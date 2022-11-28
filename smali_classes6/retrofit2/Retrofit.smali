@@ -181,14 +181,13 @@
     .line 9
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 11
+    .line 10
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -200,7 +199,7 @@
 
     throw p1
 
-    .line 12
+    .line 11
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
 
@@ -210,18 +209,18 @@
 
     goto :goto_0
 
-    .line 13
+    .line 12
     :cond_2
     iget-boolean v0, p0, Lretrofit2/Retrofit;->validateEagerly:Z
 
     if-eqz v0, :cond_4
 
-    .line 14
+    .line 13
     invoke-static {}, Lretrofit2/Platform;->get()Lretrofit2/Platform;
 
     move-result-object v0
 
-    .line 15
+    .line 14
     invoke-virtual {p1}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
     move-result-object p1
@@ -235,7 +234,7 @@
 
     aget-object v3, p1, v2
 
-    .line 16
+    .line 15
     invoke-virtual {v0, v3}, Lretrofit2/Platform;->isDefaultMethod(Ljava/lang/reflect/Method;)Z
 
     move-result v4
@@ -252,7 +251,7 @@
 
     if-nez v4, :cond_3
 
-    .line 17
+    .line 16
     invoke-virtual {p0, v3}, Lretrofit2/Retrofit;->loadServiceMethod(Ljava/lang/reflect/Method;)Lretrofit2/ServiceMethod;
 
     :cond_3
@@ -263,7 +262,7 @@
     :cond_4
     return-void
 
-    .line 18
+    .line 17
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -395,6 +394,7 @@
 
     invoke-direct {v2, p0, p1}, Lretrofit2/Retrofit$1;-><init>(Lretrofit2/Retrofit;Ljava/lang/Class;)V
 
+    .line 3
     invoke-static {v0, v1, v2}, Ljava/lang/reflect/Proxy;->newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object p1
@@ -567,7 +567,6 @@
 
     const-string p2, ".\n"
 
-    .line 8
     invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p2, "\n   * "
@@ -576,7 +575,7 @@
 
     const-string p1, "  Skipped:"
 
-    .line 9
+    .line 8
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 p1, 0x0
@@ -584,7 +583,7 @@
     :goto_1
     if-ge p1, v0, :cond_2
 
-    .line 10
+    .line 9
     invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lretrofit2/Retrofit;->callAdapterFactories:Ljava/util/List;
@@ -612,16 +611,16 @@
     :cond_2
     const/16 p1, 0xa
 
-    .line 11
+    .line 10
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_3
     const-string p1, "  Tried:"
 
-    .line 12
+    .line 11
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 13
+    .line 12
     iget-object p1, p0, Lretrofit2/Retrofit;->callAdapterFactories:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -631,7 +630,7 @@
     :goto_2
     if-ge v0, p1, :cond_4
 
-    .line 14
+    .line 13
     invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lretrofit2/Retrofit;->callAdapterFactories:Ljava/util/List;
@@ -656,7 +655,7 @@
 
     goto :goto_2
 
-    .line 15
+    .line 14
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -766,7 +765,6 @@
 
     const-string p2, ".\n"
 
-    .line 10
     invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p2, "\n   * "
@@ -775,7 +773,7 @@
 
     const-string p1, "  Skipped:"
 
-    .line 11
+    .line 10
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 p1, 0x0
@@ -783,7 +781,7 @@
     :goto_1
     if-ge p1, v0, :cond_2
 
-    .line 12
+    .line 11
     invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p4, p0, Lretrofit2/Retrofit;->converterFactories:Ljava/util/List;
@@ -811,16 +809,16 @@
     :cond_2
     const/16 p1, 0xa
 
-    .line 13
+    .line 12
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_3
     const-string p1, "  Tried:"
 
-    .line 14
+    .line 13
     invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 15
+    .line 14
     iget-object p1, p0, Lretrofit2/Retrofit;->converterFactories:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -830,7 +828,7 @@
     :goto_2
     if-ge v0, p1, :cond_4
 
-    .line 16
+    .line 15
     invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p4, p0, Lretrofit2/Retrofit;->converterFactories:Ljava/util/List;
@@ -855,7 +853,7 @@
 
     goto :goto_2
 
-    .line 17
+    .line 16
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

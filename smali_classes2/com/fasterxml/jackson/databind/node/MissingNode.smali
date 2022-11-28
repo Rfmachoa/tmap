@@ -6,6 +6,8 @@
 # static fields
 .field private static final instance:Lcom/fasterxml/jackson/databind/node/MissingNode;
 
+.field private static final serialVersionUID:J = 0x1L
+
 
 # direct methods
 .method public static constructor <clinit>()V
@@ -21,7 +23,7 @@
     return-void
 .end method
 
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
@@ -115,6 +117,61 @@
     return v0
 .end method
 
+.method public isMissingNode()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public readResolve()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/databind/node/MissingNode;->instance:Lcom/fasterxml/jackson/databind/node/MissingNode;
+
+    return-object v0
+.end method
+
+.method public require()Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "require() called on `MissingNode`"
+
+    .line 1
+    invoke-virtual {p0, v1, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->_reportRequiredViolation(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/JsonNode;
+
+    return-object v0
+.end method
+
+.method public requireNonNull()Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "requireNonNull() called on `MissingNode`"
+
+    .line 1
+    invoke-virtual {p0, v1, v0}, Lcom/fasterxml/jackson/databind/JsonNode;->_reportRequiredViolation(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/JsonNode;
+
+    return-object v0
+.end method
+
 .method public final serialize(Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/databind/SerializerProvider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -143,6 +200,14 @@
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeNull()V
 
     return-void
+.end method
+
+.method public toPrettyString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;

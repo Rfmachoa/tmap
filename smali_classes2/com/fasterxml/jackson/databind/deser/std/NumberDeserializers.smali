@@ -167,7 +167,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     .line 2
     sget-object p1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -249,7 +249,7 @@
     :cond_6
     sget-object p1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    if-ne p0, p1, :cond_12
+    if-ne p0, p1, :cond_7
 
     .line 17
     sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$FloatDeserializer;->primitiveInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$FloatDeserializer;
@@ -258,136 +258,147 @@
 
     .line 18
     :cond_7
+    sget-object p1, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+
+    if-ne p0, p1, :cond_13
+
+    .line 19
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NullifyingDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NullifyingDeserializer;
+
+    return-object p0
+
+    .line 20
+    :cond_8
     sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers;->_classNames:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_13
-
-    .line 19
-    const-class p1, Ljava/lang/Integer;
-
-    if-ne p0, p1, :cond_8
-
-    .line 20
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$IntegerDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$IntegerDeserializer;
-
-    return-object p0
+    if-eqz p1, :cond_14
 
     .line 21
-    :cond_8
-    const-class p1, Ljava/lang/Boolean;
+    const-class p1, Ljava/lang/Integer;
 
     if-ne p0, p1, :cond_9
 
     .line 22
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BooleanDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BooleanDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$IntegerDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$IntegerDeserializer;
 
     return-object p0
 
     .line 23
     :cond_9
-    const-class p1, Ljava/lang/Long;
+    const-class p1, Ljava/lang/Boolean;
 
     if-ne p0, p1, :cond_a
 
     .line 24
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$LongDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$LongDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BooleanDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BooleanDeserializer;
 
     return-object p0
 
     .line 25
     :cond_a
-    const-class p1, Ljava/lang/Double;
+    const-class p1, Ljava/lang/Long;
 
     if-ne p0, p1, :cond_b
 
     .line 26
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$DoubleDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$DoubleDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$LongDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$LongDeserializer;
 
     return-object p0
 
     .line 27
     :cond_b
-    const-class p1, Ljava/lang/Character;
+    const-class p1, Ljava/lang/Double;
 
     if-ne p0, p1, :cond_c
 
     .line 28
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$DoubleDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$DoubleDeserializer;
 
     return-object p0
 
     .line 29
     :cond_c
-    const-class p1, Ljava/lang/Byte;
+    const-class p1, Ljava/lang/Character;
 
     if-ne p0, p1, :cond_d
 
     .line 30
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ByteDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ByteDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;
 
     return-object p0
 
     .line 31
     :cond_d
-    const-class p1, Ljava/lang/Short;
+    const-class p1, Ljava/lang/Byte;
 
     if-ne p0, p1, :cond_e
 
     .line 32
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ShortDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ShortDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ByteDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ByteDeserializer;
 
     return-object p0
 
     .line 33
     :cond_e
-    const-class p1, Ljava/lang/Float;
+    const-class p1, Ljava/lang/Short;
 
     if-ne p0, p1, :cond_f
 
     .line 34
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$FloatDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$FloatDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ShortDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$ShortDeserializer;
 
     return-object p0
 
     .line 35
     :cond_f
-    const-class p1, Ljava/lang/Number;
+    const-class p1, Ljava/lang/Float;
 
     if-ne p0, p1, :cond_10
 
     .line 36
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$NumberDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$NumberDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$FloatDeserializer;->wrapperInstance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$FloatDeserializer;
 
     return-object p0
 
     .line 37
     :cond_10
-    const-class p1, Ljava/math/BigDecimal;
+    const-class p1, Ljava/lang/Number;
 
     if-ne p0, p1, :cond_11
 
     .line 38
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigDecimalDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigDecimalDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$NumberDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$NumberDeserializer;
 
     return-object p0
 
     .line 39
     :cond_11
-    const-class p1, Ljava/math/BigInteger;
+    const-class p1, Ljava/math/BigDecimal;
 
     if-ne p0, p1, :cond_12
 
     .line 40
-    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigIntegerDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigIntegerDeserializer;
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigDecimalDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigDecimalDeserializer;
 
     return-object p0
 
     .line 41
     :cond_12
+    const-class p1, Ljava/math/BigInteger;
+
+    if-ne p0, p1, :cond_13
+
+    .line 42
+    sget-object p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigIntegerDeserializer;->instance:Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigIntegerDeserializer;
+
+    return-object p0
+
+    .line 43
+    :cond_13
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Internal error: can\'t find deserializer for "
@@ -396,7 +407,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -404,7 +415,7 @@
 
     throw p1
 
-    :cond_13
+    :cond_14
     const/4 p0, 0x0
 
     return-object p0

@@ -123,7 +123,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/amplifyframework/datastore/syncengine/h3;->a:Lcom/amplifyframework/datastore/syncengine/h3;
+    sget-object v0, Lcom/amplifyframework/datastore/syncengine/l3;->a:Lcom/amplifyframework/datastore/syncengine/l3;
 
     invoke-static {p1, v0}, Lcom/amplifyframework/util/ForEach;->inCollection(Ljava/util/Collection;Lcom/amplifyframework/util/ForEach$Mapping;)Ljava/util/List;
 
@@ -154,10 +154,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lok/c;
+.method public static synthetic a(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lum/c;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$syncModel$9(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lok/c;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$syncModel$9(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lum/c;
 
     move-result-object p0
 
@@ -193,7 +193,7 @@
     return p0
 .end method
 
-.method private createHydrationTask(Lcom/amplifyframework/core/model/ModelSchema;)Lai/a;
+.method private createHydrationTask(Lcom/amplifyframework/core/model/ModelSchema;)Lek/a;
     .locals 3
 
     .line 1
@@ -212,60 +212,60 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lookupLastSyncTime(Ljava/lang/String;)Lai/p0;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/r3;
-
-    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/r3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
-
-    .line 3
-    invoke-virtual {v1, v2}, Lai/p0;->P0(Lci/o;)Lai/p0;
+    invoke-virtual {v1, v2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lookupLastSyncTime(Ljava/lang/String;)Lek/p0;
 
     move-result-object v1
 
     new-instance v2, Lcom/amplifyframework/datastore/syncengine/z2;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/z2;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
+    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/z2;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
 
-    .line 4
-    invoke-virtual {v1, v2}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    .line 3
+    invoke-virtual {v1, v2}, Lek/p0;->P0(Lgk/o;)Lek/p0;
 
     move-result-object v1
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/a3;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/c3;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/a3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
+    invoke-direct {v2, p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/c3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
+
+    .line 4
+    invoke-virtual {v1, v2}, Lek/p0;->r0(Lgk/o;)Lek/p0;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/d3;
+
+    invoke-direct {v2, p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/d3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
 
     .line 5
-    invoke-virtual {v1, v2}, Lai/p0;->u0(Lci/o;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/p0;->u0(Lgk/o;)Lek/a;
 
     move-result-object p1
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/o3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/r3;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/o3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/r3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
 
     .line 6
-    invoke-virtual {p1, v0}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {p1, v0}, Lek/a;->P(Lgk/g;)Lek/a;
 
     move-result-object p1
 
-    sget-object v0, Lcom/amplifyframework/datastore/syncengine/l3;->a:Lcom/amplifyframework/datastore/syncengine/l3;
+    sget-object v0, Lcom/amplifyframework/datastore/syncengine/o3;->a:Lcom/amplifyframework/datastore/syncengine/o3;
 
     .line 7
-    invoke-virtual {p1, v0}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {p1, v0}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static synthetic d(Lai/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
+.method public static synthetic d(Lek/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$null$14(Lai/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$null$14(Lek/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
 
     return-void
 .end method
@@ -441,20 +441,20 @@
     return-object p1
 .end method
 
-.method public static synthetic i(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
+.method public static synthetic i(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$null$2(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$null$2(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic j(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)Lai/g;
+.method public static synthetic j(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$createHydrationTask$6(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)Lai/g;
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$createHydrationTask$6(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)Lek/g;
 
     move-result-object p0
 
@@ -481,7 +481,7 @@
     return-object p0
 .end method
 
-.method private synthetic lambda$createHydrationTask$4(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/v0;
+.method private synthetic lambda$createHydrationTask$4(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/v0;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -490,48 +490,48 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->syncModel(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/m;
+    invoke-direct {p0, p1, p3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->syncModel(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/m;
 
     move-result-object p1
 
     .line 2
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lai/m;->I4(Lai/o0;)Lai/m;
+    invoke-virtual {p1, v0}, Lek/m;->I4(Lek/o0;)Lek/m;
 
     move-result-object p1
 
-    sget-object v0, Lcom/amplifyframework/datastore/syncengine/c3;->a:Lcom/amplifyframework/datastore/syncengine/c3;
+    sget-object v0, Lcom/amplifyframework/datastore/syncengine/f3;->a:Lcom/amplifyframework/datastore/syncengine/f3;
 
     .line 3
-    invoke-virtual {p1, v0}, Lai/m;->X0(Lci/o;)Lai/m;
+    invoke-virtual {p1, v0}, Lek/m;->X0(Lgk/o;)Lek/m;
 
     move-result-object p1
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/b3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/e3;
 
-    invoke-direct {v0, p0, p2}, Lcom/amplifyframework/datastore/syncengine/b3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
+    invoke-direct {v0, p0, p2}, Lcom/amplifyframework/datastore/syncengine/e3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
 
     .line 4
-    invoke-virtual {p1, v0}, Lai/m;->a1(Lci/o;)Lai/a;
+    invoke-virtual {p1, v0}, Lek/m;->a1(Lgk/o;)Lek/a;
 
     move-result-object p1
 
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/e3;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/h3;
 
-    invoke-direct {p2, p3}, Lcom/amplifyframework/datastore/syncengine/e3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTime;)V
+    invoke-direct {p2, p3}, Lcom/amplifyframework/datastore/syncengine/h3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTime;)V
 
     .line 5
-    invoke-virtual {p1, p2}, Lai/a;->u1(Lci/s;)Lai/p0;
+    invoke-virtual {p1, p2}, Lek/a;->u1(Lgk/s;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private synthetic lambda$createHydrationTask$6(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)Lai/g;
+.method private synthetic lambda$createHydrationTask$6(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)Lek/g;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -559,7 +559,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->saveLastDeltaSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/a;
+    invoke-virtual {v0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->saveLastDeltaSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/a;
 
     move-result-object p1
 
@@ -577,21 +577,21 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->saveLastBaseSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/a;
+    invoke-virtual {v0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->saveLastBaseSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/a;
 
     move-result-object p1
 
     .line 4
     :goto_0
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/i3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/n3;
 
-    invoke-direct {v0, p2, p3}, Lcom/amplifyframework/datastore/syncengine/i3;-><init>(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)V
+    invoke-direct {v0, p2, p3}, Lcom/amplifyframework/datastore/syncengine/n3;-><init>(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)V
 
-    invoke-static {v0}, Lai/a;->X(Lci/a;)Lai/a;
+    invoke-static {v0}, Lek/a;->X(Lgk/a;)Lek/a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {p1, p2}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object p1
 
@@ -729,7 +729,7 @@
     return-object p1
 .end method
 
-.method private static synthetic lambda$null$14(Lai/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
+.method private static synthetic lambda$null$14(Lek/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
     .locals 3
 
     .line 1
@@ -766,7 +766,7 @@
     invoke-direct {v0, p1, v1}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-interface {p0, v0}, Lai/r0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p0, v0}, Lek/r0;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -787,7 +787,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {p0, p1}, Lai/r0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p0, p1}, Lek/r0;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -797,13 +797,13 @@
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lai/r0;->onSuccess(Ljava/lang/Object;)V
+    invoke-interface {p0, p1}, Lek/r0;->onSuccess(Ljava/lang/Object;)V
 
     :goto_0
     return-void
 .end method
 
-.method private synthetic lambda$null$2(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
+.method private synthetic lambda$null$2(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -816,11 +816,11 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/g3;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/x2;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/syncengine/g3;-><init>(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/syncengine/x2;-><init>(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
 
-    invoke-virtual {v0, p2, v1}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/a;
+    invoke-virtual {v0, p2, v1}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lek/a;
 
     move-result-object p1
 
@@ -922,26 +922,26 @@
     .end annotation
 
     .line 1
-    invoke-static {p2}, Lai/m;->l3(Ljava/lang/Iterable;)Lai/m;
+    invoke-static {p2}, Lek/m;->l3(Ljava/lang/Iterable;)Lek/m;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/y2;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/b3;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/y2;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/b3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
 
     .line 2
-    invoke-virtual {p2, v0}, Lai/m;->g4(Lci/o;)Lai/m;
+    invoke-virtual {p2, v0}, Lek/m;->g4(Lgk/o;)Lek/m;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p1}, Lai/m;->g8()Lai/p0;
+    invoke-virtual {p1}, Lek/m;->g8()Lek/p0;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1}, Lai/p0;->h()Ljava/lang/Object;
+    invoke-virtual {p1}, Lek/p0;->h()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -996,7 +996,7 @@
     return p0
 .end method
 
-.method private synthetic lambda$syncModel$9(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lok/c;
+.method private synthetic lambda$syncModel$9(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lum/c;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1005,18 +1005,18 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->syncPage(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lai/p0;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->syncPage(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lek/p0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lai/p0;->n2()Lai/m;
+    invoke-virtual {p1}, Lek/p0;->n2()Lek/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private synthetic lambda$syncPage$15(Lcom/amplifyframework/api/graphql/GraphQLRequest;Lai/r0;)V
+.method private synthetic lambda$syncPage$15(Lcom/amplifyframework/api/graphql/GraphQLRequest;Lek/r0;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1027,15 +1027,15 @@
     .line 1
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->appSync:Lcom/amplifyframework/datastore/appsync/AppSync;
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/f3;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/i3;
 
-    invoke-direct {v1, p2}, Lcom/amplifyframework/datastore/syncengine/f3;-><init>(Lai/r0;)V
+    invoke-direct {v1, p2}, Lcom/amplifyframework/datastore/syncengine/i3;-><init>(Lek/r0;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance v2, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {v2, p2}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {v2, p2}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     invoke-interface {v0, p1, v1, v2}, Lcom/amplifyframework/datastore/appsync/AppSync;->sync(Lcom/amplifyframework/api/graphql/GraphQLRequest;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)Lcom/amplifyframework/core/async/Cancelable;
 
@@ -1046,7 +1046,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lai/r0;->setDisposable(Lio/reactivex/rxjava3/disposables/c;)V
+    invoke-interface {p2, p1}, Lek/r0;->setDisposable(Lio/reactivex/rxjava3/disposables/c;)V
 
     return-void
 .end method
@@ -1059,18 +1059,18 @@
     return-void
 .end method
 
-.method public static synthetic n(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;Lai/r0;)V
+.method public static synthetic n(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;Lek/r0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$syncPage$15(Lcom/amplifyframework/api/graphql/GraphQLRequest;Lai/r0;)V
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$syncPage$15(Lcom/amplifyframework/api/graphql/GraphQLRequest;Lek/r0;)V
 
     return-void
 .end method
 
-.method public static synthetic o(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/v0;
+.method public static synthetic o(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/v0;
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$createHydrationTask$4(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/v0;
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->lambda$createHydrationTask$4(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/v0;
 
     move-result-object p0
 
@@ -1093,7 +1093,7 @@
     return-void
 .end method
 
-.method private syncModel(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/m;
+.method private syncModel(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/m;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1103,7 +1103,7 @@
             "Lcom/amplifyframework/core/model/ModelSchema;",
             "Lcom/amplifyframework/datastore/syncengine/SyncTime;",
             ")",
-            "Lai/m<",
+            "Lek/m<",
             "Ljava/util/List<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;>;"
@@ -1195,45 +1195,45 @@
     move-result-object p2
 
     .line 9
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/q3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/y2;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/q3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/y2;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
 
-    invoke-virtual {p2, v0}, Lai/m;->X0(Lci/o;)Lai/m;
+    invoke-virtual {p2, v0}, Lek/m;->X0(Lgk/o;)Lek/m;
 
     move-result-object v0
 
-    new-instance v3, Lcom/amplifyframework/datastore/syncengine/p3;
+    new-instance v3, Lcom/amplifyframework/datastore/syncengine/s3;
 
-    invoke-direct {v3, p2}, Lcom/amplifyframework/datastore/syncengine/p3;-><init>(Lio/reactivex/rxjava3/processors/BehaviorProcessor;)V
+    invoke-direct {v3, p2}, Lcom/amplifyframework/datastore/syncengine/s3;-><init>(Lio/reactivex/rxjava3/processors/BehaviorProcessor;)V
 
     .line 10
-    invoke-virtual {v0, v3}, Lai/m;->m2(Lci/g;)Lai/m;
+    invoke-virtual {v0, v3}, Lek/m;->m2(Lgk/g;)Lek/m;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/s3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/a3;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/s3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/a3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
 
     .line 11
-    invoke-virtual {p2, v0}, Lai/m;->g4(Lci/o;)Lai/m;
+    invoke-virtual {p2, v0}, Lek/m;->g4(Lgk/o;)Lek/m;
 
     move-result-object p1
 
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/d3;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/g3;
 
-    invoke-direct {p2, v2, v1}, Lcom/amplifyframework/datastore/syncengine/d3;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Integer;)V
+    invoke-direct {p2, v2, v1}, Lcom/amplifyframework/datastore/syncengine/g3;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Integer;)V
 
     .line 12
-    invoke-virtual {p1, p2}, Lai/m;->u7(Lci/r;)Lai/m;
+    invoke-virtual {p1, p2}, Lek/m;->u7(Lgk/r;)Lek/m;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private syncPage(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lai/p0;
+.method private syncPage(Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lek/p0;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1244,7 +1244,7 @@
             "Lcom/amplifyframework/api/graphql/PaginatedResult<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/api/graphql/PaginatedResult<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;>;"
@@ -1252,11 +1252,11 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/x2;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/m3;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/x2;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/m3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)V
 
-    invoke-static {v0}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p1
 
@@ -1265,7 +1265,7 @@
 
 
 # virtual methods
-.method public hydrate()Lai/a;
+.method public hydrate()Lek/a;
     .locals 4
 
     .line 1
@@ -1326,7 +1326,7 @@
     check-cast v2, Lcom/amplifyframework/core/model/ModelSchema;
 
     .line 7
-    invoke-direct {p0, v2}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->createHydrationTask(Lcom/amplifyframework/core/model/ModelSchema;)Lai/a;
+    invoke-direct {p0, v2}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->createHydrationTask(Lcom/amplifyframework/core/model/ModelSchema;)Lek/a;
 
     move-result-object v2
 
@@ -1336,23 +1336,23 @@
 
     .line 8
     :cond_0
-    invoke-static {v0}, Lai/a;->v(Ljava/lang/Iterable;)Lai/a;
+    invoke-static {v0}, Lek/a;->v(Ljava/lang/Iterable;)Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/n3;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/q3;
 
-    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/syncengine/n3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
+    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/syncengine/q3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;)V
 
     .line 9
-    invoke-virtual {v0, v1}, Lai/a;->T(Lci/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->T(Lgk/g;)Lek/a;
 
     move-result-object v0
 
-    sget-object v1, Lcom/amplifyframework/datastore/syncengine/m3;->a:Lcom/amplifyframework/datastore/syncengine/m3;
+    sget-object v1, Lcom/amplifyframework/datastore/syncengine/p3;->a:Lcom/amplifyframework/datastore/syncengine/p3;
 
     .line 10
-    invoke-virtual {v0, v1}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object v0
 

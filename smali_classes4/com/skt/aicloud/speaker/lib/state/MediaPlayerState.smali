@@ -104,7 +104,7 @@
 
 
 # virtual methods
-.method public b()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -122,21 +122,21 @@
     return-object v0
 .end method
 
-.method public d()Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->c:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public e()Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->c:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -155,7 +155,7 @@
 
     const-string v3, ", mPlayServiceId="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->b:Ljava/lang/String;
 

@@ -1,17 +1,10 @@
 .class final Lcom/google/android/gms/common/api/internal/zabs;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zaa:Lcom/google/android/gms/common/api/internal/ApiKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Lcom/google/android/gms/common/Feature;
 

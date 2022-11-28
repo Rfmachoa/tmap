@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/data/DataBufferObserverSet;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/data/DataBufferObserver;
@@ -9,14 +9,6 @@
 
 # instance fields
 .field private zaa:Ljava/util/HashSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashSet<",
-            "Lcom/google/android/gms/common/data/DataBufferObserver;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

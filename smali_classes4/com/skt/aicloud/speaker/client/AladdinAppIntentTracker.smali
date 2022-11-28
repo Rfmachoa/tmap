@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field public a:Lfa/c;
+.field public a:Lcc/c;
 
 .field public b:Landroid/app/Application$ActivityLifecycleCallbacks;
 
@@ -68,7 +68,7 @@
 
 
 # virtual methods
-.method public c(Landroid/app/Application;Lfa/c;)V
+.method public c(Landroid/app/Application;Lcc/c;)V
     .locals 2
 
     const/4 v0, 0x2
@@ -86,7 +86,7 @@
     const-string v1, "registerActivityLifeCycleTracker(application:%s, monitor:%s)"
 
     .line 1
-    invoke-static {v1, v0}, Lva/a;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lsc/a;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -95,7 +95,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput-object p2, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->a:Lfa/c;
+    iput-object p2, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->a:Lcc/c;
 
     .line 3
     iget-object p2, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->b:Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -109,11 +109,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->a:Lfa/c;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->a:Lcc/c;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lfa/c;->r()Z
+    invoke-virtual {v0}, Lcc/c;->r()Z
 
     move-result v0
 
@@ -127,7 +127,7 @@
     const-string v1, "ACTIVITY_LIFE_CYCLE"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->f(Ljava/lang/String;)V
 
     .line 4
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -140,18 +140,18 @@
 
     const-string v1, "CLASS_NAME"
 
-    invoke-virtual {v0, v1, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "LIFE_CYCLE"
 
     .line 5
-    invoke-virtual {v0, p1, p2}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     :try_start_0
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->a:Lfa/c;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/client/AladdinAppIntentTracker;->a:Lcc/c;
 
-    invoke-virtual {p1, v0}, Lfa/c;->S(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)Z
+    invoke-virtual {p1, v0}, Lcc/c;->S(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -179,10 +179,10 @@
 
     aput-object p1, v0, v1
 
-    const-string/jumbo v1, "unregisterActivityLifeCycleTracker(application:%s)"
+    const-string v1, "unregisterActivityLifeCycleTracker(application:%s)"
 
     .line 1
-    invoke-static {v1, v0}, Lva/a;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lsc/a;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,12 +3,12 @@
 .source "ActivityResultCaller.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/activity/result/ActivityResultCallerLauncher;-><init>(Landroidx/activity/result/e;Lb/a;Ljava/lang/Object;)V
+    value = Landroidx/activity/result/ActivityResultCallerLauncher;-><init>(Landroidx/activity/result/g;Lc/a;Ljava/lang/Object;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$a;",
         ">;"
     }
@@ -41,19 +41,33 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # instance fields
 .field public final synthetic this$0:Landroidx/activity/result/ActivityResultCallerLauncher;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/activity/result/ActivityResultCallerLauncher<",
+            "TI;TO;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Landroidx/activity/result/ActivityResultCallerLauncher;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/activity/result/ActivityResultCallerLauncher<",
+            "TI;TO;>;)V"
+        }
+    .end annotation
 
     iput-object p1, p0, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2;->this$0:Landroidx/activity/result/ActivityResultCallerLauncher;
 
@@ -67,14 +81,16 @@
 
 # virtual methods
 .method public final invoke()Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$a;
-    .locals 1
+    .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 2
     new-instance v0, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$a;
 
-    invoke-direct {v0, p0}, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$a;-><init>(Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2;)V
+    iget-object v1, p0, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2;->this$0:Landroidx/activity/result/ActivityResultCallerLauncher;
+
+    invoke-direct {v0, v1}, Landroidx/activity/result/ActivityResultCallerLauncher$resultContract$2$a;-><init>(Landroidx/activity/result/ActivityResultCallerLauncher;)V
 
     return-object v0
 .end method

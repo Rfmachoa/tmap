@@ -1,73 +1,91 @@
-.class public final Lf2/b$b;
-.super Lf2/b$s;
-.source "DynamicAnimation.java"
+.class public Lf2/b$b;
+.super Ljava/lang/Object;
+.source "DocumentsContractCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lf2/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x9
-    name = null
+    name = "b"
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lf2/b$s;-><init>(Ljava/lang/String;Lf2/b$g;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Landroid/view/View;)F
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->F0(Landroid/view/View;)F
+    invoke-static {p0, p1}, Landroid/provider/DocumentsContract;->buildDocumentUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result p1
+    move-result-object p0
 
-    return p1
+    return-object p0
 .end method
 
-.method public b(Landroid/view/View;F)V
+.method public static b(Landroid/content/ContentResolver;Landroid/net/Uri;)Z
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/FileNotFoundException;
+        }
+    .end annotation
 
     .line 1
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->B2(Landroid/view/View;F)V
+    invoke-static {p0, p1}, Landroid/provider/DocumentsContract;->deleteDocument(Landroid/content/ContentResolver;Landroid/net/Uri;)Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public bridge synthetic getValue(Ljava/lang/Object;)F
+.method public static c(Landroid/net/Uri;)Ljava/lang/String;
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    check-cast p1, Landroid/view/View;
+    invoke-static {p0}, Landroid/provider/DocumentsContract;->getDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lf2/b$b;->a(Landroid/view/View;)F
+    move-result-object p0
 
-    move-result p1
-
-    return p1
+    return-object p0
 .end method
 
-.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+.method public static d(Landroid/content/Context;Landroid/net/Uri;)Z
     .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    check-cast p1, Landroid/view/View;
+    invoke-static {p0, p1}, Landroid/provider/DocumentsContract;->isDocumentUri(Landroid/content/Context;Landroid/net/Uri;)Z
 
-    invoke-virtual {p0, p1, p2}, Lf2/b$b;->b(Landroid/view/View;F)V
+    move-result p0
 
-    return-void
+    return p0
 .end method

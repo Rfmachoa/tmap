@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/skt/tmap/util/r0$f;
 
 
 # instance fields
@@ -27,14 +27,14 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final a()V
     .locals 2
 
     iget-object v0, p0, Lcom/skt/tmap/activity/f;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
     iget v1, p0, Lcom/skt/tmap/activity/f;->b:I
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->t5(Lcom/skt/tmap/activity/BaseAiActivity;I)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->E5(Lcom/skt/tmap/activity/BaseAiActivity;I)V
 
     return-void
 .end method

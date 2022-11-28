@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field public E1:[Ljava/lang/CharSequence;
+.field public G1:[Ljava/lang/CharSequence;
 
-.field public F1:[Ljava/lang/CharSequence;
+.field public H1:[Ljava/lang/CharSequence;
 
-.field public G1:Ljava/util/Set;
+.field public I1:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -30,6 +30,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -41,13 +45,21 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 8
     sget v0, Landroidx/preference/R$attr;->dialogPreferenceStyle:I
 
     const v1, 0x1010091
 
-    invoke-static {p1, v0, v1}, Lz0/i;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Ls1/l;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -58,6 +70,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -69,6 +89,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -78,7 +106,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Landroidx/preference/MultiSelectListPreference;->G1:Ljava/util/Set;
+    iput-object v0, p0, Landroidx/preference/MultiSelectListPreference;->I1:Ljava/util/Set;
 
     .line 3
     sget-object v0, Landroidx/preference/R$styleable;->MultiSelectListPreference:[I
@@ -92,22 +120,22 @@
 
     sget p3, Landroidx/preference/R$styleable;->MultiSelectListPreference_android_entries:I
 
-    invoke-static {p1, p2, p3}, Lz0/i;->q(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Ls1/l;->q(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    iput-object p2, p0, Landroidx/preference/MultiSelectListPreference;->E1:[Ljava/lang/CharSequence;
+    iput-object p2, p0, Landroidx/preference/MultiSelectListPreference;->G1:[Ljava/lang/CharSequence;
 
     .line 5
     sget p2, Landroidx/preference/R$styleable;->MultiSelectListPreference_entryValues:I
 
     sget p3, Landroidx/preference/R$styleable;->MultiSelectListPreference_android_entryValues:I
 
-    invoke-static {p1, p2, p3}, Lz0/i;->q(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Ls1/l;->q(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    iput-object p2, p0, Landroidx/preference/MultiSelectListPreference;->F1:[Ljava/lang/CharSequence;
+    iput-object p2, p0, Landroidx/preference/MultiSelectListPreference;->H1:[Ljava/lang/CharSequence;
 
     .line 6
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -121,7 +149,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->E1:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->G1:[Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -130,7 +158,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->F1:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->H1:[Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -139,13 +167,13 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->F1:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->H1:[Ljava/lang/CharSequence;
 
     .line 2
     array-length v1, v0
 
     .line 3
-    iget-object v2, p0, Landroidx/preference/MultiSelectListPreference;->G1:Ljava/util/Set;
+    iget-object v2, p0, Landroidx/preference/MultiSelectListPreference;->I1:Ljava/util/Set;
 
     .line 4
     new-array v3, v1, [Z
@@ -188,7 +216,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->G1:Ljava/util/Set;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->I1:Ljava/util/Set;
 
     return-object v0
 .end method
@@ -222,7 +250,7 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/MultiSelectListPreference;->E1:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/MultiSelectListPreference;->G1:[Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -256,7 +284,7 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/MultiSelectListPreference;->F1:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/MultiSelectListPreference;->H1:[Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -273,12 +301,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->G1:Ljava/util/Set;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->I1:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->G1:Ljava/util/Set;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->I1:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
@@ -293,6 +321,12 @@
 
 .method public d0(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 3
+    .param p1    # Landroid/content/res/TypedArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
@@ -331,6 +365,10 @@
 
 .method public h0(Landroid/os/Parcelable;)V
     .locals 2
+    .param p1    # Landroid/os/Parcelable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_1
 
@@ -377,6 +415,8 @@
 
 .method public i0()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-super {p0}, Landroidx/preference/Preference;->i0()Landroid/os/Parcelable;
@@ -429,7 +469,7 @@
     if-eqz p1, :cond_1
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->F1:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/MultiSelectListPreference;->H1:[Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
 
@@ -442,11 +482,15 @@
     if-ltz v0, :cond_1
 
     .line 3
-    iget-object v1, p0, Landroidx/preference/MultiSelectListPreference;->F1:[Ljava/lang/CharSequence;
+    iget-object v1, p0, Landroidx/preference/MultiSelectListPreference;->H1:[Ljava/lang/CharSequence;
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
 

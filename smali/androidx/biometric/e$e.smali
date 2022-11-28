@@ -27,7 +27,7 @@
 .method public abstract c()Z
 .end method
 
-.method public abstract d()Lf1/a;
+.method public abstract d()Ly1/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method

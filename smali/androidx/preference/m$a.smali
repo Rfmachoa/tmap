@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/preference/m;)V
+.method public constructor <init>(Landroidx/preference/m;Landroid/os/Looper;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/preference/m$a;->a:Landroidx/preference/m;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/preference/m$a;->a:Landroidx/preference/m;
 
-    invoke-virtual {p1}, Landroidx/preference/m;->i()V
+    invoke-virtual {p1}, Landroidx/preference/m;->j()V
 
     :goto_0
     return-void

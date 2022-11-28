@@ -348,13 +348,13 @@
     return-void
 .end method
 
-.method public static u(Landroid/view/View;Ls1/e0;)V
+.method public static u(Landroid/view/View;Landroidx/core/view/i0;)V
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ls1/e0;
+    .param p1    # Landroidx/core/view/i0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -395,7 +395,7 @@
     :cond_1
     new-instance v0, Landroidx/core/view/ViewCompat$m$a;
 
-    invoke-direct {v0, p0, p1}, Landroidx/core/view/ViewCompat$m$a;-><init>(Landroid/view/View;Ls1/e0;)V
+    invoke-direct {v0, p0, p1}, Landroidx/core/view/ViewCompat$m$a;-><init>(Landroid/view/View;Landroidx/core/view/i0;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
 

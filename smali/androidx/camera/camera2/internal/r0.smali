@@ -1,95 +1,34 @@
-.class public final Landroidx/camera/camera2/internal/r0;
+.class public final synthetic Landroidx/camera/camera2/internal/r0;
 .super Ljava/lang/Object;
-.source "Camera2CaptureCallbacks.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/lifecycle/Observer;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/camera/camera2/internal/r0$a;,
-        Landroidx/camera/camera2/internal/r0$b;
-    }
-.end annotation
+# instance fields
+.field public final synthetic a:Landroidx/camera/camera2/internal/s0$a;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/s0$a;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/camera2/internal/r0;->a:Landroidx/camera/camera2/internal/s0$a;
 
     return-void
 .end method
 
-.method public static a(Ljava/util/List;)Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+# virtual methods
+.method public final onChanged(Ljava/lang/Object;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "callbacks"
-        }
-    .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;",
-            ">;)",
-            "Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;"
-        }
-    .end annotation
+    iget-object v0, p0, Landroidx/camera/camera2/internal/r0;->a:Landroidx/camera/camera2/internal/s0$a;
 
-    .line 1
-    new-instance v0, Landroidx/camera/camera2/internal/r0$a;
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V
 
-    invoke-direct {v0, p0}, Landroidx/camera/camera2/internal/r0$a;-><init>(Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static varargs b([Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-    .locals 0
-    .param p0    # [Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "callbacks"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroidx/camera/camera2/internal/r0;->a(Ljava/util/List;)Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c()Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Landroidx/camera/camera2/internal/r0$b;
-
-    invoke-direct {v0}, Landroidx/camera/camera2/internal/r0$b;-><init>()V
-
-    return-object v0
+    return-void
 .end method

@@ -3,7 +3,7 @@
 .source "MembersInjectors.java"
 
 # interfaces
-.implements Lsg/b;
+.implements Lwi/b;
 
 
 # annotations
@@ -21,7 +21,7 @@
         "Ljava/lang/Enum<",
         "Ldagger/internal/MembersInjectors$NoOpMembersInjector;",
         ">;",
-        "Lsg/b<",
+        "Lwi/b<",
         "Ljava/lang/Object;",
         ">;"
     }

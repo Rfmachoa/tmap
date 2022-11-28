@@ -19,43 +19,43 @@
 
 
 # static fields
-.field public static final u1:J = 0x7530L
+.field public static final A1:J = 0x4c4b40L
 
-.field public static final v1:J = 0x7530L
+.field public static final B1:Ljava/lang/String; = "DashMediaSource"
+
+.field public static final w1:J = 0x7530L
+
+.field public static final x1:J = 0x7530L
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
-.field public static final w1:Ljava/lang/String; = "DashMediaSource"
+.field public static final y1:Ljava/lang/String; = "DashMediaSource"
 
-.field public static final x1:J = 0x1388L
-
-.field public static final y1:J = 0x4c4b40L
-
-.field public static final z1:Ljava/lang/String; = "DashMediaSource"
+.field public static final z1:J = 0x1388L
 
 
 # instance fields
 .field public final K0:J
 
-.field public final V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+.field public final X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
-.field public final W0:Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+.field public final Y0:Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a<",
             "+",
-            "Loe/c;",
+            "Lrg/c;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final X0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
+.field public final Z0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
 
-.field public final Y0:Ljava/lang/Object;
+.field public final a1:Ljava/lang/Object;
 
-.field public final Z0:Landroid/util/SparseArray;
+.field public final b1:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -65,64 +65,64 @@
     .end annotation
 .end field
 
-.field public final a1:Ljava/lang/Runnable;
+.field public final c1:Ljava/lang/Runnable;
 
-.field public final b1:Ljava/lang/Runnable;
+.field public final d1:Ljava/lang/Runnable;
 
-.field public final c1:Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;
+.field public final e1:Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;
 
-.field public final d1:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+.field public final f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;
 
-.field public e1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
+.field public g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
 
-.field public f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+.field public final h:Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
 
-.field public g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+.field public h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+
+.field public final i:Z
+
+.field public i1:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final h:Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-.field public h1:Ljava/io/IOException;
-
-.field public final i:Z
-
-.field public i1:Landroid/os/Handler;
-
 .field public final j:Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
 
-.field public j1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
+.field public j1:Ljava/io/IOException;
 
 .field public final k:Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;
 
-.field public final k0:Lne/b;
+.field public final k0:Lqg/b;
 
-.field public k1:Landroid/net/Uri;
+.field public k1:Landroid/os/Handler;
 
 .field public final l:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
-.field public l1:Landroid/net/Uri;
+.field public l1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
-.field public m1:Loe/c;
+.field public m1:Landroid/net/Uri;
 
-.field public n1:Z
+.field public n1:Landroid/net/Uri;
 
-.field public o1:J
+.field public o1:Lrg/c;
 
 .field public final p:Lcom/tmapmobility/tmap/exoplayer2/drm/c;
 
-.field public p1:J
+.field public p1:Z
 
 .field public q1:J
 
-.field public r1:I
+.field public r1:J
 
 .field public s1:J
 
 .field public t1:I
 
 .field public final u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
+
+.field public u1:J
+
+.field public v1:I
 
 
 # direct methods
@@ -137,9 +137,9 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Loe/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;J)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;J)V
     .locals 1
-    .param p2    # Loe/c;
+    .param p2    # Lrg/c;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -147,7 +147,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p4    # Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+    .param p4    # Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -155,11 +155,11 @@
         value = {
             "(",
             "Lcom/tmapmobility/tmap/exoplayer2/MediaItem;",
-            "Loe/c;",
+            "Lrg/c;",
             "Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a<",
             "+",
-            "Loe/c;",
+            "Lrg/c;",
             ">;",
             "Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;",
             "Lcom/tmapmobility/tmap/exoplayer2/source/g;",
@@ -178,7 +178,7 @@
     .line 4
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->d:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
     .line 5
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->b:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
@@ -191,23 +191,23 @@
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;->a:Landroid/net/Uri;
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Landroid/net/Uri;
 
     .line 6
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->b:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
 
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;->a:Landroid/net/Uri;
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Landroid/net/Uri;
 
     .line 7
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     .line 8
     iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j:Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
 
     .line 9
-    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->W0:Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Y0:Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
 
     .line 10
     iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k:Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;
@@ -225,11 +225,11 @@
     iput-object p6, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
     .line 15
-    new-instance p1, Lne/b;
+    new-instance p1, Lqg/b;
 
-    invoke-direct {p1}, Lne/b;-><init>()V
+    invoke-direct {p1}, Lqg/b;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k0:Lne/b;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k0:Lqg/b;
 
     const/4 p1, 0x1
 
@@ -249,65 +249,65 @@
     const/4 p4, 0x0
 
     .line 17
-    invoke-virtual {p0, p4}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->W(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    invoke-virtual {p0, p4}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->R(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
     move-result-object p5
 
-    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
     .line 18
     new-instance p5, Ljava/lang/Object;
 
     invoke-direct {p5}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Y0:Ljava/lang/Object;
+    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Object;
 
     .line 19
     new-instance p5, Landroid/util/SparseArray;
 
     invoke-direct {p5}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     .line 20
     new-instance p5, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$c;
 
     invoke-direct {p5, p0, p4}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$c;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
 
-    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->c1:Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;
+    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->e1:Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;
 
     const-wide p5, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 21
-    iput-wide p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
+    iput-wide p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u1:J
 
     .line 22
-    iput-wide p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
+    iput-wide p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
     if-eqz p3, :cond_1
 
     .line 23
-    iget-boolean p2, p2, Loe/c;->d:Z
+    iget-boolean p2, p2, Lrg/c;->d:Z
 
     xor-int/2addr p1, p2
 
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 24
-    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
+    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
 
     .line 25
-    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Runnable;
+    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->c1:Ljava/lang/Runnable;
 
     .line 26
-    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Ljava/lang/Runnable;
+    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Ljava/lang/Runnable;
 
     .line 27
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/c0$a;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/a0$a;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/c0$a;-><init>()V
+    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/a0$a;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;
 
     goto :goto_1
 
@@ -317,43 +317,43 @@
 
     invoke-direct {p1, p0, p4}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
 
     .line 29
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$g;
 
     invoke-direct {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$g;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;
 
     .line 30
-    new-instance p1, Lne/d;
+    new-instance p1, Lqg/d;
 
-    invoke-direct {p1, p0}, Lne/d;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
+    invoke-direct {p1, p0}, Lqg/d;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->c1:Ljava/lang/Runnable;
 
     .line 31
-    new-instance p1, Lne/e;
+    new-instance p1, Lqg/e;
 
-    invoke-direct {p1, p0}, Lne/e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
+    invoke-direct {p1, p0}, Lqg/e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Ljava/lang/Runnable;
 
     :goto_1
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Loe/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;JLcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
+.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;JLcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p10}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Loe/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;J)V
+    invoke-direct/range {p0 .. p10}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;J)V
 
     return-void
 .end method
 
-.method public static synthetic k0(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
+.method public static synthetic j0(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
     .locals 0
 
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->O0()V
@@ -391,7 +391,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     return-object p0
 .end method
@@ -400,12 +400,12 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Ljava/io/IOException;
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Ljava/io/IOException;
 
     return-object p0
 .end method
 
-.method public static q0(Loe/g;JJ)J
+.method public static q0(Lrg/g;JJ)J
     .locals 17
 
     move-object/from16 v0, p0
@@ -415,14 +415,14 @@
     move-wide/from16 v3, p3
 
     .line 1
-    iget-wide v5, v0, Loe/g;->b:J
+    iget-wide v5, v0, Lrg/g;->b:J
 
-    invoke-static {v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v5
 
     .line 2
-    invoke-static/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u0(Loe/g;)Z
+    invoke-static/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u0(Lrg/g;)Z
 
     move-result v7
 
@@ -434,7 +434,7 @@
 
     .line 3
     :goto_0
-    iget-object v12, v0, Loe/g;->c:Ljava/util/List;
+    iget-object v12, v0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v12}, Ljava/util/List;->size()I
 
@@ -443,21 +443,21 @@
     if-ge v11, v12, :cond_5
 
     .line 4
-    iget-object v12, v0, Loe/g;->c:Ljava/util/List;
+    iget-object v12, v0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v12, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
-    check-cast v12, Loe/a;
+    check-cast v12, Lrg/a;
 
     .line 5
-    iget-object v13, v12, Loe/a;->c:Ljava/util/List;
+    iget-object v13, v12, Lrg/a;->c:Ljava/util/List;
 
     if-eqz v7, :cond_0
 
     .line 6
-    iget v12, v12, Loe/a;->b:I
+    iget v12, v12, Lrg/a;->b:I
 
     const/4 v14, 0x3
 
@@ -479,9 +479,9 @@
 
     move-result-object v12
 
-    check-cast v12, Loe/j;
+    check-cast v12, Lrg/j;
 
-    invoke-virtual {v12}, Loe/j;->k()Lne/f;
+    invoke-virtual {v12}, Lrg/j;->k()Lqg/f;
 
     move-result-object v12
 
@@ -493,7 +493,7 @@
 
     .line 9
     :cond_2
-    invoke-interface {v12, v1, v2, v3, v4}, Lne/f;->i(JJ)J
+    invoke-interface {v12, v1, v2, v3, v4}, Lqg/f;->i(JJ)J
 
     move-result-wide v13
 
@@ -507,7 +507,7 @@
 
     .line 10
     :cond_3
-    invoke-interface {v12, v1, v2, v3, v4}, Lne/f;->b(JJ)J
+    invoke-interface {v12, v1, v2, v3, v4}, Lqg/f;->b(JJ)J
 
     move-result-wide v15
 
@@ -518,14 +518,14 @@
     sub-long v13, v15, v13
 
     .line 11
-    invoke-interface {v12, v13, v14}, Lne/f;->getTimeUs(J)J
+    invoke-interface {v12, v13, v14}, Lqg/f;->getTimeUs(J)J
 
     move-result-wide v15
 
     add-long/2addr v15, v5
 
     .line 12
-    invoke-interface {v12, v13, v14, v1, v2}, Lne/f;->a(JJ)J
+    invoke-interface {v12, v13, v14, v1, v2}, Lqg/f;->a(JJ)J
 
     move-result-wide v12
 
@@ -546,7 +546,7 @@
     return-wide v9
 .end method
 
-.method public static r0(Loe/g;JJ)J
+.method public static r0(Lrg/g;JJ)J
     .locals 17
 
     move-object/from16 v0, p0
@@ -556,14 +556,14 @@
     move-wide/from16 v3, p3
 
     .line 1
-    iget-wide v5, v0, Loe/g;->b:J
+    iget-wide v5, v0, Lrg/g;->b:J
 
-    invoke-static {v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v5
 
     .line 2
-    invoke-static/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u0(Loe/g;)Z
+    invoke-static/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u0(Lrg/g;)Z
 
     move-result v7
 
@@ -575,7 +575,7 @@
 
     .line 3
     :goto_0
-    iget-object v12, v0, Loe/g;->c:Ljava/util/List;
+    iget-object v12, v0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v12}, Ljava/util/List;->size()I
 
@@ -584,21 +584,21 @@
     if-ge v9, v12, :cond_5
 
     .line 4
-    iget-object v12, v0, Loe/g;->c:Ljava/util/List;
+    iget-object v12, v0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v12, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
-    check-cast v12, Loe/a;
+    check-cast v12, Lrg/a;
 
     .line 5
-    iget-object v13, v12, Loe/a;->c:Ljava/util/List;
+    iget-object v13, v12, Lrg/a;->c:Ljava/util/List;
 
     if-eqz v7, :cond_0
 
     .line 6
-    iget v12, v12, Loe/a;->b:I
+    iget v12, v12, Lrg/a;->b:I
 
     const/4 v14, 0x3
 
@@ -620,9 +620,9 @@
 
     move-result-object v12
 
-    check-cast v12, Loe/j;
+    check-cast v12, Lrg/j;
 
-    invoke-virtual {v12}, Loe/j;->k()Lne/f;
+    invoke-virtual {v12}, Lrg/j;->k()Lqg/f;
 
     move-result-object v12
 
@@ -632,7 +632,7 @@
 
     .line 9
     :cond_2
-    invoke-interface {v12, v1, v2, v3, v4}, Lne/f;->i(JJ)J
+    invoke-interface {v12, v1, v2, v3, v4}, Lqg/f;->i(JJ)J
 
     move-result-wide v13
 
@@ -646,12 +646,12 @@
 
     .line 10
     :cond_3
-    invoke-interface {v12, v1, v2, v3, v4}, Lne/f;->b(JJ)J
+    invoke-interface {v12, v1, v2, v3, v4}, Lqg/f;->b(JJ)J
 
     move-result-wide v13
 
     .line 11
-    invoke-interface {v12, v13, v14}, Lne/f;->getTimeUs(J)J
+    invoke-interface {v12, v13, v14}, Lqg/f;->getTimeUs(J)J
 
     move-result-wide v12
 
@@ -672,51 +672,51 @@
     return-wide v10
 .end method
 
-.method public static s0(Loe/c;J)J
+.method public static s0(Lrg/c;J)J
     .locals 20
 
     move-object/from16 v0, p0
 
     .line 1
-    invoke-virtual/range {p0 .. p0}, Loe/c;->e()I
+    invoke-virtual/range {p0 .. p0}, Lrg/c;->e()I
 
     move-result v1
 
     add-int/lit8 v1, v1, -0x1
 
     .line 2
-    invoke-virtual {v0, v1}, Loe/c;->d(I)Loe/g;
+    invoke-virtual {v0, v1}, Lrg/c;->d(I)Lrg/g;
 
     move-result-object v2
 
     .line 3
-    iget-wide v3, v2, Loe/g;->b:J
+    iget-wide v3, v2, Lrg/g;->b:J
 
-    invoke-static {v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v3
 
     .line 4
-    invoke-virtual {v0, v1}, Loe/c;->g(I)J
+    invoke-virtual {v0, v1}, Lrg/c;->g(I)J
 
     move-result-wide v5
 
     .line 5
-    invoke-static/range {p1 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static/range {p1 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v7
 
     .line 6
-    iget-wide v0, v0, Loe/c;->a:J
+    iget-wide v0, v0, Lrg/c;->a:J
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v0
 
     const-wide/16 v9, 0x1388
 
     .line 7
-    invoke-static {v9, v10}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v9, v10}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v9
 
@@ -726,7 +726,7 @@
 
     .line 8
     :goto_0
-    iget-object v13, v2, Loe/g;->c:Ljava/util/List;
+    iget-object v13, v2, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v13}, Ljava/util/List;->size()I
 
@@ -735,15 +735,15 @@
     if-ge v12, v13, :cond_3
 
     .line 9
-    iget-object v13, v2, Loe/g;->c:Ljava/util/List;
+    iget-object v13, v2, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v13, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
 
-    check-cast v13, Loe/a;
+    check-cast v13, Lrg/a;
 
-    iget-object v13, v13, Loe/a;->c:Ljava/util/List;
+    iget-object v13, v13, Lrg/a;->c:Ljava/util/List;
 
     .line 10
     invoke-interface {v13}, Ljava/util/List;->isEmpty()Z
@@ -760,9 +760,9 @@
 
     move-result-object v13
 
-    check-cast v13, Loe/j;
+    check-cast v13, Lrg/j;
 
-    invoke-virtual {v13}, Loe/j;->k()Lne/f;
+    invoke-virtual {v13}, Lrg/j;->k()Lqg/f;
 
     move-result-object v13
 
@@ -771,7 +771,7 @@
     add-long v14, v0, v3
 
     .line 12
-    invoke-interface {v13, v5, v6, v7, v8}, Lne/f;->c(JJ)J
+    invoke-interface {v13, v5, v6, v7, v8}, Lqg/f;->c(JJ)J
 
     move-result-wide v16
 
@@ -819,7 +819,7 @@
     return-wide v0
 .end method
 
-.method public static u0(Loe/g;)Z
+.method public static u0(Lrg/g;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -828,7 +828,7 @@
 
     .line 1
     :goto_0
-    iget-object v2, p0, Loe/g;->c:Ljava/util/List;
+    iget-object v2, p0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -837,15 +837,15 @@
     if-ge v1, v2, :cond_2
 
     .line 2
-    iget-object v2, p0, Loe/g;->c:Ljava/util/List;
+    iget-object v2, p0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Loe/a;
+    check-cast v2, Lrg/a;
 
-    iget v2, v2, Loe/a;->b:I
+    iget v2, v2, Lrg/a;->b:I
 
     const/4 v3, 0x1
 
@@ -870,7 +870,7 @@
     return v0
 .end method
 
-.method public static v0(Loe/g;)Z
+.method public static v0(Lrg/g;)Z
     .locals 3
 
     const/4 v0, 0x0
@@ -879,7 +879,7 @@
 
     .line 1
     :goto_0
-    iget-object v2, p0, Loe/g;->c:Ljava/util/List;
+    iget-object v2, p0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -888,30 +888,30 @@
     if-ge v1, v2, :cond_2
 
     .line 2
-    iget-object v2, p0, Loe/g;->c:Ljava/util/List;
+    iget-object v2, p0, Lrg/g;->c:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Loe/a;
+    check-cast v2, Lrg/a;
 
-    iget-object v2, v2, Loe/a;->c:Ljava/util/List;
+    iget-object v2, v2, Lrg/a;->c:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Loe/j;
+    check-cast v2, Lrg/j;
 
-    invoke-virtual {v2}, Loe/j;->k()Lne/f;
+    invoke-virtual {v2}, Lrg/j;->k()Lqg/f;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 3
-    invoke-interface {v2}, Lne/f;->g()Z
+    invoke-interface {v2}, Lqg/f;->g()Z
 
     move-result v2
 
@@ -947,12 +947,12 @@
 
 
 # virtual methods
-.method public A0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;JJ)V
+.method public A0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;JJ)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
             "*>;JJ)V"
         }
     .end annotation
@@ -964,22 +964,22 @@
     .line 1
     new-instance v14, Lcom/tmapmobility/tmap/exoplayer2/source/u;
 
-    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
-    iget-object v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+    iget-object v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->d()Landroid/net/Uri;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->d()Landroid/net/Uri;
 
     move-result-object v6
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b()Ljava/util/Map;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b()Ljava/util/Map;
 
     move-result-object v7
 
     .line 4
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a()J
 
     move-result-wide v12
 
@@ -994,27 +994,27 @@
     .line 5
     iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
     invoke-interface {v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;->c(J)V
 
     .line 6
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
-    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     invoke-virtual {v2, v14, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;->q(Lcom/tmapmobility/tmap/exoplayer2/source/u;I)V
 
     return-void
 .end method
 
-.method public B0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;JJ)V
+.method public B0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;JJ)V
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
-            "Loe/c;",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
+            "Lrg/c;",
             ">;JJ)V"
         }
     .end annotation
@@ -1028,22 +1028,22 @@
     .line 1
     new-instance v12, Lcom/tmapmobility/tmap/exoplayer2/source/u;
 
-    iget-wide v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->d()Landroid/net/Uri;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->d()Landroid/net/Uri;
 
     move-result-object v6
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b()Ljava/util/Map;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b()Ljava/util/Map;
 
     move-result-object v7
 
     .line 4
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a()J
 
     move-result-wide v16
 
@@ -1062,26 +1062,26 @@
     .line 5
     iget-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget-wide v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
     invoke-interface {v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;->c(J)V
 
     .line 6
-    iget-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    iget-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
-    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     invoke-virtual {v2, v14, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;->t(Lcom/tmapmobility/tmap/exoplayer2/source/u;I)V
 
     .line 7
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c()Ljava/lang/Object;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Loe/c;
+    check-cast v2, Lrg/c;
 
     .line 8
-    iget-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     const/4 v4, 0x0
 
@@ -1092,17 +1092,17 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Loe/c;->e()I
+    invoke-virtual {v3}, Lrg/c;->e()I
 
     move-result v3
 
     .line 9
     :goto_0
-    invoke-virtual {v2, v4}, Loe/c;->d(I)Loe/g;
+    invoke-virtual {v2, v4}, Lrg/c;->d(I)Lrg/g;
 
     move-result-object v5
 
-    iget-wide v5, v5, Loe/g;->b:J
+    iget-wide v5, v5, Lrg/g;->b:J
 
     move v7, v4
 
@@ -1110,14 +1110,14 @@
     if-ge v7, v3, :cond_1
 
     .line 10
-    iget-object v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     .line 11
-    invoke-virtual {v8, v7}, Loe/c;->d(I)Loe/g;
+    invoke-virtual {v8, v7}, Lrg/c;->d(I)Lrg/g;
 
     move-result-object v8
 
-    iget-wide v8, v8, Loe/g;->b:J
+    iget-wide v8, v8, Lrg/g;->b:J
 
     cmp-long v8, v8, v5
 
@@ -1129,7 +1129,7 @@
 
     .line 12
     :cond_1
-    iget-boolean v5, v2, Loe/c;->d:Z
+    iget-boolean v5, v2, Lrg/c;->d:Z
 
     const/4 v6, 0x1
 
@@ -1138,7 +1138,7 @@
     sub-int v5, v3, v7
 
     .line 13
-    invoke-virtual {v2}, Loe/c;->e()I
+    invoke-virtual {v2}, Lrg/c;->e()I
 
     move-result v8
 
@@ -1149,13 +1149,13 @@
     const-string v8, "Loaded out of sync manifest"
 
     .line 14
-    invoke-static {v5, v8}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 15
     :cond_2
-    iget-wide v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
+    iget-wide v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u1:J
 
     const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -1163,7 +1163,7 @@
 
     if-eqz v5, :cond_3
 
-    iget-wide v10, v2, Loe/c;->h:J
+    iget-wide v10, v2, Lrg/c;->h:J
 
     const-wide/16 v12, 0x3e8
 
@@ -1182,7 +1182,7 @@
 
     move-result-object v8
 
-    iget-wide v9, v2, Loe/c;->h:J
+    iget-wide v9, v2, Lrg/c;->h:J
 
     invoke-virtual {v8, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1190,7 +1190,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v9, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
+    iget-wide v9, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u1:J
 
     invoke-virtual {v8, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1198,7 +1198,7 @@
 
     move-result-object v8
 
-    invoke-static {v5, v8}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     move v5, v6
@@ -1212,15 +1212,15 @@
     if-eqz v5, :cond_5
 
     .line 17
-    iget v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:I
+    iget v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
 
     add-int/lit8 v3, v2, 0x1
 
-    iput v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:I
+    iput v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
 
     iget-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     .line 18
     invoke-interface {v3, v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;->b(I)I
@@ -1244,50 +1244,50 @@
 
     invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashManifestStaleException;-><init>()V
 
-    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Ljava/io/IOException;
+    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Ljava/io/IOException;
 
     :goto_4
     return-void
 
     .line 21
     :cond_5
-    iput v4, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:I
+    iput v4, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
 
     .line 22
     :cond_6
-    iput-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iput-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     .line 23
-    iget-boolean v5, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Z
+    iget-boolean v5, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:Z
 
-    iget-boolean v2, v2, Loe/c;->d:Z
+    iget-boolean v2, v2, Lrg/c;->d:Z
 
     and-int/2addr v2, v5
 
-    iput-boolean v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Z
+    iput-boolean v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:Z
 
     move-wide/from16 v8, p2
 
     sub-long v10, v8, p4
 
     .line 24
-    iput-wide v10, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:J
+    iput-wide v10, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
 
     .line 25
-    iput-wide v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:J
+    iput-wide v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:J
 
     .line 26
-    iget-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Y0:Ljava/lang/Object;
+    iget-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Object;
 
     monitor-enter v2
 
     .line 27
     :try_start_0
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
 
     iget-object v5, v5, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->a:Landroid/net/Uri;
 
-    iget-object v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/net/Uri;
+    iget-object v8, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Landroid/net/Uri;
 
     if-ne v5, v8, :cond_7
 
@@ -1297,21 +1297,21 @@
     if-eqz v4, :cond_9
 
     .line 28
-    iget-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v4, v4, Loe/c;->k:Landroid/net/Uri;
+    iget-object v4, v4, Lrg/c;->k:Landroid/net/Uri;
 
     if-eqz v4, :cond_8
 
     goto :goto_5
 
     :cond_8
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->d()Landroid/net/Uri;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->d()Landroid/net/Uri;
 
     move-result-object v4
 
     :goto_5
-    iput-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/net/Uri;
+    iput-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Landroid/net/Uri;
 
     .line 29
     :cond_9
@@ -1322,19 +1322,19 @@
     if-nez v3, :cond_c
 
     .line 30
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-boolean v2, v0, Loe/c;->d:Z
+    iget-boolean v2, v0, Lrg/c;->d:Z
 
     if-eqz v2, :cond_b
 
     .line 31
-    iget-object v0, v0, Loe/c;->i:Loe/o;
+    iget-object v0, v0, Lrg/c;->i:Lrg/o;
 
     if-eqz v0, :cond_a
 
     .line 32
-    invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->J0(Loe/o;)V
+    invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->J0(Lrg/o;)V
 
     goto :goto_6
 
@@ -1352,11 +1352,11 @@
 
     .line 35
     :cond_c
-    iget v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iget v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     add-int/2addr v0, v7
 
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     .line 36
     invoke-virtual {v1, v6}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->H0(Z)V
@@ -1376,13 +1376,13 @@
     throw v0
 .end method
 
-.method public C0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;JJLjava/io/IOException;I)Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$c;
+.method public C0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;JJLjava/io/IOException;I)Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$c;
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
-            "Loe/c;",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
+            "Lrg/c;",
             ">;JJ",
             "Ljava/io/IOException;",
             "I)",
@@ -1399,22 +1399,22 @@
     .line 1
     new-instance v15, Lcom/tmapmobility/tmap/exoplayer2/source/u;
 
-    iget-wide v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
-    iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+    iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->d()Landroid/net/Uri;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->d()Landroid/net/Uri;
 
     move-result-object v7
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b()Ljava/util/Map;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b()Ljava/util/Map;
 
     move-result-object v8
 
     .line 4
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a()J
 
     move-result-wide v13
 
@@ -1429,7 +1429,7 @@
     .line 5
     new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/source/y;
 
-    iget v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     invoke-direct {v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/y;-><init>(I)V
 
@@ -1475,9 +1475,9 @@
     xor-int/lit8 v4, v4, 0x1
 
     .line 11
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
-    iget v6, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v6, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     invoke-virtual {v5, v15, v6, v2, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;->x(Lcom/tmapmobility/tmap/exoplayer2/source/u;ILjava/io/IOException;Z)V
 
@@ -1486,7 +1486,7 @@
     .line 12
     iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget-wide v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
     invoke-interface {v2, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;->c(J)V
 
@@ -1494,12 +1494,12 @@
     return-object v3
 .end method
 
-.method public D0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;JJ)V
+.method public D0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;JJ)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
             "Ljava/lang/Long;",
             ">;JJ)V"
         }
@@ -1512,22 +1512,22 @@
     .line 1
     new-instance v14, Lcom/tmapmobility/tmap/exoplayer2/source/u;
 
-    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
-    iget-object v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+    iget-object v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->d()Landroid/net/Uri;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->d()Landroid/net/Uri;
 
     move-result-object v6
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b()Ljava/util/Map;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b()Ljava/util/Map;
 
     move-result-object v7
 
     .line 4
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a()J
 
     move-result-wide v12
 
@@ -1542,19 +1542,19 @@
     .line 5
     iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
     invoke-interface {v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;->c(J)V
 
     .line 6
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
-    iget v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     invoke-virtual {v2, v14, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;->t(Lcom/tmapmobility/tmap/exoplayer2/source/u;I)V
 
     .line 7
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c()Ljava/lang/Object;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1571,12 +1571,12 @@
     return-void
 .end method
 
-.method public E0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;JJLjava/io/IOException;)Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$c;
+.method public E0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;JJLjava/io/IOException;)Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$c;
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
             "Ljava/lang/Long;",
             ">;JJ",
             "Ljava/io/IOException;",
@@ -1592,26 +1592,26 @@
     move-object/from16 v2, p6
 
     .line 1
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
     new-instance v14, Lcom/tmapmobility/tmap/exoplayer2/source/u;
 
-    iget-wide v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
-    iget-object v7, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+    iget-object v7, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->d()Landroid/net/Uri;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->d()Landroid/net/Uri;
 
     move-result-object v8
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b()Ljava/util/Map;
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b()Ljava/util/Map;
 
     move-result-object v9
 
     .line 4
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a()J
 
     move-result-wide v15
 
@@ -1627,7 +1627,7 @@
 
     invoke-direct/range {v4 .. v15}, Lcom/tmapmobility/tmap/exoplayer2/source/u;-><init>(JLcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;Landroid/net/Uri;Ljava/util/Map;JJJ)V
 
-    iget v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
+    iget v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
 
     const/4 v5, 0x1
 
@@ -1639,7 +1639,7 @@
     .line 6
     iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget-wide v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
+    iget-wide v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
 
     invoke-interface {v3, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;->c(J)V
 
@@ -1674,7 +1674,7 @@
     .locals 0
 
     .line 1
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
     const/4 p1, 0x1
 
@@ -1695,7 +1695,7 @@
 
     .line 1
     :goto_0
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
@@ -1704,19 +1704,19 @@
     if-ge v2, v3, :cond_1
 
     .line 2
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
     .line 3
-    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     if-lt v3, v4, :cond_0
 
     .line 4
-    iget-object v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iget-object v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -1724,13 +1724,13 @@
 
     check-cast v4, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;
 
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iget v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     sub-int/2addr v3, v6
 
-    invoke-virtual {v4, v5, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;->E(Loe/c;I)V
+    invoke-virtual {v4, v5, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;->E(Lrg/c;I)V
 
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -1739,16 +1739,16 @@
 
     .line 5
     :cond_1
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    invoke-virtual {v2, v1}, Loe/c;->d(I)Loe/g;
+    invoke-virtual {v2, v1}, Lrg/c;->d(I)Lrg/g;
 
     move-result-object v2
 
     .line 6
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    invoke-virtual {v3}, Loe/c;->e()I
+    invoke-virtual {v3}, Lrg/c;->e()I
 
     move-result v3
 
@@ -1757,56 +1757,56 @@
     sub-int/2addr v3, v4
 
     .line 7
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    invoke-virtual {v5, v3}, Loe/c;->d(I)Loe/g;
+    invoke-virtual {v5, v3}, Lrg/c;->d(I)Lrg/g;
 
     move-result-object v5
 
     .line 8
-    iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    invoke-virtual {v6, v3}, Loe/c;->g(I)J
+    invoke-virtual {v6, v3}, Lrg/c;->g(I)J
 
     move-result-wide v6
 
     .line 9
-    iget-wide v8, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
+    iget-wide v8, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
-    invoke-static {v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->m0(J)J
+    invoke-static {v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->m0(J)J
 
     move-result-wide v8
 
-    invoke-static {v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v8
 
     .line 10
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     .line 11
-    invoke-virtual {v3, v1}, Loe/c;->g(I)J
+    invoke-virtual {v3, v1}, Lrg/c;->g(I)J
 
     move-result-wide v10
 
     .line 12
-    invoke-static {v2, v10, v11, v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r0(Loe/g;JJ)J
+    invoke-static {v2, v10, v11, v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r0(Lrg/g;JJ)J
 
     move-result-wide v10
 
     .line 13
-    invoke-static {v5, v6, v7, v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q0(Loe/g;JJ)J
+    invoke-static {v5, v6, v7, v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q0(Lrg/g;JJ)J
 
     move-result-wide v6
 
     .line 14
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-boolean v3, v3, Loe/c;->d:Z
+    iget-boolean v3, v3, Lrg/c;->d:Z
 
     if-eqz v3, :cond_2
 
-    invoke-static {v5}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v0(Loe/g;)Z
+    invoke-static {v5}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v0(Lrg/g;)Z
 
     move-result v3
 
@@ -1825,16 +1825,16 @@
     if-eqz v3, :cond_3
 
     .line 15
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-wide v14, v5, Loe/c;->f:J
+    iget-wide v14, v5, Lrg/c;->f:J
 
     cmp-long v5, v14, v12
 
     if-eqz v5, :cond_3
 
     .line 16
-    invoke-static {v14, v15}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v14, v15}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v14
 
@@ -1849,16 +1849,16 @@
     sub-long v5, v6, v10
 
     .line 18
-    iget-object v7, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v7, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-boolean v14, v7, Loe/c;->d:Z
+    iget-boolean v14, v7, Lrg/c;->d:Z
 
     move-object/from16 v16, v2
 
     if-eqz v14, :cond_6
 
     .line 19
-    iget-wide v1, v7, Loe/c;->a:J
+    iget-wide v1, v7, Lrg/c;->a:J
 
     cmp-long v1, v1, v12
 
@@ -1875,12 +1875,12 @@
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 20
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-wide v1, v1, Loe/c;->a:J
+    iget-wide v1, v1, Lrg/c;->a:J
 
     .line 21
-    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v1
 
@@ -1892,23 +1892,23 @@
     invoke-virtual {v0, v8, v9, v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->P0(JJ)V
 
     .line 23
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-wide v1, v1, Loe/c;->a:J
+    iget-wide v1, v1, Lrg/c;->a:J
 
     .line 24
-    invoke-static {v10, v11}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E1(J)J
+    invoke-static {v10, v11}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H1(J)J
 
     move-result-wide v14
 
     add-long/2addr v14, v1
 
     .line 25
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
     iget-wide v1, v1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;->a:J
 
-    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v1
 
@@ -1953,9 +1953,9 @@
 
     .line 28
     :goto_4
-    iget-wide v1, v1, Loe/g;->b:J
+    iget-wide v1, v1, Lrg/g;->b:J
 
-    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->V0(J)J
+    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->Z0(J)J
 
     move-result-wide v1
 
@@ -1964,22 +1964,22 @@
     .line 29
     new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$b;
 
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-wide v7, v2, Loe/c;->a:J
+    iget-wide v7, v2, Lrg/c;->a:J
 
-    iget-wide v9, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
+    iget-wide v9, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
-    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     iget-object v11, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h:Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
 
     .line 30
-    iget-boolean v12, v2, Loe/c;->d:Z
+    iget-boolean v12, v2, Lrg/c;->d:Z
 
     if-eqz v12, :cond_7
 
-    iget-object v12, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
+    iget-object v12, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
     goto :goto_5
 
@@ -2003,10 +2003,10 @@
 
     move-object/from16 v29, v11
 
-    invoke-direct/range {v14 .. v30}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$b;-><init>(JJJIJJJLoe/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;)V
+    invoke-direct/range {v14 .. v30}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$b;-><init>(JJJIJJJLrg/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;)V
 
     .line 31
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->i0(Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->d0(Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
 
     .line 32
     iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i:Z
@@ -2014,30 +2014,30 @@
     if-nez v1, :cond_b
 
     .line 33
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Ljava/lang/Runnable;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     if-eqz v3, :cond_8
 
     .line 34
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Ljava/lang/Runnable;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Ljava/lang/Runnable;
 
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-wide v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
+    iget-wide v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
     .line 35
-    invoke-static {v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->m0(J)J
+    invoke-static {v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->m0(J)J
 
     move-result-wide v4
 
     .line 36
-    invoke-static {v3, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s0(Loe/c;J)J
+    invoke-static {v3, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s0(Lrg/c;J)J
 
     move-result-wide v3
 
@@ -2046,7 +2046,7 @@
 
     .line 38
     :cond_8
-    iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Z
+    iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:Z
 
     if-eqz v1, :cond_9
 
@@ -2059,13 +2059,13 @@
     if-eqz p1, :cond_b
 
     .line 40
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-boolean v2, v1, Loe/c;->d:Z
+    iget-boolean v2, v1, Lrg/c;->d:Z
 
     if-eqz v2, :cond_b
 
-    iget-wide v1, v1, Loe/c;->e:J
+    iget-wide v1, v1, Lrg/c;->e:J
 
     const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -2083,7 +2083,7 @@
 
     .line 41
     :cond_a
-    iget-wide v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:J
+    iget-wide v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
 
     add-long/2addr v5, v1
 
@@ -2110,16 +2110,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Y0:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Object;
 
     monitor-enter v0
 
     .line 2
     :try_start_0
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Landroid/net/Uri;
 
     .line 3
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Landroid/net/Uri;
 
     .line 4
     monitor-exit v0
@@ -2136,16 +2136,16 @@
     throw p1
 .end method
 
-.method public final J0(Loe/o;)V
+.method public final J0(Lrg/o;)V
     .locals 2
 
     .line 1
-    iget-object v0, p1, Loe/o;->a:Ljava/lang/String;
+    iget-object v0, p1, Lrg/o;->a:Ljava/lang/String;
 
     const-string v1, "urn:mpeg:dash:utc:direct:2014"
 
     .line 2
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2154,7 +2154,7 @@
     const-string v1, "urn:mpeg:dash:utc:direct:2012"
 
     .line 3
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2166,7 +2166,7 @@
     const-string v1, "urn:mpeg:dash:utc:http-iso:2014"
 
     .line 4
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2175,7 +2175,7 @@
     const-string v1, "urn:mpeg:dash:utc:http-iso:2012"
 
     .line 5
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2187,7 +2187,7 @@
     const-string v1, "urn:mpeg:dash:utc:http-xsdate:2014"
 
     .line 6
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2196,7 +2196,7 @@
     const-string v1, "urn:mpeg:dash:utc:http-xsdate:2012"
 
     .line 7
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2208,7 +2208,7 @@
     const-string p1, "urn:mpeg:dash:utc:ntp:2014"
 
     .line 8
-    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2217,7 +2217,7 @@
     const-string p1, "urn:mpeg:dash:utc:ntp:2012"
 
     .line 9
-    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2253,7 +2253,7 @@
 
     invoke-direct {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$i;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->L0(Loe/o;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;)V
+    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->L0(Lrg/o;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;)V
 
     goto :goto_4
 
@@ -2264,32 +2264,32 @@
 
     invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$e;-><init>()V
 
-    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->L0(Loe/o;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;)V
+    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->L0(Lrg/o;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;)V
 
     goto :goto_4
 
     .line 14
     :cond_7
     :goto_3
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->K0(Loe/o;)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->K0(Lrg/o;)V
 
     :goto_4
     return-void
 .end method
 
-.method public final K0(Loe/o;)V
+.method public final K0(Lrg/o;)V
     .locals 4
 
     .line 1
     :try_start_0
-    iget-object p1, p1, Loe/o;->b:Ljava/lang/String;
+    iget-object p1, p1, Lrg/o;->b:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->d1(Ljava/lang/String;)J
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->h1(Ljava/lang/String;)J
 
     move-result-wide v0
 
     .line 2
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:J
 
     sub-long/2addr v0, v2
 
@@ -2309,104 +2309,7 @@
     return-void
 .end method
 
-.method public final L0(Loe/o;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Loe/o;",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a<",
-            "Ljava/lang/Long;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->e1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
-
-    iget-object p1, p1, Loe/o;->b:Ljava/lang/String;
-
-    .line 2
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, p1, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Landroid/net/Uri;ILcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;)V
-
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$h;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$h;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
-
-    const/4 p2, 0x1
-
-    .line 3
-    invoke-virtual {p0, v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->N0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)V
-
-    return-void
-.end method
-
-.method public final M0(J)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-.end method
-
-.method public final N0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)V
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
-            "TT;>;",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b<",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0<",
-            "TT;>;>;I)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;->l(Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$e;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)J
-
-    move-result-wide v5
-
-    .line 2
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->V0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
-
-    new-instance p3, Lcom/tmapmobility/tmap/exoplayer2/source/u;
-
-    iget-wide v2, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->a:J
-
-    iget-object v4, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
-
-    move-object v1, p3
-
-    invoke-direct/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/source/u;-><init>(JLcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;J)V
-
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->c:I
-
-    invoke-virtual {p2, p3, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;->z(Lcom/tmapmobility/tmap/exoplayer2/source/u;I)V
-
-    return-void
-.end method
-
-.method public O(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
+.method public L(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
     .locals 20
 
     move-object/from16 v0, p0
@@ -2424,28 +2327,28 @@
 
     move-result v2
 
-    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     sub-int v3, v2, v3
 
     move v6, v3
 
     .line 2
-    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     .line 3
-    invoke-virtual {v2, v3}, Loe/c;->d(I)Loe/g;
+    invoke-virtual {v2, v3}, Lrg/c;->d(I)Lrg/g;
 
     move-result-object v2
 
-    iget-wide v4, v2, Loe/g;->b:J
+    iget-wide v4, v2, Lrg/g;->b:J
 
-    invoke-virtual {v0, v1, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->b0(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;J)Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+    invoke-virtual {v0, v1, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->S(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;J)Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
 
     move-result-object v12
 
     .line 4
-    invoke-virtual/range {p0 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->S(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)Lcom/tmapmobility/tmap/exoplayer2/drm/b$a;
+    invoke-virtual/range {p0 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->P(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)Lcom/tmapmobility/tmap/exoplayer2/drm/b$a;
 
     move-result-object v10
 
@@ -2454,25 +2357,25 @@
 
     move-object v2, v1
 
-    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
+    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
 
     add-int/2addr v3, v4
 
-    iget-object v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v4, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k0:Lne/b;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k0:Lqg/b;
 
     iget-object v7, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k:Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;
 
-    iget-object v8, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+    iget-object v8, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
 
     iget-object v9, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p:Lcom/tmapmobility/tmap/exoplayer2/drm/c;
 
     iget-object v11, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
-    iget-wide v13, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
+    iget-wide v13, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
-    iget-object v15, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+    iget-object v15, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;
 
     move-object/from16 p1, v1
 
@@ -2480,19 +2383,19 @@
 
     move-object/from16 v17, v1
 
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->c1:Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->e1:Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;
 
     move-object/from16 v18, v1
 
     .line 6
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->f0()Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->W()Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;
 
     move-result-object v19
 
-    invoke-direct/range {v2 .. v19}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;-><init>(ILoe/c;Lne/b;ILcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/drm/b$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;JLcom/tmapmobility/tmap/exoplayer2/upstream/c0;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)V
+    invoke-direct/range {v2 .. v19}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;-><init>(ILrg/c;Lqg/b;ILcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/drm/b$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;JLcom/tmapmobility/tmap/exoplayer2/upstream/a0;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$b;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)V
 
     .line 7
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     move-object/from16 v2, p1
 
@@ -2503,18 +2406,115 @@
     return-object v2
 .end method
 
+.method public final L0(Lrg/o;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lrg/o;",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a<",
+            "Ljava/lang/Long;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
+
+    iget-object p1, p1, Lrg/o;->b:Ljava/lang/String;
+
+    .line 2
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, p1, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Landroid/net/Uri;ILcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;)V
+
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$h;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$h;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
+
+    const/4 p2, 0x1
+
+    .line 3
+    invoke-virtual {p0, v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->N0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)V
+
+    return-void
+.end method
+
+.method public final M0(J)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->c1:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public final N0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
+            "TT;>;",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0<",
+            "TT;>;>;I)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;->l(Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$e;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)J
+
+    move-result-wide v5
+
+    .line 2
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;
+
+    new-instance p3, Lcom/tmapmobility/tmap/exoplayer2/source/u;
+
+    iget-wide v2, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->a:J
+
+    iget-object v4, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+
+    move-object v1, p3
+
+    invoke-direct/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/source/u;-><init>(JLcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;J)V
+
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;->c:I
+
+    invoke-virtual {p2, p3, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/k0$a;->z(Lcom/tmapmobility/tmap/exoplayer2/source/u;I)V
+
+    return-void
+.end method
+
 .method public final O0()V
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->c1:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;->h()Z
 
@@ -2526,7 +2526,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;->i()Z
 
@@ -2537,19 +2537,19 @@
     const/4 v0, 0x1
 
     .line 4
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:Z
 
     return-void
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Y0:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->a1:Ljava/lang/Object;
 
     monitor-enter v0
 
     .line 6
     :try_start_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Landroid/net/Uri;
 
     .line 7
     monitor-exit v0
@@ -2559,20 +2559,20 @@
     const/4 v0, 0x0
 
     .line 8
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:Z
 
     .line 9
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->e1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
 
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->W0:Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Y0:Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
 
     const/4 v4, 0x4
 
-    invoke-direct {v0, v2, v1, v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Landroid/net/Uri;ILcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;)V
+    invoke-direct {v0, v2, v1, v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Landroid/net/Uri;ILcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;)V
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$f;
 
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
@@ -2582,7 +2582,7 @@
     move-result v2
 
     .line 11
-    invoke-virtual {p0, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->N0(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->N0(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)V
 
     return-void
 
@@ -2604,7 +2604,7 @@
     move-object/from16 v0, p0
 
     .line 1
-    invoke-static/range {p1 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E1(J)J
+    invoke-static/range {p1 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H1(J)J
 
     move-result-wide v5
 
@@ -2633,13 +2633,13 @@
 
     .line 4
     :cond_0
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v1, v1, Loe/c;->j:Loe/l;
+    iget-object v1, v1, Lrg/c;->j:Lrg/l;
 
     if-eqz v1, :cond_1
 
-    iget-wide v1, v1, Loe/l;->c:J
+    iget-wide v1, v1, Lrg/l;->c:J
 
     cmp-long v3, v1, v7
 
@@ -2659,7 +2659,7 @@
     sub-long v1, p1, p3
 
     .line 6
-    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E1(J)J
+    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H1(J)J
 
     move-result-wide v1
 
@@ -2677,9 +2677,9 @@
 
     .line 7
     :cond_2
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-wide v3, v3, Loe/c;->c:J
+    iget-wide v3, v3, Lrg/c;->c:J
 
     cmp-long v11, v3, v7
 
@@ -2707,7 +2707,7 @@
     if-eqz v11, :cond_4
 
     .line 10
-    invoke-static/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->t(JJJ)J
+    invoke-static/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->t(JJJ)J
 
     move-result-wide v3
 
@@ -2715,20 +2715,20 @@
 
     .line 11
     :cond_4
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v1, v1, Loe/c;->j:Loe/l;
+    iget-object v1, v1, Lrg/c;->j:Lrg/l;
 
     if-eqz v1, :cond_5
 
-    iget-wide v1, v1, Loe/l;->b:J
+    iget-wide v1, v1, Lrg/l;->b:J
 
     cmp-long v11, v1, v7
 
     if-eqz v11, :cond_5
 
     .line 12
-    invoke-static/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->t(JJJ)J
+    invoke-static/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->t(JJJ)J
 
     move-result-wide v3
 
@@ -2742,7 +2742,7 @@
 
     .line 13
     :cond_6
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
     iget-wide v1, v1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;->a:J
 
@@ -2754,13 +2754,13 @@
 
     .line 14
     :cond_7
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v2, v1, Loe/c;->j:Loe/l;
+    iget-object v2, v1, Lrg/c;->j:Lrg/l;
 
     if-eqz v2, :cond_8
 
-    iget-wide v5, v2, Loe/l;->a:J
+    iget-wide v5, v2, Lrg/l;->a:J
 
     cmp-long v2, v5, v7
 
@@ -2772,7 +2772,7 @@
 
     .line 15
     :cond_8
-    iget-wide v1, v1, Loe/c;->g:J
+    iget-wide v1, v1, Lrg/c;->g:J
 
     cmp-long v5, v1, v7
 
@@ -2811,7 +2811,7 @@
     sub-long v1, p1, v1
 
     .line 19
-    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E1(J)J
+    invoke-static {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H1(J)J
 
     move-result-wide v11
 
@@ -2820,7 +2820,7 @@
     move-wide v15, v9
 
     .line 20
-    invoke-static/range {v11 .. v16}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->t(JJJ)J
+    invoke-static/range {v11 .. v16}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->t(JJJ)J
 
     move-result-wide v1
 
@@ -2842,14 +2842,14 @@
 
     .line 22
     :cond_c
-    iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v6, v6, Loe/c;->j:Loe/l;
+    iget-object v6, v6, Lrg/c;->j:Lrg/l;
 
     if-eqz v6, :cond_d
 
     .line 23
-    iget v6, v6, Loe/l;->d:F
+    iget v6, v6, Lrg/l;->d:F
 
     goto :goto_4
 
@@ -2868,14 +2868,14 @@
 
     .line 25
     :cond_e
-    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v5, v5, Loe/c;->j:Loe/l;
+    iget-object v5, v5, Lrg/c;->j:Lrg/l;
 
     if-eqz v5, :cond_f
 
     .line 26
-    iget v5, v5, Loe/l;->e:F
+    iget v5, v5, Lrg/l;->e:F
 
     goto :goto_5
 
@@ -2894,13 +2894,13 @@
     if-nez v11, :cond_11
 
     .line 27
-    iget-object v11, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v11, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
-    iget-object v11, v11, Loe/c;->j:Loe/l;
+    iget-object v11, v11, Lrg/c;->j:Lrg/l;
 
     if-eqz v11, :cond_10
 
-    iget-wide v11, v11, Loe/l;->a:J
+    iget-wide v11, v11, Lrg/l;->a:J
 
     cmp-long v7, v11, v7
 
@@ -2947,12 +2947,12 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
+    iput-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$LiveConfiguration;
 
     return-void
 .end method
 
-.method public h0(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
+.method public c0(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
     .locals 2
     .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
         .annotation build Landroidx/annotation/Nullable;
@@ -2960,7 +2960,7 @@
     .end param
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
 
     .line 2
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p:Lcom/tmapmobility/tmap/exoplayer2/drm/c;
@@ -2974,7 +2974,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->f0()Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->W()Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;
 
     move-result-object v1
 
@@ -3000,7 +3000,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->e1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
 
     .line 7
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
@@ -3009,14 +3009,14 @@
 
     invoke-direct {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     .line 8
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->y()Landroid/os/Handler;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->y()Landroid/os/Handler;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
     .line 9
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->O0()V
@@ -3025,21 +3025,21 @@
     return-void
 .end method
 
-.method public j0()V
+.method public i0()V
     .locals 4
 
     const/4 v0, 0x0
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:Z
 
     const/4 v1, 0x0
 
     .line 2
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->e1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->g1:Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
 
     .line 3
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     if-eqz v2, :cond_0
 
@@ -3047,23 +3047,23 @@
     invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;->j()V
 
     .line 5
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     :cond_0
     const-wide/16 v2, 0x0
 
     .line 6
-    iput-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:J
+    iput-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
 
     .line 7
-    iput-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p1:J
+    iput-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:J
 
     .line 8
     iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i:Z
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     goto :goto_0
 
@@ -3071,18 +3071,18 @@
     move-object v2, v1
 
     :goto_0
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Loe/c;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->o1:Lrg/c;
 
     .line 9
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->l1:Landroid/net/Uri;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->n1:Landroid/net/Uri;
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/net/Uri;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->m1:Landroid/net/Uri;
 
     .line 10
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Ljava/io/IOException;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->j1:Ljava/io/IOException;
 
     .line 11
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
     if-eqz v2, :cond_2
 
@@ -3090,32 +3090,32 @@
     invoke-virtual {v2, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 13
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
     :cond_2
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 14
-    iput-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->q1:J
-
-    .line 15
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:I
-
-    .line 16
     iput-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
 
-    .line 17
+    .line 15
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
 
+    .line 16
+    iput-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u1:J
+
+    .line 17
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->v1:I
+
     .line 18
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
     .line 19
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k0:Lne/b;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k0:Lqg/b;
 
-    invoke-virtual {v0}, Lne/b;->i()V
+    invoke-virtual {v0}, Lqg/b;->i()V
 
     .line 20
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->p:Lcom/tmapmobility/tmap/exoplayer2/drm/c;
@@ -3123,6 +3123,15 @@
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/drm/c;->release()V
 
     return-void
+.end method
+
+.method public j()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h:Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    return-object v0
 .end method
 
 .method public maybeThrowSourceInfoRefreshError()V
@@ -3134,27 +3143,18 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;->maybeThrowError()V
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;->maybeThrowError()V
 
     return-void
-.end method
-
-.method public t()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h:Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    return-object v0
 .end method
 
 .method public final t0()J
     .locals 2
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->r1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->t1:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -3181,7 +3181,7 @@
     invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;->A()V
 
     .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->Z0:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Landroid/util/SparseArray;
 
     iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/DashMediaPeriod;->a:I
 
@@ -3194,13 +3194,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->f1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->h1:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
 
     new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;
 
     invoke-direct {v1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;)V
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->j(Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;Lcom/tmapmobility/tmap/exoplayer2/util/d0$b;)V
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/e0;->j(Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;Lcom/tmapmobility/tmap/exoplayer2/util/e0$b;)V
 
     return-void
 .end method
@@ -3209,7 +3209,7 @@
     .locals 4
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u1:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -3223,7 +3223,7 @@
 
     .line 2
     :cond_0
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->s1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->u1:J
 
     :cond_1
     return-void
@@ -3233,9 +3233,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->i1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->k1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->b1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;->d1:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 

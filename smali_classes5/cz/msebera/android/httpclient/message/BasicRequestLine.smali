@@ -3,7 +3,7 @@
 .source "BasicRequestLine.java"
 
 # interfaces
-.implements Ldf/a0;
+.implements Lhh/a0;
 .implements Ljava/lang/Cloneable;
 .implements Ljava/io/Serializable;
 
@@ -35,7 +35,7 @@
     const-string v0, "Method"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -46,7 +46,7 @@
     const-string p1, "URI"
 
     .line 3
-    invoke-static {p2, p1}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, p1}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -57,7 +57,7 @@
     const-string p1, "Version"
 
     .line 4
-    invoke-static {p3, p1}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p3, p1}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -117,11 +117,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lmg/j;->b:Lmg/j;
+    sget-object v0, Lqi/j;->b:Lqi/j;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p0}, Lmg/j;->b(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Ldf/a0;)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-virtual {v0, v1, p0}, Lqi/j;->d(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lhh/a0;)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     move-result-object v0
 

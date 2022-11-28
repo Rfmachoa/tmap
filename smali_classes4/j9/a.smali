@@ -1,83 +1,71 @@
 .class public Lj9/a;
-.super Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
-.source "QueryDeleteDevice.java"
+.super Landroid/database/sqlite/SQLiteOpenHelper;
+.source "DatabaseOpenHelper.java"
+
+
+# static fields
+.field public static final a:I = 0x5
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x5
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getExecutor()Lretrofit2/Call;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
-            ">;"
-        }
-    .end annotation
+.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 1
+
+    const-string v0, "CREATE TABLE IF NOT EXISTS log (_id INTEGER PRIMARY KEY AUTOINCREMENT, url TEXT NOT NULL, token TEXT NOT NULL, log TEXT NOT NULL, createdAt INTEGER NOT NULL);"
 
     .line 1
-    invoke-virtual {p0}, Lj9/a;->getHeaders()Ljava/util/Map;
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string v0, "CREATE INDEX IF NOT EXISTS createdAt_idx ON log (createdAt);"
 
     .line 2
-    invoke-static {}, Lp8/d;->c()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    move-result-object v1
-
-    .line 3
-    iget-object v2, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->d:Landroid/content/Context;
-
-    invoke-static {v2}, Lua/d;->d(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 4
-    iget-object v3, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->c:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;
-
-    invoke-interface {v3, v0, v1, v2}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;->deleteDevice(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public getHeaders()Ljava/util/Map;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 0
+
+    const/4 p3, 0x5
+
+    if-ge p2, p3, :cond_0
+
+    const-string p2, "DROP TABLE IF EXISTS events"
 
     .line 1
-    invoke-super {p0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->getHeaders()Ljava/util/Map;
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string p2, "DROP TABLE IF EXISTS log"
 
     .line 2
-    invoke-static {}, Lp8/d;->a()Ljava/lang/String;
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    move-result-object v1
+    const-string p2, "CREATE TABLE IF NOT EXISTS log (_id INTEGER PRIMARY KEY AUTOINCREMENT, url TEXT NOT NULL, token TEXT NOT NULL, log TEXT NOT NULL, createdAt INTEGER NOT NULL);"
 
-    const-string v2, "App-Version"
+    .line 3
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p2, "CREATE INDEX IF NOT EXISTS createdAt_idx ON log (createdAt);"
 
-    return-object v0
+    .line 4
+    invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

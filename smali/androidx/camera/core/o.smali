@@ -1,38 +1,78 @@
-.class public final synthetic Landroidx/camera/core/o;
+.class public interface abstract Landroidx/camera/core/o;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
-
-# interfaces
-.implements Ln/a;
+.source "CameraFilter.java"
 
 
-# instance fields
-.field public final synthetic a:Landroidx/camera/core/CameraX;
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
+# static fields
+.field public static final a:Lb0/s0;
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/CameraX;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Landroidx/camera/core/o;->a:Landroidx/camera/core/CameraX;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v0}, Lb0/s0;->a(Ljava/lang/Object;)Lb0/s0;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/camera/core/o;->a:Lb0/s0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a()Lb0/s0;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    iget-object v0, p0, Landroidx/camera/core/o;->a:Landroidx/camera/core/CameraX;
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
-    check-cast p1, Ljava/lang/Void;
+    .line 1
+    sget-object v0, Landroidx/camera/core/o;->a:Lb0/s0;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/CameraX;->b(Landroidx/camera/core/CameraX;Ljava/lang/Void;)Landroidx/camera/core/CameraX;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public abstract b(Ljava/util/List;)Ljava/util/List;
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    return-object p1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/CameraInfo;",
+            ">;)",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/CameraInfo;",
+            ">;"
+        }
+    .end annotation
 .end method

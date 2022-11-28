@@ -1,42 +1,19 @@
-.class public final Lcom/skt/tmap/dialog/y$d;
+.class public Lcom/skt/tmap/dialog/y$d;
 .super Ljava/lang/Object;
-.source "TmapSatisfactionDialog.kt"
+.source "TimePredictionDialog.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/dialog/y;->onStart()V
+    value = Lcom/skt/tmap/dialog/y;->x()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x1
     name = null
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0010\u0007\u001a\u00020\u00032\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00010\u00000\u0000H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u00a8\u0006\u0006"
-    }
-    d2 = {
-        "Landroid/content/DialogInterface;",
-        "kotlin.jvm.PlatformType",
-        "it",
-        "Lkotlin/d1;",
-        "onDismiss",
-        "(Landroid/content/DialogInterface;)V",
-        "com/skt/tmap/dialog/TmapSatisfactionDialog$onStart$1$2",
-        "<anonymous>"
-    }
-    k = 0x3
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
 .end annotation
 
 
@@ -47,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/dialog/y;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/skt/tmap/dialog/y$d;->a:Lcom/skt/tmap/dialog/y;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -57,20 +43,37 @@
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
+.method public onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "resp",
+            "errorType",
+            "errorCode",
+            "errorMessage"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/dialog/y$d;->a:Lcom/skt/tmap/dialog/y;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/dialog/y;->n()Lcom/skt/tmap/dialog/y$b;
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    const/4 p2, 0x0
 
-    invoke-interface {p1}, Lcom/skt/tmap/dialog/y$b;->onDismiss()V
+    invoke-static {p1, p4, p2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    :cond_0
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
+
     return-void
 .end method

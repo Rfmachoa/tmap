@@ -12,6 +12,7 @@
         Lcom/google/firebase/datatransport/R$id;,
         Lcom/google/firebase/datatransport/R$integer;,
         Lcom/google/firebase/datatransport/R$layout;,
+        Lcom/google/firebase/datatransport/R$raw;,
         Lcom/google/firebase/datatransport/R$string;,
         Lcom/google/firebase/datatransport/R$style;,
         Lcom/google/firebase/datatransport/R$styleable;

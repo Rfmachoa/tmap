@@ -68,9 +68,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/car/app/model/h;
+    new-instance v0, Landroidx/car/app/model/k;
 
-    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/h;-><init>(Landroidx/car/app/model/OnCheckedChangeDelegateImpl$OnCheckedChangeListenerStub;Z)V
+    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/k;-><init>(Landroidx/car/app/model/OnCheckedChangeDelegateImpl$OnCheckedChangeListenerStub;Z)V
 
     const-string p1, "onCheckedChange"
 

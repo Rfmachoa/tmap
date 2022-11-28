@@ -34,7 +34,7 @@
 
     iget-boolean v1, p0, Lcom/google/firebase/database/connection/d;->b:Z
 
-    invoke-static {v0, v1, p1}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->c(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZLjava/util/Map;)V
+    invoke-static {v0, v1, p1}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->d(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZLjava/util/Map;)V
 
     return-void
 .end method

@@ -53,20 +53,20 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
     const-string v1, "popup_tap.nugu_policy"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$k$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$k;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$k;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/p0;->a(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/v0;->a(Landroid/app/Activity;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$k$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$k;
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->Hb(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->ac(Z)V
 
     :cond_0
     return-void

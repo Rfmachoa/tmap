@@ -1,16 +1,6 @@
 .class final Lcom/google/android/gms/dynamite/zzd;
 .super Ljava/lang/ThreadLocal;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/ThreadLocal<",
-        "Ljava/lang/Long;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # direct methods

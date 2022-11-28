@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/gms/auth/api/accounttransfer/AuthenticatorTransferCompletionStatus;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

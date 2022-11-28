@@ -104,9 +104,9 @@
     return-void
 .end method
 
-.method public onResponse(Lc4/i;)V
+.method public onResponse(Lz5/i;)V
     .locals 0
-    .param p1    # Lc4/i;
+    .param p1    # Lz5/i;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param

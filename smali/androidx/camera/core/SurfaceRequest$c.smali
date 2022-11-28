@@ -39,20 +39,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/SurfaceRequest;Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$terminationFuture",
-            "val$sessionStatusCompleter",
-            "val$surfaceRequestString"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$c;->d:Landroidx/camera/core/SurfaceRequest;
@@ -76,14 +62,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$c;->a:Lcom/google/common/util/concurrent/ListenableFuture;
@@ -97,14 +75,6 @@
 
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
 
     .line 1
     instance-of v0, p1, Ljava/util/concurrent/CancellationException;
@@ -124,7 +94,7 @@
 
     const-string v4, " cancelled."
 
-    invoke-static {v2, v3, v4}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -134,7 +104,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lr1/o;->m(Z)V
+    invoke-static {p1}, Landroidx/core/util/p;->n(Z)V
 
     goto :goto_0
 
@@ -156,14 +126,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     check-cast p1, Landroid/view/Surface;

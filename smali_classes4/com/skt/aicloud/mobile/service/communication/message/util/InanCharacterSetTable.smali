@@ -565,7 +565,7 @@
     .line 2
     new-instance v1, Lcom/skt/aicloud/mobile/service/communication/message/util/InanCharacterSetTable;
 
-    const-string/jumbo v2, "unknown"
+    const-string v2, "unknown"
 
     const/4 v4, 0x2
 

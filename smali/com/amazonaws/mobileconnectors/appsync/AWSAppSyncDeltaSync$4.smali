@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;->runBaseQuery(Li4/a;)V
+    value = Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;->runBaseQuery(Lf6/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,17 +29,17 @@
 
 .field public final synthetic val$baseQueryInitiationTime:J
 
-.field public final synthetic val$fetchPolicy:Li4/a;
+.field public final synthetic val$fetchPolicy:Lf6/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;Li4/a;JLjava/util/concurrent/CountDownLatch;)V
+.method public constructor <init>(Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;Lf6/a;JLjava/util/concurrent/CountDownLatch;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;
 
-    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;->val$fetchPolicy:Li4/a;
+    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;->val$fetchPolicy:Lf6/a;
 
     iput-wide p3, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;->val$baseQueryInitiationTime:J
 
@@ -123,16 +123,16 @@
     return-void
 .end method
 
-.method public onResponse(Lc4/i;)V
+.method public onResponse(Lz5/i;)V
     .locals 5
-    .param p1    # Lc4/i;
+    .param p1    # Lz5/i;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/i<",
+            "Lz5/i<",
             "Lcom/apollographql/apollo/api/b$a;",
             ">;)V"
         }
@@ -148,9 +148,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
-    sget-object v0, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->NETWORK_ONLY:Li4/a;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->NETWORK_ONLY:Lf6/a;
 
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;->val$fetchPolicy:Li4/a;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;->val$fetchPolicy:Lf6/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -268,7 +268,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lc4/i;)V
+    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lz5/i;)V
 
     .line 10
     :cond_1

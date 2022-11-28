@@ -12,6 +12,8 @@
 
 .field public goalPosY:D
 
+.field public isEqualsLinkIdList:Z
+
 .field public isMainRoadChanged:Z
 
 .field public nRouteOption:I

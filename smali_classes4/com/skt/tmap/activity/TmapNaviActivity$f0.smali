@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->wb(Ljava/lang/String;)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Ob(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,11 +55,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$f0;->b:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->Y()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->h0()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -77,11 +77,11 @@
     .line 3
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$f0;->b:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->R0(Lcom/skt/tmap/data/TmapDrivingData;)V
+    invoke-virtual {v1, v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->c1(Lcom/skt/tmap/data/TmapDrivingData;)V
 
     return-void
 .end method

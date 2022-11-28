@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/server/response/SafeParcelResponse;
 .super Lcom/google/android/gms/common/server/response/FastSafeParcelableJsonResponse;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -308,7 +308,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_1
 
     .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse;->getFieldMappings()Ljava/util/Map;
@@ -333,7 +333,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -371,7 +371,38 @@
     :catch_0
     move-exception p0
 
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object v0, v1, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zag:Ljava/lang/Class;
+
     .line 9
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Could not access object of type "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_1
+    move-exception p0
+
     new-instance p1, Ljava/lang/IllegalStateException;
 
     iget-object v0, v1, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zag:Ljava/lang/Class;
@@ -391,94 +422,22 @@
 
     move-result-object v0
 
-    const-string v1, "Could not access object of type "
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    .line 11
-    :cond_1
-    new-instance v0, Ljava/lang/String;
-
-    .line 12
-    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_1
-    invoke-direct {p1, v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    .line 13
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    iget-object v0, v1, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zag:Ljava/lang/Class;
-
-    .line 14
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
     const-string v1, "Could not instantiate an object of type "
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
     invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_2
-
-    .line 15
-    :cond_2
-    new-instance v0, Ljava/lang/String;
-
-    .line 16
-    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_2
     invoke-direct {p1, v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw p1
 
-    :cond_3
+    :cond_1
     return-void
 .end method
 
 .method private final zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;)V"
-        }
-    .end annotation
 
     .line 1
     iget p1, p1, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaf:I
@@ -547,18 +506,6 @@
 
 .method private final zaH(Ljava/lang/StringBuilder;Ljava/util/Map;Landroid/os/Parcel;)V
     .locals 10
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/StringBuilder;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;>;",
-            "Landroid/os/Parcel;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     new-instance v0, Landroid/util/SparseArray;
@@ -693,11 +640,9 @@
     .line 14
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/16 p2, 0x24
+    const-string p2, "Unknown field out type = "
 
-    const-string p3, "Unknown field out type = "
-
-    invoke-static {p2, p3, v3}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {p2, v3}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1361,11 +1306,9 @@
     :cond_b
     new-instance p1, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader$ParseException;
 
-    const/16 v0, 0x25
+    const-string v0, "Overread allowed size end="
 
-    const-string v1, "Overread allowed size end="
-
-    invoke-static {v0, v1, p2}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p2}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1438,11 +1381,9 @@
     .line 1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const/16 p2, 0x1a
+    const-string p2, "Unknown type = "
 
-    const-string v0, "Unknown type = "
-
-    invoke-static {p2, v0, p1}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {p2, p1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1557,16 +1498,6 @@
 
 .method private static final zaJ(Ljava/lang/StringBuilder;Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;Ljava/lang/Object;)V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/StringBuilder;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/Object;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     iget-boolean v0, p1, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zab:Z
@@ -2385,16 +2316,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/math/BigDecimal;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2427,17 +2348,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigDecimal;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2504,16 +2414,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/math/BigInteger;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2546,17 +2446,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigInteger;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2623,17 +2512,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2699,15 +2577,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "D)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2738,17 +2607,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Double;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2814,15 +2672,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "F)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2853,17 +2702,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Float;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -2933,17 +2771,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Integer;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V
@@ -3013,17 +2840,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/server/response/SafeParcelResponse;->zaG(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)V

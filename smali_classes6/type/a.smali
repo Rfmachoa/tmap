@@ -3,7 +3,7 @@
 .source "UpdateUserContextInfoInput.java"
 
 # interfaces
-.implements Lc4/g;
+.implements Lz5/g;
 
 
 # annotations
@@ -20,10 +20,10 @@
     .end annotation
 .end field
 
-.field public final b:Lc4/d;
+.field public final b:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;"
@@ -31,30 +31,30 @@
     .end annotation
 .end field
 
-.field public final c:Lc4/d;
+.field public final c:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final d:Lc4/d;
+.field public final d:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final e:Lc4/d;
+.field public final e:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;"
@@ -62,30 +62,30 @@
     .end annotation
 .end field
 
-.field public final f:Lc4/d;
+.field public final f:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final g:Lc4/d;
+.field public final g:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final h:Lc4/d;
+.field public final h:Lz5/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;"
@@ -95,7 +95,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lc4/d;Lc4/d;Lc4/d;Lc4/d;Lc4/d;Lc4/d;Lc4/d;)V
+.method public constructor <init>(Ljava/lang/String;Lz5/d;Lz5/d;Lz5/d;Lz5/d;Lz5/d;Lz5/d;Lz5/d;)V
     .locals 0
     .param p1    # Ljava/lang/String;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -128,27 +128,27 @@
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/String;",
             ">;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/String;",
             ">;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/Long;",
             ">;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/lang/String;",
             ">;",
-            "Lc4/d<",
+            "Lz5/d<",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;)V"
@@ -162,25 +162,25 @@
     iput-object p1, p0, Ltype/a;->a:Ljava/lang/String;
 
     .line 3
-    iput-object p2, p0, Ltype/a;->b:Lc4/d;
+    iput-object p2, p0, Ltype/a;->b:Lz5/d;
 
     .line 4
-    iput-object p3, p0, Ltype/a;->c:Lc4/d;
+    iput-object p3, p0, Ltype/a;->c:Lz5/d;
 
     .line 5
-    iput-object p4, p0, Ltype/a;->d:Lc4/d;
+    iput-object p4, p0, Ltype/a;->d:Lz5/d;
 
     .line 6
-    iput-object p5, p0, Ltype/a;->e:Lc4/d;
+    iput-object p5, p0, Ltype/a;->e:Lz5/d;
 
     .line 7
-    iput-object p6, p0, Ltype/a;->f:Lc4/d;
+    iput-object p6, p0, Ltype/a;->f:Lz5/d;
 
     .line 8
-    iput-object p7, p0, Ltype/a;->g:Lc4/d;
+    iput-object p7, p0, Ltype/a;->g:Lz5/d;
 
     .line 9
-    iput-object p8, p0, Ltype/a;->h:Lc4/d;
+    iput-object p8, p0, Ltype/a;->h:Lz5/d;
 
     return-void
 .end method
@@ -194,65 +194,65 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Ltype/a;)Lc4/d;
+.method public static synthetic b(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->b:Lc4/d;
+    iget-object p0, p0, Ltype/a;->b:Lz5/d;
 
     return-object p0
 .end method
 
-.method public static synthetic c(Ltype/a;)Lc4/d;
+.method public static synthetic c(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->c:Lc4/d;
+    iget-object p0, p0, Ltype/a;->c:Lz5/d;
 
     return-object p0
 .end method
 
-.method public static synthetic d(Ltype/a;)Lc4/d;
+.method public static synthetic d(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->d:Lc4/d;
+    iget-object p0, p0, Ltype/a;->d:Lz5/d;
 
     return-object p0
 .end method
 
-.method public static synthetic e(Ltype/a;)Lc4/d;
+.method public static synthetic e(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->e:Lc4/d;
+    iget-object p0, p0, Ltype/a;->e:Lz5/d;
 
     return-object p0
 .end method
 
-.method public static synthetic f(Ltype/a;)Lc4/d;
+.method public static synthetic f(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->f:Lc4/d;
+    iget-object p0, p0, Ltype/a;->f:Lz5/d;
 
     return-object p0
 .end method
 
-.method public static synthetic g(Ltype/a;)Lc4/d;
+.method public static synthetic g(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->g:Lc4/d;
+    iget-object p0, p0, Ltype/a;->g:Lz5/d;
 
     return-object p0
 .end method
 
-.method public static synthetic h(Ltype/a;)Lc4/d;
+.method public static synthetic h(Ltype/a;)Lz5/d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ltype/a;->h:Lc4/d;
+    iget-object p0, p0, Ltype/a;->h:Lz5/d;
 
     return-object p0
 .end method
@@ -285,9 +285,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->b:Lc4/d;
+    iget-object v0, p0, Ltype/a;->b:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/List;
 
@@ -300,9 +300,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->c:Lc4/d;
+    iget-object v0, p0, Ltype/a;->c:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
@@ -315,9 +315,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->d:Lc4/d;
+    iget-object v0, p0, Ltype/a;->d:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
@@ -339,16 +339,16 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->e:Lc4/d;
+    iget-object v0, p0, Ltype/a;->e:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public marshaller()Lc4/e;
+.method public marshaller()Lz5/e;
     .locals 1
 
     .line 1
@@ -365,9 +365,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->f:Lc4/d;
+    iget-object v0, p0, Ltype/a;->f:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;
 
@@ -391,9 +391,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->g:Lc4/d;
+    iget-object v0, p0, Ltype/a;->g:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
@@ -415,9 +415,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ltype/a;->h:Lc4/d;
+    iget-object v0, p0, Ltype/a;->h:Lz5/d;
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/List;
 

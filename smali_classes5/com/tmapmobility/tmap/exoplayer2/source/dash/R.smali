@@ -12,7 +12,6 @@
         Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$id;,
         Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$integer;,
         Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$layout;,
-        Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$menu;,
         Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$string;,
         Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$style;,
         Lcom/tmapmobility/tmap/exoplayer2/source/dash/R$styleable;

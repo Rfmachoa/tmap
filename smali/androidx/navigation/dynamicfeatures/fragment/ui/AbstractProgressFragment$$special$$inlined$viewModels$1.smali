@@ -3,7 +3,7 @@
 .source "FragmentViewModelLazy.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroidx/fragment/app/Fragment;",
         ">;"
     }

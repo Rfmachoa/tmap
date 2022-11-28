@@ -3,7 +3,7 @@
 .source "AWSAppSyncClient.java"
 
 # interfaces
-.implements Lq4/a;
+.implements Ln6/a;
 
 
 # annotations

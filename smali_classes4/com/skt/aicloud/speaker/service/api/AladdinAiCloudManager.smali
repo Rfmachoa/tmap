@@ -15,73 +15,69 @@
 
 
 # static fields
-.field public static final A1:Ljava/lang/String; = "flow_code"
+.field public static final A1:Ljava/lang/String; = "multi_modal_count"
 
-.field public static final B1:Ljava/lang/String; = "client_version"
+.field public static final B1:Ljava/lang/String; = "access_token"
 
-.field public static final C1:Ljava/lang/String; = "domain_types"
+.field public static final C1:Ljava/lang/String; = "flow_code"
 
-.field public static final D1:Ljava/lang/String; = "M"
+.field public static final D1:Ljava/lang/String; = "client_version"
 
-.field public static final E1:Ljava/lang/String; = "S"
+.field public static final E1:Ljava/lang/String; = "domain_types"
 
-.field public static final F1:Ljava/lang/String; = "V"
+.field public static final F1:Ljava/lang/String; = "M"
 
-.field public static final G1:Ljava/lang/String; = "PIF01"
+.field public static final G1:Ljava/lang/String; = "S"
 
-.field public static final H1:Ljava/lang/String; = "event"
+.field public static final H1:Ljava/lang/String; = "V"
 
-.field public static final I1:I = 0x0
+.field public static final I1:Ljava/lang/String; = "PIF01"
 
-.field public static final J1:Ljava/lang/String; = "Command"
+.field public static final J1:Ljava/lang/String; = "event"
 
-.field public static final K1:Ljava/lang/String; = "21"
+.field public static final K1:I = 0x0
 
-.field public static final L1:Ljava/lang/String; = "10"
+.field public static final L1:Ljava/lang/String; = "Command"
 
-.field public static final M1:Ljava/lang/String; = "80"
+.field public static final M1:Ljava/lang/String; = "21"
 
-.field public static final N1:Ljava/lang/String; = "Content"
+.field public static final N1:Ljava/lang/String; = "10"
 
-.field public static final O1:Ljava/lang/String; = "0000"
+.field public static final O1:Ljava/lang/String; = "80"
 
-.field public static final P1:Ljava/lang/String; = "2001"
+.field public static final P1:Ljava/lang/String; = "Content"
 
-.field public static final Q1:Ljava/lang/String; = "2004"
+.field public static final Q1:Ljava/lang/String; = "0000"
 
-.field public static final R1:I = 0x0
+.field public static final R1:Ljava/lang/String; = "2001"
 
-.field public static final S1:I = 0x1
+.field public static final S1:Ljava/lang/String; = "2004"
 
-.field public static final T1:I = 0x2
+.field public static final T1:I = 0x0
 
-.field public static final U1:I = 0x3
+.field public static final U1:I = 0x1
 
-.field public static final V1:I = 0x3
+.field public static final V1:I = 0x2
 
-.field public static final s1:Ljava/lang/String; = "AladdinAiCloudManager"
+.field public static final W1:I = 0x3
 
-.field public static final t1:I = 0x0
+.field public static final X1:I = 0x3
 
-.field public static final u1:I = 0x5
+.field public static final u1:Ljava/lang/String; = "AladdinAiCloudManager"
 
-.field public static final v1:Ljava/lang/String; = "request"
+.field public static final v1:I = 0x0
 
-.field public static final w1:Ljava/lang/String; = "request_id"
+.field public static final w1:I = 0x5
 
-.field public static final x1:Ljava/lang/String; = "request_type"
+.field public static final x1:Ljava/lang/String; = "request"
 
-.field public static final y1:Ljava/lang/String; = "multi_modal_count"
+.field public static final y1:Ljava/lang/String; = "request_id"
 
-.field public static final z1:Ljava/lang/String; = "access_token"
+.field public static final z1:Ljava/lang/String; = "request_type"
 
 
 # instance fields
 .field public K0:I
-
-.field public V0:I
-
-.field public W0:I
 
 .field public X0:I
 
@@ -89,11 +85,11 @@
 
 .field public Z0:I
 
-.field public a1:Ljava/lang/String;
+.field public a1:I
 
 .field public final b:I
 
-.field public b1:Z
+.field public b1:I
 
 .field public final c:Lcom/skt/aicloud/speaker/service/common/ClientStatus;
 
@@ -101,23 +97,23 @@
 
 .field public d:Lcom/skt/aicloud/mobile/service/api/g;
 
-.field public d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+.field public d1:Z
 
 .field public e:I
 
-.field public e1:Landroid/content/Context;
+.field public e1:Ljava/lang/String;
 
 .field public f:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+.field public f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
 .field public g:Ljava/lang/Boolean;
 
-.field public g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+.field public g1:Landroid/content/Context;
 
 .field public final h:Ljava/lang/Object;
 
-.field public h1:Z
+.field public h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
 .field public i:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -129,35 +125,39 @@
     .end annotation
 .end field
 
-.field public i1:Ljava/lang/String;
+.field public i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
 .field public j:I
 
-.field public j1:J
+.field public j1:Z
 
 .field public k:Landroid/os/Handler;
 
 .field public k0:Z
 
-.field public k1:J
+.field public k1:Ljava/lang/String;
 
 .field public l:I
 
-.field public l1:Landroid/os/Handler;
+.field public l1:J
 
-.field public m1:Landroid/os/Handler;
+.field public m1:J
 
-.field public n1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
+.field public n1:Landroid/os/Handler;
 
-.field public o1:Ljava/lang/Runnable;
+.field public o1:Landroid/os/Handler;
 
 .field public p:I
 
-.field public final p1:Lcom/skt/aicloud/sdk/api/AICloudInterface;
+.field public p1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
 
 .field public q1:Ljava/lang/Runnable;
 
-.field public r1:Ljava/lang/Runnable;
+.field public final r1:Lcom/skt/aicloud/sdk/api/AICloudInterface;
+
+.field public s1:Ljava/lang/Runnable;
+
+.field public t1:Ljava/lang/Runnable;
 
 .field public u:I
 
@@ -177,15 +177,15 @@
     .line 3
     new-instance p1, Lcom/skt/aicloud/speaker/service/common/ClientStatus;
 
-    new-instance v0, Lja/e;
+    new-instance v0, Lgc/e;
 
     const-string v1, ""
 
-    invoke-direct {v0, v1, v1}, Lja/e;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v1}, Lgc/e;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    invoke-direct {p1, v1, v2, v0}, Lcom/skt/aicloud/speaker/service/common/ClientStatus;-><init>(Ljava/lang/String;ZLja/e;)V
+    invoke-direct {p1, v1, v2, v0}, Lcom/skt/aicloud/speaker/service/common/ClientStatus;-><init>(Ljava/lang/String;ZLgc/e;)V
 
     iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c:Lcom/skt/aicloud/speaker/service/common/ClientStatus;
 
@@ -252,105 +252,105 @@
     iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->K0:I
 
     .line 16
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->V0:I
-
-    .line 17
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->W0:I
-
-    .line 18
     iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->X0:I
 
-    .line 19
+    .line 17
     iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Y0:I
 
-    .line 20
+    .line 18
     iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Z0:I
+
+    .line 19
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:I
+
+    .line 20
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1:I
 
     const/4 p1, 0x0
 
     .line 21
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
 
     .line 22
-    iput-boolean v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1:Z
+    iput-boolean v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Z
 
     .line 23
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Ljava/lang/String;
 
     .line 24
     sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AsrState;->NOT_INITIALIZED:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     .line 25
-    iput-boolean v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Z
+    iput-boolean v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->j1:Z
 
     .line 26
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Landroid/os/Handler;
 
     .line 27
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     .line 28
     sget-object p1, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;->NONE:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->p1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
 
     .line 29
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$a;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$a;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
 
     .line 30
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$b;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$b;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->p1:Lcom/skt/aicloud/sdk/api/AICloudInterface;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->r1:Lcom/skt/aicloud/sdk/api/AICloudInterface;
 
     .line 31
     new-instance v1, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$e;
 
     invoke-direct {v1, p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$e;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;)V
 
-    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->s1:Ljava/lang/Runnable;
 
     .line 32
     new-instance v1, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$f;
 
     invoke-direct {v1, p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$f;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;)V
 
-    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->r1:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->t1:Ljava/lang/Runnable;
 
     .line 33
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/b;->r()Landroid/content/Context;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     .line 34
     invoke-static {v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getInstance(Landroid/content/Context;)Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     .line 35
     invoke-virtual {v1, v2}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setStartHeartBeatRepeat(Z)V
 
     .line 36
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v1, p1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setListener(Lcom/skt/aicloud/sdk/api/AICloudInterface;)V
 
@@ -359,25 +359,25 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
 
     .line 38
     invoke-static {}, Lcom/skt/aicloud/mobile/service/api/a;->c()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Ljava/lang/String;
 
     const/4 p1, 0x3
 
     new-array p1, p1, [Ljava/lang/Object;
 
     .line 39
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:Ljava/lang/String;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
 
     aput-object v1, p1, v2
 
-    iget-boolean v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1:Z
+    iget-boolean v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Z
 
     .line 40
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -386,7 +386,7 @@
 
     aput-object v1, p1, v0
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Ljava/lang/String;
 
     const/4 v3, 0x2
 
@@ -404,7 +404,7 @@
     invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 42
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {p1, v2}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setKeepRDVConnection(Z)V
 
@@ -437,7 +437,7 @@
     if-eqz p1, :cond_0
 
     .line 45
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setEnableClientEventLogBySDK(Z)V
 
@@ -449,7 +449,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getEnableClientEventLogBySDK()Z
 
@@ -528,7 +528,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     return-object p0
 .end method
@@ -546,7 +546,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     return-object p0
 .end method
@@ -602,7 +602,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     return-object p0
 .end method
@@ -694,7 +694,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     return-object p0
 .end method
@@ -721,7 +721,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     return-object p0
 .end method
@@ -887,7 +887,7 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->p1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
 
     invoke-virtual {p1, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
@@ -916,7 +916,7 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->p1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
 
     .line 5
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->R1()V
@@ -953,7 +953,7 @@
     const-string p3, "access_token"
 
     .line 5
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1030,7 +1030,7 @@
     const-string p1, "client_version"
 
     .line 15
-    invoke-static {}, Lp8/d;->a()Ljava/lang/String;
+    invoke-static {}, Lma/d;->a()Ljava/lang/String;
 
     move-result-object p2
 
@@ -1079,7 +1079,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Y0:I
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:I
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n0()Lcom/sktelecom/tyche/SpeechRecognizer;
@@ -1250,7 +1250,7 @@
     :cond_0
     sget-object v0, Lcom/skt/aicloud/speaker/lib/state/AsrState;->NOT_INITIALIZED:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
@@ -1293,7 +1293,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     .line 6
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/b;->v()Z
@@ -1341,7 +1341,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->r1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->t1:Ljava/lang/Runnable;
 
     int-to-long v2, p1
 
@@ -1492,7 +1492,7 @@
 
     if-eqz v3, :cond_1
 
-    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/skt/aicloud/mobile/service/util/r;->e(Landroid/content/Context;)Z
 
@@ -1561,7 +1561,7 @@
 
     .line 12
     :cond_3
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -1582,7 +1582,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -1621,9 +1621,9 @@
     move-result-object v1
 
     .line 17
-    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-virtual {p0, v4, v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->z0(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1633,7 +1633,7 @@
 
     .line 18
     :cond_5
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getSpeechRecognitionStatus()Lcom/skt/aicloud/sdk/api/AICloudManager$SPEECH_RECOGNITION_STATUS;
 
@@ -1688,7 +1688,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -1711,7 +1711,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -1726,12 +1726,12 @@
     invoke-static {v0}, Lcom/skt/aicloud/mobile/service/util/TimeLap;->g(Ljava/lang/String;)J
 
     .line 25
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     invoke-virtual {v0, v6}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 26
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     new-instance v1, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$d;
 
@@ -1746,7 +1746,7 @@
     .line 27
     :cond_8
     :goto_0
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getSpeechRecognizer()Lcom/sktelecom/tyche/SpeechRecognizer;
 
@@ -1755,7 +1755,7 @@
     if-eqz v1, :cond_9
 
     .line 28
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     invoke-virtual {v1, v6}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
@@ -1770,7 +1770,7 @@
     invoke-virtual {p0, v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->A1(Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;)V
 
     .line 31
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->cancelTriggerAndStartListening()I
 
@@ -1837,13 +1837,13 @@
 
     sget-object v1, Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;->APMODE_ENABLED:Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;
 
-    invoke-virtual {v0, v1, v6}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lsa/d;)Z
+    invoke-virtual {v0, v1, v6}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lpc/d;)Z
 
     :cond_b
     return-void
 .end method
 
-.method public final H0(Ljava/util/Vector;Lma/c;)V
+.method public final H0(Ljava/util/Vector;Ljc/c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1851,7 +1851,7 @@
             "Ljava/util/Vector<",
             "Ljava/lang/String;",
             ">;",
-            "Lma/c;",
+            "Ljc/c;",
             ")V"
         }
     .end annotation
@@ -1928,7 +1928,7 @@
     aput-object p2, v0, v2
 
     .line 3
-    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     .line 4
     invoke-virtual {v3}, Lcom/skt/aicloud/sdk/api/AICloudManager;->isCardReceived()Z
@@ -1958,7 +1958,7 @@
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h0()V
 
     .line 7
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getSpeechRecognitionStatus()Lcom/skt/aicloud/sdk/api/AICloudManager$SPEECH_RECOGNITION_STATUS;
 
@@ -2001,14 +2001,14 @@
     move-result-object v0
 
     .line 12
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-virtual {p0, v4, v0, p1, p2}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->A0(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 13
-    iget-object p2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     const/4 v4, 0x0
 
@@ -2225,7 +2225,7 @@
 
     .line 7
     :cond_1
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2245,7 +2245,7 @@
 
     .line 10
     :cond_2
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
@@ -2255,9 +2255,9 @@
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->L1()V
 
     .line 12
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->s1:Ljava/lang/Runnable;
 
     int-to-long v2, p1
 
@@ -2347,7 +2347,7 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -2374,9 +2374,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
@@ -2409,7 +2409,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/SLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/skt/aicloud/mobile/service/util/r;->g(Landroid/content/Context;)Z
 
@@ -2417,7 +2417,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/skt/aicloud/mobile/service/util/r;->e(Landroid/content/Context;)Z
 
@@ -2531,7 +2531,7 @@
     .line 10
     sget-object v2, Lcom/skt/aicloud/speaker/lib/state/AsrState;->RESULT:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
-    iput-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iput-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     goto :goto_4
 
@@ -2604,12 +2604,12 @@
     if-eqz v2, :cond_7
 
     .line 21
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_6
 
     .line 22
-    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->f()V
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->g()V
 
     :cond_6
     return-void
@@ -2620,12 +2620,12 @@
 
     .line 24
     :cond_8
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v1, :cond_9
 
     .line 25
-    invoke-interface {v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->f()V
+    invoke-interface {v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->g()V
 
     .line 26
     :cond_9
@@ -2783,7 +2783,7 @@
     sget-object v0, Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;->SERVICE_ERROR_TRY_AGAIN:Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;
 
     .line 10
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;->getDescription(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;)Ljava/lang/String;
 
@@ -2809,7 +2809,7 @@
 
     invoke-direct {v1, p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$c;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lsa/d;)Z
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lpc/d;)Z
 
     return-void
 
@@ -2860,12 +2860,12 @@
     invoke-virtual {p0, v0, v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->E0(Lcom/skt/aicloud/speaker/lib/state/AsrState;Ljava/lang/String;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->e()V
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->f()V
 
     :cond_0
     return-void
@@ -2963,11 +2963,11 @@
     .line 8
     iget-object v5, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d:Lcom/skt/aicloud/mobile/service/api/g;
 
-    invoke-virtual {v5}, Lcom/skt/aicloud/mobile/service/api/g;->c()Lma/d;
+    invoke-virtual {v5}, Lcom/skt/aicloud/mobile/service/api/g;->c()Ljc/d;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lma/d;->h()Ljava/lang/String;
+    invoke-virtual {v5}, Ljc/d;->h()Ljava/lang/String;
 
     move-result-object v5
 
@@ -3014,12 +3014,12 @@
     invoke-virtual {p0, v0, v4}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->E0(Lcom/skt/aicloud/speaker/lib/state/AsrState;Ljava/lang/String;)V
 
     .line 12
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_3
 
     .line 13
-    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->d()V
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->e()V
 
     :cond_3
     return-void
@@ -3055,7 +3055,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:J
+    iput-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:J
 
     const-string p1, "[card life] ActionFinishTime = "
 
@@ -3064,7 +3064,7 @@
 
     move-result-object p1
 
-    iget-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:J
+    iget-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:J
 
     invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3092,11 +3092,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d:Lcom/skt/aicloud/mobile/service/api/g;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/mobile/service/api/g;->c()Lma/d;
+    invoke-virtual {v0}, Lcom/skt/aicloud/mobile/service/api/g;->c()Ljc/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lma/d;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Ljc/d;->h()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3140,7 +3140,7 @@
     invoke-virtual {p0, v0, v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->E0(Lcom/skt/aicloud/speaker/lib/state/AsrState;Ljava/lang/String;)V
 
     .line 7
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_0
 
@@ -3179,14 +3179,14 @@
     const-wide/16 v2, 0x0
 
     .line 2
-    iput-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:J
+    iput-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:J
 
     .line 3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->j1:J
+    iput-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:J
 
     const-string p1, "[card life] ActionStartTime = "
 
@@ -3195,7 +3195,7 @@
 
     move-result-object p1
 
-    iget-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->j1:J
+    iget-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:J
 
     invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3214,7 +3214,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:J
+    iget-wide v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:J
 
     invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3254,12 +3254,12 @@
     invoke-virtual {p0, v0, v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->E0(Lcom/skt/aicloud/speaker/lib/state/AsrState;Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->b()V
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->c()V
 
     :cond_0
     return-void
@@ -3312,12 +3312,12 @@
     invoke-virtual {p0, v0, v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->E0(Lcom/skt/aicloud/speaker/lib/state/AsrState;Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->c()V
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->d()V
 
     :cond_0
     return-void
@@ -3329,7 +3329,7 @@
     .line 1
     sget-object v0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$h;->a:[I
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->p1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$StartListeningType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -3404,7 +3404,7 @@
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d0()V
 
     .line 4
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->m1:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Landroid/os/Handler;
 
     if-eqz p1, :cond_0
 
@@ -3501,11 +3501,11 @@
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lu8/a;->d()V
+    invoke-virtual {v2}, Lra/a;->d()V
 
     .line 4
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->u0()Z
@@ -3616,18 +3616,18 @@
     invoke-static {v2, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {p1}, Lma/c;->k(Lorg/json/JSONObject;)Lma/d;
+    invoke-static {p1}, Ljc/c;->k(Lorg/json/JSONObject;)Ljc/d;
 
     move-result-object v1
 
     .line 3
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v4
 
     sget-object v5, Lcom/skt/aicloud/mobile/service/common/logsender/item/ResponseLogSenderItem$Tag;->AIP_CARD_RECV:Lcom/skt/aicloud/mobile/service/common/logsender/item/ResponseLogSenderItem$Tag;
 
-    invoke-virtual {v4, v5, v1}, Lu8/a;->r(Lcom/skt/aicloud/mobile/service/common/logsender/item/ResponseLogSenderItem$Tag;Lma/d;)V
+    invoke-virtual {v4, v5, v1}, Lra/a;->r(Lcom/skt/aicloud/mobile/service/common/logsender/item/ResponseLogSenderItem$Tag;Ljc/d;)V
 
     .line 4
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n0()Lcom/sktelecom/tyche/SpeechRecognizer;
@@ -3665,18 +3665,18 @@
 
     check-cast v6, Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lf9/a;->b(Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;Ljava/lang/String;)J
+    invoke-static {v5, v6}, Lcb/a;->b(Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;Ljava/lang/String;)J
 
     .line 8
     :cond_1
-    invoke-static {}, Le9/a;->c()Le9/a;
+    invoke-static {}, Lbb/a;->c()Lbb/a;
 
     move-result-object v5
 
-    invoke-virtual {v5, p1}, Le9/a;->h(Lorg/json/JSONObject;)V
+    invoke-virtual {v5, p1}, Lbb/a;->h(Lorg/json/JSONObject;)V
 
     .line 9
-    invoke-static {p1}, Lma/c;->r(Lorg/json/JSONObject;)Lma/c;
+    invoke-static {p1}, Ljc/c;->r(Lorg/json/JSONObject;)Ljc/c;
 
     move-result-object v5
 
@@ -3704,23 +3704,23 @@
     invoke-static {v2, p1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lu8/a;->d()V
+    invoke-virtual {p1}, Lra/a;->d()V
 
     .line 12
-    invoke-static {}, Lua/e;->a()Lua/e$a;
+    invoke-static {}, Lrc/e;->a()Lrc/e$a;
 
     move-result-object p1
 
     const-string v0, "Card parsing (null)"
 
-    invoke-virtual {p1, v0}, Lua/e$a;->d(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lrc/e$a;->d(Ljava/lang/String;)V
 
     .line 13
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz p1, :cond_2
 
@@ -3732,7 +3732,7 @@
 
     .line 15
     :cond_3
-    invoke-virtual {v5}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v5}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v7
 
@@ -3764,14 +3764,14 @@
 
     .line 20
     :cond_4
-    invoke-virtual {v5}, Lma/c;->i()Lma/c0;
+    invoke-virtual {v5}, Ljc/c;->i()Ljc/c0;
 
     move-result-object v8
 
     if-nez v8, :cond_5
 
     .line 21
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     invoke-interface {p1, v6}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->onError(I)V
 
@@ -3779,7 +3779,7 @@
 
     .line 22
     :cond_5
-    invoke-virtual {v1}, Lma/d;->l()Z
+    invoke-virtual {v1}, Ljc/d;->l()Z
 
     move-result v8
 
@@ -3791,7 +3791,7 @@
 
     if-eqz v8, :cond_8
 
-    invoke-virtual {v1}, Lma/d;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->e()Ljava/lang/String;
 
     move-result-object v8
 
@@ -3804,7 +3804,7 @@
     .line 23
     iget-object v8, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d:Lcom/skt/aicloud/mobile/service/api/g;
 
-    invoke-virtual {v8, v1}, Lcom/skt/aicloud/mobile/service/api/g;->i(Lma/d;)Z
+    invoke-virtual {v8, v1}, Lcom/skt/aicloud/mobile/service/api/g;->i(Ljc/d;)Z
 
     move-result v8
 
@@ -3813,7 +3813,7 @@
 
     iget v13, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->j:I
 
-    invoke-virtual {v12, v1, v13}, Lcom/skt/aicloud/mobile/service/api/g;->h(Lma/d;I)Z
+    invoke-virtual {v12, v1, v13}, Lcom/skt/aicloud/mobile/service/api/g;->h(Ljc/d;I)Z
 
     move-result v12
 
@@ -3823,11 +3823,11 @@
 
     .line 25
     :cond_6
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lu8/a;->d()V
+    invoke-virtual {p1}, Lra/a;->d()V
 
     new-array p1, v10, [Ljava/lang/Object;
 
@@ -3846,7 +3846,7 @@
 
     aput-object v7, p1, v11
 
-    invoke-virtual {v1}, Lma/d;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3906,7 +3906,7 @@
 
     .line 33
     :cond_8
-    invoke-virtual {v1}, Lma/d;->l()Z
+    invoke-virtual {v1}, Ljc/d;->l()Z
 
     move-result v6
 
@@ -3917,7 +3917,7 @@
 
     .line 35
     :cond_9
-    invoke-virtual {v1}, Lma/d;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->e()Ljava/lang/String;
 
     move-result-object v6
 
@@ -3928,11 +3928,11 @@
     if-eqz v6, :cond_a
 
     .line 36
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lu8/a;->d()V
+    invoke-virtual {v0}, Lra/a;->d()V
 
     .line 37
     new-instance v0, Ljava/lang/StringBuilder;
@@ -4026,7 +4026,7 @@
 
     .line 45
     :goto_4
-    invoke-static {}, Lua/e;->a()Lua/e$a;
+    invoke-static {}, Lrc/e;->a()Lrc/e$a;
 
     move-result-object v8
 
@@ -4048,29 +4048,29 @@
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Lua/e$a;->d(Ljava/lang/String;)V
+    invoke-virtual {v8, v9}, Lrc/e$a;->d(Ljava/lang/String;)V
 
     .line 46
-    invoke-virtual {v5}, Lma/c;->o()Z
+    invoke-virtual {v5}, Ljc/c;->o()Z
 
     move-result v8
 
     if-eqz v8, :cond_e
 
     .line 47
-    invoke-static {}, Lua/e;->b()Lcom/skt/aicloud/speaker/service/utils/TimeLogger;
+    invoke-static {}, Lrc/e;->b()Lcom/skt/aicloud/speaker/service/utils/TimeLogger;
 
     move-result-object v8
 
-    iget-object v9, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v9, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     sget-object v11, Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;->OnCardReceive:Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;
 
-    invoke-virtual {v5}, Lma/c;->e()Ljava/lang/String;
+    invoke-virtual {v5}, Ljc/c;->e()Ljava/lang/String;
 
     move-result-object v12
 
-    invoke-virtual {v8, v9, v11, v1, v12}, Lcom/skt/aicloud/speaker/service/utils/TimeLogger;->a(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;Lma/d;Ljava/lang/String;)V
+    invoke-virtual {v8, v9, v11, v1, v12}, Lcom/skt/aicloud/speaker/service/utils/TimeLogger;->a(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;Ljc/d;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -4112,7 +4112,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v5}, Lma/c;->q()Z
+    invoke-virtual {v5}, Ljc/c;->q()Z
 
     move-result v8
 
@@ -4125,7 +4125,7 @@
     invoke-static {v2, v6}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 53
-    invoke-virtual {v5}, Lma/c;->q()Z
+    invoke-virtual {v5}, Ljc/c;->q()Z
 
     move-result v6
 
@@ -4142,10 +4142,10 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v5, v3}, Lcom/skt/aicloud/mobile/service/api/b;->R(Lma/c;Z)V
+    invoke-virtual {v0, v5, v3}, Lcom/skt/aicloud/mobile/service/api/b;->R(Ljc/c;Z)V
 
     .line 55
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_11
 
@@ -4169,15 +4169,15 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-static {v0, v1, v8}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v8}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     .line 58
     :cond_10
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
-    invoke-interface {v0, v11, v5, p1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->g(Ljava/lang/String;Lma/c;Lorg/json/JSONObject;)V
+    invoke-interface {v0, v11, v5, p1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->b(Ljava/lang/String;Ljc/c;Lorg/json/JSONObject;)V
 
     :cond_11
     return-void
@@ -4204,18 +4204,18 @@
     if-eqz v6, :cond_13
 
     .line 61
-    invoke-virtual {v5}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v5}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v6
 
-    check-cast v6, Lma/t;
+    check-cast v6, Ljc/t;
 
     .line 62
-    invoke-static {}, Lla/c;->C0()Lla/c;
+    invoke-static {}, Lic/c;->C0()Lic/c;
 
     move-result-object v13
 
-    invoke-virtual {v13, v6, v0}, Lla/c;->B0(Lma/t;Z)Ljava/lang/String;
+    invoke-virtual {v13, v6, v0}, Lic/c;->B0(Ljc/t;Z)Ljava/lang/String;
 
     move-result-object v6
 
@@ -4228,7 +4228,7 @@
     aput-object v7, v10, v0
 
     .line 63
-    invoke-virtual {v1}, Lma/d;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4260,18 +4260,18 @@
     if-eqz v6, :cond_14
 
     .line 66
-    invoke-virtual {v5}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v5}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v6
 
-    check-cast v6, Lma/u;
+    check-cast v6, Ljc/u;
 
     .line 67
-    invoke-static {}, Lla/e;->u0()Lla/e;
+    invoke-static {}, Lic/e;->u0()Lic/e;
 
     move-result-object v13
 
-    invoke-virtual {v13, v6}, Lla/e;->t0(Lma/u;)Ljava/lang/String;
+    invoke-virtual {v13, v6}, Lic/e;->t0(Ljc/u;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -4284,7 +4284,7 @@
     aput-object v7, v10, v0
 
     .line 68
-    invoke-virtual {v1}, Lma/d;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4380,21 +4380,21 @@
 
     if-eqz v0, :cond_16
 
-    invoke-virtual {v5}, Lma/c;->o()Z
+    invoke-virtual {v5}, Ljc/c;->o()Z
 
     move-result v0
 
     if-eqz v0, :cond_16
 
     .line 76
-    invoke-virtual {v1}, Lma/d;->l()Z
+    invoke-virtual {v1}, Ljc/d;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_16
 
     .line 77
-    invoke-virtual {v1}, Lma/d;->j()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4407,7 +4407,7 @@
     if-eqz v0, :cond_16
 
     .line 78
-    invoke-virtual {v1}, Lma/d;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4420,19 +4420,19 @@
     if-eqz v0, :cond_16
 
     .line 79
-    invoke-virtual {v5}, Lma/c;->a()Z
+    invoke-virtual {v5}, Ljc/c;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_16
 
     .line 80
-    invoke-virtual {v5}, Lma/c;->i()Lma/c0;
+    invoke-virtual {v5}, Ljc/c;->i()Ljc/c0;
 
     move-result-object v0
 
     .line 81
-    invoke-virtual {v0}, Lma/c0;->c()Lma/d;
+    invoke-virtual {v0}, Ljc/c0;->c()Ljc/d;
 
     move-result-object v1
 
@@ -4455,7 +4455,7 @@
 
     .line 83
     :cond_16
-    invoke-virtual {p0, v4, v5}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->H0(Ljava/util/Vector;Lma/c;)V
+    invoke-virtual {p0, v4, v5}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->H0(Ljava/util/Vector;Ljc/c;)V
 
     .line 84
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/b;->j()Lcom/skt/aicloud/mobile/service/api/b;
@@ -4464,24 +4464,24 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v5, v2}, Lcom/skt/aicloud/mobile/service/api/b;->R(Lma/c;Z)V
+    invoke-virtual {v0, v5, v2}, Lcom/skt/aicloud/mobile/service/api/b;->R(Ljc/c;Z)V
 
     .line 85
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/b;->h()Lcom/skt/aicloud/mobile/service/common/AladdinAsrConfigManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Lcom/skt/aicloud/mobile/service/common/AladdinAsrConfigManager;->w(Lma/c;)V
+    invoke-virtual {v0, v5}, Lcom/skt/aicloud/mobile/service/common/AladdinAsrConfigManager;->w(Ljc/c;)V
 
     .line 86
-    invoke-virtual {v1}, Lma/d;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->P1(Ljava/lang/String;)V
 
     .line 87
-    invoke-virtual {v5}, Lma/c;->m()Ljava/lang/String;
+    invoke-virtual {v5}, Ljc/c;->m()Ljava/lang/String;
 
     move-result-object v0
 
@@ -4492,17 +4492,17 @@
     if-eqz v0, :cond_17
 
     .line 88
-    invoke-static {}, Lua/e;->a()Lua/e$a;
+    invoke-static {}, Lrc/e;->a()Lrc/e$a;
 
     move-result-object v0
 
     const-string v1, "Empty TTS"
 
-    invoke-virtual {v0, v1, v2}, Lua/e$a;->h(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2}, Lrc/e$a;->h(Ljava/lang/String;I)V
 
     .line 89
     :cond_17
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v0, :cond_19
 
@@ -4526,15 +4526,15 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-static {v0, v1, v8}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v8}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
     .line 92
     :cond_18
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
-    invoke-interface {v0, v11, v5, p1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->g(Ljava/lang/String;Lma/c;Lorg/json/JSONObject;)V
+    invoke-interface {v0, v11, v5, p1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;->b(Ljava/lang/String;Ljc/c;Lorg/json/JSONObject;)V
 
     :cond_19
     return-void
@@ -4790,20 +4790,20 @@
     move-result-object v4
 
     .line 10
-    invoke-static {}, Lua/e;->b()Lcom/skt/aicloud/speaker/service/utils/TimeLogger;
+    invoke-static {}, Lrc/e;->b()Lcom/skt/aicloud/speaker/service/utils/TimeLogger;
 
     move-result-object v5
 
     invoke-virtual {v5, v1, v4}, Lcom/skt/aicloud/speaker/service/utils/TimeLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
-    invoke-static {}, Lua/a;->h()Lua/a;
+    invoke-static {}, Lrc/a;->h()Lrc/a;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v6, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    invoke-virtual {v5, v6, v1, v4}, Lua/a;->l(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v5, v6, v1, v4}, Lrc/a;->l(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -4895,9 +4895,9 @@
     if-eqz v4, :cond_9
 
     .line 19
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Landroid/os/Handler;
 
-    iget-object v5, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Ljava/lang/Runnable;
+    iget-object v5, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
@@ -4969,7 +4969,7 @@
     invoke-static {v3, v4}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 29
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-eqz v4, :cond_c
 
@@ -5067,7 +5067,7 @@
 
     .line 36
     :goto_4
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     if-eqz v4, :cond_f
 
@@ -5086,7 +5086,7 @@
     const-string v5, ")"
 
     .line 38
-    invoke-static {v4, v2, v5}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v2, v5}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -5203,7 +5203,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-eqz v0, :cond_0
 
@@ -5213,7 +5213,7 @@
     invoke-direct {v0, p1, p2, p3}, Lcom/skt/aicloud/sdk/request/AIRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
 
     .line 4
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->request(Lcom/skt/aicloud/sdk/request/AIRequest;)V
 
@@ -5307,7 +5307,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-static {v0}, Lcom/skt/aicloud/speaker/lib/state/AsrState;->canStartListeningWithTrigger(Lcom/skt/aicloud/speaker/lib/state/AsrState;)Z
 
@@ -5326,7 +5326,7 @@
 
     aput-object v2, v1, v3
 
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     const/4 v3, 0x1
 
@@ -5396,7 +5396,7 @@
 
     const-string v0, "nugu_sdk_version"
 
-    const-string v5, "1.26.20"
+    const-string v5, "1.26.22"
 
     .line 4
     invoke-virtual {v4, v0, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -5613,14 +5613,14 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/g;->z()Lla/a;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/g;->z()Lic/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 6
-    invoke-virtual {p1}, Lla/a;->K()V
+    invoke-virtual {p1}, Lic/a;->K()V
 
     :cond_1
     return-object v6
@@ -5655,7 +5655,7 @@
     .line 9
     new-instance v0, Lcom/skt/aicloud/sdk/request/IWFRequestBuilder;
 
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -5671,7 +5671,7 @@
     invoke-virtual {v0, p1}, Lcom/skt/aicloud/sdk/request/IWFRequestBuilder;->setRequestId(Ljava/lang/String;)Lcom/skt/aicloud/sdk/request/IWFRequestBuilder;
 
     .line 13
-    invoke-static {}, Lp8/d;->a()Ljava/lang/String;
+    invoke-static {}, Lma/d;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -5684,7 +5684,7 @@
     invoke-virtual {v0, p5}, Lcom/skt/aicloud/sdk/request/IWFRequestBuilder;->setEntities(Ljava/util/Map;)Lcom/skt/aicloud/sdk/request/IWFRequestBuilder;
 
     .line 16
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-eqz p1, :cond_3
 
@@ -5712,7 +5712,7 @@
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Z0()V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-eqz v0, :cond_0
 
@@ -5722,7 +5722,7 @@
     invoke-virtual {v0, v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setListener(Lcom/skt/aicloud/sdk/api/AICloudInterface;)V
 
     .line 5
-    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     :cond_0
     return-void
@@ -5770,7 +5770,7 @@
 
     .line 3
     :goto_0
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->isRecognizer()Z
 
@@ -5779,9 +5779,9 @@
     if-nez v1, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lua/d;->e0(Landroid/content/Context;I)V
+    invoke-static {v0, p1}, Lrc/d;->e0(Landroid/content/Context;I)V
 
     const-string p1, "changeTriggerEngine() : skip, SpeechRecognizer not initialized."
 
@@ -5792,9 +5792,9 @@
 
     .line 6
     :cond_1
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    invoke-static {v1}, Lua/d;->A(Landroid/content/Context;)I
+    invoke-static {v1}, Lrc/d;->A(Landroid/content/Context;)I
 
     move-result v1
 
@@ -5893,9 +5893,9 @@
     invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lua/d;->e0(Landroid/content/Context;I)V
+    invoke-static {v0, p1}, Lrc/d;->e0(Landroid/content/Context;I)V
 
     .line 16
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d0()V
@@ -5948,7 +5948,7 @@
     .locals 8
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/skt/aicloud/mobile/service/util/r;->e(Landroid/content/Context;)Z
 
@@ -5967,7 +5967,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -5981,7 +5981,7 @@
     move-result-object v2
 
     .line 5
-    invoke-static {}, Lp8/d;->a()Ljava/lang/String;
+    invoke-static {}, Lma/d;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -5993,7 +5993,7 @@
     .line 7
     iget-object v5, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c:Lcom/skt/aicloud/speaker/service/common/ClientStatus;
 
-    iget-object v6, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v6, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-virtual {v5, v6, v2}, Lcom/skt/aicloud/speaker/service/common/ClientStatus;->n(Landroid/content/Context;Ljava/lang/String;)Ljava/util/Map;
 
@@ -6055,7 +6055,7 @@
     invoke-virtual {v1, v3}, Lcom/skt/aicloud/sdk/request/NLURequestBuilder;->setVersion(Ljava/lang/String;)Lcom/skt/aicloud/sdk/request/NLURequestBuilder;
 
     .line 15
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {p1, v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->requestNLU(Lcom/skt/aicloud/sdk/request/NLURequestBuilder;)Ljava/lang/String;
 
@@ -6106,16 +6106,16 @@
     if-eq v1, v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->l1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->o1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->q1:Ljava/lang/Runnable;
 
     mul-int/lit16 p1, p1, 0x3e8
 
@@ -6181,7 +6181,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Ljava/lang/String;
+    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:Ljava/lang/String;
 
     return-void
 .end method
@@ -6201,7 +6201,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->isRecognizer()Z
 
@@ -6220,11 +6220,11 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Ljava/lang/String;
 
     const/4 v4, 0x0
 
@@ -6284,17 +6284,17 @@
     .line 10
     :cond_2
     :goto_0
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0, v2}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setEnableSendWakeUpWord(Z)V
 
     .line 11
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0, v2}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setEnableSendEventLog(Z)V
 
     .line 12
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getSpeechRecognizer()Lcom/sktelecom/tyche/SpeechRecognizer;
 
@@ -6337,7 +6337,7 @@
 
     .line 18
     :cond_3
-    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->V0:I
+    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->X0:I
 
     if-eq v1, v3, :cond_4
 
@@ -6346,7 +6346,7 @@
 
     .line 20
     :cond_4
-    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->W0:I
+    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Y0:I
 
     if-eq v1, v3, :cond_5
 
@@ -6362,7 +6362,7 @@
     invoke-virtual {v0, v1}, Lcom/sktelecom/tyche/SpeechRecognizer;->setBeepStreamType(I)V
 
     .line 23
-    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->X0:I
+    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Z0:I
 
     if-eq v1, v3, :cond_6
 
@@ -6371,7 +6371,7 @@
 
     .line 25
     :cond_6
-    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Y0:I
+    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:I
 
     if-eq v1, v3, :cond_7
 
@@ -6380,7 +6380,7 @@
 
     .line 27
     :cond_7
-    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Z0:I
+    iget v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1:I
 
     if-eq v1, v3, :cond_8
 
@@ -6402,9 +6402,9 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    invoke-static {v1}, Lua/d;->H(Landroid/content/Context;)Z
+    invoke-static {v1}, Lrc/d;->H(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -6694,7 +6694,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -6729,7 +6729,7 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -6861,7 +6861,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     const/4 v1, 0x0
 
@@ -6871,12 +6871,12 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
     .line 3
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v2}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getEnableSendWakeUpWord()Z
 
@@ -6915,7 +6915,7 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v2}, Lcom/skt/aicloud/sdk/api/AICloudManager;->isRecognizer()Z
 
@@ -6924,9 +6924,9 @@
     if-eqz v2, :cond_1
 
     .line 7
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
-    invoke-static {}, Lp8/d;->c()Ljava/lang/String;
+    invoke-static {}, Lma/d;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -6942,7 +6942,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-eqz v0, :cond_0
 
@@ -6981,7 +6981,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     return-object v0
 .end method
@@ -7013,7 +7013,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->W0:I
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Y0:I
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n0()Lcom/sktelecom/tyche/SpeechRecognizer;
@@ -7033,9 +7033,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
-    invoke-static {v0}, Lua/d;->A(Landroid/content/Context;)I
+    invoke-static {v0}, Lrc/d;->A(Landroid/content/Context;)I
 
     move-result v0
 
@@ -7086,7 +7086,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput-boolean p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Z
+    iput-boolean p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->j1:Z
 
     return-void
 .end method
@@ -7234,36 +7234,36 @@
     invoke-static {v3, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     .line 3
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-nez p1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->e1:Landroid/content/Context;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getInstance(Landroid/content/Context;)Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->p1:Lcom/skt/aicloud/sdk/api/AICloudInterface;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->r1:Lcom/skt/aicloud/sdk/api/AICloudInterface;
 
     invoke-virtual {p1, v1}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setListener(Lcom/skt/aicloud/sdk/api/AICloudInterface;)V
 
     .line 6
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->a1:Ljava/lang/String;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->c1:Ljava/lang/String;
 
-    iget-boolean v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1:Z
+    iget-boolean v4, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Z
 
     invoke-virtual {p1, v1, v4, v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setHostServerURL(Ljava/lang/String;ZZ)V
 
@@ -7275,7 +7275,7 @@
     if-eqz p1, :cond_1
 
     .line 8
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->setEnableClientEventLogBySDK(Z)V
 
@@ -7283,7 +7283,7 @@
     new-array p1, v0, [Ljava/lang/Object;
 
     .line 9
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     .line 10
     invoke-virtual {v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getEnableClientEventLogBySDK()Z
@@ -7306,9 +7306,9 @@
     invoke-static {v3, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -7357,10 +7357,10 @@
 
     .line 3
     :cond_0
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Z0:I
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1:I
 
     .line 4
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     invoke-virtual {v0}, Lcom/skt/aicloud/sdk/api/AICloudManager;->getSpeechRecognizer()Lcom/sktelecom/tyche/SpeechRecognizer;
 
@@ -7386,7 +7386,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Z
+    iget-boolean v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->j1:Z
 
     return v0
 .end method
@@ -7414,7 +7414,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->k1:Ljava/lang/String;
 
     return-void
 .end method
@@ -7451,7 +7451,7 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->g1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->i1:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$j;
 
     return-void
 .end method
@@ -7460,7 +7460,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->d1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     invoke-static {v0}, Lcom/skt/aicloud/speaker/lib/state/AsrState;->isRecognizingState(Lcom/skt/aicloud/speaker/lib/state/AsrState;)Z
 
@@ -7519,7 +7519,7 @@
     invoke-static {v2, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->V0:I
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->X0:I
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n0()Lcom/sktelecom/tyche/SpeechRecognizer;
@@ -7731,7 +7731,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->f1:Lcom/skt/aicloud/sdk/api/AICloudManager;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->h1:Lcom/skt/aicloud/sdk/api/AICloudManager;
 
     if-nez v0, :cond_1
 
@@ -7795,7 +7795,7 @@
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->X0:I
+    iput p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->Z0:I
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->n0()Lcom/sktelecom/tyche/SpeechRecognizer;

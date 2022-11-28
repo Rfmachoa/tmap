@@ -47,14 +47,14 @@
 
     iget-object p1, p1, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
-    instance-of v0, p1, Li/c;
+    instance-of v0, p1, Lk/c;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p1, Li/c;
+    check-cast p1, Lk/c;
 
-    invoke-interface {p1}, Li/c;->c()V
+    invoke-interface {p1}, Lk/c;->c()V
 
     .line 3
     :cond_0
@@ -239,14 +239,14 @@
 
     iget-object p2, p2, Landroidx/appcompat/widget/Toolbar;->mExpandedActionView:Landroid/view/View;
 
-    instance-of v0, p2, Li/c;
+    instance-of v0, p2, Lk/c;
 
     if-eqz v0, :cond_4
 
     .line 22
-    check-cast p2, Li/c;
+    check-cast p2, Lk/c;
 
-    invoke-interface {p2}, Li/c;->a()V
+    invoke-interface {p2}, Lk/c;->a()V
 
     :cond_4
     return p1

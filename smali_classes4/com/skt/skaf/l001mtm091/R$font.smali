@@ -24,11 +24,11 @@
 
 .field public static final skp_go_mm:I = 0x7f090004
 
-.field public static final skt_tmap_300:I = 0x7f090005
+.field public static final tmobi300:I = 0x7f090005
 
-.field public static final skt_tmap_500:I = 0x7f090006
+.field public static final tmobi500:I = 0x7f090006
 
-.field public static final skt_tmap_700:I = 0x7f090007
+.field public static final tmobi700:I = 0x7f090007
 
 
 # direct methods

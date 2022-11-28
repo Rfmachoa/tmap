@@ -1,131 +1,74 @@
-.class public Lq3/a;
+.class public final Lq3/a;
 .super Ljava/lang/Object;
-.source "CubicCurveData.java"
+.source "Constants.kt"
 
 
 # annotations
 .annotation build Landroidx/annotation/RestrictTo;
     value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\u0008\u00c7\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0004"
+    }
+    d2 = {
+        "Lq3/a;",
+        "",
+        "<init>",
+        "()V",
+        "navigation-dynamic-features-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x4,
+        0x0
     }
 .end annotation
 
 
-# instance fields
-.field public final a:Landroid/graphics/PointF;
+# static fields
+.field public static final a:Ljava/lang/String; = "dfn:navigated"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
-.field public final b:Landroid/graphics/PointF;
+.field public static final b:Ljava/lang/String; = "dfn:destinationId"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
-.field public final c:Landroid/graphics/PointF;
+.field public static final c:Ljava/lang/String; = "dfn:destinationArgs"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final d:Lq3/a;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq3/a;
 
-    .line 2
-    new-instance v0, Landroid/graphics/PointF;
+    invoke-direct {v0}, Lq3/a;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
-
-    iput-object v0, p0, Lq3/a;->a:Landroid/graphics/PointF;
-
-    .line 3
-    new-instance v0, Landroid/graphics/PointF;
-
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
-
-    iput-object v0, p0, Lq3/a;->b:Landroid/graphics/PointF;
-
-    .line 4
-    new-instance v0, Landroid/graphics/PointF;
-
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
-
-    iput-object v0, p0, Lq3/a;->c:Landroid/graphics/PointF;
+    sput-object v0, Lq3/a;->d:Lq3/a;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 5
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p1, p0, Lq3/a;->a:Landroid/graphics/PointF;
-
-    .line 7
-    iput-object p2, p0, Lq3/a;->b:Landroid/graphics/PointF;
-
-    .line 8
-    iput-object p3, p0, Lq3/a;->c:Landroid/graphics/PointF;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()Landroid/graphics/PointF;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lq3/a;->a:Landroid/graphics/PointF;
-
-    return-object v0
-.end method
-
-.method public b()Landroid/graphics/PointF;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lq3/a;->b:Landroid/graphics/PointF;
-
-    return-object v0
-.end method
-
-.method public c()Landroid/graphics/PointF;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lq3/a;->c:Landroid/graphics/PointF;
-
-    return-object v0
-.end method
-
-.method public d(FF)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lq3/a;->a:Landroid/graphics/PointF;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
-
-    return-void
-.end method
-
-.method public e(FF)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lq3/a;->b:Landroid/graphics/PointF;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
-
-    return-void
-.end method
-
-.method public f(FF)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lq3/a;->c:Landroid/graphics/PointF;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/PointF;->set(FF)V
 
     return-void
 .end method

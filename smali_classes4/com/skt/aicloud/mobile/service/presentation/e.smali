@@ -141,7 +141,7 @@
 
     :cond_0
     :try_start_0
-    const-string/jumbo v0, "text"
+    const-string v0, "text"
 
     .line 15
     invoke-static {p1, v0}, Lcom/skt/aicloud/mobile/service/util/n;->j(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
@@ -150,7 +150,7 @@
 
     iput-object v0, p0, Lcom/skt/aicloud/mobile/service/presentation/e;->f:Ljava/lang/String;
 
-    const-string/jumbo v0, "subAction"
+    const-string v0, "subAction"
 
     .line 16
     invoke-static {p1, v0}, Lcom/skt/aicloud/mobile/service/util/n;->j(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
@@ -168,7 +168,7 @@
 
     iput-object v0, p0, Lcom/skt/aicloud/mobile/service/presentation/e;->h:Ljava/lang/String;
 
-    const-string/jumbo v0, "tellNumber"
+    const-string v0, "tellNumber"
 
     .line 18
     invoke-static {p1, v0}, Lcom/skt/aicloud/mobile/service/util/n;->j(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;

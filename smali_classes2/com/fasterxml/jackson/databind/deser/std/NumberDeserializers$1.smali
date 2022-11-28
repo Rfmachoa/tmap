@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final synthetic $SwitchMap$com$fasterxml$jackson$core$JsonParser$NumberType:[I
+.field public static final synthetic $SwitchMap$com$fasterxml$jackson$databind$cfg$CoercionAction:[I
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/fasterxml/jackson/core/JsonParser$NumberType;->values()[Lcom/fasterxml/jackson/core/JsonParser$NumberType;
+    invoke-static {}, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->values()[Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
     move-result-object v0
 
@@ -31,10 +31,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$core$JsonParser$NumberType:[I
+    sput-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$databind$cfg$CoercionAction:[I
 
     :try_start_0
-    sget-object v1, Lcom/fasterxml/jackson/core/JsonParser$NumberType;->INT:Lcom/fasterxml/jackson/core/JsonParser$NumberType;
+    sget-object v1, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->Fail:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -48,9 +48,9 @@
 
     :catch_0
     :try_start_1
-    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$core$JsonParser$NumberType:[I
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$databind$cfg$CoercionAction:[I
 
-    sget-object v1, Lcom/fasterxml/jackson/core/JsonParser$NumberType;->LONG:Lcom/fasterxml/jackson/core/JsonParser$NumberType;
+    sget-object v1, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->AsNull:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -64,9 +64,9 @@
 
     :catch_1
     :try_start_2
-    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$core$JsonParser$NumberType:[I
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$databind$cfg$CoercionAction:[I
 
-    sget-object v1, Lcom/fasterxml/jackson/core/JsonParser$NumberType;->BIG_INTEGER:Lcom/fasterxml/jackson/core/JsonParser$NumberType;
+    sget-object v1, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->AsEmpty:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

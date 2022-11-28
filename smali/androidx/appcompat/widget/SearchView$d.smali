@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Landroidx/appcompat/widget/SearchView$d;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, p1, Landroidx/appcompat/widget/SearchView;->c1:Landroid/view/View$OnFocusChangeListener;
+    iget-object v0, p1, Landroidx/appcompat/widget/SearchView;->e1:Landroid/view/View$OnFocusChangeListener;
 
     if-eqz v0, :cond_0
 

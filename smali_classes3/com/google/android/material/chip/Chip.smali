@@ -5,12 +5,24 @@
 # interfaces
 .implements Lcom/google/android/material/chip/ChipDrawable$Delegate;
 .implements Lcom/google/android/material/shape/Shapeable;
+.implements Lcom/google/android/material/internal/MaterialCheckable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/chip/Chip$ChipTouchHelper;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/appcompat/widget/AppCompatCheckBox;",
+        "Lcom/google/android/material/chip/ChipDrawable$Delegate;",
+        "Lcom/google/android/material/shape/Shapeable;",
+        "Lcom/google/android/material/internal/MaterialCheckable<",
+        "Lcom/google/android/material/chip/Chip;",
+        ">;"
     }
 .end annotation
 
@@ -24,8 +36,6 @@
 
 .field private static final CLOSE_ICON_VIRTUAL_ID:I = 0x1
 
-.field private static final COMPOUND_BUTTON_ACCESSIBILITY_CLASS_NAME:Ljava/lang/String; = "android.widget.CompoundButton"
-
 .field private static final DEF_STYLE_RES:I
 
 .field private static final EMPTY_BOUNDS:Landroid/graphics/Rect;
@@ -36,12 +46,19 @@
 
 .field private static final NAMESPACE_ANDROID:Ljava/lang/String; = "http://schemas.android.com/apk/res/android"
 
+.field private static final RADIO_BUTTON_ACCESSIBILITY_CLASS_NAME:Ljava/lang/String; = "android.widget.RadioButton"
+
 .field private static final SELECTED_STATE:[I
 
 .field private static final TAG:Ljava/lang/String; = "Chip"
 
 
 # instance fields
+.field private accessibilityClassName:Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
 .field private chipDrawable:Lcom/google/android/material/chip/ChipDrawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -72,8 +89,21 @@
     .end annotation
 .end field
 
-.field private onCheckedChangeListenerInternal:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.field private onCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
     .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private onCheckedChangeListenerInternal:Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener<",
+            "Lcom/google/android/material/chip/Chip;",
+            ">;"
+        }
     .end annotation
 .end field
 
@@ -95,6 +125,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
+
+.field private touchHelperEnabled:Z
 
 
 # direct methods
@@ -328,6 +360,21 @@
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/chip/Chip;->lastLayoutDirection:I
+
+    .line 32
+    new-instance p1, Lcom/google/android/material/chip/a;
+
+    invoke-direct {p1, p0}, Lcom/google/android/material/chip/a;-><init>(Lcom/google/android/material/chip/Chip;)V
+
+    invoke-super {p0, p1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/google/android/material/chip/Chip;Landroid/widget/CompoundButton;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/chip/Chip;->lambda$new$0(Landroid/widget/CompoundButton;Z)V
 
     return-void
 .end method
@@ -659,137 +706,6 @@
     return-object v0
 .end method
 
-.method private handleAccessibilityExit(Landroid/view/MotionEvent;)Z
-    .locals 8
-    .param p1    # Landroid/view/MotionEvent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "PrivateApi"
-        }
-    .end annotation
-
-    .line 1
-    const-class v0, Ly1/a;
-
-    const-string v1, "Unable to send Accessibility Exit event"
-
-    const-string v2, "Chip"
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0xa
-
-    if-ne p1, v4, :cond_0
-
-    :try_start_0
-    const-string p1, "mHoveredVirtualViewId"
-
-    .line 2
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object p1
-
-    const/4 v4, 0x1
-
-    .line 3
-    invoke-virtual {p1, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
-
-    .line 4
-    iget-object v5, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
-
-    invoke-virtual {p1, v5}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const/high16 v5, -0x80000000
-
-    if-eq p1, v5, :cond_0
-
-    const-string p1, "updateHoveredVirtualView"
-
-    new-array v6, v4, [Ljava/lang/Class;
-
-    .line 5
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v7, v6, v3
-
-    .line 6
-    invoke-virtual {v0, p1, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    .line 7
-    invoke-virtual {p1, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-
-    .line 8
-    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
-
-    new-array v6, v4, [Ljava/lang/Object;
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v6, v3
-
-    invoke-virtual {p1, v0, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v4
-
-    :catch_0
-    move-exception p1
-
-    .line 9
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    .line 10
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
-
-    :catch_2
-    move-exception p1
-
-    .line 11
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
-
-    :catch_3
-    move-exception p1
-
-    .line 12
-    invoke-static {v2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    :goto_0
-    return v3
-.end method
-
 .method private hasCloseIcon()Z
     .locals 1
 
@@ -933,6 +849,30 @@
     return-void
 .end method
 
+.method private synthetic lambda$new$0(Landroid/widget/CompoundButton;Z)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->onCheckedChangeListenerInternal:Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-interface {v0, p0, p2}, Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;->onCheckedChanged(Ljava/lang/Object;Z)V
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->onCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    invoke-interface {v0, p1, p2}, Landroid/widget/CompoundButton$OnCheckedChangeListener;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+
+    :cond_1
+    return-void
+.end method
+
 .method private removeBackgroundInset()V
     .locals 1
 
@@ -1046,13 +986,23 @@
 
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->B1(Landroid/view/View;Landroidx/core/view/a;)V
 
+    const/4 v0, 0x1
+
+    .line 3
+    iput-boolean v0, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
+
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
+    .line 4
     invoke-static {p0, v0}, Landroidx/core/view/ViewCompat;->B1(Landroid/view/View;Landroidx/core/view/a;)V
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput-boolean v0, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
 
     :goto_0
     return-void
@@ -1483,36 +1433,42 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/chip/Chip;->handleAccessibilityExit(Landroid/view/MotionEvent;)Z
+    iget-boolean v0, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
+    if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Ly1/a;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 3
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    return p1
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
+
+    invoke-virtual {v0, p1}, Lp2/a;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 4
+    invoke-super {p0, p1}, Landroid/widget/CheckBox;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p1, 0x0
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     :goto_0
     const/4 p1, 0x1
 
@@ -1524,32 +1480,45 @@
     .locals 2
 
     .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-super {p0, p1}, Landroid/widget/CheckBox;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 3
+    :cond_0
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    invoke-virtual {v0, p1}, Ly1/a;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-virtual {v0, p1}, Lp2/a;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 2
+    .line 4
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    .line 3
-    invoke-virtual {v0}, Ly1/a;->getKeyboardFocusedVirtualViewId()I
+    .line 5
+    invoke-virtual {v0}, Lp2/a;->getKeyboardFocusedVirtualViewId()I
 
     move-result v0
 
     const/high16 v1, -0x80000000
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v1, :cond_1
 
     const/4 p1, 0x1
 
     return p1
 
-    .line 4
-    :cond_0
+    .line 6
+    :cond_1
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
@@ -1771,6 +1740,76 @@
     invoke-direct {p0}, Lcom/google/android/material/chip/Chip;->updateBackgroundDrawable()V
 
     return v3
+.end method
+
+.method public getAccessibilityClassName()Ljava/lang/CharSequence;
+    .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->accessibilityClassName:Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->accessibilityClassName:Ljava/lang/CharSequence;
+
+    return-object v0
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Lcom/google/android/material/chip/Chip;->isCheckable()Z
+
+    move-result v0
+
+    const-string v1, "android.widget.Button"
+
+    if-eqz v0, :cond_2
+
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/CheckBox;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    .line 5
+    instance-of v2, v0, Lcom/google/android/material/chip/ChipGroup;
+
+    if-eqz v2, :cond_1
+
+    check-cast v0, Lcom/google/android/material/chip/ChipGroup;
+
+    invoke-virtual {v0}, Lcom/google/android/material/chip/ChipGroup;->isSingleSelection()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "android.widget.RadioButton"
+
+    return-object v0
+
+    :cond_1
+    return-object v1
+
+    .line 6
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/CheckBox;->isClickable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    return-object v1
+
+    :cond_3
+    const-string v0, "android.view.View"
+
+    return-object v0
 .end method
 
 .method public getBackgroundDrawable()Landroid/graphics/drawable/Drawable;
@@ -2240,43 +2279,45 @@
     .end param
 
     .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
+
+    if-eqz v0, :cond_1
+
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    invoke-virtual {v0}, Ly1/a;->getKeyboardFocusedVirtualViewId()I
+    .line 2
+    invoke-virtual {v0}, Lp2/a;->getKeyboardFocusedVirtualViewId()I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v1, :cond_0
 
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    .line 2
-    invoke-virtual {v0}, Ly1/a;->getAccessibilityFocusedVirtualViewId()I
+    .line 3
+    invoke-virtual {v0}, Lp2/a;->getAccessibilityFocusedVirtualViewId()I
 
     move-result v0
 
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-super {p0, p1}, Landroid/widget/CheckBox;->getFocusedRect(Landroid/graphics/Rect;)V
-
-    goto :goto_1
+    if-ne v0, v1, :cond_1
 
     .line 4
-    :cond_1
-    :goto_0
+    :cond_0
     invoke-direct {p0}, Lcom/google/android/material/chip/Chip;->getCloseIconTouchBoundsInt()Landroid/graphics/Rect;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    :goto_1
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    invoke-super {p0, p1}, Landroid/widget/CheckBox;->getFocusedRect(Landroid/graphics/Rect;)V
+
+    :goto_0
     return-void
 .end method
 
@@ -2664,10 +2705,16 @@
     invoke-super {p0, p1, p2, p3}, Landroid/widget/CheckBox;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
     .line 2
+    iget-boolean v0, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
+
+    if-eqz v0, :cond_0
+
+    .line 3
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    invoke-virtual {v0, p1, p2, p3}, Ly1/a;->onFocusChanged(ZILandroid/graphics/Rect;)V
+    invoke-virtual {v0, p1, p2, p3}, Lp2/a;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
+    :cond_0
     return-void
 .end method
 
@@ -2741,104 +2788,67 @@
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/google/android/material/chip/Chip;->isCheckable()Z
+    invoke-virtual {p0}, Lcom/google/android/material/chip/Chip;->getAccessibilityClassName()Ljava/lang/CharSequence;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/widget/CheckBox;->isClickable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "android.view.View"
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
     .line 3
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
-
-    goto :goto_2
-
-    .line 4
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lcom/google/android/material/chip/Chip;->isCheckable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "android.widget.CompoundButton"
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "android.widget.Button"
-
-    .line 5
-    :goto_1
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
-
-    .line 6
-    :goto_2
     invoke-virtual {p0}, Lcom/google/android/material/chip/Chip;->isCheckable()Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
 
-    .line 7
+    .line 4
     invoke-virtual {p0}, Landroid/widget/CheckBox;->isClickable()Z
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
 
-    .line 8
+    .line 5
     invoke-virtual {p0}, Landroid/widget/CheckBox;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     instance-of v0, v0, Lcom/google/android/material/chip/ChipGroup;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_1
 
-    .line 9
+    .line 6
     invoke-virtual {p0}, Landroid/widget/CheckBox;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/material/chip/ChipGroup;
 
-    .line 10
-    invoke-static {p1}, Lt1/c;->V1(Landroid/view/accessibility/AccessibilityNodeInfo;)Lt1/c;
+    .line 7
+    invoke-static {p1}, Lk2/c;->c2(Landroid/view/accessibility/AccessibilityNodeInfo;)Lk2/c;
 
     move-result-object p1
 
-    .line 11
+    .line 8
     invoke-virtual {v0}, Lcom/google/android/material/chip/ChipGroup;->isSingleLine()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_0
 
     invoke-virtual {v0, p0}, Lcom/google/android/material/chip/ChipGroup;->getIndexOfChip(Landroid/view/View;)I
 
     move-result v1
 
-    goto :goto_3
+    goto :goto_0
 
-    :cond_3
+    :cond_0
     const/4 v1, -0x1
 
-    :goto_3
+    :goto_0
     move v4, v1
 
-    .line 12
+    .line 9
     invoke-virtual {v0, p0}, Lcom/google/android/material/internal/FlowLayout;->getRowIndex(Landroid/view/View;)I
 
     move-result v2
@@ -2849,20 +2859,20 @@
 
     const/4 v6, 0x0
 
-    .line 13
+    .line 10
     invoke-virtual {p0}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v7
 
-    .line 14
-    invoke-static/range {v2 .. v7}, Lt1/c$c;->h(IIIIZZ)Lt1/c$c;
+    .line 11
+    invoke-static/range {v2 .. v7}, Lk2/c$d;->h(IIIIZZ)Lk2/c$d;
 
     move-result-object v0
 
-    .line 15
-    invoke-virtual {p1, v0}, Lt1/c;->X0(Ljava/lang/Object;)V
+    .line 12
+    invoke-virtual {p1, v0}, Lk2/c;->c1(Ljava/lang/Object;)V
 
-    :cond_4
+    :cond_1
     return-void
 .end method
 
@@ -3091,11 +3101,30 @@
 
     .line 4
     :cond_0
+    iget-boolean v1, p0, Lcom/google/android/material/chip/Chip;->touchHelperEnabled:Z
+
+    if-eqz v1, :cond_1
+
+    .line 5
     iget-object v1, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    invoke-virtual {v1, v2, v2}, Ly1/a;->sendEventForVirtualView(II)Z
+    invoke-virtual {v1, v2, v2}, Lp2/a;->sendEventForVirtualView(II)Z
 
+    :cond_1
     return v0
+.end method
+
+.method public setAccessibilityClassName(Ljava/lang/CharSequence;)V
+    .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/chip/Chip;->accessibilityClassName:Ljava/lang/CharSequence;
+
+    return-void
 .end method
 
 .method public setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -3276,22 +3305,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v0
-
-    .line 5
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    if-eq v0, p1, :cond_1
-
-    .line 6
-    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->onCheckedChangeListenerInternal:Landroid/widget/CompoundButton$OnCheckedChangeListener;
-
-    if-eqz v0, :cond_1
-
-    .line 7
-    invoke-interface {v0, p0, p1}, Landroid/widget/CompoundButton$OnCheckedChangeListener;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
 
     :cond_1
     :goto_0
@@ -4221,7 +4235,7 @@
     if-nez p3, :cond_0
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/CheckBox;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/AppCompatCheckBox;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
@@ -4264,13 +4278,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
 
     if-nez p1, :cond_1
 
     if-nez p3, :cond_0
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/CheckBox;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/AppCompatCheckBox;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
@@ -4665,6 +4682,33 @@
     return-void
 .end method
 
+.method public setInternalOnCheckedChangeListener(Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;)V
+    .locals 0
+    .param p1    # Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener<",
+            "Lcom/google/android/material/chip/Chip;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/chip/Chip;->onCheckedChangeListenerInternal:Lcom/google/android/material/internal/MaterialCheckable$OnCheckedChangeListener;
+
+    return-void
+.end method
+
 .method public setLayoutDirection(I)V
     .locals 1
 
@@ -4773,11 +4817,15 @@
     throw p1
 .end method
 
-.method public setOnCheckedChangeListenerInternal(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+.method public setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
     .locals 0
+    .param p1    # Landroid/widget/CompoundButton$OnCheckedChangeListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Lcom/google/android/material/chip/Chip;->onCheckedChangeListenerInternal:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iput-object p1, p0, Lcom/google/android/material/chip/Chip;->onCheckedChangeListener:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     return-void
 .end method
@@ -5088,6 +5136,40 @@
     invoke-virtual {v0, p1}, Lcom/google/android/material/chip/ChipDrawable;->setTextEndPaddingResource(I)V
 
     :cond_0
+    return-void
+.end method
+
+.method public setTextSize(IF)V
+    .locals 2
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/widget/CheckBox;->setTextSize(IF)V
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/chip/Chip;->chipDrawable:Lcom/google/android/material/chip/ChipDrawable;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/CheckBox;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    invoke-static {p1, p2, v1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p1
+
+    .line 4
+    invoke-virtual {v0, p1}, Lcom/google/android/material/chip/ChipDrawable;->setTextSize(F)V
+
+    .line 5
+    :cond_0
+    invoke-direct {p0}, Lcom/google/android/material/chip/Chip;->updateTextPaintDrawState()V
+
     return-void
 .end method
 

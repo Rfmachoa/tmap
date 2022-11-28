@@ -218,7 +218,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_3
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -233,7 +233,12 @@
 
     check-cast v6, Ljava/lang/String;
 
+    if-nez v6, :cond_1
+
+    goto :goto_0
+
     .line 7
+    :cond_1
     invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
 
     move-result v7
@@ -245,7 +250,7 @@
     .line 8
     aget-object v9, v3, v8
 
-    if-eqz v9, :cond_1
+    if-eqz v9, :cond_2
 
     shr-int/lit8 v7, v7, 0x1
 
@@ -256,7 +261,7 @@
     .line 9
     aget-object v7, v3, v8
 
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_2
 
     shl-int/lit8 v7, v2, 0x1
 
@@ -267,7 +272,7 @@
     .line 10
     array-length v7, v3
 
-    if-lt v8, v7, :cond_1
+    if-lt v8, v7, :cond_2
 
     .line 11
     array-length v7, v3
@@ -279,7 +284,7 @@
     move-result-object v3
 
     .line 12
-    :cond_1
+    :cond_2
     aput-object v6, v3, v8
 
     add-int/lit8 v8, v8, 0x1
@@ -294,7 +299,7 @@
     goto :goto_0
 
     .line 14
-    :cond_2
+    :cond_3
     new-instance p0, Lcom/fasterxml/jackson/databind/util/CompactStringObjectMap;
 
     invoke-direct {p0, v1, v4, v3}, Lcom/fasterxml/jackson/databind/util/CompactStringObjectMap;-><init>(II[Ljava/lang/Object;)V
@@ -388,6 +393,56 @@
     add-int/lit8 v1, v1, 0x1
 
     aget-object p1, p1, v1
+
+    return-object p1
+.end method
+
+.method public findCaseInsensitive(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/util/CompactStringObjectMap;->_hashArea:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    .line 2
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/util/CompactStringObjectMap;->_hashArea:[Ljava/lang/Object;
+
+    aget-object v2, v2, v1
+
+    if-eqz v2, :cond_0
+
+    .line 3
+    check-cast v2, Ljava/lang/String;
+
+    .line 4
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 5
+    iget-object p1, p0, Lcom/fasterxml/jackson/databind/util/CompactStringObjectMap;->_hashArea:[Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, 0x1
+
+    aget-object p1, p1, v1
+
+    return-object p1
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x2
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
 
     return-object p1
 .end method

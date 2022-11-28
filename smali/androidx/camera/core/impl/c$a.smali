@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method public static i()Landroidx/camera/core/impl/c;
+.method public static j()Landroidx/camera/core/impl/c;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -42,13 +42,13 @@
 
 
 # virtual methods
-.method public b()Lx/g1;
+.method public b()Lb0/v1;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Lx/g1;->b()Lx/g1;
+    invoke-static {}, Lb0/v1;->b()Lb0/v1;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
     return-object v0
 .end method
 
-.method public e()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
+.method public f()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -85,7 +85,7 @@
     return-object v0
 .end method
 
-.method public f()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
+.method public g()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -96,7 +96,7 @@
     return-object v0
 .end method
 
-.method public g()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
+.method public h()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -107,7 +107,7 @@
     return-object v0
 .end method
 
-.method public h()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
+.method public i()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

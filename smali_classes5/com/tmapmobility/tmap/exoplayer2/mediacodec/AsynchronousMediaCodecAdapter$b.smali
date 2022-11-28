@@ -40,11 +40,9 @@
 
 .field public final d:Z
 
-.field public final e:Z
-
 
 # direct methods
-.method public constructor <init>(IZZ)V
+.method public constructor <init>(IZ)V
     .locals 2
 
     .line 1
@@ -56,12 +54,12 @@
 
     invoke-direct {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/b;-><init>(I)V
 
-    invoke-direct {p0, v0, v1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;-><init>(Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;ZZ)V
+    invoke-direct {p0, v0, v1, p2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;-><init>(Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;Z)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;ZZ)V
+.method public constructor <init>(Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;Z)V
     .locals 0
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -74,7 +72,7 @@
             ">;",
             "Lcom/google/common/base/Supplier<",
             "Landroid/os/HandlerThread;",
-            ">;ZZ)V"
+            ">;Z)V"
         }
     .end annotation
 
@@ -89,9 +87,6 @@
 
     .line 5
     iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;->d:Z
-
-    .line 6
-    iput-boolean p4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;->e:Z
 
     return-void
 .end method
@@ -165,7 +160,7 @@
 .end method
 
 .method public d(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$a;)Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter;
-    .locals 10
+    .locals 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -195,7 +190,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->a(Ljava/lang/String;)V
 
     .line 3
     invoke-static {v0}, Landroid/media/MediaCodec;->createByCodecName(Ljava/lang/String;)Landroid/media/MediaCodec;
@@ -232,21 +227,19 @@
 
     iget-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;->d:Z
 
-    iget-boolean v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;->e:Z
-
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
     move-object v3, v2
 
     move-object v4, v0
 
-    invoke-direct/range {v3 .. v9}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter;-><init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;Landroid/os/HandlerThread;ZZLcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$a;)V
+    invoke-direct/range {v3 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter;-><init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;Landroid/os/HandlerThread;ZLcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$a;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 7
     :try_start_2
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->c()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->c()V
 
     .line 8
     iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$a;->b:Landroid/media/MediaFormat;

@@ -1,26 +1,73 @@
-.class public interface abstract Lfj/c;
+.class public final Lfj/c;
 .super Ljava/lang/Object;
-.source "KMarkers.kt"
-
-# interfaces
-.implements Lfj/a;
+.source "ApplicationContextModule.java"
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0008f\u0018\u00002\u00020\u0001\u00a8\u0006\u0002"
-    }
-    d2 = {
-        "Lfj/c;",
-        "Lfj/a;",
-        "kotlin-stdlib"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x5,
-        0x1
+.annotation runtime Ldagger/Module;
+.end annotation
+
+.annotation build Ldagger/hilt/InstallIn;
+    value = {
+        Lhj/a;
     }
 .end annotation
+
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "applicationContext"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lfj/c;->a:Landroid/content/Context;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Landroid/app/Application;
+    .locals 1
+    .annotation runtime Ldagger/Provides;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lfj/c;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Application;
+
+    return-object v0
+.end method
+
+.method public b()Landroid/content/Context;
+    .locals 1
+    .annotation runtime Ldagger/Provides;
+    .end annotation
+
+    .annotation build Ldagger/hilt/android/qualifiers/ApplicationContext;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lfj/c;->a:Landroid/content/Context;
+
+    return-object v0
+.end method

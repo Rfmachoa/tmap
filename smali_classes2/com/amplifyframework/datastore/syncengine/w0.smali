@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lgk/a;
 
 
 # static fields
@@ -36,7 +36,7 @@
 .method public final run()V
     .locals 0
 
-    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->l()V
+    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->a()V
 
     return-void
 .end method

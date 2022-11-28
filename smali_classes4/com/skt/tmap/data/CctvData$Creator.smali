@@ -1,5 +1,6 @@
 .class public final Lcom/skt/tmap/data/CctvData$Creator;
 .super Ljava/lang/Object;
+.source "CctvData.kt"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -11,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "Creator"
 .end annotation
 
@@ -25,17 +26,13 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -51,7 +48,7 @@
 
 # virtual methods
 .method public final createFromParcel(Landroid/os/Parcel;)Lcom/skt/tmap/data/CctvData;
-    .locals 7
+    .locals 8
     .param p1    # Landroid/os/Parcel;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -59,7 +56,7 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "in"
+    const-string v0, "parcel"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -85,9 +82,13 @@
 
     move-result-object v6
 
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v7
+
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/skt/tmap/data/CctvData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v7}, Lcom/skt/tmap/data/CctvData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -95,7 +96,6 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/skt/tmap/data/CctvData$Creator;->createFromParcel(Landroid/os/Parcel;)Lcom/skt/tmap/data/CctvData;
 
     move-result-object p1
@@ -116,7 +116,6 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 1
     invoke-virtual {p0, p1}, Lcom/skt/tmap/data/CctvData$Creator;->newArray(I)[Lcom/skt/tmap/data/CctvData;
 
     move-result-object p1

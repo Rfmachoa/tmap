@@ -71,7 +71,7 @@
 
     move-result v2
 
-    iput v2, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->i1:I
+    iput v2, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->k1:I
 
     .line 3
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$f;->a:Landroidx/appcompat/widget/ActionMenuPresenter;

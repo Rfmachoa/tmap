@@ -383,12 +383,12 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lda/c;
+    new-instance v0, Lac/c;
 
-    invoke-direct {v0}, Lda/c;-><init>()V
+    invoke-direct {v0}, Lac/c;-><init>()V
 
     .line 2
-    invoke-virtual {v0, p0, p1}, Lda/c;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0, p1}, Lac/c;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -428,7 +428,7 @@
 
     const-string v3, ", args:"
 
-    invoke-static {v2, p0, v3}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, p0, v3}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 

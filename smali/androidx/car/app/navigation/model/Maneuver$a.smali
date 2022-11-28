@@ -39,7 +39,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Landroidx/car/app/navigation/model/Maneuver;->e(I)Z
+    invoke-static {p1}, Landroidx/car/app/navigation/model/Maneuver;->f(I)Z
 
     move-result v0
 
@@ -71,7 +71,7 @@
     .line 1
     iget v0, p0, Landroidx/car/app/navigation/model/Maneuver$a;->a:I
 
-    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->g(I)Z
+    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->e(I)Z
 
     move-result v0
 
@@ -98,7 +98,7 @@
     :goto_0
     iget v0, p0, Landroidx/car/app/navigation/model/Maneuver$a;->a:I
 
-    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->f(I)Z
+    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->g(I)Z
 
     move-result v0
 
@@ -169,7 +169,7 @@
     .line 1
     iget v0, p0, Landroidx/car/app/navigation/model/Maneuver$a;->a:I
 
-    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->f(I)Z
+    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->g(I)Z
 
     move-result v0
 
@@ -225,7 +225,7 @@
     .line 1
     iget v0, p0, Landroidx/car/app/navigation/model/Maneuver$a;->a:I
 
-    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->g(I)Z
+    invoke-static {v0}, Landroidx/car/app/navigation/model/Maneuver;->h(I)Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "BasicCookieStore.java"
 
 # interfaces
-.implements Lgf/f;
+.implements Lkh/f;
 .implements Ljava/io/Serializable;
 
 
@@ -25,7 +25,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/TreeSet<",
-            "Lxf/b;",
+            "Lbi/b;",
             ">;"
         }
     .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public declared-synchronized addCookie(Lxf/b;)V
+.method public declared-synchronized addCookie(Lbi/b;)V
     .locals 1
 
     monitor-enter p0
@@ -73,7 +73,7 @@
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    invoke-interface {p1, v0}, Lxf/b;->isExpired(Ljava/util/Date;)Z
+    invoke-interface {p1, v0}, Lbi/b;->isExpired(Ljava/util/Date;)Z
 
     move-result v0
 
@@ -103,7 +103,7 @@
     return-void
 .end method
 
-.method public declared-synchronized addCookies([Lxf/b;)V
+.method public declared-synchronized addCookies([Lbi/b;)V
     .locals 3
 
     monitor-enter p0
@@ -122,7 +122,7 @@
     aget-object v2, p1, v1
 
     .line 2
-    invoke-virtual {p0, v2}, Lcz/msebera/android/httpclient/impl/client/BasicCookieStore;->addCookie(Lxf/b;)V
+    invoke-virtual {p0, v2}, Lcz/msebera/android/httpclient/impl/client/BasicCookieStore;->addCookie(Lbi/b;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -206,9 +206,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lxf/b;
+    check-cast v2, Lbi/b;
 
-    invoke-interface {v2, p1}, Lxf/b;->isExpired(Ljava/util/Date;)Z
+    invoke-interface {v2, p1}, Lbi/b;->isExpired(Ljava/util/Date;)Z
 
     move-result v2
 
@@ -243,7 +243,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lxf/b;",
+            "Lbi/b;",
             ">;"
         }
     .end annotation

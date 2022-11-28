@@ -1,141 +1,322 @@
-.class public Landroidx/paging/e;
-.super Landroidx/paging/l;
-.source "ListDataSource.java"
+.class public final Landroidx/paging/e;
+.super Ljava/lang/Object;
+.source "NullPaddedListDiffHelper.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Landroidx/paging/l<",
-        "TT;>;"
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\t\u0008\u00c0\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J4\u0010\t\u001a\u00020\u0008\"\u0008\u0008\u0000\u0010\u0002*\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u00032\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00052\u000c\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0005J8\u0010\u0010\u001a\u00020\u00082\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\u000c\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\n2\u0006\u0010\u000f\u001a\u00020\u0001H\u0002\u00a8\u0006\u0013"
+    }
+    d2 = {
+        "Landroidx/paging/e;",
+        "",
+        "T",
+        "Landroidx/recyclerview/widget/u;",
+        "callback",
+        "Landroidx/paging/v;",
+        "oldList",
+        "newList",
+        "Lkotlin/d1;",
+        "b",
+        "",
+        "startBoundary",
+        "endBoundary",
+        "start",
+        "end",
+        "payload",
+        "a",
+        "<init>",
+        "()V",
+        "paging-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
     }
 .end annotation
 
 
-# instance fields
-.field public final c:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "TT;>;"
-        }
+# static fields
+.field public static final a:Landroidx/paging/e;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public static constructor <clinit>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "TT;>;)V"
-        }
-    .end annotation
+
+    new-instance v0, Landroidx/paging/e;
+
+    invoke-direct {v0}, Landroidx/paging/e;-><init>()V
+
+    sput-object v0, Landroidx/paging/e;->a:Landroidx/paging/e;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Landroidx/paging/l;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Landroidx/paging/e;->c:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public n(Landroidx/paging/l$d;Landroidx/paging/l$b;)V
-    .locals 3
-    .param p1    # Landroidx/paging/l$d;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/l$b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/paging/l$d;",
-            "Landroidx/paging/l$b<",
-            "TT;>;)V"
-        }
-    .end annotation
+.method public final a(Landroidx/recyclerview/widget/u;IIIILjava/lang/Object;)V
+    .locals 0
+
+    sub-int/2addr p2, p4
+
+    if-lez p2, :cond_0
 
     .line 1
-    iget-object v0, p0, Landroidx/paging/e;->c:Ljava/util/List;
+    invoke-interface {p1, p4, p2, p6}, Landroidx/recyclerview/widget/u;->c(IILjava/lang/Object;)V
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    :cond_0
+    sub-int/2addr p5, p3
 
-    move-result v0
+    if-lez p5, :cond_1
 
     .line 2
-    invoke-static {p1, v0}, Landroidx/paging/l;->j(Landroidx/paging/l$d;I)I
+    invoke-interface {p1, p3, p5, p6}, Landroidx/recyclerview/widget/u;->c(IILjava/lang/Object;)V
 
-    move-result v1
-
-    .line 3
-    invoke-static {p1, v1, v0}, Landroidx/paging/l;->k(Landroidx/paging/l$d;II)I
-
-    move-result p1
-
-    .line 4
-    iget-object v2, p0, Landroidx/paging/e;->c:Ljava/util/List;
-
-    add-int/2addr p1, v1
-
-    invoke-interface {v2, v1, p1}, Ljava/util/List;->subList(II)Ljava/util/List;
-
-    move-result-object p1
-
-    .line 5
-    invoke-virtual {p2, p1, v1, v0}, Landroidx/paging/l$b;->b(Ljava/util/List;II)V
-
+    :cond_1
     return-void
 .end method
 
-.method public o(Landroidx/paging/l$g;Landroidx/paging/l$e;)V
-    .locals 2
-    .param p1    # Landroidx/paging/l$g;
-        .annotation build Landroidx/annotation/NonNull;
+.method public final b(Landroidx/recyclerview/widget/u;Landroidx/paging/v;Landroidx/paging/v;)V
+    .locals 10
+    .param p1    # Landroidx/recyclerview/widget/u;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/paging/l$e;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p2    # Landroidx/paging/v;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/paging/v;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Landroidx/paging/l$g;",
-            "Landroidx/paging/l$e<",
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/recyclerview/widget/u;",
+            "Landroidx/paging/v<",
+            "TT;>;",
+            "Landroidx/paging/v<",
             "TT;>;)V"
         }
     .end annotation
 
+    const-string v0, "callback"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "oldList"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "newList"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 1
-    iget-object v0, p0, Landroidx/paging/e;->c:Ljava/util/List;
+    invoke-interface {p2}, Landroidx/paging/v;->c()I
 
-    iget v1, p1, Landroidx/paging/l$g;->a:I
+    move-result v0
 
-    iget p1, p1, Landroidx/paging/l$g;->b:I
+    invoke-interface {p3}, Landroidx/paging/v;->c()I
 
-    add-int/2addr p1, v1
+    move-result v1
 
-    invoke-interface {v0, v1, p1}, Ljava/util/List;->subList(II)Ljava/util/List;
+    .line 2
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {p2, p1}, Landroidx/paging/l$e;->a(Ljava/util/List;)V
+    .line 3
+    invoke-interface {p2}, Landroidx/paging/v;->c()I
 
+    move-result v1
+
+    invoke-interface {p2}, Landroidx/paging/v;->b()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    .line 4
+    invoke-interface {p3}, Landroidx/paging/v;->c()I
+
+    move-result v1
+
+    invoke-interface {p3}, Landroidx/paging/v;->b()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    .line 5
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    sub-int v2, v1, v0
+
+    if-lez v2, :cond_0
+
+    .line 6
+    invoke-interface {p1, v0, v2}, Landroidx/recyclerview/widget/u;->b(II)V
+
+    .line 7
+    invoke-interface {p1, v0, v2}, Landroidx/recyclerview/widget/u;->a(II)V
+
+    .line 8
+    :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    .line 9
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    .line 10
+    invoke-interface {p2}, Landroidx/paging/v;->c()I
+
+    move-result v1
+
+    invoke-interface {p3}, Landroidx/paging/v;->getSize()I
+
+    move-result v3
+
+    invoke-static {v1, v3}, Lol/u;->B(II)I
+
+    move-result v7
+
+    .line 11
+    invoke-interface {p2}, Landroidx/paging/v;->c()I
+
+    move-result v1
+
+    invoke-interface {p2}, Landroidx/paging/v;->b()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    invoke-interface {p3}, Landroidx/paging/v;->getSize()I
+
+    move-result v1
+
+    invoke-static {v3, v1}, Lol/u;->B(II)I
+
+    move-result v8
+
+    .line 12
+    sget-object v9, Landroidx/paging/DiffingChangePayload;->ITEM_TO_PLACEHOLDER:Landroidx/paging/DiffingChangePayload;
+
+    move-object v3, p0
+
+    move-object v4, p1
+
+    move v5, v2
+
+    move v6, v0
+
+    .line 13
+    invoke-virtual/range {v3 .. v9}, Landroidx/paging/e;->a(Landroidx/recyclerview/widget/u;IIIILjava/lang/Object;)V
+
+    .line 14
+    invoke-interface {p3}, Landroidx/paging/v;->c()I
+
+    move-result v1
+
+    invoke-interface {p2}, Landroidx/paging/v;->getSize()I
+
+    move-result v3
+
+    invoke-static {v1, v3}, Lol/u;->B(II)I
+
+    move-result v7
+
+    .line 15
+    invoke-interface {p3}, Landroidx/paging/v;->c()I
+
+    move-result v1
+
+    invoke-interface {p3}, Landroidx/paging/v;->b()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    invoke-interface {p2}, Landroidx/paging/v;->getSize()I
+
+    move-result v1
+
+    invoke-static {v3, v1}, Lol/u;->B(II)I
+
+    move-result v8
+
+    .line 16
+    sget-object v9, Landroidx/paging/DiffingChangePayload;->PLACEHOLDER_TO_ITEM:Landroidx/paging/DiffingChangePayload;
+
+    move-object v3, p0
+
+    .line 17
+    invoke-virtual/range {v3 .. v9}, Landroidx/paging/e;->a(Landroidx/recyclerview/widget/u;IIIILjava/lang/Object;)V
+
+    .line 18
+    invoke-interface {p3}, Landroidx/paging/v;->getSize()I
+
+    move-result p3
+
+    invoke-interface {p2}, Landroidx/paging/v;->getSize()I
+
+    move-result v0
+
+    sub-int/2addr p3, v0
+
+    if-lez p3, :cond_1
+
+    .line 19
+    invoke-interface {p2}, Landroidx/paging/v;->getSize()I
+
+    move-result p2
+
+    invoke-interface {p1, p2, p3}, Landroidx/recyclerview/widget/u;->a(II)V
+
+    goto :goto_0
+
+    :cond_1
+    if-gez p3, :cond_2
+
+    .line 20
+    invoke-interface {p2}, Landroidx/paging/v;->getSize()I
+
+    move-result p2
+
+    add-int/2addr p2, p3
+
+    neg-int p3, p3
+
+    invoke-interface {p1, p2, p3}, Landroidx/recyclerview/widget/u;->b(II)V
+
+    :cond_2
+    :goto_0
     return-void
 .end method

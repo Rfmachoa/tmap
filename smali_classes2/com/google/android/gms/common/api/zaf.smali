@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/api/zaf;
 .super Lcom/google/android/gms/common/api/internal/BasePendingResult;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -17,22 +17,11 @@
 
 # instance fields
 .field private final zae:Lcom/google/android/gms/common/api/Result;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TR;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/Result;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;

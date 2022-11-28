@@ -1,555 +1,1604 @@
-.class public final Lk1/b;
-.super Ljava/lang/Object;
-.source "MailTo.java"
+.class public Lk1/b;
+.super Lk1/c;
+.source "ArcCurveFit.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lk1/b$a;
+    }
+.end annotation
 
 
 # static fields
-.field public static final b:Ljava/lang/String; = "mailto:"
+.field public static final g:I = 0x1
 
-.field public static final c:Ljava/lang/String; = "mailto"
+.field public static final h:I = 0x2
 
-.field public static final d:Ljava/lang/String; = "to"
+.field public static final i:I = 0x3
 
-.field public static final e:Ljava/lang/String; = "body"
+.field public static final j:I = 0x0
 
-.field public static final f:Ljava/lang/String; = "cc"
+.field public static final k:I = 0x1
 
-.field public static final g:Ljava/lang/String; = "bcc"
+.field public static final l:I = 0x2
 
-.field public static final h:Ljava/lang/String; = "subject"
+.field public static final m:I = 0x3
 
 
 # instance fields
-.field public a:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final d:[D
+
+.field public e:[Lk1/b$a;
+
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>([I[D[[D)V
+    .locals 24
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p2
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Lk1/c;-><init>()V
+
+    const/4 v2, 0x1
 
     .line 2
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
-
-    return-void
-.end method
-
-.method public static g(Landroid/net/Uri;)Z
-    .locals 1
-    .param p0    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    if-eqz p0, :cond_0
-
-    .line 1
-    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "mailto"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static h(Ljava/lang/String;)Z
-    .locals 1
-    .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    if-eqz p0, :cond_0
-
-    const-string v0, "mailto:"
-
-    .line 1
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static i(Landroid/net/Uri;)Lk1/b;
-    .locals 0
-    .param p0    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/core/net/ParseException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lk1/b;->j(Ljava/lang/String;)Lk1/b;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Ljava/lang/String;)Lk1/b;
-    .locals 10
-    .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/core/net/ParseException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 2
-    invoke-static {p0}, Lk1/b;->h(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const/16 v0, 0x23
+    iput-boolean v2, v0, Lk1/b;->f:Z
 
     .line 3
-    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_0
+    iput-object v1, v0, Lk1/b;->d:[D
 
     .line 4
-    invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    array-length v3, v1
 
-    move-result-object p0
+    sub-int/2addr v3, v2
 
-    :cond_0
-    const/16 v0, 0x3f
+    new-array v3, v3, [Lk1/b$a;
 
-    .line 5
-    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v0
+    iput-object v3, v0, Lk1/b;->e:[Lk1/b$a;
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x7
+    move v5, v2
 
-    const/4 v5, 0x1
+    move v6, v5
 
-    if-ne v0, v1, :cond_1
+    move v4, v3
 
-    .line 6
-    invoke-virtual {p0, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    move-object v1, p0
-
-    move-object p0, v3
-
-    goto :goto_0
-
-    .line 7
-    :cond_1
-    invoke-virtual {p0, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    add-int/2addr v0, v5
-
-    .line 8
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 9
+    .line 5
     :goto_0
-    new-instance v0, Lk1/b;
+    iget-object v7, v0, Lk1/b;->e:[Lk1/b$a;
 
-    invoke-direct {v0}, Lk1/b;-><init>()V
-
-    if-eqz p0, :cond_4
-
-    const-string v4, "&"
-
-    .line 10
-    invoke-virtual {p0, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 11
-    array-length v4, p0
-
-    move v6, v2
-
-    :goto_1
-    if-ge v6, v4, :cond_4
-
-    aget-object v7, p0, v6
-
-    const/4 v8, 0x2
-
-    const-string v9, "="
-
-    .line 12
-    invoke-virtual {v7, v9, v8}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 13
     array-length v8, v7
 
-    if-nez v8, :cond_2
+    if-ge v4, v8, :cond_4
 
-    goto :goto_3
+    .line 6
+    aget v8, p1, v4
 
-    .line 14
+    const/4 v9, 0x3
+
+    const/4 v10, 0x2
+
+    if-eqz v8, :cond_3
+
+    if-eq v8, v2, :cond_2
+
+    if-eq v8, v10, :cond_1
+
+    if-eq v8, v9, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    if-ne v5, v2, :cond_2
+
+    :cond_1
+    move v5, v10
+
+    goto :goto_1
+
     :cond_2
-    aget-object v8, v7, v2
+    move v5, v2
 
-    invoke-static {v8}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    sget-object v9, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 15
-    array-length v9, v7
-
-    if-le v9, v5, :cond_3
-
-    .line 16
-    aget-object v7, v7, v5
-
-    invoke-static {v7}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
+    :goto_1
+    move v6, v5
 
     goto :goto_2
 
     :cond_3
-    move-object v7, v3
+    move v6, v9
 
-    .line 17
+    .line 7
     :goto_2
-    iget-object v9, v0, Lk1/b;->a:Ljava/util/HashMap;
+    new-instance v22, Lk1/b$a;
 
-    invoke-virtual {v9, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aget-wide v10, v1, v4
 
-    :goto_3
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v23, v4, 0x1
 
-    goto :goto_1
+    aget-wide v12, v1, v23
 
-    .line 18
+    aget-object v8, p3, v4
+
+    aget-wide v14, v8, v3
+
+    aget-object v8, p3, v4
+
+    aget-wide v16, v8, v2
+
+    aget-object v8, p3, v23
+
+    aget-wide v18, v8, v3
+
+    aget-object v8, p3, v23
+
+    aget-wide v20, v8, v2
+
+    move-object/from16 v8, v22
+
+    move v9, v6
+
+    invoke-direct/range {v8 .. v21}, Lk1/b$a;-><init>(IDDDDDD)V
+
+    aput-object v22, v7, v4
+
+    move/from16 v4, v23
+
+    goto :goto_0
+
     :cond_4
-    invoke-virtual {v0}, Lk1/b;->f()Ljava/lang/String;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_5
-
-    const-string v2, ", "
-
-    .line 19
-    invoke-static {v1, v2, p0}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 20
-    :cond_5
-    iget-object p0, v0, Lk1/b;->a:Ljava/util/HashMap;
-
-    const-string v2, "to"
-
-    invoke-virtual {p0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-
-    .line 21
-    :cond_6
-    new-instance p0, Landroidx/core/net/ParseException;
-
-    const-string v0, "Not a mailto scheme"
-
-    invoke-direct {p0, v0}, Landroidx/core/net/ParseException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+.method public c(DI)D
+    .locals 6
 
     .line 1
-    iget-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
+    iget-boolean v0, p0, Lk1/b;->f:Z
 
-    const-string v1, "bcc"
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
-
-    const-string v1, "body"
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
-
-    const-string v1, "cc"
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d()Ljava/util/Map;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
-
-    return-object v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
-
-    const-string v1, "subject"
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public f()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lk1/b;->a:Ljava/util/HashMap;
-
-    const-string v1, "to"
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 4
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "mailto:"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0x3f
+    if-eqz v0, :cond_5
 
     .line 2
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v2, v0, v1
+
+    iget-wide v2, v2, Lk1/b$a;->c:D
+
+    cmpg-double v2, p1, v2
+
+    if-gez v2, :cond_3
 
     .line 3
-    iget-object v1, p0, Lk1/b;->a:Ljava/util/HashMap;
+    aget-object v2, v0, v1
 
-    invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
+    iget-wide v2, v2, Lk1/b$a;->c:D
 
     .line 4
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    aget-object v4, v0, v1
 
-    move-result-object v3
+    iget-wide v4, v4, Lk1/b$a;->c:D
 
-    check-cast v3, Ljava/lang/String;
-
-    invoke-static {v3}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v3, 0x3d
+    sub-double/2addr p1, v4
 
     .line 5
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    aget-object v4, v0, v1
+
+    iget-boolean v4, v4, Lk1/b$a;->r:Z
+
+    if-eqz v4, :cond_1
+
+    if-nez p3, :cond_0
 
     .line 6
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    aget-object p3, v0, v1
 
-    move-result-object v2
+    invoke-virtual {p3, v2, v3}, Lk1/b$a;->f(D)D
 
-    check-cast v2, Ljava/lang/String;
+    move-result-wide v4
 
-    invoke-static {v2}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
 
-    move-result-object v2
+    aget-object p3, p3, v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v2, v3}, Lk1/b$a;->d(D)D
 
-    const/16 v2, 0x26
+    move-result-wide v0
+
+    mul-double/2addr v0, p1
+
+    add-double/2addr v0, v4
+
+    return-wide v0
 
     .line 7
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :cond_0
+    aget-object p3, v0, v1
+
+    invoke-virtual {p3, v2, v3}, Lk1/b$a;->g(D)D
+
+    move-result-wide v4
+
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v1
+
+    invoke-virtual {p3, v2, v3}, Lk1/b$a;->e(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, p1
+
+    add-double/2addr v0, v4
+
+    return-wide v0
+
+    .line 8
+    :cond_1
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0, v2, v3}, Lk1/b$a;->k(D)V
+
+    if-nez p3, :cond_2
+
+    .line 9
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v1
+
+    invoke-virtual {p3}, Lk1/b$a;->h()D
+
+    move-result-wide v2
+
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v1
+
+    invoke-virtual {p3}, Lk1/b$a;->b()D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, p1
+
+    add-double/2addr v0, v2
+
+    return-wide v0
+
+    .line 10
+    :cond_2
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v1
+
+    invoke-virtual {p3}, Lk1/b$a;->i()D
+
+    move-result-wide v2
+
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v1
+
+    invoke-virtual {p3}, Lk1/b$a;->c()D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, p1
+
+    add-double/2addr v0, v2
+
+    return-wide v0
+
+    .line 11
+    :cond_3
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    aget-object v2, v0, v2
+
+    iget-wide v2, v2, Lk1/b$a;->d:D
+
+    cmpl-double v2, p1, v2
+
+    if-lez v2, :cond_7
+
+    .line 12
+    array-length v1, v0
+
+    add-int/lit8 v1, v1, -0x1
+
+    aget-object v1, v0, v1
+
+    iget-wide v1, v1, Lk1/b$a;->d:D
+
+    sub-double/2addr p1, v1
+
+    .line 13
+    array-length v3, v0
+
+    add-int/lit8 v3, v3, -0x1
+
+    if-nez p3, :cond_4
+
+    .line 14
+    aget-object p3, v0, v3
+
+    invoke-virtual {p3, v1, v2}, Lk1/b$a;->f(D)D
+
+    move-result-wide v4
+
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v3
+
+    invoke-virtual {p3, v1, v2}, Lk1/b$a;->d(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, p1
+
+    add-double/2addr v0, v4
+
+    return-wide v0
+
+    .line 15
+    :cond_4
+    aget-object p3, v0, v3
+
+    invoke-virtual {p3, v1, v2}, Lk1/b$a;->g(D)D
+
+    move-result-wide v4
+
+    iget-object p3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p3, p3, v3
+
+    invoke-virtual {p3, v1, v2}, Lk1/b$a;->e(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v0, p1
+
+    add-double/2addr v0, v4
+
+    return-wide v0
+
+    .line 16
+    :cond_5
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v2, v0, v1
+
+    iget-wide v2, v2, Lk1/b$a;->c:D
+
+    cmpg-double v2, p1, v2
+
+    if-gez v2, :cond_6
+
+    .line 17
+    aget-object p1, v0, v1
+
+    iget-wide p1, p1, Lk1/b$a;->c:D
+
+    goto :goto_0
+
+    .line 18
+    :cond_6
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    aget-object v2, v0, v2
+
+    iget-wide v2, v2, Lk1/b$a;->d:D
+
+    cmpl-double v2, p1, v2
+
+    if-lez v2, :cond_7
+
+    .line 19
+    array-length p1, v0
+
+    add-int/lit8 p1, p1, -0x1
+
+    aget-object p1, v0, p1
+
+    iget-wide p1, p1, Lk1/b$a;->d:D
+
+    .line 20
+    :cond_7
+    :goto_0
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_c
+
+    .line 21
+    aget-object v2, v0, v1
+
+    iget-wide v2, v2, Lk1/b$a;->d:D
+
+    cmpg-double v2, p1, v2
+
+    if-gtz v2, :cond_b
+
+    .line 22
+    aget-object v2, v0, v1
+
+    iget-boolean v2, v2, Lk1/b$a;->r:Z
+
+    if-eqz v2, :cond_9
+
+    if-nez p3, :cond_8
+
+    .line 23
+    aget-object p3, v0, v1
+
+    invoke-virtual {p3, p1, p2}, Lk1/b$a;->f(D)D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    .line 24
+    :cond_8
+    aget-object p3, v0, v1
+
+    invoke-virtual {p3, p1, p2}, Lk1/b$a;->g(D)D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    .line 25
+    :cond_9
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->k(D)V
+
+    if-nez p3, :cond_a
+
+    .line 26
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v1
+
+    invoke-virtual {p1}, Lk1/b$a;->h()D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    .line 27
+    :cond_a
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v1
+
+    invoke-virtual {p1}, Lk1/b$a;->i()D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    :cond_b
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_c
+    const-wide/high16 p1, 0x7ff8000000000000L    # Double.NaN
+
+    return-wide p1
+.end method
+
+.method public d(D[D)V
+    .locals 10
+
+    .line 1
+    iget-boolean v0, p0, Lk1/b;->f:Z
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_3
+
+    .line 2
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v3, v0, v2
+
+    iget-wide v3, v3, Lk1/b$a;->c:D
+
+    cmpg-double v3, p1, v3
+
+    if-gez v3, :cond_1
+
+    .line 3
+    aget-object v3, v0, v2
+
+    iget-wide v3, v3, Lk1/b$a;->c:D
+
+    .line 4
+    aget-object v5, v0, v2
+
+    iget-wide v5, v5, Lk1/b$a;->c:D
+
+    sub-double/2addr p1, v5
+
+    .line 5
+    aget-object v5, v0, v2
+
+    iget-boolean v5, v5, Lk1/b$a;->r:Z
+
+    if-eqz v5, :cond_0
+
+    .line 6
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->f(D)D
+
+    move-result-wide v5
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->d(D)D
+
+    move-result-wide v7
+
+    mul-double/2addr v7, p1
+
+    add-double/2addr v7, v5
+
+    aput-wide v7, p3, v2
+
+    .line 7
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->g(D)D
+
+    move-result-wide v5
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->e(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, p1
+
+    add-double/2addr v2, v5
+
+    aput-wide v2, p3, v1
 
     goto :goto_0
 
     .line 8
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    aget-object v0, v0, v2
 
-    move-result-object v0
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->k(D)V
+
+    .line 9
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->h()D
+
+    move-result-wide v3
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->b()D
+
+    move-result-wide v5
+
+    mul-double/2addr v5, p1
+
+    add-double/2addr v5, v3
+
+    aput-wide v5, p3, v2
+
+    .line 10
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->i()D
+
+    move-result-wide v3
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->c()D
+
+    move-result-wide v5
+
+    mul-double/2addr v5, p1
+
+    add-double/2addr v5, v3
+
+    aput-wide v5, p3, v1
+
+    :goto_0
+    return-void
+
+    .line 11
+    :cond_1
+    array-length v3, v0
+
+    sub-int/2addr v3, v1
+
+    aget-object v3, v0, v3
+
+    iget-wide v3, v3, Lk1/b$a;->d:D
+
+    cmpl-double v3, p1, v3
+
+    if-lez v3, :cond_5
+
+    .line 12
+    array-length v3, v0
+
+    sub-int/2addr v3, v1
+
+    aget-object v3, v0, v3
+
+    iget-wide v3, v3, Lk1/b$a;->d:D
+
+    sub-double v5, p1, v3
+
+    .line 13
+    array-length v7, v0
+
+    sub-int/2addr v7, v1
+
+    .line 14
+    aget-object v8, v0, v7
+
+    iget-boolean v8, v8, Lk1/b$a;->r:Z
+
+    if-eqz v8, :cond_2
+
+    .line 15
+    aget-object p1, v0, v7
+
+    invoke-virtual {p1, v3, v4}, Lk1/b$a;->f(D)D
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->d(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v8, v5
+
+    add-double/2addr v8, p1
+
+    aput-wide v8, p3, v2
+
+    .line 16
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v7
+
+    invoke-virtual {p1, v3, v4}, Lk1/b$a;->g(D)D
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->e(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v5
+
+    add-double/2addr v2, p1
+
+    aput-wide v2, p3, v1
+
+    goto :goto_1
+
+    .line 17
+    :cond_2
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->k(D)V
+
+    .line 18
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v7
+
+    invoke-virtual {p1}, Lk1/b$a;->h()D
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0}, Lk1/b$a;->b()D
+
+    move-result-wide v3
+
+    mul-double/2addr v3, v5
+
+    add-double/2addr v3, p1
+
+    aput-wide v3, p3, v2
+
+    .line 19
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v7
+
+    invoke-virtual {p1}, Lk1/b$a;->i()D
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0}, Lk1/b$a;->c()D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v5
+
+    add-double/2addr v2, p1
+
+    aput-wide v2, p3, v1
+
+    :goto_1
+    return-void
+
+    .line 20
+    :cond_3
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v3, v0, v2
+
+    iget-wide v3, v3, Lk1/b$a;->c:D
+
+    cmpg-double v3, p1, v3
+
+    if-gez v3, :cond_4
+
+    .line 21
+    aget-object p1, v0, v2
+
+    iget-wide p1, p1, Lk1/b$a;->c:D
+
+    .line 22
+    :cond_4
+    array-length v3, v0
+
+    sub-int/2addr v3, v1
+
+    aget-object v3, v0, v3
+
+    iget-wide v3, v3, Lk1/b$a;->d:D
+
+    cmpl-double v3, p1, v3
+
+    if-lez v3, :cond_5
+
+    .line 23
+    array-length p1, v0
+
+    sub-int/2addr p1, v1
+
+    aget-object p1, v0, p1
+
+    iget-wide p1, p1, Lk1/b$a;->d:D
+
+    :cond_5
+    move v0, v2
+
+    .line 24
+    :goto_2
+    iget-object v3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    array-length v4, v3
+
+    if-ge v0, v4, :cond_8
+
+    .line 25
+    aget-object v4, v3, v0
+
+    iget-wide v4, v4, Lk1/b$a;->d:D
+
+    cmpg-double v4, p1, v4
+
+    if-gtz v4, :cond_7
+
+    .line 26
+    aget-object v4, v3, v0
+
+    iget-boolean v4, v4, Lk1/b$a;->r:Z
+
+    if-eqz v4, :cond_6
+
+    .line 27
+    aget-object v3, v3, v0
+
+    invoke-virtual {v3, p1, p2}, Lk1/b$a;->f(D)D
+
+    move-result-wide v3
+
+    aput-wide v3, p3, v2
+
+    .line 28
+    iget-object v2, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v2, v0
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->g(D)D
+
+    move-result-wide p1
+
+    aput-wide p1, p3, v1
+
+    return-void
+
+    .line 29
+    :cond_6
+    aget-object v3, v3, v0
+
+    invoke-virtual {v3, p1, p2}, Lk1/b$a;->k(D)V
+
+    .line 30
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lk1/b$a;->h()D
+
+    move-result-wide p1
+
+    aput-wide p1, p3, v2
+
+    .line 31
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lk1/b$a;->i()D
+
+    move-result-wide p1
+
+    aput-wide p1, p3, v1
+
+    return-void
+
+    :cond_7
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_8
+    return-void
+.end method
+
+.method public e(D[F)V
+    .locals 10
+
+    .line 1
+    iget-boolean v0, p0, Lk1/b;->f:Z
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_3
+
+    .line 2
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v3, v0, v2
+
+    iget-wide v3, v3, Lk1/b$a;->c:D
+
+    cmpg-double v3, p1, v3
+
+    if-gez v3, :cond_1
+
+    .line 3
+    aget-object v3, v0, v2
+
+    iget-wide v3, v3, Lk1/b$a;->c:D
+
+    .line 4
+    aget-object v5, v0, v2
+
+    iget-wide v5, v5, Lk1/b$a;->c:D
+
+    sub-double/2addr p1, v5
+
+    .line 5
+    aget-object v5, v0, v2
+
+    iget-boolean v5, v5, Lk1/b$a;->r:Z
+
+    if-eqz v5, :cond_0
+
+    .line 6
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->f(D)D
+
+    move-result-wide v5
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->d(D)D
+
+    move-result-wide v7
+
+    mul-double/2addr v7, p1
+
+    add-double/2addr v7, v5
+
+    double-to-float v0, v7
+
+    aput v0, p3, v2
+
+    .line 7
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->g(D)D
+
+    move-result-wide v5
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->e(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, p1
+
+    add-double/2addr v2, v5
+
+    double-to-float p1, v2
+
+    aput p1, p3, v1
+
+    goto :goto_0
+
+    .line 8
+    :cond_0
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->k(D)V
+
+    .line 9
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->h()D
+
+    move-result-wide v3
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->b()D
+
+    move-result-wide v5
+
+    mul-double/2addr v5, p1
+
+    add-double/2addr v5, v3
+
+    double-to-float v0, v5
+
+    aput v0, p3, v2
+
+    .line 10
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->i()D
+
+    move-result-wide v3
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v0}, Lk1/b$a;->c()D
+
+    move-result-wide v5
+
+    mul-double/2addr v5, p1
+
+    add-double/2addr v5, v3
+
+    double-to-float p1, v5
+
+    aput p1, p3, v1
+
+    :goto_0
+    return-void
+
+    .line 11
+    :cond_1
+    array-length v3, v0
+
+    sub-int/2addr v3, v1
+
+    aget-object v3, v0, v3
+
+    iget-wide v3, v3, Lk1/b$a;->d:D
+
+    cmpl-double v3, p1, v3
+
+    if-lez v3, :cond_5
+
+    .line 12
+    array-length v3, v0
+
+    sub-int/2addr v3, v1
+
+    aget-object v3, v0, v3
+
+    iget-wide v3, v3, Lk1/b$a;->d:D
+
+    sub-double v5, p1, v3
+
+    .line 13
+    array-length v7, v0
+
+    sub-int/2addr v7, v1
+
+    .line 14
+    aget-object v8, v0, v7
+
+    iget-boolean v8, v8, Lk1/b$a;->r:Z
+
+    if-eqz v8, :cond_2
+
+    .line 15
+    aget-object p1, v0, v7
+
+    invoke-virtual {p1, v3, v4}, Lk1/b$a;->f(D)D
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->d(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v8, v5
+
+    add-double/2addr v8, p1
+
+    double-to-float p1, v8
+
+    aput p1, p3, v2
+
+    .line 16
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v7
+
+    invoke-virtual {p1, v3, v4}, Lk1/b$a;->g(D)D
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0, v3, v4}, Lk1/b$a;->e(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v5
+
+    add-double/2addr v2, p1
+
+    double-to-float p1, v2
+
+    aput p1, p3, v1
+
+    goto :goto_1
+
+    .line 17
+    :cond_2
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->k(D)V
+
+    .line 18
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v7
+
+    invoke-virtual {p1}, Lk1/b$a;->h()D
+
+    move-result-wide p1
+
+    double-to-float p1, p1
+
+    aput p1, p3, v2
+
+    .line 19
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v7
+
+    invoke-virtual {p1}, Lk1/b$a;->i()D
+
+    move-result-wide p1
+
+    double-to-float p1, p1
+
+    aput p1, p3, v1
+
+    :goto_1
+    return-void
+
+    .line 20
+    :cond_3
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v3, v0, v2
+
+    iget-wide v3, v3, Lk1/b$a;->c:D
+
+    cmpg-double v3, p1, v3
+
+    if-gez v3, :cond_4
+
+    .line 21
+    aget-object p1, v0, v2
+
+    iget-wide p1, p1, Lk1/b$a;->c:D
+
+    goto :goto_2
+
+    .line 22
+    :cond_4
+    array-length v3, v0
+
+    sub-int/2addr v3, v1
+
+    aget-object v3, v0, v3
+
+    iget-wide v3, v3, Lk1/b$a;->d:D
+
+    cmpl-double v3, p1, v3
+
+    if-lez v3, :cond_5
+
+    .line 23
+    array-length p1, v0
+
+    sub-int/2addr p1, v1
+
+    aget-object p1, v0, p1
+
+    iget-wide p1, p1, Lk1/b$a;->d:D
+
+    :cond_5
+    :goto_2
+    move v0, v2
+
+    .line 24
+    :goto_3
+    iget-object v3, p0, Lk1/b;->e:[Lk1/b$a;
+
+    array-length v4, v3
+
+    if-ge v0, v4, :cond_8
+
+    .line 25
+    aget-object v4, v3, v0
+
+    iget-wide v4, v4, Lk1/b$a;->d:D
+
+    cmpg-double v4, p1, v4
+
+    if-gtz v4, :cond_7
+
+    .line 26
+    aget-object v4, v3, v0
+
+    iget-boolean v4, v4, Lk1/b$a;->r:Z
+
+    if-eqz v4, :cond_6
+
+    .line 27
+    aget-object v3, v3, v0
+
+    invoke-virtual {v3, p1, p2}, Lk1/b$a;->f(D)D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    aput v3, p3, v2
+
+    .line 28
+    iget-object v2, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v2, v0
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->g(D)D
+
+    move-result-wide p1
+
+    double-to-float p1, p1
+
+    aput p1, p3, v1
+
+    return-void
+
+    .line 29
+    :cond_6
+    aget-object v3, v3, v0
+
+    invoke-virtual {v3, p1, p2}, Lk1/b$a;->k(D)V
+
+    .line 30
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lk1/b$a;->h()D
+
+    move-result-wide p1
+
+    double-to-float p1, p1
+
+    aput p1, p3, v2
+
+    .line 31
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lk1/b$a;->i()D
+
+    move-result-wide p1
+
+    double-to-float p1, p1
+
+    aput p1, p3, v1
+
+    return-void
+
+    :cond_7
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_3
+
+    :cond_8
+    return-void
+.end method
+
+.method public f(DI)D
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    const/4 v1, 0x0
+
+    aget-object v2, v0, v1
+
+    iget-wide v2, v2, Lk1/b$a;->c:D
+
+    cmpg-double v2, p1, v2
+
+    if-gez v2, :cond_0
+
+    .line 2
+    aget-object p1, v0, v1
+
+    iget-wide p1, p1, Lk1/b$a;->c:D
+
+    .line 3
+    :cond_0
+    array-length v2, v0
+
+    add-int/lit8 v2, v2, -0x1
+
+    aget-object v2, v0, v2
+
+    iget-wide v2, v2, Lk1/b$a;->d:D
+
+    cmpl-double v2, p1, v2
+
+    if-lez v2, :cond_1
+
+    .line 4
+    array-length p1, v0
+
+    add-int/lit8 p1, p1, -0x1
+
+    aget-object p1, v0, p1
+
+    iget-wide p1, p1, Lk1/b$a;->d:D
+
+    .line 5
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_6
+
+    .line 6
+    aget-object v2, v0, v1
+
+    iget-wide v2, v2, Lk1/b$a;->d:D
+
+    cmpg-double v2, p1, v2
+
+    if-gtz v2, :cond_5
+
+    .line 7
+    aget-object v2, v0, v1
+
+    iget-boolean v2, v2, Lk1/b$a;->r:Z
+
+    if-eqz v2, :cond_3
+
+    if-nez p3, :cond_2
+
+    .line 8
+    aget-object p3, v0, v1
+
+    invoke-virtual {p3, p1, p2}, Lk1/b$a;->d(D)D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    .line 9
+    :cond_2
+    aget-object p3, v0, v1
+
+    invoke-virtual {p3, p1, p2}, Lk1/b$a;->e(D)D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    .line 10
+    :cond_3
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->k(D)V
+
+    if-nez p3, :cond_4
+
+    .line 11
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v1
+
+    invoke-virtual {p1}, Lk1/b$a;->b()D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    .line 12
+    :cond_4
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v1
+
+    invoke-virtual {p1}, Lk1/b$a;->c()D
+
+    move-result-wide p1
+
+    return-wide p1
+
+    :cond_5
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    const-wide/high16 p1, 0x7ff8000000000000L    # Double.NaN
+
+    return-wide p1
+.end method
+
+.method public g(D[D)V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lk1/b;->e:[Lk1/b$a;
+
+    const/4 v1, 0x0
+
+    aget-object v2, v0, v1
+
+    iget-wide v2, v2, Lk1/b$a;->c:D
+
+    cmpg-double v2, p1, v2
+
+    const/4 v3, 0x1
+
+    if-gez v2, :cond_0
+
+    .line 2
+    aget-object p1, v0, v1
+
+    iget-wide p1, p1, Lk1/b$a;->c:D
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    array-length v2, v0
+
+    sub-int/2addr v2, v3
+
+    aget-object v2, v0, v2
+
+    iget-wide v4, v2, Lk1/b$a;->d:D
+
+    cmpl-double v2, p1, v4
+
+    if-lez v2, :cond_1
+
+    .line 4
+    array-length p1, v0
+
+    sub-int/2addr p1, v3
+
+    aget-object p1, v0, p1
+
+    iget-wide p1, p1, Lk1/b$a;->d:D
+
+    :cond_1
+    :goto_0
+    move v0, v1
+
+    .line 5
+    :goto_1
+    iget-object v2, p0, Lk1/b;->e:[Lk1/b$a;
+
+    array-length v4, v2
+
+    if-ge v0, v4, :cond_4
+
+    .line 6
+    aget-object v4, v2, v0
+
+    iget-wide v4, v4, Lk1/b$a;->d:D
+
+    cmpg-double v4, p1, v4
+
+    if-gtz v4, :cond_3
+
+    .line 7
+    aget-object v4, v2, v0
+
+    iget-boolean v4, v4, Lk1/b$a;->r:Z
+
+    if-eqz v4, :cond_2
+
+    .line 8
+    aget-object v2, v2, v0
+
+    invoke-virtual {v2, p1, p2}, Lk1/b$a;->d(D)D
+
+    move-result-wide v4
+
+    aput-wide v4, p3, v1
+
+    .line 9
+    iget-object v1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object v0, v1, v0
+
+    invoke-virtual {v0, p1, p2}, Lk1/b$a;->e(D)D
+
+    move-result-wide p1
+
+    aput-wide p1, p3, v3
+
+    return-void
+
+    .line 10
+    :cond_2
+    aget-object v2, v2, v0
+
+    invoke-virtual {v2, p1, p2}, Lk1/b$a;->k(D)V
+
+    .line 11
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lk1/b$a;->b()D
+
+    move-result-wide p1
+
+    aput-wide p1, p3, v1
+
+    .line 12
+    iget-object p1, p0, Lk1/b;->e:[Lk1/b$a;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lk1/b$a;->c()D
+
+    move-result-wide p1
+
+    aput-wide p1, p3, v3
+
+    return-void
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    return-void
+.end method
+
+.method public h()[D
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lk1/b;->d:[D
 
     return-object v0
 .end method

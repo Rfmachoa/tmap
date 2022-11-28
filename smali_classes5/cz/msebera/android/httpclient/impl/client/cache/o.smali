@@ -1,12 +1,12 @@
 .class public Lcz/msebera/android/httpclient/impl/client/cache/o;
-.super Ldg/f0;
+.super Lhi/f0;
 .source "CachingHttpClientBuilder.java"
 
 
 # instance fields
-.field public R:Lhf/h;
+.field public R:Llh/h;
 
-.field public S:Lhf/e;
+.field public S:Llh/e;
 
 .field public T:Ljava/io/File;
 
@@ -14,7 +14,7 @@
 
 .field public V:Lcz/msebera/android/httpclient/impl/client/cache/l0;
 
-.field public W:Lhf/d;
+.field public W:Llh/d;
 
 
 # direct methods
@@ -22,7 +22,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ldg/f0;-><init>()V
+    invoke-direct {p0}, Lhi/f0;-><init>()V
 
     return-void
 .end method
@@ -61,7 +61,7 @@
     invoke-direct {v0, p1}, Lcz/msebera/android/httpclient/impl/client/cache/b;-><init>(Lcz/msebera/android/httpclient/impl/client/cache/l0;)V
 
     .line 4
-    invoke-virtual {p0, v0}, Ldg/f0;->a(Ljava/io/Closeable;)V
+    invoke-virtual {p0, v0}, Lhi/f0;->a(Ljava/io/Closeable;)V
 
     return-object v0
 
@@ -108,29 +108,29 @@
     return-object p0
 .end method
 
-.method public final a0(Lhf/d;)Lcz/msebera/android/httpclient/impl/client/cache/o;
+.method public final a0(Llh/d;)Lcz/msebera/android/httpclient/impl/client/cache/o;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->W:Lhf/d;
+    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->W:Llh/d;
 
     return-object p0
 .end method
 
-.method public final b0(Lhf/e;)Lcz/msebera/android/httpclient/impl/client/cache/o;
+.method public final b0(Llh/e;)Lcz/msebera/android/httpclient/impl/client/cache/o;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->S:Lhf/e;
+    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->S:Llh/e;
 
     return-object p0
 .end method
 
-.method public final c0(Lhf/h;)Lcz/msebera/android/httpclient/impl/client/cache/o;
+.method public final c0(Llh/h;)Lcz/msebera/android/httpclient/impl/client/cache/o;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->R:Lhf/h;
+    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->R:Llh/h;
 
     return-object p0
 .end method
@@ -144,7 +144,7 @@
     return-object p0
 .end method
 
-.method public h(Lig/b;)Lig/b;
+.method public h(Lmi/b;)Lmi/b;
     .locals 10
 
     .line 1
@@ -155,11 +155,11 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcz/msebera/android/httpclient/impl/client/cache/f;->f1:Lcz/msebera/android/httpclient/impl/client/cache/f;
+    sget-object v0, Lcz/msebera/android/httpclient/impl/client/cache/f;->h1:Lcz/msebera/android/httpclient/impl/client/cache/f;
 
     .line 2
     :goto_0
-    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->R:Lhf/h;
+    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->R:Llh/h;
 
     if-nez v1, :cond_2
 
@@ -189,7 +189,7 @@
 
     .line 6
     :goto_2
-    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->S:Lhf/e;
+    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->S:Llh/e;
 
     if-nez v1, :cond_4
 
@@ -212,7 +212,7 @@
     invoke-direct {v1, v0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;-><init>(Lcz/msebera/android/httpclient/impl/client/cache/f;)V
 
     .line 10
-    invoke-virtual {p0, v1}, Ldg/f0;->a(Ljava/io/Closeable;)V
+    invoke-virtual {p0, v1}, Lhi/f0;->a(Ljava/io/Closeable;)V
 
     :cond_4
     :goto_3
@@ -229,14 +229,14 @@
     invoke-direct {v5}, Lcz/msebera/android/httpclient/impl/client/cache/i;-><init>()V
 
     .line 13
-    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->W:Lhf/d;
+    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o;->W:Llh/d;
 
     if-nez v1, :cond_5
 
     .line 14
     new-instance v1, Lcz/msebera/android/httpclient/impl/client/cache/h;
 
-    invoke-direct {v1, v5, v3}, Lcz/msebera/android/httpclient/impl/client/cache/h;-><init>(Lcz/msebera/android/httpclient/impl/client/cache/i;Lhf/e;)V
+    invoke-direct {v1, v5, v3}, Lcz/msebera/android/httpclient/impl/client/cache/h;-><init>(Lcz/msebera/android/httpclient/impl/client/cache/i;Llh/e;)V
 
     :cond_5
     move-object v6, v1
@@ -250,9 +250,9 @@
 
     move-object v4, v0
 
-    invoke-direct/range {v1 .. v6}, Lcz/msebera/android/httpclient/impl/client/cache/c;-><init>(Lhf/h;Lhf/e;Lcz/msebera/android/httpclient/impl/client/cache/f;Lcz/msebera/android/httpclient/impl/client/cache/i;Lhf/d;)V
+    invoke-direct/range {v1 .. v6}, Lcz/msebera/android/httpclient/impl/client/cache/c;-><init>(Llh/h;Llh/e;Lcz/msebera/android/httpclient/impl/client/cache/f;Lcz/msebera/android/httpclient/impl/client/cache/i;Llh/d;)V
 
-    invoke-direct {v8, p1, v9, v0, v7}, Lcz/msebera/android/httpclient/impl/client/cache/n;-><init>(Lig/b;Lcz/msebera/android/httpclient/impl/client/cache/z;Lcz/msebera/android/httpclient/impl/client/cache/f;Lcz/msebera/android/httpclient/impl/client/cache/b;)V
+    invoke-direct {v8, p1, v9, v0, v7}, Lcz/msebera/android/httpclient/impl/client/cache/n;-><init>(Lmi/b;Lcz/msebera/android/httpclient/impl/client/cache/z;Lcz/msebera/android/httpclient/impl/client/cache/f;Lcz/msebera/android/httpclient/impl/client/cache/b;)V
 
     return-object v8
 .end method

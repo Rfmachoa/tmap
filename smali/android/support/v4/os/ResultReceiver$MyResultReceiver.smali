@@ -53,7 +53,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {v0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->b(ILandroid/os/Bundle;)V
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->a(ILandroid/os/Bundle;)V
 
     :goto_0
     return-void

@@ -51,11 +51,11 @@
 
     iget-object v0, v0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object v0
 
-    const v1, 0x7f13002b
+    const v1, 0x7f14002b
 
     const/4 v2, 0x0
 

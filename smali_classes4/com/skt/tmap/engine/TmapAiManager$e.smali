@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/skt/tmap/engine/TmapAiManager;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/engine/TmapAiManager;->C3()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,63 +44,69 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
     .line 2
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1a
-
-    if-lt v0, v1, :cond_0
-
-    .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->g0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioFocusRequest;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->e1(Lcom/skt/tmap/engine/TmapAiManager;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 3
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->P()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->O5(Z)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->z()V
 
-    move-result-object v0
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
-
-    invoke-static {v1}, Lcom/skt/tmap/engine/TmapAiManager;->g0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioFocusRequest;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->T5(Z)V
 
     goto :goto_0
 
-    .line 5
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->e1(Lcom/skt/tmap/engine/TmapAiManager;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 7
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$e;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_NUGU_TTS_ERROR:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    iget-object v1, v1, Lcom/skt/tmap/engine/TmapAiManager;->F0:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->i(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;)V
 
     :cond_1
     :goto_0

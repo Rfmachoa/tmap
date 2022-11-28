@@ -1,392 +1,217 @@
 .class public final Landroidx/fragment/app/p;
 .super Ljava/lang/Object;
-.source "FragmentManager.kt"
+.source "Fragment.kt"
 
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u001a3\u0010\u0008\u001a\u00020\u0005*\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00012\u0017\u0010\u0007\u001a\u0013\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0003\u00a2\u0006\u0002\u0008\u0006H\u0086\u0008\u00f8\u0001\u0000\u001a3\u0010\t\u001a\u00020\u0005*\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00012\u0017\u0010\u0007\u001a\u0013\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0003\u00a2\u0006\u0002\u0008\u0006H\u0086\u0008\u00f8\u0001\u0000\u001a=\u0010\u000b\u001a\u00020\u0005*\u00020\u00002\u0008\u0008\u0002\u0010\n\u001a\u00020\u00012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00012\u0017\u0010\u0007\u001a\u0013\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0003\u00a2\u0006\u0002\u0008\u0006H\u0087\u0008\u00f8\u0001\u0000\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u000c"
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u001a\u001a\u0010\u0006\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003\u001a\u0012\u0010\u0007\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0001\u001aJ\u0010\r\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u000126\u0010\u000c\u001a2\u0012\u0013\u0012\u00110\u0001\u00a2\u0006\u000c\u0008\t\u0012\u0008\u0008\n\u0012\u0004\u0008\u0008(\u0002\u0012\u0013\u0012\u00110\u0003\u00a2\u0006\u000c\u0008\t\u0012\u0008\u0008\n\u0012\u0004\u0008\u0008(\u000b\u0012\u0004\u0012\u00020\u00050\u0008\u001a\u0012\u0010\u000e\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0001\u00a8\u0006\u000f"
     }
     d2 = {
-        "Landroidx/fragment/app/FragmentManager;",
+        "Landroidx/fragment/app/Fragment;",
         "",
-        "allowStateLoss",
-        "Lkotlin/Function1;",
-        "Landroidx/fragment/app/a0;",
+        "requestKey",
+        "Landroid/os/Bundle;",
+        "result",
         "Lkotlin/d1;",
-        "Lkotlin/ExtensionFunctionType;",
-        "body",
-        "a",
-        "c",
-        "now",
+        "d",
+        "b",
+        "Lkotlin/Function2;",
+        "Lkotlin/ParameterName;",
+        "name",
+        "bundle",
+        "listener",
         "e",
+        "c",
         "fragment-ktx_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # direct methods
-.method public static final a(Landroidx/fragment/app/FragmentManager;ZLej/l;)V
-    .locals 1
-    .param p0    # Landroidx/fragment/app/FragmentManager;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Lej/l;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/fragment/app/FragmentManager;",
-            "Z",
-            "Lej/l<",
-            "-",
-            "Landroidx/fragment/app/a0;",
-            "Lkotlin/d1;",
-            ">;)V"
-        }
-    .end annotation
+.method public static synthetic a(Lgl/p;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
 
-    const-string v0, "$this$commit"
+    invoke-static {p0, p1, p2}, Landroidx/fragment/app/p;->f(Lgl/p;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public static final b(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .locals 1
+    .param p0    # Landroidx/fragment/app/Fragment;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "body"
+    const-string v0, "requestKey"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManager;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static final c(Landroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .locals 1
+    .param p0    # Landroidx/fragment/app/Fragment;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "requestKey"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManager;->c(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static final d(Landroidx/fragment/app/Fragment;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+    .param p0    # Landroidx/fragment/app/Fragment;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "requestKey"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "result"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
 
-    const-string v0, "beginTransaction()"
+    invoke-virtual {p0, p1, p2}, Landroidx/fragment/app/FragmentManager;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2
-    invoke-interface {p2, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->r()I
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->q()I
-
-    :goto_0
     return-void
 .end method
 
-.method public static synthetic b(Landroidx/fragment/app/FragmentManager;ZLej/l;ILjava/lang/Object;)V
-    .locals 0
-
-    and-int/lit8 p3, p3, 0x1
-
-    if-eqz p3, :cond_0
-
-    const/4 p1, 0x0
-
-    :cond_0
-    const-string p3, "$this$commit"
-
-    .line 1
-    invoke-static {p0, p3}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p3, "body"
-
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
-
-    move-result-object p0
-
-    const-string p3, "beginTransaction()"
-
-    invoke-static {p0, p3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 3
-    invoke-interface {p2, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p1, :cond_1
-
-    .line 4
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->r()I
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->q()I
-
-    :goto_0
-    return-void
-.end method
-
-.method public static final c(Landroidx/fragment/app/FragmentManager;ZLej/l;)V
-    .locals 1
-    .param p0    # Landroidx/fragment/app/FragmentManager;
+.method public static final e(Landroidx/fragment/app/Fragment;Ljava/lang/String;Lgl/p;)V
+    .locals 2
+    .param p0    # Landroidx/fragment/app/Fragment;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lej/l;
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/fragment/app/FragmentManager;",
-            "Z",
-            "Lej/l<",
+            "Landroidx/fragment/app/Fragment;",
+            "Ljava/lang/String;",
+            "Lgl/p<",
             "-",
-            "Landroidx/fragment/app/a0;",
+            "Ljava/lang/String;",
+            "-",
+            "Landroid/os/Bundle;",
             "Lkotlin/d1;",
             ">;)V"
         }
     .end annotation
 
-    const-string v0, "$this$commitNow"
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "body"
+    const-string v0, "requestKey"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "listener"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragmentManager()Landroidx/fragment/app/FragmentManager;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "beginTransaction()"
+    new-instance v1, Landroidx/fragment/app/o;
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, p2}, Landroidx/fragment/app/o;-><init>(Lgl/p;)V
 
-    .line 2
-    invoke-interface {p2, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p0, v1}, Landroidx/fragment/app/FragmentManager;->b(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Landroidx/fragment/app/d0;)V
 
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->t()V
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->s()V
-
-    :goto_0
     return-void
 .end method
 
-.method public static synthetic d(Landroidx/fragment/app/FragmentManager;ZLej/l;ILjava/lang/Object;)V
-    .locals 0
-
-    and-int/lit8 p3, p3, 0x1
-
-    if-eqz p3, :cond_0
-
-    const/4 p1, 0x0
-
-    :cond_0
-    const-string p3, "$this$commitNow"
-
-    .line 1
-    invoke-static {p0, p3}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p3, "body"
-
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
-
-    move-result-object p0
-
-    const-string p3, "beginTransaction()"
-
-    invoke-static {p0, p3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 3
-    invoke-interface {p2, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p1, :cond_1
-
-    .line 4
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->t()V
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->s()V
-
-    :goto_0
-    return-void
-.end method
-
-.method public static final e(Landroidx/fragment/app/FragmentManager;ZZLej/l;)V
+.method public static final f(Lgl/p;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
-    .param p0    # Landroidx/fragment/app/FragmentManager;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p3    # Lej/l;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/fragment/app/FragmentManager;",
-            "ZZ",
-            "Lej/l<",
-            "-",
-            "Landroidx/fragment/app/a0;",
-            "Lkotlin/d1;",
-            ">;)V"
-        }
-    .end annotation
 
-    .annotation runtime Lkotlin/Deprecated;
-        message = "Use commit { .. } or commitNow { .. } extensions"
-    .end annotation
-
-    const-string v0, "$this$transaction"
+    const-string v0, "$tmp0"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "body"
+    const-string v0, "p0"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    const-string v0, "p1"
 
-    move-result-object p0
-
-    const-string v0, "beginTransaction()"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2
-    invoke-interface {p3, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_0
-
-    .line 3
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->t()V
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->s()V
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    .line 5
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->r()I
-
-    goto :goto_0
-
-    .line 6
-    :cond_2
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->q()I
-
-    :goto_0
-    return-void
-.end method
-
-.method public static synthetic f(Landroidx/fragment/app/FragmentManager;ZZLej/l;ILjava/lang/Object;)V
-    .locals 1
-
-    and-int/lit8 p5, p4, 0x1
-
-    const/4 v0, 0x0
-
-    if-eqz p5, :cond_0
-
-    move p1, v0
-
-    :cond_0
-    and-int/lit8 p4, p4, 0x2
-
-    if-eqz p4, :cond_1
-
-    move p2, v0
-
-    :cond_1
-    const-string p4, "$this$transaction"
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p0, p4}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-interface {p0, p1, p2}, Lgl/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p4, "body"
-
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
-
-    move-result-object p0
-
-    const-string p4, "beginTransaction()"
-
-    invoke-static {p0, p4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 3
-    invoke-interface {p3, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p1, :cond_3
-
-    if-eqz p2, :cond_2
-
-    .line 4
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->t()V
-
-    goto :goto_0
-
-    .line 5
-    :cond_2
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->s()V
-
-    goto :goto_0
-
-    :cond_3
-    if-eqz p2, :cond_4
-
-    .line 6
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->r()I
-
-    goto :goto_0
-
-    .line 7
-    :cond_4
-    invoke-virtual {p0}, Landroidx/fragment/app/a0;->q()I
-
-    :goto_0
     return-void
 .end method

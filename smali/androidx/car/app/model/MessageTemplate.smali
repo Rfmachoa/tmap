@@ -3,7 +3,7 @@
 .source "MessageTemplate.java"
 
 # interfaces
-.implements Landroidx/car/app/model/s;
+.implements Landroidx/car/app/model/y;
 
 
 # annotations

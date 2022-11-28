@@ -38,7 +38,7 @@
     const-string v0, "Target host"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     iput-object p1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->a:Lcz/msebera/android/httpclient/HttpHost;
@@ -84,7 +84,7 @@
     const-string v0, "Proxy host"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     iget-boolean v0, p0, Lcz/msebera/android/httpclient/conn/routing/b;->c:Z
@@ -95,7 +95,7 @@
 
     const-string v2, "Already connected"
 
-    invoke-static {v0, v2}, Lqg/b;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v2}, Lui/b;->a(ZLjava/lang/String;)V
 
     .line 3
     iput-boolean v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->c:Z
@@ -127,7 +127,7 @@
 
     const-string v2, "Already connected"
 
-    invoke-static {v0, v2}, Lqg/b;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v2}, Lui/b;->a(ZLjava/lang/String;)V
 
     .line 2
     iput-boolean v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->c:Z
@@ -171,7 +171,7 @@
 
     const-string v1, "No layered protocol unless connected"
 
-    invoke-static {v0, v1}, Lqg/b;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Lui/b;->a(ZLjava/lang/String;)V
 
     .line 2
     sget-object v0, Lcz/msebera/android/httpclient/conn/routing/RouteInfo$LayerType;->LAYERED:Lcz/msebera/android/httpclient/conn/routing/RouteInfo$LayerType;
@@ -266,7 +266,7 @@
     iget-object v3, p1, Lcz/msebera/android/httpclient/conn/routing/b;->a:Lcz/msebera/android/httpclient/HttpHost;
 
     .line 4
-    invoke-static {v1, v3}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -277,7 +277,7 @@
     iget-object v3, p1, Lcz/msebera/android/httpclient/conn/routing/b;->b:Ljava/net/InetAddress;
 
     .line 5
-    invoke-static {v1, v3}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -288,7 +288,7 @@
     iget-object p1, p1, Lcz/msebera/android/httpclient/conn/routing/b;->d:[Lcz/msebera/android/httpclient/HttpHost;
 
     .line 6
-    invoke-static {v1, p1}, Lqg/g;->b([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lui/g;->b([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -344,21 +344,21 @@
     const-string v0, "Proxy host"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     iget-boolean v0, p0, Lcz/msebera/android/httpclient/conn/routing/b;->c:Z
 
     const-string v1, "No tunnel unless connected"
 
-    invoke-static {v0, v1}, Lqg/b;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Lui/b;->a(ZLjava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcz/msebera/android/httpclient/conn/routing/b;->d:[Lcz/msebera/android/httpclient/HttpHost;
 
     const-string v1, "No tunnel without proxy"
 
-    invoke-static {v0, v1}, Lqg/b;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lui/b;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcz/msebera/android/httpclient/conn/routing/b;->d:[Lcz/msebera/android/httpclient/HttpHost;
@@ -428,7 +428,7 @@
     const-string v0, "Hop index"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->f(ILjava/lang/String;)I
+    invoke-static {p1, v0}, Lui/a;->f(ILjava/lang/String;)I
 
     .line 2
     invoke-virtual {p0}, Lcz/msebera/android/httpclient/conn/routing/b;->getHopCount()I
@@ -450,7 +450,7 @@
     const-string v3, "Hop index exceeds tracked route length"
 
     .line 3
-    invoke-static {v2, v3}, Lqg/a;->a(ZLjava/lang/String;)V
+    invoke-static {v2, v3}, Lui/a;->a(ZLjava/lang/String;)V
 
     sub-int/2addr v0, v1
 
@@ -536,14 +536,14 @@
 
     const-string v1, "No tunnel unless connected"
 
-    invoke-static {v0, v1}, Lqg/b;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Lui/b;->a(ZLjava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcz/msebera/android/httpclient/conn/routing/b;->d:[Lcz/msebera/android/httpclient/HttpHost;
 
     const-string v1, "No tunnel without proxy"
 
-    invoke-static {v0, v1}, Lqg/b;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lui/b;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     sget-object v0, Lcz/msebera/android/httpclient/conn/routing/RouteInfo$TunnelType;->TUNNELLED:Lcz/msebera/android/httpclient/conn/routing/RouteInfo$TunnelType;
@@ -564,14 +564,14 @@
 
     const/16 v1, 0x11
 
-    invoke-static {v1, v0}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v1, v0}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
     .line 2
     iget-object v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->b:Ljava/net/InetAddress;
 
-    invoke-static {v0, v1}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
@@ -591,7 +591,7 @@
     aget-object v4, v1, v3
 
     .line 5
-    invoke-static {v0, v4}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v4}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
@@ -603,28 +603,28 @@
     :cond_0
     iget-boolean v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->c:Z
 
-    invoke-static {v0, v1}, Lqg/g;->e(IZ)I
+    invoke-static {v0, v1}, Lui/g;->e(IZ)I
 
     move-result v0
 
     .line 7
     iget-boolean v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->g:Z
 
-    invoke-static {v0, v1}, Lqg/g;->e(IZ)I
+    invoke-static {v0, v1}, Lui/g;->e(IZ)I
 
     move-result v0
 
     .line 8
     iget-object v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->e:Lcz/msebera/android/httpclient/conn/routing/RouteInfo$TunnelType;
 
-    invoke-static {v0, v1}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
     .line 9
     iget-object v1, p0, Lcz/msebera/android/httpclient/conn/routing/b;->f:Lcz/msebera/android/httpclient/conn/routing/RouteInfo$LayerType;
 
-    invoke-static {v0, v1}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 

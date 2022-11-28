@@ -3,44 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lek/t0;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;
 
 .field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-.field public final synthetic c:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e0;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e0;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;
 
     iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/e0;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
-
-    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/e0;->c:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Lek/r0;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e0;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e0;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/e0;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/e0;->c:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
-
-    invoke-static {v0, v1, v2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->b(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->d(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lek/r0;)V
 
     return-void
 .end method

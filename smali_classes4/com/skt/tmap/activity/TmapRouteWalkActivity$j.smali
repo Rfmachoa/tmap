@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapRouteWalkActivity;->T4(Ljava/lang/String;)V
+    value = Lcom/skt/tmap/activity/TmapRouteWalkActivity;->F1(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
         }
         names = {
             "this$0",
-            "val$remainDistance"
+            "val$distanceString"
         }
     .end annotation
 
@@ -55,13 +55,13 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapRouteWalkActivity$j;->b:Lcom/skt/tmap/activity/TmapRouteWalkActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapRouteWalkActivity;->C5(Lcom/skt/tmap/activity/TmapRouteWalkActivity;)Llb/i2;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapRouteWalkActivity;->K5(Lcom/skt/tmap/activity/TmapRouteWalkActivity;)Lid/y2;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapRouteWalkActivity$j;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Llb/i2;->z1(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lid/y2;->y1(Ljava/lang/String;)V
 
     return-void
 .end method

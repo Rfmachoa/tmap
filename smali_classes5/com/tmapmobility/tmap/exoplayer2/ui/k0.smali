@@ -2170,51 +2170,56 @@
     :cond_1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->j:Landroid/view/View;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 4
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->a:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+
+    .line 5
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    .line 5
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->a:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+    sget v3, Lcom/tmapmobility/tmap/exoplayer2/ui/R$dimen;->exo_styled_progress_margin_bottom:I
 
     .line 6
-    invoke-virtual {v3}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    .line 7
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->j:Landroid/view/View;
+
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
-    sget v4, Lcom/tmapmobility/tmap/exoplayer2/ui/R$dimen;->exo_styled_progress_margin_bottom:I
+    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 7
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
+    if-eqz v3, :cond_3
 
     .line 8
     iget-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->A:Z
 
     if-eqz v4, :cond_2
 
-    move v3, v2
+    move v0, v2
 
     :cond_2
-    iput v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    iput v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 9
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->j:Landroid/view/View;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->j:Landroid/view/View;
 
-    invoke-virtual {v3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 10
+    :cond_3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->j:Landroid/view/View;
 
     instance-of v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     .line 11
     check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;
@@ -2224,7 +2229,7 @@
 
     const/4 v4, 0x1
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     .line 13
     invoke-virtual {v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j(Z)V
@@ -2232,26 +2237,26 @@
     goto :goto_1
 
     .line 14
-    :cond_3
+    :cond_4
     iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->z:I
 
-    if-ne v3, v4, :cond_4
+    if-ne v3, v4, :cond_5
 
     .line 15
     invoke-virtual {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j(Z)V
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     const/4 v4, 0x3
 
-    if-eq v3, v4, :cond_5
+    if-eq v3, v4, :cond_6
 
     .line 16
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->u()V
 
     .line 17
-    :cond_5
+    :cond_6
     :goto_1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->y:Ljava/util/List;
 
@@ -2264,7 +2269,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2275,19 +2280,19 @@
     .line 18
     iget-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->A:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     invoke-virtual {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/ui/k0;->b0(Landroid/view/View;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     move v4, v1
 
     goto :goto_3
 
-    :cond_6
+    :cond_7
     move v4, v2
 
     :goto_3
@@ -2295,7 +2300,7 @@
 
     goto :goto_2
 
-    :cond_7
+    :cond_8
     return-void
 .end method
 

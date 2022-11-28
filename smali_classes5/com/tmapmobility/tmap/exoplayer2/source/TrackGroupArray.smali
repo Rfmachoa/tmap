@@ -64,7 +64,7 @@
     sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->e:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
 
     .line 2
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/g1;->a:Lcom/tmapmobility/tmap/exoplayer2/source/g1;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/h1;->a:Lcom/tmapmobility/tmap/exoplayer2/source/h1;
 
     sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->g:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
@@ -121,44 +121,51 @@
 .method public static synthetic f(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
     .locals 3
 
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->h:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    .line 1
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
 
     .line 2
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->e(I)Ljava/lang/String;
+    new-instance p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
 
-    move-result-object v2
+    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
 
-    invoke-virtual {p0, v2}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;-><init>([Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)V
 
-    move-result-object p0
+    return-object p0
 
     .line 3
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+    :cond_0
+    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
 
-    move-result-object v2
+    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->i:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
     .line 4
-    invoke-static {v0, p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->c(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v2, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->b(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
+    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+
     .line 5
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
-
-    new-array v1, v1, [Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
-
-    invoke-interface {p0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, [Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
 
-    invoke-direct {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;-><init>([Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)V
+    invoke-direct {v1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;-><init>([Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)V
 
-    return-object v0
+    return-object v1
 .end method
 
 
@@ -399,7 +406,7 @@
 
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->b:Lcom/google/common/collect/ImmutableList;
 
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->g(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->d(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v2
 

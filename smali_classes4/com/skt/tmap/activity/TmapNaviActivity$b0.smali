@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Jb()V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->cc()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -61,9 +61,9 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/w0;->y0()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/v0;->t0()Z
 
     move-result v0
 
@@ -71,16 +71,16 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/w0;->w0()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/v0;->r0()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/location/h;->t()Lcom/skt/tmap/location/h;
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
@@ -113,7 +113,7 @@
 
     float-to-int v8, v0
 
-    invoke-virtual/range {v2 .. v8}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->y1(DDII)V
+    invoke-virtual/range {v2 .. v8}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->z1(DDII)V
 
     :cond_0
     return-void
@@ -133,9 +133,9 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/w0;->y0()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/v0;->t0()Z
 
     move-result v0
 
@@ -143,9 +143,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/w0;->w0()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/v0;->r0()Z
 
     move-result v0
 
@@ -165,11 +165,11 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+    invoke-static {p1}, Lcom/skt/tmap/util/f0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->e1(Lcom/skt/tmap/engine/navigation/route/data/MapPoint;)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->f1(Lcom/skt/tmap/engine/navigation/route/data/MapPoint;)V
 
     :cond_0
     return-void
@@ -189,11 +189,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->A8(Lcom/skt/tmap/activity/TmapNaviActivity;)Llb/w1;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->N8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lid/m2;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Llb/w1;->b3(F)V
+    invoke-virtual {v0, p1}, Lid/m2;->k3(F)V
 
     return-void
 .end method
@@ -226,14 +226,14 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/presenter/w0;->r1(I)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/presenter/v0;->g1(I)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->D8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/engine/navigation/LockableHandler;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->Q8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     move-result-object v0
 
@@ -242,7 +242,7 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$b0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->D8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/engine/navigation/LockableHandler;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->Q8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     move-result-object v0
 

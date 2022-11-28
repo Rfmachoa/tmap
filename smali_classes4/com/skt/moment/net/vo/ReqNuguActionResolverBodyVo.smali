@@ -52,6 +52,14 @@
 
 .method public setAction(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "action"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqNuguActionResolverBodyVo;->action:Ljava/lang/String;
@@ -61,6 +69,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqNuguActionResolverBodyVo;->campaignId:Ljava/lang/Integer;
@@ -70,6 +86,14 @@
 
 .method public setDomain(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "domain"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqNuguActionResolverBodyVo;->domain:Ljava/lang/String;

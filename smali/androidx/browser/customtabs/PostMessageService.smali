@@ -28,6 +28,12 @@
 # virtual methods
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/browser/customtabs/PostMessageService;->a:Landroid/support/customtabs/IPostMessageService$Stub;

@@ -1,5 +1,5 @@
 .class public Landroidx/recyclerview/widget/d$a$a;
-.super Landroidx/recyclerview/widget/k$b;
+.super Landroidx/recyclerview/widget/j$b;
 .source "AsyncListDiffer.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/d$a$a;->a:Landroidx/recyclerview/widget/d$a;
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/k$b;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/j$b;-><init>()V
 
     return-void
 .end method
@@ -64,11 +64,11 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/d;->b:Landroidx/recyclerview/widget/c;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/c;->b()Landroidx/recyclerview/widget/k$f;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/c;->b()Landroidx/recyclerview/widget/j$f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/k$f;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/j$f;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -124,11 +124,11 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/d;->b:Landroidx/recyclerview/widget/c;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/c;->b()Landroidx/recyclerview/widget/k$f;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/c;->b()Landroidx/recyclerview/widget/j$f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/k$f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/j$f;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -184,11 +184,11 @@
 
     iget-object v0, v0, Landroidx/recyclerview/widget/d;->b:Landroidx/recyclerview/widget/c;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/c;->b()Landroidx/recyclerview/widget/k$f;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/c;->b()Landroidx/recyclerview/widget/j$f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/k$f;->c(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/j$f;->c(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

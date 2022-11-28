@@ -1,33 +1,105 @@
 .class public final Lm0/b;
 .super Ljava/lang/Object;
-.source "CarColorConstraints.java"
+.source "VideoCaptureLegacyConfig.java"
+
+# interfaces
+.implements Landroidx/camera/core/impl/q;
+.implements Landroidx/camera/core/impl/ImageOutputConfig;
+.implements Ld0/h;
 
 
 # annotations
-.annotation build Landroidx/annotation/RestrictTo;
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        "Ljava/lang/Object;",
+        "Landroidx/camera/core/impl/q<",
+        "Landroidx/camera/video/VideoCaptureLegacy;",
+        ">;",
+        "Landroidx/camera/core/impl/ImageOutputConfig;",
+        "Ld0/h;"
     }
 .end annotation
 
 
 # static fields
-.field public static final b:Lm0/b;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final c:Lm0/b;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Ljava/util/HashSet;
+.field public static final E:Landroidx/camera/core/impl/Config$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashSet<",
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final F:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final G:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final H:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final I:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final J:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final K:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final L:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -35,163 +107,461 @@
 .end field
 
 
+# instance fields
+.field public final D:Landroidx/camera/core/impl/m;
+
+
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
-
-    const/16 v0, 0x8
-
-    new-array v0, v0, [I
+    .locals 2
 
     .line 1
-    fill-array-data v0, :array_0
+    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.recordingFrameRate"
 
     .line 2
-    invoke-static {v0}, Lm0/b;->a([I)Lm0/b;
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->E:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.bitRate"
+
+    .line 3
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->F:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.intraFrameInterval"
+
+    .line 4
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->G:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.audioBitRate"
+
+    .line 5
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->H:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.audioSampleRate"
+
+    .line 6
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->I:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.audioChannelCount"
+
+    .line 7
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->J:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.audioRecordSource"
+
+    .line 8
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Lm0/b;->K:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.video.videoCaptureLegacy.audioMinBufferSize"
+
+    .line 9
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
 
     move-result-object v0
 
-    sput-object v0, Lm0/b;->b:Lm0/b;
-
-    const/4 v0, 0x7
-
-    new-array v0, v0, [I
-
-    .line 3
-    fill-array-data v0, :array_1
-
-    .line 4
-    invoke-static {v0}, Lm0/b;->a([I)Lm0/b;
-
-    move-result-object v0
-
-    sput-object v0, Lm0/b;->c:Lm0/b;
+    sput-object v0, Lm0/b;->L:Landroidx/camera/core/impl/Config$a;
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x1
-        0x2
-        0x3
-        0x4
-        0x5
-        0x6
-        0x7
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x1
-        0x2
-        0x3
-        0x4
-        0x5
-        0x6
-        0x7
-    .end array-data
 .end method
 
-.method public constructor <init>([I)V
-    .locals 4
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lm0/b;->a:Ljava/util/HashSet;
-
-    .line 3
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget v2, p1, v1
-
-    .line 4
-    iget-object v3, p0, Lm0/b;->a:Ljava/util/HashSet;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static a([I)Lm0/b;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lm0/b;
-
-    invoke-direct {v0, p0}, Lm0/b;-><init>([I)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public b(Landroidx/car/app/model/CarColor;)V
-    .locals 3
-    .param p1    # Landroidx/car/app/model/CarColor;
+.method public constructor <init>(Landroidx/camera/core/impl/m;)V
+    .locals 0
+    .param p1    # Landroidx/camera/core/impl/m;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-virtual {p1}, Landroidx/car/app/model/CarColor;->e()I
-
-    move-result v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lm0/b;->a:Ljava/util/HashSet;
+    iput-object p1, p0, Lm0/b;->D:Landroidx/camera/core/impl/m;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Landroidx/camera/core/impl/Config;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lm0/b;->D:Landroidx/camera/core/impl/m;
+
+    return-object v0
+.end method
+
+.method public g0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->H:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    return-void
+.method public h0(I)I
+    .locals 1
 
-    .line 3
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    .line 1
+    sget-object v0, Lm0/b;->H:Landroidx/camera/core/impl/Config$a;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Car color type is not allowed: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw v0
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public i0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->J:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->J:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public k0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->L:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public l0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->L:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public m0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->K:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public n0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->K:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public o0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->I:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public p0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->I:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public q()I
+    .locals 1
+
+    const/16 v0, 0x22
+
+    return v0
+.end method
+
+.method public q0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->F:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public r0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->F:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public s0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->G:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public t0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->G:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public u0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->E:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public v0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Lm0/b;->E:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
 .end method

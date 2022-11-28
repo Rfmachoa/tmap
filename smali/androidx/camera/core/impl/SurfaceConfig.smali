@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation build Lcom/google/auto/value/AutoValue;
 .end annotation
 
@@ -38,17 +42,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "type",
-            "size"
-        }
-    .end annotation
-
     .line 1
     new-instance v0, Landroidx/camera/core/impl/b;
 
@@ -75,14 +68,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surfaceConfig"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p1}, Landroidx/camera/core/impl/SurfaceConfig;->c()Landroidx/camera/core/impl/SurfaceConfig$ConfigType;

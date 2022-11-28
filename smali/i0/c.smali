@@ -1,154 +1,329 @@
 .class public final Li0/c;
-.super Li0/f;
-.source "AutoValue_OutputFileResults.java"
+.super Ljava/lang/Object;
+.source "AdaptingPreviewProcessor.java"
+
+# interfaces
+.implements Lb0/f0;
+.implements Li0/i;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
+# static fields
+.field public static final c:Ljava/lang/String; = "AdaptingPreviewProcesso"
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
+
+.field public b:Li0/h;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 0
-    .param p1    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/Nullable;
+.method public constructor <init>(Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;)V
+    .locals 1
+    .param p1    # Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "savedUri"
-        }
-    .end annotation
 
     .line 1
-    invoke-direct {p0}, Li0/f;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Li0/c;->a:Landroid/net/Uri;
+    new-instance v0, Li0/h;
+
+    invoke-direct {v0}, Li0/h;-><init>()V
+
+    iput-object v0, p0, Li0/c;->b:Li0/h;
+
+    .line 3
+    iput-object p1, p0, Li0/c;->a:Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Landroid/net/Uri;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+.method public a(Lb0/v0;)V
+    .locals 5
+    .param p1    # Lb0/v0;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/camera/core/ExperimentalGetImage;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Li0/c;->a:Landroid/net/Uri;
+    invoke-interface {p1}, Lb0/v0;->a()Ljava/util/List;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
+    .line 2
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    .line 1
-    :cond_0
-    instance-of v1, p1, Li0/f;
+    move-result v1
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_3
+    const/4 v3, 0x1
 
-    .line 2
-    check-cast p1, Li0/f;
-
-    .line 3
-    iget-object v1, p0, Li0/c;->a:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Li0/f;->b()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-nez v1, :cond_2
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public hashCode()I
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Li0/c;->a:Landroid/net/Uri;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    if-ne v1, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+    move v3, v2
+
+    :goto_0
+    const-string v1, "Processing preview bundle must be 1, but found "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 3
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 4
+    invoke-static {v3, v1}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
+
+    .line 5
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    :goto_0
-    const v1, 0xf4243
+    .line 6
+    invoke-interface {p1, v0}, Lb0/v0;->b(I)Lcom/google/common/util/concurrent/ListenableFuture;
 
-    xor-int/2addr v0, v1
+    move-result-object p1
 
-    return v0
+    .line 7
+    invoke-interface {p1}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    invoke-static {v0}, Landroidx/core/util/p;->a(Z)V
+
+    .line 8
+    :try_start_0
+    invoke-interface {p1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/camera/core/m1;
+    :try_end_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 9
+    invoke-interface {p1}, Landroidx/camera/core/m1;->L1()Landroid/media/Image;
+
+    move-result-object v0
+
+    .line 10
+    invoke-interface {p1}, Landroidx/camera/core/m1;->A1()Landroidx/camera/core/j1;
+
+    move-result-object p1
+
+    .line 11
+    invoke-static {p1}, Lb0/o;->a(Landroidx/camera/core/j1;)Landroidx/camera/core/impl/c;
+
+    move-result-object p1
+
+    .line 12
+    invoke-static {p1}, Lv/a;->b(Landroidx/camera/core/impl/c;)Landroid/hardware/camera2/CaptureResult;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    .line 13
+    instance-of v2, p1, Landroid/hardware/camera2/TotalCaptureResult;
+
+    if-eqz v2, :cond_1
+
+    .line 14
+    move-object v1, p1
+
+    check-cast v1, Landroid/hardware/camera2/TotalCaptureResult;
+
+    :cond_1
+    if-nez v0, :cond_2
+
+    return-void
+
+    .line 15
+    :cond_2
+    iget-object p1, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {p1}, Li0/h;->c()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return-void
+
+    .line 16
+    :cond_3
+    :try_start_1
+    iget-object p1, p0, Li0/c;->a:Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
+
+    invoke-interface {p1, v0, v1}, Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;->process(Landroid/media/Image;Landroid/hardware/camera2/TotalCaptureResult;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 17
+    iget-object p1, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {p1}, Li0/h;->a()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    iget-object v0, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {v0}, Li0/h;->a()V
+
+    .line 18
+    throw p1
+
+    :catch_0
+    const-string p1, "AdaptingPreviewProcesso"
+
+    const-string v0, "Unable to retrieve ImageProxy from bundle"
+
+    .line 19
+    invoke-static {p1, v0}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "OutputFileResults{savedUri="
+.method public b(Landroid/view/Surface;I)V
+    .locals 1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Li0/c;->b:Li0/h;
 
-    move-result-object v0
+    invoke-virtual {v0}, Li0/h;->c()Z
 
-    iget-object v1, p0, Li0/c;->a:Landroid/net/Uri;
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v1, "}"
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Li0/c;->a:Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, p1, p2}, Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;->onOutputSurface(Landroid/view/Surface;I)V
 
-    move-result-object v0
+    .line 3
+    iget-object p1, p0, Li0/c;->a:Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
 
-    return-object v0
+    const/16 p2, 0x23
+
+    invoke-interface {p1, p2}, Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;->onImageFormatUpdate(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    iget-object p1, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {p1}, Li0/h;->a()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p2, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {p2}, Li0/h;->a()V
+
+    .line 5
+    throw p1
+.end method
+
+.method public close()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {v0}, Li0/h;->b()V
+
+    return-void
+.end method
+
+.method public d(Landroid/util/Size;)V
+    .locals 1
+    .param p1    # Landroid/util/Size;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {v0}, Li0/h;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Li0/c;->a:Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;
+
+    invoke-interface {v0, p1}, Landroidx/camera/extensions/impl/PreviewImageProcessorImpl;->onResolutionUpdate(Landroid/util/Size;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 3
+    iget-object p1, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {p1}, Li0/h;->a()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    iget-object v0, p0, Li0/c;->b:Li0/h;
+
+    invoke-virtual {v0}, Li0/h;->a()V
+
+    .line 4
+    throw p1
 .end method

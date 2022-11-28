@@ -3,12 +3,12 @@
 .source "DefaultProgressFragment.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->l()V
+    value = Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->m()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Lkotlin/d1;",
         ">;"
     }
@@ -81,7 +81,7 @@
     .line 2
     iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$onCancelled$1;->this$0:Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;
 
-    invoke-virtual {v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->k()V
+    invoke-virtual {v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->l()V
 
     return-void
 .end method

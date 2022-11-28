@@ -1,20 +1,9 @@
 .class public final Lcom/google/android/gms/auth/api/signin/internal/zaa;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator<",
-        "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods

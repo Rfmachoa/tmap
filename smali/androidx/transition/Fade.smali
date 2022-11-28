@@ -45,6 +45,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "RestrictedApi"
@@ -74,7 +82,7 @@
     const/4 v2, 0x0
 
     .line 8
-    invoke-static {p1, p2, v1, v2, v0}, Lz0/i;->k(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v1, v2, v0}, Ls1/l;->k(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
@@ -87,13 +95,13 @@
     return-void
 .end method
 
-.method public static b(Lh3/o;F)F
+.method public static b(Lp4/o;F)F
     .locals 1
 
     if-eqz p0, :cond_0
 
     .line 1
-    iget-object p0, p0, Lh3/o;->a:Ljava/util/Map;
+    iget-object p0, p0, Lp4/o;->a:Ljava/util/Map;
 
     const-string v0, "android:fade:transitionAlpha"
 
@@ -129,10 +137,10 @@
 
     .line 1
     :cond_0
-    invoke-static {p1, p2}, Lh3/x;->h(Landroid/view/View;F)V
+    invoke-static {p1, p2}, Lp4/x;->h(Landroid/view/View;F)V
 
     .line 2
-    sget-object p2, Lh3/x;->c:Landroid/util/Property;
+    sget-object p2, Lp4/x;->c:Landroid/util/Property;
 
     const/4 v0, 0x1
 
@@ -164,23 +172,23 @@
     return-object p2
 .end method
 
-.method public captureStartValues(Lh3/o;)V
+.method public captureStartValues(Lp4/o;)V
     .locals 2
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Lh3/o;)V
+    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Lp4/o;)V
 
     .line 2
-    iget-object v0, p1, Lh3/o;->a:Ljava/util/Map;
+    iget-object v0, p1, Lp4/o;->a:Ljava/util/Map;
 
-    iget-object p1, p1, Lh3/o;->b:Landroid/view/View;
+    iget-object p1, p1, Lp4/o;->b:Landroid/view/View;
 
     .line 3
-    invoke-static {p1}, Lh3/x;->c(Landroid/view/View;)F
+    invoke-static {p1}, Lp4/x;->c(Landroid/view/View;)F
 
     move-result p1
 
@@ -196,13 +204,15 @@
     return-void
 .end method
 
-.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 p1, 0x0
 
     .line 1
-    invoke-static {p3, p1}, Landroidx/transition/Fade;->b(Lh3/o;F)F
+    invoke-static {p3, p1}, Landroidx/transition/Fade;->b(Lp4/o;F)F
 
     move-result p3
 
@@ -226,16 +236,18 @@
     return-object p1
 .end method
 
-.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    invoke-static {p2}, Lh3/x;->e(Landroid/view/View;)V
+    invoke-static {p2}, Lp4/x;->e(Landroid/view/View;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
     .line 2
-    invoke-static {p3, p1}, Landroidx/transition/Fade;->b(Lh3/o;F)F
+    invoke-static {p3, p1}, Landroidx/transition/Fade;->b(Lp4/o;F)F
 
     move-result p1
 

@@ -1,5 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/auth/account/WorkAccountApi$AddAccountResult;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Result;
@@ -21,4 +22,6 @@
 
 # virtual methods
 .method public abstract getAccount()Landroid/accounts/Account;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method

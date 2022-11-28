@@ -4,7 +4,8 @@
 
 
 # annotations
-.annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -46,20 +47,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "scaleType",
-            "aspectRatio",
-            "rotation",
-            "layoutDirection"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -94,11 +81,6 @@
 
 .method public b()I
     .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
 
     .line 1
     iget v0, p0, Landroidx/camera/core/ViewPort;->d:I

@@ -40,7 +40,7 @@
 
     iget v2, p0, Landroidx/car/app/utils/j;->c:F
 
-    invoke-static {v0, v1, v2}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->g(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->e(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)Ljava/lang/Object;
 
     move-result-object v0
 

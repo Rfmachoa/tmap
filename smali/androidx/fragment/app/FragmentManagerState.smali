@@ -31,7 +31,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Landroidx/fragment/app/FragmentState;",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
@@ -47,7 +47,7 @@
     .end annotation
 .end field
 
-.field public c:[Landroidx/fragment/app/BackStackState;
+.field public c:[Landroidx/fragment/app/BackStackRecordState;
 
 .field public d:I
 
@@ -67,7 +67,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Landroid/os/Bundle;",
+            "Landroidx/fragment/app/BackStackState;",
             ">;"
         }
     .end annotation
@@ -152,9 +152,7 @@
     iput-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->g:Ljava/util/ArrayList;
 
     .line 9
-    sget-object v0, Landroidx/fragment/app/FragmentState;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+    invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -168,15 +166,15 @@
     iput-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->b:Ljava/util/ArrayList;
 
     .line 11
-    sget-object v0, Landroidx/fragment/app/BackStackState;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v0, Landroidx/fragment/app/BackStackRecordState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Landroidx/fragment/app/BackStackState;
+    check-cast v0, [Landroidx/fragment/app/BackStackRecordState;
 
-    iput-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->c:[Landroidx/fragment/app/BackStackState;
+    iput-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->c:[Landroidx/fragment/app/BackStackRecordState;
 
     .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -200,7 +198,7 @@
     iput-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->f:Ljava/util/ArrayList;
 
     .line 15
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v0, Landroidx/fragment/app/BackStackState;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
@@ -236,7 +234,7 @@
     .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     .line 2
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->b:Ljava/util/ArrayList;
@@ -244,7 +242,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->c:[Landroidx/fragment/app/BackStackState;
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerState;->c:[Landroidx/fragment/app/BackStackRecordState;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 

@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/recyclerview/widget/k$e;
+.field public final synthetic a:Landroidx/recyclerview/widget/j$e;
 
 .field public final synthetic b:Landroidx/recyclerview/widget/d$a;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/d$a;Landroidx/recyclerview/widget/k$e;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/d$a;Landroidx/recyclerview/widget/j$e;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/d$a$b;->b:Landroidx/recyclerview/widget/d$a;
 
-    iput-object p2, p0, Landroidx/recyclerview/widget/d$a$b;->a:Landroidx/recyclerview/widget/k$e;
+    iput-object p2, p0, Landroidx/recyclerview/widget/d$a$b;->a:Landroidx/recyclerview/widget/j$e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,11 +56,11 @@
     .line 2
     iget-object v2, v0, Landroidx/recyclerview/widget/d$a;->b:Ljava/util/List;
 
-    iget-object v3, p0, Landroidx/recyclerview/widget/d$a$b;->a:Landroidx/recyclerview/widget/k$e;
+    iget-object v3, p0, Landroidx/recyclerview/widget/d$a$b;->a:Landroidx/recyclerview/widget/j$e;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/d$a;->d:Ljava/lang/Runnable;
 
-    invoke-virtual {v1, v2, v3, v0}, Landroidx/recyclerview/widget/d;->c(Ljava/util/List;Landroidx/recyclerview/widget/k$e;Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2, v3, v0}, Landroidx/recyclerview/widget/d;->c(Ljava/util/List;Landroidx/recyclerview/widget/j$e;Ljava/lang/Runnable;)V
 
     :cond_0
     return-void

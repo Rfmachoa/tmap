@@ -1,132 +1,103 @@
-.class public Landroidx/appcompat/widget/q$a;
-.super Landroidx/appcompat/graphics/drawable/c;
-.source "DropDownListView.java"
+.class public final Landroidx/appcompat/widget/q$a;
+.super Ljava/lang/Object;
+.source "AppCompatTextViewAutoSizeHelper.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x10
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/q;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
 
-# instance fields
-.field public a:Z
-
-
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Landroidx/appcompat/graphics/drawable/c;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    const/4 p1, 0x1
-
-    .line 2
-    iput-boolean p1, p0, Landroidx/appcompat/widget/q$a;->a:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;ILandroid/widget/TextView;Landroid/text/TextPaint;)Landroid/text/StaticLayout;
+    .locals 8
+    .param p0    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/text/Layout$Alignment;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/widget/TextView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/text/TextPaint;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
-# virtual methods
-.method public a(Z)V
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p3}, Landroid/widget/TextView;->getLineSpacingMultiplier()F
+
+    move-result v5
+
+    .line 2
+    invoke-virtual {p3}, Landroid/widget/TextView;->getLineSpacingExtra()F
+
+    move-result v6
+
+    .line 3
+    invoke-virtual {p3}, Landroid/widget/TextView;->getIncludeFontPadding()Z
+
+    move-result v7
+
+    .line 4
+    new-instance p3, Landroid/text/StaticLayout;
+
+    move-object v0, p3
+
+    move-object v1, p0
+
+    move-object v2, p4
+
+    move v3, p2
+
+    move-object v4, p1
+
+    invoke-direct/range {v0 .. v7}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
+
+    return-object p3
+.end method
+
+.method public static b(Landroid/widget/TextView;)I
     .locals 0
+    .param p0    # Landroid/widget/TextView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    iput-boolean p1, p0, Landroidx/appcompat/widget/q$a;->a:Z
+    invoke-virtual {p0}, Landroid/widget/TextView;->getMaxLines()I
 
-    return-void
-.end method
+    move-result p0
 
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/q$a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/c;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setHotspot(FF)V
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/q$a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/c;->setHotspot(FF)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setHotspotBounds(IIII)V
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/q$a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/appcompat/graphics/drawable/c;->setHotspotBounds(IIII)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setState([I)Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/q$a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-super {p0, p1}, Landroidx/appcompat/graphics/drawable/c;->setState([I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public setVisible(ZZ)Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/appcompat/widget/q$a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/graphics/drawable/c;->setVisible(ZZ)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return p0
 .end method

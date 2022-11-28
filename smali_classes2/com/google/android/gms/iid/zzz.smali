@@ -59,7 +59,7 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 5
+    .locals 4
 
     .line 1
     iget v0, p0, Lcom/google/android/gms/iid/zzz;->what:I
@@ -68,21 +68,29 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/iid/zzz;->zzw()Z
 
-    const/16 v2, 0x37
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x37
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v3, "Request { what="
 
-    const-string v4, " id="
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lcom/google/android/gms/cloudmessaging/a;->a(ILjava/lang/String;ILjava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v0, " id="
 
-    const-string v1, " oneWay=false}"
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, " oneWay=false}"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -128,7 +136,7 @@
 
     const-string v5, " with "
 
-    invoke-static {v4, v3, v1, v5, v2}, Lcom/android/billingclient/api/f;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v3, v1, v5, v2}, Lcom/google/android/gms/gcm/c;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

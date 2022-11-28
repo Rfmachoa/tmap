@@ -137,7 +137,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lw3/d;->d(Ljava/lang/String;)V
+    invoke-static {p0}, Ls5/d;->d(Ljava/lang/String;)V
 
     .line 4
     sget-object p0, Lcom/airbnb/lottie/network/FileExtension;->JSON:Lcom/airbnb/lottie/network/FileExtension;

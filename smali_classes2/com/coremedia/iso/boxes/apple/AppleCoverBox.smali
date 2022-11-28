@@ -8,13 +8,13 @@
 
 .field public static final TYPE:Ljava/lang/String; = "covr"
 
-.field private static final synthetic ajc$tjp_0:Lek/c$b;
+.field private static final synthetic ajc$tjp_0:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_1:Lek/c$b;
+.field private static final synthetic ajc$tjp_1:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_2:Lek/c$b;
+.field private static final synthetic ajc$tjp_2:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_3:Lek/c$b;
+.field private static final synthetic ajc$tjp_3:Ljm/c$b;
 
 
 # direct methods
@@ -54,13 +54,13 @@
     .locals 10
 
     .line 1
-    new-instance v8, Lkk/e;
+    new-instance v8, Lpm/e;
 
     const-class v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;
 
     const-string v1, "AppleCoverBox.java"
 
-    invoke-direct {v8, v1, v0}, Lkk/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v8, v1, v0}, Lpm/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     const-string v1, "1"
 
@@ -78,7 +78,7 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
@@ -86,11 +86,11 @@
 
     const/16 v1, 0x12
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_0:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_0:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -108,17 +108,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x1b
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_1:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_1:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -136,17 +136,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x24
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_2:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_2:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -164,17 +164,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x29
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_3:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_3:Ljm/c$b;
 
     return-void
 .end method
@@ -184,18 +184,18 @@
 .method public getValue()Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_3:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_3:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     const-string v0, "---"
 
@@ -205,18 +205,18 @@
 .method public setJpg([B)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_1:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_1:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     new-instance v0, Lcom/coremedia/iso/boxes/apple/AppleDataBox;
 
@@ -227,14 +227,14 @@
     const/4 v1, 0x0
 
     .line 2
-    invoke-virtual {v0, v1}, Ld6/c;->setVersion(I)V
+    invoke-virtual {v0, v1}, Lb8/c;->setVersion(I)V
 
     .line 3
     iget-object v0, p0, Lcom/coremedia/iso/boxes/apple/AbstractAppleMetaDataBox;->appleDataBox:Lcom/coremedia/iso/boxes/apple/AppleDataBox;
 
     const/16 v1, 0xd
 
-    invoke-virtual {v0, v1}, Ld6/c;->setFlags(I)V
+    invoke-virtual {v0, v1}, Lb8/c;->setFlags(I)V
 
     .line 4
     iget-object v0, p0, Lcom/coremedia/iso/boxes/apple/AbstractAppleMetaDataBox;->appleDataBox:Lcom/coremedia/iso/boxes/apple/AppleDataBox;
@@ -256,18 +256,18 @@
 .method public setPng([B)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_0:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_0:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     new-instance v0, Lcom/coremedia/iso/boxes/apple/AppleDataBox;
 
@@ -278,14 +278,14 @@
     const/4 v1, 0x0
 
     .line 2
-    invoke-virtual {v0, v1}, Ld6/c;->setVersion(I)V
+    invoke-virtual {v0, v1}, Lb8/c;->setVersion(I)V
 
     .line 3
     iget-object v0, p0, Lcom/coremedia/iso/boxes/apple/AbstractAppleMetaDataBox;->appleDataBox:Lcom/coremedia/iso/boxes/apple/AppleDataBox;
 
     const/16 v1, 0xe
 
-    invoke-virtual {v0, v1}, Ld6/c;->setFlags(I)V
+    invoke-virtual {v0, v1}, Lb8/c;->setFlags(I)V
 
     .line 4
     iget-object v0, p0, Lcom/coremedia/iso/boxes/apple/AbstractAppleMetaDataBox;->appleDataBox:Lcom/coremedia/iso/boxes/apple/AppleDataBox;
@@ -307,18 +307,18 @@
 .method public setValue(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_2:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->ajc$tjp_2:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object p1
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v0, p1}, Lb8/e;->c(Ljm/c;)V
 
     sget-object p1, Lcom/coremedia/iso/boxes/apple/AppleCoverBox;->LOG:Ljava/util/logging/Logger;
 

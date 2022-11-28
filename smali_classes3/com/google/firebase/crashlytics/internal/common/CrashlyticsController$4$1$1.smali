@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/google/android/gms/tasks/SuccessContinuation<",
-        "Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;",
+        "Lcom/google/firebase/crashlytics/internal/settings/Settings;",
         "Ljava/lang/Void;",
         ">;"
     }
@@ -49,9 +49,9 @@
 
 
 # virtual methods
-.method public then(Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;)Lcom/google/android/gms/tasks/Task;
+.method public then(Lcom/google/firebase/crashlytics/internal/settings/Settings;)Lcom/google/android/gms/tasks/Task;
     .locals 2
-    .param p1    # Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
+    .param p1    # Lcom/google/firebase/crashlytics/internal/settings/Settings;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -61,7 +61,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;",
+            "Lcom/google/firebase/crashlytics/internal/settings/Settings;",
             ")",
             "Lcom/google/android/gms/tasks/Task<",
             "Ljava/lang/Void;",
@@ -156,9 +156,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;
+    check-cast p1, Lcom/google/firebase/crashlytics/internal/settings/Settings;
 
-    invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4$1$1;->then(Lcom/google/firebase/crashlytics/internal/settings/model/AppSettingsData;)Lcom/google/android/gms/tasks/Task;
+    invoke-virtual {p0, p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4$1$1;->then(Lcom/google/firebase/crashlytics/internal/settings/Settings;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
 

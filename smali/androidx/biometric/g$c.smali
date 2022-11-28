@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public abstract a()Ll1/b;
+.method public abstract a()Landroidx/core/os/d;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method

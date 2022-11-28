@@ -1,9 +1,6 @@
-.class public Landroidx/recyclerview/widget/i0$b;
+.class public interface abstract Landroidx/recyclerview/widget/i0$b;
 .super Ljava/lang/Object;
-.source "StableIdStorage.java"
-
-# interfaces
-.implements Landroidx/recyclerview/widget/i0;
+.source "ThreadUtil.java"
 
 
 # annotations
@@ -12,41 +9,33 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x609
     name = "b"
 .end annotation
 
-
-# instance fields
-.field public final a:Landroidx/recyclerview/widget/i0$d;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Landroidx/recyclerview/widget/i0$b$a;
-
-    invoke-direct {v0, p0}, Landroidx/recyclerview/widget/i0$b$a;-><init>(Landroidx/recyclerview/widget/i0$b;)V
-
-    iput-object v0, p0, Landroidx/recyclerview/widget/i0$b;->a:Landroidx/recyclerview/widget/i0$d;
-
-    return-void
-.end method
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # virtual methods
-.method public a()Landroidx/recyclerview/widget/i0$d;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+.method public abstract a(II)V
+.end method
+
+.method public abstract b(ILandroidx/recyclerview/widget/j0$a;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Landroidx/recyclerview/widget/j0$a<",
+            "TT;>;)V"
+        }
     .end annotation
+.end method
 
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/i0$b;->a:Landroidx/recyclerview/widget/i0$d;
-
-    return-object v0
+.method public abstract c(II)V
 .end method

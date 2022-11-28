@@ -115,7 +115,7 @@
 .end method
 
 .method public n(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$i;I)V
-    .locals 2
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$e;->a:[Ljava/lang/String;
@@ -133,23 +133,41 @@
 
     .line 3
     :cond_0
-    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$i;->b:Landroid/view/View;
-
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$e;->c:I
-
-    if-ne p2, v1, :cond_1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$e;->c:I
 
     const/4 v1, 0x0
 
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x4
-
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    if-ne p2, v0, :cond_1
 
     .line 4
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$a0;->itemView:Landroid/view/View;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setSelected(Z)V
+
+    .line 5
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$i;->b:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_1
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$a0;->itemView:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
+
+    .line 7
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$i;->b:Landroid/view/View;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 8
+    :goto_0
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$a0;->itemView:Landroid/view/View;
 
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/ui/t;

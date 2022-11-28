@@ -157,7 +157,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p1}, Landroidx/core/app/h;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Landroidx/core/app/j;->f(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -213,7 +213,7 @@
     if-ne v0, p3, :cond_5
 
     .line 8
-    invoke-static {v1, p4}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p4}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -230,7 +230,7 @@
     if-eqz v0, :cond_6
 
     .line 9
-    invoke-static {p0, p3, p1, p4}, Landroidx/core/app/h;->a(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p3, p1, p4}, Landroidx/core/app/j;->a(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 
@@ -238,7 +238,7 @@
 
     .line 10
     :cond_6
-    invoke-static {p0, p1, p4}, Landroidx/core/app/h;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1, p4}, Landroidx/core/app/j;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
 

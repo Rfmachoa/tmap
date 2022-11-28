@@ -54,14 +54,14 @@
     .line 1
     iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$c;->a:Landroidx/appcompat/widget/ListPopupWindow;
 
-    iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->c:Landroidx/appcompat/widget/q;
+    iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->c:Landroidx/appcompat/widget/u;
 
     if-eqz p1, :cond_0
 
     const/4 p2, 0x0
 
     .line 2
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/q;->setListSelectionHidden(Z)V
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/u;->setListSelectionHidden(Z)V
 
     :cond_0
     return-void

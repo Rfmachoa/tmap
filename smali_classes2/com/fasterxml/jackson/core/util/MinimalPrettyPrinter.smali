@@ -8,40 +8,44 @@
 
 
 # static fields
-.field public static final DEFAULT_ROOT_VALUE_SEPARATOR:Ljava/lang/String; = " "
-
 .field private static final serialVersionUID:J = 0x1L
 
 
 # instance fields
 .field public _rootValueSeparator:Ljava/lang/String;
 
+.field public _separators:Lcom/fasterxml/jackson/core/util/Separators;
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    const-string v0, " "
-
     .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/PrettyPrinter;->DEFAULT_ROOT_VALUE_SEPARATOR:Lcom/fasterxml/jackson/core/io/SerializedString;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/io/SerializedString;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, " "
-
     .line 3
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_rootValueSeparator:Ljava/lang/String;
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_rootValueSeparator:Ljava/lang/String;
 
     .line 4
-    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_rootValueSeparator:Ljava/lang/String;
+    sget-object p1, Lcom/fasterxml/jackson/core/PrettyPrinter;->DEFAULT_SEPARATORS:Lcom/fasterxml/jackson/core/util/Separators;
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
 
     return-void
 .end method
@@ -52,8 +56,7 @@
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -64,8 +67,7 @@
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -81,18 +83,30 @@
     return-void
 .end method
 
+.method public setSeparators(Lcom/fasterxml/jackson/core/util/Separators;)Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    return-object p0
+.end method
+
 .method public writeArrayValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    const/16 v0, 0x2c
-
     .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/util/Separators;->getArrayValueSeparator()C
+
+    move-result v0
+
     invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
 
     return-void
@@ -102,8 +116,7 @@
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -119,8 +132,7 @@
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -136,14 +148,17 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    const/16 v0, 0x2c
-
     .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectEntrySeparator()C
+
+    move-result v0
+
     invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
 
     return-void
@@ -153,14 +168,17 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    const/16 v0, 0x3a
-
     .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/MinimalPrettyPrinter;->_separators:Lcom/fasterxml/jackson/core/util/Separators;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/util/Separators;->getObjectFieldValueSeparator()C
+
+    move-result v0
+
     invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw(C)V
 
     return-void
@@ -170,8 +188,7 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -191,8 +208,7 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -208,8 +224,7 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 

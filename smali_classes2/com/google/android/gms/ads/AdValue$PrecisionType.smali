@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/gms/ads/AdValue$PrecisionType;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/camera/view/PreviewView;
 .end annotation
@@ -136,19 +140,6 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000,
-            0x0
-        }
-        names = {
-            "$enum$name",
-            "$enum$ordinal",
-            "id"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)V"
@@ -166,14 +157,6 @@
 
 .method public static fromId(I)Landroidx/camera/view/PreviewView$ScaleType;
     .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "id"
-        }
-    .end annotation
 
     .line 1
     invoke-static {}, Landroidx/camera/view/PreviewView$ScaleType;->values()[Landroidx/camera/view/PreviewView$ScaleType;
@@ -218,14 +201,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Landroidx/camera/view/PreviewView$ScaleType;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8000
-        }
-        names = {
-            "name"
-        }
-    .end annotation
 
     .line 1
     const-class v0, Landroidx/camera/view/PreviewView$ScaleType;

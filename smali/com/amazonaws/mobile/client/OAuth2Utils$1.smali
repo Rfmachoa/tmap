@@ -1,5 +1,5 @@
 .class Lcom/amazonaws/mobile/client/OAuth2Utils$1;
-.super Landroidx/browser/customtabs/c;
+.super Landroidx/browser/customtabs/d;
 .source "AWSMobileClient.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils$1;->this$0:Lcom/amazonaws/mobile/client/OAuth2Utils;
 
-    invoke-direct {p0}, Landroidx/browser/customtabs/c;-><init>()V
+    invoke-direct {p0}, Landroidx/browser/customtabs/d;-><init>()V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->g(J)Z
+    invoke-virtual {p1, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->n(J)Z
 
     .line 3
     iget-object p1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils$1;->this$0:Lcom/amazonaws/mobile/client/OAuth2Utils;
@@ -60,15 +60,15 @@
 
     iget-object v0, p0, Lcom/amazonaws/mobile/client/OAuth2Utils$1;->this$0:Lcom/amazonaws/mobile/client/OAuth2Utils;
 
-    invoke-static {v0}, Lcom/amazonaws/mobile/client/OAuth2Utils;->access$200(Lcom/amazonaws/mobile/client/OAuth2Utils;)Landroidx/browser/customtabs/a;
+    invoke-static {v0}, Lcom/amazonaws/mobile/client/OAuth2Utils;->access$200(Lcom/amazonaws/mobile/client/OAuth2Utils;)Landroidx/browser/customtabs/b;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroidx/browser/customtabs/CustomTabsClient;->f(Landroidx/browser/customtabs/a;)Landroidx/browser/customtabs/d;
+    invoke-virtual {p2, v0}, Landroidx/browser/customtabs/CustomTabsClient;->k(Landroidx/browser/customtabs/b;)Landroidx/browser/customtabs/CustomTabsSession;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/amazonaws/mobile/client/OAuth2Utils;->access$102(Lcom/amazonaws/mobile/client/OAuth2Utils;Landroidx/browser/customtabs/d;)Landroidx/browser/customtabs/d;
+    invoke-static {p1, p2}, Lcom/amazonaws/mobile/client/OAuth2Utils;->access$102(Lcom/amazonaws/mobile/client/OAuth2Utils;Landroidx/browser/customtabs/CustomTabsSession;)Landroidx/browser/customtabs/CustomTabsSession;
 
     return-void
 .end method

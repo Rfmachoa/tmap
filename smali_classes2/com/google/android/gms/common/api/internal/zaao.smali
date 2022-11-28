@@ -1,35 +1,17 @@
 .class final Lcom/google/android/gms/common/api/internal/zaao;
 .super Lcom/google/android/gms/common/api/internal/zaav;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
 .field private final zac:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            "Lcom/google/android/gms/common/api/internal/zaal;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;Ljava/util/Map;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            "Lcom/google/android/gms/common/api/internal/zaal;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaao;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -16,14 +16,6 @@
 
 # instance fields
 .field private zaa:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zab:Z
 
@@ -47,15 +39,6 @@
 .end field
 
 .field private zah:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zai:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
@@ -231,6 +214,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;->zah:Ljava/util/Map;
 
@@ -388,6 +374,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;->zaa:Ljava/util/Set;
 
@@ -401,6 +390,9 @@
 .method public requestId()Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -422,6 +414,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     const/4 v0, 0x1
 
     .line 1
@@ -437,6 +432,9 @@
 .method public requestProfile()Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -460,6 +458,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -505,6 +506,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     const/4 v0, 0x1
 
     .line 2
@@ -526,6 +530,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -553,6 +560,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
@@ -573,6 +583,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions$Builder;->zai:Ljava/lang/String;

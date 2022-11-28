@@ -1,11 +1,11 @@
 .class public Landroidx/appcompat/app/AppCompatDelegateImpl$g;
-.super Ls1/w0;
+.super Landroidx/core/view/a1;
 .source "AppCompatDelegateImpl.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/app/AppCompatDelegateImpl;->R0(Li/b$a;)Li/b;
+    value = Landroidx/appcompat/app/AppCompatDelegateImpl;->R0(Lk/b$a;)Lk/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    invoke-direct {p0}, Ls1/w0;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/a1;-><init>()V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
     .line 1
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->g1:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->i1:Landroidx/appcompat/widget/ActionBarContextView;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -47,16 +47,16 @@
     .line 2
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->j1:Ls1/u0;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->l1:Landroidx/core/view/y0;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Ls1/u0;->s(Ls1/v0;)Ls1/u0;
+    invoke-virtual {p1, v0}, Landroidx/core/view/y0;->u(Landroidx/core/view/z0;)Landroidx/core/view/y0;
 
     .line 3
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iput-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->j1:Ls1/u0;
+    iput-object v0, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->l1:Landroidx/core/view/y0;
 
     return-void
 .end method
@@ -67,7 +67,7 @@
     .line 1
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->g1:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->i1:Landroidx/appcompat/widget/ActionBarContextView;
 
     const/4 v0, 0x0
 
@@ -76,16 +76,7 @@
     .line 2
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->g1:Landroidx/appcompat/widget/ActionBarContextView;
-
-    const/16 v0, 0x20
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->sendAccessibilityEvent(I)V
-
-    .line 3
-    iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->g1:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->i1:Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
@@ -95,10 +86,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 4
+    .line 3
     iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$g;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->g1:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p1, Landroidx/appcompat/app/AppCompatDelegateImpl;->i1:Landroidx/appcompat/widget/ActionBarContextView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 

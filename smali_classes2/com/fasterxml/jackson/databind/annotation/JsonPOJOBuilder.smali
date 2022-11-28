@@ -35,6 +35,12 @@
 .end annotation
 
 
+# static fields
+.field public static final DEFAULT_BUILD_METHOD:Ljava/lang/String; = "build"
+
+.field public static final DEFAULT_WITH_PREFIX:Ljava/lang/String; = "with"
+
+
 # virtual methods
 .method public abstract buildMethodName()Ljava/lang/String;
 .end method

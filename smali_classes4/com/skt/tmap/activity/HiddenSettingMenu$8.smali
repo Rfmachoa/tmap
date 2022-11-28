@@ -44,58 +44,47 @@
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const/4 p1, 0x0
+    const/4 p1, 0x1
 
     .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string v0, "Server Policy"
+    const-string v0, "Location GPS"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const p1, 0x927c0
+    const/4 p1, 0x2
 
     .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string v0, "10 Min"
+    const-string v0, "NMEA AGPS"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const p1, 0x493e0
+    const/4 p1, 0x0
 
     .line 4
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string v0, "5 Min"
+    const-string v0, "File GPS(NMEA)"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const p1, 0xea60
+    const/4 p1, 0x3
 
     .line 5
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string v0, "1 Min"
-
-    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 p1, 0x7530
-
-    .line 6
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    const-string v0, "30 Sec"
+    const-string v0, "File GPS(CSV)"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

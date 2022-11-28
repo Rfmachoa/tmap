@@ -127,14 +127,14 @@
 
     .line 4
     :cond_1
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/state/a;->M()Lma/c;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/state/a;->M()Ljc/c;
 
     move-result-object v2
 
     if-eqz v2, :cond_4
 
     .line 5
-    invoke-virtual {v2}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v2}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v3
 
@@ -155,7 +155,7 @@
     .line 7
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/g$c;->a:Lcom/skt/aicloud/speaker/service/api/g;
 
-    invoke-virtual {v2}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v2}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v1
 
@@ -174,7 +174,7 @@
     .line 8
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/g$c;->a:Lcom/skt/aicloud/speaker/service/api/g;
 
-    invoke-virtual {v2}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v2}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v1
 

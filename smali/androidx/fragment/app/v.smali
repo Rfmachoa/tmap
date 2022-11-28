@@ -1,45 +1,36 @@
-.class public interface abstract Landroidx/fragment/app/v;
+.class public final synthetic Landroidx/fragment/app/v;
 .super Ljava/lang/Object;
-.source "FragmentResultOwner.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/core/util/d;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/fragment/app/FragmentManager;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroidx/fragment/app/FragmentManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/fragment/app/v;->a:Landroidx/fragment/app/FragmentManager;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;Landroid/os/Bundle;)V
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-.end method
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-.method public abstract b(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Landroidx/fragment/app/u;)V
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/lifecycle/LifecycleOwner;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroidx/fragment/app/u;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-.end method
+    iget-object v0, p0, Landroidx/fragment/app/v;->a:Landroidx/fragment/app/FragmentManager;
 
-.method public abstract c(Ljava/lang/String;)V
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-.end method
+    check-cast p1, Ljava/lang/Integer;
 
-.method public abstract d(Ljava/lang/String;)V
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    invoke-static {v0, p1}, Landroidx/fragment/app/FragmentManager;->e(Landroidx/fragment/app/FragmentManager;Ljava/lang/Integer;)V
+
+    return-void
 .end method

@@ -4,9 +4,6 @@
 
 
 # annotations
-.annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/camera/core/SurfaceRequest;
 .end annotation
@@ -23,12 +20,4 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "transformationInfo"
-        }
-    .end annotation
 .end method

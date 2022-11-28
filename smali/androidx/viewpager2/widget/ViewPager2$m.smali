@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$m;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$e;->d()Z
 
@@ -57,7 +57,7 @@
     .line 2
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$m;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2$e;->n()Ljava/lang/CharSequence;
 
@@ -101,7 +101,7 @@
     .line 4
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$m;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
     invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2$e;->o(Landroid/view/accessibility/AccessibilityEvent;)V
 

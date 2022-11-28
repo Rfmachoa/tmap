@@ -2602,7 +2602,7 @@
 
     const-string v5, ", remainingSamplesAtTimestampDelta "
 
-    invoke-static {v1, v3, v4, v8, v5}, Lt0/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v1, v3, v4, v8, v5}, Lg1/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     const-string v3, ", remainingSamplesInChunk "
 
@@ -2610,7 +2610,7 @@
 
     move/from16 v5, p1
 
-    invoke-static {v1, v5, v3, v0, v4}, Lt0/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v1, v5, v3, v0, v4}, Lg1/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

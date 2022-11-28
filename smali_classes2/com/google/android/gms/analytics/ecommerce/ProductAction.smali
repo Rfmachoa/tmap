@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/ecommerce/ProductAction;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -10,22 +10,22 @@
 
 # static fields
 .field public static final ACTION_ADD:Ljava/lang/String; = "add"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_CHECKOUT:Ljava/lang/String; = "checkout"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_CHECKOUT_OPTION:Ljava/lang/String; = "checkout_option"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_CHECKOUT_OPTIONS:Ljava/lang/String; = "checkout_options"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation runtime Ljava/lang/Deprecated;
@@ -33,57 +33,48 @@
 .end field
 
 .field public static final ACTION_CLICK:Ljava/lang/String; = "click"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_DETAIL:Ljava/lang/String; = "detail"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_PURCHASE:Ljava/lang/String; = "purchase"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_REFUND:Ljava/lang/String; = "refund"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 .field public static final ACTION_REMOVE:Ljava/lang/String; = "remove"
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # instance fields
 .field public zza:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
 
-    .line 1
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/analytics/ecommerce/ProductAction;->zza:Ljava/util/Map;
@@ -101,10 +92,10 @@
 .method public setCheckoutOptions(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "&col"
@@ -117,7 +108,7 @@
 
 .method public setCheckoutStep(I)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -135,10 +126,10 @@
 .method public setProductActionList(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "&pal"
@@ -152,10 +143,10 @@
 .method public setProductListSource(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "&pls"
@@ -169,10 +160,10 @@
 .method public setTransactionAffiliation(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "&ta"
@@ -186,10 +177,10 @@
 .method public setTransactionCouponCode(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "&tcc"
@@ -203,10 +194,10 @@
 .method public setTransactionId(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "&ti"
@@ -219,7 +210,7 @@
 
 .method public setTransactionRevenue(D)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -236,7 +227,7 @@
 
 .method public setTransactionShipping(D)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -253,7 +244,7 @@
 
 .method public setTransactionTax(D)Lcom/google/android/gms/analytics/ecommerce/ProductAction;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -270,12 +261,12 @@
 
 .method public toString()Ljava/lang/String;
     .locals 5
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
-    .line 1
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/gms/analytics/ecommerce/ProductAction;->zza:Ljava/util/Map;
@@ -369,27 +360,17 @@
 
 .method public final zza()Ljava/util/Map;
     .locals 2
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/google/android/gms/analytics/ecommerce/ProductAction;->zza:Ljava/util/Map;
 
-    .line 1
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     return-object v0

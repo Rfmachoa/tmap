@@ -1,124 +1,200 @@
-.class public final Lo/a;
-.super Ljava/lang/Object;
-.source "AsyncLayoutInflater.java"
+.class public Lo/a;
+.super Lo/b;
+.source "FastSafeIterableMap.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation build Landroidx/annotation/RestrictTo;
     value = {
-        Lo/a$d;,
-        Lo/a$b;,
-        Lo/a$c;,
-        Lo/a$e;
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lo/b<",
+        "TK;TV;>;"
     }
 .end annotation
 
 
-# static fields
-.field public static final e:Ljava/lang/String; = "AsyncLayoutInflater"
-
-
 # instance fields
-.field public a:Landroid/view/LayoutInflater;
-
-.field public b:Landroid/os/Handler;
-
-.field public c:Lo/a$d;
-
-.field public d:Landroid/os/Handler$Callback;
+.field public e:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "TK;",
+            "Lo/b$c<",
+            "TK;TV;>;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>()V
     .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lo/b;-><init>()V
 
     .line 2
-    new-instance v0, Lo/a$a;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0, p0}, Lo/a$a;-><init>(Lo/a;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lo/a;->d:Landroid/os/Handler$Callback;
-
-    .line 3
-    new-instance v0, Lo/a$b;
-
-    invoke-direct {v0, p1}, Lo/a$b;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lo/a;->a:Landroid/view/LayoutInflater;
-
-    .line 4
-    new-instance p1, Landroid/os/Handler;
-
-    iget-object v0, p0, Lo/a;->d:Landroid/os/Handler$Callback;
-
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
-
-    iput-object p1, p0, Lo/a;->b:Landroid/os/Handler;
-
-    .line 5
-    invoke-static {}, Lo/a$d;->b()Lo/a$d;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo/a;->c:Lo/a$d;
+    iput-object v0, p0, Lo/a;->e:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ILandroid/view/ViewGroup;Lo/a$e;)V
+.method public b(Ljava/lang/Object;)Lo/b$c;
     .locals 1
-    .param p1    # I
-        .annotation build Landroidx/annotation/LayoutRes;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Lo/a$e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)",
+            "Lo/b$c<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lo/a;->e:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lo/b$c;
+
+    return-object p1
+.end method
+
+.method public contains(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)Z"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lo/a;->e:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public f(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/UiThread;
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;)TV;"
+        }
     .end annotation
 
-    const-string v0, "callback argument may not be null!"
-
     .line 1
-    invoke-static {p3, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    iget-object v0, p0, Lo/a;->c:Lo/a$d;
-
-    invoke-virtual {v0}, Lo/a$d;->c()Lo/a$c;
+    invoke-virtual {p0, p1}, Lo/a;->b(Ljava/lang/Object;)Lo/b$c;
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object p1, v0, Lo/b$c;->b:Ljava/lang/Object;
+
+    return-object p1
+
     .line 3
-    iput-object p0, v0, Lo/a$c;->a:Lo/a;
+    :cond_0
+    iget-object v0, p0, Lo/a;->e:Ljava/util/HashMap;
 
-    .line 4
-    iput p1, v0, Lo/a$c;->c:I
+    invoke-virtual {p0, p1, p2}, Lo/b;->e(Ljava/lang/Object;Ljava/lang/Object;)Lo/b$c;
 
-    .line 5
-    iput-object p2, v0, Lo/a$c;->b:Landroid/view/ViewGroup;
+    move-result-object p2
 
-    .line 6
-    iput-object p3, v0, Lo/a$c;->e:Lo/a$e;
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
-    iget-object p1, p0, Lo/a;->c:Lo/a$d;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Lo/a$d;->a(Lo/a$c;)V
+    return-object p1
+.end method
 
-    return-void
+.method public g(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)TV;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lo/b;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lo/a;->e:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public h(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)",
+            "Ljava/util/Map$Entry<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lo/a;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lo/a;->e:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lo/b$c;
+
+    iget-object p1, p1, Lo/b$c;->d:Lo/b$c;
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

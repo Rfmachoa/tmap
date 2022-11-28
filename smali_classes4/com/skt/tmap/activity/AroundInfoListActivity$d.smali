@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/AroundInfoListActivity;->z5()V
+    value = Lcom/skt/tmap/activity/AroundInfoListActivity;->H5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -141,9 +141,9 @@
 
     iget-object p1, p0, Lcom/skt/tmap/activity/AroundInfoListActivity$d;->a:Lcom/skt/tmap/activity/AroundInfoListActivity;
 
-    iget-object v5, p1, Lcom/skt/tmap/activity/AroundInfoListActivity;->X0:Lcom/skt/tmap/vsm/map/MapEngine$OnHitObjectListener;
+    iget-object v5, p1, Lcom/skt/tmap/activity/AroundInfoListActivity;->a1:Lcom/skt/tmap/vsm/map/MapEngine$OnHitObjectListener;
 
-    iget-object v6, p1, Lcom/skt/tmap/activity/AroundInfoListActivity;->Y0:Lcom/skt/tmap/vsm/map/MapEngine$OnHitCalloutPopupListener;
+    iget-object v6, p1, Lcom/skt/tmap/activity/AroundInfoListActivity;->b1:Lcom/skt/tmap/vsm/map/MapEngine$OnHitCalloutPopupListener;
 
     invoke-virtual/range {v1 .. v6}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->hitObject(FFLcom/skt/tmap/vsm/map/MapEngine$HitTestType;Lcom/skt/tmap/vsm/map/MapEngine$OnHitObjectListener;Lcom/skt/tmap/vsm/map/MapEngine$OnHitCalloutPopupListener;)Z
 

@@ -24,31 +24,31 @@
 
 
 # static fields
-.field public static final l:I = 0x0
+.field public static final m:I = 0x0
 
-.field public static final m:I = 0x1
+.field public static final n:I = 0x1
 
-.field public static final n:I = 0x2
+.field public static final o:I = 0x2
 
-.field public static final o:I = 0x3
+.field public static final p:I = 0x3
 
-.field public static final p:I = 0x4
+.field public static final q:I = 0x4
 
-.field public static final q:I = 0x5
+.field public static final r:I = 0x5
 
-.field public static final r:I = 0x6
+.field public static final s:I = 0x6
 
-.field public static final s:I = 0x7
+.field public static final t:I = 0x7
 
-.field public static final t:I = 0x8
+.field public static final u:I = 0x8
 
-.field public static final u:I = 0x9
+.field public static final v:I = 0x9
 
-.field public static final v:I = 0xa
+.field public static final w:I = 0xa
 
-.field public static final w:Ljava/lang/String; = "android.support.action.showsUserInterface"
+.field public static final x:Ljava/lang/String; = "android.support.action.showsUserInterface"
 
-.field public static final x:Ljava/lang/String; = "android.support.action.semanticAction"
+.field public static final y:Ljava/lang/String; = "android.support.action.semanticAction"
 
 
 # instance fields
@@ -79,6 +79,8 @@
 .field public j:Ljava/lang/CharSequence;
 
 .field public k:Landroid/app/PendingIntent;
+
+.field public l:Z
 
 
 # direct methods
@@ -113,8 +115,8 @@
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
-    .locals 13
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
+    .locals 14
     .param p2    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -157,7 +159,7 @@
 
     move-object v2, p0
 
-    move-object v4, p2
+    move-object/from16 v4, p2
 
     move-object/from16 v5, p3
 
@@ -175,13 +177,15 @@
 
     move/from16 v12, p10
 
-    invoke-direct/range {v2 .. v12}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+    move/from16 v13, p11
+
+    invoke-direct/range {v2 .. v13}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
-    .locals 11
+    .locals 12
     .param p1    # Landroidx/core/graphics/drawable/IconCompat;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -212,6 +216,8 @@
 
     const/4 v10, 0x0
 
+    const/4 v11, 0x0
+
     move-object v0, p0
 
     move-object v1, p1
@@ -220,12 +226,12 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v10}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+    invoke-direct/range {v0 .. v11}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
     .locals 2
     .param p1    # Landroidx/core/graphics/drawable/IconCompat;
         .annotation build Landroidx/annotation/Nullable;
@@ -266,7 +272,7 @@
     if-eqz p1, :cond_0
 
     .line 7
-    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->D()I
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->B()I
 
     move-result v0
 
@@ -322,6 +328,9 @@
 
     .line 17
     iput-boolean p10, p0, Landroidx/core/app/NotificationCompat$Action;->h:Z
+
+    .line 18
+    iput-boolean p11, p0, Landroidx/core/app/NotificationCompat$Action;->l:Z
 
     return-void
 .end method
@@ -454,6 +463,15 @@
 .end method
 
 .method public k()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/core/app/NotificationCompat$Action;->l:Z
+
+    return v0
+.end method
+
+.method public l()Z
     .locals 1
 
     .line 1

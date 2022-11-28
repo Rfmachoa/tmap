@@ -1,26 +1,46 @@
-.class public abstract Lu9/a;
+.class public Lu9/a;
 .super Ljava/lang/Object;
-.source "GeneralEvent.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lu9/a$a;
-    }
-.end annotation
+.source "AuthenticatorInfoFromAuthenticator.java"
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "token"
+.field public a:S
+
+.field public b:Ljava/lang/String;
+
+.field public c:Lu9/b;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lu9/c;",
+            ">;"
+        }
     .end annotation
 .end field
 
-.field public b:J
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "offsetInMilliseconds"
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public h:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
     .end annotation
 .end field
 
@@ -37,78 +57,194 @@
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
-
-.method public b()J
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Lu9/a;->b:J
-
-    return-wide v0
-.end method
-
-.method public c()Ljava/lang/String;
+.method public a()S
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lu9/a;->a:Ljava/lang/String;
+    iget-short v0, p0, Lu9/a;->a:S
+
+    return v0
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lu9/a;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public c(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lu9/c;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lu9/a;->e:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public d(Lu9/b;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lu9/a;->c:Lu9/b;
+
+    return-void
+.end method
+
+.method public e(S)V
+    .locals 0
+
+    .line 1
+    iput-short p1, p0, Lu9/a;->a:S
+
+    return-void
+.end method
+
+.method public f()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lu9/a;->b:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public d(J)V
+.method public g(Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    iput-wide p1, p0, Lu9/a;->b:J
+    iput-object p1, p0, Lu9/a;->d:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public e(Ljava/lang/String;)V
+.method public h(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;)V"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lu9/a;->a:Ljava/lang/String;
+    iput-object p1, p0, Lu9/a;->g:Ljava/util/List;
 
     return-void
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 4
+.method public i()Lu9/b;
+    .locals 1
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lu9/a;->c:Lu9/b;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    return-object v0
+.end method
 
-    invoke-virtual {p0}, Lu9/a;->a()Ljava/lang/String;
+.method public j(Ljava/lang/String;)V
+    .locals 0
 
-    move-result-object v1
+    .line 1
+    iput-object p1, p0, Lu9/a;->f:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string/jumbo v1, "{mToken=\'"
+.method public k(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1
+    iput-object p1, p0, Lu9/a;->h:Ljava/util/List;
 
-    iget-object v1, p0, Lu9/a;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    const/16 v2, 0x27
+.method public l()Ljava/lang/String;
+    .locals 1
 
-    const-string v3, ", mOffsetInMilliseconds="
+    .line 1
+    iget-object v0, p0, Lu9/a;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    return-object v0
+.end method
 
-    iget-wide v1, p0, Lu9/a;->b:J
+.method public m()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lu9/c;",
+            ">;"
+        }
+    .end annotation
 
-    const/16 v3, 0x7d
+    .line 1
+    iget-object v0, p0, Lu9/a;->e:Ljava/util/List;
 
-    invoke-static {v0, v1, v2, v3}, Lz3/a;->a(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public n()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lu9/a;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public o()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lu9/a;->g:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public p()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lu9/a;->h:Ljava/util/List;
 
     return-object v0
 .end method

@@ -1021,7 +1021,7 @@
 
     const-string v3, "Unexpected version="
 
-    invoke-static {v2, v3, v1}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v3, v1}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 

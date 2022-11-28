@@ -1,320 +1,244 @@
-.class public Lri/d;
-.super Lri/c;
-.source "_Comparisons.kt"
+.class public final Lri/d;
+.super Lri/a;
+.source "DefaultedHttpParams.java"
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0018\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0011\n\u0002\u0008\u0007\u001aI\u0010\u0007\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u00002\u0006\u0010\u0002\u001a\u00028\u00002\u0006\u0010\u0003\u001a\u00028\u00002\u001a\u0010\u0006\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00028\u00000\u0004j\n\u0012\u0006\u0008\u0000\u0012\u00028\u0000`\u0005H\u0007\u00a2\u0006\u0004\u0008\u0007\u0010\u0008\u001aA\u0010\t\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u00002\u0006\u0010\u0002\u001a\u00028\u00002\u001a\u0010\u0006\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00028\u00000\u0004j\n\u0012\u0006\u0008\u0000\u0012\u00028\u0000`\u0005H\u0007\u00a2\u0006\u0004\u0008\t\u0010\n\u001aM\u0010\r\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u00002\u0012\u0010\u000c\u001a\n\u0012\u0006\u0008\u0001\u0012\u00028\u00000\u000b\"\u00028\u00002\u001a\u0010\u0006\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00028\u00000\u0004j\n\u0012\u0006\u0008\u0000\u0012\u00028\u0000`\u0005H\u0007\u00a2\u0006\u0004\u0008\r\u0010\u000e\u001aI\u0010\u000f\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u00002\u0006\u0010\u0002\u001a\u00028\u00002\u0006\u0010\u0003\u001a\u00028\u00002\u001a\u0010\u0006\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00028\u00000\u0004j\n\u0012\u0006\u0008\u0000\u0012\u00028\u0000`\u0005H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0008\u001aA\u0010\u0010\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u00002\u0006\u0010\u0002\u001a\u00028\u00002\u001a\u0010\u0006\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00028\u00000\u0004j\n\u0012\u0006\u0008\u0000\u0012\u00028\u0000`\u0005H\u0007\u00a2\u0006\u0004\u0008\u0010\u0010\n\u001aM\u0010\u0011\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u00002\u0012\u0010\u000c\u001a\n\u0012\u0006\u0008\u0001\u0012\u00028\u00000\u000b\"\u00028\u00002\u001a\u0010\u0006\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00028\u00000\u0004j\n\u0012\u0006\u0008\u0000\u0012\u00028\u0000`\u0005H\u0007\u00a2\u0006\u0004\u0008\u0011\u0010\u000e\u00a8\u0006\u0012"
-    }
-    d2 = {
-        "T",
-        "a",
-        "b",
-        "c",
-        "Ljava/util/Comparator;",
-        "Lkotlin/Comparator;",
-        "comparator",
-        "p0",
-        "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;",
-        "q0",
-        "(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;",
-        "",
-        "other",
-        "r0",
-        "(Ljava/lang/Object;[Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;",
-        "s0",
-        "t0",
-        "u0",
-        "kotlin-stdlib"
-    }
-    k = 0x5
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
-    xs = "kotlin/comparisons/ComparisonsKt"
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# instance fields
+.field public final a:Lri/i;
 
-    invoke-direct {p0}, Lri/c;-><init>()V
+.field public final b:Lri/i;
+
+
+# direct methods
+.method public constructor <init>(Lri/i;Lri/i;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lri/a;-><init>()V
+
+    const-string v0, "Local HTTP parameters"
+
+    .line 2
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lri/i;
+
+    iput-object p1, p0, Lri/d;->a:Lri/i;
+
+    .line 3
+    iput-object p2, p0, Lri/d;->b:Lri/i;
 
     return-void
 .end method
 
-.method public static final p0(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
-    .locals 1
-    .param p3    # Ljava/util/Comparator;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+
+# virtual methods
+.method public a()Ljava/util/Set;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;TT;TT;",
-            "Ljava/util/Comparator<",
-            "-TT;>;)TT;"
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
         }
     .end annotation
 
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    .line 1
+    new-instance v0, Ljava/util/HashSet;
 
-    const-string v0, "comparator"
+    iget-object v1, p0, Lri/d;->b:Lri/i;
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lri/d;->d(Lri/i;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+.end method
+
+.method public b()Lri/i;
+    .locals 1
 
     .line 1
-    invoke-static {p1, p2, p3}, Lri/d;->q0(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
+    iget-object v0, p0, Lri/d;->b:Lri/i;
+
+    return-object v0
+.end method
+
+.method public c()Ljava/util/Set;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/HashSet;
+
+    iget-object v1, p0, Lri/d;->a:Lri/i;
+
+    invoke-virtual {p0, v1}, Lri/d;->d(Lri/i;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+.end method
+
+.method public copy()Lri/i;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lri/d;->a:Lri/i;
+
+    invoke-interface {v0}, Lri/i;->copy()Lri/i;
+
+    move-result-object v0
+
+    .line 2
+    new-instance v1, Lri/d;
+
+    iget-object v2, p0, Lri/d;->b:Lri/i;
+
+    invoke-direct {v1, v0, v2}, Lri/d;-><init>(Lri/i;Lri/i;)V
+
+    return-object v1
+.end method
+
+.method public final d(Lri/i;)Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lri/i;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    instance-of v0, p1, Lri/j;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    check-cast p1, Lri/j;
+
+    invoke-interface {p1}, Lri/j;->getNames()Ljava/util/Set;
 
     move-result-object p1
 
-    invoke-static {p0, p1, p3}, Lri/d;->q0(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
+    return-object p1
 
-    move-result-object p0
+    .line 3
+    :cond_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    return-object p0
+    const-string v0, "HttpParams instance does not implement HttpParamsNames"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static final q0(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
-    .locals 1
-    .param p2    # Ljava/util/Comparator;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method public getNames()Ljava/util/Set;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;TT;",
-            "Ljava/util/Comparator<",
-            "-TT;>;)TT;"
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
         }
     .end annotation
 
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    .line 1
+    new-instance v0, Ljava/util/HashSet;
 
-    const-string v0, "comparator"
+    iget-object v1, p0, Lri/d;->b:Lri/i;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lri/d;->d(Lri/i;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    .line 2
+    iget-object v1, p0, Lri/d;->a:Lri/i;
+
+    invoke-virtual {p0, v1}, Lri/d;->d(Lri/i;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    return-object v0
+.end method
+
+.method public getParameter(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 2
 
     .line 1
-    invoke-interface {p2, p0, p1}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    iget-object v0, p0, Lri/d;->a:Lri/i;
 
-    move-result p2
+    invoke-interface {v0, p1}, Lri/i;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
-    if-ltz p2, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v1, p0, Lri/d;->b:Lri/i;
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    invoke-interface {v1, p1}, Lri/i;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
 
     :cond_0
-    move-object p0, p1
-
-    :goto_0
-    return-object p0
+    return-object v0
 .end method
 
-.method public static final r0(Ljava/lang/Object;[Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
-    .locals 4
-    .param p1    # [Ljava/lang/Object;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/Comparator;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;[TT;",
-            "Ljava/util/Comparator<",
-            "-TT;>;)TT;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.4"
-    .end annotation
-
-    const-string v0, "other"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "comparator"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    aget-object v2, p1, v1
-
-    invoke-interface {p2, p0, v2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v3
-
-    if-gez v3, :cond_0
-
-    move-object p0, v2
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object p0
-.end method
-
-.method public static final s0(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
+.method public removeParameter(Ljava/lang/String;)Z
     .locals 1
-    .param p3    # Ljava/util/Comparator;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;TT;TT;",
-            "Ljava/util/Comparator<",
-            "-TT;>;)TT;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
-
-    const-string v0, "comparator"
-
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p1, p2, p3}, Lri/d;->t0(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
+    iget-object v0, p0, Lri/d;->a:Lri/i;
+
+    invoke-interface {v0, p1}, Lri/i;->removeParameter(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lri/d;->a:Lri/i;
+
+    invoke-interface {v0, p1, p2}, Lri/i;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
 
     move-result-object p1
 
-    invoke-static {p0, p1, p3}, Lri/d;->t0(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final t0(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
-    .locals 1
-    .param p2    # Ljava/util/Comparator;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;TT;",
-            "Ljava/util/Comparator<",
-            "-TT;>;)TT;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
-
-    const-string v0, "comparator"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-interface {p2, p0, p1}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p2
-
-    if-gtz p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, p1
-
-    :goto_0
-    return-object p0
-.end method
-
-.method public static final u0(Ljava/lang/Object;[Ljava/lang/Object;Ljava/util/Comparator;)Ljava/lang/Object;
-    .locals 4
-    .param p1    # [Ljava/lang/Object;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/Comparator;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;[TT;",
-            "Ljava/util/Comparator<",
-            "-TT;>;)TT;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.4"
-    .end annotation
-
-    const-string v0, "other"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "comparator"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    aget-object v2, p1, v1
-
-    invoke-interface {p2, p0, v2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v3
-
-    if-lez v3, :cond_0
-
-    move-object p0, v2
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object p0
+    return-object p1
 .end method

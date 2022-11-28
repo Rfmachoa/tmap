@@ -79,7 +79,7 @@
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1, v3}, Landroid/animation/ObjectAnimator;->setAutoCancel(Z)V
+    invoke-static {p1, v3}, Li/a$b;->a(Landroid/animation/ObjectAnimator;Z)V
 
     .line 6
     invoke-virtual {v4}, Landroidx/appcompat/graphics/drawable/a$f;->a()I

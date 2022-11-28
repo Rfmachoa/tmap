@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list
+<selector
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:gravity="center" android:left="@dimen/tmap_2dp" android:right="@dimen/tmap_2dp">
-        <shape android:shape="rectangle">
-            <corners android:radius="@dimen/tmap_14dp" />
-            <solid android:color="@color/switch_color" />
-            <size android:height="@dimen/tmap_14dp" />
-        </shape>
-    </item>
-</layer-list>
+    <item android:state_enabled="false" android:drawable="@drawable/switch_track_disabled" />
+    <item android:state_checked="true" android:drawable="@drawable/switch_track_on" />
+    <item android:drawable="@drawable/swtich_track_off" />
+</selector>

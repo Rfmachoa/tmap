@@ -144,7 +144,7 @@
 
     const-string v1, "Invalid URI: "
 
-    invoke-static {v1, p1}, Landroidx/appcompat/widget/b0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v1, p1}, Landroidx/appcompat/widget/g0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -329,7 +329,7 @@
 
     const-string p3, "WHERE clause not supported: "
 
-    invoke-static {p3, p1}, Landroidx/appcompat/widget/b0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p3, p1}, Landroidx/appcompat/widget/g0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -343,7 +343,7 @@
 
     const-string p3, "Invalid URI: "
 
-    invoke-static {p3, p1}, Landroidx/appcompat/widget/b0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p3, p1}, Landroidx/appcompat/widget/g0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 

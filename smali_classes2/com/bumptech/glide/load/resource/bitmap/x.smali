@@ -58,7 +58,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -67,7 +67,7 @@
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/x;->a:Landroid/content/res/Resources;
 
     .line 3
-    invoke-static {p2}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

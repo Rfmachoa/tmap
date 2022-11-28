@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/model/k;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public final onClick()V
+.method public final a()V
     .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/car/screen/j;->a:Lcom/skt/tmap/car/screen/HomeScreen;

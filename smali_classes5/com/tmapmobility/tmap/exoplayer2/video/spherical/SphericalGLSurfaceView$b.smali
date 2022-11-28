@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract u(Landroid/view/Surface;)V
+.method public abstract v(Landroid/view/Surface;)V
 .end method
 
-.method public abstract v(Landroid/view/Surface;)V
+.method public abstract w(Landroid/view/Surface;)V
 .end method

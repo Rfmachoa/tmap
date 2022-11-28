@@ -267,7 +267,7 @@
     if-nez v5, :cond_1
 
     .line 11
-    invoke-virtual {v1, v3, v4}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v3, v4}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 

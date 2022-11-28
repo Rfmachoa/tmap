@@ -1,6 +1,9 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;
 .super Ljava/lang/Object;
-.source "SilenceMediaSource.java"
+.source "ShuffleOrder.java"
+
+# interfaces
+.implements Lcom/tmapmobility/tmap/exoplayer2/source/z0;
 
 
 # annotations
@@ -15,101 +18,146 @@
 
 
 # instance fields
-.field public a:J
-
-.field public b:Ljava/lang/Object;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(I)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/tmapmobility/tmap/exoplayer2/source/z0;
-    .locals 5
+.method public a(II)Lcom/tmapmobility/tmap/exoplayer2/source/z0;
+    .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:J
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;
 
-    const-wide/16 v2, 0x0
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
 
-    cmp-long v0, v0, v2
+    sub-int/2addr v1, p2
 
-    if-lez v0, :cond_0
+    add-int/2addr v1, p1
 
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
-
-    .line 2
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/z0;
-
-    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:J
-
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/source/z0;->k0()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->b()Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->b:Ljava/lang/Object;
-
-    invoke-virtual {v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->J(Ljava/lang/Object;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/z0;-><init>(JLcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/source/z0$a;)V
+    invoke-direct {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;-><init>(I)V
 
     return-object v0
 .end method
 
-.method public b(J)Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;
-    .locals 0
-    .param p1    # J
-        .annotation build Landroidx/annotation/IntRange;
-            from = 0x1L
-        .end annotation
-    .end param
+.method public b(I)I
+    .locals 1
 
-    .line 1
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:J
+    const/4 v0, -0x1
 
-    return-object p0
+    add-int/2addr p1, v0
+
+    if-ltz p1, :cond_0
+
+    move v0, p1
+
+    :cond_0
+    return v0
 .end method
 
-.method public c(Ljava/lang/Object;)Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;
-    .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public c(I)I
+    .locals 1
+
+    add-int/lit8 p1, p1, 0x1
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->b:Ljava/lang/Object;
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
 
-    return-object p0
+    if-ge p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    return p1
+.end method
+
+.method public d()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
+
+    if-lez v0, :cond_0
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+.end method
+
+.method public e()Lcom/tmapmobility/tmap/exoplayer2/source/z0;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;-><init>(I)V
+
+    return-object v0
+.end method
+
+.method public f()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+.end method
+
+.method public g(II)Lcom/tmapmobility/tmap/exoplayer2/source/z0;
+    .locals 1
+
+    .line 1
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;
+
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
+
+    add-int/2addr v0, p2
+
+    invoke-direct {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;-><init>(I)V
+
+    return-object p1
+.end method
+
+.method public getLength()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/z0$b;->a:I
+
+    return v0
 .end method

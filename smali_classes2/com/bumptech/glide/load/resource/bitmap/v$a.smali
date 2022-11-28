@@ -18,11 +18,9 @@
 
 
 # instance fields
-.field public final a:Lcom/bumptech/glide/load/data/k;
+.field public final a:[B
 
-.field public final b:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
-
-.field public final c:Ljava/util/List;
+.field public final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -32,14 +30,15 @@
     .end annotation
 .end field
 
+.field public final c:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
+
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;Ljava/util/List;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
-    .locals 1
+.method public constructor <init>([BLjava/util/List;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Ljava/io/InputStream;",
+            "([B",
             "Ljava/util/List<",
             "Lcom/bumptech/glide/load/ImageHeaderParser;",
             ">;",
@@ -52,29 +51,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p3}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
-
-    iput-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
+    iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:[B
 
     .line 3
-    invoke-static {p2}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/util/List;
-
-    iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->c:Ljava/util/List;
+    iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->b:Ljava/util/List;
 
     .line 4
-    new-instance p2, Lcom/bumptech/glide/load/data/k;
-
-    invoke-direct {p2, p1, p3}, Lcom/bumptech/glide/load/data/k;-><init>(Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
-
-    iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:Lcom/bumptech/glide/load/data/k;
+    iput-object p3, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->c:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
 
     return-void
 .end method
@@ -82,26 +65,18 @@
 
 # virtual methods
 .method public a(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    .locals 2
+    .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:Lcom/bumptech/glide/load/data/k;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:[B
 
-    invoke-virtual {v0}, Lcom/bumptech/glide/load/data/k;->d()Ljava/io/InputStream;
+    array-length v1, v0
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1, p1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {v0, v2, v1, p1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -109,12 +84,7 @@
 .end method
 
 .method public b()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:Lcom/bumptech/glide/load/data/k;
-
-    invoke-virtual {v0}, Lcom/bumptech/glide/load/data/k;->c()V
+    .locals 0
 
     return-void
 .end method
@@ -128,19 +98,17 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->c:Ljava/util/List;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->b:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:Lcom/bumptech/glide/load/data/k;
+    iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:[B
 
-    .line 2
-    invoke-virtual {v1}, Lcom/bumptech/glide/load/data/k;->d()Ljava/io/InputStream;
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
+    iget-object v2, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->c:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
 
-    .line 3
-    invoke-static {v0, v1, v2}, Lcom/bumptech/glide/load/a;->b(Ljava/util/List;Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)I
+    invoke-static {v0, v1, v2}, Lcom/bumptech/glide/load/a;->c(Ljava/util/List;Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)I
 
     move-result v0
 
@@ -148,7 +116,7 @@
 .end method
 
 .method public d()Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -156,17 +124,15 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->c:Ljava/util/List;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->b:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:Lcom/bumptech/glide/load/data/k;
+    iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->a:[B
 
-    invoke-virtual {v1}, Lcom/bumptech/glide/load/data/k;->d()Ljava/io/InputStream;
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bumptech/glide/load/resource/bitmap/v$a;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
-
-    invoke-static {v0, v1, v2}, Lcom/bumptech/glide/load/a;->e(Ljava/util/List;Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    invoke-static {v0, v1}, Lcom/bumptech/glide/load/a;->g(Ljava/util/List;Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object v0
 

@@ -1,93 +1,169 @@
 .class public final Le0/c;
-.super Le0/t;
-.source "AutoValue_Version.java"
+.super Ljava/lang/Object;
+.source "ImageWriterCompatApi26Impl.java"
 
 
-# instance fields
-.field public final d:I
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
 
-.field public final e:I
 
-.field public final f:I
+# static fields
+.field public static final a:Ljava/lang/String; = "ImageWriterCompatApi26"
 
-.field public final g:Ljava/lang/String;
+.field public static b:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public constructor <init>(IIILjava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "major",
-            "minor",
-            "patch",
-            "description"
-        }
-    .end annotation
+.method public static constructor <clinit>()V
+    .locals 5
 
     .line 1
-    invoke-direct {p0}, Le0/t;-><init>()V
+    :try_start_0
+    const-class v0, Landroid/media/ImageWriter;
+
+    const-string v1, "newInstance"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Landroid/view/Surface;
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Le0/c;->b:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "ImageWriterCompatApi26"
+
+    const-string v2, "Unable to initialize via reflection."
 
     .line 2
-    iput p1, p0, Le0/c;->d:I
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 3
-    iput p2, p0, Le0/c;->e:I
+    :goto_0
+    return-void
+.end method
 
-    .line 4
-    iput p3, p0, Le0/c;->f:I
+.method public constructor <init>()V
+    .locals 0
 
-    const-string p1, "Null description"
-
-    .line 5
-    invoke-static {p4, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 6
-    iput-object p4, p0, Le0/c;->g:Ljava/lang/String;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public f()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Le0/c;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public g()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Le0/c;->d:I
-
-    return v0
-.end method
-
-.method public h()I
-    .locals 1
+.method public static a(Landroid/view/Surface;II)Landroid/media/ImageWriter;
+    .locals 4
+    .param p0    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget v0, p0, Le0/c;->e:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public i()I
-    .locals 1
+    const/16 v2, 0x1a
 
-    .line 1
-    iget v0, p0, Le0/c;->f:I
+    if-lt v0, v2, :cond_0
 
-    return v0
+    .line 2
+    :try_start_0
+    sget-object v0, Le0/c;->b:Ljava/lang/reflect/Method;
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p0, v2, v3
+
+    const/4 p0, 0x1
+
+    .line 3
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v2, p0
+
+    const/4 p0, 0x2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v2, p0
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    .line 4
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/media/ImageWriter;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p0
+
+    :goto_0
+    move-object v1, p0
+
+    .line 5
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string p1, "Unable to invoke newInstance(Surface, int, int) via reflection."
+
+    invoke-direct {p0, p1, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p0
 .end method

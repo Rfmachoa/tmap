@@ -90,7 +90,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/storage/StorageItem;->key:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/storage/StorageItem;->lastModified:Ljava/util/Date;
 
-    invoke-static {v0, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -130,7 +130,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/storage/StorageItem;->eTag:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -144,7 +144,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/storage/StorageItem;->pluginResults:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -241,7 +241,7 @@
 
     const/16 v2, 0x1f
 
-    invoke-static {v0, v1, v2}, Lb3/k;->a(Ljava/lang/String;II)I
+    invoke-static {v0, v1, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
 
     move-result v0
 
@@ -283,7 +283,7 @@
 
     const-string v3, ", size="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-wide v3, p0, Lcom/amplifyframework/storage/StorageItem;->size:J
 
@@ -310,7 +310,7 @@
 
     const-string v3, ", pluginResults="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/storage/StorageItem;->pluginResults:Ljava/lang/Object;
 

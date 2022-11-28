@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/ClientSettings$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -24,14 +24,6 @@
 .end field
 
 .field private zab:Landroidx/collection/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/collection/c<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zac:Ljava/lang/String;
 
@@ -103,6 +95,9 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     iput-object p1, p0, Lcom/google/android/gms/common/internal/ClientSettings$Builder;->zac:Ljava/lang/String;
 
     return-object p0
@@ -117,14 +112,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;)",
-            "Lcom/google/android/gms/common/internal/ClientSettings$Builder;"
-        }
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -156,6 +144,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     iput-object p1, p0, Lcom/google/android/gms/common/internal/ClientSettings$Builder;->zaa:Landroid/accounts/Account;
 
     return-object p0
@@ -168,6 +159,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     iput-object p1, p0, Lcom/google/android/gms/common/internal/ClientSettings$Builder;->zad:Ljava/lang/String;

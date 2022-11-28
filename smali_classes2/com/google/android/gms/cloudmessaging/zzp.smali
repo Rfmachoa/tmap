@@ -56,34 +56,42 @@
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 4
 
     iget v0, p0, Lcom/google/android/gms/cloudmessaging/zzp;->zzc:I
 
     iget v1, p0, Lcom/google/android/gms/cloudmessaging/zzp;->zza:I
 
-    const/16 v2, 0x37
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x37
+
+    .line 1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v3, "Request { what="
 
-    const-string v4, " id="
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lcom/google/android/gms/cloudmessaging/a;->a(ILjava/lang/String;ILjava/lang/String;I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v0, " id="
 
-    const-string v1, " oneWay="
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " oneWay="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/google/android/gms/cloudmessaging/zzp;->zzb()Z
 
-    move-result v1
+    move-result v0
 
-    const-string v2, "}"
+    const-string v1, "}"
 
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Ld/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -139,7 +147,7 @@
 
     const-string v4, " with "
 
-    invoke-static {v5, v3, v1, v4, v2}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v3, v1, v4, v2}, Landroidx/core/util/m;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -202,7 +210,7 @@
 
     const-string v4, " with "
 
-    invoke-static {v5, v3, v1, v4, v2}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v3, v1, v4, v2}, Landroidx/core/util/m;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

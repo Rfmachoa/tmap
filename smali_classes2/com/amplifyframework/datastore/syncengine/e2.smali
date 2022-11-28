@@ -3,36 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
+.field public final synthetic a:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;)V
+.method public synthetic constructor <init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e2;->a:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e2;->a:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
     check-cast p1, Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->m(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lai/a;
+    invoke-virtual {v0, p1}, Lio/reactivex/rxjava3/subjects/ReplaySubject;->onNext(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

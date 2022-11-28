@@ -32,7 +32,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Collection<",
             "TT;>;>;>;"
         }
@@ -43,7 +43,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;>;"
         }
     .end annotation
@@ -91,12 +91,12 @@
 
 
 # virtual methods
-.method public addCollectionProvider(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
+.method public addCollectionProvider(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "+",
             "Ljava/util/Collection<",
             "+TT;>;>;)",
@@ -113,12 +113,12 @@
     return-object p0
 .end method
 
-.method public addProvider(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
+.method public addProvider(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "+TT;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder<",
             "TT;>;"

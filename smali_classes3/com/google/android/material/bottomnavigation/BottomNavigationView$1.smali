@@ -3,12 +3,12 @@
 .source "BottomNavigationView.java"
 
 # interfaces
-.implements Landroidx/appcompat/view/menu/d$a;
+.implements Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/bottomnavigation/BottomNavigationView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    value = Lcom/google/android/material/bottomnavigation/BottomNavigationView;->applyWindowInsets()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,80 +35,89 @@
 
 
 # virtual methods
-.method public onMenuItemSelected(Landroidx/appcompat/view/menu/d;Landroid/view/MenuItem;)Z
-    .locals 2
-    .param p2    # Landroid/view/MenuItem;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/view/WindowInsetsCompat;
+    .locals 5
+    .param p2    # Landroidx/core/view/WindowInsetsCompat;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .param p3    # Lcom/google/android/material/internal/ViewUtils$RelativePadding;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$1;->this$0:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
+    iget v0, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    invoke-static {p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->access$000(Lcom/google/android/material/bottomnavigation/BottomNavigationView;)Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemReselectedListener;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result p1
-
-    iget-object v1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$1;->this$0:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
-
-    invoke-virtual {v1}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->getSelectedItemId()I
+    invoke-virtual {p2}, Landroidx/core/view/WindowInsetsCompat;->o()I
 
     move-result v1
 
-    if-ne p1, v1, :cond_0
+    add-int/2addr v1, v0
+
+    iput v1, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
     .line 2
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$1;->this$0:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->Z(Landroid/view/View;)I
 
-    invoke-static {p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->access$000(Lcom/google/android/material/bottomnavigation/BottomNavigationView;)Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemReselectedListener;
+    move-result v0
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    invoke-interface {p1, p2}, Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemReselectedListener;->onNavigationItemReselected(Landroid/view/MenuItem;)V
-
-    return v0
-
-    .line 3
-    :cond_0
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$1;->this$0:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
-
-    invoke-static {p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->access$100(Lcom/google/android/material/bottomnavigation/BottomNavigationView;)Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemSelectedListener;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView$1;->this$0:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
-
-    invoke-static {p1}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->access$100(Lcom/google/android/material/bottomnavigation/BottomNavigationView;)Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemSelectedListener;
-
-    move-result-object p1
-
-    invoke-interface {p1, p2}, Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemSelectedListener;->onNavigationItemSelected(Landroid/view/MenuItem;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v1, 0x0
 
+    .line 3
     :goto_0
-    return v0
-.end method
+    invoke-virtual {p2}, Landroidx/core/view/WindowInsetsCompat;->p()I
 
-.method public onMenuModeChange(Landroidx/appcompat/view/menu/d;)V
-    .locals 0
+    move-result v0
 
-    return-void
+    .line 4
+    invoke-virtual {p2}, Landroidx/core/view/WindowInsetsCompat;->q()I
+
+    move-result v2
+
+    .line 5
+    iget v3, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
+
+    if-eqz v1, :cond_1
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v0
+
+    :goto_1
+    add-int/2addr v3, v4
+
+    iput v3, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
+
+    .line 6
+    iget v3, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
+
+    if-eqz v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v2
+
+    :goto_2
+    add-int/2addr v3, v0
+
+    iput v3, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
+
+    .line 7
+    invoke-virtual {p3, p1}, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->applyToView(Landroid/view/View;)V
+
+    return-object p2
 .end method

@@ -14,6 +14,9 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;)V

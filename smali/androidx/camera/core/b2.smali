@@ -1,113 +1,56 @@
-.class public Landroidx/camera/core/b2;
+.class public final synthetic Landroidx/camera/core/b2;
 .super Ljava/lang/Object;
-.source "MeteringPoint.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/camera/core/impl/SessionConfig$c;
 
 
 # instance fields
-.field public a:F
+.field public final synthetic a:Landroidx/camera/core/e2;
 
-.field public b:F
+.field public final synthetic b:Ljava/lang/String;
 
-.field public c:F
+.field public final synthetic c:Landroidx/camera/core/impl/n;
 
-.field public d:Landroid/util/Rational;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field public final synthetic d:Landroid/util/Size;
 
 
 # direct methods
-.method public constructor <init>(FFFLandroid/util/Rational;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/e2;Ljava/lang/String;Landroidx/camera/core/impl/n;Landroid/util/Size;)V
     .locals 0
-    .param p4    # Landroid/util/Rational;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "normalizedX",
-            "normalizedY",
-            "size",
-            "surfaceAspectRatio"
-        }
-    .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Landroidx/camera/core/b2;->a:F
+    iput-object p1, p0, Landroidx/camera/core/b2;->a:Landroidx/camera/core/e2;
 
-    .line 3
-    iput p2, p0, Landroidx/camera/core/b2;->b:F
+    iput-object p2, p0, Landroidx/camera/core/b2;->b:Ljava/lang/String;
 
-    .line 4
-    iput p3, p0, Landroidx/camera/core/b2;->c:F
+    iput-object p3, p0, Landroidx/camera/core/b2;->c:Landroidx/camera/core/impl/n;
 
-    .line 5
-    iput-object p4, p0, Landroidx/camera/core/b2;->d:Landroid/util/Rational;
+    iput-object p4, p0, Landroidx/camera/core/b2;->d:Landroid/util/Size;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()F
-    .locals 1
+.method public final a(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
+    .locals 6
 
-    .line 1
-    iget v0, p0, Landroidx/camera/core/b2;->c:F
+    iget-object v0, p0, Landroidx/camera/core/b2;->a:Landroidx/camera/core/e2;
 
-    return v0
-.end method
+    iget-object v1, p0, Landroidx/camera/core/b2;->b:Ljava/lang/String;
 
-.method public b()Landroid/util/Rational;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    iget-object v2, p0, Landroidx/camera/core/b2;->c:Landroidx/camera/core/impl/n;
 
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
+    iget-object v3, p0, Landroidx/camera/core/b2;->d:Landroid/util/Size;
 
-    .line 1
-    iget-object v0, p0, Landroidx/camera/core/b2;->d:Landroid/util/Rational;
+    move-object v4, p1
 
-    return-object v0
-.end method
+    move-object v5, p2
 
-.method public c()F
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
+    invoke-static/range {v0 .. v5}, Landroidx/camera/core/e2;->N(Landroidx/camera/core/e2;Ljava/lang/String;Landroidx/camera/core/impl/n;Landroid/util/Size;Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
 
-    .line 1
-    iget v0, p0, Landroidx/camera/core/b2;->a:F
-
-    return v0
-.end method
-
-.method public d()F
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .line 1
-    iget v0, p0, Landroidx/camera/core/b2;->b:F
-
-    return v0
+    return-void
 .end method

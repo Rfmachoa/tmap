@@ -3,12 +3,12 @@
 .source "Operation.java"
 
 # interfaces
-.implements Lc4/e;
+.implements Lz5/e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/apollographql/apollo/api/b$b;->marshaller()Lc4/e;
+    value = Lcom/apollographql/apollo/api/b$b;->marshaller()Lz5/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public marshal(Lc4/f;)V
+.method public marshal(Lz5/f;)V
     .locals 0
 
     return-void

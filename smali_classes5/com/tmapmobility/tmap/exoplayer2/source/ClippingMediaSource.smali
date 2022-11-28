@@ -23,7 +23,7 @@
 # instance fields
 .field public final K0:Z
 
-.field public final V0:Ljava/util/ArrayList;
+.field public final X0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -33,21 +33,21 @@
     .end annotation
 .end field
 
-.field public final W0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
+.field public final Y0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
-.field public X0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
+.field public Z0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public Y0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+.field public a1:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public Z0:J
+.field public b1:J
 
-.field public a1:J
+.field public c1:J
 
 .field public final k:Lcom/tmapmobility/tmap/exoplayer2/source/d0;
 
@@ -159,21 +159,21 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     .line 12
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->W0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public O(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
+.method public L(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
     .locals 8
 
     .line 1
@@ -182,29 +182,29 @@
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->k:Lcom/tmapmobility/tmap/exoplayer2/source/d0;
 
     .line 2
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->O(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->L(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->u:Z
 
-    iget-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:J
+    iget-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->b1:J
 
-    iget-wide v5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:J
+    iget-wide v5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->c1:J
 
     move-object v0, v7
 
     invoke-direct/range {v0 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/source/c;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/b0;ZJJ)V
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-object v7
 .end method
 
-.method public h0(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
+.method public c0(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
     .locals 1
     .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
         .annotation build Landroidx/annotation/Nullable;
@@ -212,7 +212,7 @@
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/e;->h0(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
+    invoke-super {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/e;->c0(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
 
     .line 2
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->k:Lcom/tmapmobility/tmap/exoplayer2/source/d0;
@@ -224,21 +224,34 @@
     return-void
 .end method
 
-.method public j0()V
+.method public i0()V
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/e;->j0()V
+    invoke-super {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/e;->i0()V
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     .line 3
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
 
     return-void
+.end method
+
+.method public j()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->k:Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->j()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public maybeThrowSourceInfoRefreshError()V
@@ -250,7 +263,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     if-nez v0, :cond_0
 
@@ -275,24 +288,11 @@
     return-void
 .end method
 
-.method public t()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->k:Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->t()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public u0(Ljava/lang/Void;Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     if-eqz p1, :cond_0
 
@@ -311,7 +311,7 @@
     move-object v1, p0
 
     .line 1
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->W0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     const/4 v2, 0x0
 
@@ -320,20 +320,20 @@
     invoke-virtual {v4, v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/Timeline;->t(ILcom/tmapmobility/tmap/exoplayer2/Timeline$Window;)Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     .line 2
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->W0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->j()J
 
     move-result-wide v5
 
     .line 3
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
 
     const-wide/high16 v7, -0x8000000000000000L
 
     if-eqz v0, :cond_2
 
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -349,7 +349,7 @@
 
     .line 4
     :cond_0
-    iget-wide v9, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:J
+    iget-wide v9, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->b1:J
 
     sub-long/2addr v9, v5
 
@@ -364,7 +364,7 @@
 
     .line 6
     :cond_1
-    iget-wide v7, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:J
+    iget-wide v7, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->c1:J
 
     sub-long/2addr v7, v5
 
@@ -387,7 +387,7 @@
     if-eqz v0, :cond_3
 
     .line 10
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->W0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->f()J
 
@@ -401,7 +401,7 @@
     add-long v13, v5, v9
 
     .line 11
-    iput-wide v13, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:J
+    iput-wide v13, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->b1:J
 
     .line 12
     iget-wide v13, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->p:J
@@ -417,10 +417,10 @@
 
     .line 13
     :goto_2
-    iput-wide v7, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:J
+    iput-wide v7, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->c1:J
 
     .line 14
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -432,7 +432,7 @@
     if-ge v3, v0, :cond_5
 
     .line 15
-    iget-object v5, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object v5, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -440,9 +440,9 @@
 
     check-cast v5, Lcom/tmapmobility/tmap/exoplayer2/source/c;
 
-    iget-wide v6, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:J
+    iget-wide v6, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->b1:J
 
-    iget-wide v13, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:J
+    iget-wide v13, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->c1:J
 
     invoke-virtual {v5, v6, v7, v13, v14}, Lcom/tmapmobility/tmap/exoplayer2/source/c;->o(JJ)V
 
@@ -466,12 +466,12 @@
 
     invoke-direct/range {v3 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/Timeline;JJ)V
 
-    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
+    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
     :try_end_0
     .catch Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 17
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->i0(Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/a;->d0(Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
 
     return-void
 
@@ -479,11 +479,11 @@
     move-exception v0
 
     .line 18
-    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     .line 19
     :goto_5
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -492,7 +492,7 @@
     if-ge v2, v0, :cond_6
 
     .line 20
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -500,7 +500,7 @@
 
     check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/source/c;
 
-    iget-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Y0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
+    iget-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->a1:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/c;->m(Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$IllegalClippingException;)V
 
@@ -516,7 +516,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -534,7 +534,7 @@
     invoke-interface {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->x(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->V0:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -547,7 +547,7 @@
     if-nez p1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->X0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource;->Z0:Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;
 
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/signin/internal/HashAccumulator;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -52,6 +52,9 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     sget v0, Lcom/google/android/gms/auth/api/signin/internal/HashAccumulator;->zaa:I
 
@@ -91,6 +94,9 @@
 .method public final zaa(Z)Lcom/google/android/gms/auth/api/signin/internal/HashAccumulator;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     sget v0, Lcom/google/android/gms/auth/api/signin/internal/HashAccumulator;->zaa:I

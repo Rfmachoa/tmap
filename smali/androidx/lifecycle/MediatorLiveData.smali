@@ -22,10 +22,10 @@
 
 
 # instance fields
-.field private mSources:Lm/b;
+.field private mSources:Lo/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lm/b<",
+            "Lo/b<",
             "Landroidx/lifecycle/LiveData<",
             "*>;",
             "Landroidx/lifecycle/MediatorLiveData$Source<",
@@ -43,11 +43,11 @@
     invoke-direct {p0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
     .line 2
-    new-instance v0, Lm/b;
+    new-instance v0, Lo/b;
 
-    invoke-direct {v0}, Lm/b;-><init>()V
+    invoke-direct {v0}, Lo/b;-><init>()V
 
-    iput-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lm/b;
+    iput-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lo/b;
 
     return-void
 .end method
@@ -79,15 +79,20 @@
         }
     .end annotation
 
+    const-string v0, "source cannot be null"
+
     .line 1
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 2
     new-instance v0, Landroidx/lifecycle/MediatorLiveData$Source;
 
     invoke-direct {v0, p1, p2}, Landroidx/lifecycle/MediatorLiveData$Source;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
-    .line 2
-    iget-object v1, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lm/b;
+    .line 3
+    iget-object v1, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lo/b;
 
-    invoke-virtual {v1, p1, v0}, Lm/b;->f(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Lo/b;->f(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -95,14 +100,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 3
+    .line 4
     iget-object v1, p1, Landroidx/lifecycle/MediatorLiveData$Source;->mObserver:Landroidx/lifecycle/Observer;
 
     if-ne v1, p2, :cond_0
 
     goto :goto_0
 
-    .line 4
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -118,7 +123,7 @@
 
     return-void
 
-    .line 5
+    .line 6
     :cond_2
     invoke-virtual {p0}, Landroidx/lifecycle/LiveData;->hasActiveObservers()Z
 
@@ -126,7 +131,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 6
+    .line 7
     invoke-virtual {v0}, Landroidx/lifecycle/MediatorLiveData$Source;->plug()V
 
     :cond_3
@@ -139,9 +144,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lm/b;
+    iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lo/b;
 
-    invoke-virtual {v0}, Lm/b;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lo/b;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -179,9 +184,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lm/b;
+    iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lo/b;
 
-    invoke-virtual {v0}, Lm/b;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lo/b;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -233,9 +238,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lm/b;
+    iget-object v0, p0, Landroidx/lifecycle/MediatorLiveData;->mSources:Lo/b;
 
-    invoke-virtual {v0, p1}, Lm/b;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lo/b;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

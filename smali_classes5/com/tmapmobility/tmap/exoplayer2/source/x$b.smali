@@ -128,7 +128,7 @@
     move-object/from16 v0, p2
 
     .line 1
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->W0:Ljava/lang/Object;
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->Y0:Ljava/lang/Object;
 
     move-object/from16 v13, p0
 

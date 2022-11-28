@@ -3,7 +3,7 @@
 .source "TextEmphasisSpan.java"
 
 # interfaces
-.implements Lwe/b;
+.implements Lzg/b;
 
 
 # annotations

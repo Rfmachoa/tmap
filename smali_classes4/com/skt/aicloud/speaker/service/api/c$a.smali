@@ -54,7 +54,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2, v2}, Lcom/skt/aicloud/speaker/service/api/c;->x(Lcom/skt/aicloud/speaker/service/api/c;Lcom/skt/aicloud/speaker/service/state/b;Landroid/content/Intent;Lma/c;)V
+    invoke-static {v0, v1, v2, v2}, Lcom/skt/aicloud/speaker/service/api/c;->x(Lcom/skt/aicloud/speaker/service/api/c;Lcom/skt/aicloud/speaker/service/state/b;Landroid/content/Intent;Ljc/c;)V
 
     return-void
 .end method

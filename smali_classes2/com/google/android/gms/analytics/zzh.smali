@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/analytics/zzh;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -28,34 +28,15 @@
 .field private zzi:Z
 
 .field private final zzj:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Class<",
-            "+",
-            "Lcom/google/android/gms/analytics/zzj;",
-            ">;",
-            "Lcom/google/android/gms/analytics/zzj;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zzk:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/analytics/zzt;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/analytics/zzh;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iget-object v0, p1, Lcom/google/android/gms/analytics/zzh;->zza:Lcom/google/android/gms/analytics/zzk;
@@ -90,7 +71,6 @@
 
     iget-object v1, p1, Lcom/google/android/gms/analytics/zzh;->zzk:Ljava/util/List;
 
-    .line 1
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zzk:Ljava/util/List;
@@ -174,9 +154,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 8
@@ -215,16 +195,6 @@
     .locals 2
     .annotation build Landroid/annotation/TargetApi;
         value = 0x13
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Lcom/google/android/gms/analytics/zzj;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
     .end annotation
 
     const/4 v0, 0x0
@@ -326,19 +296,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Lcom/google/android/gms/analytics/zzj;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zzj:Ljava/util/Map;
 
-    .line 1
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -369,19 +329,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Lcom/google/android/gms/analytics/zzj;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zzj:Ljava/util/Map;
 
-    .line 1
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -404,18 +354,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Collection<",
-            "Lcom/google/android/gms/analytics/zzj;",
-            ">;"
-        }
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zzj:Ljava/util/Map;
 
-    .line 1
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -425,14 +366,6 @@
 
 .method public final zzf()Ljava/util/List;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/analytics/zzt;",
-            ">;"
-        }
-    .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zzk:Ljava/util/List;
 
@@ -497,9 +430,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zzb:Lcom/google/android/gms/common/util/Clock;
 
-    .line 1
     invoke-interface {v0}, Lcom/google/android/gms/common/util/Clock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -552,13 +485,13 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzh;->zza:Lcom/google/android/gms/analytics/zzk;
 
     invoke-virtual {v0}, Lcom/google/android/gms/analytics/zzk;->zzm()Lcom/google/android/gms/analytics/zzr;
 
     move-result-object v0
 
-    .line 1
     invoke-virtual {v0, p0}, Lcom/google/android/gms/analytics/zzr;->zzk(Lcom/google/android/gms/analytics/zzh;)V
 
     return-void

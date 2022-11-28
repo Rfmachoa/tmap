@@ -1,5 +1,5 @@
 .class abstract Lcom/bumptech/glide/GeneratedAppGlideModule;
-.super Lh5/a;
+.super Le7/a;
 .source "GeneratedAppGlideModule.java"
 
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lh5/a;-><init>()V
+    invoke-direct {p0}, Le7/a;-><init>()V
 
     return-void
 .end method
@@ -29,7 +29,7 @@
     .end annotation
 .end method
 
-.method public e()Lcom/bumptech/glide/manager/o$b;
+.method public e()Lcom/bumptech/glide/manager/p$b;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

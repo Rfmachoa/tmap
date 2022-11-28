@@ -44,19 +44,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2
-    invoke-static {}, Lcom/skt/tmap/gnb/repo/b;->i()Lcom/skt/tmap/gnb/repo/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/gnb/repo/b;->f()V
-
     const/4 v0, -0x1
 
-    .line 3
+    .line 2
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
 
-    .line 4
+    .line 3
     :cond_0
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
 
@@ -106,7 +99,7 @@
 
     move-result p1
 
-    const v0, 0x7f0a0b27
+    const v0, 0x7f0a0bad
 
     if-eq p1, v0, :cond_0
 
@@ -137,7 +130,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -146,12 +139,12 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d020f
+    const p1, 0x7f0d0210
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0bdf
+    const p1, 0x7f0a0c6b
 
     .line 4
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -181,13 +174,13 @@
     .line 7
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string v0, "/start/agreement"
 
-    invoke-virtual {p1, v0}, Ldc/d;->k0(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->l0(Ljava/lang/String;)V
 
     .line 8
     iget p1, p0, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity;->contentsType:I
@@ -205,7 +198,7 @@
     if-eq p1, v0, :cond_1
 
     .line 9
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->e0(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->i0(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -225,7 +218,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -245,7 +238,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -264,13 +257,13 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f1301bb
+    const v1, 0x7f1401ca
 
     .line 2
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -280,26 +273,26 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->u(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    const v2, 0x7f13043e
+    const v2, 0x7f1404af
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f130436
+    const v3, 0x7f1404a7
 
     invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$1;
 
@@ -308,7 +301,7 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 
@@ -321,13 +314,13 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f13002a
+    const v1, 0x7f14002a
 
     .line 2
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -337,26 +330,26 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->u(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    const v2, 0x7f130433
+    const v2, 0x7f1404a4
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f1301b3
+    const v3, 0x7f1401bc
 
     invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$2;
 
@@ -365,7 +358,7 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 

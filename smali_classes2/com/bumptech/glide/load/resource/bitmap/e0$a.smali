@@ -105,7 +105,7 @@
     .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/e0$a;->a:Landroid/graphics/Bitmap;
 
-    invoke-static {v0}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {v0}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result v0
 

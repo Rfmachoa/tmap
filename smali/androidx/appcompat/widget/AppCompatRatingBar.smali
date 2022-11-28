@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/appcompat/widget/i;
+.field public final a:Landroidx/appcompat/widget/l;
 
 
 # direct methods
@@ -61,17 +61,17 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/e0;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/j0;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 5
-    new-instance p1, Landroidx/appcompat/widget/i;
+    new-instance p1, Landroidx/appcompat/widget/l;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/i;-><init>(Landroid/widget/ProgressBar;)V
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/l;-><init>(Landroid/widget/ProgressBar;)V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->a:Landroidx/appcompat/widget/i;
+    iput-object p1, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->a:Landroidx/appcompat/widget/l;
 
     .line 6
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/i;->c(Landroid/util/AttributeSet;I)V
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/l;->c(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
@@ -88,9 +88,9 @@
     invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
 
     .line 2
-    iget-object p2, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->a:Landroidx/appcompat/widget/i;
+    iget-object p2, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->a:Landroidx/appcompat/widget/l;
 
-    invoke-virtual {p2}, Landroidx/appcompat/widget/i;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p2}, Landroidx/appcompat/widget/l;->b()Landroid/graphics/Bitmap;
 
     move-result-object p2
 

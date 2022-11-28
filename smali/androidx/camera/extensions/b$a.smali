@@ -1,647 +1,254 @@
-.class public Landroidx/camera/extensions/b$a;
-.super Lr/c;
-.source "ImageCaptureExtender.java"
+.class public final Landroidx/camera/extensions/b$a;
+.super Ljava/lang/Object;
+.source "ExtensionsConfig.java"
 
 # interfaces
-.implements Landroidx/camera/core/UseCase$b;
-.implements Lx/w;
+.implements Landroidx/camera/core/impl/CameraConfig$a;
 
 
 # annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/camera/extensions/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroidx/camera/core/impl/CameraConfig$a<",
+        "Landroidx/camera/extensions/b$a;",
+        ">;"
+    }
 .end annotation
 
 
 # instance fields
-.field public final a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final b:Landroid/content/Context;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final d:Ljava/lang/Object;
-
-.field public volatile e:I
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mLock"
-    .end annotation
-.end field
-
-.field public volatile f:Z
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mLock"
-    .end annotation
-.end field
+.field public final a:Landroidx/camera/core/impl/l;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;Landroid/content/Context;)V
-    .locals 2
-    .param p1    # Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "impl",
-            "context"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Lr/c;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {}, Landroidx/camera/core/impl/l;->k0()Landroidx/camera/core/impl/l;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    .line 3
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput v0, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 5
-    iput-boolean v0, p0, Landroidx/camera/extensions/b$a;->f:Z
-
-    .line 6
-    iput-object p1, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-
-    .line 7
-    iput-object p2, p0, Landroidx/camera/extensions/b$a;->b:Landroid/content/Context;
+    iput-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/camera/core/CameraInfo;)V
-    .locals 3
-    .param p1    # Landroidx/camera/core/CameraInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/experimental/UseExperimental;
-        markerClass = Landroidx/camera/camera2/interop/ExperimentalCamera2Interop;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraInfo"
-        }
+.method public bridge synthetic a(Z)Ljava/lang/Object;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-static {p1}, Lw/l;->b(Landroidx/camera/core/CameraInfo;)Lw/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lw/l;->d()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 3
-    invoke-static {p1}, Lw/l;->a(Landroidx/camera/core/CameraInfo;)Landroid/hardware/camera2/CameraCharacteristics;
+    invoke-virtual {p0, p1}, Landroidx/camera/extensions/b$a;->l(Z)Landroidx/camera/extensions/b$a;
 
     move-result-object p1
 
-    .line 4
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-
-    iget-object v2, p0, Landroidx/camera/extensions/b$a;->b:Landroid/content/Context;
-
-    invoke-interface {v1, v0, p1, v2}, Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;->onInit(Ljava/lang/String;Landroid/hardware/camera2/CameraCharacteristics;Landroid/content/Context;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public b()V
+.method public bridge synthetic b(Landroidx/camera/core/impl/UseCaseConfigFactory;)Ljava/lang/Object;
+    .locals 0
+    .param p1    # Landroidx/camera/core/impl/UseCaseConfigFactory;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/camera/extensions/b$a;->k(Landroidx/camera/core/impl/UseCaseConfigFactory;)Landroidx/camera/extensions/b$a;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic c(Lb0/p1;)Ljava/lang/Object;
+    .locals 0
+    .param p1    # Lb0/p1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/camera/extensions/b$a;->i(Lb0/p1;)Landroidx/camera/extensions/b$a;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic d(Lb0/s0;)Ljava/lang/Object;
+    .locals 0
+    .param p1    # Lb0/s0;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/camera/extensions/b$a;->g(Lb0/s0;)Landroidx/camera/extensions/b$a;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic e(I)Ljava/lang/Object;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/camera/extensions/b$a;->j(I)Landroidx/camera/extensions/b$a;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public f()Landroidx/camera/extensions/b;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
+    new-instance v0, Landroidx/camera/extensions/b;
 
-    monitor-enter v0
+    iget-object v1, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
 
-    const/4 v1, 0x1
-
-    .line 2
-    :try_start_0
-    iput-boolean v1, p0, Landroidx/camera/extensions/b$a;->f:Z
-
-    .line 3
-    iget v1, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    if-nez v1, :cond_0
-
-    .line 4
-    invoke-virtual {p0}, Landroidx/camera/extensions/b$a;->h()V
-
-    .line 5
-    :cond_0
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public c()Ljava/util/List;
-    .locals 4
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/h;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-
-    invoke-interface {v0}, Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;->getCaptureStages()Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 3
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 4
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 5
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/extensions/impl/CaptureStageImpl;
-
-    .line 6
-    new-instance v3, Lf0/b;
-
-    invoke-direct {v3, v2}, Lf0/b;-><init>(Landroidx/camera/extensions/impl/CaptureStageImpl;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
-
-    :cond_1
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Landroidx/camera/extensions/b;-><init>(Landroidx/camera/core/impl/Config;)V
 
     return-object v0
 .end method
 
-.method public d()Landroidx/camera/core/impl/g;
-    .locals 3
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-
-    invoke-interface {v0}, Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;->onDisableSession()Landroidx/camera/extensions/impl/CaptureStageImpl;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 3
-    new-instance v1, Lf0/b;
-
-    invoke-direct {v1, v0}, Lf0/b;-><init>(Landroidx/camera/extensions/impl/CaptureStageImpl;)V
-
-    invoke-virtual {v1}, Lf0/b;->a()Landroidx/camera/core/impl/g;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    .line 4
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 5
-    :try_start_1
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    add-int/lit8 v2, v2, -0x1
-
-    iput v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 6
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    if-nez v2, :cond_0
-
-    iget-boolean v2, p0, Landroidx/camera/extensions/b$a;->f:Z
-
-    if-eqz v2, :cond_0
-
-    .line 7
-    invoke-virtual {p0}, Landroidx/camera/extensions/b$a;->h()V
-
-    .line 8
-    :cond_0
-    monitor-exit v1
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    .line 9
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 10
-    :try_start_2
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    add-int/lit8 v2, v2, -0x1
-
-    iput v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 11
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    if-nez v2, :cond_2
-
-    iget-boolean v2, p0, Landroidx/camera/extensions/b$a;->f:Z
-
-    if-eqz v2, :cond_2
-
-    .line 12
-    invoke-virtual {p0}, Landroidx/camera/extensions/b$a;->h()V
-
-    .line 13
-    :cond_2
-    monitor-exit v1
-
-    return-object v0
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v0
-
-    :catchall_2
-    move-exception v0
-
-    .line 14
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 15
-    :try_start_3
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    add-int/lit8 v2, v2, -0x1
-
-    iput v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 16
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    if-nez v2, :cond_3
-
-    iget-boolean v2, p0, Landroidx/camera/extensions/b$a;->f:Z
-
-    if-eqz v2, :cond_3
-
-    .line 17
-    invoke-virtual {p0}, Landroidx/camera/extensions/b$a;->h()V
-
-    .line 18
-    :cond_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    .line 19
-    throw v0
-
-    :catchall_3
-    move-exception v0
-
-    .line 20
-    :try_start_4
-    monitor-exit v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    throw v0
-.end method
-
-.method public e()Landroidx/camera/core/impl/g;
-    .locals 3
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-
-    invoke-interface {v0}, Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;->onEnableSession()Landroidx/camera/extensions/impl/CaptureStageImpl;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    new-instance v1, Lf0/b;
-
-    invoke-direct {v1, v0}, Lf0/b;-><init>(Landroidx/camera/extensions/impl/CaptureStageImpl;)V
-
-    invoke-virtual {v1}, Lf0/b;->a()Landroidx/camera/core/impl/g;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    .line 4
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 5
-    :try_start_1
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 6
-    monitor-exit v1
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 7
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 8
-    :try_start_2
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 9
-    monitor-exit v1
-
-    return-object v0
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v0
-
-    :catchall_2
-    move-exception v0
-
-    .line 10
-    iget-object v1, p0, Landroidx/camera/extensions/b$a;->d:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    .line 11
-    :try_start_3
-    iget v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Landroidx/camera/extensions/b$a;->e:I
-
-    .line 12
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    .line 13
-    throw v0
-
-    :catchall_3
-    move-exception v0
-
-    .line 14
-    :try_start_4
-    monitor-exit v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    throw v0
-.end method
-
-.method public f()Landroidx/camera/core/impl/g;
+.method public g(Lb0/s0;)Landroidx/camera/extensions/b$a;
     .locals 2
-    .annotation build Landroidx/annotation/Nullable;
+    .param p1    # Lb0/s0;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    sget-object v1, Landroidx/camera/core/impl/CameraConfig;->b:Landroidx/camera/core/impl/Config$a;
 
-    move-result v0
+    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/impl/l;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
-
-    invoke-interface {v0}, Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;->onPresetSession()Landroidx/camera/extensions/impl/CaptureStageImpl;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    new-instance v1, Lf0/b;
-
-    invoke-direct {v1, v0}, Lf0/b;-><init>(Landroidx/camera/extensions/impl/CaptureStageImpl;)V
-
-    invoke-virtual {v1}, Lf0/b;->a()Landroidx/camera/core/impl/g;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
+    return-object p0
 .end method
 
-.method public final h()V
+.method public h(I)Landroidx/camera/extensions/b$a;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    sget-object v1, Landroidx/camera/extensions/b;->E:Landroidx/camera/core/impl/Config$a;
 
-    move-result v0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/impl/l;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public i(Lb0/p1;)Landroidx/camera/extensions/b$a;
+    .locals 2
+    .param p1    # Lb0/p1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
+
+    sget-object v1, Landroidx/camera/core/impl/CameraConfig;->d:Landroidx/camera/core/impl/Config$a;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/impl/l;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public j(I)Landroidx/camera/extensions/b$a;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
+
+    sget-object v1, Landroidx/camera/core/impl/CameraConfig;->c:Landroidx/camera/core/impl/Config$a;
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-interface {v0}, Landroidx/camera/extensions/impl/ImageCaptureExtenderImpl;->onDeInit()V
+    move-result-object p1
 
     .line 3
-    iget-object v0, p0, Landroidx/camera/extensions/b$a;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/impl/l;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+.method public k(Landroidx/camera/core/impl/UseCaseConfigFactory;)Landroidx/camera/extensions/b$a;
+    .locals 2
+    .param p1    # Landroidx/camera/core/impl/UseCaseConfigFactory;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    :cond_0
-    return-void
+    .line 1
+    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
+
+    sget-object v1, Landroidx/camera/core/impl/CameraConfig;->a:Landroidx/camera/core/impl/Config$a;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/impl/l;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public l(Z)Landroidx/camera/extensions/b$a;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/extensions/b$a;->a:Landroidx/camera/core/impl/l;
+
+    sget-object v1, Landroidx/camera/core/impl/CameraConfig;->e:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Landroidx/camera/core/impl/l;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
 .end method

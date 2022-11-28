@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final SDK_VERSION:Ljava/lang/String; = "20.0.3"
+.field private static final SDK_VERSION:Ljava/lang/String; = "20.0.6"
 
 
 # instance fields
@@ -422,7 +422,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    const-string v0, "20.0.3"
+    const-string v0, "20.0.6"
 
     return-object v0
 .end method
@@ -573,7 +573,7 @@
 
     const-string v2, ") passed to getReference().  URL was expected to match configured Database URL: "
 
-    invoke-static {v1, p1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

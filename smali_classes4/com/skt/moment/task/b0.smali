@@ -89,6 +89,14 @@
 # virtual methods
 .method public b(Lcom/skt/moment/task/z;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "task"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -100,11 +108,21 @@
 
 .method public c(Lcom/skt/moment/task/z;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "task",
+            "serviceId"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
     .line 1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
@@ -116,14 +134,14 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 2
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Leb/b;->b(I)V
+    invoke-virtual {p1, v0}, Lbd/b;->b(I)V
 
     return-void
 
@@ -150,7 +168,7 @@
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 7
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p2
 
@@ -172,7 +190,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 8
     invoke-virtual {p0}, Lcom/skt/moment/task/b0;->n()V
@@ -182,6 +200,14 @@
 
 .method public d(I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -277,6 +303,14 @@
 
 .method public e(Ljava/lang/String;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "serviceId"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -396,22 +430,30 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lfb/b;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/b;->d()Ljava/lang/String;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lib/d;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lfd/d;->f(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public g(I)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/b0;->c:Ljava/util/List;
@@ -536,7 +578,7 @@
     invoke-virtual {v2, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     .line 5
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v2
 
@@ -558,7 +600,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 6
     invoke-virtual {p0}, Lcom/skt/moment/task/b0;->n()V
@@ -604,6 +646,14 @@
 
 .method public final i(Lcom/skt/moment/task/z;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "task"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/b0;->b:Landroid/util/SparseArray;
@@ -615,7 +665,7 @@
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->remove(I)V
 
     .line 2
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
@@ -637,7 +687,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/moment/task/b0;->n()V
@@ -711,6 +761,14 @@
 
 .method public final k(Ljava/lang/String;)Lcom/skt/moment/task/a;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "serviceId"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -827,6 +885,18 @@
 
 .method public m(Ljava/lang/String;ILandroid/os/Bundle;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serviceId",
+            "operationCode",
+            "extras"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/skt/moment/task/b0;->k(Ljava/lang/String;)Lcom/skt/moment/task/a;
@@ -856,13 +926,13 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
     const-string v1, "standby tasks"
 
-    invoke-virtual {v0, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/moment/task/b0;->c:Ljava/util/List;
@@ -935,13 +1005,13 @@
     invoke-virtual {p0, v0, v3}, Lcom/skt/moment/task/b0;->o([Ljava/lang/String;C)V
 
     .line 9
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
     const-string v3, "ongoing tasks"
 
-    invoke-virtual {v0, v3}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lcom/skt/moment/task/b0;->b:Landroid/util/SparseArray;
@@ -1012,6 +1082,16 @@
 
 .method public final o([Ljava/lang/String;C)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "names",
+            "ch"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p2}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
@@ -1034,30 +1114,12 @@
     move-result-object v1
 
     .line 3
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, p2, v2}, Lq1/a;->a(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 4
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, p2}, Landroidx/camera/core/impl/utils/h;->a(Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1139,31 +1201,41 @@
     move-result-object p2
 
     .line 17
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, p2}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 18
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 19
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lfd/b;->i(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public p(Ljava/lang/String;Lcom/skt/moment/task/a$a;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "serviceId",
+            "listener"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/skt/moment/task/b0;->k(Ljava/lang/String;)Lcom/skt/moment/task/a;
@@ -1187,6 +1259,14 @@
 
 .method public q(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/b0;->a:Landroid/content/Context;

@@ -38,7 +38,7 @@
     iput-object v1, p0, Lcom/skt/aicloud/mobile/service/presentation/f;->h:Ljava/lang/String;
 
     :try_start_0
-    const-string/jumbo v1, "subAction"
+    const-string v1, "subAction"
 
     .line 5
     invoke-static {p1, v1}, Lcom/skt/aicloud/mobile/service/util/n;->j(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;

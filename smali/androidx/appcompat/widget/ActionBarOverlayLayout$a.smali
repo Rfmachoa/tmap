@@ -40,7 +40,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->f1:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->h1:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->f1:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->h1:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;)Ljava/util/List;
+    value = Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,9 +36,11 @@
 
 .field public final synthetic val$query:Lcom/google/firebase/database/core/view/QuerySpec;
 
+.field public final synthetic val$skipDedup:Z
+
 
 # direct methods
-.method public constructor <init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;)V
+.method public constructor <init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)V
     .locals 0
 
     .line 1
@@ -49,6 +51,8 @@
     iput-object p3, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$eventRegistration:Lcom/google/firebase/database/core/EventRegistration;
 
     iput-object p4, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$cancelError:Lcom/google/firebase/database/DatabaseError;
+
+    iput-boolean p5, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$skipDedup:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -74,7 +78,7 @@
 .end method
 
 .method public call()Ljava/util/List;
-    .locals 11
+    .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -94,7 +98,7 @@
     .line 3
     iget-object v1, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v1}, Lcom/google/firebase/database/core/SyncTree;->access$700(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+    invoke-static {v1}, Lcom/google/firebase/database/core/SyncTree;->access$600(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
 
     move-result-object v1
 
@@ -109,7 +113,7 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     .line 5
     iget-object v3, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$query:Lcom/google/firebase/database/core/view/QuerySpec;
@@ -127,7 +131,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_f
 
     .line 7
     :cond_0
@@ -152,7 +156,7 @@
     .line 10
     iget-object v1, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v1}, Lcom/google/firebase/database/core/SyncTree;->access$700(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+    invoke-static {v1}, Lcom/google/firebase/database/core/SyncTree;->access$600(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
 
     move-result-object v3
 
@@ -160,7 +164,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/google/firebase/database/core/SyncTree;->access$702(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+    invoke-static {v1, v3}, Lcom/google/firebase/database/core/SyncTree;->access$602(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
 
     .line 11
     :cond_1
@@ -205,7 +209,7 @@
     .line 14
     iget-object v8, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v8}, Lcom/google/firebase/database/core/SyncTree;->access$200(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/persistence/PersistenceManager;
+    invoke-static {v8}, Lcom/google/firebase/database/core/SyncTree;->access$100(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/persistence/PersistenceManager;
 
     move-result-object v8
 
@@ -229,114 +233,124 @@
 
     .line 16
     :cond_4
+    iget-boolean v3, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$skipDedup:Z
+
+    const/4 v6, 0x0
+
+    if-eqz v3, :cond_5
+
+    return-object v6
+
+    .line 17
+    :cond_5
     iget-object v3, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v3}, Lcom/google/firebase/database/core/SyncTree;->access$700(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+    invoke-static {v3}, Lcom/google/firebase/database/core/SyncTree;->access$600(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
 
     move-result-object v3
 
-    .line 17
-    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_5
-
-    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/google/firebase/database/core/SyncPoint;
-
-    invoke-virtual {v6}, Lcom/google/firebase/database/core/SyncPoint;->hasCompleteView()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    move v6, v7
-
-    goto :goto_1
-
-    :cond_5
-    move v6, v4
-
     .line 18
-    :goto_1
-    invoke-virtual {v0}, Lcom/google/firebase/database/core/Path;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
 
     move-result-object v8
 
+    if-eqz v8, :cond_6
+
+    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lcom/google/firebase/database/core/SyncPoint;
+
+    invoke-virtual {v8}, Lcom/google/firebase/database/core/SyncPoint;->hasCompleteView()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    move v8, v7
+
+    goto :goto_1
+
     :cond_6
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    move v8, v4
 
-    move-result v9
-
-    if-eqz v9, :cond_9
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 19
+    :goto_1
+    invoke-virtual {v0}, Lcom/google/firebase/database/core/Path;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
 
-    check-cast v9, Lcom/google/firebase/database/snapshot/ChildKey;
+    :cond_7
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 19
-    invoke-virtual {v3, v9}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getChild(Lcom/google/firebase/database/snapshot/ChildKey;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+    move-result v10
+
+    if-eqz v10, :cond_a
+
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lcom/google/firebase/database/snapshot/ChildKey;
+
+    .line 20
+    invoke-virtual {v3, v10}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getChild(Lcom/google/firebase/database/snapshot/ChildKey;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
 
     move-result-object v3
 
-    if-nez v6, :cond_8
-
-    .line 20
-    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_7
+    if-nez v8, :cond_9
 
     .line 21
     invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v8
 
-    check-cast v6, Lcom/google/firebase/database/core/SyncPoint;
+    if-eqz v8, :cond_8
 
-    invoke-virtual {v6}, Lcom/google/firebase/database/core/SyncPoint;->hasCompleteView()Z
+    .line 22
+    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->getValue()Ljava/lang/Object;
 
-    move-result v6
+    move-result-object v8
 
-    if-eqz v6, :cond_7
+    check-cast v8, Lcom/google/firebase/database/core/SyncPoint;
+
+    invoke-virtual {v8}, Lcom/google/firebase/database/core/SyncPoint;->hasCompleteView()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_8
 
     goto :goto_2
 
-    :cond_7
-    move v6, v4
+    :cond_8
+    move v8, v4
 
     goto :goto_3
 
-    :cond_8
+    :cond_9
     :goto_2
-    move v6, v7
+    move v8, v7
 
     :goto_3
-    if-nez v6, :cond_9
-
-    .line 22
-    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->isEmpty()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_6
-
-    :cond_9
-    if-eqz v5, :cond_a
-
-    if-nez v6, :cond_a
+    if-nez v8, :cond_a
 
     .line 23
+    invoke-virtual {v3}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->isEmpty()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_7
+
+    :cond_a
+    if-eqz v5, :cond_b
+
+    if-nez v8, :cond_b
+
+    .line 24
     iget-object v3, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v3}, Lcom/google/firebase/database/core/SyncTree;->access$700(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+    invoke-static {v3}, Lcom/google/firebase/database/core/SyncTree;->access$600(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
 
     move-result-object v3
 
@@ -344,21 +358,21 @@
 
     move-result-object v0
 
-    .line 24
+    .line 25
     invoke-virtual {v0}, Lcom/google/firebase/database/core/utilities/ImmutableTree;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_a
+    if-nez v3, :cond_b
 
-    .line 25
+    .line 26
     iget-object v3, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v3, v0}, Lcom/google/firebase/database/core/SyncTree;->access$1200(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Ljava/util/List;
+    invoke-static {v3, v0}, Lcom/google/firebase/database/core/SyncTree;->access$1100(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 26
+    .line 27
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -368,7 +382,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -376,61 +390,61 @@
 
     check-cast v3, Lcom/google/firebase/database/core/view/View;
 
-    .line 27
-    new-instance v8, Lcom/google/firebase/database/core/SyncTree$ListenContainer;
-
-    iget-object v9, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
-
-    invoke-direct {v8, v9, v3}, Lcom/google/firebase/database/core/SyncTree$ListenContainer;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/View;)V
-
     .line 28
+    new-instance v9, Lcom/google/firebase/database/core/SyncTree$ListenContainer;
+
+    iget-object v10, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
+
+    invoke-direct {v9, v10, v3}, Lcom/google/firebase/database/core/SyncTree$ListenContainer;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/View;)V
+
+    .line 29
     invoke-virtual {v3}, Lcom/google/firebase/database/core/view/View;->getQuery()Lcom/google/firebase/database/core/view/QuerySpec;
 
     move-result-object v3
 
-    .line 29
-    iget-object v9, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
-
-    invoke-static {v9}, Lcom/google/firebase/database/core/SyncTree;->access$1500(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
-
-    move-result-object v9
-
+    .line 30
     iget-object v10, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    .line 30
-    invoke-static {v10, v3}, Lcom/google/firebase/database/core/SyncTree;->access$1300(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
-
-    move-result-object v3
-
-    invoke-static {v8}, Lcom/google/firebase/database/core/SyncTree$ListenContainer;->access$1400(Lcom/google/firebase/database/core/SyncTree$ListenContainer;)Lcom/google/firebase/database/core/Tag;
+    invoke-static {v10}, Lcom/google/firebase/database/core/SyncTree;->access$1400(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
 
     move-result-object v10
 
+    iget-object v11, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
+
     .line 31
-    invoke-interface {v9, v3, v10, v8, v8}, Lcom/google/firebase/database/core/SyncTree$ListenProvider;->startListening(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/Tag;Lcom/google/firebase/database/connection/ListenHashProvider;Lcom/google/firebase/database/core/SyncTree$CompletionListener;)V
+    invoke-static {v11, v3}, Lcom/google/firebase/database/core/SyncTree;->access$1200(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
+
+    move-result-object v3
+
+    invoke-static {v9}, Lcom/google/firebase/database/core/SyncTree$ListenContainer;->access$1300(Lcom/google/firebase/database/core/SyncTree$ListenContainer;)Lcom/google/firebase/database/core/Tag;
+
+    move-result-object v11
+
+    .line 32
+    invoke-interface {v10, v3, v11, v9, v9}, Lcom/google/firebase/database/core/SyncTree$ListenProvider;->startListening(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/Tag;Lcom/google/firebase/database/connection/ListenHashProvider;Lcom/google/firebase/database/core/SyncTree$CompletionListener;)V
 
     goto :goto_4
 
-    :cond_a
-    if-nez v6, :cond_d
+    :cond_b
+    if-nez v8, :cond_e
 
-    .line 32
+    .line 33
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$cancelError:Lcom/google/firebase/database/DatabaseError;
 
-    if-nez v0, :cond_d
+    if-nez v0, :cond_e
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_c
 
-    .line 33
+    .line 34
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v0}, Lcom/google/firebase/database/core/SyncTree;->access$1500(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
+    invoke-static {v0}, Lcom/google/firebase/database/core/SyncTree;->access$1400(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
 
     move-result-object v0
 
@@ -438,18 +452,16 @@
 
     iget-object v4, p0, Lcom/google/firebase/database/core/SyncTree$14;->val$query:Lcom/google/firebase/database/core/view/QuerySpec;
 
-    invoke-static {v3, v4}, Lcom/google/firebase/database/core/SyncTree;->access$1300(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
+    invoke-static {v3, v4}, Lcom/google/firebase/database/core/SyncTree;->access$1200(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
 
     move-result-object v3
 
-    const/4 v4, 0x0
-
-    invoke-interface {v0, v3, v4}, Lcom/google/firebase/database/core/SyncTree$ListenProvider;->stopListening(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/Tag;)V
+    invoke-interface {v0, v3, v6}, Lcom/google/firebase/database/core/SyncTree$ListenProvider;->stopListening(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/Tag;)V
 
     goto :goto_7
 
-    .line 34
-    :cond_b
+    .line 35
+    :cond_c
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -459,7 +471,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_e
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -467,36 +479,36 @@
 
     check-cast v3, Lcom/google/firebase/database/core/view/QuerySpec;
 
-    .line 35
+    .line 36
     iget-object v5, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v5, v3}, Lcom/google/firebase/database/core/SyncTree;->access$000(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
+    invoke-virtual {v5, v3}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
 
     move-result-object v5
 
-    if-eqz v5, :cond_c
+    if-eqz v5, :cond_d
 
     move v6, v7
 
     goto :goto_6
 
-    :cond_c
+    :cond_d
     move v6, v4
 
-    .line 36
+    .line 37
     :goto_6
     invoke-static {v6}, Lcom/google/firebase/database/core/utilities/Utilities;->hardAssert(Z)V
 
-    .line 37
+    .line 38
     iget-object v6, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v6}, Lcom/google/firebase/database/core/SyncTree;->access$1500(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
+    invoke-static {v6}, Lcom/google/firebase/database/core/SyncTree;->access$1400(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
 
     move-result-object v6
 
     iget-object v8, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v8, v3}, Lcom/google/firebase/database/core/SyncTree;->access$1300(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
+    invoke-static {v8, v3}, Lcom/google/firebase/database/core/SyncTree;->access$1200(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
 
     move-result-object v3
 
@@ -504,13 +516,13 @@
 
     goto :goto_5
 
-    .line 38
-    :cond_d
+    .line 39
+    :cond_e
     :goto_7
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree$14;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v0, v1}, Lcom/google/firebase/database/core/SyncTree;->access$1600(Lcom/google/firebase/database/core/SyncTree;Ljava/util/List;)V
+    invoke-static {v0, v1}, Lcom/google/firebase/database/core/SyncTree;->access$1500(Lcom/google/firebase/database/core/SyncTree;Ljava/util/List;)V
 
-    :cond_e
+    :cond_f
     return-object v2
 .end method

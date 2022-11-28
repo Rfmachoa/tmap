@@ -459,7 +459,7 @@
 
     const-string v2, "Saw unexpected config key: "
 
-    invoke-static {v2, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -88,6 +88,41 @@
     return-void
 .end method
 
+.method public currentToken()Lcom/fasterxml/jackson/core/JsonToken;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->currentToken()Lcom/fasterxml/jackson/core/JsonToken;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public currentTokenId()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->currentTokenId()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public delegate()Lcom/fasterxml/jackson/core/JsonParser;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    return-object v0
+.end method
+
 .method public disable(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/core/JsonParser;
     .locals 1
 
@@ -108,6 +143,22 @@
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/JsonParser;->enable(Lcom/fasterxml/jackson/core/JsonParser$Feature;)Lcom/fasterxml/jackson/core/JsonParser;
 
     return-object p0
+.end method
+
+.method public finishToken()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->finishToken()V
+
+    return-void
 .end method
 
 .method public getBigIntegerValue()Ljava/math/BigInteger;
@@ -241,6 +292,8 @@
 
 .method public getCurrentTokenId()I
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
@@ -448,6 +501,24 @@
     return-object v0
 .end method
 
+.method public getNumberValueExact()Ljava/lang/Number;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->getNumberValueExact()Ljava/lang/Number;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getObjectId()Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -473,6 +544,27 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->getParsingContext()Lcom/fasterxml/jackson/core/JsonStreamContext;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getReadCapabilities()Lcom/fasterxml/jackson/core/util/JacksonFeatureSet;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/fasterxml/jackson/core/util/JacksonFeatureSet<",
+            "Lcom/fasterxml/jackson/core/StreamReadCapability;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->getReadCapabilities()Lcom/fasterxml/jackson/core/util/JacksonFeatureSet;
 
     move-result-object v0
 
@@ -508,6 +600,25 @@
     move-result v0
 
     return v0
+.end method
+
+.method public getText(Ljava/io/Writer;)I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/UnsupportedOperationException;
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/JsonParser;->getText(Ljava/io/Writer;)I
+
+    move-result p1
+
+    return p1
 .end method
 
 .method public getText()Ljava/lang/String;
@@ -871,6 +982,19 @@
     return p1
 .end method
 
+.method public isExpectedNumberIntToken()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->isExpectedNumberIntToken()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public isExpectedStartArrayToken()Z
     .locals 1
 
@@ -891,6 +1015,24 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->isExpectedStartObjectToken()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isNaN()Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonParserDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonParser;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->isNaN()Z
 
     move-result v0
 

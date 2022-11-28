@@ -46,7 +46,7 @@
     .line 1
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$d;->c:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->g1:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
+    iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->i1:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
 
     iget v0, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$d;->a:I
 

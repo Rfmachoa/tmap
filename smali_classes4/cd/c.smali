@@ -1,214 +1,450 @@
 .class public Lcd/c;
-.super Lcd/b;
-.source "VSMTileSource.java"
+.super Ljava/lang/Object;
+.source "MomentPreference.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcd/c$b;
-    }
-.end annotation
+# static fields
+.field public static b:Lcd/c; = null
+
+.field public static final c:Ljava/lang/String; = "moment.pref"
+
+.field public static final d:Ljava/lang/String; = "onOff"
 
 
 # instance fields
-.field public a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcd/c$b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public a:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcd/b;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    iput-object v0, p0, Lcd/c;->a:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic c(Lcd/c;Lcd/c$b;)V
-    .locals 0
+.method public static c()Lcd/c;
+    .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Lcd/c;->d(Lcd/c$b;)V
+    sget-object v0, Lcd/c;->b:Lcd/c;
 
-    return-void
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcd/c;
+
+    invoke-direct {v0}, Lcd/c;-><init>()V
+
+    sput-object v0, Lcd/c;->b:Lcd/c;
+
+    .line 2
+    :cond_0
+    sget-object v0, Lcd/c;->b:Lcd/c;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcd/c;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    return-void
-.end method
-
-.method public b(Lcd/b$a;Lcd/b$b;)Z
-    .locals 10
+.method public final a(Ljava/lang/String;Z)Z
+    .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
             0x0
         }
         names = {
-            "tile",
-            "listener"
+            "key",
+            "defValue"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcd/c$b;
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
 
-    const/4 v1, 0x0
+    const-string v1, "moment.pref"
 
-    invoke-direct {v0, v1}, Lcd/c$b;-><init>(Lcd/c$a;)V
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
 
     .line 2
-    new-instance v9, Lcom/skt/tmap/vsm/map/VSMTileLoader;
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    iget v3, p1, Lcd/b$a;->a:I
-
-    iget v4, p1, Lcd/b$a;->b:I
-
-    iget v5, p1, Lcd/b$a;->c:I
-
-    iget v6, p1, Lcd/b$a;->d:I
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x1
-
-    move-object v2, v9
-
-    invoke-direct/range {v2 .. v8}, Lcom/skt/tmap/vsm/map/VSMTileLoader;-><init>(IIIIZI)V
-
-    .line 3
-    new-instance v2, Lcd/c$a;
-
-    invoke-direct {v2, p0, v0}, Lcd/c$a;-><init>(Lcd/c;Lcd/c$b;)V
-
-    invoke-virtual {v9, v2}, Lcom/skt/tmap/vsm/map/VSMTileLoader;->setListener(Lcom/skt/tmap/vsm/map/VSMTileLoader$VSMTileLoaderListener;)V
-
-    .line 4
-    iput-object p1, v0, Lcd/c$b;->a:Lcd/b$a;
-
-    .line 5
-    iput-object v9, v0, Lcd/c$b;->b:Lcom/skt/tmap/vsm/map/VSMTileLoader;
-
-    .line 6
-    iput-object v1, v0, Lcd/c$b;->c:Lcom/skt/tmap/vsm/map/VSMTileData;
-
-    const/4 p1, 0x0
-
-    .line 7
-    iput p1, v0, Lcd/c$b;->d:I
-
-    .line 8
-    iput-object p2, v0, Lcd/c$b;->e:Lcd/b$b;
-
-    .line 9
-    invoke-virtual {p0, v0}, Lcd/c;->e(Lcd/c$b;)V
-
-    const/4 p1, 0x1
+    move-result p1
 
     return p1
 .end method
 
-.method public final d(Lcd/c$b;)V
+.method public final b(Ljava/lang/String;F)F
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
+            0x0,
             0x0
         }
         names = {
-            "req"
+            "key",
+            "defValue"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p1, Lcd/c$b;->e:Lcd/b$b;
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
 
-    if-eqz v0, :cond_1
+    const-string v1, "moment.pref"
 
-    .line 2
-    iget-object v1, p1, Lcd/c$b;->a:Lcd/b$a;
-
-    .line 3
-    iget-object v2, p1, Lcd/c$b;->c:Lcom/skt/tmap/vsm/map/VSMTileData;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Lcom/skt/tmap/vsm/map/VSMTileData;->getBuffer()Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    :cond_0
     const/4 v2, 0x0
 
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(Ljava/lang/String;I)I
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "defValue"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final e(Ljava/lang/String;J)J
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "defValue"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public f()Z
+    .locals 2
+
+    const-string v0, "onOff"
+
+    const/4 v1, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0, v1}, Lcd/c;->a(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "defValue"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final h(Ljava/lang/String;F)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
+
     .line 4
-    :goto_0
-    invoke-interface {v0, v1, v2}, Lcd/b$b;->a(Lcd/b$a;Ljava/nio/ByteBuffer;)V
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Lcd/c;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 .end method
 
-.method public final e(Lcd/c$b;)V
+.method public final i(Ljava/lang/String;I)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 4
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public final j(Ljava/lang/String;J)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    .line 4
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 4
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public final l(Ljava/lang/String;Z)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcd/c;->a:Landroid/content/Context;
+
+    const-string v1, "moment.pref"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 4
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public m(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "req"
+            "onOff"
+        }
+    .end annotation
+
+    const-string v0, "onOff"
+
+    .line 1
+    invoke-virtual {p0, v0, p1}, Lcd/c;->l(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public n(Landroid/content/Context;)Lcd/c;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcd/c;->a:Ljava/util/List;
+    iput-object p1, p0, Lcd/c;->a:Landroid/content/Context;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 2
-    iget-object v0, p1, Lcd/c$b;->b:Lcom/skt/tmap/vsm/map/VSMTileLoader;
-
-    invoke-virtual {v0}, Lcom/skt/tmap/vsm/map/VSMTileLoader;->load()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/16 v0, 0x3e8
-
-    .line 3
-    iput v0, p1, Lcd/c$b;->d:I
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

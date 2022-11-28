@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public i(Landroid/content/Intent;Lma/c;)V
+.method public g(Landroid/content/Intent;Ljc/c;)V
     .locals 0
 
     const-string p1, "setAction"

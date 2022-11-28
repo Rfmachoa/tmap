@@ -45,7 +45,7 @@
     .line 2
     iget-object v1, p0, Lcom/skt/tmap/data/PoiDataBookmark;->mName:[B
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -54,7 +54,7 @@
     .line 3
     iget-object v1, p0, Lcom/skt/tmap/data/PoiDataBookmark;->mPoiId:[B
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -214,7 +214,7 @@
 
     const/16 v1, 0x10
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/v0;->m(Ljava/lang/String;B)B
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->m(Ljava/lang/String;B)B
 
     move-result v0
 
@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v0
 
@@ -243,7 +243,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object p1
 

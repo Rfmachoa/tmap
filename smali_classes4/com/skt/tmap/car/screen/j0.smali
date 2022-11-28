@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/RecentScreen;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/RecentScreen;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/j0;->a:Lcom/skt/tmap/car/screen/RecentScreen;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/j0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final onChanged(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/j0;->a:Lcom/skt/tmap/car/screen/RecentScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/j0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    check-cast p1, Lkotlin/Pair;
+    check-cast p1, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/RecentScreen;->L(Lcom/skt/tmap/car/screen/RecentScreen;Lkotlin/Pair;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->N(Lcom/skt/tmap/car/screen/NavigationScreenKt;Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;)V
 
     return-void
 .end method

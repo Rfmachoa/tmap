@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/AroundInfoListActivity;->z5()V
+    value = Lcom/skt/tmap/activity/AroundInfoListActivity;->H5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

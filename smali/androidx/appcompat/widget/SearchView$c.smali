@@ -41,16 +41,16 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$c;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->h1:Lx1/a;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->j1:Lo2/a;
 
-    instance-of v1, v0, Landroidx/appcompat/widget/d0;
+    instance-of v1, v0, Landroidx/appcompat/widget/i0;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
     .line 2
-    invoke-virtual {v0, v1}, Lx1/a;->b(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lo2/a;->b(Landroid/database/Cursor;)V
 
     :cond_0
     return-void

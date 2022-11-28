@@ -180,7 +180,7 @@
 
     .line 14
     :cond_2
-    invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/core/JsonParser;->currentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object p2
 
@@ -525,7 +525,7 @@
     :cond_1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/MappingIterator;->_parser:Lcom/fasterxml/jackson/core/JsonParser;
 
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonParser;->currentToken()Lcom/fasterxml/jackson/core/JsonToken;
 
     move-result-object v0
 
@@ -577,7 +577,7 @@
 .end method
 
 .method public next()Ljava/lang/Object;
-    .locals 3
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -599,29 +599,21 @@
     move-exception v0
 
     .line 2
-    new-instance v1, Ljava/lang/RuntimeException;
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/MappingIterator;->_handleIOException(Ljava/io/IOException;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object v0
 
     :catch_1
     move-exception v0
 
     .line 3
-    new-instance v1, Lcom/fasterxml/jackson/databind/RuntimeJsonMappingException;
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/MappingIterator;->_handleMappingException(Lcom/fasterxml/jackson/databind/JsonMappingException;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JsonMappingException;->getMessage()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Lcom/fasterxml/jackson/databind/RuntimeJsonMappingException;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JsonMappingException;)V
-
-    throw v1
+    return-object v0
 .end method
 
 .method public nextValue()Ljava/lang/Object;
@@ -726,9 +718,10 @@
 
     invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonParser;->clearCurrentToken()V
 
+    .line 12
     throw v0
 
-    .line 12
+    .line 13
     :cond_3
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/MappingIterator;->_throwNoSuchElement()Ljava/lang/Object;
 

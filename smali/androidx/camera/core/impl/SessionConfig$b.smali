@@ -24,28 +24,19 @@
     return-void
 .end method
 
-.method public static p(Landroidx/camera/core/impl/s;)Landroidx/camera/core/impl/SessionConfig$b;
+.method public static p(Landroidx/camera/core/impl/q;)Landroidx/camera/core/impl/SessionConfig$b;
     .locals 3
-    .param p0    # Landroidx/camera/core/impl/s;
+    .param p0    # Landroidx/camera/core/impl/q;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "config"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/camera/core/impl/s<",
+            "Landroidx/camera/core/impl/q<",
             "*>;)",
             "Landroidx/camera/core/impl/SessionConfig$b;"
         }
@@ -54,7 +45,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/s;->Y(Landroidx/camera/core/impl/SessionConfig$d;)Landroidx/camera/core/impl/SessionConfig$d;
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/q;->f0(Landroidx/camera/core/impl/SessionConfig$d;)Landroidx/camera/core/impl/SessionConfig$d;
 
     move-result-object v0
 
@@ -66,7 +57,7 @@
     invoke-direct {v1}, Landroidx/camera/core/impl/SessionConfig$b;-><init>()V
 
     .line 3
-    invoke-interface {v0, p0, v1}, Landroidx/camera/core/impl/SessionConfig$d;->a(Landroidx/camera/core/impl/s;Landroidx/camera/core/impl/SessionConfig$b;)V
+    invoke-interface {v0, p0, v1}, Landroidx/camera/core/impl/SessionConfig$d;->a(Landroidx/camera/core/impl/q;Landroidx/camera/core/impl/SessionConfig$b;)V
 
     return-object v1
 
@@ -85,7 +76,7 @@
 
     move-result-object v2
 
-    invoke-interface {p0, v2}, Lz/f;->v(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v2}, Ld0/g;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -103,39 +94,61 @@
 
 # virtual methods
 .method public a(Ljava/util/Collection;)V
-    .locals 1
+    .locals 2
     .param p1    # Ljava/util/Collection;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraCaptureCallbacks"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lx/i;",
+            "Lb0/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->a(Ljava/util/Collection;)V
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb0/m;
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->f:Ljava/util/List;
+    iget-object v1, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v1, v0}, Landroidx/camera/core/impl/e$a;->c(Lb0/m;)V
 
+    .line 3
+    iget-object v1, p0, Landroidx/camera/core/impl/SessionConfig$a;->f:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 4
+    iget-object v1, p0, Landroidx/camera/core/impl/SessionConfig$a;->f:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
@@ -145,15 +158,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "deviceStateCallbacks"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -196,28 +200,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraCaptureCallbacks"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lx/i;",
+            "Lb0/m;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->a(Ljava/util/Collection;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->a(Ljava/util/Collection;)V
 
     return-void
 .end method
@@ -228,15 +223,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "sessionStateCallbacks"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -273,31 +259,33 @@
     return-void
 .end method
 
-.method public e(Lx/i;)V
+.method public e(Lb0/m;)V
     .locals 1
-    .param p1    # Lx/i;
+    .param p1    # Lb0/m;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraCaptureCallback"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->c(Lx/i;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->c(Lb0/m;)V
 
     .line 2
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->f:Ljava/util/List;
 
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->f:Ljava/util/List;
+
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    :cond_0
     return-void
 .end method
 
@@ -307,14 +295,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "deviceStateCallback"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->c:Ljava/util/List;
@@ -323,24 +303,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
+
+    return-void
 
     .line 2
+    :cond_0
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->c:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
-
-    .line 3
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Duplicate device state callback."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 .method public g(Landroidx/camera/core/impl/SessionConfig$c;)V
@@ -349,14 +322,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "errorListener"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->e:Ljava/util/List;
@@ -372,19 +337,11 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "config"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->e(Landroidx/camera/core/impl/Config;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->e(Landroidx/camera/core/impl/Config;)V
 
     return-void
 .end method
@@ -395,14 +352,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surface"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->a:Ljava/util/Set;
@@ -412,25 +361,17 @@
     return-void
 .end method
 
-.method public j(Lx/i;)V
+.method public j(Lb0/m;)V
     .locals 1
-    .param p1    # Lx/i;
+    .param p1    # Lb0/m;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraCaptureCallback"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->c(Lx/i;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->c(Lb0/m;)V
 
     return-void
 .end method
@@ -441,14 +382,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "sessionStateCallback"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->d:Ljava/util/List;
@@ -457,24 +390,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
+
+    return-void
 
     .line 2
+    :cond_0
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->d:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
-
-    .line 3
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Duplicate session state callback."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 .method public l(Landroidx/camera/core/impl/DeferrableSurface;)V
@@ -483,14 +409,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surface"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->a:Ljava/util/Set;
@@ -498,49 +416,39 @@
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->f(Landroidx/camera/core/impl/DeferrableSurface;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->f(Landroidx/camera/core/impl/DeferrableSurface;)V
 
     return-void
 .end method
 
-.method public m(Ljava/lang/String;Ljava/lang/Integer;)V
+.method public m(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ljava/lang/Integer;
+    .param p2    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "key",
-            "tag"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/impl/g$a;->g(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/camera/core/impl/e$a;->g(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public n()Landroidx/camera/core/impl/SessionConfig;
-    .locals 8
+    .locals 9
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    new-instance v7, Landroidx/camera/core/impl/SessionConfig;
+    new-instance v8, Landroidx/camera/core/impl/SessionConfig;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -556,18 +464,20 @@
 
     iget-object v5, p0, Landroidx/camera/core/impl/SessionConfig$a;->e:Ljava/util/List;
 
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
     .line 2
-    invoke-virtual {v0}, Landroidx/camera/core/impl/g$a;->h()Landroidx/camera/core/impl/g;
+    invoke-virtual {v0}, Landroidx/camera/core/impl/e$a;->h()Landroidx/camera/core/impl/e;
 
     move-result-object v6
 
-    move-object v0, v7
+    iget-object v7, p0, Landroidx/camera/core/impl/SessionConfig$a;->g:Landroid/hardware/camera2/params/InputConfiguration;
 
-    invoke-direct/range {v0 .. v6}, Landroidx/camera/core/impl/SessionConfig;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Landroidx/camera/core/impl/g;)V
+    move-object v0, v8
 
-    return-object v7
+    invoke-direct/range {v0 .. v7}, Landroidx/camera/core/impl/SessionConfig;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Landroidx/camera/core/impl/e;Landroid/hardware/camera2/params/InputConfiguration;)V
+
+    return-object v8
 .end method
 
 .method public o()V
@@ -579,9 +489,9 @@
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0}, Landroidx/camera/core/impl/g$a;->i()V
+    invoke-virtual {v0}, Landroidx/camera/core/impl/e$a;->i()V
 
     return-void
 .end method
@@ -595,7 +505,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lx/i;",
+            "Lb0/m;",
             ">;"
         }
     .end annotation
@@ -610,20 +520,54 @@
     return-object v0
 .end method
 
-.method public r(Landroidx/camera/core/impl/DeferrableSurface;)V
+.method public r(Lb0/m;)Z
+    .locals 2
+    .param p1    # Lb0/m;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
+
+    .line 2
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->q(Lb0/m;)Z
+
+    move-result v0
+
+    .line 3
+    iget-object v1, p0, Landroidx/camera/core/impl/SessionConfig$a;->f:Ljava/util/List;
+
+    .line 4
+    invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez v0, :cond_1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+.end method
+
+.method public s(Landroidx/camera/core/impl/DeferrableSurface;)V
     .locals 1
     .param p1    # Landroidx/camera/core/impl/DeferrableSurface;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surface"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->a:Ljava/util/Set;
@@ -631,51 +575,48 @@
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->q(Landroidx/camera/core/impl/DeferrableSurface;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->r(Landroidx/camera/core/impl/DeferrableSurface;)V
 
     return-void
 .end method
 
-.method public s(Landroidx/camera/core/impl/Config;)V
+.method public t(Landroidx/camera/core/impl/Config;)V
     .locals 1
     .param p1    # Landroidx/camera/core/impl/Config;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "config"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->r(Landroidx/camera/core/impl/Config;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->t(Landroidx/camera/core/impl/Config;)V
 
     return-void
 .end method
 
-.method public t(I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "templateType"
-        }
-    .end annotation
+.method public u(Landroid/hardware/camera2/params/InputConfiguration;)V
+    .locals 0
+    .param p1    # Landroid/hardware/camera2/params/InputConfiguration;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iput-object p1, p0, Landroidx/camera/core/impl/SessionConfig$a;->g:Landroid/hardware/camera2/params/InputConfiguration;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/g$a;->s(I)V
+    return-void
+.end method
+
+.method public v(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
+
+    invoke-virtual {v0, p1}, Landroidx/camera/core/impl/e$a;->u(I)V
 
     return-void
 .end method

@@ -7,20 +7,20 @@
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic a:Landroidx/camera/core/VideoCapture;
 
-.field public final synthetic b:Landroid/media/MediaCodec;
+.field public final synthetic b:Landroidx/camera/core/VideoCapture$g;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLandroid/media/MediaCodec;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/VideoCapture;Landroidx/camera/core/VideoCapture$g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Landroidx/camera/core/l3;->a:Z
+    iput-object p1, p0, Landroidx/camera/core/l3;->a:Landroidx/camera/core/VideoCapture;
 
-    iput-object p2, p0, Landroidx/camera/core/l3;->b:Landroid/media/MediaCodec;
+    iput-object p2, p0, Landroidx/camera/core/l3;->b:Landroidx/camera/core/VideoCapture$g;
 
     return-void
 .end method
@@ -30,11 +30,11 @@
 .method public final run()V
     .locals 2
 
-    iget-boolean v0, p0, Landroidx/camera/core/l3;->a:Z
+    iget-object v0, p0, Landroidx/camera/core/l3;->a:Landroidx/camera/core/VideoCapture;
 
-    iget-object v1, p0, Landroidx/camera/core/l3;->b:Landroid/media/MediaCodec;
+    iget-object v1, p0, Landroidx/camera/core/l3;->b:Landroidx/camera/core/VideoCapture$g;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/VideoCapture;->L(ZLandroid/media/MediaCodec;)V
+    invoke-static {v0, v1}, Landroidx/camera/core/VideoCapture;->O(Landroidx/camera/core/VideoCapture;Landroidx/camera/core/VideoCapture$g;)V
 
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public interface abstract Lkh/m;
 .super Ljava/lang/Object;
-.source "FlowableOnSubscribe.java"
+.source "ResponseHandler.java"
 
 
 # annotations
@@ -15,22 +15,19 @@
 
 
 # virtual methods
-.method public abstract a(Lkh/l;)V
-    .param p1    # Lkh/l;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
+.method public abstract a(Lhh/t;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkh/l<",
-            "TT;>;)V"
+            "Lhh/t;",
+            ")TT;"
         }
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/lang/Exception;
+            Lcz/msebera/android/httpclient/client/ClientProtocolException;,
+            Ljava/io/IOException;
         }
     .end annotation
 .end method

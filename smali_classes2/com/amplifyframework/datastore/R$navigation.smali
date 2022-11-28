@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final dev_menu_nav_graph:I = 0x7f100000
+.field public static final dev_menu_nav_graph:I = 0x7f110000
 
 
 # direct methods

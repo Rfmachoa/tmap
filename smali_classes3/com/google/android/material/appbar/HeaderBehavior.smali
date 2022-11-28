@@ -818,7 +818,7 @@
     if-gt p1, p5, :cond_0
 
     .line 3
-    invoke-static {p3, p4, p5}, Lj1/a;->e(III)I
+    invoke-static {p3, p4, p5}, Ld2/a;->e(III)I
 
     move-result p2
 

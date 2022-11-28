@@ -39,7 +39,7 @@
     const/16 v0, 0x14
 
     .line 2
-    invoke-static {v0}, Lm5/m;->f(I)Ljava/util/Queue;
+    invoke-static {v0}, Lj7/n;->f(I)Ljava/util/Queue;
 
     move-result-object v0
 

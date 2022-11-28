@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/tasks/TaskCompletionSource;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # annotations
@@ -16,13 +16,6 @@
 
 # instance fields
 .field private final zza:Lcom/google/android/gms/tasks/zzw;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/zzw<",
-            "TTResult;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

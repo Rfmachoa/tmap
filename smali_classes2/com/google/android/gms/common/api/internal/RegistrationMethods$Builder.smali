@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -29,41 +29,12 @@
 
 # instance fields
 .field private zaa:Lcom/google/android/gms/common/api/internal/RemoteCall;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/RemoteCall<",
-            "TA;",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "Ljava/lang/Void;",
-            ">;>;"
-        }
-    .end annotation
-.end field
 
 .field private zab:Lcom/google/android/gms/common/api/internal/RemoteCall;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/RemoteCall<",
-            "TA;",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "Ljava/lang/Boolean;",
-            ">;>;"
-        }
-    .end annotation
-.end field
 
 .field private zac:Ljava/lang/Runnable;
 
 .field private zad:Lcom/google/android/gms/common/api/internal/ListenerHolder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder<",
-            "T",
-            "L;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zae:[Lcom/google/android/gms/common/Feature;
 
@@ -253,6 +224,9 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -280,6 +254,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -310,6 +287,9 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
@@ -337,6 +317,9 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -360,6 +343,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -387,6 +373,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -419,6 +408,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;

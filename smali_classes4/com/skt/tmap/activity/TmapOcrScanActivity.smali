@@ -10,6 +10,10 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nTmapOcrScanActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TmapOcrScanActivity.kt\ncom/skt/tmap/activity/TmapOcrScanActivity\n+ 2 Strings.kt\nkotlin/text/StringsKt__StringsKt\n*L\n1#1,169:1\n107#2:170\n79#2,22:171\n107#2:193\n79#2,22:194\n*S KotlinDebug\n*F\n+ 1 TmapOcrScanActivity.kt\ncom/skt/tmap/activity/TmapOcrScanActivity\n*L\n73#1:170\n73#1:171,22\n74#1:193\n74#1:194,22\n*E\n"
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
@@ -22,24 +26,24 @@
         "onPause",
         "onDestroy",
         "onResume",
-        "A5",
-        "z5",
-        "x5",
+        "K5",
+        "J5",
+        "H5",
         "onBackPressed",
-        "N5",
+        "b6",
         "",
         "enable",
-        "H5",
-        "M5",
-        "L5",
-        "K5",
-        "I5",
+        "R5",
+        "W5",
+        "V5",
+        "U5",
+        "S5",
         "",
         "f",
         "Ljava/lang/String;",
         "TAG",
         "g",
-        "J5",
+        "T5",
         "()Ljava/lang/String;",
         "SCANCONFIG_SCAN_NAME",
         "Lcom/fingram/mi/scanner/CardView;",
@@ -48,31 +52,31 @@
         "cardView",
         "<init>",
         "()V",
-        "u",
+        "l",
         "a",
         "tmap_android_phoneKUShip"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # static fields
-.field public static final l:Ljava/lang/String; = "ocr_result_card_number"
+.field public static final l:Lcom/skt/tmap/activity/TmapOcrScanActivity$a;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
-.field public static final p:Ljava/lang/String; = "ocr_result_valid_date"
+.field public static final p:Ljava/lang/String; = "ocr_result_card_number"
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
-.field public static final u:Lcom/skt/tmap/activity/TmapOcrScanActivity$a;
+.field public static final u:Ljava/lang/String; = "ocr_result_valid_date"
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
@@ -80,19 +84,43 @@
 
 # instance fields
 .field public final f:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field public final g:Ljava/lang/String;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
-.field public h:Llb/a;
+.field public h:Lid/a;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field public final i:Lw5/b;
+.field public final i:Lt7/b;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field public j:Lcom/fingram/mi/scanner/CardView;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field public k:Ljava/util/HashMap;
+.field public k:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -105,7 +133,7 @@
 
     invoke-direct {v0, v1}, Lcom/skt/tmap/activity/TmapOcrScanActivity$a;-><init>(Lkotlin/jvm/internal/u;)V
 
-    sput-object v0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->u:Lcom/skt/tmap/activity/TmapOcrScanActivity$a;
+    sput-object v0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->l:Lcom/skt/tmap/activity/TmapOcrScanActivity$a;
 
     return-void
 .end method
@@ -114,6 +142,12 @@
     .locals 1
 
     .line 1
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/Map;
+
     invoke-direct {p0}, Lcom/skt/tmap/activity/TmapCameraBase;-><init>()V
 
     const-string v0, "TmapOcrScanActivity"
@@ -127,60 +161,506 @@
     iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->g:Ljava/lang/String;
 
     .line 4
-    new-instance v0, Lw5/b;
+    new-instance v0, Lt7/b;
 
-    invoke-direct {v0}, Lw5/b;-><init>()V
+    invoke-direct {v0}, Lt7/b;-><init>()V
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lw5/b;
-
-    return-void
-.end method
-
-.method public static final synthetic D5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Z)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->H5(Z)V
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lt7/b;
 
     return-void
 .end method
 
-.method public static final synthetic E5(Lcom/skt/tmap/activity/TmapOcrScanActivity;)Llb/a;
+.method public static synthetic N5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Lt7/e;)V
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    invoke-static {p0, p1}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->Y5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Lt7/e;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static final synthetic F5(Lcom/skt/tmap/activity/TmapOcrScanActivity;)Ljava/lang/String;
+.method public static synthetic O5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->f:Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->Z5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static final synthetic G5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Llb/a;)V
+.method public static synthetic P5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
     .locals 0
 
+    invoke-static {p0, p1}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->a6(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static synthetic Q5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->X5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static final X5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
+    .locals 0
+
+    const-string p1, "this$0"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lid/a;->g1()Z
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->R5(Z)V
+
+    return-void
+.end method
+
+.method public static final Y5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Lt7/e;)V
+    .locals 8
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_c
+
+    .line 1
+    iget-object v1, p1, Lt7/e;->b:[[C
+
+    aget-object v1, v1, v0
+
+    const-string v2, "cardScanResult.lineText[0]"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v1}, Ljava/lang/String;-><init>([C)V
+
+    .line 2
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    sub-int/2addr v1, v3
+
+    move v4, v0
+
+    move v5, v4
+
+    :goto_0
+    const/16 v6, 0x20
+
+    if-gt v4, v1, :cond_5
+
+    if-nez v5, :cond_0
+
+    move v7, v4
+
+    goto :goto_1
+
+    :cond_0
+    move v7, v1
+
+    .line 3
+    :goto_1
+    invoke-interface {v2, v7}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v7
+
+    .line 4
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/f0;->t(II)I
+
+    move-result v7
+
+    if-gtz v7, :cond_1
+
+    move v7, v3
+
+    goto :goto_2
+
+    :cond_1
+    move v7, v0
+
+    :goto_2
+    if-nez v5, :cond_3
+
+    if-nez v7, :cond_2
+
+    move v5, v3
+
+    goto :goto_0
+
+    :cond_2
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-nez v7, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    :cond_5
+    :goto_3
+    add-int/2addr v1, v3
+
+    .line 5
+    invoke-interface {v2, v4, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    .line 6
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 7
+    iget-object p1, p1, Lt7/e;->b:[[C
+
+    aget-object p1, p1, v3
+
+    const-string v2, "cardScanResult.lineText[1]"
+
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, p1}, Ljava/lang/String;-><init>([C)V
+
+    .line 8
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result p1
+
+    sub-int/2addr p1, v3
+
+    move v4, v0
+
+    move v5, v4
+
+    :goto_4
+    if-gt v4, p1, :cond_b
+
+    if-nez v5, :cond_6
+
+    move v7, v4
+
+    goto :goto_5
+
+    :cond_6
+    move v7, p1
+
+    .line 9
+    :goto_5
+    invoke-interface {v2, v7}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v7
+
+    .line 10
+    invoke-static {v7, v6}, Lkotlin/jvm/internal/f0;->t(II)I
+
+    move-result v7
+
+    if-gtz v7, :cond_7
+
+    move v7, v3
+
+    goto :goto_6
+
+    :cond_7
+    move v7, v0
+
+    :goto_6
+    if-nez v5, :cond_9
+
+    if-nez v7, :cond_8
+
+    move v5, v3
+
+    goto :goto_4
+
+    :cond_8
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_4
+
+    :cond_9
+    if-nez v7, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    add-int/lit8 p1, p1, -0x1
+
+    goto :goto_4
+
+    :cond_b
+    :goto_7
+    add-int/2addr p1, v3
+
+    .line 11
+    invoke-interface {v2, v4, p1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    .line 12
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 13
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->f:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Card number: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->f:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Card valid: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 15
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-string v2, "ocr_result_card_number"
+
+    .line 16
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "ocr_result_valid_date"
+
+    .line 17
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 p1, -0x1
+
+    .line 18
+    invoke-virtual {p0, p1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+
+    goto :goto_8
+
+    .line 19
+    :cond_c
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
+
+    .line 20
+    :goto_8
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
+
+    return-void
+.end method
+
+.method public static final Z5(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
+    .locals 0
+
+    const-string p1, "this$0"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->onBackPressed()V
+
+    return-void
+.end method
+
+.method public static final a6(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/view/View;)V
+    .locals 0
+
+    const-string p1, "this$0"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p1, 0x1
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setResult(I)V
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A5()V
+.method public C5()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    return-void
+.end method
+
+.method public D5(I)Landroid/view/View;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :cond_1
+    :goto_0
+    return-object v1
+.end method
+
+.method public H5()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lt7/b;
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lt7/b;->f:I
+
+    .line 2
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 3
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lt7/b;
+
+    iget-object v3, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, v2, Lcom/fingram/mi/bankcard/ScannerConfig;->scanName:Z
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->b6()V
+
+    .line 5
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    const/16 v1, 0x80
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
+
+    const/4 v0, 0x1
+
+    .line 6
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setRequestedOrientation(I)V
+
+    .line 7
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->V5()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 8
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->f:Ljava/lang/String;
+
+    const-string v1, "Could not connect to camera."
+
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public J5()V
     .locals 0
 
     return-void
 .end method
 
-.method public final H5(Z)V
+.method public K5()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final R5(Z)V
     .locals 1
 
     .line 1
@@ -193,12 +673,12 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
 
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {v0, p1}, Llb/a;->j1(Z)V
+    invoke-virtual {v0, p1}, Lid/a;->l1(Z)V
     :try_end_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -214,14 +694,14 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public final I5()V
+.method public final S5()V
     .locals 1
 
     .line 1
@@ -235,13 +715,13 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->H5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->R5(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public final J5()Ljava/lang/String;
+.method public final T5()Ljava/lang/String;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
@@ -252,7 +732,7 @@
     return-object v0
 .end method
 
-.method public final K5()V
+.method public final U5()V
     .locals 1
 
     .line 1
@@ -266,13 +746,13 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->H5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->R5(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public final L5()Z
+.method public final V5()Z
     .locals 3
 
     .line 1
@@ -292,7 +772,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->j:Lcom/fingram/mi/scanner/CardView;
@@ -315,7 +795,7 @@
     return v0
 .end method
 
-.method public final M5()V
+.method public final W5()V
     .locals 4
 
     const v0, 0x7f0d0022
@@ -325,58 +805,61 @@
 
     move-result-object v0
 
-    check-cast v0, Llb/a;
+    check-cast v0, Lid/a;
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     .line 2
-    invoke-virtual {v0, v1}, Llb/a;->j1(Z)V
+    :cond_0
+    invoke-virtual {v0, v1}, Lid/a;->l1(Z)V
 
     .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    :goto_0
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Llb/a;->o1:Landroid/widget/CheckBox;
+    iget-object v0, v0, Lid/a;->q1:Landroid/widget/CheckBox;
 
     if-eqz v0, :cond_1
 
-    new-instance v2, Lcom/skt/tmap/activity/TmapOcrScanActivity$d;
+    new-instance v2, Lcom/skt/tmap/activity/c8;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity$d;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/c8;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, v0, Llb/a;->q1:Landroid/widget/FrameLayout;
+    iget-object v0, v0, Lid/a;->s1:Landroid/widget/FrameLayout;
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
     const/4 v0, 0x0
 
     .line 5
-    :goto_0
-    iget-object v2, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lw5/b;
+    :goto_1
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lt7/b;
 
     const/high16 v3, -0x1000000
 
-    iput v3, v2, Lw5/b;->a:I
+    iput v3, v2, Lt7/b;->a:I
 
     const/high16 v3, -0x70000000
 
     .line 6
-    iput v3, v2, Lw5/b;->b:I
+    iput v3, v2, Lt7/b;->b:I
 
     const/4 v3, 0x1
 
@@ -399,16 +882,16 @@
     iput-object v1, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->j:Lcom/fingram/mi/scanner/CardView;
 
     .line 11
-    new-instance v2, Lcom/skt/tmap/activity/TmapOcrScanActivity$b;
+    new-instance v2, Lcom/skt/tmap/activity/d8;
 
-    invoke-direct {v2, p0, v0}, Lcom/skt/tmap/activity/TmapOcrScanActivity$b;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/widget/FrameLayout;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/d8;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;)V
 
-    invoke-virtual {v1, v2}, Lcom/fingram/mi/scanner/CardView;->setCardViewListener(Lx5/b;)V
+    invoke-virtual {v1, v2}, Lcom/fingram/mi/scanner/CardView;->setCardViewListener(Lu7/b;)V
 
     .line 12
-    iget-object v2, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lw5/b;
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lt7/b;
 
-    invoke-virtual {v1, p0, v2}, Lcom/fingram/mi/scanner/CardView;->f(Landroid/content/Context;Lw5/b;)V
+    invoke-virtual {v1, p0, v2}, Lcom/fingram/mi/scanner/CardView;->f(Landroid/content/Context;Lt7/b;)V
 
     .line 13
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
@@ -429,33 +912,33 @@
 
     .line 16
     :cond_3
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
 
-    if-eqz v1, :cond_4
+    if-eqz v0, :cond_4
 
-    iget-object v1, v1, Llb/a;->m1:Landroid/widget/ImageView;
+    iget-object v0, v0, Lid/a;->o1:Landroid/widget/ImageView;
 
-    if-eqz v1, :cond_4
+    if-eqz v0, :cond_4
 
-    new-instance v2, Lcom/skt/tmap/activity/TmapOcrScanActivity$c;
+    new-instance v1, Lcom/skt/tmap/activity/a8;
 
-    invoke-direct {v2, p0, v0}, Lcom/skt/tmap/activity/TmapOcrScanActivity$c;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;Landroid/widget/FrameLayout;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/a8;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 17
     :cond_4
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Llb/a;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->h:Lid/a;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, v0, Llb/a;->j1:Landroidx/constraintlayout/widget/ConstraintLayout;
+    iget-object v0, v0, Lid/a;->l1:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     if-eqz v0, :cond_5
 
-    new-instance v1, Lcom/skt/tmap/activity/TmapOcrScanActivity$e;
+    new-instance v1, Lcom/skt/tmap/activity/b8;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity$e;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/b8;-><init>(Lcom/skt/tmap/activity/TmapOcrScanActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -463,12 +946,12 @@
     return-void
 .end method
 
-.method public final N5()V
+.method public final b6()V
     .locals 2
 
     .line 1
     :try_start_0
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->M5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->W5()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -484,7 +967,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -508,7 +991,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->I5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->S5()V
 
     .line 2
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onDestroy()V
@@ -523,7 +1006,7 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onPause()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->K5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->U5()V
 
     return-void
 .end method
@@ -543,129 +1026,5 @@
     invoke-virtual {v0}, Lcom/fingram/mi/scanner/CardView;->i()Z
 
     :cond_0
-    return-void
-.end method
-
-.method public t5()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/HashMap;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public u5(I)Landroid/view/View;
-    .locals 2
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/HashMap;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/HashMap;
-
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->k:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public x5()V
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lw5/b;
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Lw5/b;->f:I
-
-    .line 2
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 3
-    iget-object v2, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->i:Lw5/b;
-
-    iget-object v3, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, v2, Lcom/fingram/mi/bankcard/ScannerConfig;->scanName:Z
-
-    .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->N5()V
-
-    .line 5
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const/16 v1, 0x80
-
-    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
-
-    const/4 v0, 0x1
-
-    .line 6
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->setRequestedOrientation(I)V
-
-    .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapOcrScanActivity;->L5()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 8
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapOcrScanActivity;->f:Ljava/lang/String;
-
-    const-string v1, "Could not connect to camera."
-
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public z5()V
-    .locals 0
-
     return-void
 .end method

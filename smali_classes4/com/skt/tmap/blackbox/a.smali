@@ -208,7 +208,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -243,7 +243,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -409,19 +409,9 @@
     if-lez v1, :cond_0
 
     .line 5
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 6
     :cond_0
@@ -544,7 +534,7 @@
 
     const-string v1, "BlackBoxUtil"
 
-    invoke-static {v1, p0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -646,14 +636,14 @@
 
     .line 2
     :cond_0
-    invoke-static {p0, v0}, Le2/a;->j(Landroid/content/Context;Landroid/net/Uri;)Le2/a;
+    invoke-static {p0, v0}, Lv2/a;->j(Landroid/content/Context;Landroid/net/Uri;)Lv2/a;
 
     move-result-object p0
 
     if-eqz p0, :cond_7
 
     .line 3
-    invoke-virtual {p0}, Le2/a;->f()Z
+    invoke-virtual {p0}, Lv2/a;->f()Z
 
     move-result v0
 
@@ -665,14 +655,14 @@
     const-string v0, "Tmap_bb_log"
 
     .line 4
-    invoke-virtual {p0, v0}, Le2/a;->g(Ljava/lang/String;)Le2/a;
+    invoke-virtual {p0, v0}, Lv2/a;->g(Ljava/lang/String;)Lv2/a;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
     .line 5
-    invoke-virtual {v2}, Le2/a;->f()Z
+    invoke-virtual {v2}, Lv2/a;->f()Z
 
     move-result v3
 
@@ -680,14 +670,14 @@
 
     .line 6
     :cond_2
-    invoke-virtual {p0, v0}, Le2/a;->c(Ljava/lang/String;)Le2/a;
+    invoke-virtual {p0, v0}, Lv2/a;->c(Ljava/lang/String;)Lv2/a;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
     .line 7
-    invoke-virtual {v2}, Le2/a;->f()Z
+    invoke-virtual {v2}, Lv2/a;->f()Z
 
     move-result p0
 
@@ -711,14 +701,14 @@
 
     move-result-object p0
 
-    invoke-virtual {v2, p0}, Le2/a;->g(Ljava/lang/String;)Le2/a;
+    invoke-virtual {v2, p0}, Lv2/a;->g(Ljava/lang/String;)Lv2/a;
 
     move-result-object p0
 
     if-eqz p0, :cond_4
 
     .line 9
-    invoke-virtual {p0}, Le2/a;->f()Z
+    invoke-virtual {p0}, Lv2/a;->f()Z
 
     move-result v3
 
@@ -740,9 +730,9 @@
 
     move-result-object p0
 
-    const-string/jumbo p1, "text"
+    const-string p1, "text"
 
-    invoke-virtual {v2, p1, p0}, Le2/a;->d(Ljava/lang/String;Ljava/lang/String;)Le2/a;
+    invoke-virtual {v2, p1, p0}, Lv2/a;->d(Ljava/lang/String;Ljava/lang/String;)Lv2/a;
 
     move-result-object p0
 
@@ -750,7 +740,7 @@
     if-eqz p0, :cond_7
 
     .line 11
-    invoke-virtual {p0}, Le2/a;->f()Z
+    invoke-virtual {p0}, Lv2/a;->f()Z
 
     move-result p1
 
@@ -760,7 +750,7 @@
 
     .line 12
     :cond_6
-    invoke-virtual {p0}, Le2/a;->n()Landroid/net/Uri;
+    invoke-virtual {p0}, Lv2/a;->n()Landroid/net/Uri;
 
     move-result-object p0
 
@@ -874,7 +864,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f130758
+    const v1, 0x7f1407d1
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -886,7 +876,7 @@
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v1, 0x7f130739
+    const v1, 0x7f1407af
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -929,7 +919,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lwb/b;",
+            "Lud/b;",
             ">;",
             "Ljava/lang/String;",
             "I)I"
@@ -970,9 +960,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lwb/b;
+    check-cast v3, Lud/b;
 
-    invoke-virtual {v3}, Lwb/b;->k()Ljava/lang/String;
+    invoke-virtual {v3}, Lud/b;->k()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1215,7 +1205,7 @@
     const-string p0, "N"
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/w0;->h(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/d1;->h(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -1249,20 +1239,20 @@
 
     .line 1
     :try_start_0
-    new-instance v1, Lwb/c;
+    new-instance v1, Lud/c;
 
-    invoke-direct {v1, p0}, Lwb/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p0}, Lud/c;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {v1}, Lwb/c;->k()V
+    invoke-virtual {v1}, Lud/c;->k()V
 
     .line 3
-    invoke-virtual {v1, p1}, Lwb/c;->e(Ljava/lang/String;)Z
+    invoke-virtual {v1, p1}, Lud/c;->e(Ljava/lang/String;)Z
 
     move-result v0
 
     .line 4
-    invoke-virtual {v1}, Lwb/c;->a()V
+    invoke-virtual {v1}, Lud/c;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1294,7 +1284,7 @@
     const-string p0, "N"
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/w0;->h(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/d1;->h(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -1367,15 +1357,15 @@
 
     .line 1
     :try_start_0
-    new-instance v0, Lwb/c;
+    new-instance v0, Lud/c;
 
-    invoke-direct {v0, p0}, Lwb/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lud/c;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {v0}, Lwb/c;->k()V
+    invoke-virtual {v0}, Lud/c;->k()V
 
     .line 3
-    invoke-virtual {v0}, Lwb/c;->f()I
+    invoke-virtual {v0}, Lud/c;->f()I
 
     move-result v1
 
@@ -1384,7 +1374,7 @@
     if-ge v1, v2, :cond_0
 
     .line 4
-    invoke-virtual {v0, p1, p2}, Lwb/c;->d(Ljava/lang/String;I)V
+    invoke-virtual {v0, p1, p2}, Lud/c;->d(Ljava/lang/String;I)V
 
     goto :goto_0
 
@@ -1402,7 +1392,7 @@
 
     .line 6
     :goto_0
-    invoke-virtual {v0}, Lwb/c;->a()V
+    invoke-virtual {v0}, Lud/c;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1434,7 +1424,7 @@
     const-string v1, "N"
 
     .line 1
-    invoke-static {p0, v0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1451,17 +1441,17 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/l0;->c(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/r0;->c(Landroid/content/Context;)Z
 
     move-result v0
 
     const-string v1, "feature.useBlackbox"
 
     .line 2
-    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->F(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 3
-    sput-boolean v0, Lcom/skt/tmap/blackbox/b;->B1:Z
+    sput-boolean v0, Lcom/skt/tmap/blackbox/b;->C1:Z
 
     return-void
 .end method
@@ -1483,17 +1473,17 @@
 
     .line 1
     :cond_0
-    invoke-static {p0}, Lcom/skt/tmap/util/l0;->c(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/r0;->c(Landroid/content/Context;)Z
 
     move-result v0
 
     const-string v1, "feature.useBlackbox"
 
     .line 2
-    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->F(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 3
-    sput-boolean v0, Lcom/skt/tmap/blackbox/b;->B1:Z
+    sput-boolean v0, Lcom/skt/tmap/blackbox/b;->C1:Z
 
     if-nez v0, :cond_2
 
@@ -1507,10 +1497,10 @@
 
     if-nez v1, :cond_1
 
-    const v1, 0x7f130158
+    const v1, 0x7f14015d
 
     .line 5
-    invoke-static {p0, v1}, Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v1}, Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     goto :goto_0
 
@@ -1667,7 +1657,7 @@
     .line 9
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    const p1, 0x7f130185
+    const p1, 0x7f14018a
 
     .line 10
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -1683,7 +1673,7 @@
     goto :goto_1
 
     :cond_1
-    const p1, 0x7f130171
+    const p1, 0x7f140176
 
     .line 11
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -1703,7 +1693,7 @@
     return-void
 .end method
 
-.method public static x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+.method public static x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1721,7 +1711,7 @@
     const/4 v1, 0x0
 
     .line 1
-    invoke-static {p0, v0, v1}, Lcom/skt/tmap/dialog/v;->y(Landroid/app/Activity;IZ)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0, v1}, Lcom/skt/tmap/dialog/a0;->y(Landroid/app/Activity;IZ)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
@@ -1735,7 +1725,7 @@
     .line 3
     sget-object p1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_1_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    const v1, 0x7f130438
+    const v1, 0x7f1404a9
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1743,12 +1733,12 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     new-instance p1, Lcom/skt/tmap/blackbox/a$a;
 
-    invoke-direct {p1, v0, p0}, Lcom/skt/tmap/blackbox/a$a;-><init>(Lcom/skt/tmap/dialog/v;Landroid/app/Activity;)V
+    invoke-direct {p1, v0, p0}, Lcom/skt/tmap/blackbox/a$a;-><init>(Lcom/skt/tmap/dialog/a0;Landroid/app/Activity;)V
 
     invoke-virtual {v0, p1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
@@ -1773,18 +1763,18 @@
 
     .line 1
     :try_start_0
-    new-instance v0, Lwb/c;
+    new-instance v0, Lud/c;
 
-    invoke-direct {v0, p0}, Lwb/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lud/c;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {v0}, Lwb/c;->k()V
+    invoke-virtual {v0}, Lud/c;->k()V
 
     .line 3
-    invoke-virtual {v0, p1}, Lwb/c;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lud/c;->c(Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {v0}, Lwb/c;->a()V
+    invoke-virtual {v0}, Lud/c;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

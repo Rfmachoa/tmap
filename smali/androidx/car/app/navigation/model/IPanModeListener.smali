@@ -15,6 +15,10 @@
 .end annotation
 
 
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.navigation.model.IPanModeListener"
+
+
 # virtual methods
 .method public abstract onPanModeChanged(ZLandroidx/car/app/IOnDoneCallback;)V
     .annotation system Ldalvik/annotation/Throws;

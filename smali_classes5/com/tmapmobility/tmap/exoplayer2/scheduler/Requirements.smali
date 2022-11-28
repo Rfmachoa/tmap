@@ -73,11 +73,11 @@
     return-void
 .end method
 
-.method public static l(Landroid/net/ConnectivityManager;)Z
+.method public static n(Landroid/net/ConnectivityManager;)Z
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/4 v1, 0x1
 
@@ -131,11 +131,11 @@
 
 
 # virtual methods
-.method public b(Landroid/content/Context;)Z
+.method public a(Landroid/content/Context;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->e(Landroid/content/Context;)I
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f(Landroid/content/Context;)I
 
     move-result p1
 
@@ -176,11 +176,19 @@
     return-object v0
 .end method
 
-.method public final d(Landroid/content/Context;)I
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(Landroid/content/Context;)I
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->m()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->o()Z
 
     move-result v0
 
@@ -219,7 +227,7 @@
     if-eqz v0, :cond_3
 
     .line 5
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->l(Landroid/net/ConnectivityManager;)Z
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->n(Landroid/net/ConnectivityManager;)Z
 
     move-result v0
 
@@ -229,7 +237,7 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->p()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->r()Z
 
     move-result v0
 
@@ -256,73 +264,6 @@
     and-int/lit8 p1, p1, 0x3
 
     return p1
-.end method
-
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e(Landroid/content/Context;)I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->d(Landroid/content/Context;)I
-
-    move-result v0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->g()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->h(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    or-int/lit8 v0, v0, 0x8
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->j()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->i(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    or-int/lit8 v0, v0, 0x4
-
-    .line 4
-    :cond_1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->o()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->n(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    or-int/lit8 v0, v0, 0x10
-
-    :cond_2
-    return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -377,7 +318,66 @@
     return v1
 .end method
 
-.method public f()I
+.method public f(Landroid/content/Context;)I
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->e(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->i()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->j(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    or-int/lit8 v0, v0, 0x8
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->m()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->l(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    or-int/lit8 v0, v0, 0x4
+
+    .line 4
+    :cond_1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->q()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->p(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    or-int/lit8 v0, v0, 0x10
+
+    :cond_2
+    return v0
+.end method
+
+.method public h()I
     .locals 1
 
     .line 1
@@ -386,7 +386,16 @@
     return v0
 .end method
 
-.method public g()Z
+.method public hashCode()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->a:I
+
+    return v0
+.end method
+
+.method public i()Z
     .locals 1
 
     .line 1
@@ -407,7 +416,7 @@
     return v0
 .end method
 
-.method public final h(Landroid/content/Context;)Z
+.method public final j(Landroid/content/Context;)Z
     .locals 3
 
     .line 1
@@ -455,16 +464,7 @@
     return v0
 .end method
 
-.method public hashCode()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->a:I
-
-    return v0
-.end method
-
-.method public final i(Landroid/content/Context;)Z
+.method public final l(Landroid/content/Context;)Z
     .locals 4
 
     const-string v0, "power"
@@ -481,7 +481,7 @@
     check-cast p1, Landroid/os/PowerManager;
 
     .line 2
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/4 v1, 0x1
 
@@ -528,7 +528,7 @@
     return v1
 .end method
 
-.method public j()Z
+.method public m()Z
     .locals 1
 
     .line 1
@@ -549,7 +549,7 @@
     return v0
 .end method
 
-.method public m()Z
+.method public o()Z
     .locals 2
 
     .line 1
@@ -570,7 +570,7 @@
     return v1
 .end method
 
-.method public final n(Landroid/content/Context;)Z
+.method public final p(Landroid/content/Context;)Z
     .locals 2
 
     .line 1
@@ -599,7 +599,7 @@
     return p1
 .end method
 
-.method public o()Z
+.method public q()Z
     .locals 1
 
     .line 1
@@ -620,7 +620,7 @@
     return v0
 .end method
 
-.method public p()Z
+.method public r()Z
     .locals 1
 
     .line 1

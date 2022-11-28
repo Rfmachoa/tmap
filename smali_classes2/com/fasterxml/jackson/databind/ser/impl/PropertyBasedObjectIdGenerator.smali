@@ -159,6 +159,7 @@
 
     iget-object v2, p0, Lcom/fasterxml/jackson/databind/ser/impl/PropertyBasedObjectIdGenerator;->_property:Lcom/fasterxml/jackson/databind/ser/BeanPropertyWriter;
 
+    .line 3
     invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/ser/BeanPropertyWriter;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -186,7 +187,7 @@
     :catch_1
     move-exception p1
 
-    .line 3
+    .line 4
     throw p1
 .end method
 

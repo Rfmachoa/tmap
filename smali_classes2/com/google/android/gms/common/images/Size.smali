@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/images/Size;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
@@ -118,26 +118,16 @@
 .end method
 
 .method private static zaa(Ljava/lang/String;)Ljava/lang/NumberFormatException;
-    .locals 4
+    .locals 3
 
     .line 1
     new-instance v0, Ljava/lang/NumberFormatException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Invalid Size: \""
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    const-string v2, "\""
 
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x10
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Invalid Size: \""
-
-    const-string v3, "\""
-
-    invoke-static {v1, v2, p0, v3}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -230,7 +220,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -241,9 +231,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/16 v3, 0x17
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

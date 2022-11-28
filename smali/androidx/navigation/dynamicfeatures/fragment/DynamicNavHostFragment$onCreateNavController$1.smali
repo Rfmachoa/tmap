@@ -3,12 +3,12 @@
 .source "DynamicNavHostFragment.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment;->m(Landroidx/navigation/NavController;)V
+    value = Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment;->o(Landroidx/navigation/NavController;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroidx/navigation/dynamicfeatures/fragment/a$a;",
         ">;"
     }
@@ -76,7 +76,7 @@
     .line 2
     iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment$onCreateNavController$1;->$fragmentNavigator:Landroidx/navigation/dynamicfeatures/fragment/a;
 
-    invoke-virtual {v0}, Landroidx/navigation/dynamicfeatures/fragment/a;->j()Landroidx/navigation/dynamicfeatures/fragment/a$a;
+    invoke-virtual {v0}, Landroidx/navigation/dynamicfeatures/fragment/a;->p()Landroidx/navigation/dynamicfeatures/fragment/a$a;
 
     move-result-object v0
 
@@ -87,12 +87,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/fragment/d$a;->B(Ljava/lang/String;)Landroidx/navigation/fragment/d$a;
+    invoke-virtual {v0, v1}, Lr3/h$b;->K(Ljava/lang/String;)Lr3/h$b;
 
     .line 4
     sget v1, Landroidx/navigation/dynamicfeatures/fragment/R$id;->dfn_progress_fragment:I
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/NavDestination;->w(I)V
+    invoke-virtual {v0, v1}, Landroidx/navigation/NavDestination;->E(I)V
 
     return-object v0
 .end method

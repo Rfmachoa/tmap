@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/internal/InternalTokenResult;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-auth-interop@@20.0.0"
+.source "com.google.firebase:firebase-auth-interop@@19.0.2"
 
 
 # annotations
@@ -10,9 +10,6 @@
 
 # instance fields
 .field private zza:Ljava/lang/String;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
 
 
 # direct methods
@@ -36,10 +33,6 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 1
     instance-of v0, p1, Lcom/google/firebase/internal/InternalTokenResult;
@@ -102,8 +95,6 @@
 
 .method public toString()Ljava/lang/String;
     .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Objects;->toStringHelper(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;

@@ -1,16 +1,9 @@
 .class public final Lcom/bumptech/glide/manager/h;
 .super Ljava/lang/Object;
-.source "FirstFrameAndAfterTrimMemoryWaiter.java"
+.source "EmptyRequestManagerTreeNode.java"
 
 # interfaces
-.implements Lcom/bumptech/glide/manager/j;
-.implements Landroid/content/ComponentCallbacks2;
-
-
-# annotations
-.annotation build Landroidx/annotation/RequiresApi;
-    value = 0x1a
-.end annotation
+.implements Lcom/bumptech/glide/manager/q;
 
 
 # direct methods
@@ -25,35 +18,24 @@
 
 
 # virtual methods
-.method public a(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
-    .param p1    # Landroid/content/res/Configuration;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    return-void
-.end method
-
-.method public onLowMemory()V
+.method public a()Ljava/util/Set;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    const/16 v0, 0x14
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Lcom/bumptech/glide/i;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    invoke-virtual {p0, v0}, Lcom/bumptech/glide/manager/h;->onTrimMemory(I)V
+    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public onTrimMemory(I)V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

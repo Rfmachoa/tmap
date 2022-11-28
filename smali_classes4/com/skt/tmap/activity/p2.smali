@@ -3,40 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroidx/activity/result/a;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-.field public final synthetic b:Lcom/skt/tmap/mapinfo/MapInfoType;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mapinfo/MapInfoType;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/p2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/p2;->b:Lcom/skt/tmap/mapinfo/MapInfoType;
+    iput-object p1, p0, Lcom/skt/tmap/activity/p2;->a:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/p2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/p2;->a:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/p2;->b:Lcom/skt/tmap/mapinfo/MapInfoType;
+    check-cast p1, Landroidx/activity/result/ActivityResult;
 
-    check-cast p1, Lcom/skt/tmap/network/ndds/dto/info/PoiRecentsInfo;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->N7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mapinfo/MapInfoType;Lcom/skt/tmap/network/ndds/dto/info/PoiRecentsInfo;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->D5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;Landroidx/activity/result/ActivityResult;)V
 
     return-void
 .end method

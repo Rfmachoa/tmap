@@ -3,34 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lgk/a;
 
 
-# instance fields
-.field public final synthetic a:Lio/reactivex/rxjava3/processors/BehaviorProcessor;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/p3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lio/reactivex/rxjava3/processors/BehaviorProcessor;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/p3;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/p3;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/p3;->a:Lcom/amplifyframework/datastore/syncengine/p3;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/p3;->a:Lio/reactivex/rxjava3/processors/BehaviorProcessor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/p3;->a:Lio/reactivex/rxjava3/processors/BehaviorProcessor;
-
-    check-cast p1, Lcom/amplifyframework/api/graphql/PaginatedResult;
-
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->m(Lio/reactivex/rxjava3/processors/BehaviorProcessor;Lcom/amplifyframework/api/graphql/PaginatedResult;)V
+    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->q()V
 
     return-void
 .end method

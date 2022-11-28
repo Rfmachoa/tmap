@@ -3,7 +3,7 @@
 .source "BodyObservable.java"
 
 # interfaces
-.implements Lkh/g0;
+.implements Loj/g0;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkh/g0<",
+        "Loj/g0<",
         "Lretrofit2/Response<",
         "TR;>;>;"
     }
@@ -30,10 +30,10 @@
 
 
 # instance fields
-.field private final observer:Lkh/g0;
+.field private final observer:Loj/g0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkh/g0<",
+            "Loj/g0<",
             "-TR;>;"
         }
     .end annotation
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lkh/g0;)V
+.method public constructor <init>(Loj/g0;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkh/g0<",
+            "Loj/g0<",
             "-TR;>;)V"
         }
     .end annotation
@@ -57,7 +57,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lkh/g0;
+    iput-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Loj/g0;
 
     return-void
 .end method
@@ -73,9 +73,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Loj/g0;
 
-    invoke-interface {v0}, Lkh/g0;->onComplete()V
+    invoke-interface {v0}, Loj/g0;->onComplete()V
 
     :cond_0
     return-void
@@ -90,9 +90,9 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Loj/g0;
 
-    invoke-interface {v0, p1}, Lkh/g0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Loj/g0;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -108,7 +108,7 @@
     invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 5
-    invoke-static {v0}, Lwh/a;->Y(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lak/a;->Y(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -143,13 +143,13 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Loj/g0;
 
     invoke-virtual {p1}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkh/g0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Loj/g0;->onNext(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -166,9 +166,9 @@
 
     .line 6
     :try_start_0
-    iget-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lkh/g0;
+    iget-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Loj/g0;
 
-    invoke-interface {p1, v1}, Lkh/g0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v1}, Loj/g0;->onError(Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -195,7 +195,7 @@
 
     invoke-direct {v2, v3}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v2}, Lwh/a;->Y(Ljava/lang/Throwable;)V
+    invoke-static {v2}, Lak/a;->Y(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -205,9 +205,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;->observer:Loj/g0;
 
-    invoke-interface {v0, p1}, Lkh/g0;->onSubscribe(Lio/reactivex/disposables/b;)V
+    invoke-interface {v0, p1}, Loj/g0;->onSubscribe(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

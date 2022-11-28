@@ -16,8 +16,6 @@
 
 .field private static final BYTE_LCURLY:B = 0x7bt
 
-.field private static final BYTE_QUOTE:B = 0x22t
-
 .field private static final BYTE_RBRACKET:B = 0x5dt
 
 .field private static final BYTE_RCURLY:B = 0x7dt
@@ -53,6 +51,8 @@
 .field public final _outputStream:Ljava/io/OutputStream;
 
 .field public _outputTail:I
+
+.field public _quoteChar:B
 
 
 # direct methods
@@ -120,6 +120,29 @@
 .end method
 
 .method public constructor <init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;)V
+    .locals 6
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/16 v5, 0x22
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    .line 24
+    invoke-direct/range {v0 .. v5}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;C)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;C)V
     .locals 0
 
     .line 1
@@ -128,97 +151,160 @@
     .line 2
     iput-object p4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputStream:Ljava/io/OutputStream;
 
-    const/4 p2, 0x1
+    int-to-byte p2, p5
 
     .line 3
-    iput-boolean p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_bufferRecyclable:Z
+    iput-byte p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    const/16 p2, 0x22
+
+    if-eq p5, p2, :cond_0
 
     .line 4
+    invoke-static {p5}, Lcom/fasterxml/jackson/core/io/CharTypes;->get7BitOutputEscapes(I)[I
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_outputEscapes:[I
+
+    :cond_0
+    const/4 p2, 0x1
+
+    .line 5
+    iput-boolean p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_bufferRecyclable:Z
+
+    .line 6
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/io/IOContext;->allocWriteEncodingBuffer()[B
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
-    .line 5
+    .line 7
     array-length p2, p2
 
     iput p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
     shr-int/lit8 p2, p2, 0x3
 
-    .line 6
+    .line 8
     iput p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMaxContiguous:I
 
-    .line 7
+    .line 9
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/io/IOContext;->allocConcatBuffer()[C
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBuffer:[C
 
-    .line 8
+    .line 10
     array-length p1, p1
 
     iput p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBufferLength:I
 
-    .line 9
+    .line 11
     sget-object p1, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->ESCAPE_NON_ASCII:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->isEnabled(Lcom/fasterxml/jackson/core/JsonGenerator$Feature;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     const/16 p1, 0x7f
 
-    .line 10
+    .line 12
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->setHighestNonEscapedChar(I)Lcom/fasterxml/jackson/core/JsonGenerator;
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
-.method public constructor <init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;[BIZ)V
+.method public constructor <init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;C[BIZ)V
     .locals 0
 
-    .line 11
+    .line 13
     invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;)V
 
-    .line 12
+    .line 14
     iput-object p4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputStream:Ljava/io/OutputStream;
 
-    .line 13
-    iput-boolean p7, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_bufferRecyclable:Z
-
-    .line 14
-    iput p6, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    int-to-byte p2, p5
 
     .line 15
-    iput-object p5, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+    iput-byte p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    const/16 p2, 0x22
+
+    if-eq p5, p2, :cond_0
 
     .line 16
-    array-length p2, p5
+    invoke-static {p5}, Lcom/fasterxml/jackson/core/io/CharTypes;->get7BitOutputEscapes(I)[I
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_outputEscapes:[I
+
+    .line 17
+    :cond_0
+    iput-boolean p8, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_bufferRecyclable:Z
+
+    .line 18
+    iput p7, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    .line 19
+    iput-object p6, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    .line 20
+    array-length p2, p6
 
     iput p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
     shr-int/lit8 p2, p2, 0x3
 
-    .line 17
+    .line 21
     iput p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMaxContiguous:I
 
-    .line 18
+    .line 22
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/io/IOContext;->allocConcatBuffer()[C
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBuffer:[C
 
-    .line 19
+    .line 23
     array-length p1, p1
 
     iput p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBufferLength:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;[BIZ)V
+    .locals 9
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/16 v5, 0x22
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v6, p5
+
+    move v7, p6
+
+    move/from16 v8, p7
+
+    .line 25
+    invoke-direct/range {v0 .. v8}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILcom/fasterxml/jackson/core/ObjectCodec;Ljava/io/OutputStream;C[BIZ)V
 
     return-void
 .end method
@@ -237,7 +323,9 @@
 
     add-int v1, p2, v0
 
-    if-le v1, p3, :cond_1
+    const/4 v2, 0x0
+
+    if-le v1, p3, :cond_0
 
     .line 2
     iput p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
@@ -250,8 +338,6 @@
 
     .line 5
     array-length v1, p1
-
-    const/4 v2, 0x0
 
     if-le v0, v1, :cond_0
 
@@ -268,22 +354,24 @@
 
     add-int/2addr p2, v0
 
-    :cond_1
     mul-int/lit8 p5, p5, 0x6
 
     add-int/2addr p5, p2
 
-    if-le p5, p3, :cond_2
+    if-le p5, p3, :cond_1
 
     .line 8
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+    iput p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     .line 9
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 10
     iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     return p1
 
-    :cond_2
+    :cond_1
     return p2
 .end method
 
@@ -424,31 +512,54 @@
 
     if-gt p1, v0, :cond_2
 
-    if-ge p3, p4, :cond_0
+    const/4 v0, 0x1
 
-    if-nez p2, :cond_1
+    if-ge p3, p4, :cond_1
 
-    :cond_0
-    const-string p4, "Split surrogate on writeRaw() input (last character)"
+    if-nez p2, :cond_0
+
+    goto :goto_0
 
     .line 1
-    invoke-virtual {p0, p4}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
-
-    .line 2
-    :cond_1
+    :cond_0
     aget-char p2, p2, p3
 
     invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputSurrogates(II)V
 
-    add-int/lit8 p3, p3, 0x1
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    new-array p2, v0, [Ljava/lang/Object;
+
+    const/4 p4, 0x0
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, p2, p4
+
+    const-string p1, "Split surrogate on writeRaw() input (last character): first character 0x%4x"
+
+    .line 3
+    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
+
+    :goto_1
+    add-int/2addr p3, v0
 
     return p3
 
-    .line 3
+    .line 4
     :cond_2
     iget-object p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
-    .line 4
+    .line 5
     iget p4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     add-int/lit8 v0, p4, 0x1
@@ -465,7 +576,7 @@
 
     add-int/lit8 p4, v0, 0x1
 
-    .line 5
+    .line 6
     iput p4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     shr-int/lit8 v1, p1, 0x6
@@ -480,7 +591,7 @@
 
     add-int/lit8 v0, p4, 0x1
 
-    .line 6
+    .line 7
     iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     and-int/lit8 p1, p1, 0x3f
@@ -718,7 +829,7 @@
         }
     .end annotation
 
-    .line 25
+    .line 27
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     sub-int v1, p3, p2
@@ -731,27 +842,27 @@
 
     if-le v1, v0, :cond_0
 
-    .line 26
+    .line 28
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 27
+    .line 29
     :cond_0
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    .line 28
+    .line 30
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
-    .line 29
+    .line 31
     iget-object v2, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_outputEscapes:[I
 
-    .line 30
+    .line 32
     iget v3, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_maximumNonEscapedChar:I
 
     if-gtz v3, :cond_1
 
     const v3, 0xffff
 
-    .line 31
+    .line 33
     :cond_1
     iget-object v4, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_characterEscapes:Lcom/fasterxml/jackson/core/io/CharacterEscapes;
 
@@ -760,7 +871,7 @@
 
     add-int/lit8 v5, p2, 0x1
 
-    .line 32
+    .line 34
     invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
 
     move-result p2
@@ -769,7 +880,7 @@
 
     if-gt p2, v6, :cond_6
 
-    .line 33
+    .line 35
     aget v6, v2, p2
 
     if-nez v6, :cond_2
@@ -778,7 +889,7 @@
 
     int-to-byte p2, p2
 
-    .line 34
+    .line 36
     aput-byte p2, v1, v0
 
     move p2, v5
@@ -787,7 +898,7 @@
 
     goto :goto_0
 
-    .line 35
+    .line 37
     :cond_2
     aget v6, v2, p2
 
@@ -797,14 +908,14 @@
 
     const/16 v7, 0x5c
 
-    .line 36
+    .line 38
     aput-byte v7, v1, v0
 
     add-int/lit8 v0, p2, 0x1
 
     int-to-byte v6, v6
 
-    .line 37
+    .line 39
     aput-byte v6, v1, p2
 
     goto :goto_2
@@ -814,7 +925,7 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 38
+    .line 40
     invoke-virtual {v4, p2}, Lcom/fasterxml/jackson/core/io/CharacterEscapes;->getEscapeSequence(I)Lcom/fasterxml/jackson/core/SerializableString;
 
     move-result-object v6
@@ -823,11 +934,12 @@
 
     const-string v7, "Invalid custom escape definitions; custom escape not found for character code 0x"
 
-    .line 39
+    .line 41
     invoke-static {v7}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
+    .line 42
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -842,19 +954,20 @@
 
     move-result-object p2
 
+    .line 43
     invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
 
     :cond_4
     sub-int p2, p3, v5
 
-    .line 40
+    .line 44
     invoke-direct {p0, v1, v0, v6, p2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeCustomEscape([BILcom/fasterxml/jackson/core/SerializableString;I)I
 
     move-result p2
 
     goto :goto_1
 
-    .line 41
+    .line 45
     :cond_5
     invoke-direct {p0, p2, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeGenericEscape(II)I
 
@@ -865,7 +978,7 @@
     :cond_6
     if-le p2, v3, :cond_7
 
-    .line 42
+    .line 46
     invoke-direct {p0, p2, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeGenericEscape(II)I
 
     move-result p2
@@ -875,7 +988,7 @@
 
     goto :goto_2
 
-    .line 43
+    .line 47
     :cond_7
     invoke-virtual {v4, p2}, Lcom/fasterxml/jackson/core/io/CharacterEscapes;->getEscapeSequence(I)Lcom/fasterxml/jackson/core/SerializableString;
 
@@ -885,7 +998,7 @@
 
     sub-int p2, p3, v5
 
-    .line 44
+    .line 48
     invoke-direct {p0, v1, v0, v6, p2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeCustomEscape([BILcom/fasterxml/jackson/core/SerializableString;I)I
 
     move-result p2
@@ -905,7 +1018,7 @@
 
     int-to-byte v7, v7
 
-    .line 45
+    .line 49
     aput-byte v7, v1, v0
 
     add-int/lit8 v0, v6, 0x1
@@ -916,12 +1029,12 @@
 
     int-to-byte p2, p2
 
-    .line 46
+    .line 50
     aput-byte p2, v1, v6
 
     goto :goto_2
 
-    .line 47
+    .line 51
     :cond_9
     invoke-direct {p0, p2, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMultiByteChar(II)I
 
@@ -934,7 +1047,7 @@
 
     goto/16 :goto_0
 
-    .line 48
+    .line 52
     :cond_a
     iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
@@ -1057,6 +1170,7 @@
 
     move-result-object v7
 
+    .line 16
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -1071,19 +1185,20 @@
 
     move-result-object p2
 
+    .line 17
     invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
 
     :cond_4
     sub-int p2, p3, v5
 
-    .line 16
+    .line 18
     invoke-direct {p0, v1, v0, v6, p2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeCustomEscape([BILcom/fasterxml/jackson/core/SerializableString;I)I
 
     move-result p2
 
     goto :goto_1
 
-    .line 17
+    .line 19
     :cond_5
     invoke-direct {p0, p2, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeGenericEscape(II)I
 
@@ -1094,7 +1209,7 @@
     :cond_6
     if-le p2, v3, :cond_7
 
-    .line 18
+    .line 20
     invoke-direct {p0, p2, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeGenericEscape(II)I
 
     move-result p2
@@ -1104,7 +1219,7 @@
 
     goto :goto_2
 
-    .line 19
+    .line 21
     :cond_7
     invoke-virtual {v4, p2}, Lcom/fasterxml/jackson/core/io/CharacterEscapes;->getEscapeSequence(I)Lcom/fasterxml/jackson/core/SerializableString;
 
@@ -1114,7 +1229,7 @@
 
     sub-int p2, p3, v5
 
-    .line 20
+    .line 22
     invoke-direct {p0, v1, v0, v6, p2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeCustomEscape([BILcom/fasterxml/jackson/core/SerializableString;I)I
 
     move-result p2
@@ -1134,7 +1249,7 @@
 
     int-to-byte v7, v7
 
-    .line 21
+    .line 23
     aput-byte v7, v1, v0
 
     add-int/lit8 v0, v6, 0x1
@@ -1145,12 +1260,12 @@
 
     int-to-byte p2, p2
 
-    .line 22
+    .line 24
     aput-byte p2, v1, v6
 
     goto :goto_2
 
-    .line 23
+    .line 25
     :cond_9
     invoke-direct {p0, p2, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMultiByteChar(II)I
 
@@ -1163,7 +1278,7 @@
 
     goto/16 :goto_0
 
-    .line 24
+    .line 26
     :cond_a
     iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
@@ -1338,7 +1453,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v0, v1
 
@@ -1356,7 +1471,9 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, v0, p1
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v1, v0, p1
 
     return-void
 .end method
@@ -1391,7 +1508,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v0, v1
 
@@ -1409,7 +1526,9 @@
 
     iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, p2, p1
+    iget-byte v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v0, p2, p1
 
     return-void
 .end method
@@ -1442,7 +1561,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v2, 0x22
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v2, v0, v1
 
@@ -1469,7 +1588,71 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v2, p1, v0
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v1, p1, v0
+
+    return-void
+.end method
+
+.method private _writeQuotedRaw([CII)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 8
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt v0, v1, :cond_0
+
+    .line 9
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 10
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v2, v0, v1
+
+    .line 11
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw([CII)V
+
+    .line 12
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt p1, p2, :cond_1
+
+    .line 13
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 14
+    :cond_1
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 p3, p2, 0x1
+
+    iput p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget-byte p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte p3, p1, p2
 
     return-void
 .end method
@@ -1504,7 +1687,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v0, v1
 
@@ -1522,8 +1705,102 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, v0, p1
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
+    aput-byte v1, v0, p1
+
+    return-void
+.end method
+
+.method private _writeRawSegment([CII)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    :goto_0
+    if-ge p2, p3, :cond_3
+
+    .line 1
+    :cond_0
+    aget-char v0, p1, p2
+
+    const/16 v1, 0x7f
+
+    if-le v0, v1, :cond_2
+
+    add-int/lit8 v0, p2, 0x1
+
+    .line 2
+    aget-char p2, p1, p2
+
+    const/16 v1, 0x800
+
+    if-ge p2, v1, :cond_1
+
+    .line 3
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    shr-int/lit8 v4, p2, 0x6
+
+    or-int/lit16 v4, v4, 0xc0
+
+    int-to-byte v4, v4
+
+    aput-byte v4, v1, v2
+
+    add-int/lit8 v2, v3, 0x1
+
+    .line 4
+    iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    and-int/lit8 p2, p2, 0x3f
+
+    or-int/lit16 p2, p2, 0x80
+
+    int-to-byte p2, p2
+
+    aput-byte p2, v1, v3
+
+    move p2, v0
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    invoke-direct {p0, p2, p1, v0, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputRawMultiByteChar(I[CII)I
+
+    move-result p2
+
+    goto :goto_0
+
+    .line 6
+    :cond_2
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    int-to-byte v0, v0
+
+    aput-byte v0, v1, v2
+
+    add-int/lit8 p2, p2, 0x1
+
+    if-lt p2, p3, :cond_0
+
+    :cond_3
     return-void
 .end method
 
@@ -1531,8 +1808,7 @@
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -1541,6 +1817,8 @@
 
     .line 2
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    add-int/2addr p3, p2
 
     :goto_0
     if-ge p2, p3, :cond_5
@@ -2472,76 +2750,76 @@
 .end method
 
 .method private final _writeStringSegments(Ljava/lang/String;Z)V
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/16 v0, 0x22
-
     if-eqz p2, :cond_1
 
     .line 1
-    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
-    if-lt v1, v2, :cond_0
+    if-lt v0, v1, :cond_0
 
     .line 2
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
     .line 3
     :cond_0
-    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
-    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    add-int/lit8 v3, v2, 0x1
+    add-int/lit8 v2, v1, 0x1
 
-    iput v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v0, v1, v2
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v2, v0, v1
 
     .line 4
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    move-result v1
+    move-result v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-lez v1, :cond_3
+    if-lez v0, :cond_3
 
     .line 5
-    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMaxContiguous:I
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMaxContiguous:I
 
-    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
+    invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
 
-    move-result v3
+    move-result v2
 
     .line 6
-    iget v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    add-int/2addr v4, v3
+    add-int/2addr v3, v2
 
-    iget v5, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+    iget v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
-    if-le v4, v5, :cond_2
+    if-le v3, v4, :cond_2
 
     .line 7
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
     .line 8
     :cond_2
-    invoke-direct {p0, p1, v2, v3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeStringSegment(Ljava/lang/String;II)V
+    invoke-direct {p0, p1, v1, v2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeStringSegment(Ljava/lang/String;II)V
 
-    add-int/2addr v2, v3
+    add-int/2addr v1, v2
 
-    sub-int/2addr v1, v3
+    sub-int/2addr v0, v2
 
     goto :goto_0
 
@@ -2564,9 +2842,11 @@
 
     iget p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    add-int/lit8 v1, p2, 0x1
+    add-int/lit8 v0, p2, 0x1
 
-    iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget-byte v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v0, p1, p2
 
@@ -3026,94 +3306,6 @@
     return-void
 .end method
 
-.method public final _verifyPrettyValueWrite(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    if-eqz p2, :cond_3
-
-    const/4 p1, 0x1
-
-    if-eq p2, p1, :cond_2
-
-    const/4 p1, 0x2
-
-    if-eq p2, p1, :cond_1
-
-    const/4 p1, 0x3
-
-    if-eq p2, p1, :cond_0
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/JsonGenerator;->_throwInternal()V
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
-
-    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->writeRootValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
-
-    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->writeObjectFieldValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
-
-    goto :goto_0
-
-    .line 4
-    :cond_2
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
-
-    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->writeArrayValueSeparator(Lcom/fasterxml/jackson/core/JsonGenerator;)V
-
-    goto :goto_0
-
-    .line 5
-    :cond_3
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonStreamContext;->inArray()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    .line 6
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
-
-    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->beforeArrayValues(Lcom/fasterxml/jackson/core/JsonGenerator;)V
-
-    goto :goto_0
-
-    .line 7
-    :cond_4
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonStreamContext;->inObject()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    .line 8
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
-
-    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->beforeObjectEntries(Lcom/fasterxml/jackson/core/JsonGenerator;)V
-
-    :cond_5
-    :goto_0
-    return-void
-.end method
-
 .method public final _verifyValueWrite(Ljava/lang/String;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
@@ -3129,110 +3321,93 @@
 
     move-result v0
 
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_0
-
     .line 2
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Can not "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", expecting field name"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
-
-    .line 3
-    :cond_0
     iget-object v1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
 
-    if-nez v1, :cond_6
+    if-eqz v1, :cond_0
 
-    const/4 p1, 0x1
+    .line 3
+    invoke-virtual {p0, p1, v0}, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_verifyPrettyValueWrite(Ljava/lang/String;I)V
 
-    if-eq v0, p1, :cond_4
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_5
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v1, :cond_4
 
-    const/4 p1, 0x3
+    const/4 v1, 0x3
 
-    if-eq v0, p1, :cond_1
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_1
 
     return-void
 
     .line 4
     :cond_1
-    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_rootValueSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_reportCantWriteValueExpectName(Ljava/lang/String;)V
 
-    if-eqz p1, :cond_2
+    return-void
 
     .line 5
+    :cond_2
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_rootValueSeparator:Lcom/fasterxml/jackson/core/SerializableString;
+
+    if-eqz p1, :cond_3
+
+    .line 6
     invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->asUnquotedUTF8()[B
 
     move-result-object p1
 
-    .line 6
+    .line 7
     array-length v0, p1
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
-    .line 7
+    .line 8
     invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeBytes([B)V
 
-    :cond_2
+    :cond_3
     return-void
 
-    :cond_3
-    const/16 v0, 0x3a
+    :cond_4
+    const/16 p1, 0x3a
 
     goto :goto_0
 
-    :cond_4
-    const/16 v0, 0x2c
-
-    .line 8
-    :goto_0
-    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
-
-    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
-
-    if-lt v1, v2, :cond_5
+    :cond_5
+    const/16 p1, 0x2c
 
     .line 9
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+    :goto_0
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt v0, v1, :cond_6
 
     .line 10
-    :cond_5
-    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
-
-    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
-
-    aput-byte v0, v1, v2
-
-    add-int/2addr v2, p1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
     .line 11
+    :cond_6
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v2, v1, 0x1
+
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    return-void
-
-    .line 12
-    :cond_6
-    invoke-virtual {p0, p1, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyPrettyValueWrite(Ljava/lang/String;I)V
+    aput-byte p1, v0, v1
 
     return-void
 .end method
@@ -3808,7 +3983,7 @@
 .end method
 
 .method public final _writePPFieldName(Lcom/fasterxml/jackson/core/SerializableString;)V
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3859,65 +4034,89 @@
 
     xor-int/2addr v0, v1
 
-    const/16 v1, 0x22
-
     if-eqz v0, :cond_3
 
     .line 27
-    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
-    if-lt v2, v3, :cond_2
+    if-lt v1, v2, :cond_2
 
     .line 28
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
     .line 29
     :cond_2
-    iget-object v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
-    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    add-int/lit8 v4, v3, 0x1
+    add-int/lit8 v3, v2, 0x1
 
-    iput v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iput v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v1, v2, v3
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v3, v1, v2
 
     .line 30
     :cond_3
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    invoke-interface {p1, v1, v2}, Lcom/fasterxml/jackson/core/SerializableString;->appendQuotedUTF8([BI)I
+
+    move-result v1
+
+    if-gez v1, :cond_4
+
+    .line 31
     invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->asQuotedUTF8()[B
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeBytes([B)V
 
-    if-eqz v0, :cond_5
+    goto :goto_1
 
-    .line 31
+    .line 32
+    :cond_4
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/2addr p1, v1
+
+    iput p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    :goto_1
+    if-eqz v0, :cond_6
+
+    .line 33
     iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
-    if-lt p1, v0, :cond_4
+    if-lt p1, v0, :cond_5
 
-    .line 32
+    .line 34
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 33
-    :cond_4
+    .line 35
+    :cond_5
     iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    add-int/lit8 v2, v0, 0x1
+    add-int/lit8 v1, v0, 0x1
 
-    iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+    iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v1, p1, v0
 
-    :cond_5
+    :cond_6
     return-void
 .end method
 
@@ -4013,7 +4212,7 @@
 
     iput v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v4, 0x22
+    iget-byte v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v4, v1, v3
 
@@ -4074,7 +4273,9 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v4, p1, v0
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v1, p1, v0
 
     return-void
 .end method
@@ -4097,31 +4298,32 @@
 
     sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->AUTO_CLOSE_JSON_CONTENT:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->isEnabled(Lcom/fasterxml/jackson/core/JsonGenerator$Feature;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3
+    .line 4
     :goto_0
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->getOutputContext()Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->getOutputContext()Lcom/fasterxml/jackson/core/JsonStreamContext;
 
     move-result-object v0
 
-    .line 4
+    .line 5
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonStreamContext;->inArray()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 5
+    .line 6
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeEndArray()V
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_0
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonStreamContext;->inObject()Z
 
@@ -4129,26 +4331,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
+    .line 8
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeEndObject()V
 
     goto :goto_0
 
-    .line 8
+    .line 9
     :cond_1
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
     const/4 v0, 0x0
 
-    .line 9
+    .line 10
     iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    .line 10
+    .line 11
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputStream:Ljava/io/OutputStream;
 
     if-eqz v0, :cond_4
 
-    .line 11
+    .line 12
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/JsonGeneratorImpl;->_ioContext:Lcom/fasterxml/jackson/core/io/IOContext;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/io/IOContext;->isResourceManaged()Z
@@ -4167,7 +4369,7 @@
 
     goto :goto_1
 
-    .line 12
+    .line 13
     :cond_2
     sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->FLUSH_PASSED_TO_STREAM:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
@@ -4177,21 +4379,21 @@
 
     if-eqz v0, :cond_4
 
-    .line 13
+    .line 14
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
     goto :goto_2
 
-    .line 14
+    .line 15
     :cond_3
     :goto_1
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 15
+    .line 16
     :cond_4
     :goto_2
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_releaseBuffers()V
@@ -4285,7 +4487,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v2, 0x22
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v2, v0, v1
 
@@ -4370,7 +4572,9 @@
 
     iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v2, p1, p2
+    iget-byte v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v0, p1, p2
 
     return p3
 
@@ -4382,6 +4586,7 @@
 
     invoke-virtual {p2, v0}, Lcom/fasterxml/jackson/core/io/IOContext;->releaseBase64Buffer([B)V
 
+    .line 22
     throw p1
 .end method
 
@@ -4419,7 +4624,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v2, 0x22
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v2, v0, v1
 
@@ -4448,7 +4653,9 @@
 
     iput p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v2, p1, p2
+    iget-byte p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte p3, p1, p2
 
     return-void
 .end method
@@ -4529,7 +4736,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "Current context not an ARRAY but "
+    const-string v0, "Current context not Array but "
 
     .line 2
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -4538,7 +4745,7 @@
 
     iget-object v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
 
-    invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonStreamContext;->getTypeDesc()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonStreamContext;->typeDesc()Ljava/lang/String;
 
     move-result-object v1
 
@@ -4622,7 +4829,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "Current context not an object but "
+    const-string v0, "Current context not Object but "
 
     .line 2
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -4631,7 +4838,7 @@
 
     iget-object v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
 
-    invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonStreamContext;->getTypeDesc()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonStreamContext;->typeDesc()Ljava/lang/String;
 
     move-result-object v1
 
@@ -4798,7 +5005,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v0, v1
 
@@ -4847,7 +5054,9 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, p1, v0
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v1, p1, v0
 
     return-void
 .end method
@@ -4966,7 +5175,7 @@
 
     iput v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v5, 0x22
+    iget-byte v5, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v5, v1, v3
 
@@ -5016,7 +5225,9 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v5, p1, v0
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v1, p1, v0
 
     return-void
 .end method
@@ -5051,40 +5262,35 @@
     .line 24
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->isInfinite(D)Z
+    .line 25
+    invoke-static {p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->notFinite(D)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
     sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->QUOTE_NON_NUMERIC_NUMBERS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     iget v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
 
+    .line 26
     invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     const-string v0, "write a number"
 
-    .line 25
+    .line 27
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
-    .line 26
+    .line 28
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
     move-result-object p1
@@ -5093,8 +5299,8 @@
 
     return-void
 
-    .line 27
-    :cond_2
+    .line 29
+    :cond_1
     :goto_0
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
@@ -5113,43 +5319,38 @@
         }
     .end annotation
 
-    .line 28
+    .line 30
     iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p1}, Ljava/lang/Float;->isInfinite(F)Z
+    .line 31
+    invoke-static {p1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->notFinite(F)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
     sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->QUOTE_NON_NUMERIC_NUMBERS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     iget v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
 
+    .line 32
     invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     const-string v0, "write a number"
 
-    .line 29
+    .line 33
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
-    .line 30
+    .line 34
     invoke-static {p1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object p1
@@ -5158,8 +5359,8 @@
 
     return-void
 
-    .line 31
-    :cond_2
+    .line 35
+    :cond_1
     :goto_0
     invoke-static {p1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
@@ -5282,21 +5483,29 @@
 
     const-string v0, "write a number"
 
-    .line 40
+    .line 41
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
-    .line 41
-    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
-
-    if-eqz v0, :cond_0
+    if-nez p1, :cond_0
 
     .line 42
-    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeQuotedRaw(Ljava/lang/String;)V
+    invoke-direct {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeNull()V
 
     goto :goto_0
 
     .line 43
     :cond_0
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
+
+    if-eqz v0, :cond_1
+
+    .line 44
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeQuotedRaw(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 45
+    :cond_1
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw(Ljava/lang/String;)V
 
     :goto_0
@@ -5304,7 +5513,7 @@
 .end method
 
 .method public writeNumber(Ljava/math/BigDecimal;)V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -5313,80 +5522,40 @@
 
     const-string v0, "write a number"
 
-    .line 32
+    .line 36
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
-    .line 33
+    .line 37
     invoke-direct {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeNull()V
-
-    goto :goto_1
-
-    .line 34
-    :cond_0
-    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
-
-    if-eqz v0, :cond_2
-
-    .line 35
-    sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
-
-    iget v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
-
-    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
-
-    move-result-object p1
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 36
-    :goto_0
-    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeQuotedRaw(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 37
-    :cond_2
-    sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
-
-    iget v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
-
-    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
     .line 38
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
+    :cond_0
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
 
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw(Ljava/lang/String;)V
-
-    goto :goto_1
+    if-eqz v0, :cond_1
 
     .line 39
-    :cond_3
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_asString(Ljava/math/BigDecimal;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeQuotedRaw(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 40
+    :cond_1
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_asString(Ljava/math/BigDecimal;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw(Ljava/lang/String;)V
 
-    :goto_1
+    :goto_0
     return-void
 .end method
 
@@ -5488,16 +5657,46 @@
     return-void
 .end method
 
+.method public writeNumber([CII)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "write a number"
+
+    .line 46
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
+
+    .line 47
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
+
+    if-eqz v0, :cond_0
+
+    .line 48
+    invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeQuotedRaw([CII)V
+
+    goto :goto_0
+
+    .line 49
+    :cond_0
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw([CII)V
+
+    :goto_0
+    return-void
+.end method
+
 .method public writeRaw(C)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .line 22
+    .line 30
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     add-int/lit8 v0, v0, 0x3
@@ -5506,10 +5705,10 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 23
+    .line 31
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 24
+    .line 32
     :cond_0
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
@@ -5517,7 +5716,7 @@
 
     if-gt p1, v1, :cond_1
 
-    .line 25
+    .line 33
     iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     add-int/lit8 v2, v1, 0x1
@@ -5535,7 +5734,7 @@
 
     if-ge p1, v1, :cond_2
 
-    .line 26
+    .line 34
     iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     add-int/lit8 v2, v1, 0x1
@@ -5552,7 +5751,7 @@
 
     add-int/lit8 v1, v2, 0x1
 
-    .line 27
+    .line 35
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     and-int/lit8 p1, p1, 0x3f
@@ -5570,7 +5769,7 @@
 
     const/4 v1, 0x0
 
-    .line 28
+    .line 36
     invoke-direct {p0, p1, v0, v1, v1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputRawMultiByteChar(I[CII)I
 
     :goto_0
@@ -5578,37 +5777,50 @@
 .end method
 
 .method public writeRaw(Lcom/fasterxml/jackson/core/SerializableString;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .line 10
+    .line 18
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    invoke-interface {p1, v0, v1}, Lcom/fasterxml/jackson/core/SerializableString;->appendUnquotedUTF8([BI)I
+
+    move-result v0
+
+    if-gez v0, :cond_0
+
+    .line 19
     invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->asUnquotedUTF8()[B
 
     move-result-object p1
 
-    .line 11
-    array-length v0, p1
-
-    if-lez v0, :cond_0
-
-    .line 12
     invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeBytes([B)V
 
+    goto :goto_0
+
+    .line 20
     :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    :goto_0
     return-void
 .end method
 
 .method public writeRaw(Ljava/lang/String;)V
-    .locals 6
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -5617,82 +5829,132 @@
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-lez v0, :cond_1
-
     .line 2
-    iget-object v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBuffer:[C
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBuffer:[C
 
     .line 3
-    array-length v4, v3
+    array-length v2, v1
 
-    if-ge v0, v4, :cond_0
+    const/4 v3, 0x0
 
-    move v4, v0
-
-    :cond_0
-    add-int v5, v2, v4
+    if-gt v0, v2, :cond_0
 
     .line 4
-    invoke-virtual {p1, v2, v5, v3, v1}, Ljava/lang/String;->getChars(II[CI)V
+    invoke-virtual {p1, v3, v0, v1, v3}, Ljava/lang/String;->getChars(II[CI)V
 
     .line 5
-    invoke-virtual {p0, v3, v1, v4}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw([CII)V
-
-    sub-int/2addr v0, v4
-
-    move v2, v5
+    invoke-virtual {p0, v1, v3, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw([CII)V
 
     goto :goto_0
 
-    :cond_1
+    .line 6
+    :cond_0
+    invoke-virtual {p0, p1, v3, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw(Ljava/lang/String;II)V
+
+    :goto_0
     return-void
 .end method
 
 .method public writeRaw(Ljava/lang/String;II)V
-    .locals 4
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    :goto_0
-    if-lez p3, :cond_1
-
-    .line 6
+    .line 7
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBuffer:[C
 
-    .line 7
+    .line 8
     array-length v1, v0
 
-    if-ge p3, v1, :cond_0
+    const/4 v2, 0x0
 
-    move v1, p3
+    if-gt p3, v1, :cond_0
 
-    :cond_0
-    add-int v2, p2, v1
-
-    const/4 v3, 0x0
-
-    .line 8
-    invoke-virtual {p1, p2, v2, v0, v3}, Ljava/lang/String;->getChars(II[CI)V
+    add-int v1, p2, p3
 
     .line 9
-    invoke-virtual {p0, v0, v3, v1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw([CII)V
+    invoke-virtual {p1, p2, v1, v0, v2}, Ljava/lang/String;->getChars(II[CI)V
 
-    sub-int/2addr p3, v1
+    .line 10
+    invoke-virtual {p0, v0, v2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->writeRaw([CII)V
 
-    move p2, v2
+    return-void
+
+    .line 11
+    :cond_0
+    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    shr-int/lit8 v4, v3, 0x2
+
+    shr-int/lit8 v3, v3, 0x4
+
+    add-int/2addr v4, v3
+
+    invoke-static {v1, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    mul-int/lit8 v3, v1, 0x3
+
+    :goto_0
+    if-lez p3, :cond_3
+
+    .line 12
+    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    add-int v5, p2, v4
+
+    .line 13
+    invoke-virtual {p1, p2, v5, v0, v2}, Ljava/lang/String;->getChars(II[CI)V
+
+    .line 14
+    iget v5, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/2addr v5, v3
+
+    iget v6, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-le v5, v6, :cond_1
+
+    .line 15
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    :cond_1
+    const/4 v5, 0x1
+
+    if-le v4, v5, :cond_2
+
+    add-int/lit8 v5, v4, -0x1
+
+    .line 16
+    aget-char v5, v0, v5
+
+    const v6, 0xd800
+
+    if-lt v5, v6, :cond_2
+
+    const v6, 0xdbff
+
+    if-gt v5, v6, :cond_2
+
+    add-int/lit8 v4, v4, -0x1
+
+    .line 17
+    :cond_2
+    invoke-direct {p0, v0, v2, v4}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeRawSegment([CII)V
+
+    add-int/2addr p2, v4
+
+    sub-int/2addr p3, v4
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     return-void
 .end method
 
@@ -5700,8 +5962,7 @@
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonGenerationException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -5709,7 +5970,7 @@
 
     add-int/2addr v0, p3
 
-    .line 13
+    .line 21
     iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     add-int/2addr v1, v0
@@ -5720,12 +5981,12 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 14
+    .line 22
     invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeSegmentedRaw([CII)V
 
     return-void
 
-    .line 15
+    .line 23
     :cond_0
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
@@ -5735,7 +5996,7 @@
     :goto_0
     if-ge p2, p3, :cond_5
 
-    .line 16
+    .line 24
     :cond_2
     aget-char v0, p1, p2
 
@@ -5745,14 +6006,14 @@
 
     add-int/lit8 v0, p2, 0x1
 
-    .line 17
+    .line 25
     aget-char p2, p1, p2
 
     const/16 v1, 0x800
 
     if-ge p2, v1, :cond_3
 
-    .line 18
+    .line 26
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
     iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
@@ -5771,7 +6032,7 @@
 
     add-int/lit8 v2, v3, 0x1
 
-    .line 19
+    .line 27
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     and-int/lit8 p2, p2, 0x3f
@@ -5786,7 +6047,7 @@
 
     goto :goto_0
 
-    .line 20
+    .line 28
     :cond_3
     invoke-direct {p0, p2, p1, v0, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputRawMultiByteChar(I[CII)I
 
@@ -5794,7 +6055,7 @@
 
     goto :goto_0
 
-    .line 21
+    .line 29
     :cond_4
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
@@ -5849,7 +6110,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v2, 0x22
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v2, v0, v1
 
@@ -5876,13 +6137,15 @@
 
     iput p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v2, p1, p2
+    iget-byte p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte p3, p1, p2
 
     return-void
 .end method
 
 .method public writeRawValue(Lcom/fasterxml/jackson/core/SerializableString;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -5895,19 +6158,34 @@
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
     .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    invoke-interface {p1, v0, v1}, Lcom/fasterxml/jackson/core/SerializableString;->appendUnquotedUTF8([BI)I
+
+    move-result v0
+
+    if-gez v0, :cond_0
+
+    .line 3
     invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->asUnquotedUTF8()[B
 
     move-result-object p1
 
-    .line 3
-    array-length v0, p1
-
-    if-lez v0, :cond_0
-
-    .line 4
     invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeBytes([B)V
 
+    goto :goto_0
+
+    .line 4
     :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    :goto_0
     return-void
 .end method
 
@@ -5967,6 +6245,128 @@
     const/16 v2, 0x5b
 
     aput-byte v2, v0, v1
+
+    :goto_0
+    return-void
+.end method
+
+.method public final writeStartArray(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "start an array"
+
+    .line 8
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
+
+    .line 9
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/json/JsonWriteContext;->createChildArrayContext(Ljava/lang/Object;)Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    .line 10
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
+
+    if-eqz p1, :cond_0
+
+    .line 11
+    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->writeStartArray(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt p1, v0, :cond_1
+
+    .line 13
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 14
+    :cond_1
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    const/16 v1, 0x5b
+
+    aput-byte v1, p1, v0
+
+    :goto_0
+    return-void
+.end method
+
+.method public writeStartArray(Ljava/lang/Object;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string p2, "start an array"
+
+    .line 15
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
+
+    .line 16
+    iget-object p2, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    invoke-virtual {p2, p1}, Lcom/fasterxml/jackson/core/json/JsonWriteContext;->createChildArrayContext(Ljava/lang/Object;)Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    .line 17
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
+
+    if-eqz p1, :cond_0
+
+    .line 18
+    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->writeStartArray(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt p1, p2, :cond_1
+
+    .line 20
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 21
+    :cond_1
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget p2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v0, p2, 0x1
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    const/16 v0, 0x5b
+
+    aput-byte v0, p1, p2
 
     :goto_0
     return-void
@@ -6033,6 +6433,68 @@
     return-void
 .end method
 
+.method public writeStartObject(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "start an object"
+
+    .line 8
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
+
+    .line 9
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/json/JsonWriteContext;->createChildObjectContext(Ljava/lang/Object;)Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    move-result-object p1
+
+    .line 10
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    .line 11
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/JsonGenerator;->_cfgPrettyPrinter:Lcom/fasterxml/jackson/core/PrettyPrinter;
+
+    if-eqz p1, :cond_0
+
+    .line 12
+    invoke-interface {p1, p0}, Lcom/fasterxml/jackson/core/PrettyPrinter;->writeStartObject(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+
+    goto :goto_0
+
+    .line 13
+    :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt p1, v0, :cond_1
+
+    .line 14
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 15
+    :cond_1
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    const/16 v1, 0x7b
+
+    aput-byte v1, p1, v0
+
+    :goto_0
+    return-void
+.end method
+
 .method public final writeString(Lcom/fasterxml/jackson/core/SerializableString;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
@@ -6043,20 +6505,20 @@
 
     const-string v0, "write a string"
 
-    .line 25
+    .line 40
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
-    .line 26
+    .line 41
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
     if-lt v0, v1, :cond_0
 
-    .line 27
+    .line 42
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 28
+    .line 43
     :cond_0
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
@@ -6066,18 +6528,18 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v0, v1
 
-    .line 29
+    .line 44
     invoke-interface {p1, v0, v2}, Lcom/fasterxml/jackson/core/SerializableString;->appendQuotedUTF8([BI)I
 
     move-result v0
 
     if-gez v0, :cond_1
 
-    .line 30
+    .line 45
     invoke-interface {p1}, Lcom/fasterxml/jackson/core/SerializableString;->asQuotedUTF8()[B
 
     move-result-object p1
@@ -6086,7 +6548,7 @@
 
     goto :goto_0
 
-    .line 31
+    .line 46
     :cond_1
     iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
@@ -6094,7 +6556,7 @@
 
     iput p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    .line 32
+    .line 47
     :goto_0
     iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
@@ -6102,10 +6564,10 @@
 
     if-lt p1, v0, :cond_2
 
-    .line 33
+    .line 48
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 34
+    .line 49
     :cond_2
     iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
@@ -6115,8 +6577,151 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, p1, v0
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
+    aput-byte v1, p1, v0
+
+    return-void
+.end method
+
+.method public writeString(Ljava/io/Reader;I)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "write a string"
+
+    .line 13
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
+
+    if-nez p1, :cond_0
+
+    const-string p1, "null reader"
+
+    .line 14
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    if-ltz p2, :cond_1
+
+    move v0, p2
+
+    goto :goto_0
+
+    :cond_1
+    const v0, 0x7fffffff
+
+    .line 15
+    :goto_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_charBuffer:[C
+
+    .line 16
+    iget v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt v2, v3, :cond_2
+
+    .line 17
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 18
+    :cond_2
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget-byte v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v4, v2, v3
+
+    :goto_1
+    if-lez v0, :cond_5
+
+    .line 19
+    array-length v2, v1
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    .line 20
+    invoke-virtual {p1, v1, v3, v2}, Ljava/io/Reader;->read([CII)I
+
+    move-result v2
+
+    if-gtz v2, :cond_3
+
+    goto :goto_2
+
+    .line 21
+    :cond_3
+    iget v4, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/2addr v4, p2
+
+    iget v5, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt v4, v5, :cond_4
+
+    .line 22
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 23
+    :cond_4
+    invoke-direct {p0, v1, v3, v2}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeStringSegments([CII)V
+
+    sub-int/2addr v0, v2
+
+    goto :goto_1
+
+    .line 24
+    :cond_5
+    :goto_2
+    iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
+
+    if-lt p1, v1, :cond_6
+
+    .line 25
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
+
+    .line 26
+    :cond_6
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
+
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v2, p1, v1
+
+    if-lez v0, :cond_7
+
+    if-ltz p2, :cond_7
+
+    const-string p1, "Didn\'t read enough from reader"
+
+    .line 27
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
+
+    :cond_7
     return-void
 .end method
 
@@ -6181,7 +6786,7 @@
 
     iput v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v1, v2
 
@@ -6210,7 +6815,9 @@
 
     iput v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, p1, v0
+    iget-byte v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte v1, p1, v0
 
     return-void
 .end method
@@ -6225,20 +6832,20 @@
 
     const-string v0, "write a string"
 
-    .line 13
+    .line 28
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_verifyValueWrite(Ljava/lang/String;)V
 
-    .line 14
+    .line 29
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
     iget v1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
     if-lt v0, v1, :cond_0
 
-    .line 15
+    .line 30
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 16
+    .line 31
     :cond_0
     iget-object v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
@@ -6248,36 +6855,36 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v3, 0x22
+    iget-byte v3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v3, v0, v1
 
-    .line 17
+    .line 32
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputMaxContiguous:I
 
     if-gt p3, v0, :cond_2
 
     add-int/2addr v2, p3
 
-    .line 18
+    .line 33
     iget v0, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputEnd:I
 
     if-le v2, v0, :cond_1
 
-    .line 19
+    .line 34
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 20
+    .line 35
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeStringSegment([CII)V
 
     goto :goto_0
 
-    .line 21
+    .line 36
     :cond_2
     invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_writeStringSegments([CII)V
 
-    .line 22
+    .line 37
     :goto_0
     iget p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
@@ -6285,10 +6892,10 @@
 
     if-lt p1, p2, :cond_3
 
-    .line 23
+    .line 38
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_flushBuffer()V
 
-    .line 24
+    .line 39
     :cond_3
     iget-object p1, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputBuffer:[B
 
@@ -6298,7 +6905,9 @@
 
     iput p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v3, p1, p2
+    iget-byte p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte p3, p1, p2
 
     return-void
 .end method
@@ -6336,7 +6945,7 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    const/16 v2, 0x22
+    iget-byte v2, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
 
     aput-byte v2, v0, v1
 
@@ -6375,7 +6984,9 @@
 
     iput p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_outputTail:I
 
-    aput-byte v2, p1, p2
+    iget-byte p3, p0, Lcom/fasterxml/jackson/core/json/UTF8JsonGenerator;->_quoteChar:B
+
+    aput-byte p3, p1, p2
 
     return-void
 .end method

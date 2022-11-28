@@ -38,13 +38,13 @@
 
 .field public static final abc_tooltip_exit:I = 0x7f01000b
 
-.field public static final design_bottom_sheet_slide_in:I = 0x7f010019
+.field public static final design_bottom_sheet_slide_in:I = 0x7f010018
 
-.field public static final design_bottom_sheet_slide_out:I = 0x7f01001a
+.field public static final design_bottom_sheet_slide_out:I = 0x7f010019
 
-.field public static final design_snackbar_in:I = 0x7f01001b
+.field public static final design_snackbar_in:I = 0x7f01001a
 
-.field public static final design_snackbar_out:I = 0x7f01001c
+.field public static final design_snackbar_out:I = 0x7f01001b
 
 
 # direct methods

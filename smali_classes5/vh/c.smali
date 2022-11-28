@@ -1,37 +1,16 @@
 .class public interface abstract Lvh/c;
 .super Ljava/lang/Object;
-.source "ParallelTransformer.java"
+.source "ConnManagerPNames.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<Upstream:",
-        "Ljava/lang/Object;",
-        "Downstream:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# virtual methods
-.method public abstract a(Lvh/a;)Lvh/a;
-    .param p1    # Lvh/a;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lvh/a<",
-            "TUpstream;>;)",
-            "Lvh/a<",
-            "TDownstream;>;"
-        }
-    .end annotation
+# static fields
+.field public static final M:Ljava/lang/String; = "http.conn-manager.timeout"
 
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end method
+.field public static final N:Ljava/lang/String; = "http.conn-manager.max-per-route"
+
+.field public static final O:Ljava/lang/String; = "http.conn-manager.max-total"

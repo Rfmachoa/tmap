@@ -121,7 +121,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {p0, v0}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -140,7 +140,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {p0, v0}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p0
 

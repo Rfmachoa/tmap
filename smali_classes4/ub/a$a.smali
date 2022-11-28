@@ -1,14 +1,14 @@
 .class public Lub/a$a;
 .super Ljava/lang/Object;
-.source "TmapTestAudioFileWrite.java"
+.source "OpenMediaPlayerWrapper.java"
 
 # interfaces
-.implements Lub/c$a;
+.implements Ltb/c;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lub/a;->h(Landroid/content/Context;Ljava/lang/String;I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lub/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,35 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Landroid/content/Context;
+.field public final synthetic a:Lub/a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILandroid/content/Context;)V
+.method public constructor <init>(Lub/a;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "val$name",
-            "val$index",
-            "val$context"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Lub/a$a;->a:Ljava/lang/String;
-
-    iput p2, p0, Lub/a$a;->b:I
-
-    iput-object p3, p0, Lub/a$a;->c:Landroid/content/Context;
+    iput-object p1, p0, Lub/a$a;->a:Lub/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,82 +35,71 @@
 
 
 # virtual methods
-.method public onResponseComplete(Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-    .param p1    # Ljava/util/ArrayList;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "buffers",
-            "successWord",
-            "failWord"
-        }
-    .end annotation
-
+.method public a(Lrb/a;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "[B>;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
+            "<T:",
+            "Lrb/a;",
+            ">(TT;)V"
         }
     .end annotation
 
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
     .line 1
-    iget-object p2, p0, Lub/a$a;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Lrb/a;->a()Ljava/lang/String;
 
-    iget p3, p0, Lub/a$a;->b:I
+    move-result-object v1
 
-    sget-object v0, Lub/a;->c:[[Ljava/lang/String;
+    const/4 v2, 0x0
 
-    aget-object v0, v0, p3
+    aput-object v1, v0, v2
 
-    invoke-static {p2, p3, v0, p1}, Lub/a;->f(Ljava/lang/String;I[Ljava/lang/String;Ljava/util/ArrayList;)V
+    const/4 v1, 0x1
+
+    aput-object p1, v0, v1
+
+    const-string v1, "onSendEvent(eventInfo:%s) : %s"
+
+    invoke-static {v1, v0}, Lcom/skt/aicloud/mobile/service/util/z;->i(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpenMediaPlayerWrapper"
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object p1, p0, Lub/a$a;->c:Landroid/content/Context;
+    instance-of v0, p1, Lrb/b;
 
-    iget-object p2, p0, Lub/a$a;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    iget p3, p0, Lub/a$a;->b:I
+    .line 3
+    iget-object v0, p0, Lub/a$a;->a:Lub/a;
 
-    add-int/lit8 p3, p3, 0x1
+    invoke-static {v0}, Lub/a;->n0(Lub/a;)Landroid/content/Context;
 
-    invoke-static {p1, p2, p3}, Lub/a;->h(Landroid/content/Context;Ljava/lang/String;I)V
+    move-result-object v0
 
-    return-void
-.end method
+    sget v1, Lcom/skt/aicloud/speaker/service/R$string;->tts_play_error_open_platform:I
 
-.method public onResponseFail()V
-    .locals 3
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 1
-    iget-object v0, p0, Lub/a$a;->c:Landroid/content/Context;
+    move-result-object v0
 
-    iget-object v1, p0, Lub/a$a;->a:Ljava/lang/String;
+    .line 4
+    iget-object v1, p0, Lub/a$a;->a:Lub/a;
 
-    iget v2, p0, Lub/a$a;->b:I
+    invoke-static {v1, v0}, Lub/a;->o0(Lub/a;Ljava/lang/String;)V
 
-    add-int/lit8 v2, v2, 0x1
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lub/a$a;->a:Lub/a;
 
-    invoke-static {v0, v1, v2}, Lub/a;->h(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, p1}, Lub/a;->p0(Lub/a;Lrb/a;)V
 
     return-void
 .end method

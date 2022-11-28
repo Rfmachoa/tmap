@@ -49,9 +49,19 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$g;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Y1()Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->P1(Z)V
+    move-result-object v0
 
+    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/AsrState;->SPEECH_END:Lcom/skt/aicloud/speaker/lib/state/AsrState;
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$g;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->l1()V
+
+    :cond_0
     return-void
 .end method

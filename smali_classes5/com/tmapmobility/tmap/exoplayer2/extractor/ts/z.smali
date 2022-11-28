@@ -18,7 +18,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/util/i0;JJII)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/util/j0;JJII)V
     .locals 16
 
     .line 1
@@ -34,7 +34,7 @@
 
     move/from16 v4, p7
 
-    invoke-direct {v2, v3, v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/z$a;-><init>(ILcom/tmapmobility/tmap/exoplayer2/util/i0;I)V
+    invoke-direct {v2, v3, v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/z$a;-><init>(ILcom/tmapmobility/tmap/exoplayer2/util/j0;I)V
 
     const-wide/16 v3, 0x1
 

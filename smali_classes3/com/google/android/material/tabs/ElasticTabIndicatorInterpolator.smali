@@ -77,7 +77,7 @@
 
 
 # virtual methods
-.method public setIndicatorBoundsForOffset(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;Landroid/view/View;FLandroid/graphics/drawable/Drawable;)V
+.method public updateIndicatorForOffset(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;Landroid/view/View;FLandroid/graphics/drawable/Drawable;)V
     .locals 2
     .param p5    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/NonNull;

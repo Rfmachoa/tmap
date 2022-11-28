@@ -53,7 +53,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->n6(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->w6(Z)V
 
     return-void
 .end method

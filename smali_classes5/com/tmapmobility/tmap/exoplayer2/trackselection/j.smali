@@ -40,7 +40,7 @@
 
     check-cast p2, Ljava/util/List;
 
-    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->c(Ljava/util/List;Ljava/util/List;)I
+    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c(Ljava/util/List;Ljava/util/List;)I
 
     move-result p1
 

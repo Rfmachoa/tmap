@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/db/SearchHistoryDatabase;->B(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
+    value = Lcom/skt/tmap/db/SearchHistoryDatabase;->N(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,9 +26,9 @@
 
 
 # virtual methods
-.method public a(Lc3/c;)V
+.method public a(Lj4/d;)V
     .locals 0
-    .param p1    # Lc3/c;
+    .param p1    # Lj4/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -42,14 +42,14 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/room/RoomDatabase$b;->a(Lc3/c;)V
+    invoke-super {p0, p1}, Landroidx/room/RoomDatabase$b;->a(Lj4/d;)V
 
     return-void
 .end method
 
-.method public c(Lc3/c;)V
+.method public c(Lj4/d;)V
     .locals 0
-    .param p1    # Lc3/c;
+    .param p1    # Lj4/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -63,7 +63,7 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/room/RoomDatabase$b;->c(Lc3/c;)V
+    invoke-super {p0, p1}, Landroidx/room/RoomDatabase$b;->c(Lj4/d;)V
 
     return-void
 .end method

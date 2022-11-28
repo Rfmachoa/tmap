@@ -37,16 +37,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "lifecycleOwner",
-            "cameraId"
-        }
-    .end annotation
 
     .line 1
     new-instance v0, Landroidx/camera/lifecycle/a;

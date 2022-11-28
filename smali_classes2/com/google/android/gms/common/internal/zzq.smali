@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/internal/zzq;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -24,7 +24,7 @@
 
 # virtual methods
 .method public final handleMessage(Landroid/os/Message;)Z
-    .locals 7
+    .locals 6
 
     .line 1
     iget v0, p1, Landroid/os/Message;->what:I
@@ -78,38 +78,32 @@
 
     if-ne v3, v4, :cond_3
 
-    const-string v3, "GmsClientSupervisor"
-
     .line 5
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result v5
-
-    add-int/lit8 v5, v5, 0x2f
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "Timeout waiting for ServiceConnection callback "
 
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v4, Ljava/lang/Exception;
+    new-instance v3, Ljava/lang/Exception;
 
-    invoke-direct {v4}, Ljava/lang/Exception;-><init>()V
+    invoke-direct {v3}, Ljava/lang/Exception;-><init>()V
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v5, "GmsClientSupervisor"
 
-    move-result-object v5
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v3, v5, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    move-result-object v4
+
+    invoke-static {v5, v4, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     invoke-virtual {v2}, Lcom/google/android/gms/common/internal/zzo;->zzb()Landroid/content/ComponentName;
 

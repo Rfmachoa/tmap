@@ -433,7 +433,7 @@
     :goto_0
     const-string p0, "DateTimeHelper"
 
-    const-string/jumbo p1, "toDaysAsOfCurrentTime(): milliseconds must be more than 0 and less than current time"
+    const-string p1, "toDaysAsOfCurrentTime(): milliseconds must be more than 0 and less than current time"
 
     .line 3
     invoke-static {p0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V

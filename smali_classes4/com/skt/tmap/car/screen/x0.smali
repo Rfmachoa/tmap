@@ -3,40 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/SearchScreen;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NearScreen;
 
-.field public final synthetic b:Lcom/skt/tmap/mvp/viewmodel/userdata/RecentLocalRepository;
+.field public final synthetic b:Lcom/skt/tmap/network/ndds/dto/poi/code/PoiCateCode;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SearchScreen;Lcom/skt/tmap/mvp/viewmodel/userdata/RecentLocalRepository;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NearScreen;Lcom/skt/tmap/network/ndds/dto/poi/code/PoiCateCode;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/x0;->a:Lcom/skt/tmap/car/screen/SearchScreen;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/x0;->a:Lcom/skt/tmap/car/screen/NearScreen;
 
-    iput-object p2, p0, Lcom/skt/tmap/car/screen/x0;->b:Lcom/skt/tmap/mvp/viewmodel/userdata/RecentLocalRepository;
+    iput-object p2, p0, Lcom/skt/tmap/car/screen/x0;->b:Lcom/skt/tmap/network/ndds/dto/poi/code/PoiCateCode;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/x0;->a:Lcom/skt/tmap/car/screen/SearchScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/x0;->a:Lcom/skt/tmap/car/screen/NearScreen;
 
-    iget-object v1, p0, Lcom/skt/tmap/car/screen/x0;->b:Lcom/skt/tmap/mvp/viewmodel/userdata/RecentLocalRepository;
+    iget-object v1, p0, Lcom/skt/tmap/car/screen/x0;->b:Lcom/skt/tmap/network/ndds/dto/poi/code/PoiCateCode;
 
-    check-cast p1, Ljava/util/List;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/car/screen/SearchScreen;->L(Lcom/skt/tmap/car/screen/SearchScreen;Lcom/skt/tmap/mvp/viewmodel/userdata/RecentLocalRepository;Ljava/util/List;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/car/screen/NearScreen;->J(Lcom/skt/tmap/car/screen/NearScreen;Lcom/skt/tmap/network/ndds/dto/poi/code/PoiCateCode;)V
 
     return-void
 .end method

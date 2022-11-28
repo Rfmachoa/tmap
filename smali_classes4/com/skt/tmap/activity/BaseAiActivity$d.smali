@@ -3,7 +3,7 @@
 .source "BaseAiActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/util/l0$f;
+.implements Lcom/skt/tmap/util/r0$f;
 
 
 # annotations
@@ -57,7 +57,7 @@
 
     iget v1, p0, Lcom/skt/tmap/activity/BaseAiActivity$d;->a:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->G6(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->P6(I)V
 
     return-void
 .end method

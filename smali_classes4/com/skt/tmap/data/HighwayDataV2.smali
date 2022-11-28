@@ -33,7 +33,7 @@
     iput-object p2, p0, Lcom/skt/tmap/data/HighwayDataV2;->highwayData:Lcom/skt/tmap/engine/navigation/livedata/ObservableHighwayData;
 
     .line 3
-    invoke-static {p1}, Lyc/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    invoke-static {p1}, Lze/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
 
     move-result-object p1
 
@@ -101,7 +101,7 @@
     .line 5
     sget-object v2, Ljava/util/Locale;->KOREA:Ljava/util/Locale;
 
-    const v4, 0x7f1307e5
+    const v4, 0x7f140863
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -266,7 +266,7 @@
     .line 7
     sget-object v6, Ljava/util/Locale;->KOREA:Ljava/util/Locale;
 
-    const v8, 0x7f1307e5
+    const v8, 0x7f140863
 
     invoke-virtual {p1, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -319,7 +319,7 @@
     goto :goto_1
 
     :cond_2
-    const v6, 0x7f080533
+    const v6, 0x7f08053e
 
     .line 10
     invoke-virtual {v5, v6}, Lcom/skt/tmap/data/HighwayViewData;->setArrowResourceId(I)V
@@ -328,7 +328,7 @@
 
     :cond_3
     :goto_1
-    const v6, 0x7f080532
+    const v6, 0x7f08053d
 
     .line 11
     invoke-virtual {v5, v6}, Lcom/skt/tmap/data/HighwayViewData;->setArrowResourceId(I)V
@@ -401,7 +401,7 @@
     if-ne v4, v6, :cond_6
 
     .line 21
-    invoke-static {p1}, Lyc/a;->i(Landroid/content/Context;)Z
+    invoke-static {p1}, Lze/a;->i(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -528,7 +528,7 @@
 
     if-ne v3, v4, :cond_1
 
-    const v1, 0x7f1307df
+    const v1, 0x7f14085d
 
     .line 5
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -556,14 +556,14 @@
     iget v3, v3, Lcom/skt/tmap/engine/navigation/data/TBTListInfo;->remainDistance:I
 
     .line 7
-    invoke-static {v3}, Lcom/skt/tmap/util/w0;->a(I)[Ljava/lang/String;
+    invoke-static {v3}, Lcom/skt/tmap/util/d1;->a(I)[Ljava/lang/String;
 
     move-result-object v3
 
     .line 8
     sget-object v5, Ljava/util/Locale;->KOREA:Ljava/util/Locale;
 
-    const v6, 0x7f1307e1
+    const v6, 0x7f14085f
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->L(Lcom/tmapmobility/tmap/exoplayer2/h3;)[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
+    value = Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->M(Lcom/tmapmobility/tmap/exoplayer2/i3;)[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

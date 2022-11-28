@@ -1,9 +1,9 @@
 .class public final enum Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 .super Ljava/lang/Enum;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "MessagingClientEvent.java"
 
 # interfaces
-.implements Lcom/google/android/gms/internal/firebase_messaging/zzq;
+.implements Lcom/google/firebase/encoders/proto/ProtoEnum;
 
 
 # annotations
@@ -21,7 +21,7 @@
         "Ljava/lang/Enum<",
         "Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;",
         ">;",
-        "Lcom/google/android/gms/internal/firebase_messaging/zzq;"
+        "Lcom/google/firebase/encoders/proto/ProtoEnum;"
     }
 .end annotation
 
@@ -30,24 +30,12 @@
 .field private static final synthetic $VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
 .field public static final enum ANDROID:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final enum IOS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final enum UNKNOWN_OS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final enum WEB:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 
 # instance fields
@@ -55,42 +43,8 @@
 
 
 # direct methods
-.method private static synthetic $values()[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-    .locals 3
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->UNKNOWN_OS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->ANDROID:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->IOS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->WEB:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    const/4 v2, 0x3
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 9
 
     .line 1
     new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
@@ -103,45 +57,53 @@
 
     sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->UNKNOWN_OS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
-    new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    const-string v1, "ANDROID"
-
-    const/4 v2, 0x1
-
     .line 2
-    invoke-direct {v0, v1, v2, v2}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;-><init>(Ljava/lang/String;II)V
+    new-instance v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->ANDROID:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+    const-string v3, "ANDROID"
 
-    new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+    const/4 v4, 0x1
 
-    const-string v1, "IOS"
+    invoke-direct {v1, v3, v4, v4}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;-><init>(Ljava/lang/String;II)V
 
-    const/4 v2, 0x2
+    sput-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->ANDROID:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     .line 3
-    invoke-direct {v0, v1, v2, v2}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;-><init>(Ljava/lang/String;II)V
+    new-instance v3, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->IOS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+    const-string v5, "IOS"
 
-    new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+    const/4 v6, 0x2
 
-    const-string v1, "WEB"
+    invoke-direct {v3, v5, v6, v6}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;-><init>(Ljava/lang/String;II)V
 
-    const/4 v2, 0x3
+    sput-object v3, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->IOS:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     .line 4
-    invoke-direct {v0, v1, v2, v2}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;-><init>(Ljava/lang/String;II)V
+    new-instance v5, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->WEB:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+    const-string v7, "WEB"
+
+    const/4 v8, 0x3
+
+    invoke-direct {v5, v7, v8, v8}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->WEB:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+
+    const/4 v7, 0x4
+
+    new-array v7, v7, [Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+
+    aput-object v0, v7, v2
+
+    aput-object v1, v7, v4
+
+    aput-object v3, v7, v6
+
+    aput-object v5, v7, v8
 
     .line 5
-    invoke-static {}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->$values()[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->$VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
+    sput-object v7, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->$VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     return-void
 .end method
@@ -157,6 +119,7 @@
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->number_:I
 
     return-void
@@ -164,12 +127,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
     .locals 1
-    .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
     const-class v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
@@ -185,8 +142,6 @@
 
 .method public static values()[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
     sget-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->$VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
@@ -205,6 +160,7 @@
 .method public getNumber()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->number_:I
 
     return v0

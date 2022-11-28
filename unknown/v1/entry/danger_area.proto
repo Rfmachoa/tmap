@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message DangerAreaEntry {
+
+  /** 정보 인덱스 type (0x02) */
+  // default = x02
+  int32 infoIndexType = 1;
+
+  /** 위험지역 데이터 Collection */
+  repeated DangerAreaElement elements = 2;
+
+}
+
+message DangerAreaElement {
+
+  /** 시작 보간점 Idx */
+  int32 departVtxIndex = 1;
+
+  /**
+   * 종료 보간점 Idx : 시작 조간점Idx와 동일한 값이면 정보인덱스Type ‘0x01’과 동일하게 처리
+   */
+  int32 destVtxIndex = 2;
+
+  /**
+   * 위험지역 타입 구분 코드 ※ 이동카메라, 구간단속, 끼어들기 추가됨
+   */
+  int32 dangerAreaCode = 3;
+
+  /**
+   * 위험지역 서비스 데이터 속도 : 구간속도, 제한속도(km/h)
+   */
+  int32 dangerAreaService = 4;
+
+  /**
+   * 구간 링크길이 (m) -구간단속카메라 : 시작 ~ 종료보간점Idx 거리 -끼어들기 카메라 : 1차검지선까지 거리
+   */
+  int32 dangerAreaDistance = 5;
+
+
+  /** 가변속도 여부(0:고정,1:가변) */
+  int32 variableSpeedFlag = 6;
+
+  /** 구간 단속 속도 */
+  int32 sectionSpeed = 7;
+
+  /** 구간단속 그룹 ID */
+  int32 groupId = 8;
+
+  /** 연속 위험지역 존재 여부 : 일정거리(300m) 전방에 다른 위험지역 안내 존재함 */
+  int32 continueSDIFlag = 9;
+
+  /** 어린이보호구역 단속 카메라 여부 */
+  int32 schoolZoneType = 10;
+
+  /** 단속시간정보 실데이타 */
+  CrackdownTimeElement crackdownTimeElement = 11;
+
+}
+
+message CrackdownTimeElement {
+
+  /** 평일 오전 시작 시간(시분) */
+  int32 startTimeAm = 1;
+
+  /** 평일 오전 종료 시간(시분) */
+  int32 endTimeAm = 2;
+
+  /** 평일 오후 시작 시간(시분) */
+  int32 startTimePm = 3;
+
+  /** 평일 오후 종료 시간(시분) */
+  int32 endTimePm = 4;
+
+  /** 토요일 시작 시간(시분) */
+  int32 saturdayStartTime = 5;
+
+  /** 토요일 종료 시간(시분) */
+  int32 saturdayEndTime = 6;
+
+  /** 휴일 시작 시간(시분) */
+  int32 holidayStartTime = 7;
+
+  /** 휴일 오후 시작 시간(시분) */
+  int32 holidayEndTime = 8;
+}

@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;
-.super Landroidx/appcompat/app/f;
+.super Landroidx/appcompat/app/g;
 .source "BottomSheetDialogFragment.java"
 
 
@@ -20,7 +20,25 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Landroidx/appcompat/app/f;-><init>()V
+    invoke-direct {p0}, Landroidx/appcompat/app/g;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/LayoutRes;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ValidFragment"
+        }
+    .end annotation
+
+    .line 2
+    invoke-direct {p0, p1}, Landroidx/appcompat/app/g;-><init>(I)V
 
     return-void
 .end method

@@ -36,11 +36,11 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Ljava/lang/Integer;
 
-    check-cast p2, Ljava/util/List;
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c(Ljava/util/List;Ljava/util/List;)I
+    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->q(Ljava/lang/Integer;Ljava/lang/Integer;)I
 
     move-result p1
 

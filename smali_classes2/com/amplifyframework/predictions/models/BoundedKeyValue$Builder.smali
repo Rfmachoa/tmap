@@ -18,7 +18,7 @@
         "Lcom/amplifyframework/predictions/models/ImageFeature$Builder<",
         "Lcom/amplifyframework/predictions/models/BoundedKeyValue$Builder;",
         "Lcom/amplifyframework/predictions/models/BoundedKeyValue;",
-        "Lr1/i<",
+        "Landroidx/core/util/k<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
         ">;>;"
@@ -55,9 +55,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lr1/i;
+    check-cast v0, Landroidx/core/util/k;
 
-    iget-object v0, v0, Lr1/i;->a:Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/core/util/k;->a:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -66,9 +66,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lr1/i;
+    check-cast v0, Landroidx/core/util/k;
 
-    iget-object v0, v0, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -115,7 +115,7 @@
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    invoke-static {p1, p2}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {p1, p2}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p1
 

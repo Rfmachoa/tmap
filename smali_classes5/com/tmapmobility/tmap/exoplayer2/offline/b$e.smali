@@ -22,7 +22,7 @@
 
 .field public final b:Lcom/tmapmobility/tmap/exoplayer2/offline/c;
 
-.field public final c:Lle/o;
+.field public final c:Log/o;
 
 .field public final d:Z
 
@@ -44,7 +44,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Lle/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Log/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;)V
     .locals 0
 
     .line 2
@@ -57,7 +57,7 @@
     iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->b:Lcom/tmapmobility/tmap/exoplayer2/offline/c;
 
     .line 5
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Lle/o;
+    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Log/o;
 
     .line 6
     iput-boolean p4, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->d:Z
@@ -76,11 +76,11 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Lle/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;Lcom/tmapmobility/tmap/exoplayer2/offline/b$a;)V
+.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Log/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;Lcom/tmapmobility/tmap/exoplayer2/offline/b$a;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p6}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Lle/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;)V
+    invoke-direct/range {p0 .. p6}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Log/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;)V
 
     return-void
 .end method
@@ -144,14 +144,14 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Lle/o;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Log/o;
 
-    iput-wide p3, v0, Lle/o;->a:J
+    iput-wide p3, v0, Log/o;->a:J
 
     .line 2
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Lle/o;
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Log/o;
 
-    iput p5, p3, Lle/o;->b:F
+    iput p5, p3, Log/o;->b:F
 
     .line 3
     iget-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->i:J
@@ -278,9 +278,9 @@
     if-nez v5, :cond_1
 
     .line 6
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Lle/o;
+    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;->c:Log/o;
 
-    iget-wide v5, v5, Lle/o;->a:J
+    iget-wide v5, v5, Log/o;->a:J
 
     cmp-long v7, v5, v0
 

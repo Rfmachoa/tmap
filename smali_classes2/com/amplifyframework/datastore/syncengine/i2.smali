@@ -3,20 +3,30 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lgk/g;
 
 
-# instance fields
-.field public final synthetic a:Lai/i0;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/i2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/i0;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/i2;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/i2;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/i2;->a:Lcom/amplifyframework/datastore/syncengine/i2;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/i2;->a:Lai/i0;
 
     return-void
 .end method
@@ -24,13 +34,11 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/i2;->a:Lai/i0;
+    check-cast p1, Ljava/lang/Throwable;
 
-    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
-
-    invoke-interface {v0, p1}, Lai/i;->onNext(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

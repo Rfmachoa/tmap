@@ -48,8 +48,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -61,15 +61,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/NavigationManager;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$requestVmsInfo$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -102,7 +97,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo p1, "t"
+    const-string p1, "t"
 
     invoke-static {p2, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -110,7 +105,7 @@
 .end method
 
 .method public onResponse(Lretrofit2/Call;Lretrofit2/Response;)V
-    .locals 3
+    .locals 2
     .param p1    # Lretrofit2/Call;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -156,8 +151,6 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
-
     if-eqz v0, :cond_1
 
     .line 4
@@ -166,10 +159,6 @@
     move-result-object v0
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v1, "response.body()!!"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
 
@@ -186,8 +175,6 @@
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     check-cast v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;->getHeader()Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseCommonHeader;
@@ -198,15 +185,13 @@
 
     iget-object v0, v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseCommonHeader;->errorCode:Ljava/lang/String;
 
-    const-string v2, "000000"
+    const-string v1, "000000"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    xor-int/lit8 v0, v0, 0x1
-
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     goto/16 :goto_0
 
@@ -245,23 +230,23 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "2. VMS : "
+    const-string v1, "2. VMS : "
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    check-cast v2, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
+    check-cast v1, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getContentName()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getContentName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -274,23 +259,23 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "3. VMS : "
+    const-string v1, "3. VMS : "
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    check-cast v2, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
+    check-cast v1, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getContent()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getContent()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -303,23 +288,23 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "4. VMS : "
+    const-string v1, "4. VMS : "
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    check-cast v2, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
+    check-cast v1, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getDataSource()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getDataSource()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -336,7 +321,7 @@
 
     new-instance v0, Lkotlin/Pair;
 
-    sget-object v2, Lcom/skt/tmap/engine/navigation/util/V2VLibraryWrapper$NaviAlarmType;->VMS:Lcom/skt/tmap/engine/navigation/util/V2VLibraryWrapper$NaviAlarmType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/util/V2VLibraryWrapper$NaviAlarmType;->VMS:Lcom/skt/tmap/engine/navigation/util/V2VLibraryWrapper$NaviAlarmType;
 
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
@@ -344,15 +329,13 @@
 
     invoke-static {p2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     check-cast p2, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;
 
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;->getContent()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-direct {v0, v2, p2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-virtual {p1, v0}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
 
@@ -365,7 +348,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "type : "
+    const-string v1, "type : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -1,19 +1,14 @@
 .class public Ldc/e;
 .super Ljava/lang/Object;
-.source "SearchLogConstant.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Ldc/e$b;,
-        Ldc/e$a;
-    }
-.end annotation
+.source "GuiStatusCode.java"
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "SearchLog"
+.field public static final a:Ljava/lang/String; = "list.selecting.number"
+
+.field public static final b:Ljava/lang/String; = "receive.call"
+
+.field public static final c:Ljava/lang/String; = "list.selecting.yesorno"
 
 
 # direct methods

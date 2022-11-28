@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/camera2/internal/Camera2CameraImpl;->s0(Landroidx/camera/camera2/internal/CaptureSession;Z)Lcom/google/common/util/concurrent/ListenableFuture;
+    value = Landroidx/camera/camera2/internal/Camera2CameraImpl;->x0(Landroidx/camera/camera2/internal/a2;Z)Lcom/google/common/util/concurrent/ListenableFuture;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,29 +27,19 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/CaptureSession;
+.field public final synthetic a:Landroidx/camera/camera2/internal/a2;
 
 .field public final synthetic b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/camera2/internal/Camera2CameraImpl;Landroidx/camera/camera2/internal/CaptureSession;)V
+.method public constructor <init>(Landroidx/camera/camera2/internal/Camera2CameraImpl;Landroidx/camera/camera2/internal/a2;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$captureSession"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iput-object p2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->a:Landroidx/camera/camera2/internal/CaptureSession;
+    iput-object p2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->a:Landroidx/camera/camera2/internal/a2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,21 +54,13 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->K0:Ljava/util/Map;
+    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->X0:Ljava/util/Map;
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->a:Landroidx/camera/camera2/internal/CaptureSession;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->a:Landroidx/camera/camera2/internal/a2;
 
     invoke-interface {p1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -87,7 +69,7 @@
 
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -113,7 +95,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->j:I
+    iget p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
 
     if-nez p1, :cond_1
 
@@ -123,7 +105,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->U()Z
+    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->X()Z
 
     move-result p1
 
@@ -131,19 +113,19 @@
 
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
 
     if-eqz p1, :cond_2
 
     .line 5
-    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->close()V
+    invoke-static {p1}, Lw/a$a;->a(Landroid/hardware/camera2/CameraDevice;)V
 
     .line 6
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$a;->b:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iput-object v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
 
     :cond_2
     :goto_0
@@ -152,14 +134,6 @@
 
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
 
     return-void
 .end method
@@ -170,14 +144,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     check-cast p1, Ljava/lang/Void;

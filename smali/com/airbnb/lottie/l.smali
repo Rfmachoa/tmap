@@ -30,7 +30,7 @@
 
 .field public static final j:Landroid/graphics/PointF;
 
-.field public static final k:Lx3/k;
+.field public static final k:Lt5/k;
 
 .field public static final l:Ljava/lang/Float;
 
@@ -148,11 +148,11 @@
     sput-object v1, Lcom/airbnb/lottie/l;->j:Landroid/graphics/PointF;
 
     .line 11
-    new-instance v1, Lx3/k;
+    new-instance v1, Lt5/k;
 
-    invoke-direct {v1}, Lx3/k;-><init>()V
+    invoke-direct {v1}, Lt5/k;-><init>()V
 
-    sput-object v1, Lcom/airbnb/lottie/l;->k:Lx3/k;
+    sput-object v1, Lcom/airbnb/lottie/l;->k:Lt5/k;
 
     const/high16 v1, 0x3f800000    # 1.0f
 

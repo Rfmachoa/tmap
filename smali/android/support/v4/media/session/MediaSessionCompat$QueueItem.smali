@@ -179,7 +179,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -201,7 +201,7 @@
     move-result-object v0
 
     .line 3
-    invoke-static {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-static {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object v0
 
@@ -269,7 +269,7 @@
     move-result-object v1
 
     .line 3
-    invoke-static {v1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->b(Ljava/lang/Object;)Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
+    invoke-static {v1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a(Ljava/lang/Object;)Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
 
     move-result-object v1
 
@@ -288,15 +288,6 @@
 
 
 # virtual methods
-.method public d()Landroid/support/v4/media/MediaDescriptionCompat;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -305,7 +296,16 @@
     return v0
 .end method
 
-.method public e()J
+.method public e()Landroid/support/v4/media/MediaDescriptionCompat;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
+
+    return-object v0
+.end method
+
+.method public f()J
     .locals 2
 
     .line 1
@@ -314,7 +314,7 @@
     return-wide v0
 .end method
 
-.method public f()Ljava/lang/Object;
+.method public h()Ljava/lang/Object;
     .locals 3
 
     .line 1
@@ -326,7 +326,7 @@
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->a:Landroid/support/v4/media/MediaDescriptionCompat;
 
     .line 3
-    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->g()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->i()Ljava/lang/Object;
 
     move-result-object v0
 

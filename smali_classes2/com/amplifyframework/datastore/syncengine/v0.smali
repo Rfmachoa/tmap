@@ -3,30 +3,20 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lgk/a;
 
 
-# static fields
-.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/v0;
+# instance fields
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/v0;
-
-    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/v0;-><init>()V
-
-    sput-object v0, Lcom/amplifyframework/datastore/syncengine/v0;->a:Lcom/amplifyframework/datastore/syncengine/v0;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/v0;->a:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
     return-void
 .end method
@@ -34,9 +24,11 @@
 
 # virtual methods
 .method public final run()V
-    .locals 0
+    .locals 1
 
-    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->a()V
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/v0;->a:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
+
+    invoke-static {v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->k(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     return-void
 .end method

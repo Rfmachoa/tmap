@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/BlockingServiceConnection;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Landroid/content/ServiceConnection;
@@ -15,14 +15,6 @@
 .field public zza:Z
 
 .field private final zzb:Ljava/util/concurrent/BlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/BlockingQueue<",
-            "Landroid/os/IBinder;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

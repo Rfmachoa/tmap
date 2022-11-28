@@ -29,7 +29,11 @@
 
 .field public static final enum ARRAY:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
+.field public static final enum BINARY:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+
 .field public static final enum BOOLEAN:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+
+.field public static final enum NATURAL:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
 .field public static final enum NUMBER:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
@@ -62,121 +66,155 @@
     .line 2
     new-instance v1, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v3, "SCALAR"
+    const-string v3, "NATURAL"
 
     const/4 v4, 0x1
 
     invoke-direct {v1, v3, v4}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->SCALAR:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v1, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NATURAL:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 3
     new-instance v3, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v5, "ARRAY"
+    const-string v5, "SCALAR"
 
     const/4 v6, 0x2
 
     invoke-direct {v3, v5, v6}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->ARRAY:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v3, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->SCALAR:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 4
     new-instance v5, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v7, "OBJECT"
+    const-string v7, "ARRAY"
 
     const/4 v8, 0x3
 
     invoke-direct {v5, v7, v8}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->OBJECT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v5, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->ARRAY:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 5
     new-instance v7, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v9, "NUMBER"
+    const-string v9, "OBJECT"
 
     const/4 v10, 0x4
 
     invoke-direct {v7, v9, v10}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v7, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NUMBER:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v7, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->OBJECT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 6
     new-instance v9, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v11, "NUMBER_FLOAT"
+    const-string v11, "NUMBER"
 
     const/4 v12, 0x5
 
     invoke-direct {v9, v11, v12}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NUMBER_FLOAT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v9, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NUMBER:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 7
     new-instance v11, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v13, "NUMBER_INT"
+    const-string v13, "NUMBER_FLOAT"
 
     const/4 v14, 0x6
 
     invoke-direct {v11, v13, v14}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v11, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NUMBER_INT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v11, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NUMBER_FLOAT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 8
     new-instance v13, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v15, "STRING"
+    const-string v15, "NUMBER_INT"
 
     const/4 v14, 0x7
 
     invoke-direct {v13, v15, v14}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v13, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->STRING:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v13, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->NUMBER_INT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     .line 9
     new-instance v15, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const-string v14, "BOOLEAN"
+    const-string v14, "STRING"
 
     const/16 v12, 0x8
 
     invoke-direct {v15, v14, v12}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    sput-object v15, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->BOOLEAN:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    sput-object v15, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->STRING:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    const/16 v14, 0x9
+    .line 10
+    new-instance v14, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    new-array v14, v14, [Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    const-string v12, "BOOLEAN"
 
-    aput-object v0, v14, v2
+    const/16 v10, 0x9
 
-    aput-object v1, v14, v4
+    invoke-direct {v14, v12, v10}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
 
-    aput-object v3, v14, v6
+    sput-object v14, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->BOOLEAN:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    aput-object v5, v14, v8
+    .line 11
+    new-instance v12, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    aput-object v7, v14, v10
+    const-string v10, "BINARY"
+
+    const/16 v8, 0xa
+
+    invoke-direct {v12, v10, v8}, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;-><init>(Ljava/lang/String;I)V
+
+    sput-object v12, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->BINARY:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+
+    const/16 v10, 0xb
+
+    new-array v10, v10, [Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+
+    aput-object v0, v10, v2
+
+    aput-object v1, v10, v4
+
+    aput-object v3, v10, v6
+
+    const/4 v0, 0x3
+
+    aput-object v5, v10, v0
+
+    const/4 v0, 0x4
+
+    aput-object v7, v10, v0
 
     const/4 v0, 0x5
 
-    aput-object v9, v14, v0
+    aput-object v9, v10, v0
 
     const/4 v0, 0x6
 
-    aput-object v11, v14, v0
+    aput-object v11, v10, v0
 
     const/4 v0, 0x7
 
-    aput-object v13, v14, v0
+    aput-object v13, v10, v0
 
-    aput-object v15, v14, v12
+    const/16 v0, 0x8
 
-    .line 10
-    sput-object v14, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->$VALUES:[Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+    aput-object v15, v10, v0
+
+    const/16 v0, 0x9
+
+    aput-object v14, v10, v0
+
+    aput-object v12, v10, v8
+
+    .line 12
+    sput-object v10, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->$VALUES:[Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     return-void
 .end method

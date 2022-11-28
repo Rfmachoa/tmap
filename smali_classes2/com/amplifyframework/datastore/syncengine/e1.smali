@@ -3,52 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lgk/s;
 
 
 # instance fields
 .field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
-.field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
-
-.field public final synthetic c:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
-
-.field public final synthetic d:Lai/x;
+.field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;Lai/x;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/e1;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
-
-    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/e1;->c:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
-
-    iput-object p4, p0, Lcom/amplifyframework/datastore/syncengine/e1;->d:Lai/x;
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/e1;->b:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/e1;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/e1;->b:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
 
-    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/e1;->c:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
+    invoke-static {v0, v1}, Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;->a(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lek/g;
 
-    iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/e1;->d:Lai/x;
+    move-result-object v0
 
-    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
-
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;->k(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;Lai/x;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
-
-    return-void
+    return-object v0
 .end method

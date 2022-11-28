@@ -4,9 +4,14 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/view/PreviewView$c;,
+        Landroidx/camera/view/PreviewView$d;,
         Landroidx/camera/view/PreviewView$StreamState;,
         Landroidx/camera/view/PreviewView$ScaleType;,
         Landroidx/camera/view/PreviewView$ImplementationMode;
@@ -15,14 +20,14 @@
 
 
 # static fields
-.field public static final l:Ljava/lang/String; = "PreviewView"
-
-.field public static final p:I = 0x106000c
+.field public static final K0:I = 0x106000c
     .annotation build Landroidx/annotation/ColorRes;
     .end annotation
 .end field
 
-.field public static final u:Landroidx/camera/view/PreviewView$ImplementationMode;
+.field public static final X0:Landroidx/camera/view/PreviewView$ImplementationMode;
+
+.field public static final k0:Ljava/lang/String; = "PreviewView"
 
 
 # instance fields
@@ -31,7 +36,7 @@
     .end annotation
 .end field
 
-.field public b:Landroidx/camera/view/q;
+.field public b:Landroidx/camera/view/c;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -39,12 +44,14 @@
     .end annotation
 .end field
 
-.field public final c:Landroidx/camera/view/l;
+.field public final c:Landroidx/camera/view/b;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final d:Landroidx/lifecycle/MutableLiveData;
+.field public d:Z
+
+.field public final e:Landroidx/lifecycle/MutableLiveData;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -57,39 +64,49 @@
     .end annotation
 .end field
 
-.field public final e:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Landroidx/camera/view/k;",
+            "Landroidx/camera/view/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public f:Landroidx/camera/view/CameraController;
+.field public g:Landroidx/camera/view/CameraController;
 
-.field public g:Landroidx/camera/view/s;
+.field public h:Ls0/p;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public final h:Landroid/view/ScaleGestureDetector;
+.field public final i:Landroid/view/ScaleGestureDetector;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public i:Landroid/view/MotionEvent;
+.field public j:Lb0/y;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final j:Landroid/view/View$OnLayoutChangeListener;
+.field public k:Landroid/view/MotionEvent;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field public final k:Landroidx/camera/core/g2$d;
+.field public final l:Landroidx/camera/view/PreviewView$c;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final p:Landroid/view/View$OnLayoutChangeListener;
+
+.field public final u:Landroidx/camera/core/e2$d;
 
 
 # direct methods
@@ -99,7 +116,7 @@
     .line 1
     sget-object v0, Landroidx/camera/view/PreviewView$ImplementationMode;->PERFORMANCE:Landroidx/camera/view/PreviewView$ImplementationMode;
 
-    sput-object v0, Landroidx/camera/view/PreviewView;->u:Landroidx/camera/view/PreviewView$ImplementationMode;
+    sput-object v0, Landroidx/camera/view/PreviewView;->X0:Landroidx/camera/view/PreviewView$ImplementationMode;
 
     return-void
 .end method
@@ -111,15 +128,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/UiThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
     .end annotation
 
     const/4 v0, 0x0
@@ -143,17 +151,6 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "attrs"
-        }
-    .end annotation
-
     const/4 v0, 0x0
 
     .line 2
@@ -173,19 +170,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/UiThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "attrs",
-            "defStyleAttr"
-        }
     .end annotation
 
     const/4 v0, 0x0
@@ -209,77 +193,74 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "attrs",
-            "defStyleAttr",
-            "defStyleRes"
-        }
-    .end annotation
-
     .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 5
-    sget-object v0, Landroidx/camera/view/PreviewView;->u:Landroidx/camera/view/PreviewView$ImplementationMode;
+    sget-object v0, Landroidx/camera/view/PreviewView;->X0:Landroidx/camera/view/PreviewView$ImplementationMode;
 
     iput-object v0, p0, Landroidx/camera/view/PreviewView;->a:Landroidx/camera/view/PreviewView$ImplementationMode;
 
     .line 6
-    new-instance v1, Landroidx/camera/view/l;
+    new-instance v1, Landroidx/camera/view/b;
 
-    invoke-direct {v1}, Landroidx/camera/view/l;-><init>()V
+    invoke-direct {v1}, Landroidx/camera/view/b;-><init>()V
 
-    iput-object v1, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/l;
+    iput-object v1, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/b;
+
+    const/4 v2, 0x1
 
     .line 7
+    iput-boolean v2, p0, Landroidx/camera/view/PreviewView;->d:Z
+
+    .line 8
     new-instance v2, Landroidx/lifecycle/MutableLiveData;
 
     sget-object v3, Landroidx/camera/view/PreviewView$StreamState;->IDLE:Landroidx/camera/view/PreviewView$StreamState;
 
     invoke-direct {v2, v3}, Landroidx/lifecycle/MutableLiveData;-><init>(Ljava/lang/Object;)V
 
-    iput-object v2, p0, Landroidx/camera/view/PreviewView;->d:Landroidx/lifecycle/MutableLiveData;
+    iput-object v2, p0, Landroidx/camera/view/PreviewView;->e:Landroidx/lifecycle/MutableLiveData;
 
-    .line 8
+    .line 9
     new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object v2, p0, Landroidx/camera/view/PreviewView;->e:Ljava/util/concurrent/atomic/AtomicReference;
-
-    .line 9
-    new-instance v2, Landroidx/camera/view/s;
-
-    invoke-direct {v2, v1}, Landroidx/camera/view/s;-><init>(Landroidx/camera/view/l;)V
-
-    iput-object v2, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/s;
+    iput-object v2, p0, Landroidx/camera/view/PreviewView;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 10
-    new-instance v2, Landroidx/camera/view/m;
+    new-instance v2, Ls0/p;
 
-    invoke-direct {v2, p0}, Landroidx/camera/view/m;-><init>(Landroidx/camera/view/PreviewView;)V
+    invoke-direct {v2, v1}, Ls0/p;-><init>(Landroidx/camera/view/b;)V
 
-    iput-object v2, p0, Landroidx/camera/view/PreviewView;->j:Landroid/view/View$OnLayoutChangeListener;
+    iput-object v2, p0, Landroidx/camera/view/PreviewView;->h:Ls0/p;
 
     .line 11
+    new-instance v2, Landroidx/camera/view/PreviewView$c;
+
+    invoke-direct {v2, p0}, Landroidx/camera/view/PreviewView$c;-><init>(Landroidx/camera/view/PreviewView;)V
+
+    iput-object v2, p0, Landroidx/camera/view/PreviewView;->l:Landroidx/camera/view/PreviewView$c;
+
+    .line 12
+    new-instance v2, Ls0/l;
+
+    invoke-direct {v2, p0}, Ls0/l;-><init>(Landroidx/camera/view/PreviewView;)V
+
+    iput-object v2, p0, Landroidx/camera/view/PreviewView;->p:Landroid/view/View$OnLayoutChangeListener;
+
+    .line 13
     new-instance v2, Landroidx/camera/view/PreviewView$a;
 
     invoke-direct {v2, p0}, Landroidx/camera/view/PreviewView$a;-><init>(Landroidx/camera/view/PreviewView;)V
 
-    iput-object v2, p0, Landroidx/camera/view/PreviewView;->k:Landroidx/camera/core/g2$d;
+    iput-object v2, p0, Landroidx/camera/view/PreviewView;->u:Landroidx/camera/core/e2$d;
 
-    .line 12
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    .line 14
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
-    .line 13
+    .line 15
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v2
@@ -289,13 +270,6 @@
     invoke-virtual {v2, p2, v5, p3, p4}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v2
-
-    .line 14
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v4, 0x1d
-
-    if-lt v3, v4, :cond_0
 
     move-object v3, p0
 
@@ -309,16 +283,15 @@
 
     move v9, p4
 
-    .line 15
-    invoke-virtual/range {v3 .. v9}, Landroid/widget/FrameLayout;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-
     .line 16
-    :cond_0
+    invoke-static/range {v3 .. v9}, Landroidx/core/view/ViewCompat;->z1(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+
+    .line 17
     :try_start_0
     sget p2, Landroidx/camera/view/R$styleable;->PreviewView_scaleType:I
 
-    .line 17
-    invoke-virtual {v1}, Landroidx/camera/view/l;->f()Landroidx/camera/view/PreviewView$ScaleType;
+    .line 18
+    invoke-virtual {v1}, Landroidx/camera/view/b;->f()Landroidx/camera/view/PreviewView$ScaleType;
 
     move-result-object p3
 
@@ -326,32 +299,32 @@
 
     move-result p3
 
-    .line 18
+    .line 19
     invoke-virtual {v2, p2, p3}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result p2
 
-    .line 19
+    .line 20
     invoke-static {p2}, Landroidx/camera/view/PreviewView$ScaleType;->fromId(I)Landroidx/camera/view/PreviewView$ScaleType;
 
     move-result-object p2
 
     invoke-virtual {p0, p2}, Landroidx/camera/view/PreviewView;->setScaleType(Landroidx/camera/view/PreviewView$ScaleType;)V
 
-    .line 20
+    .line 21
     sget p2, Landroidx/camera/view/R$styleable;->PreviewView_implementationMode:I
 
-    .line 21
+    .line 22
     invoke-virtual {v0}, Landroidx/camera/view/PreviewView$ImplementationMode;->getId()I
 
     move-result p3
 
-    .line 22
+    .line 23
     invoke-virtual {v2, p2, p3}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result p2
 
-    .line 23
+    .line 24
     invoke-static {p2}, Landroidx/camera/view/PreviewView$ImplementationMode;->fromId(I)Landroidx/camera/view/PreviewView$ImplementationMode;
 
     move-result-object p2
@@ -360,50 +333,50 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
+    .line 25
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 25
+    .line 26
     new-instance p2, Landroid/view/ScaleGestureDetector;
 
-    new-instance p3, Landroidx/camera/view/PreviewView$c;
+    new-instance p3, Landroidx/camera/view/PreviewView$d;
 
-    invoke-direct {p3, p0}, Landroidx/camera/view/PreviewView$c;-><init>(Landroidx/camera/view/PreviewView;)V
+    invoke-direct {p3, p0}, Landroidx/camera/view/PreviewView$d;-><init>(Landroidx/camera/view/PreviewView;)V
 
     invoke-direct {p2, p1, p3}, Landroid/view/ScaleGestureDetector;-><init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;)V
 
-    iput-object p2, p0, Landroidx/camera/view/PreviewView;->h:Landroid/view/ScaleGestureDetector;
+    iput-object p2, p0, Landroidx/camera/view/PreviewView;->i:Landroid/view/ScaleGestureDetector;
 
-    .line 26
+    .line 27
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
-    .line 27
+    .line 28
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     const p2, 0x106000c
 
-    invoke-static {p1, p2}, Landroidx/core/content/d;->f(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    :cond_1
+    :cond_0
     return-void
 
     :catchall_0
     move-exception p1
 
-    .line 28
+    .line 29
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 29
+    .line 30
     throw p1
 .end method
 
@@ -454,6 +427,169 @@
 
     :cond_2
     return-void
+.end method
+
+.method public static f(Landroidx/camera/core/SurfaceRequest;Landroidx/camera/view/PreviewView$ImplementationMode;)Z
+    .locals 5
+    .param p0    # Landroidx/camera/core/SurfaceRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroidx/camera/view/PreviewView$ImplementationMode;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceRequest;->k()Landroidx/camera/core/impl/CameraInternal;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroidx/camera/core/impl/CameraInternal;->m()Lb0/y;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v0}, Landroidx/camera/core/CameraInfo;->p()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "androidx.camera.camera2.legacy"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    .line 3
+    const-class v1, Lt0/d;
+
+    invoke-static {v1}, Lt0/a;->a(Ljava/lang/Class;)Lb0/m1;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-nez v1, :cond_1
+
+    const-class v1, Lt0/c;
+
+    .line 4
+    invoke-static {v1}, Lt0/a;->a(Ljava/lang/Class;)Lb0/m1;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v3
+
+    .line 5
+    :goto_1
+    invoke-virtual {p0}, Landroidx/camera/core/SurfaceRequest;->n()Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x18
+
+    if-le p0, v4, :cond_4
+
+    if-nez v0, :cond_4
+
+    if-eqz v1, :cond_2
+
+    goto :goto_2
+
+    .line 6
+    :cond_2
+    sget-object p0, Landroidx/camera/view/PreviewView$b;->b:[I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    aget p0, p0, v0
+
+    if-eq p0, v3, :cond_4
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_3
+
+    return v2
+
+    .line 7
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Invalid implementation mode: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    :goto_2
+    return v3
+.end method
+
+.method private getDisplayManager()Landroid/hardware/display/DisplayManager;
+    .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "display"
+
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/display/DisplayManager;
+
+    return-object v0
 .end method
 
 .method private getViewPortScaleType()I
@@ -532,31 +668,24 @@
 # virtual methods
 .method public final b(Z)V
     .locals 4
-    .annotation build Landroidx/annotation/experimental/UseExperimental;
-        markerClass = Landroidx/camera/core/ExperimentalUseCaseGroup;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "shouldFailSilently"
-        }
+    .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
     .line 1
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
+
+    .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 2
+    .line 3
     invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->getViewPort()Landroidx/camera/core/ViewPort;
 
     move-result-object v1
 
-    .line 3
-    iget-object v2, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    .line 4
+    iget-object v2, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     if-eqz v2, :cond_1
 
@@ -570,15 +699,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
+    .line 5
     :try_start_0
-    iget-object v2, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v2, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
-    invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->getSurfaceProvider()Landroidx/camera/core/g2$d;
+    invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->getSurfaceProvider()Landroidx/camera/core/e2$d;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v1, v0}, Landroidx/camera/view/CameraController;->d(Landroidx/camera/core/g2$d;Landroidx/camera/core/ViewPort;Landroid/view/Display;)V
+    invoke-virtual {v2, v3, v1, v0}, Landroidx/camera/view/CameraController;->e(Landroidx/camera/core/e2$d;Landroidx/camera/core/ViewPort;Landroid/view/Display;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -589,18 +718,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 5
-    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
+    .line 6
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "PreviewView"
 
-    invoke-static {v1, p1, v0}, Landroidx/camera/core/x1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, p1, v0}, Landroidx/camera/core/u1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_0
     throw v0
 
@@ -623,20 +752,8 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "targetRotation"
-        }
-    .end annotation
-
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWidth()I
@@ -705,18 +822,29 @@
 
 .method public e()V
     .locals 4
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .annotation build Landroidx/annotation/OptIn;
+        markerClass = {
+            Landroidx/camera/view/TransformExperimental;
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/q;
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
+
+    .line 2
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/c;
 
     if-eqz v0, :cond_0
 
-    .line 2
-    invoke-virtual {v0}, Landroidx/camera/view/q;->i()V
-
     .line 3
+    invoke-virtual {v0}, Landroidx/camera/view/c;->i()V
+
+    .line 4
     :cond_0
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/s;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->h:Ls0/p;
 
     new-instance v1, Landroid/util/Size;
 
@@ -730,122 +858,59 @@
 
     invoke-direct {v1, v2, v3}, Landroid/util/Size;-><init>(II)V
 
-    .line 4
+    .line 5
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutDirection()I
 
     move-result v2
 
-    .line 5
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/view/s;->e(Landroid/util/Size;I)V
+    .line 6
+    invoke-virtual {v0, v1, v2}, Ls0/p;->e(Landroid/util/Size;I)V
 
+    .line 7
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
+
+    if-eqz v0, :cond_1
+
+    .line 8
+    invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->getOutputTransform()Lu0/d;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/camera/view/CameraController;->B0(Lu0/d;)V
+
+    :cond_1
     return-void
 .end method
 
-.method public f(Landroidx/camera/core/SurfaceRequest;Landroidx/camera/view/PreviewView$ImplementationMode;)Z
-    .locals 3
-    .param p1    # Landroidx/camera/core/SurfaceRequest;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/camera/view/PreviewView$ImplementationMode;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x10
-        }
-        names = {
-            "surfaceRequest",
-            "implementationMode"
-        }
-    .end annotation
+.method public final g()V
+    .locals 4
 
     .line 1
-    invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->k()Landroidx/camera/core/impl/CameraInternal;
+    invoke-direct {p0}, Landroidx/camera/view/PreviewView;->getDisplayManager()Landroid/hardware/display/DisplayManager;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroidx/camera/core/impl/CameraInternal;->k()Lx/q;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    return-void
 
     .line 2
-    invoke-interface {v0}, Landroidx/camera/core/CameraInfo;->k()Ljava/lang/String;
+    :cond_0
+    iget-object v1, p0, Landroidx/camera/view/PreviewView;->l:Landroidx/camera/view/PreviewView$c;
 
-    move-result-object v0
-
-    const-string v1, "androidx.camera.camera2.legacy"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    new-instance v2, Landroid/os/Handler;
 
     .line 3
-    invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest;->n()Z
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result p1
+    move-result-object v3
 
-    const/4 v1, 0x1
-
-    if-nez p1, :cond_2
-
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x18
-
-    if-le p1, v2, :cond_2
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
+    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 4
-    :cond_0
-    sget-object p1, Landroidx/camera/view/PreviewView$b;->b:[I
+    invoke-virtual {v0, v1, v2}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    aget p1, p1, v0
-
-    if-eq p1, v1, :cond_2
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 5
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Invalid implementation mode: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    :goto_0
-    return v1
+    return-void
 .end method
 
 .method public getBitmap()Landroid/graphics/Bitmap;
@@ -857,10 +922,10 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/q;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/c;
 
     if-nez v0, :cond_0
 
@@ -869,7 +934,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Landroidx/camera/view/q;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Landroidx/camera/view/c;->a()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -886,10 +951,10 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     return-object v0
 .end method
@@ -903,7 +968,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
     iget-object v0, p0, Landroidx/camera/view/PreviewView;->a:Landroidx/camera/view/PreviewView$ImplementationMode;
@@ -911,7 +976,7 @@
     return-object v0
 .end method
 
-.method public getMeteringPointFactory()Landroidx/camera/core/c2;
+.method public getMeteringPointFactory()Landroidx/camera/core/z1;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -920,36 +985,30 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/s;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->h:Ls0/p;
 
     return-object v0
 .end method
 
-.method public getOutputTransform()Lh0/c;
+.method public getOutputTransform()Lu0/d;
     .locals 5
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
     .end annotation
 
     .annotation build Landroidx/camera/view/TransformExperimental;
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     const/4 v0, 0x0
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/l;
+    iget-object v1, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/b;
 
     new-instance v2, Landroid/util/Size;
 
@@ -969,7 +1028,7 @@
     move-result v3
 
     .line 4
-    invoke-virtual {v1, v2, v3}, Landroidx/camera/view/l;->i(Landroid/util/Size;I)Landroid/graphics/Matrix;
+    invoke-virtual {v1, v2, v3}, Landroidx/camera/view/b;->h(Landroid/util/Size;I)Landroid/graphics/Matrix;
 
     move-result-object v1
     :try_end_0
@@ -982,9 +1041,9 @@
 
     .line 5
     :goto_0
-    iget-object v2, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/l;
+    iget-object v2, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/b;
 
-    invoke-virtual {v2}, Landroidx/camera/view/l;->g()Landroid/graphics/Rect;
+    invoke-virtual {v2}, Landroidx/camera/view/b;->g()Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -998,16 +1057,16 @@
 
     .line 6
     :cond_0
-    invoke-static {v2}, Lh0/c;->b(Landroid/graphics/Rect;)Landroid/graphics/Matrix;
+    invoke-static {v2}, Ls0/a0;->b(Landroid/graphics/Rect;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
     .line 7
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/q;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/c;
 
-    instance-of v0, v0, Landroidx/camera/view/e0;
+    instance-of v0, v0, Landroidx/camera/view/f;
 
     if-eqz v0, :cond_1
 
@@ -1024,11 +1083,11 @@
     const-string v0, "PreviewView needs to be in COMPATIBLE mode for the transform to work correctly."
 
     .line 9
-    invoke-static {v3, v0}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     :goto_1
-    new-instance v0, Lh0/c;
+    new-instance v0, Lu0/d;
 
     new-instance v3, Landroid/util/Size;
 
@@ -1043,7 +1102,7 @@
 
     invoke-direct {v3, v4, v2}, Landroid/util/Size;-><init>(II)V
 
-    invoke-direct {v0, v1, v3}, Lh0/c;-><init>(Landroid/graphics/Matrix;Landroid/util/Size;)V
+    invoke-direct {v0, v1, v3}, Lu0/d;-><init>(Landroid/graphics/Matrix;Landroid/util/Size;)V
 
     return-object v0
 
@@ -1052,7 +1111,7 @@
     const-string v1, "Transform info is not ready"
 
     .line 12
-    invoke-static {v3, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1072,7 +1131,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->d:Landroidx/lifecycle/MutableLiveData;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->e:Landroidx/lifecycle/MutableLiveData;
 
     return-object v0
 .end method
@@ -1086,19 +1145,19 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/l;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/b;
 
-    invoke-virtual {v0}, Landroidx/camera/view/l;->f()Landroidx/camera/view/PreviewView$ScaleType;
+    invoke-virtual {v0}, Landroidx/camera/view/b;->f()Landroidx/camera/view/PreviewView$ScaleType;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getSurfaceProvider()Landroidx/camera/core/g2$d;
+.method public getSurfaceProvider()Landroidx/camera/core/e2$d;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1106,15 +1165,11 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation build Landroidx/annotation/experimental/UseExperimental;
-        markerClass = Landroidx/camera/core/ExperimentalUseCaseGroup;
-    .end annotation
-
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->k:Landroidx/camera/core/g2$d;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->u:Landroidx/camera/core/e2$d;
 
     return-object v0
 .end method
@@ -1127,11 +1182,8 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
-    .end annotation
-
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getDisplay()Landroid/view/Display;
@@ -1161,6 +1213,72 @@
     return-object v0
 .end method
 
+.method public final h()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Landroidx/camera/view/PreviewView;->getDisplayManager()Landroid/hardware/display/DisplayManager;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v1, p0, Landroidx/camera/view/PreviewView;->l:Landroidx/camera/view/PreviewView$c;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
+
+    return-void
+.end method
+
+.method public i()V
+    .locals 4
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/camera/view/PreviewView;->d:Z
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getDisplay()Landroid/view/Display;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v1, p0, Landroidx/camera/view/PreviewView;->j:Lb0/y;
+
+    if-eqz v1, :cond_0
+
+    .line 4
+    iget-object v2, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/b;
+
+    .line 5
+    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
+
+    move-result v3
+
+    .line 6
+    invoke-interface {v1, v3}, Landroidx/camera/core/CameraInfo;->q(I)I
+
+    move-result v1
+
+    .line 7
+    invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
+
+    move-result v0
+
+    .line 8
+    invoke-virtual {v2, v1, v0}, Landroidx/camera/view/b;->m(II)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onAttachedToWindow()V
     .locals 1
 
@@ -1168,22 +1286,28 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->j:Landroid/view/View$OnLayoutChangeListener;
+    invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->i()V
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->g()V
+
+    .line 4
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->p:Landroid/view/View$OnLayoutChangeListener;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 3
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/q;
+    .line 5
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/c;
 
     if-eqz v0, :cond_0
 
-    .line 4
-    invoke-virtual {v0}, Landroidx/camera/view/q;->e()V
+    .line 6
+    invoke-virtual {v0}, Landroidx/camera/view/c;->e()V
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 5
+    .line 7
     invoke-virtual {p0, v0}, Landroidx/camera/view/PreviewView;->b(Z)V
 
     return-void
@@ -1196,28 +1320,31 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->j:Landroid/view/View$OnLayoutChangeListener;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->p:Landroid/view/View$OnLayoutChangeListener;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/q;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->b:Landroidx/camera/view/c;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Landroidx/camera/view/q;->f()V
+    invoke-virtual {v0}, Landroidx/camera/view/c;->f()V
 
     .line 5
     :cond_0
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-virtual {v0}, Landroidx/camera/view/CameraController;->f()V
+    invoke-virtual {v0}, Landroidx/camera/view/CameraController;->g()V
 
+    .line 7
     :cond_1
+    invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->h()V
+
     return-void
 .end method
 
@@ -1227,17 +1354,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "event"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     if-nez v0, :cond_0
 
@@ -1320,7 +1439,7 @@
     if-eqz v4, :cond_4
 
     .line 7
-    iput-object p1, p0, Landroidx/camera/view/PreviewView;->i:Landroid/view/MotionEvent;
+    iput-object p1, p0, Landroidx/camera/view/PreviewView;->k:Landroid/view/MotionEvent;
 
     .line 8
     invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->performClick()Z
@@ -1329,7 +1448,7 @@
 
     .line 9
     :cond_4
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->h:Landroid/view/ScaleGestureDetector;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->i:Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1354,12 +1473,12 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     if-eqz v0, :cond_2
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->i:Landroid/view/MotionEvent;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->k:Landroid/view/MotionEvent;
 
     const/high16 v1, 0x40000000    # 2.0f
 
@@ -1382,7 +1501,7 @@
 
     .line 3
     :goto_0
-    iget-object v2, p0, Landroidx/camera/view/PreviewView;->i:Landroid/view/MotionEvent;
+    iget-object v2, p0, Landroidx/camera/view/PreviewView;->k:Landroid/view/MotionEvent;
 
     if-eqz v2, :cond_1
 
@@ -1403,17 +1522,17 @@
 
     .line 4
     :goto_1
-    iget-object v2, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v2, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
-    iget-object v3, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/s;
+    iget-object v3, p0, Landroidx/camera/view/PreviewView;->h:Ls0/p;
 
-    invoke-virtual {v2, v3, v0, v1}, Landroidx/camera/view/CameraController;->H(Landroidx/camera/core/c2;FF)V
+    invoke-virtual {v2, v3, v0, v1}, Landroidx/camera/view/CameraController;->S(Landroidx/camera/core/z1;FF)V
 
     :cond_2
     const/4 v0, 0x0
 
     .line 5
-    iput-object v0, p0, Landroidx/camera/view/PreviewView;->i:Landroid/view/MotionEvent;
+    iput-object v0, p0, Landroidx/camera/view/PreviewView;->k:Landroid/view/MotionEvent;
 
     .line 6
     invoke-super {p0}, Landroid/widget/FrameLayout;->performClick()Z
@@ -1432,31 +1551,22 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraController"
-        }
-    .end annotation
-
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     if-eqz v0, :cond_0
 
     if-eq v0, p1, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Landroidx/camera/view/CameraController;->f()V
+    invoke-virtual {v0}, Landroidx/camera/view/CameraController;->g()V
 
     .line 4
     :cond_0
-    iput-object p1, p0, Landroidx/camera/view/PreviewView;->f:Landroidx/camera/view/CameraController;
+    iput-object p1, p0, Landroidx/camera/view/PreviewView;->g:Landroidx/camera/view/CameraController;
 
     const/4 p1, 0x0
 
@@ -1475,17 +1585,8 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "implementationMode"
-        }
-    .end annotation
-
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
     iput-object p1, p0, Landroidx/camera/view/PreviewView;->a:Landroidx/camera/view/PreviewView$ImplementationMode;
@@ -1502,22 +1603,13 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "scaleType"
-        }
-    .end annotation
-
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/utils/l;->b()V
+    invoke-static {}, Landroidx/camera/core/impl/utils/p;->b()V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/l;
+    iget-object v0, p0, Landroidx/camera/view/PreviewView;->c:Landroidx/camera/view/b;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/view/l;->o(Landroidx/camera/view/PreviewView$ScaleType;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/view/b;->o(Landroidx/camera/view/PreviewView$ScaleType;)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/camera/view/PreviewView;->e()V

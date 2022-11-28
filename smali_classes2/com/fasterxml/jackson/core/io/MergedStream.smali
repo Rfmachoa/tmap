@@ -119,10 +119,13 @@
     return-void
 .end method
 
-.method public mark(I)V
+.method public declared-synchronized mark(I)V
     .locals 1
 
+    monitor-enter p0
+
     .line 1
+    :try_start_0
     iget-object v0, p0, Lcom/fasterxml/jackson/core/io/MergedStream;->_b:[B
 
     if-nez v0, :cond_0
@@ -130,9 +133,21 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/io/MergedStream;->_in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     :cond_0
+    monitor-exit p0
+
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
 .end method
 
 .method public markSupported()Z
@@ -285,7 +300,7 @@
     return p1
 .end method
 
-.method public reset()V
+.method public declared-synchronized reset()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -293,7 +308,10 @@
         }
     .end annotation
 
+    monitor-enter p0
+
     .line 1
+    :try_start_0
     iget-object v0, p0, Lcom/fasterxml/jackson/core/io/MergedStream;->_b:[B
 
     if-nez v0, :cond_0
@@ -301,9 +319,21 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/io/MergedStream;->_in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     :cond_0
+    monitor-exit p0
+
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
 .method public skip(J)J

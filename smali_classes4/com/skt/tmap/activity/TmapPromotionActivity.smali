@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static a:Ldc/d;
+.field public static a:Lbe/e;
 
 
 # direct methods
@@ -36,7 +36,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -45,12 +45,12 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0211
+    const p1, 0x7f0d0212
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
@@ -60,11 +60,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
+    invoke-static {p1}, Lbe/e;->a(Landroid/content/Context;)Lbe/e;
 
     move-result-object p1
 
-    sput-object p1, Lcom/skt/tmap/activity/TmapPromotionActivity;->a:Ldc/d;
+    sput-object p1, Lcom/skt/tmap/activity/TmapPromotionActivity;->a:Lbe/e;
 
     .line 6
     new-instance p1, Ljava/lang/StringBuilder;
@@ -73,7 +73,7 @@
 
     const-string v0, "/tmap2/app/short_cut.jsp?ak="
 
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->g(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
     move-result-object p1
 
     :cond_2
-    const v0, 0x7f0a0b21
+    const v0, 0x7f0a0b9d
 
     .line 13
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -138,7 +138,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a0bdf
+    const v0, 0x7f0a0c6b
 
     .line 14
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -155,7 +155,7 @@
     invoke-virtual {v0, p0, p1, v1}, Lcom/skt/tmap/view/TmapWebView;->init(Landroid/app/Activity;Ljava/lang/String;Z)V
 
     .line 16
-    invoke-static {}, Lic/b;->a()Lic/b;
+    invoke-static {}, Lge/b;->a()Lge/b;
 
     move-result-object p1
 
@@ -163,7 +163,7 @@
 
     const-string v1, ""
 
-    invoke-virtual {p1, p0, v0, v1}, Lic/b;->o(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p0, v0, v1}, Lge/b;->o(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

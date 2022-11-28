@@ -1,539 +1,362 @@
 .class public Lm1/e;
-.super Ljava/lang/Object;
-.source "SelfDestructiveThread.java"
-
-
-# annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lm1/e$d;
-    }
-.end annotation
-
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
-
-
-# static fields
-.field public static final i:I = 0x1
-
-.field public static final j:I
+.super Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+.source "WidgetContainer.java"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public b:Landroid/os/HandlerThread;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mLock"
+.field public A1:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroidx/constraintlayout/core/widgets/ConstraintWidget;",
+            ">;"
+        }
     .end annotation
 .end field
-
-.field public c:Landroid/os/Handler;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mLock"
-    .end annotation
-.end field
-
-.field public d:I
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mLock"
-    .end annotation
-.end field
-
-.field public e:Landroid/os/Handler$Callback;
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>()V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lm1/e;->a:Ljava/lang/Object;
+    iput-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
 
-    .line 3
-    new-instance v0, Lm1/e$a;
+    return-void
+.end method
 
-    invoke-direct {v0, p0}, Lm1/e$a;-><init>(Lm1/e;)V
-
-    iput-object v0, p0, Lm1/e;->e:Landroid/os/Handler$Callback;
-
-    .line 4
-    iput-object p1, p0, Lm1/e;->h:Ljava/lang/String;
+.method public constructor <init>(II)V
+    .locals 0
 
     .line 5
-    iput p2, p0, Lm1/e;->g:I
+    invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;-><init>(II)V
 
     .line 6
-    iput p3, p0, Lm1/e;->f:I
+    new-instance p1, Ljava/util/ArrayList;
 
-    const/4 p1, 0x0
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
-    iput p1, p0, Lm1/e;->d:I
+    iput-object p1, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIII)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;-><init>(IIII)V
+
+    .line 4
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lm1/e;->A1:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 2
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
+.method public Q1(II)V
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Lm1/e;->a:Ljava/lang/Object;
-
-    monitor-enter v0
+    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->Q1(II)V
 
     .line 2
-    :try_start_0
-    iget v1, p0, Lm1/e;->d:I
+    iget-object p1, p0, Lm1/e;->A1:Ljava/util/ArrayList;
 
-    monitor-exit v0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    return v1
+    move-result p1
 
-    :catchall_0
-    move-exception v1
+    const/4 p2, 0x0
+
+    :goto_0
+    if-ge p2, p1, :cond_0
 
     .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
 
-    throw v1
-.end method
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-.method public b()Z
-    .locals 2
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
+    move-result-object v0
 
-    .line 1
-    iget-object v0, p0, Lm1/e;->a:Ljava/lang/Object;
+    check-cast v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
-    monitor-enter v0
+    .line 4
+    invoke-virtual {p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->Y()I
 
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lm1/e;->b:Landroid/os/HandlerThread;
+    move-result v1
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->Z()I
 
-    const/4 v1, 0x1
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->Q1(II)V
+
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-void
 .end method
 
-.method public c()V
+.method public R0()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    .line 2
+    invoke-super {p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->R0()V
+
+    return-void
+.end method
+
+.method public W0(Landroidx/constraintlayout/core/c;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lm1/e;->a:Ljava/lang/Object;
-
-    monitor-enter v0
+    invoke-super {p0, p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->W0(Landroidx/constraintlayout/core/c;)V
 
     .line 2
-    :try_start_0
-    iget-object v1, p0, Lm1/e;->c:Landroid/os/Handler;
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 3
-    monitor-exit v0
-
-    return-void
-
-    .line 4
-    :cond_0
-    iget-object v1, p0, Lm1/e;->b:Landroid/os/HandlerThread;
-
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->quit()Z
+    move-result v0
 
     const/4 v1, 0x0
 
-    .line 5
-    iput-object v1, p0, Lm1/e;->b:Landroid/os/HandlerThread;
-
-    .line 6
-    iput-object v1, p0, Lm1/e;->c:Landroid/os/Handler;
-
-    .line 7
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public d(Ljava/lang/Runnable;)V
-    .locals 4
-
-    .line 1
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    .line 2
-    iget-object p1, p0, Lm1/e;->a:Ljava/lang/Object;
-
-    monitor-enter p1
+    :goto_0
+    if-ge v1, v0, :cond_0
 
     .line 3
-    :try_start_0
-    iget-object v0, p0, Lm1/e;->c:Landroid/os/Handler;
+    iget-object v2, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+
+    .line 4
+    invoke-virtual {v2, p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->W0(Landroidx/constraintlayout/core/c;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 2
+    invoke-virtual {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->U()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-virtual {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->U()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+
+    move-result-object v0
+
+    check-cast v0, Lm1/e;
+
+    .line 4
+    invoke-virtual {v0, p1}, Lm1/e;->o2(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
+
+    .line 5
+    :cond_0
+    invoke-virtual {p1, p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->S1(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
+
+    return-void
+.end method
+
+.method public varargs k2([Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
+    .locals 3
+
+    .line 1
+    array-length v0, p1
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 4
-    iget-object v0, p0, Lm1/e;->c:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    iget v2, p0, Lm1/e;->f:I
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    .line 5
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public final e(Ljava/lang/Runnable;)V
-    .locals 5
-
-    .line 1
-    iget-object v0, p0, Lm1/e;->a:Ljava/lang/Object;
-
-    monitor-enter v0
+    :goto_0
+    if-ge v1, v0, :cond_0
 
     .line 2
-    :try_start_0
-    iget-object v1, p0, Lm1/e;->b:Landroid/os/HandlerThread;
+    aget-object v2, p1, v1
 
-    const/4 v2, 0x1
+    invoke-virtual {p0, v2}, Lm1/e;->a(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
 
-    if-nez v1, :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-    .line 3
-    new-instance v1, Landroid/os/HandlerThread;
+    goto :goto_0
 
-    iget-object v3, p0, Lm1/e;->h:Ljava/lang/String;
-
-    iget v4, p0, Lm1/e;->g:I
-
-    invoke-direct {v1, v3, v4}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
-
-    iput-object v1, p0, Lm1/e;->b:Landroid/os/HandlerThread;
-
-    .line 4
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
-
-    .line 5
-    new-instance v1, Landroid/os/Handler;
-
-    iget-object v3, p0, Lm1/e;->b:Landroid/os/HandlerThread;
-
-    invoke-virtual {v3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lm1/e;->e:Landroid/os/Handler$Callback;
-
-    invoke-direct {v1, v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
-
-    iput-object v1, p0, Lm1/e;->c:Landroid/os/Handler;
-
-    .line 6
-    iget v1, p0, Lm1/e;->d:I
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lm1/e;->d:I
-
-    .line 7
     :cond_0
-    iget-object v1, p0, Lm1/e;->c:Landroid/os/Handler;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3}, Landroid/os/Handler;->removeMessages(I)V
-
-    .line 8
-    iget-object v1, p0, Lm1/e;->c:Landroid/os/Handler;
-
-    invoke-virtual {v1, v2, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 9
-    monitor-exit v0
-
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method
 
-.method public f(Ljava/util/concurrent/Callable;Lm1/e$d;)V
-    .locals 2
+.method public l2()Ljava/util/ArrayList;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/concurrent/Callable<",
-            "TT;>;",
-            "Lm1/e$d<",
-            "TT;>;)V"
+            "()",
+            "Ljava/util/ArrayList<",
+            "Landroidx/constraintlayout/core/widgets/ConstraintWidget;",
+            ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {}, Lm1/a;->a()Landroid/os/Handler;
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method public m2()Landroidx/constraintlayout/core/widgets/d;
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->U()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     move-result-object v0
 
     .line 2
-    new-instance v1, Lm1/e$b;
+    instance-of v1, p0, Landroidx/constraintlayout/core/widgets/d;
 
-    invoke-direct {v1, p0, p1, v0, p2}, Lm1/e$b;-><init>(Lm1/e;Ljava/util/concurrent/Callable;Landroid/os/Handler;Lm1/e$d;)V
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v1}, Lm1/e;->e(Ljava/lang/Runnable;)V
+    .line 3
+    move-object v1, p0
+
+    check-cast v1, Landroidx/constraintlayout/core/widgets/d;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    .line 4
+    invoke-virtual {v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->U()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+
+    move-result-object v2
+
+    .line 5
+    instance-of v3, v0, Landroidx/constraintlayout/core/widgets/d;
+
+    if-eqz v3, :cond_1
+
+    .line 6
+    move-object v1, v0
+
+    check-cast v1, Landroidx/constraintlayout/core/widgets/d;
+
+    :cond_1
+    move-object v0, v2
+
+    goto :goto_0
+
+    :cond_2
+    return-object v1
+.end method
+
+.method public n2()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    .line 3
+    iget-object v2, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+
+    .line 4
+    instance-of v3, v2, Lm1/e;
+
+    if-eqz v3, :cond_1
+
+    .line 5
+    check-cast v2, Lm1/e;
+
+    invoke-virtual {v2}, Lm1/e;->n2()V
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public o2(Landroidx/constraintlayout/core/widgets/ConstraintWidget;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 2
+    invoke-virtual {p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->R0()V
 
     return-void
 .end method
 
-.method public g(Ljava/util/concurrent/Callable;I)Ljava/lang/Object;
-    .locals 12
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/concurrent/Callable<",
-            "TT;>;I)TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;
-        }
-    .end annotation
+.method public p2()V
+    .locals 1
 
     .line 1
-    new-instance v7, Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lm1/e;->A1:Ljava/util/ArrayList;
 
-    invoke-direct {v7}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2
-    invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
-
-    move-result-object v8
-
-    .line 3
-    new-instance v9, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v9}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    .line 4
-    new-instance v10, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v10, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    .line 5
-    new-instance v11, Lm1/e$c;
-
-    move-object v0, v11
-
-    move-object v1, p0
-
-    move-object v2, v9
-
-    move-object v3, p1
-
-    move-object v4, v7
-
-    move-object v5, v10
-
-    move-object v6, v8
-
-    invoke-direct/range {v0 .. v6}, Lm1/e$c;-><init>(Lm1/e;Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
-
-    invoke-virtual {p0, v11}, Lm1/e;->e(Ljava/lang/Runnable;)V
-
-    .line 6
-    invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    .line 7
-    :try_start_0
-    invoke-virtual {v10}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 8
-    invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 9
-    invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-object p1
-
-    .line 10
-    :cond_0
-    :try_start_1
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    int-to-long v0, p2
-
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 11
-    :goto_0
-    :try_start_2
-    invoke-interface {v8, p1, p2}, Ljava/util/concurrent/locks/Condition;->awaitNanos(J)J
-
-    move-result-wide p1
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 12
-    :catch_0
-    :try_start_3
-    invoke-virtual {v10}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 13
-    invoke-virtual {v9}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 14
-    invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-object p1
-
-    :cond_1
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-lez v0, :cond_2
-
-    goto :goto_0
-
-    .line 15
-    :cond_2
-    :try_start_4
-    new-instance p1, Ljava/lang/InterruptedException;
-
-    const-string p2, "timeout"
-
-    invoke-direct {p1, p2}, Ljava/lang/InterruptedException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :catchall_0
-    move-exception p1
-
-    .line 16
-    invoke-virtual {v7}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    .line 17
-    throw p1
+    return-void
 .end method

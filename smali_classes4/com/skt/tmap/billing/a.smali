@@ -24,8 +24,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 

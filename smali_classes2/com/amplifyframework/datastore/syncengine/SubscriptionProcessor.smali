@@ -299,10 +299,10 @@
     return-object p0
 .end method
 
-.method public static synthetic h(Ljava/util/concurrent/atomic/AtomicReference;Lai/i0;)V
+.method public static synthetic h(Ljava/util/concurrent/atomic/AtomicReference;Lek/i0;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->lambda$null$5(Ljava/util/concurrent/atomic/AtomicReference;Lai/i0;)V
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->lambda$null$5(Ljava/util/concurrent/atomic/AtomicReference;Lek/i0;)V
 
     return-void
 .end method
@@ -571,7 +571,7 @@
     return-void
 .end method
 
-.method private static synthetic lambda$null$5(Ljava/util/concurrent/atomic/AtomicReference;Lai/i0;)V
+.method private static synthetic lambda$null$5(Ljava/util/concurrent/atomic/AtomicReference;Lek/i0;)V
     .locals 2
 
     .line 1
@@ -598,7 +598,7 @@
     invoke-interface {v0, p0}, Lcom/amplifyframework/logging/Logger;->debug(Ljava/lang/String;)V
 
     .line 2
-    invoke-interface {p1}, Lai/i;->onComplete()V
+    invoke-interface {p1}, Lek/i;->onComplete()V
 
     return-void
 .end method
@@ -711,7 +711,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$subscriptionObservable$6(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lai/i0;)V
+.method private synthetic lambda$subscriptionObservable$6(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lek/i0;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -730,23 +730,23 @@
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 3
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/j2;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/m2;
 
-    invoke-direct {v2, p2, p3, p1, p4}, Lcom/amplifyframework/datastore/syncengine/j2;-><init>(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Ljava/util/concurrent/atomic/AtomicReference;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;)V
+    invoke-direct {v2, p2, p3, p1, p4}, Lcom/amplifyframework/datastore/syncengine/m2;-><init>(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Ljava/util/concurrent/atomic/AtomicReference;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;)V
 
     invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v3, Lcom/amplifyframework/datastore/syncengine/i2;
+    new-instance v3, Lcom/amplifyframework/datastore/syncengine/q2;
 
-    invoke-direct {v3, p5}, Lcom/amplifyframework/datastore/syncengine/i2;-><init>(Lai/i0;)V
+    invoke-direct {v3, p5}, Lcom/amplifyframework/datastore/syncengine/q2;-><init>(Lek/i0;)V
 
-    new-instance v4, Lcom/amplifyframework/datastore/syncengine/k2;
+    new-instance v4, Lcom/amplifyframework/datastore/syncengine/p2;
 
-    invoke-direct {v4, p0, p4, p2, p3}, Lcom/amplifyframework/datastore/syncengine/k2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;)V
+    invoke-direct {v4, p0, p4, p2, p3}, Lcom/amplifyframework/datastore/syncengine/p2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;)V
 
-    new-instance v5, Lcom/amplifyframework/datastore/syncengine/h2;
+    new-instance v5, Lcom/amplifyframework/datastore/syncengine/b2;
 
-    invoke-direct {v5, p1, p5}, Lcom/amplifyframework/datastore/syncengine/h2;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Lai/i0;)V
+    invoke-direct {v5, p1, p5}, Lcom/amplifyframework/datastore/syncengine/b2;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Lek/i0;)V
 
     move-object v1, p3
 
@@ -759,7 +759,7 @@
 
     move-result-object p1
 
-    invoke-interface {p5, p1}, Lai/i0;->setDisposable(Lio/reactivex/rxjava3/disposables/c;)V
+    invoke-interface {p5, p1}, Lek/i0;->setDisposable(Lio/reactivex/rxjava3/disposables/c;)V
 
     return-void
 .end method
@@ -879,17 +879,17 @@
     return-object p0
 .end method
 
-.method public static synthetic m(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lai/a;
+.method public static synthetic m(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lek/a;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->mergeEvent(Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lai/a;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->mergeEvent(Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lek/a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private mergeEvent(Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lai/a;
+.method private mergeEvent(Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lek/a;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -898,7 +898,7 @@
             "+",
             "Lcom/amplifyframework/core/model/Model;",
             ">;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 
@@ -962,7 +962,7 @@
 
     invoke-direct {v2, p1, v0}, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;-><init>(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
 
-    invoke-virtual {v1, v2}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/a;
+    invoke-virtual {v1, v2}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/a;
 
     move-result-object p1
 
@@ -972,17 +972,17 @@
     :cond_0
     iget-object p1, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->merger:Lcom/amplifyframework/datastore/syncengine/Merger;
 
-    invoke-virtual {p1, v0}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/a;
+    invoke-virtual {p1, v0}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static synthetic n(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lai/i0;)V
+.method public static synthetic n(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lek/i0;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->lambda$subscriptionObservable$6(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lai/i0;)V
+    invoke-direct/range {p0 .. p5}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->lambda$subscriptionObservable$6(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lek/i0;)V
 
     return-void
 .end method
@@ -1030,9 +1030,9 @@
     .line 2
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lcom/amplifyframework/datastore/syncengine/l2;
+    new-instance p1, Lcom/amplifyframework/datastore/syncengine/r2;
 
-    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/l2;-><init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
+    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/r2;-><init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
 
     return-object p1
 
@@ -1052,9 +1052,9 @@
     :cond_1
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lcom/amplifyframework/datastore/syncengine/n2;
+    new-instance p1, Lcom/amplifyframework/datastore/syncengine/s2;
 
-    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/n2;-><init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
+    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/s2;-><init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
 
     return-object p1
 
@@ -1062,14 +1062,14 @@
     :cond_2
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lcom/amplifyframework/datastore/syncengine/o2;
+    new-instance p1, Lcom/amplifyframework/datastore/syncengine/t2;
 
-    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/o2;-><init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
+    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/t2;-><init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
 
     return-object p1
 .end method
 
-.method private subscriptionObservable(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lcom/amplifyframework/core/model/ModelSchema;)Lai/g0;
+.method private subscriptionObservable(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lcom/amplifyframework/core/model/ModelSchema;)Lek/g0;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1083,7 +1083,7 @@
             ">;",
             "Lcom/amplifyframework/core/model/ModelSchema;",
             ")",
-            "Lai/g0<",
+            "Lek/g0<",
             "Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent<",
             "+",
             "Lcom/amplifyframework/core/model/Model;",
@@ -1092,7 +1092,7 @@
     .end annotation
 
     .line 1
-    new-instance v6, Lcom/amplifyframework/datastore/syncengine/b2;
+    new-instance v6, Lcom/amplifyframework/datastore/syncengine/u2;
 
     move-object v0, v6
 
@@ -1106,52 +1106,9 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/b2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/u2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;)V
 
-    invoke-static {v6}, Lai/g0;->B1(Lai/j0;)Lai/g0;
-
-    move-result-object p1
-
-    new-instance p3, Lcom/amplifyframework/datastore/syncengine/r2;
-
-    invoke-direct {p3, p2, p4}, Lcom/amplifyframework/datastore/syncengine/r2;-><init>(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;)V
-
-    .line 2
-    invoke-virtual {p1, p3}, Lai/g0;->f2(Lci/g;)Lai/g0;
-
-    move-result-object p1
-
-    .line 3
-    invoke-static {}, Lki/b;->e()Lai/o0;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lai/g0;->m6(Lai/o0;)Lai/g0;
-
-    move-result-object p1
-
-    .line 4
-    invoke-static {}, Lki/b;->e()Lai/o0;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lai/g0;->x4(Lai/o0;)Lai/g0;
-
-    move-result-object p1
-
-    sget-object p3, Lcom/amplifyframework/datastore/syncengine/f2;->a:Lcom/amplifyframework/datastore/syncengine/f2;
-
-    .line 5
-    invoke-virtual {p1, p3}, Lai/g0;->V3(Lci/o;)Lai/g0;
-
-    move-result-object p1
-
-    new-instance p3, Lcom/amplifyframework/datastore/syncengine/g2;
-
-    invoke-direct {p3, p0, p4}, Lcom/amplifyframework/datastore/syncengine/g2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
-
-    .line 6
-    invoke-virtual {p1, p3}, Lai/g0;->q2(Lci/r;)Lai/g0;
+    invoke-static {v6}, Lek/g0;->create(Lek/j0;)Lek/g0;
 
     move-result-object p1
 
@@ -1159,8 +1116,51 @@
 
     invoke-direct {p3, p2, p4}, Lcom/amplifyframework/datastore/syncengine/d2;-><init>(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;)V
 
+    .line 2
+    invoke-virtual {p1, p3}, Lek/g0;->doOnError(Lgk/g;)Lek/g0;
+
+    move-result-object p1
+
+    .line 3
+    invoke-static {}, Lok/b;->e()Lek/o0;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Lek/g0;->subscribeOn(Lek/o0;)Lek/g0;
+
+    move-result-object p1
+
+    .line 4
+    invoke-static {}, Lok/b;->e()Lek/o0;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Lek/g0;->observeOn(Lek/o0;)Lek/g0;
+
+    move-result-object p1
+
+    sget-object p3, Lcom/amplifyframework/datastore/syncengine/n2;->a:Lcom/amplifyframework/datastore/syncengine/n2;
+
+    .line 5
+    invoke-virtual {p1, p3}, Lek/g0;->map(Lgk/o;)Lek/g0;
+
+    move-result-object p1
+
+    new-instance p3, Lcom/amplifyframework/datastore/syncengine/o2;
+
+    invoke-direct {p3, p0, p4}, Lcom/amplifyframework/datastore/syncengine/o2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
+
+    .line 6
+    invoke-virtual {p1, p3}, Lek/g0;->filter(Lgk/r;)Lek/g0;
+
+    move-result-object p1
+
+    new-instance p3, Lcom/amplifyframework/datastore/syncengine/k2;
+
+    invoke-direct {p3, p2, p4}, Lcom/amplifyframework/datastore/syncengine/k2;-><init>(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;)V
+
     .line 7
-    invoke-virtual {p1, p3}, Lai/g0;->V3(Lci/o;)Lai/g0;
+    invoke-virtual {p1, p3}, Lek/g0;->map(Lgk/o;)Lek/g0;
 
     move-result-object p1
 
@@ -1265,38 +1265,38 @@
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->buffer:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/u2;->a:Lcom/amplifyframework/datastore/syncengine/u2;
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/g2;->a:Lcom/amplifyframework/datastore/syncengine/g2;
 
     .line 2
-    invoke-virtual {v1, v2}, Lai/g0;->i2(Lci/g;)Lai/g0;
+    invoke-virtual {v1, v2}, Lek/g0;->doOnSubscribe(Lgk/g;)Lek/g0;
 
     move-result-object v1
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/e2;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/l2;
 
-    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/e2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;)V
+    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/l2;-><init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;)V
 
     .line 3
-    invoke-virtual {v1, v2}, Lai/g0;->I2(Lci/o;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/g0;->flatMapCompletable(Lgk/o;)Lek/a;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/w2;->a:Lcom/amplifyframework/datastore/syncengine/w2;
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/i2;->a:Lcom/amplifyframework/datastore/syncengine/i2;
 
     .line 4
-    invoke-virtual {v1, v2}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/a;->P(Lgk/g;)Lek/a;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/q2;->a:Lcom/amplifyframework/datastore/syncengine/q2;
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/c2;->a:Lcom/amplifyframework/datastore/syncengine/c2;
 
     .line 5
-    invoke-virtual {v1, v2}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v1}, Lai/a;->V0()Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v1}, Lek/a;->V0()Lio/reactivex/rxjava3/disposables/c;
 
     move-result-object v1
 
@@ -1342,7 +1342,7 @@
     invoke-direct {v1, v0}, Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;-><init>(I)V
 
     .line 3
-    invoke-static {}, Lio/reactivex/rxjava3/subjects/ReplaySubject;->P8()Lio/reactivex/rxjava3/subjects/ReplaySubject;
+    invoke-static {}, Lio/reactivex/rxjava3/subjects/ReplaySubject;->q()Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
     move-result-object v0
 
@@ -1398,7 +1398,7 @@
     .line 7
     iget-object v8, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->appSync:Lcom/amplifyframework/datastore/appsync/AppSync;
 
-    invoke-direct {p0, v8, v7, v1, v3}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->subscriptionObservable(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lcom/amplifyframework/core/model/ModelSchema;)Lai/g0;
+    invoke-direct {p0, v8, v7, v1, v3}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->subscriptionObservable(Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lcom/amplifyframework/core/model/ModelSchema;)Lek/g0;
 
     move-result-object v7
 
@@ -1412,46 +1412,46 @@
     :cond_1
     iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->ongoingOperationsDisposable:Lio/reactivex/rxjava3/disposables/a;
 
-    invoke-static {v0}, Lai/g0;->d4(Ljava/lang/Iterable;)Lai/g0;
+    invoke-static {v0}, Lek/g0;->merge(Ljava/lang/Iterable;)Lek/g0;
 
     move-result-object v0
 
     .line 9
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lai/g0;->m6(Lai/o0;)Lai/g0;
+    invoke-virtual {v0, v3}, Lek/g0;->subscribeOn(Lek/o0;)Lek/g0;
 
     move-result-object v0
 
     .line 10
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lai/g0;->x4(Lai/o0;)Lai/g0;
+    invoke-virtual {v0, v3}, Lek/g0;->observeOn(Lek/o0;)Lek/g0;
 
     move-result-object v0
 
-    sget-object v3, Lcom/amplifyframework/datastore/syncengine/v2;->a:Lcom/amplifyframework/datastore/syncengine/v2;
+    sget-object v3, Lcom/amplifyframework/datastore/syncengine/h2;->a:Lcom/amplifyframework/datastore/syncengine/h2;
 
     .line 11
-    invoke-virtual {v0, v3}, Lai/g0;->i2(Lci/g;)Lai/g0;
+    invoke-virtual {v0, v3}, Lek/g0;->doOnSubscribe(Lgk/g;)Lek/g0;
 
     move-result-object v0
 
-    sget-object v3, Lcom/amplifyframework/datastore/syncengine/c2;->a:Lcom/amplifyframework/datastore/syncengine/c2;
+    sget-object v3, Lcom/amplifyframework/datastore/syncengine/j2;->a:Lcom/amplifyframework/datastore/syncengine/j2;
 
     .line 12
-    invoke-virtual {v0, v3}, Lai/g0;->f2(Lci/g;)Lai/g0;
+    invoke-virtual {v0, v3}, Lek/g0;->doOnError(Lgk/g;)Lek/g0;
 
     move-result-object v0
 
-    sget-object v3, Lcom/amplifyframework/datastore/syncengine/p2;->a:Lcom/amplifyframework/datastore/syncengine/p2;
+    sget-object v3, Lcom/amplifyframework/datastore/syncengine/w2;->a:Lcom/amplifyframework/datastore/syncengine/w2;
 
     .line 13
-    invoke-virtual {v0, v3}, Lai/g0;->a2(Lci/a;)Lai/g0;
+    invoke-virtual {v0, v3}, Lek/g0;->doOnComplete(Lgk/a;)Lek/g0;
 
     move-result-object v0
 
@@ -1459,28 +1459,28 @@
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lcom/amplifyframework/datastore/syncengine/s2;
+    new-instance v5, Lcom/amplifyframework/datastore/syncengine/e2;
 
-    invoke-direct {v5, v3}, Lcom/amplifyframework/datastore/syncengine/s2;-><init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
-
-    iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->buffer:Lio/reactivex/rxjava3/subjects/ReplaySubject;
-
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v6, Lcom/amplifyframework/datastore/syncengine/t2;
-
-    invoke-direct {v6, v3}, Lcom/amplifyframework/datastore/syncengine/t2;-><init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
+    invoke-direct {v5, v3}, Lcom/amplifyframework/datastore/syncengine/e2;-><init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
 
     iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->buffer:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v7, Lcom/amplifyframework/datastore/syncengine/m2;
+    new-instance v6, Lcom/amplifyframework/datastore/syncengine/f2;
 
-    invoke-direct {v7, v3}, Lcom/amplifyframework/datastore/syncengine/m2;-><init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
+    invoke-direct {v6, v3}, Lcom/amplifyframework/datastore/syncengine/f2;-><init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
+
+    iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->buffer:Lio/reactivex/rxjava3/subjects/ReplaySubject;
+
+    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v7, Lcom/amplifyframework/datastore/syncengine/v2;
+
+    invoke-direct {v7, v3}, Lcom/amplifyframework/datastore/syncengine/v2;-><init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
 
     .line 14
-    invoke-virtual {v0, v5, v6, v7}, Lai/g0;->k6(Lci/g;Lci/g;Lci/a;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v5, v6, v7}, Lek/g0;->subscribe(Lgk/g;Lgk/g;Lgk/a;)Lio/reactivex/rxjava3/disposables/c;
 
     move-result-object v0
 

@@ -44,6 +44,8 @@
 
 .field public static final ERROR_NOT_VALID_REQUEST:I = 0x3df
 
+.field public static final ERROR_POI_ERROR:I = 0x190
+
 .field public static final ERROR_SERVER:I = 0x12c
 
 .field public static final ERROR_SERVICE_DELAYED:I = 0x258
@@ -313,15 +315,33 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_a
+    if-nez v0, :cond_a
 
     const-string/jumbo p0, "\uc774\ub95c\ucc28 \ud1b5\ud589\uac00\ub2a5 \uacbd\ub85c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."
 
     return-object p0
 
     :cond_a
+    const/16 v0, 0x190
+
+    .line 12
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result p0
+
+    if-nez p0, :cond_b
+
+    const-string p0, "Wi-Fi\ub97c \ub044\uace0 \ub370\uc774\ud130 \uc811\uc18d \uc0c1\ud0dc \ud655\uc778 \ud6c4 \ub2e4\uc2dc \uc2dc\ub3c4\ud574\uc8fc\uc138\uc694. \ub2e4\ub978 \uc778\ud130\ub137 \uc811\uc18d\ub3c4 \uc798 \ub418\uc9c0 \uc54a\ub294\ub2e4\uba74 \ud1b5\uc2e0\uc0ac \uace0\uac1d\uc13c\ud130\uc5d0 \ubb38\uc758\ud574\uc8fc\uc138\uc694."
+
+    return-object p0
+
+    :cond_b
     return-object v1
 .end method
 

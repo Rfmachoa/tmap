@@ -3,32 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/car/app/utils/RemoteUtils$a;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/car/app/CarAppService;
+.field public final synthetic a:Landroidx/car/app/CarContext;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/CarAppService;)V
+.method public synthetic constructor <init>(Landroidx/car/app/CarContext;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/k;->a:Landroidx/car/app/CarAppService;
+    iput-object p1, p0, Landroidx/car/app/k;->a:Landroidx/car/app/CarContext;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroidx/car/app/k;->a:Landroidx/car/app/CarAppService;
+    iget-object v0, p0, Landroidx/car/app/k;->a:Landroidx/car/app/CarContext;
 
-    invoke-static {v0}, Landroidx/car/app/CarAppService;->a(Landroidx/car/app/CarAppService;)V
+    invoke-static {v0}, Landroidx/car/app/AppManager$1;->c(Landroidx/car/app/CarContext;)Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -10,7 +10,7 @@
 # instance fields
 .field public g:I
 
-.field public h:Lwc/r;
+.field public h:Lcom/skt/tmap/setting/fragment/s;
 
 
 # direct methods
@@ -31,6 +31,49 @@
 
 
 # virtual methods
+.method public D5()Landroid/view/View;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public E5()Landroidx/fragment/app/Fragment;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lcom/skt/tmap/setting/fragment/s;
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance v0, Lcom/skt/tmap/setting/fragment/s;
+
+    invoke-direct {v0}, Lcom/skt/tmap/setting/fragment/s;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lcom/skt/tmap/setting/fragment/s;
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lcom/skt/tmap/setting/fragment/s;
+
+    return-object v0
+.end method
+
+.method public F5()Ljava/lang/String;
+    .locals 1
+
+    const v0, 0x7f14014e
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 1
     .param p3    # Landroid/content/Intent;
@@ -97,9 +140,9 @@
 
     .line 5
     :cond_1
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lwc/r;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lcom/skt/tmap/setting/fragment/s;
 
-    invoke-virtual {p1}, Lwc/r;->P()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/s;->Q()V
 
     goto :goto_1
 
@@ -109,9 +152,9 @@
     invoke-static {p0}, Lcom/skt/tmap/blackbox/a;->u(Landroid/app/Activity;)V
 
     .line 7
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lwc/r;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lcom/skt/tmap/setting/fragment/s;
 
-    invoke-virtual {p1}, Lwc/r;->R()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/s;->S()V
 
     :goto_1
     return-void
@@ -134,7 +177,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -161,7 +204,7 @@
     const/16 p1, 0x81
 
     .line 4
-    invoke-static {p0, p1}, Lcom/skt/tmap/util/l0;->l(Landroid/app/Activity;I)Z
+    invoke-static {p0, p1}, Lcom/skt/tmap/util/r0;->l(Landroid/app/Activity;I)Z
 
     return-void
 .end method
@@ -263,9 +306,9 @@
     invoke-static {p0}, Lcom/skt/tmap/blackbox/a;->v(Landroid/app/Activity;)V
 
     .line 3
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lwc/r;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lcom/skt/tmap/setting/fragment/s;
 
-    invoke-virtual {p1}, Lwc/r;->R()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/s;->S()V
 
     :goto_0
     return-void
@@ -275,7 +318,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->I(Landroid/content/Context;)V
 
     .line 2
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
@@ -287,53 +330,10 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->N(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->P(Landroid/content/Context;)V
 
     .line 2
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onStop()V
 
     return-void
-.end method
-
-.method public u5()Landroid/view/View;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public v5()Landroidx/fragment/app/Fragment;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lwc/r;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Lwc/r;
-
-    invoke-direct {v0}, Lwc/r;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lwc/r;
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBlackBoxSettingPreferenceActivity;->h:Lwc/r;
-
-    return-object v0
-.end method
-
-.method public w5()Ljava/lang/String;
-    .locals 1
-
-    const v0, 0x7f130149
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

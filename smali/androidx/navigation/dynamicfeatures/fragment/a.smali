@@ -1,5 +1,5 @@
 .class public final Landroidx/navigation/dynamicfeatures/fragment/a;
-.super Landroidx/navigation/fragment/d;
+.super Lr3/h;
 .source "DynamicFragmentNavigator.kt"
 
 
@@ -21,29 +21,29 @@
     }
     d2 = {
         "Landroidx/navigation/dynamicfeatures/fragment/a;",
-        "Landroidx/navigation/fragment/d;",
+        "Lr3/h;",
         "Landroidx/navigation/dynamicfeatures/fragment/a$a;",
-        "j",
-        "Landroidx/navigation/fragment/d$a;",
+        "p",
+        "Lr3/h$b;",
         "destination",
         "Landroid/os/Bundle;",
         "args",
-        "Landroidx/navigation/j0;",
+        "Landroidx/navigation/k0;",
         "navOptions",
         "Landroidx/navigation/Navigator$a;",
         "navigatorExtras",
         "Landroidx/navigation/NavDestination;",
-        "i",
+        "q",
         "Landroid/content/Context;",
         "context",
         "Landroidx/fragment/app/FragmentManager;",
         "manager",
         "",
         "containerId",
-        "Lu2/k;",
+        "Lq3/j;",
         "installManager",
         "<init>",
-        "(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILu2/k;)V",
+        "(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILq3/j;)V",
         "a",
         "navigation-dynamic-features-fragment_release"
     }
@@ -57,11 +57,11 @@
 
 
 # instance fields
-.field public final g:Lu2/k;
+.field public final j:Lq3/j;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILu2/k;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILq3/j;)V
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -71,7 +71,7 @@
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p4    # Lu2/k;
+    .param p4    # Lq3/j;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -89,9 +89,9 @@
     invoke-static {p4, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Landroidx/navigation/fragment/d;-><init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;I)V
+    invoke-direct {p0, p1, p2, p3}, Lr3/h;-><init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;I)V
 
-    iput-object p4, p0, Landroidx/navigation/dynamicfeatures/fragment/a;->g:Lu2/k;
+    iput-object p4, p0, Landroidx/navigation/dynamicfeatures/fragment/a;->j:Lq3/j;
 
     return-void
 .end method
@@ -102,40 +102,53 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/a;->j()Landroidx/navigation/dynamicfeatures/fragment/a$a;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/a;->p()Landroidx/navigation/dynamicfeatures/fragment/a$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic b(Landroidx/navigation/NavDestination;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
+.method public bridge synthetic d(Landroidx/navigation/NavDestination;Landroid/os/Bundle;Landroidx/navigation/k0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
     .locals 0
 
     .line 1
-    check-cast p1, Landroidx/navigation/fragment/d$a;
+    check-cast p1, Lr3/h$b;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/navigation/dynamicfeatures/fragment/a;->i(Landroidx/navigation/fragment/d$a;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/navigation/dynamicfeatures/fragment/a;->q(Lr3/h$b;Landroid/os/Bundle;Landroidx/navigation/k0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic f()Landroidx/navigation/fragment/d$a;
+.method public bridge synthetic l()Lr3/h$b;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/a;->j()Landroidx/navigation/dynamicfeatures/fragment/a$a;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/a;->p()Landroidx/navigation/dynamicfeatures/fragment/a$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public i(Landroidx/navigation/fragment/d$a;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
+.method public p()Landroidx/navigation/dynamicfeatures/fragment/a$a;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroidx/navigation/dynamicfeatures/fragment/a$a;
+
+    invoke-direct {v0, p0}, Landroidx/navigation/dynamicfeatures/fragment/a$a;-><init>(Landroidx/navigation/Navigator;)V
+
+    return-object v0
+.end method
+
+.method public q(Lr3/h$b;Landroid/os/Bundle;Landroidx/navigation/k0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
     .locals 3
-    .param p1    # Landroidx/navigation/fragment/d$a;
+    .param p1    # Lr3/h$b;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -143,7 +156,7 @@
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p3    # Landroidx/navigation/j0;
+    .param p3    # Landroidx/navigation/k0;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
@@ -159,7 +172,7 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    instance-of v0, p4, Lu2/e;
+    instance-of v0, p4, Lq3/e;
 
     if-nez v0, :cond_0
 
@@ -171,7 +184,7 @@
     move-object v0, p4
 
     :goto_0
-    check-cast v0, Lu2/e;
+    check-cast v0, Lq3/e;
 
     .line 2
     instance-of v1, p1, Landroidx/navigation/dynamicfeatures/fragment/a$a;
@@ -183,25 +196,25 @@
 
     check-cast v1, Landroidx/navigation/dynamicfeatures/fragment/a$a;
 
-    invoke-virtual {v1}, Landroidx/navigation/dynamicfeatures/fragment/a$a;->C()Ljava/lang/String;
+    invoke-virtual {v1}, Landroidx/navigation/dynamicfeatures/fragment/a$a;->L()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 4
-    iget-object v2, p0, Landroidx/navigation/dynamicfeatures/fragment/a;->g:Lu2/k;
+    iget-object v2, p0, Landroidx/navigation/dynamicfeatures/fragment/a;->j:Lq3/j;
 
-    invoke-virtual {v2, v1}, Lu2/k;->c(Ljava/lang/String;)Z
+    invoke-virtual {v2, v1}, Lq3/j;->c(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
     .line 5
-    iget-object p3, p0, Landroidx/navigation/dynamicfeatures/fragment/a;->g:Lu2/k;
+    iget-object p3, p0, Landroidx/navigation/dynamicfeatures/fragment/a;->j:Lq3/j;
 
-    invoke-virtual {p3, p1, p2, v0, v1}, Lu2/k;->d(Landroidx/navigation/NavDestination;Landroid/os/Bundle;Lu2/e;Ljava/lang/String;)Landroidx/navigation/NavDestination;
+    invoke-virtual {p3, p1, p2, v0, v1}, Lq3/j;->d(Landroidx/navigation/NavDestination;Landroid/os/Bundle;Lq3/e;Ljava/lang/String;)Landroidx/navigation/NavDestination;
 
     move-result-object p1
 
@@ -211,28 +224,15 @@
     if-eqz v0, :cond_2
 
     .line 6
-    invoke-virtual {v0}, Lu2/e;->a()Landroidx/navigation/Navigator$a;
+    invoke-virtual {v0}, Lq3/e;->a()Landroidx/navigation/Navigator$a;
 
     move-result-object p4
 
     .line 7
     :cond_2
-    invoke-super {p0, p1, p2, p3, p4}, Landroidx/navigation/fragment/d;->i(Landroidx/navigation/fragment/d$a;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
+    invoke-super {p0, p1, p2, p3, p4}, Lr3/h;->navigate(Lr3/h$b;Landroid/os/Bundle;Landroidx/navigation/k0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public j()Landroidx/navigation/dynamicfeatures/fragment/a$a;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Landroidx/navigation/dynamicfeatures/fragment/a$a;
-
-    invoke-direct {v0, p0}, Landroidx/navigation/dynamicfeatures/fragment/a$a;-><init>(Landroidx/navigation/Navigator;)V
-
-    return-object v0
 .end method

@@ -16,5 +16,27 @@
     .end annotation
 .end method
 
+.method public abstract has(Ljava/lang/Class;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+.end method
+
+.method public abstract hasOneOf([Ljava/lang/Class;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Ljava/lang/Class<",
+            "+",
+            "Ljava/lang/annotation/Annotation;",
+            ">;)Z"
+        }
+    .end annotation
+.end method
+
 .method public abstract size()I
 .end method

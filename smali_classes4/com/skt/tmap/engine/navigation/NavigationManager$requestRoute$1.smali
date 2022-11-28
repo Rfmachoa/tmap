@@ -48,8 +48,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -63,19 +63,12 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/NavigationManager;Lcom/skt/tmap/engine/navigation/route/RouteOption;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/skt/tmap/engine/navigation/route/RouteOption;",
-            ")V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$requestRoute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     iput-object p2, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$requestRoute$1;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -84,7 +77,7 @@
 
 # virtual methods
 .method public onFailure(Lretrofit2/Call;Ljava/lang/Throwable;)V
-    .locals 3
+    .locals 6
     .param p1    # Lretrofit2/Call;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -108,7 +101,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "t"
+    const-string v0, "t"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -157,6 +150,8 @@
 
     const/16 v1, 0x12c
 
+    const/4 v2, 0x0
+
     if-eqz p1, :cond_2
 
     .line 7
@@ -166,33 +161,36 @@
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getResponseCode()Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
 
-    move-result v1
+    move-result v2
 
     .line 8
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getResp()Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getErrorCode()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v4
 
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v5
 
-    invoke-interface {v0, v2, v1, p1, p2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+    invoke-interface {v0, v3, v2, v4, v5}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 9
+    sget-object v2, Lkotlin/d1;->a:Lkotlin/d1;
+
     :cond_1
+    if-nez v2, :cond_3
+
+    .line 10
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getResp()Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;
 
     move-result-object v2
@@ -210,24 +208,16 @@
     goto :goto_0
 
     :cond_2
-    const/4 p1, 0x0
+    const-string p1, "300"
 
-    .line 10
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    .line 11
+    invoke-static {p1}, Lcom/skt/tmap/engine/navigation/network/NetworkError;->getErrorString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-interface {v0, v2, v1, p1, p2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/skt/tmap/engine/navigation/network/NetworkError;->getErrorString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, p1, v1, p2, v2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 11
+    .line 12
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$requestRoute$1;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
@@ -240,7 +230,7 @@
 
     if-eq p1, p2, :cond_4
 
-    .line 12
+    .line 13
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$requestRoute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getDriveStatusChangedListener()Lcom/skt/tmap/engine/navigation/DriveStatusChangedListener;
@@ -322,8 +312,6 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
-
     if-eqz v0, :cond_6
 
     .line 6
@@ -332,10 +320,6 @@
     move-result-object v0
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "response.body()!!"
-
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
@@ -351,8 +335,6 @@
     move-result-object v0
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
@@ -370,9 +352,7 @@
 
     move-result v0
 
-    xor-int/lit8 v0, v0, 0x1
-
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_2
 
@@ -512,7 +492,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "type : "
+    const-string v1, "type : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

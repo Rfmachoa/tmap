@@ -294,6 +294,29 @@
     return v0
 .end method
 
+.method public getHourContentDescriptionResId()I
+    .locals 2
+    .annotation build Landroidx/annotation/StringRes;
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/google/android/material/timepicker/TimeModel;->format:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    sget v0, Lcom/google/android/material/R$string;->material_hour_24h_suffix:I
+
+    goto :goto_0
+
+    :cond_0
+    sget v0, Lcom/google/android/material/R$string;->material_hour_suffix:I
+
+    :goto_0
+    return v0
+.end method
+
 .method public getHourForDisplay()I
     .locals 4
 
@@ -468,7 +491,7 @@
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
             from = 0x0L
-            to = 0x3cL
+            to = 0x3bL
         .end annotation
     .end param
 

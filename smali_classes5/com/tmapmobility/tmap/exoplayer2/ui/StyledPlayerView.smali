@@ -10,60 +10,45 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;,
-        Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$ShowBuffering;
+        Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$ShowBuffering;,
+        Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;,
+        Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
     }
 .end annotation
 
 
 # static fields
-.field public static final g1:I = 0x0
+.field public static final k1:I = 0x0
 
-.field public static final h1:I = 0x1
+.field public static final l1:I = 0x1
 
-.field public static final i1:I = 0x2
+.field public static final m1:I = 0x2
 
-.field public static final j1:I = 0x0
+.field public static final n1:I = 0x0
 
-.field public static final k1:I = 0x1
+.field public static final o1:I = 0x1
 
-.field public static final l1:I = 0x2
+.field public static final p1:I = 0x2
 
-.field public static final m1:I = 0x3
+.field public static final q1:I = 0x3
 
-.field public static final n1:I = 0x4
-
-.field public static final o1:I = 0x3
-
-.field public static final p1:I = -0x1
+.field public static final r1:I = 0x4
 
 
 # instance fields
-.field public K0:Z
-
-.field public V0:Landroid/graphics/drawable/Drawable;
+.field public K0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public W0:I
-
-.field public X0:Z
-
-.field public Y0:Lcom/tmapmobility/tmap/exoplayer2/util/l;
+.field public X0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/tmapmobility/tmap/exoplayer2/util/l<",
-            "-",
-            "Lcom/tmapmobility/tmap/exoplayer2/PlaybackException;",
-            ">;"
-        }
     .end annotation
 .end field
 
-.field public Z0:Ljava/lang/CharSequence;
+.field public Y0:Z
+
+.field public Z0:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -84,14 +69,29 @@
     .end annotation
 .end field
 
-.field public c1:Z
+.field public c1:Lcom/tmapmobility/tmap/exoplayer2/util/l;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tmapmobility/tmap/exoplayer2/util/l<",
+            "-",
+            "Lcom/tmapmobility/tmap/exoplayer2/PlaybackException;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public final d:Landroid/view/View;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public d1:Z
+.field public d1:Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field public final e:Z
 
@@ -109,27 +109,35 @@
     .end annotation
 .end field
 
+.field public g1:Z
+
 .field public final h:Landroid/view/View;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
+
+.field public h1:Z
 
 .field public final i:Landroid/widget/TextView;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
+.field public i1:I
+
 .field public final j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
+
+.field public j1:Z
 
 .field public final k:Landroid/widget/FrameLayout;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public k0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
+.field public k0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -247,7 +255,7 @@
     invoke-direct {v2, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 18
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v3, 0x17
 
@@ -258,7 +266,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->r(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->t(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
 
     goto :goto_0
 
@@ -268,7 +276,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->q(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->s(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
 
     .line 21
     :goto_0
@@ -399,14 +407,14 @@
 
     move/from16 v18, v5
 
-    iget-boolean v5, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Z
+    iget-boolean v5, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
 
     .line 43
     invoke-virtual {v9, v4, v5}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v4
 
-    iput-boolean v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Z
+    iput-boolean v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
 
     .line 44
     sget v4, Lcom/tmapmobility/tmap/exoplayer2/ui/R$styleable;->StyledPlayerView_hide_during_ads:I
@@ -511,7 +519,7 @@
     if-eqz v4, :cond_3
 
     .line 51
-    invoke-static {v4, v6}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->F(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;I)V
+    invoke-static {v4, v6}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->H(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;I)V
 
     .line 52
     :cond_3
@@ -561,10 +569,7 @@
 
     iput-object v10, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
 
-    :goto_2
-    const/4 v11, 0x1
-
-    goto :goto_3
+    goto :goto_2
 
     :cond_5
     :try_start_1
@@ -656,9 +661,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    move v10, v11
+    const/4 v10, 0x1
 
-    goto :goto_4
+    goto :goto_3
 
     :catch_1
     move-exception v0
@@ -672,24 +677,22 @@
 
     throw v2
 
-    :cond_7
-    const/4 v11, 0x1
-
     .line 62
+    :cond_7
     new-instance v10, Landroid/view/TextureView;
 
     invoke-direct {v10, v0}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
     iput-object v10, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
 
-    :goto_3
+    :goto_2
     const/4 v10, 0x0
 
     .line 63
-    :goto_4
-    iget-object v12, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
+    :goto_3
+    iget-object v11, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
 
-    invoke-virtual {v12, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v11, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 64
     iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
@@ -699,22 +702,20 @@
     .line 65
     iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
 
-    const/4 v12, 0x0
+    const/4 v11, 0x0
 
-    invoke-virtual {v6, v12}, Landroid/view/View;->setClickable(Z)V
+    invoke-virtual {v6, v11}, Landroid/view/View;->setClickable(Z)V
 
     .line 66
     iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d:Landroid/view/View;
 
-    invoke-virtual {v4, v6, v12}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
+    invoke-virtual {v4, v6, v11}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     move v4, v10
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_8
-    const/4 v11, 0x1
-
     const/4 v4, 0x0
 
     .line 67
@@ -723,7 +724,7 @@
     const/4 v4, 0x0
 
     .line 68
-    :goto_5
+    :goto_4
     iput-boolean v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e:Z
 
     .line 69
@@ -763,16 +764,16 @@
 
     if-eqz v4, :cond_9
 
-    move v4, v11
+    const/4 v4, 0x1
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_9
     const/4 v4, 0x0
 
     .line 72
-    :goto_6
-    iput-boolean v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Z
+    :goto_5
+    iput-boolean v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Z
 
     if-eqz v14, :cond_a
 
@@ -781,11 +782,11 @@
 
     move-result-object v4
 
-    invoke-static {v4, v14}, Landroidx/core/content/d;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v4, v14}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    iput-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->V0:Landroid/graphics/drawable/Drawable;
+    iput-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Landroid/graphics/drawable/Drawable;
 
     .line 74
     :cond_a
@@ -802,10 +803,10 @@
     if-eqz v4, :cond_b
 
     .line 75
-    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->I()V
+    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->e()V
 
     .line 76
-    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->J()V
+    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->f()V
 
     .line 77
     :cond_b
@@ -826,7 +827,7 @@
 
     .line 79
     :cond_c
-    iput v8, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->W0:I
+    iput v8, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
 
     .line 80
     sget v4, Lcom/tmapmobility/tmap/exoplayer2/ui/R$id;->exo_error_message:I
@@ -868,7 +869,7 @@
 
     const/4 v10, 0x0
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_e
     if-eqz v8, :cond_f
@@ -878,9 +879,9 @@
 
     const/4 v10, 0x0
 
-    const/4 v12, 0x0
+    const/4 v11, 0x0
 
-    invoke-direct {v6, v0, v12, v10, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/util/AttributeSet;)V
+    invoke-direct {v6, v0, v11, v10, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILandroid/util/AttributeSet;)V
 
     iput-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
@@ -912,54 +913,54 @@
     .line 91
     invoke-virtual {v0, v6, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_f
     const/4 v10, 0x0
 
-    const/4 v12, 0x0
+    const/4 v11, 0x0
 
     .line 92
-    iput-object v12, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+    iput-object v11, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     .line 93
-    :goto_7
+    :goto_6
     iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     if-eqz v0, :cond_10
 
     move/from16 v4, p3
 
-    goto :goto_8
+    goto :goto_7
 
     :cond_10
     move v4, v10
 
-    :goto_8
-    iput v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
+    :goto_7
+    iput v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
 
     .line 94
-    iput-boolean v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Z
+    iput-boolean v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h1:Z
 
     .line 95
-    iput-boolean v5, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
+    iput-boolean v5, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
 
     .line 96
-    iput-boolean v7, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Z
+    iput-boolean v7, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g1:Z
 
     if-eqz v17, :cond_11
 
     if-eqz v0, :cond_11
 
-    move v6, v11
+    const/4 v6, 0x1
 
-    goto :goto_9
+    goto :goto_8
 
     :cond_11
     move v6, v10
 
     .line 97
-    :goto_9
+    :goto_8
     iput-boolean v6, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u:Z
 
     if-eqz v0, :cond_12
@@ -972,14 +973,22 @@
 
     invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->S(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;)V
 
-    .line 100
     :cond_12
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->N()V
+    if-eqz v17, :cond_13
+
+    const/4 v0, 0x1
+
+    .line 100
+    invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setClickable(Z)V
+
+    .line 101
+    :cond_13
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
 
     return-void
 .end method
 
-.method public static F(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;I)V
+.method public static H(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;I)V
     .locals 0
 
     .line 1
@@ -988,7 +997,7 @@
     return-void
 .end method
 
-.method public static J(Lcom/tmapmobility/tmap/exoplayer2/Player;Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+.method public static L(Lcom/tmapmobility/tmap/exoplayer2/Player;Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
     .param p1    # Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
         .annotation build Landroidx/annotation/Nullable;
@@ -1034,7 +1043,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->L()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->N()V
 
     return-void
 .end method
@@ -1043,7 +1052,7 @@
     .locals 0
 
     .line 1
-    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
+    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i1:I
 
     return p0
 .end method
@@ -1052,59 +1061,12 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->o(Landroid/view/TextureView;I)V
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->q(Landroid/view/TextureView;I)V
 
     return-void
 .end method
 
-.method public static synthetic e(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic f(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->N()V
-
-    return-void
-.end method
-
-.method public static synthetic g(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c:Landroid/view/View;
-
-    return-object p0
-.end method
-
-.method public static synthetic h(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/Player;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p:Lcom/tmapmobility/tmap/exoplayer2/Player;
-
-    return-object p0
-.end method
-
-.method public static synthetic i(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;Z)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Q(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic j(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+.method public static synthetic e(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
     .line 1
@@ -1113,11 +1075,56 @@
     return-void
 .end method
 
-.method public static synthetic k(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+.method public static synthetic f(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
     .line 1
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
+
+    return-void
+.end method
+
+.method public static synthetic g(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->k0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
+
+    return-object p0
+.end method
+
+.method public static synthetic h(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+
+    return-object p0
+.end method
+
+.method public static synthetic i(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method public static synthetic j(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/Player;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p:Lcom/tmapmobility/tmap/exoplayer2/Player;
+
+    return-object p0
+.end method
+
+.method public static synthetic k(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;Z)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S(Z)V
 
     return-void
 .end method
@@ -1131,27 +1138,45 @@
     return-void
 .end method
 
-.method public static synthetic m(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
+.method public static synthetic m(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->x()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->R()V
+
+    return-void
+.end method
+
+.method public static synthetic n(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Q()V
+
+    return-void
+.end method
+
+.method public static synthetic o(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->z()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic n(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
+.method public static synthetic p(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
     .locals 0
 
     .line 1
-    iget-boolean p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Z
+    iget-boolean p0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g1:Z
 
     return p0
 .end method
 
-.method public static o(Landroid/view/TextureView;I)V
+.method public static q(Landroid/view/TextureView;I)V
     .locals 6
 
     .line 1
@@ -1233,7 +1258,7 @@
     return-void
 .end method
 
-.method public static q(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
+.method public static s(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
     .locals 1
 
     .line 1
@@ -1257,7 +1282,7 @@
     return-void
 .end method
 
-.method public static r(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
+.method public static t(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
     .locals 2
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x17
@@ -1288,7 +1313,92 @@
 
 
 # virtual methods
-.method public A()V
+.method public final A(Z)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->z()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g1:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 3
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+
+    .line 4
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->g0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->getShowTimeoutMs()I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 5
+    :goto_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->I()Z
+
+    move-result v1
+
+    if-nez p1, :cond_2
+
+    if-nez v0, :cond_2
+
+    if-eqz v1, :cond_3
+
+    .line 6
+    :cond_2
+    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K(Z)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public B(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;F)V
+    .locals 0
+    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;->setAspectRatio(F)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public C()V
     .locals 2
 
     .line 1
@@ -1307,7 +1417,7 @@
     return-void
 .end method
 
-.method public B()V
+.method public D()V
     .locals 2
 
     .line 1
@@ -1326,7 +1436,7 @@
     return-void
 .end method
 
-.method public final C(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;)Z
+.method public final E(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;)Z
     .locals 2
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
         value = {
@@ -1335,7 +1445,7 @@
     .end annotation
 
     .line 1
-    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;->k:[B
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;->j:[B
 
     const/4 v0, 0x0
 
@@ -1361,14 +1471,14 @@
 
     invoke-direct {v0, v1, p1}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->D(Landroid/graphics/drawable/Drawable;)Z
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->F(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final D(Landroid/graphics/drawable/Drawable;)Z
+.method public final F(Landroid/graphics/drawable/Drawable;)Z
     .locals 3
     .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/Nullable;
@@ -1407,7 +1517,7 @@
     .line 3
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b:Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;
 
-    invoke-virtual {p0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->z(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;F)V
+    invoke-virtual {p0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->B(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;F)V
 
     .line 4
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f:Landroid/widget/ImageView;
@@ -1427,7 +1537,7 @@
     return v0
 .end method
 
-.method public E([J[Z)V
+.method public G([J[Z)V
     .locals 1
     .param p1    # [J
         .annotation build Landroidx/annotation/Nullable;
@@ -1451,7 +1561,7 @@
     return-void
 .end method
 
-.method public final G()Z
+.method public final I()Z
     .locals 3
 
     .line 1
@@ -1470,7 +1580,7 @@
     move-result v0
 
     .line 3
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
 
     if-eqz v2, :cond_1
 
@@ -1518,24 +1628,24 @@
     return v1
 .end method
 
-.method public H()V
+.method public J()V
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->G()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->I()Z
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->I(Z)V
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K(Z)V
 
     return-void
 .end method
 
-.method public final I(Z)V
+.method public final K(Z)V
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result v0
 
@@ -1554,7 +1664,7 @@
     goto :goto_0
 
     :cond_1
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
 
     :goto_0
     invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->setShowTimeoutMs(I)V
@@ -1567,15 +1677,13 @@
     return-void
 .end method
 
-.method public final K()Z
-    .locals 3
+.method public final M()V
+    .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result v0
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
@@ -1593,18 +1701,18 @@
 
     move-result v0
 
-    const/4 v2, 0x1
-
     if-nez v0, :cond_1
 
-    .line 3
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    const/4 v0, 0x1
 
-    return v2
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
+
+    goto :goto_0
 
     .line 4
     :cond_1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h1:Z
 
     if-eqz v0, :cond_2
 
@@ -1613,14 +1721,12 @@
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->b0()V
 
-    return v2
-
     :cond_2
     :goto_0
-    return v1
+    return-void
 .end method
 
-.method public final L()V
+.method public final N()V
     .locals 5
 
     .line 1
@@ -1628,7 +1734,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->C()Lcom/tmapmobility/tmap/exoplayer2/video/VideoSize;
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->D()Lcom/tmapmobility/tmap/exoplayer2/video/VideoSize;
 
     move-result-object v0
 
@@ -1702,7 +1808,7 @@
 
     .line 7
     :cond_4
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i1:I
 
     if-eqz v2, :cond_5
 
@@ -1713,7 +1819,7 @@
 
     .line 9
     :cond_5
-    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i1:I
 
     if-eqz v3, :cond_6
 
@@ -1730,9 +1836,9 @@
 
     check-cast v0, Landroid/view/TextureView;
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i1:I
 
-    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->o(Landroid/view/TextureView;I)V
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->q(Landroid/view/TextureView;I)V
 
     .line 12
     :cond_7
@@ -1750,12 +1856,12 @@
 
     .line 14
     :goto_3
-    invoke-virtual {p0, v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->z(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;F)V
+    invoke-virtual {p0, v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->B(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;F)V
 
     return-void
 .end method
 
-.method public final M()V
+.method public final O()V
     .locals 4
 
     .line 1
@@ -1781,7 +1887,7 @@
 
     if-ne v0, v3, :cond_0
 
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->W0:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
 
     if-eq v0, v3, :cond_1
 
@@ -1820,7 +1926,7 @@
     return-void
 .end method
 
-.method public final N()V
+.method public final P()V
     .locals 3
 
     .line 1
@@ -1845,7 +1951,7 @@
     if-eqz v0, :cond_2
 
     .line 3
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h1:Z
 
     if-eqz v0, :cond_1
 
@@ -1892,22 +1998,22 @@
     return-void
 .end method
 
-.method public final O()V
+.method public final Q()V
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->x()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->z()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g1:Z
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->w()V
 
     goto :goto_0
 
@@ -1915,13 +2021,13 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
 
     :goto_0
     return-void
 .end method
 
-.method public final P()V
+.method public final R()V
     .locals 3
 
     .line 1
@@ -1930,7 +2036,7 @@
     if-eqz v0, :cond_3
 
     .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Ljava/lang/CharSequence;
 
     const/4 v2, 0x0
 
@@ -1965,7 +2071,7 @@
     if-eqz v0, :cond_2
 
     .line 6
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Lcom/tmapmobility/tmap/exoplayer2/util/l;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/l;
 
     if-eqz v1, :cond_2
 
@@ -2003,7 +2109,7 @@
     return-void
 .end method
 
-.method public final Q(Z)V
+.method public final S(Z)V
     .locals 2
 
     .line 1
@@ -2012,15 +2118,11 @@
     if-eqz v0, :cond_5
 
     .line 2
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->C0()Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->p0()Lcom/tmapmobility/tmap/exoplayer2/Tracks;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;->b()Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/Tracks;->d()Z
 
     move-result v1
 
@@ -2032,38 +2134,38 @@
     if-eqz p1, :cond_1
 
     .line 3
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Z
+    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
 
     if-nez p1, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->r()V
 
     .line 5
     :cond_1
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->C0()Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->p0()Lcom/tmapmobility/tmap/exoplayer2/Tracks;
 
     move-result-object p1
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;->c(I)Z
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/Tracks;->e(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
     .line 6
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->t()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->v()V
 
     return-void
 
     .line 7
     :cond_2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->r()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->R()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->T()Z
 
     move-result p1
 
@@ -2074,7 +2176,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->C(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;)Z
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->E(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;)Z
 
     move-result p1
 
@@ -2084,9 +2186,9 @@
 
     .line 10
     :cond_3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->V0:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->D(Landroid/graphics/drawable/Drawable;)Z
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->F(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p1
 
@@ -2096,28 +2198,28 @@
 
     .line 11
     :cond_4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->t()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->v()V
 
     return-void
 
     .line 12
     :cond_5
     :goto_0
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Z
+    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
 
     if-nez p1, :cond_6
 
     .line 13
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->t()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->v()V
 
     .line 14
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->r()V
 
     :cond_6
     return-void
 .end method
 
-.method public final R()Z
+.method public final T()Z
     .locals 1
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/EnsuresNonNullIf;
         expression = {
@@ -2127,7 +2229,7 @@
     .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Z
 
     if-eqz v0, :cond_0
 
@@ -2146,7 +2248,7 @@
     return v0
 .end method
 
-.method public final S()Z
+.method public final U()Z
     .locals 1
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/EnsuresNonNullIf;
         expression = {
@@ -2183,7 +2285,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->L()Z
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->M()Z
 
     move-result v0
 
@@ -2202,7 +2304,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->w(I)Z
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(I)Z
 
     move-result v0
 
@@ -2213,7 +2315,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result v3
 
@@ -2228,13 +2330,13 @@
     if-nez v3, :cond_1
 
     .line 5
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
 
     goto :goto_1
 
     .line 6
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->s(Landroid/view/KeyEvent;)Z
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u(Landroid/view/KeyEvent;)Z
 
     move-result v3
 
@@ -2252,21 +2354,21 @@
     if-eqz v0, :cond_4
 
     .line 7
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
     .line 8
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
 
     goto :goto_2
 
     .line 9
     :cond_3
     :goto_0
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
 
     :goto_1
     move v1, v2
@@ -2353,7 +2455,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
 
     return v0
 .end method
@@ -2362,7 +2464,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h1:Z
 
     return v0
 .end method
@@ -2371,7 +2473,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
 
     return v0
 .end method
@@ -2382,7 +2484,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->V0:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -2442,7 +2544,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Z
 
     return v0
 .end method
@@ -2467,73 +2569,11 @@
     return-object v0
 .end method
 
-.method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p:Lcom/tmapmobility/tmap/exoplayer2/Player;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_3
-
-    if-eq p1, v0, :cond_1
-
-    return v1
-
-    .line 3
-    :cond_1
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
-
-    if-eqz p1, :cond_2
-
-    .line 4
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
-
-    .line 5
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->performClick()Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    return v1
-
-    .line 6
-    :cond_3
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
-
-    return v0
-
-    :cond_4
-    :goto_0
-    return v1
-.end method
-
 .method public onTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result p1
 
@@ -2549,7 +2589,7 @@
     const/4 p1, 0x1
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
 
     return p1
 
@@ -2560,7 +2600,21 @@
     return p1
 .end method
 
-.method public final p()V
+.method public performClick()Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->M()V
+
+    .line 2
+    invoke-super {p0}, Landroid/widget/FrameLayout;->performClick()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final r()V
     .locals 2
 
     .line 1
@@ -2575,49 +2629,6 @@
 
     :cond_0
     return-void
-.end method
-
-.method public performClick()Z
-    .locals 1
-
-    .line 1
-    invoke-super {p0}, Landroid/widget/FrameLayout;->performClick()Z
-
-    .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public s(Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
-
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->U(Landroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
 .end method
 
 .method public setAspectRatioListener(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout$b;)V
@@ -2644,7 +2655,7 @@
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f1:Z
 
     return-void
 .end method
@@ -2653,7 +2664,7 @@
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g1:Z
 
     return-void
 .end method
@@ -2667,10 +2678,10 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h1:Z
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->N()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
 
     return-void
 .end method
@@ -2681,13 +2692,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
+    const/4 v0, 0x0
+
     .line 2
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+
+    .line 3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->setOnFullScreenModeChangedListener(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$d;)V
@@ -2704,7 +2722,7 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e1:I
 
     .line 3
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
@@ -2716,7 +2734,7 @@
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->H()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->J()V
 
     :cond_0
     return-void
@@ -2728,14 +2746,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 1
+    .line 3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->k0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
+    .line 4
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
 
     if-ne v0, p1, :cond_0
 
@@ -2744,23 +2764,46 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3
+    .line 5
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->n0(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;)V
 
-    .line 4
+    .line 6
     :cond_1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->k0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
 
     if-eqz p1, :cond_2
 
-    .line 5
+    .line 7
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->S(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;)V
 
     :cond_2
+    const/4 p1, 0x0
+
+    .line 8
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->setControllerVisibilityListener(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;)V
+
+    return-void
+.end method
+
+.method public setControllerVisibilityListener(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;)V
+    .locals 0
+    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->k0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
+
+    const/4 p1, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->setControllerVisibilityListener(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;)V
+
     return-void
 .end method
 
@@ -2787,10 +2830,10 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 2
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->d1:Ljava/lang/CharSequence;
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->R()V
 
     return-void
 .end method
@@ -2803,17 +2846,17 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->V0:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
     .line 2
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->V0:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Z0:Landroid/graphics/drawable/Drawable;
 
     const/4 p1, 0x0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Q(Z)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S(Z)V
 
     :cond_0
     return-void
@@ -2836,17 +2879,42 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Lcom/tmapmobility/tmap/exoplayer2/util/l;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/l;
 
     if-eq v0, p1, :cond_0
 
     .line 2
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Lcom/tmapmobility/tmap/exoplayer2/util/l;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/l;
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->R()V
 
     :cond_0
+    return-void
+.end method
+
+.method public setFullscreenButtonClickListener(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;)V
+    .locals 1
+    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+
+    .line 3
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;
+
+    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->setOnFullScreenModeChangedListener(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$d;)V
+
     return-void
 .end method
 
@@ -2854,17 +2922,17 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
 
     if-eq v0, p1, :cond_0
 
     .line 2
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->X0:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b1:Z
 
     const/4 p1, 0x0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Q(Z)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S(Z)V
 
     :cond_0
     return-void
@@ -2905,7 +2973,7 @@
     if-eqz p1, :cond_2
 
     .line 2
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->D0()Landroid/os/Looper;
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->E0()Landroid/os/Looper;
 
     move-result-object v0
 
@@ -2955,7 +3023,7 @@
     .line 7
     check-cast v1, Landroid/view/TextureView;
 
-    invoke-interface {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->B(Landroid/view/TextureView;)V
+    invoke-interface {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->C(Landroid/view/TextureView;)V
 
     goto :goto_3
 
@@ -2968,7 +3036,7 @@
     .line 9
     check-cast v1, Landroid/view/SurfaceView;
 
-    invoke-interface {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->G(Landroid/view/SurfaceView;)V
+    invoke-interface {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->H(Landroid/view/SurfaceView;)V
 
     .line 10
     :cond_5
@@ -2987,7 +3055,7 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p:Lcom/tmapmobility/tmap/exoplayer2/Player;
 
     .line 13
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result v0
 
@@ -3000,20 +3068,20 @@
 
     .line 15
     :cond_7
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->M()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->O()V
 
     .line 16
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->R()V
 
     .line 17
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Q(Z)V
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S(Z)V
 
     if-eqz p1, :cond_c
 
     const/16 v0, 0x1b
 
     .line 18
-    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->x0(I)Z
+    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->z0(I)Z
 
     move-result v0
 
@@ -3047,7 +3115,7 @@
     .line 23
     :cond_9
     :goto_4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->L()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->N()V
 
     .line 24
     :cond_a
@@ -3057,7 +3125,7 @@
 
     const/16 v0, 0x1c
 
-    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->x0(I)Z
+    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->z0(I)Z
 
     move-result v0
 
@@ -3066,9 +3134,11 @@
     .line 25
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g:Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;
 
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->t()Ljava/util/List;
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->t()Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;
 
     move-result-object v1
+
+    iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;->a:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->setCues(Ljava/util/List;)V
 
@@ -3076,16 +3146,16 @@
     :cond_b
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;
 
-    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->g0(Lcom/tmapmobility/tmap/exoplayer2/Player$c;)V
+    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->h0(Lcom/tmapmobility/tmap/exoplayer2/Player$c;)V
 
     .line 27
-    invoke-virtual {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->y(Z)V
+    invoke-virtual {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->A(Z)V
 
     goto :goto_5
 
     .line 28
     :cond_c
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->w()V
 
     :goto_5
     return-void
@@ -3127,15 +3197,15 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->W0:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
 
     if-eq v0, p1, :cond_0
 
     .line 2
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->W0:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->a1:I
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->M()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->O()V
 
     :cond_0
     return-void
@@ -3271,6 +3341,10 @@
 
 .method public setShutterBackgroundColor(I)V
     .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c:Landroid/view/View;
@@ -3311,63 +3385,82 @@
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 2
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Z
 
     if-eq v1, p1, :cond_2
 
     .line 3
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->K0:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Y0:Z
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->Q(Z)V
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S(Z)V
 
     :cond_2
     return-void
 .end method
 
 .method public setUseController(Z)V
-    .locals 1
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
 
     if-eqz p1, :cond_1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v2, v0
 
     goto :goto_1
 
     :cond_1
     :goto_0
-    const/4 v0, 0x1
+    move v2, v1
 
     :goto_1
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
+
+    if-nez p1, :cond_2
 
     .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->hasOnClickListeners()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    :cond_2
+    move v0, v1
+
+    :cond_3
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClickable(Z)V
+
+    .line 3
     iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u:Z
 
-    if-ne v0, p1, :cond_2
+    if-ne v0, p1, :cond_4
 
     return-void
 
-    .line 3
-    :cond_2
+    .line 4
+    :cond_4
     iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u:Z
 
-    .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
+    .line 5
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_5
 
-    .line 5
+    .line 6
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p:Lcom/tmapmobility/tmap/exoplayer2/Player;
@@ -3376,26 +3469,26 @@
 
     goto :goto_2
 
-    .line 6
-    :cond_3
+    .line 7
+    :cond_5
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
-    if-eqz p1, :cond_4
-
-    .line 7
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->b0()V
+    if-eqz p1, :cond_6
 
     .line 8
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->b0()V
+
+    .line 9
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->setPlayer(Lcom/tmapmobility/tmap/exoplayer2/Player;)V
 
-    .line 9
-    :cond_4
+    .line 10
+    :cond_6
     :goto_2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->N()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->P()V
 
     return-void
 .end method
@@ -3420,7 +3513,36 @@
     return-void
 .end method
 
-.method public final t()V
+.method public u(Landroid/view/KeyEvent;)Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->U()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->U(Landroid/view/KeyEvent;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public final v()V
     .locals 2
 
     .line 1
@@ -3444,7 +3566,7 @@
     return-void
 .end method
 
-.method public u()V
+.method public w()V
     .locals 1
 
     .line 1
@@ -3459,7 +3581,7 @@
     return-void
 .end method
 
-.method public v()Z
+.method public x()Z
     .locals 1
 
     .line 1
@@ -3484,7 +3606,7 @@
     return v0
 .end method
 
-.method public final w(I)Z
+.method public final y(I)Z
     .locals 1
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -3543,7 +3665,7 @@
     return p1
 .end method
 
-.method public final x()Z
+.method public final z()Z
     .locals 1
 
     .line 1
@@ -3551,7 +3673,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->L()Z
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/Player;->M()Z
 
     move-result v0
 
@@ -3574,89 +3696,4 @@
 
     :goto_0
     return v0
-.end method
-
-.method public final y(Z)V
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->x()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->c1:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->S()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
-
-    .line 4
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->g0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
-
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->getShowTimeoutMs()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    .line 5
-    :goto_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->G()Z
-
-    move-result v1
-
-    if-nez p1, :cond_2
-
-    if-nez v0, :cond_2
-
-    if-eqz v1, :cond_3
-
-    .line 6
-    :cond_2
-    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->I(Z)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public z(Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;F)V
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    if-eqz p1, :cond_0
-
-    .line 1
-    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/AspectRatioFrameLayout;->setAspectRatio(F)V
-
-    :cond_0
-    return-void
 .end method

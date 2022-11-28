@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapBioAuthActivity;->v5(Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/skt/tmap/activity/TmapBioAuthActivity;->D5(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,8 +36,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -49,15 +49,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapBioAuthActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity$a;->a:Lcom/skt/tmap/activity/TmapBioAuthActivity;
 
+    .line 1
     invoke-direct {p0}, Landroidx/biometric/BiometricPrompt$a;-><init>()V
 
     return-void

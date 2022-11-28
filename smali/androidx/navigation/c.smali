@@ -1,775 +1,394 @@
-.class public Landroidx/navigation/c;
-.super Landroidx/navigation/Navigator;
-.source "ActivityNavigator.java"
+.class public final Landroidx/navigation/c;
+.super Landroidx/navigation/z;
+.source "ActivityNavigatorDestinationBuilder.kt"
 
 
 # annotations
-.annotation runtime Landroidx/navigation/Navigator$Name;
-    value = "activity"
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/navigation/c$b;,
-        Landroidx/navigation/c$a;
-    }
+.annotation runtime Landroidx/navigation/NavDestinationDsl;
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroidx/navigation/Navigator<",
-        "Landroidx/navigation/c$a;",
+        "Landroidx/navigation/z<",
+        "Landroidx/navigation/ActivityNavigator$b;",
         ">;"
     }
 .end annotation
 
-
-# static fields
-.field public static final c:Ljava/lang/String; = "android-support-navigation:ActivityNavigator:source"
-
-.field public static final d:Ljava/lang/String; = "android-support-navigation:ActivityNavigator:current"
-
-.field public static final e:Ljava/lang/String; = "android-support-navigation:ActivityNavigator:popEnterAnim"
-
-.field public static final f:Ljava/lang/String; = "android-support-navigation:ActivityNavigator:popExitAnim"
-
-.field public static final g:Ljava/lang/String; = "ActivityNavigator"
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0006\u0008\u0007\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001B\u001b\u0008\u0017\u0012\u0006\u0010\'\u001a\u00020&\u0012\u0008\u0008\u0001\u0010)\u001a\u00020(\u00a2\u0006\u0004\u0008*\u0010+B\u0019\u0008\u0016\u0012\u0006\u0010\'\u001a\u00020&\u0012\u0006\u0010,\u001a\u00020\u0008\u00a2\u0006\u0004\u0008*\u0010-J\u0008\u0010\u0003\u001a\u00020\u0002H\u0016R\u0016\u0010\u0007\u001a\u00020\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010\u0006R$\u0010\u000f\u001a\u0004\u0018\u00010\u00088\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000c\"\u0004\u0008\r\u0010\u000eR,\u0010\u0018\u001a\u000c\u0012\u0006\u0008\u0001\u0012\u00020\u0011\u0018\u00010\u00108\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0012\u0010\u0013\u001a\u0004\u0008\u0014\u0010\u0015\"\u0004\u0008\u0016\u0010\u0017R$\u0010\u001b\u001a\u0004\u0018\u00010\u00088\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0003\u0010\n\u001a\u0004\u0008\u0019\u0010\u000c\"\u0004\u0008\u001a\u0010\u000eR$\u0010\"\u001a\u0004\u0018\u00010\u001c8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0019\u0010\u001d\u001a\u0004\u0008\u001e\u0010\u001f\"\u0004\u0008 \u0010!R$\u0010%\u001a\u0004\u0018\u00010\u00088\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0014\u0010\n\u001a\u0004\u0008#\u0010\u000c\"\u0004\u0008$\u0010\u000e\u00a8\u0006."
+    }
+    d2 = {
+        "Landroidx/navigation/c;",
+        "Landroidx/navigation/z;",
+        "Landroidx/navigation/ActivityNavigator$b;",
+        "k",
+        "Landroid/content/Context;",
+        "h",
+        "Landroid/content/Context;",
+        "context",
+        "",
+        "i",
+        "Ljava/lang/String;",
+        "p",
+        "()Ljava/lang/String;",
+        "u",
+        "(Ljava/lang/String;)V",
+        "targetPackage",
+        "Lkotlin/reflect/d;",
+        "Landroid/app/Activity;",
+        "j",
+        "Lkotlin/reflect/d;",
+        "m",
+        "()Lkotlin/reflect/d;",
+        "r",
+        "(Lkotlin/reflect/d;)V",
+        "activityClass",
+        "l",
+        "q",
+        "action",
+        "Landroid/net/Uri;",
+        "Landroid/net/Uri;",
+        "n",
+        "()Landroid/net/Uri;",
+        "s",
+        "(Landroid/net/Uri;)V",
+        "data",
+        "o",
+        "t",
+        "dataPattern",
+        "Landroidx/navigation/ActivityNavigator;",
+        "navigator",
+        "",
+        "id",
+        "<init>",
+        "(Landroidx/navigation/ActivityNavigator;I)V",
+        "route",
+        "(Landroidx/navigation/ActivityNavigator;Ljava/lang/String;)V",
+        "navigation-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+.end annotation
 
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field public h:Landroid/content/Context;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
-.field public b:Landroid/app/Activity;
+.field public i:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public j:Lkotlin/reflect/d;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/reflect/d<",
+            "+",
+            "Landroid/app/Activity;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public k:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public l:Landroid/net/Uri;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public m:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroidx/navigation/ActivityNavigator;I)V
     .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # Landroidx/navigation/ActivityNavigator;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IdRes;
+        .end annotation
+    .end param
+    .annotation runtime Lkotlin/Deprecated;
+        message = "Use routes to create your ActivityNavigatorDestinationBuilder instead"
+        replaceWith = .subannotation Lkotlin/ReplaceWith;
+            expression = "ActivityNavigatorDestinationBuilder(navigator, route = id.toString())"
+            imports = {}
+        .end subannotation
+    .end annotation
+
+    const-string v0, "navigator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-direct {p0}, Landroidx/navigation/Navigator;-><init>()V
+    invoke-direct {p0, p1, p2}, Landroidx/navigation/z;-><init>(Landroidx/navigation/Navigator;I)V
 
     .line 2
-    iput-object p1, p0, Landroidx/navigation/c;->a:Landroid/content/Context;
-
-    .line 3
-    :goto_0
-    instance-of v0, p1, Landroid/content/ContextWrapper;
-
-    if-eqz v0, :cond_1
-
-    .line 4
-    instance-of v0, p1, Landroid/app/Activity;
-
-    if-eqz v0, :cond_0
-
-    .line 5
-    check-cast p1, Landroid/app/Activity;
-
-    iput-object p1, p0, Landroidx/navigation/c;->b:Landroid/app/Activity;
-
-    goto :goto_1
-
-    .line 6
-    :cond_0
-    check-cast p1, Landroid/content/ContextWrapper;
-
-    invoke-virtual {p1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroidx/navigation/ActivityNavigator;->n()Landroid/content/Context;
 
     move-result-object p1
 
-    goto :goto_0
+    iput-object p1, p0, Landroidx/navigation/c;->h:Landroid/content/Context;
 
-    :cond_1
-    :goto_1
     return-void
 .end method
 
-.method public static f(Landroid/app/Activity;)V
-    .locals 4
-    .param p0    # Landroid/app/Activity;
-        .annotation build Landroidx/annotation/NonNull;
+.method public constructor <init>(Landroidx/navigation/ActivityNavigator;Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Landroidx/navigation/ActivityNavigator;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
 
-    .line 1
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    const-string v0, "navigator"
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-nez v0, :cond_0
+    const-string v0, "route"
 
-    return-void
-
-    :cond_0
-    const-string v1, "android-support-navigation:ActivityNavigator:popEnterAnim"
-
-    const/4 v2, -0x1
-
-    .line 2
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    const-string v3, "android-support-navigation:ActivityNavigator:popExitAnim"
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v1, v2, :cond_1
-
-    if-eq v0, v2, :cond_4
-
-    :cond_1
-    const/4 v3, 0x0
-
-    if-eq v1, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v1, v3
-
-    :goto_0
-    if-eq v0, v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move v0, v3
+    invoke-direct {p0, p1, p2}, Landroidx/navigation/z;-><init>(Landroidx/navigation/Navigator;Ljava/lang/String;)V
 
     .line 4
-    :goto_1
-    invoke-virtual {p0, v1, v0}, Landroid/app/Activity;->overridePendingTransition(II)V
+    invoke-virtual {p1}, Landroidx/navigation/ActivityNavigator;->n()Landroid/content/Context;
 
-    :cond_4
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/navigation/c;->h:Landroid/content/Context;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a()Landroidx/navigation/NavDestination;
+.method public bridge synthetic c()Landroidx/navigation/NavDestination;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/navigation/c;->g()Landroidx/navigation/c$a;
+    invoke-virtual {p0}, Landroidx/navigation/c;->k()Landroidx/navigation/ActivityNavigator$b;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic b(Landroidx/navigation/NavDestination;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
-    .locals 0
-    .param p1    # Landroidx/navigation/NavDestination;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroidx/navigation/j0;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroidx/navigation/Navigator$a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
+.method public k()Landroidx/navigation/ActivityNavigator$b;
+    .locals 4
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    check-cast p1, Landroidx/navigation/c$a;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/navigation/c;->i(Landroidx/navigation/c$a;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public e()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/c;->b:Landroid/app/Activity;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public g()Landroidx/navigation/c$a;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Landroidx/navigation/c$a;
-
-    invoke-direct {v0, p0}, Landroidx/navigation/c$a;-><init>(Landroidx/navigation/Navigator;)V
-
-    return-object v0
-.end method
-
-.method public final h()Landroid/content/Context;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/c;->a:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method public i(Landroidx/navigation/c$a;Landroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)Landroidx/navigation/NavDestination;
-    .locals 9
-    .param p1    # Landroidx/navigation/c$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroidx/navigation/j0;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroidx/navigation/Navigator$a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Landroidx/navigation/c$a;->E()Landroid/content/Intent;
+    invoke-super {p0}, Landroidx/navigation/z;->c()Landroidx/navigation/NavDestination;
 
     move-result-object v0
 
-    if-eqz v0, :cond_12
+    check-cast v0, Landroidx/navigation/ActivityNavigator$b;
 
     .line 2
-    new-instance v0, Landroid/content/Intent;
+    iget-object v1, p0, Landroidx/navigation/c;->i:Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroidx/navigation/c$a;->E()Landroid/content/Intent;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
-
-    if-eqz p2, :cond_2
+    invoke-virtual {v0, v1}, Landroidx/navigation/ActivityNavigator$b;->U(Ljava/lang/String;)Landroidx/navigation/ActivityNavigator$b;
 
     .line 3
-    invoke-virtual {v0, p2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+    iget-object v1, p0, Landroidx/navigation/c;->j:Lkotlin/reflect/d;
+
+    if-eqz v1, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Landroidx/navigation/c$a;->D()Ljava/lang/String;
+    new-instance v2, Landroid/content/ComponentName;
+
+    iget-object v3, p0, Landroidx/navigation/c;->h:Landroid/content/Context;
+
+    invoke-static {v1}, Lfl/a;->e(Lkotlin/reflect/d;)Ljava/lang/Class;
 
     move-result-object v1
+
+    invoke-direct {v2, v3, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v2}, Landroidx/navigation/ActivityNavigator$b;->Q(Landroid/content/ComponentName;)Landroidx/navigation/ActivityNavigator$b;
 
     .line 5
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :cond_0
+    iget-object v1, p0, Landroidx/navigation/c;->k:Ljava/lang/String;
 
-    move-result v2
-
-    if-nez v2, :cond_2
+    invoke-virtual {v0, v1}, Landroidx/navigation/ActivityNavigator$b;->P(Ljava/lang/String;)Landroidx/navigation/ActivityNavigator$b;
 
     .line 6
-    new-instance v2, Ljava/lang/StringBuffer;
+    iget-object v1, p0, Landroidx/navigation/c;->l:Landroid/net/Uri;
 
-    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
-
-    const-string v3, "\\{(.+?)\\}"
+    invoke-virtual {v0, v1}, Landroidx/navigation/ActivityNavigator$b;->R(Landroid/net/Uri;)Landroidx/navigation/ActivityNavigator$b;
 
     .line 7
-    invoke-static {v3}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iget-object v1, p0, Landroidx/navigation/c;->m:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroidx/navigation/ActivityNavigator$b;->S(Ljava/lang/String;)Landroidx/navigation/ActivityNavigator$b;
+
+    return-object v0
+.end method
+
+.method public final l()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/c;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final m()Lkotlin/reflect/d;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/reflect/d<",
+            "+",
+            "Landroid/app/Activity;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/c;->j:Lkotlin/reflect/d;
+
+    return-object v0
+.end method
+
+.method public final n()Landroid/net/Uri;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/c;->l:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final o()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/c;->m:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final p()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/c;->i:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final q(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Landroidx/navigation/c;->k:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final r(Lkotlin/reflect/d;)V
+    .locals 0
+    .param p1    # Lkotlin/reflect/d;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/reflect/d<",
+            "+",
+            "Landroid/app/Activity;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Landroidx/navigation/c;->j:Lkotlin/reflect/d;
 
-    move-result-object v3
+    return-void
+.end method
 
-    .line 8
-    invoke-virtual {v3, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+.method public final s(Landroid/net/Uri;)V
+    .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
 
-    move-result-object v3
+    .line 1
+    iput-object p1, p0, Landroidx/navigation/c;->l:Landroid/net/Uri;
 
-    .line 9
-    :goto_0
-    invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
+    return-void
+.end method
 
-    move-result v4
+.method public final t(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
 
-    if-eqz v4, :cond_1
+    .line 1
+    iput-object p1, p0, Landroidx/navigation/c;->m:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    return-void
+.end method
 
-    .line 10
-    invoke-virtual {v3, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+.method public final u(Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
 
-    move-result-object v4
+    .line 1
+    iput-object p1, p0, Landroidx/navigation/c;->i:Ljava/lang/String;
 
-    .line 11
-    invoke-virtual {p2, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    const-string v5, ""
-
-    .line 12
-    invoke-virtual {v3, v2, v5}, Ljava/util/regex/Matcher;->appendReplacement(Ljava/lang/StringBuffer;Ljava/lang/String;)Ljava/util/regex/Matcher;
-
-    .line 13
-    invoke-virtual {p2, v4}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    goto :goto_0
-
-    .line 14
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p4, "Could not find "
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p4, " in "
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p2, " to fill data pattern "
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 15
-    :cond_1
-    invoke-virtual {v3, v2}, Ljava/util/regex/Matcher;->appendTail(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
-
-    .line 16
-    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    .line 17
-    :cond_2
-    instance-of p2, p4, Landroidx/navigation/c$b;
-
-    if-eqz p2, :cond_3
-
-    .line 18
-    move-object v1, p4
-
-    check-cast v1, Landroidx/navigation/c$b;
-
-    .line 19
-    invoke-virtual {v1}, Landroidx/navigation/c$b;->b()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 20
-    :cond_3
-    iget-object v1, p0, Landroidx/navigation/c;->a:Landroid/content/Context;
-
-    instance-of v1, v1, Landroid/app/Activity;
-
-    if-nez v1, :cond_4
-
-    const/high16 v1, 0x10000000
-
-    .line 21
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    :cond_4
-    if-eqz p3, :cond_5
-
-    .line 22
-    invoke-virtual {p3}, Landroidx/navigation/j0;->g()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const/high16 v1, 0x20000000
-
-    .line 23
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 24
-    :cond_5
-    iget-object v1, p0, Landroidx/navigation/c;->b:Landroid/app/Activity;
-
-    const-string v2, "android-support-navigation:ActivityNavigator:current"
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_6
-
-    .line 25
-    invoke-virtual {v1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_6
-
-    .line 26
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    const-string v4, "android-support-navigation:ActivityNavigator:source"
-
-    .line 27
-    invoke-virtual {v0, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 28
-    :cond_6
-    invoke-virtual {p1}, Landroidx/navigation/NavDestination;->j()I
-
-    move-result v1
-
-    .line 29
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 30
-    invoke-virtual {p0}, Landroidx/navigation/c;->h()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const-string v2, "when launching "
-
-    const-string v4, "ActivityNavigator"
-
-    const-string v5, "animator"
-
-    if-eqz p3, :cond_a
-
-    .line 31
-    invoke-virtual {p3}, Landroidx/navigation/j0;->c()I
-
-    move-result v6
-
-    .line 32
-    invoke-virtual {p3}, Landroidx/navigation/j0;->d()I
-
-    move-result v7
-
-    if-lez v6, :cond_7
-
-    .line 33
-    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_8
-
-    :cond_7
-    if-lez v7, :cond_9
-
-    .line 34
-    invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_9
-
-    :cond_8
-    const-string v8, "Activity destinations do not support Animator resource. Ignoring popEnter resource "
-
-    .line 35
-    invoke-static {v8}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    .line 36
-    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v6, " and popExit resource "
-
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 37
-    invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 38
-    invoke-static {v4, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_9
-    const-string v8, "android-support-navigation:ActivityNavigator:popEnterAnim"
-
-    .line 39
-    invoke-virtual {v0, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string v6, "android-support-navigation:ActivityNavigator:popExitAnim"
-
-    .line 40
-    invoke-virtual {v0, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    :cond_a
-    :goto_1
-    if-eqz p2, :cond_c
-
-    .line 41
-    check-cast p4, Landroidx/navigation/c$b;
-
-    .line 42
-    invoke-virtual {p4}, Landroidx/navigation/c$b;->a()Landroidx/core/app/c;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_b
-
-    .line 43
-    iget-object p4, p0, Landroidx/navigation/c;->a:Landroid/content/Context;
-
-    invoke-virtual {p2}, Landroidx/core/app/c;->l()Landroid/os/Bundle;
-
-    move-result-object p2
-
-    invoke-static {p4, v0, p2}, Landroidx/core/content/d;->t(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-
-    goto :goto_2
-
-    .line 44
-    :cond_b
-    iget-object p2, p0, Landroidx/navigation/c;->a:Landroid/content/Context;
-
-    invoke-virtual {p2, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_2
-
-    .line 45
-    :cond_c
-    iget-object p2, p0, Landroidx/navigation/c;->a:Landroid/content/Context;
-
-    invoke-virtual {p2, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    :goto_2
-    if-eqz p3, :cond_11
-
-    .line 46
-    iget-object p2, p0, Landroidx/navigation/c;->b:Landroid/app/Activity;
-
-    if-eqz p2, :cond_11
-
-    .line 47
-    invoke-virtual {p3}, Landroidx/navigation/j0;->a()I
-
-    move-result p2
-
-    .line 48
-    invoke-virtual {p3}, Landroidx/navigation/j0;->b()I
-
-    move-result p3
-
-    if-lez p2, :cond_d
-
-    .line 49
-    invoke-virtual {v1, p2}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object p4
-
-    invoke-virtual {p4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p4
-
-    if-nez p4, :cond_e
-
-    :cond_d
-    if-lez p3, :cond_f
-
-    .line 50
-    invoke-virtual {v1, p3}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object p4
-
-    invoke-virtual {p4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p4
-
-    if-eqz p4, :cond_f
-
-    :cond_e
-    const-string p4, "Activity destinations do not support Animator resource. Ignoring enter resource "
-
-    .line 51
-    invoke-static {p4}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p4
-
-    .line 52
-    invoke-virtual {v1, p2}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " and exit resource "
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 53
-    invoke-virtual {v1, p3}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 54
-    invoke-static {v4, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_3
-
-    :cond_f
-    if-gez p2, :cond_10
-
-    if-ltz p3, :cond_11
-
-    .line 55
-    :cond_10
-    invoke-static {p2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    .line 56
-    invoke-static {p3, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result p2
-
-    .line 57
-    iget-object p3, p0, Landroidx/navigation/c;->b:Landroid/app/Activity;
-
-    invoke-virtual {p3, p1, p2}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    :cond_11
-    :goto_3
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 58
-    :cond_12
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    const-string p3, "Destination "
-
-    invoke-static {p3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p3
-
-    invoke-virtual {p1}, Landroidx/navigation/NavDestination;->j()I
-
-    move-result p1
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " does not have an Intent set."
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-void
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zada;
 .super Lcom/google/android/gms/common/api/TransformedResult;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/ResultCallback;
@@ -24,52 +24,20 @@
 .field private zaa:Lcom/google/android/gms/common/api/ResultTransform;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/ResultTransform<",
-            "-TR;+",
-            "Lcom/google/android/gms/common/api/Result;",
-            ">;"
-        }
-    .end annotation
 .end field
 
 .field private zab:Lcom/google/android/gms/common/api/internal/zada;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/zada<",
-            "+",
-            "Lcom/google/android/gms/common/api/Result;",
-            ">;"
-        }
     .end annotation
 .end field
 
 .field private volatile zac:Lcom/google/android/gms/common/api/ResultCallbacks;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/ResultCallbacks<",
-            "-TR;>;"
-        }
-    .end annotation
 .end field
 
 .field private zad:Lcom/google/android/gms/common/api/PendingResult;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "TR;>;"
-        }
     .end annotation
 .end field
 
@@ -81,22 +49,8 @@
 .end field
 
 .field private final zag:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zah:Lcom/google/android/gms/common/api/internal/zacz;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/zacz;"
-        }
-    .end annotation
-.end field
 
 .field private zai:Z
 
@@ -104,14 +58,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/ref/WeakReference;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/TransformedResult;-><init>()V
@@ -555,11 +501,6 @@
 
 .method public final onResult(Lcom/google/android/gms/common/api/Result;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zada;->zae:Ljava/lang/Object;
@@ -748,13 +689,6 @@
 
 .method public final zai(Lcom/google/android/gms/common/api/PendingResult;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "*>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zada;->zae:Ljava/lang/Object;

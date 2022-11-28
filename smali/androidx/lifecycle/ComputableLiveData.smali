@@ -52,7 +52,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Ll/a;->e()Ljava/util/concurrent/Executor;
+    invoke-static {}, Ln/a;->e()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
@@ -152,13 +152,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Ll/a;->f()Ll/a;
+    invoke-static {}, Ln/a;->f()Ln/a;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/lifecycle/ComputableLiveData;->mInvalidationRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Ll/c;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Ln/c;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -77,13 +77,7 @@
     return v0
 .end method
 
-.method public findInclusion()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->EMPTY_INCLUDE:Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
-
-    return-object v0
+.method public abstract findInclusion()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
 .end method
 
 .method public findObjectIdInfo()Lcom/fasterxml/jackson/databind/introspect/ObjectIdInfo;
@@ -91,6 +85,30 @@
 
     const/4 v0, 0x0
 
+    return-object v0
+.end method
+
+.method public findReferenceName()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->findReferenceType()Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
     return-object v0
 .end method
 
@@ -117,7 +135,23 @@
     return-object v0
 .end method
 
-.method public abstract getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+.method public getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getGetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method public abstract getConstructorParameter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
@@ -157,16 +191,68 @@
 .method public abstract getMetadata()Lcom/fasterxml/jackson/databind/PropertyMetadata;
 .end method
 
-.method public abstract getMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+.method public getMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getConstructorParameter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getSetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method public abstract getName()Ljava/lang/String;
 .end method
 
-.method public abstract getNonConstructorMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+.method public getNonConstructorMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getSetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method public abstract getPrimaryMember()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+.end method
+
+.method public abstract getPrimaryType()Lcom/fasterxml/jackson/databind/JavaType;
+.end method
+
+.method public abstract getRawPrimaryType()Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
 .end method
 
 .method public abstract getSetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
@@ -224,23 +310,10 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 2
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->isRequired()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/car/TmapCarAppService;->m()Landroidx/car/app/Session;
+    value = Lcom/skt/tmap/car/TmapCarAppService;->j()Landroidx/car/app/Session;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

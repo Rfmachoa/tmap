@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/j;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->q(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->t(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     return-void
 .end method

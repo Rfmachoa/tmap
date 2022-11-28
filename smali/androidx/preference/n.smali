@@ -23,7 +23,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Landroidx/preference/s;",
+        "Landroidx/preference/v;",
         ">;",
         "Landroidx/preference/Preference$b;",
         "Landroidx/preference/PreferenceGroup$c;"
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field public a:Landroidx/preference/PreferenceGroup;
+.field public final a:Landroidx/preference/PreferenceGroup;
 
 .field public b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -54,7 +54,7 @@
     .end annotation
 .end field
 
-.field public d:Ljava/util/List;
+.field public final d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -64,14 +64,18 @@
     .end annotation
 .end field
 
-.field public e:Landroid/os/Handler;
+.field public final e:Landroid/os/Handler;
 
-.field public f:Ljava/lang/Runnable;
+.field public final f:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/PreferenceGroup;)V
-    .locals 1
+    .locals 2
+    .param p1    # Landroidx/preference/PreferenceGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
@@ -87,41 +91,41 @@
     iput-object p1, p0, Landroidx/preference/n;->a:Landroidx/preference/PreferenceGroup;
 
     .line 4
-    new-instance p1, Landroid/os/Handler;
+    new-instance v0, Landroid/os/Handler;
 
-    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    iput-object p1, p0, Landroidx/preference/n;->e:Landroid/os/Handler;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Landroidx/preference/n;->e:Landroid/os/Handler;
 
     .line 5
-    iget-object p1, p0, Landroidx/preference/n;->a:Landroidx/preference/PreferenceGroup;
-
     invoke-virtual {p1, p0}, Landroidx/preference/Preference;->L0(Landroidx/preference/Preference$b;)V
 
     .line 6
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Landroidx/preference/n;->b:Ljava/util/List;
+    iput-object v0, p0, Landroidx/preference/n;->b:Ljava/util/List;
 
     .line 7
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Landroidx/preference/n;->c:Ljava/util/List;
+    iput-object v0, p0, Landroidx/preference/n;->c:Ljava/util/List;
 
     .line 8
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Landroidx/preference/n;->d:Ljava/util/List;
+    iput-object v0, p0, Landroidx/preference/n;->d:Ljava/util/List;
 
     .line 9
-    iget-object p1, p0, Landroidx/preference/n;->a:Landroidx/preference/PreferenceGroup;
-
     instance-of v0, p1, Landroidx/preference/PreferenceScreen;
 
     if-eqz v0, :cond_0
@@ -154,6 +158,10 @@
 # virtual methods
 .method public c(Landroidx/preference/Preference;)V
     .locals 0
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p0, p1}, Landroidx/preference/n;->f(Landroidx/preference/Preference;)V
@@ -163,6 +171,10 @@
 
 .method public d(Landroidx/preference/Preference;)I
     .locals 3
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget-object v0, p0, Landroidx/preference/n;->c:Ljava/util/List;
@@ -209,6 +221,10 @@
 
 .method public e(Landroidx/preference/Preference;)V
     .locals 2
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget-object v0, p0, Landroidx/preference/n;->c:Ljava/util/List;
@@ -230,6 +246,10 @@
 
 .method public f(Landroidx/preference/Preference;)V
     .locals 1
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget-object p1, p0, Landroidx/preference/n;->e:Landroid/os/Handler;
@@ -332,6 +352,10 @@
 
 .method public h(Ljava/lang/String;)I
     .locals 3
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget-object v0, p0, Landroidx/preference/n;->c:Ljava/util/List;
@@ -720,6 +744,8 @@
 
 .method public n(I)Landroidx/preference/Preference;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-ltz p1, :cond_1
 
@@ -782,9 +808,9 @@
     .end param
 
     .line 1
-    check-cast p1, Landroidx/preference/s;
+    check-cast p1, Landroidx/preference/v;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/preference/n;->p(Landroidx/preference/s;I)V
+    invoke-virtual {p0, p1, p2}, Landroidx/preference/n;->p(Landroidx/preference/v;I)V
 
     return-void
 .end method
@@ -799,16 +825,16 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroidx/preference/n;->q(Landroid/view/ViewGroup;I)Landroidx/preference/s;
+    invoke-virtual {p0, p1, p2}, Landroidx/preference/n;->q(Landroid/view/ViewGroup;I)Landroidx/preference/v;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public p(Landroidx/preference/s;I)V
+.method public p(Landroidx/preference/v;I)V
     .locals 0
-    .param p1    # Landroidx/preference/s;
+    .param p1    # Landroidx/preference/v;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -819,12 +845,15 @@
     move-result-object p2
 
     .line 2
-    invoke-virtual {p2, p1}, Landroidx/preference/Preference;->Z(Landroidx/preference/s;)V
+    invoke-virtual {p1}, Landroidx/preference/v;->g()V
+
+    .line 3
+    invoke-virtual {p2, p1}, Landroidx/preference/Preference;->Z(Landroidx/preference/v;)V
 
     return-void
 .end method
 
-.method public q(Landroid/view/ViewGroup;I)Landroidx/preference/s;
+.method public q(Landroid/view/ViewGroup;I)Landroidx/preference/v;
     .locals 4
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -881,7 +910,7 @@
 
     const v3, 0x1080062
 
-    invoke-static {v2, v3}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2, v3}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -939,9 +968,9 @@
     .line 15
     :cond_3
     :goto_0
-    new-instance p2, Landroidx/preference/s;
+    new-instance p2, Landroidx/preference/v;
 
-    invoke-direct {p2, p1}, Landroidx/preference/s;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Landroidx/preference/v;-><init>(Landroid/view/View;)V
 
     return-object p2
 .end method
@@ -1012,35 +1041,35 @@
     .line 9
     iget-object v2, p0, Landroidx/preference/n;->a:Landroidx/preference/PreferenceGroup;
 
-    invoke-virtual {v2}, Landroidx/preference/Preference;->D()Landroidx/preference/p;
+    invoke-virtual {v2}, Landroidx/preference/Preference;->D()Landroidx/preference/t;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
     .line 10
-    invoke-virtual {v2}, Landroidx/preference/p;->l()Landroidx/preference/p$d;
+    invoke-virtual {v2}, Landroidx/preference/t;->l()Landroidx/preference/t$d;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
     .line 11
-    invoke-virtual {v2}, Landroidx/preference/p;->l()Landroidx/preference/p$d;
+    invoke-virtual {v2}, Landroidx/preference/t;->l()Landroidx/preference/t$d;
 
     move-result-object v2
 
     .line 12
     new-instance v3, Landroidx/preference/n$b;
 
-    invoke-direct {v3, p0, v0, v1, v2}, Landroidx/preference/n$b;-><init>(Landroidx/preference/n;Ljava/util/List;Ljava/util/List;Landroidx/preference/p$d;)V
+    invoke-direct {v3, p0, v0, v1, v2}, Landroidx/preference/n$b;-><init>(Landroidx/preference/n;Ljava/util/List;Ljava/util/List;Landroidx/preference/t$d;)V
 
-    invoke-static {v3}, Landroidx/recyclerview/widget/k;->b(Landroidx/recyclerview/widget/k$b;)Landroidx/recyclerview/widget/k$e;
+    invoke-static {v3}, Landroidx/recyclerview/widget/j;->b(Landroidx/recyclerview/widget/j$b;)Landroidx/recyclerview/widget/j$e;
 
     move-result-object v0
 
     .line 13
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/k$e;->e(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/j$e;->e(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     goto :goto_1
 

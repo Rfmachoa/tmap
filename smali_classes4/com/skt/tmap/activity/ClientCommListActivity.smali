@@ -3,7 +3,7 @@
 .source "ClientCommListActivity.java"
 
 # interfaces
-.implements Llc/e;
+.implements Lje/e;
 
 
 # static fields
@@ -23,7 +23,7 @@
 
 .field public b:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public c:Lcom/skt/tmap/mvp/presenter/f;
+.field public c:Lcom/skt/tmap/mvp/presenter/g;
 
 .field public d:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -36,24 +36,32 @@
     invoke-direct {p0}, Lcom/skt/tmap/activity/BaseActivity;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/skt/tmap/activity/v;
+    new-instance v0, Lcom/skt/tmap/activity/y;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/v;-><init>(Lcom/skt/tmap/activity/ClientCommListActivity;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/y;-><init>(Lcom/skt/tmap/activity/ClientCommListActivity;)V
 
     iput-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->a:Landroid/view/View$OnScrollChangeListener;
 
     return-void
 .end method
 
-.method public static synthetic t5(Lcom/skt/tmap/activity/ClientCommListActivity;Landroid/view/View;IIII)V
+.method public static synthetic B5(Lcom/skt/tmap/activity/ClientCommListActivity;I)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/skt/tmap/activity/ClientCommListActivity;->u5(Landroid/view/View;IIII)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/activity/ClientCommListActivity;->E5(I)V
 
     return-void
 .end method
 
-.method private synthetic u5(Landroid/view/View;IIII)V
+.method public static synthetic C5(Lcom/skt/tmap/activity/ClientCommListActivity;Landroid/view/View;IIII)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/skt/tmap/activity/ClientCommListActivity;->D5(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method private synthetic D5(Landroid/view/View;IIII)V
     .locals 0
 
     if-eq p3, p5, :cond_0
@@ -61,21 +69,51 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo p2, "swipe.list"
+    const-string p2, "swipe.list"
 
-    invoke-virtual {p1, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
+.method private synthetic E5(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public X1(ZZ)Lqc/c;
+.method public Y4(Lmd/v;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "commListViewAdapter"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    return-void
+.end method
+
+.method public Z1(ZZ)Loe/d;
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -89,15 +127,15 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lqc/c;
+    new-instance v0, Loe/d;
 
-    invoke-direct {v0, p0, p1, p2}, Lqc/c;-><init>(Landroid/app/Activity;ZZ)V
+    invoke-direct {v0, p0, p1, p2}, Loe/d;-><init>(Landroid/app/Activity;ZZ)V
 
     return-object v0
 .end method
 
-.method public h0(I)V
-    .locals 2
+.method public j0(I)V
+    .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -110,11 +148,17 @@
     if-ltz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->d:Landroidx/recyclerview/widget/LinearLayoutManager;
+    new-instance v0, Landroid/os/Handler;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    invoke-virtual {v0, p1, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
+    new-instance v1, Lcom/skt/tmap/activity/z;
+
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/activity/z;-><init>(Lcom/skt/tmap/activity/ClientCommListActivity;I)V
+
+    const-wide/16 v2, 0xc8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_0
     return-void
@@ -137,7 +181,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -152,17 +196,17 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f0d005b
+    const p1, 0x7f0d005e
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
 
-    const p1, 0x7f0a0b1a
+    const p1, 0x7f0a0b96
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -171,11 +215,11 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    const v0, 0x7f1301e1
+    const v0, 0x7f1401f8
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    const p1, 0x7f0a0250
+    const p1, 0x7f0a027c
 
     .line 6
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -193,34 +237,41 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->d:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 8
-    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->b:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$m;)V
+    .line 8
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->setStackFromEnd(Z)V
 
     .line 9
+    iget-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->d:Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$m;)V
+
+    .line 10
     iget-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->a:Landroid/view/View$OnScrollChangeListener;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setOnScrollChangeListener(Landroid/view/View$OnScrollChangeListener;)V
 
-    .line 10
-    new-instance p1, Lcom/skt/tmap/mvp/presenter/f;
+    .line 11
+    new-instance p1, Lcom/skt/tmap/mvp/presenter/g;
 
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-direct {p1, p0, v0}, Lcom/skt/tmap/mvp/presenter/f;-><init>(Lcom/skt/tmap/activity/ClientCommListActivity;Lcom/skt/tmap/mvp/presenter/BasePresenter;)V
+    invoke-direct {p1, p0, v0}, Lcom/skt/tmap/mvp/presenter/g;-><init>(Lcom/skt/tmap/activity/ClientCommListActivity;Lcom/skt/tmap/mvp/presenter/BasePresenter;)V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/f;
-
-    .line 11
-    invoke-virtual {p1, p0}, Lcom/skt/tmap/mvp/presenter/f;->o(Llc/e;)V
+    iput-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/g;
 
     .line 12
-    iget-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/f;
+    invoke-virtual {p1, p0}, Lcom/skt/tmap/mvp/presenter/g;->o(Lje/e;)V
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/f;->onCreate()V
+    .line 13
+    iget-object p1, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/g;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/g;->onCreate()V
 
     :cond_1
     :goto_0
@@ -234,12 +285,12 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/f;
+    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/g;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/f;->onDestroy()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/g;->onDestroy()V
 
     :cond_0
     return-void
@@ -257,12 +308,12 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onNewIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/f;
+    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/g;
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/presenter/f;->c(Landroid/content/Intent;)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/presenter/g;->d(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -274,28 +325,9 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/f;
+    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->c:Lcom/skt/tmap/mvp/presenter/g;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/f;->onResume()V
-
-    return-void
-.end method
-
-.method public q4(Lpb/s;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "commListViewAdapter"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/ClientCommListActivity;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/g;->onResume()V
 
     return-void
 .end method

@@ -53,13 +53,13 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
     const-string v1, "popup_tap.nugu_activate"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$l$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$l;
@@ -74,26 +74,26 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v1, v3}, Lcom/skt/tmap/util/r0;->o(Landroid/app/Activity;ZLcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;)V
+    invoke-static {v0, v2, v1, v3}, Lcom/skt/tmap/util/x0;->o(Landroid/app/Activity;ZLcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$l$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$l;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$l;->b:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$l$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$l;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$l;->b:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iput-object v3, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v3, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void

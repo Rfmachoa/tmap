@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/analytics/zze;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -66,9 +66,9 @@
 .method public final onActivityStarted(Landroid/app/Activity;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zze;->zza:Lcom/google/android/gms/analytics/GoogleAnalytics;
 
-    .line 1
     invoke-virtual {v0, p1}, Lcom/google/android/gms/analytics/GoogleAnalytics;->zzh(Landroid/app/Activity;)V
 
     return-void
@@ -77,9 +77,9 @@
 .method public final onActivityStopped(Landroid/app/Activity;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zze;->zza:Lcom/google/android/gms/analytics/GoogleAnalytics;
 
-    .line 1
     invoke-virtual {v0, p1}, Lcom/google/android/gms/analytics/GoogleAnalytics;->zzi(Landroid/app/Activity;)V
 
     return-void

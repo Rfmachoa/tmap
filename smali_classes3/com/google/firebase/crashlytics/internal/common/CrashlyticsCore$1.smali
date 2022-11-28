@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;->doBackgroundInitializationAsync(Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)Lcom/google/android/gms/tasks/Task;
+    value = Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;->doBackgroundInitializationAsync(Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;)Lcom/google/android/gms/tasks/Task;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,17 +30,17 @@
 # instance fields
 .field public final synthetic this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
-.field public final synthetic val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
+.field public final synthetic val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)V
+.method public constructor <init>(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
-    iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
+    iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,9 +69,9 @@
     .line 2
     iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;
 
-    iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;
+    iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore$1;->val$settingsProvider:Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;
 
-    invoke-static {v0, v1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;->access$000(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsDataProvider;)Lcom/google/android/gms/tasks/Task;
+    invoke-static {v0, v1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;->access$000(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsCore;Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v0
 

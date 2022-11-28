@@ -15,12 +15,12 @@
         "viewId",
         "Landroidx/navigation/NavController;",
         "a",
-        "navigation-runtime-ktx_release"
+        "navigation-runtime_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -40,18 +40,14 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$findNavController"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p0, p1}, Landroidx/navigation/p0;->d(Landroid/app/Activity;I)Landroidx/navigation/NavController;
+    invoke-static {p0, p1}, Landroidx/navigation/Navigation;->j(Landroid/app/Activity;I)Landroidx/navigation/NavController;
 
     move-result-object p0
-
-    const-string p1, "Navigation.findNavController(this, viewId)"
-
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method

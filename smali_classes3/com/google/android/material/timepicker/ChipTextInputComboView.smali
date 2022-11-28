@@ -93,7 +93,12 @@
 
     iput-object p2, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->chip:Lcom/google/android/material/chip/Chip;
 
+    const-string v0, "android.view.View"
+
     .line 6
+    invoke-virtual {p2, v0}, Lcom/google/android/material/chip/Chip;->setAccessibilityClassName(Ljava/lang/CharSequence;)V
+
+    .line 7
     sget v0, Lcom/google/android/material/R$layout;->material_time_input:I
 
     invoke-virtual {p1, v0, p0, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -104,7 +109,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
 
-    .line 7
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object v0
@@ -113,10 +118,10 @@
 
     const/4 v1, 0x4
 
-    .line 8
+    .line 9
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
 
-    .line 9
+    .line 10
     new-instance v1, Lcom/google/android/material/timepicker/ChipTextInputComboView$TextFormatter;
 
     const/4 v2, 0x0
@@ -125,19 +130,19 @@
 
     iput-object v1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->watcher:Landroid/text/TextWatcher;
 
-    .line 10
+    .line 11
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 11
+    .line 12
     invoke-direct {p0}, Lcom/google/android/material/timepicker/ChipTextInputComboView;->updateHintLocales()V
 
-    .line 12
+    .line 13
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 13
+    .line 14
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 14
+    .line 15
     sget p1, Lcom/google/android/material/R$id;->material_label:I
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -148,8 +153,27 @@
 
     iput-object p1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->label:Landroid/widget/TextView;
 
-    .line 15
+    .line 16
+    invoke-static {}, Landroidx/core/view/ViewCompat;->D()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setId(I)V
+
+    .line 17
+    iget-object p1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->label:Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getId()I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->U1(Landroid/view/View;I)V
+
+    .line 18
     invoke-virtual {v0, p3}, Landroid/widget/EditText;->setSaveEnabled(Z)V
+
+    .line 19
+    invoke-virtual {v0, p3}, Landroid/widget/EditText;->setLongClickable(Z)V
 
     return-void
 .end method
@@ -333,7 +357,7 @@
     .line 5
     iget-object p1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->editText:Landroid/widget/EditText;
 
-    invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-static {p1}, Lcom/google/android/material/internal/ViewUtils;->requestFocusAndShowKeyboard(Landroid/view/View;)V
 
     .line 6
     iget-object p1, p0, Lcom/google/android/material/timepicker/ChipTextInputComboView;->editText:Landroid/widget/EditText;

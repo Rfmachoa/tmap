@@ -26,11 +26,10 @@
 
 
 # instance fields
-.field public final _calendarClass:Ljava/lang/Class;
+.field public final _defaultCtor:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/lang/Class<",
-            "+",
+            "Ljava/lang/reflect/Constructor<",
             "Ljava/util/Calendar;",
             ">;"
         }
@@ -50,7 +49,7 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
+    iput-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_defaultCtor:Ljava/lang/reflect/Constructor;
 
     return-void
 .end method
@@ -62,15 +61,15 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;-><init>(Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;Ljava/text/DateFormat;Ljava/lang/String;)V
 
     .line 6
-    iget-object p1, p1, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
+    iget-object p1, p1, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_defaultCtor:Ljava/lang/reflect/Constructor;
 
-    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
+    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_defaultCtor:Ljava/lang/reflect/Constructor;
 
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/Class;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,8 +83,14 @@
     .line 3
     invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;-><init>(Ljava/lang/Class;)V
 
+    const/4 v0, 0x0
+
     .line 4
-    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
+    invoke-static {p1, v0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->findConstructor(Ljava/lang/Class;Z)Ljava/lang/reflect/Constructor;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_defaultCtor:Ljava/lang/reflect/Constructor;
 
     return-void
 .end method
@@ -146,7 +151,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_defaultCtor:Ljava/lang/reflect/Constructor;
 
     if-nez v0, :cond_1
 
@@ -157,10 +162,14 @@
 
     return-object p1
 
-    .line 5
     :cond_1
+    const/4 v1, 0x0
+
     :try_start_0
-    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
+
+    .line 5
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -176,12 +185,12 @@
     .line 7
     invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getTimeZone()Ljava/util/TimeZone;
 
-    move-result-object p1
+    move-result-object v1
 
-    if-eqz p1, :cond_2
+    if-eqz v1, :cond_2
 
     .line 8
-    invoke-virtual {v0, p1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
+    invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -189,16 +198,47 @@
     return-object v0
 
     :catch_0
-    move-exception p1
+    move-exception v0
 
     .line 9
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;->_calendarClass:Ljava/lang/Class;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->handledType()Ljava/lang/Class;
 
-    invoke-virtual {p2, v0, p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->instantiationException(Ljava/lang/Class;Ljava/lang/Throwable;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    move-result-object v1
+
+    invoke-virtual {p2, v1, p1, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleInstantiationProblem(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Ljava/util/Calendar;
+
+    return-object p1
+.end method
+
+.method public getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    new-instance p1, Ljava/util/GregorianCalendar;
+
+    invoke-direct {p1}, Ljava/util/GregorianCalendar;-><init>()V
+
+    const-wide/16 v0, 0x0
+
+    .line 2
+    invoke-virtual {p1, v0, v1}, Ljava/util/GregorianCalendar;->setTimeInMillis(J)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public withDateFormat(Ljava/text/DateFormat;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$CalendarDeserializer;

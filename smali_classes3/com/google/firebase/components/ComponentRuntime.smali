@@ -28,6 +28,8 @@
 
 
 # instance fields
+.field private final componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
 .field private final components:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -93,15 +95,15 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/firebase/components/g;->a:Lcom/google/firebase/components/g;
+    sget-object v0, Lcom/google/firebase/components/h;->a:Lcom/google/firebase/components/h;
 
     sput-object v0, Lcom/google/firebase/components/ComponentRuntime;->EMPTY_PROVIDER:Lcom/google/firebase/inject/Provider;
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;)V
-    .locals 6
+.method private constructor <init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRegistrarProcessor;)V
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -112,90 +114,95 @@
             ">;>;",
             "Ljava/util/Collection<",
             "Lcom/google/firebase/components/Component<",
-            "*>;>;)V"
+            "*>;>;",
+            "Lcom/google/firebase/components/ComponentRegistrarProcessor;",
+            ")V"
         }
     .end annotation
 
-    .line 3
-    invoke-direct {p0}, Lcom/google/firebase/components/AbstractComponentContainer;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->components:Ljava/util/Map;
-
     .line 5
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->lazyInstanceMap:Ljava/util/Map;
+    invoke-direct {p0}, Lcom/google/firebase/components/AbstractComponentContainer;-><init>()V
 
     .line 6
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->lazySetMap:Ljava/util/Map;
+    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->components:Ljava/util/Map;
 
     .line 7
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->lazyInstanceMap:Ljava/util/Map;
+
+    .line 8
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->lazySetMap:Ljava/util/Map;
+
+    .line 9
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->eagerComponentsInitializedWith:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 8
+    .line 10
     new-instance v0, Lcom/google/firebase/components/EventBus;
 
     invoke-direct {v0, p1}, Lcom/google/firebase/components/EventBus;-><init>(Ljava/util/concurrent/Executor;)V
 
     iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->eventBus:Lcom/google/firebase/components/EventBus;
 
-    .line 9
+    .line 11
+    iput-object p4, p0, Lcom/google/firebase/components/ComponentRuntime;->componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
+    .line 12
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 10
-    const-class v1, Lcom/google/firebase/components/EventBus;
+    .line 13
+    const-class p4, Lcom/google/firebase/components/EventBus;
 
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    new-array v2, v2, [Ljava/lang/Class;
+    new-array v1, v1, [Ljava/lang/Class;
 
-    const-class v3, Lcom/google/firebase/events/Subscriber;
+    const-class v2, Lcom/google/firebase/events/Subscriber;
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    aput-object v3, v2, v4
+    aput-object v2, v1, v3
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    const-class v5, Lcom/google/firebase/events/Publisher;
+    const-class v4, Lcom/google/firebase/events/Publisher;
 
-    aput-object v5, v2, v3
+    aput-object v4, v1, v2
 
-    invoke-static {v0, v1, v2}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
+    invoke-static {v0, p4, v1}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
-    move-result-object v0
+    move-result-object p4
 
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 11
-    const-class v0, Lcom/google/firebase/dynamicloading/ComponentLoader;
+    .line 14
+    const-class p4, Lcom/google/firebase/dynamicloading/ComponentLoader;
 
-    new-array v1, v4, [Ljava/lang/Class;
+    new-array v0, v3, [Ljava/lang/Class;
 
-    invoke-static {p0, v0, v1}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
+    invoke-static {p0, p4, v0}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
-    move-result-object v0
+    move-result-object p4
 
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 12
+    .line 15
     invoke-interface {p3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -204,24 +211,24 @@
     :goto_0
     invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result p4
 
-    if-eqz v0, :cond_1
+    if-eqz p4, :cond_1
 
     invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p4
 
-    check-cast v0, Lcom/google/firebase/components/Component;
+    check-cast p4, Lcom/google/firebase/components/Component;
 
-    if-eqz v0, :cond_0
+    if-eqz p4, :cond_0
 
-    .line 13
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 16
+    invoke-virtual {p1, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 14
+    .line 17
     :cond_1
     invoke-static {p2}, Lcom/google/firebase/components/ComponentRuntime;->iterableToList(Ljava/lang/Iterable;)Ljava/util/List;
 
@@ -229,23 +236,23 @@
 
     iput-object p2, p0, Lcom/google/firebase/components/ComponentRuntime;->unprocessedRegistrarProviders:Ljava/util/List;
 
-    .line 15
+    .line 18
     invoke-direct {p0, p1}, Lcom/google/firebase/components/ComponentRuntime;->discoverComponents(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRuntime$1;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRegistrarProcessor;Lcom/google/firebase/components/ComponentRuntime$1;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/firebase/components/ComponentRuntime;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/firebase/components/ComponentRuntime;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRegistrarProcessor;)V
 
     return-void
 .end method
 
 .method public varargs constructor <init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;[Lcom/google/firebase/components/Component;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -266,11 +273,15 @@
 
     move-result-object p2
 
+    .line 3
     invoke-static {p3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p3
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/firebase/components/ComponentRuntime;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;)V
+    sget-object v0, Lcom/google/firebase/components/ComponentRegistrarProcessor;->NOOP:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
+    .line 4
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/firebase/components/ComponentRuntime;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRegistrarProcessor;)V
 
     return-void
 .end method
@@ -378,7 +389,9 @@
     if-eqz v2, :cond_0
 
     .line 7
-    invoke-interface {v2}, Lcom/google/firebase/components/ComponentRegistrar;->getComponents()Ljava/util/List;
+    iget-object v3, p0, Lcom/google/firebase/components/ComponentRuntime;->componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
+    invoke-interface {v3, v2}, Lcom/google/firebase/components/ComponentRegistrarProcessor;->processRegistrar(Lcom/google/firebase/components/ComponentRegistrar;)Ljava/util/List;
 
     move-result-object v2
 
@@ -463,9 +476,9 @@
     .line 17
     new-instance v3, Lcom/google/firebase/components/Lazy;
 
-    new-instance v4, Lcom/google/firebase/components/f;
+    new-instance v4, Lcom/google/firebase/components/g;
 
-    invoke-direct {v4, p0, v2}, Lcom/google/firebase/components/f;-><init>(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)V
+    invoke-direct {v4, p0, v2}, Lcom/google/firebase/components/g;-><init>(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)V
 
     invoke-direct {v3, v4}, Lcom/google/firebase/components/Lazy;-><init>(Lcom/google/firebase/inject/Provider;)V
 
@@ -1011,9 +1024,9 @@
     check-cast v3, Lcom/google/firebase/components/OptionalProvider;
 
     .line 10
-    new-instance v4, Lcom/google/firebase/components/i;
+    new-instance v4, Lcom/google/firebase/components/j;
 
-    invoke-direct {v4, v3, v2}, Lcom/google/firebase/components/i;-><init>(Lcom/google/firebase/components/OptionalProvider;Lcom/google/firebase/inject/Provider;)V
+    invoke-direct {v4, v3, v2}, Lcom/google/firebase/components/j;-><init>(Lcom/google/firebase/components/OptionalProvider;Lcom/google/firebase/inject/Provider;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1240,9 +1253,9 @@
     check-cast v4, Lcom/google/firebase/inject/Provider;
 
     .line 16
-    new-instance v5, Lcom/google/firebase/components/h;
+    new-instance v5, Lcom/google/firebase/components/i;
 
-    invoke-direct {v5, v3, v4}, Lcom/google/firebase/components/h;-><init>(Lcom/google/firebase/components/LazySet;Lcom/google/firebase/inject/Provider;)V
+    invoke-direct {v5, v3, v4}, Lcom/google/firebase/components/i;-><init>(Lcom/google/firebase/components/LazySet;Lcom/google/firebase/inject/Provider;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1291,9 +1304,9 @@
     check-cast v1, Lcom/google/firebase/components/ComponentRegistrar;
 
     .line 3
-    new-instance v2, Lcom/google/firebase/components/e;
+    new-instance v2, Lcom/google/firebase/components/f;
 
-    invoke-direct {v2, v1}, Lcom/google/firebase/components/e;-><init>(Lcom/google/firebase/components/ComponentRegistrar;)V
+    invoke-direct {v2, v1}, Lcom/google/firebase/components/f;-><init>(Lcom/google/firebase/components/ComponentRegistrar;)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1362,6 +1375,30 @@
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public getAllComponentsForTest()Ljava/util/Collection;
+    .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Collection<",
+            "Lcom/google/firebase/components/Component<",
+            "*>;>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/google/firebase/components/ComponentRuntime;->components:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public getDeferred(Ljava/lang/Class;)Lcom/google/firebase/inject/Deferred;

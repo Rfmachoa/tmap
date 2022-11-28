@@ -18,6 +18,8 @@
 
 .field public static final NDDS_OS_TYPE:Ljava/lang/String; = "AND"
 
+.field public static final SUCCESS_RESULT_CODE:Ljava/lang/String; = "000000"
+
 
 # direct methods
 .method public constructor <init>()V

@@ -1,76 +1,99 @@
-.class public final Lcom/google/android/gms/tagmanager/zzdh;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
-
-
-# annotations
-.annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
-.end annotation
+.class final Lcom/google/android/gms/tagmanager/zzdh;
+.super Lcom/google/android/gms/tagmanager/zzbt;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # static fields
-.field public static zza:I
+.field private static final zza:Ljava/lang/String;
 
-.field public static final zzb:Lcom/google/android/gms/tagmanager/zzbg;
-    .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-    .end annotation
-.end field
+.field private static final zzb:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/tagmanager/zzbg;
-
     .line 1
-    invoke-direct {v0}, Lcom/google/android/gms/tagmanager/zzbg;-><init>()V
+    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzR:Lcom/google/android/gms/internal/gtm/zza;
 
-    sput-object v0, Lcom/google/android/gms/tagmanager/zzdh;->zzb:Lcom/google/android/gms/tagmanager/zzbg;
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/gms/tagmanager/zzdh;->zza:Ljava/lang/String;
+
+    .line 2
+    sget-object v0, Lcom/google/android/gms/internal/gtm/zzb;->zzr:Lcom/google/android/gms/internal/gtm/zzb;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzb;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/gms/tagmanager/zzdh;->zzb:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static zza(Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "GoogleTagManager"
+.method public constructor <init>()V
+    .locals 4
 
     .line 1
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzdh;->zza:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    sget-object v2, Lcom/google/android/gms/tagmanager/zzdh;->zzb:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbt;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+# virtual methods
+.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzam;
     .locals 1
 
-    const-string v0, "GoogleTagManager"
-
     .line 1
-    invoke-static {v0, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzdh;->zzb:Ljava/lang/String;
 
-    return-void
+    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
+
+    .line 2
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzn(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzam;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static zzc(Ljava/lang/String;)V
+.method public final zzb()Z
     .locals 1
 
-    const-string v0, "GoogleTagManager"
+    const/4 v0, 0x1
 
-    .line 1
-    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public static zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const-string v0, "GoogleTagManager"
-
-    .line 1
-    invoke-static {v0, p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return-void
+    return v0
 .end method

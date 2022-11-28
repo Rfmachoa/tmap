@@ -1,6 +1,9 @@
-.class public Landroidx/camera/core/impl/f$a;
+.class public final Landroidx/camera/core/impl/f$a;
 .super Ljava/lang/Object;
-.source "CameraStateRegistry.java"
+.source "CaptureStage.java"
+
+# interfaces
+.implements Landroidx/camera/core/impl/f;
 
 
 # annotations
@@ -9,128 +12,52 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
 
 # instance fields
-.field public a:Landroidx/camera/core/impl/CameraInternal$State;
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Landroidx/camera/core/impl/f$b;
+.field public final a:Landroidx/camera/core/impl/e;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/core/impl/CameraInternal$State;Ljava/util/concurrent/Executor;Landroidx/camera/core/impl/f$b;)V
-    .locals 0
-    .param p1    # Landroidx/camera/core/impl/CameraInternal$State;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroidx/camera/core/impl/f$b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "initialState",
-            "notifyExecutor",
-            "cameraAvailableListener"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/camera/core/impl/f$a;->a:Landroidx/camera/core/impl/CameraInternal$State;
+    new-instance v0, Landroidx/camera/core/impl/e$a;
+
+    invoke-direct {v0}, Landroidx/camera/core/impl/e$a;-><init>()V
 
     .line 3
-    iput-object p2, p0, Landroidx/camera/core/impl/f$a;->b:Ljava/util/concurrent/Executor;
+    invoke-virtual {v0}, Landroidx/camera/core/impl/e$a;->h()Landroidx/camera/core/impl/e;
 
-    .line 4
-    iput-object p3, p0, Landroidx/camera/core/impl/f$a;->c:Landroidx/camera/core/impl/f$b;
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/camera/core/impl/f$a;->a:Landroidx/camera/core/impl/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroidx/camera/core/impl/CameraInternal$State;
+.method public a()Landroidx/camera/core/impl/e;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/f$a;->a:Landroidx/camera/core/impl/CameraInternal$State;
+    iget-object v0, p0, Landroidx/camera/core/impl/f$a;->a:Landroidx/camera/core/impl/e;
 
     return-object v0
 .end method
 
-.method public b()V
-    .locals 3
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/impl/f$a;->b:Ljava/util/concurrent/Executor;
-
-    iget-object v1, p0, Landroidx/camera/core/impl/f$a;->c:Landroidx/camera/core/impl/f$b;
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v2, Lx/u;
-
-    invoke-direct {v2, v1}, Lx/u;-><init>(Landroidx/camera/core/impl/f$b;)V
-
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "CameraStateRegistry"
-
-    const-string v2, "Unable to notify camera."
-
-    .line 2
-    invoke-static {v1, v2, v0}, Landroidx/camera/core/x1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public c(Landroidx/camera/core/impl/CameraInternal$State;)Landroidx/camera/core/impl/CameraInternal$State;
+.method public getId()I
     .locals 1
-    .param p1    # Landroidx/camera/core/impl/CameraInternal$State;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "state"
-        }
-    .end annotation
 
-    .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/f$a;->a:Landroidx/camera/core/impl/CameraInternal$State;
+    const/4 v0, 0x0
 
-    .line 2
-    iput-object p1, p0, Landroidx/camera/core/impl/f$a;->a:Landroidx/camera/core/impl/CameraInternal$State;
-
-    return-object v0
+    return v0
 .end method

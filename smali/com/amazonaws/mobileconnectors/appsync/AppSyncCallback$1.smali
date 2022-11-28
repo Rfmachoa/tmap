@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;->onResponse(Lc4/i;)V
+    value = Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;->onResponse(Lz5/i;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,17 @@
 # instance fields
 .field public final synthetic this$0:Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;
 
-.field public final synthetic val$response:Lc4/i;
+.field public final synthetic val$response:Lz5/i;
 
 
 # direct methods
-.method public constructor <init>(Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;Lc4/i;)V
+.method public constructor <init>(Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;Lz5/i;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;
 
-    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;->val$response:Lc4/i;
+    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;->val$response:Lz5/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,9 +49,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;->val$response:Lc4/i;
+    iget-object v1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;->val$response:Lz5/i;
 
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lc4/i;)V
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lz5/i;)V
 
     return-void
 .end method

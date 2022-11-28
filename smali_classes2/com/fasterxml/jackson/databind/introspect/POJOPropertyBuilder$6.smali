@@ -1,71 +1,99 @@
-.class Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;
+.class synthetic Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;
 .super Ljava/lang/Object;
 .source "POJOPropertyBuilder.java"
 
-# interfaces
-.implements Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember;
-
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_findIndex()Ljava/lang/Integer;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x1009
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember<",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
 
-
-# instance fields
-.field public final synthetic this$0:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;
+# static fields
+.field public static final synthetic $SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 1
-    iput-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->this$0:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;
+    invoke-static {}, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->values()[Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->$SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
+
+    :try_start_0
+    sget-object v1, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->READ_ONLY:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->$SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
+
+    sget-object v1, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->READ_WRITE:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->$SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
+
+    sget-object v1, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->WRITE_ONLY:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->$SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
+
+    sget-object v1, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->AUTO:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
     return-void
-.end method
-
-
-# virtual methods
-.method public withMember(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Ljava/lang/Integer;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->this$0:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;
-
-    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
-
-    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findPropertyIndex(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic withMember(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->withMember(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -7,15 +7,24 @@
 
 
 # static fields
-.field public static final PROGRESS_THRESHOLD:F = 0.35f
+.field public static final FADE_THROUGH_THRESHOLD:F = 0.35f
+
+
+# instance fields
+.field private progressThreshold:F
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const v0, 0x3eb33333    # 0.35f
+
+    .line 2
+    iput v0, p0, Lcom/google/android/material/transition/FadeThroughProvider;->progressThreshold:F
 
     return-void
 .end method
@@ -123,7 +132,8 @@
 
     const/4 v1, 0x0
 
-    const v3, 0x3eb33333    # 0.35f
+    .line 2
+    iget v3, p0, Lcom/google/android/material/transition/FadeThroughProvider;->progressThreshold:F
 
     const/high16 v4, 0x3f800000    # 1.0f
 
@@ -131,7 +141,6 @@
 
     move v2, v5
 
-    .line 2
     invoke-static/range {v0 .. v5}, Lcom/google/android/material/transition/FadeThroughProvider;->createFadeThroughAnimator(Landroid/view/View;FFFFF)Landroid/animation/Animator;
 
     move-result-object p1
@@ -179,16 +188,40 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x3eb33333    # 0.35f
+    .line 2
+    iget v4, p0, Lcom/google/android/material/transition/FadeThroughProvider;->progressThreshold:F
 
     move-object v0, p2
 
     move v1, v5
 
-    .line 2
     invoke-static/range {v0 .. v5}, Lcom/google/android/material/transition/FadeThroughProvider;->createFadeThroughAnimator(Landroid/view/View;FFFFF)Landroid/animation/Animator;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public getProgressThreshold()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/android/material/transition/FadeThroughProvider;->progressThreshold:F
+
+    return v0
+.end method
+
+.method public setProgressThreshold(F)V
+    .locals 0
+    .param p1    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/transition/FadeThroughProvider;->progressThreshold:F
+
+    return-void
 .end method

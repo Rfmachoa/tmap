@@ -1,9 +1,13 @@
-.class public final Landroidx/camera/core/impl/CameraCaptureFailure;
+.class public Landroidx/camera/core/impl/CameraCaptureFailure;
 .super Ljava/lang/Object;
 .source "CameraCaptureFailure.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
@@ -22,14 +26,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "reason"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

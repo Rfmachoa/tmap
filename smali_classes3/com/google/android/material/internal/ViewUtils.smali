@@ -18,6 +18,14 @@
 .end annotation
 
 
+# static fields
+.field public static final EDGE_TO_EDGE_FLAGS:I = 0x300
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+.end field
+
+
 # direct methods
 .method private constructor <init>()V
     .locals 0
@@ -50,6 +58,63 @@
 
     :cond_0
     return-void
+.end method
+
+.method public static calculateRectFromBounds(Landroid/view/View;)Landroid/graphics/Rect;
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, v0}, Lcom/google/android/material/internal/ViewUtils;->calculateRectFromBounds(Landroid/view/View;I)Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static calculateRectFromBounds(Landroid/view/View;I)Landroid/graphics/Rect;
+    .locals 4
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 2
+    new-instance v0, Landroid/graphics/Rect;
+
+    .line 3
+    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getTop()I
+
+    move-result v2
+
+    add-int/2addr v2, p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getRight()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getBottom()I
+
+    move-result p0
+
+    add-int/2addr p0, p1
+
+    invoke-direct {v0, v1, v2, v3, p0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    return-object v0
 .end method
 
 .method public static doOnApplyWindowInsets(Landroid/view/View;Landroid/util/AttributeSet;II)V
@@ -178,7 +243,7 @@
 
     invoke-direct {v1, p1, v0}, Lcom/google/android/material/internal/ViewUtils$3;-><init>(Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)V
 
-    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->a2(Landroid/view/View;Ls1/e0;)V
+    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->a2(Landroid/view/View;Landroidx/core/view/i0;)V
 
     .line 18
     invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->requestApplyInsetsWhenAttached(Landroid/view/View;)V
@@ -217,6 +282,106 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static getBackgroundColor(Landroid/view/View;)Ljava/lang/Integer;
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/graphics/drawable/ColorDrawable;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public static getChildren(Landroid/view/View;)Ljava/util/List;
+    .locals 3
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/View;",
+            ")",
+            "Ljava/util/List<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 2
+    instance-of v1, p0, Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    check-cast p0, Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    .line 4
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_0
+
+    .line 5
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method public static getContentView(Landroid/view/View;)Landroid/view/ViewGroup;
@@ -291,6 +456,31 @@
     return-object p0
 .end method
 
+.method private static getInputMethodManager(Landroid/view/View;)Landroid/view/inputmethod/InputMethodManager;
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const-class v0, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->getSystemService(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
+
+    return-object p0
+.end method
+
 .method public static getOverlay(Landroid/view/View;)Lcom/google/android/material/internal/ViewOverlayImpl;
     .locals 1
     .param p0    # Landroid/view/View;
@@ -355,6 +545,67 @@
 
     :cond_0
     return v0
+.end method
+
+.method public static hideKeyboard(Landroid/view/View;)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-static {p0, v0}, Lcom/google/android/material/internal/ViewUtils;->hideKeyboard(Landroid/view/View;Z)V
+
+    return-void
+.end method
+
+.method public static hideKeyboard(Landroid/view/View;Z)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->B0(Landroid/view/View;)Landroidx/core/view/g1;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-static {}, Landroidx/core/view/WindowInsetsCompat$Type;->d()I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Landroidx/core/view/g1;->d(I)V
+
+    return-void
+
+    .line 4
+    :cond_0
+    invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->getInputMethodManager(Landroid/view/View;)Landroid/view/inputmethod/InputMethodManager;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    .line 5
+    invoke-virtual {p0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p0, v0}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    :cond_1
+    return-void
 .end method
 
 .method public static isLayoutRtl(Landroid/view/View;)Z
@@ -529,6 +780,93 @@
     invoke-direct {v0, p0}, Lcom/google/android/material/internal/ViewUtils$1;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public static setBoundsFromRect(Landroid/view/View;Landroid/graphics/Rect;)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget v0, p1, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLeft(I)V
+
+    .line 2
+    iget v0, p1, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setTop(I)V
+
+    .line 3
+    iget v0, p1, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setRight(I)V
+
+    .line 4
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBottom(I)V
+
+    return-void
+.end method
+
+.method public static showKeyboard(Landroid/view/View;)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-static {p0, v0}, Lcom/google/android/material/internal/ViewUtils;->showKeyboard(Landroid/view/View;Z)V
+
+    return-void
+.end method
+
+.method public static showKeyboard(Landroid/view/View;Z)V
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->B0(Landroid/view/View;)Landroidx/core/view/g1;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-static {}, Landroidx/core/view/WindowInsetsCompat$Type;->d()I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Landroidx/core/view/g1;->k(I)V
+
+    return-void
+
+    .line 4
+    :cond_0
+    invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->getInputMethodManager(Landroid/view/View;)Landroid/view/inputmethod/InputMethodManager;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, p0, v0}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     return-void
 .end method

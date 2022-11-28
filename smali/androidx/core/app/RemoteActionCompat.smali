@@ -3,11 +3,23 @@
 .source "RemoteActionCompat.java"
 
 # interfaces
-.implements Lj3/d;
+.implements Lr4/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/app/RemoteActionCompat$a;,
+        Landroidx/core/app/RemoteActionCompat$b;
+    }
+.end annotation
 
 
 # instance fields
 .field public a:Landroidx/core/graphics/drawable/IconCompat;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
@@ -16,6 +28,9 @@
 .end field
 
 .field public b:Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
@@ -24,6 +39,9 @@
 .end field
 
 .field public c:Ljava/lang/CharSequence;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
@@ -32,6 +50,9 @@
 .end field
 
 .field public d:Landroid/app/PendingIntent;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
@@ -82,7 +103,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 10
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 11
     iget-object v0, p1, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
@@ -140,7 +161,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -149,7 +170,7 @@
     iput-object p1, p0, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
 
     .line 3
-    invoke-static {p2}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -158,7 +179,7 @@
     iput-object p1, p0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
     .line 4
-    invoke-static {p3}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -167,7 +188,7 @@
     iput-object p1, p0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
     .line 5
-    invoke-static {p4}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p4}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -200,51 +221,54 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     new-instance v0, Landroidx/core/app/RemoteActionCompat;
 
     .line 3
-    invoke-virtual {p0}, Landroid/app/RemoteAction;->getIcon()Landroid/graphics/drawable/Icon;
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompat$a;->d(Landroid/app/RemoteAction;)Landroid/graphics/drawable/Icon;
 
     move-result-object v1
 
+    .line 4
     invoke-static {v1}, Landroidx/core/graphics/drawable/IconCompat;->l(Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/app/RemoteAction;->getTitle()Ljava/lang/CharSequence;
+    .line 5
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompat$a;->e(Landroid/app/RemoteAction;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 4
-    invoke-virtual {p0}, Landroid/app/RemoteAction;->getContentDescription()Ljava/lang/CharSequence;
+    .line 6
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompat$a;->c(Landroid/app/RemoteAction;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Landroid/app/RemoteAction;->getActionIntent()Landroid/app/PendingIntent;
+    .line 7
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompat$a;->b(Landroid/app/RemoteAction;)Landroid/app/PendingIntent;
 
     move-result-object v4
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroidx/core/app/RemoteActionCompat;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 5
-    invoke-virtual {p0}, Landroid/app/RemoteAction;->isEnabled()Z
+    .line 8
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompat$a;->f(Landroid/app/RemoteAction;)Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroidx/core/app/RemoteActionCompat;->l(Z)V
 
-    .line 6
+    .line 9
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1c
 
     if-lt v1, v2, :cond_0
 
-    .line 7
-    invoke-virtual {p0}, Landroid/app/RemoteAction;->shouldShowIcon()Z
+    .line 10
+    invoke-static {p0}, Landroidx/core/app/RemoteActionCompat$b;->b(Landroid/app/RemoteAction;)Z
 
     move-result p0
 
@@ -329,6 +353,11 @@
 
 .method public n()Z
     .locals 1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "KotlinPropertyAccess"
+        }
+    .end annotation
 
     .line 1
     iget-boolean v0, p0, Landroidx/core/app/RemoteActionCompat;->f:Z
@@ -337,7 +366,7 @@
 .end method
 
 .method public o()Landroid/app/RemoteAction;
-    .locals 5
+    .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -346,28 +375,28 @@
     .end annotation
 
     .line 1
-    new-instance v0, Landroid/app/RemoteAction;
+    iget-object v0, p0, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
 
-    iget-object v1, p0, Landroidx/core/app/RemoteActionCompat;->a:Landroidx/core/graphics/drawable/IconCompat;
+    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->K()Landroid/graphics/drawable/Icon;
 
-    invoke-virtual {v1}, Landroidx/core/graphics/drawable/IconCompat;->O()Landroid/graphics/drawable/Icon;
+    move-result-object v0
 
-    move-result-object v1
+    iget-object v1, p0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
 
-    iget-object v2, p0, Landroidx/core/app/RemoteActionCompat;->b:Ljava/lang/CharSequence;
+    iget-object v2, p0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
 
-    iget-object v3, p0, Landroidx/core/app/RemoteActionCompat;->c:Ljava/lang/CharSequence;
+    iget-object v3, p0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
 
-    iget-object v4, p0, Landroidx/core/app/RemoteActionCompat;->d:Landroid/app/PendingIntent;
+    invoke-static {v0, v1, v2, v3}, Landroidx/core/app/RemoteActionCompat$a;->a(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/RemoteAction;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroid/app/RemoteAction;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    move-result-object v0
 
     .line 2
     invoke-virtual {p0}, Landroidx/core/app/RemoteActionCompat;->k()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/app/RemoteAction;->setEnabled(Z)V
+    invoke-static {v0, v1}, Landroidx/core/app/RemoteActionCompat$a;->g(Landroid/app/RemoteAction;Z)V
 
     .line 3
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -381,7 +410,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/app/RemoteAction;->setShouldShowIcon(Z)V
+    invoke-static {v0, v1}, Landroidx/core/app/RemoteActionCompat$b;->a(Landroid/app/RemoteAction;Z)V
 
     :cond_0
     return-object v0

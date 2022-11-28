@@ -62,7 +62,8 @@
     .locals 6
     .annotation build Landroid/annotation/SuppressLint;
         value = {
-            "PrivateApi"
+            "PrivateApi",
+            "SoonBlockedPrivateApi"
         }
     .end annotation
 
@@ -266,6 +267,7 @@
 
     const/4 v4, 0x0
 
+    .line 7
     aget v5, v3, v4
 
     cmpg-float v5, v5, v2
@@ -288,7 +290,7 @@
 
     float-to-double v7, v0
 
-    .line 7
+    .line 8
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v5
@@ -299,50 +301,50 @@
 
     double-to-float p2, v5
 
-    .line 8
+    .line 9
     aget v4, v3, v4
 
     div-float/2addr v4, v0
 
     const/4 v5, 0x4
 
-    .line 9
+    .line 10
     aget v5, v3, v5
 
     div-float/2addr v5, v0
 
-    .line 10
+    .line 11
     aget v0, v3, v1
 
     const/4 v1, 0x5
 
-    .line 11
+    .line 12
     aget v1, v3, v1
 
-    .line 12
+    .line 13
     invoke-virtual {p1, v2}, Landroid/view/View;->setPivotX(F)V
 
-    .line 13
+    .line 14
     invoke-virtual {p1, v2}, Landroid/view/View;->setPivotY(F)V
 
-    .line 14
+    .line 15
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 15
+    .line 16
     invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 16
+    .line 17
     invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
 
-    .line 17
+    .line 18
     invoke-virtual {p1, v4}, Landroid/view/View;->setScaleX(F)V
 
-    .line 18
+    .line 19
     invoke-virtual {p1, v5}, Landroid/view/View;->setScaleY(F)V
 
     goto :goto_2
 
-    .line 19
+    .line 20
     :cond_3
     :goto_1
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -355,7 +357,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setPivotX(F)V
 
-    .line 20
+    .line 21
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p2
@@ -366,19 +368,19 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setPivotY(F)V
 
-    .line 21
+    .line 22
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 22
+    .line 23
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 23
+    .line 24
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 24
+    .line 25
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 25
+    .line 26
     invoke-virtual {p1, v2}, Landroid/view/View;->setRotation(F)V
 
     :goto_2

@@ -105,7 +105,7 @@
     .line 5
     sget v0, Lcom/google/android/material/R$color;->design_fab_shadow_start_color:I
 
-    invoke-static {p1, v0}, Landroidx/core/content/d;->f(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -114,7 +114,7 @@
     .line 6
     sget v0, Lcom/google/android/material/R$color;->design_fab_shadow_mid_color:I
 
-    invoke-static {p1, v0}, Landroidx/core/content/d;->f(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -123,7 +123,7 @@
     .line 7
     sget v0, Lcom/google/android/material/R$color;->design_fab_shadow_end_color:I
 
-    invoke-static {p1, v0}, Landroidx/core/content/d;->f(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 

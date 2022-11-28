@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -16,4 +16,12 @@
 
 # virtual methods
 .method public abstract onCustomClick(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;Ljava/lang/String;)V
+    .param p1    # Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

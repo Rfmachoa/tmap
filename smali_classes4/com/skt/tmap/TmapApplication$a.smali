@@ -3,7 +3,7 @@
 .source "TmapApplication.java"
 
 # interfaces
-.implements Lcom/skt/tmap/util/w$b;
+.implements Lcom/skt/tmap/util/y$b;
 
 
 # annotations
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/tid/a;->k(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/skt/tmap/tid/a;->d(Landroid/content/Context;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/TmapApplication$a;->a:Lcom/skt/tmap/TmapApplication;

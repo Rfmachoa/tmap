@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nContentValues.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContentValues.kt\nandroidx/core/content/ContentValuesKt\n*L\n1#1,46:1\n*E\n"
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
@@ -27,8 +23,8 @@
     k = 0x2
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -57,7 +53,7 @@
 
     const-string v0, "pairs"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Landroid/content/ContentValues;

@@ -1,9 +1,18 @@
 .class final Lcom/google/firebase/messaging/TopicOperation;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "TopicOperation.java"
 
 
 # static fields
+.field private static final OLD_TOPIC_PREFIX:Ljava/lang/String; = "/topics/"
+
+.field public static final OPERATION_PAIR_DIVIDER:Ljava/lang/String; = "!"
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+.end field
+
+.field private static final TOPIC_NAME_PATTERN:Ljava/lang/String; = "[a-zA-Z0-9-_.~%]{1,900}"
+
 .field private static final TOPIC_NAME_REGEXP:Ljava/util/regex/Pattern;
 
 
@@ -21,6 +30,7 @@
 
     const-string v0, "[a-zA-Z0-9-_.~%]{1,900}"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -31,47 +41,25 @@
 .end method
 
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p2, p1}, Lcom/google/firebase/messaging/TopicOperation;->normalizeTopicOrThrow(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/firebase/messaging/TopicOperation;->topic:Ljava/lang/String;
 
+    .line 3
     iput-object p1, p0, Lcom/google/firebase/messaging/TopicOperation;->operation:Ljava/lang/String;
-
-    .line 2
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x1
-
-    add-int/2addr v0, v1
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v0, "!"
 
-    invoke-static {v2, p1, v0, p2}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 4
+    invoke-static {p1, v0, p2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -115,12 +103,12 @@
 
     return-object v1
 
+    .line 4
     :cond_1
     new-instance v0, Lcom/google/firebase/messaging/TopicOperation;
 
     const/4 v1, 0x0
 
-    .line 4
     aget-object v1, p0, v1
 
     const/4 v2, 0x1
@@ -178,9 +166,9 @@
     :cond_0
     if-eqz p0, :cond_1
 
+    .line 5
     sget-object p1, Lcom/google/firebase/messaging/TopicOperation;->TOPIC_NAME_REGEXP:Ljava/util/regex/Pattern;
 
-    .line 5
     invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p1
@@ -193,6 +181,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -208,7 +197,7 @@
 
     const-string p0, "Invalid topic name: %s does not match the allowed format %s."
 
-    .line 6
+    .line 7
     invoke-static {p0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -274,9 +263,9 @@
     :cond_0
     check-cast p1, Lcom/google/firebase/messaging/TopicOperation;
 
+    .line 3
     iget-object v0, p0, Lcom/google/firebase/messaging/TopicOperation;->topic:Ljava/lang/String;
 
-    .line 3
     iget-object v2, p1, Lcom/google/firebase/messaging/TopicOperation;->topic:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -295,9 +284,7 @@
 
     if-eqz p1, :cond_1
 
-    const/4 p1, 0x1
-
-    return p1
+    const/4 v1, 0x1
 
     :cond_1
     return v1
@@ -306,6 +293,7 @@
 .method public getOperation()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/TopicOperation;->operation:Ljava/lang/String;
 
     return-object v0
@@ -314,6 +302,7 @@
 .method public getTopic()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/TopicOperation;->topic:Ljava/lang/String;
 
     return-object v0
@@ -349,6 +338,7 @@
 .method public serialize()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/TopicOperation;->serializedString:Ljava/lang/String;
 
     return-object v0

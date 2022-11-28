@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation build Landroidx/camera/view/video/ExperimentalVideo;
 .end annotation
 
@@ -38,31 +42,11 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "videoCaptureError",
-            "message",
-            "cause"
-        }
-    .end annotation
 .end method
 
-.method public abstract b(Li0/f;)V
-    .param p1    # Li0/f;
+.method public abstract b(Lv0/f;)V
+    .param p1    # Lv0/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "outputFileResults"
-        }
-    .end annotation
 .end method

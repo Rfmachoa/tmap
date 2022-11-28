@@ -93,7 +93,7 @@
     .line 2
     iget-object v2, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor$1;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;
 
-    invoke-static {v2}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->access$100(Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;)Lf4/a;
+    invoke-static {v2}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->access$100(Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;)Lc6/a;
 
     move-result-object v2
 
@@ -103,11 +103,11 @@
 
     iget-object v4, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor$1;->val$data:Lcom/apollographql/apollo/api/b$a;
 
-    invoke-interface {v2, v3, v4}, Lf4/a;->y(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lf4/e;
+    invoke-interface {v2, v3, v4}, Lc6/a;->x(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lc6/e;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lf4/e;->f()Ljava/lang/Object;
+    invoke-virtual {v2}, Lc6/e;->f()Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->W3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->Y3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -53,32 +53,64 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->cc()V
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
-    const/4 v0, 0x0
+    move-result-object v0
+
+    const/16 v1, 0x7d
+
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/r0;->l(Landroid/app/Activity;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 2
-    sput-boolean v0, Lcom/skt/tmap/blackbox/b;->B1:Z
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "feature.useBlackbox"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 3
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->b:Lcom/skt/tmap/engine/TmapAiManager;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f130148
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    invoke-virtual {v0, v2}, Lcom/skt/tmap/activity/TmapNaviActivity;->r0(Z)V
 
     .line 4
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->b:Lcom/skt/tmap/engine/TmapAiManager;
+    sput-boolean v2, Lcom/skt/tmap/blackbox/b;->B1:Z
 
-    invoke-virtual {v2, v1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    goto :goto_0
 
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+
+    move-result-object v0
+
+    const v1, 0x7f14014a
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 6
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$u;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
+
+    :goto_0
     return-void
 .end method

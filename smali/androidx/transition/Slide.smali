@@ -149,6 +149,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "RestrictedApi"
@@ -182,7 +190,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, p2, v1, v2, v0}, Lz0/i;->k(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v1, v2, v0}, Ls1/l;->k(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
@@ -293,56 +301,56 @@
     iput p1, p0, Landroidx/transition/Slide;->b:I
 
     .line 9
-    new-instance v0, Lh3/m;
+    new-instance v0, Lp4/m;
 
-    invoke-direct {v0}, Lh3/m;-><init>()V
+    invoke-direct {v0}, Lp4/m;-><init>()V
 
     .line 10
-    invoke-virtual {v0, p1}, Lh3/m;->k(I)V
+    invoke-virtual {v0, p1}, Lp4/m;->k(I)V
 
     .line 11
-    invoke-virtual {p0, v0}, Landroidx/transition/Transition;->setPropagation(Lh3/n;)V
+    invoke-virtual {p0, v0}, Landroidx/transition/Transition;->setPropagation(Lp4/n;)V
 
     return-void
 .end method
 
-.method public captureEndValues(Lh3/o;)V
+.method public captureEndValues(Lp4/o;)V
     .locals 0
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureEndValues(Lh3/o;)V
+    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureEndValues(Lp4/o;)V
 
     .line 2
-    invoke-virtual {p0, p1}, Landroidx/transition/Slide;->captureValues(Lh3/o;)V
+    invoke-virtual {p0, p1}, Landroidx/transition/Slide;->captureValues(Lp4/o;)V
 
     return-void
 .end method
 
-.method public captureStartValues(Lh3/o;)V
+.method public captureStartValues(Lp4/o;)V
     .locals 0
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Lh3/o;)V
+    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Lp4/o;)V
 
     .line 2
-    invoke-virtual {p0, p1}, Landroidx/transition/Slide;->captureValues(Lh3/o;)V
+    invoke-virtual {p0, p1}, Landroidx/transition/Slide;->captureValues(Lp4/o;)V
 
     return-void
 .end method
 
-.method public final captureValues(Lh3/o;)V
+.method public final captureValues(Lp4/o;)V
     .locals 2
 
     .line 1
-    iget-object v0, p1, Lh3/o;->b:Landroid/view/View;
+    iget-object v0, p1, Lp4/o;->b:Landroid/view/View;
 
     const/4 v1, 0x2
 
@@ -352,7 +360,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
     .line 3
-    iget-object p1, p1, Lh3/o;->a:Ljava/util/Map;
+    iget-object p1, p1, Lp4/o;->a:Ljava/util/Map;
 
     const-string v0, "android:slide:screenPosition"
 
@@ -361,8 +369,10 @@
     return-void
 .end method
 
-.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 10
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-nez p4, :cond_0
 
@@ -372,7 +382,7 @@
 
     .line 1
     :cond_0
-    iget-object p3, p4, Lh3/o;->a:Ljava/util/Map;
+    iget-object p3, p4, Lp4/o;->a:Ljava/util/Map;
 
     const-string v0, "android:slide:screenPosition"
 
@@ -424,15 +434,17 @@
     move-object v9, p0
 
     .line 7
-    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lh3/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
+    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lp4/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 10
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-nez p3, :cond_0
 
@@ -442,7 +454,7 @@
 
     .line 1
     :cond_0
-    iget-object p4, p3, Lh3/o;->a:Ljava/util/Map;
+    iget-object p4, p3, Lp4/o;->a:Ljava/util/Map;
 
     const-string v0, "android:slide:screenPosition"
 
@@ -494,7 +506,7 @@
     move-object v9, p0
 
     .line 7
-    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lh3/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
+    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lp4/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
 
     move-result-object p1
 

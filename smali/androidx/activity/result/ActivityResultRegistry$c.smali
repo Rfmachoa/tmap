@@ -33,10 +33,10 @@
     .end annotation
 .end field
 
-.field public final b:Lb/a;
+.field public final b:Lc/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/a<",
+            "Lc/a<",
             "*TO;>;"
         }
     .end annotation
@@ -44,14 +44,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/activity/result/a;Lb/a;)V
+.method public constructor <init>(Landroidx/activity/result/a;Lc/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/activity/result/a<",
             "TO;>;",
-            "Lb/a<",
+            "Lc/a<",
             "*TO;>;)V"
         }
     .end annotation
@@ -63,7 +63,7 @@
     iput-object p1, p0, Landroidx/activity/result/ActivityResultRegistry$c;->a:Landroidx/activity/result/a;
 
     .line 3
-    iput-object p2, p0, Landroidx/activity/result/ActivityResultRegistry$c;->b:Lb/a;
+    iput-object p2, p0, Landroidx/activity/result/ActivityResultRegistry$c;->b:Lc/a;
 
     return-void
 .end method

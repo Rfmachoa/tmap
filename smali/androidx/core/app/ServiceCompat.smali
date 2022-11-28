@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/core/app/ServiceCompat$a;,
         Landroidx/core/app/ServiceCompat$StopForegroundFlags;
     }
 .end annotation
@@ -37,7 +38,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/app/Service;->stopForeground(I)V
+    invoke-static {p0, p1}, Landroidx/core/app/ServiceCompat$a;->a(Landroid/app/Service;I)V
 
     return-void
 .end method

@@ -1,96 +1,61 @@
-.class public final Loj/l;
-.super Loj/b;
-.source "MonoTimeSource.kt"
+.class public interface abstract Loj/l;
+.super Ljava/lang/Object;
+.source "FlowableEmitter.java"
 
 # interfaces
-.implements Loj/o;
+.implements Loj/i;
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\u0008\u00c1\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0008\u0010\u0004\u001a\u00020\u0003H\u0014J\u0008\u0010\u0006\u001a\u00020\u0005H\u0016\u00a8\u0006\t"
-    }
-    d2 = {
-        "Loj/l;",
-        "Loj/b;",
-        "Loj/o;",
-        "",
-        "c",
-        "",
-        "toString",
-        "<init>",
-        "()V",
-        "kotlin-stdlib"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x5,
-        0x1
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Loj/i<",
+        "TT;>;"
     }
 .end annotation
-
-.annotation build Lkotlin/SinceKotlin;
-    version = "1.3"
-.end annotation
-
-.annotation build Lkotlin/time/ExperimentalTime;
-.end annotation
-
-
-# static fields
-.field public static final c:Loj/l;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
-
-
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    new-instance v0, Loj/l;
-
-    invoke-direct {v0}, Loj/l;-><init>()V
-
-    sput-object v0, Loj/l;->c:Loj/l;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-direct {p0, v0}, Loj/b;-><init>(Ljava/util/concurrent/TimeUnit;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public c()J
-    .locals 2
-
-    .line 1
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v0
-
-    return-wide v0
+.method public abstract isCancelled()Z
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/NotNull;
+.method public abstract requested()J
+.end method
+
+.method public abstract serialize()Loj/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Loj/l<",
+            "TT;>;"
+        }
     .end annotation
 
-    const-string v0, "TimeSource(System.nanoTime())"
+    .annotation build Lio/reactivex/annotations/NonNull;
+    .end annotation
+.end method
 
-    return-object v0
+.method public abstract setCancellable(Ltj/f;)V
+    .param p1    # Ltj/f;
+        .annotation build Lio/reactivex/annotations/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract setDisposable(Lio/reactivex/disposables/b;)V
+    .param p1    # Lio/reactivex/disposables/b;
+        .annotation build Lio/reactivex/annotations/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract tryOnError(Ljava/lang/Throwable;)Z
+    .param p1    # Ljava/lang/Throwable;
+        .annotation build Lio/reactivex/annotations/NonNull;
+        .end annotation
+    .end param
 .end method

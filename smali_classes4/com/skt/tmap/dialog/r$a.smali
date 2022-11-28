@@ -1,14 +1,14 @@
 .class public Lcom/skt/tmap/dialog/r$a;
 .super Ljava/lang/Object;
-.source "SimpleItemSelectDialog.java"
+.source "PoiFavoriteDialog.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/dialog/r;-><init>(Landroid/app/Activity;[Ljava/lang/String;ILcom/skt/tmap/dialog/r$d;)V
+    value = Lcom/skt/tmap/dialog/r;->i(Landroid/app/Dialog;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,29 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcom/skt/tmap/dialog/r;
+.field public final synthetic a:Lcom/skt/tmap/dialog/r;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/dialog/r;I)V
+.method public constructor <init>(Lcom/skt/tmap/dialog/r;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010,
-            0x1010
+            0x8010
         }
         names = {
-            "this$0",
-            "val$currentIndex"
+            "this$0"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/dialog/r$a;->b:Lcom/skt/tmap/dialog/r;
-
-    iput p2, p0, Lcom/skt/tmap/dialog/r$a;->a:I
+    iput-object p1, p0, Lcom/skt/tmap/dialog/r$a;->a:Lcom/skt/tmap/dialog/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,85 +43,127 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 4
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "view"
+            "editable"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->b:Lcom/skt/tmap/dialog/r;
+    invoke-interface {p1}, Landroid/text/Editable;->length()I
 
-    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->x(Lcom/skt/tmap/dialog/r;)Ljava/util/ArrayList;
+    move-result p1
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RadioButton;
+    if-nez p1, :cond_0
 
     .line 2
-    iget v1, p0, Lcom/skt/tmap/dialog/r$a;->a:I
+    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->a:Lcom/skt/tmap/dialog/r;
 
-    const/4 v2, 0x1
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Landroid/widget/Button;
 
-    add-int/2addr v1, v2
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/widget/RadioButton;->getId()I
+    invoke-virtual {p1}, Landroid/widget/Button;->getVisibility()I
 
-    move-result v3
+    move-result p1
 
-    if-ne v1, v3, :cond_0
+    if-nez p1, :cond_1
 
-    goto :goto_1
+    .line 3
+    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->a:Lcom/skt/tmap/dialog/r;
 
-    :cond_0
-    const/4 v2, 0x0
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Landroid/widget/Button;
 
-    :goto_1
-    invoke-virtual {v0, v2}, Landroid/widget/RadioButton;->setChecked(Z)V
+    move-result-object p1
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 3
-    :cond_1
-    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->b:Lcom/skt/tmap/dialog/r;
-
-    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Lcom/skt/tmap/dialog/r$d;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
     .line 4
-    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->b:Lcom/skt/tmap/dialog/r;
+    :cond_0
+    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->a:Lcom/skt/tmap/dialog/r;
 
-    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Lcom/skt/tmap/dialog/r$d;
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Landroid/widget/Button;
 
     move-result-object p1
 
-    iget v0, p0, Lcom/skt/tmap/dialog/r$a;->a:I
+    invoke-virtual {p1}, Landroid/widget/Button;->getVisibility()I
 
-    invoke-interface {p1, v0}, Lcom/skt/tmap/dialog/r$d;->b(I)V
+    move-result p1
 
-    :cond_2
+    if-eqz p1, :cond_1
+
+    .line 5
+    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->a:Lcom/skt/tmap/dialog/r;
+
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Landroid/widget/Button;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "arg0",
+            "arg1",
+            "arg2",
+            "arg3"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "arg0",
+            "arg1",
+            "arg2",
+            "arg3"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lcom/skt/tmap/dialog/r$a;->a:Lcom/skt/tmap/dialog/r;
+
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->x(Lcom/skt/tmap/dialog/r;)Landroid/widget/EditText;
+
+    move-result-object p1
+
+    const/16 p2, 0x32
+
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/g;->t(Landroid/widget/EditText;I)V
+
     return-void
 .end method

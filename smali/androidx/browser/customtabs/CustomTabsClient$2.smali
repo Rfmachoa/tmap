@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/browser/customtabs/CustomTabsClient;->f(Landroidx/browser/customtabs/a;)Landroidx/browser/customtabs/d;
+    value = Landroidx/browser/customtabs/CustomTabsClient;->e(Landroidx/browser/customtabs/b;)Landroid/support/customtabs/ICustomTabsCallback$Stub;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,17 +19,17 @@
 
 .field public final synthetic this$0:Landroidx/browser/customtabs/CustomTabsClient;
 
-.field public final synthetic val$callback:Landroidx/browser/customtabs/a;
+.field public final synthetic val$callback:Landroidx/browser/customtabs/b;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/browser/customtabs/CustomTabsClient;Landroidx/browser/customtabs/a;)V
+.method public constructor <init>(Landroidx/browser/customtabs/CustomTabsClient;Landroidx/browser/customtabs/b;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->this$0:Landroidx/browser/customtabs/CustomTabsClient;
 
-    iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     invoke-direct {p0}, Landroid/support/customtabs/ICustomTabsCallback$Stub;-><init>()V
 
@@ -58,7 +58,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     if-nez v0, :cond_0
 
@@ -77,6 +77,40 @@
     return-void
 .end method
 
+.method public extraCallbackWithResult(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0, p1, p2}, Landroidx/browser/customtabs/b;->extraCallbackWithResult(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public onMessageChannelReady(Landroid/os/Bundle;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
@@ -86,7 +120,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     if-nez v0, :cond_0
 
@@ -109,7 +143,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     if-nez v0, :cond_0
 
@@ -137,7 +171,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     if-nez v0, :cond_0
 
@@ -169,7 +203,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     if-nez v0, :cond_0
 

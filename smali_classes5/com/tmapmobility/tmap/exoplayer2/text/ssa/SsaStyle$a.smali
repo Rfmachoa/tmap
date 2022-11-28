@@ -33,9 +33,13 @@
 
 .field public final i:I
 
+.field public final j:I
+
+.field public final k:I
+
 
 # direct methods
-.method public constructor <init>(IIIIIIIII)V
+.method public constructor <init>(IIIIIIIIIII)V
     .locals 0
 
     .line 1
@@ -68,36 +72,42 @@
     .line 10
     iput p9, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->i:I
 
+    .line 11
+    iput p10, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->j:I
+
+    .line 12
+    iput p11, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->k:I
+
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;
-    .locals 14
+    .locals 17
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     const/4 v0, 0x7
 
+    move-object/from16 v1, p0
+
     .line 1
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, ","
+    const-string v2, ","
 
-    invoke-static {p0, v1}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v1, v2}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, -0x1
+    const/4 v3, -0x1
 
-    move v3, v1
+    move v4, v2
 
-    move v5, v2
-
-    move v6, v5
+    move v6, v3
 
     move v7, v6
 
@@ -111,244 +121,302 @@
 
     move v12, v11
 
+    move v13, v12
+
+    move v14, v13
+
+    move v15, v14
+
     .line 2
     :goto_0
-    array-length v4, p0
+    array-length v5, v1
 
-    if-ge v3, v4, :cond_8
+    if-ge v4, v5, :cond_a
 
     .line 3
-    aget-object v4, p0, v3
+    aget-object v5, v1, v4
 
-    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v4}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
 
-    move-result v13
+    move-result v16
 
-    sparse-switch v13, :sswitch_data_0
+    sparse-switch v16, :sswitch_data_0
 
     :goto_1
-    move v4, v2
+    move v0, v3
 
     goto/16 :goto_2
 
     :sswitch_0
-    const-string v13, "alignment"
+    const-string v0, "outlinecolour"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_0
+    if-nez v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    move v4, v0
+    const/16 v0, 0x9
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :sswitch_1
-    const-string v13, "fontsize"
+    const-string v0, "alignment"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/4 v4, 0x6
+    const/16 v0, 0x8
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :sswitch_2
-    const-string v13, "name"
+    const-string v0, "borderstyle"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_2
+    if-nez v0, :cond_2
 
     goto :goto_1
 
     :cond_2
-    const/4 v4, 0x5
+    const/4 v0, 0x7
 
     goto :goto_2
 
     :sswitch_3
-    const-string v13, "bold"
+    const-string v0, "fontsize"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_3
+    if-nez v0, :cond_3
 
     goto :goto_1
 
     :cond_3
-    const/4 v4, 0x4
+    const/4 v0, 0x6
 
     goto :goto_2
 
     :sswitch_4
-    const-string v13, "primarycolour"
+    const-string v0, "name"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_4
+    if-nez v0, :cond_4
 
     goto :goto_1
 
     :cond_4
-    const/4 v4, 0x3
+    const/4 v0, 0x5
 
     goto :goto_2
 
     :sswitch_5
-    const-string v13, "strikeout"
+    const-string v0, "bold"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_5
+    if-nez v0, :cond_5
 
     goto :goto_1
 
     :cond_5
-    const/4 v4, 0x2
+    const/4 v0, 0x4
 
     goto :goto_2
 
     :sswitch_6
-    const-string v13, "underline"
+    const-string v0, "primarycolour"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_6
+    if-nez v0, :cond_6
 
     goto :goto_1
 
     :cond_6
-    const/4 v4, 0x1
+    const/4 v0, 0x3
 
     goto :goto_2
 
     :sswitch_7
-    const-string v13, "italic"
+    const-string v0, "strikeout"
 
-    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_7
+    if-nez v0, :cond_7
 
     goto :goto_1
 
     :cond_7
-    move v4, v1
+    const/4 v0, 0x2
+
+    goto :goto_2
+
+    :sswitch_8
+    const-string v0, "underline"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    const/4 v0, 0x1
+
+    goto :goto_2
+
+    :sswitch_9
+    const-string v0, "italic"
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    goto :goto_1
+
+    :cond_9
+    move v0, v2
 
     :goto_2
-    packed-switch v4, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
     goto :goto_3
 
     :pswitch_0
-    move v6, v3
+    move v9, v4
 
     goto :goto_3
 
     :pswitch_1
-    move v8, v3
+    move v7, v4
 
     goto :goto_3
 
     :pswitch_2
-    move v5, v3
+    move v15, v4
 
     goto :goto_3
 
     :pswitch_3
-    move v9, v3
+    move v10, v4
 
     goto :goto_3
 
     :pswitch_4
-    move v7, v3
+    move v6, v4
 
     goto :goto_3
 
     :pswitch_5
-    move v12, v3
+    move v11, v4
 
     goto :goto_3
 
     :pswitch_6
-    move v11, v3
+    move v8, v4
 
     goto :goto_3
 
     :pswitch_7
-    move v10, v3
+    move v14, v4
+
+    goto :goto_3
+
+    :pswitch_8
+    move v13, v4
+
+    goto :goto_3
+
+    :pswitch_9
+    move v12, v4
 
     :goto_3
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
+
+    const/4 v0, 0x7
 
     goto/16 :goto_0
 
-    :cond_8
-    if-eq v5, v2, :cond_9
+    :cond_a
+    if-eq v6, v3, :cond_b
 
     .line 4
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;
 
-    array-length v13, p0
+    array-length v1, v1
 
-    move-object v4, v0
+    move-object v5, v0
 
-    invoke-direct/range {v4 .. v13}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;-><init>(IIIIIIIII)V
+    move/from16 v16, v1
+
+    invoke-direct/range {v5 .. v16}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;-><init>(IIIIIIIIIII)V
 
     goto :goto_4
 
-    :cond_9
+    :cond_b
     const/4 v0, 0x0
 
     :goto_4
     return-object v0
 
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        -0x4642c5d0 -> :sswitch_7
-        -0x3d363934 -> :sswitch_6
-        -0xb7325a4 -> :sswitch_5
-        -0x43a3db2 -> :sswitch_4
-        0x2e3a85 -> :sswitch_3
-        0x337a8b -> :sswitch_2
-        0x15d92cd0 -> :sswitch_1
-        0x695fa1e3 -> :sswitch_0
+        -0x4642c5d0 -> :sswitch_9
+        -0x3d363934 -> :sswitch_8
+        -0xb7325a4 -> :sswitch_7
+        -0x43a3db2 -> :sswitch_6
+        0x2e3a85 -> :sswitch_5
+        0x337a8b -> :sswitch_4
+        0x15d92cd0 -> :sswitch_3
+        0x2dbc6505 -> :sswitch_2
+        0x695fa1e3 -> :sswitch_1
+        0x76840c8e -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
         :pswitch_7
         :pswitch_6
         :pswitch_5

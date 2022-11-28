@@ -101,7 +101,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p2, p3}, Landroid/support/v4/media/session/PlaybackStateCompat;->q(J)I
+    invoke-static {p2, p3}, Landroid/support/v4/media/session/PlaybackStateCompat;->s(J)I
 
     move-result v2
 
@@ -342,7 +342,7 @@
 
     const-string v2, ", found "
 
-    invoke-static {v1, p1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -481,7 +481,7 @@
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     .line 5
-    invoke-static {p1, p2}, Landroidx/core/content/d;->u(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->startForegroundService(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 

@@ -54,6 +54,22 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "resDomainActionResolverVo"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -122,11 +138,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lib/a;->b()Lib/a;
+    invoke-static {}, Lfd/a;->b()Lfd/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lib/a;->a()V
+    invoke-virtual {v0}, Lfd/a;->a()V
 
     .line 2
     invoke-static {}, Lcom/skt/moment/a;->r()V
@@ -148,6 +164,14 @@
 
 .method public c(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     .line 1
     invoke-super {p0, p1}, Lcom/skt/moment/task/z;->c(I)V

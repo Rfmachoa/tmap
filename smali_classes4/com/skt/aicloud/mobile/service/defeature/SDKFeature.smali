@@ -350,11 +350,11 @@
     invoke-static {p0}, Lcom/diotek/diotts/pttsnet/PttsnetManager;->w(Z)V
 
     .line 4
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lu8/a;->w(Z)V
+    invoke-virtual {v1, p0}, Lra/a;->w(Z)V
 
     new-array v0, v0, [Ljava/lang/Object;
 

@@ -202,7 +202,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroidx/core/graphics/drawable/IconCompat;->O()Landroid/graphics/drawable/Icon;
+    invoke-virtual {v2}, Landroidx/core/graphics/drawable/IconCompat;->K()Landroid/graphics/drawable/Icon;
 
     move-result-object v2
 

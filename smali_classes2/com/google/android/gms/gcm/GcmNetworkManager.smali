@@ -339,7 +339,7 @@
 
     const/16 v1, 0x76
 
-    invoke-static {p1, v1}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {p1, v1}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -347,7 +347,7 @@
 
     const-string v3, " does not seem to support receiving com.google.android.gms.gcm.ACTION_TASK_READY"
 
-    invoke-static {v1, v2, p1, v3}, Lcom/google/android/gms/ads/internal/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, p1, v3}, Lcom/google/android/gms/gcm/b;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

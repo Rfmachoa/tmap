@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lai/i0;
+.field public final synthetic a:Lek/i0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/i0;)V
+.method public synthetic constructor <init>(Lek/i0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/i0;->a:Lai/i0;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/i0;->a:Lek/i0;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/i0;->a:Lai/i0;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/i0;->a:Lek/i0;
 
     check-cast p1, Lcom/amplifyframework/AmplifyException;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/AmplifyDisposables;->a(Lai/i0;Lcom/amplifyframework/AmplifyException;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/AmplifyDisposables;->a(Lek/i0;Lcom/amplifyframework/AmplifyException;)V
 
     return-void
 .end method

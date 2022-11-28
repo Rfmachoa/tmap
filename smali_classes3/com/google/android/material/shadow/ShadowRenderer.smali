@@ -51,7 +51,7 @@
 
 .field private shadowStartColor:I
 
-.field private transparentPaint:Landroid/graphics/Paint;
+.field private final transparentPaint:Landroid/graphics/Paint;
 
 
 # direct methods
@@ -118,7 +118,7 @@
 .end method
 
 .method public constructor <init>(I)V
-    .locals 1
+    .locals 2
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -138,21 +138,19 @@
     iput-object v0, p0, Lcom/google/android/material/shadow/ShadowRenderer;->transparentPaint:Landroid/graphics/Paint;
 
     .line 5
-    new-instance v0, Landroid/graphics/Paint;
+    new-instance v1, Landroid/graphics/Paint;
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/shadow/ShadowRenderer;->shadowPaint:Landroid/graphics/Paint;
+    iput-object v1, p0, Lcom/google/android/material/shadow/ShadowRenderer;->shadowPaint:Landroid/graphics/Paint;
 
     .line 6
     invoke-virtual {p0, p1}, Lcom/google/android/material/shadow/ShadowRenderer;->setShadowColor(I)V
 
+    const/4 p1, 0x0
+
     .line 7
-    iget-object p1, p0, Lcom/google/android/material/shadow/ShadowRenderer;->transparentPaint:Landroid/graphics/Paint;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 8
     new-instance p1, Landroid/graphics/Paint;
@@ -331,11 +329,11 @@
 
     sub-float v1, v3, v1
 
-    sub-float/2addr v3, v1
+    sub-float v8, v3, v1
 
-    div-float/2addr v3, v10
+    div-float/2addr v8, v10
 
-    add-float/2addr v3, v1
+    add-float/2addr v8, v1
 
     .line 16
     sget-object v18, Lcom/google/android/material/shadow/ShadowRenderer;->cornerPositions:[F
@@ -343,12 +341,10 @@
     aput v1, v18, v6
 
     .line 17
-    aput v3, v18, v11
+    aput v8, v18, v11
 
     .line 18
-    iget-object v1, v0, Lcom/google/android/material/shadow/ShadowRenderer;->cornerShadowPaint:Landroid/graphics/Paint;
-
-    new-instance v3, Landroid/graphics/RadialGradient;
+    new-instance v1, Landroid/graphics/RadialGradient;
 
     .line 19
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/RectF;->centerX()F
@@ -364,12 +360,14 @@
 
     sget-object v19, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    move-object v13, v3
+    move-object v13, v1
 
     invoke-direct/range {v13 .. v19}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
 
     .line 21
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+    iget-object v6, v0, Lcom/google/android/material/shadow/ShadowRenderer;->cornerShadowPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v6, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
     .line 22
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
@@ -377,14 +375,27 @@
     .line 23
     invoke-virtual/range {p1 .. p2}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
+    .line 24
+    invoke-virtual/range {p3 .. p3}, Landroid/graphics/RectF;->height()F
+
+    move-result v1
+
+    invoke-virtual/range {p3 .. p3}, Landroid/graphics/RectF;->width()F
+
+    move-result v6
+
+    div-float/2addr v1, v6
+
+    invoke-virtual {v7, v3, v1}, Landroid/graphics/Canvas;->scale(FF)V
+
     if-nez v5, :cond_3
 
-    .line 24
+    .line 25
     sget-object v1, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
     invoke-virtual {v7, v9, v1}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
 
-    .line 25
+    .line 26
     iget-object v1, v0, Lcom/google/android/material/shadow/ShadowRenderer;->transparentPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v7, v9, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
@@ -392,7 +403,7 @@
     :cond_3
     const/4 v5, 0x1
 
-    .line 26
+    .line 27
     iget-object v6, v0, Lcom/google/android/material/shadow/ShadowRenderer;->cornerShadowPaint:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
@@ -405,7 +416,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 27
+    .line 28
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -507,6 +518,113 @@
     return-void
 .end method
 
+.method public drawInnerCornerShadow(Landroid/graphics/Canvas;Landroid/graphics/Matrix;Landroid/graphics/RectF;IFF[F)V
+    .locals 7
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p7    # [F
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    cmpl-float v0, p6, v0
+
+    if-lez v0, :cond_0
+
+    add-float/2addr p5, p6
+
+    neg-float p6, p6
+
+    :cond_0
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    move v6, p6
+
+    .line 1
+    invoke-virtual/range {v0 .. v6}, Lcom/google/android/material/shadow/ShadowRenderer;->drawCornerShadow(Landroid/graphics/Canvas;Landroid/graphics/Matrix;Landroid/graphics/RectF;IFF)V
+
+    .line 2
+    iget-object p4, p0, Lcom/google/android/material/shadow/ShadowRenderer;->scratch:Landroid/graphics/Path;
+
+    .line 3
+    invoke-virtual {p4}, Landroid/graphics/Path;->rewind()V
+
+    const/4 v0, 0x0
+
+    .line 4
+    aget v0, p7, v0
+
+    const/4 v1, 0x1
+
+    aget p7, p7, v1
+
+    invoke-virtual {p4, v0, p7}, Landroid/graphics/Path;->moveTo(FF)V
+
+    .line 5
+    invoke-virtual {p4, p3, p5, p6}, Landroid/graphics/Path;->arcTo(Landroid/graphics/RectF;FF)V
+
+    .line 6
+    invoke-virtual {p4}, Landroid/graphics/Path;->close()V
+
+    .line 7
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    .line 8
+    invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    .line 9
+    invoke-virtual {p3}, Landroid/graphics/RectF;->height()F
+
+    move-result p5
+
+    invoke-virtual {p3}, Landroid/graphics/RectF;->width()F
+
+    move-result p3
+
+    div-float/2addr p5, p3
+
+    invoke-virtual {p1, p2, p5}, Landroid/graphics/Canvas;->scale(FF)V
+
+    .line 10
+    iget-object p2, p0, Lcom/google/android/material/shadow/ShadowRenderer;->transparentPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p4, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    .line 11
+    iget-object p2, p0, Lcom/google/android/material/shadow/ShadowRenderer;->shadowPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p4, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    .line 12
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    return-void
+.end method
+
 .method public getShadowPaint()Landroid/graphics/Paint;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
@@ -524,7 +642,7 @@
     const/16 v0, 0x44
 
     .line 1
-    invoke-static {p1, v0}, Lc1/i;->B(II)I
+    invoke-static {p1, v0}, Lv1/h;->B(II)I
 
     move-result v0
 
@@ -533,7 +651,7 @@
     const/16 v0, 0x14
 
     .line 2
-    invoke-static {p1, v0}, Lc1/i;->B(II)I
+    invoke-static {p1, v0}, Lv1/h;->B(II)I
 
     move-result v0
 
@@ -542,7 +660,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-static {p1, v0}, Lc1/i;->B(II)I
+    invoke-static {p1, v0}, Lv1/h;->B(II)I
 
     move-result p1
 

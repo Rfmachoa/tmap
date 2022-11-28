@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/skt/tmap/dialog/r$d;
 .super Ljava/lang/Object;
-.source "SimpleItemSelectDialog.java"
+.source "PoiFavoriteDialog.java"
 
 
 # annotations
@@ -18,13 +18,18 @@
 .method public abstract a()V
 .end method
 
-.method public abstract b(I)V
+.method public abstract b(IZ)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
+            0x0,
             0x0
         }
         names = {
-            "selectedPosition"
+            "type",
+            "isAddHome"
         }
     .end annotation
+.end method
+
+.method public abstract c()V
 .end method

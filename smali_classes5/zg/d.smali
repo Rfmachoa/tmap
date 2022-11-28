@@ -1,107 +1,72 @@
 .class public final Lzg/d;
 .super Ljava/lang/Object;
-.source "ApplicationComponentManager.java"
-
-# interfaces
-.implements Leh/b;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Leh/b<",
-        "Ljava/lang/Object;",
-        ">;"
-    }
-.end annotation
-
-
-# instance fields
-.field public volatile a:Ljava/lang/Object;
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Lzg/f;
+.source "SpanUtil.java"
 
 
 # direct methods
-.method public constructor <init>(Lzg/f;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "componentCreator"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lzg/d;->b:Ljava/lang/Object;
-
-    .line 3
-    iput-object p1, p0, Lzg/d;->c:Lzg/f;
-
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Ljava/lang/Object;
-    .locals 2
+.method public static a(Landroid/text/Spannable;Ljava/lang/Object;III)V
+    .locals 5
 
     .line 1
-    iget-object v0, p0, Lzg/d;->a:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_1
+    move-result-object v0
+
+    invoke-interface {p0, p2, p3, v0}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
 
     .line 2
-    iget-object v0, p0, Lzg/d;->b:Ljava/lang/Object;
+    array-length v1, v0
 
-    monitor-enter v0
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
 
     .line 3
-    :try_start_0
-    iget-object v1, p0, Lzg/d;->a:Ljava/lang/Object;
+    invoke-interface {p0, v3}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
-    if-nez v1, :cond_0
+    move-result v4
+
+    if-ne v4, p2, :cond_0
 
     .line 4
-    iget-object v1, p0, Lzg/d;->c:Lzg/f;
+    invoke-interface {p0, v3}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
 
-    invoke-interface {v1}, Lzg/f;->get()Ljava/lang/Object;
+    move-result v4
 
-    move-result-object v1
-
-    iput-object v1, p0, Lzg/d;->a:Ljava/lang/Object;
+    if-ne v4, p3, :cond_0
 
     .line 5
+    invoke-interface {p0, v3}, Landroid/text/Spannable;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v4
+
+    if-ne v4, p4, :cond_0
+
+    .line 6
+    invoke-interface {p0, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
     :cond_0
-    monitor-exit v0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    .line 6
+    .line 7
     :cond_1
-    :goto_0
-    iget-object v0, p0, Lzg/d;->a:Ljava/lang/Object;
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    return-object v0
+    return-void
 .end method

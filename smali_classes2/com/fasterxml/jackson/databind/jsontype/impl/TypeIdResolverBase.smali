@@ -76,8 +76,13 @@
 
 .method public typeFromId(Lcom/fasterxml/jackson/databind/DatabindContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
     .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    .line 2
+    .line 1
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "Sub-class "
@@ -96,11 +101,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, " MUST implement "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "`typeFromId(DatabindContext,String)"
+    const-string v0, " MUST implement `typeFromId(DatabindContext,String)"
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -111,19 +112,4 @@
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
-
-.method public typeFromId(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0, p1}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeIdResolverBase;->typeFromId(Lcom/fasterxml/jackson/databind/DatabindContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
-
-    move-result-object p1
-
-    return-object p1
 .end method

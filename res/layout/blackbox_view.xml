@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/camera_preview" android:background="@drawable/drive_blackbox_video" android:paddingLeft="@dimen/tmap_1dp" android:paddingTop="@dimen/tmap_1dp" android:paddingRight="@dimen/tmap_1dp" android:layout_width="@dimen/tmap_0dp" android:layout_height="@dimen/tmap_0dp" android:alpha="0.5" />
+    <androidx.camera.view.PreviewView android:id="@id/camera_preview" android:background="@drawable/drive_blackbox_video" android:paddingLeft="@dimen/tmap_1dp" android:paddingTop="@dimen/tmap_1dp" android:paddingRight="@dimen/tmap_1dp" android:layout_width="@dimen/tmap_0dp" android:layout_height="@dimen/tmap_0dp" />
     <LinearLayout android:id="@id/blackbox_record_img_layouot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
         <ImageView android:background="@drawable/ico_rec_01" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <ImageView android:background="@drawable/ico_rec_02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_5dp" />

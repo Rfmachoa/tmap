@@ -34,15 +34,15 @@
     .end param
 .end method
 
-.method public abstract onResponse(Lc4/i;)V
-    .param p1    # Lc4/i;
+.method public abstract onResponse(Lz5/i;)V
+    .param p1    # Lz5/i;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/i<",
+            "Lz5/i<",
             "TT;>;)V"
         }
     .end annotation

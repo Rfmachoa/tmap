@@ -65,8 +65,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -293,13 +293,33 @@
 
     cmpg-double p1, v3, v5
 
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_1
+
+    move p1, v1
+
+    goto :goto_1
+
+    :cond_1
+    move p1, v2
+
+    :goto_1
+    if-nez p1, :cond_3
 
     iget-wide v7, p2, Lcom/skt/tmap/engine/navigation/data/RGData;->vpPosPointLon:D
 
     cmpg-double p1, v7, v5
 
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_2
+
+    move p1, v1
+
+    goto :goto_2
+
+    :cond_2
+    move p1, v2
+
+    :goto_2
+    if-nez p1, :cond_3
 
     .line 4
     invoke-virtual {v0, v3, v4}, Landroid/location/Location;->setLatitude(D)V
@@ -319,16 +339,12 @@
     .line 7
     iget-boolean p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData;->isShadeArea:Z
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     .line 8
     invoke-static {}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getInstance()Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
 
     move-result-object p1
-
-    const-string v0, "TmapLocationManager.getInstance()"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getCurrentPosition()Landroid/location/Location;
 
@@ -359,7 +375,7 @@
     invoke-virtual {p1, v3, v4}, Landroid/location/Location;->setTime(J)V
 
     .line 13
-    :cond_1
+    :cond_3
     iput-object p3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData;->gpsStat:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
     .line 14
@@ -368,16 +384,16 @@
     .line 15
     sget-object p1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->NO_SIGNAL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    if-eq p3, p1, :cond_3
+    if-eq p3, p1, :cond_5
 
     sget-object p1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->BAD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    if-ne p3, p1, :cond_2
+    if-ne p3, p1, :cond_4
 
-    goto :goto_1
+    goto :goto_3
 
     .line 16
-    :cond_2
+    :cond_4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -387,11 +403,11 @@
     .line 17
     iput-boolean v2, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData;->noLocationSignal:Z
 
-    goto :goto_2
+    goto :goto_4
 
     .line 18
-    :cond_3
-    :goto_1
+    :cond_5
+    :goto_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -406,12 +422,12 @@
 
     cmp-long p1, p1, p3
 
-    if-ltz p1, :cond_4
+    if-ltz p1, :cond_6
 
     .line 19
     iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData;->noLocationSignal:Z
 
-    :cond_4
-    :goto_2
+    :cond_6
+    :goto_4
     return-void
 .end method

@@ -3,38 +3,36 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/skt/tmap/route/search/b$c;
+.implements Lgl/l;
 
 
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/engine/TmapAiManager;
 
-.field public final synthetic b:Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/skt/tmap/engine/b;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iput-object p2, p0, Lcom/skt/tmap/engine/b;->b:Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/engine/b;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iget-object v1, p0, Lcom/skt/tmap/engine/b;->b:Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
+    check-cast p1, Lcom/skt/tmap/data/TmapRerouteResponseData;
 
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->e(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

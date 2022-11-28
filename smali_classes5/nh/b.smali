@@ -1,112 +1,78 @@
-.class public final Lnh/b;
-.super Lkh/h0;
-.source "HandlerScheduler.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lnh/b$b;,
-        Lnh/b$a;
-    }
-.end annotation
-
-
-# instance fields
-.field public final b:Landroid/os/Handler;
-
-.field public final c:Z
+.class public Lnh/b;
+.super Lnh/a;
+.source "DeflateDecompressingEntity.java"
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Z)V
+.method public constructor <init>(Lhh/l;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lkh/h0;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lnh/b;->b:Landroid/os/Handler;
-
-    .line 3
-    iput-boolean p2, p0, Lnh/b;->c:Z
+    invoke-direct {p0, p1}, Lnh/a;-><init>(Lhh/l;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c()Lkh/h0$c;
-    .locals 3
+.method public a(Ljava/io/InputStream;)Ljava/io/InputStream;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
     .line 1
-    new-instance v0, Lnh/b$a;
+    new-instance v0, Lnh/c;
 
-    iget-object v1, p0, Lnh/b;->b:Landroid/os/Handler;
-
-    iget-boolean v2, p0, Lnh/b;->c:Z
-
-    invoke-direct {v0, v1, v2}, Lnh/b$a;-><init>(Landroid/os/Handler;Z)V
+    invoke-direct {v0, p1}, Lnh/c;-><init>(Ljava/io/InputStream;)V
 
     return-object v0
 .end method
 
-.method public f(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
-    .locals 2
-    .annotation build Landroid/annotation/SuppressLint;
+.method public bridge synthetic getContent()Ljava/io/InputStream;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "NewApi"
+            Ljava/io/IOException;
         }
     .end annotation
 
-    const-string v0, "run == null"
-
     .line 1
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-super {p0}, Lnh/a;->getContent()Ljava/io/InputStream;
 
-    const-string v0, "unit == null"
-
-    .line 2
-    invoke-static {p4, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    invoke-static {p1}, Lwh/a;->b0(Ljava/lang/Runnable;)Ljava/lang/Runnable;
-
-    move-result-object p1
-
-    .line 4
-    new-instance v0, Lnh/b$b;
-
-    iget-object v1, p0, Lnh/b;->b:Landroid/os/Handler;
-
-    invoke-direct {v0, v1, p1}, Lnh/b$b;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    .line 5
-    iget-object p1, p0, Lnh/b;->b:Landroid/os/Handler;
-
-    invoke-static {p1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
-
-    move-result-object p1
-
-    .line 6
-    iget-boolean v1, p0, Lnh/b;->c:Z
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    .line 7
-    invoke-virtual {p1, v1}, Landroid/os/Message;->setAsynchronous(Z)V
-
-    .line 8
-    :cond_0
-    iget-object v1, p0, Lnh/b;->b:Landroid/os/Handler;
-
-    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide p2
-
-    invoke-virtual {v1, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public getContentEncoding()Lhh/d;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getContentLength()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public bridge synthetic writeTo(Ljava/io/OutputStream;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lnh/a;->writeTo(Ljava/io/OutputStream;)V
+
+    return-void
 .end method

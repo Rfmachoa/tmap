@@ -1,74 +1,76 @@
-.class public Landroidx/paging/r$b;
-.super Landroidx/paging/l$e;
-.source "WrapperPositionalDataSource.java"
+.class public final synthetic Landroidx/paging/r$b;
+.super Ljava/lang/Object;
+.source "LoadStates.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/paging/r;->o(Landroidx/paging/l$g;Landroidx/paging/l$e;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/paging/r;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x1001
+    name = "b"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroidx/paging/l$e<",
-        "TA;>;"
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x5,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Landroidx/paging/l$e;
-
-.field public final synthetic b:Landroidx/paging/r;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/paging/r;Landroidx/paging/l$e;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    iput-object p1, p0, Landroidx/paging/r$b;->b:Landroidx/paging/r;
+    invoke-static {}, Landroidx/paging/LoadType;->values()[Landroidx/paging/LoadType;
 
-    iput-object p2, p0, Landroidx/paging/r$b;->a:Landroidx/paging/l$e;
+    move-result-object v0
 
-    invoke-direct {p0}, Landroidx/paging/l$e;-><init>()V
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
+    sget-object v1, Landroidx/paging/LoadType;->APPEND:Landroidx/paging/LoadType;
 
-# virtual methods
-.method public a(Ljava/util/List;)V
-    .locals 2
-    .param p1    # Ljava/util/List;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "TA;>;)V"
-        }
-    .end annotation
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    .line 1
-    iget-object v0, p0, Landroidx/paging/r$b;->a:Landroidx/paging/l$e;
+    move-result v1
 
-    iget-object v1, p0, Landroidx/paging/r$b;->b:Landroidx/paging/r;
+    const/4 v2, 0x1
 
-    iget-object v1, v1, Landroidx/paging/r;->d:Ln/a;
+    aput v2, v0, v1
 
-    invoke-static {v1, p1}, Landroidx/paging/c;->b(Ln/a;Ljava/util/List;)Ljava/util/List;
+    sget-object v1, Landroidx/paging/LoadType;->PREPEND:Landroidx/paging/LoadType;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {v0, p1}, Landroidx/paging/l$e;->a(Ljava/util/List;)V
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+
+    sget-object v1, Landroidx/paging/LoadType;->REFRESH:Landroidx/paging/LoadType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+
+    sput-object v0, Landroidx/paging/r$b;->a:[I
 
     return-void
 .end method

@@ -48,8 +48,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -64,11 +64,11 @@
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/route/RouteEventListener;Lcom/skt/tmap/engine/navigation/route/RouteOption;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
     iput-object p2, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,7 +77,7 @@
 
 # virtual methods
 .method public onFailure(Lretrofit2/Call;Ljava/lang/Throwable;)V
-    .locals 3
+    .locals 6
     .param p1    # Lretrofit2/Call;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -101,7 +101,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "t"
+    const-string v0, "t"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -117,13 +117,15 @@
 
     invoke-interface {p1}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onCancelAction()V
 
-    goto/16 :goto_1
+    goto :goto_0
 
     .line 3
     :cond_0
     instance-of p1, p2, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;
 
     const/16 v0, 0x12c
+
+    const/4 v1, 0x0
 
     if-eqz p1, :cond_2
 
@@ -134,35 +136,38 @@
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getResponseCode()Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
-    move-result v0
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    move-result v2
 
     .line 5
-    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
-
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getResp()Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getErrorCode()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v4
 
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v5
 
-    invoke-interface {v1, v2, v0, p1, p2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
+    invoke-interface {v1, v3, v2, v4, v5}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 6
+    sget-object v1, Lkotlin/d1;->a:Lkotlin/d1;
+
     :cond_1
+    if-nez v1, :cond_4
+
+    .line 7
     iget-object v1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/TmapRequestThrowable;->getResp()Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;
@@ -179,82 +184,52 @@
 
     invoke-interface {v1, v2, v0, p1, p2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 7
+    .line 8
     :cond_2
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 p2, 0x0
+    const-string/jumbo p2, "\uc774\ub95c\ucc28 \ud1b5\ud589\uac00\ub2a5 \uacbd\ub85c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."
 
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const v2, -0x2cc71a3
-
-    if-eq v1, v2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const-string/jumbo v1, "\uc774\ub95c\ucc28 \ud1b5\ud589\uac00\ub2a5 \uacbd\ub85c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."
-
-    .line 8
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 9
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_5
-
-    .line 9
-    iget-object p1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
-
-    const/16 v0, 0x3e0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/skt/tmap/engine/navigation/network/NetworkError;->getErrorString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, p2, v0, v1, v2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
+    if-eqz p1, :cond_3
 
     .line 10
-    :cond_5
-    :goto_0
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const/16 p2, 0x3e0
 
-    move-result-object v1
+    const-string v0, "992"
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/skt/tmap/engine/navigation/network/NetworkError;->getErrorString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/engine/navigation/network/NetworkError;->getErrorString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {p1, p2, v0, v1, v2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v1, p2, v0, v2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
-    :goto_1
+    goto :goto_0
+
+    .line 11
+    :cond_3
+    iget-object p1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
+
+    const-string p2, "300"
+
+    invoke-static {p2}, Lcom/skt/tmap/engine/navigation/network/NetworkError;->getErrorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {p1, v1, v0, p2, v2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_4
+    :goto_0
     return-void
 .end method
 
@@ -293,23 +268,21 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 2
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 3
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
-
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 4
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
@@ -318,17 +291,13 @@
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v1, "response.body()!!"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     check-cast v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;->getHeader()Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseCommonHeader;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     .line 5
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
@@ -336,8 +305,6 @@
     move-result-object v0
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
@@ -355,11 +322,7 @@
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
     goto/16 :goto_2
 
@@ -369,9 +332,9 @@
 
     iget-object v0, v0, Lcom/skt/tmap/engine/navigation/route/RouteOption;->destSearchCode:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
 
-    sget-object v2, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->EndResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->EndResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
 
-    if-eq v0, v2, :cond_4
+    if-eq v0, v1, :cond_5
 
     .line 7
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
@@ -385,9 +348,9 @@
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;->getRouteCount()B
 
-    move-result v2
+    move-result v1
 
-    if-gtz v2, :cond_1
+    if-gtz v1, :cond_1
 
     .line 9
     new-instance p2, Ljava/lang/Throwable;
@@ -402,9 +365,9 @@
 
     .line 10
     :cond_1
-    new-instance v2, Lcom/skt/tmap/engine/navigation/route/RouteResult;
+    new-instance v1, Lcom/skt/tmap/engine/navigation/route/RouteResult;
 
-    iget-object v3, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
+    iget-object v2, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
 
     invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
 
@@ -422,15 +385,18 @@
 
     iget-object p2, p2, Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseCommonHeader;->sessionId:Ljava/lang/String;
 
-    if-eqz p2, :cond_2
-
     goto :goto_0
 
     :cond_2
-    const-string p2, ""
+    const/4 p2, 0x0
 
     :goto_0
-    invoke-direct {v2, v3, v0, p2}, Lcom/skt/tmap/engine/navigation/route/RouteResult;-><init>(Lcom/skt/tmap/engine/navigation/route/RouteOption;Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;Ljava/lang/String;)V
+    if-nez p2, :cond_3
+
+    const-string p2, ""
+
+    :cond_3
+    invoke-direct {v1, v2, v0, p2}, Lcom/skt/tmap/engine/navigation/route/RouteResult;-><init>(Lcom/skt/tmap/engine/navigation/route/RouteOption;Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;Ljava/lang/String;)V
 
     .line 11
     iget-object p2, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
@@ -441,29 +407,29 @@
 
     move-result p2
 
-    if-ne p2, v1, :cond_3
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_4
 
     .line 12
     iget-object p2, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
 
     iget-object p2, p2, Lcom/skt/tmap/engine/navigation/route/RouteOption;->routePlanTypeList:Ljava/util/List;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
-
     sget-object v3, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->Traffic_GeneralRoad:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    if-ne p2, v3, :cond_3
+    if-ne p2, v3, :cond_4
 
     .line 13
-    iget-object p2, v2, Lcom/skt/tmap/engine/navigation/route/RouteResult;->routeInfos:Ljava/util/ArrayList;
+    iget-object p2, v1, Lcom/skt/tmap/engine/navigation/route/RouteResult;->routeInfos:Ljava/util/ArrayList;
 
-    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -473,13 +439,22 @@
 
     iget-byte p2, p2, Lcom/skt/tmap/engine/navigation/data/RouteSummaryInfo;->ucRoadAttribute:B
 
-    and-int/2addr p2, v1
+    and-int/2addr p2, v0
 
     int-to-byte p2, p2
 
-    if-ne p2, v1, :cond_3
+    if-ne p2, v0, :cond_4
 
     .line 14
+    iget-object p2, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    iget-object p2, p2, Lcom/skt/tmap/engine/navigation/route/RouteOption;->destSearchCode:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
+
+    sget-object v0, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->LeaveReSearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
+
+    if-eq p2, v0, :cond_4
+
+    .line 15
     new-instance p2, Ljava/lang/Throwable;
 
     const-string/jumbo v0, "\uc774\ub95c\ucc28 \ud1b5\ud589\uac00\ub2a5 \uacbd\ub85c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."
@@ -490,32 +465,32 @@
 
     return-void
 
-    .line 15
-    :cond_3
+    .line 16
+    :cond_4
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->isFavoriteRoute()Z
 
     move-result p1
 
-    invoke-virtual {v2, p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->setFavoriteRouteSelected(Z)V
+    invoke-virtual {v1, p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->setFavoriteRouteSelected(Z)V
 
-    .line 16
+    .line 17
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion$requestRoute$2;->$routeEventListener:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
-    invoke-interface {p1, v2}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onComplete(Lcom/skt/tmap/engine/navigation/route/RouteResult;)V
+    invoke-interface {p1, v1}, Lcom/skt/tmap/engine/navigation/route/RouteEventListener;->onComplete(Lcom/skt/tmap/engine/navigation/route/RouteResult;)V
 
     const-string p1, "RouteRepository"
 
     const-string p2, "onComplete"
 
-    .line 17
+    .line 18
     invoke-static {p1, p2}, Lcom/skt/tmap/engine/navigation/util/TmapNavigationLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 18
-    :cond_4
+    .line 19
+    :cond_5
     new-instance p2, Ljava/lang/Throwable;
 
     const-string v0, "EndResearch."
@@ -527,14 +502,14 @@
     :goto_1
     return-void
 
-    .line 19
-    :cond_5
+    .line 20
+    :cond_6
     :goto_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "type : "
+    const-string v1, "type : "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -546,7 +521,7 @@
 
     invoke-static {p2}, Lcom/skt/tmap/engine/navigation/util/TmapNavigationLog;->log(Ljava/lang/String;)V
 
-    .line 20
+    .line 21
     new-instance p2, Ljava/lang/Throwable;
 
     const-string v0, "Response is not valid."

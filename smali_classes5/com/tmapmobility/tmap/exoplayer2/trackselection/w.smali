@@ -36,7 +36,7 @@
 .method public final a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
     .locals 0
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->b(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
 
     move-result-object p1
 

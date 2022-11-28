@@ -1,20 +1,23 @@
-.class public Lhh/e;
+.class public interface abstract Lhh/e;
 .super Ljava/lang/Object;
-.source "dagger_hilt_EntryPoint.java"
+.source "HeaderElement.java"
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/EntryPoint;
-.end annotation
+# virtual methods
+.method public abstract getName()Ljava/lang/String;
+.end method
 
+.method public abstract getParameter(I)Lhh/y;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract getParameterByName(Ljava/lang/String;)Lhh/y;
+.end method
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getParameterCount()I
+.end method
 
-    return-void
+.method public abstract getParameters()[Lhh/y;
+.end method
+
+.method public abstract getValue()Ljava/lang/String;
 .end method

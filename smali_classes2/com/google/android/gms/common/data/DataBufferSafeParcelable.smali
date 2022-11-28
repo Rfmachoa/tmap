@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/data/DataBufferSafeParcelable;
 .super Lcom/google/android/gms/common/data/AbstractDataBuffer;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -24,13 +24,6 @@
 
 # instance fields
 .field private final zab:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "TT;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

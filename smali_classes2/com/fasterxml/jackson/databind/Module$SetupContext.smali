@@ -48,6 +48,17 @@
 .method public abstract appendAnnotationIntrospector(Lcom/fasterxml/jackson/databind/AnnotationIntrospector;)V
 .end method
 
+.method public abstract configOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/MutableConfigOverride;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/fasterxml/jackson/databind/cfg/MutableConfigOverride;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getMapperVersion()Lcom/fasterxml/jackson/core/Version;
 .end method
 
@@ -83,6 +94,17 @@
 .end method
 
 .method public abstract isEnabled(Lcom/fasterxml/jackson/databind/SerializationFeature;)Z
+.end method
+
+.method public abstract registerSubtypes(Ljava/util/Collection;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "Ljava/lang/Class<",
+            "*>;>;)V"
+        }
+    .end annotation
 .end method
 
 .method public varargs abstract registerSubtypes([Lcom/fasterxml/jackson/databind/jsontype/NamedType;)V

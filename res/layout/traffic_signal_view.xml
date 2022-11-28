@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/traffic_signal_view_0" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_36dp" bind:layout_constraintStart_toStartOf="parent" bind:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/red_light" android:tag="binding_2" android:layout_width="@dimen/tmap_26dp" android:layout_height="@dimen/tmap_26dp" android:layout_marginStart="@dimen/tmap_6dp" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/left_light" android:tag="binding_3" android:layout_width="@dimen/tmap_26dp" android:layout_height="@dimen/tmap_26dp" android:layout_marginStart="5.0dip" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/green_light" android:tag="binding_4" android:layout_width="@dimen/tmap_26dp" android:layout_height="@dimen/tmap_26dp" android:layout_marginStart="5.0dip" android:layout_marginEnd="6.0dip" />
+        <com.skt.tmap.view.TmapCustomTextView android:textSize="@dimen/tmap_18dp" android:gravity="center" android:id="@id/remain_time" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/roboto_bold" android:layout_marginEnd="@dimen/tmap_9dp" bind:textStroke="true" bind:textStrokeColor="@color/black_color" bind:textStrokeWidth="@dimen/tmap_2dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

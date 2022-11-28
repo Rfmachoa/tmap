@@ -138,7 +138,7 @@
 
     const-string v5, "Cache size: "
 
-    invoke-static {v5, v2, v3}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v5, v2, v3}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v5
 
@@ -218,7 +218,7 @@
 
     const-string v5, "Cache size after prune: "
 
-    invoke-static {v5, v2, v3}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v5, v2, v3}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v5
 

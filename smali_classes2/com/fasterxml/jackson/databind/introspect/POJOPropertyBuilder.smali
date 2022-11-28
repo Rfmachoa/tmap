@@ -25,6 +25,10 @@
 .end annotation
 
 
+# static fields
+.field private static final NOT_REFEFERENCE_PROP:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+
 # instance fields
 .field public final _annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
 
@@ -71,7 +75,11 @@
 
 .field public final _internalName:Lcom/fasterxml/jackson/databind/PropertyName;
 
+.field public transient _metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
 .field public final _name:Lcom/fasterxml/jackson/databind/PropertyName;
+
+.field public transient _referenceInfo:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
 
 .field public _setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
     .annotation system Ldalvik/annotation/Signature;
@@ -85,6 +93,21 @@
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, ""
+
+    .line 1
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;->managed(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->NOT_REFEFERENCE_PROP:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/AnnotationIntrospector;ZLcom/fasterxml/jackson/databind/PropertyName;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
@@ -380,7 +403,7 @@
 
     check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
 
-    invoke-virtual {v0, p2}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->withAnnotations(Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)Lcom/fasterxml/jackson/databind/introspect/Annotated;
+    invoke-virtual {v0, p2}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->withAnnotations(Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)Lcom/fasterxml/jackson/databind/introspect/Annotated;
 
     move-result-object v0
 
@@ -580,7 +603,7 @@
     :cond_7
     new-instance p2, Ljava/lang/IllegalStateException;
 
-    const-string p3, "Conflicting/ambiguous property name definitions (implicit name \'"
+    const-string p3, "Conflicting/ambiguous property name definitions (implicit name "
 
     invoke-static {p3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -588,9 +611,14 @@
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_name:Lcom/fasterxml/jackson/databind/PropertyName;
 
-    invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 18
+    invoke-static {v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->name(Lcom/fasterxml/jackson/databind/PropertyName;)Ljava/lang/String;
 
-    const-string v1, "\'): found multiple explicit names: "
+    move-result-object v1
+
+    invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "): found multiple explicit names: "
 
     invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -876,72 +904,232 @@
 
 
 # virtual methods
-.method public _findDefaultValue()Ljava/lang/String;
-    .locals 1
+.method public _getSetterInfo(Lcom/fasterxml/jackson/databind/PropertyMetadata;Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
+    .locals 6
 
     .line 1
-    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$7;
-
-    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$7;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
-
-    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->fromMemberAnnotations(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public _findDescription()Ljava/lang/String;
-    .locals 1
+    const/4 v3, 0x1
 
-    .line 1
-    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$5;
+    if-eqz p2, :cond_6
 
-    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$5;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
+    .line 2
+    iget-object v4, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
 
-    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->fromMemberAnnotations(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember;)Ljava/lang/Object;
+    if-eqz v4, :cond_2
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    check-cast v0, Ljava/lang/String;
+    .line 3
+    invoke-virtual {v4, p2}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findMergeInfo(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Ljava/lang/Boolean;
 
-    return-object v0
-.end method
+    move-result-object v4
 
-.method public _findIndex()Ljava/lang/Integer;
-    .locals 1
+    if-eqz v4, :cond_1
 
-    .line 1
-    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;
+    .line 4
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
+    move-result v3
 
-    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->fromMemberAnnotations(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember;)Ljava/lang/Object;
+    if-eqz v3, :cond_0
 
-    move-result-object v0
+    .line 5
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;->createForPropertyOverride(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;
 
-    check-cast v0, Ljava/lang/Integer;
+    move-result-object v3
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v3}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->withMergeInfo(Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-.method public _findRequired()Ljava/lang/Boolean;
-    .locals 1
+    move-result-object p1
 
-    .line 1
-    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$4;
+    :cond_0
+    move v3, v1
 
-    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$4;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
+    .line 6
+    :cond_1
+    iget-object v4, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
 
-    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->fromMemberAnnotations(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember;)Ljava/lang/Object;
+    invoke-virtual {v4, p2}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findSetterInfo(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Lcom/fasterxml/jackson/annotation/JsonSetter$Value;
 
-    move-result-object v0
+    move-result-object v4
 
-    check-cast v0, Ljava/lang/Boolean;
+    if-eqz v4, :cond_2
 
-    return-object v0
+    .line 7
+    invoke-virtual {v4}, Lcom/fasterxml/jackson/annotation/JsonSetter$Value;->nonDefaultValueNulls()Lcom/fasterxml/jackson/annotation/Nulls;
+
+    move-result-object v2
+
+    .line 8
+    invoke-virtual {v4}, Lcom/fasterxml/jackson/annotation/JsonSetter$Value;->nonDefaultContentNulls()Lcom/fasterxml/jackson/annotation/Nulls;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :cond_2
+    move-object v4, v2
+
+    :goto_0
+    if-nez v3, :cond_3
+
+    if-eqz v2, :cond_3
+
+    if-nez v4, :cond_7
+
+    .line 9
+    :cond_3
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_rawTypeOf(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Ljava/lang/Class;
+
+    move-result-object p2
+
+    .line 10
+    iget-object v5, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
+
+    invoke-virtual {v5, p2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getConfigOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;
+
+    move-result-object p2
+
+    .line 11
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;->getSetterInfo()Lcom/fasterxml/jackson/annotation/JsonSetter$Value;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_5
+
+    if-nez v2, :cond_4
+
+    .line 12
+    invoke-virtual {v5}, Lcom/fasterxml/jackson/annotation/JsonSetter$Value;->nonDefaultValueNulls()Lcom/fasterxml/jackson/annotation/Nulls;
+
+    move-result-object v2
+
+    :cond_4
+    if-nez v4, :cond_5
+
+    .line 13
+    invoke-virtual {v5}, Lcom/fasterxml/jackson/annotation/JsonSetter$Value;->nonDefaultContentNulls()Lcom/fasterxml/jackson/annotation/Nulls;
+
+    move-result-object v4
+
+    :cond_5
+    if-eqz v3, :cond_7
+
+    if-eqz v0, :cond_7
+
+    .line 14
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;->getMergeable()Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_7
+
+    .line 15
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_8
+
+    .line 16
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;->createForTypeOverride(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->withMergeInfo(Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_6
+    move-object v4, v2
+
+    :cond_7
+    move v1, v3
+
+    :cond_8
+    :goto_1
+    if-nez v1, :cond_9
+
+    if-eqz v2, :cond_9
+
+    if-nez v4, :cond_c
+
+    .line 17
+    :cond_9
+    iget-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
+
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getDefaultSetterInfo()Lcom/fasterxml/jackson/annotation/JsonSetter$Value;
+
+    move-result-object p2
+
+    if-nez v2, :cond_a
+
+    .line 18
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/annotation/JsonSetter$Value;->nonDefaultValueNulls()Lcom/fasterxml/jackson/annotation/Nulls;
+
+    move-result-object v2
+
+    :cond_a
+    if-nez v4, :cond_b
+
+    .line 19
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/annotation/JsonSetter$Value;->nonDefaultContentNulls()Lcom/fasterxml/jackson/annotation/Nulls;
+
+    move-result-object v4
+
+    :cond_b
+    if-eqz v1, :cond_c
+
+    .line 20
+    iget-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
+
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getDefaultMergeable()Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    .line 21
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v1, p2}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_c
+
+    if-eqz v0, :cond_c
+
+    .line 22
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;->createForDefaults(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->withMergeInfo(Lcom/fasterxml/jackson/databind/PropertyMetadata$MergeInfo;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    move-result-object p1
+
+    :cond_c
+    if-nez v2, :cond_d
+
+    if-eqz v4, :cond_e
+
+    .line 23
+    :cond_d
+    invoke-virtual {p1, v2, v4}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->withNulls(Lcom/fasterxml/jackson/annotation/Nulls;Lcom/fasterxml/jackson/annotation/Nulls;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    move-result-object p1
+
+    :cond_e
+    return-object p1
 .end method
 
 .method public _getterPriority(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;)I
@@ -995,6 +1183,61 @@
 
     :cond_1
     return v1
+.end method
+
+.method public _rawTypeOf(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Ljava/lang/Class;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;",
+            ")",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 1
+    instance-of v0, p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    move-object v0, p1
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    .line 3
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;->getParameterCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 4
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;->getParameterType(I)Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 5
+    :cond_0
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getType()Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public _setterPriority(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;)I
@@ -1204,6 +1447,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyIgnorals(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -1212,6 +1456,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyIgnorals(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -1220,6 +1465,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyIgnorals(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -1255,6 +1501,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -1263,6 +1510,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -1271,6 +1519,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -1458,9 +1707,9 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$9;
+    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$5;
 
-    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$9;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$5;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
 
     sget-object v1, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->AUTO:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
 
@@ -1529,32 +1778,34 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
 
     move-result-object v0
 
-    .line 3
+    .line 2
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
 
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
     invoke-virtual {v1, v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findPropertyInclusion(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    return-object v0
+    :goto_0
+    if-nez v0, :cond_1
 
     .line 4
-    :cond_0
     invoke-static {}, Lcom/fasterxml/jackson/annotation/JsonInclude$Value;->empty()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
 
     move-result-object v0
 
+    :cond_1
     return-object v0
 .end method
 
@@ -1562,9 +1813,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$8;
+    new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$4;
 
-    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$8;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
+    invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$4;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
 
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->fromMemberAnnotations(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$WithMember;)Ljava/lang/Object;
 
@@ -1576,9 +1827,25 @@
 .end method
 
 .method public findReferenceType()Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
-    .locals 1
+    .locals 2
 
     .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_referenceInfo:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    sget-object v1, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->NOT_REFEFERENCE_PROP:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    return-object v0
+
+    .line 3
+    :cond_1
     new-instance v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$2;
 
     invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$2;-><init>(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;)V
@@ -1588,6 +1855,19 @@
     move-result-object v0
 
     check-cast v0, Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    if-nez v0, :cond_2
+
+    .line 4
+    sget-object v1, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->NOT_REFEFERENCE_PROP:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
+
+    goto :goto_0
+
+    :cond_2
+    move-object v1, v0
+
+    :goto_0
+    iput-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_referenceInfo:Lcom/fasterxml/jackson/databind/AnnotationIntrospector$ReferenceProperty;
 
     return-object v0
 .end method
@@ -1911,25 +2191,6 @@
     return-object v1
 .end method
 
-.method public getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getGetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
 .method public getConstructorParameter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
     .locals 2
 
@@ -2097,7 +2358,8 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getFullName()Ljava/lang/String;
+    .line 11
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getFullName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2107,7 +2369,7 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getFullName()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getFullName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2259,6 +2521,7 @@
 
     check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
 
+    .line 12
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;->getFullName()Ljava/lang/String;
 
     move-result-object v0
@@ -2287,7 +2550,7 @@
 
     throw v2
 
-    .line 12
+    .line 13
     :cond_6
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->withoutNext()Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
@@ -2295,7 +2558,7 @@
 
     iput-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    .line 13
+    .line 14
     iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
 
     check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
@@ -2317,85 +2580,108 @@
 .end method
 
 .method public getMetadata()Lcom/fasterxml/jackson/databind/PropertyMetadata;
-    .locals 4
+    .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_findRequired()Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    if-nez v0, :cond_3
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getPrimaryMemberUnchecked()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
 
     move-result-object v0
 
-    .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_findDescription()Ljava/lang/String;
+    if-nez v0, :cond_0
+
+    .line 3
+    sget-object v0, Lcom/fasterxml/jackson/databind/PropertyMetadata;->STD_REQUIRED_OR_OPTIONAL:Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    goto :goto_2
+
+    .line 4
+    :cond_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
+
+    invoke-virtual {v1, v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->hasRequiredMarker(Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    .line 3
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_findIndex()Ljava/lang/Integer;
+    .line 5
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
+
+    invoke-virtual {v2, v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findPropertyDescription(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_findDefaultValue()Ljava/lang/String;
+    .line 6
+    iget-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
+
+    invoke-virtual {v3, v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findPropertyIndex(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Ljava/lang/Integer;
 
     move-result-object v3
 
-    if-nez v0, :cond_1
+    .line 7
+    iget-object v4, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_annotationIntrospector:Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
+
+    invoke-virtual {v4, v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findPropertyDefaultValue(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v1, :cond_2
+
+    if-nez v3, :cond_2
+
+    if-nez v4, :cond_2
+
+    .line 8
+    sget-object v1, Lcom/fasterxml/jackson/databind/PropertyMetadata;->STD_REQUIRED_OR_OPTIONAL:Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
     if-nez v2, :cond_1
 
-    if-nez v3, :cond_1
-
-    .line 5
-    sget-object v0, Lcom/fasterxml/jackson/databind/PropertyMetadata;->STD_REQUIRED_OR_OPTIONAL:Lcom/fasterxml/jackson/databind/PropertyMetadata;
-
-    if-nez v1, :cond_0
-
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->withDescription(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
+    .line 9
+    :cond_1
+    invoke-virtual {v1, v2}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->withDescription(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    move-result-object v0
+    move-result-object v1
 
     :goto_0
-    return-object v0
+    iput-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    .line 6
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    goto :goto_1
 
-    move-result v0
+    .line 10
+    :cond_2
+    invoke-static {v1, v2, v3, v4}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->construct(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/fasterxml/jackson/databind/PropertyMetadata;->construct(ZLjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
+    move-result-object v1
 
-    move-result-object v0
+    iput-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    return-object v0
-.end method
+    .line 11
+    :goto_1
+    iget-boolean v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_forSerialization:Z
 
-.method public getMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
-    .locals 1
+    if-nez v1, :cond_3
 
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getConstructorParameter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
+    .line 12
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getSetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+    invoke-virtual {p0, v1, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getSetterInfo(Lcom/fasterxml/jackson/databind/PropertyMetadata;Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;)Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    iput-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    .line 3
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+    .line 13
+    :cond_3
+    :goto_2
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_metadata:Lcom/fasterxml/jackson/databind/PropertyMetadata;
 
-    move-result-object v0
-
-    :cond_0
     return-object v0
 .end method
 
@@ -2420,25 +2706,6 @@
     return-object v0
 .end method
 
-.method public getNonConstructorMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getSetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
 .method public getPrimaryMember()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
     .locals 1
 
@@ -2448,7 +2715,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
 
     move-result-object v0
 
@@ -2456,7 +2723,224 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getMutator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    .line 4
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;->getAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    move-result-object v0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public getPrimaryMemberUnchecked()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    .locals 2
+
+    .line 1
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_forSerialization:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    return-object v0
+
+    .line 4
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    return-object v0
+
+    :cond_1
+    return-object v1
+
+    .line 6
+    :cond_2
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    if-eqz v0, :cond_3
+
+    .line 7
+    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    return-object v0
+
+    .line 8
+    :cond_3
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    if-eqz v0, :cond_4
+
+    .line 9
+    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    return-object v0
+
+    .line 10
+    :cond_4
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    if-eqz v0, :cond_5
+
+    .line 11
+    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    return-object v0
+
+    .line 12
+    :cond_5
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    if-eqz v0, :cond_6
+
+    .line 13
+    iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    return-object v0
+
+    :cond_6
+    return-object v1
+.end method
+
+.method public getPrimaryType()Lcom/fasterxml/jackson/databind/JavaType;
+    .locals 2
+
+    .line 1
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_forSerialization:Z
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getGetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 4
+    invoke-static {}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->unknownType()Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 5
+    :cond_0
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getType()Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 6
+    :cond_1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getConstructorParameter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    .line 7
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getSetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x0
+
+    .line 8
+    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;->getParameterType(I)Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 9
+    :cond_2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+
+    move-result-object v0
+
+    :cond_3
+    if-nez v0, :cond_4
+
+    .line 10
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getGetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    move-result-object v0
+
+    if-nez v0, :cond_4
+
+    .line 11
+    invoke-static {}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->unknownType()Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 12
+    :cond_4
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getType()Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getRawPrimaryType()Ljava/lang/Class;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getPrimaryType()Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object v0
 
@@ -2592,21 +3076,20 @@
     :cond_7
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string v3, "Conflicting setter definitions for property \""
+    const/4 v3, 0x3
 
-    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    move-result-object v3
+    const/4 v4, 0x0
 
+    .line 16
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v5, v3, v4
 
-    const-string v4, "\": "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x1
 
     iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
 
@@ -2616,23 +3099,24 @@
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v0, v3, v4
 
-    const-string v0, " vs "
+    const/4 v0, 0x2
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v1, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
 
-    iget-object v0, v1, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
+    check-cast v1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
 
-    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;->getFullName()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;->getFullName()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    aput-object v1, v3, v0
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "Conflicting setter definitions for property \"%s\": %s vs %s"
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 17
+    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2640,7 +3124,7 @@
 
     throw v2
 
-    .line 16
+    .line 18
     :cond_8
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->withoutNext()Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
@@ -2648,7 +3132,7 @@
 
     iput-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    .line 17
+    .line 19
     iget-object v0, v0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;->value:Ljava/lang/Object;
 
     check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
@@ -2673,6 +3157,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {v1, v0}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findWrapperName(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Lcom/fasterxml/jackson/databind/PropertyName;
 
@@ -2791,6 +3276,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicits(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -2799,6 +3285,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicits(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -2807,7 +3294,8 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicits(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
+    .line 4
+    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicitNames(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
 
@@ -2842,6 +3330,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicitNames(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -2850,6 +3339,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicitNames(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -2858,6 +3348,7 @@
 
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_anyExplicitNames(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Z
 
     move-result v0
@@ -3157,69 +3648,84 @@
     return-void
 .end method
 
-.method public removeNonVisible(Z)V
-    .locals 3
+.method public removeNonVisible(Z)Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x0
 
     .line 1
+    invoke-virtual {p0, p1, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->removeNonVisible(ZLcom/fasterxml/jackson/databind/introspect/POJOPropertiesCollector;)Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public removeNonVisible(ZLcom/fasterxml/jackson/databind/introspect/POJOPropertiesCollector;)Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
+    .locals 4
+
+    .line 2
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->findAccess()Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 2
+    .line 3
     sget-object v0, Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->AUTO:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
 
-    .line 3
+    .line 4
     :cond_0
-    sget-object v1, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$10;->$SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
+    sget-object v1, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$6;->$SwitchMap$com$fasterxml$jackson$annotation$JsonProperty$Access:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v0
+    move-result v2
 
-    aget v0, v1, v0
+    aget v1, v1, v2
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    if-eq v0, v1, :cond_3
+    if-eq v1, v2, :cond_3
 
-    const/4 v1, 0x2
+    const/4 p2, 0x2
 
-    if-eq v0, v1, :cond_4
+    if-eq v1, p2, :cond_5
 
-    const/4 v1, 0x3
+    const/4 p2, 0x3
 
-    if-eq v0, v1, :cond_2
-
-    .line 4
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
-
-    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_removeNonVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    if-eq v1, p2, :cond_2
 
     .line 5
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    iget-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_removeNonVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    invoke-direct {p0, p2}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_removeNonVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    move-result-object v0
+    move-result-object p2
 
-    iput-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    iput-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    .line 6
+    iget-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    invoke-direct {p0, p2}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_removeNonVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
     if-eqz p1, :cond_1
 
-    .line 6
+    .line 7
     iget-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
-    .line 7
+    .line 8
     :cond_1
     iget-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
@@ -3229,7 +3735,7 @@
 
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    .line 8
+    .line 9
     iget-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
     invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_removeNonVisible(Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;)Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
@@ -3238,40 +3744,81 @@
 
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    goto :goto_0
-
-    .line 9
-    :cond_2
-    iput-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    goto :goto_1
 
     .line 10
-    iget-boolean p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_forSerialization:Z
-
-    if-eqz p1, :cond_4
+    :cond_2
+    iput-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
     .line 11
-    iput-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    iget-boolean p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_forSerialization:Z
+
+    if-eqz p1, :cond_5
+
+    .line 12
+    iput-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+
+    goto :goto_1
+
+    :cond_3
+    if-eqz p2, :cond_4
+
+    .line 13
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertiesCollector;->_collectIgnorals(Ljava/lang/String;)V
+
+    .line 14
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->findExplicitNames()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/fasterxml/jackson/databind/PropertyName;
+
+    .line 15
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/PropertyName;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1}, Lcom/fasterxml/jackson/databind/introspect/POJOPropertiesCollector;->_collectIgnorals(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 12
-    :cond_3
-    iput-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    .line 16
+    :cond_4
+    iput-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    .line 13
-    iput-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    .line 17
+    iput-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    .line 14
+    .line 18
     iget-boolean p1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_forSerialization:Z
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
-    .line 15
-    iput-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
+    .line 19
+    iput-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
 
-    :cond_4
-    :goto_0
-    return-void
+    :cond_5
+    :goto_1
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -3291,6 +3838,7 @@
 
     const-string v1, "\'; ctors: "
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_ctorParameters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
@@ -3299,6 +3847,7 @@
 
     const-string v1, ", field(s): "
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_fields:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
@@ -3307,6 +3856,7 @@
 
     const-string v1, ", getter(s): "
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_getters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
@@ -3315,6 +3865,7 @@
 
     const-string v1, ", setter(s): "
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder;->_setters:Lcom/fasterxml/jackson/databind/introspect/POJOPropertyBuilder$Linked;
@@ -3323,10 +3874,10 @@
 
     const-string v1, "]"
 
-    .line 3
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
+    .line 8
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

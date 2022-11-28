@@ -41,7 +41,7 @@
     .line 3
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/Projection$b;->c:[F
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->k([F)Ljava/nio/FloatBuffer;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
     .line 4
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/Projection$b;->d:[F
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->k([F)Ljava/nio/FloatBuffer;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
 

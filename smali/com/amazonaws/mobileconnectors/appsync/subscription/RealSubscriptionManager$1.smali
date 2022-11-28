@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->subscribe(Lcom/apollographql/apollo/api/f;Ljava/util/List;Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionResponse;Lj4/h;)V
+    value = Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->subscribe(Lcom/apollographql/apollo/api/f;Ljava/util/List;Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionResponse;Lg6/h;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -90,7 +90,7 @@
 
     const-string v3, "]. Will subscribe up to %d topics"
 
-    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,33 +1,65 @@
-.class public Lt9/c;
-.super Lt9/a;
-.source "ContentTemplate2.java"
-
-
-# instance fields
-.field private d:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "subtitle"
-    .end annotation
-.end field
+.class public final Lt9/c;
+.super Ljava/lang/Object;
+.source "UUIDUtil.java"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Lt9/a;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public d()Ljava/lang/String;
+.method public static a()Ljava/util/UUID;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lt9/c;->d:Ljava/lang/String;
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(Ljava/util/UUID;)[B
+    .locals 3
+
+    const/16 v0, 0x10
+
+    new-array v0, v0, [B
+
+    .line 1
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    .line 2
+    invoke-virtual {p0}, Ljava/util/UUID;->getMostSignificantBits()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/util/UUID;->getLeastSignificantBits()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+
+    .line 4
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c()[B
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lt9/c;->a()Ljava/util/UUID;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lt9/c;->b(Ljava/util/UUID;)[B
+
+    move-result-object v0
 
     return-object v0
 .end method

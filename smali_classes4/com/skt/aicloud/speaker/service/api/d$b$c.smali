@@ -41,35 +41,18 @@
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/d$b$c;->a:Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lsa/a;
+    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lpc/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lsa/a;->n()Z
+    invoke-virtual {v0}, Lpc/a;->o()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public b()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/d$b$c;->a:Lcom/skt/aicloud/speaker/service/api/d$b;
-
-    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lsa/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lsa/a;->o()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public c(Z)V
+.method public b(Z)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -77,11 +60,11 @@
     .line 1
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/d$b$c;->a:Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    invoke-static {p1}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lsa/a;
+    invoke-static {p1}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lpc/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lsa/a;->g()V
+    invoke-virtual {p1}, Lpc/a;->g()V
 
     :cond_0
     return-void
@@ -93,11 +76,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/d$b$c;->a:Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lsa/a;
+    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lpc/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lsa/a;->g()V
+    invoke-virtual {v0}, Lpc/a;->g()V
 
     return-void
 .end method
@@ -108,11 +91,28 @@
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/d$b$c;->a:Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lsa/a;
+    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lpc/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lsa/a;->p()Z
+    invoke-virtual {v0}, Lpc/a;->p()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public o()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/d$b$c;->a:Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->c(Lcom/skt/aicloud/speaker/service/api/d$b;)Lpc/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lpc/a;->n()Z
 
     move-result v0
 

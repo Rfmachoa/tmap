@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public a(Lcom/bumptech/glide/load/engine/s;ZLu4/b;Lcom/bumptech/glide/load/engine/n$a;)Lcom/bumptech/glide/load/engine/n;
+.method public a(Lcom/bumptech/glide/load/engine/s;ZLr6/b;Lcom/bumptech/glide/load/engine/n$a;)Lcom/bumptech/glide/load/engine/n;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -38,7 +38,7 @@
             ">(",
             "Lcom/bumptech/glide/load/engine/s<",
             "TR;>;Z",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/n$a;",
             ")",
             "Lcom/bumptech/glide/load/engine/n<",
@@ -61,7 +61,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/bumptech/glide/load/engine/n;-><init>(Lcom/bumptech/glide/load/engine/s;ZZLu4/b;Lcom/bumptech/glide/load/engine/n$a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/bumptech/glide/load/engine/n;-><init>(Lcom/bumptech/glide/load/engine/s;ZZLr6/b;Lcom/bumptech/glide/load/engine/n$a;)V
 
     return-object v6
 .end method

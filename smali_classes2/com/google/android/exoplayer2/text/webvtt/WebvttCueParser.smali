@@ -1765,7 +1765,7 @@
     const-string v1, "WebvttCueParser"
 
     .line 2
-    invoke-static {v0, p0, v1}, Landroidx/appcompat/widget/c0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0, v1}, Landroidx/appcompat/widget/h0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 p0, -0x80000000
 
@@ -1977,7 +1977,7 @@
     const-string v1, "WebvttCueParser"
 
     .line 2
-    invoke-static {v0, p0, v1}, Landroidx/appcompat/widget/c0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0, v1}, Landroidx/appcompat/widget/h0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 

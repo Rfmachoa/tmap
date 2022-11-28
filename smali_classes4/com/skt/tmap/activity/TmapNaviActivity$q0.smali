@@ -89,7 +89,20 @@
     .end annotation
 .end method
 
-.method public abstract g(Landroid/widget/SeekBar;)V
+.method public abstract g(Landroid/view/View;Lcom/skt/tmap/data/ArrivalParkingLotViewData;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "arrivalParkingLotViewData"
+        }
+    .end annotation
+.end method
+
+.method public abstract h(Landroid/widget/SeekBar;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -100,7 +113,7 @@
     .end annotation
 .end method
 
-.method public abstract h(Landroid/view/View;)V
+.method public abstract i(Landroid/view/View;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -111,7 +124,7 @@
     .end annotation
 .end method
 
-.method public abstract i(Landroid/widget/SeekBar;IZ)V
+.method public abstract j(Landroid/widget/SeekBar;IZ)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -126,7 +139,7 @@
     .end annotation
 .end method
 
-.method public abstract j(Landroid/view/View;)V
+.method public abstract k(Landroid/view/View;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -137,7 +150,7 @@
     .end annotation
 .end method
 
-.method public abstract k(Landroid/view/View;Lcom/skt/moment/net/vo/PlaceCampaign;)V
+.method public abstract l(Landroid/view/View;Lcom/skt/moment/net/vo/PlaceCampaign;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,

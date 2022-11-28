@@ -3,36 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/j0;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/j0;->a:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/j0;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/j0;->a:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-    check-cast p1, Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->f(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lai/g;
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->c(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

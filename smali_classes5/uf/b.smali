@@ -1,17 +1,25 @@
 .class public interface abstract Luf/b;
 .super Ljava/lang/Object;
-.source "LayeredConnectionSocketFactory.java"
+.source "RouteDataOrBuilder.java"
 
 # interfaces
-.implements Luf/a;
+.implements Lcom/google/protobuf/MessageLiteOrBuilder;
 
 
 # virtual methods
-.method public abstract g(Ljava/net/Socket;Ljava/lang/String;ILpg/g;)Ljava/net/Socket;
-    .annotation system Ldalvik/annotation/Throws;
+.method public abstract B()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Ljava/io/IOException;,
-            Ljava/net/UnknownHostException;
+            "()",
+            "Ljava/util/List<",
+            "Luf/d;",
+            ">;"
         }
     .end annotation
+.end method
+
+.method public abstract K2(I)Luf/d;
+.end method
+
+.method public abstract n2()I
 .end method

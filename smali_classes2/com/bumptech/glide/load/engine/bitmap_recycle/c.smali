@@ -64,7 +64,7 @@
     const-string v2, "], "
 
     .line 1
-    invoke-static {v0, p0, v1, p1, v2}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p0, v1, p1, v2}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -128,7 +128,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/impl/utils/futures/f;->o(Lcom/google/common/util/concurrent/ListenableFuture;Ln/a;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/ListenableFuture;
+    value = Landroidx/camera/core/impl/utils/futures/f;->o(Lcom/google/common/util/concurrent/ListenableFuture;Lp/a;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/ListenableFuture;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,23 +26,15 @@
 
 
 # instance fields
-.field public final synthetic a:Ln/a;
+.field public final synthetic a:Lp/a;
 
 
 # direct methods
-.method public constructor <init>(Ln/a;)V
+.method public constructor <init>(Lp/a;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010
-        }
-        names = {
-            "val$function"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/f$a;->a:Ln/a;
+    iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/f$a;->a:Lp/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,15 +45,6 @@
 # virtual methods
 .method public apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "input"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TI;)",
@@ -71,9 +54,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/f$a;->a:Ln/a;
+    iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/f$a;->a:Lp/a;
 
-    invoke-interface {v0, p1}, Ln/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lp/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

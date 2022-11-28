@@ -1,186 +1,241 @@
-.class public Lu0/b;
-.super Landroidx/constraintlayout/solver/state/a;
-.source "AlignVerticallyReference.java"
+.class public final Lu0/b;
+.super Ljava/lang/Object;
+.source "FileTransformFactory.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation build Landroidx/camera/view/TransformExperimental;
+.end annotation
 
 
 # instance fields
-.field public e:F
-
-.field public f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
-
-.field public h:Ljava/lang/Object;
-
-.field public i:Ljava/lang/Object;
+.field public a:Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/constraintlayout/solver/state/State;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    sget-object v0, Landroidx/constraintlayout/solver/state/State$Helper;->ALIGN_VERTICALLY:Landroidx/constraintlayout/solver/state/State$Helper;
-
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/solver/state/a;-><init>(Landroidx/constraintlayout/solver/state/State;Landroidx/constraintlayout/solver/state/State$Helper;)V
-
-    const/high16 p1, 0x3f000000    # 0.5f
-
-    .line 2
-    iput p1, p0, Lu0/b;->e:F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 4
+.method public a(Landroid/content/ContentResolver;Landroid/net/Uri;)Lu0/d;
+    .locals 0
+    .param p1    # Landroid/content/ContentResolver;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/solver/state/a;->c:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
+    move-result-object p1
 
     .line 2
-    iget-object v2, p0, Landroidx/constraintlayout/solver/state/a;->a:Landroidx/constraintlayout/solver/state/State;
+    :try_start_0
+    invoke-virtual {p0, p1}, Lu0/b;->c(Ljava/io/InputStream;)Lu0/d;
 
-    invoke-virtual {v2, v1}, Landroidx/constraintlayout/solver/state/State;->e(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
+    move-result-object p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
     .line 3
-    invoke-virtual {v1}, Landroidx/constraintlayout/solver/state/ConstraintReference;->p()Landroidx/constraintlayout/solver/state/ConstraintReference;
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+
+    :cond_0
+    return-object p2
+
+    :catchall_0
+    move-exception p2
+
+    if-eqz p1, :cond_1
 
     .line 4
-    iget-object v2, p0, Lu0/b;->f:Ljava/lang/Object;
-
-    if-eqz v2, :cond_1
-
-    .line 5
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->X(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_1
-
-    .line 6
-    :cond_1
-    iget-object v2, p0, Lu0/b;->g:Ljava/lang/Object;
-
-    if-eqz v2, :cond_2
-
-    .line 7
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->W(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_1
-
-    .line 8
-    :cond_2
-    sget-object v2, Landroidx/constraintlayout/solver/state/State;->i:Ljava/lang/Integer;
-
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->X(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    .line 9
-    :goto_1
-    iget-object v2, p0, Lu0/b;->h:Ljava/lang/Object;
-
-    if-eqz v2, :cond_3
-
-    .line 10
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->k(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_2
-
-    .line 11
-    :cond_3
-    iget-object v2, p0, Lu0/b;->i:Ljava/lang/Object;
-
-    if-eqz v2, :cond_4
-
-    .line 12
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->j(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_2
-
-    .line 13
-    :cond_4
-    sget-object v2, Landroidx/constraintlayout/solver/state/State;->i:Ljava/lang/Integer;
-
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->j(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    .line 14
-    :goto_2
-    iget v2, p0, Lu0/b;->e:F
-
-    const/high16 v3, 0x3f000000    # 0.5f
-
-    cmpl-float v3, v2, v3
-
-    if-eqz v3, :cond_0
-
-    .line 15
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->Z(F)Landroidx/constraintlayout/solver/state/ConstraintReference;
+    :try_start_1
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
-    :cond_5
-    return-void
+    :catchall_1
+    move-exception p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    throw p2
 .end method
 
-.method public f(F)V
+.method public b(Ljava/io/File;)Lu0/d;
+    .locals 1
+    .param p1    # Ljava/io/File;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/io/FileInputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    .line 2
+    :try_start_0
+    invoke-virtual {p0, v0}, Lu0/b;->c(Ljava/io/InputStream;)Lu0/d;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 3
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 4
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_0
+    throw p1
+.end method
+
+.method public c(Ljava/io/InputStream;)Lu0/d;
+    .locals 4
+    .param p1    # Ljava/io/InputStream;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Landroidx/camera/core/impl/utils/g;->l(Ljava/io/InputStream;)Landroidx/camera/core/impl/utils/g;
+
+    move-result-object p1
+
+    .line 2
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-virtual {p1}, Landroidx/camera/core/impl/utils/g;->w()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroidx/camera/core/impl/utils/g;->q()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 3
+    invoke-static {v0}, Ls0/a0;->b(Landroid/graphics/Rect;)Landroid/graphics/Matrix;
+
+    move-result-object v1
+
+    .line 4
+    iget-boolean v2, p0, Lu0/b;->a:Z
+
+    if-eqz v2, :cond_0
+
+    .line 5
+    invoke-virtual {p1}, Landroidx/camera/core/impl/utils/g;->t()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroidx/camera/core/impl/utils/g;->w()I
+
+    move-result v3
+
+    invoke-virtual {p1}, Landroidx/camera/core/impl/utils/g;->q()I
+
+    move-result p1
+
+    invoke-static {v2, v3, p1}, Ls0/a0;->a(III)Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    .line 6
+    invoke-virtual {v1, p1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+
+    .line 7
+    :cond_0
+    new-instance p1, Lu0/d;
+
+    invoke-static {v0}, Ls0/a0;->i(Landroid/graphics/Rect;)Landroid/util/Size;
+
+    move-result-object v0
+
+    invoke-direct {p1, v1, v0}, Lu0/d;-><init>(Landroid/graphics/Matrix;Landroid/util/Size;)V
+
+    return-object p1
+.end method
+
+.method public d()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lu0/b;->a:Z
+
+    return v0
+.end method
+
+.method public e(Z)V
     .locals 0
 
     .line 1
-    iput p1, p0, Lu0/b;->e:F
-
-    return-void
-.end method
-
-.method public g(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lu0/b;->i:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public h(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lu0/b;->h:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public i(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lu0/b;->g:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public j(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lu0/b;->f:Ljava/lang/Object;
+    iput-boolean p1, p0, Lu0/b;->a:Z
 
     return-void
 .end method

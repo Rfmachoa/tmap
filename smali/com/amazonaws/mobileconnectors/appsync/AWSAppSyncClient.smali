@@ -45,11 +45,11 @@
 
 .field public deltaSyncSqlStoreName:Ljava/lang/String;
 
-.field public mApolloClient:Lb4/a;
+.field public mApolloClient:Ly5/a;
 
 .field private mAppSyncOfflineMutationManager:Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;
 
-.field public mS3ObjectManager:Lc4/n;
+.field public mS3ObjectManager:Lz5/n;
 
 .field public mSyncStore:Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;
 
@@ -146,7 +146,7 @@
 
     const-string v5, "_"
 
-    invoke-static {v3, v4, v5, v0}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4, v5, v0}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
 
     iget-object v3, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->clientDatabasePrefix:Ljava/lang/String;
 
-    invoke-static {v0, v3, v5, v1}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v5, v1}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -172,7 +172,7 @@
 
     iget-object v1, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->clientDatabasePrefix:Ljava/lang/String;
 
-    invoke-static {v0, v1, v5, v2}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v5, v2}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -320,7 +320,7 @@
     move-result-object v11
 
     .line 30
-    iget-object v0, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lf4/g;
+    iget-object v0, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lc6/g;
 
     if-nez v0, :cond_6
 
@@ -334,11 +334,11 @@
     move-result-object v0
 
     .line 32
-    new-instance v1, Lh4/b;
+    new-instance v1, Le6/b;
 
-    invoke-direct {v1, v0}, Lh4/b;-><init>(Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/sql/AppSyncSqlHelper;)V
+    invoke-direct {v1, v0}, Le6/b;-><init>(Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/sql/AppSyncSqlHelper;)V
 
-    iput-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lf4/g;
+    iput-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lc6/g;
 
     .line 33
     :cond_6
@@ -377,21 +377,21 @@
 
     move-result-object v2
 
-    new-instance v4, Lo4/d;
+    new-instance v4, Ll6/d;
 
     iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->customTypeAdapters:Ljava/util/Map;
 
-    invoke-direct {v4, v1}, Lo4/d;-><init>(Ljava/util/Map;)V
+    invoke-direct {v4, v1}, Ll6/d;-><init>(Ljava/util/Map;)V
 
     iget-object v5, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mPersistentMutationsCallback:Lcom/amazonaws/mobileconnectors/appsync/PersistentMutationsCallback;
 
-    iget-object v6, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lc4/n;
+    iget-object v6, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lz5/n;
 
     move-object v1, v0
 
     move-object v3, v11
 
-    invoke-direct/range {v1 .. v6}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;-><init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lo4/d;Lcom/amazonaws/mobileconnectors/appsync/PersistentMutationsCallback;Lc4/n;)V
+    invoke-direct/range {v1 .. v6}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;-><init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Ll6/d;Lcom/amazonaws/mobileconnectors/appsync/PersistentMutationsCallback;Lz5/n;)V
 
     .line 39
     new-instance v1, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;
@@ -405,28 +405,28 @@
     iput-object v1, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mAppSyncOfflineMutationManager:Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;
 
     .line 40
-    invoke-static {}, Lb4/a;->c()Lb4/a$b;
+    invoke-static {}, Ly5/a;->c()Ly5/a$b;
 
     move-result-object v0
 
     iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mServerUrl:Ljava/lang/String;
 
     .line 41
-    invoke-virtual {v0, v1}, Lb4/a$b;->q(Ljava/lang/String;)Lb4/a$b;
+    invoke-virtual {v0, v1}, Ly5/a$b;->q(Ljava/lang/String;)Ly5/a$b;
 
     move-result-object v0
 
-    iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lf4/g;
+    iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lc6/g;
 
-    iget-object v2, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lf4/c;
+    iget-object v2, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lc6/c;
 
     .line 42
-    invoke-virtual {v0, v1, v2}, Lb4/a$b;->n(Lf4/g;Lf4/c;)Lb4/a$b;
+    invoke-virtual {v0, v1, v2}, Ly5/a$b;->n(Lc6/g;Lc6/c;)Ly5/a$b;
 
     move-result-object v0
 
     .line 43
-    invoke-virtual {v0, v12}, Lb4/a$b;->a(Lcom/apollographql/apollo/interceptor/ApolloInterceptor;)Lb4/a$b;
+    invoke-virtual {v0, v12}, Ly5/a$b;->a(Lcom/apollographql/apollo/interceptor/ApolloInterceptor;)Ly5/a$b;
 
     move-result-object v13
 
@@ -451,23 +451,23 @@
     invoke-direct/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationInterceptor;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;ZLandroid/content/Context;Ljava/util/Map;Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;Lcom/amazonaws/mobileconnectors/appsync/ConflictResolverInterface;J)V
 
     .line 44
-    invoke-virtual {v13, v14}, Lb4/a$b;->a(Lcom/apollographql/apollo/interceptor/ApolloInterceptor;)Lb4/a$b;
+    invoke-virtual {v13, v14}, Ly5/a$b;->a(Lcom/apollographql/apollo/interceptor/ApolloInterceptor;)Ly5/a$b;
 
     move-result-object v0
 
     new-instance v1, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;
 
-    iget-object v2, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lc4/n;
+    iget-object v2, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lz5/n;
 
-    invoke-direct {v1, v2}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;-><init>(Lc4/n;)V
+    invoke-direct {v1, v2}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;-><init>(Lz5/n;)V
 
     .line 45
-    invoke-virtual {v0, v1}, Lb4/a$b;->a(Lcom/apollographql/apollo/interceptor/ApolloInterceptor;)Lb4/a$b;
+    invoke-virtual {v0, v1}, Ly5/a$b;->a(Lcom/apollographql/apollo/interceptor/ApolloInterceptor;)Ly5/a$b;
 
     move-result-object v0
 
     .line 46
-    invoke-virtual {v0, v11}, Lb4/a$b;->o(Lokhttp3/OkHttpClient;)Lb4/a$b;
+    invoke-virtual {v0, v11}, Ly5/a$b;->o(Lokhttp3/OkHttpClient;)Ly5/a$b;
 
     move-result-object v0
 
@@ -493,7 +493,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lc4/o;
+    check-cast v2, Lz5/o;
 
     .line 48
     iget-object v3, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->customTypeAdapters:Ljava/util/Map;
@@ -502,9 +502,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lb4/b;
+    check-cast v3, Ly5/b;
 
-    invoke-virtual {v0, v2, v3}, Lb4/a$b;->b(Lc4/o;Lb4/b;)Lb4/a$b;
+    invoke-virtual {v0, v2, v3}, Ly5/a$b;->b(Lz5/o;Ly5/b;)Ly5/a$b;
 
     goto :goto_2
 
@@ -515,25 +515,25 @@
     if-eqz v1, :cond_8
 
     .line 50
-    invoke-virtual {v0, v1}, Lb4/a$b;->j(Ljava/util/concurrent/Executor;)Lb4/a$b;
+    invoke-virtual {v0, v1}, Ly5/a$b;->j(Ljava/util/concurrent/Executor;)Ly5/a$b;
 
     .line 51
     :cond_8
-    iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mCacheHeaders:Le4/a;
+    iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mCacheHeaders:Lb6/a;
 
     if-eqz v1, :cond_9
 
     .line 52
-    invoke-virtual {v0, v1}, Lb4/a$b;->f(Le4/a;)Lb4/a$b;
+    invoke-virtual {v0, v1}, Ly5/a$b;->f(Lb6/a;)Ly5/a$b;
 
     .line 53
     :cond_9
-    iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mDefaultResponseFetcher:Li4/a;
+    iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mDefaultResponseFetcher:Lf6/a;
 
     if-eqz v1, :cond_a
 
     .line 54
-    invoke-virtual {v0, v1}, Lb4/a$b;->i(Li4/a;)Lb4/a$b;
+    invoke-virtual {v0, v1}, Ly5/a$b;->i(Lf6/a;)Ly5/a$b;
 
     .line 55
     :cond_a
@@ -551,62 +551,62 @@
     invoke-direct {v1, v2, v3}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;-><init>(Landroid/content/Context;Z)V
 
     .line 57
-    invoke-virtual {v0, v1}, Lb4/a$b;->s(Lp4/b;)Lb4/a$b;
+    invoke-virtual {v0, v1}, Ly5/a$b;->s(Lm6/b;)Ly5/a$b;
 
     .line 58
-    invoke-virtual {v0}, Lb4/a$b;->d()Lb4/a;
+    invoke-virtual {v0}, Ly5/a$b;->d()Ly5/a;
 
     move-result-object v0
 
-    iput-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iput-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
     .line 59
-    invoke-virtual {v1, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->setApolloClient(Lb4/a;)V
+    invoke-virtual {v1, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->setApolloClient(Ly5/a;)V
 
     .line 60
     new-instance v0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;
 
-    iget-object v2, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object v2, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
-    invoke-virtual {v2}, Lb4/a;->b()Lf4/a;
+    invoke-virtual {v2}, Ly5/a;->b()Lc6/a;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;-><init>(Lf4/a;)V
+    invoke-direct {v0, v2}, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;-><init>(Lc6/a;)V
 
     iput-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mSyncStore:Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;
 
     .line 61
-    iget-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
-    invoke-virtual {v0}, Lb4/a;->b()Lf4/a;
+    invoke-virtual {v0}, Ly5/a;->b()Lc6/a;
 
     move-result-object v0
 
-    invoke-virtual {v12, v0}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->setStore(Lf4/a;)V
+    invoke-virtual {v12, v0}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->setStore(Lc6/a;)V
 
     .line 62
-    iget-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
-    invoke-virtual {v0}, Lb4/a;->b()Lf4/a;
+    invoke-virtual {v0}, Ly5/a;->b()Lc6/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->setStore(Lf4/a;)V
+    invoke-virtual {v1, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->setStore(Lc6/a;)V
 
     .line 63
-    new-instance v0, Lo4/d;
+    new-instance v0, Ll6/d;
 
     iget-object v2, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->customTypeAdapters:Ljava/util/Map;
 
-    invoke-direct {v0, v2}, Lo4/d;-><init>(Ljava/util/Map;)V
+    invoke-direct {v0, v2}, Ll6/d;-><init>(Ljava/util/Map;)V
 
-    invoke-virtual {v1, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->setScalarTypeAdapters(Lo4/d;)V
+    invoke-virtual {v1, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->setScalarTypeAdapters(Ll6/d;)V
 
     .line 64
-    iget-object v0, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lc4/n;
+    iget-object v0, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lz5/n;
 
-    iput-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mS3ObjectManager:Lc4/n;
+    iput-object v0, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mS3ObjectManager:Lz5/n;
 
     .line 65
     new-instance v4, Lcom/amazonaws/mobileconnectors/appsync/SubscriptionAuthorizer;
@@ -624,18 +624,18 @@
 
     iget-object v1, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->customTypeAdapters:Ljava/util/Map;
 
-    iget-object v6, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object v6, v9, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
     .line 67
-    invoke-virtual {v6}, Lb4/a;->b()Lf4/a;
+    invoke-virtual {v6}, Ly5/a;->b()Lc6/a;
 
     move-result-object v6
 
-    invoke-interface {v6}, Lf4/a;->o()Lj4/h;
+    invoke-interface {v6}, Lc6/a;->m()Lg6/h;
 
     move-result-object v6
 
-    invoke-direct {v5, v1, v6}, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;-><init>(Ljava/util/Map;Lj4/h;)V
+    invoke-direct {v5, v1, v6}, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;-><init>(Ljava/util/Map;Lg6/h;)V
 
     iget-boolean v6, v10, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mSubscriptionsAutoReconnect:Z
 
@@ -894,11 +894,11 @@
     .line 10
     iget-object v1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mSyncStore:Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;
 
-    invoke-virtual {v1}, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->clearAll()Lf4/e;
+    invoke-virtual {v1}, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->clearAll()Lc6/e;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lf4/e;->f()Ljava/lang/Object;
+    invoke-virtual {v1}, Lc6/e;->f()Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -999,11 +999,11 @@
     return-void
 .end method
 
-.method public getS3ObjectManager()Lc4/n;
+.method public getS3ObjectManager()Lz5/n;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mS3ObjectManager:Lc4/n;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mS3ObjectManager:Lz5/n;
 
     return-object v0
 .end method
@@ -1143,9 +1143,9 @@
 
     .line 5
     :cond_0
-    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object p3, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
-    invoke-virtual {p3, p1, p2}, Lb4/a;->mutate(Lcom/apollographql/apollo/api/a;Lcom/apollographql/apollo/api/b$a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
+    invoke-virtual {p3, p1, p2}, Ly5/a;->mutate(Lcom/apollographql/apollo/api/a;Lcom/apollographql/apollo/api/b$a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
 
     move-result-object p1
 
@@ -1185,9 +1185,9 @@
 
     .line 3
     :cond_0
-    iget-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
-    invoke-virtual {p2, p1}, Lb4/a;->mutate(Lcom/apollographql/apollo/api/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
+    invoke-virtual {p2, p1}, Ly5/a;->mutate(Lcom/apollographql/apollo/api/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
 
     move-result-object p1
 
@@ -1217,9 +1217,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Lb4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->mApolloClient:Ly5/a;
 
-    invoke-virtual {v0, p1}, Lb4/a;->query(Lcom/apollographql/apollo/api/c;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+    invoke-virtual {v0, p1}, Ly5/a;->query(Lcom/apollographql/apollo/api/c;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
 
     move-result-object p1
 
@@ -1258,7 +1258,7 @@
     return-object v0
 .end method
 
-.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Lq4/a;
+.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Ln6/a;
     .locals 9
     .param p1    # Lcom/apollographql/apollo/api/c;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -1278,7 +1278,7 @@
             "Lcom/apollographql/apollo/GraphQLCall$a<",
             "Lcom/apollographql/apollo/api/b$a;",
             ">;J)",
-            "Lq4/a;"
+            "Ln6/a;"
         }
     .end annotation
 
@@ -1299,14 +1299,14 @@
     move-wide v7, p3
 
     .line 12
-    invoke-virtual/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Lq4/a;
+    invoke-virtual/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Ln6/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Lq4/a;
+.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Ln6/a;
     .locals 9
     .param p1    # Lcom/apollographql/apollo/api/c;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -1331,7 +1331,7 @@
             "Lcom/apollographql/apollo/GraphQLCall$a<",
             "Lcom/apollographql/apollo/api/b$a;",
             ">;J)",
-            "Lq4/a;"
+            "Ln6/a;"
         }
     .end annotation
 
@@ -1352,14 +1352,14 @@
     move-wide v7, p5
 
     .line 13
-    invoke-virtual/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Lq4/a;
+    invoke-virtual/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Ln6/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;)Lq4/a;
+.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;)Ln6/a;
     .locals 9
     .param p1    # Lcom/apollographql/apollo/api/c;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -1383,7 +1383,7 @@
             "TD;TT;TV;>;",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;",
             ")",
-            "Lq4/a;"
+            "Ln6/a;"
         }
     .end annotation
 
@@ -1404,14 +1404,14 @@
     move-object v4, p4
 
     .line 14
-    invoke-virtual/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Lq4/a;
+    invoke-virtual/range {v0 .. v8}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient;->sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Ln6/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Lq4/a;
+.method public sync(Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;Lcom/apollographql/apollo/api/c;Lcom/apollographql/apollo/GraphQLCall$a;J)Ln6/a;
     .locals 2
     .param p1    # Lcom/apollographql/apollo/api/c;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -1439,7 +1439,7 @@
             "Lcom/apollographql/apollo/GraphQLCall$a<",
             "Lcom/apollographql/apollo/api/b$a;",
             ">;J)",
-            "Lq4/a;"
+            "Ln6/a;"
         }
     .end annotation
 

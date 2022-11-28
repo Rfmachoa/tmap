@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field public final _caseInsensitive:Z
+
 .field public final _config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -24,10 +26,10 @@
     .end annotation
 .end field
 
-.field public final _typeToId:Ljava/util/Map;
+.field public final _typeToId:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/Map<",
+            "Ljava/util/concurrent/ConcurrentHashMap<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -37,7 +39,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Ljava/util/Map;Ljava/util/Map;)V
+.method public constructor <init>(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Ljava/util/concurrent/ConcurrentHashMap;Ljava/util/HashMap;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -45,11 +47,11 @@
             "Lcom/fasterxml/jackson/databind/cfg/MapperConfig<",
             "*>;",
             "Lcom/fasterxml/jackson/databind/JavaType;",
-            "Ljava/util/Map<",
+            "Ljava/util/concurrent/ConcurrentHashMap<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Ljava/util/Map<",
+            "Ljava/util/HashMap<",
             "Ljava/lang/String;",
             "Lcom/fasterxml/jackson/databind/JavaType;",
             ">;)V"
@@ -67,10 +69,19 @@
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
 
     .line 3
-    iput-object p3, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/Map;
+    iput-object p3, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/concurrent/ConcurrentHashMap;
 
     .line 4
     iput-object p4, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_idToType:Ljava/util/Map;
+
+    .line 5
+    sget-object p2, Lcom/fasterxml/jackson/databind/MapperFeature;->ACCEPT_CASE_INSENSITIVE_VALUES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->isEnabled(Lcom/fasterxml/jackson/databind/MapperFeature;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_caseInsensitive:Z
 
     return-void
 .end method
@@ -115,7 +126,7 @@
 .end method
 
 .method public static construct(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Ljava/util/Collection;ZZ)Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -131,132 +142,144 @@
 
     if-eq p3, p4, :cond_7
 
-    const/4 v0, 0x0
-
     if-eqz p3, :cond_0
 
     .line 1
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    if-eqz p4, :cond_1
-
-    .line 2
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
     .line 3
-    new-instance v1, Ljava/util/TreeMap;
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v1}, Ljava/util/TreeMap;-><init>()V
+    const/4 v2, 0x4
 
-    :cond_1
-    if-eqz p2, :cond_6
+    invoke-direct {v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
 
     .line 4
+    :goto_0
+    sget-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->ACCEPT_CASE_INSENSITIVE_VALUES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    invoke-virtual {p0, v2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->isEnabled(Lcom/fasterxml/jackson/databind/MapperFeature;)Z
+
+    move-result v2
+
+    if-eqz p2, :cond_6
+
+    .line 5
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 
-    :cond_2
+    :cond_1
     :goto_1
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_6
+    if-eqz v3, :cond_6
 
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
-
-    check-cast v2, Lcom/fasterxml/jackson/databind/jsontype/NamedType;
-
-    .line 5
-    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->getType()Ljava/lang/Class;
-
     move-result-object v3
 
+    check-cast v3, Lcom/fasterxml/jackson/databind/jsontype/NamedType;
+
     .line 6
-    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->hasName()Z
+    invoke-virtual {v3}, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->getType()Ljava/lang/Class;
 
-    move-result v4
+    move-result-object v4
 
-    if-eqz v4, :cond_3
+    .line 7
+    invoke-virtual {v3}, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->hasName()Z
 
-    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->getName()Ljava/lang/String;
+    move-result v5
 
-    move-result-object v2
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v3}, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->getName()Ljava/lang/String;
+
+    move-result-object v3
 
     goto :goto_2
 
-    :cond_3
-    invoke-static {v3}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_defaultTypeId(Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_2
-    if-eqz p3, :cond_4
-
-    .line 7
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    if-eqz p4, :cond_2
-
-    .line 8
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/fasterxml/jackson/databind/JavaType;
-
-    if-eqz v4, :cond_5
-
-    .line 9
-    invoke-virtual {v4}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    goto :goto_1
-
-    .line 10
-    :cond_5
-    invoke-virtual {p0, v3}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JavaType;
+    :cond_2
+    invoke-static {v4}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_defaultTypeId(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_2
+    if-eqz p3, :cond_3
+
+    .line 8
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    if-eqz p4, :cond_1
+
+    if-eqz v2, :cond_4
+
+    .line 9
+    invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 10
+    :cond_4
+    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/fasterxml/jackson/databind/JavaType;
+
+    if-eqz v5, :cond_5
+
+    .line 11
+    invoke-virtual {v5}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
 
     goto :goto_1
 
-    .line 11
+    .line 12
+    :cond_5
+    invoke-virtual {p0, v4}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    .line 13
     :cond_6
     new-instance p2, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;
 
-    invoke-direct {p2, p0, p1, v1, v0}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;-><init>(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Ljava/util/Map;Ljava/util/Map;)V
+    invoke-direct {p2, p0, p1, v0, v1}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;-><init>(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Ljava/util/concurrent/ConcurrentHashMap;Ljava/util/HashMap;)V
 
     return-object p2
 
-    .line 12
+    .line 14
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -271,6 +294,17 @@
     .locals 1
 
     .line 1
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_caseInsensitive:Z
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 3
+    :cond_0
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_idToType:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -283,19 +317,62 @@
 .end method
 
 .method public getDescForKnownTypeIds()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
     .line 1
     new-instance v0, Ljava/util/TreeSet;
 
+    invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
+
+    .line 2
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_idToType:Ljava/util/Map;
 
-    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    .line 3
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/fasterxml/jackson/databind/JavaType;
+
+    invoke-virtual {v3}, Lcom/fasterxml/jackson/databind/JavaType;->isConcrete()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 4
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
     invoke-virtual {v0}, Ljava/util/TreeSet;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -313,7 +390,7 @@
 .end method
 
 .method public idFromClass(Ljava/lang/Class;)Ljava/lang/String;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -331,9 +408,25 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeIdResolverBase;->_typeFactory:Lcom/fasterxml/jackson/databind/type/TypeFactory;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/JavaType;
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    if-nez v1, :cond_3
+
+    .line 3
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeIdResolverBase;->_typeFactory:Lcom/fasterxml/jackson/databind/type/TypeFactory;
+
+    invoke-virtual {v2, p1}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->constructType(Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
 
@@ -341,89 +434,55 @@
 
     move-result-object p1
 
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 3
-    iget-object v1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/Map;
-
-    monitor-enter v1
-
     .line 4
-    :try_start_0
-    iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/Map;
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
 
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->isAnnotationProcessingEnabled()Z
 
-    move-result-object v2
+    move-result v2
 
-    check-cast v2, Ljava/lang/String;
-
-    if-nez v2, :cond_3
+    if-eqz v2, :cond_1
 
     .line 5
-    iget-object v3, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
 
-    invoke-virtual {v3}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->isAnnotationProcessingEnabled()Z
+    invoke-virtual {v1, p1}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->introspectClassAnnotations(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/BeanDescription;
 
-    move-result v3
-
-    if-eqz v3, :cond_1
+    move-result-object v1
 
     .line 6
     iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
 
-    invoke-virtual {v2, p1}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->introspectClassAnnotations(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/BeanDescription;
+    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getAnnotationIntrospector()Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
 
     move-result-object v2
 
-    .line 7
-    iget-object v3, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_config:Lcom/fasterxml/jackson/databind/cfg/MapperConfig;
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/BeanDescription;->getClassInfo()Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;
 
-    invoke-virtual {v3}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getAnnotationIntrospector()Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-virtual {v2, v1}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findTypeName(Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;)Ljava/lang/String;
 
-    invoke-virtual {v2}, Lcom/fasterxml/jackson/databind/BeanDescription;->getClassInfo()Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findTypeName(Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;)Ljava/lang/String;
-
-    move-result-object v2
+    move-result-object v1
 
     :cond_1
-    if-nez v2, :cond_2
+    if-nez v1, :cond_2
 
-    .line 8
+    .line 7
     invoke-static {p1}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_defaultTypeId(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p1
 
-    move-object v2, p1
+    move-object v1, p1
 
-    .line 9
+    .line 8
     :cond_2
-    iget-object p1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/Map;
+    iget-object p1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeToId:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {p1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     :cond_3
-    monitor-exit v1
-
-    return-object v2
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    return-object v1
 .end method
 
 .method public idFromValue(Ljava/lang/Object;)Ljava/lang/String;
@@ -472,16 +531,13 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    const/16 v0, 0x5b
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
 
     .line 1
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/a;->a(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -490,24 +546,19 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const-string v1, "; id-to-type="
-
-    .line 3
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v0, v2
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_idToType:Ljava/util/Map;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    const/16 v1, 0x5d
+    aput-object v1, v0, v2
 
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const-string v1, "[%s; id-to-type=%s]"
 
-    .line 5
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -517,21 +568,8 @@
 .method public typeFromId(Lcom/fasterxml/jackson/databind/DatabindContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
     .locals 0
 
-    .line 2
-    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeFromId(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public typeFromId(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeFromId(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/jsontype/impl/TypeNameIdResolver;->_typeFromId(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
 

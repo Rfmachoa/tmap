@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapMainActivity;->z4(ILjava/lang/String;Ljava/lang/String;)V
+    value = Lcom/skt/tmap/activity/TmapMainActivity;->B4(ILjava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,25 +55,25 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->r7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->u()Lcom/skt/tmap/GlobalDataManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()Lcom/skt/tmap/GlobalDataManager;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->u()Lcom/skt/tmap/GlobalDataManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()Lcom/skt/tmap/GlobalDataManager;
 
     move-result-object v0
 
@@ -124,18 +124,18 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.forceupdate_quit"
+    const-string v1, "tap.forceupdate_quit"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -145,20 +145,20 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.updatepopup_close"
+    const-string v1, "tap.updatepopup_close"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->u()Lcom/skt/tmap/GlobalDataManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()Lcom/skt/tmap/GlobalDataManager;
 
     move-result-object v0
 
@@ -171,9 +171,9 @@
 
     const/16 v1, 0x7d7
 
-    const v2, 0x7f13046e
+    const v2, 0x7f1404df
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/activity/TmapMainActivity;->R3(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/activity/TmapMainActivity;->V3(II)V
 
     goto :goto_0
 
@@ -181,7 +181,7 @@
     :cond_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->r7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
 
     move-result-object v0
 
@@ -201,7 +201,7 @@
     :cond_4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     :goto_1
     return-void
@@ -215,19 +215,19 @@
     .line 1
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual {v1}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v1}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
     const/4 v2, 0x0
 
-    iput-object v2, v1, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v2, v1, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0
@@ -238,7 +238,7 @@
     if-ne v1, v2, :cond_3
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/util/g;->s()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/util/i;->s()Ljava/lang/String;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->u()Lcom/skt/tmap/GlobalDataManager;
+    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()Lcom/skt/tmap/GlobalDataManager;
 
     move-result-object v1
 
@@ -259,7 +259,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->u()Lcom/skt/tmap/GlobalDataManager;
+    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()Lcom/skt/tmap/GlobalDataManager;
 
     move-result-object v1
 
@@ -278,13 +278,13 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v1
 
-    const-string/jumbo v2, "tap.forceupdate_update"
+    const-string v2, "tap.forceupdate_update"
 
-    invoke-virtual {v1, v2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lbe/e;->T(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -294,13 +294,13 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v1
 
-    const-string/jumbo v2, "tap.updatepopup_update"
+    const-string v2, "tap.updatepopup_update"
 
-    invoke-virtual {v1, v2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lbe/e;->T(Ljava/lang/String;)V
 
     :goto_0
     const-string v1, ""
@@ -315,7 +315,7 @@
     .line 10
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/e;->m0(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/g;->r0(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -327,13 +327,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->u(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->x(Landroid/app/Activity;)V
 
     .line 12
     :goto_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     goto/16 :goto_2
 
@@ -349,7 +349,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/service/LoginService;->Z0(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/skt/tmap/service/LoginService;->n1(Landroid/content/Context;)V
 
     goto :goto_2
 
@@ -394,7 +394,7 @@
     if-ne v1, v2, :cond_7
 
     .line 17
-    invoke-static {}, Lcom/skt/tmap/util/e;->w()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/util/g;->z()Ljava/lang/String;
 
     move-result-object v1
 
@@ -464,7 +464,7 @@
     :cond_7
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$o;->b:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     :goto_2
     return-void

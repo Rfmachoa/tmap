@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lh2/g;
+.field public a:Ly2/g;
 
 .field public b:Z
 
@@ -46,24 +46,24 @@
     return-void
 .end method
 
-.method private getEmojiTextViewHelper()Lh2/g;
+.method private getEmojiTextViewHelper()Ly2/g;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->a:Lh2/g;
+    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->a:Ly2/g;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lh2/g;
+    new-instance v0, Ly2/g;
 
-    invoke-direct {v0, p0}, Lh2/g;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, Ly2/g;-><init>(Landroid/widget/TextView;)V
 
-    iput-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->a:Lh2/g;
+    iput-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->a:Ly2/g;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->a:Lh2/g;
+    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->a:Ly2/g;
 
     return-object v0
 .end method
@@ -84,11 +84,11 @@
     iput-boolean v0, p0, Landroidx/emoji/widget/EmojiAppCompatTextView;->b:Z
 
     .line 3
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatTextView;->getEmojiTextViewHelper()Lh2/g;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatTextView;->getEmojiTextViewHelper()Ly2/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lh2/g;->c()V
+    invoke-virtual {v0}, Ly2/g;->c()V
 
     :cond_0
     return-void
@@ -98,14 +98,14 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Landroid/widget/TextView;->setAllCaps(Z)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->setAllCaps(Z)V
 
     .line 2
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatTextView;->getEmojiTextViewHelper()Lh2/g;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatTextView;->getEmojiTextViewHelper()Ly2/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lh2/g;->b(Z)V
+    invoke-virtual {v0, p1}, Ly2/g;->b(Z)V
 
     return-void
 .end method
@@ -114,15 +114,15 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatTextView;->getEmojiTextViewHelper()Lh2/g;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatTextView;->getEmojiTextViewHelper()Ly2/g;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lh2/g;->a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+    invoke-virtual {v0, p1}, Ly2/g;->a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
 
     move-result-object p1
 
-    invoke-super {p0, p1}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->setFilters([Landroid/text/InputFilter;)V
 
     return-void
 .end method

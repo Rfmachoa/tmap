@@ -48,7 +48,7 @@
 .end method
 
 .method private synthetic t(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$j;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
@@ -67,7 +67,7 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->F0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->G0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
 
     move-result-object p1
 
@@ -79,51 +79,33 @@
     move-result-object v0
 
     .line 5
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->c()Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters$a;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/google/common/collect/ImmutableSet$Builder;
-
-    invoke-direct {v2}, Lcom/google/common/collect/ImmutableSet$Builder;-><init>()V
-
-    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->d1:Lcom/google/common/collect/ImmutableSet;
-
-    .line 6
-    invoke-virtual {v2, p1}, Lcom/google/common/collect/ImmutableSet$Builder;->addAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet$Builder;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->a()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
     move-result-object p1
 
-    const/4 v2, 0x3
+    const/4 v1, 0x3
+
+    .line 6
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->E(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+
+    move-result-object p1
+
+    const/4 v1, -0x3
 
     .line 7
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Lcom/google/common/collect/ImmutableSet$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet$Builder;
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->N(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
     move-result-object p1
 
     .line 8
-    invoke-virtual {p1}, Lcom/google/common/collect/ImmutableSet$Builder;->build()Lcom/google/common/collect/ImmutableSet;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->B()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
 
     move-result-object p1
 
     .line 9
-    invoke-virtual {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters$a;->F(Ljava/util/Set;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters$a;
-
-    move-result-object p1
+    invoke-interface {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->K0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
 
     .line 10
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters$a;->z()Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;
-
-    move-result-object p1
-
-    .line 11
-    invoke-interface {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->K0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;)V
-
-    .line 12
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$j;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;->I(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView;)Landroid/widget/PopupWindow;

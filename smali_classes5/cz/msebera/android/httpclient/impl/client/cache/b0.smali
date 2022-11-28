@@ -74,7 +74,7 @@
 
 
 # virtual methods
-.method public B(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
+.method public D(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
     .locals 1
 
     if-eqz p1, :cond_0

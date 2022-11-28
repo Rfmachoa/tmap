@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final serialVersionUID:J = 0x76667f4cd0de53cbL
+.field private static final serialVersionUID:J = 0x3L
 
 
 # instance fields
@@ -284,11 +284,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, " does not define valid handledType() -- must either register with method that takes type argument "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " or make serializer extend \'com.fasterxml.jackson.databind.ser.std.StdSerializer\'"
+    const-string p1, " does not define valid handledType() -- must either register with method that takes type argument  or make serializer extend \'com.fasterxml.jackson.databind.ser.std.StdSerializer\'"
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

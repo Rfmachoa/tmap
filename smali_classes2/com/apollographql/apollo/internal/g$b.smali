@@ -81,7 +81,7 @@
     :try_start_1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/g$b;->a:Lcom/apollographql/apollo/internal/g;
 
-    invoke-static {v0}, Lcom/apollographql/apollo/internal/g;->e(Lcom/apollographql/apollo/internal/g;)Lp4/b;
+    invoke-static {v0}, Lcom/apollographql/apollo/internal/g;->e(Lcom/apollographql/apollo/internal/g;)Lm6/b;
 
     move-result-object v0
 
@@ -91,12 +91,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lp4/b;->unsubscribe(Lcom/apollographql/apollo/api/f;)V
+    invoke-interface {v0, v1}, Lm6/b;->unsubscribe(Lcom/apollographql/apollo/api/f;)V
 
     .line 4
     iget-object v0, p0, Lcom/apollographql/apollo/internal/g$b;->a:Lcom/apollographql/apollo/internal/g;
 
-    invoke-static {v0}, Lcom/apollographql/apollo/internal/g;->e(Lcom/apollographql/apollo/internal/g;)Lp4/b;
+    invoke-static {v0}, Lcom/apollographql/apollo/internal/g;->e(Lcom/apollographql/apollo/internal/g;)Lm6/b;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lp4/b;->removeListener(Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;)V
+    invoke-interface {v0, v1, v2}, Lm6/b;->removeListener(Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;)V
 
     .line 5
     iget-object v0, p0, Lcom/apollographql/apollo/internal/g$b;->a:Lcom/apollographql/apollo/internal/g;

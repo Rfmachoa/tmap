@@ -22,13 +22,13 @@
 
 .field public d:Lcom/tmapmobility/tmap/exoplayer2/source/hls/g;
 
-.field public e:Lre/f;
+.field public e:Lug/f;
 
 .field public f:Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;
 
 .field public g:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
-.field public h:Lwd/q;
+.field public h:Lzf/q;
 
 .field public i:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
@@ -62,14 +62,14 @@
 
     invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/a;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h:Lwd/q;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h:Lzf/q;
 
     .line 5
-    new-instance p1, Lre/a;
+    new-instance p1, Lug/a;
 
-    invoke-direct {p1}, Lre/a;-><init>()V
+    invoke-direct {p1}, Lug/a;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e:Lre/f;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e:Lug/f;
 
     .line 6
     sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/a;->K0:Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;
@@ -142,27 +142,8 @@
     return-object v0
 .end method
 
-.method public bridge synthetic b(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
+.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
     .locals 0
-    .param p1    # Lwd/q;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->k(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
@@ -172,11 +153,22 @@
     return-object p1
 .end method
 
-.method public bridge synthetic d(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
     .locals 0
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic d(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
 
     move-result-object p1
 
@@ -196,7 +188,7 @@
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e:Lre/f;
+    iget-object v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e:Lug/f;
 
     .line 3
     iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->b:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
@@ -211,9 +203,9 @@
     if-nez v4, :cond_0
 
     .line 5
-    new-instance v4, Lre/d;
+    new-instance v4, Lug/d;
 
-    invoke-direct {v4, v1, v3}, Lre/d;-><init>(Lre/f;Ljava/util/List;)V
+    invoke-direct {v4, v1, v3}, Lug/d;-><init>(Lug/f;Ljava/util/List;)V
 
     move-object v1, v4
 
@@ -227,10 +219,10 @@
 
     iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->g:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
-    iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h:Lwd/q;
+    iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h:Lzf/q;
 
     .line 7
-    invoke-interface {v6, v2}, Lwd/q;->a(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+    invoke-interface {v6, v2}, Lzf/q;->a(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
 
     move-result-object v6
 
@@ -241,7 +233,7 @@
     iget-object v9, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->c:Lcom/tmapmobility/tmap/exoplayer2/source/hls/f;
 
     .line 8
-    invoke-interface {v8, v9, v7, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;->a(Lcom/tmapmobility/tmap/exoplayer2/source/hls/f;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;Lre/f;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker;
+    invoke-interface {v8, v9, v7, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;->a(Lcom/tmapmobility/tmap/exoplayer2/source/hls/f;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;Lug/f;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker;
 
     move-result-object v8
 
@@ -274,47 +266,35 @@
 .end method
 
 .method public g(Lcom/tmapmobility/tmap/exoplayer2/source/g;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/source/g;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "HlsMediaSource.Factory#setCompositeSequenceableLoaderFactory no longer handles null by instantiating a new DefaultCompositeSequenceableLoaderFactory. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/j;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/source/j;-><init>()V
+    move-result-object p1
 
-    :goto_0
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/g;
+
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->g:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
     return-object p0
 .end method
 
-.method public h(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
-    .locals 0
-    .param p1    # Lwd/q;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public h(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "MediaSource.Factory#setDrmSessionManagerProvider no longer handles null by instantiating a new DefaultDrmSessionManagerProvider. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/drm/a;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/a;-><init>()V
+    move-result-object p1
 
-    :goto_0
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h:Lwd/q;
+    check-cast p1, Lzf/q;
+
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->h:Lzf/q;
 
     return-object p0
 .end method
@@ -352,23 +332,17 @@
 .end method
 
 .method public k(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "MediaSource.Factory#setLoadErrorHandlingPolicy no longer handles null by instantiating a new DefaultLoadErrorHandlingPolicy. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/x;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/x;-><init>()V
+    move-result-object p1
 
-    :goto_0
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
+
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
     return-object p0
@@ -383,45 +357,35 @@
     return-object p0
 .end method
 
-.method public m(Lre/f;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
-    .locals 0
-    .param p1    # Lre/f;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public m(Lug/f;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "HlsMediaSource.Factory#setPlaylistParserFactory no longer handles null by instantiating a new DefaultHlsPlaylistParserFactory. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lre/a;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lre/a;-><init>()V
+    move-result-object p1
 
-    :goto_0
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e:Lre/f;
+    check-cast p1, Lug/f;
+
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->e:Lug/f;
 
     return-object p0
 .end method
 
 .method public n(Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "HlsMediaSource.Factory#setPlaylistTrackerFactory no longer handles null by defaulting to DefaultHlsPlaylistTracker.FACTORY. Explicitly pass a reference to this instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/a;->K0:Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
+    move-result-object p1
+
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;
+
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/HlsMediaSource$b;->f:Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsPlaylistTracker$a;
 
     return-object p0

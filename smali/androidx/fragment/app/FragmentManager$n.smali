@@ -3,7 +3,7 @@
 .source "FragmentManager.java"
 
 # interfaces
-.implements Landroidx/fragment/app/u;
+.implements Landroidx/fragment/app/d0;
 
 
 # annotations
@@ -20,19 +20,19 @@
 # instance fields
 .field public final a:Landroidx/lifecycle/Lifecycle;
 
-.field public final b:Landroidx/fragment/app/u;
+.field public final b:Landroidx/fragment/app/d0;
 
 .field public final c:Landroidx/lifecycle/LifecycleEventObserver;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/fragment/app/u;Landroidx/lifecycle/LifecycleEventObserver;)V
+.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/fragment/app/d0;Landroidx/lifecycle/LifecycleEventObserver;)V
     .locals 0
     .param p1    # Landroidx/lifecycle/Lifecycle;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/fragment/app/u;
+    .param p2    # Landroidx/fragment/app/d0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -48,7 +48,7 @@
     iput-object p1, p0, Landroidx/fragment/app/FragmentManager$n;->a:Landroidx/lifecycle/Lifecycle;
 
     .line 3
-    iput-object p2, p0, Landroidx/fragment/app/FragmentManager$n;->b:Landroidx/fragment/app/u;
+    iput-object p2, p0, Landroidx/fragment/app/FragmentManager$n;->b:Landroidx/fragment/app/d0;
 
     .line 4
     iput-object p3, p0, Landroidx/fragment/app/FragmentManager$n;->c:Landroidx/lifecycle/LifecycleEventObserver;
@@ -70,9 +70,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$n;->b:Landroidx/fragment/app/u;
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$n;->b:Landroidx/fragment/app/d0;
 
-    invoke-interface {v0, p1, p2}, Landroidx/fragment/app/u;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0, p1, p2}, Landroidx/fragment/app/d0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method

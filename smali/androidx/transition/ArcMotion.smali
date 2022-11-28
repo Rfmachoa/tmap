@@ -82,6 +82,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "RestrictedApi"
@@ -130,7 +138,7 @@
     const/4 v3, 0x1
 
     .line 17
-    invoke-static {p1, p2, v2, v3, v0}, Lz0/i;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, v3, v0}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v2
 
@@ -142,7 +150,7 @@
     const/4 v3, 0x0
 
     .line 19
-    invoke-static {p1, p2, v2, v3, v0}, Lz0/i;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, v3, v0}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -154,7 +162,7 @@
     const/4 v2, 0x2
 
     .line 21
-    invoke-static {p1, p2, v0, v2, v1}, Lz0/i;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v0, v2, v1}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p2
 
@@ -291,6 +299,8 @@
 
 .method public getPath(FFFF)Landroid/graphics/Path;
     .locals 11
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     new-instance v7, Landroid/graphics/Path;

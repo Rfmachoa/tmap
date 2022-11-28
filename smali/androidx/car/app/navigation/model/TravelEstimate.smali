@@ -47,6 +47,22 @@
     .end annotation
 .end field
 
+.field private final mTripIcon:Landroidx/car/app/model/CarIcon;
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private final mTripText:Landroidx/car/app/model/CarText;
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>()V
@@ -69,12 +85,18 @@
     iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mArrivalTimeAtDestination:Landroidx/car/app/model/DateTimeWithZone;
 
     .line 5
-    sget-object v0, Landroidx/car/app/model/CarColor;->i:Landroidx/car/app/model/CarColor;
+    sget-object v1, Landroidx/car/app/model/CarColor;->i:Landroidx/car/app/model/CarColor;
 
-    iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingTimeColor:Landroidx/car/app/model/CarColor;
+    iput-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingTimeColor:Landroidx/car/app/model/CarColor;
 
     .line 6
-    iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
+    iput-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
+
+    .line 7
+    iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripText:Landroidx/car/app/model/CarText;
+
+    .line 8
+    iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripIcon:Landroidx/car/app/model/CarIcon;
 
     return-void
 .end method
@@ -82,33 +104,43 @@
 .method public constructor <init>(Landroidx/car/app/navigation/model/TravelEstimate$a;)V
     .locals 2
 
-    .line 7
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
+    .line 10
     iget-object v0, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->a:Landroidx/car/app/model/Distance;
 
     iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistance:Landroidx/car/app/model/Distance;
 
-    .line 9
+    .line 11
     iget-wide v0, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->b:J
 
     iput-wide v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingTimeSeconds:J
 
-    .line 10
+    .line 12
     iget-object v0, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->c:Landroidx/car/app/model/DateTimeWithZone;
 
     iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mArrivalTimeAtDestination:Landroidx/car/app/model/DateTimeWithZone;
 
-    .line 11
+    .line 13
     iget-object v0, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->d:Landroidx/car/app/model/CarColor;
 
     iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingTimeColor:Landroidx/car/app/model/CarColor;
 
-    .line 12
-    iget-object p1, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->e:Landroidx/car/app/model/CarColor;
+    .line 14
+    iget-object v0, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->e:Landroidx/car/app/model/CarColor;
 
-    iput-object p1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
+    iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
+
+    .line 15
+    iget-object v0, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->f:Landroidx/car/app/model/CarText;
+
+    iput-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripText:Landroidx/car/app/model/CarText;
+
+    .line 16
+    iget-object p1, p1, Landroidx/car/app/navigation/model/TravelEstimate$a;->g:Landroidx/car/app/model/CarIcon;
+
+    iput-object p1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripIcon:Landroidx/car/app/model/CarIcon;
 
     return-void
 .end method
@@ -250,9 +282,31 @@
 
     iget-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
 
-    iget-object p1, p1, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
+    iget-object v3, p1, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
 
     .line 6
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripText:Landroidx/car/app/model/CarText;
+
+    iget-object v3, p1, Landroidx/car/app/navigation/model/TravelEstimate;->mTripText:Landroidx/car/app/model/CarText;
+
+    .line 7
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripIcon:Landroidx/car/app/model/CarIcon;
+
+    iget-object p1, p1, Landroidx/car/app/navigation/model/TravelEstimate;->mTripIcon:Landroidx/car/app/model/CarIcon;
+
+    .line 8
     invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
@@ -268,10 +322,40 @@
     return v0
 .end method
 
+.method public f()Landroidx/car/app/model/CarIcon;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripIcon:Landroidx/car/app/model/CarIcon;
+
+    return-object v0
+.end method
+
+.method public g()Landroidx/car/app/model/CarText;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripText:Landroidx/car/app/model/CarText;
+
+    return-object v0
+.end method
+
 .method public hashCode()I
     .locals 3
 
-    const/4 v0, 0x5
+    const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -308,6 +392,18 @@
     iget-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mRemainingDistanceColor:Landroidx/car/app/model/CarColor;
 
     const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    iget-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripText:Landroidx/car/app/model/CarText;
+
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+    iget-object v1, p0, Landroidx/car/app/navigation/model/TravelEstimate;->mTripIcon:Landroidx/car/app/model/CarIcon;
+
+    const/4 v2, 0x6
 
     aput-object v1, v0, v2
 

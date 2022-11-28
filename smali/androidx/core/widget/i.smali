@@ -6,13 +6,14 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/widget/i$a;
+        Landroidx/core/widget/i$a;,
+        Landroidx/core/widget/i$b;
     }
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/widget/EdgeEffect;
+.field public final a:Landroid/widget/EdgeEffect;
 
 
 # direct methods
@@ -35,7 +36,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
-    .locals 1
+    .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -48,14 +49,14 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/core/os/BuildCompat;->i()Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v0
+    const/16 v1, 0x1f
 
-    if-eqz v0, :cond_0
+    if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1}, Landroidx/core/widget/i$a;->a(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
+    invoke-static {p0, p1}, Landroidx/core/widget/i$b;->a(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
 
     move-result-object p0
 
@@ -71,21 +72,21 @@
 .end method
 
 .method public static d(Landroid/widget/EdgeEffect;)F
-    .locals 1
+    .locals 2
     .param p0    # Landroid/widget/EdgeEffect;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-static {}, Landroidx/core/os/BuildCompat;->i()Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v0
+    const/16 v1, 0x1f
 
-    if-eqz v0, :cond_0
+    if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0}, Landroidx/core/widget/i$a;->b(Landroid/widget/EdgeEffect;)F
+    invoke-static {p0}, Landroidx/core/widget/i$b;->b(Landroid/widget/EdgeEffect;)F
 
     move-result p0
 
@@ -105,27 +106,27 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+    invoke-static {p0, p1, p2}, Landroidx/core/widget/i$a;->a(Landroid/widget/EdgeEffect;FF)V
 
     return-void
 .end method
 
 .method public static j(Landroid/widget/EdgeEffect;FF)F
-    .locals 1
+    .locals 2
     .param p0    # Landroid/widget/EdgeEffect;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-static {}, Landroidx/core/os/BuildCompat;->i()Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v0
+    const/16 v1, 0x1f
 
-    if-eqz v0, :cond_0
+    if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1, p2}, Landroidx/core/widget/i$a;->c(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {p0, p1, p2}, Landroidx/core/widget/i$b;->c(Landroid/widget/EdgeEffect;FF)F
 
     move-result p0
 

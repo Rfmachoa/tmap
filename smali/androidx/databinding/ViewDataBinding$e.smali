@@ -89,7 +89,7 @@
     if-nez p1, :cond_3
 
     .line 4
-    invoke-static {p2, p4}, Landroidx/databinding/ViewDataBinding;->d(Landroidx/databinding/ViewDataBinding;Z)Z
+    invoke-static {p2, p4}, Landroidx/databinding/ViewDataBinding;->f(Landroidx/databinding/ViewDataBinding;Z)Z
 
     :cond_3
     :goto_0

@@ -22,11 +22,13 @@
 
 .field public final synthetic val$query:Lcom/google/firebase/database/Query;
 
+.field public final synthetic val$repo:Lcom/google/firebase/database/core/Repo;
+
 .field public final synthetic val$source:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/firebase/database/core/Repo;Lcom/google/firebase/database/Query;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+.method public constructor <init>(Lcom/google/firebase/database/core/Repo;Lcom/google/firebase/database/Query;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/core/Repo;)V
     .locals 0
 
     .line 1
@@ -36,15 +38,211 @@
 
     iput-object p3, p0, Lcom/google/firebase/database/core/Repo$9;->val$source:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    iput-object p4, p0, Lcom/google/firebase/database/core/Repo$9;->val$repo:Lcom/google/firebase/database/core/Repo;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/google/firebase/database/core/Repo$9;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;Lcom/google/firebase/database/Query;Lcom/google/firebase/database/core/Repo;Lcom/google/android/gms/tasks/Task;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/google/firebase/database/core/Repo$9;->lambda$run$1(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;Lcom/google/firebase/database/Query;Lcom/google/firebase/database/core/Repo;Lcom/google/android/gms/tasks/Task;)V
+
+    return-void
+.end method
+
+.method public static synthetic b(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/firebase/database/core/Repo$9;->lambda$run$0(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;)V
+
+    return-void
+.end method
+
+.method private static synthetic lambda$run$0(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetResult(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method private synthetic lambda$run$1(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;Lcom/google/firebase/database/Query;Lcom/google/firebase/database/core/Repo;Lcom/google/android/gms/tasks/Task;)V
+    .locals 4
+
+    .line 1
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/tasks/Task;->isComplete()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {p5}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 3
+    invoke-virtual {p2}, Lcom/google/firebase/database/DataSnapshot;->exists()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    .line 4
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 5
+    :cond_1
+    invoke-virtual {p5}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object p3, p2
+
+    check-cast p3, Ljava/lang/Exception;
+
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
+
+    goto :goto_1
+
+    .line 6
+    :cond_2
+    invoke-virtual {p5}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/google/firebase/database/snapshot/NodeUtilities;->NodeFromJSON(Ljava/lang/Object;)Lcom/google/firebase/database/snapshot/Node;
+
+    move-result-object p2
+
+    .line 7
+    invoke-virtual {p3}, Lcom/google/firebase/database/Query;->getSpec()Lcom/google/firebase/database/core/view/QuerySpec;
+
+    move-result-object p5
+
+    .line 8
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p5, v1, v1}, Lcom/google/firebase/database/core/Repo;->keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
+
+    .line 9
+    invoke-virtual {p5}, Lcom/google/firebase/database/core/view/QuerySpec;->loadsAllData()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 10
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
+    invoke-static {v0}, Lcom/google/firebase/database/core/Repo;->access$900(Lcom/google/firebase/database/core/Repo;)Lcom/google/firebase/database/core/SyncTree;
+
+    move-result-object v0
+
+    invoke-virtual {p5}, Lcom/google/firebase/database/core/view/QuerySpec;->getPath()Lcom/google/firebase/database/core/Path;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2, p2}, Lcom/google/firebase/database/core/SyncTree;->applyServerOverwrite(Lcom/google/firebase/database/core/Path;Lcom/google/firebase/database/snapshot/Node;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 11
+    :cond_3
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
+    .line 12
+    invoke-static {v0}, Lcom/google/firebase/database/core/Repo;->access$900(Lcom/google/firebase/database/core/Repo;)Lcom/google/firebase/database/core/SyncTree;
+
+    move-result-object v0
+
+    .line 13
+    invoke-virtual {p5}, Lcom/google/firebase/database/core/view/QuerySpec;->getPath()Lcom/google/firebase/database/core/Path;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
+    .line 14
+    invoke-virtual {v3}, Lcom/google/firebase/database/core/Repo;->getServerSyncTree()Lcom/google/firebase/database/core/SyncTree;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p5}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
+
+    move-result-object v3
+
+    .line 15
+    invoke-virtual {v0, v2, p2, v3}, Lcom/google/firebase/database/core/SyncTree;->applyTaggedQueryOverwrite(Lcom/google/firebase/database/core/Path;Lcom/google/firebase/database/snapshot/Node;Lcom/google/firebase/database/core/Tag;)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 16
+    :goto_0
+    invoke-static {p4, v0}, Lcom/google/firebase/database/core/Repo;->access$500(Lcom/google/firebase/database/core/Repo;Ljava/util/List;)V
+
+    .line 17
+    invoke-virtual {p3}, Lcom/google/firebase/database/Query;->getRef()Lcom/google/firebase/database/DatabaseReference;
+
+    move-result-object p4
+
+    .line 18
+    invoke-virtual {p3}, Lcom/google/firebase/database/Query;->getSpec()Lcom/google/firebase/database/core/view/QuerySpec;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lcom/google/firebase/database/core/view/QuerySpec;->getIndex()Lcom/google/firebase/database/snapshot/Index;
+
+    move-result-object p3
+
+    invoke-static {p2, p3}, Lcom/google/firebase/database/snapshot/IndexedNode;->from(Lcom/google/firebase/database/snapshot/Node;Lcom/google/firebase/database/snapshot/Index;)Lcom/google/firebase/database/snapshot/IndexedNode;
+
+    move-result-object p2
+
+    .line 19
+    invoke-static {p4, p2}, Lcom/google/firebase/database/InternalHelpers;->createDataSnapshot(Lcom/google/firebase/database/DatabaseReference;Lcom/google/firebase/database/snapshot/IndexedNode;)Lcom/google/firebase/database/DataSnapshot;
+
+    move-result-object p2
+
+    .line 20
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
+
+    .line 21
+    iget-object p1, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p5, p2, v1}, Lcom/google/firebase/database/core/Repo;->keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
+
+    :goto_1
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 9
 
     .line 1
     iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
@@ -108,13 +306,47 @@
     .line 7
     iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
 
+    invoke-static {v0}, Lcom/google/firebase/database/core/Repo;->access$900(Lcom/google/firebase/database/core/Repo;)Lcom/google/firebase/database/core/SyncTree;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/firebase/database/core/Repo$9;->val$query:Lcom/google/firebase/database/Query;
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/database/core/SyncTree;->persistenceServerCache(Lcom/google/firebase/database/Query;)Lcom/google/firebase/database/DataSnapshot;
+
+    move-result-object v5
+
+    .line 8
+    invoke-virtual {v5}, Lcom/google/firebase/database/DataSnapshot;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 9
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
+    iget-object v1, p0, Lcom/google/firebase/database/core/Repo$9;->val$source:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+    new-instance v2, Lcom/google/firebase/database/core/e;
+
+    invoke-direct {v2, v1, v5}, Lcom/google/firebase/database/core/e;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;)V
+
+    const-wide/16 v3, 0xbb8
+
+    invoke-virtual {v0, v2, v3, v4}, Lcom/google/firebase/database/core/Repo;->scheduleDelayed(Ljava/lang/Runnable;J)V
+
+    .line 10
+    :cond_1
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
+
     invoke-static {v0}, Lcom/google/firebase/database/core/Repo;->access$200(Lcom/google/firebase/database/core/Repo;)Lcom/google/firebase/database/connection/PersistentConnection;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/firebase/database/core/Repo$9;->val$query:Lcom/google/firebase/database/Query;
 
-    .line 8
+    .line 11
     invoke-virtual {v1}, Lcom/google/firebase/database/Query;->getPath()Lcom/google/firebase/database/core/Path;
 
     move-result-object v1
@@ -143,7 +375,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/database/core/Repo$9;->this$0:Lcom/google/firebase/database/core/Repo;
 
-    .line 9
+    .line 12
     invoke-static {v1}, Lcom/google/firebase/database/core/Repo;->access$1000(Lcom/google/firebase/database/core/Repo;)Lcom/google/firebase/database/core/Context;
 
     move-result-object v1
@@ -158,12 +390,22 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/google/firebase/database/core/Repo$9$1;
+    iget-object v4, p0, Lcom/google/firebase/database/core/Repo$9;->val$source:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
-    invoke-direct {v2, p0}, Lcom/google/firebase/database/core/Repo$9$1;-><init>(Lcom/google/firebase/database/core/Repo$9;)V
+    iget-object v6, p0, Lcom/google/firebase/database/core/Repo$9;->val$query:Lcom/google/firebase/database/Query;
 
-    .line 10
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
+    iget-object v7, p0, Lcom/google/firebase/database/core/Repo$9;->val$repo:Lcom/google/firebase/database/core/Repo;
+
+    new-instance v8, Lcom/google/firebase/database/core/d;
+
+    move-object v2, v8
+
+    move-object v3, p0
+
+    invoke-direct/range {v2 .. v7}, Lcom/google/firebase/database/core/d;-><init>(Lcom/google/firebase/database/core/Repo$9;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/DataSnapshot;Lcom/google/firebase/database/Query;Lcom/google/firebase/database/core/Repo;)V
+
+    .line 13
+    invoke-virtual {v0, v1, v8}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
 
     return-void
 .end method

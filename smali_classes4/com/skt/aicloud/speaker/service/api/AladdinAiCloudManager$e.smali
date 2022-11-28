@@ -114,7 +114,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lua/d;->H(Landroid/content/Context;)Z
+    invoke-static {v4}, Lrc/d;->H(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -215,7 +215,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v4, "trigger"
+    const-string v4, "trigger"
 
     invoke-virtual {v1, v4}, Lcom/skt/aicloud/mobile/service/api/g;->a(Ljava/lang/String;)Ljava/lang/String;
 

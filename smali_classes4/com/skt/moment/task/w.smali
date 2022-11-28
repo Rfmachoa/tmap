@@ -4,13 +4,21 @@
 
 
 # static fields
-.field public static final Q:Ljava/lang/String; = "progress"
+.field public static final M:Ljava/lang/String; = "progress"
 
-.field public static final R:I = 0x3
+.field public static final N:I = 0x3
 
-.field public static S:I = 0x7d1
+.field public static O:I = 0x7d1
 
-.field public static final T:I = 0x7d1
+.field public static final P:I = 0x7d1
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final T:I
 
 .field public static final U:I
 
@@ -26,39 +34,23 @@
 
 .field public static final a0:I
 
-.field public static final b0:I
-
-.field public static final c0:I
-
-.field public static final d0:I
-
-.field public static final e0:I
-
 
 # instance fields
 .field public E:Lcom/fasterxml/jackson/databind/ObjectMapper;
 
-.field public F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+.field public F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
 
-.field public G:I
+.field public G:Lcom/skt/moment/a$k;
 
-.field public H:I
+.field public H:Ljava/lang/Thread;
 
-.field public I:Lcom/skt/moment/net/vo/ServiceReqVo;
+.field public I:Landroid/graphics/Bitmap;
 
-.field public J:Lcom/skt/moment/net/vo/ServiceResVo;
+.field public J:Lcom/skt/moment/net/vo/ServiceReqVo;
 
-.field public K:Lcom/loopj/android/http/x;
+.field public K:Lcom/skt/moment/net/vo/ServiceResVo;
 
-.field public L:Ljava/lang/Thread;
-
-.field public M:Landroid/graphics/Bitmap;
-
-.field public N:Lcom/skt/moment/net/vo/ServiceReqVo;
-
-.field public O:Lcom/skt/moment/net/vo/ServiceResVo;
-
-.field public P:Lcom/loopj/android/http/x;
+.field public L:Lcom/loopj/android/http/x;
 
 
 # direct methods
@@ -70,90 +62,106 @@
     add-int/lit8 v0, v0, 0x1
 
     .line 1
-    sput v0, Lcom/skt/moment/task/w;->S:I
+    sput v0, Lcom/skt/moment/task/w;->O:I
 
     add-int/lit8 v1, v0, 0x1
 
     .line 2
-    sput v1, Lcom/skt/moment/task/w;->S:I
+    sput v1, Lcom/skt/moment/task/w;->O:I
+
+    sput v0, Lcom/skt/moment/task/w;->Q:I
+
+    add-int/lit8 v0, v1, 0x1
+
+    .line 3
+    sput v0, Lcom/skt/moment/task/w;->O:I
+
+    sput v1, Lcom/skt/moment/task/w;->R:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    .line 4
+    sput v1, Lcom/skt/moment/task/w;->O:I
+
+    sput v0, Lcom/skt/moment/task/w;->S:I
+
+    add-int/lit8 v0, v1, 0x1
+
+    .line 5
+    sput v0, Lcom/skt/moment/task/w;->O:I
+
+    sput v1, Lcom/skt/moment/task/w;->T:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    .line 6
+    sput v1, Lcom/skt/moment/task/w;->O:I
 
     sput v0, Lcom/skt/moment/task/w;->U:I
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 3
-    sput v0, Lcom/skt/moment/task/w;->S:I
+    .line 7
+    sput v0, Lcom/skt/moment/task/w;->O:I
 
     sput v1, Lcom/skt/moment/task/w;->V:I
 
     add-int/lit8 v1, v0, 0x1
 
-    .line 4
-    sput v1, Lcom/skt/moment/task/w;->S:I
+    .line 8
+    sput v1, Lcom/skt/moment/task/w;->O:I
 
     sput v0, Lcom/skt/moment/task/w;->W:I
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 5
-    sput v0, Lcom/skt/moment/task/w;->S:I
+    .line 9
+    sput v0, Lcom/skt/moment/task/w;->O:I
 
     sput v1, Lcom/skt/moment/task/w;->X:I
 
     add-int/lit8 v1, v0, 0x1
 
-    .line 6
-    sput v1, Lcom/skt/moment/task/w;->S:I
+    .line 10
+    sput v1, Lcom/skt/moment/task/w;->O:I
 
     sput v0, Lcom/skt/moment/task/w;->Y:I
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 7
-    sput v0, Lcom/skt/moment/task/w;->S:I
+    .line 11
+    sput v0, Lcom/skt/moment/task/w;->O:I
 
     sput v1, Lcom/skt/moment/task/w;->Z:I
 
     add-int/lit8 v1, v0, 0x1
 
-    .line 8
-    sput v1, Lcom/skt/moment/task/w;->S:I
+    .line 12
+    sput v1, Lcom/skt/moment/task/w;->O:I
 
     sput v0, Lcom/skt/moment/task/w;->a0:I
-
-    add-int/lit8 v0, v1, 0x1
-
-    .line 9
-    sput v0, Lcom/skt/moment/task/w;->S:I
-
-    sput v1, Lcom/skt/moment/task/w;->b0:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    .line 10
-    sput v1, Lcom/skt/moment/task/w;->S:I
-
-    sput v0, Lcom/skt/moment/task/w;->c0:I
-
-    add-int/lit8 v0, v1, 0x1
-
-    .line 11
-    sput v0, Lcom/skt/moment/task/w;->S:I
-
-    sput v1, Lcom/skt/moment/task/w;->d0:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    .line 12
-    sput v1, Lcom/skt/moment/task/w;->S:I
-
-    sput v0, Lcom/skt/moment/task/w;->e0:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ResPlaceCampaign;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;Lcom/skt/moment/a$k;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "receivePlaceCoupon",
+            "placeCallback"
+        }
+    .end annotation
 
     const-string v1, "place"
 
@@ -177,13 +185,11 @@
 
     iput-object p1, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
 
-    const/4 p2, 0x3
-
     .line 3
-    iput p2, p0, Lcom/skt/moment/task/w;->G:I
+    iput-object p4, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
 
     .line 4
-    iput-object p4, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    iput-object p5, p0, Lcom/skt/moment/task/w;->G:Lcom/skt/moment/a$k;
 
     .line 5
     sget-object p2, Lcom/fasterxml/jackson/databind/DeserializationFeature;->FAIL_ON_UNKNOWN_PROPERTIES:Lcom/fasterxml/jackson/databind/DeserializationFeature;
@@ -199,7 +205,7 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/task/w;->K:Lcom/loopj/android/http/x;
+    iput-object p1, p0, Lcom/skt/moment/task/w;->L:Lcom/loopj/android/http/x;
 
     return-object p1
 .end method
@@ -213,20 +219,11 @@
     return-object p0
 .end method
 
-.method public static synthetic O(Lcom/skt/moment/task/w;Lcom/loopj/android/http/x;)Lcom/loopj/android/http/x;
+.method public static synthetic O(Lcom/skt/moment/task/w;Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/task/w;->P:Lcom/loopj/android/http/x;
-
-    return-object p1
-.end method
-
-.method public static synthetic P(Lcom/skt/moment/task/w;Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/moment/task/w;->f0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
+    invoke-virtual {p0, p1}, Lcom/skt/moment/task/w;->e0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
 
     move-result-object p0
 
@@ -237,9 +234,19 @@
 # virtual methods
 .method public H(ILandroid/os/Bundle;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "extras"
+        }
+    .end annotation
 
     .line 1
-    sget v0, Lcom/skt/moment/task/w;->T:I
+    sget v0, Lcom/skt/moment/task/w;->P:I
 
     const/4 v1, 0x1
 
@@ -251,7 +258,7 @@
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->c0()Z
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->b0()Z
 
     return v1
 
@@ -267,69 +274,81 @@
 
     .line 5
     :cond_1
-    sget v0, Lcom/skt/moment/task/w;->V:I
+    sget v0, Lcom/skt/moment/task/w;->R:I
 
-    if-ne v0, p1, :cond_2
+    if-ne v0, p1, :cond_3
 
     .line 6
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->S()Z
-
-    return v1
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->R()Z
 
     .line 8
-    :cond_2
-    sget v0, Lcom/skt/moment/task/w;->W:I
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
-    if-ne v0, p1, :cond_3
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
+
+    move-result-object p1
 
     .line 9
-    invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
+    invoke-virtual {p1}, Lcd/a$a;->a()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "place-close"
+
+    if-eq v0, p1, :cond_2
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->n0()V
+    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->Z(Landroid/os/Bundle;)Z
 
-    .line 11
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->W()Z
-
+    :cond_2
     return v1
 
-    .line 12
+    .line 11
     :cond_3
-    sget v0, Lcom/skt/moment/task/w;->X:I
+    sget v0, Lcom/skt/moment/task/w;->S:I
 
     if-ne v0, p1, :cond_4
 
-    .line 13
+    .line 12
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
-    .line 14
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->n0()V
+    .line 13
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
 
-    .line 15
+    .line 14
     invoke-virtual {p0}, Lcom/skt/moment/task/w;->V()Z
 
     return v1
 
-    .line 16
+    .line 15
     :cond_4
-    sget v0, Lcom/skt/moment/task/w;->Y:I
+    sget v0, Lcom/skt/moment/task/w;->T:I
 
     if-ne v0, p1, :cond_5
 
-    .line 17
+    .line 16
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
+    .line 17
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
+
     .line 18
-    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->a0(Landroid/os/Bundle;)Z
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->U()Z
 
     return v1
 
     .line 19
     :cond_5
-    sget v0, Lcom/skt/moment/task/w;->Z:I
+    sget v0, Lcom/skt/moment/task/w;->U:I
 
     if-ne v0, p1, :cond_6
 
@@ -337,13 +356,13 @@
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
     .line 21
-    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->b0(Landroid/os/Bundle;)Z
+    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->Z(Landroid/os/Bundle;)Z
 
     return v1
 
     .line 22
     :cond_6
-    sget v0, Lcom/skt/moment/task/w;->a0:I
+    sget v0, Lcom/skt/moment/task/w;->V:I
 
     if-ne v0, p1, :cond_7
 
@@ -351,13 +370,13 @@
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
     .line 24
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->p0()Z
+    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->a0(Landroid/os/Bundle;)Z
 
     return v1
 
     .line 25
     :cond_7
-    sget v0, Lcom/skt/moment/task/w;->b0:I
+    sget v0, Lcom/skt/moment/task/w;->W:I
 
     if-ne v0, p1, :cond_8
 
@@ -365,13 +384,13 @@
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
     .line 27
-    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->U(Landroid/os/Bundle;)Z
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->o0()Z
 
     return v1
 
     .line 28
     :cond_8
-    sget v0, Lcom/skt/moment/task/w;->c0:I
+    sget v0, Lcom/skt/moment/task/w;->X:I
 
     if-ne v0, p1, :cond_9
 
@@ -379,60 +398,84 @@
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
     .line 30
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->n0()V
-
-    .line 31
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->Y()Z
+    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->T(Landroid/os/Bundle;)Z
 
     return v1
 
-    .line 32
+    .line 31
     :cond_9
-    sget v0, Lcom/skt/moment/task/w;->d0:I
+    sget v0, Lcom/skt/moment/task/w;->Y:I
 
     if-ne v0, p1, :cond_a
 
-    .line 33
+    .line 32
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
-    .line 34
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->n0()V
+    .line 33
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
 
-    .line 35
+    .line 34
     invoke-virtual {p0}, Lcom/skt/moment/task/w;->X()Z
 
     return v1
 
-    .line 36
+    .line 35
     :cond_a
-    sget v0, Lcom/skt/moment/task/w;->e0:I
+    sget v0, Lcom/skt/moment/task/w;->Z:I
 
     if-ne v0, p1, :cond_b
 
-    .line 37
+    .line 36
     invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
 
-    .line 38
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->n0()V
+    .line 37
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
 
-    .line 39
-    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->Z(Landroid/os/Bundle;)Z
+    .line 38
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->W()Z
 
     return v1
 
+    .line 39
     :cond_b
+    sget v0, Lcom/skt/moment/task/w;->a0:I
+
+    if-ne v0, p1, :cond_c
+
+    .line 40
+    invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->I(II)V
+
+    .line 41
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
+
+    .line 42
+    invoke-virtual {p0, p2}, Lcom/skt/moment/task/w;->Y(Landroid/os/Bundle;)Z
+
+    return v1
+
+    :cond_c
     return v2
 .end method
 
 .method public I(II)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "result"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
     if-ne v0, p2, :cond_3
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v1
 
@@ -440,14 +483,14 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v1, v2}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
     .line 2
-    invoke-virtual {v1}, Lfb/a$a;->r()Ljava/lang/String;
+    invoke-virtual {v1}, Lcd/a$a;->r()Ljava/lang/String;
 
     move-result-object v2
 
@@ -465,10 +508,10 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->l0()V
 
     .line 4
-    invoke-virtual {v1}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -482,7 +525,7 @@
 
     const-string v5, "message"
 
-    const-string/jumbo v6, "title"
+    const-string v6, "title"
 
     if-ne v0, v2, :cond_1
 
@@ -495,7 +538,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v6, v0}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v6, v0}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
@@ -506,7 +549,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v5, v0}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v5, v0}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iget-object v0, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
@@ -517,13 +560,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v4, v0}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v4, v0}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 8
     :cond_1
-    invoke-virtual {v1}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -544,7 +587,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v6, v0}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v6, v0}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
@@ -555,7 +598,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v5, v0}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v5, v0}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     iget-object v0, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
@@ -566,7 +609,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v4, v0}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v4, v0}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -582,24 +625,18 @@
     return-void
 .end method
 
-.method public final Q()Z
+.method public final P()Z
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/skt/moment/task/w;->J:Lcom/skt/moment/net/vo/ServiceResVo;
+    iget-object v0, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
 
-    invoke-virtual {v0}, Lcom/skt/moment/net/vo/ServiceResVo;->getResponse()Lcom/skt/moment/net/vo/ResponseVo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/moment/net/vo/ResponseVo;->getBody()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
 
     move-result-object v0
-
-    check-cast v0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
 
     .line 2
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v1
 
@@ -611,7 +648,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lfb/b;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcd/b;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -620,15 +657,15 @@
 
     move-result-object v0
 
-    new-instance v2, Lcom/skt/moment/task/w$b;
+    new-instance v2, Lcom/skt/moment/task/w$a;
 
-    invoke-direct {v2, p0}, Lcom/skt/moment/task/w$b;-><init>(Lcom/skt/moment/task/w;)V
+    invoke-direct {v2, p0}, Lcom/skt/moment/task/w$a;-><init>(Lcom/skt/moment/task/w;)V
 
-    invoke-static {v0, v1, v2}, Lib/d;->d(Ljava/lang/String;Ljava/lang/String;Lib/d$c;)Ljava/lang/Thread;
+    invoke-static {v0, v1, v2}, Lfd/d;->d(Ljava/lang/String;Ljava/lang/String;Lfd/d$c;)Ljava/lang/Thread;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/moment/task/w;->L:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/skt/moment/task/w;->H:Ljava/lang/Thread;
 
     .line 4
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
@@ -638,11 +675,19 @@
     return v0
 .end method
 
-.method public R(I)Ljava/lang/String;
+.method public Q(I)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "operationCode"
+        }
+    .end annotation
 
     .line 1
-    sget v0, Lcom/skt/moment/task/w;->T:I
+    sget v0, Lcom/skt/moment/task/w;->P:I
 
     if-ne v0, p1, :cond_0
 
@@ -652,7 +697,7 @@
 
     .line 2
     :cond_0
-    sget v0, Lcom/skt/moment/task/w;->U:I
+    sget v0, Lcom/skt/moment/task/w;->Q:I
 
     if-ne v0, p1, :cond_1
 
@@ -662,7 +707,7 @@
 
     .line 3
     :cond_1
-    sget v0, Lcom/skt/moment/task/w;->V:I
+    sget v0, Lcom/skt/moment/task/w;->R:I
 
     if-ne v0, p1, :cond_2
 
@@ -672,7 +717,7 @@
 
     .line 4
     :cond_2
-    sget v0, Lcom/skt/moment/task/w;->W:I
+    sget v0, Lcom/skt/moment/task/w;->S:I
 
     if-ne v0, p1, :cond_3
 
@@ -682,7 +727,7 @@
 
     .line 5
     :cond_3
-    sget v0, Lcom/skt/moment/task/w;->X:I
+    sget v0, Lcom/skt/moment/task/w;->T:I
 
     if-ne v0, p1, :cond_4
 
@@ -692,7 +737,7 @@
 
     .line 6
     :cond_4
-    sget v0, Lcom/skt/moment/task/w;->Y:I
+    sget v0, Lcom/skt/moment/task/w;->U:I
 
     if-ne v0, p1, :cond_5
 
@@ -702,7 +747,7 @@
 
     .line 7
     :cond_5
-    sget v0, Lcom/skt/moment/task/w;->Z:I
+    sget v0, Lcom/skt/moment/task/w;->V:I
 
     if-ne v0, p1, :cond_6
 
@@ -712,7 +757,7 @@
 
     .line 8
     :cond_6
-    sget v0, Lcom/skt/moment/task/w;->a0:I
+    sget v0, Lcom/skt/moment/task/w;->W:I
 
     if-ne v0, p1, :cond_7
 
@@ -722,7 +767,7 @@
 
     .line 9
     :cond_7
-    sget v0, Lcom/skt/moment/task/w;->b0:I
+    sget v0, Lcom/skt/moment/task/w;->X:I
 
     if-ne v0, p1, :cond_8
 
@@ -732,7 +777,7 @@
 
     .line 10
     :cond_8
-    sget v0, Lcom/skt/moment/task/w;->c0:I
+    sget v0, Lcom/skt/moment/task/w;->Y:I
 
     if-ne v0, p1, :cond_9
 
@@ -742,7 +787,7 @@
 
     .line 11
     :cond_9
-    sget v0, Lcom/skt/moment/task/w;->d0:I
+    sget v0, Lcom/skt/moment/task/w;->Z:I
 
     if-ne v0, p1, :cond_a
 
@@ -752,7 +797,7 @@
 
     .line 12
     :cond_a
-    sget v0, Lcom/skt/moment/task/w;->e0:I
+    sget v0, Lcom/skt/moment/task/w;->a0:I
 
     if-ne v0, p1, :cond_b
 
@@ -766,11 +811,11 @@
     return-object p1
 .end method
 
-.method public final S()Z
+.method public final R()Z
     .locals 3
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
@@ -778,7 +823,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
@@ -792,10 +837,10 @@
     const-string v2, "idle"
 
     .line 2
-    invoke-virtual {v0, v2}, Lfb/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcd/a$a;->D(Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -819,33 +864,62 @@
     return v1
 .end method
 
-.method public final T()Z
+.method public final S()Z
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->i0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->h0()V
 
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final U(Landroid/os/Bundle;)Z
+.method public final T(Landroid/os/Bundle;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "extras"
+        }
+    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->k0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->j0()V
 
     const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public final V()Z
+.method public final U()Z
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->i0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->h0()V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final V()Z
+    .locals 3
+
+    .line 1
+    sget v0, Lcom/skt/moment/task/w;->U:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2}, Lcom/skt/moment/task/a;->L(Landroid/os/Bundle;I)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/skt/moment/task/w;->H(ILandroid/os/Bundle;)Z
 
     const/4 v0, 0x1
 
@@ -853,97 +927,59 @@
 .end method
 
 .method public final W()Z
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/moment/task/w;->J:Lcom/skt/moment/net/vo/ServiceResVo;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/skt/moment/net/vo/ServiceResVo;->isResponseSuccess()Z
-
-    move-result v0
-
-    if-ne v1, v0, :cond_0
-
-    .line 2
-    sget v0, Lcom/skt/moment/task/w;->Y:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v2, v3}, Lcom/skt/moment/task/a;->L(Landroid/os/Bundle;I)Landroid/os/Bundle;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->H(ILandroid/os/Bundle;)Z
-
-    return v1
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->r0()Z
-
-    return v1
-.end method
-
-.method public final X()Z
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->i0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->h0()V
 
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final Y()Z
-    .locals 4
+.method public final X()Z
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/moment/task/w;->O:Lcom/skt/moment/net/vo/ServiceResVo;
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->h0()V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lcom/skt/moment/net/vo/ServiceResVo;->isResponseSuccess()Z
+.method public final Y(Landroid/os/Bundle;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "extras"
+        }
+    .end annotation
 
-    move-result v0
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->h0()V
 
-    if-ne v1, v0, :cond_0
+    const/4 p1, 0x1
 
-    .line 2
-    sget v0, Lcom/skt/moment/task/w;->e0:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v2, v3}, Lcom/skt/moment/task/a;->L(Landroid/os/Bundle;I)Landroid/os/Bundle;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v2}, Lcom/skt/moment/task/w;->H(ILandroid/os/Bundle;)Z
-
-    return v1
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->q0()Z
-
-    return v1
+    return p1
 .end method
 
 .method public final Z(Landroid/os/Bundle;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "extras"
+        }
+    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->i0()V
+    invoke-static {}, Lcom/skt/moment/a;->r()V
 
     const/4 p1, 0x1
 
@@ -962,50 +998,31 @@
 .end method
 
 .method public final a0(Landroid/os/Bundle;)Z
-    .locals 2
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "extras"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/moment/a;->r()V
-
-    .line 2
     invoke-virtual {p0, p1}, Lcom/skt/moment/task/a;->G(Landroid/os/Bundle;)Z
 
     move-result p1
 
-    const/4 v0, 0x1
+    if-nez p1, :cond_0
 
-    if-nez p1, :cond_1
+    const/4 p1, 0x0
 
-    .line 3
-    iget p1, p0, Lcom/skt/moment/task/w;->G:I
+    return p1
 
-    iget v1, p0, Lcom/skt/moment/task/w;->H:I
-
-    if-gt p1, v1, :cond_0
-
-    .line 4
-    sget p1, Lfb/a;->F0:I
-
-    invoke-virtual {p0, p1}, Lcom/skt/moment/task/w;->j0(I)V
-
-    return v0
-
-    .line 5
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->m0()V
+    const/4 p1, 0x1
 
-    .line 6
-    sget p1, Lcom/skt/moment/task/w;->W:I
-
-    invoke-virtual {p0, p1, v0}, Lcom/skt/moment/task/w;->I(II)V
-
-    return v0
-
-    .line 7
-    :cond_1
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->Q()Z
-
-    return v0
+    return p1
 .end method
 
 .method public b()I
@@ -1040,33 +1057,33 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lfb/a;->b()Lfb/a$a;
+    invoke-virtual {v0}, Lcd/a;->b()Lcd/a$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 4
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object v0
 
     sget v1, Lcom/skt/moment/R$string;->debugging_task_exist:I
 
-    invoke-virtual {v0, v1}, Leb/b;->b(I)V
+    invoke-virtual {v0, v1}, Lbd/b;->b(I)V
 
     return v2
 
     .line 5
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->l0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->k0()V
 
     .line 6
-    sget v0, Lcom/skt/moment/task/w;->T:I
+    sget v0, Lcom/skt/moment/task/w;->P:I
 
     const/4 v2, 0x0
 
@@ -1075,124 +1092,7 @@
     return v1
 .end method
 
-.method public final b0(Landroid/os/Bundle;)Z
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/moment/task/a;->G(Landroid/os/Bundle;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public c(I)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/moment/task/w;->K:Lcom/loopj/android/http/x;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    invoke-virtual {v0}, Lcom/loopj/android/http/x;->d()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/skt/moment/task/w;->K:Lcom/loopj/android/http/x;
-
-    invoke-virtual {v0}, Lcom/loopj/android/http/x;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/moment/task/w;->K:Lcom/loopj/android/http/x;
-
-    invoke-virtual {v0, v1}, Lcom/loopj/android/http/x;->a(Z)Z
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 4
-    iput-object v0, p0, Lcom/skt/moment/task/w;->K:Lcom/loopj/android/http/x;
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Lcom/skt/moment/task/w;->L:Ljava/lang/Thread;
-
-    if-eqz v0, :cond_3
-
-    .line 6
-    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
-
-    move-result v0
-
-    if-ne v1, v0, :cond_2
-
-    .line 7
-    iget-object v0, p0, Lcom/skt/moment/task/w;->L:Ljava/lang/Thread;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    .line 8
-    :cond_2
-    :try_start_0
-    iget-object v0, p0, Lcom/skt/moment/task/w;->L:Ljava/lang/Thread;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    .line 9
-    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
-
-    :cond_3
-    :goto_0
-    const/4 v0, 0x2
-
-    const/4 v1, 0x0
-
-    .line 10
-    invoke-virtual {p0, v0, v1}, Lcom/skt/moment/task/w;->I(II)V
-
-    .line 11
-    invoke-static {}, Lfb/a;->c()Lfb/a;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lfb/a;->f(Ljava/lang/String;)Lfb/a$a;
-
-    .line 12
-    invoke-super {p0, p1}, Lcom/skt/moment/task/z;->c(I)V
-
-    return-void
-.end method
-
-.method public final c0()Z
+.method public final b0()Z
     .locals 3
 
     .line 1
@@ -1231,19 +1131,224 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 6
-    invoke-static {}, Lgb/c;->c()Lgb/c;
+    invoke-static {}, Ldd/c;->c()Ldd/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lgb/c;->e()V
+    invoke-virtual {v0}, Ldd/c;->e()V
 
     const/4 v0, 0x1
 
     return v0
 .end method
 
+.method public c(I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/moment/task/w;->H:Ljava/lang/Thread;
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
+
+    move-result v0
+
+    if-ne v1, v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/moment/task/w;->H:Ljava/lang/Thread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    .line 4
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/skt/moment/task/w;->H:Ljava/lang/Thread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    .line 6
+    invoke-virtual {p0, v0, v1}, Lcom/skt/moment/task/w;->I(II)V
+
+    .line 7
+    invoke-static {}, Lcd/a;->c()Lcd/a;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcd/a;->f(Ljava/lang/String;)Lcd/a$a;
+
+    .line 8
+    invoke-super {p0, p1}, Lcom/skt/moment/task/z;->c(I)V
+
+    return-void
+.end method
+
+.method public final c0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    :try_start_0
+    iget-object v1, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
+
+    const-class v2, Lcom/skt/moment/net/vo/ServiceResVo;
+
+    invoke-virtual {v1, p1, v2}, Lcom/fasterxml/jackson/databind/ObjectMapper;->readValue(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/skt/moment/net/vo/ServiceResVo;
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_5
+    .catch Lcom/fasterxml/jackson/databind/JsonMappingException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+
+    .line 2
+    :try_start_1
+    iget-object v0, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
+
+    invoke-virtual {p1}, Lcom/skt/moment/net/vo/ServiceResVo;->getResponse()Lcom/skt/moment/net/vo/ResponseVo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResponseVo;->getBody()Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-class v2, Lcom/skt/moment/net/vo/ResCouponDownloadVo;
+
+    invoke-virtual {v0, v1, v2}, Lcom/fasterxml/jackson/databind/ObjectMapper;->convertValue(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/moment/net/vo/ResCouponDownloadVo;
+
+    .line 3
+    invoke-virtual {p1}, Lcom/skt/moment/net/vo/ServiceResVo;->getResponse()Lcom/skt/moment/net/vo/ResponseVo;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResponseVo;->setBody(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Lcom/fasterxml/jackson/databind/JsonMappingException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_3
+    move-exception p1
+
+    move-object v3, v0
+
+    move-object v0, p1
+
+    move-object p1, v3
+
+    .line 4
+    :goto_0
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_3
+
+    :catch_4
+    move-exception p1
+
+    move-object v3, v0
+
+    move-object v0, p1
+
+    move-object p1, v3
+
+    .line 5
+    :goto_1
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_3
+
+    :catch_5
+    move-exception p1
+
+    move-object v3, v0
+
+    move-object v0, p1
+
+    move-object p1, v3
+
+    .line 6
+    :goto_2
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    :goto_3
+    return-object p1
+.end method
+
 .method public final d0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1359,123 +1464,73 @@
 .end method
 
 .method public final e0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
-    .locals 4
-
-    const/4 v0, 0x0
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
-    iget-object v1, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
+    iget-object v0, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
 
-    const-class v2, Lcom/skt/moment/net/vo/ServiceResVo;
+    const-class v1, Lcom/skt/moment/net/vo/ServiceResVo;
 
-    invoke-virtual {v1, p1, v2}, Lcom/fasterxml/jackson/databind/ObjectMapper;->readValue(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Lcom/fasterxml/jackson/databind/ObjectMapper;->readValue(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/skt/moment/net/vo/ServiceResVo;
     :try_end_0
-    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_5
-    .catch Lcom/fasterxml/jackson/databind/JsonMappingException; {:try_start_0 .. :try_end_0} :catch_4
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Lcom/fasterxml/jackson/databind/JsonMappingException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2
-    :try_start_1
-    iget-object v0, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
-
-    invoke-virtual {p1}, Lcom/skt/moment/net/vo/ServiceResVo;->getResponse()Lcom/skt/moment/net/vo/ResponseVo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResponseVo;->getBody()Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-class v2, Lcom/skt/moment/net/vo/ResCouponDownloadVo;
-
-    invoke-virtual {v0, v1, v2}, Lcom/fasterxml/jackson/databind/ObjectMapper;->convertValue(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/skt/moment/net/vo/ResCouponDownloadVo;
-
-    .line 3
-    invoke-virtual {p1}, Lcom/skt/moment/net/vo/ServiceResVo;->getResponse()Lcom/skt/moment/net/vo/ResponseVo;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResponseVo;->setBody(Ljava/lang/Object;)V
-    :try_end_1
-    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Lcom/fasterxml/jackson/databind/JsonMappingException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_3
+    goto :goto_1
 
     :catch_0
-    move-exception v0
+    move-exception p1
+
+    .line 2
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
     :catch_1
-    move-exception v0
+    move-exception p1
 
-    goto :goto_1
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
 
     :catch_2
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_3
     move-exception p1
-
-    move-object v3, v0
-
-    move-object v0, p1
-
-    move-object p1, v3
 
     .line 4
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
+
     :goto_0
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    const/4 p1, 0x0
 
-    goto :goto_3
-
-    :catch_4
-    move-exception p1
-
-    move-object v3, v0
-
-    move-object v0, p1
-
-    move-object p1, v3
-
-    .line 5
     :goto_1
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_3
-
-    :catch_5
-    move-exception p1
-
-    move-object v3, v0
-
-    move-object v0, p1
-
-    move-object p1, v3
-
-    .line 6
-    :goto_2
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    :goto_3
     return-object p1
 .end method
 
 .method public final f0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -1524,58 +1579,16 @@
     return-object p1
 .end method
 
-.method public final g0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
-    .locals 2
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
-
-    const-class v1, Lcom/skt/moment/net/vo/ServiceResVo;
-
-    invoke-virtual {v0, p1, v1}, Lcom/fasterxml/jackson/databind/ObjectMapper;->readValue(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/moment/net/vo/ServiceResVo;
-    :try_end_0
-    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Lcom/fasterxml/jackson/databind/JsonMappingException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    .line 2
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    .line 3
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_2
-    move-exception p1
-
-    .line 4
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    :goto_0
-    const/4 p1, 0x0
-
-    :goto_1
-    return-object p1
-.end method
-
-.method public h0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
+.method public g0(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1693,11 +1706,11 @@
     return-object p1
 .end method
 
-.method public final i0()V
+.method public final h0()V
     .locals 5
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
@@ -1705,14 +1718,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lfb/a$a;
+    new-instance v0, Lcd/a$a;
 
     invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
 
@@ -1720,14 +1733,14 @@
 
     const/16 v2, 0x8
 
-    invoke-direct {v0, v1, v2}, Lfb/a$a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcd/a$a;-><init>(Ljava/lang/String;I)V
 
     .line 3
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lfb/a;->d(Lfb/a$a;)Lfb/a$a;
+    invoke-virtual {v1, v0}, Lcd/a;->d(Lcd/a$a;)Lcd/a$a;
 
     .line 4
     :cond_0
@@ -1737,7 +1750,7 @@
 
     const-string v3, "auto-coupon-download"
 
-    invoke-virtual {v0, v2, v3, v1}, Lfb/a$a;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcd/a$a;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;)V
 
     const-string v1, "place-campaign-common"
 
@@ -1746,47 +1759,64 @@
     const-string v4, ""
 
     .line 5
-    invoke-virtual {v0, v1, v3, v4}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v3, v4}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a$a;->C(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcd/a$a;->C(Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {v0, v2}, Lfb/a$a;->B(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcd/a$a;->B(Ljava/lang/String;)V
 
     const-string v1, "anim"
 
     .line 8
-    invoke-virtual {v0, v1}, Lfb/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcd/a$a;->D(Ljava/lang/String;)V
 
     .line 9
-    sget v0, Lcom/skt/moment/task/w;->U:I
+    sget v0, Lcom/skt/moment/task/w;->Q:I
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/skt/moment/task/w;->I(II)V
 
+    .line 10
+    iget-object v0, p0, Lcom/skt/moment/task/w;->G:Lcom/skt/moment/a$k;
+
+    if-eqz v0, :cond_1
+
+    .line 11
+    invoke-interface {v0}, Lcom/skt/moment/a$k;->onClose()V
+
+    :cond_1
     return-void
 .end method
 
-.method public final j0(I)V
+.method public final i0(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
 
     .line 1
-    sget v0, Lfb/a;->F0:I
+    sget v0, Lcd/a;->F0:I
 
     if-ne v0, p1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/moment/task/w;->o0()V
+    invoke-virtual {p0}, Lcom/skt/moment/task/w;->n0()V
 
     .line 3
     :cond_0
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
@@ -1794,14 +1824,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
     .line 4
-    new-instance v0, Lfb/a$a;
+    new-instance v0, Lcd/a$a;
 
     invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
 
@@ -1809,14 +1839,14 @@
 
     const/16 v2, 0x8
 
-    invoke-direct {v0, v1, v2}, Lfb/a$a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcd/a$a;-><init>(Ljava/lang/String;I)V
 
     .line 5
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lfb/a;->d(Lfb/a$a;)Lfb/a$a;
+    invoke-virtual {v1, v0}, Lcd/a;->d(Lcd/a$a;)Lcd/a$a;
 
     .line 6
     :cond_1
@@ -1828,27 +1858,27 @@
 
     const-string v2, "close-result"
 
-    invoke-virtual {v0, v1, v2, p1}, Lfb/a$a;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v1, v2, p1}, Lcd/a$a;->x(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 7
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lfb/a$a;->C(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcd/a$a;->C(Ljava/lang/String;)V
 
     const-string p1, "place-close"
 
     .line 8
-    invoke-virtual {v0, p1}, Lfb/a$a;->B(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcd/a$a;->B(Ljava/lang/String;)V
 
     const-string p1, "anim"
 
     .line 9
-    invoke-virtual {v0, p1}, Lfb/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcd/a$a;->D(Ljava/lang/String;)V
 
     .line 10
-    sget p1, Lcom/skt/moment/task/w;->U:I
+    sget p1, Lcom/skt/moment/task/w;->Q:I
 
     const/4 v0, 0x0
 
@@ -1857,11 +1887,11 @@
     return-void
 .end method
 
-.method public final k0()V
+.method public final j0()V
     .locals 6
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
@@ -1869,14 +1899,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lfb/a$a;
+    new-instance v0, Lcd/a$a;
 
     invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
 
@@ -1884,28 +1914,22 @@
 
     const/16 v2, 0x8
 
-    invoke-direct {v0, v1, v2}, Lfb/a$a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcd/a$a;-><init>(Ljava/lang/String;I)V
 
     .line 3
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lfb/a;->d(Lfb/a$a;)Lfb/a$a;
+    invoke-virtual {v1, v0}, Lcd/a;->d(Lcd/a$a;)Lcd/a$a;
 
     .line 4
     :cond_0
-    iget-object v1, p0, Lcom/skt/moment/task/w;->J:Lcom/skt/moment/net/vo/ServiceResVo;
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
 
-    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ServiceResVo;->getResponse()Lcom/skt/moment/net/vo/ResponseVo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResponseVo;->getBody()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
 
     move-result-object v1
-
-    check-cast v1, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
 
     .line 5
     iget-object v2, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
@@ -1914,29 +1938,33 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lib/d;->h(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lfd/d;->h(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 6
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lfb/a$a;->C(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lcd/a$a;->C(Ljava/lang/String;)V
 
     const-string v3, "place-campaign-coupon"
 
     .line 7
-    invoke-virtual {v0, v3}, Lfb/a$a;->B(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lcd/a$a;->B(Ljava/lang/String;)V
 
     const-string v4, "anim"
 
     .line 8
-    invoke-virtual {v0, v4}, Lfb/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lcd/a$a;->D(Ljava/lang/String;)V
 
     .line 9
-    iget-object v4, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    iget-object v4, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v4}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v4
 
     invoke-virtual {v4}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsThumbnailImagePath()Ljava/lang/String;
 
@@ -1944,7 +1972,7 @@
 
     const-string v5, "reward"
 
-    invoke-virtual {v0, v3, v5, v4}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v5, v4}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getDisplayName()Ljava/lang/String;
@@ -1953,7 +1981,7 @@
 
     const-string v5, "reward-desc"
 
-    invoke-virtual {v0, v3, v5, v4}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v5, v4}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getUsePlace()Ljava/lang/String;
@@ -1962,19 +1990,19 @@
 
     const-string/jumbo v5, "use-place"
 
-    invoke-virtual {v0, v3, v5, v4}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v5, v4}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v4, "expire-date"
 
     .line 12
-    invoke-virtual {v0, v3, v4, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v4, v2}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "coupon-type"
 
     const-string v4, "BARCODE"
 
     .line 13
-    invoke-virtual {v0, v3, v2, v4}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v2, v4}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
     invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getCouponNumber()Ljava/lang/String;
@@ -1983,7 +2011,7 @@
 
     const-string v4, "coupon-code"
 
-    invoke-virtual {v0, v3, v4, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v4, v2}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
     invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getIntroMsg1()Ljava/lang/String;
@@ -1992,10 +2020,14 @@
 
     const-string v2, "notice"
 
-    invoke-virtual {v0, v3, v2, v1}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v2, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
-    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v1
 
     invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getPoiDetailUrl()Ljava/lang/String;
 
@@ -2003,10 +2035,14 @@
 
     const-string v2, "poi-url"
 
-    invoke-virtual {v0, v3, v2, v1}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v2, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
-    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v1
 
     invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCouponButtonTitle()Ljava/lang/String;
 
@@ -2014,10 +2050,208 @@
 
     const-string v2, "coupon-button-title"
 
-    invoke-virtual {v0, v3, v2, v1}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v2, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 18
-    sget v0, Lcom/skt/moment/task/w;->U:I
+    sget v0, Lcom/skt/moment/task/w;->Q:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/skt/moment/task/w;->I(II)V
+
+    return-void
+.end method
+
+.method public final k0()V
+    .locals 5
+
+    .line 1
+    invoke-static {}, Lcd/a;->c()Lcd/a;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance v0, Lcd/a$a;
+
+    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v1, v2}, Lcd/a$a;-><init>(Ljava/lang/String;I)V
+
+    .line 3
+    invoke-static {}, Lcd/a;->c()Lcd/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcd/a;->d(Lcd/a$a;)Lcd/a$a;
+
+    .line 4
+    :cond_0
+    iget-object v1, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getExpireYmd()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lfd/d;->h(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 5
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcd/a$a;->C(Ljava/lang/String;)V
+
+    const-string v2, "place-campaign-coupon"
+
+    .line 6
+    invoke-virtual {v0, v2}, Lcd/a$a;->B(Ljava/lang/String;)V
+
+    const-string v3, "anim"
+
+    .line 7
+    invoke-virtual {v0, v3}, Lcd/a$a;->D(Ljava/lang/String;)V
+
+    .line 8
+    iget-object v3, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v3}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsThumbnailImagePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "reward"
+
+    invoke-virtual {v0, v2, v4, v3}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 9
+    iget-object v3, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v3}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getDisplayName()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "reward-desc"
+
+    invoke-virtual {v0, v2, v4, v3}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 10
+    iget-object v3, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v3}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getUsePlace()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "use-place"
+
+    invoke-virtual {v0, v2, v4, v3}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v3, "expire-date"
+
+    .line 11
+    invoke-virtual {v0, v2, v3, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "coupon-type"
+
+    const-string v3, "BARCODE"
+
+    .line 12
+    invoke-virtual {v0, v2, v1, v3}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 13
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getCouponNumber()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "coupon-code"
+
+    invoke-virtual {v0, v2, v3, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCouponTicket()Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->getIntroMsg1()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "notice"
+
+    invoke-virtual {v0, v2, v3, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 15
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getPoiDetailUrl()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "poi-url"
+
+    invoke-virtual {v0, v2, v3, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 16
+    iget-object v1, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCouponButtonTitle()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "coupon-button-title"
+
+    invoke-virtual {v0, v2, v3, v1}, Lcd/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 17
+    sget v0, Lcom/skt/moment/task/w;->Q:I
 
     const/4 v1, 0x0
 
@@ -2027,129 +2261,10 @@
 .end method
 
 .method public final l0()V
-    .locals 4
-
-    .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Lfb/a$a;
-
-    invoke-virtual {p0}, Lcom/skt/moment/task/z;->j()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v1, v2}, Lfb/a$a;-><init>(Ljava/lang/String;I)V
-
-    .line 3
-    invoke-static {}, Lfb/a;->c()Lfb/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lfb/a;->d(Lfb/a$a;)Lfb/a$a;
-
-    .line 4
-    :cond_0
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lfb/a$a;->C(Ljava/lang/String;)V
-
-    const-string v1, "place-campaign-congrats"
-
-    .line 5
-    invoke-virtual {v0, v1}, Lfb/a$a;->B(Ljava/lang/String;)V
-
-    const-string v2, "anim"
-
-    .line 6
-    invoke-virtual {v0, v2}, Lfb/a$a;->D(Ljava/lang/String;)V
-
-    .line 7
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsThumbnailImagePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "reward"
-
-    invoke-virtual {v0, v1, v3, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 8
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsThumbnailName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "reward-desc"
-
-    invoke-virtual {v0, v1, v3, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 9
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsTitle()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string/jumbo v3, "title"
-
-    invoke-virtual {v0, v1, v3, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 10
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "message"
-
-    invoke-virtual {v0, v1, v3, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 11
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getCongratsButtonTitle()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "ok"
-
-    invoke-virtual {v0, v1, v3, v2}, Lfb/a$a;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 12
-    sget v0, Lcom/skt/moment/task/w;->U:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lcom/skt/moment/task/w;->I(II)V
-
-    return-void
-.end method
-
-.method public final m0()V
     .locals 2
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
@@ -2157,7 +2272,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
@@ -2169,16 +2284,16 @@
     const-string v1, "idle"
 
     .line 2
-    invoke-virtual {v0, v1}, Lfb/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcd/a$a;->D(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final n0()V
+.method public final m0()V
     .locals 2
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
@@ -2186,7 +2301,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
@@ -2198,12 +2313,12 @@
     const-string v1, "ongoing"
 
     .line 2
-    invoke-virtual {v0, v1}, Lfb/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcd/a$a;->D(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final o0()V
+.method public final n0()V
     .locals 1
 
     .line 1
@@ -2214,11 +2329,11 @@
     return-void
 .end method
 
-.method public p0()Z
+.method public o0()Z
     .locals 3
 
     .line 1
-    sget v0, Lcom/skt/moment/task/w;->b0:I
+    sget v0, Lcom/skt/moment/task/w;->X:I
 
     const/4 v1, 0x0
 
@@ -2235,7 +2350,7 @@
     return v0
 .end method
 
-.method public q0()Z
+.method public p0()Z
     .locals 5
 
     .line 1
@@ -2263,7 +2378,11 @@
     invoke-virtual {v0, v1}, Lcom/skt/moment/net/vo/ServiceReqVo;->setBody(Ljava/lang/Object;)V
 
     .line 5
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v2
 
     invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getPlaceCampaignId()Ljava/lang/Integer;
 
@@ -2277,7 +2396,11 @@
     invoke-virtual {v1, v2}, Lcom/skt/moment/net/vo/ReqMovePlaceCampaignBodyVo;->setMoveTypeCode(Ljava/lang/String;)V
 
     .line 7
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
+
+    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;->getPlaceCampaign()Lcom/skt/moment/net/vo/ResPlaceCampaign;
+
+    move-result-object v2
 
     invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getSeed()Ljava/lang/Integer;
 
@@ -2293,107 +2416,23 @@
     invoke-virtual {p0, v2, v0, v1}, Lcom/skt/moment/task/z;->s(Ljava/lang/String;Ljava/lang/Object;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
 
     .line 9
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v1
 
     iget-object v3, p0, Lcom/skt/moment/task/a;->r:Ljava/lang/String;
 
-    new-instance v4, Lcom/skt/moment/task/w$c;
+    new-instance v4, Lcom/skt/moment/task/w$b;
 
-    invoke-direct {v4, p0}, Lcom/skt/moment/task/w$c;-><init>(Lcom/skt/moment/task/w;)V
+    invoke-direct {v4, p0}, Lcom/skt/moment/task/w$b;-><init>(Lcom/skt/moment/task/w;)V
 
-    invoke-virtual {v1, v3, v2, v0, v4}, Lhb/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual {v1, v3, v2, v0, v4}, Led/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/moment/task/w;->P:Lcom/loopj/android/http/x;
+    iput-object v0, p0, Lcom/skt/moment/task/w;->L:Lcom/loopj/android/http/x;
 
     const/4 v0, 0x1
 
     return v0
-.end method
-
-.method public r0()Z
-    .locals 6
-
-    .line 1
-    new-instance v0, Lcom/skt/moment/net/vo/ServiceReqVo;
-
-    invoke-direct {v0}, Lcom/skt/moment/net/vo/ServiceReqVo;-><init>()V
-
-    .line 2
-    iget-object v1, p0, Lcom/skt/moment/task/a;->s:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/skt/moment/task/a;->t:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lcom/skt/moment/net/vo/ReqHeaderVo;->getHeaderVO(Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/net/vo/ReqHeaderVo;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/moment/net/vo/ServiceReqVo;->setHeader(Lcom/skt/moment/net/vo/ReqHeaderVo;)V
-
-    .line 3
-    new-instance v1, Lcom/skt/moment/net/vo/ReqReceivePlaceCouponBodyVo;
-
-    invoke-direct {v1}, Lcom/skt/moment/net/vo/ReqReceivePlaceCouponBodyVo;-><init>()V
-
-    .line 4
-    invoke-virtual {v0, v1}, Lcom/skt/moment/net/vo/ServiceReqVo;->setBody(Ljava/lang/Object;)V
-
-    .line 5
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getPlaceCampaignId()Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/skt/moment/net/vo/ReqReceivePlaceCouponBodyVo;->setPlaceCampaignId(Ljava/lang/Integer;)V
-
-    .line 6
-    iget-object v2, p0, Lcom/skt/moment/task/w;->F:Lcom/skt/moment/net/vo/ResPlaceCampaign;
-
-    invoke-virtual {v2}, Lcom/skt/moment/net/vo/ResPlaceCampaign;->getSeed()Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/skt/moment/net/vo/ReqReceivePlaceCouponBodyVo;->setSeed(Ljava/lang/Integer;)V
-
-    .line 7
-    iget-object v1, p0, Lcom/skt/moment/task/w;->E:Lcom/fasterxml/jackson/databind/ObjectMapper;
-
-    const-string v2, "intrfc/moment/receivePlaceCoupon"
-
-    invoke-virtual {p0, v2, v0, v1}, Lcom/skt/moment/task/z;->s(Ljava/lang/String;Ljava/lang/Object;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
-
-    .line 8
-    iget v1, p0, Lcom/skt/moment/task/w;->H:I
-
-    const/4 v3, 0x1
-
-    add-int/2addr v1, v3
-
-    iput v1, p0, Lcom/skt/moment/task/w;->H:I
-
-    .line 9
-    iput-object v0, p0, Lcom/skt/moment/task/w;->I:Lcom/skt/moment/net/vo/ServiceReqVo;
-
-    .line 10
-    invoke-static {}, Lhb/a;->f()Lhb/a;
-
-    move-result-object v1
-
-    iget-object v4, p0, Lcom/skt/moment/task/a;->r:Ljava/lang/String;
-
-    new-instance v5, Lcom/skt/moment/task/w$a;
-
-    invoke-direct {v5, p0}, Lcom/skt/moment/task/w$a;-><init>(Lcom/skt/moment/task/w;)V
-
-    invoke-virtual {v1, v4, v2, v0, v5}, Lhb/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/skt/moment/task/w;->K:Lcom/loopj/android/http/x;
-
-    return v3
 .end method

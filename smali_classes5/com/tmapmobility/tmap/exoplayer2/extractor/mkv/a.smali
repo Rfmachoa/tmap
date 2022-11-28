@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

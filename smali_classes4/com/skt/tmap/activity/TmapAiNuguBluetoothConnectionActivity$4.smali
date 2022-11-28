@@ -63,7 +63,7 @@
 
     move-result-object p1
 
-    const-string/jumbo v0, "tmap_ble_button_already_connected"
+    const-string v0, "tmap_ble_button_already_connected"
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -72,12 +72,12 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->s()V
+    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->t()V
 
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$4;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->H5()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->P5()V
 
     goto :goto_0
 
@@ -87,7 +87,7 @@
 
     move-result-object p1
 
-    const-string/jumbo v0, "tmap_ble_button_has_connection_with_other"
+    const-string v0, "tmap_ble_button_has_connection_with_other"
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -96,12 +96,12 @@
     if-eqz p1, :cond_2
 
     .line 5
-    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->s()V
+    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->t()V
 
     .line 6
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$4;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->D5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->L5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     goto :goto_0
 
@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lno/nordicsemi/android/ble/BleManager;->a1:Ljava/lang/String;
+    sget-object v0, Lno/nordicsemi/android/ble/BleManager;->c1:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -120,12 +120,12 @@
     if-eqz p1, :cond_3
 
     .line 8
-    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->s()V
+    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->t()V
 
     .line 9
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$4;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->H5()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->P5()V
 
     goto :goto_0
 
@@ -155,12 +155,12 @@
     if-nez p1, :cond_5
 
     .line 12
-    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->s()V
+    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->t()V
 
     .line 13
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$4;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->E5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->M5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     goto :goto_0
 
@@ -179,12 +179,12 @@
     if-eqz p1, :cond_5
 
     .line 15
-    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->s()V
+    invoke-static {}, Lno/nordicsemi/android/ble/ScannerFragment;->t()V
 
     .line 16
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$4;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->D5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->L5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     :cond_5
     :goto_0

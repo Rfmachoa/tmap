@@ -3,62 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic e:Ljava/lang/String;
-
-.field public final synthetic f:Lcom/skt/tmap/vsm/data/VSMMapPoint;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity$z;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/k4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/k4;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/skt/tmap/activity/k4;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/skt/tmap/activity/k4;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lcom/skt/tmap/activity/k4;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Lcom/skt/tmap/activity/k4;->f:Lcom/skt/tmap/vsm/data/VSMMapPoint;
+    iput-object p1, p0, Lcom/skt/tmap/activity/k4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/k4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
+    iget-object v0, p0, Lcom/skt/tmap/activity/k4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/k4;->b:Ljava/lang/String;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v2, p0, Lcom/skt/tmap/activity/k4;->c:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/skt/tmap/activity/k4;->d:Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/skt/tmap/activity/k4;->e:Ljava/lang/String;
-
-    iget-object v5, p0, Lcom/skt/tmap/activity/k4;->f:Lcom/skt/tmap/vsm/data/VSMMapPoint;
-
-    invoke-static/range {v0 .. v5}, Lcom/skt/tmap/activity/TmapNaviActivity$z;->a(Lcom/skt/tmap/activity/TmapNaviActivity$z;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->N7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/util/List;)V
 
     return-void
 .end method

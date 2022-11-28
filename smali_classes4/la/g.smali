@@ -1,1120 +1,457 @@
 .class public Lla/g;
-.super Lla/a;
-.source "SyncMusicPlayer.java"
-
-# interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
-.implements Landroid/media/MediaPlayer$OnErrorListener;
-
-
-# static fields
-.field public static final f1:Ljava/lang/String;
-
-.field public static g1:Lla/g; = null
-
-.field public static final h1:I = 0x32
-
-.field public static i1:Landroid/media/MediaPlayer;
-
-.field public static j1:I
-
-.field public static k1:Z
-
-.field public static l1:Z
-
-.field public static m1:Z
-
-
-# instance fields
-.field public a1:Lma/e;
-
-.field public b1:Lma/e$b;
-
-.field public c1:Ljava/lang/String;
-
-.field public d1:Ljava/lang/String;
-
-.field public e1:Ljava/lang/Runnable;
+.super Ljava/lang/Object;
+.source "RpUtils.java"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public static a([Ljava/lang/StackTraceElement;)I
+    .locals 4
+
+    const/4 v0, 0x5
 
     .line 1
-    const-class v0, Lla/g;
+    :goto_0
+    array-length v1, p0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/4 v2, -0x1
 
-    move-result-object v0
-
-    sput-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const/4 v0, 0x0
+    if-ge v0, v1, :cond_1
 
     .line 2
-    sput v0, Lla/g;->j1:I
+    aget-object v1, p0, v0
 
     .line 3
-    sput-boolean v0, Lla/g;->k1:Z
+    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v1
 
     .line 4
-    sput-boolean v0, Lla/g;->l1:Z
+    const-class v3, Lla/f;
+
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    add-int/2addr v0, v2
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v2
+.end method
+
+.method public static b(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 5
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getFields()[Ljava/lang/reflect/Field;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 3
+    :goto_0
+    array-length v3, v1
+
+    if-ge v2, v3, :cond_0
+
+    .line 4
+    aget-object v3, v1, v2
+
+    :try_start_0
+    const-string v4, "["
 
     .line 5
-    sput-boolean v0, Lla/g;->m1:Z
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    .line 6
+    invoke-virtual {v3}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
 
-.method public constructor <init>()V
-    .locals 1
+    move-result-object v4
 
-    .line 1
-    invoke-direct {p0}, Lla/a;-><init>()V
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v4, "::"
 
-    .line 2
-    iput-object v0, p0, Lla/g;->c1:Ljava/lang/String;
+    .line 7
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
-    iput-object v0, p0, Lla/g;->d1:Ljava/lang/String;
+    .line 8
+    invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
-    new-instance v0, Lla/g$e;
+    move-result-object v3
 
-    invoke-direct {v0, p0}, Lla/g$e;-><init>(Lla/g;)V
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lla/g;->e1:Ljava/lang/Runnable;
+    const-string v3, "]"
 
-    return-void
-.end method
+    .line 9
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public static synthetic g0()Ljava/lang/String;
-    .locals 1
+    const-string v3, "  , "
 
-    .line 1
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
+    .line 10
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
-.end method
+    :catch_0
+    add-int/lit8 v2, v2, 0x1
 
-.method public static synthetic h0(Lla/g;)Lcom/skt/aicloud/speaker/service/api/a;
-    .locals 0
+    goto :goto_0
 
-    .line 1
-    invoke-virtual {p0}, Lla/g;->q0()Lcom/skt/aicloud/speaker/service/api/a;
+    .line 11
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic i0()Z
+.method public static c(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 1
-    sget-boolean v0, Lla/g;->l1:Z
+    :try_start_0
+    const-string/jumbo v0, "utf-8"
 
-    return v0
+    .line 1
+    invoke-static {p0, v0}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-object p0
 .end method
 
-.method public static synthetic j0(Z)Z
-    .locals 0
+.method public static d(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 7
 
     .line 1
-    sput-boolean p0, Lla/g;->l1:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public static synthetic k0(Lla/g;)Z
-    .locals 0
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 1
-    invoke-virtual {p0}, Lla/g;->s0()Z
+    move-result-object v1
 
-    move-result p0
+    invoke-virtual {v1}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
-    return p0
-.end method
+    move-result-object v1
 
-.method public static synthetic l0()Landroid/media/MediaPlayer;
-    .locals 1
+    const/4 v2, 0x0
 
-    .line 1
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
+    move v3, v2
 
-    return-object v0
-.end method
+    .line 3
+    :goto_0
+    array-length v4, v1
 
-.method public static synthetic m0(Lla/g;)Lma/e$b;
-    .locals 0
+    if-ge v3, v4, :cond_1
 
-    .line 1
-    iget-object p0, p0, Lla/g;->b1:Lma/e$b;
+    .line 4
+    aget-object v4, v1, v3
+
+    .line 5
+    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getDeclaringClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v6
+
+    if-ne v5, v6, :cond_0
+
+    .line 6
+    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "get"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    :try_start_0
+    const-string v5, "["
+
+    .line 7
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 8
+    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "::"
+
+    .line 9
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    .line 10
+    invoke-virtual {v4, p0, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, "]"
+
+    .line 11
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, "  , "
+
+    .line 12
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 13
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic n0()Z
-    .locals 1
+.method public static e(Ljava/lang/String;)Ljava/lang/String;
+    .locals 10
 
     .line 1
-    sget-boolean v0, Lla/g;->m1:Z
-
-    return v0
-.end method
-
-.method public static r0()Lla/g;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lla/g;->g1:Lla/g;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Lla/g;
-
-    invoke-direct {v0}, Lla/g;-><init>()V
-
-    sput-object v0, Lla/g;->g1:Lla/g;
-
-    .line 3
-    :cond_0
-    sget-object v0, Lla/g;->g1:Lla/g;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public F()Z
-    .locals 1
-
-    .line 1
-    sget-boolean v0, Lla/g;->k1:Z
-
-    return v0
-.end method
-
-.method public H()Z
-    .locals 1
-
-    .line 1
-    sget-boolean v0, Lla/g;->l1:Z
-
-    return v0
-.end method
-
-.method public Q(Z)V
-    .locals 2
-
-    .line 1
-    sget-object p1, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v0, "resetMedia()"
-
-    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    iget-object p1, p0, Lla/a;->d:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    const/4 v0, 0x0
-
-    .line 3
-    :try_start_0
-    sput-boolean v0, Lla/g;->k1:Z
-
-    .line 4
-    sput-boolean v0, Lla/g;->l1:Z
-
-    const/4 v0, 0x0
-
-    .line 5
-    iput-object v0, p0, Lla/a;->i:Landroid/media/MediaPlayer$OnPreparedListener;
-
-    .line 6
-    sget-object v1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    if-eqz v1, :cond_0
-
-    .line 7
-    invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
-
-    .line 8
-    sput-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    .line 9
-    :cond_0
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public a()Z
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lla/g;->F()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public c(ZLjava/lang/String;Lcom/skt/aicloud/speaker/service/player/BgmCaller;Ljava/lang/String;)V
-    .locals 3
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setBackground : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", cardType = "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", caller = "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", reason"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public d()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public o0()V
-    .locals 12
-
-    .line 1
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v1, "getLoggingPath : "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v2}, Lma/e$b;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", getUserId : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v2}, Lma/e$b;->g()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "getBitRate : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v2}, Lma/e$b;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", getSongId : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v2}, Lma/e$b;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "getLoggingToken : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v2}, Lma/e$b;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", getMetaType : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v2}, Lma/e$b;->e()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "DeviceToken : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->c1:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", getMenuId : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lla/g;->a1:Lma/e;
-
-    invoke-virtual {v2}, Lma/e;->k()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 5
-    new-instance v0, Lm9/a;
-
-    iget-object v3, p0, Lla/a;->a:Landroid/content/Context;
-
-    iget-object v1, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v1}, Lma/e$b;->b()Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v1, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v1}, Lma/e$b;->g()Ljava/lang/String;
-
-    move-result-object v5
-
-    iget-object v1, p0, Lla/g;->b1:Lma/e$b;
-
-    .line 6
-    invoke-virtual {v1}, Lma/e$b;->a()Ljava/lang/String;
-
-    move-result-object v6
-
-    iget-object v1, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v1}, Lma/e$b;->f()Ljava/lang/String;
-
-    move-result-object v7
-
-    iget-object v1, p0, Lla/g;->b1:Lma/e$b;
-
-    .line 7
-    invoke-virtual {v1}, Lma/e$b;->c()Ljava/lang/String;
-
-    move-result-object v8
-
-    iget-object v1, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v1}, Lma/e$b;->e()Ljava/lang/String;
-
-    move-result-object v9
-
-    iget-object v10, p0, Lla/g;->c1:Ljava/lang/String;
-
-    iget-object v1, p0, Lla/g;->a1:Lma/e;
-
-    invoke-virtual {v1}, Lma/e;->k()Ljava/lang/String;
-
-    move-result-object v11
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v11}, Lm9/a;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Lla/g$d;
-
-    invoke-direct {v1, p0}, Lla/g$d;-><init>(Lla/g;)V
-
-    .line 8
-    invoke-virtual {v0, v1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->t(Li9/d;)V
-
-    const/4 v0, 0x1
-
-    .line 9
-    sput-boolean v0, Lla/g;->m1:Z
-
-    return-void
-.end method
-
-.method public onError(Landroid/media/MediaPlayer;II)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p0(Landroid/content/Context;)V
-    .locals 1
-
-    .line 1
-    sget-object p1, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v0, "oncreate oncreate"
-
-    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public pause()V
-    .locals 3
-
-    .line 1
-    invoke-virtual {p0}, Lla/g;->H()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
-
-    move-result v0
-
-    sput v0, Lla/g;->j1:I
-
-    .line 4
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v1, "pause Position : "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget v2, Lla/g;->j1:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    .line 5
-    sput-boolean v0, Lla/g;->k1:Z
-
-    .line 6
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public q()Landroid/media/MediaPlayer;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    return-object v0
-.end method
-
-.method public final q0()Lcom/skt/aicloud/speaker/service/api/a;
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getInstance()Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    .line 2
-    :cond_0
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getAladdinAlarmManager()Lcom/skt/aicloud/speaker/service/api/a;
+    invoke-virtual {v0}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public resume()V
-    .locals 4
-
-    .line 1
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v1, "isPlay : "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lla/g;->H()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", isPause : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lla/g;->F()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 2
-    sget-boolean v1, Lla/g;->k1:Z
-
-    if-eqz v1, :cond_1
-
-    .line 3
-    iget-object v1, p0, Lla/a;->a:Landroid/content/Context;
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p0, v1, p0, v2, v3}, Lla/a;->P(Landroid/content/Context;Landroid/media/AudioManager$OnAudioFocusChangeListener;II)Z
+    invoke-static {v0}, Lla/g;->a([Ljava/lang/StackTraceElement;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/lit8 v2, v1, 0x3
+
+    .line 3
+    array-length v3, v0
+
+    const/4 v4, 0x1
+
+    if-le v2, v3, :cond_0
 
     .line 4
-    sget-object v1, Lla/g;->i1:Landroid/media/MediaPlayer;
+    array-length v2, v0
 
-    if-eqz v1, :cond_1
+    sub-int/2addr v2, v1
 
-    iget-object v1, p0, Lla/a;->i:Landroid/media/MediaPlayer$OnPreparedListener;
-
-    if-nez v1, :cond_1
-
-    const-string v1, "Resume Position : "
-
-    .line 5
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget v2, Lla/g;->j1:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    .line 6
-    sput-boolean v0, Lla/g;->k1:Z
-
-    .line 7
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    sget v1, Lla/g;->j1:I
-
-    invoke-static {v0, v1}, Lua/b;->e(Landroid/media/MediaPlayer;I)Z
-
-    .line 8
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    invoke-static {v0}, Lua/b;->g(Landroid/media/MediaPlayer;)Z
+    sub-int/2addr v2, v4
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "NOT gain AudioFocus"
+    const/4 v2, 0x3
+
+    .line 5
+    :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, " "
+
+    move v6, v2
+
+    move-object v7, v5
+
+    :goto_1
+    if-lt v6, v4, :cond_3
+
+    add-int v8, v6, v1
+
+    .line 6
+    array-length v9, v0
+
+    if-lt v8, v9, :cond_1
+
+    goto :goto_2
+
+    .line 7
+    :cond_1
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 8
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v9, v0, v8
 
     .line 9
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v9}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
-    :cond_1
-    :goto_0
-    return-void
+    move-result-object v9
+
+    invoke-static {v9}, Lla/g;->f(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v9, "."
+
+    .line 10
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v9, v0, v8
+
+    .line 11
+    invoke-virtual {v9}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 12
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v9, " ("
+
+    .line 13
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v9, v0, v8
+
+    .line 14
+    invoke-virtual {v9}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v9, ":"
+
+    .line 15
+    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v8, v0, v8
+
+    .line 16
+    invoke-virtual {v8}, Ljava/lang/StackTraceElement;->getLineNumber()I
+
+    move-result v8
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ")"
+
+    .line 17
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 18
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, "   "
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    if-ne v6, v2, :cond_2
+
+    const-string v8, "\n"
+
+    .line 19
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    :goto_2
+    add-int/lit8 v6, v6, -0x1
+
+    goto :goto_1
+
+    .line 20
+    :cond_3
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final s0()Z
+.method public static f(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v0}, Lma/e$b;->g()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lla/g;->b1:Lma/e$b;
-
-    invoke-virtual {v0}, Lma/e$b;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public t0()V
-    .locals 2
-
-    .line 1
-    sget-object v0, Lla/g;->g1:Lla/g;
-
-    invoke-virtual {v0}, Lla/g;->t0()V
-
-    .line 2
-    sget-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 3
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
+    const-string p0, ""
 
-    const/4 v0, 0x0
+    return-object p0
 
-    .line 4
-    sput-object v0, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    .line 5
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v1, "onDestroy-1"
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 6
     :cond_0
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v1, "MusicPlayer - onDestroy()"
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public u0(ZLjava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1, p2}, Lla/a;->T(ZLjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public v0(Lma/e;Landroid/content/Context;)V
-    .locals 4
-
-    .line 1
-    sget-object v0, Lla/g;->f1:Ljava/lang/String;
-
-    const-string v1, "start(), mediaPlayer = "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v2, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "."
 
     .line 2
-    iput-object p1, p0, Lla/g;->a1:Lma/e;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
 
     .line 3
-    invoke-virtual {p1}, Lma/e;->j()Lma/e$b;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    iput-object p1, p0, Lla/g;->b1:Lma/e$b;
-
-    .line 4
-    iput-object p2, p0, Lla/a;->a:Landroid/content/Context;
-
-    .line 5
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lla/g;->c1:Ljava/lang/String;
-
-    const-string p1, "DeviceToken() : "
-
-    .line 6
-    invoke-static {p1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lla/g;->c1:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    .line 7
-    sput-boolean p1, Lla/g;->m1:Z
-
-    const/4 p2, 0x1
-
-    .line 8
-    invoke-virtual {p0, p2}, Lla/g;->Q(Z)V
-
-    .line 9
-    new-instance v1, Landroid/media/MediaPlayer;
-
-    invoke-direct {v1}, Landroid/media/MediaPlayer;-><init>()V
-
-    sput-object v1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    .line 10
-    invoke-virtual {p0}, Lla/g;->q0()Lcom/skt/aicloud/speaker/service/api/a;
-
-    move-result-object v1
-
-    const-string v2, "SyncMusicPlayer start!"
-
-    invoke-virtual {v1, p1, v2}, Lcom/skt/aicloud/speaker/service/api/a;->h0(ZLjava/lang/String;)V
-
-    .line 11
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
-
-    .line 12
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "set start mediaVolume : "
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lla/a;->s()F
-
-    move-result v2
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 13
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    invoke-virtual {p0}, Lla/a;->s()F
-
-    move-result v2
-
-    invoke-virtual {p0}, Lla/a;->s()F
-
-    move-result v3
-
-    invoke-virtual {p1, v2, v3}, Landroid/media/MediaPlayer;->setVolume(FF)V
-
-    .line 14
-    iget-object p1, p0, Lla/a;->a:Landroid/content/Context;
-
-    invoke-virtual {p0, p1, p0, v1, p2}, Lla/a;->P(Landroid/content/Context;Landroid/media/AudioManager$OnAudioFocusChangeListener;II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 15
-    :try_start_0
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    iget-object p2, p0, Lla/g;->a1:Lma/e;
-
-    invoke-virtual {p2}, Lma/e;->p()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
-
-    .line 16
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p2, "SET url : "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p2, p0, Lla/g;->a1:Lma/e;
-
-    invoke-virtual {p2}, Lma/e;->p()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_2
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_3
-    move-exception p1
-
-    .line 17
-    :goto_0
-    sget-object p2, Lla/g;->f1:Ljava/lang/String;
-
-    invoke-static {p2, p1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_0
-    const-string p1, "NOT gain AudioFocus"
-
-    .line 18
-    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 19
-    :goto_1
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    invoke-virtual {p0}, Lla/g;->z()Landroid/media/MediaPlayer$OnPreparedListener;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
-
-    .line 20
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    invoke-virtual {p1}, Landroid/media/MediaPlayer;->prepareAsync()V
-
-    .line 21
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    new-instance p2, Lla/g$b;
-
-    invoke-direct {p2, p0}, Lla/g$b;-><init>(Lla/g;)V
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
-
-    .line 22
-    sget-object p1, Lla/g;->i1:Landroid/media/MediaPlayer;
-
-    new-instance p2, Lla/g$c;
-
-    invoke-direct {p2, p0}, Lla/g$c;-><init>(Lla/g;)V
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
-
-    return-void
-.end method
-
-.method public y()Lcom/skt/aicloud/speaker/service/state/a;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public z()Landroid/media/MediaPlayer$OnPreparedListener;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lla/g$a;
-
-    invoke-direct {v0, p0}, Lla/g$a;-><init>(Lla/g;)V
-
-    iput-object v0, p0, Lla/a;->i:Landroid/media/MediaPlayer$OnPreparedListener;
-
-    return-object v0
+    return-object p0
 .end method

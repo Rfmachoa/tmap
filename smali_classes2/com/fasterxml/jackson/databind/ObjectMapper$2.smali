@@ -1,83 +1,95 @@
-.class synthetic Lcom/fasterxml/jackson/databind/ObjectMapper$2;
+.class final Lcom/fasterxml/jackson/databind/ObjectMapper$2;
 .super Ljava/lang/Object;
 .source "ObjectMapper.java"
 
+# interfaces
+.implements Ljava/security/PrivilegedAction;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/fasterxml/jackson/databind/ObjectMapper;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/fasterxml/jackson/databind/ObjectMapper;->secureGetServiceLoader(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1009
+    accessFlags = 0x9
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/security/PrivilegedAction<",
+        "Ljava/util/ServiceLoader<",
+        "TT;>;>;"
+    }
+.end annotation
 
-# static fields
-.field public static final synthetic $SwitchMap$com$fasterxml$jackson$databind$ObjectMapper$DefaultTyping:[I
+
+# instance fields
+.field public final synthetic val$classLoader:Ljava/lang/ClassLoader;
+
+.field public final synthetic val$clazz:Ljava/lang/Class;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/ClassLoader;Ljava/lang/Class;)V
+    .locals 0
 
     .line 1
-    invoke-static {}, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->values()[Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+    iput-object p1, p0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->val$classLoader:Ljava/lang/ClassLoader;
+
+    iput-object p2, p0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->val$clazz:Ljava/lang/Class;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic run()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->run()Ljava/util/ServiceLoader;
 
     move-result-object v0
 
-    array-length v0, v0
+    return-object v0
+.end method
 
-    new-array v0, v0, [I
+.method public run()Ljava/util/ServiceLoader;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ServiceLoader<",
+            "TT;>;"
+        }
+    .end annotation
 
-    sput-object v0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->$SwitchMap$com$fasterxml$jackson$databind$ObjectMapper$DefaultTyping:[I
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->val$classLoader:Ljava/lang/ClassLoader;
 
-    :try_start_0
-    sget-object v1, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->NON_CONCRETE_AND_ARRAYS:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->val$clazz:Ljava/lang/Class;
 
-    move-result v1
+    .line 3
+    invoke-static {v0}, Ljava/util/ServiceLoader;->load(Ljava/lang/Class;)Ljava/util/ServiceLoader;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_0
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->$SwitchMap$com$fasterxml$jackson$databind$ObjectMapper$DefaultTyping:[I
+    :cond_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->val$clazz:Ljava/lang/Class;
 
-    sget-object v1, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->OBJECT_AND_NON_CONCRETE:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+    invoke-static {v1, v0}, Ljava/util/ServiceLoader;->load(Ljava/lang/Class;Ljava/lang/ClassLoader;)Ljava/util/ServiceLoader;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-result-object v0
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Lcom/fasterxml/jackson/databind/ObjectMapper$2;->$SwitchMap$com$fasterxml$jackson$databind$ObjectMapper$DefaultTyping:[I
-
-    sget-object v1, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->NON_FINAL:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    return-void
+    :goto_0
+    return-object v0
 .end method

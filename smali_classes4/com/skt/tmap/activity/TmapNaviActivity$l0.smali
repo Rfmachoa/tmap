@@ -49,11 +49,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$l0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->u()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->E()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -70,11 +70,11 @@
     .line 2
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$l0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->l()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->w()Landroidx/lifecycle/LiveData;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$l0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
 
     rem-int/2addr v1, v4
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->r0(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->C0(I)V
 
     goto :goto_0
 
@@ -120,11 +120,11 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$l0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->a0()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->k0()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -146,7 +146,7 @@
     :cond_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$l0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v0
 
@@ -154,7 +154,7 @@
 
     rem-int/2addr v1, v4
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->r0(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->C0(I)V
 
     :goto_0
     return-void

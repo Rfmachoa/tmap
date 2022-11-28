@@ -123,7 +123,7 @@
 
     const-string v2, "()"
 
-    invoke-static {v1, v0, v2}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -11,11 +11,11 @@
 
 .field public final synthetic b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-.field public final synthetic c:Z
+.field public final synthetic c:Landroidx/camera/core/FocusMeteringAction;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/s2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Z)V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/s2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Landroidx/camera/core/FocusMeteringAction;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +24,7 @@
 
     iput-object p2, p0, Landroidx/camera/camera2/internal/r2;->b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    iput-boolean p3, p0, Landroidx/camera/camera2/internal/r2;->c:Z
+    iput-object p3, p0, Landroidx/camera/camera2/internal/r2;->c:Landroidx/camera/core/FocusMeteringAction;
 
     return-void
 .end method
@@ -38,9 +38,9 @@
 
     iget-object v1, p0, Landroidx/camera/camera2/internal/r2;->b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    iget-boolean v2, p0, Landroidx/camera/camera2/internal/r2;->c:Z
+    iget-object v2, p0, Landroidx/camera/camera2/internal/r2;->c:Landroidx/camera/core/FocusMeteringAction;
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/s2;->a(Landroidx/camera/camera2/internal/s2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Z)V
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/s2;->c(Landroidx/camera/camera2/internal/s2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Landroidx/camera/core/FocusMeteringAction;)V
 
     return-void
 .end method

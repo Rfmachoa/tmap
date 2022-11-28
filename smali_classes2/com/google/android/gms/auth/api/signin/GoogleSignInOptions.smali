@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Api$ApiOptions$Optional;
@@ -84,14 +84,6 @@
 .end field
 
 .field private static zag:Ljava/util/Comparator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Comparator<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
@@ -105,14 +97,6 @@
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getScopes"
         id = 0x2
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
     .end annotation
 .end field
 
@@ -172,14 +156,6 @@
         getter = "getExtensions"
         id = 0x9
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;"
-        }
-    .end annotation
 .end field
 
 .field private zap:Ljava/lang/String;
@@ -193,15 +169,6 @@
 .end field
 
 .field private zaq:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -369,24 +336,6 @@
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;",
-            "Landroid/accounts/Account;",
-            "ZZZ",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
     .line 1
     invoke-static/range {p9 .. p9}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->zam(Ljava/util/List;)Ljava/util/Map;
 
@@ -436,24 +385,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;",
-            "Landroid/accounts/Account;",
-            "ZZZ",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     .line 3
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
@@ -803,18 +734,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;)",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Lcom/google/android/gms/auth/api/signin/internal/GoogleSignInOptionsExtensionParcelable;",
-            ">;"
-        }
-    .end annotation
 
     .line 1
     new-instance v0, Ljava/util/HashMap;

@@ -86,7 +86,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const-string v2, "18.2.8"
+    const-string v2, "18.2.13"
 
     aput-object v2, v0, v10
 
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    const-string v1, "18.2.8"
+    const-string v1, "18.2.13"
 
     .line 2
     invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Builder;->setSdkVersion(Ljava/lang/String;)Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport$Builder;
@@ -1130,16 +1130,12 @@
     mul-long/2addr v5, v7
 
     .line 6
-    iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->context:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->isEmulator(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->isEmulator()Z
 
     move-result v0
 
     .line 7
-    iget-object v7, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->context:Landroid/content/Context;
-
-    invoke-static {v7}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->getDeviceState(Landroid/content/Context;)I
+    invoke-static {}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->getDeviceState()I
 
     move-result v7
 
@@ -1238,10 +1234,8 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportDataCapture;->context:Landroid/content/Context;
-
     .line 5
-    invoke-static {v1}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->isRooted(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/google/firebase/crashlytics/internal/common/CommonUtils;->isRooted()Z
 
     move-result v1
 

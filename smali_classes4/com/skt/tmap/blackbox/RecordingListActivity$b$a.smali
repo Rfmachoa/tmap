@@ -59,14 +59,14 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Z0:Landroid/net/Uri;
+    iput-object v1, v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->b1:Landroid/net/Uri;
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$b$a;->a:Lcom/skt/tmap/blackbox/RecordingListActivity$b;
 
     iget-object v0, v0, Lcom/skt/tmap/blackbox/RecordingListActivity$b;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->x5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
+    invoke-static {v0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->G5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
 
     move-result v0
 
@@ -76,14 +76,14 @@
 
     iget-object v0, v0, Lcom/skt/tmap/blackbox/RecordingListActivity$b;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    iget-object v1, v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Z0:Landroid/net/Uri;
+    iget-object v1, v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->b1:Landroid/net/Uri;
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f130199
+    const v1, 0x7f14019e
 
     .line 3
-    invoke-static {v0, v1}, Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {v0, v1}, Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/blackbox/RecordingListActivity$b;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->y5(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->H5(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
 
     :goto_0
     return-void

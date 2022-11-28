@@ -60,6 +60,22 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "resHappenVo"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -172,6 +188,14 @@
 
 .method public G(Landroid/os/Bundle;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bundle"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -198,10 +222,30 @@
 .end method
 
 .method public abstract H(ILandroid/os/Bundle;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "extras"
+        }
+    .end annotation
 .end method
 
 .method public I(II)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "result"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -213,6 +257,18 @@
 
 .method public J(IILandroid/os/Bundle;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "result",
+            "extras"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/a;->v:Ljava/lang/ref/WeakReference;
@@ -242,6 +298,14 @@
 
 .method public K(Lcom/skt/moment/task/a$a;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
@@ -266,6 +330,16 @@
 
 .method public L(Landroid/os/Bundle;I)Landroid/os/Bundle;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bundle",
+            "result"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 

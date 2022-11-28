@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0007\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002j\u0002\u0008\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006j\u0002\u0008\u0007\u00a8\u0006\u0008"
     }
@@ -44,9 +39,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -65,72 +61,107 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method private static final synthetic $values()[Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    .locals 3
 
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_NONE:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    const-string v2, "AUTO_ZOOM_NONE"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_LOW:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_NONE:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    const/4 v2, 0x1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_MIDDLE:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    const-string v2, "AUTO_ZOOM_SPEED_LOW"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_HIGH:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_LOW:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    const/4 v2, 0x3
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_TBT:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    const-string v2, "AUTO_ZOOM_SPEED_MIDDLE"
+    const/4 v2, 0x4
 
-    const/4 v3, 0x2
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+    return-object v0
+.end method
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_MIDDLE:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+.method public static constructor <clinit>()V
+    .locals 3
 
-    aput-object v1, v0, v3
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    const-string v1, "AUTO_ZOOM_NONE"
 
-    const-string v2, "AUTO_ZOOM_SPEED_HIGH"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x3
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_NONE:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_HIGH:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    .line 2
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    aput-object v1, v0, v3
+    const-string v1, "AUTO_ZOOM_SPEED_LOW"
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    const/4 v2, 0x1
 
-    const-string v2, "AUTO_ZOOM_TBT"
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
 
-    const/4 v3, 0x4
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_LOW:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+    .line 3
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_TBT:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    const-string v1, "AUTO_ZOOM_SPEED_MIDDLE"
 
-    aput-object v1, v0, v3
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_MIDDLE:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+
+    .line 4
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+
+    const-string v1, "AUTO_ZOOM_SPEED_HIGH"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_SPEED_HIGH:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+
+    .line 5
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+
+    const-string v1, "AUTO_ZOOM_TBT"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->AUTO_ZOOM_TBT:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->$values()[Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->$VALUES:[Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
@@ -170,7 +201,7 @@
 
     sget-object v0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->$VALUES:[Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

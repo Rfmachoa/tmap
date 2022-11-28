@@ -86,7 +86,7 @@
     const-string v1, "android.permission.ACCESS_FINE_LOCATION"
 
     .line 1
-    invoke-static {p0, v1}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
 
@@ -166,7 +166,7 @@
 
     const-string v2, "_GOLDENEYE"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

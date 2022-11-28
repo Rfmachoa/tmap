@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final serialVersionUID:J = 0x77d76620fcbdac67L
+.field private static final serialVersionUID:J = 0x1L
 
 
 # instance fields
@@ -64,7 +64,7 @@
 
     move-result v0
 
-    const-string v1, "Can not add mapping from class "
+    const-string v1, "Cannot add mapping from class "
 
     if-eqz v0, :cond_1
 
@@ -100,7 +100,7 @@
 
     const-string v1, " since it is not abstract"
 
-    invoke-static {p1, v0, v1}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -126,6 +126,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -144,11 +145,11 @@
 
     throw v0
 
-    .line 6
+    .line 7
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Can not add mapping from class to itself"
+    const-string p2, "Cannot add mapping from class to itself"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -205,6 +206,8 @@
 
 .method public resolveAbstractType(Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JavaType;
     .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     const/4 p1, 0x0
 

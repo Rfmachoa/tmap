@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/t0;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
-
-.field public final synthetic b:Lcom/amplifyframework/api/graphql/GraphQLRequest;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/x2;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/x2;->b:Lcom/amplifyframework/api/graphql/GraphQLRequest;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/x2;->a:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/r0;)V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/x2;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/x2;->a:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/x2;->b:Lcom/amplifyframework/api/graphql/GraphQLRequest;
+    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange$Type;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->n(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;Lai/r0;)V
+    invoke-virtual {v0, p1}, Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;->increment(Lcom/amplifyframework/datastore/storage/StorageItemChange$Type;)V
 
     return-void
 .end method

@@ -64,7 +64,7 @@
     const-string v0, "metadataLoader cannot be null."
 
     .line 4
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     iput-object p1, p0, Landroidx/emoji/text/EmojiCompat$c;->a:Landroidx/emoji/text/EmojiCompat$f;
@@ -93,7 +93,7 @@
     const-string v0, "initCallback cannot be null"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat$c;->e:Ljava/util/Set;
@@ -264,7 +264,7 @@
     const-string v0, "initCallback cannot be null"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat$c;->e:Ljava/util/Set;

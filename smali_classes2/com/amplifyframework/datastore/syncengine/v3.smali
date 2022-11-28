@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/t0;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;
-
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic a:Lek/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lek/c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/v3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/v3;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/v3;->a:Lek/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/r0;)V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/v3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/v3;->a:Lek/c;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/v3;->b:Ljava/lang/String;
+    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->c(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lai/r0;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->e(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method

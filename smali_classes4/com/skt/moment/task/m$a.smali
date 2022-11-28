@@ -26,6 +26,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/m;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$socketTimeout"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/m$a;->b:Lcom/skt/moment/task/m;
@@ -100,11 +110,11 @@
     const-string v3, "appVersion"
 
     .line 8
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->a()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->a()Ljava/lang/String;
 
     move-result-object v4
 
@@ -113,11 +123,11 @@
     const-string v3, "momentVersion"
 
     .line 9
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->r()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->r()Ljava/lang/String;
 
     move-result-object v4
 
@@ -126,11 +136,11 @@
     const-string v3, "osCode"
 
     .line 10
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->s()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->s()Ljava/lang/String;
 
     move-result-object v4
 
@@ -139,11 +149,11 @@
     const-string v3, "osVersion"
 
     .line 11
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->v()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->v()Ljava/lang/String;
 
     move-result-object v4
 
@@ -152,11 +162,11 @@
     const-string v3, "modelName"
 
     .line 12
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->q()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->q()Ljava/lang/String;
 
     move-result-object v4
 
@@ -165,11 +175,11 @@
     const-string v3, "networkOperator"
 
     .line 13
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->p()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->p()Ljava/lang/String;
 
     move-result-object v4
 
@@ -178,11 +188,11 @@
     const-string v3, "fingerprint"
 
     .line 14
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->i()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->i()Ljava/lang/String;
 
     move-result-object v4
 
@@ -191,11 +201,11 @@
     const-string v3, "manufacturer"
 
     .line 15
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->o()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->o()Ljava/lang/String;
 
     move-result-object v4
 
@@ -204,11 +214,11 @@
     const-string v3, "device"
 
     .line 16
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->f()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->f()Ljava/lang/String;
 
     move-result-object v4
 
@@ -217,11 +227,11 @@
     const-string v3, "brand"
 
     .line 17
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->c()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->c()Ljava/lang/String;
 
     move-result-object v4
 
@@ -230,22 +240,22 @@
     const-string v3, "product"
 
     .line 18
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lfb/b;->u()Ljava/lang/String;
+    invoke-virtual {v4}, Lcd/b;->u()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v2, v3, v4}, Lcom/loopj/android/http/a;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 19
-    new-instance v5, Lzf/l;
+    new-instance v5, Ldi/l;
 
     const-string v3, "UTF-8"
 
-    invoke-direct {v5, v1, v3}, Lzf/l;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, v1, v3}, Ldi/l;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 20
     new-instance v7, Lcom/skt/moment/task/m$a$a;
@@ -255,7 +265,7 @@
     const/4 v1, 0x1
 
     .line 21
-    invoke-interface {v7, v1}, Lcom/loopj/android/http/y;->h(Z)V
+    invoke-interface {v7, v1}, Lcom/loopj/android/http/y;->d(Z)V
 
     .line 22
     iget-object v1, p0, Lcom/skt/moment/task/m$a;->b:Lcom/skt/moment/task/m;
@@ -270,13 +280,13 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lhb/a;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Led/a;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v6, "application/json;charset=UTF-8"
 
-    invoke-virtual/range {v2 .. v7}, Lcom/loopj/android/http/a;->b0(Landroid/content/Context;Ljava/lang/String;Ldf/l;Ljava/lang/String;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual/range {v2 .. v7}, Lcom/loopj/android/http/a;->b0(Landroid/content/Context;Ljava/lang/String;Lhh/l;Ljava/lang/String;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -284,13 +294,13 @@
 
     .line 23
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
     const-string v1, "error occured"
 
-    invoke-virtual {v0, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 24
     :goto_0

@@ -17,27 +17,27 @@
 
 
 # static fields
-.field public static final Y0:Ljava/lang/String; = "MI_CardScanner"
+.field public static final a1:Ljava/lang/String; = "MI_CardScanner"
 
-.field public static final Z0:I = 0x1388
+.field public static final b1:I = 0x1388
 
-.field public static final a1:I = 0x32
+.field public static final c1:I = 0x32
 
-.field public static b1:Z
+.field public static d1:Z
 
-.field public static final synthetic c1:Z
+.field public static final synthetic e1:Z
 
 
 # instance fields
-.field public K0:Lx5/a;
+.field public K0:Lu7/a;
 
-.field public V0:Landroid/graphics/Rect;
+.field public X0:Landroid/graphics/Rect;
 
-.field public W0:J
+.field public Y0:J
 
-.field public X0:Ljava/lang/Runnable;
+.field public Z0:Ljava/lang/Runnable;
 
-.field public a:Lw5/e;
+.field public a:Lt7/e;
 
 .field public b:Z
 
@@ -65,7 +65,7 @@
 
 .field public p:Z
 
-.field public u:Lw5/b;
+.field public u:Lt7/b;
 
 
 # direct methods
@@ -78,23 +78,23 @@
     const/4 v0, 0x0
 
     .line 2
-    sput-boolean v0, Lcom/fingram/mi/scanner/CardScanner;->b1:Z
+    sput-boolean v0, Lcom/fingram/mi/scanner/CardScanner;->d1:Z
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lw5/b;)V
+.method public constructor <init>(Landroid/content/Context;Lt7/b;)V
     .locals 3
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lw5/e;
+    new-instance v0, Lt7/e;
 
-    invoke-direct {v0}, Lw5/e;-><init>()V
+    invoke-direct {v0}, Lt7/e;-><init>()V
 
-    iput-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->a:Lw5/e;
+    iput-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->a:Lt7/e;
 
     const/4 v0, 0x1
 
@@ -128,25 +128,25 @@
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->V0:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->X0:Landroid/graphics/Rect;
 
     const-wide/16 v1, 0x0
 
     .line 11
-    iput-wide v1, p0, Lcom/fingram/mi/scanner/CardScanner;->W0:J
+    iput-wide v1, p0, Lcom/fingram/mi/scanner/CardScanner;->Y0:J
 
     .line 12
     new-instance v1, Lcom/fingram/mi/scanner/CardScanner$a;
 
     invoke-direct {v1, p0}, Lcom/fingram/mi/scanner/CardScanner$a;-><init>(Lcom/fingram/mi/scanner/CardScanner;)V
 
-    iput-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->X0:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->Z0:Ljava/lang/Runnable;
 
     .line 13
     iput-object p1, p0, Lcom/fingram/mi/scanner/CardScanner;->k0:Landroid/content/Context;
 
     .line 14
-    iput-object p2, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iput-object p2, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     .line 15
     iput-boolean v0, p0, Lcom/fingram/mi/scanner/CardScanner;->b:Z
@@ -178,7 +178,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/fingram/mi/scanner/CardScanner;->W0:J
+    iget-wide v0, p0, Lcom/fingram/mi/scanner/CardScanner;->Y0:J
 
     return-wide v0
 .end method
@@ -187,7 +187,7 @@
     .locals 0
 
     .line 1
-    iput-wide p1, p0, Lcom/fingram/mi/scanner/CardScanner;->W0:J
+    iput-wide p1, p0, Lcom/fingram/mi/scanner/CardScanner;->Y0:J
 
     return-wide p1
 .end method
@@ -232,7 +232,7 @@
     .locals 1
 
     .line 1
-    sget-boolean v0, Lcom/fingram/mi/scanner/CardScanner;->b1:Z
+    sget-boolean v0, Lcom/fingram/mi/scanner/CardScanner;->d1:Z
 
     return v0
 .end method
@@ -241,7 +241,7 @@
     .locals 0
 
     .line 1
-    sput-boolean p0, Lcom/fingram/mi/scanner/CardScanner;->b1:Z
+    sput-boolean p0, Lcom/fingram/mi/scanner/CardScanner;->d1:Z
 
     return p0
 .end method
@@ -255,11 +255,11 @@
     return p0
 .end method
 
-.method public static synthetic k(Lcom/fingram/mi/scanner/CardScanner;)Lw5/e;
+.method public static synthetic k(Lcom/fingram/mi/scanner/CardScanner;)Lt7/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/fingram/mi/scanner/CardScanner;->a:Lw5/e;
+    iget-object p0, p0, Lcom/fingram/mi/scanner/CardScanner;->a:Lt7/e;
 
     return-object p0
 .end method
@@ -282,11 +282,11 @@
     return-void
 .end method
 
-.method public static w(Lw5/b;)Landroid/hardware/Camera;
+.method public static w(Lt7/b;)Landroid/hardware/Camera;
     .locals 7
 
     .line 1
-    iget v0, p0, Lw5/b;->f:I
+    iget v0, p0, Lt7/b;->f:I
 
     const/4 v1, 0x0
 
@@ -330,7 +330,7 @@
     move-result-object v4
 
     .line 7
-    iput v1, p0, Lw5/b;->g:I
+    iput v1, p0, Lt7/b;->g:I
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -400,11 +400,11 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lw5/e;
+    new-instance v0, Lt7/e;
 
-    invoke-direct {v0}, Lw5/e;-><init>()V
+    invoke-direct {v0}, Lt7/e;-><init>()V
 
-    iput-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->a:Lw5/e;
+    iput-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->a:Lt7/e;
 
     return-void
 .end method
@@ -475,13 +475,13 @@
     div-int/lit8 v0, v0, 0x8
 
     .line 9
-    iget-object v2, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-virtual {v2}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewWidth()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-virtual {v3}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
 
@@ -503,7 +503,7 @@
     iput-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->f:Ljava/nio/ByteBuffer;
 
     .line 11
-    sget-boolean v0, Lw5/f;->k:Z
+    sget-boolean v0, Lt7/f;->k:Z
 
     if-nez v0, :cond_2
 
@@ -527,7 +527,7 @@
     if-eqz v0, :cond_4
 
     .line 16
-    sget-boolean v0, Lw5/f;->k:Z
+    sget-boolean v0, Lt7/f;->k:Z
 
     if-eqz v0, :cond_3
 
@@ -749,7 +749,7 @@
 
     .line 13
     :cond_1
-    iget-object p1, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object p1, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     iput v0, p1, Lcom/fingram/mi/bankcard/ScannerConfig;->cwPreviewDegree:I
 
@@ -770,7 +770,7 @@
     .locals 2
 
     .line 1
-    sget-boolean v0, Lw5/f;->k:Z
+    sget-boolean v0, Lt7/f;->k:Z
 
     if-eqz v0, :cond_0
 
@@ -793,14 +793,14 @@
     return-void
 .end method
 
-.method public G(Landroid/hardware/Camera;Lw5/b;)V
+.method public G(Landroid/hardware/Camera;Lt7/b;)V
     .locals 7
 
     const-string v0, "camera"
 
     .line 1
     :try_start_0
-    iget p2, p2, Lw5/b;->g:I
+    iget p2, p2, Lt7/b;->g:I
 
     .line 2
     iget-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->k0:Landroid/content/Context;
@@ -1049,11 +1049,11 @@
     return-void
 .end method
 
-.method public n(Lx5/a;)V
+.method public n(Lu7/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/fingram/mi/scanner/CardScanner;->K0:Lx5/a;
+    iput-object p1, p0, Lcom/fingram/mi/scanner/CardScanner;->K0:Lu7/a;
 
     return-void
 .end method
@@ -1076,9 +1076,9 @@
     .line 3
     :cond_0
     :try_start_0
-    iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
-    invoke-static {v3}, Lcom/fingram/mi/scanner/CardScanner;->w(Lw5/b;)Landroid/hardware/Camera;
+    invoke-static {v3}, Lcom/fingram/mi/scanner/CardScanner;->w(Lt7/b;)Landroid/hardware/Camera;
 
     move-result-object p1
     :try_end_0
@@ -1239,9 +1239,9 @@
     iput-boolean v0, p0, Lcom/fingram/mi/scanner/CardScanner;->c:Z
 
     .line 5
-    iget-object p2, p0, Lcom/fingram/mi/scanner/CardScanner;->K0:Lx5/a;
+    iget-object p2, p0, Lcom/fingram/mi/scanner/CardScanner;->K0:Lu7/a;
 
-    invoke-interface {p2}, Lx5/a;->b()V
+    invoke-interface {p2}, Lu7/a;->b()V
 
     goto :goto_0
 
@@ -1296,7 +1296,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 14
-    sput-boolean v0, Lcom/fingram/mi/scanner/CardScanner;->b1:Z
+    sput-boolean v0, Lcom/fingram/mi/scanner/CardScanner;->d1:Z
 
     return-void
 
@@ -1321,7 +1321,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->k0:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v1, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-static {v0, v1}, Lcom/fingram/mi/bankcard/BankCardScanner;->Init(Landroid/content/Context;Lcom/fingram/mi/bankcard/ScannerConfig;)Z
 
@@ -1407,7 +1407,7 @@
     int-to-float p1, p1
 
     .line 1
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-virtual {v0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
 
@@ -1419,7 +1419,7 @@
 
     int-to-float p2, p2
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-virtual {v0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewWidth()I
 
@@ -1436,7 +1436,7 @@
     .line 2
     new-instance p2, Landroid/graphics/Rect;
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->V0:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardScanner;->X0:Landroid/graphics/Rect;
 
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
@@ -1673,14 +1673,14 @@
     throw p1
 .end method
 
-.method public t(Lw5/b;)Z
+.method public t(Lt7/b;)Z
     .locals 13
 
     const-string v0, "MI_CardScanner"
 
     .line 1
     :try_start_0
-    invoke-static {p1}, Lcom/fingram/mi/scanner/CardScanner;->w(Lw5/b;)Landroid/hardware/Camera;
+    invoke-static {p1}, Lcom/fingram/mi/scanner/CardScanner;->w(Lt7/b;)Landroid/hardware/Camera;
 
     move-result-object v1
     :try_end_0
@@ -2013,7 +2013,7 @@
 
     .line 4
     :try_start_2
-    sput-boolean v1, Lcom/fingram/mi/scanner/CardScanner;->b1:Z
+    sput-boolean v1, Lcom/fingram/mi/scanner/CardScanner;->d1:Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -2036,7 +2036,7 @@
     .line 7
     new-instance p1, Ljava/lang/Thread;
 
-    iget-object v2, p0, Lcom/fingram/mi/scanner/CardScanner;->X0:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/CardScanner;->Z0:Ljava/lang/Runnable;
 
     invoke-direct {p1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -2205,13 +2205,13 @@
     move-result-object v1
 
     .line 10
-    iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-virtual {v3}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewWidth()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v4, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-virtual {v4}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
 
@@ -2230,9 +2230,9 @@
     .line 13
     iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner;->d:Landroid/hardware/Camera;
 
-    iget-object v4, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v4, p0, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
-    invoke-virtual {p0, v3, v4}, Lcom/fingram/mi/scanner/CardScanner;->G(Landroid/hardware/Camera;Lw5/b;)V
+    invoke-virtual {p0, v3, v4}, Lcom/fingram/mi/scanner/CardScanner;->G(Landroid/hardware/Camera;Lt7/b;)V
 
     .line 14
     invoke-virtual {v1}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewFpsRange()Ljava/util/List;

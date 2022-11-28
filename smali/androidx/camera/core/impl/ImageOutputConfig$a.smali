@@ -28,15 +28,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rotation"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TB;"
@@ -50,15 +41,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolution"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -78,15 +60,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -104,15 +77,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -126,15 +90,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "aspectRatio"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TB;"
@@ -142,21 +97,12 @@
     .end annotation
 .end method
 
-.method public abstract q(Ljava/util/List;)Ljava/lang/Object;
+.method public abstract p(Ljava/util/List;)Ljava/lang/Object;
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolutionsList"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;

@@ -1,17 +1,6 @@
 .class final Lcom/google/android/gms/common/internal/service/zab;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-        "Lcom/google/android/gms/common/internal/service/zah;",
-        "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # direct methods

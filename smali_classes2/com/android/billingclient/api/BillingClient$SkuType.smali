@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/android/billingclient/api/BillingClient$SkuType;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -22,6 +22,12 @@
 
 
 # static fields
-.field public static final V:Ljava/lang/String; = "inapp"
+.field public static final Z:Ljava/lang/String; = "inapp"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public static final W:Ljava/lang/String; = "subs"
+.field public static final a0:Ljava/lang/String; = "subs"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field

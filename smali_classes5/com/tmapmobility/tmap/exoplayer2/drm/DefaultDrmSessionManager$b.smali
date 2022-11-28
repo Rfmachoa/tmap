@@ -56,7 +56,7 @@
     iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DefaultDrmSessionManager$b;->a:Ljava/util/HashMap;
 
     .line 3
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/C;->S1:Ljava/util/UUID;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/C;->e2:Ljava/util/UUID;
 
     iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DefaultDrmSessionManager$b;->b:Ljava/util/UUID;
 

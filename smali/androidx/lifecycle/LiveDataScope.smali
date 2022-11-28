@@ -28,7 +28,7 @@
         "(Ljava/lang/Object;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "Landroidx/lifecycle/LiveData;",
         "source",
-        "Lkotlinx/coroutines/e1;",
+        "Lkotlinx/coroutines/f1;",
         "emitSource",
         "(Landroidx/lifecycle/LiveData;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "getLatestValue",
@@ -39,7 +39,7 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -82,7 +82,7 @@
             "TT;>;",
             "Lkotlin/coroutines/c<",
             "-",
-            "Lkotlinx/coroutines/e1;",
+            "Lkotlinx/coroutines/f1;",
             ">;)",
             "Ljava/lang/Object;"
         }

@@ -1,40 +1,15 @@
 .class public final Lcom/google/android/gms/common/api/internal/zae;
 .super Lcom/google/android/gms/common/api/internal/zai;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<A:",
-        "Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl<",
-        "+",
-        "Lcom/google/android/gms/common/api/Result;",
-        "Lcom/google/android/gms/common/api/Api$AnyClient;",
-        ">;>",
-        "Lcom/google/android/gms/common/api/internal/zai;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field public final zaa:Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TA;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(ILcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITA;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/zai;-><init>(I)V
@@ -86,7 +61,7 @@
 .end method
 
 .method public final zae(Ljava/lang/Exception;)V
-    .locals 5
+    .locals 3
     .param p1    # Ljava/lang/Exception;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -108,29 +83,9 @@
 
     move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x2
-
-    add-int/2addr v2, v3
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, ": "
 
-    invoke-static {v4, v1, v2, p1}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, p1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -163,14 +118,6 @@
 
 .method public final zaf(Lcom/google/android/gms/common/api/internal/zabq;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)V"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/DeadObjectException;

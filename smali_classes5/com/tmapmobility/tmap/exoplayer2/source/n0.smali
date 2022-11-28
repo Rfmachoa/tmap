@@ -12,7 +12,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/upstream/j;Landroid/net/Uri;Ljava/util/Map;JJLcom/tmapmobility/tmap/exoplayer2/extractor/j;)V
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/upstream/j;Landroid/net/Uri;Ljava/util/Map;JJLcom/tmapmobility/tmap/exoplayer2/extractor/l;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -23,7 +23,7 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;JJ",
-            "Lcom/tmapmobility/tmap/exoplayer2/extractor/j;",
+            "Lcom/tmapmobility/tmap/exoplayer2/extractor/l;",
             ")V"
         }
     .end annotation
@@ -41,7 +41,7 @@
 .method public abstract c()J
 .end method
 
-.method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/extractor/v;)I
+.method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

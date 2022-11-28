@@ -41,7 +41,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->g()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i()Ljava/lang/Object;
 
     move-result-object p1
 

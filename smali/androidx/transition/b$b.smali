@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/b;->r(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
+    value = Landroidx/transition/b;->o(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

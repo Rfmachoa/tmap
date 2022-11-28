@@ -1,205 +1,211 @@
-.class final Lcom/google/android/gms/auth/zze;
+.class public final Lcom/google/android/gms/auth/zze;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/google/android/gms/auth/zzj;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/auth/zzj<",
-        "Lcom/google/android/gms/auth/TokenData;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field public static final zza:Lcom/google/android/gms/common/Feature;
 
+.field public static final zzb:Lcom/google/android/gms/common/Feature;
 
-# instance fields
-.field private final synthetic val$options:Landroid/os/Bundle;
+.field public static final zzc:Lcom/google/android/gms/common/Feature;
 
-.field private final synthetic zzo:Landroid/accounts/Account;
+.field public static final zzd:Lcom/google/android/gms/common/Feature;
 
-.field private final synthetic zzp:Ljava/lang/String;
+.field public static final zze:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzf:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzg:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzh:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzi:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzj:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzk:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzl:Lcom/google/android/gms/common/Feature;
+
+.field public static final zzm:[Lcom/google/android/gms/common/Feature;
 
 
 # direct methods
-.method public constructor <init>(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 15
 
     .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/zze;->zzo:Landroid/accounts/Account;
+    new-instance v0, Lcom/google/android/gms/common/Feature;
 
-    iput-object p2, p0, Lcom/google/android/gms/auth/zze;->zzp:Ljava/lang/String;
+    const-string v1, "account_capability_api"
 
-    iput-object p3, p0, Lcom/google/android/gms/auth/zze;->val$options:Landroid/os/Bundle;
+    const-wide/16 v2, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    return-void
-.end method
+    sput-object v0, Lcom/google/android/gms/auth/zze;->zza:Lcom/google/android/gms/common/Feature;
 
+    new-instance v1, Lcom/google/android/gms/common/Feature;
 
-# virtual methods
-.method public final synthetic zzb(Landroid/os/IBinder;)Ljava/lang/Object;
-    .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;,
-            Ljava/io/IOException;,
-            Lcom/google/android/gms/auth/GoogleAuthException;
-        }
-    .end annotation
+    const-string v4, "account_data_service"
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/internal/auth/zzf;->zza(Landroid/os/IBinder;)Lcom/google/android/gms/internal/auth/zze;
-
-    move-result-object p1
+    const-wide/16 v5, 0x6
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/gms/auth/zze;->zzo:Landroid/accounts/Account;
+    invoke-direct {v1, v4, v5, v6}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/zze;->zzp:Ljava/lang/String;
+    sput-object v1, Lcom/google/android/gms/auth/zze;->zzb:Lcom/google/android/gms/common/Feature;
 
-    iget-object v2, p0, Lcom/google/android/gms/auth/zze;->val$options:Landroid/os/Bundle;
+    new-instance v4, Lcom/google/android/gms/common/Feature;
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/google/android/gms/internal/auth/zze;->zza(Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/gms/auth/zzd;->zzb(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
-
-    const-string v0, "tokenDetails"
+    const-string v5, "account_data_service_legacy"
 
     .line 3
-    invoke-static {p1, v0}, Lcom/google/android/gms/auth/TokenData;->zza(Landroid/os/Bundle;Ljava/lang/String;)Lcom/google/android/gms/auth/TokenData;
+    invoke-direct {v4, v5, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    move-result-object v0
+    sput-object v4, Lcom/google/android/gms/auth/zze;->zzc:Lcom/google/android/gms/common/Feature;
 
-    if-eqz v0, :cond_0
+    new-instance v5, Lcom/google/android/gms/common/Feature;
 
-    return-object v0
+    const-string v6, "account_data_service_token"
 
-    :cond_0
-    const-string v0, "Error"
+    const-wide/16 v7, 0x8
 
     .line 4
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v5, v6, v7, v8}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    move-result-object v0
+    sput-object v5, Lcom/google/android/gms/auth/zze;->zzd:Lcom/google/android/gms/common/Feature;
 
-    const-string v1, "userRecoveryIntent"
+    new-instance v6, Lcom/google/android/gms/common/Feature;
+
+    const-string v7, "account_data_service_visibility"
 
     .line 5
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-direct {v6, v7, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    move-result-object p1
+    sput-object v6, Lcom/google/android/gms/auth/zze;->zze:Lcom/google/android/gms/common/Feature;
 
-    check-cast p1, Landroid/content/Intent;
+    new-instance v7, Lcom/google/android/gms/common/Feature;
+
+    const-string v8, "config_sync"
 
     .line 6
-    invoke-static {v0}, Lcom/google/android/gms/internal/auth/zzay;->zzc(Ljava/lang/String;)Lcom/google/android/gms/internal/auth/zzay;
+    invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    move-result-object v1
+    sput-object v7, Lcom/google/android/gms/auth/zze;->zzf:Lcom/google/android/gms/common/Feature;
+
+    new-instance v8, Lcom/google/android/gms/common/Feature;
+
+    const-string v9, "device_account_api"
 
     .line 7
-    invoke-static {v1}, Lcom/google/android/gms/internal/auth/zzay;->zza(Lcom/google/android/gms/internal/auth/zzay;)Z
+    invoke-direct {v8, v9, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
-    move-result v2
+    sput-object v8, Lcom/google/android/gms/auth/zze;->zzg:Lcom/google/android/gms/common/Feature;
+
+    new-instance v9, Lcom/google/android/gms/common/Feature;
+
+    const-string v10, "gaiaid_primary_email_api"
+
+    .line 8
+    invoke-direct {v9, v10, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
+
+    sput-object v9, Lcom/google/android/gms/auth/zze;->zzh:Lcom/google/android/gms/common/Feature;
+
+    new-instance v10, Lcom/google/android/gms/common/Feature;
+
+    const-string v11, "google_auth_service_accounts"
+
+    const-wide/16 v12, 0x2
+
+    .line 9
+    invoke-direct {v10, v11, v12, v13}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
+
+    sput-object v10, Lcom/google/android/gms/auth/zze;->zzi:Lcom/google/android/gms/common/Feature;
+
+    new-instance v11, Lcom/google/android/gms/common/Feature;
+
+    const-string v12, "google_auth_service_token"
+
+    const-wide/16 v13, 0x3
+
+    .line 10
+    invoke-direct {v11, v12, v13, v14}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
+
+    sput-object v11, Lcom/google/android/gms/auth/zze;->zzj:Lcom/google/android/gms/common/Feature;
+
+    new-instance v12, Lcom/google/android/gms/common/Feature;
+
+    const-string v13, "hub_mode_api"
+
+    .line 11
+    invoke-direct {v12, v13, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
+
+    sput-object v12, Lcom/google/android/gms/auth/zze;->zzk:Lcom/google/android/gms/common/Feature;
+
+    new-instance v13, Lcom/google/android/gms/common/Feature;
+
+    const-string v14, "work_account_client_is_whitelisted"
+
+    .line 12
+    invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
+
+    sput-object v13, Lcom/google/android/gms/auth/zze;->zzl:Lcom/google/android/gms/common/Feature;
+
+    const/16 v2, 0xc
+
+    new-array v2, v2, [Lcom/google/android/gms/common/Feature;
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x1
+    aput-object v0, v2, v3
 
-    if-nez v2, :cond_4
+    const/4 v0, 0x1
 
-    .line 8
-    sget-object p1, Lcom/google/android/gms/internal/auth/zzay;->zzco:Lcom/google/android/gms/internal/auth/zzay;
+    aput-object v1, v2, v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x2
 
-    move-result p1
+    aput-object v4, v2, v0
 
-    if-nez p1, :cond_1
+    const/4 v0, 0x3
 
-    sget-object p1, Lcom/google/android/gms/internal/auth/zzay;->zzcp:Lcom/google/android/gms/internal/auth/zzay;
+    aput-object v5, v2, v0
 
-    .line 9
-    invoke-virtual {p1, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x4
 
-    move-result p1
+    aput-object v6, v2, v0
 
-    if-nez p1, :cond_1
+    const/4 v0, 0x5
 
-    sget-object p1, Lcom/google/android/gms/internal/auth/zzay;->zzcq:Lcom/google/android/gms/internal/auth/zzay;
+    aput-object v7, v2, v0
 
-    .line 10
-    invoke-virtual {p1, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x6
 
-    move-result p1
+    aput-object v8, v2, v0
 
-    if-eqz p1, :cond_2
+    const/4 v0, 0x7
 
-    :cond_1
-    move v3, v4
+    aput-object v9, v2, v0
 
-    :cond_2
-    if-eqz v3, :cond_3
+    const/16 v0, 0x8
 
-    .line 11
-    new-instance p1, Ljava/io/IOException;
+    aput-object v10, v2, v0
 
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    const/16 v0, 0x9
 
-    throw p1
+    aput-object v11, v2, v0
 
-    .line 12
-    :cond_3
-    new-instance p1, Lcom/google/android/gms/auth/GoogleAuthException;
+    const/16 v0, 0xa
 
-    invoke-direct {p1, v0}, Lcom/google/android/gms/auth/GoogleAuthException;-><init>(Ljava/lang/String;)V
+    aput-object v12, v2, v0
 
-    throw p1
+    const/16 v0, 0xb
 
-    .line 13
-    :cond_4
-    invoke-static {}, Lcom/google/android/gms/auth/zzd;->zza()Lcom/google/android/gms/common/logging/Logger;
+    aput-object v13, v2, v0
 
-    move-result-object v2
+    sput-object v2, Lcom/google/android/gms/auth/zze;->zzm:[Lcom/google/android/gms/common/Feature;
 
-    new-array v4, v4, [Ljava/lang/Object;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    add-int/lit8 v5, v5, 0x1f
-
-    const-string v6, "isUserRecoverableError status: "
-
-    invoke-static {v5, v6, v1}, Lcom/android/billingclient/api/e;->a(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v3
-
-    const-string v1, "GoogleAuthUtil"
-
-    invoke-virtual {v2, v1, v4}, Lcom/google/android/gms/common/logging/Logger;->w(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 14
-    new-instance v1, Lcom/google/android/gms/auth/UserRecoverableAuthException;
-
-    invoke-direct {v1, v0, p1}, Lcom/google/android/gms/auth/UserRecoverableAuthException;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
-
-    throw v1
+    return-void
 .end method

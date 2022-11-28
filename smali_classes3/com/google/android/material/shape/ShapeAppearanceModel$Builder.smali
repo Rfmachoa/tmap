@@ -499,6 +499,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 5
     invoke-virtual {p0, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setTopLeftCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
 
@@ -529,6 +532,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -563,6 +569,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     invoke-static {p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->createCornerTreatment(I)Lcom/google/android/material/shape/CornerTreatment;
 
@@ -587,6 +596,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 3
@@ -621,6 +633,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setLeftEdge(Lcom/google/android/material/shape/EdgeTreatment;)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
 
@@ -653,6 +668,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iput-object p1, p0, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->bottomEdge:Lcom/google/android/material/shape/EdgeTreatment;
 
@@ -666,6 +684,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -694,6 +715,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 3
     invoke-static {p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->createCornerTreatment(I)Lcom/google/android/material/shape/CornerTreatment;
 
@@ -718,6 +742,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 5
@@ -750,6 +777,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     new-instance v0, Lcom/google/android/material/shape/AbsoluteCornerSize;
 
@@ -769,6 +799,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 2
     iput-object p1, p0, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->bottomLeftCornerSize:Lcom/google/android/material/shape/CornerSize;
 
@@ -782,6 +815,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -810,6 +846,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 3
     invoke-static {p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->createCornerTreatment(I)Lcom/google/android/material/shape/CornerTreatment;
 
@@ -834,6 +873,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 5
@@ -866,6 +908,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     new-instance v0, Lcom/google/android/material/shape/AbsoluteCornerSize;
 
@@ -885,6 +930,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 2
     iput-object p1, p0, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->bottomRightCornerSize:Lcom/google/android/material/shape/CornerSize;
 
@@ -898,6 +946,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -915,6 +966,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iput-object p1, p0, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->rightEdge:Lcom/google/android/material/shape/EdgeTreatment;
 
@@ -930,6 +984,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iput-object p1, p0, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->topEdge:Lcom/google/android/material/shape/EdgeTreatment;
 
@@ -943,6 +1000,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -971,6 +1031,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 3
     invoke-static {p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->createCornerTreatment(I)Lcom/google/android/material/shape/CornerTreatment;
 
@@ -995,6 +1058,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 5
@@ -1027,6 +1093,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     new-instance v0, Lcom/google/android/material/shape/AbsoluteCornerSize;
 
@@ -1046,6 +1115,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 2
     iput-object p1, p0, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->topLeftCornerSize:Lcom/google/android/material/shape/CornerSize;
 
@@ -1059,6 +1131,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -1087,6 +1162,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 3
     invoke-static {p1}, Lcom/google/android/material/shape/MaterialShapeUtils;->createCornerTreatment(I)Lcom/google/android/material/shape/CornerTreatment;
 
@@ -1111,6 +1189,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 5
@@ -1143,6 +1224,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     new-instance v0, Lcom/google/android/material/shape/AbsoluteCornerSize;
 
@@ -1160,6 +1244,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 2

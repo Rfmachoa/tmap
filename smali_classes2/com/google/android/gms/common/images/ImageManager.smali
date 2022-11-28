@@ -1,13 +1,13 @@
 .class public final Lcom/google/android/gms/common/images/ImageManager;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;,
-        Lcom/google/android/gms/common/images/ImageManager$OnImageLoadedListener;
+        Lcom/google/android/gms/common/images/ImageManager$OnImageLoadedListener;,
+        Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;
     }
 .end annotation
 
@@ -16,14 +16,6 @@
 .field private static final zaa:Ljava/lang/Object;
 
 .field private static zab:Ljava/util/HashSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashSet<",
-            "Landroid/net/Uri;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private static zac:Lcom/google/android/gms/common/images/ImageManager;
 
@@ -35,40 +27,13 @@
 
 .field private final zaf:Ljava/util/concurrent/ExecutorService;
 
-.field private final zag:Lcom/google/android/gms/internal/base/zak;
+.field private final zag:Lcom/google/android/gms/internal/base/zam;
 
 .field private final zah:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/images/zag;",
-            "Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zai:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Landroid/net/Uri;",
-            "Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zaj:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Landroid/net/Uri;",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -103,19 +68,19 @@
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zad:Landroid/content/Context;
 
-    new-instance p1, Lcom/google/android/gms/internal/base/zaq;
+    new-instance p1, Lcom/google/android/gms/internal/base/zau;
 
     .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/google/android/gms/internal/base/zaq;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p1, p2}, Lcom/google/android/gms/internal/base/zau;-><init>(Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zae:Landroid/os/Handler;
 
     .line 3
-    invoke-static {}, Lcom/google/android/gms/internal/base/zap;->zaa()Lcom/google/android/gms/internal/base/zam;
+    invoke-static {}, Lcom/google/android/gms/internal/base/zat;->zaa()Lcom/google/android/gms/internal/base/zaq;
 
     move-result-object p1
 
@@ -124,18 +89,18 @@
     const/4 v0, 0x2
 
     .line 4
-    invoke-interface {p1, p2, v0}, Lcom/google/android/gms/internal/base/zam;->zab(II)Ljava/util/concurrent/ExecutorService;
+    invoke-interface {p1, p2, v0}, Lcom/google/android/gms/internal/base/zaq;->zab(II)Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zaf:Ljava/util/concurrent/ExecutorService;
 
     .line 5
-    new-instance p1, Lcom/google/android/gms/internal/base/zak;
+    new-instance p1, Lcom/google/android/gms/internal/base/zam;
 
-    invoke-direct {p1}, Lcom/google/android/gms/internal/base/zak;-><init>()V
+    invoke-direct {p1}, Lcom/google/android/gms/internal/base/zam;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zag:Lcom/google/android/gms/internal/base/zak;
+    iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zag:Lcom/google/android/gms/internal/base/zam;
 
     new-instance p1, Ljava/util/HashMap;
 
@@ -205,10 +170,10 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic zac(Lcom/google/android/gms/common/images/ImageManager;)Lcom/google/android/gms/internal/base/zak;
+.method public static bridge synthetic zac(Lcom/google/android/gms/common/images/ImageManager;)Lcom/google/android/gms/internal/base/zam;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/gms/common/images/ImageManager;->zag:Lcom/google/android/gms/internal/base/zak;
+    iget-object p0, p0, Lcom/google/android/gms/common/images/ImageManager;->zag:Lcom/google/android/gms/internal/base/zam;
 
     return-object p0
 .end method

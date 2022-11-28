@@ -66,13 +66,13 @@
     return-object p1
 .end method
 
-.method public b(Landroid/content/Context;Lm1/c;)Landroidx/core/provider/FontsContractCompat$b;
+.method public b(Landroid/content/Context;Lf2/d;)Landroidx/core/provider/FontsContractCompat$b;
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lm1/c;
+    .param p2    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -85,7 +85,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0, p2}, Landroidx/core/provider/FontsContractCompat;->b(Landroid/content/Context;Landroid/os/CancellationSignal;Lm1/c;)Landroidx/core/provider/FontsContractCompat$b;
+    invoke-static {p1, v0, p2}, Landroidx/core/provider/FontsContractCompat;->b(Landroid/content/Context;Landroid/os/CancellationSignal;Lf2/d;)Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object p1
 

@@ -798,7 +798,7 @@
     const-string v0, "android.permission.READ_PHONE_STATE"
 
     .line 6
-    invoke-static {p0, v0}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
 
@@ -1096,7 +1096,7 @@
     move-result-object p0
 
     .line 4
-    invoke-static {p0}, Lck/a;->m([B)[B
+    invoke-static {p0}, Lhm/a;->m([B)[B
 
     move-result-object p0
 

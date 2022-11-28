@@ -1,111 +1,332 @@
-.class public interface abstract Lti/c;
+.class public final Lti/c;
 .super Ljava/lang/Object;
-.source "ContractBuilder.kt"
+.source "ChainBuilder.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation build Lcz/msebera/android/httpclient/annotation/NotThreadSafe;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        Lti/c$a;
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008g\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\'J\u0012\u0010\u0005\u001a\u00020\u00022\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0001H\'J\u0008\u0010\u0007\u001a\u00020\u0006H\'J&\u0010\u000e\u001a\u00020\r\"\u0004\u0008\u0000\u0010\u00082\u000c\u0010\n\u001a\u0008\u0012\u0004\u0012\u00028\u00000\t2\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\'\u00a8\u0006\u000f"
-    }
-    d2 = {
-        "Lti/c;",
-        "",
-        "Lti/f;",
-        "a",
-        "value",
-        "b",
-        "Lti/g;",
-        "c",
-        "R",
-        "Lkotlin/j;",
-        "lambda",
-        "Lkotlin/contracts/InvocationKind;",
-        "kind",
-        "Lti/a;",
-        "d",
-        "kotlin-stdlib"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
-.end annotation
 
-.annotation build Lkotlin/SinceKotlin;
-    version = "1.3"
-.end annotation
+# instance fields
+.field public final a:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList<",
+            "TE;>;"
+        }
+    .end annotation
+.end field
 
-.annotation build Lkotlin/contracts/ExperimentalContracts;
-.end annotation
+.field public final b:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Class<",
+            "*>;TE;>;"
+        }
+    .end annotation
+.end field
 
-.annotation build Lkotlin/internal/ContractsDsl;
-.end annotation
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lti/c;->a:Ljava/util/LinkedList;
+
+    .line 3
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lti/c;->b:Ljava/util/Map;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Lti/f;
-    .annotation build Lkotlin/internal/ContractsDsl;
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end method
-
-.method public abstract b(Ljava/lang/Object;)Lti/f;
-    .param p1    # Ljava/lang/Object;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .annotation build Lkotlin/internal/ContractsDsl;
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end method
-
-.method public abstract c()Lti/g;
-    .annotation build Lkotlin/internal/ContractsDsl;
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end method
-
-.method public abstract d(Lkotlin/j;Lkotlin/contracts/InvocationKind;)Lti/a;
-    .param p1    # Lkotlin/j;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Lkotlin/contracts/InvocationKind;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method public a(Ljava/util/Collection;)Lti/c;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lkotlin/j<",
-            "+TR;>;",
-            "Lkotlin/contracts/InvocationKind;",
-            ")",
-            "Lti/a;"
+            "(",
+            "Ljava/util/Collection<",
+            "TE;>;)",
+            "Lti/c<",
+            "TE;>;"
         }
     .end annotation
 
-    .annotation build Lkotlin/internal/ContractsDsl;
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 2
+    invoke-virtual {p0, v0}, Lti/c;->e(Ljava/lang/Object;)Lti/c;
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public varargs b([Ljava/lang/Object;)Lti/c;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([TE;)",
+            "Lti/c<",
+            "TE;>;"
+        }
     .end annotation
 
-    .annotation build Lorg/jetbrains/annotations/NotNull;
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    aget-object v2, p1, v1
+
+    .line 2
+    invoke-virtual {p0, v2}, Lti/c;->e(Ljava/lang/Object;)Lti/c;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public c(Ljava/util/Collection;)Lti/c;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "TE;>;)",
+            "Lti/c<",
+            "TE;>;"
+        }
     .end annotation
+
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 2
+    invoke-virtual {p0, v0}, Lti/c;->f(Ljava/lang/Object;)Lti/c;
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public varargs d([Ljava/lang/Object;)Lti/c;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([TE;)",
+            "Lti/c<",
+            "TE;>;"
+        }
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    aget-object v2, p1, v1
+
+    .line 2
+    invoke-virtual {p0, v2}, Lti/c;->f(Ljava/lang/Object;)Lti/c;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public e(Ljava/lang/Object;)Lti/c;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)",
+            "Lti/c<",
+            "TE;>;"
+        }
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    invoke-virtual {p0, p1}, Lti/c;->h(Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v0, p0, Lti/c;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public f(Ljava/lang/Object;)Lti/c;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)",
+            "Lti/c<",
+            "TE;>;"
+        }
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    invoke-virtual {p0, p1}, Lti/c;->h(Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v0, p0, Lti/c;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public g()Ljava/util/LinkedList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/LinkedList<",
+            "TE;>;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/LinkedList;
+
+    iget-object v1, p0, Lti/c;->a:Ljava/util/LinkedList;
+
+    invoke-direct {v0, v1}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lti/c;->b:Ljava/util/Map;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v1, p0, Lti/c;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lti/c;->b:Ljava/util/Map;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

@@ -79,7 +79,7 @@
     .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManager$q;->d:Landroidx/fragment/app/FragmentManager;
 
-    iget-object v0, v0, Landroidx/fragment/app/FragmentManager;->u:Landroidx/fragment/app/Fragment;
+    iget-object v0, v0, Landroidx/fragment/app/FragmentManager;->y:Landroidx/fragment/app/Fragment;
 
     if-eqz v0, :cond_0
 
@@ -97,7 +97,7 @@
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->o1()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->v1()Z
 
     move-result v0
 
@@ -121,7 +121,7 @@
 
     move-object v2, p2
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/fragment/app/FragmentManager;->s1(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;II)Z
+    invoke-virtual/range {v0 .. v5}, Landroidx/fragment/app/FragmentManager;->z1(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;II)Z
 
     move-result p1
 

@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/messaging/RemoteMessageCreator;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "RemoteMessageCreator.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -25,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,13 +39,13 @@
 
     move-result p2
 
+    .line 2
     iget-object p0, p0, Lcom/google/firebase/messaging/RemoteMessage;->bundle:Landroid/os/Bundle;
 
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-static {p1, v0, p0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBundle(Landroid/os/Parcel;ILandroid/os/Bundle;Z)V
 
     .line 3
@@ -57,21 +58,17 @@
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/firebase/messaging/RemoteMessage;
     .locals 5
-    .param p1    # Landroid/os/Parcel;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 2
+    .line 3
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -79,12 +76,12 @@
 
     if-ge v2, v0, :cond_1
 
-    .line 3
+    .line 4
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
 
     move-result v2
 
-    .line 4
+    .line 5
     invoke-static {v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
 
     move-result v3
@@ -93,12 +90,12 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 5
+    .line 6
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_0
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createBundle(Landroid/os/Parcel;I)Landroid/os/Bundle;
 
@@ -106,11 +103,11 @@
 
     goto :goto_0
 
-    .line 7
+    .line 8
     :cond_1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
 
-    .line 8
+    .line 9
     new-instance p1, Lcom/google/firebase/messaging/RemoteMessage;
 
     invoke-direct {p1, v1}, Lcom/google/firebase/messaging/RemoteMessage;-><init>(Landroid/os/Bundle;)V
@@ -120,14 +117,10 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
-    .param p1    # Landroid/os/Parcel;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 9
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/RemoteMessageCreator;->createFromParcel(Landroid/os/Parcel;)Lcom/google/firebase/messaging/RemoteMessage;
 
     move-result-object p1
@@ -137,10 +130,10 @@
 
 .method public newArray(I)[Lcom/google/firebase/messaging/RemoteMessage;
     .locals 0
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
+    .line 2
     new-array p1, p1, [Lcom/google/firebase/messaging/RemoteMessage;
 
     return-object p1
@@ -148,10 +141,10 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 2
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/RemoteMessageCreator;->newArray(I)[Lcom/google/firebase/messaging/RemoteMessage;
 
     move-result-object p1

@@ -19,7 +19,7 @@
 
     move-result-object p0
 
-    invoke-static {p2, p0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

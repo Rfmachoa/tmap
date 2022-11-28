@@ -1,68 +1,34 @@
-.class public Landroidx/navigation/g0;
-.super Landroidx/navigation/NavController;
-.source "NavHostController.java"
+.class public interface abstract Landroidx/navigation/g0;
+.super Ljava/lang/Object;
+.source "NavHost.kt"
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-direct {p0, p1}, Landroidx/navigation/NavController;-><init>(Landroid/content/Context;)V
-
-    return-void
-.end method
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008f\u0018\u00002\u00020\u0001R\u0014\u0010\u0005\u001a\u00020\u00028&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0006"
+    }
+    d2 = {
+        "Landroidx/navigation/g0;",
+        "",
+        "Landroidx/navigation/NavController;",
+        "e",
+        "()Landroidx/navigation/NavController;",
+        "navController",
+        "navigation-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+.end annotation
 
 
 # virtual methods
-.method public final S(Landroidx/lifecycle/LifecycleOwner;)V
-    .locals 0
-    .param p1    # Landroidx/lifecycle/LifecycleOwner;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-super {p0, p1}, Landroidx/navigation/NavController;->S(Landroidx/lifecycle/LifecycleOwner;)V
-
-    return-void
-.end method
-
-.method public final U(Landroidx/activity/OnBackPressedDispatcher;)V
-    .locals 0
-    .param p1    # Landroidx/activity/OnBackPressedDispatcher;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-super {p0, p1}, Landroidx/navigation/NavController;->U(Landroidx/activity/OnBackPressedDispatcher;)V
-
-    return-void
-.end method
-
-.method public final V(Landroidx/lifecycle/ViewModelStore;)V
-    .locals 0
-    .param p1    # Landroidx/lifecycle/ViewModelStore;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-super {p0, p1}, Landroidx/navigation/NavController;->V(Landroidx/lifecycle/ViewModelStore;)V
-
-    return-void
-.end method
-
-.method public final d(Z)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1}, Landroidx/navigation/NavController;->d(Z)V
-
-    return-void
+.method public abstract e()Landroidx/navigation/NavController;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end method

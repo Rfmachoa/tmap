@@ -1,16 +1,31 @@
-.class public final Lcom/tmapmobility/tmap/exoplayer2/extractor/g;
+.class public final synthetic Lcom/tmapmobility/tmap/exoplayer2/extractor/g;
 .super Ljava/lang/Object;
-.source "DummyExtractorOutput.java"
+.source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/h$a$a;
+
+
+# static fields
+.field public static final synthetic a:Lcom/tmapmobility/tmap/exoplayer2/extractor/g;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/g;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/g;-><init>()V
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/g;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/g;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,25 +33,12 @@
 
 
 # virtual methods
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)V
-    .locals 0
+.method public final f()Ljava/lang/reflect/Constructor;
+    .locals 1
 
-    return-void
-.end method
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/extractor/h;->e()Ljava/lang/reflect/Constructor;
 
-.method public endTracks()V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
-
-.method public track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
-    .locals 0
-
-    .line 1
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/h;
-
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/h;-><init>()V
-
-    return-object p1
+    return-object v0
 .end method

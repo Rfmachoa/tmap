@@ -12,6 +12,7 @@
         Lcom/google/firebase/appcheck/interop/R$id;,
         Lcom/google/firebase/appcheck/interop/R$integer;,
         Lcom/google/firebase/appcheck/interop/R$layout;,
+        Lcom/google/firebase/appcheck/interop/R$raw;,
         Lcom/google/firebase/appcheck/interop/R$string;,
         Lcom/google/firebase/appcheck/interop/R$style;,
         Lcom/google/firebase/appcheck/interop/R$styleable;

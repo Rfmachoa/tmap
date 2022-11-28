@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/analytics/zzd;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -179,36 +179,21 @@
 .end method
 
 .method private static zzn(Ljava/lang/String;I)Ljava/lang/String;
-    .locals 2
+    .locals 0
 
     if-gtz p1, :cond_0
 
     const-string p1, "index out of range for prefix"
 
     .line 1
-    invoke-static {p1, p0}, Lcom/google/android/gms/internal/gtm/zzfa;->zzb(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1, p0}, Lcom/google/android/gms/internal/gtm/zzfc;->zzb(Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string p0, ""
 
     return-object p0
 
-    .line 2
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0xb
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0, p1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 

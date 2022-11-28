@@ -33,14 +33,14 @@
     sget-object v0, Lcom/google/android/material/R$styleable;->TabItem:[I
 
     .line 4
-    invoke-static {p1, p2, v0}, Landroidx/appcompat/widget/j0;->F(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/j0;
+    invoke-static {p1, p2, v0}, Landroidx/appcompat/widget/o0;->F(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/o0;
 
     move-result-object p1
 
     .line 5
     sget p2, Lcom/google/android/material/R$styleable;->TabItem_android_text:I
 
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/j0;->x(I)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/o0;->x(I)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -49,7 +49,7 @@
     .line 6
     sget p2, Lcom/google/android/material/R$styleable;->TabItem_android_icon:I
 
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/j0;->h(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/o0;->h(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -60,14 +60,14 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/j0;->u(II)I
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/o0;->u(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/material/tabs/TabItem;->customLayout:I
 
     .line 8
-    invoke-virtual {p1}, Landroidx/appcompat/widget/j0;->I()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/o0;->I()V
 
     return-void
 .end method

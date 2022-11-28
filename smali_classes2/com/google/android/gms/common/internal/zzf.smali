@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/zzf;
 .super Lcom/google/android/gms/common/internal/zza;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # instance fields
@@ -69,7 +69,7 @@
 .end method
 
 .method public final zzd()Z
-    .locals 7
+    .locals 6
 
     const-string v0, "GmsClient"
 
@@ -107,35 +107,23 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    const-string v5, "service descriptor mismatch: "
 
-    move-result v4
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    const-string v3, " vs. "
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v5
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v4, v4, 0x22
-
-    add-int/2addr v4, v5
-
-    invoke-direct {v6, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v4, "service descriptor mismatch: "
-
-    const-string v5, " vs. "
-
-    invoke-static {v6, v4, v3, v5, v2}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 

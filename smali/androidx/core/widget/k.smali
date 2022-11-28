@@ -3,6 +3,14 @@
 .source "ListPopupWindowCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/k$a;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -27,7 +35,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/ListPopupWindow;->createDragToOpenListener(Landroid/view/View;)Landroid/view/View$OnTouchListener;
+    invoke-static {p0, p1}, Landroidx/core/widget/k$a;->a(Landroid/widget/ListPopupWindow;Landroid/view/View;)Landroid/view/View$OnTouchListener;
 
     move-result-object p0
 

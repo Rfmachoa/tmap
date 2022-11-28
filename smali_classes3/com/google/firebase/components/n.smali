@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/google/firebase/inject/Provider;
+.implements Lcom/google/firebase/inject/Deferred$DeferredHandler;
 
 
 # static fields
@@ -33,12 +33,10 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final handle(Lcom/google/firebase/inject/Provider;)V
+    .locals 0
 
-    invoke-static {}, Lcom/google/firebase/components/OptionalProvider;->a()Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/firebase/components/OptionalProvider;->b(Lcom/google/firebase/inject/Provider;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

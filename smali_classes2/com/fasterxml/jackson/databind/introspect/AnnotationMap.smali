@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/util/HashMap;)V
+.method public constructor <init>(Ljava/util/HashMap;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -172,6 +172,37 @@
     :cond_5
     :goto_3
     return-object p1
+.end method
+
+.method public static of(Ljava/lang/Class;Ljava/lang/annotation/Annotation;)Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Ljava/lang/annotation/Annotation;",
+            ")",
+            "Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/HashMap;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
+
+    .line 2
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    new-instance p0, Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
+
+    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;-><init>(Ljava/util/HashMap;)V
+
+    return-object p0
 .end method
 
 

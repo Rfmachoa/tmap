@@ -1,45 +1,14 @@
 .class public final Lcom/google/android/gms/common/api/internal/zal;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zaa:Landroidx/collection/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/collection/a<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Landroidx/collection/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/collection/a<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Lcom/google/android/gms/tasks/TaskCompletionSource;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
-    .end annotation
-.end field
 
 .field private zad:I
 
@@ -49,15 +18,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Iterable<",
-            "+",
-            "Lcom/google/android/gms/common/api/HasApiKey<",
-            "*>;>;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -113,7 +73,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -138,17 +98,6 @@
 # virtual methods
 .method public final zaa()Lcom/google/android/gms/tasks/Task;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/tasks/Task<",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zac:Lcom/google/android/gms/tasks/TaskCompletionSource;
@@ -162,14 +111,6 @@
 
 .method public final zab()Ljava/util/Set;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;>;"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/a;
@@ -187,26 +128,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zab:Landroidx/collection/a;
 
     .line 2
-    invoke-virtual {v0, p1, p3}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p3}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget p1, p0, Lcom/google/android/gms/common/api/internal/zal;->zad:I
 

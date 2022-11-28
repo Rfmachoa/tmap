@@ -1,100 +1,36 @@
 .class public final synthetic Lcom/skt/tmap/car/c;
 .super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/lifecycle/Observer;
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
-    k = 0x3
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
-
-
-# static fields
-.field public static final synthetic a:[I
-
-.field public static final synthetic b:[I
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/car/NavigationNotificationServiceKt;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/NavigationNotificationServiceKt;)V
+    .locals 0
 
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lcom/skt/tmap/car/c;->a:Lcom/skt/tmap/car/NavigationNotificationServiceKt;
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/skt/tmap/car/c;->a:[I
+# virtual methods
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    sget-object v1, Lcom/skt/tmap/engine/navigation/data/DriveMode;->REAL_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+    iget-object v0, p0, Lcom/skt/tmap/car/c;->a:Lcom/skt/tmap/car/NavigationNotificationServiceKt;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result v2
-
-    const/4 v3, 0x1
-
-    aput v3, v0, v2
-
-    sget-object v2, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SAFE_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v4
-
-    const/4 v5, 0x2
-
-    aput v5, v0, v4
-
-    sget-object v4, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SIMULATION_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v6
-
-    const/4 v7, 0x3
-
-    aput v7, v0, v6
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/car/c;->b:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v3, v0, v1
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v5, v0, v1
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v7, v0, v1
+    invoke-static {v0, p1}, Lcom/skt/tmap/car/NavigationNotificationServiceKt;->f(Lcom/skt/tmap/car/NavigationNotificationServiceKt;Ljava/lang/Boolean;)V
 
     return-void
 .end method

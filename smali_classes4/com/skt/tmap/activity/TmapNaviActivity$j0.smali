@@ -3,7 +3,7 @@
 .source "TmapNaviActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/util/w$b;
+.implements Lcom/skt/tmap/util/y$b;
 
 
 # annotations
@@ -49,20 +49,20 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/w0;->v1(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/v0;->k1(Z)V
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->d8()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->q8()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "onBecameBackground"
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
@@ -80,9 +80,9 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/w0;->y0()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/v0;->t0()Z
 
     move-result v0
 
@@ -90,9 +90,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/w0;->v0()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/v0;->q0()Z
 
     move-result v0
 
@@ -104,11 +104,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lxb/b;->d(Landroid/content/Context;)Lxb/b;
+    invoke-static {v0}, Lcom/skt/tmap/car/data/CarRepository;->g(Landroid/content/Context;)Lcom/skt/tmap/car/data/CarRepository;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lxb/b;->i()Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lcom/skt/tmap/car/data/CarRepository;->l()Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -121,9 +121,9 @@
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/w0;->x1(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/v0;->m1(Z)V
 
     :cond_0
     return-void
@@ -135,27 +135,27 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/w0;->v1(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/v0;->k1(Z)V
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->d8()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->q8()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "onBecameForeground"
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$j0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/w0;->x1(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/v0;->m1(Z)V
 
     return-void
 .end method

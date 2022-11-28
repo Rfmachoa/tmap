@@ -14,13 +14,13 @@
 
 
 # static fields
-.field public static final mtrl_fast_out_linear_in:I = 0x7f0c0007
+.field public static final mtrl_fast_out_linear_in:I = 0x7f0c000e
 
-.field public static final mtrl_fast_out_slow_in:I = 0x7f0c0008
+.field public static final mtrl_fast_out_slow_in:I = 0x7f0c000f
 
-.field public static final mtrl_linear:I = 0x7f0c0009
+.field public static final mtrl_linear:I = 0x7f0c0010
 
-.field public static final mtrl_linear_out_slow_in:I = 0x7f0c000a
+.field public static final mtrl_linear_out_slow_in:I = 0x7f0c0011
 
 
 # direct methods

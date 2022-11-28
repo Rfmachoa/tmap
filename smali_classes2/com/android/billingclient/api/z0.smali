@@ -1,89 +1,69 @@
-.class public final Lcom/android/billingclient/api/z0;
+.class public final synthetic Lcom/android/billingclient/api/z0;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/concurrent/Callable<",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic a:Ljava/util/concurrent/Future;
 
-.field public final synthetic b:Lcom/android/billingclient/api/g;
+.field public final synthetic b:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/billingclient/api/g;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Future;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 1
-    iput-object p1, p0, Lcom/android/billingclient/api/z0;->b:Lcom/android/billingclient/api/g;
-
-    iput-object p2, p0, Lcom/android/billingclient/api/z0;->a:Ljava/lang/String;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/billingclient/api/z0;->a:Ljava/util/concurrent/Future;
+
+    iput-object p2, p0, Lcom/android/billingclient/api/z0;->b:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic call()Ljava/lang/Object;
-    .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+.method public final run()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/billingclient/api/z0;->a:Ljava/util/concurrent/Future;
+
+    iget-object v1, p0, Lcom/android/billingclient/api/z0;->b:Ljava/lang/Runnable;
 
     .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/z0;->b:Lcom/android/billingclient/api/g;
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
 
-    invoke-static {v0}, Lcom/android/billingclient/api/g;->M(Lcom/android/billingclient/api/g;)Lcom/google/android/gms/internal/play_billing/zza;
+    move-result v2
 
-    move-result-object v0
+    if-nez v2, :cond_0
 
-    iget-object v1, p0, Lcom/android/billingclient/api/z0;->b:Lcom/android/billingclient/api/g;
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x1
 
     .line 2
-    invoke-static {v1}, Lcom/android/billingclient/api/g;->F(Lcom/android/billingclient/api/g;)Landroid/content/Context;
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    move-result-object v1
+    const-string v0, "BillingClient"
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/billingclient/api/z0;->a:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/android/billingclient/api/z0;->b:Lcom/android/billingclient/api/g;
+    const-string v2, "Async task is taking too long, cancel it!"
 
     .line 3
-    invoke-static {v3}, Lcom/android/billingclient/api/g;->Q(Lcom/android/billingclient/api/g;)Landroid/os/Bundle;
+    invoke-static {v0, v2}, Lcom/google/android/gms/internal/play_billing/zza;->zzk(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v3
-
-    const/4 v4, 0x7
+    if-eqz v1, :cond_0
 
     .line 4
-    invoke-interface {v0, v4, v1, v2, v3}, Lcom/google/android/gms/internal/play_billing/zza;->zzb(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)I
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

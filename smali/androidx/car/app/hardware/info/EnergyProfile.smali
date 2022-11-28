@@ -115,7 +115,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
-    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->j:Landroidx/car/app/hardware/common/CarValue;
+    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->l:Landroidx/car/app/hardware/common/CarValue;
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/EnergyProfile;->mEvConnectorTypes:Landroidx/car/app/hardware/common/CarValue;
 

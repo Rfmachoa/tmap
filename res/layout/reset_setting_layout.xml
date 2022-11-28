@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white_color" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_68dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/reset_setting_divider" android:background="@color/gray_100" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_8dp" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/gray_900" android:id="@id/textview_reset_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_main_reset" android:fontFamily="@font/tmobi300" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/reset_setting_divider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,11 +28,11 @@
 
 
 # static fields
-.field public static final f0:I = 0x0
+.field public static final k0:I = 0x0
 
-.field public static final g0:I = 0x1
+.field public static final l0:I = 0x1
 
-.field public static final h0:I = 0x2
+.field public static final m0:I = 0x2
 
 
 # virtual methods

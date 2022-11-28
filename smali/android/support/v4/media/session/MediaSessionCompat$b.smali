@@ -242,7 +242,7 @@
     if-eqz p1, :cond_2
 
     .line 6
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result p1
 

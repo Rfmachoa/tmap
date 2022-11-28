@@ -74,7 +74,7 @@
     iput-object v0, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->d:Ljava/lang/String;
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i(Landroid/os/Parcel;)V
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->l(Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -101,7 +101,7 @@
 
 
 # virtual methods
-.method public b()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -119,15 +119,6 @@
     return v0
 .end method
 
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -140,7 +131,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->c:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->b:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -149,12 +140,21 @@
     .locals 1
 
     .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public h()Ljava/lang/String;
+    .locals 1
+
+    .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->d:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public g()Ljava/lang/String;
+.method public i()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -163,7 +163,7 @@
     return-object v0
 .end method
 
-.method public h()I
+.method public j()I
     .locals 1
 
     .line 1
@@ -172,7 +172,7 @@
     return v0
 .end method
 
-.method public i(Landroid/os/Parcel;)V
+.method public l(Landroid/os/Parcel;)V
     .locals 1
 
     .line 1
@@ -227,7 +227,7 @@
     return-void
 .end method
 
-.method public j(Ljava/lang/String;)V
+.method public m(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -236,7 +236,7 @@
     return-void
 .end method
 
-.method public l(I)V
+.method public n(I)V
     .locals 0
 
     .line 1
@@ -245,7 +245,7 @@
     return-void
 .end method
 
-.method public m(Ljava/lang/String;)V
+.method public o(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method public n(Ljava/lang/String;)V
+.method public p(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -263,7 +263,7 @@
     return-void
 .end method
 
-.method public o(Ljava/lang/String;)V
+.method public q(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -272,7 +272,7 @@
     return-void
 .end method
 
-.method public p(Ljava/lang/String;)V
+.method public r(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -281,7 +281,7 @@
     return-void
 .end method
 
-.method public q(I)V
+.method public s(I)V
     .locals 0
 
     .line 1
@@ -306,31 +306,31 @@
 
     const-string v3, ", mDescription=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->b:Ljava/lang/String;
 
     const-string v3, ", mImageUrl=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->c:Ljava/lang/String;
 
     const-string v3, ", mTTS=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->d:Ljava/lang/String;
 
     const-string v3, ", mCpCode=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->e:Ljava/lang/String;
 
     const-string v3, ", mTotalCount="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget v1, p0, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f:I
 
@@ -344,7 +344,7 @@
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lc1/k;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lv1/j;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 

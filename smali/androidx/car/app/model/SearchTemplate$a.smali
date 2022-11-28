@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/car/app/model/p;
+.field public final a:Landroidx/car/app/model/v;
 
 .field public b:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
@@ -69,11 +69,11 @@
     iput-boolean v0, p0, Landroidx/car/app/model/SearchTemplate$a;->f:Z
 
     .line 3
-    invoke-static {p1}, Landroidx/car/app/model/SearchCallbackDelegateImpl;->c(Landroidx/car/app/model/SearchTemplate$b;)Landroidx/car/app/model/p;
+    invoke-static {p1}, Landroidx/car/app/model/SearchCallbackDelegateImpl;->c(Landroidx/car/app/model/SearchTemplate$b;)Landroidx/car/app/model/v;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/car/app/model/SearchTemplate$a;->a:Landroidx/car/app/model/p;
+    iput-object p1, p0, Landroidx/car/app/model/SearchTemplate$a;->a:Landroidx/car/app/model/v;
 
     return-void
 .end method
@@ -126,7 +126,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->k:Lm0/a;
+    sget-object v0, La1/a;->n:La1/a;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -134,7 +134,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/SearchTemplate$a;->h:Landroidx/car/app/model/ActionStrip;
@@ -152,7 +152,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->j:Lm0/a;
+    sget-object v0, La1/a;->i:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -162,7 +162,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
     iput-object p1, p0, Landroidx/car/app/model/SearchTemplate$a;->g:Landroidx/car/app/model/Action;
@@ -197,11 +197,11 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/f;->f:Lm0/f;
+    sget-object v0, La1/f;->f:La1/f;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/f;->d(Landroidx/car/app/model/ItemList;)V
+    invoke-virtual {v0, p1}, La1/f;->d(Landroidx/car/app/model/ItemList;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/SearchTemplate$a;->e:Landroidx/car/app/model/ItemList;

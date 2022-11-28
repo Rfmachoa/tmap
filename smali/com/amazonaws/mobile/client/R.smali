@@ -17,7 +17,8 @@
         Lcom/amazonaws/mobile/client/R$layout;,
         Lcom/amazonaws/mobile/client/R$string;,
         Lcom/amazonaws/mobile/client/R$style;,
-        Lcom/amazonaws/mobile/client/R$styleable;
+        Lcom/amazonaws/mobile/client/R$styleable;,
+        Lcom/amazonaws/mobile/client/R$xml;
     }
 .end annotation
 

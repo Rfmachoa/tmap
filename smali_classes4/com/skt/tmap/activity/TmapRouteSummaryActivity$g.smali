@@ -32,8 +32,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -45,16 +45,32 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g;->b(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
+
+    return-void
+.end method
+
+.method public static final b(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->T5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
 
     return-void
 .end method
@@ -62,29 +78,25 @@
 
 # virtual methods
 .method public onMapLoadComplete()V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
     iget-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    const-string v2, "mapView"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v1}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->getScreenCenter()Landroid/graphics/Point;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->K5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;Landroid/graphics/Point;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->P5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;Landroid/graphics/Point;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    new-instance v1, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g$a;
+    new-instance v1, Lcom/skt/tmap/activity/z9;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g$a;-><init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity$g;)V
+    invoke-direct {v1, v0}, Lcom/skt/tmap/activity/z9;-><init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 

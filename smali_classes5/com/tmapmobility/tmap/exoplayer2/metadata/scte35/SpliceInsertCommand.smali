@@ -344,18 +344,18 @@
     return-void
 .end method
 
-.method public static b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;JLcom/tmapmobility/tmap/exoplayer2/util/i0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceInsertCommand;
+.method public static a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;JLcom/tmapmobility/tmap/exoplayer2/util/j0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceInsertCommand;
     .locals 27
 
     move-object/from16 v0, p3
 
     .line 1
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v2
 
     .line 2
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v1
 
@@ -379,7 +379,7 @@
     if-nez v6, :cond_b
 
     .line 4
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v9
 
@@ -436,7 +436,7 @@
     if-nez v9, :cond_5
 
     .line 5
-    invoke-static/range {p0 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)J
+    invoke-static/range {p0 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)J
 
     move-result-wide v13
 
@@ -449,7 +449,7 @@
     if-nez v11, :cond_8
 
     .line 6
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v1
 
@@ -464,14 +464,14 @@
     if-ge v4, v1, :cond_7
 
     .line 8
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v18
 
     if-nez v9, :cond_6
 
     .line 9
-    invoke-static/range {p0 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)J
+    invoke-static/range {p0 .. p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)J
 
     move-result-wide v19
 
@@ -487,7 +487,7 @@
     new-instance v5, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceInsertCommand$b;
 
     .line 11
-    invoke-virtual {v0, v7, v8}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b(J)J
+    invoke-virtual {v0, v7, v8}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->b(J)J
 
     move-result-wide v21
 
@@ -513,7 +513,7 @@
     if-eqz v12, :cond_a
 
     .line 13
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v4
 
@@ -546,7 +546,7 @@
     shl-long/2addr v4, v7
 
     .line 14
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v7
 
@@ -572,17 +572,17 @@
 
     .line 16
     :goto_9
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->M()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
 
     move-result v4
 
     .line 17
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v12
 
     .line 18
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v15
 
@@ -638,7 +638,7 @@
     move-object/from16 v1, v19
 
     .line 20
-    invoke-virtual {v0, v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b(J)J
+    invoke-virtual {v0, v8, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->b(J)J
 
     move-result-wide v10
 

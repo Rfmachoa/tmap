@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->L5()V
+    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->T5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,12 +49,12 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     :cond_0
     return-void
@@ -66,18 +66,18 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->B5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->J5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->B5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->J5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 

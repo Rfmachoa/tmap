@@ -25,8 +25,6 @@
     .end annotation
 .end field
 
-.field private final context:Landroid/content/Context;
-
 .field private final dateSelector:Lcom/google/android/material/datepicker/DateSelector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -36,13 +34,18 @@
     .end annotation
 .end field
 
+.field private final dayViewDecorator:Lcom/google/android/material/datepicker/DayViewDecorator;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
 .field private final itemHeight:I
 
 .field private final onDayClickListener:Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/DayViewDecorator;Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;)V
     .locals 3
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -52,6 +55,10 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .param p4    # Lcom/google/android/material/datepicker/DayViewDecorator;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -59,6 +66,7 @@
             "Lcom/google/android/material/datepicker/DateSelector<",
             "*>;",
             "Lcom/google/android/material/datepicker/CalendarConstraints;",
+            "Lcom/google/android/material/datepicker/DayViewDecorator;",
             "Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;",
             ")V"
         }
@@ -114,30 +122,30 @@
 
     invoke-static {p1}, Lcom/google/android/material/datepicker/MaterialCalendar;->getDayHeight(Landroid/content/Context;)I
 
-    move-result v0
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 p1, 0x0
+
+    :goto_0
+    add-int/2addr v1, p1
 
     .line 9
-    :goto_0
-    iput-object p1, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->context:Landroid/content/Context;
-
-    add-int/2addr v1, v0
-
-    .line 10
     iput v1, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->itemHeight:I
 
-    .line 11
+    .line 10
     iput-object p3, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
 
-    .line 12
+    .line 11
     iput-object p2, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->dateSelector:Lcom/google/android/material/datepicker/DateSelector;
 
+    .line 12
+    iput-object p4, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->dayViewDecorator:Lcom/google/android/material/datepicker/DayViewDecorator;
+
     .line 13
-    iput-object p4, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->onDayClickListener:Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;
+    iput-object p5, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->onDayClickListener:Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;
 
     const/4 p1, 0x1
 
@@ -232,7 +240,7 @@
 .end method
 
 .method public getPageTitle(I)Ljava/lang/CharSequence;
-    .locals 1
+    .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -241,9 +249,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->context:Landroid/content/Context;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/datepicker/Month;->getLongName(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/android/material/datepicker/Month;->getLongName()Ljava/lang/String;
 
     move-result-object p1
 
@@ -287,7 +293,7 @@
 .end method
 
 .method public onBindViewHolder(Lcom/google/android/material/datepicker/MonthsPagerAdapter$ViewHolder;I)V
-    .locals 3
+    .locals 4
     .param p1    # Lcom/google/android/material/datepicker/MonthsPagerAdapter$ViewHolder;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -307,13 +313,7 @@
     .line 3
     iget-object v0, p1, Lcom/google/android/material/datepicker/MonthsPagerAdapter$ViewHolder;->monthTitle:Landroid/widget/TextView;
 
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$a0;->itemView:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v1}, Lcom/google/android/material/datepicker/Month;->getLongName(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/google/android/material/datepicker/Month;->getLongName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -369,7 +369,9 @@
 
     iget-object v2, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->calendarConstraints:Lcom/google/android/material/datepicker/CalendarConstraints;
 
-    invoke-direct {v0, p2, v1, v2}, Lcom/google/android/material/datepicker/MonthAdapter;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;)V
+    iget-object v3, p0, Lcom/google/android/material/datepicker/MonthsPagerAdapter;->dayViewDecorator:Lcom/google/android/material/datepicker/DayViewDecorator;
+
+    invoke-direct {v0, p2, v1, v2, v3}, Lcom/google/android/material/datepicker/MonthAdapter;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/DateSelector;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/DayViewDecorator;)V
 
     .line 9
     iget p2, p2, Lcom/google/android/material/datepicker/Month;->daysInWeek:I

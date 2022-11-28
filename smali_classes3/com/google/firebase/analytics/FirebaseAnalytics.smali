@@ -1,13 +1,13 @@
 .class public final Lcom/google/firebase/analytics/FirebaseAnalytics;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;,
         Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;,
+        Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;,
         Lcom/google/firebase/analytics/FirebaseAnalytics$UserProperty;,
         Lcom/google/firebase/analytics/FirebaseAnalytics$Param;,
         Lcom/google/firebase/analytics/FirebaseAnalytics$Event;
@@ -108,7 +108,7 @@
     return-object p0
 .end method
 
-.method public static getScionFrontendApiImplementation(Landroid/content/Context;Landroid/os/Bundle;)Lcom/google/android/gms/measurement/internal/zzhx;
+.method public static getScionFrontendApiImplementation(Landroid/content/Context;Landroid/os/Bundle;)Lcom/google/android/gms/measurement/internal/zzie;
     .locals 1
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;

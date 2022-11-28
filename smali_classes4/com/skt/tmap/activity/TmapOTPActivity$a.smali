@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapOTPActivity$a;->a:Lcom/skt/tmap/activity/TmapOTPActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapOTPActivity;->t5(Lcom/skt/tmap/activity/TmapOTPActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapOTPActivity;->B5(Lcom/skt/tmap/activity/TmapOTPActivity;)V
 
     return-void
 .end method

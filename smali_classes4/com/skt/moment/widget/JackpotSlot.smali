@@ -6,9 +6,9 @@
 # static fields
 .field public static final K0:I = -0x1
 
-.field public static final V0:I = 0x3
+.field public static final X0:I = 0x3
 
-.field public static final W0:I = 0x6
+.field public static final Y0:I = 0x6
 
 
 # instance fields
@@ -46,6 +46,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -55,6 +63,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -73,6 +91,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 6
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -109,6 +139,14 @@
 
 .method private setDrawableSlot1(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->b:Landroid/widget/ImageView;
@@ -119,7 +157,7 @@
 
     .line 2
     :cond_0
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->b:Landroid/widget/ImageView;
@@ -135,6 +173,14 @@
 
 .method private setDrawableSlot2(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->c:Landroid/widget/ImageView;
@@ -145,7 +191,7 @@
 
     .line 2
     :cond_0
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->c:Landroid/widget/ImageView;
@@ -161,6 +207,14 @@
 
 .method private setDrawableSlot3(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->d:Landroid/widget/ImageView;
@@ -171,7 +225,7 @@
 
     .line 2
     :cond_0
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->d:Landroid/widget/ImageView;
@@ -189,6 +243,14 @@
 # virtual methods
 .method public final c(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const-string v0, "layout_inflater"
 
@@ -539,6 +601,14 @@
 
 .method public final e(Z)I
     .locals 14
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/Math;->random()D
@@ -695,6 +765,14 @@
 
 .method public final f(Z)I
     .locals 14
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/Math;->random()D
@@ -851,6 +929,14 @@
 
 .method public final g(Z)I
     .locals 14
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/Math;->random()D
@@ -1007,6 +1093,16 @@
 
 .method public final h(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 1
     sget-object v0, Lcom/skt/moment/R$styleable;->JackpotSlot:[I
@@ -1035,6 +1131,16 @@
 
 .method public i(Landroid/os/Handler;I)V
     .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x10
+        }
+        names = {
+            "finishHandler",
+            "what"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/skt/moment/widget/JackpotSlot;->k()V
@@ -1642,17 +1748,17 @@
     .line 1
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->b:Landroid/widget/ImageView;
 
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->c:Landroid/widget/ImageView;
 
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->d:Landroid/widget/ImageView;
 
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/moment/widget/JackpotSlot;->a:Landroid/widget/ImageView;
@@ -1960,6 +2066,22 @@
 
 .method public onLayout(ZIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "changed",
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 
     .line 1
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
@@ -1986,6 +2108,14 @@
 
 .method public setJackpot(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isJackpot"
+        }
+    .end annotation
 
     .line 1
     iput-boolean p1, p0, Lcom/skt/moment/widget/JackpotSlot;->f:Z

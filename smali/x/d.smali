@@ -1,233 +1,402 @@
-.class public final Lx/d;
-.super Lx/h0;
-.source "AutoValue_DeviceProperties.java"
+.class public Lx/d;
+.super Lx/c;
+.source "OutputConfigurationCompatApi26Impl.java"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1a
+.end annotation
 
-.field public final b:Ljava/lang/String;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lx/d$a;
+    }
+.end annotation
 
-.field public final c:I
+
+# static fields
+.field public static final c:Ljava/lang/String; = "MAX_SURFACES_COUNT"
+
+.field public static final d:Ljava/lang/String; = "mSurfaces"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "manufacturer",
-            "model",
-            "sdkVersion"
-        }
-    .end annotation
+.method public constructor <init>(Landroid/view/Surface;)V
+    .locals 2
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-direct {p0}, Lx/h0;-><init>()V
+    new-instance v0, Lx/d$a;
 
-    const-string v0, "Null manufacturer"
+    new-instance v1, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    .line 2
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v1, p1}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(Landroid/view/Surface;)V
 
-    .line 3
-    iput-object p1, p0, Lx/d;->a:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lx/d$a;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
 
-    const-string p1, "Null model"
-
-    .line 4
-    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 5
-    iput-object p2, p0, Lx/d;->b:Ljava/lang/String;
-
-    .line 6
-    iput p3, p0, Lx/d;->c:I
+    invoke-direct {p0, v0}, Lx/d;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public c()Ljava/lang/String;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lx/d;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lx/d;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lx/d;->c:I
-
-    return v0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    .line 1
-    :cond_0
-    instance-of v1, p1, Lx/h0;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 2
-    check-cast p1, Lx/h0;
+    invoke-direct {p0, p1}, Lx/c;-><init>(Ljava/lang/Object;)V
 
-    .line 3
-    iget-object v1, p0, Lx/d;->a:Ljava/lang/String;
-
-    invoke-virtual {p1}, Lx/h0;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lx/d;->b:Ljava/lang/String;
-
-    .line 4
-    invoke-virtual {p1}, Lx/h0;->d()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lx/d;->c:I
-
-    .line 5
-    invoke-virtual {p1}, Lx/h0;->e()I
-
-    move-result p1
-
-    if-ne v1, p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    :goto_0
-    return v0
-
-    :cond_2
-    return v2
+    return-void
 .end method
 
-.method public hashCode()I
-    .locals 3
+.method public static m()I
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/NoSuchFieldException;,
+            Ljava/lang/IllegalAccessException;
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lx/d;->a:Ljava/lang/String;
+    const-class v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    const-string v1, "MAX_SURFACES_COUNT"
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    .line 2
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    const/4 v1, 0x0
+
+    .line 3
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
     move-result v0
 
-    const v1, 0xf4243
+    return v0
+.end method
 
-    xor-int/2addr v0, v1
+.method public static n(Landroid/hardware/camera2/params/OutputConfiguration;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/hardware/camera2/params/OutputConfiguration;",
+            ")",
+            "Ljava/util/List<",
+            "Landroid/view/Surface;",
+            ">;"
+        }
+    .end annotation
 
-    mul-int/2addr v0, v1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/NoSuchFieldException;,
+            Ljava/lang/IllegalAccessException;
+        }
+    .end annotation
+
+    .line 1
+    const-class v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    const-string v1, "mSurfaces"
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
 
     .line 2
-    iget-object v2, p0, Lx/d;->b:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     .line 3
-    iget v1, p0, Lx/d;->c:I
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    xor-int/2addr v0, v1
+    move-result-object p0
+
+    check-cast p0, Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public static o(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/d;
+    .locals 2
+    .param p0    # Landroid/hardware/camera2/params/OutputConfiguration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1a
+    .end annotation
+
+    .line 1
+    new-instance v0, Lx/d;
+
+    new-instance v1, Lx/d$a;
+
+    invoke-direct {v1, p0}, Lx/d$a;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+
+    invoke-direct {v0, v1}, Lx/d;-><init>(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a(Landroid/view/Surface;)V
+    .locals 1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Lx/d;->j()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->addSurface(Landroid/view/Surface;)V
+
+    return-void
+.end method
+
+.method public b(Landroid/view/Surface;)V
+    .locals 2
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Lx/c;->c()Landroid/view/Surface;
+
+    move-result-object v0
+
+    if-eq v0, p1, :cond_1
+
+    .line 2
+    :try_start_0
+    invoke-virtual {p0}, Lx/d;->j()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    .line 3
+    invoke-static {v0}, Lx/d;->n(Landroid/hardware/camera2/params/OutputConfiguration;)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_1
+
+    .line 5
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Surface is not part of this output configuration"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    :goto_0
+    const-string v0, "OutputConfigCompat"
+
+    const-string v1, "Unable to remove surface from this output configuration."
+
+    .line 6
+    invoke-static {v0, v1, p1}, Landroidx/camera/core/u1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    .line 7
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot remove surface associated with this output configuration"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public e()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/d$a;
+
+    iget-object v0, v0, Lx/d$a;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/d$a;
+
+    iput-object p1, v0, Lx/d$a;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public g()I
+    .locals 3
+
+    .line 1
+    :try_start_0
+    invoke-static {}, Lx/d;->m()I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    :goto_0
+    const-string v1, "OutputConfigCompat"
+
+    const-string v2, "Unable to retrieve max shared surface count."
+
+    .line 2
+    invoke-static {v1, v2, v0}, Landroidx/camera/core/u1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 3
+    invoke-super {p0}, Lx/f;->g()I
+
+    move-result v0
 
     return v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public h()Ljava/util/List;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    const-string v0, "DeviceProperties{manufacturer="
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/view/Surface;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lx/d;->j()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lx/d;->a:Ljava/lang/String;
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", model="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx/d;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sdkVersion="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lx/d;->c:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Landroid/support/v4/media/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->getSurfaces()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public i()V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lx/d;->j()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->enableSurfaceSharing()V
+
+    return-void
+.end method
+
+.method public j()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    instance-of v0, v0, Lx/d$a;
+
+    invoke-static {v0}, Landroidx/core/util/p;->a(Z)V
+
+    .line 2
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/d$a;
+
+    iget-object v0, v0, Lx/d$a;->a:Landroid/hardware/camera2/params/OutputConfiguration;
+
+    return-object v0
+.end method
+
+.method public final k()Z
+    .locals 2
+
+    .line 1
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "isSurfaceSharingEnabled() should not be called on API >= 26"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
 .end method

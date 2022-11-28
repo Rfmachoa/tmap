@@ -22,16 +22,16 @@
 
 
 # instance fields
-.field public final a:Ls1/f0;
+.field public final a:Landroidx/core/view/j0;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ls1/f0;)V
+.method public constructor <init>(Landroidx/core/view/j0;)V
     .locals 0
-    .param p1    # Ls1/f0;
+    .param p1    # Landroidx/core/view/j0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -40,7 +40,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/core/view/ViewCompat$u;->a:Ls1/f0;
+    iput-object p1, p0, Landroidx/core/view/ViewCompat$u;->a:Landroidx/core/view/j0;
 
     return-void
 .end method
@@ -66,9 +66,9 @@
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Landroidx/core/view/ViewCompat$u;->a:Ls1/f0;
+    iget-object v1, p0, Landroidx/core/view/ViewCompat$u;->a:Landroidx/core/view/j0;
 
-    invoke-interface {v1, p1, v0}, Ls1/f0;->a(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
+    invoke-interface {v1, p1, v0}, Landroidx/core/view/j0;->a(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
 
     move-result-object p1
 

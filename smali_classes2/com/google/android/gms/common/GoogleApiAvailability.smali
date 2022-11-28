@@ -1,6 +1,18 @@
 .class public Lcom/google/android/gms/common/GoogleApiAvailability;
 .super Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
+
+
+# annotations
+.annotation runtime Lcom/google/errorprone/annotations/RestrictedInheritance;
+    allowedOnPath = ".*java.*/com/google/android/gms.*"
+    allowlistAnnotations = {
+        Lcom/google/android/gms/internal/base/zad;,
+        Lcom/google/android/gms/internal/base/zae;
+    }
+    explanation = "Sub classing of GMS Core\'s APIs are restricted to GMS Core client libs and testing fakes."
+    link = "go/gmscore-restrictedinheritance"
+.end annotation
 
 
 # static fields
@@ -78,22 +90,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/HasApiKey<",
-            "*>;[",
-            "Lcom/google/android/gms/common/api/HasApiKey<",
-            "*>;)",
-            "Lcom/google/android/gms/tasks/Task<",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
     .end annotation
 
     const-string v0, "Requested API must not be null."
@@ -983,7 +979,7 @@
     invoke-direct {v1, p2}, Lcom/google/android/gms/common/api/internal/zabx;-><init>(Lcom/google/android/gms/common/api/internal/zabw;)V
 
     .line 4
-    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/internal/base/zao;->zaa(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 5
     invoke-virtual {v1, p1}, Lcom/google/android/gms/common/api/internal/zabx;->zaa(Landroid/content/Context;)V
@@ -1527,14 +1523,14 @@
 
     move-result-object p3
 
-    sget v0, Lcom/google/android/gms/internal/base/zal;->zaa:I
+    sget v0, Lcom/google/android/gms/internal/base/zap;->zaa:I
 
     const/high16 v4, 0x8000000
 
     or-int/2addr v0, v4
 
     .line 5
-    invoke-static {p1, v1, p3, v0}, Lcom/google/android/gms/internal/base/zal;->zaa(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p1, v1, p3, v0}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p3
 

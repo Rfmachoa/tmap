@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/messaging/CommonNotificationBuilder$DisplayNotificationInfo;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "CommonNotificationBuilder.java"
 
 
 # annotations
@@ -18,29 +18,25 @@
 .field public final id:I
 
 .field public final notificationBuilder:Landroidx/core/app/NotificationCompat$e;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public final tag:Ljava/lang/String;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/app/NotificationCompat$e;Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/firebase/messaging/CommonNotificationBuilder$DisplayNotificationInfo;->notificationBuilder:Landroidx/core/app/NotificationCompat$e;
 
+    .line 3
     iput-object p2, p0, Lcom/google/firebase/messaging/CommonNotificationBuilder$DisplayNotificationInfo;->tag:Ljava/lang/String;
 
-    const/4 p1, 0x0
-
-    iput p1, p0, Lcom/google/firebase/messaging/CommonNotificationBuilder$DisplayNotificationInfo;->id:I
+    .line 4
+    iput p3, p0, Lcom/google/firebase/messaging/CommonNotificationBuilder$DisplayNotificationInfo;->id:I
 
     return-void
 .end method

@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lz5/a;->a:Lz5/a;
+    sget-object v2, Lw7/a;->a:Lw7/a;
 
     .line 5
     invoke-virtual {v1, v2}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
@@ -123,7 +123,7 @@
 
     const-string v1, "fire-abt"
 
-    const-string v2, "21.0.0"
+    const-string v2, "21.0.2"
 
     .line 7
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;

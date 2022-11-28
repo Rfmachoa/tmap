@@ -26,7 +26,7 @@
 .method public abstract b(J)V
 .end method
 
-.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;J)Z
+.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;J)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

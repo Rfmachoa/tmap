@@ -4,31 +4,31 @@
 
 
 # static fields
-.field public static final W0:I = -0x1
-
-.field public static final X0:I = -0x1
-
 .field public static final Y0:I = -0x1
 
-.field public static final Z0:F = 2.0f
+.field public static final Z0:I = -0x1
 
-.field public static final a1:F = 4.0f
+.field public static final a1:I = -0x1
 
-.field public static final b1:I = 0x0
+.field public static final b1:F = 2.0f
 
-.field public static final c1:I = 0x64
+.field public static final c1:F = 4.0f
 
-.field public static final d1:I = 0xe6
+.field public static final d1:I = 0x0
 
-.field public static final e1:I = 0xff
+.field public static final e1:I = 0x64
 
-.field public static final f1:I = -0x5a
+.field public static final f1:I = 0xe6
+
+.field public static final g1:I = 0xff
+
+.field public static final h1:I = -0x5a
 
 
 # instance fields
 .field public K0:Landroid/graphics/RectF;
 
-.field public V0:Landroid/animation/ValueAnimator;
+.field public X0:Landroid/animation/ValueAnimator;
 
 .field public a:I
 
@@ -64,6 +64,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -119,6 +127,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 12
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -180,6 +198,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 25
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -250,6 +280,16 @@
 
 .method public static c(Landroid/content/Context;F)F
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "dipValue"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -272,6 +312,14 @@
 
 .method private setProgressValue(F)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
     .line 1
     iget v0, p0, Lcom/skt/moment/widget/CouponProgress;->g:I
@@ -307,7 +355,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/moment/widget/CouponProgress;->V0:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/skt/moment/widget/CouponProgress;->X0:Landroid/animation/ValueAnimator;
 
     if-nez v0, :cond_0
 
@@ -320,7 +368,7 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/skt/moment/widget/CouponProgress;->V0:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/skt/moment/widget/CouponProgress;->X0:Landroid/animation/ValueAnimator;
 
     return-void
 .end method
@@ -410,6 +458,14 @@
 
 .method public e(F)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/skt/moment/widget/CouponProgress;->b()V
@@ -450,7 +506,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->V0:Landroid/animation/ValueAnimator;
+    iput-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->X0:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0x12c
 
@@ -458,7 +514,7 @@
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 7
-    iget-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->V0:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->X0:Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
@@ -467,7 +523,7 @@
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     .line 8
-    iget-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->V0:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->X0:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lcom/skt/moment/widget/CouponProgress$a;
 
@@ -476,7 +532,7 @@
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 9
-    iget-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->V0:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/skt/moment/widget/CouponProgress;->X0:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
@@ -485,6 +541,16 @@
 
 .method public final f(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 1
     sget-object v0, Lcom/skt/moment/R$styleable;->CouponProgress:[I
@@ -672,6 +738,14 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
@@ -746,6 +820,16 @@
 
 .method public onMeasure(II)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumHeight()I
@@ -863,6 +947,14 @@
 
 .method public setMaxValue(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "max"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/widget/CouponProgress;->g:I
@@ -906,6 +998,14 @@
 
 .method public setMinValue(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "min"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/widget/CouponProgress;->f:I
@@ -951,6 +1051,14 @@
 
 .method public setProgress(F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/skt/moment/widget/CouponProgress;->b()V

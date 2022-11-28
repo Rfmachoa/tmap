@@ -1,106 +1,238 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/util/x;
 .super Ljava/lang/Object;
-.source "NalUnitUtil.java"
+.source "MimeTypes.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tmapmobility/tmap/exoplayer2/util/x$b;,
         Lcom/tmapmobility/tmap/exoplayer2/util/x$a;,
-        Lcom/tmapmobility/tmap/exoplayer2/util/x$c;
+        Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
     }
 .end annotation
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "NalUnitUtil"
+.field public static final A:Ljava/lang/String; = "video/mp42"
 
-.field public static final b:[B
+.field public static final A0:Ljava/lang/String; = "application/x-mp4-vtt"
 
-.field public static final c:I = 0xff
+.field public static final B:Ljava/lang/String; = "video/mp43"
 
-.field public static final d:[F
+.field public static final B0:Ljava/lang/String; = "application/x-mp4-cea-608"
 
-.field public static final e:I = 0x6
+.field public static final C:Ljava/lang/String; = "video/x-unknown"
 
-.field public static final f:I = 0x7
+.field public static final C0:Ljava/lang/String; = "application/x-rawcc"
 
-.field public static final g:I = 0x27
+.field public static final D:Ljava/lang/String; = "audio/mp4"
 
-.field public static final h:Ljava/lang/Object;
+.field public static final D0:Ljava/lang/String; = "application/vobsub"
 
-.field public static i:[I
+.field public static final E:Ljava/lang/String; = "audio/mp4a-latm"
+
+.field public static final E0:Ljava/lang/String; = "application/pgs"
+
+.field public static final F:Ljava/lang/String; = "audio/x-matroska"
+
+.field public static final F0:Ljava/lang/String; = "application/x-scte35"
+
+.field public static final G:Ljava/lang/String; = "audio/webm"
+
+.field public static final G0:Ljava/lang/String; = "application/x-camera-motion"
+
+.field public static final H:Ljava/lang/String; = "audio/mpeg"
+
+.field public static final H0:Ljava/lang/String; = "application/x-emsg"
+
+.field public static final I:Ljava/lang/String; = "audio/mpeg-L1"
+
+.field public static final I0:Ljava/lang/String; = "application/dvbsubs"
+
+.field public static final J:Ljava/lang/String; = "audio/mpeg-L2"
+
+.field public static final J0:Ljava/lang/String; = "application/x-exif"
+
+.field public static final K:Ljava/lang/String; = "audio/mha1"
+
+.field public static final K0:Ljava/lang/String; = "application/x-icy"
+
+.field public static final L:Ljava/lang/String; = "audio/mhm1"
+
+.field public static final L0:Ljava/lang/String; = "application/vnd.dvb.ait"
+
+.field public static final M:Ljava/lang/String; = "audio/raw"
+
+.field public static final M0:Ljava/lang/String; = "application/x-rtsp"
+
+.field public static final N:Ljava/lang/String; = "audio/g711-alaw"
+
+.field public static final N0:Ljava/lang/String; = "image/jpeg"
+
+.field public static final O:Ljava/lang/String; = "audio/g711-mlaw"
+
+.field public static final O0:Ljava/lang/String; = "ec+3"
+
+.field public static final P:Ljava/lang/String; = "audio/ac3"
+
+.field public static final P0:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lcom/tmapmobility/tmap/exoplayer2/util/x$a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final Q:Ljava/lang/String; = "audio/eac3"
+
+.field public static final Q0:Ljava/util/regex/Pattern;
+
+.field public static final R:Ljava/lang/String; = "audio/eac3-joc"
+
+.field public static final S:Ljava/lang/String; = "audio/ac4"
+
+.field public static final T:Ljava/lang/String; = "audio/true-hd"
+
+.field public static final U:Ljava/lang/String; = "audio/vnd.dts"
+
+.field public static final V:Ljava/lang/String; = "audio/vnd.dts.hd"
+
+.field public static final W:Ljava/lang/String; = "audio/vnd.dts.hd;profile=lbr"
+
+.field public static final X:Ljava/lang/String; = "audio/vnd.dts.uhd;profile=p2"
+
+.field public static final Y:Ljava/lang/String; = "audio/vorbis"
+
+.field public static final Z:Ljava/lang/String; = "audio/opus"
+
+.field public static final a:Ljava/lang/String; = "video"
+
+.field public static final a0:Ljava/lang/String; = "audio/amr"
+
+.field public static final b:Ljava/lang/String; = "audio"
+
+.field public static final b0:Ljava/lang/String; = "audio/3gpp"
+
+.field public static final c:Ljava/lang/String; = "text"
+
+.field public static final c0:Ljava/lang/String; = "audio/amr-wb"
+
+.field public static final d:Ljava/lang/String; = "image"
+
+.field public static final d0:Ljava/lang/String; = "audio/flac"
+
+.field public static final e:Ljava/lang/String; = "application"
+
+.field public static final e0:Ljava/lang/String; = "audio/midi"
+
+.field public static final f:Ljava/lang/String; = "video/mp4"
+
+.field public static final f0:Ljava/lang/String; = "audio/alac"
+
+.field public static final g:Ljava/lang/String; = "video/x-matroska"
+
+.field public static final g0:Ljava/lang/String; = "audio/gsm"
+
+.field public static final h:Ljava/lang/String; = "video/webm"
+
+.field public static final h0:Ljava/lang/String; = "audio/ogg"
+
+.field public static final i:Ljava/lang/String; = "video/3gpp"
+
+.field public static final i0:Ljava/lang/String; = "audio/wav"
+
+.field public static final j:Ljava/lang/String; = "video/avc"
+
+.field public static final j0:Ljava/lang/String; = "audio/x-unknown"
+
+.field public static final k:Ljava/lang/String; = "video/hevc"
+
+.field public static final k0:Ljava/lang/String; = "text/vtt"
+
+.field public static final l:Ljava/lang/String; = "video/x-vnd.on2.vp8"
+
+.field public static final l0:Ljava/lang/String; = "text/x-ssa"
+
+.field public static final m:Ljava/lang/String; = "video/x-vnd.on2.vp9"
+
+.field public static final m0:Ljava/lang/String; = "text/x-exoplayer-cues"
+
+.field public static final n:Ljava/lang/String; = "video/av01"
+
+.field public static final n0:Ljava/lang/String; = "text/x-unknown"
+
+.field public static final o:Ljava/lang/String; = "video/mp2t"
+
+.field public static final o0:Ljava/lang/String; = "application/mp4"
+
+.field public static final p:Ljava/lang/String; = "video/mp4v-es"
+
+.field public static final p0:Ljava/lang/String; = "application/webm"
+
+.field public static final q:Ljava/lang/String; = "video/mpeg"
+
+.field public static final q0:Ljava/lang/String; = "application/x-matroska"
+
+.field public static final r:Ljava/lang/String; = "video/mp2p"
+
+.field public static final r0:Ljava/lang/String; = "application/dash+xml"
+
+.field public static final s:Ljava/lang/String; = "video/mpeg2"
+
+.field public static final s0:Ljava/lang/String; = "application/x-mpegURL"
+
+.field public static final t:Ljava/lang/String; = "video/wvc1"
+
+.field public static final t0:Ljava/lang/String; = "application/vnd.ms-sstr+xml"
+
+.field public static final u:Ljava/lang/String; = "video/divx"
+
+.field public static final u0:Ljava/lang/String; = "application/id3"
+
+.field public static final v:Ljava/lang/String; = "video/x-flv"
+
+.field public static final v0:Ljava/lang/String; = "application/cea-608"
+
+.field public static final w:Ljava/lang/String; = "video/dolby-vision"
+
+.field public static final w0:Ljava/lang/String; = "application/cea-708"
+
+.field public static final x:Ljava/lang/String; = "video/ogg"
+
+.field public static final x0:Ljava/lang/String; = "application/x-subrip"
+
+.field public static final y:Ljava/lang/String; = "video/x-msvideo"
+
+.field public static final y0:Ljava/lang/String; = "application/ttml+xml"
+
+.field public static final z:Ljava/lang/String; = "video/mjpeg"
+
+.field public static final z0:Ljava/lang/String; = "application/x-quicktime-tx3g"
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x4
-
-    new-array v0, v0, [B
-
     .line 1
-    fill-array-data v0, :array_0
+    new-instance v0, Ljava/util/ArrayList;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->b:[B
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/16 v0, 0x11
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
 
-    new-array v0, v0, [F
+    const-string v0, "^mp4a\\.([a-zA-Z0-9]{2})(?:\\.([0-9]{1,2}))?$"
 
     .line 2
-    fill-array-data v0, :array_1
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->d:[F
+    move-result-object v0
 
-    .line 3
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->h:Ljava/lang/Object;
-
-    const/16 v0, 0xa
-
-    new-array v0, v0, [I
-
-    .line 4
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i:[I
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->Q0:Ljava/util/regex/Pattern;
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 1
-        0x0t
-        0x0t
-        0x0t
-        0x1t
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f8ba2e9
-        0x3f68ba2f
-        0x3fba2e8c
-        0x3f9b26ca
-        0x400ba2e9
-        0x3fe8ba2f
-        0x403a2e8c
-        0x401b26ca
-        0x3fd1745d
-        0x3fae8ba3
-        0x3ff83e10
-        0x3fcede62
-        0x3faaaaab
-        0x3fc00000    # 1.5f
-        0x40000000    # 2.0f
-    .end array-data
 .end method
 
 .method public constructor <init>()V
@@ -112,1943 +244,2294 @@
     return-void
 .end method
 
-.method public static a([Z)V
-    .locals 2
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 4
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
-    .line 1
-    aput-boolean v0, p0, v0
+    if-nez p0, :cond_0
 
-    const/4 v1, 0x1
-
-    .line 2
-    aput-boolean v0, p0, v1
-
-    const/4 v1, 0x2
-
-    .line 3
-    aput-boolean v0, p0, v1
-
-    return-void
-.end method
-
-.method public static b(Ljava/nio/ByteBuffer;)V
-    .locals 9
-
-    .line 1
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :goto_0
-    add-int/lit8 v4, v2, 0x1
-
-    if-ge v4, v0, :cond_3
-
-    .line 2
-    invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v5
-
-    and-int/lit16 v5, v5, 0xff
-
-    const/4 v6, 0x3
-
-    if-ne v3, v6, :cond_0
-
-    const/4 v7, 0x1
-
-    if-ne v5, v7, :cond_1
-
-    .line 3
-    invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->get(I)B
-
-    move-result v7
-
-    and-int/lit8 v7, v7, 0x1f
-
-    const/4 v8, 0x7
-
-    if-ne v7, v8, :cond_1
-
-    .line 4
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    sub-int/2addr v2, v6
-
-    .line 5
-    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 6
-    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    .line 7
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 8
-    invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    return-void
+    return v0
 
     :cond_0
-    if-nez v5, :cond_1
-
-    add-int/lit8 v3, v3, 0x1
-
-    :cond_1
-    if-eqz v5, :cond_2
-
-    move v3, v1
-
-    :cond_2
-    move v2, v4
-
-    goto :goto_0
-
-    .line 9
-    :cond_3
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
-
-    return-void
-.end method
-
-.method public static c([BII[Z)I
-    .locals 7
-
-    sub-int v0, p2, p1
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-ltz v0, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v1
+    const/4 v1, -0x1
 
     .line 1
-    :goto_0
-    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    if-nez v0, :cond_1
+    move-result v2
 
-    return p2
+    const/4 v3, 0x1
 
-    .line 2
+    sparse-switch v2, :sswitch_data_0
+
+    goto/16 :goto_0
+
+    :sswitch_0
+    const-string v2, "audio/g711-mlaw"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto/16 :goto_0
+
     :cond_1
-    aget-boolean v3, p3, v1
+    const/16 v1, 0xa
 
-    if-eqz v3, :cond_2
+    goto/16 :goto_0
 
-    .line 3
-    invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->a([Z)V
+    :sswitch_1
+    const-string v2, "audio/g711-alaw"
 
-    add-int/lit8 p1, p1, -0x3
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return p1
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto/16 :goto_0
 
     :cond_2
-    const/4 v3, 0x2
+    const/16 v1, 0x9
 
-    if-le v0, v2, :cond_3
+    goto/16 :goto_0
 
-    .line 4
-    aget-boolean v4, p3, v2
+    :sswitch_2
+    const-string v2, "audio/mpeg"
 
-    if-eqz v4, :cond_3
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget-byte v4, p0, p1
+    move-result p0
 
-    if-ne v4, v2, :cond_3
+    if-nez p0, :cond_3
 
-    .line 5
-    invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->a([Z)V
-
-    sub-int/2addr p1, v3
-
-    return p1
+    goto/16 :goto_0
 
     :cond_3
-    if-le v0, v3, :cond_4
+    const/16 v1, 0x8
 
-    .line 6
-    aget-boolean v4, p3, v3
+    goto/16 :goto_0
 
-    if-eqz v4, :cond_4
+    :sswitch_3
+    const-string v2, "audio/flac"
 
-    aget-byte v4, p0, p1
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v4, :cond_4
+    move-result p0
 
-    add-int/lit8 v4, p1, 0x1
+    if-nez p0, :cond_4
 
-    aget-byte v4, p0, v4
-
-    if-ne v4, v2, :cond_4
-
-    .line 7
-    invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->a([Z)V
-
-    sub-int/2addr p1, v2
-
-    return p1
+    goto :goto_0
 
     :cond_4
-    add-int/lit8 v4, p2, -0x1
+    const/4 v1, 0x7
 
-    add-int/2addr p1, v3
+    goto :goto_0
 
-    :goto_1
-    if-ge p1, v4, :cond_7
+    :sswitch_4
+    const-string v2, "audio/eac3"
 
-    .line 8
-    aget-byte v5, p0, p1
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    and-int/lit16 v5, v5, 0xfe
+    move-result p0
 
-    if-eqz v5, :cond_5
+    if-nez p0, :cond_5
 
-    goto :goto_2
+    goto :goto_0
 
     :cond_5
-    add-int/lit8 v5, p1, -0x2
+    const/4 v1, 0x6
 
-    .line 9
-    aget-byte v6, p0, v5
+    goto :goto_0
 
-    if-nez v6, :cond_6
+    :sswitch_5
+    const-string v2, "audio/raw"
 
-    add-int/lit8 v6, p1, -0x1
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget-byte v6, p0, v6
+    move-result p0
 
-    if-nez v6, :cond_6
+    if-nez p0, :cond_6
 
-    aget-byte v6, p0, p1
-
-    if-ne v6, v2, :cond_6
-
-    .line 10
-    invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->a([Z)V
-
-    return v5
+    goto :goto_0
 
     :cond_6
-    add-int/lit8 p1, p1, -0x2
+    const/4 v1, 0x5
 
-    :goto_2
-    add-int/lit8 p1, p1, 0x3
+    goto :goto_0
 
-    goto :goto_1
+    :sswitch_6
+    const-string v2, "audio/ac3"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_0
 
     :cond_7
-    if-le v0, v3, :cond_9
+    const/4 v1, 0x4
 
-    add-int/lit8 p1, p2, -0x3
+    goto :goto_0
 
-    .line 11
-    aget-byte p1, p0, p1
+    :sswitch_7
+    const-string v2, "audio/mp4a-latm"
 
-    if-nez p1, :cond_8
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    add-int/lit8 p1, p2, -0x2
+    move-result p0
 
-    aget-byte p1, p0, p1
+    if-nez p0, :cond_8
 
-    if-nez p1, :cond_8
-
-    aget-byte p1, p0, v4
-
-    if-ne p1, v2, :cond_8
-
-    goto :goto_3
+    goto :goto_0
 
     :cond_8
-    move p1, v1
+    const/4 v1, 0x3
 
-    goto :goto_4
+    goto :goto_0
+
+    :sswitch_8
+    const-string v2, "audio/mpeg-L2"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_9
+
+    goto :goto_0
 
     :cond_9
-    if-ne v0, v3, :cond_a
+    const/4 v1, 0x2
 
-    .line 12
-    aget-boolean p1, p3, v3
+    goto :goto_0
 
-    if-eqz p1, :cond_8
+    :sswitch_9
+    const-string v2, "audio/mpeg-L1"
 
-    add-int/lit8 p1, p2, -0x2
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget-byte p1, p0, p1
+    move-result p0
 
-    if-nez p1, :cond_8
+    if-nez p0, :cond_a
 
-    aget-byte p1, p0, v4
+    goto :goto_0
 
-    if-ne p1, v2, :cond_8
-
-    goto :goto_3
-
-    .line 13
     :cond_a
-    aget-boolean p1, p3, v2
+    move v1, v3
 
-    if-eqz p1, :cond_8
+    goto :goto_0
 
-    aget-byte p1, p0, v4
+    :sswitch_a
+    const-string v2, "audio/eac3-joc"
 
-    if-ne p1, v2, :cond_8
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :goto_3
-    move p1, v2
+    move-result p0
 
-    :goto_4
-    aput-boolean p1, p3, v1
+    if-nez p0, :cond_b
 
-    if-le v0, v2, :cond_b
+    goto :goto_0
 
-    add-int/lit8 p1, p2, -0x2
-
-    .line 14
-    aget-byte p1, p0, p1
-
-    if-nez p1, :cond_c
-
-    aget-byte p1, p0, v4
-
-    if-nez p1, :cond_c
-
-    goto :goto_5
-
-    .line 15
     :cond_b
-    aget-boolean p1, p3, v3
+    move v1, v0
 
-    if-eqz p1, :cond_c
+    :goto_0
+    packed-switch v1, :pswitch_data_0
 
-    aget-byte p1, p0, v4
+    return v0
 
+    :pswitch_0
     if-nez p1, :cond_c
 
-    :goto_5
-    move p1, v2
+    return v0
 
-    goto :goto_6
-
+    .line 2
     :cond_c
-    move p1, v1
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
 
-    :goto_6
-    aput-boolean p1, p3, v2
-
-    .line 16
-    aget-byte p0, p0, v4
+    move-result-object p0
 
     if-nez p0, :cond_d
 
-    move v1, v2
+    return v0
 
+    .line 3
     :cond_d
-    aput-boolean v1, p3, v3
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;->a()I
 
-    return p2
+    move-result p0
+
+    if-eqz p0, :cond_e
+
+    const/16 p1, 0x10
+
+    if-eq p0, p1, :cond_e
+
+    move v0, v3
+
+    :cond_e
+    return v0
+
+    :pswitch_1
+    return v3
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7e929daa -> :sswitch_a
+        -0x19cc928c -> :sswitch_9
+        -0x19cc928b -> :sswitch_8
+        -0x3313c2e -> :sswitch_7
+        0xb269698 -> :sswitch_6
+        0xb26d66f -> :sswitch_5
+        0x59ae0c65 -> :sswitch_4
+        0x59aeaa01 -> :sswitch_3
+        0x59b1e81e -> :sswitch_2
+        0x71710385 -> :sswitch_1
+        0x717677f9 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public static d([BII)I
-    .locals 2
-
-    :goto_0
-    add-int/lit8 v0, p2, -0x2
-
-    if-ge p1, v0, :cond_1
-
-    .line 1
-    aget-byte v0, p0, p1
-
-    if-nez v0, :cond_0
-
-    add-int/lit8 v0, p1, 0x1
-
-    aget-byte v0, p0, v0
-
-    if-nez v0, :cond_0
-
-    add-int/lit8 v0, p1, 0x2
-
-    aget-byte v0, p0, v0
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    return p1
-
-    :cond_0
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return p2
-.end method
-
-.method public static e([BI)I
+.method public static b(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
-
-    add-int/lit8 p1, p1, 0x3
-
-    .line 1
-    aget-byte p0, p0, p1
-
-    and-int/lit8 p0, p0, 0x7e
-
-    shr-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
-.method public static f([BI)I
-    .locals 0
-
-    add-int/lit8 p1, p1, 0x3
-
-    .line 1
-    aget-byte p0, p0, p1
-
-    and-int/lit8 p0, p0, 0x1f
-
-    return p0
-.end method
-
-.method public static g(Ljava/lang/String;B)Z
-    .locals 3
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    const-string v0, "video/avc"
-
     .line 1
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object p0
 
-    const/4 v1, 0x1
+    if-eqz p0, :cond_0
 
-    if-eqz v0, :cond_0
+    const/4 p0, 0x1
 
-    and-int/lit8 v0, p1, 0x1f
-
-    const/4 v2, 0x6
-
-    if-eq v0, v2, :cond_2
+    goto :goto_0
 
     :cond_0
-    const-string v0, "video/hevc"
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    .line 1
+    :cond_0
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->w1(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
 
     .line 2
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    array-length v1, p0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, p0, v2
+
+    .line 3
+    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 4
+    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->p(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    return-object v3
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public static d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_4
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    .line 1
+    :cond_0
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->w1(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 3
+    array-length v2, p0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_3
+
+    aget-object v4, p0, v3
+
+    .line 4
+    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    .line 5
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v5
+
+    if-lez v5, :cond_1
+
+    const-string v5, ","
+
+    .line 6
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    :cond_1
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 8
+    :cond_3
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    if-lez p0, :cond_4
 
-    and-int/lit8 p0, p1, 0x7e
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    shr-int/2addr p0, v1
+    move-result-object v0
 
-    const/16 p1, 0x27
+    :cond_4
+    :goto_1
+    return-object v0
+.end method
 
-    if-ne p0, p1, :cond_1
+.method public static e(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    .line 2
+    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
+
+    .line 3
+    iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;->b:Ljava/lang/String;
+
+    invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 4
+    iget-object p0, v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;->a:Ljava/lang/String;
+
+    return-object p0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public static h([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
-    .locals 0
-
-    add-int/lit8 p1, p1, 0x2
-
-    .line 1
-    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
-
-    move-result-object p0
+    const/4 p0, 0x0
 
     return-object p0
 .end method
 
-.method public static i([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
-    .locals 21
+.method public static f(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 7
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object/from16 v1, p0
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move/from16 v2, p1
+    move-result v0
 
-    move/from16 v3, p2
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([BII)V
+    const/4 v2, 0x7
 
-    const/4 v1, 0x4
+    const/4 v3, 0x6
 
-    .line 2
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    const/4 v2, 0x3
-
-    .line 3
-    invoke-virtual {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v3
-
-    .line 4
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    const/4 v4, 0x2
-
-    .line 5
-    invoke-virtual {v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v6
-
-    .line 6
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v7
-
-    const/4 v5, 0x5
-
-    .line 7
-    invoke-virtual {v0, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v8
+    const/4 v4, 0x5
 
     const/4 v5, 0x0
 
-    const/4 v9, 0x0
+    const/4 v6, -0x1
 
-    move v10, v5
+    sparse-switch v0, :sswitch_data_0
 
-    :goto_0
-    const/16 v5, 0x20
+    goto/16 :goto_0
 
-    const/4 v11, 0x1
+    :sswitch_0
+    const-string v0, "audio/true-hd"
 
-    if-ge v9, v5, :cond_1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 8
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
+    move-result p0
 
-    move-result v5
+    if-nez p0, :cond_0
 
-    if-eqz v5, :cond_0
-
-    shl-int v5, v11, v9
-
-    or-int/2addr v10, v5
+    goto/16 :goto_0
 
     :cond_0
-    add-int/lit8 v9, v9, 0x1
+    move v6, v1
+
+    goto/16 :goto_0
+
+    :sswitch_1
+    const-string v0, "audio/vnd.dts.hd"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v5, 0x6
+    move v6, v2
 
-    new-array v12, v5, [I
+    goto :goto_0
 
-    const/4 v9, 0x0
+    :sswitch_2
+    const-string v0, "audio/mpeg"
 
-    :goto_1
-    const/16 v13, 0x8
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-ge v9, v5, :cond_2
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v6, v3
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "audio/eac3"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v6, v4
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "audio/ac4"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v6, 0x4
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "audio/ac3"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v6, 0x3
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "audio/mp4a-latm"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    const/4 v6, 0x2
+
+    goto :goto_0
+
+    :sswitch_7
+    const-string v0, "audio/vnd.dts"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    const/4 v6, 0x1
+
+    goto :goto_0
+
+    :sswitch_8
+    const-string v0, "audio/eac3-joc"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    move v6, v5
+
+    :goto_0
+    packed-switch v6, :pswitch_data_0
+
+    return v5
+
+    :pswitch_0
+    const/16 p0, 0xe
+
+    return p0
+
+    :pswitch_1
+    return v1
+
+    :pswitch_2
+    const/16 p0, 0x9
+
+    return p0
+
+    :pswitch_3
+    return v3
+
+    :pswitch_4
+    const/16 p0, 0x11
+
+    return p0
+
+    :pswitch_5
+    return v4
+
+    :pswitch_6
+    if-nez p1, :cond_9
+
+    return v5
+
+    .line 2
+    :cond_9
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
+
+    move-result-object p0
+
+    if-nez p0, :cond_a
+
+    return v5
+
+    .line 3
+    :cond_a
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;->a()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_7
+    return v2
+
+    :pswitch_8
+    const/16 p0, 0x12
+
+    return p0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7e929daa -> :sswitch_8
+        -0x41455b98 -> :sswitch_7
+        -0x3313c2e -> :sswitch_6
+        0xb269698 -> :sswitch_5
+        0xb269699 -> :sswitch_4
+        0x59ae0c65 -> :sswitch_3
+        0x59b1e81e -> :sswitch_2
+        0x59c2dc42 -> :sswitch_1
+        0x5cc95062 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static g(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    .line 1
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "avc1"
+
+    .line 2
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_24
+
+    const-string v1, "avc3"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto/16 :goto_9
+
+    :cond_1
+    const-string v1, "hev1"
+
+    .line 3
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_23
+
+    const-string v1, "hvc1"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto/16 :goto_8
+
+    :cond_2
+    const-string v1, "dvav"
+
+    .line 4
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_22
+
+    const-string v1, "dva1"
+
+    .line 5
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_22
+
+    const-string v1, "dvhe"
+
+    .line 6
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_22
+
+    const-string v1, "dvh1"
+
+    .line 7
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto/16 :goto_7
+
+    :cond_3
+    const-string v1, "av01"
+
+    .line 8
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string p0, "video/av01"
+
+    return-object p0
+
+    :cond_4
+    const-string v1, "vp9"
 
     .line 9
-    invoke-virtual {v0, v13}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v13
+    move-result v1
 
-    aput v13, v12, v9
+    if-nez v1, :cond_21
 
-    add-int/lit8 v9, v9, 0x1
+    const-string v1, "vp09"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    goto/16 :goto_6
+
+    :cond_5
+    const-string v1, "vp8"
+
+    .line 10
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_20
+
+    const-string v1, "vp08"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    goto/16 :goto_5
+
+    :cond_6
+    const-string v1, "mp4a"
+
+    .line 11
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    const-string v1, "mp4a."
+
+    .line 12
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    .line 13
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_7
+
+    .line 14
+    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;->a:I
+
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->h(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_7
+    if-nez v0, :cond_8
+
+    const-string v0, "audio/mp4a-latm"
+
+    :cond_8
+    return-object v0
+
+    :cond_9
+    const-string v0, "mha1"
+
+    .line 15
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    const-string p0, "audio/mha1"
+
+    return-object p0
+
+    :cond_a
+    const-string v0, "mhm1"
+
+    .line 16
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    const-string p0, "audio/mhm1"
+
+    return-object p0
+
+    :cond_b
+    const-string v0, "ac-3"
+
+    .line 17
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1f
+
+    const-string v0, "dac3"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    goto/16 :goto_4
+
+    :cond_c
+    const-string v0, "ec-3"
+
+    .line 18
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1e
+
+    const-string v0, "dec3"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    goto/16 :goto_3
+
+    :cond_d
+    const-string v0, "ec+3"
+
+    .line 19
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    const-string p0, "audio/eac3-joc"
+
+    return-object p0
+
+    :cond_e
+    const-string v0, "ac-4"
+
+    .line 20
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1d
+
+    const-string v0, "dac4"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    goto/16 :goto_2
+
+    :cond_f
+    const-string v0, "dtsc"
+
+    .line 21
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    const-string p0, "audio/vnd.dts"
+
+    return-object p0
+
+    :cond_10
+    const-string v0, "dtse"
+
+    .line 22
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    const-string p0, "audio/vnd.dts.hd;profile=lbr"
+
+    return-object p0
+
+    :cond_11
+    const-string v0, "dtsh"
+
+    .line 23
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1c
+
+    const-string v0, "dtsl"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
 
     goto :goto_1
 
-    .line 10
-    :cond_2
-    invoke-virtual {v0, v13}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v14
-
-    const/4 v5, 0x0
-
-    const/4 v9, 0x0
-
-    :goto_2
-    if-ge v5, v3, :cond_5
-
-    .line 11
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v15
-
-    if-eqz v15, :cond_3
-
-    add-int/lit8 v9, v9, 0x59
-
-    .line 12
-    :cond_3
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v15
-
-    if-eqz v15, :cond_4
-
-    add-int/lit8 v9, v9, 0x8
-
-    :cond_4
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_2
-
-    .line 13
-    :cond_5
-    invoke-virtual {v0, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    if-lez v3, :cond_6
-
-    rsub-int/lit8 v5, v3, 0x8
-
-    mul-int/2addr v5, v4
-
-    .line 14
-    invoke-virtual {v0, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    .line 15
-    :cond_6
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v15
-
-    .line 16
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v5
-
-    if-ne v5, v2, :cond_7
-
-    .line 17
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 18
-    :cond_7
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v2
-
-    .line 19
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v9
-
-    .line 20
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v16
-
-    if-eqz v16, :cond_b
-
-    .line 21
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v16
-
-    .line 22
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v17
-
-    .line 23
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v18
+    :cond_12
+    const-string v0, "dtsx"
 
     .line 24
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v19
+    move-result v0
 
-    if-eq v5, v11, :cond_9
+    if-eqz v0, :cond_13
 
-    if-ne v5, v4, :cond_8
+    const-string p0, "audio/vnd.dts.uhd;profile=p2"
 
-    goto :goto_3
+    return-object p0
 
-    :cond_8
-    move/from16 v20, v11
-
-    goto :goto_4
-
-    :cond_9
-    :goto_3
-    move/from16 v20, v4
-
-    :goto_4
-    if-ne v5, v11, :cond_a
-
-    move v5, v4
-
-    goto :goto_5
-
-    :cond_a
-    move v5, v11
-
-    :goto_5
-    add-int v16, v16, v17
-
-    mul-int v16, v16, v20
-
-    sub-int v2, v2, v16
-
-    add-int v18, v18, v19
-
-    mul-int v18, v18, v5
-
-    sub-int v9, v9, v18
+    :cond_13
+    const-string v0, "opus"
 
     .line 25
-    :cond_b
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_14
+
+    const-string p0, "audio/opus"
+
+    return-object p0
+
+    :cond_14
+    const-string v0, "vorbis"
 
     .line 26
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_15
+
+    const-string p0, "audio/vorbis"
+
+    return-object p0
+
+    :cond_15
+    const-string v0, "flac"
 
     .line 27
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v5
+    move-result v0
+
+    if-eqz v0, :cond_16
+
+    const-string p0, "audio/flac"
+
+    return-object p0
+
+    :cond_16
+    const-string v0, "stpp"
 
     .line 28
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v16
-
-    if-eqz v16, :cond_c
-
-    const/16 v16, 0x0
-
-    goto :goto_6
-
-    :cond_c
-    move/from16 v16, v3
-
-    :goto_6
-    move/from16 v1, v16
-
-    :goto_7
-    if-gt v1, v3, :cond_d
-
-    .line 29
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 30
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 31
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_7
-
-    .line 32
-    :cond_d
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 33
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 34
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 35
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 36
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 37
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 38
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_e
-
-    .line 39
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_e
-
-    .line 40
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->n(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)V
-
-    .line 41
-    :cond_e
-    invoke-virtual {v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    .line 42
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_f
-
-    .line 43
-    invoke-virtual {v0, v13}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    .line 44
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 45
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 46
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 47
-    :cond_f
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->p(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)V
-
-    .line 48
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_10
-
-    const/4 v1, 0x0
-
-    .line 49
-    :goto_8
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_10
-
-    add-int/lit8 v3, v5, 0x4
-
-    add-int/2addr v3, v11
-
-    .line 50
-    invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_8
-
-    .line 51
-    :cond_10
-    invoke-virtual {v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 52
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_17
-
-    .line 53
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_13
-
-    .line 54
-    invoke-virtual {v0, v13}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v3
-
-    const/16 v4, 0xff
-
-    if-ne v3, v4, :cond_11
-
-    const/16 v3, 0x10
-
-    .line 55
-    invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v4
-
-    .line 56
-    invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v3
-
-    if-eqz v4, :cond_13
-
-    if-eqz v3, :cond_13
-
-    int-to-float v1, v4
-
-    int-to-float v3, v3
-
-    div-float/2addr v1, v3
-
-    goto :goto_9
-
-    .line 57
-    :cond_11
-    sget-object v4, Lcom/tmapmobility/tmap/exoplayer2/util/x;->d:[F
-
-    array-length v5, v4
-
-    if-ge v3, v5, :cond_12
-
-    .line 58
-    aget v1, v4, v3
-
-    goto :goto_9
-
-    :cond_12
-    const-string v4, "Unexpected aspect_ratio_idc value: "
-
-    const-string v5, "NalUnitUtil"
-
-    .line 59
-    invoke-static {v4, v3, v5}, Lcom/tmapmobility/tmap/exoplayer2/b;->a(Ljava/lang/String;ILjava/lang/String;)V
-
-    .line 60
-    :cond_13
-    :goto_9
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_14
-
-    .line 61
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 62
-    :cond_14
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_15
-
-    const/4 v3, 0x4
-
-    .line 63
-    invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    .line 64
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_15
-
-    const/16 v3, 0x18
-
-    .line 65
-    invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(I)V
-
-    .line 66
-    :cond_15
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_16
-
-    .line 67
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 68
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 69
-    :cond_16
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 70
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_17
 
-    mul-int/lit8 v9, v9, 0x2
+    const-string p0, "application/ttml+xml"
+
+    return-object p0
 
     :cond_17
-    move v0, v9
-
-    .line 71
-    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
-
-    move-object v5, v3
-
-    move v9, v10
-
-    move-object v10, v12
-
-    move v11, v14
-
-    move v12, v15
-
-    move v13, v2
-
-    move v14, v0
-
-    move v15, v1
-
-    invoke-direct/range {v5 .. v15}, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;-><init>(IZII[IIIIIF)V
-
-    return-object v3
-.end method
-
-.method public static j([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
-    .locals 0
-
-    add-int/lit8 p1, p1, 0x1
-
-    .line 1
-    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->k([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static k([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([BII)V
-
-    .line 2
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result p0
-
-    .line 3
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result p1
-
-    .line 4
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 5
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result p2
-
-    .line 6
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;-><init>(IIZ)V
-
-    return-object v0
-.end method
-
-.method public static l([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$c;
-    .locals 0
-
-    add-int/lit8 p1, p1, 0x1
-
-    .line 1
-    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->m([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$c;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static m([BII)Lcom/tmapmobility/tmap/exoplayer2/util/x$c;
-    .locals 20
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
-
-    move-object/from16 v1, p0
-
-    move/from16 v2, p1
-
-    move/from16 v3, p2
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([BII)V
-
-    const/16 v1, 0x8
-
-    .line 2
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v3
-
-    .line 3
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v4
-
-    .line 4
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v5
-
-    .line 5
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v6
-
-    const/4 v2, 0x3
-
-    const/4 v7, 0x1
-
-    const/16 v8, 0x64
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x6e
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x7a
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0xf4
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x2c
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x53
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x56
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x76
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x80
-
-    if-eq v3, v8, :cond_1
-
-    const/16 v8, 0x8a
-
-    if-ne v3, v8, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    move v10, v1
-
-    move v8, v7
-
-    goto :goto_5
-
-    .line 6
-    :cond_1
-    :goto_0
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v8
-
-    if-ne v8, v2, :cond_2
-
-    .line 7
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v9
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v9, 0x0
-
-    .line 8
-    :goto_1
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 9
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 10
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 11
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_6
-
-    if-eq v8, v2, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/16 v1, 0xc
-
-    :goto_2
-    const/4 v2, 0x0
-
-    :goto_3
-    if-ge v2, v1, :cond_6
-
-    .line 12
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_5
-
-    const/4 v10, 0x6
-
-    if-ge v2, v10, :cond_4
-
-    const/16 v10, 0x10
-
-    goto :goto_4
-
-    :cond_4
-    const/16 v10, 0x40
-
-    .line 13
-    :goto_4
-    invoke-static {v0, v10}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->o(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
-
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    move v10, v9
-
-    .line 14
-    :goto_5
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v1
-
-    add-int/lit8 v12, v1, 0x4
-
-    .line 15
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v13
-
-    if-nez v13, :cond_7
-
-    .line 16
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x4
-
-    move/from16 p1, v8
-
-    goto :goto_7
-
-    :cond_7
-    if-ne v13, v7, :cond_9
-
-    .line 17
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v1
-
-    .line 18
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->g()I
-
-    .line 19
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->g()I
-
-    .line 20
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v2
-
-    int-to-long v14, v2
-
-    const/4 v2, 0x0
-
-    move/from16 p1, v8
-
-    :goto_6
-    int-to-long v7, v2
-
-    cmp-long v7, v7, v14
-
-    if-gez v7, :cond_8
-
-    .line 21
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_6
-
-    :cond_8
-    const/4 v2, 0x0
-
-    move v15, v1
-
-    move v14, v2
-
-    goto :goto_8
-
-    :cond_9
-    move/from16 p1, v8
-
-    const/4 v1, 0x0
-
-    :goto_7
-    const/4 v2, 0x0
-
-    move v14, v1
-
-    move v15, v2
-
-    .line 22
-    :goto_8
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 23
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 24
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    add-int/2addr v1, v2
-
-    .line 25
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v7
-
-    add-int/2addr v7, v2
-
-    .line 26
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v11
-
-    rsub-int/lit8 v8, v11, 0x2
-
-    mul-int/2addr v8, v7
-
-    if-nez v11, :cond_a
-
-    .line 27
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    .line 28
-    :cond_a
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    mul-int/lit8 v1, v1, 0x10
-
-    mul-int/lit8 v8, v8, 0x10
+    const-string v0, "wvtt"
 
     .line 29
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_e
-
-    .line 30
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v7
-
-    .line 31
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v9
-
-    .line 32
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v16
-
-    .line 33
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move-result v17
-
-    if-nez p1, :cond_b
-
-    rsub-int/lit8 v18, v11, 0x2
-
-    move/from16 p2, v15
-
-    goto :goto_a
-
-    :cond_b
-    const/4 v2, 0x3
-
-    move/from16 p2, v15
-
-    move/from16 v15, p1
-
-    if-ne v15, v2, :cond_c
-
-    const/4 v2, 0x1
-
-    const/16 v18, 0x1
-
-    goto :goto_9
-
-    :cond_c
-    const/4 v2, 0x1
-
-    const/16 v18, 0x2
-
-    :goto_9
-    if-ne v15, v2, :cond_d
-
-    const/4 v2, 0x2
-
-    :cond_d
-    rsub-int/lit8 v15, v11, 0x2
-
-    mul-int/2addr v2, v15
-
-    move/from16 v19, v18
-
-    move/from16 v18, v2
-
-    move/from16 v2, v19
-
-    :goto_a
-    add-int/2addr v7, v9
-
-    mul-int/2addr v7, v2
-
-    sub-int/2addr v1, v7
-
-    add-int v16, v16, v17
-
-    mul-int v16, v16, v18
-
-    sub-int v8, v8, v16
-
-    goto :goto_b
-
-    :cond_e
-    move/from16 p2, v15
-
-    :goto_b
-    move v7, v1
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 34
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    .line 35
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    const/16 v2, 0x8
-
-    .line 36
-    invoke-virtual {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v2
-
-    const/16 v9, 0xff
-
-    if-ne v2, v9, :cond_f
-
-    const/16 v2, 0x10
-
-    .line 37
-    invoke-virtual {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v9
-
-    .line 38
-    invoke-virtual {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v9, :cond_11
+    if-eqz v0, :cond_18
 
-    if-eqz v0, :cond_11
+    const-string p0, "text/vtt"
 
-    int-to-float v1, v9
+    return-object p0
 
-    int-to-float v0, v0
+    :cond_18
+    const-string v0, "cea708"
 
-    div-float/2addr v1, v0
+    .line 30
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    goto :goto_c
+    move-result v0
 
-    .line 39
-    :cond_f
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->d:[F
+    if-eqz v0, :cond_19
 
-    array-length v9, v0
+    const-string p0, "application/cea-708"
 
-    if-ge v2, v9, :cond_10
+    return-object p0
 
-    .line 40
-    aget v0, v0, v2
+    :cond_19
+    const-string v0, "eia608"
 
-    move v9, v0
+    .line 31
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    goto :goto_d
+    move-result v0
 
-    :cond_10
-    const-string v0, "Unexpected aspect_ratio_idc value: "
+    if-nez v0, :cond_1b
 
-    const-string v9, "NalUnitUtil"
+    const-string v0, "cea608"
 
-    .line 41
-    invoke-static {v0, v2, v9}, Lcom/tmapmobility/tmap/exoplayer2/b;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    :cond_11
-    :goto_c
-    move v9, v1
+    move-result v0
 
-    .line 42
-    :goto_d
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/x$c;
+    if-eqz v0, :cond_1a
 
-    move-object v2, v0
+    goto :goto_0
 
-    move/from16 v15, p2
+    .line 32
+    :cond_1a
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct/range {v2 .. v15}, Lcom/tmapmobility/tmap/exoplayer2/util/x$c;-><init>(IIIIIIFZZIIIZ)V
+    move-result-object p0
 
-    return-object v0
+    return-object p0
+
+    :cond_1b
+    :goto_0
+    const-string p0, "application/cea-608"
+
+    return-object p0
+
+    :cond_1c
+    :goto_1
+    const-string p0, "audio/vnd.dts.hd"
+
+    return-object p0
+
+    :cond_1d
+    :goto_2
+    const-string p0, "audio/ac4"
+
+    return-object p0
+
+    :cond_1e
+    :goto_3
+    const-string p0, "audio/eac3"
+
+    return-object p0
+
+    :cond_1f
+    :goto_4
+    const-string p0, "audio/ac3"
+
+    return-object p0
+
+    :cond_20
+    :goto_5
+    const-string p0, "video/x-vnd.on2.vp8"
+
+    return-object p0
+
+    :cond_21
+    :goto_6
+    const-string p0, "video/x-vnd.on2.vp9"
+
+    return-object p0
+
+    :cond_22
+    :goto_7
+    const-string p0, "video/dolby-vision"
+
+    return-object p0
+
+    :cond_23
+    :goto_8
+    const-string p0, "video/hevc"
+
+    return-object p0
+
+    :cond_24
+    :goto_9
+    const-string p0, "video/avc"
+
+    return-object p0
 .end method
 
-.method public static n(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)V
-    .locals 7
+.method public static h(I)Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    const/16 v0, 0x20
+
+    if-eq p0, v0, :cond_7
+
+    const/16 v0, 0x21
+
+    if-eq p0, v0, :cond_6
+
+    const/16 v0, 0x23
+
+    if-eq p0, v0, :cond_5
+
+    const/16 v0, 0x40
+
+    if-eq p0, v0, :cond_4
+
+    const/16 v0, 0xa3
+
+    if-eq p0, v0, :cond_3
+
+    const/16 v0, 0xb1
+
+    if-eq p0, v0, :cond_2
+
+    const/16 v0, 0xa5
+
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0xa6
+
+    if-eq p0, v0, :cond_0
+
+    packed-switch p0, :pswitch_data_0
+
+    packed-switch p0, :pswitch_data_1
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "audio/ac4"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "audio/opus"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "audio/vnd.dts.hd"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "audio/vnd.dts"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "video/mpeg"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "audio/mpeg"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "video/mpeg2"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "audio/eac3"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "audio/ac3"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "video/x-vnd.on2.vp9"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "video/wvc1"
+
+    return-object p0
+
+    :cond_4
+    :pswitch_7
+    const-string p0, "audio/mp4a-latm"
+
+    return-object p0
+
+    :cond_5
+    const-string p0, "video/hevc"
+
+    return-object p0
+
+    :cond_6
+    const-string p0, "video/avc"
+
+    return-object p0
+
+    :cond_7
+    const-string p0, "video/mp4v-es"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x60
+        :pswitch_6
+        :pswitch_6
+        :pswitch_6
+        :pswitch_6
+        :pswitch_6
+        :pswitch_6
+        :pswitch_7
+        :pswitch_7
+        :pswitch_7
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0xa9
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_3
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static i(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
+    .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->Q0:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    .line 2
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 3
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    const/4 v2, 0x2
+
+    .line 4
+    invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x10
+
+    .line 5
+    :try_start_0
+    invoke-static {v0, v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-eqz p0, :cond_1
+
+    .line 6
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 7
+    :cond_1
+    new-instance p0, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;
+
+    invoke-direct {p0, v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/x$b;-><init>(II)V
+
+    return-object p0
+
+    :catch_0
+    return-object v1
+.end method
+
+.method public static j(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
-    move v1, v0
+    if-nez p0, :cond_0
 
-    :goto_0
-    const/4 v2, 0x4
-
-    if-ge v1, v2, :cond_5
-
-    move v3, v0
-
-    :goto_1
-    const/4 v4, 0x6
-
-    if-ge v3, v4, :cond_4
+    return-object v0
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
+    :cond_0
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->w1(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-nez v4, :cond_0
+    move-result-object p0
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    array-length v1, p0
 
-    goto :goto_3
+    const/4 v2, 0x0
 
-    :cond_0
-    const/16 v4, 0x40
+    :goto_0
+    if-ge v2, v1, :cond_2
 
-    shl-int/lit8 v6, v1, 0x1
-
-    add-int/2addr v6, v2
-
-    shl-int v6, v5, v6
+    aget-object v3, p0, v2
 
     .line 3
-    invoke-static {v4, v6}, Ljava/lang/Math;->min(II)I
+    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 4
+    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->s(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-le v1, v5, :cond_1
+    if-eqz v4, :cond_1
 
-    .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->g()I
+    return-object v3
 
     :cond_1
-    move v6, v0
+    add-int/lit8 v2, v2, 0x1
 
-    :goto_2
-    if-ge v6, v4, :cond_2
-
-    .line 5
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->g()I
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_2
-    :goto_3
-    const/4 v4, 0x3
+    return-object v0
+.end method
 
-    if-ne v1, v4, :cond_3
+.method public static k(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    move v5, v4
+    const/4 v0, 0x0
 
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    const/16 v1, 0x2f
+
+    .line 1
+    invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_1
+
+    return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static l(Ljava/lang/String;)I
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    .line 2
+    :cond_0
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->p(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    .line 3
+    :cond_1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->t(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 p0, 0x2
+
+    return p0
+
+    .line 4
+    :cond_2
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->s(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 p0, 0x3
+
+    return p0
+
+    .line 5
     :cond_3
-    add-int/2addr v3, v5
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->q(Ljava/lang/String;)Z
 
-    goto :goto_1
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 p0, 0x4
+
+    return p0
 
     :cond_4
+    const-string v0, "application/id3"
+
+    .line 6
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const-string v0, "application/x-emsg"
+
+    .line 7
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const-string v0, "application/x-scte35"
+
+    .line 8
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const-string v0, "application/x-camera-motion"
+
+    .line 9
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const/4 p0, 0x6
+
+    return p0
+
+    .line 10
+    :cond_6
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->m(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+
+    :cond_7
+    :goto_0
+    const/4 p0, 0x5
+
+    return p0
+.end method
+
+.method public static m(Ljava/lang/String;)I
+    .locals 4
+
+    .line 1
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    .line 2
+    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
+
+    .line 3
+    iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;->a:Ljava/lang/String;
+
+    invoke-virtual {p0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 4
+    iget p0, v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;->c:I
+
+    return p0
+
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_5
-    return-void
-.end method
-
-.method public static o(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
-    .locals 3
-
-    const/16 v0, 0x8
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v1, v0
-
-    :goto_0
-    if-ge v2, p1, :cond_2
-
-    if-eqz v0, :cond_0
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->g()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    add-int/lit16 v0, v0, 0x100
-
-    .line 2
-    rem-int/lit16 v0, v0, 0x100
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    move v1, v0
+    const/4 p0, -0x1
 
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
+    return p0
 .end method
 
-.method public static p(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)V
-    .locals 8
+.method public static n(Ljava/lang/String;)I
+    .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->g(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object p0
 
-    const/4 v1, 0x0
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->l(Ljava/lang/String;)I
 
-    move v2, v1
+    move-result p0
 
-    move v3, v2
+    return p0
+.end method
 
-    move v4, v3
+.method public static o(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    :goto_0
-    if-ge v2, v0, :cond_6
+    const/4 v0, 0x0
 
-    if-eqz v2, :cond_0
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    .line 1
+    :cond_0
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->w1(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
+    array-length v1, p0
 
-    move-result v3
+    const/4 v2, 0x0
 
-    :cond_0
-    if-eqz v3, :cond_2
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, p0, v2
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
+    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    move v5, v1
-
-    :goto_1
-    if-gt v5, v4, :cond_5
-
-    .line 5
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    .line 6
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    :cond_1
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    .line 7
-    :cond_2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->t(Ljava/lang/String;)Z
 
     move-result v4
 
-    .line 8
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
+    if-eqz v4, :cond_1
 
-    move-result v5
+    return-object v3
 
-    add-int v6, v4, v5
-
-    move v7, v1
-
-    :goto_2
-    if-ge v7, v4, :cond_3
-
-    .line 9
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 10
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    move v4, v1
-
-    :goto_3
-    if-ge v4, v5, :cond_4
-
-    .line 11
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->h()I
-
-    .line 12
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    :cond_4
-    move v4, v6
-
-    :cond_5
+    :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
-
-    :cond_6
-    return-void
-.end method
-
-.method public static q([BI)I
-    .locals 8
-
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->h:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :cond_0
-    :goto_0
-    if-ge v2, p1, :cond_2
-
-    .line 2
-    :try_start_0
-    invoke-static {p0, v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->d([BII)I
-
-    move-result v2
-
-    if-ge v2, p1, :cond_0
-
-    .line 3
-    sget-object v4, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i:[I
-
-    array-length v5, v4
-
-    if-gt v5, v3, :cond_1
-
-    .line 4
-    array-length v5, v4
-
-    mul-int/lit8 v5, v5, 0x2
-
-    .line 5
-    invoke-static {v4, v5}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v4
-
-    sput-object v4, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i:[I
-
-    .line 6
-    :cond_1
-    sget-object v4, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i:[I
-
-    add-int/lit8 v5, v3, 0x1
-
-    aput v2, v4, v3
-
-    add-int/lit8 v2, v2, 0x3
-
-    move v3, v5
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
 
     :cond_2
-    sub-int/2addr p1, v3
+    return-object v0
+.end method
 
-    move v2, v1
+.method public static p(Ljava/lang/String;)Z
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    move v4, v2
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    move v5, v4
+    move-result-object p0
 
-    :goto_1
-    if-ge v2, v3, :cond_3
+    const-string v0, "audio"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static q(Ljava/lang/String;)Z
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "image"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static r(Ljava/lang/String;)Z
+    .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    const-string v1, "video/webm"
+
+    .line 1
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "audio/webm"
+
+    .line 2
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "application/webm"
+
+    .line 3
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "video/x-matroska"
+
+    .line 4
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "audio/x-matroska"
+
+    .line 5
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "application/x-matroska"
+
+    .line 6
+    invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :cond_2
+    return v0
+.end method
+
+.method public static s(Ljava/lang/String;)Z
+    .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "text"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/cea-608"
+
+    .line 2
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/cea-708"
+
+    .line 3
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-mp4-cea-608"
+
+    .line 4
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-subrip"
+
+    .line 5
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/ttml+xml"
+
+    .line 6
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-quicktime-tx3g"
 
     .line 7
-    sget-object v6, Lcom/tmapmobility/tmap/exoplayer2/util/x;->i:[I
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget v6, v6, v2
+    move-result v0
 
-    sub-int/2addr v6, v5
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-mp4-vtt"
 
     .line 8
-    invoke-static {p0, v5, p0, v4, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    add-int/2addr v4, v6
+    move-result v0
 
-    add-int/lit8 v7, v4, 0x1
+    if-nez v0, :cond_1
+
+    const-string v0, "application/x-rawcc"
 
     .line 9
-    aput-byte v1, p0, v4
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    add-int/lit8 v4, v7, 0x1
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/vobsub"
 
     .line 10
-    aput-byte v1, p0, v7
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    add-int/lit8 v6, v6, 0x3
+    move-result v0
 
-    add-int/2addr v5, v6
+    if-nez v0, :cond_1
 
-    add-int/lit8 v2, v2, 0x1
+    const-string v0, "application/pgs"
+
+    .line 11
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "application/dvbsubs"
+
+    .line 12
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
 
     goto :goto_1
 
-    :cond_3
-    sub-int v1, p1, v4
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    .line 11
-    invoke-static {p0, v5, p0, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :goto_1
+    return p0
+.end method
 
-    .line 12
-    monitor-exit v0
+.method public static t(Ljava/lang/String;)Z
+    .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    return p1
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 13
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p0
 
-    throw p0
+    const-string v0, "video"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static u(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "audio/mp3"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "audio/x-wav"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "audio/x-flac"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_0
+    packed-switch v1, :pswitch_data_0
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "audio/mpeg"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "audio/wav"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "audio/flac"
+
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x3c11ec0a -> :sswitch_2
+        -0x22f81362 -> :sswitch_1
+        0xb26c537 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static v(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 3
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
+
+    invoke-direct {v0, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 2
+    sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    const/4 p2, 0x0
+
+    :goto_0
+    if-ge p2, p1, :cond_1
+
+    .line 3
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;
+
+    iget-object v2, v2, Lcom/tmapmobility/tmap/exoplayer2/util/x$a;->a:Ljava/lang/String;
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 4
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    :goto_1
+    sget-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/x;->P0:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

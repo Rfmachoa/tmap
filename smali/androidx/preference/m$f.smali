@@ -15,5 +15,13 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/preference/m;Landroidx/preference/Preference;)Z
+.method public abstract f(Landroidx/preference/m;Landroidx/preference/Preference;)Z
+    .param p1    # Landroidx/preference/m;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

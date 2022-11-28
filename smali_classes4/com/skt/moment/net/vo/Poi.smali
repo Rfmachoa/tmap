@@ -85,6 +85,14 @@
 
 .method public setDistance(D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "distance"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/Poi;->distance:D
@@ -94,6 +102,14 @@
 
 .method public setLatitude(D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "latitude"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/Poi;->latitude:D
@@ -103,6 +119,14 @@
 
 .method public setLink(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "link"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/Poi;->link:Ljava/lang/String;
@@ -112,6 +136,14 @@
 
 .method public setLongitude(D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "longitude"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/Poi;->longitude:D
@@ -121,6 +153,14 @@
 
 .method public setMomentPoiId(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentPoiId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/Poi;->momentPoiId:Ljava/lang/String;
@@ -130,6 +170,14 @@
 
 .method public setPoiType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poiType"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/Poi;->poiType:Ljava/lang/String;

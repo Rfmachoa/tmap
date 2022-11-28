@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;
-.super Ly1/a;
+.super Lp2/a;
 .source "BaseSlider.java"
 
 
@@ -24,7 +24,7 @@
     .end annotation
 .end field
 
-.field public virtualViewBounds:Landroid/graphics/Rect;
+.field public final virtualViewBounds:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -39,7 +39,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Ly1/a;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lp2/a;-><init>(Landroid/view/View;)V
 
     .line 2
     new-instance v0, Landroid/graphics/Rect;
@@ -140,7 +140,7 @@
 
     iget-object v2, p0, Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;->virtualViewBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {v1, v0, v2}, Lcom/google/android/material/slider/BaseSlider;->updateBoundsForVirturalViewId(ILandroid/graphics/Rect;)V
+    invoke-virtual {v1, v0, v2}, Lcom/google/android/material/slider/BaseSlider;->updateBoundsForVirtualViewId(ILandroid/graphics/Rect;)V
 
     .line 3
     iget-object v1, p0, Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;->virtualViewBounds:Landroid/graphics/Rect;
@@ -283,7 +283,7 @@
     invoke-virtual {p2}, Landroid/view/View;->postInvalidate()V
 
     .line 7
-    invoke-virtual {p0, p1}, Ly1/a;->invalidateVirtualView(I)V
+    invoke-virtual {p0, p1}, Lp2/a;->invalidateVirtualView(I)V
 
     return v2
 
@@ -353,7 +353,7 @@
     move-result v0
 
     .line 14
-    invoke-static {p2, p3, v0}, Lj1/a;->d(FFF)F
+    invoke-static {p2, p3, v0}, Ld2/a;->d(FFF)F
 
     move-result p2
 
@@ -377,7 +377,7 @@
     invoke-virtual {p2}, Landroid/view/View;->postInvalidate()V
 
     .line 18
-    invoke-virtual {p0, p1}, Ly1/a;->invalidateVirtualView(I)V
+    invoke-virtual {p0, p1}, Lp2/a;->invalidateVirtualView(I)V
 
     return v2
 
@@ -385,13 +385,13 @@
     return v1
 .end method
 
-.method public onPopulateNodeForVirtualView(ILt1/c;)V
+.method public onPopulateNodeForVirtualView(ILk2/c;)V
     .locals 5
 
     .line 1
-    sget-object v0, Lt1/c$a;->M:Lt1/c$a;
+    sget-object v0, Lk2/c$a;->M:Lk2/c$a;
 
-    invoke-virtual {p2, v0}, Lt1/c;->b(Lt1/c$a;)V
+    invoke-virtual {p2, v0}, Lk2/c;->b(Lk2/c$a;)V
 
     .line 2
     iget-object v0, p0, Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;->slider:Lcom/google/android/material/slider/BaseSlider;
@@ -441,7 +441,7 @@
     const/16 v4, 0x2000
 
     .line 7
-    invoke-virtual {p2, v4}, Lt1/c;->a(I)V
+    invoke-virtual {p2, v4}, Lk2/c;->a(I)V
 
     :cond_0
     cmpg-float v4, v1, v3
@@ -451,17 +451,17 @@
     const/16 v4, 0x1000
 
     .line 8
-    invoke-virtual {p2, v4}, Lt1/c;->a(I)V
+    invoke-virtual {p2, v4}, Lk2/c;->a(I)V
 
     :cond_1
     const/4 v4, 0x1
 
     .line 9
-    invoke-static {v4, v2, v3, v1}, Lt1/c$d;->e(IFFF)Lt1/c$d;
+    invoke-static {v4, v2, v3, v1}, Lk2/c$e;->e(IFFF)Lk2/c$e;
 
     move-result-object v2
 
-    invoke-virtual {p2, v2}, Lt1/c;->A1(Lt1/c$d;)V
+    invoke-virtual {p2, v2}, Lk2/c;->F1(Lk2/c$e;)V
 
     .line 10
     const-class v2, Landroid/widget/SeekBar;
@@ -470,7 +470,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p2, v2}, Lt1/c;->U0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v2}, Lk2/c;->Z0(Ljava/lang/CharSequence;)V
 
     .line 11
     new-instance v2, Ljava/lang/StringBuilder;
@@ -529,19 +529,19 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lt1/c;->Y0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lk2/c;->d1(Ljava/lang/CharSequence;)V
 
     .line 18
     iget-object v0, p0, Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;->slider:Lcom/google/android/material/slider/BaseSlider;
 
     iget-object v1, p0, Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;->virtualViewBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/slider/BaseSlider;->updateBoundsForVirturalViewId(ILandroid/graphics/Rect;)V
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/slider/BaseSlider;->updateBoundsForVirtualViewId(ILandroid/graphics/Rect;)V
 
     .line 19
     iget-object p1, p0, Lcom/google/android/material/slider/BaseSlider$AccessibilityHelper;->virtualViewBounds:Landroid/graphics/Rect;
 
-    invoke-virtual {p2, p1}, Lt1/c;->P0(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, p1}, Lk2/c;->U0(Landroid/graphics/Rect;)V
 
     return-void
 .end method

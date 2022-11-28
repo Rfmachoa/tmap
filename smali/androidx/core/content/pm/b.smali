@@ -111,7 +111,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
+    invoke-static {p0}, Landroidx/core/content/pm/b$a;->b(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v0
 
@@ -175,7 +175,7 @@
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
     .line 4
-    invoke-static {p0}, Landroidx/core/content/pm/b$a;->c(Landroid/content/pm/SigningInfo;)Z
+    invoke-static {p0}, Landroidx/core/content/pm/b$a;->d(Landroid/content/pm/SigningInfo;)Z
 
     move-result p1
 
@@ -190,7 +190,7 @@
 
     .line 6
     :cond_0
-    invoke-static {p0}, Landroidx/core/content/pm/b$a;->b(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
+    invoke-static {p0}, Landroidx/core/content/pm/b$a;->c(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
 
     move-result-object p0
 
@@ -356,7 +356,7 @@
 
     const-string p2, "Type must be specified for cert when verifying "
 
-    invoke-static {p2, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -370,7 +370,7 @@
 
     const-string p2, "Cert byte array cannot be null when verifying "
 
-    invoke-static {p2, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -423,7 +423,7 @@
 
     move-result v2
 
-    invoke-static {p0, p1, v0, v2}, Landroidx/core/content/pm/b$a;->d(Landroid/content/pm/PackageManager;Ljava/lang/String;[BI)Z
+    invoke-static {p0, p1, v0, v2}, Landroidx/core/content/pm/b$a;->e(Landroid/content/pm/PackageManager;Ljava/lang/String;[BI)Z
 
     move-result v0
 

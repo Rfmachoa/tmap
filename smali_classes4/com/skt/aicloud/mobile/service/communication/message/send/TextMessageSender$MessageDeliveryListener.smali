@@ -95,7 +95,7 @@
 
     const-string v5, ",mCntSuccess:"
 
-    invoke-static {v2, v3, v4, v0, v5}, Lt0/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v2, v3, v4, v0, v5}, Lg1/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     iget v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender$MessageDeliveryListener;->c:I
 

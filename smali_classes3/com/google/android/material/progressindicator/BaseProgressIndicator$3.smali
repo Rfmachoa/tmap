@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;
-.super Li3/b$a;
+.super Lq4/b$a;
 .source "BaseProgressIndicator.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;->this$0:Lcom/google/android/material/progressindicator/BaseProgressIndicator;
 
-    invoke-direct {p0}, Li3/b$a;-><init>()V
+    invoke-direct {p0}, Lq4/b$a;-><init>()V
 
     return-void
 .end method
@@ -43,11 +43,6 @@
     invoke-virtual {p1, v0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->setIndeterminate(Z)V
 
     .line 2
-    iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;->this$0:Lcom/google/android/material/progressindicator/BaseProgressIndicator;
-
-    invoke-virtual {p1, v0, v0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->setProgressCompat(IZ)V
-
-    .line 3
     iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;->this$0:Lcom/google/android/material/progressindicator/BaseProgressIndicator;
 
     invoke-static {p1}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->access$300(Lcom/google/android/material/progressindicator/BaseProgressIndicator;)I

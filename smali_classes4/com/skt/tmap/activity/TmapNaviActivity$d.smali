@@ -75,7 +75,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$d;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->W8(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->j9(Lcom/skt/tmap/activity/TmapNaviActivity;)V
 
     :cond_0
     return-void

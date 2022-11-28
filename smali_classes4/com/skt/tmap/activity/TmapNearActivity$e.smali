@@ -1,9 +1,6 @@
 .class public Lcom/skt/tmap/activity/TmapNearActivity$e;
-.super Ljava/lang/Object;
+.super Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;
 .source "TmapNearActivity.java"
-
-# interfaces
-.implements Lcom/skt/tmap/vsm/map/MapEngine$OnHitObjectListener;
 
 
 # annotations
@@ -36,389 +33,269 @@
     .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public OnHitObjectAlternativeRoute(Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectCctv(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;Landroid/os/Bundle;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "cctvId",
-            "vsmMapPoint",
-            "bundle"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectMarker(Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;Landroid/os/Bundle;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "vsmMarkerBase",
-            "extras"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v0, "_FAVORITE"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    .line 2
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
-
-    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    invoke-virtual {p2}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object p2
-
-    const-string/jumbo v0, "tap.map_bookmark"
-
-    invoke-virtual {p2, v0}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v0, "_RECENTLY"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    .line 4
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
-
-    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    invoke-virtual {p2}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object p2
-
-    const-string/jumbo v0, "tap.map_history"
-
-    invoke-virtual {p2, v0}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    .line 5
-    :cond_1
-    :goto_0
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
-
-    invoke-static {p2, p1}, Lcom/skt/tmap/activity/TmapNearActivity;->F5(Lcom/skt/tmap/activity/TmapNearActivity;Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)Z
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_2
-
-    return v0
-
-    .line 6
-    :cond_2
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v1, "POI_SELECT"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    return v0
-
-    .line 7
-    :cond_3
-    instance-of p2, p1, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
-
-    if-nez p2, :cond_4
-
-    return v0
-
-    .line 8
-    :cond_4
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
-
-    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-virtual {p2, v0, p1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->X0(ILcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)V
-
-    .line 9
-    check-cast p1, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
-
-    .line 10
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
-
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;->getText()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 11
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;->getPosition()Lcom/skt/tmap/vsm/data/VSMMapPoint;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
-
-    move-result-object p1
-
-    .line 12
-    invoke-static {p2, v1, v2, p1, v0}, Lcom/skt/tmap/activity/TmapNearActivity;->E5(Lcom/skt/tmap/activity/TmapNearActivity;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/route/data/MapPoint;I)V
-
-    return v0
-.end method
-
-.method public OnHitObjectNone(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "vsmMapPoint"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectOilInfo(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "id",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectPOI(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;Landroid/os/Bundle;)Z
+.method public a(Landroid/view/View;F)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
-            0x0,
             0x0,
             0x0
         }
         names = {
-            "name",
-            "id",
-            "point",
-            "extras"
+            "bottomSheet",
+            "slideOffset"
         }
     .end annotation
 
     .line 1
-    iget-object p4, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    iget-object p4, p4, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->c6(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
 
-    invoke-virtual {p4}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    move-result-object v0
 
-    move-result-object p4
+    invoke-virtual {v0}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->isHideable()Z
 
-    const-string/jumbo v0, "tap.map_poi"
+    move-result v0
 
-    invoke-virtual {p4, v0}, Ldc/d;->c0(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
+
+    return-void
 
     .line 2
-    iget-object p4, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    iget-object p4, p4, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/TmapNearActivity;->W5(Lcom/skt/tmap/activity/TmapNearActivity;Landroid/view/View;F)V
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p4, v0, p2, v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->Y0(III)V
-
-    .line 3
-    iget-object p4, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p3}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
-
-    move-result-object p3
-
-    invoke-static {p4, p2, p1, p3, v0}, Lcom/skt/tmap/activity/TmapNearActivity;->E5(Lcom/skt/tmap/activity/TmapNearActivity;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/route/data/MapPoint;I)V
-
-    return v0
+    return-void
 .end method
 
-.method public OnHitObjectRouteFlag(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
+.method public b(Landroid/view/View;I)V
+    .locals 4
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0,
             0x0
         }
         names = {
-            "name",
-            "id",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectRouteLine(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "routeLineID",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectTraffic(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 9
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "trafficID",
-            "contents",
-            "iconPath",
-            "infoSource",
-            "point"
+            "bottomSheet",
+            "newState"
         }
     .end annotation
 
     .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->J5(Lcom/skt/tmap/activity/TmapNearActivity;)Landroid/widget/FrameLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.map_event"
+    invoke-virtual {v0, p2}, Lbe/e;->F0(I)V
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    :cond_0
+    const/4 v0, 0x1
 
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+    const/4 v1, 0x4
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    if-eq p2, v0, :cond_5
 
-    const/4 v1, 0x0
+    const/4 v0, 0x3
 
-    const/4 v2, 0x1
+    const-string v2, "tap.drawer"
 
-    invoke-virtual {v0, v1, p2, v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->Y0(III)V
+    const/4 v3, 0x0
+
+    if-eq p2, v0, :cond_4
+
+    if-eq p2, v1, :cond_2
+
+    const/4 v0, 0x5
+
+    if-eq p2, v0, :cond_1
+
+    const/4 v0, 0x6
+
+    if-eq p2, v0, :cond_4
+
+    goto/16 :goto_1
 
     .line 3
-    iget-object v3, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+    :cond_1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-static {p6}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+    invoke-static {v0, v3}, Lcom/skt/tmap/activity/TmapNearActivity;->d6(Lcom/skt/tmap/activity/TmapNearActivity;Z)Z
 
-    move-result-object v8
+    goto :goto_1
 
-    move-object v4, p1
+    .line 4
+    :cond_2
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    move-object v5, p3
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    move-object v6, p4
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    move-object v7, p5
+    move-result-object v0
 
-    invoke-static/range {v3 .. v8}, Lcom/skt/tmap/activity/TmapNearActivity;->G5(Lcom/skt/tmap/activity/TmapNearActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/route/data/MapPoint;)V
+    invoke-virtual {v0, v2}, Lbe/e;->c0(Ljava/lang/String;)V
 
-    return v1
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0, v3}, Lcom/skt/tmap/activity/TmapNearActivity;->d6(Lcom/skt/tmap/activity/TmapNearActivity;Z)Z
+
+    .line 6
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->e6(Lcom/skt/tmap/activity/TmapNearActivity;)V
+
+    .line 7
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->J5(Lcom/skt/tmap/activity/TmapNearActivity;)Landroid/widget/FrameLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 8
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->f6(Lcom/skt/tmap/activity/TmapNearActivity;)V
+
+    goto :goto_0
+
+    .line 9
+    :cond_3
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->g6(Lcom/skt/tmap/activity/TmapNearActivity;)V
+
+    .line 10
+    :goto_0
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->h6(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/mvp/fragment/p;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->h6(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/mvp/fragment/p;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 11
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->h6(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/mvp/fragment/p;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/fragment/p;->i0()V
+
+    goto :goto_1
+
+    .line 12
+    :cond_4
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0, v3}, Lcom/skt/tmap/activity/TmapNearActivity;->d6(Lcom/skt/tmap/activity/TmapNearActivity;Z)Z
+
+    .line 13
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 14
+    :cond_5
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->b6(Lcom/skt/tmap/activity/TmapNearActivity;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    .line 15
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->c6(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setState(I)V
+
+    .line 16
+    :cond_6
+    :goto_1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->b6(Lcom/skt/tmap/activity/TmapNearActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    .line 17
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$e;->a:Lcom/skt/tmap/activity/TmapNearActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->L5(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/mvp/fragment/i2;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/mvp/fragment/i2;->q0(Landroid/view/View;I)V
+
+    :cond_7
+    return-void
 .end method

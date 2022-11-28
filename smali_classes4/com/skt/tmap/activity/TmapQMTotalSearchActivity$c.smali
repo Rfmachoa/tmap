@@ -70,7 +70,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity$c;->a:Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->u5(Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->C5(Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;)V
 
     return-void
 .end method

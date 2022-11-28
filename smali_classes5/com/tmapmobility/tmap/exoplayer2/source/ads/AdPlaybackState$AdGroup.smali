@@ -98,7 +98,7 @@
 
     move-wide v2, p1
 
-    .line 1
+    .line 2
     invoke-direct/range {v1 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;-><init>(JI[I[Landroid/net/Uri;[JJZ)V
 
     return-void
@@ -107,10 +107,10 @@
 .method public constructor <init>(JI[I[Landroid/net/Uri;[JJZ)V
     .locals 2
 
-    .line 2
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
+    .line 4
     array-length v0, p4
 
     array-length v1, p5
@@ -127,26 +127,35 @@
     :goto_0
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
 
-    .line 4
+    .line 5
     iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
 
-    .line 5
+    .line 6
     iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->b:I
 
-    .line 6
+    .line 7
     iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->d:[I
 
-    .line 7
+    .line 8
     iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->c:[Landroid/net/Uri;
 
-    .line 8
+    .line 9
     iput-object p6, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->e:[J
 
-    .line 9
+    .line 10
     iput-wide p7, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->f:J
 
-    .line 10
+    .line 11
     iput-boolean p9, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->g:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(JI[I[Landroid/net/Uri;[JJZLcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$a;)V
+    .locals 0
+
+    .line 1
+    invoke-direct/range {p0 .. p9}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;-><init>(JI[I[Landroid/net/Uri;[JJZ)V
 
     return-void
 .end method

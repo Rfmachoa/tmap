@@ -48,7 +48,7 @@
 
 .field public k:I
 
-.field public l:Lab/a;
+.field public l:Lxc/a;
 
 .field public m:I
 
@@ -111,7 +111,7 @@
     iput v0, p0, Lcom/skt/bugAgent/BugReportAgnet;->k:I
 
     .line 12
-    iput-object v1, p0, Lcom/skt/bugAgent/BugReportAgnet;->l:Lab/a;
+    iput-object v1, p0, Lcom/skt/bugAgent/BugReportAgnet;->l:Lxc/a;
 
     .line 13
     iput v0, p0, Lcom/skt/bugAgent/BugReportAgnet;->m:I
@@ -165,16 +165,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/skt/bugAgent/BugReportAgnet;)Lab/a;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/bugAgent/BugReportAgnet;->l:Lab/a;
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/String;)Lcom/skt/bugAgent/BugReportAgnet;
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Lcom/skt/bugAgent/BugReportAgnet;
     .locals 2
 
     .line 1
@@ -223,7 +214,16 @@
     return-object p0
 .end method
 
-.method public static synthetic j(Lcom/skt/bugAgent/BugReportAgnet;Z)V
+.method public static synthetic b(Lcom/skt/bugAgent/BugReportAgnet;)Lxc/a;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/bugAgent/BugReportAgnet;->l:Lxc/a;
+
+    return-object p0
+.end method
+
+.method public static synthetic i(Lcom/skt/bugAgent/BugReportAgnet;Z)V
     .locals 0
 
     .line 1
@@ -234,29 +234,7 @@
 
 
 # virtual methods
-.method public A(Ljava/net/UnknownHostException;)V
-    .locals 2
-
-    const/4 v0, 0x7
-
-    .line 1
-    iput v0, p0, Lcom/skt/bugAgent/BugReportAgnet;->m:I
-
-    .line 2
-    invoke-virtual {p1}, Ljava/net/UnknownHostException;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/net/UnknownHostException;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, v1, p1}, Lcom/skt/bugAgent/BugReportAgnet;->f(I[Ljava/lang/StackTraceElement;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public B(Ljava/security/cert/CertificateException;)V
+.method public A(Ljava/security/cert/CertificateException;)V
     .locals 2
 
     const/16 v0, 0xa
@@ -278,7 +256,7 @@
     return-void
 .end method
 
-.method public C(Lorg/apache/http/client/ClientProtocolException;)V
+.method public B(Lorg/apache/http/client/ClientProtocolException;)V
     .locals 2
 
     const/16 v0, 0x8
@@ -300,7 +278,7 @@
     return-void
 .end method
 
-.method public D(Lorg/json/JSONException;)V
+.method public C(Lorg/json/JSONException;)V
     .locals 2
 
     const/16 v0, 0xd
@@ -322,7 +300,7 @@
     return-void
 .end method
 
-.method public E(Lorg/xmlpull/v1/XmlPullParserException;)V
+.method public D(Lorg/xmlpull/v1/XmlPullParserException;)V
     .locals 2
 
     const/16 v0, 0x12
@@ -340,6 +318,15 @@
     move-result-object p1
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/skt/bugAgent/BugReportAgnet;->f(I[Ljava/lang/StackTraceElement;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public E(Lxc/a;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/bugAgent/BugReportAgnet;->l:Lxc/a;
 
     return-void
 .end method
@@ -615,16 +602,7 @@
     return-void
 .end method
 
-.method public g(Lab/a;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/skt/bugAgent/BugReportAgnet;->l:Lab/a;
-
-    return-void
-.end method
-
-.method public h(Landroid/app/PendingIntent$CanceledException;)V
+.method public g(Landroid/app/PendingIntent$CanceledException;)V
     .locals 2
 
     const/16 v0, 0x13
@@ -646,7 +624,7 @@
     return-void
 .end method
 
-.method public i(Landroid/database/SQLException;)V
+.method public h(Landroid/database/SQLException;)V
     .locals 2
 
     const/16 v0, 0xb
@@ -668,7 +646,7 @@
     return-void
 .end method
 
-.method public k(Ljava/io/FileNotFoundException;)V
+.method public j(Ljava/io/FileNotFoundException;)V
     .locals 2
 
     const/4 v0, 0x2
@@ -690,7 +668,7 @@
     return-void
 .end method
 
-.method public l(Ljava/io/IOException;)V
+.method public k(Ljava/io/IOException;)V
     .locals 2
 
     const/4 v0, 0x5
@@ -712,7 +690,7 @@
     return-void
 .end method
 
-.method public m(Ljava/io/UnsupportedEncodingException;)V
+.method public l(Ljava/io/UnsupportedEncodingException;)V
     .locals 2
 
     const/16 v0, 0xc
@@ -734,7 +712,7 @@
     return-void
 .end method
 
-.method public n(Ljava/lang/ArrayIndexOutOfBoundsException;)V
+.method public m(Ljava/lang/ArrayIndexOutOfBoundsException;)V
     .locals 2
 
     const/4 v0, 0x3
@@ -756,7 +734,7 @@
     return-void
 .end method
 
-.method public o(Ljava/lang/ClassNotFoundException;)V
+.method public n(Ljava/lang/ClassNotFoundException;)V
     .locals 2
 
     const/16 v0, 0xf
@@ -778,7 +756,7 @@
     return-void
 .end method
 
-.method public p(Ljava/lang/Exception;)V
+.method public o(Ljava/lang/Exception;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -800,7 +778,7 @@
     return-void
 .end method
 
-.method public q(Ljava/lang/IllegalArgumentException;)V
+.method public p(Ljava/lang/IllegalArgumentException;)V
     .locals 2
 
     const/16 v0, 0x11
@@ -822,7 +800,7 @@
     return-void
 .end method
 
-.method public r(Ljava/lang/IllegalStateException;)V
+.method public q(Ljava/lang/IllegalStateException;)V
     .locals 2
 
     const/16 v0, 0x10
@@ -844,7 +822,7 @@
     return-void
 .end method
 
-.method public s(Ljava/lang/InterruptedException;)V
+.method public r(Ljava/lang/InterruptedException;)V
     .locals 2
 
     const/16 v0, 0xe
@@ -866,7 +844,7 @@
     return-void
 .end method
 
-.method public t(Ljava/lang/NullPointerException;)V
+.method public s(Ljava/lang/NullPointerException;)V
     .locals 2
 
     const/4 v0, 0x1
@@ -888,7 +866,7 @@
     return-void
 .end method
 
-.method public u(Ljava/lang/OutOfMemoryError;)V
+.method public t(Ljava/lang/OutOfMemoryError;)V
     .locals 2
 
     const/16 v0, 0x14
@@ -910,7 +888,7 @@
     return-void
 .end method
 
-.method public v(Ljava/lang/RuntimeException;)V
+.method public u(Ljava/lang/RuntimeException;)V
     .locals 2
 
     const/16 v0, 0x15
@@ -932,7 +910,7 @@
     return-void
 .end method
 
-.method public w(Ljava/lang/String;)V
+.method public v(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -941,7 +919,7 @@
     return-void
 .end method
 
-.method public x(Ljava/net/ConnectException;)V
+.method public w(Ljava/net/ConnectException;)V
     .locals 2
 
     const/16 v0, 0x9
@@ -963,7 +941,7 @@
     return-void
 .end method
 
-.method public y(Ljava/net/SocketException;)V
+.method public x(Ljava/net/SocketException;)V
     .locals 2
 
     const/4 v0, 0x4
@@ -985,7 +963,7 @@
     return-void
 .end method
 
-.method public z(Ljava/net/SocketTimeoutException;)V
+.method public y(Ljava/net/SocketTimeoutException;)V
     .locals 2
 
     const/4 v0, 0x6
@@ -999,6 +977,28 @@
     move-result-object v1
 
     invoke-virtual {p1}, Ljava/net/SocketTimeoutException;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0, v1, p1}, Lcom/skt/bugAgent/BugReportAgnet;->f(I[Ljava/lang/StackTraceElement;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public z(Ljava/net/UnknownHostException;)V
+    .locals 2
+
+    const/4 v0, 0x7
+
+    .line 1
+    iput v0, p0, Lcom/skt/bugAgent/BugReportAgnet;->m:I
+
+    .line 2
+    invoke-virtual {p1}, Ljava/net/UnknownHostException;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/net/UnknownHostException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 

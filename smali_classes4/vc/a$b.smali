@@ -1,14 +1,11 @@
 .class public Lvc/a$b;
-.super Ljava/lang/Object;
-.source "SettingLayoutFamilyAppInfo.java"
-
-# interfaces
-.implements Lcom/skt/tmap/util/o$a;
+.super Lvc/d;
+.source "DefaultNogTaskFactory.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lvc/a;->b(Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;J)Landroid/view/View;
+    value = Lvc/a;->b(Luc/b;I)Lvc/d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,131 +15,44 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/widget/ImageView;
-
-.field public final synthetic b:Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;
+.field public final synthetic b:Luc/b;
 
 .field public final synthetic c:Lvc/a;
 
 
 # direct methods
-.method public constructor <init>(Lvc/a;Landroid/widget/ImageView;Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;)V
+.method public constructor <init>(Lvc/a;ILuc/b;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$imgFamilyAppIcon",
-            "val$serviceJoinInfo"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Lvc/a$b;->c:Lvc/a;
 
-    iput-object p2, p0, Lvc/a$b;->a:Landroid/widget/ImageView;
+    iput-object p3, p0, Lvc/a$b;->b:Luc/b;
 
-    iput-object p3, p0, Lvc/a$b;->b:Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lvc/d;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Landroid/graphics/Bitmap;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "bitmap"
+.method public b(I)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Luc/e;",
+            ">;"
         }
     .end annotation
 
-    const-string v0, "SettingLayoutFamilyAppInfo"
-
-    if-eqz p1, :cond_0
-
     .line 1
-    iget-object v1, p0, Lvc/a$b;->a:Landroid/widget/ImageView;
+    iget-object v0, p0, Lvc/a$b;->b:Luc/b;
 
-    invoke-virtual {v1, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 2
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "bitmap != null : "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvc/a$b;->b:Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, p1}, Luc/b;->d(I)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    iget-object p1, p0, Lvc/a$b;->a:Landroid/widget/ImageView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 4
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "bitmap == null : "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvc/a$b;->b:Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/response/ServiceJoinInfo;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public c()V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

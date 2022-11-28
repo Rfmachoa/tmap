@@ -243,7 +243,7 @@
     move-result-object p0
 
     .line 2
-    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v2, 0x11
 
@@ -392,7 +392,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x1e
 
@@ -605,7 +605,7 @@
     .end param
 
     .line 1
-    instance-of v0, p1, Lcom/tmapmobility/tmap/exoplayer2/video/DummySurface;
+    instance-of v0, p1, Lcom/tmapmobility/tmap/exoplayer2/video/PlaceholderSurface;
 
     if-eqz v0, :cond_0
 
@@ -719,7 +719,7 @@
     const-string v0, "Unable to query display refresh rate"
 
     .line 4
-    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -737,7 +737,7 @@
     .locals 7
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x1e
 
@@ -890,7 +890,7 @@
     .locals 4
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x1e
 

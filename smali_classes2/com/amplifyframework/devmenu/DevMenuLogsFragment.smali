@@ -105,7 +105,7 @@
     return-void
 .end method
 
-.method public static synthetic h(Lcom/amplifyframework/devmenu/DevMenuLogsFragment;Landroid/view/View;)V
+.method public static synthetic i(Lcom/amplifyframework/devmenu/DevMenuLogsFragment;Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amplifyframework/devmenu/DevMenuLogsFragment;->lambda$onCreateView$0(Landroid/view/View;)V

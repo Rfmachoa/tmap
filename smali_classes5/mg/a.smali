@@ -1,322 +1,276 @@
-.class public abstract Lmg/a;
-.super Ljava/lang/Object;
-.source "AbstractHttpMessage.java"
-
-# interfaces
-.implements Ldf/p;
+.class public final Lmg/a;
+.super Lfg/e;
+.source "SpliceInfoDecoder.java"
 
 
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/NotThreadSafe;
-.end annotation
+# static fields
+.field public static final d:I = 0x0
+
+.field public static final e:I = 0x4
+
+.field public static final f:I = 0x5
+
+.field public static final g:I = 0x6
+
+.field public static final h:I = 0xff
 
 
 # instance fields
-.field public a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+.field public final a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public b:Lng/i;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
+.field public final b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+
+.field public c:Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-direct {p0, v0}, Lmg/a;-><init>(Lng/i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lng/i;)V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lfg/e;-><init>()V
 
     .line 2
-    new-instance v0, Lcz/msebera/android/httpclient/message/HeaderGroup;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;-><init>()V
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>()V
 
-    iput-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iput-object v0, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 3
-    iput-object p1, p0, Lmg/a;->b:Lng/i;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>()V
+
+    iput-object v0, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public G(Ldf/d;)V
-    .locals 1
+.method public b(Lfg/c;Ljava/nio/ByteBuffer;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
+    .locals 6
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lmg/a;->c:Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->addHeader(Ldf/d;)V
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    iget-wide v1, p1, Lfg/c;->p:J
 
-.method public L(Ldf/d;)V
-    .locals 1
+    .line 2
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->e()J
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    move-result-wide v3
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->removeHeader(Ldf/d;)V
+    cmp-long v0, v1, v3
 
-    return-void
-.end method
+    if-eqz v0, :cond_1
 
-.method public N(Lng/i;)V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    .line 3
+    :cond_0
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
-    const-string v0, "HTTP parameters"
+    iget-wide v1, p1, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->f:J
 
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;-><init>(J)V
+
+    iput-object v0, p0, Lmg/a;->c:Lcom/tmapmobility/tmap/exoplayer2/util/j0;
+
+    .line 4
+    iget-wide v1, p1, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->f:J
+
+    iget-wide v3, p1, Lfg/c;->p:J
+
+    sub-long/2addr v1, v3
+
+    invoke-virtual {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->a(J)J
+
+    .line 5
+    :cond_1
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p1
 
-    check-cast p1, Lng/i;
+    .line 6
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->limit()I
 
-    iput-object p1, p0, Lmg/a;->b:Lng/i;
+    move-result p2
 
-    return-void
-.end method
+    .line 7
+    iget-object v0, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.method public addHeader(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->Q([BI)V
 
-    const-string v0, "Header name"
+    .line 8
+    iget-object v0, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->p([BI)V
 
-    .line 2
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    .line 9
+    iget-object p1, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    new-instance v1, Lcz/msebera/android/httpclient/message/BasicHeader;
+    const/16 p2, 0x27
 
-    invoke-direct {v1, p1, p2}, Lcz/msebera/android/httpclient/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->s(I)V
 
-    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->addHeader(Ldf/d;)V
+    .line 10
+    iget-object p1, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    return-void
-.end method
+    const/4 p2, 0x1
 
-.method public containsHeader(Ljava/lang/String;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
-
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->containsHeader(Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->h(I)I
 
     move-result p1
 
-    return p1
-.end method
+    int-to-long v0, p1
 
-.method public f([Ldf/d;)V
-    .locals 1
+    const/16 p1, 0x20
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    shl-long/2addr v0, p1
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->setHeaders([Ldf/d;)V
+    .line 11
+    iget-object v2, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    return-void
-.end method
+    invoke-virtual {v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->h(I)I
 
-.method public getAllHeaders()[Ldf/d;
-    .locals 1
+    move-result p1
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    int-to-long v2, p1
 
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getAllHeaders()[Ldf/d;
+    or-long/2addr v0, v2
 
-    move-result-object v0
+    .line 12
+    iget-object p1, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    return-object v0
-.end method
+    const/16 v2, 0x14
 
-.method public getFirstHeader(Ljava/lang/String;)Ldf/d;
-    .locals 1
+    invoke-virtual {p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->s(I)V
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    .line 13
+    iget-object p1, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    const/16 v2, 0xc
 
-    move-result-object p1
+    invoke-virtual {p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->h(I)I
 
-    return-object p1
-.end method
+    move-result p1
 
-.method public getHeaders(Ljava/lang/String;)[Ldf/d;
-    .locals 1
+    .line 14
+    iget-object v2, p0, Lmg/a;->b:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    const/16 v3, 0x8
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->h(I)I
 
-    move-result-object p1
+    move-result v2
 
-    return-object p1
-.end method
+    const/4 v3, 0x0
 
-.method public getLastHeader(Ljava/lang/String;)Ldf/d;
-    .locals 1
+    .line 15
+    iget-object v4, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    const/16 v5, 0xe
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getLastHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->T(I)V
 
-    move-result-object p1
+    if-eqz v2, :cond_6
 
-    return-object p1
-.end method
+    const/16 v4, 0xff
 
-.method public getParams()Lng/i;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    if-eq v2, v4, :cond_5
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->b:Lng/i;
+    const/4 p1, 0x4
 
-    if-nez v0, :cond_0
+    if-eq v2, p1, :cond_4
 
-    .line 2
-    new-instance v0, Lcz/msebera/android/httpclient/params/BasicHttpParams;
+    const/4 p1, 0x5
 
-    invoke-direct {v0}, Lcz/msebera/android/httpclient/params/BasicHttpParams;-><init>()V
+    if-eq v2, p1, :cond_3
 
-    iput-object v0, p0, Lmg/a;->b:Lng/i;
+    const/4 p1, 0x6
 
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lmg/a;->b:Lng/i;
-
-    return-object v0
-.end method
-
-.method public headerIterator()Ldf/g;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
-
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator()Ldf/g;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public headerIterator(Ljava/lang/String;)Ldf/g;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
-
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator(Ljava/lang/String;)Ldf/g;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public removeHeaders(Ljava/lang/String;)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    .line 1
-    :cond_0
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
-
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator()Ldf/g;
-
-    move-result-object v0
-
-    :cond_1
-    :goto_0
-    invoke-interface {v0}, Ldf/g;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 2
-    invoke-interface {v0}, Ldf/g;->nextHeader()Ldf/d;
-
-    move-result-object v1
-
-    .line 3
-    invoke-interface {v1}, Ldf/d;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+    if-eq v2, p1, :cond_2
 
     goto :goto_0
 
+    .line 16
     :cond_2
-    return-void
-.end method
+    iget-object p1, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.method public setHeader(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    iget-object v2, p0, Lmg/a;->c:Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
-    const-string v0, "Header name"
+    invoke-static {p1, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;JLcom/tmapmobility/tmap/exoplayer2/util/j0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;
 
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    move-result-object v3
 
-    .line 2
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    goto :goto_0
 
-    new-instance v1, Lcz/msebera/android/httpclient/message/BasicHeader;
+    .line 17
+    :cond_3
+    iget-object p1, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {v1, p1, p2}, Lcz/msebera/android/httpclient/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, p0, Lmg/a;->c:Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
-    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->updateHeader(Ldf/d;)V
+    .line 18
+    invoke-static {p1, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceInsertCommand;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;JLcom/tmapmobility/tmap/exoplayer2/util/j0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceInsertCommand;
 
-    return-void
-.end method
+    move-result-object v3
 
-.method public v(Ldf/d;)V
-    .locals 1
+    goto :goto_0
 
-    .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    .line 19
+    :cond_4
+    iget-object p1, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->updateHeader(Ldf/d;)V
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
-    return-void
+    move-result-object v3
+
+    goto :goto_0
+
+    .line 20
+    :cond_5
+    iget-object v2, p0, Lmg/a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-static {v2, p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/PrivateCommand;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;IJ)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/PrivateCommand;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    .line 21
+    :cond_6
+    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceNullCommand;
+
+    invoke-direct {v3}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceNullCommand;-><init>()V
+
+    :goto_0
+    const/4 p1, 0x0
+
+    if-nez v3, :cond_7
+
+    .line 22
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
+
+    new-array p1, p1, [Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
+
+    invoke-direct {p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;-><init>([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)V
+
+    goto :goto_1
+
+    :cond_7
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
+
+    new-array p2, p2, [Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
+
+    aput-object v3, p2, p1
+
+    invoke-direct {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;-><init>([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)V
+
+    move-object p2, v0
+
+    :goto_1
+    return-object p2
 .end method

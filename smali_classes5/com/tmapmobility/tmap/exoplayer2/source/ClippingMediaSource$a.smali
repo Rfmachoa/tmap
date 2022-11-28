@@ -261,13 +261,13 @@
     invoke-virtual {p1, p3, p2, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/Timeline;->u(ILcom/tmapmobility/tmap/exoplayer2/Timeline$Window;J)Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;
 
     .line 2
-    iget-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->V0:J
+    iget-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->X0:J
 
     iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;->g:J
 
     add-long/2addr p3, v0
 
-    iput-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->V0:J
+    iput-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->X0:J
 
     .line 3
     iget-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;->i:J
@@ -323,7 +323,7 @@
     :cond_1
     iget-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ClippingMediaSource$a;->g:J
 
-    invoke-static {p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E1(J)J
+    invoke-static {p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H1(J)J
 
     move-result-wide p3
 

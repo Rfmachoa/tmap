@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/SurfaceRequest;->w(Landroid/view/Surface;Ljava/util/concurrent/Executor;Lr1/c;)V
+    value = Landroidx/camera/core/SurfaceRequest;->w(Landroid/view/Surface;Ljava/util/concurrent/Executor;Landroidx/core/util/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public final synthetic a:Lr1/c;
+.field public final synthetic a:Landroidx/core/util/d;
 
 .field public final synthetic b:Landroid/view/Surface;
 
@@ -35,25 +35,13 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/core/SurfaceRequest;Lr1/c;Landroid/view/Surface;)V
+.method public constructor <init>(Landroidx/camera/core/SurfaceRequest;Landroidx/core/util/d;Landroid/view/Surface;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$resultListener",
-            "val$surface"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$d;->c:Landroidx/camera/core/SurfaceRequest;
 
-    iput-object p2, p0, Landroidx/camera/core/SurfaceRequest$d;->a:Lr1/c;
+    iput-object p2, p0, Landroidx/camera/core/SurfaceRequest$d;->a:Landroidx/core/util/d;
 
     iput-object p3, p0, Landroidx/camera/core/SurfaceRequest$d;->b:Landroid/view/Surface;
 
@@ -70,17 +58,9 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
-    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$d;->a:Lr1/c;
+    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$d;->a:Landroidx/core/util/d;
 
     iget-object v0, p0, Landroidx/camera/core/SurfaceRequest$d;->b:Landroid/view/Surface;
 
@@ -90,21 +70,13 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lr1/c;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Landroidx/core/util/d;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
 
     .line 1
     instance-of v0, p1, Landroidx/camera/core/SurfaceRequest$RequestCancelledException;
@@ -123,10 +95,10 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 2
-    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$d;->a:Lr1/c;
+    iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$d;->a:Landroidx/core/util/d;
 
     iget-object v0, p0, Landroidx/camera/core/SurfaceRequest$d;->b:Landroid/view/Surface;
 
@@ -136,7 +108,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lr1/c;->accept(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Landroidx/core/util/d;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -147,14 +119,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     check-cast p1, Ljava/lang/Void;

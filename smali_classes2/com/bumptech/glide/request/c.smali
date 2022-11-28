@@ -34,12 +34,18 @@
 
 
 # virtual methods
-.method public abstract c(Ljava/lang/Object;Ljava/lang/Object;Lj5/p;Lcom/bumptech/glide/load/DataSource;ZZ)Z
+.method public c(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract d(Ljava/lang/Object;Ljava/lang/Object;Lg7/p;Lcom/bumptech/glide/load/DataSource;ZZ)Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TResourceT;",
             "Ljava/lang/Object;",
-            "Lj5/p<",
+            "Lg7/p<",
             "TResourceT;>;",
             "Lcom/bumptech/glide/load/DataSource;",
             "ZZ)Z"

@@ -1,9 +1,9 @@
-.class final Lcom/google/android/material/internal/ViewUtils$3;
+.class Lcom/google/android/material/internal/ViewUtils$3;
 .super Ljava/lang/Object;
 .source "ViewUtils.java"
 
 # interfaces
-.implements Ls1/e0;
+.implements Landroidx/core/view/i0;
 
 
 # annotations
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->J5()V
+    value = Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->T5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,8 +37,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -50,15 +50,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$a;->a:Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -96,7 +91,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$a;->a:Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;
 
-    invoke-virtual {v0, p1, p2, p4}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->L5(ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p4}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->X5(ZLjava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 

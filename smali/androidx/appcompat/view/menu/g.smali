@@ -3,7 +3,7 @@
 .source "MenuItemImpl.java"
 
 # interfaces
-.implements Lh1/b;
+.implements La2/b;
 
 
 # annotations
@@ -59,7 +59,7 @@
 
 .field public L:Landroid/view/View;
 
-.field public M:Ls1/a;
+.field public M:Landroidx/core/view/b;
 
 .field public N:Landroid/view/MenuItem$OnActionExpandListener;
 
@@ -300,11 +300,11 @@
     return v0
 .end method
 
-.method public a()Ls1/a;
+.method public a()Landroidx/core/view/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     return-object v0
 .end method
@@ -332,16 +332,18 @@
     return v0
 .end method
 
-.method public c(Ls1/a;)Lh1/b;
+.method public c(Landroidx/core/view/b;)La2/b;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Ls1/a;->j()V
+    invoke-virtual {v0}, Landroidx/core/view/b;->j()V
 
     :cond_0
     const/4 v0, 0x0
@@ -350,7 +352,7 @@
     iput-object v0, p0, Landroidx/appcompat/view/menu/g;->L:Landroid/view/View;
 
     .line 4
-    iput-object p1, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iput-object p1, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     .line 5
     iget-object p1, p0, Landroidx/appcompat/view/menu/g;->y:Landroidx/appcompat/view/menu/d;
@@ -360,7 +362,7 @@
     invoke-virtual {p1, v0}, Landroidx/appcompat/view/menu/d;->onItemsChanged(Z)V
 
     .line 6
-    iget-object p1, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object p1, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     if-eqz p1, :cond_1
 
@@ -369,7 +371,7 @@
 
     invoke-direct {v0, p0}, Landroidx/appcompat/view/menu/g$a;-><init>(Landroidx/appcompat/view/menu/g;)V
 
-    invoke-virtual {p1, v0}, Ls1/a;->l(Ls1/a$b;)V
+    invoke-virtual {p1, v0}, Landroidx/core/view/b;->l(Landroidx/core/view/b$b;)V
 
     :cond_1
     return-object p0
@@ -531,7 +533,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p1}, Ld1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lw1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -548,7 +550,7 @@
     .line 5
     iget-object v0, p0, Landroidx/appcompat/view/menu/g;->E:Landroid/content/res/ColorStateList;
 
-    invoke-static {p1, v0}, Ld1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v0}, Lw1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 6
     :cond_1
@@ -559,7 +561,7 @@
     .line 7
     iget-object v0, p0, Landroidx/appcompat/view/menu/g;->F:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {p1, v0}, Ld1/c;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p1, v0}, Lw1/c;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
     const/4 v0, 0x0
@@ -596,12 +598,12 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {v0, p0}, Ls1/a;->e(Landroid/view/MenuItem;)Landroid/view/View;
+    invoke-virtual {v0, p0}, Landroidx/core/view/b;->e(Landroid/view/MenuItem;)Landroid/view/View;
 
     move-result-object v0
 
@@ -681,7 +683,7 @@
 
     iget v1, p0, Landroidx/appcompat/view/menu/g;->x:I
 
-    invoke-static {v0, v1}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -941,7 +943,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     const/4 v1, 0x1
 
@@ -949,7 +951,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Ls1/a;->h()Z
+    invoke-virtual {v0}, Landroidx/core/view/b;->h()Z
 
     move-result v0
 
@@ -962,9 +964,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
-    invoke-virtual {v0}, Ls1/a;->c()Z
+    invoke-virtual {v0}, Landroidx/core/view/b;->c()Z
 
     move-result v0
 
@@ -1275,12 +1277,12 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p0}, Ls1/a;->e(Landroid/view/MenuItem;)Landroid/view/View;
+    invoke-virtual {v0, p0}, Landroidx/core/view/b;->e(Landroid/view/MenuItem;)Landroid/view/View;
 
     move-result-object v0
 
@@ -1373,11 +1375,11 @@
 
     .line 8
     :cond_3
-    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Ls1/a;->f()Z
+    invoke-virtual {v0}, Landroidx/core/view/b;->f()Z
 
     move-result v0
 
@@ -1456,8 +1458,10 @@
     return v1
 .end method
 
-.method public r(I)Lh1/b;
+.method public r(I)La2/b;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/g;->y:Landroidx/appcompat/view/menu/d;
@@ -1482,13 +1486,15 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->s(Landroid/view/View;)Lh1/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->s(Landroid/view/View;)La2/b;
 
     return-object p0
 .end method
 
-.method public s(Landroid/view/View;)Lh1/b;
+.method public s(Landroid/view/View;)La2/b;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/g;->L:Landroid/view/View;
@@ -1496,7 +1502,7 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Ls1/a;
+    iput-object v0, p0, Landroidx/appcompat/view/menu/g;->M:Landroidx/core/view/b;
 
     if-eqz p1, :cond_0
 
@@ -1540,9 +1546,11 @@
 
 .method public bridge synthetic setActionView(I)Landroid/view/MenuItem;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->r(I)Lh1/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->r(I)La2/b;
 
     move-result-object p1
 
@@ -1551,9 +1559,11 @@
 
 .method public bridge synthetic setActionView(Landroid/view/View;)Landroid/view/MenuItem;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 2
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->s(Landroid/view/View;)Lh1/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->s(Landroid/view/View;)La2/b;
 
     move-result-object p1
 
@@ -1590,6 +1600,8 @@
 
 .method public setAlphabeticShortcut(CI)Landroid/view/MenuItem;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 4
     iget-char v0, p0, Landroidx/appcompat/view/menu/g;->u:C
@@ -1678,19 +1690,10 @@
     return-object p0
 .end method
 
-.method public bridge synthetic setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->setContentDescription(Ljava/lang/CharSequence;)Lh1/b;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public setContentDescription(Ljava/lang/CharSequence;)Lh1/b;
+.method public setContentDescription(Ljava/lang/CharSequence;)La2/b;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 2
     iput-object p1, p0, Landroidx/appcompat/view/menu/g;->C:Ljava/lang/CharSequence;
@@ -1703,6 +1706,19 @@
     invoke-virtual {p1, v0}, Landroidx/appcompat/view/menu/d;->onItemsChanged(Z)V
 
     return-object p0
+.end method
+
+.method public bridge synthetic setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->setContentDescription(Ljava/lang/CharSequence;)La2/b;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public setEnabled(Z)Landroid/view/MenuItem;
@@ -1794,6 +1810,8 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/g;->E:Landroid/content/res/ColorStateList;
@@ -1818,6 +1836,8 @@
 
 .method public setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/g;->F:Landroid/graphics/PorterDuff$Mode;
@@ -1875,6 +1895,8 @@
 
 .method public setNumericShortcut(CI)Landroid/view/MenuItem;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 4
     iget-char v0, p0, Landroidx/appcompat/view/menu/g;->s:C
@@ -1951,6 +1973,8 @@
 
 .method public setShortcut(CCII)Landroid/view/MenuItem;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 4
     iput-char p1, p0, Landroidx/appcompat/view/menu/g;->s:C
@@ -2028,9 +2052,11 @@
 
 .method public bridge synthetic setShowAsActionFlags(I)Landroid/view/MenuItem;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->z(I)Lh1/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->z(I)La2/b;
 
     move-result-object p1
 
@@ -2099,19 +2125,10 @@
     return-object p0
 .end method
 
-.method public bridge synthetic setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->setTooltipText(Ljava/lang/CharSequence;)Lh1/b;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public setTooltipText(Ljava/lang/CharSequence;)Lh1/b;
+.method public setTooltipText(Ljava/lang/CharSequence;)La2/b;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 2
     iput-object p1, p0, Landroidx/appcompat/view/menu/g;->D:Ljava/lang/CharSequence;
@@ -2124,6 +2141,19 @@
     invoke-virtual {p1, v0}, Landroidx/appcompat/view/menu/d;->onItemsChanged(Z)V
 
     return-object p0
+.end method
+
+.method public bridge synthetic setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->setTooltipText(Ljava/lang/CharSequence;)La2/b;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public setVisible(Z)Landroid/view/MenuItem;
@@ -2286,8 +2316,10 @@
     return-void
 .end method
 
-.method public z(I)Lh1/b;
+.method public z(I)La2/b;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/g;->setShowAsAction(I)V

@@ -63,7 +63,7 @@
 
     const-string v2, "Failed to create Temporal.DateTime object from "
 
-    invoke-static {v2, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -174,7 +174,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/core/model/temporal/Temporal$DateTime;->offsetDateTime:Ljava/time/OffsetDateTime;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

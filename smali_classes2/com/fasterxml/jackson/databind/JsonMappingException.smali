@@ -62,10 +62,10 @@
 .method public constructor <init>(Ljava/io/Closeable;Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;)V
     .locals 0
 
-    .line 13
+    .line 15
     invoke-direct {p0, p2, p3}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;)V
 
-    .line 14
+    .line 16
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/JsonMappingException;->_processor:Ljava/io/Closeable;
 
     return-void
@@ -81,11 +81,28 @@
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/JsonMappingException;->_processor:Ljava/io/Closeable;
 
     .line 11
-    instance-of p2, p1, Lcom/fasterxml/jackson/core/JsonParser;
+    instance-of p2, p3, Lcom/fasterxml/jackson/core/JsonProcessingException;
 
     if-eqz p2, :cond_0
 
     .line 12
+    check-cast p3, Lcom/fasterxml/jackson/core/JsonProcessingException;
+
+    invoke-virtual {p3}, Lcom/fasterxml/jackson/core/JsonProcessingException;->getLocation()Lcom/fasterxml/jackson/core/JsonLocation;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->_location:Lcom/fasterxml/jackson/core/JsonLocation;
+
+    goto :goto_0
+
+    .line 13
+    :cond_0
+    instance-of p2, p1, Lcom/fasterxml/jackson/core/JsonParser;
+
+    if-eqz p2, :cond_1
+
+    .line 14
     check-cast p1, Lcom/fasterxml/jackson/core/JsonParser;
 
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getTokenLocation()Lcom/fasterxml/jackson/core/JsonLocation;
@@ -94,7 +111,8 @@
 
     iput-object p1, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->_location:Lcom/fasterxml/jackson/core/JsonLocation;
 
-    :cond_0
+    :cond_1
+    :goto_0
     return-void
 .end method
 
@@ -222,26 +240,30 @@
     .locals 1
 
     .line 7
-    new-instance p0, Lcom/fasterxml/jackson/databind/JsonMappingException;
+    new-instance v0, Lcom/fasterxml/jackson/databind/JsonMappingException;
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/SerializerProvider;->getGenerator()Lcom/fasterxml/jackson/core/JsonGenerator;
 
-    invoke-direct {p0, v0, p1}, Lcom/fasterxml/jackson/databind/JsonMappingException;-><init>(Ljava/io/Closeable;Ljava/lang/String;)V
+    move-result-object p0
 
-    return-object p0
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/databind/JsonMappingException;-><init>(Ljava/io/Closeable;Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 .method public static from(Lcom/fasterxml/jackson/databind/SerializerProvider;Ljava/lang/String;Ljava/lang/Throwable;)Lcom/fasterxml/jackson/databind/JsonMappingException;
     .locals 1
 
     .line 8
-    new-instance p0, Lcom/fasterxml/jackson/databind/JsonMappingException;
+    new-instance v0, Lcom/fasterxml/jackson/databind/JsonMappingException;
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/SerializerProvider;->getGenerator()Lcom/fasterxml/jackson/core/JsonGenerator;
 
-    invoke-direct {p0, v0, p1, p2}, Lcom/fasterxml/jackson/databind/JsonMappingException;-><init>(Ljava/io/Closeable;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object p0
 
-    return-object p0
+    invoke-direct {v0, p0, p1, p2}, Lcom/fasterxml/jackson/databind/JsonMappingException;-><init>(Ljava/io/Closeable;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v0
 .end method
 
 .method public static fromUnexpectedIOE(Ljava/io/IOException;)Lcom/fasterxml/jackson/databind/JsonMappingException;
@@ -254,6 +276,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -266,7 +289,8 @@
 
     aput-object v2, v1, v3
 
-    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-static {p0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->exceptionMessage(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -276,6 +300,7 @@
 
     const-string p0, "Unexpected IOException (of type %s): %s"
 
+    .line 4
     invoke-static {p0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -302,18 +327,18 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-static {p0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->exceptionMessage(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
     :cond_1
     const-string v0, "(was "
@@ -611,6 +636,8 @@
 
 .method public getProcessor()Ljava/lang/Object;
     .locals 1
+    .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/JsonMappingException;->_processor:Ljava/io/Closeable;

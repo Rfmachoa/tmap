@@ -147,7 +147,7 @@
 
     const-string v1, "fire-rtdb"
 
-    const-string v2, "20.0.3"
+    const-string v2, "20.0.6"
 
     .line 8
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;

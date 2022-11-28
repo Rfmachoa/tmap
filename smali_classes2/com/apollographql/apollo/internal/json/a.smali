@@ -6,65 +6,65 @@
 # static fields
 .field public static final K0:Lokio/ByteString;
 
-.field public static final V0:Lokio/ByteString;
+.field public static final X0:Lokio/ByteString;
 
-.field public static final W0:I = 0x0
+.field public static final Y0:I = 0x0
 
-.field public static final X0:I = 0x1
+.field public static final Z0:I = 0x1
 
-.field public static final Y0:I = 0x2
+.field public static final a1:I = 0x2
 
-.field public static final Z0:I = 0x3
+.field public static final b1:I = 0x3
 
-.field public static final a1:I = 0x4
+.field public static final c1:I = 0x4
 
-.field public static final b1:I = 0x5
+.field public static final d1:I = 0x5
 
-.field public static final c1:I = 0x6
+.field public static final e1:I = 0x6
 
-.field public static final d1:I = 0x7
+.field public static final f1:I = 0x7
 
-.field public static final e1:I = 0x8
+.field public static final g1:I = 0x8
 
-.field public static final f1:I = 0x9
+.field public static final h1:I = 0x9
 
-.field public static final g1:I = 0xa
+.field public static final i1:I = 0xa
 
-.field public static final h1:I = 0xb
-
-.field public static final i1:I = 0xc
-
-.field public static final j1:I = 0xd
+.field public static final j1:I = 0xb
 
 .field public static final k0:Lokio/ByteString;
 
-.field public static final k1:I = 0xe
+.field public static final k1:I = 0xc
 
-.field public static final l1:I = 0xf
+.field public static final l1:I = 0xd
 
-.field public static final m1:I = 0x10
+.field public static final m1:I = 0xe
 
-.field public static final n1:I = 0x11
+.field public static final n1:I = 0xf
 
-.field public static final o1:I = 0x0
+.field public static final o1:I = 0x10
 
 .field public static final p:J = -0xcccccccccccccccL
 
-.field public static final p1:I = 0x1
+.field public static final p1:I = 0x11
 
-.field public static final q1:I = 0x2
+.field public static final q1:I = 0x0
 
-.field public static final r1:I = 0x3
+.field public static final r1:I = 0x1
 
-.field public static final s1:I = 0x4
+.field public static final s1:I = 0x2
 
-.field public static final t1:I = 0x5
+.field public static final t1:I = 0x3
 
 .field public static final u:Lokio/ByteString;
 
-.field public static final u1:I = 0x6
+.field public static final u1:I = 0x4
 
-.field public static final v1:I = 0x7
+.field public static final v1:I = 0x5
+
+.field public static final w1:I = 0x6
+
+.field public static final x1:I = 0x7
 
 
 # instance fields
@@ -72,9 +72,9 @@
 
 .field public b:Z
 
-.field public final c:Lzj/o;
+.field public final c:Lem/o;
 
-.field public final d:Lzj/m;
+.field public final d:Lem/m;
 
 .field public e:I
 
@@ -131,12 +131,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/apollographql/apollo/internal/json/a;->V0:Lokio/ByteString;
+    sput-object v0, Lcom/apollographql/apollo/internal/json/a;->X0:Lokio/ByteString;
 
     return-void
 .end method
 
-.method public constructor <init>(Lzj/o;)V
+.method public constructor <init>(Lem/o;)V
     .locals 4
 
     .line 1
@@ -188,30 +188,137 @@
     invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 11
-    iput-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iput-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     .line 12
-    invoke-interface {p1}, Lzj/o;->e()Lzj/m;
+    invoke-interface {p1}, Lem/o;->e()Lem/m;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iput-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public B0(Z)V
-    .locals 0
+.method public final E1(Lokio/ByteString;)Ljava/lang/String;
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
 
     .line 1
-    iput-boolean p1, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
+    :goto_0
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
-    return-void
+    invoke-interface {v1, p1}, Lem/o;->G(Lokio/ByteString;)J
+
+    move-result-wide v1
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v3, v1, v3
+
+    if-eqz v3, :cond_3
+
+    .line 2
+    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v3, v1, v2}, Lem/m;->q0(J)B
+
+    move-result v3
+
+    const/16 v4, 0x5c
+
+    if-ne v3, v4, :cond_1
+
+    if-nez v0, :cond_0
+
+    .line 3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 4
+    :cond_0
+    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v3, v1, v2}, Lem/m;->K0(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 5
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v1}, Lem/m;->readByte()B
+
+    .line 6
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->c2()C
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_1
+    if-nez v0, :cond_2
+
+    .line 7
+    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {p1, v1, v2}, Lem/m;->K0(J)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 8
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v0}, Lem/m;->readByte()B
+
+    return-object p1
+
+    .line 9
+    :cond_2
+    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {p1, v1, v2}, Lem/m;->K0(J)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 10
+    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {p1}, Lem/m;->readByte()B
+
+    .line 11
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_3
+    const-string p1, "Unterminated string"
+
+    .line 12
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    move-result-object p1
+
+    throw p1
 .end method
 
-.method public final B1()Ljava/lang/String;
+.method public final F1()Ljava/lang/String;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -220,11 +327,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     sget-object v1, Lcom/apollographql/apollo/internal/json/a;->K0:Lokio/ByteString;
 
-    invoke-interface {v0, v1}, Lzj/o;->D(Lokio/ByteString;)J
+    invoke-interface {v0, v1}, Lem/o;->G(Lokio/ByteString;)J
 
     move-result-wide v0
 
@@ -235,18 +342,18 @@
     if-eqz v2, :cond_0
 
     .line 2
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v2, v0, v1}, Lzj/m;->q0(J)Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lem/m;->K0(J)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v0}, Lzj/m;->q1()Ljava/lang/String;
+    invoke-virtual {v0}, Lem/m;->M1()Ljava/lang/String;
 
     move-result-object v0
 
@@ -254,499 +361,7 @@
     return-object v0
 .end method
 
-.method public D0()V
-    .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->b:Z
-
-    if-nez v0, :cond_d
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 2
-    :cond_0
-    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    if-nez v2, :cond_1
-
-    .line 3
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
-
-    move-result v2
-
-    :cond_1
-    const/4 v3, 0x3
-
-    const/4 v4, 0x1
-
-    if-ne v2, v3, :cond_2
-
-    .line 4
-    invoke-virtual {p0, v4}, Lcom/apollographql/apollo/internal/json/a;->I1(I)V
-
-    goto :goto_0
-
-    :cond_2
-    if-ne v2, v4, :cond_3
-
-    .line 5
-    invoke-virtual {p0, v3}, Lcom/apollographql/apollo/internal/json/a;->I1(I)V
-
-    :goto_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_5
-
-    :cond_3
-    const/4 v3, 0x4
-
-    if-ne v2, v3, :cond_4
-
-    .line 6
-    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    sub-int/2addr v2, v4
-
-    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v3, 0x2
-
-    if-ne v2, v3, :cond_5
-
-    .line 7
-    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    sub-int/2addr v2, v4
-
-    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    :goto_1
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_5
-
-    :cond_5
-    const/16 v3, 0xe
-
-    if-eq v2, v3, :cond_b
-
-    const/16 v3, 0xa
-
-    if-ne v2, v3, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    const/16 v3, 0x9
-
-    if-eq v2, v3, :cond_a
-
-    const/16 v3, 0xd
-
-    if-ne v2, v3, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    const/16 v3, 0x8
-
-    if-eq v2, v3, :cond_9
-
-    const/16 v3, 0xc
-
-    if-ne v2, v3, :cond_8
-
-    goto :goto_2
-
-    :cond_8
-    const/16 v3, 0x10
-
-    if-ne v2, v3, :cond_c
-
-    .line 8
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    iget v3, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
-
-    int-to-long v5, v3
-
-    invoke-virtual {v2, v5, v6}, Lzj/m;->skip(J)V
-
-    goto :goto_5
-
-    .line 9
-    :cond_9
-    :goto_2
-    sget-object v2, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
-
-    invoke-virtual {p0, v2}, Lcom/apollographql/apollo/internal/json/a;->K1(Lokio/ByteString;)V
-
-    goto :goto_5
-
-    .line 10
-    :cond_a
-    :goto_3
-    sget-object v2, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
-
-    invoke-virtual {p0, v2}, Lcom/apollographql/apollo/internal/json/a;->K1(Lokio/ByteString;)V
-
-    goto :goto_5
-
-    .line 11
-    :cond_b
-    :goto_4
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->N1()V
-
-    .line 12
-    :cond_c
-    :goto_5
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    if-nez v1, :cond_0
-
-    .line 13
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
-
-    iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    add-int/lit8 v2, v1, -0x1
-
-    aget v3, v0, v2
-
-    add-int/2addr v3, v4
-
-    aput v3, v0, v2
-
-    .line 14
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->k:[Ljava/lang/String;
-
-    sub-int/2addr v1, v4
-
-    const-string v2, "null"
-
-    aput-object v2, v0, v1
-
-    return-void
-
-    .line 15
-    :cond_d
-    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
-
-    const-string v1, "Cannot skip unexpected "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " at "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public G()D
-    .locals 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
-
-    move-result v0
-
-    :cond_0
-    const/16 v1, 0xf
-
-    const/4 v2, 0x0
-
-    if-ne v0, v1, :cond_1
-
-    .line 3
-    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    .line 4
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
-
-    iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    aget v2, v0, v1
-
-    add-int/lit8 v2, v2, 0x1
-
-    aput v2, v0, v1
-
-    .line 5
-    iget-wide v0, p0, Lcom/apollographql/apollo/internal/json/a;->f:J
-
-    long-to-double v0, v0
-
-    return-wide v0
-
-    :cond_1
-    const/16 v1, 0x10
-
-    const-string v3, "Expected a double but was "
-
-    const/16 v4, 0xb
-
-    const-string v5, " at path "
-
-    if-ne v0, v1, :cond_2
-
-    .line 6
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
-
-    int-to-long v6, v1
-
-    invoke-virtual {v0, v6, v7}, Lzj/m;->q0(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v1, 0x9
-
-    if-ne v0, v1, :cond_3
-
-    .line 7
-    sget-object v0, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
-
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_4
-
-    .line 8
-    sget-object v0, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
-
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_4
-    const/16 v1, 0xa
-
-    if-ne v0, v1, :cond_5
-
-    .line 9
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->B1()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_5
-    if-ne v0, v4, :cond_8
-
-    .line 10
-    :goto_0
-    iput v4, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    .line 11
-    :try_start_0
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
-
-    move-result-wide v0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 12
-    iget-boolean v3, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
-
-    if-nez v3, :cond_7
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    goto :goto_1
-
-    .line 13
-    :cond_6
-    new-instance v2, Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "JSON forbids NaN and infinities: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 14
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Lcom/apollographql/apollo/json/JsonEncodingException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-
-    :cond_7
-    :goto_1
-    const/4 v3, 0x0
-
-    .line 15
-    iput-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    .line 16
-    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    .line 17
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
-
-    iget v3, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    aget v4, v2, v3
-
-    add-int/lit8 v4, v4, 0x1
-
-    aput v4, v2, v3
-
-    return-wide v0
-
-    .line 18
-    :catch_0
-    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
-
-    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 19
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 20
-    :cond_8
-    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
-
-    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final G1()I
+.method public final H1()I
     .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -755,11 +370,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     const-wide/16 v1, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lzj/m;->B0(J)B
+    invoke-virtual {v0, v1, v2}, Lem/m;->q0(J)B
 
     move-result v0
 
@@ -840,13 +455,13 @@
     if-ge v5, v4, :cond_8
 
     .line 3
-    iget-object v6, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v6, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     add-int/lit8 v7, v5, 0x1
 
     int-to-long v8, v7
 
-    invoke-interface {v6, v8, v9}, Lzj/o;->request(J)Z
+    invoke-interface {v6, v8, v9}, Lem/o;->request(J)Z
 
     move-result v6
 
@@ -856,11 +471,11 @@
 
     .line 4
     :cond_6
-    iget-object v6, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v6, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     int-to-long v8, v5
 
-    invoke-virtual {v6, v8, v9}, Lzj/m;->B0(J)B
+    invoke-virtual {v6, v8, v9}, Lem/m;->q0(J)B
 
     move-result v6
 
@@ -886,27 +501,27 @@
 
     .line 6
     :cond_8
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     add-int/lit8 v3, v4, 0x1
 
     int-to-long v5, v3
 
-    invoke-interface {v2, v5, v6}, Lzj/o;->request(J)Z
+    invoke-interface {v2, v5, v6}, Lem/o;->request(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     int-to-long v5, v4
 
-    invoke-virtual {v2, v5, v6}, Lzj/m;->B0(J)B
+    invoke-virtual {v2, v5, v6}, Lem/m;->q0(J)B
 
     move-result v2
 
-    invoke-virtual {p0, v2}, Lcom/apollographql/apollo/internal/json/a;->j1(I)Z
+    invoke-virtual {p0, v2}, Lcom/apollographql/apollo/internal/json/a;->e1(I)Z
 
     move-result v2
 
@@ -916,11 +531,11 @@
 
     .line 7
     :cond_9
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     int-to-long v2, v4
 
-    invoke-virtual {v1, v2, v3}, Lzj/m;->skip(J)V
+    invoke-virtual {v1, v2, v3}, Lem/m;->skip(J)V
 
     .line 8
     iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
@@ -928,746 +543,7 @@
     return v0
 .end method
 
-.method public final H1()I
-    .locals 16
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    move-object/from16 v0, p0
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    move-wide v8, v1
-
-    move v7, v3
-
-    move v5, v4
-
-    move v6, v5
-
-    move v10, v6
-
-    .line 1
-    :goto_0
-    iget-object v11, v0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    add-int/lit8 v12, v5, 0x1
-
-    int-to-long v13, v12
-
-    invoke-interface {v11, v13, v14}, Lzj/o;->request(J)Z
-
-    move-result v11
-
-    const/4 v15, 0x2
-
-    if-nez v11, :cond_0
-
-    goto/16 :goto_5
-
-    .line 2
-    :cond_0
-    iget-object v11, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    int-to-long v13, v5
-
-    invoke-virtual {v11, v13, v14}, Lzj/m;->B0(J)B
-
-    move-result v11
-
-    const/16 v13, 0x2b
-
-    const/4 v14, 0x5
-
-    if-eq v11, v13, :cond_19
-
-    const/16 v13, 0x45
-
-    if-eq v11, v13, :cond_16
-
-    const/16 v13, 0x65
-
-    if-eq v11, v13, :cond_16
-
-    const/16 v13, 0x2d
-
-    if-eq v11, v13, :cond_13
-
-    const/16 v13, 0x2e
-
-    if-eq v11, v13, :cond_11
-
-    const/16 v13, 0x30
-
-    if-lt v11, v13, :cond_a
-
-    const/16 v13, 0x39
-
-    if-le v11, v13, :cond_1
-
-    goto :goto_4
-
-    :cond_1
-    if-eq v6, v3, :cond_9
-
-    if-nez v6, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    if-ne v6, v15, :cond_6
-
-    cmp-long v5, v8, v1
-
-    if-nez v5, :cond_3
-
-    return v4
-
-    :cond_3
-    const-wide/16 v13, 0xa
-
-    mul-long/2addr v13, v8
-
-    add-int/lit8 v11, v11, -0x30
-
-    int-to-long v1, v11
-
-    sub-long/2addr v13, v1
-
-    const-wide v1, -0xcccccccccccccccL
-
-    cmp-long v1, v8, v1
-
-    if-gtz v1, :cond_5
-
-    if-nez v1, :cond_4
-
-    cmp-long v1, v13, v8
-
-    if-gez v1, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    move v1, v4
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    move v1, v3
-
-    :goto_2
-    and-int/2addr v7, v1
-
-    move-wide v8, v13
-
-    goto/16 :goto_a
-
-    :cond_6
-    const/4 v1, 0x3
-
-    if-ne v6, v1, :cond_7
-
-    const/4 v6, 0x4
-
-    goto/16 :goto_a
-
-    :cond_7
-    if-eq v6, v14, :cond_8
-
-    const/4 v1, 0x6
-
-    if-ne v6, v1, :cond_1a
-
-    :cond_8
-    const/4 v6, 0x7
-
-    goto/16 :goto_a
-
-    :cond_9
-    :goto_3
-    add-int/lit8 v11, v11, -0x30
-
-    neg-int v1, v11
-
-    int-to-long v8, v1
-
-    move v6, v15
-
-    goto :goto_a
-
-    .line 3
-    :cond_a
-    :goto_4
-    invoke-virtual {v0, v11}, Lcom/apollographql/apollo/internal/json/a;->j1(I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_10
-
-    :goto_5
-    if-ne v6, v15, :cond_d
-
-    if-eqz v7, :cond_d
-
-    const-wide/high16 v1, -0x8000000000000000L
-
-    cmp-long v1, v8, v1
-
-    if-nez v1, :cond_b
-
-    if-eqz v10, :cond_d
-
-    :cond_b
-    if-eqz v10, :cond_c
-
-    goto :goto_6
-
-    :cond_c
-    neg-long v8, v8
-
-    .line 4
-    :goto_6
-    iput-wide v8, v0, Lcom/apollographql/apollo/internal/json/a;->f:J
-
-    .line 5
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    int-to-long v2, v5
-
-    invoke-virtual {v1, v2, v3}, Lzj/m;->skip(J)V
-
-    const/16 v1, 0xf
-
-    .line 6
-    iput v1, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    return v1
-
-    :cond_d
-    if-eq v6, v15, :cond_f
-
-    const/4 v1, 0x4
-
-    if-eq v6, v1, :cond_f
-
-    const/4 v1, 0x7
-
-    if-ne v6, v1, :cond_e
-
-    goto :goto_7
-
-    :cond_e
-    return v4
-
-    .line 7
-    :cond_f
-    :goto_7
-    iput v5, v0, Lcom/apollographql/apollo/internal/json/a;->g:I
-
-    const/16 v1, 0x10
-
-    .line 8
-    iput v1, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    return v1
-
-    :cond_10
-    return v4
-
-    :cond_11
-    const/4 v1, 0x3
-
-    if-ne v6, v15, :cond_12
-
-    goto :goto_9
-
-    :cond_12
-    return v4
-
-    :cond_13
-    const/4 v1, 0x6
-
-    if-nez v6, :cond_14
-
-    move v6, v3
-
-    move v10, v6
-
-    goto :goto_a
-
-    :cond_14
-    if-ne v6, v14, :cond_15
-
-    goto :goto_9
-
-    :cond_15
-    return v4
-
-    :cond_16
-    if-eq v6, v15, :cond_18
-
-    const/4 v1, 0x4
-
-    if-ne v6, v1, :cond_17
-
-    goto :goto_8
-
-    :cond_17
-    return v4
-
-    :cond_18
-    :goto_8
-    move v6, v14
-
-    goto :goto_a
-
-    :cond_19
-    const/4 v1, 0x6
-
-    if-ne v6, v14, :cond_1b
-
-    :goto_9
-    move v6, v1
-
-    :cond_1a
-    :goto_a
-    move v5, v12
-
-    const-wide/16 v1, 0x0
-
-    goto/16 :goto_0
-
-    :cond_1b
-    return v4
-.end method
-
-.method public final I1(I)V
-    .locals 3
-
-    .line 1
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->i:[I
-
-    array-length v2, v1
-
-    if-eq v0, v2, :cond_0
-
-    add-int/lit8 v2, v0, 0x1
-
-    .line 2
-    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    aput p1, v1, v0
-
-    return-void
-
-    .line 3
-    :cond_0
-    new-instance p1, Lcom/apollographql/apollo/json/JsonDataException;
-
-    const-string v0, "Nesting too deep at "
-
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final J1()C
-    .locals 9
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    const-wide/16 v1, 0x1
-
-    invoke-interface {v0, v1, v2}, Lzj/o;->request(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    .line 2
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v0}, Lzj/m;->readByte()B
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_c
-
-    const/16 v2, 0x22
-
-    if-eq v0, v2, :cond_c
-
-    const/16 v2, 0x27
-
-    if-eq v0, v2, :cond_c
-
-    const/16 v2, 0x2f
-
-    if-eq v0, v2, :cond_c
-
-    const/16 v2, 0x5c
-
-    if-eq v0, v2, :cond_c
-
-    const/16 v2, 0x62
-
-    if-eq v0, v2, :cond_b
-
-    const/16 v2, 0x66
-
-    if-eq v0, v2, :cond_a
-
-    const/16 v3, 0x6e
-
-    if-eq v0, v3, :cond_9
-
-    const/16 v3, 0x72
-
-    if-eq v0, v3, :cond_8
-
-    const/16 v3, 0x74
-
-    if-eq v0, v3, :cond_7
-
-    const/16 v3, 0x75
-
-    if-eq v0, v3, :cond_1
-
-    .line 3
-    iget-boolean v1, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
-
-    if-eqz v1, :cond_0
-
-    int-to-char v0, v0
-
-    return v0
-
-    :cond_0
-    const-string v1, "Invalid escape sequence: \\"
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    int-to-char v0, v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    move-result-object v0
-
-    throw v0
-
-    .line 4
-    :cond_1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    const-wide/16 v3, 0x4
-
-    invoke-interface {v0, v3, v4}, Lzj/o;->request(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const/4 v0, 0x0
-
-    move v5, v0
-
-    :goto_0
-    const/4 v6, 0x4
-
-    if-ge v0, v6, :cond_5
-
-    .line 5
-    iget-object v6, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    int-to-long v7, v0
-
-    invoke-virtual {v6, v7, v8}, Lzj/m;->B0(J)B
-
-    move-result v6
-
-    shl-int/lit8 v5, v5, 0x4
-
-    int-to-char v5, v5
-
-    const/16 v7, 0x30
-
-    if-lt v6, v7, :cond_2
-
-    const/16 v7, 0x39
-
-    if-gt v6, v7, :cond_2
-
-    add-int/lit8 v6, v6, -0x30
-
-    goto :goto_2
-
-    :cond_2
-    const/16 v7, 0x61
-
-    if-lt v6, v7, :cond_3
-
-    if-gt v6, v2, :cond_3
-
-    add-int/lit8 v6, v6, -0x61
-
-    goto :goto_1
-
-    :cond_3
-    const/16 v7, 0x41
-
-    if-lt v6, v7, :cond_4
-
-    const/16 v7, 0x46
-
-    if-gt v6, v7, :cond_4
-
-    add-int/lit8 v6, v6, -0x41
-
-    :goto_1
-    add-int/2addr v6, v1
-
-    :goto_2
-    add-int/2addr v6, v5
-
-    int-to-char v5, v6
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    const-string v0, "\\u"
-
-    .line 6
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v1, v3, v4}, Lzj/m;->q0(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    move-result-object v0
-
-    throw v0
-
-    .line 7
-    :cond_5
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v0, v3, v4}, Lzj/m;->skip(J)V
-
-    return v5
-
-    .line 8
-    :cond_6
-    new-instance v0, Ljava/io/EOFException;
-
-    const-string v1, "Unterminated escape sequence at path "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_7
-    const/16 v0, 0x9
-
-    return v0
-
-    :cond_8
-    const/16 v0, 0xd
-
-    return v0
-
-    :cond_9
-    return v1
-
-    :cond_a
-    const/16 v0, 0xc
-
-    return v0
-
-    :cond_b
-    const/16 v0, 0x8
-
-    return v0
-
-    :cond_c
-    int-to-char v0, v0
-
-    return v0
-
-    :cond_d
-    const-string v0, "Unterminated escape sequence"
-
-    .line 9
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    move-result-object v0
-
-    throw v0
-.end method
-
-.method public final K0()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const-string v0, "Use JsonReader.setLenient(true) to accept malformed JSON"
-
-    .line 2
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    move-result-object v0
-
-    throw v0
-.end method
-
-.method public final K1(Lokio/ByteString;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    :goto_0
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    invoke-interface {v0, p1}, Lzj/o;->D(Lokio/ByteString;)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_1
-
-    .line 2
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v2, v0, v1}, Lzj/m;->B0(J)B
-
-    move-result v2
-
-    const/16 v3, 0x5c
-
-    const-wide/16 v4, 0x1
-
-    if-ne v2, v3, :cond_0
-
-    .line 3
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    add-long/2addr v0, v4
-
-    invoke-virtual {v2, v0, v1}, Lzj/m;->skip(J)V
-
-    .line 4
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->J1()C
-
-    goto :goto_0
-
-    .line 5
-    :cond_0
-    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    add-long/2addr v0, v4
-
-    invoke-virtual {p1, v0, v1}, Lzj/m;->skip(J)V
-
-    return-void
-
-    :cond_1
-    const-string p1, "Unterminated string"
-
-    .line 6
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public L()I
+.method public J()I
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1762,13 +638,13 @@
     if-ne v0, v1, :cond_3
 
     .line 8
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
 
     int-to-long v6, v1
 
-    invoke-virtual {v0, v6, v7}, Lzj/m;->q0(J)Ljava/lang/String;
+    invoke-virtual {v0, v6, v7}, Lem/m;->K0(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1800,7 +676,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -1830,7 +706,7 @@
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1840,7 +716,7 @@
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
 
     .line 12
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1978,120 +854,7 @@
     throw v0
 .end method
 
-.method public final L1(Ljava/lang/String;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    :goto_0
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    invoke-interface {v0, v1, v2}, Lzj/o;->request(J)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    .line 2
-    :goto_1
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_1
-
-    .line 3
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    int-to-long v2, v1
-
-    invoke-virtual {v0, v2, v3}, Lzj/m;->B0(J)B
-
-    move-result v0
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    .line 4
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v0}, Lzj/m;->readByte()B
-
-    goto :goto_0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    return v1
-.end method
-
-.method public final M1()V
-    .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    sget-object v1, Lcom/apollographql/apollo/internal/json/a;->V0:Lokio/ByteString;
-
-    invoke-interface {v0, v1}, Lzj/o;->D(Lokio/ByteString;)J
-
-    move-result-wide v0
-
-    .line 2
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    const-wide/16 v3, -0x1
-
-    cmp-long v3, v0, v3
-
-    if-eqz v3, :cond_0
-
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Lzj/m;->size()J
-
-    move-result-wide v0
-
-    :goto_0
-    invoke-virtual {v2, v0, v1}, Lzj/m;->skip(J)V
-
-    return-void
-.end method
-
-.method public N()J
+.method public T()J
     .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2149,13 +912,13 @@
     if-ne v0, v1, :cond_2
 
     .line 6
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
 
     int-to-long v6, v1
 
-    invoke-virtual {v0, v6, v7}, Lzj/m;->q0(J)Ljava/lang/String;
+    invoke-virtual {v0, v6, v7}, Lem/m;->K0(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2187,7 +950,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -2218,7 +981,7 @@
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
 
     .line 10
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2228,7 +991,7 @@
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2366,46 +1129,7 @@
     throw v0
 .end method
 
-.method public final N1()V
-    .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    sget-object v1, Lcom/apollographql/apollo/internal/json/a;->K0:Lokio/ByteString;
-
-    invoke-interface {v0, v1}, Lzj/o;->D(Lokio/ByteString;)J
-
-    move-result-wide v0
-
-    .line 2
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    const-wide/16 v3, -0x1
-
-    cmp-long v3, v0, v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Lzj/m;->size()J
-
-    move-result-wide v0
-
-    :goto_0
-    invoke-virtual {v2, v0, v1}, Lzj/m;->skip(J)V
-
-    return-void
-.end method
-
-.method public O()Ljava/lang/String;
+.method public U()Ljava/lang/String;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2429,7 +1153,7 @@
     if-ne v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->B1()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->F1()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2443,7 +1167,7 @@
     .line 4
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
 
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2457,7 +1181,7 @@
     .line 5
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
 
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2488,7 +1212,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -2513,39 +1237,7 @@
     throw v0
 .end method
 
-.method public final O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/apollographql/apollo/json/JsonEncodingException;
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    const-string v1, " at path "
-
-    invoke-static {p1, v1}, Landroid/support/v4/media/e;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lcom/apollographql/apollo/json/JsonEncodingException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public W()Ljava/lang/Object;
+.method public V()Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2608,7 +1300,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -2631,6 +1323,354 @@
     invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
 
     throw v0
+.end method
+
+.method public final V0()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string v0, "Use JsonReader.setLenient(true) to accept malformed JSON"
+
+    .line 2
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final W1()I
+    .locals 16
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    move-wide v8, v1
+
+    move v7, v3
+
+    move v5, v4
+
+    move v6, v5
+
+    move v10, v6
+
+    .line 1
+    :goto_0
+    iget-object v11, v0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    add-int/lit8 v12, v5, 0x1
+
+    int-to-long v13, v12
+
+    invoke-interface {v11, v13, v14}, Lem/o;->request(J)Z
+
+    move-result v11
+
+    const/4 v15, 0x2
+
+    if-nez v11, :cond_0
+
+    goto/16 :goto_5
+
+    .line 2
+    :cond_0
+    iget-object v11, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    int-to-long v13, v5
+
+    invoke-virtual {v11, v13, v14}, Lem/m;->q0(J)B
+
+    move-result v11
+
+    const/16 v13, 0x2b
+
+    const/4 v14, 0x5
+
+    if-eq v11, v13, :cond_19
+
+    const/16 v13, 0x45
+
+    if-eq v11, v13, :cond_16
+
+    const/16 v13, 0x65
+
+    if-eq v11, v13, :cond_16
+
+    const/16 v13, 0x2d
+
+    if-eq v11, v13, :cond_13
+
+    const/16 v13, 0x2e
+
+    if-eq v11, v13, :cond_11
+
+    const/16 v13, 0x30
+
+    if-lt v11, v13, :cond_a
+
+    const/16 v13, 0x39
+
+    if-le v11, v13, :cond_1
+
+    goto :goto_4
+
+    :cond_1
+    if-eq v6, v3, :cond_9
+
+    if-nez v6, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    if-ne v6, v15, :cond_6
+
+    cmp-long v5, v8, v1
+
+    if-nez v5, :cond_3
+
+    return v4
+
+    :cond_3
+    const-wide/16 v13, 0xa
+
+    mul-long/2addr v13, v8
+
+    add-int/lit8 v11, v11, -0x30
+
+    int-to-long v1, v11
+
+    sub-long/2addr v13, v1
+
+    const-wide v1, -0xcccccccccccccccL
+
+    cmp-long v1, v8, v1
+
+    if-gtz v1, :cond_5
+
+    if-nez v1, :cond_4
+
+    cmp-long v1, v13, v8
+
+    if-gez v1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v1, v4
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    move v1, v3
+
+    :goto_2
+    and-int/2addr v7, v1
+
+    move-wide v8, v13
+
+    goto/16 :goto_a
+
+    :cond_6
+    const/4 v1, 0x3
+
+    if-ne v6, v1, :cond_7
+
+    const/4 v6, 0x4
+
+    goto/16 :goto_a
+
+    :cond_7
+    if-eq v6, v14, :cond_8
+
+    const/4 v1, 0x6
+
+    if-ne v6, v1, :cond_1a
+
+    :cond_8
+    const/4 v6, 0x7
+
+    goto/16 :goto_a
+
+    :cond_9
+    :goto_3
+    add-int/lit8 v11, v11, -0x30
+
+    neg-int v1, v11
+
+    int-to-long v8, v1
+
+    move v6, v15
+
+    goto :goto_a
+
+    .line 3
+    :cond_a
+    :goto_4
+    invoke-virtual {v0, v11}, Lcom/apollographql/apollo/internal/json/a;->e1(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_10
+
+    :goto_5
+    if-ne v6, v15, :cond_d
+
+    if-eqz v7, :cond_d
+
+    const-wide/high16 v1, -0x8000000000000000L
+
+    cmp-long v1, v8, v1
+
+    if-nez v1, :cond_b
+
+    if-eqz v10, :cond_d
+
+    :cond_b
+    if-eqz v10, :cond_c
+
+    goto :goto_6
+
+    :cond_c
+    neg-long v8, v8
+
+    .line 4
+    :goto_6
+    iput-wide v8, v0, Lcom/apollographql/apollo/internal/json/a;->f:J
+
+    .line 5
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    int-to-long v2, v5
+
+    invoke-virtual {v1, v2, v3}, Lem/m;->skip(J)V
+
+    const/16 v1, 0xf
+
+    .line 6
+    iput v1, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    return v1
+
+    :cond_d
+    if-eq v6, v15, :cond_f
+
+    const/4 v1, 0x4
+
+    if-eq v6, v1, :cond_f
+
+    const/4 v1, 0x7
+
+    if-ne v6, v1, :cond_e
+
+    goto :goto_7
+
+    :cond_e
+    return v4
+
+    .line 7
+    :cond_f
+    :goto_7
+    iput v5, v0, Lcom/apollographql/apollo/internal/json/a;->g:I
+
+    const/16 v1, 0x10
+
+    .line 8
+    iput v1, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    return v1
+
+    :cond_10
+    return v4
+
+    :cond_11
+    const/4 v1, 0x3
+
+    if-ne v6, v15, :cond_12
+
+    goto :goto_9
+
+    :cond_12
+    return v4
+
+    :cond_13
+    const/4 v1, 0x6
+
+    if-nez v6, :cond_14
+
+    move v6, v3
+
+    move v10, v6
+
+    goto :goto_a
+
+    :cond_14
+    if-ne v6, v14, :cond_15
+
+    goto :goto_9
+
+    :cond_15
+    return v4
+
+    :cond_16
+    if-eq v6, v15, :cond_18
+
+    const/4 v1, 0x4
+
+    if-ne v6, v1, :cond_17
+
+    goto :goto_8
+
+    :cond_17
+    return v4
+
+    :cond_18
+    :goto_8
+    move v6, v14
+
+    goto :goto_a
+
+    :cond_19
+    const/4 v1, 0x6
+
+    if-ne v6, v14, :cond_1b
+
+    :goto_9
+    move v6, v1
+
+    :cond_1a
+    :goto_a
+    move v5, v12
+
+    const-wide/16 v1, 0x0
+
+    goto/16 :goto_0
+
+    :cond_1b
+    return v4
 .end method
 
 .method public final X0()I
@@ -2687,14 +1727,14 @@
     if-ne v3, v15, :cond_3
 
     .line 3
-    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->l1(Z)I
+    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->r1(Z)I
 
     move-result v1
 
     .line 4
-    iget-object v2, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v2, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v2}, Lzj/m;->readByte()B
+    invoke-virtual {v2}, Lem/m;->readByte()B
 
     if-eq v1, v13, :cond_a
 
@@ -2711,7 +1751,7 @@
     const-string v1, "Unterminated array"
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -2719,7 +1759,7 @@
 
     .line 7
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     goto :goto_0
 
@@ -2741,14 +1781,14 @@
     aput v15, v1, v2
 
     .line 9
-    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->l1(Z)I
+    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->r1(Z)I
 
     move-result v1
 
     .line 10
-    iget-object v2, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v2, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v2}, Lzj/m;->readByte()B
+    invoke-virtual {v2}, Lem/m;->readByte()B
 
     const/16 v2, 0x3a
 
@@ -2759,22 +1799,22 @@
     if-ne v1, v2, :cond_5
 
     .line 11
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     .line 12
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     const-wide/16 v14, 0x1
 
-    invoke-interface {v1, v14, v15}, Lzj/o;->request(J)Z
+    invoke-interface {v1, v14, v15}, Lem/o;->request(J)Z
 
     move-result v1
 
     if-eqz v1, :cond_a
 
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1, v4, v5}, Lzj/m;->B0(J)B
+    invoke-virtual {v1, v4, v5}, Lem/m;->q0(J)B
 
     move-result v1
 
@@ -2783,9 +1823,9 @@
     if-ne v1, v2, :cond_a
 
     .line 13
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     goto :goto_0
 
@@ -2793,7 +1833,7 @@
     const-string v1, "Expected \':\'"
 
     .line 14
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -2817,7 +1857,7 @@
     const/4 v1, 0x0
 
     .line 16
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->l1(Z)I
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->r1(Z)I
 
     move-result v1
 
@@ -2834,7 +1874,7 @@
 
     .line 18
     :cond_8
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     goto :goto_0
 
@@ -2844,7 +1884,7 @@
     .line 19
     :cond_a
     :goto_0
-    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->l1(Z)I
+    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->r1(Z)I
 
     move-result v1
 
@@ -2869,7 +1909,7 @@
     if-eq v1, v2, :cond_e
 
     .line 20
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->G1()I
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->H1()I
 
     move-result v1
 
@@ -2879,7 +1919,7 @@
 
     .line 21
     :cond_b
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->H1()I
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->W1()I
 
     move-result v1
 
@@ -2889,20 +1929,20 @@
 
     .line 22
     :cond_c
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1, v4, v5}, Lzj/m;->B0(J)B
+    invoke-virtual {v1, v4, v5}, Lem/m;->q0(J)B
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->j1(I)Z
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->e1(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_d
 
     .line 23
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     const/16 v1, 0xa
 
@@ -2915,7 +1955,7 @@
     const-string v1, "Expected value"
 
     .line 25
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -2923,9 +1963,9 @@
 
     .line 26
     :cond_e
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 27
     iput v7, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
@@ -2936,9 +1976,9 @@
     if-ne v3, v7, :cond_11
 
     .line 28
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     const/4 v1, 0x4
 
@@ -2949,9 +1989,9 @@
 
     .line 30
     :cond_10
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 31
     iput v10, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
@@ -2971,7 +2011,7 @@
     const-string v1, "Unexpected value"
 
     .line 32
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -2980,7 +2020,7 @@
     .line 33
     :cond_13
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     .line 34
     iput v11, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
@@ -2989,12 +2029,12 @@
 
     .line 35
     :cond_14
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     .line 36
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 37
     iput v6, v0, Lcom/apollographql/apollo/internal/json/a;->e:I
@@ -3003,9 +2043,9 @@
 
     .line 38
     :cond_15
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     const/16 v1, 0x9
 
@@ -3038,14 +2078,14 @@
     if-ne v3, v15, :cond_1a
 
     .line 42
-    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->l1(Z)I
+    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->r1(Z)I
 
     move-result v2
 
     .line 43
-    iget-object v4, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v4, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v4}, Lzj/m;->readByte()B
+    invoke-virtual {v4}, Lem/m;->readByte()B
 
     if-eq v2, v13, :cond_1a
 
@@ -3064,7 +2104,7 @@
     const-string v1, "Unterminated object"
 
     .line 45
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -3072,11 +2112,11 @@
 
     .line 46
     :cond_19
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     .line 47
     :cond_1a
-    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->l1(Z)I
+    invoke-virtual {v0, v7}, Lcom/apollographql/apollo/internal/json/a;->r1(Z)I
 
     move-result v2
 
@@ -3091,12 +2131,12 @@
     if-eq v2, v1, :cond_1c
 
     .line 48
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     int-to-char v1, v2
 
     .line 49
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->j1(I)Z
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/json/a;->e1(I)Z
 
     move-result v1
 
@@ -3111,7 +2151,7 @@
 
     .line 51
     :cond_1b
-    invoke-virtual {v0, v4}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v4}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -3121,9 +2161,9 @@
     if-eq v3, v15, :cond_1d
 
     .line 52
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     const/4 v1, 0x2
 
@@ -3134,7 +2174,7 @@
 
     .line 54
     :cond_1d
-    invoke-virtual {v0, v4}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {v0, v4}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object v1
 
@@ -3142,12 +2182,12 @@
 
     .line 55
     :cond_1e
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 56
-    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual/range {p0 .. p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     const/16 v1, 0xc
 
@@ -3158,9 +2198,9 @@
 
     .line 58
     :cond_1f
-    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, v0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     const/16 v1, 0xd
 
@@ -3170,7 +2210,158 @@
     return v1
 .end method
 
-.method public Y()Ljava/lang/String;
+.method public a()V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
+
+    move-result v0
+
+    :cond_0
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->b2(I)V
+
+    .line 4
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
+
+    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    sub-int/2addr v2, v0
+
+    const/4 v0, 0x0
+
+    aput v0, v1, v2
+
+    .line 5
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    return-void
+
+    .line 6
+    :cond_1
+    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
+
+    const-string v1, "Expected BEGIN_ARRAY but was "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " at path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public b()V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
+
+    move-result v0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x3
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->b2(I)V
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    return-void
+
+    .line 5
+    :cond_1
+    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
+
+    const-string v1, "Expected BEGIN_OBJECT but was "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " at path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 6
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public b0()Ljava/lang/String;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3194,7 +2385,7 @@
     if-ne v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->B1()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->F1()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3208,7 +2399,7 @@
     .line 4
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
 
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3222,7 +2413,7 @@
     .line 5
     sget-object v0, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
 
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->m1(Lokio/ByteString;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3263,13 +2454,13 @@
     if-ne v0, v1, :cond_6
 
     .line 9
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
 
     int-to-long v1, v1
 
-    invoke-virtual {v0, v1, v2}, Lzj/m;->q0(J)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lem/m;->K0(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3304,7 +2495,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -3329,7 +2520,53 @@
     throw v0
 .end method
 
-.method public a()V
+.method public final b2(I)V
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->i:[I
+
+    array-length v2, v1
+
+    if-eq v0, v2, :cond_0
+
+    add-int/lit8 v2, v0, 0x1
+
+    .line 2
+    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    aput p1, v1, v0
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance p1, Lcom/apollographql/apollo/json/JsonDataException;
+
+    const-string v0, "Nesting too deep at "
+
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public c()V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3348,25 +2585,29 @@
     move-result v0
 
     :cond_0
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ne v0, v1, :cond_1
 
-    const/4 v0, 0x1
-
     .line 3
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->I1(I)V
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
 
     .line 4
     iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
 
-    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+    add-int/lit8 v0, v0, -0x1
 
-    sub-int/2addr v2, v0
+    aget v2, v1, v0
+
+    add-int/lit8 v2, v2, 0x1
+
+    aput v2, v1, v0
 
     const/4 v0, 0x0
-
-    aput v0, v1, v2
 
     .line 5
     iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
@@ -3377,13 +2618,13 @@
     :cond_1
     new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
 
-    const-string v1, "Expected BEGIN_ARRAY but was "
+    const-string v1, "Expected END_ARRAY but was "
 
     invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -3409,7 +2650,746 @@
     throw v0
 .end method
 
-.method public a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+.method public final c2()C
+    .locals 9
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    const-wide/16 v1, 0x1
+
+    invoke-interface {v0, v1, v2}, Lem/o;->request(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    .line 2
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v0}, Lem/m;->readByte()B
+
+    move-result v0
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_c
+
+    const/16 v2, 0x22
+
+    if-eq v0, v2, :cond_c
+
+    const/16 v2, 0x27
+
+    if-eq v0, v2, :cond_c
+
+    const/16 v2, 0x2f
+
+    if-eq v0, v2, :cond_c
+
+    const/16 v2, 0x5c
+
+    if-eq v0, v2, :cond_c
+
+    const/16 v2, 0x62
+
+    if-eq v0, v2, :cond_b
+
+    const/16 v2, 0x66
+
+    if-eq v0, v2, :cond_a
+
+    const/16 v3, 0x6e
+
+    if-eq v0, v3, :cond_9
+
+    const/16 v3, 0x72
+
+    if-eq v0, v3, :cond_8
+
+    const/16 v3, 0x74
+
+    if-eq v0, v3, :cond_7
+
+    const/16 v3, 0x75
+
+    if-eq v0, v3, :cond_1
+
+    .line 3
+    iget-boolean v1, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
+
+    if-eqz v1, :cond_0
+
+    int-to-char v0, v0
+
+    return v0
+
+    :cond_0
+    const-string v1, "Invalid escape sequence: \\"
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    int-to-char v0, v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    move-result-object v0
+
+    throw v0
+
+    .line 4
+    :cond_1
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    const-wide/16 v3, 0x4
+
+    invoke-interface {v0, v3, v4}, Lem/o;->request(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const/4 v0, 0x0
+
+    move v5, v0
+
+    :goto_0
+    const/4 v6, 0x4
+
+    if-ge v0, v6, :cond_5
+
+    .line 5
+    iget-object v6, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    int-to-long v7, v0
+
+    invoke-virtual {v6, v7, v8}, Lem/m;->q0(J)B
+
+    move-result v6
+
+    shl-int/lit8 v5, v5, 0x4
+
+    int-to-char v5, v5
+
+    const/16 v7, 0x30
+
+    if-lt v6, v7, :cond_2
+
+    const/16 v7, 0x39
+
+    if-gt v6, v7, :cond_2
+
+    add-int/lit8 v6, v6, -0x30
+
+    goto :goto_2
+
+    :cond_2
+    const/16 v7, 0x61
+
+    if-lt v6, v7, :cond_3
+
+    if-gt v6, v2, :cond_3
+
+    add-int/lit8 v6, v6, -0x61
+
+    goto :goto_1
+
+    :cond_3
+    const/16 v7, 0x41
+
+    if-lt v6, v7, :cond_4
+
+    const/16 v7, 0x46
+
+    if-gt v6, v7, :cond_4
+
+    add-int/lit8 v6, v6, -0x41
+
+    :goto_1
+    add-int/2addr v6, v1
+
+    :goto_2
+    add-int/2addr v6, v5
+
+    int-to-char v5, v6
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    const-string v0, "\\u"
+
+    .line 6
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v1, v3, v4}, Lem/m;->K0(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    move-result-object v0
+
+    throw v0
+
+    .line 7
+    :cond_5
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v0, v3, v4}, Lem/m;->skip(J)V
+
+    return v5
+
+    .line 8
+    :cond_6
+    new-instance v0, Ljava/io/EOFException;
+
+    const-string v1, "Unterminated escape sequence at path "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
+    const/16 v0, 0x9
+
+    return v0
+
+    :cond_8
+    const/16 v0, 0xd
+
+    return v0
+
+    :cond_9
+    return v1
+
+    :cond_a
+    const/16 v0, 0xc
+
+    return v0
+
+    :cond_b
+    const/16 v0, 0x8
+
+    return v0
+
+    :cond_c
+    int-to-char v0, v0
+
+    return v0
+
+    :cond_d
+    const-string v0, "Unterminated escape sequence"
+
+    .line 9
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public close()V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    .line 2
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->i:[I
+
+    const/16 v2, 0x8
+
+    aput v2, v1, v0
+
+    const/4 v0, 0x1
+
+    .line 3
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    .line 4
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v0}, Lem/m;->c()V
+
+    .line 5
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    invoke-interface {v0}, Lem/m0;->close()V
+
+    return-void
+.end method
+
+.method public d()V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
+
+    move-result v0
+
+    :cond_0
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    .line 3
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    .line 4
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->k:[Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    aput-object v2, v1, v0
+
+    .line 5
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget v2, v1, v0
+
+    add-int/lit8 v2, v2, 0x1
+
+    aput v2, v1, v0
+
+    const/4 v0, 0x0
+
+    .line 6
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    return-void
+
+    .line 7
+    :cond_1
+    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
+
+    const-string v1, "Expected END_OBJECT but was "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " at path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 8
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final d2(Lokio/ByteString;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    :goto_0
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    invoke-interface {v0, p1}, Lem/o;->G(Lokio/ByteString;)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_1
+
+    .line 2
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v2, v0, v1}, Lem/m;->q0(J)B
+
+    move-result v2
+
+    const/16 v3, 0x5c
+
+    const-wide/16 v4, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    .line 3
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    add-long/2addr v0, v4
+
+    invoke-virtual {v2, v0, v1}, Lem/m;->skip(J)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->c2()C
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    add-long/2addr v0, v4
+
+    invoke-virtual {p1, v0, v1}, Lem/m;->skip(J)V
+
+    return-void
+
+    :cond_1
+    const-string p1, "Unterminated string"
+
+    .line 6
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    move-result-object p1
+
+    throw p1
+.end method
+
+.method public final e1(I)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const/16 v0, 0x9
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0xa
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0xc
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0xd
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x20
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x23
+
+    if-eq p1, v0, :cond_0
+
+    const/16 v0, 0x2c
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x2f
+
+    if-eq p1, v0, :cond_0
+
+    const/16 v0, 0x3d
+
+    if-eq p1, v0, :cond_0
+
+    const/16 v0, 0x7b
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x7d
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x3a
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x3b
+
+    if-eq p1, v0, :cond_0
+
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 1
+    :cond_0
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
+
+    :cond_1
+    :pswitch_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x5b
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final e2(Ljava/lang/String;)Z
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    :goto_0
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    int-to-long v1, v1
+
+    invoke-interface {v0, v1, v2}, Lem/o;->request(J)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    .line 2
+    :goto_1
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_1
+
+    .line 3
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    int-to-long v2, v1
+
+    invoke-virtual {v0, v2, v3}, Lem/m;->q0(J)B
+
+    move-result v0
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    .line 4
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    invoke-virtual {v0}, Lem/m;->readByte()B
+
+    goto :goto_0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    return v1
+.end method
+
+.method public final f2()V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    sget-object v1, Lcom/apollographql/apollo/internal/json/a;->X0:Lokio/ByteString;
+
+    invoke-interface {v0, v1}, Lem/o;->G(Lokio/ByteString;)J
+
+    move-result-wide v0
+
+    .line 2
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v3, v0, v3
+
+    if-eqz v3, :cond_0
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Lem/m;->size()J
+
+    move-result-wide v0
+
+    :goto_0
+    invoke-virtual {v2, v0, v1}, Lem/m;->skip(J)V
+
+    return-void
+.end method
+
+.method public g()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->b:Z
+
+    return v0
+.end method
+
+.method public final g2()V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
+
+    sget-object v1, Lcom/apollographql/apollo/internal/json/a;->K0:Lokio/ByteString;
+
+    invoke-interface {v0, v1}, Lem/o;->G(Lokio/ByteString;)J
+
+    move-result-wide v0
+
+    .line 2
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v3, v0, v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Lem/m;->size()J
+
+    move-result-wide v0
+
+    :goto_0
+    invoke-virtual {v2, v0, v1}, Lem/m;->skip(J)V
+
+    return-void
+.end method
+
+.method public getPath()Ljava/lang/String;
+    .locals 4
+
+    .line 1
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->i:[I
+
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->k:[Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
+
+    invoke-static {v0, v1, v2, v3}, Lk6/d;->a(I[I[Ljava/lang/String;[I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3521,441 +3501,36 @@
     .end packed-switch
 .end method
 
-.method public b()V
-    .locals 3
+.method public final h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;
+            Lcom/apollographql/apollo/json/JsonEncodingException;
         }
     .end annotation
 
     .line 1
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+    new-instance v0, Lcom/apollographql/apollo/json/JsonEncodingException;
 
-    if-nez v0, :cond_0
+    const-string v1, " at path "
 
-    .line 2
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
+    invoke-static {p1, v1}, Landroid/support/v4/media/e;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x3
-
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->I1(I)V
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    return-void
-
-    .line 5
-    :cond_1
-    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
-
-    const-string v1, "Expected BEGIN_OBJECT but was "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " at path "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 6
     invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcom/apollographql/apollo/json/JsonEncodingException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-.method public c()V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
-
-    move-result v0
-
-    :cond_0
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_1
-
-    .line 3
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    .line 4
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget v2, v1, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    aput v2, v1, v0
-
-    const/4 v0, 0x0
-
-    .line 5
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    return-void
-
-    .line 6
-    :cond_1
-    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
-
-    const-string v1, "Expected END_ARRAY but was "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " at path "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 7
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public c0()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->k()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->O()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
-
-    const/16 v0, 0xb
-
-    .line 3
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public close()V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    .line 1
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    .line 2
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->i:[I
-
-    const/16 v2, 0x8
-
-    aput v2, v1, v0
-
-    const/4 v0, 0x1
-
-    .line 3
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    .line 4
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v0}, Lzj/m;->c()V
-
-    .line 5
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
-
-    invoke-interface {v0}, Lzj/m0;->close()V
-
-    return-void
-.end method
-
-.method public d()V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
-
-    move-result v0
-
-    :cond_0
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    .line 3
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    .line 4
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->k:[Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    aput-object v2, v1, v0
-
-    .line 5
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget v2, v1, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    aput v2, v1, v0
-
-    const/4 v0, 0x0
-
-    .line 6
-    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
-
-    return-void
-
-    .line 7
-    :cond_1
-    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
-
-    const-string v1, "Expected END_OBJECT but was "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " at path "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 8
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public e0(Z)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/apollographql/apollo/internal/json/a;->b:Z
-
-    return-void
-.end method
-
-.method public f()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->b:Z
-
-    return v0
-.end method
-
-.method public getPath()Ljava/lang/String;
-    .locals 4
-
-    .line 1
-    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
-
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->i:[I
-
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->k:[Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
-
-    invoke-static {v0, v1, v2, v3}, Ln4/d;->a(I[I[Ljava/lang/String;[I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final j1(I)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const/16 v0, 0x9
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0xa
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0xc
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0xd
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0x20
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0x23
-
-    if-eq p1, v0, :cond_0
-
-    const/16 v0, 0x2c
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0x2f
-
-    if-eq p1, v0, :cond_0
-
-    const/16 v0, 0x3d
-
-    if-eq p1, v0, :cond_0
-
-    const/16 v0, 0x7b
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0x7d
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0x3a
-
-    if-eq p1, v0, :cond_1
-
-    const/16 v0, 0x3b
-
-    if-eq p1, v0, :cond_0
-
-    packed-switch p1, :pswitch_data_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    .line 1
-    :cond_0
-    :pswitch_0
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
-
-    :cond_1
-    :pswitch_1
-    const/4 p1, 0x0
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x5b
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method
 
 .method public k()Z
@@ -3996,7 +3571,56 @@
     return v0
 .end method
 
-.method public final l1(Z)I
+.method public k0()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->k()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->U()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    const/16 v0, 0xb
+
+    .line 3
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public o0(Z)V
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/apollographql/apollo/internal/json/a;->b:Z
+
+    return-void
+.end method
+
+.method public q0(Z)V
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
+
+    return-void
+.end method
+
+.method public final r1(Z)I
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4011,24 +3635,24 @@
 
     .line 1
     :goto_1
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     add-int/lit8 v3, v1, 0x1
 
     int-to-long v4, v3
 
-    invoke-interface {v2, v4, v5}, Lzj/o;->request(J)Z
+    invoke-interface {v2, v4, v5}, Lem/o;->request(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
     .line 2
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     int-to-long v4, v1
 
-    invoke-virtual {v2, v4, v5}, Lzj/m;->B0(J)B
+    invoke-virtual {v2, v4, v5}, Lem/m;->q0(J)B
 
     move-result v1
 
@@ -4052,24 +3676,24 @@
 
     .line 3
     :cond_0
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     add-int/lit8 v3, v3, -0x1
 
     int-to-long v3, v3
 
-    invoke-virtual {v2, v3, v4}, Lzj/m;->skip(J)V
+    invoke-virtual {v2, v3, v4}, Lem/m;->skip(J)V
 
     const/16 v2, 0x2f
 
     if-ne v1, v2, :cond_5
 
     .line 4
-    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     const-wide/16 v4, 0x2
 
-    invoke-interface {v3, v4, v5}, Lzj/o;->request(J)Z
+    invoke-interface {v3, v4, v5}, Lem/o;->request(J)Z
 
     move-result v3
 
@@ -4079,14 +3703,14 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     .line 6
-    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
     const-wide/16 v4, 0x1
 
-    invoke-virtual {v3, v4, v5}, Lzj/m;->B0(J)B
+    invoke-virtual {v3, v4, v5}, Lem/m;->q0(J)B
 
     move-result v3
 
@@ -4100,49 +3724,49 @@
 
     .line 7
     :cond_2
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 8
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 9
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->M1()V
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->f2()V
 
     goto :goto_0
 
     .line 10
     :cond_3
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 11
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     const-string v1, "*/"
 
     .line 12
-    invoke-virtual {p0, v1}, Lcom/apollographql/apollo/internal/json/a;->L1(Ljava/lang/String;)Z
+    invoke-virtual {p0, v1}, Lcom/apollographql/apollo/internal/json/a;->e2(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 13
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 14
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
 
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     goto :goto_0
 
@@ -4150,7 +3774,7 @@
     const-string p1, "Unterminated comment"
 
     .line 15
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/json/a;->h2(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
 
     move-result-object p1
 
@@ -4162,10 +3786,10 @@
     if-ne v1, v2, :cond_6
 
     .line 16
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->K0()V
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->V0()V
 
     .line 17
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->M1()V
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->f2()V
 
     goto/16 :goto_0
 
@@ -4196,120 +3820,13 @@
     throw p1
 .end method
 
-.method public final m1(Lokio/ByteString;)Ljava/lang/String;
-    .locals 5
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const/4 v0, 0x0
+.method public s()Z
+    .locals 1
 
     .line 1
-    :goto_0
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
 
-    invoke-interface {v1, p1}, Lzj/o;->D(Lokio/ByteString;)J
-
-    move-result-wide v1
-
-    const-wide/16 v3, -0x1
-
-    cmp-long v3, v1, v3
-
-    if-eqz v3, :cond_3
-
-    .line 2
-    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v3, v1, v2}, Lzj/m;->B0(J)B
-
-    move-result v3
-
-    const/16 v4, 0x5c
-
-    if-ne v3, v4, :cond_1
-
-    if-nez v0, :cond_0
-
-    .line 3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 4
-    :cond_0
-    iget-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v3, v1, v2}, Lzj/m;->q0(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 5
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v1}, Lzj/m;->readByte()B
-
-    .line 6
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->J1()C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_1
-    if-nez v0, :cond_2
-
-    .line 7
-    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {p1, v1, v2}, Lzj/m;->q0(J)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 8
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {v0}, Lzj/m;->readByte()B
-
-    return-object p1
-
-    .line 9
-    :cond_2
-    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {p1, v1, v2}, Lzj/m;->q0(J)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 10
-    iget-object p1, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lzj/m;
-
-    invoke-virtual {p1}, Lzj/m;->readByte()B
-
-    .line 11
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_3
-    const-string p1, "Unterminated string"
-
-    .line 12
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/json/a;->O1(Ljava/lang/String;)Lcom/apollographql/apollo/json/JsonEncodingException;
-
-    move-result-object p1
-
-    throw p1
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -4322,7 +3839,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lzj/o;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/json/a;->c:Lem/o;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -4337,16 +3854,227 @@
     return-object v0
 .end method
 
-.method public u()Z
-    .locals 1
+.method public v0()V
+    .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
+    iget-boolean v0, p0, Lcom/apollographql/apollo/internal/json/a;->b:Z
 
-    return v0
+    if-nez v0, :cond_d
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    .line 2
+    :cond_0
+    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    if-nez v2, :cond_1
+
+    .line 3
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
+
+    move-result v2
+
+    :cond_1
+    const/4 v3, 0x3
+
+    const/4 v4, 0x1
+
+    if-ne v2, v3, :cond_2
+
+    .line 4
+    invoke-virtual {p0, v4}, Lcom/apollographql/apollo/internal/json/a;->b2(I)V
+
+    goto :goto_0
+
+    :cond_2
+    if-ne v2, v4, :cond_3
+
+    .line 5
+    invoke-virtual {p0, v3}, Lcom/apollographql/apollo/internal/json/a;->b2(I)V
+
+    :goto_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_5
+
+    :cond_3
+    const/4 v3, 0x4
+
+    if-ne v2, v3, :cond_4
+
+    .line 6
+    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    sub-int/2addr v2, v4
+
+    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_5
+
+    .line 7
+    iget v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    sub-int/2addr v2, v4
+
+    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    :goto_1
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_5
+
+    :cond_5
+    const/16 v3, 0xe
+
+    if-eq v2, v3, :cond_b
+
+    const/16 v3, 0xa
+
+    if-ne v2, v3, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    const/16 v3, 0x9
+
+    if-eq v2, v3, :cond_a
+
+    const/16 v3, 0xd
+
+    if-ne v2, v3, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    const/16 v3, 0x8
+
+    if-eq v2, v3, :cond_9
+
+    const/16 v3, 0xc
+
+    if-ne v2, v3, :cond_8
+
+    goto :goto_2
+
+    :cond_8
+    const/16 v3, 0x10
+
+    if-ne v2, v3, :cond_c
+
+    .line 8
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    iget v3, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
+
+    int-to-long v5, v3
+
+    invoke-virtual {v2, v5, v6}, Lem/m;->skip(J)V
+
+    goto :goto_5
+
+    .line 9
+    :cond_9
+    :goto_2
+    sget-object v2, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
+
+    invoke-virtual {p0, v2}, Lcom/apollographql/apollo/internal/json/a;->d2(Lokio/ByteString;)V
+
+    goto :goto_5
+
+    .line 10
+    :cond_a
+    :goto_3
+    sget-object v2, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
+
+    invoke-virtual {p0, v2}, Lcom/apollographql/apollo/internal/json/a;->d2(Lokio/ByteString;)V
+
+    goto :goto_5
+
+    .line 11
+    :cond_b
+    :goto_4
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->g2()V
+
+    .line 12
+    :cond_c
+    :goto_5
+    iput v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    if-nez v1, :cond_0
+
+    .line 13
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
+
+    iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    add-int/lit8 v2, v1, -0x1
+
+    aget v3, v0, v2
+
+    add-int/2addr v3, v4
+
+    aput v3, v0, v2
+
+    .line 14
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->k:[Ljava/lang/String;
+
+    sub-int/2addr v1, v4
+
+    const-string v2, "null"
+
+    aput-object v2, v0, v1
+
+    return-void
+
+    .line 15
+    :cond_d
+    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
+
+    const-string v1, "Cannot skip unexpected "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " at "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public v()Z
+.method public w()Z
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4424,7 +4152,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v2
 
@@ -4433,6 +4161,278 @@
     const-string v2, " at path "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public x()D
+    .locals 8
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->X0()I
+
+    move-result v0
+
+    :cond_0
+    const/16 v1, 0xf
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_1
+
+    .line 3
+    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    .line 4
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
+
+    iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    aget v2, v0, v1
+
+    add-int/lit8 v2, v2, 0x1
+
+    aput v2, v0, v1
+
+    .line 5
+    iget-wide v0, p0, Lcom/apollographql/apollo/internal/json/a;->f:J
+
+    long-to-double v0, v0
+
+    return-wide v0
+
+    :cond_1
+    const/16 v1, 0x10
+
+    const-string v3, "Expected a double but was "
+
+    const/16 v4, 0xb
+
+    const-string v5, " at path "
+
+    if-ne v0, v1, :cond_2
+
+    .line 6
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->d:Lem/m;
+
+    iget v1, p0, Lcom/apollographql/apollo/internal/json/a;->g:I
+
+    int-to-long v6, v1
+
+    invoke-virtual {v0, v6, v7}, Lem/m;->K0(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_3
+
+    .line 7
+    sget-object v0, Lcom/apollographql/apollo/internal/json/a;->k0:Lokio/ByteString;
+
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_3
+    const/16 v1, 0x8
+
+    if-ne v0, v1, :cond_4
+
+    .line 8
+    sget-object v0, Lcom/apollographql/apollo/internal/json/a;->u:Lokio/ByteString;
+
+    invoke-virtual {p0, v0}, Lcom/apollographql/apollo/internal/json/a;->E1(Lokio/ByteString;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_4
+    const/16 v1, 0xa
+
+    if-ne v0, v1, :cond_5
+
+    .line 9
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->F1()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_5
+    if-ne v0, v4, :cond_8
+
+    .line 10
+    :goto_0
+    iput v4, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    .line 11
+    :try_start_0
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 12
+    iget-boolean v3, p0, Lcom/apollographql/apollo/internal/json/a;->a:Z
+
+    if-nez v3, :cond_7
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    goto :goto_1
+
+    .line 13
+    :cond_6
+    new-instance v2, Lcom/apollographql/apollo/json/JsonEncodingException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "JSON forbids NaN and infinities: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 14
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Lcom/apollographql/apollo/json/JsonEncodingException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_7
+    :goto_1
+    const/4 v3, 0x0
+
+    .line 15
+    iput-object v3, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    .line 16
+    iput v2, p0, Lcom/apollographql/apollo/internal/json/a;->e:I
+
+    .line 17
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->l:[I
+
+    iget v3, p0, Lcom/apollographql/apollo/internal/json/a;->j:I
+
+    add-int/lit8 v3, v3, -0x1
+
+    aget v4, v2, v3
+
+    add-int/lit8 v4, v4, 0x1
+
+    aput v4, v2, v3
+
+    return-wide v0
+
+    .line 18
+    :catch_0
+    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
+
+    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/json/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 19
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/apollographql/apollo/json/JsonDataException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 20
+    :cond_8
+    new-instance v0, Lcom/apollographql/apollo/json/JsonDataException;
+
+    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/apollographql/apollo/internal/json/a;->getPath()Ljava/lang/String;
 

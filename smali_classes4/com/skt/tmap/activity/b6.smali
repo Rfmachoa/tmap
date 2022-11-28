@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;
-
-.field public final synthetic b:F
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;F)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/b6;->a:Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;
-
-    iput p2, p0, Lcom/skt/tmap/activity/b6;->b:F
+    iput-object p1, p0, Lcom/skt/tmap/activity/b6;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/b6;->a:Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;
+    iget-object v0, p0, Lcom/skt/tmap/activity/b6;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget v1, p0, Lcom/skt/tmap/activity/b6;->b:F
+    check-cast p1, Lcom/skt/tmap/data/TmapVolumeData;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;->b(Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;F)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->p7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/data/TmapVolumeData;)V
 
     return-void
 .end method

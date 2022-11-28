@@ -136,9 +136,9 @@
     check-cast p1, Landroidx/car/app/IStartCarApp;
 
     .line 9
-    new-instance v0, Ln0/b;
+    new-instance v0, Lb1/b;
 
-    invoke-direct {v0, p1, p2}, Ln0/b;-><init>(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)V
+    invoke-direct {v0, p1, p2}, Lb1/b;-><init>(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)V
 
     const-string p1, "startCarApp from notification"
 

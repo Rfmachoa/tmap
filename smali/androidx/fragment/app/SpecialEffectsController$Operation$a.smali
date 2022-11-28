@@ -3,12 +3,12 @@
 .source "SpecialEffectsController.java"
 
 # interfaces
-.implements Ll1/b$a;
+.implements Landroidx/core/os/d$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/SpecialEffectsController$Operation;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/Fragment;Ll1/b;)V
+    value = Landroidx/fragment/app/SpecialEffectsController$Operation;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/Fragment;Landroidx/core/os/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

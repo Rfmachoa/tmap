@@ -67,7 +67,7 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/Character;)V
-    .locals 0
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -80,7 +80,17 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;-><init>(Ljava/lang/Class;Ljava/lang/Object;)V
+    sget-object v0, Lcom/fasterxml/jackson/databind/type/LogicalType;->Integer:Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-static {v1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v1
+
+    .line 3
+    invoke-direct {p0, p1, v0, p2, v1}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;-><init>(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/type/LogicalType;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -88,7 +98,7 @@
 
 # virtual methods
 .method public deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Character;
-    .locals 4
+    .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -96,61 +106,229 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentTokenId()I
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->currentTokenId()I
 
     move-result v0
 
-    const/4 v1, 0x3
+    const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_2
+    const/4 v2, 0x1
 
-    const/4 v1, 0x6
+    if-eq v0, v2, :cond_9
 
-    if-eq v0, v1, :cond_0
+    const/4 v3, 0x3
 
-    const/4 v1, 0x7
+    if-eq v0, v3, :cond_8
 
-    if-ne v0, v1, :cond_4
+    const/16 v4, 0xb
+
+    if-eq v0, v4, :cond_6
+
+    const/4 v4, 0x6
+
+    if-eq v0, v4, :cond_5
+
+    const/4 v4, 0x7
+
+    if-eq v0, v4, :cond_0
 
     .line 3
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getIntValue()I
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->getValueType(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JavaType;
 
-    move-result v0
+    move-result-object v0
 
-    if-ltz v0, :cond_4
+    invoke-virtual {p2, v0, p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleUnexpectedToken(Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;
 
-    const v1, 0xffff
+    move-result-object p1
 
-    if-gt v0, v1, :cond_4
+    check-cast p1, Ljava/lang/Character;
 
-    int-to-char p1, v0
+    return-object p1
 
     .line 4
+    :cond_0
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
+
+    iget-object v4, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
+
+    sget-object v5, Lcom/fasterxml/jackson/databind/cfg/CoercionInputShape;->Integer:Lcom/fasterxml/jackson/databind/cfg/CoercionInputShape;
+
+    invoke-virtual {p2, v0, v4, v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->findCoercionAction(Lcom/fasterxml/jackson/databind/type/LogicalType;Ljava/lang/Class;Lcom/fasterxml/jackson/databind/cfg/CoercionInputShape;)Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    move-result-object v8
+
+    .line 5
+    sget-object v0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$1;->$SwitchMap$com$fasterxml$jackson$databind$cfg$CoercionAction:[I
+
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aget v0, v0, v4
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_4
+
+    if-eq v0, v3, :cond_2
+
+    .line 6
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getIntValue()I
+
+    move-result p1
+
+    if-ltz p1, :cond_1
+
+    const v0, 0xffff
+
+    if-gt p1, v0, :cond_1
+
+    int-to-char p1, p1
+
+    .line 7
     invoke-static {p1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
     move-result-object p1
 
     return-object p1
 
-    .line 5
-    :cond_0
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;
+    .line 8
+    :cond_1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->handledType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 6
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v1
+    move-result-object p1
 
-    const/4 v2, 0x1
+    new-array v1, v1, [Ljava/lang/Object;
 
-    if-ne v1, v2, :cond_1
+    const-string v2, "value outside valid Character range (0x0000 - 0xFFFF)"
 
-    const/4 p1, 0x0
+    invoke-virtual {p2, v0, p1, v2, v1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleWeirdNumberValue(Ljava/lang/Class;Ljava/lang/Number;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
-    invoke-virtual {v0, p1}, Ljava/lang/String;->charAt(I)C
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Character;
+
+    return-object p1
+
+    .line 9
+    :cond_2
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;->getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Character;
+
+    return-object p1
+
+    .line 10
+    :cond_3
+    iget-object v9, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getNumberValue()Ljava/lang/Number;
+
+    move-result-object v10
+
+    const-string v0, "Integer value ("
+
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 11
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ")"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    move-object v6, p0
+
+    move-object v7, p2
+
+    .line 12
+    invoke-virtual/range {v6 .. v11}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_checkCoercionFail(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/cfg/CoercionAction;Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    .line 13
+    :cond_4
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Character;
+
+    return-object p1
+
+    .line 14
+    :cond_5
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 15
+    :cond_6
+    iget-boolean p1, p0, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->_primitive:Z
+
+    if-eqz p1, :cond_7
+
+    .line 16
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_verifyNullForPrimitive(Lcom/fasterxml/jackson/databind/DeserializationContext;)V
+
+    .line 17
+    :cond_7
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Character;
+
+    return-object p1
+
+    .line 18
+    :cond_8
+    invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_deserializeFromArray(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Character;
+
+    return-object p1
+
+    .line 19
+    :cond_9
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
+
+    invoke-virtual {p2, p1, p0, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->extractScalarFromObject(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/JsonDeserializer;Ljava/lang/Class;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 20
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_a
+
+    .line 21
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result p1
 
@@ -160,16 +338,19 @@
 
     return-object p1
 
-    .line 8
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    .line 22
+    :cond_a
+    invoke-virtual {p0, p2, p1}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_checkFromStringCoercion(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_4
+    .line 23
+    sget-object v2, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->AsNull:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
-    .line 9
-    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    if-ne v0, v2, :cond_b
+
+    .line 24
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -177,70 +358,60 @@
 
     return-object p1
 
-    .line 10
-    :cond_2
-    sget-object v0, Lcom/fasterxml/jackson/databind/DeserializationFeature;->UNWRAP_SINGLE_VALUE_ARRAYS:Lcom/fasterxml/jackson/databind/DeserializationFeature;
+    .line 25
+    :cond_b
+    sget-object v2, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->AsEmpty:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
 
-    invoke-virtual {p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z
+    if-ne v0, v2, :cond_c
+
+    .line 26
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;->getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Character;
+
+    return-object p1
+
+    .line 27
+    :cond_c
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 28
+    invoke-virtual {p0, p2, p1}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_checkTextualNull(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_d
 
-    .line 11
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
-
-    .line 12
-    invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$CharacterDeserializer;->deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Character;
-
-    move-result-object v0
-
-    .line 13
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
-
-    if-ne v1, v2, :cond_3
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "Attempted to unwrap single value array for single \'"
-
-    .line 14
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
-
-    const-string v3, "\' value but there was more than a single value in the array"
-
-    invoke-static {v1, v0, v3}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, p1, v2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->wrongTokenException(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    .line 29
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Ljava/lang/Character;
 
-    .line 15
-    :cond_4
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
+    return-object p1
 
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
+    .line 30
+    :cond_d
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->handledType()Ljava/lang/Class;
+
+    move-result-object v0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Expected either Integer value code or 1-character String"
+
+    invoke-virtual {p2, v0, p1, v2, v1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleWeirdStringValue(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p2, v0, p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/Class;Lcom/fasterxml/jackson/core/JsonToken;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    check-cast p1, Ljava/lang/Character;
 
-    move-result-object p1
-
-    throw p1
+    return-object p1
 .end method
 
 .method public bridge synthetic deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
@@ -258,4 +429,31 @@
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public bridge synthetic getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic getNullAccessPattern()Lcom/fasterxml/jackson/databind/util/AccessPattern;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$PrimitiveOrWrapperDeserializer;->getNullAccessPattern()Lcom/fasterxml/jackson/databind/util/AccessPattern;
+
+    move-result-object v0
+
+    return-object v0
 .end method

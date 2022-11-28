@@ -13,6 +13,9 @@
     name = "LowerCaseStrategy"
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V

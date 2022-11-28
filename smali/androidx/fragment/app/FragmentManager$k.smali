@@ -1,6 +1,9 @@
-.class public interface abstract Landroidx/fragment/app/FragmentManager$k;
+.class public Landroidx/fragment/app/FragmentManager$k;
 .super Ljava/lang/Object;
 .source "FragmentManager.java"
+
+# interfaces
+.implements Landroidx/fragment/app/FragmentManager$p;
 
 
 # annotations
@@ -9,48 +12,68 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x1
     name = "k"
 .end annotation
 
 
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final synthetic b:Landroidx/fragment/app/FragmentManager;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+    .locals 0
+    .param p1    # Landroidx/fragment/app/FragmentManager;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$k;->b:Landroidx/fragment/app/FragmentManager;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p2, p0, Landroidx/fragment/app/FragmentManager$k;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract b()Ljava/lang/CharSequence;
-    .annotation build Landroidx/annotation/Nullable;
+.method public a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+    .locals 2
+    .param p1    # Ljava/util/ArrayList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/ArrayList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Landroidx/fragment/app/b;",
+            ">;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Boolean;",
+            ">;)Z"
+        }
     .end annotation
 
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end method
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$k;->b:Landroidx/fragment/app/FragmentManager;
 
-.method public abstract c()I
-    .annotation build Landroidx/annotation/StringRes;
-    .end annotation
+    iget-object v1, p0, Landroidx/fragment/app/FragmentManager$k;->a:Ljava/lang/String;
 
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end method
+    invoke-virtual {v0, p1, p2, v1}, Landroidx/fragment/app/FragmentManager;->z(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/String;)Z
 
-.method public abstract d()I
-    .annotation build Landroidx/annotation/StringRes;
-    .end annotation
+    move-result p1
 
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end method
-
-.method public abstract e()Ljava/lang/CharSequence;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end method
-
-.method public abstract getId()I
-.end method
-
-.method public abstract getName()Ljava/lang/String;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    return p1
 .end method

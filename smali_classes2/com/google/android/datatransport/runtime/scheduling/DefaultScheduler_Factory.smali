@@ -18,50 +18,50 @@
 
 
 # instance fields
-.field private final backendRegistryProvider:Loi/a;
+.field private final backendRegistryProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/backends/BackendRegistry;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final eventStoreProvider:Loi/a;
+.field private final eventStoreProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final executorProvider:Loi/a;
+.field private final executorProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/concurrent/Executor;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final guardProvider:Loi/a;
+.field private final guardProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final workSchedulerProvider:Loi/a;
+.field private final workSchedulerProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;"
         }
@@ -70,24 +70,24 @@
 
 
 # direct methods
-.method public constructor <init>(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)V
+.method public constructor <init>(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/concurrent/Executor;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/backends/BackendRegistry;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;",
             ">;)V"
         }
@@ -97,41 +97,41 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->executorProvider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->executorProvider:Lsk/a;
 
     .line 3
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->backendRegistryProvider:Loi/a;
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->backendRegistryProvider:Lsk/a;
 
     .line 4
-    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->workSchedulerProvider:Loi/a;
+    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->workSchedulerProvider:Lsk/a;
 
     .line 5
-    iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->eventStoreProvider:Loi/a;
+    iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->eventStoreProvider:Lsk/a;
 
     .line 6
-    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->guardProvider:Loi/a;
+    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->guardProvider:Lsk/a;
 
     return-void
 .end method
 
-.method public static create(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;
+.method public static create(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/concurrent/Executor;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/backends/BackendRegistry;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;"
@@ -153,7 +153,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;-><init>(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;-><init>(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)V
 
     return-object v6
 .end method
@@ -187,41 +187,41 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->executorProvider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->executorProvider:Lsk/a;
 
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->backendRegistryProvider:Loi/a;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->backendRegistryProvider:Lsk/a;
 
-    invoke-interface {v1}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/datatransport/runtime/backends/BackendRegistry;
 
-    iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->workSchedulerProvider:Loi/a;
+    iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->workSchedulerProvider:Lsk/a;
 
-    invoke-interface {v2}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v2}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
 
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->eventStoreProvider:Loi/a;
+    iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->eventStoreProvider:Lsk/a;
 
-    invoke-interface {v3}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
-    iget-object v4, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->guardProvider:Loi/a;
+    iget-object v4, p0, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->guardProvider:Lsk/a;
 
-    invoke-interface {v4}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v4}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v4
 

@@ -15,23 +15,11 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "nearby_category"
+.field public static final a:I = 0x0
 
-.field public static final b:Ljava/lang/String; = "positionX"
+.field public static final b:I = 0x1
 
-.field public static final c:Ljava/lang/String; = "positionY"
-
-.field public static final d:Ljava/lang/String; = "INTENT_EXTRA_CATEGORY_NAME"
-
-.field public static final e:Ljava/lang/String; = "INTENT_EXTRA_SETTING_AREA_NAME"
-
-.field public static final f:Ljava/lang/String; = "INTENT_EXTRA_SETTING_AREA_LCD"
-
-.field public static final g:Ljava/lang/String; = "INTENT_EXTRA_SETTING_AREA_MCD"
-
-.field public static final h:Ljava/lang/String; = "INTENT_EXTRA_SETTING_AREA_SCD"
-
-.field public static final i:I = 0x309
+.field public static final c:I = 0x2
 
 
 # direct methods

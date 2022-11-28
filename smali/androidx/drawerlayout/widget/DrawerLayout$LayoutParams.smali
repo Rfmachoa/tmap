@@ -79,7 +79,7 @@
     iput v0, p0, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->a:I
 
     .line 3
-    sget-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->G1:[I
+    sget-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->I1:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

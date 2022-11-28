@@ -434,7 +434,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p3, p4}, Ly6/b;->a(J)I
+    invoke-static {p3, p4}, Lw8/b;->a(J)I
 
     move-result p2
 

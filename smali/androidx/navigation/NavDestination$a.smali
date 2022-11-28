@@ -1,18 +1,24 @@
-.class public Landroidx/navigation/NavDestination$a;
+.class public final Landroidx/navigation/NavDestination$a;
 .super Ljava/lang/Object;
-.source "NavDestination.java"
+.source "NavDestination.kt"
 
 # interfaces
 .implements Ljava/lang/Comparable;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/navigation/NavDestination;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
@@ -25,15 +31,56 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u000f\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\n\u0008\u0007\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B1\u0012\u0006\u0010\t\u001a\u00020\u0005\u0012\u0008\u0010\u000e\u001a\u0004\u0018\u00010\n\u0012\u0006\u0010\u0011\u001a\u00020\u000f\u0012\u0006\u0010\u0013\u001a\u00020\u000f\u0012\u0006\u0010\u0016\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0011\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0002\u001a\u00020\u0000H\u0096\u0002R\u0017\u0010\t\u001a\u00020\u00058\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0004\u0010\u0006\u001a\u0004\u0008\u0007\u0010\u0008R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\n8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010\u000b\u001a\u0004\u0008\u000c\u0010\rR\u0014\u0010\u0011\u001a\u00020\u000f8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000c\u0010\u0010R\u0014\u0010\u0013\u001a\u00020\u000f8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0012\u0010\u0010R\u0014\u0010\u0016\u001a\u00020\u00038\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0014\u0010\u0015\u00a8\u0006\u0019"
+    }
+    d2 = {
+        "Landroidx/navigation/NavDestination$a;",
+        "",
+        "other",
+        "",
+        "a",
+        "Landroidx/navigation/NavDestination;",
+        "Landroidx/navigation/NavDestination;",
+        "b",
+        "()Landroidx/navigation/NavDestination;",
+        "destination",
+        "Landroid/os/Bundle;",
+        "Landroid/os/Bundle;",
+        "c",
+        "()Landroid/os/Bundle;",
+        "matchingArgs",
+        "",
+        "Z",
+        "isExactDeepLink",
+        "d",
+        "hasMatchingAction",
+        "e",
+        "I",
+        "mimeTypeMatchLevel",
+        "<init>",
+        "(Landroidx/navigation/NavDestination;Landroid/os/Bundle;ZZI)V",
+        "navigation-common_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+.end annotation
+
 
 # instance fields
 .field public final a:Landroidx/navigation/NavDestination;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
 .field public final b:Landroid/os/Bundle;
-    .annotation build Landroidx/annotation/Nullable;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 .end field
 
@@ -46,15 +93,19 @@
 
 # direct methods
 .method public constructor <init>(Landroidx/navigation/NavDestination;Landroid/os/Bundle;ZZI)V
-    .locals 0
+    .locals 1
     .param p1    # Landroidx/navigation/NavDestination;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
+
+    const-string v0, "destination"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -82,9 +133,13 @@
 .method public a(Landroidx/navigation/NavDestination$a;)I
     .locals 4
     .param p1    # Landroidx/navigation/NavDestination$a;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+
+    const-string v0, "other"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     iget-boolean v0, p0, Landroidx/navigation/NavDestination$a;->c:Z
@@ -143,6 +198,8 @@
 
     iget-object v3, p1, Landroidx/navigation/NavDestination$a;->b:Landroid/os/Bundle;
 
+    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/os/Bundle;->size()I
 
     move-result v3
@@ -191,9 +248,9 @@
     return v0
 .end method
 
-.method public b()Landroidx/navigation/NavDestination;
+.method public final b()Landroidx/navigation/NavDestination;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
@@ -202,9 +259,9 @@
     return-object v0
 .end method
 
-.method public c()Landroid/os/Bundle;
+.method public final c()Landroid/os/Bundle;
     .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
     .line 1
@@ -215,10 +272,6 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     check-cast p1, Landroidx/navigation/NavDestination$a;

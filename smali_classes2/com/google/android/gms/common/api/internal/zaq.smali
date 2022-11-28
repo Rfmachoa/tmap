@@ -1,16 +1,6 @@
 .class final Lcom/google/android/gms/common/api/internal/zaq;
 .super Ljava/lang/ThreadLocal;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/ThreadLocal<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # direct methods

@@ -1,14 +1,11 @@
 .class public Lcom/skt/tmap/engine/TmapAiManager$k1;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/media/session/MediaSessionCompat$b;
 .source "TmapAiManager.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->onAiServiceRawResult(Lcom/skt/voice/tyche/data/CardResult;)Z
+    value = Lcom/skt/tmap/engine/TmapAiManager;->K2()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +15,7 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/engine/TmapAiManager;
+.field public final synthetic f:Lcom/skt/tmap/engine/TmapAiManager;
 
 
 # direct methods
@@ -34,44 +31,81 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->f:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public A()V
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->f:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P4()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-super {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;->A()V
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    return-void
+.end method
 
-    move-result-object v0
+.method public B()V
+    .locals 1
 
-    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_ASR_RESULTS:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->f:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->V4()V
 
-    invoke-static {v2}, Lcom/skt/tmap/engine/TmapAiManager;->J(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+    .line 2
+    invoke-super {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;->B()V
 
-    move-result-object v2
+    return-void
+.end method
 
-    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->i(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;)V
+.method public D()V
+    .locals 1
 
-    :cond_0
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->f:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d5()V
+
+    .line 2
+    invoke-super {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;->D()V
+
+    return-void
+.end method
+
+.method public h()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->f:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->T4()V
+
+    .line 2
+    invoke-super {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;->h()V
+
+    return-void
+.end method
+
+.method public i()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$k1;->f:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->X4()V
+
+    .line 2
+    invoke-super {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;->i()V
+
     return-void
 .end method

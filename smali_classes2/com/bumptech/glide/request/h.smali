@@ -14,16 +14,6 @@
 
 
 # static fields
-.field public static A1:Lcom/bumptech/glide/request/h;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public static B1:Lcom/bumptech/glide/request/h;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
 .field public static C1:Lcom/bumptech/glide/request/h;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -54,6 +44,16 @@
     .end annotation
 .end field
 
+.field public static I1:Lcom/bumptech/glide/request/h;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public static J1:Lcom/bumptech/glide/request/h;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>()V
@@ -65,9 +65,9 @@
     return-void
 .end method
 
-.method public static S0(Lu4/h;)Lcom/bumptech/glide/request/h;
+.method public static S0(Lr6/h;)Lcom/bumptech/glide/request/h;
     .locals 1
-    .param p0    # Lu4/h;
+    .param p0    # Lr6/h;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -80,7 +80,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/h<",
+            "Lr6/h<",
             "Landroid/graphics/Bitmap;",
             ">;)",
             "Lcom/bumptech/glide/request/h;"
@@ -92,7 +92,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/h;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/a;->M0(Lu4/h;)Lcom/bumptech/glide/request/a;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/a;->M0(Lr6/h;)Lcom/bumptech/glide/request/a;
 
     move-result-object p0
 
@@ -110,7 +110,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/request/h;->E1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->G1:Lcom/bumptech/glide/request/h;
 
     if-nez v0, :cond_0
 
@@ -131,11 +131,11 @@
 
     check-cast v0, Lcom/bumptech/glide/request/h;
 
-    sput-object v0, Lcom/bumptech/glide/request/h;->E1:Lcom/bumptech/glide/request/h;
+    sput-object v0, Lcom/bumptech/glide/request/h;->G1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/bumptech/glide/request/h;->E1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->G1:Lcom/bumptech/glide/request/h;
 
     return-object v0
 .end method
@@ -149,7 +149,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/request/h;->D1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->F1:Lcom/bumptech/glide/request/h;
 
     if-nez v0, :cond_0
 
@@ -170,11 +170,11 @@
 
     check-cast v0, Lcom/bumptech/glide/request/h;
 
-    sput-object v0, Lcom/bumptech/glide/request/h;->D1:Lcom/bumptech/glide/request/h;
+    sput-object v0, Lcom/bumptech/glide/request/h;->F1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/bumptech/glide/request/h;->D1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->F1:Lcom/bumptech/glide/request/h;
 
     return-object v0
 .end method
@@ -188,7 +188,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/request/h;->F1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->H1:Lcom/bumptech/glide/request/h;
 
     if-nez v0, :cond_0
 
@@ -197,7 +197,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/h;-><init>()V
 
-    invoke-virtual {v0}, Lcom/bumptech/glide/request/a;->j()Lcom/bumptech/glide/request/a;
+    invoke-virtual {v0}, Lcom/bumptech/glide/request/a;->k()Lcom/bumptech/glide/request/a;
 
     move-result-object v0
 
@@ -209,11 +209,11 @@
 
     check-cast v0, Lcom/bumptech/glide/request/h;
 
-    sput-object v0, Lcom/bumptech/glide/request/h;->F1:Lcom/bumptech/glide/request/h;
+    sput-object v0, Lcom/bumptech/glide/request/h;->H1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/bumptech/glide/request/h;->F1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->H1:Lcom/bumptech/glide/request/h;
 
     return-object v0
 .end method
@@ -244,7 +244,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/h;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/a;->m(Ljava/lang/Class;)Lcom/bumptech/glide/request/a;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/a;->n(Ljava/lang/Class;)Lcom/bumptech/glide/request/a;
 
     move-result-object p0
 
@@ -420,7 +420,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/request/h;->C1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->E1:Lcom/bumptech/glide/request/h;
 
     if-nez v0, :cond_0
 
@@ -441,11 +441,11 @@
 
     check-cast v0, Lcom/bumptech/glide/request/h;
 
-    sput-object v0, Lcom/bumptech/glide/request/h;->C1:Lcom/bumptech/glide/request/h;
+    sput-object v0, Lcom/bumptech/glide/request/h;->E1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/bumptech/glide/request/h;->C1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->E1:Lcom/bumptech/glide/request/h;
 
     return-object v0
 .end method
@@ -512,7 +512,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/request/h;->H1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->J1:Lcom/bumptech/glide/request/h;
 
     if-nez v0, :cond_0
 
@@ -533,11 +533,11 @@
 
     check-cast v0, Lcom/bumptech/glide/request/h;
 
-    sput-object v0, Lcom/bumptech/glide/request/h;->H1:Lcom/bumptech/glide/request/h;
+    sput-object v0, Lcom/bumptech/glide/request/h;->J1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/bumptech/glide/request/h;->H1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->J1:Lcom/bumptech/glide/request/h;
 
     return-object v0
 .end method
@@ -551,7 +551,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/request/h;->G1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->I1:Lcom/bumptech/glide/request/h;
 
     if-nez v0, :cond_0
 
@@ -572,18 +572,18 @@
 
     check-cast v0, Lcom/bumptech/glide/request/h;
 
-    sput-object v0, Lcom/bumptech/glide/request/h;->G1:Lcom/bumptech/glide/request/h;
+    sput-object v0, Lcom/bumptech/glide/request/h;->I1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/bumptech/glide/request/h;->G1:Lcom/bumptech/glide/request/h;
+    sget-object v0, Lcom/bumptech/glide/request/h;->I1:Lcom/bumptech/glide/request/h;
 
     return-object v0
 .end method
 
-.method public static i1(Lu4/d;Ljava/lang/Object;)Lcom/bumptech/glide/request/h;
+.method public static i1(Lr6/d;Ljava/lang/Object;)Lcom/bumptech/glide/request/h;
     .locals 1
-    .param p0    # Lu4/d;
+    .param p0    # Lr6/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -602,7 +602,7 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lu4/d<",
+            "Lr6/d<",
             "TT;>;TT;)",
             "Lcom/bumptech/glide/request/h;"
         }
@@ -613,7 +613,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/h;-><init>()V
 
-    invoke-virtual {v0, p0, p1}, Lcom/bumptech/glide/request/a;->D0(Lu4/d;Ljava/lang/Object;)Lcom/bumptech/glide/request/a;
+    invoke-virtual {v0, p0, p1}, Lcom/bumptech/glide/request/a;->D0(Lr6/d;Ljava/lang/Object;)Lcom/bumptech/glide/request/a;
 
     move-result-object p0
 
@@ -738,9 +738,9 @@
     return-object p0
 .end method
 
-.method public static o1(Lu4/b;)Lcom/bumptech/glide/request/h;
+.method public static o1(Lr6/b;)Lcom/bumptech/glide/request/h;
     .locals 1
-    .param p0    # Lu4/b;
+    .param p0    # Lr6/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -755,7 +755,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/request/h;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/a;->E0(Lu4/b;)Lcom/bumptech/glide/request/a;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/a;->E0(Lr6/b;)Lcom/bumptech/glide/request/a;
 
     move-result-object p0
 
@@ -803,7 +803,7 @@
     if-eqz p0, :cond_1
 
     .line 1
-    sget-object p0, Lcom/bumptech/glide/request/h;->A1:Lcom/bumptech/glide/request/h;
+    sget-object p0, Lcom/bumptech/glide/request/h;->C1:Lcom/bumptech/glide/request/h;
 
     if-nez p0, :cond_0
 
@@ -826,17 +826,17 @@
 
     check-cast p0, Lcom/bumptech/glide/request/h;
 
-    sput-object p0, Lcom/bumptech/glide/request/h;->A1:Lcom/bumptech/glide/request/h;
+    sput-object p0, Lcom/bumptech/glide/request/h;->C1:Lcom/bumptech/glide/request/h;
 
     .line 3
     :cond_0
-    sget-object p0, Lcom/bumptech/glide/request/h;->A1:Lcom/bumptech/glide/request/h;
+    sget-object p0, Lcom/bumptech/glide/request/h;->C1:Lcom/bumptech/glide/request/h;
 
     return-object p0
 
     .line 4
     :cond_1
-    sget-object p0, Lcom/bumptech/glide/request/h;->B1:Lcom/bumptech/glide/request/h;
+    sget-object p0, Lcom/bumptech/glide/request/h;->D1:Lcom/bumptech/glide/request/h;
 
     if-nez p0, :cond_2
 
@@ -859,11 +859,11 @@
 
     check-cast p0, Lcom/bumptech/glide/request/h;
 
-    sput-object p0, Lcom/bumptech/glide/request/h;->B1:Lcom/bumptech/glide/request/h;
+    sput-object p0, Lcom/bumptech/glide/request/h;->D1:Lcom/bumptech/glide/request/h;
 
     .line 6
     :cond_2
-    sget-object p0, Lcom/bumptech/glide/request/h;->B1:Lcom/bumptech/glide/request/h;
+    sget-object p0, Lcom/bumptech/glide/request/h;->D1:Lcom/bumptech/glide/request/h;
 
     return-object p0
 .end method

@@ -80,11 +80,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lu8/a;->x(Z)V
+    invoke-virtual {v0, p1}, Lra/a;->x(Z)V
 
     return-void
 .end method

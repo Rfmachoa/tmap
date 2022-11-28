@@ -3,7 +3,7 @@
 .source "TidAppEvents.kt"
 
 # interfaces
-.implements Lej/p;
+.implements Lgl/p;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
-        "Lej/p<",
-        "Lkotlinx/coroutines/n0;",
+        "Lgl/p<",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/coroutines/c<",
         "-",
         "Lkotlin/d1;",
@@ -36,7 +36,7 @@
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0004\u001a\u00020\u0001*\u00020\u0000H\u008a@\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/d1;",
         "invoke",
         "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
@@ -76,7 +76,7 @@
 
 .field public final synthetic c:Lcom/skt/tid/common/TidAppEvents;
 
-.field private d:Lkotlinx/coroutines/n0;
+.field private d:Lkotlinx/coroutines/p0;
 
 
 # direct methods
@@ -129,9 +129,9 @@
 
     invoke-direct {v0, v1, p2}, Lcom/skt/tid/common/TidAppEvents$d;-><init>(Lcom/skt/tid/common/TidAppEvents;Lkotlin/coroutines/c;)V
 
-    check-cast p1, Lkotlinx/coroutines/n0;
+    check-cast p1, Lkotlinx/coroutines/p0;
 
-    iput-object p1, v0, Lcom/skt/tid/common/TidAppEvents$d;->d:Lkotlinx/coroutines/n0;
+    iput-object p1, v0, Lcom/skt/tid/common/TidAppEvents$d;->d:Lkotlinx/coroutines/p0;
 
     return-object v0
 .end method
@@ -165,7 +165,7 @@
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -196,7 +196,7 @@
     :cond_1
     invoke-static {p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lcom/skt/tid/common/TidAppEvents$d;->d:Lkotlinx/coroutines/n0;
+    iget-object p1, p0, Lcom/skt/tid/common/TidAppEvents$d;->d:Lkotlinx/coroutines/p0;
 
     .line 4
     iget-object v1, p0, Lcom/skt/tid/common/TidAppEvents$d;->c:Lcom/skt/tid/common/TidAppEvents;

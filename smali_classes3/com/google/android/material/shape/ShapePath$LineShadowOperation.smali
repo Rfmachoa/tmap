@@ -94,26 +94,32 @@
     invoke-direct {v2, v1, v1, v0, v1}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     .line 4
-    new-instance v0, Landroid/graphics/Matrix;
+    iget-object v0, p0, Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;->renderMatrix:Landroid/graphics/Matrix;
 
-    invoke-direct {v0, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
     .line 5
-    iget p1, p0, Lcom/google/android/material/shape/ShapePath$LineShadowOperation;->startX:F
+    iget-object p1, p0, Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;->renderMatrix:Landroid/graphics/Matrix;
+
+    iget v0, p0, Lcom/google/android/material/shape/ShapePath$LineShadowOperation;->startX:F
 
     iget v1, p0, Lcom/google/android/material/shape/ShapePath$LineShadowOperation;->startY:F
 
-    invoke-virtual {v0, p1, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     .line 6
+    iget-object p1, p0, Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;->renderMatrix:Landroid/graphics/Matrix;
+
     invoke-virtual {p0}, Lcom/google/android/material/shape/ShapePath$LineShadowOperation;->getAngle()F
 
-    move-result p1
+    move-result v0
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->preRotate(F)Z
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->preRotate(F)Z
 
     .line 7
-    invoke-virtual {p2, p4, v0, v2, p3}, Lcom/google/android/material/shadow/ShadowRenderer;->drawEdgeShadow(Landroid/graphics/Canvas;Landroid/graphics/Matrix;Landroid/graphics/RectF;I)V
+    iget-object p1, p0, Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;->renderMatrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {p2, p4, p1, v2, p3}, Lcom/google/android/material/shadow/ShadowRenderer;->drawEdgeShadow(Landroid/graphics/Canvas;Landroid/graphics/Matrix;Landroid/graphics/RectF;I)V
 
     return-void
 .end method

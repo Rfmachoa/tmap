@@ -38,8 +38,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -53,19 +53,12 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/network/AuthEventListener;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/skt/tmap/engine/navigation/network/AuthEventListener;",
-            ")V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/SDKManager$init$internalAuthListener$1;->this$0:Lcom/skt/tmap/engine/navigation/SDKManager;
 
     iput-object p2, p0, Lcom/skt/tmap/engine/navigation/SDKManager$init$internalAuthListener$1;->$authListener:Lcom/skt/tmap/engine/navigation/network/AuthEventListener;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,7 +67,7 @@
 
 # virtual methods
 .method public onCancelAction()V
-    .locals 4
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager$init$internalAuthListener$1;->this$0:Lcom/skt/tmap/engine/navigation/SDKManager;
@@ -98,10 +91,6 @@
     move-result-object v2
 
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v3, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -131,7 +120,7 @@
 .end method
 
 .method public onComplete()V
-    .locals 4
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager$init$internalAuthListener$1;->this$0:Lcom/skt/tmap/engine/navigation/SDKManager;
@@ -155,10 +144,6 @@
     move-result-object v2
 
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v3, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -198,7 +183,7 @@
 .end method
 
 .method public onFailAction(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 4
+    .locals 3
     .param p2    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
@@ -230,10 +215,6 @@
     move-result-object v2
 
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v3, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/AroundInfoListActivity;->z5()V
+    value = Lcom/skt/tmap/activity/AroundInfoListActivity;->H5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -51,11 +51,11 @@
 
     iget-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/AroundInfoListActivity;->t5(Lcom/skt/tmap/activity/AroundInfoListActivity;)Lcom/skt/tmap/mvp/presenter/b;
+    invoke-static {v0}, Lcom/skt/tmap/activity/AroundInfoListActivity;->B5(Lcom/skt/tmap/activity/AroundInfoListActivity;)Lcom/skt/tmap/mvp/presenter/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/b;->E()I
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/b;->G()I
 
     move-result v0
 

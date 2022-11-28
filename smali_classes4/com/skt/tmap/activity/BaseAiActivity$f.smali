@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    value = Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,7 +57,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseAiActivity$f;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->R6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -73,7 +73,7 @@
 
     const/16 v1, 0x83
 
-    invoke-static {p1, v1}, Lcom/skt/tmap/util/l0;->l(Landroid/app/Activity;I)Z
+    invoke-static {p1, v1}, Lcom/skt/tmap/util/r0;->l(Landroid/app/Activity;I)Z
 
     move-result p1
 
@@ -90,7 +90,7 @@
 
     check-cast p1, Landroid/net/ConnectivityManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/e;->L(Landroid/net/ConnectivityManager;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/g;->O(Landroid/net/ConnectivityManager;)Z
 
     move-result p1
 
@@ -101,7 +101,7 @@
 
     sget-object v1, Lcom/skt/voice/tyche/AiConstant$AiViewMode;->HELP:Lcom/skt/voice/tyche/AiConstant$AiViewMode;
 
-    invoke-virtual {p1, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->E6(Lcom/skt/voice/tyche/AiConstant$AiViewMode;)V
+    invoke-virtual {p1, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->N6(Lcom/skt/voice/tyche/AiConstant$AiViewMode;)V
 
     goto :goto_0
 
@@ -109,7 +109,7 @@
     :cond_1
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseAiActivity$f;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->J6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->S6()V
 
     :cond_2
     :goto_0

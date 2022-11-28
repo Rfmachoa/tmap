@@ -3,7 +3,7 @@
 .source "DrawableWithAnimatedVisibilityChange.java"
 
 # interfaces
-.implements Li3/b;
+.implements Lq4/b;
 
 
 # static fields
@@ -28,7 +28,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Li3/b$a;",
+            "Lq4/b$a;",
             ">;"
         }
     .end annotation
@@ -46,7 +46,7 @@
 
 .field private ignoreCallbacks:Z
 
-.field private internalAnimationCallback:Li3/b$a;
+.field private internalAnimationCallback:Lq4/b$a;
 
 .field private mockGrowFraction:F
 
@@ -150,16 +150,55 @@
     return-void
 .end method
 
+.method private varargs cancelAnimatorsWithoutCallbacks([Landroid/animation/ValueAnimator;)V
+    .locals 4
+    .param p1    # [Landroid/animation/ValueAnimator;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->ignoreCallbacks:Z
+
+    const/4 v1, 0x1
+
+    .line 2
+    iput-boolean v1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->ignoreCallbacks:Z
+
+    .line 3
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, p1, v2
+
+    .line 4
+    invoke-virtual {v3}, Landroid/animation/ValueAnimator;->cancel()V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    iput-boolean v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->ignoreCallbacks:Z
+
+    return-void
+.end method
+
 .method private dispatchAnimationEnd()V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Li3/b$a;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Lq4/b$a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p0}, Li3/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p0}, Lq4/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     .line 3
     :cond_0
@@ -187,10 +226,10 @@
 
     move-result-object v1
 
-    check-cast v1, Li3/b$a;
+    check-cast v1, Lq4/b$a;
 
     .line 5
-    invoke-virtual {v1, p0}, Li3/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, p0}, Lq4/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -202,12 +241,12 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Li3/b$a;
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Lq4/b$a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p0}, Li3/b$a;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p0}, Lq4/b$a;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
 
     .line 3
     :cond_0
@@ -235,10 +274,10 @@
 
     move-result-object v1
 
-    check-cast v1, Li3/b$a;
+    check-cast v1, Lq4/b$a;
 
     .line 5
-    invoke-virtual {v1, p0}, Li3/b$a;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, p0}, Lq4/b$a;->onAnimationStart(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -246,7 +285,7 @@
     return-void
 .end method
 
-.method private varargs endAnimatorWithoutCallbacks([Landroid/animation/ValueAnimator;)V
+.method private varargs endAnimatorsWithoutCallbacks([Landroid/animation/ValueAnimator;)V
     .locals 4
     .param p1    # [Landroid/animation/ValueAnimator;
         .annotation build Landroidx/annotation/NonNull;
@@ -667,9 +706,9 @@
     return v0
 .end method
 
-.method public registerAnimationCallback(Li3/b$a;)V
+.method public registerAnimationCallback(Lq4/b$a;)V
     .locals 1
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -761,15 +800,15 @@
     return-void
 .end method
 
-.method public setInternalAnimationCallback(Li3/b$a;)V
+.method public setInternalAnimationCallback(Lq4/b$a;)V
     .locals 0
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Li3/b$a;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->internalAnimationCallback:Lq4/b$a;
 
     return-void
 .end method
@@ -869,7 +908,7 @@
 .end method
 
 .method public setVisibleInternal(ZZZ)Z
-    .locals 3
+    .locals 4
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->maybeInitializeAnimators()V
@@ -899,127 +938,152 @@
     iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->hideAnimator:Landroid/animation/ValueAnimator;
 
     :goto_0
-    const/4 v2, 0x1
-
-    if-nez p3, :cond_3
+    if-eqz p1, :cond_2
 
     .line 4
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    .line 5
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
+    iget-object v2, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->hideAnimator:Landroid/animation/ValueAnimator;
 
     goto :goto_1
 
     :cond_2
-    new-array p2, v2, [Landroid/animation/ValueAnimator;
+    iget-object v2, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->showAnimator:Landroid/animation/ValueAnimator;
+
+    :goto_1
+    const/4 v3, 0x1
+
+    if-nez p3, :cond_5
+
+    .line 5
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    new-array p2, v3, [Landroid/animation/ValueAnimator;
+
+    aput-object v2, p2, v1
+
+    .line 6
+    invoke-direct {p0, p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->cancelAnimatorsWithoutCallbacks([Landroid/animation/ValueAnimator;)V
+
+    .line 7
+    :cond_3
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    .line 8
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
+
+    goto :goto_2
+
+    :cond_4
+    new-array p2, v3, [Landroid/animation/ValueAnimator;
 
     aput-object v0, p2, v1
 
-    .line 6
-    invoke-direct {p0, p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->endAnimatorWithoutCallbacks([Landroid/animation/ValueAnimator;)V
+    .line 9
+    invoke-direct {p0, p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->endAnimatorsWithoutCallbacks([Landroid/animation/ValueAnimator;)V
 
-    .line 7
-    :goto_1
+    .line 10
+    :goto_2
     invoke-super {p0, p1, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     move-result p1
 
     return p1
 
-    :cond_3
-    if-eqz p3, :cond_4
+    :cond_5
+    if-eqz p3, :cond_6
 
-    .line 8
+    .line 11
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result p3
 
-    if-eqz p3, :cond_4
+    if-eqz p3, :cond_6
 
     return v1
 
-    :cond_4
-    if-eqz p1, :cond_6
+    :cond_6
+    if-eqz p1, :cond_8
 
-    .line 9
+    .line 12
     invoke-super {p0, p1, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     move-result p3
 
-    if-eqz p3, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move p3, v1
+    if-eqz p3, :cond_7
 
     goto :goto_3
 
-    :cond_6
-    :goto_2
-    move p3, v2
+    :cond_7
+    move p3, v1
 
+    goto :goto_4
+
+    :cond_8
     :goto_3
-    if-eqz p1, :cond_7
+    move p3, v3
 
-    .line 10
+    :goto_4
+    if-eqz p1, :cond_9
+
+    .line 13
     iget-object p1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->baseSpec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    .line 11
     invoke-virtual {p1}, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->isShowAnimationEnabled()Z
 
     move-result p1
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_7
+    :cond_9
     iget-object p1, p0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->baseSpec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
     invoke-virtual {p1}, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->isHideAnimationEnabled()Z
 
     move-result p1
 
-    :goto_4
-    if-nez p1, :cond_8
+    :goto_5
+    if-nez p1, :cond_a
 
-    new-array p1, v2, [Landroid/animation/ValueAnimator;
+    new-array p1, v3, [Landroid/animation/ValueAnimator;
 
     aput-object v0, p1, v1
 
-    .line 12
-    invoke-direct {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->endAnimatorWithoutCallbacks([Landroid/animation/ValueAnimator;)V
+    .line 14
+    invoke-direct {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->endAnimatorsWithoutCallbacks([Landroid/animation/ValueAnimator;)V
 
     return p3
 
-    :cond_8
-    if-nez p2, :cond_a
+    :cond_a
+    if-nez p2, :cond_c
 
-    .line 13
+    .line 15
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isPaused()Z
 
     move-result p1
 
-    if-nez p1, :cond_9
-
-    goto :goto_5
-
-    .line 14
-    :cond_9
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->resume()V
+    if-nez p1, :cond_b
 
     goto :goto_6
 
-    .line 15
-    :cond_a
-    :goto_5
+    .line 16
+    :cond_b
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->resume()V
+
+    goto :goto_7
+
+    .line 17
+    :cond_c
+    :goto_6
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    :goto_6
+    :goto_7
     return p3
 .end method
 
@@ -1049,9 +1113,9 @@
     return-void
 .end method
 
-.method public unregisterAnimationCallback(Li3/b$a;)Z
+.method public unregisterAnimationCallback(Lq4/b$a;)Z
     .locals 1
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

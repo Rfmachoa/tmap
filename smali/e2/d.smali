@@ -1,272 +1,287 @@
-.class public Le2/d;
-.super Le2/a;
-.source "SingleDocumentFile.java"
-
-
-# annotations
-.annotation build Landroidx/annotation/RequiresApi;
-    value = 0x13
-.end annotation
-
-
-# instance fields
-.field public c:Landroid/content/Context;
-
-.field public d:Landroid/net/Uri;
+.class public final Le2/d;
+.super Ljava/lang/Object;
+.source "UriCompat.java"
 
 
 # direct methods
-.method public constructor <init>(Le2/a;Landroid/content/Context;Landroid/net/Uri;)V
+.method public constructor <init>()V
     .locals 0
-    .param p1    # Le2/a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 1
-    invoke-direct {p0, p1}, Le2/a;-><init>(Le2/a;)V
-
-    .line 2
-    iput-object p2, p0, Le2/d;->c:Landroid/content/Context;
-
-    .line 3
-    iput-object p3, p0, Le2/d;->d:Landroid/net/Uri;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
-
-    invoke-static {v0, v1}, Le2/b;->a(Landroid/content/Context;Landroid/net/Uri;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public b()Z
-    .locals 2
+.method public static a(Landroid/net/Uri;)Ljava/lang/String;
+    .locals 7
+    .param p0    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
-
-    invoke-static {v0, v1}, Le2/b;->b(Landroid/content/Context;Landroid/net/Uri;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public c(Ljava/lang/String;)Le2/a;
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public d(Ljava/lang/String;Ljava/lang/String;)Le2/a;
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public e()Z
-    .locals 2
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
+    .line 2
+    invoke-virtual {p0}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
-    invoke-static {v0, v1}, Landroid/provider/DocumentsContract;->deleteDocument(Landroid/content/ContentResolver;Landroid/net/Uri;)Z
+    move-result-object v1
 
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/16 v2, 0x3a
 
-    return v0
+    const/16 v3, 0x40
 
-    :catch_0
+    if-eqz v0, :cond_8
+
+    const-string v4, "tel"
+
+    .line 3
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "sip"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "sms"
+
+    .line 4
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "smsto"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "mailto"
+
+    .line 5
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    const-string v4, "nfc"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const-string v4, "http"
+
+    .line 6
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    const-string v4, "https"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    const-string v4, "ftp"
+
+    .line 7
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    const-string v4, "rtsp"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    :cond_1
+    const-string v1, "//"
+
+    .line 8
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, ""
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :cond_2
+    move-object v4, v5
+
+    :goto_0
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 9
+    invoke-virtual {p0}, Landroid/net/Uri;->getPort()I
+
+    move-result v4
+
+    const/4 v6, -0x1
+
+    if-eq v4, v6, :cond_3
+
+    const-string v4, ":"
+
+    invoke-static {v4}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getPort()I
+
+    move-result p0
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_3
+    const-string p0, "/..."
+
+    invoke-static {v1, v5, p0}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_5
+
+    .line 10
+    :cond_4
+    :goto_1
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 11
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 12
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    if-eqz v1, :cond_7
+
     const/4 v0, 0x0
 
-    return v0
-.end method
+    .line 13
+    :goto_2
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-.method public f()Z
-    .locals 2
+    move-result v2
 
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
+    if-ge v0, v2, :cond_7
 
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
+    .line 14
+    invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
 
-    invoke-static {v0, v1}, Le2/b;->d(Landroid/content/Context;Landroid/net/Uri;)Z
+    move-result v2
 
-    move-result v0
+    const/16 v4, 0x2d
 
-    return v0
-.end method
+    if-eq v2, v4, :cond_6
 
-.method public k()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    if-eq v2, v3, :cond_6
 
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
+    const/16 v4, 0x2e
 
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
+    if-ne v2, v4, :cond_5
 
-    invoke-static {v0, v1}, Le2/b;->f(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    goto :goto_3
 
-    move-result-object v0
+    :cond_5
+    const/16 v2, 0x78
 
-    return-object v0
-.end method
+    .line 15
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-.method public m()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    goto :goto_4
 
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
+    .line 16
+    :cond_6
+    :goto_3
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
+    :goto_4
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0, v1}, Le2/b;->h(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    goto :goto_2
 
-    move-result-object v0
+    .line 17
+    :cond_7
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v0
-.end method
+    move-result-object p0
 
-.method public n()Landroid/net/Uri;
-    .locals 1
+    return-object p0
 
-    .line 1
-    iget-object v0, p0, Le2/d;->d:Landroid/net/Uri;
+    .line 18
+    :cond_8
+    :goto_5
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-.method public o()Z
-    .locals 2
+    if-eqz v0, :cond_9
 
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
+    .line 19
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
+    .line 20
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Le2/b;->i(Landroid/content/Context;Landroid/net/Uri;)Z
+    :cond_9
+    if-eqz v1, :cond_a
 
-    move-result v0
+    .line 21
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    .line 22
+    :cond_a
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public q()Z
-    .locals 2
+    move-result-object p0
 
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
-
-    invoke-static {v0, v1}, Le2/b;->j(Landroid/content/Context;Landroid/net/Uri;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public r()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
-
-    invoke-static {v0, v1}, Le2/b;->k(Landroid/content/Context;Landroid/net/Uri;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public s()J
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
-
-    invoke-static {v0, v1}, Le2/b;->l(Landroid/content/Context;Landroid/net/Uri;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public t()J
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Le2/d;->c:Landroid/content/Context;
-
-    iget-object v1, p0, Le2/d;->d:Landroid/net/Uri;
-
-    invoke-static {v0, v1}, Le2/b;->m(Landroid/content/Context;Landroid/net/Uri;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public u()[Le2/a;
-    .locals 1
-
-    .line 1
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public v(Ljava/lang/String;)Z
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-object p0
 .end method

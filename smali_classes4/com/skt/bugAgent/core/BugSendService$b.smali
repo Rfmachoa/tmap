@@ -44,7 +44,7 @@
 
     const-string v1, "211.234.248.231 "
 
-    invoke-static {v0, v1}, Lcom/skt/bugAgent/core/BugSendService;->f(Lcom/skt/bugAgent/core/BugSendService;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/bugAgent/core/BugSendService;->e(Lcom/skt/bugAgent/core/BugSendService;Ljava/lang/String;)V
 
     return-void
 .end method

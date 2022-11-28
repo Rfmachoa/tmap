@@ -118,6 +118,84 @@
     return-object p0
 .end method
 
+.method public static construct(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Ljava/lang/Class;Ljava/util/List;)Lcom/fasterxml/jackson/databind/util/EnumValues;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/cfg/MapperConfig<",
+            "*>;",
+            "Ljava/lang/Class<",
+            "Ljava/lang/Enum<",
+            "*>;>;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/fasterxml/jackson/databind/util/EnumValues;"
+        }
+    .end annotation
+
+    .line 4
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    .line 5
+    new-array v1, v0, [Lcom/fasterxml/jackson/core/SerializableString;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    .line 6
+    invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {p0, v3}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->compileString(Ljava/lang/String;)Lcom/fasterxml/jackson/core/SerializableString;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/util/EnumValues;->construct(Ljava/lang/Class;[Lcom/fasterxml/jackson/core/SerializableString;)Lcom/fasterxml/jackson/databind/util/EnumValues;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static construct(Ljava/lang/Class;[Lcom/fasterxml/jackson/core/SerializableString;)Lcom/fasterxml/jackson/databind/util/EnumValues;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "Ljava/lang/Enum<",
+            "*>;>;[",
+            "Lcom/fasterxml/jackson/core/SerializableString;",
+            ")",
+            "Lcom/fasterxml/jackson/databind/util/EnumValues;"
+        }
+    .end annotation
+
+    .line 8
+    new-instance v0, Lcom/fasterxml/jackson/databind/util/EnumValues;
+
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/databind/util/EnumValues;-><init>(Ljava/lang/Class;[Lcom/fasterxml/jackson/core/SerializableString;)V
+
+    return-object v0
+.end method
+
 .method public static constructFromName(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/util/EnumValues;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
@@ -203,9 +281,9 @@
 
     .line 10
     :cond_1
-    new-instance p0, Lcom/fasterxml/jackson/databind/util/EnumValues;
+    invoke-static {p1, v2}, Lcom/fasterxml/jackson/databind/util/EnumValues;->construct(Ljava/lang/Class;[Lcom/fasterxml/jackson/core/SerializableString;)Lcom/fasterxml/jackson/databind/util/EnumValues;
 
-    invoke-direct {p0, p1, v2}, Lcom/fasterxml/jackson/databind/util/EnumValues;-><init>(Ljava/lang/Class;[Lcom/fasterxml/jackson/core/SerializableString;)V
+    move-result-object p0
 
     return-object p0
 
@@ -213,13 +291,13 @@
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Can not determine enum constants for Class "
+    const-string v0, "Cannot determine enum constants for Class "
 
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -229,7 +307,7 @@
 .end method
 
 .method public static constructFromToString(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/util/EnumValues;
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -257,9 +335,11 @@
     if-eqz v0, :cond_1
 
     .line 3
-    array-length v1, v0
+    new-instance v1, Ljava/util/ArrayList;
 
-    new-array v1, v1, [Lcom/fasterxml/jackson/core/SerializableString;
+    array-length v2, v0
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 4
     array-length v2, v0
@@ -272,19 +352,11 @@
     aget-object v4, v0, v3
 
     .line 5
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
     invoke-virtual {v4}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->compileString(Ljava/lang/String;)Lcom/fasterxml/jackson/core/SerializableString;
-
-    move-result-object v4
-
-    aput-object v4, v1, v5
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 
@@ -292,9 +364,9 @@
 
     .line 6
     :cond_0
-    new-instance p0, Lcom/fasterxml/jackson/databind/util/EnumValues;
+    invoke-static {p0, p1, v1}, Lcom/fasterxml/jackson/databind/util/EnumValues;->construct(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Ljava/lang/Class;Ljava/util/List;)Lcom/fasterxml/jackson/databind/util/EnumValues;
 
-    invoke-direct {p0, p1, v1}, Lcom/fasterxml/jackson/databind/util/EnumValues;-><init>(Ljava/lang/Class;[Lcom/fasterxml/jackson/core/SerializableString;)V
+    move-result-object p0
 
     return-object p0
 
@@ -302,13 +374,13 @@
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Can not determine enum constants for Class "
+    const-string v0, "Cannot determine enum constants for Class "
 
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,7 +55,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$e0;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object v0
 

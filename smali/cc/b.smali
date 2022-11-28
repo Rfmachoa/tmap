@@ -2,33 +2,20 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
-# interfaces
-.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;
-
-
-# instance fields
-.field public final synthetic a:Lcc/d;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcc/d;)V
+.method public static a(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/String;Lcc/c;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, p1}, Lsc/a;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    iput-object p1, p0, Lcc/b;->a:Lcc/d;
+    move-result-object p0
 
-    return-void
-.end method
+    invoke-static {p2, p0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    invoke-virtual {p3}, Lcc/c;->r()Z
 
-# virtual methods
-.method public final onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    move-result p0
 
-    iget-object v0, p0, Lcc/b;->a:Lcc/d;
-
-    invoke-static {v0, p1, p2, p3, p4}, Lcc/c;->a(Lcc/d;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return p0
 .end method

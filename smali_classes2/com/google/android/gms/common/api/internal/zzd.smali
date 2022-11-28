@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zzd;
 .super Landroidx/fragment/app/Fragment;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/LifecycleFragment;
@@ -8,29 +8,10 @@
 
 # static fields
 .field private static final zza:Ljava/util/WeakHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/WeakHashMap<",
-            "Landroidx/fragment/app/FragmentActivity;",
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/common/api/internal/zzd;",
-            ">;>;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
 .field private final zzb:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/common/api/internal/LifecycleCallback;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zzc:I
 
@@ -133,7 +114,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Landroidx/fragment/app/FragmentManager;->q0(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {v2, v0}, Landroidx/fragment/app/FragmentManager;->s0(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v2
 
@@ -161,15 +142,15 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {v3}, Landroidx/fragment/app/FragmentManager;->u()Landroidx/fragment/app/j0;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2, v0}, Landroidx/fragment/app/a0;->k(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/a0;
+    invoke-virtual {v3, v2, v0}, Landroidx/fragment/app/j0;->k(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/j0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a0;->r()I
+    invoke-virtual {v0}, Landroidx/fragment/app/j0;->r()I
 
     :cond_3
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -197,7 +178,7 @@
 
 # virtual methods
 .method public final addCallback(Ljava/lang/String;Lcom/google/android/gms/common/api/internal/LifecycleCallback;)V
-    .locals 3
+    .locals 2
     .param p2    # Lcom/google/android/gms/common/api/internal/LifecycleCallback;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -243,29 +224,15 @@
     :cond_1
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    .line 5
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x3b
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v0, "LifecycleCallback with tag "
 
-    const-string v2, " already added to this fragment."
+    const-string v1, " already added to this fragment."
 
-    invoke-static {v1, v0, p1, v2}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 5
     invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p2

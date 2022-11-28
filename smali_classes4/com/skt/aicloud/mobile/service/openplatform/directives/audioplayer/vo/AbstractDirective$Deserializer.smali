@@ -23,7 +23,7 @@
         value = {
             "Ljava/lang/Class<",
             "+",
-            "Lt9/a;",
+            "Lqb/a;",
             ">;"
         }
     .end annotation
@@ -60,7 +60,7 @@
     .end annotation
 
     .line 1
-    const-class p3, Lt9/a;
+    const-class p3, Lqb/a;
 
     const-class v0, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$a$a;
 
@@ -73,7 +73,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v1, "type"
+    const-string v1, "type"
 
     .line 3
     invoke-virtual {v0, v1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;

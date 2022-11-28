@@ -55,14 +55,14 @@
 
     const-string v1, "IAladdinContactUploadListener : onAlreadyRunning"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
     const-string v1, "ContactUpload - AlreadyRunning"
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -82,7 +82,7 @@
 
     const-string v1, "IAladdinContactUploadListener : onConnectionError"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
@@ -111,7 +111,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/engine/TmapAiManager;->H0:Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->H0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->I0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
 
     .line 5
     :cond_0
@@ -135,7 +135,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -155,7 +155,7 @@
 
     const-string v1, "IAladdinContactUploadListener : onContactNotChanged"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
@@ -196,7 +196,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object p1
 
@@ -204,7 +204,7 @@
 
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object p1
 
@@ -217,7 +217,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object p1
 
@@ -225,21 +225,21 @@
 
     const-string v1, "N"
 
-    invoke-static {p1, v0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object p1
 
-    invoke-static {p1, v0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->R(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->T(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object p1
 
@@ -268,7 +268,7 @@
 
     const-string v1, "IAladdinContactUploadListener : onParseError"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
@@ -297,7 +297,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/engine/TmapAiManager;->H0:Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->H0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->I0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
 
     .line 5
     :cond_0
@@ -321,7 +321,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -370,7 +370,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
@@ -399,7 +399,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/engine/TmapAiManager;->H0:Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;
 
-    invoke-virtual {p2, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->H0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
+    invoke-virtual {p2, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->I0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
 
     .line 5
     :cond_0
@@ -429,7 +429,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -449,7 +449,7 @@
 
     const-string v1, "IAladdinContactUploadListener : onSuccess"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$2;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
@@ -463,7 +463,7 @@
 
     const-string v1, "ContactUpload - Success"
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method

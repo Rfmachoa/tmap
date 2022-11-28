@@ -14,15 +14,15 @@
 
 
 # static fields
-.field public static final carColorPrimary:I = 0x7f04008f
+.field public static final carColorPrimary:I = 0x7f0400a3
 
-.field public static final carColorPrimaryDark:I = 0x7f040090
+.field public static final carColorPrimaryDark:I = 0x7f0400a4
 
-.field public static final carColorSecondary:I = 0x7f040091
+.field public static final carColorSecondary:I = 0x7f0400a5
 
-.field public static final carColorSecondaryDark:I = 0x7f040092
+.field public static final carColorSecondaryDark:I = 0x7f0400a6
 
-.field public static final carPermissionActivityLayout:I = 0x7f040093
+.field public static final carPermissionActivityLayout:I = 0x7f0400a7
 
 
 # direct methods

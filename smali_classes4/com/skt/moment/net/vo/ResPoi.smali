@@ -96,6 +96,14 @@
 
 .method public setDistance(D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "distance"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/ResPoi;->distance:D
@@ -105,6 +113,14 @@
 
 .method public setLatitude(D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "latitude"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/ResPoi;->latitude:D
@@ -114,6 +130,14 @@
 
 .method public setLink(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "link"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPoi;->link:Ljava/lang/String;
@@ -123,6 +147,14 @@
 
 .method public setLongitude(D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "longitude"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/ResPoi;->longitude:D
@@ -132,6 +164,14 @@
 
 .method public setMoment_poi_id(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "moment_poi_id"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPoi;->moment_poi_id:Ljava/lang/String;
@@ -141,6 +181,14 @@
 
 .method public setPoiType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poiType"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPoi;->poiType:Ljava/lang/String;
@@ -150,6 +198,14 @@
 
 .method public setPoi_id(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poi_id"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPoi;->poi_id:Ljava/lang/String;

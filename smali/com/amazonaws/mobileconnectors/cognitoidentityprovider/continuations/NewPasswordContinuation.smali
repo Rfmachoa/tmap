@@ -244,7 +244,7 @@
     const-string v3, "userAttributes."
 
     .line 3
-    invoke-static {v3, v2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

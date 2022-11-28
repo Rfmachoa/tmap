@@ -69,11 +69,11 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/skt/tmap/engine/g0;->d()Lcom/skt/tmap/engine/g0;
+    invoke-static {}, Lcom/skt/tmap/engine/i0;->d()Lcom/skt/tmap/engine/i0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/g0;->i()Lcom/skt/tmap/location/h;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/i0;->i()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 

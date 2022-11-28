@@ -2,22 +2,39 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
+# interfaces
+.implements Landroidx/camera/core/j0$a;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/camera/core/m1;
+
+.field public final synthetic b:Landroidx/camera/core/m1;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;J)Ljava/lang/String;
-    .locals 1
+.method public synthetic constructor <init>(Landroidx/camera/core/m1;Landroidx/camera/core/m1;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iput-object p1, p0, Landroidx/camera/core/l1;->a:Landroidx/camera/core/m1;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p2, p0, Landroidx/camera/core/l1;->b:Landroidx/camera/core/m1;
 
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+# virtual methods
+.method public final d(Landroidx/camera/core/m1;)V
+    .locals 2
 
-    return-object p0
+    iget-object v0, p0, Landroidx/camera/core/l1;->a:Landroidx/camera/core/m1;
+
+    iget-object v1, p0, Landroidx/camera/core/l1;->b:Landroidx/camera/core/m1;
+
+    invoke-static {v0, v1, p1}, Landroidx/camera/core/ImageProcessingUtil;->b(Landroidx/camera/core/m1;Landroidx/camera/core/m1;Landroidx/camera/core/m1;)V
+
+    return-void
 .end method

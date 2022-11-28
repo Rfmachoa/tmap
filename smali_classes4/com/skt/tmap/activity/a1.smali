@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Function;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity$q;
-
-.field public final synthetic b:Lkotlin/Triple;
+.field public final synthetic a:Lgl/l;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity$q;Lkotlin/Triple;)V
+.method public synthetic constructor <init>(Lgl/l;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/a1;->a:Lcom/skt/tmap/activity/TmapMainActivity$q;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/a1;->b:Lkotlin/Triple;
+    iput-object p1, p0, Lcom/skt/tmap/activity/a1;->a:Lgl/l;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/a1;->a:Lcom/skt/tmap/activity/TmapMainActivity$q;
+    iget-object v0, p0, Lcom/skt/tmap/activity/a1;->a:Lgl/l;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/a1;->b:Lkotlin/Triple;
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapHybridSearchActivity;->N5(Lgl/l;Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity$q;->a(Lcom/skt/tmap/activity/TmapMainActivity$q;Lkotlin/Triple;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

@@ -1,104 +1,73 @@
-.class public Landroidx/paging/r$a;
-.super Landroidx/paging/l$b;
-.source "WrapperPositionalDataSource.java"
+.class public final Landroidx/paging/r$a;
+.super Ljava/lang/Object;
+.source "LoadStates.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/paging/r;->n(Landroidx/paging/l$d;Landroidx/paging/l$b;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/paging/r;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x19
+    name = "a"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroidx/paging/l$b<",
-        "TA;>;"
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u0080\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008R\u0017\u0010\u0003\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\t"
+    }
+    d2 = {
+        "Landroidx/paging/r$a;",
+        "",
+        "Landroidx/paging/r;",
+        "IDLE",
+        "Landroidx/paging/r;",
+        "a",
+        "()Landroidx/paging/r;",
+        "<init>",
+        "()V",
+        "paging-common"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
     }
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Landroidx/paging/l$b;
-
-.field public final synthetic b:Landroidx/paging/r;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/paging/r;Landroidx/paging/l$b;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/paging/r$a;->b:Landroidx/paging/r;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Landroidx/paging/r$a;->a:Landroidx/paging/l$b;
+    return-void
+.end method
 
-    invoke-direct {p0}, Landroidx/paging/l$b;-><init>()V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroidx/paging/r$a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/util/List;I)V
-    .locals 2
-    .param p1    # Ljava/util/List;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "TA;>;I)V"
-        }
+.method public final a()Landroidx/paging/r;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/paging/r$a;->a:Landroidx/paging/l$b;
+    invoke-static {}, Landroidx/paging/r;->a()Landroidx/paging/r;
 
-    iget-object v1, p0, Landroidx/paging/r$a;->b:Landroidx/paging/r;
+    move-result-object v0
 
-    iget-object v1, v1, Landroidx/paging/r;->d:Ln/a;
-
-    invoke-static {v1, p1}, Landroidx/paging/c;->b(Ln/a;Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, p2}, Landroidx/paging/l$b;->a(Ljava/util/List;I)V
-
-    return-void
-.end method
-
-.method public b(Ljava/util/List;II)V
-    .locals 2
-    .param p1    # Ljava/util/List;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "TA;>;II)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/paging/r$a;->a:Landroidx/paging/l$b;
-
-    iget-object v1, p0, Landroidx/paging/r$a;->b:Landroidx/paging/r;
-
-    iget-object v1, v1, Landroidx/paging/r;->d:Ln/a;
-
-    invoke-static {v1, p1}, Landroidx/paging/c;->b(Ln/a;Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/paging/l$b;->b(Ljava/util/List;II)V
-
-    return-void
+    return-object v0
 .end method

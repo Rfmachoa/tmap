@@ -47,7 +47,7 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$b;->a:Landroidx/appcompat/view/menu/CascadingMenuPopup;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->d1:Landroid/view/ViewTreeObserver;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->f1:Landroid/view/ViewTreeObserver;
 
     if-eqz v0, :cond_1
 
@@ -65,13 +65,13 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->d1:Landroid/view/ViewTreeObserver;
+    iput-object v1, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->f1:Landroid/view/ViewTreeObserver;
 
     .line 4
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/CascadingMenuPopup$b;->a:Landroidx/appcompat/view/menu/CascadingMenuPopup;
 
-    iget-object v1, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->d1:Landroid/view/ViewTreeObserver;
+    iget-object v1, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->f1:Landroid/view/ViewTreeObserver;
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->j:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 

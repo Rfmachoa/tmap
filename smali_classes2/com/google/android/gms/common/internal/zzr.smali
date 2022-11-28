@@ -1,19 +1,10 @@
 .class final Lcom/google/android/gms/common/internal/zzr;
 .super Lcom/google/android/gms/common/internal/GmsClientSupervisor;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # instance fields
 .field private final zzb:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Lcom/google/android/gms/common/internal/zzn;",
-            "Lcom/google/android/gms/common/internal/zzo;",
-            ">;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "connectionStatus"
     .end annotation
@@ -200,23 +191,17 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    move-result p3
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    add-int/lit8 p3, p3, 0x4c
+    const-string v1, "Trying to unbind a GmsServiceConnection  that was not bound before.  config="
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, p3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p3, "Trying to unbind a GmsServiceConnection  that was not bound before.  config="
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -233,23 +218,17 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    move-result p3
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    add-int/lit8 p3, p3, 0x32
+    const-string v1, "Nonexistent connection status for service config: "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, p3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p3, "Nonexistent connection status for service config: "
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -385,23 +364,17 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    move-result p3
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    add-int/lit8 p3, p3, 0x51
+    const-string p4, "Trying to bind a GmsServiceConnection that was already connected before.  config="
 
-    new-instance p4, Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p4, p3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p3, "Trying to bind a GmsServiceConnection that was already connected before.  config="
-
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 

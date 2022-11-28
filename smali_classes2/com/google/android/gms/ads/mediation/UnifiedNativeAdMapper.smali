@@ -1,52 +1,44 @@
-.class public Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;
+.class public abstract Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # instance fields
-.field private extras:Landroid/os/Bundle;
+.field private zza:Ljava/lang/String;
 
-.field private zzcgy:Lcom/google/android/gms/ads/VideoController;
+.field private zzb:Ljava/util/List;
 
-.field private zzdnr:Ljava/lang/String;
+.field private zzc:Ljava/lang/String;
 
-.field private zzemc:Ljava/lang/String;
+.field private zzd:Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
-.field private zzemd:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/ads/formats/NativeAd$Image;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private zze:Ljava/lang/String;
 
-.field private zzeme:Lcom/google/android/gms/ads/formats/NativeAd$Image;
+.field private zzf:Ljava/lang/String;
 
-.field private zzemf:Ljava/lang/String;
+.field private zzg:Ljava/lang/Double;
 
-.field private zzemh:Ljava/lang/String;
+.field private zzh:Ljava/lang/String;
 
-.field private zzemi:Ljava/lang/String;
+.field private zzi:Ljava/lang/String;
 
-.field private zzemj:Landroid/view/View;
+.field private zzj:Lcom/google/android/gms/ads/VideoController;
 
-.field private zzemk:Z
+.field private zzk:Z
 
-.field private zzemm:Ljava/lang/String;
+.field private zzl:Landroid/view/View;
 
-.field private zzemn:Ljava/lang/Double;
+.field private zzm:Landroid/view/View;
 
-.field private zzemo:Landroid/view/View;
+.field private zzn:Ljava/lang/Object;
 
-.field private zzemp:Ljava/lang/Object;
+.field private zzo:Landroid/os/Bundle;
 
-.field private zzemq:Z
+.field private zzp:Z
 
-.field private zzemr:Z
+.field private zzq:Z
 
-.field private zzems:F
+.field private zzr:F
 
 
 # direct methods
@@ -56,12 +48,11 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->extras:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzo:Landroid/os/Bundle;
 
     return-void
 .end method
@@ -70,36 +61,40 @@
 # virtual methods
 .method public getAdChoicesContent()Landroid/view/View;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemo:Landroid/view/View;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzl:Landroid/view/View;
 
     return-object v0
 .end method
 
 .method public final getAdvertiser()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemm:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzf:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public final getBody()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzdnr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzc:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public final getCallToAction()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemf:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zze:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -122,33 +117,39 @@
 
 .method public final getExtras()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->extras:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzo:Landroid/os/Bundle;
 
     return-object v0
 .end method
 
 .method public final getHeadline()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemc:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zza:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public final getIcon()Lcom/google/android/gms/ads/formats/NativeAd$Image;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzeme:Lcom/google/android/gms/ads/formats/NativeAd$Image;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzd:Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
     return-object v0
 .end method
 
 .method public final getImages()Ljava/util/List;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -158,8 +159,7 @@
         }
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemd:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzb:Ljava/util/List;
 
     return-object v0
 .end method
@@ -167,8 +167,7 @@
 .method public getMediaContentAspectRatio()F
     .locals 1
 
-    .line 1
-    iget v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzems:F
+    iget v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzr:F
 
     return v0
 .end method
@@ -176,8 +175,7 @@
 .method public final getOverrideClickHandling()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemr:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzq:Z
 
     return v0
 .end method
@@ -185,50 +183,47 @@
 .method public final getOverrideImpressionRecording()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemq:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzp:Z
 
     return v0
 .end method
 
 .method public final getPrice()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemi:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzi:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public final getStarRating()Ljava/lang/Double;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemn:Ljava/lang/Double;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzg:Ljava/lang/Double;
 
     return-object v0
 .end method
 
 .method public final getStore()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemh:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final getVideoController()Lcom/google/android/gms/ads/VideoController;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzcgy:Lcom/google/android/gms/ads/VideoController;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzh:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public handleClick(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
@@ -236,8 +231,7 @@
 .method public hasVideoContent()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemk:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzk:Z
 
     return v0
 .end method
@@ -250,45 +244,60 @@
 
 .method public setAdChoicesContent(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemo:Landroid/view/View;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzl:Landroid/view/View;
 
     return-void
 .end method
 
 .method public final setAdvertiser(Ljava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemm:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzf:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final setBody(Ljava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzdnr:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzc:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final setCallToAction(Ljava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemf:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zze:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final setExtras(Landroid/os/Bundle;)V
     .locals 0
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->extras:Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzo:Landroid/os/Bundle;
 
     return-void
 .end method
@@ -296,32 +305,41 @@
 .method public setHasVideoContent(Z)V
     .locals 0
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemk:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzk:Z
 
     return-void
 .end method
 
 .method public final setHeadline(Ljava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemc:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zza:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final setIcon(Lcom/google/android/gms/ads/formats/NativeAd$Image;)V
     .locals 0
+    .param p1    # Lcom/google/android/gms/ads/formats/NativeAd$Image;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzeme:Lcom/google/android/gms/ads/formats/NativeAd$Image;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzd:Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
     return-void
 .end method
 
 .method public final setImages(Ljava/util/List;)V
     .locals 0
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -331,8 +349,7 @@
         }
     .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemd:Ljava/util/List;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzb:Ljava/util/List;
 
     return-void
 .end method
@@ -340,17 +357,19 @@
 .method public setMediaContentAspectRatio(F)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzems:F
+    iput p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzr:F
 
     return-void
 .end method
 
 .method public setMediaView(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemj:Landroid/view/View;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzm:Landroid/view/View;
 
     return-void
 .end method
@@ -358,8 +377,7 @@
 .method public final setOverrideClickHandling(Z)V
     .locals 0
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemr:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzq:Z
 
     return-void
 .end method
@@ -367,41 +385,61 @@
 .method public final setOverrideImpressionRecording(Z)V
     .locals 0
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemq:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzp:Z
 
     return-void
 .end method
 
 .method public final setPrice(Ljava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemi:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzi:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final setStarRating(Ljava/lang/Double;)V
     .locals 0
+    .param p1    # Ljava/lang/Double;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemn:Ljava/lang/Double;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzg:Ljava/lang/Double;
 
     return-void
 .end method
 
 .method public final setStore(Ljava/lang/String;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemh:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzh:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public trackViews(Landroid/view/View;Ljava/util/Map;Ljava/util/Map;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -422,42 +460,64 @@
 
 .method public untrackView(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
-.method public final zza(Lcom/google/android/gms/ads/VideoController;)V
-    .locals 0
+.method public final zza()Landroid/view/View;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzcgy:Lcom/google/android/gms/ads/VideoController;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzm:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method public final zzb()Lcom/google/android/gms/ads/VideoController;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzj:Lcom/google/android/gms/ads/VideoController;
+
+    return-object v0
+.end method
+
+.method public final zzc()Ljava/lang/Object;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzn:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final zzd(Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzn:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final zzacu()Landroid/view/View;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemj:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method public final zzjv()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemp:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final zzn(Ljava/lang/Object;)V
+.method public final zze(Lcom/google/android/gms/ads/VideoController;)V
     .locals 0
+    .param p1    # Lcom/google/android/gms/ads/VideoController;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzemp:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/UnifiedNativeAdMapper;->zzj:Lcom/google/android/gms/ads/VideoController;
 
     return-void
 .end method

@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$a;,
         Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
     }
 .end annotation
@@ -57,333 +56,335 @@
 
 # virtual methods
 .method public a(Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;)J
-    .locals 14
+    .locals 17
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
         }
     .end annotation
 
-    const/16 v0, 0x7d0
+    move-object/from16 v1, p0
+
+    move-object/from16 v0, p1
+
+    const/16 v2, 0x7d0
 
     .line 1
     :try_start_0
-    iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->a:Landroid/net/Uri;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->a:Landroid/net/Uri;
 
     .line 2
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->g:Landroid/net/Uri;
+    iput-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->g:Landroid/net/Uri;
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/e;->i(Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;)V
+    invoke-virtual/range {p0 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/e;->i(Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;)V
 
-    const-string v2, "content"
+    const-string v4, "content"
 
     .line 4
-    iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->a:Landroid/net/Uri;
+    iget-object v5, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->a:Landroid/net/Uri;
 
-    invoke-virtual {v3}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 5
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    .line 6
-    sget v3, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
-
-    const/16 v4, 0x1f
-
-    if-lt v3, v4, :cond_0
-
-    .line 7
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$a;->a(Landroid/os/Bundle;)V
-
-    .line 8
-    :cond_0
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->f:Landroid/content/ContentResolver;
-
-    const-string v4, "*/*"
-
-    .line 9
-    invoke-virtual {v3, v1, v4, v2}, Landroid/content/ContentResolver;->openTypedAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    .line 10
-    :cond_1
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->f:Landroid/content/ContentResolver;
-
-    const-string v3, "r"
-
-    invoke-virtual {v2, v1, v3}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object v2
-
-    .line 11
-    :goto_0
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->h:Landroid/content/res/AssetFileDescriptor;
-
-    if-eqz v2, :cond_c
-
-    .line 12
-    invoke-virtual {v2}, Landroid/content/res/AssetFileDescriptor;->getLength()J
-
-    move-result-wide v3
-
-    .line 13
-    new-instance v1, Ljava/io/FileInputStream;
-
-    invoke-virtual {v2}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+    invoke-virtual {v5}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-direct {v1, v5}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    const/4 v5, 0x1
+
+    if-eqz v4, :cond_0
+
+    .line 5
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
+
+    const-string v6, "android.provider.extra.ACCEPT_ORIGINAL_MEDIA_FORMAT"
+
+    .line 6
+    invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 7
+    iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->f:Landroid/content/ContentResolver;
+
+    const-string v7, "*/*"
+
+    .line 8
+    invoke-virtual {v6, v3, v7, v4}, Landroid/content/ContentResolver;->openTypedAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    .line 9
+    :cond_0
+    iget-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->f:Landroid/content/ContentResolver;
+
+    const-string v6, "r"
+
+    invoke-virtual {v4, v3, v6}, Landroid/content/ContentResolver;->openAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
+
+    move-result-object v4
+
+    .line 10
+    :goto_0
+    iput-object v4, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->h:Landroid/content/res/AssetFileDescriptor;
+
+    if-eqz v4, :cond_b
+
+    .line 11
+    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getLength()J
+
+    move-result-wide v6
+
+    .line 12
+    new-instance v3, Ljava/io/FileInputStream;
+
+    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+
+    move-result-object v8
+
+    invoke-direct {v3, v8}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+
+    .line 13
+    iput-object v3, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->i:Ljava/io/FileInputStream;
+
+    const-wide/16 v8, -0x1
+
+    cmp-long v10, v6, v8
+
+    const/16 v11, 0x7d8
+
+    const/4 v12, 0x0
+
+    if-eqz v10, :cond_2
 
     .line 14
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->i:Ljava/io/FileInputStream;
+    iget-wide v13, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->g:J
 
-    const-wide/16 v5, -0x1
+    cmp-long v13, v13, v6
 
-    cmp-long v7, v3, v5
-
-    const/16 v8, 0x7d8
-
-    const/4 v9, 0x0
-
-    if-eqz v7, :cond_3
-
-    .line 15
-    iget-wide v10, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->g:J
-
-    cmp-long v10, v10, v3
-
-    if-gtz v10, :cond_2
+    if-gtz v13, :cond_1
 
     goto :goto_1
 
+    .line 15
+    :cond_1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+
+    invoke-direct {v0, v12, v11}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
+
+    throw v0
+
     .line 16
     :cond_2
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+    :goto_1
+    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
 
-    invoke-direct {p1, v9, v8}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
+    move-result-wide v13
 
-    throw p1
+    move-wide v15, v6
 
     .line 17
-    :cond_3
-    :goto_1
-    invoke-virtual {v2}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
+    iget-wide v5, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->g:J
 
-    move-result-wide v10
+    add-long/2addr v5, v13
 
     .line 18
-    iget-wide v12, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->g:J
+    invoke-virtual {v3, v5, v6}, Ljava/io/FileInputStream;->skip(J)J
 
-    add-long/2addr v12, v10
+    move-result-wide v5
+
+    sub-long/2addr v5, v13
 
     .line 19
-    invoke-virtual {v1, v12, v13}, Ljava/io/FileInputStream;->skip(J)J
+    iget-wide v13, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->g:J
 
-    move-result-wide v12
+    cmp-long v7, v5, v13
 
-    sub-long/2addr v12, v10
+    if-nez v7, :cond_a
+
+    const-wide/16 v13, 0x0
+
+    if-nez v10, :cond_5
 
     .line 20
-    iget-wide v10, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->g:J
+    invoke-virtual {v3}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    cmp-long v2, v12, v10
-
-    if-nez v2, :cond_b
-
-    const-wide/16 v10, 0x0
-
-    if-nez v7, :cond_6
+    move-result-object v3
 
     .line 21
-    invoke-virtual {v1}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->size()J
 
-    move-result-object v1
+    move-result-wide v5
+
+    cmp-long v7, v5, v13
+
+    if-nez v7, :cond_3
 
     .line 22
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
+    iput-wide v8, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
 
-    move-result-wide v2
-
-    cmp-long v4, v2, v10
-
-    if-nez v4, :cond_4
+    goto :goto_2
 
     .line 23
-    iput-wide v5, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
+    :cond_3
+    invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->position()J
+
+    move-result-wide v15
+
+    sub-long/2addr v5, v15
+
+    iput-wide v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
+
+    cmp-long v3, v5, v13
+
+    if-ltz v3, :cond_4
 
     goto :goto_2
 
     .line 24
     :cond_4
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->position()J
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
-    move-result-wide v12
+    invoke-direct {v0, v12, v11}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
 
-    sub-long/2addr v2, v12
+    throw v0
 
-    iput-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
-
-    cmp-long v1, v2, v10
-
-    if-ltz v1, :cond_5
-
-    goto :goto_2
+    :cond_5
+    sub-long v6, v15, v5
 
     .line 25
-    :cond_5
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
-
-    invoke-direct {p1, v9, v8}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
-
-    throw p1
-
-    :cond_6
-    sub-long/2addr v3, v12
-
-    .line 26
-    iput-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
+    iput-wide v6, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
     :try_end_0
     .catch Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    cmp-long v1, v3, v10
+    cmp-long v3, v6, v13
 
-    if-ltz v1, :cond_a
+    if-ltz v3, :cond_9
+
+    .line 26
+    :goto_2
+    iget-wide v2, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->h:J
+
+    cmp-long v5, v2, v8
+
+    if-eqz v5, :cond_7
 
     .line 27
-    :goto_2
-    iget-wide v0, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->h:J
+    iget-wide v5, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
 
-    cmp-long v2, v0, v5
+    cmp-long v7, v5, v8
 
-    if-eqz v2, :cond_8
-
-    .line 28
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
-
-    cmp-long v4, v2, v5
-
-    if-nez v4, :cond_7
+    if-nez v7, :cond_6
 
     goto :goto_3
 
-    :cond_7
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
+    :cond_6
+    invoke-static {v5, v6, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
-    move-result-wide v0
+    move-result-wide v2
 
     :goto_3
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
+    iput-wide v2, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
 
-    :cond_8
-    const/4 v0, 0x1
+    :cond_7
+    const/4 v2, 0x1
+
+    .line 28
+    iput-boolean v2, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->k:Z
 
     .line 29
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->k:Z
+    invoke-virtual/range {p0 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/e;->j(Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;)V
 
     .line 30
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/e;->j(Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;)V
+    iget-wide v2, v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->h:J
 
-    .line 31
-    iget-wide v0, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->h:J
+    cmp-long v0, v2, v8
 
-    cmp-long p1, v0, v5
-
-    if-eqz p1, :cond_9
+    if-eqz v0, :cond_8
 
     goto :goto_4
 
-    :cond_9
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
+    :cond_8
+    iget-wide v2, v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->j:J
 
     :goto_4
-    return-wide v0
+    return-wide v2
+
+    .line 31
+    :cond_9
+    :try_start_1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+
+    invoke-direct {v0, v12, v11}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
+
+    throw v0
 
     .line 32
     :cond_a
-    :try_start_1
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
-    invoke-direct {p1, v9, v8}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
+    invoke-direct {v0, v12, v11}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
 
-    throw p1
+    throw v0
 
     .line 33
     :cond_b
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
-    invoke-direct {p1, v9, v8}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
+    new-instance v4, Ljava/io/IOException;
 
-    throw p1
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    .line 34
-    :cond_c
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v2, Ljava/io/IOException;
+    const-string v6, "Could not open file descriptor for: "
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v4, "Could not open file descriptor for: "
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v4, v3}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0, v4, v2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
 
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {p1, v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
-
-    throw p1
+    throw v0
     :try_end_1
     .catch Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
     :catch_0
-    move-exception p1
+    move-exception v0
+
+    .line 34
+    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
     .line 35
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
+    instance-of v4, v0, Ljava/io/FileNotFoundException;
+
+    if-eqz v4, :cond_c
+
+    const/16 v2, 0x7d5
 
     .line 36
-    instance-of v2, p1, Ljava/io/FileNotFoundException;
+    :cond_c
+    invoke-direct {v3, v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
 
-    if-eqz v2, :cond_d
-
-    const/16 v0, 0x7d5
-
-    .line 37
-    :cond_d
-    invoke-direct {v1, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
-
-    throw v1
+    throw v3
 
     :catch_1
-    move-exception p1
+    move-exception v0
 
-    .line 38
-    throw p1
+    .line 37
+    throw v0
 .end method
 
 .method public close()V
@@ -640,7 +641,7 @@
     :goto_0
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/ContentDataSource;->i:Ljava/io/FileInputStream;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

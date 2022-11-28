@@ -3,7 +3,7 @@
 .source "DrawerLayout.java"
 
 # interfaces
-.implements Ly1/c;
+.implements Lp2/c;
 
 
 # annotations
@@ -21,62 +21,64 @@
 
 
 # static fields
-.field public static final A1:I = -0x67000000
+.field public static final A1:I = 0x3
 
-.field public static final B1:I = 0xa0
+.field public static final B1:I = 0x40
 
-.field public static final C1:I = 0x190
+.field public static final C1:I = -0x67000000
 
-.field public static final D1:Z = false
+.field public static final D1:I = 0xa0
 
-.field public static final E1:Z = true
+.field public static final E1:I = 0x190
 
-.field public static final F1:F = 1.0f
+.field public static final F1:Z = false
 
-.field public static final G1:[I
+.field public static final G1:Z = true
 
-.field public static final H1:Z
+.field public static final H1:F = 1.0f
 
-.field public static final I1:Z
+.field public static final I1:[I
 
-.field public static final J1:Ljava/lang/String; = "androidx.drawerlayout.widget.DrawerLayout"
+.field public static final J1:Z
 
-.field public static K1:Z = false
+.field public static final K1:Z
 
-.field public static final q1:Ljava/lang/String; = "DrawerLayout"
+.field public static final L1:Ljava/lang/String; = "androidx.drawerlayout.widget.DrawerLayout"
 
-.field public static final r1:[I
+.field public static M1:Z = false
 
-.field public static final s1:I = 0x0
+.field public static final s1:Ljava/lang/String; = "DrawerLayout"
 
-.field public static final t1:I = 0x1
+.field public static final t1:[I
 
-.field public static final u1:I = 0x2
+.field public static final u1:I = 0x0
 
-.field public static final v1:I = 0x0
+.field public static final v1:I = 0x1
 
-.field public static final w1:I = 0x1
+.field public static final w1:I = 0x2
 
-.field public static final x1:I = 0x2
+.field public static final x1:I = 0x0
 
-.field public static final y1:I = 0x3
+.field public static final y1:I = 0x1
 
-.field public static final z1:I = 0x40
+.field public static final z1:I = 0x2
 
 
 # instance fields
 .field public K0:I
 
-.field public V0:I
+.field public X0:I
 
-.field public W0:Z
+.field public Y0:Z
 
-.field public X0:Landroidx/drawerlayout/widget/DrawerLayout$e;
+.field public Z0:Landroidx/drawerlayout/widget/DrawerLayout$e;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public Y0:Ljava/util/List;
+.field public final a:Landroidx/drawerlayout/widget/DrawerLayout$d;
+
+.field public a1:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -86,19 +88,13 @@
     .end annotation
 .end field
 
-.field public Z0:F
-
-.field public final a:Landroidx/drawerlayout/widget/DrawerLayout$d;
-
-.field public a1:F
-
 .field public b:F
 
-.field public b1:Landroid/graphics/drawable/Drawable;
+.field public b1:F
 
 .field public c:I
 
-.field public c1:Landroid/graphics/drawable/Drawable;
+.field public c1:F
 
 .field public d:I
 
@@ -106,27 +102,27 @@
 
 .field public e:F
 
-.field public e1:Ljava/lang/CharSequence;
+.field public e1:Landroid/graphics/drawable/Drawable;
 
 .field public f:Landroid/graphics/Paint;
 
-.field public f1:Ljava/lang/CharSequence;
+.field public f1:Landroid/graphics/drawable/Drawable;
 
-.field public final g:Ly1/d;
+.field public final g:Lp2/d;
 
-.field public g1:Ljava/lang/Object;
+.field public g1:Ljava/lang/CharSequence;
 
-.field public final h:Ly1/d;
+.field public final h:Lp2/d;
 
-.field public h1:Z
+.field public h1:Ljava/lang/CharSequence;
 
 .field public final i:Landroidx/drawerlayout/widget/DrawerLayout$g;
 
-.field public i1:Landroid/graphics/drawable/Drawable;
+.field public i1:Ljava/lang/Object;
 
 .field public final j:Landroidx/drawerlayout/widget/DrawerLayout$g;
 
-.field public j1:Landroid/graphics/drawable/Drawable;
+.field public j1:Z
 
 .field public k:I
 
@@ -138,7 +134,11 @@
 
 .field public l1:Landroid/graphics/drawable/Drawable;
 
-.field public final m1:Ljava/util/ArrayList;
+.field public m1:Landroid/graphics/drawable/Drawable;
+
+.field public n1:Landroid/graphics/drawable/Drawable;
+
+.field public final o1:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -148,13 +148,13 @@
     .end annotation
 .end field
 
-.field public n1:Landroid/graphics/Rect;
-
-.field public o1:Landroid/graphics/Matrix;
-
 .field public p:Z
 
-.field public final p1:Lt1/f;
+.field public p1:Landroid/graphics/Rect;
+
+.field public q1:Landroid/graphics/Matrix;
+
+.field public final r1:Lk2/f;
 
 .field public u:I
 
@@ -174,7 +174,7 @@
     aput v2, v1, v3
 
     .line 1
-    sput-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->r1:[I
+    sput-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->t1:[I
 
     new-array v1, v0, [I
 
@@ -183,15 +183,15 @@
     aput v2, v1, v3
 
     .line 2
-    sput-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->G1:[I
+    sput-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->I1:[I
 
     .line 3
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    sput-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->H1:Z
+    sput-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->J1:Z
 
     .line 4
-    sput-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->I1:Z
+    sput-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
 
     const/16 v2, 0x1d
 
@@ -204,7 +204,7 @@
 
     .line 5
     :goto_0
-    sput-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
+    sput-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->M1:Z
 
     return-void
 .end method
@@ -293,28 +293,28 @@
     iput v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->K0:I
 
     .line 11
-    iput v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->V0:I
+    iput v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:I
 
     const/4 v2, 0x0
 
     .line 12
-    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Landroid/graphics/drawable/Drawable;
-
-    .line 13
-    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Landroid/graphics/drawable/Drawable;
-
-    .line 14
     iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
 
-    .line 15
+    .line 13
     iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
+
+    .line 14
+    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Landroid/graphics/drawable/Drawable;
+
+    .line 15
+    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/drawable/Drawable;
 
     .line 16
     new-instance v2, Landroidx/drawerlayout/widget/DrawerLayout$a;
 
     invoke-direct {v2, p0}, Landroidx/drawerlayout/widget/DrawerLayout$a;-><init>(Landroidx/drawerlayout/widget/DrawerLayout;)V
 
-    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->p1:Lt1/f;
+    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->r1:Lk2/f;
 
     const/high16 v2, 0x40000
 
@@ -368,38 +368,38 @@
     const/high16 v4, 0x3f800000    # 1.0f
 
     .line 22
-    invoke-static {p0, v4, v3}, Ly1/d;->p(Landroid/view/ViewGroup;FLy1/d$c;)Ly1/d;
+    invoke-static {p0, v4, v3}, Lp2/d;->p(Landroid/view/ViewGroup;FLp2/d$c;)Lp2/d;
 
     move-result-object v5
 
-    iput-object v5, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iput-object v5, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     .line 23
-    invoke-virtual {v5, v0}, Ly1/d;->T(I)V
+    invoke-virtual {v5, v0}, Lp2/d;->T(I)V
 
     .line 24
-    invoke-virtual {v5, v2}, Ly1/d;->U(F)V
+    invoke-virtual {v5, v2}, Lp2/d;->U(F)V
 
     .line 25
-    invoke-virtual {v3, v5}, Landroidx/drawerlayout/widget/DrawerLayout$g;->d(Ly1/d;)V
+    invoke-virtual {v3, v5}, Landroidx/drawerlayout/widget/DrawerLayout$g;->d(Lp2/d;)V
 
     .line 26
-    invoke-static {p0, v4, v1}, Ly1/d;->p(Landroid/view/ViewGroup;FLy1/d$c;)Ly1/d;
+    invoke-static {p0, v4, v1}, Lp2/d;->p(Landroid/view/ViewGroup;FLp2/d$c;)Lp2/d;
 
     move-result-object v3
 
-    iput-object v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iput-object v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     const/4 v4, 0x2
 
     .line 27
-    invoke-virtual {v3, v4}, Ly1/d;->T(I)V
+    invoke-virtual {v3, v4}, Lp2/d;->T(I)V
 
     .line 28
-    invoke-virtual {v3, v2}, Ly1/d;->U(F)V
+    invoke-virtual {v3, v2}, Lp2/d;->U(F)V
 
     .line 29
-    invoke-virtual {v1, v3}, Landroidx/drawerlayout/widget/DrawerLayout$g;->d(Ly1/d;)V
+    invoke-virtual {v1, v3}, Landroidx/drawerlayout/widget/DrawerLayout$g;->d(Lp2/d;)V
 
     .line 30
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setFocusableInTouchMode(Z)V
@@ -439,7 +439,7 @@
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setSystemUiVisibility(I)V
 
     .line 37
-    sget-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->r1:[I
+    sget-object v1, Landroidx/drawerlayout/widget/DrawerLayout;->t1:[I
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
@@ -451,7 +451,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iput-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -524,7 +524,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Ljava/util/ArrayList;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Ljava/util/ArrayList;
 
     return-void
 
@@ -763,7 +763,7 @@
     move-result p1
 
     .line 3
-    invoke-static {v0, p1}, Ls1/h;->d(II)I
+    invoke-static {v0, p1}, Landroidx/core/view/l;->d(II)I
 
     move-result p1
 
@@ -881,7 +881,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/Rect;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->p1:Landroid/graphics/Rect;
 
     if-nez v0, :cond_0
 
@@ -890,16 +890,16 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->p1:Landroid/graphics/Rect;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/Rect;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->p1:Landroid/graphics/Rect;
 
     invoke-virtual {p3, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
     .line 4
-    iget-object p3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/Rect;
+    iget-object p3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->p1:Landroid/graphics/Rect;
 
     float-to-int p1, p1
 
@@ -918,14 +918,14 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-static {p1}, Ld1/c;->h(Landroid/graphics/drawable/Drawable;)Z
+    invoke-static {p1}, Lw1/c;->h(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1, p2}, Ld1/c;->m(Landroid/graphics/drawable/Drawable;I)Z
+    invoke-static {p1, p2}, Lw1/c;->m(Landroid/graphics/drawable/Drawable;I)Z
 
     :cond_0
     return-void
@@ -1113,19 +1113,19 @@
     if-eqz p2, :cond_1
 
     .line 10
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v0
 
-    invoke-virtual {p2, p1, v1, v0}, Ly1/d;->X(Landroid/view/View;II)Z
+    invoke-virtual {p2, p1, v1, v0}, Lp2/d;->X(Landroid/view/View;II)Z
 
     goto :goto_0
 
     .line 11
     :cond_1
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
@@ -1143,7 +1143,7 @@
     move-result v1
 
     .line 13
-    invoke-virtual {p2, p1, v0, v1}, Ly1/d;->X(Landroid/view/View;II)Z
+    invoke-virtual {p2, p1, v0, v1}, Lp2/d;->X(Landroid/view/View;II)Z
 
     goto :goto_0
 
@@ -1203,7 +1203,7 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     if-nez v0, :cond_1
 
@@ -1227,7 +1227,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
@@ -1235,13 +1235,13 @@
     invoke-virtual {p0, v1, v0}, Landroidx/drawerlayout/widget/DrawerLayout;->I(Landroid/graphics/drawable/Drawable;I)V
 
     .line 4
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 
     .line 5
     :cond_0
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
@@ -1249,13 +1249,13 @@
     invoke-virtual {p0, v1, v0}, Landroidx/drawerlayout/widget/DrawerLayout;->I(Landroid/graphics/drawable/Drawable;I)V
 
     .line 7
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 
     .line 8
     :cond_1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -1271,7 +1271,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
@@ -1279,13 +1279,13 @@
     invoke-virtual {p0, v1, v0}, Landroidx/drawerlayout/widget/DrawerLayout;->I(Landroid/graphics/drawable/Drawable;I)V
 
     .line 4
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 
     .line 5
     :cond_0
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
@@ -1293,13 +1293,13 @@
     invoke-virtual {p0, v1, v0}, Landroidx/drawerlayout/widget/DrawerLayout;->I(Landroid/graphics/drawable/Drawable;I)V
 
     .line 7
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 
     .line 8
     :cond_1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -1308,7 +1308,7 @@
     .locals 1
 
     .line 1
-    sget-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->I1:Z
+    sget-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
 
     if-eqz v0, :cond_0
 
@@ -1320,14 +1320,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Landroid/graphics/drawable/Drawable;
 
     .line 3
     invoke-virtual {p0}, Landroidx/drawerlayout/widget/DrawerLayout;->Q()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Landroid/graphics/drawable/Drawable;
 
     return-void
 .end method
@@ -1341,10 +1341,10 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/Object;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Ljava/lang/Object;
 
     .line 2
-    iput-boolean p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h1:Z
+    iput-boolean p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Z
 
     if-nez p2, :cond_0
 
@@ -1380,7 +1380,7 @@
     move-result v0
 
     .line 2
-    invoke-static {p2, v0}, Ls1/h;->d(II)I
+    invoke-static {p2, v0}, Landroidx/core/view/l;->d(II)I
 
     move-result v0
 
@@ -1404,7 +1404,7 @@
 
     .line 3
     :cond_0
-    iput p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->V0:I
+    iput p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:I
 
     goto :goto_0
 
@@ -1430,16 +1430,16 @@
     if-ne v0, v1, :cond_4
 
     .line 7
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     goto :goto_1
 
     :cond_4
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     .line 8
     :goto_1
-    invoke-virtual {p2}, Ly1/d;->c()V
+    invoke-virtual {p2}, Lp2/d;->c()V
 
     :cond_5
     const/4 p2, 0x1
@@ -1548,7 +1548,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/d;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1561,7 +1561,7 @@
     .locals 2
 
     .line 1
-    sget-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->I1:Z
+    sget-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
 
     if-eqz v0, :cond_0
 
@@ -1575,7 +1575,7 @@
     if-ne v1, v0, :cond_1
 
     .line 2
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -1587,7 +1587,7 @@
     if-ne v1, v0, :cond_2
 
     .line 3
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -1599,7 +1599,7 @@
     if-ne v0, v1, :cond_3
 
     .line 4
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k1:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -1611,7 +1611,7 @@
     if-ne p2, v0, :cond_4
 
     .line 5
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->l1:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->n1:Landroid/graphics/drawable/Drawable;
 
     .line 6
     :goto_0
@@ -1637,7 +1637,7 @@
     move-result v0
 
     .line 2
-    invoke-static {p1, v0}, Ls1/h;->d(II)I
+    invoke-static {p1, v0}, Landroidx/core/view/l;->d(II)I
 
     move-result p1
 
@@ -1646,7 +1646,7 @@
     if-ne p1, v0, :cond_0
 
     .line 3
-    iput-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Ljava/lang/CharSequence;
+    iput-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/CharSequence;
 
     goto :goto_0
 
@@ -1656,7 +1656,7 @@
     if-ne p1, v0, :cond_1
 
     .line 4
-    iput-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Ljava/lang/CharSequence;
+    iput-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h1:Ljava/lang/CharSequence;
 
     :cond_1
     :goto_0
@@ -1696,9 +1696,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lt1/c$a;->z:Lt1/c$a;
+    sget-object v0, Lk2/c$a;->z:Lk2/c$a;
 
-    invoke-virtual {v0}, Lt1/c$a;->b()I
+    invoke-virtual {v0}, Lk2/c$a;->b()I
 
     move-result v1
 
@@ -1722,9 +1722,9 @@
     const/4 v1, 0x0
 
     .line 3
-    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->p1:Lt1/f;
+    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->r1:Lk2/f;
 
-    invoke-static {p1, v0, v1, v2}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lt1/c$a;Ljava/lang/CharSequence;Lt1/f;)V
+    invoke-static {p1, v0, v1, v2}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lk2/c$a;Ljava/lang/CharSequence;Lk2/f;)V
 
     :cond_0
     return-void
@@ -1743,7 +1743,7 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     if-nez v0, :cond_1
 
@@ -1752,11 +1752,11 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     .line 3
     :cond_1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1883,7 +1883,7 @@
 
     .line 7
     :cond_1
-    iget-object v5, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Ljava/util/ArrayList;
+    iget-object v5, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1897,7 +1897,7 @@
     if-nez v3, :cond_5
 
     .line 8
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1907,7 +1907,7 @@
     if-ge v1, v0, :cond_5
 
     .line 9
-    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Ljava/util/ArrayList;
+    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1932,7 +1932,7 @@
 
     .line 12
     :cond_5
-    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->m1:Ljava/util/ArrayList;
+    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
@@ -1978,7 +1978,7 @@
 
     .line 6
     :goto_1
-    sget-boolean p2, Landroidx/drawerlayout/widget/DrawerLayout;->H1:Z
+    sget-boolean p2, Landroidx/drawerlayout/widget/DrawerLayout;->J1:Z
 
     if-nez p2, :cond_2
 
@@ -1995,7 +1995,7 @@
     .locals 9
 
     .line 1
-    iget-boolean v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iget-boolean v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     if-nez v0, :cond_1
 
@@ -2047,7 +2047,7 @@
     const/4 v0, 0x1
 
     .line 7
-    iput-boolean v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iput-boolean v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     :cond_1
     return-void
@@ -2057,16 +2057,16 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
-    invoke-virtual {v0}, Ly1/d;->F()I
+    invoke-virtual {v0}, Lp2/d;->F()I
 
     move-result v0
 
     .line 2
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
-    invoke-virtual {v1}, Ly1/d;->F()I
+    invoke-virtual {v1}, Lp2/d;->F()I
 
     move-result v1
 
@@ -2144,7 +2144,7 @@
     iput v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->k:I
 
     .line 9
-    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     if-eqz p1, :cond_6
 
@@ -2159,7 +2159,7 @@
     if-ltz p1, :cond_6
 
     .line 11
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2278,18 +2278,18 @@
     iput v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->e:F
 
     .line 5
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ly1/d;->o(Z)Z
+    invoke-virtual {v0, v1}, Lp2/d;->o(Z)Z
 
     move-result v0
 
     .line 6
-    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
-    invoke-virtual {v2, v1}, Ly1/d;->o(Z)Z
+    invoke-virtual {v2, v1}, Lp2/d;->o(Z)Z
 
     move-result v1
 
@@ -2622,7 +2622,7 @@
 
     .line 20
     :cond_5
-    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Landroid/graphics/drawable/Drawable;
 
     const/high16 v4, 0x437f0000    # 255.0f
 
@@ -2638,7 +2638,7 @@
     if-eqz v3, :cond_6
 
     .line 22
-    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -2650,9 +2650,9 @@
     move-result v7
 
     .line 24
-    iget-object v8, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v8, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
-    invoke-virtual {v8}, Ly1/d;->B()I
+    invoke-virtual {v8}, Lp2/d;->B()I
 
     move-result v8
 
@@ -2672,7 +2672,7 @@
     move-result v5
 
     .line 26
-    iget-object v6, v0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:Landroid/graphics/drawable/Drawable;
+    iget-object v6, v0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getTop()I
 
@@ -2689,7 +2689,7 @@
     invoke-virtual {v6, v7, v8, v3, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 29
-    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Landroid/graphics/drawable/Drawable;
 
     mul-float/2addr v5, v4
 
@@ -2698,7 +2698,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     .line 30
-    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -2706,7 +2706,7 @@
 
     .line 31
     :cond_6
-    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_7
 
@@ -2720,7 +2720,7 @@
     if-eqz v3, :cond_7
 
     .line 33
-    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
+    iget-object v3, v0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -2739,9 +2739,9 @@
     sub-int/2addr v8, v7
 
     .line 36
-    iget-object v10, v0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v10, v0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
-    invoke-virtual {v10}, Ly1/d;->B()I
+    invoke-virtual {v10}, Lp2/d;->B()I
 
     move-result v10
 
@@ -2761,7 +2761,7 @@
     move-result v5
 
     .line 38
-    iget-object v6, v0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
+    iget-object v6, v0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Landroid/graphics/drawable/Drawable;
 
     sub-int v3, v7, v3
 
@@ -2778,7 +2778,7 @@
     invoke-virtual {v6, v3, v8, v7, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 41
-    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Landroid/graphics/drawable/Drawable;
 
     mul-float/2addr v5, v4
 
@@ -2787,7 +2787,7 @@
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     .line 42
-    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -2912,7 +2912,7 @@
     if-eqz p2, :cond_1
 
     .line 8
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -2926,13 +2926,13 @@
     move-result v1
 
     .line 10
-    invoke-virtual {p2, p1, v0, v1}, Ly1/d;->X(Landroid/view/View;II)Z
+    invoke-virtual {p2, p1, v0, v1}, Lp2/d;->X(Landroid/view/View;II)Z
 
     goto :goto_0
 
     .line 11
     :cond_1
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
@@ -2942,7 +2942,7 @@
 
     move-result v1
 
-    invoke-virtual {p2, p1, v0, v1}, Ly1/d;->X(Landroid/view/View;II)Z
+    invoke-virtual {p2, p1, v0, v1}, Lp2/d;->X(Landroid/view/View;II)Z
 
     goto :goto_0
 
@@ -3063,7 +3063,7 @@
     .locals 1
 
     .line 1
-    sget-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->I1:Z
+    sget-boolean v0, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
 
     if-eqz v0, :cond_0
 
@@ -3084,7 +3084,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -3160,7 +3160,7 @@
     if-eqz v7, :cond_1
 
     .line 7
-    iget-object v7, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v7, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     neg-int v6, v6
 
@@ -3170,7 +3170,7 @@
     move-result v8
 
     .line 9
-    invoke-virtual {v7, v4, v6, v8}, Ly1/d;->X(Landroid/view/View;II)Z
+    invoke-virtual {v7, v4, v6, v8}, Lp2/d;->X(Landroid/view/View;II)Z
 
     move-result v4
 
@@ -3178,7 +3178,7 @@
 
     .line 10
     :cond_1
-    iget-object v6, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v6, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     .line 11
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
@@ -3190,7 +3190,7 @@
     move-result v8
 
     .line 12
-    invoke-virtual {v6, v4, v7, v8}, Ly1/d;->X(Landroid/view/View;II)Z
+    invoke-virtual {v6, v4, v7, v8}, Lp2/d;->X(Landroid/view/View;II)Z
 
     move-result v4
 
@@ -3264,7 +3264,7 @@
     iput v1, v0, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->d:I
 
     .line 4
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
@@ -3279,7 +3279,7 @@
     if-ltz v0, :cond_0
 
     .line 6
-    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3346,7 +3346,7 @@
     iput v2, v0, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->d:I
 
     .line 4
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
@@ -3361,7 +3361,7 @@
     if-ltz v0, :cond_0
 
     .line 6
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3402,7 +3402,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
@@ -3417,7 +3417,7 @@
     if-ltz v0, :cond_0
 
     .line 3
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Ljava/util/List;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3520,7 +3520,7 @@
     move-result v0
 
     .line 2
-    invoke-static {p1, v0}, Ls1/h;->d(II)I
+    invoke-static {p1, v0}, Landroidx/core/view/l;->d(II)I
 
     move-result p1
 
@@ -3645,16 +3645,16 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-boolean v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h1:Z
+    iget-boolean v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->j1:Z
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/Object;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
@@ -3676,7 +3676,7 @@
     if-lez v0, :cond_1
 
     .line 5
-    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
@@ -3685,7 +3685,7 @@
     invoke-virtual {v2, v1, v1, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 6
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -3702,16 +3702,16 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
-    invoke-virtual {v1, p1}, Ly1/d;->W(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v1, p1}, Lp2/d;->W(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
-    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     .line 3
-    invoke-virtual {v2, p1}, Ly1/d;->W(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v2, p1}, Lp2/d;->W(Landroid/view/MotionEvent;)Z
 
     move-result v2
 
@@ -3737,9 +3737,9 @@
 
     .line 4
     :cond_0
-    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
-    invoke-virtual {p1, v4}, Ly1/d;->f(I)Z
+    invoke-virtual {p1, v4}, Lp2/d;->f(I)Z
 
     move-result p1
 
@@ -3762,7 +3762,7 @@
     invoke-virtual {p0, v2}, Landroidx/drawerlayout/widget/DrawerLayout;->i(Z)V
 
     .line 8
-    iput-boolean v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iput-boolean v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     :cond_2
     :goto_0
@@ -3782,10 +3782,10 @@
     move-result p1
 
     .line 11
-    iput v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Z0:F
+    iput v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:F
 
     .line 12
-    iput p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:F
+    iput p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:F
 
     .line 13
     iget v4, p0, Landroidx/drawerlayout/widget/DrawerLayout;->e:F
@@ -3797,13 +3797,13 @@
     if-lez v4, :cond_4
 
     .line 14
-    iget-object v4, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v4, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     float-to-int v0, v0
 
     float-to-int p1, p1
 
-    invoke-virtual {v4, v0, p1}, Ly1/d;->v(II)Landroid/view/View;
+    invoke-virtual {v4, v0, p1}, Lp2/d;->v(II)Landroid/view/View;
 
     move-result-object p1
 
@@ -3825,7 +3825,7 @@
 
     .line 16
     :goto_1
-    iput-boolean v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iput-boolean v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     :goto_2
     if-nez v1, :cond_6
@@ -3839,7 +3839,7 @@
 
     if-nez p1, :cond_6
 
-    iget-boolean p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iget-boolean p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     if-eqz p1, :cond_5
 
@@ -4219,7 +4219,7 @@
 
     .line 30
     :cond_b
-    sget-boolean v1, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
+    sget-boolean v1, Landroidx/drawerlayout/widget/DrawerLayout;->M1:Z
 
     if-eqz v1, :cond_c
 
@@ -4236,43 +4236,43 @@
     move-result-object v1
 
     .line 33
-    invoke-virtual {v1}, Landroidx/core/view/WindowInsetsCompat;->n()Lc1/l;
+    invoke-virtual {v1}, Landroidx/core/view/WindowInsetsCompat;->n()Lv1/k;
 
     move-result-object v1
 
     .line 34
-    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     .line 35
-    invoke-virtual {v2}, Ly1/d;->A()I
+    invoke-virtual {v2}, Lp2/d;->A()I
 
     move-result v3
 
-    iget v4, v1, Lc1/l;->a:I
+    iget v4, v1, Lv1/k;->a:I
 
     invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
     .line 36
-    invoke-virtual {v2, v3}, Ly1/d;->S(I)V
+    invoke-virtual {v2, v3}, Lp2/d;->S(I)V
 
     .line 37
-    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v2, v0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
     .line 38
-    invoke-virtual {v2}, Ly1/d;->A()I
+    invoke-virtual {v2}, Lp2/d;->A()I
 
     move-result v3
 
-    iget v1, v1, Lc1/l;->c:I
+    iget v1, v1, Lv1/k;->c:I
 
     invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
     .line 39
-    invoke-virtual {v2, v1}, Ly1/d;->S(I)V
+    invoke-virtual {v2, v1}, Lp2/d;->S(I)V
 
     :cond_c
     const/4 v1, 0x0
@@ -4346,7 +4346,7 @@
     invoke-virtual {v0, v3, v4}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     .line 7
-    iget-object v1, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/Object;
+    iget-object v1, v0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -4416,7 +4416,7 @@
     .line 13
     iget v13, v11, Landroidx/drawerlayout/widget/DrawerLayout$LayoutParams;->a:I
 
-    invoke-static {v13, v5}, Ls1/h;->d(II)I
+    invoke-static {v13, v5}, Landroidx/core/view/l;->d(II)I
 
     move-result v13
 
@@ -4430,7 +4430,7 @@
     if-eqz v14, :cond_7
 
     .line 15
-    iget-object v14, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/Object;
+    iget-object v14, v0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Ljava/lang/Object;
 
     check-cast v14, Landroid/view/WindowInsets;
 
@@ -4490,7 +4490,7 @@
 
     .line 25
     :cond_7
-    iget-object v12, v0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/Object;
+    iget-object v12, v0, Landroidx/drawerlayout/widget/DrawerLayout;->i1:Ljava/lang/Object;
 
     check-cast v12, Landroid/view/WindowInsets;
 
@@ -4629,7 +4629,7 @@
     if-eqz v12, :cond_12
 
     .line 43
-    sget-boolean v12, Landroidx/drawerlayout/widget/DrawerLayout;->I1:Z
+    sget-boolean v12, Landroidx/drawerlayout/widget/DrawerLayout;->K1:Z
 
     if-eqz v12, :cond_c
 
@@ -5005,7 +5005,7 @@
     iput v0, v1, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->d:I
 
     .line 11
-    iget v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->V0:I
+    iget v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:I
 
     iput v0, v1, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->e:I
 
@@ -5016,14 +5016,14 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
-    invoke-virtual {v0, p1}, Ly1/d;->M(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Lp2/d;->M(Landroid/view/MotionEvent;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Ly1/d;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h:Lp2/d;
 
-    invoke-virtual {v0, p1}, Ly1/d;->M(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Lp2/d;->M(Landroid/view/MotionEvent;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -5051,7 +5051,7 @@
     invoke-virtual {p0, v2}, Landroidx/drawerlayout/widget/DrawerLayout;->i(Z)V
 
     .line 5
-    iput-boolean v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iput-boolean v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     goto :goto_0
 
@@ -5067,13 +5067,13 @@
     move-result p1
 
     .line 8
-    iget-object v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
     float-to-int v4, v0
 
     float-to-int v5, p1
 
-    invoke-virtual {v3, v4, v5}, Ly1/d;->v(II)Landroid/view/View;
+    invoke-virtual {v3, v4, v5}, Lp2/d;->v(II)Landroid/view/View;
 
     move-result-object v3
 
@@ -5087,19 +5087,19 @@
     if-eqz v3, :cond_2
 
     .line 10
-    iget v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Z0:F
+    iget v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:F
 
     sub-float/2addr v0, v3
 
     .line 11
-    iget v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:F
+    iget v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:F
 
     sub-float/2addr p1, v3
 
     .line 12
-    iget-object v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Ly1/d;
+    iget-object v3, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g:Lp2/d;
 
-    invoke-virtual {v3}, Ly1/d;->E()I
+    invoke-virtual {v3}, Lp2/d;->E()I
 
     move-result v3
 
@@ -5154,13 +5154,13 @@
     move-result p1
 
     .line 18
-    iput v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Z0:F
+    iput v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:F
 
     .line 19
-    iput p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->a1:F
+    iput p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->c1:F
 
     .line 20
-    iput-boolean v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->W0:Z
+    iput-boolean v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Y0:Z
 
     :goto_0
     return v2
@@ -5249,7 +5249,7 @@
 
     .line 2
     :cond_0
-    iget p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->V0:I
+    iget p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:I
 
     if-eq p1, v1, :cond_1
 
@@ -5307,7 +5307,7 @@
     if-nez v0, :cond_8
 
     .line 7
-    iget p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->V0:I
+    iget p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:I
 
     goto :goto_2
 
@@ -5336,7 +5336,7 @@
     goto :goto_3
 
     :cond_b
-    iget p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->V0:I
+    iget p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:I
 
     :goto_3
     if-eq p1, v1, :cond_c
@@ -5450,7 +5450,7 @@
     move-result v0
 
     .line 2
-    invoke-static {p1, v0}, Ls1/h;->d(II)I
+    invoke-static {p1, v0}, Landroidx/core/view/l;->d(II)I
 
     move-result p1
 
@@ -5459,7 +5459,7 @@
     if-ne p1, v0, :cond_0
 
     .line 3
-    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->e1:Ljava/lang/CharSequence;
+    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->g1:Ljava/lang/CharSequence;
 
     return-object p1
 
@@ -5469,7 +5469,7 @@
     if-ne p1, v0, :cond_1
 
     .line 4
-    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->f1:Ljava/lang/CharSequence;
+    iget-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->h1:Ljava/lang/CharSequence;
 
     return-object p1
 
@@ -5527,7 +5527,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:Landroidx/drawerlayout/widget/DrawerLayout$e;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Z0:Landroidx/drawerlayout/widget/DrawerLayout$e;
 
     if-eqz v0, :cond_0
 
@@ -5542,7 +5542,7 @@
 
     .line 4
     :cond_1
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->X0:Landroidx/drawerlayout/widget/DrawerLayout$e;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->Z0:Landroidx/drawerlayout/widget/DrawerLayout$e;
 
     return-void
 .end method
@@ -5589,7 +5589,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/d;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -5599,7 +5599,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     .line 4
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
@@ -5615,7 +5615,7 @@
     .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
@@ -5635,7 +5635,7 @@
 
     invoke-direct {v0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->b1:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->d1:Landroid/graphics/drawable/Drawable;
 
     .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
@@ -5660,7 +5660,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Ls1/h;->d(II)I
+    invoke-static {p1, v0}, Landroidx/core/view/l;->d(II)I
 
     move-result p1
 
@@ -5732,7 +5732,7 @@
     if-nez v0, :cond_1
 
     .line 7
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Landroid/graphics/Matrix;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->q1:Landroid/graphics/Matrix;
 
     if-nez v0, :cond_0
 
@@ -5741,16 +5741,16 @@
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Landroid/graphics/Matrix;
+    iput-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->q1:Landroid/graphics/Matrix;
 
     .line 9
     :cond_0
-    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Landroid/graphics/Matrix;
+    iget-object v0, p0, Landroidx/drawerlayout/widget/DrawerLayout;->q1:Landroid/graphics/Matrix;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
     .line 10
-    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->o1:Landroid/graphics/Matrix;
+    iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->q1:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->transform(Landroid/graphics/Matrix;)V
 

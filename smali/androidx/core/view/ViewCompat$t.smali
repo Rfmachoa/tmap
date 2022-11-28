@@ -94,7 +94,7 @@
     return-object p0
 .end method
 
-.method public static c(Landroid/view/View;[Ljava/lang/String;Ls1/f0;)V
+.method public static c(Landroid/view/View;[Ljava/lang/String;Landroidx/core/view/j0;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -104,7 +104,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p2    # Ls1/f0;
+    .param p2    # Landroidx/core/view/j0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -124,7 +124,7 @@
     :cond_0
     new-instance v0, Landroidx/core/view/ViewCompat$u;
 
-    invoke-direct {v0, p2}, Landroidx/core/view/ViewCompat$u;-><init>(Ls1/f0;)V
+    invoke-direct {v0, p2}, Landroidx/core/view/ViewCompat$u;-><init>(Landroidx/core/view/j0;)V
 
     invoke-virtual {p0, p1, v0}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
 

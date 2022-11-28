@@ -101,7 +101,7 @@
 
     iget-object v3, p1, Lcom/amplifyframework/core/model/query/QuerySortBy;->modelName:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -112,7 +112,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/query/QuerySortBy;->field:Ljava/lang/String;
 
     .line 4
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -123,7 +123,7 @@
     iget-object p1, p1, Lcom/amplifyframework/core/model/query/QuerySortBy;->sortOrder:Lcom/amplifyframework/core/model/query/QuerySortOrder;
 
     .line 5
-    invoke-static {v2, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -201,7 +201,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/material/datepicker/CompositeDateValidator$3;
+.class Lcom/google/android/material/datepicker/CompositeDateValidator$3;
 .super Ljava/lang/Object;
 .source "CompositeDateValidator.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -97,7 +97,7 @@
     :goto_0
     new-instance v1, Lcom/google/android/material/datepicker/CompositeDateValidator;
 
-    invoke-static {v0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

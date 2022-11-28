@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/ads/MediaContent;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # virtual methods
@@ -19,6 +19,8 @@
 .end method
 
 .method public abstract getVideoController()Lcom/google/android/gms/ads/VideoController;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract hasVideoContent()Z
@@ -29,4 +31,9 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+.end method
+
+.method public abstract zza()Lcom/google/android/gms/internal/ads/zzbmy;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 .end method

@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/signin/RevocationBoundService;
 .super Landroid/app/Service;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # direct methods
@@ -14,8 +15,14 @@
 
 
 # virtual methods
-.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 3
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -30,7 +37,7 @@
 
     const-string v1, "RevocationService"
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     .line 2
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -45,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    goto :goto_1
-
-    :cond_0
-    const-string v0, "Unknown action sent to RevocationBoundService: "
+    goto :goto_0
 
     .line 3
+    :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -59,32 +64,20 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_1
+    const-string v0, "Unknown action sent to RevocationBoundService: "
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Ljava/lang/String;
-
-    invoke-direct {p1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
     invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
     return-object p1
 
-    :cond_2
-    :goto_1
+    :cond_1
+    :goto_0
     const/4 v0, 0x2
 
     .line 4
@@ -92,9 +85,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
-
-    const-string v0, "RevocationBoundService handling "
+    if-eqz v0, :cond_2
 
     .line 5
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -105,31 +96,19 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_3
+    const-string v0, "RevocationBoundService handling "
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_2
-
-    :cond_3
-    new-instance p1, Ljava/lang/String;
-
-    invoke-direct {p1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_2
     invoke-static {v1, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
-    :cond_4
-    new-instance p1, Lcom/google/android/gms/auth/api/signin/internal/zzw;
+    :cond_2
+    new-instance p1, Lcom/google/android/gms/auth/api/signin/internal/zbt;
 
-    invoke-direct {p1, p0}, Lcom/google/android/gms/auth/api/signin/internal/zzw;-><init>(Landroid/content/Context;)V
+    .line 6
+    invoke-direct {p1, p0}, Lcom/google/android/gms/auth/api/signin/internal/zbt;-><init>(Landroid/content/Context;)V
 
     return-object p1
 .end method

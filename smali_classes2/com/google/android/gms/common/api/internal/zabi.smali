@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zabi;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/zaca;
@@ -9,28 +9,8 @@
 
 # instance fields
 .field public final zaa:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$AnyClientKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public final zab:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$AnyClientKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public final zac:Lcom/google/android/gms/common/internal/ClientSettings;
     .annotation build Landroidx/annotation/Nullable;
@@ -38,29 +18,9 @@
 .end field
 
 .field public final zad:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public final zae:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "+",
-            "Lcom/google/android/gms/signin/zae;",
-            "Lcom/google/android/gms/signin/SignInOptions;",
-            ">;"
-        }
     .end annotation
 .end field
 
@@ -102,37 +62,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Lcom/google/android/gms/common/api/internal/zabe;",
-            "Ljava/util/concurrent/locks/Lock;",
-            "Landroid/os/Looper;",
-            "Lcom/google/android/gms/common/GoogleApiAvailabilityLight;",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$AnyClientKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;",
-            "Lcom/google/android/gms/common/internal/ClientSettings;",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Ljava/lang/Boolean;",
-            ">;",
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "+",
-            "Lcom/google/android/gms/signin/zae;",
-            "Lcom/google/android/gms/signin/SignInOptions;",
-            ">;",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/internal/zat;",
-            ">;",
-            "Lcom/google/android/gms/common/api/internal/zabz;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -318,14 +247,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;Z)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
@@ -552,15 +473,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;)",
-            "Lcom/google/android/gms/common/ConnectionResult;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "mLock"
     .end annotation
@@ -632,18 +544,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<A::",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "R::",
-            "Lcom/google/android/gms/common/api/Result;",
-            "T:",
-            "Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl<",
-            "TR;TA;>;>(TT;)TT;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "mLock"
     .end annotation
@@ -665,18 +565,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<A::",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "T:",
-            "Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl<",
-            "+",
-            "Lcom/google/android/gms/common/api/Result;",
-            "TA;>;>(TT;)TT;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "mLock"
     .end annotation
@@ -966,7 +854,6 @@
 
     move-result-object v0
 
-    .line 2
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v1
@@ -983,7 +870,7 @@
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabi;->zad:Ljava/util/Map;
 
-    .line 3
+    .line 2
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -1005,7 +892,7 @@
 
     check-cast v2, Lcom/google/android/gms/common/api/Api;
 
-    .line 4
+    .line 3
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v3
@@ -1024,7 +911,7 @@
 
     iget-object v3, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaa:Ljava/util/Map;
 
-    .line 5
+    .line 4
     invoke-virtual {v2}, Lcom/google/android/gms/common/api/Api;->zab()Lcom/google/android/gms/common/api/Api$AnyClientKey;
 
     move-result-object v2
@@ -1041,7 +928,7 @@
 
     check-cast v2, Lcom/google/android/gms/common/api/Api$Client;
 
-    .line 6
+    .line 5
     invoke-interface {v2, v0, p2, p3, p4}, Lcom/google/android/gms/common/api/Api$Client;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0

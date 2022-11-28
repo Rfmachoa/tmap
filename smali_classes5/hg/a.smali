@@ -1,88 +1,117 @@
-.class public Lhg/a;
-.super Ljava/lang/Object;
-.source "DisallowIdentityContentLengthStrategy.java"
-
-# interfaces
-.implements Lzf/e;
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
-
-
-# static fields
-.field public static final d:Lhg/a;
-
-
-# instance fields
-.field public final c:Lzf/e;
+.class public final Lhg/a;
+.super Lfg/e;
+.source "EventMessageDecoder.java"
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
-
-    .line 1
-    new-instance v0, Lhg/a;
-
-    new-instance v1, Lhg/d;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lhg/d;-><init>(I)V
-
-    invoke-direct {v0, v1}, Lhg/a;-><init>(Lzf/e;)V
-
-    sput-object v0, Lhg/a;->d:Lhg/a;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzf/e;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lhg/a;->c:Lzf/e;
+    invoke-direct {p0}, Lfg/e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ldf/p;)J
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcz/msebera/android/httpclient/HttpException;
-        }
-    .end annotation
+.method public b(Lfg/c;Ljava/nio/ByteBuffer;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Lhg/a;->c:Lzf/e;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
 
-    invoke-interface {v0, p1}, Lzf/e;->a(Ldf/p;)J
+    const/4 v0, 0x1
 
-    move-result-wide v0
+    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
 
-    const-wide/16 v2, -0x1
+    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    cmp-long p1, v0, v2
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
 
-    if-eqz p1, :cond_0
+    move-result-object v2
 
-    return-wide v0
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->limit()I
+
+    move-result p2
+
+    invoke-direct {v1, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([BI)V
+
+    invoke-virtual {p0, v1}, Lhg/a;->c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;
+
+    move-result-object p2
+
+    const/4 v1, 0x0
+
+    aput-object p2, v0, v1
+
+    invoke-direct {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;-><init>([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)V
+
+    return-object p1
+.end method
+
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;
+    .locals 9
+
+    .line 1
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->A()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Ljava/lang/String;
 
     .line 2
-    :cond_0
-    new-instance p1, Lcz/msebera/android/httpclient/ProtocolException;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->A()Ljava/lang/String;
 
-    const-string v0, "Identity transfer encoding cannot be used"
+    move-result-object v0
 
-    invoke-direct {p1, v0}, Lcz/msebera/android/httpclient/ProtocolException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw p1
+    move-result-object v0
+
+    move-object v3, v0
+
+    check-cast v3, Ljava/lang/String;
+
+    .line 3
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->z()J
+
+    move-result-wide v4
+
+    .line 4
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->z()J
+
+    move-result-wide v6
+
+    .line 5
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
+
+    move-result p1
+
+    invoke-static {v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v8
+
+    .line 6
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;
+
+    move-object v1, p1
+
+    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;-><init>(Ljava/lang/String;Ljava/lang/String;JJ[B)V
+
+    return-object p1
 .end method

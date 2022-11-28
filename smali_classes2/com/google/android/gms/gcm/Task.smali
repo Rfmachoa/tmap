@@ -286,7 +286,7 @@
 
     const-string v2, "Invalid required URI port: "
 
-    invoke-static {v1, v2, p0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, p0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -541,7 +541,7 @@
 
     const-string v1, "Extras exceeding maximum size(10240 bytes): "
 
-    invoke-static {v0, v1, v2}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

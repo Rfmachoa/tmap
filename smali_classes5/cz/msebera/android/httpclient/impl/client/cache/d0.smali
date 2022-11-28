@@ -3,7 +3,7 @@
 .source "ManagedHttpCacheStorage.java"
 
 # interfaces
-.implements Lhf/e;
+.implements Llh/e;
 .implements Ljava/io/Closeable;
 
 
@@ -84,7 +84,72 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;
+.method public a(Ljava/lang/String;Llh/f;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "URL"
+
+    .line 1
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string v0, "Callback"
+
+    .line 2
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
+    invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->k()V
+
+    .line 4
+    monitor-enter p0
+
+    .line 5
+    :try_start_0
+    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->a:Lcz/msebera/android/httpclient/impl/client/cache/CacheMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;
+
+    .line 6
+    invoke-interface {p2, v0}, Llh/f;->a(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;
+
+    move-result-object p2
+
+    .line 7
+    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->a:Lcz/msebera/android/httpclient/impl/client/cache/CacheMap;
+
+    invoke-virtual {v1, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    if-eq v0, p2, :cond_0
+
+    .line 8
+    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->s(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
+
+    .line 9
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public b(Ljava/lang/String;)Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -95,7 +160,7 @@
     const-string v0, "URL"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->k()V
@@ -128,7 +193,7 @@
     throw p1
 .end method
 
-.method public b(Ljava/lang/String;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
+.method public c(Ljava/lang/String;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -139,12 +204,12 @@
     const-string v0, "URL"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "Cache entry"
 
     .line 2
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->k()V
@@ -159,7 +224,7 @@
     invoke-virtual {v0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
-    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->u(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
+    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->s(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
 
     .line 7
     monitor-exit p0
@@ -176,7 +241,16 @@
     throw p1
 .end method
 
-.method public c(Ljava/lang/String;)V
+.method public close()V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->shutdown()V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -187,7 +261,7 @@
     const-string v0, "URL"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->k()V
@@ -216,81 +290,7 @@
     throw p1
 .end method
 
-.method public close()V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->shutdown()V
-
-    return-void
-.end method
-
-.method public d(Ljava/lang/String;Lhf/f;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const-string v0, "URL"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "Callback"
-
-    .line 2
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->k()V
-
-    .line 4
-    monitor-enter p0
-
-    .line 5
-    :try_start_0
-    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->a:Lcz/msebera/android/httpclient/impl/client/cache/CacheMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;
-
-    .line 6
-    invoke-interface {p2, v0}, Lhf/f;->a(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;
-
-    move-result-object p2
-
-    .line 7
-    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->a:Lcz/msebera/android/httpclient/impl/client/cache/CacheMap;
-
-    invoke-virtual {v1, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eq v0, p2, :cond_0
-
-    .line 8
-    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/client/cache/d0;->u(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
-
-    .line 9
-    :cond_0
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public f()V
+.method public g()V
     .locals 2
 
     .line 1
@@ -382,6 +382,32 @@
     throw v0
 .end method
 
+.method public final s(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getResource()Lcz/msebera/android/httpclient/client/cache/Resource;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    new-instance v0, Lcz/msebera/android/httpclient/impl/client/cache/h0;
+
+    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->b:Ljava/lang/ref/ReferenceQueue;
+
+    invoke-direct {v0, p1, v1}, Lcz/msebera/android/httpclient/impl/client/cache/h0;-><init>(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;Ljava/lang/ref/ReferenceQueue;)V
+
+    .line 3
+    iget-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->c:Ljava/util/Set;
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
 .method public shutdown()V
     .locals 3
 
@@ -471,31 +497,5 @@
 
     :cond_2
     :goto_2
-    return-void
-.end method
-
-.method public final u(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
-    .locals 2
-
-    .line 1
-    invoke-virtual {p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getResource()Lcz/msebera/android/httpclient/client/cache/Resource;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    new-instance v0, Lcz/msebera/android/httpclient/impl/client/cache/h0;
-
-    iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->b:Ljava/lang/ref/ReferenceQueue;
-
-    invoke-direct {v0, p1, v1}, Lcz/msebera/android/httpclient/impl/client/cache/h0;-><init>(Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;Ljava/lang/ref/ReferenceQueue;)V
-
-    .line 3
-    iget-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/d0;->c:Ljava/util/Set;
-
-    invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    :cond_0
     return-void
 .end method

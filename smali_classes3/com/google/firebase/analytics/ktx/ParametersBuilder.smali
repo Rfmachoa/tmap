@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/analytics/ktx/ParametersBuilder;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-analytics-ktx@@20.1.0"
+.source "com.google.firebase:firebase-analytics-ktx@@21.1.1"
 
 
 # annotations
@@ -33,8 +33,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x6,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 

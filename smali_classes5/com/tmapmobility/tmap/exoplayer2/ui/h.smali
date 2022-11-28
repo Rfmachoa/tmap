@@ -23,7 +23,7 @@
     const-string v2, " *"
 
     .line 1
-    invoke-static {v0, p0, v1, p0, v2}, Ls/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1, p0, v2}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -99,7 +99,7 @@
     const-string p0, "rgba(%d,%d,%d,%.3f)"
 
     .line 2
-    invoke-static {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->H(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 

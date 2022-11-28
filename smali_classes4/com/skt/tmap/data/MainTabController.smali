@@ -5,13 +5,13 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nMainTabController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainTabController.kt\ncom/skt/tmap/data/MainTabController\n+ 2 Menu.kt\nandroidx/core/view/MenuKt\n*L\n1#1,117:1\n56#2,4:118\n*E\n*S KotlinDebug\n*F\n+ 1 MainTabController.kt\ncom/skt/tmap/data/MainTabController\n*L\n65#1,4:118\n*E\n"
+    value = "SMAP\nMainTabController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MainTabController.kt\ncom/skt/tmap/data/MainTabController\n+ 2 Menu.kt\nandroidx/core/view/MenuKt\n*L\n1#1,121:1\n56#2,4:122\n*S KotlinDebug\n*F\n+ 1 MainTabController.kt\ncom/skt/tmap/data/MainTabController\n*L\n61#1:122,4\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010 \u001a\u00020\u001f\u00a2\u0006\u0004\u0008$\u0010%J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0012\u0010\t\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0002J\u0010\u0010\n\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000c\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u000e\u0010\u000e\u001a\u00020\u00042\u0006\u0010\r\u001a\u00020\u0008J\u000e\u0010\u000f\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u001e\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u0012J\u000e\u0010\u0016\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u0010R\u0018\u0010\u0017\u001a\u0004\u0018\u00010\u00088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010\u0018R\u0018\u0010\u001a\u001a\u0004\u0018\u00010\u00198\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001a\u0010\u001bR\u0018\u0010\u001c\u001a\u0004\u0018\u00010\u00198\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001c\u0010\u001bR\u0018\u0010\u001d\u001a\u0004\u0018\u00010\u00198\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u001bR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u00198\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u001bR\u0017\u0010 \u001a\u00020\u001f8\u0006\u00a2\u0006\u000c\n\u0004\u0008 \u0010!\u001a\u0004\u0008\"\u0010#\u00a8\u0006&"
+        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u00a2\u0006\u0004\u0008#\u0010$J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0012\u0010\t\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0002J\u0010\u0010\n\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000c\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u000e\u0010\u000e\u001a\u00020\u00042\u0006\u0010\r\u001a\u00020\u0008J\u000e\u0010\u000f\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u001e\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u0012J\u000e\u0010\u0016\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u0010J\u000e\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0010R\u0017\u0010\u0019\u001a\u00020\u00188\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0019\u0010\u001a\u001a\u0004\u0008\u001b\u0010\u001cR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u001fR\u0018\u0010 \u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008 \u0010\u001fR\u0018\u0010!\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008!\u0010\u001fR\u0018\u0010\"\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\"\u0010\u001f\u00a8\u0006%"
     }
     d2 = {
         "Lcom/skt/tmap/data/MainTabController;",
@@ -37,19 +37,18 @@
         "setBadge",
         "score",
         "updateDrivingScore",
-        "lastSelectedMenuItem",
-        "Landroid/view/MenuItem;",
+        "isBadgeVisible",
+        "Lcom/google/android/material/bottomnavigation/BottomNavigationView;",
+        "bottomNavigation",
+        "Lcom/google/android/material/bottomnavigation/BottomNavigationView;",
+        "getBottomNavigation",
+        "()Lcom/google/android/material/bottomnavigation/BottomNavigationView;",
         "Lcom/airbnb/lottie/LottieDrawable;",
         "homeTabSelected",
         "Lcom/airbnb/lottie/LottieDrawable;",
         "tNowTabSelected",
         "lifeTabSelected",
         "myTabSelected",
-        "Lcom/google/android/material/bottomnavigation/BottomNavigationView;",
-        "bottomNavigation",
-        "Lcom/google/android/material/bottomnavigation/BottomNavigationView;",
-        "getBottomNavigation",
-        "()Lcom/google/android/material/bottomnavigation/BottomNavigationView;",
         "<init>",
         "(Lcom/google/android/material/bottomnavigation/BottomNavigationView;)V",
         "tmap_android_phoneKUShip"
@@ -57,8 +56,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -69,17 +68,30 @@
     .end annotation
 .end field
 
-.field private drivingScore:Llb/u1;
+.field private drivingScore:Lid/k2;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private homeTabSelected:Lcom/airbnb/lottie/LottieDrawable;
-
-.field private lastSelectedMenuItem:Landroid/view/MenuItem;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private lifeTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private myTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private tNowTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -108,7 +120,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
-    invoke-virtual {v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->getMenu()Landroid/view/Menu;
+    invoke-virtual {v0}, Lcom/google/android/material/navigation/NavigationBarView;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
@@ -133,7 +145,7 @@
 
     const-string v4, "getItem(index)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {v3}, Landroid/view/MenuItem;->getItemId()I
@@ -170,15 +182,15 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/skt/tmap/util/c0;->a:Lcom/skt/tmap/util/c0$a;
+    sget-object v1, Lcom/skt/tmap/util/e0;->a:Lcom/skt/tmap/util/e0$a;
 
     iget-object v2, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "tab_home_ani.json"
+    const-string v4, "tab_home_ani.json"
 
-    invoke-virtual {v1, p1, v2, v4, v3}, Lcom/skt/tmap/util/c0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
+    invoke-virtual {v1, p1, v2, v4, v3}, Lcom/skt/tmap/util/e0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
 
     move-result-object v2
 
@@ -187,7 +199,7 @@
     .line 3
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const v3, 0x7f080b04
+    const v3, 0x7f080a86
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -195,11 +207,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v3, "context.getDrawable(R.drawable.tap_home_off)!!"
-
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/c0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/e0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object p1
 
@@ -222,15 +230,15 @@
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v1, Lcom/skt/tmap/util/c0;->a:Lcom/skt/tmap/util/c0$a;
+    sget-object v1, Lcom/skt/tmap/util/e0;->a:Lcom/skt/tmap/util/e0$a;
 
     iget-object v2, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
-    const-string/jumbo v3, "tab_drivinglife_ani.json"
+    const-string v3, "tab_drivinglife_ani.json"
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, p1, v2, v3, v4}, Lcom/skt/tmap/util/c0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
+    invoke-virtual {v1, p1, v2, v3, v4}, Lcom/skt/tmap/util/e0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
 
     move-result-object v2
 
@@ -239,7 +247,7 @@
     .line 3
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const v3, 0x7f080b03
+    const v3, 0x7f080a85
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -247,18 +255,14 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v3, "context.getDrawable(R.dr\u2026le.tap_drivinglife_off)!!"
-
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/c0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/e0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object p1
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
 
     .line 4
-    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Llb/u1;
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Lid/k2;
 
     if-nez p1, :cond_1
 
@@ -271,18 +275,18 @@
 
     const-string v0, "null cannot be cast to non-null type com.google.android.material.bottomnavigation.BottomNavigationMenuView"
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;
 
-    const/4 v0, 0x2
+    const/4 v0, 0x3
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v1, "bottomNavigationMenuView.getChildAt(2)"
+    const-string v1, "bottomNavigationMenuView.getChildAt(3)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -297,26 +301,28 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d011a
+    const v2, 0x7f0d0122
 
     invoke-static {v1, v2, p1, v4}, Landroidx/databinding/h;->j(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p1
 
-    check-cast p1, Llb/u1;
+    check-cast p1, Lid/k2;
 
-    iput-object p1, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Llb/u1;
+    iput-object p1, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Lid/k2;
 
-    const-string v1, "null cannot be cast to non-null type com.google.android.material.bottomnavigation.BottomNavigationItemView"
+    const-string p1, "null cannot be cast to non-null type com.google.android.material.bottomnavigation.BottomNavigationItemView"
 
     .line 8
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;
 
+    .line 9
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Lid/k2;
+
     if-eqz p1, :cond_0
 
-    .line 9
     invoke-virtual {p1}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
 
     move-result-object p1
@@ -346,15 +352,15 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/skt/tmap/util/c0;->a:Lcom/skt/tmap/util/c0$a;
+    sget-object v1, Lcom/skt/tmap/util/e0;->a:Lcom/skt/tmap/util/e0$a;
 
     iget-object v2, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "tab_my_ani.json"
+    const-string v4, "tap_service_index_ani.json"
 
-    invoke-virtual {v1, p1, v2, v4, v3}, Lcom/skt/tmap/util/c0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
+    invoke-virtual {v1, p1, v2, v4, v3}, Lcom/skt/tmap/util/e0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
 
     move-result-object v2
 
@@ -363,7 +369,7 @@
     .line 3
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const v3, 0x7f080af8
+    const v3, 0x7f080a87
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -371,11 +377,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v3, "context.getDrawable(R.drawable.tab_my_off)!!"
-
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/c0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/e0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object p1
 
@@ -389,7 +391,7 @@
     .locals 5
 
     .line 1
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->O0(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->S0(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -405,15 +407,15 @@
     if-eqz v0, :cond_0
 
     .line 3
-    sget-object v1, Lcom/skt/tmap/util/c0;->a:Lcom/skt/tmap/util/c0$a;
+    sget-object v1, Lcom/skt/tmap/util/e0;->a:Lcom/skt/tmap/util/e0$a;
 
     iget-object v2, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
     const/4 v3, 0x0
 
-    const-string/jumbo v4, "tab_tnow_ani.json"
+    const-string v4, "tab_tnow_ani.json"
 
-    invoke-virtual {v1, p1, v2, v4, v3}, Lcom/skt/tmap/util/c0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
+    invoke-virtual {v1, p1, v2, v4, v3}, Lcom/skt/tmap/util/e0$a;->a(Landroid/content/Context;Landroid/graphics/drawable/Drawable$Callback;Ljava/lang/String;I)Lcom/airbnb/lottie/LottieDrawable;
 
     move-result-object v2
 
@@ -422,7 +424,7 @@
     .line 4
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const v3, 0x7f080b05
+    const v3, 0x7f080a88
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -430,11 +432,7 @@
 
     invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v3, "context.getDrawable(R.drawable.tap_tnow_off)!!"
-
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/c0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-virtual {v1, v2, p1}, Lcom/skt/tmap/util/e0$a;->b(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object p1
 
@@ -457,6 +455,31 @@
     return-object v0
 .end method
 
+.method public final isBadgeVisible(I)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/navigation/NavigationBarView;->getBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
 .method public final onNavigationItemSelected(Landroid/view/MenuItem;)V
     .locals 2
     .param p1    # Landroid/view/MenuItem;
@@ -469,98 +492,101 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Llb/u1;
+    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Lid/k2;
 
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Llb/u1;->l1(Z)V
-
-    .line 2
-    :cond_0
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result v0
-
-    .line 3
-    sget-object v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->HOME:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
-
-    iget v1, v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->homeTabSelected:Lcom/airbnb/lottie/LottieDrawable;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->L()V
+    if-nez v0, :cond_0
 
     goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lid/k2;->n1(Z)V
+
+    .line 2
+    :goto_0
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result p1
+
+    .line 3
+    sget-object v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->HOME:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
+
+    iget v0, v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+
+    if-ne p1, v0, :cond_1
+
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->homeTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->L()V
+
+    goto :goto_1
 
     .line 4
     :cond_1
-    sget-object v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->TNOW:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
+    sget-object v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->TNOW:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
 
-    iget v1, v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+    iget v0, v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
 
-    if-ne v0, v1, :cond_2
+    if-ne p1, v0, :cond_2
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->tNowTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->tNowTabSelected:Lcom/airbnb/lottie/LottieDrawable;
 
-    if-eqz v0, :cond_5
+    if-eqz p1, :cond_6
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->L()V
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->L()V
 
-    goto :goto_0
+    goto :goto_1
 
     .line 6
     :cond_2
-    sget-object v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->LIFE:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
+    sget-object v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->LIFE:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
 
-    iget v1, v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+    iget v0, v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
 
-    if-ne v0, v1, :cond_4
+    if-ne p1, v0, :cond_5
 
     .line 7
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->lifeTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->lifeTabSelected:Lcom/airbnb/lottie/LottieDrawable;
 
-    if-eqz v0, :cond_3
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->L()V
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->L()V
 
     .line 8
     :cond_3
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Llb/u1;
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Lid/k2;
 
-    if-eqz v0, :cond_5
+    if-nez p1, :cond_4
 
-    const/4 v1, 0x1
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Llb/u1;->l1(Z)V
+    :cond_4
+    const/4 v0, 0x1
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Lid/k2;->n1(Z)V
+
+    goto :goto_1
 
     .line 9
-    :cond_4
-    sget-object v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->MY:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
-
-    iget v1, v1, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
-
-    if-ne v0, v1, :cond_5
-
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->myTabSelected:Lcom/airbnb/lottie/LottieDrawable;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->L()V
-
-    .line 10
     :cond_5
-    :goto_0
-    iput-object p1, p0, Lcom/skt/tmap/data/MainTabController;->lastSelectedMenuItem:Landroid/view/MenuItem;
+    sget-object v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->MY:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
 
+    iget v0, v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+
+    if-ne p1, v0, :cond_6
+
+    iget-object p1, p0, Lcom/skt/tmap/data/MainTabController;->myTabSelected:Lcom/airbnb/lottie/LottieDrawable;
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->L()V
+
+    :cond_6
+    :goto_1
     return-void
 .end method
 
@@ -578,15 +604,15 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->bottomNavigation:Lcom/google/android/material/bottomnavigation/BottomNavigationView;
 
-    invoke-virtual {v0, p2}, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->getOrCreateBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
+    invoke-virtual {v0, p2}, Lcom/google/android/material/navigation/NavigationBarView;->getOrCreateBadge(I)Lcom/google/android/material/badge/BadgeDrawable;
 
     move-result-object p2
 
-    const-string v0, "badgeDrawable"
+    const-string v0, "bottomNavigation.getOrCreateBadge(itemId)"
 
-    .line 2
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p2, p3}, Lcom/google/android/material/badge/BadgeDrawable;->setVisible(Z)V
 
     if-eqz p3, :cond_0
@@ -596,7 +622,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f0601b8
+    const v0, 0x7f0601c1
 
     const/4 v1, 0x0
 
@@ -616,7 +642,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f07033c
+    const v0, 0x7f070425
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -631,7 +657,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f070333
+    const p3, 0x7f07041c
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -675,20 +701,29 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Llb/u1;
+    iget-object v0, p0, Lcom/skt/tmap/data/MainTabController;->drivingScore:Lid/k2;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Llb/u1;->j1:Landroid/widget/TextView;
+    iget-object v0, v0, Lid/k2;->l1:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_0
+    goto :goto_0
 
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_0
+    :goto_1
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/util/PlatformVersion;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -22,6 +22,10 @@
 
 .method public static isAtLeastHoneycomb()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0xb
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -32,6 +36,10 @@
 
 .method public static isAtLeastHoneycombMR1()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0xc
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -42,6 +50,10 @@
 
 .method public static isAtLeastIceCreamSandwich()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0xe
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -52,6 +64,10 @@
 
 .method public static isAtLeastIceCreamSandwichMR1()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0xf
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -62,6 +78,10 @@
 
 .method public static isAtLeastJellyBean()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x10
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -72,6 +92,10 @@
 
 .method public static isAtLeastJellyBeanMR1()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x11
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -82,6 +106,10 @@
 
 .method public static isAtLeastJellyBeanMR2()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x12
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -92,6 +120,10 @@
 
 .method public static isAtLeastKitKat()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x13
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -102,6 +134,10 @@
 
 .method public static isAtLeastKitKatWatch()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x14
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -112,6 +148,10 @@
 
 .method public static isAtLeastLollipop()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x15
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -122,6 +162,10 @@
 
 .method public static isAtLeastLollipopMR1()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x16
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -132,6 +176,10 @@
 
 .method public static isAtLeastM()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x17
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -142,6 +190,10 @@
 
 .method public static isAtLeastN()Z
     .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x18
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -152,6 +204,10 @@
 
 .method public static isAtLeastO()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1a
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -173,6 +229,10 @@
 
 .method public static isAtLeastP()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1c
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -194,6 +254,10 @@
 
 .method public static isAtLeastQ()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1d
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -215,6 +279,10 @@
 
 .method public static isAtLeastR()Z
     .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1e
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -235,105 +303,121 @@
 .end method
 
 .method public static isAtLeastS()Z
-    .locals 5
+    .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x1f
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static isAtLeastSv2()Z
+    .locals 2
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x20
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x20
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static isAtLeastT()Z
+    .locals 3
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x21
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
     .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v1, 0x1
+    const/16 v1, 0x21
 
-    const/16 v2, 0x1f
+    if-ge v0, v1, :cond_1
 
-    if-lt v0, v2, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastR()Z
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    return v2
-
-    :cond_1
     sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const/4 v1, 0x0
 
-    move-result v3
-
-    if-ne v3, v1, :cond_2
-
-    .line 2
-    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
-
-    move-result v3
-
-    const/16 v4, 0x53
-
-    if-lt v3, v4, :cond_2
-
-    .line 3
-    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    const/16 v3, 0x5a
+    const/16 v2, 0x54
 
-    if-gt v0, v3, :cond_2
+    if-ne v0, v2, :cond_0
 
+    goto :goto_0
+
+    :cond_0
     return v1
 
-    :cond_2
-    return v2
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public static isAtLeastT()Z
-    .locals 4
+.method public static isAtLeastU()Z
+    .locals 1
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x21
+        codename = "UpsideDownCake"
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastS()Z
+    invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastT()Z
 
     move-result v0
-
-    const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    return v1
-
-    :cond_0
-    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
-
-    .line 2
-    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    const/16 v3, 0x54
-
-    if-lt v2, v3, :cond_1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    const/16 v2, 0x5a
-
-    if-gt v0, v2, :cond_1
-
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 
-    :cond_1
-    return v1
+    .line 2
+    :cond_0
+    invoke-static {}, Landroidx/core/os/BuildCompat;->l()Z
+
+    move-result v0
+
+    return v0
 .end method

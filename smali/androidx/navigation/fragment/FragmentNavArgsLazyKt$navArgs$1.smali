@@ -3,12 +3,12 @@
 .source "FragmentNavArgsLazy.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/fragment/FragmentNavArgsLazyKt;->a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/l;
+    value = Landroidx/navigation/fragment/FragmentNavArgsLazyKt;->a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,14 +19,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroid/os/Bundle;",
         ">;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nFragmentNavArgsLazy.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FragmentNavArgsLazy.kt\nandroidx/navigation/fragment/FragmentNavArgsLazyKt$navArgs$1\n*L\n1#1,44:1\n*E\n"
+    value = "SMAP\nFragmentNavArgsLazy.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FragmentNavArgsLazy.kt\nandroidx/navigation/fragment/FragmentNavArgsLazyKt$navArgs$1\n*L\n1#1,45:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -35,7 +35,7 @@
         "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u0002\"\n\u0008\u0000\u0010\u0001\u0018\u0001*\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Landroidx/navigation/k;",
+        "Landroidx/navigation/l;",
         "Args",
         "Landroid/os/Bundle;",
         "invoke",
@@ -45,7 +45,7 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -75,7 +75,7 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 1
+    .line 2
     iget-object v0, p0, Landroidx/navigation/fragment/FragmentNavArgsLazyKt$navArgs$1;->$this_navArgs:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -115,6 +115,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/navigation/fragment/FragmentNavArgsLazyKt$navArgs$1;->invoke()Landroid/os/Bundle;
 
     move-result-object v0

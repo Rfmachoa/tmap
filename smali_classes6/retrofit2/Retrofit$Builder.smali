@@ -173,6 +173,7 @@
     .line 14
     iget-object v1, p1, Lretrofit2/Retrofit;->callAdapterFactories:Ljava/util/List;
 
+    .line 15
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -188,7 +189,7 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 15
+    .line 16
     iget-object v2, p0, Lretrofit2/Retrofit$Builder;->callAdapterFactories:Ljava/util/List;
 
     iget-object v3, p1, Lretrofit2/Retrofit;->callAdapterFactories:Ljava/util/List;
@@ -205,13 +206,13 @@
 
     goto :goto_1
 
-    .line 16
+    .line 17
     :cond_1
     iget-object v0, p1, Lretrofit2/Retrofit;->callbackExecutor:Ljava/util/concurrent/Executor;
 
     iput-object v0, p0, Lretrofit2/Retrofit$Builder;->callbackExecutor:Ljava/util/concurrent/Executor;
 
-    .line 17
+    .line 18
     iget-boolean p1, p1, Lretrofit2/Retrofit;->validateEagerly:Z
 
     iput-boolean p1, p0, Lretrofit2/Retrofit$Builder;->validateEagerly:Z
@@ -455,11 +456,12 @@
 
     iget-object v3, p0, Lretrofit2/Retrofit$Builder;->baseUrl:Lokhttp3/HttpUrl;
 
+    .line 14
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 14
+    .line 15
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v5
@@ -472,7 +474,7 @@
 
     return-object v8
 
-    .line 15
+    .line 16
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 

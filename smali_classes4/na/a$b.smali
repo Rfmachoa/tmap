@@ -1,14 +1,14 @@
 .class public Lna/a$b;
 .super Ljava/lang/Object;
-.source "ActionAlarmSet.java"
+.source "MediaPlayableTask.java"
 
 # interfaces
-.implements Lsa/d;
+.implements Lqa/b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lna/a;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lna/a;->a()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,13 +35,11 @@
 
 
 # virtual methods
-.method public onCanceled()V
+.method public a(Ljava/lang/Object;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lna/a$b;->a:Lna/a;
-
-    invoke-static {v0}, Lna/a;->p0(Lna/a;)Ljava/lang/String;
+    invoke-static {}, Lna/a;->g()Ljava/lang/String;
 
     move-result-object v0
 
@@ -49,17 +47,11 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lna/a$b;->a:Lna/a;
-
-    invoke-static {v2}, Lna/a;->q0(Lna/a;)Ljava/lang/String;
-
-    move-result-object v2
+    const-string v2, "onReady() path = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ":TTS onCanceled"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -67,109 +59,138 @@
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
+    iget-object v0, p0, Lna/a$b;->a:Lna/a;
+
+    invoke-static {v0, p1}, Lna/a;->h(Lna/a;Ljava/lang/Object;)V
+
     return-void
 .end method
 
-.method public onCompletion()V
-    .locals 6
+.method public b()V
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Lna/a$b;->a:Lna/a;
+    invoke-static {}, Lna/a;->g()Ljava/lang/String;
 
-    invoke-static {v0}, Lna/a;->k0(Lna/a;)Ljava/lang/String;
+    move-result-object v0
+
+    const-string v1, "onResumeForBufferUnderflow() mIsPrepared = "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
     iget-object v2, p0, Lna/a$b;->a:Lna/a;
 
-    invoke-static {v2}, Lna/a;->l0(Lna/a;)Lma/c;
+    iget-boolean v2, v2, Lna/b;->e:Z
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    .line 2
+    iget-object v0, p0, Lna/a$b;->a:Lna/a;
 
-    iget-object v4, p0, Lna/a$b;->a:Lna/a;
+    iget-boolean v1, v0, Lna/b;->e:Z
 
-    invoke-static {v4}, Lna/a;->m0(Lna/a;)Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object v4
+    .line 3
+    invoke-virtual {v0}, Lna/a;->resume()V
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
+.end method
 
-    const-string v4, ":TTS onCompletion"
+.method public c()V
+    .locals 3
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1
+    invoke-static {}, Lna/a;->g()Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v5
+    const-string v1, "onPauseForBufferUnderflow() mIsPrepared = "
 
-    const/4 v2, 0x1
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
+    move-result-object v1
 
-    invoke-static/range {v0 .. v5}, Lna/a;->n0(Lna/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, p0, Lna/a$b;->a:Lna/a;
+
+    iget-boolean v2, v2, Lna/b;->e:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lna/a$b;->a:Lna/a;
+
+    iget-boolean v1, v0, Lna/b;->e:Z
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    invoke-virtual {v0}, Lna/a;->pause()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public d()V
+    .locals 2
+
+    .line 1
+    invoke-static {}, Lna/a;->g()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "onIOExceptionReceived()"
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lna/a$b;->a:Lna/a;
+
+    invoke-static {v0}, Lna/a;->i(Lna/a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lna/a;->h(Lna/a;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public onError(I)V
-    .locals 6
+.method public e(Ljava/lang/Exception;)V
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lna/a$b;->a:Lna/a;
-
-    invoke-static {v0}, Lna/a;->g0(Lna/a;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object p1, p0, Lna/a$b;->a:Lna/a;
-
-    invoke-static {p1}, Lna/a;->h0(Lna/a;)Lma/c;
+    invoke-static {}, Lna/a;->g()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lma/c;->n()Ljava/lang/String;
+    const-string v0, "onPrepareFail()"
 
-    move-result-object v3
+    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    .line 2
+    iget-object p1, p0, Lna/a$b;->a:Lna/a;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p1}, Lna/a;->i(Lna/a;)Ljava/lang/String;
 
-    iget-object v2, p0, Lna/a$b;->a:Lna/a;
+    move-result-object v0
 
-    invoke-static {v2}, Lna/a;->i0(Lna/a;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ":TTS onError"
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v2, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v0 .. v5}, Lna/a;->j0(Lna/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 0
+    invoke-static {p1, v0}, Lna/a;->h(Lna/a;Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public final j:Lc4/o;
+.field public final j:Lz5/o;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLc4/o;Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLz5/o;Ljava/util/List;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -30,7 +30,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
             ">;Z",
-            "Lc4/o;",
+            "Lz5/o;",
             "Ljava/util/List<",
             "Lcom/apollographql/apollo/api/ResponseField$c;",
             ">;)V"
@@ -57,18 +57,18 @@
     invoke-direct/range {v0 .. v7}, Lcom/apollographql/apollo/api/ResponseField;-><init>(Lcom/apollographql/apollo/api/ResponseField$Type;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLjava/util/List;Lcom/apollographql/apollo/api/ResponseField$a;)V
 
     .line 2
-    iput-object p5, p0, Lcom/apollographql/apollo/api/ResponseField$d;->j:Lc4/o;
+    iput-object p5, p0, Lcom/apollographql/apollo/api/ResponseField$d;->j:Lz5/o;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public w()Lc4/o;
+.method public w()Lz5/o;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/api/ResponseField$d;->j:Lc4/o;
+    iget-object v0, p0, Lcom/apollographql/apollo/api/ResponseField$d;->j:Lz5/o;
 
     return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "ScreenManager.java"
 
 # interfaces
-.implements Ll0/a;
+.implements Lz0/a;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Deque<",
-            "Landroidx/car/app/t0;",
+            "Landroidx/car/app/y0;",
             ">;"
         }
     .end annotation
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method public static f(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
+.method public static g(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
     .locals 1
 
     .line 1
@@ -89,13 +89,18 @@
 
 
 # virtual methods
-.method public g()V
+.method public h()V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    invoke-interface {v0}, Ljava/util/Deque;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(Ljava/util/Collection;)V
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -110,16 +115,16 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/car/app/t0;
+    check-cast v1, Landroidx/car/app/y0;
 
     const/4 v2, 0x1
 
-    .line 2
-    invoke-virtual {p0, v1, v2}, Landroidx/car/app/ScreenManager;->w(Landroidx/car/app/t0;Z)V
+    .line 3
+    invoke-virtual {p0, v1, v2}, Landroidx/car/app/ScreenManager;->x(Landroidx/car/app/y0;Z)V
 
     goto :goto_0
 
-    .line 3
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
@@ -128,15 +133,15 @@
     return-void
 .end method
 
-.method public final h(Ljava/lang/String;)Z
+.method public final i(Ljava/lang/String;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->k()Landroidx/car/app/t0;
+    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->l()Landroidx/car/app/y0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/car/app/t0;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/car/app/y0;->h()Ljava/lang/String;
 
     move-result-object v0
 
@@ -147,7 +152,7 @@
     return p1
 .end method
 
-.method public i()Ljava/util/Deque;
+.method public j()Ljava/util/Deque;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -162,7 +167,7 @@
         value = {
             "()",
             "Ljava/util/Deque<",
-            "Landroidx/car/app/t0;",
+            "Landroidx/car/app/y0;",
             ">;"
         }
     .end annotation
@@ -173,7 +178,7 @@
     return-object v0
 .end method
 
-.method public j()I
+.method public k()I
     .locals 1
 
     .line 1
@@ -186,13 +191,13 @@
     return v0
 .end method
 
-.method public k()Landroidx/car/app/t0;
+.method public l()Landroidx/car/app/y0;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
@@ -201,23 +206,23 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/car/app/t0;
+    check-cast v0, Landroidx/car/app/y0;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public l()Landroidx/car/app/model/TemplateWrapper;
+.method public m()Landroidx/car/app/model/TemplateWrapper;
     .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
-    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->k()Landroidx/car/app/t0;
+    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->l()Landroidx/car/app/y0;
 
     move-result-object v0
 
@@ -251,7 +256,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {v0}, Landroidx/car/app/t0;->k()Landroidx/car/app/model/TemplateWrapper;
+    invoke-virtual {v0}, Landroidx/car/app/y0;->k()Landroidx/car/app/model/TemplateWrapper;
 
     move-result-object v0
 
@@ -278,10 +283,10 @@
 
     move-result-object v3
 
-    check-cast v3, Landroidx/car/app/t0;
+    check-cast v3, Landroidx/car/app/y0;
 
     .line 8
-    invoke-virtual {v3}, Landroidx/car/app/t0;->f()Landroidx/car/app/model/TemplateInfo;
+    invoke-virtual {v3}, Landroidx/car/app/y0;->f()Landroidx/car/app/model/TemplateInfo;
 
     move-result-object v3
 
@@ -296,7 +301,7 @@
     return-object v0
 .end method
 
-.method public final m(Landroidx/car/app/t0;)V
+.method public final n(Landroidx/car/app/y0;)V
     .locals 2
 
     .line 1
@@ -306,7 +311,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/car/app/t0;
+    check-cast v0, Landroidx/car/app/y0;
 
     if-eqz v0, :cond_1
 
@@ -323,10 +328,10 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-virtual {p0, p1, v1}, Landroidx/car/app/ScreenManager;->s(Landroidx/car/app/t0;Z)V
+    invoke-virtual {p0, p1, v1}, Landroidx/car/app/ScreenManager;->t(Landroidx/car/app/y0;Z)V
 
     .line 4
-    invoke-virtual {p0, v0, v1}, Landroidx/car/app/ScreenManager;->w(Landroidx/car/app/t0;Z)V
+    invoke-virtual {p0, v0, v1}, Landroidx/car/app/ScreenManager;->x(Landroidx/car/app/y0;Z)V
 
     .line 5
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
@@ -346,20 +351,55 @@
     .line 6
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, v0}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public n()V
+.method public o()V
     .locals 2
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
+    iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x3
+
+    const-string v1, "CarApp"
+
+    .line 3
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Popping screens after the DESTROYED state is a no-op"
+
+    .line 4
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 5
+    :cond_1
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->size()I
@@ -368,60 +408,60 @@
 
     const/4 v1, 0x1
 
-    if-le v0, v1, :cond_0
+    if-le v0, v1, :cond_2
 
-    .line 3
+    .line 6
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->pop()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/car/app/t0;
+    check-cast v0, Landroidx/car/app/y0;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroidx/car/app/ScreenManager;->o(Ljava/util/List;)V
+    invoke-virtual {p0, v0}, Landroidx/car/app/ScreenManager;->p(Ljava/util/List;)V
 
-    :cond_0
+    :cond_2
     return-void
 .end method
 
-.method public final o(Ljava/util/List;)V
+.method public final p(Ljava/util/List;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/car/app/t0;",
+            "Landroidx/car/app/y0;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->k()Landroidx/car/app/t0;
+    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->l()Landroidx/car/app/y0;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
     .line 2
-    invoke-virtual {v0, v1}, Landroidx/car/app/t0;->s(Z)V
+    invoke-virtual {v0, v1}, Landroidx/car/app/y0;->s(Z)V
 
     .line 3
     iget-object v2, p0, Landroidx/car/app/ScreenManager;->b:Landroidx/car/app/CarContext;
 
     const-class v3, Landroidx/car/app/AppManager;
 
-    invoke-virtual {v2, v3}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroidx/car/app/AppManager;
 
-    invoke-virtual {v2}, Landroidx/car/app/AppManager;->n()V
+    invoke-virtual {v2}, Landroidx/car/app/AppManager;->s()V
 
     .line 4
     iget-object v2, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
@@ -441,7 +481,7 @@
     .line 5
     sget-object v2, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v2}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, v2}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 6
     :cond_0
@@ -464,7 +504,7 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/car/app/t0;
+    check-cast v2, Landroidx/car/app/y0;
 
     .line 7
     invoke-static {v4, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -496,7 +536,7 @@
 
     .line 9
     :cond_1
-    invoke-virtual {p0, v2, v1}, Landroidx/car/app/ScreenManager;->w(Landroidx/car/app/t0;Z)V
+    invoke-virtual {p0, v2, v1}, Landroidx/car/app/ScreenManager;->x(Landroidx/car/app/y0;Z)V
 
     goto :goto_0
 
@@ -557,13 +597,13 @@
     .line 14
     sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, p1}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {v0, p1}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_4
     return-void
 .end method
 
-.method public p(Ljava/lang/String;)V
+.method public q(Ljava/lang/String;)V
     .locals 3
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -571,17 +611,52 @@
     .end param
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
+    iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x3
+
+    const-string v0, "CarApp"
+
+    .line 4
+    invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Popping screens after the DESTROYED state is a no-op"
+
+    .line 5
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 6
+    :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
+    .line 7
     :goto_0
     iget-object v1, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
@@ -591,51 +666,86 @@
 
     const/4 v2, 0x1
 
-    if-le v1, v2, :cond_0
+    if-le v1, v2, :cond_2
 
-    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->h(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->i(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_2
 
-    .line 5
+    .line 8
     iget-object v1, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v1}, Ljava/util/Deque;->pop()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/car/app/t0;
+    check-cast v1, Landroidx/car/app/y0;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6
-    :cond_0
+    .line 9
+    :cond_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     return-void
 
-    .line 7
-    :cond_1
-    invoke-virtual {p0, v0}, Landroidx/car/app/ScreenManager;->o(Ljava/util/List;)V
+    .line 10
+    :cond_3
+    invoke-virtual {p0, v0}, Landroidx/car/app/ScreenManager;->p(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public q()V
+.method public r()V
     .locals 3
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
+    iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x3
+
+    const-string v1, "CarApp"
+
+    .line 3
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Popping screens after the DESTROYED state is a no-op"
+
+    .line 4
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 5
+    :cond_1
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->size()I
@@ -644,17 +754,17 @@
 
     const/4 v1, 0x1
 
-    if-gt v0, v1, :cond_0
+    if-gt v0, v1, :cond_2
 
     return-void
 
-    .line 3
-    :cond_0
+    .line 6
+    :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
+    .line 7
     :goto_0
     iget-object v2, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
@@ -662,47 +772,82 @@
 
     move-result v2
 
-    if-le v2, v1, :cond_1
+    if-le v2, v1, :cond_3
 
-    .line 5
+    .line 8
     iget-object v2, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v2}, Ljava/util/Deque;->pop()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/car/app/t0;
+    check-cast v2, Landroidx/car/app/y0;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6
-    :cond_1
-    invoke-virtual {p0, v0}, Landroidx/car/app/ScreenManager;->o(Ljava/util/List;)V
+    .line 9
+    :cond_3
+    invoke-virtual {p0, v0}, Landroidx/car/app/ScreenManager;->p(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public r(Landroidx/car/app/t0;)V
-    .locals 0
-    .param p1    # Landroidx/car/app/t0;
+.method public s(Landroidx/car/app/y0;)V
+    .locals 2
+    .param p1    # Landroidx/car/app/y0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
+    iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x3
+
+    const-string v0, "CarApp"
+
+    .line 3
+    invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Pushing screens after the DESTROYED state is a no-op"
+
+    .line 4
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 5
+    :cond_1
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->u(Landroidx/car/app/t0;)V
+    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->v(Landroidx/car/app/y0;)V
 
     return-void
 .end method
 
-.method public final s(Landroidx/car/app/t0;Z)V
+.method public final t(Landroidx/car/app/y0;Z)V
     .locals 1
 
     .line 1
@@ -730,11 +875,11 @@
     .line 3
     sget-object p2, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, p2}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, p2}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 4
     :cond_0
-    invoke-virtual {p1}, Landroidx/car/app/t0;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-virtual {p1}, Landroidx/car/app/y0;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p2
 
@@ -773,30 +918,30 @@
 
     const-class v0, Landroidx/car/app/AppManager;
 
-    invoke-virtual {p2, v0}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroidx/car/app/AppManager;
 
-    invoke-virtual {p2}, Landroidx/car/app/AppManager;->n()V
+    invoke-virtual {p2}, Landroidx/car/app/AppManager;->s()V
 
     .line 7
     sget-object p2, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, p2}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, p2}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_2
     return-void
 .end method
 
-.method public t(Landroidx/car/app/t0;Landroidx/car/app/q0;)V
-    .locals 0
-    .param p1    # Landroidx/car/app/t0;
+.method public u(Landroidx/car/app/y0;Landroidx/car/app/v0;)V
+    .locals 2
+    .param p1    # Landroidx/car/app/y0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/car/app/q0;
+    .param p2    # Landroidx/car/app/v0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -807,24 +952,59 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
+    iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x3
+
+    const-string p2, "CarApp"
+
+    .line 3
+    invoke-static {p2, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Pushing screens after the DESTROYED state is a no-op"
+
+    .line 4
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 5
+    :cond_1
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Landroidx/car/app/q0;
+    check-cast p2, Landroidx/car/app/v0;
 
-    invoke-virtual {p1, p2}, Landroidx/car/app/t0;->q(Landroidx/car/app/q0;)V
+    invoke-virtual {p1, p2}, Landroidx/car/app/y0;->q(Landroidx/car/app/v0;)V
 
-    .line 3
-    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->u(Landroidx/car/app/t0;)V
+    .line 6
+    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->v(Landroidx/car/app/y0;)V
 
     return-void
 .end method
 
-.method public final u(Landroidx/car/app/t0;)V
+.method public final v(Landroidx/car/app/y0;)V
     .locals 3
 
     const-string v0, "CarApp"
@@ -870,7 +1050,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->m(Landroidx/car/app/t0;)V
+    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->n(Landroidx/car/app/y0;)V
 
     return-void
 
@@ -882,12 +1062,12 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/car/app/t0;
+    check-cast v0, Landroidx/car/app/y0;
 
     const/4 v1, 0x1
 
     .line 6
-    invoke-virtual {p0, p1, v1}, Landroidx/car/app/ScreenManager;->s(Landroidx/car/app/t0;Z)V
+    invoke-virtual {p0, p1, v1}, Landroidx/car/app/ScreenManager;->t(Landroidx/car/app/y0;Z)V
 
     .line 7
     iget-object v1, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
@@ -906,7 +1086,7 @@
     const/4 v1, 0x0
 
     .line 8
-    invoke-virtual {p0, v0, v1}, Landroidx/car/app/ScreenManager;->w(Landroidx/car/app/t0;Z)V
+    invoke-virtual {p0, v0, v1}, Landroidx/car/app/ScreenManager;->x(Landroidx/car/app/y0;Z)V
 
     .line 9
     :cond_3
@@ -927,26 +1107,61 @@
     .line 10
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, v0}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_4
     return-void
 .end method
 
-.method public v(Landroidx/car/app/t0;)V
+.method public w(Landroidx/car/app/y0;)V
     .locals 2
-    .param p1    # Landroidx/car/app/t0;
+    .param p1    # Landroidx/car/app/y0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
+    iget-object v0, p0, Landroidx/car/app/ScreenManager;->c:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x3
+
+    const-string v0, "CarApp"
+
+    .line 4
+    invoke-static {v0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Popping screens after the DESTROYED state is a no-op"
+
+    .line 5
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 6
+    :cond_1
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->size()I
@@ -955,13 +1170,13 @@
 
     const/4 v1, 0x1
 
-    if-gt v0, v1, :cond_0
+    if-gt v0, v1, :cond_2
 
     return-void
 
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->k()Landroidx/car/app/t0;
+    .line 7
+    :cond_2
+    invoke-virtual {p0}, Landroidx/car/app/ScreenManager;->l()Landroidx/car/app/y0;
 
     move-result-object v0
 
@@ -969,47 +1184,47 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
-    .line 5
+    .line 8
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->pop()Ljava/lang/Object;
 
-    .line 6
+    .line 9
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->o(Ljava/util/List;)V
+    invoke-virtual {p0, p1}, Landroidx/car/app/ScreenManager;->p(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 7
-    :cond_1
+    .line 10
+    :cond_3
     iget-object v0, p0, Landroidx/car/app/ScreenManager;->a:Ljava/util/Deque;
 
     invoke-interface {v0, p1}, Ljava/util/Deque;->remove(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
-    .line 8
+    .line 11
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, v0}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
-    :cond_2
+    :cond_4
     :goto_0
     return-void
 .end method
 
-.method public final w(Landroidx/car/app/t0;Z)V
+.method public final x(Landroidx/car/app/y0;Z)V
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Landroidx/car/app/t0;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+    invoke-virtual {p1}, Landroidx/car/app/y0;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
@@ -1029,7 +1244,7 @@
     .line 3
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v1}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, v1}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 4
     :cond_0
@@ -1044,7 +1259,7 @@
     .line 5
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, v0}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     if-eqz p2, :cond_2
@@ -1052,7 +1267,7 @@
     .line 6
     sget-object p2, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, p2}, Landroidx/car/app/t0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
+    invoke-virtual {p1, p2}, Landroidx/car/app/y0;->c(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_2
     return-void

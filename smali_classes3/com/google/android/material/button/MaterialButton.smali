@@ -374,15 +374,128 @@
     return-object v0
 .end method
 
+.method private getActualTextAlignment()Landroid/text/Layout$Alignment;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/Button;->getTextAlignment()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x6
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_0
+
+    .line 2
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
+    return-object v0
+
+    .line 3
+    :cond_0
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    return-object v0
+
+    .line 4
+    :cond_1
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
+    return-object v0
+
+    .line 5
+    :cond_2
+    invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->getGravityTextAlignment()Landroid/text/Layout$Alignment;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private getGravityTextAlignment()Landroid/text/Layout$Alignment;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/Button;->getGravity()I
+
+    move-result v0
+
+    const v1, 0x800007
+
+    and-int/2addr v0, v1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_0
+
+    const v1, 0x800005
+
+    if-eq v0, v1, :cond_0
+
+    .line 2
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
+    return-object v0
+
+    .line 3
+    :cond_0
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
+    return-object v0
+
+    .line 4
+    :cond_1
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    return-object v0
+.end method
+
 .method private getTextHeight()I
     .locals 5
 
     .line 1
+    invoke-virtual {p0}, Landroid/widget/Button;->getLineCount()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/Button;->getLayout()Landroid/text/Layout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
+
+    move-result v0
+
+    return v0
+
+    .line 3
+    :cond_0
     invoke-virtual {p0}, Landroid/widget/Button;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v0
 
-    .line 2
+    .line 4
     invoke-virtual {p0}, Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -391,14 +504,14 @@
 
     move-result-object v1
 
-    .line 3
+    .line 5
     invoke-virtual {p0}, Landroid/widget/Button;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
-    .line 4
+    .line 6
     invoke-virtual {p0}, Landroid/widget/Button;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
     move-result-object v2
@@ -411,22 +524,22 @@
 
     move-result-object v1
 
-    .line 5
-    :cond_0
+    .line 7
+    :cond_1
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     const/4 v3, 0x0
 
-    .line 6
+    .line 8
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v4
 
     invoke-virtual {v0, v1, v3, v4, v2}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 7
+    .line 9
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -446,8 +559,77 @@
     return v0
 .end method
 
-.method private getTextWidth()I
-    .locals 3
+.method private getTextInLine(I)Ljava/lang/CharSequence;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/Button;->getLayout()Landroid/text/Layout;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/text/Layout;->getLineStart(I)I
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/Button;->getLayout()Landroid/text/Layout;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/text/Layout;->getLineEnd(I)I
+
+    move-result p1
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0, p1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method private getTextLayoutWidth()I
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/Button;->getLineCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    .line 2
+    invoke-direct {p0, v1}, Lcom/google/android/material/button/MaterialButton;->getTextInLine(I)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-direct {p0, v3}, Lcom/google/android/material/button/MaterialButton;->getTextWidth(Ljava/lang/CharSequence;)I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v2
+.end method
+
+.method private getTextWidth(Ljava/lang/CharSequence;)I
+    .locals 2
 
     .line 1
     invoke-virtual {p0}, Landroid/widget/Button;->getPaint()Landroid/text/TextPaint;
@@ -455,55 +637,51 @@
     move-result-object v0
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    move-result-object p1
 
     .line 3
     invoke-virtual {p0}, Landroid/widget/Button;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
     .line 4
     invoke-virtual {p0}, Landroid/widget/Button;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
-    move-result-object v2
-
-    invoke-interface {v2, v1, p0}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v1, p1, p0}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
 
-    move-result-object v1
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
 
     .line 5
     :cond_0
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    move-result v0
+    move-result p1
 
-    float-to-int v0, v0
+    float-to-int p1, p1
 
     invoke-virtual {p0}, Landroid/widget/Button;->getLayout()Landroid/text/Layout;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/text/Layout;->getEllipsizedWidth()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v0}, Landroid/text/Layout;->getEllipsizedWidth()I
 
     move-result v0
 
-    return v0
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
 .end method
 
 .method private isIconEnd()Z
@@ -687,15 +865,17 @@
 .end method
 
 .method private updateIcon(Z)V
-    .locals 5
+    .locals 6
 
     .line 1
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
+    const/4 v1, 0x1
+
     if-eqz v0, :cond_3
 
     .line 2
-    invoke-static {v0}, Ld1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Lw1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -706,9 +886,9 @@
     iput-object v0, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
     .line 3
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->iconTint:Landroid/content/res/ColorStateList;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->iconTint:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0, v1}, Ld1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v2}, Lw1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 4
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->iconTintMode:Landroid/graphics/PorterDuff$Mode;
@@ -716,9 +896,9 @@
     if-eqz v0, :cond_0
 
     .line 5
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v1, v0}, Ld1/c;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {v2, v0}, Lw1/c;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     .line 6
     :cond_0
@@ -737,42 +917,47 @@
 
     .line 7
     :goto_0
-    iget v1, p0, Lcom/google/android/material/button/MaterialButton;->iconSize:I
+    iget v2, p0, Lcom/google/android/material/button/MaterialButton;->iconSize:I
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
     goto :goto_1
 
     :cond_2
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    move-result v1
+    move-result v2
 
     .line 8
     :goto_1
-    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    iget v3, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
+    iget v4, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
 
-    iget v4, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+    iget v5, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
 
-    add-int/2addr v0, v3
+    add-int/2addr v0, v4
 
-    add-int/2addr v1, v4
+    add-int/2addr v2, v5
 
-    invoke-virtual {v2, v3, v4, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v3, v4, v5, v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 9
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1, p1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     :cond_3
     if-eqz p1, :cond_4
 
-    .line 9
+    .line 10
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->resetIconDrawable()V
 
     return-void
 
-    .line 10
+    .line 11
     :cond_4
     invoke-static {p0}, Landroidx/core/widget/TextViewCompat;->h(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
 
@@ -780,20 +965,18 @@
 
     const/4 v0, 0x0
 
-    .line 11
-    aget-object v1, p1, v0
-
-    const/4 v2, 0x1
-
     .line 12
-    aget-object v3, p1, v2
+    aget-object v2, p1, v0
+
+    .line 13
+    aget-object v3, p1, v1
 
     const/4 v4, 0x2
 
-    .line 13
+    .line 14
     aget-object p1, p1, v4
 
-    .line 14
+    .line 15
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isIconStart()Z
 
     move-result v4
@@ -802,39 +985,42 @@
 
     iget-object v4, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    if-ne v1, v4, :cond_7
+    if-ne v2, v4, :cond_8
 
-    .line 15
+    .line 16
     :cond_5
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isIconEnd()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_6
+    if-eqz v2, :cond_6
 
-    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    if-ne p1, v1, :cond_7
+    if-ne p1, v2, :cond_8
 
-    .line 16
+    .line 17
     :cond_6
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isIconTop()Z
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_7
 
     iget-object p1, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    if-eq v3, p1, :cond_8
+    if-eq v3, p1, :cond_7
+
+    goto :goto_2
 
     :cond_7
-    move v0, v2
+    move v1, v0
 
     :cond_8
-    if-eqz v0, :cond_9
+    :goto_2
+    if-eqz v1, :cond_9
 
-    .line 17
+    .line 18
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->resetIconDrawable()V
 
     :cond_9
@@ -842,12 +1028,12 @@
 .end method
 
 .method private updateIconPosition(II)V
-    .locals 4
+    .locals 5
 
     .line 1
     iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_d
 
     invoke-virtual {p0}, Landroid/widget/Button;->getLayout()Landroid/text/Layout;
 
@@ -863,7 +1049,9 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
 
     if-nez v0, :cond_4
 
@@ -881,10 +1069,10 @@
 
     move-result p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_b
 
     .line 4
-    iput v1, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
+    iput v2, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
 
     .line 5
     iget p1, p0, Lcom/google/android/material/button/MaterialButton;->iconGravity:I
@@ -894,10 +1082,10 @@
     if-ne p1, v0, :cond_2
 
     .line 6
-    iput v1, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+    iput v2, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
 
     .line 7
-    invoke-direct {p0, v1}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
+    invoke-direct {p0, v2}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
 
     return-void
 
@@ -941,127 +1129,156 @@
 
     sub-int/2addr p2, p1
 
-    div-int/lit8 p2, p2, 0x2
+    div-int/2addr p2, v1
 
     .line 12
-    iget p1, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+    invoke-static {v2, p2}, Ljava/lang/Math;->max(II)I
 
-    if-eq p1, p2, :cond_9
+    move-result p1
 
     .line 13
-    iput p2, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+    iget p2, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+
+    if-eq p2, p1, :cond_b
 
     .line 14
-    invoke-direct {p0, v1}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
+    iput p1, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+
+    .line 15
+    invoke-direct {p0, v2}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
 
     goto :goto_2
 
-    .line 15
+    .line 16
     :cond_4
     :goto_0
-    iput v1, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
+    iput v2, p0, Lcom/google/android/material/button/MaterialButton;->iconTop:I
 
-    .line 16
-    iget p2, p0, Lcom/google/android/material/button/MaterialButton;->iconGravity:I
+    .line 17
+    invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->getActualTextAlignment()Landroid/text/Layout$Alignment;
 
-    const/4 v0, 0x1
+    move-result-object p2
 
-    if-eq p2, v0, :cond_a
+    .line 18
+    iget v0, p0, Lcom/google/android/material/button/MaterialButton;->iconGravity:I
 
-    const/4 v2, 0x3
+    const/4 v3, 0x1
 
-    if-ne p2, v2, :cond_5
+    if-eq v0, v3, :cond_c
+
+    const/4 v4, 0x3
+
+    if-eq v0, v4, :cond_c
+
+    if-ne v0, v1, :cond_5
+
+    sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
+    if-eq p2, v1, :cond_c
+
+    :cond_5
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_6
+
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
+    if-ne p2, v0, :cond_6
 
     goto :goto_3
 
-    .line 17
-    :cond_5
-    iget p2, p0, Lcom/google/android/material/button/MaterialButton;->iconSize:I
-
-    if-nez p2, :cond_6
-
-    iget-object p2, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result p2
-
-    .line 18
-    :cond_6
-    invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->getTextWidth()I
-
-    move-result v2
-
-    sub-int/2addr p1, v2
-
     .line 19
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;)I
+    :cond_6
+    iget v0, p0, Lcom/google/android/material/button/MaterialButton;->iconSize:I
 
-    move-result v2
+    if-nez v0, :cond_7
 
-    sub-int/2addr p1, v2
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
 
-    sub-int/2addr p1, p2
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    iget p2, p0, Lcom/google/android/material/button/MaterialButton;->iconPadding:I
-
-    sub-int/2addr p1, p2
+    move-result v0
 
     .line 20
+    :cond_7
+    invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->getTextLayoutWidth()I
+
+    move-result v4
+
+    sub-int/2addr p1, v4
+
+    .line 21
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;)I
+
+    move-result v4
+
+    sub-int/2addr p1, v4
+
+    sub-int/2addr p1, v0
+
+    iget v0, p0, Lcom/google/android/material/button/MaterialButton;->iconPadding:I
+
+    sub-int/2addr p1, v0
+
+    .line 22
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->k0(Landroid/view/View;)I
 
-    move-result p2
+    move-result v0
 
-    sub-int/2addr p1, p2
+    sub-int/2addr p1, v0
+
+    .line 23
+    sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    if-ne p2, v0, :cond_8
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 21
+    .line 24
+    :cond_8
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isLayoutRTL()Z
 
     move-result p2
 
-    iget v2, p0, Lcom/google/android/material/button/MaterialButton;->iconGravity:I
+    iget v0, p0, Lcom/google/android/material/button/MaterialButton;->iconGravity:I
 
-    const/4 v3, 0x4
-
-    if-ne v2, v3, :cond_7
+    if-ne v0, v1, :cond_9
 
     goto :goto_1
 
-    :cond_7
-    move v0, v1
+    :cond_9
+    move v3, v2
 
     :goto_1
-    if-eq p2, v0, :cond_8
+    if-eq p2, v3, :cond_a
 
     neg-int p1, p1
 
-    .line 22
-    :cond_8
+    .line 25
+    :cond_a
     iget p2, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
 
-    if-eq p2, p1, :cond_9
+    if-eq p2, p1, :cond_b
 
-    .line 23
+    .line 26
     iput p1, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
 
-    .line 24
-    invoke-direct {p0, v1}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
+    .line 27
+    invoke-direct {p0, v2}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
 
-    :cond_9
+    :cond_b
     :goto_2
     return-void
 
-    .line 25
-    :cond_a
+    .line 28
+    :cond_c
     :goto_3
-    iput v1, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
+    iput v2, p0, Lcom/google/android/material/button/MaterialButton;->iconLeft:I
 
-    .line 26
-    invoke-direct {p0, v1}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
+    .line 29
+    invoke-direct {p0, v2}, Lcom/google/android/material/button/MaterialButton;->updateIcon(Z)V
 
-    :cond_b
+    :cond_d
     :goto_4
     return-void
 .end method
@@ -1452,6 +1669,19 @@
     return v0
 .end method
 
+.method public isToggleCheckedStateOnClick()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->materialButtonHelper:Lcom/google/android/material/button/MaterialButtonHelper;
+
+    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButtonHelper;->isToggleCheckedStateOnClick()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public onAttachedToWindow()V
     .locals 1
 
@@ -1593,6 +1823,17 @@
     .line 1
     invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/AppCompatButton;->onLayout(ZIIII)V
 
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/Button;->getMeasuredWidth()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/widget/Button;->getMeasuredHeight()I
+
+    move-result p2
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/button/MaterialButton;->updateIconPosition(II)V
+
     return-void
 .end method
 
@@ -1655,18 +1896,6 @@
     return-object v1
 .end method
 
-.method public onSizeChanged(IIII)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/Button;->onSizeChanged(IIII)V
-
-    .line 2
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/button/MaterialButton;->updateIconPosition(II)V
-
-    return-void
-.end method
-
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
 
@@ -1691,14 +1920,56 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButton;->toggle()V
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->materialButtonHelper:Lcom/google/android/material/button/MaterialButtonHelper;
+
+    invoke-virtual {v0}, Lcom/google/android/material/button/MaterialButtonHelper;->isToggleCheckedStateOnClick()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 2
+    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButton;->toggle()V
+
+    .line 3
+    :cond_0
     invoke-super {p0}, Landroid/widget/Button;->performClick()Z
 
     move-result v0
 
     return v0
+.end method
+
+.method public refreshDrawableState()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Landroid/widget/Button;->refreshDrawableState()V
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/Button;->getDrawableState()[I
+
+    move-result-object v0
+
+    .line 4
+    iget-object v1, p0, Lcom/google/android/material/button/MaterialButton;->icon:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/Button;->invalidate()V
+
+    :cond_0
+    return-void
 .end method
 
 .method public removeOnCheckedChangeListener(Lcom/google/android/material/button/MaterialButton$OnCheckedChangeListener;)V
@@ -1832,7 +2103,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1901,38 +2172,59 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Landroid/widget/Button;->isEnabled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-boolean v0, p0, Lcom/google/android/material/button/MaterialButton;->checked:Z
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p1, :cond_3
 
     .line 2
     iput-boolean p1, p0, Lcom/google/android/material/button/MaterialButton;->checked:Z
 
     .line 3
-    invoke-virtual {p0}, Landroid/widget/Button;->refreshDrawableState()V
+    invoke-virtual {p0}, Lcom/google/android/material/button/MaterialButton;->refreshDrawableState()V
 
     .line 4
-    iget-boolean p1, p0, Lcom/google/android/material/button/MaterialButton;->broadcasting:Z
+    invoke-virtual {p0}, Landroid/widget/Button;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
     if-eqz p1, :cond_0
 
-    return-void
-
-    :cond_0
-    const/4 p1, 0x1
-
     .line 5
-    iput-boolean p1, p0, Lcom/google/android/material/button/MaterialButton;->broadcasting:Z
+    invoke-virtual {p0}, Landroid/widget/Button;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/button/MaterialButtonToggleGroup;
+
+    iget-boolean v0, p0, Lcom/google/android/material/button/MaterialButton;->checked:Z
+
+    invoke-virtual {p1, p0, v0}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->onButtonCheckedStateChanged(Lcom/google/android/material/button/MaterialButton;Z)V
 
     .line 6
+    :cond_0
+    iget-boolean p1, p0, Lcom/google/android/material/button/MaterialButton;->broadcasting:Z
+
+    if-eqz p1, :cond_1
+
+    return-void
+
+    :cond_1
+    const/4 p1, 0x1
+
+    .line 7
+    iput-boolean p1, p0, Lcom/google/android/material/button/MaterialButton;->broadcasting:Z
+
+    .line 8
     iget-object p1, p0, Lcom/google/android/material/button/MaterialButton;->onCheckedChangeListeners:Ljava/util/LinkedHashSet;
 
     invoke-virtual {p1}, Ljava/util/LinkedHashSet;->iterator()Ljava/util/Iterator;
@@ -1944,7 +2236,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1952,20 +2244,20 @@
 
     check-cast v0, Lcom/google/android/material/button/MaterialButton$OnCheckedChangeListener;
 
-    .line 7
+    .line 9
     iget-boolean v1, p0, Lcom/google/android/material/button/MaterialButton;->checked:Z
 
     invoke-interface {v0, p0, v1}, Lcom/google/android/material/button/MaterialButton$OnCheckedChangeListener;->onCheckedChanged(Lcom/google/android/material/button/MaterialButton;Z)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/4 p1, 0x0
 
-    .line 8
+    .line 10
     iput-boolean p1, p0, Lcom/google/android/material/button/MaterialButton;->broadcasting:Z
 
-    :cond_2
+    :cond_3
     return-void
 .end method
 
@@ -2147,7 +2439,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -2255,7 +2547,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -2376,7 +2668,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -2479,7 +2771,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -2606,6 +2898,40 @@
     invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatButton;->setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :goto_0
+    return-void
+.end method
+
+.method public setTextAlignment(I)V
+    .locals 1
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x11
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/Button;->setTextAlignment(I)V
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/Button;->getMeasuredWidth()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/widget/Button;->getMeasuredHeight()I
+
+    move-result v0
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/button/MaterialButton;->updateIconPosition(II)V
+
+    return-void
+.end method
+
+.method public setToggleCheckedStateOnClick(Z)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/button/MaterialButton;->materialButtonHelper:Lcom/google/android/material/button/MaterialButtonHelper;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/button/MaterialButtonHelper;->setToggleCheckedStateOnClick(Z)V
+
     return-void
 .end method
 

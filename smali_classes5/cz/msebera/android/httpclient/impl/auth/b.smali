@@ -17,7 +17,7 @@
     .locals 1
 
     .line 4
-    sget-object v0, Ldf/b;->f:Ljava/nio/charset/Charset;
+    sget-object v0, Lhh/b;->f:Ljava/nio/charset/Charset;
 
     invoke-direct {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/b;-><init>(Ljava/nio/charset/Charset;)V
 
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public static j(Lef/j;Ljava/lang/String;Z)Ldf/d;
+.method public static j(Lih/j;Ljava/lang/String;Z)Lhh/d;
     .locals 2
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -57,12 +57,12 @@
     const-string v0, "Credentials"
 
     .line 1
-    invoke-static {p0, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "charset"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     new-instance v0, Ljava/lang/StringBuilder;
@@ -70,7 +70,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 4
-    invoke-interface {p0}, Lef/j;->getUserPrincipal()Ljava/security/Principal;
+    invoke-interface {p0}, Lih/j;->getUserPrincipal()Ljava/security/Principal;
 
     move-result-object v1
 
@@ -86,7 +86,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 6
-    invoke-interface {p0}, Lef/j;->getPassword()Ljava/lang/String;
+    invoke-interface {p0}, Lih/j;->getPassword()Ljava/lang/String;
 
     move-result-object v1
 
@@ -97,7 +97,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lef/j;->getPassword()Ljava/lang/String;
+    invoke-interface {p0}, Lih/j;->getPassword()Ljava/lang/String;
 
     move-result-object p0
 
@@ -109,7 +109,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, p1}, Lqg/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {p0, p1}, Lui/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p0
 
@@ -165,26 +165,7 @@
 
 
 # virtual methods
-.method public a(Ldf/d;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-super {p0, p1}, Lcz/msebera/android/httpclient/impl/auth/a;->a(Ldf/d;)V
-
-    const/4 p1, 0x1
-
-    .line 2
-    iput-boolean p1, p0, Lcz/msebera/android/httpclient/impl/auth/b;->d:Z
-
-    return-void
-.end method
-
-.method public b(Lef/j;Ldf/q;)Ldf/d;
+.method public a(Lih/j;Lhh/q;)Lhh/d;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -196,18 +177,37 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lpg/a;
+    new-instance v0, Lti/a;
 
-    invoke-direct {v0}, Lpg/a;-><init>()V
+    invoke-direct {v0}, Lti/a;-><init>()V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcz/msebera/android/httpclient/impl/auth/b;->c(Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+    invoke-virtual {p0, p1, p2, v0}, Lcz/msebera/android/httpclient/impl/auth/b;->c(Lih/j;Lhh/q;Lti/g;)Lhh/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public c(Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+.method public b(Lhh/d;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcz/msebera/android/httpclient/impl/auth/a;->b(Lhh/d;)V
+
+    const/4 p1, 0x1
+
+    .line 2
+    iput-boolean p1, p0, Lcz/msebera/android/httpclient/impl/auth/b;->d:Z
+
+    return-void
+.end method
+
+.method public c(Lih/j;Lhh/q;Lti/g;)Lhh/d;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -218,12 +218,12 @@
     const-string p3, "Credentials"
 
     .line 1
-    invoke-static {p1, p3}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, p3}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string p3, "HTTP request"
 
     .line 2
-    invoke-static {p2, p3}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, p3}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     new-instance p3, Ljava/lang/StringBuilder;
@@ -231,7 +231,7 @@
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 4
-    invoke-interface {p1}, Lef/j;->getUserPrincipal()Ljava/security/Principal;
+    invoke-interface {p1}, Lih/j;->getUserPrincipal()Ljava/security/Principal;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 6
-    invoke-interface {p1}, Lef/j;->getPassword()Ljava/lang/String;
+    invoke-interface {p1}, Lih/j;->getPassword()Ljava/lang/String;
 
     move-result-object v0
 
@@ -258,7 +258,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lef/j;->getPassword()Ljava/lang/String;
+    invoke-interface {p1}, Lih/j;->getPassword()Ljava/lang/String;
 
     move-result-object p1
 
@@ -270,11 +270,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/auth/l;->g(Ldf/q;)Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/auth/l;->g(Lhh/q;)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lqg/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {p1, p2}, Lui/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p1
 

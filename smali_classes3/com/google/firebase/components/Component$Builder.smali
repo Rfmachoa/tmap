@@ -45,6 +45,8 @@
 
 .field private instantiation:I
 
+.field private name:Ljava/lang/String;
+
 .field private final providedInterfaces:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -87,14 +89,19 @@
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
     .line 3
+    iput-object v0, p0, Lcom/google/firebase/components/Component$Builder;->name:Ljava/lang/String;
+
+    .line 4
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
-    .line 4
+    .line 5
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
@@ -103,13 +110,13 @@
 
     const/4 v1, 0x0
 
-    .line 5
+    .line 6
     iput v1, p0, Lcom/google/firebase/components/Component$Builder;->instantiation:I
 
-    .line 6
+    .line 7
     iput v1, p0, Lcom/google/firebase/components/Component$Builder;->type:I
 
-    .line 7
+    .line 8
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
@@ -118,13 +125,13 @@
 
     const-string v2, "Null interface"
 
-    .line 8
+    .line 9
     invoke-static {p1, v2}, Lcom/google/firebase/components/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 9
+    .line 10
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 10
+    .line 11
     array-length p1, p2
 
     :goto_0
@@ -132,14 +139,14 @@
 
     aget-object v0, p2, v1
 
-    .line 11
+    .line 12
     invoke-static {v0, v2}, Lcom/google/firebase/components/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 12
+    .line 13
     :cond_0
     iget-object p1, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
@@ -170,6 +177,9 @@
 
 .method private intoSet()Lcom/google/firebase/components/Component$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -188,6 +198,9 @@
 
 .method private setInstantiation(I)Lcom/google/firebase/components/Component$Builder;
     .locals 2
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -251,6 +264,9 @@
 # virtual methods
 .method public add(Lcom/google/firebase/components/Dependency;)Lcom/google/firebase/components/Component$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -283,6 +299,9 @@
 
 .method public alwaysEager()Lcom/google/firebase/components/Component$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -302,7 +321,7 @@
 .end method
 
 .method public build()Lcom/google/firebase/components/Component;
-    .locals 10
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -331,37 +350,42 @@
     .line 2
     new-instance v0, Lcom/google/firebase/components/Component;
 
-    new-instance v3, Ljava/util/HashSet;
-
-    iget-object v1, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
-
-    invoke-direct {v3, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    iget-object v3, p0, Lcom/google/firebase/components/Component$Builder;->name:Ljava/lang/String;
 
     new-instance v4, Ljava/util/HashSet;
 
-    iget-object v1, p0, Lcom/google/firebase/components/Component$Builder;->dependencies:Ljava/util/Set;
+    iget-object v1, p0, Lcom/google/firebase/components/Component$Builder;->providedInterfaces:Ljava/util/Set;
 
     invoke-direct {v4, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iget v5, p0, Lcom/google/firebase/components/Component$Builder;->instantiation:I
+    new-instance v5, Ljava/util/HashSet;
 
-    iget v6, p0, Lcom/google/firebase/components/Component$Builder;->type:I
+    iget-object v1, p0, Lcom/google/firebase/components/Component$Builder;->dependencies:Ljava/util/Set;
 
-    iget-object v7, p0, Lcom/google/firebase/components/Component$Builder;->factory:Lcom/google/firebase/components/ComponentFactory;
+    invoke-direct {v5, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iget-object v8, p0, Lcom/google/firebase/components/Component$Builder;->publishedEvents:Ljava/util/Set;
+    iget v6, p0, Lcom/google/firebase/components/Component$Builder;->instantiation:I
 
-    const/4 v9, 0x0
+    iget v7, p0, Lcom/google/firebase/components/Component$Builder;->type:I
+
+    iget-object v8, p0, Lcom/google/firebase/components/Component$Builder;->factory:Lcom/google/firebase/components/ComponentFactory;
+
+    iget-object v9, p0, Lcom/google/firebase/components/Component$Builder;->publishedEvents:Ljava/util/Set;
+
+    const/4 v10, 0x0
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v9}, Lcom/google/firebase/components/Component;-><init>(Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;Lcom/google/firebase/components/Component$1;)V
+    invoke-direct/range {v2 .. v10}, Lcom/google/firebase/components/Component;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;Lcom/google/firebase/components/Component$1;)V
 
     return-object v0
 .end method
 
 .method public eagerInDefaultApp()Lcom/google/firebase/components/Component$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -382,6 +406,9 @@
 
 .method public factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -406,8 +433,33 @@
     return-object p0
 .end method
 
+.method public name(Ljava/lang/String;)Lcom/google/firebase/components/Component$Builder;
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/google/firebase/components/Component$Builder<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/google/firebase/components/Component$Builder;->name:Ljava/lang/String;
+
+    return-object p0
+.end method
+
 .method public publishes(Ljava/lang/Class;)Lcom/google/firebase/components/Component$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field private store:Lf4/a;
+.field private store:Lc6/a;
 
 
 # direct methods
@@ -39,11 +39,11 @@
     return-object v0
 .end method
 
-.method public static synthetic access$100(Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;)Lf4/a;
+.method public static synthetic access$100(Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;)Lc6/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->store:Lf4/a;
+    iget-object p0, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->store:Lc6/a;
 
     return-object p0
 .end method
@@ -107,11 +107,11 @@
     return-void
 .end method
 
-.method public setStore(Lf4/a;)V
+.method public setStore(Lc6/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->store:Lf4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOptimisticUpdateInterceptor;->store:Lc6/a;
 
     return-void
 .end method

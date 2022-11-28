@@ -13,7 +13,9 @@
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/fasterxml/jackson/annotation/JsonInclude;
         content = .enum Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->ALWAYS:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+        contentFilter = Ljava/lang/Void;
         value = .enum Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->ALWAYS:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+        valueFilter = Ljava/lang/Void;
     .end subannotation
 .end annotation
 
@@ -43,5 +45,25 @@
 .method public abstract content()Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
 .end method
 
+.method public abstract contentFilter()Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end method
+
 .method public abstract value()Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+.end method
+
+.method public abstract valueFilter()Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
 .end method

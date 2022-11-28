@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/camera/core/impl/s;Landroidx/camera/core/impl/SessionConfig$b;)V
-    .param p1    # Landroidx/camera/core/impl/s;
+.method public abstract a(Landroidx/camera/core/impl/q;Landroidx/camera/core/impl/SessionConfig$b;)V
+    .param p1    # Landroidx/camera/core/impl/q;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -24,21 +24,10 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "config",
-            "builder"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/camera/core/impl/s<",
+            "Landroidx/camera/core/impl/q<",
             "*>;",
             "Landroidx/camera/core/impl/SessionConfig$b;",
             ")V"

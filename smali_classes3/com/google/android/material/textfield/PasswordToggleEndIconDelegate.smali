@@ -4,77 +4,65 @@
 
 
 # instance fields
-.field private final onEditTextAttachedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
+.field private editText:Landroid/widget/EditText;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field private final onEndIconChangedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;
+.field private iconResId:I
 
-.field private final textWatcher:Landroid/text/TextWatcher;
+.field private final onIconClickListener:Landroid/view/View$OnClickListener;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+.method public constructor <init>(Lcom/google/android/material/textfield/EndCompoundLayout;I)V
     .locals 0
-    .param p1    # Lcom/google/android/material/textfield/TextInputLayout;
+    .param p1    # Lcom/google/android/material/textfield/EndCompoundLayout;
         .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/DrawableRes;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/EndIconDelegate;-><init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/EndIconDelegate;-><init>(Lcom/google/android/material/textfield/EndCompoundLayout;)V
 
     .line 2
-    new-instance p1, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$1;
+    sget p1, Lcom/google/android/material/R$drawable;->design_password_eye:I
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$1;-><init>(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)V
-
-    iput-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->textWatcher:Landroid/text/TextWatcher;
+    iput p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->iconResId:I
 
     .line 3
-    new-instance p1, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$2;
+    new-instance p1, Lcom/google/android/material/textfield/m;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$2;-><init>(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/m;-><init>(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)V
 
-    iput-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->onEditTextAttachedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
+    iput-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->onIconClickListener:Landroid/view/View$OnClickListener;
+
+    if-eqz p2, :cond_0
 
     .line 4
-    new-instance p1, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$3;
+    iput p2, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->iconResId:I
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$3;-><init>(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)V
-
-    iput-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->onEndIconChangedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;
-
+    :cond_0
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)Z
+.method public static synthetic a(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;Landroid/view/View;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->hasPasswordTransformation()Z
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->lambda$new$0(Landroid/view/View;)V
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic access$100(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)Landroid/text/TextWatcher;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->textWatcher:Landroid/text/TextWatcher;
-
-    return-object p0
+    return-void
 .end method
 
 .method private hasPasswordTransformation()Z
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
@@ -151,81 +139,176 @@
     return p0
 .end method
 
-
-# virtual methods
-.method public initialize()V
-    .locals 3
+.method private synthetic lambda$new$0(Landroid/view/View;)V
+    .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    iget-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
+    if-nez p1, :cond_0
 
-    sget v2, Lcom/google/android/material/R$drawable;->design_password_eye:I
+    return-void
 
     .line 2
-    invoke-static {v1, v2}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    :cond_0
+    invoke-virtual {p1}, Landroid/widget/EditText;->getSelectionEnd()I
 
-    move-result-object v1
+    move-result p1
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->hasPasswordTransformation()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    goto :goto_0
 
     .line 5
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
+    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
 
     move-result-object v1
 
-    sget v2, Lcom/google/android/material/R$string;->password_toggle_content_description:I
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
+    :goto_0
+    if-ltz p1, :cond_2
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconContentDescription(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
+    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 7
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    :cond_2
+    invoke-virtual {p0}, Lcom/google/android/material/textfield/EndIconDelegate;->refreshIconState()V
 
-    new-instance v1, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$4;
+    return-void
+.end method
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate$4;-><init>(Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconOnClickListener(Landroid/view/View$OnClickListener;)V
+# virtual methods
+.method public beforeEditTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    .line 8
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    .line 1
+    invoke-virtual {p0}, Lcom/google/android/material/textfield/EndIconDelegate;->refreshIconState()V
 
-    iget-object v1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->onEditTextAttachedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->addOnEditTextAttachedListener(Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;)V
+.method public getIconContentDescriptionResId()I
+    .locals 1
+    .annotation build Landroidx/annotation/StringRes;
+    .end annotation
 
-    .line 9
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    .line 1
+    sget v0, Lcom/google/android/material/R$string;->password_toggle_content_description:I
 
-    iget-object v1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->onEndIconChangedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->addOnEndIconChangedListener(Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;)V
+.method public getIconDrawableResId()I
+    .locals 1
+    .annotation build Landroidx/annotation/DrawableRes;
+    .end annotation
 
-    .line 10
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    .line 1
+    iget v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->iconResId:I
 
-    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+    return v0
+.end method
 
-    move-result-object v0
+.method public getOnIconClickListener()Landroid/view/View$OnClickListener;
+    .locals 1
 
-    .line 11
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->onIconClickListener:Landroid/view/View$OnClickListener;
+
+    return-object v0
+.end method
+
+.method public isIconCheckable()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public isIconChecked()Z
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->hasPasswordTransformation()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    return v0
+.end method
+
+.method public onEditTextAttached(Landroid/widget/EditText;)V
+    .locals 0
+    .param p1    # Landroid/widget/EditText;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
+    .line 2
+    invoke-virtual {p0}, Lcom/google/android/material/textfield/EndIconDelegate;->refreshIconState()V
+
+    return-void
+.end method
+
+.method public setUp()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
     invoke-static {v0}, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->isInputTypePassword(Landroid/widget/EditText;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 12
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
+    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public tearDown()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/PasswordToggleEndIconDelegate;->editText:Landroid/widget/EditText;
+
+    if-eqz v0, :cond_0
+
+    .line 2
     invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
 
     move-result-object v1

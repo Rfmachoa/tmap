@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message WaterProtectionZoneEntry {
+  /** 정보 인덱스 type */
+  // default = 0x02
+  int32 infoIndexType = 1;
+  /** 상수원 보호구역 정보 */
+  repeated WaterProtectionZoneElement elements = 2;
+}
+
+message WaterProtectionZoneElement {
+  /** 시작 보간점 Idx */
+  int32 departVtxIndex = 1;
+  /** 마지막 보간점 Idx */
+  int32 destVtxIndex = 2;
+  /** 제한 초과 알람코드(0:제한 미초과, 1:제한 초과) */
+  int32 restrictionExceedType = 3;
+}

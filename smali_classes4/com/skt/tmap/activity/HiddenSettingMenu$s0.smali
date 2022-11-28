@@ -3,12 +3,12 @@
 .source "HiddenSettingMenu.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/skt/tmap/util/p0;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->N5(Lcom/skt/tmap/util/y;)V
+    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->U5(Landroid/widget/ListView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,35 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/widget/EditText;
-
-.field public final synthetic b:Lcom/skt/tmap/util/y;
-
-.field public final synthetic c:Lcom/skt/tmap/activity/HiddenSettingMenu;
+.field public final synthetic a:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/HiddenSettingMenu;Landroid/widget/EditText;Lcom/skt/tmap/util/y;)V
+.method public constructor <init>(Lcom/skt/tmap/activity/HiddenSettingMenu;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
+            0x8010
         }
         names = {
-            "this$0",
-            "val$editText",
-            "val$hiddenMenuListData"
+            "this$0"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->c:Lcom/skt/tmap/activity/HiddenSettingMenu;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->a:Landroid/widget/EditText;
-
-    iput-object p3, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->b:Lcom/skt/tmap/util/y;
+    iput-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,60 +43,50 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public a(Lcom/skt/tmap/util/a0;)V
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0
         }
         names = {
-            "dialog",
-            "id"
+            "hiddenMenuListData"
         }
     .end annotation
 
     .line 1
-    iget-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->a:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->L5(Lcom/skt/tmap/activity/HiddenSettingMenu;Lcom/skt/tmap/util/a0;)V
 
-    move-result-object p1
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+.method public b(Lcom/skt/tmap/util/a0;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hiddenMenuListData"
+        }
+    .end annotation
 
-    move-result-object p1
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
-    .line 2
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/skt/tmap/activity/HiddenSettingMenu;->B5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lcom/skt/tmap/util/HiddenSettingData;
 
-    move-result p2
+    move-result-object v0
 
-    if-nez p2, :cond_0
-
-    .line 3
-    iget-object p2, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->c:Lcom/skt/tmap/activity/HiddenSettingMenu;
-
-    invoke-static {p2}, Lcom/skt/tmap/activity/HiddenSettingMenu;->t5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lcom/skt/tmap/util/HiddenSettingData;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/util/HiddenSettingData;->C0(Ljava/lang/String;)V
-
-    .line 4
-    iget-object p2, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->b:Lcom/skt/tmap/util/y;
-
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/util/y;->i(Ljava/lang/Object;)V
-
-    .line 5
-    iget-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$s0;->c:Lcom/skt/tmap/activity/HiddenSettingMenu;
-
-    invoke-static {p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->w5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lpb/b0;
+    invoke-virtual {p1}, Lcom/skt/tmap/util/a0;->d()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    check-cast p1, Ljava/lang/Boolean;
 
-    :cond_0
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/util/HiddenSettingData;->l0(Ljava/lang/Boolean;)V
+
     return-void
 .end method

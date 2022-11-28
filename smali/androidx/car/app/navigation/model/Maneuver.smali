@@ -183,9 +183,9 @@
     iput p3, p0, Landroidx/car/app/navigation/model/Maneuver;->mRoundaboutExitAngle:I
 
     .line 5
-    sget-object p1, Lm0/c;->c:Lm0/c;
+    sget-object p1, La1/c;->c:La1/c;
 
-    invoke-virtual {p1, p4}, Lm0/c;->c(Landroidx/car/app/model/CarIcon;)V
+    invoke-virtual {p1, p4}, La1/c;->c(Landroidx/car/app/model/CarIcon;)V
 
     .line 6
     iput-object p4, p0, Landroidx/car/app/navigation/model/Maneuver;->mIcon:Landroidx/car/app/model/CarIcon;
@@ -194,6 +194,32 @@
 .end method
 
 .method public static e(I)Z
+    .locals 1
+
+    const/16 v0, 0x20
+
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0x22
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
+.end method
+
+.method public static f(I)Z
     .locals 1
 
     if-ltz p0, :cond_0
@@ -213,7 +239,7 @@
     return p0
 .end method
 
-.method public static f(I)Z
+.method public static g(I)Z
     .locals 1
 
     const/16 v0, 0x21
@@ -239,7 +265,7 @@
     return p0
 .end method
 
-.method public static g(I)Z
+.method public static h(I)Z
     .locals 1
 
     const/16 v0, 0x20

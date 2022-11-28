@@ -6,27 +6,17 @@
 .implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic a:Landroidx/camera/core/w0;
+# instance fields
+.field public final synthetic a:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Landroidx/camera/core/w0;
-
-    invoke-direct {v0}, Landroidx/camera/core/w0;-><init>()V
-
-    sput-object v0, Landroidx/camera/core/w0;->a:Landroidx/camera/core/w0;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/core/w0;->a:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
@@ -34,9 +24,11 @@
 
 # virtual methods
 .method public final run()V
-    .locals 0
+    .locals 1
 
-    invoke-static {}, Landroidx/camera/core/ImageCapture;->T()V
+    iget-object v0, p0, Landroidx/camera/core/w0;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-static {v0}, Landroidx/camera/core/ImageCapture;->P(Ljava/util/concurrent/ExecutorService;)V
 
     return-void
 .end method

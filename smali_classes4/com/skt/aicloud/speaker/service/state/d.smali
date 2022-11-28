@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public s:Lsa/d;
+.field public s:Lpc/d;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/state/d$a;-><init>(Lcom/skt/aicloud/speaker/service/state/d;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/d;->s:Lsa/d;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/d;->s:Lpc/d;
 
     .line 3
     sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_IDLE:Lcom/skt/aicloud/speaker/lib/state/AppState;
@@ -128,9 +128,9 @@
 
     sget-object v2, Lcom/skt/aicloud/speaker/lib/NuguSdkError;->NOT_SUPPORTED_IN_IDLE:Lcom/skt/aicloud/speaker/lib/NuguSdkError;
 
-    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/d;->s:Lsa/d;
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/d;->s:Lpc/d;
 
-    invoke-virtual {v1, v2, v0, v3}, Lcom/skt/aicloud/mobile/service/api/f;->x(Lcom/skt/aicloud/speaker/lib/NuguSdkError;Ljava/lang/String;Lsa/d;)Z
+    invoke-virtual {v1, v2, v0, v3}, Lcom/skt/aicloud/mobile/service/api/f;->x(Lcom/skt/aicloud/speaker/lib/NuguSdkError;Ljava/lang/String;Lpc/d;)Z
 
     return-void
 .end method
@@ -223,22 +223,7 @@
     return-void
 .end method
 
-.method public g()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
-
-    const-string v1, "canReadContentInfo = true"
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public i(Landroid/content/Intent;Lma/c;)V
+.method public g(Landroid/content/Intent;Ljc/c;)V
     .locals 0
 
     const-string p1, "setAction"
@@ -254,6 +239,21 @@
     invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/common/ApplicationStateDetecter;->e()V
 
     return-void
+.end method
+
+.method public h()Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v1, "canReadContentInfo = true"
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method public j(Ljava/lang/String;)V
@@ -317,7 +317,7 @@
 
     const-string v7, "), WakeupTime = "
 
-    invoke-static {v1, p1, v7}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v7}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -329,7 +329,7 @@
 
     const-string v8, ", diff = "
 
-    invoke-static {v1, v7, v2, v3, v8}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v1, v7, v2, v3, v8}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

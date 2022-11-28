@@ -1,20 +1,26 @@
 .class public final synthetic Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;
 .super Ljava/lang/Object;
+.source "NavigationManager.kt"
 
 
 # annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/skt/tmap/engine/navigation/NavigationManager;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1001
+    name = "WhenMappings"
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -23,28 +29,12 @@
 
 .field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public static final synthetic $EnumSwitchMapping$10:[I
-
 .field public static final synthetic $EnumSwitchMapping$2:[I
-
-.field public static final synthetic $EnumSwitchMapping$3:[I
-
-.field public static final synthetic $EnumSwitchMapping$4:[I
-
-.field public static final synthetic $EnumSwitchMapping$5:[I
-
-.field public static final synthetic $EnumSwitchMapping$6:[I
-
-.field public static final synthetic $EnumSwitchMapping$7:[I
-
-.field public static final synthetic $EnumSwitchMapping$8:[I
-
-.field public static final synthetic $EnumSwitchMapping$9:[I
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 10
+.method public static constructor <clinit>()V
+    .locals 5
 
     invoke-static {}, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->values()[Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
@@ -54,65 +44,111 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$0:[I
+    const/4 v1, 0x1
 
-    sget-object v1, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->UsedFavoriteRoute:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
+    :try_start_0
+    sget-object v2, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->UsedFavoriteRoute:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x1
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    aput v2, v0, v1
+    :catch_0
+    const/4 v2, 0x2
 
-    sget-object v1, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->SlowRoad:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
+    :try_start_1
+    sget-object v3, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->SlowRoad:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
     move-result v3
 
-    const/4 v4, 0x2
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v3, 0x3
+
+    :try_start_2
+    sget-object v4, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->ThemeRoad:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v3, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_3
+    sget-object v4, Lcom/skt/tmap/engine/navigation/data/DriveMode;->REAL_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v1, v0, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v4, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SIMULATION_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v2, v0, v4
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v4, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SAFE_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v3, v0, v4
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v3, Lcom/skt/tmap/engine/navigation/data/DriveMode;->NONE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    const/4 v4, 0x4
 
     aput v4, v0, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    sget-object v3, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->ThemeRoad:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    const/4 v6, 0x3
-
-    aput v6, v0, v5
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
+    :catch_6
     sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$1:[I
 
-    sget-object v5, Lcom/skt/tmap/engine/navigation/data/DriveMode;->REAL_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v6
-
-    aput v2, v0, v6
-
-    sget-object v6, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SIMULATION_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v7
-
-    aput v4, v0, v7
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->values()[Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
 
     move-result-object v0
 
@@ -120,197 +156,31 @@
 
     new-array v0, v0, [I
 
+    :try_start_7
+    sget-object v3, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->AvoidAltResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    aput v1, v0, v3
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    sget-object v1, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->DestinationDirResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
     sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$2:[I
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v7
-
-    aput v2, v0, v7
-
-    sget-object v7, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SAFE_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v8
-
-    aput v4, v0, v8
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$3:[I
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v8
-
-    aput v2, v0, v8
-
-    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v8
-
-    aput v4, v0, v8
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$4:[I
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v8
-
-    aput v2, v0, v8
-
-    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v8
-
-    aput v4, v0, v8
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->values()[Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$5:[I
-
-    sget-object v8, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->DestinationDirResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
-
-    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v9
-
-    aput v2, v0, v9
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->values()[Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$6:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v9
-
-    aput v2, v0, v9
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v9
-
-    aput v4, v0, v9
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->values()[Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$7:[I
-
-    sget-object v9, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->AvoidAltResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
-
-    invoke-virtual {v9}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v9
-
-    aput v2, v0, v9
-
-    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v8
-
-    aput v4, v0, v8
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->values()[Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$8:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v2, v0, v1
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v4, v0, v1
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$9:[I
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v2, v0, v1
-
-    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v4, v0, v1
-
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$10:[I
-
-    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v2, v0, v1
-
-    sget-object v1, Lcom/skt/tmap/engine/navigation/data/DriveMode;->NONE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aput v4, v0, v1
 
     return-void
 .end method

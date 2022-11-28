@@ -3,7 +3,7 @@
 .source "ProviderOfLazy.java"
 
 # interfaces
-.implements Loi/a;
+.implements Lsk/a;
 
 
 # annotations
@@ -13,8 +13,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Loi/a<",
-        "Lsg/a<",
+        "Lsk/a<",
+        "Lwi/a<",
         "TT;>;>;"
     }
 .end annotation
@@ -25,10 +25,10 @@
 
 
 # instance fields
-.field public final a:Loi/a;
+.field public final a:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -42,12 +42,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Loi/a;)V
+.method public constructor <init>(Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -56,22 +56,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Ldagger/internal/l;->a:Loi/a;
+    iput-object p1, p0, Ldagger/internal/l;->a:Lsk/a;
 
     return-void
 .end method
 
-.method public static a(Loi/a;)Loi/a;
+.method public static a(Lsk/a;)Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)",
-            "Loi/a<",
-            "Lsg/a<",
+            "Lsk/a<",
+            "Lwi/a<",
             "TT;>;>;"
         }
     .end annotation
@@ -83,29 +83,29 @@
 
     move-result-object p0
 
-    check-cast p0, Loi/a;
+    check-cast p0, Lsk/a;
 
-    invoke-direct {v0, p0}, Ldagger/internal/l;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Ldagger/internal/l;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public b()Lsg/a;
+.method public b()Lwi/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lsg/a<",
+            "Lwi/a<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ldagger/internal/l;->a:Loi/a;
+    iget-object v0, p0, Ldagger/internal/l;->a:Lsk/a;
 
-    invoke-static {v0}, Ldagger/internal/d;->a(Loi/a;)Lsg/a;
+    invoke-static {v0}, Ldagger/internal/d;->a(Lsk/a;)Lwi/a;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Ldagger/internal/l;->b()Lsg/a;
+    invoke-virtual {p0}, Ldagger/internal/l;->b()Lwi/a;
 
     move-result-object v0
 

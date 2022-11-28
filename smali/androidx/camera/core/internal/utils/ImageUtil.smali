@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
@@ -38,17 +42,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "sourceSize",
-            "aspectRatio"
-        }
-    .end annotation
-
     .line 1
     invoke-static {p1}, Landroidx/camera/core/internal/utils/ImageUtil;->f(Landroid/util/Rational;)Z
 
@@ -61,7 +54,7 @@
     const-string p1, "Invalid view ratio."
 
     .line 2
-    invoke-static {p0, p1}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -171,28 +164,134 @@
     return-object v1
 .end method
 
-.method public static b([BLandroid/graphics/Rect;)[B
+.method public static b(Landroid/graphics/Rect;ILandroid/util/Size;I)Landroid/graphics/Rect;
+    .locals 4
+    .param p0    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/Size;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    sub-int/2addr p3, p1
+
+    int-to-float p1, p3
+
+    .line 2
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->setRotate(F)V
+
+    .line 3
+    invoke-static {p2}, Landroidx/camera/core/internal/utils/ImageUtil;->o(Landroid/util/Size;)[F
+
+    move-result-object p1
+
+    .line 4
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->mapPoints([F)V
+
+    const/4 p2, 0x0
+
+    .line 5
+    aget p2, p1, p2
+
+    const/4 p3, 0x2
+
+    aget p3, p1, p3
+
+    const/4 v1, 0x4
+
+    aget v1, p1, v1
+
+    const/4 v2, 0x6
+
+    aget v2, p1, v2
+
+    invoke-static {p2, p3, v1, v2}, Landroidx/camera/core/internal/utils/ImageUtil;->k(FFFF)F
+
+    move-result p2
+
+    const/4 p3, 0x1
+
+    .line 6
+    aget p3, p1, p3
+
+    const/4 v1, 0x3
+
+    aget v1, p1, v1
+
+    const/4 v2, 0x5
+
+    aget v2, p1, v2
+
+    const/4 v3, 0x7
+
+    aget p1, p1, v3
+
+    invoke-static {p3, v1, v2, p1}, Landroidx/camera/core/internal/utils/ImageUtil;->k(FFFF)F
+
+    move-result p1
+
+    neg-float p2, p2
+
+    neg-float p1, p1
+
+    .line 7
+    invoke-virtual {v0, p2, p1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    .line 8
+    invoke-virtual {v0, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+
+    .line 9
+    new-instance p1, Landroid/graphics/RectF;
+
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+
+    .line 10
+    new-instance p2, Landroid/graphics/RectF;
+
+    invoke-direct {p2, p0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+
+    .line 11
+    invoke-virtual {p1}, Landroid/graphics/RectF;->sort()V
+
+    .line 12
+    new-instance p0, Landroid/graphics/Rect;
+
+    invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
+
+    .line 13
+    invoke-virtual {p1, p0}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
+
+    return-object p0
+.end method
+
+.method public static c([BLandroid/graphics/Rect;I)[B
     .locals 3
     .param p0    # [B
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p1    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+            to = 0x64L
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "data",
-            "cropRect"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -203,12 +302,7 @@
 
     const-string v0, "Decode byte array failed."
 
-    if-nez p1, :cond_0
-
-    return-object p0
-
     .line 1
-    :cond_0
     :try_start_0
     array-length v1, p0
 
@@ -233,7 +327,7 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
     .line 4
     new-instance p0, Ljava/io/ByteArrayOutputStream;
@@ -243,13 +337,11 @@
     .line 5
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    const/16 v1, 0x64
+    invoke-virtual {p1, v0, p2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    invoke-virtual {p1, v0, v1, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    move-result p2
 
-    move-result v0
-
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_0
 
     .line 6
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
@@ -262,19 +354,19 @@
     return-object p0
 
     .line 8
-    :cond_1
+    :cond_0
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
     sget-object p1, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;->ENCODE_FAILED:Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;
 
-    const-string v0, "Encode bitmap failed."
+    const-string p2, "Encode bitmap failed."
 
-    invoke-direct {p0, v0, p1}, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;-><init>(Ljava/lang/String;Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;)V
+    invoke-direct {p0, p2, p1}, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;-><init>(Ljava/lang/String;Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;)V
 
     throw p0
 
     .line 9
-    :cond_2
+    :cond_1
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
     sget-object p1, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;->DECODE_FAILED:Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;
@@ -299,28 +391,28 @@
     .line 11
     new-instance p1, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Decode byte array failed with illegal argument."
+    const-string v0, "Decode byte array failed with illegal argument."
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    sget-object v0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;->DECODE_FAILED:Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;
+    sget-object p2, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;->DECODE_FAILED:Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;
 
-    invoke-direct {p1, p0, v0}, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;-><init>(Ljava/lang/String;Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;)V
+    invoke-direct {p1, p0, p2}, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;-><init>(Ljava/lang/String;Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException$FailureType;)V
 
     throw p1
 .end method
 
-.method public static c(ILandroid/util/Rational;)Landroid/util/Rational;
+.method public static d(ILandroid/util/Rational;)Landroid/util/Rational;
     .locals 1
     .param p0    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -333,17 +425,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "rotationDegrees",
-            "aspectRatio"
-        }
     .end annotation
 
     const/16 v0, 0x5a
@@ -382,101 +463,12 @@
     return-object p0
 .end method
 
-.method public static d(Landroidx/camera/core/p1;)[B
-    .locals 2
-    .param p0    # Landroidx/camera/core/p1;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "image"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-interface {p0}, Landroidx/camera/core/p1;->g()I
-
-    move-result v0
-
-    const/16 v1, 0x100
-
-    if-ne v0, v1, :cond_0
-
-    .line 2
-    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->i(Landroidx/camera/core/p1;)[B
-
-    move-result-object p0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-interface {p0}, Landroidx/camera/core/p1;->g()I
-
-    move-result v0
-
-    const/16 v1, 0x23
-
-    if-ne v0, v1, :cond_1
-
-    .line 4
-    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->n(Landroidx/camera/core/p1;)[B
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "Unrecognized image format: "
-
-    .line 5
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-interface {p0}, Landroidx/camera/core/p1;->g()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "ImageUtil"
-
-    invoke-static {v0, p0}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    :goto_0
-    return-object p0
-.end method
-
 .method public static e(Landroid/util/Rational;)Landroid/util/Rational;
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rational"
-        }
-    .end annotation
+    .param p0    # Landroid/util/Rational;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-nez p0, :cond_0
 
@@ -507,14 +499,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "aspectRatio"
-        }
-    .end annotation
 
     if-eqz p0, :cond_0
 
@@ -556,16 +540,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "sourceSize",
-            "aspectRatio"
-        }
-    .end annotation
 
     if-eqz p1, :cond_0
 
@@ -607,16 +581,14 @@
 
 .method public static h(Landroid/util/Size;Landroid/util/Rational;)Z
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "sourceSize",
-            "aspectRatio"
-        }
-    .end annotation
+    .param p0    # Landroid/util/Size;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/util/Rational;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
@@ -683,15 +655,96 @@
     return p0
 .end method
 
-.method public static i(Landroidx/camera/core/p1;)[B
+.method public static i(Landroidx/camera/core/m1;)[B
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "image"
-        }
+    .param p0    # Landroidx/camera/core/m1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-interface {p0}, Landroidx/camera/core/m1;->h()I
+
+    move-result v0
+
+    const/16 v1, 0x100
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    invoke-interface {p0}, Landroidx/camera/core/m1;->L0()[Landroidx/camera/core/m1$a;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 3
+    aget-object p0, p0, v0
+
+    invoke-interface {p0}, Landroidx/camera/core/m1$a;->getBuffer()Ljava/nio/ByteBuffer;
+
+    move-result-object p0
+
+    .line 4
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->capacity()I
+
+    move-result v0
+
+    new-array v0, v0, [B
+
+    .line 5
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 6
+    invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    return-object v0
+
+    .line 7
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Incorrect image format of the input image proxy: "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 8
+    invoke-interface {p0}, Landroidx/camera/core/m1;->h()I
+
+    move-result p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static j(Landroidx/camera/core/m1;Landroid/graphics/Rect;I)[B
+    .locals 2
+    .param p0    # Landroidx/camera/core/m1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+            to = 0x64L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -701,68 +754,54 @@
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Landroidx/camera/core/p1;->r0()[Landroidx/camera/core/p1$a;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 2
-    aget-object v0, v0, v1
-
-    invoke-interface {v0}, Landroidx/camera/core/p1$a;->getBuffer()Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    .line 3
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->capacity()I
-
-    move-result v1
-
-    new-array v1, v1, [B
-
-    .line 4
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    .line 6
-    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->l(Landroidx/camera/core/p1;)Z
+    invoke-interface {p0}, Landroidx/camera/core/m1;->h()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0x100
 
-    .line 7
-    invoke-interface {p0}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->i(Landroidx/camera/core/m1;)[B
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Landroidx/camera/core/internal/utils/ImageUtil;->b([BLandroid/graphics/Rect;)[B
+    .line 3
+    invoke-static {p0, p1, p2}, Landroidx/camera/core/internal/utils/ImageUtil;->c([BLandroid/graphics/Rect;I)[B
 
-    move-result-object v1
+    move-result-object p0
 
+    return-object p0
+
+    .line 4
     :cond_0
-    return-object v1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Incorrect image format of the input image proxy: "
+
+    invoke-static {p2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p2
+
+    .line 5
+    invoke-interface {p0}, Landroidx/camera/core/m1;->h()I
+
+    move-result p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static j(FFFF)F
+.method public static k(FFFF)F
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "value1",
-            "value2",
-            "value3",
-            "value4"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->min(FF)F
@@ -780,27 +819,22 @@
     return p0
 .end method
 
-.method public static k([BIILandroid/graphics/Rect;)[B
+.method public static l([BIILandroid/graphics/Rect;I)[B
     .locals 8
+    .param p0    # [B
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .param p3    # Landroid/graphics/Rect;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "nv21",
-            "width",
-            "height",
-            "cropRect"
-        }
-    .end annotation
-
+    .param p4    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+            to = 0x64L
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
@@ -839,23 +873,20 @@
     invoke-direct {p3, p0, p0, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     :cond_0
-    const/16 p0, 0x64
-
-    .line 4
-    invoke-virtual {v7, p3, p0, v0}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
+    invoke-virtual {v7, p3, p4, v0}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 5
+    .line 4
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
     return-object p0
 
-    .line 6
+    .line 5
     :cond_1
     new-instance p0, Landroidx/camera/core/internal/utils/ImageUtil$CodecFailedException;
 
@@ -868,34 +899,45 @@
     throw p0
 .end method
 
-.method public static l(Landroidx/camera/core/p1;)Z
+.method public static m(IIII)Z
+    .locals 0
+
+    if-ne p0, p2, :cond_1
+
+    if-eq p1, p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
+.end method
+
+.method public static n(Landroidx/camera/core/m1;)Z
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "image"
-        }
-    .end annotation
+    .param p0    # Landroidx/camera/core/m1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    new-instance v0, Landroid/util/Size;
+    invoke-interface {p0}, Landroidx/camera/core/m1;->getWidth()I
 
-    invoke-interface {p0}, Landroidx/camera/core/p1;->getWidth()I
+    move-result v0
+
+    invoke-interface {p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v1
 
-    invoke-interface {p0}, Landroidx/camera/core/p1;->getHeight()I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
-
-    .line 2
-    new-instance v1, Landroid/util/Size;
-
-    invoke-interface {p0}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
+    invoke-interface {p0}, Landroidx/camera/core/m1;->a1()Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -903,7 +945,8 @@
 
     move-result v2
 
-    invoke-interface {p0}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
+    .line 2
+    invoke-interface {p0}, Landroidx/camera/core/m1;->a1()Landroid/graphics/Rect;
 
     move-result-object p0
 
@@ -911,34 +954,21 @@
 
     move-result p0
 
-    invoke-direct {v1, v2, p0}, Landroid/util/Size;-><init>(II)V
-
     .line 3
-    invoke-virtual {v1, v0}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2, p0}, Landroidx/camera/core/internal/utils/ImageUtil;->m(IIII)Z
 
     move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
 
     return p0
 .end method
 
-.method public static m(Landroid/util/Size;)[F
+.method public static o(Landroid/util/Size;)[F
     .locals 4
     .param p0    # Landroid/util/Size;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "size"
-        }
     .end annotation
 
     const/16 v0, 0x8
@@ -1008,15 +1038,23 @@
     return-object v0
 .end method
 
-.method public static n(Landroidx/camera/core/p1;)[B
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "image"
-        }
+.method public static p(Landroidx/camera/core/m1;Landroid/graphics/Rect;I)[B
+    .locals 2
+    .param p0    # Landroidx/camera/core/m1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+            to = 0x64L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -1026,65 +1064,73 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->o(Landroidx/camera/core/p1;)[B
+    invoke-interface {p0}, Landroidx/camera/core/m1;->h()I
+
+    move-result v0
+
+    const/16 v1, 0x23
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->q(Landroidx/camera/core/m1;)[B
 
     move-result-object v0
 
-    .line 2
-    invoke-interface {p0}, Landroidx/camera/core/p1;->getWidth()I
+    .line 3
+    invoke-interface {p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v1
 
-    .line 3
-    invoke-interface {p0}, Landroidx/camera/core/p1;->getHeight()I
-
-    move-result v2
-
     .line 4
-    invoke-static {p0}, Landroidx/camera/core/internal/utils/ImageUtil;->l(Landroidx/camera/core/p1;)Z
+    invoke-interface {p0}, Landroidx/camera/core/m1;->getHeight()I
 
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {p0}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
+    move-result p0
 
     .line 5
-    :goto_0
-    invoke-static {v0, v1, v2, p0}, Landroidx/camera/core/internal/utils/ImageUtil;->k([BIILandroid/graphics/Rect;)[B
+    invoke-static {v0, v1, p0, p1, p2}, Landroidx/camera/core/internal/utils/ImageUtil;->l([BIILandroid/graphics/Rect;I)[B
 
     move-result-object p0
 
     return-object p0
+
+    .line 6
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Incorrect image format of the input image proxy: "
+
+    invoke-static {p2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p2
+
+    .line 7
+    invoke-interface {p0}, Landroidx/camera/core/m1;->h()I
+
+    move-result p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static o(Landroidx/camera/core/p1;)[B
+.method public static q(Landroidx/camera/core/m1;)[B
     .locals 19
-    .param p0    # Landroidx/camera/core/p1;
+    .param p0    # Landroidx/camera/core/m1;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "image"
-        }
-    .end annotation
-
     .line 1
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->r0()[Landroidx/camera/core/p1$a;
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->L0()[Landroidx/camera/core/m1$a;
 
     move-result-object v0
 
@@ -1093,7 +1139,7 @@
     aget-object v0, v0, v1
 
     .line 2
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->r0()[Landroidx/camera/core/p1$a;
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->L0()[Landroidx/camera/core/m1$a;
 
     move-result-object v2
 
@@ -1102,7 +1148,7 @@
     aget-object v2, v2, v3
 
     .line 3
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->r0()[Landroidx/camera/core/p1$a;
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->L0()[Landroidx/camera/core/m1$a;
 
     move-result-object v3
 
@@ -1111,17 +1157,17 @@
     aget-object v3, v3, v4
 
     .line 4
-    invoke-interface {v0}, Landroidx/camera/core/p1$a;->getBuffer()Ljava/nio/ByteBuffer;
+    invoke-interface {v0}, Landroidx/camera/core/m1$a;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v5
 
     .line 5
-    invoke-interface {v2}, Landroidx/camera/core/p1$a;->getBuffer()Ljava/nio/ByteBuffer;
+    invoke-interface {v2}, Landroidx/camera/core/m1$a;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v6
 
     .line 6
-    invoke-interface {v3}, Landroidx/camera/core/p1$a;->getBuffer()Ljava/nio/ByteBuffer;
+    invoke-interface {v3}, Landroidx/camera/core/m1$a;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v7
 
@@ -1140,11 +1186,11 @@
     move-result v8
 
     .line 11
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v9
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v10
 
@@ -1162,21 +1208,21 @@
 
     .line 12
     :goto_0
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v12
 
     if-ge v10, v12, :cond_0
 
     .line 13
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v12
 
     invoke-virtual {v5, v9, v11, v12}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     .line 14
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v12
 
@@ -1187,13 +1233,13 @@
 
     move-result v12
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v13
 
     sub-int/2addr v12, v13
 
-    invoke-interface {v0}, Landroidx/camera/core/p1$a;->a()I
+    invoke-interface {v0}, Landroidx/camera/core/m1$a;->a()I
 
     move-result v13
 
@@ -1212,36 +1258,36 @@
 
     .line 17
     :cond_0
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v0
 
     div-int/2addr v0, v4
 
     .line 18
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v5
 
     div-int/2addr v5, v4
 
     .line 19
-    invoke-interface {v3}, Landroidx/camera/core/p1$a;->a()I
+    invoke-interface {v3}, Landroidx/camera/core/m1$a;->a()I
 
     move-result v4
 
     .line 20
-    invoke-interface {v2}, Landroidx/camera/core/p1$a;->a()I
+    invoke-interface {v2}, Landroidx/camera/core/m1$a;->a()I
 
     move-result v8
 
     .line 21
-    invoke-interface {v3}, Landroidx/camera/core/p1$a;->b()I
+    invoke-interface {v3}, Landroidx/camera/core/m1$a;->b()I
 
     move-result v3
 
     .line 22
-    invoke-interface {v2}, Landroidx/camera/core/p1$a;->b()I
+    invoke-interface {v2}, Landroidx/camera/core/m1$a;->b()I
 
     move-result v2
 

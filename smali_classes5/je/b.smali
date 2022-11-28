@@ -1,8 +1,11 @@
-.class public interface abstract synthetic Lje/b;
+.class public interface abstract Lje/b;
 .super Ljava/lang/Object;
-.source "package-info.java"
+.source "ArrivalInfoView.java"
+
+# interfaces
+.implements Lje/f;
 
 
-# annotations
-.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
-.end annotation
+# virtual methods
+.method public abstract c4()V
+.end method

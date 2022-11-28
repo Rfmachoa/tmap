@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/service/Common;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # static fields
@@ -39,15 +39,6 @@
 .field public static final zaa:Lcom/google/android/gms/common/internal/service/zae;
 
 .field private static final zab:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "Lcom/google/android/gms/common/internal/service/zah;",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

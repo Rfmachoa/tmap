@@ -1,102 +1,98 @@
 .class public Landroidx/appcompat/widget/l$a;
-.super Landroidx/core/content/res/a$d;
-.source "AppCompatTextHelper.java"
+.super Ljava/lang/Object;
+.source "AppCompatProgressBarHelper.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/widget/l;->B(Landroid/content/Context;Landroidx/appcompat/widget/j0;)V
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x17
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/appcompat/widget/l;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x9
+    name = "a"
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/ref/WeakReference;
-
-.field public final synthetic d:Landroidx/appcompat/widget/l;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/l;IILjava/lang/ref/WeakReference;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/widget/l$a;->d:Landroidx/appcompat/widget/l;
-
-    iput p2, p0, Landroidx/appcompat/widget/l$a;->a:I
-
-    iput p3, p0, Landroidx/appcompat/widget/l$a;->b:I
-
-    iput-object p4, p0, Landroidx/appcompat/widget/l$a;->c:Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p0}, Landroidx/core/content/res/a$d;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public onFontRetrievalFailed(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onFontRetrieved(Landroid/graphics/Typeface;)V
-    .locals 2
-    .param p1    # Landroid/graphics/Typeface;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public static a(Landroid/graphics/drawable/LayerDrawable;Landroid/graphics/drawable/LayerDrawable;I)V
+    .locals 1
 
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerGravity(I)I
 
-    const/16 v1, 0x1c
+    move-result v0
 
-    if-lt v0, v1, :cond_1
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
 
     .line 2
-    iget v0, p0, Landroidx/appcompat/widget/l$a;->a:I
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerWidth(I)I
 
-    const/4 v1, -0x1
+    move-result v0
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerWidth(II)V
 
     .line 3
-    iget v1, p0, Landroidx/appcompat/widget/l$a;->b:I
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerHeight(I)I
 
-    and-int/lit8 v1, v1, 0x2
+    move-result v0
 
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {p1, v0, v1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-
-    move-result-object p1
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerHeight(II)V
 
     .line 4
-    :cond_1
-    iget-object v0, p0, Landroidx/appcompat/widget/l$a;->d:Landroidx/appcompat/widget/l;
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerInsetLeft(I)I
 
-    iget-object v1, p0, Landroidx/appcompat/widget/l$a;->c:Ljava/lang/ref/WeakReference;
+    move-result v0
 
-    invoke-virtual {v0, v1, p1}, Landroidx/appcompat/widget/l;->n(Ljava/lang/ref/WeakReference;Landroid/graphics/Typeface;)V
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetLeft(II)V
+
+    .line 5
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerInsetRight(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetRight(II)V
+
+    .line 6
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerInsetTop(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetTop(II)V
+
+    .line 7
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerInsetBottom(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetBottom(II)V
+
+    .line 8
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerInsetStart(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetStart(II)V
+
+    .line 9
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/LayerDrawable;->getLayerInsetEnd(I)I
+
+    move-result p0
+
+    invoke-virtual {p1, p2, p0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetEnd(II)V
 
     return-void
 .end method

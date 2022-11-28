@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/activity/ComponentActivity$b;->f(ILb/a;Ljava/lang/Object;Landroidx/core/app/c;)V
+    value = Landroidx/activity/ComponentActivity$b;->f(ILc/a;Ljava/lang/Object;Landroidx/core/app/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

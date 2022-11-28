@@ -3,40 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
+.field public final synthetic a:Landroid/view/View;
 
-.field public final synthetic b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+.field public final synthetic b:Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;)V
+.method public synthetic constructor <init>(Landroid/view/View;Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/v2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iput-object p1, p0, Lcom/skt/tmap/activity/v2;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/skt/tmap/activity/v2;->b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    iput-object p2, p0, Lcom/skt/tmap/activity/v2;->b:Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/v2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/v2;->a:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/v2;->b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    iget-object v1, p0, Lcom/skt/tmap/activity/v2;->b:Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->K7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;Ljava/lang/Boolean;)V
+    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;->E5(Landroid/view/View;Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;Landroid/view/View;)V
 
     return-void
 .end method

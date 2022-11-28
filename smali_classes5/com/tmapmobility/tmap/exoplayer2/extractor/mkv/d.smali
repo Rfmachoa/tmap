@@ -170,7 +170,7 @@
     return v0
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;ZZI)J
+.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;ZZI)J
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -190,7 +190,7 @@
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/d;->a:[B
 
-    invoke-interface {p1, v0, v1, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BIIZ)Z
+    invoke-interface {p1, v0, v1, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BIIZ)Z
 
     move-result p2
 
@@ -256,7 +256,7 @@
 
     sub-int/2addr p2, v2
 
-    invoke-interface {p1, p4, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, p4, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 10
     :cond_4

@@ -1,72 +1,44 @@
-.class public interface abstract Landroidx/camera/core/p1;
+.class public final Landroidx/camera/core/p1;
 .super Ljava/lang/Object;
-.source "ImageProxy.java"
-
-# interfaces
-.implements Ljava/lang/AutoCloseable;
+.source "ImageReaderProxys.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation build Landroidx/annotation/RestrictTo;
     value = {
-        Landroidx/camera/core/p1$a;
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
     }
 .end annotation
 
 
-# virtual methods
-.method public abstract G0()Landroid/graphics/Rect;
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a(IIII)Lb0/w0;
+    .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
-.end method
 
-.method public abstract V(Landroid/graphics/Rect;)V
-    .param p1    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rect"
-        }
-    .end annotation
-.end method
+    .line 1
+    invoke-static {p0, p1, p2, p3}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
 
-.method public abstract close()V
-.end method
+    move-result-object p0
 
-.method public abstract f1()Landroidx/camera/core/o1;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end method
+    .line 2
+    new-instance p1, Landroidx/camera/core/d;
 
-.method public abstract g()I
-.end method
+    invoke-direct {p1, p0}, Landroidx/camera/core/d;-><init>(Landroid/media/ImageReader;)V
 
-.method public abstract getHeight()I
-.end method
-
-.method public abstract getWidth()I
-.end method
-
-.method public abstract p1()Landroid/media/Image;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation build Landroidx/camera/core/ExperimentalGetImage;
-    .end annotation
-.end method
-
-.method public abstract r0()[Landroidx/camera/core/p1$a;
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ArrayReturn"
-        }
-    .end annotation
-
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+    return-object p1
 .end method

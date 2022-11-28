@@ -1,6 +1,6 @@
 .class Lcom/google/firebase/messaging/Store$Token;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "Store.java"
 
 
 # annotations
@@ -15,6 +15,12 @@
 
 
 # static fields
+.field private static final KEY_APP_VERSION:Ljava/lang/String; = "appVersion"
+
+.field private static final KEY_TIMESTAMP:Ljava/lang/String; = "timestamp"
+
+.field private static final KEY_TOKEN:Ljava/lang/String; = "token"
+
 .field private static final REFRESH_PERIOD_MILLIS:J
 
 
@@ -47,12 +53,16 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/firebase/messaging/Store$Token;->token:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/google/firebase/messaging/Store$Token;->appVersion:Ljava/lang/String;
 
+    .line 4
     iput-wide p3, p0, Lcom/google/firebase/messaging/Store$Token;->timestamp:J
 
     return-void
@@ -95,13 +105,17 @@
     move-exception p0
 
     .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p1, "Failed to encode token: "
+    const-string p2, "Failed to encode token: "
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -144,25 +158,26 @@
 
     invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
+    .line 4
     new-instance p0, Lcom/google/firebase/messaging/Store$Token;
 
     const-string v2, "token"
 
-    .line 4
+    .line 5
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "appVersion"
 
-    .line 5
+    .line 6
     invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "timestamp"
 
-    .line 6
+    .line 7
     invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
     move-result-wide v4
@@ -176,14 +191,18 @@
     :catch_0
     move-exception p0
 
-    .line 7
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 8
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Failed to parse token: "
+    const-string v2, "Failed to parse token: "
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -193,7 +212,7 @@
 
     return-object v1
 
-    .line 8
+    .line 9
     :cond_1
     new-instance v0, Lcom/google/firebase/messaging/Store$Token;
 
@@ -238,11 +257,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    return p1
+    goto :goto_1
 
     :cond_1
     :goto_0
     const/4 p1, 0x1
 
+    :goto_1
     return p1
 .end method

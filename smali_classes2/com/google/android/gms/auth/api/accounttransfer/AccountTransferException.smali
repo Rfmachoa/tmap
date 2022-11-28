@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferException;
 .super Lcom/google/android/gms/common/api/ApiException;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # direct methods

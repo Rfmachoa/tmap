@@ -3,7 +3,7 @@
 .source "NnApiDelegate.java"
 
 # interfaces
-.implements Lorg/tensorflow/lite/a;
+.implements Lorg/tensorflow/lite/b;
 .implements Ljava/lang/AutoCloseable;
 
 
@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 13
+    .line 14
     new-instance v0, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
 
     invoke-direct {v0}, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;-><init>()V
@@ -38,7 +38,7 @@
 .end method
 
 .method public constructor <init>(Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;)V
-    .locals 9
+    .locals 10
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -111,7 +111,7 @@
 
     move-result-object v8
 
-    if-eqz v8, :cond_2
+    if-eqz v8, :cond_3
 
     .line 10
     invoke-static {p1}, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->f(Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;)Ljava/lang/Boolean;
@@ -130,26 +130,30 @@
     move v6, v7
 
     .line 11
+    :cond_3
     :goto_2
     invoke-static {p1}, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->g(Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;)Ljava/lang/Boolean;
 
     move-result-object v8
 
-    if-eqz v8, :cond_3
+    if-eqz v8, :cond_4
 
     invoke-static {p1}, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->g(Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object v7
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p1
-
-    move v7, p1
+    move-result v7
 
     .line 12
-    :cond_3
-    invoke-static/range {v0 .. v7}, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->createDelegate(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZ)J
+    :cond_4
+    invoke-static {p1}, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->h(Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;)J
+
+    move-result-wide v8
+
+    .line 13
+    invoke-static/range {v0 .. v9}, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->createDelegate(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZJ)J
 
     move-result-wide v0
 
@@ -158,7 +162,7 @@
     return-void
 .end method
 
-.method private static native createDelegate(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZ)J
+.method private static native createDelegate(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IZZZJ)J
 .end method
 
 .method private static native deleteDelegate(J)V
@@ -169,16 +173,7 @@
 
 
 # virtual methods
-.method public a()J
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->a:J
-
-    return-wide v0
-.end method
-
-.method public final b()V
+.method public final a()V
     .locals 4
 
     .line 1
@@ -203,11 +198,11 @@
     throw v0
 .end method
 
-.method public c()I
+.method public b()I
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->b()V
+    invoke-virtual {p0}, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->a()V
 
     .line 2
     iget-wide v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->a:J
@@ -216,6 +211,29 @@
 
     move-result v0
 
+    return v0
+.end method
+
+.method public c()Z
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->a:J
+
+    invoke-static {v0, v1}, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->getNnapiErrno(J)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 
@@ -241,25 +259,11 @@
     return-void
 .end method
 
-.method public d()Z
+.method public getNativeHandle()J
     .locals 2
 
     .line 1
     iget-wide v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->a:J
 
-    invoke-static {v0, v1}, Lorg/tensorflow/lite/nnapi/NnApiDelegate;->getNnapiErrno(J)I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
+    return-wide v0
 .end method

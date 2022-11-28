@@ -925,7 +925,7 @@
     .locals 2
 
     .line 1
-    invoke-static {p0}, Landroidx/core/content/d;->m(Landroid/content/Context;)Ljava/io/File;
+    invoke-static {p0}, Landroidx/core/content/ContextCompat;->getNoBackupFilesDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 

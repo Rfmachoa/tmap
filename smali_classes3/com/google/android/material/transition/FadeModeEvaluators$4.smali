@@ -1,4 +1,4 @@
-.class final Lcom/google/android/material/transition/FadeModeEvaluators$4;
+.class Lcom/google/android/material/transition/FadeModeEvaluators$4;
 .super Ljava/lang/Object;
 .source "FadeModeEvaluators.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -29,26 +29,24 @@
 
 
 # virtual methods
-.method public evaluate(FFF)Lcom/google/android/material/transition/FadeModeResult;
-    .locals 3
+.method public evaluate(FFFF)Lcom/google/android/material/transition/FadeModeResult;
+    .locals 2
 
-    const v0, 0x3eb33333    # 0.35f
+    invoke-static {p3, p2, p4, p2}, Landroidx/appcompat/graphics/drawable/d;->a(FFFF)F
 
-    invoke-static {p3, p2, v0, p2}, Landroidx/appcompat/graphics/drawable/d;->a(FFFF)F
+    move-result p4
 
-    move-result v0
+    const/16 v0, 0xff
 
-    const/16 v1, 0xff
-
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 1
-    invoke-static {v1, v2, p2, v0, p1}, Lcom/google/android/material/transition/TransitionUtils;->lerp(IIFFF)I
+    invoke-static {v0, v1, p2, p4, p1}, Lcom/google/android/material/transition/TransitionUtils;->lerp(IIFFF)I
 
     move-result p2
 
     .line 2
-    invoke-static {v2, v1, v0, p3, p1}, Lcom/google/android/material/transition/TransitionUtils;->lerp(IIFFF)I
+    invoke-static {v1, v0, p4, p3, p1}, Lcom/google/android/material/transition/TransitionUtils;->lerp(IIFFF)I
 
     move-result p1
 

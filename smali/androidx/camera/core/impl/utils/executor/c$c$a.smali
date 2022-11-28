@@ -36,18 +36,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/executor/c$c;Landroid/os/Handler;Ljava/util/concurrent/Callable;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$handler",
-            "val$task"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/executor/c$c$a;->c:Landroidx/camera/core/impl/utils/executor/c$c;
@@ -69,15 +57,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "completer"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

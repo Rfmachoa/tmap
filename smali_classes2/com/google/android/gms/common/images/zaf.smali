@@ -1,18 +1,10 @@
 .class public final Lcom/google/android/gms/common/images/zaf;
 .super Lcom/google/android/gms/common/images/zag;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zac:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/common/images/ImageManager$OnImageLoadedListener;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

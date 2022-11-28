@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/view/menu/ActionMenuItemView$a;
-.super Landroidx/appcompat/widget/s;
+.super Landroidx/appcompat/widget/x;
 .source "ActionMenuItemView.java"
 
 
@@ -26,14 +26,14 @@
     iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView$a;->j:Landroidx/appcompat/view/menu/ActionMenuItemView;
 
     .line 2
-    invoke-direct {p0, p1}, Landroidx/appcompat/widget/s;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Landroidx/appcompat/widget/x;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Lj/g;
+.method public b()Ll/g;
     .locals 1
 
     .line 1
@@ -44,7 +44,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Landroidx/appcompat/view/menu/ActionMenuItemView$b;->a()Lj/g;
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/ActionMenuItemView$b;->a()Ll/g;
 
     move-result-object v0
 
@@ -77,14 +77,14 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/ActionMenuItemView$a;->b()Lj/g;
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/ActionMenuItemView$a;->b()Ll/g;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lj/g;->a()Z
+    invoke-interface {v0}, Ll/g;->a()Z
 
     move-result v0
 

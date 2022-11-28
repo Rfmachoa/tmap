@@ -1,216 +1,129 @@
-.class public final Lli/c;
-.super Lkh/h0;
-.source "TestScheduler.java"
+.class public Lli/c;
+.super Ljava/lang/Object;
+.source "EntitySerializer.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lli/c$a;,
-        Lli/c$b;
-    }
+.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # instance fields
-.field public final b:Ljava/util/Queue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Queue<",
-            "Lli/c$b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public c:J
-
-.field public volatile d:J
+.field public final a:Ldi/e;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ldi/e;)V
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Lkh/h0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "Content length strategy"
 
     .line 2
-    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const/16 v1, 0xb
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>(I)V
+    check-cast p1, Ldi/e;
 
-    iput-object v0, p0, Lli/c;->b:Ljava/util/Queue;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/util/concurrent/TimeUnit;)V
-    .locals 2
-
-    .line 3
-    invoke-direct {p0}, Lkh/h0;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>(I)V
-
-    iput-object v0, p0, Lli/c;->b:Ljava/util/Queue;
-
-    .line 5
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lli/c;->d:J
+    iput-object p1, p0, Lli/c;->a:Ldi/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c()Lkh/h0$c;
-    .locals 1
-    .annotation build Lio/reactivex/annotations/NonNull;
+.method public a(Lpi/i;Lhh/p;)Ljava/io/OutputStream;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
     .end annotation
 
     .line 1
-    new-instance v0, Lli/c$a;
+    iget-object v0, p0, Lli/c;->a:Ldi/e;
 
-    invoke-direct {v0, p0}, Lli/c$a;-><init>(Lli/c;)V
-
-    return-object v0
-.end method
-
-.method public d(Ljava/util/concurrent/TimeUnit;)J
-    .locals 3
-    .param p1    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    iget-wide v0, p0, Lli/c;->d:J
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p1, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-interface {v0, p2}, Ldi/e;->a(Lhh/p;)J
 
     move-result-wide v0
 
-    return-wide v0
-.end method
+    const-wide/16 v2, -0x2
 
-.method public k(JLjava/util/concurrent/TimeUnit;)V
-    .locals 2
+    cmp-long p2, v0, v2
 
-    .line 1
-    iget-wide v0, p0, Lli/c;->d:J
-
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide p1
-
-    add-long/2addr p1, v0
-
-    sget-object p3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p0, p1, p2, p3}, Lli/c;->l(JLjava/util/concurrent/TimeUnit;)V
-
-    return-void
-.end method
-
-.method public l(JLjava/util/concurrent/TimeUnit;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide p1
+    if-nez p2, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Lli/c;->n(J)V
+    new-instance p2, Lni/f;
 
-    return-void
-.end method
+    invoke-direct {p2, p1}, Lni/f;-><init>(Lpi/i;)V
 
-.method public m()V
-    .locals 2
+    return-object p2
 
-    .line 1
-    iget-wide v0, p0, Lli/c;->d:J
-
-    invoke-virtual {p0, v0, v1}, Lli/c;->n(J)V
-
-    return-void
-.end method
-
-.method public final n(J)V
-    .locals 5
-
-    .line 1
     :cond_0
-    :goto_0
-    iget-object v0, p0, Lli/c;->b:Ljava/util/Queue;
+    const-wide/16 v2, -0x1
 
-    invoke-interface {v0}, Ljava/util/Queue;->peek()Ljava/lang/Object;
+    cmp-long p2, v0, v2
 
-    move-result-object v0
-
-    check-cast v0, Lli/c$b;
-
-    if-eqz v0, :cond_3
-
-    .line 2
-    iget-wide v1, v0, Lli/c$b;->a:J
-
-    cmp-long v3, v1, p1
-
-    if-lez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v1, v3
-
-    if-nez v3, :cond_2
+    if-nez p2, :cond_1
 
     .line 3
-    iget-wide v1, p0, Lli/c;->d:J
+    new-instance p2, Lni/w;
 
-    :cond_2
-    iput-wide v1, p0, Lli/c;->d:J
+    invoke-direct {p2, p1}, Lni/w;-><init>(Lpi/i;)V
+
+    return-object p2
 
     .line 4
-    iget-object v1, p0, Lli/c;->b:Ljava/util/Queue;
+    :cond_1
+    new-instance p2, Lni/h;
 
-    invoke-interface {v1, v0}, Ljava/util/Queue;->remove(Ljava/lang/Object;)Z
+    invoke-direct {p2, p1, v0, v1}, Lni/h;-><init>(Lpi/i;J)V
+
+    return-object p2
+.end method
+
+.method public b(Lpi/i;Lhh/p;Lhh/l;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "Session output buffer"
+
+    .line 1
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string v0, "HTTP message"
+
+    .line 2
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string v0, "HTTP entity"
+
+    .line 3
+    invoke-static {p3, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 4
+    invoke-virtual {p0, p1, p2}, Lli/c;->a(Lpi/i;Lhh/p;)Ljava/io/OutputStream;
+
+    move-result-object p1
 
     .line 5
-    iget-object v1, v0, Lli/c$b;->c:Lli/c$a;
-
-    iget-boolean v1, v1, Lli/c$a;->a:Z
-
-    if-nez v1, :cond_0
+    invoke-interface {p3, p1}, Lhh/l;->writeTo(Ljava/io/OutputStream;)V
 
     .line 6
-    iget-object v0, v0, Lli/c$b;->b:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    .line 7
-    :cond_3
-    :goto_1
-    iput-wide p1, p0, Lli/c;->d:J
+    invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
 
     return-void
 .end method

@@ -26,6 +26,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/l;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$socketTimeout"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/l$a;->b:Lcom/skt/moment/task/l;
@@ -142,11 +152,11 @@
     invoke-virtual {v3, v1, v1}, Lcom/loopj/android/http/a;->D0(II)V
 
     .line 14
-    new-instance v6, Lzf/l;
+    new-instance v6, Ldi/l;
 
     const-string v4, "UTF-8"
 
-    invoke-direct {v6, v2, v4}, Lzf/l;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v2, v4}, Ldi/l;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
     new-instance v8, Lcom/skt/moment/task/l$a$a;
@@ -154,7 +164,7 @@
     invoke-direct {v8, p0}, Lcom/skt/moment/task/l$a$a;-><init>(Lcom/skt/moment/task/l$a;)V
 
     .line 16
-    invoke-interface {v8, v1}, Lcom/loopj/android/http/y;->h(Z)V
+    invoke-interface {v8, v1}, Lcom/loopj/android/http/y;->d(Z)V
 
     .line 17
     iget-object v2, p0, Lcom/skt/moment/task/l$a;->b:Lcom/skt/moment/task/l;
@@ -169,13 +179,13 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lhb/a;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0}, Led/a;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v7, "application/json;charset=UTF-8"
 
-    invoke-virtual/range {v3 .. v8}, Lcom/loopj/android/http/a;->b0(Landroid/content/Context;Ljava/lang/String;Ldf/l;Ljava/lang/String;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual/range {v3 .. v8}, Lcom/loopj/android/http/a;->b0(Landroid/content/Context;Ljava/lang/String;Lhh/l;Ljava/lang/String;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -183,13 +193,13 @@
 
     .line 18
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
     const-string v2, "error occured"
 
-    invoke-virtual {v0, v2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 19
     :goto_0

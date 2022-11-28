@@ -1,0 +1,101 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message RouteSummaryEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x02
+  int32 infoIndexType = 1;
+
+  /** 교통정보 제공시간(YYYYMMDDHHMM)
+   * “2006년 5월 8일 오후4시 30분” */
+  string trafficInfoServiceTime = 2;
+
+  /** 톨게이트 요금정보(단위 원) */
+  int32 recmdRouteFare = 3;
+
+  /** 예측구분코드(1:도착시간예측, 4:출발시간예측) */
+  int32 estimationType = 4;
+
+  /** 예측시간정보 (YYYYMMDDHHMM)*/
+  string estimationTime = 5;
+
+  /** 경로내 도로속성 (코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/139954980) */
+  int32 roadType = 6;
+
+  /** 경로요약 데이터 제공 타입 */
+  int32 routeSummaryType = 7;
+
+  /** 경로요약 명칭 */
+  string routeRoadName = 8;
+
+  /** 경로요약 데이터 */
+  repeated RouteSummaryElement elements = 9;
+
+  /** 주요도로 명칭 데이터 */
+  repeated RouteRoadNameElement roadNameElements = 10;
+}
+
+message RouteSummaryElement {
+
+  /** 구분(1:Link, 2:Node) */
+  int32 option = 1;
+
+  /** 통제구분코드(0:통제 없음, 1:사고, 2:공사, 3:행사, 4:재해) */
+  int32 controlCode = 2;
+
+  /** 구간거리(단위:m, 올림:1의자리) */
+  int64 recmdRouteLen = 3;
+
+  /** 구간시간(단위:초, 올림:1의자리)
+   * (교통수집구간 거리비율 50%이상 있을 때 유효값):구간평균속도는 별도 제공 안함  */
+  int64 recmdRouteTime = 4;
+
+  /** 교통수집 속도
+   * (교통수집구간 거리비율 50%이상 있을 때 유효값) */
+  int32 speed = 5;
+
+  /** 교통수집 혼잡도
+   * (교통수집구간 거리비율 50%이상 있을 때 유효값): (‘0’(정보없음),‘1’(원할),’2’(서행), ‘4’(정체)) */
+  int32 congestion = 6;
+
+  /**
+    * 시작 보간점 Idx
+    * ※ Node 일 경우 : 해당 Node 보간점 Idx
+    **/
+  int32 departVtxIndex = 7;
+
+  /**
+   * 마지막 보간점 Idx
+   * ※ Node 일 경우 : 0 (의미 없음) */
+  int32 destVtxIndex = 8;
+
+  /** 세도로 포함 여부 */
+  int32 backRoadIncludeCode = 9;
+
+  /** RSD회전코드(코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/36998015) */
+  int32 turnCode = 10;
+
+  /** 요약 명칭 데이터 (NULL포함) */
+  string name =  11;
+
+  /** 에너지 소모량(W) */
+  int32 evEnergyConsumption = 12;
+
+}
+
+message RouteRoadNameElement {
+
+  /** 시작 보간점 idx */
+  int32 departVtxIndex = 1;
+
+  /** 마지막 보간점 idx */
+  int32 destVtxIndex = 2;
+
+  /** 요약 명칭 데이터 (NULL포함) */
+  string name = 3;
+}

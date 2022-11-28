@@ -3,7 +3,7 @@
 .source "DefaultHttpCacheEntrySerializer.java"
 
 # interfaces
-.implements Lhf/c;
+.implements Llh/c;
 
 
 # annotations

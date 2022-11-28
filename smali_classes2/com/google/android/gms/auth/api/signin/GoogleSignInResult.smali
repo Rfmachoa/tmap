@@ -1,14 +1,18 @@
 .class public Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Result;
 
 
 # instance fields
-.field private mStatus:Lcom/google/android/gms/common/api/Status;
+.field private zba:Lcom/google/android/gms/common/api/Status;
 
-.field private zzaz:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+.field private zbb:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,14 +27,11 @@
         .end annotation
     .end param
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zzaz:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zbb:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
-    .line 3
-    iput-object p2, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->mStatus:Lcom/google/android/gms/common/api/Status;
+    iput-object p2, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zba:Lcom/google/android/gms/common/api/Status;
 
     return-void
 .end method
@@ -42,8 +43,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zzaz:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zbb:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
     return-object v0
 .end method
@@ -53,8 +53,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->mStatus:Lcom/google/android/gms/common/api/Status;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zba:Lcom/google/android/gms/common/api/Status;
 
     return-object v0
 .end method
@@ -63,7 +62,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->mStatus:Lcom/google/android/gms/common/api/Status;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/signin/GoogleSignInResult;->zba:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 

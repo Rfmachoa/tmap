@@ -17,15 +17,15 @@
 # static fields
 .field public static final K0:Ljava/lang/String; = "dex.number"
 
-.field public static final V0:Ljava/lang/String; = "dex.crc."
+.field public static final X0:Ljava/lang/String; = "dex.crc."
 
-.field public static final W0:Ljava/lang/String; = "dex.time."
+.field public static final Y0:Ljava/lang/String; = "dex.time."
 
-.field public static final X0:I = 0x4000
+.field public static final Z0:I = 0x4000
 
-.field public static final Y0:J = -0x1L
+.field public static final a1:J = -0x1L
 
-.field public static final Z0:Ljava/lang/String; = "MultiDex.lock"
+.field public static final b1:Ljava/lang/String; = "MultiDex.lock"
 
 .field public static final g:Ljava/lang/String; = "MultiDex"
 
@@ -254,7 +254,7 @@
     throw p1
 .end method
 
-.method public static N(Landroid/content/Context;Ljava/lang/String;JJLjava/util/List;)V
+.method public static T(Landroid/content/Context;Ljava/lang/String;JJLjava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -302,7 +302,7 @@
 
     const-string p3, "crc"
 
-    invoke-static {p2, p1, p3}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1, p3}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -351,20 +351,10 @@
 
     check-cast p4, Landroidx/multidex/MultiDexExtractor$ExtractedDex;
 
+    const-string p5, "dex.crc."
+
     .line 7
-    new-instance p5, Ljava/lang/StringBuilder;
-
-    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p6, "dex.crc."
-
-    invoke-virtual {p5, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, p5, p3}, Landroidx/multidex/c;->a(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p5
 
@@ -448,7 +438,7 @@
     const-string v0, "tmp-"
 
     .line 2
-    invoke-static {v0, p3}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p3}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -720,7 +710,7 @@
     return-object p0
 .end method
 
-.method public static f(Ljava/io/File;)J
+.method public static g(Ljava/io/File;)J
     .locals 4
 
     .line 1
@@ -751,7 +741,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Landroidx/multidex/e;->c(Ljava/io/File;)J
+    invoke-static {p0}, Landroidx/multidex/f;->c(Ljava/io/File;)J
 
     move-result-wide v0
 
@@ -769,7 +759,7 @@
     return-wide v0
 .end method
 
-.method public static u(Landroid/content/Context;Ljava/io/File;JLjava/lang/String;)Z
+.method public static s(Landroid/content/Context;Ljava/io/File;JLjava/lang/String;)Z
     .locals 7
 
     .line 1
@@ -798,7 +788,7 @@
 
     move-result-wide v3
 
-    invoke-static {p1}, Landroidx/multidex/MultiDexExtractor;->f(Ljava/io/File;)J
+    invoke-static {p1}, Landroidx/multidex/MultiDexExtractor;->g(Ljava/io/File;)J
 
     move-result-wide v5
 
@@ -846,283 +836,7 @@
 
 
 # virtual methods
-.method public final G(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
-    .locals 15
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/List<",
-            "Landroidx/multidex/MultiDexExtractor$ExtractedDex;",
-            ">;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    move-object v0, p0
-
-    move-object/from16 v1, p2
-
-    const-string v2, "MultiDex"
-
-    const-string v3, "loading existing secondary dex files"
-
-    .line 1
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v3, v0, Landroidx/multidex/MultiDexExtractor;->a:Ljava/io/File;
-
-    invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ".classes"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 3
-    invoke-static/range {p1 .. p1}, Landroidx/multidex/MultiDexExtractor;->d(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v3
-
-    .line 4
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, "dex.number"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x1
-
-    invoke-interface {v3, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    .line 5
-    new-instance v5, Ljava/util/ArrayList;
-
-    add-int/lit8 v6, v4, -0x1
-
-    invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v6, 0x2
-
-    :goto_0
-    if-gt v6, v4, :cond_2
-
-    const-string v7, ".zip"
-
-    .line 6
-    invoke-static {v2, v6, v7}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 7
-    new-instance v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;
-
-    iget-object v9, v0, Landroidx/multidex/MultiDexExtractor;->c:Ljava/io/File;
-
-    invoke-direct {v8, v9, v7}, Landroidx/multidex/MultiDexExtractor$ExtractedDex;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    .line 8
-    invoke-virtual {v8}, Ljava/io/File;->isFile()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    .line 9
-    invoke-static {v8}, Landroidx/multidex/MultiDexExtractor;->k(Ljava/io/File;)J
-
-    move-result-wide v9
-
-    iput-wide v9, v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;->crc:J
-
-    .line 10
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v9, "dex.crc."
-
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    const-wide/16 v9, -0x1
-
-    invoke-interface {v3, v7, v9, v10}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v11
-
-    .line 11
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v13, "dex.time."
-
-    invoke-virtual {v7, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-interface {v3, v7, v9, v10}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v9
-
-    .line 12
-    invoke-virtual {v8}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v13
-
-    cmp-long v7, v9, v13
-
-    if-nez v7, :cond_0
-
-    move-object v7, v2
-
-    move-object/from16 p1, v3
-
-    .line 13
-    iget-wide v2, v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;->crc:J
-
-    cmp-long v2, v11, v2
-
-    if-nez v2, :cond_0
-
-    .line 14
-    invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v6, v6, 0x1
-
-    move-object/from16 v3, p1
-
-    move-object v2, v7
-
-    goto :goto_0
-
-    .line 15
-    :cond_0
-    new-instance v2, Ljava/io/IOException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Invalid extracted dex: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, " (key \""
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\"), expected modification time: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", modification time: "
-
-    const-string v4, ", expected crc: "
-
-    invoke-static {v3, v1, v13, v14, v4}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
-
-    invoke-virtual {v3, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", file crc: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v4, v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;->crc:J
-
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-
-    .line 16
-    :cond_1
-    new-instance v1, Ljava/io/IOException;
-
-    const-string v2, "Missing extracted secondary dex file \'"
-
-    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    .line 17
-    invoke-virtual {v8}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, "\'"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_2
-    return-object v5
-.end method
-
-.method public final L()Ljava/util/List;
+.method public final J()Ljava/util/List;
     .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1678,7 +1392,7 @@
     return-void
 .end method
 
-.method public v(Landroid/content/Context;Ljava/lang/String;Z)Ljava/util/List;
+.method public w(Landroid/content/Context;Ljava/lang/String;Z)Ljava/util/List;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1752,7 +1466,7 @@
 
     iget-wide v2, p0, Landroidx/multidex/MultiDexExtractor;->b:J
 
-    invoke-static {p1, v0, v2, v3, p2}, Landroidx/multidex/MultiDexExtractor;->u(Landroid/content/Context;Ljava/io/File;JLjava/lang/String;)Z
+    invoke-static {p1, v0, v2, v3, p2}, Landroidx/multidex/MultiDexExtractor;->s(Landroid/content/Context;Ljava/io/File;JLjava/lang/String;)Z
 
     move-result v0
 
@@ -1760,7 +1474,7 @@
 
     .line 4
     :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroidx/multidex/MultiDexExtractor;->G(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p0, p1, p2}, Landroidx/multidex/MultiDexExtractor;->x(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object p1
     :try_end_0
@@ -1777,14 +1491,14 @@
     invoke-static {v1, v0, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 6
-    invoke-virtual {p0}, Landroidx/multidex/MultiDexExtractor;->L()Ljava/util/List;
+    invoke-virtual {p0}, Landroidx/multidex/MultiDexExtractor;->J()Ljava/util/List;
 
     move-result-object p3
 
     .line 7
     iget-object v0, p0, Landroidx/multidex/MultiDexExtractor;->a:Ljava/io/File;
 
-    invoke-static {v0}, Landroidx/multidex/MultiDexExtractor;->f(Ljava/io/File;)J
+    invoke-static {v0}, Landroidx/multidex/MultiDexExtractor;->g(Ljava/io/File;)J
 
     move-result-wide v4
 
@@ -1796,7 +1510,7 @@
 
     move-object v8, p3
 
-    invoke-static/range {v2 .. v8}, Landroidx/multidex/MultiDexExtractor;->N(Landroid/content/Context;Ljava/lang/String;JJLjava/util/List;)V
+    invoke-static/range {v2 .. v8}, Landroidx/multidex/MultiDexExtractor;->T(Landroid/content/Context;Ljava/lang/String;JJLjava/util/List;)V
 
     goto :goto_1
 
@@ -1818,14 +1532,14 @@
 
     .line 10
     :goto_0
-    invoke-virtual {p0}, Landroidx/multidex/MultiDexExtractor;->L()Ljava/util/List;
+    invoke-virtual {p0}, Landroidx/multidex/MultiDexExtractor;->J()Ljava/util/List;
 
     move-result-object p3
 
     .line 11
     iget-object v0, p0, Landroidx/multidex/MultiDexExtractor;->a:Ljava/io/File;
 
-    invoke-static {v0}, Landroidx/multidex/MultiDexExtractor;->f(Ljava/io/File;)J
+    invoke-static {v0}, Landroidx/multidex/MultiDexExtractor;->g(Ljava/io/File;)J
 
     move-result-wide v4
 
@@ -1837,7 +1551,7 @@
 
     move-object v8, p3
 
-    invoke-static/range {v2 .. v8}, Landroidx/multidex/MultiDexExtractor;->N(Landroid/content/Context;Ljava/lang/String;JJLjava/util/List;)V
+    invoke-static/range {v2 .. v8}, Landroidx/multidex/MultiDexExtractor;->T(Landroid/content/Context;Ljava/lang/String;JJLjava/util/List;)V
 
     :goto_1
     move-object p1, p3
@@ -1877,4 +1591,260 @@
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
+
+.method public final x(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
+    .locals 15
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List<",
+            "Landroidx/multidex/MultiDexExtractor$ExtractedDex;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    move-object v0, p0
+
+    move-object/from16 v1, p2
+
+    const-string v2, "MultiDex"
+
+    const-string v3, "loading existing secondary dex files"
+
+    .line 1
+    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, v0, Landroidx/multidex/MultiDexExtractor;->a:Ljava/io/File;
+
+    invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ".classes"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 3
+    invoke-static/range {p1 .. p1}, Landroidx/multidex/MultiDexExtractor;->d(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v3
+
+    .line 4
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "dex.number"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x1
+
+    invoke-interface {v3, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    .line 5
+    new-instance v5, Ljava/util/ArrayList;
+
+    add-int/lit8 v6, v4, -0x1
+
+    invoke-direct {v5, v6}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v6, 0x2
+
+    :goto_0
+    if-gt v6, v4, :cond_2
+
+    const-string v7, ".zip"
+
+    .line 6
+    invoke-static {v2, v6, v7}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 7
+    new-instance v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;
+
+    iget-object v9, v0, Landroidx/multidex/MultiDexExtractor;->c:Ljava/io/File;
+
+    invoke-direct {v8, v9, v7}, Landroidx/multidex/MultiDexExtractor$ExtractedDex;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {v8}, Ljava/io/File;->isFile()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    .line 9
+    invoke-static {v8}, Landroidx/multidex/MultiDexExtractor;->k(Ljava/io/File;)J
+
+    move-result-wide v9
+
+    iput-wide v9, v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;->crc:J
+
+    const-string v7, "dex.crc."
+
+    .line 10
+    invoke-static {v1, v7, v6}, Landroidx/multidex/c;->a(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-wide/16 v9, -0x1
+
+    invoke-interface {v3, v7, v9, v10}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v11
+
+    const-string v7, "dex.time."
+
+    .line 11
+    invoke-static {v1, v7, v6}, Landroidx/multidex/c;->a(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v3, v7, v9, v10}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v9
+
+    .line 12
+    invoke-virtual {v8}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v13
+
+    cmp-long v7, v9, v13
+
+    if-nez v7, :cond_0
+
+    move-object v7, v2
+
+    move-object/from16 p1, v3
+
+    .line 13
+    iget-wide v2, v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;->crc:J
+
+    cmp-long v2, v11, v2
+
+    if-nez v2, :cond_0
+
+    .line 14
+    invoke-virtual {v5, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v6, v6, 0x1
+
+    move-object/from16 v3, p1
+
+    move-object v2, v7
+
+    goto :goto_0
+
+    .line 15
+    :cond_0
+    new-instance v2, Ljava/io/IOException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Invalid extracted dex: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, " (key \""
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\"), expected modification time: "
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", modification time: "
+
+    const-string v4, ", expected crc: "
+
+    invoke-static {v3, v1, v13, v14, v4}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+
+    invoke-virtual {v3, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", file crc: "
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v4, v8, Landroidx/multidex/MultiDexExtractor$ExtractedDex;->crc:J
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    .line 16
+    :cond_1
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "Missing extracted secondary dex file \'"
+
+    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    .line 17
+    invoke-virtual {v8}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "\'"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    return-object v5
 .end method

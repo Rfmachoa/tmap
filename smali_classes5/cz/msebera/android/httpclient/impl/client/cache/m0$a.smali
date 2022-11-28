@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcz/msebera/android/httpclient/impl/client/cache/m0;->e()Lkf/c;
+    value = Lcz/msebera/android/httpclient/impl/client/cache/m0;->e()Loh/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcz/msebera/android/httpclient/impl/client/cache/m0;Ldf/t;)V
+.method public constructor <init>(Lcz/msebera/android/httpclient/impl/client/cache/m0;Lhh/t;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/m0$a;->c:Lcz/msebera/android/httpclient/impl/client/cache/m0;
 
-    invoke-direct {p0, p2}, Lcz/msebera/android/httpclient/impl/client/cache/k0;-><init>(Ldf/t;)V
+    invoke-direct {p0, p2}, Lcz/msebera/android/httpclient/impl/client/cache/k0;-><init>(Lhh/t;)V
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     .line 1
     iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/m0$a;->c:Lcz/msebera/android/httpclient/impl/client/cache/m0;
 
-    invoke-static {v0}, Lcz/msebera/android/httpclient/impl/client/cache/m0;->a(Lcz/msebera/android/httpclient/impl/client/cache/m0;)Lkf/c;
+    invoke-static {v0}, Lcz/msebera/android/httpclient/impl/client/cache/m0;->a(Lcz/msebera/android/httpclient/impl/client/cache/m0;)Loh/c;
 
     move-result-object v0
 

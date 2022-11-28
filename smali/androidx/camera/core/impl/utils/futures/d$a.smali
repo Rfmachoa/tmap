@@ -32,14 +32,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/futures/d;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/d$a;->a:Landroidx/camera/core/impl/utils/futures/d;
@@ -57,15 +49,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "completer"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -92,7 +75,7 @@
     :goto_0
     const-string v1, "The result can only set once!"
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Landroidx/camera/core/impl/utils/futures/d$a;->a:Landroidx/camera/core/impl/utils/futures/d;

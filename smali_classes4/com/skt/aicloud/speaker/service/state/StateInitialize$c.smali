@@ -43,26 +43,26 @@
 
     iget-object v0, v0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateDeviceToken.R"
+    const-string v1, "updateDeviceToken.R"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lj9/e;
+    new-instance v0, Lgb/e;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize$c;->a:Lcom/skt/aicloud/speaker/service/state/StateInitialize;
 
     iget-object v1, v1, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lj9/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lgb/e;-><init>(Landroid/content/Context;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize$c;->a:Lcom/skt/aicloud/speaker/service/state/StateInitialize;
 
-    invoke-static {v1}, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->f0(Lcom/skt/aicloud/speaker/service/state/StateInitialize;)Li9/e;
+    invoke-static {v1}, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->f0(Lcom/skt/aicloud/speaker/service/state/StateInitialize;)Lfb/e;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->t(Li9/d;)V
+    invoke-virtual {v0, v1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->t(Lfb/d;)V
 
     return-void
 .end method

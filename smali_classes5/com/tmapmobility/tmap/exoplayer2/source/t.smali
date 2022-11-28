@@ -197,11 +197,11 @@
     .line 6
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/t;->d:Lcom/tmapmobility/tmap/exoplayer2/source/t$a;
 
-    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {v2, v4, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>([BI)V
+    invoke-direct {v2, v4, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([BI)V
 
-    invoke-interface {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/source/t$a;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)V
+    invoke-interface {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/source/t$a;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)V
 
     :cond_5
     return v3

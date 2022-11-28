@@ -78,7 +78,7 @@
 
     const-string v5, " with "
 
-    invoke-static {v4, v3, v0, v5, v2}, Lcom/android/billingclient/api/f;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v3, v0, v5, v2}, Lcom/google/android/gms/gcm/c;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

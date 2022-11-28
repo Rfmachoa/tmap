@@ -156,7 +156,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/bumptech/glide/i;->z(Lj5/p;)V
+    invoke-virtual {v2, v3}, Lcom/bumptech/glide/i;->z(Lg7/p;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -412,7 +412,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/bumptech/glide/h;->h1(Lj5/p;)Lj5/p;
+    invoke-virtual {p1, p2}, Lcom/bumptech/glide/h;->h1(Lg7/p;)Lg7/p;
 
     return-void
 .end method

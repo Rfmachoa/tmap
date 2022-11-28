@@ -1,606 +1,469 @@
 .class public final Lv1/b;
 .super Ljava/lang/Object;
-.source "InputConnectionCompat.java"
+.source "Bitmap.kt"
 
 
 # annotations
-.annotation build Landroid/annotation/SuppressLint;
-    value = {
-        "PrivateConstructorForUtilityClass"
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a)\u0010\u0006\u001a\u00020\u0000*\u00020\u00002\u0017\u0010\u0005\u001a\u0013\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001\u00a2\u0006\u0002\u0008\u0004H\u0086\u0008\u00f8\u0001\u0000\u001a\u001d\u0010\n\u001a\u00020\u0007*\u00020\u00002\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u0007H\u0086\n\u001a\'\u0010\u000c\u001a\u00020\u0003*\u00020\u00002\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u00072\u0008\u0008\u0001\u0010\u000b\u001a\u00020\u0007H\u0086\n\u001a\'\u0010\u0011\u001a\u00020\u0000*\u00020\u00002\u0006\u0010\r\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u0010\u001a\u00020\u000fH\u0086\u0008\u001a#\u0010\u0014\u001a\u00020\u00002\u0006\u0010\r\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u0013\u001a\u00020\u0012H\u0086\u0008\u001a7\u0010\u0018\u001a\u00020\u00002\u0006\u0010\r\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u0013\u001a\u00020\u00122\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u000f2\u0008\u0008\u0002\u0010\u0017\u001a\u00020\u0016H\u0087\u0008\u001a\u0015\u0010\u001b\u001a\u00020\u000f*\u00020\u00002\u0006\u0010\u001a\u001a\u00020\u0019H\u0086\n\u001a\u0015\u0010\u001d\u001a\u00020\u000f*\u00020\u00002\u0006\u0010\u001a\u001a\u00020\u001cH\u0086\n\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u001e"
+    }
+    d2 = {
+        "Landroid/graphics/Bitmap;",
+        "Lkotlin/Function1;",
+        "Landroid/graphics/Canvas;",
+        "Lkotlin/d1;",
+        "Lkotlin/ExtensionFunctionType;",
+        "block",
+        "a",
+        "",
+        "x",
+        "y",
+        "h",
+        "color",
+        "k",
+        "width",
+        "height",
+        "",
+        "filter",
+        "i",
+        "Landroid/graphics/Bitmap$Config;",
+        "config",
+        "d",
+        "hasAlpha",
+        "Landroid/graphics/ColorSpace;",
+        "colorSpace",
+        "e",
+        "Landroid/graphics/Point;",
+        "p",
+        "b",
+        "Landroid/graphics/PointF;",
+        "c",
+        "core-ktx_release"
+    }
+    k = 0x2
+    mv = {
+        0x1,
+        0x7,
+        0x1
     }
 .end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lv1/b$d;
-    }
-.end annotation
-
-
-# static fields
-.field public static final a:Ljava/lang/String; = "InputConnectionCompat"
-
-.field public static final b:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT"
-
-.field public static final c:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT"
-
-.field public static final d:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_URI"
-
-.field public static final e:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_URI"
-
-.field public static final f:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION"
-
-.field public static final g:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION"
-
-.field public static final h:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI"
-
-.field public static final i:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI"
-
-.field public static final j:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_OPTS"
-
-.field public static final k:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_OPTS"
-
-.field public static final l:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS"
-
-.field public static final m:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS"
-
-.field public static final n:Ljava/lang/String; = "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER"
-
-.field public static final o:Ljava/lang/String; = "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER"
-
-.field public static final p:I = 0x1
-
-.field public static final q:Ljava/lang/String; = "androidx.core.view.extra.INPUT_CONTENT_INFO"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
+.method public static final a(Landroid/graphics/Bitmap;Lgl/l;)Landroid/graphics/Bitmap;
+    .locals 1
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lgl/l;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/Bitmap;",
+            "Lgl/l<",
+            "-",
+            "Landroid/graphics/Canvas;",
+            "Lkotlin/d1;",
+            ">;)",
+            "Landroid/graphics/Bitmap;"
+        }
     .end annotation
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    return-void
-.end method
+    const-string v0, "<this>"
 
-.method public static a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;Lv1/c;ILandroid/os/Bundle;)Z
-    .locals 7
-    .param p0    # Landroid/view/inputmethod/InputConnection;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lv1/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-virtual {p2}, Lv1/c;->b()Landroid/content/ClipDescription;
+    new-instance v0, Landroid/graphics/Canvas;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 2
-    invoke-static {p1}, Lv1/a;->a(Landroid/view/inputmethod/EditorInfo;)[Ljava/lang/String;
+    invoke-interface {p1, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p0
+.end method
 
-    array-length v2, v1
+.method public static final b(Landroid/graphics/Bitmap;Landroid/graphics/Point;)Z
+    .locals 4
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/graphics/Point;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    iget v1, p1, Landroid/graphics/Point;->x:I
+
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    move v4, v3
+    if-ltz v1, :cond_0
+
+    if-ge v1, v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
 
     :goto_0
-    const/4 v5, 0x1
+    if-eqz v0, :cond_1
 
-    if-ge v4, v2, :cond_1
+    iget p1, p1, Landroid/graphics/Point;->y:I
 
-    aget-object v6, v1, v4
+    if-ltz p1, :cond_1
 
-    .line 3
-    invoke-virtual {v0, v6}, Landroid/content/ClipDescription;->hasMimeType(Ljava/lang/String;)Z
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v6
+    move-result p0
 
-    if-eqz v6, :cond_0
-
-    move v0, v5
+    if-ge p1, p0, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
     :cond_1
-    move v0, v3
+    move v2, v3
 
     :goto_1
-    if-nez v0, :cond_2
-
-    return v3
-
-    .line 4
-    :cond_2
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_3
-
-    .line 5
-    invoke-virtual {p2}, Lv1/c;->f()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/inputmethod/InputContentInfo;
-
-    .line 6
-    invoke-interface {p0, p1, p3, p4}, Landroid/view/inputmethod/InputConnection;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
-
-    move-result p0
-
-    return p0
-
-    .line 7
-    :cond_3
-    invoke-static {p1}, Lv1/a;->e(Landroid/view/inputmethod/EditorInfo;)I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_4
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_5
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_5
-
-    return v3
-
-    :cond_4
-    move v3, v5
-
-    .line 8
-    :cond_5
-    new-instance p1, Landroid/os/Bundle;
-
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
-
-    if-eqz v3, :cond_6
-
-    const-string v0, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_URI"
-
-    goto :goto_2
-
-    :cond_6
-    const-string v0, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_URI"
-
-    .line 9
-    :goto_2
-    invoke-virtual {p2}, Lv1/c;->a()Landroid/net/Uri;
-
-    move-result-object v1
-
-    .line 10
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    if-eqz v3, :cond_7
-
-    const-string v0, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION"
-
-    goto :goto_3
-
-    :cond_7
-    const-string v0, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION"
-
-    .line 11
-    :goto_3
-    invoke-virtual {p2}, Lv1/c;->b()Landroid/content/ClipDescription;
-
-    move-result-object v1
-
-    .line 12
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    if-eqz v3, :cond_8
-
-    const-string v0, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI"
-
-    goto :goto_4
-
-    :cond_8
-    const-string v0, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI"
-
-    .line 13
-    :goto_4
-    invoke-virtual {p2}, Lv1/c;->c()Landroid/net/Uri;
-
-    move-result-object p2
-
-    .line 14
-    invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    if-eqz v3, :cond_9
-
-    const-string p2, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS"
-
-    goto :goto_5
-
-    :cond_9
-    const-string p2, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS"
-
-    .line 15
-    :goto_5
-    invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    if-eqz v3, :cond_a
-
-    const-string p2, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_OPTS"
-
-    goto :goto_6
-
-    :cond_a
-    const-string p2, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_OPTS"
-
-    .line 16
-    :goto_6
-    invoke-virtual {p1, p2, p4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    if-eqz v3, :cond_b
-
-    const-string p2, "android.support.v13.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT"
-
-    goto :goto_7
-
-    :cond_b
-    const-string p2, "androidx.core.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT"
-
-    .line 17
-    :goto_7
-    invoke-interface {p0, p2, p1}, Landroid/view/inputmethod/InputConnection;->performPrivateCommand(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result p0
-
-    return p0
+    return v2
 .end method
 
-.method public static b(Landroid/view/View;)Lv1/b$d;
-    .locals 1
-    .param p0    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 2
-    new-instance v0, Lv1/b$c;
-
-    invoke-direct {v0, p0}, Lv1/b$c;-><init>(Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public static c(Landroid/view/View;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
-    .locals 0
-    .param p0    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/view/inputmethod/InputConnection;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lv1/b;->b(Landroid/view/View;)Lv1/b$d;
-
-    move-result-object p0
-
-    .line 2
-    invoke-static {p1, p2, p0}, Lv1/b;->d(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;Lv1/b$d;)Landroid/view/inputmethod/InputConnection;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;Lv1/b$d;)Landroid/view/inputmethod/InputConnection;
+.method public static final c(Landroid/graphics/Bitmap;Landroid/graphics/PointF;)Z
     .locals 3
-    .param p0    # Landroid/view/inputmethod/InputConnection;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # Landroid/graphics/PointF;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lv1/b$d;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    const-string v0, "<this>"
 
-    const-string v0, "inputConnection must be non-null"
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p0, v0}, Lr1/h;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "editorInfo must be non-null"
-
-    .line 2
-    invoke-static {p1, v0}, Lr1/h;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "onCommitContentListener must be non-null"
-
-    .line 3
-    invoke-static {p2, v0}, Lr1/h;->e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 4
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v0, p1, Landroid/graphics/PointF;->x:F
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x19
+    cmpl-float v2, v0, v1
 
-    if-lt v0, v2, :cond_0
+    if-ltz v2, :cond_0
 
-    .line 5
-    new-instance p1, Lv1/b$a;
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
-    invoke-direct {p1, p0, v1, p2}, Lv1/b$a;-><init>(Landroid/view/inputmethod/InputConnection;ZLv1/b$d;)V
+    move-result v2
 
-    return-object p1
+    int-to-float v2, v2
 
-    .line 6
-    :cond_0
-    invoke-static {p1}, Lv1/a;->a(Landroid/view/inputmethod/EditorInfo;)[Ljava/lang/String;
+    cmpg-float v0, v0, v2
 
-    move-result-object p1
+    if-gez v0, :cond_0
 
-    .line 7
-    array-length p1, p1
+    iget p1, p1, Landroid/graphics/PointF;->y:F
 
-    if-nez p1, :cond_1
+    cmpl-float v0, p1, v1
 
-    return-object p0
+    if-ltz v0, :cond_0
 
-    .line 8
-    :cond_1
-    new-instance p1, Lv1/b$b;
-
-    invoke-direct {p1, p0, v1, p2}, Lv1/b$b;-><init>(Landroid/view/inputmethod/InputConnection;ZLv1/b$d;)V
-
-    return-object p1
-.end method
-
-.method public static e(Ljava/lang/String;Landroid/os/Bundle;Lv1/b$d;)Z
-    .locals 7
-    .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Lv1/b$d;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const-string v1, "androidx.core.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT"
-
-    .line 1
-    invoke-static {v1, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    move p0, v0
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "android.support.v13.view.inputmethod.InputConnectionCompat.COMMIT_CONTENT"
-
-    .line 2
-    invoke-static {v1, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p0
 
-    if-eqz p0, :cond_b
+    int-to-float p0, p0
+
+    cmpg-float p0, p1, p0
+
+    if-gez p0, :cond_0
 
     const/4 p0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
     :goto_0
-    const/4 v1, 0x0
+    return p0
+.end method
 
-    if-eqz p0, :cond_2
+.method public static final d(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    .locals 1
+    .param p2    # Landroid/graphics/Bitmap$Config;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    :try_start_0
-    const-string v2, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER"
+    const-string v0, "config"
 
-    goto :goto_1
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :cond_2
-    const-string v2, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_RESULT_RECEIVER"
-
-    .line 3
-    :goto_1
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/ResultReceiver;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    if-eqz p0, :cond_3
-
-    :try_start_1
-    const-string v3, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_URI"
-
-    goto :goto_2
-
-    :cond_3
-    const-string v3, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_URI"
-
-    .line 4
-    :goto_2
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/net/Uri;
-
-    if-eqz p0, :cond_4
-
-    const-string v4, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION"
-
-    goto :goto_3
-
-    :cond_4
-    const-string v4, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_DESCRIPTION"
-
-    .line 5
-    :goto_3
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/ClipDescription;
-
-    if-eqz p0, :cond_5
-
-    const-string v5, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI"
-
-    goto :goto_4
-
-    :cond_5
-    const-string v5, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_LINK_URI"
-
-    .line 6
-    :goto_4
-    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/net/Uri;
-
-    if-eqz p0, :cond_6
-
-    const-string v6, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS"
-
-    goto :goto_5
-
-    :cond_6
-    const-string v6, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_FLAGS"
-
-    .line 7
-    :goto_5
-    invoke-virtual {p1, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v6
-
-    if-eqz p0, :cond_7
-
-    const-string p0, "android.support.v13.view.inputmethod.InputConnectionCompat.CONTENT_OPTS"
-
-    goto :goto_6
-
-    :cond_7
-    const-string p0, "androidx.core.view.inputmethod.InputConnectionCompat.CONTENT_OPTS"
-
-    .line 8
-    :goto_6
-    invoke-virtual {p1, p0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    .line 1
+    invoke-static {p0, p1, p2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    check-cast p0, Landroid/os/Bundle;
+    const-string p1, "createBitmap(width, height, config)"
 
-    if-eqz v3, :cond_8
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-eqz v4, :cond_8
+    return-object p0
+.end method
 
-    .line 9
-    new-instance p1, Lv1/c;
+.method public static final e(IILandroid/graphics/Bitmap$Config;ZLandroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;
+    .locals 1
+    .param p2    # Landroid/graphics/Bitmap$Config;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/graphics/ColorSpace;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ClassVerificationFailure"
+        }
+    .end annotation
 
-    invoke-direct {p1, v3, v4, v5}, Lv1/c;-><init>(Landroid/net/Uri;Landroid/content/ClipDescription;Landroid/net/Uri;)V
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1a
+    .end annotation
 
-    .line 10
-    invoke-interface {p2, p1, v6, p0}, Lv1/b$d;->a(Lv1/c;ILandroid/os/Bundle;)Z
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string v0, "config"
 
-    :cond_8
-    if-eqz v2, :cond_9
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 11
-    invoke-virtual {v2, v0, v1}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
+    const-string v0, "colorSpace"
 
-    :cond_9
-    return v0
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :catchall_0
-    move-exception p0
+    .line 1
+    invoke-static {p0, p1, p2, p3, p4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;ZLandroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;
 
-    goto :goto_7
+    move-result-object p0
 
-    :catchall_1
-    move-exception p0
+    const-string p1, "createBitmap(width, heig\u2026ig, hasAlpha, colorSpace)"
 
-    move-object v2, v1
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    :goto_7
-    if-eqz v2, :cond_a
+    return-object p0
+.end method
 
-    invoke-virtual {v2, v0, v1}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
+.method public static synthetic f(IILandroid/graphics/Bitmap$Config;ILjava/lang/Object;)Landroid/graphics/Bitmap;
+    .locals 0
 
-    .line 12
-    :cond_a
-    throw p0
+    and-int/lit8 p3, p3, 0x4
 
-    :cond_b
-    return v0
+    if-eqz p3, :cond_0
+
+    .line 1
+    sget-object p2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    :cond_0
+    const-string p3, "config"
+
+    .line 2
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 3
+    invoke-static {p0, p1, p2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    const-string p1, "createBitmap(width, height, config)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public static synthetic g(IILandroid/graphics/Bitmap$Config;ZLandroid/graphics/ColorSpace;ILjava/lang/Object;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    and-int/lit8 p6, p5, 0x4
+
+    if-eqz p6, :cond_0
+
+    .line 1
+    sget-object p2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    :cond_0
+    and-int/lit8 p6, p5, 0x8
+
+    if-eqz p6, :cond_1
+
+    const/4 p3, 0x1
+
+    :cond_1
+    and-int/lit8 p5, p5, 0x10
+
+    if-eqz p5, :cond_2
+
+    .line 2
+    sget-object p4, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
+
+    invoke-static {p4}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
+
+    move-result-object p4
+
+    const-string p5, "get(ColorSpace.Named.SRGB)"
+
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_2
+    const-string p5, "config"
+
+    .line 3
+    invoke-static {p2, p5}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p5, "colorSpace"
+
+    invoke-static {p4, p5}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    invoke-static {p0, p1, p2, p3, p4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;ZLandroid/graphics/ColorSpace;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    const-string p1, "createBitmap(width, heig\u2026ig, hasAlpha, colorSpace)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public static final h(Landroid/graphics/Bitmap;II)I
+    .locals 1
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroid/graphics/Bitmap;->getPixel(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final i(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+    .locals 1
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1, p2, p3}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    const-string p1, "createScaledBitmap(this, width, height, filter)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public static synthetic j(Landroid/graphics/Bitmap;IIZILjava/lang/Object;)Landroid/graphics/Bitmap;
+    .locals 0
+
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_0
+
+    const/4 p3, 0x1
+
+    :cond_0
+    const-string p4, "<this>"
+
+    .line 1
+    invoke-static {p0, p4}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    invoke-static {p0, p1, p2, p3}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    const-string p1, "createScaledBitmap(this, width, height, filter)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public static final k(Landroid/graphics/Bitmap;III)V
+    .locals 1
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3}, Landroid/graphics/Bitmap;->setPixel(III)V
+
+    return-void
 .end method

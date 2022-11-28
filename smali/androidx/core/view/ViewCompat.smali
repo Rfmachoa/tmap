@@ -88,7 +88,7 @@
         value = {
             "Ljava/util/WeakHashMap<",
             "Landroid/view/View;",
-            "Ls1/u0;",
+            "Landroidx/core/view/y0;",
             ">;"
         }
     .end annotation
@@ -112,7 +112,7 @@
 
 .field public static final V:[I
 
-.field public static final W:Ls1/g0;
+.field public static final W:Landroidx/core/view/k0;
 
 .field public static final X:Landroidx/core/view/ViewCompat$e;
 
@@ -418,9 +418,9 @@
     sput-object v2, Landroidx/core/view/ViewCompat;->V:[I
 
     .line 5
-    sget-object v0, Ls1/n0;->a:Ls1/n0;
+    sget-object v0, Landroidx/core/view/r0;->a:Landroidx/core/view/r0;
 
-    sput-object v0, Landroidx/core/view/ViewCompat;->W:Ls1/g0;
+    sput-object v0, Landroidx/core/view/ViewCompat;->W:Landroidx/core/view/k0;
 
     .line 6
     new-instance v0, Landroidx/core/view/ViewCompat$e;
@@ -536,13 +536,16 @@
     return-void
 .end method
 
-.method public static B0(Landroid/view/View;)Landroidx/core/view/b;
+.method public static B0(Landroid/view/View;)Landroidx/core/view/g1;
     .locals 3
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
@@ -553,7 +556,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0}, Landroidx/core/view/ViewCompat$s;->b(Landroid/view/View;)Landroidx/core/view/b;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat$s;->b(Landroid/view/View;)Landroidx/core/view/g1;
 
     move-result-object p0
 
@@ -588,7 +591,7 @@
     if-eqz v0, :cond_1
 
     .line 7
-    invoke-static {v0, p0}, Ls1/y0;->a(Landroid/view/Window;Landroid/view/View;)Landroidx/core/view/b;
+    invoke-static {v0, p0}, Landroidx/core/view/c1;->a(Landroid/view/Window;Landroid/view/View;)Landroidx/core/view/g1;
 
     move-result-object v2
 
@@ -915,14 +918,14 @@
     .end param
 
     .line 1
-    instance-of v0, p0, Ls1/w;
+    instance-of v0, p0, Landroidx/core/view/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p0, Ls1/w;
+    check-cast p0, Landroidx/core/view/a0;
 
-    invoke-interface {p0, p1, p2}, Ls1/w;->startNestedScroll(II)Z
+    invoke-interface {p0, p1, p2}, Landroidx/core/view/a0;->startNestedScroll(II)Z
 
     move-result p0
 
@@ -1246,14 +1249,14 @@
     .end param
 
     .line 1
-    instance-of v0, p0, Ls1/w;
+    instance-of v0, p0, Landroidx/core/view/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p0, Ls1/w;
+    check-cast p0, Landroidx/core/view/a0;
 
-    invoke-interface {p0, p1}, Ls1/w;->stopNestedScroll(I)V
+    invoke-interface {p0, p1}, Landroidx/core/view/a0;->stopNestedScroll(I)V
 
     goto :goto_0
 
@@ -1268,7 +1271,7 @@
     return-void
 .end method
 
-.method public static I(Landroid/view/View;)Lt1/d;
+.method public static I(Landroid/view/View;)Lk2/d;
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -1285,9 +1288,9 @@
     if-eqz p0, :cond_0
 
     .line 2
-    new-instance v0, Lt1/d;
+    new-instance v0, Lk2/d;
 
-    invoke-direct {v0, p0}, Lt1/d;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Lk2/d;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 
@@ -1384,14 +1387,14 @@
     .end param
 
     .line 1
-    instance-of v0, p0, Ls1/w;
+    instance-of v0, p0, Landroidx/core/view/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p0, Ls1/w;
+    check-cast p0, Landroidx/core/view/a0;
 
-    invoke-interface {p0, p1}, Ls1/w;->hasNestedScrollingParent(I)Z
+    invoke-interface {p0, p1}, Landroidx/core/view/a0;->hasNestedScrollingParent(I)Z
 
     goto :goto_0
 
@@ -1454,7 +1457,7 @@
             "Landroid/view/View;",
             ")",
             "Ljava/util/List<",
-            "Lt1/c$a;",
+            "Lk2/c$a;",
             ">;"
         }
     .end annotation
@@ -1680,9 +1683,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lt1/c$a;
+    check-cast v2, Lk2/c$a;
 
-    invoke-virtual {v2}, Lt1/c$a;->c()Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Lk2/c$a;->c()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -1697,9 +1700,9 @@
 
     move-result-object p0
 
-    check-cast p0, Lt1/c$a;
+    check-cast p0, Lk2/c$a;
 
-    invoke-virtual {p0}, Lt1/c$a;->b()I
+    invoke-virtual {p0}, Lk2/c$a;->b()I
 
     move-result p0
 
@@ -1749,9 +1752,9 @@
 
     move-result-object v7
 
-    check-cast v7, Lt1/c$a;
+    check-cast v7, Lk2/c$a;
 
-    invoke-virtual {v7}, Lt1/c$a;->b()I
+    invoke-virtual {v7}, Lk2/c$a;->b()I
 
     move-result v7
 
@@ -2177,7 +2180,7 @@
     return-void
 .end method
 
-.method public static T(Landroid/view/View;)Ls1/g0;
+.method public static T(Landroid/view/View;)Landroidx/core/view/k0;
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -2185,18 +2188,18 @@
     .end param
 
     .line 1
-    instance-of v0, p0, Ls1/g0;
+    instance-of v0, p0, Landroidx/core/view/k0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p0, Ls1/g0;
+    check-cast p0, Landroidx/core/view/k0;
 
     return-object p0
 
     .line 3
     :cond_0
-    sget-object p0, Landroidx/core/view/ViewCompat;->W:Ls1/g0;
+    sget-object p0, Landroidx/core/view/ViewCompat;->W:Landroidx/core/view/k0;
 
     return-object p0
 .end method
@@ -2596,19 +2599,19 @@
     return-void
 .end method
 
-.method public static a2(Landroid/view/View;Ls1/e0;)V
+.method public static a2(Landroid/view/View;Landroidx/core/view/i0;)V
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ls1/e0;
+    .param p1    # Landroidx/core/view/i0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat$m;->u(Landroid/view/View;Ls1/e0;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat$m;->u(Landroid/view/View;Landroidx/core/view/i0;)V
 
     return-void
 .end method
@@ -2684,7 +2687,7 @@
     return-object p0
 .end method
 
-.method public static b2(Landroid/view/View;[Ljava/lang/String;Ls1/f0;)V
+.method public static b2(Landroid/view/View;[Ljava/lang/String;Landroidx/core/view/j0;)V
     .locals 6
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -2694,7 +2697,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p2    # Ls1/f0;
+    .param p2    # Landroidx/core/view/j0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -2707,7 +2710,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1, p2}, Landroidx/core/view/ViewCompat$t;->c(Landroid/view/View;[Ljava/lang/String;Ls1/f0;)V
+    invoke-static {p0, p1, p2}, Landroidx/core/view/ViewCompat$t;->c(Landroid/view/View;[Ljava/lang/String;Landroidx/core/view/j0;)V
 
     return-void
 
@@ -2742,7 +2745,7 @@
     const-string v3, "When the listener is set, MIME types must also be set"
 
     .line 4
-    invoke-static {v2, v3}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v2, v3}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     :cond_4
     if-eqz p1, :cond_7
@@ -2798,7 +2801,7 @@
     move-result-object v1
 
     .line 9
-    invoke-static {v0, v1}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     .line 10
     :cond_7
@@ -2814,7 +2817,7 @@
     return-void
 .end method
 
-.method public static c(Landroid/view/View;Ljava/lang/CharSequence;Lt1/f;)I
+.method public static c(Landroid/view/View;Ljava/lang/CharSequence;Lk2/f;)I
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -2824,7 +2827,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lt1/f;
+    .param p2    # Lk2/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -2839,12 +2842,12 @@
     if-eq v0, v1, :cond_0
 
     .line 2
-    new-instance v1, Lt1/c$a;
+    new-instance v1, Lk2/c$a;
 
-    invoke-direct {v1, v0, p1, p2}, Lt1/c$a;-><init>(ILjava/lang/CharSequence;Lt1/f;)V
+    invoke-direct {v1, v0, p1, p2}, Lk2/c$a;-><init>(ILjava/lang/CharSequence;Lk2/f;)V
 
     .line 3
-    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->d(Landroid/view/View;Lt1/c$a;)V
+    invoke-static {p0, v1}, Landroidx/core/view/ViewCompat;->d(Landroid/view/View;Lk2/c$a;)V
 
     :cond_0
     return v0
@@ -2880,13 +2883,13 @@
     return-void
 .end method
 
-.method public static d(Landroid/view/View;Lt1/c$a;)V
+.method public static d(Landroid/view/View;Lk2/c$a;)V
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lt1/c$a;
+    .param p1    # Lk2/c$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -2895,7 +2898,7 @@
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->C(Landroid/view/View;)V
 
     .line 2
-    invoke-virtual {p1}, Lt1/c$a;->b()I
+    invoke-virtual {p1}, Lk2/c$a;->b()I
 
     move-result v0
 
@@ -2966,7 +2969,13 @@
     if-eqz v1, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p0}, Landroid/view/View;->isShown()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/View;->getWindowVisibility()I
 
     move-result v1
 
@@ -3340,7 +3349,7 @@
     return-void
 .end method
 
-.method public static g(Landroid/view/View;)Ls1/u0;
+.method public static g(Landroid/view/View;)Landroidx/core/view/y0;
     .locals 2
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -3369,14 +3378,14 @@
 
     move-result-object v0
 
-    check-cast v0, Ls1/u0;
+    check-cast v0, Landroidx/core/view/y0;
 
     if-nez v0, :cond_1
 
     .line 4
-    new-instance v0, Ls1/u0;
+    new-instance v0, Landroidx/core/view/y0;
 
-    invoke-direct {v0, p0}, Ls1/u0;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p0}, Landroidx/core/view/y0;-><init>(Landroid/view/View;)V
 
     .line 5
     sget-object v1, Landroidx/core/view/ViewCompat;->Q:Ljava/util/WeakHashMap;
@@ -3457,13 +3466,13 @@
     return-object p1
 .end method
 
-.method public static g2(Landroid/view/View;Ls1/i0;)V
+.method public static g2(Landroid/view/View;Landroidx/core/view/m0;)V
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ls1/i0;
+    .param p1    # Landroidx/core/view/m0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -3471,7 +3480,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p1}, Ls1/i0;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroidx/core/view/m0;->b()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -3628,19 +3637,19 @@
     return p0
 .end method
 
-.method public static i1(Landroid/view/View;Lt1/c;)V
+.method public static i1(Landroid/view/View;Lk2/c;)V
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lt1/c;
+    .param p1    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-virtual {p1}, Lt1/c;->U1()Landroid/view/accessibility/AccessibilityNodeInfo;
+    invoke-virtual {p1}, Lk2/c;->b2()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object p1
 
@@ -3983,12 +3992,12 @@
 
     move-result-object v0
 
-    check-cast v0, Ls1/f0;
+    check-cast v0, Landroidx/core/view/j0;
 
     if-eqz v0, :cond_3
 
     .line 9
-    invoke-interface {v0, p0, p1}, Ls1/f0;->a(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
+    invoke-interface {v0, p0, p1}, Landroidx/core/view/j0;->a(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
 
     move-result-object p1
 
@@ -4000,11 +4009,11 @@
 
     .line 10
     :cond_2
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->T(Landroid/view/View;)Ls1/g0;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->T(Landroid/view/View;)Landroidx/core/view/k0;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ls1/g0;->a(Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
+    invoke-interface {p0, p1}, Landroidx/core/view/k0;->onReceiveContent(Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
 
     move-result-object p0
 
@@ -4013,11 +4022,11 @@
 
     .line 11
     :cond_3
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->T(Landroid/view/View;)Ls1/g0;
+    invoke-static {p0}, Landroidx/core/view/ViewCompat;->T(Landroid/view/View;)Landroidx/core/view/k0;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ls1/g0;->a(Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
+    invoke-interface {p0, p1}, Landroidx/core/view/k0;->onReceiveContent(Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
 
     move-result-object p0
 
@@ -4475,9 +4484,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lt1/c$a;
+    check-cast v1, Lk2/c$a;
 
-    invoke-virtual {v1}, Lt1/c$a;->b()I
+    invoke-virtual {v1}, Lk2/c$a;->b()I
 
     move-result v1
 
@@ -4645,14 +4654,14 @@
     .end param
 
     .line 1
-    instance-of v0, p0, Ls1/w;
+    instance-of v0, p0, Landroidx/core/view/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
     move-object v1, p0
 
-    check-cast v1, Ls1/w;
+    check-cast v1, Landroidx/core/view/a0;
 
     move v2, p1
 
@@ -4664,7 +4673,7 @@
 
     move v6, p5
 
-    invoke-interface/range {v1 .. v6}, Ls1/w;->dispatchNestedPreScroll(II[I[II)Z
+    invoke-interface/range {v1 .. v6}, Landroidx/core/view/a0;->dispatchNestedPreScroll(II[I[II)Z
 
     move-result p0
 
@@ -4701,13 +4710,13 @@
     return p0
 .end method
 
-.method public static u1(Landroid/view/View;Lt1/c$a;Ljava/lang/CharSequence;Lt1/f;)V
+.method public static u1(Landroid/view/View;Lk2/c$a;Ljava/lang/CharSequence;Lk2/f;)V
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lt1/c$a;
+    .param p1    # Lk2/c$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -4715,7 +4724,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lt1/f;
+    .param p3    # Lk2/f;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -4725,7 +4734,7 @@
     if-nez p2, :cond_0
 
     .line 1
-    invoke-virtual {p1}, Lt1/c$a;->b()I
+    invoke-virtual {p1}, Lk2/c$a;->b()I
 
     move-result p1
 
@@ -4735,11 +4744,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1, p2, p3}, Lt1/c$a;->a(Ljava/lang/CharSequence;Lt1/f;)Lt1/c$a;
+    invoke-virtual {p1, p2, p3}, Lk2/c$a;->a(Ljava/lang/CharSequence;Lk2/f;)Lk2/c$a;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->d(Landroid/view/View;Lt1/c$a;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->d(Landroid/view/View;Lk2/c$a;)V
 
     :goto_0
     return-void
@@ -4774,14 +4783,14 @@
     move-object v0, p0
 
     .line 1
-    instance-of v1, v0, Ls1/x;
+    instance-of v1, v0, Landroidx/core/view/b0;
 
     if-eqz v1, :cond_0
 
     .line 2
     move-object v2, v0
 
-    check-cast v2, Ls1/x;
+    check-cast v2, Landroidx/core/view/b0;
 
     move v3, p1
 
@@ -4797,7 +4806,7 @@
 
     move-object/from16 v9, p7
 
-    invoke-interface/range {v2 .. v9}, Ls1/x;->dispatchNestedScroll(IIII[II[I)V
+    invoke-interface/range {v2 .. v9}, Landroidx/core/view/b0;->dispatchNestedScroll(IIII[II[I)V
 
     goto :goto_0
 
@@ -5006,14 +5015,14 @@
     .end param
 
     .line 1
-    instance-of v0, p0, Ls1/w;
+    instance-of v0, p0, Landroidx/core/view/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
     move-object v1, p0
 
-    check-cast v1, Ls1/w;
+    check-cast v1, Landroidx/core/view/a0;
 
     move v2, p1
 
@@ -5027,7 +5036,7 @@
 
     move v7, p6
 
-    invoke-interface/range {v1 .. v7}, Ls1/w;->dispatchNestedScroll(IIII[II)Z
+    invoke-interface/range {v1 .. v7}, Landroidx/core/view/a0;->dispatchNestedScroll(IIII[II)Z
 
     move-result p0
 

@@ -7,12 +7,6 @@
 
 
 # annotations
-.annotation build Landroidx/annotation/OptIn;
-    markerClass = {
-        Landroidx/car/app/annotations/ExperimentalCarApi;
-    }
-.end annotation
-
 .annotation build Landroidx/annotation/RestrictTo;
     value = {
         .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;

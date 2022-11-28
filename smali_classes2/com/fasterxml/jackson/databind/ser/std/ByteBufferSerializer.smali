@@ -27,6 +27,30 @@
 
 
 # virtual methods
+.method public acceptJsonFormatVisitor(Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatVisitorWrapper;Lcom/fasterxml/jackson/databind/JavaType;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1, p2}, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatVisitorWrapper;->expectArrayFormat(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonArrayFormatVisitor;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    sget-object p2, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatTypes;->INTEGER:Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatTypes;
+
+    invoke-interface {p1, p2}, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonArrayFormatVisitor;->itemsFormat(Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatTypes;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public bridge synthetic serialize(Ljava/lang/Object;Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/databind/SerializerProvider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -44,7 +68,7 @@
 .end method
 
 .method public serialize(Ljava/nio/ByteBuffer;Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/databind/SerializerProvider;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -59,50 +83,61 @@
     if-eqz p3, :cond_0
 
     .line 3
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
+
+    move-result p3
+
+    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
-    move-result-object p3
+    move-result-object v0
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->arrayOffset()I
+
+    move-result v1
+
+    add-int/2addr v1, p3
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p1
 
-    invoke-virtual {p2, p3, v0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeBinary([BII)V
+    sub-int/2addr p1, p3
+
+    invoke-virtual {p2, v0, v1, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeBinary([BII)V
 
     return-void
 
-    .line 4
+    .line 5
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 5
+    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p3
 
     if-lez p3, :cond_1
 
-    .line 6
+    .line 7
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 7
+    .line 8
     :cond_1
     new-instance p3, Lcom/fasterxml/jackson/databind/util/ByteBufferBackedInputStream;
 
     invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/util/ByteBufferBackedInputStream;-><init>(Ljava/nio/ByteBuffer;)V
 
-    .line 8
+    .line 9
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p1
 
     invoke-virtual {p2, p3, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeBinary(Ljava/io/InputStream;I)I
 
-    .line 9
+    .line 10
     invoke-virtual {p3}, Ljava/io/InputStream;->close()V
 
     return-void

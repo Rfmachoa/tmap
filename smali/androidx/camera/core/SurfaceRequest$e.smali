@@ -4,9 +4,6 @@
 
 
 # annotations
-.annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
-.end annotation
-
 .annotation build Lcom/google/auto/value/AutoValue;
 .end annotation
 
@@ -45,23 +42,10 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "cropRect",
-            "rotationDegrees",
-            "targetRotation"
-        }
-    .end annotation
-
     .line 1
-    new-instance v0, Landroidx/camera/core/h;
+    new-instance v0, Landroidx/camera/core/k;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/h;-><init>(Landroid/graphics/Rect;II)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/camera/core/k;-><init>(Landroid/graphics/Rect;II)V
 
     return-object v0
 .end method

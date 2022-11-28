@@ -57,7 +57,7 @@
 
     .line 2
     :try_start_0
-    invoke-static {p0, p1}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
     :try_end_0

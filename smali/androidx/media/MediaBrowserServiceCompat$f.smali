@@ -36,7 +36,7 @@
             "Ljava/util/HashMap<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Landroid/os/IBinder;",
             "Landroid/os/Bundle;",
             ">;>;>;"

@@ -6,12 +6,12 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lretrofit2/BuiltInConverters$ToStringConverter;,
-        Lretrofit2/BuiltInConverters$BufferingResponseBodyConverter;,
         Lretrofit2/BuiltInConverters$StreamingResponseBodyConverter;,
-        Lretrofit2/BuiltInConverters$RequestBodyConverter;,
+        Lretrofit2/BuiltInConverters$BufferingResponseBodyConverter;,
+        Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;,
         Lretrofit2/BuiltInConverters$UnitResponseBodyConverter;,
-        Lretrofit2/BuiltInConverters$VoidResponseBodyConverter;
+        Lretrofit2/BuiltInConverters$RequestBodyConverter;,
+        Lretrofit2/BuiltInConverters$ToStringConverter;
     }
 .end annotation
 

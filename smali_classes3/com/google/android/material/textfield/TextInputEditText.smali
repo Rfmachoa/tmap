@@ -139,16 +139,11 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 5
-    sget v3, Lcom/google/android/material/R$id;->textinput_helper_text:I
-
-    invoke-virtual {p0, v3}, Landroid/widget/EditText;->setLabelFor(I)V
-
     const-string v3, ""
 
     if-eqz v2, :cond_0
 
-    .line 6
+    .line 5
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -161,7 +156,7 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 7
+    .line 6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +171,7 @@
 
     const-string v0, ", "
 
-    invoke-static {v0, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -189,7 +184,7 @@
 
     return-object p1
 
-    .line 8
+    .line 7
     :cond_2
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -269,6 +264,31 @@
     return-object v0
 .end method
 
+.method private shouldUseTextInputLayoutFocusedRect(Lcom/google/android/material/textfield/TextInputLayout;)Z
+    .locals 0
+    .param p1    # Lcom/google/android/material/textfield/TextInputLayout;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    iget-boolean p1, p0, Lcom/google/android/material/textfield/TextInputEditText;->textInputLayoutFocusedRectEnabled:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
 
 # virtual methods
 .method public getFocusedRect(Landroid/graphics/Rect;)V
@@ -286,10 +306,10 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
     .line 3
-    iget-boolean v1, p0, Lcom/google/android/material/textfield/TextInputEditText;->textInputLayoutFocusedRectEnabled:Z
+    invoke-direct {p0, v0}, Lcom/google/android/material/textfield/TextInputEditText;->shouldUseTextInputLayoutFocusedRect(Lcom/google/android/material/textfield/TextInputLayout;)Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
@@ -312,7 +332,7 @@
 .end method
 
 .method public getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
-    .locals 3
+    .locals 2
     .param p1    # Landroid/graphics/Rect;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -323,38 +343,32 @@
     .end param
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
-
-    move-result v0
-
-    .line 2
     invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputEditText;->getTextInputLayout()Lcom/google/android/material/textfield/TextInputLayout;
 
-    move-result-object v1
+    move-result-object v0
+
+    .line 2
+    invoke-direct {p0, v0}, Lcom/google/android/material/textfield/TextInputEditText;->shouldUseTextInputLayoutFocusedRect(Lcom/google/android/material/textfield/TextInputLayout;)Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
     .line 3
-    iget-boolean v2, p0, Lcom/google/android/material/textfield/TextInputEditText;->textInputLayoutFocusedRectEnabled:Z
+    invoke-virtual {v0, p1, p2}, Landroid/widget/LinearLayout;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
 
-    if-eqz v2, :cond_0
+    move-result p1
 
-    if-eqz p1, :cond_0
+    goto :goto_0
 
     .line 4
-    iget-object v2, p0, Lcom/google/android/material/textfield/TextInputEditText;->parentRect:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v2, p2}, Landroid/widget/LinearLayout;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
-
-    .line 5
-    iget-object p2, p0, Lcom/google/android/material/textfield/TextInputEditText;->parentRect:Landroid/graphics/Rect;
-
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
-
-    iput p2, p1, Landroid/graphics/Rect;->bottom:I
-
     :cond_0
-    return v0
+    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->getGlobalVisibleRect(Landroid/graphics/Rect;Landroid/graphics/Point;)Z
+
+    move-result p1
+
+    :goto_0
+    return p1
 .end method
 
 .method public getHint()Ljava/lang/CharSequence;
@@ -493,73 +507,67 @@
 .end method
 
 .method public requestRectangleOnScreen(Landroid/graphics/Rect;)Z
-    .locals 6
+    .locals 5
     .param p1    # Landroid/graphics/Rect;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroid/widget/EditText;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
-
-    move-result p1
-
-    .line 2
     invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputEditText;->getTextInputLayout()Lcom/google/android/material/textfield/TextInputLayout;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    .line 2
+    invoke-direct {p0, v0}, Lcom/google/android/material/textfield/TextInputEditText;->shouldUseTextInputLayoutFocusedRect(Lcom/google/android/material/textfield/TextInputLayout;)Z
 
-    .line 3
-    iget-boolean v1, p0, Lcom/google/android/material/textfield/TextInputEditText;->textInputLayoutFocusedRectEnabled:Z
+    move-result v1
 
     if-eqz v1, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->getHeight()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
 
     .line 4
     iget-object v1, p0, Lcom/google/android/material/textfield/TextInputEditText;->parentRect:Landroid/graphics/Rect;
 
-    const/4 v2, 0x0
+    iget v2, p1, Landroid/graphics/Rect;->left:I
+
+    iget v3, p1, Landroid/graphics/Rect;->top:I
+
+    iget v4, p1, Landroid/graphics/Rect;->right:I
+
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr p1, v0
+
+    invoke-virtual {v1, v2, v3, v4, p1}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 5
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getHeight()I
+    iget-object p1, p0, Lcom/google/android/material/textfield/TextInputEditText;->parentRect:Landroid/graphics/Rect;
 
-    move-result v3
+    invoke-super {p0, p1}, Landroid/widget/EditText;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
+
+    move-result p1
+
+    return p1
 
     .line 6
-    invoke-virtual {p0}, Landroid/widget/EditText;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    sget v5, Lcom/google/android/material/R$dimen;->mtrl_edittext_rectangle_top_offset:I
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v4
-
-    sub-int/2addr v3, v4
-
-    .line 7
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getWidth()I
-
-    move-result v4
-
-    .line 8
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getHeight()I
-
-    move-result v5
-
-    .line 9
-    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
-
-    .line 10
-    iget-object v1, p0, Lcom/google/android/material/textfield/TextInputEditText;->parentRect:Landroid/graphics/Rect;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->requestRectangleOnScreen(Landroid/graphics/Rect;Z)Z
-
     :cond_0
+    invoke-super {p0, p1}, Landroid/widget/EditText;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
+
+    move-result p1
+
     return p1
 .end method
 

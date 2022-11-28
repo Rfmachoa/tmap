@@ -53,13 +53,13 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lq3/f;->c()Lq3/f;
+    invoke-static {}, Lm5/f;->c()Lm5/f;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/airbnb/lottie/g$a;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lq3/f;->d(Ljava/lang/String;Lcom/airbnb/lottie/f;)V
+    invoke-virtual {v0, v1, p1}, Lm5/f;->d(Ljava/lang/String;Lcom/airbnb/lottie/f;)V
 
     .line 3
     :cond_0

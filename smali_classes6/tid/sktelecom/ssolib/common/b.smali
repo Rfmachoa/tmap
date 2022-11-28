@@ -11,7 +11,7 @@
     :try_start_0
     new-instance v0, Ljava/lang/String;
 
-    invoke-static {p0}, Lck/a;->m([B)[B
+    invoke-static {p0}, Lhm/a;->m([B)[B
 
     move-result-object p0
 
@@ -123,7 +123,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lck/a;->q([B)[B
+    invoke-static {p0}, Lhm/a;->q([B)[B
 
     move-result-object p0
     :try_end_0

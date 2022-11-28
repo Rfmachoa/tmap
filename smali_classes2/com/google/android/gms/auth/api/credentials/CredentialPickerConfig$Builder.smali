@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # annotations
@@ -14,122 +15,109 @@
 
 
 # instance fields
-.field private mShowCancelButton:Z
+.field private zba:Z
 
-.field private zzv:Z
+.field private zbb:Z
 
-.field private zzy:I
+.field private zbc:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
-    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzv:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zba:Z
 
     const/4 v0, 0x1
 
-    .line 3
-    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->mShowCancelButton:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbb:Z
 
-    .line 4
-    iput v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzy:I
+    iput v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbc:I
 
     return-void
-.end method
-
-.method public static synthetic zzc(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzv:Z
-
-    return p0
-.end method
-
-.method public static synthetic zzd(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->mShowCancelButton:Z
-
-    return p0
-.end method
-
-.method public static synthetic zze(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)I
-    .locals 0
-
-    .line 1
-    iget p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzy:I
-
-    return p0
 .end method
 
 
 # virtual methods
 .method public build()Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
-    .locals 2
+    .locals 7
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+    new-instance v6, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
-    const/4 v1, 0x0
+    iget-boolean v2, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zba:Z
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;-><init>(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;Lcom/google/android/gms/auth/api/credentials/zzd;)V
+    iget-boolean v3, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbb:Z
 
-    return-object v0
+    iget v5, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbc:I
+
+    const/4 v1, 0x2
+
+    const/4 v4, 0x0
+
+    move-object v0, v6
+
+    .line 2
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;-><init>(IZZZI)V
+
+    return-object v6
 .end method
 
 .method public setForNewAccount(Z)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;
-    .locals 0
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x1
 
-    const/4 p1, 0x3
+    if-eq v0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x1
+    const/4 v0, 0x3
 
-    .line 1
     :goto_0
-    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzy:I
+    iput v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbc:I
 
     return-object p0
 .end method
 
 .method public setPrompt(I)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzy:I
+    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbc:I
 
     return-object p0
 .end method
 
 .method public setShowAddAccountButton(Z)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzv:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zba:Z
 
     return-object p0
 .end method
 
 .method public setShowCancelButton(Z)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->mShowCancelButton:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zbb:Z
 
     return-object p0
 .end method

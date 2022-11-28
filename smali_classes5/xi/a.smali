@@ -1,162 +1,113 @@
 .class public final Lxi/a;
 .super Ljava/lang/Object;
-.source "bitwiseOperations.kt"
-
-
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0010\n\u0002\u0010\u0005\n\u0002\u0008\u0005\n\u0002\u0010\n\n\u0002\u0008\u0005\u001a\u0015\u0010\u0002\u001a\u00020\u0000*\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\u0087\u000c\u001a\u0015\u0010\u0003\u001a\u00020\u0000*\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\u0087\u000c\u001a\u0015\u0010\u0004\u001a\u00020\u0000*\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\u0087\u000c\u001a\r\u0010\u0005\u001a\u00020\u0000*\u00020\u0000H\u0087\u0008\u001a\u0015\u0010\u0007\u001a\u00020\u0006*\u00020\u00062\u0006\u0010\u0001\u001a\u00020\u0006H\u0087\u000c\u001a\u0015\u0010\u0008\u001a\u00020\u0006*\u00020\u00062\u0006\u0010\u0001\u001a\u00020\u0006H\u0087\u000c\u001a\u0015\u0010\t\u001a\u00020\u0006*\u00020\u00062\u0006\u0010\u0001\u001a\u00020\u0006H\u0087\u000c\u001a\r\u0010\n\u001a\u00020\u0006*\u00020\u0006H\u0087\u0008\u00a8\u0006\u000b"
-    }
-    d2 = {
-        "",
-        "other",
-        "a",
-        "e",
-        "g",
-        "c",
-        "",
-        "b",
-        "f",
-        "h",
-        "d",
-        "kotlin-stdlib"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
-.end annotation
+.source "EntryPoints.java"
 
 
 # direct methods
-.method public static final a(BB)B
+.method public constructor <init>()V
     .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/2addr p0, p1
-
-    int-to-byte p0, p0
-
-    return p0
+    return-void
 .end method
 
-.method public static final b(SS)S
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
+.method public static a(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "component",
+            "entryPoint"
+        }
     .end annotation
 
-    .annotation build Lkotlin/internal/InlineOnly;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
     .end annotation
 
-    and-int/2addr p0, p1
-
-    int-to-short p0, p0
-
-    return p0
-.end method
-
-.method public static final c(B)B
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
+    .annotation runtime Ljavax/annotation/Nonnull;
     .end annotation
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    .line 1
+    instance-of v0, p0, Lij/a;
 
-    not-int p0, p0
+    if-eqz v0, :cond_0
 
-    int-to-byte p0, p0
+    .line 2
+    invoke-virtual {p1, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p0
-.end method
+    move-result-object p0
 
-.method public static final d(S)S
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    return-object p0
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    .line 3
+    :cond_0
+    instance-of v0, p0, Lij/b;
 
-    not-int p0, p0
+    if-eqz v0, :cond_1
 
-    int-to-short p0, p0
+    .line 4
+    check-cast p0, Lij/b;
 
-    return p0
-.end method
+    invoke-interface {p0}, Lij/b;->a()Ljava/lang/Object;
 
-.method public static final e(BB)B
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    move-result-object p0
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    invoke-virtual {p1, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
-    or-int/2addr p0, p1
+    move-result-object p0
 
-    int-to-byte p0, p0
+    return-object p0
 
-    return p0
-.end method
+    .line 5
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.method public static final f(SS)S
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    const/4 v0, 0x3
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    new-array v0, v0, [Ljava/lang/Object;
 
-    or-int/2addr p0, p1
+    const/4 v1, 0x0
 
-    int-to-short p0, p0
+    .line 6
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p0
-.end method
+    move-result-object p0
 
-.method public static final g(BB)B
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    aput-object p0, v0, v1
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    const/4 p0, 0x1
 
-    xor-int/2addr p0, p1
+    const-class v1, Lij/a;
 
-    int-to-byte p0, p0
+    aput-object v1, v0, p0
 
-    return p0
-.end method
+    const/4 p0, 0x2
 
-.method public static final h(SS)S
-    .locals 0
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.1"
-    .end annotation
+    const-class v1, Lij/b;
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    aput-object v1, v0, p0
 
-    xor-int/2addr p0, p1
+    const-string p0, "Given component holder %s does not implement %s or %s"
 
-    int-to-short p0, p0
+    .line 7
+    invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    return p0
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

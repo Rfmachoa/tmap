@@ -14,7 +14,11 @@
 
 
 # static fields
+.field public static final cancel_button_image_alpha:I = 0x7f0b0004
+
 .field public static final google_play_services_version:I = 0x7f0b0010
+
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0056
 
 
 # direct methods

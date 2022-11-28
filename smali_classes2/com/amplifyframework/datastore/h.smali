@@ -3,56 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Action;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/AWSDataStorePlugin;
-
-.field public final synthetic b:Lcom/amplifyframework/core/model/Model;
-
-.field public final synthetic c:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
-
-.field public final synthetic d:Lcom/amplifyframework/core/Consumer;
-
-.field public final synthetic e:Lcom/amplifyframework/core/Consumer;
+.field public final synthetic a:Lek/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+.method public synthetic constructor <init>(Lek/c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/h;->a:Lcom/amplifyframework/datastore/AWSDataStorePlugin;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/h;->b:Lcom/amplifyframework/core/model/Model;
-
-    iput-object p3, p0, Lcom/amplifyframework/datastore/h;->c:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
-
-    iput-object p4, p0, Lcom/amplifyframework/datastore/h;->d:Lcom/amplifyframework/core/Consumer;
-
-    iput-object p5, p0, Lcom/amplifyframework/datastore/h;->e:Lcom/amplifyframework/core/Consumer;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/h;->a:Lek/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()V
-    .locals 5
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/h;->a:Lcom/amplifyframework/datastore/AWSDataStorePlugin;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/h;->a:Lek/c;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/h;->b:Lcom/amplifyframework/core/model/Model;
+    check-cast p1, Lcom/amplifyframework/datastore/DataStoreException;
 
-    iget-object v2, p0, Lcom/amplifyframework/datastore/h;->c:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
-
-    iget-object v3, p0, Lcom/amplifyframework/datastore/h;->d:Lcom/amplifyframework/core/Consumer;
-
-    iget-object v4, p0, Lcom/amplifyframework/datastore/h;->e:Lcom/amplifyframework/core/Consumer;
-
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->C(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-interface {v0, p1}, Lek/c;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

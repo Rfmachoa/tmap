@@ -1,434 +1,109 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 .super Ljava/lang/Object;
-.source "TimestampAdjuster.java"
+.source "TimedValueQueue.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final e:J = 0x7fffffffffffffffL
-
-.field public static final f:J = 0x7ffffffffffffffeL
-
-.field public static final g:J = 0x200000000L
+.field public static final e:I = 0xa
 
 
 # instance fields
-.field public a:J
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "this"
-    .end annotation
-.end field
+.field public a:[J
 
-.field public b:J
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "this"
-    .end annotation
-.end field
-
-.field public c:J
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "this"
-    .end annotation
-.end field
-
-.field public final d:Ljava/lang/ThreadLocal;
+.field public b:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/lang/ThreadLocal<",
-            "Ljava/lang/Long;",
-            ">;"
+            "[TV;"
         }
     .end annotation
 .end field
 
+.field public c:I
+
+.field public d:I
+
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>()V
     .locals 1
 
+    const/16 v0, 0xa
+
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:Ljava/lang/ThreadLocal;
-
-    .line 3
-    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->g(J)V
+    invoke-direct {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;-><init>(I)V
 
     return-void
 .end method
 
-.method public static f(J)J
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 1
 
-    const-wide/32 v0, 0xf4240
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    mul-long/2addr p0, v0
+    .line 3
+    new-array v0, p1, [J
 
-    const-wide/32 v0, 0x15f90
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
 
-    .line 1
-    div-long/2addr p0, v0
+    .line 4
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->f(I)[Ljava/lang/Object;
 
-    return-wide p0
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    return-void
 .end method
 
-.method public static i(J)J
-    .locals 2
-
-    const-wide/32 v0, 0x15f90
-
-    mul-long/2addr p0, v0
-
-    const-wide/32 v0, 0xf4240
-
-    .line 1
-    div-long/2addr p0, v0
-
-    return-wide p0
-.end method
-
-.method public static j(J)J
-    .locals 2
+.method public static f(I)[Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<V:",
+            "Ljava/lang/Object;",
+            ">(I)[TV;"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->i(J)J
+    new-array p0, p0, [Ljava/lang/Object;
 
-    move-result-wide p0
-
-    const-wide v0, 0x200000000L
-
-    rem-long/2addr p0, v0
-
-    return-wide p0
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public declared-synchronized a(J)J
-    .locals 4
+.method public declared-synchronized a(JLjava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(JTV;)V"
+        }
+    .end annotation
 
     monitor-enter p0
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, p1, v0
-
-    if-nez v2, :cond_0
-
     .line 1
-    monitor-exit p0
-
-    return-wide v0
+    :try_start_0
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d(J)V
 
     .line 2
-    :cond_0
-    :try_start_0
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-
-    cmp-long v0, v2, v0
-
-    if-nez v0, :cond_2
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->e()V
 
     .line 3
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:J
-
-    const-wide v2, 0x7ffffffffffffffeL
-
-    cmp-long v2, v0, v2
-
-    if-nez v2, :cond_1
-
-    .line 4
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    :cond_1
-    sub-long/2addr v0, p1
-
-    .line 5
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-
-    .line 7
-    :cond_2
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:J
-
-    .line 8
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    add-long/2addr p1, v0
-
-    monitor-exit p0
-
-    return-wide p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized b(J)J
-    .locals 8
-
-    monitor-enter p0
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, p1, v0
-
-    if-nez v2, :cond_0
-
-    .line 1
-    monitor-exit p0
-
-    return-wide v0
-
-    .line 2
-    :cond_0
-    :try_start_0
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:J
-
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_2
-
-    .line 3
-    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->i(J)J
-
-    move-result-wide v0
-
-    const-wide v2, 0x100000000L
-
-    add-long/2addr v2, v0
-
-    const-wide v4, 0x200000000L
-
-    .line 4
-    div-long/2addr v2, v4
-
-    const-wide/16 v6, 0x1
-
-    sub-long v6, v2, v6
-
-    mul-long/2addr v6, v4
-
-    add-long/2addr v6, p1
-
-    mul-long/2addr v2, v4
-
-    add-long/2addr v2, p1
-
-    sub-long p1, v6, v0
-
-    .line 5
-    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide p1
-
-    sub-long v0, v2, v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide v0
-
-    cmp-long p1, p1, v0
-
-    if-gez p1, :cond_1
-
-    move-wide p1, v6
-
-    goto :goto_0
-
-    :cond_1
-    move-wide p1, v2
-
-    .line 6
-    :cond_2
-    :goto_0
-    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->f(J)J
-
-    move-result-wide p1
-
-    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a(J)J
-
-    move-result-wide p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-wide p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized c()J
-    .locals 4
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    const-wide v2, 0x7ffffffffffffffeL
-
-    cmp-long v2, v0, v2
-
-    if-nez v2, :cond_1
-
-    :cond_0
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    :cond_1
-    monitor-exit p0
-
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized d()J
-    .locals 4
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    .line 2
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-
-    add-long/2addr v0, v2
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c()J
-
-    move-result-wide v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    :goto_0
-    monitor-exit p0
-
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized e()J
-    .locals 2
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized g(J)V
-    .locals 2
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:J
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    cmp-long p1, p1, v0
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    if-nez p1, :cond_0
-
-    const-wide/16 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide p1, v0
-
-    .line 2
-    :goto_0
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-
-    .line 3
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:J
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b(JLjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -445,11 +120,295 @@
     throw p1
 .end method
 
-.method public declared-synchronized h(ZJ)V
+.method public final b(JLjava/lang/Object;)V
     .locals 4
-    .annotation system Ldalvik/annotation/Throws;
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Ljava/lang/InterruptedException;
+            "(JTV;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    add-int/2addr v0, v1
+
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    array-length v3, v2
+
+    rem-int/2addr v0, v3
+
+    .line 2
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
+
+    aput-wide p1, v3, v0
+
+    .line 3
+    aput-object p3, v2, v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    .line 4
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    return-void
+.end method
+
+.method public declared-synchronized c()V
+    .locals 2
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    .line 1
+    :try_start_0
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    .line 2
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    .line 3
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final d(J)V
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    if-lez v0, :cond_0
+
+    .line 2
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    add-int/2addr v1, v0
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    .line 3
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
+
+    aget-wide v1, v0, v1
+
+    cmp-long p1, p1, v1
+
+    if-gtz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e()V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    .line 2
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    if-ge v1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    mul-int/lit8 v1, v0, 0x2
+
+    .line 3
+    new-array v2, v1, [J
+
+    .line 4
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->f(I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 5
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    sub-int/2addr v0, v3
+
+    .line 6
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
+
+    const/4 v5, 0x0
+
+    invoke-static {v4, v3, v2, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 7
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    invoke-static {v3, v4, v1, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 8
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    if-lez v3, :cond_1
+
+    .line 9
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
+
+    invoke-static {v4, v5, v2, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 10
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    invoke-static {v3, v5, v1, v0, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 11
+    :cond_1
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
+
+    .line 12
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    .line 13
+    iput v5, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    return-void
+.end method
+
+.method public declared-synchronized g(J)Ljava/lang/Object;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)TV;"
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0, p1, p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->h(JZ)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final h(JZ)Ljava/lang/Object;
+    .locals 7
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(JZ)TV;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    .line 1
+    :goto_0
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    if-lez v3, :cond_1
+
+    .line 2
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:[J
+
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    aget-wide v4, v3, v4
+
+    sub-long v3, p1, v4
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v5, v3, v5
+
+    if-gez v5, :cond_0
+
+    if-nez p3, :cond_1
+
+    neg-long v5, v3
+
+    cmp-long v1, v5, v1
+
+    if-ltz v1, :cond_0
+
+    goto :goto_1
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->k()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-wide v1, v3
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-object v0
+.end method
+
+.method public declared-synchronized i()Ljava/lang/Object;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
         }
     .end annotation
 
@@ -457,15 +416,88 @@
 
     .line 1
     :try_start_0
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a:J
-
-    const-wide v2, 0x7ffffffffffffffeL
-
-    cmp-long v0, v0, v2
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
 
     if-nez v0, :cond_0
 
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->k()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized j(J)Ljava/lang/Object;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)TV;"
+        }
+    .end annotation
+
+    monitor-enter p0
+
     const/4 v0, 0x1
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0, p1, p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->h(JZ)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final k()Ljava/lang/Object;
+    .locals 5
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    const/4 v1, 0x1
+
+    if-lez v0, :cond_0
+
+    move v0, v1
 
     goto :goto_0
 
@@ -476,63 +508,55 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 2
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:[Ljava/lang/Object;
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    aget-object v3, v0, v2
+
+    const/4 v4, 0x0
+
+    .line 3
+    aput-object v4, v0, v2
+
+    add-int/2addr v2, v1
+
+    .line 4
+    array-length v0, v0
+
+    rem-int/2addr v2, v0
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c:I
+
+    .line 5
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    sub-int/2addr v0, v1
+
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
+
+    return-object v3
+.end method
+
+.method public declared-synchronized l()I
+    .locals 1
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    .line 3
     monitor-exit p0
 
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    .line 4
-    :try_start_1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->d:Ljava/lang/ThreadLocal;
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    .line 5
-    :cond_2
-    :goto_1
-    iget-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b:J
-
-    cmp-long p1, p1, v2
-
-    if-nez p1, :cond_3
-
-    .line 6
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    .line 7
-    :cond_3
-    :goto_2
-    monitor-exit p0
-
-    return-void
+    return v0
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
     monitor-exit p0
 
-    throw p1
+    throw v0
 .end method

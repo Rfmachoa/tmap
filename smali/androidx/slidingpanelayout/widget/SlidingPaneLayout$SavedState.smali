@@ -29,6 +29,8 @@
 # instance fields
 .field public a:Z
 
+.field public b:I
+
 
 # direct methods
 .method public static constructor <clinit>()V
@@ -53,19 +55,26 @@
     .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
-    const/4 p1, 0x1
+    const/4 p2, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->a:Z
+    iput-boolean p2, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->a:Z
+
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->b:I
 
     return-void
 .end method
@@ -89,6 +98,11 @@
 
     .line 2
     iget-boolean p2, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->a:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 3
+    iget p2, p0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$SavedState;->b:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

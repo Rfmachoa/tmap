@@ -3,38 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/j0;
+.implements Lcom/amplifyframework/core/Action;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/StorageObserver;
-
-.field public final synthetic b:Lcom/amplifyframework/core/Action;
+.field public final synthetic a:Lek/i0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/StorageObserver;Lcom/amplifyframework/core/Action;)V
+.method public synthetic constructor <init>(Lek/i0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/r1;->a:Lcom/amplifyframework/datastore/syncengine/StorageObserver;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/r1;->b:Lcom/amplifyframework/core/Action;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/r1;->a:Lek/i0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/i0;)V
-    .locals 2
+.method public final call()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/r1;->a:Lcom/amplifyframework/datastore/syncengine/StorageObserver;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/r1;->a:Lek/i0;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/r1;->b:Lcom/amplifyframework/core/Action;
-
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/StorageObserver;->b(Lcom/amplifyframework/datastore/syncengine/StorageObserver;Lcom/amplifyframework/core/Action;Lai/i0;)V
+    invoke-interface {v0}, Lek/i;->onComplete()V
 
     return-void
 .end method

@@ -31,7 +31,7 @@
 # static fields
 .field public static final OPERATION_DEFINITION:Ljava/lang/String; = "subscription OnUpdateUserContextInfoByLambda($userKey: String, $advertisements: [AWSJSON], $myTab: AWSJSON, $notice: AWSJSON, $shortcuts: [AWSJSON]) {\n  onUpdateUserContextInfoByLambda(userKey: $userKey, advertisements: $advertisements, myTab: $myTab, notice: $notice, shortcuts: $shortcuts) {\n    __typename\n    userKey\n    advertisements\n    myTab\n    notice\n    shortcuts\n    ttlTimeStamp\n    welcome\n    widgets\n  }\n}"
 
-.field private static final OPERATION_NAME:Lc4/h;
+.field private static final OPERATION_NAME:Lz5/h;
 
 .field public static final QUERY_DOCUMENT:Ljava/lang/String; = "subscription OnUpdateUserContextInfoByLambda($userKey: String, $advertisements: [AWSJSON], $myTab: AWSJSON, $notice: AWSJSON, $shortcuts: [AWSJSON]) {\n  onUpdateUserContextInfoByLambda(userKey: $userKey, advertisements: $advertisements, myTab: $myTab, notice: $notice, shortcuts: $shortcuts) {\n    __typename\n    userKey\n    advertisements\n    myTab\n    notice\n    shortcuts\n    ttlTimeStamp\n    welcome\n    widgets\n  }\n}"
 
@@ -49,7 +49,7 @@
 
     invoke-direct {v0}, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$1;-><init>()V
 
-    sput-object v0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription;->OPERATION_NAME:Lc4/h;
+    sput-object v0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription;->OPERATION_NAME:Lz5/h;
 
     return-void
 .end method
@@ -146,11 +146,11 @@
 
 
 # virtual methods
-.method public name()Lc4/h;
+.method public name()Lz5/h;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription;->OPERATION_NAME:Lc4/h;
+    sget-object v0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription;->OPERATION_NAME:Lz5/h;
 
     return-object v0
 .end method
@@ -171,12 +171,12 @@
     return-object v0
 .end method
 
-.method public responseFieldMapper()Lc4/j;
+.method public responseFieldMapper()Lz5/j;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc4/j<",
+            "Lz5/j<",
             "Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Data;",
             ">;"
         }

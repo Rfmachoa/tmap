@@ -38,6 +38,11 @@
 # direct methods
 .method public constructor <init>(Lretrofit2/DefaultCallAdapterFactory;Ljava/lang/reflect/Type;Ljava/util/concurrent/Executor;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lretrofit2/DefaultCallAdapterFactory$1;->this$0:Lretrofit2/DefaultCallAdapterFactory;
@@ -85,7 +90,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     new-instance v1, Lretrofit2/DefaultCallAdapterFactory$ExecutorCallbackCall;
 

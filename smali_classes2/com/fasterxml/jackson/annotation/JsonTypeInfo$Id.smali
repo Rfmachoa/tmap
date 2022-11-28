@@ -29,6 +29,8 @@
 
 .field public static final enum CUSTOM:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
 
+.field public static final enum DEDUCTION:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
+
 .field public static final enum MINIMAL_CLASS:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
 
 .field public static final enum NAME:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
@@ -42,7 +44,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 12
+    .locals 14
 
     .line 1
     new-instance v0, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
@@ -99,15 +101,26 @@
     .line 5
     new-instance v8, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
 
-    const-string v10, "CUSTOM"
+    const-string v10, "DEDUCTION"
 
     const/4 v11, 0x4
 
     invoke-direct {v8, v10, v11, v3}, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v8, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;->CUSTOM:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
+    sput-object v8, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;->DEDUCTION:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
 
-    const/4 v3, 0x5
+    .line 6
+    new-instance v10, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
+
+    const-string v12, "CUSTOM"
+
+    const/4 v13, 0x5
+
+    invoke-direct {v10, v12, v13, v3}, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v10, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;->CUSTOM:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
+
+    const/4 v3, 0x6
 
     new-array v3, v3, [Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
 
@@ -121,7 +134,9 @@
 
     aput-object v8, v3, v11
 
-    .line 6
+    aput-object v10, v3, v13
+
+    .line 7
     sput-object v3, Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;->$VALUES:[Lcom/fasterxml/jackson/annotation/JsonTypeInfo$Id;
 
     return-void

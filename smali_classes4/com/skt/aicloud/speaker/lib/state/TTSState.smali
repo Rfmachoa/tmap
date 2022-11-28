@@ -107,7 +107,7 @@
 
 
 # virtual methods
-.method public b()Lcom/skt/aicloud/speaker/lib/state/TTSState$PlayState;
+.method public a()Lcom/skt/aicloud/speaker/lib/state/TTSState$PlayState;
     .locals 1
 
     .line 1

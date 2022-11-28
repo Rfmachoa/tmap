@@ -41,6 +41,14 @@
 
 .method public setBody(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "body"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResponseVo;->body:Ljava/lang/Object;
@@ -50,6 +58,14 @@
 
 .method public setHeader(Lcom/skt/moment/net/vo/ResHeaderVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "header"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResponseVo;->header:Lcom/skt/moment/net/vo/ResHeaderVo;

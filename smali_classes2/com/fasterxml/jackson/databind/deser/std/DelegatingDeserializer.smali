@@ -46,7 +46,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_figureType(Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Class;
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->handledType()Ljava/lang/Class;
 
     move-result-object v0
 
@@ -58,69 +58,8 @@
     return-void
 .end method
 
-.method private static _figureType(Lcom/fasterxml/jackson/databind/JsonDeserializer;)Ljava/lang/Class;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/fasterxml/jackson/databind/JsonDeserializer<",
-            "*>;)",
-            "Ljava/lang/Class<",
-            "*>;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->handledType()Ljava/lang/Class;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    return-object p0
-
-    .line 2
-    :cond_0
-    const-class p0, Ljava/lang/Object;
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public _createContextual(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/BeanProperty;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/fasterxml/jackson/databind/DeserializationContext;",
-            "Lcom/fasterxml/jackson/databind/BeanProperty;",
-            "Lcom/fasterxml/jackson/databind/JsonDeserializer<",
-            "*>;)",
-            "Lcom/fasterxml/jackson/databind/JsonDeserializer<",
-            "*>;"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    iget-object p1, p0, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_delegatee:Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    if-ne p3, p1, :cond_0
-
-    return-object p0
-
-    .line 2
-    :cond_0
-    invoke-virtual {p0, p3}, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->newDelegatingInstance(Lcom/fasterxml/jackson/databind/JsonDeserializer;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public createContextual(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/BeanProperty;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -178,8 +117,7 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonProcessingException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -197,8 +135,7 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonProcessingException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -216,8 +153,7 @@
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonProcessingException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -256,21 +192,6 @@
 
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_delegatee:Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    return-object v0
-.end method
-
-.method public getEmptyValue()Ljava/lang/Object;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 2
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_delegatee:Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->getEmptyValue()Ljava/lang/Object;
-
-    move-result-object v0
 
     return-object v0
 .end method
@@ -314,15 +235,13 @@
     return-object v0
 .end method
 
-.method public getNullValue()Ljava/lang/Object;
+.method public getNullAccessPattern()Lcom/fasterxml/jackson/databind/util/AccessPattern;
     .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
-    .line 2
+    .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_delegatee:Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->getNullValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->getNullAccessPattern()Lcom/fasterxml/jackson/databind/util/AccessPattern;
 
     move-result-object v0
 
@@ -371,6 +290,19 @@
     move-result v0
 
     return v0
+.end method
+
+.method public logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_delegatee:Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public abstract newDelegatingInstance(Lcom/fasterxml/jackson/databind/JsonDeserializer;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
@@ -435,4 +367,17 @@
 
     :cond_0
     return-void
+.end method
+
+.method public supportsUpdate(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Ljava/lang/Boolean;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/DelegatingDeserializer;->_delegatee:Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->supportsUpdate(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -19,15 +19,15 @@
 
 .field public b:Ljava/lang/String;
 
-.field public c:Lh3/o;
+.field public c:Lp4/o;
 
-.field public d:Lh3/g0;
+.field public d:Lp4/g0;
 
 .field public e:Landroidx/transition/Transition;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;Landroidx/transition/Transition;Lh3/g0;Lh3/o;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;Landroidx/transition/Transition;Lp4/g0;Lp4/o;)V
     .locals 0
 
     .line 1
@@ -40,10 +40,10 @@
     iput-object p2, p0, Landroidx/transition/Transition$d;->b:Ljava/lang/String;
 
     .line 4
-    iput-object p5, p0, Landroidx/transition/Transition$d;->c:Lh3/o;
+    iput-object p5, p0, Landroidx/transition/Transition$d;->c:Lp4/o;
 
     .line 5
-    iput-object p4, p0, Landroidx/transition/Transition$d;->d:Lh3/g0;
+    iput-object p4, p0, Landroidx/transition/Transition$d;->d:Lp4/g0;
 
     .line 6
     iput-object p3, p0, Landroidx/transition/Transition$d;->e:Landroidx/transition/Transition;

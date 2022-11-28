@@ -95,7 +95,7 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -117,6 +117,16 @@
 
     move-result-object v1
 
+    if-nez v1, :cond_1
+
+    return-void
+
+    .line 3
+    :cond_1
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
     check-cast v1, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;
 
     iget v1, v1, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uTime:I
@@ -127,7 +137,7 @@
 
     invoke-virtual {p0, v1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 3
+    .line 4
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -138,7 +148,7 @@
 
     invoke-virtual {p0, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 4
+    .line 5
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -149,7 +159,7 @@
 
     invoke-virtual {p0, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 5
+    .line 6
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -164,7 +174,7 @@
 
     invoke-virtual {p0, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 6
+    .line 7
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -179,7 +189,7 @@
 
     int-to-short p2, p2
 
-    .line 7
+    .line 8
     invoke-static {p2}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
 
     move-result-object p2
@@ -188,14 +198,14 @@
 
     int-to-short p2, p3
 
-    .line 8
+    .line 9
     invoke-static {p2}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
 
     move-result-object p2
 
     invoke-virtual {p0, p2}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 9
+    .line 10
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -205,7 +215,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_3
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -213,7 +223,12 @@
 
     check-cast p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;
 
-    .line 10
+    if-nez p2, :cond_2
+
+    return-void
+
+    .line 11
+    :cond_2
     iget p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uPosX:I
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->intToByte(I)[B
@@ -222,7 +237,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 11
+    .line 12
     iget p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uPosY:I
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->intToByte(I)[B
@@ -231,7 +246,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 12
+    .line 13
     iget p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uTime:I
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->intToByte(I)[B
@@ -240,7 +255,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 13
+    .line 14
     iget-short p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uAngle:S
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
@@ -249,7 +264,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 14
+    .line 15
     iget-short p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uSpeed:S
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
@@ -258,17 +273,17 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 15
+    .line 16
     iget-byte p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->satelliteCnt:B
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 16
+    .line 17
     iget-byte p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->provider:B
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 17
+    .line 18
     iget-short p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->accuracy:S
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
@@ -277,12 +292,12 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 18
+    .line 19
     iget-byte p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMapMatchingCode:B
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 19
+    .line 20
     iget p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMatPosX:I
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->intToByte(I)[B
@@ -291,7 +306,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 20
+    .line 21
     iget p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMatPosY:I
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->intToByte(I)[B
@@ -300,7 +315,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 21
+    .line 22
     iget-short p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMatAngle:S
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
@@ -309,7 +324,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 22
+    .line 23
     iget-short p3, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->activityType:S
 
     invoke-static {p3}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->shortToByte(S)[B
@@ -318,7 +333,7 @@
 
     invoke-virtual {p0, p3}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 23
+    .line 24
     iget p2, p2, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->altitude:I
 
     invoke-static {p2}, Lcom/skt/tmap/engine/navigation/coordination/BigEndianByteHandler;->intToByte(I)[B
@@ -329,15 +344,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :catch_0
     move-exception p0
 
-    .line 24
+    .line 25
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_1
+    :cond_3
     :goto_1
     return-void
 .end method
@@ -445,24 +460,45 @@
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     :cond_0
-    if-eqz p2, :cond_1
-
-    .line 2
-    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 3
-    :cond_1
-    invoke-static {p1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
-
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_5
+    .line 2
+    invoke-interface {p1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    const/4 v1, 0x0
+
+    if-eqz p2, :cond_2
+
+    move v2, v1
+
+    .line 3
+    :goto_0
+    array-length v3, p2
+
+    if-ge v2, v3, :cond_2
 
     .line 4
+    aget-object v3, p2, v2
+
+    if-eqz v3, :cond_1
+
+    .line 5
+    aget-object v3, p2, v2
+
+    invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 6
+    :cond_2
+    invoke-static {p1}, Ljava/util/Collections;->sort(Ljava/util/List;)V
+
+    if-eqz p2, :cond_6
+
+    .line 7
     invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
 
     move-result-object p2
@@ -471,61 +507,59 @@
 
     move-result-object p2
 
-    .line 5
+    .line 8
     invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getLinkTraceData()[Lcom/skt/tmap/engine/navigation/data/LinkInformation;
+    invoke-virtual {v2}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getLinkTraceData()[Lcom/skt/tmap/engine/navigation/data/LinkInformation;
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v2, 0x0
+    if-eqz p2, :cond_3
 
-    if-eqz p2, :cond_2
-
-    .line 6
+    .line 9
     array-length v3, p2
-
-    goto :goto_0
-
-    :cond_2
-    move v3, v2
-
-    .line 7
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-eqz v1, :cond_3
-
-    .line 8
-    array-length v5, v1
 
     goto :goto_1
 
     :cond_3
-    move v5, v2
+    move v3, v1
 
+    .line 10
     :goto_1
-    if-lez v4, :cond_5
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    .line 9
+    move-result v4
+
+    if-eqz v2, :cond_4
+
+    .line 11
+    array-length v5, v2
+
+    goto :goto_2
+
+    :cond_4
+    move v5, v1
+
+    :goto_2
+    if-lez v4, :cond_6
+
+    .line 12
     :try_start_0
     new-instance v4, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v4}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 10
+    .line 13
     invoke-static {v4, p1, v3, v5}, Lcom/skt/tmap/engine/navigation/network/RouteRequesterV2;->addGpsTraceInfo(Ljava/io/ByteArrayOutputStream;Ljava/util/List;II)V
 
-    move p1, v2
+    move p1, v1
 
-    :goto_2
-    if-ge p1, v3, :cond_4
+    :goto_3
+    if-ge p1, v3, :cond_5
 
-    .line 11
+    .line 14
     aget-object v5, p2, p1
 
     iget v5, v5, Lcom/skt/tmap/engine/navigation/data/VertexTraceInfo;->tileId:I
@@ -536,7 +570,7 @@
 
     invoke-virtual {v4, v5}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 12
+    .line 15
     aget-object v5, p2, p1
 
     iget v5, v5, Lcom/skt/tmap/engine/navigation/data/VertexTraceInfo;->vPosX:I
@@ -547,7 +581,7 @@
 
     invoke-virtual {v4, v5}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 13
+    .line 16
     aget-object v5, p2, p1
 
     iget v5, v5, Lcom/skt/tmap/engine/navigation/data/VertexTraceInfo;->vPosY:I
@@ -558,7 +592,7 @@
 
     invoke-virtual {v4, v5}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 14
+    .line 17
     aget-object v5, p2, p1
 
     iget-short v5, v5, Lcom/skt/tmap/engine/navigation/data/VertexTraceInfo;->vDistance:S
@@ -569,7 +603,7 @@
 
     invoke-virtual {v4, v5}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 15
+    .line 18
     aget-object v5, p2, p1
 
     iget-short v5, v5, Lcom/skt/tmap/engine/navigation/data/VertexTraceInfo;->vTime:S
@@ -582,53 +616,53 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 16
-    :cond_4
-    invoke-static {p0, v4, v1}, Lcom/skt/tmap/engine/navigation/network/RouteRequesterV2;->addRpLinkData(ILjava/io/ByteArrayOutputStream;[Lcom/skt/tmap/engine/navigation/data/LinkInformation;)V
+    .line 19
+    :cond_5
+    invoke-static {p0, v4, v2}, Lcom/skt/tmap/engine/navigation/network/RouteRequesterV2;->addRpLinkData(ILjava/io/ByteArrayOutputStream;[Lcom/skt/tmap/engine/navigation/data/LinkInformation;)V
 
-    .line 17
+    .line 20
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
-    invoke-static {p0, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    invoke-static {p0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 18
+    .line 21
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_3
+    goto :goto_4
 
     :catch_0
     move-exception p0
 
-    .line 19
+    .line 22
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    :cond_5
-    :goto_3
+    :cond_6
+    :goto_4
     return-object v0
 .end method
 
 .method private getRequestDto(Lcom/skt/tmap/engine/navigation/route/RouteOption;)Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;
     .locals 12
 
-    const-string/jumbo v0, "truckType"
+    const-string v0, "truckType"
 
-    const-string/jumbo v1, "truckLength"
+    const-string v1, "truckLength"
 
-    const-string/jumbo v2, "truckTotalWeight"
+    const-string v2, "truckTotalWeight"
 
-    const-string/jumbo v3, "truckWeight"
+    const-string v3, "truckWeight"
 
-    const-string/jumbo v4, "truckHeight"
+    const-string v4, "truckHeight"
 
-    const-string/jumbo v5, "truckWidth"
+    const-string v5, "truckWidth"
 
     .line 1
     new-instance v6, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;
@@ -1646,7 +1680,7 @@
 .end method
 
 .method public request(Lretrofit2/Callback;)Lretrofit2/Call;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1664,25 +1698,33 @@
 
     invoke-direct {p0, v0}, Lcom/skt/tmap/engine/navigation/network/RouteRequesterV2;->getRequestDto(Lcom/skt/tmap/engine/navigation/route/RouteOption;)Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
     .line 3
     invoke-static {}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getInstance()Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getLastMockGpsTime()J
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getLastMockGpsTime()J
 
-    move-result-wide v1
+    move-result-wide v4
 
     .line 4
     invoke-static {}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->getInstance()Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v0, p1, v1, v2}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->requestRoute(Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;Lretrofit2/Callback;J)Lretrofit2/Call;
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/network/RouteRequesterV2;->routeOption:Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->isReroute()Z
+
+    move-result v6
+
+    move-object v3, p1
+
+    invoke-virtual/range {v1 .. v6}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->requestRoute(Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;Lretrofit2/Callback;JZ)Lretrofit2/Call;
 
     move-result-object p1
 
@@ -1885,7 +1927,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     .line 23
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getSearchDetailFlag()Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchDetailFlag;
@@ -1984,7 +2026,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_a
 
     .line 35
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getInitSrchSessionId()Ljava/lang/String;
@@ -2031,30 +2073,15 @@
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;->setPastSessionId(Ljava/lang/String;)V
 
-    goto :goto_7
-
     .line 40
     :cond_a
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getLastRouteSessionId()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;->setPastSessionId(Ljava/lang/String;)V
-
-    .line 41
-    :cond_b
-    :goto_7
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getDestSearchCode()Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
 
     move-result-object v0
 
     sget-object v1, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->AvoidAltResearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
 
-    if-ne v0, v1, :cond_c
+    if-ne v0, v1, :cond_b
 
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getExtraInfo()Lcom/skt/tmap/engine/navigation/route/RouteOption$ExtraInfo;
 
@@ -2062,9 +2089,9 @@
 
     iget v0, v0, Lcom/skt/tmap/engine/navigation/route/RouteOption$ExtraInfo;->congestionRid:I
 
-    if-lez v0, :cond_c
+    if-lez v0, :cond_b
 
-    .line 42
+    .line 41
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getExtraInfo()Lcom/skt/tmap/engine/navigation/route/RouteOption$ExtraInfo;
 
     move-result-object v0
@@ -2073,21 +2100,21 @@
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;->setTcRid(I)V
 
-    .line 43
-    :cond_c
+    .line 42
+    :cond_b
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->isFavoriteRoute()Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_c
 
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getInitialOrigin()Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
 
     move-result-object v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_c
 
-    .line 44
+    .line 43
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getInitialOrigin()Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
 
     move-result-object v0
@@ -2104,7 +2131,7 @@
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;->setInitSrchDepartXPos(I)V
 
-    .line 45
+    .line 44
     invoke-virtual {p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getInitialOrigin()Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
 
     move-result-object p2
@@ -2121,6 +2148,6 @@
 
     invoke-virtual {p1, p2}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PlanningRouteMultiFormatRequestDto;->setInitSrchDepartYPos(I)V
 
-    :cond_d
+    :cond_c
     return-void
 .end method

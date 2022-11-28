@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/api/internal/zaa;
 .super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -11,14 +11,6 @@
 
 # instance fields
 .field private zaa:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/Runnable;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

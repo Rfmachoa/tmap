@@ -78,7 +78,7 @@
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Landroidx/biometric/f;->V(Z)V
+    invoke-virtual {p1, p2}, Landroidx/biometric/f;->W(Z)V
 
     :cond_0
     return-void

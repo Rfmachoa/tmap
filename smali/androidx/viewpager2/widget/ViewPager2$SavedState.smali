@@ -57,7 +57,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-virtual {p0, p1, v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     invoke-direct {p0, p1, p2}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/viewpager2/widget/ViewPager2$SavedState;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 
 
 # virtual methods
-.method public final b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public final a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
     .line 1

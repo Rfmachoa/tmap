@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
+.method public onFragmentActivityCreated(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -46,7 +46,7 @@
     return-void
 .end method
 
-.method public b(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
+.method public onFragmentAttached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public c(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
+.method public onFragmentCreated(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -82,7 +82,7 @@
     return-void
 .end method
 
-.method public d(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentDestroyed(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method public e(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentDetached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public f(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentPaused(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -124,7 +124,7 @@
     return-void
 .end method
 
-.method public g(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
+.method public onFragmentPreAttached(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/content/Context;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -142,7 +142,7 @@
     return-void
 .end method
 
-.method public h(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
+.method public onFragmentPreCreated(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public i(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentResumed(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -174,7 +174,7 @@
     return-void
 .end method
 
-.method public j(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
+.method public onFragmentSaveInstanceState(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -192,7 +192,7 @@
     return-void
 .end method
 
-.method public k(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentStarted(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -206,7 +206,7 @@
     return-void
 .end method
 
-.method public l(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentStopped(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -220,7 +220,7 @@
     return-void
 .end method
 
-.method public m(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
+.method public onFragmentViewCreated(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -242,7 +242,7 @@
     return-void
 .end method
 
-.method public n(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public onFragmentViewDestroyed(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;

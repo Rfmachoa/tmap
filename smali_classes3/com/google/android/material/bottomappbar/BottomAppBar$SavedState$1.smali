@@ -1,4 +1,4 @@
-.class final Lcom/google/android/material/bottomappbar/BottomAppBar$SavedState$1;
+.class Lcom/google/android/material/bottomappbar/BottomAppBar$SavedState$1;
 .super Ljava/lang/Object;
 .source "BottomAppBar.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

@@ -54,18 +54,10 @@
 
     if-eq p1, v1, :cond_0
 
+    const-string v2, "/"
+
     .line 3
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, "/"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v2}, Landroidx/core/content/b0;->a(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

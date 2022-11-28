@@ -1,22 +1,22 @@
 .class public Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;
-.super Ld6/c;
+.super Lb8/c;
 .source "SampleAuxiliaryInformationOffsetsBox.java"
 
 
 # static fields
 .field public static final TYPE:Ljava/lang/String; = "saio"
 
-.field private static final synthetic ajc$tjp_0:Lek/c$b;
+.field private static final synthetic ajc$tjp_0:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_1:Lek/c$b;
+.field private static final synthetic ajc$tjp_1:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_2:Lek/c$b;
+.field private static final synthetic ajc$tjp_2:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_3:Lek/c$b;
+.field private static final synthetic ajc$tjp_3:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_4:Lek/c$b;
+.field private static final synthetic ajc$tjp_4:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_5:Lek/c$b;
+.field private static final synthetic ajc$tjp_5:Ljm/c$b;
 
 
 # instance fields
@@ -51,7 +51,7 @@
     const-string v0, "saio"
 
     .line 1
-    invoke-direct {p0, v0}, Ld6/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lb8/c;-><init>(Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Ljava/util/LinkedList;
@@ -67,13 +67,13 @@
     .locals 10
 
     .line 1
-    new-instance v8, Lkk/e;
+    new-instance v8, Lpm/e;
 
     const-class v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;
 
     const-string v1, "SampleAuxiliaryInformationOffsetsBox.java"
 
-    invoke-direct {v8, v1, v0}, Lkk/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v8, v1, v0}, Lpm/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     const-string v1, "1"
 
@@ -91,7 +91,7 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
@@ -99,11 +99,11 @@
 
     const/16 v1, 0x68
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_0:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_0:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -121,17 +121,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x6c
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_1:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_1:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -149,17 +149,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x70
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_2:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_2:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -177,17 +177,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x74
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_3:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_3:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -205,17 +205,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x78
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_4:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_4:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -233,17 +233,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x7c
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_5:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_5:Ljm/c$b;
 
     return-void
 .end method
@@ -254,10 +254,10 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
+    invoke-virtual {p0, p1}, Lb8/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
 
     .line 2
-    invoke-virtual {p0}, Ld6/c;->getFlags()I
+    invoke-virtual {p0}, Lb8/c;->getFlags()I
 
     move-result v0
 
@@ -287,7 +287,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Ly6/b;->a(J)I
+    invoke-static {v0, v1}, Lw8/b;->a(J)I
 
     move-result v0
 
@@ -305,7 +305,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0}, Ld6/c;->getVersion()I
+    invoke-virtual {p0}, Lb8/c;->getVersion()I
 
     move-result v2
 
@@ -349,18 +349,18 @@
 .method public getAuxInfoType()J
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_0:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_0:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget-wide v0, p0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->auxInfoType:J
 
@@ -370,18 +370,18 @@
 .method public getAuxInfoTypeParameter()J
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_2:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_2:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget-wide v0, p0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->auxInfoTypeParameter:J
 
@@ -392,10 +392,10 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
 
     .line 2
-    invoke-virtual {p0}, Ld6/c;->getFlags()I
+    invoke-virtual {p0}, Lb8/c;->getFlags()I
 
     move-result v0
 
@@ -451,7 +451,7 @@
     check-cast v1, Ljava/lang/Long;
 
     .line 7
-    invoke-virtual {p0}, Ld6/c;->getVersion()I
+    invoke-virtual {p0}, Lb8/c;->getVersion()I
 
     move-result v2
 
@@ -481,7 +481,7 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Ld6/c;->getVersion()I
+    invoke-virtual {p0}, Lb8/c;->getVersion()I
 
     move-result v0
 
@@ -511,7 +511,7 @@
     :goto_0
     add-int/2addr v0, v1
 
-    invoke-virtual {p0}, Ld6/c;->getFlags()I
+    invoke-virtual {p0}, Lb8/c;->getFlags()I
 
     move-result v2
 
@@ -545,18 +545,18 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_4:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_4:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget-object v0, p0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->offsets:Ljava/util/List;
 
@@ -566,22 +566,22 @@
 .method public setAuxInfoType(J)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_1:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_1:Ljm/c$b;
 
-    invoke-static {p1, p2}, Lik/e;->m(J)Ljava/lang/Object;
+    invoke-static {p1, p2}, Lnm/e;->m(J)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v0, p0, p0, v1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, v1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iput-wide p1, p0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->auxInfoType:J
 
@@ -591,22 +591,22 @@
 .method public setAuxInfoTypeParameter(J)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_3:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_3:Ljm/c$b;
 
-    invoke-static {p1, p2}, Lik/e;->m(J)Ljava/lang/Object;
+    invoke-static {p1, p2}, Lnm/e;->m(J)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v0, p0, p0, v1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, v1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iput-wide p1, p0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->auxInfoTypeParameter:J
 
@@ -624,18 +624,18 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_5:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->ajc$tjp_5:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iput-object p1, p0, Lcom/coremedia/iso/boxes/SampleAuxiliaryInformationOffsetsBox;->offsets:Ljava/util/List;
 

@@ -153,7 +153,7 @@
 
 
 # virtual methods
-.method public b()Landroid/content/Intent;
+.method public a()Landroid/content/Intent;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -173,15 +173,6 @@
     return v0
 .end method
 
-.method public d()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Landroidx/activity/result/IntentSenderRequest;->d:I
-
-    return v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -190,7 +181,16 @@
     return v0
 .end method
 
-.method public e()Landroid/content/IntentSender;
+.method public e()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/activity/result/IntentSenderRequest;->d:I
+
+    return v0
+.end method
+
+.method public f()Landroid/content/IntentSender;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

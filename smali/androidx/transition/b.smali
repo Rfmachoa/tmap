@@ -1,5 +1,5 @@
 .class public Landroidx/transition/b;
-.super Landroidx/fragment/app/e0;
+.super Landroidx/fragment/app/n0;
 .source "FragmentTransitionSupport.java"
 
 
@@ -22,12 +22,12 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Landroidx/fragment/app/e0;-><init>()V
+    invoke-direct {p0}, Landroidx/fragment/app/n0;-><init>()V
 
     return-void
 .end method
 
-.method public static C(Landroidx/transition/Transition;)Z
+.method public static x(Landroidx/transition/Transition;)Z
     .locals 1
 
     .line 1
@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/fragment/app/e0;->l(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/n0;->i(Ljava/util/List;)Z
 
     move-result v0
 
@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/fragment/app/e0;->l(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/n0;->i(Ljava/util/List;)Z
 
     move-result v0
 
@@ -57,7 +57,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/fragment/app/e0;->l(Ljava/util/List;)Z
+    invoke-static {p0}, Landroidx/fragment/app/n0;->i(Ljava/util/List;)Z
 
     move-result p0
 
@@ -80,70 +80,6 @@
 
 
 # virtual methods
-.method public A(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Object;",
-            "Ljava/util/ArrayList<",
-            "Landroid/view/View;",
-            ">;",
-            "Ljava/util/ArrayList<",
-            "Landroid/view/View;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    check-cast p1, Landroidx/transition/TransitionSet;
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    .line 3
-    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 4
-    invoke-virtual {p0, p1, p2, p3}, Landroidx/transition/b;->q(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public B(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 1
-    :cond_0
-    new-instance v0, Landroidx/transition/TransitionSet;
-
-    invoke-direct {v0}, Landroidx/transition/TransitionSet;-><init>()V
-
-    .line 2
-    check-cast p1, Landroidx/transition/Transition;
-
-    invoke-virtual {v0, p1}, Landroidx/transition/TransitionSet;->f(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
-
-    return-object v0
-.end method
-
 .method public a(Ljava/lang/Object;Landroid/view/View;)V
     .locals 0
 
@@ -211,7 +147,7 @@
 
     .line 7
     :cond_1
-    invoke-static {p1}, Landroidx/transition/b;->C(Landroidx/transition/Transition;)Z
+    invoke-static {p1}, Landroidx/transition/b;->x(Landroidx/transition/Transition;)Z
 
     move-result v0
 
@@ -223,7 +159,7 @@
     move-result-object v0
 
     .line 9
-    invoke-static {v0}, Landroidx/fragment/app/e0;->l(Ljava/util/List;)Z
+    invoke-static {v0}, Landroidx/fragment/app/n0;->i(Ljava/util/List;)Z
 
     move-result v0
 
@@ -274,7 +210,7 @@
     return p1
 .end method
 
-.method public g(Ljava/lang/Object;)Ljava/lang/Object;
+.method public f(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     if-eqz p1, :cond_0
@@ -295,7 +231,7 @@
     return-object p1
 .end method
 
-.method public m(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public j(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 1
@@ -373,7 +309,7 @@
     return-object p1
 .end method
 
-.method public n(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public k(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .line 1
@@ -408,7 +344,7 @@
     return-object v0
 .end method
 
-.method public p(Ljava/lang/Object;Landroid/view/View;)V
+.method public m(Ljava/lang/Object;Landroid/view/View;)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -423,7 +359,7 @@
     return-void
 .end method
 
-.method public q(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method public n(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -465,7 +401,7 @@
     move-result-object v2
 
     .line 6
-    invoke-virtual {p0, v2, p2, p3}, Landroidx/transition/b;->q(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-virtual {p0, v2, p2, p3}, Landroidx/transition/b;->n(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -473,7 +409,7 @@
 
     .line 7
     :cond_0
-    invoke-static {p1}, Landroidx/transition/b;->C(Landroidx/transition/Transition;)Z
+    invoke-static {p1}, Landroidx/transition/b;->x(Landroidx/transition/Transition;)Z
 
     move-result v0
 
@@ -558,7 +494,7 @@
     return-void
 .end method
 
-.method public r(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
+.method public o(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -584,7 +520,7 @@
     return-void
 .end method
 
-.method public t(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
+.method public p(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -636,7 +572,7 @@
     return-void
 .end method
 
-.method public u(Ljava/lang/Object;Landroid/graphics/Rect;)V
+.method public q(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -655,7 +591,7 @@
     return-void
 .end method
 
-.method public v(Ljava/lang/Object;Landroid/view/View;)V
+.method public r(Ljava/lang/Object;Landroid/view/View;)V
     .locals 1
 
     if-eqz p2, :cond_0
@@ -669,7 +605,7 @@
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 3
-    invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/e0;->k(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p2, v0}, Landroidx/fragment/app/n0;->h(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 4
     new-instance p2, Landroidx/transition/b$a;
@@ -682,7 +618,7 @@
     return-void
 .end method
 
-.method public w(Landroidx/fragment/app/Fragment;Ljava/lang/Object;Ll1/b;Ljava/lang/Runnable;)V
+.method public s(Landroidx/fragment/app/Fragment;Ljava/lang/Object;Landroidx/core/os/d;Ljava/lang/Runnable;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/Fragment;
         .annotation build Landroidx/annotation/NonNull;
@@ -692,7 +628,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Ll1/b;
+    .param p3    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -709,7 +645,7 @@
 
     invoke-direct {p1, p0, p2}, Landroidx/transition/b$d;-><init>(Landroidx/transition/b;Landroidx/transition/Transition;)V
 
-    invoke-virtual {p3, p1}, Ll1/b;->d(Ll1/b$a;)V
+    invoke-virtual {p3, p1}, Landroidx/core/os/d;->d(Landroidx/core/os/d$b;)V
 
     .line 3
     new-instance p1, Landroidx/transition/b$e;
@@ -721,7 +657,7 @@
     return-void
 .end method
 
-.method public z(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
+.method public u(Ljava/lang/Object;Landroid/view/View;Ljava/util/ArrayList;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -763,7 +699,7 @@
     check-cast v3, Landroid/view/View;
 
     .line 6
-    invoke-static {v0, v3}, Landroidx/fragment/app/e0;->d(Ljava/util/List;Landroid/view/View;)V
+    invoke-static {v0, v3}, Landroidx/fragment/app/n0;->d(Ljava/util/List;Landroid/view/View;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -780,4 +716,68 @@
     invoke-virtual {p0, p1, p3}, Landroidx/transition/b;->b(Ljava/lang/Object;Ljava/util/ArrayList;)V
 
     return-void
+.end method
+
+.method public v(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Ljava/util/ArrayList<",
+            "Landroid/view/View;",
+            ">;",
+            "Ljava/util/ArrayList<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    check-cast p1, Landroidx/transition/TransitionSet;
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 3
+    invoke-virtual {p1}, Landroidx/transition/Transition;->getTargets()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, p3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 4
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/transition/b;->n(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public w(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 1
+    :cond_0
+    new-instance v0, Landroidx/transition/TransitionSet;
+
+    invoke-direct {v0}, Landroidx/transition/TransitionSet;-><init>()V
+
+    .line 2
+    check-cast p1, Landroidx/transition/Transition;
+
+    invoke-virtual {v0, p1}, Landroidx/transition/TransitionSet;->f(Landroidx/transition/Transition;)Landroidx/transition/TransitionSet;
+
+    return-object v0
 .end method

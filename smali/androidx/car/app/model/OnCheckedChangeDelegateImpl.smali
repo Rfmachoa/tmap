@@ -3,7 +3,7 @@
 .source "OnCheckedChangeDelegateImpl.java"
 
 # interfaces
-.implements Landroidx/car/app/model/g;
+.implements Landroidx/car/app/model/j;
 
 
 # annotations
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method public static b(Landroidx/car/app/model/Toggle$b;)Landroidx/car/app/model/g;
+.method public static b(Landroidx/car/app/model/Toggle$b;)Landroidx/car/app/model/j;
     .locals 1
     .param p0    # Landroidx/car/app/model/Toggle$b;
         .annotation build Landroidx/annotation/NonNull;
@@ -90,9 +90,9 @@
 
 
 # virtual methods
-.method public a(ZLandroidx/car/app/o0;)V
+.method public a(ZLandroidx/car/app/t0;)V
     .locals 1
-    .param p2    # Landroidx/car/app/o0;
+    .param p2    # Landroidx/car/app/t0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -106,7 +106,7 @@
     check-cast v0, Landroidx/car/app/model/IOnCheckedChangeListener;
 
     .line 2
-    invoke-static {p2}, Landroidx/car/app/utils/RemoteUtils;->f(Landroidx/car/app/o0;)Landroidx/car/app/IOnDoneCallback;
+    invoke-static {p2}, Landroidx/car/app/utils/RemoteUtils;->f(Landroidx/car/app/t0;)Landroidx/car/app/IOnDoneCallback;
 
     move-result-object p2
 

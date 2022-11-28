@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->y5(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->G5(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

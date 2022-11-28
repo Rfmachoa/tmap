@@ -21,7 +21,7 @@
 
 .field public b:Ljava/lang/String;
 
-.field public c:Ljb/f;
+.field public c:Lgd/f;
 
 
 # direct methods
@@ -38,9 +38,21 @@
 # virtual methods
 .method public a(IILandroid/os/Bundle;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "result",
+            "extras"
+        }
+    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->c()Ljb/f;
+    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->c()Lgd/f;
 
     move-result-object v0
 
@@ -48,20 +60,20 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->c()Ljb/f;
+    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->c()Lgd/f;
 
     move-result-object v0
 
-    instance-of v0, v0, Ljb/f;
+    instance-of v0, v0, Lgd/f;
 
     if-ne v1, v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->c()Ljb/f;
+    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->c()Lgd/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Ljb/f;->u(IILandroid/os/Bundle;)V
+    invoke-virtual {v0, p1, p2, p3}, Lgd/f;->u(IILandroid/os/Bundle;)V
 
     :cond_0
     if-ne v1, p1, :cond_1
@@ -86,17 +98,17 @@
     return-void
 .end method
 
-.method public final b()Lfb/a$a;
+.method public final b()Lcd/a$a;
     .locals 3
 
     .line 1
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lfb/a;->a(Ljava/lang/String;)Lfb/a$a;
+    invoke-virtual {v0, v1}, Lcd/a;->a(Ljava/lang/String;)Lcd/a$a;
 
     move-result-object v0
 
@@ -105,7 +117,7 @@
     .line 2
     iget-object v1, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lfb/a$a;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->r()Ljava/lang/String;
 
     move-result-object v2
 
@@ -121,17 +133,25 @@
     return-object v0
 .end method
 
-.method public c()Ljb/f;
+.method public c()Lgd/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/moment/view/PopsActivity;->c:Ljb/f;
+    iget-object v0, p0, Lcom/skt/moment/view/PopsActivity;->c:Lgd/f;
 
     return-object v0
 .end method
 
 .method public final d(Landroid/content/Intent;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "intent"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -203,11 +223,19 @@
     return v3
 .end method
 
-.method public e(Ljb/f;)V
+.method public e(Lgd/f;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "foregroundFragment"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/view/PopsActivity;->c:Ljb/f;
+    iput-object p1, p0, Lcom/skt/moment/view/PopsActivity;->c:Lgd/f;
 
     return-void
 .end method
@@ -216,7 +244,7 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->b()Lfb/a$a;
+    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->b()Lcd/a$a;
 
     move-result-object v0
 
@@ -228,7 +256,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v2
 
@@ -237,7 +265,7 @@
     if-ne v3, v2, :cond_2
 
     .line 3
-    const-class v0, Ljb/h;
+    const-class v0, Lgd/h;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -252,30 +280,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_1
 
     .line 5
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 6
     :cond_1
-    new-instance v1, Ljb/h;
+    new-instance v1, Lgd/h;
 
-    invoke-direct {v1}, Ljb/h;-><init>()V
+    invoke-direct {v1}, Lgd/h;-><init>()V
 
     .line 7
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 8
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 9
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -295,7 +323,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 10
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     goto/16 :goto_0
 
@@ -303,14 +331,14 @@
     const/4 v2, 0x2
 
     .line 11
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v4
 
     if-ne v2, v4, :cond_4
 
     .line 12
-    const-class v0, Ljb/i;
+    const-class v0, Lgd/i;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -325,30 +353,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_3
 
     .line 14
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 15
     :cond_3
-    new-instance v1, Ljb/i;
+    new-instance v1, Lgd/i;
 
-    invoke-direct {v1}, Ljb/i;-><init>()V
+    invoke-direct {v1}, Lgd/i;-><init>()V
 
     .line 16
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 17
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 18
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -368,7 +396,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 19
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     goto/16 :goto_0
 
@@ -376,14 +404,14 @@
     const/4 v2, 0x3
 
     .line 20
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v4
 
     if-ne v2, v4, :cond_6
 
     .line 21
-    const-class v0, Ljb/b;
+    const-class v0, Lgd/b;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -398,30 +426,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_5
 
     .line 23
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 24
     :cond_5
-    new-instance v1, Ljb/b;
+    new-instance v1, Lgd/b;
 
-    invoke-direct {v1}, Ljb/b;-><init>()V
+    invoke-direct {v1}, Lgd/b;-><init>()V
 
     .line 25
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 26
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 27
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -441,7 +469,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 28
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     goto/16 :goto_0
 
@@ -449,14 +477,14 @@
     const/4 v2, 0x4
 
     .line 29
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v4
 
     if-ne v2, v4, :cond_8
 
     .line 30
-    const-class v0, Ljb/c;
+    const-class v0, Lgd/c;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -471,30 +499,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_7
 
     .line 32
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 33
     :cond_7
-    new-instance v1, Ljb/c;
+    new-instance v1, Lgd/c;
 
-    invoke-direct {v1}, Ljb/c;-><init>()V
+    invoke-direct {v1}, Lgd/c;-><init>()V
 
     .line 34
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 35
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 36
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -514,7 +542,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 37
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     goto/16 :goto_0
 
@@ -522,14 +550,14 @@
     const/4 v2, 0x5
 
     .line 38
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v4
 
     if-ne v2, v4, :cond_a
 
     .line 39
-    const-class v0, Ljb/g;
+    const-class v0, Lgd/g;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -544,30 +572,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_9
 
     .line 41
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 42
     :cond_9
-    new-instance v1, Ljb/g;
+    new-instance v1, Lgd/g;
 
-    invoke-direct {v1}, Ljb/g;-><init>()V
+    invoke-direct {v1}, Lgd/g;-><init>()V
 
     .line 43
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 44
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 45
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -587,7 +615,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 46
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     goto/16 :goto_0
 
@@ -595,14 +623,14 @@
     const/4 v2, 0x6
 
     .line 47
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v4
 
     if-ne v2, v4, :cond_c
 
     .line 48
-    const-class v0, Ljb/d;
+    const-class v0, Lgd/d;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -617,30 +645,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_b
 
     .line 50
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 51
     :cond_b
-    new-instance v1, Ljb/d;
+    new-instance v1, Lgd/d;
 
-    invoke-direct {v1}, Ljb/d;-><init>()V
+    invoke-direct {v1}, Lgd/d;-><init>()V
 
     .line 52
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 53
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 54
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -660,7 +688,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 55
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     goto :goto_0
 
@@ -668,14 +696,14 @@
     const/16 v2, 0x8
 
     .line 56
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v0
 
     if-ne v2, v0, :cond_e
 
     .line 57
-    const-class v0, Ljb/e;
+    const-class v0, Lgd/e;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
@@ -690,30 +718,30 @@
 
     move-result-object v1
 
-    check-cast v1, Ljb/f;
+    check-cast v1, Lgd/f;
 
     if-eqz v1, :cond_d
 
     .line 59
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     return v3
 
     .line 60
     :cond_d
-    new-instance v1, Ljb/e;
+    new-instance v1, Lgd/e;
 
-    invoke-direct {v1}, Ljb/e;-><init>()V
+    invoke-direct {v1}, Lgd/e;-><init>()V
 
     .line 61
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->G(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->G(Ljava/lang/String;)V
 
     .line 62
     iget-object v2, p0, Lcom/skt/moment/view/PopsActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljb/f;->F(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lgd/f;->F(Ljava/lang/String;)V
 
     .line 63
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -733,7 +761,7 @@
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     .line 64
-    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Ljb/f;)V
+    invoke-virtual {p0, v1}, Lcom/skt/moment/view/PopsActivity;->e(Lgd/f;)V
 
     :goto_0
     return v3
@@ -763,6 +791,14 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "savedInstanceState"
+        }
+    .end annotation
 
     .line 1
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
@@ -848,11 +884,11 @@
     if-ne v2, v1, :cond_3
 
     .line 3
-    invoke-static {}, Lgb/c;->c()Lgb/c;
+    invoke-static {}, Ldd/c;->c()Ldd/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lgb/c;->d()V
+    invoke-virtual {v1}, Ldd/c;->d()V
 
     const/4 v1, 0x0
 
@@ -901,7 +937,7 @@
     .line 9
     :catch_0
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->b()Lfb/a$a;
+    invoke-virtual {p0}, Lcom/skt/moment/view/PopsActivity;->b()Lcd/a$a;
 
     move-result-object v0
 
@@ -910,14 +946,14 @@
     const/4 v3, 0x3
 
     .line 10
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v4
 
     if-ne v3, v4, :cond_1
 
     .line 11
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -933,34 +969,34 @@
     if-eqz v0, :cond_2
 
     .line 12
-    invoke-virtual {v0}, Lfb/a$a;->t()I
+    invoke-virtual {v0}, Lcd/a$a;->t()I
 
     move-result v3
 
     if-ne v2, v3, :cond_2
 
     .line 13
-    invoke-virtual {v0}, Lfb/a$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->a()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v4, "treats-close"
+    const-string v4, "treats-close"
 
     if-ne v4, v3, :cond_2
 
     .line 14
-    invoke-virtual {v0}, Lfb/a$a;->q()Ljava/lang/String;
+    invoke-virtual {v0}, Lcd/a$a;->q()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string/jumbo v5, "treats-offer"
+    const-string v5, "treats-offer"
 
     if-ne v5, v3, :cond_2
 
     const-string v3, "auto-coupon-download"
 
     .line 15
-    invoke-virtual {v0, v4, v3}, Lfb/a$a;->c(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, v4, v3}, Lcd/a$a;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -992,6 +1028,14 @@
 
 .method public onNewIntent(Landroid/content/Intent;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "intent"
+        }
+    .end annotation
 
     .line 1
     invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V

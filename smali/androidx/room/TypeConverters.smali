@@ -7,6 +7,14 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Landroidx/room/TypeConverters;
+        builtInTypeConverters = .subannotation Landroidx/room/BuiltInTypeConverters;
+        .end subannotation
+        value = {}
+    .end subannotation
+.end annotation
+
 .annotation runtime Ljava/lang/annotation/Retention;
     value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
 .end annotation
@@ -22,6 +30,9 @@
 
 
 # virtual methods
+.method public abstract builtInTypeConverters()Landroidx/room/BuiltInTypeConverters;
+.end method
+
 .method public abstract value()[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {

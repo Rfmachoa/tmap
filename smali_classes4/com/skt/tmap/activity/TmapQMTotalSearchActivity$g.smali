@@ -70,20 +70,20 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity$g;->a:Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->v5(Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;)Llb/s4;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->D5(Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;)Lid/o5;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Llb/s4;->j1(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lid/o5;->l1(Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity$g;->a:Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->v5(Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;)Llb/s4;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->D5(Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;)Lid/o5;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/databinding/ViewDataBinding;->r()V
+    invoke-virtual {p1}, Landroidx/databinding/ViewDataBinding;->u()V
 
     return-void
 .end method

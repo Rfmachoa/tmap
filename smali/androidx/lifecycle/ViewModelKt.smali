@@ -14,27 +14,30 @@
         "JOB_KEY",
         "Ljava/lang/String;",
         "Landroidx/lifecycle/ViewModel;",
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "getViewModelScope",
-        "(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/n0;",
+        "(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/p0;",
         "viewModelScope",
         "lifecycle-viewmodel-ktx_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # static fields
 .field private static final JOB_KEY:Ljava/lang/String; = "androidx.lifecycle.ViewModelCoroutineScope.JOB_KEY"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public static final getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/n0;
+.method public static final getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/p0;
     .locals 4
     .param p0    # Landroidx/lifecycle/ViewModel;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -43,7 +46,7 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$viewModelScope"
+    const-string v0, "<this>"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -54,7 +57,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lkotlinx/coroutines/n0;
+    check-cast v1, Lkotlinx/coroutines/p0;
 
     if-eqz v1, :cond_0
 
@@ -68,15 +71,15 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v3, v2, v3}, Lkotlinx/coroutines/a3;->c(Lkotlinx/coroutines/y1;ILjava/lang/Object;)Lkotlinx/coroutines/z;
+    invoke-static {v3, v2, v3}, Lkotlinx/coroutines/z2;->c(Lkotlinx/coroutines/y1;ILjava/lang/Object;)Lkotlinx/coroutines/b0;
 
     move-result-object v2
 
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v3}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v3
 
@@ -95,7 +98,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p0, Lkotlinx/coroutines/n0;
+    check-cast p0, Lkotlinx/coroutines/p0;
 
     return-object p0
 .end method

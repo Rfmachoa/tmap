@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zadc;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # static fields
@@ -10,14 +10,6 @@
 # instance fields
 .field public final zab:Ljava/util/Set;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/BasePendingResult<",
-            "*>;>;"
-        }
     .end annotation
 .end field
 
@@ -77,15 +69,6 @@
 # virtual methods
 .method public final zaa(Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/BasePendingResult<",
-            "+",
-            "Lcom/google/android/gms/common/api/Result;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zadc;->zab:Ljava/util/Set;

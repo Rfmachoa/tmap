@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
 .super Ljava/lang/Enum;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 
 # annotations

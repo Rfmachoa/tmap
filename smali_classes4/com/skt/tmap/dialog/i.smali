@@ -1,6 +1,6 @@
-.class public Lcom/skt/tmap/dialog/i;
-.super Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;
-.source "MainFavoriteRouteDialog.java"
+.class public final Lcom/skt/tmap/dialog/i;
+.super Ljava/lang/Object;
+.source "DialogManager.java"
 
 
 # annotations
@@ -11,117 +11,439 @@
 .end annotation
 
 
+# static fields
+.field public static final c:I = 0x0
+
+.field public static final d:I = 0x1
+
+.field public static final e:I = 0x2
+
+.field public static final f:I = 0x3
+
+.field public static final g:I = 0x4
+
+.field public static final h:I = 0x5
+
+.field public static final i:I = 0x6
+
+.field public static final j:I = 0x7
+
+.field public static final k:I = 0x0
+
+.field public static final l:I = 0x1
+
+.field public static final m:I = 0x2
+
+.field public static final n:Ljava/lang/String; = "DialogManager"
+
+.field public static volatile o:Lcom/skt/tmap/dialog/i;
+
+
 # instance fields
-.field public a:Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;
+.field public a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public b:I
-
-.field public c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-.field public d:Lcom/skt/tmap/dialog/i$a;
+.field public b:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray<",
+            "Lcom/skt/tmap/dialog/i$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 0
-
-    .line 1
-    invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;-><init>()V
 
     return-void
 .end method
 
-.method public static h()Lcom/skt/tmap/dialog/i;
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 1
-    new-instance v0, Lcom/skt/tmap/dialog/i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcom/skt/tmap/dialog/i;-><init>()V
+    .line 2
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Lcom/skt/tmap/dialog/i;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 3
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    return-void
+.end method
+
+.method public static a()Lcom/skt/tmap/dialog/i;
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/skt/tmap/dialog/i;->o:Lcom/skt/tmap/dialog/i;
+
+    if-nez v0, :cond_1
+
+    .line 2
+    const-class v0, Lcom/skt/tmap/dialog/i;
+
+    monitor-enter v0
+
+    .line 3
+    :try_start_0
+    sget-object v1, Lcom/skt/tmap/dialog/i;->o:Lcom/skt/tmap/dialog/i;
+
+    if-nez v1, :cond_0
+
+    .line 4
+    new-instance v1, Lcom/skt/tmap/dialog/i;
+
+    invoke-direct {v1}, Lcom/skt/tmap/dialog/i;-><init>()V
+
+    sput-object v1, Lcom/skt/tmap/dialog/i;->o:Lcom/skt/tmap/dialog/i;
+
+    .line 5
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    .line 6
+    :cond_1
+    :goto_0
+    sget-object v0, Lcom/skt/tmap/dialog/i;->o:Lcom/skt/tmap/dialog/i;
 
     return-object v0
 .end method
 
+.method public static b()V
+    .locals 2
+
+    .line 1
+    const-class v0, Lcom/skt/tmap/dialog/i;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    sget-object v1, Lcom/skt/tmap/dialog/i;->o:Lcom/skt/tmap/dialog/i;
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    .line 3
+    sput-object v1, Lcom/skt/tmap/dialog/i;->o:Lcom/skt/tmap/dialog/i;
+
+    .line 4
+    :cond_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
 
 # virtual methods
-.method public i(Lcom/skt/tmap/dialog/i$a;)V
+.method public c()Z
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    sub-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ltz v0, :cond_1
+
+    .line 2
+    iget-object v4, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/skt/tmap/dialog/i$a;
+
+    if-eqz v4, :cond_0
+
+    .line 3
+    invoke-static {v4}, Lcom/skt/tmap/dialog/i$a;->a(Lcom/skt/tmap/dialog/i$a;)I
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    .line 4
+    invoke-virtual {v4, v2}, Lcom/skt/tmap/dialog/i$a;->c(I)V
+
+    move v3, v1
+
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v3
+.end method
+
+.method public d(II)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dialogType",
+            "dismissType"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    sub-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ltz v0, :cond_1
+
+    .line 2
+    iget-object v3, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/skt/tmap/dialog/i$a;
+
+    if-eqz v3, :cond_0
+
+    .line 3
+    invoke-static {v3}, Lcom/skt/tmap/dialog/i$a;->a(Lcom/skt/tmap/dialog/i$a;)I
+
+    move-result v4
+
+    if-ne v4, p1, :cond_0
+
+    .line 4
+    invoke-virtual {v3, p2}, Lcom/skt/tmap/dialog/i$a;->c(I)V
+
+    move v2, v1
+
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final e(ILcom/skt/tmap/dialog/i$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "dialog"
+        }
+    .end annotation
+
+    if-eqz p2, :cond_0
+
+    .line 1
+    invoke-virtual {p2}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/skt/tmap/util/n2;->f(Landroid/view/View;)V
+
+    .line 2
+    :cond_0
+    iget-object p2, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {p2, p1}, Landroid/util/SparseArray;->delete(I)V
+
+    return-void
+.end method
+
+.method public f(I)V
+    .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "callback"
+            "key"
         }
     .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/dialog/i;->d:Lcom/skt/tmap/dialog/i$a;
+    const-string v0, "dismiss key : "
 
+    const-string v1, "DialogManager"
+
+    .line 1
+    invoke-static {v0, p1, v1}, Lcom/skt/tmap/activity/u;->a(Ljava/lang/String;ILjava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/dialog/i$a;
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/i$a;->isShowing()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 4
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
+
+    .line 5
+    :cond_0
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/dialog/i;->e(ILcom/skt/tmap/dialog/i$a;)V
+
+    :cond_1
     return-void
 .end method
 
-.method public j(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "position"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Lcom/skt/tmap/dialog/i;->b:I
-
-    return-void
-.end method
-
-.method public k(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "usedFavoriteRouteInfo"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/dialog/i;->a:Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;
-
-    return-void
-.end method
-
-.method public onActivityCreated(Landroid/os/Bundle;)V
-    .locals 0
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "savedInstanceState"
-        }
-    .end annotation
-
-    .line 1
-    invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public onCancel(Landroid/content/DialogInterface;)V
+.method public g()I
     .locals 1
-    .param p1    # Landroid/content/DialogInterface;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public h(I)Lcom/skt/tmap/dialog/i$a;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/skt/tmap/dialog/i$a;
+
+    return-object p1
+.end method
+
+.method public i(I)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/skt/tmap/dialog/i$a;
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, Lcom/skt/tmap/dialog/i$a;->isShowing()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final j(Lcom/skt/tmap/dialog/i$a;)I
+    .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -132,220 +454,145 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/fragment/app/d;->onCancel(Landroid/content/DialogInterface;)V
+    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    iget-object v1, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 3
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "create key : "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", current count : "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
+
+    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lcom/skt/tmap/activity/BaseActivity;
+    const-string v1, "DialogManager"
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseActivity;->getBasePresenter()Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+.method public k(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hashCode"
+        }
+    .end annotation
 
-    move-result-object p1
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const-string/jumbo v0, "tap.other"
-
-    invoke-virtual {p1, v0}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
     return-void
 .end method
 
-.method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+.method public l(Landroid/app/Activity;I)I
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "activity",
+            "dialogType"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/dialog/i$a;
+
+    invoke-direct {v0, p1}, Lcom/skt/tmap/dialog/i$a;-><init>(Landroid/content/Context;)V
+
+    .line 2
+    invoke-static {v0, p2}, Lcom/skt/tmap/dialog/i$a;->b(Lcom/skt/tmap/dialog/i$a;I)I
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/dialog/i;->j(Lcom/skt/tmap/dialog/i$a;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public m(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "savedInstanceState"
+            "key"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lcom/google/android/material/bottomsheet/BottomSheetDialog;
+    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->b:Landroid/util/SparseArray;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f14024e
-
-    invoke-direct {p1, v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;-><init>(Landroid/content/Context;I)V
-
-    return-object p1
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 1
-    .param p2    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "inflater",
-            "container",
-            "savedInstanceState"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p1
-
-    const p3, 0x7f0d00f2
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, p3, p2, v0}, Landroidx/databinding/h;->j(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroidx/databinding/ViewDataBinding;
-
-    move-result-object p1
-
-    check-cast p1, Llb/y0;
-
-    .line 2
-    iget-object p2, p0, Lcom/skt/tmap/dialog/i;->d:Lcom/skt/tmap/dialog/i$a;
-
-    invoke-virtual {p1, p2}, Llb/y0;->l1(Lcom/skt/tmap/dialog/i$a;)V
-
-    .line 3
-    iget p2, p0, Lcom/skt/tmap/dialog/i;->b:I
-
-    invoke-virtual {p1, p2}, Llb/y0;->m1(I)V
-
-    .line 4
-    iget-object p2, p0, Lcom/skt/tmap/dialog/i;->a:Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;
-
-    invoke-virtual {p1, p2}, Llb/y0;->n1(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;)V
-
-    .line 5
-    invoke-virtual {p1}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 1
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "outState"
-        }
-    .end annotation
-
-    .line 1
-    invoke-super {p0, p1}, Landroidx/fragment/app/d;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object p1
-
-    const v0, 0x7f140287
-
-    .line 4
-    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
-
-    .line 5
-    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 2
-
-    .line 1
-    invoke-super {p0}, Landroidx/fragment/app/d;->onStart()V
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
-
-    move-result-object v0
+    check-cast v0, Lcom/skt/tmap/dialog/i$a;
 
     if-eqz v0, :cond_0
 
+    .line 2
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+
+    const/4 v1, 0x0
+
     .line 3
-    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/material/bottomsheet/BottomSheetDialog;
-
-    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->getBehavior()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/skt/tmap/dialog/i;->c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x3
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setState(I)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 5
-    iget-object v0, p0, Lcom/skt/tmap/dialog/i;->c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v1, 0x1
+    const-string v1, "show key on screen : "
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setSkipCollapsed(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "DialogManager"
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void

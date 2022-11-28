@@ -92,11 +92,11 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v0}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -159,11 +159,11 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v0}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -301,11 +301,11 @@
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {p1}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object p1
 
@@ -331,9 +331,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lc4/i;
+    check-cast p1, Lz5/i;
 
-    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lc4/i;)V
+    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lz5/i;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "TmapMainAdvertiseStateMachine.kt"
 
 # interfaces
-.implements Lsk/k;
+.implements Lcom/bumptech/glide/request/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->v(Lsk/b;)V
+    value = Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->F(Landroid/widget/ImageView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,12 +18,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<T:",
         "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lsk/k<",
-        "Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;",
+        "Lcom/bumptech/glide/request/g<",
+        "Landroid/graphics/drawable/Drawable;",
         ">;"
     }
 .end annotation
@@ -31,21 +28,32 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0004\u001a\u00020\u00032\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00010\u00000\u0000H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
+        "\u0000/\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001J4\u0010\u000b\u001a\u00020\t2\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u00032\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u00052\u000e\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u00072\u0006\u0010\n\u001a\u00020\tH\u0016J>\u0010\u000f\u001a\u00020\t2\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u00022\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u00052\u000e\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u00072\u0008\u0010\u000e\u001a\u0004\u0018\u00010\r2\u0006\u0010\n\u001a\u00020\tH\u0016\u00a8\u0006\u0010"
     }
     d2 = {
-        "Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;",
-        "kotlin.jvm.PlatformType",
-        "it",
-        "Lkotlin/d1;",
-        "b",
-        "(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;)V"
+        "com/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b",
+        "Lcom/bumptech/glide/request/g;",
+        "Landroid/graphics/drawable/Drawable;",
+        "Lcom/bumptech/glide/load/engine/GlideException;",
+        "e",
+        "",
+        "model",
+        "Lg7/p;",
+        "target",
+        "",
+        "isFirstResource",
+        "a",
+        "resource",
+        "Lcom/bumptech/glide/load/DataSource;",
+        "dataSource",
+        "c",
+        "tmap_android_phoneKUShip"
     }
-    k = 0x3
+    k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -60,6 +68,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,127 +76,86 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;)V
+.method public a(Lcom/bumptech/glide/load/engine/GlideException;Ljava/lang/Object;Lg7/p;Z)Z
+    .locals 0
+    .param p1    # Lcom/bumptech/glide/load/engine/GlideException;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lg7/p;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bumptech/glide/load/engine/GlideException;",
+            "Ljava/lang/Object;",
+            "Lg7/p<",
+            "Landroid/graphics/drawable/Drawable;",
+            ">;Z)Z"
+        }
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public bridge synthetic b(Ljava/lang/Object;Ljava/lang/Object;Lg7/p;Lcom/bumptech/glide/load/DataSource;Z)Z
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    check-cast p1, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->b(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;)V
-
-    return-void
-.end method
-
-.method public final b(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;)V
-    .locals 3
-
-    .line 1
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
-
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->j(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "onEntering(TmapMainAdState.IMAGE_STATE"
-
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
-
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->a(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)Ljava/lang/ref/WeakReference;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/activity/BaseAiActivity;->R5(Z)V
-
-    .line 4
-    :cond_0
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
-
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->e(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)Lcom/skt/tmap/network/ndds/dto/info/AdvtBandBannerDetails;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/AdvtBandBannerDetails;->getAdMediaType()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v1
-
-    :goto_0
-    const-string v2, "image"
-
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual/range {p0 .. p5}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->c(Landroid/graphics/drawable/Drawable;Ljava/lang/Object;Lg7/p;Lcom/bumptech/glide/load/DataSource;Z)Z
 
     move-result p1
 
-    xor-int/2addr p1, v0
+    return p1
+.end method
 
-    if-eqz p1, :cond_2
+.method public c(Landroid/graphics/drawable/Drawable;Ljava/lang/Object;Lg7/p;Lcom/bumptech/glide/load/DataSource;Z)Z
+    .locals 0
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lg7/p;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Lcom/bumptech/glide/load/DataSource;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/drawable/Drawable;",
+            "Ljava/lang/Object;",
+            "Lg7/p<",
+            "Landroid/graphics/drawable/Drawable;",
+            ">;",
+            "Lcom/bumptech/glide/load/DataSource;",
+            "Z)Z"
+        }
+    .end annotation
 
-    .line 5
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
+    .line 1
+    iget-object p2, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
 
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->c(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)Landroidx/constraintlayout/motion/widget/MotionLayout;
+    invoke-static {p2, p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->p(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    const v0, 0x7f0a005c
-
-    invoke-virtual {p1, v0}, Landroidx/constraintlayout/motion/widget/MotionLayout;->g0(I)V
-
-    .line 6
-    :cond_2
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
-
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->m(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)V
-
-    .line 7
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
-
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->d(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)Lcom/tmapmobility/tmap/exoplayer2/ui/PlayerView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/PlayerView;->setPlayer(Lcom/tmapmobility/tmap/exoplayer2/Player;)V
-
-    .line 8
-    iget-object p1, p0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$b;->a:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;
-
-    invoke-static {p1}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;->d(Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine;)Lcom/tmapmobility/tmap/exoplayer2/ui/PlayerView;
-
-    move-result-object p1
-
-    sget v0, Lcom/skt/skaf/l001mtm091/R$id;->ad_mute:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageButton;
-
-    const v0, 0x7f0804f9
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageButton;->setImageResource(I)V
-
-    return-void
+    return p1
 .end method

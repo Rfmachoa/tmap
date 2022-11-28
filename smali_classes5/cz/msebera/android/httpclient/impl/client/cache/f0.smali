@@ -18,21 +18,21 @@
     return-void
 .end method
 
-.method public static a(Ldf/t;)Lkf/c;
+.method public static a(Lhh/t;)Loh/c;
     .locals 4
 
     const-string v0, "HTTP response"
 
     .line 1
-    invoke-static {p0, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
-    instance-of v0, p0, Lkf/c;
+    instance-of v0, p0, Loh/c;
 
     if-eqz v0, :cond_0
 
     .line 3
-    check-cast p0, Lkf/c;
+    check-cast p0, Loh/c;
 
     return-object p0
 
@@ -51,20 +51,20 @@
 
     const/4 v2, 0x0
 
-    const-class v3, Lkf/c;
+    const-class v3, Loh/c;
 
     aput-object v3, v1, v2
 
     new-instance v2, Lcz/msebera/android/httpclient/impl/client/cache/k0;
 
-    invoke-direct {v2, p0}, Lcz/msebera/android/httpclient/impl/client/cache/k0;-><init>(Ldf/t;)V
+    invoke-direct {v2, p0}, Lcz/msebera/android/httpclient/impl/client/cache/k0;-><init>(Lhh/t;)V
 
     .line 6
     invoke-static {v0, v1, v2}, Ljava/lang/reflect/Proxy;->newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lkf/c;
+    check-cast p0, Loh/c;
 
     return-object p0
 .end method

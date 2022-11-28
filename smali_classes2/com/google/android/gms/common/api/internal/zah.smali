@@ -1,42 +1,15 @@
 .class public final Lcom/google/android/gms/common/api/internal/zah;
 .super Lcom/google/android/gms/common/api/internal/zad;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/api/internal/zad<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field public final zab:Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey<",
-            "*>;",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
 
     const/4 v0, 0x4
 
@@ -52,13 +25,6 @@
 # virtual methods
 .method public final zaa(Lcom/google/android/gms/common/api/internal/zabq;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)Z"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/zabq;->zah()Ljava/util/Map;
@@ -99,15 +65,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)[",
-            "Lcom/google/android/gms/common/Feature;"
-        }
-    .end annotation
-
     .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/zabq;->zah()Ljava/util/Map;
 
@@ -140,14 +97,6 @@
 
 .method public final zac(Lcom/google/android/gms/common/api/internal/zabq;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)V"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

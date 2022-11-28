@@ -152,12 +152,13 @@
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const-string p2, "Can not update object of type %s (using deserializer for type %s)"
+    const-string p2, "Cannot update object of type %s (using deserializer for type %s)"
 
     invoke-static {p2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
+    .line 2
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p3
@@ -182,6 +183,7 @@
 
     aput-object v0, p3, v1
 
+    .line 3
     invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -276,10 +278,12 @@
     .line 6
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;->_converter:Lcom/fasterxml/jackson/databind/util/Converter;
 
+    .line 7
     invoke-virtual {p1, v0, p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->findContextualValueDeserializer(Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanProperty;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p0, v1, v0, p1}, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;->withDelegate(Lcom/fasterxml/jackson/databind/util/Converter;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;
 
     move-result-object p1
@@ -445,6 +449,19 @@
     return-object v0
 .end method
 
+.method public logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;->_delegateDeserializer:Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public resolve(Lcom/fasterxml/jackson/databind/DeserializationContext;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
@@ -471,6 +488,19 @@
     return-void
 .end method
 
+.method public supportsUpdate(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Ljava/lang/Boolean;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;->_delegateDeserializer:Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->supportsUpdate(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public withDelegate(Lcom/fasterxml/jackson/databind/util/Converter;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -488,13 +518,11 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v0, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;
 
-    move-result-object v0
+    const-string v1, "withDelegate"
 
-    const-class v1, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;
-
-    if-ne v0, v1, :cond_0
+    invoke-static {v0, p0, v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->verifyMustOverride(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;
@@ -502,36 +530,4 @@
     invoke-direct {v0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;-><init>(Lcom/fasterxml/jackson/databind/util/Converter;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/JsonDeserializer;)V
 
     return-object v0
-
-    .line 3
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Sub-class "
-
-    invoke-static {p2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p3, " must override \'withDelegate\'"
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

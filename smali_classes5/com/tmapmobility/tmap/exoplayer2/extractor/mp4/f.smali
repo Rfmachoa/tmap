@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/m;
+.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
 
 # static fields

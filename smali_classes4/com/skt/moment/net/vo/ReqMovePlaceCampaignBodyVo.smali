@@ -56,6 +56,14 @@
 
 .method public setMoveTypeCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "moveTypeCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqMovePlaceCampaignBodyVo;->moveTypeCode:Ljava/lang/String;
@@ -65,6 +73,14 @@
 
 .method public setPlaceCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCampaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqMovePlaceCampaignBodyVo;->placeCampaignId:Ljava/lang/Integer;
@@ -74,6 +90,14 @@
 
 .method public setSeed(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seed"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqMovePlaceCampaignBodyVo;->seed:Ljava/lang/Integer;

@@ -308,7 +308,13 @@
 
     iget-object v2, p0, Lcom/amazonaws/mobile/auth/userpools/ForceChangePasswordView;->fontFamily:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lj2/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 3
     iget-object v0, p0, Lcom/amazonaws/mobile/auth/userpools/ForceChangePasswordView;->passwordEditText:Landroid/widget/EditText;

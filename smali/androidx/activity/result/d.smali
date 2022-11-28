@@ -1,68 +1,34 @@
-.class public final Landroidx/activity/result/d;
+.class public final synthetic Landroidx/activity/result/d;
 .super Ljava/lang/Object;
-.source "ActivityResult.kt"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/activity/result/a;
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\r\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0086\u0002\u001a\u000f\u0010\u0004\u001a\u0004\u0018\u00010\u0003*\u00020\u0000H\u0086\u0002\u00a8\u0006\u0005"
-    }
-    d2 = {
-        "Landroidx/activity/result/ActivityResult;",
-        "",
-        "a",
-        "Landroid/content/Intent;",
-        "b",
-        "activity-ktx_release"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x4,
-        0x1
-    }
-.end annotation
+# instance fields
+.field public final synthetic a:Lgl/l;
 
 
 # direct methods
-.method public static final a(Landroidx/activity/result/ActivityResult;)I
-    .locals 1
-    .param p0    # Landroidx/activity/result/ActivityResult;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method public synthetic constructor <init>(Lgl/l;)V
+    .locals 0
 
-    const-string v0, "$this$component1"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-object p1, p0, Landroidx/activity/result/d;->a:Lgl/l;
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/activity/result/ActivityResult;->c()I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static final b(Landroidx/activity/result/ActivityResult;)Landroid/content/Intent;
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
     .locals 1
-    .param p0    # Landroidx/activity/result/ActivityResult;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
 
-    const-string v0, "$this$component2"
+    iget-object v0, p0, Landroidx/activity/result/d;->a:Lgl/l;
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/activity/result/e;->b(Lgl/l;Ljava/lang/Object;)V
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/activity/result/ActivityResult;->b()Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

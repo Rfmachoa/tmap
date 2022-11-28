@@ -1,16 +1,17 @@
-.class public abstract Lcom/google/android/gms/tagmanager/zzey;
+.class final Lcom/google/android/gms/tagmanager/zzey;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
-# annotations
-.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-.end annotation
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/tagmanager/zzfe;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzfe;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzey;->zza:Lcom/google/android/gms/tagmanager/zzfe;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -19,11 +20,17 @@
 
 
 # virtual methods
-.method public abstract zza()V
-.end method
+.method public final zza(Z)V
+    .locals 2
 
-.method public abstract zzb()V
-.end method
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzey;->zza:Lcom/google/android/gms/tagmanager/zzfe;
 
-.method public abstract zzc(Z)V
+    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzfe;->zzj(Lcom/google/android/gms/tagmanager/zzfe;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/gms/tagmanager/zzfe;->zzi(ZZ)V
+
+    return-void
 .end method

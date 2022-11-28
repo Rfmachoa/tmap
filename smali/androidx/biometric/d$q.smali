@@ -76,7 +76,7 @@
 
     check-cast v0, Landroidx/biometric/d;
 
-    invoke-virtual {v0}, Landroidx/biometric/d;->L()V
+    invoke-virtual {v0}, Landroidx/biometric/d;->M()V
 
     :cond_0
     return-void

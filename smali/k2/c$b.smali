@@ -1,16 +1,11 @@
-.class public final Lk2/c$b;
+.class public Lk2/c$b;
 .super Ljava/lang/Object;
-.source "ViewModelFactoryModules.java"
+.source "AccessibilityNodeInfoCompat.java"
 
 
 # annotations
-.annotation runtime Ldagger/Module;
-.end annotation
-
-.annotation build Ldagger/hilt/InstallIn;
-    value = {
-        Lvg/c;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x21
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -18,7 +13,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
@@ -33,75 +28,39 @@
     return-void
 .end method
 
-.method public static a(Landroidx/fragment/app/Fragment;Landroid/app/Application;Ljava/util/Map;)Landroidx/lifecycle/ViewModelProvider$Factory;
-    .locals 2
-    .param p0    # Landroidx/fragment/app/Fragment;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/app/Application;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/Map;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ldagger/Provides;
-    .end annotation
-
-    .annotation build Ldagger/hilt/android/internal/lifecycle/DefaultFragmentViewModelFactory;
-    .end annotation
-
-    .annotation runtime Ldagger/multibindings/IntoSet;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "fragment",
-            "application",
-            "viewModelFactories"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/fragment/app/Fragment;",
-            "Landroid/app/Application;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Loi/a<",
-            "Lk2/b<",
-            "+",
-            "Landroidx/lifecycle/ViewModel;",
-            ">;>;>;)",
-            "Landroidx/lifecycle/ViewModelProvider$Factory;"
-        }
+.method public static a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo$ExtraRenderingInfo;
+    .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtraRenderingInfo()Landroid/view/accessibility/AccessibilityNodeInfo$ExtraRenderingInfo;
 
-    move-result-object v0
+    move-result-object p0
 
-    .line 2
-    new-instance v1, Landroidx/lifecycle/SavedStateViewModelFactory;
+    return-object p0
+.end method
 
-    invoke-direct {v1, p1, p0, v0}, Landroidx/lifecycle/SavedStateViewModelFactory;-><init>(Landroid/app/Application;Landroidx/savedstate/b;Landroid/os/Bundle;)V
+.method public static b(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+    .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
-    .line 3
-    new-instance p1, Lk2/a;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isTextSelectable()Z
 
-    invoke-direct {p1, p0, v0, v1, p2}, Lk2/a;-><init>(Landroidx/savedstate/b;Landroid/os/Bundle;Landroidx/lifecycle/SavedStateViewModelFactory;Ljava/util/Map;)V
+    move-result p0
 
-    return-object p1
+    return p0
+.end method
+
+.method public static c(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
+    .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTextSelectable(Z)V
+
+    return-void
 .end method

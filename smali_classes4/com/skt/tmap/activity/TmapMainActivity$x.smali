@@ -60,11 +60,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->f7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->isHideable()Z
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v0
 
@@ -76,13 +76,22 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/TmapMainActivity;->c8(Lcom/skt/tmap/activity/TmapMainActivity;Landroid/view/View;F)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->s8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->y0(F)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/TmapMainActivity;->t8(Lcom/skt/tmap/activity/TmapMainActivity;Landroid/view/View;F)V
 
     return-void
 .end method
 
 .method public b(Landroid/view/View;I)V
-    .locals 4
+    .locals 3
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -98,204 +107,190 @@
         }
     .end annotation
 
+    const-string p1, "newState "
+
+    const-string v0, "TAG"
+
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    invoke-static {p1, p2, v0}, Lcom/skt/tmap/activity/u;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getVisibility()I
 
-    invoke-virtual {v0, p2}, Ldc/d;->F0(I)V
+    move-result p1
 
-    :cond_0
-    const/4 v0, 0x1
-
-    const/4 v1, 0x4
-
-    if-eq p2, v0, :cond_5
-
-    const/4 v0, 0x3
-
-    const-string/jumbo v2, "tap.drawer"
-
-    const/4 v3, 0x0
-
-    if-eq p2, v0, :cond_4
-
-    if-eq p2, v1, :cond_2
-
-    const/4 v0, 0x5
-
-    if-eq p2, v0, :cond_1
-
-    const/4 v0, 0x6
-
-    if-eq p2, v0, :cond_4
-
-    goto/16 :goto_1
+    if-nez p1, :cond_0
 
     .line 3
-    :cond_1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0, v3}, Lcom/skt/tmap/activity/TmapMainActivity;->g7(Lcom/skt/tmap/activity/TmapMainActivity;Z)Z
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    goto :goto_1
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lbe/e;->F0(I)V
 
     .line 4
-    :cond_2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    :cond_0
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    invoke-static {p1, p2}, Lcom/skt/tmap/activity/TmapMainActivity;->c8(Lcom/skt/tmap/activity/TmapMainActivity;I)V
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    const/4 p1, 0x3
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v2}, Ldc/d;->c0(Ljava/lang/String;)V
+    const-string v1, "tap.drawer"
 
-    .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    if-eq p2, p1, :cond_4
 
-    invoke-static {v0, v3}, Lcom/skt/tmap/activity/TmapMainActivity;->g7(Lcom/skt/tmap/activity/TmapMainActivity;Z)Z
+    const/4 p1, 0x4
 
-    .line 6
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    if-eq p2, p1, :cond_2
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->h7(Lcom/skt/tmap/activity/TmapMainActivity;)V
+    const/4 v2, 0x6
 
-    .line 7
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    .line 8
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->i7(Lcom/skt/tmap/activity/TmapMainActivity;)V
+    if-eq p2, v2, :cond_1
 
     goto :goto_0
 
-    .line 9
-    :cond_3
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    .line 5
+    :cond_1
+    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->j7(Lcom/skt/tmap/activity/TmapMainActivity;)V
+    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p2}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v1}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    .line 6
+    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iput-boolean v0, p2, Lcom/skt/tmap/activity/BaseAiActivity;->K0:Z
+
+    .line 7
+    invoke-virtual {p2}, Lcom/skt/tmap/activity/BaseAiActivity;->d6()I
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Lcom/skt/tmap/activity/BaseAiActivity;->D6(I)V
+
+    .line 8
+    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-virtual {p2}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v0, 0x2
+
+    if-ne p2, v0, :cond_5
+
+    .line 9
+    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p2}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setState(I)V
+
+    goto :goto_0
 
     .line 10
-    :goto_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    :cond_2
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/p;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->E7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/s1;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/p;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/fragment/s1;->I0()V
 
     .line 11
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/p;
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/fragment/p;->g0()V
+    move-result-object p1
 
-    goto :goto_1
+    invoke-virtual {p1, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 12
-    :cond_4
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0, v3}, Lcom/skt/tmap/activity/TmapMainActivity;->g7(Lcom/skt/tmap/activity/TmapMainActivity;Z)Z
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->o8(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/view/MenuItem;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
 
     .line 13
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    const/4 p2, 0x1
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    goto :goto_1
+    iput-boolean p2, p1, Lcom/skt/tmap/activity/BaseAiActivity;->K0:Z
 
     .line 14
-    :cond_5
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->d6()I
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Z
+    move-result p2
 
-    move-result v0
-
-    if-nez v0, :cond_6
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->D6(I)V
 
     .line 15
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    :cond_3
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->f7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->q8(Lcom/skt/tmap/activity/TmapMainActivity;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setState(I)V
+    goto :goto_0
 
     .line 16
-    :cond_6
-    :goto_1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    :cond_4
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Z
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    move-result v0
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    if-eqz v0, :cond_7
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 17
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$x;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->l7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/q1;
+    iput-boolean v0, p1, Lcom/skt/tmap/activity/BaseAiActivity;->K0:Z
 
-    move-result-object v0
+    .line 18
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->d6()I
 
-    invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/mvp/fragment/q1;->o0(Landroid/view/View;I)V
+    move-result p2
 
-    :cond_7
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->D6(I)V
+
+    :cond_5
+    :goto_0
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "Camera2CameraImpl.java"
 
 # interfaces
-.implements Landroidx/camera/core/impl/f$b;
+.implements Landroidx/camera/core/impl/d$b;
 
 
 # annotations
@@ -28,16 +28,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/camera2/internal/Camera2CameraImpl;Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x0
-        }
-        names = {
-            "this$0",
-            "cameraId"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$d;->c:Landroidx/camera/camera2/internal/Camera2CameraImpl;
@@ -63,7 +53,7 @@
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$d;->c:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     sget-object v1, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->PENDING_OPEN:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
@@ -74,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->B0(Z)V
+    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->I0(Z)V
 
     :cond_0
     return-void
@@ -95,14 +85,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraId"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$d;->a:Ljava/lang/String;
@@ -124,7 +106,7 @@
     .line 3
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$d;->c:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     sget-object v0, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->PENDING_OPEN:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
@@ -135,7 +117,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->B0(Z)V
+    invoke-virtual {p1, v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->I0(Z)V
 
     :cond_1
     return-void
@@ -147,14 +129,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraId"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$d;->a:Ljava/lang/String;

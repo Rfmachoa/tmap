@@ -1,59 +1,27 @@
 .class public Ljc/l;
-.super Ljava/lang/Object;
-.source "TmapMapDownloadModel.java"
+.super Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;
+.source "pCommandInfoIot.java"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:I
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lorg/json/JSONObject;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class p1, Ljc/l;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
-
-    iput-object v0, p0, Ljc/l;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Ljc/l;->b:I
-
-    return v0
-.end method
-
-.method public b(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "launchingMode"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/l;->b:I
+    iput-object p1, p0, Ljc/l;->f:Ljava/lang/String;
 
     return-void
 .end method

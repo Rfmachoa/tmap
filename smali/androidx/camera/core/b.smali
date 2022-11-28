@@ -11,11 +11,11 @@
 
 .field public final synthetic b:Ljava/util/concurrent/Executor;
 
-.field public final synthetic c:Lx/l0$a;
+.field public final synthetic c:Lb0/w0$a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lx/l0$a;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lb0/w0$a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,7 +24,7 @@
 
     iput-object p2, p0, Landroidx/camera/core/b;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p3, p0, Landroidx/camera/core/b;->c:Lx/l0$a;
+    iput-object p3, p0, Landroidx/camera/core/b;->c:Lb0/w0$a;
 
     return-void
 .end method
@@ -38,9 +38,9 @@
 
     iget-object v1, p0, Landroidx/camera/core/b;->b:Ljava/util/concurrent/Executor;
 
-    iget-object v2, p0, Landroidx/camera/core/b;->c:Lx/l0$a;
+    iget-object v2, p0, Landroidx/camera/core/b;->c:Lb0/w0$a;
 
-    invoke-static {v0, v1, v2, p1}, Landroidx/camera/core/d;->b(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lx/l0$a;Landroid/media/ImageReader;)V
+    invoke-static {v0, v1, v2, p1}, Landroidx/camera/core/d;->d(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lb0/w0$a;Landroid/media/ImageReader;)V
 
     return-void
 .end method

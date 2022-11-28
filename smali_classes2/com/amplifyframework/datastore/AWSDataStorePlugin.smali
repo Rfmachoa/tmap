@@ -179,13 +179,13 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/amplifyframework/datastore/w;
+    new-instance v5, Lcom/amplifyframework/datastore/n;
 
-    invoke-direct {v5, p0}, Lcom/amplifyframework/datastore/w;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
+    invoke-direct {v5, p0}, Lcom/amplifyframework/datastore/n;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
 
-    new-instance v6, Lcom/amplifyframework/datastore/a0;
+    new-instance v6, Lcom/amplifyframework/datastore/a;
 
-    invoke-direct {v6, p3}, Lcom/amplifyframework/datastore/a0;-><init>(Lcom/amplifyframework/api/ApiCategory;)V
+    invoke-direct {v6, p3}, Lcom/amplifyframework/datastore/a;-><init>(Lcom/amplifyframework/api/ApiCategory;)V
 
     move-object v0, v7
 
@@ -193,7 +193,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;-><init>(Lcom/amplifyframework/core/model/ModelProvider;Lcom/amplifyframework/core/model/ModelSchemaRegistry;Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/datastore/DataStoreConfigurationProvider;Lr1/w;)V
+    invoke-direct/range {v0 .. v6}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;-><init>(Lcom/amplifyframework/core/model/ModelProvider;Lcom/amplifyframework/core/model/ModelSchemaRegistry;Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/datastore/DataStoreConfigurationProvider;Landroidx/core/util/e0;)V
 
     iput-object v7, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->orchestrator:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
@@ -342,17 +342,17 @@
     return-void
 .end method
 
-.method private initializeStorageAdapter(Landroid/content/Context;)Lai/a;
+.method private initializeStorageAdapter(Landroid/content/Context;)Lek/a;
     .locals 1
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/g0;
+    new-instance v0, Lcom/amplifyframework/datastore/a0;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/g0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/a0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)V
 
-    invoke-static {v0}, Lai/a;->F(Lci/s;)Lai/a;
+    invoke-static {v0}, Lek/a;->F(Lgk/s;)Lek/a;
 
     move-result-object p1
 
@@ -375,10 +375,10 @@
     return-void
 .end method
 
-.method public static synthetic l(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lai/c;)V
+.method public static synthetic l(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$null$11(Lai/c;)V
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$null$11(Lek/c;)V
 
     return-void
 .end method
@@ -387,35 +387,35 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/a;
+    new-instance v0, Lcom/amplifyframework/datastore/q;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/a;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/q;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
 
-    invoke-static {v0}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {v0}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->Z0(Lai/o0;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->Z0(Lek/o0;)Lek/a;
 
     move-result-object v0
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/amplifyframework/datastore/x;
+    new-instance v1, Lcom/amplifyframework/datastore/t;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/x;-><init>(Lcom/amplifyframework/core/Action;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/t;-><init>(Lcom/amplifyframework/core/Action;)V
 
-    new-instance p1, Lcom/amplifyframework/datastore/e0;
+    new-instance p1, Lcom/amplifyframework/datastore/y;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/e0;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/y;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
     .line 3
-    invoke-virtual {v0, v1, p1}, Lai/a;->X0(Lci/a;Lci/g;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v1, p1}, Lek/a;->X0(Lgk/a;Lgk/g;)Lio/reactivex/rxjava3/disposables/c;
 
     return-void
 .end method
@@ -460,9 +460,9 @@
 
     sget-object v2, Lcom/amplifyframework/datastore/storage/StorageItemChange$Initiator;->DATA_STORE_API:Lcom/amplifyframework/datastore/storage/StorageItemChange$Initiator;
 
-    new-instance v4, Lcom/amplifyframework/datastore/q;
+    new-instance v4, Lcom/amplifyframework/datastore/f;
 
-    invoke-direct {v4, p3, p4}, Lcom/amplifyframework/datastore/q;-><init>(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v4, p3, p4}, Lcom/amplifyframework/datastore/f;-><init>(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     move-object v1, p1
 
@@ -496,7 +496,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$initializeStorageAdapter$6(Landroid/content/Context;)Lai/g;
+.method private synthetic lambda$initializeStorageAdapter$6(Landroid/content/Context;)Lek/g;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -505,11 +505,11 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/l;
+    new-instance v0, Lcom/amplifyframework/datastore/s;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/l;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/s;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)V
 
-    invoke-static {v0}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {v0}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object p1
 
@@ -555,7 +555,7 @@
     return-object p0
 .end method
 
-.method private synthetic lambda$null$11(Lai/c;)V
+.method private synthetic lambda$null$11(Lek/c;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -568,13 +568,13 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/amplifyframework/datastore/h0;
+    new-instance v1, Lcom/amplifyframework/datastore/d;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/h0;-><init>(Lai/c;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/d;-><init>(Lek/c;)V
 
-    new-instance v2, Lcom/amplifyframework/datastore/n;
+    new-instance v2, Lcom/amplifyframework/datastore/h;
 
-    invoke-direct {v2, p1}, Lcom/amplifyframework/datastore/n;-><init>(Lai/c;)V
+    invoke-direct {v2, p1}, Lcom/amplifyframework/datastore/h;-><init>(Lek/c;)V
 
     invoke-interface {v0, v1, v2}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->clear(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -843,16 +843,16 @@
     return-void
 .end method
 
-.method private static synthetic lambda$null$4(Lai/c;Ljava/util/List;)V
+.method private static synthetic lambda$null$4(Lek/c;Ljava/util/List;)V
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lai/c;->onComplete()V
+    invoke-interface {p0}, Lek/c;->onComplete()V
 
     return-void
 .end method
 
-.method private synthetic lambda$null$5(Landroid/content/Context;Lai/c;)V
+.method private synthetic lambda$null$5(Landroid/content/Context;Lek/c;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -863,15 +863,15 @@
     .line 1
     iget-object v0, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->sqliteStorageAdapter:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
-    new-instance v1, Lcom/amplifyframework/datastore/o;
+    new-instance v1, Lcom/amplifyframework/datastore/i;
 
-    invoke-direct {v1, p2}, Lcom/amplifyframework/datastore/o;-><init>(Lai/c;)V
+    invoke-direct {v1, p2}, Lcom/amplifyframework/datastore/i;-><init>(Lek/c;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lcom/amplifyframework/datastore/n;
+    new-instance v2, Lcom/amplifyframework/datastore/h;
 
-    invoke-direct {v2, p2}, Lcom/amplifyframework/datastore/n;-><init>(Lai/c;)V
+    invoke-direct {v2, p2}, Lcom/amplifyframework/datastore/h;-><init>(Lek/c;)V
 
     invoke-interface {v0, p1, v1, v2}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->initialize(Landroid/content/Context;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
@@ -884,9 +884,9 @@
     .line 1
     iget-object v0, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->sqliteStorageAdapter:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
-    new-instance v1, Lcom/amplifyframework/datastore/s;
+    new-instance v1, Lcom/amplifyframework/datastore/g;
 
-    invoke-direct {v1, p2, p3}, Lcom/amplifyframework/datastore/s;-><init>(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p2, p3}, Lcom/amplifyframework/datastore/g;-><init>(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-interface {v0, v1, p3, p4}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->observe(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
 
@@ -903,9 +903,9 @@
     .line 1
     iget-object v0, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->sqliteStorageAdapter:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
-    new-instance v1, Lcom/amplifyframework/datastore/t;
+    new-instance v1, Lcom/amplifyframework/datastore/j;
 
-    invoke-direct {v1, p2, p3, p4}, Lcom/amplifyframework/datastore/t;-><init>(Ljava/lang/Class;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p2, p3, p4}, Lcom/amplifyframework/datastore/j;-><init>(Ljava/lang/Class;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-interface {v0, v1, p4, p5}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->observe(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
 
@@ -922,9 +922,9 @@
     .line 1
     iget-object v0, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->sqliteStorageAdapter:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
-    new-instance v1, Lcom/amplifyframework/datastore/v;
+    new-instance v1, Lcom/amplifyframework/datastore/m;
 
-    invoke-direct {v1, p2, p3, p4}, Lcom/amplifyframework/datastore/v;-><init>(Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p2, p3, p4}, Lcom/amplifyframework/datastore/m;-><init>(Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-interface {v0, v1, p4, p5}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->observe(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
 
@@ -941,9 +941,9 @@
     .line 1
     iget-object v0, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->sqliteStorageAdapter:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
-    new-instance v1, Lcom/amplifyframework/datastore/u;
+    new-instance v1, Lcom/amplifyframework/datastore/k;
 
-    invoke-direct {v1, p2, p3, p4, p5}, Lcom/amplifyframework/datastore/u;-><init>(Ljava/lang/Class;Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p2, p3, p4, p5}, Lcom/amplifyframework/datastore/k;-><init>(Ljava/lang/Class;Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-interface {v0, v1, p5, p6}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->observe(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
 
@@ -999,9 +999,9 @@
 
     sget-object v2, Lcom/amplifyframework/datastore/storage/StorageItemChange$Initiator;->DATA_STORE_API:Lcom/amplifyframework/datastore/storage/StorageItemChange$Initiator;
 
-    new-instance v4, Lcom/amplifyframework/datastore/p;
+    new-instance v4, Lcom/amplifyframework/datastore/e;
 
-    invoke-direct {v4, p3, p4}, Lcom/amplifyframework/datastore/p;-><init>(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v4, p3, p4}, Lcom/amplifyframework/datastore/e;-><init>(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     move-object v1, p1
 
@@ -1116,10 +1116,10 @@
     return-void
 .end method
 
-.method public static synthetic p(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)Lai/g;
+.method public static synthetic p(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$initializeStorageAdapter$6(Landroid/content/Context;)Lai/g;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$initializeStorageAdapter$6(Landroid/content/Context;)Lek/g;
 
     move-result-object p0
 
@@ -1142,10 +1142,10 @@
     return-void
 .end method
 
-.method public static synthetic s(Lai/c;Ljava/util/List;)V
+.method public static synthetic s(Lek/c;Ljava/util/List;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$null$4(Lai/c;Ljava/util/List;)V
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$null$4(Lek/c;Ljava/util/List;)V
 
     return-void
 .end method
@@ -1186,15 +1186,15 @@
     return-object p0
 .end method
 
-.method private waitForInitialization()Lai/a;
+.method private waitForInitialization()Lek/a;
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/b0;
+    new-instance v0, Lcom/amplifyframework/datastore/u;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/b0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/u;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
 
-    invoke-static {v0}, Lai/a;->X(Lci/a;)Lai/a;
+    invoke-static {v0}, Lek/a;->X(Lgk/a;)Lek/a;
 
     move-result-object v0
 
@@ -1203,33 +1203,33 @@
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 2
-    invoke-virtual {v0, v1, v2, v3}, Lai/a;->g1(JLjava/util/concurrent/TimeUnit;)Lai/a;
+    invoke-virtual {v0, v1, v2, v3}, Lek/a;->g1(JLjava/util/concurrent/TimeUnit;)Lek/a;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->Z0(Lai/o0;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->Z0(Lek/o0;)Lek/a;
 
     move-result-object v0
 
-    sget-object v1, Lcom/amplifyframework/datastore/f0;->a:Lcom/amplifyframework/datastore/f0;
+    sget-object v1, Lcom/amplifyframework/datastore/z;->a:Lcom/amplifyframework/datastore/z;
 
     .line 4
-    invoke-virtual {v0, v1}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->P(Lgk/g;)Lek/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static synthetic x(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;Lai/c;)V
+.method public static synthetic x(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$null$5(Landroid/content/Context;Lai/c;)V
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->lambda$null$5(Landroid/content/Context;Lek/c;)V
 
     return-void
 .end method
@@ -1273,9 +1273,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/b;
+    new-instance v0, Lcom/amplifyframework/datastore/l;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/b;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/l;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v0, p2}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->stop(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1328,11 +1328,11 @@
     .line 5
     sget-object p2, Lcom/amplifyframework/core/Amplify;->Hub:Lcom/amplifyframework/hub/HubCategory;
 
-    sget-object v0, Lcom/amplifyframework/datastore/y;->a:Lcom/amplifyframework/datastore/y;
+    sget-object v0, Lcom/amplifyframework/datastore/o;->a:Lcom/amplifyframework/datastore/o;
 
-    new-instance v1, Lcom/amplifyframework/datastore/z;
+    new-instance v1, Lcom/amplifyframework/datastore/p;
 
-    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/z;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
+    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/p;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;)V
 
     invoke-virtual {p2, p1, v0, v1}, Lcom/amplifyframework/hub/HubCategory;->subscribe(Lcom/amplifyframework/hub/HubChannel;Lcom/amplifyframework/hub/HubEventFilter;Lcom/amplifyframework/hub/HubSubscriber;)Lcom/amplifyframework/hub/SubscriptionToken;
 
@@ -1425,7 +1425,7 @@
     .end annotation
 
     .line 2
-    new-instance v6, Lcom/amplifyframework/datastore/h;
+    new-instance v6, Lcom/amplifyframework/datastore/f0;
 
     move-object v0, v6
 
@@ -1439,7 +1439,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/h;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/f0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v6, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1480,7 +1480,7 @@
     .end annotation
 
     .line 3
-    new-instance v6, Lcom/amplifyframework/datastore/k;
+    new-instance v6, Lcom/amplifyframework/datastore/b;
 
     move-object v0, v6
 
@@ -1494,7 +1494,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/k;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/Class;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/b;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/Class;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v6, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1561,7 +1561,7 @@
 
     .line 1
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->initializeStorageAdapter(Landroid/content/Context;)Lai/a;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->initializeStorageAdapter(Landroid/content/Context;)Lek/a;
 
     move-result-object p1
 
@@ -1570,7 +1570,7 @@
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 2
-    invoke-virtual {p1, v0, v1, v2}, Lai/a;->n(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {p1, v0, v1, v2}, Lek/a;->n(JLjava/util/concurrent/TimeUnit;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1629,7 +1629,7 @@
     .end annotation
 
     .line 1
-    new-instance v6, Lcom/amplifyframework/datastore/c;
+    new-instance v6, Lcom/amplifyframework/datastore/x;
 
     move-object v0, v6
 
@@ -1643,7 +1643,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/c;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/x;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
 
     invoke-virtual {p0, v6, p3}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1694,7 +1694,7 @@
     .end annotation
 
     .line 2
-    new-instance v7, Lcom/amplifyframework/datastore/d;
+    new-instance v7, Lcom/amplifyframework/datastore/b0;
 
     move-object v0, v7
 
@@ -1710,7 +1710,7 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/amplifyframework/datastore/d;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Ljava/lang/Class;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
+    invoke-direct/range {v0 .. v6}, Lcom/amplifyframework/datastore/b0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Ljava/lang/Class;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
 
     invoke-virtual {p0, v7, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1828,7 +1828,7 @@
     .end annotation
 
     .line 4
-    new-instance v8, Lcom/amplifyframework/datastore/e;
+    new-instance v8, Lcom/amplifyframework/datastore/c0;
 
     move-object v0, v8
 
@@ -1846,7 +1846,7 @@
 
     move-object v7, p6
 
-    invoke-direct/range {v0 .. v7}, Lcom/amplifyframework/datastore/e;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Ljava/lang/Class;Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
+    invoke-direct/range {v0 .. v7}, Lcom/amplifyframework/datastore/c0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Ljava/lang/Class;Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
 
     invoke-virtual {p0, v8, p5}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1896,7 +1896,7 @@
     .end annotation
 
     .line 3
-    new-instance v7, Lcom/amplifyframework/datastore/f;
+    new-instance v7, Lcom/amplifyframework/datastore/d0;
 
     move-object v0, v7
 
@@ -1912,7 +1912,7 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/amplifyframework/datastore/f;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
+    invoke-direct/range {v0 .. v6}, Lcom/amplifyframework/datastore/d0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Consumer;Ljava/lang/String;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)V
 
     invoke-virtual {p0, v7, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1950,9 +1950,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/i;
+    new-instance v0, Lcom/amplifyframework/datastore/g0;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/amplifyframework/datastore/i;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/Class;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/amplifyframework/datastore/g0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/Class;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v0, p3}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1995,7 +1995,7 @@
     .end annotation
 
     .line 4
-    new-instance v6, Lcom/amplifyframework/datastore/j;
+    new-instance v6, Lcom/amplifyframework/datastore/h0;
 
     move-object v0, v6
 
@@ -2009,7 +2009,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/j;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/Class;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/h0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/Class;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v6, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -2096,7 +2096,7 @@
     .end annotation
 
     .line 2
-    new-instance v6, Lcom/amplifyframework/datastore/m;
+    new-instance v6, Lcom/amplifyframework/datastore/c;
 
     move-object v0, v6
 
@@ -2110,7 +2110,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/m;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/String;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/c;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Ljava/lang/String;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v6, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -2189,7 +2189,7 @@
     .end annotation
 
     .line 2
-    new-instance v6, Lcom/amplifyframework/datastore/g;
+    new-instance v6, Lcom/amplifyframework/datastore/e0;
 
     move-object v0, v6
 
@@ -2203,7 +2203,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/g;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/e0;-><init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v6, p4}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->start(Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
@@ -2231,42 +2231,42 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->waitForInitialization()Lai/a;
+    invoke-direct {p0}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->waitForInitialization()Lek/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->orchestrator:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
     .line 2
-    invoke-virtual {v1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->start()Lai/a;
+    invoke-virtual {v1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->start()Lek/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->Z0(Lai/o0;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->Z0(Lek/o0;)Lek/a;
 
     move-result-object v0
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/amplifyframework/datastore/x;
+    new-instance v1, Lcom/amplifyframework/datastore/t;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/x;-><init>(Lcom/amplifyframework/core/Action;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/t;-><init>(Lcom/amplifyframework/core/Action;)V
 
-    new-instance p1, Lcom/amplifyframework/datastore/d0;
+    new-instance p1, Lcom/amplifyframework/datastore/w;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/d0;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/w;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
     .line 4
-    invoke-virtual {v0, v1, p1}, Lai/a;->X0(Lci/a;Lci/g;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v1, p1}, Lek/a;->X0(Lgk/a;Lgk/g;)Lio/reactivex/rxjava3/disposables/c;
 
     return-void
 .end method
@@ -2292,42 +2292,42 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->waitForInitialization()Lai/a;
+    invoke-direct {p0}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->waitForInitialization()Lek/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->orchestrator:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
     .line 2
-    invoke-virtual {v1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->stop()Lai/a;
+    invoke-virtual {v1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->stop()Lek/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->Z0(Lai/o0;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->Z0(Lek/o0;)Lek/a;
 
     move-result-object v0
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/amplifyframework/datastore/x;
+    new-instance v1, Lcom/amplifyframework/datastore/t;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/x;-><init>(Lcom/amplifyframework/core/Action;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/t;-><init>(Lcom/amplifyframework/core/Action;)V
 
-    new-instance p1, Lcom/amplifyframework/datastore/c0;
+    new-instance p1, Lcom/amplifyframework/datastore/v;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/c0;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/v;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
     .line 4
-    invoke-virtual {v0, v1, p1}, Lai/a;->X0(Lci/a;Lci/g;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v1, p1}, Lek/a;->X0(Lgk/a;Lgk/g;)Lio/reactivex/rxjava3/disposables/c;
 
     return-void
 .end method

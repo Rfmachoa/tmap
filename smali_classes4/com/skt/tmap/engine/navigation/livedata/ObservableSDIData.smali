@@ -5,13 +5,8 @@
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u000e\u0018\u00002\u00020\u0001B\u0011\u0008\u0016\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008R\u0011\u0010\t\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\n\u0010\u0008R\u0013\u0010\u000b\u001a\u0004\u0018\u00010\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\r\u0010\u000eR\u0011\u0010\u000f\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000f\u0010\u0011R\u0011\u0010\u0012\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0012\u0010\u0011R\u0011\u0010\u0013\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0013\u0010\u0011R\u0011\u0010\u0014\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0015\u0010\u0008R\u0013\u0010\u0016\u001a\u0004\u0018\u00010\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0017\u0010\u000eR\u0011\u0010\u0018\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0019\u0010\u0011R\u0011\u0010\u001a\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001b\u0010\u0011R\u0011\u0010\u001c\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001d\u0010\u0011\u00a8\u0006\u001e"
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u000f\u0018\u00002\u00020\u0001B\u0011\u0008\u0016\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0002\u0010\u0004J\u000e\u0010\u001e\u001a\u00020\u000c2\u0006\u0010\u0002\u001a\u00020\u0003R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008R\u0011\u0010\t\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\n\u0010\u0008R\u0013\u0010\u000b\u001a\u0004\u0018\u00010\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\r\u0010\u000eR\u0011\u0010\u000f\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000f\u0010\u0011R\u0011\u0010\u0012\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0012\u0010\u0011R\u0011\u0010\u0013\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0013\u0010\u0011R\u0011\u0010\u0014\u001a\u00020\u0006\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0015\u0010\u0008R\u0013\u0010\u0016\u001a\u0004\u0018\u00010\u000c\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0017\u0010\u000eR\u0011\u0010\u0018\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0019\u0010\u0011R\u0011\u0010\u001a\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001b\u0010\u0011R\u0011\u0010\u001c\u001a\u00020\u0010\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001d\u0010\u0011\u00a8\u0006\u001f"
     }
     d2 = {
         "Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;",
@@ -44,14 +39,16 @@
         "getShowSDI",
         "showSign",
         "getShowSign",
+        "makeSdiPlusInfo",
         "navigation-sdk_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -87,468 +84,490 @@
 
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/data/RGData;)V
-    .locals 12
+    .locals 16
     .param p1    # Lcom/skt/tmap/engine/navigation/data/RGData;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
 
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    if-eqz p1, :cond_f
+    if-eqz v1, :cond_10
 
-    iget-object v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    .line 2
+    iget-object v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
-    const/4 v3, 0x1
+    const/4 v5, 0x1
 
-    if-eqz v2, :cond_2
+    if-eqz v4, :cond_2
 
-    array-length v2, v2
+    array-length v4, v4
 
-    if-nez v2, :cond_0
+    if-nez v4, :cond_0
 
-    move v2, v3
+    move v4, v5
 
     goto :goto_0
 
     :cond_0
-    move v2, v1
+    move v4, v3
 
     :goto_0
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v2, v1
+    move v4, v3
 
     goto :goto_2
 
     :cond_2
     :goto_1
-    move v2, v3
+    move v4, v5
 
     :goto_2
-    if-eqz v2, :cond_3
+    if-eqz v4, :cond_3
 
-    iget-boolean v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDIPlus:Z
+    iget-boolean v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDIPlus:Z
 
-    if-nez v2, :cond_3
+    if-nez v4, :cond_3
 
     goto/16 :goto_9
 
-    .line 2
-    :cond_3
-    iget-boolean v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDI:Z
-
-    if-nez v2, :cond_4
-
-    iget-boolean v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDIPlus:Z
-
-    if-eqz v2, :cond_4
-
     .line 3
-    iput-boolean v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDI:Z
+    :cond_3
+    iget-boolean v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDI:Z
 
-    new-array v2, v3, [Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    if-nez v4, :cond_4
+
+    iget-boolean v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDIPlus:Z
+
+    if-eqz v4, :cond_4
 
     .line 4
-    iput-object v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    iput-boolean v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDI:Z
+
+    new-array v4, v5, [Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
     .line 5
-    new-instance v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    invoke-direct {v4}, Lcom/skt/tmap/engine/navigation/data/SDIInfo;-><init>()V
-
-    aput-object v4, v2, v1
+    iput-object v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
     .line 6
-    iget-object v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    invoke-virtual/range {p0 .. p1}, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->makeSdiPlusInfo(Lcom/skt/tmap/engine/navigation/data/RGData;)Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
-    aget-object v4, v2, v1
+    move-result-object v6
 
-    iget v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusType:I
-
-    iput v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
+    aput-object v6, v4, v3
 
     .line 7
-    aget-object v4, v2, v1
+    :cond_4
+    iget-boolean v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDI:Z
 
-    iget v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusSpeedLimit:I
-
-    iput v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+    iput-boolean v4, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSDI:Z
 
     .line 8
-    aget-object v4, v2, v1
+    iget-object v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
-    iget v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusDist:I
+    aget-object v6, v4, v3
 
-    iput v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiDist:I
+    iput-object v6, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->firstSDIInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
     .line 9
-    aget-object v4, v2, v1
+    aget-object v7, v4, v3
 
-    iget-wide v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->vpSdiPlusPointLon:D
+    iget v7, v7, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
 
-    iput-wide v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->vpSdiPointLon:D
+    const/16 v8, 0x40
+
+    const/16 v9, 0x3f
+
+    const/16 v10, 0x31
+
+    const/16 v11, 0x2e
+
+    const/4 v12, 0x4
+
+    const/4 v13, 0x3
+
+    const/4 v14, 0x2
+
+    if-eqz v7, :cond_6
+
+    if-eq v7, v5, :cond_6
+
+    if-eq v7, v14, :cond_6
+
+    if-eq v7, v13, :cond_6
+
+    if-eq v7, v12, :cond_6
+
+    if-eq v7, v11, :cond_5
+
+    if-eq v7, v10, :cond_5
+
+    if-eq v7, v9, :cond_5
+
+    if-eq v7, v8, :cond_5
+
+    packed-switch v7, :pswitch_data_0
+
+    packed-switch v7, :pswitch_data_1
+
+    packed-switch v7, :pswitch_data_2
 
     .line 10
-    aget-object v4, v2, v1
-
-    iget-wide v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->vpSdiPlusPointLat:D
-
-    iput-wide v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->vpSdiPointLat:D
+    iput-boolean v5, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
 
     .line 11
-    aget-object v4, v2, v1
-
-    iget v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusBlockDist:I
-
-    iput v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockDist:I
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
     .line 12
-    aget-object v4, v2, v1
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
 
-    iget v5, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusBlockTime:I
-
-    iput v5, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockTime:I
+    goto :goto_4
 
     .line 13
-    aget-object v2, v2, v1
-
-    iget v4, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusBlockSpeed:I
-
-    iput v4, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockSpeed:I
-
-    .line 14
-    :cond_4
-    iget-boolean v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDI:Z
-
-    iput-boolean v2, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSDI:Z
-
-    .line 15
-    iget-object v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    aget-object v4, v2, v1
-
-    iput-object v4, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->firstSDIInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    .line 16
-    aget-object v4, v2, v1
-
-    iget v4, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
-
-    const/16 v5, 0x40
-
-    const/16 v6, 0x3f
-
-    const/16 v7, 0x31
-
-    const/16 v8, 0x2e
-
-    const/4 v9, 0x4
-
-    const/4 v10, 0x3
-
-    const/4 v11, 0x2
-
-    if-eqz v4, :cond_6
-
-    if-eq v4, v3, :cond_6
-
-    if-eq v4, v11, :cond_6
-
-    if-eq v4, v10, :cond_6
-
-    if-eq v4, v9, :cond_6
-
-    if-eq v4, v8, :cond_5
-
-    if-eq v4, v7, :cond_5
-
-    if-eq v4, v6, :cond_5
-
-    if-eq v4, v5, :cond_5
-
-    packed-switch v4, :pswitch_data_0
-
-    packed-switch v4, :pswitch_data_1
-
-    packed-switch v4, :pswitch_data_2
-
-    .line 17
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
-
-    .line 18
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    .line 19
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
-
-    goto :goto_4
-
-    .line 20
     :cond_5
     :pswitch_0
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
 
-    .line 21
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    .line 14
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
-    .line 22
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
+    .line 15
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
 
     goto :goto_4
 
-    .line 23
+    .line 16
     :cond_6
     :pswitch_1
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
+    iput-boolean v5, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
+
+    .line 17
+    aget-object v7, v4, v3
+
+    iget-boolean v7, v7, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bSdiBlockSection:Z
+
+    if-eqz v7, :cond_7
+
+    iget-boolean v7, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->bSDIPlus:Z
+
+    if-eqz v7, :cond_7
+
+    .line 18
+    invoke-virtual/range {p0 .. p1}, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->makeSdiPlusInfo(Lcom/skt/tmap/engine/navigation/data/RGData;)Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    .line 19
+    iget v4, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
+
+    .line 20
+    iget v7, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+
+    .line 21
+    iget v15, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiDist:I
+
+    .line 22
+    iget-object v8, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    aget-object v9, v8, v3
+
+    iget-boolean v9, v9, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bIsChangeableSpeedType:Z
+
+    iput-boolean v9, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bIsChangeableSpeedType:Z
+
+    .line 23
+    aget-object v9, v8, v3
+
+    iget v9, v9, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+
+    iput v9, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
 
     .line 24
-    array-length v4, v2
+    aget-object v9, v8, v3
 
-    if-le v4, v3, :cond_7
+    iget v9, v9, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
 
-    aget-object v4, v2, v3
-
-    if-eqz v4, :cond_7
+    iput v9, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
 
     .line 25
-    aget-object v0, v2, v3
+    aget-object v8, v8, v3
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    iget v8, v8, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiDist:I
+
+    iput v8, v2, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiDist:I
+
+    .line 26
+    iput v7, v6, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+
+    .line 27
+    iput v4, v6, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
+
+    .line 28
+    iput v15, v6, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiDist:I
 
     goto :goto_3
 
-    .line 26
-    :cond_7
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    .line 27
-    :goto_3
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
-
-    .line 28
-    :goto_4
-    aget-object v0, v2, v1
-
-    iget v0, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
-
-    if-eqz v0, :cond_9
-
-    if-eq v0, v3, :cond_9
-
-    if-eq v0, v11, :cond_9
-
-    if-eq v0, v10, :cond_9
-
-    if-eq v0, v9, :cond_9
-
-    if-eq v0, v8, :cond_8
-
-    if-eq v0, v7, :cond_8
-
-    if-eq v0, v6, :cond_8
-
-    if-eq v0, v5, :cond_8
-
-    packed-switch v0, :pswitch_data_3
-
-    packed-switch v0, :pswitch_data_4
-
-    packed-switch v0, :pswitch_data_5
-
     .line 29
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
+    :cond_7
+    array-length v6, v4
+
+    if-le v6, v5, :cond_8
+
+    aget-object v6, v4, v5
+
+    if-eqz v6, :cond_8
 
     .line 30
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
+    aget-object v2, v4, v5
 
-    goto :goto_6
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    goto :goto_3
 
     .line 31
     :cond_8
-    :pswitch_2
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
 
     .line 32
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
+    :goto_3
+    iput-boolean v5, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
+
+    .line 33
+    :goto_4
+    iget-object v2, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    aget-object v4, v2, v3
+
+    iget v4, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
+
+    if-eqz v4, :cond_a
+
+    if-eq v4, v5, :cond_a
+
+    if-eq v4, v14, :cond_a
+
+    if-eq v4, v13, :cond_a
+
+    if-eq v4, v12, :cond_a
+
+    if-eq v4, v11, :cond_9
+
+    if-eq v4, v10, :cond_9
+
+    const/16 v6, 0x3f
+
+    if-eq v4, v6, :cond_9
+
+    const/16 v6, 0x40
+
+    if-eq v4, v6, :cond_9
+
+    packed-switch v4, :pswitch_data_3
+
+    packed-switch v4, :pswitch_data_4
+
+    packed-switch v4, :pswitch_data_5
+
+    .line 34
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
+
+    .line 35
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
 
     goto :goto_6
 
-    .line 33
+    .line 36
     :cond_9
+    :pswitch_2
+    iput-boolean v5, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
+
+    .line 37
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
+
+    goto :goto_6
+
+    .line 38
+    :cond_a
     :pswitch_3
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
+    iput-boolean v5, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
 
-    .line 34
-    aget-object v0, v2, v1
+    .line 39
+    aget-object v4, v2, v3
 
-    iget v0, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+    iget v4, v4, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
 
-    if-eqz v0, :cond_a
+    if-eqz v4, :cond_b
 
-    move v0, v3
+    move v4, v5
 
     goto :goto_5
 
-    :cond_a
-    move v0, v1
+    :cond_b
+    move v4, v3
 
     :goto_5
-    iput-boolean v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
+    iput-boolean v4, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
 
-    .line 35
+    .line 40
     :goto_6
-    iget v0, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nPosSpeed:I
+    iget v4, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->nPosSpeed:I
 
-    iput v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->currentSpeed:I
+    iput v4, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->currentSpeed:I
 
-    .line 36
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
+    .line 41
+    iget-boolean v4, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v4, :cond_f
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
-    const-string v0, "rgData.sdiInfo"
+    const-string v4, "rgData.sdiInfo"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    array-length v0, v2
+    array-length v2, v2
 
-    if-nez v0, :cond_b
+    if-nez v2, :cond_c
 
-    move v0, v3
+    move v2, v5
 
     goto :goto_7
 
-    :cond_b
-    move v0, v1
+    :cond_c
+    move v2, v3
 
     :goto_7
-    xor-int/2addr v0, v3
+    xor-int/2addr v2, v5
 
-    if-eqz v0, :cond_e
-
-    .line 37
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showCautionBackground:Z
-
-    .line 38
-    iget-object p1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    aget-object p1, p1, v1
-
-    .line 39
-    iget-boolean v0, p1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bSdiBlockSection:Z
-
-    if-eqz v0, :cond_d
-
-    iget v0, p1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockAverageSpeed:I
-
-    if-lez v0, :cond_d
-
-    .line 40
-    iget-boolean v2, p1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bIsLimitSpeedSignChanged:Z
-
-    if-eqz v2, :cond_c
-
-    .line 41
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+    if-eqz v2, :cond_f
 
     .line 42
-    iget p1, p1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
-
-    iput p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
-
-    goto :goto_8
+    iput-boolean v5, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showCautionBackground:Z
 
     .line 43
-    :cond_c
-    iput v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+    iget-object v1, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->sdiInfo:[Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    aget-object v1, v1, v3
 
     .line 44
-    iget p1, p1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockSpeed:I
+    iget-boolean v2, v1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bSdiBlockSection:Z
 
-    iput p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
+    if-eqz v2, :cond_e
 
-    goto :goto_8
+    iget v2, v1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockAverageSpeed:I
+
+    if-lez v2, :cond_e
 
     .line 45
-    :cond_d
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+    iget-boolean v4, v1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->bIsLimitSpeedSignChanged:Z
+
+    if-eqz v4, :cond_d
 
     .line 46
-    iget p1, p1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
 
-    iput p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
+    .line 47
+    iget v1, v1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
 
     goto :goto_8
 
-    .line 47
-    :cond_e
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showCautionBackground:Z
-
     .line 48
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+    :cond_d
+    iput v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
 
     .line 49
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
+    iget v1, v1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockSpeed:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
+
+    goto :goto_8
+
+    .line 50
+    :cond_e
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+
+    .line 51
+    iget v1, v1, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
+
+    goto :goto_8
+
+    .line 52
+    :cond_f
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showCautionBackground:Z
+
+    .line 53
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+
+    .line 54
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
 
     :goto_8
     return-void
 
-    .line 50
-    :cond_f
-    :goto_9
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSDI:Z
-
-    .line 51
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
-
-    .line 52
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
-
-    .line 53
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
-
-    .line 54
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showCautionBackground:Z
-
-    if-eqz p1, :cond_10
-
     .line 55
-    iget p1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nPosSpeed:I
+    :cond_10
+    :goto_9
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSDI:Z
 
-    iput p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->currentSpeed:I
+    .line 56
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isCaution:Z
+
+    .line 57
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showSign:Z
+
+    .line 58
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
+
+    .line 59
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->showCautionBackground:Z
+
+    if-eqz v1, :cond_11
+
+    .line 60
+    iget v1, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->nPosSpeed:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->currentSpeed:I
 
     goto :goto_a
 
-    .line 56
-    :cond_10
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->currentSpeed:I
-
-    .line 57
-    :goto_a
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
-
-    .line 58
-    iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
-
-    .line 59
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->firstSDIInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
-    .line 60
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
-
     .line 61
-    iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
+    :cond_11
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->currentSpeed:I
+
+    .line 62
+    :goto_a
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->limitSpeed:I
+
+    .line 63
+    iput v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->averageSpeed:I
+
+    .line 64
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->firstSDIInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    .line 65
+    iput-object v2, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->secondSdiInfo:Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    .line 66
+    iput-boolean v3, v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isNumberType:Z
 
     return-void
 
@@ -764,4 +783,65 @@
     iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableSDIData;->isSpeedType:Z
 
     return v0
+.end method
+
+.method public final makeSdiPlusInfo(Lcom/skt/tmap/engine/navigation/data/RGData;)Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+    .locals 3
+    .param p1    # Lcom/skt/tmap/engine/navigation/data/RGData;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "rgData"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;
+
+    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/data/SDIInfo;-><init>()V
+
+    .line 2
+    iget v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusType:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiType:I
+
+    .line 3
+    iget v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusSpeedLimit:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiSpeedLimit:I
+
+    .line 4
+    iget v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusDist:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiDist:I
+
+    .line 5
+    iget-wide v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->vpSdiPlusPointLon:D
+
+    iput-wide v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->vpSdiPointLon:D
+
+    .line 6
+    iget-wide v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->vpSdiPlusPointLat:D
+
+    iput-wide v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->vpSdiPointLat:D
+
+    .line 7
+    iget v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusBlockDist:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockDist:I
+
+    .line 8
+    iget v1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusBlockTime:I
+
+    iput v1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockTime:I
+
+    .line 9
+    iget p1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->nSdiPlusBlockSpeed:I
+
+    iput p1, v0, Lcom/skt/tmap/engine/navigation/data/SDIInfo;->nSdiBlockSpeed:I
+
+    return-object v0
 .end method

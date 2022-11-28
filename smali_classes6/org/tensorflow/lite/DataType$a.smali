@@ -66,7 +66,7 @@
     :try_start_2
     sget-object v0, Lorg/tensorflow/lite/DataType$a;->a:[I
 
-    sget-object v1, Lorg/tensorflow/lite/DataType;->INT8:Lorg/tensorflow/lite/DataType;
+    sget-object v1, Lorg/tensorflow/lite/DataType;->INT16:Lorg/tensorflow/lite/DataType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -82,7 +82,7 @@
     :try_start_3
     sget-object v0, Lorg/tensorflow/lite/DataType$a;->a:[I
 
-    sget-object v1, Lorg/tensorflow/lite/DataType;->UINT8:Lorg/tensorflow/lite/DataType;
+    sget-object v1, Lorg/tensorflow/lite/DataType;->INT8:Lorg/tensorflow/lite/DataType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -98,7 +98,7 @@
     :try_start_4
     sget-object v0, Lorg/tensorflow/lite/DataType$a;->a:[I
 
-    sget-object v1, Lorg/tensorflow/lite/DataType;->INT64:Lorg/tensorflow/lite/DataType;
+    sget-object v1, Lorg/tensorflow/lite/DataType;->UINT8:Lorg/tensorflow/lite/DataType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -114,7 +114,7 @@
     :try_start_5
     sget-object v0, Lorg/tensorflow/lite/DataType$a;->a:[I
 
-    sget-object v1, Lorg/tensorflow/lite/DataType;->STRING:Lorg/tensorflow/lite/DataType;
+    sget-object v1, Lorg/tensorflow/lite/DataType;->INT64:Lorg/tensorflow/lite/DataType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -127,5 +127,37 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
     :catch_5
+    :try_start_6
+    sget-object v0, Lorg/tensorflow/lite/DataType$a;->a:[I
+
+    sget-object v1, Lorg/tensorflow/lite/DataType;->BOOL:Lorg/tensorflow/lite/DataType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Lorg/tensorflow/lite/DataType$a;->a:[I
+
+    sget-object v1, Lorg/tensorflow/lite/DataType;->STRING:Lorg/tensorflow/lite/DataType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
 .end method

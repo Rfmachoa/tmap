@@ -3,7 +3,7 @@
 .source "BufferedHeader.java"
 
 # interfaces
-.implements Ldf/c;
+.implements Lhh/c;
 .implements Ljava/lang/Cloneable;
 .implements Ljava/io/Serializable;
 
@@ -40,7 +40,7 @@
     const-string v0, "Char array buffer"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/16 v0, 0x3a
 
@@ -156,7 +156,7 @@
     return-object v0
 .end method
 
-.method public getElements()[Ldf/e;
+.method public getElements()[Lhh/e;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -165,7 +165,7 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lmg/r;
+    new-instance v0, Lqi/r;
 
     iget-object v1, p0, Lcz/msebera/android/httpclient/message/BufferedHeader;->buffer:Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
@@ -175,19 +175,19 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v1}, Lmg/r;-><init>(II)V
+    invoke-direct {v0, v2, v1}, Lqi/r;-><init>(II)V
 
     .line 2
     iget v1, p0, Lcz/msebera/android/httpclient/message/BufferedHeader;->valuePos:I
 
-    invoke-virtual {v0, v1}, Lmg/r;->e(I)V
+    invoke-virtual {v0, v1}, Lqi/r;->e(I)V
 
     .line 3
-    sget-object v1, Lmg/f;->b:Lmg/f;
+    sget-object v1, Lqi/f;->b:Lqi/f;
 
     iget-object v2, p0, Lcz/msebera/android/httpclient/message/BufferedHeader;->buffer:Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
-    invoke-virtual {v1, v2, v0}, Lmg/f;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lmg/r;)[Ldf/e;
+    invoke-virtual {v1, v2, v0}, Lqi/f;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lqi/r;)[Lhh/e;
 
     move-result-object v0
 

@@ -131,12 +131,12 @@
     .line 5
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
 
-    invoke-static {v3, v0}, Lua/d;->h0(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lrc/d;->h0(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lua/d;->N(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lrc/d;->N(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->I()Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;
@@ -247,7 +247,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lsa/d;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lpc/d;)Z
 
     .line 4
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->c:Lcom/skt/aicloud/speaker/service/api/c;
@@ -344,11 +344,11 @@
 
     .line 6
     :cond_1
-    invoke-static {}, Lua/a;->h()Lua/a;
+    invoke-static {}, Lrc/a;->h()Lrc/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lua/a;->k()V
+    invoke-virtual {v0}, Lrc/a;->k()V
 
     goto :goto_0
 
@@ -430,7 +430,7 @@
     return-void
 .end method
 
-.method public i(Landroid/content/Intent;Lma/c;)V
+.method public g(Landroid/content/Intent;Ljc/c;)V
     .locals 2
 
     const/4 p2, 0x0
@@ -474,7 +474,7 @@
 
     sget-object v0, Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;->APP_CONNECTED:Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;
 
-    invoke-virtual {p1, v0, p2}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lsa/d;)Z
+    invoke-virtual {p1, v0, p2}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lpc/d;)Z
 
     goto :goto_0
 

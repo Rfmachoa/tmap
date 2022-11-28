@@ -243,7 +243,7 @@
 
     .line 13
     :goto_2
-    iget-boolean p2, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean p2, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-nez p2, :cond_6
 
@@ -256,10 +256,10 @@
 
     .line 14
     :goto_3
-    iput-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
+    iput-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:Z
 
     .line 15
-    iput v3, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
+    iput v3, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
 
     mul-int/2addr p1, v3
 
@@ -342,7 +342,7 @@
     const/16 v1, 0x10
 
     .line 2
-    iput v1, v0, Landroidx/appcompat/widget/LinearLayoutCompat$LayoutParams;->b:I
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     return-object v0
 .end method
@@ -389,14 +389,14 @@
 
     .line 4
     :goto_0
-    iget p1, v0, Landroidx/appcompat/widget/LinearLayoutCompat$LayoutParams;->b:I
+    iget p1, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     if-gtz p1, :cond_1
 
     const/16 p1, 0x10
 
     .line 5
-    iput p1, v0, Landroidx/appcompat/widget/LinearLayoutCompat$LayoutParams;->b:I
+    iput p1, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     :cond_1
     return-object v0
@@ -611,7 +611,7 @@
     const/4 v1, 0x1
 
     .line 2
-    iput-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iput-boolean v1, v0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     return-object v0
 .end method
@@ -943,22 +943,22 @@
     check-cast v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;
 
     .line 17
-    iput-boolean v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->h:Z
-
-    .line 18
-    iput v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:I
-
-    .line 19
-    iput v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
-
-    .line 20
     iput-boolean v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
 
+    .line 18
+    iput v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:I
+
+    .line 19
+    iput v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
+
+    .line 20
+    iput-boolean v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:Z
+
     .line 21
-    iput v14, v9, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iput v14, v9, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     .line 22
-    iput v14, v9, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v14, v9, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     if-eqz v3, :cond_3
 
@@ -981,10 +981,10 @@
     const/4 v3, 0x0
 
     :goto_2
-    iput-boolean v3, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->g:Z
+    iput-boolean v3, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:Z
 
     .line 24
-    iget-boolean v3, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean v3, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-eqz v3, :cond_4
 
@@ -1007,7 +1007,7 @@
     move-result v15
 
     .line 27
-    iget-boolean v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
+    iget-boolean v14, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:Z
 
     if-eqz v14, :cond_5
 
@@ -1015,7 +1015,7 @@
 
     .line 28
     :cond_5
-    iget-boolean v9, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean v9, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-eqz v9, :cond_6
 
@@ -1128,7 +1128,7 @@
     move/from16 v24, v10
 
     .line 32
-    iget-boolean v10, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
+    iget-boolean v10, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:Z
 
     if-nez v10, :cond_a
 
@@ -1136,7 +1136,7 @@
 
     .line 33
     :cond_a
-    iget v9, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
+    iget v9, v9, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
 
     if-ge v9, v12, :cond_b
 
@@ -1227,7 +1227,7 @@
     if-nez v22, :cond_10
 
     .line 36
-    iget v9, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
+    iget v9, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
 
     if-ne v9, v12, :cond_f
 
@@ -1242,7 +1242,7 @@
     if-eqz v6, :cond_11
 
     .line 37
-    iget-boolean v1, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->g:Z
+    iget-boolean v1, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:Z
 
     if-eqz v1, :cond_11
 
@@ -1268,16 +1268,16 @@
 
     .line 39
     :goto_b
-    iget v1, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
+    iget v1, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
 
     const/4 v2, 0x1
 
     add-int/2addr v1, v2
 
-    iput v1, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
+    iput v1, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
 
     .line 40
-    iput-boolean v2, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->h:Z
+    iput-boolean v2, v10, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
 
     add-int/lit8 v7, v7, -0x1
 
@@ -1377,7 +1377,7 @@
     check-cast v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;
 
     .line 43
-    iget-boolean v2, v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->g:Z
+    iget-boolean v2, v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:Z
 
     if-nez v2, :cond_16
 
@@ -1412,7 +1412,7 @@
     check-cast v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;
 
     .line 45
-    iget-boolean v2, v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->g:Z
+    iget-boolean v2, v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:Z
 
     if-nez v2, :cond_18
 
@@ -1491,17 +1491,17 @@
     if-eqz v3, :cond_1c
 
     .line 49
-    iput v1, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:I
+    iput v1, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:I
 
     const/4 v3, 0x1
 
     .line 50
-    iput-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->h:Z
+    iput-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
 
     if-nez v2, :cond_1b
 
     .line 51
-    iget-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->g:Z
+    iget-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:Z
 
     if-nez v3, :cond_1b
 
@@ -1512,7 +1512,7 @@
     .line 52
     div-int/2addr v3, v7
 
-    iput v3, v6, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iput v3, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     goto :goto_12
 
@@ -1530,24 +1530,24 @@
     const/4 v7, 0x2
 
     .line 53
-    iget-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-eqz v3, :cond_1d
 
     .line 54
-    iput v1, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:I
+    iput v1, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:I
 
     const/4 v3, 0x1
 
     .line 55
-    iput-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->h:Z
+    iput-boolean v3, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
 
     neg-int v9, v1
 
     .line 56
     div-int/2addr v9, v7
 
-    iput v9, v6, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v9, v6, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     move v9, v3
 
@@ -1561,7 +1561,7 @@
     .line 57
     div-int/lit8 v10, v1, 0x2
 
-    iput v10, v6, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iput v10, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     :cond_1e
     add-int/lit8 v10, v5, -0x1
@@ -1571,7 +1571,7 @@
     .line 58
     div-int/lit8 v10, v1, 0x2
 
-    iput v10, v6, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v10, v6, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     :cond_1f
     :goto_13
@@ -1607,7 +1607,7 @@
     check-cast v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;
 
     .line 61
-    iget-boolean v6, v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->h:Z
+    iget-boolean v6, v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->f:Z
 
     if-nez v6, :cond_22
 
@@ -1615,11 +1615,11 @@
 
     .line 62
     :cond_22
-    iget v6, v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->d:I
+    iget v6, v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->b:I
 
     mul-int/2addr v6, v8
 
-    iget v3, v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->e:I
+    iget v3, v3, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:I
 
     add-int/2addr v6, v3
 
@@ -1752,7 +1752,7 @@
     sub-int/2addr v5, v6
 
     .line 7
-    invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/p0;->b(Landroid/view/View;)Z
+    invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/x0;->b(Landroid/view/View;)Z
 
     move-result v6
 
@@ -1792,7 +1792,7 @@
     check-cast v11, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;
 
     .line 11
-    iget-boolean v14, v11, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean v14, v11, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-eqz v14, :cond_4
 
@@ -1823,7 +1823,7 @@
 
     move-result v15
 
-    iget v11, v11, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget v11, v11, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v15, v11
 
@@ -1843,7 +1843,7 @@
 
     sub-int v15, v15, v16
 
-    iget v11, v11, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget v11, v11, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     sub-int v11, v15, v11
 
@@ -1872,11 +1872,11 @@
 
     move-result v7
 
-    iget v12, v11, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget v12, v11, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v7, v12
 
-    iget v11, v11, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget v11, v11, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     add-int/2addr v7, v11
 
@@ -1995,7 +1995,7 @@
 
     if-eq v8, v11, :cond_9
 
-    iget-boolean v8, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean v8, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-eqz v8, :cond_8
 
@@ -2003,7 +2003,7 @@
 
     .line 33
     :cond_8
-    iget v8, v6, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget v8, v6, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     sub-int/2addr v5, v8
 
@@ -2030,7 +2030,7 @@
     invoke-virtual {v4, v12, v10, v5, v9}, Landroid/view/View;->layout(IIII)V
 
     .line 38
-    iget v4, v6, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget v4, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v8, v4
 
@@ -2074,7 +2074,7 @@
 
     if-eq v8, v11, :cond_c
 
-    iget-boolean v8, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean v8, v6, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     if-eqz v8, :cond_b
 
@@ -2082,7 +2082,7 @@
 
     .line 43
     :cond_b
-    iget v8, v6, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget v8, v6, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     add-int/2addr v5, v8
 
@@ -2109,7 +2109,7 @@
     invoke-virtual {v4, v5, v10, v12, v9}, Landroid/view/View;->layout(IIII)V
 
     .line 48
-    iget v4, v6, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget v4, v6, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
     add-int/2addr v8, v4
 
@@ -2225,9 +2225,9 @@
     check-cast v2, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;
 
     .line 13
-    iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
-    iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
     add-int/lit8 v1, v1, 0x1
 
@@ -2401,7 +2401,7 @@
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 

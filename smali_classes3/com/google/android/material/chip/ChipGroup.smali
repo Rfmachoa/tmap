@@ -7,8 +7,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;,
-        Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;,
         Lcom/google/android/material/chip/ChipGroup$LayoutParams;,
+        Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;,
         Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
     }
 .end annotation
@@ -19,12 +19,15 @@
 
 
 # instance fields
-.field private checkedId:I
-    .annotation build Landroidx/annotation/IdRes;
+.field private final checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/android/material/internal/CheckableGroup<",
+            "Lcom/google/android/material/chip/Chip;",
+            ">;"
+        }
     .end annotation
 .end field
-
-.field private final checkedStateTracker:Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;
 
 .field private chipSpacingHorizontal:I
     .annotation build Landroidx/annotation/Dimension;
@@ -36,21 +39,17 @@
     .end annotation
 .end field
 
-.field private onCheckedChangeListener:Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
+.field private final defaultCheckedId:I
+
+.field private onCheckedStateChangeListener:Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private passThroughListener:Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
+.field private final passThroughListener:Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
-
-.field private protectFromCheckedChange:Z
-
-.field private selectionRequired:Z
-
-.field private singleSelection:Z
 
 
 # direct methods
@@ -88,7 +87,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 7
+    .locals 8
 
     .line 3
     sget v4, Lcom/google/android/material/chip/ChipGroup;->DEF_STYLE_RES:I
@@ -100,208 +99,149 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/internal/FlowLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    new-instance p1, Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;
+    new-instance p1, Lcom/google/android/material/internal/CheckableGroup;
+
+    invoke-direct {p1}, Lcom/google/android/material/internal/CheckableGroup;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
+
+    .line 5
+    new-instance v6, Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;-><init>(Lcom/google/android/material/chip/ChipGroup;Lcom/google/android/material/chip/ChipGroup$1;)V
+    invoke-direct {v6, p0, v0}, Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;-><init>(Lcom/google/android/material/chip/ChipGroup;Lcom/google/android/material/chip/ChipGroup$1;)V
 
-    iput-object p1, p0, Lcom/google/android/material/chip/ChipGroup;->checkedStateTracker:Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;
-
-    .line 5
-    new-instance p1, Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
-
-    invoke-direct {p1, p0, v0}, Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;-><init>(Lcom/google/android/material/chip/ChipGroup;Lcom/google/android/material/chip/ChipGroup$1;)V
-
-    iput-object p1, p0, Lcom/google/android/material/chip/ChipGroup;->passThroughListener:Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
-
-    const/4 p1, -0x1
+    iput-object v6, p0, Lcom/google/android/material/chip/ChipGroup;->passThroughListener:Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
 
     .line 6
-    iput p1, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
-
-    const/4 v6, 0x0
-
-    .line 7
-    iput-boolean v6, p0, Lcom/google/android/material/chip/ChipGroup;->protectFromCheckedChange:Z
-
-    .line 8
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 9
+    .line 7
     sget-object v2, Lcom/google/android/material/R$styleable;->ChipGroup:[I
 
-    new-array v5, v6, [I
+    const/4 v7, 0x0
+
+    new-array v5, v7, [I
 
     move-object v1, p2
 
     move v3, p3
 
-    .line 10
+    .line 8
     invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    .line 11
+    .line 9
     sget p3, Lcom/google/android/material/R$styleable;->ChipGroup_chipSpacing:I
 
-    invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+    invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result p3
 
-    .line 12
+    .line 10
     sget v0, Lcom/google/android/material/R$styleable;->ChipGroup_chipSpacingHorizontal:I
 
-    .line 13
+    .line 11
     invoke-virtual {p2, v0, p3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result v0
 
-    .line 14
+    .line 12
     invoke-virtual {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->setChipSpacingHorizontal(I)V
 
-    .line 15
+    .line 13
     sget v0, Lcom/google/android/material/R$styleable;->ChipGroup_chipSpacingVertical:I
 
-    .line 16
+    .line 14
     invoke-virtual {p2, v0, p3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
     move-result p3
 
-    .line 17
+    .line 15
     invoke-virtual {p0, p3}, Lcom/google/android/material/chip/ChipGroup;->setChipSpacingVertical(I)V
 
-    .line 18
+    .line 16
     sget p3, Lcom/google/android/material/R$styleable;->ChipGroup_singleLine:I
 
-    invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/chip/ChipGroup;->setSingleLine(Z)V
 
-    .line 19
+    .line 17
     sget p3, Lcom/google/android/material/R$styleable;->ChipGroup_singleSelection:I
 
-    invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/chip/ChipGroup;->setSingleSelection(Z)V
 
-    .line 20
+    .line 18
     sget p3, Lcom/google/android/material/R$styleable;->ChipGroup_selectionRequired:I
 
-    invoke-virtual {p2, p3, v6}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p2, p3, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p3
 
     invoke-virtual {p0, p3}, Lcom/google/android/material/chip/ChipGroup;->setSelectionRequired(Z)V
 
-    .line 21
+    .line 19
     sget p3, Lcom/google/android/material/R$styleable;->ChipGroup_checkedChip:I
 
-    invoke-virtual {p2, p3, p1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    const/4 v0, -0x1
+
+    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p3
 
-    if-eq p3, p1, :cond_0
+    iput p3, p0, Lcom/google/android/material/chip/ChipGroup;->defaultCheckedId:I
 
-    .line 22
-    iput p3, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
-
-    .line 23
-    :cond_0
+    .line 20
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 24
-    iget-object p1, p0, Lcom/google/android/material/chip/ChipGroup;->passThroughListener:Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
+    .line 21
+    new-instance p2, Lcom/google/android/material/chip/ChipGroup$1;
 
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/chip/ChipGroup$1;-><init>(Lcom/google/android/material/chip/ChipGroup;)V
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/internal/CheckableGroup;->setOnCheckedStateChangeListener(Lcom/google/android/material/internal/CheckableGroup$OnCheckedStateChangeListener;)V
+
+    .line 22
+    invoke-super {p0, v6}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
     const/4 p1, 0x1
 
-    .line 25
+    .line 23
     invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->R1(Landroid/view/View;I)V
 
     return-void
 .end method
 
-.method public static synthetic access$1000(Lcom/google/android/material/chip/ChipGroup;)Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;
+.method public static synthetic access$100(Lcom/google/android/material/chip/ChipGroup;)Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/google/android/material/chip/ChipGroup;->checkedStateTracker:Lcom/google/android/material/chip/ChipGroup$CheckedStateTracker;
+    iget-object p0, p0, Lcom/google/android/material/chip/ChipGroup;->onCheckedStateChangeListener:Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;
 
     return-object p0
 .end method
 
-.method public static synthetic access$300(Lcom/google/android/material/chip/ChipGroup;)Z
+.method public static synthetic access$200(Lcom/google/android/material/chip/ChipGroup;)Lcom/google/android/material/internal/CheckableGroup;
     .locals 0
 
     .line 1
-    iget-boolean p0, p0, Lcom/google/android/material/chip/ChipGroup;->protectFromCheckedChange:Z
+    iget-object p0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    return p0
+    return-object p0
 .end method
 
-.method public static synthetic access$400(Lcom/google/android/material/chip/ChipGroup;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/material/chip/ChipGroup;->selectionRequired:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$500(Lcom/google/android/material/chip/ChipGroup;IZ)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/chip/ChipGroup;->setCheckedStateForView(IZ)V
-
-    return-void
-.end method
-
-.method public static synthetic access$600(Lcom/google/android/material/chip/ChipGroup;IZ)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(IZ)V
-
-    return-void
-.end method
-
-.method public static synthetic access$700(Lcom/google/android/material/chip/ChipGroup;)I
-    .locals 0
-
-    .line 1
-    iget p0, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
-
-    return p0
-.end method
-
-.method public static synthetic access$800(Lcom/google/android/material/chip/ChipGroup;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$900(Lcom/google/android/material/chip/ChipGroup;I)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(I)V
-
-    return-void
-.end method
-
-.method private getChipCount()I
+.method private getVisibleChipCount()I
     .locals 3
 
     const/4 v0, 0x0
@@ -325,6 +265,12 @@
 
     if-eqz v2, :cond_0
 
+    invoke-direct {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->isChildVisible(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
     add-int/lit8 v1, v1, 0x1
 
     :cond_0
@@ -336,170 +282,44 @@
     return v1
 .end method
 
-.method private setCheckedId(I)V
-    .locals 1
-
-    const/4 v0, 0x1
+.method private isChildVisible(I)Z
+    .locals 0
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(IZ)V
-
-    return-void
-.end method
-
-.method private setCheckedId(IZ)V
-    .locals 2
-
-    .line 2
-    iput p1, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
-
-    .line 3
-    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->onCheckedChangeListener:Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v1, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
-
-    if-eqz v1, :cond_0
-
-    if-eqz p2, :cond_0
-
-    .line 4
-    invoke-interface {v0, p0, p1}, Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;->onCheckedChanged(Lcom/google/android/material/chip/ChipGroup;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private setCheckedStateForView(IZ)V
-    .locals 1
-    .param p1    # I
-        .annotation build Landroidx/annotation/IdRes;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 2
-    instance-of v0, p1, Lcom/google/android/material/chip/Chip;
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
-    if-eqz v0, :cond_0
+    move-result p1
 
-    const/4 v0, 0x1
+    if-nez p1, :cond_0
 
-    .line 3
-    iput-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->protectFromCheckedChange:Z
+    const/4 p1, 0x1
 
-    .line 4
-    check-cast p1, Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
-
-    const/4 p1, 0x0
-
-    .line 5
-    iput-boolean p1, p0, Lcom/google/android/material/chip/ChipGroup;->protectFromCheckedChange:Z
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 .end method
 
 
 # virtual methods
-.method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
-    .locals 3
-
-    .line 1
-    instance-of v0, p1, Lcom/google/android/material/chip/Chip;
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    move-object v0, p1
-
-    check-cast v0, Lcom/google/android/material/chip/Chip;
-
-    .line 3
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 4
-    iget v1, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
-
-    const/4 v2, -0x1
-
-    if-eq v1, v2, :cond_0
-
-    iget-boolean v2, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x0
-
-    .line 5
-    invoke-direct {p0, v1, v2}, Lcom/google/android/material/chip/ChipGroup;->setCheckedStateForView(IZ)V
-
-    .line 6
-    :cond_0
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->getId()I
-
-    move-result v0
-
-    invoke-direct {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(I)V
-
-    .line 7
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
 .method public check(I)V
-    .locals 3
+    .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/IdRes;
         .end annotation
     .end param
 
     .line 1
-    iget v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    if-ne p1, v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_1
-
-    .line 2
-    iget-boolean v2, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x0
-
-    .line 3
-    invoke-direct {p0, v0, v2}, Lcom/google/android/material/chip/ChipGroup;->setCheckedStateForView(IZ)V
-
-    :cond_1
-    if-eq p1, v1, :cond_2
-
-    const/4 v0, 0x1
-
-    .line 4
-    invoke-direct {p0, p1, v0}, Lcom/google/android/material/chip/ChipGroup;->setCheckedStateForView(IZ)V
-
-    .line 5
-    :cond_2
-    invoke-direct {p0, p1}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(I)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/CheckableGroup;->check(I)V
 
     return-void
 .end method
@@ -530,53 +350,12 @@
 .end method
 
 .method public clearCheck()V
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 1
 
     .line 1
-    iput-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->protectFromCheckedChange:Z
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 2
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    .line 3
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 4
-    instance-of v3, v2, Lcom/google/android/material/chip/Chip;
-
-    if-eqz v3, :cond_0
-
-    .line 5
-    check-cast v2, Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {v2, v0}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 6
-    :cond_1
-    iput-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->protectFromCheckedChange:Z
-
-    const/4 v0, -0x1
-
-    .line 7
-    invoke-direct {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(I)V
+    invoke-virtual {v0}, Lcom/google/android/material/internal/CheckableGroup;->clearCheck()V
 
     return-void
 .end method
@@ -632,23 +411,17 @@
     .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/google/android/material/internal/CheckableGroup;->getSingleCheckedId()I
 
-    iget v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
+    move-result v0
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    :goto_0
     return v0
 .end method
 
 .method public getCheckedChipIds()Ljava/util/List;
-    .locals 4
+    .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -662,65 +435,12 @@
     .end annotation
 
     .line 1
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0, p0}, Lcom/google/android/material/internal/CheckableGroup;->getCheckedIdsSortedByChildOrder(Landroid/view/ViewGroup;)Ljava/util/List;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    .line 2
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    .line 3
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 4
-    instance-of v3, v2, Lcom/google/android/material/chip/Chip;
-
-    if-eqz v3, :cond_0
-
-    .line 5
-    move-object v3, v2
-
-    check-cast v3, Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 6
-    invoke-virtual {v2}, Landroid/view/View;->getId()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 7
-    iget-boolean v2, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
-
-    if-eqz v2, :cond_0
-
-    return-object v0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-object v0
 .end method
 
@@ -747,7 +467,7 @@
 .end method
 
 .method public getIndexOfChip(Landroid/view/View;)I
-    .locals 4
+    .locals 5
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -780,15 +500,18 @@
 
     move-result-object v3
 
-    instance-of v3, v3, Lcom/google/android/material/chip/Chip;
-
-    if-eqz v3, :cond_2
-
     .line 4
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    instance-of v4, v3, Lcom/google/android/material/chip/Chip;
 
-    move-result-object v3
+    if-eqz v4, :cond_2
 
+    invoke-direct {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->isChildVisible(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 5
     check-cast v3, Lcom/google/android/material/chip/Chip;
 
     if-ne v3, p1, :cond_1
@@ -811,7 +534,11 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->selectionRequired:Z
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
+
+    invoke-virtual {v0}, Lcom/google/android/material/internal/CheckableGroup;->isSelectionRequired()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -831,7 +558,11 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
+
+    invoke-virtual {v0}, Lcom/google/android/material/internal/CheckableGroup;->isSingleSelection()Z
+
+    move-result v0
 
     return v0
 .end method
@@ -843,21 +574,16 @@
     invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
     .line 2
-    iget v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
+    iget v0, p0, Lcom/google/android/material/chip/ChipGroup;->defaultCheckedId:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    const/4 v1, 0x1
-
     .line 3
-    invoke-direct {p0, v0, v1}, Lcom/google/android/material/chip/ChipGroup;->setCheckedStateForView(IZ)V
+    iget-object v1, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    .line 4
-    iget v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkedId:I
-
-    invoke-direct {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->setCheckedId(I)V
+    invoke-virtual {v1, v0}, Lcom/google/android/material/internal/CheckableGroup;->check(I)V
 
     :cond_0
     return-void
@@ -874,7 +600,7 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 2
-    invoke-static {p1}, Lt1/c;->V1(Landroid/view/accessibility/AccessibilityNodeInfo;)Lt1/c;
+    invoke-static {p1}, Lk2/c;->c2(Landroid/view/accessibility/AccessibilityNodeInfo;)Lk2/c;
 
     move-result-object p1
 
@@ -885,7 +611,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/google/android/material/chip/ChipGroup;->getChipCount()I
+    invoke-direct {p0}, Lcom/google/android/material/chip/ChipGroup;->getVisibleChipCount()I
 
     move-result v0
 
@@ -918,12 +644,12 @@
 
     .line 6
     :goto_1
-    invoke-static {v1, v0, v2, v3}, Lt1/c$b;->f(IIZI)Lt1/c$b;
+    invoke-static {v1, v0, v2, v3}, Lk2/c$c;->f(IIZI)Lk2/c$c;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {p1, v0}, Lt1/c;->W0(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lk2/c;->b1(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1107,10 +833,43 @@
 .end method
 
 .method public setOnCheckedChangeListener(Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;)V
-    .locals 0
+    .locals 1
+    .param p1    # Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
 
     .line 1
-    iput-object p1, p0, Lcom/google/android/material/chip/ChipGroup;->onCheckedChangeListener:Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;
+    invoke-virtual {p0, p1}, Lcom/google/android/material/chip/ChipGroup;->setOnCheckedStateChangeListener(Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;)V
+
+    return-void
+
+    .line 2
+    :cond_0
+    new-instance v0, Lcom/google/android/material/chip/ChipGroup$2;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/material/chip/ChipGroup$2;-><init>(Lcom/google/android/material/chip/ChipGroup;Lcom/google/android/material/chip/ChipGroup$OnCheckedChangeListener;)V
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/chip/ChipGroup;->setOnCheckedStateChangeListener(Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;)V
+
+    return-void
+.end method
+
+.method public setOnCheckedStateChangeListener(Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;)V
+    .locals 0
+    .param p1    # Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/chip/ChipGroup;->onCheckedStateChangeListener:Lcom/google/android/material/chip/ChipGroup$OnCheckedStateChangeListener;
 
     return-void
 .end method
@@ -1121,16 +880,18 @@
     .line 1
     iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->passThroughListener:Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;
 
-    invoke-static {v0, p1}, Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;->access$202(Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;Landroid/view/ViewGroup$OnHierarchyChangeListener;)Landroid/view/ViewGroup$OnHierarchyChangeListener;
+    invoke-static {v0, p1}, Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;->access$302(Lcom/google/android/material/chip/ChipGroup$PassThroughHierarchyChangeListener;Landroid/view/ViewGroup$OnHierarchyChangeListener;)Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
     return-void
 .end method
 
 .method public setSelectionRequired(Z)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iput-boolean p1, p0, Lcom/google/android/material/chip/ChipGroup;->selectionRequired:Z
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/CheckableGroup;->setSelectionRequired(Z)V
 
     return-void
 .end method
@@ -1202,7 +963,7 @@
         .end annotation
     .end param
 
-    .line 4
+    .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1220,16 +981,9 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
+    iget-object v0, p0, Lcom/google/android/material/chip/ChipGroup;->checkableGroup:Lcom/google/android/material/internal/CheckableGroup;
 
-    if-eq v0, p1, :cond_0
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/CheckableGroup;->setSingleSelection(Z)V
 
-    .line 2
-    iput-boolean p1, p0, Lcom/google/android/material/chip/ChipGroup;->singleSelection:Z
-
-    .line 3
-    invoke-virtual {p0}, Lcom/google/android/material/chip/ChipGroup;->clearCheck()V
-
-    :cond_0
     return-void
 .end method

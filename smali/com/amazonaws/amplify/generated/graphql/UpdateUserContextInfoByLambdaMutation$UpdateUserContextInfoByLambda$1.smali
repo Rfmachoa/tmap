@@ -3,12 +3,12 @@
 .source "UpdateUserContextInfoByLambdaMutation.java"
 
 # interfaces
-.implements Lc4/k;
+.implements Lz5/k;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->marshaller()Lc4/k;
+    value = Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->marshaller()Lz5/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -65,7 +65,7 @@
 
     iget-object v2, v2, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->__typename:Ljava/lang/String;
 
-    invoke-interface {p1, v1, v2}, Lcom/apollographql/apollo/api/e;->c(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v2}, Lcom/apollographql/apollo/api/e;->d(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -76,7 +76,7 @@
 
     iget-object v2, v2, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->userKey:Ljava/lang/String;
 
-    invoke-interface {p1, v1, v2}, Lcom/apollographql/apollo/api/e;->c(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v2}, Lcom/apollographql/apollo/api/e;->d(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -91,7 +91,7 @@
 
     invoke-direct {v3, p0}, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda$1$1;-><init>(Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda$1;)V
 
-    invoke-interface {p1, v1, v2, v3}, Lcom/apollographql/apollo/api/e;->b(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
+    invoke-interface {p1, v1, v2, v3}, Lcom/apollographql/apollo/api/e;->c(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
 
     const/4 v1, 0x3
 
@@ -132,7 +132,7 @@
 
     invoke-direct {v3, p0}, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda$1$2;-><init>(Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda$1;)V
 
-    invoke-interface {p1, v1, v2, v3}, Lcom/apollographql/apollo/api/e;->b(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
+    invoke-interface {p1, v1, v2, v3}, Lcom/apollographql/apollo/api/e;->c(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
 
     const/4 v1, 0x6
 
@@ -156,7 +156,7 @@
 
     iget-object v2, v2, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->welcome:Ljava/lang/String;
 
-    invoke-interface {p1, v1, v2}, Lcom/apollographql/apollo/api/e;->c(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v2}, Lcom/apollographql/apollo/api/e;->d(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
 
     const/16 v1, 0x8
 
@@ -171,7 +171,7 @@
 
     invoke-direct {v2, p0}, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda$1$3;-><init>(Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda$1;)V
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/apollographql/apollo/api/e;->b(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/apollographql/apollo/api/e;->c(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
 
     return-void
 .end method

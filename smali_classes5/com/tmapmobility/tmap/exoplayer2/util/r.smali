@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/Handler$Callback;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Lcom/tmapmobility/tmap/exoplayer2/util/s$a;
+.field public final synthetic a:Lcom/tmapmobility/tmap/exoplayer2/util/t;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/tmapmobility/tmap/exoplayer2/util/s$a;)V
+.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/util/t;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->b:I
-
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->c:Lcom/tmapmobility/tmap/exoplayer2/util/s$a;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->a:Lcom/tmapmobility/tmap/exoplayer2/util/t;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->a:Lcom/tmapmobility/tmap/exoplayer2/util/t;
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->b:I
+    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->a(Lcom/tmapmobility/tmap/exoplayer2/util/t;Landroid/os/Message;)Z
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/r;->c:Lcom/tmapmobility/tmap/exoplayer2/util/s$a;
+    move-result p1
 
-    invoke-static {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/s;->b(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/tmapmobility/tmap/exoplayer2/util/s$a;)V
-
-    return-void
+    return p1
 .end method

@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/emoji/text/EmojiMetadata;)Lg2/a;
+.method public a(Landroidx/emoji/text/EmojiMetadata;)Lx2/a;
     .locals 1
     .param p1    # Landroidx/emoji/text/EmojiMetadata;
         .annotation build Landroidx/annotation/NonNull;
@@ -44,9 +44,9 @@
     .end param
 
     .line 1
-    new-instance v0, Lg2/c;
+    new-instance v0, Lx2/c;
 
-    invoke-direct {v0, p1}, Lg2/c;-><init>(Landroidx/emoji/text/EmojiMetadata;)V
+    invoke-direct {v0, p1}, Lx2/c;-><init>(Landroidx/emoji/text/EmojiMetadata;)V
 
     return-object v0
 .end method

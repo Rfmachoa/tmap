@@ -1,589 +1,213 @@
-.class public abstract La3/a;
-.super Landroidx/paging/l;
-.source "LimitOffsetDataSource.java"
+.class public final La3/a;
+.super Ljava/lang/Object;
+.source "EmojiEditTextHelper.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/RestrictTo;
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Landroidx/paging/l<",
-        "TT;>;"
+        La3/a$a;,
+        La3/a$b;
     }
 .end annotation
 
 
 # instance fields
-.field public final c:Landroidx/room/m;
+.field public final a:La3/a$b;
 
-.field public final d:Ljava/lang/String;
+.field public b:I
 
-.field public final e:Ljava/lang/String;
-
-.field public final f:Landroidx/room/RoomDatabase;
-
-.field public final g:Landroidx/room/g$c;
-
-.field public final h:Z
+.field public c:I
 
 
 # direct methods
-.method public varargs constructor <init>(Landroidx/room/RoomDatabase;Landroidx/room/m;Z[Ljava/lang/String;)V
+.method public constructor <init>(Landroid/widget/EditText;)V
     .locals 1
+    .param p1    # Landroid/widget/EditText;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 2
-    invoke-direct {p0}, Landroidx/paging/l;-><init>()V
+    const/4 v0, 0x1
 
-    .line 3
-    iput-object p1, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    .line 4
-    iput-object p2, p0, La3/a;->c:Landroidx/room/m;
-
-    .line 5
-    iput-boolean p3, p0, La3/a;->h:Z
-
-    const-string p3, "SELECT COUNT(*) FROM ( "
-
-    .line 6
-    invoke-static {p3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p3
-
-    invoke-virtual {p2}, Landroidx/room/m;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " )"
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    iput-object p3, p0, La3/a;->d:Ljava/lang/String;
-
-    const-string p3, "SELECT * FROM ( "
-
-    .line 7
-    invoke-static {p3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p3
-
-    invoke-virtual {p2}, Landroidx/room/m;->c()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " ) LIMIT ? OFFSET ?"
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, La3/a;->e:Ljava/lang/String;
-
-    .line 8
-    new-instance p2, La3/a$a;
-
-    invoke-direct {p2, p0, p4}, La3/a$a;-><init>(La3/a;[Ljava/lang/String;)V
-
-    iput-object p2, p0, La3/a;->g:Landroidx/room/g$c;
-
-    .line 9
-    invoke-virtual {p1}, Landroidx/room/RoomDatabase;->l()Landroidx/room/g;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Landroidx/room/g;->b(Landroidx/room/g$c;)V
+    .line 1
+    invoke-direct {p0, p1, v0}, La3/a;-><init>(Landroid/widget/EditText;Z)V
 
     return-void
 .end method
 
-.method public varargs constructor <init>(Landroidx/room/RoomDatabase;Lc3/g;Z[Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/EditText;Z)V
+    .locals 1
+    .param p1    # Landroid/widget/EditText;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    .line 1
-    invoke-static {p2}, Landroidx/room/m;->k(Lc3/g;)Landroidx/room/m;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p2
+    const v0, 0x7fffffff
 
-    invoke-direct {p0, p1, p2, p3, p4}, La3/a;-><init>(Landroidx/room/RoomDatabase;Landroidx/room/m;Z[Ljava/lang/String;)V
+    .line 3
+    iput v0, p0, La3/a;->b:I
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput v0, p0, La3/a;->c:I
+
+    const-string v0, "editText cannot be null"
+
+    .line 5
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 6
+    new-instance v0, La3/a$a;
+
+    invoke-direct {v0, p1, p2}, La3/a$a;-><init>(Landroid/widget/EditText;Z)V
+
+    iput-object v0, p0, La3/a;->a:La3/a$b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public f()Z
+.method public a()I
+    .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, La3/a;->c:I
+
+    return v0
+.end method
+
+.method public b(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
+    .locals 1
+    .param p1    # Landroid/text/method/KeyListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, La3/a;->a:La3/a$b;
+
+    invoke-virtual {v0, p1}, La3/a$b;->a(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public c()I
     .locals 1
 
     .line 1
-    iget-object v0, p0, La3/a;->f:Landroidx/room/RoomDatabase;
+    iget v0, p0, La3/a;->b:I
 
-    invoke-virtual {v0}, Landroidx/room/RoomDatabase;->l()Landroidx/room/g;
+    return v0
+.end method
 
-    move-result-object v0
+.method public d()Z
+    .locals 1
 
-    invoke-virtual {v0}, Landroidx/room/g;->j()V
+    .line 1
+    iget-object v0, p0, La3/a;->a:La3/a$b;
 
-    .line 2
-    invoke-super {p0}, Landroidx/paging/c;->f()Z
+    invoke-virtual {v0}, La3/a$b;->b()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public n(Landroidx/paging/l$d;Landroidx/paging/l$b;)V
-    .locals 6
-    .param p1    # Landroidx/paging/l$d;
+.method public e(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    .locals 1
+    .param p1    # Landroid/view/inputmethod/InputConnection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/inputmethod/EditorInfo;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/paging/l$b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/paging/l$d;",
-            "Landroidx/paging/l$b<",
-            "TT;>;)V"
-        }
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    if-nez p1, :cond_0
 
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v1}, Landroidx/room/RoomDatabase;->c()V
-
-    const/4 v1, 0x0
-
-    .line 3
-    :try_start_0
-    invoke-virtual {p0}, La3/a;->t()I
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 4
-    invoke-static {p1, v2}, Landroidx/paging/l;->j(Landroidx/paging/l$d;I)I
-
-    move-result v0
-
-    .line 5
-    invoke-static {p1, v0, v2}, Landroidx/paging/l;->k(Landroidx/paging/l$d;II)I
-
-    move-result p1
-
-    .line 6
-    invoke-virtual {p0, v0, p1}, La3/a;->u(II)Landroidx/room/m;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 7
-    :try_start_1
-    iget-object v3, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v3, p1}, Landroidx/room/RoomDatabase;->v(Lc3/g;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 8
-    invoke-virtual {p0, v1}, La3/a;->s(Landroid/database/Cursor;)Ljava/util/List;
-
-    move-result-object v3
-
-    .line 9
-    iget-object v4, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v4}, Landroidx/room/RoomDatabase;->A()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-object v5, v3
-
-    move-object v3, p1
-
-    move p1, v0
-
-    move-object v0, v5
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_1
-
-    :cond_0
     const/4 p1, 0x0
 
-    move-object v3, v1
+    return-object p1
 
-    :goto_0
-    if-eqz v1, :cond_1
+    .line 1
+    :cond_0
+    iget-object v0, p0, La3/a;->a:La3/a$b;
 
-    .line 10
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    invoke-virtual {v0, p1, p2}, La3/a$b;->c(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 
-    .line 11
-    :cond_1
-    iget-object v1, p0, La3/a;->f:Landroidx/room/RoomDatabase;
+    move-result-object p1
 
-    invoke-virtual {v1}, Landroidx/room/RoomDatabase;->i()V
-
-    if-eqz v3, :cond_2
-
-    .line 12
-    invoke-virtual {v3}, Landroidx/room/m;->release()V
-
-    .line 13
-    :cond_2
-    invoke-virtual {p2, v0, p1, v2}, Landroidx/paging/l$b;->b(Ljava/util/List;II)V
-
-    return-void
-
-    :catchall_1
-    move-exception p2
-
-    move-object p1, v1
-
-    :goto_1
-    if-eqz v1, :cond_3
-
-    .line 14
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 15
-    :cond_3
-    iget-object v0, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v0}, Landroidx/room/RoomDatabase;->i()V
-
-    if-eqz p1, :cond_4
-
-    .line 16
-    invoke-virtual {p1}, Landroidx/room/m;->release()V
-
-    .line 17
-    :cond_4
-    throw p2
+    return-object p1
 .end method
 
-.method public o(Landroidx/paging/l$g;Landroidx/paging/l$e;)V
+.method public f(I)V
     .locals 1
-    .param p1    # Landroidx/paging/l$g;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/l$e;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
+    .annotation build Landroidx/annotation/RestrictTo;
         value = {
-            "(",
-            "Landroidx/paging/l$g;",
-            "Landroidx/paging/l$e<",
-            "TT;>;)V"
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
     .line 1
-    iget v0, p1, Landroidx/paging/l$g;->a:I
+    iput p1, p0, La3/a;->c:I
 
-    iget p1, p1, Landroidx/paging/l$g;->b:I
+    .line 2
+    iget-object v0, p0, La3/a;->a:La3/a$b;
 
-    invoke-virtual {p0, v0, p1}, La3/a;->v(II)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Landroidx/paging/l$e;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, La3/a$b;->d(I)V
 
     return-void
 .end method
 
-.method public abstract s(Landroid/database/Cursor;)Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/database/Cursor;",
-            ")",
-            "Ljava/util/List<",
-            "TT;>;"
-        }
-    .end annotation
-.end method
-
-.method public t()I
-    .locals 4
+.method public g(Z)V
+    .locals 1
 
     .line 1
-    iget-object v0, p0, La3/a;->d:Ljava/lang/String;
+    iget-object v0, p0, La3/a;->a:La3/a$b;
 
-    iget-object v1, p0, La3/a;->c:Landroidx/room/m;
+    invoke-virtual {v0, p1}, La3/a$b;->e(Z)V
 
-    .line 2
-    invoke-virtual {v1}, Landroidx/room/m;->a()I
-
-    move-result v1
-
-    .line 3
-    invoke-static {v0, v1}, Landroidx/room/m;->d(Ljava/lang/String;I)Landroidx/room/m;
-
-    move-result-object v0
-
-    .line 4
-    iget-object v1, p0, La3/a;->c:Landroidx/room/m;
-
-    invoke-virtual {v0, v1}, Landroidx/room/m;->f(Landroidx/room/m;)V
-
-    .line 5
-    iget-object v1, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v1, v0}, Landroidx/room/RoomDatabase;->v(Lc3/g;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 6
-    :try_start_0
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    .line 7
-    invoke-interface {v1, v3}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 8
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 9
-    invoke-virtual {v0}, Landroidx/room/m;->release()V
-
-    return v2
-
-    .line 10
-    :cond_0
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 11
-    invoke-virtual {v0}, Landroidx/room/m;->release()V
-
-    return v3
-
-    :catchall_0
-    move-exception v2
-
-    .line 12
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 13
-    invoke-virtual {v0}, Landroidx/room/m;->release()V
-
-    .line 14
-    throw v2
+    return-void
 .end method
 
-.method public final u(II)Landroidx/room/m;
-    .locals 4
+.method public h(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+
+    const-string v0, "maxEmojiCount should be greater than 0"
 
     .line 1
-    iget-object v0, p0, La3/a;->e:Ljava/lang/String;
-
-    iget-object v1, p0, La3/a;->c:Landroidx/room/m;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->j(ILjava/lang/String;)I
 
     .line 2
-    invoke-virtual {v1}, Landroidx/room/m;->a()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x2
+    iput p1, p0, La3/a;->b:I
 
     .line 3
-    invoke-static {v0, v1}, Landroidx/room/m;->d(Ljava/lang/String;I)Landroidx/room/m;
+    iget-object v0, p0, La3/a;->a:La3/a$b;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, La3/a$b;->f(I)V
 
-    .line 4
-    iget-object v1, p0, La3/a;->c:Landroidx/room/m;
-
-    invoke-virtual {v0, v1}, Landroidx/room/m;->f(Landroidx/room/m;)V
-
-    .line 5
-    invoke-virtual {v0}, Landroidx/room/m;->a()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    int-to-long v2, p2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroidx/room/m;->O0(IJ)V
-
-    .line 6
-    invoke-virtual {v0}, Landroidx/room/m;->a()I
-
-    move-result p2
-
-    int-to-long v1, p1
-
-    invoke-virtual {v0, p2, v1, v2}, Landroidx/room/m;->O0(IJ)V
-
-    return-object v0
-.end method
-
-.method public v(II)Ljava/util/List;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(II)",
-            "Ljava/util/List<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1, p2}, La3/a;->u(II)Landroidx/room/m;
-
-    move-result-object p1
-
-    .line 2
-    iget-boolean p2, p0, La3/a;->h:Z
-
-    if-eqz p2, :cond_2
-
-    .line 3
-    iget-object p2, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {p2}, Landroidx/room/RoomDatabase;->c()V
-
-    const/4 p2, 0x0
-
-    .line 4
-    :try_start_0
-    iget-object v0, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v0, p1}, Landroidx/room/RoomDatabase;->v(Lc3/g;)Landroid/database/Cursor;
-
-    move-result-object p2
-
-    .line 5
-    invoke-virtual {p0, p2}, La3/a;->s(Landroid/database/Cursor;)Ljava/util/List;
-
-    move-result-object v0
-
-    .line 6
-    iget-object v1, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {v1}, Landroidx/room/RoomDatabase;->A()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p2, :cond_0
-
-    .line 7
-    invoke-interface {p2}, Landroid/database/Cursor;->close()V
-
-    .line 8
-    :cond_0
-    iget-object p2, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {p2}, Landroidx/room/RoomDatabase;->i()V
-
-    .line 9
-    invoke-virtual {p1}, Landroidx/room/m;->release()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    if-eqz p2, :cond_1
-
-    .line 10
-    invoke-interface {p2}, Landroid/database/Cursor;->close()V
-
-    .line 11
-    :cond_1
-    iget-object p2, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {p2}, Landroidx/room/RoomDatabase;->i()V
-
-    .line 12
-    invoke-virtual {p1}, Landroidx/room/m;->release()V
-
-    .line 13
-    throw v0
-
-    .line 14
-    :cond_2
-    iget-object p2, p0, La3/a;->f:Landroidx/room/RoomDatabase;
-
-    invoke-virtual {p2, p1}, Landroidx/room/RoomDatabase;->v(Lc3/g;)Landroid/database/Cursor;
-
-    move-result-object p2
-
-    .line 15
-    :try_start_1
-    invoke-virtual {p0, p2}, La3/a;->s(Landroid/database/Cursor;)Ljava/util/List;
-
-    move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 16
-    invoke-interface {p2}, Landroid/database/Cursor;->close()V
-
-    .line 17
-    invoke-virtual {p1}, Landroidx/room/m;->release()V
-
-    return-object v0
-
-    :catchall_1
-    move-exception v0
-
-    .line 18
-    invoke-interface {p2}, Landroid/database/Cursor;->close()V
-
-    .line 19
-    invoke-virtual {p1}, Landroidx/room/m;->release()V
-
-    .line 20
-    throw v0
+    return-void
 .end method

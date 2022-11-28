@@ -86,7 +86,7 @@
 
     check-cast p1, [Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -276,7 +276,7 @@
     return v0
 .end method
 
-.method public static e(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
+.method public static f(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
     .locals 8
     .param p0    # Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
         .annotation build Landroidx/annotation/Nullable;
@@ -316,7 +316,7 @@
     aget-object v6, p0, v5
 
     .line 4
-    invoke-virtual {v6}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;->d()Z
+    invoke-virtual {v6}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;->e()Z
 
     move-result v7
 
@@ -360,7 +360,7 @@
     aget-object v5, p1, v1
 
     .line 9
-    invoke-virtual {v5}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;->d()Z
+    invoke-virtual {v5}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;->e()Z
 
     move-result v6
 
@@ -403,11 +403,11 @@
 
 
 # virtual methods
-.method public b(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;)I
+.method public a(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;)I
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/C;->P1:Ljava/util/UUID;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/C;->b2:Ljava/util/UUID;
 
     iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;->b:Ljava/util/UUID;
 
@@ -457,24 +457,34 @@
 
     check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
 
-    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;)I
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->a(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public d(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
     .locals 3
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/CheckResult;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->c:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -493,14 +503,6 @@
     invoke-direct {v0, p1, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;-><init>(Ljava/lang/String;Z[Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;)V
 
     return-object v0
-.end method
-
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -541,7 +543,7 @@
 
     iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->c:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -571,7 +573,7 @@
     return v1
 .end method
 
-.method public f(I)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
+.method public h(I)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
     .locals 1
 
     .line 1
@@ -582,7 +584,51 @@
     return-object p1
 .end method
 
-.method public g(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
+.method public hashCode()I
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b:I
+
+    if-nez v0, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->c:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 3
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->a:[Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 4
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b:I
+
+    .line 5
+    :cond_1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b:I
+
+    return v0
+.end method
+
+.method public i(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;)Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;
     .locals 2
 
     .line 1
@@ -633,7 +679,7 @@
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->a:[Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
 
     .line 6
-    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->Z0([Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->d1([Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -645,50 +691,6 @@
     invoke-direct {v1, v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;-><init>(Ljava/lang/String;[Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;)V
 
     return-object v1
-.end method
-
-.method public hashCode()I
-    .locals 2
-
-    .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b:I
-
-    if-nez v0, :cond_1
-
-    .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->c:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->a:[Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b:I
-
-    .line 5
-    :cond_1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData;->b:I
-
-    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

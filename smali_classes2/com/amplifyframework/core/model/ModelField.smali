@@ -210,7 +210,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/core/model/ModelField;->name:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -224,7 +224,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/core/model/ModelField;->javaClassForValue:Ljava/lang/Class;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -238,7 +238,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/core/model/ModelField;->targetType:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -452,7 +452,7 @@
 
     const-string v3, ", javaClassForValue=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/core/model/ModelField;->javaClassForValue:Ljava/lang/Class;
 
@@ -468,7 +468,7 @@
 
     const-string v3, ", isRequired="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-boolean v1, p0, Lcom/amplifyframework/core/model/ModelField;->isRequired:Z
 
@@ -496,13 +496,9 @@
 
     iget-boolean v1, p0, Lcom/amplifyframework/core/model/ModelField;->isModel:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const/16 v2, 0x7d
 
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lk2/g;->a(Ljava/lang/StringBuilder;ZC)Ljava/lang/String;
 
     move-result-object v0
 

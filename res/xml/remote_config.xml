@@ -16,4 +16,20 @@
         <key>show_parking</key>
         <value>false</value>
     </entry>
+    <entry>
+        <key>performance_enable</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>tunnel_location_model_type</key>
+        <value>legacy</value>
+    </entry>
+    <entry>
+        <key>use_thor_route_summary</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>splash_ad_expire_date_9_12_3</key>
+        <value>2011-10-10</value>
+    </entry>
 </defaultsMap>

@@ -3,7 +3,7 @@
 .source "AndroidImageProxy.java"
 
 # interfaces
-.implements Landroidx/camera/core/p1$a;
+.implements Landroidx/camera/core/m1$a;
 
 
 # annotations
@@ -28,14 +28,6 @@
 # direct methods
 .method public constructor <init>(Landroid/media/Image$Plane;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "plane"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

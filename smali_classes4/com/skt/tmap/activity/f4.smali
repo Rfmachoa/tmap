@@ -3,50 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity$y;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Lcom/skt/tmap/vsm/data/VSMMapPoint;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity$y;Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/f4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$y;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/f4;->b:Ljava/lang/String;
-
-    iput p3, p0, Lcom/skt/tmap/activity/f4;->c:I
-
-    iput-object p4, p0, Lcom/skt/tmap/activity/f4;->d:Lcom/skt/tmap/vsm/data/VSMMapPoint;
+    iput-object p1, p0, Lcom/skt/tmap/activity/f4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/f4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$y;
+    iget-object v0, p0, Lcom/skt/tmap/activity/f4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/f4;->b:Ljava/lang/String;
+    check-cast p1, Ljava/lang/Integer;
 
-    iget v2, p0, Lcom/skt/tmap/activity/f4;->c:I
-
-    iget-object v3, p0, Lcom/skt/tmap/activity/f4;->d:Lcom/skt/tmap/vsm/data/VSMMapPoint;
-
-    invoke-static {v0, v1, v2, v3}, Lcom/skt/tmap/activity/TmapNaviActivity$y;->b(Lcom/skt/tmap/activity/TmapNaviActivity$y;Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->m7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Integer;)V
 
     return-void
 .end method

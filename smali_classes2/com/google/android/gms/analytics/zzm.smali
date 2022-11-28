@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/analytics/zzm;
 .super Ljava/util/concurrent/FutureTask;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # instance fields
@@ -11,9 +11,9 @@
 .method public constructor <init>(Lcom/google/android/gms/analytics/zzn;Ljava/lang/Runnable;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/analytics/zzm;->zza:Lcom/google/android/gms/analytics/zzn;
 
-    .line 1
     invoke-direct {p0, p2, p3}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
     return-void
@@ -22,13 +22,13 @@
 
 # virtual methods
 .method public final setException(Ljava/lang/Throwable;)V
-    .locals 4
+    .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzm;->zza:Lcom/google/android/gms/analytics/zzn;
 
     iget-object v0, v0, Lcom/google/android/gms/analytics/zzn;->zza:Lcom/google/android/gms/analytics/zzr;
 
-    .line 1
     invoke-static {v0}, Lcom/google/android/gms/analytics/zzr;->zze(Lcom/google/android/gms/analytics/zzr;)Ljava/lang/Thread$UncaughtExceptionHandler;
 
     move-result-object v0
@@ -61,23 +61,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x25
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "MeasurementExecutor: job failed with "
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -30,6 +30,11 @@
 # direct methods
 .method public constructor <init>(Lretrofit2/Retrofit;Ljava/lang/Class;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lretrofit2/Retrofit$1;->this$0:Lretrofit2/Retrofit;
@@ -88,17 +93,26 @@
 
     return-object p1
 
-    .line 3
     :cond_0
+    if-eqz p3, :cond_1
+
+    goto :goto_0
+
+    .line 3
+    :cond_1
+    iget-object p3, p0, Lretrofit2/Retrofit$1;->emptyArgs:[Ljava/lang/Object;
+
+    .line 4
+    :goto_0
     iget-object v0, p0, Lretrofit2/Retrofit$1;->platform:Lretrofit2/Platform;
 
     invoke-virtual {v0, p2}, Lretrofit2/Platform;->isDefaultMethod(Ljava/lang/reflect/Method;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 4
+    .line 5
     iget-object v0, p0, Lretrofit2/Retrofit$1;->platform:Lretrofit2/Platform;
 
     iget-object v1, p0, Lretrofit2/Retrofit$1;->val$service:Ljava/lang/Class;
@@ -107,27 +121,20 @@
 
     move-result-object p1
 
-    return-object p1
+    goto :goto_1
 
-    .line 5
-    :cond_1
+    .line 6
+    :cond_2
     iget-object p1, p0, Lretrofit2/Retrofit$1;->this$0:Lretrofit2/Retrofit;
 
     invoke-virtual {p1, p2}, Lretrofit2/Retrofit;->loadServiceMethod(Ljava/lang/reflect/Method;)Lretrofit2/ServiceMethod;
 
     move-result-object p1
 
-    if-eqz p3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p3, p0, Lretrofit2/Retrofit$1;->emptyArgs:[Ljava/lang/Object;
-
-    :goto_0
     invoke-virtual {p1, p3}, Lretrofit2/ServiceMethod;->invoke([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    :goto_1
     return-object p1
 .end method

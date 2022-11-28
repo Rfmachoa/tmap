@@ -226,7 +226,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v0, v1, v2}, Lx/c;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lb0/e;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

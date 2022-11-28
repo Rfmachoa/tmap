@@ -24,10 +24,10 @@
 
 
 # static fields
-.field public static final b:Loi/a;
+.field public static final b:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Map<",
             "Ljava/lang/Object;",
             "Ljava/lang/Object;",
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    sput-object v0, Ldagger/internal/h;->b:Loi/a;
+    sput-object v0, Ldagger/internal/h;->b:Lsk/a;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;)V"
         }
     .end annotation
@@ -106,7 +106,7 @@
     return-object v0
 .end method
 
-.method public static d()Loi/a;
+.method public static d()Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -115,14 +115,14 @@
             "V:",
             "Ljava/lang/Object;",
             ">()",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Map<",
             "TK;TV;>;>;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Ldagger/internal/h;->b:Loi/a;
+    sget-object v0, Ldagger/internal/h;->b:Lsk/a;
 
     return-object v0
 .end method
@@ -187,9 +187,9 @@
 
     move-result-object v2
 
-    check-cast v2, Loi/a;
+    check-cast v2, Lsk/a;
 
-    invoke-interface {v2}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v2}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v2
 

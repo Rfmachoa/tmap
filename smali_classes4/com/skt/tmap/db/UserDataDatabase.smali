@@ -28,40 +28,46 @@
     d2 = {
         "Lcom/skt/tmap/db/UserDataDatabase;",
         "Landroidx/room/RoomDatabase;",
-        "Lac/f;",
-        "G",
-        "()Lac/f;",
+        "Lxd/f;",
+        "R",
+        "()Lxd/f;",
         "recentDao",
-        "Lac/b;",
-        "D",
-        "()Lac/b;",
+        "Lxd/b;",
+        "O",
+        "()Lxd/b;",
         "favoriteDao",
-        "Lac/d;",
-        "E",
-        "()Lac/d;",
+        "Lxd/d;",
+        "P",
+        "()Lxd/d;",
         "homeOfficeDao",
         "<init>",
         "()V",
-        "p",
+        "q",
         "a",
         "tmap_android_phoneKUShip"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # static fields
-.field public static final n:Ljava/lang/String; = "userdata.db"
-
-.field public static volatile o:Lcom/skt/tmap/db/UserDataDatabase;
-
-.field public static final p:Lcom/skt/tmap/db/UserDataDatabase$a;
+.field public static final q:Lcom/skt/tmap/db/UserDataDatabase$a;
     .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final r:Ljava/lang/String; = "userdata.db"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static volatile s:Lcom/skt/tmap/db/UserDataDatabase;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 .end field
 
@@ -76,7 +82,7 @@
 
     invoke-direct {v0, v1}, Lcom/skt/tmap/db/UserDataDatabase$a;-><init>(Lkotlin/jvm/internal/u;)V
 
-    sput-object v0, Lcom/skt/tmap/db/UserDataDatabase;->p:Lcom/skt/tmap/db/UserDataDatabase$a;
+    sput-object v0, Lcom/skt/tmap/db/UserDataDatabase;->q:Lcom/skt/tmap/db/UserDataDatabase$a;
 
     return-void
 .end method
@@ -90,25 +96,25 @@
     return-void
 .end method
 
-.method public static final synthetic B()Lcom/skt/tmap/db/UserDataDatabase;
+.method public static final synthetic M()Lcom/skt/tmap/db/UserDataDatabase;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/db/UserDataDatabase;->o:Lcom/skt/tmap/db/UserDataDatabase;
+    sget-object v0, Lcom/skt/tmap/db/UserDataDatabase;->s:Lcom/skt/tmap/db/UserDataDatabase;
 
     return-object v0
 .end method
 
-.method public static final synthetic C(Lcom/skt/tmap/db/UserDataDatabase;)V
+.method public static final synthetic N(Lcom/skt/tmap/db/UserDataDatabase;)V
     .locals 0
 
     .line 1
-    sput-object p0, Lcom/skt/tmap/db/UserDataDatabase;->o:Lcom/skt/tmap/db/UserDataDatabase;
+    sput-object p0, Lcom/skt/tmap/db/UserDataDatabase;->s:Lcom/skt/tmap/db/UserDataDatabase;
 
     return-void
 .end method
 
-.method public static final F(Landroid/content/Context;)Lcom/skt/tmap/db/UserDataDatabase;
+.method public static final Q(Landroid/content/Context;)Lcom/skt/tmap/db/UserDataDatabase;
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -120,7 +126,7 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    sget-object v0, Lcom/skt/tmap/db/UserDataDatabase;->p:Lcom/skt/tmap/db/UserDataDatabase$a;
+    sget-object v0, Lcom/skt/tmap/db/UserDataDatabase;->q:Lcom/skt/tmap/db/UserDataDatabase$a;
 
     invoke-virtual {v0, p0}, Lcom/skt/tmap/db/UserDataDatabase$a;->a(Landroid/content/Context;)Lcom/skt/tmap/db/UserDataDatabase;
 
@@ -131,17 +137,17 @@
 
 
 # virtual methods
-.method public abstract D()Lac/b;
+.method public abstract O()Lxd/b;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end method
 
-.method public abstract E()Lac/d;
+.method public abstract P()Lxd/d;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end method
 
-.method public abstract G()Lac/f;
+.method public abstract R()Lxd/f;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end method

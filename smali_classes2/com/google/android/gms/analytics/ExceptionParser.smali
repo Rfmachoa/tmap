@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/analytics/ExceptionParser;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # virtual methods
@@ -10,9 +10,9 @@
         .end annotation
     .end param
     .param p2    # Ljava/lang/Throwable;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method

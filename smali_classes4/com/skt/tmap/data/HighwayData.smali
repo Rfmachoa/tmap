@@ -68,7 +68,7 @@
     invoke-direct {p0, p1}, Lcom/skt/tmap/data/HighwayData;->setData([Lcom/skt/tmap/engine/navigation/data/TBTListInfo;)V
 
     .line 6
-    invoke-static {p3}, Lyc/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    invoke-static {p3}, Lze/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
 
     move-result-object p1
 
@@ -130,7 +130,7 @@
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f080734
+    const v0, 0x7f08075e
 
     goto :goto_0
 
@@ -191,47 +191,47 @@
 
     packed-switch p0, :pswitch_data_0
 
-    const p0, 0x7f080736
+    const p0, 0x7f080760
 
     goto :goto_0
 
     :pswitch_0
-    const p0, 0x7f080743
+    const p0, 0x7f08076d
 
     goto :goto_0
 
     :pswitch_1
-    const p0, 0x7f080740
+    const p0, 0x7f08076a
 
     goto :goto_0
 
     :pswitch_2
-    const p0, 0x7f08073a
+    const p0, 0x7f080764
 
     goto :goto_0
 
     :pswitch_3
-    const p0, 0x7f08073c
+    const p0, 0x7f080766
 
     goto :goto_0
 
     :pswitch_4
-    const p0, 0x7f080738
+    const p0, 0x7f080762
 
     goto :goto_0
 
     :cond_0
-    const p0, 0x7f080745
+    const p0, 0x7f08076f
 
     goto :goto_0
 
     :cond_1
-    const p0, 0x7f080742
+    const p0, 0x7f08076c
 
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f08073e
+    const p0, 0x7f080768
 
     :goto_0
     return p0
@@ -287,42 +287,42 @@
 
     if-eq p0, v0, :cond_0
 
-    const p0, 0x7f080746
+    const p0, 0x7f080770
 
     goto :goto_0
 
     :cond_0
-    const p0, 0x7f080744
+    const p0, 0x7f08076e
 
     goto :goto_0
 
     :cond_1
-    const p0, 0x7f08073d
+    const p0, 0x7f080767
 
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f080741
+    const p0, 0x7f08076b
 
     goto :goto_0
 
     :cond_3
-    const p0, 0x7f08073f
+    const p0, 0x7f080769
 
     goto :goto_0
 
     :cond_4
-    const p0, 0x7f080739
+    const p0, 0x7f080763
 
     goto :goto_0
 
     :cond_5
-    const p0, 0x7f08073b
+    const p0, 0x7f080765
 
     goto :goto_0
 
     :cond_6
-    const p0, 0x7f080737
+    const p0, 0x7f080761
 
     :goto_0
     return p0
@@ -741,7 +741,7 @@
     .line 4
     sget-object v0, Ljava/util/Locale;->KOREA:Ljava/util/Locale;
 
-    const v1, 0x7f1307e5
+    const v1, 0x7f140863
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -874,7 +874,7 @@
     .line 7
     sget-object v4, Ljava/util/Locale;->KOREA:Ljava/util/Locale;
 
-    const v5, 0x7f1307e5
+    const v5, 0x7f140863
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -929,7 +929,7 @@
     goto :goto_1
 
     :cond_3
-    const v4, 0x7f080533
+    const v4, 0x7f08053e
 
     .line 10
     invoke-virtual {v6, v4}, Lcom/skt/tmap/data/HighwayViewData;->setArrowResourceId(I)V
@@ -938,7 +938,7 @@
 
     :cond_4
     :goto_1
-    const v4, 0x7f080532
+    const v4, 0x7f08053d
 
     .line 11
     invoke-virtual {v6, v4}, Lcom/skt/tmap/data/HighwayViewData;->setArrowResourceId(I)V
@@ -1096,7 +1096,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f1307df
+    const v0, 0x7f14085d
 
     .line 4
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1118,14 +1118,14 @@
     sub-int/2addr v0, v1
 
     .line 6
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->a(I)[Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/d1;->a(I)[Ljava/lang/String;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Ljava/util/Locale;->KOREA:Ljava/util/Locale;
 
-    const v2, 0x7f1307e1
+    const v2, 0x7f14085f
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

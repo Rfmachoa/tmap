@@ -52,6 +52,14 @@
 
 .method public setCampaign(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaign"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResVcpgnHappenBodyVo;->campaign:Ljava/lang/Object;
@@ -61,6 +69,14 @@
 
 .method public setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "coupon"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResVcpgnHappenBodyVo;->coupon:Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;
@@ -70,6 +86,14 @@
 
 .method public setInformation(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "information"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResVcpgnHappenBodyVo;->information:Ljava/lang/Object;

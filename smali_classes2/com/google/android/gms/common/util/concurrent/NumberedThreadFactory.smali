@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/util/concurrent/NumberedThreadFactory;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Ljava/util/concurrent/ThreadFactory;
@@ -58,7 +58,7 @@
 
 # virtual methods
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+    .locals 3
     .param p1    # Ljava/lang/Runnable;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -90,13 +90,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0xd
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

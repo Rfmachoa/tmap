@@ -1,87 +1,102 @@
 .class public Lwb/a;
 .super Ljava/lang/Object;
-.source "BlackBoxEventInfo.java"
+.source "AudioDto.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lwb/a$a;
+    }
+.end annotation
 
 
 # instance fields
-.field public a:I
+.field private a:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "type"
+    .end annotation
+.end field
 
-.field public b:Ljava/lang/String;
+.field private b:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "url"
+    .end annotation
+.end field
+
+.field private c:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "offsetMs"
+    .end annotation
+.end field
+
+.field private d:Ljava/util/List;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "additionalList"
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lwb/a$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "crashOccurredTime",
-            "timeStamp"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput p1, p0, Lwb/a;->a:I
-
-    .line 3
-    iput-object p2, p0, Lwb/a;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
+.method public a()Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lwb/a$a;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    iget v0, p0, Lwb/a;->a:I
+    iget-object v0, p0, Lwb/a;->d:Ljava/util/List;
 
-    return v0
+    return-object v0
 .end method
 
 .method public b()Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lwb/a;->b:Ljava/lang/String;
+    iget-object v0, p0, Lwb/a;->c:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "BlackBoxEventInfo{crashOccurredTime="
+.method public c()Ljava/lang/String;
+    .locals 1
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lwb/a;->a:Ljava/lang/String;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    iget v1, p0, Lwb/a;->a:I
+.method public d()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", timeStamp=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwb/a;->b:Ljava/lang/String;
-
-    const/16 v2, 0x27
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lb3/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
-
-    move-result-object v0
+    .line 1
+    iget-object v0, p0, Lwb/a;->b:Ljava/lang/String;
 
     return-object v0
 .end method

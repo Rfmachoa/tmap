@@ -1,4 +1,4 @@
-.class final Lcom/google/android/material/datepicker/CalendarConstraints$1;
+.class Lcom/google/android/material/datepicker/CalendarConstraints$1;
 .super Ljava/lang/Object;
 .source "CalendarConstraints.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -39,7 +39,7 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/google/android/material/datepicker/CalendarConstraints;
-    .locals 7
+    .locals 8
     .param p1    # Landroid/os/Parcel;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -101,20 +101,25 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    move-result-object p1
+    move-result-object v0
 
-    move-object v4, p1
+    move-object v4, v0
 
     check-cast v4, Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
 
     .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    .line 7
     new-instance p1, Lcom/google/android/material/datepicker/CalendarConstraints;
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/datepicker/CalendarConstraints;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/material/datepicker/CalendarConstraints;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;Lcom/google/android/material/datepicker/Month;ILcom/google/android/material/datepicker/CalendarConstraints$1;)V
 
     return-object p1
 .end method

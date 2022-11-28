@@ -3,7 +3,7 @@
 .source "TmapSearchResultKtActivity.kt"
 
 # interfaces
-.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;
+.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$i;
 
 
 # annotations
@@ -23,7 +23,7 @@
     }
     d2 = {
         "com/skt/tmap/activity/TmapSearchResultKtActivity$h",
-        "Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;",
+        "Lcom/skt/tmap/mapview/streaming/MapViewStreaming$i;",
         "Landroid/view/View;",
         "view",
         "Lkotlin/d1;",
@@ -37,8 +37,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -50,16 +50,61 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static synthetic e(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->g(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
+
+    return-void
+.end method
+
+.method public static final g(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
+    .locals 2
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/dialog/p;
+
+    invoke-direct {v0}, Lcom/skt/tmap/dialog/p;-><init>()V
+
+    .line 2
+    invoke-static {p0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "searchResultActivityBinding"
+
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    :cond_0
+    iget-object v1, v1, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/p;->p(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;)V
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object p0
+
+    const-string v1, "mapSettingDialog"
+
+    invoke-virtual {v0, p0, v1}, Landroidx/fragment/app/d;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -67,7 +112,7 @@
 
 # virtual methods
 .method public a(Landroid/view/View;)V
-    .locals 5
+    .locals 7
     .param p1    # Landroid/view/View;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
@@ -78,174 +123,212 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string v0, "basePresenter"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo v0, "tap.research_onmap"
+    const-string v0, "tap.research_onmap"
 
-    invoke-virtual {p1, v0}, Ldc/d;->n0(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->o0(Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->O5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->e6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
 
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->K5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->a6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->t()Loc/e;
+    const-string v0, "tmapSearchResultViewModel"
+
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_0
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v1
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->A()Lme/h;
 
     move-result-object p1
 
-    new-instance v0, Landroid/location/Location;
+    new-instance v2, Landroid/location/Location;
 
-    const-string v1, "mapCenter"
+    const-string v3, "mapCenter"
 
-    invoke-direct {v0, v1}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
     .line 4
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
+    invoke-static {v3}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    move-result-object v3
 
-    move-result-object v1
+    const-string v4, "searchResultActivityBinding"
 
-    iget-object v1, v1, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    if-nez v3, :cond_1
 
-    const-string v2, "searchResultActivityBinding.searchResultMapView"
+    invoke-static {v4}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    move-object v3, v1
 
-    invoke-virtual {v1}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->getMapCenterGEO()Lcom/skt/tmap/vsm/data/VSMMapPoint;
+    :cond_1
+    iget-object v3, v3, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    move-result-object v1
+    invoke-virtual {v3}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->getMapCenterGEO()Lcom/skt/tmap/vsm/data/VSMMapPoint;
 
-    const-string v3, "point"
+    move-result-object v3
 
     .line 5
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v3}, Lcom/skt/tmap/vsm/data/VSMMapPoint;->getLatitude()D
 
-    invoke-virtual {v1}, Lcom/skt/tmap/vsm/data/VSMMapPoint;->getLatitude()D
+    move-result-wide v5
 
-    move-result-wide v3
-
-    invoke-virtual {v0, v3, v4}, Landroid/location/Location;->setLatitude(D)V
+    invoke-virtual {v2, v5, v6}, Landroid/location/Location;->setLatitude(D)V
 
     .line 6
-    invoke-virtual {v1}, Lcom/skt/tmap/vsm/data/VSMMapPoint;->getLongitude()D
+    invoke-virtual {v3}, Lcom/skt/tmap/vsm/data/VSMMapPoint;->getLongitude()D
 
-    move-result-wide v3
+    move-result-wide v5
 
-    invoke-virtual {v0, v3, v4}, Landroid/location/Location;->setLongitude(D)V
+    invoke-virtual {v2, v5, v6}, Landroid/location/Location;->setLongitude(D)V
 
     .line 7
-    sget-object v1, Lkotlin/d1;->a:Lkotlin/d1;
+    invoke-virtual {p1, v2}, Lme/h;->u(Landroid/location/Location;)V
 
     .line 8
-    invoke-virtual {p1, v0}, Loc/e;->p(Landroid/location/Location;)V
-
-    .line 9
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->K5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->a6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->t()Loc/e;
+    if-nez p1, :cond_2
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v1
+
+    :cond_2
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->A()Lme/h;
 
     move-result-object p1
+
+    .line 9
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
+
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->V5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
+
+    move-result-object v2
+
+    sget-object v3, Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;->map:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
+
+    if-ne v2, v3, :cond_3
 
     .line 10
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->F5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;->map:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
-
-    if-ne v0, v1, :cond_0
-
-    .line 11
-    sget-object v0, Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;->map_onmap:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
+    sget-object v2, Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;->map_onmap:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
 
     goto :goto_0
 
+    .line 11
+    :cond_3
+    sget-object v2, Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;->user_real_onmap:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
+
     .line 12
-    :cond_0
-    sget-object v0, Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;->user_real_onmap:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;
+    :goto_0
+    invoke-virtual {p1, v2}, Lme/h;->v(Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;)V
 
     .line 13
-    :goto_0
-    invoke-virtual {p1, v0}, Loc/e;->q(Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisRequestDto$SearchLocationType;)V
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->a6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
+
+    move-result-object p1
+
+    if-nez p1, :cond_4
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v1
+
+    :cond_4
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->A()Lme/h;
+
+    move-result-object p1
+
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
+
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
+
+    move-result-object v2
+
+    if-nez v2, :cond_5
+
+    invoke-static {v4}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object v2, v1
+
+    :cond_5
+    iget-object v2, v2, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->getViewLevel()I
+
+    move-result v2
+
+    invoke-virtual {p1, v2}, Lme/h;->y(I)V
 
     .line 14
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->K5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->a6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->t()Loc/e;
+    if-nez p1, :cond_6
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v1
+
+    :cond_6
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->A()Lme/h;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->P5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v0, v0, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->getViewLevel()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Loc/e;->t(I)V
+    invoke-virtual {p1, v2}, Lme/h;->s(Ljava/lang/String;)V
 
     .line 15
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->K5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->a6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->t()Loc/e;
+    if-nez p1, :cond_7
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v1
+
+    :cond_7
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->A()Lme/h;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->x5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Loc/e;->n(Ljava/lang/String;)V
-
-    .line 16
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
-
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->K5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->t()Loc/e;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Loc/e;->k()Landroidx/lifecycle/MutableLiveData;
+    invoke-virtual {p1}, Lme/h;->p()Landroidx/lifecycle/MutableLiveData;
 
     move-result-object p1
 
@@ -253,29 +336,39 @@
 
     move-result-object p1
 
-    check-cast p1, Loc/d;
+    check-cast p1, Lme/g;
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_8
 
-    invoke-virtual {p1}, Landroidx/paging/c;->d()V
+    invoke-virtual {p1}, Landroidx/paging/DataSource;->f()V
 
-    .line 17
-    :cond_1
+    .line 16
+    :cond_8
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->K5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->a6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    if-nez p1, :cond_9
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->H(I)V
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_9
+    move-object v1, p1
+
+    :goto_1
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Lcom/skt/tmap/mvp/viewmodel/TmapSearchResultViewModel;->O(I)V
 
     return-void
 .end method
 
 .method public b(Landroid/view/View;)V
-    .locals 4
+    .locals 6
     .param p1    # Landroid/view/View;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
@@ -284,126 +377,179 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    const-string v1, "searchResultActivityBinding"
 
-    const-string v1, "searchResultActivityBinding.searchResultMapView"
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    if-nez v0, :cond_0
+
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object v0, v2
+
+    :cond_0
+    iget-object v0, v0, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
     invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->getPositionIconType()I
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v3, 0x1
 
-    const-string v2, "null cannot be cast to non-null type android.widget.ImageView"
+    const-string v4, "null cannot be cast to non-null type android.widget.ImageView"
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_4
 
-    if-eq v0, v1, :cond_1
+    if-eq v0, v3, :cond_4
 
-    const/4 v1, 0x2
+    const/4 v3, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v3, :cond_2
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    if-nez v0, :cond_1
+
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move-object v2, v0
+
+    :goto_0
+    iget-object v0, v2, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setNormalState(Z)V
 
     .line 3
-    invoke-static {p1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
-    const v0, 0x7f08016b
+    const v0, 0x7f08017b
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    goto :goto_0
+    goto :goto_3
 
     .line 4
-    :cond_0
+    :cond_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    if-nez v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->h1()V
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_3
+    move-object v2, v0
+
+    :goto_1
+    iget-object v0, v2, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->i1()V
 
     .line 5
-    invoke-static {p1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
-    const v0, 0x7f080166
+    const v0, 0x7f080176
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    goto :goto_0
+    goto :goto_3
 
     .line 6
-    :cond_1
+    :cond_4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    if-nez v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->r1()V
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object v0, v2
+
+    :cond_5
+    iget-object v0, v0, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->s1()V
 
     .line 7
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->I5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->Y5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     move-result-object v0
 
+    if-nez v0, :cond_6
+
+    const-string v0, "searchResultCallOutBottomSheetBehavior"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object v0, v2
+
+    :cond_6
     invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->getState()I
 
     move-result v0
 
-    const/4 v3, 0x5
+    const/4 v5, 0x5
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v5, :cond_8
 
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Llb/y5;->A1(Z)V
+    if-nez v0, :cond_7
+
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_7
+    move-object v2, v0
+
+    :goto_2
+    invoke-virtual {v2, v3}, Lid/y6;->D1(Z)V
 
     .line 9
-    :cond_2
-    invoke-static {p1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :cond_8
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
-    const v0, 0x7f08016a
+    const v0, 0x7f08017a
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    :goto_0
+    :goto_3
     return-void
 .end method
 
@@ -419,22 +565,24 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string v0, "basePresenter"
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    const-string/jumbo v1, "tap.layer"
+    move-result-object p1
 
-    invoke-static {p1, v0, v1}, Lcom/skt/tmap/activity/x;->a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "tap.layer"
+
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    iget-object v0, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    new-instance v0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h$a;
+    new-instance v1, Lcom/skt/tmap/activity/sa;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h$a;-><init>(Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;)V
+    invoke-direct {v1, p1}, Lcom/skt/tmap/activity/sa;-><init>(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->l(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->n(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -450,7 +598,7 @@
 .end method
 
 .method public f(Landroid/view/View;)V
-    .locals 2
+    .locals 4
     .param p1    # Landroid/view/View;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
@@ -459,37 +607,65 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object p1
 
-    iget-object p1, p1, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    const-string v1, "searchResultActivityBinding"
 
-    invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setRotationAngle(FZ)Z
+    if-nez p1, :cond_0
+
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v0
+
+    :cond_0
+    iget-object p1, p1, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p1, v2, v3}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setRotationAngle(FZ)Z
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object p1
 
-    iget-object p1, p1, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    if-nez p1, :cond_1
 
-    invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setTiltAngle(FZ)Z
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p1, v0
+
+    :cond_1
+    iget-object p1, p1, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {p1, v2, v3}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setTiltAngle(FZ)Z
 
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$h;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/databinding/ViewDataBinding;->r()V
+    if-nez p1, :cond_2
+
+    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    move-object v0, p1
+
+    :goto_0
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->u()V
 
     return-void
 .end method

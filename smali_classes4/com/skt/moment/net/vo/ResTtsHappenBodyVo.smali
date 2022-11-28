@@ -170,6 +170,14 @@
 
 .method public setActionType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "actionType"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo;->actionType:Ljava/lang/String;
@@ -179,6 +187,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo;->campaignId:Ljava/lang/Integer;
@@ -188,6 +204,14 @@
 
 .method public setCongPops(Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResCongPopsVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congPops"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo;->congPops:Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResCongPopsVo;
@@ -197,6 +221,15 @@
 
 .method public setPois(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pois"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -214,6 +247,14 @@
 
 .method public setReward(Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResRewardVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "reward"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo;->reward:Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResRewardVo;
@@ -223,6 +264,14 @@
 
 .method public setTts(Lcom/skt/moment/net/vo/HappenForTTS;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tts"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo;->tts:Lcom/skt/moment/net/vo/HappenForTTS;

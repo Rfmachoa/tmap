@@ -5,13 +5,8 @@
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
-        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\u001f\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u0002H\u00020\u0001\"\u0004\u0008\u0000\u0010\u0002*\u0008\u0012\u0004\u0012\u0002H\u00020\u0001H\u0086\u0008\u001a;\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u0002H\u00040\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u0004*\u0008\u0012\u0004\u0012\u0002H\u00020\u00012\u0014\u0008\u0004\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u0002H\u0002\u0012\u0004\u0012\u0002H\u00040\u0006H\u0086\u0008\u001aA\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u0002H\u00040\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u0004*\u0008\u0012\u0004\u0012\u0002H\u00020\u00012\u001a\u0008\u0004\u0010\u0005\u001a\u0014\u0012\u0004\u0012\u0002H\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u0002H\u00040\u00010\u0006H\u0086\u0008\u00a8\u0006\u0008"
+        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\u001f\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u0002H\u00020\u0001\"\u0004\u0008\u0000\u0010\u0002*\u0008\u0012\u0004\u0012\u0002H\u00020\u0001H\u0087\u0008\u001a>\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u0002H\u00040\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u0004*\u0008\u0012\u0004\u0012\u0002H\u00020\u00012\u0014\u0008\u0004\u0010\u0005\u001a\u000e\u0012\u0004\u0012\u0002H\u0002\u0012\u0004\u0012\u0002H\u00040\u0006H\u0087\u0008\u00f8\u0001\u0000\u001aF\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u0002H\u00040\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u0004*\u0008\u0012\u0004\u0012\u0002H\u00020\u00012\u001c\u0008\u0004\u0010\u0005\u001a\u0016\u0012\u0004\u0012\u0002H\u0002\u0012\u000c\u0012\n\u0012\u0004\u0012\u0002H\u0004\u0018\u00010\u00010\u0006H\u0087\u0008\u00f8\u0001\u0000\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u0008"
     }
     d2 = {
         "distinctUntilChanged",
@@ -27,9 +22,10 @@
     k = 0x2
     mv = {
         0x1,
-        0x1,
-        0xf
+        0x6,
+        0x0
     }
+    xi = 0x30
 .end annotation
 
 
@@ -40,6 +36,9 @@
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/CheckResult;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<X:",
@@ -55,32 +54,35 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$distinctUntilChanged"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-static {p0}, Landroidx/lifecycle/Transformations;->distinctUntilChanged(Landroidx/lifecycle/LiveData;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
-    const-string v0, "Transformations.distinctUntilChanged(this)"
+    const-string v0, "distinctUntilChanged(this)"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static final map(Landroidx/lifecycle/LiveData;Lej/l;)Landroidx/lifecycle/LiveData;
+.method public static final map(Landroidx/lifecycle/LiveData;Lgl/l;)Landroidx/lifecycle/LiveData;
     .locals 1
     .param p0    # Landroidx/lifecycle/LiveData;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/l;
+    .param p1    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/CheckResult;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<X:",
@@ -90,7 +92,7 @@
             ">(",
             "Landroidx/lifecycle/LiveData<",
             "TX;>;",
-            "Lej/l<",
+            "Lgl/l<",
             "-TX;+TY;>;)",
             "Landroidx/lifecycle/LiveData<",
             "TY;>;"
@@ -100,40 +102,43 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$map"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "transform"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Landroidx/lifecycle/TransformationsKt$map$1;
 
-    invoke-direct {v0, p1}, Landroidx/lifecycle/TransformationsKt$map$1;-><init>(Lej/l;)V
+    invoke-direct {v0, p1}, Landroidx/lifecycle/TransformationsKt$map$1;-><init>(Lgl/l;)V
 
-    invoke-static {p0, v0}, Landroidx/lifecycle/Transformations;->map(Landroidx/lifecycle/LiveData;Ln/a;)Landroidx/lifecycle/LiveData;
+    invoke-static {p0, v0}, Landroidx/lifecycle/Transformations;->map(Landroidx/lifecycle/LiveData;Lp/a;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
-    const-string p1, "Transformations.map(this) { transform(it) }"
+    const-string p1, "crossinline transform: (\u2026p(this) { transform(it) }"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static final switchMap(Landroidx/lifecycle/LiveData;Lej/l;)Landroidx/lifecycle/LiveData;
+.method public static final switchMap(Landroidx/lifecycle/LiveData;Lgl/l;)Landroidx/lifecycle/LiveData;
     .locals 1
     .param p0    # Landroidx/lifecycle/LiveData;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/l;
+    .param p1    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/CheckResult;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<X:",
@@ -143,7 +148,7 @@
             ">(",
             "Landroidx/lifecycle/LiveData<",
             "TX;>;",
-            "Lej/l<",
+            "Lgl/l<",
             "-TX;+",
             "Landroidx/lifecycle/LiveData<",
             "TY;>;>;)",
@@ -155,26 +160,26 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$switchMap"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "transform"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Landroidx/lifecycle/TransformationsKt$switchMap$1;
 
-    invoke-direct {v0, p1}, Landroidx/lifecycle/TransformationsKt$switchMap$1;-><init>(Lej/l;)V
+    invoke-direct {v0, p1}, Landroidx/lifecycle/TransformationsKt$switchMap$1;-><init>(Lgl/l;)V
 
-    invoke-static {p0, v0}, Landroidx/lifecycle/Transformations;->switchMap(Landroidx/lifecycle/LiveData;Ln/a;)Landroidx/lifecycle/LiveData;
+    invoke-static {p0, v0}, Landroidx/lifecycle/Transformations;->switchMap(Landroidx/lifecycle/LiveData;Lp/a;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
-    const-string p1, "Transformations.switchMap(this) { transform(it) }"
+    const-string p1, "crossinline transform: (\u2026p(this) { transform(it) }"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method

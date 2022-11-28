@@ -23,26 +23,60 @@
 
 
 # static fields
-.field private static final _parserFactory:Ljavax/xml/parsers/DocumentBuilderFactory;
+.field private static final DEFAULT_PARSER_FACTORY:Ljavax/xml/parsers/DocumentBuilderFactory;
 
 .field private static final serialVersionUID:J = 0x1L
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
     .line 1
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v0
 
-    sput-object v0, Lcom/fasterxml/jackson/databind/ext/DOMDeserializer;->_parserFactory:Ljavax/xml/parsers/DocumentBuilderFactory;
-
     const/4 v1, 0x1
 
     .line 2
     invoke-virtual {v0, v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->setNamespaceAware(Z)V
+
+    const/4 v2, 0x0
+
+    .line 3
+    invoke-virtual {v0, v2}, Ljavax/xml/parsers/DocumentBuilderFactory;->setExpandEntityReferences(Z)V
+
+    :try_start_0
+    const-string v3, "http://javax.xml.XMLConstants/feature/secure-processing"
+
+    .line 4
+    invoke-virtual {v0, v3, v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->setFeature(Ljava/lang/String;Z)V
+    :try_end_0
+    .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    const-string v3, "http://apache.org/xml/features/disallow-doctype-decl"
+
+    .line 5
+    invoke-virtual {v0, v3, v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->setFeature(Ljava/lang/String;Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
+    :try_start_2
+    const-string v1, "http://apache.org/xml/features/nonvalidating/load-external-dtd"
+
+    .line 6
+    invoke-virtual {v0, v1, v2}, Ljavax/xml/parsers/DocumentBuilderFactory;->setFeature(Ljava/lang/String;Z)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 7
+    :catchall_1
+    sput-object v0, Lcom/fasterxml/jackson/databind/ext/DOMDeserializer;->DEFAULT_PARSER_FACTORY:Ljavax/xml/parsers/DocumentBuilderFactory;
 
     return-void
 .end method
@@ -76,6 +110,24 @@
     .end annotation
 .end method
 
+.method public documentBuilder()Ljavax/xml/parsers/DocumentBuilder;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljavax/xml/parsers/ParserConfigurationException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/databind/ext/DOMDeserializer;->DEFAULT_PARSER_FACTORY:Ljavax/xml/parsers/DocumentBuilderFactory;
+
+    invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final parse(Ljava/lang/String;)Lorg/w3c/dom/Document;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
@@ -86,9 +138,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/fasterxml/jackson/databind/ext/DOMDeserializer;->_parserFactory:Ljavax/xml/parsers/DocumentBuilderFactory;
-
-    invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/ext/DOMDeserializer;->documentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 

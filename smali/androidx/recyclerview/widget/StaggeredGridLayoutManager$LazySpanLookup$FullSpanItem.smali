@@ -126,7 +126,7 @@
 
 
 # virtual methods
-.method public b(I)I
+.method public a(I)I
     .locals 1
 
     .line 1

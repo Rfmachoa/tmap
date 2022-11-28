@@ -10,8 +10,8 @@
 
 
 # virtual methods
-.method public abstract a(ZLandroidx/car/app/o0;)V
-    .param p2    # Landroidx/car/app/o0;
+.method public abstract a(ZLandroidx/car/app/t0;)V
+    .param p2    # Landroidx/car/app/t0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

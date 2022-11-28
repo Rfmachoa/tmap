@@ -20,7 +20,7 @@
 
 .field public static final exo_media_button_opacity_percentage_enabled:I = 0x7f0b000f
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0b001d
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0056
 
 
 # direct methods

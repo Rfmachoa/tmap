@@ -9,10 +9,15 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/car/app/IStartCarApp$a;,
         Landroidx/car/app/IStartCarApp$Stub;,
         Landroidx/car/app/IStartCarApp$Default;
     }
 .end annotation
+
+
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.IStartCarApp"
 
 
 # virtual methods

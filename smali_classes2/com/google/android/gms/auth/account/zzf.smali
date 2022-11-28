@@ -1,16 +1,6 @@
 .class final Lcom/google/android/gms/auth/account/zzf;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-        "Lcom/google/android/gms/internal/auth/zzr;",
-        "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # direct methods
@@ -29,7 +19,10 @@
     .locals 6
 
     .line 1
-    new-instance p4, Lcom/google/android/gms/internal/auth/zzr;
+    check-cast p4, Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;
+
+    .line 2
+    new-instance p4, Lcom/google/android/gms/internal/auth/zzam;
 
     move-object v0, p4
 
@@ -43,7 +36,7 @@
 
     move-object v5, p6
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/auth/zzr;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/auth/zzam;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
 
     return-object p4
 .end method

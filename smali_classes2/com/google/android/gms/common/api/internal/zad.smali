@@ -1,40 +1,15 @@
 .class abstract Lcom/google/android/gms/common/api/internal/zad;
 .super Lcom/google/android/gms/common/api/internal/zac;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/google/android/gms/common/api/internal/zac;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field public final zaa:Lcom/google/android/gms/tasks/TaskCompletionSource;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TT;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(ILcom/google/android/gms/tasks/TaskCompletionSource;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TT;>;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/zac;-><init>(I)V
@@ -47,14 +22,6 @@
 
 # virtual methods
 .method public abstract zac(Lcom/google/android/gms/common/api/internal/zabq;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)V"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -98,14 +65,6 @@
 
 .method public final zaf(Lcom/google/android/gms/common/api/internal/zabq;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)V"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/DeadObjectException;

@@ -30,7 +30,7 @@
         "Landroid/view/View;",
         "view",
         "onViewCreated",
-        "k",
+        "l",
         "outState",
         "onSaveInstanceState",
         "",
@@ -43,23 +43,23 @@
         "",
         "bytesDownloaded",
         "bytesTotal",
-        "o",
-        "l",
-        "errorCode",
+        "p",
         "m",
+        "errorCode",
         "n",
+        "o",
         "Landroidx/navigation/dynamicfeatures/fragment/ui/a;",
         "a",
-        "Lkotlin/o;",
-        "j",
+        "Lkotlin/p;",
+        "k",
         "()Landroidx/navigation/dynamicfeatures/fragment/ui/a;",
         "installViewModel",
         "b",
-        "i",
+        "j",
         "()I",
         "destinationId",
         "c",
-        "h",
+        "i",
         "()Landroid/os/Bundle;",
         "destinationArgs",
         "",
@@ -91,11 +91,11 @@
 
 
 # instance fields
-.field public final a:Lkotlin/o;
+.field public final a:Lkotlin/p;
 
-.field public final b:Lkotlin/o;
+.field public final b:Lkotlin/p;
 
-.field public final c:Lkotlin/o;
+.field public final c:Lkotlin/p;
 
 .field public d:Z
 
@@ -138,35 +138,35 @@
 
     new-instance v3, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$2;
 
-    invoke-direct {v3, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$2;-><init>(Lej/a;)V
+    invoke-direct {v3, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$2;-><init>(Lgl/a;)V
 
-    invoke-static {p0, v2, v3, v0}, Landroidx/fragment/app/FragmentViewModelLazyKt;->c(Landroidx/fragment/app/Fragment;Lkotlin/reflect/d;Lej/a;Lej/a;)Lkotlin/o;
+    invoke-static {p0, v2, v3, v0}, Landroidx/fragment/app/FragmentViewModelLazyKt;->g(Landroidx/fragment/app/Fragment;Lkotlin/reflect/d;Lgl/a;Lgl/a;)Lkotlin/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->a:Lkotlin/o;
+    iput-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->a:Lkotlin/p;
 
     .line 5
     new-instance v0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationId$2;
 
     invoke-direct {v0, p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationId$2;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;)V
 
-    invoke-static {v0}, Lkotlin/r;->a(Lej/a;)Lkotlin/o;
+    invoke-static {v0}, Lkotlin/r;->a(Lgl/a;)Lkotlin/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->b:Lkotlin/o;
+    iput-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->b:Lkotlin/p;
 
     .line 6
     new-instance v0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationArgs$2;
 
     invoke-direct {v0, p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationArgs$2;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;)V
 
-    invoke-static {v0}, Lkotlin/r;->a(Lej/a;)Lkotlin/o;
+    invoke-static {v0}, Lkotlin/r;->a(Lgl/a;)Lkotlin/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->c:Lkotlin/o;
+    iput-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->c:Lkotlin/p;
 
     return-void
 .end method
@@ -194,47 +194,47 @@
 
     new-instance v2, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;
 
-    invoke-direct {v2, v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;-><init>(Lej/a;)V
+    invoke-direct {v2, v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;-><init>(Lgl/a;)V
 
-    invoke-static {p0, v1, v2, p1}, Landroidx/fragment/app/FragmentViewModelLazyKt;->c(Landroidx/fragment/app/Fragment;Lkotlin/reflect/d;Lej/a;Lej/a;)Lkotlin/o;
+    invoke-static {p0, v1, v2, p1}, Landroidx/fragment/app/FragmentViewModelLazyKt;->g(Landroidx/fragment/app/Fragment;Lkotlin/reflect/d;Lgl/a;Lgl/a;)Lkotlin/p;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->a:Lkotlin/o;
+    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->a:Lkotlin/p;
 
     .line 11
     new-instance p1, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationId$2;
 
     invoke-direct {p1, p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationId$2;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;)V
 
-    invoke-static {p1}, Lkotlin/r;->a(Lej/a;)Lkotlin/o;
+    invoke-static {p1}, Lkotlin/r;->a(Lgl/a;)Lkotlin/p;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->b:Lkotlin/o;
+    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->b:Lkotlin/p;
 
     .line 12
     new-instance p1, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationArgs$2;
 
     invoke-direct {p1, p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$destinationArgs$2;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;)V
 
-    invoke-static {p1}, Lkotlin/r;->a(Lej/a;)Lkotlin/o;
+    invoke-static {p1}, Lkotlin/r;->a(Lgl/a;)Lkotlin/p;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->c:Lkotlin/o;
+    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->c:Lkotlin/p;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h()Landroid/os/Bundle;
+.method public final i()Landroid/os/Bundle;
     .locals 1
 
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->c:Lkotlin/o;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->c:Lkotlin/p;
 
-    invoke-interface {v0}, Lkotlin/o;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/p;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -243,12 +243,12 @@
     return-object v0
 .end method
 
-.method public final i()I
+.method public final j()I
     .locals 1
 
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->b:Lkotlin/o;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->b:Lkotlin/p;
 
-    invoke-interface {v0}, Lkotlin/o;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/p;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -261,12 +261,12 @@
     return v0
 .end method
 
-.method public final j()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
+.method public final k()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
     .locals 1
 
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->a:Lkotlin/o;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->a:Lkotlin/p;
 
-    invoke-interface {v0}, Lkotlin/o;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/p;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -275,7 +275,7 @@
     return-object v0
 .end method
 
-.method public final k()V
+.method public final l()V
     .locals 7
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -291,36 +291,36 @@
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
-    new-instance v1, Lu2/l;
+    new-instance v1, Lq3/k;
 
-    invoke-direct {v1}, Lu2/l;-><init>()V
+    invoke-direct {v1}, Lq3/k;-><init>()V
 
     .line 3
-    new-instance v2, Lu2/e;
+    new-instance v2, Lq3/e;
 
     const/4 v3, 0x0
 
     const/4 v4, 0x2
 
-    invoke-direct {v2, v1, v3, v4, v3}, Lu2/e;-><init>(Lu2/l;Landroidx/navigation/Navigator$a;ILkotlin/jvm/internal/u;)V
+    invoke-direct {v2, v1, v3, v4, v3}, Lq3/e;-><init>(Lq3/k;Landroidx/navigation/Navigator$a;ILkotlin/jvm/internal/u;)V
 
     .line 4
-    invoke-static {p0}, Landroidx/navigation/fragment/c;->a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
+    invoke-static {p0}, Lr3/g;->a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->i()I
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->j()I
 
     move-result v5
 
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->h()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->i()Landroid/os/Bundle;
 
     move-result-object v6
 
-    invoke-virtual {v4, v5, v6, v3, v2}, Landroidx/navigation/NavController;->v(ILandroid/os/Bundle;Landroidx/navigation/j0;Landroidx/navigation/Navigator$a;)V
+    invoke-virtual {v4, v5, v6, v3, v2}, Landroidx/navigation/NavController;->Y(ILandroid/os/Bundle;Landroidx/navigation/k0;Landroidx/navigation/Navigator$a;)V
 
     .line 5
-    invoke-virtual {v1}, Lu2/l;->f()Z
+    invoke-virtual {v1}, Lq3/k;->f()Z
 
     move-result v2
 
@@ -345,37 +345,30 @@
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 9
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->j()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->k()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->c(Lu2/l;)V
+    invoke-virtual {v0, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->d(Lq3/k;)V
 
     :goto_0
     return-void
 .end method
 
-.method public abstract l()V
+.method public abstract m()V
 .end method
 
-.method public abstract m(I)V
+.method public abstract n(I)V
     .param p1    # I
         .annotation build Lcom/google/android/play/core/splitinstall/model/SplitInstallErrorCode;
         .end annotation
     .end param
 .end method
 
-.method public n()V
+.method public o()V
     .locals 0
 
     return-void
-.end method
-
-.method public abstract o(IJJ)V
-    .param p1    # I
-        .annotation build Lcom/google/android/play/core/splitinstall/model/SplitInstallSessionStatus;
-        .end annotation
-    .end param
 .end method
 
 .method public onActivityResult(IILandroid/content/Intent;)V
@@ -395,7 +388,7 @@
     if-nez p2, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->l()V
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->m()V
 
     :cond_0
     return-void
@@ -473,21 +466,21 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {p0}, Landroidx/navigation/fragment/c;->a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
+    invoke-static {p0}, Lr3/g;->a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/navigation/NavController;->I()Z
+    invoke-virtual {p1}, Landroidx/navigation/NavController;->s0()Z
 
     return-void
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->j()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->k()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->b()Lu2/l;
+    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->c()Lq3/k;
 
     move-result-object p1
 
@@ -501,14 +494,14 @@
     invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 5
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->k()V
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->l()V
 
     .line 6
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->j()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->k()Landroidx/navigation/dynamicfeatures/fragment/ui/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->b()Lu2/l;
+    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->c()Lq3/k;
 
     move-result-object p1
 
@@ -521,7 +514,7 @@
     invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8
-    invoke-virtual {p1}, Lu2/l;->e()Landroidx/lifecycle/LiveData;
+    invoke-virtual {p1}, Lq3/k;->e()Landroidx/lifecycle/LiveData;
 
     move-result-object p2
 
@@ -531,10 +524,17 @@
 
     new-instance v1, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;
 
-    invoke-direct {v1, p0, p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;Lu2/l;)V
+    invoke-direct {v1, p0, p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;Lq3/k;)V
 
     invoke-virtual {p2, v0, v1}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
     :cond_2
     return-void
+.end method
+
+.method public abstract p(IJJ)V
+    .param p1    # I
+        .annotation build Lcom/google/android/play/core/splitinstall/model/SplitInstallSessionStatus;
+        .end annotation
+    .end param
 .end method

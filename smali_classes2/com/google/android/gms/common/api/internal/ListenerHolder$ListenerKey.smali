@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -28,13 +28,6 @@
 
 # instance fields
 .field private final zaa:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "T",
-            "L;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Ljava/lang/String;
 
@@ -144,7 +137,7 @@
 .end method
 
 .method public toIdString()Ljava/lang/String;
-    .locals 4
+    .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -160,29 +153,9 @@
 
     move-result v1
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v2, "@"
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0xc
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "@"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Landroidx/multidex/c;->a(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

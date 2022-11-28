@@ -1,260 +1,150 @@
-.class public abstract Lg2/a;
-.super Landroid/text/style/ReplacementSpan;
-.source "EmojiSpan.java"
+.class public Lg2/a;
+.super Ljava/lang/Object;
+.source "SubscriptionManagerCompat.java"
 
 
 # annotations
 .annotation build Landroidx/annotation/RequiresApi;
-    value = 0x13
+    value = 0x16
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lg2/a$a;
+    }
 .end annotation
 
 
-# instance fields
-.field public final a:Landroid/graphics/Paint$FontMetricsInt;
-
-.field public final b:Landroidx/emoji/text/EmojiMetadata;
-
-.field public c:S
-
-.field public d:S
-
-.field public e:F
+# static fields
+.field public static a:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/emoji/text/EmojiMetadata;)V
-    .locals 1
-    .param p1    # Landroidx/emoji/text/EmojiMetadata;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
-
-    .line 2
-    new-instance v0, Landroid/graphics/Paint$FontMetricsInt;
-
-    invoke-direct {v0}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
-
-    iput-object v0, p0, Lg2/a;->a:Landroid/graphics/Paint$FontMetricsInt;
-
-    const/4 v0, -0x1
-
-    .line 3
-    iput-short v0, p0, Lg2/a;->c:S
-
-    .line 4
-    iput-short v0, p0, Lg2/a;->d:S
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 5
-    iput v0, p0, Lg2/a;->e:F
-
-    const-string v0, "metadata cannot be null"
-
-    .line 6
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 7
-    iput-object p1, p0, Lg2/a;->b:Landroidx/emoji/text/EmojiMetadata;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(I)I
+    .locals 7
 
-# virtual methods
-.method public final a()I
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
+    const/4 v0, -0x1
 
-    .line 1
-    iget-short v0, p0, Lg2/a;->d:S
+    if-ne p0, v0, :cond_0
 
     return v0
-.end method
-
-.method public final b()I
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lg2/a;->c()Landroidx/emoji/text/EmojiMetadata;
+    :cond_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v0
+    const/16 v2, 0x1d
 
-    invoke-virtual {v0}, Landroidx/emoji/text/EmojiMetadata;->g()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c()Landroidx/emoji/text/EmojiMetadata;
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lg2/a;->b:Landroidx/emoji/text/EmojiMetadata;
-
-    return-object v0
-.end method
-
-.method public final d()F
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .line 1
-    iget v0, p0, Lg2/a;->e:F
-
-    return v0
-.end method
-
-.method public final e()I
-    .locals 1
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .line 1
-    iget-short v0, p0, Lg2/a;->c:S
-
-    return v0
-.end method
-
-.method public getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 0
-    .param p1    # Landroid/graphics/Paint;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    iget-object p2, p0, Lg2/a;->a:Landroid/graphics/Paint$FontMetricsInt;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->getFontMetricsInt(Landroid/graphics/Paint$FontMetricsInt;)I
+    if-lt v1, v2, :cond_1
 
     .line 2
-    iget-object p1, p0, Lg2/a;->a:Landroid/graphics/Paint$FontMetricsInt;
+    invoke-static {p0}, Lg2/a$a;->a(I)I
 
-    iget p2, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    move-result p0
 
-    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    sub-int/2addr p2, p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    mul-float/2addr p1, p2
+    return p0
 
     .line 3
-    iget-object p2, p0, Lg2/a;->b:Landroidx/emoji/text/EmojiMetadata;
+    :cond_1
+    :try_start_0
+    sget-object v2, Lg2/a;->a:Ljava/lang/reflect/Method;
 
-    invoke-virtual {p2}, Landroidx/emoji/text/EmojiMetadata;->f()S
+    const/4 v3, 0x0
 
-    move-result p2
+    const/4 v4, 0x1
 
-    int-to-float p2, p2
+    if-nez v2, :cond_3
 
-    div-float/2addr p1, p2
+    const/16 v2, 0x1a
 
-    iput p1, p0, Lg2/a;->e:F
+    if-lt v1, v2, :cond_2
 
     .line 4
-    iget-object p1, p0, Lg2/a;->b:Landroidx/emoji/text/EmojiMetadata;
+    const-class v1, Landroid/telephony/SubscriptionManager;
 
-    invoke-virtual {p1}, Landroidx/emoji/text/EmojiMetadata;->f()S
+    const-string v2, "getSlotIndex"
 
-    move-result p1
+    new-array v5, v4, [Ljava/lang/Class;
 
-    int-to-float p1, p1
+    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    iget p2, p0, Lg2/a;->e:F
+    aput-object v6, v5, v3
 
-    mul-float/2addr p1, p2
+    invoke-virtual {v1, v2, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    float-to-int p1, p1
+    move-result-object v1
 
-    int-to-short p1, p1
+    sput-object v1, Lg2/a;->a:Ljava/lang/reflect/Method;
 
-    iput-short p1, p0, Lg2/a;->d:S
+    goto :goto_0
 
     .line 5
-    iget-object p1, p0, Lg2/a;->b:Landroidx/emoji/text/EmojiMetadata;
+    :cond_2
+    const-class v1, Landroid/telephony/SubscriptionManager;
 
-    invoke-virtual {p1}, Landroidx/emoji/text/EmojiMetadata;->k()S
+    const-string v2, "getSlotId"
 
-    move-result p1
+    new-array v5, v4, [Ljava/lang/Class;
 
-    int-to-float p1, p1
+    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    iget p2, p0, Lg2/a;->e:F
+    aput-object v6, v5, v3
 
-    mul-float/2addr p1, p2
+    invoke-virtual {v1, v2, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    float-to-int p1, p1
+    move-result-object v1
 
-    int-to-short p1, p1
-
-    iput-short p1, p0, Lg2/a;->c:S
-
-    if-eqz p5, :cond_0
+    sput-object v1, Lg2/a;->a:Ljava/lang/reflect/Method;
 
     .line 6
-    iget-object p2, p0, Lg2/a;->a:Landroid/graphics/Paint$FontMetricsInt;
+    :goto_0
+    sget-object v1, Lg2/a;->a:Ljava/lang/reflect/Method;
 
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    invoke-virtual {v1, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     .line 7
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    :cond_3
+    sget-object v1, Lg2/a;->a:Ljava/lang/reflect/Method;
 
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    const/4 v2, 0x0
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    aput-object p0, v4, v3
+
+    invoke-virtual {v1, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    if-eqz p0, :cond_4
 
     .line 8
-    iget p3, p2, Landroid/graphics/Paint$FontMetricsInt;->top:I
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9
-    iget p2, p2, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
+    return p0
 
-    iput p2, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    :cond_0
-    return p1
+    :catch_0
+    :cond_4
+    return v0
 .end method

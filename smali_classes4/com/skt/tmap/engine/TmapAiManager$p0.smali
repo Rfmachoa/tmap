@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->x6(I)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->C6(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -50,12 +50,12 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$p0;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     move-result-object v0
 
@@ -67,31 +67,26 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$p0;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->p0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->K0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget v2, p0, Lcom/skt/tmap/engine/TmapAiManager$p0;->a:I
+    iget v1, p0, Lcom/skt/tmap/engine/TmapAiManager$p0;->a:I
 
-    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;
+    check-cast v0, Lcom/skt/tmap/data/TmapRecentDesInfo;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->A2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+    invoke-virtual {v0}, Lcom/skt/tmap/data/TmapRecentDesInfo;->getRouteSearchPacket()Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$p0;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->C6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
-
-    .line 4
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$p0;->b:Lcom/skt/tmap/engine/TmapAiManager;
-
-    invoke-static {v1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->I0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {v1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     return-void
 .end method

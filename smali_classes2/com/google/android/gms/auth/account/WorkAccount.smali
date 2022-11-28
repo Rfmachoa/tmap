@@ -1,9 +1,13 @@
 .class public Lcom/google/android/gms/auth/account/WorkAccount;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # static fields
 .field public static final API:Lcom/google/android/gms/common/api/Api;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/gms/common/api/Api<",
@@ -13,31 +17,17 @@
     .end annotation
 .end field
 
-.field private static final CLIENT_BUILDER:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "Lcom/google/android/gms/internal/auth/zzr;",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static final CLIENT_KEY:Lcom/google/android/gms/common/api/Api$ClientKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$ClientKey<",
-            "Lcom/google/android/gms/internal/auth/zzr;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field public static final WorkAccountApi:Lcom/google/android/gms/auth/account/WorkAccountApi;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
+
+.field private static final zza:Lcom/google/android/gms/common/api/Api$ClientKey;
+
+.field private static final zzb:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
 
 # direct methods
@@ -49,14 +39,14 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/common/api/Api$ClientKey;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/auth/account/WorkAccount;->CLIENT_KEY:Lcom/google/android/gms/common/api/Api$ClientKey;
+    sput-object v0, Lcom/google/android/gms/auth/account/WorkAccount;->zza:Lcom/google/android/gms/common/api/Api$ClientKey;
 
     .line 2
     new-instance v1, Lcom/google/android/gms/auth/account/zzf;
 
     invoke-direct {v1}, Lcom/google/android/gms/auth/account/zzf;-><init>()V
 
-    sput-object v1, Lcom/google/android/gms/auth/account/WorkAccount;->CLIENT_BUILDER:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
+    sput-object v1, Lcom/google/android/gms/auth/account/WorkAccount;->zzb:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
     .line 3
     new-instance v2, Lcom/google/android/gms/common/api/Api;
@@ -68,9 +58,9 @@
     sput-object v2, Lcom/google/android/gms/auth/account/WorkAccount;->API:Lcom/google/android/gms/common/api/Api;
 
     .line 4
-    new-instance v0, Lcom/google/android/gms/internal/auth/zzh;
+    new-instance v0, Lcom/google/android/gms/internal/auth/zzal;
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/auth/zzh;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/internal/auth/zzal;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/auth/account/WorkAccount;->WorkAccountApi:Lcom/google/android/gms/auth/account/WorkAccountApi;
 
@@ -80,7 +70,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -92,6 +81,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     new-instance v0, Lcom/google/android/gms/auth/account/WorkAccountClient;
@@ -107,6 +98,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 2
     new-instance v0, Lcom/google/android/gms/auth/account/WorkAccountClient;

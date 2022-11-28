@@ -15,19 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/camera/core/ImageCapture$s;)V
-    .param p1    # Landroidx/camera/core/ImageCapture$s;
+.method public abstract a(Landroidx/camera/core/ImageCapture$q;)V
+    .param p1    # Landroidx/camera/core/ImageCapture$q;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "outputFileResults"
-        }
-    .end annotation
 .end method
 
 .method public abstract b(Landroidx/camera/core/ImageSaver$SaveError;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -43,16 +35,4 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "saveError",
-            "message",
-            "cause"
-        }
-    .end annotation
 .end method

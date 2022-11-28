@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/dialog/v;
+.field public final synthetic a:Lcom/skt/tmap/dialog/a0;
 
 .field public final synthetic b:Lcom/skt/tmap/activity/BaseWebViewActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/BaseWebViewActivity;Lcom/skt/tmap/dialog/v;)V
+.method public constructor <init>(Lcom/skt/tmap/activity/BaseWebViewActivity;Lcom/skt/tmap/dialog/a0;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -40,7 +40,7 @@
     .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$c;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
 
-    iput-object p2, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$c;->a:Lcom/skt/tmap/dialog/v;
+    iput-object p2, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$c;->a:Lcom/skt/tmap/dialog/a0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -59,9 +59,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$c;->a:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$c;->a:Lcom/skt/tmap/dialog/a0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     return-void
 .end method

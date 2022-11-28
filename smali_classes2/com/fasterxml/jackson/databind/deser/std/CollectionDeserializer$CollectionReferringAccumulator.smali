@@ -1,4 +1,4 @@
-.class public final Lcom/fasterxml/jackson/databind/deser/std/CollectionDeserializer$CollectionReferringAccumulator;
+.class public Lcom/fasterxml/jackson/databind/deser/std/CollectionDeserializer$CollectionReferringAccumulator;
 .super Ljava/lang/Object;
 .source "CollectionDeserializer.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x9
     name = "CollectionReferringAccumulator"
 .end annotation
 
@@ -105,7 +105,7 @@
 
     const/4 v1, -0x1
 
-    invoke-static {v0, v1}, Lj/c;->a(Ljava/util/List;I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Ll/c;->a(Ljava/util/List;I)Ljava/lang/Object;
 
     move-result-object v0
 

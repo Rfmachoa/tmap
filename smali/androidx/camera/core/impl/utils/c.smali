@@ -3,6 +3,12 @@
 .source "CameraOrientationUtil.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
 # static fields
 .field public static final a:Ljava/lang/String; = "CameraOrientationUtil"
 
@@ -19,14 +25,6 @@
 
 .method public static a(I)I
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "degrees"
-        }
-    .end annotation
 
     if-eqz p0, :cond_3
 
@@ -79,18 +77,6 @@
 
 .method public static b(IIZ)I
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "destRotationDegrees",
-            "sourceRotationDegrees",
-            "isOppositeFacing"
-        }
-    .end annotation
 
     if-eqz p2, :cond_0
 
@@ -113,7 +99,7 @@
     const-string v1, "CameraOrientationUtil"
 
     .line 3
-    invoke-static {v1}, Landroidx/camera/core/x1;->g(Ljava/lang/String;)Z
+    invoke-static {v1}, Landroidx/camera/core/u1;->h(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -164,7 +150,7 @@
     move-result-object p0
 
     .line 6
-    invoke-static {v1, p0}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return v0
@@ -172,14 +158,6 @@
 
 .method public static c(I)I
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rotation"
-        }
-    .end annotation
 
     if-eqz p0, :cond_3
 

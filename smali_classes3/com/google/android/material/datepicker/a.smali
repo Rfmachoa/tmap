@@ -2,16 +2,39 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Lcom/google/android/material/datepicker/DateFormatTextWatcher;
+
+.field public final synthetic b:J
+
 
 # direct methods
-.method public static a(IIII)I
+.method public synthetic constructor <init>(Lcom/google/android/material/datepicker/DateFormatTextWatcher;J)V
     .locals 0
 
-    add-int/2addr p0, p1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    mul-int/2addr p0, p2
+    iput-object p1, p0, Lcom/google/android/material/datepicker/a;->a:Lcom/google/android/material/datepicker/DateFormatTextWatcher;
 
-    add-int/2addr p0, p3
+    iput-wide p2, p0, Lcom/google/android/material/datepicker/a;->b:J
 
-    return p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/datepicker/a;->a:Lcom/google/android/material/datepicker/DateFormatTextWatcher;
+
+    iget-wide v1, p0, Lcom/google/android/material/datepicker/a;->b:J
+
+    invoke-static {v0, v1, v2}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->b(Lcom/google/android/material/datepicker/DateFormatTextWatcher;J)V
+
+    return-void
 .end method

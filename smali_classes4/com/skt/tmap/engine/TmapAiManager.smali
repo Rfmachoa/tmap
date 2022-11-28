@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/skt/tmap/engine/TmapAiManager$x1;,
         Lcom/skt/tmap/engine/TmapAiManager$y1;,
+        Lcom/skt/tmap/engine/TmapAiManager$z1;,
         Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
     }
 .end annotation
@@ -47,7 +47,7 @@
 
 .field public E:Ljava/lang/String;
 
-.field public E0:Lcom/skt/tmap/engine/TmapAiManager$y1;
+.field public E0:Lcom/skt/tmap/engine/TmapAiManager$z1;
 
 .field public F:Ljava/lang/String;
 
@@ -139,7 +139,7 @@
     .end annotation
 .end field
 
-.field public Z:Lcom/skt/tmap/engine/f0;
+.field public Z:Lcom/skt/tmap/engine/h0;
 
 .field public a:Lcom/skt/voice/tyche/NuguSdkManager;
 
@@ -147,11 +147,11 @@
 
 .field public b:Landroid/app/Activity;
 
-.field public b0:Lcom/skt/tmap/engine/e0;
+.field public b0:Lcom/skt/tmap/engine/g0;
 
 .field public c:Landroid/media/AudioFocusRequest;
 
-.field public c0:Lcom/skt/tmap/engine/a0;
+.field public c0:Lcom/skt/tmap/engine/c0;
 
 .field public d:Landroid/media/AudioManager;
 
@@ -363,7 +363,7 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a0:Z
 
     .line 25
-    sget v4, Lcom/skt/voice/tyche/AiConstant;->V:I
+    sget v4, Lcom/skt/voice/tyche/AiConstant;->Z:I
 
     int-to-long v4, v4
 
@@ -376,7 +376,7 @@
     iput-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->j0:Ljava/lang/String;
 
     .line 28
-    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->W:J
+    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->a0:J
 
     iput-wide v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
 
@@ -384,7 +384,7 @@
     iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->l0:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;
 
     .line 30
-    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->Z:J
+    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->d0:J
 
     iput-wide v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->m0:J
 
@@ -463,30 +463,30 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->J0:Z
 
     .line 51
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$e;
-
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$e;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->K0:Ljava/lang/Runnable;
-
-    .line 52
     new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$f;
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$f;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->L0:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->K0:Ljava/lang/Runnable;
 
-    .line 53
+    .line 52
     new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$g;
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$g;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->L0:Ljava/lang/Runnable;
+
+    .line 53
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$h;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$h;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->M0:Ljava/lang/Runnable;
 
     .line 54
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$t0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$u0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$t0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$u0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->N0:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
@@ -494,7 +494,7 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 56
-    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->c0(Landroid/content/Context;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->H0(Landroid/content/Context;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v0
 
@@ -512,7 +512,7 @@
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 58
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->u1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()V
 
     .line 59
     iput-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
@@ -600,7 +600,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f12001d
+    const v3, 0x7f13001e
 
     invoke-virtual {v0, v2, v3, v1}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
 
@@ -615,7 +615,7 @@
 
     move-result-object p1
 
-    const v2, 0x7f12001b
+    const v2, 0x7f13001c
 
     invoke-virtual {v0, p1, v2, v1}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
 
@@ -626,11 +626,11 @@
     return-void
 .end method
 
-.method public static synthetic A0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+.method public static synthetic A0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->B4(Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
 
     return-void
 .end method
@@ -644,11 +644,11 @@
     return-object v0
 .end method
 
-.method public static synthetic B0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+.method public static synthetic B0(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E3()V
 
     return-void
 .end method
@@ -662,11 +662,11 @@
     return p0
 .end method
 
-.method public static synthetic C0(Lcom/skt/tmap/engine/TmapAiManager;Landroid/app/Activity;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Ljava/lang/String;Z)V
+.method public static synthetic C0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/skt/tmap/engine/TmapAiManager;->X4(Landroid/app/Activity;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->S3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
 
     return-void
 .end method
@@ -680,18 +680,58 @@
     return p0
 .end method
 
-.method public static synthetic D0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Ljava/lang/String;
+.method public static synthetic D0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static synthetic E(Lcom/skt/tmap/engine/TmapAiManager;I)I
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->w0:I
+
+    return p1
+.end method
+
+.method public static synthetic E0(Lcom/skt/tmap/engine/TmapAiManager;Landroid/app/Activity;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Ljava/lang/String;Z)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/skt/tmap/engine/TmapAiManager;->Z4(Landroid/app/Activity;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public static synthetic F(Lcom/skt/tmap/engine/TmapAiManager;)I
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->w0:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->w0:I
+
+    return v0
+.end method
+
+.method public static synthetic F0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static D1(Landroid/app/Activity;)Lcom/skt/tmap/engine/TmapAiManager;
+.method public static F1(Landroid/app/Activity;)Lcom/skt/tmap/engine/TmapAiManager;
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -718,62 +758,22 @@
     :cond_0
     sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->S0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->u1()V
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()V
 
     .line 4
     sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->S0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager;->w5(Landroid/app/Activity;)V
+    invoke-virtual {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager;->y5(Landroid/app/Activity;)V
 
     .line 5
     sget-object p0, Lcom/skt/tmap/engine/TmapAiManager;->S0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Y1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->a2()V
 
     .line 6
     sget-object p0, Lcom/skt/tmap/engine/TmapAiManager;->S0:Lcom/skt/tmap/engine/TmapAiManager;
 
     return-object p0
-.end method
-
-.method public static synthetic E(Lcom/skt/tmap/engine/TmapAiManager;I)I
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->w0:I
-
-    return p1
-.end method
-
-.method public static synthetic E0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/skt/tmap/engine/TmapAiManager;->I3(Ljava/lang/String;Ljava/lang/String;II)V
-
-    return-void
-.end method
-
-.method public static synthetic F(Lcom/skt/tmap/engine/TmapAiManager;)I
-    .locals 2
-
-    .line 1
-    iget v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->w0:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->w0:I
-
-    return v0
-.end method
-
-.method public static synthetic F0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;II)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/skt/tmap/engine/TmapAiManager;->L3(Ljava/lang/String;II)V
-
-    return-void
 .end method
 
 .method public static synthetic G(Lcom/skt/tmap/engine/TmapAiManager;)Z
@@ -785,13 +785,13 @@
     return p0
 .end method
 
-.method public static synthetic G0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
+.method public static synthetic G0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->W:Ljava/util/List;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/skt/tmap/engine/TmapAiManager;->K3(Ljava/lang/String;Ljava/lang/String;II)V
 
-    return-object p0
+    return-void
 .end method
 
 .method public static synthetic H(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
@@ -803,38 +803,38 @@
     return p1
 .end method
 
-.method public static synthetic H0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
+.method public static synthetic H0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;II)V
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->X:Ljava/util/List;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/skt/tmap/engine/TmapAiManager;->N3(Ljava/lang/String;II)V
 
-    return-object p0
+    return-void
 .end method
 
 .method public static synthetic I(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->d6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f6()V
 
     return-void
 .end method
 
-.method public static synthetic I0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method public static synthetic I0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->e1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->W:Ljava/util/List;
 
-    return-void
+    return-object p0
 .end method
 
-.method public static synthetic J(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic J(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/tmap/engine/h0;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
     return-object p0
 .end method
@@ -848,7 +848,43 @@
     return-object p0
 .end method
 
-.method public static J2(Landroid/content/Context;)Z
+.method public static synthetic K(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/support/v4/media/session/MediaSessionCompat;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
+
+    return-object p0
+.end method
+
+.method public static synthetic K0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->X:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public static synthetic L(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic L0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;)Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+
+    return-object p1
+.end method
+
+.method public static L2(Landroid/content/Context;)Z
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -860,14 +896,14 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->p1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->x1(Landroid/content/Context;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic K(Lcom/skt/tmap/engine/TmapAiManager;)I
+.method public static synthetic M(Lcom/skt/tmap/engine/TmapAiManager;)I
     .locals 0
 
     .line 1
@@ -876,16 +912,16 @@
     return p0
 .end method
 
-.method public static synthetic K0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+.method public static synthetic M0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->s0:Z
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->g1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
-    return p1
+    return-void
 .end method
 
-.method public static K2(Landroid/content/Context;)Z
+.method public static M2(Landroid/content/Context;)Z
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -897,14 +933,14 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->J2(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->L2(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->R6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
 
     move-result p0
 
@@ -921,7 +957,7 @@
     return p0
 .end method
 
-.method public static synthetic L(Lcom/skt/tmap/engine/TmapAiManager;)I
+.method public static synthetic N(Lcom/skt/tmap/engine/TmapAiManager;)I
     .locals 2
 
     .line 1
@@ -934,16 +970,16 @@
     return v0
 .end method
 
-.method public static synthetic L0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;)Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+.method public static synthetic N0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->s0:Z
 
-    return-object p1
+    return p1
 .end method
 
-.method public static synthetic M(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic O(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -952,7 +988,7 @@
     return p0
 .end method
 
-.method public static synthetic M0(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic O0(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -961,7 +997,7 @@
     return p0
 .end method
 
-.method public static synthetic N()Lcom/skt/tmap/engine/TmapAiManager;
+.method public static synthetic P()Lcom/skt/tmap/engine/TmapAiManager;
     .locals 1
 
     .line 1
@@ -970,7 +1006,7 @@
     return-object v0
 .end method
 
-.method public static synthetic N0(Lcom/skt/tmap/engine/TmapAiManager;)J
+.method public static synthetic P0(Lcom/skt/tmap/engine/TmapAiManager;)J
     .locals 2
 
     .line 1
@@ -979,7 +1015,7 @@
     return-wide v0
 .end method
 
-.method public static N6(Landroid/content/Context;)Z
+.method public static P6(Landroid/content/Context;)Z
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -991,13 +1027,13 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->m1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->u1(Landroid/content/Context;)Z
 
     move-result p0
 
@@ -1014,7 +1050,7 @@
     return p0
 .end method
 
-.method public static synthetic O(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic Q(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -1023,7 +1059,7 @@
     return p0
 .end method
 
-.method public static synthetic O0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic Q0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -1032,7 +1068,7 @@
     return-object p0
 .end method
 
-.method public static O2(Ljava/util/List;)Z
+.method public static Q2(Ljava/util/List;)Z
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1066,153 +1102,6 @@
     return p0
 .end method
 
-.method public static O6(Landroid/content/Context;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->p1(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->q1(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "feature.useNugu"
-
-    .line 3
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->j(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static synthetic P(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->l:Z
-
-    return p1
-.end method
-
-.method public static synthetic P0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->u0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-
-    return-object p0
-.end method
-
-.method public static P2(Landroid/content/Context;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->j1(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 2
-    :cond_0
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->k1(Landroid/content/Context;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static P6(Landroid/content/Context;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->s1(Landroid/content/Context;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static synthetic Q(Lcom/skt/tmap/engine/TmapAiManager;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
-
-    return p0
-.end method
-
-.method public static synthetic Q0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->u0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-
-    return-object p1
-.end method
-
 .method public static Q6(Landroid/content/Context;)Z
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
@@ -1225,30 +1114,23 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->x1(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const-string v0, "feature.catchCallWhileRouting"
+    if-nez v0, :cond_0
 
     .line 2
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->j(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->y1(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
+
+    const-string v0, "feature.useNugu"
 
     .line 3
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->s1(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 4
-    invoke-static {p0}, Lcom/skt/tmap/util/l0;->h(Landroid/content/Context;)Z
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->j(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
 
@@ -1269,18 +1151,49 @@
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
+    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->l:Z
 
     return p1
 .end method
 
-.method public static synthetic R0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method public static synthetic R0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->u0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static R2(Landroid/content/Context;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->o1(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    .line 2
+    :cond_0
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->p1(Landroid/content/Context;)Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static R6(Landroid/content/Context;)Z
@@ -1295,14 +1208,13 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->p1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 2
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->q1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->z1(Landroid/content/Context;)Z
 
     move-result p0
 
@@ -1319,16 +1231,140 @@
     return p0
 .end method
 
-.method public static synthetic S(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
     .locals 0
 
     .line 1
-    iget-boolean p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i:Z
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    return-object p0
+.end method
+
+.method public static synthetic S0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->u0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+
+    return-object p1
+.end method
+
+.method public static S6(Landroid/content/Context;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "feature.catchCallWhileRouting"
+
+    .line 2
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->j(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->z1(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-static {p0}, Lcom/skt/tmap/util/r0;->h(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public static synthetic T(Lcom/skt/tmap/engine/TmapAiManager;)Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
 
     return p0
 .end method
 
-.method public static synthetic S0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/tmap/engine/navigation/LockableHandler;
+.method public static synthetic T0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->A1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+
+    return-void
+.end method
+
+.method public static T6(Landroid/content/Context;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->x1(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->y1(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public static synthetic U(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
+
+    return p1
+.end method
+
+.method public static synthetic U0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/tmap/engine/navigation/LockableHandler;
     .locals 0
 
     .line 1
@@ -1337,7 +1373,7 @@
     return-object p0
 .end method
 
-.method public static S6(Landroid/content/Context;)Z
+.method public static U6(Landroid/content/Context;)Z
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1358,27 +1394,27 @@
     return p0
 .end method
 
-.method public static synthetic T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+.method public static synthetic V(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+    iget-boolean p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i:Z
 
-    return-object p0
+    return p0
 .end method
 
-.method public static synthetic T0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic V0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E2()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G2()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static T6(Landroid/content/Context;)Z
+.method public static V6(Landroid/content/Context;)Z
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1399,7 +1435,7 @@
     return p0
 .end method
 
-.method public static synthetic U(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic W(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -1408,16 +1444,16 @@
     return p0
 .end method
 
-.method public static synthetic U0(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic W0(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->S1()V
+    iget-boolean p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->z0:Z
 
-    return-void
+    return p0
 .end method
 
-.method public static U6(Landroid/content/Context;)Z
+.method public static W6(Landroid/content/Context;)Z
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1429,7 +1465,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->R6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1438,14 +1474,14 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->S6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->U6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->s1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->z1(Landroid/content/Context;)Z
 
     move-result p0
 
@@ -1460,7 +1496,7 @@
     return v1
 .end method
 
-.method public static synthetic V(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+.method public static synthetic X(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
     .locals 0
 
     .line 1
@@ -1469,16 +1505,16 @@
     return p1
 .end method
 
-.method public static synthetic V0(Lcom/skt/tmap/engine/TmapAiManager;I)V
+.method public static synthetic X0(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(I)V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->U1()V
 
     return-void
 .end method
 
-.method public static V1(Ljava/lang/String;)Lcom/skt/voice/tyche/data/CardResult;
+.method public static X1(Ljava/lang/String;)Lcom/skt/voice/tyche/data/CardResult;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1534,7 +1570,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1556,13 +1592,13 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
 .end method
 
-.method public static synthetic W(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
+.method public static synthetic Y(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -1571,36 +1607,44 @@
     return-object p0
 .end method
 
-.method public static synthetic W0(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic Y0(Lcom/skt/tmap/engine/TmapAiManager;I)V
     .locals 0
 
     .line 1
-    iget-boolean p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->z0:Z
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
 
-    return p0
+    return-void
 .end method
 
-.method public static synthetic X(Ljava/util/List;)Z
+.method public static synthetic Z(Ljava/util/List;)Z
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic X0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+.method public static synthetic Z0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Z4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->b5(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic Y(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Ljava/lang/String;
+.method public static synthetic a(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->v3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+
+    return-void
+.end method
+
+.method public static synthetic a0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -1609,16 +1653,24 @@
     return-object p1
 .end method
 
-.method public static synthetic Y0(Lcom/skt/tmap/engine/TmapAiManager;I)V
+.method public static synthetic a1(Lcom/skt/tmap/engine/TmapAiManager;I)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J1(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->L1(I)V
 
     return-void
 .end method
 
-.method public static synthetic Z(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+.method public static synthetic b(Lcom/skt/tmap/engine/TmapAiManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l3()V
+
+    return-void
+.end method
+
+.method public static synthetic b0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
     .locals 0
 
     .line 1
@@ -1627,7 +1679,7 @@
     return p1
 .end method
 
-.method public static synthetic Z0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+.method public static synthetic b1(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
     .locals 0
 
     .line 1
@@ -1636,7 +1688,7 @@
     return-object p1
 .end method
 
-.method public static Z1(Ljava/lang/String;)Ljava/lang/String;
+.method public static b2(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -1708,15 +1760,15 @@
     return-object v0
 .end method
 
-.method public static synthetic a(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+.method public static synthetic c(Lcom/skt/tmap/engine/TmapAiManager;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->t3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z3(I)V
 
     return-void
 .end method
 
-.method public static synthetic a0(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic c0(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -1725,7 +1777,7 @@
     return p0
 .end method
 
-.method public static synthetic a1(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic c1(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -1734,15 +1786,15 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic d(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->j3()V
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r3()V
 
     return-void
 .end method
 
-.method public static synthetic b0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+.method public static synthetic d0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
     .locals 0
 
     .line 1
@@ -1751,7 +1803,7 @@
     return p1
 .end method
 
-.method public static synthetic b1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+.method public static synthetic d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
     .locals 0
 
     .line 1
@@ -1760,15 +1812,17 @@
     return-object p0
 .end method
 
-.method public static synthetic c(Lcom/skt/tmap/engine/TmapAiManager;I)V
+.method public static synthetic e(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x3(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->r1(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public static synthetic c0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic e0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -1777,7 +1831,7 @@
     return-object p0
 .end method
 
-.method public static synthetic c1(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic e1(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -1786,21 +1840,21 @@
     return p0
 .end method
 
-.method public static synthetic c3(Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
+.method public static synthetic e3(Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
     .locals 0
 
     return-void
 .end method
 
-.method public static synthetic d(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic f(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p3()V
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m3()V
 
     return-void
 .end method
 
-.method public static synthetic d0(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic f0(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -1809,7 +1863,7 @@
     return p0
 .end method
 
-.method public static synthetic d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+.method public static synthetic f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
     .locals 0
 
     .line 1
@@ -1818,7 +1872,7 @@
     return-object p0
 .end method
 
-.method private synthetic d3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+.method private synthetic f3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
     .locals 1
 
     if-eqz p2, :cond_0
@@ -1834,7 +1888,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, v0, p2}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p2}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1844,13 +1898,13 @@
     :cond_0
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p2, p1, p1}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1, p1}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 3
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -1864,17 +1918,15 @@
     return-void
 .end method
 
-.method public static synthetic e(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+.method public static synthetic g(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->p1(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+    invoke-direct {p0, p1, p2, p3}, Lcom/skt/tmap/engine/TmapAiManager;->p3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static synthetic e0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+.method public static synthetic g0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
     .locals 0
 
     .line 1
@@ -1883,7 +1935,7 @@
     return p1
 .end method
 
-.method private synthetic e3(I)V
+.method private synthetic g3(I)V
     .locals 2
 
     .line 1
@@ -1909,30 +1961,30 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     :goto_0
     return-void
 .end method
 
-.method public static synthetic f(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic h(Lcom/skt/tmap/engine/TmapAiManager;Lkotlin/Pair;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->k3()V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h3(Lkotlin/Pair;)V
 
     return-void
 .end method
 
-.method public static synthetic f0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
+.method public static synthetic h0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/NuguSdkManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->d:Landroid/media/AudioManager;
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
     return-object p0
 .end method
 
-.method private synthetic f3(Lkotlin/Pair;)V
+.method private synthetic h3(Lkotlin/Pair;)V
     .locals 5
 
     .line 1
@@ -1962,7 +2014,7 @@
 
     check-cast v1, Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;
 
-    invoke-static {v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/h;->j(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
+    invoke-static {v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/z;->k(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
 
     move-result-object v2
 
@@ -1973,7 +2025,7 @@
 
     check-cast p1, Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;
 
-    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/h;->s(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
+    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/z;->t(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
 
     move-result-object p1
 
@@ -2003,7 +2055,7 @@
     if-nez p1, :cond_3
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->k5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
 
     goto :goto_1
 
@@ -2017,7 +2069,7 @@
 
     .line 10
     :cond_4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object p1
 
@@ -2058,7 +2110,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c;->y(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/d;->y(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2068,30 +2120,30 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
 
     .line 17
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :goto_1
     return-void
 .end method
 
-.method public static synthetic g(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+.method public static synthetic i(Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/skt/tmap/engine/TmapAiManager;->n3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->e3(Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
 
     return-void
 .end method
 
-.method public static synthetic g0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioFocusRequest;
+.method public static synthetic i0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->c:Landroid/media/AudioFocusRequest;
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->d:Landroid/media/AudioManager;
 
     return-object p0
 .end method
 
-.method private synthetic g3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
+.method private synthetic i3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
     .locals 3
 
     if-eqz p1, :cond_1
@@ -2127,7 +2179,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -2138,7 +2190,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -2149,7 +2201,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -2174,20 +2226,20 @@
     invoke-virtual {v0, v1, p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPosString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->y1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->A1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     goto :goto_0
 
     .line 12
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->C6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     goto :goto_0
 
@@ -2205,7 +2257,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f130086
+    const v2, 0x7f140087
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -2216,13 +2268,13 @@
     .line 15
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f13007b
+    const v0, 0x7f14007c
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -2238,7 +2290,7 @@
     .line 19
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f130036
+    const v0, 0x7f140036
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -2250,24 +2302,24 @@
     return-void
 .end method
 
-.method public static synthetic h(Lcom/skt/tmap/engine/TmapAiManager;Lkotlin/Pair;)V
+.method public static synthetic j(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->f3(Lkotlin/Pair;)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y3(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic h0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/NuguSdkManager;
+.method public static synthetic j0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioFocusRequest;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
+    iget-object p0, p0, Lcom/skt/tmap/engine/TmapAiManager;->c:Landroid/media/AudioFocusRequest;
 
     return-object p0
 .end method
 
-.method private synthetic h3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
+.method private synthetic j3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
     .locals 3
 
     if-eqz p1, :cond_1
@@ -2303,7 +2355,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -2314,7 +2366,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -2325,7 +2377,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -2350,20 +2402,20 @@
     invoke-virtual {v0, v1, p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPosString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->y1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->A1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     goto :goto_0
 
     .line 12
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->C6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     goto :goto_0
 
@@ -2381,7 +2433,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f130086
+    const v2, 0x7f140087
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -2392,13 +2444,13 @@
     .line 15
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f13007e
+    const v0, 0x7f14007f
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -2414,7 +2466,7 @@
     .line 19
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f130036
+    const v0, 0x7f140036
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -2426,15 +2478,15 @@
     return-void
 .end method
 
-.method public static synthetic i(Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
+.method public static synthetic k(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapTipOffData;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->c3(Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o3(Lcom/skt/tmap/data/TmapTipOffData;)V
 
     return-void
 .end method
 
-.method public static synthetic i0(Lcom/skt/tmap/engine/TmapAiManager;)Z
+.method public static synthetic k0(Lcom/skt/tmap/engine/TmapAiManager;)Z
     .locals 0
 
     .line 1
@@ -2443,7 +2495,7 @@
     return p0
 .end method
 
-.method private synthetic i3(Ljava/util/List;)V
+.method private synthetic k3(Ljava/util/List;)V
     .locals 5
 
     if-eqz p1, :cond_1
@@ -2464,7 +2516,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object v0
 
@@ -2507,7 +2559,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c;->y(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/d;->y(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2517,27 +2569,27 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
 
     .line 10
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 11
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->q5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->s5()V
 
     :goto_0
     return-void
 .end method
 
-.method public static synthetic j(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+.method public static synthetic l(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w3(Ljava/lang/String;)V
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n3()V
 
     return-void
 .end method
 
-.method public static synthetic j0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
+.method public static synthetic l0(Lcom/skt/tmap/engine/TmapAiManager;Z)Z
     .locals 0
 
     .line 1
@@ -2546,24 +2598,26 @@
     return p1
 .end method
 
-.method private synthetic j3()V
+.method private synthetic l3()V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 .end method
 
-.method public static synthetic k(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapTipOffData;)V
+.method public static synthetic m(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m3(Lcom/skt/tmap/data/TmapTipOffData;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public static synthetic k0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic m0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -2572,11 +2626,11 @@
     return-object p0
 .end method
 
-.method private synthetic k3()V
+.method private synthetic m3()V
     .locals 5
 
     .line 1
-    invoke-static {}, Lic/b;->a()Lic/b;
+    invoke-static {}, Lge/b;->a()Lge/b;
 
     move-result-object v0
 
@@ -2588,23 +2642,23 @@
 
     iget-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lic/b;->u(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lge/b;->u(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 .end method
 
-.method public static synthetic l(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic n(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l3()V
+    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->f3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
 
     return-void
 .end method
 
-.method public static synthetic l0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic n0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -2613,7 +2667,7 @@
     return-object p0
 .end method
 
-.method public static l2()Lcom/skt/tmap/engine/TmapAiManager;
+.method public static n2()Lcom/skt/tmap/engine/TmapAiManager;
     .locals 1
 
     .line 1
@@ -2622,41 +2676,39 @@
     return-object v0
 .end method
 
-.method private synthetic l3()V
+.method private synthetic n3()V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 .end method
 
-.method public static synthetic m(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+.method public static synthetic o(Lcom/skt/tmap/engine/TmapAiManager;I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M6(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->g3(I)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static synthetic m0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/location/Location;
+.method public static synthetic o0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/location/Location;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private synthetic m3(Lcom/skt/tmap/data/TmapTipOffData;)V
+.method private synthetic o3(Lcom/skt/tmap/data/TmapTipOffData;)V
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->p:Lcom/skt/tmap/db/TipOffDatabase$a;
+    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->q:Lcom/skt/tmap/db/TipOffDatabase$a;
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
@@ -2676,20 +2728,20 @@
     invoke-direct {v1, v2, p1}, Lcom/skt/tmap/db/entity/TipOffEntity;-><init>(Ljava/lang/Long;Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/db/TipOffDatabase;->E(Lcom/skt/tmap/db/entity/TipOffEntity;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/db/TipOffDatabase;->P(Lcom/skt/tmap/db/entity/TipOffEntity;)V
 
     return-void
 .end method
 
-.method public static synthetic n(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+.method public static synthetic p(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->d3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+    invoke-direct/range {p0 .. p5}, Lcom/skt/tmap/engine/TmapAiManager;->q3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic n0(Lcom/skt/tmap/engine/TmapAiManager;)[I
+.method public static synthetic p0(Lcom/skt/tmap/engine/TmapAiManager;)[I
     .locals 0
 
     .line 1
@@ -2698,32 +2750,32 @@
     return-object p0
 .end method
 
-.method private synthetic n3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+.method private synthetic p3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
-    const p1, 0x7f130885
+    const p1, 0x7f140907
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 .end method
 
-.method public static synthetic o(Lcom/skt/tmap/engine/TmapAiManager;I)V
+.method public static synthetic q(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->e3(I)V
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t3()V
 
     return-void
 .end method
 
-.method public static synthetic o0(Lcom/skt/tmap/engine/TmapAiManager;[I)[I
+.method public static synthetic q0(Lcom/skt/tmap/engine/TmapAiManager;[I)[I
     .locals 0
 
     .line 1
@@ -2732,11 +2784,11 @@
     return-object p1
 .end method
 
-.method private synthetic o3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+.method private synthetic q3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 2
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -2752,15 +2804,15 @@
     return-void
 .end method
 
-.method public static synthetic p(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+.method public static synthetic r(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/skt/tmap/engine/TmapAiManager;->o3(Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
 
     return-void
 .end method
 
-.method public static synthetic p0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
+.method public static synthetic r0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -2769,24 +2821,24 @@
     return-object p0
 .end method
 
-.method private synthetic p3()V
+.method private synthetic r3()V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t5()V
 
     return-void
 .end method
 
-.method public static synthetic q(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic s(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r3()V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x3(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static synthetic q0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)Ljava/util/List;
+.method public static synthetic s0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -2795,7 +2847,7 @@
     return-object p1
 .end method
 
-.method private synthetic q3()V
+.method private synthetic s3()V
     .locals 3
 
     .line 1
@@ -2810,13 +2862,13 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f130077
+    const v1, 0x7f140078
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -2829,7 +2881,7 @@
     iput-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     const-string v0, "remove.stopby"
 
@@ -2839,15 +2891,15 @@
     return-void
 .end method
 
-.method public static synthetic r(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
+.method public static synthetic t(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w3()V
 
     return-void
 .end method
 
-.method public static synthetic r0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+.method public static synthetic t0(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -2856,24 +2908,24 @@
     return-object p0
 .end method
 
-.method private synthetic r3()V
+.method private synthetic t3()V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t5()V
 
     return-void
 .end method
 
-.method public static synthetic s(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)V
+.method public static synthetic u(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->v3(Ljava/util/List;)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->i3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
 
     return-void
 .end method
 
-.method public static synthetic s0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Ljava/lang/String;
+.method public static synthetic u0(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -2882,13 +2934,13 @@
     return-object p1
 .end method
 
-.method private synthetic s3(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method private synthetic u3(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 15
 
     move-object v0, p0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object v2
 
@@ -2924,7 +2976,7 @@
     iget-object v4, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 7
-    invoke-static {v4}, Lyc/a;->b(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
+    invoke-static {v4}, Lze/a;->b(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
 
     move-result-object v4
 
@@ -2939,7 +2991,7 @@
     iget-object v4, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 8
-    invoke-static {v4}, Lyc/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    invoke-static {v4}, Lze/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
 
     move-result-object v4
 
@@ -2969,15 +3021,15 @@
     return-void
 .end method
 
-.method public static synthetic t(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public static synthetic v(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->u3()V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->k3(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static synthetic t0(Lcom/skt/tmap/engine/TmapAiManager;)[I
+.method public static synthetic v0(Lcom/skt/tmap/engine/TmapAiManager;)[I
     .locals 0
 
     .line 1
@@ -2986,7 +3038,7 @@
     return-object p0
 .end method
 
-.method private synthetic t3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+.method private synthetic v3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
     .locals 1
 
     const-string/jumbo v0, "\ubaa9\uc801\uc9c0"
@@ -3000,7 +3052,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, v0, p2}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p2}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3010,26 +3062,28 @@
     :cond_0
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p2, v0, p1}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0, p1}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 3
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic u(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
+.method public static synthetic w(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Lkotlin/d1;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->g3(Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->S1(Ljava/lang/String;)Lkotlin/d1;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public static synthetic u0(Lcom/skt/tmap/engine/TmapAiManager;[I)[I
+.method public static synthetic w0(Lcom/skt/tmap/engine/TmapAiManager;[I)[I
     .locals 0
 
     .line 1
@@ -3038,7 +3092,7 @@
     return-object p1
 .end method
 
-.method private synthetic u3()V
+.method private synthetic w3()V
     .locals 3
 
     .line 1
@@ -3053,35 +3107,35 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f130089
+    const v1, 0x7f14008a
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic v(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)V
+.method public static synthetic x(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->i3(Ljava/util/List;)V
+    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->u3(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     return-void
 .end method
 
-.method public static synthetic v0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/Actions;)V
-    .locals 0
+.method public static synthetic x0(Lcom/skt/tmap/engine/TmapAiManager;)J
+    .locals 2
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w4(Lcom/skt/voice/tyche/data/Actions;)V
+    iget-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->C0:J
 
-    return-void
+    return-wide v0
 .end method
 
-.method private synthetic v3(Ljava/util/List;)V
+.method private synthetic x3(Ljava/util/List;)V
     .locals 3
 
     const/4 v0, 0x1
@@ -3090,41 +3144,39 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->s0:Z
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$x0;
+    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$y0;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$x0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$y0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/skt/tmap/engine/l0;->H(Landroid/content/Context;Ljava/util/List;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
+    invoke-virtual {v0, v1, p1, v2}, Lcom/skt/tmap/engine/v0;->M(Landroid/content/Context;Ljava/util/List;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
 
     return-void
 .end method
 
-.method public static synthetic w(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Lkotlin/d1;
+.method public static synthetic y(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q1(Ljava/lang/String;)Lkotlin/d1;
+    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->s3()V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static synthetic w0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+.method public static synthetic y0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/Actions;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->z4(Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y4(Lcom/skt/voice/tyche/data/Actions;)V
 
     return-void
 .end method
 
-.method private synthetic w3(Ljava/lang/String;)V
+.method private synthetic y3(Ljava/lang/String;)V
     .locals 10
 
     .line 1
@@ -3132,7 +3184,7 @@
 
     const-string v1, "startReroute"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
@@ -3167,26 +3219,26 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->b3(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->d3(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object p1
 
-    new-instance v0, Lcom/skt/tmap/engine/d;
+    new-instance v0, Lcom/skt/tmap/engine/c;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/d;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/c;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    new-instance v1, Lcom/skt/tmap/engine/e;
+    new-instance v1, Lcom/skt/tmap/engine/d;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/e;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/d;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/engine/l0;->k1(Lej/l;Lej/l;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/engine/v0;->B1(Lgl/l;Lgl/l;)V
 
     goto/16 :goto_4
 
@@ -3198,7 +3250,7 @@
     const-string p1, "oos"
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -3312,7 +3364,7 @@
     .line 16
     :cond_6
     :goto_3
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object p1
 
@@ -3320,44 +3372,36 @@
 
     move-result v0
 
-    new-instance v1, Lcom/skt/tmap/engine/c;
+    new-instance v1, Lcom/skt/tmap/engine/b;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/c;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/b;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    new-instance v2, Lcom/skt/tmap/engine/e;
+    new-instance v2, Lcom/skt/tmap/engine/d;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/e;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/d;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/skt/tmap/engine/l0;->L(ILej/l;Lej/l;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/skt/tmap/engine/v0;->Q(ILgl/l;Lgl/l;)V
 
     goto :goto_4
 
     .line 17
     :cond_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     :goto_4
     return-void
 .end method
 
-.method public static synthetic x(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method public static synthetic z0(Lcom/skt/tmap/engine/TmapAiManager;J)J
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->s3(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
-
-    return-void
-.end method
-
-.method public static synthetic x0(Lcom/skt/tmap/engine/TmapAiManager;)J
-    .locals 2
-
     .line 1
-    iget-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->C0:J
+    iput-wide p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C0:J
 
-    return-wide v0
+    return-wide p1
 .end method
 
-.method private synthetic x3(I)V
+.method private synthetic z3(I)V
     .locals 3
 
     .line 1
@@ -3403,46 +3447,20 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->s0:Z
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$a1;
+    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$b1;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$a1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$b1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/skt/tmap/engine/l0;->D0(Landroid/content/Context;ILcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
+    invoke-virtual {v0, v1, p1, v2}, Lcom/skt/tmap/engine/v0;->V0(Landroid/content/Context;ILcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
 
     :cond_0
     return-void
-.end method
-
-.method public static synthetic y(Lcom/skt/tmap/engine/TmapAiManager;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/skt/tmap/engine/TmapAiManager;->q3()V
-
-    return-void
-.end method
-
-.method public static synthetic y0(Lcom/skt/tmap/engine/TmapAiManager;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->C3()V
-
-    return-void
-.end method
-
-.method public static synthetic z0(Lcom/skt/tmap/engine/TmapAiManager;J)J
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C0:J
-
-    return-wide p1
 .end method
 
 
@@ -3464,7 +3482,1115 @@
     return-void
 .end method
 
-.method public A1()V
+.method public final A1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "selectData"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    .line 2
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    .line 3
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 4
+    :cond_0
+    sget-object v0, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->SpeechRecogSearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
+
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setExploreCode(Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;)V
+
+    .line 5
+    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->v6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_3
+
+    .line 7
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return-void
+
+    :cond_2
+    const/4 v1, 0x0
+
+    .line 8
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
+
+    invoke-virtual {v4}, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 9
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->getfurName()[B
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 10
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
+
+    .line 11
+    iget-object v6, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    sget-object v7, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SHOW_ALL_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
+
+    invoke-interface {v6, v7, v4, v5, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->s(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    const v4, 0x7f140079
+
+    invoke-virtual {v2, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
+
+    .line 13
+    iput-boolean v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
+
+    .line 14
+    new-instance v2, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
+
+    invoke-direct {v2, v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;-><init>(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
+
+    iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->d0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+
+    .line 15
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->e0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+
+    .line 16
+    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;->IN_STOP_BY:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+
+    goto :goto_0
+
+    .line 17
+    :cond_3
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->k5()V
+
+    :cond_4
+    :goto_0
+    return-void
+.end method
+
+.method public A2()Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+
+    return-object v0
+.end method
+
+.method public final A3()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$m1;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$m1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public A4(Lcom/skt/voice/tyche/data/CardResult;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cardResult"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CommandInfo;->getFilter()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+
+    .line 3
+    :cond_0
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    packed-switch v1, :pswitch_data_0
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "ORDER_5"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "ORDER_4"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v3
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "ORDER_3"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v4
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "ORDER_2"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v0, v5
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "ORDER_1"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v0, v6
+
+    :goto_0
+    packed-switch v0, :pswitch_data_1
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+
+    return-void
+
+    :pswitch_5
+    move v2, v3
+
+    goto :goto_1
+
+    :pswitch_6
+    move v2, v4
+
+    goto :goto_1
+
+    :pswitch_7
+    move v2, v5
+
+    goto :goto_1
+
+    :pswitch_8
+    move v2, v6
+
+    .line 5
+    :goto_1
+    :pswitch_9
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    .line 6
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    .line 7
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    .line 8
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-lez p1, :cond_7
+
+    .line 9
+    :cond_6
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    .line 10
+    :cond_7
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->x1()Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    add-int/lit8 v6, v6, 0x1
+
+    :cond_8
+    if-gt v6, v2, :cond_9
+
+    .line 11
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+
+    return-void
+
+    .line 12
+    :cond_9
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
+
+    move-result-object p1
+
+    .line 13
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    .line 14
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->i5(I)V
+
+    goto :goto_2
+
+    .line 15
+    :cond_a
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->x1()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    .line 16
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->F6(I)V
+
+    if-eqz p1, :cond_b
+
+    int-to-long v0, v2
+
+    const-string v2, "ai_speak.deletewaypoint_list"
+
+    .line 17
+    invoke-virtual {p1, v2, v0, v1}, Lbe/e;->U(Ljava/lang/String;J)V
+
+    :cond_b
+    :goto_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch -0x1d2778a0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_9
+    .end packed-switch
+.end method
+
+.method public A5(Lcom/skt/voice/tyche/AiTechLabVoiceCallback;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "aiTechLabVoiceCallback"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    return-void
+.end method
+
+.method public A6(I)V
+    .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "index"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/skt/tmap/util/e1;->u(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/skt/tmap/GlobalDataManager;->b(Landroid/content/Context;)Lcom/skt/tmap/GlobalDataManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/GlobalDataManager;->G()V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/skt/tmap/location/a;->useGooglePlayServiceForTurningOnLocation(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$m0;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$m0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$n0;
+
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$n0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 6
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    sparse-switch v2, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v2, "tmap.favoritelist"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    move v1, v4
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v2, "search.again.route"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    move v1, v5
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v2, "search.route"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v2, "show.destination.recent"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    move v1, v3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v2, "set.stopby"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x0
+
+    :cond_1
+    :goto_0
+    if-eqz v1, :cond_5
+
+    if-eq v1, v5, :cond_4
+
+    if-eq v1, v4, :cond_3
+
+    if-eq v1, v3, :cond_2
+
+    .line 7
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z6(I)V
+
+    goto :goto_1
+
+    .line 8
+    :cond_2
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->C6(I)V
+
+    goto :goto_1
+
+    .line 9
+    :cond_3
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->B6(I)V
+
+    goto :goto_1
+
+    .line 10
+    :cond_4
+    invoke-static {}, Lcom/skt/tmap/data/RouteOptionData;->values()[Lcom/skt/tmap/data/RouteOptionData;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    .line 11
+    iget-object p1, p1, Lcom/skt/tmap/data/RouteOptionData;->nuguNluFilter:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y6(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 12
+    :cond_5
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->u6(I)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x65c74d1b -> :sswitch_4
+        -0x5bdf1134 -> :sswitch_3
+        -0x3814d97d -> :sswitch_2
+        -0x3628550b -> :sswitch_1
+        0x70290000 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public final B1()V
+    .locals 3
+
+    const-string v0, ""
+
+    .line 1
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
+
+    .line 2
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->L3(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 3
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->N3(Landroid/content/Context;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->l0:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->r0:Z
+
+    .line 6
+    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->n0:Z
+
+    .line 7
+    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->a0:J
+
+    iput-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
+
+    .line 8
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-static {v2, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->M3(Landroid/content/Context;J)V
+
+    .line 9
+    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->d0:J
+
+    iput-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->m0:J
+
+    .line 10
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->W5(Ljava/lang/String;)V
+
+    .line 11
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->F6(I)V
+
+    return-void
+.end method
+
+.method public B2(Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poiFavoritesInfo"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+
+    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;-><init>()V
+
+    .line 2
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getPkey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPkey(Ljava/lang/String;)V
+
+    .line 3
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getRpFlag()B
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setRPFlag(B)V
+
+    .line 4
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getPoiId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPOIId([B)V
+
+    .line 5
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getNavSeq()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setNavSeq(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getNoorX()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getNoorY()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPosString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 7
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getCenterX()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getCenterY()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setCenterString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getCustName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setfurName([B)V
+
+    .line 9
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setaddress([B)V
+
+    return-object v0
+.end method
+
+.method public B3()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->j:Z
+
+    .line 2
+    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->k:Z
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$d;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$d;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final B4(Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cardResult",
+            "volumeType"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CommandInfo;->getFilter()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+
+    goto :goto_1
+
+    :cond_0
+    const-string v0, "QT.ALL"
+
+    .line 3
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+
+    .line 5
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->s1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v0, "GUIDE_VOLUME"
+
+    .line 6
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "TMAP"
+
+    .line 7
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "ROUTE"
+
+    .line 8
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "SERVICE_NAME.NAVIGATION"
+
+    .line 9
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    .line 10
+    :cond_2
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+
+    goto :goto_1
+
+    .line 11
+    :cond_3
+    :goto_0
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->s1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+
+    .line 12
+    :goto_1
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E3()V
+
+    return-void
+.end method
+
+.method public B5(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sec"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->Z(I)V
+
+    return-void
+.end method
+
+.method public B6(I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "index"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->W:Ljava/util/List;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_1
+
+    if-gez p1, :cond_0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$o0;
+
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$o0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_1
+
+    .line 3
+    :cond_1
+    :goto_0
+    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
+
+    const-string v0, "no favorites"
+
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+
+    :goto_1
+    return-void
+.end method
+
+.method public C1()V
     .locals 3
 
     .line 1
@@ -3483,7 +4609,7 @@
     return-void
 .end method
 
-.method public A2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+.method public C2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -3518,7 +4644,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -3558,22 +4684,22 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setfurName([B)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -3584,7 +4710,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -3600,7 +4726,7 @@
     return-object v0
 .end method
 
-.method public A3()V
+.method public C3()V
     .locals 3
 
     const/4 v0, 0x0
@@ -3625,9 +4751,9 @@
     .line 6
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$d;
+    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$e;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$d;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$e;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -3651,7 +4777,7 @@
     const/16 v1, 0xa
 
     .line 10
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->O5(I)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->Q5(I)V
 
     .line 11
     :cond_0
@@ -3672,14 +4798,14 @@
 
     .line 15
     :cond_1
-    sget v0, Lcom/skt/voice/tyche/AiConstant;->P:I
+    sget v0, Lcom/skt/voice/tyche/AiConstant;->T:I
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
 
     return-void
 .end method
 
-.method public A4()V
+.method public C4()V
     .locals 1
 
     .line 1
@@ -3688,13 +4814,13 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->z0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->A0()V
 
     :cond_0
     return-void
 .end method
 
-.method public A5(Landroid/content/Context;Lcom/skt/tmap/engine/a0;)V
+.method public C5(Landroid/content/Context;Lcom/skt/tmap/engine/c0;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -3708,12 +4834,12 @@
     .end annotation
 
     .line 1
-    iput-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/a0;
+    iput-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/c0;
 
     if-eqz p2, :cond_0
 
     .line 2
-    invoke-static {p1}, Lcom/skt/tmap/util/z0;->e(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/skt/tmap/util/g1;->e(Landroid/content/Context;)I
 
     move-result p1
 
@@ -3724,13 +4850,13 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->H:Ljava/lang/String;
 
-    invoke-interface {p2, p1}, Lcom/skt/tmap/engine/a0;->b(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/skt/tmap/engine/c0;->b(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public A6(I)V
+.method public C6(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -3760,9 +4886,9 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$o0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$p0;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$o0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$p0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -3775,16 +4901,16 @@
 
     const-string v0, "no recent history"
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_1
     return-void
 .end method
 
-.method public B1()V
+.method public D1()V
     .locals 3
 
     .line 1
@@ -3803,7 +4929,7 @@
     return-void
 .end method
 
-.method public B2(Lcom/skt/tmap/network/ndds/dto/response/FindPoiDetailInfoResponseDto;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+.method public D2(Lcom/skt/tmap/network/ndds/dto/response/FindPoiDetailInfoResponseDto;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -3838,7 +4964,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -3878,22 +5004,22 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setfurName([B)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object p1
 
@@ -3902,7 +5028,7 @@
     return-object v0
 .end method
 
-.method public B3()V
+.method public D3()V
     .locals 3
 
     const/4 v0, 0x1
@@ -3913,24 +5039,24 @@
     .line 2
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$b;
+    new-instance v2, Lcom/skt/tmap/engine/TmapAiManager$c;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$b;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/engine/TmapAiManager$c;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 3
-    sget v1, Lcom/skt/voice/tyche/AiConstant;->Q:I
+    sget v1, Lcom/skt/voice/tyche/AiConstant;->U:I
 
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->R5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->T5(Z)V
 
     return-void
 .end method
 
-.method public B4()V
+.method public D4()V
     .locals 1
 
     .line 1
@@ -3939,13 +5065,13 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->A0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->B0()V
 
     :cond_0
     return-void
 .end method
 
-.method public B5(Ljava/lang/String;)V
+.method public D5(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -3990,27 +5116,27 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->j0:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->a0(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->b0(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final B6()V
+.method public final D6()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$q0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$r0;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$q0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$r0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public C1(Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;)V
+.method public E1(Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;)V
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4031,11 +5157,11 @@
     .line 2
     sget-object v2, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_MAKE_PHONE_CALL_CONFIRM:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;->e()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;->f()Ljava/lang/String;
 
     move-result-object v4
 
@@ -4045,17 +5171,17 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c;->x(Landroid/content/Context;Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/d;->x(Landroid/content/Context;Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfo;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p0, p1, v1}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v1}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method public C2()Ljava/lang/String;
+.method public E2()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -4064,7 +5190,7 @@
     return-object v0
 .end method
 
-.method public final C3()V
+.method public final E3()V
     .locals 3
 
     .line 1
@@ -4087,12 +5213,12 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->D3(II)V
+    invoke-virtual {p0, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->F3(II)V
 
     return-void
 .end method
 
-.method public C4()V
+.method public E4()V
     .locals 1
 
     .line 1
@@ -4105,7 +5231,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->B0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->C0()V
 
     const/4 v0, 0x0
 
@@ -4116,7 +5242,7 @@
     return-void
 .end method
 
-.method public C5()V
+.method public E5()V
     .locals 2
 
     const/4 v0, 0x0
@@ -4125,11 +5251,11 @@
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B0:Ljava/lang/String;
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/engine/g0;->d()Lcom/skt/tmap/engine/g0;
+    invoke-static {}, Lcom/skt/tmap/engine/i0;->d()Lcom/skt/tmap/engine/i0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/g0;->f()Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/i0;->f()Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 
@@ -4143,9 +5269,9 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    sget v1, Lcom/skt/voice/tyche/AiConstant;->O:I
+    sget v1, Lcom/skt/voice/tyche/AiConstant;->S:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->b0(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->c0(I)V
 
     goto :goto_0
 
@@ -4153,15 +5279,15 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    sget v1, Lcom/skt/voice/tyche/AiConstant;->N:I
+    sget v1, Lcom/skt/voice/tyche/AiConstant;->R:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->b0(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->c0(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public C6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method public E6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 7
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4219,7 +5345,7 @@
     invoke-direct {v4, p1}, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;-><init>(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Z2()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->b3()Z
 
     move-result v5
 
@@ -4247,20 +5373,20 @@
     .line 7
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1300cf
+    const v1, 0x7f1400d0
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f1300cd
+    const v2, 0x7f1400ce
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -4290,7 +5416,7 @@
     :cond_2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/x0;->t(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/e1;->u(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -4308,7 +5434,7 @@
     .line 14
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/location/a;->c(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/location/a;->useGooglePlayServiceForTurningOnLocation(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -4317,9 +5443,9 @@
     .line 15
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$s0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$t0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$s0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$t0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -4337,7 +5463,7 @@
     iput-boolean v6, p0, Lcom/skt/tmap/engine/TmapAiManager;->s0:Z
 
     .line 18
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object p1
 
@@ -4347,35 +5473,35 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->N0:Lcom/skt/tmap/engine/navigation/route/RouteEventListener;
 
-    invoke-virtual {p1, v0, v4, v1, v2}, Lcom/skt/tmap/engine/l0;->I(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
+    invoke-virtual {p1, v0, v4, v1, v2}, Lcom/skt/tmap/engine/v0;->N(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
 
     .line 19
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/l0;->O0(Z)V
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/v0;->f1(Z)V
 
     goto :goto_1
 
     .line 20
     :cond_4
-    invoke-virtual {p0, v4}, Lcom/skt/tmap/engine/TmapAiManager;->Y4(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
+    invoke-virtual {p0, v4}, Lcom/skt/tmap/engine/TmapAiManager;->a5(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
 
     .line 21
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object p1
 
-    invoke-virtual {p1, v6}, Lcom/skt/tmap/engine/l0;->O0(Z)V
+    invoke-virtual {p1, v6}, Lcom/skt/tmap/engine/v0;->f1(Z)V
 
     :goto_1
     return-void
 .end method
 
-.method public D2()J
+.method public F2()J
     .locals 6
 
     .line 1
@@ -4398,7 +5524,7 @@
     return-wide v2
 .end method
 
-.method public D3(II)V
+.method public F3(II)V
     .locals 7
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4431,7 +5557,7 @@
     return-void
 .end method
 
-.method public final D4(Landroid/app/Activity;)V
+.method public final F4(Landroid/app/Activity;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4447,7 +5573,7 @@
 
     const-string v1, "registerBleReceiver"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     monitor-enter p0
@@ -4458,7 +5584,7 @@
     const-string p1, "registerBleReceiver activity == null"
 
     .line 3
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     monitor-exit p0
@@ -4513,7 +5639,7 @@
     throw p1
 .end method
 
-.method public D5(I)V
+.method public F5(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4533,12 +5659,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->b0(I)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->c0(I)V
 
     return-void
 .end method
 
-.method public D6(I)V
+.method public F6(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4552,25 +5678,25 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$y0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$a1;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$y0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$a1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/n;
+    new-instance v1, Lcom/skt/tmap/engine/m;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/n;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/m;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public E1(Ljava/lang/String;)V
+.method public G1(Ljava/lang/String;)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -4602,7 +5728,7 @@
     invoke-direct {v1, v2, v3}, Landroidx/core/app/NotificationCompat$e;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/util/e;->B()I
+    invoke-static {}, Lcom/skt/tmap/util/g;->E()I
 
     move-result v2
 
@@ -4612,7 +5738,7 @@
 
     iget-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v5, 0x7f1300dc
+    const v5, 0x7f1400dd
 
     .line 4
     invoke-virtual {v4, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -4679,7 +5805,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v4, 0x7f1300d6
+    const v4, 0x7f1400d7
 
     invoke-virtual {v2, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -4692,7 +5818,7 @@
     .line 13
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f1300d0
+    const v3, 0x7f1400d1
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -4721,7 +5847,7 @@
     return-void
 .end method
 
-.method public final E2()Ljava/lang/String;
+.method public final G2()Ljava/lang/String;
     .locals 22
 
     move-object/from16 v6, p0
@@ -4860,7 +5986,7 @@
 
     iget v1, v3, Lcom/skt/tmap/engine/navigation/data/TrafficListInfo;->nAccTime:I
 
-    invoke-static {v2, v1, v0}, Lwb/d;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)V
+    invoke-static {v2, v1, v0}, Lud/f;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)V
 
     if-ne v4, v10, :cond_1
 
@@ -4898,7 +6024,7 @@
     sub-int v18, v0, v14
 
     .line 14
-    sget v2, Lcom/skt/voice/tyche/AiConstant;->C:I
+    sget v2, Lcom/skt/voice/tyche/AiConstant;->G:I
 
     if-lt v5, v2, :cond_4
 
@@ -4934,7 +6060,7 @@
     move/from16 v5, v17
 
     .line 16
-    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/engine/TmapAiManager;->i2(IIIII)I
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/engine/TmapAiManager;->k2(IIIII)I
 
     move-result v17
 
@@ -5012,7 +6138,7 @@
 
     move/from16 v5, v17
 
-    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/engine/TmapAiManager;->i2(IIIII)I
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/engine/TmapAiManager;->k2(IIIII)I
 
     move-result v0
 
@@ -5094,19 +6220,19 @@
     .line 23
     sget-object v4, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
 
-    const-string/jumbo v5, "total dist : ["
+    const-string v5, "total dist : ["
 
     const-string v8, ","
 
     const-string v9, "] green dist : ["
 
-    invoke-static {v5, v0, v8, v11, v9}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v8, v11, v9}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
     const-string v9, "] ratio : ["
 
-    invoke-static {v5, v12, v8, v1, v9}, Lt0/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v5, v12, v8, v1, v9}, Lg1/b;->a(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -5128,12 +6254,12 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     iget-object v1, v6, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v1, v3, v2, v15, v0}, Lcom/skt/tmap/util/c;->n(Landroid/content/Context;FIII)Ljava/lang/String;
+    invoke-static {v1, v3, v2, v15, v0}, Lcom/skt/tmap/util/d;->n(Landroid/content/Context;FIII)Ljava/lang/String;
 
     move-result-object v0
 
@@ -5150,7 +6276,7 @@
     .line 26
     iget-object v0, v6, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1300ae
+    const v1, 0x7f1400af
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -5167,22 +6293,22 @@
     return-object v0
 .end method
 
-.method public final E3()V
+.method public final G3()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$j1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$l1;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$j1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$l1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public E4()V
+.method public G4()V
     .locals 3
 
     .line 1
@@ -5233,7 +6359,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->D6(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->F6(I)V
 
     goto :goto_0
 
@@ -5248,9 +6374,9 @@
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/g;
+    new-instance v1, Lcom/skt/tmap/engine/f;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/g;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/f;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -5260,9 +6386,9 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/m;
+    new-instance v1, Lcom/skt/tmap/engine/k;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/m;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/k;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -5272,9 +6398,9 @@
     :cond_2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/j;
+    new-instance v1, Lcom/skt/tmap/engine/i;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/j;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/i;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -5282,13 +6408,13 @@
 
     .line 9
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     :goto_0
     return-void
 .end method
 
-.method public E5()V
+.method public G5()V
     .locals 5
 
     .line 1
@@ -5379,7 +6505,7 @@
 
     iget-wide v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->h0:J
 
-    invoke-virtual {v0, v3, v4}, Lcom/skt/voice/tyche/NuguSdkManager;->c0(J)V
+    invoke-virtual {v0, v3, v4}, Lcom/skt/voice/tyche/NuguSdkManager;->d0(J)V
 
     .line 9
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
@@ -5405,13 +6531,13 @@
     const/4 v0, 0x0
 
     .line 10
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->a5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->c5(Z)V
 
     goto :goto_1
 
     .line 11
     :cond_3
-    sget v0, Lcom/skt/voice/tyche/AiConstant;->V:I
+    sget v0, Lcom/skt/voice/tyche/AiConstant;->Z:I
 
     int-to-long v1, v0
 
@@ -5422,29 +6548,29 @@
 
     int-to-long v2, v0
 
-    invoke-virtual {v1, v2, v3}, Lcom/skt/voice/tyche/NuguSdkManager;->c0(J)V
+    invoke-virtual {v1, v2, v3}, Lcom/skt/voice/tyche/NuguSdkManager;->d0(J)V
 
     :cond_4
     :goto_1
     return-void
 .end method
 
-.method public final E6()V
+.method public final G6()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$z;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$a0;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$z;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$a0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public F1(Z)V
+.method public H1(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -5480,12 +6606,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->E0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->F0()V
 
     const/4 v0, 0x0
 
@@ -5493,21 +6619,21 @@
     iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a0:Z
 
     .line 5
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
     .line 6
-    invoke-interface {v1}, Lcom/skt/tmap/engine/e0;->e()V
+    invoke-interface {v1}, Lcom/skt/tmap/engine/g0;->e()V
 
     .line 7
-    iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     .line 8
     :cond_1
-    iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
     .line 9
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -5519,7 +6645,7 @@
     .line 10
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {p1, v2}, Lcom/skt/voice/tyche/NuguSdkManager;->l0(Lcom/skt/voice/tyche/data/NuguSdkCallback;)V
+    invoke-virtual {p1, v2}, Lcom/skt/voice/tyche/NuguSdkManager;->m0(Lcom/skt/voice/tyche/data/NuguSdkCallback;)V
 
     .line 11
     iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -5531,12 +6657,12 @@
     .line 13
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->K6(Landroid/app/Activity;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M6(Landroid/app/Activity;)V
 
     return-void
 .end method
 
-.method public F2()I
+.method public H2()I
     .locals 1
 
     .line 1
@@ -5550,14 +6676,14 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->G()I
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->H()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final F3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Z)V
+.method public final H3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -5580,7 +6706,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -5591,7 +6717,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -5613,7 +6739,7 @@
     const-string p1, "oos"
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -5645,13 +6771,13 @@
     if-eqz p2, :cond_1
 
     .line 8
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->J3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->L3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 9
     :cond_1
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->H3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->J3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -5671,13 +6797,13 @@
     if-eqz p1, :cond_3
 
     .line 12
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->q5()V
 
     goto :goto_0
 
     .line 13
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r5()V
 
     goto :goto_0
 
@@ -5685,30 +6811,30 @@
     if-eqz p2, :cond_5
 
     .line 14
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->h1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 15
     :cond_5
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->g1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->i1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     :goto_0
     return-void
 .end method
 
-.method public F4()V
+.method public H4()V
     .locals 1
 
     const/4 v0, 0x2
 
     .line 1
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->G4(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->I4(I)V
 
     return-void
 .end method
 
-.method public F5(I)V
+.method public H5(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -5728,16 +6854,16 @@
 
     .line 2
     :cond_0
-    sget v0, Lcom/skt/voice/tyche/AiConstant;->P:I
+    sget v0, Lcom/skt/voice/tyche/AiConstant;->T:I
 
     if-ne p1, v0, :cond_4
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/engine/g0;->d()Lcom/skt/tmap/engine/g0;
+    invoke-static {}, Lcom/skt/tmap/engine/i0;->d()Lcom/skt/tmap/engine/i0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/g0;->f()Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/i0;->f()Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 
@@ -5768,18 +6894,18 @@
 
     .line 5
     :cond_3
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->Q:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->U:I
 
     .line 6
     :cond_4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->d0(I)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->e0(I)V
 
     return-void
 .end method
 
-.method public F6(Z)V
+.method public H6(Z)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -5793,7 +6919,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -5818,30 +6944,30 @@
 
     sub-long/2addr v0, v2
 
-    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->Y:J
+    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->c0:J
 
     cmp-long v0, v0, v2
 
     if-lez v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
-    const v0, 0x7f1300cb
+    const v0, 0x7f1400cc
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1300d5
+    const v1, 0x7f1400d6
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E1(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->G1(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -5851,10 +6977,10 @@
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f1300e1
+    const p1, 0x7f1400e2
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
 
     return-void
 
@@ -5866,17 +6992,17 @@
     if-eqz v0, :cond_3
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v1()V
 
     .line 11
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->C0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->D0()V
 
     const/4 v0, 0x1
 
     .line 12
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->a6(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->c6(Z)V
 
     .line 13
     iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->i:Z
@@ -5885,7 +7011,7 @@
     return-void
 .end method
 
-.method public G1()V
+.method public I1()V
     .locals 2
 
     .line 1
@@ -5897,9 +7023,9 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$73;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$74;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$73;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$74;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     .line 3
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -5909,7 +7035,7 @@
     return-void
 .end method
 
-.method public final G2(Landroid/location/Location;)Ljava/lang/String;
+.method public final I2(Landroid/location/Location;)Ljava/lang/String;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -5955,7 +7081,7 @@
     return-object p1
 .end method
 
-.method public final G3(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public final I3(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -5971,21 +7097,21 @@
 
     const-string v1, "processAiBizTmapAction"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$l;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$m;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$l;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$m;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public G4(I)V
+.method public I4(I)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6045,7 +7171,7 @@
     return-void
 .end method
 
-.method public G5(Ljava/lang/String;)V
+.method public I5(Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6065,12 +7191,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->e0(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->f0(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public G6()V
+.method public I6()V
     .locals 4
 
     .line 1
@@ -6081,18 +7207,18 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->F0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->H0()V
 
     .line 4
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 5
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->a6(Z)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->c6(Z)V
 
     .line 6
     :cond_0
@@ -6182,7 +7308,7 @@
     return-void
 .end method
 
-.method public H1(Z)V
+.method public J1(Z)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6218,7 +7344,7 @@
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f1300cb
+    const v3, 0x7f1400cc
 
     invoke-virtual {p1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -6235,7 +7361,7 @@
     :cond_1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130044
+    const v3, 0x7f140044
 
     invoke-virtual {p1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -6246,7 +7372,7 @@
     .line 7
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f1307ef
+    const v3, 0x7f14086d
 
     invoke-virtual {p1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -6259,7 +7385,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 9
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -6284,7 +7410,7 @@
     return-void
 .end method
 
-.method public H2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
+.method public J2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6304,12 +7430,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->H(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->I(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
 
     return-void
 .end method
 
-.method public final H3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+.method public final J3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6371,7 +7497,7 @@
     if-eqz v2, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lcom/skt/tmap/engine/navigation/data/TBTListInfo;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v2()Lcom/skt/tmap/engine/navigation/data/TBTListInfo;
 
     move-result-object p2
 
@@ -6388,7 +7514,7 @@
 
     const-string v1, "</sk_poi>"
 
-    invoke-static {p1, v0, v1}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -6396,13 +7522,13 @@
 
     iget p2, p2, Lcom/skt/tmap/engine/navigation/data/TBTListInfo;->nAccDist:I
 
-    invoke-virtual {p0, p1, v0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->L3(Ljava/lang/String;II)V
+    invoke-virtual {p0, p1, v0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->N3(Ljava/lang/String;II)V
 
     goto/16 :goto_2
 
     .line 7
     :cond_0
-    invoke-virtual {p0, p1, v4}, Lcom/skt/tmap/engine/TmapAiManager;->g1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v4}, Lcom/skt/tmap/engine/TmapAiManager;->i1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -6430,7 +7556,7 @@
     if-nez v2, :cond_2
 
     .line 10
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->g1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->i1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -6542,7 +7668,7 @@
     :goto_0
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p2, p1}, Lcom/skt/tmap/util/c;->J(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Lcom/skt/tmap/util/d;->J(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -6551,16 +7677,16 @@
     .line 18
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/c;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 19
     :cond_8
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 20
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_2
 
@@ -6570,7 +7696,7 @@
 
     iget p2, v1, Lcom/skt/tmap/engine/navigation/data/RGData;->nTotalDist:I
 
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->K3(II)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->M3(II)V
 
     goto :goto_2
 
@@ -6612,20 +7738,20 @@
 
     .line 25
     :cond_b
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     goto :goto_2
 
     .line 26
     :cond_c
     :goto_1
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->g1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->i1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     :goto_2
     return-void
 .end method
 
-.method public H4()V
+.method public J4()V
     .locals 4
 
     .line 1
@@ -6654,7 +7780,7 @@
     return-void
 .end method
 
-.method public H5(Ljava/util/List;Ljava/util/List;I)V
+.method public J5(Ljava/util/List;Ljava/util/List;I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6684,7 +7810,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->R6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -6710,7 +7836,7 @@
     return-void
 .end method
 
-.method public H6()V
+.method public J6()V
     .locals 2
 
     .line 1
@@ -6723,7 +7849,7 @@
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->F0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
 
     const/4 v0, 0x1
 
@@ -6734,28 +7860,28 @@
     return-void
 .end method
 
-.method public I1()V
+.method public K1()V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->u0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->C6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     return-void
 .end method
 
-.method public final I2()V
+.method public final K2()V
     .locals 3
 
     .line 1
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat;
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v1
 
-    const-string v2, "T map"
+    const-string v2, "TMAP"
 
     invoke-direct {v0, v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -6769,16 +7895,16 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$z0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$k1;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$z0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$k1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat;->p(Landroid/support/v4/media/session/MediaSessionCompat$b;)V
 
     return-void
 .end method
 
-.method public final I3(Ljava/lang/String;Ljava/lang/String;II)V
+.method public final K3(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6803,12 +7929,12 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lcom/skt/tmap/util/c;->m(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
+    invoke-static {v0, p1, p2, p3, p4}, Lcom/skt/tmap/util/d;->m(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -6823,7 +7949,7 @@
     return-void
 .end method
 
-.method public I4()V
+.method public K4()V
     .locals 3
 
     .line 1
@@ -6847,7 +7973,7 @@
     return-void
 .end method
 
-.method public I5(I)V
+.method public K5(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6867,12 +7993,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->j0(I)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->k0(I)V
 
     return-void
 .end method
 
-.method public I6(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public K6(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6886,16 +8012,16 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$e1;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$f1;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$e1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$f1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final J1(I)V
+.method public final L1(I)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6914,14 +8040,14 @@
     const-string v1, "UI_ACTION_INFO"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->f(Ljava/lang/String;)V
 
     const-string v1, "TYPE"
 
     const-string v2, "SELECT_LIST"
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -6930,15 +8056,15 @@
 
     const-string v1, "VALUE"
 
-    invoke-virtual {v0, v1, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->H2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->J2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
 
     return-void
 .end method
 
-.method public final J3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+.method public final L3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -6980,7 +8106,7 @@
     if-nez v1, :cond_0
 
     .line 3
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->h1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->j1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -6993,7 +8119,7 @@
     if-nez p1, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->g6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->i6()V
 
     goto :goto_0
 
@@ -7024,19 +8150,19 @@
     const-string p1, "oos"
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 8
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->g6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->i6()V
 
     :goto_0
     return-void
 .end method
 
-.method public J4(I)V
+.method public L4(I)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7080,7 +8206,7 @@
     return-void
 .end method
 
-.method public J5(Lcom/skt/tmap/engine/e0;)V
+.method public L5(Lcom/skt/tmap/engine/g0;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7092,7 +8218,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     .line 2
     iget-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a0:Z
@@ -7102,15 +8228,15 @@
     if-eqz p1, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
-    invoke-interface {p1, v0}, Lcom/skt/tmap/engine/e0;->g(Lcom/skt/tmap/engine/f0;)V
+    invoke-interface {p1, v0}, Lcom/skt/tmap/engine/g0;->g(Lcom/skt/tmap/engine/h0;)V
 
     :cond_0
     return-void
 .end method
 
-.method public J6(Ljava/lang/String;)V
+.method public L6(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7126,7 +8252,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -7140,7 +8266,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->H()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->Q()Z
 
     move-result v0
 
@@ -7159,7 +8285,7 @@
     return-void
 .end method
 
-.method public K1(Z)V
+.method public M1(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7175,7 +8301,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f130046
+    const v0, 0x7f140046
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7184,7 +8310,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1307f1
+    const v1, 0x7f14086f
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7204,15 +8330,15 @@
 
     check-cast v0, Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
     if-eqz v0, :cond_1
 
     check-cast p1, Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object p1, p1, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object p1, p1, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/w0;->t0()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/v0;->o0()Z
 
     move-result p1
 
@@ -7221,7 +8347,7 @@
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f130044
+    const v0, 0x7f140044
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7233,7 +8359,7 @@
     :cond_1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f130042
+    const v0, 0x7f140042
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7243,7 +8369,7 @@
     :goto_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1307f0
+    const v1, 0x7f14086e
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7251,7 +8377,7 @@
 
     .line 7
     :goto_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 8
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -7274,7 +8400,7 @@
     return-void
 .end method
 
-.method public final K3(II)V
+.method public final M3(II)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7295,12 +8421,12 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1, p2}, Lcom/skt/tmap/util/c;->z(Landroid/content/Context;II)Ljava/lang/String;
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/util/d;->z(Landroid/content/Context;II)Ljava/lang/String;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -7315,7 +8441,7 @@
     return-void
 .end method
 
-.method public K4(I)V
+.method public M4(I)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7367,7 +8493,7 @@
     return-void
 .end method
 
-.method public K5(Z)V
+.method public M5(Z)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7384,7 +8510,7 @@
     return-void
 .end method
 
-.method public final K6(Landroid/app/Activity;)V
+.method public final M6(Landroid/app/Activity;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7402,9 +8528,9 @@
     :try_start_0
     sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
 
-    const-string/jumbo v1, "unregisterBleReceiver"
+    const-string v1, "unregisterBleReceiver"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -7459,8 +8585,8 @@
     throw p1
 .end method
 
-.method public L1(Z)V
-    .locals 3
+.method public N1(Z)V
+    .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -7486,29 +8612,15 @@
     if-eqz v1, :cond_1
 
     .line 3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 4
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    const v2, 0x7f1307f2
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 5
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+    move-object v1, v0
 
     check-cast v1, Lcom/skt/tmap/activity/TmapNaviActivity;
 
     const/16 v2, 0x9
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const v3, 0x7f140870
+
+    invoke-virtual {v0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -7516,13 +8628,13 @@
 
     goto :goto_0
 
-    .line 6
+    .line 4
     :cond_1
     check-cast v0, Lcom/skt/tmap/activity/BaseActivity;
 
     invoke-virtual {v0, p1}, Lcom/skt/tmap/activity/BaseActivity;->showTmapFinishDialog(Z)V
 
-    .line 7
+    .line 5
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -7532,10 +8644,10 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 8
+    .line 6
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f130054
+    const v1, 0x7f140055
 
     invoke-virtual {p1, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7545,11 +8657,11 @@
 
     goto :goto_1
 
-    .line 9
+    .line 7
     :cond_2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f130055
+    const v1, 0x7f140056
 
     invoke-virtual {p1, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -7557,15 +8669,15 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 10
+    .line 8
     :goto_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
-    .line 11
+    .line 9
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     sget-object v0, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_CLOSE_VIEW:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
@@ -7577,7 +8689,7 @@
     return-void
 .end method
 
-.method public L2()Z
+.method public N2()Z
     .locals 1
 
     .line 1
@@ -7595,7 +8707,7 @@
     return v0
 .end method
 
-.method public final L3(Ljava/lang/String;II)V
+.method public final N3(Ljava/lang/String;II)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7618,12 +8730,12 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/skt/tmap/util/c;->l(Landroid/content/Context;Ljava/lang/String;II)Ljava/lang/String;
+    invoke-static {v0, p1, p2, p3}, Lcom/skt/tmap/util/d;->l(Landroid/content/Context;Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -7638,7 +8750,7 @@
     return-void
 .end method
 
-.method public L4(Ljava/lang/String;II)V
+.method public N4(Ljava/lang/String;II)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7687,14 +8799,14 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O5(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q5(I)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->S(Ljava/lang/String;Z)V
+    invoke-virtual {v0, p1, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->T(Ljava/lang/String;Z)V
 
     .line 5
     iput-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->l:Z
@@ -7703,7 +8815,7 @@
     iput-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->k:Z
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v0
 
@@ -7712,7 +8824,7 @@
     .line 8
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1}, Ldc/d;->z(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1}, Lbe/e;->A(Ljava/lang/String;Ljava/lang/String;)V
 
     int-to-long p1, p2
 
@@ -7723,14 +8835,14 @@
 
     const-string/jumbo v1, "view.voice_inventory"
 
-    invoke-virtual {v0, v1, p1, p2, p3}, Ldc/d;->a0(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {v0, v1, p1, p2, p3}, Lbe/e;->a0(Ljava/lang/String;JLjava/lang/String;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public L5(Z)V
+.method public N5(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7758,7 +8870,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
@@ -7766,7 +8878,7 @@
     return-void
 .end method
 
-.method public L6()V
+.method public N6()V
     .locals 2
 
     .line 1
@@ -7778,7 +8890,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -7808,14 +8920,14 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->H0:Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->H0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->I0(Lcom/skt/aicloud/speaker/lib/model/IAladdinContactUploadListener;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public M1(Z)V
+.method public O1(Z)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7853,7 +8965,7 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->L(Landroid/net/ConnectivityManager;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->O(Landroid/net/ConnectivityManager;)Z
 
     move-result v0
 
@@ -7867,7 +8979,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -7881,7 +8993,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->fb()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->xb()Z
 
     move-result p1
 
@@ -7902,11 +9014,11 @@
     return-void
 .end method
 
-.method public M2()Z
+.method public O2()Z
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->W1()Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Y1()Lcom/skt/aicloud/speaker/lib/state/AsrState;
 
     move-result-object v0
 
@@ -7915,7 +9027,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v2, Lcom/skt/tmap/engine/TmapAiManager$u1;->b:[I
+    sget-object v2, Lcom/skt/tmap/engine/TmapAiManager$v1;->b:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -7954,7 +9066,7 @@
     return v1
 .end method
 
-.method public M3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public O3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -7971,7 +9083,7 @@
 
     .line 1
     :cond_0
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object p1
 
@@ -7980,18 +9092,18 @@
     if-eqz p1, :cond_2
 
     .line 2
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 3
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -8003,7 +9115,7 @@
 
     if-gt v0, v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -8019,30 +9131,30 @@
 
     iget-object p1, p1, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$d;->f:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result p1
 
     if-le p1, v1, :cond_2
 
     :cond_1
-    const p1, 0x7f1300c9
+    const p1, 0x7f1400ca
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     return-void
 
     :cond_2
-    const p1, 0x7f1300cb
+    const p1, 0x7f1400cc
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     return-void
 .end method
 
-.method public M4(Ljava/lang/String;)V
+.method public O4(Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8056,12 +9168,12 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method public M5(Z)V
+.method public O5(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8081,12 +9193,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->Z(Z)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->a0(Z)V
 
     return-void
 .end method
 
-.method public final M6(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+.method public final O6(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8102,7 +9214,7 @@
 
     const-string/jumbo v1, "userRerouteComplete"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_2
 
@@ -8113,7 +9225,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f130909
+    const v2, 0x7f14098f
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -8143,11 +9255,11 @@
     add-long/2addr v0, v2
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object p1
 
-    const v2, 0x7f13009f
+    const v2, 0x7f1400a0
 
     invoke-virtual {p1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -8159,7 +9271,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c;->i(J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/d;->i(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -8170,17 +9282,20 @@
     move-result-object p1
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     if-eqz v0, :cond_1
 
-    .line 7
+    .line 8
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
@@ -8195,11 +9310,11 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/car/d;->r(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/skt/tmap/car/h;->r(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 8
+    .line 9
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     sget-object v3, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_ROUTE_CHANGE:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
@@ -8208,7 +9323,7 @@
 
     move-result v4
 
-    .line 9
+    .line 10
     invoke-virtual {p1}, Lcom/skt/tmap/data/TmapRerouteResponseData;->getTollFeeDifference()I
 
     move-result v5
@@ -8219,10 +9334,10 @@
 
     iget-object v7, v0, Lcom/skt/tmap/engine/navigation/data/RouteSummaryInfo;->szRoadNames:[Ljava/lang/String;
 
-    .line 10
+    .line 11
     invoke-interface/range {v2 .. v7}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->a(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;IILjava/lang/String;[Ljava/lang/String;)V
 
-    .line 11
+    .line 12
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
@@ -8240,28 +9355,27 @@
 
     iget-object p1, p1, Lcom/skt/tmap/engine/navigation/data/RouteSummaryInfo;->szRoadNames:[Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, p1}, Lcom/skt/tmap/util/c;->M(Landroid/content/Context;II[Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, p1}, Lcom/skt/tmap/util/d;->M(Landroid/content/Context;II[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 12
-    :goto_0
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
-
-    goto :goto_1
-
     .line 13
-    :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
+
+    goto :goto_0
 
     .line 14
-    :goto_1
+    :cond_2
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
+
+    .line 15
+    :goto_0
     sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
 
     return-object p1
 .end method
 
-.method public final N1([ZLjava/lang/String;)Z
+.method public final P1([ZLjava/lang/String;)Z
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8333,7 +9447,7 @@
     return v2
 .end method
 
-.method public final N2(Lcom/skt/voice/tyche/data/CommandInfo;)Z
+.method public final P2(Lcom/skt/voice/tyche/data/CommandInfo;)Z
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8388,7 +9502,7 @@
     return p1
 .end method
 
-.method public final N3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public final P3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 7
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8415,7 +9529,7 @@
     if-nez v1, :cond_1
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->H0()V
 
     return-void
 
@@ -8429,7 +9543,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -8439,27 +9553,27 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v0
 
     check-cast v0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;
 
     .line 6
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
     .line 7
-    invoke-virtual {p0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->j()Z
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->m()Z
 
     move-result v1
 
@@ -8477,22 +9591,22 @@
 
     .line 11
     :cond_2
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 12
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->v()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->w()Ljava/util/ArrayList;
 
     move-result-object v1
 
     .line 13
-    sget v4, Lcom/skt/voice/tyche/AiConstant;->R:I
+    sget v4, Lcom/skt/voice/tyche/AiConstant;->V:I
 
-    invoke-static {v4, v1}, Lcom/skt/tmap/util/b0;->a(ILjava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v4, v1}, Lcom/skt/tmap/util/d0;->a(ILjava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v1
 
     .line 14
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v4
 
@@ -8626,7 +9740,7 @@
     const-string p1, "oos"
 
     .line 15
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -8669,26 +9783,26 @@
 
     sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_GENERAL_RESULTS:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {p1, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->i(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;)V
 
     .line 21
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object p1
 
     const-string v1, "ai.call_whom"
 
-    invoke-virtual {p1, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 22
     iput-boolean v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->w:Z
 
     .line 23
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object p1
 
@@ -8711,10 +9825,10 @@
     if-eqz p1, :cond_a
 
     .line 25
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 26
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->t()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->v()Ljava/lang/String;
 
     move-result-object p1
 
@@ -8732,7 +9846,7 @@
     if-eqz p1, :cond_d
 
     .line 29
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->y()Z
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->z()Z
 
     move-result p1
 
@@ -8743,7 +9857,7 @@
 
     sget-object v4, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SELECT_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->x()I
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->y()I
 
     move-result v5
 
@@ -8757,11 +9871,11 @@
 
     sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_MAKE_PHONE_CALL_CONFIRM:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->s()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->u()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->t()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->v()Ljava/lang/String;
 
     move-result-object v0
 
@@ -8775,11 +9889,11 @@
 
     sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_MAKE_PHONE_CALL_CONFIRM:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->s()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->u()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->t()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->v()Ljava/lang/String;
 
     move-result-object v0
 
@@ -8802,7 +9916,7 @@
     .line 36
     :cond_d
     :goto_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object p1
 
@@ -8813,7 +9927,7 @@
 
     const-string v1, "ai_speak.select_list"
 
-    invoke-virtual {p1, v1, v0}, Ldc/d;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Lbe/e;->q(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -8824,7 +9938,7 @@
     if-eqz v0, :cond_f
 
     .line 39
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 40
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -8848,7 +9962,7 @@
     .line 42
     sget-object v1, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v0
 
@@ -8863,16 +9977,16 @@
     if-eqz v2, :cond_f
 
     .line 44
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 45
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->w()Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->x()Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
 
     move-result-object v2
 
     if-eqz v2, :cond_e
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->w()Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;->x()Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
 
     move-result-object v0
 
@@ -8934,7 +10048,7 @@
     .end packed-switch
 .end method
 
-.method public N4()V
+.method public P4()V
     .locals 1
 
     .line 1
@@ -8946,12 +10060,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->L()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->M()V
 
     return-void
 .end method
 
-.method public N5(Z)V
+.method public P5(Z)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -8968,7 +10082,7 @@
     return-void
 .end method
 
-.method public final O1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
+.method public final Q1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9017,7 +10131,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130073
+    const v3, 0x7f140074
 
     invoke-virtual {v1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -9032,7 +10146,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     return v2
 
@@ -9055,7 +10169,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130074
+    const v3, 0x7f140075
 
     invoke-virtual {v1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -9070,7 +10184,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     return v2
 
@@ -9111,7 +10225,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130075
+    const v3, 0x7f140076
 
     invoke-virtual {v1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -9126,7 +10240,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     return v2
 
@@ -9136,13 +10250,13 @@
     return p1
 .end method
 
-.method public final O3()V
+.method public final Q3()V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f:Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->J()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->j0()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -9159,7 +10273,7 @@
     return-void
 .end method
 
-.method public O4(Ljava/lang/String;Z)V
+.method public Q4(Ljava/lang/String;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9247,7 +10361,7 @@
     iput-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->y:Z
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->I6()V
 
     :cond_2
     if-eqz p2, :cond_3
@@ -9255,11 +10369,11 @@
     .line 10
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$f1;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$g1;
 
-    invoke-direct {v0, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$f1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$g1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->J:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->N:I
 
     int-to-long v1, p1
 
@@ -9271,14 +10385,14 @@
     :cond_3
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {p2, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->P(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->Q(Ljava/lang/String;)V
 
     :cond_4
     :goto_0
     return-void
 .end method
 
-.method public O5(I)V
+.method public Q5(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9298,12 +10412,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->m0(I)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->n0(I)V
 
     return-void
 .end method
 
-.method public P1(Z)V
+.method public R1(Z)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9321,7 +10435,7 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->X2()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Z2()Z
 
     move-result v0
 
@@ -9332,18 +10446,18 @@
 
     const-string v1, "expireRequestedStarbucksOrder"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f1300c7
+    const p1, 0x7f1400c8
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -9356,7 +10470,7 @@
     return-void
 .end method
 
-.method public final P3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+.method public final R3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9487,7 +10601,7 @@
     if-eq v4, v6, :cond_2
 
     .line 8
-    invoke-virtual {p0, v1, p1}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+    invoke-virtual {p0, v1, p1}, Lcom/skt/tmap/engine/TmapAiManager;->d4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
 
     goto :goto_1
 
@@ -9515,25 +10629,25 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
 
     .line 11
-    invoke-virtual {p0, v2, v0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->a4(Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {p0, v2, v0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->c4(Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_1
 
     .line 12
     :cond_3
-    invoke-virtual {p0, v1, p1}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+    invoke-virtual {p0, v1, p1}, Lcom/skt/tmap/engine/TmapAiManager;->d4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
 
     goto :goto_1
 
     .line 13
     :cond_4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->U3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->W3()V
 
     goto :goto_1
 
     .line 14
     :cond_5
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->T3(Ljava/util/List;)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->V3(Ljava/util/List;)V
 
     :goto_1
     return-void
@@ -9550,7 +10664,7 @@
     .end sparse-switch
 .end method
 
-.method public P4(Ljava/lang/String;)V
+.method public R4(Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9572,33 +10686,33 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->b6(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->d6(Z)V
 
     const/4 v0, 0x1
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->R5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->T5(Z)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->h0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->i0()V
 
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->V()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->W()V
 
     .line 7
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->P(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->Q(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public P5(Lcom/skt/tmap/engine/TmapAiManager$y1;)V
+.method public R5(Lcom/skt/tmap/engine/TmapAiManager$z1;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9610,12 +10724,12 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E0:Lcom/skt/tmap/engine/TmapAiManager$y1;
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E0:Lcom/skt/tmap/engine/TmapAiManager$z1;
 
     return-void
 .end method
 
-.method public final Q1(Ljava/lang/String;)Lkotlin/d1;
+.method public final S1(Ljava/lang/String;)Lkotlin/d1;
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9658,7 +10772,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f13005d
+    const v2, 0x7f14005e
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -9669,13 +10783,13 @@
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f13005e
+    const v0, 0x7f14005f
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -9692,13 +10806,13 @@
     .line 7
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f1300ef
+    const v0, 0x7f1400f0
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 8
     :cond_1
@@ -9708,7 +10822,7 @@
     return-object p1
 .end method
 
-.method public Q2()Z
+.method public S2()Z
     .locals 1
 
     .line 1
@@ -9717,7 +10831,7 @@
     return v0
 .end method
 
-.method public final Q3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+.method public final S3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -9899,7 +11013,7 @@
     goto :goto_0
 
     :sswitch_8
-    const-string/jumbo v4, "undefined"
+    const-string v4, "undefined"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -9948,19 +11062,19 @@
     packed-switch v3, :pswitch_data_0
 
     .line 4
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 5
     :pswitch_0
-    invoke-virtual {p0, p1, v5}, Lcom/skt/tmap/engine/TmapAiManager;->F3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Z)V
+    invoke-virtual {p0, p1, v5}, Lcom/skt/tmap/engine/TmapAiManager;->H3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Z)V
 
     goto :goto_1
 
     .line 6
     :pswitch_1
-    invoke-virtual {p0, p1, v6}, Lcom/skt/tmap/engine/TmapAiManager;->F3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Z)V
+    invoke-virtual {p0, p1, v6}, Lcom/skt/tmap/engine/TmapAiManager;->H3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Z)V
 
     goto :goto_1
 
@@ -9975,19 +11089,19 @@
     if-eqz p1, :cond_c
 
     .line 8
-    invoke-virtual {p0, v7}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 9
     :cond_c
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 10
     :pswitch_3
-    invoke-virtual {p0, v7}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v7}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -10010,13 +11124,13 @@
 
     .line 13
     :cond_d
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->P3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
 
     goto :goto_1
 
     .line 14
     :pswitch_5
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -10039,13 +11153,13 @@
     if-eqz v0, :cond_e
 
     .line 16
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->P3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R3(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
 
     goto :goto_1
 
     .line 17
     :cond_e
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     goto :goto_1
 
@@ -10059,7 +11173,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->f5(Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
 
     :goto_1
     return-void
@@ -10067,9 +11181,11 @@
     .line 19
     :cond_f
     :goto_2
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -10102,7 +11218,7 @@
     .end packed-switch
 .end method
 
-.method public Q4(Ljava/lang/String;Z)V
+.method public S4(Ljava/lang/String;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -10167,7 +11283,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, p1, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->S(Ljava/lang/String;Z)V
+    invoke-virtual {p2, p1, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->T(Ljava/lang/String;Z)V
 
     goto :goto_0
 
@@ -10175,11 +11291,11 @@
     :cond_2
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {p2, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->Q(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->R(Ljava/lang/String;)V
 
     .line 8
     :goto_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object p2
 
@@ -10188,14 +11304,14 @@
     .line 9
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->E:Ljava/lang/String;
 
-    invoke-virtual {p2, p1, v0}, Ldc/d;->z(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, p1, v0}, Lbe/e;->A(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     :goto_1
     return-void
 .end method
 
-.method public Q5(Z)V
+.method public S5(Z)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -10222,7 +11338,7 @@
     return-void
 .end method
 
-.method public R1(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public T1(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -10236,16 +11352,16 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$g0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$h0;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$g0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$h0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public R2()Z
+.method public T2()Z
     .locals 1
 
     .line 1
@@ -10254,7 +11370,7 @@
     return v0
 .end method
 
-.method public final R3(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final T3(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -10276,7 +11392,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
@@ -10476,7 +11592,7 @@
     goto/16 :goto_0
 
     :sswitch_b
-    const-string/jumbo v4, "turn_off"
+    const-string v4, "turn_off"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -10604,7 +11720,7 @@
     goto :goto_0
 
     :sswitch_13
-    const-string/jumbo v4, "undefined"
+    const-string v4, "undefined"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -10706,11 +11822,11 @@
     :pswitch_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$q;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$r;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$q;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$r;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->J:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->N:I
 
     int-to-long v3, p1
 
@@ -10720,7 +11836,7 @@
 
     .line 4
     :pswitch_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n1()V
 
     return v2
 
@@ -10728,11 +11844,11 @@
     :pswitch_2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$p;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$q;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$p;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$q;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    sget v1, Lcom/skt/voice/tyche/AiConstant;->J:I
+    sget v1, Lcom/skt/voice/tyche/AiConstant;->N:I
 
     int-to-long v3, v1
 
@@ -10742,7 +11858,7 @@
 
     .line 6
     :pswitch_3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     .line 7
     iget-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a0:Z
@@ -10750,7 +11866,7 @@
     if-eqz p1, :cond_19
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->b5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->d5()V
 
     :cond_19
     return v2
@@ -10759,11 +11875,11 @@
     :pswitch_4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$o;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$p;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$o;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$p;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->J:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->N:I
 
     int-to-long v3, p1
 
@@ -10773,7 +11889,7 @@
 
     .line 10
     :pswitch_5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->V3(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->X3(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v2
 
@@ -10781,11 +11897,11 @@
     :pswitch_6
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$m;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$n;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$m;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$n;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->J:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->N:I
 
     int-to-long v3, p1
 
@@ -10795,7 +11911,7 @@
 
     .line 12
     :pswitch_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Y3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->a4()V
 
     return v2
 
@@ -10837,13 +11953,13 @@
     .line 15
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->f4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
     .line 16
     :pswitch_9
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v2
 
@@ -10851,7 +11967,7 @@
     const-string p1, "oos"
 
     .line 17
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return v2
 
@@ -10859,11 +11975,11 @@
     :pswitch_b
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$n;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$o;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$n;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$o;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->J:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->N:I
 
     int-to-long v3, p1
 
@@ -10873,7 +11989,7 @@
 
     .line 19
     :pswitch_c
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R1(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T1(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v2
 
@@ -10938,7 +12054,7 @@
     .end packed-switch
 .end method
 
-.method public R4()V
+.method public T4()V
     .locals 1
 
     .line 1
@@ -10955,7 +12071,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->M()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->N()V
 
     :cond_1
     const/4 v0, 0x1
@@ -10966,7 +12082,7 @@
     return-void
 .end method
 
-.method public R5(Z)V
+.method public T5(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11006,22 +12122,22 @@
     return-void
 .end method
 
-.method public final S1()V
+.method public final U1()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$a0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$b0;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$a0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$b0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public S2()Z
+.method public U2()Z
     .locals 1
 
     .line 1
@@ -11030,7 +12146,7 @@
     return v0
 .end method
 
-.method public final S3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public final U3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11070,7 +12186,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -11080,7 +12196,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -11090,31 +12206,31 @@
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->H0()V
 
     return-void
 
     .line 5
     :cond_1
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v1
 
     .line 7
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object p1
 
@@ -11210,7 +12326,7 @@
     if-eq v2, v5, :cond_3
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_1
 
@@ -11219,16 +12335,16 @@
     iput-boolean v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
 
     .line 10
-    invoke-virtual {p0, v1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->l6(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->n6(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 11
     :cond_4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 12
-    invoke-virtual {p0, v1, v4}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v1, v4}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     :cond_5
     :goto_1
@@ -11246,7 +12362,7 @@
     .end sparse-switch
 .end method
 
-.method public final S4(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
+.method public final U4(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11313,7 +12429,7 @@
 
     .line 8
     :goto_0
-    new-instance p1, Lqc/c;
+    new-instance p1, Loe/d;
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
@@ -11321,18 +12437,18 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {p1, v1, v2, v3}, Lqc/c;-><init>(Landroid/app/Activity;ZZ)V
+    invoke-direct {p1, v1, v2, v3}, Loe/d;-><init>(Landroid/app/Activity;ZZ)V
 
     .line 9
     invoke-virtual {p1, p2}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnComplete(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
 
     .line 10
-    invoke-virtual {p1, v0}, Lqc/c;->request(Lcom/skt/tmap/engine/navigation/network/ndds/dto/RequestDto;)Z
+    invoke-virtual {p1, v0}, Loe/d;->p(Lcom/skt/tmap/network/ndds/dto/request/FindPoiDetailInfoRequestDto;)Z
 
     return-void
 .end method
 
-.method public S5(Z)V
+.method public U5(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11355,7 +12471,7 @@
     return-void
 .end method
 
-.method public T1()Landroid/app/Activity;
+.method public V1()Landroid/app/Activity;
     .locals 1
 
     .line 1
@@ -11364,7 +12480,7 @@
     return-object v0
 .end method
 
-.method public T2()Z
+.method public V2()Z
     .locals 1
 
     .line 1
@@ -11373,7 +12489,7 @@
     return v0
 .end method
 
-.method public final T3(Ljava/util/List;)V
+.method public final V3(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11396,7 +12512,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f:Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->f0()Landroidx/lifecycle/LiveData;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->L0()Landroidx/lifecycle/LiveData;
 
     move-result-object p1
 
@@ -11413,7 +12529,7 @@
     return-void
 .end method
 
-.method public T4()V
+.method public V4()V
     .locals 1
 
     .line 1
@@ -11425,12 +12541,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->N()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->O()V
 
     return-void
 .end method
 
-.method public T5(Z)V
+.method public V5(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11455,7 +12571,7 @@
     return-void
 .end method
 
-.method public U1()Ljava/util/List;
+.method public W1()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -11472,7 +12588,7 @@
     return-object v0
 .end method
 
-.method public U2()Z
+.method public W2()Z
     .locals 1
 
     .line 1
@@ -11481,13 +12597,13 @@
     return v0
 .end method
 
-.method public final U3()V
+.method public final W3()V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f:Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->f0()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->L0()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -11504,7 +12620,7 @@
     return-void
 .end method
 
-.method public U4()V
+.method public W4()V
     .locals 1
 
     .line 1
@@ -11516,12 +12632,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->R()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->S()V
 
     return-void
 .end method
 
-.method public U5(Ljava/lang/String;)V
+.method public W5(Ljava/lang/String;)V
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11541,7 +12657,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->h0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->i0()V
 
     .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -11551,7 +12667,7 @@
     .line 4
     iget-wide v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
 
-    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->W:J
+    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->a0:J
 
     cmp-long v4, v2, v4
 
@@ -11567,7 +12683,7 @@
 
     sub-long/2addr v0, v2
 
-    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->X:J
+    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->b0:J
 
     cmp-long v0, v0, v2
 
@@ -11582,14 +12698,14 @@
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
     .line 6
-    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->W:J
+    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->a0:J
 
     iput-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
 
     .line 7
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v2, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->A3(Landroid/content/Context;J)V
+    invoke-static {v2, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->M3(Landroid/content/Context;J)V
 
     goto :goto_1
 
@@ -11609,12 +12725,12 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->z3(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->L3(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public V2()Z
+.method public X2()Z
     .locals 1
 
     .line 1
@@ -11623,7 +12739,7 @@
     return v0
 .end method
 
-.method public final V3(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public final X3(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11637,16 +12753,16 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$h1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$i1;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$h1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$i1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public V4()V
+.method public X4()V
     .locals 1
 
     .line 1
@@ -11663,7 +12779,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->T()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->U()V
 
     :cond_1
     const/4 v0, 0x0
@@ -11674,7 +12790,7 @@
     return-void
 .end method
 
-.method public V5(Z)V
+.method public X5(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11695,7 +12811,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    const p1, 0x7f120021
+    const p1, 0x7f130022
 
     .line 2
     invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->t0(I)V
@@ -11712,7 +12828,7 @@
     return-void
 .end method
 
-.method public V6(Ljava/lang/String;)V
+.method public X6(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11742,10 +12858,10 @@
 
     const-string/jumbo v1, "validateStarbucksOrder"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->W5(Ljava/lang/String;)V
 
     .line 4
     new-instance p1, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;
@@ -11755,24 +12871,24 @@
     const-string v0, "UI_ACTION_INFO"
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->f(Ljava/lang/String;)V
 
     const-string v0, "TYPE"
 
     const-string v1, "REQUEST_ORDER_VALIDATION"
 
     .line 6
-    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public W1()Lcom/skt/aicloud/speaker/lib/state/AsrState;
+.method public Y1()Lcom/skt/aicloud/speaker/lib/state/AsrState;
     .locals 1
 
     .line 1
@@ -11794,7 +12910,7 @@
     return-object v0
 .end method
 
-.method public W2()Z
+.method public Y2()Z
     .locals 1
 
     .line 1
@@ -11803,7 +12919,7 @@
     return v0
 .end method
 
-.method public final W3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public final Y3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -11819,7 +12935,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p3
 
@@ -11828,14 +12944,14 @@
     if-nez p3, :cond_a
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object p3
 
     if-eqz p3, :cond_a
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object p3
 
@@ -11847,7 +12963,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object p3
 
@@ -11869,7 +12985,7 @@
     goto :goto_0
 
     :sswitch_0
-    const-string/jumbo v2, "turn_on.hud"
+    const-string v2, "turn_on.hud"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -11901,7 +13017,7 @@
     goto :goto_0
 
     :sswitch_2
-    const-string/jumbo v2, "turn_on.blackbox"
+    const-string v2, "turn_on.blackbox"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -11933,7 +13049,7 @@
     goto :goto_0
 
     :sswitch_4
-    const-string/jumbo v2, "turn_off.blackbox"
+    const-string v2, "turn_off.blackbox"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -11984,7 +13100,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -11992,9 +13108,9 @@
     :pswitch_0
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$w;
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$x;
 
-    invoke-direct {p2, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$w;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
+    invoke-direct {p2, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$x;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -12004,9 +13120,9 @@
     :pswitch_1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$v;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$w;
 
-    invoke-direct {v0, p0, p3, p2}, Lcom/skt/tmap/engine/TmapAiManager$v;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p3, p2}, Lcom/skt/tmap/engine/TmapAiManager$w;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -12014,7 +13130,7 @@
 
     .line 9
     :pswitch_2
-    invoke-virtual {p3}, Lcom/skt/tmap/activity/TmapNaviActivity;->I9()Z
+    invoke-virtual {p3}, Lcom/skt/tmap/activity/TmapNaviActivity;->W9()Z
 
     move-result p1
 
@@ -12023,50 +13139,19 @@
     .line 10
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const p2, 0x7f130143
+    const p2, 0x7f140148
 
     invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
     .line 11
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->s5(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Z)V
 
     return-void
 
     .line 12
     :cond_8
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$t;
-
-    invoke-direct {p2, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$t;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_1
-
-    .line 13
-    :pswitch_3
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$r;
-
-    invoke-direct {p2, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$r;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_1
-
-    .line 14
-    :pswitch_4
-    invoke-virtual {p3}, Lcom/skt/tmap/activity/TmapNaviActivity;->I9()Z
-
-    move-result p1
-
-    if-ne p1, v3, :cond_9
-
-    .line 15
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$u;
@@ -12077,23 +13162,8 @@
 
     goto :goto_1
 
-    .line 16
-    :cond_9
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    const p2, 0x7f130144
-
-    invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 17
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->s5(Ljava/lang/String;Z)V
-
-    return-void
-
-    .line 18
-    :pswitch_5
+    .line 13
+    :pswitch_3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$s;
@@ -12102,13 +13172,59 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    goto :goto_1
+
+    .line 14
+    :pswitch_4
+    invoke-virtual {p3}, Lcom/skt/tmap/activity/TmapNaviActivity;->W9()Z
+
+    move-result p1
+
+    if-ne p1, v3, :cond_9
+
+    .line 15
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$v;
+
+    invoke-direct {p2, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$v;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_1
+
+    .line 16
+    :cond_9
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    const p2, 0x7f140149
+
+    invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 17
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Z)V
+
+    return-void
+
+    .line 18
+    :pswitch_5
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$t;
+
+    invoke-direct {p2, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$t;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     .line 19
     :goto_1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$x;
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$y;
 
-    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$x;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$y;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -12116,7 +13232,7 @@
 
     .line 20
     :pswitch_6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -12125,17 +13241,15 @@
     :goto_2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const p2, 0x7f130063
+    const p2, 0x7f140064
 
     invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->s5(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Z)V
 
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -12160,7 +13274,7 @@
     .end packed-switch
 .end method
 
-.method public W4()V
+.method public Y4()V
     .locals 2
 
     .line 1
@@ -12177,19 +13291,19 @@
     if-eqz v1, :cond_1
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->T()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->U()V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->M()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->N()V
 
     :goto_0
     return-void
 .end method
 
-.method public W5(Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;)V
+.method public Y5(Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -12206,7 +13320,7 @@
     return-void
 .end method
 
-.method public X1()I
+.method public Z1()I
     .locals 1
 
     .line 1
@@ -12227,7 +13341,7 @@
     return v0
 .end method
 
-.method public X2()Z
+.method public Z2()Z
     .locals 1
 
     .line 1
@@ -12249,7 +13363,7 @@
     return v0
 .end method
 
-.method public final X3(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final Z3(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -12277,7 +13391,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
@@ -12333,7 +13447,7 @@
     goto/16 :goto_0
 
     :sswitch_0
-    const-string/jumbo v5, "tmap.favoritelist"
+    const-string v5, "tmap.favoritelist"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12365,7 +13479,7 @@
     goto/16 :goto_0
 
     :sswitch_2
-    const-string/jumbo v5, "turn_on.safe_driving"
+    const-string v5, "turn_on.safe_driving"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12477,7 +13591,7 @@
     goto/16 :goto_0
 
     :sswitch_9
-    const-string/jumbo v5, "turn_on.hud"
+    const-string v5, "turn_on.hud"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12525,7 +13639,7 @@
     goto/16 :goto_0
 
     :sswitch_c
-    const-string/jumbo v5, "turn_on.blackbox"
+    const-string v5, "turn_on.blackbox"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12637,7 +13751,7 @@
     goto/16 :goto_0
 
     :sswitch_13
-    const-string/jumbo v5, "undefined"
+    const-string v5, "undefined"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12669,7 +13783,7 @@
     goto :goto_0
 
     :sswitch_15
-    const-string/jumbo v5, "turn_off.safe_driving"
+    const-string v5, "turn_off.safe_driving"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12701,7 +13815,7 @@
     goto :goto_0
 
     :sswitch_17
-    const-string/jumbo v5, "turn_off.blackbox"
+    const-string v5, "turn_off.blackbox"
 
     invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12784,7 +13898,7 @@
     const-string p1, "oos"
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return v3
 
@@ -12795,50 +13909,50 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->O3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Q3()V
 
     return v3
 
     .line 8
     :pswitch_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n1()V
 
     return v3
 
     .line 9
     :pswitch_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G6()V
 
     return v3
 
     .line 10
     :pswitch_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Y3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->a4()V
 
     return v3
 
     .line 11
     :pswitch_4
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1c
 
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1c
 
     .line 12
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->g6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->i6()V
 
     goto :goto_1
 
     .line 13
     :cond_1c
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R1(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T1(Lcom/skt/voice/tyche/data/CardResult;)V
 
     :goto_1
     return v3
@@ -12850,19 +13964,19 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
 
     .line 15
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E4()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G4()V
 
     return v3
 
     .line 16
     :pswitch_6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->I6(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->K6(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v3
 
     .line 17
     :pswitch_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->q6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->s6()V
 
     return v3
 
@@ -12870,19 +13984,19 @@
     :pswitch_8
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->f4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
     .line 19
     :pswitch_9
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R1(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T1(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v3
 
     .line 20
     :pswitch_a
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->S1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->U1()V
 
     return v3
 
@@ -12893,7 +14007,7 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
 
     .line 22
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->e4()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->g4()V
 
     return v3
 
@@ -12932,14 +14046,14 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->N2(Lcom/skt/voice/tyche/data/CommandInfo;)Z
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->P2(Lcom/skt/voice/tyche/data/CommandInfo;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1e
 
     .line 25
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Y3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->a4()V
 
     goto :goto_2
 
@@ -12951,7 +14065,7 @@
 
     if-ne v2, v3, :cond_1f
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->b3(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->d3(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -12960,13 +14074,13 @@
     .line 27
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->f4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 28
     :cond_1f
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R1(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T1(Lcom/skt/voice/tyche/data/CardResult;)V
 
     .line 29
     :goto_2
@@ -12979,7 +14093,7 @@
     .line 30
     :cond_20
     :goto_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     return v3
 
@@ -12987,17 +14101,15 @@
     :pswitch_e
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->W3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->Y3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
     .line 32
     :pswitch_f
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R1(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T1(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v3
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -13064,7 +14176,7 @@
     .end packed-switch
 .end method
 
-.method public final X4(Landroid/app/Activity;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Ljava/lang/String;Z)V
+.method public final Z4(Landroid/app/Activity;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Ljava/lang/String;Z)V
     .locals 7
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13082,7 +14194,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/location/h;->t()Lcom/skt/tmap/location/h;
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
@@ -13091,23 +14203,23 @@
     move-result-object v0
 
     .line 2
-    new-instance v1, Lqc/c;
+    new-instance v1, Loe/d;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2, v2}, Lqc/c;-><init>(Landroid/app/Activity;ZZ)V
+    invoke-direct {v1, p1, v2, v2}, Loe/d;-><init>(Landroid/app/Activity;ZZ)V
 
     .line 3
-    new-instance v3, Lcom/skt/tmap/engine/TmapAiManager$j0;
+    new-instance v3, Lcom/skt/tmap/engine/TmapAiManager$k0;
 
-    invoke-direct {v3, p0, p3, p2, p4}, Lcom/skt/tmap/engine/TmapAiManager$j0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Z)V
+    invoke-direct {v3, p0, p3, p2, p4}, Lcom/skt/tmap/engine/TmapAiManager$k0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Z)V
 
     invoke-virtual {v1, v3}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnComplete(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
 
     .line 4
-    new-instance p4, Lcom/skt/tmap/engine/TmapAiManager$k0;
+    new-instance p4, Lcom/skt/tmap/engine/TmapAiManager$l0;
 
-    invoke-direct {p4, p0, p3, p1}, Lcom/skt/tmap/engine/TmapAiManager$k0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Landroid/app/Activity;)V
+    invoke-direct {p4, p0, p3, p1}, Lcom/skt/tmap/engine/TmapAiManager$l0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Landroid/app/Activity;)V
 
     invoke-virtual {v1, p4}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnFail(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;)V
 
@@ -13147,9 +14259,9 @@
     invoke-virtual {p3, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 10
-    new-instance p4, Lcom/skt/tmap/network/ndds/dto/request/RouteSummaryInfoRequestDto;
+    invoke-static {p1}, Lcom/skt/tmap/network/ndds/dto/request/RouteSummaryRequestFactory;->create(Landroid/content/Context;)Lcom/skt/tmap/network/ndds/dto/request/RouteSummaryInfoRequestDto;
 
-    invoke-direct {p4}, Lcom/skt/tmap/network/ndds/dto/request/RouteSummaryInfoRequestDto;-><init>()V
+    move-result-object p4
 
     .line 11
     invoke-virtual {p4, p3}, Lcom/skt/tmap/network/ndds/dto/request/RouteSummaryInfoRequestDto;->setCommingTime(Ljava/util/List;)V
@@ -13183,7 +14295,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lyc/a;->b(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
+    invoke-static {v3}, Lze/a;->b(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
 
     move-result-object v3
 
@@ -13202,7 +14314,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lyc/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    invoke-static {v3}, Lze/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
 
     move-result-object v3
 
@@ -13221,7 +14333,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lyc/a;->h(Landroid/content/Context;)B
+    invoke-static {p1}, Lze/a;->h(Landroid/content/Context;)B
 
     move-result p1
 
@@ -13243,7 +14355,7 @@
     if-nez p1, :cond_0
 
     .line 22
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 
@@ -13316,7 +14428,7 @@
     invoke-virtual {p4, p1}, Lcom/skt/tmap/network/ndds/dto/request/RouteSummaryInfoRequestDto;->setDestPoiId(Ljava/lang/String;)V
 
     .line 33
-    invoke-virtual {v1, p4}, Lqc/c;->request(Lcom/skt/tmap/engine/navigation/network/ndds/dto/RequestDto;)Z
+    invoke-virtual {v1, p4}, Loe/d;->request(Lcom/skt/tmap/engine/navigation/network/ndds/dto/RequestDto;)Z
 
     return-void
 
@@ -13327,12 +14439,12 @@
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 35
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 .end method
 
-.method public X5(I)V
+.method public Z5(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13357,7 +14469,7 @@
     return-void
 .end method
 
-.method public Y1()V
+.method public a2()V
     .locals 2
 
     .line 1
@@ -13388,7 +14500,7 @@
     return-void
 .end method
 
-.method public Y2()Z
+.method public a3()Z
     .locals 1
 
     .line 1
@@ -13397,22 +14509,22 @@
     return v0
 .end method
 
-.method public final Y3()V
+.method public final a4()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$r0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$s0;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$r0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$s0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public Y4(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
+.method public a5(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13431,16 +14543,16 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    new-instance v1, Lcom/skt/tmap/engine/b;
+    new-instance v1, Lcom/skt/tmap/engine/q;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/b;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/q;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/route/search/b;->d(Landroid/content/Context;Lcom/skt/tmap/route/search/b$c;)V
+    invoke-static {v0, v1}, Lue/g;->c(Landroid/content/Context;Lue/g$a;)V
 
     return-void
 .end method
 
-.method public Y5(Ljava/lang/String;)V
+.method public a6(Ljava/lang/String;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13489,17 +14601,17 @@
     return-void
 .end method
 
-.method public Z2()Z
+.method public b3()Z
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->X2()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Z2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Y2()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->a3()Z
 
     move-result v0
 
@@ -13516,7 +14628,7 @@
     return v0
 .end method
 
-.method public final Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+.method public final b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13542,7 +14654,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/skt/tmap/util/c;->s(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, p2, p3}, Lcom/skt/tmap/util/d;->s(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -13554,23 +14666,23 @@
     invoke-interface {p2, p3, p1}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->b(Lcom/skt/voice/tyche/AiConstant$AiErrorType;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 6
-    invoke-virtual {p1}, Ldc/d;->s()V
+    invoke-virtual {p1}, Lbe/e;->t()V
 
     :cond_1
     return-void
 .end method
 
-.method public final Z4(Ljava/lang/String;)V
+.method public final b5(Ljava/lang/String;)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13584,11 +14696,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$o1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$p1;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$o1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$p1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->F:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->J:I
 
     int-to-long v2, p1
 
@@ -13597,7 +14709,7 @@
     return-void
 .end method
 
-.method public Z5()V
+.method public b6()V
     .locals 1
 
     .line 1
@@ -13614,7 +14726,7 @@
     return-void
 .end method
 
-.method public a2()Lcom/skt/aicloud/speaker/lib/state/CallState;
+.method public c2()Lcom/skt/aicloud/speaker/lib/state/CallState;
     .locals 1
 
     .line 1
@@ -13623,7 +14735,7 @@
     return-object v0
 .end method
 
-.method public a3()Z
+.method public c3()Z
     .locals 1
 
     .line 1
@@ -13631,7 +14743,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -13648,7 +14760,7 @@
     return v0
 .end method
 
-.method public final a4(Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;Ljava/util/List;)V
+.method public final c4(Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;Ljava/util/List;)V
     .locals 16
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -13706,12 +14818,12 @@
     move-result-object v6
 
     .line 5
-    invoke-static {v4}, Lcom/skt/tmap/util/c;->a(Ljava/lang/String;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    invoke-static {v4}, Lcom/skt/tmap/util/d;->a(Ljava/lang/String;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
 
     move-result-object v10
 
     .line 6
-    invoke-static {v10}, Lcom/skt/tmap/util/c;->h(Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;)Ljava/lang/String;
+    invoke-static {v10}, Lcom/skt/tmap/util/d;->h(Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -13728,7 +14840,7 @@
     check-cast v7, Lcom/skt/tmap/activity/TmapNaviActivity;
 
     .line 9
-    invoke-virtual {v7}, Lcom/skt/tmap/activity/TmapNaviActivity;->P0()I
+    invoke-virtual {v7}, Lcom/skt/tmap/activity/TmapNaviActivity;->T0()I
 
     move-result v7
 
@@ -13776,7 +14888,7 @@
     :cond_2
     iget v13, v10, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->vsmOilType:I
 
-    invoke-static {v8, v7, v13, v5}, Lcom/skt/tmap/util/e1;->r([Lcom/skt/tmap/engine/navigation/data/GasStationInfo;IILjava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v8, v7, v13, v5}, Lcom/skt/tmap/util/n1;->r([Lcom/skt/tmap/engine/navigation/data/GasStationInfo;IILjava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -13787,12 +14899,12 @@
 
     move-result v15
 
-    invoke-static {v13, v15, v1, v11}, Lcom/skt/tmap/util/c;->t(Landroid/content/Context;ILcom/skt/tmap/network/ndds/dto/info/OilInfo;Z)Ljava/lang/String;
+    invoke-static {v13, v15, v1, v11}, Lcom/skt/tmap/util/d;->t(Landroid/content/Context;ILcom/skt/tmap/network/ndds/dto/info/OilInfo;Z)Ljava/lang/String;
 
     move-result-object v13
 
     .line 15
-    invoke-static {v5}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {v5}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result v15
 
@@ -13801,7 +14913,7 @@
     .line 16
     iget v5, v10, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->vsmOilType:I
 
-    invoke-static {v8, v7, v5}, Lcom/skt/tmap/util/e1;->j([Lcom/skt/tmap/engine/navigation/data/GasStationInfo;II)Ljava/util/ArrayList;
+    invoke-static {v8, v7, v5}, Lcom/skt/tmap/util/n1;->j([Lcom/skt/tmap/engine/navigation/data/GasStationInfo;II)Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -13814,12 +14926,12 @@
 
     const/4 v8, 0x1
 
-    invoke-static {v6, v7, v1, v8}, Lcom/skt/tmap/util/c;->t(Landroid/content/Context;ILcom/skt/tmap/network/ndds/dto/info/OilInfo;Z)Ljava/lang/String;
+    invoke-static {v6, v7, v1, v8}, Lcom/skt/tmap/util/d;->t(Landroid/content/Context;ILcom/skt/tmap/network/ndds/dto/info/OilInfo;Z)Ljava/lang/String;
 
     move-result-object v13
 
     .line 18
-    invoke-static {v5}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {v5}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result v6
 
@@ -13844,7 +14956,7 @@
 
     iget-object v3, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v5, 0x7f130079
+    const v5, 0x7f14007a
 
     invoke-virtual {v3, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -13870,7 +14982,7 @@
 
     .line 22
     :cond_3
-    invoke-virtual {v0, v14, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {v0, v14, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     return-void
 
@@ -13897,7 +15009,7 @@
     .line 24
     iget v1, v10, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->vsmOilType:I
 
-    invoke-static {v5, v1}, Lcom/skt/tmap/util/e1;->p(Ljava/util/ArrayList;I)Ljava/util/ArrayList;
+    invoke-static {v5, v1}, Lcom/skt/tmap/util/n1;->p(Ljava/util/ArrayList;I)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -13933,11 +15045,11 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/skt/tmap/util/i0;->c(Ljava/lang/String;)D
+    invoke-static {v6}, Lcom/skt/tmap/util/o0;->c(Ljava/lang/String;)D
 
     move-result-wide v6
 
-    sget v8, Lcom/skt/voice/tyche/AiConstant;->S:I
+    sget v8, Lcom/skt/voice/tyche/AiConstant;->W:I
 
     int-to-double v11, v8
 
@@ -13964,7 +15076,7 @@
 
     iget-object v3, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v5, 0x7f130079
+    const v5, 0x7f14007a
 
     invoke-virtual {v3, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -13994,7 +15106,7 @@
 
     .line 31
     :cond_7
-    invoke-virtual {v0, v14, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {v0, v14, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     return-void
 
@@ -14028,7 +15140,7 @@
 
     iget-object v3, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v5, 0x7f13007a
+    const v5, 0x7f14007b
 
     invoke-virtual {v3, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -14064,7 +15176,7 @@
 
     iget-object v3, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v8, 0x7f130079
+    const v8, 0x7f14007a
 
     invoke-virtual {v3, v8}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -14104,7 +15216,7 @@
     iput-object v2, v0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
 
     .line 39
-    invoke-virtual {v0, v7}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {v0, v7}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 40
     iput-boolean v7, v0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
@@ -14113,7 +15225,7 @@
     iput-object v1, v0, Lcom/skt/tmap/engine/TmapAiManager;->V:Ljava/util/List;
 
     .line 42
-    invoke-virtual {v0, v13}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {v0, v13}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 43
     iget-object v7, v0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -14131,24 +15243,24 @@
     .line 44
     :cond_b
     :goto_4
-    invoke-virtual {v0, v9}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {v0, v9}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
     .line 45
     :cond_c
-    invoke-virtual {v0, v14, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {v0, v14, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     return-void
 
     .line 46
     :cond_d
-    invoke-virtual {v0, v9}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {v0, v9}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public a5(Z)V
+.method public c5(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -14190,7 +15302,7 @@
 
     const-string v2, "requestStarbucksSirenOrder"
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
@@ -14203,41 +15315,41 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->L(Landroid/net/ConnectivityManager;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->O(Landroid/net/ConnectivityManager;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
-    const p1, 0x7f1300cb
+    const p1, 0x7f1400cc
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 6
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v0, 0x7f1300d4
+    const v0, 0x7f1400d5
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->E1(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->G1(Ljava/lang/String;)V
 
     return-void
 
     .line 7
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->W5(Ljava/lang/String;)V
 
     .line 9
     iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->q0:Z
@@ -14258,7 +15370,7 @@
     .line 13
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->A3(Landroid/content/Context;J)V
+    invoke-static {p1, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->M3(Landroid/content/Context;J)V
 
     .line 14
     new-instance p1, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;
@@ -14268,31 +15380,31 @@
     const-string v0, "UI_ACTION_INFO"
 
     .line 15
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->f(Ljava/lang/String;)V
 
     const-string v0, "TYPE"
 
     const-string v1, "REQUEST_ORDER"
 
     .line 16
-    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "VALUE"
 
     const-string v1, "Y"
 
     .line 17
-    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 18
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
 
     .line 19
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->M0:Ljava/lang/Runnable;
 
-    sget-wide v1, Lcom/skt/voice/tyche/AiConstant;->X:J
+    sget-wide v1, Lcom/skt/voice/tyche/AiConstant;->b0:J
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -14301,7 +15413,7 @@
     return-void
 .end method
 
-.method public a6(Z)V
+.method public c6(Z)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -14318,7 +15430,7 @@
     return-void
 .end method
 
-.method public b2()Lcom/skt/aicloud/speaker/lib/state/CallSubState;
+.method public d2()Lcom/skt/aicloud/speaker/lib/state/CallSubState;
     .locals 1
 
     .line 1
@@ -14327,7 +15439,7 @@
     return-object v0
 .end method
 
-.method public final b3(Ljava/lang/String;)Z
+.method public final d3(Ljava/lang/String;)Z
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -14458,7 +15570,7 @@
     return p1
 .end method
 
-.method public final b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+.method public final d4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
     .locals 7
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -14502,7 +15614,7 @@
     move-result-object p2
 
     .line 7
-    invoke-static {v2}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {v2}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result v5
 
@@ -14523,7 +15635,7 @@
     const/4 v5, 0x1
 
     .line 9
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 10
     iput-boolean v5, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
@@ -14574,7 +15686,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c;->v(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/d;->v(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -14601,7 +15713,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c;->w(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/d;->w(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -14614,7 +15726,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->M:[I
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result v1
 
@@ -14641,7 +15753,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2, v4}, Lcom/skt/tmap/util/c;->u(Landroid/content/Context;ILcom/skt/tmap/network/ndds/dto/info/OilInfo;)Ljava/lang/String;
+    invoke-static {p1, p2, v4}, Lcom/skt/tmap/util/d;->u(Landroid/content/Context;ILcom/skt/tmap/network/ndds/dto/info/OilInfo;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -14656,7 +15768,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/c;->a(Ljava/lang/String;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    invoke-static {p1}, Lcom/skt/tmap/util/d;->a(Ljava/lang/String;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
 
     move-result-object v3
 
@@ -14672,14 +15784,14 @@
     :cond_3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1, v0, v1, v3, p2}, Lcom/skt/tmap/util/c;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1, v3, p2}, Lcom/skt/tmap/util/d;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 24
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result p1
 
@@ -14692,7 +15804,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c;->I(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/d;->I(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -14708,7 +15820,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c;->y(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/d;->y(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -14722,7 +15834,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->M:[I
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result v1
 
@@ -14736,26 +15848,26 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 29
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     return-void
 
     .line 30
     :cond_5
     :goto_2
-    invoke-virtual {p0, p1, v4, p2}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v4, p2}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public b5()V
+.method public d5()V
     .locals 1
 
     .line 1
@@ -14767,12 +15879,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->E0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->F0()V
 
     return-void
 .end method
 
-.method public b6(Z)V
+.method public d6(Z)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -14786,7 +15898,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/l0;->k(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/r0;->k(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -14798,7 +15910,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -14828,7 +15940,7 @@
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {p1, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->f0(Z)V
+    invoke-virtual {p1, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->g0(Z)V
 
     goto :goto_0
 
@@ -14849,14 +15961,14 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->f0(Z)V
+    invoke-virtual {p1, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->g0(Z)V
 
     :cond_3
     :goto_0
     return-void
 .end method
 
-.method public c2()Ljava/lang/String;
+.method public e2()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -14865,7 +15977,7 @@
     return-object v0
 .end method
 
-.method public c4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public e4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -14897,7 +16009,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v3
 
@@ -14907,24 +16019,24 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v2
 
     check-cast v2, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;
 
     .line 4
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->w()Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->x()Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
     .line 5
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object p1
 
@@ -14953,7 +16065,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object p1
 
@@ -14967,18 +16079,18 @@
     const/4 v0, 0x0
 
     .line 9
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 10
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -14989,7 +16101,7 @@
 
     sget-object v0, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
 
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v1
 
@@ -14999,7 +16111,7 @@
 
     .line 12
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     :goto_0
     return-void
@@ -15036,10 +16148,10 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$u1;->h:[I
+    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$v1;->h:[I
 
     iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
@@ -15052,7 +16164,7 @@
     packed-switch p1, :pswitch_data_0
 
     .line 16
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 17
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
@@ -15068,7 +16180,7 @@
     .line 19
     sget-object v1, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
 
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v2
 
@@ -15088,7 +16200,7 @@
 
     .line 22
     :pswitch_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 23
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
@@ -15097,7 +16209,7 @@
 
     .line 24
     :pswitch_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 25
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
@@ -15106,7 +16218,7 @@
 
     .line 26
     :pswitch_4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->A1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->C1()V
 
     .line 27
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
@@ -15115,7 +16227,7 @@
 
     .line 28
     :pswitch_5
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->t()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
 
     move-result-object p1
 
@@ -15125,14 +16237,14 @@
     move-result v0
 
     .line 30
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()I
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->j()I
 
     move-result v2
 
     const-string v3, ""
 
     .line 31
-    invoke-virtual {p0, p1, v3, v2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->f6(Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual {p0, p1, v3, v2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->h6(Ljava/lang/String;Ljava/lang/String;II)V
 
     .line 32
     new-instance v3, Ljava/lang/StringBuilder;
@@ -15161,7 +16273,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     :pswitch_6
@@ -15196,7 +16308,7 @@
     .end packed-switch
 .end method
 
-.method public c5()V
+.method public e5()V
     .locals 2
 
     .line 1
@@ -15220,22 +16332,22 @@
     return-void
 .end method
 
-.method public final c6()V
+.method public final e6()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$i1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$j1;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$i1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$j1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public d2()Ljava/lang/String;
+.method public f2()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -15244,7 +16356,7 @@
     return-object v0
 .end method
 
-.method public d4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public f4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -15274,10 +16386,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->j()Z
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->m()Z
 
     move-result v0
 
@@ -15397,7 +16509,7 @@
     packed-switch v3, :pswitch_data_0
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_1
 
@@ -15406,7 +16518,7 @@
     iput-boolean v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->s:Z
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     goto :goto_1
 
@@ -15414,7 +16526,7 @@
     :pswitch_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -15434,10 +16546,10 @@
     .line 11
     check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {v0, v2, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->N5(ZZ)V
+    invoke-virtual {v0, v2, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->W5(ZZ)V
 
     .line 12
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object p1
 
@@ -15446,18 +16558,18 @@
     .line 13
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f1300c2
+    const v2, 0x7f1400c3
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 14
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->w()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, v0, v1, v1}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-virtual {p0, p1, v0, v1, v1}, Lcom/skt/tmap/engine/TmapAiManager;->w5(Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     goto :goto_1
 
@@ -15484,14 +16596,14 @@
     if-eqz v0, :cond_7
 
     .line 19
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object p1
 
     check-cast p1, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiCallInfo;
 
     .line 20
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object p1
 
@@ -15507,10 +16619,10 @@
     if-nez v0, :cond_7
 
     .line 22
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v1()V
 
     .line 23
-    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     :cond_7
     :goto_1
@@ -15536,7 +16648,7 @@
     .end packed-switch
 .end method
 
-.method public d5(I)V
+.method public f5(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -15576,11 +16688,11 @@
     return-void
 .end method
 
-.method public final d6()V
+.method public final f6()V
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -15595,7 +16707,7 @@
     .line 2
     new-instance v1, Landroidx/core/app/NotificationCompat$e;
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -15604,7 +16716,7 @@
     invoke-direct {v1, v2, v3}, Landroidx/core/app/NotificationCompat$e;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/util/e;->B()I
+    invoke-static {}, Lcom/skt/tmap/util/g;->E()I
 
     move-result v2
 
@@ -15613,11 +16725,11 @@
     move-result-object v2
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v4
 
-    const v5, 0x7f1301a6
+    const v5, 0x7f1401ab
 
     invoke-virtual {v4, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -15628,11 +16740,11 @@
     move-result-object v2
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v4
 
-    const v5, 0x7f1301a3
+    const v5, 0x7f1401a8
 
     invoke-virtual {v4, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -15666,7 +16778,7 @@
     move-result-object v2
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v6
 
@@ -15689,7 +16801,7 @@
     invoke-direct {v2, v1}, Landroidx/core/app/NotificationCompat$c;-><init>(Landroidx/core/app/NotificationCompat$e;)V
 
     .line 12
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -15714,11 +16826,11 @@
     .line 15
     new-instance v2, Landroid/app/NotificationChannel;
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v5
 
-    const v6, 0x7f1303f7
+    const v6, 0x7f140457
 
     invoke-virtual {v5, v6}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -15729,11 +16841,11 @@
     invoke-direct {v2, v3, v5, v6}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
     .line 16
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v3
 
-    const v5, 0x7f1303f6
+    const v5, 0x7f140456
 
     invoke-virtual {v3, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -15756,7 +16868,7 @@
     return-void
 .end method
 
-.method public final e1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method public final g1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -15780,7 +16892,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/h;->F(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;
+    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/z;->H(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;
 
     move-result-object v1
 
@@ -15796,7 +16908,7 @@
     if-eqz v0, :cond_2
 
     .line 5
-    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/h;->G(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;
+    invoke-static {p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/z;->I(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;
 
     move-result-object v1
 
@@ -15818,7 +16930,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-virtual {v0, v2, p1, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->j0(Landroid/content/Context;Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper$HomeOfficeType;Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0, v2, p1, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->P0(Landroid/content/Context;Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper$HomeOfficeType;Lcom/skt/tmap/network/ndds/dto/info/PoiMyFavorite;)Landroidx/lifecycle/LiveData;
 
     move-result-object p1
 
@@ -15834,7 +16946,7 @@
     return-void
 .end method
 
-.method public e2()Ljava/util/List;
+.method public g2()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -15851,7 +16963,7 @@
     return-object v0
 .end method
 
-.method public final e4()V
+.method public final g4()V
     .locals 3
 
     .line 1
@@ -15862,7 +16974,7 @@
     .line 2
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f:Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
-    invoke-virtual {v1, v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->r0(Landroid/content/Context;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v1, v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->X0(Landroid/content/Context;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -15880,7 +16992,7 @@
     return-void
 .end method
 
-.method public e5(I)V
+.method public g5(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -15920,7 +17032,7 @@
     return-void
 .end method
 
-.method public e6(Z)V
+.method public g6(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -15945,7 +17057,7 @@
     return-void
 .end method
 
-.method public final f1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+.method public final h1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -16031,12 +17143,12 @@
     :goto_0
     iget-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v4, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+    invoke-static {v4, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 8
-    invoke-static {v4}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -16059,7 +17171,7 @@
 
     .line 10
     :cond_3
-    invoke-static {p1}, Lcom/skt/tmap/util/a;->n(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/b;->n(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Z
 
     move-result p2
 
@@ -16080,7 +17192,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, v0, v1, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {p2, v0, v1, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->g0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroidx/lifecycle/LiveData;
 
     move-result-object p1
 
@@ -16101,7 +17213,7 @@
     :cond_4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1, v2, v2}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2, v2}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -16116,7 +17228,7 @@
 
     move-result-object p1
 
-    invoke-static {p2, v2, p1}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v2, p1}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -16126,17 +17238,17 @@
     :cond_6
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p2, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+    invoke-static {p2, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p2, v2, p1}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v2, p1}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 16
     :goto_2
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 17
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -16160,7 +17272,7 @@
     move-result-object p2
 
     .line 20
-    invoke-static {p2}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -16175,7 +17287,7 @@
     if-eqz v0, :cond_8
 
     .line 21
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->i1(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->k1(Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -16187,22 +17299,22 @@
 
     const-string p2, ""
 
-    invoke-virtual {p0, p1, v1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     :cond_9
     :goto_4
     return-void
 .end method
 
-.method public final f2()Landroid/location/Location;
+.method public final h2()Landroid/location/Location;
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/engine/g0;->d()Lcom/skt/tmap/engine/g0;
+    invoke-static {}, Lcom/skt/tmap/engine/i0;->d()Lcom/skt/tmap/engine/i0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/g0;->i()Lcom/skt/tmap/location/h;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/i0;->i()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
@@ -16213,7 +17325,7 @@
     return-object v0
 .end method
 
-.method public final f4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public final h4(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -16247,7 +17359,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -16267,7 +17379,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f130347
+    const v3, 0x7f140375
 
     if-ne p3, v1, :cond_4
 
@@ -16310,7 +17422,7 @@
 
     .line 7
     :cond_0
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->w6(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->y6(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -16319,7 +17431,7 @@
     :goto_0
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lyc/a;->i(Landroid/content/Context;)Z
+    invoke-static {p1}, Lze/a;->i(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -16333,7 +17445,7 @@
     move-result-object p1
 
     .line 10
-    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->s5(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Z)V
 
     return-void
 
@@ -16344,19 +17456,19 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
 
     .line 12
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D6()V
 
     goto :goto_1
 
     .line 13
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     goto :goto_1
 
     .line 14
     :cond_4
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->b3(Ljava/lang/String;)Z
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->d3(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -16382,7 +17494,7 @@
     .line 16
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lyc/a;->i(Landroid/content/Context;)Z
+    invoke-static {p1}, Lze/a;->i(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -16396,37 +17508,37 @@
     move-result-object p1
 
     .line 18
-    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->s5(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Z)V
 
     goto :goto_1
 
     .line 19
     :cond_5
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->w6(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->y6(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 20
     :cond_6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     goto :goto_1
 
     .line 21
     :cond_7
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 22
     :cond_8
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     :goto_1
     return-void
 .end method
 
-.method public final f5(Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
+.method public final h5(Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -16523,7 +17635,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 3
-    invoke-virtual {p0, p3, p2}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p3, p2}, Lcom/skt/tmap/engine/TmapAiManager;->h1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     return-void
 
@@ -16571,7 +17683,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p2}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p2
 
@@ -16580,12 +17692,12 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p3}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p3
 
     .line 8
-    invoke-static {p2}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -16594,7 +17706,7 @@
     if-nez v0, :cond_4
 
     .line 9
-    invoke-static {p1}, Lcom/skt/tmap/util/a;->l(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/b;->l(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
 
     move-result p1
 
@@ -16603,7 +17715,7 @@
     .line 10
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1, p3, p2}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p3, p2}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -16613,19 +17725,19 @@
     :cond_3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1, v1, p2}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, p2}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 12
     :goto_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     goto/16 :goto_4
 
     .line 13
     :cond_4
-    invoke-static {p1}, Lcom/skt/tmap/util/a;->l(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/b;->l(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
 
     move-result p2
 
@@ -16669,7 +17781,7 @@
     .line 17
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f:Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
-    invoke-virtual {v1, p2, v0, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v1, p2, v0, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->g0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroidx/lifecycle/LiveData;
 
     move-result-object p1
 
@@ -16689,29 +17801,29 @@
     :cond_5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1, v1, p3}, Lcom/skt/tmap/util/c;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v1, p3}, Lcom/skt/tmap/util/d;->q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 19
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     goto :goto_4
 
     .line 20
     :cond_6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     return-void
 
     .line 21
     :pswitch_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object p1
 
     .line 22
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->G2(Landroid/location/Location;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->I2(Landroid/location/Location;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -16767,7 +17879,7 @@
     .line 26
     iget-object p3, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p3, p1, p2}, Lcom/skt/tmap/util/c;->p(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1, p2}, Lcom/skt/tmap/util/d;->p(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -16777,21 +17889,21 @@
     :cond_8
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p2, p1}, Lcom/skt/tmap/util/c;->o(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Lcom/skt/tmap/util/d;->o(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 28
     :goto_3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 29
     :goto_4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$y;
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$z;
 
-    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$y;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$z;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -16801,7 +17913,7 @@
     const-string p1, "oos"
 
     .line 30
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -16821,19 +17933,19 @@
     if-eqz p1, :cond_b
 
     .line 33
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->q5()V
 
     goto :goto_5
 
     .line 34
     :cond_b
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r5()V
 
     goto :goto_5
 
     .line 35
     :cond_c
-    invoke-virtual {p0, p3, p2}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-virtual {p0, p3, p2}, Lcom/skt/tmap/engine/TmapAiManager;->h1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     :goto_5
     return-void
@@ -16855,7 +17967,7 @@
     .end packed-switch
 .end method
 
-.method public f6(Ljava/lang/String;Ljava/lang/String;II)V
+.method public h6(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -16894,7 +18006,7 @@
     return-void
 .end method
 
-.method public final g1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+.method public final i1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -16926,9 +18038,9 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$i0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$j0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$i0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$j0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -16950,22 +18062,22 @@
 
     const-string v0, ""
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     :goto_1
     return-void
 .end method
 
-.method public g2()Lcom/skt/tmap/engine/f0;
+.method public i2()Lcom/skt/tmap/engine/h0;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
     return-object v0
 .end method
 
-.method public g4(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public i4(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17018,7 +18130,7 @@
     if-nez p1, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return-void
 
@@ -17074,7 +18186,7 @@
     if-eqz v1, :cond_4
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j2(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l2(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -17091,7 +18203,7 @@
 
     .line 11
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return-void
 
@@ -17099,24 +18211,32 @@
     if-gez p1, :cond_5
 
     .line 12
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->k2(Ljava/lang/String;)I
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->m2(Ljava/lang/String;)I
 
     move-result p1
 
     :cond_5
-    if-gez p1, :cond_6
+    if-ltz p1, :cond_9
 
     .line 13
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-static {}, Lcom/skt/tmap/data/RouteOptionData;->getValues()Ljava/util/List;
 
-    return-void
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_6
+
+    goto :goto_3
 
     .line 14
     :cond_6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->A6(I)V
 
     .line 15
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v0
 
@@ -17144,20 +18264,27 @@
     const-string p1, "ai_speak.routeoption_list"
 
     .line 17
-    invoke-virtual {v0, p1, v1, v2}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, p1, v1, v2}, Lbe/e;->U(Ljava/lang/String;J)V
 
     goto :goto_2
 
     .line 18
     :cond_7
-    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->t5(IZ)V
+    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->v5(IZ)V
 
     :cond_8
     :goto_2
     return-void
+
+    .line 19
+    :cond_9
+    :goto_3
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+
+    return-void
 .end method
 
-.method public g5(I)V
+.method public i5(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17183,9 +18310,9 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$w0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$x0;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$w0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$x0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -17217,7 +18344,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->e0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
 
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->t6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->v6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     goto :goto_0
 
@@ -17241,7 +18368,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->d0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
 
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->t6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->v6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     :goto_0
     return-void
@@ -17249,27 +18376,27 @@
     .line 9
     :cond_3
     :goto_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return-void
 .end method
 
-.method public final g6()V
+.method public final i6()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$c1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$d1;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$c1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$d1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final h1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+.method public final j1(Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17301,9 +18428,9 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$h0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$i0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$h0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$i0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/response/FindVoiceResponseDto;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -17325,13 +18452,13 @@
 
     const-string v0, ""
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->b4(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/OilInfo;Ljava/lang/String;)V
 
     :goto_1
     return-void
 .end method
 
-.method public h2()Ljava/lang/String;
+.method public j2()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -17340,7 +18467,7 @@
     return-object v0
 .end method
 
-.method public h4(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public j4(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17413,24 +18540,24 @@
     if-nez p1, :cond_7
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->k2(Ljava/lang/String;)I
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->m2(Ljava/lang/String;)I
 
     move-result p1
 
     if-gez p1, :cond_1
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return-void
 
     .line 7
     :cond_1
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->A6(I)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v0
 
@@ -17460,7 +18587,7 @@
     goto :goto_2
 
     :sswitch_0
-    const-string/jumbo v2, "tmap.favoritelist"
+    const-string v2, "tmap.favoritelist"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -17523,7 +18650,7 @@
     packed-switch v2, :pswitch_data_0
 
     .line 11
-    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->t5(IZ)V
+    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->v5(IZ)V
 
     goto :goto_3
 
@@ -17533,7 +18660,7 @@
     const-string p1, "ai_speak.bookmark_list"
 
     .line 12
-    invoke-virtual {v0, p1, v1, v2}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, p1, v1, v2}, Lbe/e;->U(Ljava/lang/String;J)V
 
     goto :goto_3
 
@@ -17545,7 +18672,7 @@
     const-string p1, "ai_speak.routeoption_list"
 
     .line 13
-    invoke-virtual {v0, p1, v1, v2}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, p1, v1, v2}, Lbe/e;->U(Ljava/lang/String;J)V
 
     goto :goto_3
 
@@ -17555,7 +18682,7 @@
     const-string p1, "ai_speak.history_list"
 
     .line 14
-    invoke-virtual {v0, p1, v1, v2}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, p1, v1, v2}, Lbe/e;->U(Ljava/lang/String;J)V
 
     goto :goto_3
 
@@ -17565,24 +18692,22 @@
     const-string p1, "ai_speak.waypoint_list"
 
     .line 15
-    invoke-virtual {v0, p1, v1, v2}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, p1, v1, v2}, Lbe/e;->U(Ljava/lang/String;J)V
 
     goto :goto_3
 
     .line 16
     :cond_6
-    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->t5(IZ)V
+    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->v5(IZ)V
 
     :goto_3
     return-void
 
     .line 17
     :cond_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -17601,7 +18726,7 @@
     .end packed-switch
 .end method
 
-.method public h5(Ljava/lang/String;)V
+.method public j5(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17615,16 +18740,16 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$h;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$i;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$h;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$i;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public h6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public j6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17654,12 +18779,12 @@
     move v4, p4
 
     .line 1
-    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/engine/TmapAiManager;->i6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/engine/TmapAiManager;->k6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
     return-void
 .end method
 
-.method public final i1(Ljava/lang/String;)V
+.method public final k1(Ljava/lang/String;)V
     .locals 12
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -17858,7 +18983,7 @@
     move-object v10, v4
 
     :goto_1
-    invoke-static {v3, v5, v10, v2}, Lcom/skt/tmap/util/c;->k(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v3, v5, v10, v2}, Lcom/skt/tmap/util/d;->k(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p1
 
@@ -17880,7 +19005,7 @@
     .line 16
     iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v3}, Lcom/skt/tmap/util/c;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/skt/tmap/util/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -17921,7 +19046,7 @@
     goto :goto_3
 
     :cond_9
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->j2(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->l2(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -17942,7 +19067,7 @@
     move v7, v2
 
     :goto_4
-    invoke-static {v4, v5, v6, v7}, Lcom/skt/tmap/util/c;->k(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v4, v5, v6, v7}, Lcom/skt/tmap/util/d;->k(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v4
 
@@ -17958,7 +19083,7 @@
 
     .line 20
     :goto_5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 21
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -17974,12 +19099,12 @@
     :goto_6
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/c;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 23
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 24
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -17992,14 +19117,14 @@
 
     .line 25
     :cond_d
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     :cond_e
     :goto_7
     return-void
 .end method
 
-.method public final i2(IIIII)I
+.method public final k2(IIIII)I
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -18049,7 +19174,7 @@
     return p1
 .end method
 
-.method public final i4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public final k4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 14
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -18060,7 +19185,7 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_1f
+    if-eqz p1, :cond_20
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -18076,7 +19201,7 @@
     if-nez v1, :cond_1
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->H0()V
 
     return-void
 
@@ -18090,7 +19215,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -18100,27 +19225,27 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v1
 
     check-cast v1, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;
 
     .line 7
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v2
 
     .line 8
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->j()Z
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->m()Z
 
     move-result v3
 
@@ -18162,29 +19287,29 @@
     const/4 v3, 0x0
 
     .line 13
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 14
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->y()Ljava/util/ArrayList;
 
     move-result-object v6
 
     .line 15
-    sget v7, Lcom/skt/voice/tyche/AiConstant;->R:I
+    sget v7, Lcom/skt/voice/tyche/AiConstant;->V:I
 
-    invoke-static {v7, v6}, Lcom/skt/tmap/util/b0;->a(ILjava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v7, v6}, Lcom/skt/tmap/util/d0;->a(ILjava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v6
 
     .line 16
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->B0:Ljava/lang/String;
 
     .line 17
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v7
 
@@ -18373,7 +19498,7 @@
     const-string p1, "oos"
 
     .line 19
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -18381,17 +19506,17 @@
     :pswitch_0
     iget-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
-    if-eqz v4, :cond_1f
+    if-eqz v4, :cond_20
 
     .line 21
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->A()Z
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->B()Z
 
     move-result v4
 
     if-eqz v4, :cond_f
 
     .line 22
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->z()I
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->A()I
 
     move-result v4
 
@@ -18402,7 +19527,7 @@
     int-to-long v8, v6
 
     .line 23
-    invoke-virtual {v0, v7, v8, v9}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, v7, v8, v9}, Lbe/e;->U(Ljava/lang/String;J)V
 
     .line 24
     :cond_e
@@ -18418,7 +19543,7 @@
     const-string v4, "ai_view.sms_final"
 
     .line 25
-    invoke-virtual {v0, v4}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 26
     :cond_10
@@ -18426,15 +19551,15 @@
 
     sget-object v7, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SEND_SMS:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->t()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->w()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->s()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->u()Ljava/lang/String;
 
     move-result-object v10
 
@@ -18449,13 +19574,13 @@
     invoke-interface/range {v6 .. v13}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->k(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/data/ShareData;Ljava/lang/String;Z)V
 
     .line 27
-    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 28
     iput-boolean v5, p0, Lcom/skt/tmap/engine/TmapAiManager;->w:Z
 
     .line 29
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object p1
 
@@ -18467,17 +19592,17 @@
     :pswitch_1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
-    if-eqz p1, :cond_1f
+    if-eqz p1, :cond_20
 
     .line 31
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->A()Z
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->B()Z
 
     move-result p1
 
     if-eqz p1, :cond_12
 
     .line 32
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->z()I
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->A()I
 
     move-result p1
 
@@ -18488,7 +19613,7 @@
     int-to-long v11, v4
 
     .line 33
-    invoke-virtual {v0, v7, v11, v12}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, v7, v11, v12}, Lbe/e;->U(Ljava/lang/String;J)V
 
     .line 34
     :cond_11
@@ -18502,7 +19627,7 @@
     if-eqz v0, :cond_13
 
     .line 35
-    invoke-virtual {v0, v9}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v9}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 36
     :cond_13
@@ -18527,7 +19652,7 @@
 
     sget-object v0, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_LISTENING:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v4
 
@@ -18541,7 +19666,7 @@
 
     sget-object v0, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_GENERAL_RESULTS:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v4
 
@@ -18549,13 +19674,13 @@
 
     .line 39
     :goto_2
-    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 40
     iput-boolean v5, p0, Lcom/skt/tmap/engine/TmapAiManager;->w:Z
 
     .line 41
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object p1
 
@@ -18565,12 +19690,12 @@
 
     .line 42
     :pswitch_2
-    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 43
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
-    if-eqz p1, :cond_1f
+    if-eqz p1, :cond_20
 
     .line 44
     sget-object v0, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_LISTEN_FINISH_IN_DIALOGUE:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
@@ -18599,22 +19724,22 @@
     const-string p1, "ai_speak.sms_final_send"
 
     .line 47
-    invoke-virtual {v0, p1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 48
     :cond_15
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 49
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->w()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->s()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->u()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0, v3, v5}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Ljava/lang/String;ZZ)V
+    invoke-virtual {p0, p1, v0, v3, v5}, Lcom/skt/tmap/engine/TmapAiManager;->w5(Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     goto/16 :goto_6
 
@@ -18624,7 +19749,7 @@
 
     if-eqz v2, :cond_17
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->A()Z
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->B()Z
 
     move-result v2
 
@@ -18635,7 +19760,7 @@
 
     sget-object v3, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SELECT_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->z()I
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->A()I
 
     move-result v4
 
@@ -18645,11 +19770,11 @@
     if-nez v6, :cond_18
 
     .line 52
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->t()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->w()Ljava/lang/String;
 
     move-result-object v9
 
@@ -18659,23 +19784,23 @@
 
     const/4 v11, 0x1
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->s()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->u()Ljava/lang/String;
 
     move-result-object v12
 
     move-object v7, p0
 
-    invoke-virtual/range {v7 .. v12}, Lcom/skt/tmap/engine/TmapAiManager;->i6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+    invoke-virtual/range {v7 .. v12}, Lcom/skt/tmap/engine/TmapAiManager;->k6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
     goto :goto_3
 
     .line 53
     :cond_18
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->t()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->v()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->w()Ljava/lang/String;
 
     move-result-object v3
 
@@ -18685,13 +19810,13 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->s()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->u()Ljava/lang/String;
 
     move-result-object v6
 
     move-object v1, p0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/skt/tmap/engine/TmapAiManager;->i6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/skt/tmap/engine/TmapAiManager;->k6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
 
     .line 54
     :goto_3
@@ -18707,14 +19832,14 @@
 
     if-eqz v1, :cond_19
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_20
 
     .line 55
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
 
     const-string v1, "ai_speak.location_share_list"
 
-    invoke-virtual {v0, v1, p1}, Ldc/d;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lbe/e;->q(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -18730,16 +19855,16 @@
 
     move-result p1
 
-    if-eqz p1, :cond_1f
+    if-eqz p1, :cond_20
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_20
 
     .line 57
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
 
     const-string v1, "ai_speak.arrival_time_share_list"
 
-    invoke-virtual {v0, v1, p1}, Ldc/d;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lbe/e;->q(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_6
 
@@ -18749,37 +19874,77 @@
     const-string p1, "ai_speak.sms_final_cancel"
 
     .line 58
-    invoke-virtual {v0, p1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 59
     :cond_1a
-    :pswitch_5
-    iput-object v11, p0, Lcom/skt/tmap/engine/TmapAiManager;->B0:Ljava/lang/String;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
     .line 60
-    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()Lqd/b;
 
-    .line 61
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    move-result-object v0
 
-    if-eqz p1, :cond_1b
+    if-eqz v0, :cond_1b
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()Lqd/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lqd/b;->getTmapAiFragment()Lrd/c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1b
+
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()Lqd/b;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-virtual {p1}, Lqd/b;->getTmapAiFragment()Lrd/c;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lrd/k;
+
+    if-eqz p1, :cond_1b
+
+    const p1, 0x7f1400b8
+
+    .line 61
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
+
+    .line 62
+    :cond_1b
+    :pswitch_5
+    iput-object v11, p0, Lcom/skt/tmap/engine/TmapAiManager;->B0:Ljava/lang/String;
+
+    .line 63
+    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
+
+    .line 64
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    if-eqz p1, :cond_1c
+
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p1
 
-    if-nez p1, :cond_1b
+    if-nez p1, :cond_1c
 
-    .line 62
+    .line 65
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     sget-object v0, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v1
 
@@ -18787,11 +19952,11 @@
 
     goto :goto_4
 
-    .line 63
-    :cond_1b
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    .line 66
+    :cond_1c
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
-    .line 64
+    .line 67
     :goto_4
     sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;->INITIAL_STATE:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
 
@@ -18799,63 +19964,63 @@
 
     goto :goto_6
 
-    .line 65
+    .line 68
     :pswitch_6
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
-    if-eqz p1, :cond_1f
-
-    if-eqz v0, :cond_1c
-
-    const-string p1, "ai_view.send_sms_towhom"
-
-    .line 66
-    invoke-virtual {v0, p1}, Ldc/d;->S(Ljava/lang/String;)V
-
-    .line 67
-    :cond_1c
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_6
-
-    .line 68
-    :pswitch_7
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    if-eqz p1, :cond_1f
+    if-eqz p1, :cond_20
 
     if-eqz v0, :cond_1d
 
+    const-string p1, "ai_view.send_sms_towhom"
+
     .line 69
-    invoke-virtual {v0, v9}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 70
     :cond_1d
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, v2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n6(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_6
 
     .line 71
-    :pswitch_8
-    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    :pswitch_7
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    if-eqz p1, :cond_20
+
+    if-eqz v0, :cond_1e
 
     .line 72
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    if-eqz v0, :cond_1f
+    invoke-virtual {v0, v9}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 73
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    :cond_1e
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n6(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
 
     .line 74
+    :pswitch_8
+    invoke-virtual {p0, v2, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
+
+    .line 75
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    if-eqz v0, :cond_20
+
+    .line 76
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
+
+    .line 77
     invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->c()Ljava/lang/String;
 
     move-result-object v0
@@ -18864,9 +20029,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
-    .line 75
+    .line 78
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SMS_CONTACT_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
@@ -18879,8 +20044,8 @@
 
     goto :goto_5
 
-    .line 76
-    :cond_1e
+    .line 79
+    :cond_1f
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_COMMUNICATION_CONTACT_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
@@ -18891,11 +20056,11 @@
 
     invoke-interface {v0, v1, p1, v6}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->d(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;Ljava/util/List;)V
 
-    .line 77
+    .line 80
     :goto_5
     iput-object v10, p0, Lcom/skt/tmap/engine/TmapAiManager;->A0:Ljava/lang/String;
 
-    :cond_1f
+    :cond_20
     :goto_6
     return-void
 
@@ -18928,7 +20093,7 @@
     .end packed-switch
 .end method
 
-.method public i5()V
+.method public k5()V
     .locals 4
 
     .line 1
@@ -18941,7 +20106,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130056
+    const v3, 0x7f140057
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -18952,19 +20117,19 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f130057
+    const v1, 0x7f140058
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public i6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
+.method public k6(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 15
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -19072,7 +20237,7 @@
     packed-switch v3, :pswitch_data_0
 
     .line 2
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -19165,12 +20330,12 @@
     move-wide v12, v3
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object v11
 
     .line 10
-    invoke-virtual {p0, v11}, Lcom/skt/tmap/engine/TmapAiManager;->G2(Landroid/location/Location;)Ljava/lang/String;
+    invoke-virtual {p0, v11}, Lcom/skt/tmap/engine/TmapAiManager;->I2(Landroid/location/Location;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -19208,7 +20373,7 @@
     .line 12
     iget-object v3, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v4, 0x7f1300c6
+    const v4, 0x7f1400c7
 
     invoke-virtual {v3, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -19222,13 +20387,13 @@
 
     .line 13
     :cond_6
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
     .line 14
     :cond_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     return-void
 
@@ -19241,7 +20406,7 @@
     :pswitch_2
     iget-object v1, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f1300c3
+    const v3, 0x7f1400c4
 
     invoke-virtual {v1, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -19256,12 +20421,12 @@
 
     .line 16
     :pswitch_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->f2()Landroid/location/Location;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->h2()Landroid/location/Location;
 
     move-result-object v3
 
     .line 17
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->G2(Landroid/location/Location;)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->I2(Landroid/location/Location;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -19270,7 +20435,7 @@
     .line 18
     iget-object v1, v0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v5, 0x7f1300c1
+    const v5, 0x7f1400c2
 
     invoke-virtual {v1, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -19293,12 +20458,12 @@
 
     move-object/from16 v3, p1
 
-    invoke-static {v1, v3, v5}, Lcom/skt/tmap/util/c;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3, v5}, Lcom/skt/tmap/util/d;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 21
-    invoke-virtual {p0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 22
     iget-object v1, v0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -19323,7 +20488,7 @@
 
     .line 24
     :cond_9
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
@@ -19344,7 +20509,7 @@
     .end packed-switch
 .end method
 
-.method public j1()V
+.method public l1()V
     .locals 2
 
     .line 1
@@ -19352,7 +20517,7 @@
 
     const-string v1, "cancelAsr"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -19376,7 +20541,7 @@
     return-void
 .end method
 
-.method public final j2(I)Ljava/lang/String;
+.method public final l2(I)Ljava/lang/String;
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -19459,7 +20624,7 @@
     .end packed-switch
 .end method
 
-.method public j4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public l4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 10
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -19499,7 +20664,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -19509,7 +20674,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -19519,13 +20684,13 @@
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->G0()V
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->H0()V
 
     return-void
 
     .line 5
     :cond_1
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v0
 
@@ -19536,18 +20701,18 @@
     const-string p1, "ood"
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     return-void
 
     .line 7
     :cond_2
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v1
 
     .line 8
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -19562,11 +20727,11 @@
     if-nez v2, :cond_3
 
     .line 9
-    invoke-virtual {p0, v1, v4}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v1, v4}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 10
     :cond_3
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->j()Z
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->m()Z
 
     move-result v2
 
@@ -19584,10 +20749,10 @@
 
     .line 13
     :cond_4
-    invoke-virtual {p0, v4}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v4}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 14
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -19769,7 +20934,7 @@
     packed-switch v6, :pswitch_data_0
 
     .line 15
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto/16 :goto_5
 
@@ -19784,7 +20949,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object p1
 
@@ -19859,11 +21024,11 @@
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->P(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -19882,11 +21047,11 @@
 
     move-result-object v5
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->P(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -19898,7 +21063,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->t()Ljava/lang/String;
 
     move-result-object v4
 
@@ -19906,7 +21071,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->w()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
 
     move-result-object v2
 
@@ -19962,13 +21127,13 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->t()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->w()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
 
     move-result-object v0
 
@@ -19983,7 +21148,7 @@
     move-result-object p1
 
     .line 32
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w2(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y2(Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -19996,7 +21161,7 @@
     .line 34
     sget-object v0, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
 
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->P(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -20011,13 +21176,13 @@
     if-eqz p1, :cond_1f
 
     .line 36
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->t()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->v()Ljava/util/ArrayList;
 
     move-result-object p1
 
     if-eqz p1, :cond_13
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->t()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->v()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -20036,13 +21201,13 @@
 
     .line 38
     :cond_13
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->B()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->C()Ljava/util/ArrayList;
 
     move-result-object p1
 
     if-eqz p1, :cond_14
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->B()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->C()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -20100,7 +21265,7 @@
     .line 43
     iget-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->n0:Z
 
-    const v3, 0x7f1300da
+    const v3, 0x7f1400db
 
     if-eqz p1, :cond_17
 
@@ -20110,27 +21275,27 @@
     if-nez p1, :cond_16
 
     .line 45
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 46
     :cond_16
     iput-boolean v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->q0:Z
 
     .line 47
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     goto/16 :goto_5
 
     .line 48
     :cond_17
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->z()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
     .line 49
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->v()I
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->w()I
 
     move-result p1
 
@@ -20146,21 +21311,21 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, v4}, Lcom/skt/tmap/activity/BaseAiActivity;->w6(I)V
+    invoke-virtual {p1, v4}, Lcom/skt/tmap/activity/BaseAiActivity;->F6(I)V
 
     .line 52
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result p1
 
     if-eqz p1, :cond_18
 
     .line 53
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 
@@ -20170,7 +21335,7 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->t()Ljava/lang/String;
 
     move-result-object v6
 
@@ -20178,7 +21343,7 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -20224,10 +21389,10 @@
     if-eqz v0, :cond_1a
 
     .line 56
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 57
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 58
     iget-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->h0:J
@@ -20245,7 +21410,7 @@
     if-gez v0, :cond_19
 
     .line 59
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 60
     iput-boolean v5, p0, Lcom/skt/tmap/engine/TmapAiManager;->n0:Z
@@ -20260,14 +21425,14 @@
     .line 62
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v2, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->A3(Landroid/content/Context;J)V
+    invoke-static {v2, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->M3(Landroid/content/Context;J)V
 
     .line 63
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->M0:Ljava/lang/Runnable;
 
-    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->X:J
+    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->b0:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -20277,7 +21442,7 @@
     :cond_19
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1300e3
+    const v1, 0x7f1400e4
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -20301,13 +21466,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->k6(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->m6(Ljava/lang/String;)V
 
     .line 65
     :goto_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/TmapSharedPreference;->B3(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/TmapSharedPreference;->N3(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -20316,44 +21481,44 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->j0:Ljava/lang/String;
 
     .line 67
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->k4()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m4()V
 
     .line 68
     :goto_2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->W5(Ljava/lang/String;)V
 
     goto :goto_5
 
     .line 69
     :cond_1b
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 70
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->m1(Z)V
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Z)V
 
     .line 71
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result p1
 
-    const v1, 0x7f1300cb
+    const v1, 0x7f1400cc
 
     if-eqz p1, :cond_1c
 
     .line 72
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     goto :goto_4
 
     .line 73
     :cond_1c
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -20363,7 +21528,7 @@
 
     if-gt p1, v5, :cond_1e
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->x()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->y()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -20377,7 +21542,7 @@
 
     iget-object p1, p1, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$d;->f:Ljava/lang/String;
 
-    invoke-static {p1, v4}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {p1, v4}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result p1
 
@@ -20387,32 +21552,32 @@
 
     .line 74
     :cond_1d
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     goto :goto_4
 
     :cond_1e
     :goto_3
-    const p1, 0x7f1300c9
+    const p1, 0x7f1400ca
 
     .line 75
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 76
     :goto_4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_5
 
     .line 77
     :pswitch_6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_5
 
     .line 78
     :pswitch_7
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Z)V
 
     .line 79
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -20420,7 +21585,7 @@
     if-eqz v1, :cond_1f
 
     .line 80
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object p1
 
@@ -20459,7 +21624,7 @@
     .end packed-switch
 .end method
 
-.method public j5()V
+.method public l5()V
     .locals 4
 
     .line 1
@@ -20472,7 +21637,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130041
+    const v3, 0x7f140041
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -20487,13 +21652,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public j6(I)V
+.method public l6(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -20511,12 +21676,12 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->k6(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public k1()V
+.method public m1()V
     .locals 2
 
     .line 1
@@ -20550,7 +21715,7 @@
     return-void
 .end method
 
-.method public final k2(Ljava/lang/String;)I
+.method public final m2(Ljava/lang/String;)I
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -20609,7 +21774,7 @@
     move-result-object p1
 
     .line 6
-    invoke-static {p1, v2}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {p1, v2}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result p1
 
@@ -20626,7 +21791,7 @@
     return v1
 .end method
 
-.method public final k4()V
+.method public final m4()V
     .locals 1
 
     .line 1
@@ -20637,7 +21802,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/x0;->t(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/e1;->u(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -20655,21 +21820,21 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/location/a;->c(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/location/a;->useGooglePlayServiceForTurningOnLocation(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/location/h;->t()Lcom/skt/tmap/location/h;
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/location/h;->turnOnGps()V
+    invoke-virtual {v0}, Lcom/skt/tmap/location/m;->turnOnGps()V
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 
@@ -20682,29 +21847,29 @@
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->t0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->C6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     goto :goto_0
 
     .line 9
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     const/4 v0, 0x0
 
     .line 10
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->m1(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Z)V
 
-    const v0, 0x7f1300cb
+    const v0, 0x7f1400cc
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public k5()V
+.method public m5()V
     .locals 4
 
     .line 1
@@ -20717,7 +21882,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f13004b
+    const v3, 0x7f14004c
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -20732,13 +21897,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public k6(Ljava/lang/String;)V
+.method public m6(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -20755,9 +21920,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$n1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$o1;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$n1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$o1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -20765,22 +21930,22 @@
     return-void
 .end method
 
-.method public final l1()V
+.method public final n1()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$d1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$e1;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$d1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$e1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final l4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public final n4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -20800,7 +21965,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -20810,17 +21975,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v0
 
     check-cast v0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -20830,7 +21995,7 @@
     iput-boolean v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->o0:Z
 
     .line 5
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->l()Ljava/lang/String;
 
     move-result-object p1
 
@@ -20853,34 +22018,34 @@
     if-nez p1, :cond_0
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_0
 
     .line 7
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p1()V
 
     .line 9
-    invoke-virtual {p0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
-    const p1, 0x7f1300cb
+    const p1, 0x7f1400cc
 
     .line 11
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 12
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->P(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->U(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->E1(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->G1(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -20891,31 +22056,31 @@
     .line 14
     iput-boolean v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->q0:Z
 
-    const p1, 0x7f1300da
+    const p1, 0x7f1400db
 
     .line 15
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public l5()V
+.method public n5()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$j;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$k;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$j;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$k;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final l6(Ljava/lang/String;Ljava/lang/String;)V
+.method public final n6(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -20931,7 +22096,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Ljava/lang/String;Z)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
@@ -20951,7 +22116,7 @@
     return-void
 .end method
 
-.method public m1(Z)V
+.method public o1(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -20967,7 +22132,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->X2()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Z2()Z
 
     move-result v0
 
@@ -20984,12 +22149,12 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->W5(Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
@@ -21001,44 +22166,44 @@
     const-string v0, "UI_ACTION_INFO"
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->f(Ljava/lang/String;)V
 
     const-string v0, "TYPE"
 
     const-string v1, "REQUEST_ORDER"
 
     .line 6
-    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "VALUE"
 
     const-string v1, "N"
 
     .line 7
-    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J2(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)V
 
     .line 9
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object p1
 
     const-string v0, "starbucks.order_cancel"
 
     .line 10
-    invoke-virtual {p1, v0}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 11
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
     :cond_1
     return-void
 .end method
 
-.method public m2()Z
+.method public o2()Z
     .locals 1
 
     .line 1
@@ -21047,7 +22212,7 @@
     return v0
 .end method
 
-.method public final m4(Lcom/skt/voice/tyche/data/CardResult;)V
+.method public final o4(Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -21061,16 +22226,16 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$g1;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$h1;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$g1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$h1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public m5()V
+.method public o5()V
     .locals 2
 
     .line 1
@@ -21081,9 +22246,9 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/k;
+    new-instance v1, Lcom/skt/tmap/engine/j;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/k;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/j;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -21091,7 +22256,7 @@
     return-void
 .end method
 
-.method public final m6(I)V
+.method public final o6(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -21109,826 +22274,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public n1()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
-
-    const-string v1, "cancelTts"
-
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->s()V
-
-    return-void
-.end method
-
-.method public n2()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g:Z
-
-    return v0
-.end method
-
-.method public final n4(Lcom/skt/voice/tyche/data/CardResult;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "cardResult"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    sparse-switch v1, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v1, "start.guide"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x4
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v1, "confirm.no"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x3
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v1, "close"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v2, 0x2
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v1, "stop"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v1, "cancel"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v2, 0x0
-
-    :goto_0
-    packed-switch v2, :pswitch_data_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
-
-    goto :goto_1
-
-    .line 3
-    :pswitch_0
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m4(Lcom/skt/voice/tyche/data/CardResult;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x5185d186 -> :sswitch_4
-        0x360802 -> :sswitch_3
-        0x5a5ddf8 -> :sswitch_2
-        0x32355baf -> :sswitch_1
-        0x50eb9a70 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public n5()V
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    sget-object v1, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
-
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    const v3, 0x7f13006a
-
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->b(Lcom/skt/voice/tyche/AiConstant$AiErrorType;Ljava/lang/String;)V
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-virtual {v0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final n6(II)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x0
-        }
-        names = {
-            "messageResId",
-            "length"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-virtual {v0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->p6(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public final o1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "volumeType"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$u1;->g:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq p1, v1, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->K4(I)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->J4(I)V
-
-    goto :goto_0
-
-    .line 4
-    :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->H4()V
-
-    goto :goto_0
-
-    .line 5
-    :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->I4()V
-
-    :goto_0
-    return-void
-.end method
-
-.method public o2(Lcom/skt/tmap/engine/TmapAiManager$x1;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "listener"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->C(Lcom/skt/tmap/engine/TmapAiManager$x1;)V
-
-    return-void
-.end method
-
-.method public o4(Lcom/skt/voice/tyche/data/CardResult;)Z
-    .locals 13
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "cardResult"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/CommandInfo;->getDomain()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
-
-    .line 2
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Command;->getType()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    .line 3
-    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
-
-    const-string v1, "processSwfAction "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
-
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$k;
-
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$k;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 5
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/CommandInfo;->getSubType()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 6
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/CommandInfo;->getFilter()Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 7
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/CommandInfo;->getUnit()Ljava/lang/String;
-
-    move-result-object v11
-
-    .line 8
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Command;->getPlayServiceId()Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 9
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getRequest()Lcom/skt/voice/tyche/data/Request;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Request;->getRequestId()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E:Ljava/lang/String;
-
-    .line 10
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
-
-    move-result-object v12
-
-    if-eqz v12, :cond_0
-
-    .line 11
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    iget-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
-
-    iget-object v8, p0, Lcom/skt/tmap/engine/TmapAiManager;->E:Ljava/lang/String;
-
-    move-object v1, v12
-
-    move-object v4, v0
-
-    move-object v5, v10
-
-    move-object v6, v11
-
-    invoke-virtual/range {v1 .. v9}, Ldc/d;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 12
-    :cond_0
-    invoke-static {}, Lec/l;->j()Lec/l;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 13
-    invoke-static {}, Lec/l;->j()Lec/l;
-
-    move-result-object v8
-
-    new-instance v9, Lec/b;
-
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    iget-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
-
-    move-object v1, v9
-
-    move-object v4, v0
-
-    move-object v5, v10
-
-    move-object v6, v11
-
-    invoke-direct/range {v1 .. v7}, Lec/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v8, v9}, Lec/l;->m(Lec/e;)V
-
-    .line 14
-    :cond_1
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_8
-
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    if-nez v1, :cond_2
-
-    goto/16 :goto_1
-
-    .line 15
-    :cond_2
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->o:Ljava/util/List;
-
-    invoke-static {v1}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    .line 16
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->o:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_4
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    .line 17
-    iget-object v5, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
-
-    invoke-virtual {v5, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    goto :goto_0
-
-    :cond_4
-    move-object v3, v4
-
-    .line 18
-    :goto_0
-    iput-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->o:Ljava/util/List;
-
-    .line 19
-    iput-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->p:Ljava/util/List;
-
-    .line 20
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    .line 21
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v0, Lcom/skt/tmap/engine/f;
-
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/f;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return v2
-
-    .line 22
-    :cond_5
-    iget-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->n:Z
-
-    if-eqz v1, :cond_6
-
-    .line 23
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v0, Lcom/skt/tmap/engine/h;
-
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/h;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return v2
-
-    .line 24
-    :cond_6
-    sget-object v1, Lcom/skt/tmap/engine/TmapAiManager$u1;->a:[I
-
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aget v1, v1, v2
-
-    packed-switch v1, :pswitch_data_0
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 25
-    :pswitch_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->t4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    .line 26
-    :pswitch_2
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->s4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    .line 27
-    :pswitch_3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->u4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    .line 28
-    :pswitch_4
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->r4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    .line 29
-    :pswitch_5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->q4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    .line 30
-    :pswitch_6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->p4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_7
-    if-eqz v12, :cond_7
-
-    .line 31
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
-
-    iget-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
-
-    move-object v1, v12
-
-    move-object v4, v0
-
-    move-object v5, v10
-
-    move-object v6, v11
-
-    invoke-virtual/range {v1 .. v7}, Ldc/d;->B0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 32
-    :cond_7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->v4(Lcom/skt/voice/tyche/data/CardResult;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const-string p1, "ood"
-
-    .line 33
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
-
-    return v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_7
-        :pswitch_0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final o5()V
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_ERROR:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
-
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    const v3, 0x7f130086
-
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->i(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;)V
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    const v1, 0x7f130037
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final o6(Ljava/lang/String;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "message"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->p6(Ljava/lang/String;I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->q6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -21947,7 +22293,7 @@
     if-eqz p1, :cond_29
 
     .line 1
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v0
 
@@ -21977,11 +22323,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object v2
 
@@ -21989,11 +22335,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->d()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -22020,7 +22366,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->c()Ljava/lang/String;
@@ -22479,7 +22825,7 @@
     const-string p1, "oos"
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
@@ -22491,7 +22837,7 @@
     iput-boolean v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->a0:Z
 
     .line 8
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     if-nez v0, :cond_1c
 
@@ -22506,27 +22852,27 @@
     .line 9
     check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseAiActivity;->X5()Lcom/skt/tmap/view/l;
+    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseAiActivity;->g6()Lcom/skt/tmap/view/l;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     .line 10
     iget v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->z:I
 
     int-to-long v0, v0
 
-    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->a0:J
+    sget-wide v2, Lcom/skt/voice/tyche/AiConstant;->e0:J
 
     cmp-long v0, v0, v2
 
     if-gez v0, :cond_1c
 
-    const v0, 0x7f130069
+    const v0, 0x7f14006a
 
     .line 11
-    invoke-virtual {p0, v0, v4}, Lcom/skt/tmap/engine/TmapAiManager;->n6(II)V
+    invoke-virtual {p0, v0, v4}, Lcom/skt/tmap/engine/TmapAiManager;->p6(II)V
 
     .line 12
     iget v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->z:I
@@ -22537,16 +22883,16 @@
 
     .line 13
     :cond_1c
-    new-instance v0, Lcom/skt/tmap/engine/f0;
+    new-instance v0, Lcom/skt/tmap/engine/h0;
 
-    invoke-direct {v0, p1}, Lcom/skt/tmap/engine/f0;-><init>(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-direct {v0, p1}, Lcom/skt/tmap/engine/h0;-><init>(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
     .line 14
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
-    invoke-interface {v1, v0}, Lcom/skt/tmap/engine/e0;->g(Lcom/skt/tmap/engine/f0;)V
+    invoke-interface {v1, v0}, Lcom/skt/tmap/engine/g0;->g(Lcom/skt/tmap/engine/h0;)V
 
     .line 15
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -22557,14 +22903,42 @@
 
     .line 16
     :cond_1d
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->q(Lcom/skt/tmap/engine/f0;)V
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bumptech/glide/b;->E(Landroid/content/Context;)Lcom/bumptech/glide/i;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bumptech/glide/i;->u()Lcom/bumptech/glide/h;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
+
+    invoke-virtual {v1}, Lcom/skt/tmap/engine/h0;->g()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bumptech/glide/h;->t1(Ljava/lang/String;)Lcom/bumptech/glide/h;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$z0;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$z0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
+    invoke-virtual {v0, v1}, Lcom/bumptech/glide/h;->m1(Lcom/bumptech/glide/request/g;)Lcom/bumptech/glide/h;
+
+    move-result-object v0
 
     .line 17
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
-
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->v5(Lcom/skt/tmap/engine/f0;)V
+    invoke-virtual {v0}, Lcom/bumptech/glide/h;->A1()Lcom/bumptech/glide/request/d;
 
     .line 18
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
@@ -22576,9 +22950,9 @@
     .line 19
     check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->z6(Lcom/skt/tmap/engine/f0;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->I6(Lcom/skt/tmap/engine/h0;)V
 
     .line 20
     :cond_1e
@@ -22593,45 +22967,45 @@
     .line 21
     check-cast v0, Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {v0, v4}, Lcom/skt/tmap/activity/BaseAiActivity;->H5(Z)V
+    invoke-virtual {v0, v4}, Lcom/skt/tmap/activity/BaseAiActivity;->Q5(Z)V
 
     .line 22
     :cond_1f
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v0
 
     .line 23
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->d()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->e()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, v2, p1}, Ldc/d;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, p1}, Lbe/e;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->Q:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->U:I
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
 
     goto/16 :goto_2
 
@@ -22639,7 +23013,7 @@
     :pswitch_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -22666,20 +23040,20 @@
 
     .line 27
     :cond_20
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->i4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->k4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto/16 :goto_2
 
     .line 28
     :cond_21
     :goto_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->m5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->o5()V
 
     goto/16 :goto_2
 
     .line 29
     :cond_22
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p5()V
 
     goto/16 :goto_2
 
@@ -22687,26 +23061,26 @@
     :pswitch_2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_23
 
     .line 31
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->i4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->k4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto/16 :goto_2
 
     .line 32
     :cond_23
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p5()V
 
     goto/16 :goto_2
 
     .line 33
     :pswitch_3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto/16 :goto_2
 
@@ -22714,20 +23088,20 @@
     :pswitch_4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_24
 
     .line 35
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->i4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->k4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
     .line 36
     :cond_24
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p5()V
 
     goto :goto_2
 
@@ -22738,28 +23112,28 @@
     if-eqz v0, :cond_28
 
     .line 38
-    new-instance v0, Lcom/skt/tmap/engine/f0;
+    new-instance v0, Lcom/skt/tmap/engine/h0;
 
-    invoke-direct {v0, p1}, Lcom/skt/tmap/engine/f0;-><init>(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-direct {v0, p1}, Lcom/skt/tmap/engine/h0;-><init>(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
     .line 39
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
-    invoke-interface {p1}, Lcom/skt/tmap/engine/e0;->c()V
+    invoke-interface {p1}, Lcom/skt/tmap/engine/g0;->c()V
 
     goto :goto_2
 
     .line 40
     :pswitch_6
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_2
 
     .line 41
     :pswitch_7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
@@ -22767,20 +23141,20 @@
     :pswitch_8
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_25
 
     .line 43
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->c4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->e4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
     .line 44
     :cond_25
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->p5()V
 
     .line 45
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -22788,25 +23162,25 @@
     if-eqz p1, :cond_28
 
     .line 46
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->B0()V
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->C0()V
 
     goto :goto_2
 
     .line 47
     :pswitch_9
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
     .line 48
     :pswitch_a
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->S3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->U3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
     .line 49
     :pswitch_b
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
@@ -22814,20 +23188,20 @@
     :pswitch_c
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_26
 
     .line 51
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->d4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->f4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
     .line 52
     :cond_26
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->j5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
 
     goto :goto_2
 
@@ -22835,20 +23209,20 @@
     :pswitch_d
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->N6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P6(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_27
 
     .line 54
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->N3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->P3(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
 
     goto :goto_2
 
     .line 55
     :cond_27
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->j5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
 
     :cond_28
     :goto_2
@@ -22858,7 +23232,7 @@
     .line 56
     :cond_29
     :goto_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 
@@ -22943,7 +23317,7 @@
 
     const-string v1, "onAiServiceRawResult"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i:Z
@@ -22959,9 +23333,9 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$k1;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$t1;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$k1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$t1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -23010,7 +23384,7 @@
 
     .line 7
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o4(Lcom/skt/voice/tyche/data/CardResult;)Z
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->q4(Lcom/skt/voice/tyche/data/CardResult;)Z
 
     move-result p1
 
@@ -23021,7 +23395,7 @@
     const-string p1, "ood"
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -23090,7 +23464,7 @@
 
     const-string v1, " startTime : "
 
-    invoke-static {p8, p3, v0, p4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p8, p3, v0, p4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p8, p5, p6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -23098,7 +23472,7 @@
 
     move-result-object p5
 
-    invoke-static {p7, p5}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p7, p5}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object p5, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
@@ -23133,7 +23507,7 @@
     iput-object p4, p0, Lcom/skt/tmap/engine/TmapAiManager;->G:Ljava/lang/String;
 
     .line 7
-    invoke-static {p3}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p8
 
@@ -23146,7 +23520,7 @@
 
     .line 9
     :cond_1
-    invoke-static {p4}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p4}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p3
 
@@ -23159,7 +23533,7 @@
 
     .line 11
     :cond_2
-    sget-object p3, Lcom/skt/tmap/engine/TmapAiManager$u1;->e:[I
+    sget-object p3, Lcom/skt/tmap/engine/TmapAiManager$v1;->e:[I
 
     invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
@@ -23181,7 +23555,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f13005a
+    const p4, 0x7f14005b
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -23199,7 +23573,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f1300f0
+    const p4, 0x7f1400f1
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -23210,7 +23584,7 @@
     .line 14
     :cond_5
     :goto_0
-    sget-object p3, Lcom/skt/tmap/engine/TmapAiManager$u1;->f:[I
+    sget-object p3, Lcom/skt/tmap/engine/TmapAiManager$v1;->f:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -23248,9 +23622,9 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->x0:Ljava/util/Timer;
 
     .line 19
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$a;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$b;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$a;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$b;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     .line 20
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->x0:Ljava/util/Timer;
@@ -23281,7 +23655,7 @@
     .line 22
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, p7, p7}, Lcom/skt/tmap/activity/BaseAiActivity;->N5(ZZ)V
+    invoke-virtual {p1, p7, p7}, Lcom/skt/tmap/activity/BaseAiActivity;->W5(ZZ)V
 
     .line 23
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -23299,11 +23673,11 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, p3}, Lcom/skt/tmap/activity/BaseAiActivity;->r6(Z)V
+    invoke-virtual {p1, p3}, Lcom/skt/tmap/activity/BaseAiActivity;->A6(Z)V
 
     .line 25
     :cond_7
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/a0;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/c0;
 
     if-nez p1, :cond_8
 
@@ -23312,22 +23686,22 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->W5()Lcom/skt/tmap/view/k;
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->f6()Lcom/skt/tmap/view/k;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/a0;
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/c0;
 
     .line 27
     :cond_8
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/a0;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/c0;
 
     if-eqz p1, :cond_12
 
     .line 28
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->H:Ljava/lang/String;
 
-    invoke-interface {p1, p2}, Lcom/skt/tmap/engine/a0;->b(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Lcom/skt/tmap/engine/c0;->b(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -23344,7 +23718,7 @@
 
     const/16 p2, 0x8
 
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->u6(I)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->D6(I)V
 
     goto/16 :goto_1
 
@@ -23357,7 +23731,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, p7, p7}, Lcom/skt/tmap/activity/BaseAiActivity;->N5(ZZ)V
+    invoke-virtual {p1, p7, p7}, Lcom/skt/tmap/activity/BaseAiActivity;->W5(ZZ)V
 
     .line 33
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -23375,7 +23749,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, p3}, Lcom/skt/tmap/activity/BaseAiActivity;->r6(Z)V
+    invoke-virtual {p1, p3}, Lcom/skt/tmap/activity/BaseAiActivity;->A6(Z)V
 
     .line 35
     :cond_b
@@ -23398,7 +23772,7 @@
     check-cast p1, Lcom/skt/tmap/activity/TmapNaviActivity;
 
     .line 36
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->fb()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->xb()Z
 
     move-result p1
 
@@ -23411,7 +23785,7 @@
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
     .line 37
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->I()Z
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->J()Z
 
     move-result p1
 
@@ -23422,16 +23796,16 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->C6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->L6()V
 
     .line 39
     :cond_c
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/a0;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/c0;
 
     if-eqz p1, :cond_12
 
     .line 40
-    invoke-interface {p1}, Lcom/skt/tmap/engine/a0;->d()V
+    invoke-interface {p1}, Lcom/skt/tmap/engine/c0;->d()V
 
     goto/16 :goto_1
 
@@ -23478,7 +23852,7 @@
     .line 48
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->q6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->z6()V
 
     .line 49
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
@@ -23487,11 +23861,11 @@
 
     iget p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->v0:I
 
-    invoke-static {p2}, Lcom/skt/tmap/util/w0;->G(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/skt/tmap/util/d1;->J(I)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->N6(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->W6(Ljava/lang/String;)V
 
     .line 50
     :cond_e
@@ -23513,15 +23887,15 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, p7, p7}, Lcom/skt/tmap/activity/BaseAiActivity;->N5(ZZ)V
+    invoke-virtual {p1, p7, p7}, Lcom/skt/tmap/activity/BaseAiActivity;->W5(ZZ)V
 
     .line 54
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/a0;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->c0:Lcom/skt/tmap/engine/c0;
 
     if-eqz p1, :cond_10
 
     .line 55
-    invoke-interface {p1}, Lcom/skt/tmap/engine/a0;->a()V
+    invoke-interface {p1}, Lcom/skt/tmap/engine/c0;->a()V
 
     .line 56
     :cond_10
@@ -23533,7 +23907,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->w8()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->M8()Z
 
     move-result p1
 
@@ -23554,16 +23928,16 @@
     if-nez p1, :cond_12
 
     .line 58
-    invoke-virtual {p0, p7}, Lcom/skt/tmap/engine/TmapAiManager;->b6(Z)V
+    invoke-virtual {p0, p7}, Lcom/skt/tmap/engine/TmapAiManager;->d6(Z)V
 
     .line 59
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$w1;
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$a;
 
-    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$w1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$a;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    sget p3, Lcom/skt/voice/tyche/AiConstant;->I:I
+    sget p3, Lcom/skt/voice/tyche/AiConstant;->M:I
 
     int-to-long p3, p3
 
@@ -23765,13 +24139,13 @@
     if-nez v0, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Z5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->b6()V
 
     .line 4
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/l0;->k(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/r0;->k(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -23780,7 +24154,7 @@
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 5
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -23789,7 +24163,7 @@
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 6
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->V6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -23798,7 +24172,7 @@
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 7
-    invoke-static {v0}, Lcom/skt/tmap/util/z0;->e(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/skt/tmap/util/g1;->e(Landroid/content/Context;)I
 
     move-result v0
 
@@ -23810,15 +24184,15 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->f0(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->g0(Z)V
 
     .line 9
     :cond_3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    sget v1, Lcom/skt/voice/tyche/AiConstant;->M:I
+    sget v1, Lcom/skt/voice/tyche/AiConstant;->Q:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->k0(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->l0(I)V
 
     .line 10
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -23830,7 +24204,7 @@
     .line 11
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->D4(Landroid/app/Activity;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->F4(Landroid/app/Activity;)V
 
     :cond_4
     :goto_0
@@ -23867,7 +24241,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "nugu_sdk_error_callback"
 
@@ -23881,9 +24255,9 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$t1;
+    new-instance p2, Lcom/skt/tmap/engine/TmapAiManager$w1;
 
-    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$t1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {p2, p0}, Lcom/skt/tmap/engine/TmapAiManager$w1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -23902,9 +24276,9 @@
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$v1;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$x1;
 
-    invoke-direct {v0, p0, p2}, Lcom/skt/tmap/engine/TmapAiManager$v1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p2}, Lcom/skt/tmap/engine/TmapAiManager$x1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -23917,23 +24291,23 @@
     if-eqz p2, :cond_2
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
-    const p1, 0x7f1300cb
+    const p1, 0x7f1400cc
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 9
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const p2, 0x7f1300d5
+    const p2, 0x7f1400d6
 
     invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->E1(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->G1(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -23957,13 +24331,13 @@
     if-eqz p2, :cond_3
 
     .line 12
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 13
     :cond_3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h5(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -23977,16 +24351,16 @@
 
     const-string v1, "onMediaCardReceived"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 .end method
 
 .method public onMediaPlayerState(Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;)V
-    .locals 11
+    .locals 12
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -24015,13 +24389,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     :cond_0
-    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$u1;->c:[I
+    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$v1;->c:[I
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->d()Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->e()Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
 
     move-result-object p1
 
@@ -24045,6 +24419,8 @@
 
     const-wide/16 v2, 0x637
 
+    const/4 v4, 0x1
+
     if-eq p1, v0, :cond_4
 
     const/4 v0, 0x5
@@ -24067,20 +24443,32 @@
     .line 5
     invoke-virtual {p1, v2, v3}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->d(J)Landroid/support/v4/media/session/PlaybackStateCompat$d;
 
-    move-result-object v4
+    move-result-object v5
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    const-wide/16 v6, 0x1
-
-    const/high16 v8, 0x3f800000    # 1.0f
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     .line 6
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat;->e()Landroid/support/v4/media/session/MediaControllerCompat;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaControllerCompat;->l()Landroid/support/v4/media/session/PlaybackStateCompat;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->q()J
+
+    move-result-wide v7
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v9
+    move-result-wide v10
 
-    invoke-virtual/range {v4 .. v10}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->k(IJFJ)Landroid/support/v4/media/session/PlaybackStateCompat$d;
+    invoke-virtual/range {v5 .. v11}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->k(IJFJ)Landroid/support/v4/media/session/PlaybackStateCompat$d;
 
     move-result-object p1
 
@@ -24094,124 +24482,136 @@
 
     invoke-virtual {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat;->w(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
-    :cond_2
-    const/4 p1, 0x1
-
     .line 9
-    iput-boolean p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->J0:Z
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
+
+    invoke-virtual {p1, v4}, Landroid/support/v4/media/session/MediaSessionCompat;->o(Z)V
 
     .line 10
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    :cond_2
+    iput-boolean v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->J0:Z
+
+    .line 11
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     if-eqz p1, :cond_3
 
-    .line 11
-    invoke-interface {p1}, Lcom/skt/tmap/engine/e0;->c()V
-
     .line 12
-    :cond_3
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->P:I
+    invoke-interface {p1}, Lcom/skt/tmap/engine/g0;->c()V
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+    .line 13
+    :cond_3
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->T:I
+
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
 
     goto/16 :goto_0
 
-    .line 13
+    .line 14
     :cond_4
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz p1, :cond_5
 
-    .line 14
+    .line 15
     new-instance p1, Landroid/support/v4/media/session/PlaybackStateCompat$d;
 
     invoke-direct {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$d;-><init>()V
 
-    .line 15
+    .line 16
     invoke-virtual {p1, v2, v3}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->d(J)Landroid/support/v4/media/session/PlaybackStateCompat$d;
 
-    move-result-object v4
+    move-result-object v5
 
-    const/4 v5, 0x3
+    const/4 v6, 0x3
 
-    const-wide/16 v6, 0x1
-
-    const/high16 v8, 0x3f800000    # 1.0f
-
-    .line 16
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v9
-
-    invoke-virtual/range {v4 .. v10}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->k(IJFJ)Landroid/support/v4/media/session/PlaybackStateCompat$d;
-
-    move-result-object p1
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
     .line 17
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->c()Landroid/support/v4/media/session/PlaybackStateCompat;
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/h0;->e()J
+
+    move-result-wide v7
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v10
+
+    invoke-virtual/range {v5 .. v11}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->k(IJFJ)Landroid/support/v4/media/session/PlaybackStateCompat$d;
 
     move-result-object p1
 
     .line 18
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->c()Landroid/support/v4/media/session/PlaybackStateCompat;
+
+    move-result-object p1
+
+    .line 19
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat;->w(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
-    .line 19
+    .line 20
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
+
+    invoke-virtual {p1, v4}, Landroid/support/v4/media/session/MediaSessionCompat;->o(Z)V
+
+    .line 21
     :cond_5
     iput-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->J0:Z
 
-    .line 20
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    .line 22
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     if-eqz p1, :cond_6
 
-    .line 21
-    invoke-interface {p1}, Lcom/skt/tmap/engine/e0;->c()V
+    .line 23
+    invoke-interface {p1}, Lcom/skt/tmap/engine/g0;->c()V
 
-    .line 22
+    .line 24
     :cond_6
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->Q:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->U:I
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
 
     goto :goto_0
 
-    .line 23
+    .line 25
     :cond_7
     iput-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a0:Z
 
-    .line 24
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    .line 26
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_8
 
-    .line 25
-    invoke-interface {p1}, Lcom/skt/tmap/engine/e0;->e()V
-
-    .line 26
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
-
     .line 27
-    :cond_8
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    invoke-interface {p1}, Lcom/skt/tmap/engine/g0;->e()V
 
     .line 28
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
+
+    .line 29
+    :cond_8
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
+
+    .line 30
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
     if-eqz p1, :cond_9
 
-    .line 29
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->O()V
-
-    .line 30
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->P:I
-
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
-
     .line 31
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/NuguSdkManager;->P()V
+
+    .line 32
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->T:I
+
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
+
+    .line 33
     :cond_9
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
@@ -24219,31 +24619,31 @@
 
     if-eqz v2, :cond_a
 
-    .line 32
+    .line 34
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/f0;
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->Z:Lcom/skt/tmap/engine/h0;
 
-    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->z6(Lcom/skt/tmap/engine/f0;)V
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->I6(Lcom/skt/tmap/engine/h0;)V
 
-    .line 33
+    .line 35
     :cond_a
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     if-eqz p1, :cond_b
 
-    .line 34
+    .line 36
     new-instance v2, Landroid/support/v4/media/session/PlaybackStateCompat$d;
 
     invoke-direct {v2}, Landroid/support/v4/media/session/PlaybackStateCompat$d;-><init>()V
 
     const/4 v3, 0x1
 
-    const-wide/16 v4, 0x1
+    const-wide/16 v4, 0x0
 
     const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 35
+    .line 37
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v7
@@ -24252,30 +24652,30 @@
 
     move-result-object p1
 
-    .line 36
+    .line 38
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$d;->c()Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-result-object p1
 
-    .line 37
+    .line 39
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {v2, p1}, Landroid/support/v4/media/session/MediaSessionCompat;->w(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
-    .line 38
+    .line 40
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {p1, v1}, Landroid/support/v4/media/session/MediaSessionCompat;->o(Z)V
 
-    .line 39
+    .line 41
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat;->l()V
 
-    .line 40
+    .line 42
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
-    .line 41
+    .line 43
     :cond_b
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
@@ -24285,21 +24685,21 @@
 
     if-eqz v0, :cond_d
 
-    .line 42
+    .line 44
     check-cast p1, Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->H5(Z)V
+    invoke-virtual {p1, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->Q5(Z)V
 
     goto :goto_0
 
-    .line 43
+    .line 45
     :cond_c
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/e0;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b0:Lcom/skt/tmap/engine/g0;
 
     if-eqz p1, :cond_d
 
-    .line 44
-    invoke-interface {p1}, Lcom/skt/tmap/engine/e0;->f()V
+    .line 46
+    invoke-interface {p1}, Lcom/skt/tmap/engine/g0;->f()V
 
     :cond_d
     :goto_0
@@ -24350,15 +24750,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v0
 
     .line 3
-    sget-object v1, Lcom/skt/tmap/engine/TmapAiManager$u1;->b:[I
+    sget-object v1, Lcom/skt/tmap/engine/TmapAiManager$v1;->b:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -24379,7 +24779,7 @@
 
     .line 4
     :pswitch_1
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->a6(Z)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->c6(Z)V
 
     goto/16 :goto_4
 
@@ -24401,30 +24801,30 @@
 
     sub-long/2addr p1, v0
 
-    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->Y:J
+    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->c0:J
 
     cmp-long p1, p1, v0
 
     if-lez p1, :cond_0
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
-    const p1, 0x7f1300cb
+    const p1, 0x7f1400cc
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 10
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const p2, 0x7f1300d5
+    const p2, 0x7f1400d6
 
     invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->E1(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->G1(Ljava/lang/String;)V
 
     .line 11
     iput-boolean v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->o0:Z
@@ -24432,10 +24832,10 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f1300e1
+    const p1, 0x7f1400e2
 
     .line 12
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
 
     return-void
 
@@ -24448,7 +24848,7 @@
 
     if-eqz p2, :cond_2
 
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->s1(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->z1(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -24459,25 +24859,25 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->I6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->R6()V
 
     .line 15
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v1()V
 
     .line 16
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->a6(Z)V
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->c6(Z)V
 
     goto/16 :goto_4
 
     .line 17
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->I6()V
 
     goto/16 :goto_4
 
     .line 18
     :pswitch_3
-    invoke-static {p2}, Lcom/skt/tmap/engine/TmapAiManager;->Z1(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/skt/tmap/engine/TmapAiManager;->b2(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -24527,13 +24927,13 @@
     .line 25
     iget p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->P:I
 
-    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->D3(II)V
+    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->F3(II)V
 
     .line 26
     :cond_5
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/z0;->e(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/skt/tmap/util/g1;->e(Landroid/content/Context;)I
 
     move-result p1
 
@@ -24550,7 +24950,7 @@
     if-eqz p1, :cond_7
 
     .line 28
-    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$u1;->a:[I
+    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$v1;->a:[I
 
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
 
@@ -24573,7 +24973,7 @@
 
     .line 30
     :pswitch_5
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     goto :goto_1
 
@@ -24589,7 +24989,7 @@
     :cond_7
     :goto_1
     :pswitch_7
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->a6(Z)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->c6(Z)V
 
     goto/16 :goto_4
 
@@ -24597,10 +24997,10 @@
     :pswitch_8
     iget p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->P:I
 
-    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->D3(II)V
+    invoke-virtual {p0, p1, v3}, Lcom/skt/tmap/engine/TmapAiManager;->F3(II)V
 
     .line 34
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->a6(Z)V
+    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->c6(Z)V
 
     goto/16 :goto_4
 
@@ -24621,7 +25021,7 @@
     const-string p1, "ai_speak.user"
 
     .line 37
-    invoke-virtual {v0, p1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lbe/e;->T(Ljava/lang/String;)V
 
     goto/16 :goto_4
 
@@ -24655,7 +25055,7 @@
 
     .line 42
     :cond_a
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->I6()V
 
     goto/16 :goto_4
 
@@ -24669,7 +25069,7 @@
 
     .line 44
     :cond_b
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object p1
 
@@ -24679,7 +25079,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->V5(Z)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->X5(Z)V
 
     .line 45
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -24687,14 +25087,14 @@
     invoke-virtual {p1, v3}, Lcom/skt/voice/tyche/NuguSdkManager;->w0(I)V
 
     .line 46
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->P:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->T:I
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
 
     .line 47
-    sget p1, Lcom/skt/voice/tyche/AiConstant;->L:I
+    sget p1, Lcom/skt/voice/tyche/AiConstant;->P:I
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z5(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->B5(I)V
 
     .line 48
     invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
@@ -24716,31 +25116,31 @@
     .line 49
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    sget p2, Lcom/skt/voice/tyche/AiConstant;->V:I
+    sget p2, Lcom/skt/voice/tyche/AiConstant;->Z:I
 
     int-to-long v4, p2
 
-    invoke-virtual {p1, v4, v5}, Lcom/skt/voice/tyche/NuguSdkManager;->c0(J)V
+    invoke-virtual {p1, v4, v5}, Lcom/skt/voice/tyche/NuguSdkManager;->d0(J)V
 
     .line 50
     :cond_c
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->S0(Landroid/content/Context;)J
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->V0(Landroid/content/Context;)J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
 
     .line 51
-    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->W:J
+    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->a0:J
 
     cmp-long v0, p1, v4
 
     if-eqz v0, :cond_e
 
     .line 52
-    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->X:J
+    sget-wide v4, Lcom/skt/voice/tyche/AiConstant;->b0:J
 
     add-long/2addr p1, v4
 
@@ -24757,14 +25157,14 @@
     if-gtz v0, :cond_d
 
     .line 53
-    sget-wide p1, Lcom/skt/voice/tyche/AiConstant;->W:J
+    sget-wide p1, Lcom/skt/voice/tyche/AiConstant;->a0:J
 
     iput-wide p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
 
     .line 54
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0, p1, p2}, Lcom/skt/tmap/util/TmapSharedPreference;->A3(Landroid/content/Context;J)V
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/util/TmapSharedPreference;->M3(Landroid/content/Context;J)V
 
     goto :goto_2
 
@@ -24772,14 +25172,14 @@
     :cond_d
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/TmapSharedPreference;->R0(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/TmapSharedPreference;->U0(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
 
     .line 56
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->W5(Ljava/lang/String;)V
 
     .line 57
     iput-boolean v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->n0:Z
@@ -24789,7 +25189,7 @@
 
     check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {v0, v3}, Lcom/skt/tmap/activity/BaseAiActivity;->w6(I)V
+    invoke-virtual {v0, v3}, Lcom/skt/tmap/activity/BaseAiActivity;->F6(I)V
 
     .line 59
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -24801,7 +25201,7 @@
     .line 60
     :cond_e
     :goto_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->C5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E5()V
 
     .line 61
     iput-boolean v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->g:Z
@@ -24818,7 +25218,7 @@
     .line 63
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->o1(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->w1(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -24827,25 +25227,25 @@
     .line 64
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->s1(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->z1(Landroid/content/Context;)Z
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q5(Z)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
 
     .line 65
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->t6(Z)V
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->C6(Z)V
 
     .line 66
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->d6()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->m6()Z
 
     move-result p1
 
@@ -24876,7 +25276,7 @@
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     .line 69
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -24887,7 +25287,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->e6()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->n6()Z
 
     move-result p1
 
@@ -24898,7 +25298,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->n6(Z)V
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->w6(Z)V
 
     goto :goto_3
 
@@ -24906,7 +25306,7 @@
     :cond_f
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->V6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -24921,7 +25321,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->q5()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->s5()Landroid/view/View;
 
     move-result-object p1
 
@@ -24931,7 +25331,7 @@
 
     .line 74
     :cond_10
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->x6()V
 
     .line 75
     :cond_11
@@ -24947,12 +25347,12 @@
 
     .line 77
     :cond_12
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E0:Lcom/skt/tmap/engine/TmapAiManager$y1;
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E0:Lcom/skt/tmap/engine/TmapAiManager$z1;
 
     if-eqz p1, :cond_13
 
     .line 78
-    invoke-interface {p1}, Lcom/skt/tmap/engine/TmapAiManager$y1;->a()V
+    invoke-interface {p1}, Lcom/skt/tmap/engine/TmapAiManager$z1;->a()V
 
     goto :goto_4
 
@@ -24961,13 +25361,13 @@
     iput-boolean v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->g:Z
 
     :pswitch_d
-    const p1, 0x7f13004d
+    const p1, 0x7f14004e
 
     .line 80
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
 
     .line 81
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     :cond_13
     :goto_4
@@ -25012,7 +25412,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->L0:Ljava/lang/Runnable;
 
-    sget v2, Lcom/skt/voice/tyche/AiConstant;->H:I
+    sget v2, Lcom/skt/voice/tyche/AiConstant;->L:I
 
     int-to-long v2, v2
 
@@ -25024,23 +25424,23 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
 
-    const v0, 0x7f1300cb
+    const v0, 0x7f1400cc
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->j6(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->l6(I)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f1300d5
+    const v1, 0x7f1400d6
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->E1(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->G1(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -25065,7 +25465,7 @@
     if-eqz p1, :cond_4
 
     .line 1
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/TTSState;->b()Lcom/skt/aicloud/speaker/lib/state/TTSState$PlayState;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/TTSState;->a()Lcom/skt/aicloud/speaker/lib/state/TTSState$PlayState;
 
     move-result-object v0
 
@@ -25091,12 +25491,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$u1;->d:[I
+    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$v1;->d:[I
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/TTSState;->b()Lcom/skt/aicloud/speaker/lib/state/TTSState$PlayState;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/TTSState;->a()Lcom/skt/aicloud/speaker/lib/state/TTSState$PlayState;
 
     move-result-object p1
 
@@ -25126,26 +25526,845 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->A3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->C3()V
 
     goto :goto_0
 
     .line 5
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->z3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B3()V
 
     goto :goto_0
 
     .line 6
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D3()V
 
     :cond_4
     :goto_0
     return-void
 .end method
 
-.method public final p1(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+.method public p1()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
+
+    const-string v1, "cancelTts"
+
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->s()V
+
+    return-void
+.end method
+
+.method public p2()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g:Z
+
+    return v0
+.end method
+
+.method public final p4(Lcom/skt/voice/tyche/data/CardResult;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "cardResult"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v1, "start.guide"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x4
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v1, "confirm.no"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v2, 0x3
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v1, "close"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v2, 0x2
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v1, "stop"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v1, "cancel"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v2, 0x0
+
+    :goto_0
+    packed-switch v2, :pswitch_data_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
+
+    goto :goto_1
+
+    .line 3
+    :pswitch_0
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o4(Lcom/skt/voice/tyche/data/CardResult;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x5185d186 -> :sswitch_4
+        0x360802 -> :sswitch_3
+        0x5a5ddf8 -> :sswitch_2
+        0x32355baf -> :sswitch_1
+        0x50eb9a70 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public p5()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    sget-object v1, Lcom/skt/voice/tyche/AiConstant$AiErrorType;->TYPE_CUSTOM_ERROR:Lcom/skt/voice/tyche/AiConstant$AiErrorType;
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    const v3, 0x7f14006b
+
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->b(Lcom/skt/voice/tyche/AiConstant$AiErrorType;Ljava/lang/String;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-virtual {v0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p6(II)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x0
+        }
+        names = {
+            "messageResId",
+            "length"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    invoke-virtual {v0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->r6(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "volumeType"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$v1;->g:[I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq p1, v1, :cond_0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(I)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_1
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->L4(I)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_2
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->J4()V
+
+    goto :goto_0
+
+    .line 5
+    :cond_3
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->K4()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public q2(Lcom/skt/tmap/engine/TmapAiManager$y1;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->C(Lcom/skt/tmap/engine/TmapAiManager$y1;)V
+
+    return-void
+.end method
+
+.method public q4(Lcom/skt/voice/tyche/data/CardResult;)Z
+    .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "cardResult"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/CommandInfo;->getDomain()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
+
+    .line 2
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Command;->getType()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    .line 3
+    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
+
+    const-string v1, "processSwfAction "
+
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$l;
+
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$l;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 5
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/data/CommandInfo;->getSubType()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/CommandInfo;->getFilter()Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 7
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/CommandInfo;->getUnit()Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 8
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Command;->getPlayServiceId()Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 9
+    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Content;->getRequest()Lcom/skt/voice/tyche/data/Request;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/voice/tyche/data/Request;->getRequestId()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->E:Ljava/lang/String;
+
+    .line 10
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_0
+
+    .line 11
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    iget-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+
+    iget-object v8, p0, Lcom/skt/tmap/engine/TmapAiManager;->E:Ljava/lang/String;
+
+    move-object v1, v12
+
+    move-object v4, v0
+
+    move-object v5, v10
+
+    move-object v6, v11
+
+    invoke-virtual/range {v1 .. v9}, Lbe/e;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    :cond_0
+    invoke-static {}, Lce/l;->j()Lce/l;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 13
+    invoke-static {}, Lce/l;->j()Lce/l;
+
+    move-result-object v8
+
+    new-instance v9, Lce/b;
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    iget-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+
+    move-object v1, v9
+
+    move-object v4, v0
+
+    move-object v5, v10
+
+    move-object v6, v11
+
+    invoke-direct/range {v1 .. v7}, Lce/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v8, v9}, Lce/l;->m(Lce/e;)V
+
+    .line 14
+    :cond_1
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_8
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    if-nez v1, :cond_2
+
+    goto/16 :goto_1
+
+    .line 15
+    :cond_2
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->o:Ljava/util/List;
+
+    invoke-static {v1}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    .line 16
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->o:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    .line 17
+    iget-object v5, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    goto :goto_0
+
+    :cond_4
+    move-object v3, v4
+
+    .line 18
+    :goto_0
+    iput-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->o:Ljava/util/List;
+
+    .line 19
+    iput-object v4, p0, Lcom/skt/tmap/engine/TmapAiManager;->p:Ljava/util/List;
+
+    .line 20
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    .line 21
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v0, Lcom/skt/tmap/engine/e;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/e;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return v2
+
+    .line 22
+    :cond_5
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->n:Z
+
+    if-eqz v1, :cond_6
+
+    .line 23
+    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    new-instance v0, Lcom/skt/tmap/engine/g;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/g;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return v2
+
+    .line 24
+    :cond_6
+    sget-object v1, Lcom/skt/tmap/engine/TmapAiManager$v1;->a:[I
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    packed-switch v1, :pswitch_data_0
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 25
+    :pswitch_1
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->v4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 26
+    :pswitch_2
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->u4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 27
+    :pswitch_3
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 28
+    :pswitch_4
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->t4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 29
+    :pswitch_5
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->s4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    .line 30
+    :pswitch_6
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->r4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_7
+    if-eqz v12, :cond_7
+
+    .line 31
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
+
+    iget-object v7, p0, Lcom/skt/tmap/engine/TmapAiManager;->D:Ljava/lang/String;
+
+    move-object v1, v12
+
+    move-object v4, v0
+
+    move-object v5, v10
+
+    move-object v6, v11
+
+    invoke-virtual/range {v1 .. v7}, Lbe/e;->B0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 32
+    :cond_7
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x4(Lcom/skt/voice/tyche/data/CardResult;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_8
+    :goto_1
+    const-string p1, "ood"
+
+    .line 33
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j5(Ljava/lang/String;)V
+
+    return v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_7
+        :pswitch_0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final q5()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_ERROR:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    const v3, 0x7f140087
+
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->i(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
+
+    const v1, 0x7f140037
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final q6(Ljava/lang/String;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "message"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->r6(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final r1(Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
     .locals 13
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -25225,7 +26444,7 @@
 
     move-result v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/car/d;->r(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/skt/tmap/car/h;->r(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -25296,17 +26515,17 @@
     move-object v5, v0
 
     .line 13
-    invoke-static/range {v4 .. v12}, Lcom/skt/tmap/util/c;->D(Landroid/content/Context;Ljava/lang/String;II[Ljava/lang/String;ZZJ)Ljava/lang/String;
+    invoke-static/range {v4 .. v12}, Lcom/skt/tmap/util/d;->D(Landroid/content/Context;Ljava/lang/String;II[Ljava/lang/String;ZZJ)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 14
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     .line 15
     :goto_2
@@ -25315,7 +26534,7 @@
     return-object p1
 .end method
 
-.method public p2()Z
+.method public r2()Z
     .locals 1
 
     .line 1
@@ -25324,7 +26543,7 @@
     return v0
 .end method
 
-.method public final p4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final r4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -25346,7 +26565,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
@@ -25448,7 +26667,7 @@
     goto/16 :goto_0
 
     :sswitch_5
-    const-string/jumbo v3, "turn_off"
+    const-string v3, "turn_off"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -25544,7 +26763,7 @@
     goto/16 :goto_0
 
     :sswitch_b
-    const-string/jumbo v3, "undefined"
+    const-string v3, "undefined"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -25576,7 +26795,7 @@
     goto :goto_0
 
     :sswitch_d
-    const-string/jumbo v3, "undefined.list.next"
+    const-string v3, "undefined.list.next"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -25624,7 +26843,7 @@
     goto :goto_0
 
     :sswitch_10
-    const-string/jumbo v3, "undefined.list.previous"
+    const-string v3, "undefined.list.previous"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -25673,19 +26892,19 @@
     packed-switch v2, :pswitch_data_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return v1
 
     .line 4
     :pswitch_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->c6()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->e6()V
 
     return v1
 
     .line 5
     :pswitch_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->A3()V
 
     return v1
 
@@ -25702,13 +26921,13 @@
     if-eqz v0, :cond_13
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_1
 
     .line 8
     :cond_13
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_1
     return v1
@@ -25728,20 +26947,20 @@
     if-eqz v0, :cond_14
 
     .line 10
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->g4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->i4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_2
 
     .line 11
     :cond_14
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->h4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->j4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     :goto_2
     return v1
 
     .line 12
     :pswitch_4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->E3()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->G3()V
 
     return v1
 
@@ -25792,7 +27011,7 @@
     .end packed-switch
 .end method
 
-.method public final p5()V
+.method public final r5()V
     .locals 4
 
     .line 1
@@ -25805,7 +27024,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f130086
+    const v3, 0x7f140087
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -25816,19 +27035,19 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v1, 0x7f130038
+    const v1, 0x7f140038
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final p6(Ljava/lang/String;I)V
+.method public final r6(Ljava/lang/String;I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -25847,9 +27066,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$m1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$n1;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$m1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;I)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$n1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -25857,7 +27076,7 @@
     return-void
 .end method
 
-.method public final q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+.method public final s1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -25869,7 +27088,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$u1;->g:[I
+    sget-object v0, Lcom/skt/tmap/engine/TmapAiManager$v1;->g:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -25897,13 +27116,13 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->e5(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->g5(I)V
 
     goto :goto_0
 
     .line 3
     :cond_1
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->d5(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->f5(I)V
 
     goto :goto_0
 
@@ -25911,19 +27130,19 @@
     const/16 p1, 0xa
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->e5(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->g5(I)V
 
     goto :goto_0
 
     .line 5
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->c5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->e5()V
 
     :goto_0
     return-void
 .end method
 
-.method public q2()Z
+.method public s2()Z
     .locals 1
 
     .line 1
@@ -25944,7 +27163,7 @@
     return v0
 .end method
 
-.method public final q4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final s4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -25966,7 +27185,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
@@ -26038,7 +27257,7 @@
     goto :goto_0
 
     :sswitch_3
-    const-string/jumbo v4, "turn_off"
+    const-string v4, "turn_off"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -26102,7 +27321,7 @@
     goto :goto_0
 
     :sswitch_7
-    const-string/jumbo v4, "undefined"
+    const-string v4, "undefined"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -26151,33 +27370,33 @@
     packed-switch v3, :pswitch_data_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     return v2
 
     .line 4
     :pswitch_0
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result p1
 
     if-eqz p1, :cond_a
 
     .line 5
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->g5(I)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->i5(I)V
 
     goto :goto_1
 
     .line 6
     :cond_a
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_1
     return v2
 
     .line 7
     :pswitch_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->y4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->A4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v2
 
@@ -26194,13 +27413,13 @@
     if-eqz v0, :cond_b
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->o4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_2
 
     .line 10
     :cond_b
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_2
     return v2
@@ -26254,26 +27473,26 @@
     if-eqz p1, :cond_d
 
     .line 14
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->y1()Z
 
     move-result p1
 
     if-eqz p1, :cond_c
 
     .line 15
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->g5(I)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->i5(I)V
 
     goto :goto_3
 
     .line 16
     :cond_c
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     goto :goto_3
 
     .line 17
     :cond_d
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_3
     return v2
@@ -26309,7 +27528,7 @@
     .end packed-switch
 .end method
 
-.method public q5()V
+.method public s5()V
     .locals 4
 
     .line 1
@@ -26322,7 +27541,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f1308c6
+    const v3, 0x7f140948
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -26337,28 +27556,28 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final q6()V
+.method public final s6()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$b1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$c1;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$b1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$c1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public r1()Z
+.method public t1()Z
     .locals 2
 
     .line 1
@@ -26372,7 +27591,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
 
-    const-string/jumbo v1, "tmap.favoritelist"
+    const-string v1, "tmap.favoritelist"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -26391,7 +27610,7 @@
     return v0
 .end method
 
-.method public r2()Ldc/d;
+.method public t2()Lbe/e;
     .locals 1
 
     .line 1
@@ -26419,7 +27638,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
@@ -26432,7 +27651,7 @@
     return-object v0
 .end method
 
-.method public final r4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final t4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26454,7 +27673,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
@@ -26470,9 +27689,9 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$b0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$c0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$b0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$c0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -26491,13 +27710,13 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->p4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_0
 
     .line 6
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_0
     const/4 p1, 0x1
@@ -26505,7 +27724,7 @@
     return p1
 .end method
 
-.method public r5()V
+.method public t5()V
     .locals 4
 
     .line 1
@@ -26518,7 +27737,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v3, 0x7f13004c
+    const v3, 0x7f14004d
 
     invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -26533,13 +27752,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public r6(I)V
+.method public t6(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26553,17 +27772,17 @@
     if-gez p1, :cond_0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     return-void
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/skt/tmap/engine/g0;->d()Lcom/skt/tmap/engine/g0;
+    invoke-static {}, Lcom/skt/tmap/engine/i0;->d()Lcom/skt/tmap/engine/i0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/g0;->f()Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/i0;->f()Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 
@@ -26579,9 +27798,9 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$p1;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$q1;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$p1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$q1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
 
     const/16 p1, 0x12c
 
@@ -26591,13 +27810,13 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J1(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->L1(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public s1(Ljava/lang/String;)V
+.method public u1(Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26622,13 +27841,13 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->F:Ljava/lang/String;
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     :cond_0
     return-void
 .end method
 
-.method public s2()Lcom/skt/tmap/musicmate/MusicMateLinker;
+.method public u2()Lcom/skt/tmap/musicmate/MusicMateLinker;
     .locals 1
 
     .line 1
@@ -26649,7 +27868,7 @@
     return-object v0
 .end method
 
-.method public final s4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final u4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26671,7 +27890,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
@@ -26720,9 +27939,9 @@
     :cond_1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$f0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$g0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$f0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$g0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -26739,13 +27958,13 @@
     if-eqz v0, :cond_3
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->p4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_0
 
     .line 7
     :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_0
     const/4 p1, 0x1
@@ -26753,7 +27972,7 @@
     return p1
 .end method
 
-.method public s5(Ljava/lang/String;Z)V
+.method public u5(Ljava/lang/String;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26769,16 +27988,16 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$i;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$j;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$i;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Z)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/skt/tmap/engine/TmapAiManager$j;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;Z)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public s6(I)V
+.method public u6(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26806,7 +28025,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x1(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z1(I)V
 
     goto :goto_1
 
@@ -26817,16 +28036,16 @@
 
     const-string v0, "no stop by"
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_1
     return-void
 .end method
 
-.method public t1()V
+.method public v1()V
     .locals 4
 
     .line 1
@@ -26857,22 +28076,22 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->d:Landroid/media/AudioManager;
 
-    sget v2, Lcom/skt/voice/tyche/AiConstant;->E:I
+    sget v2, Lcom/skt/voice/tyche/AiConstant;->I:I
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    const v0, 0x7f1300f2
+    const v0, 0x7f1400f3
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->m6(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->o6(I)V
 
     :cond_2
     return-void
 .end method
 
-.method public final t2()Lcom/skt/tmap/engine/navigation/data/TBTListInfo;
+.method public final v2()Lcom/skt/tmap/engine/navigation/data/TBTListInfo;
     .locals 8
 
     .line 1
@@ -26963,7 +28182,7 @@
     return-object v1
 .end method
 
-.method public final t4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final v4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -26985,7 +28204,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
@@ -27001,9 +28220,9 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$d0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$f0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$d0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$f0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -27022,13 +28241,13 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->p4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_0
 
     .line 6
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_0
     const/4 p1, 0x1
@@ -27036,7 +28255,7 @@
     return p1
 .end method
 
-.method public final t5(IZ)V
+.method public final v5(IZ)V
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27105,7 +28324,7 @@
     const-string p2, "sequence_"
 
     .line 5
-    invoke-static {v1, p2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -27113,12 +28332,12 @@
     const-string p2, "start"
 
     .line 6
-    invoke-static {v1, p2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->t2()Lbe/e;
 
     move-result-object v2
 
@@ -27143,13 +28362,13 @@
 
     move-result-object v7
 
-    invoke-virtual/range {v2 .. v7}, Ldc/d;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v2 .. v7}, Lbe/e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     return-void
 .end method
 
-.method public t6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+.method public v6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27185,12 +28404,12 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->u6(Ljava/util/List;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->w6(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public u1()V
+.method public w1()V
     .locals 2
 
     .line 1
@@ -27214,7 +28433,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p0}, Lcom/skt/voice/tyche/NuguSdkManager;->l0(Lcom/skt/voice/tyche/data/NuguSdkCallback;)V
+    invoke-virtual {v0, p0}, Lcom/skt/voice/tyche/NuguSdkManager;->m0(Lcom/skt/voice/tyche/data/NuguSdkCallback;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -27225,7 +28444,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->X(Landroid/app/Application;)V
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->Y(Landroid/app/Application;)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -27236,7 +28455,7 @@
     return-void
 .end method
 
-.method public u2()Z
+.method public w2()Z
     .locals 1
 
     .line 1
@@ -27245,7 +28464,7 @@
     return v0
 .end method
 
-.method public final u4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final w4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27267,7 +28486,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->B:Ljava/lang/String;
 
-    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcom/skt/tmap/activity/w1;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->A:Ljava/lang/String;
@@ -27293,9 +28512,9 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$c0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$d0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$c0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$d0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -27314,13 +28533,13 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->n4(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->p4(Lcom/skt/voice/tyche/data/CardResult;)V
 
     goto :goto_0
 
     .line 6
     :cond_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_0
     const/4 p1, 0x1
@@ -27328,7 +28547,7 @@
     return p1
 .end method
 
-.method public u5(Ljava/lang/String;Ljava/lang/String;ZZ)V
+.method public w5(Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27370,7 +28589,7 @@
 
     move-result-object p2
 
-    const p4, 0x7f1305eb
+    const p4, 0x7f140658
 
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -27386,7 +28605,7 @@
 
     const-string v1, " "
 
-    invoke-static {p4, p1, v1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p4, p1, v1}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p4
 
@@ -27400,7 +28619,7 @@
 
     move-result-object p4
 
-    invoke-static {p2, p4}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p4}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -27409,16 +28628,16 @@
 
     move-result-object p4
 
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$74;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$75;
 
-    invoke-direct {v0, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$74;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Z)V
+    invoke-direct {v0, p0, p3}, Lcom/skt/tmap/engine/TmapAiManager$75;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Z)V
 
-    invoke-virtual {p2, p1, p4, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->U(Ljava/lang/String;Ljava/lang/String;Lcom/skt/aicloud/speaker/lib/model/IAladdinSendMsgListener;)V
+    invoke-virtual {p2, p1, p4, v0}, Lcom/skt/voice/tyche/NuguSdkManager;->V(Ljava/lang/String;Ljava/lang/String;Lcom/skt/aicloud/speaker/lib/model/IAladdinSendMsgListener;)V
 
     return-void
 .end method
 
-.method public u6(Ljava/util/List;)V
+.method public w6(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27441,16 +28660,16 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/q;
+    new-instance v1, Lcom/skt/tmap/engine/p;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/q;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/p;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/util/List;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public v1()Z
+.method public x1()Z
     .locals 2
 
     .line 1
@@ -27483,7 +28702,7 @@
     return v0
 .end method
 
-.method public v2(Lcom/skt/aicloud/speaker/lib/model/IAladdinPersonalInfoAgreementListener;)V
+.method public x2(Lcom/skt/aicloud/speaker/lib/model/IAladdinPersonalInfoAgreementListener;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27503,12 +28722,12 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->F(Lcom/skt/aicloud/speaker/lib/model/IAladdinPersonalInfoAgreementListener;)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->G(Lcom/skt/aicloud/speaker/lib/model/IAladdinPersonalInfoAgreementListener;)V
 
     return-void
 .end method
 
-.method public final v4(Lcom/skt/voice/tyche/data/CardResult;)Z
+.method public final x4(Lcom/skt/voice/tyche/data/CardResult;)Z
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27561,14 +28780,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->O2(Ljava/util/List;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q2(Ljava/util/List;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->G3(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->I3(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v1
 
@@ -27633,9 +28852,9 @@
     .line 7
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v0, Lcom/skt/tmap/engine/i;
+    new-instance v0, Lcom/skt/tmap/engine/h;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/i;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/h;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -27669,7 +28888,7 @@
 
     .line 9
     :cond_4
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->X3(Lcom/skt/voice/tyche/data/CardResult;)Z
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->Z3(Lcom/skt/voice/tyche/data/CardResult;)Z
 
     move-result p1
 
@@ -27677,7 +28896,7 @@
 
     .line 10
     :cond_5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R3(Lcom/skt/voice/tyche/data/CardResult;)Z
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T3(Lcom/skt/voice/tyche/data/CardResult;)Z
 
     move-result p1
 
@@ -27699,30 +28918,32 @@
     move-result-object p1
 
     .line 12
-    invoke-virtual {p0, p1, v1}, Lcom/skt/tmap/engine/TmapAiManager;->s5(Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, v1}, Lcom/skt/tmap/engine/TmapAiManager;->u5(Ljava/lang/String;Z)V
 
     return v1
 
     .line 13
     :cond_7
     :goto_1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->R1(Lcom/skt/voice/tyche/data/CardResult;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->T1(Lcom/skt/voice/tyche/data/CardResult;)V
 
     return v1
 .end method
 
-.method public v5(Lcom/skt/tmap/engine/f0;)V
+.method public x5(Lcom/skt/tmap/engine/h0;Landroid/graphics/Bitmap;)V
     .locals 10
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
+            0x0,
             0x0
         }
         names = {
-            "currentPlayingMedia"
+            "currentPlayingMedia",
+            "resource"
         }
     .end annotation
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
@@ -27730,7 +28951,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->I2()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->K2()V
 
     .line 3
     :cond_0
@@ -27747,11 +28968,13 @@
 
     const/4 v4, 0x3
 
-    const-wide/16 v5, 0x1
+    .line 5
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/h0;->e()J
+
+    move-result-wide v5
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 5
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
@@ -27771,7 +28994,7 @@
     invoke-direct {v1}, Landroid/support/v4/media/MediaMetadataCompat$b;-><init>()V
 
     .line 8
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/f0;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/h0;->f()Ljava/lang/String;
 
     move-result-object v2
 
@@ -27782,43 +29005,73 @@
     move-result-object v1
 
     .line 9
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/f0;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/h0;->b()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v2
 
-    const-string v2, "android.media.metadata.ARTIST"
+    const-string v3, "android.media.metadata.ARTIST"
 
-    invoke-virtual {v1, v2, p1}, Landroid/support/v4/media/MediaMetadataCompat$b;->e(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$b;
+    invoke-virtual {v1, v3, v2}, Landroid/support/v4/media/MediaMetadataCompat$b;->e(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$b;
 
-    move-result-object p1
+    move-result-object v1
 
     .line 10
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/h0;->g()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "android.media.metadata.ART_URI"
+
+    invoke-virtual {v1, v3, v2}, Landroid/support/v4/media/MediaMetadataCompat$b;->e(Ljava/lang/String;Ljava/lang/String;)Landroid/support/v4/media/MediaMetadataCompat$b;
+
+    move-result-object v1
+
+    .line 11
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/h0;->c()J
+
+    move-result-wide v2
+
+    const-string p1, "android.media.metadata.DURATION"
+
+    invoke-virtual {v1, p1, v2, v3}, Landroid/support/v4/media/MediaMetadataCompat$b;->c(Ljava/lang/String;J)Landroid/support/v4/media/MediaMetadataCompat$b;
+
+    move-result-object p1
+
+    if-eqz p2, :cond_1
+
+    const-string v1, "android.media.metadata.ART"
+
+    .line 12
+    invoke-virtual {p1, v1, p2}, Landroid/support/v4/media/MediaMetadataCompat$b;->b(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaMetadataCompat$b;
+
+    .line 13
+    :cond_1
     invoke-virtual {p1}, Landroid/support/v4/media/MediaMetadataCompat$b;->a()Landroid/support/v4/media/MediaMetadataCompat;
 
     move-result-object p1
 
-    .line 11
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
+    .line 14
+    iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat;->o(Z)V
+    invoke-virtual {p2, v1}, Landroid/support/v4/media/session/MediaSessionCompat;->o(Z)V
 
-    .line 12
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
+    .line 15
+    iget-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
-    invoke-virtual {v1, p1}, Landroid/support/v4/media/session/MediaSessionCompat;->v(Landroid/support/v4/media/MediaMetadataCompat;)V
+    invoke-virtual {p2, p1}, Landroid/support/v4/media/session/MediaSessionCompat;->v(Landroid/support/v4/media/MediaMetadataCompat;)V
 
-    .line 13
+    .line 16
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->f0:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-virtual {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat;->w(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
-.method public v6()V
+.method public x6()V
     .locals 2
 
     .line 1
@@ -27826,7 +29079,7 @@
 
     const-string v1, "startListeningWithTrigger"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -27845,7 +29098,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -27855,7 +29108,7 @@
 
     check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseAiActivity;->e6()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseAiActivity;->n6()Z
 
     move-result v0
 
@@ -27867,14 +29120,14 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
 
-    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->D0()V
+    invoke-virtual {v0}, Lcom/skt/voice/tyche/NuguSdkManager;->E0()V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public w1()Z
+.method public y1()Z
     .locals 2
 
     .line 1
@@ -27907,7 +29160,7 @@
     return v0
 .end method
 
-.method public final w2(Ljava/lang/String;)V
+.method public final y2(Ljava/lang/String;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -27932,42 +29185,42 @@
     invoke-virtual {v0, p1}, Lcom/skt/tmap/network/ndds/dto/request/FindPoiDetailInfoRequestDto;->setName(Ljava/lang/String;)V
 
     .line 4
-    new-instance p1, Lqc/c;
+    new-instance p1, Loe/d;
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
     const/4 v2, 0x0
 
-    invoke-direct {p1, v1, v2, v2}, Lqc/c;-><init>(Landroid/app/Activity;ZZ)V
+    invoke-direct {p1, v1, v2, v2}, Loe/d;-><init>(Landroid/app/Activity;ZZ)V
 
     .line 5
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$q1;
-
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$q1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    invoke-virtual {p1, v1}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnComplete(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
-
-    .line 6
     new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$r1;
 
     invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$r1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-virtual {p1, v1}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnFail(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;)V
+    invoke-virtual {p1, v1}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnComplete(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
 
-    .line 7
+    .line 6
     new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$s1;
 
     invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$s1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
+    invoke-virtual {p1, v1}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnFail(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;)V
+
+    .line 7
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$u1;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$u1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+
     invoke-virtual {p1, v1}, Lcom/skt/tmap/engine/navigation/network/NetworkRequester;->setOnCancel(Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnCancel;)V
 
     .line 8
-    invoke-virtual {p1, v0}, Lqc/c;->request(Lcom/skt/tmap/engine/navigation/network/ndds/dto/RequestDto;)Z
+    invoke-virtual {p1, v0}, Loe/d;->p(Lcom/skt/tmap/network/ndds/dto/request/FindPoiDetailInfoRequestDto;)Z
 
     return-void
 .end method
 
-.method public final w4(Lcom/skt/voice/tyche/data/Actions;)V
+.method public final y4(Lcom/skt/voice/tyche/data/Actions;)V
     .locals 9
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28180,14 +29433,14 @@
 
     move-result-object p1
 
-    new-instance v1, Lcom/skt/tmap/engine/o;
+    new-instance v1, Lcom/skt/tmap/engine/n;
 
-    invoke-direct {v1, p0, v2}, Lcom/skt/tmap/engine/o;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapTipOffData;)V
+    invoke-direct {v1, p0, v2}, Lcom/skt/tmap/engine/n;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapTipOffData;)V
 
     invoke-interface {p1, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     .line 9
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->O4(Ljava/lang/String;)V
 
     .line 10
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
@@ -28199,11 +29452,11 @@
     .line 11
     check-cast p1, Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->eb()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->wb()V
 
     .line 12
     :cond_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
     goto :goto_2
 
@@ -28254,7 +29507,7 @@
     .end packed-switch
 .end method
 
-.method public w5(Landroid/app/Activity;)V
+.method public y5(Landroid/app/Activity;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28280,7 +29533,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
@@ -28289,13 +29542,13 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->e0(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->f0(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public w6(Ljava/lang/String;)V
+.method public y6(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28309,16 +29562,40 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/p;
+    new-instance v1, Lcom/skt/tmap/engine/o;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/p;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/o;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public x1(I)V
+.method public z()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->K0:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->K0:Ljava/lang/Runnable;
+
+    sget v2, Lcom/skt/voice/tyche/AiConstant;->Y:I
+
+    int-to-long v2, v2
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public z1(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28341,22 +29618,22 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 3
-    invoke-static {p1}, Lcom/skt/tmap/util/a;->n(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/b;->n(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -28365,11 +29642,11 @@
     if-ne v0, v1, :cond_0
 
     .line 4
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$u0;
+    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$v0;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$u0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$v0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->S4(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/engine/TmapAiManager;->U4(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;)V
 
     goto :goto_0
 
@@ -28377,9 +29654,9 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$v0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$w0;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$v0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$w0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -28388,7 +29665,7 @@
     return-void
 .end method
 
-.method public final x2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Ljava/lang/String;
+.method public final z2(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Ljava/lang/String;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28405,7 +29682,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lcom/skt/tmap/util/a;->n(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/b;->n(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Z
 
     move-result v1
 
@@ -28417,11 +29694,11 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/b;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -28497,7 +29774,7 @@
     return-object p1
 .end method
 
-.method public final x4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
+.method public final z4(Lcom/skt/aicloud/speaker/lib/AIServiceResult;)V
     .locals 6
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28509,7 +29786,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
 
     move-result-object p1
 
@@ -28518,7 +29795,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->z()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->A()Ljava/lang/String;
 
     move-result-object p1
 
@@ -28540,7 +29817,7 @@
 
     check-cast p1, Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/activity/BaseAiActivity;->w6(I)V
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/activity/BaseAiActivity;->F6(I)V
 
     const/4 p1, 0x1
 
@@ -28569,7 +29846,7 @@
     .line 7
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
 
-    const v2, 0x7f1300e3
+    const v2, 0x7f1400e4
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -28593,20 +29870,20 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->k6(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m6(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->m1(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Z)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public x5(Ljava/util/List;)V
+.method public z5(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28632,7 +29909,7 @@
     return-void
 .end method
 
-.method public x6(I)V
+.method public z6(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -28662,9 +29939,9 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$p0;
+    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$q0;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$p0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$q0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -28677,1140 +29954,10 @@
 
     const-string v0, "no destination"
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
-
-    :goto_1
-    return-void
-.end method
-
-.method public final y1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
-    .locals 8
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "selectData"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    .line 2
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    .line 3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 4
-    :cond_0
-    sget-object v0, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;->SpeechRecogSearch:Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
-
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setExploreCode(Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;)V
-
-    .line 5
-    invoke-virtual {p0, p1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->t6(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
-
-    goto :goto_0
-
-    .line 6
-    :cond_1
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const/4 v3, 0x1
-
-    if-ne v1, v3, :cond_3
-
-    .line 7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->O1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return-void
-
-    :cond_2
-    const/4 v1, 0x0
-
-    .line 8
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
-
-    invoke-virtual {v4}, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;->getName()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 9
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->getfurName()[B
-
-    move-result-object v5
-
-    invoke-static {v5}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 10
-    invoke-virtual {p0, v3}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
-
-    .line 11
-    iget-object v6, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    sget-object v7, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SHOW_ALL_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
-
-    invoke-interface {v6, v7, v4, v5, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->s(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 12
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    const v4, 0x7f130078
-
-    invoke-virtual {v2, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->M4(Ljava/lang/String;)V
-
-    .line 13
-    iput-boolean v3, p0, Lcom/skt/tmap/engine/TmapAiManager;->r:Z
-
-    .line 14
-    new-instance v2, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/skt/tmap/engine/navigation/route/data/WayPoint;
-
-    invoke-direct {v2, v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;-><init>(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
-
-    iput-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->d0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-
-    .line 15
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->e0:Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-
-    .line 16
-    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;->IN_STOP_BY:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
-
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->U:Lcom/skt/tmap/engine/TmapAiManager$TmapAiState;
-
-    goto :goto_0
-
-    .line 17
-    :cond_3
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->i5()V
-
-    :cond_4
-    :goto_0
-    return-void
-.end method
-
-.method public y2()Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->g0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
-
-    return-object v0
-.end method
-
-.method public final y3()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$l1;
-
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$l1;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public y4(Lcom/skt/voice/tyche/data/CardResult;)V
-    .locals 7
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cardResult"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CommandInfo;->getFilter()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
-
-    .line 3
-    :cond_0
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    packed-switch v1, :pswitch_data_0
-
-    goto :goto_0
-
-    :pswitch_0
-    const-string v1, "ORDER_5"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v1, "ORDER_4"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v3
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v1, "ORDER_3"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move v0, v4
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v1, "ORDER_2"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    move v0, v5
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v1, "ORDER_1"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move v0, v6
-
-    :goto_0
-    packed-switch v0, :pswitch_data_1
-
-    .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
-
-    return-void
-
-    :pswitch_5
-    move v2, v3
-
-    goto :goto_1
-
-    :pswitch_6
-    move v2, v4
-
-    goto :goto_1
-
-    :pswitch_7
-    move v2, v5
-
-    goto :goto_1
-
-    :pswitch_8
-    move v2, v6
-
-    .line 5
-    :goto_1
-    :pswitch_9
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    .line 6
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    .line 7
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    .line 8
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    if-lez p1, :cond_7
-
-    .line 9
-    :cond_6
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteOption;->getWayPoints()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    .line 10
-    :cond_7
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v1()Z
-
-    move-result p1
-
-    if-nez p1, :cond_8
-
-    add-int/lit8 v6, v6, 0x1
-
-    :cond_8
-    if-gt v6, v2, :cond_9
-
-    .line 11
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
-
-    return-void
-
-    .line 12
-    :cond_9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->r2()Ldc/d;
-
-    move-result-object p1
-
-    .line 13
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->w1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    .line 14
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->g5(I)V
-
-    goto :goto_2
-
-    .line 15
-    :cond_a
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->v1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    .line 16
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/engine/TmapAiManager;->D6(I)V
-
-    if-eqz p1, :cond_b
-
-    int-to-long v0, v2
-
-    const-string v2, "ai_speak.deletewaypoint_list"
-
-    .line 17
-    invoke-virtual {p1, v2, v0, v1}, Ldc/d;->T(Ljava/lang/String;J)V
-
-    :cond_b
-    :goto_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch -0x1d2778a0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_9
-    .end packed-switch
-.end method
-
-.method public y5(Lcom/skt/voice/tyche/AiTechLabVoiceCallback;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "aiTechLabVoiceCallback"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->T:Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
-
-    return-void
-.end method
-
-.method public y6(I)V
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-static {v0}, Lcom/skt/tmap/util/x0;->t(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-static {v0}, Lcom/skt/tmap/GlobalDataManager;->b(Landroid/content/Context;)Lcom/skt/tmap/GlobalDataManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/GlobalDataManager;->G()V
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-static {v0}, Lcom/skt/tmap/location/a;->c(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 4
-    iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v0, Lcom/skt/tmap/engine/TmapAiManager$l0;
-
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/TmapAiManager$l0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    .line 5
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$m0;
-
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$m0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 6
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->C:Ljava/lang/String;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    sparse-switch v2, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string/jumbo v2, "tmap.favoritelist"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v1, v4
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v2, "search.again.route"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v1, v5
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v2, "search.route"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x4
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v2, "show.destination.recent"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v1, v3
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v2, "set.stopby"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x0
-
-    :cond_1
-    :goto_0
-    if-eqz v1, :cond_5
-
-    if-eq v1, v5, :cond_4
-
-    if-eq v1, v4, :cond_3
-
-    if-eq v1, v3, :cond_2
-
-    .line 7
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->x6(I)V
-
-    goto :goto_1
-
-    .line 8
-    :cond_2
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->A6(I)V
-
-    goto :goto_1
-
-    .line 9
-    :cond_3
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->z6(I)V
-
-    goto :goto_1
-
-    .line 10
-    :cond_4
-    invoke-static {}, Lcom/skt/tmap/data/RouteOptionData;->values()[Lcom/skt/tmap/data/RouteOptionData;
-
-    move-result-object v0
-
-    aget-object p1, v0, p1
-
-    .line 11
-    iget-object p1, p1, Lcom/skt/tmap/data/RouteOptionData;->nuguNluFilter:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w6(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 12
-    :cond_5
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->s6(I)V
-
-    :goto_1
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x65c74d1b -> :sswitch_4
-        -0x5bdf1134 -> :sswitch_3
-        -0x3814d97d -> :sswitch_2
-        -0x3628550b -> :sswitch_1
-        0x70290000 -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method public z()V
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->K0:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->K0:Ljava/lang/Runnable;
-
-    sget v2, Lcom/skt/voice/tyche/AiConstant;->U:I
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-.end method
-
-.method public final z1()V
-    .locals 3
-
-    const-string v0, ""
-
-    .line 1
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
-
-    .line 2
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->z3(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 3
-    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->B3(Landroid/content/Context;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->l0:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;
-
-    const/4 v0, 0x0
-
-    .line 5
-    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->r0:Z
-
-    .line 6
-    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->n0:Z
-
-    .line 7
-    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->W:J
-
-    iput-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->k0:J
-
-    .line 8
-    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    invoke-static {v2, v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->A3(Landroid/content/Context;J)V
-
-    .line 9
-    sget-wide v0, Lcom/skt/voice/tyche/AiConstant;->Z:J
-
-    iput-wide v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->m0:J
-
-    .line 10
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->i0:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/engine/TmapAiManager;->U5(Ljava/lang/String;)V
-
-    .line 11
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->b:Landroid/app/Activity;
-
-    check-cast v0, Lcom/skt/tmap/activity/BaseAiActivity;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->w6(I)V
-
-    return-void
-.end method
-
-.method public z2(Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "poiFavoritesInfo"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-
-    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;-><init>()V
-
-    .line 2
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getPkey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPkey(Ljava/lang/String;)V
-
-    .line 3
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getRpFlag()B
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setRPFlag(B)V
-
-    .line 4
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getPoiId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPOIId([B)V
-
-    .line 5
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getNavSeq()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setNavSeq(Ljava/lang/String;)V
-
-    .line 6
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getNoorX()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getNoorY()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPosString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getCenterX()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getCenterY()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setCenterString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 8
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;->getCustName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setfurName([B)V
-
-    .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->T1()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setaddress([B)V
-
-    return-object v0
-.end method
-
-.method public z3()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 1
-    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->j:Z
-
-    .line 2
-    iput-boolean v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->k:Z
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$c;
-
-    invoke-direct {v1, p0}, Lcom/skt/tmap/engine/TmapAiManager$c;-><init>(Lcom/skt/tmap/engine/TmapAiManager;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final z4(Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "cardResult",
-            "volumeType"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CardResult;->getContent()Lcom/skt/voice/tyche/data/Content;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Content;->getCommand()Lcom/skt/voice/tyche/data/Command;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/Command;->getCommandInfo()Lcom/skt/voice/tyche/data/CommandInfo;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/skt/voice/tyche/data/CommandInfo;->getFilter()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    .line 2
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-
-    goto :goto_1
-
-    :cond_0
-    const-string v0, "QT.ALL"
-
-    .line 3
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 4
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-
-    .line 5
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-
-    goto :goto_1
-
-    :cond_1
-    const-string v0, "GUIDE_VOLUME"
-
-    .line 6
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const-string v0, "TMAP"
-
-    .line 7
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const-string v0, "ROUTE"
-
-    .line 8
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const-string v0, "SERVICE_NAME.NAVIGATION"
-
-    .line 9
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    .line 10
-    :cond_2
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-
-    goto :goto_1
-
-    .line 11
-    :cond_3
-    :goto_0
-    invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/TmapAiManager;->q1(Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
-
-    .line 12
-    :goto_1
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->C3()V
-
-    return-void
-.end method
-
-.method public z5(I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "sec"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->a:Lcom/skt/voice/tyche/NuguSdkManager;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    invoke-virtual {v0, p1}, Lcom/skt/voice/tyche/NuguSdkManager;->Y(I)V
-
-    return-void
-.end method
-
-.method public z6(I)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "index"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->W:Ljava/util/List;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_1
-
-    if-gez p1, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager;->R:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    new-instance v1, Lcom/skt/tmap/engine/TmapAiManager$n0;
-
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/engine/TmapAiManager$n0;-><init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_1
-
-    .line 3
-    :cond_1
-    :goto_0
-    sget-object p1, Lcom/skt/tmap/engine/TmapAiManager;->O0:Ljava/lang/String;
-
-    const-string v0, "no favorites"
-
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->l5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/TmapAiManager;->n5()V
 
     :goto_1
     return-void

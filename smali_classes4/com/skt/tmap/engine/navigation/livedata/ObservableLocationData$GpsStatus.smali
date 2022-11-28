@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0007\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002j\u0002\u0008\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006j\u0002\u0008\u0007\u00a8\u0006\u0008"
     }
@@ -44,9 +39,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -65,72 +61,107 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method private static final synthetic $values()[Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    .locals 3
 
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->NO_SIGNAL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    const-string v2, "NO_SIGNAL"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->BAD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->NO_SIGNAL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    const/4 v2, 0x1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->GOOD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    const-string v2, "BAD"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->TUNNEL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->BAD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    const/4 v2, 0x3
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->UNDERPASS:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    const-string v2, "GOOD"
+    const/4 v2, 0x4
 
-    const/4 v3, 0x2
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+    return-object v0
+.end method
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->GOOD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+.method public static constructor <clinit>()V
+    .locals 3
 
-    aput-object v1, v0, v3
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    const-string v1, "NO_SIGNAL"
 
-    const-string v2, "TUNNEL"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x3
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->NO_SIGNAL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->TUNNEL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    .line 2
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    aput-object v1, v0, v3
+    const-string v1, "BAD"
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    const/4 v2, 0x1
 
-    const-string v2, "UNDERPASS"
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
 
-    const/4 v3, 0x4
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->BAD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+    .line 3
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->UNDERPASS:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+    const-string v1, "GOOD"
 
-    aput-object v1, v0, v3
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->GOOD:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+
+    .line 4
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+
+    const-string v1, "TUNNEL"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->TUNNEL:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+
+    .line 5
+    new-instance v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+
+    const-string v1, "UNDERPASS"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->UNDERPASS:Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->$values()[Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->$VALUES:[Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
@@ -170,7 +201,7 @@
 
     sget-object v0, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->$VALUES:[Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData$GpsStatus;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

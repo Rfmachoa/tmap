@@ -1,48 +1,46 @@
-.class public Landroidx/core/content/l;
+.class public final synthetic Landroidx/core/content/l;
 .super Ljava/lang/Object;
-.source "UnusedAppRestrictionsBackportCallback.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/core/util/v;
 
 
-# instance fields
-.field public a:Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;
+# static fields
+.field public static final synthetic a:Landroidx/core/content/l;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/core/content/l;
+
+    invoke-direct {v0}, Landroidx/core/content/l;-><init>()V
+
+    sput-object v0, Landroidx/core/content/l;->a:Landroidx/core/content/l;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
-    .param p1    # Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Landroidx/core/content/l;->a:Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ZZ)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
 
-    .line 1
-    iget-object v0, p0, Landroidx/core/content/l;->a:Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;
+    check-cast p1, Landroid/net/Uri;
 
-    invoke-interface {v0, p1, p2}, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;->onIsPermissionRevocationEnabledForAppResult(ZZ)V
+    invoke-static {p1}, Landroidx/core/content/h$e;->i(Landroid/net/Uri;)Z
 
-    return-void
+    move-result p1
+
+    return p1
 .end method

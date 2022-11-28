@@ -59,7 +59,7 @@
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$c;->a:Z
 
     .line 3
-    invoke-static {p2, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->K(IZ)Z
+    invoke-static {p2, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->N(IZ)Z
 
     move-result p1
 

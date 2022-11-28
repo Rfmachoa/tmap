@@ -26,5 +26,5 @@
 
 
 # virtual methods
-.method public abstract a()Lj/g;
+.method public abstract a()Ll/g;
 .end method

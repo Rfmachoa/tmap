@@ -56,7 +56,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lm5/a;->f(Ljava/nio/ByteBuffer;)Ljava/io/InputStream;
+    invoke-static {p1}, Lj7/a;->g(Ljava/nio/ByteBuffer;)Ljava/io/InputStream;
 
     move-result-object p1
 

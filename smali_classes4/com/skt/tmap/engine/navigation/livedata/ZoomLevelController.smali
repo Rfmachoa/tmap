@@ -79,8 +79,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -100,11 +100,20 @@
             "[F>;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
 
 .field private final ZOOM_LEVEL_BY_TURN:[F
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final ZOOM_LEVEL_FOR_ALTERNATIVE_ROUTE:[[F
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private autoZoomType:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
     .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -112,6 +121,9 @@
 .end field
 
 .field private final speedValue:Lcom/skt/tmap/engine/navigation/util/LowPassFilter;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private subZoomLevel:I
 
@@ -227,7 +239,7 @@
     aput-object v2, v1, v5
 
     .line 13
-    invoke-static {v1}, Lkotlin/collections/w0;->W([Lkotlin/Pair;)Ljava/util/Map;
+    invoke-static {v1}, Lkotlin/collections/z0;->W([Lkotlin/Pair;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -273,21 +285,21 @@
     .array-data 4
         0x42200000    # 40.0f
         0x41300000    # 11.0f
-        0x42480000    # 50.0f
+        0x42200000    # 40.0f
     .end array-data
 
     :array_4
     .array-data 4
         0x42a00000    # 80.0f
         0x41280000    # 10.5f
-        0x42820000    # 65.0f
+        0x41c80000    # 25.0f
     .end array-data
 
     :array_5
     .array-data 4
         0x44fa0000    # 2000.0f
         0x41200000    # 10.0f
-        0x42820000    # 65.0f
+        0x41c80000    # 25.0f
     .end array-data
 
     :array_6
@@ -372,7 +384,7 @@
 
 # virtual methods
 .method public final calculateZoomAndTilt(FIIZLjava/lang/Integer;Z)V
-    .locals 4
+    .locals 5
     .param p5    # Ljava/lang/Integer;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
@@ -389,6 +401,8 @@
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/util/LowPassFilter;->get()F
 
     move-result p1
+
+    const/4 v0, 0x0
 
     if-eqz p6, :cond_1
 
@@ -408,46 +422,46 @@
 
     array-length p6, p4
 
-    const/4 v0, 0x0
+    move v1, v0
 
     :goto_0
-    if-ge v0, p6, :cond_1
+    if-ge v1, p6, :cond_1
 
-    aget-object v1, p4, v0
+    aget-object v2, p4, v1
 
     .line 5
     invoke-virtual {p5}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v3
 
-    int-to-float v2, v2
+    int-to-float v3, v3
 
-    iget v3, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_CONDITION:I
+    iget v4, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_CONDITION:I
 
-    aget v3, v1, v3
+    aget v4, v2, v4
 
-    cmpl-float v2, v2, v3
+    cmpl-float v3, v3, v4
 
-    if-ltz v2, :cond_0
+    if-ltz v3, :cond_0
 
     .line 6
     iget p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_ZOOM:I
 
-    aget p1, v1, p1
+    aget p1, v2, p1
 
     invoke-direct {p0, p1}, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->setZoomLevel(F)V
 
     .line 7
     iget p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_TILT:I
 
-    aget p1, v1, p1
+    aget p1, v2, p1
 
     iput p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->tiltAngle:F
 
     return-void
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -503,7 +517,9 @@
 
     move-result p4
 
-    if-eqz p4, :cond_5
+    const/4 p5, 0x1
+
+    if-eqz p4, :cond_6
 
     invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -512,15 +528,13 @@
     check-cast p4, Ljava/util/Map$Entry;
 
     .line 13
-    iget-object p5, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->autoZoomType:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
+    iget-object p6, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->autoZoomType:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
 
     invoke-interface {p4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object p6
+    move-result-object v1
 
-    check-cast p6, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController$AutoZoomType;
-
-    if-eq p5, p6, :cond_3
+    if-eq p6, v1, :cond_3
 
     .line 14
     invoke-interface {p4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -536,32 +550,40 @@
     goto :goto_1
 
     :cond_3
-    const/4 p5, 0x5
+    const/4 p6, 0x5
 
-    int-to-float p5, p5
+    int-to-float p6, p6
 
-    sub-float/2addr p2, p5
+    sub-float/2addr p2, p6
 
     .line 15
     invoke-interface {p4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result-object p6
+    move-result-object v1
 
-    check-cast p6, [F
+    check-cast v1, [F
 
-    iget v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_CONDITION:I
+    iget v2, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_CONDITION:I
 
-    aget p6, p6, v0
+    aget v1, v1, v2
 
-    add-float/2addr p6, p5
+    add-float/2addr p6, v1
 
-    cmpl-float p2, p1, p2
+    cmpg-float p2, p2, p1
 
-    if-ltz p2, :cond_4
+    if-gtz p2, :cond_4
 
     cmpg-float p2, p1, p6
 
     if-gtz p2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move p5, v0
+
+    :goto_2
+    if-eqz p5, :cond_5
 
     .line 16
     invoke-interface {p4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -600,13 +622,13 @@
 
     return-void
 
-    :cond_4
+    :cond_5
     move p2, p6
 
     goto :goto_1
 
     .line 19
-    :cond_5
+    :cond_6
     iget-object p3, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->ZOOM_LEVEL_BY_SPEED:Ljava/util/Map;
 
     invoke-interface {p3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -617,12 +639,12 @@
 
     move-result-object p3
 
-    :goto_2
+    :goto_3
     invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p4
 
-    if-eqz p4, :cond_7
+    if-eqz p4, :cond_9
 
     invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -633,21 +655,31 @@
     .line 20
     invoke-interface {p4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result-object p5
+    move-result-object p6
 
-    check-cast p5, [F
+    check-cast p6, [F
 
-    iget p6, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_CONDITION:I
+    iget v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;->INDEX_CONDITION:I
 
-    aget p5, p5, p6
+    aget p6, p6, v1
 
-    cmpl-float p2, p1, p2
+    cmpg-float p2, p2, p1
 
-    if-ltz p2, :cond_6
+    if-gtz p2, :cond_7
 
-    cmpg-float p2, p1, p5
+    cmpg-float p2, p1, p6
 
-    if-gtz p2, :cond_6
+    if-gtz p2, :cond_7
+
+    move p2, p5
+
+    goto :goto_4
+
+    :cond_7
+    move p2, v0
+
+    :goto_4
+    if-eqz p2, :cond_8
 
     .line 21
     invoke-interface {p4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -686,12 +718,12 @@
 
     return-void
 
-    :cond_6
-    move p2, p5
+    :cond_8
+    move p2, p6
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_7
+    :cond_9
     const/high16 p1, 0x41300000    # 11.0f
 
     .line 24

@@ -3,7 +3,7 @@
 .source "TmapNearActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;
+.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$i;
 
 
 # annotations
@@ -63,7 +63,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->K5(Lcom/skt/tmap/activity/TmapNearActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->S5(Lcom/skt/tmap/activity/TmapNearActivity;)Ljava/util/List;
 
     move-result-object v0
 
@@ -101,27 +101,27 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.layer"
+    const-string v1, "tap.layer"
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    new-instance v1, Lcom/skt/tmap/dialog/k;
+    new-instance v1, Lcom/skt/tmap/dialog/p;
 
-    invoke-direct {v1}, Lcom/skt/tmap/dialog/k;-><init>()V
+    invoke-direct {v1}, Lcom/skt/tmap/dialog/p;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapNearActivity;->R5(Lcom/skt/tmap/activity/TmapNearActivity;Lcom/skt/tmap/dialog/k;)Lcom/skt/tmap/dialog/k;
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapNearActivity;->Z5(Lcom/skt/tmap/activity/TmapNearActivity;Lcom/skt/tmap/dialog/p;)Lcom/skt/tmap/dialog/p;
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->Q5(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/dialog/k;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->Y5(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/dialog/p;
 
     move-result-object v0
 
@@ -129,12 +129,12 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/k;->o(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/p;->p(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->Q5(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/dialog/k;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->Y5(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/dialog/p;
 
     move-result-object v0
 
@@ -167,9 +167,9 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    new-instance v1, Lcom/skt/tmap/activity/u5;
+    new-instance v1, Lcom/skt/tmap/activity/u7;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/activity/u5;-><init>(Lcom/skt/tmap/activity/TmapNearActivity$a;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/activity/u7;-><init>(Lcom/skt/tmap/activity/TmapNearActivity$a;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapNearActivity;->i(Ljava/lang/Runnable;)V
 
@@ -192,13 +192,13 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.compass"
+    const-string v1, "tap.compass"
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
@@ -233,7 +233,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f08016b
+    const v1, 0x7f08017b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -245,14 +245,14 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->h1()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->i1()V
 
     .line 6
     move-object v0, p1
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f080166
+    const v1, 0x7f080176
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -264,14 +264,14 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->r1()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->s1()V
 
     .line 8
     move-object v0, p1
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f08016a
+    const v1, 0x7f08017a
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -292,7 +292,7 @@
     :goto_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->K5(Lcom/skt/tmap/activity/TmapNearActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->S5(Lcom/skt/tmap/activity/TmapNearActivity;)Ljava/util/List;
 
     move-result-object v0
 
@@ -336,9 +336,9 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapNearActivity$a;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    new-instance v0, Lcom/skt/tmap/activity/t5;
+    new-instance v0, Lcom/skt/tmap/activity/t7;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/t5;-><init>(Lcom/skt/tmap/activity/TmapNearActivity$a;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/t7;-><init>(Lcom/skt/tmap/activity/TmapNearActivity$a;)V
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/activity/TmapNearActivity;->i(Ljava/lang/Runnable;)V
 

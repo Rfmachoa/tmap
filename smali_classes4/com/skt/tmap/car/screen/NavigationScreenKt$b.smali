@@ -1,106 +1,98 @@
-.class public final Lcom/skt/tmap/car/screen/NavigationScreenKt$b;
+.class public final synthetic Lcom/skt/tmap/car/screen/NavigationScreenKt$b;
 .super Ljava/lang/Object;
 .source "NavigationScreenKt.kt"
 
-# interfaces
-.implements Landroidx/car/app/model/k;
-
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/car/screen/NavigationScreenKt;->c0()Landroidx/car/app/model/s;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/skt/tmap/car/screen/NavigationScreenKt;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
-    name = null
+    accessFlags = 0x1001
+    name = "b"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
-    }
-    d2 = {
-        "Lkotlin/d1;",
-        "onClick",
-        "()V",
-        "<anonymous>"
-    }
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
+# static fields
+.field public static final synthetic a:[I
+
+.field public static final synthetic b:[I
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick()V
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
-
-    invoke-virtual {v0}, Lcom/skt/tmap/car/screen/BaseScreen;->z()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
-
-    invoke-virtual {v0}, Landroidx/car/app/t0;->e()Landroidx/car/app/CarContext;
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
 
     move-result-object v0
 
-    invoke-static {v0}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    sget-object v2, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SAFE_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v2, Lcom/skt/tmap/engine/navigation/data/DriveMode;->REAL_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    aput v3, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->a:[I
+
+    invoke-static {}, Lcom/skt/tmap/data/TmapRerouteType;->values()[Lcom/skt/tmap/data/TmapRerouteType;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.menu"
+    array-length v0, v0
 
-    invoke-virtual {v0, v1}, Ldc/d;->E(Ljava/lang/String;)V
+    new-array v0, v0, [I
 
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
+    :try_start_2
+    sget-object v2, Lcom/skt/tmap/data/TmapRerouteType;->DESTINATION_DIR_RESEARCH:Lcom/skt/tmap/data/TmapRerouteType;
 
-    invoke-virtual {v0}, Landroidx/car/app/t0;->j()Landroidx/car/app/ScreenManager;
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-object v0
+    move-result v2
 
-    new-instance v1, Lcom/skt/tmap/car/screen/SettingScreen;
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iget-object v2, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
-
-    invoke-virtual {v2}, Landroidx/car/app/t0;->e()Landroidx/car/app/CarContext;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lcom/skt/tmap/car/screen/SettingScreen;-><init>(Landroidx/car/app/CarContext;)V
-
-    invoke-virtual {v0, v1}, Landroidx/car/app/ScreenManager;->r(Landroidx/car/app/t0;)V
+    :catch_2
+    sput-object v0, Lcom/skt/tmap/car/screen/NavigationScreenKt$b;->b:[I
 
     return-void
 .end method

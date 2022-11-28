@@ -40,7 +40,7 @@
         value = {
             "(",
             "Lcom/apollographql/apollo/api/internal/Optional<",
-            "Lc4/i;",
+            "Lz5/i;",
             ">;)Z"
         }
     .end annotation
@@ -60,9 +60,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lc4/i;
+    check-cast v1, Lz5/i;
 
-    invoke-virtual {v1}, Lc4/i;->f()Z
+    invoke-virtual {v1}, Lz5/i;->f()Z
 
     move-result v1
 
@@ -105,9 +105,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lc4/i;
+    check-cast v1, Lz5/i;
 
-    invoke-virtual {v1}, Lc4/i;->d()Ljava/util/List;
+    invoke-virtual {v1}, Lz5/i;->d()Ljava/util/List;
 
     move-result-object v1
 
@@ -135,9 +135,9 @@
 
     move-result-object p0
 
-    check-cast p0, Lc4/i;
+    check-cast p0, Lz5/i;
 
-    invoke-virtual {p0}, Lc4/i;->d()Ljava/util/List;
+    invoke-virtual {p0}, Lz5/i;->d()Ljava/util/List;
 
     move-result-object p0
 
@@ -145,9 +145,9 @@
 
     move-result-object p0
 
-    check-cast p0, Lc4/a;
+    check-cast p0, Lz5/a;
 
-    invoke-virtual {p0}, Lc4/a;->a()Ljava/util/Map;
+    invoke-virtual {p0}, Lz5/a;->a()Ljava/util/Map;
 
     move-result-object p0
 

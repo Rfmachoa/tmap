@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field public final a:Ldf/t;
+.field public final a:Lhh/t;
 
 
 # direct methods
@@ -54,14 +54,14 @@
     throw v1
 .end method
 
-.method public constructor <init>(Ldf/t;)V
+.method public constructor <init>(Lhh/t;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/k0;->a:Ldf/t;
+    iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/k0;->a:Lhh/t;
 
     return-void
 .end method
@@ -77,13 +77,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/k0;->a:Ldf/t;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/k0;->a:Lhh/t;
 
-    invoke-interface {v0}, Ldf/t;->getEntity()Ldf/l;
+    invoke-interface {v0}, Lhh/t;->getEntity()Lhh/l;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcz/msebera/android/httpclient/impl/client/cache/a0;->b(Ldf/l;)V
+    invoke-static {v0}, Lcz/msebera/android/httpclient/impl/client/cache/a0;->b(Lhh/l;)V
 
     return-void
 .end method
@@ -115,7 +115,7 @@
     .line 3
     :cond_0
     :try_start_0
-    iget-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/k0;->a:Ldf/t;
+    iget-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/k0;->a:Lhh/t;
 
     invoke-virtual {p2, p1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 

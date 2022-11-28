@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/g0;
+.implements Landroidx/car/app/k0;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Landroidx/car/app/navigation/INavigationHost;
 
-    invoke-static {v0, p1}, Landroidx/car/app/navigation/NavigationManager;->f(Landroidx/car/app/serialization/Bundleable;Landroidx/car/app/navigation/INavigationHost;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Landroidx/car/app/navigation/NavigationManager;->g(Landroidx/car/app/serialization/Bundleable;Landroidx/car/app/navigation/INavigationHost;)Ljava/lang/Object;
 
     move-result-object p1
 

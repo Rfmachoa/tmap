@@ -1,195 +1,419 @@
 .class public final Lx/b;
-.super Lx/v;
-.source "AutoValue_CameraThreadConfig.java"
+.super Ljava/lang/Object;
+.source "OutputConfigurationCompat.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lx/b$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final b:I = -0x1
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
-
-.field public final b:Landroid/os/Handler;
+.field public final a:Lx/b$a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+.method public constructor <init>(Landroid/util/Size;Ljava/lang/Class;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "cameraExecutor",
-            "schedulerHandler"
+    .param p1    # Landroid/util/Size;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1a
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/util/Size;",
+            "Ljava/lang/Class<",
+            "TT;>;)V"
         }
     .end annotation
 
-    .line 1
-    invoke-direct {p0}, Lx/v;-><init>()V
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "Null cameraExecutor"
+    .line 7
+    invoke-static {p1, p2}, Lw/a$d;->a(Landroid/util/Size;Ljava/lang/Class;)Landroid/hardware/camera2/params/OutputConfiguration;
+
+    move-result-object p1
+
+    .line 8
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x1c
+
+    if-lt p2, v0, :cond_0
+
+    .line 9
+    invoke-static {p1}, Lx/e;->p(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lx/b;->a:Lx/b$a;
+
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    invoke-static {p1}, Lx/d;->o(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/d;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lx/b;->a:Lx/b$a;
+
+    :goto_0
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/Surface;)V
+    .locals 2
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
 
     .line 3
-    iput-object p1, p0, Lx/b;->a:Ljava/util/concurrent/Executor;
+    new-instance v0, Lx/e;
 
-    const-string p1, "Null schedulerHandler"
+    invoke-direct {v0, p1}, Lx/e;-><init>(Landroid/view/Surface;)V
+
+    iput-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_1
 
     .line 4
-    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    new-instance v0, Lx/d;
+
+    invoke-direct {v0, p1}, Lx/d;-><init>(Landroid/view/Surface;)V
+
+    iput-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    goto :goto_0
 
     .line 5
-    iput-object p2, p0, Lx/b;->b:Landroid/os/Handler;
+    :cond_1
+    new-instance v0, Lx/c;
+
+    invoke-direct {v0, p1}, Lx/c;-><init>(Landroid/view/Surface;)V
+
+    iput-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    :goto_0
+    return-void
+.end method
+
+.method public constructor <init>(Lx/b$a;)V
+    .locals 0
+    .param p1    # Lx/b$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    iput-object p1, p0, Lx/b;->a:Lx/b$a;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public b()Ljava/util/concurrent/Executor;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+.method public static k(Ljava/lang/Object;)Lx/b;
+    .locals 3
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
     .line 1
-    iget-object v0, p0, Lx/b;->a:Ljava/util/concurrent/Executor;
+    :cond_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1c
+
+    if-lt v1, v2, :cond_1
+
+    .line 2
+    check-cast p0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-static {p0}, Lx/e;->p(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/e;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v2, 0x1a
+
+    if-lt v1, v2, :cond_2
+
+    .line 3
+    check-cast p0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-static {p0}, Lx/d;->o(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/d;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    .line 4
+    :cond_2
+    check-cast p0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-static {p0}, Lx/c;->l(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/c;
+
+    move-result-object p0
+
+    :goto_0
+    if-nez p0, :cond_3
+
+    return-object v0
+
+    .line 5
+    :cond_3
+    new-instance v0, Lx/b;
+
+    invoke-direct {v0, p0}, Lx/b;-><init>(Lx/b$a;)V
 
     return-object v0
 .end method
 
-.method public c()Landroid/os/Handler;
+
+# virtual methods
+.method public a(Landroid/view/Surface;)V
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0, p1}, Lx/b$a;->a(Landroid/view/Surface;)V
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0}, Lx/b$a;->i()V
+
+    return-void
+.end method
+
+.method public c()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0}, Lx/b$a;->g()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lx/b;->b:Landroid/os/Handler;
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0}, Lx/b$a;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public e()Landroid/view/Surface;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0}, Lx/b$a;->c()Landroid/view/Surface;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
+    .locals 1
 
     .line 1
-    :cond_0
-    instance-of v1, p1, Lx/v;
+    instance-of v0, p1, Lx/b;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_0
 
-    if-eqz v1, :cond_2
+    const/4 p1, 0x0
+
+    return p1
 
     .line 2
-    check-cast p1, Lx/v;
+    :cond_0
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
 
-    .line 3
-    iget-object v1, p0, Lx/b;->a:Ljava/util/concurrent/Executor;
+    check-cast p1, Lx/b;
 
-    invoke-virtual {p1}, Lx/v;->b()Ljava/util/concurrent/Executor;
+    iget-object p1, p1, Lx/b;->a:Lx/b$a;
 
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lx/b;->b:Landroid/os/Handler;
-
-    .line 4
-    invoke-virtual {p1}, Lx/v;->c()Landroid/os/Handler;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    return p1
+.end method
 
-    goto :goto_0
+.method public f()I
+    .locals 1
 
-    :cond_1
-    move v0, v2
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
 
-    :goto_0
+    invoke-interface {v0}, Lx/b$a;->d()I
+
+    move-result v0
+
     return v0
+.end method
 
-    :cond_2
-    return v2
+.method public g()Ljava/util/List;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/view/Surface;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0}, Lx/b$a;->h()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public h(Landroid/view/Surface;)V
+    .locals 1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
+
+    invoke-interface {v0, p1}, Lx/b$a;->b(Landroid/view/Surface;)V
+
+    return-void
 .end method
 
 .method public hashCode()I
-    .locals 2
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lx/b;->a:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    .line 2
-    iget-object v1, p0, Lx/b;->b:Landroid/os/Handler;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
     return v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "CameraThreadConfig{cameraExecutor="
+.method public i(Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Lx/b$a;->f(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lx/b;->a:Ljava/util/concurrent/Executor;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public j()Ljava/lang/Object;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    const-string v1, ", schedulerHandler="
+    .line 1
+    iget-object v0, p0, Lx/b;->a:Lx/b$a;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx/b;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lx/b$a;->j()Ljava/lang/Object;
 
     move-result-object v0
 

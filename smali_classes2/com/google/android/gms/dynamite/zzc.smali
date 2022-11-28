@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/dynamite/zzc;
 .super Ldalvik/system/PathClassLoader;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # direct methods
@@ -17,16 +17,6 @@
 # virtual methods
 .method public final loadClass(Ljava/lang/String;Z)Ljava/lang/Class;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Z)",
-            "Ljava/lang/Class<",
-            "*>;"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/ClassNotFoundException;

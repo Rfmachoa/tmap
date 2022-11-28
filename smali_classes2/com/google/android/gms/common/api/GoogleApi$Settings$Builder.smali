@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -94,6 +94,9 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     const-string v0, "Looper must not be null."
 
     .line 1
@@ -114,6 +117,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     const-string v0, "StatusExceptionMapper must not be null."

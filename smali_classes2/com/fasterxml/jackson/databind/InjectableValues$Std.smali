@@ -108,78 +108,79 @@
 .end method
 
 .method public findInjectableValue(Ljava/lang/Object;Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/BeanProperty;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
 
     .line 1
-    instance-of p2, p1, Ljava/lang/String;
+    instance-of p4, p1, Ljava/lang/String;
 
-    if-nez p2, :cond_1
-
-    if-nez p1, :cond_0
-
-    const-string p1, "[null]"
-
-    goto :goto_0
+    if-nez p4, :cond_0
 
     .line 2
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->classOf(Ljava/lang/Object;)Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object p4
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
 
     .line 3
-    :goto_0
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    invoke-static {p1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->classNameOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string p3, "Unrecognized inject value id type ("
+    move-result-object v2
 
-    const-string p4, "), expecting String"
+    aput-object v2, v0, v1
 
-    invoke-static {p3, p1, p4}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    const-string v1, "Unrecognized inject value id type (%s), expecting String"
 
     .line 4
-    :cond_1
-    check-cast p1, Ljava/lang/String;
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
 
     .line 5
+    invoke-virtual {p2, p4, v0}, Lcom/fasterxml/jackson/databind/DatabindContext;->reportBadDefinition(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 6
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    .line 7
     iget-object p2, p0, Lcom/fasterxml/jackson/databind/InjectableValues$Std;->_values:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
-    if-nez p2, :cond_3
+    if-nez p2, :cond_2
 
-    .line 6
+    .line 8
     iget-object p4, p0, Lcom/fasterxml/jackson/databind/InjectableValues$Std;->_values:Ljava/util/Map;
 
     invoke-interface {p4, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result p4
 
-    if-eqz p4, :cond_2
+    if-eqz p4, :cond_1
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 7
-    :cond_2
+    .line 9
+    :cond_1
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     const-string p4, "No injectable id with value \'"
 
     const-string v0, "\' found (for property \'"
 
-    invoke-static {p4, p1, v0}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p4, p1, v0}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -201,7 +202,7 @@
 
     throw p2
 
-    :cond_3
-    :goto_1
+    :cond_2
+    :goto_0
     return-object p2
 .end method

@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -10,6 +10,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Reserved;,
+        Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$RemovedParam;,
         Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;,
         Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;,
         Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Indicator;,

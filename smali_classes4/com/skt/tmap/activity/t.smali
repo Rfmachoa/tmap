@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/t;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->t5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;[Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;[Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
 
     return-void
 .end method

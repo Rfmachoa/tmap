@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;)V
+.method private constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;)V
     .locals 0
 
     .line 3
@@ -28,7 +28,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/InjectableValues;)V
+.method private constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;Lcom/fasterxml/jackson/databind/DeserializationConfig;)V
+    .locals 0
+
+    .line 5
+    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext;-><init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext;Lcom/fasterxml/jackson/databind/DeserializationConfig;)V
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/InjectableValues;)V
     .locals 0
 
     .line 2
@@ -37,7 +46,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;)V
+.method private constructor <init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;)V
     .locals 0
 
     .line 4
@@ -65,22 +74,25 @@
     .line 1
     const-class v0, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;
 
-    const-class v1, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;
+    const-string v1, "copy"
 
-    if-eq v0, v1, :cond_0
+    invoke-static {v0, p0, v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->verifyMustOverride(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-super {p0}, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext;->copy()Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 3
-    :cond_0
     new-instance v0, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;
 
     invoke-direct {v0, p0}, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;-><init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;)V
+
+    return-object v0
+.end method
+
+.method public createDummyInstance(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext;
+    .locals 1
+
+    .line 1
+    new-instance v0, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;
+
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;-><init>(Lcom/fasterxml/jackson/databind/deser/DefaultDeserializationContext$Impl;Lcom/fasterxml/jackson/databind/DeserializationConfig;)V
 
     return-object v0
 .end method

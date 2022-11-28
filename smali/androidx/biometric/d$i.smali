@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/biometric/d;->J()V
+    value = Landroidx/biometric/d;->K()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/biometric/f;->Q(Z)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/f;->R(Z)V
 
     return-void
 .end method

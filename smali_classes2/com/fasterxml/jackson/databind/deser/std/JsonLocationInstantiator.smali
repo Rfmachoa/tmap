@@ -1,14 +1,20 @@
 .class public Lcom/fasterxml/jackson/databind/deser/std/JsonLocationInstantiator;
-.super Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;
+.super Lcom/fasterxml/jackson/databind/deser/ValueInstantiator$Base;
 .source "JsonLocationInstantiator.java"
+
+
+# static fields
+.field private static final serialVersionUID:J = 0x1L
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;-><init>()V
+    const-class v0, Lcom/fasterxml/jackson/core/JsonLocation;
+
+    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator$Base;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -56,16 +62,16 @@
 .end method
 
 .method private static creatorProp(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;I)Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
-    .locals 11
+    .locals 9
 
     .line 1
-    new-instance v10, Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
-
     invoke-static {p0}, Lcom/fasterxml/jackson/databind/PropertyName;->construct(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/PropertyName;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget-object v9, Lcom/fasterxml/jackson/databind/PropertyMetadata;->STD_REQUIRED:Lcom/fasterxml/jackson/databind/PropertyMetadata;
+    sget-object v8, Lcom/fasterxml/jackson/databind/PropertyMetadata;->STD_REQUIRED:Lcom/fasterxml/jackson/databind/PropertyMetadata;
+
+    const/4 v2, 0x0
 
     const/4 v3, 0x0
 
@@ -73,19 +79,17 @@
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    const/4 v8, 0x0
+    move-object v1, p1
 
-    move-object v0, v10
+    move v6, p2
 
-    move-object v2, p1
+    invoke-static/range {v0 .. v8}, Lcom/fasterxml/jackson/databind/deser/CreatorProperty;->construct(Lcom/fasterxml/jackson/databind/PropertyName;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/PropertyName;Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;Lcom/fasterxml/jackson/databind/util/Annotations;Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;ILcom/fasterxml/jackson/annotation/JacksonInject$Value;Lcom/fasterxml/jackson/databind/PropertyMetadata;)Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
 
-    move v7, p2
+    move-result-object p0
 
-    invoke-direct/range {v0 .. v9}, Lcom/fasterxml/jackson/databind/deser/CreatorProperty;-><init>(Lcom/fasterxml/jackson/databind/PropertyName;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/PropertyName;Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;Lcom/fasterxml/jackson/databind/util/Annotations;Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;ILjava/lang/Object;Lcom/fasterxml/jackson/databind/PropertyMetadata;)V
-
-    return-object v10
+    return-object p0
 .end method
 
 
@@ -128,6 +132,7 @@
 
     aget-object v0, p2, v0
 
+    .line 2
     invoke-static {v0}, Lcom/fasterxml/jackson/databind/deser/std/JsonLocationInstantiator;->_int(Ljava/lang/Object;)I
 
     move-result v6
@@ -171,6 +176,7 @@
     .line 3
     const-class v3, Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {p1, v3}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->constructType(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
@@ -189,6 +195,7 @@
 
     const/4 v3, 0x1
 
+    .line 5
     invoke-static {p1, v1, v3}, Lcom/fasterxml/jackson/databind/deser/std/JsonLocationInstantiator;->creatorProp(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;I)Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
 
     move-result-object p1
@@ -199,6 +206,7 @@
 
     const/4 v3, 0x2
 
+    .line 6
     invoke-static {p1, v1, v3}, Lcom/fasterxml/jackson/databind/deser/std/JsonLocationInstantiator;->creatorProp(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;I)Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
 
     move-result-object p1
@@ -209,6 +217,7 @@
 
     const/4 v1, 0x3
 
+    .line 7
     invoke-static {p1, v0, v1}, Lcom/fasterxml/jackson/databind/deser/std/JsonLocationInstantiator;->creatorProp(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;I)Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
 
     move-result-object p1
@@ -219,6 +228,7 @@
 
     const/4 v1, 0x4
 
+    .line 8
     invoke-static {p1, v0, v1}, Lcom/fasterxml/jackson/databind/deser/std/JsonLocationInstantiator;->creatorProp(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;I)Lcom/fasterxml/jackson/databind/deser/CreatorProperty;
 
     move-result-object p1
@@ -226,17 +236,4 @@
     aput-object p1, v2, v1
 
     return-object v2
-.end method
-
-.method public getValueTypeDesc()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    const-class v0, Lcom/fasterxml/jackson/core/JsonLocation;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

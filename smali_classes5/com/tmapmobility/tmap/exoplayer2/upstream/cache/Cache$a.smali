@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Laf/e;)V
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ldh/e;Ldh/e;)V
 .end method
 
-.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Laf/e;)V
+.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ldh/e;)V
 .end method
 
-.method public abstract e(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Laf/e;Laf/e;)V
+.method public abstract e(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ldh/e;)V
 .end method

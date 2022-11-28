@@ -1,23 +1,15 @@
-.class public final synthetic Lcom/android/billingclient/api/e;
+.class public interface abstract Lcom/android/billingclient/api/e;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
+.source "com.android.billingclient:billing@@4.0.0"
 
 
-# direct methods
-.method public static a(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+# virtual methods
+.method public abstract b(Lcom/android/billingclient/api/f;)V
+    .param p1    # Lcom/android/billingclient/api/f;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract c()V
 .end method

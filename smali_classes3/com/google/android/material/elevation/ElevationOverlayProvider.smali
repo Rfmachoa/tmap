@@ -8,11 +8,15 @@
 
 .field private static final FORMULA_OFFSET:F = 2.0f
 
+.field private static final OVERLAY_ACCENT_COLOR_ALPHA:I
+
 
 # instance fields
 .field private final colorSurface:I
 
 .field private final displayDensity:F
+
+.field private final elevationOverlayAccentColor:I
 
 .field private final elevationOverlayColor:I
 
@@ -20,48 +24,62 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public static constructor <clinit>()V
     .locals 2
+
+    const-wide v0, 0x4014666666666667L    # 5.1000000000000005
+
+    .line 1
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    sput v0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->OVERLAY_ACCENT_COLOR_ALPHA:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 8
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
     sget v0, Lcom/google/android/material/R$attr;->elevationOverlayEnabled:I
 
     const/4 v1, 0x0
 
-    .line 3
+    .line 2
     invoke-static {p1, v0, v1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveBoolean(Landroid/content/Context;IZ)Z
 
-    move-result v0
+    move-result v3
 
-    iput-boolean v0, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->elevationOverlayEnabled:Z
+    sget v0, Lcom/google/android/material/R$attr;->elevationOverlayColor:I
+
+    .line 3
+    invoke-static {p1, v0, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
+
+    move-result v4
+
+    sget v0, Lcom/google/android/material/R$attr;->elevationOverlayAccentColor:I
 
     .line 4
-    sget v0, Lcom/google/android/material/R$attr;->elevationOverlayColor:I
+    invoke-static {p1, v0, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
+
+    move-result v5
+
+    sget v0, Lcom/google/android/material/R$attr;->colorSurface:I
 
     .line 5
     invoke-static {p1, v0, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
 
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->elevationOverlayColor:I
+    move-result v6
 
     .line 6
-    sget v0, Lcom/google/android/material/R$attr;->colorSurface:I
-
-    invoke-static {p1, v0, v1}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/content/Context;II)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->colorSurface:I
-
-    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -70,9 +88,48 @@
 
     move-result-object p1
 
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+    iget v7, p1, Landroid/util/DisplayMetrics;->density:F
 
-    iput p1, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->displayDensity:F
+    move-object v2, p0
+
+    .line 7
+    invoke-direct/range {v2 .. v7}, Lcom/google/android/material/elevation/ElevationOverlayProvider;-><init>(ZIIIF)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ZIIIF)V
+    .locals 0
+    .param p2    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p3    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    iput-boolean p1, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->elevationOverlayEnabled:Z
+
+    .line 10
+    iput p2, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->elevationOverlayColor:I
+
+    .line 11
+    iput p3, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->elevationOverlayAccentColor:I
+
+    .line 12
+    iput p4, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->colorSurface:I
+
+    .line 13
+    iput p5, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->displayDensity:F
 
     return-void
 .end method
@@ -87,7 +144,7 @@
     const/16 v0, 0xff
 
     .line 1
-    invoke-static {p1, v0}, Lc1/i;->B(II)I
+    invoke-static {p1, v0}, Lv1/h;->B(II)I
 
     move-result p1
 
@@ -205,7 +262,7 @@
     const/16 v1, 0xff
 
     .line 5
-    invoke-static {p1, v1}, Lc1/i;->B(II)I
+    invoke-static {p1, v1}, Lv1/h;->B(II)I
 
     move-result p1
 
@@ -217,8 +274,33 @@
 
     move-result p1
 
+    const/4 v1, 0x0
+
+    cmpl-float p2, p2, v1
+
+    if-lez p2, :cond_0
+
     .line 8
-    invoke-static {p1, v0}, Lc1/i;->B(II)I
+    iget p2, p0, Lcom/google/android/material/elevation/ElevationOverlayProvider;->elevationOverlayAccentColor:I
+
+    if-eqz p2, :cond_0
+
+    .line 9
+    sget v1, Lcom/google/android/material/elevation/ElevationOverlayProvider;->OVERLAY_ACCENT_COLOR_ALPHA:I
+
+    .line 10
+    invoke-static {p2, v1}, Lv1/h;->B(II)I
+
+    move-result p2
+
+    .line 11
+    invoke-static {p1, p2}, Lcom/google/android/material/color/MaterialColors;->layer(II)I
+
+    move-result p1
+
+    .line 12
+    :cond_0
+    invoke-static {p1, v0}, Lv1/h;->B(II)I
 
     move-result p1
 

@@ -3,34 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lgk/o;
 
 
-# instance fields
-.field public final synthetic a:Lai/r0;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/r0;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/f;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/f;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/f;->a:Lcom/amplifyframework/datastore/syncengine/f;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/f;->a:Lai/r0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/f;->a:Lai/r0;
+    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
 
-    check-cast p1, Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->b(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
 
-    invoke-interface {v0, p1}, Lai/r0;->onSuccess(Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

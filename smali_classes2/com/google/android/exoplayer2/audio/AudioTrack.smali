@@ -1507,13 +1507,13 @@
     const-string v3, "Spurious audio timestamp (system clock mismatch): "
 
     .line 20
-    invoke-static {v3, v11, v12, v9}, Landroidx/camera/core/z;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v11, v12, v9}, Landroidx/camera/core/v;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
     invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v9, v5, v6, v9}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v3, v9, v5, v6, v9}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1580,13 +1580,13 @@
     const-string v3, "Spurious audio timestamp (frame position mismatch): "
 
     .line 27
-    invoke-static {v3, v11, v12, v9}, Landroidx/camera/core/z;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v11, v12, v9}, Landroidx/camera/core/v;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
     invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v9, v5, v6, v9}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v3, v9, v5, v6, v9}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -3520,7 +3520,7 @@
     const-string v7, ", got "
 
     .line 35
-    invoke-static {v4, v5, v6, v7}, Landroidx/camera/core/z;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v5, v6, v7}, Landroidx/camera/core/v;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 

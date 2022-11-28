@@ -3,42 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor$SubscriptionMethod;
+.implements Lgk/o;
 
 
-# instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/appsync/AppSync;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/n2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/n2;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/n2;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/n2;->a:Lcom/amplifyframework/datastore/syncengine/n2;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/n2;->a:Lcom/amplifyframework/datastore/appsync/AppSync;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final subscribe(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
-    .locals 6
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/n2;->a:Lcom/amplifyframework/datastore/appsync/AppSync;
+    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-interface/range {v0 .. v5}, Lcom/amplifyframework/datastore/appsync/AppSync;->onDelete(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->d(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
     move-result-object p1
 

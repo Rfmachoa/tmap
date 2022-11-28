@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->R3(Lcom/skt/voice/tyche/data/CardResult;)Z
+    value = Lcom/skt/tmap/engine/TmapAiManager;->T3(Lcom/skt/voice/tyche/data/CardResult;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,23 +18,29 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/engine/TmapAiManager;
+.field public final synthetic a:Lcom/skt/voice/tyche/data/CardResult;
+
+.field public final synthetic b:Lcom/skt/tmap/engine/TmapAiManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010
+            0x8010,
+            0x1010
         }
         names = {
-            "this$0"
+            "this$0",
+            "val$cardResult"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$p;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$p;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    iput-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager$p;->a:Lcom/skt/voice/tyche/data/CardResult;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,12 +50,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$p;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$p;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->y0(Lcom/skt/tmap/engine/TmapAiManager;)V
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$p;->a:Lcom/skt/voice/tyche/data/CardResult;
+
+    sget-object v2, Lcom/skt/voice/tyche/AiConstant$AiVolume;->MUTE:Lcom/skt/voice/tyche/AiConstant$AiVolume;
+
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->A0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
 
     return-void
 .end method

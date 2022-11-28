@@ -25,6 +25,8 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
 
+.field public static final enum EVERYTHING:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+
 .field public static final enum JAVA_LANG_OBJECT:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
 
 .field public static final enum NON_CONCRETE_AND_ARRAYS:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
@@ -36,7 +38,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 9
+    .locals 11
 
     .line 1
     new-instance v0, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
@@ -82,20 +84,33 @@
 
     sput-object v5, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->NON_FINAL:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
 
-    const/4 v7, 0x4
-
-    new-array v7, v7, [Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
-
-    aput-object v0, v7, v2
-
-    aput-object v1, v7, v4
-
-    aput-object v3, v7, v6
-
-    aput-object v5, v7, v8
-
     .line 5
-    sput-object v7, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->$VALUES:[Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+    new-instance v7, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+
+    const-string v9, "EVERYTHING"
+
+    const/4 v10, 0x4
+
+    invoke-direct {v7, v9, v10}, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->EVERYTHING:Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+
+    const/4 v9, 0x5
+
+    new-array v9, v9, [Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
+
+    aput-object v0, v9, v2
+
+    aput-object v1, v9, v4
+
+    aput-object v3, v9, v6
+
+    aput-object v5, v9, v8
+
+    aput-object v7, v9, v10
+
+    .line 6
+    sput-object v9, Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;->$VALUES:[Lcom/fasterxml/jackson/databind/ObjectMapper$DefaultTyping;
 
     return-void
 .end method

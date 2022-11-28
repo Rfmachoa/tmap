@@ -136,7 +136,7 @@
 
     const-string v2, "TaskException has error code 0 on task: "
 
-    invoke-static {v1, v2, v0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -153,7 +153,7 @@
 
     const-string v2, "onComplete called for incomplete task: "
 
-    invoke-static {v1, v2, v0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, v0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

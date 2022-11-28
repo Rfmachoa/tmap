@@ -3,34 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lej/l;
+.implements Landroid/text/InputFilter;
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
+# static fields
+.field public static final synthetic a:Lcom/skt/tmap/activity/l3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/skt/tmap/activity/l3;
+
+    invoke-direct {v0}, Lcom/skt/tmap/activity/l3;-><init>()V
+
+    sput-object v0, Lcom/skt/tmap/activity/l3;->a:Lcom/skt/tmap/activity/l3;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/l3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/l3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->C9(Ljava/lang/String;)Lkotlin/d1;
+    invoke-static/range {p1 .. p6}, Lcom/skt/tmap/activity/TmapMainSettingUserNameActivity;->P5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
 
     move-result-object p1
 

@@ -34,9 +34,9 @@
 
 .field public queueHandler:Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationInterceptor$QueueUpdateHandler;
 
-.field public final s3ObjectManager:Lc4/n;
+.field public final s3ObjectManager:Lz5/n;
 
-.field public final scalarTypeAdapters:Lo4/d;
+.field public final scalarTypeAdapters:Ll6/d;
 
 .field public final serverUrl:Lokhttp3/HttpUrl;
 
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lo4/d;Lcom/amazonaws/mobileconnectors/appsync/PersistentMutationsCallback;Lc4/n;)V
+.method public constructor <init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Ll6/d;Lcom/amazonaws/mobileconnectors/appsync/PersistentMutationsCallback;Lz5/n;)V
     .locals 1
     .param p1    # Lokhttp3/HttpUrl;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -72,7 +72,7 @@
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p3    # Lo4/d;
+    .param p3    # Ll6/d;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -80,7 +80,7 @@
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
-    .param p5    # Lc4/n;
+    .param p5    # Lz5/n;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
@@ -117,9 +117,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lo4/d;
+    check-cast p1, Ll6/d;
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->scalarTypeAdapters:Lo4/d;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->scalarTypeAdapters:Ll6/d;
 
     .line 5
     iput-object p4, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->persistentMutationsCallback:Lcom/amazonaws/mobileconnectors/appsync/PersistentMutationsCallback;
@@ -132,7 +132,7 @@
     iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->dispatcher:Ljava/util/concurrent/Executor;
 
     .line 7
-    iput-object p5, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->s3ObjectManager:Lc4/n;
+    iput-object p5, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->s3ObjectManager:Lz5/n;
 
     return-void
 .end method

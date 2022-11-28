@@ -13,7 +13,10 @@
     name = "m"
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # virtual methods
-.method public abstract l(I)V
+.method public abstract k(I)V
 .end method

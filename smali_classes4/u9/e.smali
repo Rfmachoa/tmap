@@ -1,37 +1,72 @@
 .class public Lu9/e;
-.super Lu9/a;
-.source "PlaybackResumed.java"
+.super Ljava/lang/Object;
+.source "RgbPalletteEntry.java"
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field private a:I
     .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "type"
+        value = "r"
+    .end annotation
+.end field
+
+.field private b:I
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "g"
+    .end annotation
+.end field
+
+.field private c:I
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "b"
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(III)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Lu9/a;-><init>()V
-
-    const-string v0, "AudioPlayer.PlaybackResumed"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object v0, p0, Lu9/e;->c:Ljava/lang/String;
+    iput p1, p0, Lu9/e;->a:I
+
+    .line 3
+    iput p2, p0, Lu9/e;->b:I
+
+    .line 4
+    iput p3, p0, Lu9/e;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
+.method public a()I
     .locals 1
 
-    const-string v0, "PlaybackResumed"
+    .line 1
+    iget v0, p0, Lu9/e;->a:I
 
-    return-object v0
+    return v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lu9/e;->b:I
+
+    return v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lu9/e;->c:I
+
+    return v0
 .end method

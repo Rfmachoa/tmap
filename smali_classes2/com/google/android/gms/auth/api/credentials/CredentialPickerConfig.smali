@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
@@ -17,9 +18,15 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -31,37 +38,27 @@
 
 
 # instance fields
-.field private final mShowCancelButton:Z
-    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        getter = "shouldShowCancelButton"
-        id = 0x2
-    .end annotation
-.end field
-
-.field private final zzu:I
+.field public final zba:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x3e8
     .end annotation
 .end field
 
-.field private final zzv:Z
+.field private final zbb:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "shouldShowAddAccountButton"
         id = 0x1
     .end annotation
 .end field
 
-.field private final zzw:Z
+.field private final zbc:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        getter = "isForNewAccount"
-        id = 0x3
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
+        getter = "shouldShowCancelButton"
+        id = 0x2
     .end annotation
 .end field
 
-.field private final zzx:I
+.field private final zbd:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getPromptInternalId"
         id = 0x4
@@ -73,10 +70,9 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    new-instance v0, Lcom/google/android/gms/auth/api/credentials/zze;
+    new-instance v0, Lcom/google/android/gms/auth/api/credentials/zbb;
 
-    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/zze;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/zbb;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -84,7 +80,7 @@
 .end method
 
 .method public constructor <init>(IZZZI)V
-    .locals 1
+    .locals 0
     .param p1    # I
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x3e8
@@ -116,102 +112,44 @@
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    .line 2
-    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzu:I
+    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zba:I
 
-    .line 3
-    iput-boolean p2, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzv:Z
+    iput-boolean p2, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbb:Z
 
-    .line 4
-    iput-boolean p3, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->mShowCancelButton:Z
+    iput-boolean p3, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbc:Z
 
-    const/4 p2, 0x1
+    const/4 p2, 0x2
 
-    const/4 p3, 0x3
+    if-ge p1, p2, :cond_1
 
-    const/4 v0, 0x2
+    const/4 p1, 0x1
 
-    if-ge p1, v0, :cond_1
+    if-eq p1, p4, :cond_0
 
-    .line 5
-    iput-boolean p4, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzw:Z
+    goto :goto_0
 
-    if-eqz p4, :cond_0
-
-    move p2, p3
-
-    .line 6
     :cond_0
-    iput p2, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzx:I
+    const/4 p1, 0x3
+
+    :goto_0
+    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbd:I
 
     return-void
 
     :cond_1
-    if-ne p5, p3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p2, 0x0
-
-    .line 7
-    :goto_0
-    iput-boolean p2, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzw:Z
-
-    .line 8
-    iput p5, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzx:I
-
-    return-void
-.end method
-
-.method private constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)V
-    .locals 6
-
-    .line 9
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzc(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)Z
-
-    move-result v2
-
-    .line 10
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zzd(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)Z
-
-    move-result v3
-
-    .line 11
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;->zze(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)I
-
-    move-result v5
-
-    const/4 v1, 0x2
-
-    const/4 v4, 0x0
-
-    move-object v0, p0
-
-    .line 12
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;-><init>(IZZZI)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;Lcom/google/android/gms/auth/api/credentials/zzd;)V
-    .locals 0
-
-    .line 13
-    invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;-><init>(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Builder;)V
+    iput p5, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbd:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final isForNewAccount()Z
+.method public isForNewAccount()Z
     .locals 2
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1
-    iget v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzx:I
+    iget v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbd:I
 
     const/4 v1, 0x3
 
@@ -227,78 +165,76 @@
     return v0
 .end method
 
-.method public final shouldShowAddAccountButton()Z
+.method public shouldShowAddAccountButton()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzv:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbb:Z
 
     return v0
 .end method
 
-.method public final shouldShowCancelButton()Z
+.method public shouldShowCancelButton()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->mShowCancelButton:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbc:Z
 
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->shouldShowAddAccountButton()Z
 
     move-result v0
 
     const/4 v1, 0x1
 
-    .line 3
+    .line 2
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->shouldShowCancelButton()Z
 
     move-result v0
 
     const/4 v1, 0x2
 
-    .line 5
+    .line 3
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    .line 6
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->isForNewAccount()Z
 
     move-result v0
 
     const/4 v1, 0x3
 
-    .line 7
+    .line 4
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    .line 8
-    iget v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzx:I
+    iget v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zbd:I
 
     const/4 v1, 0x4
 
-    .line 9
+    .line 5
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    .line 10
-    iget v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zzu:I
+    iget v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;->zba:I
 
     const/16 v1, 0x3e8
 
+    .line 6
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    .line 11
+    .line 7
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

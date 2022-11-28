@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/e;
+.implements Lek/e;
 
 
 # instance fields
@@ -23,12 +23,12 @@
 
 
 # virtual methods
-.method public final a(Lai/c;)V
+.method public final a(Lek/c;)V
     .locals 1
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/p0;->a:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->m(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lai/c;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->b(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lek/c;)V
 
     return-void
 .end method

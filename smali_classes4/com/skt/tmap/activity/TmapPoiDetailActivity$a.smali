@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapPoiDetailActivity;->G5(Lcom/skt/tmap/data/PoiData;)V
+    value = Lcom/skt/tmap/activity/TmapPoiDetailActivity;->N5(Lcom/skt/tmap/data/PoiData;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,19 +55,19 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapPoiDetailActivity$a;->b:Lcom/skt/tmap/activity/TmapPoiDetailActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapPoiDetailActivity$a;->b:Lcom/skt/tmap/activity/TmapPoiDetailActivity;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0
@@ -77,13 +77,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
     const-string v1, "popup_tap.starbucks_mapcancel_cancel"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -96,10 +96,10 @@
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapPoiDetailActivity$a;->a:Lcom/skt/tmap/data/PoiData;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapPoiDetailActivity;->F5(Lcom/skt/tmap/data/PoiData;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapPoiDetailActivity;->setDestinationOfRoute(Lcom/skt/tmap/data/PoiData;)V
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->m1(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->o1(Z)V
 
     .line 4
     :cond_0
@@ -118,13 +118,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
     const-string v1, "popup_tap.starbucks_mapcancel_ok"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method

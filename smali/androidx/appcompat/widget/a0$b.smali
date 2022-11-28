@@ -1,19 +1,19 @@
 .class public Landroidx/appcompat/widget/a0$b;
 .super Ljava/lang/Object;
-.source "ShareActionProvider.java"
+.source "PopupMenu.java"
 
 # interfaces
-.implements Landroidx/appcompat/widget/c$f;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/appcompat/widget/a0;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/appcompat/widget/a0;-><init>(Landroid/content/Context;Landroid/view/View;III)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x1
-    name = "b"
+    name = null
 .end annotation
 
 
@@ -35,21 +35,19 @@
 
 
 # virtual methods
-.method public a(Landroidx/appcompat/widget/c;Landroid/content/Intent;)Z
-    .locals 1
+.method public onDismiss()V
+    .locals 2
 
     .line 1
-    iget-object p1, p0, Landroidx/appcompat/widget/a0$b;->a:Landroidx/appcompat/widget/a0;
+    iget-object v0, p0, Landroidx/appcompat/widget/a0$b;->a:Landroidx/appcompat/widget/a0;
 
-    iget-object v0, p1, Landroidx/appcompat/widget/a0;->i:Landroidx/appcompat/widget/a0$a;
+    iget-object v1, v0, Landroidx/appcompat/widget/a0;->f:Landroidx/appcompat/widget/a0$d;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     .line 2
-    invoke-interface {v0, p1, p2}, Landroidx/appcompat/widget/a0$a;->a(Landroidx/appcompat/widget/a0;Landroid/content/Intent;)Z
+    invoke-interface {v1, v0}, Landroidx/appcompat/widget/a0$d;->a(Landroidx/appcompat/widget/a0;)V
 
     :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

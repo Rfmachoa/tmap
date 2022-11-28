@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/car/app/CarContext;->I(Ljava/util/List;Ljava/util/concurrent/Executor;Landroidx/car/app/p0;)V
+    value = Landroidx/car/app/CarContext;->K(Ljava/util/List;Ljava/util/concurrent/Executor;Landroidx/car/app/u0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,11 +21,11 @@
 
 .field public final synthetic val$lifecycle:Landroidx/lifecycle/Lifecycle;
 
-.field public final synthetic val$listener:Landroidx/car/app/p0;
+.field public final synthetic val$listener:Landroidx/car/app/u0;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;Ljava/util/concurrent/Executor;Landroidx/car/app/p0;)V
+.method public constructor <init>(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;Ljava/util/concurrent/Executor;Landroidx/car/app/u0;)V
     .locals 0
 
     .line 1
@@ -35,26 +35,26 @@
 
     iput-object p3, p0, Landroidx/car/app/CarContext$1;->val$executor:Ljava/util/concurrent/Executor;
 
-    iput-object p4, p0, Landroidx/car/app/CarContext$1;->val$listener:Landroidx/car/app/p0;
+    iput-object p4, p0, Landroidx/car/app/CarContext$1;->val$listener:Landroidx/car/app/u0;
 
     invoke-direct {p0}, Landroidx/car/app/IOnRequestPermissionsListener$Stub;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic a(Landroidx/car/app/p0;Ljava/util/List;Ljava/util/List;)V
+.method public static synthetic a(Landroidx/car/app/u0;Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Landroidx/car/app/CarContext$1;->lambda$onRequestPermissionsResult$0(Landroidx/car/app/p0;Ljava/util/List;Ljava/util/List;)V
+    invoke-static {p0, p1, p2}, Landroidx/car/app/CarContext$1;->lambda$onRequestPermissionsResult$0(Landroidx/car/app/u0;Ljava/util/List;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onRequestPermissionsResult$0(Landroidx/car/app/p0;Ljava/util/List;Ljava/util/List;)V
+.method private static synthetic lambda$onRequestPermissionsResult$0(Landroidx/car/app/u0;Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
     .line 1
-    invoke-interface {p0, p1, p2}, Landroidx/car/app/p0;->a(Ljava/util/List;Ljava/util/List;)V
+    invoke-interface {p0, p1, p2}, Landroidx/car/app/u0;->a(Ljava/util/List;Ljava/util/List;)V
 
     return-void
 .end method
@@ -92,11 +92,11 @@
     .line 4
     iget-object v0, p0, Landroidx/car/app/CarContext$1;->val$executor:Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Landroidx/car/app/CarContext$1;->val$listener:Landroidx/car/app/p0;
+    iget-object v1, p0, Landroidx/car/app/CarContext$1;->val$listener:Landroidx/car/app/u0;
 
-    new-instance v2, Landroidx/car/app/f0;
+    new-instance v2, Landroidx/car/app/j0;
 
-    invoke-direct {v2, v1, p1, p2}, Landroidx/car/app/f0;-><init>(Landroidx/car/app/p0;Ljava/util/List;Ljava/util/List;)V
+    invoke-direct {v2, v1, p1, p2}, Landroidx/car/app/j0;-><init>(Landroidx/car/app/u0;Ljava/util/List;Ljava/util/List;)V
 
     invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

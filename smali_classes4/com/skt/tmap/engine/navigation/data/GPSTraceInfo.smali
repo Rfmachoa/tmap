@@ -240,7 +240,14 @@
 .method public compareTo(Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;)I
     .locals 1
 
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
     .line 2
+    :cond_0
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->getTime()I
 
     move-result p1
@@ -279,7 +286,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    const-string/jumbo v0, "uPosX:"
+    const-string v0, "uPosX:"
 
     .line 1
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -291,93 +298,93 @@
 
     const-string v2, ", "
 
-    const-string/jumbo v3, "uPosY:"
+    const-string v3, "uPosY:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uPosY:I
 
-    const-string/jumbo v3, "uTime:"
+    const-string v3, "uTime:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uTime:I
 
-    const-string/jumbo v3, "uAngle:"
+    const-string v3, "uAngle:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-short v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uAngle:S
 
-    const-string/jumbo v3, "uSpeed:"
+    const-string v3, "uSpeed:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-short v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uSpeed:S
 
     const-string v3, "satelliteCnt:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iget-byte v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->satelliteCnt:B
 
     const-string v3, "provider:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget-byte v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->provider:B
 
     const-string v3, "accuracy:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 9
     iget-short v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->accuracy:S
 
-    const-string/jumbo v3, "uMapMatchingCode:"
+    const-string v3, "uMapMatchingCode:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-byte v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMapMatchingCode:B
 
-    const-string/jumbo v3, "uMatPosX:"
+    const-string v3, "uMatPosX:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 11
     iget v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMatPosX:I
 
-    const-string/jumbo v3, "uMatPosY:"
+    const-string v3, "uMatPosY:"
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 12
     iget v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMatPosY:I
 
-    const-string/jumbo v3, "uMatAngle: "
+    const-string v3, "uMatAngle: "
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 13
     iget-short v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->uMatAngle:S
 
     const-string v3, "activityType: "
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 14
     iget-short v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->activityType:S
 
     const-string v3, "altitude: "
 
-    invoke-static {v0, v1, v2, v3}, Lt6/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lm1/a;->a(Ljava/lang/StringBuilder;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 15
     iget v1, p0, Lcom/skt/tmap/engine/navigation/data/GPSTraceInfo;->altitude:I

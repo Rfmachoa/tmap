@@ -178,7 +178,7 @@
 
     const-string v0, ":"
 
-    invoke-static {v2, p0, v0, p1}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0, v0, p1}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -220,7 +220,7 @@
 
     const-string v0, ":"
 
-    invoke-static {v3, p0, v0, p1, v0}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0, v0, p1, v0}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1288,13 +1288,23 @@
     :goto_1
     new-instance p1, Ljava/lang/SecurityException;
 
-    const/16 v0, 0x30
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x30
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v1, "Failed to parse/verify signer #"
 
-    const-string v2, " block"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v3, v2}, Lcom/google/android/gms/auth/api/accounttransfer/a;->a(ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " block"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1539,7 +1549,7 @@
 
     const-string v3, "Failed to parse signature record #"
 
-    invoke-static {v2, v3, v6}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v3, v6}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1872,7 +1882,7 @@
 
     const-string v3, "Failed to parse digest record #"
 
-    invoke-static {v2, v3, v6}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v3, v6}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1987,7 +1997,7 @@
 
     const-string v4, "Failed to decode certificate #"
 
-    invoke-static {v2, v4, v3}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v4, v3}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2126,7 +2136,7 @@
 
     const-string v4, " signature"
 
-    invoke-static {v3, v2, v6, v4}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2, v6, v4}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2360,7 +2370,7 @@
 .end method
 
 .method private static n([I[Lcom/google/android/play/core/internal/c;)[[B
-    .locals 21
+    .locals 26
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/security/DigestException;
@@ -2457,31 +2467,31 @@
 
     new-array v6, v10, [Ljava/security/MessageDigest;
 
-    move v11, v3
+    move v12, v3
 
     :goto_2
-    array-length v12, v0
+    array-length v13, v0
 
-    const-string v13, " digest not supported"
+    const-string v14, " digest not supported"
 
-    if-ge v11, v12, :cond_2
+    if-ge v12, v13, :cond_2
 
-    aget v12, v0, v11
+    aget v13, v0, v12
 
-    invoke-static {v12}, Lcom/google/android/play/core/internal/i;->p(I)Ljava/lang/String;
+    invoke-static {v13}, Lcom/google/android/play/core/internal/i;->p(I)Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v13
 
     :try_start_0
-    invoke-static {v12}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    invoke-static {v13}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
-    move-result-object v14
+    move-result-object v15
 
-    aput-object v14, v6, v11
+    aput-object v15, v6, v12
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    add-int/lit8 v11, v11, 0x1
+    add-int/lit8 v12, v12, 0x1
 
     goto :goto_2
 
@@ -2490,7 +2500,7 @@
 
     new-instance v1, Ljava/lang/RuntimeException;
 
-    invoke-virtual {v12, v13}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v13, v14}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2499,37 +2509,35 @@
     throw v1
 
     :cond_2
-    move-wide v11, v7
+    move v12, v3
 
-    move v7, v3
+    move v13, v12
 
-    move v8, v7
+    move v15, v13
 
     :goto_3
-    if-ge v3, v9, :cond_7
+    if-ge v12, v9, :cond_7
 
-    aget-object v9, p1, v3
+    aget-object v3, p1, v12
 
-    invoke-interface {v9}, Lcom/google/android/play/core/internal/c;->a()J
+    invoke-interface {v3}, Lcom/google/android/play/core/internal/c;->a()J
 
-    move-result-wide v14
+    move-result-wide v16
 
-    move/from16 v17, v7
+    move-wide/from16 v18, v1
 
-    move/from16 v16, v8
+    move-wide/from16 v24, v16
 
-    move-wide v7, v14
+    move/from16 v17, v12
 
-    move-wide v14, v11
-
-    move-wide v11, v1
+    move-wide/from16 v11, v24
 
     :goto_4
-    cmp-long v1, v7, v1
+    cmp-long v20, v11, v1
 
-    if-lez v1, :cond_6
+    if-lez v20, :cond_6
 
-    invoke-static {v7, v8, v14, v15}, Ljava/lang/Math;->min(JJ)J
+    invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v1
 
@@ -2542,56 +2550,66 @@
     :goto_5
     if-ge v2, v10, :cond_3
 
-    aget-object v14, v6, v2
+    aget-object v7, v6, v2
 
-    invoke-virtual {v14, v4}, Ljava/security/MessageDigest;->update([B)V
+    invoke-virtual {v7, v4}, Ljava/security/MessageDigest;->update([B)V
 
     add-int/lit8 v2, v2, 0x1
+
+    const-wide/32 v7, 0x100000
 
     goto :goto_5
 
     :cond_3
+    move-wide/from16 v7, v18
+
     :try_start_1
-    invoke-interface {v9, v6, v11, v12, v1}, Lcom/google/android/play/core/internal/c;->b([Ljava/security/MessageDigest;JI)V
+    invoke-interface {v3, v6, v7, v8, v1}, Lcom/google/android/play/core/internal/c;->b([Ljava/security/MessageDigest;JI)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     const/4 v2, 0x0
 
     :goto_6
-    array-length v14, v0
+    array-length v9, v0
 
-    if-ge v2, v14, :cond_5
+    if-ge v2, v9, :cond_5
 
-    aget v14, v0, v2
+    aget v9, v0, v2
 
-    aget-object v15, v5, v2
+    move-object/from16 v19, v3
 
-    invoke-static {v14}, Lcom/google/android/play/core/internal/i;->q(I)I
+    aget-object v3, v5, v2
 
-    move-result v14
+    invoke-static {v9}, Lcom/google/android/play/core/internal/i;->q(I)I
 
-    move-object/from16 v18, v4
+    move-result v9
+
+    move-object/from16 v21, v4
 
     aget-object v4, v6, v2
 
-    mul-int v19, v17, v14
+    mul-int v22, v13, v9
 
-    move-object/from16 v20, v6
+    move-object/from16 v23, v6
 
-    add-int/lit8 v6, v19, 0x5
+    const/16 v16, 0x5
 
-    invoke-virtual {v4, v15, v6, v14}, Ljava/security/MessageDigest;->digest([BII)I
+    add-int/lit8 v6, v22, 0x5
 
-    move-result v6
+    invoke-virtual {v4, v3, v6, v9}, Ljava/security/MessageDigest;->digest([BII)I
 
-    if-ne v6, v14, :cond_4
+    move-result v3
+
+    if-ne v3, v9, :cond_4
 
     add-int/lit8 v2, v2, 0x1
 
-    move-object/from16 v4, v18
+    move-object/from16 v3, v19
 
-    move-object/from16 v6, v20
+    move-object/from16 v4, v21
+
+    move-object/from16 v6, v23
 
     goto :goto_6
 
@@ -2610,25 +2628,25 @@
 
     move-result v2
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x2e
 
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v2, "Unexpected output size of "
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, " digest: "
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2637,23 +2655,37 @@
     throw v0
 
     :cond_5
-    move-object/from16 v18, v4
+    move-object/from16 v19, v3
 
-    move-object/from16 v20, v6
+    move-object/from16 v21, v4
+
+    move-object/from16 v23, v6
+
+    const/16 v16, 0x5
 
     int-to-long v1, v1
 
-    add-long/2addr v11, v1
+    add-long v3, v7, v1
 
-    sub-long/2addr v7, v1
+    sub-long/2addr v11, v1
 
-    add-int/lit8 v17, v17, 0x1
+    add-int/lit8 v13, v13, 0x1
 
     const-wide/16 v1, 0x0
 
-    const-wide/32 v14, 0x100000
+    const-wide/32 v7, 0x100000
 
-    goto :goto_4
+    const/4 v9, 0x3
+
+    move-wide/from16 v24, v3
+
+    move-object/from16 v3, v19
+
+    move-wide/from16 v18, v24
+
+    move-object/from16 v4, v21
+
+    goto/16 :goto_4
 
     :catch_1
     move-exception v0
@@ -2662,17 +2694,25 @@
 
     new-instance v0, Ljava/security/DigestException;
 
-    const/16 v2, 0x3b
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x3b
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v3, "Failed to digest chunk #"
 
-    const-string v4, " of section #"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v6, v16
+    invoke-virtual {v2, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move/from16 v7, v17
+    const-string v3, " of section #"
 
-    invoke-static {v2, v3, v7, v4, v6}, Lcom/android/billingclient/api/n;->a(ILjava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2681,25 +2721,25 @@
     throw v0
 
     :cond_6
-    move-object/from16 v18, v4
+    move-object/from16 v21, v4
 
-    move-object/from16 v20, v6
+    move-object/from16 v23, v6
 
-    move/from16 v6, v16
+    const/16 v16, 0x5
 
-    move/from16 v7, v17
+    add-int/lit8 v15, v15, 0x1
 
-    add-int/lit8 v8, v6, 0x1
+    add-int/lit8 v12, v17, 0x1
 
-    add-int/lit8 v3, v3, 0x1
+    move/from16 v11, v16
 
     const-wide/16 v1, 0x0
 
-    const-wide/32 v11, 0x100000
+    const/4 v3, 0x0
+
+    const-wide/32 v7, 0x100000
 
     const/4 v9, 0x3
-
-    move-object/from16 v6, v20
 
     goto/16 :goto_3
 
@@ -2708,35 +2748,35 @@
 
     new-array v1, v1, [[B
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :goto_7
-    array-length v3, v0
+    array-length v2, v0
 
-    if-ge v2, v3, :cond_8
+    if-ge v3, v2, :cond_8
 
-    aget v3, v0, v2
+    aget v2, v0, v3
 
-    aget-object v4, v5, v2
+    aget-object v4, v5, v3
 
-    invoke-static {v3}, Lcom/google/android/play/core/internal/i;->p(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/google/android/play/core/internal/i;->p(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     :try_start_2
-    invoke-static {v3}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
-    move-result-object v3
+    move-result-object v2
     :try_end_2
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {v3, v4}, Ljava/security/MessageDigest;->digest([B)[B
+    invoke-virtual {v2, v4}, Ljava/security/MessageDigest;->digest([B)[B
 
-    move-result-object v3
+    move-result-object v2
 
-    aput-object v3, v1, v2
+    aput-object v2, v1, v3
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_7
 
@@ -2747,7 +2787,7 @@
 
     new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-virtual {v3, v13}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v14}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2878,7 +2918,7 @@
 
     const-string v2, "Unknown content digest algorthm: "
 
-    invoke-static {v1, v2, p0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, p0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2914,7 +2954,7 @@
 
     const-string v2, "Unknown content digest algorthm: "
 
-    invoke-static {v1, v2, p0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, p0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2994,7 +3034,7 @@
 
     const-string v1, "size: "
 
-    invoke-static {v0, v1, p1}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1, p1}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -3004,7 +3044,7 @@
 .end method
 
 .method private static s(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3044,13 +3084,25 @@
 
     move-result p0
 
-    const/16 v2, 0x65
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x65
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v3, "Length-prefixed field longer than remaining buffer. Field length: "
 
-    const-string v4, ", remaining: "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, p0}, Lcom/android/billingclient/api/n;->a(ILjava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", remaining: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -3078,7 +3130,7 @@
 
     const-string v2, "Remaining buffer too short to contain length of length-prefixed field. Remaining: "
 
-    invoke-static {v1, v2, p0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, p0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -3088,7 +3140,7 @@
 .end method
 
 .method private static t(Ljava/nio/ByteBuffer;)[B
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -3120,13 +3172,25 @@
 
     move-result p0
 
-    const/16 v2, 0x5a
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x5a
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v3, "Underflow while reading length-prefixed value. Length: "
 
-    const-string v4, ", available: "
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, p0}, Lcom/android/billingclient/api/n;->a(ILjava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", available: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

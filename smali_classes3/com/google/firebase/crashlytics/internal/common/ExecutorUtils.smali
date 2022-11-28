@@ -56,7 +56,7 @@
 
     const-string p1, "Crashlytics Shutdown Hook for "
 
-    invoke-static {p1, p0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

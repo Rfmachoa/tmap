@@ -1,17 +1,6 @@
 .class public Lcom/google/android/gms/analytics/zzk;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Lcom/google/android/gms/analytics/zzk;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # instance fields
@@ -20,14 +9,6 @@
 .field private final zzb:Lcom/google/android/gms/analytics/zzr;
 
 .field private final zzc:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/analytics/zzi;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -36,9 +17,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/analytics/zzk;->zzb:Lcom/google/android/gms/analytics/zzr;
@@ -84,9 +65,9 @@
 .method public final zzn(Lcom/google/android/gms/analytics/zzh;)V
     .locals 1
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/analytics/zzk;->zzc:Ljava/util/List;
 
-    .line 1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1

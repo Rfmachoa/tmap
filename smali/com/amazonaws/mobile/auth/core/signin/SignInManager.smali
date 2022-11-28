@@ -272,7 +272,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p1, v1}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p1
 

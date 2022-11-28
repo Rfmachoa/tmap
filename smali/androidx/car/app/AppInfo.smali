@@ -95,14 +95,14 @@
     move-result v0
 
     .line 2
-    invoke-static {}, Lq0/a;->b()I
+    invoke-static {}, Le1/a;->b()I
 
     move-result v1
 
     if-lt v0, v1, :cond_0
 
     .line 3
-    invoke-static {}, Lq0/a;->a()I
+    invoke-static {}, Le1/a;->a()I
 
     move-result v1
 
@@ -112,7 +112,7 @@
     new-instance v1, Landroidx/car/app/AppInfo;
 
     .line 5
-    invoke-static {}, Lq0/a;->a()I
+    invoke-static {}, Le1/a;->a()I
 
     move-result v2
 
@@ -144,7 +144,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lq0/a;->b()I
+    invoke-static {}, Le1/a;->b()I
 
     move-result v1
 
@@ -155,7 +155,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 9
-    invoke-static {}, Lq0/a;->a()I
+    invoke-static {}, Le1/a;->a()I
 
     move-result v1
 

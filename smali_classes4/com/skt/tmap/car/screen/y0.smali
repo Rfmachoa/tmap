@@ -3,46 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnCancel;
 
 
-# static fields
-.field public static final synthetic a:Lcom/skt/tmap/car/screen/y0;
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NearScreen;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/skt/tmap/car/screen/y0;
-
-    invoke-direct {v0}, Lcom/skt/tmap/car/screen/y0;-><init>()V
-
-    sput-object v0, Lcom/skt/tmap/car/screen/y0;->a:Lcom/skt/tmap/car/screen/y0;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NearScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/y0;->a:Lcom/skt/tmap/car/screen/NearScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+.method public final onCancelAction()V
+    .locals 1
 
-    check-cast p1, Lcom/skt/tmap/data/TmapMainSearchHistoryItem;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/y0;->a:Lcom/skt/tmap/car/screen/NearScreen;
 
-    check-cast p2, Lcom/skt/tmap/data/TmapMainSearchHistoryItem;
+    invoke-static {v0}, Lcom/skt/tmap/car/screen/NearScreen;->M(Lcom/skt/tmap/car/screen/NearScreen;)V
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/car/screen/SearchScreen;->N(Lcom/skt/tmap/data/TmapMainSearchHistoryItem;Lcom/skt/tmap/data/TmapMainSearchHistoryItem;)I
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

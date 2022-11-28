@@ -52,7 +52,7 @@
     .line 2
     iget-object v0, p0, Lcom/apollographql/apollo/internal/g$a;->b:Lcom/apollographql/apollo/internal/g;
 
-    invoke-static {v0}, Lcom/apollographql/apollo/internal/g;->e(Lcom/apollographql/apollo/internal/g;)Lp4/b;
+    invoke-static {v0}, Lcom/apollographql/apollo/internal/g;->e(Lcom/apollographql/apollo/internal/g;)Lm6/b;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     iget-object v2, p0, Lcom/apollographql/apollo/internal/g$a;->a:Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;
 
-    invoke-interface {v0, v1, v2}, Lp4/b;->addListener(Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;)V
+    invoke-interface {v0, v1, v2}, Lm6/b;->addListener(Lcom/apollographql/apollo/api/f;Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;)V
 
     .line 3
     sget-object v0, Lcom/apollographql/apollo/internal/g$c;->a:[I

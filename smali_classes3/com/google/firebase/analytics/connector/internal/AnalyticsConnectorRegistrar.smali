@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/analytics/connector/internal/AnalyticsConnectorRegistrar;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentRegistrar;
@@ -156,7 +156,7 @@
 
     const-string v1, "fire-analytics"
 
-    const-string v2, "20.1.0"
+    const-string v2, "21.1.1"
 
     .line 8
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;

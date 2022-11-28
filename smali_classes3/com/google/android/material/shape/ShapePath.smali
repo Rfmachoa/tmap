@@ -12,6 +12,7 @@
         Lcom/google/android/material/shape/ShapePath$PathLineOperation;,
         Lcom/google/android/material/shape/ShapePath$PathOperation;,
         Lcom/google/android/material/shape/ShapePath$ArcShadowOperation;,
+        Lcom/google/android/material/shape/ShapePath$InnerCornerShadowOperation;,
         Lcom/google/android/material/shape/ShapePath$LineShadowOperation;,
         Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;
     }
@@ -647,6 +648,163 @@
 
     .line 10
     invoke-direct {p0, p2}, Lcom/google/android/material/shape/ShapePath;->setEndY(F)V
+
+    return-void
+.end method
+
+.method public lineTo(FFFF)V
+    .locals 5
+
+    .line 11
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapePath;->getEndX()F
+
+    move-result v0
+
+    sub-float v0, p1, v0
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    const v1, 0x3a83126f    # 0.001f
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapePath;->getEndY()F
+
+    move-result v0
+
+    sub-float v0, p2, v0
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpg-float v0, v0, v1
+
+    if-ltz v0, :cond_1
+
+    :cond_0
+    sub-float v0, p1, p3
+
+    .line 12
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_2
+
+    sub-float v0, p2, p4
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_2
+
+    .line 13
+    :cond_1
+    invoke-virtual {p0, p3, p4}, Lcom/google/android/material/shape/ShapePath;->lineTo(FF)V
+
+    return-void
+
+    .line 14
+    :cond_2
+    new-instance v0, Lcom/google/android/material/shape/ShapePath$PathLineOperation;
+
+    invoke-direct {v0}, Lcom/google/android/material/shape/ShapePath$PathLineOperation;-><init>()V
+
+    .line 15
+    invoke-static {v0, p1}, Lcom/google/android/material/shape/ShapePath$PathLineOperation;->access$002(Lcom/google/android/material/shape/ShapePath$PathLineOperation;F)F
+
+    .line 16
+    invoke-static {v0, p2}, Lcom/google/android/material/shape/ShapePath$PathLineOperation;->access$102(Lcom/google/android/material/shape/ShapePath$PathLineOperation;F)F
+
+    .line 17
+    iget-object v1, p0, Lcom/google/android/material/shape/ShapePath;->operations:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 18
+    new-instance v1, Lcom/google/android/material/shape/ShapePath$PathLineOperation;
+
+    invoke-direct {v1}, Lcom/google/android/material/shape/ShapePath$PathLineOperation;-><init>()V
+
+    .line 19
+    invoke-static {v1, p3}, Lcom/google/android/material/shape/ShapePath$PathLineOperation;->access$002(Lcom/google/android/material/shape/ShapePath$PathLineOperation;F)F
+
+    .line 20
+    invoke-static {v1, p4}, Lcom/google/android/material/shape/ShapePath$PathLineOperation;->access$102(Lcom/google/android/material/shape/ShapePath$PathLineOperation;F)F
+
+    .line 21
+    iget-object v2, p0, Lcom/google/android/material/shape/ShapePath;->operations:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 22
+    new-instance v2, Lcom/google/android/material/shape/ShapePath$InnerCornerShadowOperation;
+
+    .line 23
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapePath;->getEndX()F
+
+    move-result v3
+
+    invoke-virtual {p0}, Lcom/google/android/material/shape/ShapePath;->getEndY()F
+
+    move-result v4
+
+    invoke-direct {v2, v0, v1, v3, v4}, Lcom/google/android/material/shape/ShapePath$InnerCornerShadowOperation;-><init>(Lcom/google/android/material/shape/ShapePath$PathLineOperation;Lcom/google/android/material/shape/ShapePath$PathLineOperation;FF)V
+
+    .line 24
+    invoke-virtual {v2}, Lcom/google/android/material/shape/ShapePath$InnerCornerShadowOperation;->getSweepAngle()F
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-lez v0, :cond_3
+
+    .line 25
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/shape/ShapePath;->lineTo(FF)V
+
+    .line 26
+    invoke-virtual {p0, p3, p4}, Lcom/google/android/material/shape/ShapePath;->lineTo(FF)V
+
+    return-void
+
+    .line 27
+    :cond_3
+    invoke-virtual {v2}, Lcom/google/android/material/shape/ShapePath$InnerCornerShadowOperation;->getStartAngle()F
+
+    move-result p1
+
+    const/high16 p2, 0x43870000    # 270.0f
+
+    add-float/2addr p1, p2
+
+    .line 28
+    invoke-virtual {v2}, Lcom/google/android/material/shape/ShapePath$InnerCornerShadowOperation;->getEndAngle()F
+
+    move-result v0
+
+    add-float/2addr v0, p2
+
+    .line 29
+    invoke-direct {p0, v2, p1, v0}, Lcom/google/android/material/shape/ShapePath;->addShadowCompatOperation(Lcom/google/android/material/shape/ShapePath$ShadowCompatOperation;FF)V
+
+    .line 30
+    invoke-direct {p0, p3}, Lcom/google/android/material/shape/ShapePath;->setEndX(F)V
+
+    .line 31
+    invoke-direct {p0, p4}, Lcom/google/android/material/shape/ShapePath;->setEndY(F)V
 
     return-void
 .end method

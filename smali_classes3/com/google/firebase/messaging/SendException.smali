@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/messaging/SendException;
 .super Ljava/lang/Exception;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "SendException.java"
 
 
 # static fields
@@ -37,7 +37,7 @@
 .end method
 
 .method private parseErrorCode(Ljava/lang/String;)I
-    .locals 6
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -53,115 +53,120 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, -0x1
+
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x4
+    const/4 v3, 0x4
 
-    const/4 v3, 0x3
+    const/4 v4, 0x3
 
-    const/4 v4, 0x2
+    const/4 v5, 0x2
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    sparse-switch v1, :sswitch_data_0
+    sparse-switch v2, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string v1, "missing_to"
+    const-string v2, "missing_to"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move p1, v5
-
-    goto :goto_1
-
-    :sswitch_1
-    const-string v1, "messagetoobig"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_1
 
-    move p1, v4
-
-    goto :goto_1
-
-    :sswitch_2
-    const-string v1, "invalid_parameters"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move p1, v0
-
-    goto :goto_1
-
-    :sswitch_3
-    const-string v1, "toomanymessages"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move p1, v2
-
-    goto :goto_1
-
-    :sswitch_4
-    const-string v1, "service_not_available"
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move p1, v3
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
+    move v1, v3
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v2, "messagetoobig"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v4
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v2, "invalid_parameters"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v1, v5
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v2, "toomanymessages"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v1, v6
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v2, "service_not_available"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v1, v0
+
     :goto_0
-    const/4 p1, -0x1
-
-    :goto_1
-    if-eqz p1, :cond_5
-
-    if-eq p1, v5, :cond_5
-
-    if-eq p1, v4, :cond_4
-
-    if-eq p1, v3, :cond_3
-
-    if-eq p1, v2, :cond_2
+    packed-switch v1, :pswitch_data_0
 
     return v0
 
-    :cond_2
-    return v2
+    :pswitch_0
+    return v5
 
-    :cond_3
+    :pswitch_1
+    return v6
+
+    :pswitch_2
     return v3
 
-    :cond_4
+    :pswitch_3
     return v4
-
-    :cond_5
-    return v5
 
     :sswitch_data_0
     .sparse-switch
@@ -171,6 +176,15 @@
         -0x24c7160d -> :sswitch_1
         -0x5aa500c -> :sswitch_0
     .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 
@@ -178,6 +192,7 @@
 .method public getErrorCode()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/firebase/messaging/SendException;->errorCode:I
 
     return v0

@@ -3,7 +3,7 @@
 .source "AdapterListUpdateCallback.java"
 
 # interfaces
-.implements Landroidx/recyclerview/widget/v;
+.implements Landroidx/recyclerview/widget/u;
 
 
 # instance fields

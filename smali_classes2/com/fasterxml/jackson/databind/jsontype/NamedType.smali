@@ -45,7 +45,7 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,6 +70,20 @@
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p1
+
+    if-nez p2, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    add-int/2addr p1, v0
 
     iput p1, p0, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_hashCode:I
 
@@ -111,13 +125,25 @@
 
     .line 2
     :cond_2
-    iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_class:Ljava/lang/Class;
-
     check-cast p1, Lcom/fasterxml/jackson/databind/jsontype/NamedType;
 
-    iget-object p1, p1, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_class:Ljava/lang/Class;
+    .line 3
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_class:Ljava/lang/Class;
 
-    if-ne v2, p1, :cond_3
+    iget-object v3, p1, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_class:Ljava/lang/Class;
+
+    if-ne v2, v3, :cond_3
+
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_name:Ljava/lang/String;
+
+    iget-object p1, p1, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_name:Ljava/lang/String;
+
+    .line 4
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
 
     goto :goto_0
 
@@ -187,11 +213,11 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
     :cond_0
     const/4 p1, 0x0
@@ -241,14 +267,14 @@
 
     iget-object v3, p0, Lcom/fasterxml/jackson/databind/jsontype/NamedType;->_name:Ljava/lang/String;
 
-    invoke-static {v2, v3, v1}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v1}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     :goto_0
     const-string v2, "]"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

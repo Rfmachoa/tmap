@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapCameraBase;->w5()Lcom/skt/tmap/dialog/u;
+    value = Lcom/skt/tmap/activity/TmapCameraBase;->F5()Lcom/skt/tmap/dialog/z;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,8 +32,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -45,15 +45,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapCameraBase;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapCameraBase$b;->a:Lcom/skt/tmap/activity/TmapCameraBase;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -98,10 +93,6 @@
     invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
-
-    const-string v2, "applicationContext"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 

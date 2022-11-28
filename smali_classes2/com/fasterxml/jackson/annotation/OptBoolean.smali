@@ -90,6 +90,32 @@
     return-void
 .end method
 
+.method public static equals(Ljava/lang/Boolean;Ljava/lang/Boolean;)Z
+    .locals 0
+
+    if-nez p0, :cond_1
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+
+    .line 1
+    :cond_1
+    invoke-virtual {p0, p1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static fromBoolean(Ljava/lang/Boolean;)Lcom/fasterxml/jackson/annotation/OptBoolean;
     .locals 0
 

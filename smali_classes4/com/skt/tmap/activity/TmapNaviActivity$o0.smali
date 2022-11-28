@@ -49,13 +49,13 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$o0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->A8(Lcom/skt/tmap/activity/TmapNaviActivity;)Llb/w1;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->N8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lid/m2;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/w1;->C1:Llb/g3;
+    iget-object v0, v0, Lid/m2;->I1:Lid/a4;
 
-    iget-object v0, v0, Llb/g3;->s1:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, v0, Lid/a4;->u1:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -66,7 +66,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$o0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->L8(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->Y8(Lcom/skt/tmap/activity/TmapNaviActivity;)V
 
     return-void
 .end method

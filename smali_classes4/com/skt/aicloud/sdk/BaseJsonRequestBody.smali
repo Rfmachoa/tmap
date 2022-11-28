@@ -33,7 +33,7 @@
 .method public abstract getJsonObject()Lorg/json/JSONObject;
 .end method
 
-.method public final writeTo(Lzj/n;)V
+.method public final writeTo(Lem/n;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lzj/n;->write([B)Lzj/n;
+    invoke-interface {p1, v0}, Lem/n;->write([B)Lem/n;
 
     :cond_0
     return-void

@@ -1,22 +1,9 @@
 .class final Lcom/google/android/gms/tasks/zzn;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/zzq;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<TResult:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/zzq<",
-        "TTResult;>;"
-    }
-.end annotation
 
 
 # instance fields
@@ -25,13 +12,6 @@
 .field private final zzb:Ljava/lang/Object;
 
 .field private zzc:Lcom/google/android/gms/tasks/OnSuccessListener;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/OnSuccessListener<",
-            "-TTResult;>;"
-        }
-    .end annotation
-
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
@@ -52,14 +32,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lcom/google/android/gms/tasks/OnSuccessListener<",
-            "-TTResult;>;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -127,13 +99,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TTResult;>;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z

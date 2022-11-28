@@ -1,145 +1,22 @@
 .class public Ld9/a;
 .super Ljava/lang/Object;
-.source "HandyThreadTask.java"
+.source "MolocoDefaultLogger.java"
+
+# interfaces
+.implements Ld9/b;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "a"
+.field public static a:I = 0xc00
 
-.field public static final b:I
+.field public static final b:Ljava/lang/String; = "[%s][%s] %s"
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I = 0x5
-
-.field public static final f:Ljava/util/concurrent/ThreadFactory;
-
-.field public static final g:Ljava/util/concurrent/BlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/BlockingQueue<",
-            "Ljava/lang/Runnable;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final h:Ljava/util/concurrent/ExecutorService;
+.field public static final c:Ljava/lang/String; = "[%s][%s][%s] %s"
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 14
-
-    .line 1
-    const-class v0, Ld9/a;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 2
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v1
-
-    sput v1, Ld9/a;->b:I
-
-    add-int/lit8 v2, v1, -0x1
-
-    const/16 v3, 0x8
-
-    .line 3
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    const/4 v3, 0x2
-
-    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    sput v2, Ld9/a;->c:I
-
-    mul-int/lit8 v3, v1, 0x2
-
-    const/4 v12, 0x1
-
-    add-int/2addr v3, v12
-
-    .line 4
-    sput v3, Ld9/a;->d:I
-
-    .line 5
-    new-instance v11, Ld9/a$a;
-
-    invoke-direct {v11}, Ld9/a$a;-><init>()V
-
-    sput-object v11, Ld9/a;->f:Ljava/util/concurrent/ThreadFactory;
-
-    .line 6
-    new-instance v10, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v10}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    sput-object v10, Ld9/a;->g:Ljava/util/concurrent/BlockingQueue;
-
-    .line 7
-    new-instance v13, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget-object v9, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v7, 0x5
-
-    move-object v4, v13
-
-    move v5, v2
-
-    move v6, v3
-
-    invoke-direct/range {v4 .. v11}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    .line 8
-    invoke-virtual {v13, v12}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
-
-    .line 9
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v5, "threadPoolExecutor - CPU_COUNT:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", CORE_POOL_SIZE:"
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", MAXIMUM_POOL_SIZE:"
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 10
-    sput-object v13, Ld9/a;->h:Ljava/util/concurrent/ExecutorService;
+    .locals 0
 
     return-void
 .end method
@@ -153,41 +30,167 @@
     return-void
 .end method
 
-.method public static synthetic a()Ljava/lang/String;
-    .locals 1
+.method public static b(Ljava/lang/String;)[Ljava/lang/String;
+    .locals 7
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-nez p0, :cond_0
+
+    new-array p0, v0, [Ljava/lang/String;
+
+    return-object p0
 
     .line 1
-    sget-object v0, Ld9/a;->a:Ljava/lang/String;
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
+    move-result v1
+
+    sget v2, Ld9/a;->a:I
+
+    div-int/2addr v1, v2
+
+    add-int/2addr v1, v0
+
+    .line 2
+    new-array v0, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    .line 3
+    sget v3, Ld9/a;->a:I
+
+    mul-int v4, v2, v3
+
+    add-int/lit8 v5, v2, 0x1
+
+    mul-int/2addr v3, v5
+
+    .line 4
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    invoke-static {v3, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v3
+
+    .line 5
+    invoke-virtual {p0, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v0, v2
+
+    move v2, v5
+
+    goto :goto_0
+
+    :cond_1
     return-object v0
 .end method
 
-.method public static b(Ljava/lang/Runnable;)V
-    .locals 3
+
+# virtual methods
+.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 9
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    sget-object v0, Ld9/a;->a:Ljava/lang/String;
+    invoke-static {p4}, Ld9/a;->b(Ljava/lang/String;)[Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p4
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    array-length v0, p4
 
-    const-string v2, "execute runnable:"
+    const/4 v1, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move v2, v1
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_0
+    if-ge v2, v0, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    aget-object v3, p4, v2
 
-    move-result-object v1
+    const/4 v4, 0x3
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v5, 0x2
+
+    const-string v6, "Moloco"
+
+    const/4 v7, 0x1
+
+    if-nez p3, :cond_0
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    aput-object p1, v4, v1
+
+    aput-object p2, v4, v7
+
+    aput-object v3, v4, v5
+
+    const-string v3, "[%s][%s] %s"
 
     .line 2
-    sget-object v0, Ld9/a;->h:Ljava/util/concurrent/ExecutorService;
+    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-interface {v0, p0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+    move-result-object v3
 
+    invoke-static {v6, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v8, 0x4
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    aput-object p1, v8, v1
+
+    aput-object p2, v8, v7
+
+    aput-object p3, v8, v5
+
+    aput-object v3, v8, v4
+
+    const-string v3, "[%s][%s][%s] %s"
+
+    .line 3
+    invoke-static {v3, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v6, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method

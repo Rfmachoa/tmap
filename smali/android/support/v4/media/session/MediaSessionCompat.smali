@@ -463,12 +463,12 @@
     move-object v5, p5
 
     .line 3
-    invoke-direct/range {v0 .. v6}, Landroid/support/v4/media/session/MediaSessionCompat;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Lj3/d;)V
+    invoke-direct/range {v0 .. v6}, Landroid/support/v4/media/session/MediaSessionCompat;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Lr4/d;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Lj3/d;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroid/os/Bundle;Lr4/d;)V
     .locals 2
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -490,7 +490,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p6    # Lj3/d;
+    .param p6    # Lr4/d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -595,7 +595,7 @@
     .line 13
     new-instance p3, Landroid/support/v4/media/session/MediaSessionCompat$h;
 
-    invoke-direct {p3, p1, p2, p6, p5}, Landroid/support/v4/media/session/MediaSessionCompat$h;-><init>(Landroid/content/Context;Ljava/lang/String;Lj3/d;Landroid/os/Bundle;)V
+    invoke-direct {p3, p1, p2, p6, p5}, Landroid/support/v4/media/session/MediaSessionCompat$h;-><init>(Landroid/content/Context;Ljava/lang/String;Lr4/d;Landroid/os/Bundle;)V
 
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat;->a:Landroid/support/v4/media/session/MediaSessionCompat$c;
 
@@ -609,7 +609,7 @@
     .line 14
     new-instance p3, Landroid/support/v4/media/session/MediaSessionCompat$g;
 
-    invoke-direct {p3, p1, p2, p6, p5}, Landroid/support/v4/media/session/MediaSessionCompat$g;-><init>(Landroid/content/Context;Ljava/lang/String;Lj3/d;Landroid/os/Bundle;)V
+    invoke-direct {p3, p1, p2, p6, p5}, Landroid/support/v4/media/session/MediaSessionCompat$g;-><init>(Landroid/content/Context;Ljava/lang/String;Lr4/d;Landroid/os/Bundle;)V
 
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat;->a:Landroid/support/v4/media/session/MediaSessionCompat$c;
 
@@ -619,7 +619,7 @@
     :cond_3
     new-instance p3, Landroid/support/v4/media/session/MediaSessionCompat$f;
 
-    invoke-direct {p3, p1, p2, p6, p5}, Landroid/support/v4/media/session/MediaSessionCompat$f;-><init>(Landroid/content/Context;Ljava/lang/String;Lj3/d;Landroid/os/Bundle;)V
+    invoke-direct {p3, p1, p2, p6, p5}, Landroid/support/v4/media/session/MediaSessionCompat$f;-><init>(Landroid/content/Context;Ljava/lang/String;Lr4/d;Landroid/os/Bundle;)V
 
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat;->a:Landroid/support/v4/media/session/MediaSessionCompat$c;
 
@@ -894,7 +894,7 @@
     if-eqz p0, :cond_5
 
     .line 1
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->o()J
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->q()J
 
     move-result-wide v0
 
@@ -908,7 +908,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result v0
 
@@ -917,7 +917,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result v0
 
@@ -926,7 +926,7 @@
     if-eq v0, v1, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result v0
 
@@ -936,7 +936,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->l()J
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->n()J
 
     move-result-wide v0
 
@@ -952,7 +952,7 @@
     move-result-wide v12
 
     .line 7
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->m()F
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->o()F
 
     move-result v6
 
@@ -965,7 +965,7 @@
     float-to-long v0, v6
 
     .line 8
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->o()J
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->q()J
 
     move-result-wide v6
 
@@ -976,14 +976,14 @@
     const-string v0, "android.media.metadata.DURATION"
 
     .line 9
-    invoke-virtual {p1, v0}, Landroid/support/v4/media/MediaMetadataCompat;->b(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Landroid/support/v4/media/MediaMetadataCompat;->a(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 10
-    invoke-virtual {p1, v0}, Landroid/support/v4/media/MediaMetadataCompat;->g(Ljava/lang/String;)J
+    invoke-virtual {p1, v0}, Landroid/support/v4/media/MediaMetadataCompat;->i(Ljava/lang/String;)J
 
     move-result-wide v2
 
@@ -1019,11 +1019,11 @@
     invoke-direct {v7, p0}, Landroid/support/v4/media/session/PlaybackStateCompat$d;-><init>(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
     .line 12
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result v8
 
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->m()F
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->o()F
 
     move-result v11
 
@@ -1663,7 +1663,7 @@
     if-eqz v2, :cond_1
 
     .line 3
-    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->e()J
+    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->f()J
 
     move-result-wide v3
 
@@ -1684,7 +1684,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->e()J
+    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->f()J
 
     move-result-wide v4
 
@@ -1706,7 +1706,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->e()J
+    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->f()J
 
     move-result-wide v2
 

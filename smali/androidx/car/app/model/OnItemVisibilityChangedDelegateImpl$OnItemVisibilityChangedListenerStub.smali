@@ -68,9 +68,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/car/app/model/m;
+    new-instance v0, Landroidx/car/app/model/s;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/car/app/model/m;-><init>(Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;II)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/car/app/model/s;-><init>(Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;II)V
 
     const-string p1, "onItemVisibilityChanged"
 

@@ -1,6 +1,9 @@
-.class public final Landroidx/fragment/app/a0$a;
+.class public Landroidx/fragment/app/a0$a;
 .super Ljava/lang/Object;
-.source "FragmentTransaction.java"
+.source "FragmentManagerViewModel.java"
+
+# interfaces
+.implements Landroidx/lifecycle/ViewModelProvider$Factory;
 
 
 # annotations
@@ -9,27 +12,9 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
-    name = "a"
+    accessFlags = 0x1
+    name = null
 .end annotation
-
-
-# instance fields
-.field public a:I
-
-.field public b:Landroidx/fragment/app/Fragment;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:Landroidx/lifecycle/Lifecycle$State;
-
-.field public h:Landroidx/lifecycle/Lifecycle$State;
 
 
 # direct methods
@@ -42,52 +27,33 @@
     return-void
 .end method
 
-.method public constructor <init>(ILandroidx/fragment/app/Fragment;)V
-    .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput p1, p0, Landroidx/fragment/app/a0$a;->a:I
-
-    .line 4
-    iput-object p2, p0, Landroidx/fragment/app/a0$a;->b:Landroidx/fragment/app/Fragment;
-
-    .line 5
-    sget-object p1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
-
-    iput-object p1, p0, Landroidx/fragment/app/a0$a;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    .line 6
-    iput-object p1, p0, Landroidx/fragment/app/a0$a;->h:Landroidx/lifecycle/Lifecycle$State;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
-    .locals 0
-    .param p2    # Landroidx/fragment/app/Fragment;
+# virtual methods
+.method public create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+    .locals 1
+    .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Landroidx/lifecycle/ViewModel;",
+            ">(",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
 
-    .line 8
-    iput p1, p0, Landroidx/fragment/app/a0$a;->a:I
+    .line 1
+    new-instance p1, Landroidx/fragment/app/a0;
 
-    .line 9
-    iput-object p2, p0, Landroidx/fragment/app/a0$a;->b:Landroidx/fragment/app/Fragment;
+    const/4 v0, 0x1
 
-    .line 10
-    iget-object p1, p2, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
+    invoke-direct {p1, v0}, Landroidx/fragment/app/a0;-><init>(Z)V
 
-    iput-object p1, p0, Landroidx/fragment/app/a0$a;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    .line 11
-    iput-object p3, p0, Landroidx/fragment/app/a0$a;->h:Landroidx/lifecycle/Lifecycle$State;
-
-    return-void
+    return-object p1
 .end method

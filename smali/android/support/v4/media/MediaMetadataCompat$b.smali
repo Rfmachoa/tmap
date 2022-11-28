@@ -182,16 +182,16 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->s1:Landroidx/collection/a;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->u1:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -247,16 +247,16 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->s1:Landroidx/collection/a;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->u1:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -310,16 +310,16 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->s1:Landroidx/collection/a;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->u1:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -356,7 +356,7 @@
     :goto_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
 
-    invoke-virtual {p2}, Landroid/support/v4/media/RatingCompat;->d()Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/support/v4/media/RatingCompat;->e()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -381,16 +381,16 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->s1:Landroidx/collection/a;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->u1:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -446,16 +446,16 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->s1:Landroidx/collection/a;
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->u1:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

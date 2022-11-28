@@ -1,16 +1,23 @@
-.class final Lcom/google/android/gms/tagmanager/zzcw;
-.super Lcom/google/android/gms/tagmanager/zzbu;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.class public final Lcom/google/android/gms/tagmanager/zzcw;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
+
+
+# annotations
+.annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
+.end annotation
+
+.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+.end annotation
 
 
 # static fields
-.field private static final zza:Ljava/lang/String;
+.field public static final zza:Ljava/util/Map;
+    .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+    .end annotation
+.end field
 
-.field private static final zzb:Ljava/lang/String;
-
-
-# instance fields
-.field private final zzc:Landroid/content/Context;
+.field private static zzb:Ljava/lang/String;
 
 
 # direct methods
@@ -18,120 +25,209 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzM:Lcom/google/android/gms/internal/gtm/zza;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/tagmanager/zzcw;->zza:Ljava/lang/String;
-
-    .line 2
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zzb;->zzV:Lcom/google/android/gms/internal/gtm/zzb;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzb;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
+    sput-object v0, Lcom/google/android/gms/tagmanager/zzcw;->zza:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzcw;->zza:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    .line 1
-    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbu;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
-
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzcw;->zzc:Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static zza(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-# virtual methods
-.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzak;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)",
-            "Lcom/google/android/gms/internal/gtm/zzak;"
-        }
-    .end annotation
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
+    if-nez p1, :cond_1
 
     .line 1
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result-object v1
+    move-result p1
 
-    check-cast v1, Lcom/google/android/gms/internal/gtm/zzak;
+    if-lez p1, :cond_0
 
-    if-eqz v1, :cond_0
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_1
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "http://hostname/?"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     .line 2
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
+    move-result-object p0
 
     .line 3
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzn(Ljava/lang/Object;)Ljava/lang/String;
+    return-object p0
+.end method
 
-    move-result-object p1
+.method public static zzb(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .line 1
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
+
+    if-nez v0, :cond_2
+
+    const-class v0, Lcom/google/android/gms/tagmanager/zzcw;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
+
+    if-nez v1, :cond_1
+
+    const-string v1, "gtm_install_referrer"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const-string v1, "referrer"
+
+    const-string v2, ""
+
+    .line 2
+    invoke-interface {p0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    sput-object p0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const-string p0, ""
 
-    :goto_0
-    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzcw;->zzc:Landroid/content/Context;
+    .line 3
+    sput-object p0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
 
     .line 4
-    invoke-static {v0, p1}, Lcom/google/android/gms/tagmanager/zzcx;->zzb(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 5
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzak;
-
-    move-result-object p1
+    :cond_1
+    :goto_0
+    monitor-exit v0
 
     goto :goto_1
 
-    :cond_1
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzb()Lcom/google/android/gms/internal/gtm/zzak;
+    :catchall_0
+    move-exception p0
 
-    move-result-object p1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    throw p0
+
+    :cond_2
     :goto_1
-    return-object p1
+    sget-object p0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
+
+    .line 5
+    invoke-static {p0, p1}, Lcom/google/android/gms/tagmanager/zzcw;->zza(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final zzb()Z
+.method public static zzc(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+
+    const-string v0, "conv"
+
+    .line 1
+    invoke-static {p1, v0}, Lcom/google/android/gms/tagmanager/zzcw;->zza(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    sget-object v1, Lcom/google/android/gms/tagmanager/zzcw;->zza:Ljava/util/Map;
+
+    .line 2
+    invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "gtm_click_referrers"
+
+    .line 3
+    invoke-static {p0, v1, v0, p1}, Lcom/google/android/gms/tagmanager/zzff;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static zzd(Ljava/lang/String;)V
     .locals 1
 
-    const/4 v0, 0x1
+    .line 1
+    const-class v0, Lcom/google/android/gms/tagmanager/zzcw;
 
-    return v0
+    monitor-enter v0
+
+    :try_start_0
+    sput-object p0, Lcom/google/android/gms/tagmanager/zzcw;->zzb:Ljava/lang/String;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static zze(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 2
+
+    const-string v0, "gtm_install_referrer"
+
+    const-string v1, "referrer"
+
+    .line 1
+    invoke-static {p0, v0, v1, p1}, Lcom/google/android/gms/tagmanager/zzff;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-static {p0, p1}, Lcom/google/android/gms/tagmanager/zzcw;->zzc(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-void
 .end method

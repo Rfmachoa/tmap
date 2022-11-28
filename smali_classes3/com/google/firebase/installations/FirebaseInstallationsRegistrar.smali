@@ -32,7 +32,7 @@
 .end method
 
 .method private static synthetic lambda$getComponents$0(Lcom/google/firebase/components/ComponentContainer;)Lcom/google/firebase/installations/FirebaseInstallationsApi;
-    .locals 4
+    .locals 3
 
     .line 1
     new-instance v0, Lcom/google/firebase/installations/FirebaseInstallations;
@@ -46,21 +46,13 @@
 
     check-cast v1, Lcom/google/firebase/FirebaseApp;
 
-    const-class v2, Lcom/google/firebase/platforminfo/UserAgentPublisher;
+    const-class v2, Lcom/google/firebase/heartbeatinfo/HeartBeatController;
 
-    .line 3
     invoke-interface {p0, v2}, Lcom/google/firebase/components/ComponentContainer;->getProvider(Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
-
-    move-result-object v2
-
-    const-class v3, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;
-
-    .line 4
-    invoke-interface {p0, v3}, Lcom/google/firebase/components/ComponentContainer;->getProvider(Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
 
     move-result-object p0
 
-    invoke-direct {v0, v1, v2, p0}, Lcom/google/firebase/installations/FirebaseInstallations;-><init>(Lcom/google/firebase/FirebaseApp;Lcom/google/firebase/inject/Provider;Lcom/google/firebase/inject/Provider;)V
+    invoke-direct {v0, v1, p0}, Lcom/google/firebase/installations/FirebaseInstallations;-><init>(Lcom/google/firebase/FirebaseApp;Lcom/google/firebase/inject/Provider;)V
 
     return-object v0
 .end method
@@ -78,7 +70,7 @@
         }
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/google/firebase/components/Component;
 
@@ -101,7 +93,7 @@
 
     move-result-object v1
 
-    const-class v2, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;
+    const-class v2, Lcom/google/firebase/heartbeatinfo/HeartBeatController;
 
     .line 4
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->optionalProvider(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
@@ -112,25 +104,14 @@
 
     move-result-object v1
 
-    const-class v2, Lcom/google/firebase/platforminfo/UserAgentPublisher;
-
-    .line 5
-    invoke-static {v2}, Lcom/google/firebase/components/Dependency;->optionalProvider(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/google/firebase/components/Component$Builder;->add(Lcom/google/firebase/components/Dependency;)Lcom/google/firebase/components/Component$Builder;
-
-    move-result-object v1
-
     sget-object v2, Lcom/google/firebase/installations/e;->a:Lcom/google/firebase/installations/e;
 
-    .line 6
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v1
 
-    .line 7
+    .line 6
     invoke-virtual {v1}, Lcom/google/firebase/components/Component$Builder;->build()Lcom/google/firebase/components/Component;
 
     move-result-object v1
@@ -139,16 +120,25 @@
 
     aput-object v1, v0, v2
 
+    .line 7
+    invoke-static {}, Lcom/google/firebase/heartbeatinfo/HeartBeatConsumerComponent;->create()Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
     const-string v1, "fire-installations"
 
-    const-string v2, "17.0.0"
+    const-string v2, "17.0.2"
 
     .line 8
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
     aput-object v1, v0, v2
 

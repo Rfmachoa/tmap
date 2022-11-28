@@ -30,7 +30,7 @@
 # instance fields
 .field public final synthetic this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
-.field public final synthetic val$appSettingsDataTask:Lcom/google/android/gms/tasks/Task;
+.field public final synthetic val$settingsDataTask:Lcom/google/android/gms/tasks/Task;
 
 
 # direct methods
@@ -40,7 +40,7 @@
     .line 1
     iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->this$0:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController;
 
-    iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->val$appSettingsDataTask:Lcom/google/android/gms/tasks/Task;
+    iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->val$settingsDataTask:Lcom/google/android/gms/tasks/Task;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

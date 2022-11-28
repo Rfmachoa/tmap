@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/v;
+.field public final a:Landroidx/recyclerview/widget/u;
 
 .field public final b:Landroidx/recyclerview/widget/c;
     .annotation system Ldalvik/annotation/Signature;
@@ -90,13 +90,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/k$f;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/j$f;)V
     .locals 1
     .param p1    # Landroidx/recyclerview/widget/RecyclerView$Adapter;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/recyclerview/widget/k$f;
+    .param p2    # Landroidx/recyclerview/widget/j$f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -104,7 +104,7 @@
         value = {
             "(",
             "Landroidx/recyclerview/widget/RecyclerView$Adapter;",
-            "Landroidx/recyclerview/widget/k$f<",
+            "Landroidx/recyclerview/widget/j$f<",
             "TT;>;)V"
         }
     .end annotation
@@ -116,7 +116,7 @@
 
     new-instance p1, Landroidx/recyclerview/widget/c$a;
 
-    invoke-direct {p1, p2}, Landroidx/recyclerview/widget/c$a;-><init>(Landroidx/recyclerview/widget/k$f;)V
+    invoke-direct {p1, p2}, Landroidx/recyclerview/widget/c$a;-><init>(Landroidx/recyclerview/widget/j$f;)V
 
     .line 2
     invoke-virtual {p1}, Landroidx/recyclerview/widget/c$a;->a()Landroidx/recyclerview/widget/c;
@@ -124,14 +124,14 @@
     move-result-object p1
 
     .line 3
-    invoke-direct {p0, v0, p1}, Landroidx/recyclerview/widget/d;-><init>(Landroidx/recyclerview/widget/v;Landroidx/recyclerview/widget/c;)V
+    invoke-direct {p0, v0, p1}, Landroidx/recyclerview/widget/d;-><init>(Landroidx/recyclerview/widget/u;Landroidx/recyclerview/widget/c;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/recyclerview/widget/v;Landroidx/recyclerview/widget/c;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/u;Landroidx/recyclerview/widget/c;)V
     .locals 1
-    .param p1    # Landroidx/recyclerview/widget/v;
+    .param p1    # Landroidx/recyclerview/widget/u;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -142,7 +142,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/recyclerview/widget/v;",
+            "Landroidx/recyclerview/widget/u;",
             "Landroidx/recyclerview/widget/c<",
             "TT;>;)V"
         }
@@ -166,7 +166,7 @@
     iput-object v0, p0, Landroidx/recyclerview/widget/d;->f:Ljava/util/List;
 
     .line 7
-    iput-object p1, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/v;
+    iput-object p1, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/u;
 
     .line 8
     iput-object p2, p0, Landroidx/recyclerview/widget/d;->b:Landroidx/recyclerview/widget/c;
@@ -240,13 +240,13 @@
     return-object v0
 .end method
 
-.method public c(Ljava/util/List;Landroidx/recyclerview/widget/k$e;Ljava/lang/Runnable;)V
+.method public c(Ljava/util/List;Landroidx/recyclerview/widget/j$e;Ljava/lang/Runnable;)V
     .locals 1
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/recyclerview/widget/k$e;
+    .param p2    # Landroidx/recyclerview/widget/j$e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -259,7 +259,7 @@
             "(",
             "Ljava/util/List<",
             "TT;>;",
-            "Landroidx/recyclerview/widget/k$e;",
+            "Landroidx/recyclerview/widget/j$e;",
             "Ljava/lang/Runnable;",
             ")V"
         }
@@ -279,9 +279,9 @@
     iput-object p1, p0, Landroidx/recyclerview/widget/d;->f:Ljava/util/List;
 
     .line 4
-    iget-object p1, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/v;
+    iget-object p1, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/u;
 
-    invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/k$e;->d(Landroidx/recyclerview/widget/v;)V
+    invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/j$e;->d(Landroidx/recyclerview/widget/u;)V
 
     .line 5
     invoke-virtual {p0, v0, p3}, Landroidx/recyclerview/widget/d;->d(Ljava/util/List;Ljava/lang/Runnable;)V
@@ -456,9 +456,9 @@
     iput-object v2, p0, Landroidx/recyclerview/widget/d;->f:Ljava/util/List;
 
     .line 8
-    iget-object v2, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/v;
+    iget-object v2, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/u;
 
-    invoke-interface {v2, v1, p1}, Landroidx/recyclerview/widget/v;->b(II)V
+    invoke-interface {v2, v1, p1}, Landroidx/recyclerview/widget/u;->b(II)V
 
     .line 9
     invoke-virtual {p0, v0, p2}, Landroidx/recyclerview/widget/d;->d(Ljava/util/List;Ljava/lang/Runnable;)V
@@ -479,13 +479,13 @@
     iput-object v2, p0, Landroidx/recyclerview/widget/d;->f:Ljava/util/List;
 
     .line 12
-    iget-object v2, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/v;
+    iget-object v2, p0, Landroidx/recyclerview/widget/d;->a:Landroidx/recyclerview/widget/u;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
 
-    invoke-interface {v2, v1, p1}, Landroidx/recyclerview/widget/v;->a(II)V
+    invoke-interface {v2, v1, p1}, Landroidx/recyclerview/widget/u;->a(II)V
 
     .line 13
     invoke-virtual {p0, v0, p2}, Landroidx/recyclerview/widget/d;->d(Ljava/util/List;Ljava/lang/Runnable;)V

@@ -28,11 +28,11 @@
 
 
 # instance fields
-.field public final _bigEndian:Z
+.field private final _bigEndian:Z
 
-.field public final _bits:I
+.field private final _bits:I
 
-.field public final _javaName:Ljava/lang/String;
+.field private final _javaName:Ljava/lang/String;
 
 
 # direct methods

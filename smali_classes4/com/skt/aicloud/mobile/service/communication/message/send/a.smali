@@ -21,7 +21,7 @@
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/skt/aicloud/mobile/service/communication/message/send/a$a;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender$b;)V
 
-    invoke-static {v0}, Ld9/a;->b(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lab/a;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method

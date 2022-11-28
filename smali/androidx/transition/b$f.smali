@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/b;->u(Ljava/lang/Object;Landroid/graphics/Rect;)V
+    value = Landroidx/transition/b;->q(Ljava/lang/Object;Landroid/graphics/Rect;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

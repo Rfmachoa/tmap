@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/api/internal/UnregisterListenerMethod;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -20,15 +20,6 @@
 
 # instance fields
 .field private final zaa:Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey<",
-            "T",
-            "L;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

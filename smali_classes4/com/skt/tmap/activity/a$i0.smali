@@ -33,20 +33,6 @@
 
 .field public static final i:I = 0x8
 
-.field public static final j:I = 0x9
-
-.field public static final k:I = 0xa
-
-.field public static final l:I = 0xb
-
-.field public static final m:I = 0xc
-
-.field public static final n:I = 0xd
-
-.field public static final o:I = 0xe
-
-.field public static final p:I = 0xf
-
 
 # direct methods
 .method public constructor <init>()V

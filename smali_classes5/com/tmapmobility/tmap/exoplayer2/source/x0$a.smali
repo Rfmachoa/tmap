@@ -1,6 +1,6 @@
-.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/source/x0$a;
+.class public synthetic Lcom/tmapmobility/tmap/exoplayer2/source/x0$a;
 .super Ljava/lang/Object;
-.source "SequenceableLoader.java"
+.source "SampleQueue.java"
 
 
 # annotations
@@ -9,25 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
-    name = "a"
+    accessFlags = 0x1009
+    name = null
 .end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T::",
-        "Lcom/tmapmobility/tmap/exoplayer2/source/x0;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
-
-
-# virtual methods
-.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/source/x0;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-.end method

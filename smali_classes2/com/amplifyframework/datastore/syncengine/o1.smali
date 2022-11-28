@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/o;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lr1/i;
+    check-cast p1, Landroidx/core/util/k;
 
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->a(Lr1/i;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->a(Landroidx/core/util/k;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
 
     move-result-object p1
 

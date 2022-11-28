@@ -3,36 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/g0;
+.implements Landroidx/activity/result/a;
 
 
 # instance fields
-.field public final synthetic a:Landroid/content/Intent;
+.field public final synthetic a:Landroidx/car/app/CarAppPermissionActivity;
+
+.field public final synthetic b:Landroidx/car/app/IOnRequestPermissionsListener;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Intent;)V
+.method public synthetic constructor <init>(Landroidx/car/app/CarAppPermissionActivity;Landroidx/car/app/IOnRequestPermissionsListener;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/v;->a:Landroid/content/Intent;
+    iput-object p1, p0, Landroidx/car/app/v;->a:Landroidx/car/app/CarAppPermissionActivity;
+
+    iput-object p2, p0, Landroidx/car/app/v;->b:Landroidx/car/app/IOnRequestPermissionsListener;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Landroidx/car/app/v;->a:Landroid/content/Intent;
+    iget-object v0, p0, Landroidx/car/app/v;->a:Landroidx/car/app/CarAppPermissionActivity;
 
-    check-cast p1, Landroidx/car/app/ICarHost;
+    iget-object v1, p0, Landroidx/car/app/v;->b:Landroidx/car/app/IOnRequestPermissionsListener;
 
-    invoke-static {v0, p1}, Landroidx/car/app/CarContext;->e(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+    check-cast p1, Ljava/util/Map;
 
-    move-result-object p1
+    invoke-static {v0, v1, p1}, Landroidx/car/app/CarAppPermissionActivity;->v5(Landroidx/car/app/CarAppPermissionActivity;Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
 
-    return-object p1
+    return-void
 .end method

@@ -24,12 +24,12 @@
             ">;"
         }
     .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract equals(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract getAllAnnotations()Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
 .end method
 
 .method public abstract getAnnotated()Ljava/lang/reflect/AnnotatedElement;
@@ -45,19 +45,6 @@
             "TA;>;)TA;"
         }
     .end annotation
-.end method
-
-.method public getGenericType()Ljava/lang/reflect/Type;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getRawType()Ljava/lang/Class;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public abstract getModifiers()I
@@ -77,19 +64,6 @@
 .end method
 
 .method public abstract getType()Lcom/fasterxml/jackson/databind/JavaType;
-.end method
-
-.method public final getType(Lcom/fasterxml/jackson/databind/type/TypeBindings;)Lcom/fasterxml/jackson/databind/JavaType;
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getType()Lcom/fasterxml/jackson/databind/JavaType;
-
-    move-result-object p1
-
-    return-object p1
 .end method
 
 .method public abstract hasAnnotation(Ljava/lang/Class;)Z
@@ -117,7 +91,7 @@
 .method public abstract hashCode()I
 .end method
 
-.method public final isPublic()Z
+.method public isPublic()Z
     .locals 1
 
     .line 1
@@ -133,30 +107,4 @@
 .end method
 
 .method public abstract toString()Ljava/lang/String;
-.end method
-
-.method public abstract withAnnotations(Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)Lcom/fasterxml/jackson/databind/introspect/Annotated;
-.end method
-
-.method public final withFallBackAnnotationsFrom(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Lcom/fasterxml/jackson/databind/introspect/Annotated;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getAllAnnotations()Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getAllAnnotations()Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;->merge(Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->withAnnotations(Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)Lcom/fasterxml/jackson/databind/introspect/Annotated;
-
-    move-result-object p1
-
-    return-object p1
 .end method

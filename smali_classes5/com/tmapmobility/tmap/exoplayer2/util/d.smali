@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -107,49 +107,8 @@
     return-object p0
 .end method
 
-.method public static c(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
-    .locals 0
-    .param p1    # Ljava/util/List;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/tmapmobility/tmap/exoplayer2/h;",
-            ">(",
-            "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
-            "TT;>;",
-            "Ljava/util/List<",
-            "Landroid/os/Bundle;",
-            ">;",
-            "Ljava/util/List<",
-            "TT;>;)",
-            "Ljava/util/List<",
-            "TT;>;"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    .line 1
-    :cond_0
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->b(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;)Lcom/google/common/collect/ImmutableList;
-
-    move-result-object p2
-
-    :goto_0
-    return-object p2
-.end method
-
-.method public static d(Lcom/tmapmobility/tmap/exoplayer2/h$a;Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
-    .locals 3
-    .param p1    # Landroid/util/SparseArray;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public static c(Lcom/tmapmobility/tmap/exoplayer2/h$a;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -159,133 +118,57 @@
             "TT;>;",
             "Landroid/util/SparseArray<",
             "Landroid/os/Bundle;",
-            ">;",
-            "Landroid/util/SparseArray<",
-            "TT;>;)",
+            ">;)",
             "Landroid/util/SparseArray<",
             "TT;>;"
         }
     .end annotation
 
-    if-nez p1, :cond_0
-
-    return-object p2
-
     .line 1
-    :cond_0
-    new-instance p2, Landroid/util/SparseArray;
+    new-instance v0, Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
-    move-result v0
+    move-result v1
 
-    invoke-direct {p2, v0}, Landroid/util/SparseArray;-><init>(I)V
+    invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 2
     :goto_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v0, v1, :cond_1
+    if-ge v1, v2, :cond_0
 
     .line 3
-    invoke-virtual {p1, v0}, Landroid/util/SparseArray;->keyAt(I)I
+    invoke-virtual {p1, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Landroid/os/Bundle;
+    check-cast v3, Landroid/os/Bundle;
 
-    invoke-interface {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/h$a;->a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
+    invoke-interface {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/h$a;->a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {p2, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object p2
-.end method
-
-.method public static e(Lcom/tmapmobility/tmap/exoplayer2/h$a;Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
-    .locals 0
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/tmapmobility/tmap/exoplayer2/h;",
-            ">(",
-            "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
-            "TT;>;",
-            "Landroid/os/Bundle;",
-            ")TT;"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 p0, 0x0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1
     :cond_0
-    invoke-interface {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/h$a;->a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
+    return-object v0
 .end method
 
-.method public static f(Lcom/tmapmobility/tmap/exoplayer2/h$a;Landroid/os/Bundle;Lcom/tmapmobility/tmap/exoplayer2/h;)Lcom/tmapmobility/tmap/exoplayer2/h;
-    .locals 0
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/tmapmobility/tmap/exoplayer2/h;",
-            ">(",
-            "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
-            "TT;>;",
-            "Landroid/os/Bundle;",
-            "TT;)TT;"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    .line 1
-    :cond_0
-    invoke-interface {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/h$a;->a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
-
-    move-result-object p2
-
-    :goto_0
-    return-object p2
-.end method
-
-.method public static g(Ljava/util/Collection;)Ljava/util/ArrayList;
+.method public static d(Ljava/util/Collection;)Ljava/util/ArrayList;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -340,7 +223,7 @@
     return-object v0
 .end method
 
-.method public static h(Ljava/util/List;)Lcom/google/common/collect/ImmutableList;
+.method public static e(Ljava/util/List;)Lcom/google/common/collect/ImmutableList;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -397,7 +280,7 @@
     return-object p0
 .end method
 
-.method public static i(Landroid/util/SparseArray;)Landroid/util/SparseArray;
+.method public static f(Landroid/util/SparseArray;)Landroid/util/SparseArray;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -454,29 +337,4 @@
 
     :cond_0
     return-object v0
-.end method
-
-.method public static j(Lcom/tmapmobility/tmap/exoplayer2/h;)Landroid/os/Bundle;
-    .locals 0
-    .param p0    # Lcom/tmapmobility/tmap/exoplayer2/h;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    .line 1
-    :cond_0
-    invoke-interface {p0}, Lcom/tmapmobility/tmap/exoplayer2/h;->toBundle()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
 .end method

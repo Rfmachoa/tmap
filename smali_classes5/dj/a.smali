@@ -1,709 +1,235 @@
-.class public final Ldj/a;
+.class public Ldj/a;
 .super Ljava/lang/Object;
-.source "JvmClassMapping.kt"
+.source "ActivityComponentManager.java"
+
+# interfaces
+.implements Lij/b;
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000&\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0011\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0011\n\u0002\u0010\u001b\n\u0002\u0008\u0004\u001a!\u0010\u0004\u001a\u00020\u0003\"\n\u0008\u0000\u0010\u0001\u0018\u0001*\u00020\u0000*\u0006\u0012\u0002\u0008\u00030\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\"-\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0007\"\u0004\u0008\u0000\u0010\u0001*\u0008\u0012\u0004\u0012\u00028\u00000\u00068G\u00a2\u0006\u000c\u0012\u0004\u0008\n\u0010\u000b\u001a\u0004\u0008\u0008\u0010\t\"-\u0010\u000e\u001a\n\u0012\u0004\u0012\u00028\u0000\u0018\u00010\u0007\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000*\u0008\u0012\u0004\u0012\u00028\u00000\u00068F\u00a2\u0006\u0006\u001a\u0004\u0008\r\u0010\t\"+\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0007\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000*\u0008\u0012\u0004\u0012\u00028\u00000\u00068F\u00a2\u0006\u0006\u001a\u0004\u0008\u000f\u0010\t\"+\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0006\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000*\u0008\u0012\u0004\u0012\u00028\u00000\u00078G\u00a2\u0006\u0006\u001a\u0004\u0008\u0011\u0010\u0012\"&\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0007\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000*\u00028\u00008\u00c6\u0002\u00a2\u0006\u0006\u001a\u0004\u0008\u0014\u0010\u0015\";\u0010\u0016\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00028\u00000\u00060\u0007\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000*\u0008\u0012\u0004\u0012\u00028\u00000\u00068\u00c7\u0002X\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\u0018\u0010\u000b\u001a\u0004\u0008\u0017\u0010\t\"\'\u0010\u001c\u001a\n\u0012\u0006\u0008\u0001\u0012\u00028\u00000\u0006\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0019*\u00028\u00008F\u00a2\u0006\u0006\u001a\u0004\u0008\u001a\u0010\u001b\u00a8\u0006\u001d"
-    }
-    d2 = {
-        "",
-        "T",
-        "",
-        "",
-        "j",
-        "([Ljava/lang/Object;)Z",
-        "Lkotlin/reflect/d;",
-        "Ljava/lang/Class;",
-        "c",
-        "(Lkotlin/reflect/d;)Ljava/lang/Class;",
-        "getJavaClass$annotations",
-        "(Lkotlin/reflect/d;)V",
-        "java",
-        "f",
-        "javaPrimitiveType",
-        "e",
-        "javaObjectType",
-        "g",
-        "(Ljava/lang/Class;)Lkotlin/reflect/d;",
-        "kotlin",
-        "b",
-        "(Ljava/lang/Object;)Ljava/lang/Class;",
-        "javaClass",
-        "h",
-        "getRuntimeClassOfKClassInstance$annotations",
-        "",
-        "a",
-        "(Ljava/lang/annotation/Annotation;)Lkotlin/reflect/d;",
-        "annotationClass",
-        "kotlin-stdlib"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x5,
-        0x1
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Ldj/a$a;
     }
 .end annotation
 
-.annotation build Lkotlin/jvm/JvmName;
-    name = "JvmClassMappingKt"
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lij/b<",
+        "Ljava/lang/Object;",
+        ">;"
+    }
 .end annotation
+
+
+# instance fields
+.field public volatile a:Ljava/lang/Object;
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Landroid/app/Activity;
+
+.field public final d:Lij/b;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lij/b<",
+            "Lzi/b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public static final a(Ljava/lang/annotation/Annotation;)Lkotlin/reflect/d;
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 1
-    .param p0    # Ljava/lang/annotation/Annotation;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Ljava/lang/annotation/Annotation;",
-            ">(TT;)",
-            "Lkotlin/reflect/d<",
-            "+TT;>;"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
         }
     .end annotation
 
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$annotationClass"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
     .line 1
-    invoke-interface {p0}, Ljava/lang/annotation/Annotation;->annotationType()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    .line 2
+    new-instance v0, Ljava/lang/Object;
 
-    const-string v0, "(this as java.lang.annot\u2026otation).annotationType()"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-object v0, p0, Ldj/a;->b:Ljava/lang/Object;
 
-    invoke-static {p0}, Ldj/a;->g(Ljava/lang/Class;)Lkotlin/reflect/d;
+    .line 3
+    iput-object p1, p0, Ldj/a;->c:Landroid/app/Activity;
 
-    move-result-object p0
+    .line 4
+    new-instance v0, Ldj/b;
 
-    const-string v0, "null cannot be cast to non-null type kotlin.reflect.KClass<out T>"
+    check-cast p1, Landroidx/activity/ComponentActivity;
 
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v0, p1}, Ldj/b;-><init>(Landroidx/activity/ComponentActivity;)V
 
-    return-object p0
-.end method
-
-.method public static final b(Ljava/lang/Object;)Ljava/lang/Class;
-    .locals 1
-    .param p0    # Ljava/lang/Object;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$javaClass"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final c(Lkotlin/reflect/d;)Ljava/lang/Class;
-    .locals 1
-    .param p0    # Lkotlin/reflect/d;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lkotlin/reflect/d<",
-            "TT;>;)",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/jvm/JvmName;
-        name = "getJavaClass"
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$java"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    check-cast p0, Lkotlin/jvm/internal/r;
-
-    invoke-interface {p0}, Lkotlin/jvm/internal/r;->p()Ljava/lang/Class;
-
-    move-result-object p0
-
-    const-string v0, "null cannot be cast to non-null type java.lang.Class<T>"
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public static synthetic d(Lkotlin/reflect/d;)V
-    .locals 0
+    iput-object v0, p0, Ldj/a;->d:Lij/b;
 
     return-void
 .end method
 
-.method public static final e(Lkotlin/reflect/d;)Ljava/lang/Class;
+
+# virtual methods
+.method public a()Ljava/lang/Object;
     .locals 2
-    .param p0    # Lkotlin/reflect/d;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lkotlin/reflect/d<",
-            "TT;>;)",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$javaObjectType"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    check-cast p0, Lkotlin/jvm/internal/r;
+    iget-object v0, p0, Ldj/a;->a:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lkotlin/jvm/internal/r;->p()Ljava/lang/Class;
-
-    move-result-object p0
+    if-nez v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Class;->isPrimitive()Z
+    iget-object v0, p0, Ldj/a;->b:Ljava/lang/Object;
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-object p0
+    monitor-enter v0
 
     .line 3
+    :try_start_0
+    iget-object v1, p0, Ldj/a;->a:Ljava/lang/Object;
+
+    if-nez v1, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Ldj/a;->c()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iput-object v1, p0, Ldj/a;->a:Ljava/lang/Object;
+
+    .line 5
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    .line 6
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Ldj/a;->a:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public c()Ljava/lang/Object;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Ldj/a;->c:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    instance-of v0, v0, Lij/b;
 
-    move-result v1
-
-    sparse-switch v1, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v1, "short"
-
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Short;
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v1, "float"
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Float;
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v1, "boolean"
-
-    .line 6
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Boolean;
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v1, "void"
-
-    .line 7
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Void;
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v1, "long"
-
-    .line 8
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Long;
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string v1, "char"
-
-    .line 9
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Character;
-
-    goto :goto_0
-
-    :sswitch_6
-    const-string v1, "byte"
-
-    .line 10
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Byte;
-
-    goto :goto_0
-
-    :sswitch_7
-    const-string v1, "int"
-
-    .line 11
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Integer;
-
-    goto :goto_0
-
-    :sswitch_8
-    const-string v1, "double"
-
-    .line 12
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-class p0, Ljava/lang/Double;
-
-    :cond_1
-    :goto_0
-    return-object p0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x4f08842f -> :sswitch_8
-        0x197ef -> :sswitch_7
-        0x2e6108 -> :sswitch_6
-        0x2e9356 -> :sswitch_5
-        0x32c67c -> :sswitch_4
-        0x375194 -> :sswitch_3
-        0x3db6c28 -> :sswitch_2
-        0x5d0225c -> :sswitch_1
-        0x685847c -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method public static final f(Lkotlin/reflect/d;)Ljava/lang/Class;
-    .locals 1
-    .param p0    # Lkotlin/reflect/d;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lkotlin/reflect/d<",
-            "TT;>;)",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
-    const-string v0, "$this$javaPrimitiveType"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    check-cast p0, Lkotlin/jvm/internal/r;
-
-    invoke-interface {p0}, Lkotlin/jvm/internal/r;->p()Ljava/lang/Class;
-
-    move-result-object p0
+    if-nez v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Class;->isPrimitive()Z
+    const-class v0, Landroid/app/Application;
+
+    iget-object v1, p0, Ldj/a;->c:Landroid/app/Activity;
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    return-object p0
-
     .line 3
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object p0
+    const-string v1, "Hilt Activity must be attached to an @HiltAndroidApp Application. Did you forget to specify your Application\'s class name in your manifest\'s <application />\'s android:name attribute?"
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result v0
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto/16 :goto_0
-
-    :sswitch_0
-    const-string v0, "java.lang.Double"
+    throw v0
 
     .line 4
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result p0
+    const-string v1, "Hilt Activity must be attached to an @AndroidEntryPoint Application. Found: "
 
-    if-eqz p0, :cond_1
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+    move-result-object v1
 
-    goto :goto_1
-
-    :sswitch_1
-    const-string v0, "java.lang.Void"
+    iget-object v2, p0, Ldj/a;->c:Landroid/app/Activity;
 
     .line 5
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
-    move-result p0
+    move-result-object v2
 
-    if-eqz p0, :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+    move-result-object v2
 
-    goto :goto_1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :sswitch_2
-    const-string v0, "java.lang.Long"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     .line 6
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_1
+    iget-object v0, p0, Ldj/a;->d:Lij/b;
 
-    move-result p0
+    const-class v1, Ldj/a$a;
 
-    if-eqz p0, :cond_1
+    invoke-static {v0, v1}, Lxi/a;->a(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
 
-    sget-object p0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    move-result-object v0
 
-    goto :goto_1
-
-    :sswitch_3
-    const-string v0, "java.lang.Byte"
+    check-cast v0, Ldj/a$a;
 
     .line 7
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ldj/a$a;->a()Lbj/a;
 
-    move-result p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
-
-    sget-object p0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
-
-    goto :goto_1
-
-    :sswitch_4
-    const-string v0, "java.lang.Boolean"
+    iget-object v1, p0, Ldj/a;->c:Landroid/app/Activity;
 
     .line 8
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Lbj/a;->a(Landroid/app/Activity;)Lbj/a;
 
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    sget-object p0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    goto :goto_1
-
-    :sswitch_5
-    const-string v0, "java.lang.Character"
+    move-result-object v0
 
     .line 9
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Lbj/a;->build()Lzi/a;
 
-    move-result p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
-
-    sget-object p0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
-
-    goto :goto_1
-
-    :sswitch_6
-    const-string v0, "java.lang.Short"
-
-    .line 10
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    sget-object p0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
-
-    goto :goto_1
-
-    :sswitch_7
-    const-string v0, "java.lang.Float"
-
-    .line 11
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    sget-object p0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    goto :goto_1
-
-    :sswitch_8
-    const-string v0, "java.lang.Integer"
-
-    .line 12
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    sget-object p0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    :goto_1
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7a988a96 -> :sswitch_8
-        -0x1f76ce78 -> :sswitch_7
-        -0x1ec16c58 -> :sswitch_6
-        0x9415455 -> :sswitch_5
-        0x148d6054 -> :sswitch_4
-        0x17c0bc5c -> :sswitch_3
-        0x17c521d0 -> :sswitch_2
-        0x17c9ace8 -> :sswitch_1
-        0x2d605225 -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method public static final g(Ljava/lang/Class;)Lkotlin/reflect/d;
-    .locals 1
-    .param p0    # Ljava/lang/Class;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;)",
-            "Lkotlin/reflect/d<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/jvm/JvmName;
-        name = "getKotlinClass"
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$kotlin"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-static {p0}, Lkotlin/jvm/internal/n0;->d(Ljava/lang/Class;)Lkotlin/reflect/d;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final h(Lkotlin/reflect/d;)Ljava/lang/Class;
-    .locals 1
-    .param p0    # Lkotlin/reflect/d;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lkotlin/reflect/d<",
-            "TT;>;)",
-            "Ljava/lang/Class<",
-            "Lkotlin/reflect/d<",
-            "TT;>;>;"
-        }
-    .end annotation
-
-    .annotation build Lkotlin/jvm/JvmName;
-        name = "getRuntimeClassOfKClassInstance"
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$javaClass"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic i(Lkotlin/reflect/d;)V
-    .locals 0
-    .annotation runtime Lkotlin/Deprecated;
-        level = .enum Lkotlin/DeprecationLevel;->ERROR:Lkotlin/DeprecationLevel;
-        message = "Use \'java\' property to get Java class corresponding to this Kotlin class or cast this instance to Any if you really want to get the runtime Java class of this implementation of KClass."
-        replaceWith = .subannotation Lkotlin/ReplaceWith;
-            expression = "(this as Any).javaClass"
-            imports = {}
-        .end subannotation
-    .end annotation
-
-    return-void
-.end method
-
-.method public static final synthetic j([Ljava/lang/Object;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([",
-            "Ljava/lang/Object;",
-            ")Z"
-        }
-    .end annotation
-
-    const-string v0, "$this$isArrayOf"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v0, 0x4
-
-    const-string v1, "T"
-
-    .line 1
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->y(ILjava/lang/String;)V
-
-    const-class v0, Ljava/lang/Object;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

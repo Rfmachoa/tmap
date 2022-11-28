@@ -46,7 +46,7 @@
     invoke-direct {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;-><init>(I)V
 
     .line 3
-    invoke-virtual {v1, p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->e(Landroid/content/Context;)I
+    invoke-virtual {v1, p0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f(Landroid/content/Context;)I
 
     move-result v1
 
@@ -88,7 +88,7 @@
     move-result-object p1
 
     .line 7
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->u1(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->x1(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
 
@@ -110,7 +110,7 @@
 
     const-string v1, "PlatformScheduler"
 
-    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 

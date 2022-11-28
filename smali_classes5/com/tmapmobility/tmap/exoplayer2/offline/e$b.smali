@@ -3,7 +3,7 @@
 .source "SegmentDownloader.java"
 
 # interfaces
-.implements Laf/f$a;
+.implements Ldh/f$a;
 
 
 # annotations

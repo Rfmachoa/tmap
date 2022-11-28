@@ -1,252 +1,215 @@
-.class public Lmd/a;
-.super Ljava/lang/Object;
-.source "EventHandler.java"
+.class public abstract Lmd/a;
+.super Landroid/widget/BaseAdapter;
+.source "AbstractDynamicGridAdapter.java"
+
+# interfaces
+.implements Lmd/y;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "EventHandler"
+.field public static final c:I = -0x1
+
+
+# instance fields
+.field public a:I
+
+.field public b:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput v0, p0, Lmd/a;->a:I
+
+    .line 3
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lmd/a;->b:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public c(Ljava/util/List;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "items"
+        }
+    .end annotation
 
-    const-string v0, "::"
-
-    .line 1
-    invoke-static {p1, v0, p2, v0, p3}, Lr1/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    .line 2
-    invoke-static {p1, v0, p4}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "::"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "*>;)V"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {p1, v0, p2, v0, p3}, Lr1/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    .line 2
-    invoke-static {p1, v0, p4}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
-.end method
+    if-eqz v0, :cond_0
 
-.method public c(IIIIII)I
-    .locals 3
-
-    const-string v0, "linkLen: "
-
-    const-string v1, ", pol : "
-
-    const-string v2, ", carPfl : "
-
-    .line 1
-    invoke-static {v0, p3, v1, p4, v2}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 2
+    invoke-virtual {p0, v0}, Lmd/a;->d(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "EventHandler"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sub-int/2addr p3, p4
-
-    add-int/2addr p3, p1
-
-    const/4 p1, -0x1
-
-    if-ge p3, p5, :cond_0
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    sub-int/2addr p2, p3
-
-    if-ge p2, p6, :cond_1
-
-    return p1
-
-    :cond_1
-    return p3
+    return-void
 .end method
 
-.method public d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public d(Ljava/lang/Object;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "item"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lmd/a;->b:Ljava/util/HashMap;
+
+    iget v1, p0, Lmd/a;->a:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lmd/a;->a:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public e()V
     .locals 1
 
-    const-string v0, "::"
-
     .line 1
-    invoke-static {p1, v0, p2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lmd/a;->b:Ljava/util/HashMap;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    return-object p1
+    return-void
 .end method
 
-.method public e(IIIIII)I
-    .locals 3
-
-    const-string v0, "pol : "
-
-    const-string v1, ", linkLen: "
-
-    const-string v2, ", evPfl : "
+.method public f(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "item"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {v0, p3, v1, p2, v2}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lmd/a;->b:Ljava/util/HashMap;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final getItemId(I)J
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
-    move-result-object v0
+    if-ltz p1, :cond_1
 
-    const-string v1, "EventHandler"
+    .line 1
+    iget-object v0, p0, Lmd/a;->b:Ljava/util/HashMap;
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
-    sub-int/2addr p3, p2
+    move-result v0
 
-    sub-int/2addr p3, p1
-
-    if-gt p3, p5, :cond_1
-
-    if-ge p3, p6, :cond_0
+    if-lt p1, v0, :cond_0
 
     goto :goto_0
 
     .line 2
     :cond_0
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p2, "distToEvent : "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p2, ", speed: "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroid/widget/BaseAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 3
+    iget-object v0, p0, Lmd/a;->b:Ljava/util/HashMap;
 
-    return p3
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    const/4 p1, -0x1
+    move-result-object p1
 
-    return p1
-.end method
+    check-cast p1, Ljava/lang/Integer;
 
-.method public f(III)I
-    .locals 0
-
-    sub-int/2addr p2, p1
-
-    if-le p2, p3, :cond_0
-
-    return p2
-
-    :cond_0
-    const/4 p1, -0x1
-
-    return p1
-.end method
-
-.method public g(IIII)I
-    .locals 3
-
-    const-string v0, "pol : "
-
-    const-string v1, ", linkLen: "
-
-    const-string v2, ", evPfl : "
-
-    .line 1
-    invoke-static {v0, p3, v1, p2, v2}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "EventHandler"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sub-int p2, p3, p2
-
-    sub-int/2addr p2, p1
-
-    if-eqz p4, :cond_2
-
-    if-lez p4, :cond_0
-
-    if-gt p3, p4, :cond_2
-
-    :cond_0
-    if-gez p4, :cond_1
-
-    .line 2
-    invoke-static {p4}, Ljava/lang/Math;->abs(I)I
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    if-ge p3, p1, :cond_1
+    int-to-long v0, p1
 
-    goto :goto_0
+    return-wide v0
 
     :cond_1
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_2
     :goto_0
-    return p2
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final hasStableIds()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

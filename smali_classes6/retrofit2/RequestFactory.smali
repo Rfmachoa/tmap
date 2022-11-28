@@ -226,19 +226,17 @@
 
     invoke-direct {v1, v2, v3}, Lretrofit2/Invocation;-><init>(Ljava/lang/reflect/Method;Ljava/util/List;)V
 
-    .line 10
     invoke-virtual {p1, v0, v1}, Lokhttp3/Request$Builder;->tag(Ljava/lang/Class;Ljava/lang/Object;)Lokhttp3/Request$Builder;
 
     move-result-object p1
 
-    .line 11
     invoke-virtual {p1}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object p1
 
     return-object p1
 
-    .line 12
+    .line 10
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

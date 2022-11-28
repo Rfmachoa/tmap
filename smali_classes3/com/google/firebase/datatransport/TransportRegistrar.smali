@@ -62,7 +62,7 @@
 
 # virtual methods
 .method public getComponents()Ljava/util/List;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -72,39 +72,60 @@
         }
     .end annotation
 
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/google/firebase/components/Component;
+
     .line 1
-    const-class v0, Lcom/google/android/datatransport/TransportFactory;
+    const-class v1, Lcom/google/android/datatransport/TransportFactory;
 
     .line 2
-    invoke-static {v0}, Lcom/google/firebase/components/Component;->builder(Ljava/lang/Class;)Lcom/google/firebase/components/Component$Builder;
-
-    move-result-object v0
-
-    const-class v1, Landroid/content/Context;
-
-    .line 3
-    invoke-static {v1}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
+    invoke-static {v1}, Lcom/google/firebase/components/Component;->builder(Ljava/lang/Class;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/firebase/components/Component$Builder;->add(Lcom/google/firebase/components/Dependency;)Lcom/google/firebase/components/Component$Builder;
+    const-class v2, Landroid/content/Context;
 
-    move-result-object v0
+    .line 3
+    invoke-static {v2}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
-    sget-object v1, Lc6/a;->a:Lc6/a;
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/google/firebase/components/Component$Builder;->add(Lcom/google/firebase/components/Dependency;)Lcom/google/firebase/components/Component$Builder;
+
+    move-result-object v1
+
+    sget-object v2, Ly7/a;->a:Ly7/a;
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
+    invoke-virtual {v1, v2}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
 
-    move-result-object v0
+    move-result-object v1
 
     .line 5
-    invoke-virtual {v0}, Lcom/google/firebase/components/Component$Builder;->build()Lcom/google/firebase/components/Component;
+    invoke-virtual {v1}, Lcom/google/firebase/components/Component$Builder;->build()Lcom/google/firebase/components/Component;
 
-    move-result-object v0
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    const-string v1, "fire-transport"
+
+    const-string v2, "18.1.6"
 
     .line 6
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    .line 7
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 

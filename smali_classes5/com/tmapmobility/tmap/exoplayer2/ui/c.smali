@@ -85,7 +85,7 @@
 
     move-result-object p1
 
-    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;->k:[B
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata;->j:[B
 
     if-nez p1, :cond_0
 

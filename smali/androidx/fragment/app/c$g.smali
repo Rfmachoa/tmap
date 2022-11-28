@@ -75,7 +75,7 @@
     const/4 v4, 0x0
 
     .line 3
-    invoke-static {v0, v1, v2, v3, v4}, Landroidx/fragment/app/c0;->f(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/a;Z)V
+    invoke-static {v0, v1, v2, v3, v4}, Landroidx/fragment/app/l0;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/a;Z)V
 
     return-void
 .end method

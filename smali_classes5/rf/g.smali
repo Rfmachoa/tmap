@@ -1,198 +1,124 @@
-.class public final Lrf/g;
+.class public Lrf/g;
 .super Ljava/lang/Object;
-.source "ConnPerRouteBean.java"
-
-# interfaces
-.implements Lrf/f;
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/ThreadSafe;
-.end annotation
-
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
-
-
-# static fields
-.field public static final c:I = 0x2
+.source ""
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Lcz/msebera/android/httpclient/conn/routing/a;",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
+.field private a:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "scheme"
     .end annotation
 .end field
 
-.field public volatile b:I
+.field private b:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "package"
+    .end annotation
+.end field
+
+.field private c:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "timer"
+    .end annotation
+.end field
+
+.field private d:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "landing_url"
+    .end annotation
+.end field
+
+.field private e:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/Expose;
+    .end annotation
+
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "ssg"
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/smart/sklb/edge/nepkt/nepkt_hrnSzPx;)V
     .locals 1
 
-    const/4 v0, 0x2
-
-    .line 4
-    invoke-direct {p0, v0}, Lrf/g;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {p1}, Lcom/smart/sklb/edge/nepkt/nepkt_hrnSzPx;->getScheme()Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    move-result-object v0
 
-    iput-object v0, p0, Lrf/g;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object v0, p0, Lrf/g;->a:Ljava/lang/String;
 
-    .line 3
-    invoke-virtual {p0, p1}, Lrf/g;->d(I)V
+    invoke-virtual {p1}, Lcom/smart/sklb/edge/nepkt/nepkt_hrnSzPx;->get_package()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrf/g;->b:Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/smart/sklb/edge/nepkt/nepkt_hrnSzPx;->getTimer()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrf/g;->c:Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/smart/sklb/edge/nepkt/nepkt_hrnSzPx;->getLandingUrl()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrf/g;->d:Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/smart/sklb/edge/nepkt/nepkt_hrnSzPx;->getSsg()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrf/g;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcz/msebera/android/httpclient/conn/routing/a;)I
-    .locals 1
-
-    const-string v0, "HTTP route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    iget-object v0, p0, Lrf/g;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    return p1
-
-    .line 4
-    :cond_0
-    iget p1, p0, Lrf/g;->b:I
-
-    return p1
-.end method
-
-.method public b()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lrf/g;->b:I
-
-    return v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lrf/g;->b:I
-
-    return v0
-.end method
-
-.method public d(I)V
-    .locals 1
-
-    const-string v0, "Defautl max per route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->i(ILjava/lang/String;)I
-
-    .line 2
-    iput p1, p0, Lrf/g;->b:I
-
-    return-void
-.end method
-
-.method public e(Lcz/msebera/android/httpclient/conn/routing/a;I)V
-    .locals 1
-
-    const-string v0, "HTTP route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "Max per route"
-
-    .line 2
-    invoke-static {p2, v0}, Lqg/a;->i(ILjava/lang/String;)I
-
-    .line 3
-    iget-object v0, p0, Lrf/g;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public f(Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Lcz/msebera/android/httpclient/conn/routing/a;",
-            "Ljava/lang/Integer;",
-            ">;)V"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    .line 1
-    :cond_0
-    iget-object v0, p0, Lrf/g;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
-
-    .line 2
-    iget-object v0, p0, Lrf/g;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->putAll(Ljava/util/Map;)V
-
-    return-void
-.end method
-
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 4
 
-    .line 1
-    iget-object v0, p0, Lrf/g;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    const-string v0, "mepkd_sykSzPx{scheme=\'"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->toString()Ljava/lang/String;
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lrf/g;->a:Ljava/lang/String;
+
+    const/16 v2, 0x27
+
+    const-string v3, ", packageName=\'"
+
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+
+    iget-object v1, p0, Lrf/g;->b:Ljava/lang/String;
+
+    const-string v3, ", timer=\'"
+
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+
+    iget-object v1, p0, Lrf/g;->c:Ljava/lang/String;
+
+    const-string v3, ", landingUrl=\'"
+
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+
+    iget-object v1, p0, Lrf/g;->d:Ljava/lang/String;
+
+    const-string v3, ", ssg=\'"
+
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+
+    iget-object v1, p0, Lrf/g;->e:Ljava/lang/String;
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lg4/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
 
     move-result-object v0
 

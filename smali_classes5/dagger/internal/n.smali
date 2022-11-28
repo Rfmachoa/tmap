@@ -44,7 +44,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;>;"
         }
     .end annotation
@@ -54,7 +54,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Collection<",
             "TT;>;>;>;"
         }
@@ -86,10 +86,10 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;>;",
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Collection<",
             "TT;>;>;>;)V"
         }
@@ -209,9 +209,9 @@
 
     move-result-object v5
 
-    check-cast v5, Loi/a;
+    check-cast v5, Lsk/a;
 
-    invoke-interface {v5}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v5}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -256,9 +256,9 @@
 
     move-result-object v5
 
-    check-cast v5, Loi/a;
+    check-cast v5, Lsk/a;
 
-    invoke-interface {v5}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v5}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v5
 

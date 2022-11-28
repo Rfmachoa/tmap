@@ -26,6 +26,15 @@
 
 .field public _byToStringResolver:Lcom/fasterxml/jackson/databind/util/EnumResolver;
 
+.field public final _enumDefaultValue:Ljava/lang/Enum;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Enum<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
 .field public final _factory:Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
 
 
@@ -48,10 +57,17 @@
     .line 3
     iput-object p2, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_factory:Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
 
+    .line 4
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/util/EnumResolver;->getDefaultValue()Ljava/lang/Enum;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_enumDefaultValue:Ljava/lang/Enum;
+
     return-void
 .end method
 
-.method private _getToStringResolver()Lcom/fasterxml/jackson/databind/util/EnumResolver;
+.method private _getToStringResolver(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/util/EnumResolver;
     .locals 1
 
     .line 1
@@ -64,29 +80,38 @@
 
     .line 3
     :try_start_0
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getConfig()Lcom/fasterxml/jackson/databind/DeserializationConfig;
+
+    move-result-object p1
+
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_byNameResolver:Lcom/fasterxml/jackson/databind/util/EnumResolver;
 
+    .line 4
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/util/EnumResolver;->getEnumClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/fasterxml/jackson/databind/util/EnumResolver;->constructUnsafeUsingToString(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/util/EnumResolver;
+    .line 5
+    invoke-static {p1, v0}, Lcom/fasterxml/jackson/databind/util/EnumResolver;->constructUsingToString(Lcom/fasterxml/jackson/databind/DeserializationConfig;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/util/EnumResolver;
 
     move-result-object v0
 
-    .line 4
+    .line 6
+    iput-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_byToStringResolver:Lcom/fasterxml/jackson/databind/util/EnumResolver;
+
+    .line 7
     monitor-exit p0
 
     goto :goto_0
 
     :catchall_0
-    move-exception v0
+    move-exception p1
 
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v0
+    throw p1
 
     :cond_0
     :goto_0
@@ -99,7 +124,7 @@
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Lcom/fasterxml/jackson/databind/JsonMappingException;
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -134,7 +159,8 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_getToStringResolver()Lcom/fasterxml/jackson/databind/util/EnumResolver;
+    .line 5
+    invoke-direct {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_getToStringResolver(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/util/EnumResolver;
 
     move-result-object v0
 
@@ -143,7 +169,7 @@
     :cond_1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_byNameResolver:Lcom/fasterxml/jackson/databind/util/EnumResolver;
 
-    .line 5
+    .line 6
     :goto_0
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/util/EnumResolver;->findEnum(Ljava/lang/String;)Ljava/lang/Enum;
 
@@ -151,46 +177,59 @@
 
     if-nez v1, :cond_3
 
-    .line 6
-    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getConfig()Lcom/fasterxml/jackson/databind/DeserializationConfig;
+    .line 7
+    iget-object v2, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_enumDefaultValue:Ljava/lang/Enum;
 
-    move-result-object v2
+    if-eqz v2, :cond_2
 
-    sget-object v3, Lcom/fasterxml/jackson/databind/DeserializationFeature;->READ_UNKNOWN_ENUM_VALUES_AS_NULL:Lcom/fasterxml/jackson/databind/DeserializationFeature;
+    sget-object v2, Lcom/fasterxml/jackson/databind/DeserializationFeature;->READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE:Lcom/fasterxml/jackson/databind/DeserializationFeature;
 
-    invoke-virtual {v2, v3}, Lcom/fasterxml/jackson/databind/DeserializationConfig;->isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z
+    .line 8
+    invoke-virtual {p2, v2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
+    .line 9
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer$EnumKD;->_enumDefaultValue:Ljava/lang/Enum;
+
     goto :goto_1
 
-    .line 7
+    .line 10
     :cond_2
+    sget-object v2, Lcom/fasterxml/jackson/databind/DeserializationFeature;->READ_UNKNOWN_ENUM_VALUES_AS_NULL:Lcom/fasterxml/jackson/databind/DeserializationFeature;
+
+    invoke-virtual {p2, v2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    .line 11
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/deser/std/StdKeyDeserializer;->_keyClass:Ljava/lang/Class;
 
-    const-string v2, "not one of values excepted for Enum class: "
+    const/4 v2, 0x1
 
-    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result-object v2
+    const/4 v3, 0x0
 
+    .line 12
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/util/EnumResolver;->getEnumIds()Ljava/util/Collection;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    aput-object v0, v2, v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, "not one of the values accepted for Enum class: %s"
 
-    move-result-object v0
-
-    invoke-virtual {p2, v1, p1, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->weirdKeyException(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    .line 13
+    invoke-virtual {p2, v1, p1, v0, v2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleWeirdKey(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 
     :cond_3
     :goto_1

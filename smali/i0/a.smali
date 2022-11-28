@@ -1,171 +1,197 @@
 .class public final Li0/a;
-.super Li0/d;
-.source "AutoValue_Metadata.java"
+.super Ljava/lang/Object;
+.source "AdaptingCaptureProcessor.java"
+
+# interfaces
+.implements Lb0/f0;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Li0/a$b;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/location/Location;
+.field public final a:Landroidx/camera/extensions/impl/CaptureProcessorImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroid/location/Location;)V
+.method public constructor <init>(Landroidx/camera/extensions/impl/CaptureProcessorImpl;)V
     .locals 0
-    .param p1    # Landroid/location/Location;
-        .annotation build Landroidx/annotation/Nullable;
+    .param p1    # Landroidx/camera/extensions/impl/CaptureProcessorImpl;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "location"
-        }
-    .end annotation
-
-    .line 2
-    invoke-direct {p0}, Li0/d;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Li0/a;->a:Landroid/location/Location;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Landroid/location/Location;Li0/a$a;)V
-    .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Li0/a;-><init>(Landroid/location/Location;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Li0/a;->a:Landroidx/camera/extensions/impl/CaptureProcessorImpl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Landroid/location/Location;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+.method public a(Lb0/v0;)V
+    .locals 7
+    .param p1    # Lb0/v0;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/camera/core/ExperimentalGetImage;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Li0/a;->a:Landroid/location/Location;
+    invoke-interface {p1}, Lb0/v0;->a()Ljava/util/List;
 
-    return-object v0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    .line 1
-    :cond_0
-    instance-of v1, p1, Li0/d;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_3
+    move-result-object v0
 
     .line 2
-    check-cast p1, Li0/d;
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 3
-    iget-object v1, p0, Li0/a;->a:Landroid/location/Location;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Li0/d;->b()Landroid/location/Location;
-
-    move-result-object p1
-
-    if-nez v1, :cond_2
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    move-result-object v0
 
     :goto_0
-    return v0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    :cond_3
-    return v2
-.end method
+    move-result v2
 
-.method public hashCode()I
-    .locals 2
+    if-eqz v2, :cond_3
 
-    .line 1
-    iget-object v0, p0, Li0/a;->a:Landroid/location/Location;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object v2
 
-    const/4 v0, 0x0
+    check-cast v2, Ljava/lang/Integer;
 
-    goto :goto_0
+    .line 4
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
+    move-result v3
+
+    invoke-interface {p1, v3}, Lb0/v0;->b(I)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    move-result-object v3
+
+    const-wide/16 v4, 0x5
+
+    .line 5
+    :try_start_0
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v3, v4, v5, v6}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/camera/core/m1;
+
+    .line 6
+    invoke-interface {v3}, Landroidx/camera/core/m1;->L1()Landroid/media/Image;
+
+    move-result-object v4
+
+    if-nez v4, :cond_0
+
+    return-void
+
+    .line 7
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v3}, Landroidx/camera/core/m1;->A1()Landroidx/camera/core/j1;
 
-    move-result v0
+    move-result-object v4
 
-    :goto_0
-    const v1, 0xf4243
+    .line 8
+    invoke-static {v4}, Lb0/o;->a(Landroidx/camera/core/j1;)Landroidx/camera/core/impl/c;
 
-    xor-int/2addr v0, v1
+    move-result-object v4
 
-    return v0
+    if-nez v4, :cond_1
+
+    return-void
+
+    .line 9
+    :cond_1
+    invoke-static {v4}, Lv/a;->b(Landroidx/camera/core/impl/c;)Landroid/hardware/camera2/CaptureResult;
+
+    move-result-object v4
+
+    if-nez v4, :cond_2
+
+    return-void
+
+    .line 10
+    :cond_2
+    check-cast v4, Landroid/hardware/camera2/TotalCaptureResult;
+
+    .line 11
+    new-instance v5, Landroid/util/Pair;
+
+    invoke-interface {v3}, Landroidx/camera/core/m1;->L1()Landroid/media/Image;
+
+    move-result-object v3
+
+    invoke-direct {v5, v3, v4}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 12
+    invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    return-void
+
+    .line 13
+    :cond_3
+    iget-object p1, p0, Li0/a;->a:Landroidx/camera/extensions/impl/CaptureProcessorImpl;
+
+    invoke-interface {p1, v1}, Landroidx/camera/extensions/impl/CaptureProcessorImpl;->process(Ljava/util/Map;)V
+
+    return-void
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "Metadata{location="
+.method public b(Landroid/view/Surface;I)V
+    .locals 1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Li0/a;->a:Landroidx/camera/extensions/impl/CaptureProcessorImpl;
 
-    move-result-object v0
+    invoke-interface {v0, p1, p2}, Landroidx/camera/extensions/impl/CaptureProcessorImpl;->onOutputSurface(Landroid/view/Surface;I)V
 
-    iget-object v1, p0, Li0/a;->a:Landroid/location/Location;
+    .line 2
+    iget-object p1, p0, Li0/a;->a:Landroidx/camera/extensions/impl/CaptureProcessorImpl;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {p1, p2}, Landroidx/camera/extensions/impl/CaptureProcessorImpl;->onImageFormatUpdate(I)V
 
-    const-string v1, "}"
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public d(Landroid/util/Size;)V
+    .locals 1
+    .param p1    # Landroid/util/Size;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Li0/a;->a:Landroidx/camera/extensions/impl/CaptureProcessorImpl;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Landroidx/camera/extensions/impl/CaptureProcessorImpl;->onResolutionUpdate(Landroid/util/Size;)V
 
-    return-object v0
+    return-void
 .end method

@@ -15,14 +15,14 @@
 
 
 # instance fields
-.field public final h:Landroidx/fragment/app/w;
+.field public final h:Landroidx/fragment/app/f0;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/w;Ll1/b;)V
+.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/f0;Landroidx/core/os/d;)V
     .locals 1
     .param p1    # Landroidx/fragment/app/SpecialEffectsController$Operation$State;
         .annotation build Landroidx/annotation/NonNull;
@@ -32,24 +32,24 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Landroidx/fragment/app/w;
+    .param p3    # Landroidx/fragment/app/f0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Ll1/b;
+    .param p4    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-virtual {p3}, Landroidx/fragment/app/w;->k()Landroidx/fragment/app/Fragment;
+    invoke-virtual {p3}, Landroidx/fragment/app/f0;->k()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
-    invoke-direct {p0, p1, p2, v0, p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/Fragment;Ll1/b;)V
+    invoke-direct {p0, p1, p2, v0, p4}, Landroidx/fragment/app/SpecialEffectsController$Operation;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/Fragment;Landroidx/core/os/d;)V
 
     .line 2
-    iput-object p3, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/w;
+    iput-object p3, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/f0;
 
     return-void
 .end method
@@ -63,15 +63,15 @@
     invoke-super {p0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->c()V
 
     .line 2
-    iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/w;
+    iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/f0;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/w;->m()V
+    invoke-virtual {v0}, Landroidx/fragment/app/f0;->m()V
 
     return-void
 .end method
 
 .method public l()V
-    .locals 4
+    .locals 6
 
     .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->g()Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
@@ -80,12 +80,18 @@
 
     sget-object v1, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->ADDING:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
+    const-string v2, " for Fragment "
+
+    const-string v3, "FragmentManager"
+
+    const/4 v4, 0x2
+
     if-ne v0, v1, :cond_3
 
     .line 2
-    iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/w;
+    iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/f0;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/w;->k()Landroidx/fragment/app/Fragment;
+    invoke-virtual {v0}, Landroidx/fragment/app/f0;->k()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
@@ -101,39 +107,33 @@
     .line 4
     invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setFocusedView(Landroid/view/View;)V
 
-    const/4 v2, 0x2
-
     .line 5
-    invoke-static {v2}, Landroidx/fragment/app/FragmentManager;->T0(I)Z
+    invoke-static {v4}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_0
+    if-eqz v4, :cond_0
 
     .line 6
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "requestFocus: Saved focused view "
+    const-string v5, "requestFocus: Saved focused view "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, " for Fragment "
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "FragmentManager"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 7
     :cond_0
@@ -155,9 +155,9 @@
     if-nez v2, :cond_1
 
     .line 9
-    iget-object v2, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/w;
+    iget-object v2, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/f0;
 
-    invoke-virtual {v2}, Landroidx/fragment/app/w;->b()V
+    invoke-virtual {v2}, Landroidx/fragment/app/f0;->b()V
 
     .line 10
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
@@ -191,6 +191,71 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
 
+    goto :goto_0
+
+    .line 14
     :cond_3
+    invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->g()Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->REMOVING:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
+
+    if-ne v0, v1, :cond_5
+
+    .line 15
+    iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$d;->h:Landroidx/fragment/app/f0;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/f0;->k()Landroidx/fragment/app/Fragment;
+
+    move-result-object v0
+
+    .line 16
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->requireView()Landroid/view/View;
+
+    move-result-object v1
+
+    .line 17
+    invoke-static {v4}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "Clearing focus "
+
+    .line 18
+    invoke-static {v4}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v1}, Landroid/view/View;->findFocus()Landroid/view/View;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, " on view "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 19
+    :cond_4
+    invoke-virtual {v1}, Landroid/view/View;->clearFocus()V
+
+    :cond_5
+    :goto_0
     return-void
 .end method

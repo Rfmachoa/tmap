@@ -1,16 +1,16 @@
 .class public Lcom/coremedia/iso/boxes/XmlBox;
-.super Ld6/c;
+.super Lb8/c;
 .source "XmlBox.java"
 
 
 # static fields
 .field public static final TYPE:Ljava/lang/String; = "xml "
 
-.field private static final synthetic ajc$tjp_0:Lek/c$b;
+.field private static final synthetic ajc$tjp_0:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_1:Lek/c$b;
+.field private static final synthetic ajc$tjp_1:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_2:Lek/c$b;
+.field private static final synthetic ajc$tjp_2:Ljm/c$b;
 
 
 # instance fields
@@ -33,7 +33,7 @@
     const-string v0, "xml "
 
     .line 1
-    invoke-direct {p0, v0}, Ld6/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lb8/c;-><init>(Ljava/lang/String;)V
 
     const-string v0, ""
 
@@ -47,13 +47,13 @@
     .locals 10
 
     .line 1
-    new-instance v8, Lkk/e;
+    new-instance v8, Lpm/e;
 
     const-class v0, Lcom/coremedia/iso/boxes/XmlBox;
 
     const-string v1, "XmlBox.java"
 
-    invoke-direct {v8, v1, v0}, Lkk/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v8, v1, v0}, Lpm/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     const-string v1, "1"
 
@@ -71,7 +71,7 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
@@ -79,11 +79,11 @@
 
     const/16 v1, 0x14
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_0:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_0:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -101,17 +101,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x18
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_1:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_1:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -129,17 +129,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x2e
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_2:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_2:Ljm/c$b;
 
     return-void
 .end method
@@ -150,7 +150,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
+    invoke-virtual {p0, p1}, Lb8/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
 
     .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
@@ -170,7 +170,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
 
     .line 2
     iget-object v0, p0, Lcom/coremedia/iso/boxes/XmlBox;->xml:Ljava/lang/String;
@@ -204,18 +204,18 @@
 .method public getXml()Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_0:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_0:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget-object v0, p0, Lcom/coremedia/iso/boxes/XmlBox;->xml:Ljava/lang/String;
 
@@ -225,18 +225,18 @@
 .method public setXml(Ljava/lang/String;)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_1:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_1:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iput-object p1, p0, Lcom/coremedia/iso/boxes/XmlBox;->xml:Ljava/lang/String;
 
@@ -246,16 +246,16 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    sget-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_2:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/XmlBox;->ajc$tjp_2:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     const-string v1, "XmlBox{xml=\'"
 
     .line 1
-    invoke-static {v0, v1}, Lo5/a;->a(Lek/c;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ll7/a;->a(Ljm/c;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -266,7 +266,7 @@
 
     const/16 v3, 0x7d
 
-    invoke-static {v0, v1, v2, v3}, Lb3/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lg4/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
 
     move-result-object v0
 

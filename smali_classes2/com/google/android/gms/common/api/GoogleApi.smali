@@ -1,15 +1,12 @@
 .class public abstract Lcom/google/android/gms/common/api/GoogleApi;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/HasApiKey;
 
 
 # annotations
-.annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/gms/common/api/GoogleApi$Settings;
@@ -42,30 +39,10 @@
 .end field
 
 .field private final zad:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api<",
-            "TO;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zae:Lcom/google/android/gms/common/api/Api$ApiOptions;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TO;"
-        }
-    .end annotation
-.end field
 
 .field private final zaf:Lcom/google/android/gms/common/api/internal/ApiKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "TO;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zag:Landroid/os/Looper;
 
@@ -201,17 +178,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Landroid/app/Activity;",
-            "Lcom/google/android/gms/common/api/Api<",
-            "TO;>;TO;",
-            "Lcom/google/android/gms/common/api/GoogleApi$Settings;",
-            ")V"
-        }
-    .end annotation
 
     .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -289,7 +255,7 @@
     iput-object p1, p0, Lcom/google/android/gms/common/api/GoogleApi;->zag:Landroid/os/Looper;
 
     .line 12
-    invoke-static {p3, p4, v1}, Lcom/google/android/gms/common/api/internal/ApiKey;->zaa(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ApiKey;
+    invoke-static {p3, p4, v1}, Lcom/google/android/gms/common/api/internal/ApiKey;->getSharedApiKey(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ApiKey;
 
     move-result-object p1
 
@@ -516,17 +482,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<A::",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "T:",
-            "Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl<",
-            "+",
-            "Lcom/google/android/gms/common/api/Result;",
-            "TA;>;>(ITT;)TT;"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p2}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zak()V
@@ -545,19 +500,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<TResult:",
-            "Ljava/lang/Object;",
-            "A::",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            ">(I",
-            "Lcom/google/android/gms/common/api/internal/TaskApiCall<",
-            "TA;TTResult;>;)",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TTResult;>;"
-        }
-    .end annotation
 
     .line 1
     new-instance v6, Lcom/google/android/gms/tasks/TaskCompletionSource;
@@ -1330,16 +1272,6 @@
 .method public final zab(Landroid/os/Looper;Lcom/google/android/gms/common/api/internal/zabq;)Lcom/google/android/gms/common/api/Api$Client;
     .locals 8
     .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Looper;",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "TO;>;)",
-            "Lcom/google/android/gms/common/api/Api$Client;"
-        }
     .end annotation
 
     .line 1

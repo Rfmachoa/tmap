@@ -1,116 +1,146 @@
 .class public final Landroidx/lifecycle/SavedStateViewModelFactory;
-.super Landroidx/lifecycle/ViewModelProvider$KeyedFactory;
-.source "SavedStateViewModelFactory.java"
+.super Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;
+.source "SavedStateViewModelFactory.kt"
+
+# interfaces
+.implements Landroidx/lifecycle/ViewModelProvider$Factory;
 
 
-# static fields
-.field private static final ANDROID_VIEWMODEL_SIGNATURE:[Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "[",
-            "Ljava/lang/Class<",
-            "*>;"
-        }
-    .end annotation
-.end field
-
-.field private static final VIEWMODEL_SIGNATURE:[Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "[",
-            "Ljava/lang/Class<",
-            "*>;"
-        }
-    .end annotation
-.end field
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u00020\u00012\u00020\u0002B\t\u0008\u0016\u00a2\u0006\u0004\u0008 \u0010!B\u001b\u0008\u0016\u0012\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0012\u0012\u0006\u0010#\u001a\u00020\"\u00a2\u0006\u0004\u0008 \u0010$B%\u0008\u0017\u0012\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0012\u0012\u0006\u0010#\u001a\u00020\"\u0012\u0008\u0010\u0018\u001a\u0004\u0018\u00010\u0017\u00a2\u0006\u0004\u0008 \u0010%J/\u0010\t\u001a\u00028\u0000\"\u0008\u0008\u0000\u0010\u0004*\u00020\u00032\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00052\u0006\u0010\u0008\u001a\u00020\u0007H\u0016\u00a2\u0006\u0004\u0008\t\u0010\nJ-\u0010\t\u001a\u00028\u0000\"\u0008\u0008\u0000\u0010\u0004*\u00020\u00032\u0006\u0010\u000c\u001a\u00020\u000b2\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0005\u00a2\u0006\u0004\u0008\t\u0010\rJ\'\u0010\t\u001a\u00028\u0000\"\u0008\u0008\u0000\u0010\u0004*\u00020\u00032\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0005H\u0016\u00a2\u0006\u0004\u0008\t\u0010\u000eJ\u0010\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u0003H\u0017R\u0018\u0010\u0013\u001a\u0004\u0018\u00010\u00128\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010\u0014R\u0014\u0010\u0015\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u0016R\u0018\u0010\u0018\u001a\u0004\u0018\u00010\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\u0019R\u0018\u0010\u001b\u001a\u0004\u0018\u00010\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u001f\u00a8\u0006&"
+    }
+    d2 = {
+        "Landroidx/lifecycle/SavedStateViewModelFactory;",
+        "Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;",
+        "Landroidx/lifecycle/ViewModelProvider$Factory;",
+        "Landroidx/lifecycle/ViewModel;",
+        "T",
+        "Ljava/lang/Class;",
+        "modelClass",
+        "Landroidx/lifecycle/viewmodel/CreationExtras;",
+        "extras",
+        "create",
+        "(Ljava/lang/Class;Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/ViewModel;",
+        "",
+        "key",
+        "(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;",
+        "(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;",
+        "viewModel",
+        "Lkotlin/d1;",
+        "onRequery",
+        "Landroid/app/Application;",
+        "application",
+        "Landroid/app/Application;",
+        "factory",
+        "Landroidx/lifecycle/ViewModelProvider$Factory;",
+        "Landroid/os/Bundle;",
+        "defaultArgs",
+        "Landroid/os/Bundle;",
+        "Landroidx/lifecycle/Lifecycle;",
+        "lifecycle",
+        "Landroidx/lifecycle/Lifecycle;",
+        "Landroidx/savedstate/b;",
+        "savedStateRegistry",
+        "Landroidx/savedstate/b;",
+        "<init>",
+        "()V",
+        "Landroidx/savedstate/d;",
+        "owner",
+        "(Landroid/app/Application;Landroidx/savedstate/d;)V",
+        "(Landroid/app/Application;Landroidx/savedstate/d;Landroid/os/Bundle;)V",
+        "lifecycle-viewmodel-savedstate_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+.end annotation
 
 
 # instance fields
-.field private final mApplication:Landroid/app/Application;
+.field private application:Landroid/app/Application;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field private final mDefaultArgs:Landroid/os/Bundle;
+.field private defaultArgs:Landroid/os/Bundle;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field private final mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
+.field private final factory:Landroidx/lifecycle/ViewModelProvider$Factory;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
-.field private final mLifecycle:Landroidx/lifecycle/Lifecycle;
+.field private lifecycle:Landroidx/lifecycle/Lifecycle;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field private final mSavedStateRegistry:Landroidx/savedstate/SavedStateRegistry;
+.field private savedStateRegistry:Landroidx/savedstate/b;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    const-class v0, Landroidx/lifecycle/SavedStateHandle;
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ljava/lang/Class;
-
-    const-class v2, Landroid/app/Application;
-
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Landroidx/lifecycle/SavedStateViewModelFactory;->ANDROID_VIEWMODEL_SIGNATURE:[Ljava/lang/Class;
-
-    new-array v1, v2, [Ljava/lang/Class;
-
-    aput-object v0, v1, v3
+    invoke-direct {p0}, Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;-><init>()V
 
     .line 2
-    sput-object v1, Landroidx/lifecycle/SavedStateViewModelFactory;->VIEWMODEL_SIGNATURE:[Ljava/lang/Class;
+    new-instance v0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
+
+    invoke-direct {v0}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;-><init>()V
+
+    iput-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->factory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Application;Landroidx/savedstate/b;)V
+.method public constructor <init>(Landroid/app/Application;Landroidx/savedstate/d;)V
     .locals 1
     .param p1    # Landroid/app/Application;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p2    # Landroidx/savedstate/b;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p2    # Landroidx/savedstate/d;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "application",
-            "owner"
-        }
-    .end annotation
+
+    const-string v0, "owner"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 1
-    invoke-direct {p0, p1, p2, v0}, Landroidx/lifecycle/SavedStateViewModelFactory;-><init>(Landroid/app/Application;Landroidx/savedstate/b;Landroid/os/Bundle;)V
+    .line 3
+    invoke-direct {p0, p1, p2, v0}, Landroidx/lifecycle/SavedStateViewModelFactory;-><init>(Landroid/app/Application;Landroidx/savedstate/d;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Application;Landroidx/savedstate/b;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/app/Application;Landroidx/savedstate/d;Landroid/os/Bundle;)V
     .locals 1
     .param p1    # Landroid/app/Application;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p2    # Landroidx/savedstate/b;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p2    # Landroidx/savedstate/d;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p3    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .annotation build Landroid/annotation/SuppressLint;
@@ -119,127 +149,55 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "application",
-            "owner",
-            "defaultArgs"
-        }
-    .end annotation
+    const-string v0, "owner"
 
-    .line 2
-    invoke-direct {p0}, Landroidx/lifecycle/ViewModelProvider$KeyedFactory;-><init>()V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 3
-    invoke-interface {p2}, Landroidx/savedstate/b;->getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
+    .line 4
+    invoke-direct {p0}, Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;-><init>()V
+
+    .line 5
+    invoke-interface {p2}, Landroidx/savedstate/d;->getSavedStateRegistry()Landroidx/savedstate/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mSavedStateRegistry:Landroidx/savedstate/SavedStateRegistry;
+    iput-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->savedStateRegistry:Landroidx/savedstate/b;
 
-    .line 4
+    .line 6
     invoke-interface {p2}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p2
 
-    iput-object p2, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mLifecycle:Landroidx/lifecycle/Lifecycle;
+    iput-object p2, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->lifecycle:Landroidx/lifecycle/Lifecycle;
 
-    .line 5
-    iput-object p3, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mDefaultArgs:Landroid/os/Bundle;
+    .line 7
+    iput-object p3, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->defaultArgs:Landroid/os/Bundle;
 
-    .line 6
-    iput-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mApplication:Landroid/app/Application;
+    .line 8
+    iput-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->application:Landroid/app/Application;
 
     if-eqz p1, :cond_0
 
-    .line 7
-    invoke-static {p1}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->getInstance(Landroid/app/Application;)Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
+    .line 9
+    sget-object p2, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->Companion:Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory$Companion;
+
+    invoke-virtual {p2, p1}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory$Companion;->getInstance(Landroid/app/Application;)Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 8
+    .line 10
     :cond_0
-    invoke-static {}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->getInstance()Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
+    new-instance p1, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;
 
-    move-result-object p1
+    invoke-direct {p1}, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;-><init>()V
 
+    .line 11
     :goto_0
-    iput-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
+    iput-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->factory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
     return-void
-.end method
-
-.method private static findMatchingConstructor(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "modelClass",
-            "signature"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;[",
-            "Ljava/lang/Class<",
-            "*>;)",
-            "Ljava/lang/reflect/Constructor<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    aget-object v2, p0, v1
-
-    .line 2
-    invoke-virtual {v2}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
-
-    move-result-object v3
-
-    .line 3
-    invoke-static {p1, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    return-object v2
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
 .end method
 
 
@@ -247,21 +205,9 @@
 .method public create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
     .locals 1
     .param p1    # Ljava/lang/Class;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "modelClass"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -272,21 +218,28 @@
         }
     .end annotation
 
-    .line 15
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "modelClass"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 30
     invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 16
+    .line 31
     invoke-virtual {p0, v0, p1}, Landroidx/lifecycle/SavedStateViewModelFactory;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p1
 
     return-object p1
 
-    .line 17
+    .line 32
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -297,30 +250,210 @@
     throw p1
 .end method
 
-.method public create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+.method public create(Ljava/lang/Class;Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/ViewModel;
     .locals 5
+    .param p1    # Ljava/lang/Class;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/lifecycle/viewmodel/CreationExtras;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Landroidx/lifecycle/ViewModel;",
+            ">(",
+            "Ljava/lang/Class<",
+            "TT;>;",
+            "Landroidx/lifecycle/viewmodel/CreationExtras;",
+            ")TT;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "modelClass"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "extras"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    sget-object v0, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->VIEW_MODEL_KEY:Landroidx/lifecycle/viewmodel/CreationExtras$Key;
+
+    invoke-virtual {p2, v0}, Landroidx/lifecycle/viewmodel/CreationExtras;->get(Landroidx/lifecycle/viewmodel/CreationExtras$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_5
+
+    .line 2
+    sget-object v1, Landroidx/lifecycle/SavedStateHandleSupport;->SAVED_STATE_REGISTRY_OWNER_KEY:Landroidx/lifecycle/viewmodel/CreationExtras$Key;
+
+    invoke-virtual {p2, v1}, Landroidx/lifecycle/viewmodel/CreationExtras;->get(Landroidx/lifecycle/viewmodel/CreationExtras$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    .line 3
+    sget-object v1, Landroidx/lifecycle/SavedStateHandleSupport;->VIEW_MODEL_STORE_OWNER_KEY:Landroidx/lifecycle/viewmodel/CreationExtras$Key;
+
+    invoke-virtual {p2, v1}, Landroidx/lifecycle/viewmodel/CreationExtras;->get(Landroidx/lifecycle/viewmodel/CreationExtras$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    .line 4
+    sget-object v0, Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;->APPLICATION_KEY:Landroidx/lifecycle/viewmodel/CreationExtras$Key;
+
+    invoke-virtual {p2, v0}, Landroidx/lifecycle/viewmodel/CreationExtras;->get(Landroidx/lifecycle/viewmodel/CreationExtras$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Application;
+
+    const-class v1, Landroidx/lifecycle/AndroidViewModel;
+
+    .line 5
+    invoke-virtual {v1, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    if-eqz v0, :cond_0
+
+    .line 6
+    invoke-static {}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->access$getANDROID_VIEWMODEL_SIGNATURE$p()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-static {p1, v2}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->findMatchingConstructor(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    invoke-static {}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->access$getVIEWMODEL_SIGNATURE$p()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-static {p1, v2}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->findMatchingConstructor(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    :goto_0
+    if-nez v2, :cond_1
+
+    .line 8
+    iget-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->factory:Landroidx/lifecycle/ViewModelProvider$Factory;
+
+    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/ViewModelProvider$Factory;->create(Ljava/lang/Class;Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/ViewModel;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    aput-object v0, v1, v3
+
+    .line 9
+    invoke-static {p2}, Landroidx/lifecycle/SavedStateHandleSupport;->createSavedStateHandle(Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/SavedStateHandle;
+
+    move-result-object p2
+
+    aput-object p2, v1, v4
+
+    invoke-static {p1, v2, v1}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->newInstance(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Landroidx/lifecycle/ViewModel;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    new-array v0, v4, [Ljava/lang/Object;
+
+    .line 10
+    invoke-static {p2}, Landroidx/lifecycle/SavedStateHandleSupport;->createSavedStateHandle(Landroidx/lifecycle/viewmodel/CreationExtras;)Landroidx/lifecycle/SavedStateHandle;
+
+    move-result-object p2
+
+    aput-object p2, v0, v3
+
+    invoke-static {p1, v2, v0}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->newInstance(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Landroidx/lifecycle/ViewModel;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    .line 11
+    :cond_3
+    iget-object p2, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->lifecycle:Landroidx/lifecycle/Lifecycle;
+
+    if-eqz p2, :cond_4
+
+    .line 12
+    invoke-virtual {p0, v0, p1}, Landroidx/lifecycle/SavedStateViewModelFactory;->create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+
+    .line 13
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "SAVED_STATE_REGISTRY_OWNER_KEY andVIEW_MODEL_STORE_OWNER_KEY must be provided in the creation extras tosuccessfully create a ViewModel."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 14
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "VIEW_MODEL_KEY must always be provided by ViewModelProvider"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final create(Ljava/lang/String;Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+    .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/Class;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "key",
-            "modelClass"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -332,225 +465,200 @@
         }
     .end annotation
 
-    .line 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "key"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "modelClass"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 15
+    iget-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->lifecycle:Landroidx/lifecycle/Lifecycle;
+
+    if-eqz v0, :cond_4
+
+    .line 16
     const-class v0, Landroidx/lifecycle/AndroidViewModel;
 
+    .line 17
     invoke-virtual {v0, p2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
-    iget-object v1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mApplication:Landroid/app/Application;
+    .line 18
+    iget-object v1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->application:Landroid/app/Application;
 
     if-eqz v1, :cond_0
 
-    .line 3
-    sget-object v1, Landroidx/lifecycle/SavedStateViewModelFactory;->ANDROID_VIEWMODEL_SIGNATURE:[Ljava/lang/Class;
+    .line 19
+    invoke-static {}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->access$getANDROID_VIEWMODEL_SIGNATURE$p()Ljava/util/List;
 
-    invoke-static {p2, v1}, Landroidx/lifecycle/SavedStateViewModelFactory;->findMatchingConstructor(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    move-result-object v1
+
+    invoke-static {p2, v1}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->findMatchingConstructor(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 4
+    .line 20
     :cond_0
-    sget-object v1, Landroidx/lifecycle/SavedStateViewModelFactory;->VIEWMODEL_SIGNATURE:[Ljava/lang/Class;
+    invoke-static {}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->access$getVIEWMODEL_SIGNATURE$p()Ljava/util/List;
 
-    invoke-static {p2, v1}, Landroidx/lifecycle/SavedStateViewModelFactory;->findMatchingConstructor(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    move-result-object v1
+
+    invoke-static {p2, v1}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->findMatchingConstructor(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
     :goto_0
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
-    .line 5
-    iget-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mFactory:Landroidx/lifecycle/ViewModelProvider$Factory;
+    .line 21
+    iget-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->application:Landroid/app/Application;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->factory:Landroidx/lifecycle/ViewModelProvider$Factory;
 
     invoke-interface {p1, p2}, Landroidx/lifecycle/ViewModelProvider$Factory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p1
 
-    return-object p1
-
-    .line 6
-    :cond_1
-    iget-object v2, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mSavedStateRegistry:Landroidx/savedstate/SavedStateRegistry;
-
-    iget-object v3, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mLifecycle:Landroidx/lifecycle/Lifecycle;
-
-    iget-object v4, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mDefaultArgs:Landroid/os/Bundle;
-
-    invoke-static {v2, v3, p1, v4}, Landroidx/lifecycle/SavedStateHandleController;->create(Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/lifecycle/SavedStateHandleController;
-
-    move-result-object p1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_2
-
-    .line 7
-    :try_start_0
-    iget-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mApplication:Landroid/app/Application;
-
-    if-eqz v0, :cond_2
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    aput-object v0, v4, v2
-
-    .line 8
-    invoke-virtual {p1}, Landroidx/lifecycle/SavedStateHandleController;->getHandle()Landroidx/lifecycle/SavedStateHandle;
-
-    move-result-object v0
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {v1, v4}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/lifecycle/ViewModel;
-
     goto :goto_1
 
-    :cond_2
-    new-array v0, v3, [Ljava/lang/Object;
+    .line 22
+    :cond_1
+    sget-object p1, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->Companion:Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory$Companion;
 
-    .line 9
-    invoke-virtual {p1}, Landroidx/lifecycle/SavedStateHandleController;->getHandle()Landroidx/lifecycle/SavedStateHandle;
-
-    move-result-object v3
-
-    aput-object v3, v0, v2
-
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/lifecycle/ViewModel;
-
-    :goto_1
-    const-string v1, "androidx.lifecycle.savedstate.vm.tag"
-
-    .line 10
-    invoke-virtual {v0, v1, p1}, Landroidx/lifecycle/ViewModel;->setTagIfAbsent(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception p1
-
-    .line 11
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "An exception happened in constructor of "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 12
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory$Companion;->getInstance()Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;
 
     move-result-object p1
 
-    invoke-direct {v0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p2}, Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
-    throw v0
+    move-result-object p1
 
-    :catch_1
-    move-exception p1
+    :goto_1
+    return-object p1
 
-    .line 13
-    new-instance v0, Ljava/lang/RuntimeException;
+    .line 23
+    :cond_2
+    iget-object v2, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->savedStateRegistry:Landroidx/savedstate/b;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v3, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->lifecycle:Landroidx/lifecycle/Lifecycle;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v4, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->defaultArgs:Landroid/os/Bundle;
 
-    const-string v2, "A "
+    .line 24
+    invoke-static {v2, v3, p1, v4}, Landroidx/lifecycle/LegacySavedStateHandleController;->create(Landroidx/savedstate/b;Landroidx/lifecycle/Lifecycle;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/lifecycle/SavedStateHandleController;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "controller.handle"
 
-    const-string p2, " cannot be instantiated."
+    const/4 v3, 0x0
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_3
+
+    .line 25
+    iget-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->application:Landroid/app/Application;
+
+    if-eqz v0, :cond_3
+
+    const/4 v5, 0x2
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    .line 26
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    aput-object v0, v5, v3
+
+    invoke-virtual {p1}, Landroidx/lifecycle/SavedStateHandleController;->getHandle()Landroidx/lifecycle/SavedStateHandle;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    aput-object v0, v5, v4
+
+    invoke-static {p2, v1, v5}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->newInstance(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p2
 
-    invoke-direct {v0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_2
 
-    throw v0
+    :cond_3
+    new-array v0, v4, [Ljava/lang/Object;
 
-    :catch_2
-    move-exception p1
+    .line 27
+    invoke-virtual {p1}, Landroidx/lifecycle/SavedStateHandleController;->getHandle()Landroidx/lifecycle/SavedStateHandle;
 
-    .line 14
-    new-instance v0, Ljava/lang/RuntimeException;
+    move-result-object v4
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    aput-object v4, v0, v3
 
-    const-string v2, "Failed to access "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p2, v1, v0}, Landroidx/lifecycle/SavedStateViewModelFactoryKt;->newInstance(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Landroidx/lifecycle/ViewModel;
 
     move-result-object p2
 
-    invoke-direct {v0, p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_2
+    const-string v0, "androidx.lifecycle.savedstate.vm.tag"
 
-    throw v0
+    .line 28
+    invoke-virtual {p2, v0, p1}, Landroidx/lifecycle/ViewModel;->setTagIfAbsent(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    .line 29
+    :cond_4
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "SavedStateViewModelFactory constructed with empty constructor supports only calls to create(modelClass: Class<T>, extras: CreationExtras)."
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public onRequery(Landroidx/lifecycle/ViewModel;)V
     .locals 2
     .param p1    # Landroidx/lifecycle/ViewModel;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "viewModel"
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
+    const-string v0, "viewModel"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mSavedStateRegistry:Landroidx/savedstate/SavedStateRegistry;
+    iget-object v0, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->lifecycle:Landroidx/lifecycle/Lifecycle;
 
-    iget-object v1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->mLifecycle:Landroidx/lifecycle/Lifecycle;
+    if-eqz v0, :cond_0
 
-    invoke-static {p1, v0, v1}, Landroidx/lifecycle/SavedStateHandleController;->attachHandleIfNeeded(Landroidx/lifecycle/ViewModel;Landroidx/savedstate/SavedStateRegistry;Landroidx/lifecycle/Lifecycle;)V
+    .line 2
+    iget-object v1, p0, Landroidx/lifecycle/SavedStateViewModelFactory;->savedStateRegistry:Landroidx/savedstate/b;
 
+    .line 3
+    invoke-static {p1, v1, v0}, Landroidx/lifecycle/LegacySavedStateHandleController;->attachHandleIfNeeded(Landroidx/lifecycle/ViewModel;Landroidx/savedstate/b;Landroidx/lifecycle/Lifecycle;)V
+
+    :cond_0
     return-void
 .end method

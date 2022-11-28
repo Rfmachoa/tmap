@@ -54,7 +54,7 @@
 
 .field public static final b:F = 0.55f
 
-.field public static final c:F = 0.7f
+.field public static final c:F = 0.65f
 
 .field public static final d:F = 0.1f
 

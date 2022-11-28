@@ -1,6 +1,9 @@
 .class public Landroidx/fragment/app/FragmentManager$c;
-.super Landroidx/activity/b;
+.super Ljava/lang/Object;
 .source "FragmentManager.java"
+
+# interfaces
+.implements Landroidx/core/view/y;
 
 
 # annotations
@@ -15,30 +18,85 @@
 
 
 # instance fields
-.field public final synthetic c:Landroidx/fragment/app/FragmentManager;
+.field public final synthetic a:Landroidx/fragment/app/FragmentManager;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/FragmentManager;Z)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$c;->c:Landroidx/fragment/app/FragmentManager;
+    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$c;->a:Landroidx/fragment/app/FragmentManager;
 
-    invoke-direct {p0, p2}, Landroidx/activity/b;-><init>(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
+.method public a(Landroid/view/Menu;)V
     .locals 1
+    .param p1    # Landroid/view/Menu;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$c;->c:Landroidx/fragment/app/FragmentManager;
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$c;->a:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->P0()V
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentManager;->S(Landroid/view/Menu;)V
+
+    return-void
+.end method
+
+.method public b(Landroid/view/Menu;)V
+    .locals 1
+    .param p1    # Landroid/view/Menu;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$c;->a:Landroidx/fragment/app/FragmentManager;
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentManager;->W(Landroid/view/Menu;)Z
+
+    return-void
+.end method
+
+.method public c(Landroid/view/MenuItem;)Z
+    .locals 1
+    .param p1    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$c;->a:Landroidx/fragment/app/FragmentManager;
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentManager;->R(Landroid/view/MenuItem;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public d(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    .locals 1
+    .param p1    # Landroid/view/Menu;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/MenuInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$c;->a:Landroidx/fragment/app/FragmentManager;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/fragment/app/FragmentManager;->K(Landroid/view/Menu;Landroid/view/MenuInflater;)Z
 
     return-void
 .end method

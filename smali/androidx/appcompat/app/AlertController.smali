@@ -55,7 +55,7 @@
 
 .field public final a:Landroid/content/Context;
 
-.field public final b:Landroidx/appcompat/app/e;
+.field public final b:Landroidx/appcompat/app/f;
 
 .field public final c:Landroid/view/Window;
 
@@ -107,7 +107,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/appcompat/app/e;Landroid/view/Window;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/appcompat/app/f;Landroid/view/Window;)V
     .locals 3
 
     .line 1
@@ -140,7 +140,7 @@
     iput-object p1, p0, Landroidx/appcompat/app/AlertController;->a:Landroid/content/Context;
 
     .line 8
-    iput-object p2, p0, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iput-object p2, p0, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/f;
 
     .line 9
     iput-object p3, p0, Landroidx/appcompat/app/AlertController;->c:Landroid/view/Window;
@@ -242,7 +242,7 @@
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 22
-    invoke-virtual {p2, v1}, Landroidx/appcompat/app/e;->supportRequestWindowFeature(I)Z
+    invoke-virtual {p2, v1}, Landroidx/appcompat/app/f;->supportRequestWindowFeature(I)Z
 
     return-void
 .end method
@@ -781,9 +781,9 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iget-object v1, p0, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/f;
 
-    invoke-virtual {v1, v0}, Landroidx/appcompat/app/e;->setContentView(I)V
+    invoke-virtual {v1, v0}, Landroidx/appcompat/app/f;->setContentView(I)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/appcompat/app/AlertController;->A()V
@@ -799,7 +799,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p2}, Landroidx/core/widget/NestedScrollView;->i(Landroid/view/KeyEvent;)Z
+    invoke-virtual {p1, p2}, Landroidx/core/widget/NestedScrollView;->k(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -824,7 +824,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p2}, Landroidx/core/widget/NestedScrollView;->i(Landroid/view/KeyEvent;)Z
+    invoke-virtual {p1, p2}, Landroidx/core/widget/NestedScrollView;->k(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -1764,7 +1764,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p1, Landroidx/appcompat/widget/LinearLayoutCompat$LayoutParams;->a:F
+    iput v0, p1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     goto :goto_1
 

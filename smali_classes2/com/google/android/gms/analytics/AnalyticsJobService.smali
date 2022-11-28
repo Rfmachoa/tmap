@@ -1,9 +1,9 @@
 .class public final Lcom/google/android/gms/analytics/AnalyticsJobService;
 .super Landroid/app/job/JobService;
-.source "com.google.android.gms:play-services-analytics@@17.0.1"
+.source "com.google.android.gms:play-services-analytics@@18.0.2"
 
 # interfaces
-.implements Lcom/google/android/gms/internal/gtm/zzfm;
+.implements Lcom/google/android/gms/internal/gtm/zzfo;
 
 
 # annotations
@@ -13,15 +13,7 @@
 
 
 # instance fields
-.field private zza:Lcom/google/android/gms/internal/gtm/zzfn;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/gtm/zzfn<",
-            "Lcom/google/android/gms/analytics/AnalyticsJobService;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private zza:Lcom/google/android/gms/internal/gtm/zzfp;
 
 
 # direct methods
@@ -34,30 +26,22 @@
     return-void
 .end method
 
-.method private final zzb()Lcom/google/android/gms/internal/gtm/zzfn;
+.method private final zzb()Lcom/google/android/gms/internal/gtm/zzfp;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/internal/gtm/zzfn<",
-            "Lcom/google/android/gms/analytics/AnalyticsJobService;",
-            ">;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsJobService;->zza:Lcom/google/android/gms/internal/gtm/zzfn;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsJobService;->zza:Lcom/google/android/gms/internal/gtm/zzfp;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/gms/internal/gtm/zzfn;
+    new-instance v0, Lcom/google/android/gms/internal/gtm/zzfp;
 
-    .line 1
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/gtm/zzfn;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/gtm/zzfp;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsJobService;->zza:Lcom/google/android/gms/internal/gtm/zzfn;
+    iput-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsJobService;->zza:Lcom/google/android/gms/internal/gtm/zzfp;
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsJobService;->zza:Lcom/google/android/gms/internal/gtm/zzfn;
+    iget-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsJobService;->zza:Lcom/google/android/gms/internal/gtm/zzfp;
 
     return-object v0
 .end method
@@ -88,11 +72,11 @@
     invoke-super {p0}, Landroid/app/job/JobService;->onCreate()V
 
     .line 2
-    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfn;
+    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfp;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzfn;->zze()V
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzfp;->zze()V
 
     return-void
 .end method
@@ -107,11 +91,11 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfn;
+    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfp;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzfn;->zzf()V
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzfp;->zzf()V
 
     .line 2
     invoke-super {p0}, Landroid/app/job/JobService;->onDestroy()V
@@ -122,7 +106,7 @@
 .method public final onStartCommand(Landroid/content/Intent;II)I
     .locals 1
     .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/RequiresPermission;
@@ -133,11 +117,11 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfn;
+    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfp;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/internal/gtm/zzfn;->zza(Landroid/content/Intent;II)I
+    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/internal/gtm/zzfp;->zza(Landroid/content/Intent;II)I
 
     const/4 p1, 0x2
 
@@ -147,16 +131,16 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 1
     .param p1    # Landroid/app/job/JobParameters;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfn;
+    invoke-direct {p0}, Lcom/google/android/gms/analytics/AnalyticsJobService;->zzb()Lcom/google/android/gms/internal/gtm/zzfp;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/gtm/zzfn;->zzi(Landroid/app/job/JobParameters;)Z
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/gtm/zzfp;->zzi(Landroid/app/job/JobParameters;)Z
 
     const/4 p1, 0x1
 
@@ -166,7 +150,7 @@
 .method public onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 0
     .param p1    # Landroid/app/job/JobParameters;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
@@ -178,7 +162,7 @@
 .method public final zza(Landroid/app/job/JobParameters;Z)V
     .locals 0
     .param p1    # Landroid/app/job/JobParameters;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroid/annotation/TargetApi;

@@ -13,13 +13,6 @@
     }
 .end annotation
 
-.annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
-.end annotation
-
-.annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
-    value = 0x4
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/car/app/model/Action;
 .end annotation

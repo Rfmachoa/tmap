@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field public final c:Lp4/b;
+.field public final c:Lm6/b;
 
 .field public final d:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public final e:Lb4/a;
+.field public final e:Ly5/a;
 
 .field public final f:Lcom/apollographql/apollo/internal/d;
     .annotation system Ldalvik/annotation/Signature;
@@ -102,15 +102,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/apollographql/apollo/api/f;Lp4/b;Lb4/a;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/d;)V
+.method public constructor <init>(Lcom/apollographql/apollo/api/f;Lm6/b;Ly5/a;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/d;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/apollographql/apollo/api/f<",
             "*TT;*>;",
-            "Lp4/b;",
-            "Lb4/a;",
+            "Lm6/b;",
+            "Ly5/a;",
             "Lcom/apollographql/apollo/internal/b;",
             "Lcom/apollographql/apollo/internal/d<",
             "TT;>;)V"
@@ -133,10 +133,10 @@
     iput-object p1, p0, Lcom/apollographql/apollo/internal/g;->b:Lcom/apollographql/apollo/api/f;
 
     .line 4
-    iput-object p2, p0, Lcom/apollographql/apollo/internal/g;->c:Lp4/b;
+    iput-object p2, p0, Lcom/apollographql/apollo/internal/g;->c:Lm6/b;
 
     .line 5
-    iput-object p3, p0, Lcom/apollographql/apollo/internal/g;->e:Lb4/a;
+    iput-object p3, p0, Lcom/apollographql/apollo/internal/g;->e:Ly5/a;
 
     .line 6
     iput-object p5, p0, Lcom/apollographql/apollo/internal/g;->f:Lcom/apollographql/apollo/internal/d;
@@ -174,11 +174,11 @@
     return-object p0
 .end method
 
-.method public static synthetic e(Lcom/apollographql/apollo/internal/g;)Lp4/b;
+.method public static synthetic e(Lcom/apollographql/apollo/internal/g;)Lm6/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/apollographql/apollo/internal/g;->c:Lp4/b;
+    iget-object p0, p0, Lcom/apollographql/apollo/internal/g;->c:Lm6/b;
 
     return-object p0
 .end method
@@ -254,9 +254,9 @@
 
     iget-object v1, p0, Lcom/apollographql/apollo/internal/g;->b:Lcom/apollographql/apollo/api/f;
 
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/g;->c:Lp4/b;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/g;->c:Lm6/b;
 
-    iget-object v3, p0, Lcom/apollographql/apollo/internal/g;->e:Lb4/a;
+    iget-object v3, p0, Lcom/apollographql/apollo/internal/g;->e:Ly5/a;
 
     iget-object v4, p0, Lcom/apollographql/apollo/internal/g;->a:Lcom/apollographql/apollo/internal/b;
 
@@ -268,7 +268,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/apollographql/apollo/internal/g;-><init>(Lcom/apollographql/apollo/api/f;Lp4/b;Lb4/a;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/d;)V
+    invoke-direct/range {v0 .. v5}, Lcom/apollographql/apollo/internal/g;-><init>(Lcom/apollographql/apollo/api/f;Lm6/b;Ly5/a;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/d;)V
 
     return-object v6
 .end method
@@ -418,7 +418,7 @@
 
     .line 2
     :try_start_0
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/g;->c:Lp4/b;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/g;->c:Lm6/b;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -433,7 +433,7 @@
     move-result-object v2
 
     .line 3
-    iget-object v4, p0, Lcom/apollographql/apollo/internal/g;->c:Lp4/b;
+    iget-object v4, p0, Lcom/apollographql/apollo/internal/g;->c:Lm6/b;
 
     new-array v5, v3, [Ljava/lang/Object;
 

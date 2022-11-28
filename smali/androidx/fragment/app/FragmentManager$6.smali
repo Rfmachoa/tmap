@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/FragmentManager;->b(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Landroidx/fragment/app/u;)V
+    value = Landroidx/fragment/app/FragmentManager;->b(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Landroidx/fragment/app/d0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 # instance fields
 .field public final synthetic a:Ljava/lang/String;
 
-.field public final synthetic b:Landroidx/fragment/app/u;
+.field public final synthetic b:Landroidx/fragment/app/d0;
 
 .field public final synthetic c:Landroidx/lifecycle/Lifecycle;
 
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;Landroidx/fragment/app/u;Landroidx/lifecycle/Lifecycle;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;Landroidx/fragment/app/d0;Landroidx/lifecycle/Lifecycle;)V
     .locals 0
 
     .line 1
@@ -36,7 +36,7 @@
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentManager$6;->a:Ljava/lang/String;
 
-    iput-object p3, p0, Landroidx/fragment/app/FragmentManager$6;->b:Landroidx/fragment/app/u;
+    iput-object p3, p0, Landroidx/fragment/app/FragmentManager$6;->b:Landroidx/fragment/app/d0;
 
     iput-object p4, p0, Landroidx/fragment/app/FragmentManager$6;->c:Landroidx/lifecycle/Lifecycle;
 
@@ -66,7 +66,7 @@
     .line 2
     iget-object p1, p0, Landroidx/fragment/app/FragmentManager$6;->d:Landroidx/fragment/app/FragmentManager;
 
-    invoke-static {p1}, Landroidx/fragment/app/FragmentManager;->e(Landroidx/fragment/app/FragmentManager;)Ljava/util/Map;
+    invoke-static {p1}, Landroidx/fragment/app/FragmentManager;->j(Landroidx/fragment/app/FragmentManager;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -81,11 +81,11 @@
     if-eqz p1, :cond_0
 
     .line 3
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$6;->b:Landroidx/fragment/app/u;
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$6;->b:Landroidx/fragment/app/d0;
 
     iget-object v1, p0, Landroidx/fragment/app/FragmentManager$6;->a:Ljava/lang/String;
 
-    invoke-interface {v0, v1, p1}, Landroidx/fragment/app/u;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {v0, v1, p1}, Landroidx/fragment/app/d0;->a(Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 4
     iget-object p1, p0, Landroidx/fragment/app/FragmentManager$6;->d:Landroidx/fragment/app/FragmentManager;
@@ -108,7 +108,7 @@
     .line 7
     iget-object p1, p0, Landroidx/fragment/app/FragmentManager$6;->d:Landroidx/fragment/app/FragmentManager;
 
-    invoke-static {p1}, Landroidx/fragment/app/FragmentManager;->f(Landroidx/fragment/app/FragmentManager;)Ljava/util/Map;
+    invoke-static {p1}, Landroidx/fragment/app/FragmentManager;->k(Landroidx/fragment/app/FragmentManager;)Ljava/util/Map;
 
     move-result-object p1
 

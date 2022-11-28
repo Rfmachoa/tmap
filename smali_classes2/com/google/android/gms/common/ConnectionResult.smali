@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/ConnectionResult;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -237,7 +237,7 @@
 .end method
 
 .method public static zza(I)Ljava/lang/String;
-    .locals 3
+    .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -253,14 +253,12 @@
 
     packed-switch p0, :pswitch_data_1
 
-    const/16 v0, 0x1f
+    const-string v0, "UNKNOWN_ERROR_CODE("
 
-    const-string v1, "UNKNOWN_ERROR_CODE("
-
-    const-string v2, ")"
+    const-string v1, ")"
 
     .line 1
-    invoke-static {v0, v1, p0, v2}, Lcom/google/android/gms/auth/api/accounttransfer/a;->a(ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

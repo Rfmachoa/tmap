@@ -29,6 +29,8 @@
 
 .field public static final enum INITIALIZING:Landroidx/camera/core/CameraX$InternalInitState;
 
+.field public static final enum INITIALIZING_ERROR:Landroidx/camera/core/CameraX$InternalInitState;
+
 .field public static final enum SHUTDOWN:Landroidx/camera/core/CameraX$InternalInitState;
 
 .field public static final enum UNINITIALIZED:Landroidx/camera/core/CameraX$InternalInitState;
@@ -36,7 +38,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 9
+    .locals 11
 
     .line 1
     new-instance v0, Landroidx/camera/core/CameraX$InternalInitState;
@@ -63,56 +65,58 @@
     .line 3
     new-instance v3, Landroidx/camera/core/CameraX$InternalInitState;
 
-    const-string v5, "INITIALIZED"
+    const-string v5, "INITIALIZING_ERROR"
 
     const/4 v6, 0x2
 
     invoke-direct {v3, v5, v6}, Landroidx/camera/core/CameraX$InternalInitState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZED:Landroidx/camera/core/CameraX$InternalInitState;
+    sput-object v3, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZING_ERROR:Landroidx/camera/core/CameraX$InternalInitState;
 
     .line 4
     new-instance v5, Landroidx/camera/core/CameraX$InternalInitState;
 
-    const-string v7, "SHUTDOWN"
+    const-string v7, "INITIALIZED"
 
     const/4 v8, 0x3
 
     invoke-direct {v5, v7, v8}, Landroidx/camera/core/CameraX$InternalInitState;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Landroidx/camera/core/CameraX$InternalInitState;->SHUTDOWN:Landroidx/camera/core/CameraX$InternalInitState;
-
-    const/4 v7, 0x4
-
-    new-array v7, v7, [Landroidx/camera/core/CameraX$InternalInitState;
-
-    aput-object v0, v7, v2
-
-    aput-object v1, v7, v4
-
-    aput-object v3, v7, v6
-
-    aput-object v5, v7, v8
+    sput-object v5, Landroidx/camera/core/CameraX$InternalInitState;->INITIALIZED:Landroidx/camera/core/CameraX$InternalInitState;
 
     .line 5
-    sput-object v7, Landroidx/camera/core/CameraX$InternalInitState;->$VALUES:[Landroidx/camera/core/CameraX$InternalInitState;
+    new-instance v7, Landroidx/camera/core/CameraX$InternalInitState;
+
+    const-string v9, "SHUTDOWN"
+
+    const/4 v10, 0x4
+
+    invoke-direct {v7, v9, v10}, Landroidx/camera/core/CameraX$InternalInitState;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Landroidx/camera/core/CameraX$InternalInitState;->SHUTDOWN:Landroidx/camera/core/CameraX$InternalInitState;
+
+    const/4 v9, 0x5
+
+    new-array v9, v9, [Landroidx/camera/core/CameraX$InternalInitState;
+
+    aput-object v0, v9, v2
+
+    aput-object v1, v9, v4
+
+    aput-object v3, v9, v6
+
+    aput-object v5, v9, v8
+
+    aput-object v7, v9, v10
+
+    .line 6
+    sput-object v9, Landroidx/camera/core/CameraX$InternalInitState;->$VALUES:[Landroidx/camera/core/CameraX$InternalInitState;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000
-        }
-        names = {
-            "$enum$name",
-            "$enum$ordinal"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
@@ -127,14 +131,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Landroidx/camera/core/CameraX$InternalInitState;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8000
-        }
-        names = {
-            "name"
-        }
-    .end annotation
 
     .line 1
     const-class v0, Landroidx/camera/core/CameraX$InternalInitState;

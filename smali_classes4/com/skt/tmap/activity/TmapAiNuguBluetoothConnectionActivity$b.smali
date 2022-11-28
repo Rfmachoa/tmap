@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->H5()V
+    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->P5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,12 +55,12 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     :cond_0
@@ -71,7 +71,7 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->N5(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->V5(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -82,12 +82,12 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     :cond_0
@@ -103,7 +103,7 @@
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->N5(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->V5(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -111,7 +111,7 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->P2(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->R2(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -122,24 +122,24 @@
     .line 7
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->R3(Landroid/content/Context;Z)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->f4(Landroid/content/Context;Z)V
 
     .line 8
     :cond_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {v0, v1}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v2, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 9
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;->b:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    iget-object v2, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v2, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    invoke-static {v0, v1, v2}, Lwc/d0;->L(Landroid/app/Activity;ZLcom/skt/tmap/dialog/v;)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/setting/fragment/d0;->M(Landroid/app/Activity;ZLcom/skt/tmap/dialog/a0;)V
 
     :goto_0
     return-void

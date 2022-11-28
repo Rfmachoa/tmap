@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/io/Closeable;
-.implements Lkotlinx/coroutines/n0;
+.implements Lkotlinx/coroutines/p0;
 
 
 # annotations
@@ -16,7 +16,7 @@
     d2 = {
         "Landroidx/lifecycle/CloseableCoroutineScope;",
         "Ljava/io/Closeable;",
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/d1;",
         "close",
         "Lkotlin/coroutines/CoroutineContext;",
@@ -32,8 +32,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
@@ -80,7 +80,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lkotlinx/coroutines/b2;->j(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v1}, Lkotlinx/coroutines/b2;->i(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
     return-void
 .end method

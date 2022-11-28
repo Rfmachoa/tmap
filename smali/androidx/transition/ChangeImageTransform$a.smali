@@ -1,4 +1,4 @@
-.class public final Landroidx/transition/ChangeImageTransform$a;
+.class public Landroidx/transition/ChangeImageTransform$a;
 .super Ljava/lang/Object;
 .source "ChangeImageTransform.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

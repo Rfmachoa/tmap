@@ -25,50 +25,36 @@
 
 
 # virtual methods
-.method public abstract a(Lt4/b;[B)V
-    .param p1    # Lt4/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # [B
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-.end method
-
-.method public abstract b()Landroid/graphics/Bitmap;
+.method public abstract a()Landroid/graphics/Bitmap;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
 
-.method public abstract c()V
+.method public abstract b()V
+.end method
+
+.method public abstract c()I
 .end method
 
 .method public abstract clear()V
 .end method
 
-.method public abstract d()I
-.end method
-
-.method public abstract e(Landroid/graphics/Bitmap$Config;)V
+.method public abstract d(Landroid/graphics/Bitmap$Config;)V
     .param p1    # Landroid/graphics/Bitmap$Config;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 .end method
 
-.method public abstract f(I)I
+.method public abstract e(I)I
 .end method
 
-.method public abstract g(Lt4/b;Ljava/nio/ByteBuffer;)V
-    .param p1    # Lt4/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/nio/ByteBuffer;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public abstract f()I
+.end method
+
+.method public abstract g()I
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract getData()Ljava/nio/ByteBuffer;
@@ -88,22 +74,14 @@
 .method public abstract h()I
 .end method
 
-.method public abstract i()I
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public abstract i()V
 .end method
 
 .method public abstract j()I
 .end method
 
-.method public abstract k()V
-.end method
-
-.method public abstract l()I
-.end method
-
-.method public abstract m(Lt4/b;Ljava/nio/ByteBuffer;I)V
-    .param p1    # Lt4/b;
+.method public abstract k(Lq6/b;Ljava/nio/ByteBuffer;)V
+    .param p1    # Lq6/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -113,10 +91,32 @@
     .end param
 .end method
 
-.method public abstract n()I
+.method public abstract l()I
 .end method
 
-.method public abstract o()I
+.method public abstract m()I
+.end method
+
+.method public abstract n(Lq6/b;Ljava/nio/ByteBuffer;I)V
+    .param p1    # Lq6/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/nio/ByteBuffer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract o(Lq6/b;[B)V
+    .param p1    # Lq6/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [B
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract read(Ljava/io/InputStream;I)I

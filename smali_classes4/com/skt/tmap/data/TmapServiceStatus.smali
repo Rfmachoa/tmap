@@ -13,11 +13,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0005\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002j\u0002\u0008\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005\u00a8\u0006\u0006"
     }
@@ -33,9 +28,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -50,48 +46,71 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method private static final synthetic $values()[Lcom/skt/tmap/data/TmapServiceStatus;
+    .locals 3
 
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/skt/tmap/data/TmapServiceStatus;
 
-    new-instance v1, Lcom/skt/tmap/data/TmapServiceStatus;
+    sget-object v1, Lcom/skt/tmap/data/TmapServiceStatus;->NONE:Lcom/skt/tmap/data/TmapServiceStatus;
 
-    const-string v2, "NONE"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapServiceStatus;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/data/TmapServiceStatus;->USING:Lcom/skt/tmap/data/TmapServiceStatus;
 
-    sput-object v1, Lcom/skt/tmap/data/TmapServiceStatus;->NONE:Lcom/skt/tmap/data/TmapServiceStatus;
+    const/4 v2, 0x1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/data/TmapServiceStatus;
+    sget-object v1, Lcom/skt/tmap/data/TmapServiceStatus;->UPCOMING:Lcom/skt/tmap/data/TmapServiceStatus;
 
-    const-string v2, "USING"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapServiceStatus;-><init>(Ljava/lang/String;I)V
+    return-object v0
+.end method
 
-    sput-object v1, Lcom/skt/tmap/data/TmapServiceStatus;->USING:Lcom/skt/tmap/data/TmapServiceStatus;
+.method public static constructor <clinit>()V
+    .locals 3
 
-    aput-object v1, v0, v3
+    .line 1
+    new-instance v0, Lcom/skt/tmap/data/TmapServiceStatus;
 
-    new-instance v1, Lcom/skt/tmap/data/TmapServiceStatus;
+    const-string v1, "NONE"
 
-    const-string v2, "UPCOMING"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x2
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapServiceStatus;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapServiceStatus;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lcom/skt/tmap/data/TmapServiceStatus;->NONE:Lcom/skt/tmap/data/TmapServiceStatus;
 
-    sput-object v1, Lcom/skt/tmap/data/TmapServiceStatus;->UPCOMING:Lcom/skt/tmap/data/TmapServiceStatus;
+    new-instance v0, Lcom/skt/tmap/data/TmapServiceStatus;
 
-    aput-object v1, v0, v3
+    const-string v1, "USING"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapServiceStatus;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/data/TmapServiceStatus;->USING:Lcom/skt/tmap/data/TmapServiceStatus;
+
+    new-instance v0, Lcom/skt/tmap/data/TmapServiceStatus;
+
+    const-string v1, "UPCOMING"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapServiceStatus;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/data/TmapServiceStatus;->UPCOMING:Lcom/skt/tmap/data/TmapServiceStatus;
+
+    invoke-static {}, Lcom/skt/tmap/data/TmapServiceStatus;->$values()[Lcom/skt/tmap/data/TmapServiceStatus;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/data/TmapServiceStatus;->$VALUES:[Lcom/skt/tmap/data/TmapServiceStatus;
 
@@ -131,7 +150,7 @@
 
     sget-object v0, Lcom/skt/tmap/data/TmapServiceStatus;->$VALUES:[Lcom/skt/tmap/data/TmapServiceStatus;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/data/TmapServiceStatus;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

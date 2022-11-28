@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/server/converter/zaa;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -91,14 +91,6 @@
 
 .method public static zaa(Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;)Lcom/google/android/gms/common/server/converter/zaa;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter<",
-            "**>;)",
-            "Lcom/google/android/gms/common/server/converter/zaa;"
-        }
-    .end annotation
 
     .line 1
     instance-of v0, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;
@@ -161,13 +153,6 @@
 
 .method public final zab()Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter<",
-            "**>;"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/converter/zaa;->zab:Lcom/google/android/gms/common/server/converter/StringToIntConverter;

@@ -20,11 +20,19 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/fasterxml/jackson/databind/MapperFeature;
 
+.field public static final enum ACCEPT_CASE_INSENSITIVE_ENUMS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
 .field public static final enum ACCEPT_CASE_INSENSITIVE_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum ACCEPT_CASE_INSENSITIVE_VALUES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum ALLOW_COERCION_OF_SCALARS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum ALLOW_EXPLICIT_PROPERTY_RENAMING:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum ALLOW_FINAL_FIELDS_AS_MUTATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum ALLOW_VOID_VALUED_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum AUTO_DETECT_CREATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
@@ -36,11 +44,19 @@
 
 .field public static final enum AUTO_DETECT_SETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
+.field public static final enum BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
 .field public static final enum CAN_OVERRIDE_ACCESS_MODIFIERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum DEFAULT_VIEW_INCLUSION:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum IGNORE_DUPLICATE_MODULE_REGISTRATIONS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum IGNORE_MERGE_FOR_UNMERGEABLE:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum INFER_BUILDER_TYPE_BINDINGS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum INFER_CREATOR_FROM_CONSTRUCTOR_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum INFER_PROPERTY_MUTATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
@@ -50,9 +66,13 @@
 
 .field public static final enum REQUIRE_SETTERS_FOR_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
+.field public static final enum SORT_CREATOR_PROPERTIES_FIRST:Lcom/fasterxml/jackson/databind/MapperFeature;
+
 .field public static final enum SORT_PROPERTIES_ALPHABETICALLY:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum USE_ANNOTATIONS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+.field public static final enum USE_BASE_TYPE_AS_DEFAULT_IMPL:Lcom/fasterxml/jackson/databind/MapperFeature;
 
 .field public static final enum USE_GETTERS_AS_SETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
@@ -71,7 +91,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 25
+    .locals 34
 
     .line 1
     new-instance v0, Lcom/fasterxml/jackson/databind/MapperFeature;
@@ -89,99 +109,99 @@
     .line 2
     new-instance v1, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v4, "AUTO_DETECT_CREATORS"
+    const-string v4, "USE_GETTERS_AS_SETTERS"
 
     invoke-direct {v1, v4, v3, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v1, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_CREATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v1, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_GETTERS_AS_SETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 3
     new-instance v4, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v5, "AUTO_DETECT_FIELDS"
+    const-string v5, "PROPAGATE_TRANSIENT_MARKER"
 
     const/4 v6, 0x2
 
-    invoke-direct {v4, v5, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v4, v5, v6, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v4, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_FIELDS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v4, Lcom/fasterxml/jackson/databind/MapperFeature;->PROPAGATE_TRANSIENT_MARKER:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 4
     new-instance v5, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v7, "AUTO_DETECT_GETTERS"
+    const-string v7, "AUTO_DETECT_CREATORS"
 
     const/4 v8, 0x3
 
     invoke-direct {v5, v7, v8, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v5, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v5, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_CREATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 5
     new-instance v7, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v9, "AUTO_DETECT_IS_GETTERS"
+    const-string v9, "AUTO_DETECT_FIELDS"
 
     const/4 v10, 0x4
 
     invoke-direct {v7, v9, v10, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v7, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_IS_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v7, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_FIELDS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 6
     new-instance v9, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v11, "AUTO_DETECT_SETTERS"
+    const-string v11, "AUTO_DETECT_GETTERS"
 
     const/4 v12, 0x5
 
     invoke-direct {v9, v11, v12, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v9, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_SETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v9, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 7
     new-instance v11, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v13, "REQUIRE_SETTERS_FOR_GETTERS"
+    const-string v13, "AUTO_DETECT_IS_GETTERS"
 
     const/4 v14, 0x6
 
-    invoke-direct {v11, v13, v14, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v11, v13, v14, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v11, Lcom/fasterxml/jackson/databind/MapperFeature;->REQUIRE_SETTERS_FOR_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v11, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_IS_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 8
     new-instance v13, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v15, "USE_GETTERS_AS_SETTERS"
+    const-string v15, "AUTO_DETECT_SETTERS"
 
     const/4 v14, 0x7
 
     invoke-direct {v13, v15, v14, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v13, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_GETTERS_AS_SETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v13, Lcom/fasterxml/jackson/databind/MapperFeature;->AUTO_DETECT_SETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 9
     new-instance v15, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v14, "CAN_OVERRIDE_ACCESS_MODIFIERS"
+    const-string v14, "REQUIRE_SETTERS_FOR_GETTERS"
 
     const/16 v12, 0x8
 
-    invoke-direct {v15, v14, v12, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v15, v14, v12, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v15, Lcom/fasterxml/jackson/databind/MapperFeature;->CAN_OVERRIDE_ACCESS_MODIFIERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v15, Lcom/fasterxml/jackson/databind/MapperFeature;->REQUIRE_SETTERS_FOR_GETTERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 10
     new-instance v14, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v12, "OVERRIDE_PUBLIC_ACCESS_MODIFIERS"
+    const-string v12, "ALLOW_FINAL_FIELDS_AS_MUTATORS"
 
     const/16 v10, 0x9
 
     invoke-direct {v14, v12, v10, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v14, Lcom/fasterxml/jackson/databind/MapperFeature;->OVERRIDE_PUBLIC_ACCESS_MODIFIERS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v14, Lcom/fasterxml/jackson/databind/MapperFeature;->ALLOW_FINAL_FIELDS_AS_MUTATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 11
     new-instance v12, Lcom/fasterxml/jackson/databind/MapperFeature;
@@ -197,144 +217,284 @@
     .line 12
     new-instance v10, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v8, "ALLOW_FINAL_FIELDS_AS_MUTATORS"
+    const-string v8, "INFER_CREATOR_FROM_CONSTRUCTOR_PROPERTIES"
 
     const/16 v6, 0xb
 
     invoke-direct {v10, v8, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v10, Lcom/fasterxml/jackson/databind/MapperFeature;->ALLOW_FINAL_FIELDS_AS_MUTATORS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v10, Lcom/fasterxml/jackson/databind/MapperFeature;->INFER_CREATOR_FROM_CONSTRUCTOR_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 13
     new-instance v8, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v6, "PROPAGATE_TRANSIENT_MARKER"
+    const-string v6, "ALLOW_VOID_VALUED_PROPERTIES"
 
     const/16 v3, 0xc
 
     invoke-direct {v8, v6, v3, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v8, Lcom/fasterxml/jackson/databind/MapperFeature;->PROPAGATE_TRANSIENT_MARKER:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v8, Lcom/fasterxml/jackson/databind/MapperFeature;->ALLOW_VOID_VALUED_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 14
     new-instance v6, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v3, "USE_STATIC_TYPING"
+    const-string v3, "CAN_OVERRIDE_ACCESS_MODIFIERS"
+
+    const/16 v2, 0xd
 
     move-object/from16 v17, v8
 
-    const/16 v8, 0xd
+    const/4 v8, 0x1
 
-    invoke-direct {v6, v3, v8, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v6, v3, v2, v8}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_STATIC_TYPING:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->CAN_OVERRIDE_ACCESS_MODIFIERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 15
     new-instance v3, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v8, "DEFAULT_VIEW_INCLUSION"
-
-    const/16 v2, 0xe
+    const-string v2, "OVERRIDE_PUBLIC_ACCESS_MODIFIERS"
 
     move-object/from16 v18, v6
 
-    const/4 v6, 0x1
+    const/16 v6, 0xe
 
-    invoke-direct {v3, v8, v2, v6}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v3, v2, v6, v8}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v3, Lcom/fasterxml/jackson/databind/MapperFeature;->DEFAULT_VIEW_INCLUSION:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v3, Lcom/fasterxml/jackson/databind/MapperFeature;->OVERRIDE_PUBLIC_ACCESS_MODIFIERS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 16
-    new-instance v6, Lcom/fasterxml/jackson/databind/MapperFeature;
+    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v8, "SORT_PROPERTIES_ALPHABETICALLY"
+    const-string v8, "USE_STATIC_TYPING"
 
-    const/16 v2, 0xf
+    const/16 v6, 0xf
 
     move-object/from16 v19, v3
 
     const/4 v3, 0x0
 
-    invoke-direct {v6, v8, v2, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v2, v8, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->SORT_PROPERTIES_ALPHABETICALLY:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_STATIC_TYPING:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 17
     new-instance v8, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v2, "ACCEPT_CASE_INSENSITIVE_PROPERTIES"
+    const-string v6, "USE_BASE_TYPE_AS_DEFAULT_IMPL"
 
-    move-object/from16 v20, v6
+    move-object/from16 v20, v2
 
-    const/16 v6, 0x10
+    const/16 v2, 0x10
 
-    invoke-direct {v8, v2, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v8, v6, v2, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v8, Lcom/fasterxml/jackson/databind/MapperFeature;->ACCEPT_CASE_INSENSITIVE_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v8, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_BASE_TYPE_AS_DEFAULT_IMPL:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 18
-    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
+    new-instance v3, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v6, "USE_WRAPPER_NAME_AS_PROPERTY_NAME"
+    const-string v6, "INFER_BUILDER_TYPE_BINDINGS"
+
+    const/16 v2, 0x11
 
     move-object/from16 v21, v8
 
-    const/16 v8, 0x11
+    const/4 v8, 0x1
 
-    invoke-direct {v2, v6, v8, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v3, v6, v2, v8}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_WRAPPER_NAME_AS_PROPERTY_NAME:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v3, Lcom/fasterxml/jackson/databind/MapperFeature;->INFER_BUILDER_TYPE_BINDINGS:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 19
     new-instance v6, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v8, "USE_STD_BEAN_NAMING"
+    const-string v2, "DEFAULT_VIEW_INCLUSION"
 
-    move-object/from16 v22, v2
+    move-object/from16 v22, v3
 
-    const/16 v2, 0x12
+    const/16 v3, 0x12
 
-    invoke-direct {v6, v8, v2, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v6, v2, v3, v8}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_STD_BEAN_NAMING:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->DEFAULT_VIEW_INCLUSION:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 20
-    new-instance v8, Lcom/fasterxml/jackson/databind/MapperFeature;
+    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v2, "ALLOW_EXPLICIT_PROPERTY_RENAMING"
+    const-string v3, "SORT_PROPERTIES_ALPHABETICALLY"
+
+    const/16 v8, 0x13
 
     move-object/from16 v23, v6
 
-    const/16 v6, 0x13
+    const/4 v6, 0x0
 
-    invoke-direct {v8, v2, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v2, v3, v8, v6}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v8, Lcom/fasterxml/jackson/databind/MapperFeature;->ALLOW_EXPLICIT_PROPERTY_RENAMING:Lcom/fasterxml/jackson/databind/MapperFeature;
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->SORT_PROPERTIES_ALPHABETICALLY:Lcom/fasterxml/jackson/databind/MapperFeature;
 
     .line 21
+    new-instance v3, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "SORT_CREATOR_PROPERTIES_FIRST"
+
+    const/16 v6, 0x14
+
+    move-object/from16 v24, v2
+
+    const/4 v2, 0x1
+
+    invoke-direct {v3, v8, v6, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Lcom/fasterxml/jackson/databind/MapperFeature;->SORT_CREATOR_PROPERTIES_FIRST:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 22
     new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const-string v6, "IGNORE_DUPLICATE_MODULE_REGISTRATIONS"
-
-    const/16 v3, 0x14
-
-    move-object/from16 v24, v8
-
-    const/4 v8, 0x1
-
-    invoke-direct {v2, v6, v3, v8}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
-
-    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->IGNORE_DUPLICATE_MODULE_REGISTRATIONS:Lcom/fasterxml/jackson/databind/MapperFeature;
+    const-string v8, "ACCEPT_CASE_INSENSITIVE_PROPERTIES"
 
     const/16 v6, 0x15
 
+    move-object/from16 v25, v3
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v8, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->ACCEPT_CASE_INSENSITIVE_PROPERTIES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 23
+    new-instance v8, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v6, "ACCEPT_CASE_INSENSITIVE_ENUMS"
+
+    move-object/from16 v26, v2
+
+    const/16 v2, 0x16
+
+    invoke-direct {v8, v6, v2, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v8, Lcom/fasterxml/jackson/databind/MapperFeature;->ACCEPT_CASE_INSENSITIVE_ENUMS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 24
+    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v6, "ACCEPT_CASE_INSENSITIVE_VALUES"
+
+    move-object/from16 v27, v8
+
+    const/16 v8, 0x17
+
+    invoke-direct {v2, v6, v8, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->ACCEPT_CASE_INSENSITIVE_VALUES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 25
+    new-instance v6, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "USE_WRAPPER_NAME_AS_PROPERTY_NAME"
+
+    move-object/from16 v28, v2
+
+    const/16 v2, 0x18
+
+    invoke-direct {v6, v8, v2, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_WRAPPER_NAME_AS_PROPERTY_NAME:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 26
+    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "USE_STD_BEAN_NAMING"
+
+    move-object/from16 v29, v6
+
+    const/16 v6, 0x19
+
+    invoke-direct {v2, v8, v6, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_STD_BEAN_NAMING:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 27
+    new-instance v6, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "ALLOW_EXPLICIT_PROPERTY_RENAMING"
+
+    move-object/from16 v30, v2
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v6, v8, v2, v3}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->ALLOW_EXPLICIT_PROPERTY_RENAMING:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 28
+    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v3, "ALLOW_COERCION_OF_SCALARS"
+
+    const/16 v8, 0x1b
+
+    move-object/from16 v31, v6
+
+    const/4 v6, 0x1
+
+    invoke-direct {v2, v3, v8, v6}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->ALLOW_COERCION_OF_SCALARS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 29
+    new-instance v3, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "IGNORE_DUPLICATE_MODULE_REGISTRATIONS"
+
+    move-object/from16 v16, v2
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v3, v8, v2, v6}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Lcom/fasterxml/jackson/databind/MapperFeature;->IGNORE_DUPLICATE_MODULE_REGISTRATIONS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 30
+    new-instance v2, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "IGNORE_MERGE_FOR_UNMERGEABLE"
+
+    move-object/from16 v32, v3
+
+    const/16 v3, 0x1d
+
+    invoke-direct {v2, v8, v3, v6}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Lcom/fasterxml/jackson/databind/MapperFeature;->IGNORE_MERGE_FOR_UNMERGEABLE:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    .line 31
+    new-instance v3, Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const-string v8, "BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES"
+
+    const/16 v6, 0x1e
+
+    move-object/from16 v33, v2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v3, v8, v6, v2}, Lcom/fasterxml/jackson/databind/MapperFeature;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Lcom/fasterxml/jackson/databind/MapperFeature;->BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    const/16 v6, 0x1f
+
     new-array v6, v6, [Lcom/fasterxml/jackson/databind/MapperFeature;
 
-    const/16 v16, 0x0
+    aput-object v0, v6, v2
 
-    aput-object v0, v6, v16
+    const/4 v0, 0x1
 
-    aput-object v1, v6, v8
+    aput-object v1, v6, v0
 
     const/4 v0, 0x2
 
@@ -408,9 +568,51 @@
 
     aput-object v24, v6, v0
 
-    aput-object v2, v6, v3
+    const/16 v0, 0x14
 
-    .line 22
+    aput-object v25, v6, v0
+
+    const/16 v0, 0x15
+
+    aput-object v26, v6, v0
+
+    const/16 v0, 0x16
+
+    aput-object v27, v6, v0
+
+    const/16 v0, 0x17
+
+    aput-object v28, v6, v0
+
+    const/16 v0, 0x18
+
+    aput-object v29, v6, v0
+
+    const/16 v0, 0x19
+
+    aput-object v30, v6, v0
+
+    const/16 v0, 0x1a
+
+    aput-object v31, v6, v0
+
+    const/16 v0, 0x1b
+
+    aput-object v16, v6, v0
+
+    const/16 v0, 0x1c
+
+    aput-object v32, v6, v0
+
+    const/16 v0, 0x1d
+
+    aput-object v33, v6, v0
+
+    const/16 v0, 0x1e
+
+    aput-object v3, v6, v0
+
+    .line 32
     sput-object v6, Lcom/fasterxml/jackson/databind/MapperFeature;->$VALUES:[Lcom/fasterxml/jackson/databind/MapperFeature;
 
     return-void

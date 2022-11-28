@@ -37,7 +37,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/y;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/y;
 
     sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource;->a:Lcom/google/common/base/Predicate;
 

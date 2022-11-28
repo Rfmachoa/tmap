@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/car/app/navigation/NavigationManager;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)V
+    value = Landroidx/car/app/navigation/NavigationManager;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,7 +49,7 @@
     .line 1
     iget-object p1, p0, Landroidx/car/app/navigation/NavigationManager$2;->b:Landroidx/car/app/navigation/NavigationManager;
 
-    invoke-virtual {p1}, Landroidx/car/app/navigation/NavigationManager;->t()V
+    invoke-virtual {p1}, Landroidx/car/app/navigation/NavigationManager;->u()V
 
     .line 2
     iget-object p1, p0, Landroidx/car/app/navigation/NavigationManager$2;->a:Landroidx/lifecycle/Lifecycle;

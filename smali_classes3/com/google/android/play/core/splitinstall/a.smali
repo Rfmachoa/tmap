@@ -593,19 +593,19 @@
 
     const-string v2, ", moduleNamesNullable="
 
-    invoke-static {v0, v1, v6, v7, v2}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v0, v1, v6, v7, v2}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     const-string v1, ", languagesNullable="
 
     const-string v2, ", resolutionIntent="
 
-    invoke-static {v0, v8, v1, v9, v2}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v8, v1, v9, v2}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, ", splitFileIntents="
 
     const-string v2, "}"
 
-    invoke-static {v0, v10, v1, v11, v2}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v10, v1, v11, v2}, Landroidx/core/util/m;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

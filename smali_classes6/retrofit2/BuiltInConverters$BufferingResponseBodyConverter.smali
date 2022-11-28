@@ -100,5 +100,6 @@
 
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
+    .line 4
     throw v0
 .end method

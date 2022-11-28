@@ -75,7 +75,7 @@
 
     move-result p2
 
-    const v0, 0x7f0a02ac
+    const v0, 0x7f0a02e0
 
     if-ne p2, v0, :cond_1
 
@@ -84,13 +84,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string p2, "scroll.day"
 
-    invoke-virtual {p1, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -100,7 +100,7 @@
 
     move-result p1
 
-    const p2, 0x7f0a0b0a
+    const p2, 0x7f0a0b87
 
     if-ne p1, p2, :cond_2
 
@@ -109,13 +109,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string p2, "scroll.hour"
 
-    invoke-virtual {p1, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     :cond_2
     :goto_0

@@ -54,24 +54,24 @@
     .line 1
     iget-object v0, p0, Lcom/skt/bugAgent/core/BugSendService$e;->a:Lcom/skt/bugAgent/core/BugSendService;
 
-    new-instance v1, Lbb/a;
+    new-instance v1, Lyc/a;
 
     const-string v2, "211.234.248.231 "
 
     const/16 v3, 0x1f43
 
-    invoke-direct {v1, v2, v3}, Lbb/a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v2, v3}, Lyc/a;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v0, v1}, Lcom/skt/bugAgent/core/BugSendService;->e(Lcom/skt/bugAgent/core/BugSendService;Lbb/a;)V
+    invoke-static {v0, v1}, Lcom/skt/bugAgent/core/BugSendService;->g(Lcom/skt/bugAgent/core/BugSendService;Lyc/a;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/bugAgent/core/BugSendService$e;->a:Lcom/skt/bugAgent/core/BugSendService;
 
-    invoke-static {v0}, Lcom/skt/bugAgent/core/BugSendService;->o(Lcom/skt/bugAgent/core/BugSendService;)Lbb/a;
+    invoke-static {v0}, Lcom/skt/bugAgent/core/BugSendService;->o(Lcom/skt/bugAgent/core/BugSendService;)Lyc/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lbb/a;->f()I
+    invoke-virtual {v0}, Lyc/a;->f()I
 
     move-result v0
 

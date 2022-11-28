@@ -1,4 +1,4 @@
-.class public interface abstract Landroidx/camera/core/ImageCapture$q;
+.class public Landroidx/camera/core/ImageCapture$q;
 .super Ljava/lang/Object;
 .source "ImageCapture.java"
 
@@ -9,38 +9,44 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x9
     name = "q"
 .end annotation
 
 
-# virtual methods
-.method public abstract a(Landroidx/camera/core/ImageCapture$s;)V
-    .param p1    # Landroidx/camera/core/ImageCapture$s;
-        .annotation build Landroidx/annotation/NonNull;
+# instance fields
+.field public a:Landroid/net/Uri;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;)V
+    .locals 0
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "outputFileResults"
-        }
-    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Landroidx/camera/core/ImageCapture$q;->a:Landroid/net/Uri;
+
+    return-void
 .end method
 
-.method public abstract b(Landroidx/camera/core/ImageCaptureException;)V
-    .param p1    # Landroidx/camera/core/ImageCaptureException;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "exception"
-        }
+
+# virtual methods
+.method public a()Landroid/net/Uri;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/ImageCapture$q;->a:Landroid/net/Uri;
+
+    return-object v0
 .end method

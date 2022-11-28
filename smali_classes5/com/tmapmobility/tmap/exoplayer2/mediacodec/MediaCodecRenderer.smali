@@ -17,43 +17,43 @@
 
 
 # static fields
-.field public static final A2:I = 0x2
+.field public static final A2:I = 0x0
 
-.field public static final B2:[B
+.field public static final B2:I = 0x1
 
-.field public static final C2:I = 0x20
+.field public static final C2:I = 0x2
 
-.field public static final k2:F = -1.0f
+.field public static final D2:[B
 
-.field public static final l2:Ljava/lang/String; = "MediaCodecRenderer"
+.field public static final E2:I = 0x20
 
-.field public static final m2:J = 0x3e8L
+.field public static final m2:F = -1.0f
 
-.field public static final n2:I = 0xa
+.field public static final n2:Ljava/lang/String; = "MediaCodecRenderer"
 
-.field public static final o2:I = 0x0
+.field public static final o2:J = 0x3e8L
 
-.field public static final p2:I = 0x1
+.field public static final p2:I = 0xa
 
-.field public static final q2:I = 0x2
+.field public static final q2:I = 0x0
 
-.field public static final r2:I = 0x0
+.field public static final r2:I = 0x1
 
-.field public static final s2:I = 0x1
+.field public static final s2:I = 0x2
 
-.field public static final t2:I = 0x2
+.field public static final t2:I = 0x0
 
-.field public static final u2:I = 0x0
+.field public static final u2:I = 0x1
 
-.field public static final v2:I = 0x1
+.field public static final v2:I = 0x2
 
-.field public static final w2:I = 0x2
+.field public static final w2:I = 0x0
 
-.field public static final x2:I = 0x3
+.field public static final x2:I = 0x1
 
-.field public static final y2:I = 0x0
+.field public static final y2:I = 0x2
 
-.field public static final z2:I = 0x1
+.field public static final z2:I = 0x3
 
 
 # instance fields
@@ -73,27 +73,27 @@
 
 .field public H1:Z
 
-.field public I1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field public I1:Z
 
-.field public J1:J
+.field public J1:Z
 
 .field public final K0:Z
 
-.field public K1:I
-
-.field public L1:I
-
-.field public M1:Ljava/nio/ByteBuffer;
+.field public K1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public N1:Z
+.field public L1:J
 
-.field public O1:Z
+.field public M1:I
+
+.field public N1:I
+
+.field public O1:Ljava/nio/ByteBuffer;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field public P1:Z
 
@@ -103,43 +103,47 @@
 
 .field public S1:Z
 
-.field public T1:I
+.field public T1:Z
 
-.field public U1:I
-
-.field public final V0:F
+.field public U1:Z
 
 .field public V1:I
 
-.field public final W0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+.field public W1:I
 
-.field public W1:Z
+.field public final X0:F
 
-.field public final X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
-
-.field public X1:Z
+.field public X1:I
 
 .field public final Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
 .field public Y1:Z
 
-.field public final Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+.field public final Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-.field public Z1:J
+.field public Z1:Z
 
-.field public final a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+.field public final a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+
+.field public a2:Z
+
+.field public final b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+
+.field public b2:J
+
+.field public final c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/tmapmobility/tmap/exoplayer2/util/h0<",
+            "Lcom/tmapmobility/tmap/exoplayer2/util/i0<",
             "Lcom/tmapmobility/tmap/exoplayer2/Format;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public a2:J
+.field public c2:J
 
-.field public final b1:Ljava/util/ArrayList;
+.field public final d1:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -149,92 +153,92 @@
     .end annotation
 .end field
 
-.field public b2:Z
-
-.field public final c1:Landroid/media/MediaCodec$BufferInfo;
-
-.field public c2:Z
-
-.field public final d1:[J
-
 .field public d2:Z
 
-.field public final e1:[J
+.field public final e1:Landroid/media/MediaCodec$BufferInfo;
 
 .field public e2:Z
 
 .field public final f1:[J
 
-.field public f2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+.field public f2:Z
+
+.field public final g1:[J
+
+.field public g2:Z
+
+.field public final h1:[J
+
+.field public h2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+.field public i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public g2:Lvd/f;
+.field public i2:Lyf/f;
 
-.field public h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+.field public j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public h2:J
-
-.field public i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public i2:J
-
-.field public j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public j2:I
+.field public j2:J
 
 .field public final k0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/m;
 
-.field public k1:Landroid/media/MediaCrypto;
+.field public k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public l1:Z
+.field public k2:J
 
-.field public m1:J
-
-.field public n1:F
-
-.field public o1:F
-
-.field public p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+.field public l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+.field public l2:I
+
+.field public m1:Landroid/media/MediaCrypto;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public r1:Landroid/media/MediaFormat;
+.field public n1:Z
+
+.field public o1:J
+
+.field public p1:F
+
+.field public q1:F
+
+.field public r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public s1:Z
+.field public s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field public t1:F
+.field public t1:Landroid/media/MediaFormat;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field public final u:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$b;
 
-.field public u1:Ljava/util/ArrayDeque;
+.field public u1:Z
+
+.field public v1:F
+
+.field public w1:Ljava/util/ArrayDeque;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -247,21 +251,17 @@
     .end annotation
 .end field
 
-.field public v1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
+.field public x1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public w1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
+.field public y1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public x1:I
-
-.field public y1:Z
-
-.field public z1:Z
+.field public z1:I
 
 
 # direct methods
@@ -275,7 +275,7 @@
     .line 1
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B2:[B
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D2:[B
 
     return-void
 
@@ -344,14 +344,14 @@
     iput-boolean p4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K0:Z
 
     .line 5
-    iput p5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V0:F
+    iput p5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:F
 
     .line 6
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->n()Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->o()Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     .line 7
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
@@ -360,7 +360,7 @@
 
     invoke-direct {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;-><init>(I)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     .line 8
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
@@ -369,74 +369,74 @@
 
     invoke-direct {p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;-><init>(I)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     .line 9
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     .line 10
-    new-instance p3, Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    new-instance p3, Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
-    invoke-direct {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/h0;-><init>()V
+    invoke-direct {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;-><init>()V
 
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
     .line 11
     new-instance p3, Ljava/util/ArrayList;
 
     invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Ljava/util/ArrayList;
+    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:Ljava/util/ArrayList;
 
     .line 12
     new-instance p3, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {p3}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     const/high16 p3, 0x3f800000    # 1.0f
 
     .line 13
-    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n1:F
+    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:F
 
     .line 14
-    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:F
+    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:F
 
     const-wide p3, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 15
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:J
+    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:J
 
     const/16 p5, 0xa
 
     new-array v0, p5, [J
 
     .line 16
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:[J
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
 
     new-array v0, p5, [J
 
     .line 17
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
     new-array p5, p5, [J
 
     .line 18
-    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
+    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:[J
 
     .line 19
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:J
+    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:J
 
     .line 20
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     .line 21
-    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->k(I)V
+    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->l(I)V
 
     .line 22
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
@@ -450,36 +450,36 @@
     const/high16 p1, -0x40800000    # -1.0f
 
     .line 23
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:F
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:F
 
     .line 24
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:I
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:I
 
     .line 25
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     const/4 p1, -0x1
 
     .line 26
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     .line 27
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
     .line 28
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:J
+    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:J
 
     .line 29
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     .line 30
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:J
+    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:J
 
     .line 31
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     .line 32
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     return-void
 .end method
@@ -497,7 +497,7 @@
     .end annotation
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     const/4 v1, 0x1
 
@@ -512,7 +512,7 @@
     if-eq v0, v2, :cond_0
 
     .line 2
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     .line 3
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P0()V
@@ -546,7 +546,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -585,7 +585,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -600,7 +600,7 @@
 
     if-eqz p0, :cond_1
 
-    sget-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c:Ljava/lang/String;
+    sget-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c:Ljava/lang/String;
 
     const-string v0, "samsung"
 
@@ -611,7 +611,7 @@
 
     if-eqz p0, :cond_1
 
-    sget-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->b:Ljava/lang/String;
+    sget-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->b:Ljava/lang/String;
 
     const-string v0, "baffin"
 
@@ -683,7 +683,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x17
 
@@ -702,7 +702,7 @@
 
     if-gt v0, v1, :cond_3
 
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->b:Ljava/lang/String;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->b:Ljava/lang/String;
 
     const-string v1, "hb2000"
 
@@ -756,7 +756,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -788,7 +788,7 @@
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;->a:Ljava/lang/String;
 
     .line 2
-    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v2, 0x19
 
@@ -840,7 +840,7 @@
     if-nez v0, :cond_3
 
     :cond_2
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c:Ljava/lang/String;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c:Ljava/lang/String;
 
     const-string v1, "Amazon"
 
@@ -851,7 +851,7 @@
 
     if-eqz v0, :cond_4
 
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->d:Ljava/lang/String;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->d:Ljava/lang/String;
 
     const-string v1, "AFTS"
 
@@ -881,7 +881,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x12
 
@@ -911,7 +911,7 @@
 
     if-ne v0, v1, :cond_1
 
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->d:Ljava/lang/String;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->d:Ljava/lang/String;
 
     const-string v1, "SM-G800"
 
@@ -958,7 +958,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/4 v1, 0x1
 
@@ -966,7 +966,7 @@
 
     if-gt v0, v2, :cond_0
 
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->d1:I
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->f1:I
 
     if-ne p1, v1, :cond_0
 
@@ -992,7 +992,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x1d
 
@@ -1025,12 +1025,12 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->a(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
 
     .line 2
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     return-void
 .end method
@@ -1044,19 +1044,19 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1b
 
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     const/4 v2, 0x2
 
     if-eq v0, v2, :cond_1b
 
-    iget-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iget-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     if-eqz v3, :cond_0
 
@@ -1077,18 +1077,18 @@
 
     .line 4
     :cond_1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     if-gez v0, :cond_3
 
     .line 5
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->k()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     if-gez v0, :cond_2
 
@@ -1096,31 +1096,31 @@
 
     .line 6
     :cond_2
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    invoke-interface {v4, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->c(I)Ljava/nio/ByteBuffer;
+    invoke-interface {v4, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->b(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, v3, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
     .line 7
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 8
     :cond_3
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     const/4 v3, 0x1
 
     if-ne v0, v3, :cond_5
 
     .line 9
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:Z
 
     if-eqz v0, :cond_4
 
@@ -1128,12 +1128,12 @@
 
     .line 10
     :cond_4
-    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:Z
+    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:Z
 
     .line 11
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     const/4 v6, 0x0
 
@@ -1143,39 +1143,39 @@
 
     const/4 v10, 0x4
 
-    invoke-interface/range {v4 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->g(IIIJI)V
+    invoke-interface/range {v4 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->f(IIIJI)V
 
     .line 12
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S0()V
 
     .line 13
     :goto_0
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     return v1
 
     .line 14
     :cond_5
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
 
     if-eqz v0, :cond_6
 
     .line 15
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
 
     .line 16
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B2:[B
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D2:[B
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     .line 17
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     const/4 v6, 0x0
 
@@ -1185,19 +1185,19 @@
 
     const/4 v10, 0x0
 
-    invoke-interface/range {v4 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->g(IIIJI)V
+    invoke-interface/range {v4 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->f(IIIJI)V
 
     .line 18
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S0()V
 
     .line 19
-    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     return v3
 
     .line 20
     :cond_6
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     if-ne v0, v3, :cond_8
 
@@ -1205,7 +1205,7 @@
 
     .line 21
     :goto_1
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v4, v4, Lcom/tmapmobility/tmap/exoplayer2/Format;->u:Ljava/util/List;
 
@@ -1216,7 +1216,7 @@
     if-ge v0, v4, :cond_7
 
     .line 22
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v4, v4, Lcom/tmapmobility/tmap/exoplayer2/Format;->u:Ljava/util/List;
 
@@ -1227,7 +1227,7 @@
     check-cast v4, [B
 
     .line 23
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object v5, v5, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
@@ -1239,11 +1239,11 @@
 
     .line 24
     :cond_7
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 25
     :cond_8
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
@@ -1258,7 +1258,7 @@
 
     .line 27
     :try_start_0
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p0, v4, v5, v1}, Lcom/tmapmobility/tmap/exoplayer2/f;->F(Lcom/tmapmobility/tmap/exoplayer2/f2;Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;I)I
 
@@ -1274,9 +1274,9 @@
     if-eqz v6, :cond_9
 
     .line 29
-    iget-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iget-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
-    iput-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:J
+    iput-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:J
 
     :cond_9
     const/4 v6, -0x3
@@ -1291,17 +1291,17 @@
     if-ne v5, v6, :cond_c
 
     .line 30
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     if-ne v0, v2, :cond_b
 
     .line 31
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 32
-    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 33
     :cond_b
@@ -1311,33 +1311,33 @@
 
     .line 34
     :cond_c
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v4}, Lvd/a;->g()Z
+    invoke-virtual {v4}, Lyf/a;->g()Z
 
     move-result v4
 
     if-eqz v4, :cond_10
 
     .line 35
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     if-ne v0, v2, :cond_d
 
     .line 36
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 37
-    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 38
     :cond_d
-    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     .line 39
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     if-nez v0, :cond_e
 
@@ -1349,7 +1349,7 @@
     .line 41
     :cond_e
     :try_start_1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:Z
 
     if-eqz v0, :cond_f
 
@@ -1357,12 +1357,12 @@
 
     .line 42
     :cond_f
-    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:Z
+    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:Z
 
     .line 43
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     const/4 v6, 0x0
 
@@ -1372,7 +1372,7 @@
 
     const/4 v10, 0x4
 
-    invoke-interface/range {v4 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->g(IIIJI)V
+    invoke-interface/range {v4 .. v10}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->f(IIIJI)V
 
     .line 44
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S0()V
@@ -1386,14 +1386,14 @@
     move-exception v0
 
     .line 45
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 46
     invoke-virtual {v0}, Landroid/media/MediaCodec$CryptoException;->getErrorCode()I
 
     move-result v2
 
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->f0(I)I
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->f0(I)I
 
     move-result v2
 
@@ -1406,68 +1406,68 @@
 
     .line 48
     :cond_10
-    iget-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iget-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     if-nez v4, :cond_12
 
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v4}, Lvd/a;->h()Z
+    invoke-virtual {v4}, Lyf/a;->i()Z
 
     move-result v4
 
     if-nez v4, :cond_12
 
     .line 49
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 50
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     if-ne v0, v2, :cond_11
 
     .line 51
-    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     :cond_11
     return v3
 
     .line 52
     :cond_12
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->m()Z
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->n()Z
 
     move-result v2
 
     if-eqz v2, :cond_13
 
     .line 53
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    iget-object v4, v4, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->c:Lvd/d;
+    iget-object v4, v4, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->c:Lyf/d;
 
-    invoke-virtual {v4, v0}, Lvd/d;->b(I)V
+    invoke-virtual {v4, v0}, Lyf/d;->b(I)V
 
     .line 54
     :cond_13
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A1:Z
 
     if-eqz v0, :cond_15
 
     if-nez v2, :cond_15
 
     .line 55
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->b(Ljava/nio/ByteBuffer;)V
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/y;->b(Ljava/nio/ByteBuffer;)V
 
     .line 56
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
@@ -1481,21 +1481,21 @@
 
     .line 57
     :cond_14
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A1:Z
 
     .line 58
     :cond_15
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-wide v4, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->f:J
 
     .line 59
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
 
     if-eqz v6, :cond_16
 
     .line 60
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 61
     invoke-virtual {v6, v4, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;->d(Lcom/tmapmobility/tmap/exoplayer2/Format;Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)J
@@ -1503,11 +1503,11 @@
     move-result-wide v4
 
     .line 62
-    iget-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iget-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
 
-    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 63
     invoke-virtual {v0, v8}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;->b(Lcom/tmapmobility/tmap/exoplayer2/Format;)J
@@ -1519,22 +1519,22 @@
 
     move-result-wide v6
 
-    iput-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iput-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     :cond_16
     move-wide v12, v4
 
     .line 65
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v0}, Lvd/a;->f()Z
+    invoke-virtual {v0}, Lyf/a;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_17
 
     .line 66
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:Ljava/util/ArrayList;
 
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1544,52 +1544,52 @@
 
     .line 67
     :cond_17
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Z
 
     if-eqz v0, :cond_18
 
     .line 68
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    invoke-virtual {v0, v12, v13, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/h0;->a(JLjava/lang/Object;)V
+    invoke-virtual {v0, v12, v13, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->a(JLjava/lang/Object;)V
 
     .line 69
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Z
 
     .line 70
     :cond_18
-    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     invoke-static {v4, v5, v12, v13}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v4
 
-    iput-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iput-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     .line 71
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->l()V
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->m()V
 
     .line 72
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v0}, Lvd/a;->e()Z
+    invoke-virtual {v0}, Lyf/a;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_19
 
     .line 73
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r0(Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)V
 
     .line 74
     :cond_19
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I0(Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)V
 
@@ -1597,31 +1597,31 @@
 
     .line 75
     :try_start_2
-    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget v9, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iget v9, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     const/4 v10, 0x0
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    iget-object v11, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->c:Lvd/d;
+    iget-object v11, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->c:Lyf/d;
 
     const/4 v14, 0x0
 
-    invoke-interface/range {v8 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->b(IILvd/d;JI)V
+    invoke-interface/range {v8 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->g(IILyf/d;JI)V
 
     goto :goto_3
 
     .line 76
     :cond_1a
-    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget v9, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iget v9, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     const/4 v10, 0x0
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
@@ -1633,7 +1633,7 @@
     const/4 v14, 0x0
 
     .line 78
-    invoke-interface/range {v8 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->g(IIIJI)V
+    invoke-interface/range {v8 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->f(IIIJI)V
     :try_end_2
     .catch Landroid/media/MediaCodec$CryptoException; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -1642,19 +1642,19 @@
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S0()V
 
     .line 80
-    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     .line 81
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 82
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Lvd/f;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:Lyf/f;
 
-    iget v1, v0, Lvd/f;->c:I
+    iget v1, v0, Lyf/f;->c:I
 
     add-int/2addr v1, v3
 
-    iput v1, v0, Lvd/f;->c:I
+    iput v1, v0, Lyf/f;->c:I
 
     return v3
 
@@ -1662,14 +1662,14 @@
     move-exception v0
 
     .line 83
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 84
     invoke-virtual {v0}, Landroid/media/MediaCodec$CryptoException;->getErrorCode()I
 
     move-result v2
 
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->f0(I)I
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->f0(I)I
 
     move-result v2
 
@@ -1703,7 +1703,7 @@
     .locals 1
 
     .line 1
-    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/Format;->j1:I
+    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/Format;->l1:I
 
     if-eqz p0, :cond_1
 
@@ -1730,7 +1730,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/4 v1, 0x1
 
@@ -1833,31 +1833,31 @@
     const/4 p1, 0x0
 
     .line 1
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     .line 2
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
-
-    .line 3
     iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
+    .line 3
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Z
+
     .line 4
-    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     if-eqz p2, :cond_0
 
     .line 5
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->b()V
 
     .line 6
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 7
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
 
     goto :goto_0
 
@@ -1867,9 +1867,9 @@
 
     .line 9
     :goto_0
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/h0;->l()I
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->l()I
 
     move-result p2
 
@@ -1878,39 +1878,39 @@
     if-lez p2, :cond_1
 
     .line 10
-    iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
+    iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Z
 
     .line 11
     :cond_1
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/h0;->c()V
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->c()V
 
     .line 12
-    iget p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     if-eqz p2, :cond_2
 
     .line 13
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
     add-int/lit8 v1, p2, -0x1
 
     aget-wide v1, v0, v1
 
-    iput-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iput-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     .line 14
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:[J
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
 
     sub-int/2addr p2, p3
 
     aget-wide p2, v0, p2
 
-    iput-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:J
+    iput-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:J
 
     .line 15
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     :cond_2
     return-void
@@ -1925,7 +1925,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     const/4 v1, 0x0
 
@@ -1942,7 +1942,7 @@
 
     invoke-direct {v2}, Ljava/util/ArrayDeque;-><init>()V
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     .line 4
     iget-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K0:Z
@@ -1963,7 +1963,7 @@
     if-nez v2, :cond_1
 
     .line 7
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     const/4 v3, 0x0
 
@@ -1978,7 +1978,7 @@
     .line 8
     :cond_1
     :goto_0
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
     :try_end_0
     .catch Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1990,7 +1990,7 @@
     .line 9
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const v2, -0xc34e
 
@@ -2001,7 +2001,7 @@
     .line 10
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
@@ -2010,7 +2010,7 @@
     if-nez v0, :cond_8
 
     .line 11
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->peekFirst()Ljava/lang/Object;
 
@@ -2020,12 +2020,12 @@
 
     .line 12
     :goto_2
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-nez v2, :cond_7
 
     .line 13
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     invoke-virtual {v2}, Ljava/util/ArrayDeque;->peekFirst()Ljava/lang/Object;
 
@@ -2062,7 +2062,7 @@
     const-string v3, "Preferred decoder instantiation failed. Sleeping for 50ms then retrying."
 
     .line 16
-    invoke-static {v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v5, 0x32
 
@@ -2098,17 +2098,17 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v4, v5, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 21
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     invoke-virtual {v4}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
     .line 22
     new-instance v4, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-direct {v4, v5, v3, p2, v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/Throwable;ZLcom/tmapmobility/tmap/exoplayer2/mediacodec/k;)V
 
@@ -2116,12 +2116,12 @@
     invoke-virtual {p0, v4}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B0(Ljava/lang/Exception;)V
 
     .line 24
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
     if-nez v2, :cond_5
 
     .line 25
-    iput-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
+    iput-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
     goto :goto_3
 
@@ -2131,11 +2131,11 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
     .line 27
     :goto_3
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     invoke-virtual {v2}, Ljava/util/ArrayDeque;->isEmpty()Z
 
@@ -2147,13 +2147,13 @@
 
     .line 28
     :cond_6
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
     throw p1
 
     .line 29
     :cond_7
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     return-void
 
@@ -2161,7 +2161,7 @@
     :cond_8
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const v2, -0xc34f
 
@@ -2237,7 +2237,7 @@
     .end annotation
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -2248,7 +2248,7 @@
     if-nez p1, :cond_1
 
     .line 2
-    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:J
+    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:J
 
     cmp-long p1, v4, v2
 
@@ -2263,18 +2263,18 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 3
-    iput-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:J
+    iput-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:J
 
     .line 4
-    iput-wide p4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iput-wide p4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     goto :goto_2
 
     .line 5
     :cond_1
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
     array-length v1, v1
 
@@ -2287,9 +2287,9 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     sub-int/2addr v2, v0
 
@@ -2303,7 +2303,7 @@
 
     const-string v1, "MediaCodecRenderer"
 
-    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -2311,31 +2311,31 @@
     add-int/2addr p1, v0
 
     .line 7
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     .line 8
     :goto_1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:[J
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     add-int/lit8 v2, v1, -0x1
 
     aput-wide p2, p1, v2
 
     .line 9
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
     add-int/lit8 p2, v1, -0x1
 
     aput-wide p4, p1, p2
 
     .line 10
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:[J
 
     sub-int/2addr v1, v0
 
-    iget-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iget-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     aput-wide p2, p1, v1
 
@@ -2360,7 +2360,7 @@
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Z
 
     .line 2
     iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/f2;->b:Lcom/tmapmobility/tmap/exoplayer2/Format;
@@ -2384,28 +2384,28 @@
     invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
 
     .line 5
-    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 6
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     const/4 v1, 0x0
 
     if-eqz p1, :cond_0
 
     .line 7
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:Z
 
     return-object v1
 
     .line 8
     :cond_0
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-nez p1, :cond_1
 
     .line 9
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     .line 10
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z0()V
@@ -2414,15 +2414,15 @@
 
     .line 11
     :cond_1
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
 
     .line 12
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 13
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-virtual {p0, v1, v5, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a0(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;Lcom/tmapmobility/tmap/exoplayer2/Format;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Z
 
@@ -2450,9 +2450,9 @@
 
     .line 16
     :cond_2
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     const/4 v6, 0x0
 
@@ -2469,7 +2469,7 @@
     if-eqz v2, :cond_5
 
     .line 17
-    sget v3, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v3, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v7, 0x17
 
@@ -2522,7 +2522,7 @@
 
     .line 21
     :cond_6
-    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-eqz v2, :cond_10
 
@@ -2555,27 +2555,27 @@
 
     .line 25
     :cond_9
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:Z
 
     .line 26
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 27
-    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:I
+    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:I
 
     if-eq v7, v10, :cond_b
 
     if-ne v7, v0, :cond_a
 
-    iget v7, v5, Lcom/tmapmobility/tmap/exoplayer2/Format;->V0:I
+    iget v7, v5, Lcom/tmapmobility/tmap/exoplayer2/Format;->X0:I
 
-    iget v9, v4, Lcom/tmapmobility/tmap/exoplayer2/Format;->V0:I
+    iget v9, v4, Lcom/tmapmobility/tmap/exoplayer2/Format;->X0:I
 
     if-ne v7, v9, :cond_a
 
-    iget v7, v5, Lcom/tmapmobility/tmap/exoplayer2/Format;->W0:I
+    iget v7, v5, Lcom/tmapmobility/tmap/exoplayer2/Format;->Y0:I
 
-    iget v9, v4, Lcom/tmapmobility/tmap/exoplayer2/Format;->W0:I
+    iget v9, v4, Lcom/tmapmobility/tmap/exoplayer2/Format;->Y0:I
 
     if-ne v7, v9, :cond_a
 
@@ -2586,10 +2586,10 @@
 
     :cond_b
     :goto_3
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
 
     .line 28
-    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-eqz v2, :cond_10
 
@@ -2617,7 +2617,7 @@
 
     .line 31
     :cond_d
-    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-eqz v2, :cond_e
 
@@ -2656,11 +2656,11 @@
 
     if-eqz v0, :cond_12
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-ne v0, p1, :cond_11
 
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     if-ne p1, v8, :cond_12
 
@@ -2718,11 +2718,11 @@
 
     .line 1
     :goto_0
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:[J
 
     const/4 v2, 0x0
 
@@ -2733,23 +2733,23 @@
     if-ltz v1, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:[J
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
 
     aget-wide v3, v1, v2
 
-    iput-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:J
+    iput-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:J
 
     .line 3
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
     aget-wide v4, v3, v2
 
-    iput-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iput-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     add-int/lit8 v0, v0, -0x1
 
     .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     const/4 v3, 0x1
 
@@ -2757,16 +2757,16 @@
     invoke-static {v1, v3, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 6
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:[J
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:[J
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     invoke-static {v0, v3, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 7
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f1:[J
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:[J
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     invoke-static {v0, v3, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -2794,7 +2794,7 @@
     .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     const/4 v1, 0x1
 
@@ -2808,18 +2808,18 @@
     move-result-object v0
 
     .line 3
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 4
     :cond_0
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 5
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     const/4 v3, 0x0
 
@@ -2851,27 +2851,27 @@
 
     .line 7
     :cond_2
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v2}, Lvd/a;->g()Z
+    invoke-virtual {v2}, Lyf/a;->g()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
     .line 8
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     return-void
 
     .line 9
     :cond_3
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Z
 
     if-eqz v2, :cond_4
 
     .line 10
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2879,7 +2879,7 @@
 
     check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/4 v4, 0x0
 
@@ -2887,27 +2887,27 @@
     invoke-virtual {p0, v2, v4}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F0(Lcom/tmapmobility/tmap/exoplayer2/Format;Landroid/media/MediaFormat;)V
 
     .line 12
-    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
+    iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Z
 
     .line 13
     :cond_4
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->l()V
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->m()V
 
     .line 14
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->p(Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)Z
+    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->q(Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
     .line 15
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
 
     return-void
 
@@ -2940,7 +2940,7 @@
     move-object/from16 v15, p0
 
     .line 1
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     const/4 v14, 0x1
 
@@ -2949,9 +2949,9 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 2
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->u()Z
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->v()Z
 
     move-result v0
 
@@ -2962,41 +2962,41 @@
     const/4 v5, 0x0
 
     .line 3
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     iget-object v6, v0, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->d:Ljava/nio/ByteBuffer;
 
-    iget v7, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iget v7, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
     const/4 v8, 0x0
 
     .line 4
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->t()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->u()I
 
     move-result v9
 
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     .line 5
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->r()J
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->s()J
 
     move-result-wide v10
 
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     .line 6
-    invoke-virtual {v0}, Lvd/a;->f()Z
+    invoke-virtual {v0}, Lyf/a;->f()Z
 
     move-result v12
 
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     .line 7
-    invoke-virtual {v0}, Lvd/a;->g()Z
+    invoke-virtual {v0}, Lyf/a;->g()Z
 
     move-result v16
 
-    iget-object v3, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v3, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     move-object/from16 v0, p0
 
@@ -3018,16 +3018,16 @@
     if-eqz v0, :cond_0
 
     .line 9
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->s()J
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->t()J
 
     move-result-wide v0
 
     invoke-virtual {v15, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G0(J)V
 
     .line 10
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->b()V
 
@@ -3045,14 +3045,14 @@
 
     .line 11
     :goto_0
-    iget-boolean v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iget-boolean v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     if-eqz v1, :cond_2
 
     const/4 v1, 0x1
 
     .line 12
-    iput-boolean v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iput-boolean v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     return v0
 
@@ -3060,34 +3060,34 @@
     const/4 v1, 0x1
 
     .line 13
-    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
+    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
 
     if-eqz v2, :cond_3
 
     .line 14
-    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    iget-object v3, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v3, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->p(Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)Z
+    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->q(Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;)Z
 
     move-result v2
 
     invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
     .line 15
-    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
+    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
 
     .line 16
     :cond_3
-    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
+    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:Z
 
     if-eqz v2, :cond_5
 
     .line 17
-    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->u()Z
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->v()Z
 
     move-result v2
 
@@ -3100,13 +3100,13 @@
     invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V()V
 
     .line 19
-    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
+    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:Z
 
     .line 20
     invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z0()V
 
     .line 21
-    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     if-nez v2, :cond_5
 
@@ -3117,34 +3117,34 @@
     invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I()V
 
     .line 23
-    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->u()Z
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->v()Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
     .line 24
-    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->l()V
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->m()V
 
     .line 25
     :cond_6
-    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->u()Z
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->v()Z
 
     move-result v2
 
     if-nez v2, :cond_8
 
-    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     if-nez v2, :cond_8
 
-    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
+    iget-boolean v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:Z
 
     if-eqz v2, :cond_7
 
@@ -3206,7 +3206,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x19
 
@@ -3221,7 +3221,7 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->d:Ljava/lang/String;
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->d:Ljava/lang/String;
 
     const-string v2, "SM-T585"
 
@@ -3287,7 +3287,7 @@
     if-eqz p1, :cond_4
 
     :cond_2
-    sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->b:Ljava/lang/String;
+    sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->b:Ljava/lang/String;
 
     const-string v0, "flounder"
 
@@ -3342,17 +3342,17 @@
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:Z
 
     .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->a()Landroid/media/MediaFormat;
 
     move-result-object v1
 
     .line 3
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:I
 
     if-eqz v2, :cond_0
 
@@ -3377,13 +3377,13 @@
     if-ne v2, v3, :cond_0
 
     .line 6
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Z
 
     return-void
 
     .line 7
     :cond_0
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->E1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
 
     if-eqz v2, :cond_1
 
@@ -3394,10 +3394,10 @@
 
     .line 9
     :cond_1
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Landroid/media/MediaFormat;
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:Landroid/media/MediaFormat;
 
     .line 10
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Z
 
     return-void
 .end method
@@ -3416,12 +3416,12 @@
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     or-int/lit8 p1, p1, 0x4
 
@@ -3446,16 +3446,16 @@
     if-ne p1, v0, :cond_1
 
     .line 5
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
-    invoke-virtual {p1}, Lvd/a;->g()Z
+    invoke-virtual {p1}, Lyf/a;->g()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 6
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     .line 7
     invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J0()V
@@ -3490,7 +3490,7 @@
 
     .line 1
     :try_start_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-eqz v1, :cond_0
 
@@ -3498,16 +3498,16 @@
     invoke-interface {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->release()V
 
     .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Lvd/f;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:Lyf/f;
 
-    iget v2, v1, Lvd/f;->b:I
+    iget v2, v1, Lyf/f;->b:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, v1, Lvd/f;->b:I
+    iput v2, v1, Lyf/f;->b:I
 
     .line 4
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
 
     iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;->a:Ljava/lang/String;
 
@@ -3517,11 +3517,11 @@
 
     .line 5
     :cond_0
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     .line 6
     :try_start_1
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     if-eqz v1, :cond_1
 
@@ -3532,7 +3532,7 @@
 
     .line 8
     :cond_1
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     .line 9
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
@@ -3546,7 +3546,7 @@
     move-exception v1
 
     .line 11
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     .line 12
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
@@ -3561,11 +3561,11 @@
     move-exception v1
 
     .line 15
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     .line 16
     :try_start_2
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     if-eqz v2, :cond_2
 
@@ -3576,7 +3576,7 @@
 
     .line 18
     :cond_2
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     .line 19
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
@@ -3591,7 +3591,7 @@
     move-exception v1
 
     .line 22
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     .line 23
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
@@ -3628,41 +3628,41 @@
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 3
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:J
+    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:J
 
     const/4 v2, 0x0
 
     .line 4
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:Z
 
     .line 5
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     .line 6
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
 
     .line 7
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Z
 
     .line 8
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
 
     .line 9
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
 
     .line 10
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
     .line 11
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     .line 12
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:J
+    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:J
 
     .line 13
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
 
     if-eqz v0, :cond_0
 
@@ -3671,15 +3671,15 @@
 
     .line 15
     :cond_0
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     .line 16
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     .line 17
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:Z
 
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     return-void
 .end method
@@ -3695,71 +3695,71 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
 
     .line 3
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
 
     .line 4
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Ljava/util/ArrayDeque;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Ljava/util/ArrayDeque;
 
     .line 5
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
 
     .line 6
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 7
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Landroid/media/MediaFormat;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:Landroid/media/MediaFormat;
 
     const/4 v0, 0x0
 
     .line 8
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Z
 
     .line 9
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:Z
 
     const/high16 v1, -0x40800000    # -1.0f
 
     .line 10
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:F
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:F
 
     .line 11
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:I
 
     .line 12
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Z
-
-    .line 13
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:Z
-
-    .line 14
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A1:Z
 
-    .line 15
+    .line 13
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
 
-    .line 16
+    .line 14
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->C1:Z
 
-    .line 17
+    .line 15
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
 
-    .line 18
+    .line 16
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->E1:Z
 
+    .line 17
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
+
+    .line 18
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
+
     .line 19
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:Z
 
     .line 20
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:Z
 
     .line 21
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 22
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n1:Z
 
     return-void
 .end method
@@ -3770,10 +3770,10 @@
     const/4 v0, -0x1
 
     .line 1
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:I
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     const/4 v1, 0x0
 
@@ -3788,12 +3788,12 @@
     const/4 v0, -0x1
 
     .line 1
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:Ljava/nio/ByteBuffer;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Ljava/nio/ByteBuffer;
 
     return-void
 .end method
@@ -3821,12 +3821,12 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->a(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
 
     .line 2
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     return-void
 .end method
@@ -3837,23 +3837,23 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:Z
 
     .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->b()V
 
     .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y0:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 4
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
 
     .line 5
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     return-void
 .end method
@@ -3864,7 +3864,7 @@
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Z
 
     return-void
 .end method
@@ -3873,21 +3873,21 @@
     .locals 2
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_2
 
     .line 2
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     .line 3
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
 
     if-eqz v0, :cond_0
 
@@ -3895,7 +3895,7 @@
 
     .line 4
     :cond_0
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     goto :goto_1
 
@@ -3904,7 +3904,7 @@
     const/4 v0, 0x3
 
     .line 5
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     const/4 v0, 0x0
 
@@ -3919,7 +3919,7 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
 
     return-void
 .end method
@@ -3933,19 +3933,19 @@
     .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
     .line 2
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     const/4 v0, 0x3
 
     .line 3
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     goto :goto_0
 
@@ -3961,7 +3961,7 @@
     .locals 0
 
     .line 1
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:J
 
     return-void
 .end method
@@ -3979,21 +3979,21 @@
     .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_2
 
     .line 2
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     .line 3
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
 
     if-eqz v0, :cond_0
 
@@ -4003,7 +4003,7 @@
     const/4 v0, 0x2
 
     .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     goto :goto_1
 
@@ -4012,7 +4012,7 @@
     const/4 v0, 0x3
 
     .line 5
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     const/4 v0, 0x0
 
@@ -4048,19 +4048,19 @@
     if-nez v0, :cond_b
 
     .line 2
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->C1:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->E1:Z
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:Z
 
     if-eqz v0, :cond_1
 
     .line 3
     :try_start_0
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     invoke-interface {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->l(Landroid/media/MediaCodec$BufferInfo;)I
 
@@ -4075,7 +4075,7 @@
     invoke-direct/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J0()V
 
     .line 5
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     if-eqz v0, :cond_0
 
@@ -4087,9 +4087,9 @@
 
     .line 7
     :cond_1
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     invoke-interface {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->l(Landroid/media/MediaCodec$BufferInfo;)I
 
@@ -4109,15 +4109,15 @@
 
     .line 9
     :cond_2
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:Z
 
     if-eqz v0, :cond_4
 
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d2:Z
 
     if-nez v0, :cond_3
 
-    iget v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iget v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     const/4 v1, 0x2
 
@@ -4132,15 +4132,15 @@
 
     .line 11
     :cond_5
-    iget-boolean v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
+    iget-boolean v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Z
 
     if-eqz v1, :cond_6
 
     .line 12
-    iput-boolean v14, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
+    iput-boolean v14, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Z
 
     .line 13
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v1, v0, v14}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->m(IZ)V
 
@@ -4148,7 +4148,7 @@
 
     .line 14
     :cond_6
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget v2, v1, Landroid/media/MediaCodec$BufferInfo;->size:I
 
@@ -4167,30 +4167,30 @@
 
     .line 16
     :cond_7
-    iput v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iput v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
     .line 17
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->n(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    iput-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:Ljava/nio/ByteBuffer;
+    iput-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_8
 
     .line 18
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget v1, v1, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     .line 19
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:Ljava/nio/ByteBuffer;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Ljava/nio/ByteBuffer;
 
-    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget v2, v1, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
@@ -4202,11 +4202,11 @@
 
     .line 20
     :cond_8
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
 
     if-eqz v0, :cond_9
 
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget-wide v1, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -4222,7 +4222,7 @@
 
     if-eqz v1, :cond_9
 
-    iget-wide v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:J
+    iget-wide v1, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b2:J
 
     const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -4235,7 +4235,7 @@
 
     .line 22
     :cond_9
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -4243,12 +4243,12 @@
 
     move-result v0
 
-    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:Z
+    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
 
     .line 23
-    iget-wide v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:J
+    iget-wide v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:J
 
-    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v2, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget-wide v2, v2, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
@@ -4264,30 +4264,30 @@
     move v0, v14
 
     :goto_1
-    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Z
+    iput-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
 
     .line 24
     invoke-virtual {v15, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1(J)V
 
     .line 25
     :cond_b
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->C1:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->E1:Z
 
     if-eqz v0, :cond_d
 
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:Z
 
     if-eqz v0, :cond_d
 
     .line 26
     :try_start_1
-    iget-object v5, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v5, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget-object v6, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:Ljava/nio/ByteBuffer;
+    iget-object v6, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Ljava/nio/ByteBuffer;
 
-    iget v7, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iget v7, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget v8, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -4295,11 +4295,11 @@
 
     iget-wide v10, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    iget-boolean v12, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:Z
+    iget-boolean v12, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
 
-    iget-boolean v13, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Z
+    iget-boolean v13, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
 
-    iget-object v3, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v3, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -4333,7 +4333,7 @@
     invoke-direct/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J0()V
 
     .line 29
-    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iget-boolean v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     if-eqz v0, :cond_c
 
@@ -4347,13 +4347,13 @@
     move/from16 v18, v14
 
     .line 31
-    iget-object v5, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v5, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
-    iget-object v6, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M1:Ljava/nio/ByteBuffer;
+    iget-object v6, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Ljava/nio/ByteBuffer;
 
-    iget v7, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iget v7, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget v8, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -4361,11 +4361,11 @@
 
     iget-wide v10, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    iget-boolean v12, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:Z
+    iget-boolean v12, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
 
-    iget-boolean v13, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O1:Z
+    iget-boolean v13, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q1:Z
 
-    iget-object v14, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v14, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     move-object/from16 v0, p0
 
@@ -4382,14 +4382,14 @@
     if-eqz v0, :cond_10
 
     .line 33
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     invoke-virtual {v15, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G0(J)V
 
     .line 34
-    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, v15, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e1:Landroid/media/MediaCodec$BufferInfo;
 
     iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
 
@@ -4424,7 +4424,7 @@
     .locals 4
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -4439,7 +4439,7 @@
 
     sub-long/2addr v0, p1
 
-    iget-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:J
+    iget-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:J
 
     cmp-long p1, v0, p1
 
@@ -4493,7 +4493,7 @@
 
     .line 1
     :cond_1
-    sget v2, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v2, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v3, 0x17
 
@@ -4503,7 +4503,7 @@
 
     .line 2
     :cond_2
-    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/C;->T1:Ljava/util/UUID;
+    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/C;->f2:Ljava/util/UUID;
 
     invoke-interface {p3}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->b()Ljava/util/UUID;
 
@@ -4530,7 +4530,7 @@
 
     .line 4
     :cond_3
-    invoke-virtual {p0, p4}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lwd/r;
+    invoke-virtual {p0, p4}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lzf/r;
 
     move-result-object p3
 
@@ -4540,7 +4540,7 @@
 
     .line 5
     :cond_4
-    iget-boolean p3, p3, Lwd/r;->c:Z
+    iget-boolean p3, p3, Lzf/r;->c:Z
 
     if-eqz p3, :cond_5
 
@@ -4628,7 +4628,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->flush()V
     :try_end_0
@@ -4687,10 +4687,10 @@
 .end method
 
 .method public e0()Z
-    .locals 3
+    .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     const/4 v1, 0x0
 
@@ -4700,49 +4700,97 @@
 
     .line 2
     :cond_0
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     const/4 v2, 0x3
 
-    if-eq v0, v2, :cond_3
+    const/4 v3, 0x1
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:Z
+    if-eq v0, v2, :cond_5
 
-    if-nez v0, :cond_3
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A1:Z
+    if-nez v2, :cond_5
 
-    if-eqz v0, :cond_1
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->C1:Z
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Y1:Z
+    if-eqz v2, :cond_1
 
-    if-eqz v0, :cond_3
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a2:Z
+
+    if-eqz v2, :cond_5
 
     :cond_1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_2
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z1:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_4
+
+    .line 3
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
+
+    const/16 v2, 0x17
+
+    if-lt v0, v2, :cond_3
+
+    move v4, v3
 
     goto :goto_0
 
-    .line 3
-    :cond_2
+    :cond_3
+    move v4, v1
+
+    :goto_0
+    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
+
+    if-lt v0, v2, :cond_4
+
+    .line 4
+    :try_start_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1()V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "MediaCodecRenderer"
+
+    const-string v2, "Failed to update the DRM session, releasing the codec instead."
+
+    .line 5
+    invoke-static {v1, v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 6
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O0()V
+
+    return v3
+
+    .line 7
+    :cond_4
+    :goto_1
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c0()V
 
     return v1
 
-    .line 4
-    :cond_3
-    :goto_0
+    .line 8
+    :cond_5
+    :goto_2
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O0()V
 
-    const/4 v0, 0x1
-
-    return v0
+    return v3
 .end method
 
 .method public final f0(Z)Ljava/util/List;
@@ -4765,7 +4813,7 @@
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/m;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 2
     invoke-virtual {p0, v0, v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m0(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/m;Lcom/tmapmobility/tmap/exoplayer2/Format;Z)Ljava/util/List;
@@ -4784,7 +4832,7 @@
     .line 4
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/m;
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/4 v1, 0x0
 
@@ -4807,7 +4855,7 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
 
@@ -4829,7 +4877,7 @@
 
     const-string v1, "MediaCodecRenderer"
 
-    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-object v0
@@ -4844,7 +4892,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1(Lcom/tmapmobility/tmap/exoplayer2/Format;)Z
 
@@ -4859,7 +4907,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     return-object v0
 .end method
@@ -4873,7 +4921,7 @@
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/4 v1, 0x1
 
@@ -4885,11 +4933,11 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-eqz v0, :cond_6
 
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     const/4 v2, 0x3
 
@@ -4906,7 +4954,7 @@
 
     .line 4
     :cond_1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:F
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:F
 
     .line 5
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/f;->w()[Lcom/tmapmobility/tmap/exoplayer2/Format;
@@ -4918,7 +4966,7 @@
     move-result p1
 
     .line 6
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:F
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:F
 
     cmpl-float v2, v0, p1
 
@@ -4946,7 +4994,7 @@
     if-nez v0, :cond_5
 
     .line 8
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V0:F
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:F
 
     cmpl-float v0, p1, v0
 
@@ -4970,12 +5018,12 @@
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     .line 11
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->i(Landroid/os/Bundle;)V
 
     .line 12
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:F
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:F
 
     :cond_6
     :goto_1
@@ -4988,7 +5036,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
 
     return-object v0
 .end method
@@ -5007,32 +5055,32 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
-    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lwd/r;
+    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lzf/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lwd/r;->b:[B
+    iget-object v1, v1, Lzf/r;->b:[B
 
     invoke-virtual {v0, v1}, Landroid/media/MediaCrypto;->setMediaDrmSession([B)V
     :try_end_0
     .catch Landroid/media/MediaCryptoException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
 
     const/4 v0, 0x0
 
     .line 3
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->W1:I
 
     .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X1:I
 
     return-void
 
@@ -5040,7 +5088,7 @@
     move-exception v0
 
     .line 5
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/16 v2, 0x1776
 
@@ -5068,9 +5116,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/h0;->j(J)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->j(J)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -5079,14 +5127,14 @@
     if-nez p1, :cond_0
 
     .line 2
-    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Z
+    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Z
 
     if-eqz p2, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->a1:Lcom/tmapmobility/tmap/exoplayer2/util/h0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c1:Lcom/tmapmobility/tmap/exoplayer2/util/i0;
 
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/h0;->i()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->i()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -5098,7 +5146,7 @@
     if-eqz p1, :cond_1
 
     .line 4
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/4 p1, 0x1
 
@@ -5111,24 +5159,24 @@
     if-nez p1, :cond_2
 
     .line 5
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Z
+    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Z
 
     if-eqz p1, :cond_3
 
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-eqz p1, :cond_3
 
     .line 6
     :cond_2
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Landroid/media/MediaFormat;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:Landroid/media/MediaFormat;
 
     invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F0(Lcom/tmapmobility/tmap/exoplayer2/Format;Landroid/media/MediaFormat;)V
 
     .line 7
-    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Z
+    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u1:Z
 
     :cond_3
     return-void
@@ -5138,7 +5186,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     return v0
 .end method
@@ -5147,7 +5195,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-eqz v0, :cond_1
 
@@ -5165,7 +5213,7 @@
 
     if-nez v0, :cond_0
 
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -5178,7 +5226,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:J
 
     cmp-long v0, v0, v2
 
@@ -5200,7 +5248,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:F
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:F
 
     return v0
 .end method
@@ -5214,13 +5262,13 @@
     .end annotation
 
     .line 1
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n1:F
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:F
 
     .line 2
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:F
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:F
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1(Lcom/tmapmobility/tmap/exoplayer2/Format;)Z
 
@@ -5241,7 +5289,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Landroid/media/MediaFormat;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:Landroid/media/MediaFormat;
 
     return-object v0
 .end method
@@ -5266,7 +5314,7 @@
     .end annotation
 .end method
 
-.method public final n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lwd/r;
+.method public final n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lzf/r;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -5278,14 +5326,14 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->f()Lvd/c;
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->f()Lyf/c;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 2
-    instance-of v0, p1, Lwd/r;
+    instance-of v0, p1, Lzf/r;
 
     if-eqz v0, :cond_0
 
@@ -5311,7 +5359,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/16 v1, 0x1771
 
@@ -5324,7 +5372,7 @@
     .line 4
     :cond_1
     :goto_0
-    check-cast p1, Lwd/r;
+    check-cast p1, Lzf/r;
 
     return-object p1
 .end method
@@ -5340,7 +5388,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     return-wide v0
 .end method
@@ -5349,7 +5397,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n1:F
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:F
 
     return v0
 .end method
@@ -5374,21 +5422,21 @@
     .end annotation
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Z
 
     .line 3
     invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J0()V
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
 
     if-nez v0, :cond_b
 
@@ -5396,7 +5444,7 @@
 
     .line 5
     :try_start_0
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->c2:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e2:Z
 
     if-eqz v2, :cond_1
 
@@ -5407,7 +5455,7 @@
 
     .line 7
     :cond_1
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-nez v2, :cond_2
 
@@ -5426,14 +5474,14 @@
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z0()V
 
     .line 9
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     if-eqz v2, :cond_4
 
     const-string v2, "bypassRender"
 
     .line 10
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->a(Ljava/lang/String;)V
 
     .line 11
     :goto_0
@@ -5447,13 +5495,13 @@
 
     .line 12
     :cond_3
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->c()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->c()V
 
     goto :goto_3
 
     .line 13
     :cond_4
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-eqz v2, :cond_7
 
@@ -5465,7 +5513,7 @@
     const-string v4, "drainAndFeed"
 
     .line 15
-    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->a(Ljava/lang/String;)V
+    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->a(Ljava/lang/String;)V
 
     .line 16
     :goto_1
@@ -5503,15 +5551,15 @@
 
     .line 19
     :cond_6
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->c()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->c()V
 
     goto :goto_3
 
     .line 20
     :cond_7
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Lvd/f;
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:Lyf/f;
 
-    iget p4, p3, Lvd/f;->d:I
+    iget p4, p3, Lyf/f;->d:I
 
     invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/f;->H(J)I
 
@@ -5519,16 +5567,16 @@
 
     add-int/2addr p4, p1
 
-    iput p4, p3, Lvd/f;->d:I
+    iput p4, p3, Lyf/f;->d:I
 
     .line 21
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M0(I)Z
 
     .line 22
     :goto_3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Lvd/f;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:Lyf/f;
 
-    invoke-virtual {p1}, Lvd/f;->c()V
+    invoke-virtual {p1}, Lyf/f;->c()V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -5548,7 +5596,7 @@
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B0(Ljava/lang/Exception;)V
 
     .line 25
-    sget p2, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget p2, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 p3, 0x15
 
@@ -5578,7 +5626,7 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/16 p3, 0xfa3
 
@@ -5597,7 +5645,7 @@
     const/4 p1, 0x0
 
     .line 30
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->f2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
 
     .line 31
     throw v0
@@ -5607,7 +5655,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N1:I
 
     if-ltz v0, :cond_0
 
@@ -5669,23 +5717,23 @@
     if-nez p1, :cond_0
 
     .line 6
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
-    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->v(I)V
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->w(I)V
 
     goto :goto_0
 
     .line 7
     :cond_0
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Z0:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;
 
     const/16 v0, 0x20
 
-    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->v(I)V
+    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/g;->w(I)V
 
     .line 8
     :goto_0
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     return-void
 .end method
@@ -5702,7 +5750,7 @@
     iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;->a:Ljava/lang/String;
 
     .line 2
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/high16 v2, -0x40800000    # -1.0f
 
@@ -5716,9 +5764,9 @@
 
     .line 3
     :cond_0
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o1:F
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:F
 
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/f;->w()[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
@@ -5730,7 +5778,7 @@
 
     .line 4
     :goto_0
-    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V0:F
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->X0:F
 
     cmpg-float v4, v3, v4
 
@@ -5748,7 +5796,7 @@
     move-result-wide v3
 
     .line 6
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 7
     invoke-virtual {p0, p1, v5, p2, v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->o0(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;Lcom/tmapmobility/tmap/exoplayer2/Format;Landroid/media/MediaCrypto;F)Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$a;
@@ -5783,7 +5831,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->a(Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->u:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$b;
@@ -5792,12 +5840,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 11
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->c()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->c()V
 
     .line 12
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -5805,77 +5853,77 @@
     move-result-wide v5
 
     .line 13
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->w1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
 
     .line 14
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t1:F
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->v1:F
 
     .line 15
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 16
     invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:I
 
     .line 17
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 18
     invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->M(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/Format;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->y1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A1:Z
 
     .line 19
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
 
     .line 20
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->C1:Z
 
     .line 21
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->O(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->B1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
 
     .line 22
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->C1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->E1:Z
 
     .line 23
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->N(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->D1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
 
     .line 24
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->q1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->s1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 25
     invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/Format;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->E1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->G1:Z
 
     .line 26
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->Q(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;)Z
@@ -5906,10 +5954,10 @@
     move v0, v7
 
     :goto_3
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:Z
 
     .line 27
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;->h()Z
 
@@ -5918,20 +5966,20 @@
     if-eqz v0, :cond_6
 
     .line 28
-    iput-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->S1:Z
+    iput-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U1:Z
 
     .line 29
-    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->T1:I
+    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->V1:I
 
     .line 30
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->x1:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->z1:I
 
     if-eqz v0, :cond_5
 
     move v2, v7
 
     :cond_5
-    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->F1:Z
+    iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->H1:Z
 
     .line 31
     :cond_6
@@ -5950,7 +5998,7 @@
 
     invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->I1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->K1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/h;
 
     .line 33
     :cond_7
@@ -5971,17 +6019,17 @@
 
     add-long/2addr v8, v10
 
-    iput-wide v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->J1:J
+    iput-wide v8, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->L1:J
 
     .line 35
     :cond_8
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Lvd/f;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:Lyf/f;
 
-    iget v0, p1, Lvd/f;->a:I
+    iget v0, p1, Lyf/f;->a:I
 
     add-int/2addr v0, v7
 
-    iput v0, p1, Lvd/f;->a:I
+    iput v0, p1, Lyf/f;->a:I
 
     sub-long v7, v5, v3
 
@@ -6002,7 +6050,7 @@
     move-exception p1
 
     .line 37
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->c()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/k0;->c()V
 
     .line 38
     throw p1
@@ -6012,7 +6060,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -6026,7 +6074,7 @@
     if-ge v2, v0, :cond_1
 
     .line 2
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -6043,7 +6091,7 @@
     if-nez v3, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->b1:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->d1:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -6066,20 +6114,20 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 2
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->h2:J
+    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:J
 
     .line 3
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:J
+    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k2:J
 
     const/4 v0, 0x0
 
     .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j2:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l2:I
 
     .line 5
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->e0()Z
@@ -6096,11 +6144,11 @@
     .end annotation
 
     .line 1
-    new-instance p1, Lvd/f;
+    new-instance p1, Lyf/f;
 
-    invoke-direct {p1}, Lvd/f;-><init>()V
+    invoke-direct {p1}, Lyf/f;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g2:Lvd/f;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i2:Lyf/f;
 
     return-void
 .end method
@@ -6114,15 +6162,15 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->p1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->r1:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
 
     if-nez v0, :cond_8
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->P1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->R1:Z
 
     if-nez v0, :cond_8
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     if-nez v0, :cond_0
 
@@ -6130,7 +6178,7 @@
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     if-nez v1, :cond_1
 
@@ -6141,7 +6189,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->t0(Lcom/tmapmobility/tmap/exoplayer2/Format;)V
 
@@ -6149,36 +6197,36 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->j1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->U0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)V
 
     .line 5
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
 
     .line 6
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     if-eqz v1, :cond_7
 
     .line 7
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
     const/4 v3, 0x1
 
     if-nez v2, :cond_5
 
     .line 8
-    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lwd/r;
+    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n0(Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;)Lzf/r;
 
     move-result-object v1
 
     if-nez v1, :cond_3
 
     .line 9
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->getError()Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession$DrmSessionException;
 
@@ -6196,18 +6244,18 @@
     :try_start_0
     new-instance v2, Landroid/media/MediaCrypto;
 
-    iget-object v4, v1, Lwd/r;->a:Ljava/util/UUID;
+    iget-object v4, v1, Lzf/r;->a:Ljava/util/UUID;
 
-    iget-object v5, v1, Lwd/r;->b:[B
+    iget-object v5, v1, Lzf/r;->b:[B
 
     invoke-direct {v2, v4, v5}, Landroid/media/MediaCrypto;-><init>(Ljava/util/UUID;[B)V
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
     :try_end_0
     .catch Landroid/media/MediaCryptoException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 11
-    iget-boolean v1, v1, Lwd/r;->c:Z
+    iget-boolean v1, v1, Lzf/r;->c:Z
 
     if-nez v1, :cond_4
 
@@ -6226,7 +6274,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n1:Z
 
     goto :goto_1
 
@@ -6234,7 +6282,7 @@
     move-exception v0
 
     .line 13
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/16 v2, 0x1776
 
@@ -6247,12 +6295,12 @@
     .line 14
     :cond_5
     :goto_1
-    sget-boolean v0, Lwd/r;->d:Z
+    sget-boolean v0, Lzf/r;->d:Z
 
     if-eqz v0, :cond_7
 
     .line 15
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->getState()I
 
@@ -6268,7 +6316,7 @@
 
     .line 16
     :cond_6
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;
 
     .line 17
     invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession;->getError()Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession$DrmSessionException;
@@ -6282,7 +6330,7 @@
     check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession$DrmSessionException;
 
     .line 18
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget v2, v0, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmSession$DrmSessionException;->errorCode:I
 
@@ -6295,9 +6343,9 @@
     .line 19
     :cond_7
     :try_start_1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->k1:Landroid/media/MediaCrypto;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->m1:Landroid/media/MediaCrypto;
 
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->l1:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->n1:Z
 
     invoke-virtual {p0, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->A0(Landroid/media/MediaCrypto;Z)V
     :try_end_1
@@ -6309,7 +6357,7 @@
     move-exception v0
 
     .line 20
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->g1:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecRenderer;->i1:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/16 v2, 0xfa1
 

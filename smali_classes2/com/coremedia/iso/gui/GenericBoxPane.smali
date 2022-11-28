@@ -390,7 +390,7 @@
 
     iget-object v2, p0, Lcom/coremedia/iso/gui/GenericBoxPane;->box:Lcom/coremedia/iso/boxes/Box;
 
-    invoke-static {v2}, Ly6/d;->a(Lcom/coremedia/iso/boxes/Box;)Ljava/lang/String;
+    invoke-static {v2}, Lw8/d;->a(Lcom/coremedia/iso/boxes/Box;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -592,7 +592,7 @@
 
     if-eqz v13, :cond_f
 
-    const-class v13, Ld6/a;
+    const-class v13, Lb8/a;
 
     invoke-virtual {v11}, Ljava/beans/PropertyDescriptor;->getReadMethod()Ljava/lang/reflect/Method;
 

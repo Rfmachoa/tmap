@@ -1,36 +1,10 @@
-.class public Laj/a;
-.super Lzi/a;
-.source "JDK8PlatformImplementations.kt"
+.class public final Laj/a;
+.super Ljava/lang/Object;
+.source "ThreadUtil.java"
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0010\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u001a\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016J\u0008\u0010\t\u001a\u00020\u0008H\u0016\u00a8\u0006\u000c"
-    }
-    d2 = {
-        "Laj/a;",
-        "Lzi/a;",
-        "Ljava/util/regex/MatchResult;",
-        "matchResult",
-        "",
-        "name",
-        "Lkotlin/text/h;",
-        "c",
-        "Lkotlin/random/Random;",
-        "b",
-        "<init>",
-        "()V",
-        "kotlin-stdlib-jdk8"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x4,
-        0x1
-    }
-.end annotation
+# static fields
+.field public static a:Ljava/lang/Thread;
 
 
 # direct methods
@@ -38,110 +12,70 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lzi/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public b()Lkotlin/random/Random;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
+.method public static a()V
+    .locals 2
 
     .line 1
-    new-instance v0, Ljj/a;
+    invoke-static {}, Laj/a;->b()Z
 
-    invoke-direct {v0}, Ljj/a;-><init>()V
+    move-result v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Must be called on the Main thread."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public c(Ljava/util/regex/MatchResult;Ljava/lang/String;)Lkotlin/text/h;
-    .locals 4
-    .param p1    # Ljava/util/regex/MatchResult;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
-    const-string v0, "matchResult"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "name"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+.method public static b()Z
+    .locals 2
 
     .line 1
-    instance-of v0, p1, Ljava/util/regex/Matcher;
-
-    const/4 v1, 0x0
+    sget-object v0, Laj/a;->a:Ljava/lang/Thread;
 
     if-nez v0, :cond_0
 
-    move-object p1, v1
-
-    :cond_0
-    check-cast p1, Ljava/util/regex/Matcher;
-
-    if-eqz p1, :cond_2
-
     .line 2
-    invoke-virtual {p1, p2}, Ljava/util/regex/Matcher;->start(Ljava/lang/String;)I
-
-    move-result v0
-
-    new-instance v2, Lkj/k;
-
-    invoke-virtual {p1, p2}, Ljava/util/regex/Matcher;->end(Ljava/lang/String;)I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, -0x1
-
-    invoke-direct {v2, v0, v3}, Lkj/k;-><init>(II)V
-
-    .line 3
-    invoke-virtual {v2}, Lkj/k;->l()Ljava/lang/Integer;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    move-result v0
+    move-result-object v0
 
-    if-ltz v0, :cond_1
+    sput-object v0, Laj/a;->a:Ljava/lang/Thread;
 
-    .line 4
-    new-instance v1, Lkotlin/text/h;
+    .line 3
+    :cond_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-virtual {p1, p2}, Ljava/util/regex/Matcher;->group(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p1
+    sget-object v1, Laj/a;->a:Ljava/lang/Thread;
 
-    const-string p2, "matcher.group(name)"
+    if-ne v0, v1, :cond_1
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    invoke-direct {v1, p1, v2}, Lkotlin/text/h;-><init>(Ljava/lang/String;Lkj/k;)V
+    goto :goto_0
 
     :cond_1
-    return-object v1
+    const/4 v0, 0x0
 
-    .line 5
-    :cond_2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Retrieving groups by name is not supported on this platform."
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :goto_0
+    return v0
 .end method

@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract a(Lc4/o;Ljava/lang/Object;)V
-    .param p1    # Lc4/o;
+.method public abstract a(Lz5/o;Ljava/lang/Object;)V
+    .param p1    # Lz5/o;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -26,8 +26,8 @@
     .end param
 .end method
 
-.method public abstract b(Lc4/k;)V
-    .param p1    # Lc4/k;
+.method public abstract b(Ljava/lang/Object;)V
+    .param p1    # Ljava/lang/Object;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
@@ -40,8 +40,8 @@
     .end param
 .end method
 
-.method public abstract d(Ljava/lang/Object;)V
-    .param p1    # Ljava/lang/Object;
+.method public abstract d(Lz5/k;)V
+    .param p1    # Lz5/k;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param

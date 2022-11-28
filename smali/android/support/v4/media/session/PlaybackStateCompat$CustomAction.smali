@@ -151,7 +151,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
     .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -217,7 +217,15 @@
     return-object v0
 .end method
 
-.method public d()Ljava/lang/Object;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()Ljava/lang/Object;
     .locals 3
 
     .line 1
@@ -251,15 +259,7 @@
     return-object v0
 .end method
 
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()Landroid/os/Bundle;
+.method public f()Landroid/os/Bundle;
     .locals 1
 
     .line 1
@@ -268,7 +268,7 @@
     return-object v0
 .end method
 
-.method public f()I
+.method public h()I
     .locals 1
 
     .line 1
@@ -277,7 +277,7 @@
     return v0
 .end method
 
-.method public g()Ljava/lang/CharSequence;
+.method public i()Ljava/lang/CharSequence;
     .locals 1
 
     .line 1

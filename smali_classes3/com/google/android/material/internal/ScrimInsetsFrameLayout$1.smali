@@ -3,7 +3,7 @@
 .source "ScrimInsetsFrameLayout.java"
 
 # interfaces
-.implements Ls1/e0;
+.implements Landroidx/core/view/i0;
 
 
 # annotations

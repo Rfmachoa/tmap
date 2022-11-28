@@ -14,7 +14,6 @@
         Lcom/tmapmobility/tmap/exoplayer2/ui/R$id;,
         Lcom/tmapmobility/tmap/exoplayer2/ui/R$integer;,
         Lcom/tmapmobility/tmap/exoplayer2/ui/R$layout;,
-        Lcom/tmapmobility/tmap/exoplayer2/ui/R$menu;,
         Lcom/tmapmobility/tmap/exoplayer2/ui/R$plurals;,
         Lcom/tmapmobility/tmap/exoplayer2/ui/R$string;,
         Lcom/tmapmobility/tmap/exoplayer2/ui/R$style;,

@@ -1,4 +1,4 @@
-.class final Lcom/fasterxml/jackson/databind/deser/std/MapDeserializer$MapReferring;
+.class Lcom/fasterxml/jackson/databind/deser/std/MapDeserializer$MapReferring;
 .super Lcom/fasterxml/jackson/databind/deser/impl/ReadableObjectId$Referring;
 .source "MapDeserializer.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x9
     name = "MapReferring"
 .end annotation
 

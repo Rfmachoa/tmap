@@ -1,134 +1,49 @@
-.class public abstract Lme/b;
+.class public interface abstract Lme/b;
 .super Ljava/lang/Object;
-.source "BaseMediaChunkIterator.java"
-
-# interfaces
-.implements Lme/o;
+.source "FindEvSearchApiService.kt"
 
 
-# instance fields
-.field public final b:J
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lme/b$a;
+    }
+.end annotation
 
-.field public final c:J
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\u0008f\u0018\u00002\u00020\u0001:\u0001\u0002\u00a8\u0006\u0003"
+    }
+    d2 = {
+        "Lme/b;",
+        "",
+        "a",
+        "tmap_android_phoneKUShip"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+.end annotation
 
-.field public d:J
+
+# static fields
+.field public static final a:Lme/b$a;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lme/b$a;->a:Lme/b$a;
 
-    .line 2
-    iput-wide p1, p0, Lme/b;->b:J
-
-    .line 3
-    iput-wide p3, p0, Lme/b;->c:J
-
-    .line 4
-    invoke-virtual {p0}, Lme/b;->reset()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d()V
-    .locals 4
-
-    .line 1
-    iget-wide v0, p0, Lme/b;->d:J
-
-    iget-wide v2, p0, Lme/b;->b:J
-
-    cmp-long v2, v0, v2
-
-    if-ltz v2, :cond_0
-
-    iget-wide v2, p0, Lme/b;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-gtz v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final e()J
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Lme/b;->d:J
-
-    return-wide v0
-.end method
-
-.method public isEnded()Z
-    .locals 4
-
-    .line 1
-    iget-wide v0, p0, Lme/b;->d:J
-
-    iget-wide v2, p0, Lme/b;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public next()Z
-    .locals 4
-
-    .line 1
-    iget-wide v0, p0, Lme/b;->d:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lme/b;->d:J
-
-    .line 2
-    invoke-virtual {p0}, Lme/b;->isEnded()Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    return v0
-.end method
-
-.method public reset()V
-    .locals 4
-
-    .line 1
-    iget-wide v0, p0, Lme/b;->b:J
-
-    const-wide/16 v2, 0x1
-
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Lme/b;->d:J
+    sput-object v0, Lme/b;->a:Lme/b$a;
 
     return-void
 .end method

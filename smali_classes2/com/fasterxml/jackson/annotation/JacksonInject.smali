@@ -12,8 +12,15 @@
 
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/fasterxml/jackson/annotation/JacksonInject;
+        useInput = .enum Lcom/fasterxml/jackson/annotation/OptBoolean;->DEFAULT:Lcom/fasterxml/jackson/annotation/OptBoolean;
         value = ""
     .end subannotation
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fasterxml/jackson/annotation/JacksonInject$Value;
+    }
 .end annotation
 
 .annotation runtime Ljava/lang/annotation/Retention;
@@ -31,5 +38,8 @@
 
 
 # virtual methods
+.method public abstract useInput()Lcom/fasterxml/jackson/annotation/OptBoolean;
+.end method
+
 .method public abstract value()Ljava/lang/String;
 .end method

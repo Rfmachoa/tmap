@@ -165,7 +165,7 @@
 
     const-string v1, "fire-cls"
 
-    const-string v2, "18.2.8"
+    const-string v2, "18.2.13"
 
     .line 10
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;

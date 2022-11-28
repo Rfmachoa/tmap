@@ -342,7 +342,7 @@
     return v0
 .end method
 
-.method public marshaller()Lc4/k;
+.method public marshaller()Lz5/k;
     .locals 1
 
     .line 1

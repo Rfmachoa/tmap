@@ -53,25 +53,25 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
     const-string v1, "popup_tap.nugu_deactivate"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$j$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$j;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$j;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$j$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$j;
@@ -80,7 +80,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void

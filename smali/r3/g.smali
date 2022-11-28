@@ -1,115 +1,49 @@
-.class public Lr3/g;
-.super Lr3/n;
-.source "AnimatableScaleValue.java"
+.class public final Lr3/g;
+.super Ljava/lang/Object;
+.source "Fragment.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lr3/n<",
-        "Lx3/k;",
-        "Lx3/k;",
-        ">;"
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\n\u0010\u0002\u001a\u00020\u0001*\u00020\u0000\u00a8\u0006\u0003"
+    }
+    d2 = {
+        "Landroidx/fragment/app/Fragment;",
+        "Landroidx/navigation/NavController;",
+        "a",
+        "navigation-fragment_release"
+    }
+    k = 0x2
+    mv = {
+        0x1,
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 1
-    new-instance v0, Lx3/k;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-direct {v0, v1, v1}, Lx3/k;-><init>(FF)V
-
-    invoke-direct {p0, v0}, Lr3/g;-><init>(Lx3/k;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lx3/a<",
-            "Lx3/k;",
-            ">;>;)V"
-        }
+.method public static final a(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
+    .locals 1
+    .param p0    # Landroidx/fragment/app/Fragment;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 3
-    invoke-direct {p0, p1}, Lr3/n;-><init>(Ljava/util/List;)V
+    const-string v0, "<this>"
 
-    return-void
-.end method
-
-.method public constructor <init>(Lx3/k;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0, p1}, Lr3/n;-><init>(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()Lo3/a;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lo3/a<",
-            "Lx3/k;",
-            "Lx3/k;",
-            ">;"
-        }
-    .end annotation
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    new-instance v0, Lo3/k;
+    sget-object v0, Landroidx/navigation/fragment/NavHostFragment;->f:Landroidx/navigation/fragment/NavHostFragment$a;
 
-    iget-object v1, p0, Lr3/n;->a:Ljava/util/List;
+    invoke-virtual {v0, p0}, Landroidx/navigation/fragment/NavHostFragment$a;->d(Landroidx/fragment/app/Fragment;)Landroidx/navigation/NavController;
 
-    invoke-direct {v0, v1}, Lo3/k;-><init>(Ljava/util/List;)V
+    move-result-object p0
 
-    return-object v0
-.end method
-
-.method public bridge synthetic b()Ljava/util/List;
-    .locals 1
-
-    .line 1
-    invoke-super {p0}, Lr3/n;->b()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic c()Z
-    .locals 1
-
-    .line 1
-    invoke-super {p0}, Lr3/n;->c()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public bridge synthetic toString()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    invoke-super {p0}, Lr3/n;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

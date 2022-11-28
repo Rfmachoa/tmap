@@ -279,21 +279,19 @@
     :cond_1
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
-
-    if-lez v0, :cond_3
-
     .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
-    move-result v3
+    move-result v2
 
-    const/16 v4, 0x2b
+    const/16 v3, 0x2b
 
-    if-ne v3, v4, :cond_2
+    const/4 v4, 0x1
+
+    if-ne v2, v3, :cond_2
 
     .line 4
-    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -305,11 +303,11 @@
     goto :goto_0
 
     :cond_2
-    const/16 v4, 0x2d
+    const/16 v3, 0x2d
 
-    if-ne v3, v4, :cond_3
+    if-ne v2, v3, :cond_3
 
-    move v1, v2
+    move v1, v4
 
     :cond_3
     :goto_0
@@ -392,21 +390,19 @@
     :cond_1
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
-
-    if-lez v0, :cond_3
-
     .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
-    move-result v3
+    move-result v2
 
-    const/16 v4, 0x2b
+    const/16 v3, 0x2b
 
-    if-ne v3, v4, :cond_2
+    const/4 v4, 0x1
+
+    if-ne v2, v3, :cond_2
 
     .line 4
-    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p0, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -418,11 +414,11 @@
     goto :goto_0
 
     :cond_2
-    const/16 v4, 0x2d
+    const/16 v3, 0x2d
 
-    if-ne v3, v4, :cond_3
+    if-ne v2, v3, :cond_3
 
-    move v1, v2
+    move v1, v4
 
     :cond_3
     :goto_0
@@ -593,12 +589,12 @@
 
     const/4 v0, 0x0
 
-    .line 13
+    .line 10
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 14
+    .line 11
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -625,7 +621,7 @@
     :cond_1
     const/4 v1, 0x2
 
-    .line 15
+    .line 12
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -638,7 +634,7 @@
 
     goto :goto_1
 
-    .line 16
+    .line 13
     :cond_2
     :goto_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -652,7 +648,7 @@
 
     if-le v2, v5, :cond_4
 
-    .line 17
+    .line 14
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -678,7 +674,7 @@
 
     add-int/lit8 v7, v3, 0x1
 
-    .line 18
+    .line 15
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -700,7 +696,7 @@
 
     add-int/lit8 v3, v7, 0x1
 
-    .line 19
+    .line 16
     invoke-virtual {p0, v7}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -723,7 +719,7 @@
     :goto_2
     add-int/lit8 v7, v3, 0x1
 
-    .line 20
+    .line 17
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -750,7 +746,7 @@
 
     goto :goto_2
 
-    .line 21
+    .line 18
     :cond_a
     :goto_3
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -759,7 +755,7 @@
 
     return p0
 
-    .line 22
+    .line 19
     :cond_b
     :goto_4
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -768,7 +764,7 @@
 
     return p0
 
-    .line 23
+    .line 20
     :cond_c
     :goto_5
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -786,7 +782,7 @@
     :cond_e
     return v1
 
-    .line 24
+    .line 21
     :cond_f
     :goto_7
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -797,159 +793,159 @@
 .end method
 
 .method public static parseInt([CII)I
-    .locals 4
+    .locals 3
+
+    add-int v0, p1, p2
+
+    add-int/lit8 v0, v0, -0x1
 
     .line 1
-    aget-char v0, p0, p1
+    aget-char v0, p0, v0
 
     add-int/lit8 v0, v0, -0x30
 
-    const/4 v1, 0x4
+    packed-switch p2, :pswitch_data_0
 
-    const/4 v2, 0x1
+    goto :goto_0
 
-    if-le p2, v1, :cond_0
-
-    mul-int/lit8 v0, v0, 0xa
-
-    add-int/lit8 p1, p1, 0x1
+    :pswitch_0
+    add-int/lit8 p2, p1, 0x1
 
     .line 2
-    aget-char v3, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 v3, v3, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr v3, v0
+    const v2, 0x5f5e100
 
-    mul-int/lit8 v3, v3, 0xa
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    add-int/2addr p1, v2
+    move-result v0
+
+    move p1, p2
+
+    :pswitch_1
+    add-int/lit8 p2, p1, 0x1
 
     .line 3
-    aget-char v0, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 v0, v0, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr v0, v3
+    const v2, 0x989680
 
-    mul-int/lit8 v0, v0, 0xa
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    add-int/2addr p1, v2
+    move-result v0
+
+    move p1, p2
+
+    :pswitch_2
+    add-int/lit8 p2, p1, 0x1
 
     .line 4
-    aget-char v3, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 v3, v3, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr v3, v0
+    const v2, 0xf4240
 
-    mul-int/lit8 v3, v3, 0xa
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    add-int/2addr p1, v2
+    move-result v0
+
+    move p1, p2
+
+    :pswitch_3
+    add-int/lit8 p2, p1, 0x1
 
     .line 5
-    aget-char v0, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 v0, v0, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr v0, v3
+    const v2, 0x186a0
 
-    add-int/lit8 p2, p2, -0x4
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    if-le p2, v1, :cond_0
+    move-result v0
 
-    mul-int/lit8 v0, v0, 0xa
+    move p1, p2
 
-    add-int/2addr p1, v2
+    :pswitch_4
+    add-int/lit8 p2, p1, 0x1
 
     .line 6
-    aget-char p2, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 p2, p2, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr p2, v0
+    const/16 v2, 0x2710
 
-    mul-int/lit8 p2, p2, 0xa
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    add-int/2addr p1, v2
+    move-result v0
+
+    move p1, p2
+
+    :pswitch_5
+    add-int/lit8 p2, p1, 0x1
 
     .line 7
-    aget-char v0, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 v0, v0, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr v0, p2
+    const/16 v2, 0x3e8
 
-    mul-int/lit8 v0, v0, 0xa
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    add-int/2addr p1, v2
+    move-result v0
+
+    move p1, p2
+
+    :pswitch_6
+    add-int/lit8 p2, p1, 0x1
 
     .line 8
-    aget-char p2, p0, p1
+    aget-char p1, p0, p1
 
-    add-int/lit8 p2, p2, -0x30
+    const/16 v1, -0x30
 
-    add-int/2addr p2, v0
+    const/16 v2, 0x64
 
-    mul-int/lit8 p2, p2, 0xa
+    invoke-static {p1, v1, v2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    add-int/2addr p1, v2
+    move-result v0
+
+    move p1, p2
 
     .line 9
+    :pswitch_7
     aget-char p0, p0, p1
 
-    add-int/lit8 p0, p0, -0x30
+    const/16 p1, -0x30
 
-    add-int/2addr p0, p2
+    const/16 p2, 0xa
 
-    return p0
+    invoke-static {p0, p1, p2, v0}, Lcom/fasterxml/jackson/core/io/a;->a(IIII)I
 
-    :cond_0
-    if-le p2, v2, :cond_1
+    move-result v0
 
-    mul-int/lit8 v0, v0, 0xa
-
-    add-int/2addr p1, v2
-
-    .line 10
-    aget-char v1, p0, p1
-
-    add-int/lit8 v1, v1, -0x30
-
-    add-int/2addr v0, v1
-
-    const/4 v1, 0x2
-
-    if-le p2, v1, :cond_1
-
-    mul-int/lit8 v0, v0, 0xa
-
-    add-int/2addr p1, v2
-
-    .line 11
-    aget-char v1, p0, p1
-
-    add-int/lit8 v1, v1, -0x30
-
-    add-int/2addr v0, v1
-
-    const/4 v1, 0x3
-
-    if-le p2, v1, :cond_1
-
-    mul-int/lit8 v0, v0, 0xa
-
-    add-int/2addr p1, v2
-
-    .line 12
-    aget-char p0, p0, p1
-
-    add-int/lit8 p0, p0, -0x30
-
-    add-int/2addr v0, p0
-
-    :cond_1
+    :goto_0
     return v0
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public static parseLong(Ljava/lang/String;)J

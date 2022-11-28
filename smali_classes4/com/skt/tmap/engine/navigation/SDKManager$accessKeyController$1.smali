@@ -34,8 +34,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -47,15 +47,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/SDKManager;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/SDKManager$accessKeyController$1;->this$0:Lcom/skt/tmap/engine/navigation/SDKManager;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

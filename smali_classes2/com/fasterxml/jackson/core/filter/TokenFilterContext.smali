@@ -421,6 +421,33 @@
     return-object p1
 .end method
 
+.method public ensureFieldNameWritten(Lcom/fasterxml/jackson/core/JsonGenerator;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_needToHandleName:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_needToHandleName:Z
+
+    .line 3
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_currentName:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeFieldName(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public findChildOf(Lcom/fasterxml/jackson/core/filter/TokenFilterContext;)Lcom/fasterxml/jackson/core/filter/TokenFilterContext;
     .locals 2
 
@@ -497,6 +524,25 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_parent:Lcom/fasterxml/jackson/core/filter/TokenFilterContext;
 
     return-object v0
+.end method
+
+.method public hasCurrentName()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_currentName:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
 .method public isStartHandled()Z
@@ -670,82 +716,6 @@
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public writeImmediatePath(Lcom/fasterxml/jackson/core/JsonGenerator;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_filter:Lcom/fasterxml/jackson/core/filter/TokenFilter;
-
-    if-eqz v0, :cond_3
-
-    sget-object v1, Lcom/fasterxml/jackson/core/filter/TokenFilter;->INCLUDE_ALL:Lcom/fasterxml/jackson/core/filter/TokenFilter;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_startHandled:Z
-
-    if-eqz v0, :cond_1
-
-    .line 3
-    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_needToHandleName:Z
-
-    if-eqz v0, :cond_3
-
-    .line 4
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_currentName:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeFieldName(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    .line 5
-    iput-boolean v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_startHandled:Z
-
-    .line 6
-    iget v1, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_type:I
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_2
-
-    .line 7
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartObject()V
-
-    .line 8
-    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_needToHandleName:Z
-
-    if-eqz v0, :cond_3
-
-    .line 9
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/filter/TokenFilterContext;->_currentName:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeFieldName(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_2
-    if-ne v1, v0, :cond_3
-
-    .line 10
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartArray()V
-
-    :cond_3
-    :goto_0
-    return-void
 .end method
 
 .method public writePath(Lcom/fasterxml/jackson/core/JsonGenerator;)V

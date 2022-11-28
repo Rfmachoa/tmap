@@ -276,11 +276,11 @@
 
     iget-object v2, p0, Lcom/amazonaws/mobileconnectors/appsync/WebSocketConnectionManager$SubscriptionResponseDispatcher;->subscription:Lcom/apollographql/apollo/api/f;
 
-    invoke-virtual {v1, p1, v2}, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->buildResponse(Ljava/lang/String;Lcom/apollographql/apollo/api/f;)Lc4/i;
+    invoke-virtual {v1, p1, v2}, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->buildResponse(Ljava/lang/String;Lcom/apollographql/apollo/api/f;)Lz5/i;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lc4/i;)V
+    invoke-interface {v0, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lz5/i;)V
 
     return-void
 .end method

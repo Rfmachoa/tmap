@@ -1,132 +1,273 @@
 .class public final Ld0/a;
-.super Ljava/lang/Object;
-.source "UseCaseConfigUtil.java"
+.super Ld0/e;
+.source "AutoValue_ImmutableZoomState.java"
+
+
+# instance fields
+.field public final a:F
+
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:F
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(FFFF)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ld0/e;-><init>()V
+
+    .line 2
+    iput p1, p0, Ld0/a;->a:F
+
+    .line 3
+    iput p2, p0, Ld0/a;->b:F
+
+    .line 4
+    iput p3, p0, Ld0/a;->c:F
+
+    .line 5
+    iput p4, p0, Ld0/a;->d:F
 
     return-void
 .end method
 
-.method public static a(Landroidx/camera/core/impl/s$a;I)V
-    .locals 4
-    .param p0    # Landroidx/camera/core/impl/s$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "builder",
-            "newRotation"
-        }
-    .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/camera/core/impl/s$a<",
-            "***>;I)V"
-        }
-    .end annotation
+# virtual methods
+.method public a()F
+    .locals 1
 
     .line 1
-    invoke-interface {p0}, Landroidx/camera/core/impl/s$a;->n()Landroidx/camera/core/impl/s;
+    iget v0, p0, Ld0/a;->b:F
 
-    move-result-object v0
+    return v0
+.end method
 
-    check-cast v0, Landroidx/camera/core/impl/ImageOutputConfig;
+.method public b()F
+    .locals 1
 
-    const/4 v1, -0x1
+    .line 1
+    iget v0, p0, Ld0/a;->d:F
+
+    return v0
+.end method
+
+.method public c()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Ld0/a;->c:F
+
+    return v0
+.end method
+
+.method public d()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Ld0/a;->a:F
+
+    return v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    .line 1
+    :cond_0
+    instance-of v1, p1, Ld0/e;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
 
     .line 2
-    invoke-interface {v0, v1}, Landroidx/camera/core/impl/ImageOutputConfig;->F(I)I
-
-    move-result v2
-
-    if-eq v2, v1, :cond_0
-
-    if-eq v2, p1, :cond_1
+    check-cast p1, Ld0/e;
 
     .line 3
-    :cond_0
-    move-object v3, p0
+    iget v1, p0, Ld0/a;->a:F
 
-    check-cast v3, Landroidx/camera/core/impl/ImageOutputConfig$a;
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-interface {v3, p1}, Landroidx/camera/core/impl/ImageOutputConfig$a;->e(I)Ljava/lang/Object;
+    move-result v1
 
-    :cond_1
-    if-eq v2, v1, :cond_3
+    invoke-virtual {p1}, Ld0/e;->d()F
 
-    if-eq p1, v1, :cond_3
+    move-result v3
 
-    if-ne v2, p1, :cond_2
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ld0/a;->b:F
+
+    .line 4
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ld0/e;->a()F
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ld0/a;->c:F
+
+    .line 5
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ld0/e;->c()F
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ld0/a;->d:F
+
+    .line 6
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ld0/e;->b()F
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p1
+
+    if-ne v1, p1, :cond_1
 
     goto :goto_0
 
-    .line 4
-    :cond_2
-    invoke-static {v2}, Landroidx/camera/core/impl/utils/c;->c(I)I
+    :cond_1
+    move v0, v2
 
-    move-result v1
-
-    .line 5
-    invoke-static {p1}, Landroidx/camera/core/impl/utils/c;->c(I)I
-
-    move-result p1
-
-    sub-int/2addr p1, v1
-
-    .line 6
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    rem-int/lit16 p1, p1, 0xb4
-
-    const/16 v1, 0x5a
-
-    if-ne p1, v1, :cond_3
-
-    const/4 p1, 0x0
-
-    .line 7
-    invoke-interface {v0, p1}, Landroidx/camera/core/impl/ImageOutputConfig;->N(Landroid/util/Size;)Landroid/util/Size;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    .line 8
-    check-cast p0, Landroidx/camera/core/impl/ImageOutputConfig$a;
-
-    new-instance v0, Landroid/util/Size;
-
-    .line 9
-    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
-
-    move-result v1
-
-    .line 10
-    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
-
-    move-result p1
-
-    invoke-direct {v0, v1, p1}, Landroid/util/Size;-><init>(II)V
-
-    .line 11
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/ImageOutputConfig$a;->l(Landroid/util/Size;)Ljava/lang/Object;
-
-    :cond_3
     :goto_0
-    return-void
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public hashCode()I
+    .locals 3
+
+    .line 1
+    iget v0, p0, Ld0/a;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    .line 2
+    iget v2, p0, Ld0/a;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    .line 3
+    iget v2, p0, Ld0/a;->c:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    .line 4
+    iget v1, p0, Ld0/a;->d:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "ImmutableZoomState{zoomRatio="
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Ld0/a;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ld0/a;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ld0/a;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", linearZoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ld0/a;->d:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

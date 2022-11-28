@@ -118,7 +118,7 @@
     const-string v2, "?"
 
     .line 21
-    invoke-static {v0, v1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -409,7 +409,7 @@
 
     const-string v1, "result:"
 
-    invoke-static {v1, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1463,23 +1463,23 @@
     invoke-static {v0, v1}, Ltid/sktelecom/ssolib/common/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Landroidx/browser/customtabs/b$a;
+    new-instance v0, Landroidx/browser/customtabs/CustomTabsIntent$a;
 
     iget-object v1, p0, Ltid/sktelecom/ssolib/CustomTabAuthResultActivity;->a:Ltid/sktelecom/ssolib/c/a;
 
-    invoke-virtual {v1}, Ltid/sktelecom/ssolib/c/a;->a()Landroidx/browser/customtabs/d;
+    invoke-virtual {v1}, Ltid/sktelecom/ssolib/c/a;->a()Landroidx/browser/customtabs/CustomTabsSession;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/browser/customtabs/b$a;-><init>(Landroidx/browser/customtabs/d;)V
+    invoke-direct {v0, v1}, Landroidx/browser/customtabs/CustomTabsIntent$a;-><init>(Landroidx/browser/customtabs/CustomTabsSession;)V
 
     .line 3
-    invoke-virtual {v0}, Landroidx/browser/customtabs/b$a;->d()Landroidx/browser/customtabs/b;
+    invoke-virtual {v0}, Landroidx/browser/customtabs/CustomTabsIntent$a;->d()Landroidx/browser/customtabs/CustomTabsIntent;
 
     move-result-object v0
 
     .line 4
-    iget-object v1, v0, Landroidx/browser/customtabs/b;->a:Landroid/content/Intent;
+    iget-object v1, v0, Landroidx/browser/customtabs/CustomTabsIntent;->a:Landroid/content/Intent;
 
     iget-object v2, p0, Ltid/sktelecom/ssolib/CustomTabAuthResultActivity;->d:Ljava/lang/String;
 
@@ -1490,7 +1490,7 @@
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 5
-    iget-object v0, v0, Landroidx/browser/customtabs/b;->a:Landroid/content/Intent;
+    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsIntent;->a:Landroid/content/Intent;
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V

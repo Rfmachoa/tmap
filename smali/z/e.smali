@@ -1,95 +1,78 @@
-.class public interface abstract Lz/e;
+.class public Lz/e;
 .super Ljava/lang/Object;
-.source "IoConfig.java"
-
-# interfaces
-.implements Landroidx/camera/core/impl/q;
+.source "ExtraSupportedSurfaceCombinationsContainer.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lz/e$a;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
-# static fields
-.field public static final r:Landroidx/camera/core/impl/Config$a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Ljava/util/concurrent/Executor;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final a:Ly/p;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    const-class v0, Ljava/util/concurrent/Executor;
-
-    const-string v1, "camerax.core.io.ioExecutor"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+    const-class v0, Ly/p;
+
+    invoke-static {v0}, Ly/l;->a(Ljava/lang/Class;)Lb0/m1;
 
     move-result-object v0
 
-    sput-object v0, Lz/e;->r:Landroidx/camera/core/impl/Config$a;
+    check-cast v0, Ly/p;
+
+    iput-object v0, p0, Lz/e;->a:Ly/p;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public J(Ljava/util/concurrent/Executor;)Ljava/util/concurrent/Executor;
+.method public a(Ljava/lang/String;I)Ljava/util/List;
     .locals 1
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/Nullable;
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lz/e;->r:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/q;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/concurrent/Executor;
-
-    return-object p1
-.end method
-
-.method public P()Ljava/util/concurrent/Executor;
-    .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I)",
+            "Ljava/util/List<",
+            "Lb0/t1;",
+            ">;"
+        }
+    .end annotation
+
     .line 1
-    sget-object v0, Lz/e;->r:Landroidx/camera/core/impl/Config$a;
+    iget-object v0, p0, Lz/e;->a:Ly/p;
 
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/q;->b(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    .line 2
+    new-instance p1, Ljava/util/ArrayList;
 
-    check-cast v0, Ljava/util/concurrent/Executor;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    return-object v0
+    return-object p1
+
+    .line 3
+    :cond_0
+    invoke-virtual {v0, p1, p2}, Ly/p;->d(Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
 .end method

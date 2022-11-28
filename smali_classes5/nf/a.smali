@@ -1,154 +1,264 @@
 .class public Lnf/a;
 .super Ljava/lang/Object;
-.source "CloneUtils.java"
+.source "LinkTimestampQueue.java"
 
 
 # annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lnf/a$a;
+    }
 .end annotation
+
+
+# instance fields
+.field public a:J
+
+.field public b:Ljava/util/Deque;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Deque<",
+            "Lnf/a$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    const-wide/16 v0, 0x7530
+
+    .line 3
+    iput-wide v0, p0, Lnf/a;->a:J
+
     return-void
 .end method
 
-.method public static a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
+.method public static synthetic a(Lnf/a;)J
+    .locals 2
 
     .line 1
-    invoke-static {p0}, Lnf/a;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v0, p0, Lnf/a;->a:J
 
-    move-result-object p0
-
-    return-object p0
+    return-wide v0
 .end method
 
-.method public static b(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+
+# virtual methods
+.method public b(J)Ljava/util/List;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)TT;"
+            "(J)",
+            "Ljava/util/List<",
+            "Lnf/a$a;",
+            ">;"
         }
     .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return-object v0
 
     .line 1
-    :cond_0
-    instance-of v1, p0, Ljava/lang/Cloneable;
-
-    if-eqz v1, :cond_2
+    invoke-virtual {p0, p1, p2}, Lnf/a;->c(J)V
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance p1, Ljava/util/ArrayList;
 
-    move-result-object v1
-
-    :try_start_0
-    const-string v2, "clone"
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    iget-object p2, p0, Lnf/a;->b:Ljava/util/Deque;
 
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
+    invoke-interface {p2}, Ljava/util/Deque;->descendingIterator()Ljava/util/Iterator;
+
+    move-result-object p2
 
     .line 4
-    :try_start_1
-    invoke-virtual {v1, p0, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p0
-    :try_end_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_0
+    move-result v0
 
-    return-object p0
-
-    :catch_0
-    move-exception p0
+    if-eqz v0, :cond_0
 
     .line 5
-    new-instance v0, Ljava/lang/IllegalAccessError;
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->getMessage()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Lnf/a$a;
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalAccessError;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    throw v0
+    goto :goto_0
 
-    :catch_1
-    move-exception p0
+    :cond_0
+    return-object p1
+.end method
+
+.method public final c(J)V
+    .locals 1
+
+    .line 1
+    :goto_0
+    iget-object v0, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    invoke-interface {v0}, Ljava/util/Deque;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    invoke-interface {v0}, Ljava/util/Deque;->peekFirst()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnf/a$a;
+
+    .line 3
+    invoke-virtual {v0, p1, p2}, Lnf/a$a;->e(J)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    .line 4
+    :cond_0
+    iget-object v0, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    invoke-interface {v0}, Ljava/util/Deque;->removeFirst()Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public d(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-lez v0, :cond_0
+
+    .line 1
+    iput-wide p1, p0, Lnf/a;->a:J
+
+    return-void
+
+    .line 2
+    :cond_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string p2, "LinkTimestampQueue timeout value must be greater than 0."
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public e(Ljava/lang/String;I)V
+    .locals 8
+
+    .line 1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v3
+
+    .line 2
+    invoke-virtual {p0, v3, v4}, Lnf/a;->c(J)V
+
+    .line 3
+    iget-object v0, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    invoke-interface {v0}, Ljava/util/Deque;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    iget-object v6, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    new-instance v7, Lnf/a$a;
+
+    move-object v0, v7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lnf/a$a;-><init>(Lnf/a;Ljava/lang/String;JI)V
+
+    invoke-interface {v6, v7}, Ljava/util/Deque;->addLast(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lnf/a;->b:Ljava/util/Deque;
+
+    invoke-interface {v0}, Ljava/util/Deque;->getLast()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnf/a$a;
 
     .line 6
-    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+    invoke-static {v0}, Lnf/a$a;->a(Lnf/a$a;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
 
     .line 7
-    instance-of v0, p0, Ljava/lang/CloneNotSupportedException;
+    iget-object v6, p0, Lnf/a;->b:Ljava/util/Deque;
 
-    if-eqz v0, :cond_1
+    new-instance v7, Lnf/a$a;
+
+    move-object v0, v7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lnf/a$a;-><init>(Lnf/a;Ljava/lang/String;JI)V
+
+    invoke-interface {v6, v7}, Ljava/util/Deque;->addLast(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     .line 8
-    check-cast p0, Ljava/lang/CloneNotSupportedException;
-
-    throw p0
-
-    .line 9
     :cond_1
-    new-instance v0, Ljava/lang/Error;
+    invoke-static {v0, v3, v4}, Lnf/a$a;->b(Lnf/a$a;J)J
 
-    const-string v1, "Unexpected exception"
-
-    invoke-direct {v0, v1, p0}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catch_2
-    move-exception p0
-
-    .line 10
-    new-instance v0, Ljava/lang/NoSuchMethodError;
-
-    invoke-virtual {p0}, Ljava/lang/NoSuchMethodException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/NoSuchMethodError;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 11
-    :cond_2
-    new-instance p0, Ljava/lang/CloneNotSupportedException;
-
-    invoke-direct {p0}, Ljava/lang/CloneNotSupportedException;-><init>()V
-
-    throw p0
+    :goto_0
+    return-void
 .end method

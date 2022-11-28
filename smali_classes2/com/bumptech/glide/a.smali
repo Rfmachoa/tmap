@@ -55,9 +55,9 @@
     return-object p0
 .end method
 
-.method public static i(Lk5/g;)Lcom/bumptech/glide/a;
+.method public static i(Lh7/g;)Lcom/bumptech/glide/a;
     .locals 1
-    .param p0    # Lk5/g;
+    .param p0    # Lh7/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -69,7 +69,7 @@
             "<TranscodeType:",
             "Ljava/lang/Object;",
             ">(",
-            "Lk5/g<",
+            "Lh7/g<",
             "-TTranscodeType;>;)",
             "Lcom/bumptech/glide/a<",
             "TTranscodeType;>;"
@@ -81,7 +81,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/a;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/j;->f(Lk5/g;)Lcom/bumptech/glide/j;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/j;->f(Lh7/g;)Lcom/bumptech/glide/j;
 
     move-result-object p0
 
@@ -90,9 +90,9 @@
     return-object p0
 .end method
 
-.method public static j(Lk5/j$a;)Lcom/bumptech/glide/a;
+.method public static j(Lh7/j$a;)Lcom/bumptech/glide/a;
     .locals 1
-    .param p0    # Lk5/j$a;
+    .param p0    # Lh7/j$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -104,7 +104,7 @@
             "<TranscodeType:",
             "Ljava/lang/Object;",
             ">(",
-            "Lk5/j$a;",
+            "Lh7/j$a;",
             ")",
             "Lcom/bumptech/glide/a<",
             "TTranscodeType;>;"
@@ -116,7 +116,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/a;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/j;->g(Lk5/j$a;)Lcom/bumptech/glide/j;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/j;->g(Lh7/j$a;)Lcom/bumptech/glide/j;
 
     move-result-object p0
 

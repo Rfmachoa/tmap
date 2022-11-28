@@ -3,12 +3,12 @@
 .source "TmapNaviActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;
+.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Jb()V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->cc()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,7 +57,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$c0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->E8(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->R8(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/String;)V
 
     return-void
 .end method

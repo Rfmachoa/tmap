@@ -3,26 +3,41 @@
 .source "ProcessingImageReader.java"
 
 # interfaces
-.implements Lx/l0;
+.implements Lb0/w0;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/core/i2$f;,
+        Landroidx/camera/core/i2$e;
+    }
+.end annotation
 
 
 # static fields
-.field public static final r:Ljava/lang/String; = "ProcessingImageReader"
+.field public static final v:Ljava/lang/String; = "ProcessingImageReader"
+
+.field public static final w:I = 0xfa00
 
 
 # instance fields
 .field public final a:Ljava/lang/Object;
 
-.field public b:Lx/l0$a;
+.field public b:Lb0/w0$a;
 
-.field public c:Lx/l0$a;
+.field public c:Lb0/w0$a;
 
 .field public d:Landroidx/camera/core/impl/utils/futures/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/camera/core/impl/utils/futures/c<",
             "Ljava/util/List<",
-            "Landroidx/camera/core/p1;",
+            "Landroidx/camera/core/m1;",
             ">;>;"
         }
     .end annotation
@@ -40,19 +55,19 @@
     .end annotation
 .end field
 
-.field public final g:Landroidx/camera/core/a2;
+.field public final g:Lb0/w0;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
 .end field
 
-.field public final h:Lx/l0;
+.field public final h:Lb0/w0;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
 .end field
 
-.field public i:Lx/l0$a;
+.field public i:Lb0/w0$a;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
@@ -103,14 +118,27 @@
     .end annotation
 .end field
 
-.field public final n:Lx/x;
+.field public final n:Lb0/f0;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field public o:Ljava/lang/String;
+.field public final o:Lcom/google/common/util/concurrent/ListenableFuture;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-.field public p:Landroidx/camera/core/r2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/util/concurrent/ListenableFuture<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public p:Ljava/lang/String;
+
+.field public q:Landroidx/camera/core/u2;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
     .end annotation
@@ -119,7 +147,7 @@
     .end annotation
 .end field
 
-.field public final q:Ljava/util/List;
+.field public final r:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -129,237 +157,63 @@
     .end annotation
 .end field
 
+.field public s:Lcom/google/common/util/concurrent/ListenableFuture;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/util/concurrent/ListenableFuture<",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/m1;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field public t:Landroidx/camera/core/i2$f;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
+
+.field public u:Ljava/util/concurrent/Executor;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "mLock"
+    .end annotation
+.end field
+
 
 # direct methods
-.method public constructor <init>(IIIILjava/util/concurrent/Executor;Lx/w;Lx/x;)V
-    .locals 9
-    .param p5    # Ljava/util/concurrent/Executor;
+.method public constructor <init>(Landroidx/camera/core/i2$e;)V
+    .locals 6
+    .param p1    # Landroidx/camera/core/i2$e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p6    # Lx/w;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p7    # Lx/x;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "width",
-            "height",
-            "format",
-            "maxImages",
-            "postProcessExecutor",
-            "captureBundle",
-            "captureProcessor"
-        }
-    .end annotation
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    move-object/from16 v7, p7
-
-    move v8, p3
 
     .line 1
-    invoke-direct/range {v0 .. v8}, Landroidx/camera/core/i2;-><init>(IIIILjava/util/concurrent/Executor;Lx/w;Lx/x;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIILjava/util/concurrent/Executor;Lx/w;Lx/x;I)V
-    .locals 6
-    .param p5    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p6    # Lx/w;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p7    # Lx/x;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "width",
-            "height",
-            "inputFormat",
-            "maxImages",
-            "postProcessExecutor",
-            "captureBundle",
-            "captureProcessor",
-            "outputFormat"
-        }
-    .end annotation
-
-    .line 2
-    new-instance v1, Landroidx/camera/core/a2;
-
-    invoke-direct {v1, p1, p2, p3, p4}, Landroidx/camera/core/a2;-><init>(IIII)V
-
-    move-object v0, p0
-
-    move-object v2, p5
-
-    move-object v3, p6
-
-    move-object v4, p7
-
-    move v5, p8
-
-    invoke-direct/range {v0 .. v5}, Landroidx/camera/core/i2;-><init>(Landroidx/camera/core/a2;Ljava/util/concurrent/Executor;Lx/w;Lx/x;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/camera/core/a2;Ljava/util/concurrent/Executor;Lx/w;Lx/x;)V
-    .locals 6
-    .param p1    # Landroidx/camera/core/a2;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Lx/w;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lx/x;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "imageReader",
-            "postProcExecutor",
-            "capBundle",
-            "capProcessor"
-        }
-    .end annotation
-
-    .line 3
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->d()I
-
-    move-result v5
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-direct/range {v0 .. v5}, Landroidx/camera/core/i2;-><init>(Landroidx/camera/core/a2;Ljava/util/concurrent/Executor;Lx/w;Lx/x;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/camera/core/a2;Ljava/util/concurrent/Executor;Lx/w;Lx/x;I)V
-    .locals 4
-    .param p1    # Landroidx/camera/core/a2;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Lx/w;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lx/x;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "imageReader",
-            "postProcessExecutor",
-            "captureBundle",
-            "captureProcessor",
-            "outputFormat"
-        }
-    .end annotation
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
 
-    .line 6
+    .line 3
     new-instance v0, Landroidx/camera/core/i2$a;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/i2$a;-><init>(Landroidx/camera/core/i2;)V
 
-    iput-object v0, p0, Landroidx/camera/core/i2;->b:Lx/l0$a;
+    iput-object v0, p0, Landroidx/camera/core/i2;->b:Lb0/w0$a;
 
-    .line 7
+    .line 4
     new-instance v0, Landroidx/camera/core/i2$b;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/i2$b;-><init>(Landroidx/camera/core/i2;)V
 
-    iput-object v0, p0, Landroidx/camera/core/i2;->c:Lx/l0$a;
+    iput-object v0, p0, Landroidx/camera/core/i2;->c:Lb0/w0$a;
 
-    .line 8
+    .line 5
     new-instance v0, Landroidx/camera/core/i2$c;
 
     invoke-direct {v0, p0}, Landroidx/camera/core/i2$c;-><init>(Landroidx/camera/core/i2;)V
@@ -368,46 +222,63 @@
 
     const/4 v0, 0x0
 
-    .line 9
+    .line 6
     iput-boolean v0, p0, Landroidx/camera/core/i2;->e:Z
 
-    .line 10
+    .line 7
     iput-boolean v0, p0, Landroidx/camera/core/i2;->f:Z
 
-    .line 11
+    .line 8
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    iput-object v0, p0, Landroidx/camera/core/i2;->o:Ljava/lang/String;
+    iput-object v0, p0, Landroidx/camera/core/i2;->p:Ljava/lang/String;
 
-    .line 12
-    new-instance v0, Landroidx/camera/core/r2;
+    .line 9
+    new-instance v0, Landroidx/camera/core/u2;
 
-    .line 13
+    .line 10
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
-    iget-object v2, p0, Landroidx/camera/core/i2;->o:Ljava/lang/String;
+    iget-object v2, p0, Landroidx/camera/core/i2;->p:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Landroidx/camera/core/r2;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Landroidx/camera/core/u2;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
-    iput-object v0, p0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
+    iput-object v0, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
 
-    .line 14
+    .line 11
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Landroidx/camera/core/i2;->q:Ljava/util/List;
+    iput-object v0, p0, Landroidx/camera/core/i2;->r:Ljava/util/List;
 
-    .line 15
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->g()I
+    .line 12
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 13
+    invoke-static {v0}, Landroidx/camera/core/impl/utils/futures/f;->h(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/camera/core/i2;->s:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 14
+    iget-object v0, p1, Landroidx/camera/core/i2$e;->a:Lb0/w0;
+
+    invoke-interface {v0}, Lb0/w0;->b()I
 
     move-result v0
 
-    invoke-interface {p3}, Lx/w;->c()Ljava/util/List;
+    iget-object v1, p1, Landroidx/camera/core/i2$e;->b:Lb0/e0;
+
+    .line 15
+    invoke-interface {v1}, Lb0/e0;->c()Ljava/util/List;
 
     move-result-object v1
 
@@ -418,110 +289,176 @@
     if-lt v0, v1, :cond_1
 
     .line 16
-    iput-object p1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object v0, p1, Landroidx/camera/core/i2$e;->a:Lb0/w0;
+
+    iput-object v0, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
     .line 17
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->getWidth()I
+    invoke-interface {v0}, Lb0/w0;->getWidth()I
 
-    move-result v0
+    move-result v1
 
     .line 18
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->getHeight()I
+    invoke-interface {v0}, Lb0/w0;->getHeight()I
 
-    move-result v1
-
-    const/16 v2, 0x100
-
-    if-ne p5, v2, :cond_0
+    move-result v2
 
     .line 19
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->getWidth()I
+    iget v3, p1, Landroidx/camera/core/i2$e;->d:I
 
-    move-result v0
+    const/16 v4, 0x100
 
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->getHeight()I
+    if-ne v3, v4, :cond_0
 
-    move-result v1
+    mul-int/2addr v1, v2
 
-    mul-int/2addr v0, v1
+    int-to-float v1, v1
 
-    const/4 v1, 0x1
+    const/high16 v2, 0x3fc00000    # 1.5f
+
+    mul-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    const v2, 0xfa00
+
+    add-int/2addr v1, v2
+
+    const/4 v2, 0x1
 
     .line 20
     :cond_0
-    new-instance v2, Landroidx/camera/core/d;
+    new-instance v4, Landroidx/camera/core/d;
 
     .line 21
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->g()I
+    invoke-interface {v0}, Lb0/w0;->b()I
+
+    move-result v5
+
+    .line 22
+    invoke-static {v1, v2, v3, v5}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
+
+    move-result-object v1
+
+    invoke-direct {v4, v1}, Landroidx/camera/core/d;-><init>(Landroid/media/ImageReader;)V
+
+    iput-object v4, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
+
+    .line 23
+    iget-object v1, p1, Landroidx/camera/core/i2$e;->e:Ljava/util/concurrent/Executor;
+
+    iput-object v1, p0, Landroidx/camera/core/i2;->m:Ljava/util/concurrent/Executor;
+
+    .line 24
+    iget-object v1, p1, Landroidx/camera/core/i2$e;->c:Lb0/f0;
+
+    iput-object v1, p0, Landroidx/camera/core/i2;->n:Lb0/f0;
+
+    .line 25
+    invoke-interface {v4}, Lb0/w0;->c()Landroid/view/Surface;
+
+    move-result-object v2
+
+    iget v3, p1, Landroidx/camera/core/i2$e;->d:I
+
+    invoke-interface {v1, v2, v3}, Lb0/f0;->b(Landroid/view/Surface;I)V
+
+    .line 26
+    new-instance v2, Landroid/util/Size;
+
+    .line 27
+    invoke-interface {v0}, Lb0/w0;->getWidth()I
 
     move-result v3
 
-    .line 22
-    invoke-static {v0, v1, p5, v3}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
+    invoke-interface {v0}, Lb0/w0;->getHeight()I
+
+    move-result v0
+
+    invoke-direct {v2, v3, v0}, Landroid/util/Size;-><init>(II)V
+
+    .line 28
+    invoke-interface {v1, v2}, Lb0/f0;->d(Landroid/util/Size;)V
+
+    .line 29
+    invoke-interface {v1}, Lb0/f0;->c()Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Landroidx/camera/core/d;-><init>(Landroid/media/ImageReader;)V
+    iput-object v0, p0, Landroidx/camera/core/i2;->o:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    iput-object v2, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    .line 30
+    iget-object p1, p1, Landroidx/camera/core/i2$e;->b:Lb0/e0;
 
-    .line 23
-    iput-object p2, p0, Landroidx/camera/core/i2;->m:Ljava/util/concurrent/Executor;
-
-    .line 24
-    iput-object p4, p0, Landroidx/camera/core/i2;->n:Lx/x;
-
-    .line 25
-    invoke-interface {v2}, Lx/l0;->a()Landroid/view/Surface;
-
-    move-result-object p2
-
-    invoke-interface {p4, p2, p5}, Lx/x;->a(Landroid/view/Surface;I)V
-
-    .line 26
-    new-instance p2, Landroid/util/Size;
-
-    .line 27
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->getWidth()I
-
-    move-result p5
-
-    invoke-virtual {p1}, Landroidx/camera/core/a2;->getHeight()I
-
-    move-result p1
-
-    invoke-direct {p2, p5, p1}, Landroid/util/Size;-><init>(II)V
-
-    .line 28
-    invoke-interface {p4, p2}, Lx/x;->c(Landroid/util/Size;)V
-
-    .line 29
-    invoke-virtual {p0, p3}, Landroidx/camera/core/i2;->n(Lx/w;)V
+    invoke-virtual {p0, p1}, Landroidx/camera/core/i2;->t(Lb0/e0;)V
 
     return-void
 
-    .line 30
+    .line 31
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "MetadataImageReader is smaller than CaptureBundle."
+    const-string v0, "MetadataImageReader is smaller than CaptureBundle."
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public static synthetic b(Landroidx/camera/core/i2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+.method public static synthetic d(Landroidx/camera/core/i2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/camera/core/i2;->m(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    invoke-direct {p0, p1}, Landroidx/camera/core/i2;->s(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private synthetic m(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+.method public static synthetic i(Landroidx/camera/core/i2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroidx/camera/core/i2;->q(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
+
+    return-void
+.end method
+
+.method public static synthetic j(Ljava/lang/Void;)Ljava/lang/Void;
+    .locals 0
+
+    invoke-static {p0}, Landroidx/camera/core/i2;->r(Ljava/lang/Void;)Ljava/lang/Void;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private synthetic q(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/i2;->k()V
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->c(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public static synthetic r(Ljava/lang/Void;)Ljava/lang/Void;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private synthetic s(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -560,10 +497,8 @@
 
 
 # virtual methods
-.method public a()Landroid/view/Surface;
+.method public a()I
     .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
@@ -572,15 +507,15 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
 
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->a()Landroid/view/Surface;
+    invoke-interface {v1}, Lb0/w0;->a()I
 
-    move-result-object v1
+    move-result v1
 
     monitor-exit v0
 
-    return-object v1
+    return v1
 
     :catchall_0
     move-exception v1
@@ -593,7 +528,38 @@
     throw v1
 .end method
 
-.method public c()Landroidx/camera/core/p1;
+.method public b()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
+
+    invoke-interface {v1}, Lb0/w0;->b()I
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public c()Landroid/view/Surface;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -605,9 +571,9 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-interface {v1}, Lx/l0;->c()Landroidx/camera/core/p1;
+    invoke-interface {v1}, Lb0/w0;->c()Landroid/view/Surface;
 
     move-result-object v1
 
@@ -627,7 +593,7 @@
 .end method
 
 .method public close()V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
@@ -647,63 +613,51 @@
 
     .line 4
     :cond_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-interface {v1}, Lx/l0;->e()V
+    invoke-interface {v1}, Lb0/w0;->f()V
 
     .line 5
-    iget-boolean v1, p0, Landroidx/camera/core/i2;->f:Z
+    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
 
-    if-nez v1, :cond_1
+    invoke-interface {v1}, Lb0/w0;->f()V
 
-    .line 6
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
-
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->close()V
-
-    .line 7
-    iget-object v1, p0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
-
-    invoke-virtual {v1}, Landroidx/camera/core/r2;->d()V
-
-    .line 8
-    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
-
-    invoke-interface {v1}, Lx/l0;->close()V
-
-    .line 9
-    iget-object v1, p0, Landroidx/camera/core/i2;->k:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
-
-    if-eqz v1, :cond_1
-
-    const/4 v2, 0x0
-
-    .line 10
-    invoke-virtual {v1, v2}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->c(Ljava/lang/Object;)Z
-
-    :cond_1
     const/4 v1, 0x1
 
-    .line 11
+    .line 6
     iput-boolean v1, p0, Landroidx/camera/core/i2;->e:Z
 
-    .line 12
+    .line 7
     monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 8
+    iget-object v0, p0, Landroidx/camera/core/i2;->n:Lb0/f0;
+
+    invoke-interface {v0}, Lb0/f0;->close()V
+
+    .line 9
+    invoke-virtual {p0}, Landroidx/camera/core/i2;->l()V
 
     return-void
 
     :catchall_0
     move-exception v1
 
+    .line 10
+    :try_start_1
     monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v1
 .end method
 
-.method public d()I
+.method public e()Landroidx/camera/core/m1;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
@@ -712,15 +666,15 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
 
-    invoke-interface {v1}, Lx/l0;->d()I
+    invoke-interface {v1}, Lb0/w0;->e()Landroidx/camera/core/m1;
 
-    move-result v1
+    move-result-object v1
 
     monitor-exit v0
 
-    return v1
+    return-object v1
 
     :catchall_0
     move-exception v1
@@ -733,7 +687,7 @@
     throw v1
 .end method
 
-.method public e()V
+.method public f()V
     .locals 2
 
     .line 1
@@ -745,20 +699,20 @@
 
     .line 2
     :try_start_0
-    iput-object v1, p0, Landroidx/camera/core/i2;->i:Lx/l0$a;
+    iput-object v1, p0, Landroidx/camera/core/i2;->i:Lb0/w0$a;
 
     .line 3
     iput-object v1, p0, Landroidx/camera/core/i2;->j:Ljava/util/concurrent/Executor;
 
     .line 4
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->e()V
+    invoke-interface {v1}, Lb0/w0;->f()V
 
     .line 5
-    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
 
-    invoke-interface {v1}, Lx/l0;->e()V
+    invoke-interface {v1}, Lb0/w0;->f()V
 
     .line 6
     iget-boolean v1, p0, Landroidx/camera/core/i2;->f:Z
@@ -766,9 +720,9 @@
     if-nez v1, :cond_0
 
     .line 7
-    iget-object v1, p0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
 
-    invoke-virtual {v1}, Landroidx/camera/core/r2;->d()V
+    invoke-virtual {v1}, Landroidx/camera/core/u2;->d()V
 
     .line 8
     :cond_0
@@ -786,9 +740,9 @@
     throw v1
 .end method
 
-.method public f(Lx/l0$a;Ljava/util/concurrent/Executor;)V
+.method public g(Lb0/w0$a;Ljava/util/concurrent/Executor;)V
     .locals 2
-    .param p1    # Lx/l0$a;
+    .param p1    # Lb0/w0$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -796,16 +750,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "listener",
-            "executor"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
@@ -814,16 +758,16 @@
 
     .line 2
     :try_start_0
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lx/l0$a;
+    check-cast p1, Lb0/w0$a;
 
-    iput-object p1, p0, Landroidx/camera/core/i2;->i:Lx/l0$a;
+    iput-object p1, p0, Landroidx/camera/core/i2;->i:Lb0/w0$a;
 
     .line 3
-    invoke-static {p2}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -832,18 +776,18 @@
     iput-object p1, p0, Landroidx/camera/core/i2;->j:Ljava/util/concurrent/Executor;
 
     .line 4
-    iget-object p1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object p1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    iget-object v1, p0, Landroidx/camera/core/i2;->b:Lx/l0$a;
+    iget-object v1, p0, Landroidx/camera/core/i2;->b:Lb0/w0$a;
 
-    invoke-virtual {p1, v1, p2}, Landroidx/camera/core/a2;->f(Lx/l0$a;Ljava/util/concurrent/Executor;)V
+    invoke-interface {p1, v1, p2}, Lb0/w0;->g(Lb0/w0$a;Ljava/util/concurrent/Executor;)V
 
     .line 5
-    iget-object p1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    iget-object p1, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
 
-    iget-object v1, p0, Landroidx/camera/core/i2;->c:Lx/l0$a;
+    iget-object v1, p0, Landroidx/camera/core/i2;->c:Lb0/w0$a;
 
-    invoke-interface {p1, v1, p2}, Lx/l0;->f(Lx/l0$a;Ljava/util/concurrent/Executor;)V
+    invoke-interface {p1, v1, p2}, Lb0/w0;->g(Lb0/w0$a;Ljava/util/concurrent/Executor;)V
 
     .line 6
     monitor-exit v0
@@ -860,37 +804,6 @@
     throw p1
 .end method
 
-.method public g()I
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
-
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->g()I
-
-    move-result v1
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
 .method public getHeight()I
     .locals 2
 
@@ -901,9 +814,9 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->getHeight()I
+    invoke-interface {v1}, Lb0/w0;->getHeight()I
 
     move-result v1
 
@@ -932,9 +845,9 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->getWidth()I
+    invoke-interface {v1}, Lb0/w0;->getWidth()I
 
     move-result v1
 
@@ -953,7 +866,7 @@
     throw v1
 .end method
 
-.method public h()Landroidx/camera/core/p1;
+.method public h()Landroidx/camera/core/m1;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -965,9 +878,9 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lx/l0;
+    iget-object v1, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
 
-    invoke-interface {v1}, Lx/l0;->h()Landroidx/camera/core/p1;
+    invoke-interface {v1}, Lb0/w0;->h()Landroidx/camera/core/m1;
 
     move-result-object v1
 
@@ -986,8 +899,131 @@
     throw v1
 .end method
 
-.method public i()Lx/i;
-    .locals 2
+.method public final k()V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/i2;->s:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    invoke-interface {v1}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 3
+    iget-object v1, p0, Landroidx/camera/core/i2;->s:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    const/4 v2, 0x1
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    .line 4
+    :cond_0
+    iget-object v1, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
+
+    invoke-virtual {v1}, Landroidx/camera/core/u2;->e()V
+
+    .line 5
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public l()V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-boolean v1, p0, Landroidx/camera/core/i2;->e:Z
+
+    .line 3
+    iget-boolean v2, p0, Landroidx/camera/core/i2;->f:Z
+
+    .line 4
+    iget-object v3, p0, Landroidx/camera/core/i2;->k:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+    if-eqz v1, :cond_0
+
+    if-nez v2, :cond_0
+
+    .line 5
+    iget-object v4, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
+
+    invoke-interface {v4}, Lb0/w0;->close()V
+
+    .line 6
+    iget-object v4, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
+
+    invoke-virtual {v4}, Landroidx/camera/core/u2;->d()V
+
+    .line 7
+    iget-object v4, p0, Landroidx/camera/core/i2;->h:Lb0/w0;
+
+    invoke-interface {v4}, Lb0/w0;->close()V
+
+    .line 8
+    :cond_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    if-nez v2, :cond_1
+
+    .line 9
+    iget-object v0, p0, Landroidx/camera/core/i2;->o:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    new-instance v1, Landroidx/camera/core/g2;
+
+    invoke-direct {v1, p0, v3}, Landroidx/camera/core/g2;-><init>(Landroidx/camera/core/i2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
+
+    .line 10
+    invoke-static {}, Landroidx/camera/core/impl/utils/executor/a;->a()Ljava/util/concurrent/Executor;
+
+    move-result-object v2
+
+    .line 11
+    invoke-interface {v0, v1, v2}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    :cond_1
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 12
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public m()Lb0/m;
+    .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -998,11 +1034,28 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->n()Lx/i;
+    instance-of v2, v1, Landroidx/camera/core/x1;
+
+    if-eqz v2, :cond_0
+
+    .line 3
+    check-cast v1, Landroidx/camera/core/x1;
+
+    invoke-virtual {v1}, Landroidx/camera/core/x1;->n()Lb0/m;
 
     move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 4
+    :cond_0
+    new-instance v1, Landroidx/camera/core/i2$d;
+
+    invoke-direct {v1, p0}, Landroidx/camera/core/i2$d;-><init>(Landroidx/camera/core/i2;)V
 
     monitor-exit v0
 
@@ -1011,7 +1064,7 @@
     :catchall_0
     move-exception v1
 
-    .line 3
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1019,8 +1072,8 @@
     throw v1
 .end method
 
-.method public j()Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 2
+.method public n()Lcom/google/common/util/concurrent/ListenableFuture;
+    .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -1048,25 +1101,33 @@
 
     if-nez v1, :cond_0
 
-    const/4 v1, 0x0
-
     .line 3
-    invoke-static {v1}, Landroidx/camera/core/impl/utils/futures/f;->h(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object v1, p0, Landroidx/camera/core/i2;->o:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    sget-object v2, Landroidx/camera/core/h2;->a:Landroidx/camera/core/h2;
+
+    .line 4
+    invoke-static {}, Landroidx/camera/core/impl/utils/executor/a;->a()Ljava/util/concurrent/Executor;
+
+    move-result-object v3
+
+    .line 5
+    invoke-static {v1, v2, v3}, Landroidx/camera/core/impl/utils/futures/f;->o(Lcom/google/common/util/concurrent/ListenableFuture;Lp/a;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 4
+    .line 6
     :cond_0
     iget-object v1, p0, Landroidx/camera/core/i2;->l:Lcom/google/common/util/concurrent/ListenableFuture;
 
     if-nez v1, :cond_1
 
-    .line 5
-    new-instance v1, Landroidx/camera/core/h2;
+    .line 7
+    new-instance v1, Landroidx/camera/core/f2;
 
-    invoke-direct {v1, p0}, Landroidx/camera/core/h2;-><init>(Landroidx/camera/core/i2;)V
+    invoke-direct {v1, p0}, Landroidx/camera/core/f2;-><init>(Landroidx/camera/core/i2;)V
 
     invoke-static {v1}, Landroidx/concurrent/futures/CallbackToFutureAdapter;->a(Landroidx/concurrent/futures/CallbackToFutureAdapter$b;)Lcom/google/common/util/concurrent/ListenableFuture;
 
@@ -1074,7 +1135,7 @@
 
     iput-object v1, p0, Landroidx/camera/core/i2;->l:Lcom/google/common/util/concurrent/ListenableFuture;
 
-    .line 6
+    .line 8
     :cond_1
     iget-object v1, p0, Landroidx/camera/core/i2;->l:Lcom/google/common/util/concurrent/ListenableFuture;
 
@@ -1082,7 +1143,7 @@
 
     move-result-object v1
 
-    .line 7
+    .line 9
     :goto_0
     monitor-exit v0
 
@@ -1098,27 +1159,19 @@
     throw v1
 .end method
 
-.method public k()Ljava/lang/String;
+.method public o()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/i2;->o:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/camera/core/i2;->p:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public l(Lx/l0;)V
+.method public p(Lb0/w0;)V
     .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "imageReader"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
@@ -1141,7 +1194,7 @@
     .line 4
     :cond_0
     :try_start_1
-    invoke-interface {p1}, Lx/l0;->h()Landroidx/camera/core/p1;
+    invoke-interface {p1}, Lb0/w0;->h()Landroidx/camera/core/m1;
 
     move-result-object p1
     :try_end_1
@@ -1152,22 +1205,24 @@
 
     .line 5
     :try_start_2
-    invoke-interface {p1}, Landroidx/camera/core/p1;->f1()Landroidx/camera/core/o1;
+    invoke-interface {p1}, Landroidx/camera/core/m1;->A1()Landroidx/camera/core/j1;
 
     move-result-object v1
 
-    invoke-interface {v1}, Landroidx/camera/core/o1;->b()Lx/g1;
+    invoke-interface {v1}, Landroidx/camera/core/j1;->b()Lb0/v1;
 
     move-result-object v1
 
-    iget-object v2, p0, Landroidx/camera/core/i2;->o:Ljava/lang/String;
+    iget-object v2, p0, Landroidx/camera/core/i2;->p:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lx/g1;->d(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual {v1, v2}, Lb0/v1;->d(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
 
     .line 6
-    iget-object v2, p0, Landroidx/camera/core/i2;->q:Ljava/util/List;
+    iget-object v2, p0, Landroidx/camera/core/i2;->r:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1192,18 +1247,18 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
-    invoke-interface {p1}, Landroidx/camera/core/p1;->close()V
+    invoke-interface {p1}, Landroidx/camera/core/m1;->close()V
 
     goto :goto_0
 
     .line 9
     :cond_1
-    iget-object v1, p0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
+    iget-object v1, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
 
-    invoke-virtual {v1, p1}, Landroidx/camera/core/r2;->c(Landroidx/camera/core/p1;)V
+    invoke-virtual {v1, p1}, Landroidx/camera/core/u2;->c(Landroidx/camera/core/m1;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -1223,7 +1278,7 @@
     const-string v2, "Failed to acquire latest image."
 
     .line 10
-    invoke-static {v1, v2, p1}, Landroidx/camera/core/x1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, p1}, Landroidx/camera/core/u1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -1250,20 +1305,12 @@
     throw p1
 .end method
 
-.method public n(Lx/w;)V
+.method public t(Lb0/e0;)V
     .locals 4
-    .param p1    # Lx/w;
+    .param p1    # Lb0/e0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "captureBundle"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
@@ -1272,20 +1319,34 @@
 
     .line 2
     :try_start_0
-    invoke-interface {p1}, Lx/w;->c()Ljava/util/List;
+    iget-boolean v1, p0, Landroidx/camera/core/i2;->e:Z
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    monitor-exit v0
+
+    return-void
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Landroidx/camera/core/i2;->k()V
+
+    .line 5
+    invoke-interface {p1}, Lb0/e0;->c()Ljava/util/List;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 3
-    iget-object v1, p0, Landroidx/camera/core/i2;->g:Landroidx/camera/core/a2;
+    .line 6
+    iget-object v1, p0, Landroidx/camera/core/i2;->g:Lb0/w0;
 
-    invoke-virtual {v1}, Landroidx/camera/core/a2;->g()I
+    invoke-interface {v1}, Lb0/w0;->b()I
 
     move-result v1
 
-    invoke-interface {p1}, Lx/w;->c()Ljava/util/List;
+    invoke-interface {p1}, Lb0/e0;->c()Ljava/util/List;
 
     move-result-object v2
 
@@ -1293,15 +1354,15 @@
 
     move-result v2
 
-    if-lt v1, v2, :cond_1
+    if-lt v1, v2, :cond_2
 
-    .line 4
-    iget-object v1, p0, Landroidx/camera/core/i2;->q:Ljava/util/List;
+    .line 7
+    iget-object v1, p0, Landroidx/camera/core/i2;->r:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 5
-    invoke-interface {p1}, Lx/w;->c()Ljava/util/List;
+    .line 8
+    invoke-interface {p1}, Lb0/e0;->c()Ljava/util/List;
 
     move-result-object v1
 
@@ -1309,26 +1370,26 @@
 
     move-result-object v1
 
-    :cond_0
+    :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/camera/core/impl/h;
+    check-cast v2, Landroidx/camera/core/impl/f;
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
-    .line 6
-    iget-object v3, p0, Landroidx/camera/core/i2;->q:Ljava/util/List;
+    .line 9
+    iget-object v3, p0, Landroidx/camera/core/i2;->r:Ljava/util/List;
 
-    invoke-interface {v2}, Landroidx/camera/core/impl/h;->getId()I
+    invoke-interface {v2}, Landroidx/camera/core/impl/f;->getId()I
 
     move-result v2
 
@@ -1340,8 +1401,8 @@
 
     goto :goto_0
 
-    .line 7
-    :cond_1
+    .line 10
+    :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "CaptureBundle is larger than InputImageReader."
@@ -1350,8 +1411,8 @@
 
     throw p1
 
-    .line 8
-    :cond_2
+    .line 11
+    :cond_3
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result p1
@@ -1360,21 +1421,21 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/camera/core/i2;->o:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/camera/core/i2;->p:Ljava/lang/String;
 
-    .line 9
-    new-instance v1, Landroidx/camera/core/r2;
+    .line 12
+    new-instance v1, Landroidx/camera/core/u2;
 
-    iget-object v2, p0, Landroidx/camera/core/i2;->q:Ljava/util/List;
+    iget-object v2, p0, Landroidx/camera/core/i2;->r:Ljava/util/List;
 
-    invoke-direct {v1, v2, p1}, Landroidx/camera/core/r2;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v1, v2, p1}, Landroidx/camera/core/u2;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
-    iput-object v1, p0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
+    iput-object v1, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
 
-    .line 10
-    invoke-virtual {p0}, Landroidx/camera/core/i2;->o()V
+    .line 13
+    invoke-virtual {p0}, Landroidx/camera/core/i2;->v()V
 
-    .line 11
+    .line 14
     monitor-exit v0
 
     return-void
@@ -1389,7 +1450,45 @@
     throw p1
 .end method
 
-.method public o()V
+.method public u(Ljava/util/concurrent/Executor;Landroidx/camera/core/i2$f;)V
+    .locals 1
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/camera/core/i2$f;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/i2;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iput-object p1, p0, Landroidx/camera/core/i2;->u:Ljava/util/concurrent/Executor;
+
+    .line 3
+    iput-object p2, p0, Landroidx/camera/core/i2;->t:Landroidx/camera/core/i2$f;
+
+    .line 4
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public v()V
     .locals 4
     .annotation build Landroidx/annotation/GuardedBy;
         value = "mLock"
@@ -1401,7 +1500,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 2
-    iget-object v1, p0, Landroidx/camera/core/i2;->q:Ljava/util/List;
+    iget-object v1, p0, Landroidx/camera/core/i2;->r:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1421,13 +1520,13 @@
     check-cast v2, Ljava/lang/Integer;
 
     .line 3
-    iget-object v3, p0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
+    iget-object v3, p0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    invoke-virtual {v3, v2}, Landroidx/camera/core/r2;->b(I)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-virtual {v3, v2}, Landroidx/camera/core/u2;->b(I)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object v2
 
@@ -1437,6 +1536,13 @@
 
     .line 4
     :cond_0
+    invoke-static {v0}, Landroidx/camera/core/impl/utils/futures/f;->c(Ljava/util/Collection;)Lcom/google/common/util/concurrent/ListenableFuture;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroidx/camera/core/i2;->s:Lcom/google/common/util/concurrent/ListenableFuture;
+
+    .line 5
     invoke-static {v0}, Landroidx/camera/core/impl/utils/futures/f;->c(Ljava/util/Collection;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object v0

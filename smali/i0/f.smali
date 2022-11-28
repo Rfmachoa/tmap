@@ -1,61 +1,79 @@
-.class public abstract Li0/f;
-.super Ljava/lang/Object;
-.source "OutputFileResults.java"
+.class public final Li0/f;
+.super Li0/o;
+.source "AutoValue_Version.java"
 
 
-# annotations
-.annotation build Landroidx/camera/view/video/ExperimentalVideo;
-.end annotation
+# instance fields
+.field public final e:I
 
-.annotation build Lcom/google/auto/value/AutoValue;
-.end annotation
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(IIILjava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Li0/o;-><init>()V
+
+    .line 2
+    iput p1, p0, Li0/f;->e:I
+
+    .line 3
+    iput p2, p0, Li0/f;->f:I
+
+    .line 4
+    iput p3, p0, Li0/f;->g:I
+
+    const-string p1, "Null description"
+
+    .line 5
+    invoke-static {p4, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 6
+    iput-object p4, p0, Li0/f;->h:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a(Landroid/net/Uri;)Li0/f;
+
+# virtual methods
+.method public f()Ljava/lang/String;
     .locals 1
-    .param p0    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "savedUri"
-        }
-    .end annotation
 
     .line 1
-    new-instance v0, Li0/c;
-
-    invoke-direct {v0, p0}, Li0/c;-><init>(Landroid/net/Uri;)V
+    iget-object v0, p0, Li0/f;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
+.method public g()I
+    .locals 1
 
-# virtual methods
-.method public abstract b()Landroid/net/Uri;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    .line 1
+    iget v0, p0, Li0/f;->e:I
+
+    return v0
+.end method
+
+.method public h()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Li0/f;->f:I
+
+    return v0
+.end method
+
+.method public i()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Li0/f;->g:I
+
+    return v0
 .end method

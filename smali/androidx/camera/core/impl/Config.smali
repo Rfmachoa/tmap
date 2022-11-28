@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/Config$OptionPriority;,
@@ -14,7 +18,7 @@
 
 
 # direct methods
-.method public static B(Landroidx/camera/core/impl/Config$OptionPriority;Landroidx/camera/core/impl/Config$OptionPriority;)Z
+.method public static G(Landroidx/camera/core/impl/Config$OptionPriority;Landroidx/camera/core/impl/Config$OptionPriority;)Z
     .locals 2
     .param p0    # Landroidx/camera/core/impl/Config$OptionPriority;
         .annotation build Landroidx/annotation/NonNull;
@@ -24,16 +28,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "priority1",
-            "priority2"
-        }
-    .end annotation
 
     .line 1
     sget-object v0, Landroidx/camera/core/impl/Config$OptionPriority;->ALWAYS_OVERRIDE:Landroidx/camera/core/impl/Config$OptionPriority;
@@ -62,7 +56,7 @@
     return p0
 .end method
 
-.method public static S(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/Config;
+.method public static Y(Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/Config;
     .locals 4
     .param p0    # Landroidx/camera/core/impl/Config;
         .annotation build Landroidx/annotation/Nullable;
@@ -75,23 +69,12 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "extendedConfig",
-            "baseConfig"
-        }
-    .end annotation
-
     if-nez p0, :cond_0
 
     if-nez p1, :cond_0
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/o;->c0()Landroidx/camera/core/impl/o;
+    invoke-static {}, Landroidx/camera/core/impl/m;->h0()Landroidx/camera/core/impl/m;
 
     move-result-object p0
 
@@ -101,7 +84,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-static {p1}, Landroidx/camera/core/impl/n;->g0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/n;
+    invoke-static {p1}, Landroidx/camera/core/impl/l;->l0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/l;
 
     move-result-object p1
 
@@ -109,7 +92,7 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Landroidx/camera/core/impl/n;->f0()Landroidx/camera/core/impl/n;
+    invoke-static {}, Landroidx/camera/core/impl/l;->k0()Landroidx/camera/core/impl/l;
 
     move-result-object p1
 
@@ -117,7 +100,7 @@
     if-eqz p0, :cond_2
 
     .line 4
-    invoke-interface {p0}, Landroidx/camera/core/impl/Config;->f()Ljava/util/Set;
+    invoke-interface {p0}, Landroidx/camera/core/impl/Config;->g()Ljava/util/Set;
 
     move-result-object v0
 
@@ -139,23 +122,23 @@
     check-cast v1, Landroidx/camera/core/impl/Config$a;
 
     .line 5
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/Config;->i(Landroidx/camera/core/impl/Config$a;)Landroidx/camera/core/impl/Config$OptionPriority;
+    invoke-interface {p0, v1}, Landroidx/camera/core/impl/Config;->j(Landroidx/camera/core/impl/Config$a;)Landroidx/camera/core/impl/Config$OptionPriority;
 
     move-result-object v2
 
     .line 6
-    invoke-interface {p0, v1}, Landroidx/camera/core/impl/Config;->b(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+    invoke-interface {p0, v1}, Landroidx/camera/core/impl/Config;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 7
-    invoke-virtual {p1, v1, v2, v3}, Landroidx/camera/core/impl/n;->q(Landroidx/camera/core/impl/Config$a;Landroidx/camera/core/impl/Config$OptionPriority;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v2, v3}, Landroidx/camera/core/impl/l;->s(Landroidx/camera/core/impl/Config$a;Landroidx/camera/core/impl/Config$OptionPriority;Ljava/lang/Object;)V
 
     goto :goto_1
 
     .line 8
     :cond_2
-    invoke-static {p1}, Landroidx/camera/core/impl/o;->d0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/o;
+    invoke-static {p1}, Landroidx/camera/core/impl/m;->i0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/m;
 
     move-result-object p0
 
@@ -164,21 +147,12 @@
 
 
 # virtual methods
-.method public abstract b(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+.method public abstract c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
     .param p1    # Landroidx/camera/core/impl/Config$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "id"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -192,20 +166,11 @@
     .end annotation
 .end method
 
-.method public abstract c(Landroidx/camera/core/impl/Config$a;)Z
+.method public abstract d(Landroidx/camera/core/impl/Config$a;)Z
     .param p1    # Landroidx/camera/core/impl/Config$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "id"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -215,7 +180,7 @@
     .end annotation
 .end method
 
-.method public abstract d(Ljava/lang/String;Landroidx/camera/core/impl/Config$b;)V
+.method public abstract e(Ljava/lang/String;Landroidx/camera/core/impl/Config$b;)V
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -224,19 +189,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "idSearchString",
-            "matcher"
-        }
-    .end annotation
 .end method
 
-.method public abstract e(Landroidx/camera/core/impl/Config$a;Landroidx/camera/core/impl/Config$OptionPriority;)Ljava/lang/Object;
+.method public abstract f(Landroidx/camera/core/impl/Config$a;Landroidx/camera/core/impl/Config$OptionPriority;)Ljava/lang/Object;
     .param p1    # Landroidx/camera/core/impl/Config$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -246,17 +201,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "id",
-            "priority"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -272,7 +216,7 @@
     .end annotation
 .end method
 
-.method public abstract f()Ljava/util/Set;
+.method public abstract g()Ljava/util/Set;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -286,21 +230,12 @@
     .end annotation
 .end method
 
-.method public abstract g(Landroidx/camera/core/impl/Config$a;)Ljava/util/Set;
+.method public abstract h(Landroidx/camera/core/impl/Config$a;)Ljava/util/Set;
     .param p1    # Landroidx/camera/core/impl/Config$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "option"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -315,7 +250,7 @@
     .end annotation
 .end method
 
-.method public abstract h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
     .param p1    # Landroidx/camera/core/impl/Config$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -325,17 +260,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "id",
-            "valueIfMissing"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -349,21 +273,12 @@
     .end annotation
 .end method
 
-.method public abstract i(Landroidx/camera/core/impl/Config$a;)Landroidx/camera/core/impl/Config$OptionPriority;
+.method public abstract j(Landroidx/camera/core/impl/Config$a;)Landroidx/camera/core/impl/Config$OptionPriority;
     .param p1    # Landroidx/camera/core/impl/Config$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "opt"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;

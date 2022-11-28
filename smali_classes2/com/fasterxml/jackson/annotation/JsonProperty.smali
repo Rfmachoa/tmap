@@ -15,6 +15,7 @@
         access = .enum Lcom/fasterxml/jackson/annotation/JsonProperty$Access;->AUTO:Lcom/fasterxml/jackson/annotation/JsonProperty$Access;
         defaultValue = ""
         index = -0x1
+        namespace = ""
         required = false
         value = ""
     .end subannotation
@@ -54,6 +55,9 @@
 .end method
 
 .method public abstract index()I
+.end method
+
+.method public abstract namespace()Ljava/lang/String;
 .end method
 
 .method public abstract required()Z

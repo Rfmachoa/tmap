@@ -163,7 +163,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-static {v3, v2}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v3, v2}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v2
 

@@ -102,9 +102,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Li1/a;
+    new-instance v0, Lc2/a;
 
-    invoke-direct {v0, p0}, Li1/a;-><init>(Landroid/location/GnssStatus;)V
+    invoke-direct {v0, p0}, Lc2/a;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -125,9 +125,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Li1/b;
+    new-instance v0, Lc2/b;
 
-    invoke-direct {v0, p0}, Li1/b;-><init>(Landroid/location/GpsStatus;)V
+    invoke-direct {v0, p0}, Lc2/b;-><init>(Landroid/location/GpsStatus;)V
 
     return-object v0
 .end method

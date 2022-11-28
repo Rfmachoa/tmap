@@ -1,38 +1,22 @@
 .class public Lg2/b;
 .super Ljava/lang/Object;
-.source "MetadataListReader.java"
+.source "TelephonyManagerCompat.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/AnyThread;
-.end annotation
-
-.annotation build Landroidx/annotation/RequiresApi;
-    value = 0x13
-.end annotation
-
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lg2/b$a;,
         Lg2/b$b;,
-        Lg2/b$d;,
         Lg2/b$c;
     }
 .end annotation
 
 
 # static fields
-.field public static final a:I = 0x456d6a69
+.field public static a:Ljava/lang/reflect/Method;
 
-.field public static final b:I = 0x656d6a69
-
-.field public static final c:I = 0x6d657461
+.field public static b:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -45,377 +29,164 @@
     return-void
 .end method
 
-.method public static a(Lg2/b$d;)Lg2/b$c;
-    .locals 12
-    .annotation system Ldalvik/annotation/Throws;
+.method public static a(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
+    .locals 2
+    .param p0    # Landroid/telephony/TelephonyManager;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
         value = {
-            Ljava/io/IOException;
+            "MissingPermission"
         }
     .end annotation
 
-    const/4 v0, 0x4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresPermission;
+        value = "android.permission.READ_PHONE_STATE"
+    .end annotation
 
     .line 1
-    invoke-interface {p0, v0}, Lg2/b$d;->skip(I)V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-interface {p0}, Lg2/b$d;->readUnsignedShort()I
-
-    move-result v1
-
-    const-string v2, "Cannot read metadata."
-
-    const/16 v3, 0x64
-
-    if-gt v1, v3, :cond_5
-
-    const/4 v3, 0x6
-
-    .line 3
-    invoke-interface {p0, v3}, Lg2/b$d;->skip(I)V
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    const-wide/16 v5, -0x1
-
-    if-ge v4, v1, :cond_1
-
-    .line 4
-    invoke-interface {p0}, Lg2/b$d;->a()I
-
-    move-result v7
-
-    .line 5
-    invoke-interface {p0, v0}, Lg2/b$d;->skip(I)V
-
-    .line 6
-    invoke-interface {p0}, Lg2/b$d;->b()J
-
-    move-result-wide v8
-
-    .line 7
-    invoke-interface {p0, v0}, Lg2/b$d;->skip(I)V
-
-    const v10, 0x6d657461
-
-    if-ne v10, v7, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move-wide v8, v5
-
-    :goto_1
-    cmp-long v0, v8, v5
-
-    if-eqz v0, :cond_4
-
-    .line 8
-    invoke-interface {p0}, Lg2/b$d;->getPosition()J
-
-    move-result-wide v0
-
-    sub-long v0, v8, v0
-
-    long-to-int v0, v0
-
-    invoke-interface {p0, v0}, Lg2/b$d;->skip(I)V
-
-    const/16 v0, 0xc
-
-    .line 9
-    invoke-interface {p0, v0}, Lg2/b$d;->skip(I)V
-
-    .line 10
-    invoke-interface {p0}, Lg2/b$d;->b()J
-
-    move-result-wide v0
-
-    :goto_2
-    int-to-long v4, v3
-
-    cmp-long v4, v4, v0
-
-    if-gez v4, :cond_4
-
-    .line 11
-    invoke-interface {p0}, Lg2/b$d;->a()I
-
-    move-result v4
-
-    .line 12
-    invoke-interface {p0}, Lg2/b$d;->b()J
-
-    move-result-wide v5
-
-    .line 13
-    invoke-interface {p0}, Lg2/b$d;->b()J
-
-    move-result-wide v10
-
-    const v7, 0x456d6a69
-
-    if-eq v7, v4, :cond_3
-
-    const v7, 0x656d6a69
-
-    if-ne v7, v4, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    .line 14
-    :cond_3
-    :goto_3
-    new-instance p0, Lg2/b$c;
-
-    add-long/2addr v5, v8
-
-    invoke-direct {p0, v5, v6, v10, v11}, Lg2/b$c;-><init>(JJ)V
-
-    return-object p0
-
-    .line 15
-    :cond_4
-    new-instance p0, Ljava/io/IOException;
-
-    invoke-direct {p0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 16
-    :cond_5
-    new-instance p0, Ljava/io/IOException;
-
-    invoke-direct {p0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static b(Landroid/content/res/AssetManager;Ljava/lang/String;)Lf3/d;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+    invoke-static {p0}, Lg2/b$b;->a(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
-    :try_start_0
-    invoke-static {p0}, Lg2/b;->c(Ljava/io/InputStream;)Lf3/d;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p0, :cond_0
+    return-object p0
 
     .line 3
-    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
-
     :cond_0
-    return-object p1
+    invoke-static {p0}, Lg2/b;->b(Landroid/telephony/TelephonyManager;)I
 
-    :catchall_0
-    move-exception p1
+    move-result v0
 
-    if-eqz p0, :cond_1
+    const v1, 0x7fffffff
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
 
     .line 4
-    :try_start_1
-    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-static {v0}, Lg2/a;->a(I)I
 
-    goto :goto_0
+    move-result v0
 
-    :catchall_1
-    move-exception p0
+    .line 5
+    invoke-static {p0, v0}, Lg2/b$a;->a(Landroid/telephony/TelephonyManager;I)Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    move-result-object p0
 
+    return-object p0
+
+    .line 6
     :cond_1
-    :goto_0
-    throw p1
+    invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public static c(Ljava/io/InputStream;)Lf3/d;
-    .locals 6
-    .annotation system Ldalvik/annotation/Throws;
+.method public static b(Landroid/telephony/TelephonyManager;)I
+    .locals 4
+    .param p0    # Landroid/telephony/TelephonyManager;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
         value = {
-            Ljava/io/IOException;
+            "SoonBlockedPrivateApi"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lg2/b$b;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0, p0}, Lg2/b$b;-><init>(Ljava/io/InputStream;)V
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {v0}, Lg2/b;->a(Lg2/b$d;)Lg2/b$c;
-
-    move-result-object v1
-
-    .line 3
-    invoke-virtual {v1}, Lg2/b$c;->b()J
-
-    move-result-wide v2
-
-    invoke-interface {v0}, Lg2/b$d;->getPosition()J
-
-    move-result-wide v4
-
-    sub-long/2addr v2, v4
-
-    long-to-int v2, v2
-
-    invoke-interface {v0, v2}, Lg2/b$d;->skip(I)V
-
-    .line 4
-    invoke-virtual {v1}, Lg2/b$c;->a()J
-
-    move-result-wide v2
-
-    long-to-int v0, v2
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Ljava/io/InputStream;->read([B)I
+    invoke-static {p0}, Lg2/b$c;->a(Landroid/telephony/TelephonyManager;)I
 
     move-result p0
 
-    int-to-long v2, p0
-
-    .line 6
-    invoke-virtual {v1}, Lg2/b$c;->a()J
-
-    move-result-wide v4
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_0
-
-    .line 7
-    invoke-static {v0}, Lf3/d;->y(Ljava/nio/ByteBuffer;)Lf3/d;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 8
-    :cond_0
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v2, "Needed "
-
-    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lg2/b$c;->a()J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " bytes, got "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static d(Ljava/nio/ByteBuffer;)Lf3/d;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    .line 2
-    new-instance v0, Lg2/b$a;
-
-    invoke-direct {v0, p0}, Lg2/b$a;-><init>(Ljava/nio/ByteBuffer;)V
+    return p0
 
     .line 3
-    invoke-static {v0}, Lg2/b;->a(Lg2/b$d;)Lg2/b$c;
+    :cond_0
+    :try_start_0
+    sget-object v0, Lg2/b;->b:Ljava/lang/reflect/Method;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    .line 4
+    const-class v0, Landroid/telephony/TelephonyManager;
+
+    const-string v2, "getSubId"
+
+    new-array v3, v1, [Ljava/lang/Class;
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 4
-    invoke-virtual {v0}, Lg2/b$c;->b()J
+    sput-object v0, Lg2/b;->b:Ljava/lang/reflect/Method;
 
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    const/4 v2, 0x1
 
     .line 5
-    invoke-static {p0}, Lf3/d;->y(Ljava/nio/ByteBuffer;)Lf3/d;
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .line 6
+    :cond_1
+    sget-object v0, Lg2/b;->b:Ljava/lang/reflect/Method;
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    check-cast p0, Ljava/lang/Integer;
 
-.method public static e(I)J
-    .locals 4
+    if-eqz p0, :cond_2
 
-    int-to-long v0, p0
+    .line 7
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    const-wide v2, 0xffffffffL
+    move-result v0
 
-    and-long/2addr v0, v2
+    const/4 v1, -0x1
 
-    return-wide v0
-.end method
+    if-eq v0, v1, :cond_2
 
-.method public static f(S)I
-    .locals 1
+    .line 8
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
-    const v0, 0xffff
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    and-int/2addr p0, v0
+    return p0
+
+    :catch_0
+    :cond_2
+    const p0, 0x7fffffff
 
     return p0
 .end method

@@ -1,5 +1,5 @@
 .class Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client$2;
-.super Landroidx/browser/customtabs/c;
+.super Landroidx/browser/customtabs/d;
 .source "OAuth2Client.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client$2;->this$0:Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;
 
-    invoke-direct {p0}, Landroidx/browser/customtabs/c;-><init>()V
+    invoke-direct {p0}, Landroidx/browser/customtabs/d;-><init>()V
 
     return-void
 .end method
@@ -43,20 +43,20 @@
     const-wide/16 v0, 0x0
 
     .line 2
-    invoke-virtual {p2, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->g(J)Z
+    invoke-virtual {p2, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->n(J)Z
 
     .line 3
     iget-object p1, p0, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client$2;->this$0:Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;
 
     iget-object p2, p1, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;->mCustomTabsClient:Landroidx/browser/customtabs/CustomTabsClient;
 
-    iget-object v0, p1, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;->mCustomTabsCallback:Landroidx/browser/customtabs/a;
+    iget-object v0, p1, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;->mCustomTabsCallback:Landroidx/browser/customtabs/b;
 
-    invoke-virtual {p2, v0}, Landroidx/browser/customtabs/CustomTabsClient;->f(Landroidx/browser/customtabs/a;)Landroidx/browser/customtabs/d;
+    invoke-virtual {p2, v0}, Landroidx/browser/customtabs/CustomTabsClient;->k(Landroidx/browser/customtabs/b;)Landroidx/browser/customtabs/CustomTabsSession;
 
     move-result-object p2
 
-    iput-object p2, p1, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;->mCustomTabsSession:Landroidx/browser/customtabs/d;
+    iput-object p2, p1, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;->mCustomTabsSession:Landroidx/browser/customtabs/CustomTabsSession;
 
     return-void
 .end method

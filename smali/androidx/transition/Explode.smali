@@ -50,17 +50,25 @@
     iput-object v0, p0, Landroidx/transition/Explode;->a:[I
 
     .line 3
-    new-instance v0, Lh3/b;
+    new-instance v0, Lp4/b;
 
-    invoke-direct {v0}, Lh3/b;-><init>()V
+    invoke-direct {v0}, Lp4/b;-><init>()V
 
-    invoke-virtual {p0, v0}, Landroidx/transition/Transition;->setPropagation(Lh3/n;)V
+    invoke-virtual {p0, v0}, Landroidx/transition/Transition;->setPropagation(Lp4/n;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 4
     invoke-direct {p0, p1, p2}, Landroidx/transition/Visibility;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -73,11 +81,11 @@
     iput-object p1, p0, Landroidx/transition/Explode;->a:[I
 
     .line 6
-    new-instance p1, Lh3/b;
+    new-instance p1, Lp4/b;
 
-    invoke-direct {p1}, Lh3/b;-><init>()V
+    invoke-direct {p1}, Lp4/b;-><init>()V
 
-    invoke-virtual {p0, p1}, Landroidx/transition/Transition;->setPropagation(Lh3/n;)V
+    invoke-virtual {p0, p1}, Landroidx/transition/Transition;->setPropagation(Lp4/n;)V
 
     return-void
 .end method
@@ -323,43 +331,43 @@
     return-void
 .end method
 
-.method public captureEndValues(Lh3/o;)V
+.method public captureEndValues(Lp4/o;)V
     .locals 0
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureEndValues(Lh3/o;)V
+    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureEndValues(Lp4/o;)V
 
     .line 2
-    invoke-virtual {p0, p1}, Landroidx/transition/Explode;->captureValues(Lh3/o;)V
+    invoke-virtual {p0, p1}, Landroidx/transition/Explode;->captureValues(Lp4/o;)V
 
     return-void
 .end method
 
-.method public captureStartValues(Lh3/o;)V
+.method public captureStartValues(Lp4/o;)V
     .locals 0
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Lh3/o;)V
+    invoke-super {p0, p1}, Landroidx/transition/Visibility;->captureStartValues(Lp4/o;)V
 
     .line 2
-    invoke-virtual {p0, p1}, Landroidx/transition/Explode;->captureValues(Lh3/o;)V
+    invoke-virtual {p0, p1}, Landroidx/transition/Explode;->captureValues(Lp4/o;)V
 
     return-void
 .end method
 
-.method public final captureValues(Lh3/o;)V
+.method public final captureValues(Lp4/o;)V
     .locals 5
 
     .line 1
-    iget-object v0, p1, Lh3/o;->b:Landroid/view/View;
+    iget-object v0, p1, Lp4/o;->b:Landroid/view/View;
 
     .line 2
     iget-object v1, p0, Landroidx/transition/Explode;->a:[I
@@ -393,7 +401,7 @@
     add-int/2addr v0, v1
 
     .line 7
-    iget-object p1, p1, Lh3/o;->a:Ljava/util/Map;
+    iget-object p1, p1, Lp4/o;->a:Ljava/util/Map;
 
     new-instance v4, Landroid/graphics/Rect;
 
@@ -406,8 +414,10 @@
     return-void
 .end method
 
-.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 10
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-nez p4, :cond_0
 
@@ -417,7 +427,7 @@
 
     .line 1
     :cond_0
-    iget-object p3, p4, Lh3/o;->a:Ljava/util/Map;
+    iget-object p3, p4, Lp4/o;->a:Ljava/util/Map;
 
     const-string v0, "android:explode:screenBounds"
 
@@ -475,15 +485,17 @@
 
     move-object v9, p0
 
-    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lh3/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
+    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lp4/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 10
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     if-nez p3, :cond_0
 
@@ -493,7 +505,7 @@
 
     .line 1
     :cond_0
-    iget-object p4, p3, Lh3/o;->a:Ljava/util/Map;
+    iget-object p4, p3, Lp4/o;->a:Ljava/util/Map;
 
     const-string v0, "android:explode:screenBounds"
 
@@ -520,7 +532,7 @@
     move-result v5
 
     .line 6
-    iget-object v0, p3, Lh3/o;->b:Landroid/view/View;
+    iget-object v0, p3, Lp4/o;->b:Landroid/view/View;
 
     sget v1, Landroidx/transition/R$id;->transition_position:I
 
@@ -603,7 +615,7 @@
 
     move-object v9, p0
 
-    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lh3/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
+    invoke-static/range {v0 .. v9}, Landroidx/transition/k;->a(Landroid/view/View;Lp4/o;IIFFFFLandroid/animation/TimeInterpolator;Landroidx/transition/Transition;)Landroid/animation/Animator;
 
     move-result-object p1
 

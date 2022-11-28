@@ -1,11 +1,11 @@
 .class public Landroidx/collection/a$a;
-.super Landroidx/collection/k;
+.super Landroidx/collection/l;
 .source "ArrayMap.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/collection/a;->s()Landroidx/collection/k;
+    value = Landroidx/collection/a;->s()Landroidx/collection/l;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroidx/collection/k<",
+        "Landroidx/collection/l<",
         "TK;TV;>;"
     }
 .end annotation
@@ -32,7 +32,7 @@
     .line 1
     iput-object p1, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-direct {p0}, Landroidx/collection/k;-><init>()V
+    invoke-direct {p0}, Landroidx/collection/l;-><init>()V
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-virtual {v0}, Landroidx/collection/l;->clear()V
+    invoke-virtual {v0}, Landroidx/collection/m;->clear()V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    iget-object v0, v0, Landroidx/collection/l;->b:[Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/collection/m;->b:[Ljava/lang/Object;
 
     shl-int/lit8 p1, p1, 0x1
 
@@ -89,7 +89,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    iget v0, v0, Landroidx/collection/l;->c:I
+    iget v0, v0, Landroidx/collection/m;->c:I
 
     return v0
 .end method
@@ -100,7 +100,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->j(Ljava/lang/Object;)I
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->j(Ljava/lang/Object;)I
 
     move-result p1
 
@@ -113,7 +113,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->l(Ljava/lang/Object;)I
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->l(Ljava/lang/Object;)I
 
     move-result p1
 
@@ -131,7 +131,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -142,7 +142,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->o(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->o(I)Ljava/lang/Object;
 
     return-void
 .end method
@@ -158,7 +158,7 @@
     .line 1
     iget-object v0, p0, Landroidx/collection/a$a;->d:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/collection/l;->p(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/m;->p(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

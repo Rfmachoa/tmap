@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/zac;
-.super Lcom/google/android/gms/internal/base/zaq;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.super Lcom/google/android/gms/internal/base/zau;
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -42,7 +42,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/base/zaq;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/base/zau;-><init>(Landroid/os/Looper;)V
 
     .line 2
     invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -66,26 +66,12 @@
 
     if-eq p1, v0, :cond_0
 
+    const-string v0, "Don\'t know how to handle this message: "
+
+    const-string v1, "GoogleApiAvailability"
+
     .line 2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x32
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Don\'t know how to handle this message: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "GoogleApiAvailability"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1, v1}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
 

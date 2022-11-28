@@ -3,6 +3,11 @@
 .source "TextAppearanceConfig.java"
 
 
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
 # static fields
 .field private static shouldLoadFontSynchronously:Z
 

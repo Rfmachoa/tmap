@@ -42,6 +42,8 @@
 
 .method public static b()Landroidx/preference/ListPreference$a;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     sget-object v0, Landroidx/preference/ListPreference$a;->a:Landroidx/preference/ListPreference$a;
@@ -66,6 +68,12 @@
 # virtual methods
 .method public bridge synthetic a(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
     .locals 0
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     check-cast p1, Landroidx/preference/ListPreference;
@@ -79,6 +87,12 @@
 
 .method public c(Landroidx/preference/ListPreference;)Ljava/lang/CharSequence;
     .locals 1
+    .param p1    # Landroidx/preference/ListPreference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-virtual {p1}, Landroidx/preference/ListPreference;->B1()Ljava/lang/CharSequence;

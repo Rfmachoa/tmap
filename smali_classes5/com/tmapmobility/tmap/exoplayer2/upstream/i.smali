@@ -79,7 +79,7 @@
 
     .line 8
     :try_start_0
-    invoke-interface {p1, p2, p0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;->e(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$a;)Ljava/util/NavigableSet;
+    invoke-interface {p1, p2, p0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;->d(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$a;)Ljava/util/NavigableSet;
 
     move-result-object p1
 
@@ -101,10 +101,10 @@
 
     move-result-object p2
 
-    check-cast p2, Laf/e;
+    check-cast p2, Ldh/e;
 
     .line 12
-    invoke-virtual {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/i;->g(Laf/e;)V
+    invoke-virtual {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/i;->g(Ldh/e;)V
 
     goto :goto_0
 
@@ -126,7 +126,37 @@
 
 
 # virtual methods
-.method public declared-synchronized a(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Laf/e;)V
+.method public a(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ldh/e;Ldh/e;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public declared-synchronized c(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ldh/e;)V
+    .locals 0
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/i;->g(Ldh/e;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public declared-synchronized e(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ldh/e;)V
     .locals 6
 
     monitor-enter p0
@@ -135,9 +165,9 @@
     :try_start_0
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/i$a;
 
-    iget-wide v0, p2, Laf/e;->b:J
+    iget-wide v0, p2, Ldh/e;->b:J
 
-    iget-wide v2, p2, Laf/e;->c:J
+    iget-wide v2, p2, Ldh/e;->c:J
 
     add-long/2addr v2, v0
 
@@ -258,36 +288,6 @@
     monitor-exit p0
 
     throw p1
-.end method
-
-.method public declared-synchronized b(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Laf/e;)V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    invoke-virtual {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/upstream/i;->g(Laf/e;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public e(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Laf/e;Laf/e;)V
-    .locals 0
-
-    return-void
 .end method
 
 .method public declared-synchronized f(J)I
@@ -419,15 +419,15 @@
     throw p1
 .end method
 
-.method public final g(Laf/e;)V
+.method public final g(Ldh/e;)V
     .locals 7
 
     .line 1
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/i$a;
 
-    iget-wide v1, p1, Laf/e;->b:J
+    iget-wide v1, p1, Ldh/e;->b:J
 
-    iget-wide v3, p1, Laf/e;->c:J
+    iget-wide v3, p1, Ldh/e;->c:J
 
     add-long/2addr v3, v1
 

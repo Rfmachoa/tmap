@@ -1,11 +1,11 @@
 .class public final Landroidx/collection/i$a;
-.super Lkotlin/collections/p0;
+.super Lkotlin/collections/s0;
 .source "LongSparseArray.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/collection/i;->g(Landroidx/collection/h;)Lkotlin/collections/p0;
+    value = Landroidx/collection/i;->g(Landroidx/collection/h;)Lkotlin/collections/s0;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     }
     d2 = {
         "androidx/collection/i$a",
-        "Lkotlin/collections/p0;",
+        "Lkotlin/collections/s0;",
         "",
         "hasNext",
         "",
@@ -64,7 +64,7 @@
     .line 1
     iput-object p1, p0, Landroidx/collection/i$a;->b:Landroidx/collection/h;
 
-    invoke-direct {p0}, Lkotlin/collections/p0;-><init>()V
+    invoke-direct {p0}, Lkotlin/collections/s0;-><init>()V
 
     return-void
 .end method

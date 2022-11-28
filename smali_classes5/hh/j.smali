@@ -1,20 +1,32 @@
-.class public Lhh/j;
+.class public interface abstract Lhh/j;
 .super Ljava/lang/Object;
-.source "dagger_hilt_internal_ComponentEntryPoint.java"
+.source "HttpConnectionFactory.java"
 
 
 # annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/internal/ComponentEntryPoint;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T::",
+        "Lhh/i;",
+        ">",
+        "Ljava/lang/Object;"
+    }
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract a(Ljava/net/Socket;)Lhh/i;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/net/Socket;",
+            ")TT;"
+        }
+    .end annotation
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method

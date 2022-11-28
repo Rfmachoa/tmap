@@ -1,52 +1,68 @@
-.class public final synthetic Landroidx/camera/core/m1;
+.class public interface abstract Landroidx/camera/core/m1;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
+.source "ImageProxy.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/lang/AutoCloseable;
 
 
-# instance fields
-.field public final synthetic a:Landroidx/camera/core/ImageCapture$m;
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/Throwable;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/ImageCapture$m;ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroidx/camera/core/m1;->a:Landroidx/camera/core/ImageCapture$m;
-
-    iput p2, p0, Landroidx/camera/core/m1;->b:I
-
-    iput-object p3, p0, Landroidx/camera/core/m1;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Landroidx/camera/core/m1;->d:Ljava/lang/Throwable;
-
-    return-void
-.end method
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/core/m1$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public abstract A1()Landroidx/camera/core/j1;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
 
-    iget-object v0, p0, Landroidx/camera/core/m1;->a:Landroidx/camera/core/ImageCapture$m;
+.method public abstract L0()[Landroidx/camera/core/m1$a;
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ArrayReturn"
+        }
+    .end annotation
 
-    iget v1, p0, Landroidx/camera/core/m1;->b:I
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
 
-    iget-object v2, p0, Landroidx/camera/core/m1;->c:Ljava/lang/String;
+.method public abstract L1()Landroid/media/Image;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    iget-object v3, p0, Landroidx/camera/core/m1;->d:Ljava/lang/Throwable;
+    .annotation build Landroidx/camera/core/ExperimentalGetImage;
+    .end annotation
+.end method
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/camera/core/ImageCapture$m;->a(Landroidx/camera/core/ImageCapture$m;ILjava/lang/String;Ljava/lang/Throwable;)V
+.method public abstract a1()Landroid/graphics/Rect;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
 
-    return-void
+.method public abstract close()V
+.end method
+
+.method public abstract g0(Landroid/graphics/Rect;)V
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract getHeight()I
+.end method
+
+.method public abstract getWidth()I
+.end method
+
+.method public abstract h()I
 .end method

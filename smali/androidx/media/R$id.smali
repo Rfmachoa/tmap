@@ -14,43 +14,43 @@
 
 
 # static fields
-.field public static final action0:I = 0x7f0a0034
+.field public static final action0:I = 0x7f0a0035
 
-.field public static final action_divider:I = 0x7f0a003f
+.field public static final action_divider:I = 0x7f0a0043
 
-.field public static final cancel_action:I = 0x7f0a020f
+.field public static final cancel_action:I = 0x7f0a022c
 
-.field public static final chronometer:I = 0x7f0a0247
+.field public static final chronometer:I = 0x7f0a0273
 
-.field public static final end_padder:I = 0x7f0a0340
+.field public static final end_padder:I = 0x7f0a0375
 
-.field public static final icon:I = 0x7f0a04a3
+.field public static final icon:I = 0x7f0a04dd
 
-.field public static final info:I = 0x7f0a04c8
+.field public static final info:I = 0x7f0a0502
 
-.field public static final line1:I = 0x7f0a054f
+.field public static final line1:I = 0x7f0a0580
 
-.field public static final line3:I = 0x7f0a0550
+.field public static final line3:I = 0x7f0a0581
 
-.field public static final media_actions:I = 0x7f0a067c
+.field public static final media_actions:I = 0x7f0a06b0
 
-.field public static final media_controller_compat_view_tag:I = 0x7f0a067d
+.field public static final media_controller_compat_view_tag:I = 0x7f0a06b1
 
-.field public static final notification_main_column:I = 0x7f0a082b
+.field public static final notification_main_column:I = 0x7f0a0892
 
-.field public static final notification_main_column_container:I = 0x7f0a082c
+.field public static final notification_main_column_container:I = 0x7f0a0893
 
-.field public static final right_side:I = 0x7f0a0931
+.field public static final right_side:I = 0x7f0a09ae
 
-.field public static final status_bar_latest_event_content:I = 0x7f0a0a89
+.field public static final status_bar_latest_event_content:I = 0x7f0a0b11
 
-.field public static final text:I = 0x7f0a0ab3
+.field public static final text:I = 0x7f0a0b3b
 
-.field public static final text2:I = 0x7f0a0ab4
+.field public static final text2:I = 0x7f0a0b3c
 
-.field public static final time:I = 0x7f0a0b07
+.field public static final time:I = 0x7f0a0b84
 
-.field public static final title:I = 0x7f0a0b1a
+.field public static final title:I = 0x7f0a0b96
 
 
 # direct methods

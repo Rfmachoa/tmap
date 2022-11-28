@@ -3,7 +3,7 @@
 .source "AladdinAiCloudManager.java"
 
 # interfaces
-.implements Lsa/d;
+.implements Lpc/d;
 
 
 # annotations
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/g;->z()Lla/a;
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/g;->z()Lic/a;
 
     move-result-object v0
 
@@ -80,11 +80,11 @@
     check-cast v1, Lcom/skt/aicloud/speaker/service/state/a;
 
     .line 3
-    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/state/a;->M()Lma/c;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/state/a;->M()Ljc/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v1
 
@@ -95,7 +95,7 @@
 
     const-string v4, "Timeout TTS completion"
 
-    invoke-interface {v0, v2, v1, v3, v4}, Lla/b;->c(ZLjava/lang/String;Lcom/skt/aicloud/speaker/service/player/BgmCaller;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1, v3, v4}, Lic/b;->c(ZLjava/lang/String;Lcom/skt/aicloud/speaker/service/player/BgmCaller;Ljava/lang/String;)V
 
     .line 5
     :cond_0

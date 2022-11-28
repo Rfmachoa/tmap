@@ -60,11 +60,11 @@
     .line 3
     iget-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient$b;->a:Landroidx/room/MultiInstanceInvalidationClient;
 
-    iget-object v1, v0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/g;
+    iget-object v1, v0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/p0;
 
-    iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/g$c;
+    iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/p0$c;
 
-    invoke-virtual {v1, v0}, Landroidx/room/g;->a(Landroidx/room/g$c;)V
+    invoke-virtual {v1, v0}, Landroidx/room/p0;->a(Landroidx/room/p0$c;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

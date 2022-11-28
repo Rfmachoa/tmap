@@ -1,4 +1,4 @@
-.class public final enum Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;
+.class final enum Lcom/google/firebase/crashlytics/internal/settings/SettingsCacheBehavior;
 .super Ljava/lang/Enum;
 .source "SettingsCacheBehavior.java"
 

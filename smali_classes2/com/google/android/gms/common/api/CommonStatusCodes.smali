@@ -1,11 +1,6 @@
 .class public Lcom/google/android/gms/common/api/CommonStatusCodes;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
-
-
-# annotations
-.annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-.end annotation
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # static fields
@@ -66,19 +61,17 @@
 .end method
 
 .method public static getStatusCodeString(I)Ljava/lang/String;
-    .locals 2
+    .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
-    const/16 v0, 0x20
-
-    const-string v1, "unknown status code: "
+    const-string v0, "unknown status code: "
 
     .line 1
-    invoke-static {v0, v1, p0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p0}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 

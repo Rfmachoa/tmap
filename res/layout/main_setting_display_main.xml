@@ -4,5 +4,4 @@
     <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
     <RelativeLayout android:id="@id/main_setting_dm_layout_adapter" android:background="@color/tmap_common_list_bg_nor_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout" />
     <ListView android:id="@id/main_setting_dm_listview_adapter" android:background="@color/tmap_common_list_bg_nor_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout" />
-    <View android:id="@id/header_shadow" android:background="@drawable/bg_sheet_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_7dp" android:layout_below="@id/titlebarLayout" />
 </RelativeLayout>

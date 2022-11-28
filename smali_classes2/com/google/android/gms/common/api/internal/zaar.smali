@@ -1,18 +1,10 @@
 .class final Lcom/google/android/gms/common/api/internal/zaar;
 .super Lcom/google/android/gms/signin/internal/zac;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zaa:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/common/api/internal/zaaw;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public t(Lcom/tmapmobility/tmap/exoplayer2/Player;Lcom/tmapmobility/tmap/exoplayer2/Player$b;)V
+.method public w(Lcom/tmapmobility/tmap/exoplayer2/Player;Lcom/tmapmobility/tmap/exoplayer2/Player$b;)V
     .locals 0
 
     const/16 p1, 0x9

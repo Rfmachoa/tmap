@@ -42,7 +42,7 @@
 
 .field public j:[B
 
-.field public k:Lt4/c;
+.field public k:Lq6/c;
 
 .field public l:[S
 
@@ -59,7 +59,7 @@
 
 .field public q:I
 
-.field public r:Lt4/b;
+.field public r:Lq6/b;
 
 .field public s:Landroid/graphics/Bitmap;
 
@@ -117,16 +117,16 @@
     iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/a;->h:Lcom/bumptech/glide/gifdecoder/GifDecoder$a;
 
     .line 8
-    new-instance p1, Lt4/b;
+    new-instance p1, Lq6/b;
 
-    invoke-direct {p1}, Lt4/b;-><init>()V
+    invoke-direct {p1}, Lq6/b;-><init>()V
 
-    iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;Lt4/b;Ljava/nio/ByteBuffer;)V
+.method public constructor <init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;Lq6/b;Ljava/nio/ByteBuffer;)V
     .locals 1
     .param p1    # Lcom/bumptech/glide/gifdecoder/GifDecoder$a;
         .annotation build Landroidx/annotation/NonNull;
@@ -136,12 +136,12 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/bumptech/glide/gifdecoder/a;-><init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;Lt4/b;Ljava/nio/ByteBuffer;I)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/bumptech/glide/gifdecoder/a;-><init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;Lq6/b;Ljava/nio/ByteBuffer;I)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;Lt4/b;Ljava/nio/ByteBuffer;I)V
+.method public constructor <init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;Lq6/b;Ljava/nio/ByteBuffer;I)V
     .locals 0
     .param p1    # Lcom/bumptech/glide/gifdecoder/GifDecoder$a;
         .annotation build Landroidx/annotation/NonNull;
@@ -152,50 +152,14 @@
     invoke-direct {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;-><init>(Lcom/bumptech/glide/gifdecoder/GifDecoder$a;)V
 
     .line 3
-    invoke-virtual {p0, p2, p3, p4}, Lcom/bumptech/glide/gifdecoder/a;->m(Lt4/b;Ljava/nio/ByteBuffer;I)V
+    invoke-virtual {p0, p2, p3, p4}, Lcom/bumptech/glide/gifdecoder/a;->n(Lq6/b;Ljava/nio/ByteBuffer;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized a(Lt4/b;[B)V
-    .locals 0
-    .param p1    # Lt4/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # [B
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/gifdecoder/a;->g(Lt4/b;Ljava/nio/ByteBuffer;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized b()Landroid/graphics/Bitmap;
+.method public declared-synchronized a()Landroid/graphics/Bitmap;
     .locals 8
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -204,9 +168,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v0, v0, Lt4/b;->c:I
+    iget v0, v0, Lq6/b;->c:I
 
     const/4 v1, 0x3
 
@@ -237,9 +201,9 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v4, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v4, v4, Lt4/b;->c:I
+    iget v4, v4, Lq6/b;->c:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -299,9 +263,9 @@
 
     .line 9
     :cond_4
-    iget-object v5, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v5, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget-object v5, v5, Lt4/b;->e:Ljava/util/List;
+    iget-object v5, v5, Lq6/b;->e:Ljava/util/List;
 
     iget v6, p0, Lcom/bumptech/glide/gifdecoder/a;->q:I
 
@@ -309,7 +273,7 @@
 
     move-result-object v5
 
-    check-cast v5, Lt4/a;
+    check-cast v5, Lq6/a;
 
     .line 10
     iget v6, p0, Lcom/bumptech/glide/gifdecoder/a;->q:I
@@ -319,15 +283,15 @@
     if-ltz v6, :cond_5
 
     .line 11
-    iget-object v7, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v7, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget-object v7, v7, Lt4/b;->e:Ljava/util/List;
+    iget-object v7, v7, Lq6/b;->e:Ljava/util/List;
 
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lt4/a;
+    check-cast v6, Lq6/a;
 
     goto :goto_0
 
@@ -336,16 +300,16 @@
 
     .line 12
     :goto_0
-    iget-object v7, v5, Lt4/a;->k:[I
+    iget-object v7, v5, Lq6/a;->k:[I
 
     if-eqz v7, :cond_6
 
     goto :goto_1
 
     :cond_6
-    iget-object v7, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v7, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget-object v7, v7, Lt4/b;->a:[I
+    iget-object v7, v7, Lq6/b;->a:[I
 
     :goto_1
     iput-object v7, p0, Lcom/bumptech/glide/gifdecoder/a;->f:[I
@@ -394,7 +358,7 @@
     .line 17
     :cond_8
     :try_start_1
-    iget-boolean v1, v5, Lt4/a;->f:Z
+    iget-boolean v1, v5, Lq6/a;->f:Z
 
     if-eqz v1, :cond_9
 
@@ -411,12 +375,12 @@
     iput-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->f:[I
 
     .line 20
-    iget v2, v5, Lt4/a;->h:I
+    iget v2, v5, Lq6/a;->h:I
 
     aput v0, v1, v2
 
     .line 21
-    iget v0, v5, Lt4/a;->g:I
+    iget v0, v5, Lq6/a;->g:I
 
     if-ne v0, v4, :cond_9
 
@@ -431,7 +395,7 @@
 
     .line 23
     :cond_9
-    invoke-virtual {p0, v5, v6}, Lcom/bumptech/glide/gifdecoder/a;->x(Lt4/a;Lt4/a;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, v5, v6}, Lcom/bumptech/glide/gifdecoder/a;->x(Lq6/a;Lq6/a;)Landroid/graphics/Bitmap;
 
     move-result-object v0
     :try_end_1
@@ -488,7 +452,7 @@
     throw v0
 .end method
 
-.method public c()V
+.method public b()V
     .locals 2
 
     .line 1
@@ -496,9 +460,9 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v1, v1, Lt4/b;->c:I
+    iget v1, v1, Lq6/b;->c:I
 
     rem-int/2addr v0, v1
 
@@ -507,13 +471,24 @@
     return-void
 .end method
 
+.method public c()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
+
+    iget v0, v0, Lq6/b;->c:I
+
+    return v0
+.end method
+
 .method public clear()V
     .locals 3
 
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
     .line 2
     iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->o:[B
@@ -571,18 +546,7 @@
     return-void
 .end method
 
-.method public d()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
-
-    iget v0, v0, Lt4/b;->c:I
-
-    return v0
-.end method
-
-.method public e(Landroid/graphics/Bitmap$Config;)V
+.method public d(Landroid/graphics/Bitmap$Config;)V
     .locals 3
     .param p1    # Landroid/graphics/Bitmap$Config;
         .annotation build Landroidx/annotation/NonNull;
@@ -646,28 +610,28 @@
     return-void
 .end method
 
-.method public f(I)I
+.method public e(I)I
     .locals 2
 
     if-ltz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v1, v0, Lt4/b;->c:I
+    iget v1, v0, Lq6/b;->c:I
 
     if-ge p1, v1, :cond_0
 
     .line 2
-    iget-object v0, v0, Lt4/b;->e:Ljava/util/List;
+    iget-object v0, v0, Lq6/b;->e:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lt4/a;
+    check-cast p1, Lq6/a;
 
-    iget p1, p1, Lt4/a;->i:I
+    iget p1, p1, Lq6/a;->i:I
 
     goto :goto_0
 
@@ -678,89 +642,13 @@
     return p1
 .end method
 
-.method public declared-synchronized g(Lt4/b;Ljava/nio/ByteBuffer;)V
-    .locals 1
-    .param p1    # Lt4/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/nio/ByteBuffer;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    monitor-enter p0
-
-    const/4 v0, 0x1
-
-    .line 1
-    :try_start_0
-    invoke-virtual {p0, p1, p2, v0}, Lcom/bumptech/glide/gifdecoder/a;->m(Lt4/b;Ljava/nio/ByteBuffer;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public getData()Ljava/nio/ByteBuffer;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->i:Ljava/nio/ByteBuffer;
-
-    return-object v0
-.end method
-
-.method public getHeight()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
-
-    iget v0, v0, Lt4/b;->g:I
-
-    return v0
-.end method
-
-.method public getStatus()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lcom/bumptech/glide/gifdecoder/a;->u:I
-
-    return v0
-.end method
-
-.method public getWidth()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
-
-    iget v0, v0, Lt4/b;->f:I
-
-    return v0
-.end method
-
-.method public h()I
+.method public f()I
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v0, v0, Lt4/b;->m:I
+    iget v0, v0, Lq6/b;->m:I
 
     const/4 v1, 0x1
 
@@ -783,15 +671,15 @@
     return v0
 .end method
 
-.method public i()I
+.method public g()I
     .locals 2
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v0, v0, Lt4/b;->m:I
+    iget v0, v0, Lq6/b;->m:I
 
     const/4 v1, -0x1
 
@@ -803,13 +691,55 @@
     return v0
 .end method
 
-.method public j()I
+.method public getData()Ljava/nio/ByteBuffer;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->i:Ljava/nio/ByteBuffer;
+
+    return-object v0
+.end method
+
+.method public getHeight()I
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v0, v0, Lt4/b;->c:I
+    iget v0, v0, Lq6/b;->g:I
+
+    return v0
+.end method
+
+.method public getStatus()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/bumptech/glide/gifdecoder/a;->u:I
+
+    return v0
+.end method
+
+.method public getWidth()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
+
+    iget v0, v0, Lq6/b;->f:I
+
+    return v0
+.end method
+
+.method public h()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
+
+    iget v0, v0, Lq6/b;->c:I
 
     if-lez v0, :cond_1
 
@@ -821,7 +751,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/bumptech/glide/gifdecoder/a;->f(I)I
+    invoke-virtual {p0, v0}, Lcom/bumptech/glide/gifdecoder/a;->e(I)I
 
     move-result v0
 
@@ -834,7 +764,7 @@
     return v0
 .end method
 
-.method public k()V
+.method public i()V
     .locals 1
 
     const/4 v0, -0x1
@@ -845,7 +775,7 @@
     return-void
 .end method
 
-.method public l()I
+.method public j()I
     .locals 1
 
     .line 1
@@ -854,9 +784,81 @@
     return v0
 .end method
 
-.method public declared-synchronized m(Lt4/b;Ljava/nio/ByteBuffer;I)V
+.method public declared-synchronized k(Lq6/b;Ljava/nio/ByteBuffer;)V
+    .locals 1
+    .param p1    # Lq6/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/nio/ByteBuffer;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    monitor-enter p0
+
+    const/4 v0, 0x1
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0, p1, p2, v0}, Lcom/bumptech/glide/gifdecoder/a;->n(Lq6/b;Ljava/nio/ByteBuffer;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public l()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
+
+    iget v0, v0, Lq6/b;->m:I
+
+    return v0
+.end method
+
+.method public m()I
     .locals 2
-    .param p1    # Lt4/b;
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->i:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->o:[B
+
+    array-length v1, v1
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->p:[I
+
+    array-length v1, v1
+
+    mul-int/lit8 v1, v1, 0x4
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public declared-synchronized n(Lq6/b;Ljava/nio/ByteBuffer;I)V
+    .locals 2
+    .param p1    # Lq6/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -881,7 +883,7 @@
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/a;->u:I
 
     .line 3
-    iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iput-object p1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
     const/4 v1, -0x1
 
@@ -909,7 +911,7 @@
     iput-boolean v0, p0, Lcom/bumptech/glide/gifdecoder/a;->t:Z
 
     .line 9
-    iget-object p2, p1, Lt4/b;->e:Ljava/util/List;
+    iget-object p2, p1, Lq6/b;->e:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -926,10 +928,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lt4/a;
+    check-cast v0, Lq6/a;
 
     .line 10
-    iget v0, v0, Lt4/a;->g:I
+    iget v0, v0, Lq6/a;->g:I
 
     const/4 v1, 0x3
 
@@ -945,14 +947,14 @@
     iput p3, p0, Lcom/bumptech/glide/gifdecoder/a;->v:I
 
     .line 13
-    iget p2, p1, Lt4/b;->f:I
+    iget p2, p1, Lq6/b;->f:I
 
     div-int v0, p2, p3
 
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/a;->x:I
 
     .line 14
-    iget p1, p1, Lt4/b;->g:I
+    iget p1, p1, Lq6/b;->g:I
 
     div-int p3, p1, p3
 
@@ -1027,42 +1029,40 @@
     throw p1
 .end method
 
-.method public n()I
-    .locals 1
+.method public declared-synchronized o(Lq6/b;[B)V
+    .locals 0
+    .param p1    # Lq6/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [B
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    monitor-enter p0
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    :try_start_0
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    iget v0, v0, Lt4/b;->m:I
+    move-result-object p2
 
-    return v0
-.end method
+    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/gifdecoder/a;->k(Lq6/b;Ljava/nio/ByteBuffer;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public o()I
-    .locals 2
+    .line 2
+    monitor-exit p0
 
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->i:Ljava/nio/ByteBuffer;
+    return-void
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
+    :catchall_0
+    move-exception p1
 
-    move-result v0
+    monitor-exit p0
 
-    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->o:[B
-
-    array-length v1, v1
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->p:[I
-
-    array-length v1, v1
-
-    mul-int/lit8 v1, v1, 0x4
-
-    add-int/2addr v1, v0
-
-    return v1
+    throw p1
 .end method
 
 .method public final p(III)I
@@ -1233,7 +1233,7 @@
     return p1
 .end method
 
-.method public final q(Lt4/a;)V
+.method public final q(Lq6/a;)V
     .locals 25
 
     move-object/from16 v0, p0
@@ -1244,24 +1244,24 @@
     iget-object v2, v0, Lcom/bumptech/glide/gifdecoder/a;->p:[I
 
     .line 2
-    iget v3, v1, Lt4/a;->d:I
+    iget v3, v1, Lq6/a;->d:I
 
     iget v4, v0, Lcom/bumptech/glide/gifdecoder/a;->v:I
 
     div-int/2addr v3, v4
 
     .line 3
-    iget v5, v1, Lt4/a;->b:I
+    iget v5, v1, Lq6/a;->b:I
 
     div-int/2addr v5, v4
 
     .line 4
-    iget v6, v1, Lt4/a;->c:I
+    iget v6, v1, Lq6/a;->c:I
 
     div-int/2addr v6, v4
 
     .line 5
-    iget v7, v1, Lt4/a;->a:I
+    iget v7, v1, Lq6/a;->a:I
 
     div-int/2addr v7, v4
 
@@ -1313,7 +1313,7 @@
     move-object/from16 v18, v13
 
     .line 12
-    iget-boolean v13, v1, Lt4/a;->e:Z
+    iget-boolean v13, v1, Lq6/a;->e:Z
 
     if-eqz v13, :cond_5
 
@@ -1419,7 +1419,7 @@
     move/from16 v22, v5
 
     .line 13
-    iget v5, v1, Lt4/a;->c:I
+    iget v5, v1, Lq6/a;->c:I
 
     mul-int/2addr v14, v5
 
@@ -1486,7 +1486,7 @@
     move/from16 v20, v3
 
     .line 18
-    iget v3, v1, Lt4/a;->c:I
+    iget v3, v1, Lq6/a;->c:I
 
     invoke-virtual {v0, v14, v5, v3}, Lcom/bumptech/glide/gifdecoder/a;->p(III)I
 
@@ -1573,7 +1573,7 @@
     return-void
 .end method
 
-.method public final r(Lt4/a;)V
+.method public final r(Lq6/a;)V
     .locals 18
 
     move-object/from16 v0, p0
@@ -1584,16 +1584,16 @@
     iget-object v2, v0, Lcom/bumptech/glide/gifdecoder/a;->p:[I
 
     .line 2
-    iget v3, v1, Lt4/a;->d:I
+    iget v3, v1, Lq6/a;->d:I
 
     .line 3
-    iget v4, v1, Lt4/a;->b:I
+    iget v4, v1, Lq6/a;->b:I
 
     .line 4
-    iget v5, v1, Lt4/a;->c:I
+    iget v5, v1, Lq6/a;->c:I
 
     .line 5
-    iget v6, v1, Lt4/a;->a:I
+    iget v6, v1, Lq6/a;->a:I
 
     .line 6
     iget v7, v0, Lcom/bumptech/glide/gifdecoder/a;->q:I
@@ -1640,7 +1640,7 @@
 
     .line 10
     :cond_1
-    iget v9, v1, Lt4/a;->c:I
+    iget v9, v1, Lq6/a;->c:I
 
     mul-int/2addr v9, v14
 
@@ -1853,24 +1853,24 @@
 
     .line 11
     :try_start_0
-    invoke-virtual {p0}, Lcom/bumptech/glide/gifdecoder/a;->t()Lt4/c;
+    invoke-virtual {p0}, Lcom/bumptech/glide/gifdecoder/a;->t()Lq6/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lt4/c;->r([B)Lt4/c;
+    invoke-virtual {v0, p1}, Lq6/c;->r([B)Lq6/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lt4/c;->d()Lt4/b;
+    invoke-virtual {v0}, Lq6/c;->d()Lq6/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
     if-eqz p1, :cond_0
 
     .line 12
-    invoke-virtual {p0, v0, p1}, Lcom/bumptech/glide/gifdecoder/a;->a(Lt4/b;[B)V
+    invoke-virtual {p0, v0, p1}, Lcom/bumptech/glide/gifdecoder/a;->o(Lq6/b;[B)V
 
     .line 13
     :cond_0
@@ -1890,7 +1890,7 @@
     throw p1
 .end method
 
-.method public final s(Lt4/a;)V
+.method public final s(Lq6/a;)V
     .locals 28
 
     move-object/from16 v0, p0
@@ -1902,7 +1902,7 @@
     .line 1
     iget-object v2, v0, Lcom/bumptech/glide/gifdecoder/a;->i:Ljava/nio/ByteBuffer;
 
-    iget v3, v1, Lt4/a;->j:I
+    iget v3, v1, Lq6/a;->j:I
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
@@ -1910,18 +1910,18 @@
     if-nez v1, :cond_1
 
     .line 2
-    iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v1, v0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v2, v1, Lt4/b;->f:I
+    iget v2, v1, Lq6/b;->f:I
 
-    iget v1, v1, Lt4/b;->g:I
+    iget v1, v1, Lq6/b;->g:I
 
     goto :goto_0
 
     :cond_1
-    iget v2, v1, Lt4/a;->c:I
+    iget v2, v1, Lq6/a;->c:I
 
-    iget v1, v1, Lt4/a;->d:I
+    iget v1, v1, Lq6/a;->d:I
 
     :goto_0
     mul-int/2addr v2, v1
@@ -2323,26 +2323,26 @@
     return-void
 .end method
 
-.method public final t()Lt4/c;
+.method public final t()Lq6/c;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->k:Lt4/c;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->k:Lq6/c;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lt4/c;
+    new-instance v0, Lq6/c;
 
-    invoke-direct {v0}, Lt4/c;-><init>()V
+    invoke-direct {v0}, Lq6/c;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->k:Lt4/c;
+    iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->k:Lq6/c;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->k:Lt4/c;
+    iget-object v0, p0, Lcom/bumptech/glide/gifdecoder/a;->k:Lq6/c;
 
     return-object v0
 .end method
@@ -2440,7 +2440,7 @@
     return v0
 .end method
 
-.method public final x(Lt4/a;Lt4/a;)Landroid/graphics/Bitmap;
+.method public final x(Lq6/a;Lq6/a;)Landroid/graphics/Bitmap;
     .locals 9
 
     .line 1
@@ -2475,7 +2475,7 @@
     if-eqz p2, :cond_2
 
     .line 6
-    iget v2, p2, Lt4/a;->g:I
+    iget v2, p2, Lq6/a;->g:I
 
     if-ne v2, v1, :cond_2
 
@@ -2490,7 +2490,7 @@
     if-eqz p2, :cond_7
 
     .line 8
-    iget v2, p2, Lt4/a;->g:I
+    iget v2, p2, Lq6/a;->g:I
 
     if-lez v2, :cond_7
 
@@ -2499,23 +2499,23 @@
     if-ne v2, v3, :cond_6
 
     .line 9
-    iget-boolean v1, p1, Lt4/a;->f:Z
+    iget-boolean v1, p1, Lq6/a;->f:Z
 
     if-nez v1, :cond_4
 
     .line 10
-    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lt4/b;
+    iget-object v1, p0, Lcom/bumptech/glide/gifdecoder/a;->r:Lq6/b;
 
-    iget v2, v1, Lt4/b;->l:I
+    iget v2, v1, Lq6/b;->l:I
 
     .line 11
-    iget-object v3, p1, Lt4/a;->k:[I
+    iget-object v3, p1, Lq6/a;->k:[I
 
     if-eqz v3, :cond_3
 
-    iget v1, v1, Lt4/b;->j:I
+    iget v1, v1, Lq6/b;->j:I
 
-    iget v3, p1, Lt4/a;->h:I
+    iget v3, p1, Lq6/a;->h:I
 
     if-ne v1, v3, :cond_3
 
@@ -2527,24 +2527,24 @@
     .line 12
     :cond_4
     :goto_0
-    iget v1, p2, Lt4/a;->d:I
+    iget v1, p2, Lq6/a;->d:I
 
     iget v2, p0, Lcom/bumptech/glide/gifdecoder/a;->v:I
 
     div-int/2addr v1, v2
 
     .line 13
-    iget v3, p2, Lt4/a;->b:I
+    iget v3, p2, Lq6/a;->b:I
 
     div-int/2addr v3, v2
 
     .line 14
-    iget v4, p2, Lt4/a;->c:I
+    iget v4, p2, Lq6/a;->c:I
 
     div-int/2addr v4, v2
 
     .line 15
-    iget p2, p2, Lt4/a;->a:I
+    iget p2, p2, Lq6/a;->a:I
 
     div-int/2addr p2, v2
 
@@ -2611,10 +2611,10 @@
 
     .line 21
     :cond_7
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;->s(Lt4/a;)V
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;->s(Lq6/a;)V
 
     .line 22
-    iget-boolean p2, p1, Lt4/a;->e:Z
+    iget-boolean p2, p1, Lq6/a;->e:Z
 
     const/4 v0, 0x1
 
@@ -2628,14 +2628,14 @@
 
     .line 23
     :cond_8
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;->r(Lt4/a;)V
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;->r(Lq6/a;)V
 
     goto :goto_4
 
     .line 24
     :cond_9
     :goto_3
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;->q(Lt4/a;)V
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/gifdecoder/a;->q(Lq6/a;)V
 
     .line 25
     :goto_4
@@ -2643,7 +2643,7 @@
 
     if-eqz p2, :cond_c
 
-    iget p1, p1, Lt4/a;->g:I
+    iget p1, p1, Lq6/a;->g:I
 
     if-eqz p1, :cond_a
 

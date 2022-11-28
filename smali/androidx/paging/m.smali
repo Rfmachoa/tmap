@@ -1,6 +1,6 @@
-.class public Landroidx/paging/m;
-.super Landroidx/paging/h;
-.source "SnapshotPagedList.java"
+.class public final Landroidx/paging/m;
+.super Lkotlin/collections/b;
+.source "ItemSnapshotList.kt"
 
 
 # annotations
@@ -9,172 +9,305 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Landroidx/paging/h<",
+        "Lkotlin/collections/b<",
         "TT;>;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u001a\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000b\n\u0002\u0010 \n\u0002\u0008\t\u0018\u0000*\u0004\u0008\u0000\u0010\u00012\n\u0012\u0006\u0012\u0004\u0018\u00018\u00000\u0002B)\u0012\u0008\u0008\u0001\u0010\u000b\u001a\u00020\u0003\u0012\u0008\u0008\u0001\u0010\u000e\u001a\u00020\u0003\u0012\u000c\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u000f\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u001a\u0010\u0005\u001a\u0004\u0018\u00018\u00002\u0006\u0010\u0004\u001a\u00020\u0003H\u0096\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006R\u0017\u0010\u000b\u001a\u00020\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010\u0008\u001a\u0004\u0008\t\u0010\nR\u0017\u0010\u000e\u001a\u00020\u00038\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000c\u0010\u0008\u001a\u0004\u0008\r\u0010\nR\u001d\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u000f8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0010\u0010\u0011\u001a\u0004\u0008\u000c\u0010\u0012R\u0014\u0010\u0015\u001a\u00020\u00038VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0014\u0010\n\u00a8\u0006\u0018"
+    }
+    d2 = {
+        "Landroidx/paging/m;",
+        "T",
+        "Lkotlin/collections/b;",
+        "",
+        "index",
+        "get",
+        "(I)Ljava/lang/Object;",
+        "b",
+        "I",
+        "f",
+        "()I",
+        "placeholdersBefore",
+        "c",
+        "e",
+        "placeholdersAfter",
+        "",
+        "d",
+        "Ljava/util/List;",
+        "()Ljava/util/List;",
+        "items",
+        "a",
+        "size",
+        "<init>",
+        "(IILjava/util/List;)V",
+        "paging-common"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final K0:Ljava/lang/Object;
+.field public final b:I
 
-.field public final V0:Landroidx/paging/c;
+.field public final c:I
+
+.field public final d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/paging/c<",
-            "*TT;>;"
+            "Ljava/util/List<",
+            "TT;>;"
         }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
-.field public final k0:Z
-
 
 # direct methods
-.method public constructor <init>(Landroidx/paging/h;)V
-    .locals 7
-    .param p1    # Landroidx/paging/h;
-        .annotation build Landroidx/annotation/NonNull;
+.method public constructor <init>(IILjava/util/List;)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/List;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Landroidx/paging/h<",
-            "TT;>;)V"
+            "(II",
+            "Ljava/util/List<",
+            "+TT;>;)V"
         }
     .end annotation
 
+    const-string v0, "items"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 1
-    iget-object v0, p1, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v0}, Landroidx/paging/j;->C()Landroidx/paging/j;
-
-    move-result-object v2
-
-    iget-object v3, p1, Landroidx/paging/h;->a:Ljava/util/concurrent/Executor;
-
-    iget-object v4, p1, Landroidx/paging/h;->b:Ljava/util/concurrent/Executor;
-
-    iget-object v6, p1, Landroidx/paging/h;->d:Landroidx/paging/h$f;
-
-    const/4 v5, 0x0
-
-    move-object v1, p0
-
-    invoke-direct/range {v1 .. v6}, Landroidx/paging/h;-><init>(Landroidx/paging/j;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/paging/h$c;Landroidx/paging/h$f;)V
+    invoke-direct {p0}, Lkotlin/collections/b;-><init>()V
 
     .line 2
-    invoke-virtual {p1}, Landroidx/paging/h;->q()Landroidx/paging/c;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/paging/m;->V0:Landroidx/paging/c;
+    iput p1, p0, Landroidx/paging/m;->b:I
 
     .line 3
-    invoke-virtual {p1}, Landroidx/paging/h;->u()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Landroidx/paging/m;->k0:Z
+    iput p2, p0, Landroidx/paging/m;->c:I
 
     .line 4
-    iget v0, p1, Landroidx/paging/h;->f:I
-
-    iput v0, p0, Landroidx/paging/h;->f:I
-
-    .line 5
-    invoke-virtual {p1}, Landroidx/paging/h;->r()Ljava/lang/Object;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/paging/m;->K0:Ljava/lang/Object;
+    iput-object p3, p0, Landroidx/paging/m;->d:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public o(Landroidx/paging/h;Landroidx/paging/h$e;)V
-    .locals 0
-    .param p1    # Landroidx/paging/h;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/h$e;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/paging/h<",
-            "TT;>;",
-            "Landroidx/paging/h$e;",
-            ")V"
-        }
-    .end annotation
+.method public a()I
+    .locals 2
 
-    return-void
+    .line 1
+    iget v0, p0, Landroidx/paging/m;->b:I
+
+    iget-object v1, p0, Landroidx/paging/m;->d:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iget v0, p0, Landroidx/paging/m;->c:I
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public q()Landroidx/paging/c;
+.method public final c()Ljava/util/List;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/paging/c<",
-            "*TT;>;"
+            "Ljava/util/List<",
+            "TT;>;"
         }
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Landroidx/paging/m;->V0:Landroidx/paging/c;
-
-    return-object v0
-.end method
-
-.method public r()Ljava/lang/Object;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/paging/m;->K0:Ljava/lang/Object;
+    iget-object v0, p0, Landroidx/paging/m;->d:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public u()Z
+.method public final e()I
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Landroidx/paging/m;->k0:Z
+    iget v0, p0, Landroidx/paging/m;->c:I
 
     return v0
 .end method
 
-.method public v()Z
+.method public final f()I
     .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/paging/m;->b:I
+
+    return v0
+.end method
+
+.method public get(I)Ljava/lang/Object;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 
     const/4 v0, 0x1
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public w()Z
-    .locals 1
+    if-ltz p1, :cond_0
 
-    const/4 v0, 0x1
+    .line 1
+    iget v2, p0, Landroidx/paging/m;->b:I
 
-    return v0
-.end method
+    if-ge p1, v2, :cond_0
 
-.method public y(I)V
-    .locals 0
+    move v2, v0
 
-    return-void
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_1
+
+    goto :goto_3
+
+    .line 2
+    :cond_1
+    iget v2, p0, Landroidx/paging/m;->b:I
+
+    iget-object v4, p0, Landroidx/paging/m;->d:Ljava/util/List;
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    add-int/2addr v4, v2
+
+    if-ge p1, v4, :cond_2
+
+    if-gt v2, p1, :cond_2
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v1
+
+    :goto_1
+    if-eqz v2, :cond_3
+
+    .line 3
+    iget-object v0, p0, Landroidx/paging/m;->d:Ljava/util/List;
+
+    iget v1, p0, Landroidx/paging/m;->b:I
+
+    sub-int/2addr p1, v1
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    goto :goto_3
+
+    .line 4
+    :cond_3
+    iget v2, p0, Landroidx/paging/m;->b:I
+
+    iget-object v4, p0, Landroidx/paging/m;->d:Ljava/util/List;
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    add-int/2addr v4, v2
+
+    invoke-virtual {p0}, Lkotlin/collections/AbstractCollection;->size()I
+
+    move-result v2
+
+    if-ge p1, v2, :cond_4
+
+    if-gt v4, p1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v0, v1
+
+    :goto_2
+    if-eqz v0, :cond_5
+
+    :goto_3
+    return-object v3
+
+    .line 5
+    :cond_5
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Illegal attempt to access index "
+
+    const-string v2, " in ItemSnapshotList of size "
+
+    .line 6
+    invoke-static {v1, p1, v2}, Landroid/support/v4/media/a;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lkotlin/collections/AbstractCollection;->size()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 7
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

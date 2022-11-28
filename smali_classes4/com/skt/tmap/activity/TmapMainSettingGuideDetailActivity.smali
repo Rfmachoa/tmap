@@ -49,7 +49,15 @@
     return-void
 .end method
 
-.method public static synthetic B5(Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;)I
+.method public static synthetic J5(Landroid/view/View;IIII)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->P5(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public static synthetic K5(Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;)I
     .locals 0
 
     .line 1
@@ -58,7 +66,7 @@
     return p0
 .end method
 
-.method public static synthetic C5(Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;I)I
+.method public static synthetic L5(Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;I)I
     .locals 0
 
     .line 1
@@ -67,7 +75,7 @@
     return p1
 .end method
 
-.method public static synthetic D5(Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;)I
+.method public static synthetic M5(Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;)I
     .locals 2
 
     .line 1
@@ -80,12 +88,34 @@
     return v0
 .end method
 
+.method public static synthetic P5(Landroid/view/View;IIII)V
+    .locals 0
+
+    if-nez p2, :cond_0
+
+    const/16 p1, 0x8
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_0
+    return-void
+.end method
+
 
 # virtual methods
-.method public final E5()V
-    .locals 1
+.method public final N5()V
+    .locals 3
 
-    const v0, 0x7f0a0b1a
+    const v0, 0x7f0a0b96
 
     .line 1
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -96,21 +126,41 @@
 
     iput-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0b79
+    const v0, 0x7f0a0ba2
 
     .line 2
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/skt/tmap/view/TmapWebView;
+    const v1, 0x7f0a0ba3
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0a0c02
+
+    .line 3
+    invoke-virtual {p0, v1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/skt/tmap/view/TmapWebView;
+
+    iput-object v1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
+
+    .line 4
+    new-instance v2, Lcom/skt/tmap/activity/u2;
+
+    invoke-direct {v2, v0}, Lcom/skt/tmap/activity/u2;-><init>(Landroid/view/View;)V
+
+    invoke-virtual {v1, v2}, Lcom/skt/tmap/view/TmapWebView;->setOnScrollChangedListener(Lcom/skt/tmap/view/TmapWebView$OnScrollChangedListener;)V
 
     return-void
 .end method
 
-.method public final F5()V
+.method public final O5()V
     .locals 3
 
     .line 1
@@ -131,7 +181,7 @@
     const-string v0, "/tmap2/mobile/cautions.jsp"
 
     .line 3
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -150,7 +200,7 @@
     const-string v0, "/tmap2/m/app/tmap_agree_01.jsp?pers_info=n"
 
     .line 5
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -169,7 +219,7 @@
     const-string v0, "/tmap2/m/app/tmap/ver_6_2_and_copyright.jsp"
 
     .line 7
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -188,7 +238,7 @@
     const-string v0, "/tmap2/m/app/terms/ver_5_0/android_use_01.jsp"
 
     .line 9
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -207,7 +257,7 @@
     const-string v0, "/tmap2/mobile/tmapxnugu_manual_6.2.jsp"
 
     .line 11
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -226,7 +276,7 @@
     const-string v0, "/tmap2/mobile/nugu/nuguBtn_buy.jsp"
 
     .line 13
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -245,7 +295,7 @@
     const-string v0, "/tmap2/m/app/tmap_agree_01.jsp?pers_info=y"
 
     .line 15
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -259,7 +309,7 @@
     return-void
 .end method
 
-.method public final G5()V
+.method public final Q5()V
     .locals 2
 
     .line 1
@@ -272,7 +322,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f13054d
+    const v1, 0x7f1405bd
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -299,7 +349,7 @@
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f13054e
+    const v1, 0x7f1405be
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -317,7 +367,7 @@
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f130550
+    const v1, 0x7f1405c0
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -335,7 +385,7 @@
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f130551
+    const v1, 0x7f1405c1
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -353,7 +403,7 @@
     .line 7
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f1308d9
+    const v1, 0x7f14095c
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -371,7 +421,7 @@
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f1308d6
+    const v1, 0x7f140959
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -389,7 +439,7 @@
     .line 9
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f130552
+    const v1, 0x7f1405c2
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -436,7 +486,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -445,12 +495,12 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0112
+    const p1, 0x7f0d011b
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
@@ -471,13 +521,13 @@
     iput p1, p0, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->a:I
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->E5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->N5()V
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->F5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->O5()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->G5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->Q5()V
 
     return-void
 .end method

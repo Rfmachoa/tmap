@@ -82,6 +82,48 @@
     return-object v0
 .end method
 
+.method public static getDefaultImpl()Landroidx/room/IMultiInstanceInvalidationCallback;
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/room/IMultiInstanceInvalidationCallback$Stub$Proxy;->sDefaultImpl:Landroidx/room/IMultiInstanceInvalidationCallback;
+
+    return-object v0
+.end method
+
+.method public static setDefaultImpl(Landroidx/room/IMultiInstanceInvalidationCallback;)Z
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/room/IMultiInstanceInvalidationCallback$Stub$Proxy;->sDefaultImpl:Landroidx/room/IMultiInstanceInvalidationCallback;
+
+    if-nez v0, :cond_1
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    sput-object p0, Landroidx/room/IMultiInstanceInvalidationCallback$Stub$Proxy;->sDefaultImpl:Landroidx/room/IMultiInstanceInvalidationCallback;
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    .line 3
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "setDefaultImpl() called twice"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;

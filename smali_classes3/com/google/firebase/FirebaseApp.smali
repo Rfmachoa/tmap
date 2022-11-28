@@ -25,6 +25,10 @@
 .field private static final FIREBASE_COMMON:Ljava/lang/String; = "fire-core"
 
 .field public static final INSTANCES:Ljava/util/Map;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "LOCK"
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -32,10 +36,6 @@
             "Lcom/google/firebase/FirebaseApp;",
             ">;"
         }
-    .end annotation
-
-    .annotation build Ljavax/annotation/concurrent/GuardedBy;
-        value = "LOCK"
     .end annotation
 .end field
 
@@ -70,6 +70,16 @@
         value = {
             "Lcom/google/firebase/components/Lazy<",
             "Lcom/google/firebase/internal/DataCollectionConfigStorage;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final defaultHeartBeatController:Lcom/google/firebase/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/firebase/inject/Provider<",
+            "Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;",
             ">;"
         }
     .end annotation
@@ -183,28 +193,46 @@
 
     iput-object p2, p0, Lcom/google/firebase/FirebaseApp;->options:Lcom/google/firebase/FirebaseOptions;
 
+    const-string p2, "Firebase"
+
     .line 9
-    const-class p2, Lcom/google/firebase/components/ComponentDiscoveryService;
+    invoke-static {p2}, Lcom/google/firebase/tracing/FirebaseTrace;->pushTrace(Ljava/lang/String;)V
+
+    const-string p2, "ComponentDiscovery"
 
     .line 10
+    invoke-static {p2}, Lcom/google/firebase/tracing/FirebaseTrace;->pushTrace(Ljava/lang/String;)V
+
+    .line 11
+    const-class p2, Lcom/google/firebase/components/ComponentDiscoveryService;
+
+    .line 12
     invoke-static {p1, p2}, Lcom/google/firebase/components/ComponentDiscovery;->forContext(Landroid/content/Context;Ljava/lang/Class;)Lcom/google/firebase/components/ComponentDiscovery;
 
     move-result-object p2
 
-    .line 11
+    .line 13
     invoke-virtual {p2}, Lcom/google/firebase/components/ComponentDiscovery;->discoverLazy()Ljava/util/List;
 
     move-result-object p2
 
-    .line 12
+    .line 14
+    invoke-static {}, Lcom/google/firebase/tracing/FirebaseTrace;->popTrace()V
+
+    const-string v0, "Runtime"
+
+    .line 15
+    invoke-static {v0}, Lcom/google/firebase/tracing/FirebaseTrace;->pushTrace(Ljava/lang/String;)V
+
+    .line 16
     sget-object v0, Lcom/google/firebase/FirebaseApp;->UI_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    .line 13
+    .line 17
     invoke-static {v0}, Lcom/google/firebase/components/ComponentRuntime;->builder(Ljava/util/concurrent/Executor;)Lcom/google/firebase/components/ComponentRuntime$Builder;
 
     move-result-object v0
 
-    .line 14
+    .line 18
     invoke-virtual {v0, p2}, Lcom/google/firebase/components/ComponentRuntime$Builder;->addLazyComponentRegistrars(Ljava/util/Collection;)Lcom/google/firebase/components/ComponentRuntime$Builder;
 
     move-result-object p2
@@ -213,7 +241,7 @@
 
     invoke-direct {v0}, Lcom/google/firebase/FirebaseCommonRegistrar;-><init>()V
 
-    .line 15
+    .line 19
     invoke-virtual {p2, v0}, Lcom/google/firebase/components/ComponentRuntime$Builder;->addComponentRegistrar(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRuntime$Builder;
 
     move-result-object p2
@@ -222,7 +250,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
-    .line 16
+    .line 20
     invoke-static {p1, v0, v2}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object v0
@@ -235,7 +263,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
-    .line 17
+    .line 21
     invoke-static {p0, v0, v2}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object v0
@@ -248,7 +276,7 @@
 
     new-array v1, v1, [Ljava/lang/Class;
 
-    .line 18
+    .line 22
     invoke-static {p3, v0, v1}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object p3
@@ -257,35 +285,64 @@
 
     move-result-object p2
 
-    .line 19
+    new-instance p3, Lcom/google/firebase/tracing/ComponentMonitor;
+
+    invoke-direct {p3}, Lcom/google/firebase/tracing/ComponentMonitor;-><init>()V
+
+    .line 23
+    invoke-virtual {p2, p3}, Lcom/google/firebase/components/ComponentRuntime$Builder;->setProcessor(Lcom/google/firebase/components/ComponentRegistrarProcessor;)Lcom/google/firebase/components/ComponentRuntime$Builder;
+
+    move-result-object p2
+
+    .line 24
     invoke-virtual {p2}, Lcom/google/firebase/components/ComponentRuntime$Builder;->build()Lcom/google/firebase/components/ComponentRuntime;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/google/firebase/FirebaseApp;->componentRuntime:Lcom/google/firebase/components/ComponentRuntime;
 
-    .line 20
-    new-instance p2, Lcom/google/firebase/components/Lazy;
+    .line 25
+    invoke-static {}, Lcom/google/firebase/tracing/FirebaseTrace;->popTrace()V
 
-    new-instance p3, Lcom/google/firebase/a;
+    .line 26
+    new-instance p3, Lcom/google/firebase/components/Lazy;
 
-    invoke-direct {p3, p0, p1}, Lcom/google/firebase/a;-><init>(Lcom/google/firebase/FirebaseApp;Landroid/content/Context;)V
+    new-instance v0, Lcom/google/firebase/b;
 
-    invoke-direct {p2, p3}, Lcom/google/firebase/components/Lazy;-><init>(Lcom/google/firebase/inject/Provider;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/firebase/b;-><init>(Lcom/google/firebase/FirebaseApp;Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/google/firebase/FirebaseApp;->dataCollectionConfigStorage:Lcom/google/firebase/components/Lazy;
+    invoke-direct {p3, v0}, Lcom/google/firebase/components/Lazy;-><init>(Lcom/google/firebase/inject/Provider;)V
+
+    iput-object p3, p0, Lcom/google/firebase/FirebaseApp;->dataCollectionConfigStorage:Lcom/google/firebase/components/Lazy;
+
+    .line 27
+    const-class p1, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
+
+    invoke-virtual {p2, p1}, Lcom/google/firebase/components/ComponentRuntime;->getProvider(Ljava/lang/Class;)Lcom/google/firebase/inject/Provider;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/firebase/FirebaseApp;->defaultHeartBeatController:Lcom/google/firebase/inject/Provider;
+
+    .line 28
+    new-instance p1, Lcom/google/firebase/a;
+
+    invoke-direct {p1, p0}, Lcom/google/firebase/a;-><init>(Lcom/google/firebase/FirebaseApp;)V
+
+    invoke-virtual {p0, p1}, Lcom/google/firebase/FirebaseApp;->addBackgroundStateChangeListener(Lcom/google/firebase/FirebaseApp$BackgroundStateChangeListener;)V
+
+    .line 29
+    invoke-static {}, Lcom/google/firebase/tracing/FirebaseTrace;->popTrace()V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/firebase/FirebaseApp;Landroid/content/Context;)Lcom/google/firebase/internal/DataCollectionConfigStorage;
+.method public static synthetic a(Lcom/google/firebase/FirebaseApp;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/firebase/FirebaseApp;->lambda$new$0(Landroid/content/Context;)Lcom/google/firebase/internal/DataCollectionConfigStorage;
+    invoke-direct {p0, p1}, Lcom/google/firebase/FirebaseApp;->lambda$new$1(Z)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 .method public static synthetic access$300()Ljava/lang/Object;
@@ -322,6 +379,16 @@
     invoke-direct {p0, p1}, Lcom/google/firebase/FirebaseApp;->notifyBackgroundStateChangeListeners(Z)V
 
     return-void
+.end method
+
+.method public static synthetic b(Lcom/google/firebase/FirebaseApp;Landroid/content/Context;)Lcom/google/firebase/internal/DataCollectionConfigStorage;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/firebase/FirebaseApp;->lambda$new$0(Landroid/content/Context;)Lcom/google/firebase/internal/DataCollectionConfigStorage;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private checkNotDeleted()V
@@ -606,17 +673,28 @@
     if-eqz v1, :cond_0
 
     .line 9
+    iget-object p0, v1, Lcom/google/firebase/FirebaseApp;->defaultHeartBeatController:Lcom/google/firebase/inject/Provider;
+
+    invoke-interface {p0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
+
+    invoke-virtual {p0}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->registerHeartBeat()Lcom/google/android/gms/tasks/Task;
+
+    .line 10
     monitor-exit v0
 
     return-object v1
 
-    .line 10
+    .line 11
     :cond_0
     invoke-static {}, Lcom/google/firebase/FirebaseApp;->getAllAppNames()Ljava/util/List;
 
     move-result-object v1
 
-    .line 11
+    .line 12
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -627,7 +705,7 @@
 
     goto :goto_0
 
-    .line 12
+    .line 13
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -639,7 +717,7 @@
 
     const-string v3, ", "
 
-    .line 13
+    .line 14
     invoke-static {v3, v1}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v1
@@ -665,12 +743,12 @@
 
     aput-object v1, v3, p0
 
-    .line 14
+    .line 15
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 15
+    .line 16
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
@@ -680,7 +758,7 @@
     :catchall_0
     move-exception p0
 
-    .line 16
+    .line 17
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -748,7 +826,7 @@
     .line 1
     iget-object v0, p0, Lcom/google/firebase/FirebaseApp;->applicationContext:Landroid/content/Context;
 
-    invoke-static {v0}, Ll1/u;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Landroidx/core/os/z;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -814,6 +892,17 @@
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/components/ComponentRuntime;->initializeEagerComponents(Z)V
+
+    .line 8
+    iget-object v0, p0, Lcom/google/firebase/FirebaseApp;->defaultHeartBeatController:Lcom/google/firebase/inject/Provider;
+
+    invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
+
+    invoke-virtual {v0}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->registerHeartBeat()Lcom/google/android/gms/tasks/Task;
 
     :goto_0
     return-void
@@ -1066,6 +1155,26 @@
     invoke-direct {v0, p1, v1, v2}, Lcom/google/firebase/internal/DataCollectionConfigStorage;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/google/firebase/events/Publisher;)V
 
     return-object v0
+.end method
+
+.method private synthetic lambda$new$1(Z)V
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    .line 1
+    iget-object p1, p0, Lcom/google/firebase/FirebaseApp;->defaultHeartBeatController:Lcom/google/firebase/inject/Provider;
+
+    invoke-interface {p1}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
+
+    invoke-virtual {p1}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->registerHeartBeat()Lcom/google/android/gms/tasks/Task;
+
+    :cond_0
+    return-void
 .end method
 
 .method private static normalize(Ljava/lang/String;)Ljava/lang/String;

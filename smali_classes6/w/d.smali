@@ -3,34 +3,50 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lw/i;
+.field public final synthetic a:Lw/b$b;
+
+.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw/i;)V
+.method public synthetic constructor <init>(Lw/b$b;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw/d;->a:Lw/i;
+    iput-object p1, p0, Lw/d;->a:Lw/b$b;
+
+    iput-object p2, p0, Lw/d;->b:Landroid/hardware/camera2/CameraCaptureSession;
+
+    iput p3, p0, Lw/d;->c:I
+
+    iput-wide p4, p0, Lw/d;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iget-object v0, p0, Lw/d;->a:Lw/i;
+    iget-object v0, p0, Lw/d;->a:Lw/b$b;
 
-    invoke-static {v0, p1}, Lw/i;->h(Lw/i;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    iget-object v1, p0, Lw/d;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
-    move-result-object p1
+    iget v2, p0, Lw/d;->c:I
 
-    return-object p1
+    iget-wide v3, p0, Lw/d;->d:J
+
+    invoke-static {v0, v1, v2, v3, v4}, Lw/b$b;->e(Lw/b$b;Landroid/hardware/camera2/CameraCaptureSession;IJ)V
+
+    return-void
 .end method

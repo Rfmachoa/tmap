@@ -1,376 +1,162 @@
 .class public abstract Lfi/a;
 .super Ljava/lang/Object;
-.source "BasicFuseableObserver.java"
+.source "AbstractContentBody.java"
 
 # interfaces
-.implements Lai/n0;
-.implements Lei/l;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        "R:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lai/n0<",
-        "TT;>;",
-        "Lei/l<",
-        "TR;>;"
-    }
-.end annotation
+.implements Lfi/c;
 
 
 # instance fields
-.field public final a:Lai/n0;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lai/n0<",
-            "-TR;>;"
-        }
-    .end annotation
-.end field
-
-.field public b:Lio/reactivex/rxjava3/disposables/c;
-
-.field public c:Lei/l;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lei/l<",
-            "TT;>;"
-        }
-    .end annotation
-.end field
-
-.field public d:Z
-
-.field public e:I
+.field public final a:Lcz/msebera/android/httpclient/entity/ContentType;
 
 
 # direct methods
-.method public constructor <init>(Lai/n0;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "downstream"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lai/n0<",
-            "-TR;>;)V"
-        }
-    .end annotation
+.method public constructor <init>(Lcz/msebera/android/httpclient/entity/ContentType;)V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const-string v0, "Content type"
+
     .line 2
-    iput-object p1, p0, Lfi/a;->a:Lai/n0;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
+    iput-object p1, p0, Lfi/a;->a:Lcz/msebera/android/httpclient/entity/ContentType;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 4
+    invoke-static {p1}, Lcz/msebera/android/httpclient/entity/ContentType;->parse(Ljava/lang/String;)Lcz/msebera/android/httpclient/entity/ContentType;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lfi/a;-><init>(Lcz/msebera/android/httpclient/entity/ContentType;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final c(Ljava/lang/Throwable;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p1}, Lio/reactivex/rxjava3/exceptions/a;->b(Ljava/lang/Throwable;)V
-
-    .line 2
-    iget-object v0, p0, Lfi/a;->b:Lio/reactivex/rxjava3/disposables/c;
-
-    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/c;->dispose()V
-
-    .line 3
-    invoke-virtual {p0, p1}, Lfi/a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public clear()V
+.method public a()Lcz/msebera/android/httpclient/entity/ContentType;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lfi/a;->c:Lei/l;
+    iget-object v0, p0, Lfi/a;->a:Lcz/msebera/android/httpclient/entity/ContentType;
 
-    invoke-interface {v0}, Lei/q;->clear()V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final d(I)I
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mode"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lfi/a;->c:Lei/l;
-
-    if-eqz v0, :cond_1
-
-    and-int/lit8 v1, p1, 0x4
-
-    if-nez v1, :cond_1
-
-    .line 2
-    invoke-interface {v0, p1}, Lei/m;->requestFusion(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    iput p1, p0, Lfi/a;->e:I
-
-    :cond_0
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public dispose()V
+.method public getCharset()Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lfi/a;->b:Lio/reactivex/rxjava3/disposables/c;
+    iget-object v0, p0, Lfi/a;->a:Lcz/msebera/android/httpclient/entity/ContentType;
 
-    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/c;->dispose()V
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/entity/ContentType;->getCharset()Ljava/nio/charset/Charset;
 
-    return-void
-.end method
-
-.method public isDisposed()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfi/a;->b:Lio/reactivex/rxjava3/disposables/c;
-
-    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/c;->isDisposed()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isEmpty()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfi/a;->c:Lei/l;
-
-    invoke-interface {v0}, Lei/q;->isEmpty()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "e"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;)Z"
-        }
-    .end annotation
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Should not be called!"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final offer(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "v1",
-            "v2"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;TR;)Z"
-        }
-    .end annotation
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Should not be called!"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public onComplete()V
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Lfi/a;->d:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 2
-    iput-boolean v0, p0, Lfi/a;->d:Z
-
-    .line 3
-    iget-object v0, p0, Lfi/a;->a:Lai/n0;
-
-    invoke-interface {v0}, Lai/n0;->onComplete()V
-
-    return-void
-.end method
-
-.method public onError(Ljava/lang/Throwable;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Lfi/a;->d:Z
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lji/a;->Y(Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    .line 3
-    iput-boolean v0, p0, Lfi/a;->d:Z
-
-    .line 4
-    iget-object v0, p0, Lfi/a;->a:Lai/n0;
-
-    invoke-interface {v0, p1}, Lai/n0;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    :goto_0
+    return-object v0
 .end method
 
-.method public final onSubscribe(Lio/reactivex/rxjava3/disposables/c;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "d"
-        }
-    .end annotation
+.method public getMediaType()Ljava/lang/String;
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Lfi/a;->b:Lio/reactivex/rxjava3/disposables/c;
+    iget-object v0, p0, Lfi/a;->a:Lcz/msebera/android/httpclient/entity/ContentType;
 
-    invoke-static {v0, p1}, Lio/reactivex/rxjava3/internal/disposables/DisposableHelper;->validate(Lio/reactivex/rxjava3/disposables/c;Lio/reactivex/rxjava3/disposables/c;)Z
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/entity/ContentType;->getMimeType()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    const/16 v1, 0x2f
 
     .line 2
-    iput-object p1, p0, Lfi/a;->b:Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    const/4 v2, 0x0
 
     .line 3
-    instance-of v0, p1, Lei/l;
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 4
-    check-cast p1, Lei/l;
-
-    iput-object p1, p0, Lfi/a;->c:Lei/l;
-
-    .line 5
     :cond_0
-    invoke-virtual {p0}, Lfi/a;->b()Z
+    return-object v0
+.end method
 
-    move-result p1
+.method public getMimeType()Ljava/lang/String;
+    .locals 1
 
-    if-eqz p1, :cond_1
+    .line 1
+    iget-object v0, p0, Lfi/a;->a:Lcz/msebera/android/httpclient/entity/ContentType;
 
-    .line 6
-    iget-object p1, p0, Lfi/a;->a:Lai/n0;
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/entity/ContentType;->getMimeType()Ljava/lang/String;
 
-    invoke-interface {p1, p0}, Lai/n0;->onSubscribe(Lio/reactivex/rxjava3/disposables/c;)V
+    move-result-object v0
 
-    .line 7
-    invoke-virtual {p0}, Lfi/a;->a()V
+    return-object v0
+.end method
 
-    :cond_1
-    return-void
+.method public getSubType()Ljava/lang/String;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lfi/a;->a:Lcz/msebera/android/httpclient/entity/ContentType;
+
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/entity/ContentType;->getMimeType()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x2f
+
+    .line 2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    .line 3
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

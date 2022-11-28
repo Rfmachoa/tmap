@@ -3,7 +3,7 @@
 .source "ActionTextMessage.java"
 
 # interfaces
-.implements Lsa/d;
+.implements Lpc/d;
 
 
 # annotations
@@ -47,11 +47,11 @@
 
     iget-object v2, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$f;->a:Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;
 
-    invoke-static {v2}, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;->w0(Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;)Lma/c;
+    invoke-static {v2}, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;->w0(Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;)Ljc/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v2}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v3
 

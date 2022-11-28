@@ -120,7 +120,7 @@
 
 
 # virtual methods
-.method public declared-synchronized sendInfo(Lfa/c;)Z
+.method public declared-synchronized sendInfo(Lcc/c;)Z
     .locals 5
 
     monitor-enter p0
@@ -133,7 +133,7 @@
 
     .line 1
     :try_start_0
-    invoke-virtual {p1}, Lfa/c;->r()Z
+    invoke-virtual {p1}, Lcc/c;->r()Z
 
     move-result v2
 
@@ -182,7 +182,7 @@
     const-string v3, "APP_LIFE_CYCLE"
 
     .line 9
-    invoke-virtual {v2, v3}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->f(Ljava/lang/String;)V
 
     const-string v3, "LIFE_CYCLE"
 
@@ -191,13 +191,13 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 11
     :try_start_2
-    invoke-virtual {p1, v2}, Lfa/c;->S(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)Z
+    invoke-virtual {p1, v2}, Lcc/c;->S(Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;)Z
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

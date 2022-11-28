@@ -86,7 +86,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x101000e
+    const v4, 0x101009e
 
     aput v4, v2, v3
 

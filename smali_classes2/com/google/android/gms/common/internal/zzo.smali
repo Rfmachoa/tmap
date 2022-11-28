@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/internal/zzo;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Landroid/content/ServiceConnection;
@@ -11,15 +11,6 @@
 .field public final synthetic zza:Lcom/google/android/gms/common/internal/zzr;
 
 .field private final zzb:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Landroid/content/ServiceConnection;",
-            "Landroid/content/ServiceConnection;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zzc:I
 
@@ -255,7 +246,7 @@
 .end method
 
 .method public final zze(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
-    .locals 8
+    .locals 9
     .param p2    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -266,85 +257,116 @@
     .line 1
     iput v0, p0, Lcom/google/android/gms/common/internal/zzo;->zzc:I
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
-
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzr;->zzg(Lcom/google/android/gms/common/internal/zzr;)Lcom/google/android/gms/common/stats/ConnectionTracker;
-
-    move-result-object v1
-
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzr;->zze(Lcom/google/android/gms/common/internal/zzr;)Landroid/content/Context;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/google/android/gms/common/internal/zzo;->zzf:Lcom/google/android/gms/common/internal/zzn;
-
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzr;->zze(Lcom/google/android/gms/common/internal/zzr;)Landroid/content/Context;
+    invoke-static {}, Landroid/os/StrictMode;->getVmPolicy()Landroid/os/StrictMode$VmPolicy;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Lcom/google/android/gms/common/internal/zzn;->zzc(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastS()Z
 
-    move-result-object v4
+    move-result v1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzo;->zzf:Lcom/google/android/gms/common/internal/zzn;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/zzn;->zza()I
-
-    move-result v6
-
-    move-object v3, p1
-
-    move-object v5, p0
-
-    move-object v7, p2
+    new-instance v1, Landroid/os/StrictMode$VmPolicy$Builder;
 
     .line 2
-    invoke-virtual/range {v1 .. v7}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
+    invoke-direct {v1, v0}, Landroid/os/StrictMode$VmPolicy$Builder;-><init>(Landroid/os/StrictMode$VmPolicy;)V
+
+    invoke-virtual {v1}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/StrictMode$VmPolicy$Builder;->build()Landroid/os/StrictMode$VmPolicy;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
+
+    :cond_0
+    :try_start_0
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
+
+    invoke-static {v1}, Lcom/google/android/gms/common/internal/zzr;->zzg(Lcom/google/android/gms/common/internal/zzr;)Lcom/google/android/gms/common/stats/ConnectionTracker;
+
+    move-result-object v2
+
+    invoke-static {v1}, Lcom/google/android/gms/common/internal/zzr;->zze(Lcom/google/android/gms/common/internal/zzr;)Landroid/content/Context;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/google/android/gms/common/internal/zzo;->zzf:Lcom/google/android/gms/common/internal/zzn;
+
+    invoke-static {v1}, Lcom/google/android/gms/common/internal/zzr;->zze(Lcom/google/android/gms/common/internal/zzr;)Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 3
+    invoke-virtual {v4, v1}, Lcom/google/android/gms/common/internal/zzn;->zzc(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v5
+
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzo;->zzf:Lcom/google/android/gms/common/internal/zzn;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/common/internal/zzn;->zza()I
+
+    move-result v7
+
+    move-object v4, p1
+
+    move-object v6, p0
+
+    move-object v8, p2
+
+    .line 4
+    invoke-virtual/range {v2 .. v8}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/google/android/gms/common/internal/zzo;->zzd:Z
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     iget-object p1, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
 
-    .line 3
+    .line 5
     invoke-static {p1}, Lcom/google/android/gms/common/internal/zzr;->zzf(Lcom/google/android/gms/common/internal/zzr;)Landroid/os/Handler;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/google/android/gms/common/internal/zzo;->zzf:Lcom/google/android/gms/common/internal/zzn;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-virtual {p1, v1, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
 
-    .line 4
+    .line 6
     invoke-static {p2}, Lcom/google/android/gms/common/internal/zzr;->zzf(Lcom/google/android/gms/common/internal/zzr;)Landroid/os/Handler;
 
     move-result-object p2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzr;->zzd(Lcom/google/android/gms/common/internal/zzr;)J
+    invoke-static {v1}, Lcom/google/android/gms/common/internal/zzr;->zzd(Lcom/google/android/gms/common/internal/zzr;)J
 
-    move-result-wide v0
+    move-result-wide v1
 
-    invoke-virtual {p2, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p2, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    return-void
+    goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p1, 0x2
 
+    .line 7
     iput p1, p0, Lcom/google/android/gms/common/internal/zzo;->zzc:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :try_start_0
+    :try_start_1
     iget-object p1, p0, Lcom/google/android/gms/common/internal/zzo;->zza:Lcom/google/android/gms/common/internal/zzr;
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/zzr;->zzg(Lcom/google/android/gms/common/internal/zzr;)Lcom/google/android/gms/common/stats/ConnectionTracker;
@@ -355,13 +377,26 @@
 
     move-result-object p1
 
-    .line 5
+    .line 8
     invoke-virtual {p2, p1, p0}, Lcom/google/android/gms/common/stats/ConnectionTracker;->unbindService(Landroid/content/Context;Landroid/content/ServiceConnection;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 9
     :catch_0
+    :goto_0
+    invoke-static {v0}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
+
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {v0}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
+
+    .line 10
+    throw p1
 .end method
 
 .method public final zzf(Landroid/content/ServiceConnection;Ljava/lang/String;)V

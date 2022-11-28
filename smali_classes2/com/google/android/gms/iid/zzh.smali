@@ -40,7 +40,7 @@
 
     const/16 v1, 0x3d
 
-    invoke-static {v0, v1}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v1
 

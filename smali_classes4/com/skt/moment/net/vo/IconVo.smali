@@ -55,6 +55,14 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "src"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -154,6 +162,14 @@
 
 .method public setClickUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clickUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/IconVo;->clickUrl:Ljava/lang/String;
@@ -163,6 +179,14 @@
 
 .method public setExtraInfo(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "extraInfo"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/IconVo;->extraInfo:Ljava/lang/String;
@@ -172,6 +196,14 @@
 
 .method public setIconId(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "iconId"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/net/vo/IconVo;->iconId:I
@@ -181,6 +213,14 @@
 
 .method public setIconImageUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "iconImageUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/IconVo;->iconImageUrl:Ljava/lang/String;
@@ -190,6 +230,14 @@
 
 .method public setText(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/IconVo;->text:Ljava/lang/String;
@@ -199,6 +247,16 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dest",
+            "flags"
+        }
+    .end annotation
 
     .line 1
     iget p2, p0, Lcom/skt/moment/net/vo/IconVo;->iconId:I

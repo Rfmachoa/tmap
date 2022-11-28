@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/VideoCapture;->k0(Ljava/lang/String;Landroid/util/Size;)V
+    value = Landroidx/camera/core/VideoCapture;->q0(Ljava/lang/String;Landroid/util/Size;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,18 +28,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/VideoCapture;Ljava/lang/String;Landroid/util/Size;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$cameraId",
-            "val$resolution"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/VideoCapture$a;->c:Landroidx/camera/core/VideoCapture;
@@ -65,15 +53,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "sessionConfig",
-            "error"
-        }
+    .annotation build Landroidx/annotation/RequiresPermission;
+        value = "android.permission.RECORD_AUDIO"
     .end annotation
 
     .line 1
@@ -81,7 +62,7 @@
 
     iget-object p2, p0, Landroidx/camera/core/VideoCapture$a;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroidx/camera/core/UseCase;->o(Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, Landroidx/camera/core/UseCase;->r(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -94,12 +75,12 @@
 
     iget-object v0, p0, Landroidx/camera/core/VideoCapture$a;->b:Landroid/util/Size;
 
-    invoke-virtual {p1, p2, v0}, Landroidx/camera/core/VideoCapture;->k0(Ljava/lang/String;Landroid/util/Size;)V
+    invoke-virtual {p1, p2, v0}, Landroidx/camera/core/VideoCapture;->q0(Ljava/lang/String;Landroid/util/Size;)V
 
     .line 3
     iget-object p1, p0, Landroidx/camera/core/VideoCapture$a;->c:Landroidx/camera/core/VideoCapture;
 
-    invoke-virtual {p1}, Landroidx/camera/core/UseCase;->s()V
+    invoke-virtual {p1}, Landroidx/camera/core/UseCase;->v()V
 
     :cond_0
     return-void

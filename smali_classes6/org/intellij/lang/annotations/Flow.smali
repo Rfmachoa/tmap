@@ -32,27 +32,27 @@
 
 
 # static fields
-.field public static final A0:Ljava/lang/String; = "This container (if the parameter was annotated) or the return value (if instance method was annotated)"
+.field public static final D0:Ljava/lang/String; = "The method argument (if parameter was annotated) or this container (if instance method was annotated)"
     .annotation build Lorg/jetbrains/annotations/NonNls;
     .end annotation
 .end field
 
-.field public static final B0:Ljava/lang/String; = "The return value of this method"
+.field public static final E0:Ljava/lang/String; = "this"
     .annotation build Lorg/jetbrains/annotations/NonNls;
     .end annotation
 .end field
 
-.field public static final C0:Ljava/lang/String; = "this"
+.field public static final F0:Ljava/lang/String; = "This container (if the parameter was annotated) or the return value (if instance method was annotated)"
     .annotation build Lorg/jetbrains/annotations/NonNls;
     .end annotation
 .end field
 
-.field public static final y0:Ljava/lang/String; = "The method argument (if parameter was annotated) or this container (if instance method was annotated)"
+.field public static final G0:Ljava/lang/String; = "The return value of this method"
     .annotation build Lorg/jetbrains/annotations/NonNls;
     .end annotation
 .end field
 
-.field public static final z0:Ljava/lang/String; = "this"
+.field public static final H0:Ljava/lang/String; = "this"
     .annotation build Lorg/jetbrains/annotations/NonNls;
     .end annotation
 .end field

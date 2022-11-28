@@ -1,6 +1,9 @@
 .class public Landroidx/fragment/app/FragmentManager$e;
-.super Landroidx/fragment/app/i;
+.super Ljava/lang/Object;
 .source "FragmentManager.java"
+
+# interfaces
+.implements Landroidx/fragment/app/r0;
 
 
 # annotations
@@ -15,7 +18,7 @@
 
 
 # instance fields
-.field public final synthetic b:Landroidx/fragment/app/FragmentManager;
+.field public final synthetic a:Landroidx/fragment/app/FragmentManager;
 
 
 # direct methods
@@ -23,22 +26,18 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$e;->b:Landroidx/fragment/app/FragmentManager;
+    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$e;->a:Landroidx/fragment/app/FragmentManager;
 
-    invoke-direct {p0}, Landroidx/fragment/app/i;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
-    .locals 2
-    .param p1    # Ljava/lang/ClassLoader;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/String;
+.method public a(Landroid/view/ViewGroup;)Landroidx/fragment/app/SpecialEffectsController;
+    .locals 1
+    .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -46,27 +45,9 @@
     .end annotation
 
     .line 1
-    iget-object p1, p0, Landroidx/fragment/app/FragmentManager$e;->b:Landroidx/fragment/app/FragmentManager;
+    new-instance v0, Landroidx/fragment/app/c;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->H0()Landroidx/fragment/app/j;
+    invoke-direct {v0, p1}, Landroidx/fragment/app/c;-><init>(Landroid/view/ViewGroup;)V
 
-    move-result-object p1
-
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$e;->b:Landroidx/fragment/app/FragmentManager;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->H0()Landroidx/fragment/app/j;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/fragment/app/j;->f()Landroid/content/Context;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroidx/fragment/app/g;->b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroidx/fragment/app/Fragment;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

@@ -12,6 +12,7 @@
         Lcom/google/firebase/R$id;,
         Lcom/google/firebase/R$integer;,
         Lcom/google/firebase/R$layout;,
+        Lcom/google/firebase/R$raw;,
         Lcom/google/firebase/R$string;,
         Lcom/google/firebase/R$style;,
         Lcom/google/firebase/R$styleable;

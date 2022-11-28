@@ -93,7 +93,7 @@
 
     iget-object v1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->a:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->d1:Landroidx/appcompat/widget/ActionMenuPresenter$e;
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->f1:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
     .line 6
     :cond_1
@@ -101,7 +101,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->f1:Landroidx/appcompat/widget/ActionMenuPresenter$c;
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->h1:Landroidx/appcompat/widget/ActionMenuPresenter$c;
 
     return-void
 .end method

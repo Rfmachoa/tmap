@@ -1,25 +1,32 @@
 .class public Ljh/b;
-.super Ljava/lang/Object;
-.source "androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps.java"
+.super Lri/e;
+.source "AuthParamBean.java"
 
 
 # annotations
-.annotation build Ldagger/hilt/processor/internal/aggregateddeps/AggregatedDeps;
-    components = {
-        "dagger.hilt.android.components.FragmentComponent"
-    }
-    modules = {
-        "androidx.hilt.lifecycle.ViewModelFactoryModules.FragmentModule"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lri/i;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lri/e;-><init>(Lri/i;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lri/e;->a:Lri/i;
+
+    invoke-static {v0, p1}, Ljh/c;->b(Lri/i;Ljava/lang/String;)V
 
     return-void
 .end method

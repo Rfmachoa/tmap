@@ -15,10 +15,10 @@
 
 
 # virtual methods
-.method public abstract a()Lt/a;
+.method public abstract a()Landroid/hardware/camera2/CaptureRequest;
 .end method
 
-.method public abstract b()Landroid/hardware/camera2/CaptureRequest;
+.method public abstract b()Lx/a;
 .end method
 
 .method public abstract c()Ljava/util/List;
@@ -26,48 +26,32 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lt/b;",
+            "Lx/b;",
             ">;"
         }
     .end annotation
 .end method
 
-.method public abstract d()Ljava/lang/Object;
+.method public abstract d(Lx/a;)V
+    .param p1    # Lx/a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract e()Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
 
-.method public abstract e()I
+.method public abstract f()I
 .end method
 
-.method public abstract f()Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+.method public abstract g()Ljava/util/concurrent/Executor;
 .end method
 
-.method public abstract g(Lt/a;)V
-    .param p1    # Lt/a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "input"
-        }
-    .end annotation
+.method public abstract h()Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 .end method
 
-.method public abstract getExecutor()Ljava/util/concurrent/Executor;
-.end method
-
-.method public abstract h(Landroid/hardware/camera2/CaptureRequest;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "params"
-        }
-    .end annotation
+.method public abstract i(Landroid/hardware/camera2/CaptureRequest;)V
 .end method

@@ -108,7 +108,7 @@
     .line 1
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -162,7 +162,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v0
 
@@ -192,7 +192,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v0
 
@@ -222,7 +222,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v0
 
@@ -282,7 +282,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object v0
 
@@ -315,7 +315,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -326,7 +326,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -336,7 +336,7 @@
     :cond_0
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v()Z
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->w()Z
 
     move-result p1
 
@@ -361,7 +361,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -372,7 +372,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -382,7 +382,7 @@
     :cond_0
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->G()D
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->x()D
 
     move-result-wide v0
 
@@ -407,7 +407,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -418,7 +418,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -428,7 +428,7 @@
     :cond_0
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->L()I
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->J()I
 
     move-result p1
 
@@ -465,7 +465,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -476,7 +476,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -536,7 +536,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -547,7 +547,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -557,7 +557,7 @@
     :cond_0
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->N()J
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->T()J
 
     move-result-wide v0
 
@@ -579,7 +579,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->O()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->U()Ljava/lang/String;
 
     move-result-object v0
 
@@ -610,7 +610,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -621,7 +621,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -730,7 +730,7 @@
     .line 2
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
 
     move-result-object p1
 
@@ -741,7 +741,7 @@
     .line 3
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     const/4 p1, 0x0
 
@@ -751,7 +751,7 @@
     :cond_0
     iget-object p1, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->Y()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/json/JsonReader;->b0()Ljava/lang/String;
 
     move-result-object p1
 
@@ -837,7 +837,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/json/b;->a:Lcom/apollographql/apollo/internal/json/JsonReader;
 
-    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->D0()V
+    invoke-virtual {v0}, Lcom/apollographql/apollo/internal/json/JsonReader;->v0()V
 
     return-void
 .end method

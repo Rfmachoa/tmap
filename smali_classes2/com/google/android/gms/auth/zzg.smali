@@ -1,93 +1,54 @@
-.class final Lcom/google/android/gms/auth/zzg;
+.class public final synthetic Lcom/google/android/gms/auth/zzg;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 # interfaces
-.implements Lcom/google/android/gms/auth/zzj;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/auth/zzj<",
-        "Ljava/util/List<",
-        "Lcom/google/android/gms/auth/AccountChangeEvent;",
-        ">;>;"
-    }
-.end annotation
+.implements Lcom/google/android/gms/auth/zzk;
 
 
 # instance fields
-.field private final synthetic zzr:Ljava/lang/String;
-
-.field private final synthetic zzs:I
+.field public final synthetic zza:Landroid/accounts/Account;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Landroid/accounts/Account;)V
     .locals 0
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/zzg;->zzr:Ljava/lang/String;
-
-    iput p2, p0, Lcom/google/android/gms/auth/zzg;->zzs:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/auth/zzg;->zza:Landroid/accounts/Account;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic zzb(Landroid/os/IBinder;)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;,
-            Ljava/io/IOException;,
-            Lcom/google/android/gms/auth/GoogleAuthException;
-        }
-    .end annotation
+.method public final zza(Landroid/os/IBinder;)Ljava/lang/Object;
+    .locals 1
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/internal/auth/zzf;->zza(Landroid/os/IBinder;)Lcom/google/android/gms/internal/auth/zze;
+    iget-object v0, p0, Lcom/google/android/gms/auth/zzg;->zza:Landroid/accounts/Account;
+
+    invoke-static {p1}, Lcom/google/android/gms/internal/auth/zze;->zzb(Landroid/os/IBinder;)Lcom/google/android/gms/internal/auth/zzf;
 
     move-result-object p1
 
     .line 2
-    new-instance v0, Lcom/google/android/gms/auth/AccountChangeEventsRequest;
-
-    invoke-direct {v0}, Lcom/google/android/gms/auth/AccountChangeEventsRequest;-><init>()V
-
-    iget-object v1, p0, Lcom/google/android/gms/auth/zzg;->zzr:Ljava/lang/String;
-
-    .line 3
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/auth/AccountChangeEventsRequest;->setAccountName(Ljava/lang/String;)Lcom/google/android/gms/auth/AccountChangeEventsRequest;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/google/android/gms/auth/zzg;->zzs:I
-
-    .line 4
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/auth/AccountChangeEventsRequest;->setEventIndex(I)Lcom/google/android/gms/auth/AccountChangeEventsRequest;
-
-    move-result-object v0
-
-    .line 5
-    invoke-interface {p1, v0}, Lcom/google/android/gms/internal/auth/zze;->zza(Lcom/google/android/gms/auth/AccountChangeEventsRequest;)Lcom/google/android/gms/auth/AccountChangeEventsResponse;
+    invoke-interface {p1, v0}, Lcom/google/android/gms/internal/auth/zzf;->zzf(Landroid/accounts/Account;)Landroid/os/Bundle;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/gms/auth/zzd;->zzb(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/auth/AccountChangeEventsResponse;
-
-    .line 6
-    invoke-virtual {p1}, Lcom/google/android/gms/auth/AccountChangeEventsResponse;->getEvents()Ljava/util/List;
-
-    move-result-object p1
+    if-eqz p1, :cond_0
 
     return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/io/IOException;
+
+    const-string v0, "Service call returned null."
+
+    .line 3
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

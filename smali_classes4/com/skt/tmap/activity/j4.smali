@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Lcom/skt/tmap/vsm/data/VSMMapPoint;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity$z;Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/j4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/j4;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/skt/tmap/activity/j4;->c:Lcom/skt/tmap/vsm/data/VSMMapPoint;
+    iput-object p1, p0, Lcom/skt/tmap/activity/j4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/j4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
+    iget-object v0, p0, Lcom/skt/tmap/activity/j4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/j4;->b:Ljava/lang/String;
+    check-cast p1, Lcom/skt/tmap/data/ArrivalParkingLotViewData;
 
-    iget-object v2, p0, Lcom/skt/tmap/activity/j4;->c:Lcom/skt/tmap/vsm/data/VSMMapPoint;
-
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/activity/TmapNaviActivity$z;->c(Lcom/skt/tmap/activity/TmapNaviActivity$z;Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->j8(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/data/ArrivalParkingLotViewData;)V
 
     return-void
 .end method

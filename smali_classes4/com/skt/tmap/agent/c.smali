@@ -94,7 +94,7 @@
 
     const-string v1, "TmapAgentNotiAlarmSetting()"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     iput-object p2, p0, Lcom/skt/tmap/agent/c;->e:Ljava/lang/String;
@@ -118,7 +118,7 @@
 
     const-string v1, "cancelAlarm"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/agent/c;->e:Ljava/lang/String;
@@ -350,7 +350,7 @@
 
     const-string v2, "setAlarm"
 
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, v0, Lcom/skt/tmap/agent/c;->e:Ljava/lang/String;

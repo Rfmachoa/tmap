@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lp4/o;Lp4/o;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -95,7 +95,7 @@
 
     iget v3, p0, Landroidx/transition/ChangeBounds$i;->g:I
 
-    invoke-static {p1, v0, v1, v2, v3}, Lh3/x;->g(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, v1, v2, v3}, Lp4/x;->g(Landroid/view/View;IIII)V
 
     :cond_0
     return-void

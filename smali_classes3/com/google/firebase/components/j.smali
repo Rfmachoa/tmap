@@ -3,34 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/google/firebase/inject/Provider;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/firebase/components/ComponentRegistrar;
+.field public final synthetic a:Lcom/google/firebase/components/OptionalProvider;
+
+.field public final synthetic b:Lcom/google/firebase/inject/Provider;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRegistrar;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/components/OptionalProvider;Lcom/google/firebase/inject/Provider;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/firebase/components/j;->a:Lcom/google/firebase/components/ComponentRegistrar;
+    iput-object p1, p0, Lcom/google/firebase/components/j;->a:Lcom/google/firebase/components/OptionalProvider;
+
+    iput-object p2, p0, Lcom/google/firebase/components/j;->b:Lcom/google/firebase/inject/Provider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/google/firebase/components/j;->a:Lcom/google/firebase/components/ComponentRegistrar;
+    iget-object v0, p0, Lcom/google/firebase/components/j;->a:Lcom/google/firebase/components/OptionalProvider;
 
-    invoke-static {v0}, Lcom/google/firebase/components/ComponentRuntime$Builder;->a(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRegistrar;
+    iget-object v1, p0, Lcom/google/firebase/components/j;->b:Lcom/google/firebase/inject/Provider;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/google/firebase/components/ComponentRuntime;->d(Lcom/google/firebase/components/OptionalProvider;Lcom/google/firebase/inject/Provider;)V
 
-    return-object v0
+    return-void
 .end method

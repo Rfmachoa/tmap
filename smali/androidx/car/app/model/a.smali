@@ -1,31 +1,35 @@
 .class public interface abstract Landroidx/car/app/model/a;
 .super Ljava/lang/Object;
-.source "InputCallback.java"
+.source "AlertCallbackDelegate.java"
 
 
 # annotations
 .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
-    value = 0x2
+    value = 0x5
 .end annotation
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
-    .param p1    # Ljava/lang/String;
+.method public abstract a(ILandroidx/car/app/t0;)V
+    .param p2    # Landroidx/car/app/t0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-
-    return-void
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ExecutorRegistration"
+        }
+    .end annotation
 .end method
 
-.method public b(Ljava/lang/String;)V
-    .locals 0
-    .param p1    # Ljava/lang/String;
+.method public abstract b(Landroidx/car/app/t0;)V
+    .param p1    # Landroidx/car/app/t0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-
-    return-void
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ExecutorRegistration"
+        }
+    .end annotation
 .end method

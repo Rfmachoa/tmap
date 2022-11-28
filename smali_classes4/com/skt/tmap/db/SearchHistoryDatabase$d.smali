@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/db/SearchHistoryDatabase;->C(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+    value = Lcom/skt/tmap/db/SearchHistoryDatabase;->P(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,7 +55,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$d;->a:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->H()Lac/h;
+    invoke-virtual {v0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->X()Lxd/h;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     aput-object v2, v1, v3
 
-    invoke-interface {v0, v1}, Lac/h;->b([Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+    invoke-interface {v0, v1}, Lxd/h;->b([Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
 
     return-void
 .end method

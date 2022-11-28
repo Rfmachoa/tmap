@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/AppCompatSpinner$a;
-.super Landroidx/appcompat/widget/s;
+.super Landroidx/appcompat/widget/x;
 .source "AppCompatSpinner.java"
 
 
@@ -15,32 +15,32 @@
 
 
 # instance fields
-.field public final synthetic j:Landroidx/appcompat/widget/AppCompatSpinner$e;
+.field public final synthetic j:Landroidx/appcompat/widget/AppCompatSpinner$h;
 
 .field public final synthetic k:Landroidx/appcompat/widget/AppCompatSpinner;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/view/View;Landroidx/appcompat/widget/AppCompatSpinner$e;)V
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/view/View;Landroidx/appcompat/widget/AppCompatSpinner$h;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->k:Landroidx/appcompat/widget/AppCompatSpinner;
 
-    iput-object p3, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->j:Landroidx/appcompat/widget/AppCompatSpinner$e;
+    iput-object p3, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->j:Landroidx/appcompat/widget/AppCompatSpinner$h;
 
-    invoke-direct {p0, p2}, Landroidx/appcompat/widget/s;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Lj/g;
+.method public b()Ll/g;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->j:Landroidx/appcompat/widget/AppCompatSpinner$e;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->j:Landroidx/appcompat/widget/AppCompatSpinner$h;
 
     return-object v0
 .end method
@@ -56,11 +56,11 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner$a;->k:Landroidx/appcompat/widget/AppCompatSpinner;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner;->getInternalPopup()Landroidx/appcompat/widget/AppCompatSpinner$f;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatSpinner;->getInternalPopup()Landroidx/appcompat/widget/AppCompatSpinner$i;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$f;->a()Z
+    invoke-interface {v0}, Landroidx/appcompat/widget/AppCompatSpinner$i;->a()Z
 
     move-result v0
 

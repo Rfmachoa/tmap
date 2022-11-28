@@ -12,7 +12,7 @@
 
 .annotation build Ldagger/hilt/InstallIn;
     value = {
-        Lvg/a;
+        Lzi/a;
     }
 .end annotation
 

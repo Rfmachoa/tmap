@@ -21,21 +21,21 @@
 
 
 # static fields
-.field public static final Z0:I = 0x1f4
+.field public static final b1:I = 0x1f4
 
 
 # instance fields
 .field public K0:Lcom/skt/tmap/dialog/TmapBaseDialog$g;
 
-.field public V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+.field public X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-.field public W0:I
+.field public Y0:I
 
-.field public X0:J
-
-.field public Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+.field public Z0:J
 
 .field public a:I
+
+.field public a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
 .field public b:Z
 
@@ -117,12 +117,12 @@
     .line 7
     sget-object v2, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
     const-wide/16 v2, 0x0
 
     .line 8
-    iput-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 9
     new-instance v2, Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -131,7 +131,7 @@
 
     invoke-direct {v2, v3}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(I)V
 
-    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 10
     invoke-virtual {p0, p1, v1, v0, v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->h(Landroid/app/Activity;IZZ)V
@@ -192,12 +192,12 @@
     .line 42
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
     const-wide/16 v1, 0x0
 
     .line 43
-    iput-wide v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 44
     new-instance v1, Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -206,7 +206,7 @@
 
     invoke-direct {v1, v2}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(I)V
 
-    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 45
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->h(Landroid/app/Activity;IZZ)V
@@ -269,12 +269,12 @@
     .line 53
     sget-object v0, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
     const-wide/16 v0, 0x0
 
     .line 54
-    iput-wide v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 55
     new-instance v0, Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -283,7 +283,7 @@
 
     invoke-direct {v0, v1}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(I)V
 
-    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 56
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/skt/tmap/dialog/TmapBaseDialog;->h(Landroid/app/Activity;IZZ)V
@@ -348,12 +348,12 @@
     .line 64
     sget-object v0, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
     const-wide/16 v0, 0x0
 
     .line 65
-    iput-wide v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 66
     new-instance v0, Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -362,7 +362,7 @@
 
     invoke-direct {v0, v1}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(I)V
 
-    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iput-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 67
     iput-boolean p4, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->c:Z
@@ -426,12 +426,12 @@
     .line 18
     sget-object v2, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
     const-wide/16 v2, 0x0
 
     .line 19
-    iput-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 20
     new-instance v2, Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -440,7 +440,7 @@
 
     invoke-direct {v2, v3}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(I)V
 
-    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iput-object v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 21
     iput-boolean p3, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->c:Z
@@ -506,12 +506,12 @@
     .line 30
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->V0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
+    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
     const-wide/16 v1, 0x0
 
     .line 31
-    iput-wide v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 32
     new-instance v1, Lcom/skt/tmap/engine/navigation/LockableHandler;
@@ -520,7 +520,7 @@
 
     invoke-direct {v1, v2}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(I)V
 
-    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     .line 33
     iput-boolean p3, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->c:Z
@@ -565,7 +565,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iget-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     sub-long/2addr v0, v2
 
@@ -580,7 +580,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iget-wide v2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     sub-long/2addr v0, v2
 
@@ -598,10 +598,10 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->X0:J
+    iput-wide v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Z0:J
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     if-eqz v0, :cond_1
 
@@ -616,79 +616,53 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->f:Ljava/lang/ref/WeakReference;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->a()Lcom/skt/tmap/dialog/i;
 
     move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->f:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->a()Lcom/skt/tmap/dialog/e;
-
-    move-result-object v0
-
-    .line 3
     iget v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/e;->f(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/i;->f(I)V
 
-    .line 4
-    :cond_0
+    .line 3
     iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->u:Lcom/skt/tmap/dialog/TmapBaseDialog$e;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 5
+    .line 4
     iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->k0:Lcom/skt/tmap/dialog/TmapBaseDialog$d;
 
-    .line 6
-    :cond_1
+    .line 5
+    :cond_0
     iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->K0:Lcom/skt/tmap/dialog/TmapBaseDialog$g;
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->K0:Lcom/skt/tmap/dialog/TmapBaseDialog$g;
+
+    .line 7
+    :cond_1
+    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->k0:Lcom/skt/tmap/dialog/TmapBaseDialog$d;
 
     if-eqz v0, :cond_2
 
-    .line 7
-    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->K0:Lcom/skt/tmap/dialog/TmapBaseDialog$g;
-
     .line 8
+    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->k0:Lcom/skt/tmap/dialog/TmapBaseDialog$d;
+
+    .line 9
     :cond_2
-    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->k0:Lcom/skt/tmap/dialog/TmapBaseDialog$d;
+    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->a1:Lcom/skt/tmap/engine/navigation/LockableHandler;
 
     if-eqz v0, :cond_3
 
-    .line 9
-    iput-object v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->k0:Lcom/skt/tmap/dialog/TmapBaseDialog$d;
-
     .line 10
-    :cond_3
-    iget-object v0, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:Lcom/skt/tmap/engine/navigation/LockableHandler;
-
-    if-eqz v0, :cond_4
-
-    .line 11
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/LockableHandler;->lockAndClear()V
 
-    :cond_4
+    :cond_3
     return-void
 .end method
 
@@ -696,14 +670,14 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->a()Lcom/skt/tmap/dialog/e;
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->a()Lcom/skt/tmap/dialog/i;
 
     move-result-object v0
 
     .line 2
     iget v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/e;->h(I)Lcom/skt/tmap/dialog/e$a;
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/i;->h(I)Lcom/skt/tmap/dialog/i$a;
 
     move-result-object v0
 
@@ -726,14 +700,14 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->a()Lcom/skt/tmap/dialog/e;
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->a()Lcom/skt/tmap/dialog/i;
 
     move-result-object v0
 
     .line 2
     iget v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/e;->h(I)Lcom/skt/tmap/dialog/e$a;
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/i;->h(I)Lcom/skt/tmap/dialog/i$a;
 
     move-result-object v0
 
@@ -754,19 +728,19 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->a()Lcom/skt/tmap/dialog/e;
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->a()Lcom/skt/tmap/dialog/i;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/dialog/e;->l(Landroid/app/Activity;I)I
+    invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/dialog/i;->l(Landroid/app/Activity;I)I
 
     move-result p1
 
     iput p1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
     .line 3
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/dialog/e;->h(I)Lcom/skt/tmap/dialog/e$a;
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/dialog/i;->h(I)Lcom/skt/tmap/dialog/i$a;
 
     move-result-object p1
 
@@ -782,7 +756,7 @@
     .line 5
     iget-boolean p2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->c:Z
 
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/dialog/e$a;->e(Z)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/dialog/i$a;->e(Z)V
 
     .line 6
     iget-boolean p2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->b:Z
@@ -804,14 +778,14 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->a()Lcom/skt/tmap/dialog/e;
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->a()Lcom/skt/tmap/dialog/i;
 
     move-result-object v0
 
     .line 2
     iget v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/e;->i(I)Z
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/i;->i(I)Z
 
     move-result v0
 
@@ -846,7 +820,7 @@
     iput-boolean p3, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->b:Z
 
     .line 3
-    iput p2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->W0:I
+    iput p2, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->Y0:I
 
     .line 4
     invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/dialog/TmapBaseDialog;->f(Landroid/app/Activity;I)Landroid/app/Dialog;
@@ -1261,14 +1235,14 @@
 
     .line 1
     :try_start_0
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->a()Lcom/skt/tmap/dialog/e;
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->a()Lcom/skt/tmap/dialog/i;
 
     move-result-object v0
 
     .line 2
     iget v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/e;->i(I)Z
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/i;->i(I)Z
 
     move-result v1
 
@@ -1328,7 +1302,7 @@
     :cond_0
     iget v1, p0, Lcom/skt/tmap/dialog/TmapBaseDialog;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/e;->m(I)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/i;->m(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

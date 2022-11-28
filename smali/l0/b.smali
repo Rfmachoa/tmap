@@ -1,374 +1,198 @@
-.class public Ll0/b;
-.super Ljava/lang/Object;
-.source "ManagerCache.java"
-
-
-# annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
+.class public final Ll0/b;
+.super Ll0/f$a;
+.source "AutoValue_Camera2OutputConfigBuilder_ImageReaderConfig.java"
 
 
 # instance fields
-.field public final a:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Class<",
-            "*>;",
-            "Ll0/a;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final e:Landroid/util/Size;
 
-.field public final b:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Class<",
-            "*>;",
-            "Ljava/lang/RuntimeException;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final f:I
 
-.field public final c:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Class<",
-            "*>;",
-            "Ll0/c<",
-            "+",
-            "Ll0/a;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field public final d:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
-
-.field public final e:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Class<",
-            "*>;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/util/Size;II)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ll0/f$a;-><init>()V
+
+    const-string v0, "Null size"
 
     .line 2
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ll0/b;->a:Ljava/util/Map;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ll0/b;->b:Ljava/util/Map;
+    iput-object p1, p0, Ll0/b;->e:Landroid/util/Size;
 
     .line 4
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ll0/b;->c:Ljava/util/Map;
+    iput p2, p0, Ll0/b;->f:I
 
     .line 5
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ll0/b;->d:Ljava/util/Map;
-
-    .line 6
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ll0/b;->e:Ljava/util/Map;
+    iput p3, p0, Ll0/b;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+.method public a()I
     .locals 1
-    .param p1    # Ljava/lang/Class;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Ll0/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Ll0/a;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;",
-            "Ljava/lang/String;",
-            "Ll0/c<",
-            "TT;>;)V"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Ll0/b;->c:Ljava/util/Map;
+    iget v0, p0, Ll0/b;->f:I
 
-    invoke-interface {v0, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p2, :cond_0
-
-    .line 2
-    iget-object p3, p0, Ll0/b;->d:Ljava/util/Map;
-
-    invoke-interface {p3, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 3
-    iget-object p3, p0, Ll0/b;->e:Ljava/util/Map;
-
-    invoke-interface {p3, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public b(Ljava/lang/Class;)Ljava/lang/String;
+.method public b()I
     .locals 1
-    .param p1    # Ljava/lang/Class;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "*>;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Ll0/b;->e:Ljava/util/Map;
+    iget v0, p0, Ll0/b;->g:I
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    if-eqz p1, :cond_0
-
-    return-object p1
-
-    .line 2
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "The class does not correspond to a car service"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 .end method
 
-.method public c(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 3
-    .param p1    # Ljava/lang/Class;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
 
     .line 1
-    iget-object v0, p0, Ll0/b;->b:Ljava/util/Map;
+    :cond_0
+    instance-of v1, p1, Ll0/f$a;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/RuntimeException;
-
-    if-nez v0, :cond_2
+    if-eqz v1, :cond_2
 
     .line 2
-    iget-object v0, p0, Ll0/b;->a:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll0/a;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
+    check-cast p1, Ll0/f$a;
 
     .line 3
-    :cond_0
-    iget-object v0, p0, Ll0/b;->c:Ljava/util/Map;
+    iget-object v1, p0, Ll0/b;->e:Landroid/util/Size;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ll0/f$a;->getSize()Landroid/util/Size;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, Ll0/c;
+    invoke-virtual {v1, v3}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_1
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget v1, p0, Ll0/b;->f:I
 
     .line 4
-    :try_start_0
-    invoke-interface {v0}, Ll0/c;->create()Ll0/a;
+    invoke-virtual {p1}, Ll0/f$a;->a()I
 
-    move-result-object v0
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ll0/b;->g:I
 
     .line 5
-    iget-object v1, p0, Ll0/b;->a:Ljava/util/Map;
+    invoke-virtual {p1}, Ll0/f$a;->b()I
 
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result p1
 
-    return-object v0
+    if-ne v1, p1, :cond_1
 
-    :catch_0
-    move-exception v0
+    goto :goto_0
 
-    .line 6
-    iget-object v1, p0, Ll0/b;->b:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 7
-    throw v0
-
-    .line 8
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    move v0, v2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :goto_0
+    return v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "The class \'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, "\' does not correspond to a car service"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 9
     :cond_2
-    throw v0
+    return v2
 .end method
 
-.method public d(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 3
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public getSize()Landroid/util/Size;
+    .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalArgumentException;
-        }
-    .end annotation
+    .line 1
+    iget-object v0, p0, Ll0/b;->e:Landroid/util/Size;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Ll0/b;->d:Ljava/util/Map;
+    iget-object v0, p0, Ll0/b;->e:Landroid/util/Size;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    .line 2
+    iget v2, p0, Ll0/b;->f:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    .line 3
+    iget v1, p0, Ll0/b;->g:I
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ImageReaderConfig{size="
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Class;
+    iget-object v1, p0, Ll0/b;->e:Landroid/util/Size;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 2
-    invoke-virtual {p0, v0}, Ll0/b;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string v1, ", imageFormat="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    iget v1, p0, Ll0/b;->f:I
 
-    .line 3
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "The name \'"
+    const-string v1, ", maxImages="
 
-    const-string v2, "\' does not correspond to a car service"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget v1, p0, Ll0/b;->g:I
 
-    move-result-object p1
+    const-string v2, "}"
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Landroid/support/v4/media/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    throw v0
+    move-result-object v0
+
+    return-object v0
 .end method

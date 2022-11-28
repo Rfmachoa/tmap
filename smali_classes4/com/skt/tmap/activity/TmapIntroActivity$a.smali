@@ -3,12 +3,12 @@
 .source "TmapIntroActivity.java"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lcom/skt/tmap/util/r0$f;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/skt/tmap/activity/TmapIntroActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/activity/TmapIntroActivity;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,76 +43,30 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "animator"
-        }
-    .end annotation
+.method public a()V
+    .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapIntroActivity$a;->a:Lcom/skt/tmap/activity/TmapIntroActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapIntroActivity$a;->a:Lcom/skt/tmap/activity/TmapIntroActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapIntroActivity;->t5(Lcom/skt/tmap/activity/TmapIntroActivity;)Lcom/skt/tmap/mvp/presenter/TmapIntroPresenter;
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/TmapIntroPresenter;->onResume()V
+    const-string v1, "feature.showTbtPopUp"
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "animator"
-        }
-    .end annotation
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 1
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapIntroActivity$a;->a:Lcom/skt/tmap/activity/TmapIntroActivity;
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapIntroActivity$a;->a:Lcom/skt/tmap/activity/TmapIntroActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapIntroActivity;->t5(Lcom/skt/tmap/activity/TmapIntroActivity;)Lcom/skt/tmap/mvp/presenter/TmapIntroPresenter;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapIntroActivity;->C5(Lcom/skt/tmap/activity/TmapIntroActivity;)Lcom/skt/tmap/mvp/presenter/TmapIntroPresenter;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/TmapIntroPresenter;->onResume()V
-
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "animator"
-        }
-    .end annotation
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "animator"
-        }
-    .end annotation
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/TmapIntroPresenter;->S()V
 
     return-void
 .end method

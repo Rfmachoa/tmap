@@ -36,7 +36,7 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 0
 
-    invoke-static {p1}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;->a(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    invoke-static {p1}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->d(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object p1
 

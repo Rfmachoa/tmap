@@ -240,7 +240,7 @@
 
     const-string v1, " entries, got "
 
-    invoke-static {p2, v0, v1, v4}, Lc3/d;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {p2, v0, v1, v4}, Landroidx/emoji2/text/flatbuffer/x;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -267,6 +267,7 @@
 
     const/16 v0, 0xc
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/util/PrimitiveArrayBuilder;->_constructArray(I)Ljava/lang/Object;
 
     move-result-object v0

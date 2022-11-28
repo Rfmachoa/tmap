@@ -1,16 +1,17 @@
 .class public abstract Landroidx/navigation/n0;
 .super Ljava/lang/Object;
-.source "NavType.java"
+.source "NavType.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/navigation/n0$o;,
         Landroidx/navigation/n0$l;,
-        Landroidx/navigation/n0$p;,
+        Landroidx/navigation/n0$o;,
+        Landroidx/navigation/n0$n;,
+        Landroidx/navigation/n0$q;,
         Landroidx/navigation/n0$m;,
-        Landroidx/navigation/n0$n;
+        Landroidx/navigation/n0$p;
     }
 .end annotation
 
@@ -23,50 +24,113 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000(\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0010\u000b\n\u0002\u0008\u0012\u0008&\u0018\u0000 \u0019*\u0004\u0008\u0000\u0010\u00012\u00020\u0002:\u0006\u001e\u001f !\"#B\u000f\u0012\u0006\u0010\u0017\u001a\u00020\u0012\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\'\u0010\t\u001a\u00020\u00082\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00028\u0000H&\u00a2\u0006\u0004\u0008\t\u0010\nJ\"\u0010\u000b\u001a\u0004\u0018\u00018\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00a6\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u0017\u0010\r\u001a\u00028\u00002\u0006\u0010\u0007\u001a\u00020\u0005H&\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\'\u0010\u000f\u001a\u00028\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0008\u0010\u0011\u001a\u00020\u0005H\u0016R\u001a\u0010\u0017\u001a\u00020\u00128\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0013\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u0016R\u001a\u0010\u001b\u001a\u00020\u00058\u0016X\u0096D\u00a2\u0006\u000c\n\u0004\u0008\u000b\u0010\u0018\u001a\u0004\u0008\u0019\u0010\u001a\u00a8\u0006$"
+    }
+    d2 = {
+        "Landroidx/navigation/n0;",
+        "T",
+        "",
+        "Landroid/os/Bundle;",
+        "bundle",
+        "",
+        "key",
+        "value",
+        "Lkotlin/d1;",
+        "i",
+        "(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Object;)V",
+        "b",
+        "(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Object;",
+        "h",
+        "(Ljava/lang/String;)Ljava/lang/Object;",
+        "g",
+        "(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;",
+        "toString",
+        "",
+        "a",
+        "Z",
+        "f",
+        "()Z",
+        "isNullableAllowed",
+        "Ljava/lang/String;",
+        "c",
+        "()Ljava/lang/String;",
+        "name",
+        "<init>",
+        "(Z)V",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "navigation-common_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+.end annotation
+
 
 # static fields
-.field public static final b:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/navigation/n0<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final c:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/navigation/n0<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
+.field public static final c:Landroidx/navigation/n0$l;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
 .field public static final d:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/navigation/n0<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
     .end annotation
 
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final e:Landroidx/navigation/n0;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/navigation/n0<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final f:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
             "[I>;"
         }
     .end annotation
-.end field
 
-.field public static final e:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final g:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
@@ -74,24 +138,30 @@
             ">;"
         }
     .end annotation
-.end field
 
-.field public static final f:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final h:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
             "[J>;"
         }
     .end annotation
-.end field
 
-.field public static final g:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final i:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
@@ -99,24 +169,30 @@
             ">;"
         }
     .end annotation
-.end field
 
-.field public static final h:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final j:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
             "[F>;"
         }
     .end annotation
-.end field
 
-.field public static final i:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final k:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
@@ -124,24 +200,30 @@
             ">;"
         }
     .end annotation
-.end field
 
-.field public static final j:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final l:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
             "[Z>;"
         }
     .end annotation
-.end field
 
-.field public static final k:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final m:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
@@ -149,12 +231,15 @@
             ">;"
         }
     .end annotation
-.end field
 
-.field public static final l:Landroidx/navigation/n0;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lkotlin/jvm/JvmField;
     .end annotation
 
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public static final n:Landroidx/navigation/n0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/navigation/n0<",
@@ -163,97 +248,112 @@
             ">;"
         }
     .end annotation
+
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
 
 
 # instance fields
 .field public final a:Z
 
+.field public final b:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    .line 1
-    new-instance v0, Landroidx/navigation/n0$c;
+    new-instance v0, Landroidx/navigation/n0$l;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Landroidx/navigation/n0$c;-><init>(Z)V
+    invoke-direct {v0, v1}, Landroidx/navigation/n0$l;-><init>(Lkotlin/jvm/internal/u;)V
 
-    sput-object v0, Landroidx/navigation/n0;->b:Landroidx/navigation/n0;
+    sput-object v0, Landroidx/navigation/n0;->c:Landroidx/navigation/n0$l;
+
+    .line 1
+    new-instance v0, Landroidx/navigation/n0$f;
+
+    invoke-direct {v0}, Landroidx/navigation/n0$f;-><init>()V
+
+    sput-object v0, Landroidx/navigation/n0;->d:Landroidx/navigation/n0;
 
     .line 2
-    new-instance v0, Landroidx/navigation/n0$d;
+    new-instance v0, Landroidx/navigation/n0$i;
 
-    invoke-direct {v0, v1}, Landroidx/navigation/n0$d;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$i;-><init>()V
 
-    sput-object v0, Landroidx/navigation/n0;->c:Landroidx/navigation/n0;
+    sput-object v0, Landroidx/navigation/n0;->e:Landroidx/navigation/n0;
 
     .line 3
     new-instance v0, Landroidx/navigation/n0$e;
 
-    const/4 v2, 0x1
+    invoke-direct {v0}, Landroidx/navigation/n0$e;-><init>()V
 
-    invoke-direct {v0, v2}, Landroidx/navigation/n0$e;-><init>(Z)V
-
-    sput-object v0, Landroidx/navigation/n0;->d:Landroidx/navigation/n0;
+    sput-object v0, Landroidx/navigation/n0;->f:Landroidx/navigation/n0;
 
     .line 4
-    new-instance v0, Landroidx/navigation/n0$f;
+    new-instance v0, Landroidx/navigation/n0$h;
 
-    invoke-direct {v0, v1}, Landroidx/navigation/n0$f;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$h;-><init>()V
 
-    sput-object v0, Landroidx/navigation/n0;->e:Landroidx/navigation/n0;
+    sput-object v0, Landroidx/navigation/n0;->g:Landroidx/navigation/n0;
 
     .line 5
     new-instance v0, Landroidx/navigation/n0$g;
 
-    invoke-direct {v0, v2}, Landroidx/navigation/n0$g;-><init>(Z)V
-
-    sput-object v0, Landroidx/navigation/n0;->f:Landroidx/navigation/n0;
-
-    .line 6
-    new-instance v0, Landroidx/navigation/n0$h;
-
-    invoke-direct {v0, v1}, Landroidx/navigation/n0$h;-><init>(Z)V
-
-    sput-object v0, Landroidx/navigation/n0;->g:Landroidx/navigation/n0;
-
-    .line 7
-    new-instance v0, Landroidx/navigation/n0$i;
-
-    invoke-direct {v0, v2}, Landroidx/navigation/n0$i;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$g;-><init>()V
 
     sput-object v0, Landroidx/navigation/n0;->h:Landroidx/navigation/n0;
 
-    .line 8
-    new-instance v0, Landroidx/navigation/n0$j;
+    .line 6
+    new-instance v0, Landroidx/navigation/n0$d;
 
-    invoke-direct {v0, v1}, Landroidx/navigation/n0$j;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$d;-><init>()V
 
     sput-object v0, Landroidx/navigation/n0;->i:Landroidx/navigation/n0;
 
-    .line 9
-    new-instance v0, Landroidx/navigation/n0$k;
+    .line 7
+    new-instance v0, Landroidx/navigation/n0$c;
 
-    invoke-direct {v0, v2}, Landroidx/navigation/n0$k;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$c;-><init>()V
 
     sput-object v0, Landroidx/navigation/n0;->j:Landroidx/navigation/n0;
 
-    .line 10
-    new-instance v0, Landroidx/navigation/n0$a;
+    .line 8
+    new-instance v0, Landroidx/navigation/n0$b;
 
-    invoke-direct {v0, v2}, Landroidx/navigation/n0$a;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$b;-><init>()V
 
     sput-object v0, Landroidx/navigation/n0;->k:Landroidx/navigation/n0;
 
-    .line 11
-    new-instance v0, Landroidx/navigation/n0$b;
+    .line 9
+    new-instance v0, Landroidx/navigation/n0$a;
 
-    invoke-direct {v0, v2}, Landroidx/navigation/n0$b;-><init>(Z)V
+    invoke-direct {v0}, Landroidx/navigation/n0$a;-><init>()V
 
     sput-object v0, Landroidx/navigation/n0;->l:Landroidx/navigation/n0;
+
+    .line 10
+    new-instance v0, Landroidx/navigation/n0$k;
+
+    invoke-direct {v0}, Landroidx/navigation/n0$k;-><init>()V
+
+    sput-object v0, Landroidx/navigation/n0;->m:Landroidx/navigation/n0;
+
+    .line 11
+    new-instance v0, Landroidx/navigation/n0$j;
+
+    invoke-direct {v0}, Landroidx/navigation/n0$j;-><init>()V
+
+    sput-object v0, Landroidx/navigation/n0;->n:Landroidx/navigation/n0;
 
     return-void
 .end method
@@ -267,22 +367,24 @@
     .line 2
     iput-boolean p1, p0, Landroidx/navigation/n0;->a:Z
 
+    const-string p1, "nav_type"
+
+    .line 3
+    iput-object p1, p0, Landroidx/navigation/n0;->b:Ljava/lang/String;
+
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/lang/String;)Landroidx/navigation/n0;
-    .locals 3
+    .locals 1
     .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -294,715 +396,93 @@
         }
     .end annotation
 
-    .line 1
-    sget-object v0, Landroidx/navigation/n0;->b:Landroidx/navigation/n0;
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    move-result-object v1
+    sget-object v0, Landroidx/navigation/n0;->c:Landroidx/navigation/n0$l;
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-object v0
-
-    .line 2
-    :cond_0
-    sget-object v0, Landroidx/navigation/n0;->d:Landroidx/navigation/n0;
-
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return-object v0
-
-    .line 3
-    :cond_1
-    sget-object v0, Landroidx/navigation/n0;->e:Landroidx/navigation/n0;
-
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return-object v0
-
-    .line 4
-    :cond_2
-    sget-object v0, Landroidx/navigation/n0;->f:Landroidx/navigation/n0;
-
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return-object v0
-
-    .line 5
-    :cond_3
-    sget-object v0, Landroidx/navigation/n0;->i:Landroidx/navigation/n0;
-
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return-object v0
-
-    .line 6
-    :cond_4
-    sget-object v0, Landroidx/navigation/n0;->j:Landroidx/navigation/n0;
-
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    return-object v0
-
-    .line 7
-    :cond_5
-    sget-object v0, Landroidx/navigation/n0;->k:Landroidx/navigation/n0;
-
-    invoke-virtual {v0}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return-object v0
-
-    .line 8
-    :cond_6
-    sget-object v1, Landroidx/navigation/n0;->l:Landroidx/navigation/n0;
-
-    invoke-virtual {v1}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    return-object v1
-
-    .line 9
-    :cond_7
-    sget-object v1, Landroidx/navigation/n0;->g:Landroidx/navigation/n0;
-
-    invoke-virtual {v1}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    return-object v1
-
-    .line 10
-    :cond_8
-    sget-object v1, Landroidx/navigation/n0;->h:Landroidx/navigation/n0;
-
-    invoke-virtual {v1}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    return-object v1
-
-    .line 11
-    :cond_9
-    sget-object v1, Landroidx/navigation/n0;->c:Landroidx/navigation/n0;
-
-    invoke-virtual {v1}, Landroidx/navigation/n0;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    return-object v1
-
-    :cond_a
-    if-eqz p0, :cond_11
-
-    .line 12
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_11
-
-    :try_start_0
-    const-string v0, "."
-
-    .line 13
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    if-eqz p1, :cond_b
-
-    .line 14
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_b
-    move-object p1, p0
-
-    :goto_0
-    const-string v0, "[]"
-
-    .line 15
-    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_d
-
-    const/4 p0, 0x0
-
-    .line 16
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x2
-
-    invoke-virtual {p1, p0, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 17
-    invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-virtual {v0, p0, p1}, Landroidx/navigation/n0$l;->a(Ljava/lang/String;Ljava/lang/String;)Landroidx/navigation/n0;
 
     move-result-object p0
 
-    .line 18
-    const-class v0, Landroid/os/Parcelable;
-
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
-    .line 19
-    new-instance p1, Landroidx/navigation/n0$m;
-
-    invoke-direct {p1, p0}, Landroidx/navigation/n0$m;-><init>(Ljava/lang/Class;)V
-
-    return-object p1
-
-    .line 20
-    :cond_c
-    const-class v0, Ljava/io/Serializable;
-
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_10
-
-    .line 21
-    new-instance p1, Landroidx/navigation/n0$o;
-
-    invoke-direct {p1, p0}, Landroidx/navigation/n0$o;-><init>(Ljava/lang/Class;)V
-
-    return-object p1
-
-    .line 22
-    :cond_d
-    invoke-static {p1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    .line 23
-    const-class v0, Landroid/os/Parcelable;
-
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    .line 24
-    new-instance p1, Landroidx/navigation/n0$n;
-
-    invoke-direct {p1, p0}, Landroidx/navigation/n0$n;-><init>(Ljava/lang/Class;)V
-
-    return-object p1
-
-    .line 25
-    :cond_e
-    const-class v0, Ljava/lang/Enum;
-
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_f
-
-    .line 26
-    new-instance p1, Landroidx/navigation/n0$l;
-
-    invoke-direct {p1, p0}, Landroidx/navigation/n0$l;-><init>(Ljava/lang/Class;)V
-
-    return-object p1
-
-    .line 27
-    :cond_f
-    const-class v0, Ljava/io/Serializable;
-
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_10
-
-    .line 28
-    new-instance p1, Landroidx/navigation/n0$p;
-
-    invoke-direct {p1, p0}, Landroidx/navigation/n0$p;-><init>(Ljava/lang/Class;)V
-
-    return-object p1
-
-    .line 29
-    :cond_10
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " is not Serializable or Parcelable."
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    move-exception p0
-
-    .line 30
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :cond_11
-    return-object v0
+    return-object p0
 .end method
 
-.method public static d(Ljava/lang/String;)Landroidx/navigation/n0;
+.method public static final d(Ljava/lang/String;)Landroidx/navigation/n0;
     .locals 1
     .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
     .end annotation
 
-    .line 1
-    :try_start_0
-    sget-object v0, Landroidx/navigation/n0;->b:Landroidx/navigation/n0;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Landroidx/navigation/n0<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 
-    invoke-virtual {v0, p0}, Landroidx/navigation/n0;->h(Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    return-object v0
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    .line 2
-    :catch_0
-    :try_start_1
-    sget-object v0, Landroidx/navigation/n0;->e:Landroidx/navigation/n0;
+    sget-object v0, Landroidx/navigation/n0;->c:Landroidx/navigation/n0$l;
 
-    invoke-virtual {v0, p0}, Landroidx/navigation/n0;->h(Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {v0, p0}, Landroidx/navigation/n0$l;->b(Ljava/lang/String;)Landroidx/navigation/n0;
 
-    return-object v0
-
-    .line 3
-    :catch_1
-    :try_start_2
-    sget-object v0, Landroidx/navigation/n0;->g:Landroidx/navigation/n0;
-
-    invoke-virtual {v0, p0}, Landroidx/navigation/n0;->h(Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
-
-    return-object v0
-
-    .line 4
-    :catch_2
-    :try_start_3
-    sget-object v0, Landroidx/navigation/n0;->i:Landroidx/navigation/n0;
-
-    invoke-virtual {v0, p0}, Landroidx/navigation/n0;->h(Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_3
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
-
-    return-object v0
-
-    .line 5
-    :catch_3
-    sget-object p0, Landroidx/navigation/n0;->k:Landroidx/navigation/n0;
+    move-result-object p0
 
     return-object p0
 .end method
 
-.method public static e(Ljava/lang/Object;)Landroidx/navigation/n0;
-    .locals 3
+.method public static final e(Ljava/lang/Object;)Landroidx/navigation/n0;
+    .locals 1
     .param p0    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
     .end annotation
 
-    .line 1
-    instance-of v0, p0, Ljava/lang/Integer;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Landroidx/navigation/n0<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 
-    if-eqz v0, :cond_0
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
 
-    .line 2
-    sget-object p0, Landroidx/navigation/n0;->b:Landroidx/navigation/n0;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    return-object p0
+    sget-object v0, Landroidx/navigation/n0;->c:Landroidx/navigation/n0$l;
 
-    .line 3
-    :cond_0
-    instance-of v0, p0, [I
-
-    if-eqz v0, :cond_1
-
-    .line 4
-    sget-object p0, Landroidx/navigation/n0;->d:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 5
-    :cond_1
-    instance-of v0, p0, Ljava/lang/Long;
-
-    if-eqz v0, :cond_2
-
-    .line 6
-    sget-object p0, Landroidx/navigation/n0;->e:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 7
-    :cond_2
-    instance-of v0, p0, [J
-
-    if-eqz v0, :cond_3
-
-    .line 8
-    sget-object p0, Landroidx/navigation/n0;->f:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 9
-    :cond_3
-    instance-of v0, p0, Ljava/lang/Float;
-
-    if-eqz v0, :cond_4
-
-    .line 10
-    sget-object p0, Landroidx/navigation/n0;->g:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 11
-    :cond_4
-    instance-of v0, p0, [F
-
-    if-eqz v0, :cond_5
-
-    .line 12
-    sget-object p0, Landroidx/navigation/n0;->h:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 13
-    :cond_5
-    instance-of v0, p0, Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_6
-
-    .line 14
-    sget-object p0, Landroidx/navigation/n0;->i:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 15
-    :cond_6
-    instance-of v0, p0, [Z
-
-    if-eqz v0, :cond_7
-
-    .line 16
-    sget-object p0, Landroidx/navigation/n0;->j:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 17
-    :cond_7
-    instance-of v0, p0, Ljava/lang/String;
-
-    if-nez v0, :cond_f
-
-    if-nez p0, :cond_8
-
-    goto/16 :goto_0
-
-    .line 18
-    :cond_8
-    instance-of v0, p0, [Ljava/lang/String;
-
-    if-eqz v0, :cond_9
-
-    .line 19
-    sget-object p0, Landroidx/navigation/n0;->l:Landroidx/navigation/n0;
-
-    return-object p0
-
-    .line 20
-    :cond_9
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    const-class v0, Landroid/os/Parcelable;
-
-    .line 21
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    .line 22
-    new-instance v0, Landroidx/navigation/n0$m;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p0}, Landroidx/navigation/n0$l;->c(Ljava/lang/Object;)Landroidx/navigation/n0;
 
     move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Landroidx/navigation/n0$m;-><init>(Ljava/lang/Class;)V
-
-    return-object v0
-
-    .line 23
-    :cond_a
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    const-class v0, Ljava/io/Serializable;
-
-    .line 24
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    .line 25
-    new-instance v0, Landroidx/navigation/n0$o;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Landroidx/navigation/n0$o;-><init>(Ljava/lang/Class;)V
-
-    return-object v0
-
-    .line 26
-    :cond_b
-    instance-of v0, p0, Landroid/os/Parcelable;
-
-    if-eqz v0, :cond_c
-
-    .line 27
-    new-instance v0, Landroidx/navigation/n0$n;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Landroidx/navigation/n0$n;-><init>(Ljava/lang/Class;)V
-
-    return-object v0
-
-    .line 28
-    :cond_c
-    instance-of v0, p0, Ljava/lang/Enum;
-
-    if-eqz v0, :cond_d
-
-    .line 29
-    new-instance v0, Landroidx/navigation/n0$l;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Landroidx/navigation/n0$l;-><init>(Ljava/lang/Class;)V
-
-    return-object v0
-
-    .line 30
-    :cond_d
-    instance-of v0, p0, Ljava/io/Serializable;
-
-    if-eqz v0, :cond_e
-
-    .line 31
-    new-instance v0, Landroidx/navigation/n0$p;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Landroidx/navigation/n0$p;-><init>(Ljava/lang/Class;)V
-
-    return-object v0
-
-    .line 32
-    :cond_e
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Object of type "
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " is not supported for navigation arguments."
-
-    invoke-static {p0, v1, v2}, Landroidx/navigation/m0;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 33
-    :cond_f
-    :goto_0
-    sget-object p0, Landroidx/navigation/n0;->k:Landroidx/navigation/n0;
 
     return-object p0
 .end method
@@ -1011,16 +491,13 @@
 # virtual methods
 .method public abstract b(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/Object;
     .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1029,11 +506,20 @@
             ")TT;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 .end method
 
-.method public abstract c()Ljava/lang/String;
-    .annotation build Landroidx/annotation/NonNull;
+.method public c()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/n0;->b:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public f()Z
@@ -1045,21 +531,24 @@
     return v0
 .end method
 
-.method public g(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 0
+.method public final g(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
     .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p3    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1071,6 +560,18 @@
             ")TT;"
         }
     .end annotation
+
+    const-string v0, "bundle"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "key"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "value"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-virtual {p0, p3}, Landroidx/navigation/n0;->h(Ljava/lang/String;)Ljava/lang/Object;
@@ -1085,12 +586,9 @@
 
 .method public abstract h(Ljava/lang/String;)Ljava/lang/Object;
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1102,15 +600,11 @@
 
 .method public abstract i(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Object;)V
     .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1125,7 +619,7 @@
 
 .method public toString()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1

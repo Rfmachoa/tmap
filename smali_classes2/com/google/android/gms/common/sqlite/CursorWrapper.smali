@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/sqlite/CursorWrapper;
 .super Landroid/database/CursorWrapper;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Landroid/database/CrossProcessCursor;
@@ -17,7 +17,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/database/Cursor;)V
-    .locals 3
+    .locals 2
     .param p1    # Landroid/database/Cursor;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -55,11 +55,20 @@
     :cond_0
     instance-of v0, p1, Landroid/database/AbstractWindowedCursor;
 
-    if-nez v0, :cond_2
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    if-eqz v0, :cond_1
 
     .line 5
+    check-cast p1, Landroid/database/AbstractWindowedCursor;
+
+    iput-object p1, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
+
+    return-void
+
+    .line 6
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 7
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -70,37 +79,13 @@
 
     const-string v1, "Unknown type: "
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
     invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_1
-
-    .line 6
-    :cond_1
-    new-instance p1, Ljava/lang/String;
-
-    .line 7
-    invoke-direct {p1, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_1
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
-
-    .line 8
-    :cond_2
-    check-cast p1, Landroid/database/AbstractWindowedCursor;
-
-    iput-object p1, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
-
-    return-void
 .end method
 
 

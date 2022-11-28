@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/bumptech/glide/load/ImageHeaderParser;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+.method public abstract a(Lcom/bumptech/glide/load/ImageHeaderParser;)I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

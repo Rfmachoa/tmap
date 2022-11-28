@@ -34,7 +34,7 @@
 
 .field public h:Lcom/skt/aicloud/mobile/service/util/TokenHelper$UpdateTokenListeningMode;
 
-.field public i:Li9/e;
+.field public i:Lfb/e;
 
 
 # direct methods
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, p0}, Lcom/skt/aicloud/mobile/service/util/TokenHelper$a;-><init>(Lcom/skt/aicloud/mobile/service/util/TokenHelper;)V
 
-    iput-object v0, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->i:Li9/e;
+    iput-object v0, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->i:Lfb/e;
 
     .line 6
     iput-object p1, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->a:Landroid/content/Context;
@@ -192,11 +192,11 @@
     return-object p0
 .end method
 
-.method public static synthetic k(Lcom/skt/aicloud/mobile/service/util/TokenHelper;)Li9/e;
+.method public static synthetic k(Lcom/skt/aicloud/mobile/service/util/TokenHelper;)Lfb/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->i:Li9/e;
+    iget-object p0, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->i:Lfb/e;
 
     return-object p0
 .end method

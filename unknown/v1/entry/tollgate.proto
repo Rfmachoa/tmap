@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+
+message TollgateEntry {
+  /** 정보 인덱스 Type */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 톨게이트 데이터 Collection */
+  repeated TollgateElement elements = 2;
+
+}
+
+message TollgateElement {
+  /** 해당보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 톨게이트 요금정보 (단위:원)
+   *  ※ 고속모드 시 참고할 요금정보 */
+  int64 tollFare = 2;
+
+  /** 안내 Type (1:개방형, 2:폐쇄형, 3:IC, 4:JC, 5:진출IC, 6:휴게소) */
+  int32 tollInfoType = 3;
+
+  /** 하이패스전용톨게이트 여부 (0:아님, 1:하이패스전용TG) */
+  int32 exclusiveHipass = 4;
+
+  /** 이전안내~해당안내간의 평균속도(km/h) */
+  int32 tollSpeed = 5;
+
+  /** 이전안내~해당안내 간의 혼잡도(0: 정보없음 , 1: 원활, 2: 서행, 4: 정체) */
+  int32 tollCongestion = 6;
+
+  /** 이전안내~해당안내간의 거리(단위:m) */
+  int32 tollDistance = 7;
+
+  /** 이전안내~해당안내간의 시간(단위:초) */
+  int32 tollTime = 8;
+
+  /**
+   * <PRE>
+   * 톨게이트ID
+   * 단말에서 마지막으로 지나간 톨게이트ID를 저장하고 있다고 재탐색시 다시 서버로 올려야 함
+   * </PRE>
+   */
+  int32 tollgateId = 9;
+
+  /**
+   * 요금정보 유무(0:없음, 1:있음)
+   * 없음인 경우 특정 사유로 요금정보 없음.
+   */
+  int32 tollFareFlag = 10;
+
+  /** 톨게이트 요금 일시작무료 여부(0:아님, 1:일시적 무료) */
+  int32 temporaryFreeFlag = 11;
+
+  /** 안내 명칭 (NULL 포함)
+   * (휴게소일 경우 한칸 SPACE 제공하면 휴게소안내정보파트의 휴게소 명칭 사용) */
+  string name = 12;
+
+}

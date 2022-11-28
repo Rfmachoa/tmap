@@ -44,13 +44,7 @@
 
 
 # virtual methods
-.method public abstract currentHasChildren()Z
-.end method
-
 .method public abstract currentNode()Lcom/fasterxml/jackson/databind/JsonNode;
-.end method
-
-.method public abstract endToken()Lcom/fasterxml/jackson/core/JsonToken;
 .end method
 
 .method public final getCurrentName()Ljava/lang/String;
@@ -172,9 +166,6 @@
 .method public abstract nextToken()Lcom/fasterxml/jackson/core/JsonToken;
 .end method
 
-.method public abstract nextValue()Lcom/fasterxml/jackson/core/JsonToken;
-.end method
-
 .method public overrideCurrentName(Ljava/lang/String;)V
     .locals 0
 
@@ -191,4 +182,10 @@
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor;->_currentValue:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public abstract startArray()Lcom/fasterxml/jackson/databind/node/NodeCursor;
+.end method
+
+.method public abstract startObject()Lcom/fasterxml/jackson/databind/node/NodeCursor;
 .end method

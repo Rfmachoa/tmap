@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/biometric/d;->H(Landroidx/biometric/BiometricPrompt$b;)V
+    value = Landroidx/biometric/d;->I(Landroidx/biometric/BiometricPrompt$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -47,7 +47,7 @@
 
     iget-object v0, v0, Landroidx/biometric/d;->b:Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->h()Landroidx/biometric/BiometricPrompt$a;
+    invoke-virtual {v0}, Landroidx/biometric/f;->i()Landroidx/biometric/BiometricPrompt$a;
 
     move-result-object v0
 

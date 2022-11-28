@@ -19,7 +19,7 @@
     .end annotation
 .end field
 
-.field public b:Lf1/a$b;
+.field public b:Ly1/a$c;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -79,13 +79,13 @@
     return-object v0
 .end method
 
-.method public b()Lf1/a$b;
+.method public b()Ly1/a$c;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/biometric/a;->b:Lf1/a$b;
+    iget-object v0, p0, Landroidx/biometric/a;->b:Ly1/a$c;
 
     if-nez v0, :cond_0
 
@@ -94,11 +94,11 @@
 
     invoke-direct {v0, p0}, Landroidx/biometric/a$a;-><init>(Landroidx/biometric/a;)V
 
-    iput-object v0, p0, Landroidx/biometric/a;->b:Lf1/a$b;
+    iput-object v0, p0, Landroidx/biometric/a;->b:Ly1/a$c;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/biometric/a;->b:Lf1/a$b;
+    iget-object v0, p0, Landroidx/biometric/a;->b:Ly1/a$c;
 
     return-object v0
 .end method

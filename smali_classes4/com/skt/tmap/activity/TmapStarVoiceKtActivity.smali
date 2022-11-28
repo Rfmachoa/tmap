@@ -26,7 +26,7 @@
         "productId",
         "price",
         "cdn",
-        "M5",
+        "Z5",
         "onRestart",
         "onStop",
         "message",
@@ -34,30 +34,30 @@
         "showDialog",
         "guideType",
         "purchaseItem",
-        "L5",
-        "K5",
-        "J5",
-        "P5",
+        "X5",
+        "U5",
+        "T5",
+        "d6",
         "a",
         "Ljava/lang/String;",
         "TAG",
         "b",
-        "I5",
+        "S5",
         "()Ljava/lang/String;",
-        "O5",
+        "b6",
         "(Ljava/lang/String;)V",
         "url",
         "Ljava/util/Timer;",
         "c",
         "Ljava/util/Timer;",
-        "H5",
+        "R5",
         "()Ljava/util/Timer;",
-        "N5",
+        "a6",
         "(Ljava/util/Timer;)V",
         "timer",
-        "Lcom/skt/tmap/dialog/o;",
+        "Lcom/skt/tmap/dialog/t;",
         "d",
-        "Lcom/skt/tmap/dialog/o;",
+        "Lcom/skt/tmap/dialog/t;",
         "progressDialog",
         "<init>",
         "()V",
@@ -66,14 +66,17 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field public b:Ljava/lang/String;
     .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -85,9 +88,24 @@
     .end annotation
 .end field
 
-.field public d:Lcom/skt/tmap/dialog/o;
+.field public d:Lcom/skt/tmap/dialog/t;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field public e:Ljava/util/HashMap;
+.field public e:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -95,6 +113,12 @@
     .locals 1
 
     .line 1
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/Map;
+
     invoke-direct {p0}, Lcom/skt/tmap/activity/BaseWebViewActivity;-><init>()V
 
     const-string v0, "TmapStarVoiceKtActivity"
@@ -110,35 +134,246 @@
     return-void
 .end method
 
-.method public static final synthetic D5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)Lcom/skt/tmap/dialog/o;
+.method public static synthetic J5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->V5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+
+    return-void
+.end method
+
+.method public static synthetic K5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->W5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static synthetic L5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e6(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+
+    return-void
+.end method
+
+.method public static synthetic M5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Z)V
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->c6(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public static synthetic N5(ZLjava/lang/String;Ljava/lang/String;Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->Y5(ZLjava/lang/String;Ljava/lang/String;Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+
+    return-void
+.end method
+
+.method public static final synthetic Q5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)Lcom/skt/tmap/dialog/t;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/o;
+    iget-object p0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/t;
 
     return-object p0
 .end method
 
-.method public static final synthetic E5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
-    .locals 0
+.method public static final V5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+    .locals 4
+
+    const-string p3, "this$0"
+
+    invoke-static {p0, p3}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p3, "null cannot be cast to non-null type com.skt.tmap.network.ndds.dto.response.FindDetailResponseDto"
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->K5()V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p2, Lcom/skt/tmap/network/ndds/dto/response/FindDetailResponseDto;
+
+    .line 2
+    invoke-virtual {p2}, Lcom/skt/tmap/network/ndds/dto/response/FindDetailResponseDto;->getAvailableStatus()Ljava/lang/String;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p2}, Lcom/skt/tmap/network/ndds/dto/response/FindDetailResponseDto;->getAvailableStatus()Ljava/lang/String;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    const-string v3, "AVAILABLE"
+
+    invoke-static {p3, v3, v0, v1, v2}, Lkotlin/text/u;->L1(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/activity/BaseWebViewActivity;->setFindDetailResponseData(Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/response/FindDetailResponseDto;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    sget-object p1, Lsd/b;->j:Lsd/b$a;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    const-string p3, "baseContext"
+
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Lsd/b$a;->a(Landroid/content/Context;)Lsd/b;
+
+    move-result-object p1
+
+    const-string p2, "female"
+
+    invoke-virtual {p1, p2}, Lsd/b;->r(Ljava/lang/String;)V
+
+    .line 5
+    :goto_0
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->U5()V
 
     return-void
 .end method
 
-.method public static final synthetic F5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Lcom/skt/tmap/dialog/o;)V
+.method public static final W5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    const-string p1, "this$0"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/o;
+    sget-object p1, Lsd/b;->j:Lsd/b$a;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    const-string p3, "baseContext"
+
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Lsd/b$a;->a(Landroid/content/Context;)Lsd/b;
+
+    move-result-object p1
+
+    const-string p2, "female"
+
+    invoke-virtual {p1, p2}, Lsd/b;->r(Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->U5()V
 
     return-void
 .end method
 
-.method public static final synthetic G5(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Z)V
-    .locals 0
+.method public static final Y5(ZLjava/lang/String;Ljava/lang/String;Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    .locals 3
+
+    const-string v0, "$guideType"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "$purchaseItem"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "this$0"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "javascript:TmapWebView.purchaseProductComplete(\'"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, "\',\'"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\', \'"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\');"
+
+    invoke-static {v1, p2, p0}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string p0, ""
+
+    .line 2
+    iput-object p0, p3, Lcom/skt/tmap/activity/BaseWebViewActivity;->callBackJs:Ljava/lang/String;
+
+    .line 3
+    iget-object p0, p3, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/view/TmapWebView;->loadUrl(Ljava/lang/String;)V
+
+    .line 4
+    :cond_0
+    iget-object p0, p3, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->c:Ljava/util/Timer;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Ljava/util/Timer;->cancel()V
+
+    .line 5
+    :cond_1
+    iget-object p0, p3, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/t;
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->c()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public static final c6(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Z)V
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-super {p0, p1, p2}, Lcom/skt/tmap/activity/BaseWebViewActivity;->showDialog(Ljava/lang/String;Z)V
@@ -146,66 +381,84 @@
     return-void
 .end method
 
+.method public static final e6(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    .locals 3
 
-# virtual methods
-.method public B5()V
-    .locals 1
+    const-string v0, "this$0"
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/HashMap;
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    .line 1
+    new-instance v0, Lcom/skt/tmap/dialog/t;
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+    const/4 v1, 0x0
 
-    :cond_0
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p0, v1, v2}, Lcom/skt/tmap/dialog/t;-><init>(Landroid/app/Activity;ZZ)V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/t;
+
+    .line 2
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
+
     return-void
 .end method
 
-.method public C5(I)Landroid/view/View;
+
+# virtual methods
+.method public O5()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    return-void
+.end method
+
+.method public P5(I)Landroid/view/View;
     .locals 2
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/HashMap;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/HashMap;
-
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroid/view/View;
+    check-cast v1, Landroid/view/View;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->e:Ljava/util/HashMap;
+    if-eqz v1, :cond_0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
 
     :cond_1
-    return-object v0
+    :goto_0
+    return-object v1
 .end method
 
-.method public final H5()Ljava/util/Timer;
+.method public final R5()Ljava/util/Timer;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
@@ -216,7 +469,7 @@
     return-object v0
 .end method
 
-.method public final I5()Ljava/lang/String;
+.method public final S5()Ljava/lang/String;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
@@ -227,11 +480,11 @@
     return-object v0
 .end method
 
-.method public final J5()V
+.method public final T5()V
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/billing/BillingRepository;->i:Lcom/skt/tmap/billing/BillingRepository$a;
+    sget-object v0, Lcom/skt/tmap/billing/BillingRepository;->f:Lcom/skt/tmap/billing/BillingRepository$a;
 
     invoke-virtual {v0, p0}, Lcom/skt/tmap/billing/BillingRepository$a;->a(Landroid/app/Activity;)Lcom/skt/tmap/billing/BillingRepository;
 
@@ -241,13 +494,13 @@
 
     invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$a;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/billing/BillingRepository;->u(Lcom/skt/tmap/billing/BillingRepository$b;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/billing/BillingRepository;->C(Lcom/skt/tmap/billing/BillingRepository$b;)V
 
     return-void
 .end method
 
-.method public final K5()V
-    .locals 4
+.method public final U5()V
+    .locals 5
 
     const-string v0, "guidance.starvoiceType"
 
@@ -256,11 +509,11 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->t(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->w(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "WebviewUtil.getStarVoice\u2026UIDANCE_STAR_VOICE_TYPE))"
+    const-string v1, "getStarVoiceWebViewURL(t\u2026UIDANCE_STAR_VOICE_TYPE))"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -288,11 +541,15 @@
     if-nez v2, :cond_0
 
     .line 5
-    iget-object v2, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "&pageid="
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2, v3, v1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
+
+    const-string v4, "&pageid="
+
+    invoke-static {v2, v3, v4, v1}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -314,11 +571,15 @@
     if-nez v2, :cond_1
 
     .line 8
-    iget-object v2, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "&extra="
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2, v3, v1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
+
+    const-string v4, "&extra="
+
+    invoke-static {v2, v3, v4, v1}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -340,11 +601,15 @@
     if-nez v1, :cond_2
 
     .line 11
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "&productid="
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1, v2, v0}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
+
+    const-string v3, "&productid="
+
+    invoke-static {v1, v2, v3, v0}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -356,7 +621,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
@@ -373,7 +638,7 @@
     return-void
 .end method
 
-.method public final L5(ZLjava/lang/String;Ljava/lang/String;)V
+.method public final X5(ZLjava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p2    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -393,16 +658,16 @@
     invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    new-instance v0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$d;
+    new-instance v0, Lcom/skt/tmap/activity/gb;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$d;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2, p3, p0}, Lcom/skt/tmap/activity/gb;-><init>(ZLjava/lang/String;Ljava/lang/String;Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public final M5(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public final Z5(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -436,7 +701,7 @@
 
     if-eqz p3, :cond_0
 
-    const p1, 0x7f130140
+    const p1, 0x7f140145
 
     .line 2
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -451,29 +716,29 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->P5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d6()V
 
     .line 4
-    sget-object p3, Lcom/skt/tmap/billing/BillingRepository;->i:Lcom/skt/tmap/billing/BillingRepository$a;
+    sget-object p3, Lcom/skt/tmap/billing/BillingRepository;->f:Lcom/skt/tmap/billing/BillingRepository$a;
 
     invoke-virtual {p3, p0}, Lcom/skt/tmap/billing/BillingRepository$a;->a(Landroid/app/Activity;)Lcom/skt/tmap/billing/BillingRepository;
 
     move-result-object p3
 
-    invoke-static {p1}, Lkotlin/collections/w;->k(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/collections/y;->l(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    new-instance v0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$e;
+    new-instance v0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$b;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$e;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$b;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
 
-    invoke-virtual {p3, p1, p2, v0}, Lcom/skt/tmap/billing/BillingRepository;->r(Ljava/util/List;Ljava/lang/String;Lcom/skt/tmap/billing/BillingRepository$b;)V
+    invoke-virtual {p3, p1, p2, v0}, Lcom/skt/tmap/billing/BillingRepository;->u(Ljava/util/List;Ljava/lang/String;Lcom/skt/tmap/billing/BillingRepository$b;)V
 
     return-void
 .end method
 
-.method public final N5(Ljava/util/Timer;)V
+.method public final a6(Ljava/util/Timer;)V
     .locals 0
     .param p1    # Ljava/util/Timer;
         .annotation build Lorg/jetbrains/annotations/Nullable;
@@ -486,7 +751,7 @@
     return-void
 .end method
 
-.method public final O5(Ljava/lang/String;)V
+.method public final b6(Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -503,7 +768,7 @@
     return-void
 .end method
 
-.method public final P5()V
+.method public final d6()V
     .locals 4
 
     .line 1
@@ -523,9 +788,9 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance v1, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$h;
+    new-instance v1, Lcom/skt/tmap/activity/eb;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$h;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/eb;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -537,9 +802,9 @@
     iput-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->c:Ljava/util/Timer;
 
     .line 4
-    new-instance v1, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$g;
+    new-instance v1, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$c;
 
-    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$g;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$c;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
 
     const-wide/32 v2, 0xea60
 
@@ -561,11 +826,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string v0, "basePresenter"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -574,27 +835,23 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0211
+    const p1, 0x7f0d0212
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b21
+    const p1, 0x7f0a0b9d
 
     .line 4
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    const-string v0, "findViewById<View>(R.id.title_layout)"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const p1, 0x7f0a0bdf
+    const p1, 0x7f0a0c6b
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -605,18 +862,18 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 6
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->J5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->T5()V
 
     .line 8
-    sget-object p1, Lub/b;->r:Lub/b$c;
+    sget-object p1, Lsd/b;->j:Lsd/b$a;
 
-    invoke-virtual {p1, p0}, Lub/b$c;->a(Landroid/content/Context;)Lub/b;
+    invoke-virtual {p1, p0}, Lsd/b$a;->a(Landroid/content/Context;)Lsd/b;
 
     move-result-object p1
 
@@ -626,18 +883,18 @@
 
     move-result-object v1
 
-    const-string v2, "TmapUserSettingSharedPre\u2026GUIDANCE_STAR_VOICE_TYPE)"
+    const-string v2, "getString(this, TmapUser\u2026GUIDANCE_STAR_VOICE_TYPE)"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Lub/b;->l(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Lsd/b;->l(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->K5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->U5()V
 
     goto :goto_0
 
@@ -658,16 +915,14 @@
     invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    new-instance v2, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$b;
+    new-instance v2, Lcom/skt/tmap/activity/cb;
 
-    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$b;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/cb;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;)V
 
-    .line 14
-    new-instance p1, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$c;
+    new-instance p1, Lcom/skt/tmap/activity/db;
 
-    invoke-direct {p1, p0}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$c;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
+    invoke-direct {p1, p0}, Lcom/skt/tmap/activity/db;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;)V
 
-    .line 15
     invoke-virtual {v1, p0, v0, v2, p1}, Lcom/skt/tmap/billing/a$a;->a(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;)V
 
     :goto_0
@@ -682,7 +937,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/o;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;->d:Lcom/skt/tmap/dialog/t;
 
     if-eqz v0, :cond_0
 
@@ -713,13 +968,13 @@
     invoke-super {p0}, Landroid/app/Activity;->onRestart()V
 
     .line 2
-    sget-object v0, Lcom/skt/tmap/billing/BillingRepository;->i:Lcom/skt/tmap/billing/BillingRepository$a;
+    sget-object v0, Lcom/skt/tmap/billing/BillingRepository;->f:Lcom/skt/tmap/billing/BillingRepository$a;
 
     invoke-virtual {v0, p0}, Lcom/skt/tmap/billing/BillingRepository$a;->a(Landroid/app/Activity;)Lcom/skt/tmap/billing/BillingRepository;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/billing/BillingRepository;->l()V
+    invoke-virtual {v0}, Lcom/skt/tmap/billing/BillingRepository;->o()V
 
     return-void
 .end method
@@ -731,13 +986,13 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseWebViewActivity;->onStop()V
 
     .line 2
-    sget-object v0, Lcom/skt/tmap/billing/BillingRepository;->i:Lcom/skt/tmap/billing/BillingRepository$a;
+    sget-object v0, Lcom/skt/tmap/billing/BillingRepository;->f:Lcom/skt/tmap/billing/BillingRepository$a;
 
     invoke-virtual {v0, p0}, Lcom/skt/tmap/billing/BillingRepository$a;->a(Landroid/app/Activity;)Lcom/skt/tmap/billing/BillingRepository;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/billing/BillingRepository;->m()V
+    invoke-virtual {v0}, Lcom/skt/tmap/billing/BillingRepository;->p()V
 
     return-void
 .end method
@@ -750,9 +1005,9 @@
     .end param
 
     .line 1
-    new-instance v0, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$f;
+    new-instance v0, Lcom/skt/tmap/activity/fb;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/skt/tmap/activity/TmapStarVoiceKtActivity$f;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Z)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/skt/tmap/activity/fb;-><init>(Lcom/skt/tmap/activity/TmapStarVoiceKtActivity;Ljava/lang/String;Z)V
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 

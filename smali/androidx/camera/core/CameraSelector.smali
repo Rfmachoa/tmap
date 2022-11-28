@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/CameraSelector$LensFacing;,
@@ -33,7 +37,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashSet<",
-            "Landroidx/camera/core/k;",
+            "Landroidx/camera/core/o;",
             ">;"
         }
     .end annotation
@@ -85,20 +89,11 @@
 
 .method public constructor <init>(Ljava/util/LinkedHashSet;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraFilterSet"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/LinkedHashSet<",
-            "Landroidx/camera/core/k;",
+            "Landroidx/camera/core/o;",
             ">;)V"
         }
     .end annotation
@@ -126,15 +121,6 @@
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameras"
         }
     .end annotation
 
@@ -241,25 +227,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation build Landroidx/annotation/experimental/UseExperimental;
-        markerClass = Landroidx/camera/core/ExperimentalCameraFilter;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraInfos"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -278,80 +245,41 @@
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 2
-    new-instance v1, Ljava/util/ArrayList;
+    iget-object v1, p0, Landroidx/camera/core/CameraSelector;->a:Ljava/util/LinkedHashSet;
 
-    invoke-direct {v1, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {v1}, Ljava/util/LinkedHashSet;->iterator()Ljava/util/Iterator;
 
-    .line 3
-    iget-object p1, p0, Landroidx/camera/core/CameraSelector;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {p1}, Ljava/util/LinkedHashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
+    move-result-object v1
 
     :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/core/k;
-
-    .line 4
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v2, v1}, Landroidx/camera/core/k;->a(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    .line 5
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 6
-    invoke-interface {v0, v1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 7
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->retainAll(Ljava/util/Collection;)Z
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/camera/core/o;
+
+    .line 3
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Landroidx/camera/core/o;->b(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
 
     goto :goto_0
 
-    .line 8
+    .line 4
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-interface {v0, p1}, Ljava/util/List;->retainAll(Ljava/util/Collection;)Z
 
-    const-string v0, "The output isn\'t contained in the input."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 9
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "No available camera can be found."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    return-object v1
+    return-object v0
 .end method
 
 .method public c()Ljava/util/LinkedHashSet;
@@ -369,7 +297,7 @@
         value = {
             "()",
             "Ljava/util/LinkedHashSet<",
-            "Landroidx/camera/core/k;",
+            "Landroidx/camera/core/o;",
             ">;"
         }
     .end annotation
@@ -389,10 +317,6 @@
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
         }
-    .end annotation
-
-    .annotation build Landroidx/annotation/experimental/UseExperimental;
-        markerClass = Landroidx/camera/core/ExperimentalCameraFilter;
     .end annotation
 
     .line 1
@@ -416,17 +340,17 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/camera/core/k;
+    check-cast v2, Landroidx/camera/core/o;
 
     .line 2
-    instance-of v3, v2, Lx/n0;
+    instance-of v3, v2, Lb0/y0;
 
     if-eqz v3, :cond_0
 
     .line 3
-    check-cast v2, Lx/n0;
+    check-cast v2, Lb0/y0;
 
-    invoke-virtual {v2}, Lx/n0;->b()I
+    invoke-virtual {v2}, Lb0/y0;->c()I
 
     move-result v2
 
@@ -465,7 +389,7 @@
 .end method
 
 .method public e(Ljava/util/LinkedHashSet;)Landroidx/camera/core/impl/CameraInternal;
-    .locals 0
+    .locals 1
     .param p1    # Ljava/util/LinkedHashSet;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -476,15 +400,6 @@
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameras"
         }
     .end annotation
 
@@ -507,6 +422,14 @@
 
     move-result-object p1
 
+    .line 2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
@@ -514,4 +437,14 @@
     check-cast p1, Landroidx/camera/core/impl/CameraInternal;
 
     return-object p1
+
+    .line 4
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "No available camera can be found"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

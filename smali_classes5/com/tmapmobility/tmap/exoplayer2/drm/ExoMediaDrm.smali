@@ -69,7 +69,7 @@
     .end param
 .end method
 
-.method public abstract g([B)Lvd/c;
+.method public abstract g([B)Lyf/c;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/media/MediaCryptoException;

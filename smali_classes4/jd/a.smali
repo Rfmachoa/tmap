@@ -1,6 +1,9 @@
-.class public interface abstract Ljd/a;
+.class public final Ljd/a;
 .super Ljava/lang/Object;
-.source "IAudioRecord.java"
+.source "OnClickListener.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -11,34 +14,57 @@
 .end annotation
 
 
-# static fields
-.field public static final a:I = 0x1
+# instance fields
+.field public final a:Ljd/a$a;
 
-.field public static final b:I = 0x0
+.field public final b:I
 
-.field public static final c:I = 0x3
 
-.field public static final d:I = 0x1
+# direct methods
+.method public constructor <init>(Ljd/a$a;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "listener",
+            "sourceId"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ljd/a;->a:Ljd/a$a;
+
+    .line 3
+    iput p2, p0, Ljd/a;->b:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Ljava/nio/ByteBuffer;I)I
-.end method
+.method public onClick(Landroid/view/View;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callbackArg_0"
+        }
+    .end annotation
 
-.method public abstract b()Z
-.end method
+    .line 1
+    iget-object v0, p0, Ljd/a;->a:Ljd/a$a;
 
-.method public abstract c()I
-.end method
+    iget v1, p0, Ljd/a;->b:I
 
-.method public abstract d()Z
-.end method
+    invoke-interface {v0, v1, p1}, Ljd/a$a;->e(ILandroid/view/View;)V
 
-.method public abstract getState()I
-.end method
-
-.method public abstract read([BII)I
-.end method
-
-.method public abstract release()V
+    return-void
 .end method

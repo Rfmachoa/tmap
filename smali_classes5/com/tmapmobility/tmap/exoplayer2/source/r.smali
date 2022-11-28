@@ -24,7 +24,7 @@
     const/4 p1, 0x4
 
     .line 1
-    invoke-virtual {p2, p1}, Lvd/a;->i(I)V
+    invoke-virtual {p2, p1}, Lyf/a;->j(I)V
 
     const/4 p1, -0x4
 

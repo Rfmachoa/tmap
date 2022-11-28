@@ -20,7 +20,7 @@
 # instance fields
 .field public final a:Landroid/content/Context;
 
-.field public final b:Lm1/c;
+.field public final b:Lf2/d;
 
 .field public final c:Landroidx/emoji/text/b$b;
 
@@ -55,13 +55,13 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lm1/c;Landroidx/emoji/text/b$b;)V
+.method public constructor <init>(Landroid/content/Context;Lf2/d;Landroidx/emoji/text/b$b;)V
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lm1/c;
+    .param p2    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -83,12 +83,12 @@
     const-string v0, "Context cannot be null"
 
     .line 3
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "FontRequest cannot be null"
 
     .line 4
-    invoke-static {p2, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -98,7 +98,7 @@
     iput-object p1, p0, Landroidx/emoji/text/b$c;->a:Landroid/content/Context;
 
     .line 6
-    iput-object p2, p0, Landroidx/emoji/text/b$c;->b:Lm1/c;
+    iput-object p2, p0, Landroidx/emoji/text/b$c;->b:Lf2/d;
 
     .line 7
     iput-object p3, p0, Landroidx/emoji/text/b$c;->c:Landroidx/emoji/text/b$b;
@@ -121,7 +121,7 @@
     const-string v0, "LoaderCallback cannot be null"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/emoji/text/b$c;->d:Ljava/lang/Object;
@@ -356,7 +356,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v3, v0}, Lc1/f0;->f(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
+    invoke-static {v2, v3, v0}, Lv1/f0;->f(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
@@ -438,9 +438,9 @@
 
     iget-object v1, p0, Landroidx/emoji/text/b$c;->a:Landroid/content/Context;
 
-    iget-object v2, p0, Landroidx/emoji/text/b$c;->b:Lm1/c;
+    iget-object v2, p0, Landroidx/emoji/text/b$c;->b:Lf2/d;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/emoji/text/b$b;->b(Landroid/content/Context;Lm1/c;)Landroidx/core/provider/FontsContractCompat$b;
+    invoke-virtual {v0, v1, v2}, Landroidx/emoji/text/b$b;->b(Landroid/content/Context;Lf2/d;)Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object v0
     :try_end_0

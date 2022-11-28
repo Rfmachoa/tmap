@@ -3,7 +3,7 @@
 .source "RealAppSyncQueryWatcher.java"
 
 # interfaces
-.implements Lf4/a$a;
+.implements Lc6/a$a;
 
 
 # annotations

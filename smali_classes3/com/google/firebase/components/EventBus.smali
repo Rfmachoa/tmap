@@ -292,9 +292,9 @@
 
     check-cast v2, Ljava/util/concurrent/Executor;
 
-    new-instance v3, Lcom/google/firebase/components/k;
+    new-instance v3, Lcom/google/firebase/components/l;
 
-    invoke-direct {v3, v1, p1}, Lcom/google/firebase/components/k;-><init>(Ljava/util/Map$Entry;Lcom/google/firebase/events/Event;)V
+    invoke-direct {v3, v1, p1}, Lcom/google/firebase/components/l;-><init>(Ljava/util/Map$Entry;Lcom/google/firebase/events/Event;)V
 
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

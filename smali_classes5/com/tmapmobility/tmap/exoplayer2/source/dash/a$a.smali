@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;Loe/c;Lne/b;I[ILcom/tmapmobility/tmap/exoplayer2/trackselection/p;IJZLjava/util/List;Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$c;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/a;
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;Lrg/c;Lqg/b;I[ILcom/tmapmobility/tmap/exoplayer2/trackselection/q;IJZLjava/util/List;Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$c;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/a;
     .param p12    # Lcom/tmapmobility/tmap/exoplayer2/source/dash/d$c;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -27,11 +27,11 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;",
-            "Loe/c;",
-            "Lne/b;",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/a0;",
+            "Lrg/c;",
+            "Lqg/b;",
             "I[I",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;",
             "IJZ",
             "Ljava/util/List<",
             "Lcom/tmapmobility/tmap/exoplayer2/Format;",

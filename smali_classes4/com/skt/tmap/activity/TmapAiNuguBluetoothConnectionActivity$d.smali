@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->K5()V
+    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->S5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

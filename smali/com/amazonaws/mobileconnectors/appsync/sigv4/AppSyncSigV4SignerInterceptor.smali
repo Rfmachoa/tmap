@@ -353,26 +353,26 @@
     invoke-virtual {v1, v3, v2}, Lcom/amazonaws/DefaultRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
-    new-instance v2, Lzj/m;
+    new-instance v2, Lem/m;
 
-    invoke-direct {v2}, Lzj/m;-><init>()V
+    invoke-direct {v2}, Lem/m;-><init>()V
 
     .line 11
     invoke-virtual {v0}, Lokhttp3/Request;->body()Lokhttp3/RequestBody;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lokhttp3/RequestBody;->writeTo(Lzj/n;)V
+    invoke-virtual {v3, v2}, Lokhttp3/RequestBody;->writeTo(Lem/n;)V
 
     .line 12
-    invoke-virtual {v2}, Lzj/m;->F1()Ljava/io/InputStream;
+    invoke-virtual {v2}, Lem/m;->a2()Ljava/io/InputStream;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Lcom/amazonaws/DefaultRequest;->setContent(Ljava/io/InputStream;)V
 
     .line 13
-    invoke-virtual {v2}, Lzj/m;->d()Lzj/m;
+    invoke-virtual {v2}, Lem/m;->d()Lem/m;
 
     move-result-object v2
 
@@ -459,7 +459,13 @@
 
     iget-object v5, p0, Lcom/amazonaws/mobileconnectors/appsync/sigv4/AppSyncSigV4SignerInterceptor;->subscriberUUID:Ljava/lang/String;
 
-    invoke-static {v4, v5, v3}, Lj2/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 22
     iget-object v3, p0, Lcom/amazonaws/mobileconnectors/appsync/sigv4/AppSyncSigV4SignerInterceptor;->subscriberUUID:Ljava/lang/String;
@@ -654,7 +660,7 @@
 
     sget-object v1, Lcom/amazonaws/mobileconnectors/appsync/sigv4/AppSyncSigV4SignerInterceptor;->JSON_MEDIA_TYPE:Lokhttp3/MediaType;
 
-    invoke-virtual {v2}, Lzj/m;->E0()[B
+    invoke-virtual {v2}, Lem/m;->Y0()[B
 
     move-result-object v2
 

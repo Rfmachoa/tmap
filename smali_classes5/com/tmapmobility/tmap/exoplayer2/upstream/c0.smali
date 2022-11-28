@@ -1,29 +1,44 @@
-.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+.class public final synthetic Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
 .super Ljava/lang/Object;
-.source "LoaderErrorThrower.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tmapmobility/tmap/exoplayer2/upstream/c0$a;
-    }
-.end annotation
+# static fields
+.field public static final synthetic a:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+
+
+# direct methods
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;-><init>()V
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/c0;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract maybeThrowError()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
+.method public final createDataSource()Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
+    .locals 1
 
-.method public abstract maybeThrowError(I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;->g()Lcom/tmapmobility/tmap/exoplayer2/upstream/d0;
+
+    move-result-object v0
+
+    return-object v0
 .end method

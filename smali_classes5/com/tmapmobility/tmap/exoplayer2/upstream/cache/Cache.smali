@@ -17,13 +17,10 @@
 
 
 # virtual methods
-.method public abstract a(Laf/e;)V
+.method public abstract a(Ljava/lang/String;)Ldh/i;
 .end method
 
-.method public abstract b(Ljava/lang/String;)Laf/i;
-.end method
-
-.method public abstract c(Ljava/lang/String;JJ)Laf/e;
+.method public abstract b(Ljava/lang/String;JJ)Ldh/e;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -37,10 +34,10 @@
     .end annotation
 .end method
 
-.method public abstract d(Ljava/lang/String;JJ)J
+.method public abstract c(Ljava/lang/String;JJ)J
 .end method
 
-.method public abstract e(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$a;)Ljava/util/NavigableSet;
+.method public abstract d(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$a;)Ljava/util/NavigableSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,8 +45,19 @@
             "Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$a;",
             ")",
             "Ljava/util/NavigableSet<",
-            "Laf/e;",
+            "Ldh/e;",
             ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract e(Ljava/lang/String;Ldh/j;)V
+    .annotation build Landroidx/annotation/WorkerThread;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$CacheException;
         }
     .end annotation
 .end method
@@ -57,9 +65,7 @@
 .method public abstract f(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$a;)V
 .end method
 
-.method public abstract g(Laf/e;)V
-    .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
+.method public abstract g(Ldh/e;)V
 .end method
 
 .method public abstract getCacheSpace()J
@@ -75,7 +81,7 @@
             "Ljava/lang/String;",
             ")",
             "Ljava/util/NavigableSet<",
-            "Laf/e;",
+            "Ldh/e;",
             ">;"
         }
     .end annotation
@@ -95,7 +101,7 @@
 .method public abstract getUid()J
 .end method
 
-.method public abstract h(Ljava/lang/String;JJ)Laf/e;
+.method public abstract h(Ljava/lang/String;JJ)Ldh/e;
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
@@ -126,14 +132,8 @@
     .end annotation
 .end method
 
-.method public abstract k(Ljava/lang/String;Laf/j;)V
+.method public abstract k(Ldh/e;)V
     .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache$CacheException;
-        }
     .end annotation
 .end method
 

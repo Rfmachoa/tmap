@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/activity/ComponentActivity$b;->f(ILb/a;Ljava/lang/Object;Landroidx/core/app/c;)V
+    value = Landroidx/activity/ComponentActivity$b;->f(ILc/a;Ljava/lang/Object;Landroidx/core/app/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,13 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lb/a$a;
+.field public final synthetic b:Lc/a$a;
 
 .field public final synthetic c:Landroidx/activity/ComponentActivity$b;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/activity/ComponentActivity$b;ILb/a$a;)V
+.method public constructor <init>(Landroidx/activity/ComponentActivity$b;ILc/a$a;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
 
     iput p2, p0, Landroidx/activity/ComponentActivity$b$a;->a:I
 
-    iput-object p3, p0, Landroidx/activity/ComponentActivity$b$a;->b:Lb/a$a;
+    iput-object p3, p0, Landroidx/activity/ComponentActivity$b$a;->b:Lc/a$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,9 +51,9 @@
 
     iget v1, p0, Landroidx/activity/ComponentActivity$b$a;->a:I
 
-    iget-object v2, p0, Landroidx/activity/ComponentActivity$b$a;->b:Lb/a$a;
+    iget-object v2, p0, Landroidx/activity/ComponentActivity$b$a;->b:Lc/a$a;
 
-    invoke-virtual {v2}, Lb/a$a;->a()Ljava/lang/Object;
+    invoke-virtual {v2}, Lc/a$a;->a()Ljava/lang/Object;
 
     move-result-object v2
 

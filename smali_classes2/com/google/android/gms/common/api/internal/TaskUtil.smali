@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/api/internal/TaskUtil;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -67,13 +67,13 @@
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<TResult:",
+            "<ResultT:",
             "Ljava/lang/Object;",
             ">(",
             "Lcom/google/android/gms/common/api/Status;",
-            "TTResult;",
+            "TResultT;",
             "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TTResult;>;)V"
+            "TResultT;>;)V"
         }
     .end annotation
 
@@ -91,11 +91,11 @@
 
     .line 4
     :cond_0
-    new-instance p1, Lcom/google/android/gms/common/api/ApiException;
+    invoke-static {p0}, Lcom/google/android/gms/common/internal/ApiExceptionUtil;->fromStatus(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 
-    invoke-direct {p1, p0}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+    move-result-object p0
 
-    invoke-virtual {p2, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
+    invoke-virtual {p2, p0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
     return-void
 .end method
@@ -184,11 +184,11 @@
 
     .line 3
     :cond_0
-    new-instance p1, Lcom/google/android/gms/common/api/ApiException;
+    invoke-static {p0}, Lcom/google/android/gms/common/internal/ApiExceptionUtil;->fromStatus(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 
-    invoke-direct {p1, p0}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+    move-result-object p0
 
-    invoke-virtual {p2, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetException(Ljava/lang/Exception;)Z
+    invoke-virtual {p2, p0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetException(Ljava/lang/Exception;)Z
 
     move-result p0
 

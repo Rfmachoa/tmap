@@ -132,32 +132,41 @@
 
     move-result p3
 
-    iput p3, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorSize:I
+    iget p4, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
+
+    mul-int/lit8 p4, p4, 0x2
 
     .line 10
-    sget p3, Lcom/google/android/material/R$styleable;->CircularProgressIndicator_indicatorInset:I
+    invoke-static {p3, p4}, Ljava/lang/Math;->max(II)I
+
+    move-result p3
+
+    iput p3, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorSize:I
 
     .line 11
+    sget p3, Lcom/google/android/material/R$styleable;->CircularProgressIndicator_indicatorInset:I
+
+    .line 12
     invoke-static {p1, p2, p3, v1}, Lcom/google/android/material/resources/MaterialResources;->getDimensionPixelSize(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorInset:I
 
-    .line 12
+    .line 13
     sget p1, Lcom/google/android/material/R$styleable;->CircularProgressIndicator_indicatorDirectionCircular:I
 
-    .line 13
+    .line 14
     invoke-virtual {p2, p1, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorDirection:I
 
-    .line 14
+    .line 15
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 15
+    .line 16
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->validateSpec()V
 
     return-void
@@ -166,46 +175,7 @@
 
 # virtual methods
 .method public validateSpec()V
-    .locals 4
-
-    .line 1
-    iget v0, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorSize:I
-
-    iget v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-lt v0, v1, :cond_0
+    .locals 0
 
     return-void
-
-    .line 2
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "The indicatorSize ("
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorSize:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " px) cannot be less than twice of the trackThickness ("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
-
-    const-string v3, " px)."
-
-    invoke-static {v1, v2, v3}, Landroid/support/v4/media/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

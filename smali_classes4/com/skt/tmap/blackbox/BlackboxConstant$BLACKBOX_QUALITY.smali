@@ -53,7 +53,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f13017f
+    const v3, 0x7f140184
 
     const/16 v4, 0x280
 
@@ -74,7 +74,7 @@
 
     const/4 v10, 0x1
 
-    const v11, 0x7f13017d
+    const v11, 0x7f140182
 
     const/16 v12, 0x2d0
 
@@ -95,7 +95,7 @@
 
     const/16 v17, 0x2
 
-    const v18, 0x7f13017e
+    const v18, 0x7f140183
 
     const/16 v19, 0x500
 

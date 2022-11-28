@@ -93,7 +93,7 @@
     .end annotation
 .end method
 
-.method public abstract e(Landroid/graphics/drawable/Drawable;)Ljava/lang/Object;
+.method public abstract f(Landroid/graphics/drawable/Drawable;)Ljava/lang/Object;
     .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -113,7 +113,7 @@
     .end annotation
 .end method
 
-.method public abstract l(Landroid/graphics/Bitmap;)Ljava/lang/Object;
+.method public abstract j(Landroid/graphics/Bitmap;)Ljava/lang/Object;
     .param p1    # Landroid/graphics/Bitmap;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -133,7 +133,7 @@
     .end annotation
 .end method
 
-.method public abstract o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract m(Ljava/lang/Object;)Ljava/lang/Object;
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation

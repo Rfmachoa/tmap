@@ -6,7 +6,12 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/core/app/RemoteInput$d;,
+        Landroidx/core/app/RemoteInput$e;,
         Landroidx/core/app/RemoteInput$a;,
+        Landroidx/core/app/RemoteInput$b;,
+        Landroidx/core/app/RemoteInput$c;,
+        Landroidx/core/app/RemoteInput$f;,
         Landroidx/core/app/RemoteInput$EditChoicesBeforeSending;,
         Landroidx/core/app/RemoteInput$Source;
     }
@@ -14,25 +19,23 @@
 
 
 # static fields
-.field public static final h:Ljava/lang/String; = "RemoteInput"
+.field public static final h:Ljava/lang/String; = "android.remoteinput.results"
 
-.field public static final i:Ljava/lang/String; = "android.remoteinput.results"
+.field public static final i:Ljava/lang/String; = "android.remoteinput.resultsData"
 
-.field public static final j:Ljava/lang/String; = "android.remoteinput.resultsData"
+.field public static final j:Ljava/lang/String; = "android.remoteinput.dataTypeResultsData"
 
-.field public static final k:Ljava/lang/String; = "android.remoteinput.dataTypeResultsData"
+.field public static final k:Ljava/lang/String; = "android.remoteinput.resultsSource"
 
-.field public static final l:Ljava/lang/String; = "android.remoteinput.resultsSource"
+.field public static final l:I = 0x0
 
-.field public static final m:I = 0x0
+.field public static final m:I = 0x1
 
-.field public static final n:I = 0x1
+.field public static final n:I = 0x0
 
-.field public static final o:I = 0x0
+.field public static final o:I = 0x1
 
-.field public static final p:I = 0x1
-
-.field public static final q:I = 0x2
+.field public static final p:I = 0x2
 
 
 # instance fields
@@ -136,6 +139,18 @@
 
 .method public static a(Landroidx/core/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V
     .locals 5
+    .param p0    # Landroidx/core/app/RemoteInput;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -156,11 +171,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0}, Landroidx/core/app/RemoteInput;->c(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
-
-    move-result-object p0
-
-    invoke-static {p0, p1, p2}, Landroid/app/RemoteInput;->addDataResultToIntent(Landroid/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V
+    invoke-static {p0, p1, p2}, Landroidx/core/app/RemoteInput$c;->a(Landroidx/core/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V
 
     goto :goto_1
 
@@ -264,7 +275,8 @@
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Landroid/content/Intent;->setClipData(Landroid/content/ClipData;)V
+    .line 13
+    invoke-static {p1, p0}, Landroidx/core/app/RemoteInput$a;->b(Landroid/content/Intent;Landroid/content/ClipData;)V
 
     :goto_1
     return-void
@@ -272,6 +284,18 @@
 
 .method public static b([Landroidx/core/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
     .locals 7
+    .param p0    # [Landroidx/core/app/RemoteInput;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -285,7 +309,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, p1, p2}, Landroid/app/RemoteInput;->addResultsToIntent([Landroid/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-static {p0, p1, p2}, Landroidx/core/app/RemoteInput$b;->a(Ljava/lang/Object;Landroid/content/Intent;Landroid/os/Bundle;)V
 
     goto :goto_2
 
@@ -344,12 +368,11 @@
 
     move-result-object v6
 
-    .line 10
-    invoke-static {v6, p1, p2}, Landroid/app/RemoteInput;->addResultsToIntent([Landroid/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-static {v6, p1, p2}, Landroidx/core/app/RemoteInput$b;->a(Ljava/lang/Object;Landroid/content/Intent;Landroid/os/Bundle;)V
 
     if-eqz v5, :cond_2
 
-    .line 11
+    .line 10
     invoke-static {v4, p1, v5}, Landroidx/core/app/RemoteInput;->a(Landroidx/core/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V
 
     :cond_2
@@ -357,7 +380,7 @@
 
     goto :goto_1
 
-    .line 12
+    .line 11
     :cond_3
     invoke-static {p1, v1}, Landroidx/core/app/RemoteInput;->s(Landroid/content/Intent;I)V
 
@@ -366,114 +389,13 @@
 .end method
 
 .method public static c(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
-    .locals 4
+    .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x14
     .end annotation
 
     .line 1
-    new-instance v0, Landroid/app/RemoteInput$Builder;
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->o()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->n()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setLabel(Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->h()[Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setChoices([Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->f()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setAllowFreeFormInput(Z)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    .line 6
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->m()Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    .line 7
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1a
-
-    if-lt v1, v2, :cond_0
-
-    .line 8
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->g()Ljava/util/Set;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 9
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    const/4 v3, 0x1
-
-    .line 10
-    invoke-virtual {v0, v2, v3}, Landroid/app/RemoteInput$Builder;->setAllowDataType(Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
-
-    goto :goto_0
-
-    .line 11
-    :cond_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1d
-
-    if-lt v1, v2, :cond_1
-
-    .line 12
-    invoke-virtual {p0}, Landroidx/core/app/RemoteInput;->k()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Landroid/app/RemoteInput$Builder;->setEditChoicesBeforeSending(I)Landroid/app/RemoteInput$Builder;
-
-    .line 13
-    :cond_1
-    invoke-virtual {v0}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
+    invoke-static {p0}, Landroidx/core/app/RemoteInput$b;->b(Landroidx/core/app/RemoteInput;)Landroid/app/RemoteInput;
 
     move-result-object p0
 
@@ -524,114 +446,13 @@
 .end method
 
 .method public static e(Landroid/app/RemoteInput;)Landroidx/core/app/RemoteInput;
-    .locals 4
+    .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x14
     .end annotation
 
     .line 1
-    new-instance v0, Landroidx/core/app/RemoteInput$a;
-
-    .line 2
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroidx/core/app/RemoteInput$a;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroidx/core/app/RemoteInput$a;->h(Ljava/lang/CharSequence;)Landroidx/core/app/RemoteInput$a;
-
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroidx/core/app/RemoteInput$a;->f([Ljava/lang/CharSequence;)Landroidx/core/app/RemoteInput$a;
-
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroidx/core/app/RemoteInput$a;->e(Z)Landroidx/core/app/RemoteInput$a;
-
-    move-result-object v0
-
-    .line 6
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroidx/core/app/RemoteInput$a;->a(Landroid/os/Bundle;)Landroidx/core/app/RemoteInput$a;
-
-    move-result-object v0
-
-    .line 7
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1a
-
-    if-lt v1, v2, :cond_0
-
-    .line 8
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowedDataTypes()Ljava/util/Set;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 9
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    const/4 v3, 0x1
-
-    .line 10
-    invoke-virtual {v0, v2, v3}, Landroidx/core/app/RemoteInput$a;->d(Ljava/lang/String;Z)Landroidx/core/app/RemoteInput$a;
-
-    goto :goto_0
-
-    .line 11
-    :cond_0
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1d
-
-    if-lt v1, v2, :cond_1
-
-    .line 12
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Landroidx/core/app/RemoteInput$a;->g(I)Landroidx/core/app/RemoteInput$a;
-
-    .line 13
-    :cond_1
-    invoke-virtual {v0}, Landroidx/core/app/RemoteInput$a;->b()Landroidx/core/app/RemoteInput;
+    invoke-static {p0}, Landroidx/core/app/RemoteInput$b;->c(Ljava/lang/Object;)Landroidx/core/app/RemoteInput;
 
     move-result-object p0
 
@@ -645,7 +466,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/content/Intent;->getClipData()Landroid/content/ClipData;
+    invoke-static {p0}, Landroidx/core/app/RemoteInput$a;->a(Landroid/content/Intent;)Landroid/content/ClipData;
 
     move-result-object p0
 
@@ -709,6 +530,17 @@
 
 .method public static j(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
     .locals 6
+    .param p0    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -730,7 +562,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1}, Landroid/app/RemoteInput;->getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p0, p1}, Landroidx/core/app/RemoteInput$c;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -862,7 +694,7 @@
     const-string v0, "android.remoteinput.dataTypeResultsData"
 
     .line 1
-    invoke-static {v0, p0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -871,9 +703,15 @@
 
 .method public static p(Landroid/content/Intent;)Landroid/os/Bundle;
     .locals 0
+    .param p0    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    invoke-static {p0}, Landroid/app/RemoteInput;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
+    invoke-static {p0}, Landroidx/core/app/RemoteInput$b;->d(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object p0
 
@@ -895,7 +733,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0}, Landroid/app/RemoteInput;->getResultsSource(Landroid/content/Intent;)I
+    invoke-static {p0}, Landroidx/core/app/RemoteInput$d;->a(Landroid/content/Intent;)I
 
     move-result p0
 
@@ -943,7 +781,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1}, Landroid/app/RemoteInput;->setResultsSource(Landroid/content/Intent;I)V
+    invoke-static {p0, p1}, Landroidx/core/app/RemoteInput$d;->b(Landroid/content/Intent;I)V
 
     goto :goto_0
 
@@ -973,7 +811,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setClipData(Landroid/content/ClipData;)V
+    invoke-static {p0, p1}, Landroidx/core/app/RemoteInput$a;->b(Landroid/content/Intent;Landroid/content/ClipData;)V
 
     :goto_0
     return-void
@@ -992,6 +830,9 @@
 
 .method public g()Ljava/util/Set;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1009,6 +850,8 @@
 
 .method public h()[Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/core/app/RemoteInput;->c:[Ljava/lang/CharSequence;
@@ -1027,6 +870,8 @@
 
 .method public m()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/core/app/RemoteInput;->f:Landroid/os/Bundle;
@@ -1036,6 +881,8 @@
 
 .method public n()Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/core/app/RemoteInput;->b:Ljava/lang/CharSequence;
@@ -1045,6 +892,8 @@
 
 .method public o()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/core/app/RemoteInput;->a:Ljava/lang/String;

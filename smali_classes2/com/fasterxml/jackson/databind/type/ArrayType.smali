@@ -22,6 +22,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->hashCode()I
 
     move-result v5
@@ -40,12 +41,13 @@
 
     move v8, p6
 
+    .line 3
     invoke-direct/range {v0 .. v8}, Lcom/fasterxml/jackson/databind/type/TypeBase;-><init>(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/type/TypeBindings;Lcom/fasterxml/jackson/databind/JavaType;[Lcom/fasterxml/jackson/databind/JavaType;ILjava/lang/Object;Ljava/lang/Object;Z)V
 
-    .line 2
+    .line 4
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/type/ArrayType;->_componentType:Lcom/fasterxml/jackson/databind/JavaType;
 
-    .line 3
+    .line 5
     iput-object p3, p0, Lcom/fasterxml/jackson/databind/type/ArrayType;->_emptyArray:Ljava/lang/Object;
 
     return-void
@@ -57,7 +59,7 @@
     .line 1
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v1, "Can not narrow or widen array types"
+    const-string v1, "Cannot narrow or widen array types"
 
     invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
@@ -225,6 +227,17 @@
     return-object v0
 .end method
 
+.method public getEmptyArray()[Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/type/ArrayType;->_emptyArray:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public getErasedSignature(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
     .locals 1
 
@@ -271,6 +284,39 @@
 
     move-result v0
 
+    return v0
+.end method
+
+.method public hasHandlers()Z
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/fasterxml/jackson/databind/JavaType;->hasHandlers()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/type/ArrayType;->_componentType:Lcom/fasterxml/jackson/databind/JavaType;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JavaType;->hasHandlers()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
     return v0
 .end method
 

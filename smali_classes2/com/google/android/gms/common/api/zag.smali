@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/api/zag;
 .super Lcom/google/android/gms/common/api/internal/BasePendingResult;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -17,24 +17,11 @@
 
 # instance fields
 .field private final zae:Lcom/google/android/gms/common/api/Result;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TR;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/Result;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "TR;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V

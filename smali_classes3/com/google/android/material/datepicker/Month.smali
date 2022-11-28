@@ -237,7 +237,7 @@
     return p1
 .end method
 
-.method public daysFromStartOfWeekToFirstOfMonth()I
+.method public daysFromStartOfWeekToFirstOfMonth(I)I
     .locals 2
 
     .line 1
@@ -245,26 +245,34 @@
 
     const/4 v1, 0x7
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/Month;->firstOfMonth:Ljava/util/Calendar;
+    if-lez p1, :cond_0
 
-    invoke-virtual {v1}, Ljava/util/Calendar;->getFirstDayOfWeek()I
+    goto :goto_0
 
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    if-gez v0, :cond_0
-
-    .line 2
-    iget v1, p0, Lcom/google/android/material/datepicker/Month;->daysInWeek:I
-
-    add-int/2addr v0, v1
-
+    .line 3
     :cond_0
+    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->firstOfMonth:Ljava/util/Calendar;
+
+    invoke-virtual {p1}, Ljava/util/Calendar;->getFirstDayOfWeek()I
+
+    move-result p1
+
+    :goto_0
+    sub-int/2addr v0, p1
+
+    if-gez v0, :cond_1
+
+    .line 4
+    iget p1, p0, Lcom/google/android/material/datepicker/Month;->daysInWeek:I
+
+    add-int/2addr v0, p1
+
+    :cond_1
     return v0
 .end method
 
@@ -367,7 +375,7 @@
     return p1
 .end method
 
-.method public getLongName(Landroid/content/Context;)Ljava/lang/String;
+.method public getLongName()Ljava/lang/String;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -384,17 +392,17 @@
 
     move-result-wide v0
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getYearMonth(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/google/android/material/datepicker/DateStrings;->getYearMonth(J)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, p0, Lcom/google/android/material/datepicker/Month;->longName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/material/datepicker/Month;->longName:Ljava/lang/String;
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/google/android/material/datepicker/Month;->longName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/datepicker/Month;->longName:Ljava/lang/String;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public getStableId()J

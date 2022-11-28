@@ -14,24 +14,13 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\u0010\u0005\u001a\u0004\u0018\u00010\u0004\"\u0004\u0008\u0000\u0010\u00002\u000c\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u0001H\u0080@"
-    }
-    d2 = {
-        "T",
-        "Lkotlin/coroutines/c;",
-        "Lkotlin/d1;",
-        "continuation",
-        "",
-        "clearSource"
-    }
     k = 0x3
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
+    xi = 0x30
 .end annotation
 
 .annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
@@ -41,7 +30,7 @@
         0x0
     }
     l = {
-        0xea
+        0xec
     }
     m = "clearSource$lifecycle_livedata_ktx_release"
     n = {
@@ -61,11 +50,29 @@
 .field public synthetic result:Ljava/lang/Object;
 
 .field public final synthetic this$0:Landroidx/lifecycle/CoroutineLiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/CoroutineLiveData<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/CoroutineLiveData;Lkotlin/coroutines/c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/CoroutineLiveData<",
+            "TT;>;",
+            "Lkotlin/coroutines/c<",
+            "-",
+            "Landroidx/lifecycle/CoroutineLiveData$clearSource$1;",
+            ">;)V"
+        }
+    .end annotation
 
     iput-object p1, p0, Landroidx/lifecycle/CoroutineLiveData$clearSource$1;->this$0:Landroidx/lifecycle/CoroutineLiveData;
 

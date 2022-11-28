@@ -3,7 +3,7 @@
 .source "FloatingActionButton.java"
 
 # interfaces
-.implements Ls1/l0;
+.implements Landroidx/core/view/p0;
 .implements Landroidx/core/widget/u;
 .implements Lcom/google/android/material/expandable/ExpandableTransformationWidget;
 .implements Lcom/google/android/material/shape/Shapeable;
@@ -63,7 +63,7 @@
     .end annotation
 .end field
 
-.field private final imageHelper:Landroidx/appcompat/widget/h;
+.field private final imageHelper:Landroidx/appcompat/widget/k;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -320,7 +320,7 @@
 
     move-result v5
 
-    iput v5, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->maxImageSize:I
+    invoke-virtual {p0, v5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setMaxImageSize(I)V
 
     .line 28
     sget v5, Lcom/google/android/material/R$styleable;->FloatingActionButton_showMotionSpec:I
@@ -374,14 +374,14 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 39
-    new-instance v0, Landroidx/appcompat/widget/h;
+    new-instance v0, Landroidx/appcompat/widget/k;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/h;-><init>(Landroid/widget/ImageView;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/widget/k;-><init>(Landroid/widget/ImageView;)V
 
-    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->imageHelper:Landroidx/appcompat/widget/h;
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->imageHelper:Landroidx/appcompat/widget/k;
 
     .line 40
-    invoke-virtual {v0, p2, p3}, Landroidx/appcompat/widget/h;->f(Landroid/util/AttributeSet;I)V
+    invoke-virtual {v0, p2, p3}, Landroidx/appcompat/widget/k;->g(Landroid/util/AttributeSet;I)V
 
     .line 41
     new-instance p2, Lcom/google/android/material/expandable/ExpandableWidgetHelper;
@@ -446,32 +446,23 @@
 
     move-result-object p1
 
-    iget p2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->maxImageSize:I
-
-    invoke-virtual {p1, p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setMaxImageSize(I)V
+    invoke-virtual {p1, v5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setShowMotionSpec(Lcom/google/android/material/animation/MotionSpec;)V
 
     .line 50
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
     move-result-object p1
 
-    invoke-virtual {p1, v5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setShowMotionSpec(Lcom/google/android/material/animation/MotionSpec;)V
+    invoke-virtual {p1, v8}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setHideMotionSpec(Lcom/google/android/material/animation/MotionSpec;)V
 
     .line 51
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
 
     move-result-object p1
 
-    invoke-virtual {p1, v8}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setHideMotionSpec(Lcom/google/android/material/animation/MotionSpec;)V
-
-    .line 52
-    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
-
-    move-result-object p1
-
     invoke-virtual {p1, v6}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setEnsureMinTouchTargetSize(Z)V
 
-    .line 53
+    .line 52
     sget-object p1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageButton;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
@@ -689,7 +680,7 @@
     if-nez v1, :cond_1
 
     .line 3
-    invoke-static {v0}, Ld1/c;->c(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Lw1/c;->c(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 
@@ -720,59 +711,13 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v1, v2}, Landroidx/appcompat/widget/f;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    invoke-static {v1, v2}, Landroidx/appcompat/widget/g;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     return-void
-.end method
-
-.method private static resolveAdjustedSize(II)I
-    .locals 2
-
-    .line 1
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result v0
-
-    .line 2
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result p1
-
-    const/high16 v1, -0x80000000
-
-    if-eq v0, v1, :cond_1
-
-    if-eqz v0, :cond_2
-
-    const/high16 p0, 0x40000000    # 2.0f
-
-    if-ne v0, p0, :cond_0
-
-    move p0, p1
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
-
-    .line 4
-    :cond_1
-    invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    :cond_2
-    :goto_0
-    return p0
 .end method
 
 .method private wrapOnVisibilityChangedListener(Lcom/google/android/material/floatingactionbutton/FloatingActionButton$OnVisibilityChangedListener;)Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl$InternalVisibilityChangedListener;
@@ -1160,7 +1105,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1428,12 +1373,12 @@
     invoke-virtual {v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->updatePadding()V
 
     .line 4
-    invoke-static {v0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->resolveAdjustedSize(II)I
+    invoke-static {v0, p1}, Landroid/view/View;->resolveSize(II)I
 
     move-result p1
 
     .line 5
-    invoke-static {v0, p2}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->resolveAdjustedSize(II)I
+    invoke-static {v0, p2}, Landroid/view/View;->resolveSize(II)I
 
     move-result p2
 
@@ -1493,16 +1438,18 @@
     .line 5
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->expandableWidgetHelper:Lcom/google/android/material/expandable/ExpandableWidgetHelper;
 
-    iget-object p1, p1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/collection/l;
+    iget-object p1, p1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/collection/m;
 
     const-string v1, "expandableWidgetHelper"
 
     .line 6
-    invoke-virtual {p1, v1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Landroid/os/Bundle;
+
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1536,7 +1483,7 @@
     invoke-direct {v1, v0}, Lcom/google/android/material/stateful/ExtendableSavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 4
-    iget-object v0, v1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/collection/l;
+    iget-object v0, v1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/collection/m;
 
     iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->expandableWidgetHelper:Lcom/google/android/material/expandable/ExpandableWidgetHelper;
 
@@ -1548,7 +1495,7 @@
     const-string v3, "expandableWidgetHelper"
 
     .line 6
-    invoke-virtual {v0, v3, v2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v3, v2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v1
 .end method
@@ -2057,12 +2004,28 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->imageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->imageHelper:Landroidx/appcompat/widget/k;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/h;->g(I)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/k;->i(I)V
 
     .line 2
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->onApplySupportImageTint()V
+
+    return-void
+.end method
+
+.method public setMaxImageSize(I)V
+    .locals 1
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->maxImageSize:I
+
+    .line 2
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->setMaxImageSize(I)V
 
     return-void
 .end method

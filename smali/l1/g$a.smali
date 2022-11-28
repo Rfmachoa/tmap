@@ -1,69 +1,83 @@
-.class public final Ll1/g$a;
+.class public synthetic Ll1/g$a;
 .super Ljava/lang/Object;
-.source "Handler.kt"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "HorizontalChainReference.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Ll1/g;->a(Landroid/os/Handler;JLjava/lang/Object;Lej/a;)Ljava/lang/Runnable;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Ll1/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x1009
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nHandler.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Handler.kt\nandroidx/core/os/HandlerKt$postAtTime$runnable$1\n*L\n1#1,69:1\n*E\n"
-.end annotation
 
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
-    }
-    d2 = {
-        "Lkotlin/d1;",
-        "run",
-        "()V",
-        "<anonymous>"
-    }
-    k = 0x3
-    mv = {
-        0x1,
-        0x4,
-        0x0
-    }
-.end annotation
-
-
-# instance fields
-.field public final synthetic a:Lej/a;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lej/a;)V
-    .locals 0
-
-    iput-object p1, p0, Ll1/g$a;->a:Lej/a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Ll1/g$a;->a:Lej/a;
+    invoke-static {}, Landroidx/constraintlayout/core/state/State$Chain;->values()[Landroidx/constraintlayout/core/state/State$Chain;
 
-    invoke-interface {v0}, Lej/a;->invoke()Ljava/lang/Object;
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Ll1/g$a;->a:[I
+
+    :try_start_0
+    sget-object v1, Landroidx/constraintlayout/core/state/State$Chain;->SPREAD:Landroidx/constraintlayout/core/state/State$Chain;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll1/g$a;->a:[I
+
+    sget-object v1, Landroidx/constraintlayout/core/state/State$Chain;->SPREAD_INSIDE:Landroidx/constraintlayout/core/state/State$Chain;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll1/g$a;->a:[I
+
+    sget-object v1, Landroidx/constraintlayout/core/state/State$Chain;->PACKED:Landroidx/constraintlayout/core/state/State$Chain;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
     return-void
 .end method

@@ -1,16 +1,36 @@
-.class public interface abstract Landroidx/fragment/app/u;
+.class public final synthetic Landroidx/fragment/app/u;
 .super Ljava/lang/Object;
-.source "FragmentResultListener.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/core/util/d;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/fragment/app/FragmentManager;
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroidx/fragment/app/FragmentManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/fragment/app/u;->a:Landroidx/fragment/app/FragmentManager;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;Landroid/os/Bundle;)V
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/fragment/app/u;->a:Landroidx/fragment/app/FragmentManager;
+
+    check-cast p1, Landroidx/core/app/a0;
+
+    invoke-static {v0, p1}, Landroidx/fragment/app/FragmentManager;->f(Landroidx/fragment/app/FragmentManager;Landroidx/core/app/a0;)V
+
+    return-void
 .end method

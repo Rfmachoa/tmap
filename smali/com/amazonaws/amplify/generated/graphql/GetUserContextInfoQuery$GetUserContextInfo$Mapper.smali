@@ -3,7 +3,7 @@
 .source "GetUserContextInfoQuery.java"
 
 # interfaces
-.implements Lc4/j;
+.implements Lz5/j;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc4/j<",
+        "Lz5/j<",
         "Lcom/amazonaws/amplify/generated/graphql/GetUserContextInfoQuery$GetUserContextInfo;",
         ">;"
     }

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/preference/h;->m(Landroidx/appcompat/app/c$a;)V
+    value = Landroidx/preference/h;->n(Landroidx/appcompat/app/c$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,11 +43,11 @@
     .line 1
     iget-object p1, p0, Landroidx/preference/h$a;->a:Landroidx/preference/h;
 
-    iget-boolean p3, p1, Landroidx/preference/h;->V0:Z
+    iget-boolean p3, p1, Landroidx/preference/h;->X0:Z
 
     iget-object v0, p1, Landroidx/preference/h;->K0:Ljava/util/Set;
 
-    iget-object v1, p1, Landroidx/preference/h;->X0:[Ljava/lang/CharSequence;
+    iget-object v1, p1, Landroidx/preference/h;->Z0:[Ljava/lang/CharSequence;
 
     aget-object p2, v1, p2
 
@@ -63,7 +63,7 @@
 
     or-int/2addr p2, p3
 
-    iput-boolean p2, p1, Landroidx/preference/h;->V0:Z
+    iput-boolean p2, p1, Landroidx/preference/h;->X0:Z
 
     goto :goto_0
 
@@ -71,11 +71,11 @@
     :cond_0
     iget-object p1, p0, Landroidx/preference/h$a;->a:Landroidx/preference/h;
 
-    iget-boolean p3, p1, Landroidx/preference/h;->V0:Z
+    iget-boolean p3, p1, Landroidx/preference/h;->X0:Z
 
     iget-object v0, p1, Landroidx/preference/h;->K0:Ljava/util/Set;
 
-    iget-object v1, p1, Landroidx/preference/h;->X0:[Ljava/lang/CharSequence;
+    iget-object v1, p1, Landroidx/preference/h;->Z0:[Ljava/lang/CharSequence;
 
     aget-object p2, v1, p2
 
@@ -91,7 +91,7 @@
 
     or-int/2addr p2, p3
 
-    iput-boolean p2, p1, Landroidx/preference/h;->V0:Z
+    iput-boolean p2, p1, Landroidx/preference/h;->X0:Z
 
     :goto_0
     return-void

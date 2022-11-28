@@ -65,23 +65,6 @@
     return-object v0
 .end method
 
-.method public getUsedInput()Ljava/lang/String;
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_input:Ljava/lang/String;
-
-    iget v1, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_index:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public hasMoreTokens()Z
     .locals 1
 
@@ -133,7 +116,6 @@
     move-result-object v0
 
     .line 4
-    :goto_0
     iget v1, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_index:I
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -144,25 +126,20 @@
 
     iput v2, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_index:I
 
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
     return-object v0
 .end method
 
 .method public pushBack(Ljava/lang/String;)V
-    .locals 1
+    .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_pushbackToken:Ljava/lang/String;
-
-    .line 2
-    iget v0, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_index:I
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    sub-int/2addr v0, p1
-
-    iput v0, p0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->_index:I
 
     return-void
 .end method

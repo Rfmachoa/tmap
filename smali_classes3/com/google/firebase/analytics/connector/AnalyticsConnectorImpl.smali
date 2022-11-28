@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 # interfaces
 .implements Lcom/google/firebase/analytics/connector/AnalyticsConnector;
@@ -160,10 +160,10 @@
 
     const-class v2, Lcom/google/firebase/DataCollectionDefaultChange;
 
-    sget-object v3, Lcom/google/firebase/analytics/connector/zzb;->zza:Lcom/google/firebase/analytics/connector/zzb;
+    sget-object v3, Lcom/google/firebase/analytics/connector/zza;->zza:Lcom/google/firebase/analytics/connector/zza;
 
     .line 9
-    sget-object v4, Lcom/google/firebase/analytics/connector/zza;->zza:Lcom/google/firebase/analytics/connector/zza;
+    sget-object v4, Lcom/google/firebase/analytics/connector/zzb;->zza:Lcom/google/firebase/analytics/connector/zzb;
 
     invoke-interface {p2, v2, v3, v4}, Lcom/google/firebase/events/Subscriber;->subscribe(Ljava/lang/Class;Ljava/util/concurrent/Executor;Lcom/google/firebase/events/EventHandler;)V
 

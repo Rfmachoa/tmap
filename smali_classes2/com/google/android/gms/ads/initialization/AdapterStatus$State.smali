@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
 .super Ljava/lang/Enum;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -24,10 +24,16 @@
 
 # static fields
 .field public static final enum NOT_READY:Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field public static final enum READY:Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private static final synthetic zzblo:[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
+.field private static final synthetic zza:[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
 
 
 # direct methods
@@ -45,13 +51,13 @@
 
     sput-object v0, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->NOT_READY:Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
 
-    .line 2
     new-instance v1, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
 
     const-string v3, "READY"
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4}, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;-><init>(Ljava/lang/String;I)V
 
     sput-object v1, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->READY:Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
@@ -64,19 +70,13 @@
 
     aput-object v1, v3, v4
 
-    .line 3
-    sput-object v3, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->zzblo:[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
+    sput-object v3, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->zza:[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -86,6 +86,12 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
     .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     const-class v0, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
@@ -101,9 +107,11 @@
 
 .method public static values()[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->zzblo:[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
+    sget-object v0, Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->zza:[Lcom/google/android/gms/ads/initialization/AdapterStatus$State;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/ads/initialization/AdapterStatus$State;->clone()Ljava/lang/Object;
 

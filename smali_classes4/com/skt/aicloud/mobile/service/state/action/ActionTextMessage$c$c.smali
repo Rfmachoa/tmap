@@ -41,7 +41,7 @@
     .line 1
     sget-object v0, Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;->END:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->H(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->I(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
 
     return-void
 .end method

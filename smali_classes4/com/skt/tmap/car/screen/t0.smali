@@ -3,50 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/model/k;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/SearchScreen;
-
-.field public final synthetic b:Lcom/skt/tmap/data/AutoCompleteListItem;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:I
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SearchScreen;Lcom/skt/tmap/data/AutoCompleteListItem;Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/t0;->a:Lcom/skt/tmap/car/screen/SearchScreen;
-
-    iput-object p2, p0, Lcom/skt/tmap/car/screen/t0;->b:Lcom/skt/tmap/data/AutoCompleteListItem;
-
-    iput-object p3, p0, Lcom/skt/tmap/car/screen/t0;->c:Ljava/lang/String;
-
-    iput p4, p0, Lcom/skt/tmap/car/screen/t0;->d:I
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/t0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick()V
-    .locals 4
+.method public final a()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/t0;->a:Lcom/skt/tmap/car/screen/SearchScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/t0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    iget-object v1, p0, Lcom/skt/tmap/car/screen/t0;->b:Lcom/skt/tmap/data/AutoCompleteListItem;
-
-    iget-object v2, p0, Lcom/skt/tmap/car/screen/t0;->c:Ljava/lang/String;
-
-    iget v3, p0, Lcom/skt/tmap/car/screen/t0;->d:I
-
-    invoke-static {v0, v1, v2, v3}, Lcom/skt/tmap/car/screen/SearchScreen;->J(Lcom/skt/tmap/car/screen/SearchScreen;Lcom/skt/tmap/data/AutoCompleteListItem;Ljava/lang/String;I)V
+    invoke-static {v0}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->W(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
 
     return-void
 .end method

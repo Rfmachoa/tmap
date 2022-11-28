@@ -187,7 +187,7 @@
 
     iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->a:Lorg/json/JSONObject;
 
-    invoke-static {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->C(Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;Lorg/json/JSONObject;)V
+    invoke-static {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->D(Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;Lorg/json/JSONObject;)V
 
     :cond_1
     return-void
@@ -204,7 +204,7 @@
 
 
 # virtual methods
-.method public b(Z)V
+.method public a(Z)V
     .locals 0
 
     .line 1
@@ -222,15 +222,6 @@
     return-object v0
 .end method
 
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -243,12 +234,21 @@
     .locals 1
 
     .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public f()Ljava/lang/String;
+    .locals 1
+
+    .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->c:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public f()Lcom/skt/aicloud/speaker/lib/GuiInfo;
+.method public h()Lcom/skt/aicloud/speaker/lib/GuiInfo;
     .locals 1
 
     .line 1
@@ -257,7 +257,7 @@
     return-object v0
 .end method
 
-.method public g()Ljava/lang/String;
+.method public i()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -266,7 +266,7 @@
     return-object v0
 .end method
 
-.method public h()Lorg/json/JSONObject;
+.method public j()Lorg/json/JSONObject;
     .locals 1
 
     .line 1
@@ -275,7 +275,7 @@
     return-object v0
 .end method
 
-.method public i()Ljava/lang/String;
+.method public l()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -284,7 +284,7 @@
     return-object v0
 .end method
 
-.method public j()Z
+.method public m()Z
     .locals 1
 
     .line 1
@@ -293,7 +293,7 @@
     return v0
 .end method
 
-.method public l(Ljava/lang/String;)V
+.method public n(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -302,7 +302,7 @@
     return-void
 .end method
 
-.method public m(Ljava/lang/String;)V
+.method public o(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -311,7 +311,7 @@
     return-void
 .end method
 
-.method public n(Ljava/lang/String;)V
+.method public p(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -320,7 +320,7 @@
     return-void
 .end method
 
-.method public o(Lcom/skt/aicloud/speaker/lib/GuiInfo;)V
+.method public q(Lcom/skt/aicloud/speaker/lib/GuiInfo;)V
     .locals 0
 
     .line 1
@@ -329,7 +329,7 @@
     return-void
 .end method
 
-.method public p(Ljava/lang/String;)V
+.method public r(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -338,7 +338,7 @@
     return-void
 .end method
 
-.method public q(Lorg/json/JSONObject;)V
+.method public s(Lorg/json/JSONObject;)V
     .locals 0
 
     .line 1
@@ -347,7 +347,7 @@
     return-void
 .end method
 
-.method public r(Ljava/lang/String;)V
+.method public t(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -372,31 +372,31 @@
 
     const-string v3, ", mPlayServiceId=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->d:Ljava/lang/String;
 
     const-string v3, ", mAction=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->e:Ljava/lang/String;
 
     const-string v3, ", mSubAction=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->f:Ljava/lang/String;
 
     const-string v3, ", mActionHost=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->g:Ljava/lang/String;
 
     const-string v3, ", mIsStartListeningContinuously="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-boolean v1, p0, Lcom/skt/aicloud/speaker/lib/AIServiceResult;->h:Z
 

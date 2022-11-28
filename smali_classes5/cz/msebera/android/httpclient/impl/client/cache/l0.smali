@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract B(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
+.method public abstract D(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
 .end method

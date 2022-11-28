@@ -72,11 +72,11 @@
     .line 4
     iget-object v0, p0, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer$c;->a:Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;
 
-    new-instance v1, Lu9/h;
+    new-instance v1, Lrb/h;
 
-    invoke-direct {v1}, Lu9/h;-><init>()V
+    invoke-direct {v1}, Lrb/h;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lu9/a;)V
+    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lrb/a;)V
 
     return-void
 .end method
@@ -94,11 +94,11 @@
     .line 2
     iget-object v0, p0, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer$c;->a:Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;
 
-    new-instance v1, Lu9/i;
+    new-instance v1, Lrb/i;
 
-    invoke-direct {v1}, Lu9/i;-><init>()V
+    invoke-direct {v1}, Lrb/i;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lu9/a;)V
+    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lrb/a;)V
 
     return-void
 .end method

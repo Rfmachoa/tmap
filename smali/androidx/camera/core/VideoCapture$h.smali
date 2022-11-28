@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "VideoCapture.java"
 
-# interfaces
-.implements Landroidx/camera/core/VideoCapture$e;
-
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -16,179 +13,259 @@
     name = "h"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/core/VideoCapture$h$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final g:Landroidx/camera/core/VideoCapture$f;
+
 
 # instance fields
-.field public a:Ljava/util/concurrent/Executor;
-    .annotation build Landroidx/annotation/NonNull;
+.field public final a:Ljava/io/File;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public b:Landroidx/camera/core/VideoCapture$e;
-    .annotation build Landroidx/annotation/NonNull;
+.field public final b:Ljava/io/FileDescriptor;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final c:Landroid/content/ContentResolver;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final d:Landroid/net/Uri;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final e:Landroid/content/ContentValues;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final f:Landroidx/camera/core/VideoCapture$f;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Landroidx/camera/core/VideoCapture$e;)V
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Landroidx/camera/core/VideoCapture$f;
+
+    invoke-direct {v0}, Landroidx/camera/core/VideoCapture$f;-><init>()V
+
+    sput-object v0, Landroidx/camera/core/VideoCapture$h;->g:Landroidx/camera/core/VideoCapture$f;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/io/File;Ljava/io/FileDescriptor;Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/content/ContentValues;Landroidx/camera/core/VideoCapture$f;)V
     .locals 0
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # Ljava/io/File;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p2    # Landroidx/camera/core/VideoCapture$e;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p2    # Ljava/io/FileDescriptor;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "executor",
-            "onVideoSavedCallback"
-        }
-    .end annotation
+    .param p3    # Landroid/content/ContentResolver;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p5    # Landroid/content/ContentValues;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p6    # Landroidx/camera/core/VideoCapture$f;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/camera/core/VideoCapture$h;->a:Ljava/util/concurrent/Executor;
+    iput-object p1, p0, Landroidx/camera/core/VideoCapture$h;->a:Ljava/io/File;
 
     .line 3
-    iput-object p2, p0, Landroidx/camera/core/VideoCapture$h;->b:Landroidx/camera/core/VideoCapture$e;
+    iput-object p2, p0, Landroidx/camera/core/VideoCapture$h;->b:Ljava/io/FileDescriptor;
 
-    return-void
-.end method
+    .line 4
+    iput-object p3, p0, Landroidx/camera/core/VideoCapture$h;->c:Landroid/content/ContentResolver;
 
-.method public static synthetic c(Landroidx/camera/core/VideoCapture$h;ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    .line 5
+    iput-object p4, p0, Landroidx/camera/core/VideoCapture$h;->d:Landroid/net/Uri;
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/camera/core/VideoCapture$h;->e(ILjava/lang/String;Ljava/lang/Throwable;)V
+    .line 6
+    iput-object p5, p0, Landroidx/camera/core/VideoCapture$h;->e:Landroid/content/ContentValues;
 
-    return-void
-.end method
+    if-nez p6, :cond_0
 
-.method public static synthetic d(Landroidx/camera/core/VideoCapture$h;Landroidx/camera/core/VideoCapture$g;)V
-    .locals 0
+    .line 7
+    sget-object p6, Landroidx/camera/core/VideoCapture$h;->g:Landroidx/camera/core/VideoCapture$f;
 
-    invoke-direct {p0, p1}, Landroidx/camera/core/VideoCapture$h;->f(Landroidx/camera/core/VideoCapture$g;)V
-
-    return-void
-.end method
-
-.method private synthetic e(ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->b:Landroidx/camera/core/VideoCapture$e;
-
-    invoke-interface {v0, p1, p2, p3}, Landroidx/camera/core/VideoCapture$e;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method private synthetic f(Landroidx/camera/core/VideoCapture$g;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->b:Landroidx/camera/core/VideoCapture$e;
-
-    invoke-interface {v0, p1}, Landroidx/camera/core/VideoCapture$e;->b(Landroidx/camera/core/VideoCapture$g;)V
+    :cond_0
+    iput-object p6, p0, Landroidx/camera/core/VideoCapture$h;->f:Landroidx/camera/core/VideoCapture$f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 2
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/Throwable;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "videoCaptureError",
-            "message",
-            "cause"
-        }
+.method public a()Landroid/content/ContentResolver;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->a:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->c:Landroid/content/ContentResolver;
 
-    new-instance v1, Landroidx/camera/core/m3;
-
-    invoke-direct {v1, p0, p1, p2, p3}, Landroidx/camera/core/m3;-><init>(Landroidx/camera/core/VideoCapture$h;ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const-string p1, "VideoCapture"
-
-    const-string p2, "Unable to post to the supplied executor."
-
-    .line 2
-    invoke-static {p1, p2}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
+    return-object v0
 .end method
 
-.method public b(Landroidx/camera/core/VideoCapture$g;)V
-    .locals 2
-    .param p1    # Landroidx/camera/core/VideoCapture$g;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "outputFileResults"
-        }
+.method public b()Landroid/content/ContentValues;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->a:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->e:Landroid/content/ContentValues;
 
-    new-instance v1, Landroidx/camera/core/n3;
+    return-object v0
+.end method
 
-    invoke-direct {v1, p0, p1}, Landroidx/camera/core/n3;-><init>(Landroidx/camera/core/VideoCapture$h;Landroidx/camera/core/VideoCapture$g;)V
+.method public c()Ljava/io/File;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->a:Ljava/io/File;
+
+    return-object v0
+.end method
+
+.method public d()Ljava/io/FileDescriptor;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->b:Ljava/io/FileDescriptor;
+
+    return-object v0
+.end method
+
+.method public e()Landroidx/camera/core/VideoCapture$f;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->f:Landroidx/camera/core/VideoCapture$f;
+
+    return-object v0
+.end method
+
+.method public f()Landroid/net/Uri;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/VideoCapture$h;->d:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public g()Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/VideoCapture$h;->c()Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :catch_0
-    const-string p1, "VideoCapture"
-
-    const-string v0, "Unable to post to the supplied executor."
-
-    .line 2
-    invoke-static {p1, v0}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    return-void
+    return v0
+.end method
+
+.method public h()Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/VideoCapture$h;->d()Ljava/io/FileDescriptor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public i()Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/VideoCapture$h;->f()Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/camera/core/VideoCapture$h;->a()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/camera/core/VideoCapture$h;->b()Landroid/content/ContentValues;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method

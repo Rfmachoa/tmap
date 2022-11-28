@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/t0;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
-
-.field public final synthetic b:Lcom/amplifyframework/core/model/Model;
-
-.field public final synthetic c:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
+.field public final synthetic a:Lcom/amplifyframework/core/Action;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/core/Action;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->b:Lcom/amplifyframework/core/model/Model;
-
-    iput-object p3, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->c:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->a:Lcom/amplifyframework/core/Action;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/r0;)V
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->a:Lcom/amplifyframework/core/Action;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->b:Lcom/amplifyframework/core/model/Model;
+    check-cast p1, Ljava/util/List;
 
-    iget-object v2, p0, Lcom/amplifyframework/datastore/storage/sqlite/f;->c:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
-
-    invoke-static {v0, v1, v2, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->g(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lai/r0;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->c(Lcom/amplifyframework/core/Action;Ljava/util/List;)V
 
     return-void
 .end method

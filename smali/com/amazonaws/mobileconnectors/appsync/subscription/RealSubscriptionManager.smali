@@ -3,7 +3,7 @@
 .source "RealSubscriptionManager.java"
 
 # interfaces
-.implements Lp4/b;
+.implements Lm6/b;
 
 
 # static fields
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field private apolloStore:Lf4/a;
+.field private apolloStore:Lc6/a;
 
 .field private applicationContext:Landroid/content/Context;
 
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field private mApolloClient:Lb4/a;
+.field private mApolloClient:Ly5/a;
 
 .field private final mainMessageCallback:Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionCallback;
 
@@ -37,7 +37,7 @@
 
 .field public final reconnectionLock:Ljava/lang/Object;
 
-.field private scalarTypeAdapters:Lo4/d;
+.field private scalarTypeAdapters:Ll6/d;
 
 .field private subscriptionsAutoReconnect:Z
 
@@ -115,7 +115,7 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->mApolloClient:Lb4/a;
+    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->mApolloClient:Ly5/a;
 
     const/4 v1, 0x1
 
@@ -267,11 +267,11 @@
     return-object p1
 .end method
 
-.method public static synthetic access$600(Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;)Lb4/a;
+.method public static synthetic access$600(Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;)Ly5/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->mApolloClient:Lb4/a;
+    iget-object p0, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->mApolloClient:Ly5/a;
 
     return-object p0
 .end method
@@ -1035,34 +1035,34 @@
     throw v1
 .end method
 
-.method public setApolloClient(Lb4/a;)V
+.method public setApolloClient(Ly5/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->mApolloClient:Lb4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->mApolloClient:Ly5/a;
 
     return-void
 .end method
 
-.method public setScalarTypeAdapters(Lo4/d;)V
+.method public setScalarTypeAdapters(Ll6/d;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->scalarTypeAdapters:Lo4/d;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->scalarTypeAdapters:Ll6/d;
 
     return-void
 .end method
 
-.method public setStore(Lf4/a;)V
+.method public setStore(Lc6/a;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->apolloStore:Lf4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->apolloStore:Lc6/a;
 
     return-void
 .end method
 
-.method public declared-synchronized subscribe(Lcom/apollographql/apollo/api/f;Ljava/util/List;Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionResponse;Lj4/h;)V
+.method public declared-synchronized subscribe(Lcom/apollographql/apollo/api/f;Ljava/util/List;Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionResponse;Lg6/h;)V
     .locals 9
     .param p1    # Lcom/apollographql/apollo/api/f;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -1087,7 +1087,7 @@
             "Ljava/lang/String;",
             ">;",
             "Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionResponse;",
-            "Lj4/h<",
+            "Lg6/h<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -1134,12 +1134,12 @@
     iput-object p1, v0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->subscription:Lcom/apollographql/apollo/api/f;
 
     .line 5
-    iput-object p4, v0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->normalizer:Lj4/h;
+    iput-object p4, v0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->normalizer:Lg6/h;
 
     .line 6
-    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->scalarTypeAdapters:Lo4/d;
+    iget-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->scalarTypeAdapters:Ll6/d;
 
-    iput-object p1, v0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->scalarTypeAdapters:Lo4/d;
+    iput-object p1, v0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->scalarTypeAdapters:Ll6/d;
 
     .line 7
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;

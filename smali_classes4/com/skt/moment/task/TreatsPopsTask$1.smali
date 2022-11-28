@@ -21,6 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/TreatsPopsTask;Landroid/os/Handler;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "handler"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/TreatsPopsTask$1;->a:Lcom/skt/moment/task/TreatsPopsTask;
@@ -34,6 +44,16 @@
 # virtual methods
 .method public onReceiveResult(ILandroid/os/Bundle;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "resultCode",
+            "resultData"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/TreatsPopsTask$1;->a:Lcom/skt/moment/task/TreatsPopsTask;

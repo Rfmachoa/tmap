@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/data/zab;
 .super Lcom/google/android/gms/common/data/DataHolder$Builder;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # direct methods
@@ -32,16 +32,6 @@
 
 .method public final zaa(Ljava/util/HashMap;)Lcom/google/android/gms/common/data/DataHolder$Builder;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/HashMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;)",
-            "Lcom/google/android/gms/common/data/DataHolder$Builder;"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;

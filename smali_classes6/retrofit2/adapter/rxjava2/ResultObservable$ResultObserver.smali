@@ -3,7 +3,7 @@
 .source "ResultObservable.java"
 
 # interfaces
-.implements Lkh/g0;
+.implements Loj/g0;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkh/g0<",
+        "Loj/g0<",
         "Lretrofit2/Response<",
         "TR;>;>;"
     }
@@ -30,10 +30,10 @@
 
 
 # instance fields
-.field private final observer:Lkh/g0;
+.field private final observer:Loj/g0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkh/g0<",
+            "Loj/g0<",
             "-",
             "Lretrofit2/adapter/rxjava2/Result<",
             "TR;>;>;"
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lkh/g0;)V
+.method public constructor <init>(Loj/g0;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkh/g0<",
+            "Loj/g0<",
             "-",
             "Lretrofit2/adapter/rxjava2/Result<",
             "TR;>;>;)V"
@@ -59,7 +59,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iput-object p1, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
     return-void
 .end method
@@ -70,9 +70,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
-    invoke-interface {v0}, Lkh/g0;->onComplete()V
+    invoke-interface {v0}, Loj/g0;->onComplete()V
 
     return-void
 .end method
@@ -82,20 +82,20 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
     invoke-static {p1}, Lretrofit2/adapter/rxjava2/Result;->error(Ljava/lang/Throwable;)Lretrofit2/adapter/rxjava2/Result;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkh/g0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Loj/g0;->onNext(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2
-    iget-object p1, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iget-object p1, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
-    invoke-interface {p1}, Lkh/g0;->onComplete()V
+    invoke-interface {p1}, Loj/g0;->onComplete()V
 
     return-void
 
@@ -104,9 +104,9 @@
 
     .line 3
     :try_start_1
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
-    invoke-interface {v0, p1}, Lkh/g0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Loj/g0;->onError(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -135,7 +135,7 @@
 
     invoke-direct {v1, v2}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Lwh/a;->Y(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lak/a;->Y(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -163,13 +163,13 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
     invoke-static {p1}, Lretrofit2/adapter/rxjava2/Result;->response(Lretrofit2/Response;)Lretrofit2/adapter/rxjava2/Result;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkh/g0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Loj/g0;->onNext(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -178,9 +178,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/ResultObservable$ResultObserver;->observer:Loj/g0;
 
-    invoke-interface {v0, p1}, Lkh/g0;->onSubscribe(Lio/reactivex/disposables/b;)V
+    invoke-interface {v0, p1}, Loj/g0;->onSubscribe(Lio/reactivex/disposables/b;)V
 
     return-void
 .end method

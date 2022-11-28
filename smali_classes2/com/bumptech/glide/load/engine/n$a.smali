@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract c(Lu4/b;Lcom/bumptech/glide/load/engine/n;)V
+.method public abstract b(Lr6/b;Lcom/bumptech/glide/load/engine/n;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/n<",
             "*>;)V"
         }

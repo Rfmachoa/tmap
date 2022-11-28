@@ -16,4 +16,16 @@
 
 # virtual methods
 .method public abstract a(IILandroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "operationCode",
+            "result",
+            "extras"
+        }
+    .end annotation
 .end method

@@ -1,20 +1,60 @@
-.class public Lhh/h;
+.class public interface abstract Lhh/h;
 .super Ljava/lang/Object;
-.source "dagger_hilt_android_HiltAndroidApp.java"
+.source "HttpClientConnection.java"
+
+# interfaces
+.implements Lhh/i;
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/android/HiltAndroidApp;
-.end annotation
+# virtual methods
+.method public abstract B(Lhh/t;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
+.method public abstract V1(Lhh/q;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract e0(Lhh/m;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract flush()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
-    return-void
+.method public abstract isResponseAvailable(I)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public abstract receiveResponseHeader()Lhh/t;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method

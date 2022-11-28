@@ -37,18 +37,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/SurfaceRequest;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Lcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$requestCancellationCompleter",
-            "val$requestCancellationFuture"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$a;->c:Landroidx/camera/core/SurfaceRequest;
@@ -70,14 +58,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/core/SurfaceRequest$a;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
@@ -88,21 +68,13 @@
 
     move-result p1
 
-    invoke-static {p1}, Lr1/o;->m(Z)V
+    invoke-static {p1}, Landroidx/core/util/p;->n(Z)V
 
     return-void
 .end method
 
 .method public onFailure(Ljava/lang/Throwable;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
 
     .line 1
     instance-of p1, p1, Landroidx/camera/core/SurfaceRequest$RequestCancelledException;
@@ -118,7 +90,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lr1/o;->m(Z)V
+    invoke-static {p1}, Landroidx/core/util/p;->n(Z)V
 
     goto :goto_0
 
@@ -132,7 +104,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lr1/o;->m(Z)V
+    invoke-static {p1}, Landroidx/core/util/p;->n(Z)V
 
     :goto_0
     return-void
@@ -144,14 +116,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "result"
-        }
-    .end annotation
 
     .line 1
     check-cast p1, Ljava/lang/Void;

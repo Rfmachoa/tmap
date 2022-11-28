@@ -1,8 +1,14 @@
-.class public interface abstract synthetic Lhe/c;
+.class public Lhe/c;
 .super Ljava/lang/Object;
-.source "package-info.java"
+.source "BaseModel.java"
 
 
-# annotations
-.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
-.end annotation
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

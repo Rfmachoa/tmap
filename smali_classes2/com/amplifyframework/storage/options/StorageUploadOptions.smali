@@ -103,7 +103,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -118,7 +118,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -133,7 +133,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -148,7 +148,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -243,7 +243,7 @@
     aput-object v1, v0, v2
 
     .line 5
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 

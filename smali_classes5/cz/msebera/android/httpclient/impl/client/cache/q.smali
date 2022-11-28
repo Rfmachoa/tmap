@@ -1,5 +1,5 @@
 .class public Lcz/msebera/android/httpclient/impl/client/cache/q;
-.super Lzf/a;
+.super Ldi/a;
 .source "CombinedEntity.java"
 
 
@@ -30,7 +30,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lzf/a;-><init>()V
+    invoke-direct {p0}, Ldi/a;-><init>()V
 
     .line 2
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/client/cache/q;->e:Lcz/msebera/android/httpclient/client/cache/Resource;
@@ -126,7 +126,7 @@
     const-string v0, "Output stream"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p0}, Lcz/msebera/android/httpclient/impl/client/cache/q;->getContent()Ljava/io/InputStream;

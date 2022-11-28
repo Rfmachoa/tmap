@@ -78,8 +78,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -97,28 +97,7 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$Companion;-><init>()V
-
-    return-void
-.end method
-
-.method public static final synthetic access$getInstance$li(Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$Companion;)Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
-    .locals 0
-
-    .line 1
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->access$getInstance$cp()Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$setInstance$li(Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$Companion;Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->access$setInstance$cp(Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;)V
 
     return-void
 .end method
@@ -228,9 +207,7 @@
     invoke-static {v13, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$Companion;->access$getInstance$li(Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$Companion;)Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
-
-    move-result-object v0
+    sget-object v0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->instance:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
 
     if-nez v0, :cond_0
 
@@ -316,22 +293,24 @@
 .end method
 
 .method public final getInstance()Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
-    .locals 2
+    .locals 1
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->access$getInstance$cp()Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
+    sget-object v0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->instance:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    if-nez v0, :cond_0
-
-    const-string v1, "instance"
-
-    invoke-static {v1}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+    return-object v0
 
     :cond_0
+    const-string v0, "instance"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
     return-object v0
 .end method
 
@@ -386,7 +365,7 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p1}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->access$setInstance$cp(Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;)V
+    sput-object p1, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->instance:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
 
     return-void
 .end method

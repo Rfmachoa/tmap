@@ -1,936 +1,302 @@
-.class public abstract Lvf/a;
-.super Ljava/lang/Object;
-.source "AbstractVerifier.java"
+.class public final Lvf/a;
+.super Lcom/google/protobuf/GeneratedMessageLite;
+.source "BusLaneElement.java"
 
 # interfaces
-.implements Lvf/m;
+.implements Lvf/b;
 
 
 # annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lvf/a$b;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/protobuf/GeneratedMessageLite<",
+        "Lvf/a;",
+        "Lvf/a$b;",
+        ">;",
+        "Lvf/b;"
+    }
 .end annotation
 
 
 # static fields
-.field public static final b:[Ljava/lang/String;
+.field public static final K0:I = 0x8
+
+.field public static final X0:Lvf/a;
+
+.field public static volatile Y0:Lcom/google/protobuf/Parser; = null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/protobuf/Parser<",
+            "Lvf/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final i:I = 0x1
+
+.field public static final j:I = 0x2
+
+.field public static final k:I = 0x3
+
+.field public static final k0:I = 0x7
+
+.field public static final l:I = 0x4
+
+.field public static final p:I = 0x5
+
+.field public static final u:I = 0x6
 
 
 # instance fields
-.field public a:Lcz/msebera/android/httpclient/extras/b;
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 14
-
-    const-string v0, "ac"
-
-    const-string v1, "co"
-
-    const-string v2, "com"
-
-    const-string v3, "ed"
-
-    const-string v4, "edu"
-
-    const-string v5, "go"
-
-    const-string v6, "gouv"
-
-    const-string v7, "gov"
-
-    const-string v8, "info"
-
-    const-string v9, "lg"
-
-    const-string v10, "ne"
-
-    const-string v11, "net"
-
-    const-string v12, "or"
-
-    const-string v13, "org"
+    .locals 1
 
     .line 1
-    filled-new-array/range {v0 .. v13}, [Ljava/lang/String;
+    new-instance v0, Lvf/a;
 
-    move-result-object v0
+    invoke-direct {v0}, Lvf/a;-><init>()V
 
-    sput-object v0, Lvf/a;->b:[Ljava/lang/String;
+    sput-object v0, Lvf/a;->X0:Lvf/a;
 
     .line 2
-    invoke-static {v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
+    invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->makeImmutable()V
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Lcz/msebera/android/httpclient/extras/b;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcz/msebera/android/httpclient/extras/b;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lvf/a;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;)Z
-    .locals 3
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    const-string v0, "\\."
-
-    .line 1
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 2
-    array-length v0, p0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x3
-
-    if-ne v0, v2, :cond_2
-
-    const/4 v0, 0x2
-
-    aget-object v2, p0, v0
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eq v2, v0, :cond_0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    sget-object v0, Lvf/a;->b:[Ljava/lang/String;
-
-    aget-object p0, p0, v1
-
-    invoke-static {v0, p0}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p0
-
-    if-gez p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public static b(Ljava/lang/String;)I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 1
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_1
-
-    .line 2
-    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    const/16 v3, 0x2e
-
-    if-ne v2, v3, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v1
-.end method
-
-.method public static c(Ljava/lang/String;)[Ljava/lang/String;
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljavax/net/ssl/SSLException;
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return-object v0
-
-    .line 1
-    :cond_0
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 2
-    new-instance v2, Ljava/util/StringTokenizer;
-
-    const-string v3, ","
-
-    invoke-direct {v2, p0, v3}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3
-    :cond_1
-    :goto_0
-    invoke-virtual {v2}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    .line 4
-    invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v3, "CN="
-
-    .line 5
-    invoke-virtual {p0, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_1
-
-    add-int/lit8 v3, v3, 0x3
-
-    .line 6
-    invoke-virtual {p0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 7
-    :cond_2
-    invoke-virtual {v1}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    .line 8
-    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
-
-    move-result p0
-
-    new-array p0, p0, [Ljava/lang/String;
-
-    .line 9
-    invoke-virtual {v1, p0}, Ljava/util/LinkedList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_3
-    return-object v0
-.end method
-
-.method public static d(Ljava/security/cert/X509Certificate;)[Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljavax/security/auth/x500/X500Principal;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 2
-    :try_start_0
-    invoke-static {p0}, Lvf/a;->c(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static e(Ljava/security/cert/X509Certificate;)[Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, v0}, Lvf/a;->f(Ljava/security/cert/X509Certificate;Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Ljava/security/cert/X509Certificate;Ljava/lang/String;)[Ljava/lang/String;
-    .locals 4
-
-    .line 1
-    invoke-static {p1}, Lvf/a;->g(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x7
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x2
-
-    .line 2
-    :goto_0
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    const/4 v1, 0x0
-
-    .line 3
-    :try_start_0
-    invoke-virtual {p0}, Ljava/security/cert/X509Certificate;->getSubjectAlternativeNames()Ljava/util/Collection;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/security/cert/CertificateParsingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-object p0, v1
-
-    :goto_1
-    if-eqz p0, :cond_2
-
-    .line 4
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/List;
-
-    const/4 v3, 0x0
-
-    .line 5
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    if-ne v3, p1, :cond_1
-
-    const/4 v3, 0x1
-
-    .line 6
-    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 7
-    invoke-virtual {v0, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    .line 8
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    .line 9
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result p0
-
-    new-array p0, p0, [Ljava/lang/String;
-
-    .line 10
-    invoke-virtual {v0, p0}, Ljava/util/LinkedList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_3
-    return-object v1
-.end method
-
-.method public static g(Ljava/lang/String;)Z
-    .locals 1
-
-    if-eqz p0, :cond_1
-
-    .line 1
-    invoke-static {p0}, Lwf/a;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    invoke-static {p0}, Lwf/a;->c(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    :cond_0
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-
-# virtual methods
-.method public final h(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
-
-    if-eqz p1, :cond_1
-
-    .line 1
-    invoke-static {p1}, Lwf/a;->c(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    :try_start_0
-    invoke-static {p1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
-
-    move-result-object v0
-
-    .line 3
-    invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception v0
-
-    .line 4
-    iget-object v1, p0, Lvf/a;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Unexpected error converting "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, v0}, Lcz/msebera/android/httpclient/extras/b;->i(Ljava/lang/Object;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-object p1
-.end method
-
-.method public i(Ljava/lang/String;)Z
-    .locals 3
-
-    const-string v0, "\\."
-
-    .line 1
-    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 2
-    array-length v0, p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x3
-
-    if-ne v0, v2, :cond_2
-
-    const/4 v0, 0x2
-
-    aget-object v2, p1, v0
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eq v2, v0, :cond_0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    sget-object v0, Lvf/a;->b:[Ljava/lang/String;
-
-    aget-object p1, p1, v1
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-gez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final j(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Z)V
-    .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljavax/net/ssl/SSLException;
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    const/4 v1, 0x0
-
-    if-eqz p2, :cond_0
-
-    .line 2
-    array-length v2, p2
-
-    if-lez v2, :cond_0
-
-    aget-object v2, p2, v1
-
-    if-eqz v2, :cond_0
-
-    .line 3
-    aget-object p2, p2, v1
-
-    invoke-virtual {v0, p2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    if-eqz p3, :cond_2
-
-    .line 4
-    array-length p2, p3
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, p2, :cond_2
-
-    aget-object v3, p3, v2
-
-    if-eqz v3, :cond_1
-
-    .line 5
-    invoke-virtual {v0, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 6
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_d
-
-    .line 7
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 8
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p3
-
-    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {p3, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p0, p3}, Lvf/a;->h(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
-    .line 9
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    move v2, v1
-
-    :cond_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_b
-
-    .line 10
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 11
-    sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, " <"
-
-    .line 12
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 13
-    invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v3, 0x3e
-
-    .line 14
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 15
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    const-string v3, " OR"
-
-    .line 16
-    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_4
-    const-string v3, "\\."
-
-    .line 17
-    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 18
-    array-length v4, v3
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x1
-
-    if-lt v4, v5, :cond_5
-
-    aget-object v4, v3, v1
-
-    const-string v5, "*"
-
-    .line 19
-    invoke-virtual {v4, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    .line 20
-    invoke-virtual {p0, v2}, Lvf/a;->i(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    invoke-static {p1}, Lvf/a;->g(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    move v4, v6
-
-    goto :goto_1
-
-    :cond_5
-    move v4, v1
-
-    :goto_1
-    if-eqz v4, :cond_a
-
-    .line 21
-    aget-object v3, v3, v1
-
-    .line 22
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-le v4, v6, :cond_7
-
-    .line 23
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    sub-int/2addr v4, v6
-
-    invoke-virtual {v3, v1, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 24
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 25
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    invoke-virtual {p3, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 26
-    invoke-virtual {p3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    invoke-virtual {v5, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    move v3, v6
-
-    goto :goto_2
-
-    :cond_6
-    move v3, v1
-
-    goto :goto_2
-
-    .line 27
-    :cond_7
-    invoke-virtual {v2, v6}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p3, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    :goto_2
-    if-eqz v3, :cond_9
-
-    if-eqz p4, :cond_9
-
-    .line 28
-    invoke-static {p3}, Lvf/a;->b(Ljava/lang/String;)I
-
-    move-result v3
-
-    invoke-static {v2}, Lvf/a;->b(Ljava/lang/String;)I
-
-    move-result v2
-
-    if-ne v3, v2, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    move v6, v1
-
-    :goto_3
-    move v3, v6
-
-    :cond_9
-    move v2, v3
-
-    goto :goto_4
-
-    .line 29
-    :cond_a
-    invoke-virtual {p0, v2}, Lvf/a;->h(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    :goto_4
-    if-eqz v2, :cond_3
-
-    :cond_b
-    if-eqz v2, :cond_c
-
-    return-void
-
-    .line 30
-    :cond_c
-    new-instance p3, Ljavax/net/ssl/SSLException;
-
-    new-instance p4, Ljava/lang/StringBuilder;
-
-    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "hostname in certificate didn\'t match: <"
-
-    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "> !="
-
-    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p3, p1}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;)V
-
-    throw p3
-
-    :cond_d
-    const-string p2, "Certificate for <"
-
-    const-string p3, "> doesn\'t contain CN or DNS subjectAlt"
-
-    .line 31
-    invoke-static {p2, p1, p3}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 32
-    new-instance p2, Ljavax/net/ssl/SSLException;
-
-    invoke-direct {p2, p1}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public final verify(Ljava/lang/String;Ljava/security/cert/X509Certificate;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljavax/net/ssl/SSLException;
-        }
-    .end annotation
-
-    .line 14
-    invoke-static {p2}, Lvf/a;->d(Ljava/security/cert/X509Certificate;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 15
-    invoke-static {p2, p1}, Lvf/a;->f(Ljava/security/cert/X509Certificate;Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p2
-
-    .line 16
-    invoke-interface {p0, p1, v0, p2}, Lvf/m;->verify(Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     return-void
 .end method
 
-.method public final verify(Ljava/lang/String;Ljavax/net/ssl/SSLSocket;)V
+.method public static synthetic C5()Lvf/a;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    return-object v0
+.end method
+
+.method public static synthetic D5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->t6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic E5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->W5()V
+
+    return-void
+.end method
+
+.method public static synthetic F5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->q6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic G5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->V5()V
+
+    return-void
+.end method
+
+.method public static synthetic H5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->p6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic I5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->U5()V
+
+    return-void
+.end method
+
+.method public static synthetic J5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->o6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic K5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->T5()V
+
+    return-void
+.end method
+
+.method public static synthetic L5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->Y5()V
+
+    return-void
+.end method
+
+.method public static synthetic M5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->s6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic N5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->X5()V
+
+    return-void
+.end method
+
+.method public static synthetic O5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->v6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic P5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->a6()V
+
+    return-void
+.end method
+
+.method public static synthetic Q5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->u6(I)V
+
+    return-void
+.end method
+
+.method public static synthetic R5(Lvf/a;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lvf/a;->Z5()V
+
+    return-void
+.end method
+
+.method public static synthetic S5(Lvf/a;I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lvf/a;->r6(I)V
+
+    return-void
+.end method
+
+.method public static b6()Lvf/a;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    return-object v0
+.end method
+
+.method public static c6()Lvf/a$b;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->toBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lvf/a$b;
+
+    return-object v0
+.end method
+
+.method public static d6(Lvf/a;)Lvf/a$b;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->toBuilder()Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lvf/a$b;
+
+    invoke-virtual {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a$b;
+
+    return-object p0
+.end method
+
+.method public static e6(Ljava/io/InputStream;)Lvf/a;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -938,85 +304,1264 @@
         }
     .end annotation
 
-    const-string v0, "host to verify is null"
-
     .line 1
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    sget-object v0, Lvf/a;->X0:Lvf/a;
 
-    .line 2
-    invoke-virtual {p2}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
+    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-nez v0, :cond_0
+    check-cast p0, Lvf/a;
 
-    .line 3
-    invoke-virtual {p2}, Ljavax/net/ssl/SSLSocket;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    .line 5
-    invoke-virtual {p2}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 6
-    invoke-virtual {p2}, Ljavax/net/ssl/SSLSocket;->startHandshake()V
-
-    .line 7
-    invoke-virtual {p2}, Ljavax/net/ssl/SSLSocket;->getSession()Ljavax/net/ssl/SSLSession;
-
-    move-result-object v0
-
-    .line 8
-    :cond_0
-    invoke-interface {v0}, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    .line 9
-    aget-object p2, p2, v0
-
-    check-cast p2, Ljava/security/cert/X509Certificate;
-
-    .line 10
-    invoke-virtual {p0, p1, p2}, Lvf/a;->verify(Ljava/lang/String;Ljava/security/cert/X509Certificate;)V
-
-    return-void
+    return-object p0
 .end method
 
-.method public final verify(Ljava/lang/String;Ljavax/net/ssl/SSLSession;)Z
+.method public static f6(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseDelimitedFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static g6(Lcom/google/protobuf/ByteString;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static h6(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static i6(Lcom/google/protobuf/CodedInputStream;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static j6(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static k6(Ljava/io/InputStream;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static l6(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static m6([B)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[B)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static n6([BLcom/google/protobuf/ExtensionRegistryLite;)Lvf/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageLite;->parseFrom(Lcom/google/protobuf/GeneratedMessageLite;[BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p0
+
+    check-cast p0, Lvf/a;
+
+    return-object p0
+.end method
+
+.method public static parser()Lcom/google/protobuf/Parser;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/protobuf/Parser<",
+            "Lvf/a;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lvf/a;->X0:Lvf/a;
+
+    invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public F()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->c:I
+
+    return v0
+.end method
+
+.method public J2()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->h:I
+
+    return v0
+.end method
+
+.method public M3()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->g:I
+
+    return v0
+.end method
+
+.method public N4()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->e:I
+
+    return v0
+.end method
+
+.method public O3()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->a:I
+
+    return v0
+.end method
+
+.method public final T5()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 11
-    :try_start_0
-    invoke-interface {p2}, Ljavax/net/ssl/SSLSession;->getPeerCertificates()[Ljava/security/cert/Certificate;
+    .line 1
+    iput v0, p0, Lvf/a;->h:I
 
-    move-result-object p2
+    return-void
+.end method
+
+.method public final U5()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->g:I
+
+    return-void
+.end method
+
+.method public final V5()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->f:I
+
+    return-void
+.end method
+
+.method public final W5()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->e:I
+
+    return-void
+.end method
+
+.method public final X5()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->b:I
+
+    return-void
+.end method
+
+.method public final Y5()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->a:I
+
+    return-void
+.end method
+
+.method public final Z5()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->d:I
+
+    return-void
+.end method
+
+.method public final a6()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput v0, p0, Lvf/a;->c:I
+
+    return-void
+.end method
+
+.method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    .line 1
+    sget-object v0, Lvf/a$a;->a:[I
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    packed-switch p1, :pswitch_data_0
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    .line 3
+    :pswitch_0
+    sget-object p1, Lvf/a;->Y0:Lcom/google/protobuf/Parser;
+
+    if-nez p1, :cond_1
+
+    const-class p1, Lvf/a;
+
+    monitor-enter p1
+
+    .line 4
+    :try_start_0
+    sget-object p2, Lvf/a;->Y0:Lcom/google/protobuf/Parser;
+
+    if-nez p2, :cond_0
+
+    .line 5
+    new-instance p2, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
+
+    sget-object p3, Lvf/a;->X0:Lvf/a;
+
+    invoke-direct {p2, p3}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
+
+    sput-object p2, Lvf/a;->Y0:Lcom/google/protobuf/Parser;
+
+    .line 6
+    :cond_0
+    monitor-exit p1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p2
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+
+    .line 7
+    :cond_1
+    :goto_0
+    sget-object p1, Lvf/a;->Y0:Lcom/google/protobuf/Parser;
+
+    return-object p1
+
+    .line 8
+    :pswitch_1
+    check-cast p2, Lcom/google/protobuf/CodedInputStream;
+
+    .line 9
+    check-cast p3, Lcom/google/protobuf/ExtensionRegistryLite;
+
+    :cond_2
+    :goto_1
+    if-nez v1, :cond_c
+
+    .line 10
+    :try_start_1
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readTag()I
+
+    move-result p1
+
+    if-eqz p1, :cond_b
+
+    const/16 p3, 0x8
+
+    if-eq p1, p3, :cond_a
+
+    const/16 p3, 0x10
+
+    if-eq p1, p3, :cond_9
+
+    const/16 p3, 0x18
+
+    if-eq p1, p3, :cond_8
+
+    const/16 p3, 0x20
+
+    if-eq p1, p3, :cond_7
+
+    const/16 p3, 0x28
+
+    if-eq p1, p3, :cond_6
+
+    const/16 p3, 0x30
+
+    if-eq p1, p3, :cond_5
+
+    const/16 p3, 0x38
+
+    if-eq p1, p3, :cond_4
+
+    const/16 p3, 0x40
+
+    if-eq p1, p3, :cond_3
+
+    .line 11
+    invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_2
 
     .line 12
-    aget-object p2, p2, v0
+    :cond_3
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
-    check-cast p2, Ljava/security/cert/X509Certificate;
+    move-result p1
+
+    iput p1, p0, Lvf/a;->h:I
+
+    goto :goto_1
 
     .line 13
-    invoke-virtual {p0, p1, p2}, Lvf/a;->verify(Ljava/lang/String;Ljava/security/cert/X509Certificate;)V
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_4
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
-    const/4 p1, 0x1
+    move-result p1
 
-    return p1
+    iput p1, p0, Lvf/a;->g:I
+
+    goto :goto_1
+
+    .line 14
+    :cond_5
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->f:I
+
+    goto :goto_1
+
+    .line 15
+    :cond_6
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->e:I
+
+    goto :goto_1
+
+    .line 16
+    :cond_7
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->d:I
+
+    goto :goto_1
+
+    .line 17
+    :cond_8
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->c:I
+
+    goto :goto_1
+
+    .line 18
+    :cond_9
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->b:I
+
+    goto :goto_1
+
+    .line 19
+    :cond_a
+    invoke-virtual {p2}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->a:I
+    :try_end_1
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :cond_b
+    :goto_2
+    move v1, v2
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
 
     :catch_0
+    move-exception p1
+
+    .line 20
+    :try_start_2
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    new-instance p3, Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    .line 21
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p3, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :catch_1
+    move-exception p1
+
+    .line 22
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-virtual {p1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 23
+    :goto_3
+    throw p1
+
+    .line 24
+    :cond_c
+    :pswitch_2
+    sget-object p1, Lvf/a;->X0:Lvf/a;
+
+    return-object p1
+
+    .line 25
+    :pswitch_3
+    check-cast p2, Lcom/google/protobuf/GeneratedMessageLite$Visitor;
+
+    .line 26
+    check-cast p3, Lvf/a;
+
+    .line 27
+    iget p1, p0, Lvf/a;->a:I
+
+    if-eqz p1, :cond_d
+
+    move v0, v2
+
+    goto :goto_4
+
+    :cond_d
+    move v0, v1
+
+    :goto_4
+    iget v3, p3, Lvf/a;->a:I
+
+    if-eqz v3, :cond_e
+
+    move v4, v2
+
+    goto :goto_5
+
+    :cond_e
+    move v4, v1
+
+    :goto_5
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->a:I
+
+    .line 28
+    iget p1, p0, Lvf/a;->b:I
+
+    if-eqz p1, :cond_f
+
+    move v0, v2
+
+    goto :goto_6
+
+    :cond_f
+    move v0, v1
+
+    :goto_6
+    iget v3, p3, Lvf/a;->b:I
+
+    if-eqz v3, :cond_10
+
+    move v4, v2
+
+    goto :goto_7
+
+    :cond_10
+    move v4, v1
+
+    :goto_7
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->b:I
+
+    .line 29
+    iget p1, p0, Lvf/a;->c:I
+
+    if-eqz p1, :cond_11
+
+    move v0, v2
+
+    goto :goto_8
+
+    :cond_11
+    move v0, v1
+
+    :goto_8
+    iget v3, p3, Lvf/a;->c:I
+
+    if-eqz v3, :cond_12
+
+    move v4, v2
+
+    goto :goto_9
+
+    :cond_12
+    move v4, v1
+
+    :goto_9
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->c:I
+
+    .line 30
+    iget p1, p0, Lvf/a;->d:I
+
+    if-eqz p1, :cond_13
+
+    move v0, v2
+
+    goto :goto_a
+
+    :cond_13
+    move v0, v1
+
+    :goto_a
+    iget v3, p3, Lvf/a;->d:I
+
+    if-eqz v3, :cond_14
+
+    move v4, v2
+
+    goto :goto_b
+
+    :cond_14
+    move v4, v1
+
+    :goto_b
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->d:I
+
+    .line 31
+    iget p1, p0, Lvf/a;->e:I
+
+    if-eqz p1, :cond_15
+
+    move v0, v2
+
+    goto :goto_c
+
+    :cond_15
+    move v0, v1
+
+    :goto_c
+    iget v3, p3, Lvf/a;->e:I
+
+    if-eqz v3, :cond_16
+
+    move v4, v2
+
+    goto :goto_d
+
+    :cond_16
+    move v4, v1
+
+    :goto_d
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->e:I
+
+    .line 32
+    iget p1, p0, Lvf/a;->f:I
+
+    if-eqz p1, :cond_17
+
+    move v0, v2
+
+    goto :goto_e
+
+    :cond_17
+    move v0, v1
+
+    :goto_e
+    iget v3, p3, Lvf/a;->f:I
+
+    if-eqz v3, :cond_18
+
+    move v4, v2
+
+    goto :goto_f
+
+    :cond_18
+    move v4, v1
+
+    :goto_f
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->f:I
+
+    .line 33
+    iget p1, p0, Lvf/a;->g:I
+
+    if-eqz p1, :cond_19
+
+    move v0, v2
+
+    goto :goto_10
+
+    :cond_19
+    move v0, v1
+
+    :goto_10
+    iget v3, p3, Lvf/a;->g:I
+
+    if-eqz v3, :cond_1a
+
+    move v4, v2
+
+    goto :goto_11
+
+    :cond_1a
+    move v4, v1
+
+    :goto_11
+    invoke-interface {p2, v0, p1, v4, v3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->g:I
+
+    .line 34
+    iget p1, p0, Lvf/a;->h:I
+
+    if-eqz p1, :cond_1b
+
+    move v0, v2
+
+    goto :goto_12
+
+    :cond_1b
+    move v0, v1
+
+    :goto_12
+    iget p3, p3, Lvf/a;->h:I
+
+    if-eqz p3, :cond_1c
+
+    move v1, v2
+
+    :cond_1c
+    invoke-interface {p2, v0, p1, v1, p3}, Lcom/google/protobuf/GeneratedMessageLite$Visitor;->visitInt(ZIZI)I
+
+    move-result p1
+
+    iput p1, p0, Lvf/a;->h:I
+
+    .line 35
+    sget-object p1, Lcom/google/protobuf/GeneratedMessageLite$MergeFromVisitor;->INSTANCE:Lcom/google/protobuf/GeneratedMessageLite$MergeFromVisitor;
+
+    return-object p0
+
+    .line 36
+    :pswitch_4
+    new-instance p1, Lvf/a$b;
+
+    invoke-direct {p1, v0}, Lvf/a$b;-><init>(Lvf/a$a;)V
+
+    return-object p1
+
+    :pswitch_5
+    return-object v0
+
+    .line 37
+    :pswitch_6
+    sget-object p1, Lvf/a;->X0:Lvf/a;
+
+    return-object p1
+
+    .line 38
+    :pswitch_7
+    new-instance p1, Lvf/a;
+
+    invoke-direct {p1}, Lvf/a;-><init>()V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public getSerializedSize()I
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lvf/a;->memoizedSerializedSize:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 2
+    iget v1, p0, Lvf/a;->a:I
+
+    if-eqz v1, :cond_1
+
+    const/4 v2, 0x1
+
+    .line 3
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 4
+    :cond_1
+    iget v1, p0, Lvf/a;->b:I
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, 0x2
+
+    .line 5
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 6
+    :cond_2
+    iget v1, p0, Lvf/a;->c:I
+
+    if-eqz v1, :cond_3
+
+    const/4 v2, 0x3
+
+    .line 7
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 8
+    :cond_3
+    iget v1, p0, Lvf/a;->d:I
+
+    if-eqz v1, :cond_4
+
+    const/4 v2, 0x4
+
+    .line 9
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 10
+    :cond_4
+    iget v1, p0, Lvf/a;->e:I
+
+    if-eqz v1, :cond_5
+
+    const/4 v2, 0x5
+
+    .line 11
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 12
+    :cond_5
+    iget v1, p0, Lvf/a;->f:I
+
+    if-eqz v1, :cond_6
+
+    const/4 v2, 0x6
+
+    .line 13
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 14
+    :cond_6
+    iget v1, p0, Lvf/a;->g:I
+
+    if-eqz v1, :cond_7
+
+    const/4 v2, 0x7
+
+    .line 15
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 16
+    :cond_7
+    iget v1, p0, Lvf/a;->h:I
+
+    if-eqz v1, :cond_8
+
+    const/16 v2, 0x8
+
+    .line 17
+    invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 18
+    :cond_8
+    iput v0, p0, Lvf/a;->memoizedSerializedSize:I
+
+    return v0
+.end method
+
+.method public j1()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->f:I
+
+    return v0
+.end method
+
+.method public n3()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->b:I
+
+    return v0
+.end method
+
+.method public final o6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->h:I
+
+    return-void
+.end method
+
+.method public final p6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->g:I
+
+    return-void
+.end method
+
+.method public final q6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->f:I
+
+    return-void
+.end method
+
+.method public final r6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->e:I
+
+    return-void
+.end method
+
+.method public final s6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->b:I
+
+    return-void
+.end method
+
+.method public final t6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->a:I
+
+    return-void
+.end method
+
+.method public final u6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->d:I
+
+    return-void
+.end method
+
+.method public final v6(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lvf/a;->c:I
+
+    return-void
+.end method
+
+.method public writeTo(Lcom/google/protobuf/CodedOutputStream;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lvf/a;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    .line 2
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 3
+    :cond_0
+    iget v0, p0, Lvf/a;->b:I
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x2
+
+    .line 4
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 5
+    :cond_1
+    iget v0, p0, Lvf/a;->c:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x3
+
+    .line 6
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 7
+    :cond_2
+    iget v0, p0, Lvf/a;->d:I
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x4
+
+    .line 8
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 9
+    :cond_3
+    iget v0, p0, Lvf/a;->e:I
+
+    if-eqz v0, :cond_4
+
+    const/4 v1, 0x5
+
+    .line 10
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 11
+    :cond_4
+    iget v0, p0, Lvf/a;->f:I
+
+    if-eqz v0, :cond_5
+
+    const/4 v1, 0x6
+
+    .line 12
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 13
+    :cond_5
+    iget v0, p0, Lvf/a;->g:I
+
+    if-eqz v0, :cond_6
+
+    const/4 v1, 0x7
+
+    .line 14
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    .line 15
+    :cond_6
+    iget v0, p0, Lvf/a;->h:I
+
+    if-eqz v0, :cond_7
+
+    const/16 v1, 0x8
+
+    .line 16
+    invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
+
+    :cond_7
+    return-void
+.end method
+
+.method public x2()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lvf/a;->d:I
+
     return v0
 .end method

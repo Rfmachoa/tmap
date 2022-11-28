@@ -56,11 +56,11 @@
 
     iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable$h;->a:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-static {v0}, Lcom/airbnb/lottie/LottieDrawable;->b(Lcom/airbnb/lottie/LottieDrawable;)Lw3/e;
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieDrawable;->b(Lcom/airbnb/lottie/LottieDrawable;)Ls5/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lw3/e;->h()F
+    invoke-virtual {v0}, Ls5/e;->h()F
 
     move-result v0
 

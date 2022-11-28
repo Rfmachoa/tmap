@@ -26,6 +26,11 @@
 # direct methods
 .method public constructor <init>(Lretrofit2/OkHttpCall;Lretrofit2/Callback;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lretrofit2/OkHttpCall$1;->this$0:Lretrofit2/OkHttpCall;

@@ -85,6 +85,7 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 3
     iget p0, p0, Landroid/util/TypedValue;->data:I
 
     if-eqz p0, :cond_0
@@ -200,6 +201,38 @@
     goto :goto_0
 .end method
 
+.method public static resolveInteger(Landroid/content/Context;II)I
+    .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    iget p1, p0, Landroid/util/TypedValue;->type:I
+
+    const/16 v0, 0x10
+
+    if-ne p1, v0, :cond_0
+
+    .line 3
+    iget p2, p0, Landroid/util/TypedValue;->data:I
+
+    :cond_0
+    return p2
+.end method
+
 .method public static resolveMinimumAccessibleTouchTarget(Landroid/content/Context;)I
     .locals 2
     .param p0    # Landroid/content/Context;
@@ -222,7 +255,7 @@
 .end method
 
 .method public static resolveOrThrow(Landroid/content/Context;ILjava/lang/String;)I
-    .locals 3
+    .locals 0
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -237,18 +270,63 @@
     .end param
 
     .line 1
+    invoke-static {p0, p1, p2}, Lcom/google/android/material/resources/MaterialAttributes;->resolveTypedValueOrThrow(Landroid/content/Context;ILjava/lang/String;)Landroid/util/TypedValue;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/TypedValue;->data:I
+
+    return p0
+.end method
+
+.method public static resolveOrThrow(Landroid/view/View;I)I
+    .locals 0
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+
+    .line 2
+    invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveTypedValueOrThrow(Landroid/view/View;I)Landroid/util/TypedValue;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/TypedValue;->data:I
+
+    return p0
+.end method
+
+.method public static resolveTypedValueOrThrow(Landroid/content/Context;ILjava/lang/String;)Landroid/util/TypedValue;
+    .locals 3
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/AttrRes;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 3
     invoke-static {p0, p1}, Lcom/google/android/material/resources/MaterialAttributes;->resolve(Landroid/content/Context;I)Landroid/util/TypedValue;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2
-    iget p0, v0, Landroid/util/TypedValue;->data:I
+    return-object v0
 
-    return p0
-
-    .line 3
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -262,7 +340,7 @@
 
     const/4 p2, 0x1
 
-    .line 4
+    .line 5
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -275,7 +353,7 @@
 
     const-string p0, "%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant)."
 
-    .line 5
+    .line 6
     invoke-static {p0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -285,7 +363,7 @@
     throw v0
 .end method
 
-.method public static resolveOrThrow(Landroid/view/View;I)I
+.method public static resolveTypedValueOrThrow(Landroid/view/View;I)Landroid/util/TypedValue;
     .locals 1
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -295,8 +373,10 @@
         .annotation build Landroidx/annotation/AttrRes;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 6
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -309,10 +389,10 @@
 
     move-result-object p0
 
-    .line 7
-    invoke-static {v0, p1, p0}, Lcom/google/android/material/resources/MaterialAttributes;->resolveOrThrow(Landroid/content/Context;ILjava/lang/String;)I
+    .line 2
+    invoke-static {v0, p1, p0}, Lcom/google/android/material/resources/MaterialAttributes;->resolveTypedValueOrThrow(Landroid/content/Context;ILjava/lang/String;)Landroid/util/TypedValue;
 
-    move-result p0
+    move-result-object p0
 
-    return p0
+    return-object p0
 .end method

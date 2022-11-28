@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/c$a;
@@ -18,14 +22,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "exifBuilder"
-        }
-    .end annotation
 
     .line 1
     invoke-interface {p0}, Landroidx/camera/core/impl/c;->d()Landroidx/camera/core/impl/CameraCaptureMetaData$FlashState;
@@ -37,7 +33,7 @@
     return-void
 .end method
 
-.method public abstract b()Lx/g1;
+.method public abstract b()Lb0/v1;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
@@ -50,22 +46,39 @@
     .end annotation
 .end method
 
-.method public abstract e()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
+.method public e()Landroid/hardware/camera2/CaptureResult;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-static {}, Landroidx/camera/core/impl/c$a;->j()Landroidx/camera/core/impl/c;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroidx/camera/core/impl/c;->e()Landroid/hardware/camera2/CaptureResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract f()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
 
-.method public abstract f()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
+.method public abstract g()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
 
-.method public abstract g()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
+.method public abstract h()Landroidx/camera/core/impl/CameraCaptureMetaData$AfMode;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
 
-.method public abstract h()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
+.method public abstract i()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method

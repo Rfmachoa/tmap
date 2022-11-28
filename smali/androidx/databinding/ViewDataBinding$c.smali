@@ -29,7 +29,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/t;
+.method public a(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -39,7 +39,7 @@
             "Ljava/lang/ref/ReferenceQueue<",
             "Landroidx/databinding/ViewDataBinding;",
             ">;)",
-            "Landroidx/databinding/t;"
+            "Landroidx/databinding/u;"
         }
     .end annotation
 
@@ -49,7 +49,7 @@
     invoke-direct {v0, p1, p2, p3}, Landroidx/databinding/ViewDataBinding$m;-><init>(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)V
 
     .line 2
-    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding$m;->c()Landroidx/databinding/t;
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding$m;->c()Landroidx/databinding/u;
 
     move-result-object p1
 

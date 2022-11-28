@@ -1,76 +1,141 @@
 .class final Lcom/google/android/gms/tagmanager/zzew;
-.super Lcom/google/android/gms/tagmanager/zzbu;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
+
+# interfaces
+.implements Lcom/google/android/gms/tagmanager/zzeb;
 
 
-# static fields
-.field private static final zza:Ljava/lang/String;
+# instance fields
+.field private zza:D
+
+.field private zzb:J
+
+.field private final zzc:Ljava/lang/Object;
+
+.field private final zzd:Lcom/google/android/gms/common/util/Clock;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzD:Lcom/google/android/gms/internal/gtm/zza;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/tagmanager/zzew;->zza:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 2
 
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzew;->zza:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
     .line 1
-    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbu;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/tagmanager/zzew;->zzc:Ljava/lang/Object;
+
+    const-wide/high16 v0, 0x404e000000000000L    # 60.0
+
+    iput-wide v0, p0, Lcom/google/android/gms/tagmanager/zzew;->zza:D
+
+    invoke-static {}, Lcom/google/android/gms/common/util/DefaultClock;->getInstance()Lcom/google/android/gms/common/util/Clock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/tagmanager/zzew;->zzd:Lcom/google/android/gms/common/util/Clock;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzak;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)",
-            "Lcom/google/android/gms/internal/gtm/zzak;"
-        }
-    .end annotation
-
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+.method public final zza()Z
+    .locals 11
 
     .line 1
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzew;->zzc:Ljava/lang/Object;
 
-    move-result-object p1
+    monitor-enter v0
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzak;
+    :try_start_0
+    iget-object v1, p0, Lcom/google/android/gms/tagmanager/zzew;->zzd:Lcom/google/android/gms/common/util/Clock;
 
-    move-result-object p1
+    invoke-interface {v1}, Lcom/google/android/gms/common/util/Clock;->currentTimeMillis()J
 
-    return-object p1
-.end method
+    move-result-wide v1
 
-.method public final zzb()Z
-    .locals 1
+    iget-wide v3, p0, Lcom/google/android/gms/tagmanager/zzew;->zza:D
+
+    const-wide/high16 v5, 0x404e000000000000L    # 60.0
+
+    cmpg-double v7, v3, v5
+
+    if-gez v7, :cond_0
+
+    iget-wide v7, p0, Lcom/google/android/gms/tagmanager/zzew;->zzb:J
+
+    sub-long v7, v1, v7
+
+    long-to-double v7, v7
+
+    const-wide v9, 0x409f400000000000L    # 2000.0
+
+    div-double/2addr v7, v9
+
+    const-wide/16 v9, 0x0
+
+    cmpl-double v9, v7, v9
+
+    if-lez v9, :cond_0
+
+    add-double/2addr v3, v7
+
+    .line 2
+    invoke-static {v5, v6, v3, v4}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/google/android/gms/tagmanager/zzew;->zza:D
+
+    :cond_0
+    iput-wide v1, p0, Lcom/google/android/gms/tagmanager/zzew;->zzb:J
+
+    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double v1, v3, v1
+
+    if-ltz v1, :cond_1
+
+    const-wide/high16 v1, -0x4010000000000000L    # -1.0
+
+    add-double/2addr v3, v1
+
+    iput-wide v3, p0, Lcom/google/android/gms/tagmanager/zzew;->zza:D
+
+    .line 3
+    monitor-exit v0
 
     const/4 v0, 0x1
 
     return v0
+
+    :cond_1
+    const-string v1, "No more tokens available."
+
+    const-string v2, "GoogleTagManager"
+
+    .line 4
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 5
+    monitor-exit v0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v1
+
+    .line 6
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

@@ -1,119 +1,101 @@
-.class public Lcom/android/billingclient/api/s;
+.class public final Lcom/android/billingclient/api/s;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        Lcom/android/billingclient/api/s$a;
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Ljava/lang/Void;",
+        ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final synthetic a:Ljava/lang/String;
 
-.field public b:Ljava/lang/String;
+.field public final synthetic b:Lcom/android/billingclient/api/m;
 
-.field public c:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final synthetic c:Lcom/android/billingclient/api/d;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/android/billingclient/api/d;Ljava/lang/String;Lcom/android/billingclient/api/m;)V
     .locals 0
 
-    .line 1
+    iput-object p1, p0, Lcom/android/billingclient/api/s;->c:Lcom/android/billingclient/api/d;
+
+    iput-object p2, p0, Lcom/android/billingclient/api/s;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/android/billingclient/api/s;->b:Lcom/android/billingclient/api/m;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static c()Lcom/android/billingclient/api/s$a;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lcom/android/billingclient/api/s$a;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/android/billingclient/api/s$a;-><init>(Lcom/android/billingclient/api/i0;)V
-
-    return-object v0
-.end method
-
-.method public static synthetic e(Lcom/android/billingclient/api/s;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/android/billingclient/api/s;->a:Ljava/lang/String;
-
-    return-object p1
-.end method
-
-.method public static synthetic f(Lcom/android/billingclient/api/s;Ljava/util/List;)Ljava/util/List;
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/android/billingclient/api/s;->c:Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method public static synthetic g(Lcom/android/billingclient/api/s;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    .line 1
-    iput-object p1, p0, Lcom/android/billingclient/api/s;->b:Ljava/lang/String;
-
-    return-object p1
-.end method
-
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/s;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
+.method public final bridge synthetic call()Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
+            Ljava/lang/Exception;
         }
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/s;->c:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/billingclient/api/s;->c:Lcom/android/billingclient/api/d;
 
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    iget-object v1, p0, Lcom/android/billingclient/api/s;->a:Ljava/lang/String;
 
     .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/s;->b:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/billingclient/api/d;->L(Lcom/android/billingclient/api/d;Ljava/lang/String;)Lcom/android/billingclient/api/Purchase$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/billingclient/api/Purchase$a;->b()Ljava/util/List;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/billingclient/api/s;->b:Lcom/android/billingclient/api/m;
+
+    invoke-virtual {v0}, Lcom/android/billingclient/api/Purchase$a;->a()Lcom/android/billingclient/api/f;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lcom/android/billingclient/api/Purchase$a;->b()Ljava/util/List;
+
+    move-result-object v0
+
+    .line 2
+    invoke-interface {v1, v2, v0}, Lcom/android/billingclient/api/m;->a(Lcom/android/billingclient/api/f;Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/android/billingclient/api/s;->b:Lcom/android/billingclient/api/m;
+
+    invoke-virtual {v0}, Lcom/android/billingclient/api/Purchase$a;->a()Lcom/android/billingclient/api/f;
+
+    move-result-object v0
+
+    .line 3
+    invoke-static {}, Lcom/google/android/gms/internal/play_billing/zzp;->zzg()Lcom/google/android/gms/internal/play_billing/zzp;
+
+    move-result-object v2
+
+    invoke-interface {v1, v0, v2}, Lcom/android/billingclient/api/m;->a(Lcom/android/billingclient/api/f;Ljava/util/List;)V
+
+    :goto_0
+    const/4 v0, 0x0
 
     return-object v0
 .end method

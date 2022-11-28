@@ -15,11 +15,19 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public a:Z
 
-.field public b:Ljava/lang/String;
+.field public b:Z
 
-.field public c:Z
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
 
 
 # direct methods

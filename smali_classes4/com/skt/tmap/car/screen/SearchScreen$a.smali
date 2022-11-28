@@ -57,7 +57,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/car/screen/SearchScreen$a;->a:Lcom/skt/tmap/car/screen/SearchScreen;
 
-    invoke-virtual {v0}, Landroidx/car/app/t0;->j()Landroidx/car/app/ScreenManager;
+    invoke-virtual {v0}, Landroidx/car/app/y0;->j()Landroidx/car/app/ScreenManager;
 
     move-result-object v0
 
@@ -65,13 +65,13 @@
 
     iget-object v2, p0, Lcom/skt/tmap/car/screen/SearchScreen$a;->a:Lcom/skt/tmap/car/screen/SearchScreen;
 
-    invoke-virtual {v2}, Landroidx/car/app/t0;->e()Landroidx/car/app/CarContext;
+    invoke-virtual {v2}, Landroidx/car/app/y0;->e()Landroidx/car/app/CarContext;
 
     move-result-object v2
 
     invoke-direct {v1, v2, p1}, Lcom/skt/tmap/car/screen/SearchResultScreen;-><init>(Landroidx/car/app/CarContext;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Landroidx/car/app/ScreenManager;->r(Landroidx/car/app/t0;)V
+    invoke-virtual {v0, v1}, Landroidx/car/app/ScreenManager;->s(Landroidx/car/app/y0;)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/car/screen/SearchScreen$a;->a:Lcom/skt/tmap/car/screen/SearchScreen;
 
-    invoke-virtual {p1}, Landroidx/car/app/t0;->l()V
+    invoke-virtual {p1}, Landroidx/car/app/y0;->l()V
 
     goto :goto_0
 

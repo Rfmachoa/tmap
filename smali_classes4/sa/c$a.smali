@@ -1,79 +1,115 @@
-.class public Lsa/c$a;
+.class public synthetic Lsa/c$a;
 .super Ljava/lang/Object;
-.source "EnglishTTS.java"
-
-# interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.source "MediaLogSenderItem.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lsa/c;->l(Landroid/content/Context;Ljava/lang/String;ZLsa/d;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lsa/c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x1009
     name = null
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Lsa/c;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lsa/c;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 1
-    iput-object p1, p0, Lsa/c$a;->a:Lsa/c;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 2
-
-    .line 1
-    invoke-static {}, Lsa/c;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;->values()[Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tts.OnPrepared"
+    array-length v0, v0
 
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+    new-array v0, v0, [I
 
-    .line 2
-    invoke-static {}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getInstance()Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;
+    sput-object v0, Lsa/c$a;->a:[I
 
-    move-result-object v0
+    :try_start_0
+    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;->START:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
 
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getAladdinAiCloudManager()Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-object v0
+    move-result v1
 
-    .line 3
-    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->u0()Z
+    const/4 v2, 0x1
 
-    move-result v0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v0, :cond_0
+    :catch_0
+    :try_start_1
+    sget-object v0, Lsa/c$a;->a:[I
 
-    .line 4
-    iget-object p1, p0, Lsa/c$a;->a:Lsa/c;
+    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;->PAUSE:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
 
-    invoke-virtual {p1}, Lsa/c;->f()V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    goto :goto_0
+    move-result v1
 
-    .line 5
-    :cond_0
-    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
+    const/4 v2, 0x2
 
-    :goto_0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Lsa/c$a;->a:[I
+
+    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;->RESUME:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Lsa/c$a;->a:[I
+
+    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;->STOP_CONTINUOUS:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Lsa/c$a;->a:[I
+
+    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;->STOP:Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
     return-void
 .end method

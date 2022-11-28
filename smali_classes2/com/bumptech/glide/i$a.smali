@@ -41,9 +41,9 @@
     .line 1
     iget-object v0, p0, Lcom/bumptech/glide/i$a;->a:Lcom/bumptech/glide/i;
 
-    iget-object v1, v0, Lcom/bumptech/glide/i;->c:Lcom/bumptech/glide/manager/k;
+    iget-object v1, v0, Lcom/bumptech/glide/i;->c:Lcom/bumptech/glide/manager/l;
 
-    invoke-interface {v1, v0}, Lcom/bumptech/glide/manager/k;->b(Lcom/bumptech/glide/manager/l;)V
+    invoke-interface {v1, v0}, Lcom/bumptech/glide/manager/l;->b(Lcom/bumptech/glide/manager/m;)V
 
     return-void
 .end method

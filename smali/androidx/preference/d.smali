@@ -4,12 +4,16 @@
 
 
 # instance fields
-.field public y1:J
+.field public A1:J
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;J)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,23 +38,27 @@
     add-long/2addr p3, p1
 
     .line 4
-    iput-wide p3, p0, Landroidx/preference/d;->y1:J
+    iput-wide p3, p0, Landroidx/preference/d;->A1:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Z(Landroidx/preference/s;)V
+.method public Z(Landroidx/preference/v;)V
     .locals 1
+    .param p1    # Landroidx/preference/v;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/preference/Preference;->Z(Landroidx/preference/s;)V
+    invoke-super {p0, p1}, Landroidx/preference/Preference;->Z(Landroidx/preference/v;)V
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p1, v0}, Landroidx/preference/s;->g(Z)V
+    invoke-virtual {p1, v0}, Landroidx/preference/v;->h(Z)V
 
     return-void
 .end method
@@ -213,7 +221,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Landroidx/preference/d;->y1:J
+    iget-wide v0, p0, Landroidx/preference/d;->A1:J
 
     return-wide v0
 .end method

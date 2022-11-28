@@ -44,43 +44,55 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic $call:Lkotlin/jvm/internal/Ref$ObjectRef;
-
 .field public final synthetic $callback:Lretrofit2/Callback;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lretrofit2/Callback<",
+            "Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public final synthetic this$0:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;Lretrofit2/Callback;Lkotlin/jvm/internal/Ref$ObjectRef;Lretrofit2/Call;ILcom/skt/tmap/engine/navigation/network/UrlSwitchInterceptor;)V
+.method public constructor <init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;Lretrofit2/Callback;ILcom/skt/tmap/engine/navigation/network/UrlSwitchInterceptor;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lretrofit2/Callback;",
-            "Lkotlin/jvm/internal/Ref$ObjectRef;",
-            "Lretrofit2/Call;",
-            "I",
+            "Lkotlin/jvm/internal/Ref$ObjectRef<",
+            "Lretrofit2/Call<",
+            "Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;",
+            ">;>;",
+            "Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;",
+            "Lretrofit2/Callback<",
+            "Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/VmsGuideInfoResponse;",
+            ">;I",
             "Lcom/skt/tmap/engine/navigation/network/UrlSwitchInterceptor;",
             ")V"
         }
     .end annotation
 
+    iput-object p2, p0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$requestVmsGuideInfo$1;->this$0:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
+
+    iput-object p3, p0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$requestVmsGuideInfo$1;->$callback:Lretrofit2/Callback;
+
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$requestVmsGuideInfo$1;->this$0:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;
+    iget-object p1, p1, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    iput-object p2, p0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$requestVmsGuideInfo$1;->$callback:Lretrofit2/Callback;
+    check-cast p1, Lretrofit2/Call;
 
-    iput-object p3, p0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$requestVmsGuideInfo$1;->$call:Lkotlin/jvm/internal/Ref$ObjectRef;
-
-    invoke-direct {p0, p4, p5, p6}, Lcom/skt/tmap/engine/navigation/network/RetryableCallback;-><init>(Lretrofit2/Call;ILcom/skt/tmap/engine/navigation/network/UrlSwitchInterceptor;)V
+    invoke-direct {p0, p1, p4, p5}, Lcom/skt/tmap/engine/navigation/network/RetryableCallback;-><init>(Lretrofit2/Call;ILcom/skt/tmap/engine/navigation/network/UrlSwitchInterceptor;)V
 
     return-void
 .end method
@@ -112,7 +124,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "t"
+    const-string v0, "t"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -209,38 +221,34 @@
 
     move-result-object v1
 
-    const/4 v2, 0x1
-
     if-eqz v1, :cond_2
 
     .line 4
     invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
-    move-result v3
+    move-result v2
 
-    if-nez v3, :cond_1
+    if-nez v2, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     goto :goto_2
 
     :cond_2
     :goto_1
-    move v3, v2
+    const/4 v2, 0x1
 
     :goto_2
-    if-nez v3, :cond_3
+    if-nez v2, :cond_3
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    xor-int/2addr v0, v2
-
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_3
 
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3$requestVmsGuideInfo$1;->this$0:Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;

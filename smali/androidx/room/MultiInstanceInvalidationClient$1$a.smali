@@ -47,11 +47,11 @@
 
     iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient$1;->this$0:Landroidx/room/MultiInstanceInvalidationClient;
 
-    iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/g;
+    iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/p0;
 
     iget-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient$1$a;->a:[Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroidx/room/g;->h([Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroidx/room/p0;->i([Ljava/lang/String;)V
 
     return-void
 .end method

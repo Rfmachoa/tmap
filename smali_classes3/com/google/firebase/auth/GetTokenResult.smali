@@ -1,13 +1,10 @@
 .class public Lcom/google/firebase/auth/GetTokenResult;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-auth-interop@@20.0.0"
+.source "com.google.firebase:firebase-auth-interop@@19.0.2"
 
 
 # instance fields
 .field private zza:Ljava/lang/String;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
 
 .field private zzb:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;

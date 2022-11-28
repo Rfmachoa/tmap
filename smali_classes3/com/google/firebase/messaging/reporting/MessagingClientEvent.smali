@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/messaging/reporting/MessagingClientEvent;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "MessagingClientEvent.java"
 
 
 # annotations
@@ -73,66 +73,82 @@
 
     move-object v0, p0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-wide v1, p1
 
+    .line 2
     iput-wide v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->project_number_:J
 
     move-object v1, p3
 
+    .line 3
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->message_id_:Ljava/lang/String;
 
     move-object v1, p4
 
+    .line 4
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->instance_id_:Ljava/lang/String;
 
     move-object v1, p5
 
+    .line 5
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->message_type_:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;
 
     move-object v1, p6
 
+    .line 6
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->sdk_platform_:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     move-object v1, p7
 
+    .line 7
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->package_name_:Ljava/lang/String;
 
     move-object v1, p8
 
+    .line 8
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->collapse_key_:Ljava/lang/String;
 
     move v1, p9
 
+    .line 9
     iput v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->priority_:I
 
     move v1, p10
 
+    .line 10
     iput v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->ttl_:I
 
     move-object v1, p11
 
+    .line 11
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->topic_:Ljava/lang/String;
 
     move-wide v1, p12
 
+    .line 12
     iput-wide v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->bulk_id_:J
 
     move-object/from16 v1, p14
 
+    .line 13
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->event_:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
     move-object/from16 v1, p15
 
+    .line 14
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->analytics_label_:Ljava/lang/String;
 
     move-wide/from16 v1, p16
 
+    .line 15
     iput-wide v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->campaign_id_:J
 
     move-object/from16 v1, p18
 
+    .line 16
     iput-object v1, v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->composer_label_:Ljava/lang/String;
 
     return-void
@@ -140,9 +156,8 @@
 
 .method public static getDefaultInstance()Lcom/google/firebase/messaging/reporting/MessagingClientEvent;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->DEFAULT_INSTANCE:Lcom/google/firebase/messaging/reporting/MessagingClientEvent;
 
     return-object v0
@@ -150,8 +165,6 @@
 
 .method public static newBuilder()Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
     new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
@@ -165,13 +178,11 @@
 # virtual methods
 .method public getAnalyticsLabel()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0xd
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0xd
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->analytics_label_:Ljava/lang/String;
 
     return-object v0
@@ -179,10 +190,11 @@
 
 .method public getBulkId()J
     .locals 2
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0xb
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0xb
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->bulk_id_:J
 
     return-wide v0
@@ -190,10 +202,11 @@
 
 .method public getCampaignId()J
     .locals 2
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0xe
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0xe
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->campaign_id_:J
 
     return-wide v0
@@ -201,13 +214,11 @@
 
 .method public getCollapseKey()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x7
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x7
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->collapse_key_:Ljava/lang/String;
 
     return-object v0
@@ -215,13 +226,11 @@
 
 .method public getComposerLabel()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0xf
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0xf
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->composer_label_:Ljava/lang/String;
 
     return-object v0
@@ -229,13 +238,11 @@
 
 .method public getEvent()Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0xc
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0xc
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->event_:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
     return-object v0
@@ -243,13 +250,11 @@
 
 .method public getInstanceId()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x3
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x3
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->instance_id_:Ljava/lang/String;
 
     return-object v0
@@ -257,13 +262,11 @@
 
 .method public getMessageId()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x2
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x2
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->message_id_:Ljava/lang/String;
 
     return-object v0
@@ -271,13 +274,11 @@
 
 .method public getMessageType()Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x4
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x4
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->message_type_:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;
 
     return-object v0
@@ -285,13 +286,11 @@
 
 .method public getPackageName()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x6
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x6
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->package_name_:Ljava/lang/String;
 
     return-object v0
@@ -299,10 +298,11 @@
 
 .method public getPriority()I
     .locals 1
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x8
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x8
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->priority_:I
 
     return v0
@@ -310,10 +310,11 @@
 
 .method public getProjectNumber()J
     .locals 2
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x1
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x1
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->project_number_:J
 
     return-wide v0
@@ -321,13 +322,11 @@
 
 .method public getSdkPlatform()Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x5
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x5
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->sdk_platform_:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     return-object v0
@@ -335,13 +334,11 @@
 
 .method public getTopic()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0xa
     .end annotation
 
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0xa
-    .end annotation
-
+    .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->topic_:Ljava/lang/String;
 
     return-object v0
@@ -349,10 +346,11 @@
 
 .method public getTtl()I
     .locals 1
-    .annotation build Lcom/google/android/gms/internal/firebase_messaging/zzs;
-        zza = 0x9
+    .annotation build Lcom/google/firebase/encoders/proto/Protobuf;
+        tag = 0x9
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->ttl_:I
 
     return v0

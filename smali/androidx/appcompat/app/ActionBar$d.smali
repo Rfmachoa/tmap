@@ -18,11 +18,11 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/appcompat/app/ActionBar$c;Landroidx/fragment/app/a0;)V
+.method public abstract a(Landroidx/appcompat/app/ActionBar$c;Landroidx/fragment/app/j0;)V
 .end method
 
-.method public abstract b(Landroidx/appcompat/app/ActionBar$c;Landroidx/fragment/app/a0;)V
+.method public abstract b(Landroidx/appcompat/app/ActionBar$c;Landroidx/fragment/app/j0;)V
 .end method
 
-.method public abstract c(Landroidx/appcompat/app/ActionBar$c;Landroidx/fragment/app/a0;)V
+.method public abstract c(Landroidx/appcompat/app/ActionBar$c;Landroidx/fragment/app/j0;)V
 .end method

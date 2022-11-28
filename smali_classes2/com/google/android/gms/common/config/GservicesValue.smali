@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/config/GservicesValue;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -30,22 +30,10 @@
 .field public final zzb:Ljava/lang/Object;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
 .end field
 
 .field private zzd:Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
     .end annotation
 .end field
 
@@ -73,13 +61,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "TT;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -555,13 +536,5 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")TT;"
-        }
     .end annotation
 .end method

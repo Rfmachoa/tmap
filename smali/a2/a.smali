@@ -1,22 +1,33 @@
-.class public final La2/a;
+.class public interface abstract La2/a;
 .super Ljava/lang/Object;
-.source "BuildConfig.java"
+.source "SupportMenu.java"
+
+# interfaces
+.implements Landroid/view/Menu;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
 
 # static fields
-.field public static final a:Z = false
+.field public static final a:I = 0xffff
 
-.field public static final b:Ljava/lang/String; = "androidx.databinding.ktx"
+.field public static final b:I = 0x0
 
-.field public static final c:Ljava/lang/String; = "release"
+.field public static final c:I = -0x10000
+
+.field public static final d:I = 0x10
+
+.field public static final e:I = 0x1100f
+
+.field public static final f:I = 0x4
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract setGroupDividerEnabled(Z)V
 .end method

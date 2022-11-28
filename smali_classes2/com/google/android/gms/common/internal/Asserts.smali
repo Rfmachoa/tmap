@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/Asserts;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -73,33 +73,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x39
-
-    add-int/2addr v2, v3
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "checkMainThread: current thread "
 
     const-string v3, " IS NOT the main thread "
 
-    invoke-static {v4, v2, v0, v3, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, "!"
 
-    const-string v0, "!"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0, v3, v1, v4}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -165,33 +145,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x38
-
-    add-int/2addr v2, v3
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "checkNotMainThread: current thread "
 
     const-string v3, " IS the main thread "
 
-    invoke-static {v4, v2, v0, v3, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, "!"
 
-    const-string v0, "!"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0, v3, v1, v4}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

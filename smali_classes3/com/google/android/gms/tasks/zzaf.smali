@@ -1,9 +1,22 @@
 .class final Lcom/google/android/gms/tasks/zzaf;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/zzae;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/tasks/zzae<",
+        "TT;>;"
+    }
+.end annotation
 
 
 # instance fields
@@ -12,14 +25,6 @@
 .field private final zzb:I
 
 .field private final zzc:Lcom/google/android/gms/tasks/zzw;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/zzw<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zzd:I
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
@@ -55,14 +60,6 @@
 # direct methods
 .method public constructor <init>(ILcom/google/android/gms/tasks/zzw;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lcom/google/android/gms/tasks/zzw<",
-            "Ljava/lang/Void;",
-            ">;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,7 +77,7 @@
 .end method
 
 .method private final zza()V
-    .locals 6
+    .locals 5
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "mLock"
     .end annotation
@@ -114,9 +111,7 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    const/16 v5, 0x36
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -244,6 +239,11 @@
 
 .method public final onSuccess(Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/google/android/gms/tasks/zzaf;->zza:Ljava/lang/Object;

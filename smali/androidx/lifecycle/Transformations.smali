@@ -52,13 +52,13 @@
     return-object v0
 .end method
 
-.method public static map(Landroidx/lifecycle/LiveData;Ln/a;)Landroidx/lifecycle/LiveData;
+.method public static map(Landroidx/lifecycle/LiveData;Lp/a;)Landroidx/lifecycle/LiveData;
     .locals 2
     .param p0    # Landroidx/lifecycle/LiveData;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ln/a;
+    .param p1    # Lp/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -77,7 +77,7 @@
             ">(",
             "Landroidx/lifecycle/LiveData<",
             "TX;>;",
-            "Ln/a<",
+            "Lp/a<",
             "TX;TY;>;)",
             "Landroidx/lifecycle/LiveData<",
             "TY;>;"
@@ -92,20 +92,20 @@
     .line 2
     new-instance v1, Landroidx/lifecycle/Transformations$1;
 
-    invoke-direct {v1, v0, p1}, Landroidx/lifecycle/Transformations$1;-><init>(Landroidx/lifecycle/MediatorLiveData;Ln/a;)V
+    invoke-direct {v1, v0, p1}, Landroidx/lifecycle/Transformations$1;-><init>(Landroidx/lifecycle/MediatorLiveData;Lp/a;)V
 
     invoke-virtual {v0, p0, v1}, Landroidx/lifecycle/MediatorLiveData;->addSource(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 
     return-object v0
 .end method
 
-.method public static switchMap(Landroidx/lifecycle/LiveData;Ln/a;)Landroidx/lifecycle/LiveData;
+.method public static switchMap(Landroidx/lifecycle/LiveData;Lp/a;)Landroidx/lifecycle/LiveData;
     .locals 2
     .param p0    # Landroidx/lifecycle/LiveData;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ln/a;
+    .param p1    # Lp/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -124,7 +124,7 @@
             ">(",
             "Landroidx/lifecycle/LiveData<",
             "TX;>;",
-            "Ln/a<",
+            "Lp/a<",
             "TX;",
             "Landroidx/lifecycle/LiveData<",
             "TY;>;>;)",
@@ -141,7 +141,7 @@
     .line 2
     new-instance v1, Landroidx/lifecycle/Transformations$2;
 
-    invoke-direct {v1, p1, v0}, Landroidx/lifecycle/Transformations$2;-><init>(Ln/a;Landroidx/lifecycle/MediatorLiveData;)V
+    invoke-direct {v1, p1, v0}, Landroidx/lifecycle/Transformations$2;-><init>(Lp/a;Landroidx/lifecycle/MediatorLiveData;)V
 
     invoke-virtual {v0, p0, v1}, Landroidx/lifecycle/MediatorLiveData;->addSource(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;)V
 

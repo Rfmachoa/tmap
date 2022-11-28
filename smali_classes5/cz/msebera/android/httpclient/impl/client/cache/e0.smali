@@ -1,9 +1,9 @@
 .class public final Lcz/msebera/android/httpclient/impl/client/cache/e0;
-.super Lmg/a;
+.super Lqi/a;
 .source "OptionsHttp11Response.java"
 
 # interfaces
-.implements Ldf/t;
+.implements Lhh/t;
 
 
 # annotations
@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public final c:Ldf/b0;
+.field public final c:Lhh/b0;
 
 .field public final d:Lcz/msebera/android/httpclient/ProtocolVersion;
 
@@ -22,7 +22,7 @@
     .locals 4
 
     .line 1
-    invoke-direct {p0}, Lmg/a;-><init>()V
+    invoke-direct {p0}, Lqi/a;-><init>()V
 
     .line 2
     new-instance v0, Lcz/msebera/android/httpclient/message/BasicStatusLine;
@@ -35,7 +35,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcz/msebera/android/httpclient/message/BasicStatusLine;-><init>(Lcz/msebera/android/httpclient/ProtocolVersion;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/e0;->c:Ldf/b0;
+    iput-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/e0;->c:Lhh/b0;
 
     .line 3
     iput-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/e0;->d:Lcz/msebera/android/httpclient/ProtocolVersion;
@@ -45,19 +45,13 @@
 
 
 # virtual methods
-.method public G(Ldf/d;)V
+.method public J(Lcz/msebera/android/httpclient/ProtocolVersion;ILjava/lang/String;)V
     .locals 0
 
     return-void
 .end method
 
-.method public L(Ldf/d;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public N(Lng/i;)V
+.method public T(Lhh/b0;)V
     .locals 0
 
     return-void
@@ -69,7 +63,7 @@
     return-void
 .end method
 
-.method public b(Ldf/l;)V
+.method public b(Lhh/l;)V
     .locals 0
 
     return-void
@@ -79,7 +73,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
     invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->containsHeader(Ljava/lang/String;)Z
 
@@ -88,32 +82,32 @@
     return p1
 .end method
 
-.method public d(Ldf/b0;)V
+.method public d(Lhh/d;)V
     .locals 0
 
     return-void
 .end method
 
-.method public f([Ldf/d;)V
+.method public g([Lhh/d;)V
     .locals 0
 
     return-void
 .end method
 
-.method public getAllHeaders()[Ldf/d;
+.method public getAllHeaders()[Lhh/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getAllHeaders()[Ldf/d;
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getAllHeaders()[Lhh/d;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getEntity()Ldf/l;
+.method public getEntity()Lhh/l;
     .locals 1
 
     const/4 v0, 0x0
@@ -121,39 +115,39 @@
     return-object v0
 .end method
 
-.method public getFirstHeader(Ljava/lang/String;)Ldf/d;
+.method public getFirstHeader(Ljava/lang/String;)Lhh/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public getHeaders(Ljava/lang/String;)[Ldf/d;
+.method public getHeaders(Ljava/lang/String;)[Lhh/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Lhh/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public getLastHeader(Ljava/lang/String;)Ldf/d;
+.method public getLastHeader(Ljava/lang/String;)Lhh/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getLastHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getLastHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object p1
 
@@ -168,11 +162,11 @@
     return-object v0
 .end method
 
-.method public getParams()Lng/i;
+.method public getParams()Lri/i;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->b:Lng/i;
+    iget-object v0, p0, Lqi/a;->b:Lri/i;
 
     if-nez v0, :cond_0
 
@@ -181,11 +175,11 @@
 
     invoke-direct {v0}, Lcz/msebera/android/httpclient/params/BasicHttpParams;-><init>()V
 
-    iput-object v0, p0, Lmg/a;->b:Lng/i;
+    iput-object v0, p0, Lqi/a;->b:Lri/i;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lmg/a;->b:Lng/i;
+    iget-object v0, p0, Lqi/a;->b:Lri/i;
 
     return-object v0
 .end method
@@ -199,48 +193,54 @@
     return-object v0
 .end method
 
-.method public getStatusLine()Ldf/b0;
+.method public getStatusLine()Lhh/b0;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/e0;->c:Ldf/b0;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/e0;->c:Lhh/b0;
 
     return-object v0
 .end method
 
-.method public headerIterator()Ldf/g;
+.method public headerIterator()Lhh/g;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator()Ldf/g;
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator()Lhh/g;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public headerIterator(Ljava/lang/String;)Ldf/g;
+.method public headerIterator(Ljava/lang/String;)Lhh/g;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lmg/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
+    iget-object v0, p0, Lqi/a;->a:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator(Ljava/lang/String;)Ldf/g;
+    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->iterator(Ljava/lang/String;)Lhh/g;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public k(Lcz/msebera/android/httpclient/ProtocolVersion;I)V
+.method public k(Lhh/d;)V
     .locals 0
 
     return-void
 .end method
 
 .method public removeHeaders(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public s(Lhh/d;)V
     .locals 0
 
     return-void
@@ -280,13 +280,13 @@
     return-void
 .end method
 
-.method public u(Lcz/msebera/android/httpclient/ProtocolVersion;ILjava/lang/String;)V
+.method public w(Lcz/msebera/android/httpclient/ProtocolVersion;I)V
     .locals 0
 
     return-void
 .end method
 
-.method public v(Ldf/d;)V
+.method public x(Lri/i;)V
     .locals 0
 
     return-void

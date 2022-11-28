@@ -51,14 +51,14 @@
     iput-boolean v0, p0, Lcom/skt/tmap/data/TmapDriveSettingData;->alwaysTrafficInfoLine:Z
 
     .line 4
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->B0(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->F0(Landroid/content/Context;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/skt/tmap/data/TmapDriveSettingData;->hudMode:Z
 
     .line 5
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->U6(Landroid/content/Context;)Z
 
     move-result v0
 

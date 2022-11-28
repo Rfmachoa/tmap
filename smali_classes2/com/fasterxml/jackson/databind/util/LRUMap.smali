@@ -3,6 +3,7 @@
 .source "LRUMap.java"
 
 # interfaces
+.implements Lcom/fasterxml/jackson/databind/util/LookupCache;
 .implements Ljava/io/Serializable;
 
 
@@ -15,6 +16,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
+        "Lcom/fasterxml/jackson/databind/util/LookupCache<",
+        "TK;TV;>;",
         "Ljava/io/Serializable;"
     }
 .end annotation

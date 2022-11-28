@@ -36,12 +36,12 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Landroidx/databinding/ViewDataBinding;->w(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
+    invoke-static {p1}, Landroidx/databinding/ViewDataBinding;->y(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->e(Landroidx/databinding/ViewDataBinding;)Ljava/lang/Runnable;
+    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->h(Landroidx/databinding/ViewDataBinding;)Ljava/lang/Runnable;
 
     move-result-object v0
 

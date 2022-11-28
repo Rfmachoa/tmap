@@ -3,34 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lek/t0;
 
 
 # instance fields
-.field public final synthetic a:Lai/r0;
+.field public final synthetic a:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/r0;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/d;->a:Lai/r0;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/d;->a:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final a(Lek/r0;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/d;->a:Lai/r0;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/d;->a:Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;
 
-    check-cast p1, Ljava/util/Iterator;
-
-    invoke-interface {v0, p1}, Lai/r0;->onSuccess(Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;->c(Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lek/r0;)V
 
     return-void
 .end method

@@ -1,39 +1,54 @@
 .class public Lcom/google/android/gms/ads/query/AdInfo;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
 .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # instance fields
-.field private final zzhas:Lcom/google/android/gms/ads/query/QueryInfo;
+.field private final zza:Lcom/google/android/gms/ads/query/QueryInfo;
 
-.field private final zzhat:Ljava/lang/String;
+.field private final zzb:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/ads/query/QueryInfo;Ljava/lang/String;)V
     .locals 0
+    .param p1    # Lcom/google/android/gms/ads/query/QueryInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lcom/google/android/gms/ads/query/AdInfo;->zzhas:Lcom/google/android/gms/ads/query/QueryInfo;
+    iput-object p1, p0, Lcom/google/android/gms/ads/query/AdInfo;->zza:Lcom/google/android/gms/ads/query/QueryInfo;
 
-    .line 3
-    iput-object p2, p0, Lcom/google/android/gms/ads/query/AdInfo;->zzhat:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/ads/query/AdInfo;->zzb:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public static getRequestId(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -44,7 +59,7 @@
     const-string p0, "adString passed to AdInfo.getRequestId() cannot be null. Returning empty string."
 
     .line 1
-    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzazw;->zzfc(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzcgp;->zzj(Ljava/lang/String;)V
 
     return-object v0
 
@@ -70,7 +85,7 @@
     const-string p0, "Invalid adString passed to AdInfo.getRequestId(). Returning empty string."
 
     .line 4
-    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzazw;->zzfc(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzcgp;->zzj(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -79,22 +94,26 @@
 # virtual methods
 .method public getAdString()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/query/AdInfo;->zzhat:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/query/AdInfo;->zzb:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public getQueryInfo()Lcom/google/android/gms/ads/query/QueryInfo;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/query/AdInfo;->zzhas:Lcom/google/android/gms/ads/query/QueryInfo;
+    iget-object v0, p0, Lcom/google/android/gms/ads/query/AdInfo;->zza:Lcom/google/android/gms/ads/query/QueryInfo;
 
     return-object v0
 .end method

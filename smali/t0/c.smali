@@ -1,306 +1,65 @@
 .class public Lt0/c;
 .super Ljava/lang/Object;
-.source "Metrics.java"
+.source "SurfaceViewNotCroppedByParentQuirk.java"
+
+# interfaces
+.implements Lb0/m1;
 
 
-# instance fields
-.field public A:J
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
-.field public B:J
 
-.field public C:J
+# static fields
+.field public static final a:Ljava/lang/String; = "XIAOMI"
 
-.field public D:J
-
-.field public E:J
-
-.field public F:J
-
-.field public G:J
-
-.field public H:J
-
-.field public I:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public J:J
-
-.field public K:J
-
-.field public L:J
-
-.field public M:J
-
-.field public N:J
-
-.field public O:J
-
-.field public a:J
-
-.field public b:J
-
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:J
-
-.field public h:J
-
-.field public i:J
-
-.field public j:J
-
-.field public k:J
-
-.field public l:J
-
-.field public m:J
-
-.field public n:J
-
-.field public o:J
-
-.field public p:J
-
-.field public q:J
-
-.field public r:J
-
-.field public s:J
-
-.field public t:J
-
-.field public u:J
-
-.field public v:J
-
-.field public w:J
-
-.field public x:J
-
-.field public y:J
-
-.field public z:J
+.field public static final b:Ljava/lang/String; = "M2101K7AG"
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lt0/c;->I:Ljava/util/ArrayList;
-
     return-void
 .end method
 
-
-# virtual methods
-.method public a()V
+.method public static b()Z
     .locals 2
 
-    const-wide/16 v0, 0x0
-
     .line 1
-    iput-wide v0, p0, Lt0/c;->e:J
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v1, "XIAOMI"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "M2101K7AG"
 
     .line 2
-    iput-wide v0, p0, Lt0/c;->K:J
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    .line 3
-    iput-wide v0, p0, Lt0/c;->f:J
+    move-result v0
 
-    .line 4
-    iput-wide v0, p0, Lt0/c;->g:J
+    if-eqz v0, :cond_0
 
-    .line 5
-    iput-wide v0, p0, Lt0/c;->h:J
+    const/4 v0, 0x1
 
-    .line 6
-    iput-wide v0, p0, Lt0/c;->t:J
+    goto :goto_0
 
-    .line 7
-    iput-wide v0, p0, Lt0/c;->J:J
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 8
-    iput-wide v0, p0, Lt0/c;->A:J
-
-    .line 9
-    iput-wide v0, p0, Lt0/c;->B:J
-
-    .line 10
-    iput-wide v0, p0, Lt0/c;->i:J
-
-    .line 11
-    iput-wide v0, p0, Lt0/c;->z:J
-
-    .line 12
-    iput-wide v0, p0, Lt0/c;->j:J
-
-    .line 13
-    iput-wide v0, p0, Lt0/c;->k:J
-
-    .line 14
-    iput-wide v0, p0, Lt0/c;->l:J
-
-    .line 15
-    iput-wide v0, p0, Lt0/c;->m:J
-
-    .line 16
-    iput-wide v0, p0, Lt0/c;->n:J
-
-    .line 17
-    iput-wide v0, p0, Lt0/c;->o:J
-
-    .line 18
-    iput-wide v0, p0, Lt0/c;->p:J
-
-    .line 19
-    iput-wide v0, p0, Lt0/c;->q:J
-
-    .line 20
-    iput-wide v0, p0, Lt0/c;->r:J
-
-    .line 21
-    iput-wide v0, p0, Lt0/c;->s:J
-
-    .line 22
-    iput-wide v0, p0, Lt0/c;->u:J
-
-    .line 23
-    iput-wide v0, p0, Lt0/c;->v:J
-
-    .line 24
-    iput-wide v0, p0, Lt0/c;->w:J
-
-    .line 25
-    iput-wide v0, p0, Lt0/c;->y:J
-
-    .line 26
-    iput-wide v0, p0, Lt0/c;->G:J
-
-    .line 27
-    iput-wide v0, p0, Lt0/c;->H:J
-
-    .line 28
-    iput-wide v0, p0, Lt0/c;->C:J
-
-    .line 29
-    iput-wide v0, p0, Lt0/c;->D:J
-
-    .line 30
-    iput-wide v0, p0, Lt0/c;->E:J
-
-    .line 31
-    iput-wide v0, p0, Lt0/c;->F:J
-
-    .line 32
-    iget-object v0, p0, Lt0/c;->I:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "\n*** Metrics ***\nmeasures: "
-
-    .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lt0/c;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nmeasuresWrap: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->L:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nmeasuresWrapInfeasible: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->M:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\ndetermineGroups: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->O:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\ninfeasibleDetermineGroups: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->N:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\ngraphOptimizer: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->v:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nwidgets: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->K:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\ngraphSolved: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->w:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\nlinearSolved: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lt0/c;->x:J
-
-    const-string v3, "\n"
-
-    invoke-static {v0, v1, v2, v3}, Landroid/support/v4/media/session/a;->a(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :goto_0
+    return v0
 .end method

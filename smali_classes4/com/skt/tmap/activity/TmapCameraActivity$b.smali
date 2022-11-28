@@ -3,12 +3,12 @@
 .source "TmapCameraActivity.kt"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/camera/core/ImageCapture$o;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapCameraActivity;->P5()V
+    value = Lcom/skt/tmap/activity/TmapCameraActivity;->S5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,19 +19,25 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
+        "\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016J\u0010\u0010\u0008\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a8\u0006\t"
     }
     d2 = {
+        "com/skt/tmap/activity/TmapCameraActivity$b",
+        "Landroidx/camera/core/ImageCapture$o;",
+        "Landroidx/camera/core/ImageCaptureException;",
+        "exc",
         "Lkotlin/d1;",
-        "run",
-        "()V",
-        "<anonymous>"
+        "b",
+        "Landroidx/camera/core/ImageCapture$q;",
+        "output",
+        "a",
+        "tmap_android_phoneKUShip"
     }
-    k = 0x3
+    k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -39,17 +45,18 @@
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/activity/TmapCameraActivity;
 
-.field public final synthetic b:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final synthetic b:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/TmapCameraActivity;Lcom/google/common/util/concurrent/ListenableFuture;)V
+.method public constructor <init>(Lcom/skt/tmap/activity/TmapCameraActivity;Ljava/io/File;)V
     .locals 0
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
 
-    iput-object p2, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->b:Lcom/google/common/util/concurrent/ListenableFuture;
+    iput-object p2, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->b:Ljava/io/File;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,176 +64,132 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public a(Landroidx/camera/core/ImageCapture$q;)V
+    .locals 2
+    .param p1    # Landroidx/camera/core/ImageCapture$q;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "output"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->b:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->b:Ljava/io/File;
 
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+    invoke-static {p1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
-    move-result-object v0
-
-    const-string v1, "cameraProviderFuture.get()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v0, Landroidx/camera/lifecycle/d;
+    move-result-object p1
 
     .line 2
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Photo capture succeeded: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "TmapCameraActivity"
 
     .line 3
-    new-instance v2, Landroidx/camera/core/g2$b;
-
-    invoke-direct {v2}, Landroidx/camera/core/g2$b;-><init>()V
-
-    new-instance v3, Landroid/util/Size;
-
-    const/16 v4, 0x1e0
-
-    const/16 v5, 0x280
-
-    invoke-direct {v3, v4, v5}, Landroid/util/Size;-><init>(II)V
-
-    invoke-virtual {v2, v3}, Landroidx/camera/core/g2$b;->N(Landroid/util/Size;)Landroidx/camera/core/g2$b;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroidx/camera/core/g2$b;->t()Landroidx/camera/core/g2;
-
-    move-result-object v2
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object v3, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v3}, Lcom/skt/tmap/activity/TmapCameraActivity;->D5(Lcom/skt/tmap/activity/TmapCameraActivity;)Llb/i;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, v3, Llb/i;->o1:Landroidx/camera/view/PreviewView;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Landroidx/camera/view/PreviewView;->getSurfaceProvider()Landroidx/camera/core/g2$d;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_0
-    invoke-virtual {v2, v3}, Landroidx/camera/core/g2;->S(Landroidx/camera/core/g2$d;)V
+    const-string v1, "result_path"
 
     .line 5
-    sget-object v3, Lkotlin/d1;->a:Lkotlin/d1;
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 6
-    invoke-static {v1, v2}, Lcom/skt/tmap/activity/TmapCameraActivity;->M5(Lcom/skt/tmap/activity/TmapCameraActivity;Landroidx/camera/core/g2;)V
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p1, v1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
     .line 7
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
 
-    .line 8
-    new-instance v2, Landroidx/camera/core/ImageCapture$j;
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
 
-    invoke-direct {v2}, Landroidx/camera/core/ImageCapture$j;-><init>()V
+    return-void
+.end method
 
-    .line 9
-    new-instance v3, Landroid/util/Size;
+.method public b(Landroidx/camera/core/ImageCaptureException;)V
+    .locals 2
+    .param p1    # Landroidx/camera/core/ImageCaptureException;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
 
-    invoke-direct {v3, v4, v5}, Landroid/util/Size;-><init>(II)V
+    const-string v0, "exc"
 
-    invoke-virtual {v2, v3}, Landroidx/camera/core/ImageCapture$j;->T(Landroid/util/Size;)Landroidx/camera/core/ImageCapture$j;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v2
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 10
-    invoke-virtual {v2, v3}, Landroidx/camera/core/ImageCapture$j;->B(I)Landroidx/camera/core/ImageCapture$j;
+    const-string v1, "Image Capture Error :: "
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Landroidx/camera/core/ImageCapture$j;->t()Landroidx/camera/core/ImageCapture;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/skt/tmap/activity/TmapCameraActivity;->L5(Lcom/skt/tmap/activity/TmapCameraActivity;Landroidx/camera/core/ImageCapture;)V
+    move-result-object p1
 
-    .line 11
-    :try_start_0
-    invoke-virtual {v0}, Landroidx/camera/lifecycle/d;->b()V
+    const-string v0, "TmapCameraActivity"
 
-    .line 12
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
-    sget-object v2, Landroidx/camera/core/CameraSelector;->e:Landroidx/camera/core/CameraSelector;
+    .line 2
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
 
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Landroidx/camera/core/UseCase;
-
-    const/4 v5, 0x0
-
-    .line 14
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapCameraActivity;->H5(Lcom/skt/tmap/activity/TmapCameraActivity;)Landroidx/camera/core/g2;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    .line 15
-    iget-object v5, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
-
-    invoke-static {v5}, Lcom/skt/tmap/activity/TmapCameraActivity;->G5(Lcom/skt/tmap/activity/TmapCameraActivity;)Landroidx/camera/core/ImageCapture;
-
-    move-result-object v5
-
-    aput-object v5, v4, v3
-
-    .line 16
-    invoke-virtual {v0, v1, v2, v4}, Landroidx/camera/lifecycle/d;->h(Landroidx/lifecycle/LifecycleOwner;Landroidx/camera/core/CameraSelector;[Landroidx/camera/core/UseCase;)Landroidx/camera/core/i;
+    .line 3
+    invoke-virtual {p1}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const-string v1, "cameraProvider.bindToLif\u2026Capture\n                )"
+    const v1, 0x7f140ad3
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 17
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
-
-    invoke-interface {v0}, Landroidx/camera/core/i;->a()Landroidx/camera/core/CameraControl;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/skt/tmap/activity/TmapCameraActivity;->J5(Lcom/skt/tmap/activity/TmapCameraActivity;Landroidx/camera/core/CameraControl;)V
-
-    .line 18
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
-
-    invoke-interface {v0}, Landroidx/camera/core/i;->c()Landroidx/camera/core/CameraInfo;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/activity/TmapCameraActivity;->K5(Lcom/skt/tmap/activity/TmapCameraActivity;Landroidx/camera/core/CameraInfo;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x0
 
-    goto :goto_1
+    .line 4
+    invoke-static {p1, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    :catch_0
-    move-exception v0
+    move-result-object p1
 
-    .line 19
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    .line 5
+    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
-    :goto_1
+    .line 6
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+
+    invoke-virtual {p1, v1}, Landroid/app/Activity;->setResult(I)V
+
+    .line 7
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapCameraActivity$b;->a:Lcom/skt/tmap/activity/TmapCameraActivity;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
+
     return-void
 .end method

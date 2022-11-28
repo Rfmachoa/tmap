@@ -26,6 +26,26 @@
 
 
 # virtual methods
+.method public getDependencies()Ljava/lang/Iterable;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Iterable<",
+            "+",
+            "Lcom/fasterxml/jackson/databind/Module;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public abstract getModuleName()Ljava/lang/String;
 .end method
 

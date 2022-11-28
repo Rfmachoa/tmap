@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/analytics/connector/internal/zze;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 # interfaces
 .implements Lcom/google/firebase/analytics/connector/internal/zza;

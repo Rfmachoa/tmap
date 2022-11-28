@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/Transformations$2;
+.class Landroidx/lifecycle/Transformations$2;
 .super Ljava/lang/Object;
 .source "Transformations.java"
 
@@ -8,11 +8,11 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/Transformations;->switchMap(Landroidx/lifecycle/LiveData;Ln/a;)Landroidx/lifecycle/LiveData;
+    value = Landroidx/lifecycle/Transformations;->switchMap(Landroidx/lifecycle/LiveData;Lp/a;)Landroidx/lifecycle/LiveData;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -37,15 +37,15 @@
 
 .field public final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
 
-.field public final synthetic val$switchMapFunction:Ln/a;
+.field public final synthetic val$switchMapFunction:Lp/a;
 
 
 # direct methods
-.method public constructor <init>(Ln/a;Landroidx/lifecycle/MediatorLiveData;)V
+.method public constructor <init>(Lp/a;Landroidx/lifecycle/MediatorLiveData;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/lifecycle/Transformations$2;->val$switchMapFunction:Ln/a;
+    iput-object p1, p0, Landroidx/lifecycle/Transformations$2;->val$switchMapFunction:Lp/a;
 
     iput-object p2, p0, Landroidx/lifecycle/Transformations$2;->val$result:Landroidx/lifecycle/MediatorLiveData;
 
@@ -69,9 +69,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/Transformations$2;->val$switchMapFunction:Ln/a;
+    iget-object v0, p0, Landroidx/lifecycle/Transformations$2;->val$switchMapFunction:Lp/a;
 
-    invoke-interface {v0, p1}, Ln/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lp/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

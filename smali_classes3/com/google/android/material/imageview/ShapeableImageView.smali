@@ -220,17 +220,24 @@
 
     move-result-object v2
 
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
     .line 17
-    sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_strokeColor:I
+    invoke-virtual {p0, v4, v5}, Landroid/widget/ImageView;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 18
+    sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_strokeColor:I
+
+    .line 19
     invoke-static {v1, v2, v4}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/google/android/material/imageview/ShapeableImageView;->strokeColor:Landroid/content/res/ColorStateList;
 
-    .line 19
+    .line 20
     sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_strokeWidth:I
 
     invoke-virtual {v2, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -241,27 +248,27 @@
 
     iput v4, p0, Lcom/google/android/material/imageview/ShapeableImageView;->strokeWidth:F
 
-    .line 20
+    .line 21
     sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPadding:I
 
-    .line 21
+    .line 22
     invoke-virtual {v2, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
-    .line 22
+    .line 23
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->leftContentPadding:I
 
-    .line 23
+    .line 24
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->topContentPadding:I
 
-    .line 24
+    .line 25
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->rightContentPadding:I
 
-    .line 25
+    .line 26
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->bottomContentPadding:I
 
-    .line 26
+    .line 27
     sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPaddingLeft:I
 
     invoke-virtual {v2, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -270,7 +277,7 @@
 
     iput v4, p0, Lcom/google/android/material/imageview/ShapeableImageView;->leftContentPadding:I
 
-    .line 27
+    .line 28
     sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPaddingTop:I
 
     invoke-virtual {v2, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -279,7 +286,7 @@
 
     iput v4, p0, Lcom/google/android/material/imageview/ShapeableImageView;->topContentPadding:I
 
-    .line 28
+    .line 29
     sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPaddingRight:I
 
     invoke-virtual {v2, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -288,7 +295,7 @@
 
     iput v4, p0, Lcom/google/android/material/imageview/ShapeableImageView;->rightContentPadding:I
 
-    .line 29
+    .line 30
     sget v4, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPaddingBottom:I
 
     invoke-virtual {v2, v4, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -297,7 +304,7 @@
 
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->bottomContentPadding:I
 
-    .line 30
+    .line 31
     sget p1, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPaddingStart:I
 
     const/high16 v4, -0x80000000
@@ -308,7 +315,7 @@
 
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->startContentPadding:I
 
-    .line 31
+    .line 32
     sget p1, Lcom/google/android/material/R$styleable;->ShapeableImageView_contentPaddingEnd:I
 
     invoke-virtual {v2, p1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
@@ -317,25 +324,25 @@
 
     iput p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->endContentPadding:I
 
-    .line 32
+    .line 33
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 33
+    .line 34
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->borderPaint:Landroid/graphics/Paint;
 
-    .line 34
+    .line 35
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 35
+    .line 36
     invoke-virtual {p1, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 36
+    .line 37
     invoke-static {v1, p2, p3, v0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->builder(Landroid/content/Context;Landroid/util/AttributeSet;II)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
 
     move-result-object p1
@@ -346,7 +353,7 @@
 
     iput-object p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->shapeAppearanceModel:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-    .line 37
+    .line 38
     new-instance p1, Lcom/google/android/material/imageview/ShapeableImageView$OutlineProvider;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/imageview/ShapeableImageView$OutlineProvider;-><init>(Lcom/google/android/material/imageview/ShapeableImageView;)V
@@ -924,38 +931,6 @@
     return v0
 .end method
 
-.method public onAttachedToWindow()V
-    .locals 2
-
-    .line 1
-    invoke-super {p0}, Landroid/widget/ImageView;->onAttachedToWindow()V
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x0
-
-    .line 2
-    invoke-virtual {p0, v0, v1}, Landroid/widget/ImageView;->setLayerType(ILandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public onDetachedFromWindow()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 1
-    invoke-virtual {p0, v0, v1}, Landroid/widget/ImageView;->setLayerType(ILandroid/graphics/Paint;)V
-
-    .line 2
-    invoke-super {p0}, Landroid/widget/ImageView;->onDetachedFromWindow()V
-
-    return-void
-.end method
-
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
@@ -1461,7 +1436,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 

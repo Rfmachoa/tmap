@@ -54,7 +54,7 @@
     const-string p2, "Track "
 
     .line 6
-    invoke-static {p2, v0, v1}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {p2, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v4
 

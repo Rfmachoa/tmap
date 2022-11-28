@@ -6,6 +6,8 @@
 # static fields
 .field public static final EMPTY_BINARY_NODE:Lcom/fasterxml/jackson/databind/node/BinaryNode;
 
+.field private static final serialVersionUID:J = 0x2L
+
 
 # instance fields
 .field public final _data:[B
@@ -262,23 +264,4 @@
     invoke-virtual {p1, p2, v0, v2, v1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeBinary(Lcom/fasterxml/jackson/core/Base64Variant;[BII)V
 
     return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    .line 1
-    invoke-static {}, Lcom/fasterxml/jackson/core/Base64Variants;->getDefaultVariant()Lcom/fasterxml/jackson/core/Base64Variant;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/fasterxml/jackson/databind/node/BinaryNode;->_data:[B
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lcom/fasterxml/jackson/core/Base64Variant;->encode([BZ)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

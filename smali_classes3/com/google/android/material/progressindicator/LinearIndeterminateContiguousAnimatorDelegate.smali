@@ -39,7 +39,7 @@
 
 .field private dirtyColors:Z
 
-.field private interpolator:Lm2/b;
+.field private interpolator:Lh3/b;
 
 .field private newIndicatorColorIndex:I
 
@@ -83,11 +83,11 @@
     iput-object p1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->baseSpec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
     .line 4
-    new-instance p1, Lm2/b;
+    new-instance p1, Lh3/b;
 
-    invoke-direct {p1}, Lm2/b;-><init>()V
+    invoke-direct {p1}, Lh3/b;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Lm2/b;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Lh3/b;
 
     return-void
 .end method
@@ -299,9 +299,9 @@
     .line 3
     iget-object v0, p0, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->segmentPositions:[F
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Lm2/b;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Lh3/b;
 
-    invoke-virtual {v1, p1}, Lm2/b;->getInterpolation(F)F
+    invoke-virtual {v1, p1}, Lh3/b;->getInterpolation(F)F
 
     move-result v1
 
@@ -320,9 +320,9 @@
     .line 4
     iget-object v0, p0, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->segmentPositions:[F
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Lm2/b;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;->interpolator:Lh3/b;
 
-    invoke-virtual {v1, p1}, Lm2/b;->getInterpolation(F)F
+    invoke-virtual {v1, p1}, Lh3/b;->getInterpolation(F)F
 
     move-result p1
 
@@ -372,9 +372,9 @@
     return-void
 .end method
 
-.method public registerAnimatorsCompleteCallback(Li3/b$a;)V
+.method public registerAnimatorsCompleteCallback(Lq4/b$a;)V
     .locals 0
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

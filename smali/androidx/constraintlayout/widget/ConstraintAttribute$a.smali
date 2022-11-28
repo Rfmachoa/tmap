@@ -34,7 +34,7 @@
     sput-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
     :try_start_0
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->COLOR_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->REFERENCE_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -50,7 +50,7 @@
     :try_start_1
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->COLOR_DRAWABLE_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->BOOLEAN_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -66,7 +66,7 @@
     :try_start_2
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->INT_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->STRING_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -82,7 +82,7 @@
     :try_start_3
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->FLOAT_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->COLOR_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -98,7 +98,7 @@
     :try_start_4
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->STRING_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->COLOR_DRAWABLE_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -114,7 +114,7 @@
     :try_start_5
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->BOOLEAN_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->INT_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -130,7 +130,7 @@
     :try_start_6
     sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
 
-    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->DIMENSION_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->FLOAT_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -143,5 +143,21 @@
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
     :catch_6
+    :try_start_7
+    sget-object v0, Landroidx/constraintlayout/widget/ConstraintAttribute$a;->a:[I
+
+    sget-object v1, Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;->DIMENSION_TYPE:Landroidx/constraintlayout/widget/ConstraintAttribute$AttributeType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
 .end method

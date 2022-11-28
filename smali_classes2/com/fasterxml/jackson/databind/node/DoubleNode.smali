@@ -69,6 +69,48 @@
     return-object v0
 .end method
 
+.method public canConvertToExactIntegral()Z
+    .locals 4
+
+    .line 1
+    iget-wide v0, p0, Lcom/fasterxml/jackson/databind/node/DoubleNode;->_value:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-wide v0, p0, Lcom/fasterxml/jackson/databind/node/DoubleNode;->_value:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-wide v0, p0, Lcom/fasterxml/jackson/databind/node/DoubleNode;->_value:D
+
+    .line 2
+    invoke-static {v0, v1}, Ljava/lang/Math;->rint(D)D
+
+    move-result-wide v2
+
+    cmpl-double v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public canConvertToInt()Z
     .locals 4
 
@@ -258,6 +300,41 @@
     return v0
 .end method
 
+.method public isNaN()Z
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lcom/fasterxml/jackson/databind/node/DoubleNode;->_value:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-wide v0, p0, Lcom/fasterxml/jackson/databind/node/DoubleNode;->_value:D
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+.end method
+
 .method public longValue()J
     .locals 2
 
@@ -295,8 +372,7 @@
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonProcessingException;
+            Ljava/io/IOException;
         }
     .end annotation
 

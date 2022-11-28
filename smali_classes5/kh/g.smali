@@ -1,12 +1,14 @@
 .class public interface abstract Lkh/g;
 .super Ljava/lang/Object;
-.source "CompletableSource.java"
+.source "CredentialsProvider.java"
 
 
 # virtual methods
-.method public abstract d(Lkh/d;)V
-    .param p1    # Lkh/d;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
+.method public abstract a(Lih/g;Lih/j;)V
+.end method
+
+.method public abstract b(Lih/g;)Lih/j;
+.end method
+
+.method public abstract clear()V
 .end method

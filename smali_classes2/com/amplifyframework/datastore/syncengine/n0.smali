@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lgk/g;
 
 
 # static fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->i(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->h(Ljava/lang/Throwable;)V
 
     return-void
 .end method

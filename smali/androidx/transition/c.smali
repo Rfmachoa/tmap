@@ -47,11 +47,11 @@
     .line 5
     iget-object p1, p0, Landroidx/transition/c;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {p1}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Lh3/s;->add(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Lp4/s;->add(Landroid/view/View;)V
 
     const/4 p1, 0x1
 
@@ -171,7 +171,7 @@
     if-ge v2, v1, :cond_4
 
     .line 5
-    invoke-static {v0, v2}, Lh3/t;->a(Landroid/view/ViewGroup;I)I
+    invoke-static {v0, v2}, Lp4/t;->a(Landroid/view/ViewGroup;I)I
 
     move-result v5
 
@@ -441,20 +441,20 @@
     .line 2
     iget-object v0, p0, Landroidx/transition/c;->a:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {v0}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lh3/s;->remove(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Lp4/s;->remove(Landroid/view/View;)V
 
     .line 3
     iget-object v0, p0, Landroidx/transition/c;->a:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {v0}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object v0
 
-    invoke-interface {v0, p0}, Lh3/s;->add(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Lp4/s;->add(Landroid/view/View;)V
 
     return-void
 
@@ -537,11 +537,11 @@
     .line 5
     iget-object p1, p0, Landroidx/transition/c;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {p1}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object p1
 
-    invoke-interface {p1, p0}, Lh3/s;->remove(Landroid/view/View;)V
+    invoke-interface {p1, p0}, Lp4/s;->remove(Landroid/view/View;)V
 
     .line 6
     iput-boolean v1, p0, Landroidx/transition/c;->b:Z

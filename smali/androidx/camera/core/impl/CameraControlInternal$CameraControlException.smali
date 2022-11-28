@@ -28,14 +28,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "failure"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
@@ -56,16 +48,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "failure",
-            "cause"
-        }
-    .end annotation
 
     .line 3
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V

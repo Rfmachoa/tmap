@@ -3,54 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/SessionConfig$c;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/g2;
+.field public final synthetic a:Landroidx/camera/core/e2$d;
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Landroidx/camera/core/impl/p;
-
-.field public final synthetic d:Landroid/util/Size;
+.field public final synthetic b:Landroidx/camera/core/SurfaceRequest;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/g2;Ljava/lang/String;Landroidx/camera/core/impl/p;Landroid/util/Size;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/e2$d;Landroidx/camera/core/SurfaceRequest;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/d2;->a:Landroidx/camera/core/g2;
+    iput-object p1, p0, Landroidx/camera/core/d2;->a:Landroidx/camera/core/e2$d;
 
-    iput-object p2, p0, Landroidx/camera/core/d2;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Landroidx/camera/core/d2;->c:Landroidx/camera/core/impl/p;
-
-    iput-object p4, p0, Landroidx/camera/core/d2;->d:Landroid/util/Size;
+    iput-object p2, p0, Landroidx/camera/core/d2;->b:Landroidx/camera/core/SurfaceRequest;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
-    .locals 6
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Landroidx/camera/core/d2;->a:Landroidx/camera/core/g2;
+    iget-object v0, p0, Landroidx/camera/core/d2;->a:Landroidx/camera/core/e2$d;
 
-    iget-object v1, p0, Landroidx/camera/core/d2;->b:Ljava/lang/String;
+    iget-object v1, p0, Landroidx/camera/core/d2;->b:Landroidx/camera/core/SurfaceRequest;
 
-    iget-object v2, p0, Landroidx/camera/core/d2;->c:Landroidx/camera/core/impl/p;
-
-    iget-object v3, p0, Landroidx/camera/core/d2;->d:Landroid/util/Size;
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    invoke-static/range {v0 .. v5}, Landroidx/camera/core/g2;->J(Landroidx/camera/core/g2;Ljava/lang/String;Landroidx/camera/core/impl/p;Landroid/util/Size;Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
+    invoke-static {v0, v1}, Landroidx/camera/core/e2;->O(Landroidx/camera/core/e2$d;Landroidx/camera/core/SurfaceRequest;)V
 
     return-void
 .end method

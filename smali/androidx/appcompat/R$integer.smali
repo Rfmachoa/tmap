@@ -22,8 +22,6 @@
 
 .field public static final config_tooltipAnimTime:I = 0x7f0b0006
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0b001d
-
 
 # direct methods
 .method public constructor <init>()V

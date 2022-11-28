@@ -1,6 +1,6 @@
 .class public Lcom/skt/tmap/dialog/n;
-.super Lcom/skt/tmap/dialog/TmapBaseDialog;
-.source "ProgressBarDialog.java"
+.super Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;
+.source "MainFavoriteRouteDialog.java"
 
 
 # annotations
@@ -12,324 +12,341 @@
 
 
 # instance fields
-.field public a1:Lcom/skt/tmap/dialog/n$a;
+.field public a:Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;
 
-.field public b1:Landroid/widget/Button;
+.field public b:I
 
-.field public c1:Landroid/widget/TextView;
+.field public c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-.field public d1:Landroid/widget/TextView;
-
-.field public e1:Landroid/widget/FrameLayout;
-
-.field public f1:Landroid/widget/FrameLayout;
-
-.field public g1:I
-
-.field public h1:I
+.field public d:Lcom/skt/tmap/dialog/n$a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "activity"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    invoke-direct {p0, p1, v0, v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;-><init>(Landroid/app/Activity;ZZ)V
-
-    const/4 p1, 0x0
-
-    .line 2
-    iput-object p1, p0, Lcom/skt/tmap/dialog/n;->a1:Lcom/skt/tmap/dialog/n$a;
-
-    .line 3
-    iput v0, p0, Lcom/skt/tmap/dialog/n;->g1:I
-
-    .line 4
-    iput v0, p0, Lcom/skt/tmap/dialog/n;->h1:I
+    invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;-><init>()V
 
     return-void
+.end method
+
+.method public static i()Lcom/skt/tmap/dialog/n;
+    .locals 1
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/dialog/n;
+
+    invoke-direct {v0}, Lcom/skt/tmap/dialog/n;-><init>()V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public i(Landroid/app/Dialog;Z)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "dialog",
-            "cancelable"
-        }
-    .end annotation
-
-    const p2, 0x7f0d0187
-
-    .line 1
-    invoke-virtual {p1, p2}, Landroid/app/Dialog;->setContentView(I)V
-
-    const p2, 0x7f0a020e
-
-    .line 2
-    invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/Button;
-
-    iput-object p2, p0, Lcom/skt/tmap/dialog/n;->b1:Landroid/widget/Button;
-
-    const p2, 0x7f0a08da
-
-    .line 3
-    invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Lcom/skt/tmap/dialog/n;->c1:Landroid/widget/TextView;
-
-    const p2, 0x7f0a0312
-
-    .line 4
-    invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/FrameLayout;
-
-    iput-object p2, p0, Lcom/skt/tmap/dialog/n;->f1:Landroid/widget/FrameLayout;
-
-    const p2, 0x7f0a0313
-
-    .line 5
-    invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/FrameLayout;
-
-    iput-object p2, p0, Lcom/skt/tmap/dialog/n;->e1:Landroid/widget/FrameLayout;
-
-    const p2, 0x7f0a0ba7
-
-    .line 6
-    invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Lcom/skt/tmap/dialog/n;->d1:Landroid/widget/TextView;
-
-    .line 7
-    iget-object p2, p0, Lcom/skt/tmap/dialog/n;->b1:Landroid/widget/Button;
-
-    invoke-virtual {p2, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 8
-    invoke-virtual {p1, p0}, Landroid/app/Dialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
-
-    .line 9
-    invoke-virtual {p0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->d()Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lcom/skt/tmap/font/TypefaceManager;->a(Landroid/content/Context;)Lcom/skt/tmap/font/TypefaceManager;
-
-    move-result-object p2
-
-    const v0, 0x7f0a08cf
-
-    .line 10
-    invoke-virtual {p1, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    sget-object v0, Lcom/skt/tmap/font/TypefaceManager$FontType;->SKP_GO_M:Lcom/skt/tmap/font/TypefaceManager$FontType;
-
-    invoke-virtual {p2, p1, v0}, Lcom/skt/tmap/font/TypefaceManager;->j(Landroid/view/View;Lcom/skt/tmap/font/TypefaceManager$FontType;)V
-
-    return-void
-.end method
-
-.method public onClick(Landroid/view/View;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "v"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/n;->b1:Landroid/widget/Button;
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    iget-object p1, p0, Lcom/skt/tmap/dialog/n;->a1:Lcom/skt/tmap/dialog/n$a;
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-interface {p1}, Lcom/skt/tmap/dialog/n$a;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public u(Ljava/lang/String;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "title"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/n;->c1:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public x(Lcom/skt/tmap/dialog/n$a;)V
+.method public j(Lcom/skt/tmap/dialog/n$a;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "listener"
+            "callback"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/dialog/n;->a1:Lcom/skt/tmap/dialog/n$a;
+    iput-object p1, p0, Lcom/skt/tmap/dialog/n;->d:Lcom/skt/tmap/dialog/n$a;
 
     return-void
 .end method
 
-.method public y(F)V
-    .locals 3
+.method public k(I)V
+    .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "percent"
+            "position"
         }
     .end annotation
 
-    float-to-int p1, p1
+    .line 1
+    iput p1, p0, Lcom/skt/tmap/dialog/n;->b:I
+
+    return-void
+.end method
+
+.method public l(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "usedFavoriteRouteInfo"
+        }
+    .end annotation
 
     .line 1
-    iput p1, p0, Lcom/skt/tmap/dialog/n;->g1:I
+    iput-object p1, p0, Lcom/skt/tmap/dialog/n;->a:Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;
+
+    return-void
+.end method
+
+.method public onActivityCreated(Landroid/os/Bundle;)V
+    .locals 0
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "savedInstanceState"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/d;->onActivityCreated(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
+    .param p1    # Landroid/content/DialogInterface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dialog"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/d;->onCancel(Landroid/content/DialogInterface;)V
 
     .line 2
-    iget-object p1, p0, Lcom/skt/tmap/dialog/n;->d1:Landroid/widget/TextView;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    check-cast p1, Lcom/skt/tmap/activity/BaseActivity;
 
-    iget v1, p0, Lcom/skt/tmap/dialog/n;->g1:I
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseActivity;->getBasePresenter()Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v1
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, "%"
+    const-string v0, "tap.other"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Lbe/e;->c0(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-void
+.end method
+
+.method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "savedInstanceState"
+        }
+    .end annotation
+
+    .line 1
+    new-instance p1, Lcom/google/android/material/bottomsheet/BottomSheetDialog;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const v1, 0x7f1502cb
+
+    invoke-direct {p1, v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;-><init>(Landroid/content/Context;I)V
+
+    return-object p1
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 1
+    .param p2    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "container",
+            "savedInstanceState"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    const p3, 0x7f0d00fd
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, p3, p2, v0}, Landroidx/databinding/h;->j(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroidx/databinding/ViewDataBinding;
+
+    move-result-object p1
+
+    check-cast p1, Lid/o1;
+
+    .line 2
+    iget-object p2, p0, Lcom/skt/tmap/dialog/n;->d:Lcom/skt/tmap/dialog/n$a;
+
+    invoke-virtual {p1, p2}, Lid/o1;->n1(Lcom/skt/tmap/dialog/n$a;)V
 
     .line 3
-    iget-object p1, p0, Lcom/skt/tmap/dialog/n;->f1:Landroid/widget/FrameLayout;
+    iget p2, p0, Lcom/skt/tmap/dialog/n;->b:I
 
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result p1
-
-    if-lez p1, :cond_0
+    invoke-virtual {p1, p2}, Lid/o1;->o1(I)V
 
     .line 4
-    iget-object p1, p0, Lcom/skt/tmap/dialog/n;->f1:Landroid/widget/FrameLayout;
+    iget-object p2, p0, Lcom/skt/tmap/dialog/n;->a:Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;
 
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/skt/tmap/dialog/n;->h1:I
+    invoke-virtual {p1, p2}, Lid/o1;->p1(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;)V
 
     .line 5
-    iget v0, p0, Lcom/skt/tmap/dialog/n;->g1:I
+    invoke-virtual {p1}, Landroidx/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
 
-    mul-int/2addr p1, v0
+    move-result-object p1
 
-    div-int/lit8 p1, p1, 0x64
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public onSaveInstanceState(Landroid/os/Bundle;)V
+    .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outState"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/d;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object p1
+
+    const v0, 0x7f15033e
+
+    .line 4
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+
+    .line 5
+    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
     :cond_0
-    const/4 p1, 0x0
+    return-void
+.end method
 
-    :goto_0
-    const/16 v0, 0x43
+.method public onStart()V
+    .locals 2
 
-    if-le p1, v0, :cond_1
+    .line 1
+    invoke-super {p0}, Landroidx/fragment/app/d;->onStart()V
 
-    goto :goto_1
+    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
 
-    :cond_1
-    move p1, v0
+    move-result-object v0
 
-    .line 6
-    :goto_1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/n;->e1:Landroid/widget/FrameLayout;
+    if-eqz v0, :cond_0
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+    .line 3
+    invoke-virtual {p0}, Landroidx/fragment/app/d;->getDialog()Landroid/app/Dialog;
 
-    const/4 v2, -0x1
+    move-result-object v0
 
-    invoke-direct {v1, p1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    check-cast v0, Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog;->getBehavior()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/skt/tmap/dialog/n;->c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x3
+
+    .line 4
+    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setState(I)V
+
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/dialog/n;->c:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setSkipCollapsed(Z)V
+
+    :cond_0
     return-void
 .end method

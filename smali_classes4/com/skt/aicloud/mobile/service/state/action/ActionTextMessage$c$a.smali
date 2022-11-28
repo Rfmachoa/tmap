@@ -45,12 +45,12 @@
     .line 1
     sget-object v0, Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;->START:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->H(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->I(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
 
     .line 2
     iget v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c$a;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->q(I)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->s(I)V
 
     return-void
 .end method

@@ -1,9 +1,95 @@
 .class Lcom/google/firebase/messaging/FcmExecutors;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "FcmExecutors.java"
+
+
+# static fields
+.field private static final THREAD_FILE:Ljava/lang/String; = "Firebase-Messaging-File"
+
+.field public static final THREAD_FILE_IO:Ljava/lang/String; = "Firebase-Messaging-File-Io"
+
+.field private static final THREAD_INIT:Ljava/lang/String; = "Firebase-Messaging-Init"
+
+.field private static final THREAD_INTENT_HANDLE:Ljava/lang/String; = "Firebase-Messaging-Intent-Handle"
+
+.field private static final THREAD_NETWORK_IO:Ljava/lang/String; = "Firebase-Messaging-Network-Io"
+
+.field public static final THREAD_RPC_TASK:Ljava/lang/String; = "Firebase-Messaging-Rpc-Task"
+
+.field private static final THREAD_TASK:Ljava/lang/String; = "Firebase-Messaging-Task"
+
+.field private static final THREAD_TOPICS_IO:Ljava/lang/String; = "Firebase-Messaging-Topics-Io"
 
 
 # direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static newCachedSingleThreadExecutor(Ljava/lang/String;)Ljava/util/concurrent/Executor;
+    .locals 9
+
+    .line 1
+    new-instance v8, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    new-instance v7, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;
+
+    invoke-direct {v7, p0}, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const-wide/16 v3, 0x1e
+
+    move-object v0, v8
+
+    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    return-object v8
+.end method
+
+.method public static newFileExecutor()Ljava/util/concurrent/ExecutorService;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;
+
+    const-string v1, "Firebase-Messaging-File"
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static newFileIOExecutor()Ljava/util/concurrent/Executor;
+    .locals 1
+
+    const-string v0, "Firebase-Messaging-File-Io"
+
+    .line 1
+    invoke-static {v0}, Lcom/google/firebase/messaging/FcmExecutors;->newCachedSingleThreadExecutor(Ljava/lang/String;)Ljava/util/concurrent/Executor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static newInitExecutor()Ljava/util/concurrent/ScheduledExecutorService;
     .locals 3
 
@@ -24,43 +110,23 @@
 .end method
 
 .method public static newIntentHandleExecutor()Ljava/util/concurrent/ExecutorService;
-    .locals 9
+    .locals 3
 
     .line 1
-    invoke-static {}, Lcom/google/android/gms/internal/firebase_messaging/zzi;->zza()Lcom/google/android/gms/internal/firebase_messaging/zzf;
+    invoke-static {}, Lcom/google/firebase/messaging/threads/PoolableExecutors;->factory()Lcom/google/firebase/messaging/threads/ExecutorFactory;
 
-    new-instance v7, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;
+    move-result-object v0
 
-    const-string v0, "Firebase-Messaging-Intent-Handle"
+    new-instance v1, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;
 
-    invoke-direct {v7, v0}, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;-><init>(Ljava/lang/String;)V
+    const-string v2, "Firebase-Messaging-Intent-Handle"
 
-    new-instance v8, Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-direct {v1, v2}, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;-><init>(Ljava/lang/String;)V
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+    sget-object v2, Lcom/google/firebase/messaging/threads/ThreadPriority;->HIGH_SPEED:Lcom/google/firebase/messaging/threads/ThreadPriority;
 
     .line 2
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0x3c
-
-    move-object v0, v8
-
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    const/4 v0, 0x1
-
-    .line 3
-    invoke-virtual {v8, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
-
-    .line 4
-    invoke-static {v8}, Ljava/util/concurrent/Executors;->unconfigurableExecutorService(Ljava/util/concurrent/ExecutorService;)Ljava/util/concurrent/ExecutorService;
+    invoke-interface {v0, v1, v2}, Lcom/google/firebase/messaging/threads/ExecutorFactory;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;Lcom/google/firebase/messaging/threads/ThreadPriority;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
@@ -78,6 +144,19 @@
     invoke-direct {v0, v1}, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;-><init>(Ljava/lang/String;)V
 
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static newRpcTasksExecutor()Ljava/util/concurrent/Executor;
+    .locals 1
+
+    const-string v0, "Firebase-Messaging-Rpc-Task"
+
+    .line 1
+    invoke-static {v0}, Lcom/google/firebase/messaging/FcmExecutors;->newCachedSingleThreadExecutor(Ljava/lang/String;)Ljava/util/concurrent/Executor;
 
     move-result-object v0
 

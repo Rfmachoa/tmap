@@ -1,12 +1,22 @@
-.class public final Lxh/c;
+.class public interface abstract Lxh/c;
 .super Ljava/lang/Object;
+.source "LayeredSocketFactory.java"
+
+# interfaces
+.implements Lxh/m;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+# virtual methods
+.method public abstract createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/net/UnknownHostException;
+        }
+    .end annotation
 .end method

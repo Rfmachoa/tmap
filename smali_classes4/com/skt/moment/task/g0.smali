@@ -6,6 +6,22 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "resHappenVo"
+        }
+    .end annotation
 
     const/4 v6, 0x0
 
@@ -115,6 +131,14 @@
 
 .method public Q0(Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resCouponDownloadVo"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/TreatsPopsTask;->e0:Lcom/skt/moment/net/vo/ServiceResVo;

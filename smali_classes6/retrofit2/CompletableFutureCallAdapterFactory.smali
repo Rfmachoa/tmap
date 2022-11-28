@@ -6,8 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter;,
         Lretrofit2/CompletableFutureCallAdapterFactory$ResponseCallAdapter;,
-        Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter;
+        Lretrofit2/CompletableFutureCallAdapterFactory$CallCancelCompletableFuture;
     }
 .end annotation
 

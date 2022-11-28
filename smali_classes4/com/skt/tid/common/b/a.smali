@@ -121,7 +121,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lob/a;->a:[I
+    sget-object v0, Lld/a;->a:[I
 
     const/4 v1, 0x1
 
@@ -492,7 +492,7 @@
         .end annotation
     .end param
 
-    const-string/jumbo v0, "tag"
+    const-string v0, "tag"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -539,7 +539,7 @@
         .end annotation
     .end param
 
-    const-string/jumbo v0, "tag"
+    const-string v0, "tag"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 

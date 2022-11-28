@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/tasks/zzw;
 .super Lcom/google/android/gms/tasks/Task;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # annotations
@@ -19,13 +19,6 @@
 .field private final zza:Ljava/lang/Object;
 
 .field private final zzb:Lcom/google/android/gms/tasks/zzr;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/zzr<",
-            "TTResult;>;"
-        }
-    .end annotation
-.end field
 
 .field private zzc:Z
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
@@ -37,12 +30,6 @@
 
 .field private zze:Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TTResult;"
-        }
     .end annotation
 
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
@@ -1190,11 +1177,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TTResult;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzw;->zza:Ljava/lang/Object;
@@ -1349,11 +1331,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TTResult;)Z"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzw;->zza:Ljava/lang/Object;

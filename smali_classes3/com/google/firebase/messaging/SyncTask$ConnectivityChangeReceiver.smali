@@ -1,6 +1,6 @@
 .class Lcom/google/firebase/messaging/SyncTask$ConnectivityChangeReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "SyncTask.java"
 
 
 # annotations
@@ -19,7 +19,7 @@
 
 # instance fields
 .field private task:Lcom/google/firebase/messaging/SyncTask;
-    .annotation runtime Ljavax/annotation/Nullable;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
@@ -31,6 +31,7 @@
     .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/firebase/messaging/SyncTask$ConnectivityChangeReceiver;->task:Lcom/google/firebase/messaging/SyncTask;
 
     return-void
@@ -48,6 +49,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/google/firebase/messaging/SyncTask;->isDeviceConnected()Z
 
@@ -57,7 +59,7 @@
 
     return-void
 
-    .line 2
+    .line 3
     :cond_1
     invoke-static {}, Lcom/google/firebase/messaging/SyncTask;->isDebugLogEnabled()Z
 
@@ -69,14 +71,14 @@
 
     const-string p2, "Connectivity changed. Starting background sync."
 
-    .line 3
+    .line 4
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     :cond_2
     iget-object p1, p0, Lcom/google/firebase/messaging/SyncTask$ConnectivityChangeReceiver;->task:Lcom/google/firebase/messaging/SyncTask;
 
-    .line 4
-    invoke-static {p1}, Lcom/google/firebase/messaging/SyncTask;->-$$Nest$fgetfirebaseMessaging(Lcom/google/firebase/messaging/SyncTask;)Lcom/google/firebase/messaging/FirebaseMessaging;
+    invoke-static {p1}, Lcom/google/firebase/messaging/SyncTask;->access$000(Lcom/google/firebase/messaging/SyncTask;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
     move-result-object p1
 
@@ -86,9 +88,9 @@
 
     invoke-virtual {p1, p2, v0, v1}, Lcom/google/firebase/messaging/FirebaseMessaging;->enqueueTaskWithDelaySeconds(Ljava/lang/Runnable;J)V
 
+    .line 6
     iget-object p1, p0, Lcom/google/firebase/messaging/SyncTask$ConnectivityChangeReceiver;->task:Lcom/google/firebase/messaging/SyncTask;
 
-    .line 5
     invoke-virtual {p1}, Lcom/google/firebase/messaging/SyncTask;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -97,6 +99,7 @@
 
     const/4 p1, 0x0
 
+    .line 7
     iput-object p1, p0, Lcom/google/firebase/messaging/SyncTask$ConnectivityChangeReceiver;->task:Lcom/google/firebase/messaging/SyncTask;
 
     return-void
@@ -119,17 +122,17 @@
     .line 2
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     :cond_0
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    .line 3
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 4
     iget-object v1, p0, Lcom/google/firebase/messaging/SyncTask$ConnectivityChangeReceiver;->task:Lcom/google/firebase/messaging/SyncTask;
 
-    .line 4
     invoke-virtual {v1}, Lcom/google/firebase/messaging/SyncTask;->getContext()Landroid/content/Context;
 
     move-result-object v1

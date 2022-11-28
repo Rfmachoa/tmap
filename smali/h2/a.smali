@@ -1,74 +1,55 @@
-.class public Lh2/a;
+.class public final Lh2/a;
 .super Ljava/lang/Object;
-.source "EditTextAttributeHelper.java"
+.source "MbmsHelper.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/RestrictTo;
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        Lh2/a$a;
     }
 .end annotation
 
 
-# static fields
-.field public static final b:I = 0x7fffffff
-
-
-# instance fields
-.field public a:I
-
-
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/util/AttributeSet;II)V
-    .locals 1
-    .param p1    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p2, :cond_0
-
-    .line 2
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    .line 3
-    sget-object v0, Landroidx/emoji/R$styleable;->EmojiEditText:[I
-
-    invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    .line 4
-    sget p2, Landroidx/emoji/R$styleable;->EmojiEditText_maxEmojiCount:I
-
-    const p3, 0x7fffffff
-
-    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInteger(II)I
-
-    move-result p2
-
-    iput p2, p0, Lh2/a;->a:I
-
-    .line 5
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    :cond_0
     return-void
 .end method
 
-
-# virtual methods
-.method public a()I
-    .locals 1
+.method public static a(Landroid/content/Context;Landroid/telephony/mbms/ServiceInfo;)Ljava/lang/CharSequence;
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/telephony/mbms/ServiceInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget v0, p0, Lh2/a;->a:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return v0
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
+    invoke-static {p0, p1}, Lh2/a$a;->a(Landroid/content/Context;Landroid/telephony/mbms/ServiceInfo;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

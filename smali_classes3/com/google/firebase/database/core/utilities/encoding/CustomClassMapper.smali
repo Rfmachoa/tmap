@@ -847,7 +847,7 @@
     const-string v1, " has generic type parameters, please use GenericTypeIndicator instead"
 
     .line 14
-    invoke-static {p1, v0, v1}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, v1}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

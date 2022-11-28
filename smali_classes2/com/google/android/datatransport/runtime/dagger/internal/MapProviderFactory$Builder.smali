@@ -22,7 +22,7 @@
         ">",
         "Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder<",
         "TK;TV;",
-        "Loi/a<",
+        "Lsk/a<",
         "TV;>;>;"
     }
 .end annotation
@@ -71,23 +71,23 @@
     return-object v0
 .end method
 
-.method public bridge synthetic put(Ljava/lang/Object;Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+.method public bridge synthetic put(Ljava/lang/Object;Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;->put(Ljava/lang/Object;Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;->put(Ljava/lang/Object;Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public put(Ljava/lang/Object;Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
+.method public put(Ljava/lang/Object;Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder<",
             "TK;TV;>;"
@@ -95,31 +95,31 @@
     .end annotation
 
     .line 2
-    invoke-super {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->put(Ljava/lang/Object;Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+    invoke-super {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->put(Ljava/lang/Object;Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
 
     return-object p0
 .end method
 
-.method public bridge synthetic putAll(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+.method public bridge synthetic putAll(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;->putAll(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
+    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;->putAll(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public putAll(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
+.method public putAll(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder<",
             "TK;TV;>;"
@@ -127,7 +127,7 @@
     .end annotation
 
     .line 2
-    invoke-super {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->putAll(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+    invoke-super {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->putAll(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
 
     return-object p0
 .end method

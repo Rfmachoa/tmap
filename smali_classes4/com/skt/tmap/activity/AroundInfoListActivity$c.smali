@@ -103,7 +103,7 @@
 
     invoke-direct {p3, p0, p2}, Lcom/skt/tmap/activity/AroundInfoListActivity$c$a;-><init>(Lcom/skt/tmap/activity/AroundInfoListActivity$c;I)V
 
-    invoke-virtual {p1, p3}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->l(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, p3}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->n(Ljava/lang/Runnable;)V
 
     return-void
 .end method

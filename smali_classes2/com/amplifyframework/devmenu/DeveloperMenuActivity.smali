@@ -41,7 +41,7 @@
     .line 5
     sget p1, Lcom/amplifyframework/core/R$id;->nav_host_fragment:I
 
-    invoke-static {p0, p1}, Landroidx/navigation/p0;->d(Landroid/app/Activity;I)Landroidx/navigation/NavController;
+    invoke-static {p0, p1}, Landroidx/navigation/Navigation;->j(Landroid/app/Activity;I)Landroidx/navigation/NavController;
 
     move-result-object p1
 
@@ -54,21 +54,21 @@
 
     check-cast v0, Landroidx/appcompat/widget/Toolbar;
 
-    new-instance v1, Landroidx/navigation/ui/b$b;
+    new-instance v1, Lu3/d$a;
 
     .line 7
-    invoke-virtual {p1}, Landroidx/navigation/NavController;->m()Landroidx/navigation/a0;
+    invoke-virtual {p1}, Landroidx/navigation/NavController;->K()Landroidx/navigation/NavGraph;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Landroidx/navigation/ui/b$b;-><init>(Landroidx/navigation/a0;)V
+    invoke-direct {v1, v2}, Lu3/d$a;-><init>(Landroidx/navigation/NavGraph;)V
 
-    invoke-virtual {v1}, Landroidx/navigation/ui/b$b;->a()Landroidx/navigation/ui/b;
+    invoke-virtual {v1}, Lu3/d$a;->a()Lu3/d;
 
     move-result-object v1
 
     .line 8
-    invoke-static {v0, p1, v1}, Landroidx/navigation/ui/c;->l(Landroidx/appcompat/widget/Toolbar;Landroidx/navigation/NavController;Landroidx/navigation/ui/b;)V
+    invoke-static {v0, p1, v1}, Lu3/p;->t(Landroidx/appcompat/widget/Toolbar;Landroidx/navigation/NavController;Lu3/d;)V
 
     .line 9
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;

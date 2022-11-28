@@ -1,4 +1,4 @@
-.class Lretrofit2/Platform$Android$MainThreadExecutor;
+.class final Lretrofit2/Platform$Android$MainThreadExecutor;
 .super Ljava/lang/Object;
 .source "Platform.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "MainThreadExecutor"
 .end annotation
 

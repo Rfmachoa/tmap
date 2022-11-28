@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/analytics/zzg;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/analytics/zzt;
@@ -23,9 +23,9 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/net/Uri$Builder;
 
-    .line 1
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
 
     const-string v1, "uri"
@@ -51,9 +51,9 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
     new-instance v0, Landroid/util/LogPrinter;
 
     const/4 v1, 0x4
@@ -80,9 +80,9 @@
 .method public final zze(Lcom/google/android/gms/analytics/zzh;)V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
-    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/analytics/zzh;->zze()Ljava/util/Collection;
 
     move-result-object p1
@@ -155,11 +155,11 @@
     :cond_2
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzg;->zzb:Landroid/util/LogPrinter;
 
-    .line 9
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 9
     invoke-virtual {v0, p1}, Landroid/util/LogPrinter;->println(Ljava/lang/String;)V
 
     return-void

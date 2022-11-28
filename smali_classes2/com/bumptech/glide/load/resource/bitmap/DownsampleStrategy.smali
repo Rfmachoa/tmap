@@ -32,10 +32,10 @@
 
 .field public static final g:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
-.field public static final h:Lu4/d;
+.field public static final h:Lr6/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lu4/d<",
+            "Lr6/d<",
             "Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;",
             ">;"
         }
@@ -97,11 +97,11 @@
     const-string v1, "com.bumptech.glide.load.resource.bitmap.Downsampler.DownsampleStrategy"
 
     .line 8
-    invoke-static {v1, v0}, Lu4/d;->g(Ljava/lang/String;Ljava/lang/Object;)Lu4/d;
+    invoke-static {v1, v0}, Lr6/d;->g(Ljava/lang/String;Ljava/lang/Object;)Lr6/d;
 
     move-result-object v0
 
-    sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->h:Lu4/d;
+    sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->h:Lr6/d;
 
     const/4 v0, 0x1
 

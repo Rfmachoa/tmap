@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/internal/TelemetryData;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -41,14 +41,6 @@
         id = 0x2
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/internal/MethodInvocation;",
-            ">;"
-        }
-    .end annotation
-
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 .end field
@@ -83,15 +75,6 @@
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/internal/MethodInvocation;",
-            ">;)V"
-        }
     .end annotation
 
     .line 1
@@ -151,15 +134,6 @@
 .method public final zab()Ljava/util/List;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/internal/MethodInvocation;",
-            ">;"
-        }
     .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/TelemetryData;->zab:Ljava/util/List;

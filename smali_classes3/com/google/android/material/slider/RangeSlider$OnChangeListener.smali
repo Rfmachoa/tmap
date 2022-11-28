@@ -24,3 +24,27 @@
         ">;"
     }
 .end annotation
+
+
+# virtual methods
+.method public abstract onValueChange(Lcom/google/android/material/slider/RangeSlider;FZ)V
+    .param p1    # Lcom/google/android/material/slider/RangeSlider;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+.method public bridge synthetic onValueChange(Ljava/lang/Object;FZ)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    check-cast p1, Lcom/google/android/material/slider/RangeSlider;
+
+    invoke-interface {p0, p1, p2, p3}, Lcom/google/android/material/slider/RangeSlider$OnChangeListener;->onValueChange(Lcom/google/android/material/slider/RangeSlider;FZ)V
+
+    return-void
+.end method

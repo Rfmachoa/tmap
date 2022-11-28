@@ -3,46 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ll0/c;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:Landroidx/car/app/CarContext;
 
-.field public final synthetic b:Landroidx/car/app/m0;
-
-.field public final synthetic c:Landroidx/lifecycle/Lifecycle;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)V
+.method public synthetic constructor <init>(Landroidx/car/app/CarContext;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroidx/car/app/c0;->a:Landroidx/car/app/CarContext;
 
-    iput-object p2, p0, Landroidx/car/app/c0;->b:Landroidx/car/app/m0;
-
-    iput-object p3, p0, Landroidx/car/app/c0;->c:Landroidx/lifecycle/Lifecycle;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final create()Ll0/a;
-    .locals 3
+.method public final run()V
+    .locals 1
 
     iget-object v0, p0, Landroidx/car/app/c0;->a:Landroidx/car/app/CarContext;
 
-    iget-object v1, p0, Landroidx/car/app/c0;->b:Landroidx/car/app/m0;
+    invoke-static {v0}, Landroidx/car/app/CarContext;->k(Landroidx/car/app/CarContext;)V
 
-    iget-object v2, p0, Landroidx/car/app/c0;->c:Landroidx/lifecycle/Lifecycle;
-
-    invoke-static {v0, v1, v2}, Landroidx/car/app/CarContext;->a(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

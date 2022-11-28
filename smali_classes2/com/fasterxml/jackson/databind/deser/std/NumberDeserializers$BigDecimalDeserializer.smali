@@ -82,13 +82,17 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentTokenId()I
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->currentTokenId()I
 
     move-result v0
 
-    const/4 v1, 0x3
+    const/4 v1, 0x1
 
     if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_2
 
     const/4 v1, 0x6
 
@@ -100,9 +104,22 @@
 
     const/16 v1, 0x8
 
-    if-ne v0, v1, :cond_5
+    if-eq v0, v1, :cond_0
 
     .line 3
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->getValueType(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0, p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleUnexpectedToken(Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/core/JsonParser;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/math/BigDecimal;
+
+    return-object p1
+
+    .line 4
     :cond_0
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getDecimalValue()Ljava/math/BigDecimal;
 
@@ -110,29 +127,91 @@
 
     return-object p1
 
-    .line 4
+    .line 5
     :cond_1
     invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getText()Ljava/lang/String;
 
     move-result-object p1
 
+    goto :goto_0
+
+    .line 6
+    :cond_2
+    invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_deserializeFromArray(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/math/BigDecimal;
+
+    return-object p1
+
+    .line 7
+    :cond_3
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
+
+    invoke-virtual {p2, p1, p0, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->extractScalarFromObject(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/JsonDeserializer;Ljava/lang/Class;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 8
+    :goto_0
+    invoke-virtual {p0, p2, p1}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_checkFromStringCoercion(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    move-result-object v0
+
+    .line 9
+    sget-object v1, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->AsNull:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    if-ne v0, v1, :cond_4
+
+    .line 10
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/math/BigDecimal;
+
+    return-object p1
+
+    .line 11
+    :cond_4
+    sget-object v1, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->AsEmpty:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    if-ne v0, v1, :cond_5
+
+    .line 12
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigDecimalDeserializer;->getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/math/BigDecimal;
+
+    return-object p1
+
+    .line 13
+    :cond_5
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 5
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    .line 14
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_hasTextualNull(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_6
 
-    const/4 p1, 0x0
+    .line 15
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/math/BigDecimal;
 
     return-object p1
 
-    .line 6
-    :cond_2
+    .line 16
+    :cond_6
     :try_start_0
     new-instance v0, Ljava/math/BigDecimal;
 
@@ -142,68 +221,39 @@
 
     return-object v0
 
-    .line 7
+    .line 17
     :catch_0
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
 
-    const-string v1, "not a valid representation"
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p1, v0, v1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->weirdStringException(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "not a valid representation"
+
+    invoke-virtual {p2, v0, p1, v2, v1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleWeirdStringValue(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Ljava/math/BigDecimal;
 
-    .line 8
-    :cond_3
-    sget-object v0, Lcom/fasterxml/jackson/databind/DeserializationFeature;->UNWRAP_SINGLE_VALUE_ARRAYS:Lcom/fasterxml/jackson/databind/DeserializationFeature;
+    return-object p1
+.end method
 
-    invoke-virtual {p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z
+.method public getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 0
 
-    move-result v0
+    .line 1
+    sget-object p1, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
 
-    if-eqz v0, :cond_5
+    return-object p1
+.end method
 
-    .line 9
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
+.method public final logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
 
-    .line 10
-    invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/NumberDeserializers$BigDecimalDeserializer;->deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/math/BigDecimal;
-
-    move-result-object v0
-
-    .line 11
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/fasterxml/jackson/core/JsonToken;->END_ARRAY:Lcom/fasterxml/jackson/core/JsonToken;
-
-    if-ne v1, v2, :cond_4
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/databind/type/LogicalType;->Float:Lcom/fasterxml/jackson/databind/type/LogicalType;
 
     return-object v0
-
-    :cond_4
-    const-string v0, "Attempted to unwrap single value array for single \'BigDecimal\' value but there was more than a single value in the array"
-
-    .line 12
-    invoke-virtual {p2, p1, v2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->wrongTokenException(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/core/JsonToken;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
-
-    move-result-object p1
-
-    throw p1
-
-    .line 13
-    :cond_5
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->_valueClass:Ljava/lang/Class;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentToken()Lcom/fasterxml/jackson/core/JsonToken;
-
-    move-result-object p1
-
-    invoke-virtual {p2, v0, p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/Class;Lcom/fasterxml/jackson/core/JsonToken;)Lcom/fasterxml/jackson/databind/JsonMappingException;
-
-    move-result-object p1
-
-    throw p1
 .end method

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final FLUTTER_ASSETS_PATH:Ljava/lang/String; = "flutter_assets"
+.field private static final FLUTTER_ASSET_FILE:Ljava/lang/String; = "flutter_assets/NOTICES.Z"
 
 .field private static final FLUTTER_PLATFORM:Ljava/lang/String; = "Flutter"
 
@@ -61,56 +61,56 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->assetPathExists(Ljava/lang/String;)Z
+    invoke-direct {p0, p1}, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->assetFileExists(Ljava/lang/String;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private assetPathExists(Ljava/lang/String;)Z
+.method private assetFileExists(Ljava/lang/String;)Z
     .locals 2
 
-    const/4 v0, 0x0
-
     .line 1
-    :try_start_0
-    iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->context:Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->context:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    if-nez v0, :cond_0
+
+    return v1
 
     .line 2
     :cond_0
-    iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->context:Landroid/content/Context;
+    :try_start_0
+    iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->context:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1, p1}, Landroid/content/res/AssetManager;->list(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p1
+
+    const/4 v0, 0x1
 
     if-eqz p1, :cond_1
 
     .line 3
-    array-length p1, p1
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-lez p1, :cond_1
-
-    const/4 v0, 0x1
-
-    :catch_0
     :cond_1
     return v0
+
+    :catch_0
+    return v1
 .end method
 
 .method private initDevelopmentPlatform()Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider$DevelopmentPlatform;

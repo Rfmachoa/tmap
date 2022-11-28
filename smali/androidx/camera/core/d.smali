@@ -1,72 +1,79 @@
-.class public final Landroidx/camera/core/d;
+.class public Landroidx/camera/core/d;
 .super Ljava/lang/Object;
 .source "AndroidImageReaderProxy.java"
 
 # interfaces
-.implements Lx/l0;
+.implements Lb0/w0;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
 .field public final a:Landroid/media/ImageReader;
     .annotation build Landroidx/annotation/GuardedBy;
-        value = "this"
+        value = "mLock"
     .end annotation
 .end field
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Landroid/media/ImageReader;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "imageReader"
-        }
-    .end annotation
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    .line 3
     iput-object p1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
 
     return-void
 .end method
 
-.method public static synthetic b(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lx/l0$a;Landroid/media/ImageReader;)V
+.method public static synthetic d(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lb0/w0$a;Landroid/media/ImageReader;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/camera/core/d;->l(Ljava/util/concurrent/Executor;Lx/l0$a;Landroid/media/ImageReader;)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/camera/core/d;->l(Ljava/util/concurrent/Executor;Lb0/w0$a;Landroid/media/ImageReader;)V
 
     return-void
 .end method
 
-.method public static synthetic i(Landroidx/camera/core/d;Lx/l0$a;)V
+.method public static synthetic i(Landroidx/camera/core/d;Lb0/w0$a;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/camera/core/d;->k(Lx/l0$a;)V
+    invoke-direct {p0, p1}, Landroidx/camera/core/d;->k(Lb0/w0$a;)V
 
     return-void
 .end method
 
-.method private synthetic k(Lx/l0$a;)V
+.method private synthetic k(Lb0/w0$a;)V
     .locals 0
 
     .line 1
-    invoke-interface {p1, p0}, Lx/l0$a;->a(Lx/l0;)V
+    invoke-interface {p1, p0}, Lb0/w0$a;->a(Lb0/w0;)V
 
     return-void
 .end method
 
-.method private synthetic l(Ljava/util/concurrent/Executor;Lx/l0$a;Landroid/media/ImageReader;)V
+.method private synthetic l(Ljava/util/concurrent/Executor;Lb0/w0$a;Landroid/media/ImageReader;)V
     .locals 0
 
     .line 1
     new-instance p3, Landroidx/camera/core/c;
 
-    invoke-direct {p3, p0, p2}, Landroidx/camera/core/c;-><init>(Landroidx/camera/core/d;Lx/l0$a;)V
+    invoke-direct {p3, p0, p2}, Landroidx/camera/core/c;-><init>(Landroidx/camera/core/d;Lb0/w0$a;)V
 
     invoke-interface {p1, p3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -75,51 +82,149 @@
 
 
 # virtual methods
-.method public declared-synchronized a()Landroid/view/Surface;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    monitor-enter p0
+.method public a()I
+    .locals 2
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/media/ImageReader;->getSurface()Landroid/view/Surface;
+    monitor-enter v0
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized c()Landroidx/camera/core/p1;
-    .locals 3
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    .line 1
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
 
-    invoke-virtual {v1}, Landroid/media/ImageReader;->acquireLatestImage()Landroid/media/Image;
+    invoke-virtual {v1}, Landroid/media/ImageReader;->getImageFormat()I
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public b()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    invoke-virtual {v1}, Landroid/media/ImageReader;->getMaxImages()I
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public c()Landroid/view/Surface;
+    .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    invoke-virtual {v1}, Landroid/media/ImageReader;->getSurface()Landroid/view/Surface;
 
     move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public close()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    invoke-virtual {v1}, Landroid/media/ImageReader;->close()V
+
+    .line 3
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public e()Landroidx/camera/core/m1;
+    .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 2
+    :try_start_0
+    iget-object v2, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    invoke-virtual {v2}, Landroid/media/ImageReader;->acquireLatestImage()Landroid/media/Image;
+
+    move-result-object v2
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -127,143 +232,88 @@
     goto :goto_0
 
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     goto :goto_1
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    .line 2
+    .line 3
     :try_start_1
-    invoke-virtual {p0, v1}, Landroidx/camera/core/d;->j(Ljava/lang/RuntimeException;)Z
+    invoke-virtual {p0, v2}, Landroidx/camera/core/d;->j(Ljava/lang/RuntimeException;)Z
 
-    move-result v2
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    move-object v2, v1
+
+    :goto_0
+    if-nez v2, :cond_0
+
+    .line 4
+    monitor-exit v0
+
+    return-object v1
+
+    .line 5
+    :cond_0
+    new-instance v1, Landroidx/camera/core/a;
+
+    invoke-direct {v1, v2}, Landroidx/camera/core/a;-><init>(Landroid/media/Image;)V
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 6
+    :cond_1
+    throw v2
+
+    .line 7
+    :goto_1
+    monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v2, :cond_1
+    throw v1
+.end method
 
-    move-object v1, v0
+.method public f()V
+    .locals 3
 
-    :goto_0
-    if-nez v1, :cond_0
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, v2}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
 
     .line 3
-    monitor-exit p0
+    monitor-exit v0
 
-    return-object v0
+    return-void
 
-    .line 4
-    :cond_0
-    :try_start_2
-    new-instance v0, Landroidx/camera/core/a;
+    :catchall_0
+    move-exception v1
 
-    invoke-direct {v0, v1}, Landroidx/camera/core/a;-><init>(Landroid/media/Image;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit p0
-
-    return-object v0
-
-    .line 5
-    :cond_1
-    :try_start_3
     throw v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    monitor-exit p0
-
-    throw v0
 .end method
 
-.method public declared-synchronized close()V
-    .locals 1
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
-
-    invoke-virtual {v0}, Landroid/media/ImageReader;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized d()I
-    .locals 1
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
-
-    invoke-virtual {v0}, Landroid/media/ImageReader;->getImageFormat()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized e()V
+.method public g(Lb0/w0$a;Ljava/util/concurrent/Executor;)V
     .locals 2
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, v1}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized f(Lx/l0$a;Ljava/util/concurrent/Executor;)V
-    .locals 1
-    .param p1    # Lx/l0$a;
+    .param p1    # Lb0/w0$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -271,148 +321,125 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "listener",
-            "executor"
-        }
-    .end annotation
-
-    monitor-enter p0
 
     .line 1
-    :try_start_0
-    new-instance v0, Landroidx/camera/core/b;
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p2, p1}, Landroidx/camera/core/b;-><init>(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lx/l0$a;)V
+    monitor-enter v0
 
     .line 2
-    iget-object p1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+    :try_start_0
+    new-instance v1, Landroidx/camera/core/b;
+
+    invoke-direct {v1, p0, p2, p1}, Landroidx/camera/core/b;-><init>(Landroidx/camera/core/d;Ljava/util/concurrent/Executor;Lb0/w0$a;)V
 
     .line 3
-    invoke-static {}, Landroidx/camera/core/impl/utils/k;->a()Landroid/os/Handler;
+    iget-object p1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    .line 4
+    invoke-static {}, Landroidx/camera/core/impl/utils/o;->a()Landroid/os/Handler;
 
     move-result-object p2
 
-    .line 4
-    invoke-virtual {p1, v0, p2}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 5
-    monitor-exit p0
+    invoke-virtual {p1, v1, p2}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
+
+    .line 6
+    monitor-exit v0
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    monitor-exit p0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
 .end method
 
-.method public declared-synchronized g()I
-    .locals 1
-
-    monitor-enter p0
+.method public getHeight()I
+    .locals 2
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/media/ImageReader;->getMaxImages()I
+    monitor-enter v0
 
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized getHeight()I
-    .locals 1
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
-
-    invoke-virtual {v0}, Landroid/media/ImageReader;->getHeight()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized getWidth()I
-    .locals 1
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
-
-    invoke-virtual {v0}, Landroid/media/ImageReader;->getWidth()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public declared-synchronized h()Landroidx/camera/core/p1;
-    .locals 3
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    .line 1
+    .line 2
     :try_start_0
     iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
 
-    invoke-virtual {v1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
+    invoke-virtual {v1}, Landroid/media/ImageReader;->getHeight()I
 
-    move-result-object v1
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public getWidth()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    invoke-virtual {v1}, Landroid/media/ImageReader;->getWidth()I
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public h()Landroidx/camera/core/m1;
+    .locals 4
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/d;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    .line 2
+    :try_start_0
+    iget-object v2, p0, Landroidx/camera/core/d;->a:Landroid/media/ImageReader;
+
+    invoke-virtual {v2}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
+
+    move-result-object v2
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -420,69 +447,56 @@
     goto :goto_0
 
     :catchall_0
-    move-exception v0
+    move-exception v1
 
     goto :goto_1
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    .line 2
+    .line 3
     :try_start_1
-    invoke-virtual {p0, v1}, Landroidx/camera/core/d;->j(Ljava/lang/RuntimeException;)Z
+    invoke-virtual {p0, v2}, Landroidx/camera/core/d;->j(Ljava/lang/RuntimeException;)Z
 
-    move-result v2
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    move-object v2, v1
+
+    :goto_0
+    if-nez v2, :cond_0
+
+    .line 4
+    monitor-exit v0
+
+    return-object v1
+
+    .line 5
+    :cond_0
+    new-instance v1, Landroidx/camera/core/a;
+
+    invoke-direct {v1, v2}, Landroidx/camera/core/a;-><init>(Landroid/media/Image;)V
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 6
+    :cond_1
+    throw v2
+
+    .line 7
+    :goto_1
+    monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v2, :cond_1
-
-    move-object v1, v0
-
-    :goto_0
-    if-nez v1, :cond_0
-
-    .line 3
-    monitor-exit p0
-
-    return-object v0
-
-    .line 4
-    :cond_0
-    :try_start_2
-    new-instance v0, Landroidx/camera/core/a;
-
-    invoke-direct {v0, v1}, Landroidx/camera/core/a;-><init>(Landroid/media/Image;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    .line 5
-    :cond_1
-    :try_start_3
     throw v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    monitor-exit p0
-
-    throw v0
 .end method
 
 .method public final j(Ljava/lang/RuntimeException;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "e"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;

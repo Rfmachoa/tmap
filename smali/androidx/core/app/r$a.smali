@@ -1,9 +1,6 @@
 .class public Landroidx/core/app/r$a;
 .super Ljava/lang/Object;
-.source "NotificationManagerCompat.java"
-
-# interfaces
-.implements Landroidx/core/app/r$e;
+.source "NotificationChannelGroupCompat.java"
 
 
 # annotations
@@ -18,153 +15,73 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Z
+.field public final a:Landroidx/core/app/r;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/core/app/r$a;->a:Ljava/lang/String;
+    new-instance v0, Landroidx/core/app/r;
 
-    const/4 p1, 0x0
+    invoke-direct {v0, p1}, Landroidx/core/app/r;-><init>(Ljava/lang/String;)V
 
-    .line 3
-    iput p1, p0, Landroidx/core/app/r$a;->b:I
-
-    const/4 p1, 0x0
-
-    .line 4
-    iput-object p1, p0, Landroidx/core/app/r$a;->c:Ljava/lang/String;
-
-    const/4 p1, 0x1
-
-    .line 5
-    iput-boolean p1, p0, Landroidx/core/app/r$a;->d:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    iput-object p1, p0, Landroidx/core/app/r$a;->a:Ljava/lang/String;
-
-    .line 8
-    iput p2, p0, Landroidx/core/app/r$a;->b:I
-
-    .line 9
-    iput-object p3, p0, Landroidx/core/app/r$a;->c:Ljava/lang/String;
-
-    const/4 p1, 0x0
-
-    .line 10
-    iput-boolean p1, p0, Landroidx/core/app/r$a;->d:Z
+    iput-object v0, p0, Landroidx/core/app/r$a;->a:Landroidx/core/app/r;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/support/v4/app/INotificationSideChannel;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/core/app/r$a;->d:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Landroidx/core/app/r$a;->a:Ljava/lang/String;
-
-    invoke-interface {p1, v0}, Landroid/support/v4/app/INotificationSideChannel;->cancelAll(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/core/app/r$a;->a:Ljava/lang/String;
-
-    iget v1, p0, Landroidx/core/app/r$a;->b:I
-
-    iget-object v2, p0, Landroidx/core/app/r$a;->c:Ljava/lang/String;
-
-    invoke-interface {p1, v0, v1, v2}, Landroid/support/v4/app/INotificationSideChannel;->cancel(Ljava/lang/String;ILjava/lang/String;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public a()Landroidx/core/app/r;
+    .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelTask["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "packageName:"
-
-    .line 2
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Landroidx/core/app/r$a;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id:"
-
-    .line 3
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Landroidx/core/app/r$a;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tag:"
-
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Landroidx/core/app/r$a;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", all:"
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Landroidx/core/app/r$a;->d:Z
-
-    const-string v2, "]"
-
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Landroidx/core/app/r$a;->a:Landroidx/core/app/r;
 
     return-object v0
+.end method
+
+.method public b(Ljava/lang/String;)Landroidx/core/app/r$a;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/core/app/r$a;->a:Landroidx/core/app/r;
+
+    iput-object p1, v0, Landroidx/core/app/r;->c:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public c(Ljava/lang/CharSequence;)Landroidx/core/app/r$a;
+    .locals 1
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/core/app/r$a;->a:Landroidx/core/app/r;
+
+    iput-object p1, v0, Landroidx/core/app/r;->b:Ljava/lang/CharSequence;
+
+    return-object p0
 .end method

@@ -41,13 +41,13 @@
     .end annotation
 .end method
 
-.method public abstract c(Lc4/o;)Ljava/lang/Object;
+.method public abstract c(Lz5/o;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc4/o;",
+            "Lz5/o;",
             ")TT;"
         }
     .end annotation

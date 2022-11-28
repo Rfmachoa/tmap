@@ -30,14 +30,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/executor/e;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/executor/e$a;->b:Landroidx/camera/core/impl/utils/executor/e;
@@ -60,14 +52,6 @@
 # virtual methods
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "r"
-        }
-    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Thread;

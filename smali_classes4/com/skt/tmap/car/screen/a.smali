@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/car/screen/a;->a:Lcom/skt/tmap/car/screen/BaseScreen;
 
-    check-cast p1, Lxb/a;
+    check-cast p1, Lcom/skt/tmap/car/data/a;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/BaseScreen;->u(Lcom/skt/tmap/car/screen/BaseScreen;Lxb/a;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/BaseScreen;->u(Lcom/skt/tmap/car/screen/BaseScreen;Lcom/skt/tmap/car/data/a;)V
 
     return-void
 .end method

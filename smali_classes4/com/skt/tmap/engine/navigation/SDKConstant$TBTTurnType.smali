@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008v\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008j\u0002\u0008\tj\u0002\u0008\nj\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013j\u0002\u0008\u0014j\u0002\u0008\u0015j\u0002\u0008\u0016j\u0002\u0008\u0017j\u0002\u0008\u0018j\u0002\u0008\u0019j\u0002\u0008\u001aj\u0002\u0008\u001bj\u0002\u0008\u001cj\u0002\u0008\u001dj\u0002\u0008\u001ej\u0002\u0008\u001fj\u0002\u0008 j\u0002\u0008!j\u0002\u0008\"j\u0002\u0008#j\u0002\u0008$j\u0002\u0008%j\u0002\u0008&j\u0002\u0008\'j\u0002\u0008(j\u0002\u0008)j\u0002\u0008*j\u0002\u0008+j\u0002\u0008,j\u0002\u0008-j\u0002\u0008.j\u0002\u0008/j\u0002\u00080j\u0002\u00081j\u0002\u00082j\u0002\u00083j\u0002\u00084j\u0002\u00085j\u0002\u00086j\u0002\u00087j\u0002\u00088j\u0002\u00089j\u0002\u0008:j\u0002\u0008;j\u0002\u0008<j\u0002\u0008=j\u0002\u0008>j\u0002\u0008?j\u0002\u0008@j\u0002\u0008Aj\u0002\u0008Bj\u0002\u0008Cj\u0002\u0008Dj\u0002\u0008Ej\u0002\u0008Fj\u0002\u0008Gj\u0002\u0008Hj\u0002\u0008Ij\u0002\u0008Jj\u0002\u0008Kj\u0002\u0008Lj\u0002\u0008Mj\u0002\u0008Nj\u0002\u0008Oj\u0002\u0008Pj\u0002\u0008Qj\u0002\u0008Rj\u0002\u0008Sj\u0002\u0008Tj\u0002\u0008Uj\u0002\u0008Vj\u0002\u0008Wj\u0002\u0008Xj\u0002\u0008Yj\u0002\u0008Zj\u0002\u0008[j\u0002\u0008\\j\u0002\u0008]j\u0002\u0008^j\u0002\u0008_j\u0002\u0008`j\u0002\u0008aj\u0002\u0008bj\u0002\u0008cj\u0002\u0008dj\u0002\u0008ej\u0002\u0008fj\u0002\u0008gj\u0002\u0008hj\u0002\u0008ij\u0002\u0008jj\u0002\u0008kj\u0002\u0008lj\u0002\u0008mj\u0002\u0008nj\u0002\u0008oj\u0002\u0008pj\u0002\u0008qj\u0002\u0008rj\u0002\u0008sj\u0002\u0008tj\u0002\u0008uj\u0002\u0008vj\u0002\u0008wj\u0002\u0008x\u00a8\u0006y"
     }
@@ -152,14 +147,15 @@
         "goal",
         "tollgate",
         "NA",
-        "navigation-sdk_release"
+        "TmapEngineCommonData_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -403,1906 +399,2188 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method private static final synthetic $values()[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    .locals 3
 
     const/16 v0, 0x72
 
     new-array v0, v0, [Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strYRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string v2, "strYRight"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    const-string v4, "Y\uc790 \uc624\ub978\ucabd"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strYLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    .line 1
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/4 v2, 0x1
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strYRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    aput-object v1, v0, v2
 
-    aput-object v1, v0, v3
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->str:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    const/4 v2, 0x2
 
-    const-string v2, "strYLeft"
+    aput-object v1, v0, v2
 
-    const/4 v3, 0x1
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string v4, "Y\uc790 \uc67c\ucabd"
+    const/4 v2, 0x3
 
-    .line 2
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aput-object v1, v0, v2
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strYLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    aput-object v1, v0, v3
+    const/4 v2, 0x4
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    aput-object v1, v0, v2
 
-    const-string v2, "str"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->uturn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const/4 v3, 0x2
+    const/4 v2, 0x5
 
-    const-string/jumbo v4, "\uc9c1\uc9c4"
+    aput-object v1, v0, v2
 
-    .line 3
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->pturn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->str:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    const/4 v2, 0x6
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string v2, "left"
+    const/4 v2, 0x7
 
-    const/4 v3, 0x3
+    aput-object v1, v0, v2
 
-    const-string/jumbo v4, "\uc88c\ud68c\uc804"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    .line 4
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/16 v2, 0x8
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    aput-object v1, v0, v2
 
-    aput-object v1, v0, v3
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    const/16 v2, 0x9
 
-    const-string v2, "right"
+    aput-object v1, v0, v2
 
-    const/4 v3, 0x4
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string/jumbo v4, "\uc6b0\ud68c\uc804"
+    const/16 v2, 0xa
 
-    .line 5
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aput-object v1, v0, v2
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    aput-object v1, v0, v3
+    const/16 v2, 0xb
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    aput-object v1, v0, v2
 
-    const-string/jumbo v2, "uturn"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const/4 v3, 0x5
+    const/16 v2, 0xc
 
-    const-string/jumbo v4, "\uc720\ud134"
+    aput-object v1, v0, v2
 
-    .line 6
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->uturn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    const/16 v2, 0xd
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string v2, "pturn"
+    const/16 v2, 0xe
 
-    const/4 v3, 0x6
+    aput-object v1, v0, v2
 
-    const-string/jumbo v4, "\ud53c\ud134"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    .line 7
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/16 v2, 0xf
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->pturn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    aput-object v1, v0, v2
 
-    aput-object v1, v0, v3
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    const/16 v2, 0x10
 
-    const-string v2, "left8"
+    aput-object v1, v0, v2
 
-    const/4 v3, 0x7
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string v4, "8\uc2dc\ubc29\ud5a5 \uc88c\ud68c\uc804"
+    const/16 v2, 0x11
 
-    .line 8
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aput-object v1, v0, v2
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    aput-object v1, v0, v3
+    const/16 v2, 0x12
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    aput-object v1, v0, v2
 
-    const-string v2, "left10"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const/16 v3, 0x8
+    const/16 v2, 0x13
 
-    const-string v4, "10\uc2dc\ubc29\ud5a5 \uc88c\ud68c\uc804"
+    aput-object v1, v0, v2
 
-    .line 9
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    const/16 v2, 0x14
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    const-string v2, "right2"
+    const/16 v2, 0x15
 
-    const/16 v3, 0x9
+    aput-object v1, v0, v2
 
-    const-string v4, "2\uc2dc\ubc29\ud5a5 \uc6b0\ud68c\uc804"
-
-    .line 10
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "right4"
-
-    const/16 v3, 0xa
-
-    const-string v4, "4\uc2dc\ubc29\ud5a5 \uc6b0\ud68c\uc804"
-
-    .line 11
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir1"
-
-    const/16 v3, 0xb
-
-    const-string v4, "1\uc2dc\ubc29\ud5a5"
-
-    .line 12
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir2"
-
-    const/16 v3, 0xc
-
-    const-string v4, "2\uc2dc\ubc29\ud5a5"
-
-    .line 13
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir3"
-
-    const/16 v3, 0xd
-
-    const-string v4, "3\uc2dc\ubc29\ud5a5"
-
-    .line 14
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir4"
-
-    const/16 v3, 0xe
-
-    const-string v4, "4\uc2dc\ubc29\ud5a5"
-
-    .line 15
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir5"
-
-    const/16 v3, 0xf
-
-    const-string v4, "5\uc2dc\ubc29\ud5a5"
-
-    .line 16
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir6"
-
-    const/16 v3, 0x10
-
-    const-string v4, "6\uc2dc\ubc29\ud5a5"
-
-    .line 17
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir7"
-
-    const/16 v3, 0x11
-
-    const-string v4, "7\uc2dc\ubc29\ud5a5"
-
-    .line 18
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir8"
-
-    const/16 v3, 0x12
-
-    const-string v4, "8\uc2dc\ubc29\ud5a5"
-
-    .line 19
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir9"
-
-    const/16 v3, 0x13
-
-    const-string v4, "9\uc2dc\ubc29\ud5a5"
-
-    .line 20
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir10"
-
-    const/16 v3, 0x14
-
-    const-string v4, "10\uc2dc\ubc29\ud5a5"
-
-    .line 21
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir11"
-
-    const/16 v3, 0x15
-
-    const-string v4, "11\uc2dc\ubc29\ud5a5"
-
-    .line 22
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "dir12"
-
-    const/16 v3, 0x16
-
-    const-string v4, "12\uc2dc\ubc29\ud5a5"
-
-    .line 23
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x16
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "strRight"
-
-    const/16 v3, 0x17
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd"
-
-    .line 24
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x17
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "strLeft"
-
-    const/16 v3, 0x18
-
-    const-string/jumbo v4, "\uc67c\ucabd"
-
-    .line 25
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x18
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "laneStr"
-
-    const/16 v3, 0x19
-
-    const-string/jumbo v4, "\uc9c1\uc9c4\ubc29\ud5a5"
-
-    .line 26
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x19
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "laneLeft"
-
-    const/16 v3, 0x1a
-
-    const-string/jumbo v4, "\uc67c\ucabd\ucc28\uc120"
-
-    .line 27
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x1a
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "laneRight"
-
-    const/16 v3, 0x1b
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd\ucc28\uc120"
-
-    .line 28
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x1b
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane1st"
-
-    const/16 v3, 0x1c
-
-    const-string v4, "1\ucc28\uc120"
-
-    .line 29
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane1st:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane1st:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x1c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane2nd"
-
-    const/16 v3, 0x1d
-
-    const-string v4, "2\ucc28\uc120"
-
-    .line 30
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane2nd:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane2nd:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x1d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane3rd"
-
-    const/16 v3, 0x1e
-
-    const-string v4, "3\ucc28\uc120"
-
-    .line 31
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane3rd:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane3rd:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x1e
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane4th"
-
-    const/16 v3, 0x1f
-
-    const-string v4, "4\ucc28\uc120"
-
-    .line 32
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane4th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane4th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x1f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane5th"
-
-    const/16 v3, 0x20
-
-    const-string v4, "5\ucc28\uc120"
-
-    .line 33
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane5th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane5th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x20
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane6th"
-
-    const/16 v3, 0x21
-
-    const-string v4, "6\ucc28\uc120"
-
-    .line 34
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane6th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane6th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x21
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane7th"
-
-    const/16 v3, 0x22
-
-    const-string v4, "7\ucc28\uc120"
-
-    .line 35
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane7th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane7th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x22
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane8th"
-
-    const/16 v3, 0x23
-
-    const-string v4, "8\ucc28\uc120"
-
-    .line 36
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane8th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane8th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x23
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane9th"
-
-    const/16 v3, 0x24
-
-    const-string v4, "9\ucc28\uc120"
-
-    .line 37
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane9th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane9th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x24
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "lane10th"
-
-    const/16 v3, 0x25
-
-    const-string v4, "10\ucc28\uc120"
-
-    .line 38
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane10th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane10th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x25
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "firstExit"
-
-    const/16 v3, 0x26
-
-    const-string/jumbo v4, "\uccab\ubc88\uc9f8 \ucd9c\uad6c"
-
-    .line 39
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstExit:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstExit:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x26
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "secExit"
-
-    const/16 v3, 0x27
-
-    const-string/jumbo v4, "\ub450\ubc88\uc9f8 \ucd9c\uad6c"
-
-    .line 40
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secExit:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secExit:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x27
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "firstLaneRight"
-
-    const/16 v3, 0x28
-
-    const-string/jumbo v4, "\uccab\ubc88\uc9f8 \uc624\ub978\ucabd \uae38"
-
-    .line 41
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstLaneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstLaneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x28
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "secLaneRight"
-
-    const/16 v3, 0x29
-
-    const-string/jumbo v4, "\ub450\ubc88\uc9f8 \uc624\ub978\ucabd \uae38"
-
-    .line 42
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secLaneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secLaneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x29
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "firstLaneLeft"
-
-    const/16 v3, 0x2a
-
-    const-string/jumbo v4, "\uccab\ubc88\uc9f8 \uc67c\ucabd \uae38"
-
-    .line 43
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstLaneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstLaneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x2a
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "secLaneLeft"
-
-    const/16 v3, 0x2b
-
-    const-string/jumbo v4, "\ub450\ubc88\uc9f8 \uc67c\ucabd \uae38"
-
-    .line 44
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secLaneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secLaneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x2b
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "hiPassLeft"
-
-    const/16 v3, 0x2c
-
-    const-string/jumbo v4, "\ud558\uc774\ud328\uc2a4\ucc28\ub85c\ub294 \uc88c\uce21\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
-
-    .line 45
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x2c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "hiPassRIght"
-
-    const/16 v3, 0x2d
-
-    const-string/jumbo v4, "\ud558\uc774\ud328\uc2a4\ucc28\ub85c\ub294 \uc6b0\uce21\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
-
-    .line 46
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassRIght:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassRIght:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x2d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "hiPassCenter"
-
-    const/16 v3, 0x2e
-
-    const-string/jumbo v4, "\ud558\uc774\ud328\uc2a4\ucc28\ub85c\ub294 \uc911\uc559\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
-
-    .line 47
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassCenter:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassCenter:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x2e
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "expInRight"
-
-    const/16 v3, 0x2f
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd\ubc29\uc5d0 \uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
-
-    .line 48
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x2f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "expInLeft"
-
-    const/16 v3, 0x30
-
-    const-string/jumbo v4, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
-
-    .line 49
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x30
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "expInStr"
-
-    const/16 v3, 0x31
-
-    const-string/jumbo v4, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
-
-    .line 50
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x31
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "expOutRight"
-
-    const/16 v3, 0x32
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
-
-    .line 51
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x32
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "expOutLeft"
-
-    const/16 v3, 0x33
-
-    const-string/jumbo v4, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
-
-    .line 52
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x33
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "expOutStr"
-
-    const/16 v3, 0x34
-
-    const-string/jumbo v4, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
-
-    .line 53
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x34
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saExpInRight"
-
-    const/16 v3, 0x35
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
-
-    .line 54
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x35
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saExpInLeft"
-
-    const/16 v3, 0x36
-
-    const-string/jumbo v4, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
-
-    .line 55
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x36
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saExpInStr"
-
-    const/16 v3, 0x37
-
-    const-string/jumbo v4, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
-
-    .line 56
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x37
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saExpOutRight"
-
-    const/16 v3, 0x38
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
-
-    .line 57
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x38
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saExpOutLeft"
-
-    const/16 v3, 0x39
-
-    const-string/jumbo v4, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
-
-    .line 58
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x39
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saExpOutStr"
-
-    const/16 v3, 0x3a
-
-    const-string/jumbo v4, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
-
-    .line 59
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x3a
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "roadRight"
-
-    const/16 v3, 0x3b
-
-    const-string/jumbo v4, "\uc624\ub978\ucabd \ub3c4\ub85c"
-
-    .line 60
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->roadRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->roadRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x3b
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "roadLeft"
-
-    const/16 v3, 0x3c
-
-    const-string/jumbo v4, "\uc67c\ucabd \ub3c4\ub85c"
-
-    .line 61
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->roadLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->roadLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x3c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "underIn"
-
-    const/16 v3, 0x3d
-
-    const-string/jumbo v4, "\uc9c0\ud558\ub3c4\ub85c \uc9c4\uc785"
-
-    .line 62
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->underIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->underIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x3d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "overIn"
-
-    const/16 v3, 0x3e
-
-    const-string/jumbo v4, "\uace0\uac00\ub3c4\ub85c \uc9c4\uc785"
-
-    .line 63
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->overIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->overIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x3e
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "tunnelIn"
-
-    const/16 v3, 0x3f
-
-    const-string/jumbo v4, "\ud130\ub110"
-
-    .line 64
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tunnelIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tunnelIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x3f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "bridge"
-
-    const/16 v3, 0x40
-
-    const-string/jumbo v4, "\uad50\ub7c9"
-
-    .line 65
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->bridge:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->bridge:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x40
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "underOut"
-
-    const/16 v3, 0x41
-
-    const-string/jumbo v4, "\uc9c0\ud558\ub3c4\ub85c \uc606"
-
-    .line 66
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->underOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->underOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x41
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "overOut"
-
-    const/16 v3, 0x42
-
-    const-string/jumbo v4, "\uace0\uac00\ub3c4\ub85c \uc606"
-
-    .line 67
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->overOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->overOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x42
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir1"
-
-    const/16 v3, 0x43
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 1\uc2dc\ubc29\ud5a5"
-
-    .line 68
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x43
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir2"
-
-    const/16 v3, 0x44
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 2\uc2dc\ubc29\ud5a5"
-
-    .line 69
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x44
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir3"
-
-    const/16 v3, 0x45
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 3\uc2dc\ubc29\ud5a5"
-
-    .line 70
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x45
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir4"
-
-    const/16 v3, 0x46
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 4\uc2dc\ubc29\ud5a5"
-
-    .line 71
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x46
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir5"
-
-    const/16 v3, 0x47
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 5\uc2dc\ubc29\ud5a5"
-
-    .line 72
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x47
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir6"
-
-    const/16 v3, 0x48
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 6\uc2dc\ubc29\ud5a5"
-
-    .line 73
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x48
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir7"
-
-    const/16 v3, 0x49
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 7\uc2dc\ubc29\ud5a5"
-
-    .line 74
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x49
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir8"
-
-    const/16 v3, 0x4a
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 8\uc2dc\ubc29\ud5a5"
-
-    .line 75
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x4a
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir9"
-
-    const/16 v3, 0x4b
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 9\uc2dc\ubc29\ud5a5"
-
-    .line 76
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x4b
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir10"
-
-    const/16 v3, 0x4c
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 10\uc2dc\ubc29\ud5a5"
-
-    .line 77
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x4c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir11"
-
-    const/16 v3, 0x4d
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 11\uc2dc\ubc29\ud5a5"
-
-    .line 78
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x4d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "rotaryDir12"
-
-    const/16 v3, 0x4e
-
-    const-string/jumbo v4, "\ub85c\ud130\ub9ac 12\uc2dc\ubc29\ud5a5"
-
-    .line 79
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x4e
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "sa"
-
-    const/16 v3, 0x4f
-
-    const-string/jumbo v4, "\ud734\uac8c\uc18c"
-
-    .line 80
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->sa:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->sa:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x4f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "saIn"
-
-    const/16 v3, 0x50
-
-    const-string/jumbo v4, "\ud734\uac8c\uc18c \uc9c4\uc785"
-
-    .line 81
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x50
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "tolExp"
-
-    const/16 v3, 0x51
-
-    const-string/jumbo v4, "\ud1a8\uac8c\uc774\ud2b8 \uace0\uc18d"
-
-    .line 82
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tolExp:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tolExp:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x51
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "tolNormal"
-
-    const/16 v3, 0x52
-
-    const-string/jumbo v4, "\ud1a8\uac8c\uc774\ud2b8 \uc77c\ubc18"
-
-    .line 83
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tolNormal:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tolNormal:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x52
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "ferryIn"
-
-    const/16 v3, 0x53
-
-    const-string/jumbo v4, "\ud398\ub9ac\ud56d\ub85c \uc9c4\uc785"
-
-    .line 84
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->ferryIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->ferryIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x53
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "ferryOut"
-
-    const/16 v3, 0x54
-
-    const-string/jumbo v4, "\ud398\ub9ac\ud56d\ub85c \uc9c4\ucd9c"
-
-    .line 85
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->ferryOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->ferryOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x54
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir1"
-
-    const/16 v3, 0x55
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 1\uc2dc\ubc29\ud5a5"
-
-    .line 86
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x55
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir2"
-
-    const/16 v3, 0x56
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 2\uc2dc\ubc29\ud5a5"
-
-    .line 87
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x56
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir3"
-
-    const/16 v3, 0x57
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 3\uc2dc\ubc29\ud5a5"
-
-    .line 88
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x57
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir4"
-
-    const/16 v3, 0x58
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 4\uc2dc\ubc29\ud5a5"
-
-    .line 89
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x58
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir5"
-
-    const/16 v3, 0x59
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 5\uc2dc\ubc29\ud5a5"
-
-    .line 90
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x59
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir6"
-
-    const/16 v3, 0x5a
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 6\uc2dc\ubc29\ud5a5"
-
-    .line 91
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x5a
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir7"
-
-    const/16 v3, 0x5b
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 7\uc2dc\ubc29\ud5a5"
-
-    .line 92
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x5b
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir8"
-
-    const/16 v3, 0x5c
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 8\uc2dc\ubc29\ud5a5"
-
-    .line 93
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x5c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir9"
-
-    const/16 v3, 0x5d
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 9\uc2dc\ubc29\ud5a5"
-
-    .line 94
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x5d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir10"
-
-    const/16 v3, 0x5e
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 10\uc2dc\ubc29\ud5a5"
-
-    .line 95
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x5e
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir11"
-
-    const/16 v3, 0x5f
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 11\uc2dc\ubc29\ud5a5"
-
-    .line 96
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x5f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "starDir12"
-
-    const/16 v3, 0x60
-
-    const-string/jumbo v4, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 12\uc2dc\ubc29\ud5a5"
-
-    .line 97
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x60
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "destStr"
-
-    const/16 v3, 0x61
-
-    const-string/jumbo v4, "\ubaa9\uc801\uc9c0 \uc9c1\uc9c4\ubc29\ud5a5"
-
-    .line 98
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x61
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "destLeft"
-
-    const/16 v3, 0x62
-
-    const-string/jumbo v4, "\ubaa9\uc801\uc9c0 \uc67c\ucabd\ubc29\ud5a5"
-
-    .line 99
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x62
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "destRight"
-
-    const/16 v3, 0x63
-
-    const-string/jumbo v4, "\ubaa9\uc801\uc9c0 \uc624\ub978\ucabd\ubc29\ud5a5"
-
-    .line 100
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x63
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "posRight"
-
-    const/16 v3, 0x64
-
-    const-string/jumbo v4, "\uacbd\uc720\uc9c0"
-
-    .line 101
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->posRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->posRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x64
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "via1"
-
-    const/16 v3, 0x65
-
-    const-string/jumbo v4, "\uccab\ubc88\uc9f8 \uacbd\uc720\uc9c0"
-
-    .line 102
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x65
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "via2"
-
-    const/16 v3, 0x66
-
-    const-string/jumbo v4, "\ub450\ubc88\uc9f8 \uacbd\uc720\uc9c0"
-
-    .line 103
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x66
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "via3"
-
-    const/16 v3, 0x67
-
-    const-string/jumbo v4, "\uc138\ubc88\uc9f8 \uacbd\uc720\uc9c0"
-
-    .line 104
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x67
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "via4"
-
-    const/16 v3, 0x68
-
-    const-string/jumbo v4, "\ub124\ubc88\uc9f8 \uacbd\uc720\uc9c0"
-
-    .line 105
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x68
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "via5"
-
-    const/16 v3, 0x69
-
-    const-string/jumbo v4, "\ub2e4\uc12f\ubc88\uc9f8 \uacbd\uc720\uc9c0"
-
-    .line 106
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x69
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "noticeSpeed"
-
-    const/16 v3, 0x6a
-
-    const-string/jumbo v4, "\uc81c\ud55c\uc18d\ub3c4"
-
-    .line 107
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeSpeed:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeSpeed:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x6a
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "noticeAccident"
-
-    const/16 v3, 0x6b
-
-    const-string/jumbo v4, "\uc0ac\uace0\ub2e4\ubc1c"
-
-    .line 108
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeAccident:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeAccident:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x6b
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "noticeTurn"
-
-    const/16 v3, 0x6c
-
-    const-string/jumbo v4, "\uae09\ucee4\ube0c"
-
-    .line 109
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeTurn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeTurn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x6c
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "noticeRock"
-
-    const/16 v3, 0x6d
-
-    const-string/jumbo v4, "\ub099\uc11d\uc8fc\uc758\uc9c0\uc5ed"
-
-    .line 110
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeRock:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeRock:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x6d
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "start"
-
-    const/16 v3, 0x6e
-
-    const-string/jumbo v4, "\ucd9c\ubc1c\uc9c0"
-
-    .line 111
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->start:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->start:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x6e
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "goal"
-
-    const/16 v3, 0x6f
-
-    const-string/jumbo v4, "\ubaa9\uc801\uc9c0"
-
-    .line 112
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->goal:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->goal:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x6f
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string/jumbo v2, "tollgate"
-
-    const/16 v3, 0x70
-
-    const-string/jumbo v4, "\ud1a8\uac8c\uc774\ud2b8"
-
-    .line 113
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tollgate:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tollgate:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x70
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
-
-    const-string v2, "NA"
-
-    const/16 v3, 0x71
-
-    const-string v4, ""
-
-    .line 114
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->NA:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->NA:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
     const/16 v2, 0x71
 
     aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "strYRight"
+
+    const/4 v2, 0x0
+
+    const-string v3, "Y\uc790 \uc624\ub978\ucabd"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strYRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 2
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "strYLeft"
+
+    const/4 v2, 0x1
+
+    const-string v3, "Y\uc790 \uc67c\ucabd"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strYLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 3
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "str"
+
+    const/4 v2, 0x2
+
+    const-string/jumbo v3, "\uc9c1\uc9c4"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->str:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 4
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "left"
+
+    const/4 v2, 0x3
+
+    const-string/jumbo v3, "\uc88c\ud68c\uc804"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 5
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "right"
+
+    const/4 v2, 0x4
+
+    const-string/jumbo v3, "\uc6b0\ud68c\uc804"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 6
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string/jumbo v1, "uturn"
+
+    const/4 v2, 0x5
+
+    const-string/jumbo v3, "\uc720\ud134"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->uturn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 7
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "pturn"
+
+    const/4 v2, 0x6
+
+    const-string/jumbo v3, "\ud53c\ud134"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->pturn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 8
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "left8"
+
+    const/4 v2, 0x7
+
+    const-string v3, "8\uc2dc\ubc29\ud5a5 \uc88c\ud68c\uc804"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 9
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "left10"
+
+    const/16 v2, 0x8
+
+    const-string v3, "10\uc2dc\ubc29\ud5a5 \uc88c\ud68c\uc804"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->left10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 10
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "right2"
+
+    const/16 v2, 0x9
+
+    const-string v3, "2\uc2dc\ubc29\ud5a5 \uc6b0\ud68c\uc804"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 11
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "right4"
+
+    const/16 v2, 0xa
+
+    const-string v3, "4\uc2dc\ubc29\ud5a5 \uc6b0\ud68c\uc804"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->right4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 12
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir1"
+
+    const/16 v2, 0xb
+
+    const-string v3, "1\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 13
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir2"
+
+    const/16 v2, 0xc
+
+    const-string v3, "2\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 14
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir3"
+
+    const/16 v2, 0xd
+
+    const-string v3, "3\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 15
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir4"
+
+    const/16 v2, 0xe
+
+    const-string v3, "4\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 16
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir5"
+
+    const/16 v2, 0xf
+
+    const-string v3, "5\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 17
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir6"
+
+    const/16 v2, 0x10
+
+    const-string v3, "6\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 18
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir7"
+
+    const/16 v2, 0x11
+
+    const-string v3, "7\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 19
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir8"
+
+    const/16 v2, 0x12
+
+    const-string v3, "8\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 20
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir9"
+
+    const/16 v2, 0x13
+
+    const-string v3, "9\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 21
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir10"
+
+    const/16 v2, 0x14
+
+    const-string v3, "10\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 22
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir11"
+
+    const/16 v2, 0x15
+
+    const-string v3, "11\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 23
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "dir12"
+
+    const/16 v2, 0x16
+
+    const-string v3, "12\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->dir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 24
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "strRight"
+
+    const/16 v2, 0x17
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 25
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "strLeft"
+
+    const/16 v2, 0x18
+
+    const-string/jumbo v3, "\uc67c\ucabd"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->strLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 26
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "laneStr"
+
+    const/16 v2, 0x19
+
+    const-string/jumbo v3, "\uc9c1\uc9c4\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 27
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "laneLeft"
+
+    const/16 v2, 0x1a
+
+    const-string/jumbo v3, "\uc67c\ucabd\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 28
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "laneRight"
+
+    const/16 v2, 0x1b
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->laneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 29
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane1st"
+
+    const/16 v2, 0x1c
+
+    const-string v3, "1\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane1st:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 30
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane2nd"
+
+    const/16 v2, 0x1d
+
+    const-string v3, "2\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane2nd:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 31
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane3rd"
+
+    const/16 v2, 0x1e
+
+    const-string v3, "3\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane3rd:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 32
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane4th"
+
+    const/16 v2, 0x1f
+
+    const-string v3, "4\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane4th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 33
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane5th"
+
+    const/16 v2, 0x20
+
+    const-string v3, "5\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane5th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 34
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane6th"
+
+    const/16 v2, 0x21
+
+    const-string v3, "6\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane6th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 35
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane7th"
+
+    const/16 v2, 0x22
+
+    const-string v3, "7\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane7th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 36
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane8th"
+
+    const/16 v2, 0x23
+
+    const-string v3, "8\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane8th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 37
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane9th"
+
+    const/16 v2, 0x24
+
+    const-string v3, "9\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane9th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 38
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "lane10th"
+
+    const/16 v2, 0x25
+
+    const-string v3, "10\ucc28\uc120"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->lane10th:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 39
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "firstExit"
+
+    const/16 v2, 0x26
+
+    const-string/jumbo v3, "\uccab\ubc88\uc9f8 \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstExit:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 40
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "secExit"
+
+    const/16 v2, 0x27
+
+    const-string/jumbo v3, "\ub450\ubc88\uc9f8 \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secExit:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 41
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "firstLaneRight"
+
+    const/16 v2, 0x28
+
+    const-string/jumbo v3, "\uccab\ubc88\uc9f8 \uc624\ub978\ucabd \uae38"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstLaneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 42
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "secLaneRight"
+
+    const/16 v2, 0x29
+
+    const-string/jumbo v3, "\ub450\ubc88\uc9f8 \uc624\ub978\ucabd \uae38"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secLaneRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 43
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "firstLaneLeft"
+
+    const/16 v2, 0x2a
+
+    const-string/jumbo v3, "\uccab\ubc88\uc9f8 \uc67c\ucabd \uae38"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->firstLaneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 44
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "secLaneLeft"
+
+    const/16 v2, 0x2b
+
+    const-string/jumbo v3, "\ub450\ubc88\uc9f8 \uc67c\ucabd \uae38"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->secLaneLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 45
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "hiPassLeft"
+
+    const/16 v2, 0x2c
+
+    const-string/jumbo v3, "\ud558\uc774\ud328\uc2a4\ucc28\ub85c\ub294 \uc88c\uce21\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 46
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "hiPassRIght"
+
+    const/16 v2, 0x2d
+
+    const-string/jumbo v3, "\ud558\uc774\ud328\uc2a4\ucc28\ub85c\ub294 \uc6b0\uce21\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassRIght:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 47
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "hiPassCenter"
+
+    const/16 v2, 0x2e
+
+    const-string/jumbo v3, "\ud558\uc774\ud328\uc2a4\ucc28\ub85c\ub294 \uc911\uc559\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->hiPassCenter:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 48
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "expInRight"
+
+    const/16 v2, 0x2f
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd\ubc29\uc5d0 \uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 49
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "expInLeft"
+
+    const/16 v2, 0x30
+
+    const-string/jumbo v3, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 50
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "expInStr"
+
+    const/16 v2, 0x31
+
+    const-string/jumbo v3, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expInStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 51
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "expOutRight"
+
+    const/16 v2, 0x32
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 52
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "expOutLeft"
+
+    const/16 v2, 0x33
+
+    const-string/jumbo v3, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 53
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "expOutStr"
+
+    const/16 v2, 0x34
+
+    const-string/jumbo v3, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->expOutStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 54
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saExpInRight"
+
+    const/16 v2, 0x35
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 55
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saExpInLeft"
+
+    const/16 v2, 0x36
+
+    const-string/jumbo v3, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 56
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saExpInStr"
+
+    const/16 v2, 0x37
+
+    const-string/jumbo v3, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \uc785\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpInStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 57
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saExpOutRight"
+
+    const/16 v2, 0x38
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 58
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saExpOutLeft"
+
+    const/16 v2, 0x39
+
+    const-string/jumbo v3, "\uc67c\ucabd\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 59
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saExpOutStr"
+
+    const/16 v2, 0x3a
+
+    const-string/jumbo v3, "\uc9c1\uc9c4\ubc29\ud5a5\uc5d0 \ub3c4\uc2dc\uace0\uc18d\ub3c4\ub85c \ucd9c\uad6c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saExpOutStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 60
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "roadRight"
+
+    const/16 v2, 0x3b
+
+    const-string/jumbo v3, "\uc624\ub978\ucabd \ub3c4\ub85c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->roadRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 61
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "roadLeft"
+
+    const/16 v2, 0x3c
+
+    const-string/jumbo v3, "\uc67c\ucabd \ub3c4\ub85c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->roadLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 62
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "underIn"
+
+    const/16 v2, 0x3d
+
+    const-string/jumbo v3, "\uc9c0\ud558\ub3c4\ub85c \uc9c4\uc785"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->underIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 63
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "overIn"
+
+    const/16 v2, 0x3e
+
+    const-string/jumbo v3, "\uace0\uac00\ub3c4\ub85c \uc9c4\uc785"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->overIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 64
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "tunnelIn"
+
+    const/16 v2, 0x3f
+
+    const-string/jumbo v3, "\ud130\ub110"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tunnelIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 65
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "bridge"
+
+    const/16 v2, 0x40
+
+    const-string/jumbo v3, "\uad50\ub7c9"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->bridge:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 66
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "underOut"
+
+    const/16 v2, 0x41
+
+    const-string/jumbo v3, "\uc9c0\ud558\ub3c4\ub85c \uc606"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->underOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 67
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "overOut"
+
+    const/16 v2, 0x42
+
+    const-string/jumbo v3, "\uace0\uac00\ub3c4\ub85c \uc606"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->overOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 68
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir1"
+
+    const/16 v2, 0x43
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 1\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 69
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir2"
+
+    const/16 v2, 0x44
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 2\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 70
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir3"
+
+    const/16 v2, 0x45
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 3\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 71
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir4"
+
+    const/16 v2, 0x46
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 4\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 72
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir5"
+
+    const/16 v2, 0x47
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 5\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 73
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir6"
+
+    const/16 v2, 0x48
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 6\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 74
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir7"
+
+    const/16 v2, 0x49
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 7\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 75
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir8"
+
+    const/16 v2, 0x4a
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 8\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 76
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir9"
+
+    const/16 v2, 0x4b
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 9\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 77
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir10"
+
+    const/16 v2, 0x4c
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 10\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 78
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir11"
+
+    const/16 v2, 0x4d
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 11\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 79
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "rotaryDir12"
+
+    const/16 v2, 0x4e
+
+    const-string/jumbo v3, "\ub85c\ud130\ub9ac 12\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->rotaryDir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 80
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "sa"
+
+    const/16 v2, 0x4f
+
+    const-string/jumbo v3, "\ud734\uac8c\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->sa:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 81
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "saIn"
+
+    const/16 v2, 0x50
+
+    const-string/jumbo v3, "\ud734\uac8c\uc18c \uc9c4\uc785"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->saIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 82
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "tolExp"
+
+    const/16 v2, 0x51
+
+    const-string/jumbo v3, "\ud1a8\uac8c\uc774\ud2b8 \uace0\uc18d"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tolExp:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 83
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "tolNormal"
+
+    const/16 v2, 0x52
+
+    const-string/jumbo v3, "\ud1a8\uac8c\uc774\ud2b8 \uc77c\ubc18"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tolNormal:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 84
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "ferryIn"
+
+    const/16 v2, 0x53
+
+    const-string/jumbo v3, "\ud398\ub9ac\ud56d\ub85c \uc9c4\uc785"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->ferryIn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 85
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "ferryOut"
+
+    const/16 v2, 0x54
+
+    const-string/jumbo v3, "\ud398\ub9ac\ud56d\ub85c \uc9c4\ucd9c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->ferryOut:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 86
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir1"
+
+    const/16 v2, 0x55
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 1\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 87
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir2"
+
+    const/16 v2, 0x56
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 2\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 88
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir3"
+
+    const/16 v2, 0x57
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 3\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 89
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir4"
+
+    const/16 v2, 0x58
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 4\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 90
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir5"
+
+    const/16 v2, 0x59
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 5\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 91
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir6"
+
+    const/16 v2, 0x5a
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 6\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir6:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 92
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir7"
+
+    const/16 v2, 0x5b
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 7\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir7:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 93
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir8"
+
+    const/16 v2, 0x5c
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 8\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir8:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 94
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir9"
+
+    const/16 v2, 0x5d
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 9\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir9:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 95
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir10"
+
+    const/16 v2, 0x5e
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 10\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir10:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 96
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir11"
+
+    const/16 v2, 0x5f
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 11\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir11:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 97
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "starDir12"
+
+    const/16 v2, 0x60
+
+    const-string/jumbo v3, "\uacbd\ub85c\uc2dc\uc791\uc810\uc548\ub0b4 12\uc2dc\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->starDir12:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 98
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "destStr"
+
+    const/16 v2, 0x61
+
+    const-string/jumbo v3, "\ubaa9\uc801\uc9c0 \uc9c1\uc9c4\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destStr:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 99
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "destLeft"
+
+    const/16 v2, 0x62
+
+    const-string/jumbo v3, "\ubaa9\uc801\uc9c0 \uc67c\ucabd\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destLeft:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 100
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "destRight"
+
+    const/16 v2, 0x63
+
+    const-string/jumbo v3, "\ubaa9\uc801\uc9c0 \uc624\ub978\ucabd\ubc29\ud5a5"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->destRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 101
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "posRight"
+
+    const/16 v2, 0x64
+
+    const-string/jumbo v3, "\uacbd\uc720\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->posRight:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 102
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string/jumbo v1, "via1"
+
+    const/16 v2, 0x65
+
+    const-string/jumbo v3, "\uccab\ubc88\uc9f8 \uacbd\uc720\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 103
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string/jumbo v1, "via2"
+
+    const/16 v2, 0x66
+
+    const-string/jumbo v3, "\ub450\ubc88\uc9f8 \uacbd\uc720\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via2:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 104
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string/jumbo v1, "via3"
+
+    const/16 v2, 0x67
+
+    const-string/jumbo v3, "\uc138\ubc88\uc9f8 \uacbd\uc720\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via3:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 105
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string/jumbo v1, "via4"
+
+    const/16 v2, 0x68
+
+    const-string/jumbo v3, "\ub124\ubc88\uc9f8 \uacbd\uc720\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via4:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 106
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string/jumbo v1, "via5"
+
+    const/16 v2, 0x69
+
+    const-string/jumbo v3, "\ub2e4\uc12f\ubc88\uc9f8 \uacbd\uc720\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->via5:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 107
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "noticeSpeed"
+
+    const/16 v2, 0x6a
+
+    const-string/jumbo v3, "\uc81c\ud55c\uc18d\ub3c4"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeSpeed:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 108
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "noticeAccident"
+
+    const/16 v2, 0x6b
+
+    const-string/jumbo v3, "\uc0ac\uace0\ub2e4\ubc1c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeAccident:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 109
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "noticeTurn"
+
+    const/16 v2, 0x6c
+
+    const-string/jumbo v3, "\uae09\ucee4\ube0c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeTurn:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 110
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "noticeRock"
+
+    const/16 v2, 0x6d
+
+    const-string/jumbo v3, "\ub099\uc11d\uc8fc\uc758\uc9c0\uc5ed"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->noticeRock:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 111
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "start"
+
+    const/16 v2, 0x6e
+
+    const-string/jumbo v3, "\ucd9c\ubc1c\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->start:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 112
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "goal"
+
+    const/16 v2, 0x6f
+
+    const-string/jumbo v3, "\ubaa9\uc801\uc9c0"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->goal:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 113
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "tollgate"
+
+    const/16 v2, 0x70
+
+    const-string/jumbo v3, "\ud1a8\uac8c\uc774\ud2b8"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->tollgate:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    .line 114
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    const-string v1, "NA"
+
+    const/16 v2, 0x71
+
+    const-string v3, ""
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->NA:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->$values()[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->$VALUES:[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
@@ -2346,7 +2624,7 @@
 
     sget-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->$VALUES:[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/engine/navigation/SDKConstant$TBTTurnType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

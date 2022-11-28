@@ -37,10 +37,10 @@
         "sessionState",
         "Lkotlin/d1;",
         "a",
-        "Lu2/l;",
+        "Lq3/k;",
         "monitor",
         "<init>",
-        "(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;Lu2/l;)V",
+        "(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;Lq3/k;)V",
         "navigation-dynamic-features-fragment_release"
     }
     k = 0x1
@@ -53,13 +53,13 @@
 
 
 # instance fields
-.field public final a:Lu2/l;
+.field public final a:Lq3/k;
 
 .field public final synthetic b:Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;Lu2/l;)V
+.method public constructor <init>(Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;Lq3/k;)V
     .locals 1
     .param p1    # Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -68,7 +68,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu2/l;",
+            "Lq3/k;",
             ")V"
         }
     .end annotation
@@ -82,7 +82,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->a:Lu2/l;
+    iput-object p2, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->a:Lq3/k;
 
     return-void
 .end method
@@ -106,9 +106,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->a:Lu2/l;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->a:Lq3/k;
 
-    invoke-virtual {v0}, Lu2/l;->e()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lq3/k;->e()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -173,7 +173,7 @@
     :catch_0
     iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->b:Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
 
-    invoke-virtual {p1, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->m(I)V
+    invoke-virtual {p1, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->n(I)V
 
     goto :goto_1
 
@@ -181,7 +181,7 @@
     :pswitch_1
     iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->b:Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
 
-    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->l()V
+    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->m()V
 
     goto :goto_1
 
@@ -193,7 +193,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->m(I)V
+    invoke-virtual {v0, p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->n(I)V
 
     goto :goto_1
 
@@ -201,12 +201,12 @@
     :pswitch_3
     iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->b:Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
 
-    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->n()V
+    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->o()V
 
     .line 11
     iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->b:Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
 
-    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->k()V
+    invoke-virtual {p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->l()V
 
     goto :goto_1
 
@@ -230,7 +230,7 @@
     move-result-wide v4
 
     .line 16
-    invoke-virtual/range {v0 .. v5}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->o(IJJ)V
+    invoke-virtual/range {v0 .. v5}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->p(IJJ)V
 
     goto :goto_1
 
@@ -238,7 +238,7 @@
     :pswitch_5
     iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$b;->b:Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;
 
-    invoke-virtual {p1, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->m(I)V
+    invoke-virtual {p1, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment;->n(I)V
 
     :cond_2
     :goto_1

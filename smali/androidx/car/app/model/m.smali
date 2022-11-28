@@ -7,24 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:I
+.field public final synthetic a:Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;II)V
+.method public synthetic constructor <init>(Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/model/m;->a:Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;
-
-    iput p2, p0, Landroidx/car/app/model/m;->b:I
-
-    iput p3, p0, Landroidx/car/app/model/m;->c:I
+    iput-object p1, p0, Landroidx/car/app/model/m;->a:Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;
 
     return-void
 .end method
@@ -32,15 +24,11 @@
 
 # virtual methods
 .method public final a()Ljava/lang/Object;
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Landroidx/car/app/model/m;->a:Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;
+    iget-object v0, p0, Landroidx/car/app/model/m;->a:Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;
 
-    iget v1, p0, Landroidx/car/app/model/m;->b:I
-
-    iget v2, p0, Landroidx/car/app/model/m;->c:I
-
-    invoke-static {v0, v1, v2}, Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;->a(Landroidx/car/app/model/OnItemVisibilityChangedDelegateImpl$OnItemVisibilityChangedListenerStub;II)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;->a(Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;)Ljava/lang/Object;
 
     move-result-object v0
 

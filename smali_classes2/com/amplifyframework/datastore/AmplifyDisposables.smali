@@ -34,10 +34,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lai/i0;Lcom/amplifyframework/AmplifyException;)V
+.method public static synthetic a(Lek/i0;Lcom/amplifyframework/AmplifyException;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/AmplifyDisposables;->lambda$onErrorConsumerWrapperFor$0(Lai/i0;Lcom/amplifyframework/AmplifyException;)V
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/AmplifyDisposables;->lambda$onErrorConsumerWrapperFor$0(Lek/i0;Lcom/amplifyframework/AmplifyException;)V
 
     return-void
 .end method
@@ -69,11 +69,11 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$onErrorConsumerWrapperFor$0(Lai/i0;Lcom/amplifyframework/AmplifyException;)V
+.method private static synthetic lambda$onErrorConsumerWrapperFor$0(Lek/i0;Lcom/amplifyframework/AmplifyException;)V
     .locals 1
 
     .line 1
-    invoke-interface {p0}, Lai/i0;->isDisposed()Z
+    invoke-interface {p0}, Lek/i0;->isDisposed()Z
 
     move-result v0
 
@@ -90,15 +90,15 @@
 
     .line 3
     :cond_0
-    invoke-interface {p0, p1}, Lai/i;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p0, p1}, Lek/i;->onError(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
 .end method
 
-.method public static onErrorConsumerWrapperFor(Lai/i0;)Lcom/amplifyframework/core/Consumer;
+.method public static onErrorConsumerWrapperFor(Lek/i0;)Lcom/amplifyframework/core/Consumer;
     .locals 1
-    .param p0    # Lai/i0;
+    .param p0    # Lek/i0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -112,7 +112,7 @@
             "E:",
             "Lcom/amplifyframework/AmplifyException;",
             ">(",
-            "Lai/i0<",
+            "Lek/i0<",
             "Lcom/amplifyframework/api/graphql/GraphQLResponse<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;>;)",
@@ -124,7 +124,7 @@
     .line 1
     new-instance v0, Lcom/amplifyframework/datastore/i0;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/i0;-><init>(Lai/i0;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/i0;-><init>(Lek/i0;)V
 
     return-object v0
 .end method

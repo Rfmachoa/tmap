@@ -1,9 +1,9 @@
 .class public Lcom/skt/tmap/dialog/r$c;
 .super Ljava/lang/Object;
-.source "SimpleItemSelectDialog.java"
+.source "PoiFavoriteDialog.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnShowListener;
 
 
 # annotations
@@ -43,39 +43,34 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 0
+.method public onShow(Landroid/content/DialogInterface;)V
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "view"
+            "arg0"
         }
     .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/dialog/r$c;->a:Lcom/skt/tmap/dialog/r;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->c()V
-
-    .line 2
-    iget-object p1, p0, Lcom/skt/tmap/dialog/r$c;->a:Lcom/skt/tmap/dialog/r;
-
-    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Lcom/skt/tmap/dialog/r$d;
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->x(Lcom/skt/tmap/dialog/r;)Landroid/widget/EditText;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 3
+    .line 2
     iget-object p1, p0, Lcom/skt/tmap/dialog/r$c;->a:Lcom/skt/tmap/dialog/r;
 
-    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Lcom/skt/tmap/dialog/r$d;
+    invoke-static {p1}, Lcom/skt/tmap/dialog/r;->x(Lcom/skt/tmap/dialog/r;)Landroid/widget/EditText;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-interface {p1}, Lcom/skt/tmap/dialog/r$d;->a()V
+    invoke-static {p1, v0}, Lcom/skt/tmap/dialog/r;->z(Lcom/skt/tmap/dialog/r;Landroid/widget/EditText;)V
 
     :cond_0
     return-void

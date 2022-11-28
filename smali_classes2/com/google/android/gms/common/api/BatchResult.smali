@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/BatchResult;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Result;
@@ -10,28 +10,11 @@
 .field private final zaa:Lcom/google/android/gms/common/api/Status;
 
 .field private final zab:[Lcom/google/android/gms/common/api/PendingResult;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "[",
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/Status;[Lcom/google/android/gms/common/api/PendingResult;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Status;",
-            "[",
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "*>;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

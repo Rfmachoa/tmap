@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/credentials/CredentialRequestResponse;
 .super Lcom/google/android/gms/common/api/Response;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # annotations
@@ -9,6 +10,9 @@
         "Lcom/google/android/gms/auth/api/credentials/CredentialRequestResult;",
         ">;"
     }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
@@ -26,6 +30,8 @@
 # virtual methods
 .method public getCredential()Lcom/google/android/gms/auth/api/credentials/Credential;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;

@@ -201,37 +201,45 @@
     iput-object v0, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->controller:Lcom/google/android/material/timepicker/TimePickerTextInputKeyController;
 
     .line 25
-    new-instance p2, Lcom/google/android/material/timepicker/ClickActionDelegate;
+    new-instance v0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter$4;
 
     .line 26
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v3
 
-    sget v3, Lcom/google/android/material/R$string;->material_hour_selection:I
+    sget v4, Lcom/google/android/material/R$string;->material_hour_selection:I
 
-    invoke-direct {p2, v0, v3}, Lcom/google/android/material/timepicker/ClickActionDelegate;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p0, v3, v4, p2}, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter$4;-><init>(Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;Landroid/content/Context;ILcom/google/android/material/timepicker/TimeModel;)V
 
     .line 27
-    invoke-virtual {v2, p2}, Lcom/google/android/material/timepicker/ChipTextInputComboView;->setChipDelegate(Landroidx/core/view/a;)V
+    invoke-virtual {v2, v0}, Lcom/google/android/material/timepicker/ChipTextInputComboView;->setChipDelegate(Landroidx/core/view/a;)V
 
     .line 28
-    new-instance p2, Lcom/google/android/material/timepicker/ClickActionDelegate;
+    new-instance v0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter$5;
 
     .line 29
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Lcom/google/android/material/R$string;->material_minute_selection:I
+    sget v2, Lcom/google/android/material/R$string;->material_minute_selection:I
 
-    invoke-direct {p2, p1, v0}, Lcom/google/android/material/timepicker/ClickActionDelegate;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p0, p1, v2, p2}, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter$5;-><init>(Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;Landroid/content/Context;ILcom/google/android/material/timepicker/TimeModel;)V
 
     .line 30
-    invoke-virtual {v1, p2}, Lcom/google/android/material/timepicker/ChipTextInputComboView;->setChipDelegate(Landroidx/core/view/a;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/material/timepicker/ChipTextInputComboView;->setChipDelegate(Landroidx/core/view/a;)V
 
     .line 31
     invoke-virtual {p0}, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->initialize()V
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->lambda$setupPeriodToggle$0(Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V
 
     return-void
 .end method
@@ -261,6 +269,35 @@
     iget-object v1, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->minuteTextWatcher:Landroid/text/TextWatcher;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$setupPeriodToggle$0(Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V
+    .locals 0
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    .line 1
+    :cond_0
+    sget p1, Lcom/google/android/material/R$id;->material_clock_period_pm_button:I
+
+    if-ne p2, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    .line 2
+    :goto_0
+    iget-object p2, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->time:Lcom/google/android/material/timepicker/TimeModel;
+
+    invoke-virtual {p2, p1}, Lcom/google/android/material/timepicker/TimeModel;->setPeriod(I)V
 
     return-void
 .end method
@@ -350,7 +387,7 @@
     invoke-virtual {v3, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     .line 11
-    invoke-static {v0, v1}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -471,9 +508,9 @@
     iput-object v0, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->toggle:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
     .line 2
-    new-instance v1, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter$4;
+    new-instance v1, Lcom/google/android/material/timepicker/c;
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter$4;-><init>(Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/timepicker/c;-><init>(Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;)V
 
     invoke-virtual {v0, v1}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->addOnButtonCheckedListener(Lcom/google/android/material/button/MaterialButtonToggleGroup$OnButtonCheckedListener;)V
 
@@ -508,13 +545,16 @@
 
     if-nez v1, :cond_1
 
+    .line 3
     sget v1, Lcom/google/android/material/R$id;->material_clock_period_am_button:I
 
     goto :goto_0
 
+    .line 4
     :cond_1
     sget v1, Lcom/google/android/material/R$id;->material_clock_period_pm_button:I
 
+    .line 5
     :goto_0
     invoke-virtual {v0, v1}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->check(I)V
 
@@ -542,7 +582,7 @@
 .end method
 
 .method public hide()V
-    .locals 4
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->timePickerView:Landroid/widget/LinearLayout;
@@ -551,48 +591,16 @@
 
     move-result-object v0
 
-    const/16 v1, 0x8
-
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->timePickerView:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    return-void
+    invoke-static {v0}, Lcom/google/android/material/internal/ViewUtils;->hideKeyboard(Landroid/view/View;)V
 
     .line 3
     :cond_0
-    iget-object v2, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->timePickerView:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    .line 4
-    const-class v3, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-static {v2, v3}, Landroidx/core/content/d;->o(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/inputmethod/InputMethodManager;
-
-    if-eqz v2, :cond_1
-
-    .line 5
-    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v0, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    .line 6
-    :cond_1
     iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->timePickerView:Landroid/widget/LinearLayout;
+
+    const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
@@ -738,6 +746,13 @@
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->time:Lcom/google/android/material/timepicker/TimeModel;
+
+    iget v0, v0, Lcom/google/android/material/timepicker/TimeModel;->selection:I
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->onSelectionChanged(I)V
 
     return-void
 .end method

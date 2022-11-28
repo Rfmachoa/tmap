@@ -3,7 +3,7 @@
 .source "CustomVersionedParcelable.java"
 
 # interfaces
-.implements Lj3/d;
+.implements Lr4/d;
 
 
 # annotations

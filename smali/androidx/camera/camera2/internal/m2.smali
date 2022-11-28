@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/o2;
+.field public final synthetic a:Landroidx/camera/camera2/internal/s2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/o2;)V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/s2;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/m2;->a:Landroidx/camera/camera2/internal/o2;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/m2;->a:Landroidx/camera/camera2/internal/s2;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/m2;->a:Landroidx/camera/camera2/internal/o2;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/m2;->a:Landroidx/camera/camera2/internal/s2;
 
-    invoke-static {v0, p1}, Landroidx/camera/camera2/internal/o2;->L(Landroidx/camera/camera2/internal/o2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Landroidx/camera/camera2/internal/s2;->e(Landroidx/camera/camera2/internal/s2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
     move-result-object p1
 

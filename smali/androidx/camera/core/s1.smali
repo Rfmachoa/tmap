@@ -1,47 +1,40 @@
-.class public final Landroidx/camera/core/s1;
+.class public final synthetic Landroidx/camera/core/s1;
 .super Ljava/lang/Object;
-.source "ImageReaderProxys.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/camera/core/ImageSaver;
+
+.field public final synthetic b:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroidx/camera/core/ImageSaver;Ljava/io/File;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/core/s1;->a:Landroidx/camera/core/ImageSaver;
+
+    iput-object p2, p0, Landroidx/camera/core/s1;->b:Ljava/io/File;
 
     return-void
 .end method
 
-.method public static a(IIII)Lx/l0;
-    .locals 0
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "width",
-            "height",
-            "format",
-            "maxImages"
-        }
-    .end annotation
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    .line 1
-    invoke-static {p0, p1, p2, p3}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
+    iget-object v0, p0, Landroidx/camera/core/s1;->a:Landroidx/camera/core/ImageSaver;
 
-    move-result-object p0
+    iget-object v1, p0, Landroidx/camera/core/s1;->b:Ljava/io/File;
 
-    .line 2
-    new-instance p1, Landroidx/camera/core/d;
+    invoke-static {v0, v1}, Landroidx/camera/core/ImageSaver;->b(Landroidx/camera/core/ImageSaver;Ljava/io/File;)V
 
-    invoke-direct {p1, p0}, Landroidx/camera/core/d;-><init>(Landroid/media/ImageReader;)V
-
-    return-object p1
+    return-void
 .end method

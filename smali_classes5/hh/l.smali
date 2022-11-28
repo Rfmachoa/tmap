@@ -1,20 +1,51 @@
-.class public Lhh/l;
+.class public interface abstract Lhh/l;
 .super Ljava/lang/Object;
-.source "dagger_hilt_migration_AliasOf.java"
+.source "HttpEntity.java"
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/migration/AliasOf;
-.end annotation
+# virtual methods
+.method public abstract consumeContent()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract getContent()Ljava/io/InputStream;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/IllegalStateException;
+        }
+    .end annotation
+.end method
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getContentEncoding()Lhh/d;
+.end method
 
-    return-void
+.method public abstract getContentLength()J
+.end method
+
+.method public abstract getContentType()Lhh/d;
+.end method
+
+.method public abstract isChunked()Z
+.end method
+
+.method public abstract isRepeatable()Z
+.end method
+
+.method public abstract isStreaming()Z
+.end method
+
+.method public abstract writeTo(Ljava/io/OutputStream;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method

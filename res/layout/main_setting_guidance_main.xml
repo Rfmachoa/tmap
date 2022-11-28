@@ -3,5 +3,4 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
     <com.skt.tmap.view.TmapWebView android:id="@id/tmap_web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout" />
-    <View android:id="@id/header_shadow" android:background="@drawable/bg_sheet_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_7dp" android:layout_below="@id/titlebarLayout" />
 </RelativeLayout>

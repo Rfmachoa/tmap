@@ -44,8 +44,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -63,7 +63,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/activity/TmapEVSearchActivity$a;-><init>()V
 
     return-void

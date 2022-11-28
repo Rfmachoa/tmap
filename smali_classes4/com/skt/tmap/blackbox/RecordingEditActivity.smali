@@ -26,7 +26,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lwb/b;",
+            "Lud/b;",
             ">;"
         }
     .end annotation
@@ -52,10 +52,10 @@
 
 .field public l:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public p:Landroidx/activity/result/e;
+.field public p:Landroidx/activity/result/g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/activity/result/e<",
+            "Landroidx/activity/result/g<",
             "Landroidx/activity/result/IntentSenderRequest;",
             ">;"
         }
@@ -116,33 +116,93 @@
     iput-object v0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->l:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 8
-    new-instance v0, Lb/b$k;
+    new-instance v0, Lc/b$l;
 
-    invoke-direct {v0}, Lb/b$k;-><init>()V
+    invoke-direct {v0}, Lc/b$l;-><init>()V
 
-    new-instance v1, Lwb/h;
+    new-instance v1, Lud/j;
 
-    invoke-direct {v1, p0}, Lwb/h;-><init>(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
+    invoke-direct {v1, p0}, Lud/j;-><init>(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
 
-    invoke-virtual {p0, v0, v1}, Landroidx/activity/ComponentActivity;->registerForActivityResult(Lb/a;Landroidx/activity/result/a;)Landroidx/activity/result/e;
+    invoke-virtual {p0, v0, v1}, Landroidx/activity/ComponentActivity;->registerForActivityResult(Lc/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->p:Landroidx/activity/result/e;
+    iput-object v0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->p:Landroidx/activity/result/g;
 
     return-void
 .end method
 
-.method public static synthetic A5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v;
+.method public static synthetic B5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Landroidx/activity/result/ActivityResult;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->X5(Landroidx/activity/result/ActivityResult;)V
+
+    return-void
+.end method
+
+.method public static synthetic C5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->W5(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static synthetic D5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->V5(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public static synthetic E5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Ljava/util/List;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->b:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public static synthetic F5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Ljava/util/concurrent/atomic/AtomicInteger;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-object p0
+.end method
+
+.method public static synthetic G5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/a0;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
+
+    return-object p0
+.end method
+
+.method public static synthetic H5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/a0;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
+
+    return-object p0
+.end method
+
+.method public static synthetic I5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Lcom/skt/tmap/dialog/a0;)Lcom/skt/tmap/dialog/a0;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     return-object p1
 .end method
 
-.method public static synthetic B5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/font/TypefaceManager;
+.method public static synthetic J5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/font/TypefaceManager;
     .locals 0
 
     .line 1
@@ -151,16 +211,16 @@
     return-object p0
 .end method
 
-.method public static synthetic C5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
+.method public static synthetic K5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->Q5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->Y5()V
 
     return-void
 .end method
 
-.method public static synthetic D5()Ljava/lang/String;
+.method public static synthetic L5()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -169,16 +229,16 @@
     return-object v0
 .end method
 
-.method public static synthetic E5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Landroidx/activity/result/e;
+.method public static synthetic M5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Landroidx/activity/result/g;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->p:Landroidx/activity/result/e;
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->p:Landroidx/activity/result/g;
 
     return-object p0
 .end method
 
-.method public static synthetic F5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Landroid/widget/Button;
+.method public static synthetic N5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Landroid/widget/Button;
     .locals 0
 
     .line 1
@@ -187,7 +247,7 @@
     return-object p0
 .end method
 
-.method public static synthetic G5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/blackbox/RecordingEditActivity$c;
+.method public static synthetic O5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/blackbox/RecordingEditActivity$c;
     .locals 0
 
     .line 1
@@ -196,7 +256,7 @@
     return-object p0
 .end method
 
-.method public static synthetic H5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;
+.method public static synthetic P5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;
     .locals 0
 
     .line 1
@@ -205,34 +265,34 @@
     return-object p0
 .end method
 
-.method public static synthetic I5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/v;
+.method public static synthetic Q5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/a0;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     return-object p0
 .end method
 
-.method public static synthetic J5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/v;
+.method public static synthetic R5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/a0;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     return-object p0
 .end method
 
-.method public static synthetic K5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v;
+.method public static synthetic S5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Lcom/skt/tmap/dialog/a0;)Lcom/skt/tmap/dialog/a0;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     return-object p1
 .end method
 
-.method private synthetic N5(Ljava/util/List;)V
+.method private synthetic V5(Ljava/util/List;)V
     .locals 1
 
     .line 1
@@ -268,7 +328,7 @@
 
     if-nez p1, :cond_0
 
-    const p1, 0x7f13015d
+    const p1, 0x7f140162
 
     .line 6
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -287,7 +347,7 @@
     return-void
 .end method
 
-.method private synthetic O5(Ljava/util/List;)V
+.method private synthetic W5(Ljava/util/List;)V
     .locals 1
 
     .line 1
@@ -323,7 +383,7 @@
 
     if-nez p1, :cond_0
 
-    const p1, 0x7f13015d
+    const p1, 0x7f140162
 
     .line 6
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -342,7 +402,7 @@
     return-void
 .end method
 
-.method private synthetic P5(Landroidx/activity/result/ActivityResult;)V
+.method private synthetic X5(Landroidx/activity/result/ActivityResult;)V
     .locals 2
 
     const/4 v0, -0x1
@@ -356,7 +416,7 @@
 
     if-eq p1, v0, :cond_0
 
-    const p1, 0x7f130175
+    const p1, 0x7f14017a
 
     .line 2
     invoke-virtual {p0, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -396,7 +456,7 @@
     :cond_1
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->k:Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->g()V
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->d()V
 
     .line 6
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setResult(I)V
@@ -408,79 +468,19 @@
     return-void
 .end method
 
-.method public static synthetic t5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Landroidx/activity/result/ActivityResult;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->P5(Landroidx/activity/result/ActivityResult;)V
-
-    return-void
-.end method
-
-.method public static synthetic u5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->O5(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public static synthetic v5(Lcom/skt/tmap/blackbox/RecordingEditActivity;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->N5(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public static synthetic w5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Ljava/util/List;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->b:Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method public static synthetic x5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Ljava/util/concurrent/atomic/AtomicInteger;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-object p0
-.end method
-
-.method public static synthetic y5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/v;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
-
-    return-object p0
-.end method
-
-.method public static synthetic z5(Lcom/skt/tmap/blackbox/RecordingEditActivity;)Lcom/skt/tmap/dialog/v;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public L5()V
+.method public T5()V
     .locals 5
 
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 2
     new-instance v1, Lcom/skt/tmap/blackbox/RecordingEditActivity$a;
@@ -492,7 +492,7 @@
     .line 3
     sget-object v0, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    const v1, 0x7f13015b
+    const v1, 0x7f140160
 
     .line 4
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -504,7 +504,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f13043f
+    const v3, 0x7f1404b0
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -515,31 +515,31 @@
 
     move-result-object v3
 
-    const v4, 0x7f130437
+    const v4, 0x7f1404a8
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
     .line 7
-    iget-object v4, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v4, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v4, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->u(Ljava/lang/String;)V
 
     .line 8
-    iget-object v1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2, v3}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 
     return-void
 .end method
 
-.method public final M5()V
+.method public final U5()V
     .locals 2
 
     .line 1
@@ -563,13 +563,13 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->e()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->b()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
-    new-instance v1, Lwb/j;
+    new-instance v1, Lud/l;
 
-    invoke-direct {v1, p0}, Lwb/j;-><init>(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
+    invoke-direct {v1, p0}, Lud/l;-><init>(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
 
     invoke-virtual {v0, p0, v1}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
@@ -577,13 +577,13 @@
 
     .line 4
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->f()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->c()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
-    new-instance v1, Lwb/i;
+    new-instance v1, Lud/k;
 
-    invoke-direct {v1, p0}, Lwb/i;-><init>(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
+    invoke-direct {v1, p0}, Lud/k;-><init>(Lcom/skt/tmap/blackbox/RecordingEditActivity;)V
 
     invoke-virtual {v0, p0, v1}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
@@ -591,7 +591,7 @@
     return-void
 .end method
 
-.method public final Q5()V
+.method public final Y5()V
     .locals 3
 
     .line 1
@@ -627,10 +627,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lwb/b;
+    check-cast v1, Lud/b;
 
     .line 4
-    iget-boolean v1, v1, Lwb/b;->a:Z
+    iget-boolean v1, v1, Lud/b;->h:Z
 
     const/4 v2, 0x1
 
@@ -661,11 +661,11 @@
 
     move-result p1
 
-    const v0, 0x7f0a01e7
+    const v0, 0x7f0a0201
 
     if-eq p1, v0, :cond_4
 
-    const v0, 0x7f0a0abc
+    const v0, 0x7f0a0b44
 
     if-eq p1, v0, :cond_0
 
@@ -702,14 +702,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lwb/b;
+    check-cast v3, Lud/b;
 
     .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {v3}, Lwb/b;->p()Ljava/lang/String;
+    invoke-virtual {v3}, Lud/b;->p()Ljava/lang/String;
 
     move-result-object v5
 
@@ -720,7 +720,7 @@
     if-nez v4, :cond_1
 
     .line 5
-    iput-boolean p1, v3, Lwb/b;->a:Z
+    iput-boolean p1, v3, Lud/b;->h:Z
 
     move v1, v0
 
@@ -735,7 +735,7 @@
     invoke-virtual {p1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->Q5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->Y5()V
 
     goto :goto_1
 
@@ -751,7 +751,7 @@
 
     .line 9
     :cond_4
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->L5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->T5()V
 
     :goto_1
     return-void
@@ -774,7 +774,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -783,17 +783,17 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d01a0
+    const p1, 0x7f0d01ab
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
 
-    const p1, 0x7f0a0ae2
+    const p1, 0x7f0a0b5e
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -809,7 +809,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "title"
+    const-string v1, "title"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -817,7 +817,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0a0abc
+    const p1, 0x7f0a0b44
 
     .line 7
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -831,7 +831,7 @@
     .line 8
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a01e7
+    const p1, 0x7f0a0201
 
     .line 9
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -845,7 +845,7 @@
     .line 10
     invoke-virtual {p1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a0909
+    const p1, 0x7f0a0988
 
     .line 11
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -856,7 +856,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->a:Landroid/widget/ListView;
 
-    const p1, 0x7f0a0337
+    const p1, 0x7f0a036c
 
     .line 12
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -910,7 +910,7 @@
     iput-boolean v1, p0, Lcom/skt/tmap/blackbox/RecordingEditActivity;->j:Z
 
     .line 16
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->M5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingEditActivity;->U5()V
 
     return-void
 .end method
@@ -947,9 +947,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lwb/b;
+    check-cast v2, Lud/b;
 
-    iput-boolean v0, v2, Lwb/b;->a:Z
+    iput-boolean v0, v2, Lud/b;->h:Z
 
     add-int/lit8 v1, v1, 0x1
 

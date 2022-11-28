@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static final X0:Ljava/lang/String; = "MotionTelltales"
+.field public static final Z0:Ljava/lang/String; = "MotionTelltales"
 
 
 # instance fields
 .field public K0:I
 
-.field public V0:I
+.field public X0:I
 
-.field public W0:F
+.field public Y0:F
 
 .field public k0:Landroid/graphics/Matrix;
 
@@ -26,6 +26,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/utils/widget/MockView;-><init>(Landroid/content/Context;)V
@@ -59,12 +67,12 @@
     const v0, -0xff01
 
     .line 6
-    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->V0:I
+    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->X0:I
 
     const/high16 v0, 0x3e800000    # 0.25f
 
     .line 7
-    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->W0:F
+    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->Y0:F
 
     const/4 v0, 0x0
 
@@ -76,6 +84,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 9
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -109,12 +127,12 @@
     const v0, -0xff01
 
     .line 14
-    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->V0:I
+    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->X0:I
 
     const/high16 v0, 0x3e800000    # 0.25f
 
     .line 15
-    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->W0:F
+    iput v0, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->Y0:F
 
     .line 16
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MotionTelltales;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -124,6 +142,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 17
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/utils/widget/MockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -157,12 +187,12 @@
     const p3, -0xff01
 
     .line 22
-    iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->V0:I
+    iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->X0:I
 
     const/high16 p3, 0x3e800000    # 0.25f
 
     .line 23
-    iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->W0:F
+    iput p3, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->Y0:F
 
     .line 24
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/utils/widget/MotionTelltales;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -172,8 +202,18 @@
 
 .method private a(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
     .line 1
     sget-object v0, Landroidx/constraintlayout/widget/R$styleable;->MotionTelltales:[I
@@ -203,13 +243,13 @@
     if-ne v1, v2, :cond_0
 
     .line 5
-    iget v2, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->V0:I
+    iget v2, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->X0:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v1
 
-    iput v1, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->V0:I
+    iput v1, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->X0:I
 
     goto :goto_1
 
@@ -237,13 +277,13 @@
     if-ne v1, v2, :cond_2
 
     .line 9
-    iget v2, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->W0:F
+    iget v2, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->Y0:F
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v1
 
-    iput v1, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->W0:F
+    iput v1, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->Y0:F
 
     :cond_2
     :goto_1
@@ -253,13 +293,17 @@
 
     .line 10
     :cond_3
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 11
+    :cond_4
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->l:Landroid/graphics/Paint;
 
-    iget p2, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->V0:I
+    iget p2, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->X0:I
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 11
+    .line 12
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MotionTelltales;->l:Landroid/graphics/Paint;
 
     const/high16 p2, 0x40a00000    # 5.0f
@@ -282,6 +326,14 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 22
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     move-object/from16 v6, p0
 
@@ -370,7 +422,7 @@
 
     move v3, v13
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/motion/widget/MotionLayout;->P(Landroid/view/View;FF[FI)V
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/motion/widget/MotionLayout;->Y(Landroid/view/View;FF[FI)V
 
     .line 14
     iget-object v0, v6, Landroidx/constraintlayout/utils/widget/MotionTelltales;->k0:Landroid/graphics/Matrix;
@@ -392,7 +444,7 @@
 
     aget v1, v0, v11
 
-    iget v2, v6, Landroidx/constraintlayout/utils/widget/MotionTelltales;->W0:F
+    iget v2, v6, Landroidx/constraintlayout/utils/widget/MotionTelltales;->Y0:F
 
     mul-float/2addr v1, v2
 
@@ -445,6 +497,22 @@
 
 .method public onLayout(ZIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "changed",
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 
     .line 1
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
@@ -457,6 +525,14 @@
 
 .method public setText(Ljava/lang/CharSequence;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
 
     .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;

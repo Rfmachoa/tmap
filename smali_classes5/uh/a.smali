@@ -1,399 +1,150 @@
-.class public abstract Luh/a;
-.super Lkh/z;
-.source "ConnectableObservable.java"
+.class public Luh/a;
+.super Ljava/lang/Object;
+.source "BasicEofSensorWatcher.java"
+
+# interfaces
+.implements Luh/l;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lkh/z<",
-        "TT;>;"
-    }
+.annotation build Lcz/msebera/android/httpclient/annotation/NotThreadSafe;
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
+# instance fields
+.field public final a:Luh/p;
+
+.field public final b:Z
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Luh/p;Z)V
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Lkh/z;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "Connection"
+
+    .line 2
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
+    iput-object p1, p0, Luh/a;->a:Luh/p;
+
+    .line 4
+    iput-boolean p2, p0, Luh/a;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Lkh/z;
+.method public eofDetected(Ljava/io/InputStream;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "()",
-            "Lkh/z<",
-            "TT;>;"
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    const/4 v0, 0x1
-
     .line 1
-    invoke-virtual {p0, v0}, Luh/a;->c(I)Lkh/z;
+    :try_start_0
+    iget-boolean v0, p0, Luh/a;->b:Z
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public c(I)Lkh/z;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lio/reactivex/internal/functions/Functions;->h()Lph/g;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Luh/a;->d(ILph/g;)Lkh/z;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public d(ILph/g;)Lkh/z;
-    .locals 1
-    .param p2    # Lph/g;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lph/g<",
-            "-",
-            "Lio/reactivex/disposables/b;",
-            ">;)",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    if-gtz p1, :cond_0
-
-    .line 1
-    invoke-virtual {p0, p2}, Luh/a;->f(Lph/g;)V
+    if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p0}, Lwh/a;->U(Luh/a;)Luh/a;
-
-    move-result-object p1
-
-    return-object p1
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
 
     .line 3
-    :cond_0
-    new-instance v0, Lio/reactivex/internal/operators/observable/i;
+    iget-object p1, p0, Luh/a;->a:Luh/p;
 
-    invoke-direct {v0, p0, p1, p2}, Lio/reactivex/internal/operators/observable/i;-><init>(Luh/a;ILph/g;)V
-
-    invoke-static {v0}, Lwh/a;->R(Lkh/z;)Lkh/z;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final e()Lio/reactivex/disposables/b;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lio/reactivex/internal/util/e;
-
-    invoke-direct {v0}, Lio/reactivex/internal/util/e;-><init>()V
-
-    .line 2
-    invoke-virtual {p0, v0}, Luh/a;->f(Lph/g;)V
-
-    .line 3
-    iget-object v0, v0, Lio/reactivex/internal/util/e;->a:Lio/reactivex/disposables/b;
-
-    return-object v0
-.end method
-
-.method public abstract f(Lph/g;)V
-    .param p1    # Lph/g;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lph/g<",
-            "-",
-            "Lio/reactivex/disposables/b;",
-            ">;)V"
-        }
-    .end annotation
-.end method
-
-.method public g()Lkh/z;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
-
-    .line 1
-    new-instance v0, Lio/reactivex/internal/operators/observable/ObservableRefCount;
-
-    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/observable/ObservableRefCount;-><init>(Luh/a;)V
-
-    invoke-static {v0}, Lwh/a;->R(Lkh/z;)Lkh/z;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final h(I)Lkh/z;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
-
-    .line 1
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Lli/b;->i()Lkh/h0;
-
-    move-result-object v5
-
-    const-wide/16 v2, 0x0
-
-    move-object v0, p0
-
-    move v1, p1
-
-    invoke-virtual/range {v0 .. v5}, Luh/a;->j(IJLjava/util/concurrent/TimeUnit;Lkh/h0;)Lkh/z;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final i(IJLjava/util/concurrent/TimeUnit;)Lkh/z;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(IJ",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/SchedulerSupport;
-        value = "io.reactivex:computation"
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lli/b;->a()Lkh/h0;
-
-    move-result-object v5
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Luh/a;->j(IJLjava/util/concurrent/TimeUnit;Lkh/h0;)Lkh/z;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final j(IJLjava/util/concurrent/TimeUnit;Lkh/h0;)Lkh/z;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(IJ",
-            "Ljava/util/concurrent/TimeUnit;",
-            "Lkh/h0;",
-            ")",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/SchedulerSupport;
-        value = "custom"
-    .end annotation
-
-    const-string v0, "subscriberCount"
-
-    .line 1
-    invoke-static {p1, v0}, Lio/reactivex/internal/functions/a;->h(ILjava/lang/String;)I
-
-    const-string v0, "unit is null"
-
-    .line 2
-    invoke-static {p4, v0}, Lio/reactivex/internal/functions/a;->g(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "scheduler is null"
-
-    .line 3
-    invoke-static {p5, v0}, Lio/reactivex/internal/functions/a;->g(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-interface {p1}, Luh/p;->markReusable()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    new-instance v0, Lio/reactivex/internal/operators/observable/ObservableRefCount;
+    :cond_0
+    iget-object p1, p0, Luh/a;->a:Luh/p;
 
-    move-object v1, v0
+    invoke-interface {p1}, Luh/h;->releaseConnection()V
 
-    move-object v2, p0
+    const/4 p1, 0x0
 
-    move v3, p1
+    return p1
 
-    move-wide v4, p2
+    :catchall_0
+    move-exception p1
 
-    move-object v6, p4
+    iget-object v0, p0, Luh/a;->a:Luh/p;
 
-    move-object v7, p5
+    invoke-interface {v0}, Luh/h;->releaseConnection()V
 
-    invoke-direct/range {v1 .. v7}, Lio/reactivex/internal/operators/observable/ObservableRefCount;-><init>(Luh/a;IJLjava/util/concurrent/TimeUnit;Lkh/h0;)V
-
-    invoke-static {v0}, Lwh/a;->R(Lkh/z;)Lkh/z;
-
-    move-result-object p1
-
-    return-object p1
+    throw p1
 .end method
 
-.method public final k(JLjava/util/concurrent/TimeUnit;)Lkh/z;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
+.method public streamAbort(Ljava/io/InputStream;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(J",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")",
-            "Lkh/z<",
-            "TT;>;"
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .annotation runtime Lio/reactivex/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/SchedulerSupport;
-        value = "io.reactivex:computation"
-    .end annotation
-
     .line 1
-    invoke-static {}, Lli/b;->a()Lkh/h0;
+    iget-object p1, p0, Luh/a;->a:Luh/p;
 
-    move-result-object v5
+    invoke-interface {p1}, Luh/h;->abortConnection()V
 
-    const/4 v1, 0x1
+    const/4 p1, 0x0
 
-    move-object v0, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    invoke-virtual/range {v0 .. v5}, Luh/a;->j(IJLjava/util/concurrent/TimeUnit;Lkh/h0;)Lkh/z;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method
 
-.method public final l(JLjava/util/concurrent/TimeUnit;Lkh/h0;)Lkh/z;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
+.method public streamClosed(Ljava/io/InputStream;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(J",
-            "Ljava/util/concurrent/TimeUnit;",
-            "Lkh/h0;",
-            ")",
-            "Lkh/z<",
-            "TT;>;"
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .annotation runtime Lio/reactivex/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/annotations/SchedulerSupport;
-        value = "custom"
-    .end annotation
-
-    const/4 v1, 0x1
-
-    move-object v0, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    move-object v5, p4
-
     .line 1
-    invoke-virtual/range {v0 .. v5}, Luh/a;->j(IJLjava/util/concurrent/TimeUnit;Lkh/h0;)Lkh/z;
+    :try_start_0
+    iget-boolean v0, p0, Luh/a;->b:Z
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    return-object p1
+    .line 2
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+
+    .line 3
+    iget-object p1, p0, Luh/a;->a:Luh/p;
+
+    invoke-interface {p1}, Luh/p;->markReusable()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    :cond_0
+    iget-object p1, p0, Luh/a;->a:Luh/p;
+
+    invoke-interface {p1}, Luh/h;->releaseConnection()V
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    iget-object v0, p0, Luh/a;->a:Luh/p;
+
+    invoke-interface {v0}, Luh/h;->releaseConnection()V
+
+    throw p1
 .end method

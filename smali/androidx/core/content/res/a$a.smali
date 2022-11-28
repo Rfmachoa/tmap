@@ -5,7 +5,7 @@
 
 # annotations
 .annotation build Landroidx/annotation/RequiresApi;
-    value = 0x17
+    value = 0xf
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -28,25 +28,13 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+.method public static a(Landroid/content/res/Resources;II)Landroid/graphics/drawable/Drawable;
     .locals 0
-    .param p0    # Landroid/content/res/Resources;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # I
-        .annotation build Landroidx/annotation/ColorRes;
-        .end annotation
-    .end param
-    .param p2    # Landroid/content/res/Resources$Theme;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColorStateList(ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 

@@ -2,16 +2,33 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
+# interfaces
+.implements Landroidx/camera/view/d$b;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/camera/view/CameraController;
+
 
 # direct methods
-.method public static a(DDDD)D
+.method public synthetic constructor <init>(Landroidx/camera/view/CameraController;)V
     .locals 0
 
-    sub-double/2addr p0, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    mul-double/2addr p0, p4
+    iput-object p1, p0, Ls0/a;->a:Landroidx/camera/view/CameraController;
 
-    add-double/2addr p0, p6
+    return-void
+.end method
 
-    return-wide p0
+
+# virtual methods
+.method public final a(I)V
+    .locals 1
+
+    iget-object v0, p0, Ls0/a;->a:Landroidx/camera/view/CameraController;
+
+    invoke-static {v0, p1}, Landroidx/camera/view/CameraController;->a(Landroidx/camera/view/CameraController;I)V
+
+    return-void
 .end method

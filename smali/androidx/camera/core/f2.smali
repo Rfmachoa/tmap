@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/g2$d;
-
-.field public final synthetic b:Landroidx/camera/core/SurfaceRequest;
+.field public final synthetic a:Landroidx/camera/core/i2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/g2$d;Landroidx/camera/core/SurfaceRequest;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/i2;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/f2;->a:Landroidx/camera/core/g2$d;
-
-    iput-object p2, p0, Landroidx/camera/core/f2;->b:Landroidx/camera/core/SurfaceRequest;
+    iput-object p1, p0, Landroidx/camera/core/f2;->a:Landroidx/camera/core/i2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Landroidx/camera/core/f2;->a:Landroidx/camera/core/g2$d;
+    iget-object v0, p0, Landroidx/camera/core/f2;->a:Landroidx/camera/core/i2;
 
-    iget-object v1, p0, Landroidx/camera/core/f2;->b:Landroidx/camera/core/SurfaceRequest;
+    invoke-static {v0, p1}, Landroidx/camera/core/i2;->d(Landroidx/camera/core/i2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Landroidx/camera/core/g2;->K(Landroidx/camera/core/g2$d;Landroidx/camera/core/SurfaceRequest;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

@@ -24,14 +24,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/executor/SequentialExecutor;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor$b;->a:Landroidx/camera/core/impl/utils/executor/SequentialExecutor;
@@ -191,7 +183,7 @@
 
     move-result-object v3
 
-    invoke-static {v4, v3, v2}, Landroidx/camera/core/x1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v4, v3, v2}, Landroidx/camera/core/u1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 

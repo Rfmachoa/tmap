@@ -79,6 +79,14 @@
 # virtual methods
 .method public final a(F)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "brightness"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$c;->a:[F
@@ -191,6 +199,14 @@
 
 .method public final b(F)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "saturationStrength"
+        }
+    .end annotation
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -323,6 +339,14 @@
 
 .method public c(Landroid/widget/ImageView;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$c;->b:Landroid/graphics/ColorMatrix;
@@ -460,6 +484,14 @@
 
 .method public final d(F)V
     .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "warmth"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 

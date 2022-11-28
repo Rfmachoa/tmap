@@ -1,72 +1,27 @@
 .class public interface abstract Landroidx/car/app/u0;
 .super Ljava/lang/Object;
-.source "SurfaceCallback.java"
+.source "OnRequestPermissionsListener.java"
 
 
 # virtual methods
-.method public a(Landroid/graphics/Rect;)V
-    .locals 0
-    .param p1    # Landroid/graphics/Rect;
+.method public abstract a(Ljava/util/List;Ljava/util/List;)V
+    .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-
-    return-void
-.end method
-
-.method public b(Landroid/graphics/Rect;)V
-    .locals 0
-    .param p1    # Landroid/graphics/Rect;
+    .param p2    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-
-    return-void
-.end method
-
-.method public c(Landroidx/car/app/SurfaceContainer;)V
-    .locals 0
-    .param p1    # Landroidx/car/app/SurfaceContainer;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    return-void
-.end method
-
-.method public d(Landroidx/car/app/SurfaceContainer;)V
-    .locals 0
-    .param p1    # Landroidx/car/app/SurfaceContainer;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    return-void
-.end method
-
-.method public onFling(FF)V
-    .locals 0
-    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
-        value = 0x2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
     .end annotation
-
-    return-void
-.end method
-
-.method public onScale(FFF)V
-    .locals 0
-    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
-        value = 0x2
-    .end annotation
-
-    return-void
-.end method
-
-.method public onScroll(FF)V
-    .locals 0
-    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
-        value = 0x2
-    .end annotation
-
-    return-void
 .end method

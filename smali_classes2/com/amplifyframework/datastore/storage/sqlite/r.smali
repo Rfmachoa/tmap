@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lgk/g;
 
 
 # instance fields
@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/r;->a:Lcom/amplifyframework/core/Consumer;
 
-    check-cast p1, Lcom/amplifyframework/datastore/DataStoreException;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->d(Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/DataStoreException;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->l(Lcom/amplifyframework/core/Consumer;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -6,6 +6,12 @@
 .implements Ljava/util/concurrent/Executor;
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
 # static fields
 .field public static volatile b:Ljava/util/concurrent/Executor;
 
@@ -99,14 +105,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "command"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/d;->a:Ljava/util/concurrent/ExecutorService;

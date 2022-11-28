@@ -1,134 +1,142 @@
-.class public final Lx/e;
-.super Lx/d1$a;
-.source "AutoValue_StateObservable_ErrorWrapper.java"
+.class public Lx/e;
+.super Lx/d;
+.source "OutputConfigurationCompatApi28Impl.java"
 
 
-# instance fields
-.field public final a:Ljava/lang/Throwable;
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
+.method public constructor <init>(Landroid/view/Surface;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "error"
-        }
-    .end annotation
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-direct {p0}, Lx/d1$a;-><init>()V
+    new-instance v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    const-string v0, "Null error"
+    invoke-direct {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(Landroid/view/Surface;)V
 
-    .line 2
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    iput-object p1, p0, Lx/e;->a:Ljava/lang/Throwable;
+    invoke-direct {p0, v0}, Lx/d;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-# virtual methods
-.method public a()Ljava/lang/Throwable;
+    .line 2
+    invoke-direct {p0, p1}, Lx/d;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static p(Landroid/hardware/camera2/params/OutputConfiguration;)Lx/e;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .param p0    # Landroid/hardware/camera2/params/OutputConfiguration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1c
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lx/e;->a:Ljava/lang/Throwable;
+    new-instance v0, Lx/e;
+
+    invoke-direct {v0, p0}, Lx/e;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public equals(Ljava/lang/Object;)Z
+
+# virtual methods
+.method public b(Landroid/view/Surface;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    :cond_0
-    instance-of v0, p1, Lx/d1$a;
+    invoke-virtual {p0}, Lx/e;->j()Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    .line 2
-    check-cast p1, Lx/d1$a;
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    .line 3
-    iget-object v0, p0, Lx/e;->a:Ljava/lang/Throwable;
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->removeSurface(Landroid/view/Surface;)V
 
-    invoke-virtual {p1}, Lx/d1$a;->a()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public hashCode()I
-    .locals 2
+.method public e()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Lx/e;->a:Ljava/lang/Throwable;
+    invoke-virtual {p0}, Lx/e;->j()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->setPhysicalCameraId(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public g()I
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lx/e;->j()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->getMaxSharedSurfaceCount()I
 
     move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "ErrorWrapper{error="
+.method public j()Ljava/lang/Object;
+    .locals 1
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    instance-of v0, v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    iget-object v1, p0, Lx/e;->a:Ljava/lang/Throwable;
+    invoke-static {v0}, Landroidx/core/util/p;->a(Z)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 2
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
 
     return-object v0
 .end method

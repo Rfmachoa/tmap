@@ -1,14 +1,11 @@
 .class public Landroidx/camera/camera2/internal/s2$a;
-.super Ljava/lang/Object;
-.source "TorchControl.java"
-
-# interfaces
-.implements Landroidx/camera/camera2/internal/v$c;
+.super Lb0/m;
+.source "FocusMeteringControl.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/camera/camera2/internal/s2;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/camera/camera2/internal/s2;->R(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,107 +15,86 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/s2;
+.field public final synthetic a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+.field public final synthetic b:Landroidx/camera/camera2/internal/s2;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/camera2/internal/s2;)V
+.method public constructor <init>(Landroidx/camera/camera2/internal/s2;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/camera/camera2/internal/s2;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/s2$a;->b:Landroidx/camera/camera2/internal/s2;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+    invoke-direct {p0}, Lb0/m;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+.method public a()V
     .locals 3
-    .param p1    # Landroid/hardware/camera2/TotalCaptureResult;
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    new-instance v1, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v2, "Camera is closed"
+
+    invoke-direct {v1, v2}, Landroidx/camera/core/CameraControl$OperationCanceledException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->f(Ljava/lang/Throwable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public b(Landroidx/camera/core/impl/c;)V
+    .locals 1
+    .param p1    # Landroidx/camera/core/impl/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "captureResult"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/camera/camera2/internal/s2;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/s2;->f:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Landroid/hardware/camera2/TotalCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
-
-    move-result-object p1
-
-    .line 3
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_0
-
-    .line 4
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
+    invoke-virtual {v0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->c(Ljava/lang/Object;)Z
 
     :cond_0
-    move p1, v1
+    return-void
+.end method
 
-    .line 5
-    :goto_0
-    iget-object v0, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/camera/camera2/internal/s2;
+.method public c(Landroidx/camera/core/impl/CameraCaptureFailure;)V
+    .locals 2
+    .param p1    # Landroidx/camera/core/impl/CameraCaptureFailure;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
-    iget-boolean v2, v0, Landroidx/camera/camera2/internal/s2;->g:Z
+    .line 1
+    iget-object v0, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    if-ne p1, v2, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 6
-    iget-object p1, v0, Landroidx/camera/camera2/internal/s2;->f:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+    .line 2
+    new-instance v1, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;
 
-    const/4 v0, 0x0
+    invoke-direct {v1, p1}, Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;-><init>(Landroidx/camera/core/impl/CameraCaptureFailure;)V
 
-    invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->c(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->f(Ljava/lang/Throwable;)Z
 
-    .line 7
-    iget-object p1, p0, Landroidx/camera/camera2/internal/s2$a;->a:Landroidx/camera/camera2/internal/s2;
-
-    iput-object v0, p1, Landroidx/camera/camera2/internal/s2;->f:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
-
-    :cond_1
-    return v1
+    :cond_0
+    return-void
 .end method

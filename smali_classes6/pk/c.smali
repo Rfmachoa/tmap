@@ -1,192 +1,216 @@
-.class public interface abstract Lpk/c;
-.super Ljava/lang/Object;
-.source "Logger.java"
+.class public final Lpk/c;
+.super Loj/h0;
+.source "TestScheduler.java"
 
 
-# static fields
-.field public static final z0:Ljava/lang/String; = "ROOT"
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lpk/c$a;,
+        Lpk/c$b;
+    }
+.end annotation
+
+
+# instance fields
+.field public final b:Ljava/util/Queue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Queue<",
+            "Lpk/c$b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public c:J
+
+.field public volatile d:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Loj/h0;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>(I)V
+
+    iput-object v0, p0, Lpk/c;->b:Ljava/util/Queue;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/util/concurrent/TimeUnit;)V
+    .locals 2
+
+    .line 3
+    invoke-direct {p0}, Loj/h0;-><init>()V
+
+    .line 4
+    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>(I)V
+
+    iput-object v0, p0, Lpk/c;->b:Ljava/util/Queue;
+
+    .line 5
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpk/c;->d:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract debug(Ljava/lang/String;)V
+.method public c()Loj/h0$c;
+    .locals 1
+    .annotation build Lio/reactivex/annotations/NonNull;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lpk/c$a;
+
+    invoke-direct {v0, p0}, Lpk/c$a;-><init>(Lpk/c;)V
+
+    return-object v0
 .end method
 
-.method public abstract debug(Ljava/lang/String;Ljava/lang/Object;)V
+.method public d(Ljava/util/concurrent/TimeUnit;)J
+    .locals 3
+    .param p1    # Ljava/util/concurrent/TimeUnit;
+        .annotation build Lio/reactivex/annotations/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-wide v0, p0, Lpk/c;->d:J
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p1, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
-.method public abstract debug(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public k(JLjava/util/concurrent/TimeUnit;)V
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lpk/c;->d:J
+
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v0
+
+    sget-object p3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, p1, p2, p3}, Lpk/c;->l(JLjava/util/concurrent/TimeUnit;)V
+
+    return-void
 .end method
 
-.method public abstract debug(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public l(JLjava/util/concurrent/TimeUnit;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide p1
+
+    .line 2
+    invoke-virtual {p0, p1, p2}, Lpk/c;->n(J)V
+
+    return-void
 .end method
 
-.method public varargs abstract debug(Ljava/lang/String;[Ljava/lang/Object;)V
+.method public m()V
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lpk/c;->d:J
+
+    invoke-virtual {p0, v0, v1}, Lpk/c;->n(J)V
+
+    return-void
 .end method
 
-.method public abstract debug(Lorg/slf4j/Marker;Ljava/lang/String;)V
-.end method
+.method public final n(J)V
+    .locals 5
 
-.method public abstract debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
-.end method
+    .line 1
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lpk/c;->b:Ljava/util/Queue;
 
-.method public abstract debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    invoke-interface {v0}, Ljava/util/Queue;->peek()Ljava/lang/Object;
 
-.method public abstract debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    move-result-object v0
 
-.method public varargs abstract debug(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
+    check-cast v0, Lpk/c$b;
 
-.method public abstract error(Ljava/lang/String;)V
-.end method
+    if-eqz v0, :cond_3
 
-.method public abstract error(Ljava/lang/String;Ljava/lang/Object;)V
-.end method
+    .line 2
+    iget-wide v1, v0, Lpk/c$b;->a:J
 
-.method public abstract error(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    cmp-long v3, v1, p1
 
-.method public abstract error(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    if-lez v3, :cond_1
 
-.method public varargs abstract error(Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
+    goto :goto_1
 
-.method public abstract error(Lorg/slf4j/Marker;Ljava/lang/String;)V
-.end method
+    :cond_1
+    const-wide/16 v3, 0x0
 
-.method public abstract error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
-.end method
+    cmp-long v3, v1, v3
 
-.method public abstract error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    if-nez v3, :cond_2
 
-.method public abstract error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    .line 3
+    iget-wide v1, p0, Lpk/c;->d:J
 
-.method public varargs abstract error(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
+    :cond_2
+    iput-wide v1, p0, Lpk/c;->d:J
 
-.method public abstract getName()Ljava/lang/String;
-.end method
+    .line 4
+    iget-object v1, p0, Lpk/c;->b:Ljava/util/Queue;
 
-.method public abstract info(Ljava/lang/String;)V
-.end method
+    invoke-interface {v1, v0}, Ljava/util/Queue;->remove(Ljava/lang/Object;)Z
 
-.method public abstract info(Ljava/lang/String;Ljava/lang/Object;)V
-.end method
+    .line 5
+    iget-object v1, v0, Lpk/c$b;->c:Lpk/c$a;
 
-.method public abstract info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    iget-boolean v1, v1, Lpk/c$a;->a:Z
 
-.method public abstract info(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    if-nez v1, :cond_0
 
-.method public varargs abstract info(Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
+    .line 6
+    iget-object v0, v0, Lpk/c$b;->b:Ljava/lang/Runnable;
 
-.method public abstract info(Lorg/slf4j/Marker;Ljava/lang/String;)V
-.end method
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-.method public abstract info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
-.end method
+    goto :goto_0
 
-.method public abstract info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
+    .line 7
+    :cond_3
+    :goto_1
+    iput-wide p1, p0, Lpk/c;->d:J
 
-.method public abstract info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
-
-.method public varargs abstract info(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
-
-.method public abstract isDebugEnabled()Z
-.end method
-
-.method public abstract isDebugEnabled(Lorg/slf4j/Marker;)Z
-.end method
-
-.method public abstract isErrorEnabled()Z
-.end method
-
-.method public abstract isErrorEnabled(Lorg/slf4j/Marker;)Z
-.end method
-
-.method public abstract isInfoEnabled()Z
-.end method
-
-.method public abstract isInfoEnabled(Lorg/slf4j/Marker;)Z
-.end method
-
-.method public abstract isTraceEnabled()Z
-.end method
-
-.method public abstract isTraceEnabled(Lorg/slf4j/Marker;)Z
-.end method
-
-.method public abstract isWarnEnabled()Z
-.end method
-
-.method public abstract isWarnEnabled(Lorg/slf4j/Marker;)Z
-.end method
-
-.method public abstract trace(Ljava/lang/String;)V
-.end method
-
-.method public abstract trace(Ljava/lang/String;Ljava/lang/Object;)V
-.end method
-
-.method public abstract trace(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
-
-.method public abstract trace(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
-
-.method public varargs abstract trace(Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
-
-.method public abstract trace(Lorg/slf4j/Marker;Ljava/lang/String;)V
-.end method
-
-.method public abstract trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
-.end method
-
-.method public abstract trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
-
-.method public abstract trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
-
-.method public varargs abstract trace(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
-
-.method public abstract warn(Ljava/lang/String;)V
-.end method
-
-.method public abstract warn(Ljava/lang/String;Ljava/lang/Object;)V
-.end method
-
-.method public abstract warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
-
-.method public abstract warn(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
-
-.method public varargs abstract warn(Ljava/lang/String;[Ljava/lang/Object;)V
-.end method
-
-.method public abstract warn(Lorg/slf4j/Marker;Ljava/lang/String;)V
-.end method
-
-.method public abstract warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
-.end method
-
-.method public abstract warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-.end method
-
-.method public abstract warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
-
-.method public varargs abstract warn(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-void
 .end method

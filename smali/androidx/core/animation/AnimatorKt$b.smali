@@ -8,16 +8,12 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/animation/AnimatorKt;->c(Landroid/animation/Animator;Lej/l;Lej/l;)Landroid/animation/Animator$AnimatorPauseListener;
+    value = Landroidx/core/animation/AnimatorKt;->c(Landroid/animation/Animator;Lgl/l;Lgl/l;)Landroid/animation/Animator$AnimatorPauseListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x19
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAnimator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Animator.kt\nandroidx/core/animation/AnimatorKt$addPauseListener$listener$1\n*L\n1#1,115:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -38,27 +34,60 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lej/l;
+.field public final synthetic a:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/animation/Animator;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Lej/l;
+.field public final synthetic b:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/animation/Animator;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lej/l;Lej/l;)V
+.method public constructor <init>(Lgl/l;Lgl/l;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgl/l<",
+            "-",
+            "Landroid/animation/Animator;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/l<",
+            "-",
+            "Landroid/animation/Animator;",
+            "Lkotlin/d1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/core/animation/AnimatorKt$b;->a:Lgl/l;
+
+    iput-object p2, p0, Landroidx/core/animation/AnimatorKt$b;->b:Lgl/l;
 
     .line 1
-    iput-object p1, p0, Landroidx/core/animation/AnimatorKt$b;->a:Lej/l;
-
-    iput-object p2, p0, Landroidx/core/animation/AnimatorKt$b;->b:Lej/l;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -75,12 +104,12 @@
 
     const-string v0, "animator"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/animation/AnimatorKt$b;->a:Lej/l;
+    iget-object v0, p0, Landroidx/core/animation/AnimatorKt$b;->a:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -94,12 +123,12 @@
 
     const-string v0, "animator"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/animation/AnimatorKt$b;->b:Lej/l;
+    iget-object v0, p0, Landroidx/core/animation/AnimatorKt$b;->b:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

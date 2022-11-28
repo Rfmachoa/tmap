@@ -1,55 +1,19 @@
 .class public final Lcom/google/android/gms/common/internal/service/zao;
 .super Lcom/google/android/gms/common/api/GoogleApi;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/api/GoogleApi<",
-        "Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;",
-        ">;",
-        "Lcom/google/android/gms/common/internal/TelemetryLoggingClient;"
-    }
-.end annotation
 
 
 # static fields
 .field public static final synthetic zab:I
 
 .field private static final zac:Lcom/google/android/gms/common/api/Api$ClientKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$ClientKey<",
-            "Lcom/google/android/gms/common/internal/service/zap;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private static final zad:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "Lcom/google/android/gms/common/internal/service/zap;",
-            "Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private static final zae:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api<",
-            "Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -117,7 +81,7 @@
 
     new-array v1, v1, [Lcom/google/android/gms/common/Feature;
 
-    sget-object v2, Lcom/google/android/gms/internal/base/zad;->zaa:Lcom/google/android/gms/common/Feature;
+    sget-object v2, Lcom/google/android/gms/internal/base/zaf;->zaa:Lcom/google/android/gms/common/Feature;
 
     const/4 v3, 0x0
 

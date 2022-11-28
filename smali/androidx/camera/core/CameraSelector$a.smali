@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashSet<",
-            "Landroidx/camera/core/k;",
+            "Landroidx/camera/core/o;",
             ">;"
         }
     .end annotation
@@ -49,20 +49,11 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraFilterSet"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/LinkedHashSet<",
-            "Landroidx/camera/core/k;",
+            "Landroidx/camera/core/o;",
             ">;)V"
         }
     .end annotation
@@ -95,15 +86,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraSelector"
-        }
-    .end annotation
-
     .line 1
     new-instance v0, Landroidx/camera/core/CameraSelector$a;
 
@@ -119,25 +101,13 @@
 
 
 # virtual methods
-.method public a(Landroidx/camera/core/k;)Landroidx/camera/core/CameraSelector$a;
+.method public a(Landroidx/camera/core/o;)Landroidx/camera/core/CameraSelector$a;
     .locals 1
-    .param p1    # Landroidx/camera/core/k;
+    .param p1    # Landroidx/camera/core/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/camera/core/ExperimentalCameraFilter;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraFilter"
-        }
     .end annotation
 
     .line 1
@@ -168,25 +138,12 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Landroidx/annotation/experimental/UseExperimental;
-        markerClass = Landroidx/camera/core/ExperimentalCameraFilter;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "lensFacing"
-        }
-    .end annotation
-
     .line 1
     iget-object v0, p0, Landroidx/camera/core/CameraSelector$a;->a:Ljava/util/LinkedHashSet;
 
-    new-instance v1, Lx/n0;
+    new-instance v1, Lb0/y0;
 
-    invoke-direct {v1, p1}, Lx/n0;-><init>(I)V
+    invoke-direct {v1, p1}, Lb0/y0;-><init>(I)V
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 

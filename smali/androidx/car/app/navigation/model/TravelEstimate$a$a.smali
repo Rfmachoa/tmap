@@ -48,7 +48,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Landroidx/car/app/navigation/model/TravelEstimate$a;->f(J)J
+    invoke-static {v0, v1}, Landroidx/car/app/navigation/model/TravelEstimate$a;->h(J)J
 
     move-result-wide v0
 

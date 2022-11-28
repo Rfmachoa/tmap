@@ -3,7 +3,7 @@
 .source "MarkerIgnoringBase.java"
 
 # interfaces
-.implements Lpk/c;
+.implements Lvm/c;
 
 
 # static fields
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0, p2}, Lpk/c;->debug(Ljava/lang/String;)V
+    invoke-interface {p0, p2}, Lvm/c;->debug(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0, p2, p3}, Lpk/c;->debug(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->debug(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 3
-    invoke-interface {p0, p2, p3, p4}, Lpk/c;->debug(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3, p4}, Lvm/c;->debug(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -53,7 +53,7 @@
     .locals 0
 
     .line 5
-    invoke-interface {p0, p2, p3}, Lpk/c;->debug(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->debug(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     .locals 0
 
     .line 4
-    invoke-interface {p0, p2, p3}, Lpk/c;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0, p2}, Lpk/c;->error(Ljava/lang/String;)V
+    invoke-interface {p0, p2}, Lvm/c;->error(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0, p2, p3}, Lpk/c;->error(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->error(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -89,7 +89,7 @@
     .locals 0
 
     .line 3
-    invoke-interface {p0, p2, p3, p4}, Lpk/c;->error(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3, p4}, Lvm/c;->error(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -98,7 +98,7 @@
     .locals 0
 
     .line 5
-    invoke-interface {p0, p2, p3}, Lpk/c;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
     .locals 0
 
     .line 4
-    invoke-interface {p0, p2, p3}, Lpk/c;->error(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -127,7 +127,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0, p2}, Lpk/c;->info(Ljava/lang/String;)V
+    invoke-interface {p0, p2}, Lvm/c;->info(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -136,7 +136,7 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0, p2, p3}, Lpk/c;->info(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->info(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -145,7 +145,7 @@
     .locals 0
 
     .line 3
-    invoke-interface {p0, p2, p3, p4}, Lpk/c;->info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3, p4}, Lvm/c;->info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -154,7 +154,7 @@
     .locals 0
 
     .line 5
-    invoke-interface {p0, p2, p3}, Lpk/c;->info(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->info(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -163,7 +163,7 @@
     .locals 0
 
     .line 4
-    invoke-interface {p0, p2, p3}, Lpk/c;->info(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->info(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -172,7 +172,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lpk/c;->isDebugEnabled()Z
+    invoke-interface {p0}, Lvm/c;->isDebugEnabled()Z
 
     move-result p1
 
@@ -183,7 +183,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lpk/c;->isErrorEnabled()Z
+    invoke-interface {p0}, Lvm/c;->isErrorEnabled()Z
 
     move-result p1
 
@@ -194,7 +194,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lpk/c;->isInfoEnabled()Z
+    invoke-interface {p0}, Lvm/c;->isInfoEnabled()Z
 
     move-result p1
 
@@ -205,7 +205,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lpk/c;->isTraceEnabled()Z
+    invoke-interface {p0}, Lvm/c;->isTraceEnabled()Z
 
     move-result p1
 
@@ -216,7 +216,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lpk/c;->isWarnEnabled()Z
+    invoke-interface {p0}, Lvm/c;->isWarnEnabled()Z
 
     move-result p1
 
@@ -266,7 +266,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0, p2}, Lpk/c;->trace(Ljava/lang/String;)V
+    invoke-interface {p0, p2}, Lvm/c;->trace(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -275,7 +275,7 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0, p2, p3}, Lpk/c;->trace(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->trace(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -284,7 +284,7 @@
     .locals 0
 
     .line 3
-    invoke-interface {p0, p2, p3, p4}, Lpk/c;->trace(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3, p4}, Lvm/c;->trace(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -293,7 +293,7 @@
     .locals 0
 
     .line 5
-    invoke-interface {p0, p2, p3}, Lpk/c;->trace(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->trace(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -302,7 +302,7 @@
     .locals 0
 
     .line 4
-    invoke-interface {p0, p2, p3}, Lpk/c;->trace(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->trace(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -311,7 +311,7 @@
     .locals 0
 
     .line 1
-    invoke-interface {p0, p2}, Lpk/c;->warn(Ljava/lang/String;)V
+    invoke-interface {p0, p2}, Lvm/c;->warn(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -320,7 +320,7 @@
     .locals 0
 
     .line 2
-    invoke-interface {p0, p2, p3}, Lpk/c;->warn(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -329,7 +329,7 @@
     .locals 0
 
     .line 3
-    invoke-interface {p0, p2, p3, p4}, Lpk/c;->warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3, p4}, Lvm/c;->warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -338,7 +338,7 @@
     .locals 0
 
     .line 5
-    invoke-interface {p0, p2, p3}, Lpk/c;->warn(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->warn(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -347,7 +347,7 @@
     .locals 0
 
     .line 4
-    invoke-interface {p0, p2, p3}, Lpk/c;->warn(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {p0, p2, p3}, Lvm/c;->warn(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method

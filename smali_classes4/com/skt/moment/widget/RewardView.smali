@@ -32,6 +32,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -41,6 +49,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -59,6 +77,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 6
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -77,6 +107,14 @@
 
 .method private setBackground(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resourceId"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -123,6 +161,14 @@
 
 .method private setBackground(Landroid/graphics/Bitmap;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
@@ -151,6 +197,14 @@
 
 .method private setForeground(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resourceId"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -197,6 +251,14 @@
 
 .method private setForeground(Landroid/graphics/Bitmap;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
@@ -227,6 +289,14 @@
 # virtual methods
 .method public final a(Landroid/content/Context;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->removeAllViews()V
@@ -305,6 +375,16 @@
 
 .method public final b(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 1
     sget-object v0, Lcom/skt/moment/R$styleable;->RewardImage:[I
@@ -960,7 +1040,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 18
     :cond_6
@@ -968,7 +1048,7 @@
 
     if-eqz v0, :cond_7
 
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 19
     :cond_7
@@ -976,7 +1056,7 @@
 
     if-eqz v0, :cond_8
 
-    invoke-static {v0}, Lib/d;->t(Landroid/widget/ImageView;)V
+    invoke-static {v0}, Lfd/d;->t(Landroid/widget/ImageView;)V
 
     .line 20
     :cond_8
@@ -987,6 +1067,14 @@
 
 .method public setReward(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resourceId"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -1033,6 +1121,14 @@
 
 .method public setReward(Landroid/graphics/Bitmap;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 

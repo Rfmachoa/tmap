@@ -3,34 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/utils/RemoteUtils$b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/car/app/m0;
+.field public final synthetic a:Landroidx/car/app/u0;
+
+.field public final synthetic b:Ljava/util/List;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/m0;)V
+.method public synthetic constructor <init>(Landroidx/car/app/u0;Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/j0;->a:Landroidx/car/app/m0;
+    iput-object p1, p0, Landroidx/car/app/j0;->a:Landroidx/car/app/u0;
+
+    iput-object p2, p0, Landroidx/car/app/j0;->b:Ljava/util/List;
+
+    iput-object p3, p0, Landroidx/car/app/j0;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Landroidx/car/app/j0;->a:Landroidx/car/app/m0;
+    iget-object v0, p0, Landroidx/car/app/j0;->a:Landroidx/car/app/u0;
 
-    invoke-static {v0}, Landroidx/car/app/m0;->e(Landroidx/car/app/m0;)Landroidx/car/app/IAppHost;
+    iget-object v1, p0, Landroidx/car/app/j0;->b:Ljava/util/List;
 
-    move-result-object v0
+    iget-object v2, p0, Landroidx/car/app/j0;->c:Ljava/util/List;
 
-    return-object v0
+    invoke-static {v0, v1, v2}, Landroidx/car/app/CarContext$1;->a(Landroidx/car/app/u0;Ljava/util/List;Ljava/util/List;)V
+
+    return-void
 .end method

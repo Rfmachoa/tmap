@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Z
+.method public b(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Z
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -80,7 +80,7 @@
     if-nez v0, :cond_5
 
     .line 2
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result p1
 
@@ -236,13 +236,13 @@
 
     .line 21
     :cond_5
-    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->T(I)V
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->T(I)V
 
     :goto_3
     return v1
 .end method
 
-.method public c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)Z
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)Z
     .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -260,14 +260,14 @@
     if-ne v0, v2, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->a()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
 
     move-result v7
 
     .line 3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-    invoke-interface {v0, p1, v7}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    invoke-interface {v0, p1, v7}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
 
     .line 4
     iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
@@ -286,7 +286,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
@@ -300,14 +300,14 @@
     if-nez v3, :cond_1
 
     .line 7
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->a()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
 
     move-result p2
 
     new-array p3, p2, [B
 
     .line 8
-    invoke-virtual {p1, p3, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->k([BII)V
+    invoke-virtual {p1, p3, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k([BII)V
 
     .line 9
     invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/audio/AacUtil;->f([B)Lcom/tmapmobility/tmap/exoplayer2/audio/AacUtil$b;
@@ -389,14 +389,14 @@
     .line 20
     :cond_3
     :goto_0
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->a()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
 
     move-result v9
 
     .line 21
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-    invoke-interface {v0, p1, v9}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    invoke-interface {v0, p1, v9}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
 
     .line 22
     iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;

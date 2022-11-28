@@ -54,21 +54,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "code",
-            "surface"
-        }
-    .end annotation
-
     .line 1
-    new-instance v0, Landroidx/camera/core/g;
+    new-instance v0, Landroidx/camera/core/j;
 
-    invoke-direct {v0, p0, p1}, Landroidx/camera/core/g;-><init>(ILandroid/view/Surface;)V
+    invoke-direct {v0, p0, p1}, Landroidx/camera/core/j;-><init>(ILandroid/view/Surface;)V
 
     return-object v0
 .end method

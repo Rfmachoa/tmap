@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0008\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002j\u0002\u0008\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008\u00a8\u0006\t"
     }
@@ -45,9 +40,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -68,84 +64,124 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method private static final synthetic $values()[Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    .locals 3
 
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->GSM:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    const-string v2, "GSM"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->CDMA:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->GSM:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    const/4 v2, 0x1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->LTE:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    const-string v2, "CDMA"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->WCDMA:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->CDMA:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    const/4 v2, 0x3
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->_5G:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    const-string v2, "LTE"
+    const/4 v2, 0x4
 
-    const/4 v3, 0x2
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->ETC:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->LTE:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    const/4 v2, 0x5
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    return-object v0
+.end method
 
-    const-string v2, "WCDMA"
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v3, 0x3
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+    const-string v1, "GSM"
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->WCDMA:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    const/4 v2, 0x0
 
-    aput-object v1, v0, v3
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->GSM:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    const-string v2, "_5G"
+    .line 2
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    const/4 v3, 0x4
+    const-string v1, "CDMA"
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+    const/4 v2, 0x1
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->_5G:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
 
-    aput-object v1, v0, v3
+    sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->CDMA:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    .line 3
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    const-string v2, "ETC"
+    const-string v1, "LTE"
 
-    const/4 v3, 0x5
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->ETC:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+    sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->LTE:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    aput-object v1, v0, v3
+    .line 4
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    const-string v1, "WCDMA"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->WCDMA:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    .line 5
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    const-string v1, "_5G"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->_5G:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    .line 6
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    const-string v1, "ETC"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->ETC:Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->$values()[Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->$VALUES:[Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
@@ -185,7 +221,7 @@
 
     sget-object v0, Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->$VALUES:[Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/engine/navigation/location/TmapCellInfoManager$CellInfo$CellType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

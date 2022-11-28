@@ -38,8 +38,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -57,7 +57,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/dialog/BottomConfirmDialog$b;-><init>()V
 
     return-void
@@ -124,9 +123,6 @@
     invoke-virtual {v4, p1, p5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 8
-    sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
-
-    .line 9
     invoke-virtual {v3, v4}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object v3

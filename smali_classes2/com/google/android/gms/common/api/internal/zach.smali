@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zach;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
@@ -9,27 +9,11 @@
 .field public final zab:I
 
 .field public final zac:Lcom/google/android/gms/common/api/GoogleApi;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zai;ILcom/google/android/gms/common/api/GoogleApi;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zai;",
-            "I",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "*>;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -1,83 +1,147 @@
-.class public final Ln3/a$b;
+.class public Ln3/a$b;
 .super Ljava/lang/Object;
-.source "BaseStrokeContent.java"
+.source "NotificationCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Ln3/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x9
     name = "b"
 .end annotation
 
 
-# instance fields
-.field public final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ln3/n;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public final b:Ln3/t;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-
 # direct methods
-.method public constructor <init>(Ln3/t;)V
-    .locals 1
-    .param p1    # Ln3/t;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public constructor <init>()V
+    .locals 0
 
-    .line 2
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    new-instance v0, Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+.method public static a()Landroid/app/Notification$MediaStyle;
+    .locals 1
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
-    iput-object v0, p0, Ln3/a$b;->a:Ljava/util/List;
+    .line 1
+    new-instance v0, Landroid/app/Notification$MediaStyle;
 
-    .line 4
-    iput-object p1, p0, Ln3/a$b;->b:Ln3/t;
+    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
+    .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "style",
+            "actionsToShowInCompact",
+            "token"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    invoke-static {p0, p1}, Ln3/a$b;->e(Landroid/app/Notification$MediaStyle;[I)V
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    .line 2
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/media/session/MediaSession$Token;
+
+    invoke-static {p0, p1}, Ln3/a$b;->c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+
+    :cond_1
+    return-object p0
+.end method
+
+.method public static c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+    .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "style",
+            "token"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ln3/t;Ln3/a$a;)V
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "builder",
+            "style"
+        }
+    .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Ln3/a$b;-><init>(Ln3/t;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
 
     return-void
 .end method
 
-.method public static synthetic a(Ln3/a$b;)Ljava/util/List;
+.method public static varargs e(Landroid/app/Notification$MediaStyle;[I)V
     .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "style",
+            "actions"
+        }
+    .end annotation
 
     .line 1
-    iget-object p0, p0, Ln3/a$b;->a:Ljava/util/List;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
 
-    return-object p0
-.end method
-
-.method public static synthetic b(Ln3/a$b;)Ln3/t;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Ln3/a$b;->b:Ln3/t;
-
-    return-object p0
+    return-void
 .end method

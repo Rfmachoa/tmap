@@ -28,7 +28,7 @@
     .locals 1
 
     .line 7
-    sget-object v0, Ldf/b;->f:Ljava/nio/charset/Charset;
+    sget-object v0, Lhh/b;->f:Ljava/nio/charset/Charset;
 
     invoke-direct {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/l;-><init>(Ljava/nio/charset/Charset;)V
 
@@ -51,7 +51,7 @@
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/auth/l;->b:Ljava/util/Map;
 
     .line 3
-    sget-object p1, Ldf/b;->f:Ljava/nio/charset/Charset;
+    sget-object p1, Lhh/b;->f:Ljava/nio/charset/Charset;
 
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/auth/l;->c:Ljava/nio/charset/Charset;
 
@@ -77,7 +77,7 @@
 
     .line 6
     :cond_0
-    sget-object p1, Ldf/b;->f:Ljava/nio/charset/Charset;
+    sget-object p1, Lhh/b;->f:Ljava/nio/charset/Charset;
 
     :goto_0
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/auth/l;->c:Ljava/nio/charset/Charset;
@@ -96,19 +96,19 @@
     .end annotation
 
     .line 1
-    sget-object p3, Lmg/f;->b:Lmg/f;
+    sget-object p3, Lqi/f;->b:Lqi/f;
 
     .line 2
-    new-instance v0, Lmg/r;
+    new-instance v0, Lqi/r;
 
     invoke-virtual {p1}, Lcz/msebera/android/httpclient/util/CharArrayBuffer;->length()I
 
     move-result v1
 
-    invoke-direct {v0, p2, v1}, Lmg/r;-><init>(II)V
+    invoke-direct {v0, p2, v1}, Lqi/r;-><init>(II)V
 
     .line 3
-    invoke-interface {p3, p1, v0}, Lmg/o;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lmg/r;)[Ldf/e;
+    invoke-interface {p3, p1, v0}, Lqi/o;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lqi/r;)[Lhh/e;
 
     move-result-object p1
 
@@ -135,7 +135,7 @@
     .line 7
     iget-object v1, p0, Lcz/msebera/android/httpclient/impl/auth/l;->b:Ljava/util/Map;
 
-    invoke-interface {v0}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -145,7 +145,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0}, Ldf/e;->getValue()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/e;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
@@ -169,17 +169,17 @@
     throw p1
 .end method
 
-.method public g(Ldf/q;)Ljava/lang/String;
+.method public g(Lhh/q;)Ljava/lang/String;
     .locals 1
 
     .line 1
-    invoke-interface {p1}, Ldf/p;->getParams()Lng/i;
+    invoke-interface {p1}, Lhh/p;->getParams()Lri/i;
 
     move-result-object p1
 
     const-string v0, "http.auth.credential-charset"
 
-    invoke-interface {p1, v0}, Lng/i;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lri/i;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 

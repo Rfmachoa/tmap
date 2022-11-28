@@ -10,9 +10,9 @@
 
 .field public c:I
 
-.field public final d:Landroidx/room/g;
+.field public final d:Landroidx/room/p0;
 
-.field public final e:Landroidx/room/g$c;
+.field public final e:Landroidx/room/p0$c;
 
 .field public f:Landroidx/room/IMultiInstanceInvalidationService;
     .annotation build Landroidx/annotation/Nullable;
@@ -31,12 +31,10 @@
 
 .field public final l:Ljava/lang/Runnable;
 
-.field public final m:Ljava/lang/Runnable;
-
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/room/g;Ljava/util/concurrent/Executor;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroidx/room/p0;Ljava/util/concurrent/Executor;)V
+    .locals 3
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,62 +63,61 @@
     iput-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient;->j:Landroid/content/ServiceConnection;
 
     .line 5
-    new-instance v1, Landroidx/room/MultiInstanceInvalidationClient$b;
+    new-instance v2, Landroidx/room/MultiInstanceInvalidationClient$b;
 
-    invoke-direct {v1, p0}, Landroidx/room/MultiInstanceInvalidationClient$b;-><init>(Landroidx/room/MultiInstanceInvalidationClient;)V
+    invoke-direct {v2, p0}, Landroidx/room/MultiInstanceInvalidationClient$b;-><init>(Landroidx/room/MultiInstanceInvalidationClient;)V
 
-    iput-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->k:Ljava/lang/Runnable;
+    iput-object v2, p0, Landroidx/room/MultiInstanceInvalidationClient;->k:Ljava/lang/Runnable;
 
     .line 6
-    new-instance v1, Landroidx/room/MultiInstanceInvalidationClient$c;
+    new-instance v2, Landroidx/room/MultiInstanceInvalidationClient$c;
 
-    invoke-direct {v1, p0}, Landroidx/room/MultiInstanceInvalidationClient$c;-><init>(Landroidx/room/MultiInstanceInvalidationClient;)V
+    invoke-direct {v2, p0}, Landroidx/room/MultiInstanceInvalidationClient$c;-><init>(Landroidx/room/MultiInstanceInvalidationClient;)V
 
-    iput-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->l:Ljava/lang/Runnable;
+    iput-object v2, p0, Landroidx/room/MultiInstanceInvalidationClient;->l:Ljava/lang/Runnable;
 
     .line 7
-    new-instance v1, Landroidx/room/MultiInstanceInvalidationClient$d;
-
-    invoke-direct {v1, p0}, Landroidx/room/MultiInstanceInvalidationClient$d;-><init>(Landroidx/room/MultiInstanceInvalidationClient;)V
-
-    iput-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->m:Ljava/lang/Runnable;
-
-    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/room/MultiInstanceInvalidationClient;->a:Landroid/content/Context;
 
-    .line 9
+    .line 8
     iput-object p2, p0, Landroidx/room/MultiInstanceInvalidationClient;->b:Ljava/lang/String;
 
+    .line 9
+    iput-object p4, p0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/p0;
+
     .line 10
-    iput-object p3, p0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/g;
+    iput-object p5, p0, Landroidx/room/MultiInstanceInvalidationClient;->g:Ljava/util/concurrent/Executor;
 
     .line 11
-    iput-object p4, p0, Landroidx/room/MultiInstanceInvalidationClient;->g:Ljava/util/concurrent/Executor;
+    iget-object p2, p4, Landroidx/room/p0;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object p2
 
     .line 12
-    new-instance p2, Landroidx/room/MultiInstanceInvalidationClient$e;
+    new-instance p4, Landroidx/room/MultiInstanceInvalidationClient$d;
 
-    iget-object p3, p3, Landroidx/room/g;->b:[Ljava/lang/String;
+    new-array p5, v1, [Ljava/lang/String;
 
-    invoke-direct {p2, p0, p3}, Landroidx/room/MultiInstanceInvalidationClient$e;-><init>(Landroidx/room/MultiInstanceInvalidationClient;[Ljava/lang/String;)V
+    invoke-interface {p2, p5}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    iput-object p2, p0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/g$c;
+    move-result-object p2
+
+    check-cast p2, [Ljava/lang/String;
+
+    invoke-direct {p4, p0, p2}, Landroidx/room/MultiInstanceInvalidationClient$d;-><init>(Landroidx/room/MultiInstanceInvalidationClient;[Ljava/lang/String;)V
+
+    iput-object p4, p0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/p0$c;
+
+    const/4 p2, 0x1
 
     .line 13
-    new-instance p2, Landroid/content/Intent;
-
-    const-class p3, Landroidx/room/MultiInstanceInvalidationService;
-
-    invoke-direct {p2, p1, p3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/4 p3, 0x1
-
-    .line 14
-    invoke-virtual {p1, p2, v0, p3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {p1, p3, v0, p2}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     return-void
 .end method
@@ -141,15 +138,51 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient;->g:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/p0;
 
-    iget-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->m:Ljava/lang/Runnable;
+    iget-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/p0$c;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Landroidx/room/p0;->m(Landroidx/room/p0$c;)V
 
+    .line 3
+    :try_start_0
+    iget-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient;->f:Landroidx/room/IMultiInstanceInvalidationService;
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    iget-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->h:Landroidx/room/IMultiInstanceInvalidationCallback;
+
+    iget v2, p0, Landroidx/room/MultiInstanceInvalidationClient;->c:I
+
+    invoke-interface {v0, v1, v2}, Landroidx/room/IMultiInstanceInvalidationService;->unregisterCallback(Landroidx/room/IMultiInstanceInvalidationCallback;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "ROOM"
+
+    const-string v2, "Cannot unregister multi-instance invalidation callback"
+
+    .line 5
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 6
     :cond_0
+    :goto_0
+    iget-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient;->a:Landroid/content/Context;
+
+    iget-object v1, p0, Landroidx/room/MultiInstanceInvalidationClient;->j:Landroid/content/ServiceConnection;
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+
+    :cond_1
     return-void
 .end method

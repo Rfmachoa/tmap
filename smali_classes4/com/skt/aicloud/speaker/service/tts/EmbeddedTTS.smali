@@ -789,7 +789,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lua/d;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lrc/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

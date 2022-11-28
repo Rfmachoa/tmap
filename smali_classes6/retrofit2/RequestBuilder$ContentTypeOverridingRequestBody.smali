@@ -65,7 +65,7 @@
     return-object v0
 .end method
 
-.method public writeTo(Lzj/n;)V
+.method public writeTo(Lem/n;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -76,7 +76,7 @@
     .line 1
     iget-object v0, p0, Lretrofit2/RequestBuilder$ContentTypeOverridingRequestBody;->delegate:Lokhttp3/RequestBody;
 
-    invoke-virtual {v0, p1}, Lokhttp3/RequestBody;->writeTo(Lzj/n;)V
+    invoke-virtual {v0, p1}, Lokhttp3/RequestBody;->writeTo(Lem/n;)V
 
     return-void
 .end method

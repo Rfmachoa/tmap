@@ -12,21 +12,19 @@
 
 
 # instance fields
-.field public _bigEndian:Z
+.field private _bigEndian:Z
 
 .field private final _bufferRecyclable:Z
 
-.field public _bytesPerChar:I
+.field private _bytesPerChar:I
 
-.field public final _context:Lcom/fasterxml/jackson/core/io/IOContext;
+.field private final _context:Lcom/fasterxml/jackson/core/io/IOContext;
 
-.field public final _in:Ljava/io/InputStream;
+.field private final _in:Ljava/io/InputStream;
 
-.field public final _inputBuffer:[B
+.field private final _inputBuffer:[B
 
 .field private _inputEnd:I
-
-.field public _inputProcessed:I
 
 .field private _inputPtr:I
 
@@ -64,9 +62,6 @@
     iput p1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputEnd:I
 
     .line 7
-    iput p1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputProcessed:I
-
-    .line 8
     iput-boolean v0, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bufferRecyclable:Z
 
     return-void
@@ -75,41 +70,36 @@
 .method public constructor <init>(Lcom/fasterxml/jackson/core/io/IOContext;[BII)V
     .locals 1
 
-    .line 9
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 10
+    .line 9
     iput-boolean v0, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bigEndian:Z
 
-    .line 11
+    .line 10
     iput-object p1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
 
     const/4 p1, 0x0
 
-    .line 12
+    .line 11
     iput-object p1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_in:Ljava/io/InputStream;
 
-    .line 13
+    .line 12
     iput-object p2, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputBuffer:[B
 
-    .line 14
+    .line 13
     iput p3, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputPtr:I
 
-    add-int/2addr p4, p3
+    add-int/2addr p3, p4
 
-    .line 15
-    iput p4, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputEnd:I
-
-    neg-int p1, p3
-
-    .line 16
-    iput p1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputProcessed:I
+    .line 14
+    iput p3, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputEnd:I
 
     const/4 p1, 0x0
 
-    .line 17
+    .line 15
     iput-boolean p1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bufferRecyclable:Z
 
     return-void
@@ -254,7 +244,7 @@
 
     if-eq p1, v1, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     const-string v0, "2143"
@@ -297,13 +287,12 @@
     return v4
 
     :cond_3
-    :goto_0
     const-string v0, "3412"
 
     .line 8
     invoke-direct {p0, v0}, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->reportWeirdUCS4(Ljava/lang/String;)V
 
-    :goto_1
+    :goto_0
     ushr-int/lit8 v0, p1, 0x10
 
     const/4 v5, 0x2
@@ -771,6 +760,106 @@
     goto :goto_0
 .end method
 
+.method public static skipUTF8BOM(Ljava/io/DataInput;)I
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p0}, Ljava/io/DataInput;->readUnsignedByte()I
+
+    move-result v0
+
+    const/16 v1, 0xef
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    .line 2
+    :cond_0
+    invoke-interface {p0}, Ljava/io/DataInput;->readUnsignedByte()I
+
+    move-result v0
+
+    const/16 v1, 0xbb
+
+    const-string v2, "Unexpected byte 0x"
+
+    if-ne v0, v1, :cond_2
+
+    .line 3
+    invoke-interface {p0}, Ljava/io/DataInput;->readUnsignedByte()I
+
+    move-result v0
+
+    const/16 v1, 0xbf
+
+    if-ne v0, v1, :cond_1
+
+    .line 4
+    invoke-interface {p0}, Ljava/io/DataInput;->readUnsignedByte()I
+
+    move-result p0
+
+    return p0
+
+    .line 5
+    :cond_1
+    new-instance p0, Ljava/io/IOException;
+
+    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " following 0xEF 0xBB; should get 0xBF as part of UTF-8 BOM"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 6
+    :cond_2
+    new-instance p0, Ljava/io/IOException;
+
+    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " following 0xEF; should get 0xBB as part of UTF-8 BOM"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
 .method private static tryMatch(Lcom/fasterxml/jackson/core/format/InputAccessor;Ljava/lang/String;Lcom/fasterxml/jackson/core/format/MatchStrength;)Lcom/fasterxml/jackson/core/format/MatchStrength;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
@@ -830,7 +919,7 @@
 
 # virtual methods
 .method public constructParser(ILcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer;Lcom/fasterxml/jackson/core/sym/CharsToNameCanonicalizer;I)Lcom/fasterxml/jackson/core/JsonParser;
-    .locals 18
+    .locals 22
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -842,16 +931,24 @@
     move/from16 v1, p5
 
     .line 1
-    invoke-virtual/range {p0 .. p0}, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->detectEncoding()Lcom/fasterxml/jackson/core/JsonEncoding;
-
-    move-result-object v2
+    iget v2, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputPtr:I
 
     .line 2
-    sget-object v3, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF8:Lcom/fasterxml/jackson/core/JsonEncoding;
+    invoke-virtual/range {p0 .. p0}, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->detectEncoding()Lcom/fasterxml/jackson/core/JsonEncoding;
 
-    if-ne v2, v3, :cond_0
+    move-result-object v3
 
     .line 3
+    iget v4, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputPtr:I
+
+    sub-int v14, v4, v2
+
+    .line 4
+    sget-object v2, Lcom/fasterxml/jackson/core/JsonEncoding;->UTF8:Lcom/fasterxml/jackson/core/JsonEncoding;
+
+    if-ne v3, v2, :cond_0
+
+    .line 5
     sget-object v2, Lcom/fasterxml/jackson/core/JsonFactory$Feature;->CANONICALIZE_FIELD_NAMES:Lcom/fasterxml/jackson/core/JsonFactory$Feature;
 
     invoke-virtual {v2, v1}, Lcom/fasterxml/jackson/core/JsonFactory$Feature;->enabledIn(I)Z
@@ -862,57 +959,60 @@
 
     move-object/from16 v2, p3
 
-    .line 4
+    .line 6
     invoke-virtual {v2, v1}, Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer;->makeChild(I)Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer;
 
-    move-result-object v6
+    move-result-object v10
 
-    .line 5
-    new-instance v11, Lcom/fasterxml/jackson/core/json/UTF8StreamJsonParser;
+    .line 7
+    new-instance v1, Lcom/fasterxml/jackson/core/json/UTF8StreamJsonParser;
 
-    iget-object v2, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
+    iget-object v6, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
 
-    iget-object v4, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_in:Ljava/io/InputStream;
+    iget-object v8, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_in:Ljava/io/InputStream;
 
-    iget-object v7, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputBuffer:[B
+    iget-object v11, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputBuffer:[B
 
-    iget v8, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputPtr:I
+    iget v12, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputPtr:I
 
-    iget v9, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputEnd:I
+    iget v13, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputEnd:I
 
-    iget-boolean v10, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bufferRecyclable:Z
+    iget-boolean v15, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_bufferRecyclable:Z
 
-    move-object v1, v11
+    move-object v5, v1
 
-    move/from16 v3, p1
+    move/from16 v7, p1
 
-    move-object/from16 v5, p2
+    move-object/from16 v9, p2
 
-    invoke-direct/range {v1 .. v10}, Lcom/fasterxml/jackson/core/json/UTF8StreamJsonParser;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILjava/io/InputStream;Lcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer;[BIIZ)V
+    invoke-direct/range {v5 .. v15}, Lcom/fasterxml/jackson/core/json/UTF8StreamJsonParser;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILjava/io/InputStream;Lcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer;[BIIIZ)V
 
-    return-object v11
+    return-object v1
 
-    .line 6
+    .line 8
     :cond_0
     new-instance v2, Lcom/fasterxml/jackson/core/json/ReaderBasedJsonParser;
 
-    iget-object v13, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
+    iget-object v3, v0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
 
     invoke-virtual/range {p0 .. p0}, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->constructReader()Ljava/io/Reader;
 
-    move-result-object v15
+    move-result-object v19
 
+    .line 9
     invoke-virtual/range {p4 .. p5}, Lcom/fasterxml/jackson/core/sym/CharsToNameCanonicalizer;->makeChild(I)Lcom/fasterxml/jackson/core/sym/CharsToNameCanonicalizer;
 
-    move-result-object v17
+    move-result-object v21
 
-    move-object v12, v2
+    move-object/from16 v16, v2
 
-    move/from16 v14, p1
+    move-object/from16 v17, v3
 
-    move-object/from16 v16, p2
+    move/from16 v18, p1
 
-    invoke-direct/range {v12 .. v17}, Lcom/fasterxml/jackson/core/json/ReaderBasedJsonParser;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILjava/io/Reader;Lcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/sym/CharsToNameCanonicalizer;)V
+    move-object/from16 v20, p2
+
+    invoke-direct/range {v16 .. v21}, Lcom/fasterxml/jackson/core/json/ReaderBasedJsonParser;-><init>(Lcom/fasterxml/jackson/core/io/IOContext;ILjava/io/Reader;Lcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/sym/CharsToNameCanonicalizer;)V
 
     return-object v2
 .end method
@@ -962,6 +1062,7 @@
 
     iget v7, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputEnd:I
 
+    .line 4
     invoke-virtual {v3}, Lcom/fasterxml/jackson/core/io/IOContext;->getEncoding()Lcom/fasterxml/jackson/core/JsonEncoding;
 
     move-result-object v1
@@ -976,7 +1077,7 @@
 
     return-object v0
 
-    .line 4
+    .line 5
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -986,13 +1087,13 @@
 
     throw v0
 
-    .line 5
+    .line 6
     :cond_1
     iget-object v4, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_in:Ljava/io/InputStream;
 
     if-nez v4, :cond_2
 
-    .line 6
+    .line 7
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
     iget-object v1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputBuffer:[B
@@ -1005,7 +1106,7 @@
 
     goto :goto_0
 
-    .line 7
+    .line 8
     :cond_2
     iget v1, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_inputPtr:I
 
@@ -1013,7 +1114,7 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 8
+    .line 9
     new-instance v1, Lcom/fasterxml/jackson/core/io/MergedStream;
 
     iget-object v3, p0, Lcom/fasterxml/jackson/core/json/ByteSourceJsonBootstrapper;->_context:Lcom/fasterxml/jackson/core/io/IOContext;
@@ -1030,7 +1131,7 @@
 
     move-object v4, v1
 
-    .line 9
+    .line 10
     :cond_3
     :goto_0
     new-instance v1, Ljava/io/InputStreamReader;

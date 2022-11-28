@@ -147,10 +147,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lai/v0;
+.method public static synthetic a(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lek/v0;
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$delete$15(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lai/v0;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$delete$15(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lek/v0;
 
     move-result-object p0
 
@@ -254,7 +254,7 @@
     return-void
 .end method
 
-.method private create(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+.method private create(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -263,7 +263,7 @@
             ">(",
             "Lcom/amplifyframework/datastore/syncengine/PendingMutation<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -287,26 +287,26 @@
     move-result-object v0
 
     .line 4
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/z;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/t;
 
-    invoke-direct {v1, p0, v0}, Lcom/amplifyframework/datastore/syncengine/z;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
+    invoke-direct {v1, p0, v0}, Lcom/amplifyframework/datastore/syncengine/t;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
 
-    invoke-direct {p0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lai/p0;
+    invoke-direct {p0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lai/r0;)V
+.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lek/r0;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$publishWithStrategy$16(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lai/r0;)V
+    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$publishWithStrategy$16(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lek/r0;)V
 
     return-void
 .end method
 
-.method private delete(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+.method private delete(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -315,7 +315,7 @@
             ">(",
             "Lcom/amplifyframework/datastore/syncengine/PendingMutation<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -341,22 +341,22 @@
     .line 4
     iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->versionRepository:Lcom/amplifyframework/datastore/syncengine/VersionRepository;
 
-    invoke-virtual {v2, v0}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->findModelVersion(Lcom/amplifyframework/core/model/Model;)Lai/p0;
+    invoke-virtual {v2, v0}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->findModelVersion(Lcom/amplifyframework/core/model/Model;)Lek/p0;
 
     move-result-object v2
 
-    new-instance v3, Lcom/amplifyframework/datastore/syncengine/y;
+    new-instance v3, Lcom/amplifyframework/datastore/syncengine/b0;
 
-    invoke-direct {v3, p0, p1, v1, v0}, Lcom/amplifyframework/datastore/syncengine/y;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;)V
+    invoke-direct {v3, p0, p1, v1, v0}, Lcom/amplifyframework/datastore/syncengine/b0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;)V
 
-    invoke-virtual {v2, v3}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    invoke-virtual {v2, v3}, Lek/p0;->r0(Lgk/o;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private drainMutationOutbox()Lai/a;
+.method private drainMutationOutbox()Lek/a;
     .locals 5
 
     .line 1
@@ -370,7 +370,7 @@
     if-nez v0, :cond_1
 
     .line 2
-    invoke-static {}, Lai/a;->t()Lai/a;
+    invoke-static {}, Lek/a;->t()Lek/a;
 
     move-result-object v0
 
@@ -378,7 +378,7 @@
 
     .line 3
     :cond_1
-    invoke-direct {p0, v0}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->processOutboxItem(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/a;
+    invoke-direct {p0, v0}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->processOutboxItem(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/a;
 
     move-result-object v1
 
@@ -387,7 +387,7 @@
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 4
-    invoke-virtual {v1, v2, v3, v4}, Lai/a;->n(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v1, v2, v3, v4}, Lek/a;->n(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result v1
 
@@ -416,17 +416,17 @@
 
     invoke-direct {v1, v0, v2}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lai/a;->W(Ljava/lang/Throwable;)Lai/a;
+    invoke-static {v1}, Lek/a;->W(Ljava/lang/Throwable;)Lek/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static synthetic e(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
+.method public static synthetic e(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$processOutboxItem$6(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$processOutboxItem$6(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
 
     move-result-object p0
 
@@ -473,10 +473,10 @@
     return-object p2
 .end method
 
-.method public static synthetic f(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lai/g;
+.method public static synthetic f(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$startDrainingMutationOutbox$1(Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lai/g;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$startDrainingMutationOutbox$1(Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lek/g;
 
     move-result-object p0
 
@@ -491,17 +491,17 @@
     return-void
 .end method
 
-.method public static synthetic h(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;)Lai/v0;
+.method public static synthetic h(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;)Lek/v0;
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$update$12(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;)Lai/v0;
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$update$12(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;)Lek/v0;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private handleResponseErrors(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/util/List;)Lai/p0;
+.method private handleResponseErrors(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/util/List;)Lek/p0;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -513,7 +513,7 @@
             "Ljava/util/List<",
             "Lcom/amplifyframework/api/graphql/GraphQLResponse$Error;",
             ">;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -538,7 +538,7 @@
     .line 3
     iget-object p2, p0, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->conflictResolver:Lcom/amplifyframework/datastore/syncengine/ConflictResolver;
 
-    invoke-virtual {p2, p1, v0}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->resolve(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/AppSyncConflictUnhandledError;)Lai/p0;
+    invoke-virtual {p2, p1, v0}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->resolve(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/AppSyncConflictUnhandledError;)Lek/p0;
 
     move-result-object p1
 
@@ -570,7 +570,7 @@
 
     invoke-direct {v0, p1, p2}, Lcom/amplifyframework/datastore/DataStoreException$GraphQLResponseException;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
-    invoke-static {v0}, Lai/p0;->p0(Ljava/lang/Throwable;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->p0(Ljava/lang/Throwable;)Lek/p0;
 
     move-result-object p1
 
@@ -603,10 +603,10 @@
     return-object p0
 .end method
 
-.method public static synthetic l(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lai/g;
+.method public static synthetic l(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$processOutboxItem$9(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lai/g;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$processOutboxItem$9(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lek/g;
 
     move-result-object p0
 
@@ -624,7 +624,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$delete$15(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lai/v0;
+.method private synthetic lambda$delete$15(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lek/v0;
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -633,7 +633,7 @@
     .end annotation
 
     .line 1
-    new-instance v6, Lcom/amplifyframework/datastore/syncengine/a0;
+    new-instance v6, Lcom/amplifyframework/datastore/syncengine/c0;
 
     move-object v0, v6
 
@@ -647,9 +647,9 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/a0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/c0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
-    invoke-direct {p0, p1, v6}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lai/p0;
+    invoke-direct {p0, p1, v6}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lek/p0;
 
     move-result-object p1
 
@@ -793,7 +793,7 @@
     return-object p1
 .end method
 
-.method private synthetic lambda$processOutboxItem$6(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
+.method private synthetic lambda$processOutboxItem$6(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -808,27 +808,27 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->remove(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lai/a;
+    invoke-interface {v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->remove(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lek/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->merger:Lcom/amplifyframework/datastore/syncengine/Merger;
 
     .line 2
-    invoke-virtual {v1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/a;
+    invoke-virtual {v1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/e0;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/h0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/e0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/h0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
 
     .line 3
-    invoke-virtual {v0, v1}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object p1
 
@@ -868,7 +868,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$processOutboxItem$9(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lai/g;
+.method private synthetic lambda$processOutboxItem$9(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lek/g;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -891,16 +891,16 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->remove(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lai/a;
+    invoke-interface {v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->remove(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/d0;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/g0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/d0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/DataStoreException$GraphQLResponseException;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/g0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/DataStoreException$GraphQLResponseException;)V
 
     .line 4
-    invoke-virtual {v0, v1}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object p1
 
@@ -908,14 +908,14 @@
 
     .line 5
     :cond_0
-    invoke-static {p2}, Lai/a;->W(Ljava/lang/Throwable;)Lai/a;
+    invoke-static {p2}, Lek/a;->W(Ljava/lang/Throwable;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private static synthetic lambda$publishWithStrategy$16(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lai/r0;)V
+.method private static synthetic lambda$publishWithStrategy$16(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lek/r0;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -930,20 +930,20 @@
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/e;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/a;
 
-    invoke-direct {v0, p2}, Lcom/amplifyframework/datastore/syncengine/e;-><init>(Lai/r0;)V
+    invoke-direct {v0, p2}, Lcom/amplifyframework/datastore/syncengine/a;-><init>(Lek/r0;)V
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {v1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {v1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     invoke-interface {p0, p1, v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;->publish(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$publishWithStrategy$17(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+.method private synthetic lambda$publishWithStrategy$17(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -969,7 +969,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lai/p0;->N0(Ljava/lang/Object;)Lai/p0;
+    invoke-static {p1}, Lek/p0;->N0(Ljava/lang/Object;)Lek/p0;
 
     move-result-object p1
 
@@ -981,7 +981,7 @@
 
     move-result-object p2
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->handleResponseErrors(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/util/List;)Lai/p0;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->handleResponseErrors(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/util/List;)Lek/p0;
 
     move-result-object p1
 
@@ -1006,7 +1006,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$startDrainingMutationOutbox$1(Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lai/g;
+.method private synthetic lambda$startDrainingMutationOutbox$1(Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lek/g;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1015,7 +1015,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->drainMutationOutbox()Lai/a;
+    invoke-direct {p0}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->drainMutationOutbox()Lek/a;
 
     move-result-object p1
 
@@ -1058,7 +1058,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$update$12(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;)Lai/v0;
+.method private synthetic lambda$update$12(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;)Lek/v0;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1067,11 +1067,11 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/b0;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/d0;
 
-    invoke-direct {v0, p0, p2, p3, p1}, Lcom/amplifyframework/datastore/syncengine/b0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v0, p0, p2, p3, p1}, Lcom/amplifyframework/datastore/syncengine/d0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Integer;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
-    invoke-direct {p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lai/p0;
+    invoke-direct {p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lek/p0;
 
     move-result-object p1
 
@@ -1171,7 +1171,7 @@
     return-void
 .end method
 
-.method private processOutboxItem(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/a;
+.method private processOutboxItem(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/a;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1180,7 +1180,7 @@
             ">(",
             "Lcom/amplifyframework/datastore/syncengine/PendingMutation<",
             "TT;>;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 
@@ -1191,62 +1191,62 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->markInFlight(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lai/a;
+    invoke-interface {v0, v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->markInFlight(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lek/a;
 
     move-result-object v0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishToNetwork(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->publishToNetwork(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
 
     move-result-object v1
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/v;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/y;
 
-    invoke-direct {v2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/v;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/y;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 3
-    invoke-virtual {v1, v2}, Lai/p0;->P0(Lci/o;)Lai/p0;
+    invoke-virtual {v1, v2}, Lek/p0;->P0(Lgk/o;)Lek/p0;
 
     move-result-object v1
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/u;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/x;
 
-    invoke-direct {v2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/u;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/x;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 4
-    invoke-virtual {v1, v2}, Lai/p0;->u0(Lci/o;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/p0;->u0(Lgk/o;)Lek/a;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {v0, v1}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/c0;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/f0;
 
-    invoke-direct {v1, p0, p1}, Lcom/amplifyframework/datastore/syncengine/c0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v1, p0, p1}, Lcom/amplifyframework/datastore/syncengine/f0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 6
-    invoke-virtual {v0, v1}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/w;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/z;
 
-    invoke-direct {v1, p0, p1}, Lcom/amplifyframework/datastore/syncengine/w;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v1, p0, p1}, Lcom/amplifyframework/datastore/syncengine/z;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 7
-    invoke-virtual {v0, v1}, Lai/a;->y0(Lci/o;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->y0(Lgk/o;)Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/g0;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/j0;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/syncengine/g0;-><init>(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/syncengine/j0;-><init>(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 8
-    invoke-virtual {v0, v1}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->P(Lgk/g;)Lek/a;
 
     move-result-object p1
 
@@ -1292,7 +1292,7 @@
     return-void
 .end method
 
-.method private publishToNetwork(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+.method private publishToNetwork(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1301,7 +1301,7 @@
             ">(",
             "Lcom/amplifyframework/datastore/syncengine/PendingMutation<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -1357,7 +1357,7 @@
     invoke-direct {v0, p1, v1}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-static {v0}, Lai/p0;->p0(Ljava/lang/Throwable;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->p0(Ljava/lang/Throwable;)Lek/p0;
 
     move-result-object p1
 
@@ -1365,7 +1365,7 @@
 
     .line 5
     :cond_0
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->delete(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->delete(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
 
     move-result-object p1
 
@@ -1373,7 +1373,7 @@
 
     .line 6
     :cond_1
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->create(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->create(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
 
     move-result-object p1
 
@@ -1381,14 +1381,14 @@
 
     .line 7
     :cond_2
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->update(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->update(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lai/p0;
+.method private publishWithStrategy(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;)Lek/p0;
     .locals 1
     .param p1    # Lcom/amplifyframework/datastore/syncengine/PendingMutation;
         .annotation build Landroidx/annotation/NonNull;
@@ -1410,38 +1410,38 @@
             "TT;>;",
             "Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/t;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/e0;
 
-    invoke-direct {v0, p2, p1}, Lcom/amplifyframework/datastore/syncengine/t;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v0, p2, p1}, Lcom/amplifyframework/datastore/syncengine/e0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor$PublicationStrategy;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 2
-    invoke-static {v0}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/k0;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/w;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/k0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/w;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
 
     .line 3
-    invoke-virtual {p2, v0}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    invoke-virtual {p2, v0}, Lek/p0;->r0(Lgk/o;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static synthetic q(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+.method public static synthetic q(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$publishWithStrategy$17(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->lambda$publishWithStrategy$17(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
 
     move-result-object p0
 
@@ -1456,7 +1456,7 @@
     return-void
 .end method
 
-.method private update(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/p0;
+.method private update(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/p0;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1465,7 +1465,7 @@
             ">(",
             "Lcom/amplifyframework/datastore/syncengine/PendingMutation<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -1491,15 +1491,15 @@
     .line 4
     iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->versionRepository:Lcom/amplifyframework/datastore/syncengine/VersionRepository;
 
-    invoke-virtual {v2, v0}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->findModelVersion(Lcom/amplifyframework/core/model/Model;)Lai/p0;
+    invoke-virtual {v2, v0}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->findModelVersion(Lcom/amplifyframework/core/model/Model;)Lek/p0;
 
     move-result-object v0
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/x;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/a0;
 
-    invoke-direct {v2, p0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/x;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;)V
+    invoke-direct {v2, p0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/a0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;)V
 
-    invoke-virtual {v0, v2}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    invoke-virtual {v0, v2}, Lek/p0;->r0(Lgk/o;)Lek/p0;
 
     move-result-object p1
 
@@ -1516,57 +1516,57 @@
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->mutationOutbox:Lcom/amplifyframework/datastore/syncengine/MutationOutbox;
 
-    invoke-interface {v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->events()Lai/g0;
+    invoke-interface {v1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->events()Lek/g0;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/h0;->a:Lcom/amplifyframework/datastore/syncengine/h0;
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/k0;->a:Lcom/amplifyframework/datastore/syncengine/k0;
 
     .line 2
-    invoke-virtual {v1, v2}, Lai/g0;->i2(Lci/g;)Lai/g0;
+    invoke-virtual {v1, v2}, Lek/g0;->doOnSubscribe(Lgk/g;)Lek/g0;
 
     move-result-object v1
 
     sget-object v2, Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;->CONTENT_AVAILABLE:Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;
 
     .line 3
-    invoke-virtual {v1, v2}, Lai/g0;->f6(Ljava/lang/Object;)Lai/g0;
+    invoke-virtual {v1, v2}, Lek/g0;->startWithItem(Ljava/lang/Object;)Lek/g0;
 
     move-result-object v1
 
     .line 4
-    invoke-static {}, Lki/b;->h()Lai/o0;
+    invoke-static {}, Lok/b;->h()Lek/o0;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lai/g0;->m6(Lai/o0;)Lai/g0;
+    invoke-virtual {v1, v2}, Lek/g0;->subscribeOn(Lek/o0;)Lek/g0;
 
     move-result-object v1
 
     .line 5
-    invoke-static {}, Lki/b;->h()Lai/o0;
+    invoke-static {}, Lok/b;->h()Lek/o0;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lai/g0;->x4(Lai/o0;)Lai/g0;
+    invoke-virtual {v1, v2}, Lek/g0;->observeOn(Lek/o0;)Lek/g0;
 
     move-result-object v1
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/j0;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/v;
 
-    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/j0;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;)V
+    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/v;-><init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;)V
 
     .line 6
-    invoke-virtual {v1, v2}, Lai/g0;->I2(Lci/o;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/g0;->flatMapCompletable(Lgk/o;)Lek/a;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/f0;->a:Lcom/amplifyframework/datastore/syncengine/f0;
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/i0;->a:Lcom/amplifyframework/datastore/syncengine/i0;
 
-    sget-object v3, Lcom/amplifyframework/datastore/syncengine/i0;->a:Lcom/amplifyframework/datastore/syncengine/i0;
+    sget-object v3, Lcom/amplifyframework/datastore/syncengine/u;->a:Lcom/amplifyframework/datastore/syncengine/u;
 
     .line 7
-    invoke-virtual {v1, v2, v3}, Lai/a;->X0(Lci/a;Lci/g;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v1, v2, v3}, Lek/a;->X0(Lgk/a;Lgk/g;)Lio/reactivex/rxjava3/disposables/c;
 
     move-result-object v1
 

@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$n;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->v8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->I8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$n;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->v8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->I8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     move-result-object v0
 

@@ -15,7 +15,7 @@
         value = {
             "Ljava/lang/Class<",
             "+",
-            "Landroidx/car/app/model/s;",
+            "Landroidx/car/app/model/y;",
             ">;"
         }
     .end annotation
@@ -63,7 +63,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Landroidx/car/app/model/s;",
+            "Landroidx/car/app/model/y;",
             ">;",
             "Ljava/lang/String;",
             ")V"
@@ -94,7 +94,7 @@
             "()",
             "Ljava/lang/Class<",
             "+",
-            "Landroidx/car/app/model/s;",
+            "Landroidx/car/app/model/y;",
             ">;"
         }
     .end annotation

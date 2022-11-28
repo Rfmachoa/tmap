@@ -31,6 +31,16 @@
 
 .field public e:Landroidx/car/app/model/CarColor;
 
+.field public f:Landroidx/car/app/model/CarText;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public g:Landroidx/car/app/model/CarIcon;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>(Landroidx/car/app/model/Distance;Landroidx/car/app/model/DateTimeWithZone;)V
@@ -124,7 +134,7 @@
     return-void
 .end method
 
-.method public static f(J)J
+.method public static h(J)J
     .locals 2
 
     const-wide/16 v0, 0x0
@@ -181,13 +191,13 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/b;->c:Lm0/b;
+    sget-object v0, La1/b;->c:La1/b;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    invoke-virtual {v0, p1}, Lm0/b;->b(Landroidx/car/app/model/CarColor;)V
+    invoke-virtual {v0, p1}, La1/b;->b(Landroidx/car/app/model/CarColor;)V
 
     .line 4
     iput-object p1, p0, Landroidx/car/app/navigation/model/TravelEstimate$a;->e:Landroidx/car/app/model/CarColor;
@@ -232,11 +242,11 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/b;->c:Lm0/b;
+    sget-object v0, La1/b;->c:La1/b;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/b;->b(Landroidx/car/app/model/CarColor;)V
+    invoke-virtual {v0, p1}, La1/b;->b(Landroidx/car/app/model/CarColor;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/navigation/model/TravelEstimate$a;->d:Landroidx/car/app/model/CarColor;
@@ -255,11 +265,63 @@
     .end annotation
 
     .line 1
-    invoke-static {p1, p2}, Landroidx/car/app/navigation/model/TravelEstimate$a;->f(J)J
+    invoke-static {p1, p2}, Landroidx/car/app/navigation/model/TravelEstimate$a;->h(J)J
 
     move-result-wide p1
 
     iput-wide p1, p0, Landroidx/car/app/navigation/model/TravelEstimate$a;->b:J
+
+    return-object p0
+.end method
+
+.method public f(Landroidx/car/app/model/CarIcon;)Landroidx/car/app/navigation/model/TravelEstimate$a;
+    .locals 1
+    .param p1    # Landroidx/car/app/model/CarIcon;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    sget-object v0, La1/c;->c:La1/c;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, La1/c;->c(Landroidx/car/app/model/CarIcon;)V
+
+    .line 2
+    iput-object p1, p0, Landroidx/car/app/navigation/model/TravelEstimate$a;->g:Landroidx/car/app/model/CarIcon;
+
+    return-object p0
+.end method
+
+.method public g(Landroidx/car/app/model/CarText;)Landroidx/car/app/navigation/model/TravelEstimate$a;
+    .locals 1
+    .param p1    # Landroidx/car/app/model/CarText;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Landroidx/car/app/navigation/model/TravelEstimate$a;->f:Landroidx/car/app/model/CarText;
+
+    .line 2
+    sget-object v0, La1/d;->h:La1/d;
+
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     return-object p0
 .end method

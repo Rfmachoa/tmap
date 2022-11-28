@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/Transformations$3;
+.class Landroidx/lifecycle/Transformations$3;
 .super Ljava/lang/Object;
 .source "Transformations.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

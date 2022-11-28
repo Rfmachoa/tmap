@@ -1,485 +1,325 @@
-.class public final Lfi/g;
-.super Ljava/util/concurrent/CountDownLatch;
-.source "BlockingMultiObserver.java"
-
-# interfaces
-.implements Lai/s0;
-.implements Lai/d;
-.implements Lai/y;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/util/concurrent/CountDownLatch;",
-        "Lai/s0<",
-        "TT;>;",
-        "Lai/d;",
-        "Lai/y<",
-        "TT;>;"
-    }
-.end annotation
+.class public Lfi/g;
+.super Lfi/a;
+.source "StringBody.java"
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
-
-.field public b:Ljava/lang/Throwable;
-
-.field public c:Lio/reactivex/rxjava3/disposables/c;
-
-.field public volatile d:Z
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/UnsupportedEncodingException;
+        }
+    .end annotation
 
-    const/4 v0, 0x1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 1
-    invoke-direct {p0, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    .line 3
+    sget-object v0, Lhh/b;->f:Ljava/nio/charset/Charset;
+
+    const-string v1, "text/plain"
+
+    invoke-direct {p0, p1, v1, v0}, Lfi/g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Lcz/msebera/android/httpclient/entity/ContentType;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0, p2}, Lfi/a;-><init>(Lcz/msebera/android/httpclient/entity/ContentType;)V
+
+    const-string v0, "Text"
+
+    .line 5
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 6
+    invoke-virtual {p2}, Lcz/msebera/android/httpclient/entity/ContentType;->getCharset()Ljava/nio/charset/Charset;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    sget-object p2, Lhh/b;->f:Ljava/nio/charset/Charset;
+
+    :goto_0
+    invoke-virtual {p2}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 8
+    :try_start_0
+    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfi/g;->b:[B
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    .line 9
+    :catch_0
+    new-instance p1, Ljava/nio/charset/UnsupportedCharsetException;
+
+    invoke-direct {p1, p2}, Ljava/nio/charset/UnsupportedCharsetException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/UnsupportedEncodingException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-static {p2, p3}, Lcz/msebera/android/httpclient/entity/ContentType;->create(Ljava/lang/String;Ljava/nio/charset/Charset;)Lcz/msebera/android/httpclient/entity/ContentType;
+
+    move-result-object p2
+
+    invoke-direct {p0, p1, p2}, Lfi/g;-><init>(Ljava/lang/String;Lcz/msebera/android/httpclient/entity/ContentType;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/UnsupportedEncodingException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const-string v0, "text/plain"
+
+    .line 2
+    invoke-direct {p0, p1, v0, p2}, Lfi/g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;)Lfi/g;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalArgumentException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, v0, v0}, Lfi/g;->c(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)Lfi/g;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)Lfi/g;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalArgumentException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    :try_start_0
+    new-instance v0, Lfi/g;
+
+    invoke-direct {v0, p0, p1, p2}, Lfi/g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)V
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    .line 2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Charset "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, " is not supported"
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+.method public static d(Ljava/lang/String;Ljava/nio/charset/Charset;)Lfi/g;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalArgumentException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, v0, p1}, Lfi/g;->c(Ljava/lang/String;Ljava/lang/String;Ljava/nio/charset/Charset;)Lfi/g;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public a(JLjava/util/concurrent/TimeUnit;)Z
+.method public e()Ljava/io/Reader;
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "timeout",
-            "unit"
-        }
-    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    :try_start_0
-    invoke-static {}, Lio/reactivex/rxjava3/internal/util/c;->b()V
-
-    .line 3
-    invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 4
-    invoke-virtual {p0}, Lfi/g;->e()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :catch_0
-    move-exception p1
-
-    .line 5
-    invoke-virtual {p0}, Lfi/g;->e()V
-
-    .line 6
-    invoke-static {p1}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->i(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-
-    .line 7
-    :cond_0
-    iget-object p1, p0, Lfi/g;->b:Ljava/lang/Throwable;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    .line 8
-    :cond_1
-    invoke-static {p1}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->i(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public b(Lci/g;Lci/g;Lci/a;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "onSuccess",
-            "onError",
-            "onComplete"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lci/g<",
-            "-TT;>;",
-            "Lci/g<",
-            "-",
-            "Ljava/lang/Throwable;",
-            ">;",
-            "Lci/a;",
-            ")V"
-        }
-    .end annotation
-
-    .line 1
-    :try_start_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    :try_start_1
-    invoke-static {}, Lio/reactivex/rxjava3/internal/util/c;->b()V
-
-    .line 3
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    .line 4
-    :try_start_2
-    invoke-virtual {p0}, Lfi/g;->e()V
-
-    .line 5
-    invoke-interface {p2, p1}, Lci/g;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    .line 6
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lfi/g;->b:Ljava/lang/Throwable;
-
-    if-eqz v0, :cond_1
-
-    .line 7
-    invoke-interface {p2, v0}, Lci/g;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    .line 8
-    :cond_1
-    iget-object p2, p0, Lfi/g;->a:Ljava/lang/Object;
-
-    if-eqz p2, :cond_2
-
-    .line 9
-    invoke-interface {p1, p2}, Lci/g;->accept(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    .line 10
-    :cond_2
-    invoke-interface {p3}, Lci/a;->run()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    .line 11
-    invoke-static {p1}, Lio/reactivex/rxjava3/exceptions/a;->b(Ljava/lang/Throwable;)V
-
-    .line 12
-    invoke-static {p1}, Lji/a;->Y(Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-.end method
-
-.method public c()Ljava/lang/Object;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    :try_start_0
-    invoke-static {}, Lio/reactivex/rxjava3/internal/util/c;->b()V
-
-    .line 3
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    .line 4
-    invoke-virtual {p0}, Lfi/g;->e()V
-
-    .line 5
-    invoke-static {v0}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->i(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-virtual {p0}, Lfi/a;->a()Lcz/msebera/android/httpclient/entity/ContentType;
 
     move-result-object v0
 
-    throw v0
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/entity/ContentType;->getCharset()Ljava/nio/charset/Charset;
 
-    .line 6
+    move-result-object v0
+
+    .line 2
+    new-instance v1, Ljava/io/InputStreamReader;
+
+    new-instance v2, Ljava/io/ByteArrayInputStream;
+
+    iget-object v3, p0, Lfi/g;->b:[B
+
+    invoke-direct {v2, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
     :cond_0
+    sget-object v0, Lhh/b;->f:Ljava/nio/charset/Charset;
+
     :goto_0
-    iget-object v0, p0, Lfi/g;->b:Ljava/lang/Throwable;
+    invoke-direct {v1, v2, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
 
-    if-nez v0, :cond_1
+    return-object v1
+.end method
 
-    .line 7
-    iget-object v0, p0, Lfi/g;->a:Ljava/lang/Object;
+.method public getContentLength()J
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lfi/g;->b:[B
+
+    array-length v0, v0
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public getFilename()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
 
     return-object v0
-
-    .line 8
-    :cond_1
-    invoke-static {v0}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->i(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
 .end method
 
-.method public d(Ljava/lang/Object;)Ljava/lang/Object;
+.method public getTransferEncoding()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "8bit"
+
+    return-object v0
+.end method
+
+.method public writeTo(Ljava/io/OutputStream;)V
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "defaultValue"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)TT;"
-        }
-    .end annotation
+    const-string v0, "Output stream"
 
     .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
-    :try_start_0
-    invoke-static {}, Lio/reactivex/rxjava3/internal/util/c;->b()V
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    iget-object v1, p0, Lfi/g;->b:[B
+
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    const/16 v1, 0x1000
+
+    new-array v1, v1, [B
 
     .line 3
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/io/InputStream;->read([B)I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_0
+
+    const/4 v3, 0x0
+
+    .line 4
+    invoke-virtual {p1, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
-
-    .line 4
-    invoke-virtual {p0}, Lfi/g;->e()V
-
     .line 5
-    invoke-static {p1}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->i(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-
-    .line 6
     :cond_0
-    :goto_0
-    iget-object v0, p0, Lfi/g;->b:Ljava/lang/Throwable;
-
-    if-nez v0, :cond_2
-
-    .line 7
-    iget-object v0, p0, Lfi/g;->a:Ljava/lang/Object;
-
-    if-eqz v0, :cond_1
-
-    move-object p1, v0
-
-    :cond_1
-    return-object p1
-
-    .line 8
-    :cond_2
-    invoke-static {v0}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->i(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public e()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 1
-    iput-boolean v0, p0, Lfi/g;->d:Z
-
-    .line 2
-    iget-object v0, p0, Lfi/g;->c:Lio/reactivex/rxjava3/disposables/c;
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/c;->dispose()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onComplete()V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public onError(Ljava/lang/Throwable;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "e"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lfi/g;->b:Ljava/lang/Throwable;
-
-    .line 2
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public onSubscribe(Lio/reactivex/rxjava3/disposables/c;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "d"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lfi/g;->c:Lio/reactivex/rxjava3/disposables/c;
-
-    .line 2
-    iget-boolean v0, p0, Lfi/g;->d:Z
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    invoke-interface {p1}, Lio/reactivex/rxjava3/disposables/c;->dispose()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onSuccess(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "value"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lfi/g;->a:Ljava/lang/Object;
-
-    .line 2
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
 
     return-void
 .end method

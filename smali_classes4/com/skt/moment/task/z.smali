@@ -90,6 +90,14 @@
 # virtual methods
 .method public A(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sync"
+        }
+    .end annotation
 
     .line 1
     iput-boolean p1, p0, Lcom/skt/moment/task/z;->e:Z
@@ -99,6 +107,14 @@
 
 .method public B(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/task/z;->d:I
@@ -108,6 +124,14 @@
 
 .method public C(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resourceId"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/z;->i:Landroid/widget/Toast;
@@ -139,6 +163,14 @@
 
 .method public D(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -176,6 +208,14 @@
 
 .method public E(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/z;->a:Landroid/content/Context;
@@ -191,6 +231,14 @@
 
 .method public c(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/task/z;->f:I
@@ -218,6 +266,19 @@
 
 .method public e(Ljava/util/List;Ljava/lang/String;Landroid/os/Bundle;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "taskSeeds",
+            "name",
+            "extras"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -237,6 +298,16 @@
 
 .method public f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "name",
+            "key"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/z;->h:Ljava/util/Map;
@@ -477,6 +548,18 @@
 
 .method public o(Ljava/lang/String;Ljava/lang/String;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "title",
+            "jsonString",
+            "mapper"
+        }
+    .end annotation
 
     const-string v0, "JsonString"
 
@@ -488,17 +571,31 @@
 
 .method public p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tag",
+            "title",
+            "jsonString",
+            "mapper"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 2
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
@@ -516,7 +613,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lfd/b;->i(Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/fasterxml/jackson/core/JsonProcessingException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -543,6 +640,20 @@
 
 .method public q(Ljava/lang/String;Ljava/lang/String;[BLcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tag",
+            "title",
+            "responseBody",
+            "mapper"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/String;
@@ -556,6 +667,16 @@
 
 .method public r(Ljava/lang/String;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "jsonString",
+            "mapper"
+        }
+    .end annotation
 
     const-string v0, "json request"
 
@@ -567,6 +688,18 @@
 
 .method public s(Ljava/lang/String;Ljava/lang/Object;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "url",
+            "jsonObject",
+            "mapper"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -606,6 +739,16 @@
 
 .method public t(Ljava/lang/String;Lcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "jsonString",
+            "mapper"
+        }
+    .end annotation
 
     const-string v0, "json response"
 
@@ -617,6 +760,16 @@
 
 .method public u([BLcom/fasterxml/jackson/databind/ObjectMapper;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "responseBody",
+            "mapper"
+        }
+    .end annotation
 
     const-string v0, "JsonString"
 
@@ -630,6 +783,14 @@
 
 .method public v(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -658,6 +819,14 @@
 
 .method public w(Lcom/skt/moment/task/z$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "onExecutionListener"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/z;->g:Lcom/skt/moment/task/z$a;
@@ -684,6 +853,18 @@
 
 .method public y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "name",
+            "key",
+            "value"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/z;->h:Ljava/util/Map;
@@ -721,6 +902,14 @@
 
 .method public z(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "serviceId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/z;->c:Ljava/lang/String;

@@ -93,6 +93,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo;->campaignId:Ljava/lang/Integer;
@@ -102,6 +110,14 @@
 
 .method public setCongPops(Lcom/skt/moment/net/vo/ResHappenBodyVo$ResCongPopsVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congPops"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo;->congPops:Lcom/skt/moment/net/vo/ResHappenBodyVo$ResCongPopsVo;
@@ -111,6 +127,14 @@
 
 .method public setDeepLink(Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "deepLink"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo;->deepLink:Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;
@@ -120,6 +144,14 @@
 
 .method public setEndMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "endMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo;->endMessage:Ljava/lang/String;
@@ -129,6 +161,14 @@
 
 .method public setOfferPops(Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "offerPops"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo;->offerPops:Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;
@@ -138,6 +178,14 @@
 
 .method public setReward(Lcom/skt/moment/net/vo/ResHappenBodyVo$ResRewardVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "reward"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo;->reward:Lcom/skt/moment/net/vo/ResHappenBodyVo$ResRewardVo;

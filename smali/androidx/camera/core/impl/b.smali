@@ -12,16 +12,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/SurfaceConfig$ConfigType;Landroidx/camera/core/impl/SurfaceConfig$ConfigSize;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "configType",
-            "configSize"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Landroidx/camera/core/impl/SurfaceConfig;-><init>()V
@@ -71,14 +61,6 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
 
     const/4 v0, 0x1
 

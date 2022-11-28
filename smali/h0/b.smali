@@ -1,331 +1,170 @@
-.class public Lh0/b;
+.class public final Lh0/b;
 .super Ljava/lang/Object;
-.source "ImageProxyTransformFactory.java"
+.source "VideoUtil.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
-.annotation build Landroidx/camera/view/TransformExperimental;
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lh0/b$a;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
-# instance fields
-.field public final a:Z
-
-.field public final b:Z
+# static fields
+.field public static final a:Ljava/lang/String; = "VideoUtil"
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method public constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "useCropRect",
-            "useRotationDegrees"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-boolean p1, p0, Lh0/b;->a:Z
-
-    .line 3
-    iput-boolean p2, p0, Lh0/b;->b:Z
-
     return-void
 .end method
 
-.method public static c([FI)[F
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "cropRectVertices",
-            "rotationDegrees"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, [F->clone()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [F
-
-    .line 2
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    int-to-float p1, p1
-
-    .line 3
-    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->setRotate(F)V
-
-    .line 4
-    invoke-virtual {v0, p0}, Landroid/graphics/Matrix;->mapPoints([F)V
-
-    const/4 p1, 0x0
-
-    .line 5
-    aget v0, p0, p1
-
-    const/4 v1, 0x2
-
-    aget v1, p0, v1
-
-    const/4 v2, 0x4
-
-    aget v2, p0, v2
-
-    const/4 v3, 0x6
-
-    aget v3, p0, v3
-
-    invoke-static {v0, v1, v2, v3}, Landroidx/camera/view/f0;->e(FFFF)F
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    .line 6
-    aget v1, p0, v1
-
-    const/4 v2, 0x3
-
-    aget v2, p0, v2
-
-    const/4 v3, 0x5
-
-    aget v3, p0, v3
-
-    const/4 v4, 0x7
-
-    aget v4, p0, v4
-
-    invoke-static {v1, v2, v3, v4}, Landroidx/camera/view/f0;->e(FFFF)F
-
-    move-result v1
-
-    .line 7
-    :goto_0
-    array-length v2, p0
-
-    if-ge p1, v2, :cond_0
-
-    .line 8
-    aget v2, p0, p1
-
-    sub-float/2addr v2, v0
-
-    aput v2, p0, p1
-
-    add-int/lit8 v2, p1, 0x1
-
-    .line 9
-    aget v3, p0, v2
-
-    sub-float/2addr v3, v1
-
-    aput v3, p0, v2
-
-    add-int/lit8 p1, p1, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final a(Landroidx/camera/core/p1;)Landroid/graphics/RectF;
-    .locals 3
-    .param p1    # Landroidx/camera/core/p1;
+.method public static a(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/lang/String;
+    .locals 8
+    .param p0    # Landroid/content/ContentResolver;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "imageProxy"
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Lh0/b;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    new-instance v0, Landroid/graphics/RectF;
-
-    invoke-interface {p1}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
-
-    return-object v0
-
-    .line 3
-    :cond_0
-    new-instance v0, Landroid/graphics/RectF;
-
-    invoke-interface {p1}, Landroidx/camera/core/p1;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-interface {p1}, Landroidx/camera/core/p1;->getHeight()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v2, v1, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    return-object v0
-.end method
-
-.method public b(Landroidx/camera/core/p1;)Lh0/c;
-    .locals 7
-    .param p1    # Landroidx/camera/core/p1;
+    .param p1    # Landroid/net/Uri;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "imageProxy"
-        }
-    .end annotation
+    const-string v0, "_data"
+
+    const/4 v1, 0x0
 
     .line 1
-    new-instance v6, Landroid/graphics/Matrix;
+    :try_start_0
+    filled-new-array {v0}, [Ljava/lang/String;
 
-    invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v2, p0
+
+    move-object v3, p1
 
     .line 2
-    invoke-virtual {p0, p1}, Lh0/b;->a(Landroidx/camera/core/p1;)Landroid/graphics/RectF;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroidx/camera/view/f0;->g(Landroid/graphics/RectF;)[F
+    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
     .line 3
-    invoke-virtual {p0, p1}, Lh0/b;->d(Landroidx/camera/core/p1;)I
+    invoke-static {v1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 4
+    :try_start_1
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 4
-    invoke-static {v1, v0}, Lh0/b;->c([FI)[F
+    .line 5
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-result-object v3
+    .line 6
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 7
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    move-object v1, p0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, p0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    :goto_0
+    :try_start_2
+    const-string p0, "VideoUtil"
+
+    const-string v2, "Failed in getting absolute path for Uri %s with Exception %s"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Object;
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x4
+    .line 8
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    move-object v0, v6
+    move-result-object p1
 
-    .line 5
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Matrix;->setPolyToPoly([FI[FII)Z
+    aput-object p1, v3, v4
 
-    .line 6
-    invoke-interface {p1}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
+    const/4 p1, 0x1
+
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lh0/c;->b(Landroid/graphics/Rect;)Landroid/graphics/Matrix;
+    aput-object v0, v3, p1
 
-    move-result-object v0
-
-    invoke-virtual {v6, v0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
-
-    .line 7
-    new-instance v0, Lh0/c;
-
-    invoke-interface {p1}, Landroidx/camera/core/p1;->G0()Landroid/graphics/Rect;
+    .line 9
+    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/camera/view/f0;->f(Landroid/graphics/Rect;)Landroid/util/Size;
+    invoke-static {p0, p1}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    const-string p0, ""
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    invoke-direct {v0, v6, p1}, Lh0/c;-><init>(Landroid/graphics/Matrix;Landroid/util/Size;)V
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
-
-.method public final d(Landroidx/camera/core/p1;)I
-    .locals 1
-    .param p1    # Landroidx/camera/core/p1;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "imageProxy"
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Lh0/b;->b:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-interface {p1}, Landroidx/camera/core/p1;->f1()Landroidx/camera/core/o1;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Landroidx/camera/core/o1;->d()I
-
-    move-result p1
-
-    return p1
+    .line 10
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_0
-    const/4 p1, 0x0
+    return-object p0
 
-    return p1
+    :catchall_1
+    move-exception p1
+
+    :goto_1
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    .line 11
+    :cond_1
+    throw p1
 .end method

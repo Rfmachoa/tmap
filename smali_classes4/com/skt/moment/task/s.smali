@@ -66,6 +66,24 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "campaignType",
+            "momentCode",
+            "cause",
+            "serverAlias",
+            "appCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/c;-><init>()V
@@ -165,6 +183,24 @@
 
 .method public static L(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/task/s;
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "campaignId",
+            "cause",
+            "serverAlias",
+            "appCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     new-instance v7, Lcom/skt/moment/task/s;
@@ -193,6 +229,24 @@
 
 .method public static M(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/task/s;
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "informationId",
+            "cause",
+            "serverAlias",
+            "appCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     new-instance v7, Lcom/skt/moment/task/s;
@@ -223,6 +277,14 @@
 # virtual methods
 .method public final N(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -273,6 +335,14 @@
 
 .method public final O(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -323,6 +393,14 @@
 
 .method public P(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/task/s;->s:I
@@ -332,6 +410,14 @@
 
 .method public Q(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "informationId"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/task/s;->t:I
@@ -429,7 +515,7 @@
     iput-object v0, p0, Lcom/skt/moment/task/s;->B:Lcom/skt/moment/net/vo/ServiceReqVo;
 
     .line 12
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v1
 
@@ -439,7 +525,7 @@
 
     invoke-direct {v5, p0}, Lcom/skt/moment/task/s$a;-><init>(Lcom/skt/moment/task/s;)V
 
-    invoke-virtual {v1, v4, v2, v0, v5}, Lhb/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual {v1, v4, v2, v0, v5}, Led/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
 
     move-result-object v0
 
@@ -481,6 +567,14 @@
 
 .method public c(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/s;->D:Lcom/loopj/android/http/x;

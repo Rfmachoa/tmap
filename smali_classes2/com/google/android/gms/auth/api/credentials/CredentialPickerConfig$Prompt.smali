@@ -1,5 +1,6 @@
 .class public interface abstract annotation Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig$Prompt;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

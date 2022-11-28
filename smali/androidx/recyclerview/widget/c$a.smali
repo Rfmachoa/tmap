@@ -37,10 +37,10 @@
 
 .field public b:Ljava/util/concurrent/Executor;
 
-.field public final c:Landroidx/recyclerview/widget/k$f;
+.field public final c:Landroidx/recyclerview/widget/j$f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/k$f<",
+            "Landroidx/recyclerview/widget/j$f<",
             "TT;>;"
         }
     .end annotation
@@ -61,16 +61,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/recyclerview/widget/k$f;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/j$f;)V
     .locals 0
-    .param p1    # Landroidx/recyclerview/widget/k$f;
+    .param p1    # Landroidx/recyclerview/widget/j$f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/recyclerview/widget/k$f<",
+            "Landroidx/recyclerview/widget/j$f<",
             "TT;>;)V"
         }
     .end annotation
@@ -79,7 +79,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/recyclerview/widget/c$a;->c:Landroidx/recyclerview/widget/k$f;
+    iput-object p1, p0, Landroidx/recyclerview/widget/c$a;->c:Landroidx/recyclerview/widget/j$f;
 
     return-void
 .end method
@@ -157,9 +157,9 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/c$a;->b:Ljava/util/concurrent/Executor;
 
-    iget-object v3, p0, Landroidx/recyclerview/widget/c$a;->c:Landroidx/recyclerview/widget/k$f;
+    iget-object v3, p0, Landroidx/recyclerview/widget/c$a;->c:Landroidx/recyclerview/widget/j$f;
 
-    invoke-direct {v0, v1, v2, v3}, Landroidx/recyclerview/widget/c;-><init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/k$f;)V
+    invoke-direct {v0, v1, v2, v3}, Landroidx/recyclerview/widget/c;-><init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/j$f;)V
 
     return-object v0
 .end method

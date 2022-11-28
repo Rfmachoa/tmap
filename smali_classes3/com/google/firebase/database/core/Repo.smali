@@ -16,6 +16,8 @@
 
 
 # static fields
+.field private static final GET_TIMEOUT_MS:I = 0xbb8
+
 .field private static final INTERRUPT_REASON:Ljava/lang/String; = "repo_interrupt"
 
 .field private static final TRANSACTION_MAX_RETRIES:I = 0x19
@@ -2801,7 +2803,7 @@
     .line 2
     new-instance v1, Lcom/google/firebase/database/core/Repo$9;
 
-    invoke-direct {v1, p0, p1, v0}, Lcom/google/firebase/database/core/Repo$9;-><init>(Lcom/google/firebase/database/core/Repo;Lcom/google/firebase/database/Query;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    invoke-direct {v1, p0, p1, v0, p0}, Lcom/google/firebase/database/core/Repo$9;-><init>(Lcom/google/firebase/database/core/Repo;Lcom/google/firebase/database/Query;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/database/core/Repo;)V
 
     invoke-virtual {p0, v1}, Lcom/google/firebase/database/core/Repo;->scheduleNow(Ljava/lang/Runnable;)V
 
@@ -2862,9 +2864,20 @@
 .end method
 
 .method public keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;Z)V
-    .locals 2
+    .locals 1
+
+    const/4 v0, 0x0
 
     .line 1
+    invoke-virtual {p0, p1, p2, v0}, Lcom/google/firebase/database/core/Repo;->keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
+
+    return-void
+.end method
+
+.method public keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
+    .locals 2
+
+    .line 2
     invoke-virtual {p1}, Lcom/google/firebase/database/core/view/QuerySpec;->getPath()Lcom/google/firebase/database/core/Path;
 
     move-result-object v0
@@ -2905,10 +2918,10 @@
     :goto_1
     invoke-static {v0}, Lcom/google/firebase/database/core/utilities/Utilities;->hardAssert(Z)V
 
-    .line 2
+    .line 3
     iget-object v0, p0, Lcom/google/firebase/database/core/Repo;->serverSyncTree:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-virtual {v0, p1, p2}, Lcom/google/firebase/database/core/SyncTree;->keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;Z)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/google/firebase/database/core/SyncTree;->keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
 
     return-void
 .end method
@@ -3726,6 +3739,26 @@
     const-string v1, "repo_interrupt"
 
     invoke-interface {v0, v1}, Lcom/google/firebase/database/connection/PersistentConnection;->resume(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public scheduleDelayed(Ljava/lang/Runnable;J)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo;->ctx:Lcom/google/firebase/database/core/Context;
+
+    invoke-virtual {v0}, Lcom/google/firebase/database/core/Context;->requireStarted()V
+
+    .line 2
+    iget-object v0, p0, Lcom/google/firebase/database/core/Repo;->ctx:Lcom/google/firebase/database/core/Context;
+
+    invoke-virtual {v0}, Lcom/google/firebase/database/core/Context;->getRunLoop()Lcom/google/firebase/database/core/RunLoop;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1, p2, p3}, Lcom/google/firebase/database/core/RunLoop;->schedule(Ljava/lang/Runnable;J)Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method

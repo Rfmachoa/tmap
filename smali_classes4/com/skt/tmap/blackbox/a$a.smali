@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    value = Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/dialog/v;
+.field public final synthetic a:Lcom/skt/tmap/dialog/a0;
 
 .field public final synthetic b:Landroid/app/Activity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/dialog/v;Landroid/app/Activity;)V
+.method public constructor <init>(Lcom/skt/tmap/dialog/a0;Landroid/app/Activity;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -38,7 +38,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/blackbox/a$a;->a:Lcom/skt/tmap/dialog/v;
+    iput-object p1, p0, Lcom/skt/tmap/blackbox/a$a;->a:Lcom/skt/tmap/dialog/a0;
 
     iput-object p2, p0, Lcom/skt/tmap/blackbox/a$a;->b:Landroid/app/Activity;
 
@@ -59,12 +59,12 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/blackbox/a$a;->a:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/blackbox/a$a;->a:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     :cond_0

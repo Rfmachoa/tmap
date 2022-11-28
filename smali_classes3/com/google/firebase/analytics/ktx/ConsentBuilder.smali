@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/analytics/ktx/ConsentBuilder;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-analytics-ktx@@20.1.0"
+.source "com.google.firebase:firebase-analytics-ktx@@21.1.1"
 
 
 # annotations
@@ -29,8 +29,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x6,
-        0x0
+        0x7,
+        0x1
     }
     xi = 0x30
 .end annotation
@@ -83,31 +83,25 @@
     .line 2
     iget-object v1, p0, Lcom/google/firebase/analytics/ktx/ConsentBuilder;->zza:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
 
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    if-eqz v1, :cond_0
 
     .line 3
-    :cond_0
     sget-object v2, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;->AD_STORAGE:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
-    :goto_0
+    :cond_0
     iget-object v1, p0, Lcom/google/firebase/analytics/ktx/ConsentBuilder;->zzb:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentStatus;
 
-    if-nez v1, :cond_1
-
-    goto :goto_1
+    if-eqz v1, :cond_1
 
     .line 5
-    :cond_1
     sget-object v2, Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;->ANALYTICS_STORAGE:Lcom/google/firebase/analytics/FirebaseAnalytics$ConsentType;
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_1
+    :cond_1
     return-object v0
 .end method
 

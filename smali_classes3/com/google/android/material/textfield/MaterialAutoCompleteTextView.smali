@@ -3,6 +3,14 @@
 .source "MaterialAutoCompleteTextView.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;
+    }
+.end annotation
+
+
 # static fields
 .field private static final MAX_ITEMS_MEASURED:I = 0xf
 
@@ -15,6 +23,20 @@
 
 .field private final modalListPopup:Landroidx/appcompat/widget/ListPopupWindow;
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field private final popupElevation:F
+
+.field private final simpleItemLayout:I
+    .annotation build Landroidx/annotation/LayoutRes;
+    .end annotation
+.end field
+
+.field private simpleItemSelectedColor:I
+
+.field private simpleItemSelectedRippleColor:Landroid/content/res/ColorStateList;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
@@ -128,12 +150,58 @@
     const/4 p3, 0x0
 
     .line 10
-    invoke-virtual {p0, p3}, Landroid/widget/AutoCompleteTextView;->setKeyListener(Landroid/text/method/KeyListener;)V
-
-    :cond_0
-    const-string p3, "accessibility"
+    invoke-virtual {p0, p3}, Landroidx/appcompat/widget/AppCompatAutoCompleteTextView;->setKeyListener(Landroid/text/method/KeyListener;)V
 
     .line 11
+    :cond_0
+    sget p3, Lcom/google/android/material/R$styleable;->MaterialAutoCompleteTextView_simpleItemLayout:I
+
+    sget v1, Lcom/google/android/material/R$layout;->mtrl_auto_complete_simple_item:I
+
+    .line 12
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    iput p3, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemLayout:I
+
+    .line 13
+    sget p3, Lcom/google/android/material/R$styleable;->MaterialAutoCompleteTextView_android_popupElevation:I
+
+    sget v1, Lcom/google/android/material/R$dimen;->mtrl_exposed_dropdown_menu_popup_elevation:I
+
+    .line 14
+    invoke-virtual {p2, p3, v1}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    iput p3, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->popupElevation:F
+
+    .line 15
+    sget p3, Lcom/google/android/material/R$styleable;->MaterialAutoCompleteTextView_simpleItemSelectedColor:I
+
+    .line 16
+    invoke-virtual {p2, p3, v0}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p3
+
+    iput p3, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedColor:I
+
+    .line 17
+    sget p3, Lcom/google/android/material/R$styleable;->MaterialAutoCompleteTextView_simpleItemSelectedRippleColor:I
+
+    .line 18
+    invoke-static {p1, p2, p3}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedRippleColor:Landroid/content/res/ColorStateList;
+
+    const-string p3, "accessibility"
+
+    .line 19
     invoke-virtual {p1, p3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p3
@@ -142,7 +210,7 @@
 
     iput-object p3, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 12
+    .line 20
     new-instance p3, Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;-><init>(Landroid/content/Context;)V
@@ -151,32 +219,50 @@
 
     const/4 p1, 0x1
 
-    .line 13
+    .line 21
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->b0(Z)V
 
-    .line 14
+    .line 22
     invoke-virtual {p3, p0}, Landroidx/appcompat/widget/ListPopupWindow;->Q(Landroid/view/View;)V
 
     const/4 p1, 0x2
 
-    .line 15
+    .line 23
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->Y(I)V
 
-    .line 16
+    .line 24
     invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object p1
 
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->n(Landroid/widget/ListAdapter;)V
 
-    .line 17
+    .line 25
     new-instance p1, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$1;
 
     invoke-direct {p1, p0}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$1;-><init>(Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;)V
 
     invoke-virtual {p3, p1}, Landroidx/appcompat/widget/ListPopupWindow;->d0(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 18
+    .line 26
+    sget p1, Lcom/google/android/material/R$styleable;->MaterialAutoCompleteTextView_simpleItems:I
+
+    invoke-virtual {p2, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    .line 27
+    invoke-virtual {p2, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p1
+
+    .line 28
+    invoke-virtual {p0, p1}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->setSimpleItems(I)V
+
+    .line 29
+    :cond_1
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -198,6 +284,24 @@
     invoke-direct {p0, p1}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->updateText(Ljava/lang/Object;)V
 
     return-void
+.end method
+
+.method public static synthetic access$200(Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedColor:I
+
+    return p0
+.end method
+
+.method public static synthetic access$300(Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;)Landroid/content/res/ColorStateList;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedRippleColor:Landroid/content/res/ColorStateList;
+
+    return-object p0
 .end method
 
 .method private findTextInputLayoutAncestor()Lcom/google/android/material/textfield/TextInputLayout;
@@ -412,6 +516,23 @@
     return v2
 .end method
 
+.method private onInputTypeChanged()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->findTextInputLayoutAncestor()Lcom/google/android/material/textfield/TextInputLayout;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->updateEditTextBoxBackgroundIfNeeded()V
+
+    :cond_0
+    return-void
+.end method
+
 .method private updateText(Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -471,6 +592,35 @@
     invoke-super {p0}, Landroid/widget/AutoCompleteTextView;->getHint()Ljava/lang/CharSequence;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getPopupElevation()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->popupElevation:F
+
+    return v0
+.end method
+
+.method public getSimpleItemSelectedColor()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedColor:I
+
+    return v0
+.end method
+
+.method public getSimpleItemSelectedRippleColor()Landroid/content/res/ColorStateList;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedRippleColor:Landroid/content/res/ColorStateList;
 
     return-object v0
 .end method
@@ -596,6 +746,144 @@
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ListPopupWindow;->n(Landroid/widget/ListAdapter;)V
+
+    return-void
+.end method
+
+.method public setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+    .locals 1
+    .param p1    # Landroid/widget/AdapterView$OnItemSelectedListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/AutoCompleteTextView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->modalListPopup:Landroidx/appcompat/widget/ListPopupWindow;
+
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getOnItemSelectedListener()Landroid/widget/AdapterView$OnItemSelectedListener;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ListPopupWindow;->e0(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+
+    return-void
+.end method
+
+.method public setRawInputType(I)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/AutoCompleteTextView;->setRawInputType(I)V
+
+    .line 2
+    invoke-direct {p0}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->onInputTypeChanged()V
+
+    return-void
+.end method
+
+.method public setSimpleItemSelectedColor(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedColor:I
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;
+
+    invoke-virtual {p1}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;->updateSelectedItemColorStateList()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSimpleItemSelectedRippleColor(Landroid/content/res/ColorStateList;)V
+    .locals 0
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemSelectedRippleColor:Landroid/content/res/ColorStateList;
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;
+
+    invoke-virtual {p1}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;->updateSelectedItemColorStateList()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSimpleItems(I)V
+    .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/ArrayRes;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->setSimpleItems([Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setSimpleItems([Ljava/lang/String;)V
+    .locals 3
+    .param p1    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 2
+    new-instance v0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;
+
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->simpleItemLayout:I
+
+    invoke-direct {v0, p0, v1, v2, p1}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView$MaterialArrayAdapter;-><init>(Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;Landroid/content/Context;I[Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/textfield/MaterialAutoCompleteTextView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     return-void
 .end method

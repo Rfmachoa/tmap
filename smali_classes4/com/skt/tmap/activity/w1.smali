@@ -2,35 +2,18 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
-# interfaces
-.implements Landroidx/lifecycle/Observer;
-
-
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public static a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/w1;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object p0
 
-
-# virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/w1;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->h7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Boolean;)V
+    invoke-static {p2, p0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

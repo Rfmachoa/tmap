@@ -105,13 +105,9 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/firebase/FirebaseApp;Lcom/google/firebase/inject/Provider;Lcom/google/firebase/inject/Provider;)V
+.method public constructor <init>(Lcom/google/firebase/FirebaseApp;Lcom/google/firebase/inject/Provider;)V
     .locals 9
     .param p2    # Lcom/google/firebase/inject/Provider;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Lcom/google/firebase/inject/Provider;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -120,10 +116,7 @@
             "(",
             "Lcom/google/firebase/FirebaseApp;",
             "Lcom/google/firebase/inject/Provider<",
-            "Lcom/google/firebase/platforminfo/UserAgentPublisher;",
-            ">;",
-            "Lcom/google/firebase/inject/Provider<",
-            "Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;",
+            "Lcom/google/firebase/heartbeatinfo/HeartBeatController;",
             ">;)V"
         }
     .end annotation
@@ -156,7 +149,7 @@
 
     move-result-object v0
 
-    invoke-direct {v3, v0, p2, p3}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;-><init>(Landroid/content/Context;Lcom/google/firebase/inject/Provider;Lcom/google/firebase/inject/Provider;)V
+    invoke-direct {v3, v0, p2}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;-><init>(Landroid/content/Context;Lcom/google/firebase/inject/Provider;)V
 
     new-instance v4, Lcom/google/firebase/installations/local/PersistedInstallation;
 
@@ -1560,13 +1553,14 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 3
+    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 3
+    .line 4
     iget-object p1, p0, Lcom/google/firebase/installations/FirebaseInstallations;->fidListeners:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1586,7 +1580,7 @@
 
     check-cast v0, Lcom/google/firebase/installations/internal/FidListener;
 
-    .line 4
+    .line 5
     invoke-virtual {p2}, Lcom/google/firebase/installations/local/PersistedInstallationEntry;->getFirebaseInstallationId()Ljava/lang/String;
 
     move-result-object v1
@@ -1597,7 +1591,7 @@
 
     goto :goto_0
 
-    .line 5
+    .line 6
     :cond_0
     monitor-exit p0
 

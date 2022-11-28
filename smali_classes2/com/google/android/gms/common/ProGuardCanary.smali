@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/ProGuardCanary;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations

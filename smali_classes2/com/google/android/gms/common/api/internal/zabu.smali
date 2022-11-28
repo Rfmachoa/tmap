@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/api/internal/zabu;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
@@ -13,13 +13,6 @@
 .field private final zab:Lcom/google/android/gms/common/api/Api$Client;
 
 .field private final zac:Lcom/google/android/gms/common/api/internal/ApiKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 .field private zad:Lcom/google/android/gms/common/internal/IAccountAccessor;
     .annotation build Landroidx/annotation/Nullable;
@@ -29,14 +22,6 @@
 .field private zae:Ljava/util/Set;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
 .end field
 
 .field private zaf:Z
@@ -45,14 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/GoogleApiManager;Lcom/google/android/gms/common/api/Api$Client;Lcom/google/android/gms/common/api/internal/ApiKey;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;)V"
-        }
-    .end annotation
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zabu;->zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
@@ -198,16 +175,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/internal/IAccountAccessor;",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;)V"
-        }
     .end annotation
 
     if-eqz p1, :cond_1

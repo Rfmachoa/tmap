@@ -166,7 +166,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/google/android/datatransport/runtime/a;->a:Lcom/google/android/datatransport/runtime/a;
+    sget-object v0, Lcom/google/android/datatransport/runtime/b;->a:Lcom/google/android/datatransport/runtime/b;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/android/datatransport/runtime/TransportImpl;->schedule(Lcom/google/android/datatransport/Event;Lcom/google/android/datatransport/TransportScheduleCallback;)V
 

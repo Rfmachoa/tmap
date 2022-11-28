@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/analytics/FirebaseAnalytics$Param;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 
 # annotations
@@ -57,22 +57,6 @@
 
 .field public static final CHARACTER:Ljava/lang/String; = "character"
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final CHECKOUT_OPTION:Ljava/lang/String; = "checkout_option"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final CHECKOUT_STEP:Ljava/lang/String; = "checkout_step"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
@@ -186,14 +170,6 @@
     .end annotation
 .end field
 
-.field public static final ITEM_LIST:Ljava/lang/String; = "item_list"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 .field public static final ITEM_LIST_ID:Ljava/lang/String; = "item_list_id"
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -201,14 +177,6 @@
 
 .field public static final ITEM_LIST_NAME:Ljava/lang/String; = "item_list_name"
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final ITEM_LOCATION_ID:Ljava/lang/String; = "item_location_id"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
@@ -324,14 +292,6 @@
 
 .field public static final SHIPPING_TIER:Ljava/lang/String; = "shipping_tier"
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final SIGN_UP_METHOD:Ljava/lang/String; = "sign_up_method"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 

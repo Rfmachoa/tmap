@@ -1,91 +1,146 @@
 .class public Lmf/b;
 .super Ljava/lang/Object;
-.source "ClientContextConfigurer.java"
+.source "AndroidAudioRecordFactory.java"
 
 # interfaces
-.implements Lmf/a;
+.implements Llf/b;
 
 
 # annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/NotThreadSafe;
-.end annotation
-
-.annotation runtime Ljava/lang/Deprecated;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Llf/b<",
+        "Lmf/a;",
+        "Lmf/a$a;",
+        ">;"
+    }
 .end annotation
 
 
 # instance fields
-.field public final p:Lpg/g;
+.field public a:Lmf/a$a;
 
 
 # direct methods
-.method public constructor <init>(Lpg/g;)V
-    .locals 1
+.method public constructor <init>(Lmf/a$a;)V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "HTTP context"
-
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    iput-object p1, p0, Lmf/b;->p:Lpg/g;
+    iput-object p1, p0, Lmf/b;->a:Lmf/a$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lef/f;)V
-    .locals 2
+.method public bridge synthetic a()Llf/a$a;
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lmf/b;->p:Lpg/g;
+    invoke-virtual {p0}, Lmf/b;->d()Lmf/a$a;
 
-    const-string v1, "http.authscheme-registry"
+    move-result-object v0
 
-    invoke-interface {v0, v1, p1}, Lpg/g;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    return-object v0
+.end method
+
+.method public bridge synthetic b(Llf/a$a;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Lmf/a$a;
+
+    invoke-virtual {p0, p1}, Lmf/b;->e(Lmf/a$a;)V
 
     return-void
 .end method
 
-.method public b(Lxf/h;)V
-    .locals 2
+.method public c()Lmf/a;
+    .locals 8
 
     .line 1
-    iget-object v0, p0, Lmf/b;->p:Lpg/g;
+    iget-object v0, p0, Lmf/b;->a:Lmf/a$a;
 
-    const-string v1, "http.cookiespec-registry"
+    if-nez v0, :cond_0
 
-    invoke-interface {v0, v1, p1}, Lpg/g;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    return-void
+    return-object v0
+
+    .line 2
+    :cond_0
+    new-instance v0, Lmf/a;
+
+    new-instance v7, Landroid/media/AudioRecord;
+
+    iget-object v1, p0, Lmf/b;->a:Lmf/a$a;
+
+    invoke-virtual {v1}, Lmf/a$a;->d()I
+
+    move-result v2
+
+    iget-object v1, p0, Lmf/b;->a:Lmf/a$a;
+
+    invoke-virtual {v1}, Llf/a$a;->c()I
+
+    move-result v3
+
+    iget-object v1, p0, Lmf/b;->a:Lmf/a$a;
+
+    invoke-virtual {v1}, Llf/a$a;->b()I
+
+    move-result v4
+
+    iget-object v1, p0, Lmf/b;->a:Lmf/a$a;
+
+    invoke-virtual {v1}, Llf/a$a;->a()I
+
+    move-result v5
+
+    iget-object v1, p0, Lmf/b;->a:Lmf/a$a;
+
+    invoke-virtual {v1}, Lmf/a$a;->e()I
+
+    move-result v6
+
+    move-object v1, v7
+
+    invoke-direct/range {v1 .. v6}, Landroid/media/AudioRecord;-><init>(IIIII)V
+
+    invoke-direct {v0, v7}, Lmf/a;-><init>(Landroid/media/AudioRecord;)V
+
+    return-object v0
 .end method
 
-.method public c(Lgf/f;)V
-    .locals 2
+.method public bridge synthetic create()Llf/a;
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lmf/b;->p:Lpg/g;
+    invoke-virtual {p0}, Lmf/b;->c()Lmf/a;
 
-    const-string v1, "http.cookie-store"
+    move-result-object v0
 
-    invoke-interface {v0, v1, p1}, Lpg/g;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public d(Lgf/g;)V
-    .locals 2
+.method public d()Lmf/a$a;
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lmf/b;->p:Lpg/g;
+    iget-object v0, p0, Lmf/b;->a:Lmf/a$a;
 
-    const-string v1, "http.auth.credentials-provider"
+    return-object v0
+.end method
 
-    invoke-interface {v0, v1, p1}, Lpg/g;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+.method public e(Lmf/a$a;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lmf/b;->a:Lmf/a$a;
 
     return-void
 .end method

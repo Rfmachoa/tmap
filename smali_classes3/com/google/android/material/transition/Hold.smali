@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 0
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -25,11 +25,11 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lh3/o;
+    .param p3    # Lp4/o;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p4    # Lh3/o;
+    .param p4    # Lp4/o;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -54,7 +54,7 @@
     return-object p1
 .end method
 
-.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 0
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
@@ -64,11 +64,11 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lh3/o;
+    .param p3    # Lp4/o;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p4    # Lh3/o;
+    .param p4    # Lp4/o;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

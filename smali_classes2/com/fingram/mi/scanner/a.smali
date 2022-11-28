@@ -4,29 +4,29 @@
 
 
 # static fields
-.field public static final Y0:Ljava/lang/String;
+.field public static final a1:Ljava/lang/String;
 
-.field public static final Z0:F = 26.0f
+.field public static final b1:F = 26.0f
 
-.field public static final a1:F = 8.0f
+.field public static final c1:F = 8.0f
 
-.field public static final b1:[Landroid/graphics/drawable/GradientDrawable$Orientation;
+.field public static final d1:[Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-.field public static final c1:I = 0xa
+.field public static final e1:I = 0xa
 
-.field public static final d1:I = 0x14
+.field public static final f1:I = 0x14
 
 
 # instance fields
 .field public K0:I
 
-.field public final V0:Landroid/graphics/Paint;
+.field public final X0:Landroid/graphics/Paint;
 
-.field public final W0:Landroid/graphics/Paint;
+.field public final Y0:Landroid/graphics/Paint;
 
-.field public X0:[Landroid/graphics/Bitmap;
+.field public Z0:[Landroid/graphics/Bitmap;
 
-.field public a:Lw5/e;
+.field public a:Lt7/e;
 
 .field public b:Landroid/graphics/Rect;
 
@@ -54,7 +54,7 @@
 
 .field public p:F
 
-.field public u:Lw5/b;
+.field public u:Lt7/b;
 
 
 # direct methods
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/fingram/mi/scanner/a;->Y0:Ljava/lang/String;
+    sput-object v0, Lcom/fingram/mi/scanner/a;->a1:Ljava/lang/String;
 
     const/4 v0, 0x4
 
@@ -99,12 +99,12 @@
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/fingram/mi/scanner/a;->b1:[Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sput-object v0, Lcom/fingram/mi/scanner/a;->d1:[Landroid/graphics/drawable/GradientDrawable$Orientation;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;Lw5/b;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;Lt7/b;)V
     .locals 2
 
     .line 1
@@ -130,20 +130,20 @@
 
     invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object p1, p0, Lcom/fingram/mi/scanner/a;->V0:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/fingram/mi/scanner/a;->X0:Landroid/graphics/Paint;
 
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object p1, p0, Lcom/fingram/mi/scanner/a;->W0:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/fingram/mi/scanner/a;->Y0:Landroid/graphics/Paint;
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/graphics/Bitmap;
 
     .line 6
-    iput-object v0, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     .line 7
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -170,7 +170,7 @@
     iput-object v0, p0, Lcom/fingram/mi/scanner/a;->h:Landroid/graphics/Paint;
 
     .line 9
-    iput-object p3, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iput-object p3, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     .line 10
     new-instance p3, Landroid/graphics/Paint;
@@ -210,7 +210,7 @@
     invoke-virtual {p3, p2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 17
-    invoke-static {p1}, Lw5/g;->g(Landroid/graphics/Paint;)V
+    invoke-static {p1}, Lt7/g;->g(Landroid/graphics/Paint;)V
 
     return-void
 .end method
@@ -337,7 +337,7 @@
     fill-array-data p2, :array_0
 
     .line 8
-    sget-object p3, Lcom/fingram/mi/scanner/a;->b1:[Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sget-object p3, Lcom/fingram/mi/scanner/a;->d1:[Landroid/graphics/drawable/GradientDrawable$Orientation;
 
     iget p4, p0, Lcom/fingram/mi/scanner/a;->c:I
 
@@ -432,12 +432,12 @@
 
     sget p4, Lcom/fingram/mi/scanner/R$drawable;->ic_img_ocr_round_top_left:I
 
-    invoke-static {p3, p4}, Landroidx/core/content/d;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p3, p4}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
     .line 20
-    iget-object p4, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object p4, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     check-cast p3, Landroid/graphics/drawable/VectorDrawable;
 
@@ -448,7 +448,7 @@
     aput-object p3, p4, p2
 
     .line 21
-    iget-object p3, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object p3, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     const/4 p4, 0x1
 
@@ -463,7 +463,7 @@
     aput-object v0, p3, p4
 
     .line 22
-    iget-object p3, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object p3, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     aget-object p4, p3, p2
 
@@ -476,7 +476,7 @@
     aput-object p4, p3, p1
 
     .line 23
-    iget-object p1, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object p1, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     const/4 p3, 0x3
 
@@ -535,23 +535,23 @@
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 4
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_4
 
     .line 5
-    iget-boolean v0, v0, Lw5/e;->d:Z
+    iget-boolean v0, v0, Lt7/e;->d:Z
 
     if-eqz v0, :cond_1
 
     .line 6
     iget-object v0, p0, Lcom/fingram/mi/scanner/a;->i:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
-    iget v2, v2, Lw5/b;->c:I
+    iget v2, v2, Lt7/b;->c:I
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -561,9 +561,9 @@
     :cond_1
     iget-object v0, p0, Lcom/fingram/mi/scanner/a;->i:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
-    iget v2, v2, Lw5/b;->b:I
+    iget v2, v2, Lt7/b;->b:I
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -592,7 +592,7 @@
     add-int/2addr v4, v3
 
     .line 9
-    iget-object v5, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     aget-object v6, v5, v4
 
@@ -609,7 +609,7 @@
 
     move-result v6
 
-    iget-object v8, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object v8, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     aget-object v8, v8, v4
 
@@ -633,7 +633,7 @@
 
     move-result v7
 
-    iget-object v9, p0, Lcom/fingram/mi/scanner/a;->X0:[Landroid/graphics/Bitmap;
+    iget-object v9, p0, Lcom/fingram/mi/scanner/a;->Z0:[Landroid/graphics/Bitmap;
 
     aget-object v4, v9, v4
 
@@ -679,18 +679,18 @@
     .line 13
     iget-object v0, p0, Lcom/fingram/mi/scanner/a;->h:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
-    iget v2, v2, Lw5/b;->a:I
+    iget v2, v2, Lt7/b;->a:I
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 14
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v2, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
@@ -707,7 +707,7 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v2, v2, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
@@ -720,16 +720,16 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v2, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v2, v2, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
     div-int/2addr v0, v2
 
     .line 17
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->b:[[C
+    iget-object v0, v0, Lt7/e;->b:[[C
 
     aget-object v0, v0, v1
 
@@ -744,9 +744,9 @@
     if-lez v0, :cond_5
 
     .line 18
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     aget v0, v0, v1
 
@@ -758,7 +758,7 @@
 
     mul-int/2addr v2, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
@@ -769,9 +769,9 @@
     add-int/2addr v2, v0
 
     .line 19
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/4 v3, 0x4
 
@@ -785,16 +785,16 @@
 
     mul-int/2addr v3, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
     div-int/2addr v3, v0
 
     .line 20
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/4 v3, 0x1
 
@@ -808,7 +808,7 @@
 
     mul-int/2addr v4, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
@@ -819,9 +819,9 @@
     add-int/2addr v4, v0
 
     .line 21
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/4 v5, 0x5
 
@@ -835,14 +835,14 @@
 
     mul-int/2addr v5, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
     div-int/2addr v5, v0
 
     .line 22
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->W0:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->Y0:Landroid/graphics/Paint;
 
     const/high16 v5, 0x42480000    # 50.0f
 
@@ -854,11 +854,11 @@
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 24
-    iget-object v5, p0, Lcom/fingram/mi/scanner/a;->W0:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/fingram/mi/scanner/a;->Y0:Landroid/graphics/Paint;
 
-    iget-object v6, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v6, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v6, v6, Lw5/e;->b:[[C
+    iget-object v6, v6, Lt7/e;->b:[[C
 
     aget-object v6, v6, v1
 
@@ -866,9 +866,9 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v7, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v7, v7, Lw5/e;->b:[[C
+    iget-object v7, v7, Lt7/e;->b:[[C
 
     aget-object v7, v7, v1
 
@@ -883,9 +883,9 @@
     invoke-virtual {v5, v6, v1, v7, v0}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
     .line 25
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->b:[[C
+    iget-object v0, v0, Lt7/e;->b:[[C
 
     aget-object v0, v0, v1
 
@@ -899,14 +899,14 @@
 
     int-to-float v2, v4
 
-    iget-object v4, p0, Lcom/fingram/mi/scanner/a;->W0:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/fingram/mi/scanner/a;->Y0:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     .line 26
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/16 v1, 0x8
 
@@ -920,7 +920,7 @@
 
     mul-int/2addr v1, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
@@ -931,9 +931,9 @@
     add-int/2addr v1, v0
 
     .line 27
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/16 v2, 0xc
 
@@ -947,16 +947,16 @@
 
     mul-int/2addr v2, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
     div-int/2addr v2, v0
 
     .line 28
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/16 v2, 0x9
 
@@ -970,7 +970,7 @@
 
     mul-int/2addr v2, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
@@ -981,9 +981,9 @@
     add-int/2addr v2, v0
 
     .line 29
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->c:[I
+    iget-object v0, v0, Lt7/e;->c:[I
 
     const/16 v4, 0xd
 
@@ -997,23 +997,23 @@
 
     mul-int/2addr v4, v0
 
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->u:Lt7/b;
 
     iget v0, v0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
     div-int/2addr v4, v0
 
     .line 30
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->W0:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->Y0:Landroid/graphics/Paint;
 
     const/high16 v4, 0x41f00000    # 30.0f
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 31
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
-    iget-object v0, v0, Lw5/e;->b:[[C
+    iget-object v0, v0, Lt7/e;->b:[[C
 
     aget-object v0, v0, v3
 
@@ -1027,7 +1027,7 @@
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/fingram/mi/scanner/a;->W0:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/fingram/mi/scanner/a;->Y0:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
@@ -1073,7 +1073,7 @@
     const/16 p1, 0x14
 
     .line 3
-    invoke-static {v0, p1, p1}, Lw5/g;->f(Landroid/graphics/Point;II)Landroid/graphics/Rect;
+    invoke-static {v0, p1, p1}, Lt7/g;->f(Landroid/graphics/Point;II)Landroid/graphics/Rect;
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1081,7 +1081,7 @@
 
     .line 4
     :catch_0
-    sget-object p1, Lcom/fingram/mi/scanner/a;->Y0:Ljava/lang/String;
+    sget-object p1, Lcom/fingram/mi/scanner/a;->a1:Ljava/lang/String;
 
     const-string v0, "NullPointerException caught in onTouchEvent method"
 
@@ -1103,11 +1103,11 @@
     return-void
 .end method
 
-.method public setResultInfo(Lw5/e;)V
+.method public setResultInfo(Lt7/e;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
     if-eqz v0, :cond_0
 
@@ -1115,7 +1115,7 @@
 
     .line 2
     :cond_0
-    iput-object p1, p0, Lcom/fingram/mi/scanner/a;->a:Lw5/e;
+    iput-object p1, p0, Lcom/fingram/mi/scanner/a;->a:Lt7/e;
 
     return-void
 .end method

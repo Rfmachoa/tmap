@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/tagmanager/zzbx;
-.super Lcom/google/android/gms/tagmanager/zzdr;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Lcom/google/android/gms/tagmanager/zzbt;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # static fields
@@ -12,7 +12,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzaq:Lcom/google/android/gms/internal/gtm/zza;
+    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzK:Lcom/google/android/gms/internal/gtm/zza;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
 
@@ -24,45 +24,39 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzbx;->zza:Ljava/lang/String;
+    .locals 2
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/google/android/gms/tagmanager/zzdr;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzbx;->zza:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbt;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zzc(Lcom/google/android/gms/tagmanager/zzfu;Lcom/google/android/gms/tagmanager/zzfu;Ljava/util/Map;)Z
+.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzam;
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tagmanager/zzfu;",
-            "Lcom/google/android/gms/tagmanager/zzfu;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)Z"
-        }
-    .end annotation
+
+    const-string p1, "4.00"
 
     .line 1
-    invoke-virtual {p1, p2}, Lcom/google/android/gms/tagmanager/zzfu;->zza(Lcom/google/android/gms/tagmanager/zzfu;)I
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzam;
 
-    move-result p1
+    move-result-object p1
 
-    if-lez p1, :cond_0
+    return-object p1
+.end method
 
-    const/4 p1, 0x1
+.method public final zzb()Z
+    .locals 1
 
-    return p1
+    const/4 v0, 0x1
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 .end method

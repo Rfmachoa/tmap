@@ -35,7 +35,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->y()Landroid/os/Handler;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->y()Landroid/os/Handler;
 
     move-result-object p1
 

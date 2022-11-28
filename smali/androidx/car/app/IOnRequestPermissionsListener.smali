@@ -15,6 +15,10 @@
 .end annotation
 
 
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.IOnRequestPermissionsListener"
+
+
 # virtual methods
 .method public abstract onRequestPermissionsResult([Ljava/lang/String;[Ljava/lang/String;)V
     .annotation system Ldalvik/annotation/Throws;

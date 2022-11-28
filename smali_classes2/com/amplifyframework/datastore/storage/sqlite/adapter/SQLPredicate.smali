@@ -642,7 +642,7 @@
     invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/adapter/SQLPredicate;->addBinding(Ljava/lang/Object;)V
 
     .line 23
-    invoke-static {v0, v6, v1, v5, v7}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6, v1, v5, v7}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 24
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -681,7 +681,7 @@
     invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/adapter/SQLPredicate;->addBinding(Ljava/lang/Object;)V
 
     .line 31
-    invoke-static {v0, v6, v1, v5, v7}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6, v1, v5, v7}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 32
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

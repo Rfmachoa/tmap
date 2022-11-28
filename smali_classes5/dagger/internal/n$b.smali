@@ -32,7 +32,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;>;"
         }
     .end annotation
@@ -42,7 +42,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Collection<",
             "TT;>;>;>;"
         }
@@ -91,12 +91,12 @@
 
 
 # virtual methods
-.method public a(Loi/a;)Ldagger/internal/n$b;
+.method public a(Lsk/a;)Ldagger/internal/n$b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "+",
             "Ljava/util/Collection<",
             "+TT;>;>;)",
@@ -113,12 +113,12 @@
     return-object p0
 .end method
 
-.method public b(Loi/a;)Ldagger/internal/n$b;
+.method public b(Lsk/a;)Ldagger/internal/n$b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "+TT;>;)",
             "Ldagger/internal/n$b<",
             "TT;>;"

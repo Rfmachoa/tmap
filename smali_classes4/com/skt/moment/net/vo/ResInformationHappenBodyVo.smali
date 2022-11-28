@@ -49,6 +49,14 @@
 
 .method public setInformationCard(Lcom/skt/moment/net/vo/ResInformationHappenBodyVo$ResInformationCardVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "informationCard"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInformationHappenBodyVo;->informationCard:Lcom/skt/moment/net/vo/ResInformationHappenBodyVo$ResInformationCardVo;
@@ -58,6 +66,14 @@
 
 .method public setInformationId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "informationId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInformationHappenBodyVo;->informationId:Ljava/lang/Integer;

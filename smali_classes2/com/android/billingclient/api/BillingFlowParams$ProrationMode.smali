@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/android/billingclient/api/BillingFlowParams$ProrationMode;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -22,12 +22,17 @@
 
 
 # static fields
-.field public static final X:I = 0x0
+.field public static final b0:I = 0x0
 
-.field public static final Y:I = 0x1
+.field public static final c0:I = 0x1
 
-.field public static final Z:I = 0x2
+.field public static final d0:I = 0x2
 
-.field public static final a0:I = 0x3
+.field public static final e0:I = 0x3
 
-.field public static final b0:I = 0x4
+.field public static final f0:I = 0x4
+
+.field public static final g0:I = 0x5
+    .annotation build Lcom/android/billingclient/api/zzb;
+    .end annotation
+.end field

@@ -17,11 +17,11 @@
 # instance fields
 .field public a:Landroid/view/View;
 
-.field public b:Lh3/d;
+.field public b:Lp4/d;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lh3/d;)V
+.method public constructor <init>(Landroid/view/View;Lp4/d;)V
     .locals 0
 
     .line 1
@@ -31,7 +31,7 @@
     iput-object p1, p0, Landroidx/transition/ChangeTransform$d;->a:Landroid/view/View;
 
     .line 3
-    iput-object p2, p0, Landroidx/transition/ChangeTransform$d;->b:Lh3/d;
+    iput-object p2, p0, Landroidx/transition/ChangeTransform$d;->b:Lp4/d;
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     .line 2
     iget-object p1, p0, Landroidx/transition/ChangeTransform$d;->a:Landroid/view/View;
 
-    invoke-static {p1}, Lh3/f;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lp4/f;->b(Landroid/view/View;)V
 
     .line 3
     iget-object p1, p0, Landroidx/transition/ChangeTransform$d;->a:Landroid/view/View;
@@ -80,11 +80,11 @@
     .end param
 
     .line 1
-    iget-object p1, p0, Landroidx/transition/ChangeTransform$d;->b:Lh3/d;
+    iget-object p1, p0, Landroidx/transition/ChangeTransform$d;->b:Lp4/d;
 
     const/4 v0, 0x4
 
-    invoke-interface {p1, v0}, Lh3/d;->setVisibility(I)V
+    invoke-interface {p1, v0}, Lp4/d;->setVisibility(I)V
 
     return-void
 .end method
@@ -97,11 +97,11 @@
     .end param
 
     .line 1
-    iget-object p1, p0, Landroidx/transition/ChangeTransform$d;->b:Lh3/d;
+    iget-object p1, p0, Landroidx/transition/ChangeTransform$d;->b:Lp4/d;
 
     const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Lh3/d;->setVisibility(I)V
+    invoke-interface {p1, v0}, Lp4/d;->setVisibility(I)V
 
     return-void
 .end method

@@ -20,11 +20,11 @@
 # instance fields
 .field public final a:Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;
 
-.field public final b:Lm5/e;
+.field public final b:Lj7/e;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;Lm5/e;)V
+.method public constructor <init>(Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;Lj7/e;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/c0$a;->a:Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;
 
     .line 3
-    iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/c0$a;->b:Lm5/e;
+    iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/c0$a;->b:Lj7/e;
 
     return-void
 .end method
@@ -50,9 +50,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/c0$a;->b:Lm5/e;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/c0$a;->b:Lj7/e;
 
-    invoke-virtual {v0}, Lm5/e;->b()Ljava/io/IOException;
+    invoke-virtual {v0}, Lj7/e;->b()Ljava/io/IOException;
 
     move-result-object v0
 

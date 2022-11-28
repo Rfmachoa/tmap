@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->yb()V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Qb()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,9 +57,9 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$c;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->X0:Lcom/skt/tmap/mvp/presenter/w0;
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity;->Z0:Lcom/skt/tmap/mvp/presenter/v0;
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/presenter/w0;->onClick(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/presenter/v0;->onClick(Landroid/view/View;)V
 
     return-void
 .end method

@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message LinkTrafficEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x02
+  int32 infoIndexType = 1;
+
+  /** 교통정보 데이터 Collection */
+  repeated LinkTrafficElement elements = 2;
+}
+
+message LinkTrafficElement {
+
+  /** 시작 보간점 Idx */
+  int32 departVtxIndex = 1;
+
+  /** 해당 마지막 보간점 Idx */
+  int32 lastVertexIndex = 2;
+
+  /** 혼잡도(‘0’:정보없음, ‘1’:원활, ‘2’:서행, ‘4’:정체) */
+  int32 congestion = 3;
+
+  /** 속도(km/h) (범위:0~255) */
+  int32 speed = 4;
+
+  /** TSD링크 ID */
+  int32 tsdLinkId = 5;
+}

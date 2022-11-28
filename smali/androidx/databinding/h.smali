@@ -310,7 +310,7 @@
     if-eqz p0, :cond_6
 
     .line 1
-    invoke-static {p0}, Landroidx/databinding/ViewDataBinding;->w(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
+    invoke-static {p0}, Landroidx/databinding/ViewDataBinding;->y(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
 
     move-result-object v1
 
@@ -454,7 +454,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Landroidx/databinding/ViewDataBinding;->w(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
+    invoke-static {p0}, Landroidx/databinding/ViewDataBinding;->y(Landroid/view/View;)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p0
 

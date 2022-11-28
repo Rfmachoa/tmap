@@ -1,212 +1,609 @@
 .class public final Ls1/k;
 .super Ljava/lang/Object;
-.source "LayoutInflaterCompat.java"
+.source "TypedArray.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Ls1/k$a;
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0000\n\u0002\u0010\u0011\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u001a\u0016\u0010\u0004\u001a\u00020\u0003*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001H\u0002\u001a\u0014\u0010\u0006\u001a\u00020\u0005*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0016\u0010\u0007\u001a\u00020\u0001*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001H\u0007\u001a\u0014\u0010\t\u001a\u00020\u0008*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0014\u0010\u000b\u001a\u00020\n*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0016\u0010\u000c\u001a\u00020\u0001*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001H\u0007\u001a\u0016\u0010\r\u001a\u00020\u0001*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001H\u0007\u001a\u0014\u0010\u000f\u001a\u00020\u000e*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0014\u0010\u0010\u001a\u00020\n*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0016\u0010\u0012\u001a\u00020\u0011*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001H\u0007\u001a\u0014\u0010\u0013\u001a\u00020\u0001*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0014\u0010\u0014\u001a\u00020\u0001*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0016\u0010\u0015\u001a\u00020\u0001*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001H\u0007\u001a\u0014\u0010\u0017\u001a\u00020\u0016*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a\u0014\u0010\u0019\u001a\u00020\u0018*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u001a!\u0010\u001b\u001a\u0008\u0012\u0004\u0012\u00020\u00180\u001a*\u00020\u00002\u0008\u0008\u0001\u0010\u0002\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\u001b\u0010\u001c\u001a1\u0010 \u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u001d*\u00020\u00002\u0012\u0010\u001f\u001a\u000e\u0012\u0004\u0012\u00020\u0000\u0012\u0004\u0012\u00028\u00000\u001eH\u0086\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008 \u0010!\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\""
+    }
+    d2 = {
+        "Landroid/content/res/TypedArray;",
+        "",
+        "index",
+        "Lkotlin/d1;",
+        "a",
+        "",
+        "b",
+        "c",
+        "Landroid/content/res/ColorStateList;",
+        "d",
+        "",
+        "e",
+        "f",
+        "g",
+        "Landroid/graphics/drawable/Drawable;",
+        "h",
+        "i",
+        "Landroid/graphics/Typeface;",
+        "j",
+        "k",
+        "l",
+        "m",
+        "",
+        "n",
+        "",
+        "p",
+        "",
+        "o",
+        "(Landroid/content/res/TypedArray;I)[Ljava/lang/CharSequence;",
+        "R",
+        "Lkotlin/Function1;",
+        "block",
+        "q",
+        "(Landroid/content/res/TypedArray;Lgl/l;)Ljava/lang/Object;",
+        "core-ktx_release"
+    }
+    k = 0x2
+    mv = {
+        0x1,
+        0x7,
+        0x1
     }
 .end annotation
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "LayoutInflaterCompatHC"
-
-.field public static b:Ljava/lang/reflect/Field;
-
-.field public static c:Z
-
-
 # direct methods
-.method public constructor <init>()V
+.method public static final a(Landroid/content/res/TypedArray;I)V
     .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
-    .locals 6
-
-    .line 1
-    sget-boolean v0, Ls1/k;->c:Z
-
-    const-string v1, "; inflation may have unexpected results."
-
-    const-string v2, "LayoutInflaterCompatHC"
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 2
-    :try_start_0
-    const-class v3, Landroid/view/LayoutInflater;
-
-    const-string v4, "mFactory2"
-
-    invoke-virtual {v3, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v3
-
-    sput-object v3, Ls1/k;->b:Ljava/lang/reflect/Field;
-
-    .line 3
-    invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v3
-
-    const-string v4, "forceSetFactory2 Could not find field \'mFactory2\' on class "
-
-    .line 4
-    invoke-static {v4}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-class v5, Landroid/view/LayoutInflater;
-
-    .line 5
-    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 6
-    invoke-static {v2, v4, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 7
-    :goto_0
-    sput-boolean v0, Ls1/k;->c:Z
-
-    .line 8
-    :cond_0
-    sget-object v0, Ls1/k;->b:Ljava/lang/reflect/Field;
-
-    if-eqz v0, :cond_1
-
-    .line 9
-    :try_start_1
-    invoke-virtual {v0, p0, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    .line 10
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "forceSetFactory2 could not set the Factory2 on LayoutInflater "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public static b(Landroid/view/LayoutInflater;)Ls1/l;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
-
-    move-result-object p0
-
-    .line 2
-    instance-of v0, p0, Ls1/k$a;
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    check-cast p0, Ls1/k$a;
-
-    iget-object p0, p0, Ls1/k$a;->a:Ls1/l;
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/view/LayoutInflater;Ls1/l;)V
-    .locals 1
-    .param p0    # Landroid/view/LayoutInflater;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
         .end annotation
     .end param
-    .param p1    # Ls1/l;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    if-eqz p1, :cond_0
 
     .line 1
-    new-instance v0, Ls1/k$a;
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
-    invoke-direct {v0, p1}, Ls1/k$a;-><init>(Ls1/l;)V
+    move-result p0
 
-    goto :goto_0
+    if-eqz p0, :cond_0
 
+    return-void
+
+    .line 2
     :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Attribute not defined in set."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final b(Landroid/content/res/TypedArray;I)Z
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
     const/4 v0, 0x0
 
-    :goto_0
-    invoke-virtual {p0, v0}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public static d(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
-    .locals 0
-    .param p0    # Landroid/view/LayoutInflater;
-        .annotation build Landroidx/annotation/NonNull;
+.method public static final c(Landroid/content/res/TypedArray;I)I
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Landroid/view/LayoutInflater$Factory2;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
 
-    return-void
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final d(Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Attribute value was not a color or color state list."
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final e(Landroid/content/res/TypedArray;I)F
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final f(Landroid/content/res/TypedArray;I)I
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Dimension;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final g(Landroid/content/res/TypedArray;I)I
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Dimension;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final h(Landroid/content/res/TypedArray;I)Landroid/graphics/drawable/Drawable;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public static final i(Landroid/content/res/TypedArray;I)F
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final j(Landroid/content/res/TypedArray;I)Landroid/graphics/Typeface;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1a
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    .line 2
+    invoke-static {p0, p1}, Ls1/j;->a(Landroid/content/res/TypedArray;I)Landroid/graphics/Typeface;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final k(Landroid/content/res/TypedArray;I)I
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final l(Landroid/content/res/TypedArray;I)I
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getInteger(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final m(Landroid/content/res/TypedArray;I)I
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/AnyRes;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final n(Landroid/content/res/TypedArray;I)Ljava/lang/String;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Attribute value could not be coerced to String."
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final o(Landroid/content/res/TypedArray;I)[Ljava/lang/CharSequence;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    const-string p1, "getTextArray(index)"
+
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public static final p(Landroid/content/res/TypedArray;I)Ljava/lang/CharSequence;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleableRes;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Ls1/k;->a(Landroid/content/res/TypedArray;I)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Attribute value could not be coerced to CharSequence."
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final q(Landroid/content/res/TypedArray;Lgl/l;)Ljava/lang/Object;
+    .locals 1
+    .param p0    # Landroid/content/res/TypedArray;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p1    # Lgl/l;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/content/res/TypedArray;",
+            "Lgl/l<",
+            "-",
+            "Landroid/content/res/TypedArray;",
+            "+TR;>;)TR;"
+        }
+    .end annotation
+
+    const-string v0, "<this>"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-interface {p1, p0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 2
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-object p1
 .end method

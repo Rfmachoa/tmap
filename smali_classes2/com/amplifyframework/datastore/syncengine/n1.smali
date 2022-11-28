@@ -3,36 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/a;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
+.field public final synthetic a:Ljava/util/concurrent/Semaphore;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Semaphore;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/n1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/n1;->a:Ljava/util/concurrent/Semaphore;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/n1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/n1;->a:Ljava/util/concurrent/Semaphore;
 
-    check-cast p1, Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;
+    invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;->l(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;)Lai/g;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

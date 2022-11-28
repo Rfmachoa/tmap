@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/signin/internal/Storage;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -133,30 +133,12 @@
 .end method
 
 .method private static final zae(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
-
-    .line 1
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    invoke-static {p0, v2, v0}, Lp5/a;->a(Ljava/lang/String;II)I
-
-    move-result v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    .locals 1
 
     const-string v0, ":"
 
-    invoke-static {v1, p0, v0, p1}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {p0, v0, p1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

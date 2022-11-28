@@ -15,14 +15,16 @@
 
 
 # instance fields
-.field public a:Landroidx/car/app/model/g;
+.field public a:Landroidx/car/app/model/j;
 
 .field public b:Z
+
+.field public c:Z
 
 
 # direct methods
 .method public constructor <init>(Landroidx/car/app/model/Toggle$b;)V
-    .locals 0
+    .locals 1
     .param p1    # Landroidx/car/app/model/Toggle$b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -36,12 +38,17 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x1
+
     .line 2
-    invoke-static {p1}, Landroidx/car/app/model/OnCheckedChangeDelegateImpl;->b(Landroidx/car/app/model/Toggle$b;)Landroidx/car/app/model/g;
+    iput-boolean v0, p0, Landroidx/car/app/model/Toggle$a;->c:Z
+
+    .line 3
+    invoke-static {p1}, Landroidx/car/app/model/OnCheckedChangeDelegateImpl;->b(Landroidx/car/app/model/Toggle$b;)Landroidx/car/app/model/j;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/car/app/model/Toggle$a;->a:Landroidx/car/app/model/g;
+    iput-object p1, p0, Landroidx/car/app/model/Toggle$a;->a:Landroidx/car/app/model/j;
 
     return-void
 .end method
@@ -68,6 +75,21 @@
 
     .line 1
     iput-boolean p1, p0, Landroidx/car/app/model/Toggle$a;->b:Z
+
+    return-object p0
+.end method
+
+.method public c(Z)Landroidx/car/app/model/Toggle$a;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    iput-boolean p1, p0, Landroidx/car/app/model/Toggle$a;->c:Z
 
     return-object p0
 .end method

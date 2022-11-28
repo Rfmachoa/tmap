@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ln/a;
+.implements Landroidx/camera/core/w$b;
 
 
-# static fields
-.field public static final synthetic a:Landroidx/camera/lifecycle/c;
+# instance fields
+.field public final synthetic a:Landroidx/camera/core/w;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Landroidx/camera/lifecycle/c;
-
-    invoke-direct {v0}, Landroidx/camera/lifecycle/c;-><init>()V
-
-    sput-object v0, Landroidx/camera/lifecycle/c;->a:Landroidx/camera/lifecycle/c;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Landroidx/camera/core/w;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/lifecycle/c;->a:Landroidx/camera/core/w;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final getCameraXConfig()Landroidx/camera/core/w;
+    .locals 1
 
-    check-cast p1, Landroidx/camera/core/CameraX;
+    iget-object v0, p0, Landroidx/camera/lifecycle/c;->a:Landroidx/camera/core/w;
 
-    invoke-static {p1}, Landroidx/camera/lifecycle/d;->e(Landroidx/camera/core/CameraX;)Landroidx/camera/lifecycle/d;
+    invoke-static {v0}, Landroidx/camera/lifecycle/g;->g(Landroidx/camera/core/w;)Landroidx/camera/core/w;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method

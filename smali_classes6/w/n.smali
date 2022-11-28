@@ -3,40 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/Config$b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lw/o$a;
+.field public final synthetic a:Lw/b$c;
 
-.field public final synthetic b:Landroidx/camera/core/impl/Config;
+.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw/o$a;Landroidx/camera/core/impl/Config;)V
+.method public synthetic constructor <init>(Lw/b$c;Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw/n;->a:Lw/o$a;
+    iput-object p1, p0, Lw/n;->a:Lw/b$c;
 
-    iput-object p2, p0, Lw/n;->b:Landroidx/camera/core/impl/Config;
+    iput-object p2, p0, Lw/n;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/camera/core/impl/Config$a;)Z
+.method public final run()V
     .locals 2
 
-    iget-object v0, p0, Lw/n;->a:Lw/o$a;
+    iget-object v0, p0, Lw/n;->a:Lw/b$c;
 
-    iget-object v1, p0, Lw/n;->b:Landroidx/camera/core/impl/Config;
+    iget-object v1, p0, Lw/n;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
-    invoke-static {v0, v1, p1}, Lw/o$a;->b(Lw/o$a;Landroidx/camera/core/impl/Config;Landroidx/camera/core/impl/Config$a;)Z
+    invoke-static {v0, v1}, Lw/b$c;->f(Lw/b$c;Landroid/hardware/camera2/CameraCaptureSession;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

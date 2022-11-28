@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/skt/tmap/engine/navigation/location/TmapLocationService$TmapLocationServiceBinder;,
-        Lcom/skt/tmap/engine/navigation/location/TmapLocationService$Companion;
+        Lcom/skt/tmap/engine/navigation/location/TmapLocationService$Companion;,
+        Lcom/skt/tmap/engine/navigation/location/TmapLocationService$TmapLocationServiceBinder;
     }
 .end annotation
 
@@ -58,8 +58,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -78,6 +78,9 @@
 
 # instance fields
 .field private final locationServiceBinder:Lcom/skt/tmap/engine/navigation/location/TmapLocationService$TmapLocationServiceBinder;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private notification:Landroid/app/Notification;
     .annotation build Lorg/jetbrains/annotations/Nullable;

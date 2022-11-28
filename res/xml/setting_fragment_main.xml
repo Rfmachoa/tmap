@@ -16,7 +16,8 @@
         <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/setting_main_sound_auto_sound_control" android:key="@string/feature_musicVolumeAutoControlOnDriving" android:defaultValue="Y" app:clickLogActionId="tap.autovolume_control" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
     <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_map_setting">
-        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_item_map_driving_map_text_size" android:key="@string/feature_mapFontSize" android:defaultValue="NORMAL" app:clickLogActionId="tap.map_fontsize" app:entries="@array/setting_main_display_poi_fontsize_choices" app:entryValues="@array/setting_main_display_poi_fontsize_choices_value" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false">
+        <com.skt.tmap.setting.fragment.customPreference.CustomMapDownloadPreference android:key="@string/feature_useDownloadedMap" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_item_map_driving_map_text_size" android:key="@string/feature_mapFontSize" android:defaultValue="NORMAL" app:clickLogActionId="tap.map_fontsize" app:entries="@array/setting_main_display_poi_fontsize_choices" app:entryValues="@array/setting_main_display_poi_fontsize_choices_value" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="true">
             <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSettingDisplayDetailActivity">
                 <extra android:name="nPageNum" android:value="9" />
             </intent>
@@ -55,17 +56,20 @@
         <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/setting_push_noti_notification" android:key="@string/main_setting_alarm_category" app:isTextViewDivider="false">
             <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapPushSettingPreferenceActivity" />
         </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
-        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_disaster_message" android:key="@string/setting_disaster_message" app:clickLogActionId="tap.emergency_alerts" app:isPreferenceVisible="false">
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_disaster_message_category" android:key="@string/setting_disaster_message_category" app:isTextViewDivider="true">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_disaster_message" android:key="@string/setting_disaster_message" app:clickLogActionId="tap.emergency_alerts" app:isTextViewDivider="false">
             <intent android:targetPackage="com.google.android.cellbroadcastreceiver" android:targetClass="com.android.cellbroadcastreceiver.CellBroadcastSettings" />
         </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
     <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_nugu_setting">
         <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_setting_ai_drive_title" android:key="@string/feature_useNugu" android:defaultValue="Y" app:clickLogActionId="tap.nugusetting" app:entries="@array/setting_common_use" app:entryValues="@array/setting_value_string_yn_type" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false" />
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
-    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_lab_setting" android:key="@string/lab_category" app:isPreferenceVisible="false">
-        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_lab_menu" android:key="@string/setting_lab_menu" app:clickLogActionId="tab.laboratory" app:isPreferenceVisible="false" app:isTextViewDivider="false">
-            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapLabMenuSettingPreferenceActivity" />
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/str_version">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/str_tmap_version" android:key="@string/feature_version" android:defaultValue="Y" app:clickLogActionId="tap.version_update" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSettingUpdateActivity" />
         </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <Preference android:layout="@layout/reset_setting_layout" android:key="@string/reset_settings" />
     <com.skt.tmap.setting.fragment.customLayout.SettingMainFooterPreference android:layout="@layout/setting_environment_footer" android:title="@string/setting_title_footer" android:key="@string/setting_title_footer" app:isUseValue="false" />
 </PreferenceScreen>

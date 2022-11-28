@@ -108,7 +108,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/datastore/DataStoreException$GraphQLResponseException;->errors:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -169,7 +169,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 

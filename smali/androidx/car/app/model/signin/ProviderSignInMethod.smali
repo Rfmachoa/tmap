@@ -59,15 +59,15 @@
     if-ne v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1}, Landroidx/car/app/model/Action;->d()Landroidx/car/app/model/i;
+    invoke-virtual {p1}, Landroidx/car/app/model/Action;->d()Landroidx/car/app/model/l;
 
     move-result-object v0
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Landroidx/car/app/model/i;
+    check-cast v0, Landroidx/car/app/model/l;
 
-    invoke-interface {v0}, Landroidx/car/app/model/i;->a()Z
+    invoke-interface {v0}, Landroidx/car/app/model/l;->a()Z
 
     move-result v0
 

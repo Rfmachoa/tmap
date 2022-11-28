@@ -1,14 +1,9 @@
 .class public Lcom/google/android/gms/common/api/BooleanResult;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Result;
-
-
-# annotations
-.annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-.end annotation
 
 
 # instance fields
@@ -56,8 +51,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     const/4 v0, 0x0
 
@@ -112,9 +105,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
-
     iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zaa:Lcom/google/android/gms/common/api/Status;
 
     return-object v0
@@ -122,8 +112,6 @@
 
 .method public getValue()Z
     .locals 1
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     iget-boolean v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zab:Z
 
@@ -132,8 +120,6 @@
 
 .method public final hashCode()I
     .locals 2
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zaa:Lcom/google/android/gms/common/api/Status;

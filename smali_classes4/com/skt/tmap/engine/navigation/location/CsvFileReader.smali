@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private csvReader:Lh7/d;
+.field private csvReader:Lcom/opencsv/CSVReader;
 
 .field private final csvReaderRunnable:Ljava/lang/Runnable;
 
@@ -84,11 +84,11 @@
     return p1
 .end method
 
-.method public static synthetic access$100(Lcom/skt/tmap/engine/navigation/location/CsvFileReader;)Lh7/d;
+.method public static synthetic access$100(Lcom/skt/tmap/engine/navigation/location/CsvFileReader;)Lcom/opencsv/CSVReader;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/navigation/location/CsvFileReader;->csvReader:Lh7/d;
+    iget-object p0, p0, Lcom/skt/tmap/engine/navigation/location/CsvFileReader;->csvReader:Lcom/opencsv/CSVReader;
 
     return-object p0
 .end method
@@ -102,11 +102,11 @@
     return-object p0
 .end method
 
-.method public static synthetic access$102(Lcom/skt/tmap/engine/navigation/location/CsvFileReader;Lh7/d;)Lh7/d;
+.method public static synthetic access$102(Lcom/skt/tmap/engine/navigation/location/CsvFileReader;Lcom/opencsv/CSVReader;)Lcom/opencsv/CSVReader;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/location/CsvFileReader;->csvReader:Lh7/d;
+    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/location/CsvFileReader;->csvReader:Lcom/opencsv/CSVReader;
 
     return-object p1
 .end method
@@ -222,11 +222,11 @@
     invoke-direct {v1, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
     .line 3
-    new-instance v0, Lh7/d;
+    new-instance v0, Lcom/opencsv/CSVReader;
 
-    invoke-direct {v0, v1}, Lh7/d;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v0, v1}, Lcom/opencsv/CSVReader;-><init>(Ljava/io/Reader;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/CsvFileReader;->csvReader:Lh7/d;
+    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/CsvFileReader;->csvReader:Lcom/opencsv/CSVReader;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

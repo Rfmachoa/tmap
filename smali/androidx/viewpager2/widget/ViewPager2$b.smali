@@ -60,7 +60,7 @@
     iput p1, v0, Landroidx/viewpager2/widget/ViewPager2;->d:I
 
     .line 3
-    iget-object p1, v0, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object p1, v0, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2$e;->q()V
 

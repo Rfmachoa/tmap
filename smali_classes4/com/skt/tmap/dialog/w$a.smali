@@ -1,14 +1,14 @@
 .class public Lcom/skt/tmap/dialog/w$a;
 .super Ljava/lang/Object;
-.source "TmapNaviSoundDialog.java"
+.source "SimpleItemSelectDialog.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/skt/tmap/dialog/w;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/dialog/w;-><init>(Landroid/app/Activity;[Ljava/lang/String;ILcom/skt/tmap/dialog/w$d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,23 +18,29 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/dialog/w;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/skt/tmap/dialog/w;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/dialog/w;)V
+.method public constructor <init>(Lcom/skt/tmap/dialog/w;I)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010
+            0x8010,
+            0x1010
         }
         names = {
-            "this$0"
+            "this$0",
+            "val$currentIndex"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
+    iput-object p1, p0, Lcom/skt/tmap/dialog/w$a;->b:Lcom/skt/tmap/dialog/w;
+
+    iput p2, p0, Lcom/skt/tmap/dialog/w$a;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,69 +49,85 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
+    iget-object p1, p0, Lcom/skt/tmap/dialog/w$a;->b:Lcom/skt/tmap/dialog/w;
 
-    invoke-static {v0}, Lcom/skt/tmap/dialog/w;->y(Lcom/skt/tmap/dialog/w;)I
+    invoke-static {p1}, Lcom/skt/tmap/dialog/w;->x(Lcom/skt/tmap/dialog/w;)Ljava/util/ArrayList;
 
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
+    move-result-object p1
 
-    invoke-static {v0}, Lcom/skt/tmap/dialog/w;->z(Lcom/skt/tmap/dialog/w;)Landroid/widget/TextView;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v1, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
-
-    invoke-static {v1}, Lcom/skt/tmap/dialog/w;->x(Lcom/skt/tmap/dialog/w;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 3
-    iget-object v0, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
-
-    invoke-static {v0}, Lcom/skt/tmap/dialog/w;->x(Lcom/skt/tmap/dialog/w;)I
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_1
 
-    if-ge v0, v1, :cond_0
-
-    .line 4
-    iget-object v0, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
-
-    invoke-static {v0}, Lcom/skt/tmap/dialog/w;->C(Lcom/skt/tmap/dialog/w;)Landroid/widget/RelativeLayout;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->performClick()Z
+    check-cast v0, Landroid/widget/RadioButton;
+
+    .line 2
+    iget v1, p0, Lcom/skt/tmap/dialog/w$a;->a:I
+
+    const/4 v2, 0x1
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {v0}, Landroid/widget/RadioButton;->getId()I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_1
+    invoke-virtual {v0, v2}, Landroid/widget/RadioButton;->setChecked(Z)V
 
     goto :goto_0
 
-    .line 5
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/dialog/w$a;->a:Lcom/skt/tmap/dialog/w;
+    .line 3
+    :cond_1
+    iget-object p1, p0, Lcom/skt/tmap/dialog/w$a;->b:Lcom/skt/tmap/dialog/w;
 
-    iget-object v1, v0, Lcom/skt/tmap/dialog/w;->b1:Lcom/skt/tmap/engine/navigation/LockableHandler;
+    invoke-static {p1}, Lcom/skt/tmap/dialog/w;->y(Lcom/skt/tmap/dialog/w;)Lcom/skt/tmap/dialog/w$d;
 
-    invoke-static {v0}, Lcom/skt/tmap/dialog/w;->D(Lcom/skt/tmap/dialog/w;)Ljava/lang/Runnable;
+    move-result-object p1
 
-    move-result-object v0
+    if-eqz p1, :cond_2
 
-    const/16 v2, 0x3e8
+    .line 4
+    iget-object p1, p0, Lcom/skt/tmap/dialog/w$a;->b:Lcom/skt/tmap/dialog/w;
 
-    invoke-virtual {v1, v0, v2}, Lcom/skt/tmap/engine/navigation/LockableHandler;->putDelayed(Ljava/lang/Runnable;I)V
+    invoke-static {p1}, Lcom/skt/tmap/dialog/w;->y(Lcom/skt/tmap/dialog/w;)Lcom/skt/tmap/dialog/w$d;
 
-    :goto_0
+    move-result-object p1
+
+    iget v0, p0, Lcom/skt/tmap/dialog/w$a;->a:I
+
+    invoke-interface {p1, v0}, Lcom/skt/tmap/dialog/w$d;->b(I)V
+
+    :cond_2
     return-void
 .end method

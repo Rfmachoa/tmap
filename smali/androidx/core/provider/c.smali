@@ -27,17 +27,17 @@
 
 .field public static final c:Ljava/lang/Object;
 
-.field public static final d:Landroidx/collection/l;
+.field public static final d:Landroidx/collection/m;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "LOCK"
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/l<",
+            "Landroidx/collection/m<",
             "Ljava/lang/String;",
             "Ljava/util/ArrayList<",
-            "Lr1/c<",
+            "Landroidx/core/util/d<",
             "Landroidx/core/provider/c$e;",
             ">;>;>;"
         }
@@ -65,7 +65,7 @@
     const/16 v2, 0x2710
 
     .line 2
-    invoke-static {v0, v1, v2}, Lm1/d;->a(Ljava/lang/String;II)Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-static {v0, v1, v2}, Lf2/e;->a(Ljava/lang/String;II)Ljava/util/concurrent/ThreadPoolExecutor;
 
     move-result-object v0
 
@@ -79,11 +79,11 @@
     sput-object v0, Landroidx/core/provider/c;->c:Ljava/lang/Object;
 
     .line 4
-    new-instance v0, Landroidx/collection/l;
+    new-instance v0, Landroidx/collection/m;
 
-    invoke-direct {v0}, Landroidx/collection/l;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/m;-><init>()V
 
-    sput-object v0, Landroidx/core/provider/c;->d:Landroidx/collection/l;
+    sput-object v0, Landroidx/core/provider/c;->d:Landroidx/collection/m;
 
     return-void
 .end method
@@ -97,9 +97,9 @@
     return-void
 .end method
 
-.method public static a(Lm1/c;I)Ljava/lang/String;
+.method public static a(Lf2/d;I)Ljava/lang/String;
     .locals 1
-    .param p0    # Lm1/c;
+    .param p0    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -109,7 +109,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lm1/c;->d()Ljava/lang/String;
+    invoke-virtual {p0}, Lf2/d;->d()Ljava/lang/String;
 
     move-result-object p0
 
@@ -220,7 +220,7 @@
     return v2
 .end method
 
-.method public static c(Ljava/lang/String;Landroid/content/Context;Lm1/c;I)Landroidx/core/provider/c$e;
+.method public static c(Ljava/lang/String;Landroid/content/Context;Lf2/d;I)Landroidx/core/provider/c$e;
     .locals 3
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -230,7 +230,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lm1/c;
+    .param p2    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -260,7 +260,7 @@
 
     .line 3
     :try_start_0
-    invoke-static {p1, p2, v1}, Landroidx/core/provider/b;->d(Landroid/content/Context;Lm1/c;Landroid/os/CancellationSignal;)Landroidx/core/provider/FontsContractCompat$b;
+    invoke-static {p1, p2, v1}, Landroidx/core/provider/b;->e(Landroid/content/Context;Lf2/d;Landroid/os/CancellationSignal;)Landroidx/core/provider/FontsContractCompat$b;
 
     move-result-object p2
     :try_end_0
@@ -287,7 +287,7 @@
     move-result-object p2
 
     .line 7
-    invoke-static {p1, v1, p2, p3}, Lc1/y;->c(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$c;I)Landroid/graphics/Typeface;
+    invoke-static {p1, v1, p2, p3}, Lv1/y;->d(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$c;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -324,13 +324,13 @@
     return-object p0
 .end method
 
-.method public static d(Landroid/content/Context;Lm1/c;ILjava/util/concurrent/Executor;Landroidx/core/provider/a;)Landroid/graphics/Typeface;
+.method public static d(Landroid/content/Context;Lf2/d;ILjava/util/concurrent/Executor;Landroidx/core/provider/a;)Landroid/graphics/Typeface;
     .locals 5
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lm1/c;
+    .param p1    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -344,7 +344,7 @@
     .end param
 
     .line 1
-    invoke-static {p1, p2}, Landroidx/core/provider/c;->a(Lm1/c;I)Ljava/lang/String;
+    invoke-static {p1, p2}, Landroidx/core/provider/c;->a(Lf2/d;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -381,9 +381,9 @@
 
     .line 6
     :try_start_0
-    sget-object v2, Landroidx/core/provider/c;->d:Landroidx/collection/l;
+    sget-object v2, Landroidx/core/provider/c;->d:Landroidx/collection/m;
 
-    invoke-virtual {v2, v0}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -411,7 +411,7 @@
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 11
-    invoke-virtual {v2, v0, v3}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v3}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 12
     monitor-exit p4
@@ -421,7 +421,7 @@
     .line 13
     new-instance p4, Landroidx/core/provider/c$c;
 
-    invoke-direct {p4, v0, p0, p1, p2}, Landroidx/core/provider/c$c;-><init>(Ljava/lang/String;Landroid/content/Context;Lm1/c;I)V
+    invoke-direct {p4, v0, p0, p1, p2}, Landroidx/core/provider/c$c;-><init>(Ljava/lang/String;Landroid/content/Context;Lf2/d;I)V
 
     if-nez p3, :cond_2
 
@@ -434,7 +434,7 @@
 
     invoke-direct {p0, v0}, Landroidx/core/provider/c$d;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p3, p4, p0}, Lm1/d;->c(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Lr1/c;)V
+    invoke-static {p3, p4, p0}, Lf2/e;->c(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;Landroidx/core/util/d;)V
 
     return-object v4
 
@@ -450,13 +450,13 @@
     throw p0
 .end method
 
-.method public static e(Landroid/content/Context;Lm1/c;Landroidx/core/provider/a;II)Landroid/graphics/Typeface;
+.method public static e(Landroid/content/Context;Lf2/d;Landroidx/core/provider/a;II)Landroid/graphics/Typeface;
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lm1/c;
+    .param p1    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -466,7 +466,7 @@
     .end param
 
     .line 1
-    invoke-static {p1, p3}, Landroidx/core/provider/c;->a(Lm1/c;I)Ljava/lang/String;
+    invoke-static {p1, p3}, Landroidx/core/provider/c;->a(Lf2/d;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -496,7 +496,7 @@
     if-ne p4, v1, :cond_1
 
     .line 4
-    invoke-static {v0, p0, p1, p3}, Landroidx/core/provider/c;->c(Ljava/lang/String;Landroid/content/Context;Lm1/c;I)Landroidx/core/provider/c$e;
+    invoke-static {v0, p0, p1, p3}, Landroidx/core/provider/c;->c(Ljava/lang/String;Landroid/content/Context;Lf2/d;I)Landroidx/core/provider/c$e;
 
     move-result-object p0
 
@@ -512,13 +512,13 @@
     :cond_1
     new-instance v1, Landroidx/core/provider/c$a;
 
-    invoke-direct {v1, v0, p0, p1, p3}, Landroidx/core/provider/c$a;-><init>(Ljava/lang/String;Landroid/content/Context;Lm1/c;I)V
+    invoke-direct {v1, v0, p0, p1, p3}, Landroidx/core/provider/c$a;-><init>(Ljava/lang/String;Landroid/content/Context;Lf2/d;I)V
 
     .line 8
     :try_start_0
     sget-object p0, Landroidx/core/provider/c;->b:Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {p0, v1, p4}, Lm1/d;->d(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;I)Ljava/lang/Object;
+    invoke-static {p0, v1, p4}, Lf2/e;->d(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;I)Ljava/lang/Object;
 
     move-result-object p0
 

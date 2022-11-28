@@ -1,6 +1,11 @@
 .class public interface abstract Lcom/google/android/gms/ads/mediation/MediationAdRequest;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # static fields
@@ -13,6 +18,9 @@
 
 # virtual methods
 .method public abstract getBirthday()Ljava/util/Date;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
@@ -23,6 +31,9 @@
 .end method
 
 .method public abstract getKeywords()Ljava/util/Set;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -34,6 +45,8 @@
 .end method
 
 .method public abstract getLocation()Landroid/location/Location;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract isDesignedForFamilies()Z

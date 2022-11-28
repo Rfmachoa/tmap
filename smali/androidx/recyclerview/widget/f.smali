@@ -3,7 +3,7 @@
 .source "BatchingListUpdateCallback.java"
 
 # interfaces
-.implements Landroidx/recyclerview/widget/v;
+.implements Landroidx/recyclerview/widget/u;
 
 
 # static fields
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/v;
+.field public final a:Landroidx/recyclerview/widget/u;
 
 .field public b:I
 
@@ -29,9 +29,9 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/v;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/u;)V
     .locals 1
-    .param p1    # Landroidx/recyclerview/widget/v;
+    .param p1    # Landroidx/recyclerview/widget/u;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -58,7 +58,7 @@
     iput-object v0, p0, Landroidx/recyclerview/widget/f;->e:Ljava/lang/Object;
 
     .line 6
-    iput-object p1, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/v;
+    iput-object p1, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/u;
 
     return-void
 .end method
@@ -235,9 +235,9 @@
     invoke-virtual {p0}, Landroidx/recyclerview/widget/f;->e()V
 
     .line 2
-    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/v;
+    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/u;
 
-    invoke-interface {v0, p1, p2}, Landroidx/recyclerview/widget/v;->d(II)V
+    invoke-interface {v0, p1, p2}, Landroidx/recyclerview/widget/u;->d(II)V
 
     return-void
 .end method
@@ -269,7 +269,7 @@
 
     .line 2
     :cond_1
-    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/v;
+    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/u;
 
     iget v1, p0, Landroidx/recyclerview/widget/f;->c:I
 
@@ -277,31 +277,31 @@
 
     iget-object v3, p0, Landroidx/recyclerview/widget/f;->e:Ljava/lang/Object;
 
-    invoke-interface {v0, v1, v2, v3}, Landroidx/recyclerview/widget/v;->c(IILjava/lang/Object;)V
+    invoke-interface {v0, v1, v2, v3}, Landroidx/recyclerview/widget/u;->c(IILjava/lang/Object;)V
 
     goto :goto_0
 
     .line 3
     :cond_2
-    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/v;
+    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/u;
 
     iget v1, p0, Landroidx/recyclerview/widget/f;->c:I
 
     iget v2, p0, Landroidx/recyclerview/widget/f;->d:I
 
-    invoke-interface {v0, v1, v2}, Landroidx/recyclerview/widget/v;->b(II)V
+    invoke-interface {v0, v1, v2}, Landroidx/recyclerview/widget/u;->b(II)V
 
     goto :goto_0
 
     .line 4
     :cond_3
-    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/v;
+    iget-object v0, p0, Landroidx/recyclerview/widget/f;->a:Landroidx/recyclerview/widget/u;
 
     iget v1, p0, Landroidx/recyclerview/widget/f;->c:I
 
     iget v2, p0, Landroidx/recyclerview/widget/f;->d:I
 
-    invoke-interface {v0, v1, v2}, Landroidx/recyclerview/widget/v;->a(II)V
+    invoke-interface {v0, v1, v2}, Landroidx/recyclerview/widget/u;->a(II)V
 
     :goto_0
     const/4 v0, 0x0

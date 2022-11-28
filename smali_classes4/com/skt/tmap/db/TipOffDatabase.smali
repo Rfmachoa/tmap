@@ -26,36 +26,39 @@
     d2 = {
         "Lcom/skt/tmap/db/TipOffDatabase;",
         "Landroidx/room/RoomDatabase;",
-        "Lac/j;",
-        "F",
+        "Lxd/j;",
+        "Q",
         "Lcom/skt/tmap/db/entity/TipOffEntity;",
         "tipOffEntity",
         "Lkotlin/d1;",
-        "E",
+        "P",
         "<init>",
         "()V",
-        "p",
+        "q",
         "a",
         "tmap_android_phoneKUShip"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # static fields
-.field public static volatile n:Lcom/skt/tmap/db/TipOffDatabase;
-
-.field public static final o:I
-
-.field public static final p:Lcom/skt/tmap/db/TipOffDatabase$a;
+.field public static final q:Lcom/skt/tmap/db/TipOffDatabase$a;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
+
+.field public static volatile r:Lcom/skt/tmap/db/TipOffDatabase;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public static final s:I
 
 
 # direct methods
@@ -68,12 +71,12 @@
 
     invoke-direct {v0, v1}, Lcom/skt/tmap/db/TipOffDatabase$a;-><init>(Lkotlin/jvm/internal/u;)V
 
-    sput-object v0, Lcom/skt/tmap/db/TipOffDatabase;->p:Lcom/skt/tmap/db/TipOffDatabase$a;
+    sput-object v0, Lcom/skt/tmap/db/TipOffDatabase;->q:Lcom/skt/tmap/db/TipOffDatabase$a;
 
     const/16 v0, 0xa
 
     .line 1
-    sput v0, Lcom/skt/tmap/db/TipOffDatabase;->o:I
+    sput v0, Lcom/skt/tmap/db/TipOffDatabase;->s:I
 
     return-void
 .end method
@@ -87,25 +90,25 @@
     return-void
 .end method
 
-.method public static final synthetic B()Lcom/skt/tmap/db/TipOffDatabase;
+.method public static final synthetic M()Lcom/skt/tmap/db/TipOffDatabase;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->n:Lcom/skt/tmap/db/TipOffDatabase;
+    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->r:Lcom/skt/tmap/db/TipOffDatabase;
 
     return-object v0
 .end method
 
-.method public static final synthetic C(Lcom/skt/tmap/db/TipOffDatabase;)V
+.method public static final synthetic N(Lcom/skt/tmap/db/TipOffDatabase;)V
     .locals 0
 
     .line 1
-    sput-object p0, Lcom/skt/tmap/db/TipOffDatabase;->n:Lcom/skt/tmap/db/TipOffDatabase;
+    sput-object p0, Lcom/skt/tmap/db/TipOffDatabase;->r:Lcom/skt/tmap/db/TipOffDatabase;
 
     return-void
 .end method
 
-.method public static final D(Landroid/content/Context;)Lcom/skt/tmap/db/TipOffDatabase;
+.method public static final O(Landroid/content/Context;)Lcom/skt/tmap/db/TipOffDatabase;
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -117,7 +120,7 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->p:Lcom/skt/tmap/db/TipOffDatabase$a;
+    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->q:Lcom/skt/tmap/db/TipOffDatabase$a;
 
     invoke-virtual {v0, p0}, Lcom/skt/tmap/db/TipOffDatabase$a;->a(Landroid/content/Context;)Lcom/skt/tmap/db/TipOffDatabase;
 
@@ -128,46 +131,44 @@
 
 
 # virtual methods
-.method public final E(Lcom/skt/tmap/db/entity/TipOffEntity;)V
+.method public final P(Lcom/skt/tmap/db/entity/TipOffEntity;)V
     .locals 8
     .param p1    # Lcom/skt/tmap/db/entity/TipOffEntity;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
 
-    const-string/jumbo v0, "tipOffEntity"
+    const-string v0, "tipOffEntity"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->n:Lcom/skt/tmap/db/TipOffDatabase;
+    sget-object v0, Lcom/skt/tmap/db/TipOffDatabase;->r:Lcom/skt/tmap/db/TipOffDatabase;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/db/TipOffDatabase;->F()Lac/j;
+    invoke-virtual {v0}, Lcom/skt/tmap/db/TipOffDatabase;->Q()Lxd/j;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lac/j;->b(Lcom/skt/tmap/db/entity/TipOffEntity;)V
+    invoke-interface {v1, p1}, Lxd/j;->b(Lcom/skt/tmap/db/entity/TipOffEntity;)V
 
     .line 3
-    invoke-virtual {v0}, Lcom/skt/tmap/db/TipOffDatabase;->F()Lac/j;
+    invoke-virtual {v0}, Lcom/skt/tmap/db/TipOffDatabase;->Q()Lxd/j;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lac/j;->e()Ljava/util/List;
+    invoke-interface {p1}, Lxd/j;->e()Ljava/util/List;
 
     move-result-object p1
-
-    if-eqz p1, :cond_0
 
     .line 4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    sget v2, Lcom/skt/tmap/db/TipOffDatabase;->o:I
+    sget v2, Lcom/skt/tmap/db/TipOffDatabase;->s:I
 
     if-le v1, v2, :cond_0
 
@@ -190,7 +191,7 @@
 
     .line 6
     :goto_0
-    invoke-virtual {v0}, Lcom/skt/tmap/db/TipOffDatabase;->F()Lac/j;
+    invoke-virtual {v0}, Lcom/skt/tmap/db/TipOffDatabase;->Q()Lxd/j;
 
     move-result-object v5
 
@@ -204,7 +205,7 @@
 
     aput-object v7, v6, v2
 
-    invoke-interface {v5, v6}, Lac/j;->c([Lcom/skt/tmap/db/entity/TipOffEntity;)V
+    invoke-interface {v5, v6}, Lxd/j;->c([Lcom/skt/tmap/db/entity/TipOffEntity;)V
 
     if-eq v4, v1, :cond_0
 
@@ -216,7 +217,7 @@
     return-void
 .end method
 
-.method public abstract F()Lac/j;
+.method public abstract Q()Lxd/j;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end method

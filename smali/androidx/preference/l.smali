@@ -3,9 +3,9 @@
 .source "PreferenceFragment.java"
 
 # interfaces
-.implements Landroidx/preference/p$c;
-.implements Landroidx/preference/p$a;
-.implements Landroidx/preference/p$b;
+.implements Landroidx/preference/t$c;
+.implements Landroidx/preference/t$a;
+.implements Landroidx/preference/t$b;
 .implements Landroidx/preference/DialogPreference$a;
 
 
@@ -40,7 +40,7 @@
 # instance fields
 .field public final a:Landroidx/preference/l$d;
 
-.field public b:Landroidx/preference/p;
+.field public b:Landroidx/preference/t;
 
 .field public c:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -110,7 +110,7 @@
     invoke-virtual {p0}, Landroidx/preference/l;->r()V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     iget-object v1, p0, Landroidx/preference/l;->f:Landroid/content/Context;
 
@@ -120,7 +120,7 @@
     move-result-object v2
 
     .line 4
-    invoke-virtual {v0, v1, p1, v2}, Landroidx/preference/p;->r(Landroid/content/Context;ILandroidx/preference/PreferenceScreen;)Landroidx/preference/PreferenceScreen;
+    invoke-virtual {v0, v1, p1, v2}, Landroidx/preference/t;->r(Landroid/content/Context;ILandroidx/preference/PreferenceScreen;)Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
 
@@ -129,8 +129,43 @@
     return-void
 .end method
 
-.method public b(Landroidx/preference/PreferenceScreen;)V
+.method public b()V
+    .locals 3
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/preference/l;->j()Landroidx/preference/PreferenceScreen;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/preference/l;->f()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0}, Landroidx/preference/l;->l(Landroidx/preference/PreferenceScreen;)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    .line 3
+    invoke-virtual {v0}, Landroidx/preference/PreferenceGroup;->W()V
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Landroidx/preference/l;->k()V
+
+    return-void
+.end method
+
+.method public c(Landroidx/preference/PreferenceScreen;)V
     .locals 1
+    .param p1    # Landroidx/preference/PreferenceScreen;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -186,39 +221,12 @@
     return-void
 .end method
 
-.method public c()V
-    .locals 3
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/preference/l;->j()Landroidx/preference/PreferenceScreen;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/preference/l;->h()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0}, Landroidx/preference/l;->l(Landroidx/preference/PreferenceScreen;)Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
-
-    .line 3
-    invoke-virtual {v0}, Landroidx/preference/PreferenceGroup;->W()V
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Landroidx/preference/l;->k()V
-
-    return-void
-.end method
-
 .method public d(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
     .locals 1
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -233,7 +241,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     if-nez v0, :cond_0
 
@@ -243,7 +251,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/preference/p;->b(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {v0, p1}, Landroidx/preference/t;->b(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
 
@@ -263,8 +271,23 @@
     return-object v0
 .end method
 
-.method public f(Landroidx/preference/Preference;)V
+.method public final f()Landroidx/recyclerview/widget/RecyclerView;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/preference/l;->c:Landroidx/recyclerview/widget/RecyclerView;
+
+    return-object v0
+.end method
+
+.method public g(Landroidx/preference/Preference;)V
     .locals 3
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -414,8 +437,12 @@
     throw p1
 .end method
 
-.method public g(Landroidx/preference/Preference;)Z
+.method public h(Landroidx/preference/Preference;)Z
     .locals 2
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -477,24 +504,13 @@
     return v1
 .end method
 
-.method public final h()Landroidx/recyclerview/widget/RecyclerView;
+.method public i()Landroidx/preference/t;
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/l;->c:Landroidx/recyclerview/widget/RecyclerView;
-
-    return-object v0
-.end method
-
-.method public i()Landroidx/preference/p;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     return-object v0
 .end method
@@ -505,9 +521,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
-    invoke-virtual {v0}, Landroidx/preference/p;->n()Landroidx/preference/PreferenceScreen;
+    invoke-virtual {v0}, Landroidx/preference/t;->n()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
 
@@ -527,6 +543,13 @@
 
 .method public l(Landroidx/preference/PreferenceScreen;)Landroidx/recyclerview/widget/RecyclerView$Adapter;
     .locals 1
+    .param p1    # Landroidx/preference/PreferenceScreen;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -540,6 +563,9 @@
 
 .method public m()Landroidx/recyclerview/widget/RecyclerView$m;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -556,12 +582,31 @@
 .end method
 
 .method public abstract n(Landroid/os/Bundle;Ljava/lang/String;)V
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
 .method public o(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
+    .param p1    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -613,17 +658,21 @@
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$m;)V
 
     .line 5
-    new-instance p2, Landroidx/preference/q;
+    new-instance p2, Landroidx/preference/u;
 
-    invoke-direct {p2, p1}, Landroidx/preference/q;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p2, p1}, Landroidx/preference/u;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAccessibilityDelegateCompat(Landroidx/recyclerview/widget/c0;)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAccessibilityDelegateCompat(Landroidx/recyclerview/widget/b0;)V
 
     return-object p1
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 4
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
@@ -669,14 +718,14 @@
     iput-object v1, p0, Landroidx/preference/l;->f:Landroid/content/Context;
 
     .line 7
-    new-instance v0, Landroidx/preference/p;
+    new-instance v0, Landroidx/preference/t;
 
-    invoke-direct {v0, v1}, Landroidx/preference/p;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroidx/preference/t;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iput-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     .line 8
-    invoke-virtual {v0, p0}, Landroidx/preference/p;->y(Landroidx/preference/p$b;)V
+    invoke-virtual {v0, p0}, Landroidx/preference/t;->y(Landroidx/preference/t$b;)V
 
     .line 9
     invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -710,6 +759,20 @@
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 7
+    .param p1    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/preference/l;->f:Landroid/content/Context;
@@ -721,7 +784,7 @@
     const v3, 0x1010506
 
     .line 2
-    invoke-static {v0, v2, v3}, Lz0/i;->a(Landroid/content/Context;II)I
+    invoke-static {v0, v2, v3}, Ls1/l;->a(Landroid/content/Context;II)I
 
     move-result v2
 
@@ -915,6 +978,10 @@
 
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroid/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
@@ -950,14 +1017,14 @@
     invoke-super {p0}, Landroid/app/Fragment;->onStart()V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
-    invoke-virtual {v0, p0}, Landroidx/preference/p;->z(Landroidx/preference/p$c;)V
+    invoke-virtual {v0, p0}, Landroidx/preference/t;->z(Landroidx/preference/t$c;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
-    invoke-virtual {v0, p0}, Landroidx/preference/p;->x(Landroidx/preference/p$a;)V
+    invoke-virtual {v0, p0}, Landroidx/preference/t;->x(Landroidx/preference/t$a;)V
 
     return-void
 .end method
@@ -969,22 +1036,30 @@
     invoke-super {p0}, Landroid/app/Fragment;->onStop()V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/preference/p;->z(Landroidx/preference/p$c;)V
+    invoke-virtual {v0, v1}, Landroidx/preference/t;->z(Landroidx/preference/t$c;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
-    invoke-virtual {v0, v1}, Landroidx/preference/p;->x(Landroidx/preference/p$a;)V
+    invoke-virtual {v0, v1}, Landroidx/preference/t;->x(Landroidx/preference/t$a;)V
 
     return-void
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1, p2}, Landroid/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
@@ -1017,7 +1092,7 @@
     if-eqz p1, :cond_1
 
     .line 6
-    invoke-virtual {p0}, Landroidx/preference/l;->c()V
+    invoke-virtual {p0}, Landroidx/preference/l;->b()V
 
     .line 7
     iget-object p1, p0, Landroidx/preference/l;->h:Ljava/lang/Runnable;
@@ -1085,7 +1160,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     if-eqz v0, :cond_0
 
@@ -1104,6 +1179,10 @@
 
 .method public s(Landroidx/preference/Preference;)V
     .locals 1
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1117,6 +1196,10 @@
 
 .method public t(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1156,6 +1239,10 @@
 
 .method public v(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1186,9 +1273,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
-    invoke-virtual {v0, p1}, Landroidx/preference/p;->C(Landroidx/preference/PreferenceScreen;)Z
+    invoke-virtual {v0, p1}, Landroidx/preference/t;->C(Landroidx/preference/PreferenceScreen;)Z
 
     move-result v0
 
@@ -1233,13 +1320,13 @@
     invoke-virtual {p0}, Landroidx/preference/l;->r()V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/p;
+    iget-object v0, p0, Landroidx/preference/l;->b:Landroidx/preference/t;
 
     iget-object v1, p0, Landroidx/preference/l;->f:Landroid/content/Context;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p1, v2}, Landroidx/preference/p;->r(Landroid/content/Context;ILandroidx/preference/PreferenceScreen;)Landroidx/preference/PreferenceScreen;
+    invoke-virtual {v0, v1, p1, v2}, Landroidx/preference/t;->r(Landroid/content/Context;ILandroidx/preference/PreferenceScreen;)Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
 

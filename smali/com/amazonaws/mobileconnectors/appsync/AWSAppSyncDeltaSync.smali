@@ -81,7 +81,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayDeque<",
-            "Lc4/i;",
+            "Lz5/i;",
             ">;"
         }
     .end annotation
@@ -1299,7 +1299,7 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-interface {v1}, Lq4/a;->cancel()V
+    invoke-interface {v1}, Ln6/a;->cancel()V
 
     .line 5
     :cond_0
@@ -1426,7 +1426,7 @@
     return-object p1
 .end method
 
-.method public runBaseQuery(Li4/a;)V
+.method public runBaseQuery(Lf6/a;)V
     .locals 9
 
     .line 1
@@ -1452,10 +1452,10 @@
 
     move-object v5, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;Li4/a;JLjava/util/concurrent/CountDownLatch;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$4;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;Lf6/a;JLjava/util/concurrent/CountDownLatch;)V
 
     .line 4
-    sget-object v0, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->CACHE_ONLY:Li4/a;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->CACHE_ONLY:Lf6/a;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1491,7 +1491,7 @@
     move-result-object v0
 
     .line 8
-    invoke-interface {v0, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;->responseFetcher(Li4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+    invoke-interface {v0, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;->responseFetcher(Lf6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
 
     move-result-object p1
 
@@ -1579,10 +1579,10 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->NETWORK_ONLY:Li4/a;
+    sget-object v3, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->NETWORK_ONLY:Lf6/a;
 
     .line 6
-    invoke-interface {v2, v3}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;->responseFetcher(Li4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+    invoke-interface {v2, v3}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;->responseFetcher(Lf6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
 
     move-result-object v2
 

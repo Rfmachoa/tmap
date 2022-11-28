@@ -3,7 +3,7 @@
 .source "OnClickDelegateImpl.java"
 
 # interfaces
-.implements Landroidx/car/app/model/i;
+.implements Landroidx/car/app/model/l;
 
 
 # annotations
@@ -55,9 +55,9 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/car/app/model/k;Z)V
+.method public constructor <init>(Landroidx/car/app/model/n;Z)V
     .locals 1
-    .param p1    # Landroidx/car/app/model/k;
+    .param p1    # Landroidx/car/app/model/n;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -68,7 +68,7 @@
     .line 2
     new-instance v0, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;
 
-    invoke-direct {v0, p1}, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;-><init>(Landroidx/car/app/model/k;)V
+    invoke-direct {v0, p1}, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;-><init>(Landroidx/car/app/model/n;)V
 
     iput-object v0, p0, Landroidx/car/app/model/OnClickDelegateImpl;->mListener:Landroidx/car/app/model/IOnClickListener;
 
@@ -78,9 +78,9 @@
     return-void
 .end method
 
-.method public static c(Landroidx/car/app/model/k;)Landroidx/car/app/model/i;
+.method public static c(Landroidx/car/app/model/n;)Landroidx/car/app/model/l;
     .locals 2
-    .param p0    # Landroidx/car/app/model/k;
+    .param p0    # Landroidx/car/app/model/n;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -98,7 +98,7 @@
 
     instance-of v1, p0, Landroidx/car/app/model/ParkedOnlyOnClickListener;
 
-    invoke-direct {v0, p0, v1}, Landroidx/car/app/model/OnClickDelegateImpl;-><init>(Landroidx/car/app/model/k;Z)V
+    invoke-direct {v0, p0, v1}, Landroidx/car/app/model/OnClickDelegateImpl;-><init>(Landroidx/car/app/model/n;Z)V
 
     return-object v0
 .end method
@@ -114,9 +114,9 @@
     return v0
 .end method
 
-.method public b(Landroidx/car/app/o0;)V
+.method public b(Landroidx/car/app/t0;)V
     .locals 1
-    .param p1    # Landroidx/car/app/o0;
+    .param p1    # Landroidx/car/app/t0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -129,7 +129,7 @@
 
     check-cast v0, Landroidx/car/app/model/IOnClickListener;
 
-    invoke-static {p1}, Landroidx/car/app/utils/RemoteUtils;->f(Landroidx/car/app/o0;)Landroidx/car/app/IOnDoneCallback;
+    invoke-static {p1}, Landroidx/car/app/utils/RemoteUtils;->f(Landroidx/car/app/t0;)Landroidx/car/app/IOnDoneCallback;
 
     move-result-object p1
 

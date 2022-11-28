@@ -8,7 +8,7 @@
         </LinearLayout>
     </ScrollView>
     <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp">
-        <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/cancel_text" android:background="@drawable/btn_popup_left_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/popup_btn_cancel" android:layout_weight="1.0" />
-        <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/confirm_text" android:background="@drawable/btn_popup_right_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/popup_btn_ok" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/cancel_text" android:background="@drawable/btn_popup_left_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/permission_popup_deny" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/confirm_text" android:background="@drawable/btn_popup_right_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/permission_popup_grant" android:layout_weight="1.0" />
     </LinearLayout>
 </LinearLayout>

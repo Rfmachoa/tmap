@@ -175,7 +175,7 @@
     return-object v7
 .end method
 
-.method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLc4/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
+.method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLz5/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -186,7 +186,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
             ">;Z",
-            "Lc4/o;",
+            "Lz5/o;",
             "Ljava/util/List<",
             "Lcom/apollographql/apollo/api/ResponseField$c;",
             ">;)",
@@ -211,7 +211,7 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/apollographql/apollo/api/ResponseField$d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLc4/o;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v6}, Lcom/apollographql/apollo/api/ResponseField$d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLz5/o;Ljava/util/List;)V
 
     return-object v7
 .end method

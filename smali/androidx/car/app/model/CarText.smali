@@ -446,7 +446,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroidx/car/app/utils/p;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Landroidx/car/app/utils/q;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

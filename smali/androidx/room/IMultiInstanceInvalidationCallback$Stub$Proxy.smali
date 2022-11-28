@@ -17,6 +17,10 @@
 .end annotation
 
 
+# static fields
+.field public static sDefaultImpl:Landroidx/room/IMultiInstanceInvalidationCallback;
+
+
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 
@@ -54,7 +58,7 @@
 .end method
 
 .method public onInvalidation([Ljava/lang/String;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -76,17 +80,40 @@
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     .line 4
-    iget-object p1, p0, Landroidx/room/IMultiInstanceInvalidationCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object v1, p0, Landroidx/room/IMultiInstanceInvalidationCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {p1, v2, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-interface {v1, v3, v0, v2, v3}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 5
+    invoke-static {}, Landroidx/room/IMultiInstanceInvalidationCallback$Stub;->getDefaultImpl()Landroidx/room/IMultiInstanceInvalidationCallback;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 6
+    invoke-static {}, Landroidx/room/IMultiInstanceInvalidationCallback$Stub;->getDefaultImpl()Landroidx/room/IMultiInstanceInvalidationCallback;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1}, Landroidx/room/IMultiInstanceInvalidationCallback;->onInvalidation([Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
+    .line 7
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_0
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -96,6 +123,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 6
+    .line 8
     throw p1
 .end method

@@ -3,7 +3,7 @@
 .source "MenuBuilder.java"
 
 # interfaces
-.implements Lh1/a;
+.implements La2/a;
 
 
 # annotations
@@ -781,7 +781,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Landroidx/core/content/d;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -838,7 +838,7 @@
     iget-object v1, p0, Landroidx/appcompat/view/menu/d;->mContext:Landroid/content/Context;
 
     .line 4
-    invoke-static {p1, v1}, Ls1/p0;->g(Landroid/view/ViewConfiguration;Landroid/content/Context;)Z
+    invoke-static {p1, v1}, Landroidx/core/view/t0;->g(Landroid/view/ViewConfiguration;Landroid/content/Context;)Z
 
     move-result p1
 
@@ -2626,7 +2626,7 @@
     move-result v1
 
     .line 5
-    invoke-virtual {p1}, Landroidx/appcompat/view/menu/g;->a()Ls1/a;
+    invoke-virtual {p1}, Landroidx/appcompat/view/menu/g;->a()Landroidx/core/view/b;
 
     move-result-object v2
 
@@ -2635,7 +2635,7 @@
     if-eqz v2, :cond_1
 
     .line 6
-    invoke-virtual {v2}, Ls1/a;->b()Z
+    invoke-virtual {v2}, Landroidx/core/view/b;->b()Z
 
     move-result v4
 
@@ -2731,7 +2731,7 @@
     if-eqz v4, :cond_7
 
     .line 16
-    invoke-virtual {v2, p1}, Ls1/a;->g(Landroid/view/SubMenu;)V
+    invoke-virtual {v2, p1}, Landroidx/core/view/b;->g(Landroid/view/SubMenu;)V
 
     .line 17
     :cond_7

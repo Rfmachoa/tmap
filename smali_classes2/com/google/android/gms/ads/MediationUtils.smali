@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/ads/MediationUtils;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # static fields
@@ -13,14 +13,28 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static findClosestSize(Landroid/content/Context;Lcom/google/android/gms/ads/AdSize;Ljava/util/List;)Lcom/google/android/gms/ads/AdSize;
-    .locals 10
+    .locals 9
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lcom/google/android/gms/ads/AdSize;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -35,7 +49,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_7
 
     if-nez p1, :cond_0
 
@@ -43,13 +57,18 @@
 
     .line 1
     :cond_0
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzds()Z
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzh()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 2
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzi()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -60,7 +79,7 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 3
+    .line 2
     invoke-virtual {p1, p0}, Lcom/google/android/gms/ads/AdSize;->getWidthInPixels(Landroid/content/Context;)I
 
     move-result v2
@@ -73,7 +92,7 @@
 
     move-result v2
 
-    .line 4
+    .line 3
     invoke-virtual {p1, p0}, Lcom/google/android/gms/ads/AdSize;->getHeightInPixels(Landroid/content/Context;)I
 
     move-result p0
@@ -86,12 +105,12 @@
 
     move-result p0
 
-    .line 5
     new-instance p1, Lcom/google/android/gms/ads/AdSize;
 
+    .line 4
     invoke-direct {p1, v2, p0}, Lcom/google/android/gms/ads/AdSize;-><init>(II)V
 
-    .line 6
+    .line 5
     :cond_1
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -103,7 +122,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_7
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -111,96 +130,132 @@
 
     check-cast p2, Lcom/google/android/gms/ads/AdSize;
 
-    const/4 v1, 0x0
+    if-eqz p2, :cond_2
 
-    if-nez p2, :cond_3
-
-    goto :goto_1
-
-    .line 7
-    :cond_3
     invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p2}, Lcom/google/android/gms/ads/AdSize;->getWidth()I
 
     move-result v2
 
-    .line 8
-    invoke-virtual {p2}, Lcom/google/android/gms/ads/AdSize;->getWidth()I
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->getHeight()I
 
     move-result v3
 
-    .line 9
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->getHeight()I
+    invoke-virtual {p2}, Lcom/google/android/gms/ads/AdSize;->getHeight()I
 
     move-result v4
 
+    int-to-double v5, v1
+
+    const-wide/high16 v7, 0x3fe0000000000000L    # 0.5
+
+    mul-double/2addr v5, v7
+
+    int-to-double v7, v2
+
+    cmpl-double v5, v5, v7
+
+    if-gtz v5, :cond_2
+
+    if-lt v1, v2, :cond_2
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzi()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zza()I
+
+    move-result v1
+
+    .line 6
+    sget-object v3, Lcom/google/android/gms/internal/ads/zzbjc;->zzgL:Lcom/google/android/gms/internal/ads/zzbiu;
+
+    .line 7
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzay;->zzc()Lcom/google/android/gms/internal/ads/zzbja;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Lcom/google/android/gms/internal/ads/zzbja;->zzb(Lcom/google/android/gms/internal/ads/zzbiu;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    .line 8
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    if-gt v3, v2, :cond_2
+
+    sget-object v2, Lcom/google/android/gms/internal/ads/zzbjc;->zzgM:Lcom/google/android/gms/internal/ads/zzbiu;
+
+    .line 9
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzay;->zzc()Lcom/google/android/gms/internal/ads/zzbja;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lcom/google/android/gms/internal/ads/zzbja;->zzb(Lcom/google/android/gms/internal/ads/zzbiu;)Ljava/lang/Object;
+
+    move-result-object v2
+
     .line 10
-    invoke-virtual {p2}, Lcom/google/android/gms/ads/AdSize;->getHeight()I
+    check-cast v2, Ljava/lang/Integer;
 
-    move-result v5
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    int-to-double v6, v2
+    move-result v2
 
-    const-wide/high16 v8, 0x3fe0000000000000L    # 0.5
+    if-gt v2, v4, :cond_2
 
-    mul-double/2addr v6, v8
-
-    int-to-double v8, v3
-
-    cmpl-double v6, v6, v8
-
-    if-gtz v6, :cond_7
-
-    if-ge v2, v3, :cond_4
+    if-lt v1, v4, :cond_2
 
     goto :goto_1
 
-    .line 11
+    :cond_3
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzh()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzb()I
+
+    move-result v1
+
+    if-lt v1, v4, :cond_2
+
+    goto :goto_1
+
     :cond_4
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzds()Z
+    int-to-double v1, v3
 
-    move-result v2
+    const-wide v5, 0x3fe6666666666666L    # 0.7
 
-    if-eqz v2, :cond_5
+    mul-double/2addr v1, v5
 
-    .line 12
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdSize;->zzdt()I
+    int-to-double v5, v4
 
-    move-result v2
+    cmpl-double v1, v1, v5
 
-    if-ge v2, v5, :cond_6
+    if-gtz v1, :cond_2
 
-    goto :goto_1
+    if-ge v3, v4, :cond_5
+
+    goto :goto_0
 
     :cond_5
-    int-to-double v2, v4
-
-    const-wide v6, 0x3fe6666666666666L    # 0.7
-
-    mul-double/2addr v2, v6
-
-    int-to-double v6, v5
-
-    cmpl-double v2, v2, v6
-
-    if-gtz v2, :cond_7
-
-    if-ge v4, v5, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v1, 0x1
-
-    :cond_7
     :goto_1
-    if-eqz v1, :cond_2
-
-    if-nez v0, :cond_8
+    if-nez v0, :cond_6
 
     goto :goto_2
 
-    .line 13
-    :cond_8
+    :cond_6
     invoke-virtual {v0}, Lcom/google/android/gms/ads/AdSize;->getWidth()I
 
     move-result v1
@@ -211,7 +266,6 @@
 
     mul-int/2addr v2, v1
 
-    .line 14
     invoke-virtual {p2}, Lcom/google/android/gms/ads/AdSize;->getWidth()I
 
     move-result v1
@@ -222,17 +276,14 @@
 
     mul-int/2addr v3, v1
 
-    if-le v2, v3, :cond_9
+    if-gt v2, v3, :cond_2
 
-    goto :goto_0
-
-    :cond_9
     :goto_2
     move-object v0, p2
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_a
+    :cond_7
     :goto_3
     return-object v0
 .end method

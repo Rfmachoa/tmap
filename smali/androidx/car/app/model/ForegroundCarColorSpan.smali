@@ -47,9 +47,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/b;->b:Lm0/b;
+    sget-object v0, La1/b;->b:La1/b;
 
-    invoke-virtual {v0, p0}, Lm0/b;->b(Landroidx/car/app/model/CarColor;)V
+    invoke-virtual {v0, p0}, La1/b;->b(Landroidx/car/app/model/CarColor;)V
 
     .line 2
     new-instance v0, Landroidx/car/app/model/ForegroundCarColorSpan;

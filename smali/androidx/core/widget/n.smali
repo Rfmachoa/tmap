@@ -3,6 +3,14 @@
 .source "PopupMenuCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/n$a;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -25,7 +33,7 @@
     .line 1
     check-cast p0, Landroid/widget/PopupMenu;
 
-    invoke-virtual {p0}, Landroid/widget/PopupMenu;->getDragToOpenListener()Landroid/view/View$OnTouchListener;
+    invoke-static {p0}, Landroidx/core/widget/n$a;->a(Landroid/widget/PopupMenu;)Landroid/view/View$OnTouchListener;
 
     move-result-object p0
 

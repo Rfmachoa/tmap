@@ -14,11 +14,6 @@
 
 
 # instance fields
-.field public K0:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
 .field public final a:I
 
 .field public final b:Landroid/view/LayoutInflater;
@@ -29,27 +24,38 @@
 
 .field public final e:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$b;
 
-.field public final f:Landroid/util/SparseArray;
+.field public final f:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/util/SparseArray<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;",
+            "Ljava/util/List<",
+            "Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public g:Z
+.field public final g:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public h:Z
 
-.field public i:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
+.field public i:Z
 
-.field public j:[[Landroid/widget/CheckedTextView;
+.field public j:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
 
-.field public k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+.field public k:[[Landroid/widget/CheckedTextView;
 
-.field public k0:Ljava/util/Comparator;
+.field public l:Z
+
+.field public p:Ljava/util/Comparator;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -62,11 +68,10 @@
     .end annotation
 .end field
 
-.field public l:I
-
-.field public p:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
-
-.field public u:Z
+.field public u:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -115,19 +120,12 @@
     .line 4
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 5
-    new-instance p3, Landroid/util/SparseArray;
-
-    invoke-direct {p3}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
     const/4 p3, 0x0
 
-    .line 6
+    .line 5
     invoke-virtual {p0, p3}, Landroid/widget/LinearLayout;->setSaveFromParentEnabled(Z)V
 
-    .line 7
+    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
@@ -138,29 +136,29 @@
 
     aput v2, v1, p3
 
-    .line 8
+    .line 7
     invoke-virtual {v0, v1}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 9
+    .line 8
     invoke-virtual {v0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v1
 
     iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->a:I
 
-    .line 10
+    .line 9
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 11
+    .line 10
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->b:Landroid/view/LayoutInflater;
 
-    .line 12
+    .line 11
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$b;
 
     const/4 v2, 0x0
@@ -169,7 +167,7 @@
 
     iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->e:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$b;
 
-    .line 13
+    .line 12
     new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/ui/f;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
@@ -178,12 +176,21 @@
 
     invoke-direct {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/ui/f;-><init>(Landroid/content/res/Resources;)V
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
+
+    .line 13
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
 
     .line 14
-    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->e:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
+    new-instance v2, Ljava/util/HashMap;
 
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
     const v2, 0x109000f
 
@@ -265,7 +272,7 @@
 .method public static synthetic a(Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;)I
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f(Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;)I
+    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->e(Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;)I
 
     move-result p0
 
@@ -276,80 +283,100 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static c([II)[I
-    .locals 1
+.method public static c(Ljava/util/Map;Ljava/util/List;Z)Ljava/util/Map;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;",
+            ">;",
+            "Ljava/util/List<",
+            "Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;",
+            ">;Z)",
+            "Ljava/util/Map<",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    array-length v0, p0
+    new-instance v0, Ljava/util/HashMap;
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p0
+    const/4 v1, 0x0
 
     .line 2
-    array-length v0, p0
-
-    add-int/lit8 v0, v0, -0x1
-
-    aput p1, p0, v0
-
-    return-object p0
-.end method
-
-.method public static d([II)[I
-    .locals 6
-
-    .line 1
-    array-length v0, p0
-
-    add-int/lit8 v0, v0, -0x1
-
-    new-array v0, v0, [I
-
-    .line 2
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
     :goto_0
-    if-ge v2, v1, :cond_1
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    aget v4, p0, v2
+    move-result v2
 
-    if-eq v4, p1, :cond_0
-
-    add-int/lit8 v5, v3, 0x1
+    if-ge v1, v2, :cond_2
 
     .line 3
-    aput v4, v0, v3
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move v3, v5
+    move-result-object v2
 
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
+
+    .line 4
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->b()Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+
+    move-result-object v2
+
+    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
+
+    if-eqz v2, :cond_1
+
+    if-nez p2, :cond_0
+
+    .line 5
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    .line 6
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;->a:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     return-object v0
 .end method
 
-.method public static synthetic f(Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;)I
+.method public static synthetic e(Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;)I
     .locals 0
 
     .line 1
-    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->c:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->a()Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget-object p2, p2, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->c:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    move-result-object p1
+
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->a()Lcom/tmapmobility/tmap/exoplayer2/Format;
+
+    move-result-object p2
 
     invoke-interface {p0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
@@ -360,23 +387,25 @@
 
 
 # virtual methods
-.method public e(Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;IZLjava/util/List;Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;)V
+.method public d(Ljava/util/List;ZLjava/util/Map;Ljava/util/Comparator;Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;)V
     .locals 0
-    .param p5    # Ljava/util/Comparator;
+    .param p4    # Ljava/util/Comparator;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p6    # Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
+    .param p5    # Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;",
-            "IZ",
             "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;",
+            "Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;",
+            ">;Z",
+            "Ljava/util/Map<",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;",
             ">;",
             "Ljava/util/Comparator<",
             "Lcom/tmapmobility/tmap/exoplayer2/Format;",
@@ -387,86 +416,59 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
 
-    .line 2
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:I
+    if-nez p4, :cond_0
 
-    .line 3
-    iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
-
-    if-nez p5, :cond_0
-
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
     goto :goto_0
 
-    .line 4
+    .line 2
     :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/ui/u0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/ui/u0;
 
-    invoke-direct {p1, p5}, Lcom/tmapmobility/tmap/exoplayer2/ui/u0;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {p2, p4}, Lcom/tmapmobility/tmap/exoplayer2/ui/u0;-><init>(Ljava/util/Comparator;)V
 
     :goto_0
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k0:Ljava/util/Comparator;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Ljava/util/Comparator;
+
+    .line 3
+    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
+
+    .line 4
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->clear()V
 
     .line 5
-    iput-object p6, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->K0:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
+
+    invoke-interface {p2, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 6
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    if-eqz p1, :cond_1
-
-    invoke-interface {p4}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p4}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    :goto_1
-    const/4 p2, 0x0
-
-    :goto_2
-    if-ge p2, p1, :cond_2
+    invoke-interface {p2}, Ljava/util/Map;->clear()V
 
     .line 7
-    invoke-interface {p4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    move-result-object p3
+    iget-boolean p4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Z
 
-    check-cast p3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+    invoke-static {p3, p1, p4}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->c(Ljava/util/Map;Ljava/util/List;Z)Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-interface {p2, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     .line 8
-    iget-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    iget p6, p3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->a:I
-
-    invoke-virtual {p5, p6, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_2
-
-    .line 9
-    :cond_2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->m()V
 
     return-void
 .end method
 
-.method public final g(Landroid/view/View;)V
+.method public final f(Landroid/view/View;)V
     .locals 2
 
     .line 1
@@ -475,7 +477,7 @@
     if-ne p1, v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h()V
 
     goto :goto_0
 
@@ -486,20 +488,20 @@
     if-ne p1, v0, :cond_1
 
     .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g()V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i(Landroid/view/View;)V
 
     .line 6
     :goto_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->m()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l()V
 
     .line 7
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->K0:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;
 
     if-eqz p1, :cond_2
 
@@ -508,13 +510,29 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->getOverrides()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->getOverrides()Ljava/util/Map;
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;->a(ZLjava/util/List;)V
+    invoke-interface {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$d;->a(ZLjava/util/Map;)V
 
     :cond_2
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
     return-void
 .end method
 
@@ -522,103 +540,52 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
 
     return v0
 .end method
 
-.method public getOverrides()Ljava/util/List;
-    .locals 3
+.method public getOverrides()Ljava/util/Map;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;",
+            "Ljava/util/Map<",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    .line 2
-    :goto_0
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    .line 3
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-object v0
 .end method
 
 .method public final h()V
     .locals 1
 
-    const/4 v0, 0x0
-
-    .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
-
-    .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
-
-    return-void
-.end method
-
-.method public final i()V
-    .locals 1
-
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
 .end method
 
-.method public final j(Landroid/view/View;)V
-    .locals 8
+.method public final i(Landroid/view/View;)V
+    .locals 6
 
     const/4 v0, 0x0
 
     .line 1
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
 
     .line 2
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -632,69 +599,73 @@
     check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;
 
     .line 3
-    iget v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->a:I
+    iget-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->a:Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
+
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->b()Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+
+    move-result-object v2
 
     .line 4
-    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->b:I
+    iget v3, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->b:I
 
     .line 5
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+    check-cast v4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
+
+    if-nez v4, :cond_1
 
     .line 6
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
-
-    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v4, 0x1
-
-    if-nez v3, :cond_1
-
-    .line 7
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
+    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Z
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
+    invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result p1
 
     if-lez p1, :cond_0
 
-    .line 8
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    .line 7
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {p1}, Landroid/util/SparseArray;->clear()V
+    invoke-interface {p1}, Ljava/util/Map;->clear()V
+
+    .line 8
+    :cond_0
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
+
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
 
     .line 9
-    :cond_0
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+    move-result-object v1
 
-    new-array v4, v4, [I
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    aput v1, v4, v0
+    move-result-object v1
 
-    invoke-direct {v3, v2, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;-><init>(I[I)V
-
-    invoke-virtual {p1, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    goto :goto_2
+    invoke-direct {v0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Ljava/util/List;)V
 
     .line 10
-    :cond_1
-    iget v5, v3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->c:I
+    invoke-interface {p1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     .line 11
-    iget-object v3, v3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->b:[I
+    :cond_1
+    new-instance v5, Ljava/util/ArrayList;
+
+    iget-object v4, v4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;->b:Lcom/google/common/collect/ImmutableList;
+
+    invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 12
     check-cast p1, Landroid/widget/CheckedTextView;
@@ -704,162 +675,150 @@
     move-result p1
 
     .line 13
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k(I)Z
+    iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->a:Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
 
-    move-result v6
+    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j(Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;)Z
 
-    if-nez v6, :cond_3
+    move-result v1
+
+    if-nez v1, :cond_2
 
     .line 14
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l()Z
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k()Z
 
-    move-result v7
+    move-result v4
 
-    if-eqz v7, :cond_2
-
-    goto :goto_0
+    if-eqz v4, :cond_3
 
     :cond_2
-    move v7, v0
-
-    goto :goto_1
+    const/4 v0, 0x1
 
     :cond_3
-    :goto_0
-    move v7, v4
-
-    :goto_1
     if-eqz p1, :cond_5
 
-    if-eqz v7, :cond_5
-
-    if-ne v5, v4, :cond_4
+    if-eqz v0, :cond_5
 
     .line 15
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    invoke-virtual {p1, v2}, Landroid/util/SparseArray;->remove(I)V
-
-    goto :goto_2
-
-    .line 16
-    :cond_4
-    invoke-static {v3, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->d([II)[I
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 16
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
     .line 17
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+    invoke-interface {p1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v1, v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;-><init>(I[I)V
+    goto :goto_0
 
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    .line 18
+    :cond_4
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    goto :goto_2
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
+
+    invoke-direct {v0, v2, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Ljava/util/List;)V
+
+    invoke-interface {p1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_5
     if-nez p1, :cond_7
 
-    if-eqz v6, :cond_6
+    if-eqz v1, :cond_6
 
-    .line 18
-    invoke-static {v3, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->c([II)[I
+    .line 19
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    .line 19
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
-
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
-
-    invoke-direct {v1, v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;-><init>(I[I)V
-
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    goto :goto_2
+    invoke-virtual {v5, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 20
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
+
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
+
+    invoke-direct {v0, v2, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Ljava/util/List;)V
+
+    invoke-interface {p1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 21
     :cond_6
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
 
-    new-array v4, v4, [I
+    .line 22
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput v1, v4, v0
+    move-result-object v1
 
-    invoke-direct {v3, v2, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;-><init>(I[I)V
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    invoke-virtual {p1, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Ljava/util/List;)V
+
+    .line 23
+    invoke-interface {p1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_7
-    :goto_2
+    :goto_0
     return-void
 .end method
 
-.method public final k(I)Z
-    .locals 4
-    .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
-        value = {
-            "mappedTrackInfo"
-        }
-    .end annotation
+.method public final j(Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;)Z
+    .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Z
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
-
-    .line 2
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->b(I)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
-
-    move-result-object v0
-
-    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
-
-    if-le v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
-
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:I
-
-    .line 3
-    invoke-virtual {v0, v3, p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->a(IIZ)I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->f()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    const/4 p1, 0x1
+
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    const/4 p1, 0x0
 
     :goto_0
-    return v1
+    return p1
 .end method
 
-.method public final l()Z
+.method public final k()Z
     .locals 2
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
 
-    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->a:I
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
 
     if-le v0, v1, :cond_0
 
@@ -872,28 +831,28 @@
     return v1
 .end method
 
-.method public final m()V
-    .locals 6
+.method public final l()V
+    .locals 7
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->c:Landroid/widget/CheckedTextView;
 
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->d:Landroid/widget/CheckedTextView;
 
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->u:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:Z
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
+    invoke-interface {v1}, Ljava/util/Map;->size()I
 
     move-result v1
 
@@ -913,26 +872,38 @@
 
     .line 3
     :goto_1
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:[[Landroid/widget/CheckedTextView;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:[[Landroid/widget/CheckedTextView;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_3
 
     .line 4
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
+
+    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
+
+    invoke-virtual {v3}, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->b()Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+
+    move-result-object v3
+
+    invoke-interface {v1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+    check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
 
     move v3, v2
 
     .line 5
     :goto_2
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:[[Landroid/widget/CheckedTextView;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:[[Landroid/widget/CheckedTextView;
 
     aget-object v5, v4, v0
 
@@ -958,15 +929,21 @@
     check-cast v4, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;
 
     .line 7
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:[[Landroid/widget/CheckedTextView;
+    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:[[Landroid/widget/CheckedTextView;
 
     aget-object v5, v5, v0
 
     aget-object v5, v5, v3
 
+    iget-object v6, v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;->b:Lcom/google/common/collect/ImmutableList;
+
     iget v4, v4, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->b:I
 
-    invoke-virtual {v1, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->b(I)Z
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Lcom/google/common/collect/ImmutableList;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -996,8 +973,8 @@
     return-void
 .end method
 
-.method public final n()V
-    .locals 11
+.method public final m()V
+    .locals 12
 
     .line 1
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -1022,11 +999,15 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
 
     const/4 v2, 0x0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
     .line 4
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->c:Landroid/widget/CheckedTextView;
@@ -1052,76 +1033,71 @@
     invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 8
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
 
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-virtual {v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->h(I)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
-
-    .line 9
-    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->a:I
+    move-result v0
 
     new-array v0, v0, [[Landroid/widget/CheckedTextView;
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:[[Landroid/widget/CheckedTextView;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:[[Landroid/widget/CheckedTextView;
 
-    .line 10
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l()Z
+    .line 9
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k()Z
 
     move-result v0
 
     move v3, v2
 
-    .line 11
+    .line 10
     :goto_1
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
 
-    iget v5, v4, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->a:I
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    if-ge v3, v5, :cond_9
+    move-result v4
 
-    .line 12
-    invoke-virtual {v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;->b(I)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+    if-ge v3, v4, :cond_9
+
+    .line 11
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
+
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 13
-    invoke-virtual {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k(I)Z
+    check-cast v4, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
+
+    .line 12
+    invoke-virtual {p0, v4}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j(Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;)Z
 
     move-result v5
 
-    .line 14
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:[[Landroid/widget/CheckedTextView;
+    .line 13
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:[[Landroid/widget/CheckedTextView;
 
-    iget v7, v4, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
+    iget v7, v4, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->a:I
 
     new-array v8, v7, [Landroid/widget/CheckedTextView;
 
     aput-object v8, v6, v3
 
-    .line 15
+    .line 14
     new-array v6, v7, [Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;
 
     move v8, v2
 
-    .line 16
+    .line 15
     :goto_2
-    iget v9, v4, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
+    iget v9, v4, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->a:I
 
     if-ge v8, v9, :cond_2
 
-    .line 17
+    .line 16
     new-instance v9, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;
 
-    invoke-virtual {v4, v8}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c(I)Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    move-result-object v10
-
-    invoke-direct {v9, v3, v8, v10}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;-><init>(IILcom/tmapmobility/tmap/exoplayer2/Format;)V
+    invoke-direct {v9, v4, v8}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;-><init>(Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;I)V
 
     aput-object v9, v6, v8
 
@@ -1129,33 +1105,33 @@
 
     goto :goto_2
 
-    .line 18
+    .line 17
     :cond_2
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k0:Ljava/util/Comparator;
+    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->p:Ljava/util/Comparator;
 
-    if-eqz v4, :cond_3
+    if-eqz v8, :cond_3
 
-    .line 19
-    invoke-static {v6, v4}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+    .line 18
+    invoke-static {v6, v8}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     :cond_3
-    move v4, v2
+    move v8, v2
 
     :goto_3
-    if-ge v4, v7, :cond_8
+    if-ge v8, v7, :cond_8
 
-    if-nez v4, :cond_4
+    if-nez v8, :cond_4
 
-    .line 20
-    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->b:Landroid/view/LayoutInflater;
+    .line 19
+    iget-object v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->b:Landroid/view/LayoutInflater;
 
-    sget v9, Lcom/tmapmobility/tmap/exoplayer2/ui/R$layout;->exo_list_divider:I
+    sget v10, Lcom/tmapmobility/tmap/exoplayer2/ui/R$layout;->exo_list_divider:I
 
-    invoke-virtual {v8, v9, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v9, v10, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {p0, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     :cond_4
     if-nez v5, :cond_6
@@ -1165,90 +1141,86 @@
     goto :goto_4
 
     :cond_5
-    const v8, 0x109000f
+    const v9, 0x109000f
 
     goto :goto_5
 
     :cond_6
     :goto_4
-    const v8, 0x1090010
+    const v9, 0x1090010
+
+    .line 20
+    :goto_5
+    iget-object v10, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->b:Landroid/view/LayoutInflater;
 
     .line 21
-    :goto_5
-    iget-object v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->b:Landroid/view/LayoutInflater;
-
-    .line 22
-    invoke-virtual {v9, v8, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/widget/CheckedTextView;
-
-    .line 23
-    iget v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->a:I
-
-    invoke-virtual {v8, v9}, Landroid/widget/CheckedTextView;->setBackgroundResource(I)V
-
-    .line 24
-    iget-object v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
-
-    aget-object v10, v6, v4
-
-    iget-object v10, v10, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->c:Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    invoke-interface {v9, v10}, Lcom/tmapmobility/tmap/exoplayer2/ui/q0;->a(Lcom/tmapmobility/tmap/exoplayer2/Format;)Ljava/lang/String;
+    invoke-virtual {v10, v9, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v9
 
-    invoke-virtual {v8, v9}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
+    check-cast v9, Landroid/widget/CheckedTextView;
+
+    .line 22
+    iget v10, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->a:I
+
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setBackgroundResource(I)V
+
+    .line 23
+    iget-object v10, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
+
+    aget-object v11, v6, v8
+
+    invoke-virtual {v11}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$c;->a()Lcom/tmapmobility/tmap/exoplayer2/Format;
+
+    move-result-object v11
+
+    invoke-interface {v10, v11}, Lcom/tmapmobility/tmap/exoplayer2/ui/q0;->a(Lcom/tmapmobility/tmap/exoplayer2/Format;)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 24
+    aget-object v10, v6, v8
+
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setTag(Ljava/lang/Object;)V
 
     .line 25
-    aget-object v9, v6, v4
+    invoke-virtual {v4, v8}, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->k(I)Z
 
-    invoke-virtual {v8, v9}, Landroid/widget/CheckedTextView;->setTag(Ljava/lang/Object;)V
+    move-result v10
+
+    if-eqz v10, :cond_7
 
     .line 26
-    iget-object v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
-
-    iget v10, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l:I
-
-    invoke-virtual {v9, v10, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->i(III)I
-
-    move-result v9
-
-    const/4 v10, 0x4
-
-    if-ne v9, v10, :cond_7
+    invoke-virtual {v9, v1}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
 
     .line 27
-    invoke-virtual {v8, v1}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
+    iget-object v10, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->e:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$b;
 
-    .line 28
-    iget-object v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->e:Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView$b;
-
-    invoke-virtual {v8, v9}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_6
 
-    .line 29
+    .line 28
     :cond_7
-    invoke-virtual {v8, v2}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
+    invoke-virtual {v9, v2}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
+
+    .line 29
+    invoke-virtual {v9, v2}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 30
-    invoke-virtual {v8, v2}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
+    :goto_6
+    iget-object v10, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->k:[[Landroid/widget/CheckedTextView;
+
+    aget-object v10, v10, v3
+
+    aput-object v9, v10, v8
 
     .line 31
-    :goto_6
-    iget-object v9, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:[[Landroid/widget/CheckedTextView;
+    invoke-virtual {p0, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    aget-object v9, v9, v3
-
-    aput-object v8, v9, v4
-
-    .line 32
-    invoke-virtual {p0, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
@@ -1257,9 +1229,9 @@
 
     goto/16 :goto_1
 
-    .line 33
+    .line 32
     :cond_9
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->m()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->l()V
 
     return-void
 .end method
@@ -1268,37 +1240,37 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
 
     if-eq v0, p1, :cond_0
 
     .line 2
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->m()V
 
     :cond_0
     return-void
 .end method
 
 .method public setAllowMultipleOverrides(Z)V
-    .locals 1
+    .locals 2
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Z
 
     if-eq v0, p1, :cond_1
 
     .line 2
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->h:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Z
 
     if-nez p1, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
+    invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result p1
 
@@ -1307,29 +1279,30 @@
     if-le p1, v0, :cond_0
 
     .line 4
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
 
-    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Ljava/util/List;
 
-    move-result p1
-
-    sub-int/2addr p1, v0
-
-    :goto_0
-    if-lez p1, :cond_0
+    const/4 v1, 0x0
 
     .line 5
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->f:Landroid/util/SparseArray;
+    invoke-static {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->c(Ljava/util/Map;Ljava/util/List;Z)Ljava/util/Map;
 
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
-
-    add-int/lit8 p1, p1, -0x1
-
-    goto :goto_0
+    move-result-object p1
 
     .line 6
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 7
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->g:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+
+    .line 8
     :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->m()V
 
     :cond_1
     return-void
@@ -1366,10 +1339,10 @@
 
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->i:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->j:Lcom/tmapmobility/tmap/exoplayer2/ui/q0;
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/TrackSelectionView;->m()V
 
     return-void
 .end method

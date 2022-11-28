@@ -11,7 +11,7 @@
     }
     d2 = {
         "T",
-        "Lkotlinx/coroutines/flow/f;",
+        "Lkotlinx/coroutines/flow/e;",
         "Lkotlin/coroutines/CoroutineContext;",
         "context",
         "",
@@ -26,7 +26,7 @@
     k = 0x2
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method public static final asFlow(Landroidx/lifecycle/LiveData;)Lkotlinx/coroutines/flow/f;
+.method public static final asFlow(Landroidx/lifecycle/LiveData;)Lkotlinx/coroutines/flow/e;
     .locals 2
     .param p0    # Landroidx/lifecycle/LiveData;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -50,7 +50,7 @@
             ">(",
             "Landroidx/lifecycle/LiveData<",
             "TT;>;)",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "TT;>;"
         }
     .end annotation
@@ -58,9 +58,9 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$asFlow"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;
@@ -69,16 +69,16 @@
 
     invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;-><init>(Landroidx/lifecycle/LiveData;Lkotlin/coroutines/c;)V
 
-    invoke-static {v0}, Lkotlinx/coroutines/flow/i;->N0(Lej/p;)Lkotlinx/coroutines/flow/f;
+    invoke-static {v0}, Lkotlinx/coroutines/flow/g;->I0(Lgl/p;)Lkotlinx/coroutines/flow/e;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final asLiveData(Lkotlinx/coroutines/flow/f;)Landroidx/lifecycle/LiveData;
-    .locals 6
-    .param p0    # Lkotlinx/coroutines/flow/f;
+.method public static final asLiveData(Lkotlinx/coroutines/flow/e;)Landroidx/lifecycle/LiveData;
+    .locals 7
+    .param p0    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -87,7 +87,7 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+TT;>;)",
             "Landroidx/lifecycle/LiveData<",
             "TT;>;"
@@ -100,26 +100,30 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const/4 v1, 0x0
+    const-string v0, "<this>"
 
-    const-wide/16 v2, 0x0
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v4, 0x3
+    const/4 v2, 0x0
 
-    const/4 v5, 0x0
+    const-wide/16 v3, 0x0
 
-    move-object v0, p0
+    const/4 v5, 0x3
 
-    invoke-static/range {v0 .. v5}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData$default(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Landroidx/lifecycle/LiveData;
+    const/4 v6, 0x0
+
+    move-object v1, p0
+
+    invoke-static/range {v1 .. v6}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData$default(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final asLiveData(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;)Landroidx/lifecycle/LiveData;
-    .locals 6
-    .param p0    # Lkotlinx/coroutines/flow/f;
+.method public static final asLiveData(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;)Landroidx/lifecycle/LiveData;
+    .locals 7
+    .param p0    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -132,7 +136,7 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+TT;>;",
             "Lkotlin/coroutines/CoroutineContext;",
             ")",
@@ -147,26 +151,34 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-wide/16 v2, 0x0
+    const-string v0, "<this>"
 
-    const/4 v4, 0x2
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v5, 0x0
+    const-string v0, "context"
 
-    move-object v0, p0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v1, p1
+    const-wide/16 v3, 0x0
 
-    invoke-static/range {v0 .. v5}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData$default(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Landroidx/lifecycle/LiveData;
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    invoke-static/range {v1 .. v6}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData$default(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final asLiveData(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;J)Landroidx/lifecycle/LiveData;
+.method public static final asLiveData(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;J)Landroidx/lifecycle/LiveData;
     .locals 2
-    .param p0    # Lkotlinx/coroutines/flow/f;
+    .param p0    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -179,7 +191,7 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+TT;>;",
             "Lkotlin/coroutines/CoroutineContext;",
             "J)",
@@ -194,31 +206,31 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$asLiveData"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1;-><init>(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)V
+    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1;-><init>(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/c;)V
 
-    invoke-static {p1, p2, p3, v0}, Landroidx/lifecycle/CoroutineLiveDataKt;->liveData(Lkotlin/coroutines/CoroutineContext;JLej/p;)Landroidx/lifecycle/LiveData;
+    invoke-static {p1, p2, p3, v0}, Landroidx/lifecycle/CoroutineLiveDataKt;->liveData(Lkotlin/coroutines/CoroutineContext;JLgl/p;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final asLiveData(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;Ljava/time/Duration;)Landroidx/lifecycle/LiveData;
+.method public static final asLiveData(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;Ljava/time/Duration;)Landroidx/lifecycle/LiveData;
     .locals 2
-    .param p0    # Lkotlinx/coroutines/flow/f;
+    .param p0    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -239,7 +251,7 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+TT;>;",
             "Lkotlin/coroutines/CoroutineContext;",
             "Ljava/time/Duration;",
@@ -252,31 +264,33 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "$this$asLiveData"
+    const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "timeout"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p2}, Ljava/time/Duration;->toMillis()J
+    sget-object v0, Landroidx/lifecycle/Api26Impl;->INSTANCE:Landroidx/lifecycle/Api26Impl;
+
+    invoke-virtual {v0, p2}, Landroidx/lifecycle/Api26Impl;->toMillis(Ljava/time/Duration;)J
 
     move-result-wide v0
 
-    invoke-static {p0, p1, v0, v1}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;J)Landroidx/lifecycle/LiveData;
+    invoke-static {p0, p1, v0, v1}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;J)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic asLiveData$default(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Landroidx/lifecycle/LiveData;
+.method public static synthetic asLiveData$default(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;JILjava/lang/Object;)Landroidx/lifecycle/LiveData;
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -295,14 +309,14 @@
 
     .line 2
     :cond_1
-    invoke-static {p0, p1, p2, p3}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;J)Landroidx/lifecycle/LiveData;
+    invoke-static {p0, p1, p2, p3}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;J)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic asLiveData$default(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;Ljava/time/Duration;ILjava/lang/Object;)Landroidx/lifecycle/LiveData;
+.method public static synthetic asLiveData$default(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;Ljava/time/Duration;ILjava/lang/Object;)Landroidx/lifecycle/LiveData;
     .locals 0
 
     and-int/lit8 p3, p3, 0x1
@@ -312,8 +326,9 @@
     .line 3
     sget-object p1, Lkotlin/coroutines/EmptyCoroutineContext;->INSTANCE:Lkotlin/coroutines/EmptyCoroutineContext;
 
+    .line 4
     :cond_0
-    invoke-static {p0, p1, p2}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/CoroutineContext;Ljava/time/Duration;)Landroidx/lifecycle/LiveData;
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/FlowLiveDataConversions;->asLiveData(Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/CoroutineContext;Ljava/time/Duration;)Landroidx/lifecycle/LiveData;
 
     move-result-object p0
 

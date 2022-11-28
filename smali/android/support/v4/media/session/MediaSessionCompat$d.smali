@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lj3/d;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lr4/d;Landroid/os/Bundle;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -51,7 +51,7 @@
     .end annotation
 
     .line 1
-    invoke-direct/range {p0 .. p6}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lj3/d;Landroid/os/Bundle;)V
+    invoke-direct/range {p0 .. p6}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Lr4/d;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -70,17 +70,17 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->o()J
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->q()J
 
     move-result-wide v0
 
     .line 2
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->m()F
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->o()F
 
     move-result v2
 
     .line 3
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->l()J
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->n()J
 
     move-result-wide v3
 
@@ -90,7 +90,7 @@
     move-result-wide v5
 
     .line 5
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result v7
 
@@ -135,7 +135,7 @@
     :cond_1
     iget-object v3, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->j:Landroid/media/RemoteControlClient;
 
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->p()I
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat;->r()I
 
     move-result p1
 

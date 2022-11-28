@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Qa(Ljava/lang/String;)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->fb(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/dialog/v;
+.field public final synthetic a:Lcom/skt/tmap/dialog/a0;
 
 .field public final synthetic b:Lcom/skt/tmap/activity/TmapNaviActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/dialog/v;)V
+.method public constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/dialog/a0;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -40,7 +40,7 @@
     .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->b:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iput-object p2, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->a:Lcom/skt/tmap/dialog/v;
+    iput-object p2, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->a:Lcom/skt/tmap/dialog/a0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,12 +53,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->a:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->a:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     :cond_0
     return-void
@@ -68,16 +68,27 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->a:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$g0;->a:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object v0
 
@@ -93,17 +104,18 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/l0;->S(Lcom/skt/tmap/engine/navigation/route/RouteOption;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/v0;->e0(Lcom/skt/tmap/engine/navigation/route/RouteOption;)V
 
-    .line 4
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    .line 5
+    :cond_1
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/l0;->e1()V
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/v0;->v1()V
 
-    .line 5
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    .line 6
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object v0
 
@@ -111,15 +123,15 @@
 
     sget-object v2, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SAFE_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
 
-    invoke-static {v1}, Lcom/skt/tmap/engine/h0;->f(Landroid/content/Context;)Landroid/app/Notification;
+    invoke-static {v1}, Lcom/skt/tmap/engine/j0;->f(Landroid/content/Context;)Landroid/app/Notification;
 
     move-result-object v3
 
-    invoke-static {}, Lcom/skt/tmap/engine/h0;->d()I
+    invoke-static {}, Lcom/skt/tmap/engine/j0;->d()I
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/skt/tmap/engine/l0;->Y0(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/data/DriveMode;Landroid/app/Notification;I)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/skt/tmap/engine/v0;->p1(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/data/DriveMode;Landroid/app/Notification;I)V
 
     return-void
 .end method

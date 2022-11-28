@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/server/response/FastJsonResponse;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;,
-        Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
+        Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;,
+        Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
     }
 .end annotation
 
@@ -40,20 +40,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            "I:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "TI;TO;>;",
-            "Ljava/lang/Object;",
-            ")TI;"
-        }
-    .end annotation
-
     .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
@@ -78,17 +64,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<I:",
-            "Ljava/lang/Object;",
-            "O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "TI;TO;>;TI;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p1, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zae:Ljava/lang/String;
@@ -105,11 +80,9 @@
     :pswitch_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/16 p2, 0x2c
+    const-string p2, "Unsupported type for conversion: "
 
-    const-string v0, "Unsupported type for conversion: "
-
-    invoke-static {p2, v0, v1}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {p2, v1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -317,15 +290,6 @@
 
 .method private static final zaG(Ljava/lang/String;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     const-string v0, "FastJsonResponse"
 
@@ -338,32 +302,22 @@
 
     if-eqz v1, :cond_0
 
+    new-instance v1, Ljava/lang/StringBuilder;
+
     .line 2
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v1
+    const-string v2, "Output field ("
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x3a
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Output field ("
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p0, ") has a null value, but expected a primitive"
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -532,33 +486,23 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    const-string v2, "get"
 
-    move-result v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v1, 0x4
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "get"
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1177,18 +1121,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/lang/String;",
-            "TO;>;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1221,22 +1153,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;TO;>;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1269,20 +1185,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1315,18 +1217,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/math/BigDecimal;",
-            "TO;>;",
-            "Ljava/math/BigDecimal;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1363,16 +1253,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/math/BigDecimal;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1394,20 +1274,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigDecimal;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigDecimal;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1444,17 +1310,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigDecimal;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1476,18 +1331,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/math/BigInteger;",
-            "TO;>;",
-            "Ljava/math/BigInteger;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1524,16 +1367,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/math/BigInteger;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1555,20 +1388,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigInteger;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigInteger;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1605,17 +1424,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/math/BigInteger;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1633,16 +1441,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/lang/Boolean;",
-            "TO;>;Z)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1679,20 +1477,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Boolean;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1729,17 +1513,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1761,15 +1534,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "[BTO;>;[B)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1798,16 +1562,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/lang/Double;",
-            "TO;>;D)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1844,15 +1598,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "D)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1874,20 +1619,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Double;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Double;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1924,17 +1655,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Double;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -1952,16 +1672,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/lang/Float;",
-            "TO;>;F)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -1998,15 +1708,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "F)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -2028,20 +1729,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Float;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Float;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -2078,17 +1765,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Float;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -2106,16 +1782,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/lang/Integer;",
-            "TO;>;I)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -2152,20 +1818,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Integer;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Integer;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -2202,17 +1854,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Integer;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -2230,16 +1871,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/lang/Long;",
-            "TO;>;J)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -2276,20 +1907,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;TO;>;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac(Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;)Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
@@ -2326,17 +1943,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/Long;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance p1, Ljava/lang/UnsupportedOperationException;

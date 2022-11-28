@@ -17,7 +17,7 @@
     value = {
         "Ljava/util/LinkedHashMap<",
         "Ljava/lang/String;",
-        "Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;",
+        "Ljava/lang/Integer;",
         ">;"
     }
 .end annotation
@@ -44,24 +44,80 @@
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 2
-    sget-object p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;->USE_SERVER_CONFIG:Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
+    const/16 p1, 0x9
 
-    const-string/jumbo v0, "\uc11c\ubc84 \uc124\uc815"
+    .line 2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "5.3"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 p1, 0xa
 
     .line 3
-    sget-object p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;->FORCE_ON:Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v0, "ON"
+    move-result-object p1
+
+    const-string v0, "5.4"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
-    sget-object p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;->FORCE_OFF:Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
+    const/16 p1, 0xb
 
-    const-string v0, "OFF"
+    .line 4
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "5.5"
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 p1, 0xc
+
+    .line 5
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "5.6"
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 p1, 0xd
+
+    .line 6
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "5.7"
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 p1, 0xe
+
+    .line 7
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "5.8"
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 p1, 0xf
+
+    .line 8
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const-string v0, "5.9"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

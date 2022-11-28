@@ -4,27 +4,47 @@
 
 
 # static fields
-.field public static final W0:Ljava/lang/String; = "EditTextPreferenceDialogFragment.text"
+.field public static final a1:Ljava/lang/String; = "EditTextPreferenceDialogFragment.text"
+
+.field public static final b1:I = 0x3e8
 
 
 # instance fields
 .field public K0:Landroid/widget/EditText;
 
-.field public V0:Ljava/lang/CharSequence;
+.field public X0:Ljava/lang/CharSequence;
+
+.field public final Y0:Ljava/lang/Runnable;
+
+.field public Z0:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Landroidx/preference/k;-><init>()V
 
+    .line 2
+    new-instance v0, Landroidx/preference/c$a;
+
+    invoke-direct {v0, p0}, Landroidx/preference/c$a;-><init>(Landroidx/preference/c;)V
+
+    iput-object v0, p0, Landroidx/preference/c;->Y0:Ljava/lang/Runnable;
+
+    const-wide/16 v0, -0x1
+
+    .line 3
+    iput-wide v0, p0, Landroidx/preference/c;->Z0:J
+
     return-void
 .end method
 
-.method public static p(Ljava/lang/String;)Landroidx/preference/c;
+.method public static s(Ljava/lang/String;)Landroidx/preference/c;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     new-instance v0, Landroidx/preference/c;
@@ -51,7 +71,7 @@
 
 
 # virtual methods
-.method public i()Z
+.method public j()Z
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -64,11 +84,15 @@
     return v0
 .end method
 
-.method public j(Landroid/view/View;)V
+.method public k(Landroid/view/View;)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/preference/k;->j(Landroid/view/View;)V
+    invoke-super {p0, p1}, Landroidx/preference/k;->k(Landroid/view/View;)V
 
     const v0, 0x1020003
 
@@ -89,7 +113,7 @@
     .line 4
     iget-object p1, p0, Landroidx/preference/c;->K0:Landroid/widget/EditText;
 
-    iget-object v0, p0, Landroidx/preference/c;->V0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/c;->X0:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -107,7 +131,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setSelection(I)V
 
     .line 6
-    invoke-virtual {p0}, Landroidx/preference/c;->o()Landroidx/preference/EditTextPreference;
+    invoke-virtual {p0}, Landroidx/preference/c;->q()Landroidx/preference/EditTextPreference;
 
     move-result-object p1
 
@@ -118,7 +142,7 @@
     if-eqz p1, :cond_0
 
     .line 7
-    invoke-virtual {p0}, Landroidx/preference/c;->o()Landroidx/preference/EditTextPreference;
+    invoke-virtual {p0}, Landroidx/preference/c;->q()Landroidx/preference/EditTextPreference;
 
     move-result-object p1
 
@@ -144,7 +168,7 @@
     throw p1
 .end method
 
-.method public l(Z)V
+.method public m(Z)V
     .locals 2
 
     if-eqz p1, :cond_0
@@ -161,7 +185,7 @@
     move-result-object p1
 
     .line 2
-    invoke-virtual {p0}, Landroidx/preference/c;->o()Landroidx/preference/EditTextPreference;
+    invoke-virtual {p0}, Landroidx/preference/c;->q()Landroidx/preference/EditTextPreference;
 
     move-result-object v0
 
@@ -179,21 +203,12 @@
     return-void
 .end method
 
-.method public final o()Landroidx/preference/EditTextPreference;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/preference/k;->h()Landroidx/preference/DialogPreference;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/EditTextPreference;
-
-    return-object v0
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroidx/preference/k;->onCreate(Landroid/os/Bundle;)V
@@ -201,7 +216,7 @@
     if-nez p1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/preference/c;->o()Landroidx/preference/EditTextPreference;
+    invoke-virtual {p0}, Landroidx/preference/c;->q()Landroidx/preference/EditTextPreference;
 
     move-result-object p1
 
@@ -209,7 +224,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/c;->V0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/c;->X0:Ljava/lang/CharSequence;
 
     goto :goto_0
 
@@ -221,7 +236,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/c;->V0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/c;->X0:Ljava/lang/CharSequence;
 
     :goto_0
     return-void
@@ -238,11 +253,190 @@
     invoke-super {p0, p1}, Landroidx/preference/k;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/c;->V0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/c;->X0:Ljava/lang/CharSequence;
 
     const-string v1, "EditTextPreferenceDialogFragment.text"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public p()V
+    .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroidx/preference/c;->u(Z)V
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/preference/c;->t()V
+
+    return-void
+.end method
+
+.method public final q()Landroidx/preference/EditTextPreference;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/preference/k;->i()Landroidx/preference/DialogPreference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/EditTextPreference;
+
+    return-object v0
+.end method
+
+.method public final r()Z
+    .locals 4
+
+    .line 1
+    iget-wide v0, p0, Landroidx/preference/c;->Z0:J
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x3e8
+
+    add-long/2addr v0, v2
+
+    .line 2
+    invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public t()V
+    .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/preference/c;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 2
+    iget-object v0, p0, Landroidx/preference/c;->K0:Landroid/widget/EditText;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->isFocused()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Landroidx/preference/c;->K0:Landroid/widget/EditText;
+
+    .line 4
+    invoke-virtual {v0}, Landroid/widget/EditText;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v2, "input_method"
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    .line 5
+    iget-object v2, p0, Landroidx/preference/c;->K0:Landroid/widget/EditText;
+
+    invoke-virtual {v0, v2, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    invoke-virtual {p0, v1}, Landroidx/preference/c;->u(Z)V
+
+    goto :goto_1
+
+    .line 7
+    :cond_1
+    iget-object v0, p0, Landroidx/preference/c;->K0:Landroid/widget/EditText;
+
+    iget-object v1, p0, Landroidx/preference/c;->Y0:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    .line 8
+    iget-object v0, p0, Landroidx/preference/c;->K0:Landroid/widget/EditText;
+
+    iget-object v1, p0, Landroidx/preference/c;->Y0:Ljava/lang/Runnable;
+
+    const-wide/16 v2, 0x32
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/widget/EditText;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    goto :goto_1
+
+    .line 9
+    :cond_2
+    :goto_0
+    invoke-virtual {p0, v1}, Landroidx/preference/c;->u(Z)V
+
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+.method public final u(Z)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v0, -0x1
+
+    :goto_0
+    iput-wide v0, p0, Landroidx/preference/c;->Z0:J
 
     return-void
 .end method

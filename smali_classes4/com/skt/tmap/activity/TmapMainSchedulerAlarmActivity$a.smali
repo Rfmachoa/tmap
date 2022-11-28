@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapMainSchedulerAlarmActivity;->t5()V
+    value = Lcom/skt/tmap/activity/TmapMainSchedulerAlarmActivity;->B5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

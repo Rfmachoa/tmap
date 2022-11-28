@@ -66,7 +66,7 @@
 
 .field private animator:Landroid/animation/ObjectAnimator;
 
-.field public animatorCompleteCallback:Li3/b$a;
+.field public animatorCompleteCallback:Lq4/b$a;
 
 .field private final baseSpec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
@@ -76,7 +76,7 @@
 
 .field private indicatorColorIndexOffset:I
 
-.field private final interpolator:Lm2/b;
+.field private final interpolator:Lh3/b;
 
 
 # direct methods
@@ -175,17 +175,17 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Li3/b$a;
+    iput-object v0, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Lq4/b$a;
 
     .line 4
     iput-object p1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->baseSpec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
     .line 5
-    new-instance p1, Lm2/b;
+    new-instance p1, Lh3/b;
 
-    invoke-direct {p1}, Lm2/b;-><init>()V
+    invoke-direct {p1}, Lh3/b;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lm2/b;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lh3/b;
 
     return-void
 .end method
@@ -344,7 +344,7 @@
     .line 10
     iget-object v0, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->completeEndAnimator:Landroid/animation/ObjectAnimator;
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lm2/b;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lh3/b;
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -466,9 +466,9 @@
     move-result v1
 
     .line 11
-    iget-object v3, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lm2/b;
+    iget-object v3, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lh3/b;
 
-    invoke-virtual {v3, v2}, Lm2/b;->getInterpolation(F)F
+    invoke-virtual {v3, v2}, Lh3/b;->getInterpolation(F)F
 
     move-result v2
 
@@ -570,9 +570,9 @@
 
     aget v6, v5, v2
 
-    iget-object v7, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lm2/b;
+    iget-object v7, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lh3/b;
 
-    invoke-virtual {v7, v1}, Lm2/b;->getInterpolation(F)F
+    invoke-virtual {v7, v1}, Lh3/b;->getInterpolation(F)F
 
     move-result v1
 
@@ -599,9 +599,9 @@
 
     aget v5, v3, v4
 
-    iget-object v6, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lm2/b;
+    iget-object v6, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->interpolator:Lh3/b;
 
-    invoke-virtual {v6, v1}, Lm2/b;->getInterpolation(F)F
+    invoke-virtual {v6, v1}, Lh3/b;->getInterpolation(F)F
 
     move-result v1
 
@@ -680,15 +680,15 @@
     return-void
 .end method
 
-.method public registerAnimatorsCompleteCallback(Li3/b$a;)V
+.method public registerAnimatorsCompleteCallback(Lq4/b$a;)V
     .locals 0
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    iput-object p1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Li3/b$a;
+    iput-object p1, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Lq4/b$a;
 
     return-void
 .end method
@@ -699,13 +699,15 @@
     .line 1
     iget-object v0, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->completeEndAnimator:Landroid/animation/ObjectAnimator;
 
+    if-eqz v0, :cond_2
+
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    return-void
+    goto :goto_0
 
     .line 2
     :cond_0
@@ -728,6 +730,7 @@
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->cancelAnimatorImmediately()V
 
+    :cond_2
     :goto_0
     return-void
 .end method
@@ -823,7 +826,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Li3/b$a;
+    iput-object v0, p0, Lcom/google/android/material/progressindicator/CircularIndeterminateAnimatorDelegate;->animatorCompleteCallback:Lq4/b$a;
 
     return-void
 .end method

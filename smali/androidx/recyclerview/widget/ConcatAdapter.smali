@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/i;
+.field public final a:Landroidx/recyclerview/widget/h;
 
 
 # direct methods
@@ -55,11 +55,11 @@
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
     .line 5
-    new-instance v0, Landroidx/recyclerview/widget/i;
+    new-instance v0, Landroidx/recyclerview/widget/h;
 
-    invoke-direct {v0, p0, p1}, Landroidx/recyclerview/widget/i;-><init>(Landroidx/recyclerview/widget/ConcatAdapter;Landroidx/recyclerview/widget/ConcatAdapter$Config;)V
+    invoke-direct {v0, p0, p1}, Landroidx/recyclerview/widget/h;-><init>(Landroidx/recyclerview/widget/ConcatAdapter;Landroidx/recyclerview/widget/ConcatAdapter$Config;)V
 
-    iput-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iput-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
     .line 6
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -86,9 +86,9 @@
 
     .line 8
     :cond_0
-    iget-object p1, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object p1, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/i;->w()Z
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/h;->w()Z
 
     move-result p1
 
@@ -210,9 +210,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/i;->t(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/RecyclerView$a0;I)I
+    invoke-virtual {v0, p1, p2, p3}, Landroidx/recyclerview/widget/h;->t(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/RecyclerView$a0;I)I
 
     move-result p1
 
@@ -223,9 +223,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/i;->u()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/h;->u()I
 
     move-result v0
 
@@ -236,9 +236,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->r(I)J
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->r(I)J
 
     move-result-wide v0
 
@@ -249,9 +249,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->s(I)I
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->s(I)I
 
     move-result p1
 
@@ -275,9 +275,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/i;->h(ILandroidx/recyclerview/widget/RecyclerView$Adapter;)Z
+    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/h;->h(ILandroidx/recyclerview/widget/RecyclerView$Adapter;)Z
 
     move-result p1
 
@@ -301,9 +301,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->i(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Z
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->i(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Z
 
     move-result p1
 
@@ -328,9 +328,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/i;->q()Ljava/util/List;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/h;->q()Ljava/util/List;
 
     move-result-object v0
 
@@ -371,9 +371,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->I(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Z
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->I(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Z
 
     move-result p1
 
@@ -388,9 +388,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->z(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->z(Landroidx/recyclerview/widget/RecyclerView;)V
 
     return-void
 .end method
@@ -403,9 +403,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/i;->A(Landroidx/recyclerview/widget/RecyclerView$a0;I)V
+    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/h;->A(Landroidx/recyclerview/widget/RecyclerView$a0;I)V
 
     return-void
 .end method
@@ -420,9 +420,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/i;->B(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$a0;
+    invoke-virtual {v0, p1, p2}, Landroidx/recyclerview/widget/h;->B(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$a0;
 
     move-result-object p1
 
@@ -437,9 +437,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->C(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->C(Landroidx/recyclerview/widget/RecyclerView;)V
 
     return-void
 .end method
@@ -452,9 +452,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->D(Landroidx/recyclerview/widget/RecyclerView$a0;)Z
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->D(Landroidx/recyclerview/widget/RecyclerView$a0;)Z
 
     move-result p1
 
@@ -469,9 +469,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->E(Landroidx/recyclerview/widget/RecyclerView$a0;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->E(Landroidx/recyclerview/widget/RecyclerView$a0;)V
 
     return-void
 .end method
@@ -484,9 +484,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->F(Landroidx/recyclerview/widget/RecyclerView$a0;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->F(Landroidx/recyclerview/widget/RecyclerView$a0;)V
 
     return-void
 .end method
@@ -499,9 +499,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/i;
+    iget-object v0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->a:Landroidx/recyclerview/widget/h;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/i;->G(Landroidx/recyclerview/widget/RecyclerView$a0;)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/h;->G(Landroidx/recyclerview/widget/RecyclerView$a0;)V
 
     return-void
 .end method

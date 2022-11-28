@@ -32,42 +32,44 @@
     .end annotation
 .end field
 
-.field public static final m:Ljava/lang/String; = "androidx.car.app.extra.START_CAR_APP_BINDER_KEY"
+.field public static final m:Ljava/lang/String; = "suggestion"
 
-.field public static final n:Ljava/lang/String; = "androidx.car.app.action.NAVIGATE"
+.field public static final n:Ljava/lang/String; = "androidx.car.app.extra.START_CAR_APP_BINDER_KEY"
 
-.field public static final o:Ljava/lang/String; = "androidx.car.app.action.REQUEST_PERMISSIONS"
+.field public static final o:Ljava/lang/String; = "androidx.car.app.action.NAVIGATE"
 
-.field public static final p:Ljava/lang/String; = "androidx.car.app.action.EXTRA_PERMISSIONS_KEY"
+.field public static final p:Ljava/lang/String; = "androidx.car.app.action.REQUEST_PERMISSIONS"
 
-.field public static final q:Ljava/lang/String; = "androidx.car.app.action.EXTRA_ON_REQUEST_PERMISSIONS_RESULT_LISTENER_KEY"
+.field public static final q:Ljava/lang/String; = "androidx.car.app.action.EXTRA_PERMISSIONS_KEY"
+
+.field public static final r:Ljava/lang/String; = "androidx.car.app.action.EXTRA_ON_REQUEST_PERMISSIONS_RESULT_LISTENER_KEY"
 
 
 # instance fields
 .field public final a:Landroidx/activity/OnBackPressedDispatcher;
 
-.field public final b:Landroidx/car/app/m0;
+.field public final b:Landroidx/car/app/r0;
 
 .field public final c:Landroidx/lifecycle/Lifecycle;
 
-.field public final d:Ll0/b;
+.field public final d:Lz0/b;
 
 .field public e:I
 
-.field public f:Landroidx/car/app/n0;
+.field public f:Landroidx/car/app/s0;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/m0;)V
+.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/r0;)V
     .locals 5
     .param p1    # Landroidx/lifecycle/Lifecycle;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/car/app/m0;
+    .param p2    # Landroidx/car/app/r0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -83,11 +85,11 @@
     invoke-direct {p0, v0}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance v1, Ll0/b;
+    new-instance v1, Lz0/b;
 
-    invoke-direct {v1}, Ll0/b;-><init>()V
+    invoke-direct {v1}, Lz0/b;-><init>()V
 
-    iput-object v1, p0, Landroidx/car/app/CarContext;->d:Ll0/b;
+    iput-object v1, p0, Landroidx/car/app/CarContext;->d:Lz0/b;
 
     const/4 v2, 0x0
 
@@ -95,151 +97,178 @@
     iput v2, p0, Landroidx/car/app/CarContext;->e:I
 
     .line 4
-    iput-object v0, p0, Landroidx/car/app/CarContext;->f:Landroidx/car/app/n0;
+    iput-object v0, p0, Landroidx/car/app/CarContext;->f:Landroidx/car/app/s0;
 
     .line 5
-    iput-object p2, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/m0;
+    iput-object p2, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/r0;
 
     .line 6
     const-class v2, Landroidx/car/app/AppManager;
 
-    new-instance v3, Landroidx/car/app/d0;
+    new-instance v3, Landroidx/car/app/i0;
 
-    invoke-direct {v3, p0, p2, p1}, Landroidx/car/app/d0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)V
+    invoke-direct {v3, p0, p2, p1}, Landroidx/car/app/i0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)V
 
     const-string v4, "app"
 
-    invoke-virtual {v1, v2, v4, v3}, Ll0/b;->a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+    invoke-virtual {v1, v2, v4, v3}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
 
     .line 7
     const-class v2, Landroidx/car/app/navigation/NavigationManager;
 
-    new-instance v3, Landroidx/car/app/c0;
+    new-instance v3, Landroidx/car/app/g0;
 
-    invoke-direct {v3, p0, p2, p1}, Landroidx/car/app/c0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)V
+    invoke-direct {v3, p0, p2, p1}, Landroidx/car/app/g0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)V
 
     const-string v4, "navigation"
 
-    invoke-virtual {v1, v2, v4, v3}, Ll0/b;->a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+    invoke-virtual {v1, v2, v4, v3}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
 
     .line 8
     const-class v2, Landroidx/car/app/ScreenManager;
 
-    new-instance v3, Landroidx/car/app/e0;
+    new-instance v3, Landroidx/car/app/z;
 
-    invoke-direct {v3, p0, p1}, Landroidx/car/app/e0;-><init>(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)V
+    invoke-direct {v3, p0, p1}, Landroidx/car/app/z;-><init>(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)V
 
     const-string v4, "screen"
 
-    invoke-virtual {v1, v2, v4, v3}, Ll0/b;->a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+    invoke-virtual {v1, v2, v4, v3}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
 
     .line 9
     const-class v2, Landroidx/car/app/constraints/ConstraintManager;
 
-    new-instance v3, Landroidx/car/app/a0;
+    new-instance v3, Landroidx/car/app/e0;
 
-    invoke-direct {v3, p0, p2}, Landroidx/car/app/a0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)V
+    invoke-direct {v3, p0, p2}, Landroidx/car/app/e0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)V
 
     const-string v4, "constraints"
 
-    invoke-virtual {v1, v2, v4, v3}, Ll0/b;->a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+    invoke-virtual {v1, v2, v4, v3}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
 
     .line 10
     const-class v2, Landroidx/car/app/hardware/a;
 
-    new-instance v3, Landroidx/car/app/b0;
+    new-instance v3, Landroidx/car/app/f0;
 
-    invoke-direct {v3, p0, p2}, Landroidx/car/app/b0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)V
+    invoke-direct {v3, p0, p2}, Landroidx/car/app/f0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)V
 
     const-string v4, "hardware"
 
-    invoke-virtual {v1, v2, v4, v3}, Ll0/b;->a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+    invoke-virtual {v1, v2, v4, v3}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
 
     .line 11
-    const-class v2, Ll0/d;
+    const-class v2, Lz0/d;
 
-    new-instance v3, Landroidx/car/app/z;
+    new-instance v3, Landroidx/car/app/d0;
 
-    invoke-direct {v3, p0}, Landroidx/car/app/z;-><init>(Landroidx/car/app/CarContext;)V
+    invoke-direct {v3, p0}, Landroidx/car/app/d0;-><init>(Landroidx/car/app/CarContext;)V
 
-    invoke-virtual {v1, v2, v0, v3}, Ll0/b;->a(Ljava/lang/Class;Ljava/lang/String;Ll0/c;)V
+    invoke-virtual {v1, v2, v0, v3}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
 
     .line 12
+    const-class v0, Landroidx/car/app/suggestion/SuggestionManager;
+
+    new-instance v2, Landroidx/car/app/h0;
+
+    invoke-direct {v2, p0, p2, p1}, Landroidx/car/app/h0;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)V
+
+    const-string v3, "suggestion"
+
+    invoke-virtual {v1, v0, v3, v2}, Lz0/b;->a(Ljava/lang/Class;Ljava/lang/String;Lz0/c;)V
+
+    .line 13
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher;
 
-    new-instance v1, Landroidx/car/app/y;
+    new-instance v1, Landroidx/car/app/c0;
 
-    invoke-direct {v1, p0}, Landroidx/car/app/y;-><init>(Landroidx/car/app/CarContext;)V
+    invoke-direct {v1, p0}, Landroidx/car/app/c0;-><init>(Landroidx/car/app/CarContext;)V
 
     invoke-direct {v0, v1}, Landroidx/activity/OnBackPressedDispatcher;-><init>(Ljava/lang/Runnable;)V
 
     iput-object v0, p0, Landroidx/car/app/CarContext;->a:Landroidx/activity/OnBackPressedDispatcher;
 
-    .line 13
+    .line 14
     iput-object p1, p0, Landroidx/car/app/CarContext;->c:Landroidx/lifecycle/Lifecycle;
 
-    .line 14
+    .line 15
     new-instance v0, Landroidx/car/app/CarContext$2;
 
-    invoke-direct {v0, p0, p2}, Landroidx/car/app/CarContext$2;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)V
+    invoke-direct {v0, p0, p2}, Landroidx/car/app/CarContext$2;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)V
 
-    .line 15
+    .line 16
     invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     return-void
 .end method
 
-.method private synthetic A(Landroidx/car/app/m0;)Landroidx/car/app/constraints/ConstraintManager;
+.method private synthetic A(Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Landroidx/car/app/constraints/ConstraintManager;->g(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)Landroidx/car/app/constraints/ConstraintManager;
+    invoke-static {p0, p1, p2}, Landroidx/car/app/navigation/NavigationManager;->l(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private synthetic B(Landroidx/car/app/m0;)Landroidx/car/app/hardware/a;
+.method private synthetic B(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Landroidx/car/app/hardware/a;->e(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)Landroidx/car/app/hardware/a;
+    invoke-static {p0, p1}, Landroidx/car/app/ScreenManager;->g(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private synthetic C()Ll0/d;
+.method private synthetic C(Landroidx/car/app/r0;)Landroidx/car/app/constraints/ConstraintManager;
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1}, Landroidx/car/app/constraints/ConstraintManager;->h(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)Landroidx/car/app/constraints/ConstraintManager;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method private synthetic D(Landroidx/car/app/r0;)Landroidx/car/app/hardware/a;
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1}, Landroidx/car/app/hardware/a;->e(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)Landroidx/car/app/hardware/a;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method private synthetic E()Lz0/d;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Ll0/d;->d(Landroidx/car/app/CarContext;)Ll0/d;
+    invoke-static {p0}, Lz0/d;->d(Landroidx/car/app/CarContext;)Lz0/d;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private synthetic D()V
-    .locals 1
+.method private synthetic F(Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/suggestion/SuggestionManager;
+    .locals 0
 
     .line 1
-    const-class v0, Landroidx/car/app/ScreenManager;
+    invoke-static {p0, p1, p2}, Landroidx/car/app/suggestion/SuggestionManager;->h(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/suggestion/SuggestionManager;
 
-    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
-
-    check-cast v0, Landroidx/car/app/ScreenManager;
-
-    invoke-virtual {v0}, Landroidx/car/app/ScreenManager;->n()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public static synthetic E(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+.method public static synthetic G(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -255,7 +284,7 @@
     return-object p0
 .end method
 
-.method public static synthetic F(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
+.method public static synthetic H(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -271,7 +300,7 @@
     return-object p0
 .end method
 
-.method public static M(Landroid/content/Intent;Landroid/content/Intent;)V
+.method public static O(Landroid/content/Intent;Landroid/content/Intent;)V
     .locals 1
     .param p0    # Landroid/content/Intent;
         .annotation build Landroidx/annotation/NonNull;
@@ -322,9 +351,9 @@
     check-cast p0, Landroidx/car/app/IStartCarApp;
 
     .line 6
-    new-instance v0, Landroidx/car/app/x;
+    new-instance v0, Landroidx/car/app/b0;
 
-    invoke-direct {v0, p0, p1}, Landroidx/car/app/x;-><init>(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, p1}, Landroidx/car/app/b0;-><init>(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)V
 
     const-string p0, "startCarApp from notification"
 
@@ -343,105 +372,115 @@
     throw p0
 .end method
 
-.method public static synthetic a(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
+.method public static synthetic a(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarContext;->y(Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
+    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarContext;->A(Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)Landroidx/car/app/constraints/ConstraintManager;
+.method public static synthetic b(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)Landroidx/car/app/constraints/ConstraintManager;
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/car/app/CarContext;->A(Landroidx/car/app/m0;)Landroidx/car/app/constraints/ConstraintManager;
+    invoke-direct {p0, p1}, Landroidx/car/app/CarContext;->C(Landroidx/car/app/r0;)Landroidx/car/app/constraints/ConstraintManager;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic c(Landroidx/car/app/CarContext;)Ll0/d;
+.method public static synthetic c(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/suggestion/SuggestionManager;
     .locals 0
 
-    invoke-direct {p0}, Landroidx/car/app/CarContext;->C()Ll0/d;
+    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarContext;->F(Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/suggestion/SuggestionManager;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic d(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
+.method public static synthetic d(Landroidx/car/app/CarContext;)Lz0/d;
     .locals 0
 
-    invoke-static {p0, p1}, Landroidx/car/app/CarContext;->F(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
+    invoke-direct {p0}, Landroidx/car/app/CarContext;->E()Lz0/d;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic e(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+.method public static synthetic e(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
     .locals 0
 
-    invoke-static {p0, p1}, Landroidx/car/app/CarContext;->E(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Landroidx/car/app/CarContext;->H(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic f(Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+.method public static synthetic f(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
     .locals 0
 
-    invoke-static {p0}, Landroidx/car/app/CarContext;->w(Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Landroidx/car/app/CarContext;->G(Landroid/content/Intent;Landroidx/car/app/ICarHost;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic g(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
+.method public static synthetic g(Landroidx/car/app/ICarHost;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/car/app/CarContext;->z(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
+    invoke-static {p0}, Landroidx/car/app/CarContext;->x(Landroidx/car/app/ICarHost;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic h(Landroidx/car/app/CarContext;)V
+.method public static synthetic h(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
     .locals 0
 
-    invoke-direct {p0}, Landroidx/car/app/CarContext;->D()V
+    invoke-direct {p0, p1}, Landroidx/car/app/CarContext;->B(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic i(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarContext;->z(Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic j(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)Landroidx/car/app/hardware/a;
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroidx/car/app/CarContext;->D(Landroidx/car/app/r0;)Landroidx/car/app/hardware/a;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic k(Landroidx/car/app/CarContext;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroidx/car/app/CarContext;->y()V
 
     return-void
 .end method
 
-.method public static synthetic i(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarContext;->x(Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic j(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)Landroidx/car/app/hardware/a;
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroidx/car/app/CarContext;->B(Landroidx/car/app/m0;)Landroidx/car/app/hardware/a;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/CarContext;
+.method public static m(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/CarContext;
     .locals 2
     .param p0    # Landroidx/lifecycle/Lifecycle;
         .annotation build Landroidx/annotation/NonNull;
@@ -459,16 +498,16 @@
     .line 1
     new-instance v0, Landroidx/car/app/CarContext;
 
-    new-instance v1, Landroidx/car/app/m0;
+    new-instance v1, Landroidx/car/app/r0;
 
-    invoke-direct {v1}, Landroidx/car/app/m0;-><init>()V
+    invoke-direct {v1}, Landroidx/car/app/r0;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Landroidx/car/app/CarContext;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/m0;)V
+    invoke-direct {v0, p0, v1}, Landroidx/car/app/CarContext;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/r0;)V
 
     return-object v0
 .end method
 
-.method public static synthetic w(Landroidx/car/app/ICarHost;)Ljava/lang/Object;
+.method public static synthetic x(Landroidx/car/app/ICarHost;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -484,33 +523,28 @@
     return-object p0
 .end method
 
-.method private synthetic x(Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
-    .locals 0
+.method private synthetic y()V
+    .locals 1
 
     .line 1
-    invoke-static {p0, p1, p2}, Landroidx/car/app/AppManager;->k(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
+    const-class v0, Landroidx/car/app/ScreenManager;
 
-    move-result-object p1
+    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, Landroidx/car/app/ScreenManager;
+
+    invoke-virtual {v0}, Landroidx/car/app/ScreenManager;->o()V
+
+    return-void
 .end method
 
-.method private synthetic y(Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
+.method private synthetic z(Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Landroidx/car/app/navigation/NavigationManager;->k(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/navigation/NavigationManager;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method private synthetic z(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
-    .locals 0
-
-    .line 1
-    invoke-static {p0, p1}, Landroidx/car/app/ScreenManager;->f(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/ScreenManager;
+    invoke-static {p0, p1, p2}, Landroidx/car/app/AppManager;->o(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/AppManager;
 
     move-result-object p1
 
@@ -519,7 +553,7 @@
 
 
 # virtual methods
-.method public G(Landroid/content/res/Configuration;)V
+.method public I(Landroid/content/res/Configuration;)V
     .locals 3
     .param p1    # Landroid/content/res/Configuration;
         .annotation build Landroidx/annotation/NonNull;
@@ -535,7 +569,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     const-string v0, "CarApp"
 
@@ -609,13 +643,13 @@
     return-void
 .end method
 
-.method public H(Ljava/util/List;Landroidx/car/app/p0;)V
+.method public J(Ljava/util/List;Landroidx/car/app/u0;)V
     .locals 1
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/car/app/p0;
+    .param p2    # Landroidx/car/app/u0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -625,22 +659,22 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;",
-            "Landroidx/car/app/p0;",
+            "Landroidx/car/app/u0;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-static {p0}, Landroidx/core/content/d;->l(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    invoke-static {p0}, Landroidx/core/content/ContextCompat;->getMainExecutor(Landroid/content/Context;)Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0, p2}, Landroidx/car/app/CarContext;->I(Ljava/util/List;Ljava/util/concurrent/Executor;Landroidx/car/app/p0;)V
+    invoke-virtual {p0, p1, v0, p2}, Landroidx/car/app/CarContext;->K(Ljava/util/List;Ljava/util/concurrent/Executor;Landroidx/car/app/u0;)V
 
     return-void
 .end method
 
-.method public I(Ljava/util/List;Ljava/util/concurrent/Executor;Landroidx/car/app/p0;)V
+.method public K(Ljava/util/List;Ljava/util/concurrent/Executor;Landroidx/car/app/u0;)V
     .locals 4
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -650,7 +684,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Landroidx/car/app/p0;
+    .param p3    # Landroidx/car/app/u0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -661,7 +695,7 @@
             "Ljava/lang/String;",
             ">;",
             "Ljava/util/concurrent/Executor;",
-            "Landroidx/car/app/p0;",
+            "Landroidx/car/app/u0;",
             ")V"
         }
     .end annotation
@@ -695,7 +729,7 @@
     .line 7
     new-instance v3, Landroidx/car/app/CarContext$1;
 
-    invoke-direct {v3, p0, v1, p2, p3}, Landroidx/car/app/CarContext$1;-><init>(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;Ljava/util/concurrent/Executor;Landroidx/car/app/p0;)V
+    invoke-direct {v3, p0, v1, p2, p3}, Landroidx/car/app/CarContext$1;-><init>(Landroidx/car/app/CarContext;Landroidx/lifecycle/Lifecycle;Ljava/util/concurrent/Executor;Landroidx/car/app/u0;)V
 
     .line 8
     invoke-virtual {v3}, Landroidx/car/app/IOnRequestPermissionsListener$Stub;->asBinder()Landroid/os/IBinder;
@@ -752,7 +786,7 @@
     return-void
 .end method
 
-.method public J(ILandroid/content/Intent;)V
+.method public L(ILandroid/content/Intent;)V
     .locals 1
     .param p2    # Landroid/content/Intent;
         .annotation build Landroidx/annotation/Nullable;
@@ -763,20 +797,20 @@
     .end annotation
 
     .line 1
-    const-class v0, Ll0/d;
+    const-class v0, Lz0/d;
 
-    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll0/d;
+    check-cast v0, Lz0/d;
 
-    invoke-interface {v0, p1, p2}, Ll0/d;->b(ILandroid/content/Intent;)V
+    invoke-interface {v0, p1, p2}, Lz0/d;->b(ILandroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public K(Landroidx/car/app/ICarHost;)V
+.method public M(Landroidx/car/app/ICarHost;)V
     .locals 1
     .param p1    # Landroidx/car/app/ICarHost;
         .annotation build Landroidx/annotation/NonNull;
@@ -792,21 +826,21 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/m0;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/r0;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     check-cast p1, Landroidx/car/app/ICarHost;
 
-    invoke-virtual {v0, p1}, Landroidx/car/app/m0;->o(Landroidx/car/app/ICarHost;)V
+    invoke-virtual {v0, p1}, Landroidx/car/app/r0;->q(Landroidx/car/app/ICarHost;)V
 
     return-void
 .end method
 
-.method public L(Landroid/content/Intent;)V
+.method public N(Landroid/content/Intent;)V
     .locals 3
     .param p1    # Landroid/content/Intent;
         .annotation build Landroidx/annotation/NonNull;
@@ -817,22 +851,22 @@
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/m0;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/r0;
 
-    new-instance v1, Landroidx/car/app/v;
+    new-instance v1, Landroidx/car/app/y;
 
-    invoke-direct {v1, p1}, Landroidx/car/app/v;-><init>(Landroid/content/Intent;)V
+    invoke-direct {v1, p1}, Landroidx/car/app/y;-><init>(Landroid/content/Intent;)V
 
     const-string p1, "car"
 
     const-string v2, "startCarApp"
 
-    invoke-virtual {v0, p1, v2, v1}, Landroidx/car/app/m0;->f(Ljava/lang/String;Ljava/lang/String;Landroidx/car/app/g0;)V
+    invoke-virtual {v0, p1, v2, v1}, Landroidx/car/app/r0;->g(Ljava/lang/String;Ljava/lang/String;Landroidx/car/app/k0;)V
 
     return-void
 .end method
 
-.method public N(Landroidx/car/app/HandshakeInfo;)V
+.method public P(Landroidx/car/app/HandshakeInfo;)V
     .locals 0
     .param p1    # Landroidx/car/app/HandshakeInfo;
         .annotation build Landroidx/annotation/NonNull;
@@ -857,9 +891,9 @@
     return-void
 .end method
 
-.method public O(Landroidx/car/app/n0;)V
+.method public Q(Landroidx/car/app/s0;)V
     .locals 0
-    .param p1    # Landroidx/car/app/n0;
+    .param p1    # Landroidx/car/app/s0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -873,12 +907,12 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/car/app/CarContext;->f:Landroidx/car/app/n0;
+    iput-object p1, p0, Landroidx/car/app/CarContext;->f:Landroidx/car/app/s0;
 
     return-void
 .end method
 
-.method public k(Landroid/content/Context;Landroid/content/res/Configuration;)V
+.method public l(Landroid/content/Context;Landroid/content/res/Configuration;)V
     .locals 8
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -898,7 +932,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/car/app/utils/q;->a()V
+    invoke-static {}, Landroidx/car/app/utils/r;->a()V
 
     .line 2
     invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
@@ -957,29 +991,29 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p0, p2}, Landroidx/car/app/CarContext;->G(Landroid/content/res/Configuration;)V
+    invoke-virtual {p0, p2}, Landroidx/car/app/CarContext;->I(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
-.method public m()V
+.method public n()V
     .locals 4
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/m0;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->b:Landroidx/car/app/r0;
 
-    sget-object v1, Landroidx/car/app/w;->a:Landroidx/car/app/w;
+    sget-object v1, Landroidx/car/app/a0;->a:Landroidx/car/app/a0;
 
     const-string v2, "car"
 
     const-string v3, "finish"
 
-    invoke-virtual {v0, v2, v3, v1}, Landroidx/car/app/m0;->f(Ljava/lang/String;Ljava/lang/String;Landroidx/car/app/g0;)V
+    invoke-virtual {v0, v2, v3, v1}, Landroidx/car/app/r0;->g(Ljava/lang/String;Ljava/lang/String;Landroidx/car/app/k0;)V
 
     return-void
 .end method
 
-.method public n()Landroid/content/ComponentName;
+.method public o()Landroid/content/ComponentName;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -990,15 +1024,15 @@
 
     .line 1
     :try_start_0
-    const-class v0, Ll0/d;
+    const-class v0, Lz0/d;
 
-    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll0/d;
+    check-cast v0, Lz0/d;
 
-    invoke-interface {v0}, Ll0/d;->a()Landroid/content/ComponentName;
+    invoke-interface {v0}, Lz0/d;->a()Landroid/content/ComponentName;
 
     move-result-object v0
     :try_end_0
@@ -1012,7 +1046,7 @@
     return-object v0
 .end method
 
-.method public o()I
+.method public p()I
     .locals 2
 
     .line 1
@@ -1033,7 +1067,7 @@
     throw v0
 .end method
 
-.method public p(Ljava/lang/Class;)Ljava/lang/Object;
+.method public q(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -1056,16 +1090,16 @@
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Ll0/b;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Lz0/b;
 
-    invoke-virtual {v0, p1}, Ll0/b;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lz0/b;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public q(Ljava/lang/String;)Ljava/lang/Object;
+.method public r(Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -1078,16 +1112,16 @@
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Ll0/b;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Lz0/b;
 
-    invoke-virtual {v0, p1}, Ll0/b;->d(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lz0/b;->d(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public r(Ljava/lang/Class;)Ljava/lang/String;
+.method public s(Ljava/lang/Class;)Ljava/lang/String;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -1109,27 +1143,27 @@
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Ll0/b;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Lz0/b;
 
-    invoke-virtual {v0, p1}, Ll0/b;->b(Ljava/lang/Class;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lz0/b;->b(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public s()Landroidx/car/app/n0;
+.method public t()Landroidx/car/app/s0;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarContext;->f:Landroidx/car/app/n0;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->f:Landroidx/car/app/s0;
 
     return-object v0
 .end method
 
-.method public t()Ll0/b;
+.method public u()Lz0/b;
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -1138,12 +1172,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Ll0/b;
+    iget-object v0, p0, Landroidx/car/app/CarContext;->d:Lz0/b;
 
     return-object v0
 .end method
 
-.method public u()Landroidx/activity/OnBackPressedDispatcher;
+.method public v()Landroidx/activity/OnBackPressedDispatcher;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1154,7 +1188,7 @@
     return-object v0
 .end method
 
-.method public v()Z
+.method public w()Z
     .locals 2
 
     .line 1

@@ -138,7 +138,7 @@
 
 
 # virtual methods
-.method public b()Z
+.method public a()Z
     .locals 1
 
     .line 1

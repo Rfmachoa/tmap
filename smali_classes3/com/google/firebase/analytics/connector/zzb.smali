@@ -1,9 +1,9 @@
 .class public final synthetic Lcom/google/firebase/analytics/connector/zzb;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Lcom/google/firebase/events/EventHandler;
 
 
 # static fields
@@ -33,10 +33,10 @@
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final handle(Lcom/google/firebase/events/Event;)V
     .locals 0
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-static {p1}, Lcom/google/firebase/analytics/connector/AnalyticsConnectorImpl;->zza(Lcom/google/firebase/events/Event;)V
 
     return-void
 .end method

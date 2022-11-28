@@ -24,14 +24,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/futures/h;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/h$b;->a:Landroidx/camera/core/impl/utils/futures/h;

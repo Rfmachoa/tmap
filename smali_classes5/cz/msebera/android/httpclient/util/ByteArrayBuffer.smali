@@ -31,7 +31,7 @@
     const-string v0, "Buffer capacity"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->f(ILjava/lang/String;)I
+    invoke-static {p1, v0}, Lui/a;->f(ILjava/lang/String;)I
 
     .line 3
     new-array p1, p1, [B
@@ -194,7 +194,7 @@
 
     const-string v3, " b.length: "
 
-    invoke-static {v1, p2, v2, p3, v3}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p2, v2, p3, v3}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
@@ -291,7 +291,7 @@
 
     const-string v3, " b.length: "
 
-    invoke-static {v1, p2, v2, p3, v3}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p2, v2, p3, v3}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 

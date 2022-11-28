@@ -230,7 +230,7 @@
     move-result-object v0
 
     .line 2
-    invoke-static {p0}, Ll1/u;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Landroidx/core/os/z;->a(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -375,9 +375,9 @@
     invoke-direct {v1, p0}, Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;-><init>(Landroid/content/Context;)V
 
     .line 17
-    new-instance p0, Landroidx/core/content/i;
+    new-instance p0, Landroidx/core/content/g0;
 
-    invoke-direct {p0, v1}, Landroidx/core/content/i;-><init>(Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;)V
+    invoke-direct {p0, v1}, Landroidx/core/content/g0;-><init>(Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;)V
 
     .line 18
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;

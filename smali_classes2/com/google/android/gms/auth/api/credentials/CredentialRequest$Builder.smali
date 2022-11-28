@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # annotations
@@ -14,122 +15,53 @@
 
 
 # instance fields
-.field private zzaa:[Ljava/lang/String;
+.field private zba:Z
 
-.field private zzab:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+.field private zbb:[Ljava/lang/String;
 
-.field private zzac:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+.field private zbc:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
-.field private zzad:Z
+.field private zbd:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
-.field private zzae:Ljava/lang/String;
+.field private zbe:Z
+
+.field private zbf:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private zzaf:Ljava/lang/String;
+.field private zbg:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
-
-.field private zzag:Z
-
-.field private zzz:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 2
-    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzad:Z
-
-    .line 3
-    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzag:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbe:Z
 
     const/4 v0, 0x0
 
-    .line 4
-    iput-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzae:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbf:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static synthetic zzc(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzz:Z
-
-    return p0
-.end method
-
-.method public static synthetic zzd(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)[Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaa:[Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic zze(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzab:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
-
-    return-object p0
-.end method
-
-.method public static synthetic zzf(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzac:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
-
-    return-object p0
-.end method
-
-.method public static synthetic zzg(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzad:Z
-
-    return p0
-.end method
-
-.method public static synthetic zzh(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzae:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic zzi(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaf:Ljava/lang/String;
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final build()Lcom/google/android/gms/auth/api/credentials/CredentialRequest;
-    .locals 2
+.method public build()Lcom/google/android/gms/auth/api/credentials/CredentialRequest;
+    .locals 12
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaa:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbb:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -137,16 +69,14 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 2
-    iput-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaa:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbb:[Ljava/lang/String;
 
-    .line 3
     :cond_0
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzz:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zba:Z
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaa:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbb:[Ljava/lang/String;
 
     array-length v0, v0
 
@@ -154,30 +84,55 @@
 
     goto :goto_0
 
-    .line 4
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "At least one authentication method must be specified"
 
+    .line 2
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 5
+    .line 3
     :cond_2
     :goto_0
     new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest;
 
-    const/4 v1, 0x0
+    const/4 v3, 0x4
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/auth/api/credentials/CredentialRequest;-><init>(Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;Lcom/google/android/gms/auth/api/credentials/zzf;)V
+    iget-boolean v4, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zba:Z
+
+    iget-object v5, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbb:[Ljava/lang/String;
+
+    iget-object v6, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbc:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+
+    iget-object v7, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbd:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+
+    iget-boolean v8, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbe:Z
+
+    iget-object v9, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbf:Ljava/lang/String;
+
+    iget-object v10, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbg:Ljava/lang/String;
+
+    const/4 v11, 0x0
+
+    move-object v2, v0
+
+    .line 4
+    invoke-direct/range {v2 .. v11}, Lcom/google/android/gms/auth/api/credentials/CredentialRequest;-><init>(IZ[Ljava/lang/String;Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;ZLjava/lang/String;Ljava/lang/String;Z)V
 
     return-object v0
 .end method
 
-.method public final varargs setAccountTypes([Ljava/lang/String;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public varargs setAccountTypes([Ljava/lang/String;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
+    .param p1    # [Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     if-nez p1, :cond_0
 
@@ -185,84 +140,98 @@
 
     new-array p1, p1, [Ljava/lang/String;
 
-    .line 1
     :cond_0
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaa:[Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbb:[Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public final setCredentialHintPickerConfig(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setCredentialHintPickerConfig(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
+    .param p1    # Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzac:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbd:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
     return-object p0
 .end method
 
-.method public final setCredentialPickerConfig(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setCredentialPickerConfig(Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
+    .param p1    # Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzab:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbc:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
     return-object p0
 .end method
 
-.method public final setIdTokenNonce(Ljava/lang/String;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setIdTokenNonce(Ljava/lang/String;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzaf:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbg:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public final setIdTokenRequested(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setIdTokenRequested(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzad:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbe:Z
 
     return-object p0
 .end method
 
-.method public final setPasswordLoginSupported(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setPasswordLoginSupported(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzz:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zba:Z
 
     return-object p0
 .end method
 
-.method public final setServerClientId(Ljava/lang/String;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setServerClientId(Ljava/lang/String;)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zzae:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->zbf:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public final setSupportsPasswordLogin(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
+.method public setSupportsPasswordLogin(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;->setPasswordLoginSupported(Z)Lcom/google/android/gms/auth/api/credentials/CredentialRequest$Builder;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

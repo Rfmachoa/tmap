@@ -1,9 +1,12 @@
 .class public final Lcom/google/android/gms/common/api/internal/ApiKey;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
+.annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<O::",
@@ -18,22 +21,9 @@
 .field private final zaa:I
 
 .field private final zab:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api<",
-            "TO;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Lcom/google/android/gms/common/api/Api$ApiOptions;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TO;"
-        }
     .end annotation
 .end field
 
@@ -54,15 +44,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api<",
-            "TO;>;TO;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -98,7 +79,7 @@
     return-void
 .end method
 
-.method public static zaa(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ApiKey;
+.method public static getSharedApiKey(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ApiKey;
     .locals 1
     .param p0    # Lcom/google/android/gms/common/api/Api;
         .annotation build Landroidx/annotation/NonNull;
@@ -113,6 +94,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -218,7 +202,7 @@
     return v0
 .end method
 
-.method public final zab()Ljava/lang/String;
+.method public final zaa()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

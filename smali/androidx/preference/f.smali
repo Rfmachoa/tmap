@@ -4,19 +4,19 @@
 
 
 # static fields
-.field public static final X0:Ljava/lang/String; = "ListPreferenceDialogFragment.index"
+.field public static final Z0:Ljava/lang/String; = "ListPreferenceDialogFragment.index"
 
-.field public static final Y0:Ljava/lang/String; = "ListPreferenceDialogFragment.entries"
+.field public static final a1:Ljava/lang/String; = "ListPreferenceDialogFragment.entries"
 
-.field public static final Z0:Ljava/lang/String; = "ListPreferenceDialogFragment.entryValues"
+.field public static final b1:Ljava/lang/String; = "ListPreferenceDialogFragment.entryValues"
 
 
 # instance fields
 .field public K0:I
 
-.field public V0:[Ljava/lang/CharSequence;
+.field public X0:[Ljava/lang/CharSequence;
 
-.field public W0:[Ljava/lang/CharSequence;
+.field public Y0:[Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -29,8 +29,10 @@
     return-void
 .end method
 
-.method public static p(Ljava/lang/String;)Landroidx/preference/f;
+.method public static r(Ljava/lang/String;)Landroidx/preference/f;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     new-instance v0, Landroidx/preference/f;
@@ -57,7 +59,7 @@
 
 
 # virtual methods
-.method public l(Z)V
+.method public m(Z)V
     .locals 2
 
     if-eqz p1, :cond_0
@@ -68,7 +70,7 @@
     if-ltz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/f;->W0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/f;->Y0:[Ljava/lang/CharSequence;
 
     aget-object p1, v0, p1
 
@@ -77,7 +79,7 @@
     move-result-object p1
 
     .line 3
-    invoke-virtual {p0}, Landroidx/preference/f;->o()Landroidx/preference/ListPreference;
+    invoke-virtual {p0}, Landroidx/preference/f;->q()Landroidx/preference/ListPreference;
 
     move-result-object v0
 
@@ -95,14 +97,18 @@
     return-void
 .end method
 
-.method public m(Landroidx/appcompat/app/c$a;)V
+.method public n(Landroidx/appcompat/app/c$a;)V
     .locals 3
+    .param p1    # Landroidx/appcompat/app/c$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/preference/k;->m(Landroidx/appcompat/app/c$a;)V
+    invoke-super {p0, p1}, Landroidx/preference/k;->n(Landroidx/appcompat/app/c$a;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/f;->V0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/f;->X0:[Ljava/lang/CharSequence;
 
     iget v1, p0, Landroidx/preference/f;->K0:I
 
@@ -120,21 +126,12 @@
     return-void
 .end method
 
-.method public final o()Landroidx/preference/ListPreference;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/preference/k;->h()Landroidx/preference/DialogPreference;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/ListPreference;
-
-    return-object v0
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroidx/preference/k;->onCreate(Landroid/os/Bundle;)V
@@ -142,7 +139,7 @@
     if-nez p1, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Landroidx/preference/f;->o()Landroidx/preference/ListPreference;
+    invoke-virtual {p0}, Landroidx/preference/f;->q()Landroidx/preference/ListPreference;
 
     move-result-object p1
 
@@ -175,14 +172,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/preference/f;->V0:[Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/preference/f;->X0:[Ljava/lang/CharSequence;
 
     .line 6
     invoke-virtual {p1}, Landroidx/preference/ListPreference;->C1()[Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/f;->W0:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/f;->Y0:[Ljava/lang/CharSequence;
 
     goto :goto_0
 
@@ -215,7 +212,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/preference/f;->V0:[Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/preference/f;->X0:[Ljava/lang/CharSequence;
 
     const-string v0, "ListPreferenceDialogFragment.entryValues"
 
@@ -224,7 +221,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/f;->W0:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/f;->Y0:[Ljava/lang/CharSequence;
 
     :goto_0
     return-void
@@ -248,18 +245,31 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 3
-    iget-object v0, p0, Landroidx/preference/f;->V0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/f;->X0:[Ljava/lang/CharSequence;
 
     const-string v1, "ListPreferenceDialogFragment.entries"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
     .line 4
-    iget-object v0, p0, Landroidx/preference/f;->W0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/f;->Y0:[Ljava/lang/CharSequence;
 
     const-string v1, "ListPreferenceDialogFragment.entryValues"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
     return-void
+.end method
+
+.method public final q()Landroidx/preference/ListPreference;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/preference/k;->i()Landroidx/preference/DialogPreference;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/preference/ListPreference;
+
+    return-object v0
 .end method

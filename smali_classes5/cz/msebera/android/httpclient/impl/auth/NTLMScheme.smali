@@ -45,7 +45,7 @@
     const-string v0, "NTLM engine"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/auth/NTLMScheme;->b:Lcz/msebera/android/httpclient/impl/auth/h;
@@ -65,7 +65,7 @@
 
 
 # virtual methods
-.method public b(Lef/j;Ldf/q;)Ldf/d;
+.method public a(Lih/j;Lhh/q;)Lhh/d;
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {

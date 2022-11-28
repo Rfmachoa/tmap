@@ -9,18 +9,18 @@
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/engine/TmapAiManager;
 
-.field public final synthetic b:Lcom/skt/tmap/data/TmapTipOffData;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapTipOffData;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/skt/tmap/engine/o;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iput-object p2, p0, Lcom/skt/tmap/engine/o;->b:Lcom/skt/tmap/data/TmapTipOffData;
+    iput-object p2, p0, Lcom/skt/tmap/engine/o;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -32,9 +32,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/o;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iget-object v1, p0, Lcom/skt/tmap/engine/o;->b:Lcom/skt/tmap/data/TmapTipOffData;
+    iget-object v1, p0, Lcom/skt/tmap/engine/o;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->k(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapTipOffData;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->j(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     const-string v0, "Margin must be non-negative"
 
     .line 2
-    invoke-static {p1, v0}, Lr1/o;->i(ILjava/lang/String;)I
+    invoke-static {p1, v0}, Landroidx/core/util/p;->j(ILjava/lang/String;)I
 
     .line 3
     iput p1, p0, Landroidx/viewpager2/widget/e;->a:I

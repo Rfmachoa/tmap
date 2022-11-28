@@ -462,9 +462,7 @@
 
     move-result v8
 
-    iget-object v4, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$LocationProcessRunnable;->this$0:Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
-
-    invoke-static {v4, v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->access$100(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;Landroid/location/Location;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseLocation;->isNight(Landroid/location/Location;)Z
 
     move-result v9
 

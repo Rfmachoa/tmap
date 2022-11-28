@@ -45,6 +45,8 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
     iput-object p1, p0, Landroidx/car/app/model/PaneTemplate$a;->b:Landroidx/car/app/model/Pane;
 
     return-void
@@ -58,14 +60,14 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/f;->e:Lm0/f;
+    sget-object v0, La1/f;->e:La1/f;
 
     iget-object v1, p0, Landroidx/car/app/model/PaneTemplate$a;->b:Landroidx/car/app/model/Pane;
 
-    invoke-virtual {v0, v1}, Lm0/f;->e(Landroidx/car/app/model/Pane;)V
+    invoke-virtual {v0, v1}, La1/f;->e(Landroidx/car/app/model/Pane;)V
 
     .line 2
-    sget-object v0, Lm0/a;->i:Lm0/a;
+    sget-object v0, La1/a;->m:La1/a;
 
     iget-object v1, p0, Landroidx/car/app/model/PaneTemplate$a;->b:Landroidx/car/app/model/Pane;
 
@@ -73,36 +75,9 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/car/app/model/PaneTemplate$a;->a:Landroidx/car/app/model/CarText;
-
-    invoke-static {v0}, Landroidx/car/app/model/CarText;->h(Landroidx/car/app/model/CarText;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroidx/car/app/model/PaneTemplate$a;->c:Landroidx/car/app/model/Action;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Either the title or header action must be set"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 5
-    :cond_1
-    :goto_0
     new-instance v0, Landroidx/car/app/model/PaneTemplate;
 
     invoke-direct {v0, p0}, Landroidx/car/app/model/PaneTemplate;-><init>(Landroidx/car/app/model/PaneTemplate$a;)V
@@ -120,7 +95,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->k:Lm0/a;
+    sget-object v0, La1/a;->n:La1/a;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -128,7 +103,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/PaneTemplate$a;->d:Landroidx/car/app/model/ActionStrip;
@@ -146,7 +121,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->j:Lm0/a;
+    sget-object v0, La1/a;->i:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -156,7 +131,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
     iput-object p1, p0, Landroidx/car/app/model/PaneTemplate$a;->c:Landroidx/car/app/model/Action;
@@ -185,9 +160,9 @@
     iput-object p1, p0, Landroidx/car/app/model/PaneTemplate$a;->a:Landroidx/car/app/model/CarText;
 
     .line 2
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->g:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     return-object p0
 .end method

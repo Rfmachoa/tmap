@@ -18,10 +18,10 @@
 
 
 # instance fields
-.field private final clockProvider:Loi/a;
+.field private final clockProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
@@ -30,12 +30,12 @@
 
 
 # direct methods
-.method public constructor <init>(Loi/a;)V
+.method public constructor <init>(Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;)V"
         }
@@ -45,7 +45,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Lsk/a;
 
     return-void
 .end method
@@ -69,12 +69,12 @@
     return-object p0
 .end method
 
-.method public static create(Loi/a;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
+.method public static create(Lsk/a;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;"
@@ -84,7 +84,7 @@
     .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
@@ -95,9 +95,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Lsk/a;
 
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 

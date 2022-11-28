@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final h:I = -0x1
+.field public static final i:I = -0x1
 
-.field public static final i:I = 0x0
+.field public static final j:I = 0x0
 
-.field public static final j:I = 0x1
+.field public static final k:I = 0x1
 
-.field public static final k:I = 0x2
+.field public static final l:I = 0x2
 
 
 # instance fields
@@ -39,10 +39,12 @@
 
 .field public g:Ljava/lang/Boolean;
 
+.field public h:J
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -71,6 +73,11 @@
 
     .line 8
     iput-object v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->g:Ljava/lang/Boolean;
+
+    const-wide/16 v0, 0x0
+
+    .line 9
+    iput-wide v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->h:J
 
     return-void
 .end method
@@ -138,9 +145,18 @@
     return-object p0
 .end method
 
+.method public static synthetic h(Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;)J
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->h:J
+
+    return-wide v0
+.end method
+
 
 # virtual methods
-.method public h(Ljava/lang/String;)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public i(Ljava/lang/String;)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
     .line 1
@@ -149,7 +165,7 @@
     return-object p0
 .end method
 
-.method public i(Z)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public j(Z)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
     .line 1
@@ -162,7 +178,7 @@
     return-object p0
 .end method
 
-.method public j(Ljava/lang/String;)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public k(Ljava/lang/String;)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
     .line 1
@@ -171,7 +187,7 @@
     return-object p0
 .end method
 
-.method public k(I)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public l(I)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
     .line 1
@@ -180,7 +196,7 @@
     return-object p0
 .end method
 
-.method public l(I)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public m(I)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
     .line 1
@@ -193,7 +209,7 @@
     return-object p0
 .end method
 
-.method public m(Ljava/lang/String;)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public n(Ljava/lang/String;)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
     .line 1
@@ -202,10 +218,17 @@
     return-object p0
 .end method
 
-.method public n(Z)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+.method public o(J)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
     .locals 0
 
-    xor-int/lit8 p1, p1, 0x1
+    .line 1
+    iput-wide p1, p0, Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;->h:J
+
+    return-object p0
+.end method
+
+.method public p(Z)Lorg/tensorflow/lite/nnapi/NnApiDelegate$a;
+    .locals 0
 
     .line 1
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final main:I = 0x7f0e0004
+.field public static final main:I = 0x7f0f0002
 
 
 # direct methods

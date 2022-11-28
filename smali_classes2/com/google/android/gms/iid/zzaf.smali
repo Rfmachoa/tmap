@@ -292,11 +292,11 @@
     const/16 p0, 0x38
 
     .line 3
-    invoke-static {p1, p0}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {p1, p0}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result p0
 
-    invoke-static {p2, p0}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {p2, p0}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result p0
 
@@ -304,15 +304,21 @@
 
     const-string v1, " declares "
 
-    invoke-static {p0, v0, p1, v1, p2}, Lcom/google/ads/mediation/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, v0, p1, v1, p2}, Lcom/fasterxml/jackson/databind/util/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
     const-string p1, " without permission"
 
-    const-string p2, "InstanceID"
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, p1, p2}, Lw0/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "InstanceID"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
 
@@ -435,7 +441,7 @@
 
     const-string v2, "Unexpected response from GCM "
 
-    invoke-static {v1, v2, p0}, Lcom/android/billingclient/api/e;->a(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, p0}, Lcom/google/android/gms/iid/a;->a(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -612,7 +618,7 @@
     const/4 v3, 0x5
 
     .line 19
-    invoke-static {v1, v3}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {v1, v3}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v3
 
@@ -620,7 +626,7 @@
 
     const-string v5, "|"
 
-    invoke-static {v3, v4, v1, v5}, Lcom/google/android/gms/ads/internal/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4, v1, v5}, Lcom/google/android/gms/gcm/b;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -643,7 +649,7 @@
 
     const-string v5, "|"
 
-    invoke-static {v3, v4, v1, v5}, Lcom/google/android/gms/ads/internal/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4, v1, v5}, Lcom/google/android/gms/gcm/b;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

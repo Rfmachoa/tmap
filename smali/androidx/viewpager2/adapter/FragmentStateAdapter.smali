@@ -184,7 +184,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1, p2}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object p0
 
@@ -361,7 +361,7 @@
 
     iget-object v2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v2, v0}, Landroidx/fragment/app/FragmentManager;->I1(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/Fragment$SavedState;
+    invoke-virtual {v2, v0}, Landroidx/fragment/app/FragmentManager;->T1(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/Fragment$SavedState;
 
     move-result-object v2
 
@@ -371,15 +371,15 @@
     :cond_5
     iget-object v1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->u()Landroidx/fragment/app/j0;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroidx/fragment/app/a0;->B(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/a0;
+    invoke-virtual {v1, v0}, Landroidx/fragment/app/j0;->B(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/j0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a0;->s()V
+    invoke-virtual {v0}, Landroidx/fragment/app/j0;->s()V
 
     .line 14
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->c:Landroidx/collection/h;
@@ -439,7 +439,7 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/FragmentManager;->v1(Landroidx/fragment/app/FragmentManager$m;Z)V
+    invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/FragmentManager;->B1(Landroidx/fragment/app/FragmentManager$m;Z)V
 
     return-void
 .end method
@@ -450,7 +450,7 @@
     .line 1
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->Y0()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->d1()Z
 
     move-result v0
 
@@ -543,7 +543,7 @@
     .line 8
     iget-object v4, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v4, p1, v1}, Landroidx/fragment/app/FragmentManager;->C0(Landroid/os/Bundle;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {v4, p1, v1}, Landroidx/fragment/app/FragmentManager;->E0(Landroid/os/Bundle;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
@@ -596,7 +596,7 @@
 
     const-string v0, "Unexpected key in savedState: "
 
-    invoke-static {v0, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -824,7 +824,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {v0}, Lr1/o;->a(Z)V
+    invoke-static {v0}, Landroidx/core/util/p;->a(Z)V
 
     .line 2
     new-instance v0, Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;
@@ -1284,7 +1284,7 @@
     .line 7
     iget-object v4, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v4, v0, v3, v5}, Landroidx/fragment/app/FragmentManager;->u1(Landroid/os/Bundle;Ljava/lang/String;Landroidx/fragment/app/Fragment;)V
+    invoke-virtual {v4, v0, v3, v5}, Landroidx/fragment/app/FragmentManager;->A1(Landroid/os/Bundle;Ljava/lang/String;Landroidx/fragment/app/Fragment;)V
 
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -1679,7 +1679,7 @@
     .line 15
     iget-object v1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->u()Landroidx/fragment/app/j0;
 
     move-result-object v1
 
@@ -1700,19 +1700,19 @@
 
     move-result-object p1
 
-    invoke-virtual {v1, v0, p1}, Landroidx/fragment/app/a0;->k(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/a0;
+    invoke-virtual {v1, v0, p1}, Landroidx/fragment/app/j0;->k(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/j0;
 
     move-result-object p1
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
     .line 17
-    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/a0;->O(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/a0;
+    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/j0;->O(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/j0;
 
     move-result-object p1
 
     .line 18
-    invoke-virtual {p1}, Landroidx/fragment/app/a0;->s()V
+    invoke-virtual {p1}, Landroidx/fragment/app/j0;->s()V
 
     .line 19
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->f:Landroidx/viewpager2/adapter/FragmentStateAdapter$FragmentMaxLifecycleEnforcer;
@@ -1727,7 +1727,7 @@
     :cond_6
     iget-object v0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->S0()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->V0()Z
 
     move-result v0
 

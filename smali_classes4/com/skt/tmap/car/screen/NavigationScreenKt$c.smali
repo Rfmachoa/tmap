@@ -3,12 +3,12 @@
 .source "NavigationScreenKt.kt"
 
 # interfaces
-.implements Landroidx/car/app/model/k;
+.implements Lcom/skt/tmap/car/TmapCarSurface$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/car/screen/NavigationScreenKt;->c0()Landroidx/car/app/model/s;
+    value = Lcom/skt/tmap/car/screen/NavigationScreenKt;->onCreate(Landroidx/lifecycle/LifecycleOwner;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,19 +19,20 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
+        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0004"
     }
     d2 = {
+        "com/skt/tmap/car/screen/NavigationScreenKt$c",
+        "Lcom/skt/tmap/car/TmapCarSurface$b;",
         "Lkotlin/d1;",
-        "onClick",
-        "()V",
-        "<anonymous>"
+        "a",
+        "tmap_android_phoneKUShip"
     }
-    k = 0x3
+    k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -46,6 +47,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$c;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,61 +55,33 @@
 
 
 # virtual methods
-.method public final onClick()V
-    .locals 4
+.method public a()V
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$c;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/car/screen/BaseScreen;->z()Z
+    invoke-static {v0}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->p0(Lcom/skt/tmap/car/screen/NavigationScreenKt;)Lkotlinx/coroutines/y1;
 
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    return-void
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2, v1, v2}, Lkotlinx/coroutines/y1$a;->b(Lkotlinx/coroutines/y1;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$c;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    invoke-virtual {v0}, Landroidx/car/app/t0;->e()Landroidx/car/app/CarContext;
+    invoke-static {v0}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->n0(Lcom/skt/tmap/car/screen/NavigationScreenKt;)Lkotlinx/coroutines/y1;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "tap.routecancel"
-
-    invoke-virtual {v0, v1}, Ldc/d;->E(Ljava/lang/String;)V
-
-    .line 3
-    sget-object v0, Lcom/skt/tmap/engine/l0;->Z:Lcom/skt/tmap/engine/l0$a;
-
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/l0$a;->c()Lcom/skt/tmap/engine/l0;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lcom/skt/tmap/engine/l0;->g1(Lcom/skt/tmap/engine/l0;ZILjava/lang/Object;)V
-
-    .line 4
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/NavigationScreenKt$c;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
-
-    invoke-virtual {v0}, Landroidx/car/app/t0;->j()Landroidx/car/app/ScreenManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/skt/tmap/car/screen/HomeScreen;->K0:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroidx/car/app/ScreenManager;->p(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->u0(Lcom/skt/tmap/car/screen/NavigationScreenKt;Lkotlinx/coroutines/y1;)V
 
     return-void
 .end method

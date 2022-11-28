@@ -3,7 +3,7 @@
 .source "BasicHeader.java"
 
 # interfaces
-.implements Ldf/d;
+.implements Lhh/d;
 .implements Ljava/lang/Cloneable;
 .implements Ljava/io/Serializable;
 
@@ -33,7 +33,7 @@
     const-string v0, "Name"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -65,7 +65,7 @@
     return-object v0
 .end method
 
-.method public getElements()[Ldf/e;
+.method public getElements()[Lhh/e;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -81,7 +81,7 @@
     const/4 v1, 0x0
 
     .line 2
-    invoke-static {v0, v1}, Lmg/f;->h(Ljava/lang/String;Lmg/o;)[Ldf/e;
+    invoke-static {v0, v1}, Lqi/f;->h(Ljava/lang/String;Lqi/o;)[Lhh/e;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    new-array v0, v0, [Ldf/e;
+    new-array v0, v0, [Lhh/e;
 
     return-object v0
 .end method
@@ -117,11 +117,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lmg/j;->b:Lmg/j;
+    sget-object v0, Lqi/j;->b:Lqi/j;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p0}, Lmg/j;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Ldf/d;)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-virtual {v0, v1, p0}, Lqi/j;->b(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lhh/d;)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     move-result-object v0
 

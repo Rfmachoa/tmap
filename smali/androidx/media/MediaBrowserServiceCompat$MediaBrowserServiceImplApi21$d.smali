@@ -74,7 +74,7 @@
 
     iget-object v1, v1, Landroidx/media/MediaBrowserServiceCompat;->d:Landroidx/collection/a;
 
-    invoke-virtual {v1}, Landroidx/collection/l;->size()I
+    invoke-virtual {v1}, Landroidx/collection/m;->size()I
 
     move-result v1
 
@@ -87,7 +87,7 @@
 
     iget-object v1, v1, Landroidx/media/MediaBrowserServiceCompat;->d:Landroidx/collection/a;
 
-    invoke-virtual {v1, v0}, Landroidx/collection/l;->q(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/m;->q(I)Ljava/lang/Object;
 
     move-result-object v1
 

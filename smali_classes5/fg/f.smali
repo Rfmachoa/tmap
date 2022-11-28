@@ -1,22 +1,8 @@
-.class public interface abstract Lfg/f;
+.class public interface abstract synthetic Lfg/f;
 .super Ljava/lang/Object;
-.source "PoolEntryRequest.java"
+.source "package-info.java"
 
 
 # annotations
-.annotation runtime Ljava/lang/Deprecated;
+.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
 .end annotation
-
-
-# virtual methods
-.method public abstract abortRequest()V
-.end method
-
-.method public abstract getPoolEntry(JLjava/util/concurrent/TimeUnit;)Lfg/b;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;,
-            Lcz/msebera/android/httpclient/conn/ConnectionPoolTimeoutException;
-        }
-    .end annotation
-.end method

@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:I
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapEVSearchActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;II)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapEVSearchActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/e0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iput p2, p0, Lcom/skt/tmap/activity/e0;->b:I
-
-    iput p3, p0, Lcom/skt/tmap/activity/e0;->c:I
+    iput-object p1, p0, Lcom/skt/tmap/activity/e0;->a:Lcom/skt/tmap/activity/TmapEVSearchActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/e0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/e0;->a:Lcom/skt/tmap/activity/TmapEVSearchActivity;
 
-    iget v1, p0, Lcom/skt/tmap/activity/e0;->b:I
+    check-cast p1, Lcom/skt/tmap/engine/navigation/livedata/Event;
 
-    iget v2, p0, Lcom/skt/tmap/activity/e0;->c:I
-
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/activity/TmapMainActivity;->Z6(Lcom/skt/tmap/activity/TmapMainActivity;II)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapEVSearchActivity;->B5(Lcom/skt/tmap/activity/TmapEVSearchActivity;Lcom/skt/tmap/engine/navigation/livedata/Event;)V
 
     return-void
 .end method

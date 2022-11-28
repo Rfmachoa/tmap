@@ -1,40 +1,56 @@
-.class public final synthetic Landroidx/camera/camera2/internal/v1;
-.super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
+.class public final Landroidx/camera/camera2/internal/v1;
+.super Lb0/m;
+.source "CaptureCallbackContainer.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/z1;
-
-.field public final synthetic b:J
+.field public final a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/z1;J)V
-    .locals 0
+.method public constructor <init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lb0/m;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/v1;->a:Landroidx/camera/camera2/internal/z1;
+    const-string v0, "captureCallback is null"
 
-    iput-wide p2, p0, Landroidx/camera/camera2/internal/v1;->b:J
+    .line 2
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
+    iput-object p1, p0, Landroidx/camera/camera2/internal/v1;->a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
     return-void
 .end method
 
+.method public static d(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroidx/camera/camera2/internal/v1;
+    .locals 1
+
+    .line 1
+    new-instance v0, Landroidx/camera/camera2/internal/v1;
+
+    invoke-direct {v0, p0}, Landroidx/camera/camera2/internal/v1;-><init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public e()Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/v1;->a:Landroidx/camera/camera2/internal/z1;
+    .line 1
+    iget-object v0, p0, Landroidx/camera/camera2/internal/v1;->a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
-    iget-wide v1, p0, Landroidx/camera/camera2/internal/v1;->b:J
-
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/z1;->a(Landroidx/camera/camera2/internal/z1;J)V
-
-    return-void
+    return-object v0
 .end method

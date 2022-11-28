@@ -61,9 +61,9 @@
     .line 3
     iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$1;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;
 
-    sget-object v2, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->CACHE_ONLY:Li4/a;
+    sget-object v2, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->CACHE_ONLY:Lf6/a;
 
-    invoke-virtual {v0, v2}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;->runBaseQuery(Li4/a;)V
+    invoke-virtual {v0, v2}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;->runBaseQuery(Lf6/a;)V
 
     .line 4
     iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$1;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;
@@ -273,9 +273,9 @@
     .line 18
     iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$1;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;
 
-    sget-object v1, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->NETWORK_ONLY:Li4/a;
+    sget-object v1, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->NETWORK_ONLY:Lf6/a;
 
-    invoke-virtual {v0, v1}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;->runBaseQuery(Li4/a;)V
+    invoke-virtual {v0, v1}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;->runBaseQuery(Lf6/a;)V
 
     goto :goto_1
 
@@ -335,7 +335,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lc4/i;
+    check-cast v1, Lz5/i;
 
     if-eqz v1, :cond_7
 
@@ -364,7 +364,7 @@
 
     move-result-object v3
 
-    invoke-interface {v3, v1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lc4/i;)V
+    invoke-interface {v3, v1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lz5/i;)V
 
     goto :goto_2
 

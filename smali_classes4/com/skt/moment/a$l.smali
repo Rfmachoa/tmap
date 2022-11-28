@@ -27,21 +27,35 @@
 
 .field public g:Ljava/lang/String;
 
-.field public h:Ljava/lang/Integer;
+.field public h:I
 
-.field public i:Ljava/lang/Integer;
+.field public i:I
 
-.field public j:Ljava/lang/String;
-
-.field public k:Ljava/lang/Integer;
+.field public j:Lcom/skt/moment/a$k;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;IILcom/skt/moment/a$k;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "accessKey",
+            "placeCampaignId",
+            "seed",
+            "placeCallback"
+        }
+    .end annotation
 
     .line 1
-    sget v0, Lcom/skt/moment/a;->y:I
+    sget v0, Lcom/skt/moment/a;->C:I
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -62,16 +76,13 @@
     iput-object p2, p0, Lcom/skt/moment/a$l;->g:Ljava/lang/String;
 
     .line 4
-    iput-object p3, p0, Lcom/skt/moment/a$l;->h:Ljava/lang/Integer;
+    iput p3, p0, Lcom/skt/moment/a$l;->h:I
 
     .line 5
-    iput-object p4, p0, Lcom/skt/moment/a$l;->i:Ljava/lang/Integer;
+    iput p4, p0, Lcom/skt/moment/a$l;->i:I
 
     .line 6
-    iput-object p5, p0, Lcom/skt/moment/a$l;->j:Ljava/lang/String;
-
-    .line 7
-    iput-object p6, p0, Lcom/skt/moment/a$l;->k:Ljava/lang/Integer;
+    iput-object p5, p0, Lcom/skt/moment/a$l;->j:Lcom/skt/moment/a$k;
 
     return-void
 .end method
@@ -114,35 +125,27 @@
     invoke-static {v0, v1}, Lcom/skt/moment/a;->e(Lcom/skt/moment/a;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/moment/a$b;->d()Ljava/lang/String;
+    iget v1, p0, Lcom/skt/moment/a$l;->h:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/moment/a;->f(Lcom/skt/moment/a;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/moment/a;->R(Ljava/lang/Integer;)V
 
     .line 6
-    iget-object v1, p0, Lcom/skt/moment/a$l;->h:Ljava/lang/Integer;
+    iget v1, p0, Lcom/skt/moment/a$l;->i:I
 
-    invoke-static {v0, v1}, Lcom/skt/moment/a;->i(Lcom/skt/moment/a;Ljava/lang/Integer;)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/skt/moment/a;->T(Ljava/lang/Integer;)V
 
     .line 7
-    iget-object v1, p0, Lcom/skt/moment/a$l;->i:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/skt/moment/a$l;->j:Lcom/skt/moment/a$k;
 
-    invoke-static {v0, v1}, Lcom/skt/moment/a;->h(Lcom/skt/moment/a;Ljava/lang/Integer;)V
-
-    .line 8
-    iget-object v1, p0, Lcom/skt/moment/a$l;->j:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/skt/moment/a;->j(Lcom/skt/moment/a;Ljava/lang/String;)V
-
-    .line 9
-    iget-object v1, p0, Lcom/skt/moment/a$l;->k:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/skt/moment/a;->k(Lcom/skt/moment/a;I)V
+    invoke-virtual {v0, v1}, Lcom/skt/moment/a;->Q(Lcom/skt/moment/a$k;)V
 
     return-object v0
 .end method

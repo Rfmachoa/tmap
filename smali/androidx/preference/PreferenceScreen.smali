@@ -4,12 +4,20 @@
 
 
 # instance fields
-.field public I1:Z
+.field public K1:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
@@ -21,7 +29,7 @@
 
     const v1, 0x101008b
 
-    invoke-static {p1, v0, v1}, Lz0/i;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Ls1/l;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -30,7 +38,7 @@
     const/4 p1, 0x1
 
     .line 2
-    iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->I1:Z
+    iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->K1:Z
 
     return-void
 .end method
@@ -48,7 +56,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->I1:Z
+    iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->K1:Z
 
     return-void
 
@@ -67,7 +75,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Landroidx/preference/PreferenceScreen;->I1:Z
+    iget-boolean v0, p0, Landroidx/preference/PreferenceScreen;->K1:Z
 
     return v0
 .end method
@@ -98,18 +106,18 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Landroidx/preference/Preference;->D()Landroidx/preference/p;
+    invoke-virtual {p0}, Landroidx/preference/Preference;->D()Landroidx/preference/t;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/preference/p;->j()Landroidx/preference/p$b;
+    invoke-virtual {v0}, Landroidx/preference/t;->j()Landroidx/preference/t$b;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-interface {v0, p0}, Landroidx/preference/p$b;->b(Landroidx/preference/PreferenceScreen;)V
+    invoke-interface {v0, p0}, Landroidx/preference/t$b;->c(Landroidx/preference/PreferenceScreen;)V
 
     :cond_1
     :goto_0

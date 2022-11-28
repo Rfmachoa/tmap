@@ -1,8 +1,25 @@
-.class public interface abstract synthetic Lcom/tmapmobility/tmap/exoplayer2/extractor/d0;
+.class public final synthetic Lcom/tmapmobility/tmap/exoplayer2/extractor/d0;
 .super Ljava/lang/Object;
-.source "package-info.java"
+.source "R8$$SyntheticClass"
 
 
-# annotations
-.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
-.end annotation
+# direct methods
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p2, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

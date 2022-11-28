@@ -3,6 +3,12 @@
 .source "MainThreadExecutor.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
 # static fields
 .field public static volatile a:Ljava/util/concurrent/ScheduledExecutorService;
 

@@ -1,22 +1,9 @@
 .class final Lcom/google/android/gms/common/api/internal/zacd;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/OnCompleteListener;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/OnCompleteListener<",
-        "TT;>;"
-    }
-.end annotation
 
 
 # instance fields
@@ -25,13 +12,6 @@
 .field private final zab:I
 
 .field private final zac:Lcom/google/android/gms/common/api/internal/ApiKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 .field private final zad:J
 
@@ -52,19 +32,6 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/GoogleApiManager;",
-            "I",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;JJ",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zacd;->zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
@@ -83,20 +50,6 @@
 .method public static zaa(Lcom/google/android/gms/common/api/internal/GoogleApiManager;ILcom/google/android/gms/common/api/internal/ApiKey;)Lcom/google/android/gms/common/api/internal/zacd;
     .locals 12
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/api/internal/GoogleApiManager;",
-            "I",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;)",
-            "Lcom/google/android/gms/common/api/internal/zacd<",
-            "TT;>;"
-        }
     .end annotation
 
     .line 1
@@ -257,17 +210,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;",
-            "Lcom/google/android/gms/common/internal/BaseGmsClient<",
-            "*>;I)",
-            "Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;"
-        }
-    .end annotation
-
     .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getTelemetryConfiguration()Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;
 
@@ -350,14 +292,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TT;>;)V"
-        }
     .end annotation
 
     move-object/from16 v0, p0

@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(Lu4/b;Ljava/lang/Exception;Lcom/bumptech/glide/load/data/d;Lcom/bumptech/glide/load/DataSource;)V
+.method public abstract a(Lr6/b;Ljava/lang/Exception;Lcom/bumptech/glide/load/data/d;Lcom/bumptech/glide/load/DataSource;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Ljava/lang/Exception;",
             "Lcom/bumptech/glide/load/data/d<",
             "*>;",
@@ -29,10 +29,7 @@
     .end annotation
 .end method
 
-.method public abstract c()V
-.end method
-
-.method public abstract e(Lu4/b;Ljava/lang/Object;Lcom/bumptech/glide/load/data/d;Lcom/bumptech/glide/load/DataSource;Lu4/b;)V
+.method public abstract b(Lr6/b;Ljava/lang/Object;Lcom/bumptech/glide/load/data/d;Lcom/bumptech/glide/load/DataSource;Lr6/b;)V
     .param p2    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -40,13 +37,16 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Ljava/lang/Object;",
             "Lcom/bumptech/glide/load/data/d<",
             "*>;",
             "Lcom/bumptech/glide/load/DataSource;",
-            "Lu4/b;",
+            "Lr6/b;",
             ")V"
         }
     .end annotation
+.end method
+
+.method public abstract c()V
 .end method

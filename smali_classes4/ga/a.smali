@@ -1,68 +1,77 @@
 .class public Lga/a;
-.super Ljava/lang/Object;
-.source "ActionCode.java"
+.super Lga/b;
+.source "AsyncHttpsClient.java"
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "basic"
-
-.field public static final b:Ljava/lang/String; = "dm_basic"
-
-.field public static final c:Ljava/lang/String; = "media.play"
-
-.field public static final d:Ljava/lang/String; = "connect.call"
-
-.field public static final e:Ljava/lang/String; = "connect.call.retry"
-
-.field public static final f:Ljava/lang/String; = "connect.call.missed"
-
-.field public static final g:Ljava/lang/String; = "connect.call.emergency"
-
-.field public static final h:Ljava/lang/String; = "connect.call.cscenter"
-
-.field public static final i:Ljava/lang/String; = "receive.call"
-
-.field public static final j:Ljava/lang/String; = "receive.call.accept"
-
-.field public static final k:Ljava/lang/String; = "receive.call.reject"
-
-.field public static final l:Ljava/lang/String; = "receive.call.display.select"
-
-.field public static final m:Ljava/lang/String; = "waiting.call.received"
-
-.field public static final n:Ljava/lang/String; = "send.msg"
-
-.field public static final o:Ljava/lang/String; = "send.msg.arrival_time"
-
-.field public static final p:Ljava/lang/String; = "send.msg.cur_loc"
-
-.field public static final q:Ljava/lang/String; = "send.msg.reject"
-
-.field public static final r:Ljava/lang/String; = "send.msg.reject.on.call.received"
-
-.field public static final s:Ljava/lang/String; = "read.msg"
-
-.field public static final t:Ljava/lang/String; = "ask.order"
-
-.field public static final u:Ljava/lang/String; = "ask.order.cancel"
-
-.field public static final v:Ljava/lang/String; = "ask.order.list"
-
-.field public static final w:Ljava/lang/String; = "ask.order.balance"
-
-.field public static final x:Ljava/lang/String; = "result.order"
-
-.field public static final y:Ljava/lang/String; = "result.order.cancel"
-
-.field public static final z:Ljava/lang/String; = "result.order.validation"
+# instance fields
+.field public final e:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
 .method public constructor <init>()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Lga/b;-><init>()V
+
+    const-string v0, "Accept"
+
+    const-string v1, "application/fido.trusted-apps+json"
+
+    .line 2
+    invoke-super {p0, v0, v1}, Lga/b;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "User-Agent"
+
+    const-string v1, "SKP-FIDO-CLIENT"
+
+    .line 3
+    invoke-super {p0, v0, v1}, Lga/b;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Cache-Control"
+
+    const-string v1, "no-cache"
+
+    .line 4
+    invoke-super {p0, v0, v1}, Lga/b;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Pragma"
+
+    .line 5
+    invoke-super {p0, v0, v1}, Lga/b;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 6
+    invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lga/a;->e:Ljava/util/concurrent/ExecutorService;
+
+    return-void
+.end method
+
+.method public static synthetic e(Lga/a;Ljava/lang/String;Lga/c;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-super {p0, p1, p2}, Lga/b;->c(Ljava/lang/String;Lga/c;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public c(Ljava/lang/String;Lga/c;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lga/a;->e:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lga/a$a;
+
+    invoke-direct {v1, p0, p1, p2}, Lga/a$a;-><init>(Lga/a;Ljava/lang/String;Lga/c;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

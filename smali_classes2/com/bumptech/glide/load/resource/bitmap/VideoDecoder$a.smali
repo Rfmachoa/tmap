@@ -3,7 +3,7 @@
 .source "VideoDecoder.java"
 
 # interfaces
-.implements Lu4/d$b;
+.implements Lr6/d$b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lu4/d$b<",
+        "Lr6/d$b<",
         "Ljava/lang/Long;",
         ">;"
     }

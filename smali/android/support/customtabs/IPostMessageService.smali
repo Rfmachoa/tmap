@@ -9,7 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/customtabs/IPostMessageService$Stub;
+        Landroid/support/customtabs/IPostMessageService$Stub;,
+        Landroid/support/customtabs/IPostMessageService$Default;
     }
 .end annotation
 

@@ -9,18 +9,26 @@
 # instance fields
 .field public final synthetic a:Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;
 
-.field public final synthetic b:Landroid/graphics/Rect;
+.field public final synthetic b:F
+
+.field public final synthetic c:F
+
+.field public final synthetic d:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)V
+.method public synthetic constructor <init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FFF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroidx/car/app/utils/l;->a:Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;
 
-    iput-object p2, p0, Landroidx/car/app/utils/l;->b:Landroid/graphics/Rect;
+    iput p2, p0, Landroidx/car/app/utils/l;->b:F
+
+    iput p3, p0, Landroidx/car/app/utils/l;->c:F
+
+    iput p4, p0, Landroidx/car/app/utils/l;->d:F
 
     return-void
 .end method
@@ -28,13 +36,17 @@
 
 # virtual methods
 .method public final a()Ljava/lang/Object;
-    .locals 2
+    .locals 4
 
     iget-object v0, p0, Landroidx/car/app/utils/l;->a:Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;
 
-    iget-object v1, p0, Landroidx/car/app/utils/l;->b:Landroid/graphics/Rect;
+    iget v1, p0, Landroidx/car/app/utils/l;->b:F
 
-    invoke-static {v0, v1}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->d(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)Ljava/lang/Object;
+    iget v2, p0, Landroidx/car/app/utils/l;->c:F
+
+    iget v3, p0, Landroidx/car/app/utils/l;->d:F
+
+    invoke-static {v0, v1, v2, v3}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->g(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FFF)Ljava/lang/Object;
 
     move-result-object v0
 

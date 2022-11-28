@@ -1,9 +1,8 @@
 .class public Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;
-.super Ljava/lang/Object;
+.super Lcom/fasterxml/jackson/databind/deser/Deserializers$Base;
 .source "SimpleDeserializers.java"
 
 # interfaces
-.implements Lcom/fasterxml/jackson/databind/deser/Deserializers;
 .implements Ljava/io/Serializable;
 
 
@@ -31,7 +30,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/fasterxml/jackson/databind/deser/Deserializers$Base;-><init>()V
 
     const/4 v0, 0x0
 
@@ -60,7 +59,7 @@
     .end annotation
 
     .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/fasterxml/jackson/databind/deser/Deserializers$Base;-><init>()V
 
     const/4 v0, 0x0
 
@@ -76,6 +75,46 @@
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->addDeserializers(Ljava/util/Map;)V
 
     return-void
+.end method
+
+.method private final _find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/JavaType;",
+            ")",
+            "Lcom/fasterxml/jackson/databind/JsonDeserializer<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 2
+    :cond_0
+    new-instance v1, Lcom/fasterxml/jackson/databind/type/ClassKey;
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    return-object p1
 .end method
 
 
@@ -212,30 +251,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -260,30 +279,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -310,30 +309,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -360,30 +339,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -487,30 +446,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -538,30 +477,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -588,30 +507,10 @@
     .end annotation
 
     .line 1
-    iget-object p2, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_find(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2, p3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    :goto_0
     return-object p1
 .end method
 
@@ -645,8 +544,9 @@
 
     const/4 p1, 0x0
 
-    goto :goto_0
+    return-object p1
 
+    .line 2
     :cond_0
     new-instance p3, Lcom/fasterxml/jackson/databind/type/ClassKey;
 
@@ -658,6 +558,43 @@
 
     check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
-    :goto_0
     return-object p1
+.end method
+
+.method public hasDeserializerFor(Lcom/fasterxml/jackson/databind/DeserializationConfig;Ljava/lang/Class;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/DeserializationConfig;",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lcom/fasterxml/jackson/databind/module/SimpleDeserializers;->_classMappings:Ljava/util/HashMap;
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Lcom/fasterxml/jackson/databind/type/ClassKey;
+
+    invoke-direct {v0, p2}, Lcom/fasterxml/jackson/databind/type/ClassKey;-><init>(Ljava/lang/Class;)V
+
+    .line 2
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 .end method

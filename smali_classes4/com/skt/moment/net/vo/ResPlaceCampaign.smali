@@ -255,6 +255,14 @@
 
 .method public setCongratsButtonTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congratsButtonTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->congratsButtonTitle:Ljava/lang/String;
@@ -264,6 +272,14 @@
 
 .method public setCongratsMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congratsMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->congratsMessage:Ljava/lang/String;
@@ -273,6 +289,14 @@
 
 .method public setCongratsThumbnailImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congratsThumbnailImagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->congratsThumbnailImagePath:Ljava/lang/String;
@@ -282,6 +306,14 @@
 
 .method public setCongratsThumbnailName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congratsThumbnailName"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->congratsThumbnailName:Ljava/lang/String;
@@ -291,6 +323,14 @@
 
 .method public setCongratsTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "congratsTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->congratsTitle:Ljava/lang/String;
@@ -300,6 +340,14 @@
 
 .method public setCouponButtonTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponButtonTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->couponButtonTitle:Ljava/lang/String;
@@ -309,6 +357,14 @@
 
 .method public setCouponCount(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponCount"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->couponCount:I
@@ -318,6 +374,14 @@
 
 .method public setCouponExpireYmd(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponExpireYmd"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->couponExpireYmd:Ljava/lang/String;
@@ -327,6 +391,14 @@
 
 .method public setCouponExtensionDay(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponExtensionDay"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->couponExtensionDay:I
@@ -336,6 +408,14 @@
 
 .method public setCouponYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->couponYn:Ljava/lang/String;
@@ -345,6 +425,14 @@
 
 .method public setLandingUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "landingUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->landingUrl:Ljava/lang/String;
@@ -354,6 +442,14 @@
 
 .method public setLogoImageFilePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "logoImageFilePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->logoImageFilePath:Ljava/lang/String;
@@ -363,6 +459,14 @@
 
 .method public setOfferCategory(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "offerCategory"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->offerCategory:Ljava/lang/String;
@@ -372,6 +476,14 @@
 
 .method public setOfferMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "offerMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->offerMessage:Ljava/lang/String;
@@ -381,6 +493,14 @@
 
 .method public setOfferTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "offerTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->offerTitle:Ljava/lang/String;
@@ -390,6 +510,14 @@
 
 .method public setPlaceCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCampaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->placeCampaignId:Ljava/lang/Integer;
@@ -399,6 +527,14 @@
 
 .method public setPlaceContractId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeContractId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->placeContractId:Ljava/lang/Integer;
@@ -408,6 +544,14 @@
 
 .method public setPoiDetailUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poiDetailUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->poiDetailUrl:Ljava/lang/String;
@@ -417,6 +561,14 @@
 
 .method public setPoiId(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poiId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->poiId:Ljava/lang/String;
@@ -426,6 +578,14 @@
 
 .method public setSeed(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seed"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->seed:Ljava/lang/Integer;
@@ -435,6 +595,14 @@
 
 .method public setTypeCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "typeCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResPlaceCampaign;->typeCode:Ljava/lang/String;

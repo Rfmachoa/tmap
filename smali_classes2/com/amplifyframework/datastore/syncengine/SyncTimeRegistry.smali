@@ -20,42 +20,42 @@
     return-void
 .end method
 
-.method public static synthetic a(Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method public static synthetic a(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$null$2(Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$null$2(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$saveLastDeltaSyncTime$3(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$saveLastDeltaSyncTime$3(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lek/c;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lai/r0;)V
+.method public static synthetic c(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lek/r0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$lookupLastSyncTime$1(Ljava/lang/String;Lai/r0;)V
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$lookupLastSyncTime$1(Ljava/lang/String;Lek/r0;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$saveLastBaseSyncTime$5(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$saveLastBaseSyncTime$5(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lek/c;)V
 
     return-void
 .end method
 
-.method public static synthetic e(Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method public static synthetic e(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$null$4(Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$null$4(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method
@@ -145,7 +145,7 @@
 
     const-string v2, ", but found "
 
-    invoke-static {v1, p1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -171,15 +171,15 @@
     throw p2
 .end method
 
-.method public static synthetic f(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lai/r0;Ljava/util/Iterator;)V
+.method public static synthetic f(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lek/r0;Ljava/util/Iterator;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$null$0(Ljava/lang/String;Lai/r0;Ljava/util/Iterator;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->lambda$null$0(Ljava/lang/String;Lek/r0;Ljava/util/Iterator;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$lookupLastSyncTime$1(Ljava/lang/String;Lai/r0;)V
+.method private synthetic lambda$lookupLastSyncTime$1(Ljava/lang/String;Lek/r0;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -207,22 +207,22 @@
 
     move-result-object v0
 
-    new-instance v3, Lcom/amplifyframework/datastore/syncengine/y3;
+    new-instance v3, Lcom/amplifyframework/datastore/syncengine/t3;
 
-    invoke-direct {v3, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/y3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lai/r0;)V
+    invoke-direct {v3, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/t3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;Lek/r0;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     invoke-interface {v1, v2, v0, v3, p1}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->query(Ljava/lang/Class;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$null$0(Ljava/lang/String;Lai/r0;Ljava/util/Iterator;)V
+.method private synthetic lambda$null$0(Ljava/lang/String;Lek/r0;Ljava/util/Iterator;)V
     .locals 0
 
     .line 1
@@ -240,7 +240,7 @@
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lai/r0;->onSuccess(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Lek/r0;->onSuccess(Ljava/lang/Object;)V
     :try_end_0
     .catch Lcom/amplifyframework/datastore/DataStoreException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -250,31 +250,31 @@
     move-exception p1
 
     .line 3
-    invoke-interface {p2, p1}, Lai/r0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p2, p1}, Lek/r0;->onError(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
 .end method
 
-.method private static synthetic lambda$null$2(Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method private static synthetic lambda$null$2(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lai/c;->onComplete()V
+    invoke-interface {p0}, Lek/c;->onComplete()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$null$4(Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method private static synthetic lambda$null$4(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
     .line 1
-    invoke-interface {p0}, Lai/c;->onComplete()V
+    invoke-interface {p0}, Lek/c;->onComplete()V
 
     return-void
 .end method
 
-.method private synthetic lambda$saveLastBaseSyncTime$5(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+.method private synthetic lambda$saveLastBaseSyncTime$5(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lek/c;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -292,15 +292,15 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/amplifyframework/datastore/syncengine/x3;
+    new-instance v4, Lcom/amplifyframework/datastore/syncengine/v3;
 
-    invoke-direct {v4, p2}, Lcom/amplifyframework/datastore/syncengine/x3;-><init>(Lai/c;)V
+    invoke-direct {v4, p2}, Lcom/amplifyframework/datastore/syncengine/v3;-><init>(Lek/c;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lcom/amplifyframework/datastore/n;
+    new-instance v5, Lcom/amplifyframework/datastore/h;
 
-    invoke-direct {v5, p2}, Lcom/amplifyframework/datastore/n;-><init>(Lai/c;)V
+    invoke-direct {v5, p2}, Lcom/amplifyframework/datastore/h;-><init>(Lek/c;)V
 
     move-object v1, p1
 
@@ -310,7 +310,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$saveLastDeltaSyncTime$3(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+.method private synthetic lambda$saveLastDeltaSyncTime$3(Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lek/c;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -328,15 +328,15 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/amplifyframework/datastore/syncengine/w3;
+    new-instance v4, Lcom/amplifyframework/datastore/syncengine/u3;
 
-    invoke-direct {v4, p2}, Lcom/amplifyframework/datastore/syncengine/w3;-><init>(Lai/c;)V
+    invoke-direct {v4, p2}, Lcom/amplifyframework/datastore/syncengine/u3;-><init>(Lek/c;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lcom/amplifyframework/datastore/n;
+    new-instance v5, Lcom/amplifyframework/datastore/h;
 
-    invoke-direct {v5, p2}, Lcom/amplifyframework/datastore/n;-><init>(Lai/c;)V
+    invoke-direct {v5, p2}, Lcom/amplifyframework/datastore/h;-><init>(Lek/c;)V
 
     move-object v1, p1
 
@@ -348,7 +348,7 @@
 
 
 # virtual methods
-.method public lookupLastSyncTime(Ljava/lang/String;)Lai/p0;
+.method public lookupLastSyncTime(Ljava/lang/String;)Lek/p0;
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -359,25 +359,25 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/syncengine/SyncTime;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/v3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/y3;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/v3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/y3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public saveLastBaseSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/a;
+.method public saveLastBaseSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/a;
     .locals 2
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -416,18 +416,18 @@
 
     .line 4
     :goto_0
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/u3;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/x3;
 
-    invoke-direct {p2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/u3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;)V
+    invoke-direct {p2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/x3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;)V
 
-    invoke-static {p2}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {p2}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public saveLastDeltaSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lai/a;
+.method public saveLastDeltaSyncTime(Ljava/lang/String;Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lek/a;
     .locals 2
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -466,11 +466,11 @@
 
     .line 4
     :goto_0
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/t3;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/w3;
 
-    invoke-direct {p2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/t3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;)V
+    invoke-direct {p2, p0, p1}, Lcom/amplifyframework/datastore/syncengine/w3;-><init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;)V
 
-    invoke-static {p2}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {p2}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object p1
 

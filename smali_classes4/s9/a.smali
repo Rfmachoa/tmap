@@ -1,101 +1,78 @@
 .class public Ls9/a;
 .super Ljava/lang/Object;
-.source "AudioPlayerInfo.java"
-
-
-# instance fields
-.field private a:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "token"
-    .end annotation
-.end field
-
-.field private b:J
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "offset_in_milliseconds"
-    .end annotation
-.end field
-
-.field private c:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "player_activity"
-    .end annotation
-.end field
-
-.field private d:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "version"
-    .end annotation
-.end field
+.source "Utils.java"
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "1.1"
-
-    .line 2
-    iput-object v0, p0, Ls9/a;->d:Ljava/lang/String;
-
     return-void
 .end method
 
-
-# virtual methods
-.method public a()J
-    .locals 2
+.method public static a(Landroid/content/res/Resources;)Z
+    .locals 1
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x11
+    .end annotation
 
     .line 1
-    iget-wide v0, p0, Ls9/a;->b:J
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    return-wide v0
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLayoutDirection()I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
-.method public b()Ljava/lang/String;
+.method public static b(Landroid/content/res/Resources;F)I
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p0
+
+    float-to-int p0, p1
+
+    return p0
+.end method
+
+.method public static c(Landroid/content/res/Resources;F)I
     .locals 1
 
     .line 1
-    iget-object v0, p0, Ls9/a;->c:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return-object v0
-.end method
+    move-result-object p0
 
-.method public c()Ljava/lang/String;
-    .locals 1
+    const/4 v0, 0x2
 
-    .line 1
-    iget-object v0, p0, Ls9/a;->a:Ljava/lang/String;
+    invoke-static {v0, p1, p0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
-    return-object v0
-.end method
+    move-result p0
 
-.method public d(J)V
-    .locals 0
+    float-to-int p0, p0
 
-    .line 1
-    iput-wide p1, p0, Ls9/a;->b:J
-
-    return-void
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Ls9/a;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public f(Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Ls9/a;->a:Ljava/lang/String;
-
-    return-void
+    return p0
 .end method

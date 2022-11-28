@@ -1,13 +1,8 @@
-.class public interface abstract Llg/b;
+.class public interface abstract synthetic Llg/b;
 .super Ljava/lang/Object;
-.source "EofSensor.java"
+.source "package-info.java"
 
 
 # annotations
-.annotation runtime Ljava/lang/Deprecated;
+.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
 .end annotation
-
-
-# virtual methods
-.method public abstract isEof()Z
-.end method

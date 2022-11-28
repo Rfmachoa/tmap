@@ -294,7 +294,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
@@ -314,7 +314,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2, p3}, Lm5/m;->g(IILandroid/graphics/Bitmap$Config;)I
+    invoke-static {p1, p2, p3}, Lj7/n;->g(IILandroid/graphics/Bitmap$Config;)I
 
     move-result p1
 
@@ -330,7 +330,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result p1
 
@@ -341,7 +341,7 @@
     .locals 3
 
     .line 1
-    invoke-static {p1}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
@@ -512,7 +512,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1, p2, p3}, Lm5/m;->g(IILandroid/graphics/Bitmap$Config;)I
+    invoke-static {p1, p2, p3}, Lj7/n;->g(IILandroid/graphics/Bitmap$Config;)I
 
     move-result v0
 
@@ -706,7 +706,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {v0}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {v0}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result v1
 

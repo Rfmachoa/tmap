@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ldagger/internal/e;
-.implements Lsg/a;
+.implements Lwi/a;
 
 
 # annotations
@@ -16,7 +16,7 @@
         "Ljava/lang/Object;",
         "Ldagger/internal/e<",
         "TT;>;",
-        "Lsg/a<",
+        "Lwi/a<",
         "TT;>;"
     }
 .end annotation

@@ -38,7 +38,7 @@
 
     check-cast p1, Landroid/database/Cursor;
 
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->G(Landroid/database/Cursor;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->x(Landroid/database/Cursor;)Ljava/util/List;
 
     move-result-object p1
 

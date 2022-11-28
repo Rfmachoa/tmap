@@ -63,13 +63,13 @@
         "<init>",
         "()V",
         "Companion",
-        "navigation-sdk_release"
+        "TmapEngineCommonData_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -81,6 +81,9 @@
 .end field
 
 .field private static volatile instance:Lcom/skt/tmap/engine/navigation/TTSHelper;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private static mMuteState:B
 
@@ -89,6 +92,9 @@
 .field private final MUTE_STATE_NONE:B
 
 .field private scriptListener:Lcom/skt/tmap/engine/navigation/TTSScriptListener;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -114,7 +120,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 2
+    .line 1
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/TmapNavigationAudio;-><init>()V
 
     return-void
@@ -123,7 +129,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/TTSHelper;-><init>()V
 
     return-void

@@ -340,10 +340,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lr1/i;
+    check-cast v1, Landroidx/core/util/k;
 
     .line 3
-    iget-object v2, v1, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v2, v1, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/os/Bundle;
 
@@ -356,7 +356,7 @@
     .line 4
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;->d:Landroidx/media/MediaBrowserServiceCompat;
 
-    iget-object v1, v1, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v1, v1, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Bundle;
 
@@ -456,7 +456,7 @@
 
     const-string v4, "extra_messenger"
 
-    invoke-static {v2, v4, v3}, Landroidx/core/app/i;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {v2, v4, v3}, Landroidx/core/app/k;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     .line 7
     iget-object v3, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;->d:Landroidx/media/MediaBrowserServiceCompat;
@@ -466,7 +466,7 @@
     if-eqz v3, :cond_1
 
     .line 8
-    invoke-virtual {v3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v3
 
@@ -486,7 +486,7 @@
     const-string v4, "extra_session_binder"
 
     .line 10
-    invoke-static {v2, v4, v3}, Landroidx/core/app/i;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {v2, v4, v3}, Landroidx/core/app/k;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     goto :goto_1
 
@@ -673,7 +673,7 @@
     if-nez v0, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -707,7 +707,7 @@
     const-string v4, "extra_session_binder"
 
     .line 5
-    invoke-static {v2, v4, v3}, Landroidx/core/app/i;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {v2, v4, v3}, Landroidx/core/app/k;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     goto :goto_0
 
@@ -721,7 +721,7 @@
     :cond_1
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;->b:Landroid/service/media/MediaBrowserService;
 
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->g()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i()Ljava/lang/Object;
 
     move-result-object p1
 

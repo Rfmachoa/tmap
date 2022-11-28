@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;Lma/d;Ljava/lang/String;)V
+.method public a(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;Ljc/d;Ljava/lang/String;)V
     .locals 0
 
     return-void

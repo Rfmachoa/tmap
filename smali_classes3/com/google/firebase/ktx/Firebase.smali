@@ -22,14 +22,17 @@
     k = 0x1
     mv = {
         0x1,
-        0x1,
-        0x10
+        0x4,
+        0x2
     }
 .end annotation
 
 
 # static fields
 .field public static final INSTANCE:Lcom/google/firebase/ktx/Firebase;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods

@@ -173,7 +173,7 @@
 
     move-object v9, v1
 
-    invoke-static/range {v5 .. v10}, Lcom/apollographql/apollo/api/ResponseField;->f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLc4/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
+    invoke-static/range {v5 .. v10}, Lcom/apollographql/apollo/api/ResponseField;->f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLz5/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
 
     move-result-object v4
 
@@ -190,7 +190,7 @@
 
     const-string v6, "notice"
 
-    invoke-static/range {v5 .. v10}, Lcom/apollographql/apollo/api/ResponseField;->f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLc4/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
+    invoke-static/range {v5 .. v10}, Lcom/apollographql/apollo/api/ResponseField;->f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLz5/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
 
     move-result-object v1
 
@@ -224,7 +224,7 @@
 
     const-string v6, "ttlTimeStamp"
 
-    invoke-static/range {v5 .. v10}, Lcom/apollographql/apollo/api/ResponseField;->f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLc4/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
+    invoke-static/range {v5 .. v10}, Lcom/apollographql/apollo/api/ResponseField;->f(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ZLz5/o;Ljava/util/List;)Lcom/apollographql/apollo/api/ResponseField$d;
 
     move-result-object v1
 
@@ -817,7 +817,7 @@
     return v0
 .end method
 
-.method public marshaller()Lc4/k;
+.method public marshaller()Lz5/k;
     .locals 1
 
     .line 1

@@ -353,7 +353,7 @@
     const-string v0, "FirebaseDatabase"
 
     .line 2
-    invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/c0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/h0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -567,7 +567,7 @@
 
     const-string v2, "Invalid Firebase Database url specified: "
 
-    invoke-static {v2, p0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

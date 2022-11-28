@@ -643,7 +643,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "update(Uri = "
+    const-string v2, "update(Uri = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -693,7 +693,7 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/sync/database/AladdinGeneralProvider;->a:Ljava/lang/String;
 
-    const-string/jumbo p4, "update args.table = "
+    const-string p4, "update args.table = "
 
     invoke-static {p4}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

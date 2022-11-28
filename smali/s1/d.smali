@@ -1,548 +1,441 @@
 .class public final Ls1/d;
 .super Ljava/lang/Object;
-.source "DisplayCutoutCompat.java"
+.source "ComplexColorCompat.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+
+# static fields
+.field public static final d:Ljava/lang/String; = "ComplexColorCompat"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Landroid/graphics/Shader;
+
+.field public final b:Landroid/content/res/ColorStateList;
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Ljava/util/List;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
+.method public constructor <init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
+    .locals 0
+    .param p3    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ls1/d;->a:Landroid/graphics/Shader;
+
+    .line 3
+    iput-object p2, p0, Ls1/d;->b:Landroid/content/res/ColorStateList;
+
+    .line 4
+    iput p3, p0, Ls1/d;->c:I
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Ls1/d;
+    .locals 4
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(",
-            "Landroid/graphics/Rect;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)V"
+            Ljava/io/IOException;,
+            Lorg/xmlpull/v1/XmlPullParserException;
         }
     .end annotation
 
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Landroid/view/DisplayCutout;
-
-    invoke-direct {v0, p1, p2}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-direct {p0, v0}, Ls1/d;-><init>(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lc1/l;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lc1/l;)V
-    .locals 0
-    .param p1    # Lc1/l;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p6    # Lc1/l;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 2
-    invoke-static/range {p1 .. p6}, Ls1/d;->a(Lc1/l;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lc1/l;)Landroid/view/DisplayCutout;
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ls1/d;-><init>(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static a(Lc1/l;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lc1/l;)Landroid/view/DisplayCutout;
-    .locals 8
-    .param p0    # Lc1/l;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Lc1/l;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-static {}, Landroidx/core/os/BuildCompat;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     .line 2
-    new-instance v0, Landroid/view/DisplayCutout;
+    invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
-    invoke-virtual {p0}, Lc1/l;->h()Landroid/graphics/Insets;
-
-    move-result-object v2
+    move-result-object v0
 
     .line 3
-    invoke-virtual {p5}, Lc1/l;->h()Landroid/graphics/Insets;
+    :goto_0
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result-object v7
+    move-result v1
 
-    move-object v1, v0
+    const/4 v2, 0x2
 
-    move-object v3, p1
+    if-eq v1, v2, :cond_0
 
-    move-object v4, p2
+    const/4 v3, 0x1
 
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v1 .. v7}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Insets;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Insets;)V
-
-    return-object v0
-
-    .line 4
-    :cond_0
-    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x1d
-
-    if-lt p5, v0, :cond_1
-
-    .line 5
-    new-instance p5, Landroid/view/DisplayCutout;
-
-    invoke-virtual {p0}, Lc1/l;->h()Landroid/graphics/Insets;
-
-    move-result-object v2
-
-    move-object v1, p5
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-direct/range {v1 .. v6}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Insets;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    return-object p5
-
-    :cond_1
-    const/16 v0, 0x1c
-
-    if-lt p5, v0, :cond_6
-
-    .line 6
-    new-instance p5, Landroid/graphics/Rect;
-
-    iget v0, p0, Lc1/l;->a:I
-
-    iget v1, p0, Lc1/l;->b:I
-
-    iget v2, p0, Lc1/l;->c:I
-
-    iget p0, p0, Lc1/l;->d:I
-
-    invoke-direct {p5, v0, v1, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 7
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p1, :cond_2
-
-    .line 8
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    if-eqz p2, :cond_3
-
-    .line 9
-    invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_3
-    if-eqz p3, :cond_4
-
-    .line 10
-    invoke-virtual {p0, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    if-eqz p4, :cond_5
-
-    .line 11
-    invoke-virtual {p0, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 12
-    :cond_5
-    new-instance p1, Landroid/view/DisplayCutout;
-
-    invoke-direct {p1, p5, p0}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
-
-    return-object p1
-
-    :cond_6
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static i(Ljava/lang/Object;)Ls1/d;
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
+    if-eq v1, v3, :cond_0
 
     goto :goto_0
 
-    .line 1
     :cond_0
+    if-ne v1, v2, :cond_3
+
+    .line 4
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 5
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "gradient"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    const-string v2, "selector"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 6
+    invoke-static {p0, p1, v0, p2}, Ls1/c;->b(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ls1/d;->c(Landroid/content/res/ColorStateList;)Ls1/d;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 7
+    :cond_1
+    new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ": unsupported complex color tag "
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 8
+    :cond_2
+    invoke-static {p0, p1, v0, p2}, Ls1/f;->c(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ls1/d;->d(Landroid/graphics/Shader;)Ls1/d;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 9
+    :cond_3
+    new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
+
+    const-string p1, "No start tag found"
+
+    invoke-direct {p0, p1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static b(I)Ls1/d;
+    .locals 2
+    .param p0    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+
+    .line 1
     new-instance v0, Ls1/d;
 
-    invoke-direct {v0, p0}, Ls1/d;-><init>(Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    move-object p0, v0
+    invoke-direct {v0, v1, v1, p0}, Ls1/d;-><init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
 
-    :goto_0
+    return-object v0
+.end method
+
+.method public static c(Landroid/content/res/ColorStateList;)Ls1/d;
+    .locals 3
+    .param p0    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    new-instance v0, Ls1/d;
+
+    invoke-virtual {p0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, p0, v1}, Ls1/d;-><init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
+
+    return-object v0
+.end method
+
+.method public static d(Landroid/graphics/Shader;)Ls1/d;
+    .locals 3
+    .param p0    # Landroid/graphics/Shader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    new-instance v0, Ls1/d;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, v1, v2}, Ls1/d;-><init>(Landroid/graphics/Shader;Landroid/content/res/ColorStateList;I)V
+
+    return-object v0
+.end method
+
+.method public static g(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Ls1/d;
+    .locals 0
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorRes;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    :try_start_0
+    invoke-static {p0, p1, p2}, Ls1/d;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Ls1/d;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "ComplexColorCompat"
+
+    const-string p2, "Failed to inflate ComplexColor."
+
+    .line 2
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 p0, 0x0
+
     return-object p0
 .end method
 
 
 # virtual methods
-.method public b()Ljava/util/List;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 3
-    :cond_0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public c()I
-    .locals 2
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public d()I
-    .locals 2
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public e()I
-    .locals 2
+    .locals 1
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1c
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    iget v0, p0, Ls1/d;->c:I
 
     return v0
 .end method
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
+.method public f()Landroid/graphics/Shader;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    const-class v0, Ls1/d;
+    iget-object v0, p0, Ls1/d;->a:Landroid/graphics/Shader;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public h()Z
+    .locals 1
 
-    if-eq v0, v1, :cond_1
+    .line 1
+    iget-object v0, p0, Ls1/d;->a:Landroid/graphics/Shader;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 2
-    :cond_1
-    check-cast p1, Ls1/d;
+    :cond_0
+    const/4 v0, 0x0
 
-    .line 3
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Ls1/d;->a:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
     :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 .end method
 
-.method public f()I
-    .locals 2
+.method public i()Z
+    .locals 1
 
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v0, p0, Ls1/d;->a:Landroid/graphics/Shader;
 
-    const/16 v1, 0x1c
+    if-nez v0, :cond_0
 
-    if-lt v0, v1, :cond_0
+    iget-object v0, p0, Ls1/d;->b:Landroid/content/res/ColorStateList;
 
-    .line 2
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast v0, Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
+    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method public g()Lc1/l;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public j([I)Z
+    .locals 2
 
     .line 1
-    invoke-static {}, Landroidx/core/os/BuildCompat;->h()Z
+    invoke-virtual {p0}, Ls1/d;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getWaterfallInsets()Landroid/graphics/Insets;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lc1/l;->g(Landroid/graphics/Insets;)Lc1/l;
-
-    move-result-object v0
-
-    return-object v0
+    iget-object v0, p0, Ls1/d;->b:Landroid/content/res/ColorStateList;
 
     .line 3
-    :cond_0
-    sget-object v0, Lc1/l;->e:Lc1/l;
+    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public h()Landroid/view/DisplayCutout;
-    .locals 1
-    .annotation build Landroidx/annotation/RequiresApi;
-        api = 0x1c
-    .end annotation
+    .line 4
+    invoke-virtual {v0, p1, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
-    .line 1
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v0, Landroid/view/DisplayCutout;
+    .line 5
+    iget v0, p0, Ls1/d;->c:I
 
-    return-object v0
-.end method
+    if-eq p1, v0, :cond_0
 
-.method public hashCode()I
-    .locals 1
+    const/4 v0, 0x1
 
-    .line 1
-    iget-object v0, p0, Ls1/d;->a:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
+    .line 6
+    iput p1, p0, Ls1/d;->c:I
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    const/4 v0, 0x0
 
     :goto_0
     return v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "DisplayCutoutCompat{"
+.method public k(I)V
+    .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput p1, p0, Ls1/d;->c:I
 
-    move-result-object v0
+    return-void
+.end method
 
-    iget-object v1, p0, Ls1/d;->a:Ljava/lang/Object;
+.method public l()Z
+    .locals 1
 
-    const-string v2, "}"
+    .line 1
+    invoke-virtual {p0}, Ls1/d;->h()Z
 
-    invoke-static {v0, v1, v2}, Lx/c;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_1
 
-    return-object v0
+    iget v0, p0, Ls1/d;->c:I
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
 .end method

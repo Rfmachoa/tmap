@@ -8,33 +8,40 @@
     value = {
         Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$b;,
         Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;,
+        Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$SsaBorderStyle;,
         Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$SsaAlignment;
     }
 .end annotation
 
 
 # static fields
-.field public static final i:Ljava/lang/String; = "SsaStyle"
+.field public static final k:Ljava/lang/String; = "SsaStyle"
 
-.field public static final j:I = -0x1
+.field public static final l:I = -0x1
 
-.field public static final k:I = 0x1
+.field public static final m:I = 0x1
 
-.field public static final l:I = 0x2
+.field public static final n:I = 0x2
 
-.field public static final m:I = 0x3
+.field public static final o:I = 0x3
 
-.field public static final n:I = 0x4
+.field public static final p:I = 0x4
 
-.field public static final o:I = 0x5
+.field public static final q:I = 0x5
 
-.field public static final p:I = 0x6
+.field public static final r:I = 0x6
 
-.field public static final q:I = 0x7
+.field public static final s:I = 0x7
 
-.field public static final r:I = 0x8
+.field public static final t:I = 0x8
 
-.field public static final s:I = 0x9
+.field public static final u:I = 0x9
+
+.field public static final v:I = -0x1
+
+.field public static final w:I = 0x1
+
+.field public static final x:I = 0x3
 
 
 # instance fields
@@ -50,9 +57,15 @@
     .end annotation
 .end field
 
-.field public final d:F
+.field public final d:Ljava/lang/Integer;
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
 
-.field public final e:Z
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final e:F
 
 .field public final f:Z
 
@@ -60,11 +73,22 @@
 
 .field public final h:Z
 
+.field public final i:Z
+
+.field public final j:I
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;FZZZZ)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;FZZZZI)V
     .locals 0
     .param p3    # Ljava/lang/Integer;
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/Integer;
         .annotation build Landroidx/annotation/ColorInt;
         .end annotation
 
@@ -85,10 +109,10 @@
     iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->c:Ljava/lang/Integer;
 
     .line 5
-    iput p4, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->d:F
+    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->d:Ljava/lang/Integer;
 
     .line 6
-    iput-boolean p5, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e:Z
+    iput p5, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e:F
 
     .line 7
     iput-boolean p6, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->f:Z
@@ -99,6 +123,12 @@
     .line 9
     iput-boolean p8, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->h:Z
 
+    .line 10
+    iput-boolean p9, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->i:Z
+
+    .line 11
+    iput p10, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->j:I
+
     return-void
 .end method
 
@@ -106,7 +136,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->d(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e(Ljava/lang/String;)I
 
     move-result p0
 
@@ -114,312 +144,363 @@
 .end method
 
 .method public static b(Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;)Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;
-    .locals 14
+    .locals 18
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    const-string v0, "Style:"
+    move-object/from16 v1, p0
+
+    move-object/from16 v0, p1
+
+    const-string v2, "Style:"
 
     .line 1
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
 
-    const/4 v0, 0x6
+    const/4 v2, 0x6
 
     .line 2
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, ","
+    const-string v3, ","
 
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
     .line 3
-    array-length v1, v0
+    array-length v3, v2
 
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->i:I
+    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->k:I
 
-    const-string v3, "SsaStyle"
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
+    const-string v5, "SsaStyle"
 
     const/4 v6, 0x0
 
-    if-eq v1, v2, :cond_0
+    const/4 v7, 0x1
 
-    const/4 p1, 0x3
+    const/4 v8, 0x0
 
-    new-array p1, p1, [Ljava/lang/Object;
+    if-eq v3, v4, :cond_0
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Ljava/lang/Object;
 
     .line 4
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v0, v8
+
+    array-length v2, v2
+
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, p1, v6
+    aput-object v2, v0, v7
 
-    array-length v0, v0
+    const/4 v2, 0x2
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aput-object v1, v0, v2
+
+    const-string v1, "Skipping malformed \'Style:\' line (expected %s values, found %s): \'%s\'"
+
+    .line 5
+    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, p1, v5
-
-    const/4 v0, 0x2
-
-    aput-object p0, p1, v0
-
-    const-string p0, "Skipping malformed \'Style:\' line (expected %s values, found %s): \'%s\'"
-
-    .line 5
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->H(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
     .line 6
-    invoke-static {v3, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v4
+    return-object v6
 
     .line 7
     :cond_0
     :try_start_0
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;
+    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;
 
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->a:I
+    iget v4, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->a:I
 
-    aget-object v2, v0, v2
+    aget-object v4, v2, v4
 
     .line 8
-    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v4
 
     .line 9
-    iget v7, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->b:I
+    iget v9, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->b:I
 
-    const/4 v8, -0x1
+    const/4 v10, -0x1
 
-    if-eq v7, v8, :cond_1
+    if-eq v9, v10, :cond_1
 
     .line 10
-    aget-object v7, v0, v7
-
-    invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v7}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->d(Ljava/lang/String;)I
-
-    move-result v7
-
-    goto :goto_0
-
-    :cond_1
-    move v7, v8
-
-    .line 11
-    :goto_0
-    iget v9, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->c:I
-
-    if-eq v9, v8, :cond_2
-
-    .line 12
-    aget-object v9, v0, v9
+    aget-object v9, v2, v9
 
     invoke-virtual {v9}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v9}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->f(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v9}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e(Ljava/lang/String;)I
 
-    move-result-object v9
+    move-result v9
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_2
-    move-object v9, v4
+    :cond_1
+    move v9, v10
 
-    .line 13
-    :goto_1
-    iget v10, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->d:I
+    .line 11
+    :goto_0
+    iget v11, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->c:I
 
-    if-eq v10, v8, :cond_3
+    if-eq v11, v10, :cond_2
 
-    .line 14
-    aget-object v10, v0, v10
+    .line 12
+    aget-object v11, v2, v11
 
-    invoke-virtual {v10}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v10}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->g(Ljava/lang/String;)F
-
-    move-result v10
-
-    goto :goto_2
-
-    :cond_3
-    const v10, -0x800001
-
-    .line 15
-    :goto_2
-    iget v11, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->e:I
-
-    if-eq v11, v8, :cond_4
-
-    aget-object v11, v0, v11
-
-    .line 16
     invoke-virtual {v11}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v11
 
-    invoke-static {v11}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e(Ljava/lang/String;)Z
+    invoke-static {v11}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->h(Ljava/lang/String;)Ljava/lang/Integer;
 
-    move-result v11
+    move-result-object v11
 
-    if-eqz v11, :cond_4
+    goto :goto_1
 
-    move v11, v5
+    :cond_2
+    move-object v11, v6
 
-    goto :goto_3
+    .line 13
+    :goto_1
+    iget v12, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->d:I
 
-    :cond_4
-    move v11, v6
+    if-eq v12, v10, :cond_3
 
-    :goto_3
-    iget v12, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->f:I
+    .line 14
+    aget-object v12, v2, v12
 
-    if-eq v12, v8, :cond_5
-
-    aget-object v12, v0, v12
-
-    .line 17
     invoke-virtual {v12}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v12
 
-    invoke-static {v12}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e(Ljava/lang/String;)Z
+    invoke-static {v12}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->h(Ljava/lang/String;)Ljava/lang/Integer;
 
-    move-result v12
+    move-result-object v12
 
-    if-eqz v12, :cond_5
+    goto :goto_2
 
-    move v12, v5
+    :cond_3
+    move-object v12, v6
 
-    goto :goto_4
+    .line 15
+    :goto_2
+    iget v13, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->e:I
 
-    :cond_5
-    move v12, v6
+    if-eq v13, v10, :cond_4
 
-    :goto_4
-    iget v13, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->g:I
+    .line 16
+    aget-object v13, v2, v13
 
-    if-eq v13, v8, :cond_6
-
-    aget-object v13, v0, v13
-
-    .line 18
     invoke-virtual {v13}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v13
 
-    invoke-static {v13}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e(Ljava/lang/String;)Z
+    invoke-static {v13}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->i(Ljava/lang/String;)F
 
     move-result v13
 
-    if-eqz v13, :cond_6
+    goto :goto_3
 
-    move v13, v5
+    :cond_4
+    const v13, -0x800001
+
+    .line 17
+    :goto_3
+    iget v14, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->f:I
+
+    if-eq v14, v10, :cond_5
+
+    aget-object v14, v2, v14
+
+    .line 18
+    invoke-virtual {v14}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v14}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->f(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_5
+
+    move v14, v7
+
+    goto :goto_4
+
+    :cond_5
+    move v14, v8
+
+    :goto_4
+    iget v15, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->g:I
+
+    if-eq v15, v10, :cond_6
+
+    aget-object v15, v2, v15
+
+    .line 19
+    invoke-virtual {v15}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-static {v15}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->f(Ljava/lang/String;)Z
+
+    move-result v15
+
+    if-eqz v15, :cond_6
+
+    move v15, v7
 
     goto :goto_5
 
     :cond_6
-    move v13, v6
+    move v15, v8
 
     :goto_5
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->h:I
+    iget v7, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->h:I
 
-    if-eq p1, v8, :cond_7
+    if-eq v7, v10, :cond_7
 
-    aget-object p1, v0, p1
+    aget-object v7, v2, v7
 
-    .line 19
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+    .line 20
+    invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v7
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->e(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->f(Ljava/lang/String;)Z
 
-    move-result p1
+    move-result v7
 
-    if-eqz p1, :cond_7
+    if-eqz v7, :cond_7
 
-    move p1, v5
+    const/16 v17, 0x1
 
     goto :goto_6
 
     :cond_7
-    move p1, v6
+    move/from16 v17, v8
 
     :goto_6
-    move-object v5, v1
+    iget v7, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->i:I
 
-    move-object v6, v2
+    if-eq v7, v10, :cond_8
 
-    move-object v8, v9
+    aget-object v7, v2, v7
 
-    move v9, v10
+    .line 21
+    invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move v10, v11
+    move-result-object v7
 
-    move v11, v12
+    invoke-static {v7}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->f(Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_8
+
+    const/16 v16, 0x1
+
+    goto :goto_7
+
+    :cond_8
+    move/from16 v16, v8
+
+    .line 22
+    :goto_7
+    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle$a;->j:I
+
+    if-eq v0, v10, :cond_9
+
+    .line 23
+    aget-object v0, v2, v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->g(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_8
+
+    :cond_9
+    move v0, v10
+
+    :goto_8
+    move-object v7, v3
+
+    move-object v8, v4
+
+    move-object v10, v11
+
+    move-object v11, v12
 
     move v12, v13
 
-    move v13, p1
+    move v13, v14
 
-    invoke-direct/range {v5 .. v13}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;-><init>(Ljava/lang/String;ILjava/lang/Integer;FZZZZ)V
+    move v14, v15
+
+    move/from16 v15, v17
+
+    move/from16 v17, v0
+
+    .line 24
+    invoke-direct/range {v7 .. v17}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;-><init>(Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;FZZZZI)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v1
+    return-object v3
 
     :catch_0
-    move-exception p1
+    move-exception v0
 
-    .line 20
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 25
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Skipping malformed \'Style:\' line: \'"
+    const-string v3, "Skipping malformed \'Style:\' line: \'"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, "\'"
+    const-string v1, "\'"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {v3, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v5, v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v4
+    return-object v6
 .end method
 
 .method public static c(I)Z
@@ -452,7 +533,26 @@
     .end packed-switch
 .end method
 
-.method public static d(Ljava/lang/String;)I
+.method public static d(I)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_0
+
+    const/4 v1, 0x3
+
+    if-eq p0, v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    return v0
+.end method
+
+.method public static e(Ljava/lang/String;)I
     .locals 2
 
     .line 1
@@ -483,14 +583,14 @@
     const-string v1, "SsaStyle"
 
     .line 3
-    invoke-static {v0, p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, -0x1
 
     return p0
 .end method
 
-.method public static e(Ljava/lang/String;)Z
+.method public static f(Ljava/lang/String;)Z
     .locals 4
 
     const/4 v0, 0x0
@@ -541,12 +641,50 @@
 
     const-string v2, "SsaStyle"
 
-    invoke-static {v2, p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v0
 .end method
 
-.method public static f(Ljava/lang/String;)Ljava/lang/Integer;
+.method public static g(Ljava/lang/String;)I
+    .locals 2
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 2
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/text/ssa/SsaStyle;->d(I)Z
+
+    move-result v1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v1, :cond_0
+
+    return v0
+
+    :catch_0
+    :cond_0
+    const-string v0, "Ignoring unknown BorderStyle: "
+
+    const-string v1, "SsaStyle"
+
+    .line 3
+    invoke-static {v0, p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public static h(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 8
     .annotation build Landroidx/annotation/ColorInt;
     .end annotation
@@ -682,14 +820,14 @@
 
     const-string v1, "SsaStyle"
 
-    invoke-static {v1, p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
 
     return-object p0
 .end method
 
-.method public static g(Ljava/lang/String;)F
+.method public static i(Ljava/lang/String;)F
     .locals 3
 
     .line 1
@@ -726,7 +864,7 @@
 
     const-string v1, "SsaStyle"
 
-    invoke-static {v1, p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const p0, -0x800001
 

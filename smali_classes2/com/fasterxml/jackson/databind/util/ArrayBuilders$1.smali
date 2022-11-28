@@ -49,52 +49,50 @@
 
     return v0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_6
-
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/util/ArrayBuilders$1;->val$defaultValueType:Ljava/lang/Class;
 
-    move-result-object v2
+    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->hasClass(Ljava/lang/Object;Ljava/lang/Class;)Z
 
-    iget-object v3, p0, Lcom/fasterxml/jackson/databind/util/ArrayBuilders$1;->val$defaultValueType:Ljava/lang/Class;
+    move-result v1
 
-    if-eq v2, v3, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_2
+    if-nez v1, :cond_1
+
+    return v2
 
     .line 2
     :cond_1
     invoke-static {p1}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
-    move-result v2
+    move-result v1
 
     iget v3, p0, Lcom/fasterxml/jackson/databind/util/ArrayBuilders$1;->val$length:I
 
-    if-eq v2, v3, :cond_2
+    if-eq v1, v3, :cond_2
 
-    return v1
+    return v2
 
     :cond_2
-    move v2, v1
+    move v1, v2
 
     .line 3
     :goto_0
     iget v3, p0, Lcom/fasterxml/jackson/databind/util/ArrayBuilders$1;->val$length:I
 
-    if-ge v2, v3, :cond_5
+    if-ge v1, v3, :cond_5
 
     .line 4
     iget-object v3, p0, Lcom/fasterxml/jackson/databind/util/ArrayBuilders$1;->val$defaultValue:Ljava/lang/Object;
 
-    invoke-static {v3, v2}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
+    invoke-static {v3, v1}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 5
-    invoke-static {p1, v2}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
+    invoke-static {p1, v1}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -112,18 +110,14 @@
 
     if-nez v3, :cond_4
 
-    return v1
+    return v2
 
     :cond_4
     :goto_1
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_5
     return v0
-
-    :cond_6
-    :goto_2
-    return v1
 .end method

@@ -28,6 +28,26 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "serverAlias",
+            "accessKey",
+            "momentCode",
+            "latitude",
+            "longitude",
+            "importData"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -162,6 +182,14 @@
 # virtual methods
 .method public N(I)Lcom/skt/moment/net/vo/HappenForPlace;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "socketTimeout"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -204,19 +232,19 @@
 
     .line 6
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "Other Exception"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 7
     :catch_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
@@ -238,7 +266,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 8
     :goto_0
@@ -252,6 +280,14 @@
 
 .method public O(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -324,39 +360,39 @@
     .line 4
     :catch_3
     :goto_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v1, "IOException"
 
-    invoke-virtual {p1, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 5
     :catch_4
     :goto_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v1, "JsonMappingException"
 
-    invoke-virtual {p1, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 6
     :catch_5
     :goto_2
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v1, "JsonParseException"
 
-    invoke-virtual {p1, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     :goto_3
     move-object p1, v0
@@ -368,6 +404,15 @@
 
 .method public P(Ljava/util/List;)Ljava/util/List;
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resPlaceCampaigns"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

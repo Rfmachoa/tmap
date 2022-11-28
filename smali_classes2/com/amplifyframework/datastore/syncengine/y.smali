@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/o;
 
 
 # instance fields
@@ -11,13 +11,9 @@
 
 .field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-.field public final synthetic c:Lcom/amplifyframework/core/model/ModelSchema;
-
-.field public final synthetic d:Lcom/amplifyframework/core/model/Model;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,29 +22,21 @@
 
     iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/y;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/y;->c:Lcom/amplifyframework/core/model/ModelSchema;
-
-    iput-object p4, p0, Lcom/amplifyframework/datastore/syncengine/y;->d:Lcom/amplifyframework/core/model/Model;
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/y;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/y;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/y;->c:Lcom/amplifyframework/core/model/ModelSchema;
+    check-cast p1, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
-    iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/y;->d:Lcom/amplifyframework/core/model/Model;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->a(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/model/Model;Ljava/lang/Integer;)Lai/v0;
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->k(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
     move-result-object p1
 

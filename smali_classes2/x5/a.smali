@@ -1,14 +1,25 @@
-.class public interface abstract Lx5/a;
+.class public final Lx5/a;
 .super Ljava/lang/Object;
-.source "CardScannerListener.java"
+.source "com.android.billingclient:billing@@4.0.0"
 
 
-# virtual methods
-.method public abstract a(Lw5/e;)V
-.end method
+# static fields
+.field public static final a:Ljava/lang/String; = "com.android.billingclient"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.method public abstract b()V
-.end method
+.field public static final b:Ljava/lang/String; = "4.0.0"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.method public abstract c(Lw5/e;)V
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

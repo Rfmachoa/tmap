@@ -1,10 +1,10 @@
 .class public Lcom/fasterxml/jackson/core/JsonProcessingException;
-.super Ljava/io/IOException;
+.super Lcom/fasterxml/jackson/core/JacksonException;
 .source "JsonProcessingException.java"
 
 
 # static fields
-.field public static final serialVersionUID:J = 0x7bL
+.field private static final serialVersionUID:J = 0x7bL
 
 
 # instance fields
@@ -15,8 +15,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 4
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    .line 3
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/JacksonException;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -26,7 +26,7 @@
 
     const/4 v0, 0x0
 
-    .line 5
+    .line 4
     invoke-direct {p0, p1, p2, v0}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;Ljava/lang/Throwable;)V
 
     return-void
@@ -36,15 +36,9 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    if-eqz p3, :cond_0
+    invoke-direct {p0, p1, p3}, Lcom/fasterxml/jackson/core/JacksonException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 2
-    invoke-virtual {p0, p3}, Ljava/io/IOException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    .line 3
-    :cond_0
     iput-object p2, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->_location:Lcom/fasterxml/jackson/core/JsonLocation;
 
     return-void
@@ -55,7 +49,7 @@
 
     const/4 v0, 0x0
 
-    .line 6
+    .line 5
     invoke-direct {p0, p1, v0, p2}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;Ljava/lang/Throwable;)V
 
     return-void
@@ -66,7 +60,7 @@
 
     const/4 v0, 0x0
 
-    .line 7
+    .line 6
     invoke-direct {p0, v0, v0, p1}, Lcom/fasterxml/jackson/core/JsonProcessingException;-><init>(Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;Ljava/lang/Throwable;)V
 
     return-void
@@ -74,6 +68,17 @@
 
 
 # virtual methods
+.method public clearLocation()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->_location:Lcom/fasterxml/jackson/core/JsonLocation;
+
+    return-void
+.end method
+
 .method public getLocation()Lcom/fasterxml/jackson/core/JsonLocation;
     .locals 1
 

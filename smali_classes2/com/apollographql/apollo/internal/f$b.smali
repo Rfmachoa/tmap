@@ -79,11 +79,11 @@
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v3}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v3}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v3
 
@@ -166,16 +166,16 @@
     return-void
 .end method
 
-.method public onResponse(Lc4/i;)V
+.method public onResponse(Lz5/i;)V
     .locals 3
-    .param p1    # Lc4/i;
+    .param p1    # Lz5/i;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/i<",
+            "Lz5/i<",
             "TT;>;)V"
         }
     .end annotation
@@ -213,11 +213,11 @@
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v2}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v2}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -233,7 +233,7 @@
     :cond_0
     iget-object v1, p0, Lcom/apollographql/apollo/internal/f$b;->a:Lcom/apollographql/apollo/internal/f;
 
-    invoke-virtual {p1}, Lc4/i;->c()Ljava/util/Set;
+    invoke-virtual {p1}, Lz5/i;->c()Ljava/util/Set;
 
     move-result-object v2
 
@@ -242,17 +242,17 @@
     .line 5
     iget-object v1, p0, Lcom/apollographql/apollo/internal/f$b;->a:Lcom/apollographql/apollo/internal/f;
 
-    invoke-static {v1}, Lcom/apollographql/apollo/internal/f;->g(Lcom/apollographql/apollo/internal/f;)Lf4/a;
+    invoke-static {v1}, Lcom/apollographql/apollo/internal/f;->g(Lcom/apollographql/apollo/internal/f;)Lc6/a;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/apollographql/apollo/internal/f$b;->a:Lcom/apollographql/apollo/internal/f;
 
-    invoke-static {v2}, Lcom/apollographql/apollo/internal/f;->f(Lcom/apollographql/apollo/internal/f;)Lf4/a$a;
+    invoke-static {v2}, Lcom/apollographql/apollo/internal/f;->f(Lcom/apollographql/apollo/internal/f;)Lc6/a$a;
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lf4/a;->q(Lf4/a$a;)V
+    invoke-interface {v1, v2}, Lc6/a;->n(Lc6/a$a;)V
 
     .line 6
     invoke-virtual {v0}, Lcom/apollographql/apollo/api/internal/Optional;->get()Ljava/lang/Object;
@@ -261,7 +261,7 @@
 
     check-cast v0, Lcom/apollographql/apollo/GraphQLCall$a;
 
-    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lc4/i;)V
+    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/GraphQLCall$a;->onResponse(Lz5/i;)V
 
     return-void
 .end method

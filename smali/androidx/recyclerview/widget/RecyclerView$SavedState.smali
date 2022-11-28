@@ -90,7 +90,7 @@
 
 
 # virtual methods
-.method public b(Landroidx/recyclerview/widget/RecyclerView$SavedState;)V
+.method public a(Landroidx/recyclerview/widget/RecyclerView$SavedState;)V
     .locals 0
 
     .line 1

@@ -3,34 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lgk/a;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/Merger;
+
+.field public final synthetic b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/o;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/o;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/o;->b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/o;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/o;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
 
-    check-cast p1, Lio/reactivex/rxjava3/disposables/c;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/o;->b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->m(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/rxjava3/disposables/c;)V
+    invoke-static {v0, v1}, Lcom/amplifyframework/datastore/syncengine/Merger;->a(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
 
     return-void
 .end method

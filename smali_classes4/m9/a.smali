@@ -1,142 +1,164 @@
 .class public Lm9/a;
-.super Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
-.source "QueryChargeMelonStreamingPath.java"
+.super Ljava/lang/Object;
+.source "Metric.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lm9/a$b;,
-        Lm9/a$a;
+        Lm9/a$b;
     }
 .end annotation
 
 
 # instance fields
-.field public i:Ljava/lang/String;
-
-.field public j:Ljava/lang/String;
-
-.field public k:Lm9/a$a;
+.field public a:Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 9
-
-    move-object v0, p0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;-><init>(Landroid/content/Context;)V
-
-    move-object v1, p2
+.method public constructor <init>(Lm9/a$b;)V
+    .locals 0
 
     .line 2
-    iput-object v1, v0, Lm9/a;->i:Ljava/lang/String;
-
-    move-object/from16 v1, p8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object v1, v0, Lm9/a;->j:Ljava/lang/String;
+    invoke-static {p1}, Lm9/a$b;->a(Lm9/a$b;)Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;
 
-    .line 4
-    new-instance v8, Lm9/a$a;
+    move-result-object p1
 
-    move-object v1, v8
+    iput-object p1, p0, Lm9/a;->a:Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;
 
-    move-object v2, p4
+    return-void
+.end method
 
-    move-object v3, p6
+.method public synthetic constructor <init>(Lm9/a$b;Lm9/a$a;)V
+    .locals 0
 
-    move-object/from16 v4, p9
-
-    move-object/from16 v5, p7
-
-    move-object v6, p5
-
-    move-object v7, p3
-
-    invoke-direct/range {v1 .. v7}, Lm9/a$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v8, v0, Lm9/a;->k:Lm9/a$a;
+    .line 1
+    invoke-direct {p0, p1}, Lm9/a;-><init>(Lm9/a$b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getExecutor()Lretrofit2/Call;
+.method public a()Ljava/lang/String;
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
-            ">;"
-        }
-    .end annotation
 
     .line 1
-    new-instance v0, Lcom/google/gson/Gson;
+    iget-object v0, p0, Lm9/a;->a:Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;
 
-    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+    const-string v1, ":"
 
-    iget-object v1, p0, Lm9/a;->k:Lm9/a$a;
-
-    invoke-virtual {v0, v1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/skt/aicloud/mobile/service/net/http/lib/AbsQueryBase;->getJsonRequestBody(Ljava/lang/String;)Lokhttp3/RequestBody;
-
-    move-result-object v0
+    if-nez v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->c:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;
+    sget-object v0, Lcom/rake/android/rkmetrics/metric/model/Action;->EMPTY:Lcom/rake/android/rkmetrics/metric/model/Action;
 
-    iget-object v2, p0, Lm9/a;->i:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/rake/android/rkmetrics/metric/model/Action;->getValue()Ljava/lang/String;
 
-    iget-object v3, p0, Lm9/a;->j:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-interface {v1, v2, v3, v0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;->chargeMelonStreaming(Ljava/lang/String;Ljava/lang/String;Lokhttp3/RequestBody;)Lretrofit2/Call;
+    .line 3
+    sget-object v2, Lcom/rake/android/rkmetrics/metric/model/Status;->UNKNOWN:Lcom/rake/android/rkmetrics/metric/model/Status;
+
+    invoke-virtual {v2}, Lcom/rake/android/rkmetrics/metric/model/Status;->getValue()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 4
+    invoke-static {v0, v1, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 5
+    :cond_0
+    invoke-virtual {v0}, Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;->toJSONObject()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v2, "action"
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 6
+    iget-object v2, p0, Lm9/a;->a:Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;
+
+    invoke-virtual {v2}, Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;->toJSONObject()Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v3, "status"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 7
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    .line 8
+    sget-object v0, Lcom/rake/android/rkmetrics/metric/model/Action;->EMPTY:Lcom/rake/android/rkmetrics/metric/model/Action;
+
+    invoke-virtual {v0}, Lcom/rake/android/rkmetrics/metric/model/Action;->getValue()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 9
+    :cond_1
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 10
+    sget-object v2, Lcom/rake/android/rkmetrics/metric/model/Status;->UNKNOWN:Lcom/rake/android/rkmetrics/metric/model/Status;
+
+    invoke-virtual {v2}, Lcom/rake/android/rkmetrics/metric/model/Status;->getValue()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 11
+    :cond_2
+    invoke-static {v0, v1, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public parseResponse(Lokhttp3/Request;Lretrofit2/Response;Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/gson/JsonSyntaxException;
-        }
-    .end annotation
+.method public b()Lorg/json/JSONObject;
+    .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->parseResponse(Lokhttp3/Request;Lretrofit2/Response;Ljava/lang/String;)V
+    iget-object v0, p0, Lm9/a;->a:Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "Cannot return JSONObject. Metric shuttle is null"
 
     .line 2
-    new-instance p1, Lcom/google/gson/Gson;
+    invoke-static {v0}, Lp9/b;->e(Ljava/lang/String;)I
 
-    invoke-direct {p1}, Lcom/google/gson/Gson;-><init>()V
+    const/4 v0, 0x0
 
-    const-class p2, Lm9/a$b;
-
-    invoke-virtual {p1, p3, p2}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm9/a$b;
+    return-object v0
 
     .line 3
-    iget-object p2, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->e:Li9/d;
-
-    if-eqz p2, :cond_0
-
-    .line 4
-    invoke-virtual {p2, p1}, Li9/d;->b(Ljava/lang/Object;)V
-
     :cond_0
-    return-void
+    invoke-virtual {v0}, Lcom/skplanet/pdp/sentinel/shuttle/RakeClientMetricSentinelShuttle;->toJSONObject()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -29,19 +29,19 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Ll1/b;ZZ)V
+.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/d;ZZ)V
     .locals 1
     .param p1    # Landroidx/fragment/app/SpecialEffectsController$Operation;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ll1/b;
+    .param p2    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1, p2}, Landroidx/fragment/app/c$l;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Ll1/b;)V
+    invoke-direct {p0, p1, p2}, Landroidx/fragment/app/c$l;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/d;)V
 
     .line 2
     invoke-virtual {p1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->e()Landroidx/fragment/app/SpecialEffectsController$Operation$State;
@@ -182,7 +182,7 @@
 
 
 # virtual methods
-.method public e()Landroidx/fragment/app/e0;
+.method public e()Landroidx/fragment/app/n0;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -190,7 +190,7 @@
     .line 1
     iget-object v0, p0, Landroidx/fragment/app/c$m;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c$m;->f(Ljava/lang/Object;)Landroidx/fragment/app/e0;
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/c$m;->f(Ljava/lang/Object;)Landroidx/fragment/app/n0;
 
     move-result-object v0
 
@@ -198,7 +198,7 @@
     iget-object v1, p0, Landroidx/fragment/app/c$m;->e:Ljava/lang/Object;
 
     .line 3
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/c$m;->f(Ljava/lang/Object;)Landroidx/fragment/app/e0;
+    invoke-virtual {p0, v1}, Landroidx/fragment/app/c$m;->f(Ljava/lang/Object;)Landroidx/fragment/app/n0;
 
     move-result-object v1
 
@@ -268,7 +268,7 @@
     return-object v0
 .end method
 
-.method public final f(Ljava/lang/Object;)Landroidx/fragment/app/e0;
+.method public final f(Ljava/lang/Object;)Landroidx/fragment/app/n0;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -281,12 +281,12 @@
 
     .line 1
     :cond_0
-    sget-object v0, Landroidx/fragment/app/c0;->b:Landroidx/fragment/app/e0;
+    sget-object v0, Landroidx/fragment/app/l0;->a:Landroidx/fragment/app/n0;
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/fragment/app/e0;->e(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/n0;->e(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -296,12 +296,12 @@
 
     .line 3
     :cond_1
-    sget-object v0, Landroidx/fragment/app/c0;->c:Landroidx/fragment/app/e0;
+    sget-object v0, Landroidx/fragment/app/l0;->b:Landroidx/fragment/app/n0;
 
     if-eqz v0, :cond_2
 
     .line 4
-    invoke-virtual {v0, p1}, Landroidx/fragment/app/e0;->e(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/n0;->e(Ljava/lang/Object;)Z
 
     move-result v1
 

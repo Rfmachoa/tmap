@@ -4,7 +4,13 @@
 
 # interfaces
 .implements Landroidx/lifecycle/LifecycleObserver;
-.implements Landroidx/camera/core/i;
+.implements Landroidx/camera/core/l;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
@@ -40,16 +46,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/LifecycleOwner;Landroidx/camera/core/internal/CameraUseCaseAdapter;)V
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "lifecycleOwner",
-            "cameraUseCaseAdaptor"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -96,13 +92,13 @@
     if-eqz v0, :cond_0
 
     .line 9
-    invoke-virtual {p2}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->l()V
+    invoke-virtual {p2}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->p()V
 
     goto :goto_0
 
     .line 10
     :cond_0
-    invoke-virtual {p2}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->q()V
+    invoke-virtual {p2}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->x()V
 
     .line 11
     :goto_0
@@ -132,7 +128,7 @@
     return-object v0
 .end method
 
-.method public b()Landroidx/camera/core/impl/d;
+.method public b()Landroidx/camera/core/impl/CameraConfig;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -140,7 +136,7 @@
     .line 1
     iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->b()Landroidx/camera/core/impl/d;
+    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->b()Landroidx/camera/core/impl/CameraConfig;
 
     move-result-object v0
 
@@ -162,36 +158,22 @@
     return-object v0
 .end method
 
-.method public d(Landroidx/camera/core/impl/d;)V
+.method public d(Landroidx/camera/core/impl/CameraConfig;)V
     .locals 1
-    .param p1    # Landroidx/camera/core/impl/d;
+    .param p1    # Landroidx/camera/core/impl/CameraConfig;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraConfig"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/camera/core/internal/CameraUseCaseAdapter$CameraException;
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->d(Landroidx/camera/core/impl/d;)V
+    invoke-virtual {v0, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->d(Landroidx/camera/core/impl/CameraConfig;)V
 
     return-void
 .end method
 
-.method public e()Ljava/util/LinkedHashSet;
+.method public f()Ljava/util/LinkedHashSet;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -208,24 +190,15 @@
     .line 1
     iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->e()Ljava/util/LinkedHashSet;
+    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->f()Ljava/util/LinkedHashSet;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public f(Ljava/util/Collection;)V
+.method public g(Ljava/util/Collection;)V
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "useCases"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -250,7 +223,7 @@
     :try_start_0
     iget-object v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v1, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->g(Ljava/util/Collection;)V
+    invoke-virtual {v1, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->n(Ljava/util/Collection;)V
 
     .line 3
     monitor-exit v0
@@ -267,7 +240,7 @@
     throw p1
 .end method
 
-.method public g()Landroidx/camera/core/internal/CameraUseCaseAdapter;
+.method public h()Landroidx/camera/core/internal/CameraUseCaseAdapter;
     .locals 1
 
     .line 1
@@ -276,7 +249,7 @@
     return-object v0
 .end method
 
-.method public l()Landroidx/lifecycle/LifecycleOwner;
+.method public n()Landroidx/lifecycle/LifecycleOwner;
     .locals 2
 
     .line 1
@@ -303,92 +276,27 @@
     throw v1
 .end method
 
-.method public n()Ljava/util/List;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/UseCase;",
-            ">;"
-        }
-    .end annotation
+.method public varargs o([Landroidx/camera/core/UseCase;)Z
+    .locals 1
+    .param p1    # [Landroidx/camera/core/UseCase;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->a:Ljava/lang/Object;
+    iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    monitor-enter v0
+    invoke-virtual {v0, p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->o([Landroidx/camera/core/UseCase;)Z
 
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
+    move-result p1
 
-    invoke-virtual {v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->u()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public o()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-boolean v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->d:Z
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return p1
 .end method
 
 .method public onDestroy(Landroidx/lifecycle/LifecycleOwner;)V
     .locals 2
     .annotation runtime Landroidx/lifecycle/OnLifecycleEvent;
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "lifecycleOwner"
-        }
     .end annotation
 
     .line 1
@@ -400,11 +308,11 @@
     :try_start_0
     iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->u()Ljava/util/List;
+    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->B()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->y(Ljava/util/Collection;)V
+    invoke-virtual {v0, v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->K(Ljava/util/Collection;)V
 
     .line 3
     monitor-exit p1
@@ -421,19 +329,42 @@
     throw v0
 .end method
 
+.method public onPause(Landroidx/lifecycle/LifecycleOwner;)V
+    .locals 1
+    .annotation runtime Landroidx/lifecycle/OnLifecycleEvent;
+        value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->j(Z)V
+
+    return-void
+.end method
+
+.method public onResume(Landroidx/lifecycle/LifecycleOwner;)V
+    .locals 1
+    .annotation runtime Landroidx/lifecycle/OnLifecycleEvent;
+        value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->j(Z)V
+
+    return-void
+.end method
+
 .method public onStart(Landroidx/lifecycle/LifecycleOwner;)V
     .locals 1
     .annotation runtime Landroidx/lifecycle/OnLifecycleEvent;
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "lifecycleOwner"
-        }
     .end annotation
 
     .line 1
@@ -454,7 +385,7 @@
     .line 3
     iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->l()V
+    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->p()V
 
     const/4 v0, 0x1
 
@@ -483,15 +414,6 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "lifecycleOwner"
-        }
-    .end annotation
-
     .line 1
     iget-object p1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->a:Ljava/lang/Object;
 
@@ -510,7 +432,7 @@
     .line 3
     iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->q()V
+    invoke-virtual {v0}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->x()V
 
     const/4 v0, 0x0
 
@@ -533,18 +455,17 @@
     throw v0
 .end method
 
-.method public p(Landroidx/camera/core/UseCase;)Z
+.method public p()Ljava/util/List;
     .locals 2
-    .param p1    # Landroidx/camera/core/UseCase;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "useCase"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/UseCase;",
+            ">;"
         }
     .end annotation
 
@@ -557,7 +478,73 @@
     :try_start_0
     iget-object v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->u()Ljava/util/List;
+    invoke-virtual {v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->B()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public q()Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-boolean v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->d:Z
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public r(Landroidx/camera/core/UseCase;)Z
+    .locals 2
+    .param p1    # Landroidx/camera/core/UseCase;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/lifecycle/LifecycleCamera;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
+
+    invoke-virtual {v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->B()Ljava/util/List;
 
     move-result-object v1
 
@@ -580,7 +567,7 @@
     throw p1
 .end method
 
-.method public q()V
+.method public s()V
     .locals 2
 
     .line 1
@@ -623,7 +610,7 @@
     throw v1
 .end method
 
-.method public r()V
+.method public t()V
     .locals 2
 
     .line 1
@@ -668,17 +655,8 @@
     throw v1
 .end method
 
-.method public s(Ljava/util/Collection;)V
+.method public u(Ljava/util/Collection;)V
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "useCases"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -702,7 +680,7 @@
     .line 3
     iget-object p1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->u()Ljava/util/List;
+    invoke-virtual {p1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->B()Ljava/util/List;
 
     move-result-object p1
 
@@ -711,7 +689,7 @@
     .line 4
     iget-object p1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {p1, v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->y(Ljava/util/Collection;)V
+    invoke-virtual {p1, v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->K(Ljava/util/Collection;)V
 
     .line 5
     monitor-exit v0
@@ -728,7 +706,7 @@
     throw p1
 .end method
 
-.method public t()V
+.method public v()V
     .locals 3
 
     .line 1
@@ -740,11 +718,11 @@
     :try_start_0
     iget-object v1, p0, Landroidx/camera/lifecycle/LifecycleCamera;->c:Landroidx/camera/core/internal/CameraUseCaseAdapter;
 
-    invoke-virtual {v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->u()Ljava/util/List;
+    invoke-virtual {v1}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->B()Ljava/util/List;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->y(Ljava/util/Collection;)V
+    invoke-virtual {v1, v2}, Landroidx/camera/core/internal/CameraUseCaseAdapter;->K(Ljava/util/Collection;)V
 
     .line 3
     monitor-exit v0
@@ -761,7 +739,7 @@
     throw v1
 .end method
 
-.method public u()V
+.method public w()V
     .locals 3
 
     .line 1

@@ -1,19 +1,10 @@
 .class public final Lcom/google/android/gms/common/internal/zac;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # static fields
-.field private static final zaa:Landroidx/collection/l;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/collection/l<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
+.field private static final zaa:Landroidx/collection/m;
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "sCache"
     .end annotation
@@ -34,11 +25,11 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/collection/l;
+    new-instance v0, Landroidx/collection/m;
 
-    invoke-direct {v0}, Landroidx/collection/l;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/m;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/common/internal/zac;->zaa:Landroidx/collection/l;
+    sput-object v0, Lcom/google/android/gms/common/internal/zac;->zaa:Landroidx/collection/m;
 
     return-void
 .end method
@@ -61,7 +52,7 @@
 
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
     :try_end_0
@@ -482,10 +473,8 @@
     :pswitch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x21
-
     .line 2
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "Unexpected error code "
 
@@ -713,7 +702,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/common/internal/zac;->zaa:Landroidx/collection/l;
+    sget-object v0, Lcom/google/android/gms/common/internal/zac;->zaa:Landroidx/collection/m;
 
     monitor-enter v0
 
@@ -727,13 +716,13 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ll1/c;->a(Landroid/content/res/Configuration;)Ll1/h;
+    invoke-static {v1}, Landroidx/core/os/e;->a(Landroid/content/res/Configuration;)Landroidx/core/os/j;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Ll1/h;->d(I)Ljava/util/Locale;
+    invoke-virtual {v1, v2}, Landroidx/core/os/j;->d(I)Ljava/util/Locale;
 
     move-result-object v1
 
@@ -747,13 +736,13 @@
     if-nez v2, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Landroidx/collection/l;->clear()V
+    invoke-virtual {v0}, Landroidx/collection/m;->clear()V
 
     sput-object v1, Lcom/google/android/gms/common/internal/zac;->zab:Ljava/util/Locale;
 
     .line 5
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -791,90 +780,74 @@
 
     move-result v2
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_3
 
-    const-string p0, "GoogleApiAvailability"
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    .line 10
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Missing resource: "
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_3
+    const-string p1, "GoogleApiAvailability"
 
-    .line 10
-    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    goto :goto_0
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 11
-    :cond_3
-    new-instance p1, Ljava/lang/String;
-
-    .line 12
-    invoke-direct {p1, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 13
     monitor-exit v0
 
     return-object v1
 
-    .line 14
-    :cond_4
+    .line 12
+    :cond_3
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 15
+    .line 13
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_4
 
-    const-string p0, "GoogleApiAvailability"
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    .line 14
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Got empty resource: "
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_5
+    const-string p1, "GoogleApiAvailability"
 
-    .line 16
-    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    goto :goto_1
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
-    :cond_5
-    new-instance p1, Ljava/lang/String;
-
-    .line 18
-    invoke-direct {p1, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_1
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 19
+    .line 15
     monitor-exit v0
 
     return-object v1
 
-    .line 20
-    :cond_6
-    invoke-virtual {v0, p1, p0}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 16
+    :cond_4
+    invoke-virtual {v0, p1, p0}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
+    .line 17
     monitor-exit v0
 
     return-object p0
@@ -882,7 +855,7 @@
     :catchall_0
     move-exception p0
 
-    .line 22
+    .line 18
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

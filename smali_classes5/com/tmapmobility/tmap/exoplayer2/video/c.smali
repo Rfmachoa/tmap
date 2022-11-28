@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/video/c;
+.method public static a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/video/c;
     .locals 4
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -38,10 +38,10 @@
     const/4 v0, 0x2
 
     .line 1
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->T(I)V
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->T(I)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
@@ -54,7 +54,7 @@
     shl-int/2addr v0, v2
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result p0
 

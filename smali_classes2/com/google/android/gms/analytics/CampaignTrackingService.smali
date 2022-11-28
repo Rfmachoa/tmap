@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/CampaignTrackingService;
 .super Landroid/app/Service;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -26,10 +26,10 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
     .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNullable;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     const/4 p1, 0x0

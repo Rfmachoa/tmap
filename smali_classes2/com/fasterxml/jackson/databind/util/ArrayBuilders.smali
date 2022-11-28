@@ -66,74 +66,6 @@
     return-void
 .end method
 
-.method public static addToList(Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/List<",
-            "TT;>;TT;)",
-            "Ljava/util/List<",
-            "TT;>;"
-        }
-    .end annotation
-
-    if-nez p0, :cond_0
-
-    .line 1
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 2
-    :cond_0
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-object p0
-.end method
-
-.method public static arrayToList([Ljava/lang/Object;)Ljava/util/ArrayList;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([TT;)",
-            "Ljava/util/ArrayList<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p0, :cond_0
-
-    .line 2
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p0, v2
-
-    .line 3
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-.end method
-
 .method public static arrayToSet([Ljava/lang/Object;)Ljava/util/HashSet;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
@@ -146,32 +78,40 @@
         }
     .end annotation
 
+    if-eqz p0, :cond_1
+
     .line 1
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    if-eqz p0, :cond_0
+    array-length v0, p0
 
     .line 2
-    array-length v1, p0
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(I)V
 
     const/4 v2, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p0, v2
+    if-ge v2, v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    aget-object v3, p0, v2
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    return-object v0
+    return-object v1
+
+    .line 4
+    :cond_1
+    new-instance p0, Ljava/util/HashSet;
+
+    invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
+
+    return-object p0
 .end method
 
 .method public static getArrayComparator(Ljava/lang/Object;)Ljava/lang/Object;
@@ -193,52 +133,6 @@
     invoke-direct {v2, v1, v0, p0}, Lcom/fasterxml/jackson/databind/util/ArrayBuilders$1;-><init>(Ljava/lang/Class;ILjava/lang/Object;)V
 
     return-object v2
-.end method
-
-.method public static insertInList([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([TT;TT;)[TT;"
-        }
-    .end annotation
-
-    .line 1
-    array-length v0, p0
-
-    .line 2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v1
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-static {v1, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    if-lez v0, :cond_0
-
-    const/4 v3, 0x1
-
-    .line 3
-    invoke-static {p0, v2, v1, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 4
-    :cond_0
-    aput-object p1, v1, v2
-
-    return-object v1
 .end method
 
 .method public static insertInListNoDup([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
@@ -274,15 +168,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-static {v4, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+    invoke-static {p0, v0}, Landroidx/collection/k;->a([Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -339,54 +225,6 @@
     aput-object p1, v2, v1
 
     return-object v2
-.end method
-
-.method public static setAndArray(Ljava/util/Set;[Ljava/lang/Object;)Ljava/util/HashSet;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/Set<",
-            "TT;>;[TT;)",
-            "Ljava/util/HashSet<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    if-eqz p0, :cond_0
-
-    .line 2
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    .line 3
-    array-length p0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, p0, :cond_1
-
-    aget-object v2, p1, v1
-
-    .line 4
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
 .end method
 
 

@@ -527,7 +527,7 @@
 
     const-string v3, ", modelClasses="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/model/SimpleModelProvider;->modelClasses:Ljava/util/LinkedHashSet;
 

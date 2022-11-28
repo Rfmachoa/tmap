@@ -3,36 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/r;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/amplifyframework/datastore/syncengine/q;->a:I
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/q;->a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget v0, p0, Lcom/amplifyframework/datastore/syncengine/q;->a:I
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/q;->a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->c(ILjava/lang/Integer;)Z
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->f(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Ljava/lang/Throwable;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

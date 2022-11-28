@@ -42,10 +42,10 @@
 
 .field private volatile disposed:Z
 
-.field private final observer:Lkh/g0;
+.field private final observer:Loj/g0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkh/g0<",
+            "Loj/g0<",
             "-",
             "Lretrofit2/Response<",
             "TT;>;>;"
@@ -57,14 +57,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lretrofit2/Call;Lkh/g0;)V
+.method public constructor <init>(Lretrofit2/Call;Loj/g0;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lretrofit2/Call<",
             "*>;",
-            "Lkh/g0<",
+            "Loj/g0<",
             "-",
             "Lretrofit2/Response<",
             "TT;>;>;)V"
@@ -83,7 +83,7 @@
     iput-object p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->call:Lretrofit2/Call;
 
     .line 4
-    iput-object p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lkh/g0;
+    iput-object p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Loj/g0;
 
     return-void
 .end method
@@ -139,9 +139,9 @@
     .line 2
     :cond_0
     :try_start_0
-    iget-object p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lkh/g0;
+    iget-object p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Loj/g0;
 
-    invoke-interface {p1, p2}, Lkh/g0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p2}, Loj/g0;->onError(Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -170,7 +170,7 @@
 
     invoke-direct {v0, v1}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v0}, Lwh/a;->Y(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lak/a;->Y(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -200,9 +200,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Loj/g0;
 
-    invoke-interface {v0, p2}, Lkh/g0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {v0, p2}, Loj/g0;->onNext(Ljava/lang/Object;)V
 
     .line 3
     iget-boolean p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->disposed:Z
@@ -213,9 +213,9 @@
     iput-boolean p1, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->terminated:Z
 
     .line 5
-    iget-object p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lkh/g0;
+    iget-object p2, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Loj/g0;
 
-    invoke-interface {p2}, Lkh/g0;->onComplete()V
+    invoke-interface {p2}, Loj/g0;->onComplete()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -225,26 +225,29 @@
     move-exception p2
 
     .line 6
+    invoke-static {p2}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+
+    .line 7
     iget-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->terminated:Z
 
     if-eqz v0, :cond_1
 
-    .line 7
-    invoke-static {p2}, Lwh/a;->Y(Ljava/lang/Throwable;)V
+    .line 8
+    invoke-static {p2}, Lak/a;->Y(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 8
+    .line 9
     :cond_1
     iget-boolean v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->disposed:Z
 
     if-nez v0, :cond_2
 
-    .line 9
+    .line 10
     :try_start_1
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Lkh/g0;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/CallEnqueueObservable$CallCallback;->observer:Loj/g0;
 
-    invoke-interface {v0, p2}, Lkh/g0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p2}, Loj/g0;->onError(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -253,10 +256,10 @@
     :catchall_1
     move-exception v0
 
-    .line 10
+    .line 11
     invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
 
-    .line 11
+    .line 12
     new-instance v1, Lio/reactivex/exceptions/CompositeException;
 
     const/4 v2, 0x2
@@ -271,7 +274,7 @@
 
     invoke-direct {v1, v2}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Lwh/a;->Y(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lak/a;->Y(Ljava/lang/Throwable;)V
 
     :cond_2
     :goto_0

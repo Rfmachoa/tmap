@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public a1:Landroid/widget/LinearLayout;
+.field public c1:Landroid/widget/LinearLayout;
 
-.field public b1:Landroid/widget/TextView;
+.field public d1:Landroid/widget/TextView;
 
-.field public c1:Landroid/widget/TextView;
+.field public e1:Landroid/widget/TextView;
 
 
 # direct methods
@@ -27,18 +27,18 @@
     invoke-direct {p0, p1}, Lcom/skt/tmap/dialog/TmapBaseDialog;-><init>(Landroid/app/Activity;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/dialog/b;->c1:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/skt/tmap/dialog/b;->e1:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f130a16
+    const v1, 0x7f140a9b
 
     .line 3
     invoke-virtual {p1, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {p1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
     move-result-object p1
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/dialog/b;->a1:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/skt/tmap/dialog/b;->c1:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_1
 
@@ -66,7 +66,7 @@
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/b;->b1:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/skt/tmap/dialog/b;->d1:Landroid/widget/TextView;
 
     if-eqz v0, :cond_2
 
@@ -94,12 +94,12 @@
         }
     .end annotation
 
-    const p2, 0x7f0d0079
+    const p2, 0x7f0d007b
 
     .line 1
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->setContentView(I)V
 
-    const p2, 0x7f0a051e
+    const p2, 0x7f0a055a
 
     .line 2
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -108,9 +108,9 @@
 
     check-cast p2, Landroid/widget/LinearLayout;
 
-    iput-object p2, p0, Lcom/skt/tmap/dialog/b;->a1:Landroid/widget/LinearLayout;
+    iput-object p2, p0, Lcom/skt/tmap/dialog/b;->c1:Landroid/widget/LinearLayout;
 
-    const p2, 0x7f0a007c
+    const p2, 0x7f0a008a
 
     .line 3
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -119,9 +119,9 @@
 
     check-cast p2, Landroid/widget/TextView;
 
-    iput-object p2, p0, Lcom/skt/tmap/dialog/b;->c1:Landroid/widget/TextView;
+    iput-object p2, p0, Lcom/skt/tmap/dialog/b;->e1:Landroid/widget/TextView;
 
-    const p2, 0x7f0a026a
+    const p2, 0x7f0a0298
 
     .line 4
     invoke-virtual {p1, p2}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -130,7 +130,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/skt/tmap/dialog/b;->b1:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/skt/tmap/dialog/b;->d1:Landroid/widget/TextView;
 
     .line 5
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V

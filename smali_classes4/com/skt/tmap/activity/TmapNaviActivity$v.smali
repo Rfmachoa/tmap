@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Na(Lcom/skt/tmap/network/ndds/dto/poi/detailinfo/FindPoiDetailInfoForAutoResponseDto;)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->cb(Lcom/skt/tmap/network/ndds/dto/poi/detailinfo/FindPoiDetailInfoForAutoResponseDto;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,13 +49,13 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$v;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->A8(Lcom/skt/tmap/activity/TmapNaviActivity;)Llb/w1;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->N8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lid/m2;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/w1;->t1:Llb/q2;
+    iget-object v0, v0, Lid/m2;->z1:Lid/k3;
 
-    iget-object v0, v0, Llb/q2;->Y1:Landroid/widget/TextView;
+    iget-object v0, v0, Lid/k3;->X1:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 

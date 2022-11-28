@@ -40,8 +40,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
@@ -81,11 +81,13 @@
     .line 1
     invoke-direct {p0}, Landroidx/lifecycle/LifecycleCoroutineScope;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/lifecycle/LifecycleCoroutineScopeImpl;->lifecycle:Landroidx/lifecycle/Lifecycle;
 
+    .line 3
     iput-object p2, p0, Landroidx/lifecycle/LifecycleCoroutineScopeImpl;->coroutineContext:Lkotlin/coroutines/CoroutineContext;
 
-    .line 2
+    .line 4
     invoke-virtual {p0}, Landroidx/lifecycle/LifecycleCoroutineScopeImpl;->getLifecycle$lifecycle_runtime_ktx_release()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
@@ -98,7 +100,7 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 3
+    .line 5
     invoke-virtual {p0}, Landroidx/lifecycle/LifecycleCoroutineScopeImpl;->getCoroutineContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p1
@@ -107,7 +109,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p2, v0}, Lkotlinx/coroutines/b2;->j(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
+    invoke-static {p1, v0, p2, v0}, Lkotlinx/coroutines/b2;->i(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -189,7 +191,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p2, v0}, Lkotlinx/coroutines/b2;->j(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
+    invoke-static {p1, v0, p2, v0}, Lkotlinx/coroutines/b2;->i(Lkotlin/coroutines/CoroutineContext;Ljava/util/concurrent/CancellationException;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -199,11 +201,11 @@
     .locals 7
 
     .line 1
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v2
 
@@ -221,7 +223,7 @@
 
     move-object v1, p0
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
     return-void
 .end method

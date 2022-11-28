@@ -96,7 +96,7 @@
     return-void
 
     :cond_0
-    const-string v0, "flutter_assets"
+    const-string v0, "flutter_assets/NOTICES.Z"
 
     .line 7
     invoke-static {p1, v0}, Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;->access$400(Lcom/google/firebase/crashlytics/internal/DevelopmentPlatformProvider;Ljava/lang/String;)Z

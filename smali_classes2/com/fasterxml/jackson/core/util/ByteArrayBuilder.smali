@@ -8,7 +8,7 @@
 
 .field private static final INITIAL_BLOCK_SIZE:I = 0x1f4
 
-.field private static final MAX_BLOCK_SIZE:I = 0x40000
+.field private static final MAX_BLOCK_SIZE:I = 0x20000
 
 .field public static final NO_BYTES:[B
 
@@ -95,14 +95,21 @@
     .line 6
     iput-object p1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_bufferRecycler:Lcom/fasterxml/jackson/core/util/BufferRecycler;
 
-    if-nez p1, :cond_0
+    const/high16 v0, 0x20000
+
+    if-le p2, v0, :cond_0
+
+    move p2, v0
+
+    :cond_0
+    if-nez p1, :cond_1
 
     .line 7
     new-array p1, p2, [B
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p2, 0x2
 
     invoke-virtual {p1, p2}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->allocByteBuffer(I)[B
@@ -111,6 +118,33 @@
 
     :goto_0
     iput-object p1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlock:[B
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/fasterxml/jackson/core/util/BufferRecycler;[BI)V
+    .locals 0
+
+    .line 8
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+
+    .line 9
+    new-instance p1, Ljava/util/LinkedList;
+
+    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_pastBlocks:Ljava/util/LinkedList;
+
+    const/4 p1, 0x0
+
+    .line 10
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_bufferRecycler:Lcom/fasterxml/jackson/core/util/BufferRecycler;
+
+    .line 11
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlock:[B
+
+    .line 12
+    iput p3, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
 
     return-void
 .end method
@@ -127,24 +161,27 @@
 
     add-int/2addr v0, v1
 
+    if-ltz v0, :cond_1
+
+    .line 2
     iput v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_pastLen:I
 
     shr-int/lit8 v0, v0, 0x1
 
     const/16 v1, 0x3e8
 
-    .line 2
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    const/high16 v1, 0x40000
+    const/high16 v1, 0x20000
 
     if-le v0, v1, :cond_0
 
     move v0, v1
 
-    .line 3
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_pastBlocks:Ljava/util/LinkedList;
 
@@ -152,17 +189,40 @@
 
     invoke-virtual {v1, v2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 4
+    .line 5
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlock:[B
 
     const/4 v0, 0x0
 
-    .line 5
+    .line 6
     iput v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
 
     return-void
+
+    .line 7
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Maximum Java array size (2GB) exceeded by `ByteArrayBuilder`"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static fromInitial([BI)Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0, p1}, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;-><init>(Lcom/fasterxml/jackson/core/util/BufferRecycler;[BI)V
+
+    return-object v0
 .end method
 
 
@@ -196,6 +256,87 @@
 
     aput-byte p1, v0, v1
 
+    return-void
+.end method
+
+.method public appendFourBytes(I)V
+    .locals 4
+
+    .line 1
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
+
+    add-int/lit8 v1, v0, 0x3
+
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlock:[B
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_0
+
+    add-int/lit8 v1, v0, 0x1
+
+    .line 2
+    iput v1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
+
+    shr-int/lit8 v3, p1, 0x18
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v2, v0
+
+    add-int/lit8 v0, v1, 0x1
+
+    .line 3
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
+
+    shr-int/lit8 v3, p1, 0x10
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v2, v1
+
+    add-int/lit8 v1, v0, 0x1
+
+    .line 4
+    iput v1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
+
+    shr-int/lit8 v3, p1, 0x8
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v2, v0
+
+    add-int/lit8 v0, v1, 0x1
+
+    .line 5
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
+
+    int-to-byte p1, p1
+
+    aput-byte p1, v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    shr-int/lit8 v0, p1, 0x18
+
+    .line 6
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->append(I)V
+
+    shr-int/lit8 v0, p1, 0x10
+
+    .line 7
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->append(I)V
+
+    shr-int/lit8 v0, p1, 0x8
+
+    .line 8
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->append(I)V
+
+    .line 9
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->append(I)V
+
+    :goto_0
     return-void
 .end method
 
@@ -448,6 +589,19 @@
     return-void
 .end method
 
+.method public size()I
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_pastLen:I
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/ByteArrayBuilder;->_currBlockPtr:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
 .method public toByteArray()[B
     .locals 7
 
@@ -543,7 +697,7 @@
 
     const-string v5, " bytes"
 
-    invoke-static {v2, v0, v3, v4, v5}, Landroidx/room/k;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v3, v4, v5}, Lp0/e;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

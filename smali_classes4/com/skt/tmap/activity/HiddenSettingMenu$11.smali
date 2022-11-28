@@ -17,7 +17,7 @@
     value = {
         "Ljava/util/LinkedHashMap<",
         "Ljava/lang/String;",
-        "Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;",
+        "Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;",
         ">;"
     }
 .end annotation
@@ -45,23 +45,23 @@
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 2
-    sget-object p1, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->JavaCrash:Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
+    sget-object p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;->USE_SERVER_CONFIG:Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
 
-    const-string v0, "Java crash"
+    const-string/jumbo v0, "\uc11c\ubc84 \uc124\uc815"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    sget-object p1, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->NaviEngineCrash:Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
+    sget-object p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;->FORCE_ON:Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
 
-    const-string v0, "Navi crash"
+    const-string v0, "ON"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
-    sget-object p1, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->VsmEngineCrash:Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
+    sget-object p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;->FORCE_OFF:Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
 
-    const-string v0, "Vsm crash"
+    const-string v0, "OFF"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

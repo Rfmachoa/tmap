@@ -1,6 +1,6 @@
 .class Lcom/google/firebase/messaging/EnhancedIntentService$1;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "EnhancedIntentService.java"
 
 # interfaces
 .implements Lcom/google/firebase/messaging/WithinAppServiceBinder$IntentHandler;
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/firebase/messaging/EnhancedIntentService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/firebase/messaging/EnhancedIntentService$1;->this$0:Lcom/google/firebase/messaging/EnhancedIntentService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +54,7 @@
     .line 1
     iget-object v0, p0, Lcom/google/firebase/messaging/EnhancedIntentService$1;->this$0:Lcom/google/firebase/messaging/EnhancedIntentService;
 
-    invoke-static {v0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->-$$Nest$mprocessIntent(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
+    invoke-static {v0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->access$000(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
 

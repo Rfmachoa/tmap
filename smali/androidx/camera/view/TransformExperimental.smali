@@ -7,13 +7,13 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresOptIn;
+.end annotation
+
 .annotation build Landroidx/annotation/RestrictTo;
     value = {
         .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
     }
-.end annotation
-
-.annotation build Landroidx/annotation/experimental/Experimental;
 .end annotation
 
 .annotation runtime Ljava/lang/annotation/Retention;

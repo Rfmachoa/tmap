@@ -1,14 +1,17 @@
 .class final Lcom/google/android/gms/tagmanager/zzdj;
-.super Lcom/google/android/gms/tagmanager/zzbu;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Landroid/content/BroadcastReceiver;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # static fields
-.field private static final zza:Ljava/lang/String;
+.field public static final zza:Ljava/lang/String;
+    .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+    .end annotation
+.end field
 
 
 # instance fields
-.field private final zzb:Landroid/content/Context;
+.field private final zzb:Lcom/google/android/gms/tagmanager/zzex;
 
 
 # direct methods
@@ -16,9 +19,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzO:Lcom/google/android/gms/internal/gtm/zza;
+    const-class v0, Lcom/google/android/gms/tagmanager/zzdj;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -27,73 +30,128 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzdj;->zza:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
+.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzex;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbu;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzdj;->zzb:Landroid/content/Context;
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzdj;->zzb:Lcom/google/android/gms/tagmanager/zzex;
+
+    return-void
+.end method
+
+.method public static zza(Landroid/content/Context;)V
+    .locals 3
+
+    .line 1
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.google.analytics.RADIO_POWERED"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    sget-object v1, Lcom/google/android/gms/tagmanager/zzdj;->zza:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    .line 3
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 4
+    invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzak;
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)",
-            "Lcom/google/android/gms/internal/gtm/zzak;"
-        }
-    .end annotation
-
-    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzdj;->zzb:Landroid/content/Context;
 
     .line 1
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "android_id"
-
-    invoke-static {p1, v0}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
+    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
     .line 2
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzb()Lcom/google/android/gms/internal/gtm/zzak;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    goto :goto_0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string p2, "noConnectivity"
+
+    invoke-virtual {p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
 
     :cond_0
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzak;
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzdj;->zzb:Lcom/google/android/gms/tagmanager/zzex;
 
-    move-result-object p1
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :goto_0
-    return-object p1
-.end method
+    move-result p2
 
-.method public final zzb()Z
-    .locals 1
+    xor-int/lit8 p2, p2, 0x1
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/tagmanager/zzex;->zzc(Z)V
 
-    return v0
+    return-void
+
+    :cond_1
+    const-string v0, "com.google.analytics.RADIO_POWERED"
+
+    .line 6
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    sget-object p1, Lcom/google/android/gms/tagmanager/zzdj;->zza:Ljava/lang/String;
+
+    .line 7
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzdj;->zzb:Lcom/google/android/gms/tagmanager/zzex;
+
+    .line 8
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzex;->zzb()V
+
+    :cond_2
+    return-void
 .end method

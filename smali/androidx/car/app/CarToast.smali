@@ -199,7 +199,7 @@
 
     const-class v2, Landroidx/car/app/AppManager;
 
-    invoke-virtual {v1, v2}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -207,7 +207,7 @@
 
     iget v2, p0, Landroidx/car/app/CarToast;->c:I
 
-    invoke-virtual {v1, v0, v2}, Landroidx/car/app/AppManager;->u(Ljava/lang/CharSequence;I)V
+    invoke-virtual {v1, v0, v2}, Landroidx/car/app/AppManager;->E(Ljava/lang/CharSequence;I)V
 
     return-void
 

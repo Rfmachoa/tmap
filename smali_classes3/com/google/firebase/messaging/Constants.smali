@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/messaging/Constants;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "Constants.java"
 
 
 # annotations
@@ -18,19 +18,10 @@
 
 # static fields
 .field public static final FCM_WAKE_LOCK:Ljava/lang/String; = "wake:com.google.firebase.messaging"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final IPC_BUNDLE_KEY_SEND_ERROR:Ljava/lang/String; = "error"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final TAG:Ljava/lang/String; = "FirebaseMessaging"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final WAKE_LOCK_ACQUIRE_TIMEOUT_MILLIS:J
 
@@ -56,6 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

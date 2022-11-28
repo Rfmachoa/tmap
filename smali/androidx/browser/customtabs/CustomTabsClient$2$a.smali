@@ -49,13 +49,13 @@
     .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2$a;->c:Landroidx/browser/customtabs/CustomTabsClient$2;
 
-    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     iget v1, p0, Landroidx/browser/customtabs/CustomTabsClient$2$a;->a:I
 
     iget-object v2, p0, Landroidx/browser/customtabs/CustomTabsClient$2$a;->b:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/browser/customtabs/a;->onNavigationEvent(ILandroid/os/Bundle;)V
+    invoke-virtual {v0, v1, v2}, Landroidx/browser/customtabs/b;->onNavigationEvent(ILandroid/os/Bundle;)V
 
     return-void
 .end method

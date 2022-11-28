@@ -21,15 +21,15 @@
     return-void
 .end method
 
-.method public static synthetic r5(Landroidx/car/app/CarAppPermissionActivity;Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
+.method public static synthetic v5(Landroidx/car/app/CarAppPermissionActivity;Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarAppPermissionActivity;->s5(Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
+    invoke-direct {p0, p1, p2}, Landroidx/car/app/CarAppPermissionActivity;->w5(Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method private synthetic s5(Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
+.method private synthetic w5(Landroidx/car/app/IOnRequestPermissionsListener;Ljava/util/Map;)V
     .locals 4
 
     .line 1
@@ -130,20 +130,23 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
-
-    return-void
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
+    const-string p2, "CarApp"
+
+    const-string v0, "CarAppService dead when accepting/rejecting permissions"
+
+    .line 11
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     .line 12
-    new-instance p2, Ljava/lang/IllegalStateException;
+    :goto_1
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
+    return-void
 .end method
 
 
@@ -159,19 +162,19 @@
     invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Landroidx/car/app/CarAppPermissionActivity;->t5()V
+    invoke-virtual {p0}, Landroidx/car/app/CarAppPermissionActivity;->x5()V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroidx/car/app/CarAppPermissionActivity;->u5(Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Landroidx/car/app/CarAppPermissionActivity;->y5(Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public final t5()V
+.method public final x5()V
     .locals 6
 
     .line 1
@@ -288,7 +291,7 @@
     return-void
 .end method
 
-.method public final u5(Landroid/content/Intent;)V
+.method public final y5(Landroid/content/Intent;)V
     .locals 2
     .param p1    # Landroid/content/Intent;
         .annotation build Landroidx/annotation/Nullable;
@@ -311,7 +314,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1}, Landroidx/car/app/CarAppPermissionActivity;->v5(Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Landroidx/car/app/CarAppPermissionActivity;->z5(Landroid/content/Intent;)V
 
     goto :goto_1
 
@@ -354,7 +357,7 @@
     return-void
 .end method
 
-.method public final v5(Landroid/content/Intent;)V
+.method public final z5(Landroid/content/Intent;)V
     .locals 3
 
     .line 1
@@ -389,21 +392,21 @@
 
     .line 5
     :cond_0
-    new-instance v1, Lb/b$h;
+    new-instance v1, Lc/b$i;
 
-    invoke-direct {v1}, Lb/b$h;-><init>()V
+    invoke-direct {v1}, Lc/b$i;-><init>()V
 
-    new-instance v2, Landroidx/car/app/j;
+    new-instance v2, Landroidx/car/app/v;
 
-    invoke-direct {v2, p0, v0}, Landroidx/car/app/j;-><init>(Landroidx/car/app/CarAppPermissionActivity;Landroidx/car/app/IOnRequestPermissionsListener;)V
+    invoke-direct {v2, p0, v0}, Landroidx/car/app/v;-><init>(Landroidx/car/app/CarAppPermissionActivity;Landroidx/car/app/IOnRequestPermissionsListener;)V
 
     .line 6
-    invoke-virtual {p0, v1, v2}, Landroidx/activity/ComponentActivity;->registerForActivityResult(Lb/a;Landroidx/activity/result/a;)Landroidx/activity/result/e;
+    invoke-virtual {p0, v1, v2}, Landroidx/activity/ComponentActivity;->registerForActivityResult(Lc/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1}, Landroidx/activity/result/e;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Landroidx/activity/result/g;->b(Ljava/lang/Object;)V
 
     return-void
 

@@ -74,11 +74,6 @@
     .line 4
     iput-object p2, p0, Lcom/google/android/material/transition/platform/MaterialVisibility;->secondaryAnimatorProvider:Lcom/google/android/material/transition/platform/VisibilityAnimatorProvider;
 
-    .line 5
-    sget-object p1, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {p0, p1}, Landroid/transition/Visibility;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
-
     return-void
 .end method
 
@@ -133,6 +128,14 @@
 
 .method private createAnimator(Landroid/view/ViewGroup;Landroid/view/View;Z)Landroid/animation/Animator;
     .locals 4
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     new-instance v0, Landroid/animation/AnimatorSet;
@@ -181,9 +184,45 @@
 
     .line 7
     :cond_0
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1, p3}, Lcom/google/android/material/transition/platform/MaterialVisibility;->maybeApplyThemeValues(Landroid/content/Context;Z)V
+
+    .line 8
     invoke-static {v0, v1}, Lcom/google/android/material/animation/AnimatorSetCompat;->playTogether(Landroid/animation/AnimatorSet;Ljava/util/List;)V
 
     return-object v0
+.end method
+
+.method private maybeApplyThemeValues(Landroid/content/Context;Z)V
+    .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p2}, Lcom/google/android/material/transition/platform/MaterialVisibility;->getDurationThemeAttrResId(Z)I
+
+    move-result v0
+
+    invoke-static {p0, p1, v0}, Lcom/google/android/material/transition/platform/TransitionUtils;->maybeApplyThemeDuration(Landroid/transition/Transition;Landroid/content/Context;I)Z
+
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/google/android/material/transition/platform/MaterialVisibility;->getEasingThemeAttrResId(Z)I
+
+    move-result v0
+
+    invoke-virtual {p0, p2}, Lcom/google/android/material/transition/platform/MaterialVisibility;->getDefaultEasingInterpolator(Z)Landroid/animation/TimeInterpolator;
+
+    move-result-object p2
+
+    .line 3
+    invoke-static {p0, p1, v0, p2}, Lcom/google/android/material/transition/platform/TransitionUtils;->maybeApplyThemeInterpolator(Landroid/transition/Transition;Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Z
+
+    return-void
 .end method
 
 
@@ -212,6 +251,37 @@
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     return-void
+.end method
+
+.method public getDefaultEasingInterpolator(Z)Landroid/animation/TimeInterpolator;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    sget-object p1, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    return-object p1
+.end method
+
+.method public getDurationThemeAttrResId(Z)I
+    .locals 0
+    .annotation build Landroidx/annotation/AttrRes;
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public getEasingThemeAttrResId(Z)I
+    .locals 0
+    .annotation build Landroidx/annotation/AttrRes;
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public getPrimaryAnimatorProvider()Lcom/google/android/material/transition/platform/VisibilityAnimatorProvider;

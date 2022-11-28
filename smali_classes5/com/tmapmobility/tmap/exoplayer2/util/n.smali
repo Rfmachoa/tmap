@@ -150,7 +150,7 @@
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/util/n;
 
     .line 3
-    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v3, 0x18
 
@@ -218,7 +218,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x18
 

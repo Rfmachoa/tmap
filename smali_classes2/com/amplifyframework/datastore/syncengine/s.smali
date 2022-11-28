@@ -3,46 +3,62 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/s;
+.implements Lgk/o;
 
 
 # instance fields
 .field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/Merger;
 
-.field public final synthetic b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+.field public final synthetic b:Z
 
-.field public final synthetic c:Lcom/amplifyframework/core/Consumer;
+.field public final synthetic c:Lcom/amplifyframework/core/model/Model;
+
+.field public final synthetic d:Lcom/amplifyframework/core/Consumer;
+
+.field public final synthetic e:Lcom/amplifyframework/datastore/appsync/ModelMetadata;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/Merger;ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/s;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
 
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/s;->b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iput-boolean p2, p0, Lcom/amplifyframework/datastore/syncengine/s;->b:Z
 
-    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/s;->c:Lcom/amplifyframework/core/Consumer;
+    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/s;->c:Lcom/amplifyframework/core/model/Model;
+
+    iput-object p4, p0, Lcom/amplifyframework/datastore/syncengine/s;->d:Lcom/amplifyframework/core/Consumer;
+
+    iput-object p5, p0, Lcom/amplifyframework/datastore/syncengine/s;->e:Lcom/amplifyframework/datastore/appsync/ModelMetadata;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 3
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/s;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/s;->b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iget-boolean v1, p0, Lcom/amplifyframework/datastore/syncengine/s;->b:Z
 
-    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/s;->c:Lcom/amplifyframework/core/Consumer;
+    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/s;->c:Lcom/amplifyframework/core/model/Model;
 
-    invoke-static {v0, v1, v2}, Lcom/amplifyframework/datastore/syncengine/Merger;->b(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/g;
+    iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/s;->d:Lcom/amplifyframework/core/Consumer;
 
-    move-result-object v0
+    iget-object v4, p0, Lcom/amplifyframework/datastore/syncengine/s;->e:Lcom/amplifyframework/datastore/appsync/ModelMetadata;
 
-    return-object v0
+    move-object v5, p1
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-static/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/Merger;->e(Lcom/amplifyframework/datastore/syncengine/Merger;ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lek/g;
+
+    move-result-object p1
+
+    return-object p1
 .end method

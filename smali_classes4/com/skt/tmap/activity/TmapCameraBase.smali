@@ -32,48 +32,63 @@
         "grantResults",
         "onRequestPermissionsResult",
         "(I[Ljava/lang/String;[I)V",
-        "A5",
-        "z5",
-        "x5",
-        "Lcom/skt/tmap/dialog/u;",
-        "w5",
+        "K5",
+        "J5",
+        "H5",
+        "Lcom/skt/tmap/dialog/z;",
+        "F5",
         "",
-        "y5",
-        "B5",
-        "C5",
-        "v5",
+        "I5",
+        "L5",
+        "M5",
+        "E5",
         "a",
-        "Lcom/skt/tmap/dialog/u;",
+        "Lcom/skt/tmap/dialog/z;",
         "dialog",
         "<init>",
         "()V",
-        "e",
+        "c",
         "tmap_android_phoneKUShip"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # static fields
-.field public static final c:I = 0x64
-
-.field public static final d:I = 0x1
-
-.field public static final e:Lcom/skt/tmap/activity/TmapCameraBase$a;
+.field public static final c:Lcom/skt/tmap/activity/TmapCameraBase$a;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
+.field public static final d:I = 0x64
+
+.field public static final e:I = 0x1
+
 
 # instance fields
-.field public a:Lcom/skt/tmap/dialog/u;
+.field public a:Lcom/skt/tmap/dialog/z;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field public b:Ljava/util/HashMap;
+.field public b:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -86,55 +101,240 @@
 
     invoke-direct {v0, v1}, Lcom/skt/tmap/activity/TmapCameraBase$a;-><init>(Lkotlin/jvm/internal/u;)V
 
-    sput-object v0, Lcom/skt/tmap/activity/TmapCameraBase;->e:Lcom/skt/tmap/activity/TmapCameraBase$a;
+    sput-object v0, Lcom/skt/tmap/activity/TmapCameraBase;->c:Lcom/skt/tmap/activity/TmapCameraBase$a;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/Map;
+
     invoke-direct {p0}, Lcom/skt/tmap/activity/BaseActivity;-><init>()V
+
+    return-void
+.end method
+
+.method public static synthetic B5(Lcom/skt/tmap/activity/TmapCameraBase;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->G5(Lcom/skt/tmap/activity/TmapCameraBase;)V
+
+    return-void
+.end method
+
+.method public static final G5(Lcom/skt/tmap/activity/TmapCameraBase;)V
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/activity/ComponentActivity;->onBackPressed()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract A5()V
+.method public C5()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    return-void
 .end method
 
-.method public final B5()V
+.method public D5(I)Landroid/view/View;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :cond_1
+    :goto_0
+    return-object v1
+.end method
+
+.method public final E5()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/z;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->F5()Lcom/skt/tmap/dialog/z;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->F5()Lcom/skt/tmap/dialog/z;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->c()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/z;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final F5()Lcom/skt/tmap/dialog/z;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/z;
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance v0, Lcom/skt/tmap/dialog/z;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/dialog/z;-><init>(Landroid/app/Activity;)V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/z;
+
+    .line 3
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    new-instance v1, Lcom/skt/tmap/activity/TmapCameraBase$b;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapCameraBase$b;-><init>(Lcom/skt/tmap/activity/TmapCameraBase;)V
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/z;
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    new-instance v1, Lcom/skt/tmap/activity/c0;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/c0;-><init>(Lcom/skt/tmap/activity/TmapCameraBase;)V
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->q(Lcom/skt/tmap/dialog/TmapBaseDialog$d;)V
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/z;
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public abstract H5()V
+.end method
+
+.method public final I5()Z
+    .locals 1
+
+    const-string v0, "android.permission.CAMERA"
+
+    .line 1
+    invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public abstract J5()V
+.end method
+
+.method public abstract K5()V
+.end method
+
+.method public final L5()V
     .locals 2
 
     const-string v0, "android.permission.CAMERA"
 
     .line 1
-    invoke-static {p0, v0}, Landroidx/core/app/a;->K(Landroid/app/Activity;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Landroidx/core/app/b;->r(Landroid/app/Activity;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->C5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->M5()V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->v5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->E5()V
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->y5()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->I5()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->x5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->H5()V
 
     goto :goto_0
 
@@ -147,17 +347,17 @@
     const/16 v1, 0x64
 
     .line 7
-    invoke-static {p0, v0, v1}, Landroidx/core/app/a;->E(Landroid/app/Activity;[Ljava/lang/String;I)V
+    invoke-static {p0, v0, v1}, Landroidx/core/app/b;->l(Landroid/app/Activity;[Ljava/lang/String;I)V
 
     :goto_0
     return-void
 .end method
 
-.method public final C5()V
+.method public final M5()V
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->w5()Lcom/skt/tmap/dialog/u;
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->F5()Lcom/skt/tmap/dialog/z;
 
     move-result-object v0
 
@@ -168,7 +368,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->w5()Lcom/skt/tmap/dialog/u;
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->F5()Lcom/skt/tmap/dialog/z;
 
     move-result-object v0
 
@@ -189,7 +389,7 @@
     invoke-super {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->B5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->L5()V
 
     return-void
 .end method
@@ -277,19 +477,19 @@
     if-nez v0, :cond_4
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->x5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->H5()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->A5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->K5()V
 
     goto :goto_3
 
     .line 9
     :cond_4
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->C5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->M5()V
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->z5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->J5()V
 
     :cond_5
     :goto_3
@@ -308,182 +508,18 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->y5()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->I5()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->v5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->E5()V
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->x5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->H5()V
 
     :cond_0
     return-void
-.end method
-
-.method public t5()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/HashMap;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public u5(I)Landroid/view/View;
-    .locals 2
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/HashMap;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/HashMap;
-
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapCameraBase;->b:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public final v5()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/u;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->w5()Lcom/skt/tmap/dialog/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapCameraBase;->w5()Lcom/skt/tmap/dialog/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->c()V
-
-    const/4 v0, 0x0
-
-    .line 3
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/u;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w5()Lcom/skt/tmap/dialog/u;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/u;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Lcom/skt/tmap/dialog/u;
-
-    invoke-direct {v0, p0}, Lcom/skt/tmap/dialog/u;-><init>(Landroid/app/Activity;)V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/u;
-
-    .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    new-instance v1, Lcom/skt/tmap/activity/TmapCameraBase$b;
-
-    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapCameraBase$b;-><init>(Lcom/skt/tmap/activity/TmapCameraBase;)V
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
-
-    .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/u;
-
-    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    new-instance v1, Lcom/skt/tmap/activity/TmapCameraBase$c;
-
-    invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapCameraBase$c;-><init>(Lcom/skt/tmap/activity/TmapCameraBase;)V
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->q(Lcom/skt/tmap/dialog/TmapBaseDialog$d;)V
-
-    .line 5
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapCameraBase;->a:Lcom/skt/tmap/dialog/u;
-
-    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public abstract x5()V
-.end method
-
-.method public final y5()Z
-    .locals 1
-
-    const-string v0, "android.permission.CAMERA"
-
-    .line 1
-    invoke-static {p0, v0}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public abstract z5()V
 .end method

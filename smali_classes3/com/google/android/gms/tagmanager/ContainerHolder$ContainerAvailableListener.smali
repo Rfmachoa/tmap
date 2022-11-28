@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/tagmanager/ContainerHolder$ContainerAvailableListener;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # annotations
@@ -17,11 +17,11 @@
 # virtual methods
 .method public abstract onContainerAvailable(Lcom/google/android/gms/tagmanager/ContainerHolder;Ljava/lang/String;)V
     .param p1    # Lcom/google/android/gms/tagmanager/ContainerHolder;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 .end method

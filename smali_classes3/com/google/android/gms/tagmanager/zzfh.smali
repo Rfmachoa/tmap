@@ -1,13 +1,8 @@
-.class final Lcom/google/android/gms/tagmanager/zzfh;
+.class public interface abstract Lcom/google/android/gms/tagmanager/zzfh;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract zza(Lcom/google/android/gms/tagmanager/zzbz;)V
 .end method

@@ -1,11 +1,24 @@
-.class public final Lcom/android/billingclient/api/zzb;
+.class public interface abstract annotation Lcom/android/billingclient/api/zzb;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation runtime Ljava/lang/annotation/Documented;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Target;
     value = {
-        Lcom/android/billingclient/api/zzb$zza;
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
     }
 .end annotation

@@ -502,7 +502,7 @@
 
     iget-object v3, p1, Lcom/amplifyframework/datastore/syncengine/PendingMutation;->mutationId:Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
 
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -513,7 +513,7 @@
     iget-object v3, p1, Lcom/amplifyframework/datastore/syncengine/PendingMutation;->mutatedItem:Lcom/amplifyframework/core/model/Model;
 
     .line 4
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -524,7 +524,7 @@
     iget-object v3, p1, Lcom/amplifyframework/datastore/syncengine/PendingMutation;->modelSchema:Lcom/amplifyframework/core/model/ModelSchema;
 
     .line 5
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -535,7 +535,7 @@
     iget-object v3, p1, Lcom/amplifyframework/datastore/syncengine/PendingMutation;->mutationType:Lcom/amplifyframework/datastore/syncengine/PendingMutation$Type;
 
     .line 6
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -546,7 +546,7 @@
     iget-object p1, p1, Lcom/amplifyframework/datastore/syncengine/PendingMutation;->predicate:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
 
     .line 7
-    invoke-static {v2, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

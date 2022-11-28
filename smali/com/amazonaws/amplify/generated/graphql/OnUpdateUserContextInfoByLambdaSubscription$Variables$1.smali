@@ -3,12 +3,12 @@
 .source "OnUpdateUserContextInfoByLambdaSubscription.java"
 
 # interfaces
-.implements Lc4/e;
+.implements Lz5/e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables;->marshaller()Lc4/e;
+    value = Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables;->marshaller()Lz5/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public marshal(Lc4/f;)V
+.method public marshal(Lz5/f;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -69,7 +69,7 @@
 
     const-string v1, "userKey"
 
-    invoke-interface {p1, v1, v0}, Lc4/f;->h(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v0}, Lz5/f;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables$1;->this$0:Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables;
@@ -94,7 +94,7 @@
     :goto_0
     const-string v2, "advertisements"
 
-    invoke-interface {p1, v2, v0}, Lc4/f;->a(Ljava/lang/String;Lc4/f$b;)V
+    invoke-interface {p1, v2, v0}, Lz5/f;->a(Ljava/lang/String;Lz5/f$b;)V
 
     .line 3
     iget-object v0, p0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables$1;->this$0:Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables;
@@ -105,7 +105,7 @@
 
     const-string v2, "myTab"
 
-    invoke-interface {p1, v2, v0}, Lc4/f;->h(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lz5/f;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables$1;->this$0:Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables;
@@ -116,7 +116,7 @@
 
     const-string v2, "notice"
 
-    invoke-interface {p1, v2, v0}, Lc4/f;->h(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v2, v0}, Lz5/f;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables$1;->this$0:Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables;
@@ -134,7 +134,7 @@
     :cond_1
     const-string v0, "shortcuts"
 
-    invoke-interface {p1, v0, v1}, Lc4/f;->a(Ljava/lang/String;Lc4/f$b;)V
+    invoke-interface {p1, v0, v1}, Lz5/f;->a(Ljava/lang/String;Lz5/f$b;)V
 
     return-void
 .end method

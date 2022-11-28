@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/skt/tmap/dialog/n$a;
 .super Ljava/lang/Object;
-.source "ProgressBarDialog.java"
+.source "MainFavoriteRouteDialog.java"
 
 
 # annotations
@@ -15,5 +15,28 @@
 
 
 # virtual methods
-.method public abstract a()V
+.method public abstract a(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "usedFavoriteRouteInfo",
+            "position"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "usedFavoriteRouteInfo",
+            "position"
+        }
+    .end annotation
 .end method

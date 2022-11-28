@@ -33,10 +33,10 @@
 
 
 # virtual methods
-.method public final a(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/util/List;Lcom/tmapmobility/tmap/exoplayer2/util/i0;Ljava/util/Map;Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;
+.method public final a(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/util/List;Lcom/tmapmobility/tmap/exoplayer2/util/j0;Ljava/util/Map;Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;
     .locals 0
 
-    invoke-static/range {p1 .. p7}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s;->g(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/util/List;Lcom/tmapmobility/tmap/exoplayer2/util/i0;Ljava/util/Map;Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;
+    invoke-static/range {p1 .. p7}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s;->g(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/util/List;Lcom/tmapmobility/tmap/exoplayer2/util/j0;Ljava/util/Map;Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;
 
     move-result-object p1
 

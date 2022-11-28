@@ -32,13 +32,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lm1/c;)V
+.method public constructor <init>(Landroid/content/Context;Lf2/d;)V
     .locals 2
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lm1/c;
+    .param p2    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -48,20 +48,20 @@
 
     sget-object v1, Landroidx/emoji/text/b;->i:Landroidx/emoji/text/b$b;
 
-    invoke-direct {v0, p1, p2, v1}, Landroidx/emoji/text/b$c;-><init>(Landroid/content/Context;Lm1/c;Landroidx/emoji/text/b$b;)V
+    invoke-direct {v0, p1, p2, v1}, Landroidx/emoji/text/b$c;-><init>(Landroid/content/Context;Lf2/d;Landroidx/emoji/text/b$b;)V
 
     invoke-direct {p0, v0}, Landroidx/emoji/text/EmojiCompat$c;-><init>(Landroidx/emoji/text/EmojiCompat$f;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lm1/c;Landroidx/emoji/text/b$b;)V
+.method public constructor <init>(Landroid/content/Context;Lf2/d;Landroidx/emoji/text/b$b;)V
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lm1/c;
+    .param p2    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -78,7 +78,7 @@
     .line 2
     new-instance v0, Landroidx/emoji/text/b$c;
 
-    invoke-direct {v0, p1, p2, p3}, Landroidx/emoji/text/b$c;-><init>(Landroid/content/Context;Lm1/c;Landroidx/emoji/text/b$b;)V
+    invoke-direct {v0, p1, p2, p3}, Landroidx/emoji/text/b$c;-><init>(Landroid/content/Context;Lf2/d;Landroidx/emoji/text/b$b;)V
 
     invoke-direct {p0, v0}, Landroidx/emoji/text/EmojiCompat$c;-><init>(Landroidx/emoji/text/EmojiCompat$f;)V
 

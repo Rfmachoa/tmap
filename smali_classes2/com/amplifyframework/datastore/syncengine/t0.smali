@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lgk/a;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/t0;->a:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
-    invoke-static {v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->j(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-static {v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->g(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     return-void
 .end method

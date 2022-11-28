@@ -26,15 +26,15 @@
 
 
 # virtual methods
-.method public abstract cacheHeaders(Le4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
-    .param p1    # Le4/a;
+.method public abstract cacheHeaders(Lb6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le4/a;",
+            "Lb6/a;",
             ")",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall<",
             "TT;>;"
@@ -77,15 +77,15 @@
     .end annotation
 .end method
 
-.method public abstract responseFetcher(Li4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
-    .param p1    # Li4/a;
+.method public abstract responseFetcher(Lf6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+    .param p1    # Lf6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Li4/a;",
+            "Lf6/a;",
             ")",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall<",
             "TT;>;"

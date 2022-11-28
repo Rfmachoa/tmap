@@ -6,27 +6,21 @@
 .implements Lcom/google/firebase/inject/Provider;
 
 
-# static fields
-.field public static final synthetic a:Lcom/google/firebase/components/g;
+# instance fields
+.field public final synthetic a:Lcom/google/firebase/components/ComponentRuntime;
+
+.field public final synthetic b:Lcom/google/firebase/components/Component;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/google/firebase/components/g;
-
-    invoke-direct {v0}, Lcom/google/firebase/components/g;-><init>()V
-
-    sput-object v0, Lcom/google/firebase/components/g;->a:Lcom/google/firebase/components/g;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/firebase/components/g;->a:Lcom/google/firebase/components/ComponentRuntime;
+
+    iput-object p2, p0, Lcom/google/firebase/components/g;->b:Lcom/google/firebase/components/Component;
 
     return-void
 .end method
@@ -34,9 +28,13 @@
 
 # virtual methods
 .method public final get()Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
+    iget-object v0, p0, Lcom/google/firebase/components/g;->a:Lcom/google/firebase/components/ComponentRuntime;
+
+    iget-object v1, p0, Lcom/google/firebase/components/g;->b:Lcom/google/firebase/components/Component;
+
+    invoke-static {v0, v1}, Lcom/google/firebase/components/ComponentRuntime;->a(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)Ljava/lang/Object;
 
     move-result-object v0
 

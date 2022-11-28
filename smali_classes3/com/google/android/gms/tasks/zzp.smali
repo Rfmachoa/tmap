@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/tasks/zzp;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/OnSuccessListener;
@@ -31,22 +31,8 @@
 .field private final zza:Ljava/util/concurrent/Executor;
 
 .field private final zzb:Lcom/google/android/gms/tasks/SuccessContinuation;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/SuccessContinuation<",
-            "TTResult;TTContinuationResult;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zzc:Lcom/google/android/gms/tasks/zzw;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/zzw<",
-            "TTContinuationResult;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -64,16 +50,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lcom/google/android/gms/tasks/SuccessContinuation<",
-            "TTResult;TTContinuationResult;>;",
-            "Lcom/google/android/gms/tasks/zzw<",
-            "TTContinuationResult;>;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -155,13 +131,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TTResult;>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzp;->zza:Ljava/util/concurrent/Executor;

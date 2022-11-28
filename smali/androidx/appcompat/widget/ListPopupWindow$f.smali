@@ -3,7 +3,7 @@
 .source "ListPopupWindow.java"
 
 # interfaces
-.implements Landroid/widget/AbsListView$OnScrollListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -35,55 +35,13 @@
 
 
 # virtual methods
-.method public onScroll(Landroid/widget/AbsListView;III)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
-    .locals 0
-
-    const/4 p1, 0x1
-
-    if-ne p2, p1, :cond_0
+.method public run()V
+    .locals 1
 
     .line 1
-    iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$f;->a:Landroidx/appcompat/widget/ListPopupWindow;
+    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$f;->a:Landroidx/appcompat/widget/ListPopupWindow;
 
-    .line 2
-    invoke-virtual {p1}, Landroidx/appcompat/widget/ListPopupWindow;->I()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->q()V
 
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$f;->a:Landroidx/appcompat/widget/ListPopupWindow;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->k1:Landroid/widget/PopupWindow;
-
-    invoke-virtual {p1}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$f;->a:Landroidx/appcompat/widget/ListPopupWindow;
-
-    iget-object p2, p1, Landroidx/appcompat/widget/ListPopupWindow;->g1:Landroid/os/Handler;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->b1:Landroidx/appcompat/widget/ListPopupWindow$h;
-
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 4
-    iget-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$f;->a:Landroidx/appcompat/widget/ListPopupWindow;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/ListPopupWindow;->b1:Landroidx/appcompat/widget/ListPopupWindow$h;
-
-    invoke-virtual {p1}, Landroidx/appcompat/widget/ListPopupWindow$h;->run()V
-
-    :cond_0
     return-void
 .end method

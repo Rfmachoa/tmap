@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/data/SingleRefDataBufferIterator;
 .super Lcom/google/android/gms/common/data/DataBufferIterator;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -20,12 +20,6 @@
 
 # instance fields
 .field private zac:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -35,13 +29,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/data/DataBuffer<",
-            "TT;>;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/data/DataBufferIterator;-><init>(Lcom/google/android/gms/common/data/DataBuffer;)V
@@ -52,14 +39,8 @@
 
 # virtual methods
 .method public final next()Ljava/lang/Object;
-    .locals 5
+    .locals 4
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
     .end annotation
 
     .line 1
@@ -112,21 +93,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x2c
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "DataBuffer reference of type "
 
-    const-string v4, " is not movable"
+    const-string v3, " is not movable"
 
-    invoke-static {v3, v2, v0, v4}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v3}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -161,11 +132,9 @@
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zab:I
 
-    const/16 v2, 0x2e
+    const-string v2, "Cannot advance the iterator beyond "
 
-    const-string v3, "Cannot advance the iterator beyond "
-
-    invoke-static {v2, v3, v1}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 

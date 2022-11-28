@@ -12,6 +12,7 @@
         Lcom/google/firebase/abt/R$id;,
         Lcom/google/firebase/abt/R$integer;,
         Lcom/google/firebase/abt/R$layout;,
+        Lcom/google/firebase/abt/R$raw;,
         Lcom/google/firebase/abt/R$string;,
         Lcom/google/firebase/abt/R$style;,
         Lcom/google/firebase/abt/R$styleable;

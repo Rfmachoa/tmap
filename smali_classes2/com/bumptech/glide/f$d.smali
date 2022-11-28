@@ -34,7 +34,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lm5/m;->f(I)Ljava/util/Queue;
+    invoke-static {p1}, Lj7/n;->f(I)Ljava/util/Queue;
 
     move-result-object v0
 

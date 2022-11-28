@@ -383,7 +383,7 @@
     const-string v0, "androidx.biometric.BiometricFragment"
 
     .line 1
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentManager;->q0(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentManager;->s0(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p0
 
@@ -409,27 +409,27 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {}, Landroidx/biometric/d;->w()Landroidx/biometric/d;
+    invoke-static {}, Landroidx/biometric/d;->x()Landroidx/biometric/d;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->u()Landroidx/fragment/app/j0;
 
     move-result-object v1
 
     const-string v2, "androidx.biometric.BiometricFragment"
 
     .line 4
-    invoke-virtual {v1, v0, v2}, Landroidx/fragment/app/a0;->k(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/a0;
+    invoke-virtual {v1, v0, v2}, Landroidx/fragment/app/j0;->k(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/j0;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {v1}, Landroidx/fragment/app/a0;->r()I
+    invoke-virtual {v1}, Landroidx/fragment/app/j0;->r()I
 
     .line 6
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->l0()Z
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentManager;->n0()Z
 
     :cond_0
     return-object v0
@@ -615,7 +615,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->Y0()Z
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->d1()Z
 
     move-result v0
 
@@ -638,7 +638,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1, p2}, Landroidx/biometric/d;->h(Landroidx/biometric/BiometricPrompt$d;Landroidx/biometric/BiometricPrompt$c;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/biometric/d;->i(Landroidx/biometric/BiometricPrompt$d;Landroidx/biometric/BiometricPrompt$c;)V
 
     return-void
 .end method
@@ -679,7 +679,7 @@
     const/4 v1, 0x3
 
     .line 5
-    invoke-virtual {v0, v1}, Landroidx/biometric/d;->k(I)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/d;->l(I)V
 
     return-void
 .end method
@@ -711,11 +711,11 @@
     if-eqz p3, :cond_0
 
     .line 2
-    invoke-virtual {p2, p3}, Landroidx/biometric/f;->L(Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p2, p3}, Landroidx/biometric/f;->M(Ljava/util/concurrent/Executor;)V
 
     .line 3
     :cond_0
-    invoke-virtual {p2, p4}, Landroidx/biometric/f;->K(Landroidx/biometric/BiometricPrompt$a;)V
+    invoke-virtual {p2, p4}, Landroidx/biometric/f;->L(Landroidx/biometric/BiometricPrompt$a;)V
 
     :cond_1
     return-void

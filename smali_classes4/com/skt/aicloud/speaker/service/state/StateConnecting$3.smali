@@ -95,7 +95,7 @@
 
     check-cast v0, Landroid/net/wifi/SupplicantState;
 
-    const-string/jumbo v1, "supplicantError"
+    const-string v1, "supplicantError"
 
     .line 9
     invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z

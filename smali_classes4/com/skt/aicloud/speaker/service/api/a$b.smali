@@ -52,7 +52,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/skt/aicloud/speaker/service/api/a;->l0(Lpa/a;)V
+    invoke-virtual {v0, v1}, Lcom/skt/aicloud/speaker/service/api/a;->l0(Lmc/a;)V
 
     return-void
 .end method

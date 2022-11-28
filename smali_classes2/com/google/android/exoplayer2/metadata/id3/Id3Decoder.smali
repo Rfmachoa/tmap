@@ -190,7 +190,7 @@
     if-ne v4, v6, :cond_2
 
     .line 10
-    invoke-static {p0, v3}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v3}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1519,7 +1519,7 @@
     const-string p0, "Unexpected first three bytes of ID3 tag header: "
 
     .line 5
-    invoke-static {p0, v0, v2}, Ld1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {p0, v0, v2}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     return-object v1
 
@@ -1677,7 +1677,7 @@
     const-string p0, "Skipped ID3 tag with unsupported majorVersion="
 
     .line 16
-    invoke-static {p0, v0, v2}, Ld1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {p0, v0, v2}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     return-object v1
 .end method

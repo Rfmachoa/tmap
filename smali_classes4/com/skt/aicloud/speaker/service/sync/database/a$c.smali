@@ -89,7 +89,7 @@
 
     const-string v4, "daysofweek"
 
-    const-string/jumbo v5, "time"
+    const-string v5, "time"
 
     const-string v6, "enabled"
 
@@ -101,7 +101,7 @@
 
     const-string v10, "song_id"
 
-    const-string/jumbo v11, "type"
+    const-string v11, "type"
 
     .line 1
     filled-new-array/range {v0 .. v11}, [Ljava/lang/String;

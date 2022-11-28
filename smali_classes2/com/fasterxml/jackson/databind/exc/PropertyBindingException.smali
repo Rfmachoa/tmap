@@ -1,5 +1,5 @@
 .class public abstract Lcom/fasterxml/jackson/databind/exc/PropertyBindingException;
-.super Lcom/fasterxml/jackson/databind/JsonMappingException;
+.super Lcom/fasterxml/jackson/databind/exc/MismatchedInputException;
 .source "PropertyBindingException.java"
 
 
@@ -51,7 +51,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/JsonMappingException;-><init>(Ljava/io/Closeable;Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/exc/MismatchedInputException;-><init>(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;)V
 
     .line 2
     iput-object p4, p0, Lcom/fasterxml/jackson/databind/exc/PropertyBindingException;->_referringClass:Ljava/lang/Class;

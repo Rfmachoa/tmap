@@ -9,7 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/room/IMultiInstanceInvalidationCallback$Stub;
+        Landroidx/room/IMultiInstanceInvalidationCallback$Stub;,
+        Landroidx/room/IMultiInstanceInvalidationCallback$Default;
     }
 .end annotation
 

@@ -66,7 +66,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->a()Landroidx/lifecycle/ViewModelProvider$Factory;
+    invoke-static {}, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->b()Landroidx/lifecycle/ViewModelProvider$Factory;
 
     move-result-object v0
 

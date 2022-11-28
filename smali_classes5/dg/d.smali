@@ -1,452 +1,355 @@
 .class public Ldg/d;
 .super Ljava/lang/Object;
-.source "AuthenticationStrategyAdaptor.java"
+.source "OggExtractor.java"
 
 # interfaces
-.implements Lgf/c;
+.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/Extractor;
 
 
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
+# static fields
+.field public static final g:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.field public static final h:I = 0x8
 
 
 # instance fields
-.field public a:Lcz/msebera/android/httpclient/extras/b;
+.field public d:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-.field public final b:Lgf/b;
+.field public e:Ldg/i;
+
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>(Lgf/b;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ldg/c;->b:Ldg/c;
 
-    .line 2
-    new-instance v0, Lcz/msebera/android/httpclient/extras/b;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcz/msebera/android/httpclient/extras/b;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    .line 3
-    iput-object p1, p0, Ldg/d;->b:Lgf/b;
+    sput-object v0, Ldg/d;->g:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Ljava/util/Map;Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lpg/g;)Ljava/util/Queue;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ldf/d;",
-            ">;",
-            "Lcz/msebera/android/httpclient/HttpHost;",
-            "Ldf/t;",
-            "Lpg/g;",
-            ")",
-            "Ljava/util/Queue<",
-            "Lef/b;",
-            ">;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
-        }
-    .end annotation
-
-    const-string v0, "Map of auth challenges"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "Host"
-
-    .line 2
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "HTTP response"
-
-    .line 3
-    invoke-static {p3, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "HTTP context"
-
-    .line 4
-    invoke-static {p4, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 5
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    const-string v1, "http.auth.credentials-provider"
-
-    .line 6
-    invoke-interface {p4, v1}, Lpg/g;->getAttribute(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgf/g;
-
-    if-nez v1, :cond_0
-
-    .line 7
-    iget-object p1, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    const-string p2, "Credentials provider not set in the context"
-
-    invoke-virtual {p1, p2}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
-
-    return-object v0
-
-    .line 8
-    :cond_0
-    :try_start_0
-    iget-object v2, p0, Ldg/d;->b:Lgf/b;
-
-    invoke-interface {v2, p1, p3, p4}, Lgf/b;->b(Ljava/util/Map;Ldf/t;Lpg/g;)Lef/c;
-
-    move-result-object p3
-    :try_end_0
-    .catch Lcz/msebera/android/httpclient/auth/AuthenticationException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 9
-    invoke-interface {p3}, Lef/c;->getSchemeName()Ljava/lang/String;
-
-    move-result-object p4
-
-    .line 10
-    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {p4, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p4
-
-    invoke-interface {p1, p4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldf/d;
-
-    .line 11
-    invoke-interface {p3, p1}, Lef/c;->a(Ldf/d;)V
-
-    .line 12
-    new-instance p1, Lef/g;
-
-    .line 13
-    invoke-virtual {p2}, Lcz/msebera/android/httpclient/HttpHost;->getHostName()Ljava/lang/String;
-
-    move-result-object p4
-
-    .line 14
-    invoke-virtual {p2}, Lcz/msebera/android/httpclient/HttpHost;->getPort()I
-
-    move-result p2
-
-    .line 15
-    invoke-interface {p3}, Lef/c;->getRealm()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 16
-    invoke-interface {p3}, Lef/c;->getSchemeName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {p1, p4, p2, v2, v3}, Lef/g;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 17
-    invoke-interface {v1, p1}, Lgf/g;->b(Lef/g;)Lef/j;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 18
-    new-instance p2, Lef/b;
-
-    invoke-direct {p2, p3, p1}, Lef/b;-><init>(Lef/c;Lef/j;)V
-
-    invoke-virtual {v0, p2}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-object v0
-
-    :catch_0
-    move-exception p1
-
-    .line 19
-    iget-object p2, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    invoke-virtual {p2}, Lcz/msebera/android/httpclient/extras/b;->p()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    .line 20
-    iget-object p2, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3, p1}, Lcz/msebera/android/httpclient/extras/b;->t(Ljava/lang/Object;Ljava/lang/Throwable;)V
-
-    :cond_2
-    return-object v0
-.end method
-
-.method public b(Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lpg/g;)Z
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iget-object p1, p0, Ldg/d;->b:Lgf/b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1, p2, p3}, Lgf/b;->a(Ldf/t;Lpg/g;)Z
+    return-void
+.end method
+
+.method public static synthetic a()[Lcom/tmapmobility/tmap/exoplayer2/extractor/Extractor;
+    .locals 1
+
+    invoke-static {}, Ldg/d;->e()[Lcom/tmapmobility/tmap/exoplayer2/extractor/Extractor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static synthetic e()[Lcom/tmapmobility/tmap/exoplayer2/extractor/Extractor;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/extractor/Extractor;
+
+    .line 1
+    new-instance v1, Ldg/d;
+
+    invoke-direct {v1}, Ldg/d;-><init>()V
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static f(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public b(Lcom/tmapmobility/tmap/exoplayer2/extractor/l;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Ldg/d;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
+
+    return-void
+.end method
+
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)I
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Ldg/d;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    iget-object v0, p0, Ldg/d;->e:Ldg/i;
+
+    if-nez v0, :cond_1
+
+    .line 3
+    invoke-virtual {p0, p1}, Ldg/d;->g(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->resetPeekPosition()V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    const-string p2, "Failed to determine bitstream type"
+
+    .line 5
+    invoke-static {p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/tmapmobility/tmap/exoplayer2/ParserException;
+
+    move-result-object p1
+
+    throw p1
+
+    .line 6
+    :cond_1
+    :goto_0
+    iget-boolean v0, p0, Ldg/d;->f:Z
+
+    if-nez v0, :cond_2
+
+    .line 7
+    iget-object v0, p0, Ldg/d;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
+
+    move-result-object v0
+
+    .line 8
+    iget-object v1, p0, Ldg/d;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
+
+    invoke-interface {v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->endTracks()V
+
+    .line 9
+    iget-object v1, p0, Ldg/d;->e:Ldg/i;
+
+    iget-object v3, p0, Ldg/d;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
+
+    invoke-virtual {v1, v3, v0}, Ldg/i;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/l;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;)V
+
+    .line 10
+    iput-boolean v2, p0, Ldg/d;->f:Z
+
+    .line 11
+    :cond_2
+    iget-object v0, p0, Ldg/d;->e:Ldg/i;
+
+    invoke-virtual {v0, p1, p2}, Ldg/i;->g(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public c(Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lpg/g;)Ljava/util/Map;
+.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcz/msebera/android/httpclient/HttpHost;",
-            "Ldf/t;",
-            "Lpg/g;",
-            ")",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ldf/d;",
-            ">;"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
+            Ljava/io/IOException;
         }
     .end annotation
 
     .line 1
-    iget-object p1, p0, Ldg/d;->b:Lgf/b;
+    :try_start_0
+    invoke-virtual {p0, p1}, Ldg/d;->g(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
 
-    invoke-interface {p1, p2, p3}, Lgf/b;->c(Ldf/t;Lpg/g;)Ljava/util/Map;
+    move-result p1
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
+    return p1
 
-    return-object p1
+    :catch_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public d(Lcz/msebera/android/httpclient/HttpHost;Lef/c;Lpg/g;)V
-    .locals 2
+.method public final g(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    const-string v0, "http.auth.auth-cache"
-
-    .line 1
-    invoke-interface {p3, v0}, Lpg/g;->getAttribute(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lgf/a;
-
-    if-nez p3, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/extras/b;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 3
-    iget-object v0, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    const-string v1, "Removing from cache \'"
-
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-interface {p2}, Lef/c;->getSchemeName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "\' auth scheme for "
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
-
-    .line 4
-    :cond_1
-    invoke-interface {p3, p1}, Lgf/a;->b(Lcz/msebera/android/httpclient/HttpHost;)V
-
-    return-void
-.end method
-
-.method public e(Lcz/msebera/android/httpclient/HttpHost;Lef/c;Lpg/g;)V
-    .locals 3
-
-    const-string v0, "http.auth.auth-cache"
+    .annotation runtime Lorg/checkerframework/checker/nullness/qual/EnsuresNonNullIf;
+        expression = {
+            "streamReader"
+        }
+        result = true
+    .end annotation
 
     .line 1
-    invoke-interface {p3, v0}, Lpg/g;->getAttribute(Ljava/lang/String;)Ljava/lang/Object;
+    new-instance v0, Ldg/f;
 
-    move-result-object v1
+    invoke-direct {v0}, Ldg/f;-><init>()V
 
-    check-cast v1, Lgf/a;
+    const/4 v1, 0x1
 
     .line 2
-    invoke-virtual {p0, p2}, Ldg/d;->g(Lef/c;)Z
+    invoke-virtual {v0, p1, v1}, Ldg/f;->a(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    const/4 v3, 0x0
 
-    if-nez v1, :cond_0
+    if-eqz v2, :cond_3
+
+    iget v2, v0, Ldg/f;->b:I
+
+    const/4 v4, 0x2
+
+    and-int/2addr v2, v4
+
+    if-eq v2, v4, :cond_0
+
+    goto :goto_1
 
     .line 3
-    new-instance v1, Ldg/g;
+    :cond_0
+    iget v0, v0, Ldg/f;->i:I
 
-    invoke-direct {v1}, Ldg/g;-><init>()V
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
 
     .line 4
-    invoke-interface {p3, v0, v1}, Lpg/g;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-direct {v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>(I)V
 
     .line 5
-    :cond_0
-    iget-object p3, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
-    invoke-virtual {p3}, Lcz/msebera/android/httpclient/extras/b;->l()Z
+    move-result-object v4
 
-    move-result p3
-
-    if-eqz p3, :cond_1
+    invoke-interface {p1, v4, v3, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->peekFully([BII)V
 
     .line 6
-    iget-object p3, p0, Ldg/d;->a:Lcz/msebera/android/httpclient/extras/b;
-
-    const-string v0, "Caching \'"
-
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lef/c;->getSchemeName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\' auth scheme for "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p3, v0}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
-
-    .line 7
-    :cond_1
-    invoke-interface {v1, p1, p2}, Lgf/a;->a(Lcz/msebera/android/httpclient/HttpHost;Lef/c;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public f()Lgf/b;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ldg/d;->b:Lgf/b;
-
-    return-object v0
-.end method
-
-.method public final g(Lef/c;)Z
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_2
-
-    .line 1
-    invoke-interface {p1}, Lef/c;->isComplete()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    invoke-interface {p1}, Lef/c;->getSchemeName()Ljava/lang/String;
+    invoke-static {v2}, Ldg/d;->f(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     move-result-object p1
 
-    const-string v1, "Basic"
+    invoke-static {p1}, Ldg/b;->p(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Z
 
-    .line 3
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result p1
 
-    move-result v1
+    if-eqz p1, :cond_1
 
-    if-nez v1, :cond_1
+    .line 7
+    new-instance p1, Ldg/b;
 
-    const-string v1, "Digest"
+    invoke-direct {p1}, Ldg/b;-><init>()V
 
-    .line 4
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    iput-object p1, p0, Ldg/d;->e:Ldg/i;
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    invoke-static {v2}, Ldg/d;->f(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldg/j;->r(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    :cond_1
-    const/4 v0, 0x1
+    .line 9
+    new-instance p1, Ldg/j;
 
+    invoke-direct {p1}, Ldg/j;-><init>()V
+
+    iput-object p1, p0, Ldg/d;->e:Ldg/i;
+
+    goto :goto_0
+
+    .line 10
     :cond_2
+    invoke-static {v2}, Ldg/d;->f(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ldg/h;->p(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    .line 11
+    new-instance p1, Ldg/h;
+
+    invoke-direct {p1}, Ldg/h;-><init>()V
+
+    iput-object p1, p0, Ldg/d;->e:Ldg/i;
+
     :goto_0
-    return v0
+    return v1
+
+    :cond_3
+    :goto_1
+    return v3
+.end method
+
+.method public release()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public seek(JJ)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ldg/d;->e:Ldg/i;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0, p1, p2, p3, p4}, Ldg/i;->m(JJ)V
+
+    :cond_0
+    return-void
 .end method

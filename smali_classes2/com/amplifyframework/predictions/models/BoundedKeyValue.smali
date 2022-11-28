@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/amplifyframework/predictions/models/ImageFeature<",
-        "Lr1/i<",
+        "Landroidx/core/util/k<",
         "Ljava/lang/String;",
         "Ljava/lang/String;",
         ">;>;"
@@ -65,9 +65,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lr1/i;
+    check-cast v0, Landroidx/core/util/k;
 
-    iget-object v0, v0, Lr1/i;->a:Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/core/util/k;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
@@ -84,9 +84,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lr1/i;
+    check-cast v0, Landroidx/core/util/k;
 
-    iget-object v0, v0, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 

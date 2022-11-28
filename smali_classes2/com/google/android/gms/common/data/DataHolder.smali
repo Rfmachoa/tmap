@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/data/DataHolder;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Ljava/io/Closeable;
@@ -503,40 +503,37 @@
 .end method
 
 .method private final zae(Ljava/lang/String;I)V
-    .locals 2
+    .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataHolder;->zab:Landroid/os/Bundle;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    if-eqz v0, :cond_2
 
     .line 2
-    :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataHolder;->isClosed()Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_1
 
-    if-ltz p2, :cond_1
+    if-ltz p2, :cond_0
 
     .line 3
     iget p1, p0, Lcom/google/android/gms/common/data/DataHolder;->zad:I
 
-    if-ge p2, p1, :cond_1
+    if-ge p2, p1, :cond_0
 
     return-void
 
     .line 4
-    :cond_1
+    :cond_0
     new-instance p1, Landroid/database/CursorIndexOutOfBoundsException;
 
     iget v0, p0, Lcom/google/android/gms/common/data/DataHolder;->zad:I
@@ -546,7 +543,7 @@
     throw p1
 
     .line 5
-    :cond_2
+    :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string p2, "Buffer is closed."
@@ -557,37 +554,20 @@
     throw p1
 
     .line 7
-    :cond_3
-    :goto_0
+    :cond_2
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
-    .line 8
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "No such column: "
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
     invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_1
-
-    .line 9
-    :cond_4
-    new-instance p1, Ljava/lang/String;
-
-    .line 10
-    invoke-direct {p1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_1
+    .line 8
     invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p2
@@ -666,10 +646,8 @@
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/16 v6, 0x48
-
     .line 9
-    invoke-direct {v2, v6}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v6, "Allocating additional cursor window for large data set (row "
 
@@ -936,41 +914,23 @@
 
     move-result-object p1
 
-    invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    const-string v2, "Unsupported object for column "
 
-    move-result v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v1, 0x20
+    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    const-string v2, ": "
 
-    move-result v2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v1, v2
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 40
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    .line 41
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Unsupported object for column "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ": "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -988,13 +948,11 @@
     :cond_c
     if-nez v5, :cond_d
 
-    .line 42
+    .line 40
     new-instance v5, Ljava/lang/StringBuilder;
 
-    const/16 v6, 0x4a
-
-    .line 43
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(I)V
+    .line 41
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v6, "Couldn\'t populate window data for row "
 
@@ -1012,18 +970,18 @@
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
+    .line 42
     invoke-virtual {v2}, Landroid/database/CursorWindow;->freeLastRow()V
 
     new-instance v2, Landroid/database/CursorWindow;
 
-    .line 45
+    .line 43
     invoke-direct {v2, v0}, Landroid/database/CursorWindow;-><init>(Z)V
 
-    .line 46
+    .line 44
     invoke-virtual {v2, v4}, Landroid/database/CursorWindow;->setStartPosition(I)V
 
-    .line 47
+    .line 45
     invoke-static {p0}, Lcom/google/android/gms/common/data/DataHolder$Builder;->zac(Lcom/google/android/gms/common/data/DataHolder$Builder;)[Ljava/lang/String;
 
     move-result-object v5
@@ -1032,7 +990,7 @@
 
     invoke-virtual {v2, v5}, Landroid/database/CursorWindow;->setNumColumns(I)Z
 
-    .line 48
+    .line 46
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, -0x1
@@ -1047,10 +1005,10 @@
     :cond_d
     const-string p0, "Could not add the value to a new CursorWindow. The size of value may be larger than what a CursorWindow can handle."
 
-    .line 49
+    .line 47
     new-instance p1, Lcom/google/android/gms/common/data/zad;
 
-    .line 50
+    .line 48
     invoke-direct {p1, p0}, Lcom/google/android/gms/common/data/zad;-><init>(Ljava/lang/String;)V
 
     throw p1
@@ -1060,7 +1018,7 @@
     :catch_0
     move-exception p0
 
-    .line 51
+    .line 49
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result p1
@@ -1068,7 +1026,7 @@
     :goto_5
     if-ge v0, p1, :cond_e
 
-    .line 52
+    .line 50
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1081,11 +1039,11 @@
 
     goto :goto_5
 
-    .line 53
+    .line 51
     :cond_e
     throw p0
 
-    .line 54
+    .line 52
     :cond_f
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -1156,7 +1114,7 @@
 .end method
 
 .method public final finalize()V
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Throwable;
@@ -1184,38 +1142,28 @@
     .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
-    const-string v0, "DataBuffer"
-
     .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit16 v2, v2, 0xb2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Internal data leak within a DataBuffer object detected!  Be sure to explicitly call release() on all DataBuffer extending objects when you are done with them. (internal object: "
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v0, ")"
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, "DataBuffer"
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 

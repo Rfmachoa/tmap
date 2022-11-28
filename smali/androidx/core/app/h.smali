@@ -1,24 +1,12 @@
-.class public final Landroidx/core/app/h;
-.super Ljava/lang/Object;
-.source "AppOpsManagerCompat.java"
+.class public Landroidx/core/app/h;
+.super Landroid/app/AppComponentFactory;
+.source "AppComponentFactory.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/core/app/h$a;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
 .end annotation
-
-
-# static fields
-.field public static final a:I = 0x0
-
-.field public static final b:I = 0x1
-
-.field public static final c:I = 0x2
-
-.field public static final d:I = 0x3
 
 
 # direct methods
@@ -26,14 +14,16 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/app/AppComponentFactory;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;)I
-    .locals 2
-    .param p0    # Landroid/content/Context;
+
+# virtual methods
+.method public a(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -41,130 +31,77 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    const/4 p3, 0x0
 
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    :try_start_0
+    invoke-static {p2, p3, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
-    const/16 v1, 0x1d
+    move-result-object p1
 
-    if-lt v0, v1, :cond_1
+    const-class p2, Landroid/app/Activity;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    new-array p2, p3, [Ljava/lang/Class;
 
     .line 2
-    invoke-static {p0}, Landroidx/core/app/h$a;->c(Landroid/content/Context;)Landroid/app/AppOpsManager;
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    move-result-object v0
+    move-result-object p1
+
+    new-array p2, p3, [Ljava/lang/Object;
+
+    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Activity;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
 
     .line 3
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    move-result v1
+    const-string p3, "Couldn\'t call constructor"
 
-    .line 4
-    invoke-static {v0, p2, v1, p3}, Landroidx/core/app/h$a;->a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
+    invoke-direct {p2, p3, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result p3
-
-    if-eqz p3, :cond_0
-
-    return p3
-
-    .line 5
-    :cond_0
-    invoke-static {p0}, Landroidx/core/app/h$a;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 6
-    invoke-static {v0, p2, p1, p0}, Landroidx/core/app/h$a;->a(Landroid/app/AppOpsManager;Ljava/lang/String;ILjava/lang/String;)I
-
-    move-result p0
-
-    return p0
-
-    .line 7
-    :cond_1
-    invoke-static {p0, p2, p3}, Landroidx/core/app/h;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
+    throw p2
 .end method
 
-.method public static b(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)I
+.method public b(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
     .locals 1
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    const-string v0, "appops"
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/AppOpsManager;
-
-    .line 2
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->noteOp(Ljava/lang/String;ILjava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)I
-    .locals 1
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    const-string v0, "appops"
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/AppOpsManager;
-
-    .line 2
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/AppOpsManager;->noteOpNoThrow(Ljava/lang/String;ILjava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 1
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/String;
+    .param p1    # Ljava/lang/ClassLoader;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -172,31 +109,73 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
 
     .line 1
-    const-class v0, Landroid/app/AppOpsManager;
+    :try_start_0
+    invoke-static {p2, v0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p0
+    const-class p2, Landroid/app/Application;
 
-    check-cast p0, Landroid/app/AppOpsManager;
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    new-array p2, v0, [Ljava/lang/Class;
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOp(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    move-result p0
+    move-result-object p1
 
-    return p0
+    new-array p2, v0, [Ljava/lang/Object;
+
+    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Application;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 3
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    const-string v0, "Couldn\'t call constructor"
+
+    invoke-direct {p2, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public static e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+.method public c(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
     .locals 1
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/String;
+    .param p1    # Ljava/lang/ClassLoader;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -204,37 +183,409 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
 
     .line 1
-    const-class v0, Landroid/app/AppOpsManager;
+    :try_start_0
+    invoke-static {p2, v0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p0
+    const-class p2, Landroid/content/ContentProvider;
 
-    check-cast p0, Landroid/app/AppOpsManager;
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    new-array p2, v0, [Ljava/lang/Class;
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOpNoThrow(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    move-result p0
+    move-result-object p1
 
-    return p0
+    new-array p2, v0, [Ljava/lang/Object;
+
+    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/ContentProvider;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 3
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    const-string v0, "Couldn\'t call constructor"
+
+    invoke-direct {p2, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public static f(Ljava/lang/String;)Ljava/lang/String;
+.method public d(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
     .locals 0
-    .param p0    # Ljava/lang/String;
+    .param p1    # Ljava/lang/ClassLoader;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    const/4 p3, 0x0
+
+    .line 1
+    :try_start_0
+    invoke-static {p2, p3, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    const-class p2, Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    new-array p2, p3, [Ljava/lang/Class;
+
+    .line 2
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object p1
+
+    new-array p2, p3, [Ljava/lang/Object;
+
+    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/BroadcastReceiver;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 3
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    const-string p3, "Couldn\'t call constructor"
+
+    invoke-direct {p2, p3, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+.end method
+
+.method public e(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    const/4 p3, 0x0
+
+    .line 1
+    :try_start_0
+    invoke-static {p2, p3, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    const-class p2, Landroid/app/Service;
+
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p1
+
+    new-array p2, p3, [Ljava/lang/Class;
+
+    .line 2
+    invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object p1
+
+    new-array p2, p3, [Ljava/lang/Object;
+
+    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Service;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 3
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    const-string p3, "Couldn\'t call constructor"
+
+    invoke-direct {p2, p3, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+.end method
+
+.method public final instantiateActivity(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
     .end annotation
 
     .line 1
-    invoke-static {p0}, Landroid/app/AppOpsManager;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/h;->a(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    invoke-static {p1}, Landroidx/core/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Activity;
+
+    return-object p1
+.end method
+
+.method public final instantiateApplication(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroidx/core/app/h;->b(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroidx/core/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Application;
+
+    return-object p1
+.end method
+
+.method public final instantiateProvider(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroidx/core/app/h;->c(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroidx/core/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/ContentProvider;
+
+    return-object p1
+.end method
+
+.method public final instantiateReceiver(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/h;->d(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroidx/core/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/BroadcastReceiver;
+
+    return-object p1
+.end method
+
+.method public final instantiateService(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
+    .locals 0
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/InstantiationException;,
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/ClassNotFoundException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/h;->e(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroidx/core/app/CoreComponentFactory;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Service;
+
+    return-object p1
 .end method

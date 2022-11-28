@@ -3,32 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/q0;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
+
+.field public final synthetic b:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NearSearchResultScreen;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NavigationScreenKt;Lcom/skt/tmap/engine/navigation/NavigationManager;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/b0;->a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/b0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
+
+    iput-object p2, p0, Lcom/skt/tmap/car/screen/b0;->b:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/b0;->a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/b0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/NearSearchResultScreen;->O(Lcom/skt/tmap/car/screen/NearSearchResultScreen;Ljava/lang/Object;)V
+    iget-object v1, p0, Lcom/skt/tmap/car/screen/b0;->b:Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    invoke-static {v0, v1}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->k0(Lcom/skt/tmap/car/screen/NavigationScreenKt;Lcom/skt/tmap/engine/navigation/NavigationManager;)V
 
     return-void
 .end method

@@ -1,10 +1,13 @@
 .class public interface abstract Lcom/google/android/gms/auth/api/phone/SmsRetrieverApi;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-auth-api-phone@@17.4.0"
+.source "com.google.android.gms:play-services-auth-api-phone@@17.5.1"
 
 
 # virtual methods
 .method public abstract startSmsRetriever()Lcom/google/android/gms/tasks/Task;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -20,6 +23,9 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

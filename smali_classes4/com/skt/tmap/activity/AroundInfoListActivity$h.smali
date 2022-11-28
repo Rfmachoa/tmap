@@ -3,7 +3,7 @@
 .source "AroundInfoListActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$l;
+.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;
 
 
 # annotations
@@ -63,13 +63,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string p2, "pinchin.map"
 
-    invoke-virtual {p1, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -81,13 +81,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string p2, "pinchout.map"
 
-    invoke-virtual {p1, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -110,13 +110,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string v0, "double_tap"
 
-    invoke-virtual {p1, v0}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -159,13 +159,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string p2, "panning.map"
 
-    invoke-virtual {p1, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -200,13 +200,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo v0, "tap.map"
+    const-string v0, "tap.map"
 
-    invoke-virtual {p1, v0}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method

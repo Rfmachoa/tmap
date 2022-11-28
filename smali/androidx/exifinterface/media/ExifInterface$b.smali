@@ -254,13 +254,39 @@
     throw p1
 .end method
 
-.method public f(Ljava/nio/ByteOrder;)V
+.method public g(Ljava/nio/ByteOrder;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/exifinterface/media/ExifInterface$b;->b:Ljava/nio/ByteOrder;
 
     return-void
+.end method
+
+.method public declared-synchronized mark(I)V
+    .locals 1
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Landroidx/exifinterface/media/ExifInterface$b;->a:Ljava/io/DataInputStream;
+
+    invoke-virtual {v0, p1}, Ljava/io/DataInputStream;->mark(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
 .end method
 
 .method public read()I

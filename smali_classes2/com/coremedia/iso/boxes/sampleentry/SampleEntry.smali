@@ -1,5 +1,5 @@
 .class public abstract Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;
-.super Ld6/a;
+.super Lb8/a;
 .source "SampleEntry.java"
 
 # interfaces
@@ -7,31 +7,31 @@
 
 
 # static fields
-.field private static final synthetic ajc$tjp_0:Lek/c$b;
+.field private static final synthetic ajc$tjp_0:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_1:Lek/c$b;
+.field private static final synthetic ajc$tjp_1:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_10:Lek/c$b;
+.field private static final synthetic ajc$tjp_10:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_11:Lek/c$b;
+.field private static final synthetic ajc$tjp_11:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_12:Lek/c$b;
+.field private static final synthetic ajc$tjp_12:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_2:Lek/c$b;
+.field private static final synthetic ajc$tjp_2:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_3:Lek/c$b;
+.field private static final synthetic ajc$tjp_3:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_4:Lek/c$b;
+.field private static final synthetic ajc$tjp_4:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_5:Lek/c$b;
+.field private static final synthetic ajc$tjp_5:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_6:Lek/c$b;
+.field private static final synthetic ajc$tjp_6:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_7:Lek/c$b;
+.field private static final synthetic ajc$tjp_7:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_8:Lek/c$b;
+.field private static final synthetic ajc$tjp_8:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_9:Lek/c$b;
+.field private static final synthetic ajc$tjp_9:Ljm/c$b;
 
 
 # instance fields
@@ -64,7 +64,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Ld6/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lb8/a;-><init>(Ljava/lang/String;)V
 
     .line 2
     new-instance p1, Ljava/util/LinkedList;
@@ -80,13 +80,13 @@
     .locals 10
 
     .line 1
-    new-instance v8, Lkk/e;
+    new-instance v8, Lpm/e;
 
     const-class v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;
 
     const-string v1, "SampleEntry.java"
 
-    invoke-direct {v8, v1, v0}, Lkk/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v8, v1, v0}, Lpm/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     const-string v1, "1"
 
@@ -104,7 +104,7 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
@@ -112,11 +112,11 @@
 
     const/16 v1, 0x38
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_0:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_0:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -134,17 +134,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x3c
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_1:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_1:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -162,17 +162,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x78
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_10:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_10:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -190,17 +190,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x84
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_11:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_11:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -218,17 +218,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x89
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_12:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_12:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -246,17 +246,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x40
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_2:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_2:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -274,17 +274,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x44
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_3:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_3:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -302,17 +302,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x48
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_4:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_4:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -330,17 +330,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x4d
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_5:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_5:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -358,17 +358,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x52
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_6:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_6:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -386,17 +386,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x57
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_7:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_7:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -414,17 +414,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x68
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_8:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_8:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -442,17 +442,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x73
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_9:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_9:Ljm/c$b;
 
     return-void
 .end method
@@ -462,18 +462,18 @@
 .method public _parseChildBoxes(Ljava/nio/ByteBuffer;)V
     .locals 3
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_10:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_10:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     :goto_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
@@ -489,7 +489,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ld6/a;->setDeadBytes(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/a;->setDeadBytes(Ljava/nio/ByteBuffer;)V
 
     return-void
 
@@ -500,9 +500,9 @@
 
     iget-object v1, p0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->boxParser:Lcom/coremedia/iso/BoxParser;
 
-    new-instance v2, Ly6/a;
+    new-instance v2, Lw8/a;
 
-    invoke-direct {v2, p1}, Ly6/a;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p1}, Lw8/a;-><init>(Ljava/nio/ByteBuffer;)V
 
     invoke-interface {v1, v2, p0}, Lcom/coremedia/iso/BoxParser;->parseBox(Ljava/nio/channels/ReadableByteChannel;Lcom/coremedia/iso/boxes/ContainerBox;)Lcom/coremedia/iso/boxes/Box;
 
@@ -528,18 +528,18 @@
 .method public _parseReservedAndDataReferenceIndex(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_9:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_9:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     const/4 v0, 0x6
 
@@ -560,18 +560,18 @@
 .method public _writeChildBoxes(Ljava/nio/ByteBuffer;)V
     .locals 4
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_12:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_12:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
@@ -641,18 +641,18 @@
 .method public _writeReservedAndDataReferenceIndex(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_11:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_11:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     const/4 v0, 0x6
 
@@ -668,23 +668,23 @@
     return-void
 .end method
 
-.method public addBox(Ld6/a;)V
+.method public addBox(Lb8/a;)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_4:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_4:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
-    invoke-virtual {p1, p0}, Ld6/a;->setParent(Lcom/coremedia/iso/boxes/ContainerBox;)V
+    invoke-virtual {p1, p0}, Lb8/a;->setParent(Lcom/coremedia/iso/boxes/ContainerBox;)V
 
     .line 2
     iget-object v0, p0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->boxes:Ljava/util/List;
@@ -705,18 +705,18 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_6:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_6:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget-object v0, p0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->boxes:Ljava/util/List;
 
@@ -737,18 +737,18 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_8:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_8:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     const/4 v0, 0x0
 
@@ -773,22 +773,22 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_7:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_7:Ljm/c$b;
 
-    invoke-static {p2}, Lik/e;->a(Z)Ljava/lang/Object;
+    invoke-static {p2}, Lnm/e;->a(Z)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v0, p0, p0, p1, v1}, Lkk/e;->x(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1, v1}, Lpm/e;->x(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -853,18 +853,18 @@
 .method public getDataReferenceIndex()I
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_1:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_1:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget v0, p0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->dataReferenceIndex:I
 
@@ -891,7 +891,7 @@
     if-nez v3, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Ld6/a;->getSize()J
+    invoke-virtual {p0}, Lb8/a;->getSize()J
 
     move-result-wide v3
 
@@ -926,7 +926,7 @@
     .end annotation
 
     .line 1
-    invoke-super/range {p0 .. p5}, Ld6/a;->parse(Ljava/nio/channels/ReadableByteChannel;Ljava/nio/ByteBuffer;JLcom/coremedia/iso/BoxParser;)V
+    invoke-super/range {p0 .. p5}, Lb8/a;->parse(Ljava/nio/channels/ReadableByteChannel;Ljava/nio/ByteBuffer;JLcom/coremedia/iso/BoxParser;)V
 
     .line 2
     iput-object p5, p0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->boxParser:Lcom/coremedia/iso/BoxParser;
@@ -937,18 +937,18 @@
 .method public removeBox(Lcom/coremedia/iso/boxes/Box;)Z
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_5:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_5:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     invoke-interface {p1, p0}, Lcom/coremedia/iso/boxes/Box;->setParent(Lcom/coremedia/iso/boxes/ContainerBox;)V
 
@@ -973,18 +973,18 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_3:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_3:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -998,22 +998,22 @@
 .method public setDataReferenceIndex(I)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_2:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_2:Ljm/c$b;
 
-    invoke-static {p1}, Lik/e;->k(I)Ljava/lang/Object;
+    invoke-static {p1}, Lnm/e;->k(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v0, p0, p0, v1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, v1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iput p1, p0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->dataReferenceIndex:I
 
@@ -1023,20 +1023,20 @@
 .method public setType(Ljava/lang/String;)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_0:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/sampleentry/SampleEntry;->ajc$tjp_0:Ljm/c$b;
 
-    invoke-static {v0, p0, p0, p1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, p1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
-    iput-object p1, p0, Ld6/a;->type:Ljava/lang/String;
+    iput-object p1, p0, Lb8/a;->type:Ljava/lang/String;
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/util/LruCacheKt;->a(ILej/p;Lej/l;Lej/r;)Landroid/util/LruCache;
+    value = Landroidx/core/util/LruCacheKt;->a(ILgl/p;Lgl/l;Lgl/r;)Landroid/util/LruCache;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -51,36 +51,75 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lej/p;
+.field public final synthetic a:Lgl/p;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/p<",
+            "TK;TV;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Lej/l;
+.field public final synthetic b:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "TK;TV;>;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic c:Lej/r;
-
-.field public final synthetic d:I
+.field public final synthetic c:Lgl/r;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/r<",
+            "Ljava/lang/Boolean;",
+            "TK;TV;TV;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lej/p;Lej/l;Lej/r;II)V
+.method public constructor <init>(ILgl/p;Lgl/l;Lgl/r;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Lgl/p<",
+            "-TK;-TV;",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Lgl/l<",
+            "-TK;+TV;>;",
+            "Lgl/r<",
+            "-",
+            "Ljava/lang/Boolean;",
+            "-TK;-TV;-TV;",
+            "Lkotlin/d1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p2, p0, Landroidx/core/util/LruCacheKt$a;->a:Lgl/p;
+
+    iput-object p3, p0, Landroidx/core/util/LruCacheKt$a;->b:Lgl/l;
+
+    iput-object p4, p0, Landroidx/core/util/LruCacheKt$a;->c:Lgl/r;
 
     .line 1
-    iput-object p1, p0, Landroidx/core/util/LruCacheKt$a;->a:Lej/p;
-
-    iput-object p2, p0, Landroidx/core/util/LruCacheKt$a;->b:Lej/l;
-
-    iput-object p3, p0, Landroidx/core/util/LruCacheKt$a;->c:Lej/r;
-
-    iput p4, p0, Landroidx/core/util/LruCacheKt$a;->d:I
-
-    invoke-direct {p0, p5}, Landroid/util/LruCache;-><init>(I)V
+    invoke-direct {p0, p1}, Landroid/util/LruCache;-><init>(I)V
 
     return-void
 .end method
@@ -104,12 +143,12 @@
 
     const-string v0, "key"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/util/LruCacheKt$a;->b:Lej/l;
+    iget-object v0, p0, Landroidx/core/util/LruCacheKt$a;->b:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -138,20 +177,20 @@
 
     const-string v0, "key"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "oldValue"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/util/LruCacheKt$a;->c:Lej/r;
+    iget-object v0, p0, Landroidx/core/util/LruCacheKt$a;->c:Lgl/r;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lej/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lgl/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -174,16 +213,16 @@
 
     const-string v0, "key"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "value"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/util/LruCacheKt$a;->a:Lej/p;
+    iget-object v0, p0, Landroidx/core/util/LruCacheKt$a;->a:Lgl/p;
 
-    invoke-interface {v0, p1, p2}, Lej/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lgl/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

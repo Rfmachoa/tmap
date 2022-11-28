@@ -3,8 +3,8 @@
 .source "NTLMSchemeFactory.java"
 
 # interfaces
-.implements Lef/d;
-.implements Lef/e;
+.implements Lih/d;
+.implements Lih/e;
 
 
 # annotations
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public a(Lpg/g;)Lef/c;
+.method public a(Lri/i;)Lih/c;
     .locals 0
 
     .line 1
@@ -35,7 +35,7 @@
     return-object p1
 .end method
 
-.method public b(Lng/i;)Lef/c;
+.method public b(Lti/g;)Lih/c;
     .locals 0
 
     .line 1

@@ -6,8 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/bumptech/glide/load/a$f;,
-        Lcom/bumptech/glide/load/a$g;
+        Lcom/bumptech/glide/load/a$g;,
+        Lcom/bumptech/glide/load/a$h;
     }
 .end annotation
 
@@ -63,11 +63,11 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/bumptech/glide/load/a$e;
+    new-instance v0, Lcom/bumptech/glide/load/a$f;
 
-    invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/a$e;-><init>(Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
+    invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/a$f;-><init>(Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
 
-    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->c(Ljava/util/List;Lcom/bumptech/glide/load/a$f;)I
+    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->d(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)I
 
     move-result p0
 
@@ -134,18 +134,69 @@
     invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
 
     .line 4
-    new-instance v0, Lcom/bumptech/glide/load/a$d;
+    new-instance v0, Lcom/bumptech/glide/load/a$e;
 
-    invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/a$d;-><init>(Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
+    invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/a$e;-><init>(Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
 
-    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->c(Ljava/util/List;Lcom/bumptech/glide/load/a$f;)I
+    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->d(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static c(Ljava/util/List;Lcom/bumptech/glide/load/a$f;)I
+.method public static c(Ljava/util/List;Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)I
+    .locals 1
+    .param p0    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/nio/ByteBuffer;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Lcom/bumptech/glide/load/engine/bitmap_recycle/b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/bumptech/glide/load/ImageHeaderParser;",
+            ">;",
+            "Ljava/nio/ByteBuffer;",
+            "Lcom/bumptech/glide/load/engine/bitmap_recycle/b;",
+            ")I"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    .line 1
+    :cond_0
+    new-instance v0, Lcom/bumptech/glide/load/a$d;
+
+    invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/a$d;-><init>(Ljava/nio/ByteBuffer;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
+
+    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->d(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static d(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)I
     .locals 4
     .param p0    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -157,7 +208,7 @@
             "Ljava/util/List<",
             "Lcom/bumptech/glide/load/ImageHeaderParser;",
             ">;",
-            "Lcom/bumptech/glide/load/a$f;",
+            "Lcom/bumptech/glide/load/a$g;",
             ")I"
         }
     .end annotation
@@ -188,7 +239,7 @@
     check-cast v3, Lcom/bumptech/glide/load/ImageHeaderParser;
 
     .line 3
-    invoke-interface {p1, v3}, Lcom/bumptech/glide/load/a$f;->a(Lcom/bumptech/glide/load/ImageHeaderParser;)I
+    invoke-interface {p1, v3}, Lcom/bumptech/glide/load/a$g;->a(Lcom/bumptech/glide/load/ImageHeaderParser;)I
 
     move-result v3
 
@@ -205,7 +256,7 @@
     return v2
 .end method
 
-.method public static d(Ljava/util/List;Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+.method public static e(Ljava/util/List;Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 1
     .param p0    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -250,14 +301,14 @@
 
     invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/a$c;-><init>(Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)V
 
-    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->g(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->h(Ljava/util/List;Lcom/bumptech/glide/load/a$h;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static e(Ljava/util/List;Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+.method public static f(Ljava/util/List;Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 1
     .param p0    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -326,14 +377,14 @@
 
     invoke-direct {p2, p1}, Lcom/bumptech/glide/load/a$a;-><init>(Ljava/io/InputStream;)V
 
-    invoke-static {p0, p2}, Lcom/bumptech/glide/load/a;->g(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    invoke-static {p0, p2}, Lcom/bumptech/glide/load/a;->h(Ljava/util/List;Lcom/bumptech/glide/load/a$h;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static f(Ljava/util/List;Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+.method public static g(Ljava/util/List;Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 1
     .param p0    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -377,14 +428,14 @@
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/load/a$b;-><init>(Ljava/nio/ByteBuffer;)V
 
-    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->g(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    invoke-static {p0, v0}, Lcom/bumptech/glide/load/a;->h(Ljava/util/List;Lcom/bumptech/glide/load/a$h;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static g(Ljava/util/List;Lcom/bumptech/glide/load/a$g;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+.method public static h(Ljava/util/List;Lcom/bumptech/glide/load/a$h;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 4
     .param p0    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -399,7 +450,7 @@
             "Ljava/util/List<",
             "Lcom/bumptech/glide/load/ImageHeaderParser;",
             ">;",
-            "Lcom/bumptech/glide/load/a$g;",
+            "Lcom/bumptech/glide/load/a$h;",
             ")",
             "Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;"
         }
@@ -429,7 +480,7 @@
     check-cast v2, Lcom/bumptech/glide/load/ImageHeaderParser;
 
     .line 3
-    invoke-interface {p1, v2}, Lcom/bumptech/glide/load/a$g;->a(Lcom/bumptech/glide/load/ImageHeaderParser;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    invoke-interface {p1, v2}, Lcom/bumptech/glide/load/a$h;->a(Lcom/bumptech/glide/load/ImageHeaderParser;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object v2
 

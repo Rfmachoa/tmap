@@ -218,16 +218,16 @@
     return-void
 .end method
 
-.method public onResponse(Lc4/i;)V
+.method public onResponse(Lz5/i;)V
     .locals 2
-    .param p1    # Lc4/i;
+    .param p1    # Lz5/i;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/i<",
+            "Lz5/i<",
             "TT;>;)V"
         }
     .end annotation
@@ -237,7 +237,7 @@
 
     new-instance v1, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;Lc4/i;)V
+    invoke-direct {v1, p0, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback$1;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AppSyncCallback;Lz5/i;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

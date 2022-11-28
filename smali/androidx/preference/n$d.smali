@@ -25,6 +25,10 @@
 # direct methods
 .method public constructor <init>(Landroidx/preference/Preference;)V
     .locals 1
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

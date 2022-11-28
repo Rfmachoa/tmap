@@ -25,7 +25,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2}, Landroidx/car/app/serialization/Bundler$b;->u()Ljava/lang/String;
+    invoke-virtual {p2}, Landroidx/car/app/serialization/Bundler$b;->s()Ljava/lang/String;
 
     move-result-object p2
 
@@ -50,7 +50,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2}, Landroidx/car/app/serialization/Bundler$b;->u()Ljava/lang/String;
+    invoke-virtual {p2}, Landroidx/car/app/serialization/Bundler$b;->s()Ljava/lang/String;
 
     move-result-object p2
 

@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0008\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002j\u0002\u0008\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008\u00a8\u0006\t"
     }
@@ -45,9 +40,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -68,84 +64,119 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method private static final synthetic $values()[Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    .locals 3
 
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    new-instance v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    sget-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->GENERAL:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    const-string v2, "GENERAL"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->TRAFFIC:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    sput-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->GENERAL:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    const/4 v2, 0x1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    sget-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->CAM:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    const-string v2, "TRAFFIC"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->MAP:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    sput-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->TRAFFIC:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    const/4 v2, 0x3
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    sget-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->ROUTE:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    const-string v2, "CAM"
+    const/4 v2, 0x4
 
-    const/4 v3, 0x2
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->ROADKILL:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    sput-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->CAM:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    const/4 v2, 0x5
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    return-object v0
+.end method
 
-    const-string v2, "MAP"
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v3, 0x3
+    .line 1
+    new-instance v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+    const-string v1, "GENERAL"
 
-    sput-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->MAP:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    const/4 v2, 0x0
 
-    aput-object v1, v0, v3
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->GENERAL:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    const-string v2, "ROUTE"
+    new-instance v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    const/4 v3, 0x4
+    const-string v1, "TRAFFIC"
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+    const/4 v2, 0x1
 
-    sput-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->ROUTE:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
 
-    aput-object v1, v0, v3
+    sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->TRAFFIC:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    new-instance v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    new-instance v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    const-string v2, "ROADKILL"
+    const-string v1, "CAM"
 
-    const/4 v3, 0x5
+    const/4 v2, 0x2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->ROADKILL:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+    sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->CAM:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    aput-object v1, v0, v3
+    new-instance v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    const-string v1, "MAP"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->MAP:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    new-instance v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    const-string v1, "ROUTE"
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->ROUTE:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    new-instance v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    const-string v1, "ROADKILL"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->ROADKILL:Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    invoke-static {}, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->$values()[Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->$VALUES:[Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
@@ -185,7 +216,7 @@
 
     sget-object v0, Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->$VALUES:[Lcom/skt/tmap/data/TmapTipOffData$TipOffType;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/data/TmapTipOffData$TipOffType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

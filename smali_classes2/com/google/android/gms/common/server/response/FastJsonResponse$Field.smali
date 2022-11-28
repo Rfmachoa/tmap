@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -91,15 +91,6 @@
 .field public final zag:Ljava/lang/Class;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/Class<",
-            "+",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse;",
-            ">;"
-        }
-    .end annotation
 .end field
 
 .field public final zah:Ljava/lang/String;
@@ -129,13 +120,6 @@
         getter = "getWrappedConverter"
         id = 0x9
         type = "com.google.android.gms.common.server.converter.ConverterWrapper"
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter<",
-            "TI;TO;>;"
-        }
     .end annotation
 .end field
 
@@ -277,19 +261,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(IZIZ",
-            "Ljava/lang/String;",
-            "I",
-            "Ljava/lang/Class<",
-            "+",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse;",
-            ">;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter<",
-            "TI;TO;>;)V"
-        }
-    .end annotation
 
     .line 5
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
@@ -1116,11 +1087,11 @@
 
     if-eqz v1, :cond_1
 
+    .line 11
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v1
@@ -1256,14 +1227,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "TI;TO;>;"
-        }
-    .end annotation
-
     .line 1
     new-instance v10, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
@@ -1360,12 +1323,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TI;)TO;"
-        }
-    .end annotation
-
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zak:Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
@@ -1392,12 +1349,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TO;)TI;"
-        }
     .end annotation
 
     .line 1
@@ -1433,16 +1384,6 @@
 .method public final zah()Ljava/util/Map;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;>;"
-        }
     .end annotation
 
     .line 1

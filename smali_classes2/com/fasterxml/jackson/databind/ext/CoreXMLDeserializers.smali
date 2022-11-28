@@ -127,3 +127,42 @@
 
     return-object p1
 .end method
+
+.method public hasDeserializerFor(Lcom/fasterxml/jackson/databind/DeserializationConfig;Ljava/lang/Class;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/DeserializationConfig;",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    .line 1
+    const-class p1, Ljavax/xml/namespace/QName;
+
+    if-eq p2, p1, :cond_1
+
+    const-class p1, Ljavax/xml/datatype/XMLGregorianCalendar;
+
+    if-eq p2, p1, :cond_1
+
+    const-class p1, Ljavax/xml/datatype/Duration;
+
+    if-ne p2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+.end method

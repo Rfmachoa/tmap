@@ -12,6 +12,19 @@
 
 
 # virtual methods
+.method public bridge synthetic getLifecycle()Landroidx/lifecycle/Lifecycle;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-interface {p0}, Landroidx/lifecycle/LifecycleRegistryOwner;->getLifecycle()Landroidx/lifecycle/LifecycleRegistry;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public abstract getLifecycle()Landroidx/lifecycle/LifecycleRegistry;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

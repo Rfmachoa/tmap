@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/car/app/CarContext;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/m0;)V
+    value = Landroidx/car/app/CarContext;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/r0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/car/app/m0;
+.field public final synthetic a:Landroidx/car/app/r0;
 
 .field public final synthetic b:Landroidx/car/app/CarContext;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)V
+.method public constructor <init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/car/app/CarContext$2;->b:Landroidx/car/app/CarContext;
 
-    iput-object p2, p0, Landroidx/car/app/CarContext$2;->a:Landroidx/car/app/m0;
+    iput-object p2, p0, Landroidx/car/app/CarContext$2;->a:Landroidx/car/app/r0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,9 +47,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarContext$2;->a:Landroidx/car/app/m0;
+    iget-object v0, p0, Landroidx/car/app/CarContext$2;->a:Landroidx/car/app/r0;
 
-    invoke-virtual {v0}, Landroidx/car/app/m0;->n()V
+    invoke-virtual {v0}, Landroidx/car/app/r0;->p()V
 
     .line 2
     invoke-interface {p1}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;

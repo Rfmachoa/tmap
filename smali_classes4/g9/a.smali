@@ -1,407 +1,192 @@
 .class public Lg9/a;
-.super Lcom/skt/aicloud/speaker/service/api/a;
-.source "MockAladdinAlarmManager.java"
+.super Ljava/lang/Object;
+.source "APIClient.java"
+
+
+# static fields
+.field public static final a:Ljava/lang/String; = "moloco-sdk-cache"
+
+.field public static final b:J = 0x100000L
+
+.field public static c:Lg9/a;
+
+.field public static d:Lcom/moloco/network/MolocoAPI;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;)V
-    .locals 1
-
-    const/4 v0, 0x1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/skt/aicloud/speaker/service/api/a;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/io/File;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object p1, Ljava/io/File;->separator:Ljava/lang/String;
+
+    const-string v2, "moloco-sdk-cache"
+
+    invoke-static {v1, p1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 3
+    new-instance p1, Lokhttp3/Cache;
+
+    const-wide/32 v1, 0x100000
+
+    invoke-direct {p1, v0, v1, v2}, Lokhttp3/Cache;-><init>(Ljava/io/File;J)V
+
+    .line 4
+    new-instance v0, Lokhttp3/OkHttpClient$Builder;
+
+    invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
+
+    invoke-virtual {v0, p1}, Lokhttp3/OkHttpClient$Builder;->cache(Lokhttp3/Cache;)Lokhttp3/OkHttpClient$Builder;
+
+    move-result-object p1
+
+    .line 5
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
+
+    move-result-object p1
+
+    .line 6
+    new-instance v0, Lcom/google/gson/GsonBuilder;
+
+    invoke-direct {v0}, Lcom/google/gson/GsonBuilder;-><init>()V
+
+    .line 7
+    invoke-virtual {v0}, Lcom/google/gson/GsonBuilder;->setLenient()Lcom/google/gson/GsonBuilder;
+
+    move-result-object v0
+
+    .line 8
+    invoke-virtual {v0}, Lcom/google/gson/GsonBuilder;->create()Lcom/google/gson/Gson;
+
+    move-result-object v0
+
+    .line 9
+    new-instance v1, Lretrofit2/Retrofit$Builder;
+
+    invoke-direct {v1}, Lretrofit2/Retrofit$Builder;-><init>()V
+
+    const-string v2, "https://"
+
+    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    sget-object v3, Lc9/b;->g:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 10
+    invoke-virtual {v1, v2}, Lretrofit2/Retrofit$Builder;->baseUrl(Ljava/lang/String;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object v1
+
+    .line 11
+    invoke-virtual {v1, p1}, Lretrofit2/Retrofit$Builder;->client(Lokhttp3/OkHttpClient;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object p1
+
+    .line 12
+    invoke-static {}, Lretrofit2/converter/scalars/ScalarsConverterFactory;->create()Lretrofit2/converter/scalars/ScalarsConverterFactory;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lretrofit2/Retrofit$Builder;->addConverterFactory(Lretrofit2/Converter$Factory;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object p1
+
+    .line 13
+    invoke-static {v0}, Lretrofit2/converter/gson/GsonConverterFactory;->create(Lcom/google/gson/Gson;)Lretrofit2/converter/gson/GsonConverterFactory;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lretrofit2/Retrofit$Builder;->addConverterFactory(Lretrofit2/Converter$Factory;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object p1
+
+    .line 14
+    invoke-static {}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->create()Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lretrofit2/Retrofit$Builder;->addCallAdapterFactory(Lretrofit2/CallAdapter$Factory;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object p1
+
+    .line 15
+    invoke-virtual {p1}, Lretrofit2/Retrofit$Builder;->build()Lretrofit2/Retrofit;
+
+    move-result-object p1
+
+    const-class v0, Lcom/moloco/network/MolocoAPI;
+
+    .line 16
+    invoke-virtual {p1, v0}, Lretrofit2/Retrofit;->create(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/moloco/network/MolocoAPI;
+
+    sput-object p1, Lg9/a;->d:Lcom/moloco/network/MolocoAPI;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public A()V
+.method public static a(Landroid/content/Context;)Lcom/moloco/network/MolocoAPI;
     .locals 0
-
-    return-void
-.end method
-
-.method public C(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public D(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized E()V
-    .locals 0
-
-    monitor-enter p0
 
     .line 1
-    monitor-exit p0
+    invoke-static {p0}, Lg9/a;->b(Landroid/content/Context;)Lg9/a;
 
-    return-void
+    sget-object p0, Lg9/a;->d:Lcom/moloco/network/MolocoAPI;
+
+    return-object p0
 .end method
 
-.method public F(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public G(Ljava/lang/String;)J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public I(Landroid/content/Context;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public K(Landroid/content/Context;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public L()Lpa/a;
+.method public static b(Landroid/content/Context;)Lg9/a;
     .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public M()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public N(II)I
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public O(Lpa/a;)I
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public Q()Lcom/skt/aicloud/speaker/lib/state/AppState;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public R(JLjava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public S(JLjava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public T()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public U()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public V()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public W(Ljava/lang/String;)J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public X()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public Y()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Z()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public a()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized b0()V
-    .locals 0
-
-    monitor-enter p0
 
     .line 1
-    monitor-exit p0
+    sget-object v0, Lg9/a;->c:Lg9/a;
 
-    return-void
-.end method
+    if-nez v0, :cond_0
 
-.method public c(ZLjava/lang/String;Lcom/skt/aicloud/speaker/service/player/BgmCaller;Ljava/lang/String;)V
-    .locals 0
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .line 2
+    new-instance v0, Lg9/a;
 
-    return-void
-.end method
+    invoke-direct {v0, p0}, Lg9/a;-><init>(Landroid/content/Context;)V
 
-.method public declared-synchronized c0(Z)V
-    .locals 0
+    sput-object v0, Lg9/a;->c:Lg9/a;
 
-    monitor-enter p0
+    .line 3
+    :cond_0
+    sget-object p0, Lg9/a;->c:Lg9/a;
 
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public d()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public declared-synchronized d0(Z)V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public declared-synchronized e0(Lpa/a;)V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public f0()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g0(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h0(ZLjava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i0(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public k0()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public l0(Lpa/a;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized m0(Z)V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public n0(Ljava/lang/Long;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public next()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized p0(Z)V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public pause()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public declared-synchronized q0(Z)V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public declared-synchronized r0()V
-    .locals 0
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
-
-    return-void
-.end method
-
-.method public resume()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s0()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public stop()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t0()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u0(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v0(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public z(Landroid/content/ContentResolver;Landroid/content/ContentValues;)V
-    .locals 0
-
-    return-void
+    return-object p0
 .end method

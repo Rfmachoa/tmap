@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/safeparcel/SafeParcelableSerializer;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -847,15 +847,6 @@
 
 .method private static zza(Ljava/lang/Iterable;)[B
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;",
-            ">(",
-            "Ljava/lang/Iterable<",
-            "TT;>;)[B"
-        }
-    .end annotation
 
     .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;

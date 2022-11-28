@@ -12,6 +12,16 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "_newCouponYn",
+            "_newCouponCnt"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,6 +57,14 @@
 
 .method public setNewCouponCnt(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCouponCnt"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/NewCoupon;->newCouponCnt:Ljava/lang/Integer;
@@ -56,6 +74,14 @@
 
 .method public setNewCouponYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCouponYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/NewCoupon;->newCouponYn:Ljava/lang/String;

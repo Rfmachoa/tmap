@@ -39,9 +39,21 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "momentCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
-    sget v0, Lcom/skt/moment/a;->x:I
+    sget v0, Lcom/skt/moment/a;->y:I
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -138,6 +150,14 @@
 
 .method public i(Lcom/skt/moment/a$h;)Lcom/skt/moment/a$e;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callback"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a$e;->k:Lcom/skt/moment/a$h;
@@ -147,6 +167,16 @@
 
 .method public j(Ljava/lang/Double;Ljava/lang/Double;)Lcom/skt/moment/a$e;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "latitude",
+            "longitude"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a$e;->i:Ljava/lang/Double;

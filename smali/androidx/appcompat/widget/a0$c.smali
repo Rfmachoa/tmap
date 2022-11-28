@@ -1,105 +1,74 @@
 .class public Landroidx/appcompat/widget/a0$c;
-.super Ljava/lang/Object;
-.source "ShareActionProvider.java"
-
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+.super Landroidx/appcompat/widget/x;
+.source "PopupMenu.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/appcompat/widget/a0;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/appcompat/widget/a0;->b()Landroid/view/View$OnTouchListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x1
-    name = "c"
+    name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/a0;
+.field public final synthetic j:Landroidx/appcompat/widget/a0;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/a0;)V
+.method public constructor <init>(Landroidx/appcompat/widget/a0;Landroid/view/View;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/widget/a0$c;->a:Landroidx/appcompat/widget/a0;
+    iput-object p1, p0, Landroidx/appcompat/widget/a0$c;->j:Landroidx/appcompat/widget/a0;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
+.method public b()Ll/g;
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/a0$c;->a:Landroidx/appcompat/widget/a0;
+    iget-object v0, p0, Landroidx/appcompat/widget/a0$c;->j:Landroidx/appcompat/widget/a0;
 
-    iget-object v1, v0, Landroidx/appcompat/widget/a0;->g:Landroid/content/Context;
+    iget-object v0, v0, Landroidx/appcompat/widget/a0;->d:Landroidx/appcompat/view/menu/h;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/a0;->h:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Landroidx/appcompat/widget/c;->d(Landroid/content/Context;Ljava/lang/String;)Landroidx/appcompat/widget/c;
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/h;->e()Ll/e;
 
     move-result-object v0
 
-    .line 2
-    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+    return-object v0
+.end method
 
-    move-result p1
+.method public c()Z
+    .locals 1
 
-    .line 3
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/c;->b(I)Landroid/content/Intent;
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/widget/a0$c;->j:Landroidx/appcompat/widget/a0;
 
-    move-result-object p1
+    invoke-virtual {v0}, Landroidx/appcompat/widget/a0;->l()V
 
-    if-eqz p1, :cond_2
+    const/4 v0, 0x1
 
-    .line 4
-    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    return v0
+.end method
 
-    move-result-object v0
+.method public d()Z
+    .locals 1
 
-    const-string v1, "android.intent.action.SEND"
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/widget/a0$c;->j:Landroidx/appcompat/widget/a0;
 
-    .line 5
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/a0;->a()V
 
-    move-result v1
+    const/4 v0, 0x1
 
-    if-nez v1, :cond_0
-
-    const-string v1, "android.intent.action.SEND_MULTIPLE"
-
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 7
-    :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/a0$c;->a:Landroidx/appcompat/widget/a0;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/a0;->r(Landroid/content/Intent;)V
-
-    .line 8
-    :cond_1
-    iget-object v0, p0, Landroidx/appcompat/widget/a0$c;->a:Landroidx/appcompat/widget/a0;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/a0;->g:Landroid/content/Context;
-
-    invoke-virtual {v0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    :cond_2
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method

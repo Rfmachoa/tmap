@@ -1,20 +1,19 @@
-.class public Lhh/d;
+.class public interface abstract Lhh/d;
 .super Ljava/lang/Object;
-.source "dagger_hilt_DefineComponent_Builder.java"
+.source "Header.java"
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/DefineComponent$Builder;
-.end annotation
+# virtual methods
+.method public abstract getElements()[Lhh/e;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/ParseException;
+        }
+    .end annotation
+.end method
 
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract getValue()Ljava/lang/String;
 .end method

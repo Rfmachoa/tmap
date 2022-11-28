@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static mLogManager:Ldc/d;
+.field public static mLogManager:Lbe/e;
 
 
 # direct methods
@@ -36,7 +36,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -45,12 +45,12 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0211
+    const p1, 0x7f0d0212
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
@@ -60,11 +60,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
+    invoke-static {p1}, Lbe/e;->a(Landroid/content/Context;)Lbe/e;
 
     move-result-object p1
 
-    sput-object p1, Lcom/skt/tmap/activity/TmapUBIActivity;->mLogManager:Ldc/d;
+    sput-object p1, Lcom/skt/tmap/activity/TmapUBIActivity;->mLogManager:Lbe/e;
 
     .line 6
     new-instance p1, Ljava/lang/StringBuilder;
@@ -73,7 +73,7 @@
 
     const-string v0, "/app/dh/main/home.do?ak="
 
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->i(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->l(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
     move-result-object p1
 
     :cond_1
-    const-string/jumbo v2, "tripsessionid"
+    const-string v2, "tripsessionid"
 
     .line 11
     invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -171,7 +171,7 @@
     invoke-virtual {p0}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
 
     :cond_4
-    const v0, 0x7f0a0b21
+    const v0, 0x7f0a0b9d
 
     .line 19
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -182,7 +182,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f0a0bdf
+    const v0, 0x7f0a0c6b
 
     .line 20
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -199,11 +199,11 @@
     invoke-virtual {v0, p0, p1, v2}, Lcom/skt/tmap/view/TmapWebView;->init(Landroid/app/Activity;Ljava/lang/String;Z)V
 
     .line 22
-    invoke-static {}, Lic/b;->a()Lic/b;
+    invoke-static {}, Lge/b;->a()Lge/b;
 
     move-result-object p1
 
-    invoke-static {v1}, Lic/a;->d(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v1}, Lge/a;->d(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -213,7 +213,7 @@
 
     const-string v1, "TMAP_007"
 
-    invoke-virtual {p1, p0, v1, v0}, Lic/b;->o(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p0, v1, v0}, Lge/b;->o(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -246,18 +246,11 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseWebViewActivity;->onPause()V
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/mvp/viewmodel/userdata/b;->g()Lcom/skt/tmap/mvp/viewmodel/userdata/b;
+    invoke-static {}, Lcom/skt/tmap/mvp/viewmodel/userdata/FavoriteRouteLocalRepository;->i()Lcom/skt/tmap/mvp/viewmodel/userdata/FavoriteRouteLocalRepository;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/b;->e()V
-
-    .line 3
-    invoke-static {}, Lcom/skt/tmap/gnb/repo/b;->i()Lcom/skt/tmap/gnb/repo/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/gnb/repo/b;->k()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/FavoriteRouteLocalRepository;->g()V
 
     return-void
 .end method

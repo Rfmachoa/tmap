@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zabe;
 .super Lcom/google/android/gms/common/api/GoogleApiClient;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/internal/zabz;
@@ -9,14 +9,6 @@
 # instance fields
 .field public final zaa:Ljava/util/Queue;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Queue<",
-            "Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl<",
-            "**>;>;"
-        }
     .end annotation
 .end field
 
@@ -29,63 +21,17 @@
 .end field
 
 .field public final zac:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$AnyClientKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public zad:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public final zae:Lcom/google/android/gms/common/internal/ClientSettings;
 
 .field public final zaf:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public final zag:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "+",
-            "Lcom/google/android/gms/signin/zae;",
-            "Lcom/google/android/gms/signin/SignInOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public zah:Ljava/util/Set;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/zada;",
-            ">;"
-        }
     .end annotation
 .end field
 
@@ -119,14 +65,6 @@
 .field private final zau:Lcom/google/android/gms/common/api/internal/ListenerHolders;
 
 .field private final zav:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/internal/zat;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zaw:Ljava/lang/Integer;
 
@@ -136,40 +74,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/common/GoogleApiAvailability;Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/Map;IILjava/util/ArrayList;)V
     .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Ljava/util/concurrent/locks/Lock;",
-            "Landroid/os/Looper;",
-            "Lcom/google/android/gms/common/internal/ClientSettings;",
-            "Lcom/google/android/gms/common/GoogleApiAvailability;",
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "+",
-            "Lcom/google/android/gms/signin/zae;",
-            "Lcom/google/android/gms/signin/SignInOptions;",
-            ">;",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Ljava/lang/Boolean;",
-            ">;",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;",
-            ">;",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;",
-            ">;",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api$AnyClientKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;II",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/internal/zat;",
-            ">;)V"
-        }
-    .end annotation
 
     move-object v0, p0
 
@@ -361,14 +265,6 @@
 
 .method public static zad(Ljava/lang/Iterable;Z)I
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Iterable<",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;Z)I"
-        }
-    .end annotation
 
     .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -758,10 +654,6 @@
 
     .line 15
     :cond_8
-    invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zabe;->zag(I)Ljava/lang/String;
-
-    move-result-object p1
-
     new-instance v0, Ljava/lang/IllegalStateException;
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabe;->zaw:Ljava/lang/Integer;
@@ -771,31 +663,29 @@
 
     move-result v1
 
+    const-string v2, "Cannot use sign-in mode: "
+
+    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zabe;->zag(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Mode was already set to "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     invoke-static {v1}, Lcom/google/android/gms/common/api/internal/zabe;->zag(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x33
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/2addr v4, v3
-
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "Cannot use sign-in mode: "
-
-    const-string v4, ". Mode was already set to "
-
-    invoke-static {v2, v3, p1, v4, v1}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1401,10 +1291,8 @@
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v3, 0x21
-
     .line 9
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Illegal sign-in mode: "
 
@@ -1510,10 +1398,8 @@
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x21
-
     .line 21
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Illegal sign-in mode: "
 
@@ -1789,33 +1675,23 @@
     :cond_0
     const-string v0, "the API"
 
-    .line 3
     :goto_0
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    .line 3
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v3, "GoogleApiClient is not configured to use "
 
-    move-result v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x41
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "GoogleApiClient is not configured to use "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " required for this call."
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1917,33 +1793,23 @@
     :cond_0
     const-string v0, "the API"
 
-    .line 3
     :goto_0
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    .line 3
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v3, "GoogleApiClient is not configured to use "
 
-    move-result v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x41
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "GoogleApiClient is not configured to use "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " required for this call."
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2198,22 +2064,26 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, " requested in getConnectionResult is not connected but is not present in the failed  connections map"
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string p1, " requested in getConnectionResult is not connected but is not present in the failed  connections map"
 
-    move-result-object p1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/Exception;
+    new-instance p1, Ljava/lang/Exception;
 
-    invoke-direct {v1}, Ljava/lang/Exception;-><init>()V
+    invoke-direct {p1}, Ljava/lang/Exception;-><init>()V
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     .line 12
-    invoke-static {v0, p1, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 13
     new-instance p1, Lcom/google/android/gms/common/ConnectionResult;
@@ -2248,13 +2118,17 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, " was never registered with GoogleApiClient"
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string p1, " was never registered with GoogleApiClient"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 

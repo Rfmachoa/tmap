@@ -1,82 +1,52 @@
-.class public final Lia/a;
+.class public Lia/a;
 .super Ljava/lang/Object;
-.source "BuildConfig.java"
-
-
-# static fields
-.field public static final A:Ljava/lang/String; = "0.1.0"
-
-.field public static final B:Ljava/lang/String; = ":notiservice"
-
-.field public static final C:Ljava/lang/String; = "1.26.20"
-
-.field public static final D:Ljava/lang/String; = "STG"
-
-.field public static final E:Ljava/lang/String; = ":aladdin"
-
-.field public static final F:Ljava/lang/String; = "1.26.20"
-
-.field public static final G:Ljava/lang/String; = "5.3.24-tmap"
-
-.field public static final a:Z = false
-
-.field public static final b:Ljava/lang/String; = "com.skt.aicloud.speaker.service"
-
-.field public static final c:Ljava/lang/String; = "release"
-
-.field public static final d:Ljava/lang/String; = ""
-
-.field public static final e:I = 0x314c
-
-.field public static final f:Ljava/lang/String; = "1.26.20"
-
-.field public static final g:Z = false
-
-.field public static final h:Ljava/lang/String; = "3.1.0"
-
-.field public static final i:Ljava/lang/String; = "NONE"
-
-.field public static final j:J = 0x17f4a5fe12bL
-
-.field public static final k:Z = false
-
-.field public static final l:Z = false
-
-.field public static final m:Z = true
-
-.field public static final n:Z = true
-
-.field public static final o:Z = true
-
-.field public static final p:Ljava/lang/String; = "1.0.37"
-
-.field public static final q:Z = true
-
-.field public static final r:Z = false
-
-.field public static final s:Z = true
-
-.field public static final t:Z = true
-
-.field public static final u:Z = true
-
-.field public static final v:Z = true
-
-.field public static final w:Z = false
-
-.field public static final x:Z = false
-
-.field public static final y:Z = false
-
-.field public static final z:Z = false
+.source "Base64Util.java"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    :try_start_0
+    const-string v0, "UTF-8"
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
-    return-void
+    move-result-object p0
+
+    const/16 v0, 0xb
+
+    .line 2
+    invoke-static {p0, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    .line 3
+    invoke-virtual {p0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+
+    const/4 p0, 0x0
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "^\\s*(?:(?:[A-Za-z0-9\\-_]{4})+\\s*)*[A-Za-z0-9\\-_]*\\s*$"
+
+    .line 1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
 .end method

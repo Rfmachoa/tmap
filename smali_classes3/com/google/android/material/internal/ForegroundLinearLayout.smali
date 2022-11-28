@@ -360,9 +360,6 @@
 
 .method public jumpDrawablesToCurrentState()V
     .locals 1
-    .annotation build Landroidx/annotation/RequiresApi;
-        value = 0xb
-    .end annotation
 
     .line 1
     invoke-super {p0}, Landroid/view/ViewGroup;->jumpDrawablesToCurrentState()V
@@ -437,31 +434,36 @@
     :cond_0
     iput-object p1, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foreground:Landroid/graphics/drawable/Drawable;
 
+    const/4 v0, 0x1
+
+    .line 5
+    iput-boolean v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundBoundsChanged:Z
+
     if-eqz p1, :cond_2
 
     const/4 v0, 0x0
 
-    .line 5
+    .line 6
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
-    .line 6
+    .line 7
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 7
+    .line 8
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 8
+    .line 9
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getDrawableState()[I
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 9
+    .line 10
     :cond_1
     iget v0, p0, Lcom/google/android/material/internal/ForegroundLinearLayout;->foregroundGravity:I
 
@@ -469,28 +471,26 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 10
+    .line 11
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 11
+    .line 12
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
     goto :goto_0
 
-    :cond_2
-    const/4 p1, 0x1
-
-    .line 12
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
-
     .line 13
+    :cond_2
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
+
+    .line 14
     :cond_3
     :goto_0
     invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    .line 14
+    .line 15
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
     :cond_4

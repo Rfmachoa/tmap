@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -87,14 +91,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "object"
-        }
-    .end annotation
 
     if-ne p1, p0, :cond_0
 
@@ -145,15 +141,6 @@
 
 .method public or(Landroidx/camera/core/impl/utils/Optional;)Landroidx/camera/core/impl/utils/Optional;
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "secondChoice"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -165,7 +152,7 @@
     .end annotation
 
     .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -174,17 +161,33 @@
     return-object p1
 .end method
 
-.method public or(Ljava/lang/Object;)Ljava/lang/Object;
+.method public or(Landroidx/core/util/e0;)Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "defaultValue"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/core/util/e0<",
+            "+TT;>;)TT;"
         }
     .end annotation
 
+    .line 3
+    invoke-interface {p1}, Landroidx/core/util/e0;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "use Optional.orNull() instead of a Supplier that returns null"
+
+    .line 4
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public or(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TT;"
@@ -194,41 +197,7 @@
     const-string v0, "use Optional.orNull() instead of Optional.or(null)"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public or(Lr1/w;)Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "supplier"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lr1/w<",
-            "+TT;>;)TT;"
-        }
-    .end annotation
-
-    .line 3
-    invoke-interface {p1}, Lr1/w;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "use Optional.orNull() instead of a Supplier that returns null"
-
-    .line 4
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

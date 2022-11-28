@@ -73,7 +73,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 6
-    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->g:Landroidx/car/app/hardware/common/CarValue;
+    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->h:Landroidx/car/app/hardware/common/CarValue;
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/Speed;->mRawSpeedMetersPerSecond:Landroidx/car/app/hardware/common/CarValue;
 
@@ -81,7 +81,7 @@
     iput-object v0, p0, Landroidx/car/app/hardware/info/Speed;->mDisplaySpeedMetersPerSecond:Landroidx/car/app/hardware/common/CarValue;
 
     .line 8
-    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->e:Landroidx/car/app/hardware/common/CarValue;
+    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->f:Landroidx/car/app/hardware/common/CarValue;
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/Speed;->mSpeedDisplayUnit:Landroidx/car/app/hardware/common/CarValue;
 

@@ -3,40 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Lcom/skt/tmap/view/TmapWebView$OnScrollChangedListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-.field public final synthetic b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+.field public final synthetic a:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;)V
+.method public synthetic constructor <init>(Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/u2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/u2;->b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    iput-object p1, p0, Lcom/skt/tmap/activity/u2;->a:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
-    .locals 2
+.method public final onScrollChanged(IIII)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/u2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/u2;->a:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/u2;->b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->O6(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;Ljava/lang/Boolean;)V
+    invoke-static {v0, p1, p2, p3, p4}, Lcom/skt/tmap/activity/TmapMainSettingGuideDetailActivity;->J5(Landroid/view/View;IIII)V
 
     return-void
 .end method

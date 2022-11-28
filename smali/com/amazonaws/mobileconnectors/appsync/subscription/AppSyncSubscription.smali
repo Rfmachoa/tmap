@@ -14,7 +14,7 @@
 # instance fields
 .field public call:Lcom/apollographql/apollo/api/f;
 
-.field public parser:Lo4/a;
+.field public parser:Ll6/a;
 
 
 # direct methods
@@ -30,11 +30,11 @@
     iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->call:Lcom/apollographql/apollo/api/f;
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->createMessageParser(Lcom/apollographql/apollo/api/f;)Lo4/a;
+    invoke-direct {p0, p1}, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->createMessageParser(Lcom/apollographql/apollo/api/f;)Ll6/a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->parser:Lo4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->parser:Ll6/a;
 
     return-void
 .end method
@@ -59,29 +59,29 @@
     return-object v0
 .end method
 
-.method private createMessageParser(Lcom/apollographql/apollo/api/f;)Lo4/a;
+.method private createMessageParser(Lcom/apollographql/apollo/api/f;)Ll6/a;
     .locals 2
 
     .line 1
-    new-instance v0, Lo4/a;
+    new-instance v0, Ll6/a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, v1, v1}, Lo4/a;-><init>(Lcom/apollographql/apollo/api/b;Lc4/j;Lo4/d;Lj4/h;)V
+    invoke-direct {v0, p1, v1, v1, v1}, Ll6/a;-><init>(Lcom/apollographql/apollo/api/b;Lz5/j;Ll6/d;Lg6/h;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public parse(Lzj/o;)V
+.method public parse(Lem/o;)V
     .locals 2
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->parser:Lo4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/AppSyncSubscription;->parser:Ll6/a;
 
-    invoke-virtual {v0, p1}, Lo4/a;->g(Lzj/o;)Lc4/i;
+    invoke-virtual {v0, p1}, Ll6/a;->f(Lem/o;)Lz5/i;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

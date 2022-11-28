@@ -3,6 +3,15 @@
 .source "CompoundButtonCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/d$b;,
+        Landroidx/core/widget/d$a;
+    }
+.end annotation
+
+
 # static fields
 .field public static final a:Ljava/lang/String; = "CompoundButtonCompat"
 
@@ -31,7 +40,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, Landroidx/core/widget/d$b;->a(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
@@ -48,7 +57,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
+    invoke-static {p0}, Landroidx/core/widget/d$a;->a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -65,7 +74,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-static {p0}, Landroidx/core/widget/d$a;->b(Landroid/widget/CompoundButton;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0
 
@@ -84,7 +93,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+    invoke-static {p0, p1}, Landroidx/core/widget/d$a;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -101,7 +110,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p0, p1}, Landroidx/core/widget/d$a;->d(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
 
     return-void
 .end method

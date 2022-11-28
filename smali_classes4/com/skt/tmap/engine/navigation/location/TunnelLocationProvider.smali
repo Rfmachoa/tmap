@@ -7,10 +7,12 @@
 .implements Lcom/skt/tmap/engine/navigation/location/tunnel/OnTunnelLocationChangedListener;
 
 
+# static fields
+.field public static final TUNNEL_LOCATION_PROVIDER_NAME:Ljava/lang/String; = "tlp"
+
+
 # instance fields
 .field private final TAG:Ljava/lang/String;
-
-.field private final TUNNEL_LOCATION_PROVIDER_NAME:Ljava/lang/String;
 
 .field private locationProviderListener:Lcom/skt/tmap/engine/navigation/location/LocationProviderListener;
 
@@ -29,15 +31,10 @@
     .line 2
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TunnelLocationProvider;->TAG:Ljava/lang/String;
 
-    const-string/jumbo v0, "tlp"
-
     .line 3
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TunnelLocationProvider;->TUNNEL_LOCATION_PROVIDER_NAME:Ljava/lang/String;
-
-    .line 4
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/location/TunnelLocationProvider;->tunnelLocationProviderInterface:Lcom/skt/tmap/engine/navigation/location/tunnel/TunnelLocationProviderInterface;
 
-    .line 5
+    .line 4
     invoke-interface {p1, p0}, Lcom/skt/tmap/engine/navigation/location/tunnel/TunnelLocationProviderInterface;->setLocationListener(Lcom/skt/tmap/engine/navigation/location/tunnel/OnTunnelLocationChangedListener;)V
 
     return-void
@@ -77,7 +74,7 @@
     .line 1
     new-instance p1, Landroid/location/Location;
 
-    const-string/jumbo p2, "tlp"
+    const-string p2, "tlp"
 
     invoke-direct {p1, p2}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 

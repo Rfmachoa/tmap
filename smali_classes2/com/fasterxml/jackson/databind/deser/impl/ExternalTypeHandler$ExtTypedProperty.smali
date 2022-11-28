@@ -19,6 +19,8 @@
 
 .field private final _typeDeserializer:Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;
 
+.field private _typeProperty:Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;
+
 .field private final _typePropertyName:Ljava/lang/String;
 
 
@@ -87,6 +89,15 @@
     return-object v0
 .end method
 
+.method public getTypeProperty()Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler$ExtTypedProperty;->_typeProperty:Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;
+
+    return-object v0
+.end method
+
 .method public getTypePropertyName()Ljava/lang/String;
     .locals 1
 
@@ -102,20 +113,10 @@
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler$ExtTypedProperty;->_typeDeserializer:Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;
 
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;->getDefaultImpl()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/jsontype/TypeDeserializer;->hasDefaultImpl()Z
 
-    move-result-object v0
+    move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
 .end method
 
@@ -130,4 +131,13 @@
     move-result p1
 
     return p1
+.end method
+
+.method public linkTypeProperty(Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler$ExtTypedProperty;->_typeProperty:Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;
+
+    return-void
 .end method

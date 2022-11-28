@@ -64,7 +64,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity$b;->a:Lcom/skt/tmap/activity/BaseActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     .line 3
     :cond_0

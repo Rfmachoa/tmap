@@ -29,7 +29,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/HiddenSettingMenu;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x8010
@@ -44,20 +44,33 @@
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const-string p1, "NONE"
+    const-string p1, "RemoteConfig"
+
+    const-string v0, "remote_config"
 
     .line 2
-    invoke-virtual {p0, p1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "AICLOUD_OASR_DEV"
+    const-string p1, "Tmap"
+
+    const-string v0, "tmap_tlp"
 
     .line 3
-    invoke-virtual {p0, p1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "AICLOUD_OASR_EVA"
+    const-string p1, "SKT_TRANSF"
+
+    const-string v0, "skt_transf"
 
     .line 4
-    invoke-virtual {p0, p1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string p1, "SKT_LSTM"
+
+    const-string v0, "skt_lstm"
+
+    .line 5
+    invoke-virtual {p0, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

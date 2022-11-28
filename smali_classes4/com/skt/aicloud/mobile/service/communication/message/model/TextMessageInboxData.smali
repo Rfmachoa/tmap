@@ -200,21 +200,21 @@
 
     const-string v4, "mPhoneNumber"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageInboxData;->c:Ljava/lang/String;
 
     const-string v4, "mBodyMessage"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageInboxData;->d:Ljava/lang/String;
 
     const-string v4, "mType"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iget-object v1, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageInboxData;->e:Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageInboxData$Type;

@@ -1,5 +1,5 @@
 .class public Lcom/coremedia/iso/boxes/UserDataBox;
-.super Ld6/b;
+.super Lb8/b;
 .source "UserDataBox.java"
 
 
@@ -14,7 +14,7 @@
     const-string v0, "udta"
 
     .line 1
-    invoke-direct {p0, v0}, Ld6/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lb8/b;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Ld6/b;->_parseDetails(Ljava/nio/ByteBuffer;)V
+    invoke-super {p0, p1}, Lb8/b;->_parseDetails(Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Ld6/b;->getContent(Ljava/nio/ByteBuffer;)V
+    invoke-super {p0, p1}, Lb8/b;->getContent(Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Ld6/b;->getContentSize()J
+    invoke-super {p0}, Lb8/b;->getContentSize()J
 
     move-result-wide v0
 
@@ -59,7 +59,7 @@
     .end annotation
 
     .line 1
-    invoke-super/range {p0 .. p5}, Ld6/b;->parse(Ljava/nio/channels/ReadableByteChannel;Ljava/nio/ByteBuffer;JLcom/coremedia/iso/BoxParser;)V
+    invoke-super/range {p0 .. p5}, Lb8/b;->parse(Ljava/nio/channels/ReadableByteChannel;Ljava/nio/ByteBuffer;JLcom/coremedia/iso/BoxParser;)V
 
     return-void
 .end method

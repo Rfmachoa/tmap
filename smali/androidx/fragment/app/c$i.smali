@@ -47,7 +47,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Landroidx/fragment/app/c0;->B(Ljava/util/ArrayList;I)V
+    invoke-static {v0, v1}, Landroidx/fragment/app/l0;->e(Ljava/util/ArrayList;I)V
 
     return-void
 .end method

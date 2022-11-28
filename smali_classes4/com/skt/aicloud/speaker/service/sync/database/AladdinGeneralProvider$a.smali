@@ -99,7 +99,7 @@
 
     const-string v3, ", which will destroy all old data"
 
-    invoke-static {v1, p2, v2, p3, v3}, Landroidx/room/k;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2, v2, p3, v3}, Lp0/e;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -151,7 +151,7 @@
 
     const-string v3, ", which will destroy all old data"
 
-    invoke-static {v1, p2, v2, p3, v3}, Landroidx/room/k;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2, v2, p3, v3}, Lp0/e;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

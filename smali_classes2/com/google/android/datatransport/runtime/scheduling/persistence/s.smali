@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/s;->a:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-static {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->f(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->g(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
 
     move-result-object v0
 

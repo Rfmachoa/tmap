@@ -8,6 +8,8 @@
 
 .field public static final TRUE:Lcom/fasterxml/jackson/databind/node/BooleanNode;
 
+.field private static final serialVersionUID:J = 0x2L
+
 
 # instance fields
 .field private final _value:Z
@@ -38,7 +40,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Z)V
+.method public constructor <init>(Z)V
     .locals 0
 
     .line 1
@@ -267,6 +269,25 @@
 
     :goto_0
     return v0
+.end method
+
+.method public readResolve()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/BooleanNode;->_value:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/fasterxml/jackson/databind/node/BooleanNode;->TRUE:Lcom/fasterxml/jackson/databind/node/BooleanNode;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lcom/fasterxml/jackson/databind/node/BooleanNode;->FALSE:Lcom/fasterxml/jackson/databind/node/BooleanNode;
+
+    :goto_0
+    return-object v0
 .end method
 
 .method public final serialize(Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/databind/SerializerProvider;)V

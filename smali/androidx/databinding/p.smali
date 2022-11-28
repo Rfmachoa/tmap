@@ -24,11 +24,11 @@
 .method public abstract b(Landroidx/lifecycle/LifecycleOwner;)V
 .end method
 
-.method public abstract c()Landroidx/databinding/t;
+.method public abstract c()Landroidx/databinding/u;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/databinding/t<",
+            "Landroidx/databinding/u<",
             "TT;>;"
         }
     .end annotation

@@ -1,41 +1,40 @@
-.class public abstract Landroidx/browser/customtabs/c;
+.class public final synthetic Landroidx/browser/customtabs/c;
 .super Ljava/lang/Object;
-.source "CustomTabsServiceConnection.java"
+.source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroid/content/ServiceConnection;
+.implements Landroid/os/IBinder$DeathRecipient;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/browser/customtabs/CustomTabsService$1;
+
+.field public final synthetic b:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroidx/browser/customtabs/CustomTabsService$1;Landroidx/browser/customtabs/CustomTabsSessionToken;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/browser/customtabs/c;->a:Landroidx/browser/customtabs/CustomTabsService$1;
+
+    iput-object p2, p0, Landroidx/browser/customtabs/c;->b:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract onCustomTabsServiceConnected(Landroid/content/ComponentName;Landroidx/browser/customtabs/CustomTabsClient;)V
-.end method
+.method public final binderDied()V
+    .locals 2
 
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 1
+    iget-object v0, p0, Landroidx/browser/customtabs/c;->a:Landroidx/browser/customtabs/CustomTabsService$1;
 
-    .line 1
-    new-instance v0, Landroidx/browser/customtabs/c$a;
+    iget-object v1, p0, Landroidx/browser/customtabs/c;->b:Landroidx/browser/customtabs/CustomTabsSessionToken;
 
-    .line 2
-    invoke-static {p2}, Landroid/support/customtabs/ICustomTabsService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/support/customtabs/ICustomTabsService;
-
-    move-result-object p2
-
-    invoke-direct {v0, p0, p2, p1}, Landroidx/browser/customtabs/c$a;-><init>(Landroidx/browser/customtabs/c;Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
-
-    .line 3
-    invoke-virtual {p0, p1, v0}, Landroidx/browser/customtabs/c;->onCustomTabsServiceConnected(Landroid/content/ComponentName;Landroidx/browser/customtabs/CustomTabsClient;)V
+    invoke-static {v0, v1}, Landroidx/browser/customtabs/CustomTabsService$1;->a(Landroidx/browser/customtabs/CustomTabsService$1;Landroidx/browser/customtabs/CustomTabsSessionToken;)V
 
     return-void
 .end method

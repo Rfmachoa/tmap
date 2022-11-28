@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNavOptionsBuilder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavOptionsBuilder.kt\nandroidx/navigation/NavOptionsBuilderKt\n*L\n1#1,143:1\n*E\n"
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
@@ -15,39 +11,39 @@
     }
     d2 = {
         "Lkotlin/Function1;",
-        "Landroidx/navigation/k0;",
+        "Landroidx/navigation/NavOptionsBuilder;",
         "Lkotlin/d1;",
         "Lkotlin/ExtensionFunctionType;",
         "optionsBuilder",
-        "Landroidx/navigation/j0;",
+        "Landroidx/navigation/k0;",
         "a",
-        "navigation-common-ktx_release"
+        "navigation-common_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
 
 
 # direct methods
-.method public static final a(Lej/l;)Landroidx/navigation/j0;
+.method public static final a(Lgl/l;)Landroidx/navigation/k0;
     .locals 1
-    .param p0    # Lej/l;
+    .param p0    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
-            "Landroidx/navigation/k0;",
+            "Landroidx/navigation/NavOptionsBuilder;",
             "Lkotlin/d1;",
             ">;)",
-            "Landroidx/navigation/j0;"
+            "Landroidx/navigation/k0;"
         }
     .end annotation
 
@@ -56,16 +52,16 @@
 
     const-string v0, "optionsBuilder"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    new-instance v0, Landroidx/navigation/k0;
+    new-instance v0, Landroidx/navigation/NavOptionsBuilder;
 
-    invoke-direct {v0}, Landroidx/navigation/k0;-><init>()V
+    invoke-direct {v0}, Landroidx/navigation/NavOptionsBuilder;-><init>()V
 
-    invoke-interface {p0, v0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroidx/navigation/k0;->b()Landroidx/navigation/j0;
+    invoke-virtual {v0}, Landroidx/navigation/NavOptionsBuilder;->b()Landroidx/navigation/k0;
 
     move-result-object p0
 

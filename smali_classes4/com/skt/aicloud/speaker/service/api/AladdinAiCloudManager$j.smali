@@ -18,7 +18,7 @@
 .method public abstract a(ZLjava/lang/String;)V
 .end method
 
-.method public abstract b()V
+.method public abstract b(Ljava/lang/String;Ljc/c;Lorg/json/JSONObject;)V
 .end method
 
 .method public abstract c()V
@@ -33,7 +33,7 @@
 .method public abstract f()V
 .end method
 
-.method public abstract g(Ljava/lang/String;Lma/c;Lorg/json/JSONObject;)V
+.method public abstract g()V
 .end method
 
 .method public abstract h()V

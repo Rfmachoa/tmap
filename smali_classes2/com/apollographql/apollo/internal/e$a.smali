@@ -77,11 +77,11 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v0}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -199,11 +199,11 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v0}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v0
 

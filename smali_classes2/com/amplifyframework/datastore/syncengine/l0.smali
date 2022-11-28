@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/e;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
@@ -23,12 +23,14 @@
 
 
 # virtual methods
-.method public final a(Lai/c;)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/l0;->a:Lcom/amplifyframework/datastore/syncengine/Orchestrator;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->b(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lai/c;)V
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->e(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Ljava/lang/Throwable;)V
 
     return-void
 .end method

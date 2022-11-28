@@ -652,7 +652,7 @@
 
     const/16 v0, 0x30
 
-    invoke-static {p0, v0}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {p0, v0}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v0
 

@@ -1,38 +1,41 @@
 .class public Landroidx/appcompat/app/k;
 .super Ljava/lang/Object;
-.source "TwilightCalculator.java"
+.source "ResourcesFlusher.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/appcompat/app/k$a;
+    }
+.end annotation
 
 
 # static fields
-.field public static d:Landroidx/appcompat/app/k; = null
+.field public static final a:Ljava/lang/String; = "ResourcesFlusher"
 
-.field public static final e:I = 0x0
+.field public static b:Ljava/lang/reflect/Field;
 
-.field public static final f:I = 0x1
+.field public static c:Z
 
-.field public static final g:F = 0.017453292f
+.field public static d:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end field
 
-.field public static final h:F = 9.0E-4f
+.field public static e:Z
 
-.field public static final i:F = -0.10471976f
+.field public static f:Ljava/lang/reflect/Field;
 
-.field public static final j:F = 0.0334196f
+.field public static g:Z
 
-.field public static final k:F = 3.49066E-4f
+.field public static h:Ljava/lang/reflect/Field;
 
-.field public static final l:F = 5.236E-6f
-
-.field public static final m:F = 0.4092797f
-
-.field public static final n:J = 0xdc6d62da00L
-
-
-# instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:I
+.field public static i:Z
 
 
 # direct methods
@@ -45,318 +48,495 @@
     return-void
 .end method
 
-.method public static b()Landroidx/appcompat/app/k;
-    .locals 1
+.method public static a(Landroid/content/res/Resources;)V
+    .locals 2
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    sget-object v0, Landroidx/appcompat/app/k;->d:Landroidx/appcompat/app/k;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-static {p0}, Landroidx/appcompat/app/k;->d(Landroid/content/res/Resources;)V
+
+    return-void
+.end method
+
+.method public static b(Landroid/content/res/Resources;)V
+    .locals 4
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
+    .line 1
+    sget-boolean v0, Landroidx/appcompat/app/k;->c:Z
+
+    const-string v1, "ResourcesFlusher"
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 2
+    :try_start_0
+    const-class v2, Landroid/content/res/Resources;
+
+    const-string v3, "mDrawableCache"
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/appcompat/app/k;->b:Ljava/lang/reflect/Field;
+
+    .line 3
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    const-string v3, "Could not retrieve Resources#mDrawableCache field"
+
+    .line 4
+    invoke-static {v1, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 5
+    :goto_0
+    sput-boolean v0, Landroidx/appcompat/app/k;->c:Z
+
+    .line 6
+    :cond_0
+    sget-object v0, Landroidx/appcompat/app/k;->b:Ljava/lang/reflect/Field;
+
+    if-eqz v0, :cond_1
+
+    const/4 v2, 0x0
+
+    .line 7
+    :try_start_1
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/Map;
+    :try_end_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-object v2, p0
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p0
+
+    const-string v0, "Could not retrieve value from Resources#mDrawableCache"
+
+    .line 8
+    invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
+    if-eqz v2, :cond_1
+
+    .line 9
+    invoke-interface {v2}, Ljava/util/Map;->clear()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public static c(Landroid/content/res/Resources;)V
+    .locals 4
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
+
+    .line 1
+    sget-boolean v0, Landroidx/appcompat/app/k;->c:Z
+
+    const-string v1, "ResourcesFlusher"
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 2
+    :try_start_0
+    const-class v2, Landroid/content/res/Resources;
+
+    const-string v3, "mDrawableCache"
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/appcompat/app/k;->b:Ljava/lang/reflect/Field;
+
+    .line 3
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    const-string v3, "Could not retrieve Resources#mDrawableCache field"
+
+    .line 4
+    invoke-static {v1, v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 5
+    :goto_0
+    sput-boolean v0, Landroidx/appcompat/app/k;->c:Z
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 6
+    sget-object v2, Landroidx/appcompat/app/k;->b:Ljava/lang/reflect/Field;
+
+    if-eqz v2, :cond_1
+
+    .line 7
+    :try_start_1
+    invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p0
+
+    const-string v2, "Could not retrieve value from Resources#mDrawableCache"
+
+    .line 8
+    invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_1
+    :goto_1
+    if-nez v0, :cond_2
+
+    return-void
+
+    .line 9
+    :cond_2
+    invoke-static {v0}, Landroidx/appcompat/app/k;->e(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static d(Landroid/content/res/Resources;)V
+    .locals 5
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x18
+    .end annotation
+
+    .line 1
+    sget-boolean v0, Landroidx/appcompat/app/k;->i:Z
+
+    const/4 v1, 0x1
+
+    const-string v2, "ResourcesFlusher"
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Landroidx/appcompat/app/k;
+    :try_start_0
+    const-class v0, Landroid/content/res/Resources;
 
-    invoke-direct {v0}, Landroidx/appcompat/app/k;-><init>()V
+    const-string v3, "mResourcesImpl"
 
-    sput-object v0, Landroidx/appcompat/app/k;->d:Landroidx/appcompat/app/k;
+    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    .line 3
-    :cond_0
-    sget-object v0, Landroidx/appcompat/app/k;->d:Landroidx/appcompat/app/k;
+    move-result-object v0
 
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public a(JDD)V
-    .locals 15
-
-    move-object v0, p0
-
-    const-wide v1, 0xdc6d62da00L
-
-    sub-long v3, p1, v1
-
-    long-to-float v3, v3
-
-    const v4, 0x4ca4cb80    # 8.64E7f
-
-    div-float/2addr v3, v4
-
-    const v4, 0x3c8ceb25
-
-    mul-float/2addr v4, v3
-
-    const v5, 0x40c7ae92
-
-    add-float/2addr v4, v5
-
-    float-to-double v5, v4
-
-    .line 1
-    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v7
-
-    const-wide v9, 0x3fa11c5fc0000000L    # 0.03341960161924362
-
-    mul-double/2addr v7, v9
-
-    add-double/2addr v7, v5
-
-    const/high16 v9, 0x40000000    # 2.0f
-
-    mul-float/2addr v9, v4
-
-    float-to-double v9, v9
-
-    .line 2
-    invoke-static {v9, v10}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v9
-
-    const-wide v11, 0x3f36e05b00000000L    # 3.4906598739326E-4
-
-    mul-double/2addr v9, v11
-
-    add-double/2addr v9, v7
-
-    const/high16 v7, 0x40400000    # 3.0f
-
-    mul-float/2addr v4, v7
-
-    float-to-double v7, v4
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v7
-
-    const-wide v11, 0x3ed5f61cc0000000L    # 5.236000106378924E-6
-
-    mul-double/2addr v7, v11
-
-    add-double/2addr v7, v9
-
-    const-wide v9, 0x3ffcbed85e1ce332L    # 1.796593063
-
-    add-double/2addr v7, v9
-
-    const-wide v9, 0x400921fb54442d18L    # Math.PI
-
-    add-double/2addr v7, v9
-
-    move-wide/from16 v9, p5
-
-    neg-double v9, v9
-
-    const-wide v11, 0x4076800000000000L    # 360.0
-
-    div-double/2addr v9, v11
-
-    const v4, 0x3a6bedfa    # 9.0E-4f
-
-    sub-float/2addr v3, v4
-
-    float-to-double v11, v3
-
-    sub-double/2addr v11, v9
+    sput-object v0, Landroidx/appcompat/app/k;->h:Ljava/lang/reflect/Field;
 
     .line 3
-    invoke-static {v11, v12}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v11
-
-    long-to-float v3, v11
-
-    add-float/2addr v3, v4
-
-    float-to-double v3, v3
-
-    add-double/2addr v3, v9
-
-    .line 4
-    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v5
-
-    const-wide v9, 0x3f75b573eab367a1L    # 0.0053
-
-    mul-double/2addr v5, v9
-
-    add-double/2addr v5, v3
-
-    const-wide/high16 v3, 0x4000000000000000L    # 2.0
-
-    mul-double/2addr v3, v7
-
-    .line 5
-    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v3
-
-    const-wide v9, -0x4083bcd35a858794L    # -0.0069
-
-    mul-double/2addr v3, v9
-
-    add-double/2addr v3, v5
-
-    .line 6
-    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v5
-
-    const-wide v7, 0x3fda31a380000000L    # 0.4092797040939331
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v7
-
-    mul-double/2addr v7, v5
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->asin(D)D
-
-    move-result-wide v5
-
-    const-wide v7, 0x3f91df46a0000000L    # 0.01745329238474369
-
-    mul-double v7, v7, p3
-
-    const-wide v9, -0x4045311600000000L    # -0.10471975803375244
-
-    .line 7
-    invoke-static {v9, v10}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v9
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v11
-
-    .line 8
-    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v13
-
-    mul-double/2addr v13, v11
-
-    sub-double/2addr v9, v13
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v7
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v5
-
-    mul-double/2addr v5, v7
-
-    div-double/2addr v9, v5
-
-    const-wide/high16 v5, 0x3ff0000000000000L    # 1.0
-
-    cmpl-double v5, v9, v5
-
-    const/4 v6, 0x1
-
-    const-wide/16 v7, -0x1
-
-    if-ltz v5, :cond_0
-
-    .line 9
-    iput v6, v0, Landroidx/appcompat/app/k;->c:I
-
-    .line 10
-    iput-wide v7, v0, Landroidx/appcompat/app/k;->a:J
-
-    .line 11
-    iput-wide v7, v0, Landroidx/appcompat/app/k;->b:J
-
-    return-void
-
-    :cond_0
-    const-wide/high16 v11, -0x4010000000000000L    # -1.0
-
-    cmpg-double v5, v9, v11
-
-    const/4 v11, 0x0
-
-    if-gtz v5, :cond_1
-
-    .line 12
-    iput v11, v0, Landroidx/appcompat/app/k;->c:I
-
-    .line 13
-    iput-wide v7, v0, Landroidx/appcompat/app/k;->a:J
-
-    .line 14
-    iput-wide v7, v0, Landroidx/appcompat/app/k;->b:J
-
-    return-void
-
-    .line 15
-    :cond_1
-    invoke-static {v9, v10}, Ljava/lang/Math;->acos(D)D
-
-    move-result-wide v7
-
-    const-wide v9, 0x401921fb54442d18L    # 6.283185307179586
-
-    div-double/2addr v7, v9
-
-    double-to-float v5, v7
-
-    float-to-double v7, v5
-
-    add-double v9, v3, v7
-
-    const-wide v12, 0x4194997000000000L    # 8.64E7
-
-    mul-double/2addr v9, v12
-
-    .line 16
-    invoke-static {v9, v10}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v9
-
-    add-long/2addr v9, v1
-
-    iput-wide v9, v0, Landroidx/appcompat/app/k;->a:J
-
-    sub-double/2addr v3, v7
-
-    mul-double/2addr v3, v12
-
-    .line 17
-    invoke-static {v3, v4}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v3
-
-    add-long/2addr v3, v1
-
-    iput-wide v3, v0, Landroidx/appcompat/app/k;->b:J
-
-    cmp-long v1, v3, p1
-
-    if-gez v1, :cond_2
-
-    .line 18
-    iget-wide v1, v0, Landroidx/appcompat/app/k;->a:J
-
-    cmp-long v1, v1, p1
-
-    if-lez v1, :cond_2
-
-    .line 19
-    iput v11, v0, Landroidx/appcompat/app/k;->c:I
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 20
-    :cond_2
-    iput v6, v0, Landroidx/appcompat/app/k;->c:I
+    :catch_0
+    move-exception v0
 
+    const-string v3, "Could not retrieve Resources#mResourcesImpl field"
+
+    .line 4
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 5
     :goto_0
+    sput-boolean v1, Landroidx/appcompat/app/k;->i:Z
+
+    .line 6
+    :cond_0
+    sget-object v0, Landroidx/appcompat/app/k;->h:Ljava/lang/reflect/Field;
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    const/4 v3, 0x0
+
+    .line 7
+    :try_start_1
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p0
+
+    const-string v0, "Could not retrieve value from Resources#mResourcesImpl"
+
+    .line 8
+    invoke-static {v2, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move-object p0, v3
+
+    :goto_1
+    if-nez p0, :cond_2
+
+    return-void
+
+    .line 9
+    :cond_2
+    sget-boolean v0, Landroidx/appcompat/app/k;->c:Z
+
+    if-nez v0, :cond_3
+
+    .line 10
+    :try_start_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v4, "mDrawableCache"
+
+    invoke-virtual {v0, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/appcompat/app/k;->b:Ljava/lang/reflect/Field;
+
+    .line 11
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_2
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    const-string v4, "Could not retrieve ResourcesImpl#mDrawableCache field"
+
+    .line 12
+    invoke-static {v2, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 13
+    :goto_2
+    sput-boolean v1, Landroidx/appcompat/app/k;->c:Z
+
+    .line 14
+    :cond_3
+    sget-object v0, Landroidx/appcompat/app/k;->b:Ljava/lang/reflect/Field;
+
+    if-eqz v0, :cond_4
+
+    .line 15
+    :try_start_3
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+    :try_end_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_3 .. :try_end_3} :catch_3
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p0
+
+    const-string v0, "Could not retrieve value from ResourcesImpl#mDrawableCache"
+
+    .line 16
+    invoke-static {v2, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_4
+    :goto_3
+    if-eqz v3, :cond_5
+
+    .line 17
+    invoke-static {v3}, Landroidx/appcompat/app/k;->e(Ljava/lang/Object;)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static e(Ljava/lang/Object;)V
+    .locals 4
+    .param p0    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x10
+    .end annotation
+
+    .line 1
+    sget-boolean v0, Landroidx/appcompat/app/k;->e:Z
+
+    const/4 v1, 0x1
+
+    const-string v2, "ResourcesFlusher"
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    const-string v0, "android.content.res.ThemedResourceCache"
+
+    .line 2
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/appcompat/app/k;->d:Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v3, "Could not find ThemedResourceCache class"
+
+    .line 3
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 4
+    :goto_0
+    sput-boolean v1, Landroidx/appcompat/app/k;->e:Z
+
+    .line 5
+    :cond_0
+    sget-object v0, Landroidx/appcompat/app/k;->d:Ljava/lang/Class;
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 6
+    :cond_1
+    sget-boolean v3, Landroidx/appcompat/app/k;->g:Z
+
+    if-nez v3, :cond_2
+
+    :try_start_1
+    const-string v3, "mUnthemedEntries"
+
+    .line 7
+    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/appcompat/app/k;->f:Ljava/lang/reflect/Field;
+
+    .line 8
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    const-string v3, "Could not retrieve ThemedResourceCache#mUnthemedEntries field"
+
+    .line 9
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 10
+    :goto_1
+    sput-boolean v1, Landroidx/appcompat/app/k;->g:Z
+
+    .line 11
+    :cond_2
+    sget-object v0, Landroidx/appcompat/app/k;->f:Ljava/lang/reflect/Field;
+
+    if-nez v0, :cond_3
+
+    return-void
+
+    :cond_3
+    const/4 v1, 0x0
+
+    .line 12
+    :try_start_2
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/util/LongSparseArray;
+    :try_end_2
+    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_2
+
+    move-object v1, p0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception p0
+
+    const-string v0, "Could not retrieve value from ThemedResourceCache#mUnthemedEntries"
+
+    .line 13
+    invoke-static {v2, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_2
+    if-eqz v1, :cond_4
+
+    .line 14
+    invoke-static {v1}, Landroidx/appcompat/app/k$a;->a(Landroid/util/LongSparseArray;)V
+
+    :cond_4
     return-void
 .end method

@@ -422,7 +422,7 @@
     .line 7
     new-instance v2, Lcom/google/firebase/database/tubesock/WebSocketException;
 
-    invoke-static {v3, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -580,7 +580,7 @@
     .line 19
     new-instance v2, Lcom/google/firebase/database/tubesock/WebSocketException;
 
-    invoke-static {v3, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -594,7 +594,7 @@
 
     const-string v2, "unsupported protocol: "
 
-    invoke-static {v2, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -24,9 +24,9 @@
     return-void
 .end method
 
-.method public static m(Lk5/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public static m(Lh7/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 1
-    .param p0    # Lk5/g;
+    .param p0    # Lh7/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -36,7 +36,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lk5/g<",
+            "Lh7/g<",
             "Landroid/graphics/Bitmap;",
             ">;)",
             "Lcom/bumptech/glide/load/resource/bitmap/i;"
@@ -48,7 +48,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/bitmap/i;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/j;->f(Lk5/g;)Lcom/bumptech/glide/j;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/j;->f(Lh7/g;)Lcom/bumptech/glide/j;
 
     move-result-object p0
 
@@ -91,9 +91,9 @@
     return-object p0
 .end method
 
-.method public static p(Lk5/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public static p(Lh7/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 1
-    .param p0    # Lk5/c$a;
+    .param p0    # Lh7/c$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -105,16 +105,16 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/bitmap/i;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/i;->j(Lk5/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/i;->j(Lh7/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static q(Lk5/c;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public static q(Lh7/c;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 1
-    .param p0    # Lk5/c;
+    .param p0    # Lh7/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -126,16 +126,16 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/bitmap/i;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/i;->k(Lk5/c;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/i;->k(Lh7/c;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static r(Lk5/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public static r(Lh7/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 1
-    .param p0    # Lk5/g;
+    .param p0    # Lh7/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -145,7 +145,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lk5/g<",
+            "Lh7/g<",
             "Landroid/graphics/drawable/Drawable;",
             ">;)",
             "Lcom/bumptech/glide/load/resource/bitmap/i;"
@@ -157,7 +157,7 @@
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/bitmap/i;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/i;->l(Lk5/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {v0, p0}, Lcom/bumptech/glide/load/resource/bitmap/i;->l(Lh7/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object p0
 
@@ -172,11 +172,11 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lk5/c$a;
+    new-instance v0, Lh7/c$a;
 
-    invoke-direct {v0}, Lk5/c$a;-><init>()V
+    invoke-direct {v0}, Lh7/c$a;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bumptech/glide/load/resource/bitmap/i;->j(Lk5/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {p0, v0}, Lcom/bumptech/glide/load/resource/bitmap/i;->j(Lh7/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object v0
 
@@ -189,20 +189,20 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lk5/c$a;
+    new-instance v0, Lh7/c$a;
 
-    invoke-direct {v0, p1}, Lk5/c$a;-><init>(I)V
+    invoke-direct {v0, p1}, Lh7/c$a;-><init>(I)V
 
-    invoke-virtual {p0, v0}, Lcom/bumptech/glide/load/resource/bitmap/i;->j(Lk5/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {p0, v0}, Lcom/bumptech/glide/load/resource/bitmap/i;->j(Lh7/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public j(Lk5/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public j(Lh7/c$a;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 0
-    .param p1    # Lk5/c$a;
+    .param p1    # Lh7/c$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -210,20 +210,20 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lk5/c$a;->a()Lk5/c;
+    invoke-virtual {p1}, Lh7/c$a;->a()Lh7/c;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/i;->l(Lk5/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/i;->l(Lh7/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public k(Lk5/c;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public k(Lh7/c;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 0
-    .param p1    # Lk5/c;
+    .param p1    # Lh7/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -231,16 +231,16 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/i;->l(Lk5/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/bitmap/i;->l(Lh7/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public l(Lk5/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
+.method public l(Lh7/g;)Lcom/bumptech/glide/load/resource/bitmap/i;
     .locals 1
-    .param p1    # Lk5/g;
+    .param p1    # Lh7/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -250,7 +250,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lk5/g<",
+            "Lh7/g<",
             "Landroid/graphics/drawable/Drawable;",
             ">;)",
             "Lcom/bumptech/glide/load/resource/bitmap/i;"
@@ -258,11 +258,11 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lk5/b;
+    new-instance v0, Lh7/b;
 
-    invoke-direct {v0, p1}, Lk5/b;-><init>(Lk5/g;)V
+    invoke-direct {v0, p1}, Lh7/b;-><init>(Lh7/g;)V
 
-    invoke-virtual {p0, v0}, Lcom/bumptech/glide/j;->f(Lk5/g;)Lcom/bumptech/glide/j;
+    invoke-virtual {p0, v0}, Lcom/bumptech/glide/j;->f(Lh7/g;)Lcom/bumptech/glide/j;
 
     move-result-object p1
 

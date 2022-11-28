@@ -1,6 +1,6 @@
 .class interface abstract Lcom/google/firebase/messaging/RequestDeduplicator$GetTokenRequest;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "RequestDeduplicator.java"
 
 
 # annotations

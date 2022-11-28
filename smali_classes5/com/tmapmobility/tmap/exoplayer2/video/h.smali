@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract a(JJLcom/tmapmobility/tmap/exoplayer2/Format;Landroid/media/MediaFormat;)V
+.method public abstract b(JJLcom/tmapmobility/tmap/exoplayer2/Format;Landroid/media/MediaFormat;)V
     .param p6    # Landroid/media/MediaFormat;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation

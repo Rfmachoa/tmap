@@ -1,11 +1,14 @@
 .class public Landroidx/camera/view/CameraController$a;
-.super Landroidx/camera/view/t;
+.super Ljava/lang/Object;
 .source "CameraController.java"
+
+# interfaces
+.implements Landroidx/camera/core/VideoCapture$g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/view/CameraController;-><init>(Landroid/content/Context;)V
+    value = Landroidx/camera/view/CameraController;->r0(Lv0/e;Ljava/util/concurrent/Executor;Landroidx/camera/view/video/OnVideoSavedCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,57 +18,85 @@
 
 
 # instance fields
-.field public final synthetic c:Landroidx/camera/view/CameraController;
+.field public final synthetic a:Landroidx/camera/view/video/OnVideoSavedCallback;
+
+.field public final synthetic b:Landroidx/camera/view/CameraController;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/view/CameraController;Landroid/content/Context;)V
+.method public constructor <init>(Landroidx/camera/view/CameraController;Landroidx/camera/view/video/OnVideoSavedCallback;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x0
-        }
-        names = {
-            "this$0",
-            "context"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/view/CameraController$a;->c:Landroidx/camera/view/CameraController;
+    iput-object p1, p0, Landroidx/camera/view/CameraController$a;->b:Landroidx/camera/view/CameraController;
 
-    invoke-direct {p0, p2}, Landroidx/camera/view/t;-><init>(Landroid/content/Context;)V
+    iput-object p2, p0, Landroidx/camera/view/CameraController$a;->a:Landroidx/camera/view/video/OnVideoSavedCallback;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rotation"
-        }
-    .end annotation
+.method public a(ILjava/lang/String;Ljava/lang/Throwable;)V
+    .locals 2
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/CameraController$a;->c:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/CameraController$a;->b:Landroidx/camera/view/CameraController;
 
-    iget-object v0, v0, Landroidx/camera/view/CameraController;->d:Landroidx/camera/core/ImageCapture;
+    iget-object v0, v0, Landroidx/camera/view/CameraController;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/ImageCapture;->N0(I)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/CameraController$a;->c:Landroidx/camera/view/CameraController;
+    iget-object v0, p0, Landroidx/camera/view/CameraController$a;->a:Landroidx/camera/view/video/OnVideoSavedCallback;
 
-    iget-object v0, v0, Landroidx/camera/view/CameraController;->h:Landroidx/camera/core/VideoCapture;
+    invoke-interface {v0, p1, p2, p3}, Landroidx/camera/view/video/OnVideoSavedCallback;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, p1}, Landroidx/camera/core/VideoCapture;->j0(I)V
+    return-void
+.end method
+
+.method public b(Landroidx/camera/core/VideoCapture$i;)V
+    .locals 2
+    .param p1    # Landroidx/camera/core/VideoCapture$i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/view/CameraController$a;->b:Landroidx/camera/view/CameraController;
+
+    iget-object v0, v0, Landroidx/camera/view/CameraController;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 2
+    iget-object v0, p0, Landroidx/camera/view/CameraController$a;->a:Landroidx/camera/view/video/OnVideoSavedCallback;
+
+    .line 3
+    invoke-virtual {p1}, Landroidx/camera/core/VideoCapture$i;->a()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lv0/f;->a(Landroid/net/Uri;)Lv0/f;
+
+    move-result-object p1
+
+    .line 4
+    invoke-interface {v0, p1}, Landroidx/camera/view/video/OnVideoSavedCallback;->b(Lv0/f;)V
 
     return-void
 .end method

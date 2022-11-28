@@ -53,7 +53,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/preference/SeekBarPreference$b;->a:Landroidx/preference/SeekBarPreference;
 
-    iget-boolean v1, p1, Landroidx/preference/SeekBarPreference;->F1:Z
+    iget-boolean v1, p1, Landroidx/preference/SeekBarPreference;->H1:Z
 
     if-nez v1, :cond_2
 
@@ -81,7 +81,7 @@
 
     .line 3
     :cond_3
-    iget-object p1, p1, Landroidx/preference/SeekBarPreference;->D1:Landroid/widget/SeekBar;
+    iget-object p1, p1, Landroidx/preference/SeekBarPreference;->F1:Landroid/widget/SeekBar;
 
     if-nez p1, :cond_4
 

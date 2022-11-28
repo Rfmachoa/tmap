@@ -38,14 +38,14 @@
     .line 1
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$f;->a:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget-boolean v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->o1:Z
+    iget-boolean v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->q1:Z
 
     if-nez v0, :cond_0
 
     .line 2
-    iget v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->e1:I
+    iget v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->g1:I
 
-    iget p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->d1:I
+    iget p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->f1:I
 
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
@@ -57,13 +57,13 @@
 
     .line 3
     :cond_0
-    iget v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->e1:I
+    iget v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->g1:I
 
     .line 4
     :goto_0
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$f;->a:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget v1, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->b1:I
+    iget v1, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->d1:I
 
     sub-int/2addr v0, v1
 
@@ -76,7 +76,7 @@
     add-int/2addr v1, v0
 
     .line 5
-    iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->Z0:Le3/a;
+    iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->b1:Lm4/a;
 
     invoke-virtual {p2}, Landroid/widget/ImageView;->getTop()I
 
@@ -92,7 +92,7 @@
     .line 7
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$f;->a:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->g1:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
+    iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->i1:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;
 
     const/high16 v0, 0x3f800000    # 1.0f
 

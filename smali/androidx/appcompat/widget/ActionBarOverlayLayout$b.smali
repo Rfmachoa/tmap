@@ -60,14 +60,14 @@
 
     iget-object v2, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout$b;->a:Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
-    iget-object v2, v2, Landroidx/appcompat/widget/ActionBarOverlayLayout;->g1:Landroid/animation/AnimatorListenerAdapter;
+    iget-object v2, v2, Landroidx/appcompat/widget/ActionBarOverlayLayout;->i1:Landroid/animation/AnimatorListenerAdapter;
 
     .line 3
     invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->f1:Landroid/view/ViewPropertyAnimator;
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->h1:Landroid/view/ViewPropertyAnimator;
 
     return-void
 .end method

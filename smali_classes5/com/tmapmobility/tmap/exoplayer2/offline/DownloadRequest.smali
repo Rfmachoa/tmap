@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -178,7 +178,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -225,7 +225,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    invoke-static {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E0(Landroid/net/Uri;Ljava/lang/String;)I
+    invoke-static {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->F0(Landroid/net/Uri;Ljava/lang/String;)I
 
     move-result v0
 
@@ -322,7 +322,7 @@
     goto :goto_2
 
     :cond_4
-    sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->f:[B
+    sget-object p1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->f:[B
 
     :goto_2
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->g:[B
@@ -341,7 +341,7 @@
 
 
 # virtual methods
-.method public b(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
+.method public a(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
     .locals 9
 
     .line 1
@@ -399,7 +399,15 @@
     return-object v8
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
     .locals 9
 
     .line 1
@@ -508,65 +516,6 @@
     return-object v0
 .end method
 
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->a:Ljava/lang/String;
-
-    .line 2
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->D(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->b:Landroid/net/Uri;
-
-    .line 3
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->f:Ljava/lang/String;
-
-    .line 4
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->l(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->c:Ljava/lang/String;
-
-    .line 5
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->d:Ljava/util/List;
-
-    .line 6
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->G(Ljava/util/List;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object v0
-
-    .line 7
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
     .param p1    # Ljava/lang/Object;
@@ -614,7 +563,7 @@
     iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->c:Ljava/lang/String;
 
     .line 5
-    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -647,7 +596,7 @@
     iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->f:Ljava/lang/String;
 
     .line 8
-    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -668,6 +617,57 @@
 
     :cond_1
     return v1
+.end method
+
+.method public f()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->a:Ljava/lang/String;
+
+    .line 2
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->D(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->b:Landroid/net/Uri;
+
+    .line 3
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->f:Ljava/lang/String;
+
+    .line 4
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->l(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->c:Ljava/lang/String;
+
+    .line 5
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->d:Ljava/util/List;
+
+    .line 6
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->H(Ljava/util/List;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object v0
+
+    .line 7
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public final hashCode()I

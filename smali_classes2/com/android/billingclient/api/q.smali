@@ -1,11 +1,11 @@
 .class public interface abstract Lcom/android/billingclient/api/q;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 
 # virtual methods
-.method public abstract d(Lcom/android/billingclient/api/i;Ljava/util/List;)V
-    .param p1    # Lcom/android/billingclient/api/i;
+.method public abstract d(Lcom/android/billingclient/api/f;Ljava/util/List;)V
+    .param p1    # Lcom/android/billingclient/api/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -16,9 +16,9 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/android/billingclient/api/i;",
+            "Lcom/android/billingclient/api/f;",
             "Ljava/util/List<",
-            "Lcom/android/billingclient/api/Purchase;",
+            "Lcom/android/billingclient/api/o;",
             ">;)V"
         }
     .end annotation

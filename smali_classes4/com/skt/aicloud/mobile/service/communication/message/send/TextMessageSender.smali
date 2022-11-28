@@ -27,7 +27,7 @@
 # instance fields
 .field public a:Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender$SendType;
 
-.field public b:Ld9/b;
+.field public b:Lab/b;
 
 
 # direct methods
@@ -124,7 +124,7 @@
     const-string v0, "android.permission.SEND_SMS"
 
     .line 1
-    invoke-static {p1, v0}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v1
 
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0, v2}, Landroidx/core/app/a;->E(Landroid/app/Activity;[Ljava/lang/String;I)V
+    invoke-static {p1, v0, v2}, Landroidx/core/app/b;->l(Landroid/app/Activity;[Ljava/lang/String;I)V
 
     .line 5
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V
@@ -208,7 +208,7 @@
     invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender;->b:Ld9/b;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender;->b:Lab/b;
 
     if-nez v0, :cond_0
 
@@ -216,7 +216,7 @@
 
     .line 3
     :cond_0
-    invoke-interface {v0, p1}, Ld9/b;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lab/b;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -734,11 +734,11 @@
     return-void
 .end method
 
-.method public m(Ld9/b;)V
+.method public m(Lab/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender;->b:Ld9/b;
+    iput-object p1, p0, Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender;->b:Lab/b;
 
     return-void
 .end method

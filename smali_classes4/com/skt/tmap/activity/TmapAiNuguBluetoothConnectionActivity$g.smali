@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$g;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->B5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->J5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 
@@ -61,7 +61,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$g;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->B5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->J5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
 
     move-result-object v0
 
@@ -74,7 +74,7 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$g;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->C5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->K5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     goto :goto_0
 
@@ -82,7 +82,7 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$g;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->F5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->N5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     :goto_0
     return-void

@@ -25,7 +25,7 @@
     const-string v2, "]"
 
     .line 1
-    invoke-static {v0, p1, v1, p2, v2}, Landroidx/room/k;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1, p2, v2}, Lp0/e;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

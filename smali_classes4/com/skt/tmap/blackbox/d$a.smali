@@ -3,12 +3,12 @@
 .source "VRecorder.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Loj/l0;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/blackbox/d;->r(Z)V
+    value = Lcom/skt/tmap/blackbox/d;->A(Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,25 +16,40 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Loj/l0<",
+        "Landroid/net/Uri;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/blackbox/d;
+.field public final synthetic a:Landroid/content/Context;
+
+.field public final synthetic b:Lcom/skt/tmap/blackbox/d;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/blackbox/d;)V
+.method public constructor <init>(Lcom/skt/tmap/blackbox/d;Landroid/content/Context;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010
+            0x8010,
+            0x1010
         }
         names = {
-            "this$0"
+            "this$0",
+            "val$context"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/blackbox/d$a;->a:Lcom/skt/tmap/blackbox/d;
+    iput-object p1, p0, Lcom/skt/tmap/blackbox/d$a;->b:Lcom/skt/tmap/blackbox/d;
+
+    iput-object p2, p0, Lcom/skt/tmap/blackbox/d$a;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,35 +58,130 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a(Landroid/net/Uri;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dataFileUri"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/blackbox/d$a;->a:Lcom/skt/tmap/blackbox/d;
+    :try_start_0
+    iget-object v1, p0, Lcom/skt/tmap/blackbox/d$a;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/skt/tmap/blackbox/d;->c(Lcom/skt/tmap/blackbox/d;)Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/skt/tmap/blackbox/d$a;->a:Lcom/skt/tmap/blackbox/d;
-
-    invoke-static {v1}, Lcom/skt/tmap/blackbox/d;->c(Lcom/skt/tmap/blackbox/d;)Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const v2, 0x7f130177
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    invoke-virtual {v1, p1}, Landroid/content/ContentResolver;->openOutputStream(Landroid/net/Uri;)Ljava/io/OutputStream;
 
     move-result-object v0
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 2
+    invoke-virtual {p1}, Ljava/io/FileNotFoundException;->printStackTrace()V
+
+    :goto_0
+    if-eqz v0, :cond_0
+
+    .line 3
+    :try_start_1
+    iget-object p1, p0, Lcom/skt/tmap/blackbox/d$a;->b:Lcom/skt/tmap/blackbox/d;
+
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/d;->e(Lcom/skt/tmap/blackbox/d;)Lcom/skt/tmap/GlobalDataManager;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcom/skt/tmap/GlobalDataManager;->g0:Ljava/lang/StringBuffer;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+
+    .line 4
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    .line 5
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
+
+    :cond_0
+    :goto_1
+    return-void
+.end method
+
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    return-void
+.end method
+
+.method public onSubscribe(Lio/reactivex/disposables/b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "d"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public bridge synthetic onSuccess(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "dataFileUri"
+        }
+    .end annotation
+
+    .line 1
+    check-cast p1, Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/blackbox/d$a;->a(Landroid/net/Uri;)V
 
     return-void
 .end method

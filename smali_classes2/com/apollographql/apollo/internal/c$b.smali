@@ -29,7 +29,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lc4/h;",
+            "Lz5/h;",
             ">;"
         }
     .end annotation
@@ -41,9 +41,9 @@
 
 .field public e:Lcom/apollographql/apollo/internal/h;
 
-.field public f:Lo4/d;
+.field public f:Ll6/d;
 
-.field public g:Lf4/a;
+.field public g:Lc6/a;
 
 .field public h:Ljava/util/concurrent/Executor;
 
@@ -97,11 +97,11 @@
 
 
 # virtual methods
-.method public a(Lf4/a;)Lcom/apollographql/apollo/internal/c$b;
+.method public a(Lc6/a;)Lcom/apollographql/apollo/internal/c$b;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/apollographql/apollo/internal/c$b;->g:Lf4/a;
+    iput-object p1, p0, Lcom/apollographql/apollo/internal/c$b;->g:Lc6/a;
 
     return-object p0
 .end method
@@ -205,7 +205,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lc4/h;",
+            "Lz5/h;",
             ">;)",
             "Lcom/apollographql/apollo/internal/c$b;"
         }
@@ -236,11 +236,11 @@
     return-object p0
 .end method
 
-.method public k(Lo4/d;)Lcom/apollographql/apollo/internal/c$b;
+.method public k(Ll6/d;)Lcom/apollographql/apollo/internal/c$b;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/apollographql/apollo/internal/c$b;->f:Lo4/d;
+    iput-object p1, p0, Lcom/apollographql/apollo/internal/c$b;->f:Ll6/d;
 
     return-object p0
 .end method

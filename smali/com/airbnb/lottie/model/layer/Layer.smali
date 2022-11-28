@@ -17,7 +17,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Ls3/b;",
+            "Lo5/b;",
             ">;"
         }
     .end annotation
@@ -48,7 +48,7 @@
     .end annotation
 .end field
 
-.field public final i:Lr3/l;
+.field public final i:Ln5/l;
 
 .field public final j:I
 
@@ -64,17 +64,17 @@
 
 .field public final p:I
 
-.field public final q:Lr3/j;
+.field public final q:Ln5/j;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final r:Lr3/k;
+.field public final r:Ln5/k;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final s:Lr3/b;
+.field public final s:Ln5/b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -83,7 +83,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lx3/a<",
+            "Lt5/a<",
             "Ljava/lang/Float;",
             ">;>;"
         }
@@ -96,21 +96,21 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/airbnb/lottie/f;Ljava/lang/String;JLcom/airbnb/lottie/model/layer/Layer$LayerType;JLjava/lang/String;Ljava/util/List;Lr3/l;IIIFFIILr3/j;Lr3/k;Ljava/util/List;Lcom/airbnb/lottie/model/layer/Layer$MatteType;Lr3/b;Z)V
+.method public constructor <init>(Ljava/util/List;Lcom/airbnb/lottie/f;Ljava/lang/String;JLcom/airbnb/lottie/model/layer/Layer$LayerType;JLjava/lang/String;Ljava/util/List;Ln5/l;IIIFFIILn5/j;Ln5/k;Ljava/util/List;Lcom/airbnb/lottie/model/layer/Layer$MatteType;Ln5/b;Z)V
     .locals 3
     .param p9    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p19    # Lr3/j;
+    .param p19    # Ln5/j;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p20    # Lr3/k;
+    .param p20    # Ln5/k;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p23    # Lr3/b;
+    .param p23    # Ln5/b;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -118,7 +118,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Ls3/b;",
+            "Lo5/b;",
             ">;",
             "Lcom/airbnb/lottie/f;",
             "Ljava/lang/String;",
@@ -129,16 +129,16 @@
             "Ljava/util/List<",
             "Lcom/airbnb/lottie/model/content/Mask;",
             ">;",
-            "Lr3/l;",
+            "Ln5/l;",
             "IIIFFII",
-            "Lr3/j;",
-            "Lr3/k;",
+            "Ln5/j;",
+            "Ln5/k;",
             "Ljava/util/List<",
-            "Lx3/a<",
+            "Lt5/a<",
             "Ljava/lang/Float;",
             ">;>;",
             "Lcom/airbnb/lottie/model/layer/Layer$MatteType;",
-            "Lr3/b;",
+            "Ln5/b;",
             "Z)V"
         }
     .end annotation
@@ -191,7 +191,7 @@
     move-object v1, p11
 
     .line 10
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->i:Lr3/l;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->i:Ln5/l;
 
     move v1, p12
 
@@ -231,12 +231,12 @@
     move-object/from16 v1, p19
 
     .line 18
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->q:Lr3/j;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->q:Ln5/j;
 
     move-object/from16 v1, p20
 
     .line 19
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->r:Lr3/k;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->r:Ln5/k;
 
     move-object/from16 v1, p21
 
@@ -251,7 +251,7 @@
     move-object/from16 v1, p23
 
     .line 22
-    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->s:Lr3/b;
+    iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->s:Ln5/b;
 
     move/from16 v1, p24
 
@@ -287,7 +287,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lx3/a<",
+            "Lt5/a<",
             "Ljava/lang/Float;",
             ">;>;"
         }
@@ -387,7 +387,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Ls3/b;",
+            "Lo5/b;",
             ">;"
         }
     .end annotation
@@ -442,35 +442,35 @@
     return v0
 .end method
 
-.method public q()Lr3/j;
+.method public q()Ln5/j;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->q:Lr3/j;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->q:Ln5/j;
 
     return-object v0
 .end method
 
-.method public r()Lr3/k;
+.method public r()Ln5/k;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->r:Lr3/k;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->r:Ln5/k;
 
     return-object v0
 .end method
 
-.method public s()Lr3/b;
+.method public s()Ln5/b;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->s:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->s:Ln5/b;
 
     return-object v0
 .end method
@@ -497,11 +497,11 @@
     return-object v0
 .end method
 
-.method public u()Lr3/l;
+.method public u()Ln5/l;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->i:Lr3/l;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->i:Ln5/l;
 
     return-object v0
 .end method

@@ -57,10 +57,10 @@
 
 .field public c:I
 
-.field public d:Landroidx/collection/k;
+.field public d:Landroidx/collection/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/k<",
+            "Landroidx/collection/l<",
             "TE;TE;>;"
         }
     .end annotation
@@ -919,18 +919,18 @@
     return p1
 .end method
 
-.method public final e()Landroidx/collection/k;
+.method public final e()Landroidx/collection/l;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/collection/k<",
+            "Landroidx/collection/l<",
             "TE;TE;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/collection/c;->d:Landroidx/collection/k;
+    iget-object v0, p0, Landroidx/collection/c;->d:Landroidx/collection/l;
 
     if-nez v0, :cond_0
 
@@ -939,11 +939,11 @@
 
     invoke-direct {v0, p0}, Landroidx/collection/c$a;-><init>(Landroidx/collection/c;)V
 
-    iput-object v0, p0, Landroidx/collection/c;->d:Landroidx/collection/k;
+    iput-object v0, p0, Landroidx/collection/c;->d:Landroidx/collection/l;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/collection/c;->d:Landroidx/collection/k;
+    iget-object v0, p0, Landroidx/collection/c;->d:Landroidx/collection/l;
 
     return-object v0
 .end method
@@ -1513,11 +1513,11 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/collection/c;->e()Landroidx/collection/k;
+    invoke-virtual {p0}, Landroidx/collection/c;->e()Landroidx/collection/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/collection/k;->m()Ljava/util/Set;
+    invoke-virtual {v0}, Landroidx/collection/l;->m()Ljava/util/Set;
 
     move-result-object v0
 

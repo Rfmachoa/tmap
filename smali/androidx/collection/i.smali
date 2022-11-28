@@ -27,7 +27,7 @@
         "(Landroidx/collection/h;JLjava/lang/Object;)Ljava/lang/Object;",
         "Lkotlin/Function0;",
         "d",
-        "(Landroidx/collection/h;JLej/a;)Ljava/lang/Object;",
+        "(Landroidx/collection/h;JLgl/a;)Ljava/lang/Object;",
         "f",
         "i",
         "(Landroidx/collection/h;JLjava/lang/Object;)Z",
@@ -36,7 +36,7 @@
         "name",
         "action",
         "b",
-        "Lkotlin/collections/p0;",
+        "Lkotlin/collections/s0;",
         "g",
         "",
         "k",
@@ -84,13 +84,13 @@
     return p0
 .end method
 
-.method public static final b(Landroidx/collection/h;Lej/p;)V
+.method public static final b(Landroidx/collection/h;Lgl/p;)V
     .locals 4
     .param p0    # Landroidx/collection/h;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -101,7 +101,7 @@
             ">(",
             "Landroidx/collection/h<",
             "TT;>;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
             "Ljava/lang/Long;",
             "-TT;",
@@ -141,7 +141,7 @@
 
     move-result-object v3
 
-    invoke-interface {p1, v2, v3}, Lej/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2, v3}, Lgl/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -179,13 +179,13 @@
     return-object p0
 .end method
 
-.method public static final d(Landroidx/collection/h;JLej/a;)Ljava/lang/Object;
+.method public static final d(Landroidx/collection/h;JLgl/a;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/collection/h;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p3    # Lej/a;
+    .param p3    # Lgl/a;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -196,7 +196,7 @@
             ">(",
             "Landroidx/collection/h<",
             "TT;>;J",
-            "Lej/a<",
+            "Lgl/a<",
             "+TT;>;)TT;"
         }
     .end annotation
@@ -219,7 +219,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {p3}, Lej/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p3}, Lgl/a;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -285,7 +285,7 @@
     return p0
 .end method
 
-.method public static final g(Landroidx/collection/h;)Lkotlin/collections/p0;
+.method public static final g(Landroidx/collection/h;)Lkotlin/collections/s0;
     .locals 1
     .param p0    # Landroidx/collection/h;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -298,7 +298,7 @@
             ">(",
             "Landroidx/collection/h<",
             "TT;>;)",
-            "Lkotlin/collections/p0;"
+            "Lkotlin/collections/s0;"
         }
     .end annotation
 

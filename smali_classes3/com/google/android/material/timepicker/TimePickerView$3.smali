@@ -1,6 +1,9 @@
 .class Lcom/google/android/material/timepicker/TimePickerView$3;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.super Ljava/lang/Object;
 .source "TimePickerView.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
@@ -17,47 +20,48 @@
 # instance fields
 .field public final synthetic this$0:Lcom/google/android/material/timepicker/TimePickerView;
 
+.field public final synthetic val$gestureDetector:Landroid/view/GestureDetector;
+
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/timepicker/TimePickerView;)V
+.method public constructor <init>(Lcom/google/android/material/timepicker/TimePickerView;Landroid/view/GestureDetector;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/google/android/material/timepicker/TimePickerView$3;->this$0:Lcom/google/android/material/timepicker/TimePickerView;
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    iput-object p2, p0, Lcom/google/android/material/timepicker/TimePickerView$3;->val$gestureDetector:Landroid/view/GestureDetector;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDoubleTap(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onDoubleTap(Landroid/view/MotionEvent;)Z
+    check-cast p1, Landroid/widget/Checkable;
+
+    invoke-interface {p1}, Landroid/widget/Checkable;->isChecked()Z
 
     move-result p1
 
+    if-eqz p1, :cond_0
+
     .line 2
-    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView$3;->this$0:Lcom/google/android/material/timepicker/TimePickerView;
+    iget-object p1, p0, Lcom/google/android/material/timepicker/TimePickerView$3;->val$gestureDetector:Landroid/view/GestureDetector;
 
-    invoke-static {v0}, Lcom/google/android/material/timepicker/TimePickerView;->access$200(Lcom/google/android/material/timepicker/TimePickerView;)Lcom/google/android/material/timepicker/TimePickerView$OnDoubleTapListener;
+    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result-object v0
+    move-result p1
 
-    if-eqz v0, :cond_0
-
-    .line 3
-    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView$3;->this$0:Lcom/google/android/material/timepicker/TimePickerView;
-
-    invoke-static {v0}, Lcom/google/android/material/timepicker/TimePickerView;->access$200(Lcom/google/android/material/timepicker/TimePickerView;)Lcom/google/android/material/timepicker/TimePickerView$OnDoubleTapListener;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/google/android/material/timepicker/TimePickerView$OnDoubleTapListener;->onDoubleTap()V
+    return p1
 
     :cond_0
+    const/4 p1, 0x0
+
     return p1
 .end method

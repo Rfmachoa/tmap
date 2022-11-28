@@ -115,34 +115,51 @@
     return-object p0
 .end method
 
-.method private static removeWindowBackground(Landroid/view/Window;)V
-    .locals 2
+.method private static getWindowBackground(Landroid/view/Window;)Landroid/graphics/drawable/Drawable;
+    .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    .line 3
+    return-object p0
+.end method
+
+.method private static removeWindowBackground(Landroid/view/Window;)V
+    .locals 2
+
+    .line 1
+    invoke-static {p0}, Lcom/google/android/material/transition/platform/MaterialContainerTransformSharedElementCallback;->getWindowBackground(Landroid/view/Window;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    sget-object v0, Landroidx/core/graphics/BlendModeCompat;->CLEAR:Landroidx/core/graphics/BlendModeCompat;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    sget-object v1, Landroidx/core/graphics/BlendModeCompat;->CLEAR:Landroidx/core/graphics/BlendModeCompat;
 
-    .line 4
-    invoke-static {v1, v0}, Lc1/c;->a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
+    .line 3
+    invoke-static {v0, v1}, Lv1/c;->a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
 
     move-result-object v0
 
-    .line 5
+    .line 4
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     return-void
@@ -152,14 +169,16 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-static {p0}, Lcom/google/android/material/transition/platform/MaterialContainerTransformSharedElementCallback;->getWindowBackground(Landroid/view/Window;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    if-nez p0, :cond_0
 
-    move-result-object p0
+    return-void
 
+    .line 2
+    :cond_0
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -263,15 +282,27 @@
 .end method
 
 .method private static updateBackgroundFadeDuration(Landroid/view/Window;Lcom/google/android/material/transition/platform/MaterialContainerTransform;)V
-    .locals 2
+    .locals 4
 
     .line 1
     invoke-virtual {p1}, Landroid/transition/Transition;->getDuration()J
 
     move-result-wide v0
 
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, Landroid/transition/Transition;->getDuration()J
+
+    move-result-wide v0
+
     invoke-virtual {p0, v0, v1}, Landroid/view/Window;->setTransitionBackgroundFadeDuration(J)V
 
+    :cond_0
     return-void
 .end method
 

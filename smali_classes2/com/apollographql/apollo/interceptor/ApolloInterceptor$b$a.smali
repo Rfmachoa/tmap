@@ -17,7 +17,7 @@
 # instance fields
 .field public final a:Lcom/apollographql/apollo/api/b;
 
-.field public b:Le4/a;
+.field public b:Lb6/a;
 
 .field public c:Z
 
@@ -44,9 +44,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget-object v0, Le4/a;->b:Le4/a;
+    sget-object v0, Lb6/a;->b:Lb6/a;
 
-    iput-object v0, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b:Le4/a;
+    iput-object v0, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b:Lb6/a;
 
     .line 3
     invoke-static {}, Lcom/apollographql/apollo/api/internal/Optional;->absent()Lcom/apollographql/apollo/api/internal/Optional;
@@ -79,20 +79,20 @@
 
     iget-object v1, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->a:Lcom/apollographql/apollo/api/b;
 
-    iget-object v2, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b:Le4/a;
+    iget-object v2, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b:Lb6/a;
 
     iget-object v3, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->d:Lcom/apollographql/apollo/api/internal/Optional;
 
     iget-boolean v4, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->c:Z
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;-><init>(Lcom/apollographql/apollo/api/b;Le4/a;Lcom/apollographql/apollo/api/internal/Optional;Z)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;-><init>(Lcom/apollographql/apollo/api/b;Lb6/a;Lcom/apollographql/apollo/api/internal/Optional;Z)V
 
     return-object v0
 .end method
 
-.method public b(Le4/a;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;
+.method public b(Lb6/a;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;
     .locals 1
-    .param p1    # Le4/a;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -104,9 +104,9 @@
 
     move-result-object p1
 
-    check-cast p1, Le4/a;
+    check-cast p1, Lb6/a;
 
-    iput-object p1, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b:Le4/a;
+    iput-object p1, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b:Lb6/a;
 
     return-object p0
 .end method

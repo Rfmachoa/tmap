@@ -15,12 +15,14 @@
 
 
 # instance fields
-.field public a:Landroidx/car/app/model/CarText;
+.field public a:Z
+
+.field public b:Landroidx/car/app/model/CarText;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final b:Ljava/util/List;
+.field public final c:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -30,58 +32,122 @@
     .end annotation
 .end field
 
-.field public c:Landroidx/car/app/model/CarIcon;
+.field public d:Landroidx/car/app/model/CarIcon;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public d:Landroidx/car/app/model/Toggle;
+.field public final e:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Landroidx/car/app/model/Action;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public f:I
+
+.field public g:Landroidx/car/app/model/Toggle;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public e:Landroidx/car/app/model/i;
+.field public h:Landroidx/car/app/model/l;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public f:Landroidx/car/app/model/Metadata;
+.field public i:Landroidx/car/app/model/Metadata;
 
-.field public g:Z
+.field public j:Z
 
-.field public h:I
+.field public k:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroidx/car/app/model/Row$a;->b:Ljava/util/List;
-
-    .line 3
-    sget-object v0, Landroidx/car/app/model/Metadata;->a:Landroidx/car/app/model/Metadata;
-
-    iput-object v0, p0, Landroidx/car/app/model/Row$a;->f:Landroidx/car/app/model/Metadata;
-
     const/4 v0, 0x1
 
+    .line 2
+    iput-boolean v0, p0, Landroidx/car/app/model/Row$a;->a:Z
+
+    .line 3
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Landroidx/car/app/model/Row$a;->c:Ljava/util/List;
+
     .line 4
-    iput v0, p0, Landroidx/car/app/model/Row$a;->h:I
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Landroidx/car/app/model/Row$a;->e:Ljava/util/List;
+
+    const/4 v1, -0x1
+
+    .line 5
+    iput v1, p0, Landroidx/car/app/model/Row$a;->f:I
+
+    .line 6
+    sget-object v1, Landroidx/car/app/model/Metadata;->a:Landroidx/car/app/model/Metadata;
+
+    iput-object v1, p0, Landroidx/car/app/model/Row$a;->i:Landroidx/car/app/model/Metadata;
+
+    .line 7
+    iput v0, p0, Landroidx/car/app/model/Row$a;->k:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/car/app/model/CarText;)Landroidx/car/app/model/Row$a;
+.method public a(Landroidx/car/app/model/Action;)Landroidx/car/app/model/Row$a;
+    .locals 2
+    .param p1    # Landroidx/car/app/model/Action;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Landroidx/car/app/model/Row$a;->e:Ljava/util/List;
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 2
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 3
+    sget-object v1, La1/a;->q:La1/a;
+
+    invoke-virtual {v1, v0}, La1/a;->i(Ljava/util/List;)V
+
+    .line 4
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->e:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-object p0
+.end method
+
+.method public b(Landroidx/car/app/model/CarText;)Landroidx/car/app/model/Row$a;
     .locals 1
     .param p1    # Landroidx/car/app/model/CarText;
         .annotation build Landroidx/annotation/NonNull;
@@ -91,21 +157,21 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/d;->h:Lm0/d;
+    sget-object v0, La1/d;->i:La1/d;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->b:Ljava/util/List;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->c:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
 .end method
 
-.method public b(Ljava/lang/CharSequence;)Landroidx/car/app/model/Row$a;
+.method public c(Ljava/lang/CharSequence;)Landroidx/car/app/model/Row$a;
     .locals 2
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/NonNull;
@@ -126,12 +192,12 @@
     move-result-object v0
 
     .line 2
-    sget-object v1, Lm0/d;->h:Lm0/d;
+    sget-object v1, La1/d;->i:La1/d;
 
-    invoke-virtual {v1, v0}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v1, v0}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->b:Ljava/util/List;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->c:Ljava/util/List;
 
     invoke-static {p1}, Landroidx/car/app/model/CarText;->a(Ljava/lang/CharSequence;)Landroidx/car/app/model/CarText;
 
@@ -142,28 +208,28 @@
     return-object p0
 .end method
 
-.method public c()Landroidx/car/app/model/Row;
+.method public d()Landroidx/car/app/model/Row;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->a:Landroidx/car/app/model/CarText;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->b:Landroidx/car/app/model/CarText;
 
     if-eqz v0, :cond_5
 
     .line 2
-    iget-boolean v0, p0, Landroidx/car/app/model/Row$a;->g:Z
+    iget-boolean v0, p0, Landroidx/car/app/model/Row$a;->j:Z
 
     if-eqz v0, :cond_2
 
     .line 3
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->d:Landroidx/car/app/model/Toggle;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->g:Landroidx/car/app/model/Toggle;
 
     if-nez v0, :cond_1
 
     .line 4
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->e:Landroidx/car/app/model/i;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->h:Landroidx/car/app/model/l;
 
     if-eqz v0, :cond_0
 
@@ -192,11 +258,11 @@
     .line 7
     :cond_2
     :goto_0
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->d:Landroidx/car/app/model/Toggle;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->g:Landroidx/car/app/model/Toggle;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Landroidx/car/app/model/Row$a;->e:Landroidx/car/app/model/i;
+    iget-object v0, p0, Landroidx/car/app/model/Row$a;->h:Landroidx/car/app/model/l;
 
     if-nez v0, :cond_3
 
@@ -232,18 +298,33 @@
     throw v0
 .end method
 
-.method public d(Z)Landroidx/car/app/model/Row$a;
+.method public e(Z)Landroidx/car/app/model/Row$a;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iput-boolean p1, p0, Landroidx/car/app/model/Row$a;->g:Z
+    iput-boolean p1, p0, Landroidx/car/app/model/Row$a;->j:Z
 
     return-object p0
 .end method
 
-.method public e(Landroidx/car/app/model/CarIcon;)Landroidx/car/app/model/Row$a;
+.method public f(Z)Landroidx/car/app/model/Row$a;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    iput-boolean p1, p0, Landroidx/car/app/model/Row$a;->a:Z
+
+    return-object p0
+.end method
+
+.method public g(Landroidx/car/app/model/CarIcon;)Landroidx/car/app/model/Row$a;
     .locals 1
     .param p1    # Landroidx/car/app/model/CarIcon;
         .annotation build Landroidx/annotation/NonNull;
@@ -257,14 +338,14 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Landroidx/car/app/model/Row$a;->f(Landroidx/car/app/model/CarIcon;I)Landroidx/car/app/model/Row$a;
+    invoke-virtual {p0, p1, v0}, Landroidx/car/app/model/Row$a;->h(Landroidx/car/app/model/CarIcon;I)Landroidx/car/app/model/Row$a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public f(Landroidx/car/app/model/CarIcon;I)Landroidx/car/app/model/Row$a;
+.method public h(Landroidx/car/app/model/CarIcon;I)Landroidx/car/app/model/Row$a;
     .locals 1
     .param p1    # Landroidx/car/app/model/CarIcon;
         .annotation build Landroidx/annotation/NonNull;
@@ -274,22 +355,22 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/c;->b:Lm0/c;
+    sget-object v0, La1/c;->b:La1/c;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/c;->c(Landroidx/car/app/model/CarIcon;)V
+    invoke-virtual {v0, p1}, La1/c;->c(Landroidx/car/app/model/CarIcon;)V
 
     .line 2
-    iput-object p1, p0, Landroidx/car/app/model/Row$a;->c:Landroidx/car/app/model/CarIcon;
+    iput-object p1, p0, Landroidx/car/app/model/Row$a;->d:Landroidx/car/app/model/CarIcon;
 
     .line 3
-    iput p2, p0, Landroidx/car/app/model/Row$a;->h:I
+    iput p2, p0, Landroidx/car/app/model/Row$a;->k:I
 
     return-object p0
 .end method
 
-.method public g(Landroidx/car/app/model/Metadata;)Landroidx/car/app/model/Row$a;
+.method public i(Landroidx/car/app/model/Metadata;)Landroidx/car/app/model/Row$a;
     .locals 0
     .param p1    # Landroidx/car/app/model/Metadata;
         .annotation build Landroidx/annotation/NonNull;
@@ -299,14 +380,74 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/car/app/model/Row$a;->f:Landroidx/car/app/model/Metadata;
+    iput-object p1, p0, Landroidx/car/app/model/Row$a;->i:Landroidx/car/app/model/Metadata;
 
     return-object p0
 .end method
 
-.method public h(Landroidx/car/app/model/k;)Landroidx/car/app/model/Row$a;
+.method public j(I)Landroidx/car/app/model/Row$a;
+    .locals 3
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x0L
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x6
+    .end annotation
+
+    if-gez p1, :cond_1
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 1
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v1, v2
+
+    const-string p1, "Decoration should be positive, zero, or equal to NO_DECORATION. Instead, was %d"
+
+    .line 3
+    invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 4
+    :cond_1
+    :goto_0
+    iput p1, p0, Landroidx/car/app/model/Row$a;->f:I
+
+    return-object p0
+.end method
+
+.method public k(Landroidx/car/app/model/n;)Landroidx/car/app/model/Row$a;
     .locals 0
-    .param p1    # Landroidx/car/app/model/k;
+    .param p1    # Landroidx/car/app/model/n;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -321,16 +462,16 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Landroidx/car/app/model/OnClickDelegateImpl;->c(Landroidx/car/app/model/k;)Landroidx/car/app/model/i;
+    invoke-static {p1}, Landroidx/car/app/model/OnClickDelegateImpl;->c(Landroidx/car/app/model/n;)Landroidx/car/app/model/l;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/car/app/model/Row$a;->e:Landroidx/car/app/model/i;
+    iput-object p1, p0, Landroidx/car/app/model/Row$a;->h:Landroidx/car/app/model/l;
 
     return-object p0
 .end method
 
-.method public i(Landroidx/car/app/model/CarText;)Landroidx/car/app/model/Row$a;
+.method public l(Landroidx/car/app/model/CarText;)Landroidx/car/app/model/Row$a;
     .locals 1
     .param p1    # Landroidx/car/app/model/CarText;
         .annotation build Landroidx/annotation/NonNull;
@@ -349,12 +490,12 @@
     if-nez v0, :cond_0
 
     .line 2
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->g:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     .line 3
-    iput-object p1, p0, Landroidx/car/app/model/Row$a;->a:Landroidx/car/app/model/CarText;
+    iput-object p1, p0, Landroidx/car/app/model/Row$a;->b:Landroidx/car/app/model/CarText;
 
     return-object p0
 
@@ -369,7 +510,7 @@
     throw p1
 .end method
 
-.method public j(Ljava/lang/CharSequence;)Landroidx/car/app/model/Row$a;
+.method public m(Ljava/lang/CharSequence;)Landroidx/car/app/model/Row$a;
     .locals 1
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/NonNull;
@@ -395,12 +536,12 @@
     if-nez v0, :cond_0
 
     .line 3
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->g:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     .line 4
-    iput-object p1, p0, Landroidx/car/app/model/Row$a;->a:Landroidx/car/app/model/CarText;
+    iput-object p1, p0, Landroidx/car/app/model/Row$a;->b:Landroidx/car/app/model/CarText;
 
     return-object p0
 
@@ -415,7 +556,7 @@
     throw p1
 .end method
 
-.method public k(Landroidx/car/app/model/Toggle;)Landroidx/car/app/model/Row$a;
+.method public n(Landroidx/car/app/model/Toggle;)Landroidx/car/app/model/Row$a;
     .locals 0
     .param p1    # Landroidx/car/app/model/Toggle;
         .annotation build Landroidx/annotation/NonNull;
@@ -427,7 +568,7 @@
     .line 1
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, p0, Landroidx/car/app/model/Row$a;->d:Landroidx/car/app/model/Toggle;
+    iput-object p1, p0, Landroidx/car/app/model/Row$a;->g:Landroidx/car/app/model/Toggle;
 
     return-object p0
 .end method

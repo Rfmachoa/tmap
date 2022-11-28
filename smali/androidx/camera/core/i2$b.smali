@@ -3,7 +3,7 @@
 .source "ProcessingImageReader.java"
 
 # interfaces
-.implements Lx/l0$a;
+.implements Lb0/w0$a;
 
 
 # annotations
@@ -24,14 +24,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/i2;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/i2$b;->a:Landroidx/camera/core/i2;
@@ -41,41 +33,33 @@
     return-void
 .end method
 
-.method public static synthetic b(Landroidx/camera/core/i2$b;Lx/l0$a;)V
+.method public static synthetic b(Landroidx/camera/core/i2$b;Lb0/w0$a;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroidx/camera/core/i2$b;->c(Lx/l0$a;)V
+    invoke-direct {p0, p1}, Landroidx/camera/core/i2$b;->c(Lb0/w0$a;)V
 
     return-void
 .end method
 
-.method private synthetic c(Lx/l0$a;)V
+.method private synthetic c(Lb0/w0$a;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/i2$b;->a:Landroidx/camera/core/i2;
 
-    invoke-interface {p1, v0}, Lx/l0$a;->a(Lx/l0;)V
+    invoke-interface {p1, v0}, Lb0/w0$a;->a(Lb0/w0;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lx/l0;)V
+.method public a(Lb0/w0;)V
     .locals 3
-    .param p1    # Lx/l0;
+    .param p1    # Lb0/w0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "reader"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/core/i2$b;->a:Landroidx/camera/core/i2;
@@ -88,20 +72,20 @@
     :try_start_0
     iget-object v0, p0, Landroidx/camera/core/i2$b;->a:Landroidx/camera/core/i2;
 
-    iget-object v1, v0, Landroidx/camera/core/i2;->i:Lx/l0$a;
+    iget-object v1, v0, Landroidx/camera/core/i2;->i:Lb0/w0$a;
 
     .line 3
     iget-object v2, v0, Landroidx/camera/core/i2;->j:Ljava/util/concurrent/Executor;
 
     .line 4
-    iget-object v0, v0, Landroidx/camera/core/i2;->p:Landroidx/camera/core/r2;
+    iget-object v0, v0, Landroidx/camera/core/i2;->q:Landroidx/camera/core/u2;
 
-    invoke-virtual {v0}, Landroidx/camera/core/r2;->e()V
+    invoke-virtual {v0}, Landroidx/camera/core/u2;->e()V
 
     .line 5
     iget-object v0, p0, Landroidx/camera/core/i2$b;->a:Landroidx/camera/core/i2;
 
-    invoke-virtual {v0}, Landroidx/camera/core/i2;->o()V
+    invoke-virtual {v0}, Landroidx/camera/core/i2;->v()V
 
     .line 6
     monitor-exit p1
@@ -115,7 +99,7 @@
     .line 7
     new-instance p1, Landroidx/camera/core/j2;
 
-    invoke-direct {p1, p0, v1}, Landroidx/camera/core/j2;-><init>(Landroidx/camera/core/i2$b;Lx/l0$a;)V
+    invoke-direct {p1, p0, v1}, Landroidx/camera/core/j2;-><init>(Landroidx/camera/core/i2$b;Lb0/w0$a;)V
 
     invoke-interface {v2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -125,7 +109,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/camera/core/i2$b;->a:Landroidx/camera/core/i2;
 
-    invoke-interface {v1, p1}, Lx/l0$a;->a(Lx/l0;)V
+    invoke-interface {v1, p1}, Lb0/w0$a;->a(Lb0/w0;)V
 
     :cond_1
     :goto_0

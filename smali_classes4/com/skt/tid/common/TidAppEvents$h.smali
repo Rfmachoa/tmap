@@ -3,7 +3,7 @@
 .source "TidAppEvents.kt"
 
 # interfaces
-.implements Lnb/a;
+.implements Lkd/a;
 
 
 # annotations
@@ -49,16 +49,16 @@
 
 .field public final synthetic b:I
 
-.field public final synthetic c:Lnb/b;
+.field public final synthetic c:Lkd/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tid/common/TidAppEvents;ILnb/b;)V
+.method public constructor <init>(Lcom/skt/tid/common/TidAppEvents;ILkd/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lnb/b;",
+            "Lkd/b;",
             ")V"
         }
     .end annotation
@@ -68,7 +68,7 @@
 
     iput p2, p0, Lcom/skt/tid/common/TidAppEvents$h;->b:I
 
-    iput-object p3, p0, Lcom/skt/tid/common/TidAppEvents$h;->c:Lnb/b;
+    iput-object p3, p0, Lcom/skt/tid/common/TidAppEvents$h;->c:Lkd/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,9 +89,9 @@
 
     iget v1, p0, Lcom/skt/tid/common/TidAppEvents$h;->b:I
 
-    iget-object v2, p0, Lcom/skt/tid/common/TidAppEvents$h;->c:Lnb/b;
+    iget-object v2, p0, Lcom/skt/tid/common/TidAppEvents$h;->c:Lkd/b;
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tid/common/repository/DatabaseManager;->j(ILnb/b;)V
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tid/common/repository/DatabaseManager;->j(ILkd/b;)V
 
     return-void
 .end method
@@ -106,11 +106,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/tid/common/TidAppEvents$h;->c:Lnb/b;
+    iget-object v1, p0, Lcom/skt/tid/common/TidAppEvents$h;->c:Lkd/b;
 
     const/4 v2, -0x1
 
-    invoke-virtual {v0, v2, v1}, Lcom/skt/tid/common/repository/DatabaseManager;->j(ILnb/b;)V
+    invoke-virtual {v0, v2, v1}, Lcom/skt/tid/common/repository/DatabaseManager;->j(ILkd/b;)V
 
     return-void
 .end method

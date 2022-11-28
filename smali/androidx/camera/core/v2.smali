@@ -1,42 +1,70 @@
-.class public final synthetic Landroidx/camera/core/v2;
-.super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
+.class public final Landroidx/camera/core/v2;
+.super Landroidx/camera/core/j0;
+.source "SingleCloseImageProxy.java"
 
-# interfaces
-.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic b:Ljava/lang/String;
+.field public c:Z
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "this"
+    .end annotation
+.end field
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;)V
+.method public constructor <init>(Landroidx/camera/core/m1;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0, p1}, Landroidx/camera/core/j0;-><init>(Landroidx/camera/core/m1;)V
 
-    iput-object p1, p0, Landroidx/camera/core/v2;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 p1, 0x0
 
-    iput-object p2, p0, Landroidx/camera/core/v2;->b:Ljava/lang/String;
+    .line 2
+    iput-boolean p1, p0, Landroidx/camera/core/v2;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 2
+.method public declared-synchronized close()V
+    .locals 1
 
-    iget-object v0, p0, Landroidx/camera/core/v2;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    monitor-enter p0
 
-    iget-object v1, p0, Landroidx/camera/core/v2;->b:Ljava/lang/String;
+    .line 1
+    :try_start_0
+    iget-boolean v0, p0, Landroidx/camera/core/v2;->c:Z
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/SurfaceRequest;->g(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    const/4 v0, 0x1
 
-    return-object p1
+    .line 2
+    iput-boolean v0, p0, Landroidx/camera/core/v2;->c:Z
+
+    .line 3
+    invoke-super {p0}, Landroidx/camera/core/j0;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

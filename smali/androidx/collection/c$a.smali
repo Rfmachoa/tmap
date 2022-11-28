@@ -1,11 +1,11 @@
 .class public Landroidx/collection/c$a;
-.super Landroidx/collection/k;
+.super Landroidx/collection/l;
 .source "ArraySet.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/collection/c;->e()Landroidx/collection/k;
+    value = Landroidx/collection/c;->e()Landroidx/collection/l;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroidx/collection/k<",
+        "Landroidx/collection/l<",
         "TE;TE;>;"
     }
 .end annotation
@@ -32,7 +32,7 @@
     .line 1
     iput-object p1, p0, Landroidx/collection/c$a;->d:Landroidx/collection/c;
 
-    invoke-direct {p0}, Landroidx/collection/k;-><init>()V
+    invoke-direct {p0}, Landroidx/collection/l;-><init>()V
 
     return-void
 .end method

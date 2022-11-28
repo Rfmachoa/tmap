@@ -35,42 +35,45 @@
         "Lkotlin/Function1;",
         "onEventUnhandledContent",
         "<init>",
-        "(Lej/l;)V",
+        "(Lgl/l;)V",
         "navigation-sdk_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field private final onEventUnhandledContent:Lej/l;
+.field private final onEventUnhandledContent:Lgl/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lej/l<",
+            "Lgl/l<",
             "TT;",
             "Lkotlin/d1;",
             ">;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lej/l;)V
+.method public constructor <init>(Lgl/l;)V
     .locals 1
-    .param p1    # Lej/l;
+    .param p1    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lej/l<",
+            "Lgl/l<",
             "-TT;",
             "Lkotlin/d1;",
             ">;)V"
@@ -84,7 +87,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/livedata/EventObserver;->onEventUnhandledContent:Lej/l;
+    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/livedata/EventObserver;->onEventUnhandledContent:Lgl/l;
 
     return-void
 .end method
@@ -115,9 +118,9 @@
     if-eqz p1, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/EventObserver;->onEventUnhandledContent:Lej/l;
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/EventObserver;->onEventUnhandledContent:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->F0()V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->J0()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -93,13 +93,13 @@
 
     move-result-object v2
 
-    const v3, 0x7f1307b7
+    const v3, 0x7f140834
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const-string/jumbo v3, "titleText"
+    const-string v3, "titleText"
 
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

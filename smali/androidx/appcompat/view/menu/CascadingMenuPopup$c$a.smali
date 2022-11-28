@@ -62,7 +62,7 @@
 
     const/4 v2, 0x1
 
-    iput-boolean v2, v1, Landroidx/appcompat/view/menu/CascadingMenuPopup;->f1:Z
+    iput-boolean v2, v1, Landroidx/appcompat/view/menu/CascadingMenuPopup;->h1:Z
 
     .line 3
     iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->b:Landroidx/appcompat/view/menu/d;
@@ -76,7 +76,7 @@
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup$c;->a:Landroidx/appcompat/view/menu/CascadingMenuPopup;
 
-    iput-boolean v1, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->f1:Z
+    iput-boolean v1, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup;->h1:Z
 
     .line 5
     :cond_0

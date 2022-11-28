@@ -71,8 +71,6 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_1
-
     .line 1
     instance-of v0, p1, Ljava/lang/Class;
 
@@ -94,24 +92,34 @@
     :goto_0
     move-object v5, v0
 
-    const-string v0, "Unrecognized field \""
+    const/4 v0, 0x2
 
-    const-string v1, "\" (class "
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    aput-object p2, v0, v1
+
+    const/4 v1, 0x1
 
     .line 4
-    invoke-static {v0, p2, v1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "), not marked as ignorable"
+    aput-object v2, v0, v1
 
-    invoke-static {v5, v0, v1}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, "Unrecognized field \"%s\" (class %s), not marked as ignorable"
+
+    .line 5
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 5
+    .line 6
     new-instance v0, Lcom/fasterxml/jackson/databind/exc/UnrecognizedPropertyException;
 
+    .line 7
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentLocation()Lcom/fasterxml/jackson/core/JsonLocation;
 
     move-result-object v4
@@ -126,16 +134,8 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/fasterxml/jackson/databind/exc/UnrecognizedPropertyException;-><init>(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;Lcom/fasterxml/jackson/core/JsonLocation;Ljava/lang/Class;Ljava/lang/String;Ljava/util/Collection;)V
 
-    .line 6
+    .line 8
     invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/databind/JsonMappingException;->prependPath(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
-
-    .line 7
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
 .end method

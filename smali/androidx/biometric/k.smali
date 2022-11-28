@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public static k()Landroidx/biometric/k;
+.method public static l()Landroidx/biometric/k;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -98,7 +98,7 @@
 
 
 # virtual methods
-.method public final h()V
+.method public final i()V
     .locals 2
 
     .line 1
@@ -127,7 +127,7 @@
     iput-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
     .line 3
-    invoke-virtual {v0}, Landroidx/biometric/f;->n()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Landroidx/biometric/f;->o()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -140,7 +140,7 @@
     .line 4
     iget-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->l()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Landroidx/biometric/f;->m()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -153,7 +153,7 @@
     return-void
 .end method
 
-.method public final i(II)Landroid/graphics/drawable/Drawable;
+.method public final j(II)Landroid/graphics/drawable/Drawable;
     .locals 4
 
     .line 1
@@ -220,7 +220,7 @@
 
     .line 7
     :goto_0
-    invoke-static {v0, p1}, Landroidx/core/content/d;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -230,7 +230,7 @@
     return-object v1
 .end method
 
-.method public final j(I)I
+.method public final k(I)I
     .locals 5
 
     .line 1
@@ -300,7 +300,7 @@
     return v2
 .end method
 
-.method public l()V
+.method public m()V
     .locals 3
 
     .line 1
@@ -325,7 +325,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Landroidx/biometric/f;->T(I)V
+    invoke-virtual {v1, v2}, Landroidx/biometric/f;->U(I)V
 
     .line 4
     iget-object v1, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
@@ -338,12 +338,12 @@
     move-result-object v0
 
     .line 6
-    invoke-virtual {v1, v0}, Landroidx/biometric/f;->R(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Landroidx/biometric/f;->S(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public final m(II)Z
+.method public final n(II)Z
     .locals 3
 
     const/4 v0, 0x0
@@ -376,7 +376,7 @@
     return v0
 .end method
 
-.method public n(I)V
+.method public o(I)V
     .locals 3
 
     .line 1
@@ -390,12 +390,12 @@
     :cond_0
     iget-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->m()I
+    invoke-virtual {v0}, Landroidx/biometric/f;->n()I
 
     move-result v0
 
     .line 3
-    invoke-virtual {p0, v0, p1}, Landroidx/biometric/k;->i(II)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v0, p1}, Landroidx/biometric/k;->j(II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -410,7 +410,7 @@
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 5
-    invoke-virtual {p0, v0, p1}, Landroidx/biometric/k;->m(II)Z
+    invoke-virtual {p0, v0, p1}, Landroidx/biometric/k;->n(II)Z
 
     move-result v0
 
@@ -423,45 +423,8 @@
     :cond_2
     iget-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v0, p1}, Landroidx/biometric/f;->S(I)V
+    invoke-virtual {v0, p1}, Landroidx/biometric/f;->T(I)V
 
-    return-void
-.end method
-
-.method public o(I)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/biometric/k;->g:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x2
-
-    if-ne p1, v1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    .line 2
-    iget p1, p0, Landroidx/biometric/k;->d:I
-
-    goto :goto_1
-
-    :cond_1
-    iget p1, p0, Landroidx/biometric/k;->e:I
-
-    :goto_1
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :cond_2
     return-void
 .end method
 
@@ -480,7 +443,7 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroidx/biometric/f;->P(Z)V
+    invoke-virtual {p1, v0}, Landroidx/biometric/f;->Q(Z)V
 
     return-void
 .end method
@@ -496,7 +459,7 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/d;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Landroidx/biometric/k;->h()V
+    invoke-virtual {p0}, Landroidx/biometric/k;->i()V
 
     .line 3
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -510,7 +473,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Landroidx/biometric/k;->j(I)I
+    invoke-virtual {p0, p1}, Landroidx/biometric/k;->k(I)I
 
     move-result p1
 
@@ -529,7 +492,7 @@
     .line 6
     sget v0, Landroidx/biometric/R$color;->biometric_error_color:I
 
-    invoke-static {p1, v0}, Landroidx/core/content/d;->f(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -546,7 +509,7 @@
     const p1, 0x1010038
 
     .line 8
-    invoke-virtual {p0, p1}, Landroidx/biometric/k;->j(I)I
+    invoke-virtual {p0, p1}, Landroidx/biometric/k;->k(I)I
 
     move-result p1
 
@@ -576,7 +539,7 @@
     .line 2
     iget-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->s()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Landroidx/biometric/f;->t()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -618,7 +581,7 @@
     .line 6
     iget-object v4, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v4}, Landroidx/biometric/f;->r()Ljava/lang/CharSequence;
+    invoke-virtual {v4}, Landroidx/biometric/f;->s()Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -657,7 +620,7 @@
     .line 12
     iget-object v4, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v4}, Landroidx/biometric/f;->k()Ljava/lang/CharSequence;
+    invoke-virtual {v4}, Landroidx/biometric/f;->l()Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -707,7 +670,7 @@
     .line 19
     iget-object v1, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v1}, Landroidx/biometric/f;->a()I
+    invoke-virtual {v1}, Landroidx/biometric/f;->b()I
 
     move-result v1
 
@@ -730,7 +693,7 @@
     :cond_4
     iget-object v1, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
-    invoke-virtual {v1}, Landroidx/biometric/f;->q()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Landroidx/biometric/f;->r()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -783,14 +746,14 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/biometric/f;->S(I)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/f;->T(I)V
 
     .line 3
     iget-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/biometric/f;->T(I)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/f;->U(I)V
 
     .line 4
     iget-object v0, p0, Landroidx/biometric/k;->c:Landroidx/biometric/f;
@@ -803,12 +766,49 @@
     move-result-object v1
 
     .line 6
-    invoke-virtual {v0, v1}, Landroidx/biometric/f;->R(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/f;->S(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public p(Ljava/lang/CharSequence;)V
+.method public p(I)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/biometric/k;->g:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x2
+
+    if-ne p1, v1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    .line 2
+    iget p1, p0, Landroidx/biometric/k;->d:I
+
+    goto :goto_1
+
+    :cond_1
+    iget p1, p0, Landroidx/biometric/k;->e:I
+
+    :goto_1
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public q(Ljava/lang/CharSequence;)V
     .locals 1
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/Nullable;

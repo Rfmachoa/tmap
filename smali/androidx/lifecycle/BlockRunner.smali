@@ -13,14 +13,10 @@
     }
 .end annotation
 
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nCoroutineLiveData.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CoroutineLiveData.kt\nandroidx/lifecycle/BlockRunner\n*L\n1#1,459:1\n*E\n"
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000L\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0000\u0018\u0000*\u0004\u0008\u0000\u0010\u00012\u00020\u0002Be\u0012\u000c\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00028\u00000\n\u0012-\u0010\u0017\u001a)\u0008\u0001\u0012\n\u0012\u0008\u0012\u0004\u0012\u00028\u00000\u0014\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00030\u0015\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0013\u00a2\u0006\u0002\u0008\u0016\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u000c\u0010\u0019\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0018\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0008\u0010\u0004\u001a\u00020\u0003H\u0007J\u0008\u0010\u0005\u001a\u00020\u0003H\u0007R\u0018\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010\u0008R\u0018\u0010\t\u001a\u0004\u0018\u00010\u00068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\t\u0010\u0008R\u001a\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00028\u00000\n8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010\u000cR\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000e\u0010\u000fR\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0011\u0010\u0012\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\u001c"
+        "\u0000L\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0000\u0018\u0000*\u0004\u0008\u0000\u0010\u00012\u00020\u0002Be\u0012\u000c\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0006\u0012-\u0010\u0017\u001a)\u0008\u0001\u0012\n\u0012\u0008\u0012\u0004\u0012\u00028\u00000\u0014\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00030\u0015\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u0013\u00a2\u0006\u0002\u0008\u0016\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\r\u001a\u00020\u000c\u0012\u000c\u0010\u0019\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0018\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0008\u0010\u0004\u001a\u00020\u0003H\u0007J\u0008\u0010\u0005\u001a\u00020\u0003H\u0007R\u001a\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010\u0008R\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u0010\u000bR\u0014\u0010\r\u001a\u00020\u000c8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000eR\u0018\u0010\u0010\u001a\u0004\u0018\u00010\u000f8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0010\u0010\u0011R\u0018\u0010\u0012\u001a\u0004\u0018\u00010\u000f8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0012\u0010\u0011\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\u001c"
     }
     d2 = {
         "Landroidx/lifecycle/BlockRunner;",
@@ -29,19 +25,19 @@
         "Lkotlin/d1;",
         "maybeRun",
         "cancel",
-        "Lkotlinx/coroutines/y1;",
-        "runningJob",
-        "Lkotlinx/coroutines/y1;",
-        "cancellationJob",
         "Landroidx/lifecycle/CoroutineLiveData;",
         "liveData",
         "Landroidx/lifecycle/CoroutineLiveData;",
         "",
         "timeoutInMs",
         "J",
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "scope",
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
+        "Lkotlinx/coroutines/y1;",
+        "runningJob",
+        "Lkotlinx/coroutines/y1;",
+        "cancellationJob",
         "Lkotlin/Function2;",
         "Landroidx/lifecycle/LiveDataScope;",
         "Lkotlin/coroutines/c;",
@@ -50,23 +46,23 @@
         "Lkotlin/Function0;",
         "onDone",
         "<init>",
-        "(Landroidx/lifecycle/CoroutineLiveData;Lej/p;JLkotlinx/coroutines/n0;Lej/a;)V",
+        "(Landroidx/lifecycle/CoroutineLiveData;Lgl/p;JLkotlinx/coroutines/p0;Lgl/a;)V",
         "lifecycle-livedata-ktx_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
 
 
 # instance fields
-.field private final block:Lej/p;
+.field private final block:Lgl/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lej/p<",
+            "Lgl/p<",
             "Landroidx/lifecycle/LiveDataScope<",
             "TT;>;",
             "Lkotlin/coroutines/c<",
@@ -77,9 +73,15 @@
             ">;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
 
 .field private cancellationJob:Lkotlinx/coroutines/y1;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private final liveData:Landroidx/lifecycle/CoroutineLiveData;
     .annotation system Ldalvik/annotation/Signature;
@@ -88,41 +90,53 @@
             "TT;>;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
 
-.field private final onDone:Lej/a;
+.field private final onDone:Lgl/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lej/a<",
+            "Lgl/a<",
             "Lkotlin/d1;",
             ">;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
 
 .field private runningJob:Lkotlinx/coroutines/y1;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field private final scope:Lkotlinx/coroutines/n0;
+.field private final scope:Lkotlinx/coroutines/p0;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final timeoutInMs:J
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/CoroutineLiveData;Lej/p;JLkotlinx/coroutines/n0;Lej/a;)V
+.method public constructor <init>(Landroidx/lifecycle/CoroutineLiveData;Lgl/p;JLkotlinx/coroutines/p0;Lgl/a;)V
     .locals 1
     .param p1    # Landroidx/lifecycle/CoroutineLiveData;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lej/p;
+    .param p2    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p5    # Lkotlinx/coroutines/n0;
+    .param p5    # Lkotlinx/coroutines/p0;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p6    # Lej/a;
+    .param p6    # Lgl/a;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -131,7 +145,7 @@
             "(",
             "Landroidx/lifecycle/CoroutineLiveData<",
             "TT;>;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
             "Landroidx/lifecycle/LiveDataScope<",
             "TT;>;-",
@@ -141,8 +155,8 @@
             ">;+",
             "Ljava/lang/Object;",
             ">;J",
-            "Lkotlinx/coroutines/n0;",
-            "Lej/a<",
+            "Lkotlinx/coroutines/p0;",
+            "Lgl/a<",
             "Lkotlin/d1;",
             ">;)V"
         }
@@ -150,41 +164,46 @@
 
     const-string v0, "liveData"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "block"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "scope"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "onDone"
 
-    invoke-static {p6, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p6, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/lifecycle/BlockRunner;->liveData:Landroidx/lifecycle/CoroutineLiveData;
 
-    iput-object p2, p0, Landroidx/lifecycle/BlockRunner;->block:Lej/p;
+    .line 3
+    iput-object p2, p0, Landroidx/lifecycle/BlockRunner;->block:Lgl/p;
 
+    .line 4
     iput-wide p3, p0, Landroidx/lifecycle/BlockRunner;->timeoutInMs:J
 
-    iput-object p5, p0, Landroidx/lifecycle/BlockRunner;->scope:Lkotlinx/coroutines/n0;
+    .line 5
+    iput-object p5, p0, Landroidx/lifecycle/BlockRunner;->scope:Lkotlinx/coroutines/p0;
 
-    iput-object p6, p0, Landroidx/lifecycle/BlockRunner;->onDone:Lej/a;
+    .line 6
+    iput-object p6, p0, Landroidx/lifecycle/BlockRunner;->onDone:Lgl/a;
 
     return-void
 .end method
 
-.method public static final synthetic access$getBlock$p(Landroidx/lifecycle/BlockRunner;)Lej/p;
+.method public static final synthetic access$getBlock$p(Landroidx/lifecycle/BlockRunner;)Lgl/p;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Landroidx/lifecycle/BlockRunner;->block:Lej/p;
+    iget-object p0, p0, Landroidx/lifecycle/BlockRunner;->block:Lgl/p;
 
     return-object p0
 .end method
@@ -198,11 +217,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$getOnDone$p(Landroidx/lifecycle/BlockRunner;)Lej/a;
+.method public static final synthetic access$getOnDone$p(Landroidx/lifecycle/BlockRunner;)Lgl/a;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Landroidx/lifecycle/BlockRunner;->onDone:Lej/a;
+    iget-object p0, p0, Landroidx/lifecycle/BlockRunner;->onDone:Lgl/a;
 
     return-object p0
 .end method
@@ -247,13 +266,13 @@
     if-nez v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Landroidx/lifecycle/BlockRunner;->scope:Lkotlinx/coroutines/n0;
+    iget-object v1, p0, Landroidx/lifecycle/BlockRunner;->scope:Lkotlinx/coroutines/p0;
 
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v2
 
@@ -269,7 +288,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
     move-result-object v0
 
@@ -283,6 +302,7 @@
 
     const-string v1, "Cancel call cannot happen without a maybeRun"
 
+    .line 4
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -321,7 +341,7 @@
 
     .line 4
     :cond_1
-    iget-object v2, p0, Landroidx/lifecycle/BlockRunner;->scope:Lkotlinx/coroutines/n0;
+    iget-object v2, p0, Landroidx/lifecycle/BlockRunner;->scope:Lkotlinx/coroutines/p0;
 
     const/4 v3, 0x0
 
@@ -335,7 +355,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    invoke-static/range {v2 .. v7}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
     move-result-object v0
 

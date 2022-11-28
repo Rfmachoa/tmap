@@ -285,7 +285,7 @@
     .line 17
     iget-object v6, p0, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;->d:Landroid/content/Context;
 
-    const-string/jumbo v10, "timer_id"
+    const-string v10, "timer_id"
 
     invoke-static {v6, v8, v9, v10}, Lcom/skt/aicloud/speaker/service/sync/database/b;->s(Landroid/content/Context;JLjava/lang/String;)V
 

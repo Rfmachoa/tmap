@@ -3,7 +3,7 @@
 .source "LockedResource.java"
 
 # interfaces
-.implements Ln5/a$d;
+.implements Lk7/a$d;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ln5/a$d<",
+        "Lk7/a$d<",
         "Lcom/bumptech/glide/load/engine/r<",
         "*>;>;"
     }

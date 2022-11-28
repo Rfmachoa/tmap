@@ -77,6 +77,19 @@
     return v0
 .end method
 
+.method public canWriteFormattedNumbers()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->canWriteFormattedNumbers()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public canWriteObjectId()Z
     .locals 1
 
@@ -173,6 +186,15 @@
     return-void
 .end method
 
+.method public delegate()Lcom/fasterxml/jackson/core/JsonGenerator;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    return-object v0
+.end method
+
 .method public disable(Lcom/fasterxml/jackson/core/JsonGenerator$Feature;)Lcom/fasterxml/jackson/core/JsonGenerator;
     .locals 1
 
@@ -252,6 +274,8 @@
 
 .method public getDelegate()Lcom/fasterxml/jackson/core/JsonGenerator;
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
@@ -344,6 +368,27 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->getSchema()Lcom/fasterxml/jackson/core/FormatSchema;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getWriteCapabilities()Lcom/fasterxml/jackson/core/util/JacksonFeatureSet;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/fasterxml/jackson/core/util/JacksonFeatureSet<",
+            "Lcom/fasterxml/jackson/core/StreamWriteCapability;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->getWriteCapabilities()Lcom/fasterxml/jackson/core/util/JacksonFeatureSet;
 
     move-result-object v0
 
@@ -512,6 +557,70 @@
     return-object v0
 .end method
 
+.method public writeArray([DII)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 3
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeArray([DII)V
+
+    return-void
+.end method
+
+.method public writeArray([III)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeArray([III)V
+
+    return-void
+.end method
+
+.method public writeArray([JII)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeArray([JII)V
+
+    return-void
+.end method
+
+.method public writeArray([Ljava/lang/String;II)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 4
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeArray([Ljava/lang/String;II)V
+
+    return-void
+.end method
+
 .method public writeBinary(Lcom/fasterxml/jackson/core/Base64Variant;Ljava/io/InputStream;I)I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -562,6 +671,22 @@
     return-void
 .end method
 
+.method public writeEmbeddedObject(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeEmbeddedObject(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
 .method public writeEndArray()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -590,6 +715,22 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeEndObject()V
+
+    return-void
+.end method
+
+.method public writeFieldId(J)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeFieldId(J)V
 
     return-void
 .end method
@@ -771,12 +912,28 @@
     return-void
 .end method
 
-.method public writeObject(Ljava/lang/Object;)V
+.method public writeNumber([CII)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonProcessingException;
+            Ljava/lang/UnsupportedOperationException;
+        }
+    .end annotation
+
+    .line 9
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeNumber([CII)V
+
+    return-void
+.end method
+
+.method public writeObject(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
         }
     .end annotation
 
@@ -809,10 +966,6 @@
     if-eqz v0, :cond_2
 
     .line 5
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->getCodec()Lcom/fasterxml/jackson/core/ObjectCodec;
-
-    move-result-object v0
-
     invoke-virtual {v0, p0, p1}, Lcom/fasterxml/jackson/core/ObjectCodec;->writeValue(Lcom/fasterxml/jackson/core/JsonGenerator;Ljava/lang/Object;)V
 
     return-void
@@ -1049,6 +1202,38 @@
     return-void
 .end method
 
+.method public writeStartArray(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 3
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartArray(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public writeStartArray(Ljava/lang/Object;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 4
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartArray(Ljava/lang/Object;I)V
+
+    return-void
+.end method
+
 .method public writeStartObject()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -1065,7 +1250,23 @@
     return-void
 .end method
 
-.method public writeString(Lcom/fasterxml/jackson/core/SerializableString;)V
+.method public writeStartObject(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartObject(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public writeStartObject(Ljava/lang/Object;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1076,7 +1277,39 @@
     .line 3
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
 
+    invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartObject(Ljava/lang/Object;I)V
+
+    return-void
+.end method
+
+.method public writeString(Lcom/fasterxml/jackson/core/SerializableString;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 4
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeString(Lcom/fasterxml/jackson/core/SerializableString;)V
+
+    return-void
+.end method
+
+.method public writeString(Ljava/io/Reader;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
+
+    invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeString(Ljava/io/Reader;I)V
 
     return-void
 .end method
@@ -1105,7 +1338,7 @@
         }
     .end annotation
 
-    .line 2
+    .line 3
     iget-object v0, p0, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->delegate:Lcom/fasterxml/jackson/core/JsonGenerator;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeString([CII)V
@@ -1150,11 +1383,7 @@
     if-eqz v0, :cond_2
 
     .line 5
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/util/JsonGeneratorDelegate;->getCodec()Lcom/fasterxml/jackson/core/ObjectCodec;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0, p1}, Lcom/fasterxml/jackson/core/ObjectCodec;->writeValue(Lcom/fasterxml/jackson/core/JsonGenerator;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, p1}, Lcom/fasterxml/jackson/core/ObjectCodec;->writeTree(Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/core/TreeNode;)V
 
     :goto_0
     return-void

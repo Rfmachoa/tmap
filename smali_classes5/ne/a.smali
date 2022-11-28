@@ -1,48 +1,26 @@
-.class public final synthetic Lne/a;
+.class public final Lne/a;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.source "BuildConfig.java"
 
 
 # static fields
-.field public static final synthetic a:Lne/a;
+.field public static final a:Z = false
+
+.field public static final b:Ljava/lang/String; = "com.skt.tmap.navi"
+
+.field public static final c:Ljava/lang/String; = "release"
+
+.field public static final d:I = 0x1
+
+.field public static final e:Ljava/lang/String; = "1.0.0.0001"
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lne/a;
-
-    invoke-direct {v0}, Lne/a;-><init>()V
-
-    sput-object v0, Lne/a;->a:Lne/a;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Loe/b;
-
-    check-cast p2, Loe/b;
-
-    invoke-static {p1, p2}, Lne/b;->a(Loe/b;Loe/b;)I
-
-    move-result p1
-
-    return p1
 .end method

@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/internal/zzb;
 .super Lcom/google/android/gms/internal/common/zzi;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # instance fields
@@ -394,9 +394,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x2d
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "Don\'t know how to handle message: "
 

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/OptionalPendingResultImpl;
 .super Lcom/google/android/gms/common/api/OptionalPendingResult;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -20,13 +20,6 @@
 
 # instance fields
 .field private final zaa:Lcom/google/android/gms/common/api/internal/BasePendingResult;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/BasePendingResult<",
-            "TR;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -36,13 +29,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "TR;>;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Lcom/google/android/gms/common/api/OptionalPendingResult;-><init>()V
 

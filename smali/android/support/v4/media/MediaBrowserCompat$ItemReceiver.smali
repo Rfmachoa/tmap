@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public b(ILandroid/os/Bundle;)V
+.method public a(ILandroid/os/Bundle;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {

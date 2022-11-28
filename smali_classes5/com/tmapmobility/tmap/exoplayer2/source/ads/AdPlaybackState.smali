@@ -19,9 +19,9 @@
 # static fields
 .field public static final K0:I = 0x3
 
-.field public static final V0:I = 0x4
+.field public static final X0:I = 0x4
 
-.field public static final W0:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+.field public static final Y0:Lcom/tmapmobility/tmap/exoplayer2/h$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
@@ -108,7 +108,7 @@
     .line 3
     sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/a;->a:Lcom/tmapmobility/tmap/exoplayer2/source/ads/a;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->W0:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->Y0:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
     return-void
 .end method
@@ -175,7 +175,7 @@
 .method public static synthetic a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 0
 
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->c(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
 
     move-result-object p0
 
@@ -212,13 +212,110 @@
     return-object v1
 .end method
 
-.method public static c(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public static c(Ljava/lang/Object;Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+    .locals 17
+
+    move-object/from16 v0, p1
+
+    .line 1
+    iget v1, v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->b:I
+
+    iget v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
+
+    sub-int/2addr v1, v2
+
+    new-array v4, v1, [Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    .line 2
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->f:[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    aget-object v3, v3, v2
+
+    .line 3
+    new-instance v16, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    iget-wide v6, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
+
+    iget v8, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->b:I
+
+    iget-object v5, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->d:[I
+
+    array-length v9, v5
+
+    .line 4
+    invoke-static {v5, v9}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object v9
+
+    iget-object v5, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->c:[Landroid/net/Uri;
+
+    array-length v10, v5
+
+    .line 5
+    invoke-static {v5, v10}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v10, v5
+
+    check-cast v10, [Landroid/net/Uri;
+
+    iget-object v5, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->e:[J
+
+    array-length v11, v5
+
+    .line 6
+    invoke-static {v5, v11}, Ljava/util/Arrays;->copyOf([JI)[J
+
+    move-result-object v11
+
+    iget-wide v12, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->f:J
+
+    iget-boolean v14, v3, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->g:Z
+
+    const/4 v15, 0x0
+
+    move-object/from16 v5, v16
+
+    invoke-direct/range {v5 .. v15}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;-><init>(JI[I[Landroid/net/Uri;[JJZLcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$a;)V
+
+    aput-object v16, v4, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+
+    iget-wide v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->c:J
+
+    iget-wide v7, v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d:J
+
+    iget v9, v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
+
+    move-object v2, v1
+
+    move-object/from16 v3, p0
+
+    invoke-direct/range {v2 .. v9}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;-><init>(Ljava/lang/Object;[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;JJI)V
+
+    return-object v1
+.end method
+
+.method public static d(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 11
 
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -280,7 +377,7 @@
     const/4 v0, 0x2
 
     .line 5
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -293,7 +390,7 @@
     const/4 v0, 0x3
 
     .line 6
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -306,7 +403,7 @@
     const/4 v0, 0x4
 
     .line 7
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -326,7 +423,7 @@
     return-object p0
 .end method
 
-.method public static i(I)Ljava/lang/String;
+.method public static j(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
@@ -341,7 +438,7 @@
 
 
 # virtual methods
-.method public d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+.method public e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
     .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -369,91 +466,6 @@
 
     :goto_0
     return-object p1
-.end method
-
-.method public e(JJ)I
-    .locals 6
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    cmp-long v2, p1, v0
-
-    const/4 v3, -0x1
-
-    if-eqz v2, :cond_4
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, p3, v4
-
-    if-eqz v2, :cond_0
-
-    cmp-long p3, p1, p3
-
-    if-ltz p3, :cond_0
-
-    goto :goto_1
-
-    .line 1
-    :cond_0
-    iget p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
-
-    .line 2
-    :goto_0
-    iget p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->b:I
-
-    if-ge p3, p4, :cond_3
-
-    .line 3
-    invoke-virtual {p0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    move-result-object p4
-
-    iget-wide v4, p4, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
-
-    cmp-long p4, v4, v0
-
-    if-eqz p4, :cond_1
-
-    .line 4
-    invoke-virtual {p0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    move-result-object p4
-
-    iget-wide v4, p4, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
-
-    cmp-long p4, v4, p1
-
-    if-lez p4, :cond_2
-
-    .line 5
-    :cond_1
-    invoke-virtual {p0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    move-result-object p4
-
-    invoke-virtual {p4}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->i()Z
-
-    move-result p4
-
-    if-nez p4, :cond_3
-
-    :cond_2
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_0
-
-    .line 6
-    :cond_3
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->b:I
-
-    if-ge p3, p1, :cond_4
-
-    move v3, p3
-
-    :cond_4
-    :goto_1
-    return v3
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -494,7 +506,7 @@
 
     iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->a:Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -553,6 +565,91 @@
 .end method
 
 .method public f(JJ)I
+    .locals 6
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, -0x1
+
+    if-eqz v2, :cond_4
+
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, p3, v4
+
+    if-eqz v2, :cond_0
+
+    cmp-long p3, p1, p3
+
+    if-ltz p3, :cond_0
+
+    goto :goto_1
+
+    .line 1
+    :cond_0
+    iget p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
+
+    .line 2
+    :goto_0
+    iget p4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->b:I
+
+    if-ge p3, p4, :cond_3
+
+    .line 3
+    invoke-virtual {p0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    move-result-object p4
+
+    iget-wide v4, p4, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
+
+    cmp-long p4, v4, v0
+
+    if-eqz p4, :cond_1
+
+    .line 4
+    invoke-virtual {p0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    move-result-object p4
+
+    iget-wide v4, p4, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
+
+    cmp-long p4, v4, p1
+
+    if-lez p4, :cond_2
+
+    .line 5
+    :cond_1
+    invoke-virtual {p0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->i()Z
+
+    move-result p4
+
+    if-nez p4, :cond_3
+
+    :cond_2
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_0
+
+    .line 6
+    :cond_3
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->b:I
+
+    if-ge p3, p1, :cond_4
+
+    move v3, p3
+
+    :cond_4
+    :goto_1
+    return v3
+.end method
+
+.method public g(JJ)I
     .locals 7
 
     .line 1
@@ -572,7 +669,7 @@
     move v6, v0
 
     .line 2
-    invoke-virtual/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->h(JJI)Z
+    invoke-virtual/range {v1 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(JJI)Z
 
     move-result v1
 
@@ -586,7 +683,7 @@
     if-ltz v0, :cond_1
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p1
 
@@ -605,7 +702,7 @@
     return v0
 .end method
 
-.method public g(II)Z
+.method public h(II)Z
     .locals 3
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -629,7 +726,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p1
 
@@ -659,60 +756,6 @@
     :cond_2
     :goto_0
     return v1
-.end method
-
-.method public final h(JJI)Z
-    .locals 6
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    cmp-long v2, p1, v0
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_0
-
-    return v3
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0, p5}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    move-result-object p5
-
-    iget-wide v4, p5, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
-
-    cmp-long p5, v4, v0
-
-    const/4 v0, 0x1
-
-    if-nez p5, :cond_3
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long p5, p3, v1
-
-    if-eqz p5, :cond_1
-
-    cmp-long p1, p1, p3
-
-    if-gez p1, :cond_2
-
-    :cond_1
-    move v3, v0
-
-    :cond_2
-    return v3
-
-    :cond_3
-    cmp-long p1, p1, v4
-
-    if-gez p1, :cond_4
-
-    move v3, v0
-
-    :cond_4
-    return v3
 .end method
 
 .method public hashCode()I
@@ -779,7 +822,61 @@
     return v0
 .end method
 
-.method public j(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public final i(JJI)Z
+    .locals 6
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    return v3
+
+    .line 1
+    :cond_0
+    invoke-virtual {p0, p5}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    move-result-object p5
+
+    iget-wide v4, p5, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;->a:J
+
+    cmp-long p5, v4, v0
+
+    const/4 v0, 0x1
+
+    if-nez p5, :cond_3
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p5, p3, v1
+
+    if-eqz p5, :cond_1
+
+    cmp-long p1, p1, p3
+
+    if-gez p1, :cond_2
+
+    :cond_1
+    move v3, v0
+
+    :cond_2
+    return v3
+
+    :cond_3
+    cmp-long p1, p1, v4
+
+    if-gez p1, :cond_4
+
+    move v3, v0
+
+    :cond_4
+    return v3
+.end method
+
+.method public k(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -827,7 +924,7 @@
     :cond_1
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -864,7 +961,7 @@
     return-object p1
 .end method
 
-.method public varargs k(I[J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public varargs l(I[J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -884,7 +981,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -919,7 +1016,7 @@
     return-object p1
 .end method
 
-.method public l([[J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public m([[J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 10
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
@@ -946,7 +1043,7 @@
 
     array-length v2, v0
 
-    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -994,7 +1091,7 @@
     return-object p1
 .end method
 
-.method public m(IJ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public n(IJ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1014,7 +1111,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1051,7 +1148,7 @@
     return-object p1
 .end method
 
-.method public n(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public o(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1076,7 +1173,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1113,7 +1210,7 @@
     return-object p1
 .end method
 
-.method public o(J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public p(J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
@@ -1148,7 +1245,7 @@
     return-object v0
 .end method
 
-.method public p(IILandroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public q(IILandroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1173,7 +1270,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1208,7 +1305,7 @@
     return-object p1
 .end method
 
-.method public q(J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public r(J)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
@@ -1243,7 +1340,7 @@
     return-object v0
 .end method
 
-.method public r(IJ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public s(IJ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1275,7 +1372,7 @@
     :cond_0
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1311,7 +1408,7 @@
     return-object p1
 .end method
 
-.method public s(IZ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public t(IZ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1341,7 +1438,7 @@
     :cond_0
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1358,69 +1455,6 @@
     move-result-object p2
 
     aput-object p2, v3, p1
-
-    .line 6
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
-
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->a:Ljava/lang/Object;
-
-    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->c:J
-
-    iget-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d:J
-
-    iget v8, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
-
-    move-object v1, p1
-
-    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;-><init>(Ljava/lang/Object;[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;JJI)V
-
-    return-object p1
-.end method
-
-.method public t(IJ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
-    .locals 9
-    .param p1    # I
-        .annotation build Landroidx/annotation/IntRange;
-            from = 0x0L
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/CheckResult;
-    .end annotation
-
-    .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
-
-    sub-int/2addr p1, v0
-
-    .line 2
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    invoke-direct {v0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;-><init>(J)V
-
-    .line 3
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->f:[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    invoke-static {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->Y0([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v3, p2
-
-    check-cast v3, [Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    add-int/lit8 p2, p1, 0x1
-
-    .line 4
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->f:[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
-
-    array-length p3, p3
-
-    sub-int/2addr p3, p1
-
-    invoke-static {v3, p1, v3, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 5
-    aput-object v0, v3, p1
 
     .line 6
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
@@ -1480,7 +1514,7 @@
     const/4 v2, 0x1
 
     .line 5
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1489,7 +1523,7 @@
     const/4 v1, 0x2
 
     .line 6
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1500,7 +1534,7 @@
     const/4 v1, 0x3
 
     .line 7
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1511,7 +1545,7 @@
     const/4 v1, 0x4
 
     .line 8
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->i(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->j(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1754,7 +1788,70 @@
     return-object v0
 .end method
 
-.method public u(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public u(IJ)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+    .locals 9
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x0L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/CheckResult;
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
+
+    sub-int/2addr p1, v0
+
+    .line 2
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    invoke-direct {v0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;-><init>(J)V
+
+    .line 3
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->f:[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    invoke-static {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c1([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    move-object v3, p2
+
+    check-cast v3, [Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    add-int/lit8 p2, p1, 0x1
+
+    .line 4
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->f:[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    array-length p3, p3
+
+    sub-int/2addr p3, p1
+
+    invoke-static {v3, p1, v3, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 5
+    aput-object v0, v3, p1
+
+    .line 6
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->a:Ljava/lang/Object;
+
+    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->c:J
+
+    iget-wide v6, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->d:J
+
+    iget v8, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;->e:I
+
+    move-object v1, p1
+
+    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;-><init>(Ljava/lang/Object;[Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState$AdGroup;JJI)V
+
+    return-object p1
+.end method
+
+.method public v(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1779,7 +1876,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1817,7 +1914,7 @@
     return-object p1
 .end method
 
-.method public v(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public w(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 10
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1884,7 +1981,7 @@
     return-object v0
 .end method
 
-.method public w(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public x(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1904,7 +2001,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1939,7 +2036,7 @@
     return-object p1
 .end method
 
-.method public x(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public y(II)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -1964,7 +2061,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2002,7 +2099,7 @@
     return-object p1
 .end method
 
-.method public y(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
+.method public z(I)Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
     .locals 9
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
@@ -2022,7 +2119,7 @@
 
     array-length v1, v0
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a1([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->e1([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 

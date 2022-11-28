@@ -26,6 +26,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/b0;Lcom/skt/moment/task/z;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$task"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/b0$a;->b:Lcom/skt/moment/task/b0;
@@ -41,6 +51,14 @@
 # virtual methods
 .method public a(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/b0$a;->b:Lcom/skt/moment/task/b0;

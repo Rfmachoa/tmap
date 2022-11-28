@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/signin/GoogleSignInStatusCodes;
 .super Lcom/google/android/gms/common/api/CommonStatusCodes;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # static fields
@@ -22,6 +23,8 @@
 
 .method public static getStatusCodeString(I)Ljava/lang/String;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     packed-switch p0, :pswitch_data_0
 

@@ -172,6 +172,10 @@
 
 .field public static final NavAction_popUpToInclusive:I = 0x8
 
+.field public static final NavAction_popUpToSaveState:I = 0x9
+
+.field public static final NavAction_restoreState:I = 0xa
+
 .field public static final NavArgument:[I
 
 .field public static final NavArgument_android_defaultValue:I = 0x1
@@ -212,7 +216,9 @@
 
 .field public static final Navigator_android_id:I = 0x1
 
-.field public static final Navigator_android_label:I
+.field public static final Navigator_android_label:I = 0x0
+
+.field public static final Navigator_route:I = 0x2
 
 
 # direct methods
@@ -247,7 +253,7 @@
 
     new-array v1, v0, [I
 
-    const v4, 0x7f0402cf
+    const v4, 0x7f04036c
 
     aput v4, v1, v2
 
@@ -291,23 +297,23 @@
 
     sput-object v5, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->FontFamilyFont:[I
 
-    new-array v4, v4, [I
+    new-array v5, v4, [I
 
-    fill-array-data v4, :array_6
+    fill-array-data v5, :array_6
 
-    sput-object v4, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->Fragment:[I
+    sput-object v5, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->Fragment:[I
 
-    new-array v4, v1, [I
+    new-array v5, v1, [I
 
-    fill-array-data v4, :array_7
+    fill-array-data v5, :array_7
 
-    sput-object v4, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->FragmentContainerView:[I
+    sput-object v5, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->FragmentContainerView:[I
 
-    new-array v4, v0, [I
+    new-array v5, v0, [I
 
-    aput v3, v4, v2
+    aput v3, v5, v2
 
-    sput-object v4, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->FragmentNavigator:[I
+    sput-object v5, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->FragmentNavigator:[I
 
     const/16 v3, 0xc
 
@@ -317,67 +323,67 @@
 
     sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->GradientColor:[I
 
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_9
+
+    sput-object v1, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->GradientColorItem:[I
+
+    const/16 v1, 0xb
+
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_a
+
+    sput-object v1, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavAction:[I
+
+    const/4 v1, 0x4
+
     new-array v3, v1, [I
 
-    fill-array-data v3, :array_9
+    fill-array-data v3, :array_b
 
-    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->GradientColorItem:[I
+    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavArgument:[I
 
-    const/16 v3, 0x9
+    new-array v1, v1, [I
 
-    new-array v3, v3, [I
+    fill-array-data v1, :array_c
 
-    fill-array-data v3, :array_a
+    sput-object v1, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavDeepLink:[I
 
-    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavAction:[I
+    new-array v1, v0, [I
 
-    const/4 v3, 0x4
+    const v3, 0x7f04047e
 
-    new-array v4, v3, [I
+    aput v3, v1, v2
 
-    fill-array-data v4, :array_b
+    sput-object v1, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavGraphNavigator:[I
 
-    sput-object v4, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavArgument:[I
+    new-array v1, v0, [I
 
-    new-array v3, v3, [I
+    const v3, 0x7f04039c
 
-    fill-array-data v3, :array_c
+    aput v3, v1, v2
 
-    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavDeepLink:[I
+    sput-object v1, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavHost:[I
 
-    new-array v3, v0, [I
+    new-array v1, v0, [I
 
-    const v4, 0x7f040390
+    const v3, 0x7f040174
 
-    aput v4, v3, v2
+    aput v3, v1, v2
 
-    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavGraphNavigator:[I
-
-    new-array v3, v0, [I
-
-    const v4, 0x7f0402da
-
-    aput v4, v3, v2
-
-    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavHost:[I
-
-    new-array v3, v0, [I
-
-    const v4, 0x7f04012d
-
-    aput v4, v3, v2
-
-    sput-object v3, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavHostFragment:[I
+    sput-object v1, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavHostFragment:[I
 
     new-array v0, v0, [I
 
-    const v3, 0x7f0401c9
+    const v1, 0x7f040235
 
-    aput v3, v0, v2
+    aput v1, v0, v2
 
     sput-object v0, Landroidx/navigation/dynamicfeatures/fragment/R$styleable;->NavInclude:[I
 
-    new-array v0, v1, [I
+    new-array v0, v4, [I
 
     fill-array-data v0, :array_d
 
@@ -388,10 +394,10 @@
     :array_0
     .array-data 4
         0x1010003
-        0x7f040000
-        0x7f040126
-        0x7f040127
-        0x7f0403d4
+        0x7f040002
+        0x7f04016d
+        0x7f04016e
+        0x7f0404cd
     .end array-data
 
     :array_1
@@ -399,32 +405,32 @@
         0x10101a5
         0x101031f
         0x1010647
-        0x7f040033
-        0x7f040228
+        0x7f040039
+        0x7f0402a4
     .end array-data
 
     :array_2
     .array-data 4
-        0x7f0402cf
-        0x7f04032f
+        0x7f04036c
+        0x7f0403f8
     .end array-data
 
     :array_3
     .array-data 4
-        0x7f0401ca
-        0x7f0401cb
-        0x7f0402cf
+        0x7f040236
+        0x7f040237
+        0x7f04036c
     .end array-data
 
     :array_4
     .array-data 4
-        0x7f0401b7
-        0x7f0401b8
-        0x7f0401b9
-        0x7f0401ba
-        0x7f0401bb
-        0x7f0401bc
-        0x7f0401bd
+        0x7f040222
+        0x7f040223
+        0x7f040224
+        0x7f040225
+        0x7f040226
+        0x7f040227
+        0x7f040228
     .end array-data
 
     :array_5
@@ -434,11 +440,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f0401b5
-        0x7f0401be
-        0x7f0401bf
-        0x7f0401c0
-        0x7f040438
+        0x7f040220
+        0x7f040229
+        0x7f04022a
+        0x7f04022b
+        0x7f040561
     .end array-data
 
     :array_6
@@ -479,36 +485,39 @@
     :array_a
     .array-data 4
         0x10100d0
-        0x7f040136
-        0x7f04016d
-        0x7f040177
-        0x7f04022d
-        0x7f040315
-        0x7f040316
-        0x7f040317
-        0x7f040318
+        0x7f04017d
+        0x7f0401bf
+        0x7f0401cb
+        0x7f0402ac
+        0x7f0403db
+        0x7f0403dc
+        0x7f0403dd
+        0x7f0403de
+        0x7f0403df
+        0x7f040414
     .end array-data
 
     :array_b
     .array-data 4
         0x1010003
         0x10101ed
-        0x7f04003d
-        0x7f0402e4
+        0x7f040045
+        0x7f0403a7
     .end array-data
 
     :array_c
     .array-data 4
         0x10104ee
-        0x7f040000
-        0x7f0402c1
-        0x7f040448
+        0x7f040002
+        0x7f04035e
+        0x7f040572
     .end array-data
 
     :array_d
     .array-data 4
         0x1010001
         0x10100d0
+        0x7f04041b
     .end array-data
 .end method
 

@@ -3,7 +3,7 @@
 .source "AuthSchemeBase.java"
 
 # interfaces
-.implements Lef/i;
+.implements Lih/i;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method public a(Ldf/d;)V
+.method public b(Lhh/d;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -52,10 +52,10 @@
     const-string v0, "Header"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
-    invoke-interface {p1}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -92,19 +92,19 @@
 
     .line 7
     :goto_0
-    instance-of v0, p1, Ldf/c;
+    instance-of v0, p1, Lhh/c;
 
     if-eqz v0, :cond_1
 
     .line 8
-    check-cast p1, Ldf/c;
+    check-cast p1, Lhh/c;
 
-    invoke-interface {p1}, Ldf/c;->getBuffer()Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-interface {p1}, Lhh/c;->getBuffer()Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     move-result-object v0
 
     .line 9
-    invoke-interface {p1}, Ldf/c;->getValuePos()I
+    invoke-interface {p1}, Lhh/c;->getValuePos()I
 
     move-result p1
 
@@ -112,7 +112,7 @@
 
     .line 10
     :cond_1
-    invoke-interface {p1}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
@@ -144,7 +144,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lpg/f;->a(C)Z
+    invoke-static {v1}, Lti/f;->a(C)Z
 
     move-result v1
 
@@ -169,7 +169,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lpg/f;->a(C)Z
+    invoke-static {v2}, Lti/f;->a(C)Z
 
     move-result v2
 
@@ -186,7 +186,7 @@
     move-result-object p1
 
     .line 16
-    invoke-interface {p0}, Lef/c;->getSchemeName()Ljava/lang/String;
+    invoke-interface {p0}, Lih/c;->getSchemeName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -211,7 +211,7 @@
 
     const-string v1, "Invalid scheme identifier: "
 
-    invoke-static {v1, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -235,7 +235,7 @@
 
     const-string v1, "Unexpected header name: "
 
-    invoke-static {v1, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -244,7 +244,7 @@
     throw p1
 .end method
 
-.method public c(Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+.method public c(Lih/j;Lhh/q;Lti/g;)Lhh/d;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -253,7 +253,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p0, p1, p2}, Lef/c;->b(Lef/j;Ldf/q;)Ldf/d;
+    invoke-interface {p0, p1, p2}, Lih/c;->a(Lih/j;Lhh/q;)Lhh/d;
 
     move-result-object p1
 
@@ -304,7 +304,7 @@
     .locals 2
 
     .line 1
-    invoke-interface {p0}, Lef/c;->getSchemeName()Ljava/lang/String;
+    invoke-interface {p0}, Lih/c;->getSchemeName()Ljava/lang/String;
 
     move-result-object v0
 

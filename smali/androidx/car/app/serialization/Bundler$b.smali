@@ -94,7 +94,7 @@
 
     move-result p3
 
-    invoke-virtual {p0, p3}, Landroidx/car/app/serialization/Bundler$b;->f(I)Ljava/lang/String;
+    invoke-virtual {p0, p3}, Landroidx/car/app/serialization/Bundler$b;->g(I)Ljava/lang/String;
 
     move-result-object p3
 
@@ -240,7 +240,7 @@
     return-void
 .end method
 
-.method public final f(I)Ljava/lang/String;
+.method public final g(I)Ljava/lang/String;
     .locals 2
 
     const/16 v0, 0xb
@@ -282,7 +282,7 @@
     const-string v0, "..."
 
     .line 6
-    invoke-static {v1, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -298,7 +298,7 @@
     return-object v1
 .end method
 
-.method public u()Ljava/lang/String;
+.method public s()Ljava/lang/String;
     .locals 4
 
     .line 1

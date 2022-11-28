@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final isTablet:I = 0x7f050005
+.field public static final isTablet:I = 0x7f050007
 
 
 # direct methods

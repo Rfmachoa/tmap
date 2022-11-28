@@ -1,210 +1,356 @@
-.class public Lid/a;
-.super Ljava/lang/Object;
-.source "DNSLookup.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lid/a$a;
-    }
-.end annotation
-
-
-# static fields
-.field public static final d:Ljava/lang/String; = "DnsLookup"
+.class public abstract Lid/a;
+.super Landroidx/databinding/ViewDataBinding;
+.source "ActivityOcrScanBinding.java"
 
 
 # instance fields
-.field public a:[Ljava/lang/String;
+.field public final l1:Landroidx/constraintlayout/widget/ConstraintLayout;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public b:Ljava/util/concurrent/ExecutorService;
+.field public final m1:Landroid/widget/ImageView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public c:Lid/a$a;
+.field public final n1:Landroid/widget/TextView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final o1:Landroid/widget/ImageView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final p1:Landroid/widget/TextView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final q1:Landroid/widget/CheckBox;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final r1:Landroid/widget/TextView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public final s1:Landroid/widget/FrameLayout;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public t1:Z
+    .annotation runtime Landroidx/databinding/Bindable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/Object;Landroid/view/View;ILandroidx/constraintlayout/widget/ConstraintLayout;Landroid/widget/ImageView;Landroid/widget/TextView;Landroid/widget/ImageView;Landroid/widget/TextView;Landroid/widget/CheckBox;Landroid/widget/TextView;Landroid/widget/FrameLayout;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "_bindingComponent",
+            "_root",
+            "_localFieldCount",
+            "ocrButton",
+            "ocrButtonImage",
+            "ocrButtonText",
+            "ocrClose",
+            "ocrExplain",
+            "ocrFlash",
+            "ocrTitle",
+            "scanMainLayout"
+        }
+    .end annotation
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, "8.8.8.8"
-
-    const-string v1, "168.126.63.1"
-
-    const-string v2, "210.220.163.82"
-
-    const-string v3, "164.124.101.2"
+    invoke-direct {p0, p1, p2, p3}, Landroidx/databinding/ViewDataBinding;-><init>(Ljava/lang/Object;Landroid/view/View;I)V
 
     .line 2
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lid/a;->a:[Ljava/lang/String;
+    iput-object p4, p0, Lid/a;->l1:Landroidx/constraintlayout/widget/ConstraintLayout;
 
     .line 3
-    array-length v0, v0
-
-    invoke-static {v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lid/a;->b:Ljava/util/concurrent/ExecutorService;
+    iput-object p5, p0, Lid/a;->m1:Landroid/widget/ImageView;
 
     .line 4
-    new-instance v0, Lid/a$a;
+    iput-object p6, p0, Lid/a;->n1:Landroid/widget/TextView;
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    .line 5
+    iput-object p7, p0, Lid/a;->o1:Landroid/widget/ImageView;
 
-    const-wide/16 v2, 0xa
+    .line 6
+    iput-object p8, p0, Lid/a;->p1:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    .line 7
+    iput-object p9, p0, Lid/a;->q1:Landroid/widget/CheckBox;
 
-    move-result-wide v1
+    .line 8
+    iput-object p10, p0, Lid/a;->r1:Landroid/widget/TextView;
 
-    invoke-direct {v0, p0, v1, v2}, Lid/a$a;-><init>(Lid/a;J)V
-
-    iput-object v0, p0, Lid/a;->c:Lid/a$a;
+    .line 9
+    iput-object p11, p0, Lid/a;->s1:Landroid/widget/FrameLayout;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 7
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+.method public static e1(Landroid/view/View;)Lid/a;
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 1
-    :cond_0
-    iget-object v0, p0, Lid/a;->c:Lid/a$a;
-
-    invoke-virtual {v0, p1}, Lid/a$a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Landroidx/databinding/h;->i()Landroidx/databinding/f;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    invoke-static {p0, v0}, Lid/a;->f1(Landroid/view/View;Ljava/lang/Object;)Lid/a;
 
-    return-object v0
+    move-result-object p0
 
-    .line 2
-    :cond_1
-    new-instance v1, Ljava/util/ArrayList;
+    return-object p0
+.end method
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+.method public static f1(Landroid/view/View;Ljava/lang/Object;)Lid/a;
+    .locals 1
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "component"
+        }
+    .end annotation
 
-    .line 3
-    iget-object v2, p0, Lid/a;->a:[Ljava/lang/String;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    array-length v3, v2
+    const v0, 0x7f0d0022
 
-    const/4 v4, 0x0
+    .line 1
+    invoke-static {p1, p0, v0}, Landroidx/databinding/ViewDataBinding;->o(Ljava/lang/Object;Landroid/view/View;I)Landroidx/databinding/ViewDataBinding;
 
-    :goto_0
-    if-ge v4, v3, :cond_2
+    move-result-object p0
 
-    aget-object v5, v2, v4
+    check-cast p0, Lid/a;
 
-    .line 4
-    new-instance v6, Lid/c;
+    return-object p0
+.end method
 
-    invoke-direct {v6, v5, p1}, Lid/c;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public static h1(Landroid/view/LayoutInflater;)Lid/a;
+    .locals 1
+    .param p0    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "inflater"
+        }
+    .end annotation
 
-    add-int/lit8 v4, v4, 0x1
+    .line 1
+    invoke-static {}, Landroidx/databinding/h;->i()Landroidx/databinding/f;
 
-    goto :goto_0
+    move-result-object v0
 
-    .line 5
-    :cond_2
-    :try_start_0
-    iget-object v2, p0, Lid/a;->b:Ljava/util/concurrent/ExecutorService;
+    invoke-static {p0, v0}, Lid/a;->k1(Landroid/view/LayoutInflater;Ljava/lang/Object;)Lid/a;
 
-    invoke-interface {v2, v1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v1
+    return-object p0
+.end method
 
-    check-cast v1, Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public static i1(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lid/a;
+    .locals 1
+    .param p0    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 6
-    iget-object v0, p0, Lid/a;->b:Ljava/util/concurrent/ExecutorService;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "root",
+            "attachToRoot"
+        }
+    .end annotation
 
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+    .line 1
+    invoke-static {}, Landroidx/databinding/h;->i()Landroidx/databinding/f;
 
-    if-eqz v1, :cond_3
+    move-result-object v0
 
-    .line 7
-    iget-object v0, p0, Lid/a;->c:Lid/a$a;
+    invoke-static {p0, p1, p2, v0}, Lid/a;->j1(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;ZLjava/lang/Object;)Lid/a;
 
-    invoke-virtual {v0, p1, v1}, Lid/a$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object p0
 
-    :cond_3
-    move-object v0, v1
+    return-object p0
+.end method
 
-    goto :goto_1
+.method public static j1(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;ZLjava/lang/Object;)Lid/a;
+    .locals 1
+    .param p0    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    :catchall_0
-    move-exception v1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "root",
+            "attachToRoot",
+            "component"
+        }
+    .end annotation
 
-    goto :goto_2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    :catch_0
-    move-exception v1
+    const v0, 0x7f0d0022
 
-    :try_start_1
-    const-string v2, "DnsLookup"
+    .line 1
+    invoke-static {p0, v0, p1, p2, p3}, Landroidx/databinding/ViewDataBinding;->Y(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;ZLjava/lang/Object;)Landroidx/databinding/ViewDataBinding;
 
-    .line 8
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object v1
+    check-cast p0, Lid/a;
 
-    invoke-static {v2, v1}, Lcom/sktelecom/tyche/TycheLog;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return-object p0
+.end method
 
-    .line 9
-    iget-object v1, p0, Lid/a;->b:Ljava/util/concurrent/ExecutorService;
+.method public static k1(Landroid/view/LayoutInflater;Ljava/lang/Object;)Lid/a;
+    .locals 3
+    .param p0    # Landroid/view/LayoutInflater;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "component"
+        }
+    .end annotation
 
-    if-eqz v0, :cond_4
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 10
-    iget-object v1, p0, Lid/a;->c:Lid/a$a;
+    const v0, 0x7f0d0022
 
-    invoke-virtual {v1, p1, v0}, Lid/a$a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    :cond_4
-    :goto_1
-    return-object v0
+    const/4 v2, 0x0
 
-    .line 11
-    :goto_2
-    iget-object v2, p0, Lid/a;->b:Ljava/util/concurrent/ExecutorService;
+    .line 1
+    invoke-static {p0, v0, v1, v2, p1}, Landroidx/databinding/ViewDataBinding;->Y(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;ZLjava/lang/Object;)Landroidx/databinding/ViewDataBinding;
 
-    invoke-interface {v2}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+    move-result-object p0
 
-    if-eqz v0, :cond_5
+    check-cast p0, Lid/a;
 
-    .line 12
-    iget-object v2, p0, Lid/a;->c:Lid/a$a;
+    return-object p0
+.end method
 
-    invoke-virtual {v2, p1, v0}, Lid/a$a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
-    :cond_5
-    throw v1
+# virtual methods
+.method public g1()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lid/a;->t1:Z
+
+    return v0
+.end method
+
+.method public abstract l1(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enableFlash"
+        }
+    .end annotation
 .end method

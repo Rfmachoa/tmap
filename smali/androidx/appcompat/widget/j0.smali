@@ -1,632 +1,470 @@
 .class public Landroidx/appcompat/widget/j0;
 .super Ljava/lang/Object;
-.source "TintTypedArray.java"
+.source "ThemeUtils.java"
 
 
 # annotations
 .annotation build Landroidx/annotation/RestrictTo;
     value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
     }
 .end annotation
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static final a:Ljava/lang/String; = "ThemeUtils"
 
-.field public final b:Landroid/content/res/TypedArray;
+.field public static final b:Ljava/lang/ThreadLocal;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ThreadLocal<",
+            "Landroid/util/TypedValue;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public c:Landroid/util/TypedValue;
+.field public static final c:[I
+
+.field public static final d:[I
+
+.field public static final e:[I
+
+.field public static final f:[I
+
+.field public static final g:[I
+
+.field public static final h:[I
+
+.field public static final i:[I
+
+.field public static final j:[I
+
+.field public static final k:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 1
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Landroidx/appcompat/widget/j0;->b:Ljava/lang/ThreadLocal;
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const v2, -0x101009e
+
+    const/4 v3, 0x0
+
+    aput v2, v1, v3
+
+    .line 2
+    sput-object v1, Landroidx/appcompat/widget/j0;->c:[I
+
+    new-array v1, v0, [I
+
+    const v2, 0x101009c
+
+    aput v2, v1, v3
+
+    .line 3
+    sput-object v1, Landroidx/appcompat/widget/j0;->d:[I
+
+    new-array v1, v0, [I
+
+    const v2, 0x10102fe
+
+    aput v2, v1, v3
+
+    .line 4
+    sput-object v1, Landroidx/appcompat/widget/j0;->e:[I
+
+    new-array v1, v0, [I
+
+    const v2, 0x10100a7
+
+    aput v2, v1, v3
+
+    .line 5
+    sput-object v1, Landroidx/appcompat/widget/j0;->f:[I
+
+    new-array v1, v0, [I
+
+    const v2, 0x10100a0
+
+    aput v2, v1, v3
+
+    .line 6
+    sput-object v1, Landroidx/appcompat/widget/j0;->g:[I
+
+    new-array v1, v0, [I
+
+    const v2, 0x10100a1
+
+    aput v2, v1, v3
+
+    .line 7
+    sput-object v1, Landroidx/appcompat/widget/j0;->h:[I
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [I
+
+    .line 8
+    fill-array-data v1, :array_0
+
+    sput-object v1, Landroidx/appcompat/widget/j0;->i:[I
+
+    new-array v1, v3, [I
+
+    .line 9
+    sput-object v1, Landroidx/appcompat/widget/j0;->j:[I
+
+    new-array v0, v0, [I
+
+    .line 10
+    sput-object v0, Landroidx/appcompat/widget/j0;->k:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        -0x10100a7
+        -0x101009c
+    .end array-data
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Landroidx/appcompat/widget/j0;->a:Landroid/content/Context;
-
-    .line 3
-    iput-object p2, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
     return-void
 .end method
 
-.method public static E(Landroid/content/Context;I[I)Landroidx/appcompat/widget/j0;
-    .locals 1
+.method public static a(Landroid/view/View;Landroid/content/Context;)V
+    .locals 3
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    new-instance v0, Landroidx/appcompat/widget/j0;
+    sget-object v0, Landroidx/appcompat/R$styleable;->AppCompatTheme:[I
 
-    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object p1
-
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/widget/j0;-><init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
-
-    return-object v0
-.end method
-
-.method public static F(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/j0;
-    .locals 1
-
-    .line 1
-    new-instance v0, Landroidx/appcompat/widget/j0;
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/widget/j0;-><init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
-
-    return-object v0
-.end method
-
-.method public static G(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/j0;
-    .locals 1
-
-    .line 1
-    new-instance v0, Landroidx/appcompat/widget/j0;
 
     .line 2
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    :try_start_0
+    sget v0, Landroidx/appcompat/R$styleable;->AppCompatTheme_windowActionBar:I
 
-    move-result-object p1
-
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/widget/j0;-><init>(Landroid/content/Context;Landroid/content/res/TypedArray;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public A(ILandroid/util/TypedValue;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public B()Landroid/content/res/TypedArray;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    return-object v0
-.end method
-
-.method public C(I)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public D()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->length()I
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public H(I)Landroid/util/TypedValue;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public I()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    return-void
-.end method
-
-.method public a(IZ)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public b()I
-    .locals 1
-    .annotation build Landroidx/annotation/RequiresApi;
-        value = 0x15
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->getChangingConfigurations()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public c(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getColor(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public d(I)Landroid/content/res/ColorStateList;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    const-string v0, "ThemeUtils"
 
     .line 3
-    iget-object v1, p0, Landroidx/appcompat/widget/j0;->a:Landroid/content/Context;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "View "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, " is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant)."
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    invoke-static {v1, v0}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    :cond_0
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    move-result-object v0
+    return-void
 
-    if-eqz v0, :cond_0
+    :catchall_0
+    move-exception p0
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 5
-    :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    return-object p1
+    throw p0
 .end method
 
-.method public e(IF)F
-    .locals 1
+.method public static b(II)Landroid/content/res/ColorStateList;
+    .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [[I
+
+    new-array v0, v0, [I
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
+    sget-object v2, Landroidx/appcompat/widget/j0;->c:[I
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    const/4 v3, 0x0
 
-    move-result p1
+    aput-object v2, v1, v3
 
-    return p1
-.end method
-
-.method public f(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public g(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public h(I)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    aput p1, v0, v3
 
     .line 2
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    iget-object p1, p0, Landroidx/appcompat/widget/j0;->a:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public i(I)Landroid/graphics/drawable/Drawable;
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-static {}, Landroidx/appcompat/widget/f;->b()Landroidx/appcompat/widget/f;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroidx/appcompat/widget/j0;->a:Landroid/content/Context;
+    sget-object p1, Landroidx/appcompat/widget/j0;->j:[I
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, p1, v2}, Landroidx/appcompat/widget/f;->d(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
+    aput-object p1, v1, v2
 
-    move-result-object p1
+    aput p0, v0, v2
 
-    return-object p1
+    .line 3
+    new-instance p0, Landroid/content/res/ColorStateList;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-direct {p0, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
-    return-object p1
+    return-object p0
 .end method
 
-.method public j(IF)F
-    .locals 1
+.method public static c(Landroid/content/Context;I)I
+    .locals 4
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/j0;->f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    sget-object p0, Landroidx/appcompat/widget/j0;->c:[I
+
+    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result p1
 
-    return p1
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p0
+
+    return p0
+
+    .line 4
+    :cond_0
+    invoke-static {}, Landroidx/appcompat/widget/j0;->g()Landroid/util/TypedValue;
+
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    const v2, 0x1010033
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    .line 6
+    invoke-virtual {v0}, Landroid/util/TypedValue;->getFloat()F
+
+    move-result v0
+
+    .line 7
+    invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/j0;->e(Landroid/content/Context;IF)I
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public k(IILandroidx/core/content/res/a$d;)Landroid/graphics/Typeface;
+.method public static d(Landroid/content/Context;I)I
     .locals 2
-    .param p1    # I
-        .annotation build Landroidx/annotation/StyleableRes;
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Landroidx/core/content/res/a$d;
-        .annotation build Landroidx/annotation/Nullable;
+
+    .line 1
+    sget-object v0, Landroidx/appcompat/widget/j0;->k:[I
+
+    const/4 v1, 0x0
+
+    aput p1, v0, v1
+
+    const/4 p1, 0x0
+
+    .line 2
+    invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/o0;->F(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/o0;
+
+    move-result-object p0
+
+    .line 3
+    :try_start_0
+    invoke-virtual {p0, v1, v1}, Landroidx/appcompat/widget/o0;->c(II)I
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/appcompat/widget/o0;->I()V
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/o0;->I()V
+
+    .line 5
+    throw p1
+.end method
+
+.method public static e(Landroid/content/Context;IF)I
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/j0;->d(Landroid/content/Context;I)I
+
+    move-result p0
+
+    .line 2
+    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    mul-float/2addr p1, p2
+
+    .line 3
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lv1/h;->B(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
+    sget-object v0, Landroidx/appcompat/widget/j0;->k:[I
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    aput p1, v0, v1
 
     const/4 p1, 0x0
 
-    return-object p1
-
     .line 2
-    :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->c:Landroid/util/TypedValue;
+    invoke-static {p0, p1, v0}, Landroidx/appcompat/widget/o0;->F(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/o0;
 
-    if-nez v0, :cond_1
+    move-result-object p0
 
     .line 3
-    new-instance v0, Landroid/util/TypedValue;
+    :try_start_0
+    invoke-virtual {p0, v1}, Landroidx/appcompat/widget/o0;->d(I)Landroid/content/res/ColorStateList;
 
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    iput-object v0, p0, Landroidx/appcompat/widget/j0;->c:Landroid/util/TypedValue;
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    :cond_1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->a:Landroid/content/Context;
-
-    iget-object v1, p0, Landroidx/appcompat/widget/j0;->c:Landroid/util/TypedValue;
-
-    invoke-static {v0, p1, v1, p2, p3}, Landroidx/core/content/res/a;->j(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;)Landroid/graphics/Typeface;
-
-    move-result-object p1
+    invoke-virtual {p0}, Landroidx/appcompat/widget/o0;->I()V
 
     return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/o0;->I()V
+
+    .line 5
+    throw p1
 .end method
 
-.method public l(IIIF)F
-    .locals 1
+.method public static g()Landroid/util/TypedValue;
+    .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
+    sget-object v0, Landroidx/appcompat/widget/j0;->b:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/res/TypedArray;->getFraction(IIIF)F
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v1
 
-    return p1
-.end method
+    check-cast v1, Landroid/util/TypedValue;
 
-.method public m(I)I
-    .locals 1
+    if-nez v1, :cond_0
 
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
+    .line 2
+    new-instance v1, Landroid/util/TypedValue;
 
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getIndex(I)I
+    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    move-result p1
+    .line 3
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    return p1
-.end method
-
-.method public n()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->getIndexCount()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public o(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public p(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getInteger(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public q(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public r(ILjava/lang/String;)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public s(I)Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getNonResourceString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public t()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->getPositionDescription()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public u(II)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public v()Landroid/content/res/Resources;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public w(I)Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public x(I)Ljava/lang/CharSequence;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public y(I)[Ljava/lang/CharSequence;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public z(I)I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/j0;->b:Landroid/content/res/TypedArray;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/TypedArray;->getType(I)I
-
-    move-result p1
-
-    return p1
+    :cond_0
+    return-object v1
 .end method

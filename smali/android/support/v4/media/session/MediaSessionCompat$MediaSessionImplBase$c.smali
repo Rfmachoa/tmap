@@ -468,7 +468,7 @@
     if-eqz p1, :cond_2
 
     .line 17
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d()Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->e()Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p1
 

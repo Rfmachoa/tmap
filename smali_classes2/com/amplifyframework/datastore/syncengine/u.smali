@@ -3,42 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
-# instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
-
-.field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/u;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/u;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/u;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/u;->a:Lcom/amplifyframework/datastore/syncengine/u;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/u;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/u;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/u;->a:Lcom/amplifyframework/datastore/syncengine/MutationProcessor;
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/u;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->i(Ljava/lang/Throwable;)V
 
-    check-cast p1, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
-
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->e(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/g;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

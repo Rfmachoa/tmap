@@ -3,12 +3,12 @@
 .source "HiddenSettingMenu.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/skt/tmap/util/p0;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->O5(Lcom/skt/tmap/util/y;)V
+    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->U5(Landroid/widget/ListView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,18 +43,50 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public a(Lcom/skt/tmap/util/a0;)V
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0
         }
         names = {
-            "dialog",
-            "id"
+            "hiddenMenuListData"
         }
     .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$t0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->L5(Lcom/skt/tmap/activity/HiddenSettingMenu;Lcom/skt/tmap/util/a0;)V
+
+    return-void
+.end method
+
+.method public b(Lcom/skt/tmap/util/a0;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hiddenMenuListData"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$t0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/HiddenSettingMenu;->B5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lcom/skt/tmap/util/HiddenSettingData;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/skt/tmap/util/a0;->d()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/util/HiddenSettingData;->G0(Ljava/lang/Boolean;)V
 
     return-void
 .end method

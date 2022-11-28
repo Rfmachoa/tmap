@@ -24,6 +24,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/widget/CouponProgress;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/widget/CouponProgress$a;->a:Lcom/skt/moment/widget/CouponProgress;
@@ -37,6 +45,14 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "valueAnimator"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;

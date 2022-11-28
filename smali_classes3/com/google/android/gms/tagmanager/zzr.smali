@@ -1,26 +1,23 @@
-.class public interface abstract Lcom/google/android/gms/tagmanager/zzr;
+.class final Lcom/google/android/gms/tagmanager/zzr;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<K:",
-        "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
 .end annotation
 
 
-# virtual methods
-.method public abstract zza(Ljava/lang/Object;Ljava/lang/Object;)I
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TK;TV;)I"
-        }
-    .end annotation
+# direct methods
+.method public static final zza(ILcom/google/android/gms/tagmanager/zzq;)Lcom/google/android/gms/tagmanager/zzda;
+    .locals 1
+
+    .line 1
+    new-instance p0, Lcom/google/android/gms/tagmanager/zzda;
+
+    const/high16 v0, 0x100000
+
+    invoke-direct {p0, v0, p1}, Lcom/google/android/gms/tagmanager/zzda;-><init>(ILcom/google/android/gms/tagmanager/zzq;)V
+
+    return-object p0
 .end method

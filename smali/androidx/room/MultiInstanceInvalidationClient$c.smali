@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Landroidx/room/MultiInstanceInvalidationClient$c;->a:Landroidx/room/MultiInstanceInvalidationClient;
 
-    iget-object v1, v0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/g;
+    iget-object v1, v0, Landroidx/room/MultiInstanceInvalidationClient;->d:Landroidx/room/p0;
 
-    iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/g$c;
+    iget-object v0, v0, Landroidx/room/MultiInstanceInvalidationClient;->e:Landroidx/room/p0$c;
 
-    invoke-virtual {v1, v0}, Landroidx/room/g;->k(Landroidx/room/g$c;)V
+    invoke-virtual {v1, v0}, Landroidx/room/p0;->m(Landroidx/room/p0$c;)V
 
     return-void
 .end method

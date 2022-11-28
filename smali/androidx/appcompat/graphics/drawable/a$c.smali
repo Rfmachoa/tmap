@@ -31,10 +31,10 @@
     .end annotation
 .end field
 
-.field public L:Landroidx/collection/m;
+.field public L:Landroidx/collection/n;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/m<",
+            "Landroidx/collection/n<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -69,9 +69,9 @@
     iput-object p2, p0, Landroidx/appcompat/graphics/drawable/a$c;->K:Landroidx/collection/h;
 
     .line 3
-    iget-object p1, p1, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iget-object p1, p1, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
-    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
     goto :goto_0
 
@@ -84,11 +84,11 @@
     iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$c;->K:Landroidx/collection/h;
 
     .line 5
-    new-instance p1, Landroidx/collection/m;
+    new-instance p1, Landroidx/collection/n;
 
-    invoke-direct {p1}, Landroidx/collection/m;-><init>()V
+    invoke-direct {p1}, Landroidx/collection/n;-><init>()V
 
-    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
     :goto_0
     return-void
@@ -129,13 +129,13 @@
     move-result p1
 
     .line 2
-    iget-object p2, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iget-object p2, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
 
-    invoke-virtual {p2, p1, p3}, Landroidx/collection/m;->n(ILjava/lang/Object;)V
+    invoke-virtual {p2, p1, p3}, Landroidx/collection/n;->n(ILjava/lang/Object;)V
 
     return p1
 .end method
@@ -148,7 +148,7 @@
     .end param
 
     .line 1
-    invoke-super {p0, p3}, Landroidx/appcompat/graphics/drawable/b$c;->a(Landroid/graphics/drawable/Drawable;)I
+    invoke-super {p0, p3}, Landroidx/appcompat/graphics/drawable/b$d;->a(Landroid/graphics/drawable/Drawable;)I
 
     move-result p3
 
@@ -217,13 +217,13 @@
 
     .line 1
     :cond_0
-    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iget-object v1, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/m;->i(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/n;->i(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -433,13 +433,13 @@
     iput-object v0, p0, Landroidx/appcompat/graphics/drawable/a$c;->K:Landroidx/collection/h;
 
     .line 2
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
-    invoke-virtual {v0}, Landroidx/collection/m;->c()Landroidx/collection/m;
+    invoke-virtual {v0}, Landroidx/collection/n;->c()Landroidx/collection/n;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/m;
+    iput-object v0, p0, Landroidx/appcompat/graphics/drawable/a$c;->L:Landroidx/collection/n;
 
     return-void
 .end method

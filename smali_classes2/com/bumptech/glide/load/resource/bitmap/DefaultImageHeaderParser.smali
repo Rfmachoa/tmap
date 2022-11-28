@@ -18,6 +18,10 @@
 
 
 # static fields
+.field public static final A:I = 0x61766966
+
+.field public static final B:I = 0x61766973
+
 .field public static final b:Ljava/lang/String; = "DfltImageHeaderParser"
 
 .field public static final c:I = 0x474946
@@ -60,9 +64,13 @@
 
 .field public static final v:I = 0x4c
 
-.field public static final w:I = 0x10
+.field public static final w:I = 0x2
 
-.field public static final x:I = 0x8
+.field public static final x:I = 0x10
+
+.field public static final y:I = 0x8
+
+.field public static final z:I = 0x66747970
 
 
 # direct methods
@@ -324,7 +332,7 @@
     const-string v11, " formatCode="
 
     .line 17
-    invoke-static {v9, v2, v10, v6, v11}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v9, v2, v10, v6, v11}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
 
@@ -534,7 +542,7 @@
     .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$a;
 
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -569,7 +577,7 @@
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$a;
 
     .line 2
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -578,7 +586,7 @@
     invoke-direct {v0, p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$a;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 3
-    invoke-static {p2}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -610,7 +618,7 @@
     .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$c;
 
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -645,7 +653,7 @@
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$c;
 
     .line 2
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -654,7 +662,7 @@
     invoke-direct {v0, p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$c;-><init>(Ljava/io/InputStream;)V
 
     .line 3
-    invoke-static {p2}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -886,14 +894,26 @@
     :cond_3
     const v1, 0x52494646
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_5
 
     .line 10
-    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    invoke-virtual {p0, p1, v0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->m(Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;I)Z
 
-    return-object p1
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->AVIF:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+    goto :goto_1
 
     :cond_4
+    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+    :goto_1
+    return-object p1
+
+    :cond_5
     const-wide/16 v0, 0x4
 
     .line 11
@@ -914,7 +934,7 @@
 
     const v3, 0x57454250
 
-    if-eq v2, v3, :cond_5
+    if-eq v2, v3, :cond_6
 
     .line 13
     sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
@@ -922,7 +942,7 @@
     return-object p1
 
     .line 14
-    :cond_5
+    :cond_6
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
 
     move-result v2
@@ -939,19 +959,19 @@
 
     const v4, 0x56503800
 
-    if-eq v3, v4, :cond_6
+    if-eq v3, v4, :cond_7
 
     .line 15
     sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-object p1
 
-    :cond_6
+    :cond_7
     and-int/lit16 v2, v2, 0xff
 
     const/16 v3, 0x58
 
-    if-ne v2, v3, :cond_8
+    if-ne v2, v3, :cond_a
 
     .line 16
     invoke-interface {p1, v0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
@@ -961,58 +981,68 @@
 
     move-result p1
 
-    and-int/lit8 p1, p1, 0x10
+    and-int/lit8 v0, p1, 0x2
 
-    if-eqz p1, :cond_7
+    if-eqz v0, :cond_8
 
     .line 18
-    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->ANIMATED_WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    goto :goto_1
-
-    :cond_7
-    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
-
-    :goto_1
     return-object p1
 
     :cond_8
-    const/16 v3, 0x4c
+    and-int/lit8 p1, p1, 0x10
 
-    if-ne v2, v3, :cond_a
+    if-eqz p1, :cond_9
 
     .line 19
-    invoke-interface {p1, v0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
+    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+    return-object p1
 
     .line 20
+    :cond_9
+    sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+    return-object p1
+
+    :cond_a
+    const/16 v3, 0x4c
+
+    if-ne v2, v3, :cond_c
+
+    .line 21
+    invoke-interface {p1, v0, v1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
+
+    .line 22
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->c()S
 
     move-result p1
 
     and-int/lit8 p1, p1, 0x8
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_b
 
-    .line 21
+    .line 23
     sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     goto :goto_2
 
-    :cond_9
+    :cond_b
     sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     :goto_2
     return-object p1
 
-    .line 22
-    :cond_a
+    .line 24
+    :cond_c
     sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     :try_end_2
     .catch Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader$EndOfFileException; {:try_start_2 .. :try_end_2} :catch_1
 
     return-object p1
 
-    .line 23
+    .line 25
     :catch_1
     sget-object p1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
@@ -1194,7 +1224,7 @@
     const-string v5, ", but actually skipped: "
 
     .line 10
-    invoke-static {p1, v0, v2, v1, v5}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0, v2, v1, v5}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -1301,4 +1331,122 @@
 
     :cond_3
     return v0
+.end method
+
+.method public final m(Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;I)Z
+    .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
+
+    move-result v0
+
+    shl-int/lit8 v0, v0, 0x10
+
+    invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
+    const/4 v1, 0x0
+
+    const v2, 0x66747970
+
+    if-eq v0, v2, :cond_0
+
+    return v1
+
+    .line 2
+    :cond_0
+    invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
+
+    move-result v0
+
+    shl-int/lit8 v0, v0, 0x10
+
+    invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
+
+    move-result v2
+
+    or-int/2addr v0, v2
+
+    const v2, 0x61766966
+
+    const/4 v3, 0x1
+
+    if-eq v0, v2, :cond_6
+
+    const v4, 0x61766973
+
+    if-ne v0, v4, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    const-wide/16 v5, 0x4
+
+    .line 3
+    invoke-interface {p1, v5, v6}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
+
+    add-int/lit8 p2, p2, -0x10
+
+    .line 4
+    rem-int/lit8 v0, p2, 0x4
+
+    if-eqz v0, :cond_2
+
+    return v1
+
+    :cond_2
+    move v0, v1
+
+    :goto_0
+    const/4 v5, 0x5
+
+    if-ge v0, v5, :cond_5
+
+    if-lez p2, :cond_5
+
+    .line 5
+    invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
+
+    move-result v5
+
+    shl-int/lit8 v5, v5, 0x10
+
+    invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->a()I
+
+    move-result v6
+
+    or-int/2addr v5, v6
+
+    if-eq v5, v2, :cond_4
+
+    if-ne v5, v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    add-int/lit8 p2, p2, -0x4
+
+    goto :goto_0
+
+    :cond_4
+    :goto_1
+    return v3
+
+    :cond_5
+    return v1
+
+    :cond_6
+    :goto_2
+    return v3
 .end method

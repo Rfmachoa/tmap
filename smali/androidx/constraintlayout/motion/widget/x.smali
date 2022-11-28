@@ -1,9 +1,10 @@
-.class public abstract Landroidx/constraintlayout/motion/widget/x;
+.class public Landroidx/constraintlayout/motion/widget/x;
 .super Ljava/lang/Object;
-.source "TransitionAdapter.java"
+.source "TransitionBuilder.java"
 
-# interfaces
-.implements Landroidx/constraintlayout/motion/widget/MotionLayout$i;
+
+# static fields
+.field public static final a:Ljava/lang/String; = "TransitionBuilder"
 
 
 # direct methods
@@ -16,28 +17,141 @@
     return-void
 .end method
 
+.method public static a(Landroidx/constraintlayout/motion/widget/s;IILandroidx/constraintlayout/widget/c;ILandroidx/constraintlayout/widget/c;)Landroidx/constraintlayout/motion/widget/s$b;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "scene",
+            "transitionId",
+            "startConstraintSetId",
+            "startConstraintSet",
+            "endConstraintSetId",
+            "endConstraintSet"
+        }
+    .end annotation
 
-# virtual methods
-.method public a(Landroidx/constraintlayout/motion/widget/MotionLayout;IIF)V
-    .locals 0
+    .line 1
+    new-instance v0, Landroidx/constraintlayout/motion/widget/s$b;
+
+    invoke-direct {v0, p1, p0, p2, p4}, Landroidx/constraintlayout/motion/widget/s$b;-><init>(ILandroidx/constraintlayout/motion/widget/s;II)V
+
+    .line 2
+    invoke-static {p0, v0, p3, p5}, Landroidx/constraintlayout/motion/widget/x;->b(Landroidx/constraintlayout/motion/widget/s;Landroidx/constraintlayout/motion/widget/s$b;Landroidx/constraintlayout/widget/c;Landroidx/constraintlayout/widget/c;)V
+
+    return-object v0
+.end method
+
+.method public static b(Landroidx/constraintlayout/motion/widget/s;Landroidx/constraintlayout/motion/widget/s$b;Landroidx/constraintlayout/widget/c;Landroidx/constraintlayout/widget/c;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "scene",
+            "transition",
+            "startConstraintSet",
+            "endConstraintSet"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Landroidx/constraintlayout/motion/widget/s$b;->I()I
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p1}, Landroidx/constraintlayout/motion/widget/s$b;->B()I
+
+    move-result p1
+
+    .line 3
+    invoke-virtual {p0, v0, p2}, Landroidx/constraintlayout/motion/widget/s;->j0(ILandroidx/constraintlayout/widget/c;)V
+
+    .line 4
+    invoke-virtual {p0, p1, p3}, Landroidx/constraintlayout/motion/widget/s;->j0(ILandroidx/constraintlayout/widget/c;)V
 
     return-void
 .end method
 
-.method public b(Landroidx/constraintlayout/motion/widget/MotionLayout;I)V
-    .locals 0
+.method public static c(Landroidx/constraintlayout/motion/widget/MotionLayout;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "layout"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout;->a:Landroidx/constraintlayout/motion/widget/s;
+
+    if-eqz v0, :cond_2
+
+    .line 2
+    invoke-virtual {v0, p0}, Landroidx/constraintlayout/motion/widget/s;->s0(Landroidx/constraintlayout/motion/widget/MotionLayout;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    .line 3
+    iget-object p0, v0, Landroidx/constraintlayout/motion/widget/s;->c:Landroidx/constraintlayout/motion/widget/s$b;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {v0}, Landroidx/constraintlayout/motion/widget/s;->s()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
 
     return-void
-.end method
 
-.method public c(Landroidx/constraintlayout/motion/widget/MotionLayout;II)V
-    .locals 0
+    .line 4
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
 
-    return-void
-.end method
+    const-string v0, "Invalid motion layout. Motion Scene doesn\'t have any transition."
 
-.method public d(Landroidx/constraintlayout/motion/widget/MotionLayout;IZF)V
-    .locals 0
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw p0
+
+    .line 5
+    :cond_1
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string v0, "MotionLayout doesn\'t have the right motion scene."
+
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 6
+    :cond_2
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string v0, "Invalid motion layout. Layout missing Motion Scene."
+
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

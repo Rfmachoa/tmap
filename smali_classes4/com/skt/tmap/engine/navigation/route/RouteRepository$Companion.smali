@@ -76,8 +76,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -95,7 +95,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion;-><init>()V
 
     return-void
@@ -328,7 +327,7 @@
 
     invoke-static {p11, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "themeRoadId"
+    const-string v0, "themeRoadId"
 
     invoke-static {p13, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -336,7 +335,7 @@
 
     invoke-static {p14, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 17
+    .line 16
     new-instance v0, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;-><init>()V
@@ -345,59 +344,59 @@
 
     move-result-object p3
 
-    .line 18
+    .line 17
     invoke-virtual {p3, p4}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->destination(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 19
+    .line 18
     invoke-virtual {p3, p5}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->setWayPointList(Ljava/util/List;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 20
+    .line 19
     invoke-virtual {p3, p6}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->routePlanTypeList(Ljava/util/List;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 21
+    .line 20
     invoke-virtual {p3, p7}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->destSearchCode(Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 22
+    .line 21
     invoke-virtual {p3, p8}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->searchTypeCode(B)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 23
+    .line 22
     invoke-virtual {p3, p13}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->themeRouteId(Ljava/lang/String;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 24
+    .line 23
     invoke-virtual {p3, p9}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->usingHiPass(Z)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 25
+    .line 24
     invoke-virtual {p3, p10}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->carType(Lcom/skt/tmap/engine/navigation/network/ndds/TollCarType;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 26
+    .line 25
     invoke-virtual {p3, p11}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->oilType(Lcom/skt/tmap/engine/navigation/network/ndds/CarOilType;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
-    .line 27
+    .line 26
     invoke-virtual {p3, p12}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->setGpsDataList(Ljava/util/List;)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
     move-result-object p3
 
     if-eqz p2, :cond_0
 
-    .line 28
+    .line 27
     invoke-virtual {p2}, Landroid/location/Location;->getSpeed()F
 
     move-result p4
@@ -406,14 +405,14 @@
 
     invoke-virtual {p3, p4, p5}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->speed(D)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
-    .line 29
+    .line 28
     invoke-virtual {p2}, Landroid/location/Location;->hasBearing()Z
 
     move-result p4
 
     if-eqz p4, :cond_0
 
-    .line 30
+    .line 29
     invoke-virtual {p2}, Landroid/location/Location;->getBearing()F
 
     move-result p2
@@ -422,7 +421,7 @@
 
     invoke-virtual {p3, p2}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->originAngle(I)Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
 
-    .line 31
+    .line 30
     :cond_0
     invoke-virtual {p3}, Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;->build()Lcom/skt/tmap/engine/navigation/route/RouteOption;
 
@@ -515,11 +514,8 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_4
 
-    goto/16 :goto_1
-
-    :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -531,7 +527,6 @@
     :sswitch_0
     const-string v2, "CT_TRUCK"
 
-    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -547,9 +542,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :sswitch_2
     const-string v2, "CT_MIDDLE"
@@ -558,9 +553,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :sswitch_3
     const-string v2, "CT_SPECIAL"
@@ -569,9 +564,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :sswitch_4
     const-string v2, "CT_SMALL_TRUCK"
@@ -580,31 +575,34 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_0
 
+    goto :goto_1
+
+    :cond_0
     :goto_0
     const-string v0, "car.options"
 
     const-string v2, ""
 
-    .line 7
+    .line 6
     invoke-interface {p1, v0, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 8
+    .line 7
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 9
+    .line 8
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 10
+    .line 9
     new-instance v2, Lcom/google/gson/Gson;
 
     invoke-direct {v2}, Lcom/google/gson/Gson;-><init>()V
@@ -623,9 +621,9 @@
 
     check-cast p1, Ljava/util/Map;
 
-    const-string/jumbo v0, "truckType"
+    const-string v0, "truckType"
 
-    .line 11
+    .line 10
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
@@ -661,9 +659,9 @@
     if-eqz v0, :cond_3
 
     :cond_1
-    const-string/jumbo v0, "truckHeight"
+    const-string v0, "truckHeight"
 
-    .line 12
+    .line 11
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -677,9 +675,9 @@
     if-nez v0, :cond_3
 
     :cond_2
-    const-string/jumbo v0, "truckWeight"
+    const-string v0, "truckWeight"
 
-    .line 13
+    .line 12
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -692,24 +690,24 @@
 
     if-eqz v0, :cond_4
 
-    .line 14
+    .line 13
     :cond_3
     sget-object v0, Lcom/skt/tmap/engine/navigation/route/RoutePlanType;->Traffic_Truck:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    invoke-static {v0}, Lkotlin/collections/w;->k(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/collections/y;->l(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p2, Lcom/skt/tmap/engine/navigation/route/RouteOption;->routePlanTypeList:Ljava/util/List;
 
-    .line 15
+    .line 14
     iget-object v0, p2, Lcom/skt/tmap/engine/navigation/route/RouteOption;->extraInfo:Lcom/skt/tmap/engine/navigation/route/RouteOption$ExtraInfo;
 
     iget-object v0, v0, Lcom/skt/tmap/engine/navigation/route/RouteOption$ExtraInfo;->extraKeyValues:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 16
+    .line 15
     :cond_4
     :goto_1
     new-instance p1, Lcom/skt/tmap/engine/navigation/network/RouteRequesterV2;
@@ -724,11 +722,13 @@
 
     move-result-object p1
 
-    const-string p2, "RouteRequesterV2(routeOp\u2026         }\n            })"
+    const-string p2, "routeOption: RouteOption\u2026         }\n            })"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -797,10 +797,6 @@
     invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
 
     move-result-object v0
-
-    const-string v1, "TmapNavigation.getInstance()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getReRouteData()Lcom/skt/tmap/engine/navigation/data/RerouteData;
 

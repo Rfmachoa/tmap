@@ -1,20 +1,39 @@
-.class public Lhh/i;
+.class public interface abstract Lhh/i;
 .super Ljava/lang/Object;
-.source "dagger_hilt_android_lifecycle_HiltViewModel.java"
+.source "HttpConnection.java"
+
+# interfaces
+.implements Ljava/io/Closeable;
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/android/lifecycle/HiltViewModel;
-.end annotation
+# virtual methods
+.method public abstract close()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
+.method public abstract getMetrics()Lhh/k;
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract getSocketTimeout()I
+.end method
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract isOpen()Z
+.end method
 
-    return-void
+.method public abstract isStale()Z
+.end method
+
+.method public abstract setSocketTimeout(I)V
+.end method
+
+.method public abstract shutdown()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method

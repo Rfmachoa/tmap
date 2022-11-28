@@ -75,7 +75,7 @@
     const/4 v3, -0x1
 
     .line 3
-    invoke-static {p2}, Landroid/support/v4/media/RatingCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
+    invoke-static {p2}, Landroid/support/v4/media/RatingCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v4
 

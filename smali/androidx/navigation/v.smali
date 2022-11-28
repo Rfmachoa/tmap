@@ -8,7 +8,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNavDeepLinkDslBuilder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavDeepLinkDslBuilder.kt\nandroidx/navigation/NavDeepLinkDslBuilder\n*L\n1#1,67:1\n*E\n"
+    value = "SMAP\nNavDeepLinkDslBuilder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavDeepLinkDslBuilder.kt\nandroidx/navigation/NavDeepLinkDslBuilder\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,68:1\n1#2:69\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -19,11 +19,11 @@
     d2 = {
         "Landroidx/navigation/v;",
         "",
-        "Landroidx/navigation/t;",
+        "Landroidx/navigation/NavDeepLink;",
         "a",
-        "()Landroidx/navigation/t;",
-        "Landroidx/navigation/t$a;",
-        "Landroidx/navigation/t$a;",
+        "()Landroidx/navigation/NavDeepLink;",
+        "Landroidx/navigation/NavDeepLink$a;",
+        "Landroidx/navigation/NavDeepLink$a;",
         "builder",
         "",
         "b",
@@ -41,19 +41,22 @@
         "mimeType",
         "<init>",
         "()V",
-        "navigation-common-ktx_release"
+        "navigation-common_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
 
 
 # instance fields
-.field public final a:Landroidx/navigation/t$a;
+.field public final a:Landroidx/navigation/NavDeepLink$a;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field public b:Ljava/lang/String;
     .annotation build Lorg/jetbrains/annotations/Nullable;
@@ -79,24 +82,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroidx/navigation/t$a;
+    new-instance v0, Landroidx/navigation/NavDeepLink$a;
 
-    invoke-direct {v0}, Landroidx/navigation/t$a;-><init>()V
+    invoke-direct {v0}, Landroidx/navigation/NavDeepLink$a;-><init>()V
 
-    iput-object v0, p0, Landroidx/navigation/v;->a:Landroidx/navigation/t$a;
+    iput-object v0, p0, Landroidx/navigation/v;->a:Landroidx/navigation/NavDeepLink$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroidx/navigation/t;
+.method public final a()Landroidx/navigation/NavDeepLink;
     .locals 3
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/v;->a:Landroidx/navigation/t$a;
+    iget-object v0, p0, Landroidx/navigation/v;->a:Landroidx/navigation/NavDeepLink$a;
 
     .line 2
     iget-object v1, p0, Landroidx/navigation/v;->b:Ljava/lang/String;
@@ -128,7 +131,7 @@
     if-eqz v1, :cond_2
 
     .line 3
-    invoke-virtual {v0, v1}, Landroidx/navigation/t$a;->g(Ljava/lang/String;)Landroidx/navigation/t$a;
+    invoke-virtual {v0, v1}, Landroidx/navigation/NavDeepLink$a;->g(Ljava/lang/String;)Landroidx/navigation/NavDeepLink$a;
 
     .line 4
     :cond_2
@@ -136,7 +139,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/t$a;->e(Ljava/lang/String;)Landroidx/navigation/t$a;
+    invoke-virtual {v0, v1}, Landroidx/navigation/NavDeepLink$a;->e(Ljava/lang/String;)Landroidx/navigation/NavDeepLink$a;
 
     .line 5
     :cond_3
@@ -144,17 +147,13 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/t$a;->f(Ljava/lang/String;)Landroidx/navigation/t$a;
+    invoke-virtual {v0, v1}, Landroidx/navigation/NavDeepLink$a;->f(Ljava/lang/String;)Landroidx/navigation/NavDeepLink$a;
 
     .line 6
     :cond_4
-    invoke-virtual {v0}, Landroidx/navigation/t$a;->a()Landroidx/navigation/t;
+    invoke-virtual {v0}, Landroidx/navigation/NavDeepLink$a;->a()Landroidx/navigation/NavDeepLink;
 
     move-result-object v0
-
-    const-string v1, "builder.apply {\n        \u2026eType(it) }\n    }.build()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 

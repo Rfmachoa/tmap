@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;
-.super Li3/b$a;
+.super Lq4/b$a;
 .source "BaseProgressIndicator.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;->this$0:Lcom/google/android/material/progressindicator/BaseProgressIndicator;
 
-    invoke-direct {p0}, Li3/b$a;-><init>()V
+    invoke-direct {p0}, Lq4/b$a;-><init>()V
 
     return-void
 .end method
@@ -36,7 +36,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Li3/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Lq4/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
     iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;->this$0:Lcom/google/android/material/progressindicator/BaseProgressIndicator;

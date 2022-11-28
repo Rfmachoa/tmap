@@ -168,7 +168,7 @@
     .line 12
     iget-object v1, p0, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4$1;->this$1:Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;
 
-    iget-object v1, v1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->val$appSettingsDataTask:Lcom/google/android/gms/tasks/Task;
+    iget-object v1, v1, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4;->val$settingsDataTask:Lcom/google/android/gms/tasks/Task;
 
     new-instance v2, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsController$4$1$1;
 

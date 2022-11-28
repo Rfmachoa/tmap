@@ -124,6 +124,17 @@
     return-object v0
 .end method
 
+.method public arrayNode(I)Lcom/fasterxml/jackson/databind/node/ArrayNode;
+    .locals 1
+
+    .line 2
+    new-instance v0, Lcom/fasterxml/jackson/databind/node/ArrayNode;
+
+    invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/databind/node/ArrayNode;-><init>(Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;I)V
+
+    return-object v0
+.end method
+
 .method public binaryNode([B)Lcom/fasterxml/jackson/databind/node/BinaryNode;
     .locals 0
 
@@ -200,6 +211,17 @@
     return-object p1
 .end method
 
+.method public missingNode()Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lcom/fasterxml/jackson/databind/node/MissingNode;->getInstance()Lcom/fasterxml/jackson/databind/node/MissingNode;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
     .locals 1
 
@@ -225,7 +247,7 @@
 .method public numberNode(B)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 0
 
-    .line 9
+    .line 7
     invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/IntNode;->valueOf(I)Lcom/fasterxml/jackson/databind/node/IntNode;
 
     move-result-object p1
@@ -236,7 +258,7 @@
 .method public numberNode(D)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 0
 
-    .line 21
+    .line 20
     invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/node/DoubleNode;->valueOf(D)Lcom/fasterxml/jackson/databind/node/DoubleNode;
 
     move-result-object p1
@@ -247,7 +269,7 @@
 .method public numberNode(F)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 0
 
-    .line 19
+    .line 18
     invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/FloatNode;->valueOf(F)Lcom/fasterxml/jackson/databind/node/FloatNode;
 
     move-result-object p1
@@ -258,7 +280,7 @@
 .method public numberNode(I)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 0
 
-    .line 13
+    .line 11
     invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/IntNode;->valueOf(I)Lcom/fasterxml/jackson/databind/node/IntNode;
 
     move-result-object p1
@@ -269,61 +291,8 @@
 .method public numberNode(J)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 0
 
-    .line 15
+    .line 13
     invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/node/LongNode;->valueOf(J)Lcom/fasterxml/jackson/databind/node/LongNode;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/NumericNode;
-    .locals 1
-
-    .line 23
-    iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->_cfgBigDecimalExact:Z
-
-    if-eqz v0, :cond_0
-
-    .line 24
-    invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/DecimalNode;->valueOf(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/DecimalNode;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 25
-    :cond_0
-    sget-object v0, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
-
-    invoke-virtual {p1, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    sget-object p1, Lcom/fasterxml/jackson/databind/node/DecimalNode;->ZERO:Lcom/fasterxml/jackson/databind/node/DecimalNode;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->stripTrailingZeros()Ljava/math/BigDecimal;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/DecimalNode;->valueOf(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/DecimalNode;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
-.end method
-
-.method public numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/NumericNode;
-    .locals 0
-
-    .line 18
-    invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/BigIntegerNode;->valueOf(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/BigIntegerNode;
 
     move-result-object p1
 
@@ -333,7 +302,7 @@
 .method public numberNode(S)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 0
 
-    .line 11
+    .line 9
     invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/ShortNode;->valueOf(S)Lcom/fasterxml/jackson/databind/node/ShortNode;
 
     move-result-object p1
@@ -401,7 +370,7 @@
 
     if-nez p1, :cond_0
 
-    .line 10
+    .line 8
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
@@ -426,7 +395,7 @@
 
     if-nez p1, :cond_0
 
-    .line 22
+    .line 21
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
@@ -451,7 +420,7 @@
 
     if-nez p1, :cond_0
 
-    .line 20
+    .line 19
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
@@ -476,7 +445,7 @@
 
     if-nez p1, :cond_0
 
-    .line 14
+    .line 12
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
@@ -501,14 +470,14 @@
 
     if-nez p1, :cond_0
 
-    .line 16
+    .line 14
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
 
     return-object p1
 
-    .line 17
+    .line 15
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -526,7 +495,7 @@
 
     if-nez p1, :cond_0
 
-    .line 12
+    .line 10
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
@@ -546,22 +515,74 @@
     return-object p1
 .end method
 
-.method public bridge synthetic numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/ValueNode;
-    .locals 0
+.method public numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/ValueNode;
+    .locals 1
 
-    .line 6
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/NumericNode;
+    if-nez p1, :cond_0
+
+    .line 22
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
 
     return-object p1
+
+    .line 23
+    :cond_0
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->_cfgBigDecimalExact:Z
+
+    if-eqz v0, :cond_1
+
+    .line 24
+    invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/DecimalNode;->valueOf(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/DecimalNode;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 25
+    :cond_1
+    sget-object v0, Ljava/math/BigDecimal;->ZERO:Ljava/math/BigDecimal;
+
+    invoke-virtual {p1, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    sget-object p1, Lcom/fasterxml/jackson/databind/node/DecimalNode;->ZERO:Lcom/fasterxml/jackson/databind/node/DecimalNode;
+
+    goto :goto_0
+
+    .line 26
+    :cond_2
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->stripTrailingZeros()Ljava/math/BigDecimal;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/DecimalNode;->valueOf(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/DecimalNode;
+
+    move-result-object p1
+
+    :goto_0
+    return-object p1
 .end method
 
-.method public bridge synthetic numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/ValueNode;
+.method public numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 0
 
-    .line 7
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/NumericNode;
+    if-nez p1, :cond_0
+
+    .line 16
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 17
+    :cond_0
+    invoke-static {p1}, Lcom/fasterxml/jackson/databind/node/BigIntegerNode;->valueOf(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/BigIntegerNode;
 
     move-result-object p1
 
@@ -571,7 +592,7 @@
 .method public bridge synthetic numberNode(S)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 0
 
-    .line 8
+    .line 6
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(S)Lcom/fasterxml/jackson/databind/node/NumericNode;
 
     move-result-object p1

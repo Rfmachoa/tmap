@@ -151,19 +151,6 @@
 
 .method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000,
-            0x1000,
-            0x0
-        }
-        names = {
-            "$enum$name",
-            "$enum$ordinal",
-            "holdsCameraSlot"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)V"
@@ -181,14 +168,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Landroidx/camera/core/impl/CameraInternal$State;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8000
-        }
-        names = {
-            "name"
-        }
-    .end annotation
 
     .line 1
     const-class v0, Landroidx/camera/core/impl/CameraInternal$State;

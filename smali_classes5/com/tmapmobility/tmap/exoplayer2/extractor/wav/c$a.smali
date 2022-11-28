@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/extractor/wav/c$a;
+.method public static a(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/extractor/wav/c$a;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -49,7 +49,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v0
 
@@ -57,18 +57,18 @@
 
     const/16 v2, 0x8
 
-    invoke-interface {p0, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->peekFully([BII)V
+    invoke-interface {p0, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->peekFully([BII)V
 
     .line 2
-    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->o()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->o()I
 
     move-result p0
 
     .line 4
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->v()J
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->v()J
 
     move-result-wide v0
 

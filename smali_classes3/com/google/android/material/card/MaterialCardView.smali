@@ -10,6 +10,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/google/android/material/card/MaterialCardView$CheckedIconGravity;,
         Lcom/google/android/material/card/MaterialCardView$OnCheckedChangeListener;
     }
 .end annotation
@@ -19,6 +20,14 @@
 .field private static final ACCESSIBILITY_CLASS_NAME:Ljava/lang/String; = "androidx.cardview.widget.CardView"
 
 .field private static final CHECKABLE_STATE_SET:[I
+
+.field public static final CHECKED_ICON_GRAVITY_BOTTOM_END:I = 0x800055
+
+.field public static final CHECKED_ICON_GRAVITY_BOTTOM_START:I = 0x800053
+
+.field public static final CHECKED_ICON_GRAVITY_TOP_END:I = 0x800035
+
+.field public static final CHECKED_ICON_GRAVITY_TOP_START:I = 0x800033
 
 .field private static final CHECKED_STATE_SET:[I
 
@@ -313,6 +322,19 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public getCheckedIconGravity()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
+
+    invoke-virtual {v0}, Lcom/google/android/material/card/MaterialCardViewHelper;->getCheckedIconGravity()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public getCheckedIconMargin()I
@@ -720,7 +742,7 @@
 
     move-result v0
 
-    invoke-virtual {p1, p2, v0}, Lcom/google/android/material/card/MaterialCardViewHelper;->onMeasure(II)V
+    invoke-virtual {p1, p2, v0}, Lcom/google/android/material/card/MaterialCardViewHelper;->recalculateCheckedIconPosition(II)V
 
     return-void
 .end method
@@ -895,6 +917,27 @@
     return-void
 .end method
 
+.method public setCheckedIconGravity(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
+
+    invoke-virtual {v0}, Lcom/google/android/material/card/MaterialCardViewHelper;->getCheckedIconGravity()I
+
+    move-result v0
+
+    if-eq v0, p1, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/card/MaterialCardViewHelper;->setCheckedIconGravity(I)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setCheckedIconMargin(I)V
     .locals 1
     .param p1    # I
@@ -954,7 +997,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, p1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1179,7 +1222,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {v1, p1}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -1216,20 +1259,18 @@
 .end method
 
 .method public setStrokeColor(I)V
-    .locals 1
+    .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/ColorInt;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
-
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/card/MaterialCardViewHelper;->setStrokeColor(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/card/MaterialCardView;->setStrokeColor(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -1241,6 +1282,9 @@
     iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/card/MaterialCardViewHelper;->setStrokeColor(Landroid/content/res/ColorStateList;)V
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method
@@ -1256,6 +1300,9 @@
     iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/card/MaterialCardViewHelper;->setStrokeWidth(I)V
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method
@@ -1309,11 +1356,18 @@
     invoke-direct {p0}, Lcom/google/android/material/card/MaterialCardView;->forceRippleRedrawIfNeeded()V
 
     .line 5
+    iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->cardViewHelper:Lcom/google/android/material/card/MaterialCardViewHelper;
+
+    iget-boolean v1, p0, Lcom/google/android/material/card/MaterialCardView;->checked:Z
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/card/MaterialCardViewHelper;->setChecked(Z)V
+
+    .line 6
     iget-object v0, p0, Lcom/google/android/material/card/MaterialCardView;->onCheckedChangeListener:Lcom/google/android/material/card/MaterialCardView$OnCheckedChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 6
+    .line 7
     iget-boolean v1, p0, Lcom/google/android/material/card/MaterialCardView;->checked:Z
 
     invoke-interface {v0, p0, v1}, Lcom/google/android/material/card/MaterialCardView$OnCheckedChangeListener;->onCheckedChanged(Lcom/google/android/material/card/MaterialCardView;Z)V

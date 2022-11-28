@@ -59,7 +59,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$b;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->F7(Lcom/skt/tmap/activity/TmapMainActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->V7(Lcom/skt/tmap/activity/TmapMainActivity;)Ljava/util/List;
 
     move-result-object v0
 

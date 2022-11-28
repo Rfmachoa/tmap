@@ -52,6 +52,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqShakeItBodyVo;->campaignId:Ljava/lang/Integer;
@@ -61,6 +69,14 @@
 
 .method public setMomentCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqShakeItBodyVo;->momentCode:Ljava/lang/String;
@@ -70,6 +86,14 @@
 
 .method public setWin(Ljava/lang/Boolean;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "win"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqShakeItBodyVo;->win:Ljava/lang/Boolean;

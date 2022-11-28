@@ -97,7 +97,7 @@
 
     new-array v1, v0, [I
 
-    const v2, 0x7f04018b
+    const v2, 0x7f0401e7
 
     const/4 v3, 0x0
 
@@ -115,7 +115,7 @@
 
     new-array v1, v0, [I
 
-    const v2, 0x7f040445
+    const v2, 0x7f04056e
 
     aput v2, v1, v3
 
@@ -123,7 +123,7 @@
 
     new-array v1, v0, [I
 
-    const v2, 0x7f040203
+    const v2, 0x7f040278
 
     aput v2, v1, v3
 
@@ -163,7 +163,7 @@
 
     new-array v0, v0, [I
 
-    const v1, 0x7f04046d
+    const v1, 0x7f04059d
 
     aput v1, v0, v3
 
@@ -173,46 +173,46 @@
 
     :array_0
     .array-data 4
-        0x7f040163
-        0x7f04019d
-        0x7f04019e
-        0x7f0401fb
-        0x7f0402bb
-        0x7f0402c7
-        0x7f0402f1
-        0x7f0402f2
-        0x7f040330
-        0x7f04038f
+        0x7f0401b3
+        0x7f0401f9
+        0x7f0401fa
+        0x7f04026f
+        0x7f040355
+        0x7f040364
+        0x7f0403b5
+        0x7f0403b6
+        0x7f0403f9
+        0x7f04047d
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f040049
-        0x7f0401c1
-        0x7f040342
+        0x7f040052
+        0x7f04022d
+        0x7f040416
     .end array-data
 
     :array_2
     .array-data 4
-        0x7f040295
-        0x7f040296
+        0x7f040321
+        0x7f040322
     .end array-data
 
     :array_3
     .array-data 4
-        0x7f040468
-        0x7f040469
-        0x7f04046b
-        0x7f04046e
+        0x7f040598
+        0x7f040599
+        0x7f04059b
+        0x7f04059e
     .end array-data
 
     :array_4
     .array-data 4
-        0x7f04046a
-        0x7f04046c
-        0x7f04046f
-        0x7f040470
-        0x7f040471
+        0x7f04059a
+        0x7f04059c
+        0x7f04059f
+        0x7f0405a0
+        0x7f0405a1
     .end array-data
 .end method
 

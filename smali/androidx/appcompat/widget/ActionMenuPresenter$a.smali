@@ -70,7 +70,7 @@
 
     .line 6
     :cond_1
-    iget-object p1, p1, Landroidx/appcompat/widget/ActionMenuPresenter;->h1:Landroidx/appcompat/widget/ActionMenuPresenter$f;
+    iget-object p1, p1, Landroidx/appcompat/widget/ActionMenuPresenter;->j1:Landroidx/appcompat/widget/ActionMenuPresenter$f;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/h;->a(Landroidx/appcompat/view/menu/i$a;)V
 
@@ -87,12 +87,12 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->e1:Landroidx/appcompat/widget/ActionMenuPresenter$a;
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->g1:Landroidx/appcompat/widget/ActionMenuPresenter$a;
 
     const/4 v1, 0x0
 
     .line 2
-    iput v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->i1:I
+    iput v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->k1:I
 
     .line 3
     invoke-super {p0}, Landroidx/appcompat/view/menu/h;->g()V

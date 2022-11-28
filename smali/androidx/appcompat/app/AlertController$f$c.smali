@@ -58,7 +58,7 @@
 
     iget-object p2, p0, Landroidx/appcompat/app/AlertController$f$c;->a:Landroidx/appcompat/app/AlertController;
 
-    iget-object p2, p2, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iget-object p2, p2, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/f;
 
     invoke-interface {p1, p2, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
@@ -72,9 +72,9 @@
     .line 3
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$f$c;->a:Landroidx/appcompat/app/AlertController;
 
-    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/e;
+    iget-object p1, p1, Landroidx/appcompat/app/AlertController;->b:Landroidx/appcompat/app/f;
 
-    invoke-virtual {p1}, Landroidx/appcompat/app/e;->dismiss()V
+    invoke-virtual {p1}, Landroidx/appcompat/app/f;->dismiss()V
 
     :cond_0
     return-void

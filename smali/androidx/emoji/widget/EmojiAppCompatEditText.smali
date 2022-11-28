@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lh2/b;
+.field public a:Ly2/b;
 
 .field public b:Z
 
@@ -52,24 +52,24 @@
     return-void
 .end method
 
-.method private getEmojiEditTextHelper()Lh2/b;
+.method private getEmojiEditTextHelper()Ly2/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->a:Lh2/b;
+    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->a:Ly2/b;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lh2/b;
+    new-instance v0, Ly2/b;
 
-    invoke-direct {v0, p0}, Lh2/b;-><init>(Landroid/widget/EditText;)V
+    invoke-direct {v0, p0}, Ly2/b;-><init>(Landroid/widget/EditText;)V
 
-    iput-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->a:Lh2/b;
+    iput-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->a:Ly2/b;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->a:Lh2/b;
+    iget-object v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->a:Ly2/b;
 
     return-object v0
 .end method
@@ -94,14 +94,14 @@
     iput-boolean v0, p0, Landroidx/emoji/widget/EmojiAppCompatEditText;->b:Z
 
     .line 3
-    new-instance v0, Lh2/a;
+    new-instance v0, Ly2/a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lh2/a;-><init>(Landroid/view/View;Landroid/util/AttributeSet;II)V
+    invoke-direct {v0, p0, p1, p2, v1}, Ly2/a;-><init>(Landroid/view/View;Landroid/util/AttributeSet;II)V
 
     .line 4
-    invoke-virtual {v0}, Lh2/a;->a()I
+    invoke-virtual {v0}, Ly2/a;->a()I
 
     move-result p1
 
@@ -122,11 +122,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Lh2/b;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Ly2/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lh2/b;->c()I
+    invoke-virtual {v0}, Ly2/b;->c()I
 
     move-result v0
 
@@ -142,11 +142,11 @@
     move-result-object v0
 
     .line 2
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Lh2/b;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Ly2/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, p1}, Lh2/b;->d(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    invoke-virtual {v1, v0, p1}, Ly2/b;->d(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 
     move-result-object p1
 
@@ -163,17 +163,17 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Lh2/b;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Ly2/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lh2/b;->b(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
+    invoke-virtual {v0, p1}, Ly2/b;->b(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
 
     move-result-object p1
 
     .line 2
     :cond_0
-    invoke-super {p0, p1}, Landroid/widget/EditText;->setKeyListener(Landroid/text/method/KeyListener;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->setKeyListener(Landroid/text/method/KeyListener;)V
 
     return-void
 .end method
@@ -187,11 +187,11 @@
     .end param
 
     .line 1
-    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Lh2/b;
+    invoke-direct {p0}, Landroidx/emoji/widget/EmojiAppCompatEditText;->getEmojiEditTextHelper()Ly2/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lh2/b;->f(I)V
+    invoke-virtual {v0, p1}, Ly2/b;->f(I)V
 
     return-void
 .end method

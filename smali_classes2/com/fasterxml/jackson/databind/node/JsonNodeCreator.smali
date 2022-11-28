@@ -7,6 +7,9 @@
 .method public abstract arrayNode()Lcom/fasterxml/jackson/databind/node/ArrayNode;
 .end method
 
+.method public abstract arrayNode(I)Lcom/fasterxml/jackson/databind/node/ArrayNode;
+.end method
+
 .method public abstract binaryNode([B)Lcom/fasterxml/jackson/databind/node/ValueNode;
 .end method
 

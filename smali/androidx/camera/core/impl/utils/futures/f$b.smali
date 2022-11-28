@@ -3,7 +3,7 @@
 .source "Futures.java"
 
 # interfaces
-.implements Ln/a;
+.implements Lp/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ln/a<",
+        "Lp/a<",
         "Ljava/lang/Object;",
         "Ljava/lang/Object;",
         ">;"
@@ -41,14 +41,6 @@
 # virtual methods
 .method public apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "input"
-        }
-    .end annotation
 
     return-object p1
 .end method

@@ -510,7 +510,7 @@
     const/16 v0, 0xa
 
     .line 1
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/a;->a(C)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroidx/emoji2/text/flatbuffer/j;->a(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field public d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+.field public d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
 .field public e:I
 
@@ -318,7 +318,7 @@
     invoke-static {v2, v5}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
     .line 11
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     .line 12
     iget v6, v0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->g:I
@@ -340,7 +340,7 @@
     invoke-static/range {v6 .. v11}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     .line 15
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     .line 16
     iget v12, v0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->h:I
@@ -362,7 +362,7 @@
     invoke-static/range {v12 .. v17}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     .line 19
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     .line 20
     invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c$a;->c(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c$a;)I
@@ -376,7 +376,7 @@
     invoke-static {v2, v5, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
     .line 21
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     return-void
 .end method
@@ -385,64 +385,64 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     const-string v1, "uniform mat4 uMvpMatrix;\nuniform mat3 uTexMatrix;\nattribute vec4 aPosition;\nattribute vec2 aTexCoords;\nvarying vec2 vTexCoords;\n// Standard transformation.\nvoid main() {\n  gl_Position = uMvpMatrix * aPosition;\n  vTexCoords = (uTexMatrix * vec3(aTexCoords, 1)).xy;\n}\n"
 
     const-string v2, "// This is required since the texture data is GL_TEXTURE_EXTERNAL_OES.\n#extension GL_OES_EGL_image_external : require\nprecision mediump float;\n// Standard texture rendering shader.\nuniform samplerExternalOES uTexture;\nvarying vec2 vTexCoords;\nvoid main() {\n  gl_FragColor = texture2D(uTexture, vTexCoords);\n}\n"
 
-    invoke-direct {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/o;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     const-string v1, "uMvpMatrix"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;->e(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/o;->l(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->e:I
 
     .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     const-string v1, "uTexMatrix"
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;->e(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/o;->l(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->f:I
 
     .line 4
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     const-string v1, "aPosition"
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;->c(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/o;->g(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->g:I
 
     .line 5
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     const-string v1, "aTexCoords"
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;->c(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/o;->g(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->h:I
 
     .line 6
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     const-string v1, "uTexture"
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;->e(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/o;->l(Ljava/lang/String;)I
 
     move-result v0
 
@@ -512,12 +512,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/c;->d:Lcom/tmapmobility/tmap/exoplayer2/util/o;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$c;->b()V
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/o;->f()V
 
     :cond_0
     return-void

@@ -3,7 +3,7 @@
 .source "TmapMainActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;
+.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;
 
 
 # annotations
@@ -57,11 +57,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$c;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->b8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->s8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->T(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->n0(Ljava/lang/String;)V
 
     return-void
 .end method

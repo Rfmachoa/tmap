@@ -92,7 +92,7 @@
     .line 4
     iget-object v2, p0, Landroidx/transition/i$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v2}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -110,7 +110,7 @@
     .line 6
     iget-object v4, p0, Landroidx/transition/i$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v4, v2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4, v2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -216,7 +216,7 @@
 
     iget-object v0, p0, Landroidx/transition/i$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1, v0}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

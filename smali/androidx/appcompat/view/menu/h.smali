@@ -13,6 +13,12 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/appcompat/view/menu/h$b;
+    }
+.end annotation
+
 
 # static fields
 .field public static final m:I = 0x30
@@ -37,7 +43,7 @@
 
 .field public i:Landroidx/appcompat/view/menu/i$a;
 
-.field public j:Lj/e;
+.field public j:Ll/e;
 
 .field public k:Landroid/widget/PopupWindow$OnDismissListener;
 
@@ -222,7 +228,7 @@
     iput-object p1, p0, Landroidx/appcompat/view/menu/h;->i:Landroidx/appcompat/view/menu/i$a;
 
     .line 2
-    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     if-eqz v0, :cond_0
 
@@ -233,7 +239,7 @@
     return-void
 .end method
 
-.method public final b()Lj/e;
+.method public final b()Ll/e;
     .locals 14
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -260,7 +266,7 @@
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
     .line 4
-    invoke-virtual {v0, v1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+    invoke-static {v0, v1}, Landroidx/appcompat/view/menu/h$b;->a(Landroid/view/Display;Landroid/graphics/Point;)V
 
     .line 5
     iget v0, v1, Landroid/graphics/Point;->x:I
@@ -339,17 +345,17 @@
     :goto_1
     iget-object v1, p0, Landroidx/appcompat/view/menu/h;->b:Landroidx/appcompat/view/menu/d;
 
-    invoke-virtual {v0, v1}, Lj/e;->b(Landroidx/appcompat/view/menu/d;)V
+    invoke-virtual {v0, v1}, Ll/e;->b(Landroidx/appcompat/view/menu/d;)V
 
     .line 10
     iget-object v1, p0, Landroidx/appcompat/view/menu/h;->l:Landroid/widget/PopupWindow$OnDismissListener;
 
-    invoke-virtual {v0, v1}, Lj/e;->l(Landroid/widget/PopupWindow$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Ll/e;->l(Landroid/widget/PopupWindow$OnDismissListener;)V
 
     .line 11
     iget-object v1, p0, Landroidx/appcompat/view/menu/h;->f:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lj/e;->g(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Ll/e;->g(Landroid/view/View;)V
 
     .line 12
     iget-object v1, p0, Landroidx/appcompat/view/menu/h;->i:Landroidx/appcompat/view/menu/i$a;
@@ -359,12 +365,12 @@
     .line 13
     iget-boolean v1, p0, Landroidx/appcompat/view/menu/h;->h:Z
 
-    invoke-virtual {v0, v1}, Lj/e;->i(Z)V
+    invoke-virtual {v0, v1}, Ll/e;->i(Z)V
 
     .line 14
     iget v1, p0, Landroidx/appcompat/view/menu/h;->g:I
 
-    invoke-virtual {v0, v1}, Lj/e;->j(I)V
+    invoke-virtual {v0, v1}, Ll/e;->j(I)V
 
     return-object v0
 .end method
@@ -382,11 +388,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/h;->e()Lj/e;
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/h;->e()Ll/e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj/g;->d()Landroid/widget/ListView;
+    invoke-interface {v0}, Ll/g;->d()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -404,34 +410,40 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
-    invoke-interface {v0}, Lj/g;->dismiss()V
+    invoke-interface {v0}, Ll/g;->dismiss()V
 
     :cond_0
     return-void
 .end method
 
-.method public e()Lj/e;
+.method public e()Ll/e;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/h;->b()Lj/e;
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/h;->b()Ll/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iput-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     return-object v0
 .end method
@@ -440,11 +452,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lj/g;->a()Z
+    invoke-interface {v0}, Ll/g;->a()Z
 
     move-result v0
 
@@ -467,7 +479,7 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iput-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     .line 2
     iget-object v0, p0, Landroidx/appcompat/view/menu/h;->k:Landroid/widget/PopupWindow$OnDismissListener;
@@ -501,12 +513,12 @@
     iput-boolean p1, p0, Landroidx/appcompat/view/menu/h;->h:Z
 
     .line 2
-    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Lj/e;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/h;->j:Ll/e;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p1}, Lj/e;->i(Z)V
+    invoke-virtual {v0, p1}, Ll/e;->i(Z)V
 
     :cond_0
     return-void
@@ -584,12 +596,12 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Landroidx/appcompat/view/menu/h;->e()Lj/e;
+    invoke-virtual {p0}, Landroidx/appcompat/view/menu/h;->e()Ll/e;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0, p4}, Lj/e;->m(Z)V
+    invoke-virtual {v0, p4}, Ll/e;->m(Z)V
 
     if-eqz p3, :cond_1
 
@@ -604,7 +616,7 @@
     move-result p4
 
     .line 5
-    invoke-static {p3, p4}, Ls1/h;->d(II)I
+    invoke-static {p3, p4}, Landroidx/core/view/l;->d(II)I
 
     move-result p3
 
@@ -625,10 +637,10 @@
 
     .line 7
     :cond_0
-    invoke-virtual {v0, p1}, Lj/e;->k(I)V
+    invoke-virtual {v0, p1}, Ll/e;->k(I)V
 
     .line 8
-    invoke-virtual {v0, p2}, Lj/e;->n(I)V
+    invoke-virtual {v0, p2}, Ll/e;->n(I)V
 
     .line 9
     iget-object p3, p0, Landroidx/appcompat/view/menu/h;->a:Landroid/content/Context;
@@ -667,11 +679,11 @@
     invoke-direct {p4, v1, v2, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 11
-    invoke-virtual {v0, p4}, Lj/e;->h(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, p4}, Ll/e;->h(Landroid/graphics/Rect;)V
 
     .line 12
     :cond_1
-    invoke-interface {v0}, Lj/g;->show()V
+    invoke-interface {v0}, Ll/g;->show()V
 
     return-void
 .end method

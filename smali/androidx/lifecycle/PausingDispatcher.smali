@@ -31,8 +31,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
@@ -105,11 +105,11 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 

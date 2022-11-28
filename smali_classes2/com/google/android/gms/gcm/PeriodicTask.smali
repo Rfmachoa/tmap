@@ -197,7 +197,7 @@
 
     const/16 v5, 0x36
 
-    invoke-static {v0, v5}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {v0, v5}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v5
 

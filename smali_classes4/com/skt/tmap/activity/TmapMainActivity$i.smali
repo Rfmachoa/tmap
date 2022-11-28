@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapMainActivity;->p8()V
+    value = Lcom/skt/tmap/activity/TmapMainActivity;->F8()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/lifecycle/Observer<",
-        "Lbc/b;",
+        "Lyd/b;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
 
 
 # virtual methods
-.method public a(Lbc/b;)V
+.method public a(Lyd/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -66,11 +66,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$i;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->s7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lbc/b;->c()I
+    invoke-virtual {p1}, Lyd/b;->c()I
 
     move-result p1
 
@@ -91,9 +91,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lbc/b;
+    check-cast p1, Lyd/b;
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapMainActivity$i;->a(Lbc/b;)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapMainActivity$i;->a(Lyd/b;)V
 
     return-void
 .end method

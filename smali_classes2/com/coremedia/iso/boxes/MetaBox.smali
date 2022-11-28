@@ -1,16 +1,16 @@
 .class public Lcom/coremedia/iso/boxes/MetaBox;
-.super Ld6/b;
+.super Lb8/b;
 .source "MetaBox.java"
 
 
 # static fields
 .field public static final TYPE:Ljava/lang/String; = "meta"
 
-.field private static final synthetic ajc$tjp_0:Lek/c$b;
+.field private static final synthetic ajc$tjp_0:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_1:Lek/c$b;
+.field private static final synthetic ajc$tjp_1:Ljm/c$b;
 
-.field private static final synthetic ajc$tjp_2:Lek/c$b;
+.field private static final synthetic ajc$tjp_2:Ljm/c$b;
 
 
 # instance fields
@@ -35,7 +35,7 @@
     const-string v0, "meta"
 
     .line 1
-    invoke-direct {p0, v0}, Ld6/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lb8/b;-><init>(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -52,13 +52,13 @@
     .locals 10
 
     .line 1
-    new-instance v8, Lkk/e;
+    new-instance v8, Lpm/e;
 
     const-class v0, Lcom/coremedia/iso/boxes/MetaBox;
 
     const-string v1, "MetaBox.java"
 
-    invoke-direct {v8, v1, v0}, Lkk/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v8, v1, v0}, Lpm/e;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     const-string v1, "1"
 
@@ -76,7 +76,7 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
@@ -84,11 +84,11 @@
 
     const/16 v1, 0x2a
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_0:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_0:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -106,17 +106,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x64
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_1:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_1:Ljm/c$b;
 
     const-string v1, "1"
 
@@ -134,17 +134,17 @@
 
     move-object v0, v8
 
-    invoke-virtual/range {v0 .. v7}, Lkk/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lgk/t;
+    invoke-virtual/range {v0 .. v7}, Lpm/e;->E(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Llm/t;
 
     move-result-object v0
 
     const/16 v1, 0x68
 
-    invoke-virtual {v8, v9, v0, v1}, Lkk/e;->F(Ljava/lang/String;Lek/e;I)Lek/c$b;
+    invoke-virtual {v8, v9, v0, v1}, Lpm/e;->H(Ljava/lang/String;Ljm/e;I)Ljm/c$b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_2:Lek/c$b;
+    sput-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_2:Ljm/c$b;
 
     return-void
 .end method
@@ -243,13 +243,13 @@
     .line 14
     :cond_2
     :try_start_0
-    iget-object v0, p0, Ld6/b;->boxes:Ljava/util/List;
+    iget-object v0, p0, Lb8/b;->boxes:Ljava/util/List;
 
-    iget-object v1, p0, Ld6/b;->boxParser:Lcom/coremedia/iso/BoxParser;
+    iget-object v1, p0, Lb8/b;->boxParser:Lcom/coremedia/iso/BoxParser;
 
-    new-instance v2, Ly6/a;
+    new-instance v2, Lw8/a;
 
-    invoke-direct {v2, p1}, Ly6/a;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v2, p1}, Lw8/a;-><init>(Ljava/nio/ByteBuffer;)V
 
     invoke-interface {v1, v2, p0}, Lcom/coremedia/iso/BoxParser;->parseBox(Ljava/nio/channels/ReadableByteChannel;Lcom/coremedia/iso/boxes/ContainerBox;)Lcom/coremedia/iso/boxes/Box;
 
@@ -294,7 +294,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0, p1}, Ld6/b;->writeChildBoxes(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/b;->writeChildBoxes(Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method
@@ -302,18 +302,18 @@
 .method public getContentSize()J
     .locals 4
 
-    sget-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_0:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_0:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     invoke-virtual {p0}, Lcom/coremedia/iso/boxes/MetaBox;->isMp4Box()Z
 
@@ -324,7 +324,7 @@
     const-wide/16 v0, 0x4
 
     .line 2
-    invoke-super {p0}, Ld6/b;->getContentSize()J
+    invoke-super {p0}, Lb8/b;->getContentSize()J
 
     move-result-wide v2
 
@@ -334,7 +334,7 @@
 
     .line 3
     :cond_0
-    invoke-super {p0}, Ld6/b;->getContentSize()J
+    invoke-super {p0}, Lb8/b;->getContentSize()J
 
     move-result-wide v0
 
@@ -364,18 +364,18 @@
 .method public isMp4Box()Z
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_1:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_1:Ljm/c$b;
 
-    invoke-static {v0, p0, p0}, Lkk/e;->v(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0}, Lpm/e;->v(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     iget v0, p0, Lcom/coremedia/iso/boxes/MetaBox;->version:I
 
@@ -400,22 +400,22 @@
 .method public setMp4Box(Z)V
     .locals 2
 
-    sget-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_2:Lek/c$b;
+    sget-object v0, Lcom/coremedia/iso/boxes/MetaBox;->ajc$tjp_2:Ljm/c$b;
 
-    invoke-static {p1}, Lik/e;->a(Z)Ljava/lang/Object;
+    invoke-static {p1}, Lnm/e;->a(Z)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v0, p0, p0, v1}, Lkk/e;->w(Lek/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lek/c;
+    invoke-static {v0, p0, p0, v1}, Lpm/e;->w(Ljm/c$b;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljm/c;
 
     move-result-object v0
 
     .line 1
-    invoke-static {}, Ld6/e;->b()Ld6/e;
+    invoke-static {}, Lb8/e;->b()Lb8/e;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ld6/e;->c(Lek/c;)V
+    invoke-virtual {v1, v0}, Lb8/e;->c(Ljm/c;)V
 
     if-eqz p1, :cond_0
 

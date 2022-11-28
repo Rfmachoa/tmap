@@ -78,13 +78,13 @@
     return-object p0
 .end method
 
-.method public setOutputBuffer(Lvd/k;)V
+.method public setOutputBuffer(Lyf/k;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/VideoDecoderGLSurfaceView;->a:Lcom/tmapmobility/tmap/exoplayer2/video/VideoDecoderGLSurfaceView$a;
 
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/video/VideoDecoderGLSurfaceView$a;->a(Lvd/k;)V
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/video/VideoDecoderGLSurfaceView$a;->a(Lyf/k;)V
 
     return-void
 .end method

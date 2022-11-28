@@ -61,7 +61,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {p0, v0}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, v0}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -78,13 +78,13 @@
     return-object p0
 .end method
 
-.method public static getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/j0;I)Landroid/content/res/ColorStateList;
+.method public static getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/o0;I)Landroid/content/res/ColorStateList;
     .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/appcompat/widget/j0;
+    .param p1    # Landroidx/appcompat/widget/o0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -96,7 +96,7 @@
     .end annotation
 
     .line 5
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/j0;->C(I)Z
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/o0;->C(I)Z
 
     move-result v0
 
@@ -105,14 +105,14 @@
     const/4 v0, 0x0
 
     .line 6
-    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/j0;->u(II)I
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/o0;->u(II)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 7
-    invoke-static {p0, v0}, Lg/a;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, v0}, Lh/a;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -122,11 +122,22 @@
 
     .line 8
     :cond_0
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/j0;->d(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/o0;->d(I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private static getComplexUnit(Landroid/util/TypedValue;)I
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Landroid/util/TypedValue;->getComplexUnit()I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static getDimensionPixelSize(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
@@ -238,7 +249,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {p0, v0}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, v0}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
@@ -329,6 +340,106 @@
     const/4 p0, 0x0
 
     return-object p0
+.end method
+
+.method public static getUnscaledTextSize(Landroid/content/Context;II)I
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+
+    if-nez p1, :cond_0
+
+    return p2
+
+    .line 1
+    :cond_0
+    sget-object v0, Lcom/google/android/material/R$styleable;->TextAppearance:[I
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    .line 2
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    .line 3
+    sget v1, Lcom/google/android/material/R$styleable;->TextAppearance_android_textSize:I
+
+    invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getValue(ILandroid/util/TypedValue;)Z
+
+    move-result v1
+
+    .line 4
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-nez v1, :cond_1
+
+    return p2
+
+    .line 5
+    :cond_1
+    invoke-static {v0}, Lcom/google/android/material/resources/MaterialResources;->getComplexUnit(Landroid/util/TypedValue;)I
+
+    move-result p1
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_2
+
+    .line 6
+    iget p1, v0, Landroid/util/TypedValue;->data:I
+
+    .line 7
+    invoke-static {p1}, Landroid/util/TypedValue;->complexToFloat(I)F
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p0
+
+    .line 8
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p0
+
+    return p0
+
+    .line 9
+    :cond_2
+    iget p1, v0, Landroid/util/TypedValue;->data:I
+
+    .line 10
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    .line 11
+    invoke-static {p1, p0}, Landroid/util/TypedValue;->complexToDimensionPixelSize(ILandroid/util/DisplayMetrics;)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static isFontScaleAtLeast1_3(Landroid/content/Context;)Z

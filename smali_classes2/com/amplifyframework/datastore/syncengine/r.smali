@@ -3,36 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/r;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/r;->a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/r;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/r;->a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/r;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p1, Lio/reactivex/rxjava3/disposables/c;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->i(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Ljava/lang/Throwable;)Z
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->m(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/rxjava3/disposables/c;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

@@ -29,7 +29,7 @@
     </RelativeLayout>
     <ListView android:id="@id/around_info_listview" android:background="@color/white_color" android:fadingEdge="none" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:divider="@color/tmap_common_list_divider_color_5" android:dividerHeight="@dimen/tmap_1dp" android:layout_below="@id/around_info_sort_layout" />
     <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/around_info_empty_data" android:background="@color/white_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/around_info_sort_layout">
-        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:background="@color/white_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tag_around_info_empty_data" android:fontFamily="@font/skp_go_mm" />
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:id="@id/around_info_empty_text" android:background="@color/white_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tag_around_info_route_empty_data" android:fontFamily="@font/skp_go_mm" />
     </LinearLayout>
     <com.skt.tmap.mapview.streaming.MapViewStreaming android:id="@id/mapView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/around_info_title_layout" />
 </RelativeLayout>

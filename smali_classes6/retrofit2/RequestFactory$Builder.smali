@@ -1315,12 +1315,11 @@
     .line 49
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 50
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 51
+    .line 50
     new-instance p2, Lretrofit2/ParameterHandler$Query;
 
     invoke-direct {p2, v0, p1, p4}, Lretrofit2/ParameterHandler$Query;-><init>(Ljava/lang/String;Lretrofit2/Converter;Z)V
@@ -1331,7 +1330,7 @@
 
     return-object p1
 
-    .line 52
+    .line 51
     :cond_f
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1339,6 +1338,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 52
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -1409,44 +1409,43 @@
     :cond_11
     iget-object p1, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 61
     invoke-virtual {p1, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 62
+    .line 61
     new-instance p2, Lretrofit2/ParameterHandler$Query;
 
     invoke-direct {p2, v0, p1, p4}, Lretrofit2/ParameterHandler$Query;-><init>(Ljava/lang/String;Lretrofit2/Converter;Z)V
 
     return-object p2
 
-    .line 63
+    .line 62
     :cond_12
     instance-of v2, p4, Lretrofit2/http/QueryName;
 
     if-eqz v2, :cond_16
 
-    .line 64
+    .line 63
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 65
+    .line 64
     check-cast p4, Lretrofit2/http/QueryName;
 
-    .line 66
+    .line 65
     invoke-interface {p4}, Lretrofit2/http/QueryName;->encoded()Z
 
     move-result p4
 
-    .line 67
+    .line 66
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 68
+    .line 67
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotQueryName:Z
 
-    .line 69
+    .line 68
     const-class v1, Ljava/lang/Iterable;
 
     invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -1455,28 +1454,27 @@
 
     if-eqz v1, :cond_14
 
-    .line 70
+    .line 69
     instance-of v1, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v1, :cond_13
 
-    .line 71
+    .line 70
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 72
+    .line 71
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p1
 
-    .line 73
+    .line 72
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 74
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 75
+    .line 73
     new-instance p2, Lretrofit2/ParameterHandler$QueryName;
 
     invoke-direct {p2, p1, p4}, Lretrofit2/ParameterHandler$QueryName;-><init>(Lretrofit2/Converter;Z)V
@@ -1487,7 +1485,7 @@
 
     return-object p1
 
-    .line 76
+    .line 74
     :cond_13
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1495,6 +1493,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 75
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -1503,7 +1502,7 @@
 
     invoke-virtual {p3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 77
+    .line 76
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -1518,14 +1517,14 @@
 
     new-array p4, v5, [Ljava/lang/Object;
 
-    .line 78
+    .line 77
     invoke-static {p2, p1, p3, p4}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 79
+    .line 78
     :cond_14
     invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
 
@@ -1533,7 +1532,7 @@
 
     if-eqz p1, :cond_15
 
-    .line 80
+    .line 79
     invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p1
@@ -1542,15 +1541,15 @@
 
     move-result-object p1
 
-    .line 81
+    .line 80
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 82
+    .line 81
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 83
+    .line 82
     new-instance p2, Lretrofit2/ParameterHandler$QueryName;
 
     invoke-direct {p2, p1, p4}, Lretrofit2/ParameterHandler$QueryName;-><init>(Lretrofit2/Converter;Z)V
@@ -1561,23 +1560,22 @@
 
     return-object p1
 
-    .line 84
+    .line 83
     :cond_15
     iget-object p1, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 85
     invoke-virtual {p1, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 86
+    .line 84
     new-instance p2, Lretrofit2/ParameterHandler$QueryName;
 
     invoke-direct {p2, p1, p4}, Lretrofit2/ParameterHandler$QueryName;-><init>(Lretrofit2/Converter;Z)V
 
     return-object p2
 
-    .line 87
+    .line 85
     :cond_16
     instance-of v2, p4, Lretrofit2/http/QueryMap;
 
@@ -1585,18 +1583,18 @@
 
     if-eqz v2, :cond_1a
 
-    .line 88
+    .line 86
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 89
+    .line 87
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 90
+    .line 88
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotQueryMap:Z
 
-    .line 91
+    .line 89
     const-class v2, Ljava/util/Map;
 
     invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -1605,49 +1603,48 @@
 
     if-eqz v2, :cond_19
 
-    .line 92
+    .line 90
     const-class v2, Ljava/util/Map;
 
     invoke-static {p2, v1, v2}, Lretrofit2/Utils;->getSupertype(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 93
+    .line 91
     instance-of v1, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v1, :cond_18
 
-    .line 94
+    .line 92
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 95
+    .line 93
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object v1
 
     if-ne v0, v1, :cond_17
 
-    .line 96
+    .line 94
     invoke-static {v4, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 97
+    .line 95
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 98
     invoke-virtual {v0, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p2
 
-    .line 99
+    .line 96
     new-instance p3, Lretrofit2/ParameterHandler$QueryMap;
 
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
     check-cast p4, Lretrofit2/http/QueryMap;
 
-    .line 100
+    .line 97
     invoke-interface {p4}, Lretrofit2/http/QueryMap;->encoded()Z
 
     move-result p4
@@ -1656,7 +1653,7 @@
 
     return-object p3
 
-    .line 101
+    .line 98
     :cond_17
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1674,7 +1671,7 @@
 
     throw p1
 
-    .line 102
+    .line 99
     :cond_18
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1686,7 +1683,7 @@
 
     throw p1
 
-    .line 103
+    .line 100
     :cond_19
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1700,29 +1697,29 @@
 
     throw p1
 
-    .line 104
+    .line 101
     :cond_1a
     instance-of v2, p4, Lretrofit2/http/Header;
 
     if-eqz v2, :cond_1e
 
-    .line 105
+    .line 102
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 106
+    .line 103
     check-cast p4, Lretrofit2/http/Header;
 
-    .line 107
+    .line 104
     invoke-interface {p4}, Lretrofit2/http/Header;->value()Ljava/lang/String;
 
     move-result-object p4
 
-    .line 108
+    .line 105
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 109
+    .line 106
     const-class v1, Ljava/lang/Iterable;
 
     invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -1731,28 +1728,27 @@
 
     if-eqz v1, :cond_1c
 
-    .line 110
+    .line 107
     instance-of v1, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v1, :cond_1b
 
-    .line 111
+    .line 108
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 112
+    .line 109
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p1
 
-    .line 113
+    .line 110
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 114
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 115
+    .line 111
     new-instance p2, Lretrofit2/ParameterHandler$Header;
 
     invoke-direct {p2, p4, p1}, Lretrofit2/ParameterHandler$Header;-><init>(Ljava/lang/String;Lretrofit2/Converter;)V
@@ -1763,7 +1759,7 @@
 
     return-object p1
 
-    .line 116
+    .line 112
     :cond_1b
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1771,6 +1767,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 113
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -1779,7 +1776,7 @@
 
     invoke-virtual {p3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 117
+    .line 114
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -1794,14 +1791,14 @@
 
     new-array p4, v5, [Ljava/lang/Object;
 
-    .line 118
+    .line 115
     invoke-static {p2, p1, p3, p4}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 119
+    .line 116
     :cond_1c
     invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
 
@@ -1809,7 +1806,7 @@
 
     if-eqz p1, :cond_1d
 
-    .line 120
+    .line 117
     invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p1
@@ -1818,15 +1815,15 @@
 
     move-result-object p1
 
-    .line 121
+    .line 118
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 122
+    .line 119
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 123
+    .line 120
     new-instance p2, Lretrofit2/ParameterHandler$Header;
 
     invoke-direct {p2, p4, p1}, Lretrofit2/ParameterHandler$Header;-><init>(Ljava/lang/String;Lretrofit2/Converter;)V
@@ -1837,34 +1834,33 @@
 
     return-object p1
 
-    .line 124
+    .line 121
     :cond_1d
     iget-object p1, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 125
     invoke-virtual {p1, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 126
+    .line 122
     new-instance p2, Lretrofit2/ParameterHandler$Header;
 
     invoke-direct {p2, p4, p1}, Lretrofit2/ParameterHandler$Header;-><init>(Ljava/lang/String;Lretrofit2/Converter;)V
 
     return-object p2
 
-    .line 127
+    .line 123
     :cond_1e
     instance-of v2, p4, Lretrofit2/http/HeaderMap;
 
     if-eqz v2, :cond_23
 
-    .line 128
+    .line 124
     const-class p4, Lokhttp3/Headers;
 
     if-ne p2, p4, :cond_1f
 
-    .line 129
+    .line 125
     new-instance p2, Lretrofit2/ParameterHandler$Headers;
 
     iget-object p3, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
@@ -1873,16 +1869,16 @@
 
     return-object p2
 
-    .line 130
+    .line 126
     :cond_1f
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 131
+    .line 127
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p4
 
-    .line 132
+    .line 128
     const-class v1, Ljava/util/Map;
 
     invoke-virtual {v1, p4}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -1891,42 +1887,41 @@
 
     if-eqz v1, :cond_22
 
-    .line 133
+    .line 129
     const-class v1, Ljava/util/Map;
 
     invoke-static {p2, p4, v1}, Lretrofit2/Utils;->getSupertype(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 134
+    .line 130
     instance-of p4, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz p4, :cond_21
 
-    .line 135
+    .line 131
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 136
+    .line 132
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p4
 
     if-ne v0, p4, :cond_20
 
-    .line 137
+    .line 133
     invoke-static {v4, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 138
+    .line 134
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 139
     invoke-virtual {p4, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p2
 
-    .line 140
+    .line 135
     new-instance p3, Lretrofit2/ParameterHandler$HeaderMap;
 
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
@@ -1935,7 +1930,7 @@
 
     return-object p3
 
-    .line 141
+    .line 136
     :cond_20
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1953,7 +1948,7 @@
 
     throw p1
 
-    .line 142
+    .line 137
     :cond_21
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1965,7 +1960,7 @@
 
     throw p1
 
-    .line 143
+    .line 138
     :cond_22
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -1979,42 +1974,42 @@
 
     throw p1
 
-    .line 144
+    .line 139
     :cond_23
     instance-of v2, p4, Lretrofit2/http/Field;
 
     if-eqz v2, :cond_28
 
-    .line 145
+    .line 140
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 146
+    .line 141
     iget-boolean v0, p0, Lretrofit2/RequestFactory$Builder;->isFormEncoded:Z
 
     if-eqz v0, :cond_27
 
-    .line 147
+    .line 142
     check-cast p4, Lretrofit2/http/Field;
 
-    .line 148
+    .line 143
     invoke-interface {p4}, Lretrofit2/http/Field;->value()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
+    .line 144
     invoke-interface {p4}, Lretrofit2/http/Field;->encoded()Z
 
     move-result p4
 
-    .line 150
+    .line 145
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotField:Z
 
-    .line 151
+    .line 146
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 152
+    .line 147
     const-class v2, Ljava/lang/Iterable;
 
     invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -2023,28 +2018,27 @@
 
     if-eqz v2, :cond_25
 
-    .line 153
+    .line 148
     instance-of v2, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v2, :cond_24
 
-    .line 154
+    .line 149
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 155
+    .line 150
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p1
 
-    .line 156
+    .line 151
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 157
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 158
+    .line 152
     new-instance p2, Lretrofit2/ParameterHandler$Field;
 
     invoke-direct {p2, v0, p1, p4}, Lretrofit2/ParameterHandler$Field;-><init>(Ljava/lang/String;Lretrofit2/Converter;Z)V
@@ -2055,7 +2049,7 @@
 
     return-object p1
 
-    .line 159
+    .line 153
     :cond_24
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2063,6 +2057,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 154
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -2071,7 +2066,7 @@
 
     invoke-virtual {p3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 160
+    .line 155
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -2086,14 +2081,14 @@
 
     new-array p4, v5, [Ljava/lang/Object;
 
-    .line 161
+    .line 156
     invoke-static {p2, p1, p3, p4}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 162
+    .line 157
     :cond_25
     invoke-virtual {v1}, Ljava/lang/Class;->isArray()Z
 
@@ -2101,7 +2096,7 @@
 
     if-eqz p1, :cond_26
 
-    .line 163
+    .line 158
     invoke-virtual {v1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p1
@@ -2110,15 +2105,15 @@
 
     move-result-object p1
 
-    .line 164
+    .line 159
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 165
+    .line 160
     invoke-virtual {p2, p1, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 166
+    .line 161
     new-instance p2, Lretrofit2/ParameterHandler$Field;
 
     invoke-direct {p2, v0, p1, p4}, Lretrofit2/ParameterHandler$Field;-><init>(Ljava/lang/String;Lretrofit2/Converter;Z)V
@@ -2129,23 +2124,22 @@
 
     return-object p1
 
-    .line 167
+    .line 162
     :cond_26
     iget-object p1, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 168
     invoke-virtual {p1, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p1
 
-    .line 169
+    .line 163
     new-instance p2, Lretrofit2/ParameterHandler$Field;
 
     invoke-direct {p2, v0, p1, p4}, Lretrofit2/ParameterHandler$Field;-><init>(Ljava/lang/String;Lretrofit2/Converter;Z)V
 
     return-object p2
 
-    .line 170
+    .line 164
     :cond_27
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2159,26 +2153,26 @@
 
     throw p1
 
-    .line 171
+    .line 165
     :cond_28
     instance-of v2, p4, Lretrofit2/http/FieldMap;
 
     if-eqz v2, :cond_2d
 
-    .line 172
+    .line 166
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 173
+    .line 167
     iget-boolean v1, p0, Lretrofit2/RequestFactory$Builder;->isFormEncoded:Z
 
     if-eqz v1, :cond_2c
 
-    .line 174
+    .line 168
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 175
+    .line 169
     const-class v2, Ljava/util/Map;
 
     invoke-virtual {v2, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -2187,52 +2181,51 @@
 
     if-eqz v2, :cond_2b
 
-    .line 176
+    .line 170
     const-class v2, Ljava/util/Map;
 
     invoke-static {p2, v1, v2}, Lretrofit2/Utils;->getSupertype(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 177
+    .line 171
     instance-of v1, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v1, :cond_2a
 
-    .line 178
+    .line 172
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 179
+    .line 173
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object v1
 
     if-ne v0, v1, :cond_29
 
-    .line 180
+    .line 174
     invoke-static {v4, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 181
+    .line 175
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
-    .line 182
     invoke-virtual {v0, p2, p3}, Lretrofit2/Retrofit;->stringConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p2
 
-    .line 183
+    .line 176
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotField:Z
 
-    .line 184
+    .line 177
     new-instance p3, Lretrofit2/ParameterHandler$FieldMap;
 
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
     check-cast p4, Lretrofit2/http/FieldMap;
 
-    .line 185
+    .line 178
     invoke-interface {p4}, Lretrofit2/http/FieldMap;->encoded()Z
 
     move-result p4
@@ -2241,7 +2234,7 @@
 
     return-object p3
 
-    .line 186
+    .line 179
     :cond_29
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2259,7 +2252,7 @@
 
     throw p1
 
-    .line 187
+    .line 180
     :cond_2a
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2271,7 +2264,7 @@
 
     throw p1
 
-    .line 188
+    .line 181
     :cond_2b
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2285,7 +2278,7 @@
 
     throw p1
 
-    .line 189
+    .line 182
     :cond_2c
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2299,44 +2292,44 @@
 
     throw p1
 
-    .line 190
+    .line 183
     :cond_2d
     instance-of v2, p4, Lretrofit2/http/Part;
 
     if-eqz v2, :cond_3c
 
-    .line 191
+    .line 184
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 192
+    .line 185
     iget-boolean v0, p0, Lretrofit2/RequestFactory$Builder;->isMultipart:Z
 
     if-eqz v0, :cond_3b
 
-    .line 193
+    .line 186
     check-cast p4, Lretrofit2/http/Part;
 
-    .line 194
+    .line 187
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotPart:Z
 
-    .line 195
+    .line 188
     invoke-interface {p4}, Lretrofit2/http/Part;->value()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 196
+    .line 189
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 197
+    .line 190
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v7
 
     if-eqz v7, :cond_34
 
-    .line 198
+    .line 191
     const-class p3, Ljava/lang/Iterable;
 
     invoke-virtual {p3, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -2347,20 +2340,20 @@
 
     if-eqz p3, :cond_30
 
-    .line 199
+    .line 192
     instance-of p3, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz p3, :cond_2f
 
-    .line 200
+    .line 193
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 201
+    .line 194
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 202
+    .line 195
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p2
@@ -2371,7 +2364,7 @@
 
     if-eqz p2, :cond_2e
 
-    .line 203
+    .line 196
     sget-object p1, Lretrofit2/ParameterHandler$RawPart;->INSTANCE:Lretrofit2/ParameterHandler$RawPart;
 
     invoke-virtual {p1}, Lretrofit2/ParameterHandler;->iterable()Lretrofit2/ParameterHandler;
@@ -2380,7 +2373,7 @@
 
     return-object p1
 
-    .line 204
+    .line 197
     :cond_2e
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2392,7 +2385,7 @@
 
     throw p1
 
-    .line 205
+    .line 198
     :cond_2f
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2400,6 +2393,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 199
     invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -2408,7 +2402,7 @@
 
     invoke-virtual {p3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
+    .line 200
     invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -2423,14 +2417,14 @@
 
     new-array p4, v5, [Ljava/lang/Object;
 
-    .line 207
+    .line 201
     invoke-static {p2, p1, p3, p4}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 208
+    .line 202
     :cond_30
     invoke-virtual {v2}, Ljava/lang/Class;->isArray()Z
 
@@ -2438,19 +2432,19 @@
 
     if-eqz p2, :cond_32
 
-    .line 209
+    .line 203
     invoke-virtual {v2}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p2
 
-    .line 210
+    .line 204
     invoke-virtual {v1, p2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result p2
 
     if-eqz p2, :cond_31
 
-    .line 211
+    .line 205
     sget-object p1, Lretrofit2/ParameterHandler$RawPart;->INSTANCE:Lretrofit2/ParameterHandler$RawPart;
 
     invoke-virtual {p1}, Lretrofit2/ParameterHandler;->array()Lretrofit2/ParameterHandler;
@@ -2459,7 +2453,7 @@
 
     return-object p1
 
-    .line 212
+    .line 206
     :cond_31
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2471,7 +2465,7 @@
 
     throw p1
 
-    .line 213
+    .line 207
     :cond_32
     invoke-virtual {v1, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -2479,12 +2473,12 @@
 
     if-eqz p2, :cond_33
 
-    .line 214
+    .line 208
     sget-object p1, Lretrofit2/ParameterHandler$RawPart;->INSTANCE:Lretrofit2/ParameterHandler$RawPart;
 
     return-object p1
 
-    .line 215
+    .line 209
     :cond_33
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2509,7 +2503,7 @@
 
     const-string v9, "\""
 
-    .line 216
+    .line 210
     invoke-static {v8, v0, v9}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2524,19 +2518,19 @@
 
     const/4 v0, 0x3
 
-    .line 217
+    .line 211
     invoke-interface {p4}, Lretrofit2/http/Part;->encoding()Ljava/lang/String;
 
     move-result-object p4
 
     aput-object p4, v7, v0
 
-    .line 218
+    .line 212
     invoke-static {v7}, Lokhttp3/Headers;->of([Ljava/lang/String;)Lokhttp3/Headers;
 
     move-result-object p4
 
-    .line 219
+    .line 213
     const-class v0, Ljava/lang/Iterable;
 
     invoke-virtual {v0, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -2547,20 +2541,20 @@
 
     if-eqz v0, :cond_37
 
-    .line 220
+    .line 214
     instance-of v0, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v0, :cond_36
 
-    .line 221
+    .line 215
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 222
+    .line 216
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 223
+    .line 217
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v0
@@ -2571,17 +2565,17 @@
 
     if-nez v0, :cond_35
 
-    .line 224
+    .line 218
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
     iget-object v1, p0, Lretrofit2/RequestFactory$Builder;->methodAnnotations:[Ljava/lang/annotation/Annotation;
 
-    .line 225
+    .line 219
     invoke-virtual {v0, p2, p3, v1}, Lretrofit2/Retrofit;->requestBodyConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p2
 
-    .line 226
+    .line 220
     new-instance p3, Lretrofit2/ParameterHandler$Part;
 
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
@@ -2594,7 +2588,7 @@
 
     return-object p1
 
-    .line 227
+    .line 221
     :cond_35
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2606,7 +2600,7 @@
 
     throw p1
 
-    .line 228
+    .line 222
     :cond_36
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2614,6 +2608,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 223
     invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -2622,7 +2617,7 @@
 
     invoke-virtual {p3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 229
+    .line 224
     invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p4
@@ -2637,14 +2632,14 @@
 
     new-array p4, v5, [Ljava/lang/Object;
 
-    .line 230
+    .line 225
     invoke-static {p2, p1, p3, p4}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object p1
 
     throw p1
 
-    .line 231
+    .line 226
     :cond_37
     invoke-virtual {v2}, Ljava/lang/Class;->isArray()Z
 
@@ -2652,7 +2647,7 @@
 
     if-eqz v0, :cond_39
 
-    .line 232
+    .line 227
     invoke-virtual {v2}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p2
@@ -2661,12 +2656,55 @@
 
     move-result-object p2
 
-    .line 233
+    .line 228
     invoke-virtual {v1, p2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v0
 
     if-nez v0, :cond_38
+
+    .line 229
+    iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
+
+    iget-object v1, p0, Lretrofit2/RequestFactory$Builder;->methodAnnotations:[Ljava/lang/annotation/Annotation;
+
+    .line 230
+    invoke-virtual {v0, p2, p3, v1}, Lretrofit2/Retrofit;->requestBodyConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
+
+    move-result-object p2
+
+    .line 231
+    new-instance p3, Lretrofit2/ParameterHandler$Part;
+
+    iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
+
+    invoke-direct {p3, v0, p1, p4, p2}, Lretrofit2/ParameterHandler$Part;-><init>(Ljava/lang/reflect/Method;ILokhttp3/Headers;Lretrofit2/Converter;)V
+
+    invoke-virtual {p3}, Lretrofit2/ParameterHandler;->array()Lretrofit2/ParameterHandler;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 232
+    :cond_38
+    iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
+
+    new-array p3, v5, [Ljava/lang/Object;
+
+    invoke-static {p2, p1, v4, p3}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
+
+    move-result-object p1
+
+    throw p1
+
+    .line 233
+    :cond_39
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3a
 
     .line 234
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
@@ -2685,52 +2723,9 @@
 
     invoke-direct {p3, v0, p1, p4, p2}, Lretrofit2/ParameterHandler$Part;-><init>(Ljava/lang/reflect/Method;ILokhttp3/Headers;Lretrofit2/Converter;)V
 
-    invoke-virtual {p3}, Lretrofit2/ParameterHandler;->array()Lretrofit2/ParameterHandler;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 237
-    :cond_38
-    iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
-
-    new-array p3, v5, [Ljava/lang/Object;
-
-    invoke-static {p2, p1, v4, p3}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-
-    .line 238
-    :cond_39
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3a
-
-    .line 239
-    iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
-
-    iget-object v1, p0, Lretrofit2/RequestFactory$Builder;->methodAnnotations:[Ljava/lang/annotation/Annotation;
-
-    .line 240
-    invoke-virtual {v0, p2, p3, v1}, Lretrofit2/Retrofit;->requestBodyConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
-
-    move-result-object p2
-
-    .line 241
-    new-instance p3, Lretrofit2/ParameterHandler$Part;
-
-    iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
-
-    invoke-direct {p3, v0, p1, p4, p2}, Lretrofit2/ParameterHandler$Part;-><init>(Ljava/lang/reflect/Method;ILokhttp3/Headers;Lretrofit2/Converter;)V
-
     return-object p3
 
-    .line 242
+    .line 237
     :cond_3a
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2742,7 +2737,7 @@
 
     throw p1
 
-    .line 243
+    .line 238
     :cond_3b
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2756,29 +2751,29 @@
 
     throw p1
 
-    .line 244
+    .line 239
     :cond_3c
     instance-of v2, p4, Lretrofit2/http/PartMap;
 
     if-eqz v2, :cond_42
 
-    .line 245
+    .line 240
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 246
+    .line 241
     iget-boolean v2, p0, Lretrofit2/RequestFactory$Builder;->isMultipart:Z
 
     if-eqz v2, :cond_41
 
-    .line 247
+    .line 242
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotPart:Z
 
-    .line 248
+    .line 243
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 249
+    .line 244
     const-class v3, Ljava/util/Map;
 
     invoke-virtual {v3, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -2787,34 +2782,34 @@
 
     if-eqz v3, :cond_40
 
-    .line 250
+    .line 245
     const-class v3, Ljava/util/Map;
 
     invoke-static {p2, v2, v3}, Lretrofit2/Utils;->getSupertype(Ljava/lang/reflect/Type;Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 251
+    .line 246
     instance-of v2, p2, Ljava/lang/reflect/ParameterizedType;
 
     if-eqz v2, :cond_3f
 
-    .line 252
+    .line 247
     check-cast p2, Ljava/lang/reflect/ParameterizedType;
 
-    .line 253
+    .line 248
     invoke-static {v5, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object v2
 
     if-ne v0, v2, :cond_3e
 
-    .line 254
+    .line 249
     invoke-static {v4, p2}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object p2
 
-    .line 255
+    .line 250
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v0
@@ -2825,20 +2820,20 @@
 
     if-nez v0, :cond_3d
 
-    .line 256
+    .line 251
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
     iget-object v1, p0, Lretrofit2/RequestFactory$Builder;->methodAnnotations:[Ljava/lang/annotation/Annotation;
 
-    .line 257
+    .line 252
     invoke-virtual {v0, p2, p3, v1}, Lretrofit2/Retrofit;->requestBodyConverter(Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;[Ljava/lang/annotation/Annotation;)Lretrofit2/Converter;
 
     move-result-object p2
 
-    .line 258
+    .line 253
     check-cast p4, Lretrofit2/http/PartMap;
 
-    .line 259
+    .line 254
     new-instance p3, Lretrofit2/ParameterHandler$PartMap;
 
     iget-object v0, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
@@ -2851,7 +2846,7 @@
 
     return-object p3
 
-    .line 260
+    .line 255
     :cond_3d
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2865,7 +2860,7 @@
 
     throw p1
 
-    .line 261
+    .line 256
     :cond_3e
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2883,7 +2878,7 @@
 
     throw p1
 
-    .line 262
+    .line 257
     :cond_3f
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2895,7 +2890,7 @@
 
     throw p1
 
-    .line 263
+    .line 258
     :cond_40
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2909,7 +2904,7 @@
 
     throw p1
 
-    .line 264
+    .line 259
     :cond_41
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -2923,16 +2918,16 @@
 
     throw p1
 
-    .line 265
+    .line 260
     :cond_42
     instance-of v0, p4, Lretrofit2/http/Body;
 
     if-eqz v0, :cond_45
 
-    .line 266
+    .line 261
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 267
+    .line 262
     iget-boolean p4, p0, Lretrofit2/RequestFactory$Builder;->isFormEncoded:Z
 
     if-nez p4, :cond_44
@@ -2941,12 +2936,12 @@
 
     if-nez p4, :cond_44
 
-    .line 268
+    .line 263
     iget-boolean p4, p0, Lretrofit2/RequestFactory$Builder;->gotBody:Z
 
     if-nez p4, :cond_43
 
-    .line 269
+    .line 264
     :try_start_0
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->retrofit:Lretrofit2/Retrofit;
 
@@ -2958,10 +2953,10 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 270
+    .line 265
     iput-boolean v4, p0, Lretrofit2/RequestFactory$Builder;->gotBody:Z
 
-    .line 271
+    .line 266
     new-instance p3, Lretrofit2/ParameterHandler$Body;
 
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
@@ -2973,7 +2968,7 @@
     :catch_0
     move-exception p3
 
-    .line 272
+    .line 267
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
     new-array v0, v4, [Ljava/lang/Object;
@@ -2988,7 +2983,7 @@
 
     throw p1
 
-    .line 273
+    .line 268
     :cond_43
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -3002,7 +2997,7 @@
 
     throw p1
 
-    .line 274
+    .line 269
     :cond_44
     iget-object p2, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -3016,16 +3011,16 @@
 
     throw p1
 
-    .line 275
+    .line 270
     :cond_45
     instance-of p3, p4, Lretrofit2/http/Tag;
 
     if-eqz p3, :cond_49
 
-    .line 276
+    .line 271
     invoke-direct {p0, p1, p2}, Lretrofit2/RequestFactory$Builder;->validateResolvableType(ILjava/lang/reflect/Type;)V
 
-    .line 277
+    .line 272
     invoke-static {p2}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object p2
@@ -3035,12 +3030,12 @@
     :goto_1
     if-ltz p3, :cond_48
 
-    .line 278
+    .line 273
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->parameterHandlers:[Lretrofit2/ParameterHandler;
 
     aget-object p4, p4, p3
 
-    .line 279
+    .line 274
     instance-of v0, p4, Lretrofit2/ParameterHandler$Tag;
 
     if-eqz v0, :cond_47
@@ -3049,7 +3044,7 @@
 
     iget-object p4, p4, Lretrofit2/ParameterHandler$Tag;->cls:Ljava/lang/Class;
 
-    .line 280
+    .line 275
     invoke-virtual {p4, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p4
@@ -3058,7 +3053,7 @@
 
     goto :goto_2
 
-    .line 281
+    .line 276
     :cond_46
     iget-object p4, p0, Lretrofit2/RequestFactory$Builder;->method:Ljava/lang/reflect/Method;
 
@@ -3068,7 +3063,7 @@
 
     move-result-object v0
 
-    .line 282
+    .line 277
     invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -3093,7 +3088,7 @@
 
     new-array p3, v5, [Ljava/lang/Object;
 
-    .line 283
+    .line 278
     invoke-static {p4, p1, p2, p3}, Lretrofit2/Utils;->parameterError(Ljava/lang/reflect/Method;ILjava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object p1
@@ -3106,7 +3101,7 @@
 
     goto :goto_1
 
-    .line 284
+    .line 279
     :cond_48
     new-instance p1, Lretrofit2/ParameterHandler$Tag;
 

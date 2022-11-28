@@ -36,7 +36,7 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/amplifyframework/devmenu/DevMenuMainFragment;->i(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/amplifyframework/devmenu/DevMenuMainFragment;->j(Landroid/view/View;)V
 
     return-void
 .end method

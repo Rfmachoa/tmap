@@ -1,6 +1,10 @@
 .class public final Lcom/google/firebase/iid/FirebaseInstanceIdReceiver;
 .super Lcom/google/android/gms/cloudmessaging/CloudMessagingReceiver;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "FirebaseInstanceIdReceiver.java"
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "FirebaseMessaging"
 
 
 # direct methods
@@ -13,9 +17,36 @@
     return-void
 .end method
 
+.method private static createServiceIntent(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    new-instance p0, Landroid/content/Intent;
+
+    invoke-direct {p0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final onMessageReceive(Landroid/content/Context;Lcom/google/android/gms/cloudmessaging/CloudMessage;)I
+.method public onMessageReceive(Landroid/content/Context;Lcom/google/android/gms/cloudmessaging/CloudMessage;)I
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -78,7 +109,7 @@
     return p1
 .end method
 
-.method public final onNotificationDismissed(Landroid/content/Context;Landroid/os/Bundle;)V
+.method public onNotificationDismissed(Landroid/content/Context;Landroid/os/Bundle;)V
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -91,14 +122,10 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
-    .line 1
-    new-instance p1, Landroid/content/Intent;
-
     const-string v0, "com.google.firebase.messaging.NOTIFICATION_DISMISS"
 
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+    .line 1
+    invoke-static {p1, v0, p2}, Lcom/google/firebase/iid/FirebaseInstanceIdReceiver;->createServiceIntent(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
     move-result-object p1
 

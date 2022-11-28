@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/util/List;Lcom/tmapmobility/tmap/exoplayer2/util/i0;Ljava/util/Map;Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;
+.method public abstract a(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/util/List;Lcom/tmapmobility/tmap/exoplayer2/util/j0;Ljava/util/Map;Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;
     .param p3    # Ljava/util/List;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -36,13 +36,13 @@
             "Ljava/util/List<",
             "Lcom/tmapmobility/tmap/exoplayer2/Format;",
             ">;",
-            "Lcom/tmapmobility/tmap/exoplayer2/util/i0;",
+            "Lcom/tmapmobility/tmap/exoplayer2/util/j0;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;>;",
-            "Lcom/tmapmobility/tmap/exoplayer2/extractor/i;",
+            "Lcom/tmapmobility/tmap/exoplayer2/extractor/k;",
             "Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;",
             ")",
             "Lcom/tmapmobility/tmap/exoplayer2/source/hls/j;"

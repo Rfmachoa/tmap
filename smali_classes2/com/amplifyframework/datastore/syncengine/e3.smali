@@ -3,34 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/s;
+.implements Lgk/o;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncTime;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
+
+.field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncTime;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTime;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/e3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/e3;->b:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTime;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/e3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
 
-    invoke-static {v0}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->k(Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lcom/amplifyframework/datastore/syncengine/SyncType;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/e3;->b:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
 
-    move-result-object v0
+    check-cast p1, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
 
-    return-object v0
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->i(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/g;
+
+    move-result-object p1
+
+    return-object p1
 .end method

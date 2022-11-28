@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method public b(Landroidx/core/app/l;)V
+.method public b(Landroidx/core/app/p;)V
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -142,7 +142,7 @@
     new-instance v0, Landroid/app/Notification$BigTextStyle;
 
     .line 2
-    invoke-interface {p1}, Landroidx/core/app/l;->a()Landroid/app/Notification$Builder;
+    invoke-interface {p1}, Landroidx/core/app/p;->a()Landroid/app/Notification$Builder;
 
     move-result-object p1
 

@@ -1,88 +1,95 @@
 .class public Landroidx/recyclerview/widget/j$c;
 .super Ljava/lang/Object;
-.source "DefaultItemAnimator.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "DiffUtil.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/recyclerview/widget/j;->x()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/recyclerview/widget/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x9
+    name = "c"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/ArrayList;
+.field public final a:[I
 
-.field public final synthetic b:Landroidx/recyclerview/widget/j;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/j;Ljava/util/ArrayList;)V
+.method public constructor <init>(I)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/recyclerview/widget/j$c;->b:Landroidx/recyclerview/widget/j;
-
-    iput-object p2, p0, Landroidx/recyclerview/widget/j$c;->a:Ljava/util/ArrayList;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Landroidx/recyclerview/widget/j$c;->a:[I
+
+    .line 3
+    array-length p1, p1
+
+    div-int/lit8 p1, p1, 0x2
+
+    iput p1, p0, Landroidx/recyclerview/widget/j$c;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a()[I
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->a:[I
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public b(I)V
+    .locals 1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->a:[I
 
-    move-result v1
+    invoke-static {v0, p1}, Ljava/util/Arrays;->fill([II)V
 
-    if-eqz v1, :cond_0
+    return-void
+.end method
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public c(I)I
+    .locals 2
 
-    move-result-object v1
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->a:[I
 
-    check-cast v1, Landroidx/recyclerview/widget/RecyclerView$a0;
+    iget v1, p0, Landroidx/recyclerview/widget/j$c;->b:I
 
-    .line 2
-    iget-object v2, p0, Landroidx/recyclerview/widget/j$c;->b:Landroidx/recyclerview/widget/j;
+    add-int/2addr p1, v1
 
-    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/j;->Z(Landroidx/recyclerview/widget/RecyclerView$a0;)V
+    aget p1, v0, p1
 
-    goto :goto_0
+    return p1
+.end method
 
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->a:Ljava/util/ArrayList;
+.method public d(II)V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->a:[I
 
-    .line 4
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$c;->b:Landroidx/recyclerview/widget/j;
+    iget v1, p0, Landroidx/recyclerview/widget/j$c;->b:I
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/j;->s:Ljava/util/ArrayList;
+    add-int/2addr p1, v1
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/j$c;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    aput p2, v0, p1
 
     return-void
 .end method

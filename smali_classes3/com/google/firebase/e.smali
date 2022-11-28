@@ -38,7 +38,7 @@
 
     check-cast p1, Landroid/content/Context;
 
-    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->c(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080565
+    const v0, 0x7f08058d
 
     return v0
 
@@ -82,7 +82,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0804d5
+    const v0, 0x7f0804da
 
     return v0
 
@@ -258,7 +258,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080846
+    const v0, 0x7f080856
 
     return v0
 
@@ -268,7 +268,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f080178
+    const v0, 0x7f080188
 
     return v0
 

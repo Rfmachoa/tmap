@@ -43,11 +43,11 @@
     .line 1
     iget-object p1, p0, Landroidx/preference/g$a;->a:Landroidx/preference/g;
 
-    iget-boolean p3, p1, Landroidx/preference/g;->V0:Z
+    iget-boolean p3, p1, Landroidx/preference/g;->X0:Z
 
     iget-object v0, p1, Landroidx/preference/g;->K0:Ljava/util/Set;
 
-    iget-object v1, p1, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iget-object v1, p1, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     aget-object p2, v1, p2
 
@@ -63,7 +63,7 @@
 
     or-int/2addr p2, p3
 
-    iput-boolean p2, p1, Landroidx/preference/g;->V0:Z
+    iput-boolean p2, p1, Landroidx/preference/g;->X0:Z
 
     goto :goto_0
 
@@ -71,11 +71,11 @@
     :cond_0
     iget-object p1, p0, Landroidx/preference/g$a;->a:Landroidx/preference/g;
 
-    iget-boolean p3, p1, Landroidx/preference/g;->V0:Z
+    iget-boolean p3, p1, Landroidx/preference/g;->X0:Z
 
     iget-object v0, p1, Landroidx/preference/g;->K0:Ljava/util/Set;
 
-    iget-object v1, p1, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iget-object v1, p1, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     aget-object p2, v1, p2
 
@@ -91,7 +91,7 @@
 
     or-int/2addr p2, p3
 
-    iput-boolean p2, p1, Landroidx/preference/g;->V0:Z
+    iput-boolean p2, p1, Landroidx/preference/g;->X0:Z
 
     :goto_0
     return-void

@@ -1,45 +1,32 @@
 .class public interface abstract Lph/c;
 .super Ljava/lang/Object;
-.source "BiFunction.java"
+.source "ClientPNames.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T1:",
-        "Ljava/lang/Object;",
-        "T2:",
-        "Ljava/lang/Object;",
-        "R:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# virtual methods
-.method public abstract apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .param p1    # Ljava/lang/Object;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/Object;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT1;TT2;)TR;"
-        }
-    .end annotation
+# static fields
+.field public static final f:Ljava/lang/String; = "http.connection-manager.factory-class-name"
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+.field public static final g:Ljava/lang/String; = "http.protocol.handle-redirects"
 
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end method
+.field public static final h:Ljava/lang/String; = "http.protocol.reject-relative-redirect"
+
+.field public static final i:Ljava/lang/String; = "http.protocol.max-redirects"
+
+.field public static final j:Ljava/lang/String; = "http.protocol.allow-circular-redirects"
+
+.field public static final k:Ljava/lang/String; = "http.protocol.handle-authentication"
+
+.field public static final l:Ljava/lang/String; = "http.protocol.cookie-policy"
+
+.field public static final m:Ljava/lang/String; = "http.virtual-host"
+
+.field public static final n:Ljava/lang/String; = "http.default-headers"
+
+.field public static final o:Ljava/lang/String; = "http.default-host"
+
+.field public static final p:Ljava/lang/String; = "http.conn-manager.timeout"

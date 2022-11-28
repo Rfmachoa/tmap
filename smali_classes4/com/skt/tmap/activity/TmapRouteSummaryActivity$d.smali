@@ -49,8 +49,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -62,15 +62,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$d;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -97,7 +92,7 @@
 .end method
 
 .method public OnHitCalloutPopupMarker(Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)V
-    .locals 2
+    .locals 1
     .param p1    # Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -112,11 +107,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string v0, "basePresenter"
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    const-string/jumbo v1, "tap.poicalloutpopup"
+    move-result-object p1
 
-    invoke-static {p1, v0, v1}, Lcom/skt/tmap/activity/x;->a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "tap.poicalloutpopup"
+
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -153,11 +150,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string p2, "basePresenter"
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    const-string/jumbo p3, "tap.poicalloutpopup"
+    move-result-object p1
 
-    invoke-static {p1, p2, p3}, Lcom/skt/tmap/activity/x;->a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
+    const-string p2, "tap.poicalloutpopup"
+
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -210,11 +209,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string p2, "basePresenter"
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    const-string p3, "popup_tap.eventcalloutpopup"
+    move-result-object p1
 
-    invoke-static {p1, p2, p3}, Lcom/skt/tmap/activity/x;->a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
+    const-string p2, "popup_tap.eventcalloutpopup"
+
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -243,11 +244,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string p2, "basePresenter"
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
-    const-string/jumbo p3, "tap.poicalloutpopup"
+    move-result-object p1
 
-    invoke-static {p1, p2, p3}, Lcom/skt/tmap/activity/x;->a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
+    const-string p2, "tap.poicalloutpopup"
+
+    invoke-virtual {p1, p2}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method

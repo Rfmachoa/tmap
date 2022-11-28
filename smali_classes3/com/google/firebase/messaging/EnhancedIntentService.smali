@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/firebase/messaging/EnhancedIntentService;
 .super Landroid/app/Service;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "EnhancedIntentService.java"
 
 
 # annotations
@@ -9,6 +9,10 @@
         "UnwrappedWakefulBroadcastReceiver"
     }
 .end annotation
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "EnhancedIntentService"
 
 
 # instance fields
@@ -27,16 +31,6 @@
 
 
 # direct methods
-.method public static bridge synthetic -$$Nest$mprocessIntent(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->processIntent(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public constructor <init>()V
     .locals 1
 
@@ -50,6 +44,7 @@
 
     iput-object v0, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->executor:Ljava/util/concurrent/ExecutorService;
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -58,7 +53,35 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->runningTasks:I
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/firebase/messaging/EnhancedIntentService;->lambda$onStartCommand$1(Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)V
+
+    return-void
+.end method
+
+.method public static synthetic access$000(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->processIntent(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic b(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/firebase/messaging/EnhancedIntentService;->lambda$processIntent$0(Landroid/content/Intent;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
     return-void
 .end method
@@ -71,12 +94,13 @@
     .line 1
     invoke-static {p1}, Lcom/google/firebase/messaging/WakeLockHolder;->completeWakefulIntent(Landroid/content/Intent;)V
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->lock:Ljava/lang/Object;
 
-    .line 2
     monitor-enter p1
 
+    .line 3
     :try_start_0
     iget v0, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->runningTasks:I
 
@@ -86,12 +110,12 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     iget v0, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->lastStartId:I
 
-    .line 3
     invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/EnhancedIntentService;->stopSelfResultHook(I)Z
 
-    .line 4
+    .line 5
     :cond_1
     monitor-exit p1
 
@@ -105,6 +129,40 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method private synthetic lambda$onStartCommand$1(Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->finishTask(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$processIntent$0(Landroid/content/Intent;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->handleIntent(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    invoke-virtual {p2, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p2, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
+
+    .line 3
+    throw p1
 .end method
 
 .method private processIntent(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
@@ -145,13 +203,13 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>()V
 
+    .line 4
     iget-object v1, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->executor:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Lcom/google/firebase/messaging/EnhancedIntentService$$ExternalSyntheticLambda1;
+    new-instance v2, Lcom/google/firebase/messaging/b;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/google/firebase/messaging/EnhancedIntentService$$ExternalSyntheticLambda1;-><init>(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    invoke-direct {v2, p0, p1, v0}, Lcom/google/firebase/messaging/b;-><init>(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
-    .line 4
     invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     .line 5
@@ -166,77 +224,23 @@
 # virtual methods
 .method public getStartCommandIntent(Landroid/content/Intent;)Landroid/content/Intent;
     .locals 0
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     return-object p1
 .end method
 
 .method public abstract handleIntent(Landroid/content/Intent;)V
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method
 
 .method public handleIntentOnMainThread(Landroid/content/Intent;)Z
     .locals 0
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public synthetic lambda$onStartCommand$1$com-google-firebase-messaging-EnhancedIntentService(Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->finishTask(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method public synthetic lambda$processIntent$0$com-google-firebase-messaging-EnhancedIntentService(Landroid/content/Intent;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    :try_start_0
-    invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->handleIntent(Landroid/content/Intent;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
-    invoke-virtual {p2, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {p2, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
-
-    .line 3
-    throw p1
-.end method
-
 .method public final declared-synchronized onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     monitor-enter p0
 
@@ -259,22 +263,24 @@
     .line 2
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->binder:Landroid/os/Binder;
 
     if-nez p1, :cond_1
 
+    .line 4
     new-instance p1, Lcom/google/firebase/messaging/WithinAppServiceBinder;
 
     new-instance v0, Lcom/google/firebase/messaging/EnhancedIntentService$1;
 
-    .line 3
     invoke-direct {v0, p0}, Lcom/google/firebase/messaging/EnhancedIntentService$1;-><init>(Lcom/google/firebase/messaging/EnhancedIntentService;)V
 
     invoke-direct {p1, v0}, Lcom/google/firebase/messaging/WithinAppServiceBinder;-><init>(Lcom/google/firebase/messaging/WithinAppServiceBinder$IntentHandler;)V
 
     iput-object p1, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->binder:Landroid/os/Binder;
 
+    .line 5
     :cond_1
     iget-object p1, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->binder:Landroid/os/Binder;
     :try_end_0
@@ -310,31 +316,29 @@
 
 .method public final onStartCommand(Landroid/content/Intent;II)I
     .locals 1
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     iget-object p2, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->lock:Ljava/lang/Object;
 
     monitor-enter p2
 
+    .line 2
     :try_start_0
     iput p3, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->lastStartId:I
 
+    .line 3
     iget p3, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->runningTasks:I
 
     add-int/lit8 p3, p3, 0x1
 
     iput p3, p0, Lcom/google/firebase/messaging/EnhancedIntentService;->runningTasks:I
 
-    .line 2
+    .line 4
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->getStartCommandIntent(Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object p2
@@ -343,36 +347,36 @@
 
     if-nez p2, :cond_0
 
-    .line 4
+    .line 6
     invoke-direct {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->finishTask(Landroid/content/Intent;)V
 
     return p3
 
-    .line 5
+    .line 7
     :cond_0
     invoke-direct {p0, p2}, Lcom/google/firebase/messaging/EnhancedIntentService;->processIntent(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p2
 
-    .line 6
+    .line 8
     invoke-virtual {p2}, Lcom/google/android/gms/tasks/Task;->isComplete()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 7
+    .line 9
     invoke-direct {p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService;->finishTask(Landroid/content/Intent;)V
 
     return p3
 
+    .line 10
     :cond_1
-    sget-object p3, Lcom/google/firebase/messaging/EnhancedIntentService$$ExternalSyntheticLambda2;->INSTANCE:Lcom/google/firebase/messaging/EnhancedIntentService$$ExternalSyntheticLambda2;
+    sget-object p3, Landroidx/window/layout/r;->a:Landroidx/window/layout/r;
 
-    .line 8
-    new-instance v0, Lcom/google/firebase/messaging/EnhancedIntentService$$ExternalSyntheticLambda0;
+    new-instance v0, Lcom/google/firebase/messaging/a;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/firebase/messaging/EnhancedIntentService$$ExternalSyntheticLambda0;-><init>(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/firebase/messaging/a;-><init>(Lcom/google/firebase/messaging/EnhancedIntentService;Landroid/content/Intent;)V
 
     invoke-virtual {p2, p3, v0}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
 
@@ -383,7 +387,7 @@
     :catchall_0
     move-exception p1
 
-    .line 9
+    .line 11
     :try_start_1
     monitor-exit p2
     :try_end_1

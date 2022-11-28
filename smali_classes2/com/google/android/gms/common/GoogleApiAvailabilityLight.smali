@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -372,7 +372,6 @@
 
     return-object p1
 
-    .line 3
     :cond_0
     sget p4, Lcom/google/android/gms/internal/common/zzd;->zza:I
 
@@ -380,7 +379,8 @@
 
     or-int/2addr p4, v0
 
-    invoke-static {p1, p3, p2, p4}, Lcom/google/android/gms/internal/common/zzd;->zza(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    .line 3
+    invoke-static {p1, p3, p2, p4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 

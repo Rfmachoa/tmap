@@ -1,240 +1,1551 @@
-.class public final Lkc/a;
-.super Ljava/lang/Object;
-.source "BadgeRepository.kt"
+.class public Lkc/a;
+.super Lcom/skt/aicloud/speaker/service/state/a;
+.source "ActionAlarmSet.java"
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u001c\u0010\t\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u00022\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u0006R#\u0010\u000c\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000b0\u00060\n8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000c\u0010\r\u001a\u0004\u0008\u000e\u0010\u000f\u00a8\u0006\u0012"
-    }
-    d2 = {
-        "Lkc/a;",
-        "",
-        "Landroid/content/Context;",
-        "context",
-        "Lkotlin/d1;",
-        "c",
-        "",
-        "Lcom/skt/tmap/network/frontman/UpdatedBadge;",
-        "badges",
-        "d",
-        "Landroidx/lifecycle/LiveData;",
-        "Lcom/skt/tmap/network/frontman/Badge;",
-        "badgesList",
-        "Landroidx/lifecycle/LiveData;",
-        "b",
-        "()Landroidx/lifecycle/LiveData;",
-        "<init>",
-        "()V",
-        "tmap_android_phoneKUShip"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
+# instance fields
+.field public s:Lpc/d;
 
-
-# static fields
-.field public static final a:Ljava/lang/String; = "BadgeRepository"
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
-
-.field public static final b:Landroidx/lifecycle/MutableLiveData;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/lifecycle/MutableLiveData<",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/frontman/Badge;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
-.field public static final c:Landroidx/lifecycle/LiveData;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/lifecycle/LiveData<",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/frontman/Badge;",
-            ">;>;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
-
-.field public static final d:Lkc/a;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
+.field public t:Lpc/d;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+    .locals 0
 
     .line 1
-    new-instance v0, Lkc/a;
-
-    invoke-direct {v0}, Lkc/a;-><init>()V
-
-    sput-object v0, Lkc/a;->d:Lkc/a;
+    invoke-direct {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;-><init>(Lcom/skt/aicloud/speaker/service/api/c;)V
 
     .line 2
-    new-instance v0, Landroidx/lifecycle/MutableLiveData;
+    new-instance p1, Lkc/a$a;
 
-    invoke-direct {v0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
+    invoke-direct {p1, p0}, Lkc/a$a;-><init>(Lkc/a;)V
 
-    sput-object v0, Lkc/a;->b:Landroidx/lifecycle/MutableLiveData;
+    iput-object p1, p0, Lkc/a;->s:Lpc/d;
 
     .line 3
-    sput-object v0, Lkc/a;->c:Landroidx/lifecycle/LiveData;
+    new-instance p1, Lkc/a$b;
+
+    invoke-direct {p1, p0}, Lkc/a$b;-><init>(Lkc/a;)V
+
+    iput-object p1, p0, Lkc/a;->t:Lpc/d;
+
+    .line 4
+    sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_ALARM_SET:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    const/4 p1, 0x0
+
+    .line 5
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->e:Lcom/skt/aicloud/speaker/lib/state/AppState;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public static synthetic c0(Lkc/a;)Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static final synthetic a(Lkc/a;)Landroidx/lifecycle/MutableLiveData;
-    .locals 0
-
-    .line 1
-    sget-object p0, Lkc/a;->b:Landroidx/lifecycle/MutableLiveData;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
     return-object p0
 .end method
 
-
-# virtual methods
-.method public final b()Landroidx/lifecycle/LiveData;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroidx/lifecycle/LiveData<",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/frontman/Badge;",
-            ">;>;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
+.method public static synthetic d0(Lkc/a;)Ljc/c;
+    .locals 0
 
     .line 1
-    sget-object v0, Lkc/a;->c:Landroidx/lifecycle/LiveData;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    return-object v0
+    return-object p0
 .end method
 
-.method public final c(Landroid/content/Context;)V
-    .locals 3
-    .param p1    # Landroid/content/Context;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-
-    const-string v0, "context"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "BadgeRepository"
-
-    const-string v1, "requestBadgesInfo"
+.method public static synthetic e0(Lkc/a;)Ljava/lang/String;
+    .locals 0
 
     .line 1
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    .line 2
-    sget-object v0, Lcom/skt/tmap/network/frontman/FrontManApi;->Companion:Lcom/skt/tmap/network/frontman/FrontManApi$Companion;
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/network/frontman/FrontManApi$Companion;->create(Landroid/content/Context;)Lcom/skt/tmap/network/frontman/FrontManApi;
+.method public static synthetic f0(Lkc/a;)Ljava/lang/String;
+    .locals 0
 
-    move-result-object v1
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
-    invoke-interface {v1}, Lcom/skt/tmap/network/frontman/FrontManApi;->getBadges()Lretrofit2/Call;
+    move-result-object p0
 
-    move-result-object v1
+    return-object p0
+.end method
 
-    new-instance v2, Lkc/a$a;
+.method public static synthetic g0(Lkc/a;)Ljava/lang/String;
+    .locals 0
 
-    invoke-direct {v2}, Lkc/a$a;-><init>()V
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/skt/tmap/network/frontman/FrontManApi$Companion;->enqueue(Landroid/content/Context;Lretrofit2/Call;Lretrofit2/Callback;)V
+    return-object p0
+.end method
+
+.method public static synthetic h0(Lkc/a;)Ljc/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic i0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic j0(Lkc/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual/range {p0 .. p5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final d(Landroid/content/Context;Ljava/util/List;)V
-    .locals 2
-    .param p1    # Landroid/content/Context;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/List;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/frontman/UpdatedBadge;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "context"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "badges"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "BadgeRepository"
-
-    const-string/jumbo v1, "updateBadgesInfo"
+.method public static synthetic k0(Lkc/a;)Ljava/lang/String;
+    .locals 0
 
     .line 1
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic l0(Lkc/a;)Ljc/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic m0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic n0(Lkc/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual/range {p0 .. p5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static synthetic o0(Lkc/a;)Ljc/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic p0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic q0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic r0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic s0(Lkc/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual/range {p0 .. p5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static synthetic t0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic u0(Lkc/a;)Ljc/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic v0(Lkc/a;)Ljc/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic w0(Lkc/a;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic x0(Lkc/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual/range {p0 .. p5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public A(Ljava/lang/String;)V
+    .locals 7
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v1, "pauseByUC : cardType = "
+
+    const-string v2, "pause"
+
+    invoke-static {v1, p1, v0, v2, p1}, Lcom/skt/aicloud/speaker/service/state/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/skt/tmap/network/frontman/BadgesRequestDto;
-
-    invoke-direct {v0, p2}, Lcom/skt/tmap/network/frontman/BadgesRequestDto;-><init>(Ljava/util/List;)V
+    invoke-virtual {p0}, Lkc/a;->pause()V
 
     .line 3
-    sget-object p2, Lcom/skt/tmap/network/frontman/FrontManApi;->Companion:Lcom/skt/tmap/network/frontman/FrontManApi$Companion;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/network/frontman/FrontManApi$Companion;->create(Landroid/content/Context;)Lcom/skt/tmap/network/frontman/FrontManApi;
+    const/4 v3, 0x1
+
+    const/4 v5, 0x0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/skt/tmap/network/frontman/FrontManApi;->updateBadges(Lcom/skt/tmap/network/frontman/BadgesRequestDto;)Lretrofit2/Call;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":pauseByUC"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    move-object v1, p0
+
+    move-object v4, p1
+
+    invoke-virtual/range {v1 .. v6}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public B()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
+.end method
+
+.method public Z(Ljc/c;)V
+    .locals 6
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->Z(Ljc/c;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->f()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->m()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lkc/a$b;
+    .line 4
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    invoke-direct {v1}, Lkc/a$b;-><init>()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1, v0, v1}, Lcom/skt/tmap/network/frontman/FrontManApi$Companion;->enqueue(Landroid/content/Context;Lretrofit2/Call;Lretrofit2/Callback;)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "onCardReceived : intent = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", tts = "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 5
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 6
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->b0(Z)V
+
+    .line 7
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->n()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->j()Ljc/d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljc/d;->j()Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ":TTS Empty"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 8
+    :cond_0
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lkc/a;->s:Lpc/d;
+
+    invoke-virtual {p1, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
+
+    .line 9
+    :goto_0
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->c()Ljc/b0;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    .line 10
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v0, "getCommandInfo is NULL"
+
+    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    .line 11
+    :cond_1
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->c()Ljc/b0;
+
+    move-result-object p1
+
+    check-cast p1, Ljc/f;
+
+    .line 12
+    invoke-virtual {p1}, Ljc/f;->i()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p1}, Ljc/f;->j()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+
+    .line 13
+    :cond_3
+    :goto_1
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v0, "[ERROR] ActionUpdateUserDeviceSynchronizeVoiceAlarm : invalid param"
+
+    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/skt/aicloud/speaker/service/state/a;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    return-void
+.end method
+
+.method public e(Ljava/lang/String;)Z
+    .locals 5
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result p1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v0
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v1
+
+    .line 4
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v3, "canPause() : "
+
+    const-string v4, ", play = "
+
+    invoke-static {v3, v1, v4}, Lcom/amazonaws/mobileconnectors/appsync/subscription/mqtt/a;->a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", expired = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", musicState = "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, " / "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 7
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v1, "stopByUC : cardType = "
+
+    const-string v2, "stop"
+
+    invoke-static {v1, p1, v0, v2, p1}, Lcom/skt/aicloud/speaker/service/state/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lkc/a;->stop()V
+
+    .line 3
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    const/4 v5, 0x0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":stopByUC"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    move-object v1, p0
+
+    move-object v4, p1
+
+    invoke-virtual/range {v1 .. v6}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public g(Landroid/content/Intent;Ljc/c;)V
+    .locals 0
+
+    const-string p1, "setAction"
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    if-nez p2, :cond_0
+
+    const-string p1, "setAction : card is null"
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0, p2}, Lkc/a;->Z(Ljc/c;)V
+
+    return-void
+.end method
+
+.method public h()Z
+    .locals 6
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v1
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v2
+
+    .line 4
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v4, "canReadContentInfo() : "
+
+    const-string v5, ", domain = "
+
+    invoke-static {v4, v2, v5}, Lcom/amazonaws/mobileconnectors/appsync/subscription/mqtt/a;->a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->getDomain()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", play = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", expired = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", musicState = "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, " / "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v2
+.end method
+
+.method public j(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->j(Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    return-void
+.end method
+
+.method public m(Ljava/lang/String;)Z
+    .locals 7
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    xor-int/lit8 v2, v0, 0x1
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v2, "No media state. setExpire"
+
+    invoke-static {v0, v2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->u()V
+
+    .line 5
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    .line 6
+    :goto_0
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const/4 v2, 0x1
+
+    .line 7
+    :cond_1
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v4, "canNext("
+
+    const-string v5, ") : "
+
+    const-string v6, ", domain = "
+
+    invoke-static {v4, p1, v5, v2, v6}, Lr0/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->getDomain()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", play = "
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", expired = "
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", musicState = "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, " / "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v2
+.end method
+
+.method public n(Ljava/lang/String;)Z
+    .locals 5
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result p1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v0
+
+    xor-int/lit8 v1, p1, 0x1
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v1, 0x1
+
+    .line 4
+    :cond_0
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v3, "canRepeat() : "
+
+    const-string v4, ", domain = "
+
+    invoke-static {v3, v1, v4}, Lcom/amazonaws/mobileconnectors/appsync/subscription/mqtt/a;->a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->getDomain()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", play = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", expired = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", musicState = "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, " / "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+.end method
+
+.method public pause()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->pause()V
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->u()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/state/a;->b0(Z)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
+
+    return-void
+.end method
+
+.method public r(Ljava/lang/String;)Z
+    .locals 5
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result p1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v0
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v1
+
+    .line 4
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v3, "canStop() : "
+
+    const-string v4, ", play = "
+
+    invoke-static {v3, v1, v4}, Lcom/amazonaws/mobileconnectors/appsync/subscription/mqtt/a;->a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", expired = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", musicState = "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, " / "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+.end method
+
+.method public resume(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->resume(Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    return-void
+.end method
+
+.method public s(Ljava/lang/String;)Z
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result v0
+
+    .line 2
+    invoke-static {p1}, Ljc/a;->n(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 3
+    :goto_0
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v2, "canRestart() : "
+
+    const-string v3, ", play = "
+
+    invoke-static {v2, p1, v3}, Lcom/amazonaws/mobileconnectors/appsync/subscription/mqtt/a;->a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, ", expired = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, " / "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return p1
+.end method
+
+.method public stop()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->stop()V
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->u()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/state/a;->b0(Z)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
+
+    return-void
+.end method
+
+.method public t(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->t(Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    return-void
+.end method
+
+.method public v(Ljava/lang/String;)Z
+    .locals 7
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result v0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    xor-int/lit8 v2, v0, 0x1
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v2, "No media state. setExpire"
+
+    invoke-static {v0, v2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->u()V
+
+    .line 5
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    .line 6
+    :goto_0
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const/4 v2, 0x1
+
+    .line 7
+    :cond_1
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v4, "canPrev("
+
+    const-string v5, ") : "
+
+    const-string v6, ", domain = "
+
+    invoke-static {v4, p1, v5, v2, v6}, Lr0/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->getDomain()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", play = "
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", expired = "
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", musicState = "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, " / "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v2
+.end method
+
+.method public w(Ljava/lang/String;)V
+    .locals 6
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->w(Ljava/lang/String;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    if-eqz p1, :cond_1
+
+    .line 3
+    invoke-virtual {p1}, Ljc/c;->m()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 4
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 5
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->b0(Z)V
+
+    .line 6
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->n()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->j()Ljc/d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljc/d;->j()Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ":TTS Empty"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lkc/a;->s:Lpc/d;
+
+    invoke-virtual {v0, p1, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public x(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->x(Ljava/lang/String;)V
+
+    .line 2
+    invoke-virtual {p0}, Lkc/a;->y0()V
+
+    return-void
+.end method
+
+.method public y(Ljava/lang/String;)Z
+    .locals 5
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->S()Z
+
+    move-result p1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->T()Z
+
+    move-result v0
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v1
+
+    .line 4
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v3, "canContinue() : "
+
+    const-string v4, ", domain = "
+
+    invoke-static {v3, v1, v4}, Lcom/amazonaws/mobileconnectors/appsync/subscription/mqtt/a;->a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->getDomain()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", play = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->isPlaying()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", expired = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", musicState = "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, " / "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->R()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+.end method
+
+.method public final y0()V
+    .locals 7
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
+
+    sget v1, Lcom/skt/aicloud/speaker/service/R$string;->tts_oos_fmt_domain_not_supported_function:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    .line 2
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
+
+    sget v3, Lcom/skt/aicloud/speaker/service/R$string;->service_name_alarm:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->O()Lcom/skt/aicloud/speaker/service/api/g;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    sget-object v5, Lcom/skt/aicloud/speaker/service/player/BgmCaller;->TTS:Lcom/skt/aicloud/speaker/service/player/BgmCaller;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const-string v6, "playNotSupportedTTS"
+
+    invoke-virtual/range {v1 .. v6}, Lcom/skt/aicloud/speaker/service/api/g;->R(Lcom/skt/aicloud/speaker/lib/state/AppState;ZLjava/lang/String;Lcom/skt/aicloud/speaker/service/player/BgmCaller;Ljava/lang/String;)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lkc/a;->t:Lpc/d;
+
+    invoke-virtual {v1, v0, v2}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
 
     return-void
 .end method

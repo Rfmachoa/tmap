@@ -38,14 +38,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cause"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Landroidx/camera/core/impl/utils/futures/g;-><init>()V

@@ -1,35 +1,74 @@
 .class public Lfd/a;
 .super Ljava/lang/Object;
-.source "BarItem.java"
+.source "InteractiveEffectManager.java"
+
+
+# static fields
+.field public static f:Lfd/a; = null
+
+.field public static g:I = 0x3e8
+
+.field public static final h:I = 0x3e8
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I = 0x64
+
+.field public static final l:I = -0x1
+
+.field public static final m:F = 1.0f
+
+.field public static final n:F = 1.0f
+
+.field public static final o:I = 0x1
+
+.field public static final p:I = 0x0
+
+.field public static final q:F = 1.0f
 
 
 # instance fields
-.field public final a:Landroid/graphics/Path;
+.field public a:Landroid/content/Context;
 
-.field public final b:Landroid/graphics/Region;
+.field public b:Landroid/media/SoundPool;
 
-.field public c:I
+.field public c:Landroid/util/SparseIntArray;
 
-.field public d:I
+.field public d:Landroid/os/Vibrator;
 
 .field public e:I
 
-.field public f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
-
-.field public h:F
-
-.field public i:F
-
-.field public j:Ljava/lang/String;
-
-.field public k:Ljava/lang/String;
-
-.field public l:Ljava/lang/String;
-
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 2
+
+    const/16 v0, 0x3e8
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 1
+    sput v0, Lfd/a;->g:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    .line 2
+    sput v1, Lfd/a;->g:I
+
+    sput v0, Lfd/a;->i:I
+
+    add-int/lit8 v0, v1, 0x1
+
+    .line 3
+    sput v0, Lfd/a;->g:I
+
+    sput v1, Lfd/a;->j:I
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
@@ -37,411 +76,235 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroid/graphics/Path;
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    iput-object v0, p0, Lfd/a;->a:Landroid/graphics/Path;
-
-    .line 3
-    new-instance v0, Landroid/graphics/Region;
-
-    invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
-
-    iput-object v0, p0, Lfd/a;->b:Landroid/graphics/Region;
+    iput-object v0, p0, Lfd/a;->c:Landroid/util/SparseIntArray;
 
     const/4 v0, -0x1
 
-    .line 4
+    .line 3
     iput v0, p0, Lfd/a;->e:I
 
-    const/4 v0, 0x0
-
-    .line 5
-    iput-object v0, p0, Lfd/a;->f:Ljava/lang/String;
-
-    .line 6
-    iput-object v0, p0, Lfd/a;->j:Ljava/lang/String;
-
-    .line 7
-    iput-object v0, p0, Lfd/a;->k:Ljava/lang/String;
-
-    .line 8
-    iput-object v0, p0, Lfd/a;->l:Ljava/lang/String;
-
     return-void
+.end method
+
+.method public static b()Lfd/a;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lfd/a;->f:Lfd/a;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lfd/a;
+
+    invoke-direct {v0}, Lfd/a;-><init>()V
+
+    sput-object v0, Lfd/a;->f:Lfd/a;
+
+    .line 2
+    :cond_0
+    sget-object v0, Lfd/a;->f:Lfd/a;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(I)I
+.method public a()V
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "color"
-        }
-    .end annotation
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [F
 
     .line 1
-    invoke-static {p1, v0}, Landroid/graphics/Color;->colorToHSV(I[F)V
-
-    const/4 p1, 0x2
-
-    .line 2
-    aget v1, v0, p1
-
-    const v2, 0x3f4ccccd    # 0.8f
-
-    mul-float/2addr v1, v2
-
-    aput v1, v0, p1
-
-    .line 3
-    invoke-static {v0}, Landroid/graphics/Color;->HSVToColor([F)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public b()F
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lfd/a;->i:F
-
-    return v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lfd/a;->d:I
-
-    return v0
-.end method
-
-.method public d()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lfd/a;->c:I
-
-    return v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->f:Ljava/lang/String;
+    iget-object v0, p0, Lfd/a;->d:Landroid/os/Vibrator;
 
     if-nez v0, :cond_0
 
-    const-string v0, ""
+    return-void
 
     :cond_0
-    return-object v0
-.end method
-
-.method public f()Landroid/graphics/Path;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->a:Landroid/graphics/Path;
-
-    return-object v0
-.end method
-
-.method public g()Landroid/graphics/Region;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->b:Landroid/graphics/Region;
-
-    return-object v0
-.end method
-
-.method public h()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lfd/a;->e:I
-
-    if-gez v0, :cond_0
+    const-wide/16 v1, 0x64
 
     .line 2
-    iget v0, p0, Lfd/a;->c:I
+    invoke-virtual {v0, v1, v2}, Landroid/os/Vibrator;->vibrate(J)V
 
-    invoke-virtual {p0, v0}, Lfd/a;->a(I)I
+    return-void
+.end method
 
-    move-result v0
+.method public final c()V
+    .locals 2
 
-    iput v0, p0, Lfd/a;->e:I
+    .line 1
+    iget-object v0, p0, Lfd/a;->a:Landroid/content/Context;
 
-    .line 3
+    if-nez v0, :cond_0
+
+    return-void
+
     :cond_0
-    iget v0, p0, Lfd/a;->e:I
-
-    return v0
-.end method
-
-.method public i()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public j()F
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lfd/a;->h:F
-
-    return v0
-.end method
-
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->k:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public l()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->j:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
+    const-string/jumbo v1, "vibrator"
 
     .line 2
-    :cond_0
-    iget v0, p0, Lfd/a;->h:F
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Landroid/os/Vibrator;
 
-.method public m()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lfd/a;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public n(F)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "goalValue"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Lfd/a;->i:F
+    iput-object v0, p0, Lfd/a;->d:Landroid/os/Vibrator;
 
     return-void
 .end method
 
-.method public o(I)V
-    .locals 0
+.method public d(I)V
+    .locals 10
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "labelColor"
+            "effect"
         }
     .end annotation
 
     .line 1
-    iput p1, p0, Lfd/a;->d:I
+    iget v0, p0, Lfd/a;->e:I
 
-    return-void
-.end method
+    const/4 v1, -0x1
 
-.method public p(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "lineColor"
-        }
-    .end annotation
+    if-eq v1, v0, :cond_0
 
-    .line 1
-    iput p1, p0, Lfd/a;->c:I
+    .line 2
+    iget-object v2, p0, Lfd/a;->b:Landroid/media/SoundPool;
 
-    return-void
-.end method
+    invoke-virtual {v2, v0}, Landroid/media/SoundPool;->stop(I)V
 
-.method public q(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "name"
-        }
-    .end annotation
+    .line 3
+    iput v1, p0, Lfd/a;->e:I
 
-    .line 1
-    iput-object p1, p0, Lfd/a;->f:Ljava/lang/String;
+    .line 4
+    :cond_0
+    iget-object v3, p0, Lfd/a;->b:Landroid/media/SoundPool;
 
-    return-void
-.end method
+    iget-object v0, p0, Lfd/a;->c:Landroid/util/SparseIntArray;
 
-.method public r(IIII)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "left",
-            "top",
-            "right",
-            "bottom"
-        }
-    .end annotation
+    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->get(I)I
 
-    .line 1
-    iget-object v0, p0, Lfd/a;->b:Landroid/graphics/Region;
+    move-result v4
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Region;->set(IIII)Z
+    const/high16 v5, 0x3f800000    # 1.0f
 
-    return-void
-.end method
+    const/high16 v6, 0x3f800000    # 1.0f
 
-.method public s(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "selectedLineColor"
-        }
-    .end annotation
+    const/4 v7, 0x1
 
-    .line 1
+    const/4 v8, 0x0
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    invoke-virtual/range {v3 .. v9}, Landroid/media/SoundPool;->play(IFFIIF)I
+
+    move-result p1
+
     iput p1, p0, Lfd/a;->e:I
 
     return-void
 .end method
 
-.method public t(Ljava/lang/String;)V
-    .locals 0
+.method public e(Landroid/content/Context;)Lfd/a;
+    .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
-            "timeGap"
+            "context"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lfd/a;->g:Ljava/lang/String;
+    iput-object p1, p0, Lfd/a;->a:Landroid/content/Context;
 
-    return-void
-.end method
+    .line 2
+    invoke-virtual {p0}, Lfd/a;->c()V
 
-.method public u(F)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "value"
-        }
-    .end annotation
+    .line 3
+    new-instance v0, Landroid/media/SoundPool$Builder;
 
-    .line 1
-    iput p1, p0, Lfd/a;->h:F
+    invoke-direct {v0}, Landroid/media/SoundPool$Builder;-><init>()V
 
-    return-void
-.end method
+    new-instance v1, Landroid/media/AudioAttributes$Builder;
 
-.method public v(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valuePrefix"
-        }
-    .end annotation
+    invoke-direct {v1}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    .line 1
-    iput-object p1, p0, Lfd/a;->k:Ljava/lang/String;
+    const/4 v2, 0x5
 
-    return-void
-.end method
+    .line 4
+    invoke-virtual {v1, v2}, Landroid/media/AudioAttributes$Builder;->setLegacyStreamType(I)Landroid/media/AudioAttributes$Builder;
 
-.method public w(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "valueString"
-        }
-    .end annotation
+    move-result-object v1
 
-    .line 1
-    iput-object p1, p0, Lfd/a;->j:Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public x(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueSuffix"
-        }
-    .end annotation
+    .line 5
+    invoke-virtual {v0, v1}, Landroid/media/SoundPool$Builder;->setAudioAttributes(Landroid/media/AudioAttributes;)Landroid/media/SoundPool$Builder;
 
-    .line 1
-    iput-object p1, p0, Lfd/a;->l:Ljava/lang/String;
+    move-result-object v0
 
-    return-void
+    .line 6
+    invoke-virtual {v0}, Landroid/media/SoundPool$Builder;->build()Landroid/media/SoundPool;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfd/a;->b:Landroid/media/SoundPool;
+
+    .line 7
+    iget-object v1, p0, Lfd/a;->c:Landroid/util/SparseIntArray;
+
+    sget v2, Lfd/a;->h:I
+
+    sget v3, Lcom/skt/moment/R$raw;->banner_card_in_1:I
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, p1, v3, v4}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
+
+    move-result v0
+
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 8
+    iget-object v0, p0, Lfd/a;->c:Landroid/util/SparseIntArray;
+
+    sget v1, Lfd/a;->i:I
+
+    iget-object v2, p0, Lfd/a;->b:Landroid/media/SoundPool;
+
+    sget v3, Lcom/skt/moment/R$raw;->banner_card_out_1:I
+
+    invoke-virtual {v2, p1, v3, v4}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 9
+    iget-object v0, p0, Lfd/a;->c:Landroid/util/SparseIntArray;
+
+    sget v1, Lfd/a;->j:I
+
+    iget-object v2, p0, Lfd/a;->b:Landroid/media/SoundPool;
+
+    sget v3, Lcom/skt/moment/R$raw;->card_in_1:I
+
+    invoke-virtual {v2, p1, v3, v4}, Landroid/media/SoundPool;->load(Landroid/content/Context;II)I
+
+    move-result p1
+
+    invoke-virtual {v0, v1, p1}, Landroid/util/SparseIntArray;->put(II)V
+
+    return-object p0
 .end method

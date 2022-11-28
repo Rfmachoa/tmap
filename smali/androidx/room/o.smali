@@ -1,44 +1,50 @@
-.class public Landroidx/room/o;
+.class public final synthetic Landroidx/room/o;
 .super Ljava/lang/Object;
-.source "RoomWarnings.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Lp/a;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "ROOM_CURSOR_MISMATCH"
-
-.field public static final b:Ljava/lang/String; = "ROOM_MISSING_JAVA_TMP_DIR"
-
-.field public static final c:Ljava/lang/String; = "ROOM_CANNOT_CREATE_VERIFICATION_DATABASE"
-
-.field public static final d:Ljava/lang/String; = "ROOM_EMBEDDED_PRIMARY_KEY_IS_DROPPED"
-
-.field public static final e:Ljava/lang/String; = "ROOM_EMBEDDED_INDEX_IS_DROPPED"
-
-.field public static final f:Ljava/lang/String; = "ROOM_EMBEDDED_ENTITY_INDEX_IS_DROPPED"
-
-.field public static final g:Ljava/lang/String; = "ROOM_PARENT_INDEX_IS_DROPPED"
-
-.field public static final h:Ljava/lang/String; = "ROOM_PARENT_FIELD_INDEX_IS_DROPPED"
-
-.field public static final i:Ljava/lang/String; = "ROOM_RELATION_TYPE_MISMATCH"
-
-.field public static final j:Ljava/lang/String; = "ROOM_MISSING_SCHEMA_LOCATION"
-
-.field public static final k:Ljava/lang/String; = "ROOM_MISSING_FOREIGN_KEY_CHILD_INDEX"
-
-.field public static final l:Ljava/lang/String; = "ROOM_DEFAULT_CONSTRUCTOR"
-
-.field public static final m:Ljava/lang/String; = "ROOM_RELATION_QUERY_WITHOUT_TRANSACTION"
+.field public static final synthetic a:Landroidx/room/o;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method public static synthetic constructor <clinit>()V
+    .locals 1
 
-    .line 1
+    new-instance v0, Landroidx/room/o;
+
+    invoke-direct {v0}, Landroidx/room/o;-><init>()V
+
+    sput-object v0, Landroidx/room/o;->a:Landroidx/room/o;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 0
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lj4/d;
+
+    invoke-interface {p1}, Lj4/d;->p1()Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

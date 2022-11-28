@@ -1,20 +1,23 @@
 .class final Lcom/google/android/gms/tagmanager/zzab;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
-
-# interfaces
-.implements Lcom/google/android/gms/tagmanager/zzy;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # instance fields
-.field public final synthetic zza:Lcom/google/android/gms/tagmanager/zzal;
+.field public final synthetic zza:Z
+
+.field public final synthetic zzb:Lcom/google/android/gms/tagmanager/zzak;
+
+.field private zzc:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzal;)V
+.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzak;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zza:Lcom/google/android/gms/tagmanager/zzal;
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zzb:Lcom/google/android/gms/tagmanager/zzak;
+
+    iput-boolean p2, p0, Lcom/google/android/gms/tagmanager/zzab;->zza:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,36 +26,83 @@
 
 
 # virtual methods
-.method public final zza()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzab;->zza:Lcom/google/android/gms/tagmanager/zzal;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/tagmanager/zzal;->zzh()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final zzb()V
-    .locals 1
-
-    const-string v0, "Refresh ignored: container loaded as default only."
+.method public final zza(Lcom/google/android/gms/tagmanager/Container;)Z
+    .locals 7
 
     .line 1
-    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzdh;->zzc(Ljava/lang/String;)V
+    iget-boolean v0, p0, Lcom/google/android/gms/tagmanager/zzab;->zza:Z
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method public final zzc(Ljava/lang/String;)V
-    .locals 1
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzab;->zza:Lcom/google/android/gms/tagmanager/zzal;
+    if-eqz v0, :cond_2
 
-    .line 1
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzal;->zzo(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/Container;->getLastRefreshTime()J
 
-    return-void
+    move-result-wide v3
+
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zzc:Ljava/lang/Long;
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zzb:Lcom/google/android/gms/tagmanager/zzak;
+
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzak;->zzf(Lcom/google/android/gms/tagmanager/zzak;)Lcom/google/android/gms/tagmanager/zzal;
+
+    move-result-object p1
+
+    .line 2
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzal;->zza()J
+
+    move-result-wide v5
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zzc:Ljava/lang/Long;
+
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zzc:Ljava/lang/Long;
+
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    add-long/2addr v5, v3
+
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzab;->zzb:Lcom/google/android/gms/tagmanager/zzak;
+
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzak;->zzc(Lcom/google/android/gms/tagmanager/zzak;)Lcom/google/android/gms/common/util/Clock;
+
+    move-result-object p1
+
+    .line 4
+    invoke-interface {p1}, Lcom/google/android/gms/common/util/Clock;->currentTimeMillis()J
+
+    move-result-wide v3
+
+    cmp-long p1, v5, v3
+
+    if-ltz p1, :cond_1
+
+    return v1
+
+    :cond_1
+    return v2
+
+    .line 5
+    :cond_2
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/Container;->isDefault()Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v1
+
+    :cond_3
+    return v2
 .end method

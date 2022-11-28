@@ -30,7 +30,7 @@
 
     check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->A5(Lcom/skt/tmap/activity/BaseWebViewActivity;Ljava/lang/Boolean;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->I5(Lcom/skt/tmap/activity/BaseWebViewActivity;Ljava/lang/Boolean;)V
 
     return-void
 .end method

@@ -15,12 +15,13 @@
 
 
 # virtual methods
-.method public abstract a(ZLjava/util/List;)V
+.method public abstract a(ZLjava/util/Map;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;",
+            "Ljava/util/Map<",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;",
             ">;)V"
         }
     .end annotation

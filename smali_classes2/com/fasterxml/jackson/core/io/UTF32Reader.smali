@@ -271,7 +271,7 @@
 
     const-string v3, "), cbuf["
 
-    invoke-static {v1, p2, v2, p3, v3}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p2, v2, p3, v3}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
@@ -389,7 +389,7 @@
 
     const-string v5, ", at char #"
 
-    invoke-static {v3, p1, v4, p2, v5}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, p1, v4, p2, v5}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -490,7 +490,7 @@
 .end method
 
 .method public read([CII)I
-    .locals 5
+    .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -516,12 +516,12 @@
     :cond_1
     if-ltz p2, :cond_2
 
-    add-int v0, p2, p3
+    add-int v2, p2, p3
 
     .line 6
-    array-length v2, p1
+    array-length v3, p1
 
-    if-le v0, v2, :cond_3
+    if-le v2, v3, :cond_3
 
     .line 7
     :cond_2
@@ -531,233 +531,254 @@
     add-int/2addr p3, p2
 
     .line 8
-    iget-char v0, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_surrogate:C
+    iget-char v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_surrogate:C
 
-    if-eqz v0, :cond_4
+    const/4 v3, 0x0
+
+    const/4 v4, 0x4
+
+    if-eqz v2, :cond_4
 
     add-int/lit8 v1, p2, 0x1
 
     .line 9
-    aput-char v0, p1, p2
-
-    const/4 v0, 0x0
+    aput-char v2, p1, p2
 
     .line 10
-    iput-char v0, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_surrogate:C
+    iput-char v3, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_surrogate:C
 
     goto :goto_0
 
     .line 11
     :cond_4
-    iget v0, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_length:I
+    iget v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_length:I
 
-    iget v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+    iget v5, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
 
-    sub-int/2addr v0, v2
+    sub-int/2addr v2, v5
 
-    const/4 v2, 0x4
-
-    if-ge v0, v2, :cond_5
+    if-ge v2, v4, :cond_6
 
     .line 12
-    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/core/io/UTF32Reader;->loadMore(I)Z
+    invoke-direct {p0, v2}, Lcom/fasterxml/jackson/core/io/UTF32Reader;->loadMore(I)Z
 
-    move-result v0
+    move-result v5
 
-    if-nez v0, :cond_5
+    if-nez v5, :cond_6
+
+    if-nez v2, :cond_5
 
     return v1
 
+    .line 13
     :cond_5
+    iget v1, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_length:I
+
+    iget v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+
+    sub-int/2addr v1, v2
+
+    invoke-direct {p0, v1, v4}, Lcom/fasterxml/jackson/core/io/UTF32Reader;->reportUnexpectedEOF(II)V
+
+    :cond_6
     move v1, p2
 
-    :goto_0
-    if-ge v1, p3, :cond_b
-
-    .line 13
-    iget v0, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
-
     .line 14
-    iget-boolean v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_bigEndian:Z
+    :goto_0
+    iget v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_length:I
 
-    if-eqz v2, :cond_6
-
-    .line 15
-    iget-object v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_buffer:[B
-
-    aget-byte v3, v2, v0
-
-    shl-int/lit8 v3, v3, 0x18
-
-    add-int/lit8 v4, v0, 0x1
-
-    aget-byte v4, v2, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x10
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x2
-
-    aget-byte v4, v2, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x8
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x3
-
-    aget-byte v2, v2, v4
-
-    and-int/lit16 v2, v2, 0xff
-
-    goto :goto_1
-
-    .line 16
-    :cond_6
-    iget-object v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_buffer:[B
-
-    aget-byte v3, v2, v0
-
-    and-int/lit16 v3, v3, 0xff
-
-    add-int/lit8 v4, v0, 0x1
-
-    aget-byte v4, v2, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x8
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x2
-
-    aget-byte v4, v2, v4
-
-    and-int/lit16 v4, v4, 0xff
-
-    shl-int/lit8 v4, v4, 0x10
-
-    or-int/2addr v3, v4
-
-    add-int/lit8 v4, v0, 0x3
-
-    aget-byte v2, v2, v4
-
-    shl-int/lit8 v2, v2, 0x18
+    sub-int/2addr v2, v4
 
     :goto_1
-    or-int/2addr v2, v3
+    if-ge v1, p3, :cond_c
 
-    add-int/lit8 v0, v0, 0x4
+    .line 15
+    iget v4, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+
+    .line 16
+    iget-boolean v5, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_bigEndian:Z
+
+    if-eqz v5, :cond_7
 
     .line 17
-    iput v0, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+    iget-object v5, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_buffer:[B
 
-    const v0, 0xffff
+    aget-byte v6, v5, v4
 
-    if-le v2, v0, :cond_9
+    shl-int/lit8 v6, v6, 0x8
 
-    const v0, 0x10ffff
+    add-int/lit8 v7, v4, 0x1
 
-    if-le v2, v0, :cond_7
+    aget-byte v7, v5, v7
 
-    sub-int v3, v1, p2
+    and-int/lit16 v7, v7, 0xff
 
-    const-string v4, "(above "
+    or-int/2addr v6, v7
+
+    add-int/lit8 v7, v4, 0x2
 
     .line 18
-    invoke-static {v4}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget-byte v7, v5, v7
 
-    move-result-object v4
+    and-int/lit16 v7, v7, 0xff
 
-    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    shl-int/lit8 v7, v7, 0x8
 
-    move-result-object v0
+    add-int/lit8 v8, v4, 0x3
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget-byte v5, v5, v8
 
-    const-string v0, ") "
+    and-int/lit16 v5, v5, 0xff
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v2, v3, v0}, Lcom/fasterxml/jackson/core/io/UTF32Reader;->reportInvalid(IILjava/lang/String;)V
-
-    :cond_7
-    const/high16 v0, 0x10000
-
-    sub-int/2addr v2, v0
-
-    add-int/lit8 v0, v1, 0x1
-
-    const v3, 0xd800
-
-    shr-int/lit8 v4, v2, 0xa
-
-    add-int/2addr v4, v3
-
-    int-to-char v3, v4
-
-    .line 19
-    aput-char v3, p1, v1
-
-    const v1, 0xdc00
-
-    and-int/lit16 v2, v2, 0x3ff
-
-    or-int/2addr v2, v1
-
-    if-lt v0, p3, :cond_8
-
-    int-to-char p1, v2
-
-    .line 20
-    iput-char p1, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_surrogate:C
+    or-int/2addr v5, v7
 
     goto :goto_2
 
-    :cond_8
-    move v1, v0
+    .line 19
+    :cond_7
+    iget-object v5, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_buffer:[B
 
-    :cond_9
-    add-int/lit8 v0, v1, 0x1
+    aget-byte v6, v5, v4
 
-    int-to-char v2, v2
+    and-int/lit16 v6, v6, 0xff
 
-    .line 21
-    aput-char v2, p1, v1
+    add-int/lit8 v7, v4, 0x1
 
-    .line 22
-    iget v1, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+    aget-byte v7, v5, v7
 
-    iget v2, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_length:I
+    and-int/lit16 v7, v7, 0xff
 
-    if-lt v1, v2, :cond_a
+    shl-int/lit8 v7, v7, 0x8
+
+    or-int/2addr v6, v7
+
+    add-int/lit8 v7, v4, 0x2
+
+    .line 20
+    aget-byte v7, v5, v7
+
+    and-int/lit16 v7, v7, 0xff
+
+    add-int/lit8 v8, v4, 0x3
+
+    aget-byte v5, v5, v8
+
+    shl-int/lit8 v5, v5, 0x8
+
+    or-int/2addr v5, v7
+
+    move v9, v6
+
+    move v6, v5
+
+    move v5, v9
 
     :goto_2
-    move v1, v0
+    add-int/lit8 v4, v4, 0x4
+
+    .line 21
+    iput v4, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+
+    if-eqz v6, :cond_a
+
+    const v4, 0xffff
+
+    and-int/2addr v4, v6
+
+    add-int/lit8 v6, v4, -0x1
+
+    const/16 v7, 0x10
+
+    shl-int/2addr v6, v7
+
+    or-int/2addr v5, v6
+
+    if-le v4, v7, :cond_8
+
+    sub-int v4, v1, p2
+
+    new-array v6, v0, [Ljava/lang/Object;
+
+    const v7, 0x10ffff
+
+    .line 22
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v6, v3
+
+    const-string v7, " (above 0x%08x)"
+
+    invoke-static {v7, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 23
+    invoke-direct {p0, v5, v4, v6}, Lcom/fasterxml/jackson/core/io/UTF32Reader;->reportInvalid(IILjava/lang/String;)V
+
+    :cond_8
+    add-int/lit8 v4, v1, 0x1
+
+    const v6, 0xd800
+
+    shr-int/lit8 v7, v5, 0xa
+
+    add-int/2addr v7, v6
+
+    int-to-char v6, v7
+
+    .line 24
+    aput-char v6, p1, v1
+
+    const v1, 0xdc00
+
+    and-int/lit16 v6, v5, 0x3ff
+
+    or-int/2addr v1, v6
+
+    if-lt v4, p3, :cond_9
+
+    int-to-char p1, v5
+
+    .line 25
+    iput-char p1, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_surrogate:C
 
     goto :goto_3
 
-    :cond_a
-    move v1, v0
+    :cond_9
+    move v5, v1
 
-    goto/16 :goto_0
+    move v1, v4
+
+    :cond_a
+    add-int/lit8 v4, v1, 0x1
+
+    int-to-char v5, v5
+
+    .line 26
+    aput-char v5, p1, v1
+
+    .line 27
+    iget v1, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_ptr:I
+
+    if-le v1, v2, :cond_b
+
+    :goto_3
+    move v1, v4
+
+    goto :goto_4
 
     :cond_b
-    :goto_3
+    move v1, v4
+
+    goto/16 :goto_1
+
+    :cond_c
+    :goto_4
     sub-int/2addr v1, p2
 
-    .line 23
+    .line 28
     iget p1, p0, Lcom/fasterxml/jackson/core/io/UTF32Reader;->_charCount:I
 
     add-int/2addr p1, v1

@@ -15,16 +15,16 @@
 
 
 # virtual methods
-.method public abstract onAdapterChanged(Landroidx/viewpager/widget/ViewPager;Ll3/a;Ll3/a;)V
+.method public abstract onAdapterChanged(Landroidx/viewpager/widget/ViewPager;Lt4/a;Lt4/a;)V
     .param p1    # Landroidx/viewpager/widget/ViewPager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ll3/a;
+    .param p2    # Lt4/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Ll3/a;
+    .param p3    # Lt4/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

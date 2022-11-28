@@ -3,7 +3,7 @@
 .source "HeapResourceFactory.java"
 
 # interfaces
-.implements Lhf/h;
+.implements Llh/h;
 
 
 # annotations
@@ -72,7 +72,7 @@
     return-object p1
 .end method
 
-.method public b(Ljava/lang/String;Ljava/io/InputStream;Lhf/g;)Lcz/msebera/android/httpclient/client/cache/Resource;
+.method public b(Ljava/lang/String;Ljava/io/InputStream;Llh/g;)Lcz/msebera/android/httpclient/client/cache/Resource;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -113,7 +113,7 @@
     if-eqz p3, :cond_0
 
     .line 4
-    invoke-virtual {p3}, Lhf/g;->a()J
+    invoke-virtual {p3}, Llh/g;->a()J
 
     move-result-wide v3
 
@@ -122,7 +122,7 @@
     if-lez v3, :cond_0
 
     .line 5
-    invoke-virtual {p3}, Lhf/g;->c()V
+    invoke-virtual {p3}, Llh/g;->c()V
 
     .line 6
     :cond_1

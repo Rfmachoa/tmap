@@ -1,22 +1,9 @@
 .class final Lcom/google/android/gms/tasks/zzl;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/zzq;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<TResult:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/zzq<",
-        "TTResult;>;"
-    }
-.end annotation
 
 
 # instance fields
@@ -112,13 +99,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TTResult;>;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z

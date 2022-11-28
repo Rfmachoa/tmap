@@ -65,7 +65,7 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual {v0, v1, v2}, Ly1/a;->sendEventForVirtualView(II)Z
+    invoke-virtual {v0, v1, v2}, Lp2/a;->sendEventForVirtualView(II)Z
 
     return-void
 .end method

@@ -59,16 +59,16 @@
     return-void
 .end method
 
-.method public static b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;JLcom/tmapmobility/tmap/exoplayer2/util/i0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;
+.method public static a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;JLcom/tmapmobility/tmap/exoplayer2/util/j0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;
     .locals 1
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)J
+    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/TimeSignalCommand;->c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)J
 
     move-result-wide p0
 
     .line 2
-    invoke-virtual {p3, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;->b(J)J
+    invoke-virtual {p3, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;->b(J)J
 
     move-result-wide p2
 
@@ -80,11 +80,11 @@
     return-object v0
 .end method
 
-.method public static c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)J
+.method public static c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)J
     .locals 6
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
@@ -109,7 +109,7 @@
     shl-long/2addr v0, v2
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v2
 

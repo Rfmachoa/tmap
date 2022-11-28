@@ -61,7 +61,7 @@
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/activity/TmapMainSettingRejoinUser$b$a;-><init>(Lcom/skt/tmap/activity/TmapMainSettingRejoinUser$b;)V
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/e;->S(Landroid/content/Context;Ljava/lang/Runnable;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/g;->W(Landroid/content/Context;Ljava/lang/Runnable;)V
 
     return-void
 .end method

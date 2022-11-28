@@ -218,6 +218,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -236,6 +237,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -246,6 +248,7 @@
 
     const-string v1, "[ObjectId: key=%s, type=%s, scope=%s]"
 
+    .line 4
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

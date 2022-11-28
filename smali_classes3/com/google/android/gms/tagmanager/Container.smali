@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/tagmanager/Container;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # annotations
@@ -9,8 +9,8 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/gms/tagmanager/Container$FunctionCallTagCallback;,
-        Lcom/google/android/gms/tagmanager/Container$FunctionCallMacroCallback;
+        Lcom/google/android/gms/tagmanager/Container$FunctionCallMacroCallback;,
+        Lcom/google/android/gms/tagmanager/Container$FunctionCallTagCallback;
     }
 .end annotation
 
@@ -22,29 +22,11 @@
 
 .field private final zzc:Lcom/google/android/gms/tagmanager/DataLayer;
 
-.field private zzd:Lcom/google/android/gms/tagmanager/zzeu;
+.field private zzd:Lcom/google/android/gms/tagmanager/zzet;
 
 .field private zze:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/tagmanager/Container$FunctionCallMacroCallback;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zzf:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/tagmanager/Container$FunctionCallTagCallback;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private volatile zzg:J
 
@@ -52,28 +34,30 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/tagmanager/DataLayer;Ljava/lang/String;JLcom/google/android/gms/internal/gtm/zzai;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/tagmanager/DataLayer;Ljava/lang/String;JLcom/google/android/gms/internal/gtm/zzak;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
+    const-string v0, "GoogleTagManager"
 
     .line 1
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zze:Ljava/util/Map;
+    new-instance v1, Ljava/util/HashMap;
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, p0, Lcom/google/android/gms/tagmanager/Container;->zze:Ljava/util/Map;
+
+    new-instance v1, Ljava/util/HashMap;
 
     .line 2
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzf:Ljava/util/Map;
+    iput-object v1, p0, Lcom/google/android/gms/tagmanager/Container;->zzf:Ljava/util/Map;
 
-    const-string v0, ""
+    const-string v1, ""
 
-    iput-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzh:Ljava/lang/String;
+    iput-object v1, p0, Lcom/google/android/gms/tagmanager/Container;->zzh:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/google/android/gms/tagmanager/Container;->zza:Landroid/content/Context;
 
@@ -84,7 +68,7 @@
     iput-wide p4, p0, Lcom/google/android/gms/tagmanager/Container;->zzg:J
 
     .line 3
-    invoke-virtual {p6}, Lcom/google/android/gms/internal/gtm/zzai;->zzc()Lcom/google/android/gms/internal/gtm/zzaa;
+    invoke-virtual {p6}, Lcom/google/android/gms/internal/gtm/zzak;->zzc()Lcom/google/android/gms/internal/gtm/zzac;
 
     move-result-object p1
 
@@ -93,14 +77,14 @@
 
     .line 5
     :try_start_0
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzsa;->zzb(Lcom/google/android/gms/internal/gtm/zzaa;)Lcom/google/android/gms/internal/gtm/zzrs;
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzsd;->zzb(Lcom/google/android/gms/internal/gtm/zzac;)Lcom/google/android/gms/internal/gtm/zzrv;
 
     move-result-object p1
     :try_end_0
-    .catch Lcom/google/android/gms/internal/gtm/zzrz; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/google/android/gms/internal/gtm/zzsc; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/google/android/gms/tagmanager/Container;->zzg(Lcom/google/android/gms/internal/gtm/zzrs;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/tagmanager/Container;->zzg(Lcom/google/android/gms/internal/gtm/zzrv;)V
 
     goto :goto_0
 
@@ -108,7 +92,7 @@
     move-exception p2
 
     .line 7
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/gtm/zzbff;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -116,68 +100,53 @@
 
     move-result-object p2
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    move-result p3
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string p4, "Not loading resource: "
 
-    move-result-object p4
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p4}, Ljava/lang/String;->length()I
-
-    move-result p4
-
-    new-instance p5, Ljava/lang/StringBuilder;
-
-    add-int/lit8 p3, p3, 0x2e
-
-    add-int/2addr p3, p4
-
-    invoke-direct {p5, p3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string p3, "Not loading resource: "
-
-    invoke-virtual {p5, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " because it is invalid: "
 
-    invoke-virtual {p5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
-
     .line 8
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 9
     :goto_0
-    invoke-virtual {p6}, Lcom/google/android/gms/internal/gtm/zzai;->zza()I
+    invoke-virtual {p6}, Lcom/google/android/gms/internal/gtm/zzak;->zza()I
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 9
-    invoke-virtual {p6}, Lcom/google/android/gms/internal/gtm/zzai;->zzi()Ljava/util/List;
+    .line 10
+    invoke-virtual {p6}, Lcom/google/android/gms/internal/gtm/zzak;->zzi()Ljava/util/List;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    new-array p3, p2, [Lcom/google/android/gms/internal/gtm/zzag;
+    new-array p3, p2, [Lcom/google/android/gms/internal/gtm/zzai;
 
     invoke-interface {p1, p3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, [Lcom/google/android/gms/internal/gtm/zzag;
+    check-cast p1, [Lcom/google/android/gms/internal/gtm/zzai;
 
-    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzeu;
+    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzet;
 
     move-result-object p3
 
@@ -185,18 +154,18 @@
 
     const-string p1, "evaluateTags called for closed container."
 
-    .line 10
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    .line 11
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     :cond_0
     new-instance p4, Ljava/util/ArrayList;
 
-    .line 11
+    .line 12
     invoke-direct {p4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 12
+    .line 13
     array-length p5, p1
 
     :goto_1
@@ -204,36 +173,36 @@
 
     aget-object p6, p1, p2
 
-    .line 13
+    .line 14
     invoke-virtual {p4, p6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_1
 
-    .line 14
+    .line 15
     :cond_1
-    invoke-virtual {p3, p4}, Lcom/google/android/gms/tagmanager/zzeu;->zze(Ljava/util/List;)V
+    invoke-virtual {p3, p4}, Lcom/google/android/gms/tagmanager/zzet;->zze(Ljava/util/List;)V
 
     :cond_2
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/tagmanager/DataLayer;Ljava/lang/String;JLcom/google/android/gms/internal/gtm/zzrs;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/tagmanager/DataLayer;Ljava/lang/String;JLcom/google/android/gms/internal/gtm/zzrv;)V
     .locals 0
 
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance p4, Ljava/util/HashMap;
 
-    .line 15
     invoke-direct {p4}, Ljava/util/HashMap;-><init>()V
 
     iput-object p4, p0, Lcom/google/android/gms/tagmanager/Container;->zze:Ljava/util/Map;
 
     new-instance p4, Ljava/util/HashMap;
 
-    .line 16
+    .line 17
     invoke-direct {p4}, Ljava/util/HashMap;-><init>()V
 
     iput-object p4, p0, Lcom/google/android/gms/tagmanager/Container;->zzf:Ljava/util/Map;
@@ -252,19 +221,19 @@
 
     iput-wide p1, p0, Lcom/google/android/gms/tagmanager/Container;->zzg:J
 
-    .line 17
-    invoke-direct {p0, p6}, Lcom/google/android/gms/tagmanager/Container;->zzg(Lcom/google/android/gms/internal/gtm/zzrs;)V
+    .line 18
+    invoke-direct {p0, p6}, Lcom/google/android/gms/tagmanager/Container;->zzg(Lcom/google/android/gms/internal/gtm/zzrv;)V
 
     return-void
 .end method
 
-.method private final declared-synchronized zzf()Lcom/google/android/gms/tagmanager/zzeu;
+.method private final declared-synchronized zzf()Lcom/google/android/gms/tagmanager/zzet;
     .locals 1
 
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzd:Lcom/google/android/gms/tagmanager/zzeu;
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzd:Lcom/google/android/gms/tagmanager/zzet;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -280,21 +249,21 @@
     throw v0
 .end method
 
-.method private final zzg(Lcom/google/android/gms/internal/gtm/zzrs;)V
+.method private final zzg(Lcom/google/android/gms/internal/gtm/zzrv;)V
     .locals 9
 
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/gtm/zzrs;->zzb()Ljava/lang/String;
+    .line 1
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/gtm/zzrv;->zzb()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzh:Ljava/lang/String;
 
-    new-instance v7, Lcom/google/android/gms/tagmanager/zzdl;
+    new-instance v7, Lcom/google/android/gms/tagmanager/zzdk;
 
-    invoke-direct {v7}, Lcom/google/android/gms/tagmanager/zzdl;-><init>()V
+    invoke-direct {v7}, Lcom/google/android/gms/tagmanager/zzdk;-><init>()V
 
-    .line 1
-    new-instance v0, Lcom/google/android/gms/tagmanager/zzeu;
+    new-instance v0, Lcom/google/android/gms/tagmanager/zzet;
 
     iget-object v1, p0, Lcom/google/android/gms/tagmanager/Container;->zza:Landroid/content/Context;
 
@@ -318,15 +287,15 @@
 
     check-cast v4, Lcom/google/android/gms/tagmanager/DataLayer;
 
-    new-instance v5, Lcom/google/android/gms/tagmanager/zzv;
+    new-instance v5, Lcom/google/android/gms/tagmanager/zzu;
 
     const/4 v1, 0x0
 
-    invoke-direct {v5, p0, v1}, Lcom/google/android/gms/tagmanager/zzv;-><init>(Lcom/google/android/gms/tagmanager/Container;Lcom/google/android/gms/tagmanager/zzu;)V
+    invoke-direct {v5, p0, v1}, Lcom/google/android/gms/tagmanager/zzu;-><init>(Lcom/google/android/gms/tagmanager/Container;Lcom/google/android/gms/tagmanager/zzt;)V
 
-    new-instance v6, Lcom/google/android/gms/tagmanager/zzx;
+    new-instance v6, Lcom/google/android/gms/tagmanager/zzw;
 
-    invoke-direct {v6, p0, v1}, Lcom/google/android/gms/tagmanager/zzx;-><init>(Lcom/google/android/gms/tagmanager/Container;Lcom/google/android/gms/tagmanager/zzw;)V
+    invoke-direct {v6, p0, v1}, Lcom/google/android/gms/tagmanager/zzw;-><init>(Lcom/google/android/gms/tagmanager/Container;Lcom/google/android/gms/tagmanager/zzv;)V
 
     const/4 v8, 0x0
 
@@ -334,10 +303,10 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/tagmanager/zzeu;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/gtm/zzrs;Lcom/google/android/gms/tagmanager/DataLayer;Lcom/google/android/gms/tagmanager/zzaq;Lcom/google/android/gms/tagmanager/zzaq;Lcom/google/android/gms/tagmanager/zzdl;[B)V
+    invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/tagmanager/zzet;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/gtm/zzrv;Lcom/google/android/gms/tagmanager/DataLayer;Lcom/google/android/gms/tagmanager/zzap;Lcom/google/android/gms/tagmanager/zzap;Lcom/google/android/gms/tagmanager/zzdk;[B)V
 
     .line 4
-    invoke-direct {p0, v0}, Lcom/google/android/gms/tagmanager/Container;->zzh(Lcom/google/android/gms/tagmanager/zzeu;)V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/tagmanager/Container;->zzh(Lcom/google/android/gms/tagmanager/zzet;)V
 
     const-string p1, "_gtm.loadEventEnabled"
 
@@ -384,13 +353,13 @@
     return-void
 .end method
 
-.method private final declared-synchronized zzh(Lcom/google/android/gms/tagmanager/zzeu;)V
+.method private final declared-synchronized zzh(Lcom/google/android/gms/tagmanager/zzet;)V
     .locals 0
 
     monitor-enter p0
 
     :try_start_0
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/Container;->zzd:Lcom/google/android/gms/tagmanager/zzeu;
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/Container;->zzd:Lcom/google/android/gms/tagmanager/zzet;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -409,25 +378,27 @@
 
 # virtual methods
 .method public getBoolean(Ljava/lang/String;)Z
-    .locals 2
+    .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzeu;
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzet;
 
     move-result-object v0
+
+    const-string v1, "GoogleTagManager"
 
     if-nez v0, :cond_0
 
     const-string p1, "getBoolean called for closed container."
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzf()Ljava/lang/Boolean;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzf()Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -440,22 +411,22 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzeu;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzds;
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzet;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzdr;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzds;->zza()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzdr;->zza()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
 
     .line 4
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzg(Ljava/lang/Object;)Ljava/lang/Boolean;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzg(Ljava/lang/Object;)Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -476,39 +447,29 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const-string v2, "Calling getBoolean() threw an exception: "
 
-    move-result v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x42
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Calling getBoolean() threw an exception: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " Returning default value."
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzf()Ljava/lang/Boolean;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzf()Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -521,7 +482,7 @@
 
 .method public getContainerId()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzb:Ljava/lang/String;
@@ -530,25 +491,27 @@
 .end method
 
 .method public getDouble(Ljava/lang/String;)D
-    .locals 2
+    .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzeu;
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzet;
 
     move-result-object v0
+
+    const-string v1, "GoogleTagManager"
 
     if-nez v0, :cond_0
 
     const-string p1, "getDouble called for closed container."
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzh()Ljava/lang/Double;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzh()Ljava/lang/Double;
 
     move-result-object p1
 
@@ -561,22 +524,22 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzeu;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzds;
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzet;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzdr;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzds;->zza()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzdr;->zza()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
 
     .line 4
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzi(Ljava/lang/Object;)Ljava/lang/Double;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzi(Ljava/lang/Object;)Ljava/lang/Double;
 
     move-result-object p1
 
@@ -597,39 +560,29 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const-string v2, "Calling getDouble() threw an exception: "
 
-    move-result v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x41
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Calling getDouble() threw an exception: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " Returning default value."
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzh()Ljava/lang/Double;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzh()Ljava/lang/Double;
 
     move-result-object p1
 
@@ -649,25 +602,27 @@
 .end method
 
 .method public getLong(Ljava/lang/String;)J
-    .locals 2
+    .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
-    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzeu;
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzet;
 
     move-result-object v0
+
+    const-string v1, "GoogleTagManager"
 
     if-nez v0, :cond_0
 
     const-string p1, "getLong called for closed container."
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzj()Ljava/lang/Long;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzj()Ljava/lang/Long;
 
     move-result-object p1
 
@@ -680,22 +635,22 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzeu;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzds;
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzet;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzdr;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzds;->zza()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzdr;->zza()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
 
     .line 4
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzk(Ljava/lang/Object;)Ljava/lang/Long;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzk(Ljava/lang/Object;)Ljava/lang/Long;
 
     move-result-object p1
 
@@ -716,39 +671,29 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const-string v2, "Calling getLong() threw an exception: "
 
-    move-result v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x3f
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Calling getLong() threw an exception: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " Returning default value."
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzj()Ljava/lang/Long;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzj()Ljava/lang/Long;
 
     move-result-object p1
 
@@ -760,27 +705,29 @@
 .end method
 
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzeu;
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzet;
 
     move-result-object v0
+
+    const-string v1, "GoogleTagManager"
 
     if-nez v0, :cond_0
 
     const-string p1, "getString called for closed container."
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzm()Ljava/lang/String;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzm()Ljava/lang/String;
 
     move-result-object p1
 
@@ -789,22 +736,22 @@
     .line 3
     :cond_0
     :try_start_0
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzeu;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzds;
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzet;->zza(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/zzdr;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzds;->zza()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzdr;->zza()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
 
     .line 4
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzn(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzn(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
     :try_end_0
@@ -820,39 +767,29 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const-string v2, "Calling getString() threw an exception: "
 
-    move-result v0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x41
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "Calling getString() threw an exception: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " Returning default value."
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 7
-    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfv;->zzm()Ljava/lang/String;
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzm()Ljava/lang/String;
 
     move-result-object p1
 
@@ -886,11 +823,11 @@
 .method public registerFunctionCallMacroCallback(Ljava/lang/String;Lcom/google/android/gms/tagmanager/Container$FunctionCallMacroCallback;)V
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Lcom/google/android/gms/tagmanager/Container$FunctionCallMacroCallback;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
@@ -928,11 +865,11 @@
 .method public registerFunctionCallTagCallback(Ljava/lang/String;Lcom/google/android/gms/tagmanager/Container$FunctionCallTagCallback;)V
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Lcom/google/android/gms/tagmanager/Container$FunctionCallTagCallback;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
@@ -970,13 +907,13 @@
 .method public unregisterFunctionCallMacroCallback(Ljava/lang/String;)V
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zze:Ljava/util/Map;
 
-    .line 1
     monitor-enter v0
 
     :try_start_0
@@ -1003,13 +940,13 @@
 .method public unregisterFunctionCallTagCallback(Ljava/lang/String;)V
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzf:Ljava/util/Map;
 
-    .line 1
     monitor-enter v0
 
     :try_start_0
@@ -1038,9 +975,9 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zze:Ljava/util/Map;
 
-    .line 1
     monitor-enter v0
 
     :try_start_0
@@ -1071,18 +1008,18 @@
 .method public final zzb(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/Container$FunctionCallTagCallback;
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzf:Ljava/util/Map;
 
-    .line 1
     monitor-enter v0
 
     :try_start_0
@@ -1112,7 +1049,7 @@
 
 .method public final zzc()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
@@ -1126,28 +1063,30 @@
 .method public final zzd(Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzeu;
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/tagmanager/Container;->zzf()Lcom/google/android/gms/tagmanager/zzet;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    const-string p1, "evaluateTags called for closed container."
+    const-string p1, "GoogleTagManager"
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    const-string v0, "evaluateTags called for closed container."
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
     .line 2
     :cond_0
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzeu;->zzc(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzet;->zzc(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1157,7 +1096,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzd:Lcom/google/android/gms/tagmanager/zzeu;
+    iput-object v0, p0, Lcom/google/android/gms/tagmanager/Container;->zzd:Lcom/google/android/gms/tagmanager/zzet;
 
     return-void
 .end method

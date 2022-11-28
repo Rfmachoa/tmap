@@ -31,13 +31,13 @@
     .end annotation
 .end field
 
-.field public final c:Landroidx/recyclerview/widget/k$f;
+.field public final c:Landroidx/recyclerview/widget/j$f;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/k$f<",
+            "Landroidx/recyclerview/widget/j$f<",
             "TT;>;"
         }
     .end annotation
@@ -45,7 +45,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/k$f;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/recyclerview/widget/j$f;)V
     .locals 0
     .param p1    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/Nullable;
@@ -55,7 +55,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Landroidx/recyclerview/widget/k$f;
+    .param p3    # Landroidx/recyclerview/widget/j$f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -64,7 +64,7 @@
             "(",
             "Ljava/util/concurrent/Executor;",
             "Ljava/util/concurrent/Executor;",
-            "Landroidx/recyclerview/widget/k$f<",
+            "Landroidx/recyclerview/widget/j$f<",
             "TT;>;)V"
         }
     .end annotation
@@ -79,7 +79,7 @@
     iput-object p2, p0, Landroidx/recyclerview/widget/c;->b:Ljava/util/concurrent/Executor;
 
     .line 4
-    iput-object p3, p0, Landroidx/recyclerview/widget/c;->c:Landroidx/recyclerview/widget/k$f;
+    iput-object p3, p0, Landroidx/recyclerview/widget/c;->c:Landroidx/recyclerview/widget/j$f;
 
     return-void
 .end method
@@ -97,7 +97,7 @@
     return-object v0
 .end method
 
-.method public b()Landroidx/recyclerview/widget/k$f;
+.method public b()Landroidx/recyclerview/widget/j$f;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -105,13 +105,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/recyclerview/widget/k$f<",
+            "Landroidx/recyclerview/widget/j$f<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/c;->c:Landroidx/recyclerview/widget/k$f;
+    iget-object v0, p0, Landroidx/recyclerview/widget/c;->c:Landroidx/recyclerview/widget/j$f;
 
     return-object v0
 .end method

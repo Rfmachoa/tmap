@@ -61,19 +61,19 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/CSActivity$1;->this$0:Lcom/skt/tmap/activity/CSActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/CSActivity$1;->this$0:Lcom/skt/tmap/activity/CSActivity;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0

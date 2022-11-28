@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/messaging/Constants$MessagePayloadKeys;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "Constants.java"
 
 
 # annotations
@@ -16,90 +16,43 @@
 
 # static fields
 .field public static final COLLAPSE_KEY:Ljava/lang/String; = "collapse_key"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final DELIVERED_PRIORITY:Ljava/lang/String; = "google.delivered_priority"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final FROM:Ljava/lang/String; = "from"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final MESSAGE_TYPE:Ljava/lang/String; = "message_type"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final MSGID:Ljava/lang/String; = "google.message_id"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final MSGID_SERVER:Ljava/lang/String; = "message_id"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final ORIGINAL_PRIORITY:Ljava/lang/String; = "google.original_priority"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final PRIORITY_REDUCED_V19:Ljava/lang/String; = "google.priority_reduced"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final PRIORITY_V19:Ljava/lang/String; = "google.priority"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final RAW_DATA:Ljava/lang/String; = "rawData"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final RESERVED_CLIENT_LIB_PREFIX:Ljava/lang/String; = "google.c."
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final RESERVED_PREFIX:Ljava/lang/String; = "google."
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final SENDER_ID:Ljava/lang/String; = "google.c.sender.id"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final SENT_TIME:Ljava/lang/String; = "google.sent_time"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final TO:Ljava/lang/String; = "google.to"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final TTL:Ljava/lang/String; = "google.ttl"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -107,13 +60,6 @@
 
 .method public static extractDeveloperDefinedPayload(Landroid/os/Bundle;)Landroidx/collection/a;
     .locals 5
-    .param p0    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -213,7 +159,7 @@
     if-nez v4, :cond_0
 
     .line 11
-    invoke-virtual {v0, v2, v3}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 

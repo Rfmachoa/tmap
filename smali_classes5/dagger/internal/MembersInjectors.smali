@@ -21,14 +21,14 @@
     return-void
 .end method
 
-.method public static a()Lsg/b;
+.method public static a()Lwi/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lsg/b<",
+            "Lwi/b<",
             "TT;>;"
         }
     .end annotation

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/BackgroundDetector;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Landroid/app/Application$ActivityLifecycleCallbacks;
@@ -28,14 +28,6 @@
 .field private final zzc:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 .field private final zzd:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/internal/BackgroundDetector$BackgroundStateChangeListener;",
-            ">;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "sInstance"
     .end annotation

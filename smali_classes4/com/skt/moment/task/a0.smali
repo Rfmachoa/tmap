@@ -259,6 +259,28 @@
 
 .method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;Lcom/skt/moment/a$h;)Lcom/skt/moment/task/z;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "momentCode",
+            "latitude",
+            "longitude",
+            "importData",
+            "iconCallback"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Lcom/skt/moment/task/j;
@@ -295,6 +317,20 @@
 
 .method public static b(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/task/z;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "type",
+            "serverAlias",
+            "appCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     sget v0, Lcom/skt/moment/task/a0;->c:I
@@ -343,6 +379,26 @@
 
 .method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;I)Lcom/skt/moment/task/z;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "informationId",
+            "campaignId",
+            "displayLocationCode",
+            "stampCount"
+        }
+    .end annotation
 
     .line 1
     new-instance v8, Lcom/skt/moment/task/t;
@@ -375,6 +431,26 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/task/z;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "momentCode",
+            "campaignId",
+            "domain",
+            "action"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Lcom/skt/moment/task/n;
@@ -403,13 +479,31 @@
     return-object v0
 .end method
 
-.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Lcom/skt/moment/task/z;
-    .locals 7
+.method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/skt/moment/a$k;)Lcom/skt/moment/task/z;
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "placeCampaignId",
+            "seed",
+            "placeCallback"
+        }
+    .end annotation
 
     .line 1
-    new-instance v6, Lcom/skt/moment/task/x;
+    new-instance v7, Lcom/skt/moment/task/x;
 
-    move-object v0, v6
+    move-object v0, v7
 
     move-object v1, p0
 
@@ -421,18 +515,28 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/skt/moment/task/x;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    move-object v6, p5
+
+    invoke-direct/range {v0 .. v6}, Lcom/skt/moment/task/x;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/skt/moment/a$k;)V
 
     .line 2
     sget p0, Lcom/skt/moment/task/a0;->z:I
 
-    invoke-virtual {v6, p0}, Lcom/skt/moment/task/z;->B(I)V
+    invoke-virtual {v7, p0}, Lcom/skt/moment/task/z;->B(I)V
 
-    return-object v6
+    return-object v7
 .end method
 
 .method public static f(I)Lcom/skt/moment/task/z;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
     .line 1
     sget v0, Lcom/skt/moment/task/a0;->b:I
@@ -462,6 +566,14 @@
 
 .method public static g(Lcom/skt/moment/task/z$b;)Lcom/skt/moment/task/z;
     .locals 14
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seed"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -473,14 +585,14 @@
     :cond_0
     sget v1, Lcom/skt/moment/task/a0;->m:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v0
 
@@ -507,7 +619,7 @@
     invoke-direct {v4, v0, v1, v2, v3}, Lcom/skt/moment/task/o;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -519,14 +631,14 @@
     :cond_1
     sget v1, Lcom/skt/moment/task/a0;->n:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_2
 
     .line 9
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -562,7 +674,7 @@
     invoke-direct/range {v3 .. v8}, Lcom/skt/moment/task/d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 15
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -574,14 +686,14 @@
     :cond_2
     sget v1, Lcom/skt/moment/task/a0;->f:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_3
 
     .line 17
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -621,7 +733,7 @@
     invoke-direct/range {v3 .. v9}, Lcom/skt/moment/task/TreatsPopsTask;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;Lcom/skt/moment/a$h;)V
 
     .line 23
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -633,14 +745,14 @@
     :cond_3
     sget v1, Lcom/skt/moment/task/a0;->g:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_4
 
     .line 25
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -680,7 +792,7 @@
     invoke-direct/range {v3 .. v9}, Lcom/skt/moment/task/WebLinkPopsTask;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;Lcom/skt/moment/a$h;)V
 
     .line 31
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -692,14 +804,14 @@
     :cond_4
     sget v1, Lcom/skt/moment/task/a0;->h:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_5
 
     .line 33
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -735,7 +847,7 @@
     invoke-direct/range {v3 .. v8}, Lcom/skt/moment/task/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 39
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -747,14 +859,14 @@
     :cond_5
     sget v1, Lcom/skt/moment/task/a0;->i:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_6
 
     .line 41
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -790,7 +902,7 @@
     invoke-direct/range {v3 .. v8}, Lcom/skt/moment/task/y;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 47
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -802,14 +914,14 @@
     :cond_6
     sget v1, Lcom/skt/moment/task/a0;->j:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_7
 
     .line 49
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -845,7 +957,7 @@
     invoke-direct/range {v3 .. v8}, Lcom/skt/moment/task/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 55
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -857,7 +969,7 @@
     :cond_7
     sget v1, Lcom/skt/moment/task/a0;->o:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -870,7 +982,7 @@
     if-ne v1, v2, :cond_9
 
     .line 57
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v9
 
@@ -999,14 +1111,14 @@
     :cond_9
     sget v1, Lcom/skt/moment/task/a0;->q:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_b
 
     .line 77
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v9
 
@@ -1119,7 +1231,7 @@
     :cond_b
     sget v1, Lcom/skt/moment/task/a0;->w:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -1181,7 +1293,7 @@
     invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResponseVo;->setBody(Ljava/lang/Object;)V
 
     .line 100
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1208,7 +1320,7 @@
     invoke-direct/range {v1 .. v6}, Lcom/skt/moment/task/d0;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 105
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1220,7 +1332,7 @@
     :cond_c
     sget v1, Lcom/skt/moment/task/a0;->r:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -1349,7 +1461,7 @@
     invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResCouponDownloadVo;->setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
 
     .line 119
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1379,7 +1491,7 @@
     invoke-virtual {v0, v7}, Lcom/skt/moment/task/g0;->Q0(Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 125
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1391,7 +1503,7 @@
     :cond_d
     sget v1, Lcom/skt/moment/task/a0;->s:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -1520,7 +1632,7 @@
     invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResCouponDownloadVo;->setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
 
     .line 139
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1550,7 +1662,7 @@
     invoke-virtual {v0, v7}, Lcom/skt/moment/task/h0;->Y0(Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 145
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1562,7 +1674,7 @@
     :cond_e
     sget v1, Lcom/skt/moment/task/a0;->t:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -1691,7 +1803,7 @@
     invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResCouponDownloadVo;->setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
 
     .line 159
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1721,7 +1833,7 @@
     invoke-virtual {v0, v7}, Lcom/skt/moment/task/c0;->d1(Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 165
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1733,7 +1845,7 @@
     :cond_f
     sget v1, Lcom/skt/moment/task/a0;->u:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -1862,7 +1974,7 @@
     invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResCouponDownloadVo;->setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
 
     .line 179
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1892,7 +2004,7 @@
     invoke-virtual {v0, v7}, Lcom/skt/moment/task/f0;->O0(Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 185
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1904,7 +2016,7 @@
     :cond_10
     sget v1, Lcom/skt/moment/task/a0;->v:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
@@ -2033,7 +2145,7 @@
     invoke-virtual {v1, v0}, Lcom/skt/moment/net/vo/ResCouponDownloadVo;->setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
 
     .line 199
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2063,7 +2175,7 @@
     invoke-virtual {v0, v7}, Lcom/skt/moment/task/e0;->O0(Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 205
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -2075,14 +2187,14 @@
     :cond_11
     sget v1, Lcom/skt/moment/task/a0;->y:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_12
 
     .line 207
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
     move-result-object v5
 
@@ -2118,7 +2230,7 @@
     invoke-direct/range {v3 .. v8}, Lcom/skt/moment/task/g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
 
     .line 213
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -2130,47 +2242,53 @@
     :cond_12
     sget v1, Lcom/skt/moment/task/a0;->A:I
 
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()I
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->i()I
 
     move-result v2
 
     if-ne v1, v2, :cond_13
 
     .line 215
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
 
     .line 216
     invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->b()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v5
 
     .line 217
     invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->a()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v6
 
     .line 218
     invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->e()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v0
 
-    check-cast v3, Lcom/skt/moment/net/vo/ResPlaceCampaign;
+    move-object v7, v0
+
+    check-cast v7, Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;
 
     .line 219
-    new-instance v4, Lcom/skt/moment/task/w;
+    new-instance v0, Lcom/skt/moment/task/w;
 
-    invoke-direct {v4, v0, v1, v2, v3}, Lcom/skt/moment/task/w;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ResPlaceCampaign;)V
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->f()Lcom/skt/moment/a$k;
+
+    move-result-object v8
+
+    move-object v3, v0
+
+    invoke-direct/range {v3 .. v8}, Lcom/skt/moment/task/w;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ResReceivePlaceCouponV2BodyVo;Lcom/skt/moment/a$k;)V
 
     .line 220
-    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/moment/task/z$b;->h()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {v4, p0}, Lcom/skt/moment/task/z;->z(Ljava/lang/String;)V
-
-    return-object v4
+    invoke-virtual {v0, p0}, Lcom/skt/moment/task/z;->z(Ljava/lang/String;)V
 
     :cond_13
     return-object v0

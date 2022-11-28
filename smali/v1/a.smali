@@ -1,68 +1,23 @@
 .class public final Lv1/a;
 .super Ljava/lang/Object;
-.source "EditorInfoCompat.java"
+.source "BitmapCompat.java"
 
 
 # annotations
-.annotation build Landroid/annotation/SuppressLint;
-    value = {
-        "PrivateConstructorForUtilityClass"
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lv1/a$e;,
+        Lv1/a$d;,
+        Lv1/a$c;,
+        Lv1/a$b;,
         Lv1/a$a;
     }
 .end annotation
 
 
-# static fields
-.field public static final a:I = 0x1000000
-
-.field public static final b:I = -0x80000000
-
-.field public static final c:[Ljava/lang/String;
-
-.field public static final d:Ljava/lang/String; = "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-.field public static final e:Ljava/lang/String; = "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-.field public static final f:Ljava/lang/String; = "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT"
-
-.field public static final g:Ljava/lang/String; = "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD"
-
-.field public static final h:Ljava/lang/String; = "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END"
-
-.field public static final i:I = 0x800
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
-.end field
-
-.field public static final j:I = 0x400
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
-.end field
-
-
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    .line 1
-    sput-object v0, Lv1/a;->c:[Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -70,904 +25,794 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/inputmethod/EditorInfo;)[Ljava/lang/String;
-    .locals 2
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
+.method public static a(Landroid/graphics/Bitmap;IILandroid/graphics/Rect;Z)Landroid/graphics/Bitmap;
+    .locals 21
+    .param p0    # Landroid/graphics/Bitmap;
         .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-object/from16 v0, p0
 
-    const/16 v1, 0x19
+    move/from16 v1, p1
 
-    if-lt v0, v1, :cond_1
+    move/from16 v2, p2
 
-    .line 2
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
+    move-object/from16 v3, p3
 
-    if-eqz p0, :cond_0
+    if-lez v1, :cond_23
 
-    goto :goto_0
+    if-lez v2, :cond_23
 
-    .line 3
-    :cond_0
-    sget-object p0, Lv1/a;->c:[Ljava/lang/String;
-
-    :goto_0
-    return-object p0
-
-    .line 4
-    :cond_1
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    if-nez v0, :cond_2
-
-    .line 5
-    sget-object p0, Lv1/a;->c:[Ljava/lang/String;
-
-    return-object p0
-
-    :cond_2
-    const-string v1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-    .line 6
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    .line 7
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v0, "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_3
-    if-eqz v0, :cond_4
-
-    goto :goto_1
-
-    .line 8
-    :cond_4
-    sget-object v0, Lv1/a;->c:[Ljava/lang/String;
-
-    :goto_1
-    return-object v0
-.end method
-
-.method public static b(Landroid/view/inputmethod/EditorInfo;I)Ljava/lang/CharSequence;
-    .locals 6
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    if-eqz v3, :cond_1
 
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    invoke-static {p0, p1}, Lv1/a$a;->a(Landroid/view/inputmethod/EditorInfo;I)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return-object v1
-
-    .line 4
-    :cond_1
-    iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
-
-    iget v2, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
-
-    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    .line 5
-    iget v2, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
-
-    iget v3, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    .line 6
-    iget-object v3, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v4, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD"
-
-    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    .line 7
-    iget-object v4, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v5, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END"
-
-    invoke-virtual {v4, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->isEmpty()Z
 
     move-result v4
 
-    sub-int/2addr v2, v0
+    if-nez v4, :cond_0
 
-    .line 8
-    iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
+    iget v4, v3, Landroid/graphics/Rect;->left:I
 
-    if-ltz v0, :cond_5
+    if-ltz v4, :cond_0
 
-    iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
+    iget v4, v3, Landroid/graphics/Rect;->right:I
 
-    if-ltz v0, :cond_5
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getWidth()I
 
-    sub-int v0, v4, v3
+    move-result v5
 
-    if-eq v0, v2, :cond_2
+    if-gt v4, v5, :cond_0
 
-    goto :goto_1
+    iget v4, v3, Landroid/graphics/Rect;->top:I
 
-    .line 9
-    :cond_2
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    if-ltz v4, :cond_0
 
-    const-string v0, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT"
+    iget v4, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 10
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+    .line 2
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result-object p0
+    move-result v5
 
-    if-nez p0, :cond_3
-
-    return-object v1
-
-    :cond_3
-    and-int/lit8 p1, p1, 0x1
-
-    if-eqz p1, :cond_4
-
-    .line 11
-    invoke-interface {p0, v3, v4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
+    if-gt v4, v5, :cond_0
 
     goto :goto_0
 
-    .line 12
-    :cond_4
-    invoke-static {p0, v3, v4}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-
-    :cond_5
-    :goto_1
-    return-object v1
-.end method
-
-.method public static c(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
-    .locals 3
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    invoke-static {p0, p1, p2}, Lv1/a$a;->b(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
     .line 3
     :cond_0
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/4 v1, 0x0
+    const-string v1, "srcRect must be contained by srcBm!"
 
-    if-nez v0, :cond_1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-object v1
-
-    :cond_1
-    const-string v2, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT"
+    throw v0
 
     .line 4
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+    :cond_1
+    :goto_0
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v0
+    const/16 v5, 0x1b
 
-    if-nez v0, :cond_2
-
-    return-object v1
+    if-lt v4, v5, :cond_2
 
     .line 5
-    :cond_2
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    invoke-static/range {p0 .. p0}, Lv1/a$c;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    const-string v1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END"
-
-    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    .line 6
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    sub-int/2addr v1, p0
-
-    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    and-int/lit8 p2, p2, 0x1
-
-    if-eqz p2, :cond_3
-
-    add-int/2addr p1, p0
-
-    .line 7
-    invoke-interface {v0, p0, p1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_3
-    add-int/2addr p1, p0
-
-    .line 8
-    invoke-static {v0, p0, p1}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-.end method
-
-.method public static d(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
-    .locals 3
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    invoke-static {p0, p1, p2}, Lv1/a$a;->c(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return-object v1
-
-    :cond_1
-    const-string v2, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT"
-
-    .line 4
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    return-object v1
-
-    .line 5
-    :cond_2
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD"
-
-    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    .line 6
-    invoke-static {p1, p0}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    and-int/lit8 p2, p2, 0x1
-
-    if-eqz p2, :cond_3
-
-    sub-int p1, p0, p1
-
-    .line 7
-    invoke-interface {v0, p1, p0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_3
-    sub-int p1, p0, p1
-
-    .line 8
-    invoke-static {v0, p1, p0}, Landroid/text/TextUtils;->substring(Ljava/lang/CharSequence;II)Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-.end method
-
-.method public static e(Landroid/view/inputmethod/EditorInfo;)I
-    .locals 3
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    const-string v2, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-    .line 3
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    .line 4
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v2, "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-    invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz v0, :cond_2
-
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_2
-    if-eqz v0, :cond_3
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_3
-    if-eqz p0, :cond_4
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_4
-    return v1
-.end method
-
-.method public static f(Ljava/lang/CharSequence;II)Z
-    .locals 1
-
-    if-eqz p2, :cond_1
-
-    const/4 v0, 0x1
-
-    if-eq p2, v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 1
-    :cond_0
-    invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Character;->isHighSurrogate(C)Z
-
-    move-result p0
-
-    return p0
-
-    .line 2
-    :cond_1
-    invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Character;->isLowSurrogate(C)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static g(I)Z
-    .locals 1
-
-    and-int/lit16 p0, p0, 0xfff
-
-    const/16 v0, 0x81
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0xe1
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x12
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    :goto_1
-    return p0
-.end method
-
-.method public static h(Landroid/view/inputmethod/EditorInfo;[Ljava/lang/String;)V
-    .locals 2
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # [Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    iput-object p1, p0, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    if-nez v0, :cond_1
-
-    .line 4
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iput-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
-
-    .line 6
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    const-string v0, "android.support.v13.view.inputmethod.EditorInfoCompat.CONTENT_MIME_TYPES"
-
-    invoke-virtual {p0, v0, p1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public static i(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
-    .locals 5
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/CharSequence;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 2
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    .line 3
-    invoke-static {p0, p1, p2}, Lv1/a$a;->d(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
-
-    return-void
-
-    .line 4
-    :cond_0
-    iget v0, p0, Landroid/view/inputmethod/EditorInfo;->initialSelStart:I
-
-    iget v1, p0, Landroid/view/inputmethod/EditorInfo;->initialSelEnd:I
-
-    if-le v0, v1, :cond_1
-
-    sub-int v2, v1, p2
-
-    goto :goto_0
-
-    :cond_1
-    sub-int v2, v0, p2
-
-    :goto_0
-    if-le v0, v1, :cond_2
-
-    sub-int/2addr v0, p2
+    move-result-object v6
 
     goto :goto_1
 
     :cond_2
-    sub-int v0, v1, p2
+    move-object v6, v0
 
-    .line 5
     :goto_1
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    if-eqz v3, :cond_3
 
-    move-result v1
+    .line 6
+    invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    if-ltz p2, :cond_6
-
-    if-ltz v2, :cond_6
-
-    if-le v0, v1, :cond_3
+    move-result v7
 
     goto :goto_2
 
-    .line 6
     :cond_3
-    iget p2, p0, Landroid/view/inputmethod/EditorInfo;->inputType:I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getWidth()I
 
-    invoke-static {p2}, Lv1/a;->g(I)Z
+    move-result v7
 
-    move-result p2
-
-    if-eqz p2, :cond_4
+    :goto_2
+    if-eqz v3, :cond_4
 
     .line 7
-    invoke-static {p0, v3, v4, v4}, Lv1/a;->k(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
+    invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->height()I
 
-    return-void
+    move-result v8
+
+    goto :goto_3
 
     :cond_4
-    const/16 p2, 0x800
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    if-gt v1, p2, :cond_5
+    move-result v8
+
+    :goto_3
+    int-to-float v9, v1
+
+    int-to-float v10, v7
+
+    div-float/2addr v9, v10
+
+    int-to-float v10, v2
+
+    int-to-float v11, v8
+
+    div-float/2addr v10, v11
+
+    if-eqz v3, :cond_5
 
     .line 8
-    invoke-static {p0, p1, v2, v0}, Lv1/a;->k(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
+    iget v12, v3, Landroid/graphics/Rect;->left:I
 
-    return-void
+    goto :goto_4
+
+    :cond_5
+    const/4 v12, 0x0
+
+    :goto_4
+    if-eqz v3, :cond_6
 
     .line 9
-    :cond_5
-    invoke-static {p0, p1, v2, v0}, Lv1/a;->l(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
+    iget v3, v3, Landroid/graphics/Rect;->top:I
 
-    return-void
+    goto :goto_5
+
+    :cond_6
+    const/4 v3, 0x0
+
+    :goto_5
+    const/4 v13, 0x1
+
+    if-nez v12, :cond_8
+
+    if-nez v3, :cond_8
 
     .line 10
-    :cond_6
-    :goto_2
-    invoke-static {p0, v3, v4, v4}, Lv1/a;->k(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getWidth()I
 
-    return-void
-.end method
+    move-result v14
 
-.method public static j(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;)V
-    .locals 3
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/CharSequence;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    if-ne v1, v14, :cond_8
 
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    const/4 v1, 0x0
+    move-result v14
 
-    const/16 v2, 0x1e
+    if-ne v2, v14, :cond_8
 
-    if-lt v0, v2, :cond_0
+    .line 11
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->isMutable()Z
 
-    .line 2
-    invoke-static {p0, p1, v1}, Lv1/a$a;->d(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
+    move-result v1
 
-    goto :goto_0
+    if-eqz v1, :cond_7
 
-    .line 3
-    :cond_0
-    invoke-static {p0, p1, v1}, Lv1/a;->i(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
+    if-ne v0, v6, :cond_7
 
-    :goto_0
-    return-void
-.end method
+    .line 12
+    invoke-virtual/range {p0 .. p0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
-.method public static k(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
-    .locals 2
+    move-result-object v1
 
-    .line 1
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    invoke-virtual {v0, v1, v13}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    .line 2
-    new-instance v0, Landroid/os/Bundle;
+    return-object v0
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    :cond_7
+    return-object v6
 
-    iput-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    .line 13
+    :cond_8
+    new-instance v14, Landroid/graphics/Paint;
 
-    :cond_0
-    if-eqz p1, :cond_1
+    invoke-direct {v14, v13}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 3
-    new-instance v0, Landroid/text/SpannableStringBuilder;
+    .line 14
+    invoke-virtual {v14, v13}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    invoke-direct {v0, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+    const/16 v15, 0x1d
 
-    goto :goto_0
+    if-lt v4, v15, :cond_9
 
-    :cond_1
-    const/4 v0, 0x0
+    .line 15
+    invoke-static {v14}, Lv1/a$d;->a(Landroid/graphics/Paint;)V
 
-    .line 4
-    :goto_0
-    iget-object p1, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    goto :goto_6
 
-    const-string v1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT"
+    .line 16
+    :cond_9
+    new-instance v15, Landroid/graphics/PorterDuffXfermode;
 
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    sget-object v11, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
 
-    .line 5
-    iget-object p1, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    invoke-direct {v15, v11}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
 
-    const-string v0, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD"
+    invoke-virtual {v14, v15}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    :goto_6
+    if-ne v7, v1, :cond_a
 
-    .line 6
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    if-ne v8, v2, :cond_a
 
-    const-string p1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END"
+    .line 17
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {p0, p1, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-static {v1, v2, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-.method public static l(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
-    .locals 9
+    move-result-object v0
 
-    sub-int v0, p3, p2
+    .line 18
+    new-instance v1, Landroid/graphics/Canvas;
 
-    const/4 v1, 0x0
+    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    const/16 v2, 0x400
+    neg-int v2, v12
 
-    if-le v0, v2, :cond_0
+    int-to-float v2, v2
 
-    move v2, v1
+    neg-int v3, v3
 
-    goto :goto_0
+    int-to-float v3, v3
 
-    :cond_0
-    move v2, v0
+    .line 19
+    invoke-virtual {v1, v6, v2, v3, v14}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1
-    :goto_0
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    return-object v0
 
-    move-result v3
+    :cond_a
+    const-wide/high16 v16, 0x4000000000000000L    # 2.0
 
-    sub-int/2addr v3, p3
+    .line 20
+    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->log(D)D
 
-    rsub-int v4, v2, 0x800
+    move-result-wide v16
 
-    const-wide v5, 0x3fe999999999999aL    # 0.8
+    const/high16 v11, 0x3f800000    # 1.0f
 
-    int-to-double v7, v4
+    cmpl-float v15, v9, v11
 
-    mul-double/2addr v7, v5
+    if-lez v15, :cond_b
 
-    double-to-int v5, v7
+    move-object/from16 p3, v14
 
-    .line 2
-    invoke-static {p2, v5}, Ljava/lang/Math;->min(II)I
+    float-to-double v13, v9
 
-    move-result v5
+    .line 21
+    invoke-static {v13, v14}, Ljava/lang/Math;->log(D)D
 
-    sub-int v5, v4, v5
+    move-result-wide v13
 
-    .line 3
-    invoke-static {v3, v5}, Ljava/lang/Math;->min(II)I
+    div-double v13, v13, v16
 
-    move-result v3
+    invoke-static {v13, v14}, Ljava/lang/Math;->ceil(D)D
 
-    sub-int/2addr v4, v3
+    move-result-wide v13
 
-    .line 4
-    invoke-static {p2, v4}, Ljava/lang/Math;->min(II)I
+    goto :goto_7
+
+    :cond_b
+    move-object/from16 p3, v14
+
+    float-to-double v13, v9
+
+    .line 22
+    invoke-static {v13, v14}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v13
+
+    div-double v13, v13, v16
+
+    invoke-static {v13, v14}, Ljava/lang/Math;->floor(D)D
+
+    move-result-wide v13
+
+    :goto_7
+    double-to-int v9, v13
+
+    cmpl-float v11, v10, v11
+
+    if-lez v11, :cond_c
+
+    float-to-double v10, v10
+
+    .line 23
+    invoke-static {v10, v11}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v10
+
+    div-double v10, v10, v16
+
+    invoke-static {v10, v11}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v10
+
+    goto :goto_8
+
+    :cond_c
+    float-to-double v10, v10
+
+    .line 24
+    invoke-static {v10, v11}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v10
+
+    div-double v10, v10, v16
+
+    invoke-static {v10, v11}, Ljava/lang/Math;->floor(D)D
+
+    move-result-wide v10
+
+    :goto_8
+    double-to-int v10, v10
+
+    const/4 v11, 0x0
+
+    if-eqz p4, :cond_f
+
+    if-lt v4, v5, :cond_f
+
+    .line 25
+    invoke-static/range {p0 .. p0}, Lv1/a$c;->c(Landroid/graphics/Bitmap;)Z
 
     move-result v4
 
-    sub-int/2addr p2, v4
+    if-nez v4, :cond_f
 
-    .line 5
-    invoke-static {p1, p2, v1}, Lv1/a;->f(Ljava/lang/CharSequence;II)Z
+    const/4 v4, 0x1
+
+    if-lez v9, :cond_d
+
+    .line 26
+    invoke-static {v7, v1, v4, v9}, Lv1/a;->e(IIII)I
+
+    move-result v11
+
+    goto :goto_9
+
+    :cond_d
+    move v11, v7
+
+    :goto_9
+    if-lez v10, :cond_e
+
+    .line 27
+    invoke-static {v8, v2, v4, v10}, Lv1/a;->e(IIII)I
+
+    move-result v13
+
+    goto :goto_a
+
+    :cond_e
+    move v13, v8
+
+    .line 28
+    :goto_a
+    invoke-static {v11, v13, v0, v4}, Lv1/a$c;->b(IILandroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;
+
+    move-result-object v11
+
+    .line 29
+    new-instance v13, Landroid/graphics/Canvas;
+
+    invoke-direct {v13, v11}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    neg-int v12, v12
+
+    int-to-float v12, v12
+
+    neg-int v3, v3
+
+    int-to-float v3, v3
+
+    move-object/from16 v14, p3
+
+    .line 30
+    invoke-virtual {v13, v6, v12, v3, v14}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    move v13, v4
+
+    const/4 v3, 0x0
+
+    const/4 v12, 0x0
+
+    move-object/from16 v20, v11
+
+    move-object v11, v6
+
+    move-object/from16 v6, v20
+
+    goto :goto_b
+
+    :cond_f
+    move-object/from16 v14, p3
+
+    const/4 v4, 0x1
+
+    const/4 v13, 0x0
+
+    .line 31
+    :goto_b
+    new-instance v15, Landroid/graphics/Rect;
+
+    invoke-direct {v15, v12, v3, v7, v8}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 32
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
+    move v12, v9
+
+    move/from16 v16, v10
+
+    :goto_c
+    if-nez v12, :cond_12
+
+    if-eqz v16, :cond_10
+
+    goto :goto_d
+
+    :cond_10
+    if-eq v11, v0, :cond_11
+
+    if-eqz v11, :cond_11
+
+    .line 33
+    invoke-virtual {v11}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_11
+    return-object v6
+
+    :cond_12
+    :goto_d
+    if-gez v12, :cond_13
+
+    add-int/lit8 v12, v12, 0x1
+
+    goto :goto_e
+
+    :cond_13
+    if-lez v12, :cond_14
+
+    add-int/lit8 v12, v12, -0x1
+
+    :cond_14
+    :goto_e
+    if-gez v16, :cond_15
+
+    add-int/lit8 v16, v16, 0x1
+
+    goto :goto_f
+
+    :cond_15
+    if-lez v16, :cond_16
+
+    add-int/lit8 v16, v16, -0x1
+
+    :cond_16
+    :goto_f
+    move/from16 v4, v16
+
+    .line 34
+    invoke-static {v7, v1, v12, v9}, Lv1/a;->e(IIII)I
 
     move-result v5
 
-    if-eqz v5, :cond_1
+    move-object/from16 p3, v14
 
-    add-int/lit8 p2, p2, 0x1
+    .line 35
+    invoke-static {v8, v2, v4, v10}, Lv1/a;->e(IIII)I
 
-    add-int/lit8 v4, v4, -0x1
+    move-result v14
 
-    :cond_1
-    add-int v5, p3, v3
+    move-object/from16 v18, v15
 
-    const/4 v6, 0x1
+    const/4 v15, 0x0
 
-    sub-int/2addr v5, v6
+    .line 36
+    invoke-virtual {v3, v15, v15, v5, v14}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 6
-    invoke-static {p1, v5, v6}, Lv1/a;->f(Ljava/lang/CharSequence;II)Z
+    if-nez v12, :cond_17
 
-    move-result v5
+    if-nez v4, :cond_17
 
-    if-eqz v5, :cond_2
+    const/4 v5, 0x1
 
-    add-int/lit8 v3, v3, -0x1
+    goto :goto_10
 
-    :cond_2
-    add-int v5, v4, v2
+    :cond_17
+    move v5, v15
 
-    add-int/2addr v5, v3
+    :goto_10
+    if-eqz v11, :cond_18
 
-    if-eq v2, v0, :cond_3
+    .line 37
+    invoke-virtual {v11}, Landroid/graphics/Bitmap;->getWidth()I
 
-    add-int v0, p2, v4
+    move-result v14
 
-    .line 7
-    invoke-interface {p1, p2, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    if-ne v14, v1, :cond_18
 
-    move-result-object p2
+    invoke-virtual {v11}, Landroid/graphics/Bitmap;->getHeight()I
 
-    add-int/2addr v3, p3
+    move-result v14
 
-    .line 8
-    invoke-interface {p1, p3, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    if-ne v14, v2, :cond_18
 
-    move-result-object p1
+    const/4 v14, 0x1
 
-    const/4 p3, 0x2
+    goto :goto_11
 
-    new-array p3, p3, [Ljava/lang/CharSequence;
+    :cond_18
+    move v14, v15
 
-    aput-object p2, p3, v1
+    :goto_11
+    if-eqz v11, :cond_1c
 
-    aput-object p1, p3, v6
+    if-eq v11, v0, :cond_1c
 
-    .line 9
-    invoke-static {p3}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    if-eqz p4, :cond_19
 
-    move-result-object p1
+    .line 38
+    sget v15, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    goto :goto_1
+    move-object/from16 v19, v3
 
-    :cond_3
-    add-int/2addr v5, p2
+    const/16 v3, 0x1b
 
-    .line 10
-    invoke-interface {p1, p2, v5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    if-lt v15, v3, :cond_1a
 
-    move-result-object p1
+    .line 39
+    invoke-static {v11}, Lv1/a$c;->c(Landroid/graphics/Bitmap;)Z
 
-    :goto_1
-    add-int/2addr v4, v1
+    move-result v3
 
-    add-int/2addr v2, v4
+    if-eqz v3, :cond_1d
 
-    .line 11
-    invoke-static {p0, p1, v4, v2}, Lv1/a;->k(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
+    goto :goto_12
+
+    :cond_19
+    move-object/from16 v19, v3
+
+    :cond_1a
+    :goto_12
+    if-eqz v5, :cond_1b
+
+    if-eqz v14, :cond_1d
+
+    if-eqz v13, :cond_1b
+
+    goto :goto_13
+
+    :cond_1b
+    move-object v3, v11
+
+    const/16 v15, 0x1b
+
+    goto :goto_17
+
+    :cond_1c
+    move-object/from16 v19, v3
+
+    :cond_1d
+    :goto_13
+    if-eq v11, v0, :cond_1e
+
+    if-eqz v11, :cond_1e
+
+    .line 40
+    invoke-virtual {v11}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_1e
+    if-lez v12, :cond_1f
+
+    move v3, v13
+
+    goto :goto_14
+
+    :cond_1f
+    move v3, v12
+
+    .line 41
+    :goto_14
+    invoke-static {v7, v1, v3, v9}, Lv1/a;->e(IIII)I
+
+    move-result v3
+
+    if-lez v4, :cond_20
+
+    move v11, v13
+
+    goto :goto_15
+
+    :cond_20
+    move v11, v4
+
+    .line 42
+    :goto_15
+    invoke-static {v8, v2, v11, v10}, Lv1/a;->e(IIII)I
+
+    move-result v11
+
+    .line 43
+    sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v15, 0x1b
+
+    if-lt v14, v15, :cond_22
+
+    if-eqz p4, :cond_21
+
+    if-nez v5, :cond_21
+
+    const/4 v5, 0x1
+
+    goto :goto_16
+
+    :cond_21
+    const/4 v5, 0x0
+
+    .line 44
+    :goto_16
+    invoke-static {v3, v11, v0, v5}, Lv1/a$c;->b(IILandroid/graphics/Bitmap;Z)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    goto :goto_17
+
+    .line 45
+    :cond_22
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
+
+    move-result-object v5
+
+    invoke-static {v3, v11, v5}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    .line 46
+    :goto_17
+    new-instance v5, Landroid/graphics/Canvas;
+
+    invoke-direct {v5, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    move-object/from16 v11, p3
+
+    move-object/from16 v14, v18
+
+    move-object/from16 v15, v19
+
+    .line 47
+    invoke-virtual {v5, v6, v14, v15, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    .line 48
+    invoke-virtual {v14, v15}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move/from16 v16, v4
+
+    const/4 v4, 0x1
+
+    const/16 v5, 0x1b
+
+    move-object/from16 v20, v6
+
+    move-object v6, v3
+
+    move-object v3, v15
+
+    move-object v15, v14
+
+    move-object v14, v11
+
+    move-object/from16 v11, v20
+
+    goto/16 :goto_c
+
+    .line 49
+    :cond_23
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "dstW and dstH must be > 0!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static b(Landroid/graphics/Bitmap;)I
+    .locals 0
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0}, Lv1/a$b;->a(Landroid/graphics/Bitmap;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static c(Landroid/graphics/Bitmap;)Z
+    .locals 0
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0}, Lv1/a$a;->a(Landroid/graphics/Bitmap;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static d(Landroid/graphics/Bitmap;Z)V
+    .locals 0
+    .param p0    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0, p1}, Lv1/a$a;->b(Landroid/graphics/Bitmap;Z)V
 
     return-void
+.end method
+
+.method public static e(IIII)I
+    .locals 1
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    if-nez p2, :cond_0
+
+    return p1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    if-lez p2, :cond_1
+
+    sub-int/2addr p3, p2
+
+    shl-int p1, v0, p3
+
+    mul-int/2addr p0, p1
+
+    return p0
+
+    :cond_1
+    neg-int p0, p2
+
+    sub-int/2addr p0, v0
+
+    shl-int p0, p1, p0
+
+    return p0
 .end method

@@ -722,7 +722,7 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    invoke-static {v0, p2}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -740,7 +740,7 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    invoke-static {v0, p2}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -760,7 +760,7 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    invoke-static {v0, v1}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -773,7 +773,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -825,7 +825,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -838,7 +838,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1908,7 +1908,7 @@
 
     and-int/2addr v0, v4
 
-    invoke-static {v0, v3}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 

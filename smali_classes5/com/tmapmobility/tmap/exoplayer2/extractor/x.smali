@@ -1,23 +1,18 @@
-.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+.class public final Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
 .super Ljava/lang/Object;
-.source "SeekMap.java"
+.source "PositionHolder.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;,
-        Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;
-    }
-.end annotation
+# instance fields
+.field public a:J
 
 
-# virtual methods
-.method public abstract a(J)Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract getDurationUs()J
-.end method
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract isSeekable()Z
+    return-void
 .end method

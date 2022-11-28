@@ -26,7 +26,7 @@
     const-string p2, "HTTP host"
 
     .line 2
-    invoke-static {p1, p2}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, p2}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     iput-object p1, p0, Lcz/msebera/android/httpclient/conn/HttpInetSocketAddress;->httphost:Lcz/msebera/android/httpclient/HttpHost;

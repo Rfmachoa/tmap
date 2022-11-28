@@ -260,7 +260,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 26
     iget-object p1, p0, Lcom/skt/tmap/blackbox/c;->b:Landroid/hardware/Camera;
@@ -365,7 +365,7 @@
 
     const-string v2, "Camera is not available (in use or does not exist)"
 
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     return-object v0
@@ -392,7 +392,7 @@
     const-string p1, "findFrameRate camera is NULL!!!"
 
     .line 2
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -407,7 +407,7 @@
     const-string p1, "findFrameRate parameters is NULL!!!"
 
     .line 4
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -605,7 +605,7 @@
 
     iget v1, v1, Landroid/hardware/Camera$Size;->height:I
 
-    invoke-static {v0, v1, p1}, Lwb/d;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)V
+    invoke-static {v0, v1, p1}, Lud/f;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)V
 
     :cond_8
     :goto_2
@@ -664,7 +664,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -761,7 +761,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-ne v3, v2, :cond_4
 
@@ -847,7 +847,7 @@
 
     const-string v1, "openPreview()"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/tmap/blackbox/c;->m()V
@@ -953,7 +953,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -994,7 +994,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     :goto_1
@@ -1033,7 +1033,7 @@
 
     const-string v1, "resumeCamera"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     monitor-enter p0
@@ -1116,7 +1116,7 @@
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1155,7 +1155,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     move p1, v0
@@ -1232,7 +1232,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1317,7 +1317,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -1377,7 +1377,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1477,7 +1477,7 @@
 
     const-string v2, "_SCREEN"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1485,7 +1485,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "surfaceChanged : "
+    const-string v2, "surfaceChanged : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1513,7 +1513,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/skt/tmap/blackbox/c;->d()V
@@ -1570,7 +1570,7 @@
 
     const-string v2, "_SCREEN"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1578,7 +1578,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "surfaceCreated : "
+    const-string v2, "surfaceCreated : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1588,7 +1588,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1621,9 +1621,9 @@
 
     move-result-object p1
 
-    const-string/jumbo v0, "surfaceDestroyed"
+    const-string v0, "surfaceDestroyed"
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/skt/tmap/blackbox/c;->d()V

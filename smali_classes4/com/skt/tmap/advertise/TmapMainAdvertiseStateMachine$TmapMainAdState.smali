@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0008\u0006\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002j\u0002\u0008\u0003j\u0002\u0008\u0004j\u0002\u0008\u0005j\u0002\u0008\u0006\u00a8\u0006\u0007"
     }
@@ -43,9 +38,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -62,60 +58,90 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
+.method private static final synthetic $values()[Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    .locals 3
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    new-instance v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    sget-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->LOADING_STATE:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    const-string v2, "LOADING_STATE"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->IMAGE_STATE:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    sput-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->LOADING_STATE:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    const/4 v2, 0x1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    sget-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->VIDEO_WITHOUT_SOUND:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    const-string v2, "IMAGE_STATE"
+    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+    aput-object v1, v0, v2
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
+    sget-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->VIDEO_WITH_SOUND:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    sput-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->IMAGE_STATE:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    const/4 v2, 0x3
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    return-object v0
+.end method
 
-    const-string v2, "VIDEO_WITHOUT_SOUND"
+.method public static constructor <clinit>()V
+    .locals 3
 
-    const/4 v3, 0x2
+    .line 1
+    new-instance v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
+    const-string v1, "LOADING_STATE"
 
-    sput-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->VIDEO_WITHOUT_SOUND:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    const/4 v2, 0x0
 
-    aput-object v1, v0, v3
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    sput-object v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->LOADING_STATE:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    const-string v2, "VIDEO_WITH_SOUND"
+    .line 2
+    new-instance v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    const/4 v3, 0x3
+    const-string v1, "IMAGE_STATE"
 
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
+    const/4 v2, 0x1
 
-    sput-object v1, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->VIDEO_WITH_SOUND:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
 
-    aput-object v1, v0, v3
+    sput-object v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->IMAGE_STATE:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+
+    .line 3
+    new-instance v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+
+    const-string v1, "VIDEO_WITHOUT_SOUND"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->VIDEO_WITHOUT_SOUND:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+
+    .line 4
+    new-instance v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+
+    const-string v1, "VIDEO_WITH_SOUND"
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->VIDEO_WITH_SOUND:Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+
+    invoke-static {}, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->$values()[Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->$VALUES:[Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
@@ -155,7 +181,7 @@
 
     sget-object v0, Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->$VALUES:[Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/advertise/TmapMainAdvertiseStateMachine$TmapMainAdState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

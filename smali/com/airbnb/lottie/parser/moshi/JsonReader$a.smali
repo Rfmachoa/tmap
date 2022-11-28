@@ -17,11 +17,11 @@
 # instance fields
 .field public final a:[Ljava/lang/String;
 
-.field public final b:Lzj/c0;
+.field public final b:Lem/c0;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/String;Lzj/c0;)V
+.method public constructor <init>([Ljava/lang/String;Lem/c0;)V
     .locals 0
 
     .line 1
@@ -31,7 +31,7 @@
     iput-object p1, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;->a:[Ljava/lang/String;
 
     .line 3
-    iput-object p2, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;->b:Lzj/c0;
+    iput-object p2, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;->b:Lem/c0;
 
     return-void
 .end method
@@ -46,9 +46,9 @@
     new-array v0, v0, [Lokio/ByteString;
 
     .line 2
-    new-instance v1, Lzj/m;
+    new-instance v1, Lem/m;
 
-    invoke-direct {v1}, Lzj/m;-><init>()V
+    invoke-direct {v1}, Lem/m;-><init>()V
 
     const/4 v2, 0x0
 
@@ -61,13 +61,13 @@
     .line 4
     aget-object v3, p0, v2
 
-    invoke-static {v1, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->a(Lzj/n;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->a(Lem/n;Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v1}, Lzj/m;->readByte()B
+    invoke-virtual {v1}, Lem/m;->readByte()B
 
     .line 6
-    invoke-virtual {v1}, Lzj/m;->d1()Lokio/ByteString;
+    invoke-virtual {v1}, Lem/m;->y1()Lokio/ByteString;
 
     move-result-object v3
 
@@ -87,11 +87,11 @@
 
     check-cast p0, [Ljava/lang/String;
 
-    invoke-static {v0}, Lzj/c0;->j([Lokio/ByteString;)Lzj/c0;
+    invoke-static {v0}, Lem/c0;->j([Lokio/ByteString;)Lem/c0;
 
     move-result-object v0
 
-    invoke-direct {v1, p0, v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;-><init>([Ljava/lang/String;Lzj/c0;)V
+    invoke-direct {v1, p0, v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader$a;-><init>([Ljava/lang/String;Lem/c0;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

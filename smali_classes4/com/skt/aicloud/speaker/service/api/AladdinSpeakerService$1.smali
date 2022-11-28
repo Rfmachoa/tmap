@@ -118,7 +118,7 @@
     if-eqz p2, :cond_2
 
     .line 9
-    invoke-static {p1}, Lp8/c;->g(Landroid/content/Context;)Z
+    invoke-static {p1}, Lma/c;->g(Landroid/content/Context;)Z
 
     move-result p1
 

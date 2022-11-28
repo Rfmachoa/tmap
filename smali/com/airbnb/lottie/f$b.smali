@@ -145,7 +145,7 @@
     const-string p1, "Lottie now auto-closes input stream!"
 
     .line 1
-    invoke-static {p1}, Lw3/d;->d(Ljava/lang/String;)V
+    invoke-static {p1}, Ls5/d;->d(Ljava/lang/String;)V
 
     :cond_0
     const/4 p1, 0x0

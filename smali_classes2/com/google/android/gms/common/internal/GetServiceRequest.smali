@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/internal/GetServiceRequest;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -32,51 +32,60 @@
     .end annotation
 .end field
 
+.field public static final zza:[Lcom/google/android/gms/common/api/Scope;
+
+.field public static final zzb:[Lcom/google/android/gms/common/Feature;
+
 
 # instance fields
-.field public final zza:I
+.field public final zzc:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
         id = 0x1
     .end annotation
 .end field
 
-.field public final zzb:I
+.field public final zzd:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x2
     .end annotation
 .end field
 
-.field public zzc:I
+.field public zze:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x3
     .end annotation
 .end field
 
-.field public zzd:Ljava/lang/String;
+.field public zzf:Ljava/lang/String;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x4
     .end annotation
 .end field
 
-.field public zze:Landroid/os/IBinder;
+.field public zzg:Landroid/os/IBinder;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x5
     .end annotation
 .end field
 
-.field public zzf:[Lcom/google/android/gms/common/api/Scope;
+.field public zzh:[Lcom/google/android/gms/common/api/Scope;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        defaultValueUnchecked = "GetServiceRequest.EMPTY_SCOPES"
         id = 0x6
     .end annotation
 .end field
 
-.field public zzg:Landroid/os/Bundle;
+.field public zzi:Landroid/os/Bundle;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        defaultValueUnchecked = "new android.os.Bundle()"
         id = 0x7
     .end annotation
 .end field
 
-.field public zzh:Landroid/accounts/Account;
+.field public zzj:Landroid/accounts/Account;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -85,39 +94,41 @@
     .end annotation
 .end field
 
-.field public zzi:[Lcom/google/android/gms/common/Feature;
+.field public zzk:[Lcom/google/android/gms/common/Feature;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        defaultValueUnchecked = "GetServiceRequest.EMPTY_FEATURES"
         id = 0xa
     .end annotation
 .end field
 
-.field public zzj:[Lcom/google/android/gms/common/Feature;
+.field public zzl:[Lcom/google/android/gms/common/Feature;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        defaultValueUnchecked = "GetServiceRequest.EMPTY_FEATURES"
         id = 0xb
     .end annotation
 .end field
 
-.field public zzk:Z
+.field public zzm:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0xc
     .end annotation
 .end field
 
-.field public zzl:I
+.field public zzn:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         defaultValue = "0"
         id = 0xd
     .end annotation
 .end field
 
-.field public zzm:Z
+.field public zzo:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isRequestingTelemetryConfiguration"
         id = 0xe
     .end annotation
 .end field
 
-.field private zzn:Ljava/lang/String;
+.field private zzp:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -130,13 +141,23 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lcom/google/android/gms/common/internal/zzm;
 
     invoke-direct {v0}, Lcom/google/android/gms/common/internal/zzm;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/internal/GetServiceRequest;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Lcom/google/android/gms/common/api/Scope;
+
+    sput-object v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zza:[Lcom/google/android/gms/common/api/Scope;
+
+    new-array v0, v0, [Lcom/google/android/gms/common/Feature;
+
+    sput-object v0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzb:[Lcom/google/android/gms/common/Feature;
 
     return-void
 .end method
@@ -164,6 +185,9 @@
         .end annotation
     .end param
     .param p5    # Landroid/os/IBinder;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x5
         .end annotation
@@ -179,6 +203,9 @@
         .end annotation
     .end param
     .param p8    # Landroid/accounts/Account;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x8
         .end annotation
@@ -222,105 +249,99 @@
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    iput p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zza:I
+    if-nez p6, :cond_0
 
-    iput p2, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzb:I
+    sget-object p6, Lcom/google/android/gms/common/internal/GetServiceRequest;->zza:[Lcom/google/android/gms/common/api/Scope;
 
-    iput p3, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzc:I
+    :cond_0
+    if-nez p7, :cond_1
+
+    new-instance p7, Landroid/os/Bundle;
+
+    invoke-direct {p7}, Landroid/os/Bundle;-><init>()V
+
+    :cond_1
+    if-nez p9, :cond_2
+
+    sget-object p9, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzb:[Lcom/google/android/gms/common/Feature;
+
+    :cond_2
+    if-nez p10, :cond_3
+
+    sget-object p10, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzb:[Lcom/google/android/gms/common/Feature;
+
+    :cond_3
+    iput p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzc:I
+
+    iput p2, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzd:I
+
+    iput p3, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zze:I
 
     const-string p2, "com.google.android.gms"
 
+    .line 2
     invoke-virtual {p2, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
-    if-eqz p3, :cond_0
+    if-eqz p3, :cond_4
 
-    iput-object p2, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzd:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzf:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 2
-    :cond_0
-    iput-object p4, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzd:Ljava/lang/String;
+    .line 3
+    :cond_4
+    iput-object p4, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzf:Ljava/lang/String;
 
     :goto_0
     const/4 p2, 0x2
 
-    if-ge p1, p2, :cond_2
+    if-ge p1, p2, :cond_6
 
-    if-eqz p5, :cond_1
+    if-eqz p5, :cond_5
 
-    .line 3
+    .line 4
     invoke-static {p5}, Lcom/google/android/gms/common/internal/IAccountAccessor$Stub;->asInterface(Landroid/os/IBinder;)Lcom/google/android/gms/common/internal/IAccountAccessor;
 
     move-result-object p1
 
-    .line 4
+    .line 5
     invoke-static {p1}, Lcom/google/android/gms/common/internal/AccountAccessor;->getAccountBinderSafe(Lcom/google/android/gms/common/internal/IAccountAccessor;)Landroid/accounts/Account;
 
     move-result-object p1
 
     goto :goto_1
 
-    :cond_1
+    :cond_5
     const/4 p1, 0x0
 
     :goto_1
-    iput-object p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzh:Landroid/accounts/Account;
+    iput-object p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzj:Landroid/accounts/Account;
 
     goto :goto_2
 
-    :cond_2
-    iput-object p5, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zze:Landroid/os/IBinder;
+    :cond_6
+    iput-object p5, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzg:Landroid/os/IBinder;
 
-    iput-object p8, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzh:Landroid/accounts/Account;
+    iput-object p8, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzj:Landroid/accounts/Account;
 
     :goto_2
-    iput-object p6, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzf:[Lcom/google/android/gms/common/api/Scope;
+    iput-object p6, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzh:[Lcom/google/android/gms/common/api/Scope;
 
-    iput-object p7, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzg:Landroid/os/Bundle;
+    iput-object p7, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzi:Landroid/os/Bundle;
 
-    iput-object p9, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzi:[Lcom/google/android/gms/common/Feature;
+    iput-object p9, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzk:[Lcom/google/android/gms/common/Feature;
 
-    iput-object p10, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzj:[Lcom/google/android/gms/common/Feature;
+    iput-object p10, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzl:[Lcom/google/android/gms/common/Feature;
 
-    iput-boolean p11, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzk:Z
+    iput-boolean p11, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzm:Z
 
-    iput p12, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzl:I
+    iput p12, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzn:I
 
-    iput-boolean p13, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzm:Z
+    iput-boolean p13, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzo:Z
 
-    iput-object p14, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzn:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 1
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 5
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
-
-    const/4 v0, 0x6
-
-    iput v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zza:I
-
-    sget v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
-
-    iput v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzc:I
-
-    iput p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzb:I
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzk:Z
-
-    iput-object p2, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzn:Ljava/lang/String;
+    iput-object p14, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzp:Ljava/lang/String;
 
     return-void
 .end method
@@ -335,7 +356,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzg:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzi:Landroid/os/Bundle;
 
     return-object v0
 .end method
@@ -358,7 +379,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzn:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzp:Ljava/lang/String;
 
     return-object v0
 .end method

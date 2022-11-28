@@ -12,45 +12,57 @@
 
 
 # static fields
-.field public static final A:Ljava/lang/String; = ".webm"
+.field public static final A:Ljava/lang/String; = ".flv"
 
-.field public static final B:Ljava/lang/String; = ".og"
+.field public static final B:Ljava/lang/String; = ".mid"
 
-.field public static final C:Ljava/lang/String; = ".opus"
+.field public static final C:Ljava/lang/String; = ".midi"
 
-.field public static final D:Ljava/lang/String; = ".mp3"
+.field public static final D:Ljava/lang/String; = ".smf"
 
-.field public static final E:Ljava/lang/String; = ".mp4"
+.field public static final E:Ljava/lang/String; = ".mk"
 
-.field public static final F:Ljava/lang/String; = ".m4"
+.field public static final F:Ljava/lang/String; = ".webm"
 
-.field public static final G:Ljava/lang/String; = ".mp4"
+.field public static final G:Ljava/lang/String; = ".og"
 
-.field public static final H:Ljava/lang/String; = ".cmf"
+.field public static final H:Ljava/lang/String; = ".opus"
 
-.field public static final I:Ljava/lang/String; = ".ps"
+.field public static final I:Ljava/lang/String; = ".mp3"
 
-.field public static final J:Ljava/lang/String; = ".mpeg"
+.field public static final J:Ljava/lang/String; = ".mp4"
 
-.field public static final K:Ljava/lang/String; = ".mpg"
+.field public static final K:Ljava/lang/String; = ".m4"
 
-.field public static final L:Ljava/lang/String; = ".m2p"
+.field public static final L:Ljava/lang/String; = ".mp4"
 
-.field public static final M:Ljava/lang/String; = ".ts"
+.field public static final M:Ljava/lang/String; = ".cmf"
 
-.field public static final N:Ljava/lang/String; = ".ts"
+.field public static final N:Ljava/lang/String; = ".ps"
 
-.field public static final O:Ljava/lang/String; = ".wav"
+.field public static final O:Ljava/lang/String; = ".mpeg"
 
-.field public static final P:Ljava/lang/String; = ".wave"
+.field public static final P:Ljava/lang/String; = ".mpg"
 
-.field public static final Q:Ljava/lang/String; = ".vtt"
+.field public static final Q:Ljava/lang/String; = ".m2p"
 
-.field public static final R:Ljava/lang/String; = ".webvtt"
+.field public static final R:Ljava/lang/String; = ".ts"
 
-.field public static final S:Ljava/lang/String; = ".jpg"
+.field public static final S:Ljava/lang/String; = ".ts"
 
-.field public static final T:Ljava/lang/String; = ".jpeg"
+.field public static final T:Ljava/lang/String; = ".wav"
+
+.field public static final U:Ljava/lang/String; = ".wave"
+
+.field public static final V:Ljava/lang/String; = ".vtt"
+
+.field public static final W:Ljava/lang/String; = ".webvtt"
+
+.field public static final X:Ljava/lang/String; = ".jpg"
+
+.field public static final Y:Ljava/lang/String; = ".jpeg"
+
+.field public static final Z:Ljava/lang/String; = ".avi"
 
 .field public static final a:I = -0x1
 
@@ -84,28 +96,28 @@
 
 .field public static final p:I = 0xe
 
-.field public static final q:Ljava/lang/String; = "Content-Type"
+.field public static final q:I = 0xf
+
+.field public static final r:I = 0x10
+
+.field public static final s:Ljava/lang/String; = "Content-Type"
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field public static final r:Ljava/lang/String; = ".ac3"
+.field public static final t:Ljava/lang/String; = ".ac3"
 
-.field public static final s:Ljava/lang/String; = ".ec3"
+.field public static final u:Ljava/lang/String; = ".ec3"
 
-.field public static final t:Ljava/lang/String; = ".ac4"
+.field public static final v:Ljava/lang/String; = ".ac4"
 
-.field public static final u:Ljava/lang/String; = ".adts"
+.field public static final w:Ljava/lang/String; = ".adts"
 
-.field public static final v:Ljava/lang/String; = ".aac"
+.field public static final x:Ljava/lang/String; = ".aac"
 
-.field public static final w:Ljava/lang/String; = ".amr"
+.field public static final y:Ljava/lang/String; = ".amr"
 
-.field public static final x:Ljava/lang/String; = ".flac"
-
-.field public static final y:Ljava/lang/String; = ".flv"
-
-.field public static final z:Ljava/lang/String; = ".mk"
+.field public static final z:Ljava/lang/String; = ".flac"
 
 
 # direct methods
@@ -119,7 +131,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;)I
-    .locals 17
+    .locals 19
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -133,7 +145,7 @@
 
     .line 1
     :cond_0
-    invoke-static/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/w;->u(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->u(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -144,33 +156,37 @@
 
     move-result v2
 
-    const/16 v3, 0xe
+    const/16 v3, 0x10
 
-    const/16 v4, 0xd
+    const/16 v4, 0xf
 
-    const/16 v5, 0xc
+    const/16 v5, 0xe
 
-    const/16 v6, 0xb
+    const/16 v6, 0xd
 
-    const/16 v7, 0xa
+    const/16 v7, 0xc
 
-    const/16 v8, 0x9
+    const/16 v8, 0xb
 
-    const/16 v9, 0x8
+    const/16 v9, 0xa
 
-    const/4 v10, 0x7
+    const/16 v10, 0x9
 
-    const/4 v11, 0x6
+    const/16 v11, 0x8
 
-    const/4 v12, 0x5
+    const/4 v12, 0x7
 
-    const/4 v13, 0x4
+    const/4 v13, 0x6
 
-    const/4 v14, 0x3
+    const/4 v14, 0x5
 
-    const/4 v15, 0x1
+    const/4 v15, 0x4
 
-    const/16 v16, 0x0
+    const/16 v16, 0x3
+
+    const/16 v17, 0x1
+
+    const/16 v18, 0x0
 
     sparse-switch v2, :sswitch_data_0
 
@@ -191,7 +207,7 @@
     goto :goto_0
 
     :cond_1
-    const/16 v1, 0x17
+    const/16 v1, 0x19
 
     goto/16 :goto_1
 
@@ -207,7 +223,7 @@
     goto :goto_0
 
     :cond_2
-    const/16 v1, 0x16
+    const/16 v1, 0x18
 
     goto/16 :goto_1
 
@@ -223,12 +239,12 @@
     goto :goto_0
 
     :cond_3
-    const/16 v1, 0x15
+    const/16 v1, 0x17
 
     goto/16 :goto_1
 
     :sswitch_3
-    const-string v2, "audio/flac"
+    const-string v2, "audio/midi"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -239,12 +255,12 @@
     goto :goto_0
 
     :cond_4
-    const/16 v1, 0x14
+    const/16 v1, 0x16
 
     goto/16 :goto_1
 
     :sswitch_4
-    const-string v2, "audio/eac3"
+    const-string v2, "audio/flac"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -255,12 +271,12 @@
     goto :goto_0
 
     :cond_5
-    const/16 v1, 0x13
+    const/16 v1, 0x15
 
     goto/16 :goto_1
 
     :sswitch_5
-    const-string v2, "audio/3gpp"
+    const-string v2, "audio/eac3"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -271,12 +287,12 @@
     goto :goto_0
 
     :cond_6
-    const/16 v1, 0x12
+    const/16 v1, 0x14
 
     goto/16 :goto_1
 
     :sswitch_6
-    const-string v2, "video/mp4"
+    const-string v2, "audio/3gpp"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -287,12 +303,12 @@
     goto :goto_0
 
     :cond_7
-    const/16 v1, 0x11
+    const/16 v1, 0x13
 
     goto/16 :goto_1
 
     :sswitch_7
-    const-string v2, "audio/wav"
+    const-string v2, "video/mp4"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -303,12 +319,12 @@
     goto :goto_0
 
     :cond_8
-    const/16 v1, 0x10
+    const/16 v1, 0x12
 
     goto/16 :goto_1
 
     :sswitch_8
-    const-string v2, "audio/ogg"
+    const-string v2, "audio/wav"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -319,12 +335,12 @@
     goto :goto_0
 
     :cond_9
-    const/16 v1, 0xf
+    const/16 v1, 0x11
 
     goto/16 :goto_1
 
     :sswitch_9
-    const-string v2, "audio/mp4"
+    const-string v2, "audio/ogg"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -340,7 +356,7 @@
     goto/16 :goto_1
 
     :sswitch_a
-    const-string v2, "audio/amr"
+    const-string v2, "audio/mp4"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -356,7 +372,7 @@
     goto/16 :goto_1
 
     :sswitch_b
-    const-string v2, "audio/ac4"
+    const-string v2, "audio/amr"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -372,7 +388,7 @@
     goto/16 :goto_1
 
     :sswitch_c
-    const-string v2, "audio/ac3"
+    const-string v2, "audio/ac4"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -388,7 +404,7 @@
     goto/16 :goto_1
 
     :sswitch_d
-    const-string v2, "video/x-flv"
+    const-string v2, "audio/ac3"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -404,7 +420,7 @@
     goto/16 :goto_1
 
     :sswitch_e
-    const-string v2, "application/webm"
+    const-string v2, "video/x-flv"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -420,7 +436,7 @@
     goto/16 :goto_1
 
     :sswitch_f
-    const-string v2, "audio/x-matroska"
+    const-string v2, "application/webm"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -436,7 +452,7 @@
     goto/16 :goto_1
 
     :sswitch_10
-    const-string v2, "text/vtt"
+    const-string v2, "audio/x-matroska"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -449,10 +465,10 @@
     :cond_11
     move v1, v10
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :sswitch_11
-    const-string v2, "application/mp4"
+    const-string v2, "text/vtt"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -465,10 +481,10 @@
     :cond_12
     move v1, v11
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :sswitch_12
-    const-string v2, "image/jpeg"
+    const-string v2, "video/x-msvideo"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -484,7 +500,7 @@
     goto :goto_1
 
     :sswitch_13
-    const-string v2, "audio/amr-wb"
+    const-string v2, "application/mp4"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -500,7 +516,7 @@
     goto :goto_1
 
     :sswitch_14
-    const-string v2, "video/webm"
+    const-string v2, "image/jpeg"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -516,7 +532,7 @@
     goto :goto_1
 
     :sswitch_15
-    const-string v2, "video/mp2t"
+    const-string v2, "audio/amr-wb"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -527,12 +543,12 @@
     goto/16 :goto_0
 
     :cond_16
-    const/4 v1, 0x2
+    move v1, v15
 
     goto :goto_1
 
     :sswitch_16
-    const-string v2, "video/mp2p"
+    const-string v2, "video/webm"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -543,12 +559,12 @@
     goto/16 :goto_0
 
     :cond_17
-    move v1, v15
+    move/from16 v1, v16
 
     goto :goto_1
 
     :sswitch_17
-    const-string v2, "audio/eac3-joc"
+    const-string v2, "video/mp2t"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -559,7 +575,39 @@
     goto/16 :goto_0
 
     :cond_18
-    move/from16 v1, v16
+    const/4 v1, 0x2
+
+    goto :goto_1
+
+    :sswitch_18
+    const-string v2, "video/mp2p"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_19
+
+    goto/16 :goto_0
+
+    :cond_19
+    move/from16 v1, v17
+
+    goto :goto_1
+
+    :sswitch_19
+    const-string v2, "audio/eac3-joc"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1a
+
+    goto/16 :goto_0
+
+    :cond_1a
+    move/from16 v1, v18
 
     :goto_1
     packed-switch v1, :pswitch_data_0
@@ -567,72 +615,80 @@
     return v0
 
     :pswitch_0
-    return v10
-
-    :pswitch_1
-    return v13
-
-    :pswitch_2
-    return v5
-
-    :pswitch_3
-    return v8
-
-    :pswitch_4
-    return v15
-
-    :pswitch_5
     return v12
 
-    :pswitch_6
+    :pswitch_1
     return v4
 
+    :pswitch_2
+    return v15
+
+    :pswitch_3
+    return v7
+
+    :pswitch_4
+    return v10
+
+    :pswitch_5
+    return v17
+
+    :pswitch_6
+    return v14
+
     :pswitch_7
-    return v9
+    return v6
 
     :pswitch_8
     return v3
 
     :pswitch_9
-    return v14
-
-    :pswitch_a
     return v11
 
+    :pswitch_a
+    return v5
+
     :pswitch_b
-    return v6
+    return v16
 
     :pswitch_c
-    return v7
+    return v13
 
     :pswitch_d
-    return v16
+    return v8
+
+    :pswitch_e
+    return v9
+
+    :pswitch_f
+    return v18
 
     nop
 
     :sswitch_data_0
     .sparse-switch
-        -0x7e929daa -> :sswitch_17
-        -0x6315f78b -> :sswitch_16
-        -0x6315f787 -> :sswitch_15
-        -0x63118f53 -> :sswitch_14
-        -0x5fc6f775 -> :sswitch_13
-        -0x58a7d764 -> :sswitch_12
-        -0x4a681e4e -> :sswitch_11
-        -0x3be2f26c -> :sswitch_10
-        -0x17118226 -> :sswitch_f
-        -0x2974308 -> :sswitch_e
-        0xd45707 -> :sswitch_d
-        0xb269698 -> :sswitch_c
-        0xb269699 -> :sswitch_b
-        0xb26980d -> :sswitch_a
-        0xb26c538 -> :sswitch_9
-        0xb26cbd6 -> :sswitch_8
-        0xb26e933 -> :sswitch_7
-        0x4f62635d -> :sswitch_6
-        0x59976a2d -> :sswitch_5
-        0x59ae0c65 -> :sswitch_4
-        0x59aeaa01 -> :sswitch_3
+        -0x7e929daa -> :sswitch_19
+        -0x6315f78b -> :sswitch_18
+        -0x6315f787 -> :sswitch_17
+        -0x63118f53 -> :sswitch_16
+        -0x5fc6f775 -> :sswitch_15
+        -0x58a7d764 -> :sswitch_14
+        -0x4a681e4e -> :sswitch_13
+        -0x405dba54 -> :sswitch_12
+        -0x3be2f26c -> :sswitch_11
+        -0x17118226 -> :sswitch_10
+        -0x2974308 -> :sswitch_f
+        0xd45707 -> :sswitch_e
+        0xb269698 -> :sswitch_d
+        0xb269699 -> :sswitch_c
+        0xb26980d -> :sswitch_b
+        0xb26c538 -> :sswitch_a
+        0xb26cbd6 -> :sswitch_9
+        0xb26e933 -> :sswitch_8
+        0x4f62635d -> :sswitch_7
+        0x59976a2d -> :sswitch_6
+        0x59ae0c65 -> :sswitch_5
+        0x59aeaa01 -> :sswitch_4
+        0x59b1cdba -> :sswitch_3
         0x59b1e81e -> :sswitch_2
         0x59b64a32 -> :sswitch_1
         0x79909c15 -> :sswitch_0
@@ -640,6 +696,8 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_f
+        :pswitch_e
         :pswitch_d
         :pswitch_c
         :pswitch_b
@@ -647,23 +705,23 @@
         :pswitch_9
         :pswitch_8
         :pswitch_7
+        :pswitch_c
+        :pswitch_c
         :pswitch_6
-        :pswitch_a
-        :pswitch_a
+        :pswitch_f
         :pswitch_5
-        :pswitch_d
+        :pswitch_b
+        :pswitch_9
         :pswitch_4
-        :pswitch_9
-        :pswitch_7
         :pswitch_3
-        :pswitch_2
-        :pswitch_7
         :pswitch_9
-        :pswitch_d
+        :pswitch_b
+        :pswitch_f
+        :pswitch_2
         :pswitch_1
         :pswitch_0
-        :pswitch_a
-        :pswitch_a
+        :pswitch_c
+        :pswitch_c
     .end packed-switch
 .end method
 
@@ -746,7 +804,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_19
+    if-nez v1, :cond_1c
 
     const-string v1, ".ec3"
 
@@ -756,7 +814,7 @@
 
     if-eqz v1, :cond_1
 
-    goto/16 :goto_9
+    goto/16 :goto_a
 
     :cond_1
     const-string v1, ".ac4"
@@ -780,7 +838,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_18
+    if-nez v1, :cond_1b
 
     const-string v1, ".aac"
 
@@ -790,7 +848,7 @@
 
     if-eqz v1, :cond_3
 
-    goto/16 :goto_8
+    goto/16 :goto_9
 
     :cond_3
     const-string v1, ".amr"
@@ -834,24 +892,26 @@
 
     return v3
 
-    .line 8
     :cond_6
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    const-string v1, ".mid"
+
+    .line 8
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    sub-int/2addr v1, v2
+    if-nez v1, :cond_1a
 
-    const-string v4, ".mk"
+    const-string v1, ".midi"
 
     .line 9
-    invoke-virtual {p0, v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_17
+    if-nez v1, :cond_1a
 
-    const-string v1, ".webm"
+    const-string v1, ".smf"
 
     .line 10
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -860,33 +920,61 @@
 
     if-eqz v1, :cond_7
 
-    goto/16 :goto_7
-
-    :cond_7
-    const-string v1, ".mp3"
+    goto/16 :goto_8
 
     .line 11
+    :cond_7
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    sub-int/2addr v1, v2
+
+    const-string v4, ".mk"
+
+    .line 12
+    invoke-virtual {p0, v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_19
+
+    const-string v1, ".webm"
+
+    .line 13
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
+    goto/16 :goto_7
+
+    :cond_8
+    const-string v1, ".mp3"
+
+    .line 14
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
     const/4 p0, 0x7
 
     return p0
 
-    :cond_8
+    :cond_9
     const-string v1, ".mp4"
 
-    .line 12
+    .line 15
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-nez v4, :cond_16
+    if-nez v4, :cond_18
 
-    .line 13
+    .line 16
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -895,28 +983,28 @@
 
     const-string v5, ".m4"
 
-    .line 14
+    .line 17
     invoke-virtual {p0, v5, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v4
 
-    if-nez v4, :cond_16
+    if-nez v4, :cond_18
 
-    .line 15
+    .line 18
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
 
     sub-int/2addr v4, v3
 
-    .line 16
+    .line 19
     invoke-virtual {p0, v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
 
-    if-nez v1, :cond_16
+    if-nez v1, :cond_18
 
-    .line 17
+    .line 20
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -925,17 +1013,17 @@
 
     const-string v3, ".cmf"
 
-    .line 18
+    .line 21
     invoke-virtual {p0, v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     goto/16 :goto_6
 
-    .line 19
-    :cond_9
+    .line 22
+    :cond_a
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -944,98 +1032,98 @@
 
     const-string v3, ".og"
 
-    .line 20
+    .line 23
     invoke-virtual {p0, v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
 
-    if-nez v1, :cond_15
+    if-nez v1, :cond_17
 
     const-string v1, ".opus"
-
-    .line 21
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    goto/16 :goto_5
-
-    :cond_a
-    const-string v1, ".ps"
-
-    .line 22
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_14
-
-    const-string v1, ".mpeg"
-
-    .line 23
-    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_14
-
-    const-string v1, ".mpg"
 
     .line 24
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_14
+    if-eqz v1, :cond_b
 
-    const-string v1, ".m2p"
+    goto/16 :goto_5
+
+    :cond_b
+    const-string v1, ".ps"
 
     .line 25
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    if-nez v1, :cond_16
 
-    goto :goto_4
-
-    :cond_b
-    const-string v1, ".ts"
+    const-string v1, ".mpeg"
 
     .line 26
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_13
+    if-nez v1, :cond_16
+
+    const-string v1, ".mpg"
 
     .line 27
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_16
+
+    const-string v1, ".m2p"
+
+    .line 28
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    goto :goto_4
+
+    :cond_c
+    const-string v1, ".ts"
+
+    .line 29
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_15
+
+    .line 30
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
     sub-int/2addr v3, v2
 
-    .line 28
+    .line 31
     invoke-virtual {p0, v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_d
 
     goto :goto_3
 
-    :cond_c
+    :cond_d
     const-string v1, ".wav"
 
-    .line 29
+    .line 32
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_12
+    if-nez v1, :cond_14
 
     const-string v1, ".wave"
 
@@ -1043,19 +1131,19 @@
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_e
 
     goto :goto_2
 
-    :cond_d
+    :cond_e
     const-string v1, ".vtt"
 
-    .line 30
+    .line 33
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_11
+    if-nez v1, :cond_13
 
     const-string v1, ".webvtt"
 
@@ -1063,89 +1151,109 @@
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     goto :goto_1
 
-    :cond_e
+    :cond_f
     const-string v1, ".jpg"
 
-    .line 31
+    .line 34
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_10
+    if-nez v1, :cond_12
 
     const-string v1, ".jpeg"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_f
+    if-eqz v1, :cond_10
 
     goto :goto_0
 
-    :cond_f
+    :cond_10
+    const-string v1, ".avi"
+
+    .line 35
+    invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_11
+
+    const/16 p0, 0x10
+
+    return p0
+
+    :cond_11
     return v0
 
-    :cond_10
+    :cond_12
     :goto_0
     const/16 p0, 0xe
 
     return p0
 
-    :cond_11
+    :cond_13
     :goto_1
     const/16 p0, 0xd
 
     return p0
 
-    :cond_12
+    :cond_14
     :goto_2
     const/16 p0, 0xc
 
     return p0
 
-    :cond_13
+    :cond_15
     :goto_3
     const/16 p0, 0xb
 
     return p0
 
-    :cond_14
+    :cond_16
     :goto_4
     const/16 p0, 0xa
 
     return p0
 
-    :cond_15
+    :cond_17
     :goto_5
     const/16 p0, 0x9
 
     return p0
 
-    :cond_16
+    :cond_18
     :goto_6
     const/16 p0, 0x8
 
     return p0
 
-    :cond_17
+    :cond_19
     :goto_7
     const/4 p0, 0x6
 
     return p0
 
-    :cond_18
+    :cond_1a
     :goto_8
+    const/16 p0, 0xf
+
+    return p0
+
+    :cond_1b
+    :goto_9
     const/4 p0, 0x2
 
     return p0
 
-    :cond_19
-    :goto_9
+    :cond_1c
+    :goto_a
     const/4 p0, 0x0
 
     return p0

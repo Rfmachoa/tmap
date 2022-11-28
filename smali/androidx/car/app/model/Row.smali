@@ -3,7 +3,7 @@
 .source "Row.java"
 
 # interfaces
-.implements Landroidx/car/app/model/e;
+.implements Landroidx/car/app/model/h;
 
 
 # annotations
@@ -18,14 +18,29 @@
 # static fields
 .field public static final a:Ljava/lang/String; = "\ud83d\udea3"
 
-.field public static final b:I = 0x1
+.field public static final b:I = -0x1
 
-.field public static final c:I = 0x2
+.field public static final c:I = 0x1
 
-.field public static final d:I = 0x4
+.field public static final d:I = 0x2
+
+.field public static final e:I = 0x4
 
 
 # instance fields
+.field private final mActions:Ljava/util/List;
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Landroidx/car/app/model/Action;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private final mImage:Landroidx/car/app/model/CarIcon;
     .annotation build Landroidx/annotation/Keep;
     .end annotation
@@ -39,12 +54,22 @@
     .end annotation
 .end field
 
+.field private final mIsEnabled:Z
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+.end field
+
 .field private final mMetadata:Landroidx/car/app/model/Metadata;
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 .end field
 
-.field private final mOnClickDelegate:Landroidx/car/app/model/i;
+.field private final mNumericDecoration:I
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+.end field
+
+.field private final mOnClickDelegate:Landroidx/car/app/model/l;
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
@@ -91,44 +116,59 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 10
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 11
+    .line 14
     iput-object v0, p0, Landroidx/car/app/model/Row;->mTitle:Landroidx/car/app/model/CarText;
 
-    .line 12
+    .line 15
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Landroidx/car/app/model/Row;->mTexts:Ljava/util/List;
 
-    .line 13
+    .line 16
     iput-object v0, p0, Landroidx/car/app/model/Row;->mImage:Landroidx/car/app/model/CarIcon;
 
-    .line 14
+    .line 17
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroidx/car/app/model/Row;->mActions:Ljava/util/List;
+
+    const/4 v1, -0x1
+
+    .line 18
+    iput v1, p0, Landroidx/car/app/model/Row;->mNumericDecoration:I
+
+    .line 19
     iput-object v0, p0, Landroidx/car/app/model/Row;->mToggle:Landroidx/car/app/model/Toggle;
 
-    .line 15
-    iput-object v0, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/i;
+    .line 20
+    iput-object v0, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/l;
 
-    .line 16
+    .line 21
     sget-object v0, Landroidx/car/app/model/Metadata;->a:Landroidx/car/app/model/Metadata;
 
     iput-object v0, p0, Landroidx/car/app/model/Row;->mMetadata:Landroidx/car/app/model/Metadata;
 
     const/4 v0, 0x0
 
-    .line 17
+    .line 22
     iput-boolean v0, p0, Landroidx/car/app/model/Row;->mIsBrowsable:Z
 
     const/4 v0, 0x1
 
-    .line 18
+    .line 23
     iput v0, p0, Landroidx/car/app/model/Row;->mRowImageType:I
+
+    .line 24
+    iput-boolean v0, p0, Landroidx/car/app/model/Row;->mIsEnabled:Z
 
     return-void
 .end method
@@ -140,12 +180,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iget-object v0, p1, Landroidx/car/app/model/Row$a;->a:Landroidx/car/app/model/CarText;
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->b:Landroidx/car/app/model/CarText;
 
     iput-object v0, p0, Landroidx/car/app/model/Row;->mTitle:Landroidx/car/app/model/CarText;
 
     .line 3
-    iget-object v0, p1, Landroidx/car/app/model/Row$a;->b:Ljava/util/List;
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->c:Ljava/util/List;
 
     invoke-static {v0}, Landroidx/car/app/utils/a;->b(Ljava/util/List;)Ljava/util/List;
 
@@ -154,41 +194,83 @@
     iput-object v0, p0, Landroidx/car/app/model/Row;->mTexts:Ljava/util/List;
 
     .line 4
-    iget-object v0, p1, Landroidx/car/app/model/Row$a;->c:Landroidx/car/app/model/CarIcon;
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->d:Landroidx/car/app/model/CarIcon;
 
     iput-object v0, p0, Landroidx/car/app/model/Row;->mImage:Landroidx/car/app/model/CarIcon;
 
     .line 5
-    iget-object v0, p1, Landroidx/car/app/model/Row$a;->d:Landroidx/car/app/model/Toggle;
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->e:Ljava/util/List;
+
+    invoke-static {v0}, Landroidx/car/app/utils/a;->b(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/car/app/model/Row;->mActions:Ljava/util/List;
+
+    .line 6
+    iget v0, p1, Landroidx/car/app/model/Row$a;->f:I
+
+    iput v0, p0, Landroidx/car/app/model/Row;->mNumericDecoration:I
+
+    .line 7
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->g:Landroidx/car/app/model/Toggle;
 
     iput-object v0, p0, Landroidx/car/app/model/Row;->mToggle:Landroidx/car/app/model/Toggle;
 
-    .line 6
-    iget-object v0, p1, Landroidx/car/app/model/Row$a;->e:Landroidx/car/app/model/i;
+    .line 8
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->h:Landroidx/car/app/model/l;
 
-    iput-object v0, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iput-object v0, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/l;
 
-    .line 7
-    iget-object v0, p1, Landroidx/car/app/model/Row$a;->f:Landroidx/car/app/model/Metadata;
+    .line 9
+    iget-object v0, p1, Landroidx/car/app/model/Row$a;->i:Landroidx/car/app/model/Metadata;
 
     iput-object v0, p0, Landroidx/car/app/model/Row;->mMetadata:Landroidx/car/app/model/Metadata;
 
-    .line 8
-    iget-boolean v0, p1, Landroidx/car/app/model/Row$a;->g:Z
+    .line 10
+    iget-boolean v0, p1, Landroidx/car/app/model/Row$a;->j:Z
 
     iput-boolean v0, p0, Landroidx/car/app/model/Row;->mIsBrowsable:Z
 
-    .line 9
-    iget p1, p1, Landroidx/car/app/model/Row$a;->h:I
+    .line 11
+    iget v0, p1, Landroidx/car/app/model/Row$a;->k:I
 
-    iput p1, p0, Landroidx/car/app/model/Row;->mRowImageType:I
+    iput v0, p0, Landroidx/car/app/model/Row;->mRowImageType:I
+
+    .line 12
+    iget-boolean p1, p1, Landroidx/car/app/model/Row$a;->a:Z
+
+    iput-boolean p1, p0, Landroidx/car/app/model/Row;->mIsEnabled:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroidx/car/app/model/CarIcon;
+.method public a()Ljava/util/List;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroidx/car/app/model/Action;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/model/Row;->mActions:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public b()Landroidx/car/app/model/CarIcon;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -199,7 +281,7 @@
     return-object v0
 .end method
 
-.method public b()Landroidx/car/app/model/Metadata;
+.method public c()Landroidx/car/app/model/Metadata;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -210,46 +292,28 @@
     return-object v0
 .end method
 
-.method public c()Landroidx/car/app/model/i;
+.method public d()I
+    .locals 1
+    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x6
+    .end annotation
+
+    .line 1
+    iget v0, p0, Landroidx/car/app/model/Row;->mNumericDecoration:I
+
+    return v0
+.end method
+
+.method public e()Landroidx/car/app/model/l;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/i;
-
-    return-object v0
-.end method
-
-.method public d()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Landroidx/car/app/model/Row;->mRowImageType:I
-
-    return v0
-.end method
-
-.method public e()Ljava/util/List;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/car/app/model/CarText;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/model/Row;->mTexts:Ljava/util/List;
-
-    invoke-static {v0}, Landroidx/car/app/utils/a;->a(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
+    iget-object v0, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     return-object v0
 .end method
@@ -325,7 +389,7 @@
 
     if-eqz v1, :cond_4
 
-    iget-object v1, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object v1, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     if-nez v1, :cond_2
 
@@ -342,7 +406,7 @@
 
     move-result-object v1
 
-    iget-object v3, p1, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object v3, p1, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     if-nez v3, :cond_3
 
@@ -383,7 +447,16 @@
 
     iget v1, p0, Landroidx/car/app/model/Row;->mRowImageType:I
 
-    iget p1, p1, Landroidx/car/app/model/Row;->mRowImageType:I
+    iget v3, p1, Landroidx/car/app/model/Row;->mRowImageType:I
+
+    if-ne v1, v3, :cond_4
+
+    iget-boolean v1, p0, Landroidx/car/app/model/Row;->mIsEnabled:Z
+
+    .line 9
+    invoke-virtual {p1}, Landroidx/car/app/model/Row;->k()Z
+
+    move-result p1
 
     if-ne v1, p1, :cond_4
 
@@ -396,7 +469,40 @@
     return v0
 .end method
 
-.method public f()Landroidx/car/app/model/CarText;
+.method public f()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/car/app/model/Row;->mRowImageType:I
+
+    return v0
+.end method
+
+.method public g()Ljava/util/List;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroidx/car/app/model/CarText;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/model/Row;->mTexts:Ljava/util/List;
+
+    invoke-static {v0}, Landroidx/car/app/utils/a;->a(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public h()Landroidx/car/app/model/CarText;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -407,30 +513,10 @@
     return-object v0
 .end method
 
-.method public g()Landroidx/car/app/model/Toggle;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/model/Row;->mToggle:Landroidx/car/app/model/Toggle;
-
-    return-object v0
-.end method
-
-.method public h()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/car/app/model/Row;->mIsBrowsable:Z
-
-    return v0
-.end method
-
 .method public hashCode()I
     .locals 5
 
-    const/16 v0, 0x8
+    const/16 v0, 0x9
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -459,7 +545,7 @@
 
     aput-object v1, v0, v4
 
-    iget-object v1, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object v1, p0, Landroidx/car/app/model/Row;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     if-nez v1, :cond_0
 
@@ -503,7 +589,18 @@
 
     aput-object v2, v0, v1
 
+    const/16 v1, 0x8
+
+    iget-boolean v2, p0, Landroidx/car/app/model/Row;->mIsEnabled:Z
+
     .line 5
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
+    .line 6
     invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
@@ -511,7 +608,39 @@
     return v0
 .end method
 
-.method public i()Landroidx/car/app/model/Row;
+.method public i()Landroidx/car/app/model/Toggle;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/model/Row;->mToggle:Landroidx/car/app/model/Toggle;
+
+    return-object v0
+.end method
+
+.method public j()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/car/app/model/Row;->mIsBrowsable:Z
+
+    return v0
+.end method
+
+.method public k()Z
+    .locals 1
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/car/app/model/Row;->mIsEnabled:Z
+
+    return v0
+.end method
+
+.method public l()Landroidx/car/app/model/Row;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -519,7 +648,7 @@
     return-object p0
 .end method
 
-.method public j()Ljava/lang/CharSequence;
+.method public m()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -585,9 +714,17 @@
 
     iget-boolean v1, p0, Landroidx/car/app/model/Row;->mIsBrowsable:Z
 
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Landroidx/car/app/model/Row;->mIsEnabled:Z
+
     const-string v2, "]"
 
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ld/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

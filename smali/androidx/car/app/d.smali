@@ -3,24 +3,20 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/g0;
+.implements Landroidx/car/app/k0;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/CharSequence;
-
-.field public final synthetic b:I
+.field public final synthetic a:Landroidx/car/app/media/OpenMicrophoneRequest;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/CharSequence;I)V
+.method public synthetic constructor <init>(Landroidx/car/app/media/OpenMicrophoneRequest;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/d;->a:Ljava/lang/CharSequence;
-
-    iput p2, p0, Landroidx/car/app/d;->b:I
+    iput-object p1, p0, Landroidx/car/app/d;->a:Landroidx/car/app/media/OpenMicrophoneRequest;
 
     return-void
 .end method
@@ -28,15 +24,13 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Landroidx/car/app/d;->a:Ljava/lang/CharSequence;
-
-    iget v1, p0, Landroidx/car/app/d;->b:I
+    iget-object v0, p0, Landroidx/car/app/d;->a:Landroidx/car/app/media/OpenMicrophoneRequest;
 
     check-cast p1, Landroidx/car/app/IAppHost;
 
-    invoke-static {v0, v1, p1}, Landroidx/car/app/AppManager;->f(Ljava/lang/CharSequence;ILandroidx/car/app/IAppHost;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Landroidx/car/app/AppManager;->g(Landroidx/car/app/media/OpenMicrophoneRequest;Landroidx/car/app/IAppHost;)Landroidx/car/app/media/OpenMicrophoneResponse;
 
     move-result-object p1
 

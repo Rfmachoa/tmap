@@ -2,7 +2,8 @@
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:icon="@drawable/tap_home_off" android:id="@id/navigation_home" android:orderInCategory="0" android:title="" />
-    <item android:icon="@drawable/tap_tnow_selector" android:id="@id/navigation_tnow" android:orderInCategory="1" android:title="" />
-    <item android:icon="@drawable/tap_drivinglife_off" android:id="@id/navigation_life" android:orderInCategory="2" android:title="" />
-    <item android:icon="@drawable/tab_my_off" android:id="@id/navigation_my" android:orderInCategory="3" android:title="" />
+    <item android:icon="@drawable/tap_designate_selector" android:id="@id/navigation_designate" android:orderInCategory="1" android:title="" />
+    <item android:icon="@drawable/tap_tnow_selector" android:id="@id/navigation_tnow" android:orderInCategory="2" android:title="" />
+    <item android:icon="@drawable/tap_drivinglife_off" android:id="@id/navigation_life" android:orderInCategory="3" android:title="" />
+    <item android:icon="@drawable/tap_service_index_off" android:id="@id/navigation_my" android:orderInCategory="4" android:title="" />
 </menu>

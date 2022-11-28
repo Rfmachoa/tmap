@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public final a:Li3/c;
+.field public final a:Lq4/c;
 
 
 # direct methods
-.method public constructor <init>(Li3/c;)V
+.method public constructor <init>(Lq4/c;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -28,7 +28,7 @@
     invoke-direct {p0, v0}, Landroidx/appcompat/graphics/drawable/a$g;-><init>(Landroidx/appcompat/graphics/drawable/a$a;)V
 
     .line 2
-    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$d;->a:Li3/c;
+    iput-object p1, p0, Landroidx/appcompat/graphics/drawable/a$d;->a:Lq4/c;
 
     return-void
 .end method
@@ -39,9 +39,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/a$d;->a:Li3/c;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/a$d;->a:Lq4/c;
 
-    invoke-virtual {v0}, Li3/c;->start()V
+    invoke-virtual {v0}, Lq4/c;->start()V
 
     return-void
 .end method
@@ -50,9 +50,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/a$d;->a:Li3/c;
+    iget-object v0, p0, Landroidx/appcompat/graphics/drawable/a$d;->a:Lq4/c;
 
-    invoke-virtual {v0}, Li3/c;->stop()V
+    invoke-virtual {v0}, Lq4/c;->stop()V
 
     return-void
 .end method

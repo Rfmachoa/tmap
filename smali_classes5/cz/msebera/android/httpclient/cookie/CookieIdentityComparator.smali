@@ -16,7 +16,7 @@
         "Ljava/lang/Object;",
         "Ljava/io/Serializable;",
         "Ljava/util/Comparator<",
-        "Lxf/b;",
+        "Lbi/b;",
         ">;"
     }
 .end annotation
@@ -38,30 +38,15 @@
 
 
 # virtual methods
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
-
-    .line 1
-    check-cast p1, Lxf/b;
-
-    check-cast p2, Lxf/b;
-
-    invoke-virtual {p0, p1, p2}, Lcz/msebera/android/httpclient/cookie/CookieIdentityComparator;->compare(Lxf/b;Lxf/b;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public compare(Lxf/b;Lxf/b;)I
+.method public compare(Lbi/b;Lbi/b;)I
     .locals 6
 
     .line 2
-    invoke-interface {p1}, Lxf/b;->getName()Ljava/lang/String;
+    invoke-interface {p1}, Lbi/b;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p2}, Lxf/b;->getName()Ljava/lang/String;
+    invoke-interface {p2}, Lbi/b;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -72,7 +57,7 @@
     if-nez v0, :cond_4
 
     .line 3
-    invoke-interface {p1}, Lxf/b;->getDomain()Ljava/lang/String;
+    invoke-interface {p1}, Lbi/b;->getDomain()Ljava/lang/String;
 
     move-result-object v0
 
@@ -99,14 +84,14 @@
     if-ne v5, v3, :cond_1
 
     .line 5
-    invoke-static {v0, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 6
     :cond_1
     :goto_0
-    invoke-interface {p2}, Lxf/b;->getDomain()Ljava/lang/String;
+    invoke-interface {p2}, Lbi/b;->getDomain()Ljava/lang/String;
 
     move-result-object v5
 
@@ -123,7 +108,7 @@
     if-ne v2, v3, :cond_3
 
     .line 8
-    invoke-static {v5, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -142,7 +127,7 @@
     if-nez v0, :cond_7
 
     .line 10
-    invoke-interface {p1}, Lxf/b;->getPath()Ljava/lang/String;
+    invoke-interface {p1}, Lbi/b;->getPath()Ljava/lang/String;
 
     move-result-object p1
 
@@ -154,7 +139,7 @@
 
     .line 11
     :cond_5
-    invoke-interface {p2}, Lxf/b;->getPath()Ljava/lang/String;
+    invoke-interface {p2}, Lbi/b;->getPath()Ljava/lang/String;
 
     move-result-object p2
 
@@ -173,4 +158,19 @@
 
     :cond_7
     return v0
+.end method
+
+.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
+
+    .line 1
+    check-cast p1, Lbi/b;
+
+    check-cast p2, Lbi/b;
+
+    invoke-virtual {p0, p1, p2}, Lcz/msebera/android/httpclient/cookie/CookieIdentityComparator;->compare(Lbi/b;Lbi/b;)I
+
+    move-result p1
+
+    return p1
 .end method

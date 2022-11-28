@@ -22,7 +22,7 @@
         "Ljava/util/Enumeration<",
         "Ljava/util/HashMap<",
         "Ljava/lang/String;",
-        "Landroidx/camera/core/impl/utils/i;",
+        "Landroidx/camera/core/impl/utils/m;",
         ">;>;"
     }
 .end annotation
@@ -56,7 +56,7 @@
             "()",
             "Ljava/util/HashMap<",
             "Ljava/lang/String;",
-            "Landroidx/camera/core/impl/utils/i;",
+            "Landroidx/camera/core/impl/utils/m;",
             ">;"
         }
     .end annotation
@@ -67,7 +67,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 2
-    sget-object v1, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/i;
+    sget-object v1, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/m;
 
     iget v2, p0, Landroidx/camera/core/impl/utils/ExifData$b$a;->a:I
 
@@ -83,7 +83,7 @@
     aget-object v4, v1, v3
 
     .line 3
-    iget-object v5, v4, Landroidx/camera/core/impl/utils/i;->b:Ljava/lang/String;
+    iget-object v5, v4, Landroidx/camera/core/impl/utils/m;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -108,7 +108,7 @@
     .line 1
     iget v0, p0, Landroidx/camera/core/impl/utils/ExifData$b$a;->a:I
 
-    sget-object v1, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/i;
+    sget-object v1, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/m;
 
     array-length v1, v1
 

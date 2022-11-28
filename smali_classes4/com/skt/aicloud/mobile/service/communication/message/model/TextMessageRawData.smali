@@ -26,27 +26,27 @@
 # instance fields
 .field public K0:I
 
-.field public V0:Ljava/lang/String;
-
-.field public W0:Ljava/lang/String;
-
-.field public X0:Z
+.field public X0:Ljava/lang/String;
 
 .field public Y0:Ljava/lang/String;
 
-.field public Z0:Ljava/lang/String;
+.field public Z0:Z
 
 .field public a:Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData$Type;
 
-.field public a1:I
+.field public a1:Ljava/lang/String;
 
 .field public b:J
 
-.field public b1:Z
+.field public b1:Ljava/lang/String;
 
 .field public c:I
 
+.field public c1:I
+
 .field public d:J
+
+.field public d1:Z
 
 .field public e:Ljava/lang/String;
 
@@ -91,10 +91,10 @@
     const/4 v0, 0x0
 
     .line 4
-    iput-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->X0:Z
+    iput-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Z0:Z
 
     .line 5
-    iput-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Z
+    iput-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->d1:Z
 
     .line 6
     iput-object p1, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->a:Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData$Type;
@@ -403,7 +403,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Z0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -412,15 +412,15 @@
     if-nez v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Z0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Ljava/lang/String;
 
-    iget v1, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->a1:I
+    iget v1, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->c1:I
 
     invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/communication/message/util/InanCharacterSetTable;->getGsmBaseEncodedMessage(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Z0:Ljava/lang/String;
+    iput-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Ljava/lang/String;
 
     return-object v0
 
@@ -449,7 +449,7 @@
 
     .line 6
     :cond_2
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->V0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->X0:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -457,7 +457,7 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->W0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Y0:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -465,7 +465,7 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->W0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Y0:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isDigitsOnly(Ljava/lang/CharSequence;)Z
 
@@ -474,9 +474,9 @@
     if-eqz v0, :cond_3
 
     .line 7
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->V0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->X0:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->W0:Ljava/lang/String;
+    iget-object v1, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Y0:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -486,7 +486,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->V0:Ljava/lang/String;
+    iput-object v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->X0:Ljava/lang/String;
 
     return-object v0
 
@@ -517,14 +517,14 @@
 
     .line 3
     :cond_0
-    iget-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Z
+    iget-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->d1:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
     .line 4
-    iput-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Z
+    iput-boolean v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->d1:Z
 
     .line 5
     iget-wide v0, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->f:J
@@ -658,7 +658,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb9/c$b;->o()Z
+    invoke-static {}, Lya/c$b;->o()Z
 
     move-result v0
 
@@ -744,9 +744,9 @@
 
     iget-object v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->e:Ljava/lang/String;
 
-    const-string/jumbo v4, "thread_id"
+    const-string v4, "thread_id"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-wide v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->d:J
@@ -779,7 +779,7 @@
 
     const-string v4, "read"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->c:I
@@ -788,7 +788,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "type"
+    const-string v3, "type"
 
     .line 9
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -812,17 +812,17 @@
 
     const-string v4, "snippet"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
-    iget-object v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->Z0:Ljava/lang/String;
+    iget-object v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->b1:Ljava/lang/String;
 
     const-string v4, "snippet_cs"
 
-    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3, v2, v4, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
-    iget v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->a1:I
+    iget v3, p0, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->c1:I
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -856,7 +856,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "text_only"
+    const-string v3, "text_only"
 
     .line 15
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -895,7 +895,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "subject"
+    const-string v3, "subject"
 
     .line 18
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -918,7 +918,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "subject_charset"
+    const-string v3, "subject_charset"
 
     .line 19
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

@@ -42,7 +42,64 @@
     .line 7
     iput-object p6, p0, Lcom/fasterxml/jackson/core/format/DataFormatMatcher;->_matchStrength:Lcom/fasterxml/jackson/core/format/MatchStrength;
 
+    or-int p1, p3, p4
+
+    if-ltz p1, :cond_0
+
+    add-int p1, p3, p4
+
+    .line 8
+    array-length p5, p2
+
+    if-gt p1, p5, :cond_0
+
     return-void
+
+    .line 9
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const/4 p5, 0x3
+
+    new-array p5, p5, [Ljava/lang/Object;
+
+    const/4 p6, 0x0
+
+    .line 10
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p3
+
+    aput-object p3, p5, p6
+
+    const/4 p3, 0x1
+
+    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p4
+
+    aput-object p4, p5, p3
+
+    const/4 p3, 0x2
+
+    array-length p2, p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    aput-object p2, p5, p3
+
+    const-string p2, "Illegal start/length (%d/%d) wrt input array of %d bytes"
+
+    .line 11
+    invoke-static {p2, p5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
@@ -165,12 +222,26 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/format/DataFormatMatcher;->_match:Lcom/fasterxml/jackson/core/JsonFactory;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/format/DataFormatMatcher;->hasMatch()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/format/DataFormatMatcher;->getMatch()Lcom/fasterxml/jackson/core/JsonFactory;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonFactory;->getFormatName()Ljava/lang/String;
 
     move-result-object v0
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return-object v0
 .end method
 

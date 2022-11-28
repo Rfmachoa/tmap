@@ -18,29 +18,29 @@
 
 
 # instance fields
-.field public final a:Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
+.field public final a:Lcom/tmapmobility/tmap/exoplayer2/extractor/k;
 
 .field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)V
     .locals 0
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/k;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$a;)V
+.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$a;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)V
+    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)V
 
     return-void
 .end method
@@ -60,9 +60,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/k;
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->getLength()J
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->getLength()J
 
     move-result-wide v0
 
@@ -73,9 +73,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/k;
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->getPeekPosition()J
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->getPeekPosition()J
 
     move-result-wide v0
 
@@ -91,9 +91,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/s$b;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/k;
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->f([BII)I
+    invoke-interface {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->f([BII)I
 
     move-result p1
 

@@ -2,54 +2,178 @@
 .super Ljava/lang/Object;
 .source "TmapMainSettingDisplayDetailActivity.java"
 
+# interfaces
+.implements Lmd/a1$c;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;->Q5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "c"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
 # instance fields
-.field public a:[Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$d;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
+    iput-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x3
+    return-void
+.end method
 
-    new-array v1, v0, [Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$d;
+
+# virtual methods
+.method public a(Landroid/view/View;I)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "position"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
 
     .line 2
-    iput-object v1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:[Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$d;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;->C5(Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;)Lmd/a1;
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lmd/m0;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$f;
 
     .line 3
-    iget-object v2, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:[Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$d;
+    iget-object v1, v0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$f;->b:Ljava/lang/String;
 
-    new-instance v3, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$d;
+    const-string v2, "feature.junctionImageType"
 
-    invoke-direct {v3}, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$d;-><init>()V
+    invoke-static {p1, v2, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    aput-object v3, v2, v1
+    .line 4
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$f;->b:Ljava/lang/String;
+
+    invoke-static {p1, v0}, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;->D5(Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;Ljava/lang/String;)V
+
+    .line 5
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;->C5(Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;)Lmd/a1;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lmd/m0;->getCount()I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, p1, :cond_1
+
+    .line 6
+    iget-object v2, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;->C5(Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;)Lmd/a1;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lmd/m0;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$f;
+
+    if-ne v1, p2, :cond_0
+
+    const/4 v3, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    move v3, v0
+
+    .line 7
+    :goto_1
+    iput-boolean v3, v2, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$f;->c:Z
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_0
+    .line 8
+    :cond_1
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;->C5(Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;)Lmd/a1;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    .line 9
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 10
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSettingDisplayDetailActivity;
+
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
+    int-to-long v0, p2
+
+    const-string p2, "tap.juntionimagetype"
+
+    invoke-virtual {p1, p2, v0, v1}, Lbe/e;->U(Ljava/lang/String;J)V
+
+    :cond_2
     return-void
 .end method

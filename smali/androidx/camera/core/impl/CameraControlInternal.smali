@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/CameraControlInternal$CameraControlException;,
@@ -35,135 +39,69 @@
 
 
 # virtual methods
-.method public abstract a(I)Lcom/google/common/util/concurrent/ListenableFuture;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/camera/core/ExperimentalExposureCompensation;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "exposure"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lcom/google/common/util/concurrent/ListenableFuture<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
+.method public abstract a(Z)V
 .end method
 
-.method public abstract b()Lcom/google/common/util/concurrent/ListenableFuture;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/common/util/concurrent/ListenableFuture<",
-            "Landroidx/camera/core/impl/c;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract f()Landroid/graphics/Rect;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end method
-
-.method public abstract g(I)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "flashMode"
-        }
-    .end annotation
-.end method
-
-.method public abstract i()Landroidx/camera/core/impl/Config;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end method
-
-.method public abstract k(Landroidx/camera/core/impl/Config;)V
-    .param p1    # Landroidx/camera/core/impl/Config;
+.method public abstract b(Landroid/util/Size;Landroidx/camera/core/impl/SessionConfig$b;)V
+    .param p1    # Landroid/util/Size;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "config"
-        }
-    .end annotation
+    .param p2    # Landroidx/camera/core/impl/SessionConfig$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
-.method public abstract l()Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract c()Landroidx/camera/core/impl/SessionConfig;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/common/util/concurrent/ListenableFuture<",
-            "Landroidx/camera/core/impl/c;",
-            ">;"
-        }
-    .end annotation
 .end method
 
-.method public abstract m(ZZ)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "cancelAfTrigger",
-            "cancelAePrecaptureTrigger"
-        }
-    .end annotation
-.end method
-
-.method public abstract n()I
-.end method
-
-.method public abstract o()V
-.end method
-
-.method public abstract p(Ljava/util/List;)V
+.method public abstract e(Ljava/util/List;II)Lcom/google/common/util/concurrent/ListenableFuture;
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "captureConfigs"
-        }
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/camera/core/impl/g;",
-            ">;)V"
+            "Landroidx/camera/core/impl/e;",
+            ">;II)",
+            "Lcom/google/common/util/concurrent/ListenableFuture<",
+            "Ljava/util/List<",
+            "Ljava/lang/Void;",
+            ">;>;"
         }
     .end annotation
+.end method
+
+.method public abstract h()Landroid/graphics/Rect;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract i(I)V
+.end method
+
+.method public abstract k()Landroidx/camera/core/impl/Config;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract m(Landroidx/camera/core/impl/Config;)V
+    .param p1    # Landroidx/camera/core/impl/Config;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract o()I
+.end method
+
+.method public abstract p()V
 .end method

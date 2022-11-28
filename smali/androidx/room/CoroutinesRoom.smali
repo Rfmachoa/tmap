@@ -33,14 +33,17 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # static fields
 .field public static final a:Landroidx/room/CoroutinesRoom$Companion;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -67,7 +70,7 @@
     return-void
 .end method
 
-.method public static final a(Landroidx/room/RoomDatabase;Z[Ljava/lang/String;Ljava/util/concurrent/Callable;)Lkotlinx/coroutines/flow/f;
+.method public static final a(Landroidx/room/RoomDatabase;Z[Ljava/lang/String;Ljava/util/concurrent/Callable;)Lkotlinx/coroutines/flow/e;
     .locals 1
     .param p0    # Landroidx/room/RoomDatabase;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -91,7 +94,7 @@
             "Ljava/lang/String;",
             "Ljava/util/concurrent/Callable<",
             "TR;>;)",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "TR;>;"
         }
     .end annotation
@@ -104,14 +107,73 @@
 
     sget-object v0, Landroidx/room/CoroutinesRoom;->a:Landroidx/room/CoroutinesRoom$Companion;
 
-    invoke-virtual {v0, p0, p1, p2, p3}, Landroidx/room/CoroutinesRoom$Companion;->a(Landroidx/room/RoomDatabase;Z[Ljava/lang/String;Ljava/util/concurrent/Callable;)Lkotlinx/coroutines/flow/f;
+    invoke-virtual {v0, p0, p1, p2, p3}, Landroidx/room/CoroutinesRoom$Companion;->a(Landroidx/room/RoomDatabase;Z[Ljava/lang/String;Ljava/util/concurrent/Callable;)Lkotlinx/coroutines/flow/e;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final b(Landroidx/room/RoomDatabase;ZLjava/util/concurrent/Callable;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final b(Landroidx/room/RoomDatabase;ZLandroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 6
+    .param p0    # Landroidx/room/RoomDatabase;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/os/CancellationSignal;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/concurrent/Callable;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p4    # Lkotlin/coroutines/c;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/room/RoomDatabase;",
+            "Z",
+            "Landroid/os/CancellationSignal;",
+            "Ljava/util/concurrent/Callable<",
+            "TR;>;",
+            "Lkotlin/coroutines/c<",
+            "-TR;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    sget-object v0, Landroidx/room/CoroutinesRoom;->a:Landroidx/room/CoroutinesRoom$Companion;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/room/CoroutinesRoom$Companion;->b(Landroidx/room/RoomDatabase;ZLandroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c(Landroidx/room/RoomDatabase;ZLjava/util/concurrent/Callable;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/room/RoomDatabase;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -148,7 +210,7 @@
 
     sget-object v0, Landroidx/room/CoroutinesRoom;->a:Landroidx/room/CoroutinesRoom$Companion;
 
-    invoke-virtual {v0, p0, p1, p2, p3}, Landroidx/room/CoroutinesRoom$Companion;->b(Landroidx/room/RoomDatabase;ZLjava/util/concurrent/Callable;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, p1, p2, p3}, Landroidx/room/CoroutinesRoom$Companion;->c(Landroidx/room/RoomDatabase;ZLjava/util/concurrent/Callable;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 

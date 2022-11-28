@@ -39,7 +39,7 @@
 .method public abstract f(Ljava/lang/String;)V
 .end method
 
-.method public abstract g()Z
+.method public abstract g(Landroid/content/Intent;Ljc/c;)V
 .end method
 
 .method public abstract getAppState()Lcom/skt/aicloud/speaker/lib/state/AppState;
@@ -48,13 +48,13 @@
 .method public abstract getDomain()Ljava/lang/String;
 .end method
 
-.method public abstract getRequestId()Lma/d;
+.method public abstract getRequestId()Ljc/d;
 .end method
 
-.method public abstract h()Ljava/lang/String;
+.method public abstract h()Z
 .end method
 
-.method public abstract i(Landroid/content/Intent;Lma/c;)V
+.method public abstract i()Ljava/lang/String;
 .end method
 
 .method public abstract isPlaying()Z

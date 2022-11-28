@@ -36,7 +36,7 @@
 .method public final upgrade(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
 
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;->f(Landroid/database/sqlite/SQLiteDatabase;)V
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;->g(Landroid/database/sqlite/SQLiteDatabase;)V
 
     return-void
 .end method

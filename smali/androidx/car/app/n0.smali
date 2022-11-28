@@ -1,84 +1,34 @@
-.class public final Landroidx/car/app/n0;
+.class public final synthetic Landroidx/car/app/n0;
 .super Ljava/lang/Object;
-.source "HostInfo.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/car/app/utils/RemoteUtils$b;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final b:I
+.field public final synthetic a:Landroidx/car/app/r0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(Landroidx/car/app/r0;)V
     .locals 0
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object p1, p0, Landroidx/car/app/n0;->a:Ljava/lang/String;
-
-    .line 3
-    iput p2, p0, Landroidx/car/app/n0;->b:I
+    iput-object p1, p0, Landroidx/car/app/n0;->a:Landroidx/car/app/r0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/n0;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b()I
+.method public final call()Ljava/lang/Object;
     .locals 1
 
-    .line 1
-    iget v0, p0, Landroidx/car/app/n0;->b:I
+    iget-object v0, p0, Landroidx/car/app/n0;->a:Landroidx/car/app/r0;
 
-    return v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Landroidx/car/app/n0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uid: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Landroidx/car/app/n0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Landroidx/car/app/r0;->d(Landroidx/car/app/r0;)Landroidx/car/app/constraints/IConstraintHost;
 
     move-result-object v0
 

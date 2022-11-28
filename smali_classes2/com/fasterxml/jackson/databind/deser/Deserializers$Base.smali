@@ -1,4 +1,4 @@
-.class public Lcom/fasterxml/jackson/databind/deser/Deserializers$Base;
+.class public abstract Lcom/fasterxml/jackson/databind/deser/Deserializers$Base;
 .super Ljava/lang/Object;
 .source "Deserializers.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x409
     name = "Base"
 .end annotation
 
@@ -239,10 +239,7 @@
         }
     .end annotation
 
-    .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/Deserializers$Base;->findBeanDeserializer(Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
-
-    move-result-object p1
+    const/4 p1, 0x0
 
     return-object p1
 .end method
@@ -273,4 +270,20 @@
     const/4 p1, 0x0
 
     return-object p1
+.end method
+
+.method public hasDeserializerFor(Lcom/fasterxml/jackson/databind/DeserializationConfig;Ljava/lang/Class;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/DeserializationConfig;",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

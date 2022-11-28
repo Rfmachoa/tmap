@@ -25,15 +25,15 @@
     return-void
 .end method
 
-.method private captureValues(Lh3/o;)V
+.method private captureValues(Lp4/o;)V
     .locals 2
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p1, Lh3/o;->b:Landroid/view/View;
+    iget-object v0, p1, Lp4/o;->b:Landroid/view/View;
 
     instance-of v1, v0, Landroid/widget/TextView;
 
@@ -43,7 +43,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 3
-    iget-object p1, p1, Lh3/o;->a:Ljava/util/Map;
+    iget-object p1, p1, Lp4/o;->a:Ljava/util/Map;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getScaleX()F
 
@@ -63,43 +63,43 @@
 
 
 # virtual methods
-.method public captureEndValues(Lh3/o;)V
+.method public captureEndValues(Lp4/o;)V
     .locals 0
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Lh3/o;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Lp4/o;)V
 
     return-void
 .end method
 
-.method public captureStartValues(Lh3/o;)V
+.method public captureStartValues(Lp4/o;)V
     .locals 0
-    .param p1    # Lh3/o;
+    .param p1    # Lp4/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Lh3/o;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/internal/TextScale;->captureValues(Lp4/o;)V
 
     return-void
 .end method
 
-.method public createAnimator(Landroid/view/ViewGroup;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+.method public createAnimator(Landroid/view/ViewGroup;Lp4/o;Lp4/o;)Landroid/animation/Animator;
     .locals 4
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lh3/o;
+    .param p2    # Lp4/o;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lh3/o;
+    .param p3    # Lp4/o;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -111,13 +111,13 @@
     if-eqz p3, :cond_4
 
     .line 1
-    iget-object v0, p2, Lh3/o;->b:Landroid/view/View;
+    iget-object v0, p2, Lp4/o;->b:Landroid/view/View;
 
     instance-of v0, v0, Landroid/widget/TextView;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p3, Lh3/o;->b:Landroid/view/View;
+    iget-object v0, p3, Lp4/o;->b:Landroid/view/View;
 
     instance-of v1, v0, Landroid/widget/TextView;
 
@@ -130,10 +130,10 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 3
-    iget-object p2, p2, Lh3/o;->a:Ljava/util/Map;
+    iget-object p2, p2, Lp4/o;->a:Ljava/util/Map;
 
     .line 4
-    iget-object p3, p3, Lh3/o;->a:Ljava/util/Map;
+    iget-object p3, p3, Lp4/o;->a:Ljava/util/Map;
 
     const-string v1, "android:textscale:scale"
 

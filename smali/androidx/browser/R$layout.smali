@@ -14,21 +14,9 @@
 
 
 # static fields
-.field public static final browser_actions_context_menu_page:I = 0x7f0d0051
+.field public static final browser_actions_context_menu_page:I = 0x7f0d0053
 
-.field public static final browser_actions_context_menu_row:I = 0x7f0d0052
-
-.field public static final notification_action:I = 0x7f0d016d
-
-.field public static final notification_action_tombstone:I = 0x7f0d016e
-
-.field public static final notification_template_custom_big:I = 0x7f0d0177
-
-.field public static final notification_template_icon_group:I = 0x7f0d0178
-
-.field public static final notification_template_part_chronometer:I = 0x7f0d017c
-
-.field public static final notification_template_part_time:I = 0x7f0d017d
+.field public static final browser_actions_context_menu_row:I = 0x7f0d0054
 
 
 # direct methods

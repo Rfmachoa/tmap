@@ -3,7 +3,7 @@
 .source "S3ObjectManagerImplementation.java"
 
 # interfaces
-.implements Lc4/n;
+.implements Lz5/n;
 
 
 # static fields
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public static final getS3ComplexObject(Ljava/util/Map;)Lc4/l;
+.method public static final getS3ComplexObject(Ljava/util/Map;)Lz5/l;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -42,7 +42,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
             ">;)",
-            "Lc4/l;"
+            "Lz5/l;"
         }
     .end annotation
 
@@ -146,7 +146,7 @@
 
     move-result-object p0
 
-    check-cast p0, Lc4/l;
+    check-cast p0, Lz5/l;
 
     return-object p0
 
@@ -163,7 +163,7 @@
 
     check-cast p0, Ljava/util/Map;
 
-    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/appsync/S3ObjectManagerImplementation;->getS3ComplexObject(Ljava/util/Map;)Lc4/l;
+    invoke-static {p0}, Lcom/amazonaws/mobileconnectors/appsync/S3ObjectManagerImplementation;->getS3ComplexObject(Ljava/util/Map;)Lz5/l;
 
     move-result-object p0
 
@@ -234,7 +234,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lc4/l;
+    check-cast v6, Lz5/l;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -274,7 +274,7 @@
     aget-object v3, p0, v2
 
     .line 2
-    const-class v4, Lc4/l;
+    const-class v4, Lz5/l;
 
     if-ne v3, v4, :cond_0
 
@@ -293,7 +293,7 @@
 
 
 # virtual methods
-.method public download(Lc4/m;Ljava/lang/String;)V
+.method public download(Lz5/m;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -304,11 +304,11 @@
     .line 1
     new-instance v0, Lcom/amazonaws/services/s3/model/GetObjectRequest;
 
-    invoke-interface {p1}, Lc4/m;->bucket()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/m;->bucket()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {p1}, Lc4/m;->key()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/m;->key()Ljava/lang/String;
 
     move-result-object p1
 
@@ -326,7 +326,7 @@
     return-void
 .end method
 
-.method public upload(Lc4/l;)V
+.method public upload(Lz5/l;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -337,19 +337,19 @@
     .line 1
     new-instance v0, Lcom/amazonaws/services/s3/model/PutObjectRequest;
 
-    invoke-interface {p1}, Lc4/m;->bucket()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/m;->bucket()Ljava/lang/String;
 
     move-result-object v1
 
     .line 2
-    invoke-interface {p1}, Lc4/m;->key()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/m;->key()Ljava/lang/String;
 
     move-result-object v2
 
     new-instance v3, Ljava/io/File;
 
     .line 3
-    invoke-interface {p1}, Lc4/l;->localUri()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/l;->localUri()Ljava/lang/String;
 
     move-result-object v4
 
@@ -363,7 +363,7 @@
     invoke-direct {v1}, Lcom/amazonaws/services/s3/model/ObjectMetadata;-><init>()V
 
     .line 5
-    invoke-interface {p1}, Lc4/l;->mimeType()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/l;->mimeType()Ljava/lang/String;
 
     move-result-object v2
 
@@ -377,7 +377,7 @@
     .line 7
     new-instance v1, Ljava/io/File;
 
-    invoke-interface {p1}, Lc4/l;->localUri()Ljava/lang/String;
+    invoke-interface {p1}, Lz5/l;->localUri()Ljava/lang/String;
 
     move-result-object p1
 

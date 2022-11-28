@@ -68,9 +68,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/car/app/model/o;
+    new-instance v0, Landroidx/car/app/model/u;
 
-    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/o;-><init>(Landroidx/car/app/model/OnSelectedDelegateImpl$OnSelectedListenerStub;I)V
+    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/u;-><init>(Landroidx/car/app/model/OnSelectedDelegateImpl$OnSelectedListenerStub;I)V
 
     const-string p1, "onSelectedListener"
 

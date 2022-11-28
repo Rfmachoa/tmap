@@ -255,7 +255,7 @@
     sub-long v2, v4, v10
 
     .line 20
-    invoke-static {v2, v3}, Ly6/b;->a(J)I
+    invoke-static {v2, v3}, Lw8/b;->a(J)I
 
     move-result v8
 
@@ -271,7 +271,7 @@
 
     .line 22
     :cond_5
-    invoke-static {v2, v3}, Ly6/b;->a(J)I
+    invoke-static {v2, v3}, Lw8/b;->a(J)I
 
     move-result v0
 
@@ -301,7 +301,7 @@
 
     .line 27
     :cond_6
-    invoke-static {v2, v3}, Ly6/b;->a(J)I
+    invoke-static {v2, v3}, Lw8/b;->a(J)I
 
     move-result v0
 
@@ -331,7 +331,7 @@
 
     .line 32
     :cond_7
-    invoke-static {v2, v3}, Ly6/b;->a(J)I
+    invoke-static {v2, v3}, Lw8/b;->a(J)I
 
     move-result v0
 

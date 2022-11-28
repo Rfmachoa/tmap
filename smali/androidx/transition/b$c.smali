@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/b;->t(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
+    value = Landroidx/transition/b;->p(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/util/ArrayList;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -88,7 +88,7 @@
 
     iget-object v2, p0, Landroidx/transition/b$c;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, p1, v2, v0}, Landroidx/transition/b;->q(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-virtual {v1, p1, v2, v0}, Landroidx/transition/b;->n(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     .line 3
     :cond_0
@@ -101,7 +101,7 @@
 
     iget-object v2, p0, Landroidx/transition/b$c;->d:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, p1, v2, v0}, Landroidx/transition/b;->q(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-virtual {v1, p1, v2, v0}, Landroidx/transition/b;->n(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     .line 5
     :cond_1
@@ -114,7 +114,7 @@
 
     iget-object v2, p0, Landroidx/transition/b$c;->f:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, p1, v2, v0}, Landroidx/transition/b;->q(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-virtual {v1, p1, v2, v0}, Landroidx/transition/b;->n(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     :cond_2
     return-void

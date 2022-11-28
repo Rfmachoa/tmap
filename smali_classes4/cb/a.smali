@@ -1,92 +1,215 @@
 .class public Lcb/a;
 .super Ljava/lang/Object;
-.source "BugReportParam.java"
+.source "ElapsedTimeManager.java"
 
 
 # static fields
-.field public static final A:I = 0xa
+.field public static final a:Ljava/lang/String; = "a"
 
-.field public static final B:I = 0xb
-
-.field public static final C:I = 0xc
-
-.field public static final D:I = 0xd
-
-.field public static final E:I = 0xe
-
-.field public static final F:I = 0xf
-
-.field public static final G:I = 0x10
-
-.field public static final H:I = 0x11
-
-.field public static final I:I = 0x12
-
-.field public static final J:I = 0x13
-
-.field public static final K:I = 0x14
-
-.field public static final L:I = 0x15
-
-.field public static final a:Ljava/lang/String; = "BugReprot"
-
-.field public static final b:Ljava/lang/String; = "1.0.0"
-
-.field public static final c:Ljava/lang/String; = "com.skt.wifiagent.tmap.bugreport"
-
-.field public static final d:Ljava/lang/String; = "com.skt.wifiagent.tmap.finish"
-
-.field public static final e:Ljava/lang/String; = "211.234.248.231 "
-
-.field public static final f:Ljava/lang/String; = "211.234.248.231 "
-
-.field public static final g:I = 0x1f43
-
-.field public static final h:I = 0x1b58
-
-.field public static final i:I = 0x1b58
-
-.field public static final j:I = 0x100
-
-.field public static final k:I = 0x1
-
-.field public static final l:I = 0x1
-
-.field public static final m:I = 0x2
-
-.field public static final n:I = 0x3
-
-.field public static final o:I = 0x4
-
-.field public static final p:I = 0x5
-
-.field public static final q:I = 0x0
-
-.field public static final r:I = 0x1
-
-.field public static final s:I = 0x2
-
-.field public static final t:I = 0x3
-
-.field public static final u:I = 0x4
-
-.field public static final v:I = 0x5
-
-.field public static final w:I = 0x6
-
-.field public static final x:I = 0x7
-
-.field public static final y:I = 0x8
-
-.field public static final z:I = 0x9
+.field public static b:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcb/a;->b:Ljava/util/HashMap;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a(Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;)J
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, v0}, Lcb/a;->b(Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public static b(Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;Ljava/lang/String;)J
+    .locals 7
+
+    .line 1
+    sget-object v0, Lcb/a;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    const-wide/16 v1, -0x1
+
+    if-nez v0, :cond_0
+
+    return-wide v1
+
+    .line 2
+    :cond_0
+    invoke-static {}, Lcb/a;->c()J
+
+    move-result-wide v3
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    sub-long/2addr v3, v5
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v0, v3, v5
+
+    if-gtz v0, :cond_1
+
+    return-wide v1
+
+    .line 4
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p0, v1, v2
+
+    iget-object p0, p0, Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;->name:Ljava/lang/String;
+
+    const/4 v5, 0x1
+
+    aput-object p0, v1, v5
+
+    const/4 p0, 0x2
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    aput-object v6, v1, p0
+
+    const-string p0, "endMarking(%s) : %s %d ms."
+
+    invoke-static {p0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 5
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    new-array p0, v5, [Ljava/lang/Object;
+
+    aput-object p1, p0, v2
+
+    const-string p1, " [%s]"
+
+    .line 6
+    invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 7
+    :cond_2
+    sget-object p0, Lcb/a;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-wide v3
+.end method
+
+.method public static c()J
+    .locals 4
+
+    .line 1
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    const-wide/32 v2, 0xf4240
+
+    div-long/2addr v0, v2
+
+    return-wide v0
+.end method
+
+.method public static d(Lcom/skt/aicloud/mobile/service/debug/ElapsedTimeKey;)V
+    .locals 3
+
+    .line 1
+    invoke-static {}, Lcb/a;->c()J
+
+    move-result-wide v0
+
+    .line 2
+    sget-object v2, Lcb/a;->b:Ljava/util/HashMap;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v2, p0, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    sget-object v0, Lcb/a;->a:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p0, v1, v2
+
+    const-string p0, "startMarking(%s)"
+
+    invoke-static {p0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

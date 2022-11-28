@@ -25,6 +25,8 @@
     .end annotation
 .end field
 
+.field private componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
 .field private final defaultExecutor:Ljava/util/concurrent/Executor;
 
 .field private final lazyRegistrars:Ljava/util/List;
@@ -61,6 +63,11 @@
     iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->additionalComponents:Ljava/util/List;
 
     .line 4
+    sget-object v0, Lcom/google/firebase/components/ComponentRegistrarProcessor;->NOOP:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
+    iput-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
+    .line 5
     iput-object p1, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->defaultExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -86,6 +93,9 @@
 # virtual methods
 .method public addComponent(Lcom/google/firebase/components/Component;)Lcom/google/firebase/components/ComponentRuntime$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -105,13 +115,15 @@
 
 .method public addComponentRegistrar(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRuntime$Builder;
     .locals 2
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->lazyRegistrars:Ljava/util/List;
 
-    new-instance v1, Lcom/google/firebase/components/j;
+    new-instance v1, Lcom/google/firebase/components/k;
 
-    invoke-direct {v1, p1}, Lcom/google/firebase/components/j;-><init>(Lcom/google/firebase/components/ComponentRegistrar;)V
+    invoke-direct {v1, p1}, Lcom/google/firebase/components/k;-><init>(Lcom/google/firebase/components/ComponentRegistrar;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -120,6 +132,9 @@
 
 .method public addLazyComponentRegistrars(Ljava/util/Collection;)Lcom/google/firebase/components/ComponentRuntime$Builder;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -140,10 +155,10 @@
 .end method
 
 .method public build()Lcom/google/firebase/components/ComponentRuntime;
-    .locals 5
+    .locals 7
 
     .line 1
-    new-instance v0, Lcom/google/firebase/components/ComponentRuntime;
+    new-instance v6, Lcom/google/firebase/components/ComponentRuntime;
 
     iget-object v1, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->defaultExecutor:Ljava/util/concurrent/Executor;
 
@@ -151,9 +166,24 @@
 
     iget-object v3, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->additionalComponents:Ljava/util/List;
 
-    const/4 v4, 0x0
+    iget-object v4, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/firebase/components/ComponentRuntime;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRuntime$1;)V
+    const/4 v5, 0x0
 
-    return-object v0
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/firebase/components/ComponentRuntime;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Iterable;Ljava/util/Collection;Lcom/google/firebase/components/ComponentRegistrarProcessor;Lcom/google/firebase/components/ComponentRuntime$1;)V
+
+    return-object v6
+.end method
+
+.method public setProcessor(Lcom/google/firebase/components/ComponentRegistrarProcessor;)Lcom/google/firebase/components/ComponentRuntime$Builder;
+    .locals 0
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/google/firebase/components/ComponentRuntime$Builder;->componentRegistrarProcessor:Lcom/google/firebase/components/ComponentRegistrarProcessor;
+
+    return-object p0
 .end method

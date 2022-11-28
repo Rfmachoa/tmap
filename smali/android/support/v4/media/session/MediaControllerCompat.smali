@@ -448,7 +448,7 @@
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d()Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->e()Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p1
 
@@ -846,7 +846,7 @@
     return v0
 .end method
 
-.method public q()Lj3/d;
+.method public q()Lr4/d;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -860,7 +860,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->b:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Lj3/d;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->h()Lr4/d;
 
     move-result-object v0
 

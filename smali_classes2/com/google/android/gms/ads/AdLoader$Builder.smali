@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/ads/AdLoader$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -15,29 +15,22 @@
 
 
 # instance fields
-.field private final zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+.field private final zza:Landroid/content/Context;
 
-.field private final zzvf:Landroid/content/Context;
+.field private final zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/ads/zzvs;)V
-    .locals 0
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p1, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzvf:Landroid/content/Context;
-
-    .line 7
-    iput-object p2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const-string v0, "context cannot be null"
 
@@ -49,21 +42,24 @@
     check-cast v0, Landroid/content/Context;
 
     .line 2
-    invoke-static {}, Lcom/google/android/gms/internal/ads/zzvj;->zzps()Lcom/google/android/gms/internal/ads/zzuu;
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzaw;->zza()Lcom/google/android/gms/ads/internal/client/zzau;
 
     move-result-object v1
 
-    new-instance v2, Lcom/google/android/gms/internal/ads/zzalm;
+    new-instance v2, Lcom/google/android/gms/internal/ads/zzbvh;
 
-    invoke-direct {v2}, Lcom/google/android/gms/internal/ads/zzalm;-><init>()V
+    invoke-direct {v2}, Lcom/google/android/gms/internal/ads/zzbvh;-><init>()V
 
     .line 3
-    invoke-virtual {v1, p1, p2, v2}, Lcom/google/android/gms/internal/ads/zzuu;->zzb(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/internal/ads/zzalp;)Lcom/google/android/gms/internal/ads/zzvs;
+    invoke-virtual {v1, p1, p2, v2}, Lcom/google/android/gms/ads/internal/client/zzau;->zzc(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/internal/ads/zzbvk;)Lcom/google/android/gms/ads/internal/client/zzbo;
 
     move-result-object p1
 
-    .line 4
-    invoke-direct {p0, v0, p1}, Lcom/google/android/gms/ads/AdLoader$Builder;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/ads/zzvs;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zza:Landroid/content/Context;
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
     return-void
 .end method
@@ -71,21 +67,25 @@
 
 # virtual methods
 .method public build()Lcom/google/android/gms/ads/AdLoader;
-    .locals 3
+    .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     :try_start_0
     new-instance v0, Lcom/google/android/gms/ads/AdLoader;
 
-    iget-object v1, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzvf:Landroid/content/Context;
+    iget-object v1, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zza:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+    iget-object v2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
-    invoke-interface {v2}, Lcom/google/android/gms/internal/ads/zzvs;->zzqa()Lcom/google/android/gms/internal/ads/zzvr;
+    invoke-interface {v2}, Lcom/google/android/gms/ads/internal/client/zzbo;->zze()Lcom/google/android/gms/ads/internal/client/zzbl;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/ads/AdLoader;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/ads/zzvr;)V
+    sget-object v3, Lcom/google/android/gms/ads/internal/client/zzp;->zza:Lcom/google/android/gms/ads/internal/client/zzp;
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/ads/AdLoader;-><init>(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/zzbl;Lcom/google/android/gms/ads/internal/client/zzp;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -97,144 +97,64 @@
     const-string v1, "Failed to build AdLoader."
 
     .line 2
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/ads/zzazw;->zzc(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v0}, Lcom/google/android/gms/internal/ads/zzcgp;->zzh(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public forAppInstallAd(Lcom/google/android/gms/ads/formats/NativeAppInstallAd$OnAppInstallAdLoadedListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
-
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzaey;
-
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzaey;-><init>(Lcom/google/android/gms/ads/formats/NativeAppInstallAd$OnAppInstallAdLoadedListener;)V
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Lcom/google/android/gms/internal/ads/zzads;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "Failed to add app install ad listener"
-
-    .line 2
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-object p0
-.end method
-
-.method public forContentAd(Lcom/google/android/gms/ads/formats/NativeContentAd$OnContentAdLoadedListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
-
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzafb;
-
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzafb;-><init>(Lcom/google/android/gms/ads/formats/NativeContentAd$OnContentAdLoadedListener;)V
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Lcom/google/android/gms/internal/ads/zzadx;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "Failed to add content ad listener"
-
-    .line 2
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-object p0
-.end method
-
-.method public forCustomTemplateAd(Ljava/lang/String;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
-    .locals 2
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
-
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzafd;
-
-    invoke-direct {v1, p2}, Lcom/google/android/gms/internal/ads/zzafd;-><init>(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;)V
-
-    if-nez p3, :cond_0
-
-    const/4 p2, 0x0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    new-instance p2, Lcom/google/android/gms/internal/ads/zzafa;
-
-    invoke-direct {p2, p3}, Lcom/google/android/gms/internal/ads/zzafa;-><init>(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;)V
+    new-instance v0, Lcom/google/android/gms/ads/internal/client/zzeo;
 
     .line 3
-    :goto_0
-    invoke-interface {v0, p1, v1, p2}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/ads/zzaed;Lcom/google/android/gms/internal/ads/zzady;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0}, Lcom/google/android/gms/ads/internal/client/zzeo;-><init>()V
 
-    goto :goto_1
+    new-instance v1, Lcom/google/android/gms/ads/AdLoader;
 
-    :catch_0
-    move-exception p1
-
-    const-string p2, "Failed to add custom template ad listener"
+    iget-object v2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zza:Landroid/content/Context;
 
     .line 4
-    invoke-static {p2, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzeo;->zzc()Lcom/google/android/gms/ads/internal/client/zzbl;
 
-    :goto_1
-    return-object p0
+    move-result-object v0
+
+    sget-object v3, Lcom/google/android/gms/ads/internal/client/zzp;->zza:Lcom/google/android/gms/ads/internal/client/zzp;
+
+    invoke-direct {v1, v2, v0, v3}, Lcom/google/android/gms/ads/AdLoader;-><init>(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/zzbl;Lcom/google/android/gms/ads/internal/client/zzp;)V
+
+    return-object v1
 .end method
 
-.method public varargs forPublisherAdView(Lcom/google/android/gms/ads/formats/OnPublisherAdViewLoadedListener;[Lcom/google/android/gms/ads/AdSize;)Lcom/google/android/gms/ads/AdLoader$Builder;
+.method public varargs forAdManagerAdView(Lcom/google/android/gms/ads/formats/OnAdManagerAdViewLoadedListener;[Lcom/google/android/gms/ads/AdSize;)Lcom/google/android/gms/ads/AdLoader$Builder;
     .locals 2
+    .param p1    # Lcom/google/android/gms/ads/formats/OnAdManagerAdViewLoadedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [Lcom/google/android/gms/ads/AdSize;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     if-eqz p2, :cond_0
 
-    .line 1
     array-length v0, p2
 
     if-lez v0, :cond_0
 
-    .line 2
+    .line 1
     :try_start_0
-    new-instance v0, Lcom/google/android/gms/internal/ads/zzum;
+    new-instance v0, Lcom/google/android/gms/ads/internal/client/zzq;
 
-    iget-object v1, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzvf:Landroid/content/Context;
+    iget-object v1, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zza:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p2}, Lcom/google/android/gms/internal/ads/zzum;-><init>(Landroid/content/Context;[Lcom/google/android/gms/ads/AdSize;)V
+    invoke-direct {v0, v1, p2}, Lcom/google/android/gms/ads/internal/client/zzq;-><init>(Landroid/content/Context;[Lcom/google/android/gms/ads/AdSize;)V
 
-    .line 3
-    iget-object p2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+    iget-object p2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzafc;
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbol;
 
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzafc;-><init>(Lcom/google/android/gms/ads/formats/OnPublisherAdViewLoadedListener;)V
+    .line 2
+    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzbol;-><init>(Lcom/google/android/gms/ads/formats/OnAdManagerAdViewLoadedListener;)V
 
-    invoke-interface {p2, v1, v0}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Lcom/google/android/gms/internal/ads/zzaeg;Lcom/google/android/gms/internal/ads/zzum;)V
+    invoke-interface {p2, v1, v0}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzj(Lcom/google/android/gms/internal/ads/zzbnp;Lcom/google/android/gms/ads/internal/client/zzq;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -243,15 +163,15 @@
     :catch_0
     move-exception p1
 
-    const-string p2, "Failed to add publisher banner ad listener"
+    const-string p2, "Failed to add Google Ad Manager banner ad listener"
 
-    .line 4
-    invoke-static {p2, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 3
+    invoke-static {p2, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-object p0
 
-    .line 5
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -262,18 +182,133 @@
     throw p1
 .end method
 
-.method public forUnifiedNativeAd(Lcom/google/android/gms/ads/formats/UnifiedNativeAd$OnUnifiedNativeAdLoadedListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
+.method public forCustomFormatAd(Ljava/lang/String;Lcom/google/android/gms/ads/nativead/NativeCustomFormatAd$OnCustomFormatAdLoadedListener;Lcom/google/android/gms/ads/nativead/NativeCustomFormatAd$OnCustomClickListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/gms/ads/nativead/NativeCustomFormatAd$OnCustomFormatAdLoadedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lcom/google/android/gms/ads/nativead/NativeCustomFormatAd$OnCustomClickListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzbyp;
+
+    invoke-direct {v0, p2, p3}, Lcom/google/android/gms/internal/ads/zzbyp;-><init>(Lcom/google/android/gms/ads/nativead/NativeCustomFormatAd$OnCustomFormatAdLoadedListener;Lcom/google/android/gms/ads/nativead/NativeCustomFormatAd$OnCustomClickListener;)V
+
+    :try_start_0
+    iget-object p2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzbyp;->zzb()Lcom/google/android/gms/internal/ads/zzbnl;
+
+    move-result-object p3
+
+    .line 2
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzbyp;->zza()Lcom/google/android/gms/internal/ads/zzbni;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {p2, p1, p3, v0}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzh(Ljava/lang/String;Lcom/google/android/gms/internal/ads/zzbnl;Lcom/google/android/gms/internal/ads/zzbni;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "Failed to add custom format ad listener"
+
+    .line 4
+    invoke-static {p2, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public forCustomTemplateAd(Ljava/lang/String;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzboj;
+
+    invoke-direct {v0, p2, p3}, Lcom/google/android/gms/internal/ads/zzboj;-><init>(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;)V
+
+    :try_start_0
+    iget-object p2, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzboj;->zze()Lcom/google/android/gms/internal/ads/zzbnl;
+
+    move-result-object p3
+
+    .line 2
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzboj;->zzd()Lcom/google/android/gms/internal/ads/zzbni;
+
+    move-result-object v0
+
+    .line 3
+    invoke-interface {p2, p1, p3, v0}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzh(Ljava/lang/String;Lcom/google/android/gms/internal/ads/zzbnl;Lcom/google/android/gms/internal/ads/zzbni;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "Failed to add custom template ad listener"
+
+    .line 4
+    invoke-static {p2, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public forNativeAd(Lcom/google/android/gms/ads/nativead/NativeAd$OnNativeAdLoadedListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
     .locals 2
+    .param p1    # Lcom/google/android/gms/ads/nativead/NativeAd$OnNativeAdLoadedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzafe;
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbyr;
 
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzafe;-><init>(Lcom/google/android/gms/ads/formats/UnifiedNativeAd$OnUnifiedNativeAdLoadedListener;)V
+    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzbyr;-><init>(Lcom/google/android/gms/ads/nativead/NativeAd$OnNativeAdLoadedListener;)V
 
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Lcom/google/android/gms/internal/ads/zzael;)V
+    invoke-interface {v0, v1}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzk(Lcom/google/android/gms/internal/ads/zzbns;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -285,7 +320,45 @@
     const-string v0, "Failed to add google native ad listener"
 
     .line 2
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-object p0
+.end method
+
+.method public forUnifiedNativeAd(Lcom/google/android/gms/ads/formats/UnifiedNativeAd$OnUnifiedNativeAdLoadedListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
+    .locals 2
+    .param p1    # Lcom/google/android/gms/ads/formats/UnifiedNativeAd$OnUnifiedNativeAdLoadedListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
+
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbom;
+
+    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzbom;-><init>(Lcom/google/android/gms/ads/formats/UnifiedNativeAd$OnUnifiedNativeAdLoadedListener;)V
+
+    invoke-interface {v0, v1}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzk(Lcom/google/android/gms/internal/ads/zzbns;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "Failed to add google native ad listener"
+
+    .line 2
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-object p0
@@ -293,16 +366,22 @@
 
 .method public withAdListener(Lcom/google/android/gms/ads/AdListener;)Lcom/google/android/gms/ads/AdLoader$Builder;
     .locals 2
+    .param p1    # Lcom/google/android/gms/ads/AdListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzuf;
+    new-instance v1, Lcom/google/android/gms/ads/internal/client/zzg;
 
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzuf;-><init>(Lcom/google/android/gms/ads/AdListener;)V
+    invoke-direct {v1, p1}, Lcom/google/android/gms/ads/internal/client/zzg;-><init>(Lcom/google/android/gms/ads/AdListener;)V
 
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/ads/zzvs;->zzb(Lcom/google/android/gms/internal/ads/zzvm;)V
+    invoke-interface {v0, v1}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzl(Lcom/google/android/gms/ads/internal/client/zzbf;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -314,39 +393,64 @@
     const-string v0, "Failed to set AdListener."
 
     .line 2
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-object p0
 .end method
 
-.method public withCorrelator(Lcom/google/android/gms/ads/Correlator;)Lcom/google/android/gms/ads/AdLoader$Builder;
-    .locals 0
-    .param p1    # Lcom/google/android/gms/ads/Correlator;
+.method public withAdManagerAdViewOptions(Lcom/google/android/gms/ads/formats/AdManagerAdViewOptions;)Lcom/google/android/gms/ads/AdLoader$Builder;
+    .locals 1
+    .param p1    # Lcom/google/android/gms/ads/formats/AdManagerAdViewOptions;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
+    invoke-interface {v0, p1}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzm(Lcom/google/android/gms/ads/formats/AdManagerAdViewOptions;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "Failed to specify Ad Manager banner ad options"
+
+    .line 2
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
     return-object p0
 .end method
 
 .method public withNativeAdOptions(Lcom/google/android/gms/ads/formats/NativeAdOptions;)Lcom/google/android/gms/ads/AdLoader$Builder;
     .locals 2
+    .param p1    # Lcom/google/android/gms/ads/formats/NativeAdOptions;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
-    new-instance v1, Lcom/google/android/gms/internal/ads/zzaci;
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbls;
 
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzaci;-><init>(Lcom/google/android/gms/ads/formats/NativeAdOptions;)V
+    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzbls;-><init>(Lcom/google/android/gms/ads/formats/NativeAdOptions;)V
 
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Lcom/google/android/gms/internal/ads/zzaci;)V
+    invoke-interface {v0, v1}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzo(Lcom/google/android/gms/internal/ads/zzbls;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -358,33 +462,100 @@
     const-string v0, "Failed to specify native ad options"
 
     .line 2
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-object p0
 .end method
 
-.method public withPublisherAdViewOptions(Lcom/google/android/gms/ads/formats/PublisherAdViewOptions;)Lcom/google/android/gms/ads/AdLoader$Builder;
-    .locals 1
+.method public withNativeAdOptions(Lcom/google/android/gms/ads/nativead/NativeAdOptions;)Lcom/google/android/gms/ads/AdLoader$Builder;
+    .locals 11
+    .param p1    # Lcom/google/android/gms/ads/nativead/NativeAdOptions;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
+    .line 3
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzabz:Lcom/google/android/gms/internal/ads/zzvs;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdLoader$Builder;->zzb:Lcom/google/android/gms/ads/internal/client/zzbo;
 
-    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/ads/zzvs;->zza(Lcom/google/android/gms/ads/formats/PublisherAdViewOptions;)V
+    new-instance v10, Lcom/google/android/gms/internal/ads/zzbls;
+
+    .line 4
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->shouldReturnUrlsForImageAssets()Z
+
+    move-result v3
+
+    .line 5
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->shouldRequestMultipleImages()Z
+
+    move-result v5
+
+    .line 6
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->getAdChoicesPlacement()I
+
+    move-result v6
+
+    .line 7
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->getVideoOptions()Lcom/google/android/gms/ads/VideoOptions;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 8
+    new-instance v1, Lcom/google/android/gms/ads/internal/client/zzff;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->getVideoOptions()Lcom/google/android/gms/ads/VideoOptions;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lcom/google/android/gms/ads/internal/client/zzff;-><init>(Lcom/google/android/gms/ads/VideoOptions;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    move-object v7, v1
+
+    const/4 v2, 0x4
+
+    const/4 v4, -0x1
+
+    .line 9
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->zza()Z
+
+    move-result v8
+
+    .line 10
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/nativead/NativeAdOptions;->getMediaAspectRatio()I
+
+    move-result v9
+
+    move-object v1, v10
+
+    .line 11
+    invoke-direct/range {v1 .. v9}, Lcom/google/android/gms/internal/ads/zzbls;-><init>(IZIZILcom/google/android/gms/ads/internal/client/zzff;ZI)V
+
+    .line 12
+    invoke-interface {v0, v10}, Lcom/google/android/gms/ads/internal/client/zzbo;->zzo(Lcom/google/android/gms/internal/ads/zzbls;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p1
 
-    const-string v0, "Failed to specify DFP banner ad options"
+    const-string v0, "Failed to specify native ad options"
 
-    .line 2
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzazw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 13
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzk(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_0
+    :goto_1
     return-object p0
 .end method

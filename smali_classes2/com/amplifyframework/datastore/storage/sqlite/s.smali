@@ -3,32 +3,36 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/async/Cancelable;
+.implements Lgk/o;
 
 
 # instance fields
-.field public final synthetic a:Lio/reactivex/rxjava3/disposables/c;
+.field public final synthetic a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lio/reactivex/rxjava3/disposables/c;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/s;->a:Lio/reactivex/rxjava3/disposables/c;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/s;->a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/s;->a:Lio/reactivex/rxjava3/disposables/c;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/s;->a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
 
-    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/c;->dispose()V
+    check-cast p1, Ljava/util/Iterator;
 
-    return-void
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->i(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Ljava/util/Iterator;)Lek/v0;
+
+    move-result-object p1
+
+    return-object p1
 .end method

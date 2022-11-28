@@ -3,8 +3,8 @@
 .source "BasicSchemeFactory.java"
 
 # interfaces
-.implements Lef/d;
-.implements Lef/e;
+.implements Lih/d;
+.implements Lih/e;
 
 
 # annotations
@@ -42,7 +42,18 @@
 
 
 # virtual methods
-.method public a(Lpg/g;)Lef/c;
+.method public a(Lri/i;)Lih/c;
+    .locals 0
+
+    .line 1
+    new-instance p1, Lcz/msebera/android/httpclient/impl/auth/b;
+
+    invoke-direct {p1}, Lcz/msebera/android/httpclient/impl/auth/b;-><init>()V
+
+    return-object p1
+.end method
+
+.method public b(Lti/g;)Lih/c;
     .locals 1
 
     .line 1
@@ -51,17 +62,6 @@
     iget-object v0, p0, Lcz/msebera/android/httpclient/impl/auth/c;->a:Ljava/nio/charset/Charset;
 
     invoke-direct {p1, v0}, Lcz/msebera/android/httpclient/impl/auth/b;-><init>(Ljava/nio/charset/Charset;)V
-
-    return-object p1
-.end method
-
-.method public b(Lng/i;)Lef/c;
-    .locals 0
-
-    .line 1
-    new-instance p1, Lcz/msebera/android/httpclient/impl/auth/b;
-
-    invoke-direct {p1}, Lcz/msebera/android/httpclient/impl/auth/b;-><init>()V
 
     return-object p1
 .end method

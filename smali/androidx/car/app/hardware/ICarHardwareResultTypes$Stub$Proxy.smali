@@ -17,10 +17,6 @@
 .end annotation
 
 
-# static fields
-.field public static sDefaultImpl:Landroidx/car/app/hardware/ICarHardwareResultTypes;
-
-
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 

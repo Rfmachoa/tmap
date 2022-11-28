@@ -38,13 +38,13 @@
 
 
 # virtual methods
-.method public onAdapterChanged(Landroidx/viewpager/widget/ViewPager;Ll3/a;Ll3/a;)V
+.method public onAdapterChanged(Landroidx/viewpager/widget/ViewPager;Lt4/a;Lt4/a;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Landroidx/viewpager/widget/PagerTitleStrip$a;->b:Landroidx/viewpager/widget/PagerTitleStrip;
 
-    invoke-virtual {p1, p2, p3}, Landroidx/viewpager/widget/PagerTitleStrip;->b(Ll3/a;Ll3/a;)V
+    invoke-virtual {p1, p2, p3}, Landroidx/viewpager/widget/PagerTitleStrip;->b(Lt4/a;Lt4/a;)V
 
     return-void
 .end method
@@ -65,11 +65,11 @@
 
     iget-object v2, v2, Landroidx/viewpager/widget/PagerTitleStrip;->a:Landroidx/viewpager/widget/ViewPager;
 
-    invoke-virtual {v2}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Ll3/a;
+    invoke-virtual {v2}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Lt4/a;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroidx/viewpager/widget/PagerTitleStrip;->c(ILl3/a;)V
+    invoke-virtual {v0, v1, v2}, Landroidx/viewpager/widget/PagerTitleStrip;->c(ILt4/a;)V
 
     .line 2
     iget-object v0, p0, Landroidx/viewpager/widget/PagerTitleStrip$a;->b:Landroidx/viewpager/widget/PagerTitleStrip;
@@ -154,11 +154,11 @@
 
     iget-object v1, v1, Landroidx/viewpager/widget/PagerTitleStrip;->a:Landroidx/viewpager/widget/ViewPager;
 
-    invoke-virtual {v1}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Ll3/a;
+    invoke-virtual {v1}, Landroidx/viewpager/widget/ViewPager;->getAdapter()Lt4/a;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Landroidx/viewpager/widget/PagerTitleStrip;->c(ILl3/a;)V
+    invoke-virtual {p1, v0, v1}, Landroidx/viewpager/widget/PagerTitleStrip;->c(ILt4/a;)V
 
     .line 3
     iget-object p1, p0, Landroidx/viewpager/widget/PagerTitleStrip$a;->b:Landroidx/viewpager/widget/PagerTitleStrip;

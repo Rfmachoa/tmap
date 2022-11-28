@@ -1,23 +1,26 @@
-.class public final Lcom/android/billingclient/api/u0;
+.class public final synthetic Lcom/android/billingclient/api/u0;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/billingclient/api/p;
+.field public final synthetic a:Lcom/android/billingclient/api/h;
+
+.field public final synthetic b:Lcom/android/billingclient/api/g;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/billingclient/api/g;Lcom/android/billingclient/api/p;)V
+.method public synthetic constructor <init>(Lcom/android/billingclient/api/h;Lcom/android/billingclient/api/g;)V
     .locals 0
 
-    .line 1
-    iput-object p2, p0, Lcom/android/billingclient/api/u0;->a:Lcom/android/billingclient/api/p;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/billingclient/api/u0;->a:Lcom/android/billingclient/api/h;
+
+    iput-object p2, p0, Lcom/android/billingclient/api/u0;->b:Lcom/android/billingclient/api/g;
 
     return-void
 .end method
@@ -27,14 +30,20 @@
 .method public final run()V
     .locals 3
 
+    iget-object v0, p0, Lcom/android/billingclient/api/u0;->a:Lcom/android/billingclient/api/h;
+
+    iget-object v1, p0, Lcom/android/billingclient/api/u0;->b:Lcom/android/billingclient/api/g;
+
     .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/u0;->a:Lcom/android/billingclient/api/p;
+    sget-object v2, Lcom/android/billingclient/api/c0;->r:Lcom/android/billingclient/api/f;
 
-    sget-object v1, Lcom/android/billingclient/api/f0;->r:Lcom/android/billingclient/api/i;
+    .line 2
+    invoke-virtual {v1}, Lcom/android/billingclient/api/g;->a()Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lcom/android/billingclient/api/p;->f(Lcom/android/billingclient/api/i;Ljava/util/List;)V
+    .line 3
+    invoke-interface {v0, v2, v1}, Lcom/android/billingclient/api/h;->i(Lcom/android/billingclient/api/f;Ljava/lang/String;)V
 
     return-void
 .end method

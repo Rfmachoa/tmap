@@ -3,12 +3,12 @@
 .source "LruCache.kt"
 
 # interfaces
-.implements Lej/p;
+.implements Lgl/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/collection/LruCacheKt;->b(ILej/p;Lej/l;Lej/r;ILjava/lang/Object;)Landroidx/collection/j;
+    value = Landroidx/collection/LruCacheKt;->b(ILgl/p;Lgl/l;Lgl/r;ILjava/lang/Object;)Landroidx/collection/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/p<",
+        "Lgl/p<",
         "Ljava/lang/Object;",
         "Ljava/lang/Object;",
         "Ljava/lang/Integer;",

@@ -3,7 +3,7 @@
 .source "ShapeTrimPath.java"
 
 # interfaces
-.implements Ls3/b;
+.implements Lo5/b;
 
 
 # annotations
@@ -19,17 +19,17 @@
 
 .field public final b:Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
-.field public final c:Lr3/b;
+.field public final c:Ln5/b;
 
-.field public final d:Lr3/b;
+.field public final d:Ln5/b;
 
-.field public final e:Lr3/b;
+.field public final e:Ln5/b;
 
 .field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;Lr3/b;Lr3/b;Lr3/b;Z)V
+.method public constructor <init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;Ln5/b;Ln5/b;Ln5/b;Z)V
     .locals 0
 
     .line 1
@@ -42,13 +42,13 @@
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->b:Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     .line 4
-    iput-object p3, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c:Lr3/b;
+    iput-object p3, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c:Ln5/b;
 
     .line 5
-    iput-object p4, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d:Lr3/b;
+    iput-object p4, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d:Ln5/b;
 
     .line 6
-    iput-object p5, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e:Lr3/b;
+    iput-object p5, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e:Ln5/b;
 
     .line 7
     iput-boolean p6, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->f:Z
@@ -58,22 +58,22 @@
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Ln3/c;
+.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Lj5/c;
     .locals 0
 
     .line 1
-    new-instance p1, Ln3/t;
+    new-instance p1, Lj5/t;
 
-    invoke-direct {p1, p2, p0}, Ln3/t;-><init>(Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/ShapeTrimPath;)V
+    invoke-direct {p1, p2, p0}, Lj5/t;-><init>(Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/ShapeTrimPath;)V
 
     return-object p1
 .end method
 
-.method public b()Lr3/b;
+.method public b()Ln5/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d:Ln5/b;
 
     return-object v0
 .end method
@@ -87,20 +87,20 @@
     return-object v0
 .end method
 
-.method public d()Lr3/b;
+.method public d()Ln5/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e:Ln5/b;
 
     return-object v0
 .end method
 
-.method public e()Lr3/b;
+.method public e()Ln5/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c:Ln5/b;
 
     return-object v0
 .end method
@@ -133,7 +133,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c:Lr3/b;
+    iget-object v1, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c:Ln5/b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -141,7 +141,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d:Lr3/b;
+    iget-object v1, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d:Ln5/b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -149,7 +149,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e:Lr3/b;
+    iget-object v1, p0, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e:Ln5/b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

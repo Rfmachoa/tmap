@@ -64,7 +64,7 @@
     const-string v1, "ASCII"
 
     .line 7
-    invoke-static {p1, v1}, Lqg/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {p1, v1}, Lui/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object p1
 
@@ -367,7 +367,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lqg/d;->b([B)Ljava/lang/String;
+    invoke-static {v0}, Lui/d;->b([B)Ljava/lang/String;
 
     move-result-object v0
 

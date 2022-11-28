@@ -79,11 +79,11 @@
     invoke-virtual {v0, p4, p5}, Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;->m(J)V
 
     .line 7
-    invoke-static {p1}, Lc9/a;->b(Landroid/content/Context;)Lc9/a;
+    invoke-static {p1}, Lza/a;->b(Landroid/content/Context;)Lza/a;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lc9/a;->c(Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;)V
+    invoke-virtual {p1, v0}, Lza/a;->c(Lcom/skt/aicloud/mobile/service/communication/message/model/TextMessageRawData;)V
 
     return-void
 .end method

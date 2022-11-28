@@ -3,38 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/e;
+.implements Lcom/amplifyframework/core/Action;
 
 
 # instance fields
 .field public final synthetic a:Lcom/amplifyframework/datastore/AWSDataStorePlugin;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final synthetic b:Lcom/amplifyframework/core/Action;
+
+.field public final synthetic c:Lcom/amplifyframework/core/Consumer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/amplifyframework/datastore/l;->a:Lcom/amplifyframework/datastore/AWSDataStorePlugin;
 
-    iput-object p2, p0, Lcom/amplifyframework/datastore/l;->b:Landroid/content/Context;
+    iput-object p2, p0, Lcom/amplifyframework/datastore/l;->b:Lcom/amplifyframework/core/Action;
+
+    iput-object p3, p0, Lcom/amplifyframework/datastore/l;->c:Lcom/amplifyframework/core/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/c;)V
-    .locals 2
+.method public final call()V
+    .locals 3
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/l;->a:Lcom/amplifyframework/datastore/AWSDataStorePlugin;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/l;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/l;->b:Lcom/amplifyframework/core/Action;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->x(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Landroid/content/Context;Lai/c;)V
+    iget-object v2, p0, Lcom/amplifyframework/datastore/l;->c:Lcom/amplifyframework/core/Consumer;
+
+    invoke-static {v0, v1, v2}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->i(Lcom/amplifyframework/datastore/AWSDataStorePlugin;Lcom/amplifyframework/core/Action;Lcom/amplifyframework/core/Consumer;)V
 
     return-void
 .end method

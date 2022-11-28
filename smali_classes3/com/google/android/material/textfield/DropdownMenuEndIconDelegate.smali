@@ -9,43 +9,40 @@
 .field private static final ANIMATION_FADE_OUT_DURATION:I = 0x32
 
 .field private static final IS_LOLLIPOP:Z
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x15
+    .end annotation
+.end field
 
 
 # instance fields
-.field private final accessibilityDelegate:Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;
-
 .field private accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private final dropdownMenuOnEditTextAttachedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
+.field private autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private dropdownPopupActivatedAt:J
 
 .field private dropdownPopupDirty:Z
 
-.field private final endIconChangedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ClickableViewAccessibility"
-        }
-    .end annotation
-.end field
-
-.field private final exposedDropdownEndIconTextWatcher:Landroid/text/TextWatcher;
+.field private editTextHasFocus:Z
 
 .field private fadeInAnim:Landroid/animation/ValueAnimator;
 
 .field private fadeOutAnim:Landroid/animation/ValueAnimator;
 
-.field private filledPopupBackground:Landroid/graphics/drawable/StateListDrawable;
-
 .field private isEndIconChecked:Z
 
-.field private final onFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
+.field private final onEditTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
 
-.field private outlinedPopupBackground:Lcom/google/android/material/shape/MaterialShapeDrawable;
+.field private final onIconClickListener:Landroid/view/View$OnClickListener;
+
+.field private final touchExplorationStateChangeListener:Lk2/b$e;
 
 
 # direct methods
@@ -60,146 +57,54 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+.method public constructor <init>(Lcom/google/android/material/textfield/EndCompoundLayout;)V
     .locals 2
-    .param p1    # Lcom/google/android/material/textfield/TextInputLayout;
+    .param p1    # Lcom/google/android/material/textfield/EndCompoundLayout;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/EndIconDelegate;-><init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/EndIconDelegate;-><init>(Lcom/google/android/material/textfield/EndCompoundLayout;)V
 
     .line 2
-    new-instance p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;
+    new-instance p1, Lcom/google/android/material/textfield/g;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/g;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
 
-    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->exposedDropdownEndIconTextWatcher:Landroid/text/TextWatcher;
+    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onIconClickListener:Landroid/view/View$OnClickListener;
 
     .line 3
-    new-instance p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$2;
+    new-instance p1, Lcom/google/android/material/textfield/h;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$2;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/h;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
 
-    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
+    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onEditTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
 
     .line 4
-    new-instance p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$3;
+    new-instance p1, Lcom/google/android/material/textfield/l;
 
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/l;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$3;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Lcom/google/android/material/textfield/TextInputLayout;)V
-
-    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityDelegate:Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;
-
-    .line 5
-    new-instance p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$4;
-
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$4;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
-
-    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownMenuOnEditTextAttachedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
-
-    .line 6
-    new-instance p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$5;
-
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$5;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
-
-    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->endIconChangedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;
-
-    const/4 p1, 0x0
-
-    .line 7
-    iput-boolean p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
-
-    .line 8
-    iput-boolean p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
+    iput-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->touchExplorationStateChangeListener:Lk2/b$e;
 
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 9
+    .line 5
     iput-wide v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupActivatedAt:J
 
     return-void
 .end method
 
-.method public static synthetic access$000(Landroid/widget/EditText;)Landroid/widget/AutoCompleteTextView;
+.method public static synthetic a(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 1
-    invoke-static {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->castAutoCompleteTextViewOrThrow(Landroid/widget/EditText;)Landroid/widget/AutoCompleteTextView;
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$getAlphaAnimator$6(Landroid/animation/ValueAnimator;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/view/accessibility/AccessibilityManager;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$1000(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityDelegate:Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$1100(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/view/View$OnFocusChangeListener;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$1200()Z
-    .locals 1
-
-    .line 1
-    sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
-
-    return v0
-.end method
-
-.method public static synthetic access$1300(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Z
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isDropdownPopupActive()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic access$1402(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;J)J
-    .locals 0
-
-    .line 1
-    iput-wide p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupActivatedAt:J
-
-    return-wide p1
-.end method
-
-.method public static synthetic access$1500(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Z
-    .locals 0
-
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
-
-    return p0
-.end method
-
-.method public static synthetic access$1600(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/animation/ValueAnimator;
+.method public static synthetic access$000(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/animation/ValueAnimator;
     .locals 0
 
     .line 1
@@ -208,393 +113,20 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Landroid/widget/EditText;)Z
+.method public static synthetic b(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 1
-    invoke-static {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEditable(Landroid/widget/EditText;)Z
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$setUpDropdownShowHideBehavior$4(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static synthetic access$300(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Z)V
+.method public static synthetic c(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Z)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setEndIconChecked(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic access$402(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Z)Z
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
-
-    return p1
-.end method
-
-.method public static synthetic access$500(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->showHideDropdown(Landroid/widget/AutoCompleteTextView;)V
-
-    return-void
-.end method
-
-.method public static synthetic access$600(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setPopupBackground(Landroid/widget/AutoCompleteTextView;)V
-
-    return-void
-.end method
-
-.method public static synthetic access$700(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->addRippleEffect(Landroid/widget/AutoCompleteTextView;)V
-
-    return-void
-.end method
-
-.method public static synthetic access$800(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setUpDropdownShowHideBehavior(Landroid/widget/AutoCompleteTextView;)V
-
-    return-void
-.end method
-
-.method public static synthetic access$900(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)Landroid/text/TextWatcher;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->exposedDropdownEndIconTextWatcher:Landroid/text/TextWatcher;
-
-    return-object p0
-.end method
-
-.method private addRippleEffect(Landroid/widget/AutoCompleteTextView;)V
-    .locals 9
-    .param p1    # Landroid/widget/AutoCompleteTextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-static {p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEditable(Landroid/widget/EditText;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getBoxBackgroundMode()I
-
-    move-result v0
-
-    .line 3
-    iget-object v1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v1}, Lcom/google/android/material/textfield/TextInputLayout;->getBoxBackground()Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    move-result-object v1
-
-    .line 4
-    sget v2, Lcom/google/android/material/R$attr;->colorControlHighlight:I
-
-    invoke-static {p1, v2}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
-
-    move-result v2
-
-    const/4 v3, 0x2
-
-    new-array v4, v3, [[I
-
-    const/4 v5, 0x1
-
-    new-array v6, v5, [I
-
-    const v7, 0x10100a7
-
-    const/4 v8, 0x0
-
-    aput v7, v6, v8
-
-    aput-object v6, v4, v8
-
-    new-array v6, v8, [I
-
-    aput-object v6, v4, v5
-
-    if-ne v0, v3, :cond_1
-
-    .line 5
-    invoke-direct {p0, p1, v2, v4, v1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->addRippleEffectOnOutlinedLayout(Landroid/widget/AutoCompleteTextView;I[[ILcom/google/android/material/shape/MaterialShapeDrawable;)V
-
-    goto :goto_0
-
-    :cond_1
-    if-ne v0, v5, :cond_2
-
-    .line 6
-    invoke-direct {p0, p1, v2, v4, v1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->addRippleEffectOnFilledLayout(Landroid/widget/AutoCompleteTextView;I[[ILcom/google/android/material/shape/MaterialShapeDrawable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method private addRippleEffectOnFilledLayout(Landroid/widget/AutoCompleteTextView;I[[ILcom/google/android/material/shape/MaterialShapeDrawable;)V
-    .locals 5
-    .param p1    # Landroid/widget/AutoCompleteTextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lcom/google/android/material/shape/MaterialShapeDrawable;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getBoxBackgroundColor()I
-
-    move-result v0
-
-    const v1, 0x3dcccccd    # 0.1f
-
-    .line 2
-    invoke-static {p2, v0, v1}, Lcom/google/android/material/color/MaterialColors;->layer(IIF)I
-
-    move-result p2
-
-    const/4 v1, 0x2
-
-    new-array v2, v1, [I
-
-    const/4 v3, 0x0
-
-    aput p2, v2, v3
-
-    const/4 p2, 0x1
-
-    aput v0, v2, p2
-
-    .line 3
-    sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
-
-    if-eqz v0, :cond_0
-
-    .line 4
-    new-instance p2, Landroid/content/res/ColorStateList;
-
-    invoke-direct {p2, p3, v2}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    .line 5
-    new-instance p3, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-direct {p3, p2, p4, p4}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    .line 6
-    invoke-static {p1, p3}, Landroidx/core/view/ViewCompat;->I1(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    .line 7
-    :cond_0
-    new-instance v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    .line 8
-    invoke-virtual {p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object v4
-
-    invoke-direct {v0, v4}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
-
-    .line 9
-    new-instance v4, Landroid/content/res/ColorStateList;
-
-    invoke-direct {v4, p3, v2}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    invoke-virtual {v0, v4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setFillColor(Landroid/content/res/ColorStateList;)V
-
-    new-array p3, v1, [Landroid/graphics/drawable/Drawable;
-
-    aput-object p4, p3, v3
-
-    aput-object v0, p3, p2
-
-    .line 10
-    new-instance p2, Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-direct {p2, p3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    .line 11
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->k0(Landroid/view/View;)I
-
-    move-result p3
-
-    .line 12
-    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->getPaddingTop()I
-
-    move-result p4
-
-    .line 13
-    invoke-static {p1}, Landroidx/core/view/ViewCompat;->j0(Landroid/view/View;)I
-
-    move-result v0
-
-    .line 14
-    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->getPaddingBottom()I
-
-    move-result v1
-
-    .line 15
-    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->I1(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-
-    .line 16
-    invoke-static {p1, p3, p4, v0, v1}, Landroidx/core/view/ViewCompat;->d2(Landroid/view/View;IIII)V
-
-    :goto_0
-    return-void
-.end method
-
-.method private addRippleEffectOnOutlinedLayout(Landroid/widget/AutoCompleteTextView;I[[ILcom/google/android/material/shape/MaterialShapeDrawable;)V
-    .locals 7
-    .param p1    # Landroid/widget/AutoCompleteTextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lcom/google/android/material/shape/MaterialShapeDrawable;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    sget v0, Lcom/google/android/material/R$attr;->colorSurface:I
-
-    invoke-static {p1, v0}, Lcom/google/android/material/color/MaterialColors;->getColor(Landroid/view/View;I)I
-
-    move-result v0
-
-    .line 2
-    new-instance v1, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    .line 3
-    invoke-virtual {p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
-
-    const v2, 0x3dcccccd    # 0.1f
-
-    .line 4
-    invoke-static {p2, v0, v2}, Lcom/google/android/material/color/MaterialColors;->layer(IIF)I
-
-    move-result p2
-
-    const/4 v2, 0x2
-
-    new-array v3, v2, [I
-
-    const/4 v4, 0x0
-
-    aput p2, v3, v4
-
-    const/4 v5, 0x1
-
-    aput v4, v3, v5
-
-    .line 5
-    new-instance v6, Landroid/content/res/ColorStateList;
-
-    invoke-direct {v6, p3, v3}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    invoke-virtual {v1, v6}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setFillColor(Landroid/content/res/ColorStateList;)V
-
-    .line 6
-    sget-boolean v3, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
-
-    if-eqz v3, :cond_0
-
-    .line 7
-    invoke-virtual {v1, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setTint(I)V
-
-    new-array v3, v2, [I
-
-    aput p2, v3, v4
-
-    aput v0, v3, v5
-
-    .line 8
-    new-instance p2, Landroid/content/res/ColorStateList;
-
-    invoke-direct {p2, p3, v3}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    .line 9
-    new-instance p3, Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    .line 10
-    invoke-virtual {p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object v0
-
-    invoke-direct {p3, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
-
-    const/4 v0, -0x1
-
-    .line 11
-    invoke-virtual {p3, v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setTint(I)V
-
-    .line 12
-    new-instance v0, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-direct {v0, p2, v1, p3}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    new-array p2, v2, [Landroid/graphics/drawable/Drawable;
-
-    aput-object v0, p2, v4
-
-    aput-object p4, p2, v5
-
-    .line 13
-    new-instance p3, Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-direct {p3, p2}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-array p2, v2, [Landroid/graphics/drawable/Drawable;
-
-    aput-object v1, p2, v4
-
-    aput-object p4, p2, v5
-
-    .line 14
-    new-instance p3, Landroid/graphics/drawable/LayerDrawable;
-
-    invoke-direct {p3, p2}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    .line 15
-    :goto_0
-    invoke-static {p1, p3}, Landroidx/core/view/ViewCompat;->I1(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$new$2(Z)V
 
     return-void
 .end method
@@ -625,6 +157,38 @@
     throw p0
 .end method
 
+.method public static synthetic d(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$new$0(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static synthetic e(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$setUpDropdownShowHideBehavior$5()V
+
+    return-void
+.end method
+
+.method public static synthetic f(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$afterEditTextChanged$3()V
+
+    return-void
+.end method
+
+.method public static synthetic g(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/view/View;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->lambda$new$1(Landroid/view/View;Z)V
+
+    return-void
+.end method
+
 .method private varargs getAlphaAnimator(I[F)Landroid/animation/ValueAnimator;
     .locals 2
 
@@ -644,63 +208,11 @@
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 4
-    new-instance p1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$10;
+    new-instance p1, Lcom/google/android/material/textfield/f;
 
-    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$10;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+    invoke-direct {p1, p0}, Lcom/google/android/material/textfield/f;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
 
     invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    return-object p2
-.end method
-
-.method private getPopUpMaterialShapeDrawable(FFFI)Lcom/google/android/material/shape/MaterialShapeDrawable;
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/google/android/material/shape/ShapeAppearanceModel;->builder()Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
-
-    move-result-object v0
-
-    .line 2
-    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setTopLeftCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
-
-    move-result-object v0
-
-    .line 3
-    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setTopRightCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
-
-    move-result-object p1
-
-    .line 4
-    invoke-virtual {p1, p2}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setBottomLeftCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
-
-    move-result-object p1
-
-    .line 5
-    invoke-virtual {p1, p2}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->setBottomRightCornerSize(F)Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;
-
-    move-result-object p1
-
-    .line 6
-    invoke-virtual {p1}, Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;->build()Lcom/google/android/material/shape/ShapeAppearanceModel;
-
-    move-result-object p1
-
-    .line 7
-    iget-object p2, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
-
-    .line 8
-    invoke-static {p2, p3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->createWithElevationOverlay(Landroid/content/Context;F)Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    move-result-object p2
-
-    .line 9
-    invoke-virtual {p2, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
-
-    const/4 p1, 0x0
-
-    .line 10
-    invoke-virtual {p2, p1, p4, p1, p4}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setPadding(IIII)V
 
     return-object p2
 .end method
@@ -737,9 +249,9 @@
     iput-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->fadeOutAnim:Landroid/animation/ValueAnimator;
 
     .line 3
-    new-instance v1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$9;
+    new-instance v1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;
 
-    invoke-direct {v1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$9;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$1;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -797,29 +309,159 @@
     return v0
 .end method
 
-.method private static isEditable(Landroid/widget/EditText;)Z
-    .locals 0
-    .param p0    # Landroid/widget/EditText;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method private synthetic lambda$afterEditTextChanged$3()V
+    .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/EditText;->getKeyListener()Landroid/text/method/KeyListener;
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->isPopupShowing()Z
 
-    if-eqz p0, :cond_0
+    move-result v0
 
-    const/4 p0, 0x1
+    .line 2
+    invoke-direct {p0, v0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setEndIconChecked(Z)V
+
+    .line 3
+    iput-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
+
+    return-void
+.end method
+
+.method private synthetic lambda$getAlphaAnimator$6(Landroid/animation/ValueAnimator;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setAlpha(F)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$new$0(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->showHideDropdown()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$new$1(Landroid/view/View;Z)V
+    .locals 0
+
+    .line 1
+    iput-boolean p2, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->editTextHasFocus:Z
+
+    .line 2
+    invoke-virtual {p0}, Lcom/google/android/material/textfield/EndIconDelegate;->refreshIconState()V
+
+    if-nez p2, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 3
+    invoke-direct {p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setEndIconChecked(Z)V
+
+    .line 4
+    iput-boolean p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private synthetic lambda$new$2(Z)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Lcom/google/android/material/textfield/EditTextUtils;->isEditable(Landroid/widget/EditText;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x2
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x1
 
     :goto_0
-    return p0
+    invoke-static {v0, p1}, Landroidx/core/view/ViewCompat;->R1(Landroid/view/View;I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private synthetic lambda$setUpDropdownShowHideBehavior$4(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    const/4 p2, 0x0
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_1
+
+    .line 2
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isDropdownPopupActive()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    iput-boolean p2, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
+
+    .line 4
+    :cond_0
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->showHideDropdown()V
+
+    .line 5
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->updateDropdownPopupDirty()V
+
+    :cond_1
+    return p2
+.end method
+
+.method private synthetic lambda$setUpDropdownShowHideBehavior$5()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->updateDropdownPopupDirty()V
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, v0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setEndIconChecked(Z)V
+
+    return-void
 .end method
 
 .method private setEndIconChecked(Z)V
@@ -847,57 +489,8 @@
     return-void
 .end method
 
-.method private setPopupBackground(Landroid/widget/AutoCompleteTextView;)V
+.method private setUpDropdownShowHideBehavior()V
     .locals 2
-    .param p1    # Landroid/widget/AutoCompleteTextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {v0}, Lcom/google/android/material/textfield/TextInputLayout;->getBoxBackgroundMode()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    .line 3
-    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->outlinedPopupBackground:Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    .line 4
-    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->filledPopupBackground:Landroid/graphics/drawable/StateListDrawable;
-
-    invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method private setUpDropdownShowHideBehavior(Landroid/widget/AutoCompleteTextView;)V
-    .locals 1
-    .param p1    # Landroid/widget/AutoCompleteTextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ClickableViewAccessibility"
@@ -905,45 +498,50 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$7;
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$7;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;Landroid/widget/AutoCompleteTextView;)V
+    new-instance v1, Lcom/google/android/material/textfield/i;
 
-    invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-direct {v1, p0}, Lcom/google/android/material/textfield/i;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
-
-    invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
-
-    .line 3
     sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    new-instance v1, Lcom/google/android/material/textfield/j;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/textfield/j;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setOnDismissListener(Landroid/widget/AutoCompleteTextView$OnDismissListener;)V
+
     .line 4
-    new-instance v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;
-
-    invoke-direct {v0, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$8;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
-
-    invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->setOnDismissListener(Landroid/widget/AutoCompleteTextView$OnDismissListener;)V
-
     :cond_0
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setThreshold(I)V
+
     return-void
 .end method
 
-.method private showHideDropdown(Landroid/widget/AutoCompleteTextView;)V
+.method private showHideDropdown()V
     .locals 2
-    .param p1    # Landroid/widget/AutoCompleteTextView;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
-    if-nez p1, :cond_0
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    if-nez v0, :cond_0
 
     return-void
 
-    .line 1
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isDropdownPopupActive()Z
 
@@ -953,21 +551,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
 
-    .line 3
+    .line 4
     :cond_1
     iget-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
 
     if-nez v0, :cond_4
 
-    .line 4
+    .line 5
     sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
 
     if-eqz v0, :cond_2
 
-    .line 5
+    .line 6
     iget-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
 
     xor-int/lit8 v0, v0, 0x1
@@ -976,7 +574,7 @@
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_2
     iget-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
 
@@ -984,32 +582,36 @@
 
     iput-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
 
-    .line 7
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
-
-    invoke-virtual {v0}, Lcom/google/android/material/internal/CheckableImageButton;->toggle()V
-
     .line 8
+    invoke-virtual {p0}, Lcom/google/android/material/textfield/EndIconDelegate;->refreshIconState()V
+
+    .line 9
     :goto_0
     iget-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
 
     if-eqz v0, :cond_3
 
-    .line 9
-    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->requestFocus()Z
-
     .line 10
-    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->showDropDown()V
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
 
-    goto :goto_1
+    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->requestFocus()Z
 
     .line 11
-    :cond_3
-    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->showDropDown()V
 
     goto :goto_1
 
     .line 12
+    :cond_3
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
+
+    goto :goto_1
+
+    .line 13
     :cond_4
     iput-boolean v1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
 
@@ -1017,103 +619,87 @@
     return-void
 .end method
 
+.method private updateDropdownPopupDirty()V
+    .locals 2
 
-# virtual methods
-.method public initialize()V
-    .locals 6
+    const/4 v0, 0x1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
+    iput-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupDirty:Z
 
     .line 2
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-object v0
+    move-result-wide v0
 
-    sget v1, Lcom/google/android/material/R$dimen;->mtrl_shape_corner_size_small_component:I
+    iput-wide v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownPopupActivatedAt:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public afterEditTextChanged(Landroid/text/Editable;)V
+    .locals 1
+
+    .line 1
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    .line 2
+    invoke-static {p1}, Lcom/google/android/material/textfield/EditTextUtils;->isEditable(Landroid/widget/EditText;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
 
     .line 3
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1}, Landroid/widget/ImageButton;->hasFocus()Z
 
-    move-result v0
+    move-result p1
 
-    int-to-float v0, v0
+    if-nez p1, :cond_0
 
     .line 4
-    iget-object v1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->dismissDropDown()V
 
     .line 5
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
 
-    move-result-object v1
+    new-instance v0, Lcom/google/android/material/textfield/k;
 
-    sget v2, Lcom/google/android/material/R$dimen;->mtrl_exposed_dropdown_menu_popup_elevation:I
+    invoke-direct {v0, p0}, Lcom/google/android/material/textfield/k;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
 
-    .line 6
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1, v0}, Landroid/widget/AutoCompleteTextView;->post(Ljava/lang/Runnable;)Z
 
-    move-result v1
+    return-void
+.end method
 
-    int-to-float v1, v1
+.method public getIconContentDescriptionResId()I
+    .locals 1
 
-    .line 7
-    iget-object v2, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
+    .line 1
+    sget v0, Lcom/google/android/material/R$string;->exposed_dropdown_menu_content_description:I
 
-    .line 8
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    return v0
+.end method
 
-    move-result-object v2
+.method public getIconDrawableResId()I
+    .locals 1
 
-    sget v3, Lcom/google/android/material/R$dimen;->mtrl_exposed_dropdown_menu_popup_vertical_padding:I
-
-    .line 9
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v2
-
-    .line 10
-    invoke-direct {p0, v0, v0, v1, v2}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->getPopUpMaterialShapeDrawable(FFFI)Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    .line 11
-    invoke-direct {p0, v4, v0, v1, v2}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->getPopUpMaterialShapeDrawable(FFFI)Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    move-result-object v0
-
-    .line 12
-    iput-object v3, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->outlinedPopupBackground:Lcom/google/android/material/shape/MaterialShapeDrawable;
-
-    .line 13
-    new-instance v1, Landroid/graphics/drawable/StateListDrawable;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
-
-    iput-object v1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->filledPopupBackground:Landroid/graphics/drawable/StateListDrawable;
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [I
-
-    const v4, 0x10100aa
-
-    const/4 v5, 0x0
-
-    aput v4, v2, v5
-
-    .line 14
-    invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    .line 15
-    iget-object v1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->filledPopupBackground:Landroid/graphics/drawable/StateListDrawable;
-
-    new-array v2, v5, [I
-
-    invoke-virtual {v1, v2, v0}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    .line 16
+    .line 1
     sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
 
     if-eqz v0, :cond_0
@@ -1125,76 +711,35 @@
     :cond_0
     sget v0, Lcom/google/android/material/R$drawable;->mtrl_ic_arrow_drop_down:I
 
-    .line 17
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    return v0
+.end method
 
-    iget-object v2, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
+.method public getOnEditTextFocusChangeListener()Landroid/view/View$OnFocusChangeListener;
+    .locals 1
 
-    invoke-static {v2, v0}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onEditTextFocusChangeListener:Landroid/view/View$OnFocusChangeListener;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v0}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public getOnIconClickListener()Landroid/view/View$OnClickListener;
+    .locals 1
 
-    .line 18
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->onIconClickListener:Landroid/view/View$OnClickListener;
 
-    .line 19
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public getTouchExplorationStateChangeListener()Lk2/b$e;
+    .locals 1
 
-    sget v2, Lcom/google/android/material/R$string;->exposed_dropdown_menu_content_description:I
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->touchExplorationStateChangeListener:Lk2/b$e;
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    .line 20
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 21
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    new-instance v1, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$6;
-
-    invoke-direct {v1, p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate$6;-><init>(Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;)V
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 22
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    iget-object v1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->dropdownMenuOnEditTextAttachedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->addOnEditTextAttachedListener(Lcom/google/android/material/textfield/TextInputLayout$OnEditTextAttachedListener;)V
-
-    .line 23
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
-
-    iget-object v1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->endIconChangedListener:Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->addOnEndIconChangedListener(Lcom/google/android/material/textfield/TextInputLayout$OnEndIconChangedListener;)V
-
-    .line 24
-    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->initAnimators()V
-
-    .line 25
-    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
-
-    const-string v1, "accessibility"
-
-    .line 26
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/accessibility/AccessibilityManager;
-
-    iput-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    return-void
+    return-object v0
 .end method
 
 .method public isBoxBackgroundModeSupported(I)Z
@@ -1213,10 +758,242 @@
     return p1
 .end method
 
+.method public isIconActivable()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public isIconActivated()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->editTextHasFocus:Z
+
+    return v0
+.end method
+
+.method public isIconCheckable()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public isIconChecked()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->isEndIconChecked:Z
+
+    return v0
+.end method
+
+.method public onEditTextAttached(Landroid/widget/EditText;)V
+    .locals 2
+    .param p1    # Landroid/widget/EditText;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p1}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->castAutoCompleteTextViewOrThrow(Landroid/widget/EditText;)Landroid/widget/AutoCompleteTextView;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    .line 2
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->setUpDropdownShowHideBehavior()V
+
+    .line 3
+    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->setErrorIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 4
+    invoke-static {p1}, Lcom/google/android/material/textfield/EditTextUtils;->isEditable(Landroid/widget/EditText;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 5
+    iget-object p1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->endIconView:Lcom/google/android/material/internal/CheckableImageButton;
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->R1(Landroid/view/View;I)V
+
+    .line 6
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/textfield/EndIconDelegate;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconVisible(Z)V
+
+    return-void
+.end method
+
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
+    .locals 0
+    .param p2    # Lk2/c;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    invoke-static {p1}, Lcom/google/android/material/textfield/EditTextUtils;->isEditable(Landroid/widget/EditText;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 2
+    const-class p1, Landroid/widget/Spinner;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Lk2/c;->Z0(Ljava/lang/CharSequence;)V
+
+    .line 3
+    :cond_0
+    invoke-virtual {p2}, Lk2/c;->B0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    .line 4
+    invoke-virtual {p2, p1}, Lk2/c;->o1(Ljava/lang/CharSequence;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 0
+    .param p2    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+
+    .line 2
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    .line 3
+    invoke-static {p1}, Lcom/google/android/material/textfield/EditTextUtils;->isEditable(Landroid/widget/EditText;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 4
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->showHideDropdown()V
+
+    .line 5
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->updateDropdownPopupDirty()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setUp()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->initAnimators()V
+
+    .line 2
+    iget-object v0, p0, Lcom/google/android/material/textfield/EndIconDelegate;->context:Landroid/content/Context;
+
+    const-string v1, "accessibility"
+
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/accessibility/AccessibilityManager;
+
+    iput-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
+
+    return-void
+.end method
+
 .method public shouldTintIconOnError()Z
     .locals 1
 
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public tearDown()V
+    .locals 2
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ClickableViewAccessibility"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 3
+    sget-boolean v0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->IS_LOLLIPOP:Z
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->autoCompleteTextView:Landroid/widget/AutoCompleteTextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->setOnDismissListener(Landroid/widget/AutoCompleteTextView$OnDismissListener;)V
+
+    :cond_0
+    return-void
 .end method

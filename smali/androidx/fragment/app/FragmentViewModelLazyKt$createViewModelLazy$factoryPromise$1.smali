@@ -3,12 +3,12 @@
 .source "FragmentViewModelLazy.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/FragmentViewModelLazyKt;->c(Landroidx/fragment/app/Fragment;Lkotlin/reflect/d;Lej/a;Lej/a;)Lkotlin/o;
+    value = Landroidx/fragment/app/FragmentViewModelLazyKt;->h(Landroidx/fragment/app/Fragment;Lkotlin/reflect/d;Lgl/a;Lgl/a;Lgl/a;)Lkotlin/p;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,18 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroidx/lifecycle/ViewModelProvider$Factory;",
         ">;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\"\u0008\u0008\u0000\u0010\u0002*\u00020\u0003H\n\u00a2\u0006\u0002\u0008\u0004"
     }
@@ -44,9 +39,10 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
+    xi = 0x30
 .end annotation
 
 
@@ -70,16 +66,20 @@
 
 # virtual methods
 .method public final invoke()Landroidx/lifecycle/ViewModelProvider$Factory;
-    .locals 1
+    .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 1
+    .line 2
     iget-object v0, p0, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$factoryPromise$1;->$this_createViewModelLazy:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getDefaultViewModelProviderFactory()Landroidx/lifecycle/ViewModelProvider$Factory;
 
     move-result-object v0
+
+    const-string v1, "defaultViewModelProviderFactory"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -87,6 +87,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentViewModelLazyKt$createViewModelLazy$factoryPromise$1;->invoke()Landroidx/lifecycle/ViewModelProvider$Factory;
 
     move-result-object v0

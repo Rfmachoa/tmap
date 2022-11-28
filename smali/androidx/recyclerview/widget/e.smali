@@ -50,28 +50,28 @@
 
 .field public final d:Landroidx/recyclerview/widget/e$d;
 
-.field public final e:Landroidx/recyclerview/widget/k0;
+.field public final e:Landroidx/recyclerview/widget/j0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/k0<",
+            "Landroidx/recyclerview/widget/j0<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field public final f:Landroidx/recyclerview/widget/j0$b;
+.field public final f:Landroidx/recyclerview/widget/i0$b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/j0$b<",
+            "Landroidx/recyclerview/widget/i0$b<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field public final g:Landroidx/recyclerview/widget/j0$a;
+.field public final g:Landroidx/recyclerview/widget/i0$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/j0$a<",
+            "Landroidx/recyclerview/widget/i0$a<",
             "TT;>;"
         }
     .end annotation
@@ -95,19 +95,19 @@
 
 .field public final p:Landroid/util/SparseIntArray;
 
-.field public final q:Landroidx/recyclerview/widget/j0$b;
+.field public final q:Landroidx/recyclerview/widget/i0$b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/j0$b<",
+            "Landroidx/recyclerview/widget/i0$b<",
             "TT;>;"
         }
     .end annotation
 .end field
 
-.field public final r:Landroidx/recyclerview/widget/j0$a;
+.field public final r:Landroidx/recyclerview/widget/i0$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/recyclerview/widget/j0$a<",
+            "Landroidx/recyclerview/widget/i0$a<",
             "TT;>;"
         }
     .end annotation
@@ -187,14 +187,14 @@
 
     invoke-direct {v0, p0}, Landroidx/recyclerview/widget/e$a;-><init>(Landroidx/recyclerview/widget/e;)V
 
-    iput-object v0, p0, Landroidx/recyclerview/widget/e;->q:Landroidx/recyclerview/widget/j0$b;
+    iput-object v0, p0, Landroidx/recyclerview/widget/e;->q:Landroidx/recyclerview/widget/i0$b;
 
     .line 11
     new-instance v1, Landroidx/recyclerview/widget/e$b;
 
     invoke-direct {v1, p0}, Landroidx/recyclerview/widget/e$b;-><init>(Landroidx/recyclerview/widget/e;)V
 
-    iput-object v1, p0, Landroidx/recyclerview/widget/e;->r:Landroidx/recyclerview/widget/j0$a;
+    iput-object v1, p0, Landroidx/recyclerview/widget/e;->r:Landroidx/recyclerview/widget/i0$a;
 
     .line 12
     iput-object p1, p0, Landroidx/recyclerview/widget/e;->a:Ljava/lang/Class;
@@ -209,30 +209,30 @@
     iput-object p4, p0, Landroidx/recyclerview/widget/e;->d:Landroidx/recyclerview/widget/e$d;
 
     .line 16
-    new-instance p1, Landroidx/recyclerview/widget/k0;
+    new-instance p1, Landroidx/recyclerview/widget/j0;
 
-    invoke-direct {p1, p2}, Landroidx/recyclerview/widget/k0;-><init>(I)V
+    invoke-direct {p1, p2}, Landroidx/recyclerview/widget/j0;-><init>(I)V
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/e;->e:Landroidx/recyclerview/widget/k0;
+    iput-object p1, p0, Landroidx/recyclerview/widget/e;->e:Landroidx/recyclerview/widget/j0;
 
     .line 17
-    new-instance p1, Landroidx/recyclerview/widget/w;
+    new-instance p1, Landroidx/recyclerview/widget/v;
 
-    invoke-direct {p1}, Landroidx/recyclerview/widget/w;-><init>()V
+    invoke-direct {p1}, Landroidx/recyclerview/widget/v;-><init>()V
 
     .line 18
-    invoke-interface {p1, v0}, Landroidx/recyclerview/widget/j0;->b(Landroidx/recyclerview/widget/j0$b;)Landroidx/recyclerview/widget/j0$b;
+    invoke-interface {p1, v0}, Landroidx/recyclerview/widget/i0;->b(Landroidx/recyclerview/widget/i0$b;)Landroidx/recyclerview/widget/i0$b;
 
     move-result-object p2
 
-    iput-object p2, p0, Landroidx/recyclerview/widget/e;->f:Landroidx/recyclerview/widget/j0$b;
+    iput-object p2, p0, Landroidx/recyclerview/widget/e;->f:Landroidx/recyclerview/widget/i0$b;
 
     .line 19
-    invoke-interface {p1, v1}, Landroidx/recyclerview/widget/j0;->a(Landroidx/recyclerview/widget/j0$a;)Landroidx/recyclerview/widget/j0$a;
+    invoke-interface {p1, v1}, Landroidx/recyclerview/widget/i0;->a(Landroidx/recyclerview/widget/i0$a;)Landroidx/recyclerview/widget/i0$a;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/e;->g:Landroidx/recyclerview/widget/j0$a;
+    iput-object p1, p0, Landroidx/recyclerview/widget/e;->g:Landroidx/recyclerview/widget/i0$a;
 
     .line 20
     invoke-virtual {p0}, Landroidx/recyclerview/widget/e;->f()V
@@ -261,9 +261,9 @@
     if-ge p1, v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Landroidx/recyclerview/widget/e;->e:Landroidx/recyclerview/widget/k0;
+    iget-object v0, p0, Landroidx/recyclerview/widget/e;->e:Landroidx/recyclerview/widget/j0;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/k0;->d(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/j0;->d(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -403,7 +403,7 @@
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
 
     .line 2
-    iget-object v0, p0, Landroidx/recyclerview/widget/e;->g:Landroidx/recyclerview/widget/j0$a;
+    iget-object v0, p0, Landroidx/recyclerview/widget/e;->g:Landroidx/recyclerview/widget/i0$a;
 
     iget v1, p0, Landroidx/recyclerview/widget/e;->o:I
 
@@ -411,7 +411,7 @@
 
     iput v1, p0, Landroidx/recyclerview/widget/e;->o:I
 
-    invoke-interface {v0, v1}, Landroidx/recyclerview/widget/j0$a;->c(I)V
+    invoke-interface {v0, v1}, Landroidx/recyclerview/widget/i0$a;->c(I)V
 
     return-void
 .end method
@@ -584,7 +584,7 @@
     aput v2, v0, v3
 
     .line 18
-    iget-object v4, p0, Landroidx/recyclerview/widget/e;->g:Landroidx/recyclerview/widget/j0$a;
+    iget-object v4, p0, Landroidx/recyclerview/widget/e;->g:Landroidx/recyclerview/widget/i0$a;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/e;->h:[I
 
@@ -600,7 +600,7 @@
 
     iget v9, p0, Landroidx/recyclerview/widget/e;->l:I
 
-    invoke-interface/range {v4 .. v9}, Landroidx/recyclerview/widget/j0$a;->a(IIIII)V
+    invoke-interface/range {v4 .. v9}, Landroidx/recyclerview/widget/i0$a;->a(IIIII)V
 
     :cond_7
     :goto_2

@@ -6,7 +6,13 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/core/widget/TextViewCompat$d;,
+        Landroidx/core/widget/TextViewCompat$c;,
+        Landroidx/core/widget/TextViewCompat$f;,
+        Landroidx/core/widget/TextViewCompat$e;,
         Landroidx/core/widget/TextViewCompat$a;,
+        Landroidx/core/widget/TextViewCompat$b;,
+        Landroidx/core/widget/TextViewCompat$g;,
         Landroidx/core/widget/TextViewCompat$AutoSizeTextType;
     }
 .end annotation
@@ -64,7 +70,7 @@
     .end param
 
     .line 1
-    invoke-static {p1}, Lr1/o;->h(I)I
+    invoke-static {p1}, Landroidx/core/util/p;->i(I)I
 
     .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -74,7 +80,7 @@
     if-lt v0, v1, :cond_0
 
     .line 3
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFirstBaselineToTopHeight(I)V
+    invoke-static {p0, p1}, Landroidx/core/widget/TextViewCompat$f;->c(Landroid/widget/TextView;I)V
 
     return-void
 
@@ -89,7 +95,7 @@
     move-result-object v0
 
     .line 5
-    invoke-virtual {p0}, Landroid/widget/TextView;->getIncludeFontPadding()Z
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$a;->a(Landroid/widget/TextView;)Z
 
     move-result v1
 
@@ -151,7 +157,7 @@
     .end param
 
     .line 1
-    invoke-static {p1}, Lr1/o;->h(I)I
+    invoke-static {p1}, Landroidx/core/util/p;->i(I)I
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
@@ -163,7 +169,7 @@
     move-result-object v0
 
     .line 3
-    invoke-virtual {p0}, Landroid/widget/TextView;->getIncludeFontPadding()Z
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$a;->a(Landroid/widget/TextView;)Z
 
     move-result v1
 
@@ -225,7 +231,7 @@
     .end param
 
     .line 1
-    invoke-static {p1}, Lr1/o;->h(I)I
+    invoke-static {p1}, Landroidx/core/util/p;->i(I)I
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
@@ -253,13 +259,13 @@
     return-void
 .end method
 
-.method public static D(Landroid/widget/TextView;Lp1/g;)V
+.method public static D(Landroid/widget/TextView;Li2/g;)V
     .locals 2
     .param p0    # Landroid/widget/TextView;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lp1/g;
+    .param p1    # Li2/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -272,7 +278,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lp1/g;->f()Landroid/text/PrecomputedText;
+    invoke-virtual {p1}, Li2/g;->f()Landroid/text/PrecomputedText;
 
     move-result-object p1
 
@@ -282,16 +288,16 @@
 
     .line 3
     :cond_0
-    invoke-static {p0}, Landroidx/core/widget/TextViewCompat;->o(Landroid/widget/TextView;)Lp1/g$a;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat;->o(Landroid/widget/TextView;)Li2/g$a;
 
     move-result-object v0
 
     .line 4
-    invoke-virtual {p1}, Lp1/g;->e()Lp1/g$a;
+    invoke-virtual {p1}, Li2/g;->e()Li2/g$a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lp1/g$a;->a(Lp1/g$a;)Z
+    invoke-virtual {v0, v1}, Li2/g$a;->a(Li2/g$a;)Z
 
     move-result v0
 
@@ -331,19 +337,19 @@
     return-void
 .end method
 
-.method public static F(Landroid/widget/TextView;Lp1/g$a;)V
+.method public static F(Landroid/widget/TextView;Li2/g$a;)V
     .locals 2
     .param p0    # Landroid/widget/TextView;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lp1/g$a;
+    .param p1    # Li2/g$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-virtual {p1}, Lp1/g$a;->d()Landroid/text/TextDirectionHeuristic;
+    invoke-virtual {p1}, Li2/g$a;->d()Landroid/text/TextDirectionHeuristic;
 
     move-result-object v0
 
@@ -351,32 +357,32 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextDirection(I)V
+    invoke-static {p0, v0}, Landroidx/core/widget/TextViewCompat$b;->h(Landroid/view/View;I)V
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lp1/g$a;->e()Landroid/text/TextPaint;
+    invoke-virtual {p1}, Li2/g$a;->e()Landroid/text/TextPaint;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->set(Landroid/text/TextPaint;)V
 
     .line 3
-    invoke-virtual {p1}, Lp1/g$a;->b()I
+    invoke-virtual {p1}, Li2/g$a;->b()I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setBreakStrategy(I)V
+    invoke-static {p0, v0}, Landroidx/core/widget/TextViewCompat$c;->e(Landroid/widget/TextView;I)V
 
     .line 4
-    invoke-virtual {p1}, Lp1/g$a;->c()I
+    invoke-virtual {p1}, Li2/g$a;->c()I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setHyphenationFrequency(I)V
+    invoke-static {p0, p1}, Landroidx/core/widget/TextViewCompat$c;->h(Landroid/widget/TextView;I)V
 
     return-void
 .end method
@@ -397,7 +403,7 @@
     .end annotation
 
     .line 1
-    instance-of v0, p0, Landroidx/core/widget/TextViewCompat$a;
+    instance-of v0, p0, Landroidx/core/widget/TextViewCompat$g;
 
     if-eqz v0, :cond_0
 
@@ -408,9 +414,9 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    check-cast p0, Landroidx/core/widget/TextViewCompat$a;
+    check-cast p0, Landroidx/core/widget/TextViewCompat$g;
 
-    invoke-virtual {p0}, Landroidx/core/widget/TextViewCompat$a;->d()Landroid/view/ActionMode$Callback;
+    invoke-virtual {p0}, Landroidx/core/widget/TextViewCompat$g;->d()Landroid/view/ActionMode$Callback;
 
     move-result-object p0
 
@@ -448,7 +454,7 @@
 
     if-gt v0, v1, :cond_1
 
-    instance-of v0, p1, Landroidx/core/widget/TextViewCompat$a;
+    instance-of v0, p1, Landroidx/core/widget/TextViewCompat$g;
 
     if-nez v0, :cond_1
 
@@ -458,9 +464,9 @@
 
     .line 2
     :cond_0
-    new-instance v0, Landroidx/core/widget/TextViewCompat$a;
+    new-instance v0, Landroidx/core/widget/TextViewCompat$g;
 
-    invoke-direct {v0, p1, p0}, Landroidx/core/widget/TextViewCompat$a;-><init>(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)V
+    invoke-direct {v0, p1, p0}, Landroidx/core/widget/TextViewCompat$g;-><init>(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)V
 
     return-object v0
 
@@ -484,7 +490,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeMaxTextSize()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$e;->a(Landroid/widget/TextView;)I
 
     move-result p0
 
@@ -526,7 +532,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeMinTextSize()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$e;->b(Landroid/widget/TextView;)I
 
     move-result p0
 
@@ -568,7 +574,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$e;->c(Landroid/widget/TextView;)I
 
     move-result p0
 
@@ -612,7 +618,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeTextAvailableSizes()[I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$e;->d(Landroid/widget/TextView;)[I
 
     move-result-object p0
 
@@ -656,7 +662,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeTextType()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$e;->e(Landroid/widget/TextView;)I
 
     move-result p0
 
@@ -693,10 +699,10 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintList()Landroid/content/res/ColorStateList;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$c;->b(Landroid/widget/TextView;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -713,10 +719,10 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$c;->c(Landroid/widget/TextView;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0
 
@@ -733,7 +739,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$b;->a(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
@@ -802,7 +808,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/TextView;->getMaxLines()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$a;->b(Landroid/widget/TextView;)I
 
     move-result p0
 
@@ -817,7 +823,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/TextView;->getMinLines()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$a;->c(Landroid/widget/TextView;)I
 
     move-result p0
 
@@ -963,16 +969,16 @@
     if-ne v0, v1, :cond_3
 
     .line 5
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextLocale()Ljava/util/Locale;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$b;->d(Landroid/widget/TextView;)Ljava/util/Locale;
 
     move-result-object p0
 
-    invoke-static {p0}, Landroid/icu/text/DecimalFormatSymbols;->getInstance(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$d;->a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
 
     move-result-object p0
 
     .line 6
-    invoke-virtual {p0}, Landroid/icu/text/DecimalFormatSymbols;->getDigitStrings()[Ljava/lang/String;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$f;->a(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
 
     move-result-object p0
 
@@ -1011,7 +1017,7 @@
 
     .line 11
     :cond_3
-    invoke-virtual {p0}, Landroid/widget/TextView;->getLayoutDirection()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$b;->b(Landroid/view/View;)I
 
     move-result v0
 
@@ -1021,7 +1027,7 @@
 
     .line 12
     :cond_4
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextDirection()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$b;->c(Landroid/view/View;)I
 
     move-result p0
 
@@ -1088,7 +1094,7 @@
     .end packed-switch
 .end method
 
-.method public static o(Landroid/widget/TextView;)Lp1/g$a;
+.method public static o(Landroid/widget/TextView;)Li2/g$a;
     .locals 3
     .param p0    # Landroid/widget/TextView;
         .annotation build Landroidx/annotation/NonNull;
@@ -1105,19 +1111,19 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    new-instance v0, Lp1/g$a;
+    new-instance v0, Li2/g$a;
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextMetricsParams()Landroid/text/PrecomputedText$Params;
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$f;->b(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lp1/g$a;-><init>(Landroid/text/PrecomputedText$Params;)V
+    invoke-direct {v0, p0}, Li2/g$a;-><init>(Landroid/text/PrecomputedText$Params;)V
 
     return-object v0
 
     .line 3
     :cond_0
-    new-instance v0, Lp1/g$a$a;
+    new-instance v0, Li2/g$a$a;
 
     new-instance v1, Landroid/text/TextPaint;
 
@@ -1128,31 +1134,31 @@
 
     invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(Landroid/graphics/Paint;)V
 
-    invoke-direct {v0, v1}, Lp1/g$a$a;-><init>(Landroid/text/TextPaint;)V
+    invoke-direct {v0, v1}, Li2/g$a$a;-><init>(Landroid/text/TextPaint;)V
 
     .line 5
-    invoke-virtual {p0}, Landroid/widget/TextView;->getBreakStrategy()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$c;->a(Landroid/widget/TextView;)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lp1/g$a$a;->b(I)Lp1/g$a$a;
+    invoke-virtual {v0, v1}, Li2/g$a$a;->b(I)Li2/g$a$a;
 
     .line 6
-    invoke-virtual {p0}, Landroid/widget/TextView;->getHyphenationFrequency()I
+    invoke-static {p0}, Landroidx/core/widget/TextViewCompat$c;->d(Landroid/widget/TextView;)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lp1/g$a$a;->c(I)Lp1/g$a$a;
+    invoke-virtual {v0, v1}, Li2/g$a$a;->c(I)Li2/g$a$a;
 
     .line 7
     invoke-static {p0}, Landroidx/core/widget/TextViewCompat;->n(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lp1/g$a$a;->d(Landroid/text/TextDirectionHeuristic;)Lp1/g$a$a;
+    invoke-virtual {v0, p0}, Li2/g$a$a;->d(Landroid/text/TextDirectionHeuristic;)Li2/g$a$a;
 
     .line 8
-    invoke-virtual {v0}, Lp1/g$a$a;->a()Lp1/g$a;
+    invoke-virtual {v0}, Li2/g$a$a;->a()Li2/g$a;
 
     move-result-object p0
 
@@ -1273,7 +1279,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/widget/TextViewCompat$e;->f(Landroid/widget/TextView;IIII)V
 
     goto :goto_0
 
@@ -1317,7 +1323,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
+    invoke-static {p0, p1, p2}, Landroidx/core/widget/TextViewCompat$e;->g(Landroid/widget/TextView;[II)V
 
     goto :goto_0
 
@@ -1352,7 +1358,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setAutoSizeTextTypeWithDefaults(I)V
+    invoke-static {p0, p1}, Landroidx/core/widget/TextViewCompat$e;->h(Landroid/widget/TextView;I)V
 
     goto :goto_0
 
@@ -1384,10 +1390,10 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
+    invoke-static {p0, p1}, Landroidx/core/widget/TextViewCompat$c;->f(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -1404,10 +1410,10 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p0, p1}, Landroidx/core/widget/TextViewCompat$c;->g(Landroid/widget/TextView;Landroid/graphics/PorterDuff$Mode;)V
 
     return-void
 .end method
@@ -1436,7 +1442,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/widget/TextViewCompat$b;->e(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1465,7 +1471,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(IIII)V
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/widget/TextViewCompat$b;->f(Landroid/widget/TextView;IIII)V
 
     return-void
 .end method
@@ -1494,7 +1500,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/widget/TextViewCompat$b;->g(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

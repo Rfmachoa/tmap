@@ -60,11 +60,11 @@
     if-eqz p0, :cond_0
 
     .line 1
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
 
-    if-lez v2, :cond_0
+    if-nez v2, :cond_0
 
     move v2, v0
 
@@ -77,11 +77,11 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
-    if-lez v3, :cond_1
+    if-nez v3, :cond_1
 
     goto :goto_1
 

@@ -1,4 +1,4 @@
-.class public final Landroidx/transition/ChangeBounds$g;
+.class public Landroidx/transition/ChangeBounds$g;
 .super Landroid/util/Property;
 .source "ChangeBounds.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -75,7 +75,7 @@
     add-int/2addr v2, p2
 
     .line 5
-    invoke-static {p1, v0, p2, v1, v2}, Lh3/x;->g(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, p2, v1, v2}, Lp4/x;->g(Landroid/view/View;IIII)V
 
     return-void
 .end method

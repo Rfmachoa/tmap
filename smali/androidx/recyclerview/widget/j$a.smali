@@ -1,14 +1,14 @@
 .class public Landroidx/recyclerview/widget/j$a;
 .super Ljava/lang/Object;
-.source "DefaultItemAnimator.java"
+.source "DiffUtil.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Comparator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/recyclerview/widget/j;->x()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/recyclerview/widget/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,22 +16,21 @@
     name = null
 .end annotation
 
-
-# instance fields
-.field public final synthetic a:Ljava/util/ArrayList;
-
-.field public final synthetic b:Landroidx/recyclerview/widget/j;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator<",
+        "Landroidx/recyclerview/widget/j$d;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/j;Ljava/util/ArrayList;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/recyclerview/widget/j$a;->b:Landroidx/recyclerview/widget/j;
-
-    iput-object p2, p0, Landroidx/recyclerview/widget/j$a;->a:Ljava/util/ArrayList;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,60 +38,30 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 8
+.method public a(Landroidx/recyclerview/widget/j$d;Landroidx/recyclerview/widget/j$d;)I
+    .locals 0
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$a;->a:Ljava/util/ArrayList;
+    iget p1, p1, Landroidx/recyclerview/widget/j$d;->a:I
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget p2, p2, Landroidx/recyclerview/widget/j$d;->a:I
 
-    move-result-object v0
+    sub-int/2addr p1, p2
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return p1
+.end method
 
-    move-result v1
+.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-    if-eqz v1, :cond_0
+    .line 1
+    check-cast p1, Landroidx/recyclerview/widget/j$d;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast p2, Landroidx/recyclerview/widget/j$d;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/j$a;->a(Landroidx/recyclerview/widget/j$d;Landroidx/recyclerview/widget/j$d;)I
 
-    check-cast v1, Landroidx/recyclerview/widget/j$j;
+    move-result p1
 
-    .line 2
-    iget-object v2, p0, Landroidx/recyclerview/widget/j$a;->b:Landroidx/recyclerview/widget/j;
-
-    iget-object v3, v1, Landroidx/recyclerview/widget/j$j;->a:Landroidx/recyclerview/widget/RecyclerView$a0;
-
-    iget v4, v1, Landroidx/recyclerview/widget/j$j;->b:I
-
-    iget v5, v1, Landroidx/recyclerview/widget/j$j;->c:I
-
-    iget v6, v1, Landroidx/recyclerview/widget/j$j;->d:I
-
-    iget v7, v1, Landroidx/recyclerview/widget/j$j;->e:I
-
-    invoke-virtual/range {v2 .. v7}, Landroidx/recyclerview/widget/j;->b0(Landroidx/recyclerview/widget/RecyclerView$a0;IIII)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    .line 4
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$a;->b:Landroidx/recyclerview/widget/j;
-
-    iget-object v0, v0, Landroidx/recyclerview/widget/j;->t:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/j$a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
+    return p1
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapMainActivity;->l9(Lcom/skt/tmap/data/GridItemData;)V
+    value = Lcom/skt/tmap/activity/TmapMainActivity;->J9(Lcom/skt/tmap/data/GridItemData;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -67,7 +67,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object p1
 
@@ -76,18 +76,18 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {p1}, Lcom/skt/tmap/dialog/v;->c()V
 
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/activity/TmapMainActivity;->X7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/dialog/q;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1, v0}, Lcom/skt/tmap/activity/TmapMainActivity;->l8(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v;
 
     :cond_0
     return-void
@@ -101,7 +101,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
@@ -110,18 +110,18 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity;->X7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/dialog/q;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity;->l8(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v;
 
     :cond_0
     return-void
@@ -133,11 +133,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/q;->D()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->D()Ljava/lang/String;
 
     move-result-object v0
 
@@ -160,28 +160,28 @@
     .line 4
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->b:Lcom/skt/tmap/data/GridItemData;
 
-    invoke-static {v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/h;->i(Lcom/skt/tmap/data/GridItemData;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
+    invoke-static {v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/z;->j(Lcom/skt/tmap/data/GridItemData;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
 
     move-result-object v1
 
     .line 5
     iget-object v2, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainActivity;->e8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {v2, v3, v0, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->Z(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v2, v3, v0, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->D0(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    new-instance v2, Lcom/skt/tmap/activity/z0;
+    new-instance v2, Lcom/skt/tmap/activity/h2;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/z0;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$j;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/h2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$j;)V
 
     .line 6
     invoke-virtual {v0, v1, v2}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
@@ -192,7 +192,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const v1, 0x7f130979
+    const v1, 0x7f1409fe
 
     const/4 v2, 0x0
 
@@ -208,7 +208,7 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
@@ -217,18 +217,18 @@
     .line 9
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->W7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->k8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
 
     .line 10
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$j;->c:Lcom/skt/tmap/activity/TmapMainActivity;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity;->X7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/dialog/q;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity;->l8(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v;
 
     :cond_2
     :goto_0

@@ -1,29 +1,9 @@
-.class public final Lkj/o;
-.super Lkj/q;
+.class public interface abstract Lkj/o;
+.super Ljava/lang/Object;
+.source "dagger_hilt_components_SingletonComponent.java"
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "kj/p",
-        "kj/q"
-    }
-    d2 = {}
-    k = 0x4
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
+.annotation build Ldagger/hilt/internal/definecomponent/DefineComponentClasses;
+    component = "dagger.hilt.components.SingletonComponent"
 .end annotation
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Lkj/q;-><init>()V
-
-    return-void
-.end method

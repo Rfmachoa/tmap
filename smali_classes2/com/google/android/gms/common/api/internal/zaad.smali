@@ -1,32 +1,12 @@
 .class public final Lcom/google/android/gms/common/api/internal/zaad;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zaa:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/BasePendingResult<",
-            "*>;",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "*>;",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -252,15 +232,6 @@
 # virtual methods
 .method public final zac(Lcom/google/android/gms/common/api/internal/BasePendingResult;Z)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/BasePendingResult<",
-            "+",
-            "Lcom/google/android/gms/common/api/Result;",
-            ">;Z)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaad;->zaa:Ljava/util/Map;
@@ -283,15 +254,6 @@
 
 .method public final zad(Lcom/google/android/gms/tasks/TaskCompletionSource;Z)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<TResult:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TTResult;>;Z)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaad;->zab:Ljava/util/Map;

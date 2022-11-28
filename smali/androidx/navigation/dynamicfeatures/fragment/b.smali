@@ -1,5 +1,5 @@
 .class public final Landroidx/navigation/dynamicfeatures/fragment/b;
-.super Landroidx/navigation/y;
+.super Landroidx/navigation/z;
 .source "DynamicFragmentNavigatorDestinationBuilder.kt"
 
 
@@ -9,8 +9,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Landroidx/navigation/y<",
-        "Landroidx/navigation/fragment/d$a;",
+        "Landroidx/navigation/z<",
+        "Lr3/h$b;",
         ">;"
     }
 .end annotation
@@ -26,19 +26,19 @@
     }
     d2 = {
         "Landroidx/navigation/dynamicfeatures/fragment/b;",
-        "Landroidx/navigation/y;",
-        "Landroidx/navigation/fragment/d$a;",
+        "Landroidx/navigation/z;",
+        "Lr3/h$b;",
         "Landroidx/navigation/dynamicfeatures/fragment/a$a;",
-        "j",
-        "",
-        "g",
-        "Ljava/lang/String;",
         "k",
-        "()Ljava/lang/String;",
+        "",
+        "h",
+        "Ljava/lang/String;",
         "l",
+        "()Ljava/lang/String;",
+        "m",
         "(Ljava/lang/String;)V",
         "moduleName",
-        "h",
+        "i",
         "fragmentClassName",
         "Landroidx/navigation/dynamicfeatures/fragment/a;",
         "navigator",
@@ -58,12 +58,12 @@
 
 
 # instance fields
-.field public g:Ljava/lang/String;
+.field public h:Ljava/lang/String;
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 .end field
 
-.field public final h:Ljava/lang/String;
+.field public final i:Ljava/lang/String;
 
 
 # direct methods
@@ -91,9 +91,9 @@
     invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-direct {p0, p1, p2}, Landroidx/navigation/y;-><init>(Landroidx/navigation/Navigator;I)V
+    invoke-direct {p0, p1, p2}, Landroidx/navigation/z;-><init>(Landroidx/navigation/Navigator;I)V
 
-    iput-object p3, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->h:Ljava/lang/String;
+    iput-object p3, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->i:Ljava/lang/String;
 
     return-void
 .end method
@@ -104,20 +104,20 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/b;->j()Landroidx/navigation/dynamicfeatures/fragment/a$a;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/b;->k()Landroidx/navigation/dynamicfeatures/fragment/a$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public j()Landroidx/navigation/dynamicfeatures/fragment/a$a;
+.method public k()Landroidx/navigation/dynamicfeatures/fragment/a$a;
     .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    invoke-super {p0}, Landroidx/navigation/y;->c()Landroidx/navigation/NavDestination;
+    invoke-super {p0}, Landroidx/navigation/z;->c()Landroidx/navigation/NavDestination;
 
     move-result-object v0
 
@@ -126,14 +126,14 @@
     check-cast v0, Landroidx/navigation/dynamicfeatures/fragment/a$a;
 
     .line 2
-    iget-object v1, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->h:Ljava/lang/String;
+    iget-object v1, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->i:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/fragment/d$a;->B(Ljava/lang/String;)Landroidx/navigation/fragment/d$a;
+    invoke-virtual {v0, v1}, Lr3/h$b;->K(Ljava/lang/String;)Lr3/h$b;
 
     .line 3
-    iget-object v1, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->g:Ljava/lang/String;
+    iget-object v1, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->h:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroidx/navigation/dynamicfeatures/fragment/a$a;->D(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroidx/navigation/dynamicfeatures/fragment/a$a;->M(Ljava/lang/String;)V
 
     return-object v0
 
@@ -148,18 +148,18 @@
     throw v0
 .end method
 
-.method public final k()Ljava/lang/String;
+.method public final l()Ljava/lang/String;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->g:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final l(Ljava/lang/String;)V
+.method public final m(Ljava/lang/String;)V
     .locals 0
     .param p1    # Ljava/lang/String;
         .annotation build Lorg/jetbrains/annotations/Nullable;
@@ -167,7 +167,7 @@
     .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->g:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/b;->h:Ljava/lang/String;
 
     return-void
 .end method

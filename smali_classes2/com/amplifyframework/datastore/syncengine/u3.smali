@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/e;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;
-
-.field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;
+.field public final synthetic a:Lek/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;)V
+.method public synthetic constructor <init>(Lek/c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/u3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/u3;->b:Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/u3;->a:Lek/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/c;)V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/u3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/u3;->a:Lek/c;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/u3;->b:Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;
+    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->d(Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;Lai/c;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncTimeRegistry;->a(Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method

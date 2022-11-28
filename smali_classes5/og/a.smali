@@ -1,1702 +1,415 @@
-.class public abstract Log/a;
+.class public Log/a;
 .super Ljava/lang/Object;
-.source "AbstractConnPool.java"
+.source "DefaultDownloaderFactory.java"
 
 # interfaces
-.implements Log/c;
-.implements Log/d;
+.implements Log/r;
 
 
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/ThreadSafe;
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        "C:",
-        "Ljava/lang/Object;",
-        "E:",
-        "Log/e<",
-        "TT;TC;>;>",
-        "Ljava/lang/Object;",
-        "Log/c<",
-        "TT;TE;>;",
-        "Log/d<",
-        "TT;>;"
-    }
-.end annotation
+# static fields
+.field public static final c:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray<",
+            "Ljava/lang/reflect/Constructor<",
+            "+",
+            "Lcom/tmapmobility/tmap/exoplayer2/offline/c;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/locks/Lock;
+.field public final a:Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;
 
-.field public final b:Log/b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Log/b<",
-            "TT;TC;>;"
-        }
-    .end annotation
-.end field
-
-.field public final c:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "TT;",
-            "Log/i<",
-            "TT;TC;TE;>;>;"
-        }
-    .end annotation
-.end field
-
-.field public final d:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "TE;>;"
-        }
-    .end annotation
-.end field
-
-.field public final e:Ljava/util/LinkedList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedList<",
-            "TE;>;"
-        }
-    .end annotation
-.end field
-
-.field public final f:Ljava/util/LinkedList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedList<",
-            "Log/g<",
-            "TE;>;>;"
-        }
-    .end annotation
-.end field
-
-.field public final g:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "TT;",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public volatile h:Z
-
-.field public volatile i:I
-
-.field public volatile j:I
+.field public final b:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(Log/b;II)V
+.method public static constructor <clinit>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Log/b<",
-            "TT;TC;>;II)V"
-        }
-    .end annotation
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Log/a;->c()Landroid/util/SparseArray;
 
-    const-string v0, "Connection factory"
+    move-result-object v0
 
-    .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Log/b;
-
-    iput-object p1, p0, Log/a;->b:Log/b;
-
-    const-string p1, "Max per route value"
-
-    .line 3
-    invoke-static {p2, p1}, Lqg/a;->f(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Log/a;->i:I
-
-    const-string p1, "Max total value"
-
-    .line 4
-    invoke-static {p3, p1}, Lqg/a;->f(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Log/a;->j:I
-
-    .line 5
-    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
-
-    iput-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    .line 6
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Log/a;->c:Ljava/util/Map;
-
-    .line 7
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Log/a;->d:Ljava/util/Set;
-
-    .line 8
-    new-instance p1, Ljava/util/LinkedList;
-
-    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
-
-    iput-object p1, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    .line 9
-    new-instance p1, Ljava/util/LinkedList;
-
-    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
-
-    iput-object p1, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    .line 10
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Log/a;->g:Ljava/util/Map;
+    sput-object v0, Log/a;->c:Landroid/util/SparseArray;
 
     return-void
 .end method
 
-.method public static synthetic e(Log/a;Ljava/lang/Object;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;Log/g;)Log/e;
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/window/layout/r;->a:Landroidx/window/layout/r;
+
+    invoke-direct {p0, p1, v0}, Log/a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;Ljava/util/concurrent/Executor;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;
+
+    iput-object p1, p0, Log/a;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;
+
+    .line 4
+    invoke-static {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/concurrent/Executor;
+
+    iput-object p1, p0, Log/a;->b:Ljava/util/concurrent/Executor;
+
+    return-void
+.end method
+
+.method public static c()Landroid/util/SparseArray;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Ljava/io/IOException;,
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/TimeoutException;
+            "()",
+            "Landroid/util/SparseArray<",
+            "Ljava/lang/reflect/Constructor<",
+            "+",
+            "Lcom/tmapmobility/tmap/exoplayer2/offline/c;",
+            ">;>;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual/range {p0 .. p6}, Log/a;->n(Ljava/lang/Object;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;Log/g;)Log/e;
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    const/4 v1, 0x0
+
+    .line 2
+    :try_start_0
+    const-class v2, Lsg/a;
+
+    .line 3
+    invoke-static {v2}, Log/a;->d(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    .line 4
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v1, 0x2
+
+    .line 5
+    :try_start_1
+    const-class v2, Ltg/a;
+
+    .line 6
+    invoke-static {v2}, Log/a;->d(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    .line 7
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x1
+
+    :try_start_2
+    const-string v2, "com.tmapmobility.tmap.exoplayer2.source.smoothstreaming.offline.SsDownloader"
+
+    .line 8
+    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v2
+
+    .line 9
+    invoke-static {v2}, Log/a;->d(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    .line 10
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    :try_end_2
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    return-object v0
+.end method
+
+.method public static d(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Ljava/lang/reflect/Constructor<",
+            "+",
+            "Lcom/tmapmobility/tmap/exoplayer2/offline/c;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    :try_start_0
+    const-class v0, Lcom/tmapmobility/tmap/exoplayer2/offline/c;
+
+    .line 2
+    invoke-virtual {p0, v0}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object p0
 
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    const-class v2, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-class v2, Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    const-class v2, Ljava/util/concurrent/Executor;
+
+    aput-object v2, v0, v1
+
+    .line 3
+    invoke-virtual {p0, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
     return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 4
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Downloader constructor missing"
+
+    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public L(I)V
-    .locals 1
-
-    const-string v0, "Max per route value"
+.method public a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
+    .locals 3
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->f(ILjava/lang/String;)I
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->b:Landroid/net/Uri;
 
-    .line 2
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
+    iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->c:Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 3
-    :try_start_0
-    iput p1, p0, Log/a;->i:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public N()I
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 2
-    :try_start_0
-    iget v0, p0, Log/a;->j:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 3
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw v0
-.end method
-
-.method public O()Log/h;
-    .locals 5
-
-    .line 1
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 2
-    :try_start_0
-    new-instance v0, Log/h;
-
-    iget-object v1, p0, Log/a;->d:Ljava/util/Set;
-
-    .line 3
-    invoke-interface {v1}, Ljava/util/Set;->size()I
-
-    move-result v1
-
-    iget-object v2, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    .line 4
-    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
-
-    move-result v2
-
-    iget-object v3, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    .line 5
-    invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
-
-    move-result v3
-
-    iget v4, p0, Log/a;->j:I
-
-    invoke-direct {v0, v1, v2, v3, v4}, Log/h;-><init>(IIII)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 6
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw v0
-.end method
-
-.method public bridge synthetic a(Ljava/lang/Object;Z)V
-    .locals 0
-
-    .line 1
-    check-cast p1, Log/e;
-
-    invoke-virtual {p0, p1, p2}, Log/a;->t(Log/e;Z)V
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/Object;)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)I"
-        }
-    .end annotation
-
-    const-string v0, "Route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 3
-    :try_start_0
-    invoke-virtual {p0, p1}, Log/a;->l(Ljava/lang/Object;)I
-
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public c(Ljava/lang/Object;I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;I)V"
-        }
-    .end annotation
-
-    const-string v0, "Route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "Max per route value"
-
-    .line 2
-    invoke-static {p2, v0}, Lqg/a;->f(ILjava/lang/String;)I
-
-    .line 3
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 4
-    :try_start_0
-    iget-object v0, p0, Log/a;->g:Ljava/util/Map;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object p2, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public d(Ljava/lang/Object;Ljava/lang/Object;Lof/c;)Ljava/util/concurrent/Future;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;",
-            "Ljava/lang/Object;",
-            "Lof/c<",
-            "TE;>;)",
-            "Ljava/util/concurrent/Future<",
-            "TE;>;"
-        }
-    .end annotation
-
-    const-string v0, "Route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    iget-boolean v0, p0, Log/a;->h:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    const-string v1, "Connection pool shut down"
-
-    invoke-static {v0, v1}, Lqg/b;->a(ZLjava/lang/String;)V
-
-    .line 3
-    new-instance v0, Log/a$b;
-
-    iget-object v4, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    move-object v2, v0
-
-    move-object v3, p0
-
-    move-object v5, p3
-
-    move-object v6, p1
-
-    move-object v7, p2
-
-    invoke-direct/range {v2 .. v7}, Log/a$b;-><init>(Log/a;Ljava/util/concurrent/locks/Lock;Lof/c;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public f(Ljava/lang/Object;)Log/h;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)",
-            "Log/h;"
-        }
-    .end annotation
-
-    const-string v0, "Route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 3
-    :try_start_0
-    invoke-virtual {p0, p1}, Log/a;->m(Ljava/lang/Object;)Log/i;
-
-    move-result-object v0
-
-    .line 4
-    new-instance v1, Log/h;
-
-    .line 5
-    invoke-virtual {v0}, Log/i;->h()I
-
-    move-result v2
-
-    .line 6
-    invoke-virtual {v0}, Log/i;->i()I
-
-    move-result v3
-
-    .line 7
-    invoke-virtual {v0}, Log/i;->e()I
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->F0(Landroid/net/Uri;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 8
-    invoke-virtual {p0, p1}, Log/a;->l(Ljava/lang/Object;)I
+    if-eqz v0, :cond_1
 
-    move-result p1
+    const/4 v1, 0x1
 
-    invoke-direct {v1, v2, v3, v0, p1}, Log/h;-><init>(IIII)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eq v0, v1, :cond_1
 
-    .line 9
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
+    const/4 v1, 0x2
 
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    if-eq v0, v1, :cond_1
 
-    return-object v1
+    const/4 v1, 0x4
 
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public g()V
-    .locals 3
-
-    .line 1
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
+    if-ne v0, v1, :cond_0
 
     .line 2
-    new-instance v2, Log/a$d;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/offline/d;
 
-    invoke-direct {v2, p0, v0, v1}, Log/a$d;-><init>(Log/a;J)V
+    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
-    invoke-virtual {p0, v2}, Log/a;->j(Log/f;)V
+    invoke-direct {v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
 
-    return-void
-.end method
-
-.method public h(JLjava/util/concurrent/TimeUnit;)V
-    .locals 2
-
-    const-string v0, "Time unit"
-
-    .line 1
-    invoke-static {p3, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide p1
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p3, p1, v0
-
-    if-gez p3, :cond_0
-
-    move-wide p1, v0
+    iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->b:Landroid/net/Uri;
 
     .line 3
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    sub-long/2addr v0, p1
-
-    .line 4
-    new-instance p1, Log/a$c;
-
-    invoke-direct {p1, p0, v0, v1}, Log/a$c;-><init>(Log/a;J)V
-
-    invoke-virtual {p0, p1}, Log/a;->j(Log/f;)V
-
-    return-void
-.end method
-
-.method public abstract i(Ljava/lang/Object;Ljava/lang/Object;)Log/e;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;TC;)TE;"
-        }
-    .end annotation
-.end method
-
-.method public j(Log/f;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Log/f<",
-            "TT;TC;>;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 2
-    :try_start_0
-    iget-object v0, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    .line 3
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 4
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
     move-result-object v1
 
-    check-cast v1, Log/e;
-
-    .line 5
-    invoke-interface {p1, v1}, Log/f;->a(Log/e;)V
-
-    .line 6
-    invoke-virtual {v1}, Log/e;->j()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 7
-    invoke-virtual {v1}, Log/e;->f()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Log/a;->m(Ljava/lang/Object;)Log/i;
-
-    move-result-object v2
-
-    .line 8
-    invoke-virtual {v2, v1}, Log/i;->m(Log/e;)Z
-
-    .line 9
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_0
-
-    .line 10
-    :cond_1
-    invoke-virtual {p0}, Log/a;->s()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 11
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public k(Log/f;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Log/f<",
-            "TT;TC;>;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 2
-    :try_start_0
-    iget-object v0, p0, Log/a;->d:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    .line 3
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->f:Ljava/lang/String;
 
     .line 4
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Log/e;
-
-    .line 5
-    invoke-interface {p1, v1}, Log/f;->a(Log/e;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    .line 6
-    :cond_0
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public final l(Ljava/lang/Object;)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)I"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Log/a;->g:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->l(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    .line 5
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
 
-    if-eqz p1, :cond_0
+    move-result-object p1
 
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object v1, p0, Log/a;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;
 
-    move-result p1
+    iget-object v2, p0, Log/a;->b:Ljava/util/concurrent/Executor;
 
-    return p1
+    invoke-direct {v0, p1, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/offline/d;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;Ljava/util/concurrent/Executor;)V
 
-    .line 3
-    :cond_0
-    iget p1, p0, Log/a;->i:I
-
-    return p1
-.end method
-
-.method public final m(Ljava/lang/Object;)Log/i;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)",
-            "Log/i<",
-            "TT;TC;TE;>;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Log/a;->c:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Log/i;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Log/a$a;
-
-    invoke-direct {v0, p0, p1, p1}, Log/a$a;-><init>(Log/a;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 3
-    iget-object v1, p0, Log/a;->c:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;Log/g;)Log/e;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;",
-            "Ljava/lang/Object;",
-            "J",
-            "Ljava/util/concurrent/TimeUnit;",
-            "Log/g<",
-            "TE;>;)TE;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/TimeoutException;
-        }
-    .end annotation
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p3, v0
-
-    const/4 v1, 0x0
-
-    if-lez v0, :cond_0
-
-    .line 1
-    new-instance v0, Ljava/util/Date;
-
-    .line 2
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {p5, p3, p4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide p3
-
-    add-long/2addr p3, v2
-
-    invoke-direct {v0, p3, p4}, Ljava/util/Date;-><init>(J)V
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    .line 3
-    :goto_0
-    iget-object p3, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p3}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 4
-    :try_start_0
-    invoke-virtual {p0, p1}, Log/a;->m(Ljava/lang/Object;)Log/i;
-
-    move-result-object p3
-
-    :goto_1
-    if-nez v1, :cond_b
-
-    .line 5
-    iget-boolean p4, p0, Log/a;->h:Z
-
-    const/4 p5, 0x1
-
-    const/4 v1, 0x0
-
-    if-nez p4, :cond_1
-
-    move p4, p5
-
-    goto :goto_2
-
-    :cond_1
-    move p4, v1
-
-    :goto_2
-    const-string v2, "Connection pool shut down"
-
-    invoke-static {p4, v2}, Lqg/b;->a(ZLjava/lang/String;)V
 
     .line 6
-    :goto_3
-    invoke-virtual {p3, p2}, Log/i;->f(Ljava/lang/Object;)Log/e;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    move-result-object p4
+    const-string v1, "Unsupported type: "
 
-    if-nez p4, :cond_2
+    invoke-static {v1, v0}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
-    goto :goto_4
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     .line 7
-    :cond_2
-    invoke-virtual {p4}, Log/e;->j()Z
-
-    move-result v2
-
-    if-nez v2, :cond_a
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {p4, v2, v3}, Log/e;->k(J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    goto/16 :goto_7
-
-    :cond_3
-    :goto_4
-    if-eqz p4, :cond_4
-
-    .line 8
-    iget-object p1, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {p1, p4}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    .line 9
-    iget-object p1, p0, Log/a;->d:Ljava/util/Set;
-
-    invoke-interface {p1, p4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 10
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-object p4
-
-    .line 11
-    :cond_4
-    :try_start_1
-    invoke-virtual {p0, p1}, Log/a;->l(Ljava/lang/Object;)I
-
-    move-result v2
-
-    .line 12
-    invoke-virtual {p3}, Log/i;->d()I
-
-    move-result v3
-
-    add-int/2addr v3, p5
-
-    sub-int/2addr v3, v2
-
-    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    if-lez v3, :cond_6
-
-    move v4, v1
-
-    :goto_5
-    if-ge v4, v3, :cond_6
-
-    .line 13
-    invoke-virtual {p3}, Log/i;->g()Log/e;
-
-    move-result-object v5
-
-    if-nez v5, :cond_5
-
-    goto :goto_6
-
-    .line 14
-    :cond_5
-    invoke-virtual {v5}, Log/e;->a()V
-
-    .line 15
-    iget-object v6, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v6, v5}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    .line 16
-    invoke-virtual {p3, v5}, Log/i;->m(Log/e;)Z
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_5
-
-    .line 17
-    :cond_6
-    :goto_6
-    invoke-virtual {p3}, Log/i;->d()I
-
-    move-result v3
-
-    if-ge v3, v2, :cond_8
-
-    .line 18
-    iget-object v2, p0, Log/a;->d:Ljava/util/Set;
-
-    invoke-interface {v2}, Ljava/util/Set;->size()I
-
-    move-result v2
-
-    .line 19
-    iget v3, p0, Log/a;->j:I
-
-    sub-int/2addr v3, v2
-
-    invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    if-lez v1, :cond_8
-
-    .line 20
-    iget-object p2, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {p2}, Ljava/util/LinkedList;->size()I
-
-    move-result p2
-
-    sub-int/2addr v1, p5
-
-    if-le p2, v1, :cond_7
-
-    .line 21
-    iget-object p2, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {p2}, Ljava/util/LinkedList;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_7
-
-    .line 22
-    iget-object p2, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {p2}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Log/e;
-
-    .line 23
-    invoke-virtual {p2}, Log/e;->a()V
-
-    .line 24
-    invoke-virtual {p2}, Log/e;->f()Ljava/lang/Object;
-
-    move-result-object p4
-
-    invoke-virtual {p0, p4}, Log/a;->m(Ljava/lang/Object;)Log/i;
-
-    move-result-object p4
-
-    .line 25
-    invoke-virtual {p4, p2}, Log/i;->m(Log/e;)Z
-
-    .line 26
-    :cond_7
-    iget-object p2, p0, Log/a;->b:Log/b;
-
-    invoke-interface {p2, p1}, Log/b;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 27
-    invoke-virtual {p3, p1}, Log/i;->a(Ljava/lang/Object;)Log/e;
-
-    move-result-object p1
-
-    .line 28
-    iget-object p2, p0, Log/a;->d:Ljava/util/Set;
-
-    invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 29
-    iget-object p2, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-object p1
-
-    .line 30
-    :cond_8
-    :try_start_2
-    invoke-virtual {p3, p6}, Log/i;->l(Log/g;)V
-
-    .line 31
-    iget-object p5, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {p5, p6}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    .line 32
-    invoke-virtual {p6, v0}, Log/g;->a(Ljava/util/Date;)Z
-
-    move-result p5
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 33
-    :try_start_3
-    invoke-virtual {p3, p6}, Log/i;->o(Log/g;)V
-
-    .line 34
-    iget-object v1, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {v1, p6}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    if-nez p5, :cond_9
-
-    if-eqz v0, :cond_9
-
-    .line 35
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v1
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    cmp-long p5, v1, v3
-
-    if-lez p5, :cond_b
-
-    :cond_9
-    move-object v1, p4
-
-    goto/16 :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    .line 36
-    invoke-virtual {p3, p6}, Log/i;->o(Log/g;)V
-
-    .line 37
-    iget-object p2, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {p2, p6}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    throw p1
-
-    .line 38
-    :cond_a
-    :goto_7
-    invoke-virtual {p4}, Log/e;->a()V
-
-    .line 39
-    iget-object v2, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v2, p4}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    .line 40
-    invoke-virtual {p3, p4, v1}, Log/i;->c(Log/e;Z)V
-
-    goto/16 :goto_3
-
-    .line 41
-    :cond_b
-    new-instance p1, Ljava/util/concurrent/TimeoutException;
-
-    const-string p2, "Timeout waiting for connection"
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :catchall_1
-    move-exception p1
-
-    .line 42
-    iget-object p2, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public o()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Log/a;->h:Z
-
-    return v0
-.end method
-
-.method public p(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;",
-            "Ljava/lang/Object;",
-            ")",
-            "Ljava/util/concurrent/Future<",
-            "TE;>;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, p1, p2, v0}, Log/a;->d(Ljava/lang/Object;Ljava/lang/Object;Lof/c;)Ljava/util/concurrent/Future;
+    :cond_1
+    invoke-virtual {p0, p1, v0}, Log/a;->b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;I)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public q(Log/e;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TE;)V"
-        }
-    .end annotation
-
-    return-void
-.end method
-
-.method public r(Log/e;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TE;)V"
-        }
-    .end annotation
-
-    return-void
-.end method
-
-.method public final s()V
+.method public final b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;I)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
     .locals 3
 
     .line 1
-    iget-object v0, p0, Log/a;->c:Ljava/util/Map;
+    sget-object v0, Log/a;->c:Landroid/util/SparseArray;
 
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 3
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    .line 4
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Log/i;
-
-    .line 5
-    invoke-virtual {v1}, Log/i;->i()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Log/i;->d()I
-
-    move-result v1
-
-    add-int/2addr v1, v2
-
-    if-nez v1, :cond_0
-
-    .line 6
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public t(Log/e;Z)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TE;Z)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 2
-    :try_start_0
-    iget-object v0, p0, Log/a;->d:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 3
-    invoke-virtual {p1}, Log/e;->f()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Log/a;->m(Ljava/lang/Object;)Log/i;
-
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {v0, p1, p2}, Log/i;->c(Log/e;Z)V
-
-    if-eqz p2, :cond_0
-
-    .line 5
-    iget-boolean p2, p0, Log/a;->h:Z
-
-    if-nez p2, :cond_0
-
-    .line 6
-    iget-object p2, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {p2, p1}, Ljava/util/LinkedList;->addFirst(Ljava/lang/Object;)V
-
-    .line 7
-    invoke-virtual {p0, p1}, Log/a;->r(Log/e;)V
-
-    goto :goto_0
-
-    .line 8
-    :cond_0
-    invoke-virtual {p1}, Log/e;->a()V
-
-    .line 9
-    :goto_0
-    invoke-virtual {v0}, Log/i;->k()Log/g;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 10
-    iget-object p2, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {p2, p1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 11
-    :cond_1
-    iget-object p1, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {p1}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Log/g;
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    .line 12
-    invoke-virtual {p1}, Log/g;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 13
-    :cond_2
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object p2, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p2}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "[leased: "
-
-    .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, Log/a;->d:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "][available: "
-
-    .line 3
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 4
-    iget-object v1, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "][pending: "
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 6
-    iget-object v1, p0, Log/a;->f:Ljava/util/LinkedList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    .line 7
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 8
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public u()I
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 2
-    :try_start_0
-    iget v0, p0, Log/a;->i:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 3
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw v0
-.end method
-
-.method public v(I)V
-    .locals 1
-
-    const-string v0, "Max value"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->f(ILjava/lang/String;)I
-
-    .line 2
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
-
-    .line 3
-    :try_start_0
-    iput p1, p0, Log/a;->j:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    iget-object p1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
-.end method
-
-.method public w()V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Log/a;->h:Z
+    check-cast v0, Ljava/lang/reflect/Constructor;
 
     if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
     .line 2
-    iput-boolean v0, p0, Log/a;->h:Z
+    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->b:Landroid/net/Uri;
 
     .line 3
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
+    invoke-virtual {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+    move-result-object v1
+
+    iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->d:Ljava/util/List;
 
     .line 4
-    :try_start_0
-    iget-object v0, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->H(Ljava/util/List;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
     move-result-object v1
 
-    check-cast v1, Log/e;
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->f:Ljava/lang/String;
 
     .line 5
-    invoke-virtual {v1}, Log/e;->a()V
+    invoke-virtual {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->l(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
-    goto :goto_0
+    move-result-object p1
 
     .line 6
-    :cond_1
-    iget-object v0, p0, Log/a;->d:Ljava/util/Set;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v0
+    const/4 v1, 0x3
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_0
+    new-array v1, v1, [Ljava/lang/Object;
 
-    move-result v1
+    const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    aput-object p1, v1, v2
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Log/e;
+    const/4 p1, 0x1
 
     .line 7
-    invoke-virtual {v1}, Log/e;->a()V
+    iget-object v2, p0, Log/a;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/CacheDataSource$c;
 
-    goto :goto_1
+    aput-object v2, v1, p1
+
+    const/4 p1, 0x2
+
+    iget-object v2, p0, Log/a;->b:Ljava/util/concurrent/Executor;
+
+    aput-object v2, v1, p1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/offline/c;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
 
     .line 8
-    :cond_2
-    iget-object v0, p0, Log/a;->c:Ljava/util/Map;
+    :catch_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+    const-string v0, "Failed to instantiate downloader for content type "
 
-    move-result-object v0
+    invoke-static {v0, p2}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    move-result-object p2
 
-    move-result-object v0
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Log/i;
+    throw p1
 
     .line 9
-    invoke-virtual {v1}, Log/i;->n()V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_2
+    const-string v0, "Module missing for content type "
 
-    .line 10
-    :cond_3
-    iget-object v0, p0, Log/a;->c:Ljava/util/Map;
+    invoke-static {v0, p2}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
+    move-result-object p2
 
-    .line 11
-    iget-object v0, p0, Log/a;->d:Ljava/util/Set;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Ljava/util/Set;->clear()V
-
-    .line 12
-    iget-object v0, p0, Log/a;->e:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 13
-    iget-object v0, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Log/a;->a:Ljava/util/concurrent/locks/Lock;
-
-    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw v0
+    throw p1
 .end method

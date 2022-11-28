@@ -40,6 +40,20 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "momentCode"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -122,6 +136,16 @@
 
 .method public final J(Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)Lcom/skt/moment/task/z$b;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "type",
+            "resVo"
+        }
+    .end annotation
 
     .line 1
     new-instance p2, Lcom/skt/moment/task/z$b;
@@ -137,22 +161,22 @@
     .line 2
     iget-object v0, p0, Lcom/skt/moment/task/n;->r:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->p(Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/moment/task/n;->s:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->k(Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/moment/task/n;->t:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->i(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/moment/task/n;->u:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->l(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/String;)V
 
     .line 6
     new-instance v0, Landroid/os/Bundle;
@@ -259,7 +283,7 @@
 
     .line 17
     :cond_3
-    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/Object;)V
 
     return-object p2
 
@@ -320,7 +344,7 @@
 
     check-cast v2, Landroid/os/Bundle;
 
-    const-string/jumbo v3, "type"
+    const-string v3, "type"
 
     .line 4
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -340,6 +364,14 @@
 
 .method public final L(Ljava/lang/Object;)Lcom/skt/moment/net/vo/ResNuguActionResolverBodyVo;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/n;->y:Lcom/fasterxml/jackson/databind/ObjectMapper;
@@ -357,6 +389,14 @@
 
 .method public M(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -493,6 +533,16 @@
 
 .method public N(Ljava/lang/String;Ljava/lang/Object;)Lcom/skt/moment/net/vo/ResNuguActionResolverBodyVo;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "resolveType",
+            "value"
+        }
+    .end annotation
 
     const-string v0, "couponDownload"
 
@@ -520,6 +570,14 @@
 
 .method public O(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "action"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/n;->x:Ljava/lang/String;
@@ -529,6 +587,14 @@
 
 .method public P(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/n;->v:Ljava/lang/Integer;
@@ -538,6 +604,14 @@
 
 .method public Q(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "domain"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/n;->w:Ljava/lang/String;
@@ -547,6 +621,18 @@
 
 .method public final R(Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "name",
+            "type",
+            "resVo"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -604,7 +690,7 @@
     .line 5
     check-cast p3, Lcom/skt/moment/net/vo/ResCouponDownloadDomainActionBodyVo;
 
-    const-string/jumbo p3, "type"
+    const-string p3, "type"
 
     .line 6
     invoke-virtual {p0, p1, p3, p2}, Lcom/skt/moment/task/z;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
@@ -669,7 +755,7 @@
     iput-object v0, p0, Lcom/skt/moment/task/n;->z:Lcom/skt/moment/net/vo/ServiceReqVo;
 
     .line 10
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v1
 
@@ -679,7 +765,7 @@
 
     invoke-direct {v4, p0}, Lcom/skt/moment/task/n$a;-><init>(Lcom/skt/moment/task/n;)V
 
-    invoke-virtual {v1, v3, v2, v0, v4}, Lhb/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual {v1, v3, v2, v0, v4}, Led/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
 
     move-result-object v0
 
@@ -712,7 +798,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
@@ -720,14 +806,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/b;->x(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcd/b;->x(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lib/d;->e(Ljava/lang/String;)Z
+    invoke-static {v0}, Lfd/d;->e(Ljava/lang/String;)Z
 
     .line 2
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
@@ -735,11 +821,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/b;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcd/b;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lib/d;->e(Ljava/lang/String;)Z
+    invoke-static {v0}, Lfd/d;->e(Ljava/lang/String;)Z
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/moment/task/n;->S()Z
@@ -760,6 +846,14 @@
 
 .method public c(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/n;->B:Lcom/loopj/android/http/x;
@@ -925,27 +1019,27 @@
     .line 13
     iget-object v2, p0, Lcom/skt/moment/task/n;->r:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->p(Ljava/lang/String;)V
 
     .line 14
     iget-object v2, p0, Lcom/skt/moment/task/n;->s:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->k(Ljava/lang/String;)V
 
     .line 15
     iget-object v2, p0, Lcom/skt/moment/task/n;->t:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->i(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
 
     .line 16
     iget-object v2, p0, Lcom/skt/moment/task/n;->u:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->l(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/String;)V
 
     .line 17
     iget-object v2, p0, Lcom/skt/moment/task/n;->A:Lcom/skt/moment/net/vo/ServiceResVo;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/Object;)V
 
     .line 18
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -962,13 +1056,13 @@
 
     .line 20
     :cond_3
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object v1
 
     sget v2, Lcom/skt/moment/R$string;->debugging_no_campaign:I
 
-    invoke-virtual {v1, v2}, Leb/b;->b(I)V
+    invoke-virtual {v1, v2}, Lbd/b;->b(I)V
 
     :cond_4
     return-object v0

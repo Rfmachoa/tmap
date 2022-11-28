@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/ClientSettings;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -24,36 +24,10 @@
 .end field
 
 .field private final zab:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zad:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Lcom/google/android/gms/common/internal/zab;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zae:I
 
@@ -181,25 +155,6 @@
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/accounts/Account;",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Lcom/google/android/gms/common/internal/zab;",
-            ">;I",
-            "Landroid/view/View;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/signin/SignInOptions;",
-            "Z)V"
-        }
-    .end annotation
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -565,17 +520,6 @@
 .method public final zad()Ljava/util/Map;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Lcom/google/android/gms/common/internal/zab;",
-            ">;"
-        }
     .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/ClientSettings;->zad:Ljava/util/Map;

@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/utils/executor/SequentialExecutor$b;,
@@ -54,14 +58,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "executor"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -91,7 +87,7 @@
     iput-wide v0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;->e:J
 
     .line 6
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -106,17 +102,9 @@
 # virtual methods
 .method public execute(Ljava/lang/Runnable;)V
     .locals 8
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "task"
-        }
-    .end annotation
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;->a:Ljava/util/Deque;

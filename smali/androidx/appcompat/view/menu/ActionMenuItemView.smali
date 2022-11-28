@@ -38,7 +38,7 @@
 
 .field public d:Landroidx/appcompat/view/menu/d$b;
 
-.field public e:Landroidx/appcompat/widget/s;
+.field public e:Landroidx/appcompat/widget/x;
 
 .field public f:Landroidx/appcompat/view/menu/ActionMenuItemView$b;
 
@@ -388,16 +388,29 @@
     move-result-object v1
 
     :goto_4
-    invoke-static {p0, v1}, Landroidx/appcompat/widget/l0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v1}, Landroidx/appcompat/widget/r0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     goto :goto_5
 
     .line 12
     :cond_6
-    invoke-static {p0, v2}, Landroidx/appcompat/widget/l0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v2}, Landroidx/appcompat/widget/r0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     :goto_5
     return-void
+.end method
+
+.method public getAccessibilityClassName()Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 1
+    const-class v0, Landroid/widget/Button;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public getItemData()Landroidx/appcompat/view/menu/g;
@@ -468,7 +481,7 @@
     if-eqz p1, :cond_1
 
     .line 8
-    iget-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->e:Landroidx/appcompat/widget/s;
+    iget-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->e:Landroidx/appcompat/widget/x;
 
     if-nez p1, :cond_1
 
@@ -477,7 +490,7 @@
 
     invoke-direct {p1, p0}, Landroidx/appcompat/view/menu/ActionMenuItemView$a;-><init>(Landroidx/appcompat/view/menu/ActionMenuItemView;)V
 
-    iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->e:Landroidx/appcompat/widget/s;
+    iput-object p1, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->e:Landroidx/appcompat/widget/x;
 
     :cond_1
     return-void
@@ -676,12 +689,12 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->e:Landroidx/appcompat/widget/s;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/ActionMenuItemView;->e:Landroidx/appcompat/widget/x;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/widget/s;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/widget/x;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result v0
 

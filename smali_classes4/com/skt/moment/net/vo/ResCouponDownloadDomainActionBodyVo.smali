@@ -41,6 +41,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadDomainActionBodyVo;->campaignId:Ljava/lang/Integer;
@@ -50,6 +58,14 @@
 
 .method public setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "coupon"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadDomainActionBodyVo;->coupon:Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;

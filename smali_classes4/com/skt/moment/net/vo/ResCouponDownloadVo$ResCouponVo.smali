@@ -259,6 +259,14 @@
 
 .method public setCouponDisplayTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponDisplayTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->couponDisplayTitle:Ljava/lang/String;
@@ -268,6 +276,14 @@
 
 .method public setCouponId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->couponId:Ljava/lang/Integer;
@@ -277,6 +293,14 @@
 
 .method public setCouponImageSize(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponImageSize"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->couponImageSize:Ljava/lang/Integer;
@@ -286,6 +310,14 @@
 
 .method public setCouponImageUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponImageUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->couponImageUrl:Ljava/lang/String;
@@ -295,6 +327,14 @@
 
 .method public setCouponNumber(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponNumber"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->couponNumber:Ljava/lang/String;
@@ -304,6 +344,14 @@
 
 .method public setCouponTypeCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponTypeCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->couponTypeCode:Ljava/lang/String;
@@ -314,6 +362,15 @@
 .method public setExpireDate(Ljava/util/Date;)V
     .locals 2
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "expireDate"
+        }
     .end annotation
 
     .line 1
@@ -335,6 +392,14 @@
 
 .method public setExpireYmd(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "expireYmd"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->expireYmd:Ljava/lang/String;
@@ -344,6 +409,14 @@
 
 .method public setIntroMessage1(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMessage1"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->introMessage1:Ljava/lang/String;
@@ -353,6 +426,14 @@
 
 .method public setIntroMessage2(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMessage2"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->introMessage2:Ljava/lang/String;
@@ -362,6 +443,14 @@
 
 .method public setIntroMessage3(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMessage3"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->introMessage3:Ljava/lang/String;
@@ -371,6 +460,14 @@
 
 .method public setIntroMessage4(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMessage4"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->introMessage4:Ljava/lang/String;
@@ -380,6 +477,14 @@
 
 .method public setIntroMessage5(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMessage5"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->introMessage5:Ljava/lang/String;
@@ -389,6 +494,14 @@
 
 .method public setUsePlace(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "usePlace"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;->usePlace:Ljava/lang/String;

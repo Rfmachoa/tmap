@@ -3,7 +3,7 @@
 .source "StateInitialize.java"
 
 # interfaces
-.implements Lsa/d;
+.implements Lpc/d;
 
 
 # annotations

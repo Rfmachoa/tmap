@@ -3,12 +3,12 @@
 .source "HiddenSettingMenu.java"
 
 # interfaces
-.implements Lcom/skt/tmap/util/j0;
+.implements Lcom/skt/tmap/util/p0;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->J5(Landroid/widget/ListView;)V
+    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->U5(Landroid/widget/ListView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public a(Lcom/skt/tmap/util/y;)V
+.method public a(Lcom/skt/tmap/util/a0;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -57,12 +57,12 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$h0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->C5(Lcom/skt/tmap/activity/HiddenSettingMenu;Lcom/skt/tmap/util/y;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->L5(Lcom/skt/tmap/activity/HiddenSettingMenu;Lcom/skt/tmap/util/a0;)V
 
     return-void
 .end method
 
-.method public b(Lcom/skt/tmap/util/y;)V
+.method public b(Lcom/skt/tmap/util/a0;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -76,17 +76,17 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$h0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/HiddenSettingMenu;->t5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lcom/skt/tmap/util/HiddenSettingData;
+    invoke-static {v0}, Lcom/skt/tmap/activity/HiddenSettingMenu;->B5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lcom/skt/tmap/util/HiddenSettingData;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/skt/tmap/util/y;->d()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/skt/tmap/util/a0;->d()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/util/HiddenSettingData;->w0(Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/util/HiddenSettingData;->M0(Lcom/skt/tmap/util/HiddenSettingData$ConfigurationOnOff;)V
 
     return-void
 .end method

@@ -22,18 +22,11 @@
 
 .field public final _name:Ljava/lang/String;
 
-.field public final _rawType:Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/Class<",
-            "*>;"
-        }
-    .end annotation
-.end field
+.field public final _type:Lcom/fasterxml/jackson/databind/JavaType;
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)V
+.method public constructor <init>(Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;Ljava/lang/Class;Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -42,8 +35,8 @@
             "Ljava/lang/Class<",
             "*>;",
             "Ljava/lang/String;",
-            "Ljava/lang/Class<",
-            "*>;)V"
+            "Lcom/fasterxml/jackson/databind/JavaType;",
+            ")V"
         }
     .end annotation
 
@@ -56,7 +49,7 @@
     iput-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_declaringClass:Ljava/lang/Class;
 
     .line 3
-    iput-object p4, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_rawType:Ljava/lang/Class;
+    iput-object p4, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_type:Lcom/fasterxml/jackson/databind/JavaType;
 
     .line 4
     iput-object p3, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_name:Ljava/lang/String;
@@ -75,40 +68,39 @@
 
     return v0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_3
-
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
+    :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
+    move-result-object v1
 
-    if-eq v2, v3, :cond_1
+    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->hasClass(Ljava/lang/Object;Ljava/lang/Class;)Z
 
-    goto :goto_1
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     .line 2
     :cond_1
     check-cast p1, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;
 
     .line 3
-    iget-object v2, p1, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_declaringClass:Ljava/lang/Class;
+    iget-object v1, p1, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_declaringClass:Ljava/lang/Class;
 
     iget-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_declaringClass:Ljava/lang/Class;
 
-    if-ne v2, v3, :cond_2
+    if-ne v1, v3, :cond_2
 
     iget-object p1, p1, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_name:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_name:Ljava/lang/String;
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_name:Ljava/lang/String;
 
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 4
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -117,14 +109,10 @@
     goto :goto_0
 
     :cond_2
-    move v0, v1
+    move v0, v2
 
     :goto_0
     return v0
-
-    :cond_3
-    :goto_1
-    return v1
 .end method
 
 .method public bridge synthetic getAnnotated()Ljava/lang/reflect/AnnotatedElement;
@@ -170,41 +158,6 @@
     return-object v0
 .end method
 
-.method public getFullName()Ljava/lang/String;
-    .locals 2
-
-    .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->getDeclaringClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "#"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public getMember()Ljava/lang/reflect/Member;
     .locals 1
 
@@ -241,22 +194,20 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_rawType:Ljava/lang/Class;
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_type:Lcom/fasterxml/jackson/databind/JavaType;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
 .method public getType()Lcom/fasterxml/jackson/databind/JavaType;
-    .locals 2
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->_typeContext:Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;
-
-    iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_rawType:Ljava/lang/Class;
-
-    invoke-interface {v0, v1}, Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;->resolveType(Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/JavaType;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->_type:Lcom/fasterxml/jackson/databind/JavaType;
 
     return-object v0
 .end method
@@ -272,7 +223,7 @@
     .line 1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Can not get virtual property \'"
+    const-string v0, "Cannot get virtual property \'"
 
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -282,7 +233,7 @@
 
     const-string v2, "\'"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -315,7 +266,7 @@
     .line 1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Can not set virtual property \'"
+    const-string p2, "Cannot set virtual property \'"
 
     invoke-static {p2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -325,7 +276,7 @@
 
     const-string v1, "\'"
 
-    invoke-static {p2, v0, v1}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0, v1}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -337,14 +288,14 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    const-string v0, "[field "
+    const-string v0, "[virtual "
 
     .line 1
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/VirtualAnnotatedMember;->getFullName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getFullName()Ljava/lang/String;
 
     move-result-object v1
 

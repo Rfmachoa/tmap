@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/tagmanager/zzo;
-.super Lcom/google/android/gms/tagmanager/zzft;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Lcom/google/android/gms/tagmanager/zzfs;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # static fields
@@ -15,14 +15,6 @@
 .field private static final zze:Ljava/lang/String;
 
 .field private static final zzf:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
@@ -33,7 +25,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .line 1
     sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzau:Lcom/google/android/gms/internal/gtm/zza;
@@ -45,7 +37,7 @@
     sput-object v0, Lcom/google/android/gms/tagmanager/zzo;->zzb:Ljava/lang/String;
 
     .line 2
-    sget-object v1, Lcom/google/android/gms/internal/gtm/zzb;->zzdU:Lcom/google/android/gms/internal/gtm/zzb;
+    sget-object v1, Lcom/google/android/gms/internal/gtm/zzb;->zzdV:Lcom/google/android/gms/internal/gtm/zzb;
 
     invoke-virtual {v1}, Lcom/google/android/gms/internal/gtm/zzb;->toString()Ljava/lang/String;
 
@@ -62,7 +54,7 @@
 
     sput-object v1, Lcom/google/android/gms/tagmanager/zzo;->zzd:Ljava/lang/String;
 
-    sget-object v1, Lcom/google/android/gms/internal/gtm/zzb;->zzdT:Lcom/google/android/gms/internal/gtm/zzb;
+    sget-object v1, Lcom/google/android/gms/internal/gtm/zzb;->zzdU:Lcom/google/android/gms/internal/gtm/zzb;
 
     .line 4
     invoke-virtual {v1}, Lcom/google/android/gms/internal/gtm/zzb;->toString()Ljava/lang/String;
@@ -71,29 +63,15 @@
 
     sput-object v1, Lcom/google/android/gms/tagmanager/zzo;->zze:Ljava/lang/String;
 
-    .line 5
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x11
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v1, "gtm_"
 
-    const-string v3, "_unrepeatable"
+    const-string v2, "_unrepeatable"
 
-    invoke-static {v2, v1, v0, v3}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 5
     sput-object v0, Lcom/google/android/gms/tagmanager/zzo;->zza:Ljava/lang/String;
 
     new-instance v0, Ljava/util/HashSet;
@@ -109,9 +87,9 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tagmanager/zzm;
 
-    .line 1
     invoke-direct {v0, p1}, Lcom/google/android/gms/tagmanager/zzm;-><init>(Landroid/content/Context;)V
 
     sget-object v1, Lcom/google/android/gms/tagmanager/zzo;->zzb:Ljava/lang/String;
@@ -126,8 +104,7 @@
 
     aput-object v3, v2, v4
 
-    .line 2
-    invoke-direct {p0, v1, v2}, Lcom/google/android/gms/tagmanager/zzft;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, v1, v2}, Lcom/google/android/gms/tagmanager/zzfs;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/google/android/gms/tagmanager/zzo;->zzg:Lcom/google/android/gms/tagmanager/zzn;
 
@@ -141,10 +118,10 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     sget-object v0, Lcom/google/android/gms/tagmanager/zzo;->zzf:Ljava/util/Set;
 
-    .line 1
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -202,19 +179,10 @@
 # virtual methods
 .method public final zzc(Ljava/util/Map;)V
     .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)V"
-        }
-    .end annotation
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzo;->zze:Ljava/lang/String;
 
     .line 1
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzo;->zze:Ljava/lang/String;
+
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -225,14 +193,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast v0, Lcom/google/android/gms/internal/gtm/zzam;
 
     .line 2
-    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzfv;->zzn(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzfu;->zzn(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -265,14 +233,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast v1, Lcom/google/android/gms/internal/gtm/zzam;
 
     .line 5
-    invoke-static {v1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/google/android/gms/tagmanager/zzfv;->zzn(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/google/android/gms/tagmanager/zzfu;->zzn(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -293,130 +261,102 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_6
 
     .line 9
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzl(Lcom/google/android/gms/internal/gtm/zzam;)Ljava/lang/Object;
 
     move-result-object p1
 
     .line 10
     instance-of v2, p1, Ljava/util/List;
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_3
+
+    const-string p1, "GoogleTagManager"
+
+    const-string v0, "ArbitraryPixel: additional params not a list: not sending partial hit: "
 
     .line 11
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    const-string v0, "ArbitraryPixel: additional params not a list: not sending partial hit: "
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_2
+    move-result-object v0
 
     .line 12
-    :cond_3
-    new-instance p1, Ljava/lang/String;
-
-    .line 13
-    invoke-direct {p1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    .line 14
-    :goto_2
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 15
-    :cond_4
+    .line 13
+    :cond_3
     check-cast p1, Ljava/util/List;
 
-    .line 16
+    .line 14
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :cond_5
+    :cond_4
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_6
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 17
+    .line 15
     instance-of v3, v2, Ljava/util/Map;
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_5
 
-    .line 18
-    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
+    const-string p1, "GoogleTagManager"
 
     const-string v0, "ArbitraryPixel: additional params contains non-map: not sending partial hit: "
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    .line 16
+    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
-    move-result v1
+    move-result-object v1
 
-    if-eqz v1, :cond_6
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    goto :goto_3
+    move-result-object v1
 
-    .line 19
-    :cond_6
-    new-instance p1, Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 20
-    invoke-direct {p1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 21
-    :goto_3
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdh;->zza(Ljava/lang/String;)V
+    .line 17
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 22
-    :cond_7
+    .line 18
+    :cond_5
     check-cast v2, Ljava/util/Map;
 
-    .line 23
+    .line 19
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -425,12 +365,12 @@
 
     move-result-object v2
 
-    :goto_4
+    :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_4
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -438,7 +378,7 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 24
+    .line 20
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -457,10 +397,10 @@
 
     invoke-virtual {v1, v4, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    goto :goto_4
+    goto :goto_2
 
-    .line 25
-    :cond_8
+    .line 21
+    :cond_6
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p1
@@ -475,47 +415,30 @@
 
     iget-object v1, v1, Lcom/google/android/gms/tagmanager/zzm;->zza:Landroid/content/Context;
 
-    .line 26
-    invoke-static {v1}, Lcom/google/android/gms/tagmanager/zzbh;->zzb(Landroid/content/Context;)Lcom/google/android/gms/tagmanager/zzbh;
+    .line 22
+    invoke-static {v1}, Lcom/google/android/gms/tagmanager/zzbg;->zzb(Landroid/content/Context;)Lcom/google/android/gms/tagmanager/zzbg;
 
     move-result-object v1
 
-    .line 27
-    invoke-virtual {v1, p1}, Lcom/google/android/gms/tagmanager/zzbh;->zza(Ljava/lang/String;)Z
+    .line 23
+    invoke-virtual {v1, p1}, Lcom/google/android/gms/tagmanager/zzbg;->zza(Ljava/lang/String;)Z
 
-    .line 28
+    sget-object v1, Lcom/google/android/gms/tagmanager/zzdg;->zzb:Lcom/google/android/gms/tagmanager/zzbf;
+
+    const-string v2, "ArbitraryPixel: url = "
+
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v1, "ArbitraryPixel: url = "
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_5
+    .line 24
+    invoke-virtual {v1, p1}, Lcom/google/android/gms/tagmanager/zzbf;->zzd(Ljava/lang/String;)V
 
-    .line 29
-    :cond_9
-    new-instance p1, Ljava/lang/String;
-
-    .line 30
-    invoke-direct {p1, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_5
-    sget-object v1, Lcom/google/android/gms/tagmanager/zzdh;->zzb:Lcom/google/android/gms/tagmanager/zzbg;
-
-    .line 31
-    invoke-virtual {v1, p1}, Lcom/google/android/gms/tagmanager/zzbg;->zzd(Ljava/lang/String;)V
-
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_7
 
     const-class p1, Lcom/google/android/gms/tagmanager/zzo;
 
@@ -524,7 +447,7 @@
     :try_start_0
     sget-object v1, Lcom/google/android/gms/tagmanager/zzo;->zzf:Ljava/util/Set;
 
-    .line 32
+    .line 25
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     iget-object v1, p0, Lcom/google/android/gms/tagmanager/zzo;->zzh:Landroid/content/Context;
@@ -533,10 +456,10 @@
 
     const-string v3, "true"
 
-    .line 33
-    invoke-static {v1, v2, v0, v3}, Lcom/google/android/gms/tagmanager/zzfg;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .line 26
+    invoke-static {v1, v2, v0, v3}, Lcom/google/android/gms/tagmanager/zzff;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
+    .line 27
     monitor-exit p1
 
     return-void
@@ -550,6 +473,6 @@
 
     throw v0
 
-    :cond_a
+    :cond_7
     return-void
 .end method

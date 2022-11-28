@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nContextAware.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContextAware.kt\nandroidx/activity/contextaware/ContextAwareKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,51:1\n308#2,11:52\n*E\n*S KotlinDebug\n*F\n+ 1 ContextAware.kt\nandroidx/activity/contextaware/ContextAwareKt\n*L\n38#1,11:52\n*E\n"
+    value = "SMAP\nContextAware.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContextAware.kt\nandroidx/activity/contextaware/ContextAwareKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,51:1\n314#2,11:52\n*S KotlinDebug\n*F\n+ 1 ContextAware.kt\nandroidx/activity/contextaware/ContextAwareKt\n*L\n38#1:52,11\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -20,26 +20,26 @@
         "Landroid/content/Context;",
         "onContextAvailable",
         "a",
-        "(La/a;Lej/l;Lkotlin/coroutines/c;)Ljava/lang/Object;",
+        "(La/a;Lgl/l;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "activity-ktx_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # direct methods
-.method public static final a(La/a;Lej/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final a(La/a;Lgl/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 3
     .param p0    # La/a;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/l;
+    .param p1    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -53,7 +53,7 @@
             "Ljava/lang/Object;",
             ">(",
             "La/a;",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Landroid/content/Context;",
             "+TR;>;",
@@ -74,15 +74,15 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {p1, v0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    goto :goto_0
+    return-object p0
 
     .line 3
     :cond_0
-    new-instance v0, Lkotlinx/coroutines/o;
+    new-instance v0, Lkotlinx/coroutines/q;
 
     invoke-static {p2}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt;->d(Lkotlin/coroutines/c;)Lkotlin/coroutines/c;
 
@@ -90,60 +90,60 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/o;-><init>(Lkotlin/coroutines/c;I)V
+    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/q;-><init>(Lkotlin/coroutines/c;I)V
 
     .line 4
-    invoke-virtual {v0}, Lkotlinx/coroutines/o;->y()V
+    invoke-virtual {v0}, Lkotlinx/coroutines/q;->D()V
 
     .line 5
     new-instance v1, Landroidx/activity/contextaware/ContextAwareKt$a;
 
-    invoke-direct {v1, v0, p0, p1}, Landroidx/activity/contextaware/ContextAwareKt$a;-><init>(Lkotlinx/coroutines/n;La/a;Lej/l;)V
+    invoke-direct {v1, v0, p1}, Landroidx/activity/contextaware/ContextAwareKt$a;-><init>(Lkotlinx/coroutines/p;Lgl/l;)V
 
     .line 6
     invoke-interface {p0, v1}, La/a;->addOnContextAvailableListener(La/c;)V
 
     .line 7
-    new-instance v2, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2;
+    new-instance p1, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;
 
-    invoke-direct {v2, v1, p0, p1}, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2;-><init>(Landroidx/activity/contextaware/ContextAwareKt$a;La/a;Lej/l;)V
+    invoke-direct {p1, p0, v1}, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;-><init>(La/a;Landroidx/activity/contextaware/ContextAwareKt$a;)V
 
-    invoke-interface {v0, v2}, Lkotlinx/coroutines/n;->h(Lej/l;)V
+    invoke-interface {v0, p1}, Lkotlinx/coroutines/p;->i(Lgl/l;)V
 
     .line 8
-    invoke-virtual {v0}, Lkotlinx/coroutines/o;->D()Ljava/lang/Object;
+    invoke-virtual {v0}, Lkotlinx/coroutines/q;->y()Ljava/lang/Object;
 
     move-result-object p0
 
     .line 9
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object p1
 
     if-ne p0, p1, :cond_1
 
-    invoke-static {p2}, Lwi/e;->c(Lkotlin/coroutines/c;)V
+    invoke-static {p2}, Lzk/e;->c(Lkotlin/coroutines/c;)V
 
     :cond_1
-    :goto_0
     return-object p0
 .end method
 
-.method public static final b(La/a;Lej/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
-    .locals 4
-    .param p0    # La/a;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p1    # Lej/l;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Lkotlin/coroutines/c;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/Nullable;
+.method public static final b(La/a;Lgl/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(",
+            "La/a;",
+            "Lgl/l<",
+            "-",
+            "Landroid/content/Context;",
+            "+TR;>;",
+            "Lkotlin/coroutines/c<",
+            "-TR;>;)",
+            "Ljava/lang/Object;"
+        }
     .end annotation
 
     .line 1
@@ -154,11 +154,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {p1, v0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    goto :goto_0
+    return-object p0
 
     :cond_0
     const/4 v0, 0x0
@@ -167,7 +167,7 @@
     invoke-static {v0}, Lkotlin/jvm/internal/c0;->e(I)V
 
     .line 4
-    new-instance v0, Lkotlinx/coroutines/o;
+    new-instance v0, Lkotlinx/coroutines/q;
 
     invoke-static {p2}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt;->d(Lkotlin/coroutines/c;)Lkotlin/coroutines/c;
 
@@ -175,43 +175,42 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/o;-><init>(Lkotlin/coroutines/c;I)V
+    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/q;-><init>(Lkotlin/coroutines/c;I)V
 
     .line 5
-    invoke-virtual {v0}, Lkotlinx/coroutines/o;->y()V
+    invoke-virtual {v0}, Lkotlinx/coroutines/q;->D()V
 
     .line 6
     new-instance v1, Landroidx/activity/contextaware/ContextAwareKt$a;
 
-    invoke-direct {v1, v0, p0, p1}, Landroidx/activity/contextaware/ContextAwareKt$a;-><init>(Lkotlinx/coroutines/n;La/a;Lej/l;)V
+    invoke-direct {v1, v0, p1}, Landroidx/activity/contextaware/ContextAwareKt$a;-><init>(Lkotlinx/coroutines/p;Lgl/l;)V
 
     .line 7
     invoke-interface {p0, v1}, La/a;->addOnContextAvailableListener(La/c;)V
 
     .line 8
-    new-instance v3, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2;
+    new-instance p1, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;
 
-    invoke-direct {v3, v1, p0, p1}, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$$inlined$suspendCancellableCoroutine$lambda$2;-><init>(Landroidx/activity/contextaware/ContextAwareKt$a;La/a;Lej/l;)V
+    invoke-direct {p1, p0, v1}, Landroidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1;-><init>(La/a;Landroidx/activity/contextaware/ContextAwareKt$a;)V
 
-    invoke-interface {v0, v3}, Lkotlinx/coroutines/n;->h(Lej/l;)V
+    invoke-interface {v0, p1}, Lkotlinx/coroutines/p;->i(Lgl/l;)V
 
     .line 9
-    invoke-virtual {v0}, Lkotlinx/coroutines/o;->D()Ljava/lang/Object;
+    invoke-virtual {v0}, Lkotlinx/coroutines/q;->y()Ljava/lang/Object;
 
     move-result-object p0
 
     .line 10
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object p1
 
     if-ne p0, p1, :cond_1
 
-    invoke-static {p2}, Lwi/e;->c(Lkotlin/coroutines/c;)V
+    invoke-static {p2}, Lzk/e;->c(Lkotlin/coroutines/c;)V
 
     :cond_1
     invoke-static {v2}, Lkotlin/jvm/internal/c0;->e(I)V
 
-    :goto_0
     return-object p0
 .end method

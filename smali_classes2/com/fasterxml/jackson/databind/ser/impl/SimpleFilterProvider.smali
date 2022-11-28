@@ -322,6 +322,7 @@
 
     const-string v1, ")"
 
+    .line 5
     invoke-static {p1, v0, v1}, Landroidx/navigation/m0;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1

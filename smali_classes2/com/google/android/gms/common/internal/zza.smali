@@ -1,16 +1,6 @@
 .class abstract Lcom/google/android/gms/common/internal/zza;
 .super Lcom/google/android/gms/common/internal/zzc;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/internal/zzc<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # instance fields

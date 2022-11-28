@@ -27,7 +27,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->g(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->d(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object p1
 

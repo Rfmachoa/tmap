@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/android/billingclient/api/BillingClient$FeatureType;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -22,12 +22,27 @@
 
 
 # static fields
-.field public static final Q:Ljava/lang/String; = "subscriptions"
+.field public static final U:Ljava/lang/String; = "subscriptions"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public static final R:Ljava/lang/String; = "subscriptionsUpdate"
+.field public static final V:Ljava/lang/String; = "subscriptionsUpdate"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public static final S:Ljava/lang/String; = "inAppItemsOnVr"
+.field public static final W:Ljava/lang/String; = "inAppItemsOnVr"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public static final T:Ljava/lang/String; = "subscriptionsOnVr"
+.field public static final X:Ljava/lang/String; = "subscriptionsOnVr"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public static final U:Ljava/lang/String; = "priceChangeConfirmation"
+.field public static final Y:Ljava/lang/String; = "priceChangeConfirmation"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field

@@ -3,7 +3,7 @@
 .source "ActionCall.java"
 
 # interfaces
-.implements Lsa/d;
+.implements Lpc/d;
 
 
 # annotations
@@ -43,11 +43,11 @@
 
     sget-object v1, Lcom/skt/aicloud/mobile/service/state/action/ActionCall;->s:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/skt/aicloud/mobile/service/state/action/ActionCall;->i0(Lcom/skt/aicloud/mobile/service/state/action/ActionCall;)Lma/c;
+    invoke-static {v0}, Lcom/skt/aicloud/mobile/service/state/action/ActionCall;->i0(Lcom/skt/aicloud/mobile/service/state/action/ActionCall;)Ljc/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v2}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v3
 

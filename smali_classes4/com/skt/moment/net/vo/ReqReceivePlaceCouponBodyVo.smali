@@ -41,6 +41,14 @@
 
 .method public setPlaceCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCampaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqReceivePlaceCouponBodyVo;->placeCampaignId:Ljava/lang/Integer;
@@ -50,6 +58,14 @@
 
 .method public setSeed(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seed"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqReceivePlaceCouponBodyVo;->seed:Ljava/lang/Integer;

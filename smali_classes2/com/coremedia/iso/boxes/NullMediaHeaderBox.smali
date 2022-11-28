@@ -21,7 +21,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
+    invoke-virtual {p0, p1}, Lb8/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
 
     return-void
 .end method
@@ -30,7 +30,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method

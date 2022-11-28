@@ -16,17 +16,7 @@
 
 
 # static fields
-.field public static final o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-.field public static final p:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final q:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
+.field public static final o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
 
 # instance fields
@@ -62,7 +52,7 @@
         value = {
             "[[",
             "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;",
             ">;"
         }
     .end annotation
@@ -73,7 +63,7 @@
         value = {
             "[[",
             "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;",
             ">;"
         }
     .end annotation
@@ -85,35 +75,38 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->W1:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->a2:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     .line 2
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->n()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->k()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->U0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
     .line 3
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->p:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->g1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
 
     .line 4
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->q:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->a1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;)V
     .locals 1
     .param p2    # Lcom/tmapmobility/tmap/exoplayer2/source/d0;
         .annotation build Landroidx/annotation/Nullable;
@@ -146,7 +139,7 @@
 
     invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$d$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$a;)V
 
-    invoke-direct {p1, p3, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;-><init>(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$b;)V
+    invoke-direct {p1, p3, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;-><init>(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$b;)V
 
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
 
@@ -161,16 +154,16 @@
     iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->e:Landroid/util/SparseIntArray;
 
     .line 7
-    sget-object p2, Lle/e;->a:Lle/e;
+    sget-object p2, Log/d;->a:Log/d;
 
     new-instance p3, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$e;
 
     invoke-direct {p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$a;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/y;->c(Lcom/tmapmobility/tmap/exoplayer2/trackselection/y$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d;)V
+    invoke-virtual {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;->c(Lcom/tmapmobility/tmap/exoplayer2/trackselection/z$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d;)V
 
     .line 8
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->A()Landroid/os/Handler;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->A()Landroid/os/Handler;
 
     move-result-object p1
 
@@ -186,665 +179,9 @@
     return-void
 .end method
 
-.method public static A(Landroid/content/Context;Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
-
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->w(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static B(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
-
-    .line 2
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->l(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object p1
-
-    .line 3
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->w(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static C(Landroid/content/Context;Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-static {p1, p2, p3, v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->E(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static D(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, p1, p2, v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->E(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static E(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
-
-    .line 2
-    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p0
-
-    const-string v0, "application/vnd.ms-sstr+xml"
-
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object p0
-
-    .line 3
-    invoke-static {p0, p4, p2, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static F(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-    .locals 1
-
-    .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->o(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->n()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    .line 3
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->U0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    move-result-object p0
-
-    .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static L(Lcom/tmapmobility/tmap/exoplayer2/h3;)[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
-    .locals 6
-
-    .line 1
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->A()Landroid/os/Handler;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$a;
-
-    invoke-direct {v2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$a;-><init>()V
-
-    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$b;
-
-    invoke-direct {v3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$b;-><init>()V
-
-    sget-object v4, Lle/d;->a:Lle/d;
-
-    sget-object v5, Lle/c;->a:Lle/c;
-
-    move-object v0, p0
-
-    .line 2
-    invoke-interface/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/h3;->a(Landroid/os/Handler;Lcom/tmapmobility/tmap/exoplayer2/video/u;Lcom/tmapmobility/tmap/exoplayer2/audio/n;Lcom/tmapmobility/tmap/exoplayer2/text/j;Lce/d;)[Lcom/tmapmobility/tmap/exoplayer2/Renderer;
-
-    move-result-object p0
-
-    .line 3
-    array-length v0, p0
-
-    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
-
-    const/4 v1, 0x0
-
-    .line 4
-    :goto_0
-    array-length v2, p0
-
-    if-ge v1, v2, :cond_0
-
-    .line 5
-    aget-object v2, p0, v1
-
-    invoke-interface {v2}, Lcom/tmapmobility/tmap/exoplayer2/Renderer;->getCapabilities()Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public static O(Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;->a:Landroid/net/Uri;
-
-    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;->b:Ljava/lang/String;
-
-    invoke-static {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->E0(Landroid/net/Uri;Ljava/lang/String;)I
-
-    move-result p0
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static synthetic P(Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public static synthetic Q(Ljava/util/List;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public static synthetic R(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public static synthetic S()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private synthetic T(Ljava/io/IOException;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->i:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
-
-    invoke-interface {v0, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
-
-    return-void
-.end method
-
-.method private synthetic U()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->i:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
-
-    invoke-interface {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;->b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
-
-    return-void
-.end method
-
-.method private synthetic V(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
-    .locals 0
-
-    .line 1
-    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;->b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
-
-    return-void
-.end method
-
-.method public static synthetic a(Ljava/util/List;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->Q(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->R(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->T(Ljava/io/IOException;)V
-
-    return-void
-.end method
-
-.method public static synthetic d(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->V(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
-
-    return-void
-.end method
-
-.method public static synthetic e()V
-    .locals 0
-
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->S()V
-
-    return-void
-.end method
-
-.method public static synthetic f(Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->P(Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic g(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->U()V
-
-    return-void
-.end method
-
-.method public static synthetic h(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->X()V
-
-    return-void
-.end method
-
-.method public static synthetic i(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->W(Ljava/io/IOException;)V
-
-    return-void
-.end method
-
-.method public static p(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->q(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static q(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-    .locals 0
-    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->e()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object p0
-
-    .line 2
-    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->r(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static r(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-    .locals 2
-    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/l;
-
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/m;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/m;
-
-    invoke-direct {v0, p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/l;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/extractor/m;)V
-
-    if-eqz p2, :cond_0
-
-    .line 2
-    new-instance p1, Lle/i;
-
-    invoke-direct {p1, p2}, Lle/i;-><init>(Lcom/tmapmobility/tmap/exoplayer2/drm/c;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    .line 3
-    :goto_0
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/l;->p(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/l;
-
-    move-result-object p1
-
-    .line 4
-    invoke-virtual {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/l;->d(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static s(Landroid/content/Context;Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-static {p1, p2, p3, v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->t(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static t(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
-
-    .line 2
-    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p0
-
-    const-string v0, "application/dash+xml"
-
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object p0
-
-    .line 3
-    invoke-static {p0, p4, p2, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static u(Landroid/content/Context;Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-static {p1, p2, p3, v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->v(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static v(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
-
-    .line 2
-    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p0
-
-    const-string v0, "application/x-mpegURL"
-
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
-
-    move-result-object p0
-
-    .line 3
-    invoke-static {p0, p4, p2, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static w(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-
-    .line 1
-    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->b:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->O(Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
-
-    .line 2
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-static {p1, p0, v0, v0, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static x(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/h3;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-static {p1, p0, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static y(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-    .locals 1
-    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/h3;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-static {p0, p1, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Lcom/tmapmobility/tmap/exoplayer2/h3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+.method public static A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
     .locals 3
-    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/h3;
+    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/i3;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -866,7 +203,7 @@
 
     check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->O(Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;)Z
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->Q(Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;)Z
 
     move-result v0
 
@@ -902,14 +239,14 @@
 
     .line 4
     :cond_2
-    invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
 
     .line 5
-    invoke-static {p0, p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->r(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+    invoke-static {p0, p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->s(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
 
     move-result-object p3
 
@@ -917,7 +254,7 @@
     if-eqz p2, :cond_3
 
     .line 6
-    invoke-static {p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->L(Lcom/tmapmobility/tmap/exoplayer2/h3;)[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
+    invoke-static {p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->M(Lcom/tmapmobility/tmap/exoplayer2/i3;)[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
 
     move-result-object p2
 
@@ -928,14 +265,674 @@
 
     .line 7
     :goto_3
-    invoke-direct {v2, p0, p3, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;)V
+    invoke-direct {v2, p0, p3, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;)V
 
     return-object v2
 .end method
 
+.method public static B(Landroid/content/Context;Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->x(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static C(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    .line 2
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->l(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object p1
+
+    .line 3
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->x(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static D(Landroid/content/Context;Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->G(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-static {p1, p2, p3, v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static E(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, p1, p2, v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->F(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static F(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    .line 2
+    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p0
+
+    const-string v0, "application/vnd.ms-sstr+xml"
+
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object p0
+
+    .line 3
+    invoke-static {p0, p4, p2, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static G(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->l(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->k()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object p0
+
+    const/4 v0, 0x1
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->g1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 4
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->a1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object p0
+
+    .line 5
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static M(Lcom/tmapmobility/tmap/exoplayer2/i3;)[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
+    .locals 6
+
+    .line 1
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->A()Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$a;
+
+    invoke-direct {v2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$a;-><init>()V
+
+    new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$b;
+
+    invoke-direct {v3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$b;-><init>()V
+
+    sget-object v4, Log/c;->a:Log/c;
+
+    sget-object v5, Log/e;->a:Log/e;
+
+    move-object v0, p0
+
+    .line 2
+    invoke-interface/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/i3;->a(Landroid/os/Handler;Lcom/tmapmobility/tmap/exoplayer2/video/u;Lcom/tmapmobility/tmap/exoplayer2/audio/n;Lcom/tmapmobility/tmap/exoplayer2/text/k;Lfg/d;)[Lcom/tmapmobility/tmap/exoplayer2/Renderer;
+
+    move-result-object p0
+
+    .line 3
+    array-length v0, p0
+
+    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
+
+    const/4 v1, 0x0
+
+    .line 4
+    :goto_0
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_0
+
+    .line 5
+    aget-object v2, p0, v1
+
+    invoke-interface {v2}, Lcom/tmapmobility/tmap/exoplayer2/Renderer;->getCapabilities()Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public static Q(Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;)Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;->a:Landroid/net/Uri;
+
+    iget-object p0, p0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;->b:Ljava/lang/String;
+
+    invoke-static {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->F0(Landroid/net/Uri;Ljava/lang/String;)I
+
+    move-result p0
+
+    const/4 v0, 0x4
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public static synthetic R(Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public static synthetic S(Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static synthetic T(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static synthetic U()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private synthetic V(Ljava/io/IOException;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->i:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
+
+    invoke-interface {v0, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
+
+    return-void
+.end method
+
+.method private synthetic W()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->i:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;
+
+    invoke-interface {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;->b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
+
+    return-void
+.end method
+
+.method private synthetic X(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
+    .locals 0
+
+    .line 1
+    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;->b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
+
+    return-void
+.end method
+
+.method public static synthetic a(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->T(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)V
+
+    return-void
+.end method
+
+.method public static synthetic b(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->V(Ljava/io/IOException;)V
+
+    return-void
+.end method
+
+.method public static synthetic c(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->X(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
+
+    return-void
+.end method
+
+.method public static synthetic d()V
+    .locals 0
+
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->U()V
+
+    return-void
+.end method
+
+.method public static synthetic e(Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->R(Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic f(Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->S(Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;)V
+
+    return-void
+.end method
+
+.method public static synthetic g(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->W()V
+
+    return-void
+.end method
+
+.method public static synthetic h(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->Z()V
+
+    return-void
+.end method
+
+.method public static synthetic i(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->Y(Ljava/io/IOException;)V
+
+    return-void
+.end method
+
+.method public static q(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->r(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static r(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+    .locals 0
+    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->f()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object p0
+
+    .line 2
+    invoke-static {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->s(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static s(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+    .locals 2
+    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/l;
+
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/o;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
+
+    invoke-direct {v0, p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/l;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/extractor/o;)V
+
+    if-eqz p2, :cond_0
+
+    .line 2
+    new-instance p1, Log/i;
+
+    invoke-direct {p1, p2}, Log/i;-><init>(Lcom/tmapmobility/tmap/exoplayer2/drm/c;)V
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/l;->r(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/l;
+
+    .line 3
+    :cond_0
+    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/l;->c(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static t(Landroid/content/Context;Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->G(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-static {p1, p2, p3, v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->u(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static u(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    .line 2
+    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p0
+
+    const-string v0, "application/dash+xml"
+
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object p0
+
+    .line 3
+    invoke-static {p0, p4, p2, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static v(Landroid/content/Context;Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->G(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-static {p1, p2, p3, v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->w(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static w(Landroid/net/Uri;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;-><init>()V
+
+    .line 2
+    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p0
+
+    const-string v0, "application/x-mpegURL"
+
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->F(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->a()Lcom/tmapmobility/tmap/exoplayer2/MediaItem;
+
+    move-result-object p0
+
+    .line 3
+    invoke-static {p0, p4, p2, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static x(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+
+    .line 1
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/MediaItem;->b:Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->Q(Lcom/tmapmobility/tmap/exoplayer2/MediaItem$f;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
+
+    .line 2
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->G(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-static {p1, p0, v0, v0, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static y(Landroid/content/Context;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/i3;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->G(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-static {p1, p0, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static z(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+    .locals 1
+    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/i3;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p0, p1, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->A(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;Lcom/tmapmobility/tmap/exoplayer2/i3;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/drm/c;)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public G(Ljava/lang/String;[B)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
+.method public H(Ljava/lang/String;[B)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
     .locals 7
     .param p2    # [B
         .annotation build Landroidx/annotation/Nullable;
@@ -1011,7 +1008,7 @@
 
     .line 10
     :cond_1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 11
     new-instance p2, Ljava/util/ArrayList;
@@ -1094,7 +1091,7 @@
     return-object p1
 .end method
 
-.method public H([B)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
+.method public I([B)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
     .locals 1
     .param p1    # [B
         .annotation build Landroidx/annotation/Nullable;
@@ -1110,14 +1107,14 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->G(Ljava/lang/String;[B)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
+    invoke-virtual {p0, v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->H(Ljava/lang/String;[B)Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public I()Ljava/lang/Object;
+.method public J()Ljava/lang/Object;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -1133,7 +1130,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->j:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;
@@ -1165,11 +1162,11 @@
     return-object v1
 .end method
 
-.method public J(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+.method public K(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
@@ -1179,7 +1176,7 @@
     return-object p1
 .end method
 
-.method public K()I
+.method public L()I
     .locals 1
 
     .line 1
@@ -1193,7 +1190,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->k:[Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
@@ -1203,11 +1200,11 @@
     return v0
 .end method
 
-.method public M(I)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
+.method public N(I)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->k:[Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
@@ -1217,19 +1214,19 @@
     return-object p1
 .end method
 
-.method public N(II)Ljava/util/List;
+.method public O(II)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
             "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n:[[Ljava/util/List;
@@ -1241,7 +1238,29 @@
     return-object p1
 .end method
 
-.method public final W(Ljava/io/IOException;)V
+.method public P(I)Lcom/tmapmobility/tmap/exoplayer2/Tracks;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+
+    aget-object v0, v0, p1
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n:[[Ljava/util/List;
+
+    aget-object p1, v1, p1
+
+    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/y;->b(Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[Ljava/util/List;)Lcom/tmapmobility/tmap/exoplayer2/Tracks;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final Y(Ljava/io/IOException;)V
     .locals 2
 
     .line 1
@@ -1253,17 +1272,22 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    new-instance v1, Lle/h;
+    new-instance v1, Log/h;
 
-    invoke-direct {v1, p0, p1}, Lle/h;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
+    invoke-direct {v1, p0, p1}, Log/h;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final X()V
+.method public final Z()V
     .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->j:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;
@@ -1414,14 +1438,14 @@
     aput-object v2, v1, v5
 
     .line 14
-    invoke-virtual {p0, v5}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->b0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;
+    invoke-virtual {p0, v5}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->d0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;
 
     move-result-object v1
 
     .line 15
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
 
-    iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;->e:Ljava/lang/Object;
+    iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;->e:Ljava/lang/Object;
 
     invoke-virtual {v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector;->f(Ljava/lang/Object;)V
 
@@ -1430,7 +1454,7 @@
 
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector;->k()Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector;->l()Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
     move-result-object v2
 
@@ -1448,7 +1472,7 @@
 
     .line 17
     :cond_2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c0()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->e0()V
 
     .line 18
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->f:Landroid/os/Handler;
@@ -1459,16 +1483,16 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    new-instance v1, Lle/f;
+    new-instance v1, Log/f;
 
-    invoke-direct {v1, p0}, Lle/f;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
+    invoke-direct {v1, p0}, Log/f;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public Y(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
+.method public a0(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
     .locals 2
 
     .line 1
@@ -1507,9 +1531,9 @@
     :cond_1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->f:Landroid/os/Handler;
 
-    new-instance v1, Lle/g;
+    new-instance v1, Log/g;
 
-    invoke-direct {v1, p0, p1}, Lle/g;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
+    invoke-direct {v1, p0, p1}, Log/g;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$c;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1517,7 +1541,7 @@
     return-void
 .end method
 
-.method public Z()V
+.method public b0()V
     .locals 1
 
     .line 1
@@ -1526,26 +1550,53 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->f()V
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->e()V
 
+    .line 3
     :cond_0
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->g()V
+
     return-void
 .end method
 
-.method public a0(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
+.method public c0(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o(I)V
+    :try_start_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->p(I)V
+
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 4
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public final b0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;
+.method public final d0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;
     .locals 10
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+        }
+    .end annotation
+
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
         value = {
             "trackGroupArrays",
@@ -1556,7 +1607,6 @@
     .end annotation
 
     .line 1
-    :try_start_0
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
 
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->d:[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
@@ -1583,7 +1633,7 @@
     iget-object v4, v4, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->h:Lcom/tmapmobility/tmap/exoplayer2/Timeline;
 
     .line 3
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector;->g([Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector;->h([Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;
 
     move-result-object v0
 
@@ -1593,12 +1643,12 @@
 
     .line 4
     :goto_0
-    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;->a:I
+    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;->a:I
 
     if-ge v2, v3, :cond_7
 
     .line 5
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;->c:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;->c:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
 
     aget-object v3, v3, v2
 
@@ -1629,7 +1679,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+    check-cast v6, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
 
     .line 9
     invoke-interface {v6}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
@@ -1764,8 +1814,6 @@
 
     .line 21
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_6
     :goto_6
@@ -1775,19 +1823,9 @@
 
     :cond_7
     return-object v0
-
-    :catch_0
-    move-exception p1
-
-    .line 22
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
 .end method
 
-.method public final c0()V
+.method public final e0()V
     .locals 1
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
         value = {
@@ -1813,214 +1851,266 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
-
-    const/4 v0, 0x0
-
-    move v1, v0
+    :try_start_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
-    :goto_0
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
-
-    array-length v2, v2
-
-    if-ge v1, v2, :cond_3
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     .line 3
-    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->k()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
 
     .line 4
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->n()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    move-result-object v2
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->L(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
     .line 5
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->d:[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
 
-    aget-object v3, v3, v1
+    array-length v3, v2
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_0
+    if-ge v5, v3, :cond_1
+
+    aget-object v6, v2, v5
 
     .line 6
-    invoke-virtual {v3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->d()I
-
-    move-result v4
-
-    move v5, v0
-
-    :goto_1
-    if-ge v5, v4, :cond_1
-
-    .line 7
-    invoke-virtual {v3, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->g(I)I
+    invoke-interface {v6}, Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;->getTrackType()I
 
     move-result v6
 
-    const/4 v7, 0x1
+    if-eq v6, v1, :cond_0
 
-    if-eq v6, v7, :cond_0
-
-    .line 8
-    invoke-virtual {v2, v5, v7}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->r1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    :cond_0
-    add-int/lit8 v5, v5, 0x1
+    move v7, v1
 
     goto :goto_1
 
-    .line 9
-    :cond_1
-    array-length v3, p1
+    :cond_0
+    move v7, v4
 
-    move v4, v0
+    .line 7
+    :goto_1
+    invoke-virtual {v0, v6, v7}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->m0(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
-    :goto_2
-    if-ge v4, v3, :cond_2
-
-    aget-object v5, p1, v4
-
-    .line 10
-    invoke-virtual {v2, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->f1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    .line 11
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v1, v5}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
+    .line 8
+    :cond_1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->L()I
+
+    move-result v1
+
+    .line 9
+    array-length v2, p1
+
+    move v3, v4
+
+    :goto_2
+    if-ge v3, v2, :cond_3
+
+    aget-object v5, p1, v3
+
+    .line 10
+    invoke-virtual {v0, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->Y(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->B()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
+
+    move-result-object v5
+
+    move v6, v4
+
+    :goto_3
+    if-ge v6, v1, :cond_2
+
+    .line 11
+    invoke-virtual {p0, v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_3
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
     :cond_3
     return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 12
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method
 
 .method public varargs k(Z[Ljava/lang/String;)V
-    .locals 8
+    .locals 7
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
-
-    const/4 v0, 0x0
-
-    move v1, v0
+    :try_start_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
-    :goto_0
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
-
-    array-length v2, v2
-
-    if-ge v1, v2, :cond_3
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     .line 3
-    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->k()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    move-result-object v0
 
     .line 4
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->n()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->l0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
-    move-result-object v2
+    const/4 p1, 0x1
 
     .line 5
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l:[Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
-
-    aget-object v3, v3, v1
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->L(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
     .line 6
-    invoke-virtual {v3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->d()I
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->d:[Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;
 
-    move-result v4
+    array-length v2, v1
 
-    move v5, v0
+    const/4 v3, 0x0
 
-    :goto_1
-    if-ge v5, v4, :cond_1
+    move v4, v3
+
+    :goto_0
+    if-ge v4, v2, :cond_1
+
+    aget-object v5, v1, v4
 
     .line 7
-    invoke-virtual {v3, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->g(I)I
+    invoke-interface {v5}, Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;->getTrackType()I
 
-    move-result v6
+    move-result v5
 
-    const/4 v7, 0x3
+    const/4 v6, 0x3
 
-    if-eq v6, v7, :cond_0
+    if-eq v5, v6, :cond_0
 
-    const/4 v6, 0x1
-
-    .line 8
-    invoke-virtual {v2, v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->r1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    :cond_0
-    add-int/lit8 v5, v5, 0x1
+    move v6, p1
 
     goto :goto_1
 
-    .line 9
-    :cond_1
-    invoke-virtual {v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->s1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    :cond_0
+    move v6, v3
 
-    .line 10
-    array-length v3, p2
-
-    move v4, v0
-
-    :goto_2
-    if-ge v4, v3, :cond_2
-
-    aget-object v5, p2, v4
-
-    .line 11
-    invoke-virtual {v2, v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->k1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
-
-    .line 12
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v1, v5}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
+    .line 8
+    :goto_1
+    invoke-virtual {v0, v5, v6}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->m0(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_2
+    goto :goto_0
+
+    .line 9
+    :cond_1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->L()I
+
+    move-result p1
+
+    .line 10
+    array-length v1, p2
+
+    move v2, v3
+
+    :goto_2
+    if-ge v2, v1, :cond_3
+
+    aget-object v4, p2, v2
+
+    .line 11
+    invoke-virtual {v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->d0(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->B()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
+
+    move-result-object v4
+
+    move v5, v3
+
+    :goto_3
+    if-ge v5, p1, :cond_2
+
+    .line 12
+    invoke-virtual {p0, v5, v4}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
 
     :cond_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_3
     return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 13
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
-    .locals 1
+.method public l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    :try_start_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
-
-    invoke-virtual {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->h(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;)V
-
-    .line 3
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->b0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/z;
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 3
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public m(IILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/util/List;)V
+.method public m(IILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;",
             "Ljava/util/List<",
             "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;",
             ">;)V"
@@ -2028,10 +2118,11 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    :try_start_0
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     .line 2
-    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->n()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->k()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
     move-result-object p3
 
@@ -2062,7 +2153,7 @@
 
     .line 4
     :goto_1
-    invoke-virtual {p3, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->r1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    invoke-virtual {p3, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -2077,11 +2168,11 @@
     if-eqz v1, :cond_2
 
     .line 6
-    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     move-result-object p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
 
     goto :goto_3
 
@@ -2091,11 +2182,12 @@
 
     aget-object v1, v1, p1
 
+    .line 8
     invoke-virtual {v1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->h(I)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;
 
     move-result-object v1
 
-    .line 8
+    .line 9
     :goto_2
     invoke-interface {p4}, Ljava/util/List;->size()I
 
@@ -2103,21 +2195,23 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 9
+    .line 10
     invoke-interface {p4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
 
-    invoke-virtual {p3, p2, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->t1(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    invoke-virtual {p3, p2, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->H1(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
-    .line 10
-    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    .line 11
+    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     move-result-object v2
 
-    invoke-virtual {p0, p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->l(ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
+    invoke-virtual {p0, p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
 
     add-int/lit8 v0, v0, 0x1
 
@@ -2126,9 +2220,96 @@
     :cond_3
     :goto_3
     return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 12
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 .end method
 
-.method public final n()V
+.method public final n(ILcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException;
+        }
+    .end annotation
+
+    .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
+        value = {
+            "trackGroupArrays",
+            "trackSelectionsByPeriodAndRenderer",
+            "mediaPreparer",
+            "mediaPreparer.timeline"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
+
+    invoke-virtual {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->j(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->d0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;
+
+    .line 3
+    iget-object v0, p2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->f1:Lcom/google/common/collect/ImmutableMap;
+
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->values()Lcom/google/common/collect/ImmutableCollection;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;
+
+    .line 4
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->c:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;
+
+    .line 5
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->a()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->X(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;->B()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
+
+    move-result-object v1
+
+    .line 6
+    invoke-virtual {v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->j(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)V
+
+    .line 7
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->d0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/a0;
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final o()V
     .locals 1
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/EnsuresNonNull;
         value = {
@@ -2150,11 +2331,11 @@
     return-void
 .end method
 
-.method public o(I)V
+.method public p(I)V
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->n()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->o()V
 
     const/4 v0, 0x0
 

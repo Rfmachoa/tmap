@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/util/ProcessUtils;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -66,10 +66,8 @@
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const/16 v3, 0x19
-
     .line 2
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "/proc/"
 

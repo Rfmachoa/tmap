@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;,
         Lcom/tmapmobility/tmap/exoplayer2/util/Log$LogLevel;
     }
 .end annotation
@@ -22,14 +23,42 @@
 
 .field public static final e:I = 0x7fffffff
 
-.field public static f:I = 0x0
+.field public static final f:Ljava/lang/Object;
 
-.field public static g:Z = true
+.field public static g:I = 0x0
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "lock"
+    .end annotation
+.end field
+
+.field public static h:Z = true
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "lock"
+    .end annotation
+.end field
+
+.field public static i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "lock"
+    .end annotation
+.end field
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
+
+    .line 2
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;->a:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
 
     return-void
 .end method
@@ -92,7 +121,7 @@
 .end method
 
 .method public static b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    .locals 2
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Size;
             max = 0x17L
@@ -102,15 +131,35 @@
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:I
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_start_0
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:I
 
+    if-nez v1, :cond_0
+
+    .line 3
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+
+    invoke-interface {v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
     :cond_0
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -138,7 +187,7 @@
 .end method
 
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    .locals 3
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Size;
             max = 0x17L
@@ -148,17 +197,37 @@
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:I
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
 
-    const/4 v1, 0x3
-
-    if-gt v0, v1, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_start_0
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:I
 
+    const/4 v2, 0x3
+
+    if-gt v1, v2, :cond_0
+
+    .line 3
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+
+    invoke-interface {v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
     :cond_0
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public static e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -186,18 +255,36 @@
 .end method
 
 .method public static f()I
-    .locals 1
+    .locals 2
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:I
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
 
-    return v0
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:I
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method public static g(Ljava/lang/Throwable;)Ljava/lang/String;
-    .locals 2
+    .locals 3
     .param p0    # Ljava/lang/Throwable;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -208,38 +295,52 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
+
+    monitor-enter v0
+
     if-nez p0, :cond_0
 
     const/4 p0, 0x0
 
+    .line 2
+    :try_start_0
+    monitor-exit v0
+
     return-object p0
 
-    .line 1
+    .line 3
     :cond_0
     invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->j(Ljava/lang/Throwable;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     const-string p0, "UnknownHostException (no network)"
 
+    .line 4
+    monitor-exit v0
+
     return-object p0
 
-    .line 2
+    .line 5
     :cond_1
-    sget-boolean v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:Z
+    sget-boolean v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->h:Z
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
-    .line 3
+    .line 6
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
+    monitor-exit v0
+
     return-object p0
 
-    .line 4
+    .line 7
     :cond_2
     invoke-static {p0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
@@ -249,19 +350,31 @@
 
     move-result-object p0
 
-    const-string v0, "\t"
+    const-string v1, "\t"
 
-    const-string v1, "    "
+    const-string v2, "    "
 
-    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
+    monitor-exit v0
+
     return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 8
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public static h(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    .locals 3
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Size;
             max = 0x17L
@@ -271,17 +384,37 @@
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:I
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
 
-    const/4 v1, 0x1
-
-    if-gt v0, v1, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_start_0
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:I
 
+    const/4 v2, 0x1
+
+    if-gt v1, v2, :cond_0
+
+    .line 3
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+
+    invoke-interface {v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
     :cond_0
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public static i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -344,25 +477,88 @@
 .end method
 
 .method public static k(I)V
-    .locals 0
+    .locals 1
 
     .line 1
-    sput p0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:I
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    sput p0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:I
+
+    .line 3
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public static l(Z)V
-    .locals 0
+    .locals 1
 
     .line 1
-    sput-boolean p0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:Z
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    sput-boolean p0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->h:Z
+
+    .line 3
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public static m(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public static m(Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;)V
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    sput-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+
+    .line 3
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static n(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Size;
             max = 0x17L
@@ -372,20 +568,40 @@
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:I
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->f:Ljava/lang/Object;
 
-    const/4 v1, 0x2
-
-    if-gt v0, v1, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_start_0
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->g:I
 
+    const/4 v2, 0x2
+
+    if-gt v1, v2, :cond_0
+
+    .line 3
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->i:Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;
+
+    invoke-interface {v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log$a;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
     :cond_0
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public static n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public static o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
     .param p0    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Size;
@@ -404,7 +620,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

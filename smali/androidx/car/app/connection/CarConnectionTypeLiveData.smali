@@ -6,8 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/car/app/connection/CarConnectionTypeLiveData$a;,
         Landroidx/car/app/connection/CarConnectionTypeLiveData$CarConnectionBroadcastReceiver;,
-        Landroidx/car/app/connection/CarConnectionTypeLiveData$a;
+        Landroidx/car/app/connection/CarConnectionTypeLiveData$b;
     }
 .end annotation
 
@@ -80,14 +81,14 @@
     iput-object p1, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->a:Landroid/content/Context;
 
     .line 3
-    new-instance v0, Landroidx/car/app/connection/CarConnectionTypeLiveData$a;
+    new-instance v0, Landroidx/car/app/connection/CarConnectionTypeLiveData$b;
 
     .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
-    invoke-direct {v0, p0, p1}, Landroidx/car/app/connection/CarConnectionTypeLiveData$a;-><init>(Landroidx/car/app/connection/CarConnectionTypeLiveData;Landroid/content/ContentResolver;)V
+    invoke-direct {v0, p0, p1}, Landroidx/car/app/connection/CarConnectionTypeLiveData$b;-><init>(Landroidx/car/app/connection/CarConnectionTypeLiveData;Landroid/content/ContentResolver;)V
 
     iput-object v0, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->b:Landroid/content/AsyncQueryHandler;
 
@@ -169,22 +170,41 @@
 .end method
 
 .method public onActive()V
-    .locals 4
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->a:Landroid/content/Context;
+    new-instance v0, Landroid/content/IntentFilter;
 
-    iget-object v1, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->c:Landroidx/car/app/connection/CarConnectionTypeLiveData$CarConnectionBroadcastReceiver;
+    const-string v1, "androidx.car.app.connection.action.CAR_CONNECTION_UPDATED"
 
-    new-instance v2, Landroid/content/IntentFilter;
-
-    const-string v3, "androidx.car.app.connection.action.CAR_CONNECTION_UPDATED"
-
-    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     .line 2
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x21
+
+    if-lt v1, v2, :cond_0
+
+    .line 3
+    iget-object v1, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->a:Landroid/content/Context;
+
+    iget-object v2, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->c:Landroidx/car/app/connection/CarConnectionTypeLiveData$CarConnectionBroadcastReceiver;
+
+    invoke-static {v1, v2, v0}, Landroidx/car/app/connection/CarConnectionTypeLiveData$a;->a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    iget-object v1, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->a:Landroid/content/Context;
+
+    iget-object v2, p0, Landroidx/car/app/connection/CarConnectionTypeLiveData;->c:Landroidx/car/app/connection/CarConnectionTypeLiveData$CarConnectionBroadcastReceiver;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 5
+    :goto_0
     invoke-virtual {p0}, Landroidx/car/app/connection/CarConnectionTypeLiveData;->f()V
 
     return-void

@@ -29,15 +29,6 @@
 # direct methods
 .method public constructor <init>(Ljava/util/LinkedHashSet;)V
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraInternals"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -78,11 +69,11 @@
     .line 4
     iget-object v1, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$a;->a:Ljava/util/List;
 
-    invoke-interface {v0}, Landroidx/camera/core/impl/CameraInternal;->k()Lx/q;
+    invoke-interface {v0}, Landroidx/camera/core/impl/CameraInternal;->m()Lb0/y;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lx/q;->b()Ljava/lang/String;
+    invoke-interface {v0}, Lb0/y;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -98,14 +89,6 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraId"
-        }
-    .end annotation
 
     .line 1
     instance-of v0, p1, Landroidx/camera/core/internal/CameraUseCaseAdapter$a;

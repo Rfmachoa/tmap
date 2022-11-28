@@ -3,12 +3,12 @@
 .source "UpdateUserContextInfoByLambdaMutation.java"
 
 # interfaces
-.implements Lc4/e;
+.implements Lz5/e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$Variables;->marshaller()Lc4/e;
+    value = Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$Variables;->marshaller()Lz5/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public marshal(Lc4/f;)V
+.method public marshal(Lz5/f;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -67,13 +67,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ltype/a;->marshaller()Lc4/e;
+    invoke-virtual {v0}, Ltype/a;->marshaller()Lz5/e;
 
     move-result-object v0
 
     const-string v1, "input"
 
-    invoke-interface {p1, v1, v0}, Lc4/f;->f(Ljava/lang/String;Lc4/e;)V
+    invoke-interface {p1, v1, v0}, Lz5/f;->g(Ljava/lang/String;Lz5/e;)V
 
     return-void
 .end method

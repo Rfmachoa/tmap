@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/g0;
+.implements Landroidx/car/app/k0;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Landroidx/car/app/constraints/IConstraintHost;
 
-    invoke-static {v0, p1}, Landroidx/car/app/constraints/ConstraintManager;->f(ILandroidx/car/app/constraints/IConstraintHost;)Ljava/lang/Integer;
+    invoke-static {v0, p1}, Landroidx/car/app/constraints/ConstraintManager;->g(ILandroidx/car/app/constraints/IConstraintHost;)Ljava/lang/Integer;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    value = Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -61,27 +61,27 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
     const-string v0, "ai_tap.terminate_phonecall"
 
-    invoke-virtual {p1, v0}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
 
     .line 2
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->G1()V
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->I1()V
 
     goto :goto_0
 
@@ -89,7 +89,7 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseAiActivity$g;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/z0;->c(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/skt/tmap/util/g1;->c(Landroid/content/Context;)V
 
     :goto_0
     return-void

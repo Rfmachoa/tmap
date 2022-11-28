@@ -3,32 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity$e;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapFavoriteActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity$e;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapFavoriteActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/p0;->a:Lcom/skt/tmap/activity/TmapMainActivity$e;
+    iput-object p1, p0, Lcom/skt/tmap/activity/p0;->a:Lcom/skt/tmap/activity/TmapFavoriteActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/p0;->a:Lcom/skt/tmap/activity/TmapMainActivity$e;
+    iget-object v0, p0, Lcom/skt/tmap/activity/p0;->a:Lcom/skt/tmap/activity/TmapFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity$e;->b(Lcom/skt/tmap/activity/TmapMainActivity$e;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapFavoriteActivity;->B5(Lcom/skt/tmap/activity/TmapFavoriteActivity;Landroid/view/View;)V
 
     return-void
 .end method

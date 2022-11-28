@@ -25,5 +25,4 @@
         </LinearLayout>
         <ImageView android:id="@id/tmap_setting_sound_test_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_21dp" android:layout_marginBottom="@dimen/tmap_27dp" android:src="@drawable/btn_volume_test_selector" android:layout_below="@id/tmap_setting_sound_seekbar_layout" android:layout_centerHorizontal="true" />
     </RelativeLayout>
-    <View android:id="@id/header_shadow" android:background="@drawable/bg_sheet_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_7dp" android:layout_below="@id/titlebarLayout" />
 </RelativeLayout>

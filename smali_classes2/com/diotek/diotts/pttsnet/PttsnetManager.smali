@@ -152,20 +152,20 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lr5/c;->f(Landroid/content/Context;)Lr5/c;
+    invoke-static {p1}, Lo7/c;->f(Landroid/content/Context;)Lo7/c;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/diotek/diotts/pttsnet/d;->d:Lr5/c;
+    iput-object p1, p0, Lcom/diotek/diotts/pttsnet/d;->d:Lo7/c;
 
     const/4 v1, 0x0
 
     .line 14
-    invoke-virtual {p1, v1, v1}, Lr5/c;->k(II)Lr5/b;
+    invoke-virtual {p1, v1, v1}, Lo7/c;->k(II)Lo7/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/diotek/diotts/pttsnet/d;->f:Lr5/b;
+    iput-object p1, p0, Lcom/diotek/diotts/pttsnet/d;->f:Lo7/b;
 
     .line 15
     iput-object p2, p0, Lcom/diotek/diotts/pttsnet/d;->j:Landroid/os/Handler;
@@ -179,12 +179,12 @@
     iput-object p1, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->K:Ljava/lang/String;
 
     .line 18
-    invoke-virtual {p0}, Lcom/diotek/diotts/pttsnet/PttsnetManager;->k()V
+    invoke-virtual {p0}, Lcom/diotek/diotts/pttsnet/PttsnetManager;->b()V
 
     return-void
 .end method
 
-.method public static synthetic m(Lcom/diotek/diotts/pttsnet/PttsnetManager;Lcom/diotek/diotts/pttsnet/PttsnetManager$State;)V
+.method public static synthetic d(Lcom/diotek/diotts/pttsnet/PttsnetManager;Lcom/diotek/diotts/pttsnet/PttsnetManager$State;)V
     .locals 0
 
     .line 1
@@ -193,7 +193,7 @@
     return-void
 .end method
 
-.method public static synthetic n(Lcom/diotek/diotts/pttsnet/PttsnetManager;)Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
+.method public static synthetic e(Lcom/diotek/diotts/pttsnet/PttsnetManager;)Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
     .locals 0
 
     .line 1
@@ -202,7 +202,7 @@
     return-object p0
 .end method
 
-.method public static synthetic o(Lcom/diotek/diotts/pttsnet/PttsnetManager;)Ljava/lang/String;
+.method public static synthetic f(Lcom/diotek/diotts/pttsnet/PttsnetManager;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -222,272 +222,31 @@
 
 
 # virtual methods
-.method public a()Z
-    .locals 3
-
-    const-string v0, "mPttsnet.isPlaying() : "
+.method public bridge synthetic a()Z
+    .locals 1
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v1}, Ltvoice/Pttsnet;->isPlaying()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "PttsnetManager"
-
-    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v0}, Ltvoice/Pttsnet;->isPlaying()Z
+    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->a()Z
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    .line 3
-    :cond_0
-    sget-object v0, Lcom/diotek/diotts/pttsnet/PttsnetManager$b;->a:[I
-
-    iget-object v2, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->J:Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aget v0, v0, v2
-
-    const/4 v2, 0x3
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v2, 0x4
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_1
-    return v1
-.end method
-
-.method public b(Ljava/lang/String;)Z
-    .locals 22
-
-    move-object/from16 v1, p0
-
-    const-string v0, "play() : "
-
-    .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->J:Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", isPlaying = "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v2}, Ltvoice/Pttsnet;->isPlaying()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, " Port: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "7000"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "PttsnetManager"
-
-    invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    move-object/from16 v0, p1
-
-    .line 2
-    iput-object v0, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->K:Ljava/lang/String;
-
-    .line 3
-    sget-object v3, Lcom/diotek/diotts/pttsnet/PttsnetManager$State;->PREPARE:Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
-
-    invoke-virtual {v1, v3}, Lcom/diotek/diotts/pttsnet/PttsnetManager;->x(Lcom/diotek/diotts/pttsnet/PttsnetManager$State;)V
-
-    .line 4
-    iget-object v3, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v3}, Ltvoice/Pttsnet;->isPlaying()Z
-
-    move-result v3
-
-    const/4 v15, 0x1
-
-    if-eqz v3, :cond_0
-
-    .line 5
-    iget-object v0, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v0}, Ltvoice/Pttsnet;->PTTSNET_STOP()V
-
-    return v15
-
-    :cond_0
-    const/16 v11, 0x518
-
-    const v18, 0xbb80
-
-    const-string v3, "play() : audioStream="
-
-    .line 6
-    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget v4, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->I:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ", charset:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    :try_start_0
-    iget-object v3, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    sget-boolean v4, Lcom/diotek/diotts/pttsnet/PttsnetManager;->P:Z
-
-    invoke-virtual {v3, v4}, Ltvoice/Pttsnet;->setPrintLog(Z)V
-
-    .line 8
-    iget-object v3, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    iget-object v4, v1, Lcom/diotek/diotts/pttsnet/d;->b:Ljava/lang/String;
-
-    const-string v5, "7000"
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x3
-
-    sget-object v9, Lcom/diotek/diotts/pttsnet/PttsnetManager;->O:Ltvoice/Pttsnet$tvoice_service_type;
-
-    iget-object v8, v1, Lcom/diotek/diotts/pttsnet/d;->f:Lr5/b;
-
-    .line 9
-    invoke-virtual {v8}, Lr5/b;->c()I
-
-    move-result v10
-
-    iget v12, v1, Lcom/diotek/diotts/pttsnet/d;->i:I
-
-    iget v13, v1, Lcom/diotek/diotts/pttsnet/d;->g:I
-
-    iget v14, v1, Lcom/diotek/diotts/pttsnet/d;->h:I
-
-    const/16 v16, 0x0
-
-    const/16 v17, -0x1
-
-    const/16 v19, 0x1
-
-    const/16 v20, 0x3c
-
-    iget v8, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->I:I
-
-    move/from16 v21, v8
-
-    move-object/from16 v8, p1
-
-    move v0, v15
-
-    move/from16 v15, v16
-
-    move/from16 v16, v17
-
-    move/from16 v17, v19
-
-    move/from16 v19, v20
-
-    move/from16 v20, v21
-
-    .line 10
-    invoke-virtual/range {v3 .. v20}, Ltvoice/Pttsnet;->PTTSNET_PLAY(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ltvoice/Pttsnet$tvoice_service_type;IIIIIIIIIII)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    const-string v3, "Failed to play tts"
-
-    .line 11
-    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
     return v0
 .end method
 
-.method public bridge synthetic c(I)V
+.method public bridge synthetic b()V
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/diotek/diotts/pttsnet/d;->c(I)V
+    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->b()V
+
+    return-void
+.end method
+
+.method public bridge synthetic c(Z)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/diotek/diotts/pttsnet/d;->c(Z)V
 
     return-void
 .end method
@@ -587,65 +346,54 @@
     return v0
 .end method
 
-.method public bridge synthetic d()I
-    .locals 1
-
-    .line 1
-    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->d()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public disconnect()V
     .locals 0
 
     return-void
 .end method
 
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "null"
-
-    return-object v0
-.end method
-
-.method public bridge synthetic f()I
+.method public g()F
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->f()I
+    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v0}, Ltvoice/Pttsnet;->PTTSNET_GET_VOL()F
 
     move-result v0
 
     return v0
 .end method
 
-.method public bridge synthetic g(I)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1}, Lcom/diotek/diotts/pttsnet/d;->g(I)V
-
-    return-void
-.end method
-
-.method public h(Ljava/lang/String;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public i()Z
+.method public h()Z
     .locals 1
 
-    const/4 v0, 0x0
+    .line 1
+    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v0}, Ltvoice/Pttsnet;->isPaused()Z
+
+    move-result v0
 
     return v0
+.end method
+
+.method public i()V
+    .locals 2
+
+    const-string v0, "PttsnetManager"
+
+    const-string v1, "pause()"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v0}, Ltvoice/Pttsnet;->PTTSNET_PAUSE()V
+
+    return-void
 .end method
 
 .method public isPlaying()Z
@@ -693,80 +441,7 @@
     return v0
 .end method
 
-.method public bridge synthetic j()Z
-    .locals 1
-
-    .line 1
-    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->j()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public bridge synthetic k()V
-    .locals 0
-
-    .line 1
-    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->k()V
-
-    return-void
-.end method
-
-.method public bridge synthetic l(Z)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1}, Lcom/diotek/diotts/pttsnet/d;->l(Z)V
-
-    return-void
-.end method
-
-.method public p()F
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v0}, Ltvoice/Pttsnet;->PTTSNET_GET_VOL()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public q()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v0}, Ltvoice/Pttsnet;->isPaused()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public r()V
-    .locals 2
-
-    const-string v0, "PttsnetManager"
-
-    const-string v1, "pause()"
-
-    .line 1
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
-
-    invoke-virtual {v0}, Ltvoice/Pttsnet;->PTTSNET_PAUSE()V
-
-    return-void
-.end method
-
-.method public s(Ljava/lang/String;)Z
+.method public j(Ljava/lang/String;)Z
     .locals 22
 
     move-object/from16 v1, p0
@@ -887,10 +562,10 @@
 
     sget-object v9, Lcom/diotek/diotts/pttsnet/PttsnetManager;->O:Ltvoice/Pttsnet$tvoice_service_type;
 
-    iget-object v8, v1, Lcom/diotek/diotts/pttsnet/d;->f:Lr5/b;
+    iget-object v8, v1, Lcom/diotek/diotts/pttsnet/d;->f:Lo7/b;
 
     .line 9
-    invoke-virtual {v8}, Lr5/b;->c()I
+    invoke-virtual {v8}, Lo7/b;->c()I
 
     move-result v10
 
@@ -960,7 +635,7 @@
     return v0
 .end method
 
-.method public t()V
+.method public k()V
     .locals 2
 
     const-string v0, "PttsnetManager"
@@ -973,7 +648,7 @@
     return-void
 .end method
 
-.method public u()V
+.method public l()V
     .locals 2
 
     const-string v0, "PttsnetManager"
@@ -991,13 +666,338 @@
     return-void
 .end method
 
-.method public v(I)V
+.method public m(I)V
     .locals 0
 
     .line 1
     iput p1, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->I:I
 
     return-void
+.end method
+
+.method public bridge synthetic n()I
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->n()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public o()Z
+    .locals 3
+
+    const-string v0, "mPttsnet.isPlaying() : "
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v1}, Ltvoice/Pttsnet;->isPlaying()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PttsnetManager"
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v0}, Ltvoice/Pttsnet;->isPlaying()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    .line 3
+    :cond_0
+    sget-object v0, Lcom/diotek/diotts/pttsnet/PttsnetManager$b;->a:[I
+
+    iget-object v2, p0, Lcom/diotek/diotts/pttsnet/PttsnetManager;->J:Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aget v0, v0, v2
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v2, 0x4
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    return v1
+.end method
+
+.method public p(Ljava/lang/String;)Z
+    .locals 22
+
+    move-object/from16 v1, p0
+
+    const-string v0, "play() : "
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v2, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->J:Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", isPlaying = "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v2}, Ltvoice/Pttsnet;->isPlaying()Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " Port: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "7000"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "PttsnetManager"
+
+    invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v0, p1
+
+    .line 2
+    iput-object v0, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->K:Ljava/lang/String;
+
+    .line 3
+    sget-object v3, Lcom/diotek/diotts/pttsnet/PttsnetManager$State;->PREPARE:Lcom/diotek/diotts/pttsnet/PttsnetManager$State;
+
+    invoke-virtual {v1, v3}, Lcom/diotek/diotts/pttsnet/PttsnetManager;->x(Lcom/diotek/diotts/pttsnet/PttsnetManager$State;)V
+
+    .line 4
+    iget-object v3, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v3}, Ltvoice/Pttsnet;->isPlaying()Z
+
+    move-result v3
+
+    const/4 v15, 0x1
+
+    if-eqz v3, :cond_0
+
+    .line 5
+    iget-object v0, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    invoke-virtual {v0}, Ltvoice/Pttsnet;->PTTSNET_STOP()V
+
+    return v15
+
+    :cond_0
+    const/16 v11, 0x518
+
+    const v18, 0xbb80
+
+    const-string v3, "play() : audioStream="
+
+    .line 6
+    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget v4, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->I:I
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, ", charset:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 7
+    :try_start_0
+    iget-object v3, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    sget-boolean v4, Lcom/diotek/diotts/pttsnet/PttsnetManager;->P:Z
+
+    invoke-virtual {v3, v4}, Ltvoice/Pttsnet;->setPrintLog(Z)V
+
+    .line 8
+    iget-object v3, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->H:Ltvoice/Pttsnet;
+
+    iget-object v4, v1, Lcom/diotek/diotts/pttsnet/d;->b:Ljava/lang/String;
+
+    const-string v5, "7000"
+
+    const/4 v6, 0x3
+
+    const/4 v7, 0x3
+
+    sget-object v9, Lcom/diotek/diotts/pttsnet/PttsnetManager;->O:Ltvoice/Pttsnet$tvoice_service_type;
+
+    iget-object v8, v1, Lcom/diotek/diotts/pttsnet/d;->f:Lo7/b;
+
+    .line 9
+    invoke-virtual {v8}, Lo7/b;->c()I
+
+    move-result v10
+
+    iget v12, v1, Lcom/diotek/diotts/pttsnet/d;->i:I
+
+    iget v13, v1, Lcom/diotek/diotts/pttsnet/d;->g:I
+
+    iget v14, v1, Lcom/diotek/diotts/pttsnet/d;->h:I
+
+    const/16 v16, 0x0
+
+    const/16 v17, -0x1
+
+    const/16 v19, 0x1
+
+    const/16 v20, 0x3c
+
+    iget v8, v1, Lcom/diotek/diotts/pttsnet/PttsnetManager;->I:I
+
+    move/from16 v21, v8
+
+    move-object/from16 v8, p1
+
+    move v0, v15
+
+    move/from16 v15, v16
+
+    move/from16 v16, v17
+
+    move/from16 v17, v19
+
+    move/from16 v19, v20
+
+    move/from16 v20, v21
+
+    .line 10
+    invoke-virtual/range {v3 .. v20}, Ltvoice/Pttsnet;->PTTSNET_PLAY(Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;Ltvoice/Pttsnet$tvoice_service_type;IIIIIIIIIII)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v3, "Failed to play tts"
+
+    .line 11
+    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public bridge synthetic q(I)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/diotek/diotts/pttsnet/d;->q(I)V
+
+    return-void
+.end method
+
+.method public bridge synthetic r()I
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/diotek/diotts/pttsnet/d;->r()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public s()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "null"
+
+    return-object v0
+.end method
+
+.method public bridge synthetic t(I)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/diotek/diotts/pttsnet/d;->t(I)V
+
+    return-void
+.end method
+
+.method public u(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public v()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public final x(Lcom/diotek/diotts/pttsnet/PttsnetManager$State;)V

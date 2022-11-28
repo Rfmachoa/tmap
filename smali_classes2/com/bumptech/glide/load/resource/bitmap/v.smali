@@ -6,7 +6,10 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/bumptech/glide/load/resource/bitmap/v$e;,
+        Lcom/bumptech/glide/load/resource/bitmap/v$d;,
         Lcom/bumptech/glide/load/resource/bitmap/v$b;,
+        Lcom/bumptech/glide/load/resource/bitmap/v$c;,
         Lcom/bumptech/glide/load/resource/bitmap/v$a;
     }
 .end annotation

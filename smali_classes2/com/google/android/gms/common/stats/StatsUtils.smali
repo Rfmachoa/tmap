@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/stats/StatsUtils;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -60,10 +60,6 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
     .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -79,29 +75,17 @@
     const-string p1, ""
 
     :goto_0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/lang/String;
-
-    invoke-direct {p1, p0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    move-object p0, p1
-
-    :goto_1
     return-object p0
 .end method

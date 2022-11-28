@@ -9,10 +9,15 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/car/app/navigation/INavigationHost$a;,
         Landroidx/car/app/navigation/INavigationHost$Stub;,
         Landroidx/car/app/navigation/INavigationHost$Default;
     }
 .end annotation
+
+
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.navigation.INavigationHost"
 
 
 # virtual methods

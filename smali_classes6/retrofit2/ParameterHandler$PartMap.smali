@@ -199,11 +199,12 @@
 
     aput-object v4, v3, v2
 
+    .line 6
     invoke-static {v3}, Lokhttp3/Headers;->of([Ljava/lang/String;)Lokhttp3/Headers;
 
     move-result-object v2
 
-    .line 6
+    .line 7
     iget-object v3, p0, Lretrofit2/ParameterHandler$PartMap;->valueConverter:Lretrofit2/Converter;
 
     invoke-interface {v3, v1}, Lretrofit2/Converter;->convert(Ljava/lang/Object;)Ljava/lang/Object;
@@ -216,7 +217,7 @@
 
     goto :goto_0
 
-    .line 7
+    .line 8
     :cond_0
     iget-object p1, p0, Lretrofit2/ParameterHandler$PartMap;->method:Ljava/lang/reflect/Method;
 
@@ -238,7 +239,7 @@
 
     throw p1
 
-    .line 8
+    .line 9
     :cond_1
     iget-object p1, p0, Lretrofit2/ParameterHandler$PartMap;->method:Ljava/lang/reflect/Method;
 
@@ -257,7 +258,7 @@
     :cond_2
     return-void
 
-    .line 9
+    .line 10
     :cond_3
     iget-object p1, p0, Lretrofit2/ParameterHandler$PartMap;->method:Ljava/lang/reflect/Method;
 

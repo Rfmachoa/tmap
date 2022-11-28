@@ -35,6 +35,18 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "serviceId",
+            "resultCode"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Lcom/skt/moment/a;->b()I

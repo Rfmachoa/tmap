@@ -69,7 +69,7 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Can not find OUT type parameter for Converter of type "
+    const-string v0, "Cannot find OUT type parameter for Converter of type "
 
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

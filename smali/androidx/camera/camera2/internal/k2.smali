@@ -3,26 +3,26 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/utils/futures/a;
+.implements Landroidx/camera/camera2/internal/w$c;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/o2;
+.field public final synthetic a:Landroidx/camera/camera2/internal/s2;
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic b:I
 
 .field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/o2;Ljava/util/List;J)V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/s2;IJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/k2;->a:Landroidx/camera/camera2/internal/o2;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/k2;->a:Landroidx/camera/camera2/internal/s2;
 
-    iput-object p2, p0, Landroidx/camera/camera2/internal/k2;->b:Ljava/util/List;
+    iput p2, p0, Landroidx/camera/camera2/internal/k2;->b:I
 
     iput-wide p3, p0, Landroidx/camera/camera2/internal/k2;->c:J
 
@@ -31,20 +31,18 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 4
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/k2;->a:Landroidx/camera/camera2/internal/o2;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/k2;->a:Landroidx/camera/camera2/internal/s2;
 
-    iget-object v1, p0, Landroidx/camera/camera2/internal/k2;->b:Ljava/util/List;
+    iget v1, p0, Landroidx/camera/camera2/internal/k2;->b:I
 
     iget-wide v2, p0, Landroidx/camera/camera2/internal/k2;->c:J
 
-    check-cast p1, Ljava/util/List;
+    invoke-static {v0, v1, v2, v3, p1}, Landroidx/camera/camera2/internal/s2;->d(Landroidx/camera/camera2/internal/s2;IJLandroid/hardware/camera2/TotalCaptureResult;)Z
 
-    invoke-static {v0, v1, v2, v3, p1}, Landroidx/camera/camera2/internal/o2;->J(Landroidx/camera/camera2/internal/o2;Ljava/util/List;JLjava/util/List;)Lcom/google/common/util/concurrent/ListenableFuture;
+    move-result p1
 
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

@@ -55,7 +55,7 @@
 
     iget-object v2, p0, Landroid/support/v4/os/ResultReceiver$b;->b:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v4/os/ResultReceiver;->b(ILandroid/os/Bundle;)V
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/os/ResultReceiver;->a(ILandroid/os/Bundle;)V
 
     return-void
 .end method

@@ -30,20 +30,32 @@
 .field public static final enum AUTO_CLOSE_TARGET:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
 .field public static final enum ESCAPE_NON_ASCII:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final enum FLUSH_PASSED_TO_STREAM:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
 .field public static final enum IGNORE_UNKNOWN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
 .field public static final enum QUOTE_FIELD_NAMES:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final enum QUOTE_NON_NUMERIC_NUMBERS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final enum STRICT_DUPLICATE_DETECTION:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
 .field public static final enum WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
 .field public static final enum WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 
 # instance fields
@@ -114,35 +126,35 @@
     .line 6
     new-instance v9, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    const-string v11, "WRITE_NUMBERS_AS_STRINGS"
+    const-string v11, "ESCAPE_NON_ASCII"
 
     const/4 v12, 0x5
 
     invoke-direct {v9, v11, v12, v2}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v9, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    sput-object v9, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->ESCAPE_NON_ASCII:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     .line 7
     new-instance v11, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    const-string v13, "WRITE_BIGDECIMAL_AS_PLAIN"
+    const-string v13, "WRITE_NUMBERS_AS_STRINGS"
 
     const/4 v14, 0x6
 
     invoke-direct {v11, v13, v14, v2}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v11, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    sput-object v11, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     .line 8
     new-instance v13, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
-    const-string v15, "ESCAPE_NON_ASCII"
+    const-string v15, "WRITE_BIGDECIMAL_AS_PLAIN"
 
     const/4 v14, 0x7
 
     invoke-direct {v13, v15, v14, v2}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v13, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->ESCAPE_NON_ASCII:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+    sput-object v13, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     .line 9
     new-instance v15, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;

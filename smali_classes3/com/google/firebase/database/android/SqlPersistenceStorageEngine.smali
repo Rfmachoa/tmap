@@ -355,7 +355,7 @@
 
     const-string v2, "Could not deserialize node: "
 
-    invoke-static {v2, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -584,18 +584,14 @@
     .line 18
     new-instance v12, Lcom/google/firebase/database/core/Path;
 
-    .line 19
-    invoke-virtual {v11}, Ljava/lang/String;->length()I
+    move-wide/from16 v18, v7
 
-    move-result v18
-
-    move-wide/from16 v19, v7
-
-    add-int/lit8 v7, v18, -0xa
+    const/16 v7, -0xa
 
     const/4 v8, 0x0
 
-    invoke-virtual {v11, v8, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    .line 19
+    invoke-static {v11, v7, v8}, Landroidx/databinding/s;->a(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v7
 
@@ -620,11 +616,11 @@
 
     const-string v11, "Loading split node with "
 
-    move-object/from16 v18, v12
+    move-object/from16 v20, v12
 
     const-string v12, " parts."
 
-    invoke-static {v11, v7, v12}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v11, v7, v12}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
@@ -637,7 +633,7 @@
     goto :goto_2
 
     :cond_1
-    move-object/from16 v18, v12
+    move-object/from16 v20, v12
 
     :goto_2
     add-int/2addr v7, v13
@@ -657,12 +653,12 @@
 
     add-int/lit8 v13, v7, -0x1
 
-    move-object/from16 v12, v18
+    move-object/from16 v12, v20
 
     goto :goto_3
 
     :cond_2
-    move-wide/from16 v19, v7
+    move-wide/from16 v18, v7
 
     .line 24
     invoke-virtual {v3, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -765,7 +761,7 @@
     :goto_5
     add-int/2addr v13, v7
 
-    move-wide/from16 v7, v19
+    move-wide/from16 v7, v18
 
     goto/16 :goto_1
 
@@ -797,7 +793,7 @@
     throw v3
 
     :cond_6
-    move-wide/from16 v19, v7
+    move-wide/from16 v18, v7
 
     .line 36
     invoke-virtual {v14}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -920,7 +916,7 @@
     const/4 v0, 0x4
 
     .line 46
-    invoke-static/range {v19 .. v20}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static/range {v18 .. v19}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -1001,7 +997,7 @@
     const-string v3, " OR (path > ? AND path < ?)"
 
     .line 5
-    invoke-static {v2, v3}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2800,7 +2796,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3688,7 +3684,7 @@
 
     const-string v3, ")"
 
-    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

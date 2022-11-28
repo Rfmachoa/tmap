@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->mb()V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Eb()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -71,7 +71,7 @@
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->d8()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->q8()Ljava/lang/String;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -117,7 +117,7 @@
     move-result-object p1
 
     .line 6
-    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->d8()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->q8()Ljava/lang/String;
 
     move-result-object p2
 
@@ -135,7 +135,7 @@
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     sget-object p2, Landroid/telephony/TelephonyManager;->EXTRA_STATE_IDLE:Ljava/lang/String;
@@ -151,11 +151,11 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->u()Lcom/skt/tmap/GlobalDataManager;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()Lcom/skt/tmap/GlobalDataManager;
 
     move-result-object p1
 
-    iget-boolean p1, p1, Lcom/skt/tmap/GlobalDataManager;->K:Z
+    iget-boolean p1, p1, Lcom/skt/tmap/GlobalDataManager;->J:Z
 
     const/4 p2, 0x1
 
@@ -164,7 +164,7 @@
     .line 9
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$5;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->o8(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->B8(Lcom/skt/tmap/activity/TmapNaviActivity;)V
 
     :cond_2
     :goto_0

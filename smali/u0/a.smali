@@ -1,186 +1,208 @@
-.class public Lu0/a;
-.super Landroidx/constraintlayout/solver/state/a;
-.source "AlignHorizontallyReference.java"
+.class public final Lu0/a;
+.super Ljava/lang/Object;
+.source "CoordinateTransform.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation build Landroidx/camera/view/TransformExperimental;
+.end annotation
+
+
+# static fields
+.field public static final b:Ljava/lang/String; = "CoordinateTransform"
+
+.field public static final c:Ljava/lang/String; = "The source viewport (%s) does not match the target viewport (%s). Please make sure they are associated with the same Viewport."
 
 
 # instance fields
-.field public e:F
-
-.field public f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
-
-.field public h:Ljava/lang/Object;
-
-.field public i:Ljava/lang/Object;
+.field public final a:Landroid/graphics/Matrix;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/constraintlayout/solver/state/State;)V
-    .locals 1
+.method public constructor <init>(Lu0/d;Lu0/d;)V
+    .locals 3
+    .param p1    # Lu0/d;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lu0/d;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    sget-object v0, Landroidx/constraintlayout/solver/state/State$Helper;->ALIGN_VERTICALLY:Landroidx/constraintlayout/solver/state/State$Helper;
-
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/solver/state/a;-><init>(Landroidx/constraintlayout/solver/state/State;Landroidx/constraintlayout/solver/state/State$Helper;)V
-
-    const/high16 p1, 0x3f000000    # 0.5f
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput p1, p0, Lu0/a;->e:F
+    invoke-virtual {p1}, Lu0/d;->b()Landroid/util/Size;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {p2}, Lu0/d;->b()Landroid/util/Size;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 4
+    invoke-static {v0, v2, v1, v2}, Ls0/a0;->f(Landroid/util/Size;ZLandroid/util/Size;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    .line 5
+    invoke-virtual {p1}, Lu0/d;->b()Landroid/util/Size;
+
+    move-result-object v1
+
+    aput-object v1, v0, v2
+
+    const/4 v1, 0x1
+
+    .line 6
+    invoke-virtual {p2}, Lu0/d;->b()Landroid/util/Size;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
+    const-string v1, "The source viewport (%s) does not match the target viewport (%s). Please make sure they are associated with the same Viewport."
+
+    .line 7
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "CoordinateTransform"
+
+    invoke-static {v1, v0}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 8
+    :cond_0
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object v0, p0, Lu0/a;->a:Landroid/graphics/Matrix;
+
+    .line 9
+    invoke-virtual {p1}, Lu0/d;->a()Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+
+    move-result p1
+
+    const-string v1, "The source transform cannot be inverted"
+
+    invoke-static {p1, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
+
+    .line 10
+    invoke-virtual {p2}, Lu0/d;->a()Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
+.method public a(Landroid/graphics/PointF;)V
     .locals 4
+    .param p1    # Landroid/graphics/PointF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/solver/state/a;->c:Ljava/util/ArrayList;
+    iget v1, p1, Landroid/graphics/PointF;->x:F
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    aput v1, v0, v2
 
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget v1, p1, Landroid/graphics/PointF;->y:F
 
-    move-result v1
+    const/4 v3, 0x1
 
-    if-eqz v1, :cond_5
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
+    aput v1, v0, v3
 
     .line 2
-    iget-object v2, p0, Landroidx/constraintlayout/solver/state/a;->a:Landroidx/constraintlayout/solver/state/State;
+    iget-object v1, p0, Lu0/a;->a:Landroid/graphics/Matrix;
 
-    invoke-virtual {v2, v1}, Landroidx/constraintlayout/solver/state/State;->e(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    move-result-object v1
+    invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->mapPoints([F)V
 
     .line 3
-    invoke-virtual {v1}, Landroidx/constraintlayout/solver/state/ConstraintReference;->o()Landroidx/constraintlayout/solver/state/ConstraintReference;
+    aget v1, v0, v2
+
+    iput v1, p1, Landroid/graphics/PointF;->x:F
 
     .line 4
-    iget-object v2, p0, Lu0/a;->f:Ljava/lang/Object;
+    aget v0, v0, v3
 
-    if-eqz v2, :cond_1
-
-    .line 5
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->U(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_1
-
-    .line 6
-    :cond_1
-    iget-object v2, p0, Lu0/a;->g:Ljava/lang/Object;
-
-    if-eqz v2, :cond_2
-
-    .line 7
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->T(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_1
-
-    .line 8
-    :cond_2
-    sget-object v2, Landroidx/constraintlayout/solver/state/State;->i:Ljava/lang/Integer;
-
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->U(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    .line 9
-    :goto_1
-    iget-object v2, p0, Lu0/a;->h:Ljava/lang/Object;
-
-    if-eqz v2, :cond_3
-
-    .line 10
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->u(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_2
-
-    .line 11
-    :cond_3
-    iget-object v2, p0, Lu0/a;->i:Ljava/lang/Object;
-
-    if-eqz v2, :cond_4
-
-    .line 12
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->t(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_2
-
-    .line 13
-    :cond_4
-    sget-object v2, Landroidx/constraintlayout/solver/state/State;->i:Ljava/lang/Integer;
-
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->t(Ljava/lang/Object;)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    .line 14
-    :goto_2
-    iget v2, p0, Lu0/a;->e:F
-
-    const/high16 v3, 0x3f000000    # 0.5f
-
-    cmpl-float v3, v2, v3
-
-    if-eqz v3, :cond_0
-
-    .line 15
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/solver/state/ConstraintReference;->D(F)Landroidx/constraintlayout/solver/state/ConstraintReference;
-
-    goto :goto_0
-
-    :cond_5
-    return-void
-.end method
-
-.method public f(F)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lu0/a;->e:F
+    iput v0, p1, Landroid/graphics/PointF;->y:F
 
     return-void
 .end method
 
-.method public g(Ljava/lang/Object;)V
-    .locals 0
+.method public b([F)V
+    .locals 1
+    .param p1    # [F
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Lu0/a;->i:Ljava/lang/Object;
+    iget-object v0, p0, Lu0/a;->a:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->mapPoints([F)V
 
     return-void
 .end method
 
-.method public h(Ljava/lang/Object;)V
-    .locals 0
+.method public c(Landroid/graphics/RectF;)V
+    .locals 1
+    .param p1    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Lu0/a;->h:Ljava/lang/Object;
+    iget-object v0, p0, Lu0/a;->a:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
     return-void
 .end method
 
-.method public i(Ljava/lang/Object;)V
-    .locals 0
+.method public d(Landroid/graphics/Matrix;)V
+    .locals 1
+    .param p1    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Lu0/a;->g:Ljava/lang/Object;
+    iget-object v0, p0, Lu0/a;->a:Landroid/graphics/Matrix;
 
-    return-void
-.end method
-
-.method public j(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lu0/a;->f:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
     return-void
 .end method

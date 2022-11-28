@@ -57,15 +57,15 @@
 
 
 # instance fields
-.field public final synthetic $continuation:Lkotlinx/coroutines/n;
+.field public final synthetic $continuation:Lkotlinx/coroutines/p;
 
 
 # direct methods
-.method public constructor <init>(Lkotlinx/coroutines/n;)V
+.method public constructor <init>(Lkotlinx/coroutines/p;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/n;
+    iput-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -103,7 +103,7 @@
     invoke-static {p2, p1}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/n;
+    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/p;
 
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$a;
 
@@ -242,7 +242,7 @@
     invoke-direct {p2, p1}, Lkotlin/KotlinNullPointerException;-><init>(Ljava/lang/String;)V
 
     .line 9
-    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/n;
+    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/p;
 
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$a;
 
@@ -260,7 +260,7 @@
 
     .line 10
     :cond_1
-    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/n;
+    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/p;
 
     sget-object v0, Lkotlin/Result;->Companion:Lkotlin/Result$a;
 
@@ -274,7 +274,7 @@
 
     .line 11
     :cond_2
-    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/n;
+    iget-object p1, p0, Lretrofit2/KotlinExtensions$await$2$2;->$continuation:Lkotlinx/coroutines/p;
 
     new-instance v0, Lretrofit2/HttpException;
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/constraintlayout/motion/widget/MotionLayout;->onNestedPreScroll(Landroid/view/View;II[II)V
+    value = Landroidx/constraintlayout/motion/widget/MotionLayout;->loadLayoutDescription(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Landroidx/constraintlayout/motion/widget/MotionLayout;
+.field public final synthetic a:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/constraintlayout/motion/widget/MotionLayout;Landroid/view/View;)V
+.method public constructor <init>(Landroidx/constraintlayout/motion/widget/MotionLayout;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$a;->b:Landroidx/constraintlayout/motion/widget/MotionLayout;
-
-    iput-object p2, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$a;->a:Landroid/view/View;
+    iput-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$a;->a:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +44,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$a;->a:Landroid/view/View;
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$a;->a:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Landroidx/constraintlayout/motion/widget/MotionLayout;->a(Landroidx/constraintlayout/motion/widget/MotionLayout;)Landroidx/constraintlayout/motion/widget/MotionLayout$k;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setNestedScrollingEnabled(Z)V
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/constraintlayout/motion/widget/MotionLayout$k;->a()V
 
     return-void
 .end method

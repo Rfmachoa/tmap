@@ -31,8 +31,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -42,18 +42,17 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;JJ)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(JJ)V"
-        }
-    .end annotation
+.method public constructor <init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
+    .locals 4
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$c;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
+    const-wide/16 v0, 0x1770
+
+    const-wide/16 v2, 0x3e8
+
+    .line 1
+    invoke-direct {p0, v0, v1, v2, v3}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
     return-void
 .end method
@@ -68,7 +67,7 @@
     const-string v1, "-------- finishTimer onFinish ---------"
 
     .line 1
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$c;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
@@ -98,7 +97,7 @@
 
     const-string v1, "TmapRouteSummaryViewModel"
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 

@@ -128,7 +128,7 @@
 
     const/4 v9, 0x0
 
-    goto/16 :goto_6
+    goto :goto_6
 
     :cond_2
     const/16 v6, 0x46
@@ -230,17 +230,7 @@
     :cond_7
     new-instance v0, Ljava/lang/NumberFormatException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v10, v8, v9}, Lq1/a;->a(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -331,17 +321,7 @@
     :cond_d
     new-instance v0, Ljava/lang/NumberFormatException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v10, v8, v9}, Lq1/a;->a(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -985,7 +965,7 @@
 
     const-string v1, "), need room for 6 bytes"
 
-    invoke-static {v0, p2, v1}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2, v1}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

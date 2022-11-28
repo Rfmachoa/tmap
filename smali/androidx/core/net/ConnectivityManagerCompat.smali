@@ -6,6 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/core/net/ConnectivityManagerCompat$b;,
+        Landroidx/core/net/ConnectivityManagerCompat$a;,
         Landroidx/core/net/ConnectivityManagerCompat$RestrictBackgroundStatus;
     }
 .end annotation
@@ -88,7 +90,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getRestrictBackgroundStatus()I
+    invoke-static {p0}, Landroidx/core/net/ConnectivityManagerCompat$b;->a(Landroid/net/ConnectivityManager;)I
 
     move-result p0
 
@@ -106,7 +108,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+    invoke-static {p0}, Landroidx/core/net/ConnectivityManagerCompat$a;->a(Landroid/net/ConnectivityManager;)Z
 
     move-result p0
 

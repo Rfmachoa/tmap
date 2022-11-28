@@ -15,32 +15,32 @@
 
 
 # instance fields
-.field public c:Z
+.field public a:Z
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
     .end annotation
 .end field
 
-.field public d:I
+.field public b:I
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
     .end annotation
 .end field
 
-.field public e:I
+.field public c:I
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
+
+.field public d:Z
+    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
+    .end annotation
+.end field
+
+.field public e:Z
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
     .end annotation
 .end field
 
 .field public f:Z
-    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
-    .end annotation
-.end field
-
-.field public g:Z
-    .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
-    .end annotation
-.end field
-
-.field public h:Z
 
 
 # direct methods
@@ -53,7 +53,7 @@
     const/4 p1, 0x0
 
     .line 6
-    iput-boolean p1, p0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     return-void
 .end method
@@ -65,7 +65,7 @@
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/LinearLayoutCompat$LayoutParams;-><init>(II)V
 
     .line 8
-    iput-boolean p3, p0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iput-boolean p3, p0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     return-void
 .end method
@@ -95,9 +95,9 @@
     invoke-direct {p0, p1}, Landroidx/appcompat/widget/LinearLayoutCompat$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 4
-    iget-boolean p1, p1, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iget-boolean p1, p1, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
-    iput-boolean p1, p0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->c:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/ActionMenuView$LayoutParams;->a:Z
 
     return-void
 .end method

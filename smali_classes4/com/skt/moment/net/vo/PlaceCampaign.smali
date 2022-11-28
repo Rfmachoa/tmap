@@ -118,6 +118,14 @@
 
 .method public setCategory(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "category"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->category:Ljava/lang/String;
@@ -127,6 +135,14 @@
 
 .method public setCouponYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->couponYn:Ljava/lang/String;
@@ -136,6 +152,14 @@
 
 .method public setLandingUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "landingUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->landingUrl:Ljava/lang/String;
@@ -145,6 +169,14 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->message:Ljava/lang/String;
@@ -154,6 +186,14 @@
 
 .method public setPlaceCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCampaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->placeCampaignId:Ljava/lang/Integer;
@@ -163,6 +203,14 @@
 
 .method public setPoiId(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "poiId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->poiId:Ljava/lang/String;
@@ -172,6 +220,14 @@
 
 .method public setReceiveCouponTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "receiveCouponTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->receiveCouponTitle:Ljava/lang/String;
@@ -181,6 +237,14 @@
 
 .method public setSeed(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seed"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->seed:Ljava/lang/Integer;
@@ -190,6 +254,14 @@
 
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "title"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/PlaceCampaign;->title:Ljava/lang/String;

@@ -18,50 +18,50 @@
 
 
 # instance fields
-.field private final clockProvider:Loi/a;
+.field private final clockProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final configProvider:Loi/a;
+.field private final configProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final packageNameProvider:Loi/a;
+.field private final packageNameProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final schemaManagerProvider:Loi/a;
+.field private final schemaManagerProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final wallClockProvider:Loi/a;
+.field private final wallClockProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
@@ -70,24 +70,24 @@
 
 
 # direct methods
-.method public constructor <init>(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)V
+.method public constructor <init>(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -97,41 +97,41 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->wallClockProvider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->wallClockProvider:Lsk/a;
 
     .line 3
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->clockProvider:Loi/a;
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->clockProvider:Lsk/a;
 
     .line 4
-    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->configProvider:Loi/a;
+    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->configProvider:Lsk/a;
 
     .line 5
-    iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->schemaManagerProvider:Loi/a;
+    iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->schemaManagerProvider:Lsk/a;
 
     .line 6
-    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->packageNameProvider:Loi/a;
+    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->packageNameProvider:Lsk/a;
 
     return-void
 .end method
 
-.method public static create(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;
+.method public static create(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/lang/String;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;"
@@ -153,7 +153,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;-><init>(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;-><init>(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)V
 
     return-object v6
 .end method
@@ -204,37 +204,37 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->wallClockProvider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->wallClockProvider:Lsk/a;
 
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/datatransport/runtime/time/Clock;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->clockProvider:Loi/a;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->clockProvider:Lsk/a;
 
-    invoke-interface {v1}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/datatransport/runtime/time/Clock;
 
-    iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->configProvider:Loi/a;
+    iget-object v2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->configProvider:Lsk/a;
 
-    invoke-interface {v2}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v2}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->schemaManagerProvider:Loi/a;
+    iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->schemaManagerProvider:Lsk/a;
 
-    invoke-interface {v3}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->packageNameProvider:Loi/a;
+    iget-object v4, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->packageNameProvider:Lsk/a;
 
-    invoke-static {v4}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->lazy(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
+    invoke-static {v4}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->lazy(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
 
     move-result-object v4
 

@@ -3,12 +3,12 @@
 .source "HiddenSettingMenu.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/skt/tmap/util/p0;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->N5(Lcom/skt/tmap/util/y;)V
+    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->U5(Landroid/widget/ListView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,18 +43,61 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public a(Lcom/skt/tmap/util/a0;)V
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0
         }
         names = {
-            "dialog",
-            "id"
+            "hiddenMenuListData"
         }
     .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$r0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->E5(Lcom/skt/tmap/activity/HiddenSettingMenu;Lcom/skt/tmap/util/a0;)V
+
+    return-void
+.end method
+
+.method public b(Lcom/skt/tmap/util/a0;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hiddenMenuListData"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$r0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/HiddenSettingMenu;->B5(Lcom/skt/tmap/activity/HiddenSettingMenu;)Lcom/skt/tmap/util/HiddenSettingData;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/tmap/util/HiddenSettingData;->b0()V
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$r0;->a:Lcom/skt/tmap/activity/HiddenSettingMenu;
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const-string/jumbo v0, "\uc800\uc7a5\ub418\uc5c8\uc2b5\ub2c8\ub2e4."
+
+    const/4 v1, 0x1
+
+    invoke-static {p1, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
     return-void
 .end method

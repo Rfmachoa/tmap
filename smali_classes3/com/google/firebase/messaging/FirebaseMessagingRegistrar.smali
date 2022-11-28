@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "FirebaseMessagingRegistrar.java"
 
 # interfaces
 .implements Lcom/google/firebase/components/ComponentRegistrar;
@@ -18,12 +18,23 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$getComponents$0(Lcom/google/firebase/components/ComponentContainer;)Lcom/google/firebase/messaging/FirebaseMessaging;
+.method public static synthetic a(Lcom/google/firebase/components/ComponentContainer;)Lcom/google/firebase/messaging/FirebaseMessaging;
+    .locals 0
+
+    invoke-static {p0}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->lambda$getComponents$0(Lcom/google/firebase/components/ComponentContainer;)Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static synthetic lambda$getComponents$0(Lcom/google/firebase/components/ComponentContainer;)Lcom/google/firebase/messaging/FirebaseMessaging;
     .locals 9
 
     .line 1
@@ -112,9 +123,6 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -131,13 +139,14 @@
     .line 1
     const-class v1, Lcom/google/firebase/messaging/FirebaseMessaging;
 
+    .line 2
     invoke-static {v1}, Lcom/google/firebase/components/Component;->builder(Ljava/lang/Class;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v1
 
     const-class v2, Lcom/google/firebase/FirebaseApp;
 
-    .line 2
+    .line 3
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -148,7 +157,7 @@
 
     const-class v2, Lcom/google/firebase/iid/internal/FirebaseInstanceIdInternal;
 
-    .line 3
+    .line 4
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->optional(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -159,7 +168,7 @@
 
     const-class v2, Lcom/google/firebase/platforminfo/UserAgentPublisher;
 
-    .line 4
+    .line 5
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->optionalProvider(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -170,7 +179,7 @@
 
     const-class v2, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;
 
-    .line 5
+    .line 6
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->optionalProvider(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -181,7 +190,7 @@
 
     const-class v2, Lcom/google/android/datatransport/TransportFactory;
 
-    .line 6
+    .line 7
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->optional(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -192,7 +201,7 @@
 
     const-class v2, Lcom/google/firebase/installations/FirebaseInstallationsApi;
 
-    .line 7
+    .line 8
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -203,7 +212,7 @@
 
     const-class v2, Lcom/google/firebase/events/Subscriber;
 
-    .line 8
+    .line 9
     invoke-static {v2}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v2
@@ -212,19 +221,19 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar$$ExternalSyntheticLambda0;->INSTANCE:Lcom/google/firebase/messaging/FirebaseMessagingRegistrar$$ExternalSyntheticLambda0;
+    sget-object v2, Lcom/google/firebase/messaging/t;->a:Lcom/google/firebase/messaging/t;
 
-    .line 9
+    .line 10
     invoke-virtual {v1, v2}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v1
 
-    .line 10
+    .line 11
     invoke-virtual {v1}, Lcom/google/firebase/components/Component$Builder;->alwaysEager()Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v1
 
-    .line 11
+    .line 12
     invoke-virtual {v1}, Lcom/google/firebase/components/Component$Builder;->build()Lcom/google/firebase/components/Component;
 
     move-result-object v1
@@ -235,9 +244,9 @@
 
     const-string v1, "fire-fcm"
 
-    const-string v2, "23.0.0"
+    const-string v2, "23.0.8"
 
-    .line 12
+    .line 13
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
 
     move-result-object v1
@@ -246,7 +255,7 @@
 
     aput-object v1, v0, v2
 
-    .line 13
+    .line 14
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

@@ -75,7 +75,7 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/blackbox/c$a;->a:Lcom/skt/tmap/blackbox/c;

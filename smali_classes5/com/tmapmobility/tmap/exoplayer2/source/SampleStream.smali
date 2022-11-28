@@ -13,11 +13,11 @@
 
 
 # static fields
-.field public static final e0:I = 0x1
+.field public static final p0:I = 0x1
 
-.field public static final f0:I = 0x2
+.field public static final q0:I = 0x2
 
-.field public static final g0:I = 0x4
+.field public static final r0:I = 0x4
 
 
 # virtual methods

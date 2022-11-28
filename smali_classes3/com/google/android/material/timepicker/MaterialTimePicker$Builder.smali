@@ -15,13 +15,35 @@
 
 
 # instance fields
-.field private inputMode:I
+.field private inputMode:Ljava/lang/Integer;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private negativeButtonText:Ljava/lang/CharSequence;
+
+.field private negativeButtonTextResId:I
+    .annotation build Landroidx/annotation/StringRes;
+    .end annotation
+.end field
+
+.field private overrideThemeResId:I
+
+.field private positiveButtonText:Ljava/lang/CharSequence;
+
+.field private positiveButtonTextResId:I
+    .annotation build Landroidx/annotation/StringRes;
+    .end annotation
+.end field
 
 .field private time:Lcom/google/android/material/timepicker/TimeModel;
 
 .field private titleText:Ljava/lang/CharSequence;
 
 .field private titleTextResId:I
+    .annotation build Landroidx/annotation/StringRes;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -43,6 +65,15 @@
     .line 3
     iput v0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->titleTextResId:I
 
+    .line 4
+    iput v0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->positiveButtonTextResId:I
+
+    .line 5
+    iput v0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->negativeButtonTextResId:I
+
+    .line 6
+    iput v0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->overrideThemeResId:I
+
     return-void
 .end method
 
@@ -55,13 +86,13 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)I
+.method public static synthetic access$100(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)Ljava/lang/Integer;
     .locals 0
 
     .line 1
-    iget p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->inputMode:I
+    iget-object p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->inputMode:Ljava/lang/Integer;
 
-    return p0
+    return-object p0
 .end method
 
 .method public static synthetic access$200(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)I
@@ -82,6 +113,51 @@
     return-object p0
 .end method
 
+.method public static synthetic access$400(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->positiveButtonTextResId:I
+
+    return p0
+.end method
+
+.method public static synthetic access$500(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->positiveButtonText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$600(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->negativeButtonTextResId:I
+
+    return p0
+.end method
+
+.method public static synthetic access$700(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->negativeButtonText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$800(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->overrideThemeResId:I
+
+    return p0
+.end method
+
 
 # virtual methods
 .method public build()Lcom/google/android/material/timepicker/MaterialTimePicker;
@@ -90,7 +166,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/google/android/material/timepicker/MaterialTimePicker;->access$1000(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)Lcom/google/android/material/timepicker/MaterialTimePicker;
+    invoke-static {p0}, Lcom/google/android/material/timepicker/MaterialTimePicker;->access$1400(Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;)Lcom/google/android/material/timepicker/MaterialTimePicker;
 
     move-result-object v0
 
@@ -108,6 +184,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iget-object v0, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->time:Lcom/google/android/material/timepicker/TimeModel;
 
@@ -121,8 +200,15 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
-    iput p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->inputMode:I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->inputMode:Ljava/lang/Integer;
 
     return-object p0
 .end method
@@ -132,10 +218,13 @@
     .param p1    # I
         .annotation build Landroidx/annotation/IntRange;
             from = 0x0L
-            to = 0x3cL
+            to = 0x3bL
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -146,9 +235,102 @@
     return-object p0
 .end method
 
+.method public setNegativeButtonText(I)Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;
+    .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->negativeButtonTextResId:I
+
+    return-object p0
+.end method
+
+.method public setNegativeButtonText(Ljava/lang/CharSequence;)Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;
+    .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->negativeButtonText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setPositiveButtonText(I)Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;
+    .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StringRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->positiveButtonTextResId:I
+
+    return-object p0
+.end method
+
+.method public setPositiveButtonText(Ljava/lang/CharSequence;)Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;
+    .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 2
+    iput-object p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->positiveButtonText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public setTheme(I)Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;
+    .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/StyleRes;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->overrideThemeResId:I
+
+    return-object p0
+.end method
+
 .method public setTimeFormat(I)Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;
     .locals 3
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -186,6 +368,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iput p1, p0, Lcom/google/android/material/timepicker/MaterialTimePicker$Builder;->titleTextResId:I
 
@@ -199,6 +384,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 2

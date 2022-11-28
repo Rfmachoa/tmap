@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/behavior/SwipeDismissBehavior$1;
-.super Ly1/d$c;
+.super Lp2/d$c;
 .source "SwipeDismissBehavior.java"
 
 
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    invoke-direct {p0}, Ly1/d$c;-><init>()V
+    invoke-direct {p0}, Lp2/d$c;-><init>()V
 
     const/4 p1, -0x1
 
@@ -375,9 +375,17 @@
     .end param
 
     .line 1
-    iget p3, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->originalCapturedViewLeft:I
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p3
 
     int-to-float p3, p3
+
+    iget-object p4, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
+
+    iget p4, p4, Lcom/google/android/material/behavior/SwipeDismissBehavior;->alphaStartSwipeDistance:F
+
+    mul-float/2addr p3, p4
 
     .line 2
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -388,66 +396,53 @@
 
     iget-object p5, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    iget p5, p5, Lcom/google/android/material/behavior/SwipeDismissBehavior;->alphaStartSwipeDistance:F
+    iget p5, p5, Lcom/google/android/material/behavior/SwipeDismissBehavior;->alphaEndSwipeDistance:F
 
     mul-float/2addr p4, p5
 
-    add-float/2addr p4, p3
-
     .line 3
-    iget p3, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->originalCapturedViewLeft:I
+    iget p5, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->originalCapturedViewLeft:I
 
-    int-to-float p3, p3
+    sub-int/2addr p2, p5
 
-    .line 4
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    move-result p5
-
-    int-to-float p5, p5
-
-    iget-object v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
-
-    iget v0, v0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->alphaEndSwipeDistance:F
-
-    mul-float/2addr p5, v0
-
-    add-float/2addr p5, p3
+    move-result p2
 
     int-to-float p2, p2
 
-    cmpg-float p3, p2, p4
+    cmpg-float p5, p2, p3
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    if-gtz p3, :cond_0
+    if-gtz p5, :cond_0
 
-    .line 5
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_0
 
     :cond_0
-    cmpl-float p3, p2, p5
+    cmpl-float p5, p2, p4
 
     const/4 v1, 0x0
 
-    if-ltz p3, :cond_1
+    if-ltz p5, :cond_1
 
-    .line 6
+    .line 5
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_0
 
-    .line 7
+    .line 6
     :cond_1
-    invoke-static {p4, p5, p2}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->fraction(FFF)F
+    invoke-static {p3, p4, p2}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->fraction(FFF)F
 
     move-result p2
 
     sub-float p2, v0, p2
 
-    .line 8
+    .line 7
     invoke-static {v1, p2, v0}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->clamp(FFF)F
 
     move-result p2
@@ -478,9 +473,15 @@
     .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->shouldDismiss(Landroid/view/View;F)Z
 
-    move-result p2
+    move-result v0
 
-    if-eqz p2, :cond_1
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x0
+
+    cmpg-float p2, p2, v0
+
+    if-ltz p2, :cond_1
 
     .line 4
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
@@ -491,41 +492,48 @@
 
     if-ge p2, v0, :cond_0
 
-    sub-int/2addr v0, p3
-
     goto :goto_0
 
     :cond_0
     add-int/2addr v0, p3
 
-    :goto_0
-    const/4 p2, 0x1
-
     goto :goto_1
 
     .line 5
     :cond_1
+    :goto_0
+    iget p2, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->originalCapturedViewLeft:I
+
+    sub-int v0, p2, p3
+
+    :goto_1
+    const/4 p2, 0x1
+
+    goto :goto_2
+
+    .line 6
+    :cond_2
     iget v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->originalCapturedViewLeft:I
 
     const/4 p2, 0x0
 
-    .line 6
-    :goto_1
+    .line 7
+    :goto_2
     iget-object p3, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
-    iget-object p3, p3, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Ly1/d;
+    iget-object p3, p3, Lcom/google/android/material/behavior/SwipeDismissBehavior;->viewDragHelper:Lp2/d;
 
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    invoke-virtual {p3, v0, v1}, Ly1/d;->V(II)Z
+    invoke-virtual {p3, v0, v1}, Lp2/d;->V(II)Z
 
     move-result p3
 
-    if-eqz p3, :cond_2
+    if-eqz p3, :cond_3
 
-    .line 7
+    .line 8
     new-instance p3, Lcom/google/android/material/behavior/SwipeDismissBehavior$SettleRunnable;
 
     iget-object v0, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
@@ -534,23 +542,23 @@
 
     invoke-static {p1, p3}, Landroidx/core/view/ViewCompat;->p1(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_2
-    if-eqz p2, :cond_3
+    :cond_3
+    if-eqz p2, :cond_4
 
-    .line 8
+    .line 9
     iget-object p2, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior$1;->this$0:Lcom/google/android/material/behavior/SwipeDismissBehavior;
 
     iget-object p2, p2, Lcom/google/android/material/behavior/SwipeDismissBehavior;->listener:Lcom/google/android/material/behavior/SwipeDismissBehavior$OnDismissListener;
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
-    .line 9
+    .line 10
     invoke-interface {p2, p1}, Lcom/google/android/material/behavior/SwipeDismissBehavior$OnDismissListener;->onDismiss(Landroid/view/View;)V
 
-    :cond_3
-    :goto_2
+    :cond_4
+    :goto_3
     return-void
 .end method
 

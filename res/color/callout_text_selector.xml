@@ -2,5 +2,5 @@
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_enabled="false" android:color="@color/color_cccccc" />
-    <item android:color="@color/color_3673ee" />
+    <item android:color="@color/primary_blue_500" />
 </selector>

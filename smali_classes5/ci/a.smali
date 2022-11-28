@@ -1,18 +1,14 @@
 .class public interface abstract Lci/a;
 .super Ljava/lang/Object;
-.source "Action.java"
+.source "CookieSpecPNames.java"
 
 
 # annotations
-.annotation runtime Ljava/lang/FunctionalInterface;
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# virtual methods
-.method public abstract run()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Throwable;
-        }
-    .end annotation
-.end method
+# static fields
+.field public static final a:Ljava/lang/String; = "http.protocol.cookie-datepatterns"
+
+.field public static final b:Ljava/lang/String; = "http.protocol.single-cookie-header"

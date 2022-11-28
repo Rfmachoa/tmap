@@ -110,7 +110,7 @@
 
 
 # virtual methods
-.method public a(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;)V
+.method public b(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;)V
     .locals 1
 
     .line 1
@@ -119,7 +119,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;->l0(Ljava/lang/CharSequence;)Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;
+    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;->j0(Ljava/lang/CharSequence;)Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;
 
     :cond_0
     return-void

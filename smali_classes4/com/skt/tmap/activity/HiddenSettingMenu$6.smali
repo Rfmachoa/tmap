@@ -17,7 +17,7 @@
     value = {
         "Ljava/util/LinkedHashMap<",
         "Ljava/lang/String;",
-        "Ljava/lang/Integer;",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -44,25 +44,17 @@
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const/4 p1, 0x1
-
     .line 2
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    move-result-object p1
-
-    const-string/jumbo v0, "\uc0c1\uc6a9"
+    const-string/jumbo v0, "\uc0c1\uc6a9\uc11c\ubc84"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
-
     .line 3
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result-object p1
-
-    const-string/jumbo v0, "\uac1c\ubc1c"
+    const-string/jumbo v0, "\uac1c\ubc1c\uc11c\ubc84"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

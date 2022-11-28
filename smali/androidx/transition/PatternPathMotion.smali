@@ -47,6 +47,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "RestrictedApi"
@@ -85,14 +93,14 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, v1}, Lz0/i;->m(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, p2, v0, v1}, Ls1/l;->m(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
     .line 11
-    invoke-static {p2}, Lc1/p;->e(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {p2}, Lv1/p;->e(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p2
 
@@ -316,6 +324,8 @@
 
 .method public getPath(FFFF)Landroid/graphics/Path;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     sub-float/2addr p3, p1
 

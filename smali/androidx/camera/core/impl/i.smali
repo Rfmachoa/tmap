@@ -1,446 +1,751 @@
 .class public final Landroidx/camera/core/impl/i;
 .super Ljava/lang/Object;
-.source "DeferrableSurfaces.java"
+.source "ImageCaptureConfig.java"
+
+# interfaces
+.implements Landroidx/camera/core/impl/q;
+.implements Landroidx/camera/core/impl/ImageOutputConfig;
+.implements Ld0/f;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroidx/camera/core/impl/q<",
+        "Landroidx/camera/core/ImageCapture;",
+        ">;",
+        "Landroidx/camera/core/impl/ImageOutputConfig;",
+        "Ld0/f;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final E:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final F:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final G:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Lb0/e0;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final H:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Lb0/f0;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final I:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final J:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final K:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Landroidx/camera/core/o1;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final L:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final M:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final N:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final O:Landroidx/camera/core/impl/Config$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/camera/core/impl/Config$a<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final D:Landroidx/camera/core/impl/m;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 1
+    const-class v0, Ljava/lang/Integer;
+
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const-string v2, "camerax.core.imageCapture.captureMode"
+
+    .line 2
+    invoke-static {v2, v1}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->E:Landroidx/camera/core/impl/Config$a;
+
+    const-string v2, "camerax.core.imageCapture.flashMode"
+
+    .line 3
+    invoke-static {v2, v1}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->F:Landroidx/camera/core/impl/Config$a;
+
+    .line 4
+    const-class v2, Lb0/e0;
+
+    const-string v3, "camerax.core.imageCapture.captureBundle"
+
+    .line 5
+    invoke-static {v3, v2}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->G:Landroidx/camera/core/impl/Config$a;
+
+    .line 6
+    const-class v2, Lb0/f0;
+
+    const-string v3, "camerax.core.imageCapture.captureProcessor"
+
+    .line 7
+    invoke-static {v3, v2}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->H:Landroidx/camera/core/impl/Config$a;
+
+    const-string v2, "camerax.core.imageCapture.bufferFormat"
+
+    .line 8
+    invoke-static {v2, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->I:Landroidx/camera/core/impl/Config$a;
+
+    const-string v2, "camerax.core.imageCapture.maxCaptureStages"
+
+    .line 9
+    invoke-static {v2, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/camera/core/impl/i;->J:Landroidx/camera/core/impl/Config$a;
+
+    .line 10
+    const-class v0, Landroidx/camera/core/o1;
+
+    const-string v2, "camerax.core.imageCapture.imageReaderProxyProvider"
+
+    .line 11
+    invoke-static {v2, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/camera/core/impl/i;->K:Landroidx/camera/core/impl/Config$a;
+
+    .line 12
+    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    const-string v2, "camerax.core.imageCapture.useSoftwareJpegEncoder"
+
+    .line 13
+    invoke-static {v2, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->L:Landroidx/camera/core/impl/Config$a;
+
+    const-string v2, "camerax.core.imageCapture.flashType"
+
+    .line 14
+    invoke-static {v2, v1}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v2
+
+    sput-object v2, Landroidx/camera/core/impl/i;->M:Landroidx/camera/core/impl/Config$a;
+
+    const-string v2, "camerax.core.imageCapture.jpegCompressionQuality"
+
+    .line 15
+    invoke-static {v2, v1}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v1
+
+    sput-object v1, Landroidx/camera/core/impl/i;->N:Landroidx/camera/core/impl/Config$a;
+
+    const-string v1, "camerax.core.imageCapture.sessionProcessorEnabled"
+
+    .line 16
+    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/camera/core/impl/i;->O:Landroidx/camera/core/impl/Config$a;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/camera/core/impl/m;)V
     .locals 0
+    .param p1    # Landroidx/camera/core/impl/m;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/google/common/util/concurrent/ListenableFuture;)V
-    .locals 0
-
-    invoke-static {p0}, Landroidx/camera/core/impl/i;->i(Lcom/google/common/util/concurrent/ListenableFuture;)V
+    .line 2
+    iput-object p1, p0, Landroidx/camera/core/impl/i;->D:Landroidx/camera/core/impl/m;
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-    .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Landroidx/camera/core/impl/i;->g(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Ljava/util/List;Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/Executor;JZLandroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static/range {p0 .. p6}, Landroidx/camera/core/impl/i;->j(Ljava/util/List;Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/Executor;JZLandroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic d(Ljava/util/concurrent/Executor;Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Landroidx/camera/core/impl/i;->h(Ljava/util/concurrent/Executor;Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-
-    return-void
-.end method
-
-.method public static e(Ljava/util/List;)V
+# virtual methods
+.method public Q(Ljava/util/concurrent/Executor;)Ljava/util/concurrent/Executor;
     .locals 1
-    .param p0    # Ljava/util/List;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surfaceList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/DeferrableSurface;",
-            ">;)V"
-        }
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    sget-object v0, Ld0/f;->y:Landroidx/camera/core/impl/Config$a;
 
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/core/impl/DeferrableSurface;
-
-    .line 2
-    invoke-virtual {v0}, Landroidx/camera/core/impl/DeferrableSurface;->d()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static f(Ljava/util/List;)V
-    .locals 3
-    .param p0    # Ljava/util/List;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surfaceList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/DeferrableSurface;",
-            ">;)V"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    .line 2
-    :cond_0
-    :try_start_0
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/core/impl/DeferrableSurface;
-
-    invoke-virtual {v1}, Landroidx/camera/core/impl/DeferrableSurface;->h()V
-
-    add-int/lit8 v0, v0, 0x1
-
-    .line 3
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-    :try_end_0
-    .catch Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-lt v0, v1, :cond_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
-
-    add-int/lit8 v0, v0, -0x1
-
-    :goto_0
-    if-ltz v0, :cond_1
-
-    .line 4
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/camera/core/impl/DeferrableSurface;
-
-    invoke-virtual {v2}, Landroidx/camera/core/impl/DeferrableSurface;->d()V
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    throw v1
-
-    :cond_2
-    :goto_1
-    return-void
-.end method
-
-.method public static synthetic g(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-    .locals 2
-
-    .line 1
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    const-string v1, "Cannot complete surfaceList within "
-
-    invoke-static {v1, p2, p3}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->f(Ljava/lang/Throwable;)Z
-
-    const/4 p1, 0x1
-
-    .line 3
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public static synthetic h(Ljava/util/concurrent/Executor;Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-    .locals 1
-
-    .line 1
-    new-instance v0, Lx/f0;
-
-    invoke-direct {v0, p1, p2, p3, p4}, Lx/f0;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-
-    invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static synthetic i(Lcom/google/common/util/concurrent/ListenableFuture;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-interface {p0, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    return-void
-.end method
-
-.method public static synthetic j(Ljava/util/List;Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/Executor;JZLandroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/f;->n(Ljava/util/Collection;)Lcom/google/common/util/concurrent/ListenableFuture;
-
-    move-result-object p0
-
-    .line 2
-    new-instance v6, Lx/g0;
-
-    move-object v0, v6
-
-    move-object v1, p2
-
-    move-object v2, p0
-
-    move-object v3, p6
-
-    move-wide v4, p3
-
-    invoke-direct/range {v0 .. v5}, Lx/g0;-><init>(Ljava/util/concurrent/Executor;Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {p1, v6, p3, p4, v0}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    .line 3
-    new-instance p3, Lx/e0;
+    check-cast p1, Ljava/util/concurrent/Executor;
 
-    invoke-direct {p3, p0}, Lx/e0;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;)V
-
-    invoke-virtual {p6, p3, p2}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    .line 4
-    new-instance p3, Landroidx/camera/core/impl/i$a;
-
-    invoke-direct {p3, p5, p6, p1}, Landroidx/camera/core/impl/i$a;-><init>(ZLandroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/ScheduledFuture;)V
-
-    invoke-static {p0, p3, p2}, Landroidx/camera/core/impl/utils/futures/f;->b(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/camera/core/impl/utils/futures/c;Ljava/util/concurrent/Executor;)V
-
-    const-string p0, "surfaceList"
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public static k(Ljava/util/Collection;ZJLjava/util/concurrent/Executor;Ljava/util/concurrent/ScheduledExecutorService;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 7
-    .param p0    # Ljava/util/Collection;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p5    # Ljava/util/concurrent/ScheduledExecutorService;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public W()Ljava/util/concurrent/Executor;
+    .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "deferrableSurfaces",
-            "removeNullSurfaces",
-            "timeout",
-            "executor",
-            "scheduledExecutorService"
-        }
-    .end annotation
+    .line 1
+    sget-object v0, Ld0/f;->y:Landroidx/camera/core/impl/Config$a;
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection<",
-            "Landroidx/camera/core/impl/DeferrableSurface;",
-            ">;ZJ",
-            "Ljava/util/concurrent/Executor;",
-            "Ljava/util/concurrent/ScheduledExecutorService;",
-            ")",
-            "Lcom/google/common/util/concurrent/ListenableFuture<",
-            "Ljava/util/List<",
-            "Landroid/view/Surface;",
-            ">;>;"
-        }
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    return-object v0
+.end method
+
+.method public a()Landroidx/camera/core/impl/Config;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    new-instance v1, Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/camera/core/impl/i;->D:Landroidx/camera/core/impl/m;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    return-object v0
+.end method
 
-    .line 2
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+.method public g0()Ljava/lang/Integer;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    move-result-object p0
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->I:Landroidx/camera/core/impl/Config$a;
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public h0(Ljava/lang/Integer;)Ljava/lang/Integer;
+    .locals 1
+    .param p1    # Ljava/lang/Integer;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->I:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    return-object p1
+.end method
+
+.method public i0()Lb0/e0;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->G:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb0/e0;
+
+    return-object v0
+.end method
+
+.method public j0(Lb0/e0;)Lb0/e0;
+    .locals 1
+    .param p1    # Lb0/e0;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->G:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb0/e0;
+
+    return-object p1
+.end method
+
+.method public k0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->E:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/core/impl/DeferrableSurface;
-
-    .line 3
-    invoke-virtual {v0}, Landroidx/camera/core/impl/DeferrableSurface;->e()Lcom/google/common/util/concurrent/ListenableFuture;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    new-instance p0, Lx/d0;
-
-    move-object v0, p0
-
-    move-object v2, p5
-
-    move-object v3, p4
-
-    move-wide v4, p2
-
-    move v6, p1
-
-    invoke-direct/range {v0 .. v6}, Lx/d0;-><init>(Ljava/util/List;Ljava/util/concurrent/ScheduledExecutorService;Ljava/util/concurrent/Executor;JZ)V
-
-    invoke-static {p0}, Landroidx/concurrent/futures/CallbackToFutureAdapter;->a(Landroidx/concurrent/futures/CallbackToFutureAdapter$b;)Lcom/google/common/util/concurrent/ListenableFuture;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method
 
-.method public static l(Ljava/util/List;)Z
-    .locals 0
-    .param p0    # Ljava/util/List;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "surfaceList"
-        }
+.method public l0()Lb0/f0;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->H:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb0/f0;
+
+    return-object v0
+.end method
+
+.method public m0(Lb0/f0;)Lb0/f0;
+    .locals 1
+    .param p1    # Lb0/f0;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->H:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb0/f0;
+
+    return-object p1
+.end method
+
+.method public n0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->F:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public o0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->F:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public p0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->M:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public q()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/j;->h:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public q0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->M:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public r0()Landroidx/camera/core/o1;
+    .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
         value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/DeferrableSurface;",
-            ">;)Z"
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
     .line 1
-    :try_start_0
-    invoke-static {p0}, Landroidx/camera/core/impl/i;->f(Ljava/util/List;)V
-    :try_end_0
-    .catch Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Landroidx/camera/core/impl/i;->K:Landroidx/camera/core/impl/Config$a;
 
-    const/4 p0, 0x1
+    const/4 v1, 0x0
 
-    return p0
+    invoke-interface {p0, v0, v1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :catch_0
-    const/4 p0, 0x0
+    move-result-object v0
 
-    return p0
+    check-cast v0, Landroidx/camera/core/o1;
+
+    return-object v0
+.end method
+
+.method public s0()I
+    .locals 1
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x1L
+        to = 0x64L
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->N:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public t0(I)I
+    .locals 1
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+            to = 0x64L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/IntRange;
+        from = 0x1L
+        to = 0x64L
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->N:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public u0()I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->J:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->c(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public v0(I)I
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->J:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public w0()Z
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->E:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {p0, v0}, Landroidx/camera/core/impl/o;->d(Landroidx/camera/core/impl/Config$a;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public x0()Z
+    .locals 2
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->O:Landroidx/camera/core/impl/Config$a;
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p0, v0, v1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public y0()Z
+    .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/i;->L:Landroidx/camera/core/impl/Config$a;
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p0, v0, v1}, Landroidx/camera/core/impl/o;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
 .end method

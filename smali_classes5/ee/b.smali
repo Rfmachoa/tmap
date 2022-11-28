@@ -1,137 +1,233 @@
-.class public final Lee/b;
-.super Ljava/lang/Object;
-.source "EventMessageEncoder.java"
+.class public abstract Lee/b;
+.super Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
+.source "MapOverlayItem.java"
+
+
+# static fields
+.field public static final A:I = 0x10000
+
+.field public static final B:I = 0x103ff
+
+.field public static final C:I = 0x1
+
+.field public static final D:I = 0x2
+
+.field public static final p:I = 0x1
+
+.field public static final q:I = 0x2
+
+.field public static final r:I = 0x4
+
+.field public static final s:I = 0x8
+
+.field public static final t:I = 0x10
+
+.field public static final u:I = 0x20
+
+.field public static final v:I = 0x40
+
+.field public static final w:I = 0x80
+
+.field public static final x:I = 0x100
+
+.field public static final y:I = 0x200
+
+.field public static final z:I = 0x300
 
 
 # instance fields
-.field public final a:Ljava/io/ByteArrayOutputStream;
+.field public d:I
 
-.field public final b:Ljava/io/DataOutputStream;
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Z
+
+.field public o:[F
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/io/ByteArrayOutputStream;
-
-    const/16 v1, 0x200
-
-    invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
-
-    iput-object v0, p0, Lee/b;->a:Ljava/io/ByteArrayOutputStream;
-
-    .line 3
-    new-instance v1, Ljava/io/DataOutputStream;
-
-    invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
-
-    iput-object v1, p0, Lee/b;->b:Ljava/io/DataOutputStream;
-
-    return-void
-.end method
-
-.method public static b(Ljava/io/DataOutputStream;Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
+.method public constructor <init>(Ljava/lang/String;IIII)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "id",
+            "coordX",
+            "coordY",
+            "itemType",
+            "positionType"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;-><init>(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     .line 2
-    invoke-virtual {p0, p1}, Ljava/io/DataOutputStream;->writeByte(I)V
+    iput p1, p0, Lee/b;->f:I
+
+    const/4 v0, -0x1
+
+    .line 3
+    iput v0, p0, Lee/b;->g:I
+
+    const/4 v0, 0x1
+
+    .line 4
+    iput v0, p0, Lee/b;->i:I
+
+    .line 5
+    iput p1, p0, Lee/b;->j:I
+
+    .line 6
+    iput p1, p0, Lee/b;->k:I
+
+    .line 7
+    iput-boolean v0, p0, Lee/b;->l:Z
+
+    .line 8
+    iput-boolean v0, p0, Lee/b;->m:Z
+
+    .line 9
+    iput-boolean p1, p0, Lee/b;->n:Z
+
+    .line 10
+    iput p2, p0, Lee/b;->d:I
+
+    .line 11
+    iput p3, p0, Lee/b;->e:I
+
+    .line 12
+    iput p4, p0, Lee/b;->h:I
+
+    .line 13
+    iput p5, p0, Lee/b;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;)[B
-    .locals 3
+.method public abstract b()V
+.end method
+
+.method public abstract c(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needTextureUnload"
+        }
+    .end annotation
+.end method
+
+.method public abstract d(II)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
+    .end annotation
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public f(Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clickable"
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lee/b;->a:Ljava/io/ByteArrayOutputStream;
+    iput-boolean p1, p0, Lee/b;->m:Z
 
-    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->reset()V
+    return-void
+.end method
+
+.method public g(Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->setVisible(Z)V
 
     .line 2
-    :try_start_0
-    iget-object v0, p0, Lee/b;->b:Ljava/io/DataOutputStream;
+    iput-boolean p1, p0, Lee/b;->l:Z
 
-    iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Lee/b;->b(Ljava/io/DataOutputStream;Ljava/lang/String;)V
+.method public h(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "level"
+        }
+    .end annotation
 
-    .line 3
-    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->b:Ljava/lang/String;
+    .line 1
+    iput p1, p0, Lee/b;->g:I
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    goto :goto_0
+.method public setClicked(Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clicked"
+        }
+    .end annotation
 
-    :cond_0
-    const-string v0, ""
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->setClicked(Z)V
 
-    .line 4
-    :goto_0
-    iget-object v1, p0, Lee/b;->b:Ljava/io/DataOutputStream;
-
-    invoke-static {v1, v0}, Lee/b;->b(Ljava/io/DataOutputStream;Ljava/lang/String;)V
-
-    .line 5
-    iget-object v0, p0, Lee/b;->b:Ljava/io/DataOutputStream;
-
-    iget-wide v1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
-
-    .line 6
-    iget-object v0, p0, Lee/b;->b:Ljava/io/DataOutputStream;
-
-    iget-wide v1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
-
-    .line 7
-    iget-object v0, p0, Lee/b;->b:Ljava/io/DataOutputStream;
-
-    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->e:[B
-
-    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->write([B)V
-
-    .line 8
-    iget-object p1, p0, Lee/b;->b:Ljava/io/DataOutputStream;
-
-    invoke-virtual {p1}, Ljava/io/DataOutputStream;->flush()V
-
-    .line 9
-    iget-object p1, p0, Lee/b;->a:Ljava/io/ByteArrayOutputStream;
-
-    invoke-virtual {p1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    .line 10
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-void
 .end method

@@ -60,7 +60,7 @@
 
     iget-wide v2, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/i$a;->a:J
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->q(JJ)I
+    invoke-static {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->q(JJ)I
 
     move-result p1
 

@@ -1,20 +1,17 @@
 .class public interface abstract Lvf/e;
 .super Ljava/lang/Object;
-.source "PrivateKeyStrategy.java"
+.source "CityBorderElementOrBuilder.java"
+
+# interfaces
+.implements Lcom/google/protobuf/MessageLiteOrBuilder;
 
 
 # virtual methods
-.method public abstract a(Ljava/util/Map;Ljava/net/Socket;)Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lvf/d;",
-            ">;",
-            "Ljava/net/Socket;",
-            ")",
-            "Ljava/lang/String;"
-        }
-    .end annotation
+.method public abstract A3()I
+.end method
+
+.method public abstract g()I
+.end method
+
+.method public abstract l2()I
 .end method

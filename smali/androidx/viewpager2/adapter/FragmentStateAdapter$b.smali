@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public m(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
+.method public onFragmentViewCreated(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/FragmentManager;
         .annotation build Landroidx/annotation/NonNull;
@@ -65,7 +65,7 @@
     if-ne p2, p4, :cond_0
 
     .line 2
-    invoke-virtual {p1, p0}, Landroidx/fragment/app/FragmentManager;->T1(Landroidx/fragment/app/FragmentManager$m;)V
+    invoke-virtual {p1, p0}, Landroidx/fragment/app/FragmentManager;->f2(Landroidx/fragment/app/FragmentManager$m;)V
 
     .line 3
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$b;->c:Landroidx/viewpager2/adapter/FragmentStateAdapter;

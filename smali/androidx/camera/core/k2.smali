@@ -7,16 +7,20 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/m2;
+.field public final synthetic a:Landroidx/camera/core/i2$f;
+
+.field public final synthetic b:Ljava/lang/Exception;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/m2;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/i2$f;Ljava/lang/Exception;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/k2;->a:Landroidx/camera/core/m2;
+    iput-object p1, p0, Landroidx/camera/core/k2;->a:Landroidx/camera/core/i2$f;
+
+    iput-object p2, p0, Landroidx/camera/core/k2;->b:Ljava/lang/Exception;
 
     return-void
 .end method
@@ -24,11 +28,13 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Landroidx/camera/core/k2;->a:Landroidx/camera/core/m2;
+    iget-object v0, p0, Landroidx/camera/core/k2;->a:Landroidx/camera/core/i2$f;
 
-    invoke-static {v0}, Landroidx/camera/core/m2;->m(Landroidx/camera/core/m2;)V
+    iget-object v1, p0, Landroidx/camera/core/k2;->b:Ljava/lang/Exception;
+
+    invoke-static {v0, v1}, Landroidx/camera/core/i2$c;->a(Landroidx/camera/core/i2$f;Ljava/lang/Exception;)V
 
     return-void
 .end method

@@ -1,125 +1,118 @@
-.class public interface abstract Ll0/d;
-.super Ljava/lang/Object;
-.source "ResultManager.java"
-
-# interfaces
-.implements Ll0/a;
+.class public final Ll0/d;
+.super Ll0/f$d;
+.source "AutoValue_Camera2OutputConfigBuilder_SurfaceConfig.java"
 
 
-# annotations
-.annotation build Landroidx/annotation/MainThread;
-.end annotation
-
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
+# instance fields
+.field public final e:Landroid/view/Surface;
 
 
 # direct methods
-.method public static d(Landroidx/car/app/CarContext;)Ll0/d;
-    .locals 2
-    .param p0    # Landroidx/car/app/CarContext;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalStateException;
-        }
-    .end annotation
+.method public constructor <init>(Landroid/view/Surface;)V
+    .locals 1
 
     .line 1
-    :try_start_0
-    invoke-static {p0}, Landroidx/car/app/CarAppMetadataHolderService;->a(Landroid/content/Context;)Landroid/content/pm/ServiceInfo;
+    invoke-direct {p0}, Ll0/f$d;-><init>()V
 
-    move-result-object p0
-
-    const/4 v0, 0x0
+    const-string v0, "Null surface"
 
     .line 2
-    iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
-
-    if-eqz p0, :cond_0
-
-    const-string v0, "androidx.car.app.CarAppMetadataHolderService.RESULT_MANAGER"
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Ll0/d;->e:Landroid/view/Surface;
 
-    move-result-object v0
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    .line 4
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Class;
-
-    .line 5
-    invoke-virtual {p0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object p0
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ll0/d;
-
-    return-object p0
-
-    .line 6
-    :cond_1
-    new-instance p0, Ljava/lang/ClassNotFoundException;
-
-    const-string v0, "ResultManager metadata could not be found"
-
-    invoke-direct {p0, v0}, Ljava/lang/ClassNotFoundException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 7
-    :catch_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "ResultManager not configured. Did you forget to add a dependency on the app-automotive artifact?"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Landroid/content/ComponentName;
-    .annotation build Landroidx/annotation/Nullable;
+.method public c()Landroid/view/Surface;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
+
+    .line 1
+    iget-object v0, p0, Ll0/d;->e:Landroid/view/Surface;
+
+    return-object v0
 .end method
 
-.method public abstract b(ILandroid/content/Intent;)V
-    .param p2    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 1
+    :cond_0
+    instance-of v0, p1, Ll0/f$d;
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    check-cast p1, Ll0/f$d;
+
+    .line 3
+    iget-object v0, p0, Ll0/d;->e:Landroid/view/Surface;
+
+    invoke-virtual {p1}, Ll0/f$d;->c()Landroid/view/Surface;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Ll0/d;->e:Landroid/view/Surface;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "SurfaceConfig{surface="
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ll0/d;->e:Landroid/view/Surface;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

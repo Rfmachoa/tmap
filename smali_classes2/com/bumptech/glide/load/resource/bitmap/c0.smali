@@ -3,7 +3,7 @@
 .source "StreamBitmapDecoder.java"
 
 # interfaces
-.implements Lu4/f;
+.implements Lr6/f;
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lu4/f<",
+        "Lr6/f<",
         "Ljava/io/InputStream;",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -48,13 +48,13 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
+.method public bridge synthetic a(Ljava/lang/Object;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/e;
+    .param p4    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -67,20 +67,20 @@
     .line 1
     check-cast p1, Ljava/io/InputStream;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/c0;->c(Ljava/io/InputStream;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/c0;->c(Ljava/io/InputStream;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic b(Ljava/lang/Object;Lu4/e;)Z
+.method public bridge synthetic b(Ljava/lang/Object;Lr6/e;)Z
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/e;
+    .param p2    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -93,20 +93,20 @@
     .line 1
     check-cast p1, Ljava/io/InputStream;
 
-    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/c0;->d(Ljava/io/InputStream;Lu4/e;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/c0;->d(Ljava/io/InputStream;Lr6/e;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public c(Ljava/io/InputStream;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
+.method public c(Ljava/io/InputStream;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
     .locals 9
     .param p1    # Ljava/io/InputStream;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/e;
+    .param p4    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -115,7 +115,7 @@
             "(",
             "Ljava/io/InputStream;",
             "II",
-            "Lu4/e;",
+            "Lr6/e;",
             ")",
             "Lcom/bumptech/glide/load/engine/s<",
             "Landroid/graphics/Bitmap;",
@@ -159,19 +159,19 @@
 
     .line 4
     :goto_0
-    invoke-static {p1}, Lm5/e;->c(Ljava/io/InputStream;)Lm5/e;
+    invoke-static {p1}, Lj7/e;->c(Ljava/io/InputStream;)Lj7/e;
 
     move-result-object v1
 
     .line 5
-    new-instance v3, Lm5/j;
+    new-instance v3, Lj7/k;
 
-    invoke-direct {v3, v1}, Lm5/j;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v3, v1}, Lj7/k;-><init>(Ljava/io/InputStream;)V
 
     .line 6
     new-instance v7, Lcom/bumptech/glide/load/resource/bitmap/c0$a;
 
-    invoke-direct {v7, p1, v1}, Lcom/bumptech/glide/load/resource/bitmap/c0$a;-><init>(Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;Lm5/e;)V
+    invoke-direct {v7, p1, v1}, Lcom/bumptech/glide/load/resource/bitmap/c0$a;-><init>(Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;Lj7/e;)V
 
     .line 7
     :try_start_0
@@ -183,14 +183,14 @@
 
     move-object v6, p4
 
-    invoke-virtual/range {v2 .. v7}, Lcom/bumptech/glide/load/resource/bitmap/o;->g(Ljava/io/InputStream;IILu4/e;Lcom/bumptech/glide/load/resource/bitmap/o$b;)Lcom/bumptech/glide/load/engine/s;
+    invoke-virtual/range {v2 .. v7}, Lcom/bumptech/glide/load/resource/bitmap/o;->g(Ljava/io/InputStream;IILr6/e;Lcom/bumptech/glide/load/resource/bitmap/o$b;)Lcom/bumptech/glide/load/engine/s;
 
     move-result-object p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 8
-    invoke-virtual {v1}, Lm5/e;->release()V
+    invoke-virtual {v1}, Lj7/e;->release()V
 
     if-eqz v0, :cond_1
 
@@ -204,7 +204,7 @@
     move-exception p2
 
     .line 10
-    invoke-virtual {v1}, Lm5/e;->release()V
+    invoke-virtual {v1}, Lj7/e;->release()V
 
     if-eqz v0, :cond_2
 
@@ -215,13 +215,13 @@
     throw p2
 .end method
 
-.method public d(Ljava/io/InputStream;Lu4/e;)Z
+.method public d(Ljava/io/InputStream;Lr6/e;)Z
     .locals 0
     .param p1    # Ljava/io/InputStream;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/e;
+    .param p2    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -229,7 +229,7 @@
     .line 1
     iget-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/c0;->a:Lcom/bumptech/glide/load/resource/bitmap/o;
 
-    invoke-virtual {p2, p1}, Lcom/bumptech/glide/load/resource/bitmap/o;->p(Ljava/io/InputStream;)Z
+    invoke-virtual {p2, p1}, Lcom/bumptech/glide/load/resource/bitmap/o;->s(Ljava/io/InputStream;)Z
 
     move-result p1
 

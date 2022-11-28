@@ -209,13 +209,13 @@
     .line 13
     iget-object v2, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager$3;->this$0:Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;
 
-    invoke-static {v2}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->access$600(Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;)Lb4/a;
+    invoke-static {v2}, Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;->access$600(Lcom/amazonaws/mobileconnectors/appsync/subscription/RealSubscriptionManager;)Ly5/a;
 
     move-result-object v2
 
     iget-object v4, v5, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->subscription:Lcom/apollographql/apollo/api/f;
 
-    invoke-virtual {v2, v4}, Lb4/a;->subscribe(Lcom/apollographql/apollo/api/f;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall;
+    invoke-virtual {v2, v4}, Ly5/a;->subscribe(Lcom/apollographql/apollo/api/f;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall;
 
     move-result-object v2
 

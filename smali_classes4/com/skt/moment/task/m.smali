@@ -18,6 +18,18 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "serverAlias",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -102,6 +114,14 @@
 # virtual methods
 .method public K(I)Lcom/skt/moment/net/vo/NewCoupon;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "socketTimeout"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -137,19 +157,19 @@
 
     .line 5
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "Other Exception"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 6
     :catch_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
@@ -171,7 +191,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 7
     :goto_0
@@ -185,6 +205,14 @@
 
 .method public L(Ljava/lang/String;)Lcom/skt/moment/net/vo/ResNewCouponVo;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -206,37 +234,37 @@
 
     .line 2
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "IOException"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 3
     :catch_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "JsonMappingException"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 4
     :catch_2
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "JsonParseException"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     :goto_0
     const/4 p1, 0x0

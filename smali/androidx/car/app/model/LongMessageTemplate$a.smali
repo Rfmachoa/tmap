@@ -94,15 +94,15 @@
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-virtual {p1}, Landroidx/car/app/model/Action;->d()Landroidx/car/app/model/i;
+    invoke-virtual {p1}, Landroidx/car/app/model/Action;->d()Landroidx/car/app/model/l;
 
     move-result-object v0
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Landroidx/car/app/model/i;
+    check-cast v0, Landroidx/car/app/model/l;
 
-    invoke-interface {v0}, Landroidx/car/app/model/i;->a()Z
+    invoke-interface {v0}, Landroidx/car/app/model/l;->a()Z
 
     move-result v0
 
@@ -114,11 +114,11 @@
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 4
-    sget-object p1, Lm0/a;->i:Lm0/a;
+    sget-object p1, La1/a;->m:La1/a;
 
     iget-object v0, p0, Landroidx/car/app/model/LongMessageTemplate$a;->e:Ljava/util/List;
 
-    invoke-virtual {p1, v0}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, La1/a;->i(Ljava/util/List;)V
 
     return-object p0
 
@@ -145,44 +145,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Landroidx/car/app/model/LongMessageTemplate$a;->a:Landroidx/car/app/model/CarText;
-
-    invoke-static {v0}, Landroidx/car/app/model/CarText;->h(Landroidx/car/app/model/CarText;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroidx/car/app/model/LongMessageTemplate$a;->d:Landroidx/car/app/model/Action;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Either the title or header action must be set"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 4
-    :cond_1
-    :goto_0
     new-instance v0, Landroidx/car/app/model/LongMessageTemplate;
 
     invoke-direct {v0, p0}, Landroidx/car/app/model/LongMessageTemplate;-><init>(Landroidx/car/app/model/LongMessageTemplate$a;)V
 
     return-object v0
 
-    .line 5
-    :cond_2
+    .line 3
+    :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Message cannot be empty"
@@ -202,7 +175,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->k:Lm0/a;
+    sget-object v0, La1/a;->n:La1/a;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -210,7 +183,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/LongMessageTemplate$a;->c:Landroidx/car/app/model/ActionStrip;
@@ -228,7 +201,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->j:Lm0/a;
+    sget-object v0, La1/a;->i:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -238,7 +211,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
     iput-object p1, p0, Landroidx/car/app/model/LongMessageTemplate$a;->d:Landroidx/car/app/model/Action;
@@ -267,9 +240,9 @@
     iput-object p1, p0, Landroidx/car/app/model/LongMessageTemplate$a;->a:Landroidx/car/app/model/CarText;
 
     .line 2
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->f:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     return-object p0
 .end method

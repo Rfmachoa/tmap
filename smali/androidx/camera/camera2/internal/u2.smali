@@ -3,40 +3,46 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+.implements Ljava/util/Comparator;
 
 
-# instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/x2;
-
-.field public final synthetic b:Landroidx/camera/core/o3;
+# static fields
+.field public static final synthetic a:Landroidx/camera/camera2/internal/u2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/x2;Landroidx/camera/core/o3;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/camera/camera2/internal/u2;
+
+    invoke-direct {v0}, Landroidx/camera/camera2/internal/u2;-><init>()V
+
+    sput-object v0, Landroidx/camera/camera2/internal/u2;->a:Landroidx/camera/camera2/internal/u2;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroidx/camera/camera2/internal/u2;->a:Landroidx/camera/camera2/internal/x2;
-
-    iput-object p2, p0, Landroidx/camera/camera2/internal/u2;->b:Landroidx/camera/core/o3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 2
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/u2;->a:Landroidx/camera/camera2/internal/x2;
+    check-cast p1, Landroid/util/Size;
 
-    iget-object v1, p0, Landroidx/camera/camera2/internal/u2;->b:Landroidx/camera/core/o3;
+    check-cast p2, Landroid/util/Size;
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/camera2/internal/x2;->c(Landroidx/camera/camera2/internal/x2;Landroidx/camera/core/o3;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    invoke-static {p1, p2}, Landroidx/camera/camera2/internal/v2;->a(Landroid/util/Size;Landroid/util/Size;)I
 
-    move-result-object p1
+    move-result p1
 
-    return-object p1
+    return p1
 .end method

@@ -1,48 +1,81 @@
 .class public interface abstract Landroidx/camera/core/l;
 .super Ljava/lang/Object;
-.source "CameraProvider.java"
+.source "Camera.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
 # virtual methods
-.method public abstract a(Landroidx/camera/core/CameraSelector;)Z
-    .param p1    # Landroidx/camera/core/CameraSelector;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraSelector"
-        }
+.method public abstract a()Landroidx/camera/core/CameraControl;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract b()Landroidx/camera/core/impl/CameraConfig;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
+    .annotation build Landroidx/annotation/RestrictTo;
         value = {
-            Landroidx/camera/core/CameraInfoUnavailableException;
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 .end method
 
-.method public abstract b()Ljava/util/List;
+.method public abstract c()Landroidx/camera/core/CameraInfo;
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract d(Landroidx/camera/core/impl/CameraConfig;)V
+    .param p1    # Landroidx/camera/core/impl/CameraConfig;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+.end method
+
+.method public abstract f()Ljava/util/LinkedHashSet;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/CameraInfo;",
+            "Ljava/util/LinkedHashSet<",
+            "Landroidx/camera/core/impl/CameraInternal;",
             ">;"
         }
     .end annotation
+.end method
+
+.method public varargs o([Landroidx/camera/core/UseCase;)Z
+    .locals 0
+    .param p1    # [Landroidx/camera/core/UseCase;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

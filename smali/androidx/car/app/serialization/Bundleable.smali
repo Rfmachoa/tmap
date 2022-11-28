@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroidx/car/app/serialization/Bundleable;
+.method public static a(Ljava/lang/Object;)Landroidx/car/app/serialization/Bundleable;
     .locals 1
     .param p0    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;

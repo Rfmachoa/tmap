@@ -3,7 +3,7 @@
 .source "DownloadHelper.java"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$b;
+.implements Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$b;
 
 
 # annotations
@@ -38,13 +38,13 @@
 
 
 # virtual methods
-.method public a([Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d;Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)[Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+.method public a([Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d;Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)[Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
     .locals 2
 
     .line 1
     array-length p2, p1
 
-    new-array p2, p2, [Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+    new-array p2, p2, [Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
 
     const/4 p3, 0x0
 
@@ -69,11 +69,11 @@
 
     aget-object v0, p1, p3
 
-    iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$a;->a:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
+    iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$a;->a:Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
 
     aget-object v1, p1, p3
 
-    iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$a;->b:[I
+    iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$a;->b:[I
 
     invoke-direct {p4, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$d;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;[I)V
 

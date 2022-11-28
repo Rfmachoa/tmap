@@ -38,7 +38,7 @@
     .line 1
     const-class v0, Ldagger/hilt/android/internal/lifecycle/a$a;
 
-    invoke-static {p0, v0}, Ltg/a;->a(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lxi/a;->a(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
     .line 1
     const-class v0, Ldagger/hilt/android/internal/lifecycle/a$c;
 
-    invoke-static {p0, v0}, Ltg/a;->a(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lxi/a;->a(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 

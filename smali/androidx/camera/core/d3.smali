@@ -3,34 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:Landroidx/core/util/d;
+
+.field public final synthetic b:Landroid/view/Surface;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;)V
+.method public synthetic constructor <init>(Landroidx/core/util/d;Landroid/view/Surface;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/d3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Landroidx/camera/core/d3;->a:Landroidx/core/util/d;
+
+    iput-object p2, p0, Landroidx/camera/core/d3;->b:Landroid/view/Surface;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Landroidx/camera/core/d3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Landroidx/camera/core/d3;->a:Landroidx/core/util/d;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/VideoCapture;->O(Ljava/util/concurrent/atomic/AtomicReference;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    iget-object v1, p0, Landroidx/camera/core/d3;->b:Landroid/view/Surface;
 
-    move-result-object p1
+    invoke-static {v0, v1}, Landroidx/camera/core/SurfaceRequest;->a(Landroidx/core/util/d;Landroid/view/Surface;)V
 
-    return-object p1
+    return-void
 .end method

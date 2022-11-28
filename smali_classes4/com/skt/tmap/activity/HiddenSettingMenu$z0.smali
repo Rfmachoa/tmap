@@ -1,83 +1,71 @@
-.class public synthetic Lcom/skt/tmap/activity/HiddenSettingMenu$z0;
+.class public Lcom/skt/tmap/activity/HiddenSettingMenu$z0;
 .super Ljava/lang/Object;
 .source "HiddenSettingMenu.java"
 
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/skt/tmap/activity/HiddenSettingMenu;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->V5(Lcom/skt/tmap/util/a0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1009
+    accessFlags = 0x1
     name = null
 .end annotation
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/util/a0;
+
+.field public final synthetic b:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/skt/tmap/activity/HiddenSettingMenu;Lcom/skt/tmap/util/a0;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$hiddenMenuListData"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->values()[Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
+    iput-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$z0;->b:Lcom/skt/tmap/activity/HiddenSettingMenu;
 
-    move-result-object v0
+    iput-object p2, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$z0;->a:Lcom/skt/tmap/util/a0;
 
-    array-length v0, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    sput-object v0, Lcom/skt/tmap/activity/HiddenSettingMenu$z0;->a:[I
 
-    :try_start_0
-    sget-object v1, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->JavaCrash:Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
+# virtual methods
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dialog",
+            "item"
+        }
+    .end annotation
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    .line 1
+    iget-object p1, p0, Lcom/skt/tmap/activity/HiddenSettingMenu$z0;->a:Lcom/skt/tmap/util/a0;
 
-    move-result v1
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/util/a0;->h(I)V
 
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v0, Lcom/skt/tmap/activity/HiddenSettingMenu$z0;->a:[I
-
-    sget-object v1, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->NaviEngineCrash:Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v0, Lcom/skt/tmap/activity/HiddenSettingMenu$z0;->a:[I
-
-    sget-object v1, Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;->VsmEngineCrash:Lcom/skt/tmap/activity/HiddenSettingMenu$CrashType;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
     return-void
 .end method

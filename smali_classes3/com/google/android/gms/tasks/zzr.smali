@@ -1,31 +1,12 @@
 .class final Lcom/google/android/gms/tasks/zzr;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<TResult:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # instance fields
 .field private final zza:Ljava/lang/Object;
 
 .field private zzb:Ljava/util/Queue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Queue<",
-            "Lcom/google/android/gms/tasks/zzq<",
-            "TTResult;>;>;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "mLock"
     .end annotation
@@ -61,13 +42,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tasks/zzq<",
-            "TTResult;>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzr;->zza:Ljava/lang/Object;
@@ -112,13 +86,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TTResult;>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzr;->zza:Ljava/lang/Object;

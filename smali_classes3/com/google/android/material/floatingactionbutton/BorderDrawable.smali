@@ -184,7 +184,7 @@
 
     iget v4, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v4}, Lc1/i;->t(II)I
+    invoke-static {v3, v4}, Lv1/h;->t(II)I
 
     move-result v3
 
@@ -197,7 +197,7 @@
 
     iget v5, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v5}, Lc1/i;->t(II)I
+    invoke-static {v3, v5}, Lv1/h;->t(II)I
 
     move-result v3
 
@@ -209,14 +209,14 @@
     iget v3, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->topInnerStrokeColor:I
 
     .line 7
-    invoke-static {v3, v4}, Lc1/i;->B(II)I
+    invoke-static {v3, v4}, Lv1/h;->B(II)I
 
     move-result v3
 
     iget v6, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
     .line 8
-    invoke-static {v3, v6}, Lc1/i;->t(II)I
+    invoke-static {v3, v6}, Lv1/h;->t(II)I
 
     move-result v3
 
@@ -228,14 +228,14 @@
     iget v3, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->bottomInnerStrokeColor:I
 
     .line 10
-    invoke-static {v3, v4}, Lc1/i;->B(II)I
+    invoke-static {v3, v4}, Lv1/h;->B(II)I
 
     move-result v3
 
     iget v7, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
     .line 11
-    invoke-static {v3, v7}, Lc1/i;->t(II)I
+    invoke-static {v3, v7}, Lv1/h;->t(II)I
 
     move-result v3
 
@@ -248,7 +248,7 @@
 
     iget v9, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v9}, Lc1/i;->t(II)I
+    invoke-static {v3, v9}, Lv1/h;->t(II)I
 
     move-result v3
 
@@ -261,7 +261,7 @@
 
     iget v10, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v10}, Lc1/i;->t(II)I
+    invoke-static {v3, v10}, Lv1/h;->t(II)I
 
     move-result v3
 

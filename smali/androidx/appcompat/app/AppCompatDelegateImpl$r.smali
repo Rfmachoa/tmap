@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/app/AppCompatDelegateImpl$r;
-.super Landroidx/appcompat/widget/ContentFrameLayout;
+.super Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
 .source "AppCompatDelegateImpl.java"
 
 
@@ -15,163 +15,88 @@
 
 
 # instance fields
-.field public final synthetic i:Landroidx/appcompat/app/AppCompatDelegateImpl;
+.field public final c:Landroidx/appcompat/app/o;
+
+.field public final synthetic d:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V
+.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/o;)V
     .locals 0
+    .param p1    # Landroidx/appcompat/app/AppCompatDelegateImpl;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->i:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->d:Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    invoke-direct {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
 
     .line 2
-    invoke-direct {p0, p2}, Landroidx/appcompat/widget/ContentFrameLayout;-><init>(Landroid/content/Context;)V
+    iput-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->c:Landroidx/appcompat/app/o;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(II)Z
-    .locals 1
-
-    const/4 v0, -0x5
-
-    if-lt p1, v0, :cond_1
-
-    if-lt p2, v0, :cond_1
-
-    .line 1
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x5
-
-    if-gt p1, v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
-
-    move-result p1
-
-    add-int/lit8 p1, p1, 0x5
-
-    if-le p2, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    return p1
-.end method
-
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->i:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->e0(Landroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 2
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    return p1
-.end method
-
-.method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+.method public b()Landroid/content/IntentFilter;
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    new-instance v0, Landroid/content/IntentFilter;
 
-    move-result v0
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    if-nez v0, :cond_0
+    const-string v1, "android.intent.action.TIME_SET"
 
     .line 2
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    move-result v0
-
-    float-to-int v0, v0
+    const-string v1, "android.intent.action.TIMEZONE_CHANGED"
 
     .line 3
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    move-result v1
-
-    float-to-int v1, v1
+    const-string v1, "android.intent.action.TIME_TICK"
 
     .line 4
-    invoke-virtual {p0, v0, v1}, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->c(II)Z
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->c:Landroidx/appcompat/app/o;
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/o;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
-    iget-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->i:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    const/4 v0, 0x2
 
-    const/4 v0, 0x0
+    goto :goto_0
 
-    invoke-virtual {p1, v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->Z(I)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    .line 6
     :cond_0
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    const/4 v0, 0x1
 
-    move-result p1
-
-    return p1
+    :goto_0
+    return v0
 .end method
 
-.method public setBackgroundResource(I)V
+.method public e()V
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$r;->d:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lg/a;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->c()Z
 
     return-void
 .end method

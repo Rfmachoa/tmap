@@ -3,44 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;
+.implements Lcom/google/firebase/inject/Provider;
 
 
-# static fields
-.field public static final synthetic a:Lcom/google/firebase/b;
+# instance fields
+.field public final synthetic a:Lcom/google/firebase/FirebaseApp;
+
+.field public final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/google/firebase/b;
-
-    invoke-direct {v0}, Lcom/google/firebase/b;-><init>()V
-
-    sput-object v0, Lcom/google/firebase/b;->a:Lcom/google/firebase/b;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/google/firebase/FirebaseApp;Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/firebase/b;->a:Lcom/google/firebase/FirebaseApp;
+
+    iput-object p2, p0, Lcom/google/firebase/b;->b:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final extract(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/firebase/b;->a:Lcom/google/firebase/FirebaseApp;
 
-    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->a(Landroid/content/Context;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/firebase/b;->b:Landroid/content/Context;
 
-    move-result-object p1
+    invoke-static {v0, v1}, Lcom/google/firebase/FirebaseApp;->b(Lcom/google/firebase/FirebaseApp;Landroid/content/Context;)Lcom/google/firebase/internal/DataCollectionConfigStorage;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

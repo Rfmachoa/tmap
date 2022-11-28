@@ -1,302 +1,796 @@
 .class public Ljc/e;
-.super Ljava/lang/Object;
-.source "ClientCommListModel.java"
+.super Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;
+.source "pCommandInfoAlarmPlayMusic.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Ljc/e$a;,
+        Ljc/e$c;,
+        Ljc/e$b;
+    }
+.end annotation
+
+
+# static fields
+.field public static final A:Ljava/lang/String; = "userId"
+
+.field public static final B:Ljava/lang/String; = "bitRate"
+
+.field public static final C:Ljava/lang/String; = "songId"
+
+.field public static final D:Ljava/lang/String; = "menuId"
+
+.field public static final E:Ljava/lang/String; = "loggingToken"
+
+.field public static final F:Ljava/lang/String; = "metaType"
+
+.field public static final G:Ljava/lang/String; = "songs"
+
+.field public static final H:Ljava/lang/String; = "albumImage"
+
+.field public static final I:Ljava/lang/String; = "albumName"
+
+.field public static final J:Ljava/lang/String; = "albumId"
+
+.field public static final K:Ljava/lang/String; = "songId"
+
+.field public static final L:Ljava/lang/String; = "issueDate"
+
+.field public static final M:Ljava/lang/String; = "playTime"
+
+.field public static final N:Ljava/lang/String; = "songName"
+
+.field public static final O:Ljava/lang/String; = "artists"
+
+.field public static final P:Ljava/lang/String; = "artistId"
+
+.field public static final Q:Ljava/lang/String; = "artistName"
+
+.field public static final q:Ljava/lang/String; = "songType"
+
+.field public static final r:Ljava/lang/String; = "cpCode"
+
+.field public static final s:Ljava/lang/String; = "songStreamingUrl"
+
+.field public static final t:Ljava/lang/String; = "songStreamingCode"
+
+.field public static final u:Ljava/lang/String; = "menuId"
+
+.field public static final v:Ljava/lang/String; = "playSongId"
+
+.field public static final w:Ljava/lang/String; = "playListSeq"
+
+.field public static final x:Ljava/lang/String; = "playListTitile"
+
+.field public static final y:Ljava/lang/String; = "loggingPath"
+
+.field public static final z:Ljava/lang/String; = "loggingPath"
 
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/ClientCommListItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final f:Ljava/lang/String;
 
-.field public b:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/NotiDetailInfo;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public g:Ljava/lang/String;
 
-.field public c:Lpb/s;
-
-.field public d:I
-
-.field public e:I
-
-.field public f:Ljava/lang/String;
-
-.field public g:Landroid/content/Context;
-
-.field public h:I
+.field public h:Ljava/lang/String;
 
 .field public i:Ljava/lang/String;
 
+.field public j:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
+.field public k:Ljava/lang/String;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Ljava/lang/String;
+
+.field public o:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljc/e$c;",
+            ">;"
         }
     .end annotation
+.end field
+
+.field public p:Ljc/e$b;
+
+
+# direct methods
+.method public constructor <init>(Lorg/json/JSONObject;)V
+    .locals 28
+
+    move-object/from16 v11, p0
+
+    move-object/from16 v0, p1
+
+    const-string v12, "playTime"
+
+    const-string v13, "issueDate"
+
+    const-string v14, "albumId"
+
+    const-string v15, "albumName"
+
+    const-string v1, "playListTitile"
+
+    const-string v2, "playListSeq"
+
+    const-string v3, "songStreamingCode"
+
+    const-string v4, "songType"
+
+    const-string v5, "menuId"
+
+    const-string v6, "loggingPath"
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p0}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/util/ArrayList;
+    const-class v7, Ljc/e;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v7}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iput-object v0, p0, Ljc/e;->a:Ljava/util/ArrayList;
+    move-result-object v7
+
+    iput-object v7, v11, Ljc/e;->f:Ljava/lang/String;
+
+    const-string v8, "pCommandInfoAlarmPlayMusic : "
 
     .line 3
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-static {v8}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v8
 
-    iput-object v0, p0, Ljc/e;->b:Ljava/util/ArrayList;
+    invoke-static/range {p1 .. p1}, Lcom/skt/aicloud/mobile/service/util/n;->h(Lorg/json/JSONObject;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    new-instance v0, Lpb/s;
+    new-instance v10, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Ljc/e;->a:Ljava/util/ArrayList;
+    invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v0, p1, v1, p0}, Lpb/s;-><init>(Landroid/content/Context;Ljava/util/List;Ljc/e;)V
-
-    iput-object v0, p0, Ljc/e;->c:Lpb/s;
-
-    const/4 v0, -0x1
+    :try_start_0
+    const-string v7, "cpCode"
 
     .line 5
-    iput v0, p0, Ljc/e;->d:I
+    invoke-virtual {v0, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v7, "songStreamingUrl"
 
     .line 6
-    iput v0, p0, Ljc/e;->e:I
+    invoke-virtual {v0, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
 
     .line 7
-    iput-object p1, p0, Ljc/e;->g:Landroid/content/Context;
+    invoke-virtual {v0, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
+    move-result-object v7
+
+    move-object/from16 v16, v7
+
+    const-string v7, "playSongId"
+
+    .line 8
+    invoke-virtual {v0, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 9
+    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v17
+
+    const/16 v18, 0x0
+
+    if-nez v17, :cond_0
+
+    .line 10
+    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 v4, v18
+
+    .line 11
+    :goto_0
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v17
+
+    if-nez v17, :cond_1
+
+    .line 12
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 v3, v18
+
+    .line 13
+    :goto_1
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v17
+
+    if-nez v17, :cond_2
+
+    .line 14
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_2
+    move-object/from16 v2, v18
+
+    .line 15
+    :goto_2
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v17
+
+    if-nez v17, :cond_3
+
+    .line 16
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_3
+
+    :cond_3
+    move-object/from16 v1, v18
+
+    .line 17
+    :goto_3
+    invoke-virtual {v0, v6}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v17
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object/from16 v19, v10
+
+    const-string v10, "songId"
+
+    if-nez v17, :cond_4
+
+    move-object/from16 v17, v1
+
+    .line 18
+    :try_start_1
+    invoke-virtual {v0, v6}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    .line 19
+    invoke-virtual {v1, v6}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    move-object/from16 v20, v2
+
+    const-string/jumbo v2, "userId"
+
+    .line 20
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v21
+
+    const-string v2, "bitRate"
+
+    .line 21
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v22
+
+    .line 22
+    invoke-virtual {v1, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v23
+
+    .line 23
+    invoke-virtual {v1, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v24
+
+    const-string v2, "loggingToken"
+
+    .line 24
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v25
+
+    const-string v2, "metaType"
+
+    .line 25
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v26
+
+    .line 26
+    new-instance v27, Ljc/e$b;
+
+    move-object/from16 v5, v17
+
+    move-object/from16 v1, v27
+
+    move-object/from16 v17, v12
+
+    move-object/from16 v12, v20
+
+    move-object/from16 v2, p0
+
+    move-object/from16 v20, v13
+
+    move-object v13, v3
+
+    move-object v3, v6
+
+    move-object v6, v4
+
+    move-object/from16 v4, v21
+
+    move-object/from16 v21, v14
+
+    move-object v14, v5
+
+    move-object/from16 v5, v22
+
+    move-object/from16 v22, v15
+
+    move-object v15, v6
+
+    move-object/from16 v6, v23
+
+    move-object v0, v7
+
+    move-object/from16 v23, v10
+
+    move-object/from16 v10, v16
+
+    move-object/from16 v7, v24
+
+    move-object/from16 v16, v14
+
+    move-object v14, v8
+
+    move-object/from16 v8, v25
+
+    move-object/from16 v24, v12
+
+    move-object v12, v9
+
+    move-object/from16 v9, v26
+
+    invoke-direct/range {v1 .. v9}, Ljc/e$b;-><init>(Ljc/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v1, v27
+
+    goto :goto_4
+
+    :cond_4
+    move-object/from16 v24, v2
+
+    move-object v0, v7
+
+    move-object/from16 v23, v10
+
+    move-object/from16 v17, v12
+
+    move-object/from16 v20, v13
+
+    move-object/from16 v21, v14
+
+    move-object/from16 v22, v15
+
+    move-object/from16 v10, v16
+
+    move-object/from16 v16, v1
+
+    move-object v13, v3
+
+    move-object v15, v4
+
+    move-object v14, v8
+
+    move-object v12, v9
+
+    move-object/from16 v1, v18
+
+    .line 27
+    :goto_4
+    iput-object v15, v11, Ljc/e;->g:Ljava/lang/String;
+
+    .line 28
+    iput-object v12, v11, Ljc/e;->h:Ljava/lang/String;
+
+    .line 29
+    iput-object v14, v11, Ljc/e;->i:Ljava/lang/String;
+
+    .line 30
+    iput-object v13, v11, Ljc/e;->j:Ljava/lang/String;
+
+    .line 31
+    iput-object v10, v11, Ljc/e;->k:Ljava/lang/String;
+
+    .line 32
+    iput-object v0, v11, Ljc/e;->l:Ljava/lang/String;
+
+    move-object/from16 v2, v24
+
+    .line 33
+    iput-object v2, v11, Ljc/e;->m:Ljava/lang/String;
+
+    move-object/from16 v0, v16
+
+    .line 34
+    iput-object v0, v11, Ljc/e;->n:Ljava/lang/String;
+
+    .line 35
+    iput-object v1, v11, Ljc/e;->p:Ljc/e$b;
+
+    const-string v0, "songs"
+
+    move-object/from16 v12, p1
+
+    .line 36
+    invoke-virtual {v12, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    move v13, v1
+
+    .line 37
+    :goto_5
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v1
+
+    if-ge v13, v1, :cond_a
+
+    .line 38
+    invoke-virtual {v0, v13}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v2, "albumImage"
+
+    .line 39
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v10, v23
+
+    .line 40
+    invoke-virtual {v1, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v2, "songName"
+
+    .line 41
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    move-object/from16 v14, v22
+
+    .line 42
+    invoke-virtual {v12, v14}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    .line 43
+    invoke-virtual {v1, v14}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object v4, v2
+
+    goto :goto_6
+
+    :cond_5
+    move-object/from16 v4, v18
+
+    :goto_6
+    move-object/from16 v15, v21
+
+    .line 44
+    invoke-virtual {v12, v15}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    .line 45
+    invoke-virtual {v1, v15}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object v5, v2
+
+    goto :goto_7
+
+    :cond_6
+    move-object/from16 v5, v18
+
+    :goto_7
+    move-object/from16 v8, v20
+
+    .line 46
+    invoke-virtual {v12, v8}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    .line 47
+    invoke-virtual {v1, v8}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object v7, v2
+
+    move-object/from16 v2, v17
+
+    goto :goto_8
+
+    :cond_7
+    move-object/from16 v2, v17
+
+    move-object/from16 v7, v18
+
+    .line 48
+    :goto_8
+    invoke-virtual {v12, v2}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v16
+
+    if-nez v16, :cond_8
+
+    .line 49
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v16
+
+    move-object/from16 v17, v0
+
+    goto :goto_9
+
+    :cond_8
+    move-object/from16 v17, v0
+
+    move-object/from16 v16, v18
+
+    :goto_9
+    const-string v0, "artists"
+
+    .line 50
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    .line 51
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    const/16 v20, 0x0
+
+    move-object/from16 v21, v2
+
+    move/from16 v2, v20
+
+    move-object/from16 v20, v8
+
+    .line 52
+    :goto_a
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
+
+    move-result v8
+
+    if-ge v2, v8, :cond_9
+
+    .line 53
+    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v8
+
+    move-object/from16 v22, v0
+
+    const-string v0, "artistId"
+
+    .line 54
+    invoke-virtual {v8, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v23, v10
+
+    const-string v10, "artistName"
+
+    .line 55
+    invoke-virtual {v8, v10}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 56
+    new-instance v10, Ljc/e$a;
+
+    invoke-direct {v10, v11, v0, v8}, Ljc/e$a;-><init>(Ljc/e;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 57
+    invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    move-object/from16 v0, v22
+
+    move-object/from16 v10, v23
+
+    goto :goto_a
+
+    :cond_9
+    move-object/from16 v23, v10
+
+    .line 58
+    new-instance v0, Ljc/e$c;
+
+    move-object v10, v1
+
+    move-object v1, v0
+
+    move-object/from16 v2, p0
+
+    move-object/from16 v8, v16
+
+    move-object/from16 v12, v19
+
+    move-object/from16 v16, v23
+
+    invoke-direct/range {v1 .. v10}, Ljc/e$c;-><init>(Ljc/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    .line 59
+    invoke-virtual {v12, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v13, v13, 0x1
+
+    move-object/from16 v19, v12
+
+    move-object/from16 v22, v14
+
+    move-object/from16 v23, v16
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v17, v21
+
+    move-object/from16 v12, p1
+
+    move-object/from16 v21, v15
+
+    goto/16 :goto_5
+
+    :cond_a
+    move-object/from16 v12, v19
+
+    .line 60
+    invoke-virtual {v11, v12}, Ljc/e;->t(Ljava/util/ArrayList;)V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_b
+
+    :catch_0
+    move-exception v0
+
+    .line 61
+    iget-object v1, v11, Ljc/e;->f:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_b
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/util/ArrayList;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "notiDatailInfoList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/NotiDetailInfo;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_3
-
-    .line 2
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/skt/tmap/data/ClientCommListItem;
-
-    .line 3
-    iget-object v2, v1, Lcom/skt/tmap/data/ClientCommListItem;->contentsBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz v2, :cond_0
-
-    .line 4
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    .line 5
-    iget-object v2, v1, Lcom/skt/tmap/data/ClientCommListItem;->contentsBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_1
-    const/4 v2, 0x0
-
-    .line 6
-    iput-object v2, v1, Lcom/skt/tmap/data/ClientCommListItem;->contentsBitmap:Landroid/graphics/Bitmap;
-
-    goto :goto_0
-
-    .line 7
-    :cond_2
-    iget-object v0, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    :cond_3
-    return-void
-.end method
-
-.method public c(ILandroid/app/Activity;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "position",
-            "activity"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/tmap/data/ClientCommListItem;
-
-    iget-object p1, p1, Lcom/skt/tmap/data/ClientCommListItem;->notyInfo:Lcom/skt/tmap/data/NotiDetailInfo;
-
-    .line 2
-    invoke-virtual {p1}, Lcom/skt/tmap/data/NotiDetailInfo;->getEventURL()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lcom/skt/tmap/util/e;->m0(Landroid/content/Context;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public d()I
+.method public i()Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget v0, p0, Ljc/e;->h:I
-
-    return v0
-.end method
-
-.method public e()Lpb/s;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljc/e;->c:Lpb/s;
+    iget-object v0, p0, Ljc/e;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public f()Ljava/util/ArrayList;
+.method public j()Ljc/e$b;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/ClientCommListItem;",
-            ">;"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Ljc/e;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Ljc/e;->p:Ljc/e$b;
 
     return-object v0
-.end method
-
-.method public g()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljc/e;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public h()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Ljc/e;->e:I
-
-    return v0
-.end method
-
-.method public i()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/NotiDetailInfo;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public j()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Ljc/e;->d:I
-
-    return v0
 .end method
 
 .method public k()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ljc/e;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public l()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ljc/e;->m:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public m()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ljc/e;->n:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public n()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ljc/e;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public o()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ljc/e;->j:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public p()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -305,360 +799,67 @@
     return-object v0
 .end method
 
-.method public l()Lcom/skt/tmap/data/NotiDetailInfo;
-    .locals 2
+.method public q()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Ljc/e$c;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    iget v0, p0, Ljc/e;->e:I
-
-    if-gez v0, :cond_1
-
-    return-object v1
-
-    .line 3
-    :cond_1
-    iget-object v1, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/skt/tmap/data/NotiDetailInfo;
+    iget-object v0, p0, Ljc/e;->o:Ljava/util/ArrayList;
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    return-object v1
 .end method
 
-.method public m(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "callPageNum"
-        }
-    .end annotation
+.method public r()Ljava/lang/String;
+    .locals 1
 
     .line 1
-    iput p1, p0, Ljc/e;->h:I
+    iget-object v0, p0, Ljc/e;->g:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public n(Lpb/s;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "clientCommListAdapter"
-        }
-    .end annotation
+.method public s()Z
+    .locals 1
 
     .line 1
-    iput-object p1, p0, Ljc/e;->c:Lpb/s;
+    iget-object v0, p0, Ljc/e;->i:Ljava/lang/String;
 
-    return-void
-.end method
-
-.method public o(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "commList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/ClientCommListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public p(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "continueFlag"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/e;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public q(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "curNotiIdx"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/e;->e:I
-
-    return-void
-.end method
-
-.method public r()V
-    .locals 5
-
-    .line 1
-    iget v0, p0, Ljc/e;->e:I
-
-    iput v0, p0, Ljc/e;->d:I
-
-    .line 2
-    iget-object v0, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    goto :goto_2
+    const/4 v0, 0x0
+
+    return v0
 
     :cond_0
-    move v0, v1
+    const/4 v0, 0x1
 
-    .line 3
-    :goto_0
-    iget-object v3, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_3
-
-    .line 4
-    iget-object v3, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/skt/tmap/data/NotiDetailInfo;
-
-    .line 5
-    new-instance v4, Lcom/skt/tmap/data/ClientCommListItem;
-
-    invoke-direct {v4}, Lcom/skt/tmap/data/ClientCommListItem;-><init>()V
-
-    .line 6
-    iput-object v3, v4, Lcom/skt/tmap/data/ClientCommListItem;->notyInfo:Lcom/skt/tmap/data/NotiDetailInfo;
-
-    .line 7
-    iget v3, p0, Ljc/e;->e:I
-
-    if-ne v0, v3, :cond_1
-
-    .line 8
-    iput-boolean v2, v4, Lcom/skt/tmap/data/ClientCommListItem;->isExpanded:Z
-
-    goto :goto_1
-
-    .line 9
-    :cond_1
-    iput-boolean v1, v4, Lcom/skt/tmap/data/ClientCommListItem;->isExpanded:Z
-
-    .line 10
-    :goto_1
-    iget-object v3, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 11
-    :cond_2
-    :goto_2
-    new-instance v0, Lcom/skt/tmap/data/NotiDetailInfo;
-
-    invoke-direct {v0}, Lcom/skt/tmap/data/NotiDetailInfo;-><init>()V
-
-    .line 12
-    invoke-virtual {v0, v2}, Lcom/skt/tmap/data/NotiDetailInfo;->setMain(Z)V
-
-    .line 13
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setIdx(I)V
-
-    .line 14
-    iget-object v1, p0, Ljc/e;->g:Landroid/content/Context;
-
-    const v3, 0x7f1301de
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setAdTextTitle(Ljava/lang/String;)V
-
-    const-string v1, "KEY_COMM_DEFAULT_ICON"
-
-    .line 15
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setAdTextImgUrl(Ljava/lang/String;)V
-
-    .line 16
-    iget-object v1, p0, Ljc/e;->g:Landroid/content/Context;
-
-    const v3, 0x7f1301dd
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setAdContent(Ljava/lang/String;)V
-
-    const-string v1, "KEY_COMM_DEFAULT_IMAGE"
-
-    .line 17
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setAdContentImgURL(Ljava/lang/String;)V
-
-    const/4 v1, 0x0
-
-    .line 18
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setEventURL(Ljava/lang/String;)V
-
-    const-string v1, "AD00000"
-
-    .line 19
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/data/NotiDetailInfo;->setAdCode(Ljava/lang/String;)V
-
-    .line 20
-    new-instance v1, Lcom/skt/tmap/data/ClientCommListItem;
-
-    invoke-direct {v1}, Lcom/skt/tmap/data/ClientCommListItem;-><init>()V
-
-    .line 21
-    iput-object v0, v1, Lcom/skt/tmap/data/ClientCommListItem;->notyInfo:Lcom/skt/tmap/data/NotiDetailInfo;
-
-    .line 22
-    iput-boolean v2, v1, Lcom/skt/tmap/data/ClientCommListItem;->isExpanded:Z
-
-    .line 23
-    iget-object v0, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 24
-    :cond_3
-    iget-object v0, p0, Ljc/e;->c:Lpb/s;
-
-    iget-object v1, p0, Ljc/e;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Lpb/s;->m(Ljava/util/List;)V
-
-    return-void
+    return v0
 .end method
 
-.method public s(Ljava/util/ArrayList;)V
+.method public t(Ljava/util/ArrayList;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "notiDatailInfoList"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/NotiDetailInfo;",
+            "Ljc/e$c;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Ljc/e;->b:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public t(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "oldPos"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/e;->d:I
-
-    return-void
-.end method
-
-.method public u(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "showADCode"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/e;->i:Ljava/lang/String;
+    iput-object p1, p0, Ljc/e;->o:Ljava/util/ArrayList;
 
     return-void
 .end method

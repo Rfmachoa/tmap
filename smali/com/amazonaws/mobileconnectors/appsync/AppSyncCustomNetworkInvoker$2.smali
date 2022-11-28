@@ -58,7 +58,7 @@
     .line 2
     iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker$2;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;
 
-    iget-object v1, v0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->s3ObjectManager:Lc4/n;
+    iget-object v1, v0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;->s3ObjectManager:Lz5/n;
 
     const-string v2, "S3 upload failed."
 
@@ -118,7 +118,7 @@
 
     invoke-direct {v0, p0}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker$2$1;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker$2;)V
 
-    invoke-interface {v1, v0}, Lc4/n;->upload(Lc4/l;)V
+    invoke-interface {v1, v0}, Lz5/n;->upload(Lz5/l;)V
     :try_end_0
     .catch Lcom/amazonaws/AmazonClientException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Landroid/os/Handler$Callback;
@@ -64,16 +64,6 @@
 .field private final zao:Ljava/util/concurrent/atomic/AtomicInteger;
 
 .field private final zap:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
 
 .field private zaq:Lcom/google/android/gms/common/api/internal/zaae;
     .annotation build Landroidx/annotation/Nullable;
@@ -85,28 +75,12 @@
 .end field
 
 .field private final zar:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;>;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "lock"
     .end annotation
 .end field
 
 .field private final zas:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zat:Landroid/os/Handler;
     .annotation runtime Lorg/checkerframework/checker/initialization/qual/NotOnlyInitialized;
@@ -221,10 +195,10 @@
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zak:Landroid/content/Context;
 
-    new-instance v1, Lcom/google/android/gms/internal/base/zaq;
+    new-instance v1, Lcom/google/android/gms/internal/base/zau;
 
     .line 6
-    invoke-direct {v1, p2, p0}, Lcom/google/android/gms/internal/base/zaq;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    invoke-direct {v1, p2, p0}, Lcom/google/android/gms/internal/base/zau;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object v1, p0, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zat:Landroid/os/Handler;
 
@@ -315,23 +289,13 @@
 .end method
 
 .method private static zaH(Lcom/google/android/gms/common/api/internal/ApiKey;Lcom/google/android/gms/common/ConnectionResult;)Lcom/google/android/gms/common/api/Status;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            ")",
-            "Lcom/google/android/gms/common/api/Status;"
-        }
-    .end annotation
+    .locals 4
 
     .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
     .line 2
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/ApiKey;->zab()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/ApiKey;->zaa()Ljava/lang/String;
 
     move-result-object p0
 
@@ -339,31 +303,11 @@
 
     move-result-object v1
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x3f
-
-    add-int/2addr v2, v3
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "API: "
 
     const-string v3, " is not available on this device. Connection failed with: "
 
-    invoke-static {v4, v2, p0, v3, v1}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0, v3, v1}, Landroidx/camera/core/impl/utils/k;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -375,16 +319,6 @@
 .method private final zaI(Lcom/google/android/gms/common/api/GoogleApi;)Lcom/google/android/gms/common/api/internal/zabq;
     .locals 2
     .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "*>;)",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;"
-        }
     .end annotation
 
     .line 1
@@ -498,17 +432,6 @@
 
 .method private final zaL(Lcom/google/android/gms/tasks/TaskCompletionSource;ILcom/google/android/gms/common/api/GoogleApi;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TT;>;I",
-            "Lcom/google/android/gms/common/api/GoogleApi;",
-            ")V"
-        }
-    .end annotation
 
     if-eqz p2, :cond_0
 
@@ -786,24 +709,10 @@
 
     packed-switch v0, :pswitch_data_0
 
+    const-string p1, "Unknown message id: "
+
     .line 2
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x1f
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Unknown message id: "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v4, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0, v4}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     return v7
 
@@ -1345,35 +1254,11 @@
 
     move-result-object p1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x45
-
-    add-int/2addr v2, v3
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "Error resolution was canceled by the user, original error message: "
 
     const-string v3, ": "
 
-    invoke-static {v4, v2, v1, v3, p1}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v3, p1}, Landroidx/camera/core/impl/utils/k;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1399,23 +1284,15 @@
     goto/16 :goto_7
 
     :cond_a
-    new-instance p1, Ljava/lang/StringBuilder;
+    const-string p1, "Could not find API instance "
 
-    const/16 v1, 0x4c
+    const-string v1, " while trying to fail enqueued calls."
+
+    invoke-static {p1, v0, v1}, Landroid/support/v4/media/a;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
 
     .line 64
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Could not find API instance "
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " while trying to fail enqueued calls."
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     new-instance v0, Ljava/lang/Exception;
 
     invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
@@ -1696,8 +1573,6 @@
     :goto_7
     return v8
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_10
@@ -1745,13 +1620,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "*>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zat:Landroid/os/Handler;
@@ -1959,15 +1827,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;)",
-            "Lcom/google/android/gms/common/api/internal/zabq;"
-        }
-    .end annotation
-
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zap:Ljava/util/Map;
 
@@ -1987,22 +1846,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Iterable<",
-            "+",
-            "Lcom/google/android/gms/common/api/HasApiKey<",
-            "*>;>;)",
-            "Lcom/google/android/gms/tasks/Task<",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
     .end annotation
 
     .line 1
@@ -2036,17 +1879,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "*>;)",
-            "Lcom/google/android/gms/tasks/Task<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
     .end annotation
 
     .line 1
@@ -2100,27 +1932,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O::",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-            ">(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "TO;>;",
-            "Lcom/google/android/gms/common/api/internal/RegisterListenerMethod<",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "*>;",
-            "Lcom/google/android/gms/common/api/internal/UnregisterListenerMethod<",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "*>;",
-            "Ljava/lang/Runnable;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
     .end annotation
 
     .line 1
@@ -2188,21 +1999,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O::",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-            ">(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "TO;>;",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;",
-            "I)",
-            "Lcom/google/android/gms/tasks/Task<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-
     .line 1
     new-instance v0, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
@@ -2257,20 +2053,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O::",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-            ">(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "TO;>;I",
-            "Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl<",
-            "+",
-            "Lcom/google/android/gms/common/api/Result;",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     new-instance v0, Lcom/google/android/gms/common/api/internal/zae;
@@ -2321,24 +2103,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O::",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-            "ResultT:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "TO;>;I",
-            "Lcom/google/android/gms/common/api/internal/TaskApiCall<",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "TResultT;>;",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TResultT;>;",
-            "Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p3}, Lcom/google/android/gms/common/api/internal/TaskApiCall;->zaa()I

@@ -1,6 +1,6 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 .super Ljava/lang/Object;
-.source "ParsableNalUnitBitArray.java"
+.source "ParsableByteArray.java"
 
 
 # instance fields
@@ -10,442 +10,674 @@
 
 .field public c:I
 
-.field public d:I
-
 
 # direct methods
-.method public constructor <init>([BII)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->i([BII)V
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->f:[B
+
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-array v0, p1, [B
+
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    .line 5
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>([B)V
+    .locals 0
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    .line 8
+    array-length p1, p1
+
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>([BI)V
+    .locals 0
+
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    .line 11
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public A()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    const/4 v0, 0x0
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->l(C)Ljava/lang/String;
 
-    if-ltz v0, :cond_1
+    move-result-object v0
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+    return-object v0
+.end method
 
-    if-lt v0, v1, :cond_0
+.method public B(I)Ljava/lang/String;
+    .locals 3
 
-    if-ne v0, v1, :cond_1
+    if-nez p1, :cond_0
 
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    const-string p1, ""
 
-    if-nez v0, :cond_1
+    return-object p1
 
+    .line 1
     :cond_0
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int v1, v0, p1
+
+    add-int/lit8 v1, v1, -0x1
+
+    .line 2
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    aget-byte v1, v2, v1
+
+    if-nez v1, :cond_1
+
+    add-int/lit8 v1, p1, -0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    move v1, p1
 
+    .line 3
     :goto_0
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    return-void
+    invoke-static {v2, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->J([BII)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 4
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/2addr v1, p1
+
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return-object v0
 .end method
 
-.method public b(I)Z
+.method public C()S
     .locals 4
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    .line 2
-    div-int/lit8 v1, p1, 0x8
-
-    add-int v2, v0, v1
-
-    .line 3
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    add-int/2addr v3, p1
-
-    mul-int/lit8 v1, v1, 0x8
-
-    sub-int/2addr v3, v1
-
-    const/4 p1, 0x7
-
-    if-le v3, p1, :cond_0
-
-    add-int/lit8 v2, v2, 0x1
-
-    add-int/lit8 v3, v3, -0x8
-
-    :cond_0
-    const/4 p1, 0x1
-
-    :cond_1
-    :goto_0
-    add-int/2addr v0, p1
-
-    if-gt v0, v2, :cond_2
-
-    .line 4
     iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    if-ge v2, v1, :cond_2
+    add-int/lit8 v2, v1, 0x1
 
-    .line 5
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->j(I)Z
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    move-result v1
+    aget-byte v1, v0, v1
 
-    if-eqz v1, :cond_1
+    and-int/lit16 v1, v1, 0xff
 
-    add-int/lit8 v2, v2, 0x1
+    shl-int/lit8 v1, v1, 0x8
 
-    add-int/lit8 v0, v0, 0x2
+    add-int/lit8 v3, v2, 0x1
 
-    goto :goto_0
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    .line 6
-    :cond_2
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+    aget-byte v0, v0, v2
 
-    if-lt v2, v0, :cond_4
+    and-int/lit16 v0, v0, 0xff
 
-    if-ne v2, v0, :cond_3
+    or-int/2addr v0, v1
 
-    if-nez v3, :cond_3
+    int-to-short v0, v0
 
-    goto :goto_1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :cond_4
-    :goto_1
-    return p1
+    return v0
 .end method
 
-.method public c()Z
-    .locals 7
+.method public D(I)Ljava/lang/String;
+    .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    sget-object v0, Lcom/google/common/base/Charsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->E(ILjava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public E(ILjava/nio/charset/Charset;)Ljava/lang/String;
+    .locals 3
+
+    .line 1
+    new-instance v0, Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    invoke-direct {v0, v1, v2, p1, p2}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
     .line 2
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    iget p2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    const/4 v2, 0x0
+    add-int/2addr p2, p1
 
-    move v3, v2
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    .line 3
-    :goto_0
-    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    return-object v0
+.end method
 
-    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+.method public F()I
+    .locals 4
 
-    if-ge v4, v5, :cond_0
-
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    iget v5, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
-
-    const/4 v6, 0x1
-
-    if-ne v4, v5, :cond_1
-
-    move v4, v6
-
-    goto :goto_1
-
-    :cond_1
-    move v4, v2
-
-    .line 5
-    :goto_1
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    .line 6
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    if-nez v4, :cond_2
-
-    mul-int/lit8 v3, v3, 0x2
-
-    add-int/2addr v3, v6
-
-    .line 7
-    invoke-virtual {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b(I)Z
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    .line 2
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
-    move v2, v6
+    move-result v1
 
-    :cond_2
-    return v2
+    .line 3
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
+
+    move-result v2
+
+    .line 4
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
+
+    move-result v3
+
+    shl-int/lit8 v0, v0, 0x15
+
+    shl-int/lit8 v1, v1, 0xe
+
+    or-int/2addr v0, v1
+
+    shl-int/lit8 v1, v2, 0x7
+
+    or-int/2addr v0, v1
+
+    or-int/2addr v0, v3
+
+    return v0
 .end method
 
-.method public d()Z
+.method public G()I
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
     aget-byte v0, v0, v1
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    const/16 v2, 0x80
-
-    shr-int v1, v2, v1
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 2
-    :goto_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k()V
+    and-int/lit16 v0, v0, 0xff
 
     return v0
 .end method
 
-.method public e(I)I
+.method public H()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    add-int/lit8 v3, v3, 0x2
+
+    .line 2
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return v0
+.end method
+
+.method public I()J
     .locals 9
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    add-int/2addr v0, p1
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    add-int/lit8 v2, v1, 0x1
 
-    const/4 v0, 0x0
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    move v1, v0
+    aget-byte v1, v0, v1
 
-    .line 2
-    :goto_0
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    int-to-long v3, v1
 
-    const/4 v3, 0x2
+    const-wide/16 v5, 0xff
 
-    const/4 v4, 0x1
+    and-long/2addr v3, v5
 
-    const/16 v5, 0x8
+    const/16 v1, 0x18
 
-    if-le v2, v5, :cond_1
+    shl-long/2addr v3, v1
 
-    add-int/lit8 v2, v2, -0x8
+    add-int/lit8 v1, v2, 0x1
 
-    .line 3
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    .line 4
-    iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+    aget-byte v2, v0, v2
 
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    int-to-long v7, v2
 
-    aget-byte v5, v5, v6
+    and-long/2addr v7, v5
 
-    and-int/lit16 v5, v5, 0xff
+    const/16 v2, 0x10
 
-    shl-int v2, v5, v2
+    shl-long/2addr v7, v2
+
+    or-long v2, v3, v7
+
+    add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v7, v1
+
+    and-long/2addr v7, v5
+
+    const/16 v1, 0x8
+
+    shl-long/2addr v7, v1
+
+    or-long v1, v2, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v4
+
+    int-to-long v3, v0
+
+    and-long/2addr v3, v5
+
+    or-long v0, v1, v3
+
+    return-wide v0
+.end method
+
+.method public J()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x10
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
 
     or-int/2addr v1, v2
 
-    add-int/lit8 v2, v6, 0x1
+    add-int/lit8 v2, v3, 0x1
 
-    .line 5
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->j(I)Z
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    move-result v2
+    aget-byte v0, v0, v3
 
-    if-eqz v2, :cond_0
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public K()I
+    .locals 3
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->o()I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    return v0
+
+    .line 2
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Top bit not zero: "
+
+    invoke-static {v2, v0}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public L()J
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->z()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-ltz v2, :cond_0
+
+    return-wide v0
+
+    .line 2
+    :cond_0
+    new-instance v2, Ljava/lang/IllegalStateException;
+
+    const-string v3, "Top bit not zero: "
+
+    invoke-static {v3, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+.end method
+
+.method public M()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public N()J
+    .locals 11
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v1
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x7
+
+    move v3, v2
+
+    :goto_0
+    const/4 v4, 0x6
+
+    const/4 v5, 0x1
+
+    if-ltz v3, :cond_2
+
+    shl-int v6, v5, v3
+
+    int-to-long v7, v6
+
+    and-long/2addr v7, v0
+
+    const-wide/16 v9, 0x0
+
+    cmp-long v7, v7, v9
+
+    if-nez v7, :cond_1
+
+    if-ge v3, v4, :cond_0
+
+    sub-int/2addr v6, v5
+
+    int-to-long v6, v6
+
+    and-long/2addr v0, v6
+
+    sub-int/2addr v2, v3
 
     goto :goto_1
 
     :cond_0
-    move v3, v4
+    if-ne v3, v2, :cond_2
 
-    :goto_1
-    add-int/2addr v6, v3
+    move v2, v5
 
-    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v3, v3, -0x1
 
     goto :goto_0
 
-    .line 6
-    :cond_1
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+    :cond_2
+    const/4 v2, 0x0
 
-    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    :goto_1
+    if-eqz v2, :cond_5
 
-    aget-byte v6, v6, v7
+    :goto_2
+    if-ge v5, v2, :cond_4
 
-    and-int/lit16 v6, v6, 0xff
+    .line 2
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    rsub-int/lit8 v8, v2, 0x8
+    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    shr-int/2addr v6, v8
+    add-int/2addr v6, v5
 
-    or-int/2addr v1, v6
+    aget-byte v3, v3, v6
 
-    const/4 v6, -0x1
+    and-int/lit16 v6, v3, 0xc0
 
-    rsub-int/lit8 p1, p1, 0x20
+    const/16 v7, 0x80
 
-    ushr-int p1, v6, p1
+    if-ne v6, v7, :cond_3
 
-    and-int/2addr p1, v1
+    shl-long/2addr v0, v4
 
-    if-ne v2, v5, :cond_3
+    and-int/lit8 v3, v3, 0x3f
 
-    .line 7
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    int-to-long v6, v3
 
-    add-int/lit8 v0, v7, 0x1
+    or-long/2addr v0, v6
 
-    .line 8
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->j(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    :cond_2
-    move v3, v4
-
-    :goto_2
-    add-int/2addr v7, v3
-
-    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    .line 9
+    .line 3
     :cond_3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()V
+    new-instance v2, Ljava/lang/NumberFormatException;
 
-    return p1
+    const-string v3, "Invalid UTF-8 sequence continuation byte: "
+
+    invoke-static {v3, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    .line 4
+    :cond_4
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/2addr v3, v2
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return-wide v0
+
+    .line 5
+    :cond_5
+    new-instance v2, Ljava/lang/NumberFormatException;
+
+    const-string v3, "Invalid UTF-8 sequence first byte: "
+
+    invoke-static {v3, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw v2
 .end method
 
-.method public final f()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 1
-    :goto_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x1
-
-    shl-int v3, v2, v1
-
-    sub-int/2addr v3, v2
-
-    if-lez v1, :cond_1
-
-    .line 2
-    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e(I)I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v3, v0
-
-    return v3
-.end method
-
-.method public g()I
-    .locals 3
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
-
-    move-result v0
-
-    .line 2
-    rem-int/lit8 v1, v0, 0x2
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    div-int/lit8 v0, v0, 0x2
-
-    mul-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public h()I
+.method public O(I)V
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b()I
 
     move-result v0
 
-    return v0
+    if-ge v0, p1, :cond_0
+
+    new-array v0, p1, [B
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    :goto_0
+    invoke-virtual {p0, v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->Q([BI)V
+
+    return-void
 .end method
 
-.method public i([BII)V
+.method public P([B)V
+    .locals 1
+
+    .line 1
+    array-length v0, p1
+
+    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->Q([BI)V
+
+    return-void
+.end method
+
+.method public Q([BI)V
     .locals 0
 
     .line 1
@@ -454,53 +686,53 @@
     .line 2
     iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
 
-    .line 3
-    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
-
     const/4 p1, 0x0
 
-    .line 4
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    .line 5
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()V
+    .line 3
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
     return-void
 .end method
 
-.method public final j(I)Z
-    .locals 4
+.method public R(I)V
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    array-length v0, v0
+
+    if-gt p1, v0, :cond_0
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x2
+    goto :goto_0
 
-    if-gt v1, p1, :cond_0
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
+
+    .line 2
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    return-void
+.end method
+
+.method public S(I)V
+    .locals 1
+
+    if-ltz p1, :cond_0
 
     .line 1
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
 
-    if-ge p1, v1, :cond_0
+    if-gt p1, v0, :cond_0
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
-
-    aget-byte v2, v1, p1
-
-    const/4 v3, 0x3
-
-    if-ne v2, v3, :cond_0
-
-    add-int/lit8 v2, p1, -0x2
-
-    aget-byte v2, v1, v2
-
-    if-nez v2, :cond_0
-
-    sub-int/2addr p1, v0
-
-    aget-byte p1, v1, p1
-
-    if-nez p1, :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
 
@@ -508,124 +740,1102 @@
     const/4 v0, 0x0
 
     :goto_0
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
+
+    .line 2
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return-void
+.end method
+
+.method public T(I)V
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/2addr v0, p1
+
+    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
+
+    return-void
+.end method
+
+.method public a()I
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    sub-int/2addr v0, v1
+
     return v0
 .end method
 
-.method public k()V
+.method public b()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public c(I)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b()I
+
+    move-result v0
+
+    if-le p1, v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    :cond_0
+    return-void
+.end method
+
+.method public d()[B
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    return-object v0
+.end method
+
+.method public e()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return v0
+.end method
+
+.method public f()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    return v0
+.end method
+
+.method public g()C
     .locals 3
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    const/4 v1, 0x1
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    add-int/2addr v0, v1
+    aget-byte v2, v0, v1
 
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
+    and-int/lit16 v2, v2, 0xff
 
-    const/16 v2, 0x8
+    shl-int/lit8 v2, v2, 0x8
 
-    if-ne v0, v2, :cond_1
+    add-int/lit8 v1, v1, 0x1
 
-    const/4 v0, 0x0
+    aget-byte v0, v0, v1
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v2
+
+    int-to-char v0, v0
+
+    return v0
+.end method
+
+.method public h()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v1
+
+    and-int/lit16 v0, v0, 0xff
+
+    return v0
+.end method
+
+.method public i(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->a:[B
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k([BII)V
 
     .line 2
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    .line 3
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->j(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v1, 0x2
-
-    :cond_0
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    .line 4
-    :cond_1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()V
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->q(I)V
 
     return-void
 .end method
 
-.method public l(I)V
-    .locals 4
+.method public j(Ljava/nio/ByteBuffer;I)V
+    .locals 2
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    invoke-virtual {p1, v0, v1, p2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
     .line 2
-    div-int/lit8 v1, p1, 0x8
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
-    add-int v2, v0, v1
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return-void
+.end method
+
+.method public k([BII)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    invoke-static {v0, v1, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 2
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    return-void
+.end method
+
+.method public l(C)Ljava/lang/String;
+    .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 2
+    :cond_0
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
 
     .line 3
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    .line 4
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    mul-int/lit8 v1, v1, 0x8
-
-    sub-int/2addr p1, v1
-
-    add-int/2addr p1, v3
-
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    const/4 v1, 0x7
-
-    if-le p1, v1, :cond_0
-
-    add-int/lit8 v2, v2, 0x1
-
-    .line 5
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    add-int/lit8 p1, p1, -0x8
-
-    .line 6
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d:I
-
-    :cond_0
     :goto_0
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    aget-byte v1, v1, v0
+
+    if-eq v1, p1, :cond_1
+
     add-int/lit8 v0, v0, 0x1
-
-    .line 7
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    if-gt v0, p1, :cond_1
-
-    .line 8
-    invoke-virtual {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->j(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 9
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
-
-    add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 10
+    .line 4
     :cond_1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()V
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
 
-    return-void
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    sub-int v2, v0, v1
+
+    invoke-static {p1, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->J([BII)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 5
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    .line 6
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    if-ge v0, v1, :cond_2
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 7
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    :cond_2
+    return-object p1
+.end method
+
+.method public m()D
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->z()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public n()F
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->o()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public o()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x18
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x10
+
+    or-int/2addr v1, v2
+
+    add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v3, v0, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    or-int/2addr v1, v3
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public p()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x18
+
+    shr-int/lit8 v1, v1, 0x8
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v3
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public q()Ljava/lang/String;
+    .locals 6
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    .line 3
+    :goto_0
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    aget-byte v1, v1, v0
+
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->K0(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 4
+    :cond_1
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    sub-int v2, v0, v1
+
+    const/4 v3, 0x3
+
+    if-lt v2, v3, :cond_2
+
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    aget-byte v4, v2, v1
+
+    const/16 v5, -0x11
+
+    if-ne v4, v5, :cond_2
+
+    add-int/lit8 v4, v1, 0x1
+
+    aget-byte v4, v2, v4
+
+    const/16 v5, -0x45
+
+    if-ne v4, v5, :cond_2
+
+    add-int/lit8 v4, v1, 0x2
+
+    aget-byte v2, v2, v4
+
+    const/16 v4, -0x41
+
+    if-ne v2, v4, :cond_2
+
+    add-int/2addr v1, v3
+
+    .line 5
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    .line 6
+    :cond_2
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    sub-int v3, v0, v2
+
+    invoke-static {v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->J([BII)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 7
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    .line 8
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c:I
+
+    if-ne v0, v2, :cond_3
+
+    return-object v1
+
+    .line 9
+    :cond_3
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    aget-byte v4, v3, v0
+
+    const/16 v5, 0xd
+
+    if-ne v4, v5, :cond_4
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 10
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    if-ne v0, v2, :cond_4
+
+    return-object v1
+
+    .line 11
+    :cond_4
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v3, v0
+
+    const/16 v3, 0xa
+
+    if-ne v2, v3, :cond_5
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 12
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    :cond_5
+    return-object v1
+.end method
+
+.method public r()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v3, v0, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x10
+
+    or-int/2addr v1, v3
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int/lit8 v0, v0, 0x18
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public s()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v3
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int/lit8 v0, v0, 0x10
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public t()J
+    .locals 9
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v3, v1
+
+    const-wide/16 v5, 0xff
+
+    and-long/2addr v3, v5
+
+    add-int/lit8 v1, v2, 0x1
+
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    int-to-long v7, v2
+
+    and-long/2addr v7, v5
+
+    const/16 v2, 0x8
+
+    shl-long/2addr v7, v2
+
+    or-long v2, v3, v7
+
+    add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v7, v1
+
+    and-long/2addr v7, v5
+
+    const/16 v1, 0x10
+
+    shl-long/2addr v7, v1
+
+    or-long v1, v2, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v4, v0, v4
+
+    int-to-long v7, v4
+
+    and-long/2addr v7, v5
+
+    const/16 v4, 0x18
+
+    shl-long/2addr v7, v4
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v3, v0, v3
+
+    int-to-long v7, v3
+
+    and-long/2addr v7, v5
+
+    const/16 v3, 0x20
+
+    shl-long/2addr v7, v3
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v4, v0, v4
+
+    int-to-long v7, v4
+
+    and-long/2addr v7, v5
+
+    const/16 v4, 0x28
+
+    shl-long/2addr v7, v4
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v3, v0, v3
+
+    int-to-long v7, v3
+
+    and-long/2addr v7, v5
+
+    const/16 v3, 0x30
+
+    shl-long/2addr v7, v3
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v4
+
+    int-to-long v3, v0
+
+    and-long/2addr v3, v5
+
+    const/16 v0, 0x38
+
+    shl-long/2addr v3, v0
+
+    or-long v0, v1, v3
+
+    return-wide v0
+.end method
+
+.method public u()S
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int/lit8 v0, v0, 0x8
+
+    or-int/2addr v0, v1
+
+    int-to-short v0, v0
+
+    return v0
+.end method
+
+.method public v()J
+    .locals 9
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v3, v1
+
+    const-wide/16 v5, 0xff
+
+    and-long/2addr v3, v5
+
+    add-int/lit8 v1, v2, 0x1
+
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    int-to-long v7, v2
+
+    and-long/2addr v7, v5
+
+    const/16 v2, 0x8
+
+    shl-long/2addr v7, v2
+
+    or-long v2, v3, v7
+
+    add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v7, v1
+
+    and-long/2addr v7, v5
+
+    const/16 v1, 0x10
+
+    shl-long/2addr v7, v1
+
+    or-long v1, v2, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v4
+
+    int-to-long v3, v0
+
+    and-long/2addr v3, v5
+
+    const/16 v0, 0x18
+
+    shl-long/2addr v3, v0
+
+    or-long v0, v1, v3
+
+    return-wide v0
+.end method
+
+.method public w()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v3
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int/lit8 v0, v0, 0x10
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public x()I
+    .locals 3
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->r()I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    return v0
+
+    .line 2
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Top bit not zero: "
+
+    invoke-static {v2, v0}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public y()I
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int/lit8 v0, v0, 0x8
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public z()J
+    .locals 9
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a:[B
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v3, v1
+
+    const-wide/16 v5, 0xff
+
+    and-long/2addr v3, v5
+
+    const/16 v1, 0x38
+
+    shl-long/2addr v3, v1
+
+    add-int/lit8 v1, v2, 0x1
+
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v2, v0, v2
+
+    int-to-long v7, v2
+
+    and-long/2addr v7, v5
+
+    const/16 v2, 0x30
+
+    shl-long/2addr v7, v2
+
+    or-long v2, v3, v7
+
+    add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v1, v0, v1
+
+    int-to-long v7, v1
+
+    and-long/2addr v7, v5
+
+    const/16 v1, 0x28
+
+    shl-long/2addr v7, v1
+
+    or-long v1, v2, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v4, v0, v4
+
+    int-to-long v7, v4
+
+    and-long/2addr v7, v5
+
+    const/16 v4, 0x20
+
+    shl-long/2addr v7, v4
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v3, v0, v3
+
+    int-to-long v7, v3
+
+    and-long/2addr v7, v5
+
+    const/16 v3, 0x18
+
+    shl-long/2addr v7, v3
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v4, v0, v4
+
+    int-to-long v7, v4
+
+    and-long/2addr v7, v5
+
+    const/16 v4, 0x10
+
+    shl-long/2addr v7, v4
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v3, v0, v3
+
+    int-to-long v7, v3
+
+    and-long/2addr v7, v5
+
+    const/16 v3, 0x8
+
+    shl-long/2addr v7, v3
+
+    or-long/2addr v1, v7
+
+    add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b:I
+
+    aget-byte v0, v0, v4
+
+    int-to-long v3, v0
+
+    and-long/2addr v3, v5
+
+    or-long v0, v1, v3
+
+    return-wide v0
 .end method

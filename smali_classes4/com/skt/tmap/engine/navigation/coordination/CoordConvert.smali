@@ -199,78 +199,78 @@
     .line 2
     invoke-static {v6, v7}, Ljava/lang/Math;->atan(D)D
 
-    move-result-wide v6
+    move-result-wide v12
 
-    mul-double v8, p9, p9
+    mul-double v6, p9, p9
 
-    mul-double v10, p11, p11
+    mul-double v8, p11, p11
 
-    sub-double/2addr v8, v10
+    sub-double/2addr v6, v8
 
-    div-double/2addr v8, v10
+    div-double/2addr v6, v8
 
-    sub-double v10, p9, p11
+    sub-double v8, p9, p11
 
-    div-double v10, v10, p9
+    div-double v8, v8, p9
 
-    const-wide/high16 v12, 0x4000000000000000L    # 2.0
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
-    mul-double/2addr v12, v10
+    mul-double/2addr v10, v8
 
-    mul-double/2addr v10, v10
+    mul-double/2addr v8, v8
 
-    sub-double/2addr v12, v10
+    sub-double v14, v10, v8
 
-    mul-double v8, v8, p11
+    mul-double v6, v6, p11
 
     .line 3
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v12, v13}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v8, v6
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v8, v6
+
+    move-wide v6, v12
+
+    move-wide/from16 v10, p4
+
+    invoke-static/range {v6 .. v11}, Landroidx/appcompat/app/m;->a(DDD)D
+
+    move-result-wide v6
+
+    mul-double v8, v14, p9
+
+    .line 4
+    invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v10
 
     mul-double/2addr v10, v8
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v8
 
     mul-double/2addr v8, v10
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v10
 
     mul-double/2addr v10, v8
 
-    add-double v10, v10, p4
+    sub-double v8, v4, v10
 
-    mul-double v8, v12, p9
-
-    .line 4
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v14
-
-    mul-double/2addr v14, v8
-
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v8
-
-    mul-double/2addr v8, v14
-
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v6
-
-    mul-double/2addr v6, v8
-
-    sub-double v6, v4, v6
-
-    div-double/2addr v10, v6
+    div-double/2addr v6, v8
 
     .line 5
-    invoke-static {v10, v11}, Ljava/lang/Math;->atan(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide v6
 
@@ -287,17 +287,17 @@
 
     div-double/2addr v8, v10
 
-    const/4 v14, 0x0
+    const/4 v12, 0x0
 
     .line 7
-    aput-wide v8, p6, v14
+    aput-wide v8, p6, v12
 
     mul-double/2addr v0, v2
 
     div-double/2addr v0, v10
 
     .line 8
-    aput-wide v0, p7, v14
+    aput-wide v0, p7, v12
 
     .line 9
     invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
@@ -310,7 +310,7 @@
 
     move-result-wide v0
 
-    mul-double/2addr v0, v12
+    mul-double/2addr v0, v14
 
     invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
 
@@ -330,7 +330,7 @@
 
     sub-double/2addr v4, v0
 
-    aput-wide v4, p8, v14
+    aput-wide v4, p8, v12
 
     return-void
 .end method
@@ -421,7 +421,7 @@
 
     move-wide/from16 v14, p4
 
-    invoke-static/range {v8 .. v15}, Ls0/a;->a(DDDD)D
+    invoke-static/range {v8 .. v15}, Lk1/a;->a(DDDD)D
 
     move-result-wide v0
 

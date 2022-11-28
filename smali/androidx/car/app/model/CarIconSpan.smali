@@ -135,9 +135,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/c;->c:Lm0/c;
+    sget-object v0, La1/c;->c:La1/c;
 
-    invoke-virtual {v0, p0}, Lm0/c;->c(Landroidx/car/app/model/CarIcon;)V
+    invoke-virtual {v0, p0}, La1/c;->c(Landroidx/car/app/model/CarIcon;)V
 
     const/4 v0, 0x1
 

@@ -13,6 +13,9 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final b:Ljava/lang/String; = "BrowserActions"
@@ -25,43 +28,54 @@
 
 .field public static final f:Ljava/lang/String; = "androidx.browser.browseractions.ICON_ID"
 
-.field public static final g:Ljava/lang/String; = "androidx.browser.browseractions.TITLE"
+.field public static final g:Ljava/lang/String; = "androidx.browser.browseractions.ICON_URI"
 
-.field public static final h:Ljava/lang/String; = "androidx.browser.browseractions.ACTION"
+.field public static final h:Ljava/lang/String; = "androidx.browser.browseractions.TITLE"
 
-.field public static final i:Ljava/lang/String; = "androidx.browser.browseractions.extra.TYPE"
+.field public static final i:Ljava/lang/String; = "androidx.browser.browseractions.ACTION"
 
-.field public static final j:Ljava/lang/String; = "androidx.browser.browseractions.extra.MENU_ITEMS"
+.field public static final j:Ljava/lang/String; = "androidx.browser.browseractions.extra.TYPE"
 
-.field public static final k:Ljava/lang/String; = "androidx.browser.browseractions.extra.SELECTED_ACTION_PENDING_INTENT"
+.field public static final k:Ljava/lang/String; = "androidx.browser.browseractions.extra.MENU_ITEMS"
 
-.field public static final l:I = 0x5
+.field public static final l:Ljava/lang/String; = "androidx.browser.browseractions.extra.SELECTED_ACTION_PENDING_INTENT"
 
-.field public static final m:I = 0x0
+.field public static final m:I = 0x5
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "MinMaxConstant"
+        }
+    .end annotation
+.end field
 
-.field public static final n:I = 0x1
+.field public static final n:I = 0x0
 
-.field public static final o:I = 0x2
+.field public static final o:I = 0x1
 
-.field public static final p:I = 0x3
+.field public static final p:I = 0x2
 
-.field public static final q:I = 0x4
+.field public static final q:I = 0x3
 
-.field public static final r:I = 0x5
+.field public static final r:I = 0x4
 
-.field public static final s:I = -0x1
+.field public static final s:I = 0x5
 
-.field public static final t:I = 0x0
+.field public static final t:I = -0x1
 
-.field public static final u:I = 0x1
+.field public static final u:I = 0x0
 
-.field public static final v:I = 0x2
+.field public static final v:I = 0x1
 
-.field public static final w:I = 0x3
+.field public static final w:I = 0x2
 
-.field public static final x:I = 0x4
+.field public static final x:I = 0x3
 
-.field public static y:Landroidx/browser/browseractions/BrowserActionsIntent$a;
+.field public static final y:I = 0x4
+
+.field public static z:Landroidx/browser/browseractions/BrowserActionsIntent$a;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # instance fields
@@ -90,6 +104,19 @@
 
 .method public static a(Landroid/content/Context;)Ljava/util/List;
     .locals 3
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -131,7 +158,33 @@
 .end method
 
 .method public static b(Landroid/content/Intent;)Ljava/lang/String;
+    .locals 0
+    .param p0    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Landroidx/browser/browseractions/BrowserActionsIntent;->d(Landroid/content/Intent;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/content/Intent;)Ljava/lang/String;
     .locals 1
+    .param p0    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const-string v0, "androidx.browser.browseractions.APP_ID"
 
@@ -157,8 +210,16 @@
     return-object p0
 .end method
 
-.method public static d(Landroid/content/Context;Landroid/content/Intent;)V
+.method public static e(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-static {p0}, Landroidx/browser/browseractions/BrowserActionsIntent;->a(Landroid/content/Context;)Ljava/util/List;
@@ -166,16 +227,16 @@
     move-result-object v0
 
     .line 2
-    invoke-static {p0, p1, v0}, Landroidx/browser/browseractions/BrowserActionsIntent;->e(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)V
+    invoke-static {p0, p1, v0}, Landroidx/browser/browseractions/BrowserActionsIntent;->f(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static e(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)V
+.method public static f(Landroid/content/Context;Landroid/content/Intent;Ljava/util/List;)V
     .locals 4
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
@@ -304,20 +365,28 @@
     const/4 p2, 0x0
 
     .line 11
-    invoke-static {p0, p1, p2}, Landroidx/core/content/d;->t(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-static {p0, p1, p2}, Landroidx/core/content/ContextCompat;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
 
     return-void
 
     .line 12
     :cond_4
     :goto_2
-    invoke-static {p0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->h(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->i(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public static f(Landroid/content/Context;Landroid/net/Uri;)V
+.method public static g(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     new-instance v0, Landroidx/browser/browseractions/BrowserActionsIntent$b;
@@ -333,13 +402,29 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->d(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->e(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public static g(Landroid/content/Context;Landroid/net/Uri;ILjava/util/ArrayList;Landroid/app/PendingIntent;)V
+.method public static h(Landroid/content/Context;Landroid/net/Uri;ILjava/util/ArrayList;Landroid/app/PendingIntent;)V
     .locals 1
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/ArrayList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroid/app/PendingIntent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -347,7 +432,7 @@
             "Landroid/net/Uri;",
             "I",
             "Ljava/util/ArrayList<",
-            "Lp/a;",
+            "Lr/a;",
             ">;",
             "Landroid/app/PendingIntent;",
             ")V"
@@ -384,39 +469,30 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->d(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->e(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public static h(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+.method public static i(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
     .line 1
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    const-string v1, "androidx.browser.browseractions.extra.TYPE"
-
-    const/4 v2, 0x0
+    const-string v1, "androidx.browser.browseractions.extra.MENU_ITEMS"
 
     .line 2
-    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    const-string v2, "androidx.browser.browseractions.extra.MENU_ITEMS"
-
-    .line 3
-    invoke-virtual {p1, v2}, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getParcelableArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 4
-    invoke-static {p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->j(Ljava/util/ArrayList;)Ljava/util/List;
+    .line 3
+    invoke-static {p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->k(Ljava/util/ArrayList;)Ljava/util/List;
 
     move-result-object p1
 
@@ -425,37 +501,36 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 5
+    .line 4
     :goto_0
-    invoke-static {p0, v0, v1, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->i(Landroid/content/Context;Landroid/net/Uri;ILjava/util/List;)V
+    invoke-static {p0, v0, p1}, Landroidx/browser/browseractions/BrowserActionsIntent;->j(Landroid/content/Context;Landroid/net/Uri;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static i(Landroid/content/Context;Landroid/net/Uri;ILjava/util/List;)V
-    .locals 0
+.method public static j(Landroid/content/Context;Landroid/net/Uri;Ljava/util/List;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Landroid/net/Uri;",
-            "I",
             "Ljava/util/List<",
-            "Lp/a;",
+            "Lr/a;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    new-instance p2, Lp/d;
+    new-instance v0, Lr/d;
 
-    invoke-direct {p2, p0, p1, p3}, Lp/d;-><init>(Landroid/content/Context;Landroid/net/Uri;Ljava/util/List;)V
+    invoke-direct {v0, p0, p1, p2}, Lr/d;-><init>(Landroid/content/Context;Landroid/net/Uri;Ljava/util/List;)V
 
     .line 2
-    invoke-virtual {p2}, Lp/d;->a()V
+    invoke-virtual {v0}, Lr/d;->e()V
 
     .line 3
-    sget-object p0, Landroidx/browser/browseractions/BrowserActionsIntent;->y:Landroidx/browser/browseractions/BrowserActionsIntent$a;
+    sget-object p0, Landroidx/browser/browseractions/BrowserActionsIntent;->z:Landroidx/browser/browseractions/BrowserActionsIntent$a;
 
     if-eqz p0, :cond_0
 
@@ -466,8 +541,15 @@
     return-void
 .end method
 
-.method public static j(Ljava/util/ArrayList;)Ljava/util/List;
-    .locals 6
+.method public static k(Ljava/util/ArrayList;)Ljava/util/List;
+    .locals 7
+    .param p0    # Ljava/util/ArrayList;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -475,7 +557,7 @@
             "Landroid/os/Bundle;",
             ">;)",
             "Ljava/util/List<",
-            "Lp/a;",
+            "Lr/a;",
             ">;"
         }
     .end annotation
@@ -493,7 +575,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_1
+    if-ge v1, v2, :cond_2
 
     .line 3
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -523,31 +605,53 @@
     .line 6
     invoke-virtual {v2, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
-    move-result v2
-
-    .line 7
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
     move-result v5
 
-    if-nez v5, :cond_0
+    const-string v6, "androidx.browser.browseractions.ICON_URI"
 
-    if-eqz v4, :cond_0
+    .line 7
+    invoke-virtual {v2, v6}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/net/Uri;
 
     .line 8
-    new-instance v5, Lp/a;
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-direct {v5, v3, v4, v2}, Lp/a;-><init>(Ljava/lang/String;Landroid/app/PendingIntent;I)V
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    if-eqz v4, :cond_1
+
+    if-eqz v5, :cond_0
 
     .line 9
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-instance v2, Lr/a;
+
+    invoke-direct {v2, v3, v4, v5}, Lr/a;-><init>(Ljava/lang/String;Landroid/app/PendingIntent;I)V
+
+    goto :goto_1
+
+    .line 10
+    :cond_0
+    new-instance v5, Lr/a;
+
+    invoke-direct {v5, v3, v4, v2}, Lr/a;-><init>(Ljava/lang/String;Landroid/app/PendingIntent;Landroid/net/Uri;)V
+
+    move-object v2, v5
+
+    .line 11
+    :goto_1
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 10
-    :cond_0
+    .line 12
+    :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string v0, "Custom item should contain a non-empty title and non-null intent."
@@ -556,15 +660,15 @@
 
     throw p0
 
-    :cond_1
+    :cond_2
     return-object v0
 .end method
 
-.method public static k(Landroidx/browser/browseractions/BrowserActionsIntent$a;)V
+.method public static l(Landroidx/browser/browseractions/BrowserActionsIntent$a;)V
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
@@ -572,7 +676,7 @@
     .end annotation
 
     .line 1
-    sput-object p0, Landroidx/browser/browseractions/BrowserActionsIntent;->y:Landroidx/browser/browseractions/BrowserActionsIntent$a;
+    sput-object p0, Landroidx/browser/browseractions/BrowserActionsIntent;->z:Landroidx/browser/browseractions/BrowserActionsIntent$a;
 
     return-void
 .end method

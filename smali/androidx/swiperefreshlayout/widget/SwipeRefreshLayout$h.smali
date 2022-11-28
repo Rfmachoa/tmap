@@ -38,7 +38,7 @@
     .line 1
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$h;->a:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-    iget v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->c1:F
+    iget v0, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->e1:F
 
     neg-float v1, v0
 

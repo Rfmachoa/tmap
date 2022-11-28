@@ -3,7 +3,7 @@
 .source "TextViewOnReceiveContentListener.java"
 
 # interfaces
-.implements Ls1/f0;
+.implements Landroidx/core/view/j0;
 
 
 # annotations

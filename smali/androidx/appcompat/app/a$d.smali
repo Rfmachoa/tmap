@@ -16,6 +16,12 @@
     name = "d"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/appcompat/app/a$d$a;
+    }
+.end annotation
+
 
 # instance fields
 .field public final a:Landroid/app/Activity;
@@ -51,10 +57,10 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, p1}, Landroidx/appcompat/app/a$d$a;->b(Landroid/app/ActionBar;Landroid/graphics/drawable/Drawable;)V
 
     .line 3
-    invoke-virtual {v0, p2}, Landroid/app/ActionBar;->setHomeActionContentDescription(I)V
+    invoke-static {v0, p2}, Landroidx/appcompat/app/a$d$a;->a(Landroid/app/ActionBar;I)V
 
     :cond_0
     return-void
@@ -110,7 +116,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Landroid/app/ActionBar;->setHomeActionContentDescription(I)V
+    invoke-static {v0, p1}, Landroidx/appcompat/app/a$d$a;->a(Landroid/app/ActionBar;I)V
 
     :cond_0
     return-void

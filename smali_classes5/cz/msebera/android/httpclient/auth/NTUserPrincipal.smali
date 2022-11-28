@@ -34,7 +34,7 @@
     const-string v0, "User name"
 
     .line 2
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     iput-object p2, p0, Lcz/msebera/android/httpclient/auth/NTUserPrincipal;->username:Ljava/lang/String;
@@ -130,7 +130,7 @@
 
     iget-object v2, p1, Lcz/msebera/android/httpclient/auth/NTUserPrincipal;->username:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -141,7 +141,7 @@
     iget-object p1, p1, Lcz/msebera/android/httpclient/auth/NTUserPrincipal;->domain:Ljava/lang/String;
 
     .line 4
-    invoke-static {v1, p1}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -190,14 +190,14 @@
 
     const/16 v1, 0x11
 
-    invoke-static {v1, v0}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v1, v0}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
     .line 2
     iget-object v1, p0, Lcz/msebera/android/httpclient/auth/NTUserPrincipal;->domain:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 

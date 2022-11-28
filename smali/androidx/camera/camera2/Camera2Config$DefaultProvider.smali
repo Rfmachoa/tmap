@@ -3,7 +3,7 @@
 .source "Camera2Config.java"
 
 # interfaces
-.implements Landroidx/camera/core/a0$b;
+.implements Landroidx/camera/core/w$b;
 
 
 # annotations
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public getCameraXConfig()Landroidx/camera/core/a0;
+.method public getCameraXConfig()Landroidx/camera/core/w;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/camera2/Camera2Config;->c()Landroidx/camera/core/a0;
+    invoke-static {}, Landroidx/camera/camera2/Camera2Config;->c()Landroidx/camera/core/w;
 
     move-result-object v0
 

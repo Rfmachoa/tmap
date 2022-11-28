@@ -73,7 +73,7 @@
 
     const-string v1, "TmapMainSettingSingleTextUpdateActivity"
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-interface {p1}, Landroid/text/Editable;->length()I
@@ -85,7 +85,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity$a;->a:Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;->v5(Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;->D5(Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity$a;->a:Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;
@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1303ac
+    const v0, 0x7f1403f3
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -106,7 +106,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity$a;->a:Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;->w5(Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;->E5(Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;)V
 
     .line 6
     invoke-interface {p1}, Landroid/text/Editable;->length()I
@@ -124,7 +124,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1303b0
+    const v0, 0x7f1403f8
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -133,7 +133,7 @@
     .line 8
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity$a;->a:Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;->x5(Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;->F5(Lcom/skt/tmap/activity/TmapMainSettingSingleTextUpdateActivity;)V
 
     goto :goto_0
 
@@ -143,7 +143,7 @@
 
     move-result p1
 
-    const/16 v0, 0xa
+    const/16 v0, 0xc
 
     if-le p1, v0, :cond_2
 
@@ -154,7 +154,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1303af
+    const v0, 0x7f1403f7
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -218,7 +218,7 @@
 
     move-result p2
 
-    const/16 p3, 0xa
+    const/16 p3, 0xc
 
     if-le p2, p3, :cond_0
 

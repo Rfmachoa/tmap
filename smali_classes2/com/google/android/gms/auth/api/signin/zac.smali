@@ -1,20 +1,9 @@
 .class final Lcom/google/android/gms/auth/api/signin/zac;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator<",
-        "Lcom/google/android/gms/common/api/Scope;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods

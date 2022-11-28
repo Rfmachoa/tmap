@@ -16,4 +16,14 @@
 
 # virtual methods
 .method public abstract a(ILandroid/os/Bundle;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "type",
+            "extras"
+        }
+    .end annotation
 .end method

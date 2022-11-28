@@ -57,7 +57,7 @@
 
     const-string v2, "&referrer=utm_source%3Dplay.core.missingsplits"
 
-    invoke-static {v1, v0, p1, v2}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, p1, v2}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

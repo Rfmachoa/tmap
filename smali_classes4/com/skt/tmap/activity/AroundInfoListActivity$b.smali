@@ -141,7 +141,7 @@
 
     invoke-direct {p3, p0, p2}, Lcom/skt/tmap/activity/AroundInfoListActivity$b$a;-><init>(Lcom/skt/tmap/activity/AroundInfoListActivity$b;I)V
 
-    invoke-virtual {p1, p3}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->l(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, p3}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->n(Ljava/lang/Runnable;)V
 
     const/4 p1, 0x0
 

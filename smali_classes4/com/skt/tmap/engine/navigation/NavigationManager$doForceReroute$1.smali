@@ -16,6 +16,12 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1$WhenMappings;
+    }
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
@@ -42,34 +48,45 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
 .field public final synthetic $periodicType:Lkotlin/jvm/internal/Ref$ObjectRef;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/internal/Ref$ObjectRef<",
+            "Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public final synthetic this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/engine/navigation/NavigationManager;Lkotlin/jvm/internal/Ref$ObjectRef;)V
+.method public constructor <init>(Lkotlin/jvm/internal/Ref$ObjectRef;Lcom/skt/tmap/engine/navigation/NavigationManager;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/internal/Ref$ObjectRef;",
+            "Lkotlin/jvm/internal/Ref$ObjectRef<",
+            "Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;",
+            ">;",
+            "Lcom/skt/tmap/engine/navigation/NavigationManager;",
             ")V"
         }
     .end annotation
 
+    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1;->$periodicType:Lkotlin/jvm/internal/Ref$ObjectRef;
+
+    iput-object p2, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
+
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    iput-object p2, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1;->$periodicType:Lkotlin/jvm/internal/Ref$ObjectRef;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -115,7 +132,7 @@
 
     check-cast p1, Lcom/skt/tmap/engine/navigation/network/ndds/NddsDataType$DestSearchFlag;
 
-    sget-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$WhenMappings;->$EnumSwitchMapping$5:[I
+    sget-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -125,24 +142,20 @@
 
     const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
+    if-ne p1, v0, :cond_0
 
     .line 2
-    :cond_0
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doForceReroute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getDriveStatusChangedListener()Lcom/skt/tmap/engine/navigation/DriveStatusChangedListener;
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
     invoke-interface {p1}, Lcom/skt/tmap/engine/navigation/DriveStatusChangedListener;->onDestinationDirResearchComplete()V
 
-    :cond_1
-    :goto_0
+    :cond_0
     return-void
 .end method
 

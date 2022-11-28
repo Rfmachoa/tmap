@@ -61,7 +61,7 @@
     move-result-object p1
 
     .line 4
-    invoke-static {p0, p1, v2}, Lnf/i;->j(Ljava/net/URI;Lcz/msebera/android/httpclient/HttpHost;Z)Ljava/net/URI;
+    invoke-static {p0, p1, v2}, Lrh/i;->j(Ljava/net/URI;Lcz/msebera/android/httpclient/HttpHost;Z)Ljava/net/URI;
 
     move-result-object p0
 
@@ -69,7 +69,7 @@
 
     .line 5
     :cond_1
-    invoke-static {p0}, Lnf/i;->h(Ljava/net/URI;)Ljava/net/URI;
+    invoke-static {p0}, Lrh/i;->h(Ljava/net/URI;)Ljava/net/URI;
 
     move-result-object p0
 
@@ -84,7 +84,7 @@
     if-eqz p1, :cond_3
 
     .line 7
-    invoke-static {p0, v0, v2}, Lnf/i;->j(Ljava/net/URI;Lcz/msebera/android/httpclient/HttpHost;Z)Ljava/net/URI;
+    invoke-static {p0, v0, v2}, Lrh/i;->j(Ljava/net/URI;Lcz/msebera/android/httpclient/HttpHost;Z)Ljava/net/URI;
 
     move-result-object p0
 
@@ -92,7 +92,7 @@
 
     .line 8
     :cond_3
-    invoke-static {p0}, Lnf/i;->h(Ljava/net/URI;)Ljava/net/URI;
+    invoke-static {p0}, Lrh/i;->h(Ljava/net/URI;)Ljava/net/URI;
 
     move-result-object p0
 

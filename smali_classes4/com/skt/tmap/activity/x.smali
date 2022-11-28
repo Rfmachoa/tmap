@@ -2,18 +2,39 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/activity/CctvActivity;
+
+.field public final synthetic b:Ljava/lang/String;
+
 
 # direct methods
-.method public static a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/CctvActivity;Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    iput-object p1, p0, Lcom/skt/tmap/activity/x;->a:Lcom/skt/tmap/activity/CctvActivity;
 
-    move-result-object p0
+    iput-object p2, p0, Lcom/skt/tmap/activity/x;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, p2}, Ldc/d;->S(Ljava/lang/String;)V
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/x;->a:Lcom/skt/tmap/activity/CctvActivity;
+
+    iget-object v1, p0, Lcom/skt/tmap/activity/x;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/CctvActivity;->D5(Lcom/skt/tmap/activity/CctvActivity;Ljava/lang/String;Landroid/view/View;)V
 
     return-void
 .end method

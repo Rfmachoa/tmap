@@ -1,208 +1,464 @@
-.class public final Lmi/c;
+.class public Lmi/c;
 .super Ljava/lang/Object;
-.source "Utils.java"
+.source "ConnectionHolder.java"
+
+# interfaces
+.implements Luh/h;
+.implements Lsh/b;
+.implements Ljava/io/Closeable;
+
+
+# annotations
+.annotation build Lcz/msebera/android/httpclient/annotation/ThreadSafe;
+.end annotation
+
+
+# instance fields
+.field public a:Lcz/msebera/android/httpclient/extras/b;
+
+.field public final b:Luh/m;
+
+.field public final c:Lhh/h;
+
+.field public volatile d:Z
+
+.field public volatile e:Ljava/lang/Object;
+
+.field public volatile f:J
+
+.field public volatile g:Ljava/util/concurrent/TimeUnit;
+
+.field public volatile h:Z
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcz/msebera/android/httpclient/extras/b;Luh/m;Lhh/h;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    iput-object p1, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    .line 3
+    iput-object p2, p0, Lmi/c;->b:Luh/m;
+
+    .line 4
+    iput-object p3, p0, Lmi/c;->c:Lhh/h;
+
     return-void
 .end method
 
-.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-    .param p0    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
-    if-nez p0, :cond_1
-
-    if-nez p1, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    .line 1
-    :cond_1
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static b(Landroid/content/Context;)Landroid/app/Activity;
-    .locals 2
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return-object v0
-
-    .line 1
-    :cond_0
-    instance-of v1, p0, Landroid/app/Activity;
-
-    if-eqz v1, :cond_1
-
-    .line 2
-    check-cast p0, Landroid/app/Activity;
-
-    return-object p0
-
-    .line 3
-    :cond_1
-    instance-of v1, p0, Landroid/content/ContextWrapper;
-
-    if-eqz v1, :cond_2
-
-    .line 4
-    check-cast p0, Landroid/content/ContextWrapper;
-
-    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lmi/c;->b(Landroid/content/Context;)Landroid/app/Activity;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    return-object v0
-.end method
-
-.method public static varargs c(Ljava/lang/String;ILjava/lang/String;[Ljava/lang/Object;)V
+# virtual methods
+.method public a()Z
     .locals 1
 
     .line 1
-    sget-boolean v0, Lit/sephiroth/android/library/tooltip/Tooltip;->a:Z
+    iget-boolean v0, p0, Lmi/c;->h:Z
 
-    if-eqz v0, :cond_4
+    return v0
+.end method
 
-    const/4 v0, 0x3
+.method public abortConnection()V
+    .locals 9
 
-    if-eq p1, v0, :cond_3
+    .line 1
+    iget-object v0, p0, Lmi/c;->c:Lhh/h;
 
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x5
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x6
-
-    if-eq p1, v0, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :try_start_0
+    iget-boolean v1, p0, Lmi/c;->h:Z
 
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    if-eqz v1, :cond_0
 
     .line 3
+    monitor-exit v0
+
+    return-void
+
     :cond_0
-    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    const/4 v1, 0x1
 
     .line 4
-    :cond_1
-    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    iput-boolean v1, p0, Lmi/c;->h:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     .line 5
-    :cond_2
-    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :try_start_1
+    iget-object v1, p0, Lmi/c;->c:Lhh/h;
 
-    move-result-object p1
+    invoke-interface {v1}, Lhh/i;->shutdown()V
 
-    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 6
+    iget-object v1, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    const-string v2, "Connection discarded"
+
+    invoke-virtual {v1, v2}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 7
+    :try_start_2
+    iget-object v3, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v4, p0, Lmi/c;->c:Lhh/h;
+
+    const/4 v5, 0x0
+
+    const-wide/16 v6, 0x0
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v3 .. v8}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     goto :goto_0
 
-    .line 6
-    :cond_3
-    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :catchall_0
+    move-exception v1
 
-    move-result-object p1
+    goto :goto_1
 
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :catch_0
+    move-exception v1
 
-    :cond_4
+    .line 8
+    :try_start_3
+    iget-object v2, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    invoke-virtual {v2}, Lcz/msebera/android/httpclient/extras/b;->l()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 9
+    iget-object v2, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v1}, Lcz/msebera/android/httpclient/extras/b;->b(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 10
+    :cond_1
+    :try_start_4
+    iget-object v2, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v3, p0, Lmi/c;->c:Lhh/h;
+
+    const/4 v4, 0x0
+
+    const-wide/16 v5, 0x0
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v2 .. v7}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+
+    .line 11
     :goto_0
+    monitor-exit v0
+
+    return-void
+
+    .line 12
+    :goto_1
+    iget-object v2, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v3, p0, Lmi/c;->c:Lhh/h;
+
+    const/4 v4, 0x0
+
+    const-wide/16 v5, 0x0
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v2 .. v7}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+
+    throw v1
+
+    :catchall_1
+    move-exception v1
+
+    .line 13
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v1
+.end method
+
+.method public b()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lmi/c;->d:Z
+
+    return v0
+.end method
+
+.method public c()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-boolean v0, p0, Lmi/c;->d:Z
+
     return-void
 .end method
 
-.method public static d(Landroid/graphics/Rect;Landroid/graphics/Rect;I)Z
+.method public cancel()Z
     .locals 3
-    .param p0    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/graphics/Rect;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
-    iget v0, p1, Landroid/graphics/Rect;->left:I
+    iget-boolean v0, p0, Lmi/c;->h:Z
 
-    add-int/2addr v0, p2
+    .line 2
+    iget-object v1, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
 
-    iget v1, p1, Landroid/graphics/Rect;->top:I
+    const-string v2, "Cancelling request execution"
 
-    add-int/2addr v1, p2
+    invoke-virtual {v1, v2}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
 
-    iget v2, p1, Landroid/graphics/Rect;->right:I
+    .line 3
+    invoke-virtual {p0}, Lmi/c;->abortConnection()V
 
-    sub-int/2addr v2, p2
+    xor-int/lit8 v0, v0, 0x1
 
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
+    return v0
+.end method
 
-    sub-int/2addr p1, p2
+.method public close()V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    invoke-virtual {p0, v0, v1, v2, p1}, Landroid/graphics/Rect;->contains(IIII)Z
+    .line 1
+    invoke-virtual {p0}, Lmi/c;->abortConnection()V
 
-    move-result p0
+    return-void
+.end method
 
-    return p0
+.method public d(JLjava/util/concurrent/TimeUnit;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmi/c;->c:Lhh/h;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iput-wide p1, p0, Lmi/c;->f:J
+
+    .line 3
+    iput-object p3, p0, Lmi/c;->g:Ljava/util/concurrent/TimeUnit;
+
+    .line 4
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public markReusable()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 1
+    iput-boolean v0, p0, Lmi/c;->d:Z
+
+    return-void
+.end method
+
+.method public releaseConnection()V
+    .locals 9
+
+    .line 1
+    iget-object v0, p0, Lmi/c;->c:Lhh/h;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-boolean v1, p0, Lmi/c;->h:Z
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    monitor-exit v0
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x1
+
+    .line 4
+    iput-boolean v1, p0, Lmi/c;->h:Z
+
+    .line 5
+    iget-boolean v1, p0, Lmi/c;->d:Z
+
+    if-eqz v1, :cond_1
+
+    .line 6
+    iget-object v2, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v3, p0, Lmi/c;->c:Lhh/h;
+
+    iget-object v4, p0, Lmi/c;->e:Ljava/lang/Object;
+
+    iget-wide v5, p0, Lmi/c;->f:J
+
+    iget-object v7, p0, Lmi/c;->g:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v2 .. v7}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    goto :goto_0
+
+    .line 7
+    :cond_1
+    :try_start_1
+    iget-object v1, p0, Lmi/c;->c:Lhh/h;
+
+    invoke-interface {v1}, Lhh/i;->close()V
+
+    .line 8
+    iget-object v1, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    const-string v2, "Connection discarded"
+
+    invoke-virtual {v1, v2}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 9
+    :try_start_2
+    iget-object v3, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v4, p0, Lmi/c;->c:Lhh/h;
+
+    const/4 v5, 0x0
+
+    const-wide/16 v6, 0x0
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v3 .. v8}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    .line 10
+    :try_start_3
+    iget-object v2, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    invoke-virtual {v2}, Lcz/msebera/android/httpclient/extras/b;->l()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 11
+    iget-object v2, p0, Lmi/c;->a:Lcz/msebera/android/httpclient/extras/b;
+
+    invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v1}, Lcz/msebera/android/httpclient/extras/b;->b(Ljava/lang/Object;Ljava/lang/Throwable;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 12
+    :cond_2
+    :try_start_4
+    iget-object v2, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v3, p0, Lmi/c;->c:Lhh/h;
+
+    const/4 v4, 0x0
+
+    const-wide/16 v5, 0x0
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v2 .. v7}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+
+    .line 13
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    .line 14
+    :goto_1
+    iget-object v2, p0, Lmi/c;->b:Luh/m;
+
+    iget-object v3, p0, Lmi/c;->c:Lhh/h;
+
+    const/4 v4, 0x0
+
+    const-wide/16 v5, 0x0
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface/range {v2 .. v7}, Luh/m;->V(Lhh/h;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
+
+    throw v1
+
+    :catchall_1
+    move-exception v1
+
+    .line 15
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v1
+.end method
+
+.method public setState(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lmi/c;->e:Ljava/lang/Object;
+
+    return-void
 .end method

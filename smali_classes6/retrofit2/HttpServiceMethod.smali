@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lretrofit2/HttpServiceMethod$SuspendForBody;,
+        Lretrofit2/HttpServiceMethod$CallAdapted;,
         Lretrofit2/HttpServiceMethod$SuspendForResponse;,
-        Lretrofit2/HttpServiceMethod$CallAdapted;
+        Lretrofit2/HttpServiceMethod$SuspendForBody;
     }
 .end annotation
 
@@ -222,11 +222,12 @@
 
     check-cast v7, Ljava/lang/reflect/ParameterizedType;
 
+    .line 5
     invoke-static {v6, v7}, Lretrofit2/Utils;->getParameterLowerBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
 
     move-result-object v7
 
-    .line 5
+    .line 6
     invoke-static {v7}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v8
@@ -237,7 +238,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 6
+    .line 7
     check-cast v7, Ljava/lang/reflect/ParameterizedType;
 
     invoke-static {v6, v7}, Lretrofit2/Utils;->getParameterUpperBound(ILjava/lang/reflect/ParameterizedType;)Ljava/lang/reflect/Type;
@@ -251,7 +252,7 @@
     :cond_0
     move v8, v6
 
-    .line 7
+    .line 8
     :goto_0
     new-instance v10, Lretrofit2/Utils$ParameterizedTypeImpl;
 
@@ -265,14 +266,14 @@
 
     invoke-direct {v10, v11, v12, v9}, Lretrofit2/Utils$ParameterizedTypeImpl;-><init>(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;[Ljava/lang/reflect/Type;)V
 
-    .line 8
+    .line 9
     invoke-static {v5}, Lretrofit2/SkipCallbackExecutorImpl;->ensurePresent([Ljava/lang/annotation/Annotation;)[Ljava/lang/annotation/Annotation;
 
     move-result-object v5
 
     goto :goto_1
 
-    .line 9
+    .line 10
     :cond_1
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getGenericReturnType()Ljava/lang/reflect/Type;
 
@@ -280,25 +281,25 @@
 
     move v8, v6
 
-    .line 10
+    .line 11
     :goto_1
     invoke-static {p0, p1, v10, v5}, Lretrofit2/HttpServiceMethod;->createCallAdapter(Lretrofit2/Retrofit;Ljava/lang/reflect/Method;Ljava/lang/reflect/Type;[Ljava/lang/annotation/Annotation;)Lretrofit2/CallAdapter;
 
     move-result-object v5
 
-    .line 11
+    .line 12
     invoke-interface {v5}, Lretrofit2/CallAdapter;->responseType()Ljava/lang/reflect/Type;
 
     move-result-object v7
 
-    .line 12
+    .line 13
     const-class v9, Lokhttp3/Response;
 
     if-eq v7, v9, :cond_7
 
     if-eq v7, v3, :cond_6
 
-    .line 13
+    .line 14
     iget-object v3, p2, Lretrofit2/RequestFactory;->httpMethod:Ljava/lang/String;
 
     const-string v9, "HEAD"
@@ -324,26 +325,26 @@
 
     const-string v2, "HEAD method must use Void as response type."
 
-    .line 14
+    .line 15
     invoke-static {p1, v2, v0}, Lretrofit2/Utils;->methodError(Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object v0
 
     throw v0
 
-    .line 15
+    .line 16
     :cond_3
     :goto_2
     invoke-static {p0, p1, v7}, Lretrofit2/HttpServiceMethod;->createResponseConverter(Lretrofit2/Retrofit;Ljava/lang/reflect/Method;Ljava/lang/reflect/Type;)Lretrofit2/Converter;
 
     move-result-object v3
 
-    .line 16
+    .line 17
     iget-object v6, p0, Lretrofit2/Retrofit;->callFactory:Lokhttp3/Call$Factory;
 
     if-nez v4, :cond_4
 
-    .line 17
+    .line 18
     new-instance v0, Lretrofit2/HttpServiceMethod$CallAdapted;
 
     invoke-direct {v0, p2, v6, v3, v5}, Lretrofit2/HttpServiceMethod$CallAdapted;-><init>(Lretrofit2/RequestFactory;Lokhttp3/Call$Factory;Lretrofit2/Converter;Lretrofit2/CallAdapter;)V
@@ -353,14 +354,14 @@
     :cond_4
     if-eqz v8, :cond_5
 
-    .line 18
+    .line 19
     new-instance v0, Lretrofit2/HttpServiceMethod$SuspendForResponse;
 
     invoke-direct {v0, p2, v6, v3, v5}, Lretrofit2/HttpServiceMethod$SuspendForResponse;-><init>(Lretrofit2/RequestFactory;Lokhttp3/Call$Factory;Lretrofit2/Converter;Lretrofit2/CallAdapter;)V
 
     return-object v0
 
-    .line 19
+    .line 20
     :cond_5
     new-instance v7, Lretrofit2/HttpServiceMethod$SuspendForBody;
 
@@ -385,7 +386,7 @@
 
     const-string v2, "Response must include generic type (e.g., Response<String>)"
 
-    .line 20
+    .line 21
     invoke-static {p1, v2, v0}, Lretrofit2/Utils;->methodError(Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object v0
@@ -395,25 +396,25 @@
     :cond_7
     const-string v0, "\'"
 
-    .line 21
+    .line 22
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 22
+    .line 23
     invoke-static {v7}, Lretrofit2/Utils;->getRawType(Ljava/lang/reflect/Type;)Ljava/lang/Class;
 
     move-result-object v2
 
     const-string v3, "\' is not a valid response body type. Did you mean ResponseBody?"
 
-    invoke-static {v2, v0, v3}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v3}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     new-array v2, v6, [Ljava/lang/Object;
 
-    .line 23
+    .line 24
     invoke-static {p1, v0, v2}, Lretrofit2/Utils;->methodError(Ljava/lang/reflect/Method;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/RuntimeException;
 
     move-result-object v0

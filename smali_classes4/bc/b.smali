@@ -1,532 +1,496 @@
 .class public Lbc/b;
-.super Ljava/lang/Object;
-.source "DriveHabitModel.java"
+.super Lbc/a;
+.source "JosaConverterObject.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lbc/a<",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final f:Ljava/lang/String; = "b"
+.field public static final a:Ljava/lang/String; = "^[\uac00-\ud79d]*$"
 
-
-# instance fields
-.field public a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-.field public b:I
-
-.field public c:I
-
-.field public d:Z
-
-.field public e:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/ndds/dto/info/AfterAction;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final b:Ljava/lang/String; = "^[A-Za-z]*$"
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lbc/a;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public static c(C)Z
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
-    .line 2
-    new-instance v0, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
+    move-result-object p0
 
-    invoke-direct {v0}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;-><init>()V
+    const-string v0, "^[A-Za-z]*$"
 
-    iput-object v0, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
+    invoke-static {v0, p0}, Ljava/util/regex/Pattern;->matches(Ljava/lang/String;Ljava/lang/CharSequence;)Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public static d(Landroid/content/Context;)Lbc/b;
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
+.method public static d(C)Z
+    .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->H0(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Character;->isDigit(C)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static e(C)Z
+    .locals 0
+
+    .line 1
+    invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 2
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {p0}, Lbc/b;->f(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result p0
 
-    const/4 v1, 0x0
+    return p0
+.end method
 
-    if-eqz v0, :cond_0
+.method public static f(Ljava/lang/String;)Z
+    .locals 1
 
-    return-object v1
+    const-string v0, "^[\uac00-\ud79d]*$"
 
-    .line 3
-    :cond_0
-    :try_start_0
-    const-class v0, Lbc/b;
+    .line 1
+    invoke-static {v0, p0}, Ljava/util/regex/Pattern;->matches(Ljava/lang/String;Ljava/lang/CharSequence;)Z
 
-    invoke-static {p0, v0}, Lcom/skt/tmap/engine/navigation/network/util/JsonUtil;->GetObject(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    move-result p0
 
-    move-result-object p0
-
-    check-cast p0, Lbc/b;
-    :try_end_0
-    .catch Lcom/google/gson/JsonSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object v1, p0
-
-    :catch_0
-    return-object v1
+    return p0
 .end method
 
 
 # virtual methods
-.method public a()Lcom/skt/tmap/network/ndds/dto/info/AfterAction;
-    .locals 5
+.method public a(Ljava/lang/Object;Lcom/skt/aicloud/mobile/service/util/stringconverter/data/KoreanJosa;)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/a;
+    .locals 3
+
+    const-string v0, ""
+
+    if-eqz p1, :cond_2
+
+    if-eqz p2, :cond_2
 
     .line 1
-    iget-object v0, p0, Lbc/b;->e:Ljava/util/List;
+    invoke-virtual {p2}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/KoreanJosa;->getJosaWithJongsung()Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     .line 2
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p2}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/KoreanJosa;->getJosaWithoutJongsung()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    .line 3
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p0, p1}, Lbc/b;->b(Ljava/lang/Object;)C
+
+    move-result p1
+
+    .line 4
+    invoke-static {p1}, Lbc/b;->e(C)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/skt/tmap/network/ndds/dto/info/AfterAction;
-
-    .line 3
-    sget-object v2, Lbc/b;->f:Ljava/lang/String;
-
-    const-string/jumbo v3, "type: "
-
-    invoke-static {v3}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/info/AfterAction;->getType()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", subType: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/info/AfterAction;->getSubType()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", subActionInfo: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/info/AfterAction;->getSubActionInfo()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", actionInfo: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/info/AfterAction;->getActionInfo()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/info/AfterAction;->getActionInfo()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    return-object v1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public b()Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    return-object v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lbc/b;->b:I
-
-    return v0
-.end method
-
-.method public e()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lbc/b;->c:I
-
-    return v0
-.end method
-
-.method public f()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    invoke-virtual {v0}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;->getNewTripYn()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->h(Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Lbc/b;->d:Z
-
-    return v0
-.end method
-
-.method public h(Landroid/content/Context;)Ljava/lang/String;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    iget-boolean v0, p0, Lbc/b;->d:Z
-
-    if-nez v0, :cond_0
-
-    const v0, 0x7f13030a
-
-    .line 2
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    invoke-virtual {v0}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 4
-    iget-object p1, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->O(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
     .line 5
-    :cond_1
-    iget-object v0, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;->getNewTripYn()Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "isKoreanChar[true] :"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->h(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const v0, 0x7f13030b
+    invoke-virtual {p0, v0}, Lbc/b;->g(Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p2, p1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/KoreanJosa;->process(C)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/a;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_2
-    const v0, 0x7f13030c
-
     .line 7
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    :cond_1
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "isUnknownLetter[true] :"
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v0, 0x2
+    invoke-virtual {p0, p1}, Lbc/b;->g(Ljava/lang/String;)V
 
-    new-array v0, v0, [Ljava/lang/Object;
+    .line 8
+    new-instance p1, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/a;
 
-    const/4 v1, 0x0
+    invoke-direct {p1, v0, v0}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v2, p0, Lbc/b;->c:I
+    return-object p1
 
-    div-int/lit16 v2, v2, 0x3e8
+    .line 9
+    :cond_2
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lcom/skt/tmap/util/w0;->y(I)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    const-string v2, "[except] StringUtils.isEmpty obj:"
 
-    aput-object v2, v0, v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lbc/b;->b:I
+    const-string p1, ", koreanJosa:"
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    aput-object v2, v0, v1
-
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    invoke-virtual {p0, p1}, Lbc/b;->g(Ljava/lang/String;)V
+
+    .line 10
+    new-instance p1, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/a;
+
+    invoke-direct {p1, v0, v0}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public i(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
+.method public final b(Ljava/lang/Object;)C
+    .locals 4
 
     .line 1
-    iget-object v0, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    invoke-virtual {v0}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;->getTabMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
+    instance-of v0, p1, Ljava/lang/Long;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v0, 0x7f1306bf
+    const-string v1, "obj instanceof Long[true] :"
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
-
-    .line 3
-    :cond_0
-    iget-object p1, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;->getTabMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->W(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public j(Landroid/content/Context;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/navigation/network/util/JsonUtil;->GetJsonString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/TmapSharedPreference;->r3(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lbc/b;->g(Ljava/lang/String;)V
 
-    return-void
+    .line 3
+    check-cast p1, Ljava/lang/Long;
+
+    .line 4
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean;->b(J)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;->getKoreanChar()C
+
+    move-result p1
+
+    return p1
+
+    .line 5
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "obj instanceof Integer[true] :"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lbc/b;->g(Ljava/lang/String;)V
+
+    .line 7
+    check-cast p1, Ljava/lang/Integer;
+
+    .line 8
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean;->b(J)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;->getKoreanChar()C
+
+    move-result p1
+
+    return p1
+
+    .line 9
+    :cond_1
+    instance-of v0, p1, Ljava/lang/Short;
+
+    if-eqz v0, :cond_2
+
+    .line 10
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "obj instanceof Short[true] :"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lbc/b;->g(Ljava/lang/String;)V
+
+    .line 11
+    check-cast p1, Ljava/lang/Short;
+
+    .line 12
+    invoke-virtual {p1}, Ljava/lang/Short;->shortValue()S
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean;->b(J)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;->getKoreanChar()C
+
+    move-result p1
+
+    return p1
+
+    .line 13
+    :cond_2
+    instance-of v0, p1, Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_3
+
+    .line 14
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "obj instanceof String[true] :"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lbc/b;->g(Ljava/lang/String;)V
+
+    .line 15
+    check-cast p1, Ljava/lang/String;
+
+    .line 16
+    :try_start_0
+    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    .line 17
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean;->b(J)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;->getKoreanChar()C
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    .line 18
+    :catch_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v1
+
+    .line 19
+    :cond_3
+    invoke-static {v1}, Lbc/b;->c(C)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    .line 20
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "isAlphabetLetter[true] :"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lbc/b;->g(Ljava/lang/String;)V
+
+    .line 21
+    invoke-static {v1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherAlphabetToKorean;->getKoreanWord(C)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherAlphabetToKorean;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherAlphabetToKorean;->getKoreanLastChar()C
+
+    move-result v1
+
+    .line 22
+    :cond_4
+    invoke-static {v1}, Lbc/b;->d(C)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    .line 23
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "isDigit[true] :"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lbc/b;->g(Ljava/lang/String;)V
+
+    .line 24
+    invoke-static {v1}, Ljava/lang/Character;->getNumericValue(C)I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    invoke-static {v0, v1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean;->b(J)Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherArabicToKorean$a;->getKoreanChar()C
+
+    move-result v1
+
+    :cond_5
+    return v1
 .end method
 
-.method public k(Ljava/util/List;)V
+.method public final g(Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "afterActionList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/ndds/dto/info/AfterAction;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lbc/b;->e:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public l(Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "privateMessageInfo"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lbc/b;->a:Lcom/skt/tmap/network/ndds/dto/info/PrivateMessageInfo;
-
-    return-void
-.end method
-
-.method public m(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "registered"
-        }
-    .end annotation
-
-    .line 1
-    iput-boolean p1, p0, Lbc/b;->d:Z
-
-    return-void
-.end method
-
-.method public n(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "safeDrivingScore"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Lbc/b;->b:I
-
-    return-void
-.end method
-
-.method public o(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "totalTripDistance"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Lbc/b;->c:I
 
     return-void
 .end method

@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0006\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008\u00a8\u0006\t"
     }
@@ -40,14 +35,15 @@
         "()Ljava/lang/String;",
         "GPS_PROVIDER",
         "FUSED_PROVIDER",
-        "navigation-sdk_release"
+        "TmapEngineCommonData_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -67,42 +63,60 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method private static final synthetic $values()[Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+    .locals 3
 
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->GPS_PROVIDER:Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
-    const-string v2, "GPS_PROVIDER"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    const-string v4, "gps"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->FUSED_PROVIDER:Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 1
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->GPS_PROVIDER:Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+    const-string v1, "GPS_PROVIDER"
 
-    aput-object v1, v0, v3
+    const/4 v2, 0x0
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+    const-string v3, "gps"
 
-    const-string v2, "FUSED_PROVIDER"
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    const/4 v3, 0x1
-
-    const-string v4, "fused"
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->GPS_PROVIDER:Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
     .line 2
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->FUSED_PROVIDER:Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+    const-string v1, "FUSED_PROVIDER"
 
-    aput-object v1, v0, v3
+    const/4 v2, 0x1
+
+    const-string v3, "fused"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->FUSED_PROVIDER:Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->$values()[Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->$VALUES:[Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
@@ -146,7 +160,7 @@
 
     sget-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->$VALUES:[Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/engine/navigation/SDKConstant$LocationProvider;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

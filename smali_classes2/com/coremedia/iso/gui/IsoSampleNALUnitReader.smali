@@ -146,7 +146,7 @@
     move-result-object v0
 
     .line 8
-    invoke-static {v2, v3}, Ly6/b;->a(J)I
+    invoke-static {v2, v3}, Lw8/b;->a(J)I
 
     move-result v1
 
@@ -159,7 +159,7 @@
 
     move-result v4
 
-    invoke-static {v2, v3}, Ly6/b;->a(J)I
+    invoke-static {v2, v3}, Lw8/b;->a(J)I
 
     move-result v2
 

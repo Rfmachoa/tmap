@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/tmapmobility/tmap/exoplayer2/util/i0;",
+            "Lcom/tmapmobility/tmap/exoplayer2/util/j0;",
             ">;"
         }
     .end annotation
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public a(I)Lcom/tmapmobility/tmap/exoplayer2/util/i0;
+.method public a(I)Lcom/tmapmobility/tmap/exoplayer2/util/j0;
     .locals 3
 
     .line 1
@@ -44,16 +44,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;
+    check-cast v0, Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/i0;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/j0;
 
     const-wide v1, 0x7ffffffffffffffeL
 
-    invoke-direct {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/i0;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/j0;-><init>(J)V
 
     .line 3
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/t;->a:Landroid/util/SparseArray;

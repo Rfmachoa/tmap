@@ -1,9 +1,9 @@
 .class public final Lcom/bumptech/glide/manager/g;
 .super Ljava/lang/Object;
-.source "EmptyRequestManagerTreeNode.java"
+.source "DoNothingFirstFrameWaiter.java"
 
 # interfaces
-.implements Lcom/bumptech/glide/manager/p;
+.implements Lcom/bumptech/glide/manager/k;
 
 
 # direct methods
@@ -18,24 +18,8 @@
 
 
 # virtual methods
-.method public a()Ljava/util/Set;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public a(Landroid/app/Activity;)V
+    .locals 0
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "Lcom/bumptech/glide/i;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/auth/api/phone/SmsCodeAutofillClient;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-auth-api-phone@@17.4.0"
+.source "com.google.android.gms:play-services-auth-api-phone@@17.5.1"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/HasApiKey;
@@ -25,6 +25,9 @@
 
 # virtual methods
 .method public abstract checkPermissionState()Lcom/google/android/gms/tasks/Task;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -40,6 +43,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,6 +59,9 @@
 .end method
 
 .method public abstract startSmsCodeRetriever()Lcom/google/android/gms/tasks/Task;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",

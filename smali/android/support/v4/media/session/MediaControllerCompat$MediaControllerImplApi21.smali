@@ -108,7 +108,7 @@
     new-instance v0, Landroid/media/session/MediaController;
 
     .line 7
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->g()Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -119,7 +119,7 @@
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->a:Landroid/media/session/MediaController;
 
     .line 8
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object p1
 
@@ -208,7 +208,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->g()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -373,7 +373,7 @@
     :try_start_0
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v1
     :try_end_0
@@ -401,7 +401,7 @@
     .line 6
     iget-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object p1
 
@@ -672,7 +672,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -682,7 +682,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -715,7 +715,7 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-static {v0}, Landroid/support/v4/media/session/PlaybackStateCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat;
+    invoke-static {v0}, Landroid/support/v4/media/session/PlaybackStateCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-result-object v0
 
@@ -794,7 +794,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -804,7 +804,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -853,7 +853,7 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -863,7 +863,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -927,7 +927,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -937,7 +937,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -1013,7 +1013,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -1023,7 +1023,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -1057,7 +1057,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -1112,7 +1112,7 @@
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -1139,7 +1139,7 @@
     :try_start_1
     iget-object v2, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v2
 
@@ -1202,7 +1202,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v0
 
@@ -1248,7 +1248,7 @@
     :try_start_0
     iget-object v3, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {v3}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v3
 

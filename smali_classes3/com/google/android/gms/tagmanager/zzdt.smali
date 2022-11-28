@@ -1,72 +1,121 @@
 .class final Lcom/google/android/gms/tagmanager/zzdt;
-.super Lcom/google/android/gms/tagmanager/zzbu;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
+
+# interfaces
+.implements Lcom/google/android/gms/tagmanager/zzfh;
 
 
-# static fields
-.field private static final zza:Ljava/lang/String;
+# annotations
+.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+.end annotation
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/tagmanager/zzdv;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzdv;)V
+    .locals 0
 
-    .line 1
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzx:Lcom/google/android/gms/internal/gtm/zza;
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Lcom/google/android/gms/tagmanager/zzdv;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    .line 1
-    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbu;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzak;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)",
-            "Lcom/google/android/gms/internal/gtm/zzak;"
-        }
-    .end annotation
-
-    sget-object p1, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+.method public final zza(Lcom/google/android/gms/tagmanager/zzbz;)V
+    .locals 5
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfv;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzak;
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzbz;->zza()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Lcom/google/android/gms/tagmanager/zzdv;
+
+    .line 2
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzbz;->zzb()J
+
+    move-result-wide v1
+
+    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Lcom/google/android/gms/tagmanager/zzdv;
+
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzdv;->zze(Lcom/google/android/gms/tagmanager/zzdv;)Lcom/google/android/gms/common/util/Clock;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-interface {p1}, Lcom/google/android/gms/common/util/Clock;->currentTimeMillis()J
 
-.method public final zzb()Z
-    .locals 1
+    move-result-wide v3
 
-    const/4 v0, 0x1
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/google/android/gms/tagmanager/zzdv;->zzi(Lcom/google/android/gms/tagmanager/zzdv;JJ)V
 
-    return v0
+    return-void
+
+    :cond_0
+    const-wide/32 v2, 0xdbba00
+
+    add-long/2addr v0, v2
+
+    iget-object v2, p0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Lcom/google/android/gms/tagmanager/zzdv;
+
+    invoke-static {v2}, Lcom/google/android/gms/tagmanager/zzdv;->zze(Lcom/google/android/gms/tagmanager/zzdv;)Lcom/google/android/gms/common/util/Clock;
+
+    move-result-object v2
+
+    .line 3
+    invoke-interface {v2}, Lcom/google/android/gms/common/util/Clock;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzdt;->zza:Lcom/google/android/gms/tagmanager/zzdv;
+
+    .line 4
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzbz;->zzb()J
+
+    move-result-wide v1
+
+    invoke-static {v0, v1, v2}, Lcom/google/android/gms/tagmanager/zzdv;->zzh(Lcom/google/android/gms/tagmanager/zzdv;J)V
+
+    .line 5
+    invoke-virtual {p1}, Lcom/google/android/gms/tagmanager/zzbz;->zzb()J
+
+    move-result-wide v0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Giving up on failed hitId: "
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzdg;->zzb:Lcom/google/android/gms/tagmanager/zzbf;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tagmanager/zzbf;->zzd(Ljava/lang/String;)V
+
+    :cond_1
+    return-void
 .end method

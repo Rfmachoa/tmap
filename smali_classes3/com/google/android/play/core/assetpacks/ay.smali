@@ -300,7 +300,7 @@
 
     const-string v1, ", transferProgressPercentage="
 
-    invoke-static {v10, v0, v5, v6, v1}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v10, v0, v5, v6, v1}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

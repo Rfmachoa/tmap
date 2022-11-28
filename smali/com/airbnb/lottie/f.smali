@@ -52,7 +52,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lq3/b;",
+            "Lm5/b;",
             ">;"
         }
     .end annotation
@@ -62,17 +62,17 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lq3/g;",
+            "Lm5/g;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public g:Landroidx/collection/m;
+.field public g:Landroidx/collection/n;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/m<",
-            "Lq3/c;",
+            "Landroidx/collection/n<",
+            "Lm5/c;",
             ">;"
         }
     .end annotation
@@ -151,7 +151,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lw3/d;->d(Ljava/lang/String;)V
+    invoke-static {p1}, Ls5/d;->d(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/airbnb/lottie/f;->b:Ljava/util/HashSet;
@@ -170,19 +170,19 @@
     return-object v0
 .end method
 
-.method public c()Landroidx/collection/m;
+.method public c()Landroidx/collection/n;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/collection/m<",
-            "Lq3/c;",
+            "Landroidx/collection/n<",
+            "Lm5/c;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/f;->g:Landroidx/collection/m;
+    iget-object v0, p0, Lcom/airbnb/lottie/f;->g:Landroidx/collection/n;
 
     return-object v0
 .end method
@@ -244,7 +244,7 @@
             "()",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lq3/b;",
+            "Lm5/b;",
             ">;"
         }
     .end annotation
@@ -299,7 +299,7 @@
     return-object v0
 .end method
 
-.method public k(Ljava/lang/String;)Lq3/g;
+.method public k(Ljava/lang/String;)Lm5/g;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -328,10 +328,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lq3/g;
+    check-cast v1, Lm5/g;
 
     .line 4
-    invoke-virtual {v1, p1}, Lq3/g;->a(Ljava/lang/String;)Z
+    invoke-virtual {v1, p1}, Lm5/g;->a(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -356,7 +356,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lq3/g;",
+            "Lm5/g;",
             ">;"
         }
     .end annotation
@@ -570,7 +570,7 @@
     return-object v0
 .end method
 
-.method public u(Landroid/graphics/Rect;FFFLjava/util/List;Landroidx/collection/h;Ljava/util/Map;Ljava/util/Map;Landroidx/collection/m;Ljava/util/Map;Ljava/util/List;)V
+.method public u(Landroid/graphics/Rect;FFFLjava/util/List;Landroidx/collection/h;Ljava/util/Map;Ljava/util/Map;Landroidx/collection/n;Ljava/util/Map;Ljava/util/List;)V
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -598,15 +598,15 @@
             "Ljava/lang/String;",
             "Lcom/airbnb/lottie/h;",
             ">;",
-            "Landroidx/collection/m<",
-            "Lq3/c;",
+            "Landroidx/collection/n<",
+            "Lm5/c;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lq3/b;",
+            "Lm5/b;",
             ">;",
             "Ljava/util/List<",
-            "Lq3/g;",
+            "Lm5/g;",
             ">;)V"
         }
     .end annotation
@@ -636,7 +636,7 @@
     iput-object p8, p0, Lcom/airbnb/lottie/f;->d:Ljava/util/Map;
 
     .line 9
-    iput-object p9, p0, Lcom/airbnb/lottie/f;->g:Landroidx/collection/m;
+    iput-object p9, p0, Lcom/airbnb/lottie/f;->g:Landroidx/collection/n;
 
     .line 10
     iput-object p10, p0, Lcom/airbnb/lottie/f;->e:Ljava/util/Map;

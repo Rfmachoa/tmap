@@ -16,4 +16,20 @@
 
 # virtual methods
 .method public abstract a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "iconId",
+            "iconImageUrl",
+            "text",
+            "clickUrl",
+            "extraInfo"
+        }
+    .end annotation
 .end method

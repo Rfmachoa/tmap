@@ -94,23 +94,23 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    const/high16 v0, 0x24000000
+
     .line 1
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/high16 v2, 0x20000000
-
-    invoke-static {v0, v1, p1, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v1, v2, p1, v0}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :cond_0
-    return v1
+    return v2
 .end method
 
 .method public schedule(Lcom/google/android/datatransport/runtime/TransportContext;I)V
@@ -283,23 +283,26 @@
     .line 21
     iget-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
-    invoke-static {p1, v2, v1, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    const/high16 p3, 0x4000000
+
+    .line 22
+    invoke-static {p1, v2, v1, p3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
-    .line 22
+    .line 23
     iget-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->alarmManager:Landroid/app/AlarmManager;
 
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
-    .line 23
+    .line 24
     invoke-interface {v0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v0
 
     add-long/2addr v0, v5
 
-    .line 24
+    .line 25
     invoke-virtual {p3, p2, v0, v1, p1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     return-void

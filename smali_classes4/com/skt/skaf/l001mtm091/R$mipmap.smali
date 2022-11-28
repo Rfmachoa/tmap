@@ -14,27 +14,25 @@
 
 
 # static fields
-.field public static final ic_home:I = 0x7f0f0000
+.field public static final ic_home:I = 0x7f100000
 
-.field public static final ic_launcher:I = 0x7f0f0001
+.field public static final ic_launcher:I = 0x7f100001
 
-.field public static final ic_launcher_foreground:I = 0x7f0f0002
+.field public static final ic_launcher_foreground:I = 0x7f100002
 
-.field public static final ic_launcher_round:I = 0x7f0f0003
+.field public static final ic_office:I = 0x7f100003
 
-.field public static final ic_office:I = 0x7f0f0004
+.field public static final ic_poi:I = 0x7f100004
 
-.field public static final ic_poi:I = 0x7f0f0005
+.field public static final ic_search:I = 0x7f100005
 
-.field public static final ic_search:I = 0x7f0f0006
+.field public static final ic_shortcut_adaptive_home:I = 0x7f100006
 
-.field public static final ic_shortcut_adaptive_home:I = 0x7f0f0007
+.field public static final ic_shortcut_adaptive_office:I = 0x7f100007
 
-.field public static final ic_shortcut_adaptive_office:I = 0x7f0f0008
+.field public static final ic_shortcut_adaptive_poi:I = 0x7f100008
 
-.field public static final ic_shortcut_adaptive_poi:I = 0x7f0f0009
-
-.field public static final ic_shortcut_adaptive_search:I = 0x7f0f000a
+.field public static final ic_shortcut_adaptive_search:I = 0x7f100009
 
 
 # direct methods

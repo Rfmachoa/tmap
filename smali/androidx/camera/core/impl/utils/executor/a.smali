@@ -3,6 +3,12 @@
 .source "CameraXExecutors.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -58,14 +64,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "executor"
-        }
-    .end annotation
 
     .line 1
     instance-of p0, p0, Landroidx/camera/core/impl/utils/executor/SequentialExecutor;
@@ -108,15 +106,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "handler"
-        }
-    .end annotation
-
     .line 1
     new-instance v0, Landroidx/camera/core/impl/utils/executor/c;
 
@@ -132,15 +121,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "delegate"
-        }
     .end annotation
 
     .line 1

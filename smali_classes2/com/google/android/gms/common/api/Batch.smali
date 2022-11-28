@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/Batch;
 .super Lcom/google/android/gms/common/api/internal/BasePendingResult;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -27,14 +27,6 @@
 .field private zag:Z
 
 .field private final zah:[Lcom/google/android/gms/common/api/PendingResult;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "[",
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 .field private final zai:Ljava/lang/Object;
 

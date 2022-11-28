@@ -1,5 +1,5 @@
 .class Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client$1;
-.super Landroidx/browser/customtabs/a;
+.super Landroidx/browser/customtabs/b;
 .source "OAuth2Client.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client$1;->this$0:Lcom/amazonaws/mobile/client/internal/oauth2/OAuth2Client;
 
-    invoke-direct {p0}, Landroidx/browser/customtabs/a;-><init>()V
+    invoke-direct {p0}, Landroidx/browser/customtabs/b;-><init>()V
 
     return-void
 .end method
@@ -36,7 +36,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroidx/browser/customtabs/a;->onNavigationEvent(ILandroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Landroidx/browser/customtabs/b;->onNavigationEvent(ILandroid/os/Bundle;)V
 
     const/4 p2, 0x6
 

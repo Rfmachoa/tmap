@@ -37,10 +37,10 @@
 
 .field public static final i:Ljava/lang/String; = "android.intent.extra.shortcut.ID"
 
-.field public static volatile j:Landroidx/core/content/pm/e; = null
+.field public static volatile j:Landroidx/core/content/pm/d; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/content/pm/e<",
+            "Landroidx/core/content/pm/d<",
             "*>;"
         }
     .end annotation
@@ -77,7 +77,7 @@
     return-void
 .end method
 
-.method public static A(Landroidx/core/content/pm/e;)V
+.method public static A(Ljava/util/List;)V
     .locals 0
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -85,20 +85,40 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/core/content/pm/e<",
+            "Ljava/util/List<",
+            "Landroidx/core/content/pm/c;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->k:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public static B(Landroidx/core/content/pm/d;)V
+    .locals 0
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/core/content/pm/d<",
             "Ljava/lang/Void;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/e;
+    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/d;
 
     return-void
 .end method
 
-.method public static B(Landroid/content/Context;Ljava/util/List;)Z
-    .locals 3
+.method public static C(Landroid/content/Context;Ljava/util/List;)Z
+    .locals 5
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -112,87 +132,94 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)Z"
         }
     .end annotation
 
+    const/4 v0, 0x1
+
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-gt v0, v1, :cond_0
-
-    .line 2
-    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->c(Landroid/content/Context;Ljava/util/List;)V
-
-    :cond_0
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_2
-
-    .line 3
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 4
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, v0}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    .line 2
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v2
+    const/16 v3, 0x1d
 
-    if-eqz v2, :cond_1
+    if-gt v2, v3, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 3
+    invoke-static {p0, v1}, Landroidx/core/content/pm/ShortcutManagerCompat;->c(Landroid/content/Context;Ljava/util/List;)V
 
-    move-result-object v2
+    :cond_0
+    const/16 v3, 0x19
 
-    check-cast v2, Landroidx/core/content/pm/d;
+    if-lt v2, v3, :cond_2
+
+    .line 4
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 5
-    invoke-virtual {v2}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/core/content/pm/ShortcutInfoCompat;
+
+    .line 6
+    invoke-virtual {v4}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_1
-    const-class v1, Landroid/content/pm/ShortcutManager;
+    const-class v3, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Landroid/content/pm/ShortcutManager;
+    check-cast v3, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {v1, v0}, Landroid/content/pm/ShortcutManager;->updateShortcuts(Ljava/util/List;)Z
+    invoke-virtual {v3, v2}, Landroid/content/pm/ShortcutManager;->updateShortcuts(Ljava/util/List;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_2
+    if-nez v2, :cond_2
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 7
-    :cond_2
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/e;->a(Ljava/util/List;)Ljava/lang/Object;
-
     .line 8
+    :cond_2
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroidx/core/content/pm/d;->a(Ljava/util/List;)Ljava/lang/Object;
+
+    .line 9
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p0
@@ -204,29 +231,27 @@
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroidx/core/content/pm/c;
+    check-cast v1, Landroidx/core/content/pm/c;
 
-    .line 9
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/c;->d(Ljava/util/List;)V
+    .line 10
+    invoke-virtual {v1, p1}, Landroidx/core/content/pm/c;->d(Ljava/util/List;)V
 
     goto :goto_1
 
     :cond_3
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/util/List;)Z
-    .locals 3
+    .locals 5
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -240,87 +265,94 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)Z"
         }
     .end annotation
 
+    const/4 v0, 0x1
+
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-gt v0, v1, :cond_0
-
-    .line 2
-    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->c(Landroid/content/Context;Ljava/util/List;)V
-
-    :cond_0
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_2
-
-    .line 3
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 4
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, v0}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    .line 2
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v2
+    const/16 v3, 0x1d
 
-    if-eqz v2, :cond_1
+    if-gt v2, v3, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 3
+    invoke-static {p0, v1}, Landroidx/core/content/pm/ShortcutManagerCompat;->c(Landroid/content/Context;Ljava/util/List;)V
 
-    move-result-object v2
+    :cond_0
+    const/16 v3, 0x19
 
-    check-cast v2, Landroidx/core/content/pm/d;
+    if-lt v2, v3, :cond_2
+
+    .line 4
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     .line 5
-    invoke-virtual {v2}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/core/content/pm/ShortcutInfoCompat;
+
+    .line 6
+    invoke-virtual {v4}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_1
-    const-class v1, Landroid/content/pm/ShortcutManager;
+    const-class v3, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Landroid/content/pm/ShortcutManager;
+    check-cast v3, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {v1, v0}, Landroid/content/pm/ShortcutManager;->addDynamicShortcuts(Ljava/util/List;)Z
+    invoke-virtual {v3, v2}, Landroid/content/pm/ShortcutManager;->addDynamicShortcuts(Ljava/util/List;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_2
+    if-nez v2, :cond_2
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 7
-    :cond_2
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/e;->a(Ljava/util/List;)Ljava/lang/Object;
-
     .line 8
+    :cond_2
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroidx/core/content/pm/d;->a(Ljava/util/List;)Ljava/lang/Object;
+
+    .line 9
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p0
@@ -332,34 +364,32 @@
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_3
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroidx/core/content/pm/c;
+    check-cast v1, Landroidx/core/content/pm/c;
 
-    .line 9
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
+    .line 10
+    invoke-virtual {v1, p1}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
 
     goto :goto_1
 
     :cond_3
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 .end method
 
-.method public static b(Landroid/content/Context;Landroidx/core/content/pm/d;)Z
+.method public static b(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;)Z
     .locals 6
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/content/pm/d;
+    .param p1    # Landroidx/core/content/pm/ShortcutInfoCompat;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -367,7 +397,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p1, Landroidx/core/content/pm/d;->i:Landroidx/core/graphics/drawable/IconCompat;
+    iget-object v0, p1, Landroidx/core/content/pm/ShortcutInfoCompat;->i:Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v1, 0x0
 
@@ -393,7 +423,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {v0, p0}, Landroidx/core/graphics/drawable/IconCompat;->H(Landroid/content/Context;)Ljava/io/InputStream;
+    invoke-virtual {v0, p0}, Landroidx/core/graphics/drawable/IconCompat;->D(Landroid/content/Context;)Ljava/io/InputStream;
 
     move-result-object p0
 
@@ -428,7 +458,7 @@
     move-result-object p0
 
     :goto_0
-    iput-object p0, p1, Landroidx/core/content/pm/d;->i:Landroidx/core/graphics/drawable/IconCompat;
+    iput-object p0, p1, Landroidx/core/content/pm/ShortcutInfoCompat;->i:Landroidx/core/graphics/drawable/IconCompat;
 
     return v3
 .end method
@@ -451,7 +481,7 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)V"
         }
     .end annotation
@@ -478,10 +508,10 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/content/pm/d;
+    check-cast v1, Landroidx/core/content/pm/ShortcutInfoCompat;
 
     .line 3
-    invoke-static {p0, v1}, Landroidx/core/content/pm/ShortcutManagerCompat;->b(Landroid/content/Context;Landroidx/core/content/pm/d;)Z
+    invoke-static {p0, v1}, Landroidx/core/content/pm/ShortcutManagerCompat;->b(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;)Z
 
     move-result v2
 
@@ -496,13 +526,13 @@
     return-void
 .end method
 
-.method public static d(Landroid/content/Context;Landroidx/core/content/pm/d;)Landroid/content/Intent;
+.method public static d(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;)Landroid/content/Intent;
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/content/pm/d;
+    .param p1    # Landroidx/core/content/pm/ShortcutInfoCompat;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -526,7 +556,7 @@
     check-cast p0, Landroid/content/pm/ShortcutManager;
 
     .line 3
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v0
 
@@ -549,7 +579,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p1, p0}, Landroidx/core/content/pm/d;->a(Landroid/content/Intent;)Landroid/content/Intent;
+    invoke-virtual {p1, p0}, Landroidx/core/content/pm/ShortcutInfoCompat;->a(Landroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object p0
 
@@ -603,11 +633,11 @@
 
     .line 4
     :cond_0
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Landroidx/core/content/pm/e;->d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroidx/core/content/pm/d;->d(Ljava/util/List;)Ljava/lang/Object;
 
     .line 5
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
@@ -641,7 +671,7 @@
 .end method
 
 .method public static f(Landroid/content/Context;Ljava/util/List;)V
-    .locals 3
+    .locals 4
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -655,73 +685,80 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)V"
         }
     .end annotation
 
+    const/4 v0, 0x1
+
     .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_1
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 3
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/core/content/pm/d;
-
-    .line 4
-    iget-object v2, v2, Landroidx/core/content/pm/d;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 5
-    :cond_0
-    const-class v1, Landroid/content/pm/ShortcutManager;
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/pm/ShortcutManager;
-
-    invoke-virtual {v1, v0}, Landroid/content/pm/ShortcutManager;->enableShortcuts(Ljava/util/List;)V
-
-    .line 6
-    :cond_1
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p1, v0}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/e;->a(Ljava/util/List;)Ljava/lang/Object;
+    .line 2
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x19
+
+    if-lt v1, v2, :cond_1
+
+    .line 3
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 4
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/core/content/pm/ShortcutInfoCompat;
+
+    .line 5
+    iget-object v3, v3, Landroidx/core/content/pm/ShortcutInfoCompat;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    const-class v2, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {v2, v1}, Landroid/content/pm/ShortcutManager;->enableShortcuts(Ljava/util/List;)V
 
     .line 7
+    :cond_1
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroidx/core/content/pm/d;->a(Ljava/util/List;)Ljava/lang/Object;
+
+    .line 8
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p0
@@ -743,7 +780,7 @@
 
     check-cast v0, Landroidx/core/content/pm/c;
 
-    .line 8
+    .line 9
     invoke-virtual {v0, p1}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
 
     goto :goto_1
@@ -767,7 +804,7 @@
             "Landroid/content/Context;",
             ")",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;"
         }
     .end annotation
@@ -821,11 +858,11 @@
     check-cast v2, Landroid/content/pm/ShortcutInfo;
 
     .line 6
-    new-instance v3, Landroidx/core/content/pm/d$a;
+    new-instance v3, Landroidx/core/content/pm/ShortcutInfoCompat$a;
 
-    invoke-direct {v3, p0, v2}, Landroidx/core/content/pm/d$a;-><init>(Landroid/content/Context;Landroid/content/pm/ShortcutInfo;)V
+    invoke-direct {v3, p0, v2}, Landroidx/core/content/pm/ShortcutInfoCompat$a;-><init>(Landroid/content/Context;Landroid/content/pm/ShortcutInfo;)V
 
-    invoke-virtual {v3}, Landroidx/core/content/pm/d$a;->c()Landroidx/core/content/pm/d;
+    invoke-virtual {v3}, Landroidx/core/content/pm/ShortcutInfoCompat$a;->c()Landroidx/core/content/pm/ShortcutInfoCompat;
 
     move-result-object v2
 
@@ -839,11 +876,11 @@
     .line 7
     :cond_1
     :try_start_0
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroidx/core/content/pm/e;->b()Ljava/util/List;
+    invoke-virtual {p0}, Landroidx/core/content/pm/d;->b()Ljava/util/List;
 
     move-result-object p0
     :try_end_0
@@ -955,7 +992,7 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -998,7 +1035,7 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1041,7 +1078,7 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1101,7 +1138,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)",
             "Ljava/lang/String;"
         }
@@ -1128,22 +1165,22 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/core/content/pm/d;
+    check-cast v2, Landroidx/core/content/pm/ShortcutInfoCompat;
 
     .line 2
-    invoke-virtual {v2}, Landroidx/core/content/pm/d;->u()I
+    invoke-virtual {v2}, Landroidx/core/content/pm/ShortcutInfoCompat;->v()I
 
     move-result v3
 
     if-le v3, v0, :cond_0
 
     .line 3
-    invoke-virtual {v2}, Landroidx/core/content/pm/d;->j()Ljava/lang/String;
+    invoke-virtual {v2}, Landroidx/core/content/pm/ShortcutInfoCompat;->k()Ljava/lang/String;
 
     move-result-object v0
 
     .line 4
-    invoke-virtual {v2}, Landroidx/core/content/pm/d;->u()I
+    invoke-virtual {v2}, Landroidx/core/content/pm/ShortcutInfoCompat;->v()I
 
     move-result v1
 
@@ -1321,20 +1358,20 @@
     return-object p0
 .end method
 
-.method public static o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+.method public static o(Landroid/content/Context;)Landroidx/core/content/pm/d;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             ")",
-            "Landroidx/core/content/pm/e<",
+            "Landroidx/core/content/pm/d<",
             "*>;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/e;
+    sget-object v0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/d;
 
     if-nez v0, :cond_0
 
@@ -1381,28 +1418,28 @@
 
     move-result-object p0
 
-    check-cast p0, Landroidx/core/content/pm/e;
+    check-cast p0, Landroidx/core/content/pm/d;
 
-    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/e;
+    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/d;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 6
     :catch_0
-    sget-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/e;
+    sget-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/d;
 
     if-nez p0, :cond_0
 
     .line 7
-    new-instance p0, Landroidx/core/content/pm/e$a;
+    new-instance p0, Landroidx/core/content/pm/d$a;
 
-    invoke-direct {p0}, Landroidx/core/content/pm/e$a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/content/pm/d$a;-><init>()V
 
-    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/e;
+    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/d;
 
     .line 8
     :cond_0
-    sget-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/e;
+    sget-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->j:Landroidx/core/content/pm/d;
 
     return-object p0
 .end method
@@ -1422,7 +1459,7 @@
             "Landroid/content/Context;",
             "I)",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;"
         }
     .end annotation
@@ -1449,7 +1486,7 @@
     move-result-object p1
 
     .line 4
-    invoke-static {p0, p1}, Landroidx/core/content/pm/d;->c(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
+    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->c(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
@@ -1511,7 +1548,7 @@
 
     .line 10
     :cond_3
-    invoke-static {p0, v1}, Landroidx/core/content/pm/d;->c(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
+    invoke-static {p0, v1}, Landroidx/core/content/pm/ShortcutInfoCompat;->c(Landroid/content/Context;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
@@ -1524,11 +1561,11 @@
 
     .line 11
     :try_start_0
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroidx/core/content/pm/e;->b()Ljava/util/List;
+    invoke-virtual {p0}, Landroidx/core/content/pm/d;->b()Ljava/util/List;
 
     move-result-object p0
     :try_end_0
@@ -1554,7 +1591,7 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1641,7 +1678,7 @@
     const-string v0, "com.android.launcher.permission.INSTALL_SHORTCUT"
 
     .line 3
-    invoke-static {p0, v0}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v1
 
@@ -1711,191 +1748,237 @@
     return v2
 .end method
 
-.method public static s(Landroid/content/Context;Landroidx/core/content/pm/d;)Z
+.method public static s(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;)Z
     .locals 6
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/content/pm/d;
+    .param p1    # Landroidx/core/content/pm/ShortcutInfoCompat;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->k(Landroid/content/Context;)I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x1f
+
+    if-gt v0, v2, :cond_1
+
+    .line 4
+    invoke-virtual {p1, v1}, Landroidx/core/content/pm/ShortcutInfoCompat;->E(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 5
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    if-nez v0, :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return v1
+    move-result-object v0
 
-    .line 4
-    :cond_0
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1d
-
-    if-gt v2, v3, :cond_1
-
-    .line 5
-    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->b(Landroid/content/Context;Landroidx/core/content/pm/d;)Z
-
-    :cond_1
-    const/16 v3, 0x1e
-
-    const/4 v4, 0x1
-
-    if-lt v2, v3, :cond_2
+    check-cast v0, Landroidx/core/content/pm/c;
 
     .line 6
-    const-class v2, Landroid/content/pm/ShortcutManager;
-
-    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
-    check-cast v2, Landroid/content/pm/ShortcutManager;
-
-    .line 7
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
-
-    move-result-object v3
-
-    .line 8
-    invoke-virtual {v2, v3}, Landroid/content/pm/ShortcutManager;->pushDynamicShortcut(Landroid/content/pm/ShortcutInfo;)V
+    invoke-virtual {v0, v2}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
 
     goto :goto_0
 
-    :cond_2
-    const/16 v3, 0x19
-
-    if-lt v2, v3, :cond_5
-
-    .line 9
-    const-class v2, Landroid/content/pm/ShortcutManager;
-
-    invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/content/pm/ShortcutManager;
-
-    .line 10
-    invoke-virtual {v2}, Landroid/content/pm/ShortcutManager;->isRateLimitingActive()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
+    :cond_0
     return v1
 
-    .line 11
-    :cond_3
-    invoke-virtual {v2}, Landroid/content/pm/ShortcutManager;->getDynamicShortcuts()Ljava/util/List;
+    .line 7
+    :cond_1
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->k(Landroid/content/Context;)I
 
-    move-result-object v3
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_2
+
+    return v3
+
+    :cond_2
+    const/16 v4, 0x1d
+
+    if-gt v0, v4, :cond_3
+
+    .line 8
+    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->b(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;)Z
+
+    :cond_3
+    const/16 v4, 0x1e
+
+    if-lt v0, v4, :cond_4
+
+    .line 9
+    const-class v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ShortcutManager;
+
+    .line 10
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v4
+
+    .line 11
+    invoke-virtual {v0, v4}, Landroid/content/pm/ShortcutManager;->pushDynamicShortcut(Landroid/content/pm/ShortcutInfo;)V
+
+    goto :goto_1
+
+    :cond_4
+    const/16 v4, 0x19
+
+    if-lt v0, v4, :cond_7
 
     .line 12
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    const-class v0, Landroid/content/pm/ShortcutManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ShortcutManager;
+
+    .line 13
+    invoke-virtual {v0}, Landroid/content/pm/ShortcutManager;->isRateLimitingActive()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    return v3
+
+    .line 14
+    :cond_5
+    invoke-virtual {v0}, Landroid/content/pm/ShortcutManager;->getDynamicShortcuts()Ljava/util/List;
+
+    move-result-object v4
+
+    .line 15
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v5
 
-    if-lt v5, v0, :cond_4
+    if-lt v5, v2, :cond_6
 
-    new-array v5, v4, [Ljava/lang/String;
+    new-array v5, v1, [Ljava/lang/String;
 
-    .line 13
-    invoke-static {v3}, Landroidx/core/content/pm/ShortcutManagerCompat$a;->a(Ljava/util/List;)Ljava/lang/String;
+    .line 16
+    invoke-static {v4}, Landroidx/core/content/pm/ShortcutManagerCompat$a;->a(Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v5, v1
+    aput-object v4, v5, v3
 
-    .line 14
+    .line 17
     invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v2, v3}, Landroid/content/pm/ShortcutManager;->removeDynamicShortcuts(Ljava/util/List;)V
+    invoke-virtual {v0, v4}, Landroid/content/pm/ShortcutManager;->removeDynamicShortcuts(Ljava/util/List;)V
 
-    :cond_4
-    new-array v3, v4, [Landroid/content/pm/ShortcutInfo;
+    :cond_6
+    new-array v4, v1, [Landroid/content/pm/ShortcutInfo;
 
-    .line 15
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
+    .line 18
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v5
 
-    aput-object v5, v3, v1
+    aput-object v5, v4, v3
 
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v2, v3}, Landroid/content/pm/ShortcutManager;->addDynamicShortcuts(Ljava/util/List;)Z
+    invoke-virtual {v0, v4}, Landroid/content/pm/ShortcutManager;->addDynamicShortcuts(Ljava/util/List;)Z
 
-    .line 16
-    :cond_5
-    :goto_0
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    .line 19
+    :cond_7
+    :goto_1
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 17
+    .line 20
     :try_start_0
-    invoke-virtual {v2}, Landroidx/core/content/pm/e;->b()Ljava/util/List;
+    invoke-virtual {v0}, Landroidx/core/content/pm/d;->b()Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v4
 
-    .line 18
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    .line 21
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v5
 
-    if-lt v5, v0, :cond_6
+    if-lt v5, v2, :cond_8
 
-    new-array v0, v4, [Ljava/lang/String;
+    new-array v2, v1, [Ljava/lang/String;
 
-    .line 19
-    invoke-static {v3}, Landroidx/core/content/pm/ShortcutManagerCompat;->m(Ljava/util/List;)Ljava/lang/String;
+    .line 22
+    invoke-static {v4}, Landroidx/core/content/pm/ShortcutManagerCompat;->m(Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v0, v1
+    aput-object v4, v2, v3
 
-    .line 20
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    .line 23
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v2, v0}, Landroidx/core/content/pm/e;->d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroidx/core/content/pm/d;->d(Ljava/util/List;)Ljava/lang/Object;
 
-    :cond_6
-    new-array v0, v4, [Landroidx/core/content/pm/d;
+    :cond_8
+    new-array v2, v1, [Landroidx/core/content/pm/ShortcutInfoCompat;
 
-    aput-object p1, v0, v1
+    aput-object p1, v2, v3
 
-    .line 21
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    .line 24
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v2, v0}, Landroidx/core/content/pm/e;->a(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroidx/core/content/pm/d;->a(Ljava/util/List;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 22
+    .line 25
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object v0
@@ -1904,58 +1987,14 @@
 
     move-result-object v0
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/core/content/pm/c;
-
-    .line 23
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
-
-    goto :goto_1
-
-    .line 24
-    :cond_7
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->j()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Landroid/content/Context;Ljava/lang/String;)V
-
-    return v4
-
-    :catchall_0
-    move-exception v0
-
-    .line 25
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
     :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1971,17 +2010,61 @@
     goto :goto_2
 
     .line 27
-    :cond_8
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->j()Ljava/lang/String;
+    :cond_9
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->k()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->x(Landroid/content/Context;Ljava/lang/String;)V
+
+    return v1
+
+    :catchall_0
+    move-exception v0
 
     .line 28
-    throw v0
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/core/content/pm/c;
 
     .line 29
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
+
+    goto :goto_3
+
+    .line 30
+    :cond_a
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->k()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->x(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 31
+    throw v0
+
+    .line 32
     :catch_0
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
 
@@ -1991,37 +2074,37 @@
 
     move-result-object v0
 
-    :goto_3
+    :goto_4
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_9
+    if-eqz v1, :cond_b
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Landroidx/core/content/pm/c;
+    check-cast v1, Landroidx/core/content/pm/c;
 
-    .line 30
+    .line 33
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v2, v3}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
 
-    goto :goto_3
+    goto :goto_4
 
-    .line 31
-    :cond_9
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->j()Ljava/lang/String;
+    .line 34
+    :cond_b
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->k()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Landroidx/core/content/pm/ShortcutManagerCompat;->x(Landroid/content/Context;Ljava/lang/String;)V
 
-    return v1
+    return v3
 .end method
 
 .method public static t(Landroid/content/Context;)V
@@ -2051,11 +2134,11 @@
 
     .line 3
     :cond_0
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/core/content/pm/e;->c()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/core/content/pm/d;->c()Ljava/lang/Object;
 
     .line 4
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
@@ -2128,11 +2211,11 @@
 
     .line 3
     :cond_0
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/e;->d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/core/content/pm/d;->d(Ljava/util/List;)Ljava/lang/Object;
 
     .line 4
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
@@ -2210,11 +2293,11 @@
     invoke-virtual {v0, p1}, Landroid/content/pm/ShortcutManager;->removeLongLivedShortcuts(Ljava/util/List;)V
 
     .line 4
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/e;->d(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/core/content/pm/d;->d(Ljava/util/List;)Ljava/lang/Object;
 
     .line 5
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
@@ -2247,7 +2330,81 @@
     return-void
 .end method
 
-.method public static w(Landroid/content/Context;Ljava/lang/String;)V
+.method public static w(Ljava/util/List;I)Ljava/util/List;
+    .locals 3
+    .param p0    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
+            ">;I)",
+            "Ljava/util/List<",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-le v0, v1, :cond_0
+
+    return-object p0
+
+    .line 3
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 4
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_1
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/core/content/pm/ShortcutInfoCompat;
+
+    .line 5
+    invoke-virtual {v1, p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->E(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 6
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public static x(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -2259,10 +2416,10 @@
     .end param
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -2318,13 +2475,13 @@
     return-void
 .end method
 
-.method public static x(Landroid/content/Context;Landroidx/core/content/pm/d;Landroid/content/IntentSender;)Z
-    .locals 10
+.method public static y(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;Landroid/content/IntentSender;)Z
+    .locals 11
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/core/content/pm/d;
+    .param p1    # Landroidx/core/content/pm/ShortcutInfoCompat;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -2336,11 +2493,29 @@
     .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x1a
+    const/4 v1, 0x0
 
-    if-lt v0, v1, :cond_0
+    const/4 v2, 0x1
+
+    const/16 v3, 0x1f
+
+    if-gt v0, v3, :cond_0
 
     .line 2
+    invoke-virtual {p1, v2}, Landroidx/core/content/pm/ShortcutInfoCompat;->E(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    return v1
+
+    :cond_0
+    const/16 v3, 0x1a
+
+    if-lt v0, v3, :cond_1
+
+    .line 3
     const-class v0, Landroid/content/pm/ShortcutManager;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -2349,76 +2524,72 @@
 
     check-cast p0, Landroid/content/pm/ShortcutManager;
 
-    .line 3
-    invoke-virtual {p1}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
+    .line 4
+    invoke-virtual {p1}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
 
     move-result-object p1
 
-    .line 4
+    .line 5
     invoke-virtual {p0, p1, p2}, Landroid/content/pm/ShortcutManager;->requestPinShortcut(Landroid/content/pm/ShortcutInfo;Landroid/content/IntentSender;)Z
 
     move-result p0
 
     return p0
 
-    .line 5
-    :cond_0
+    .line 6
+    :cond_1
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->r(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    const/4 p0, 0x0
+    return v1
 
-    return p0
-
-    .line 6
-    :cond_1
+    .line 7
+    :cond_2
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.launcher.action.INSTALL_SHORTCUT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Landroidx/core/content/pm/d;->a(Landroid/content/Intent;)Landroid/content/Intent;
+    invoke-virtual {p1, v0}, Landroidx/core/content/pm/ShortcutInfoCompat;->a(Landroid/content/Intent;)Landroid/content/Intent;
 
-    move-result-object v3
+    move-result-object v4
 
-    const/4 p1, 0x1
-
-    if-nez p2, :cond_2
-
-    .line 7
-    invoke-virtual {p0, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    return p1
-
-    :cond_2
-    const/4 v4, 0x0
+    if-nez p2, :cond_3
 
     .line 8
-    new-instance v5, Landroidx/core/content/pm/ShortcutManagerCompat$1;
+    invoke-virtual {p0, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    invoke-direct {v5, p2}, Landroidx/core/content/pm/ShortcutManagerCompat$1;-><init>(Landroid/content/IntentSender;)V
+    return v2
 
-    const/4 v6, 0x0
+    :cond_3
+    const/4 v5, 0x0
 
-    const/4 v7, -0x1
+    .line 9
+    new-instance v6, Landroidx/core/content/pm/ShortcutManagerCompat$1;
 
-    const/4 v8, 0x0
+    invoke-direct {v6, p2}, Landroidx/core/content/pm/ShortcutManagerCompat$1;-><init>(Landroid/content/IntentSender;)V
+
+    const/4 v7, 0x0
+
+    const/4 v8, -0x1
 
     const/4 v9, 0x0
 
-    move-object v2, p0
+    const/4 v10, 0x0
 
-    invoke-virtual/range {v2 .. v9}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
+    move-object v3, p0
 
-    return p1
+    invoke-virtual/range {v3 .. v10}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
+
+    return v2
 .end method
 
-.method public static y(Landroid/content/Context;Ljava/util/List;)Z
-    .locals 3
+.method public static z(Landroid/content/Context;Ljava/util/List;)Z
+    .locals 5
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -2432,96 +2603,103 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)Z"
         }
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v0, 0x1
 
     .line 3
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_1
-
-    .line 4
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 5
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, v0}, Landroidx/core/content/pm/ShortcutManagerCompat;->w(Ljava/util/List;I)Ljava/util/List;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    .line 4
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v2
+    const/16 v3, 0x19
 
-    if-eqz v2, :cond_0
+    if-lt v2, v3, :cond_1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 5
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-result-object v2
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    check-cast v2, Landroidx/core/content/pm/d;
+    move-result v3
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
 
     .line 6
-    invoke-virtual {v2}, Landroidx/core/content/pm/d;->E()Landroid/content/pm/ShortcutInfo;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroidx/core/content/pm/ShortcutInfoCompat;
+
+    .line 7
+    invoke-virtual {v4}, Landroidx/core/content/pm/ShortcutInfoCompat;->H()Landroid/content/pm/ShortcutInfo;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 7
+    .line 8
     :cond_0
-    const-class v1, Landroid/content/pm/ShortcutManager;
+    const-class v3, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Landroid/content/pm/ShortcutManager;
+    check-cast v3, Landroid/content/pm/ShortcutManager;
 
-    invoke-virtual {v1, v0}, Landroid/content/pm/ShortcutManager;->setDynamicShortcuts(Ljava/util/List;)Z
+    invoke-virtual {v3, v2}, Landroid/content/pm/ShortcutManager;->setDynamicShortcuts(Ljava/util/List;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_1
+    if-nez v2, :cond_1
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 8
-    :cond_1
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/core/content/pm/e;->c()Ljava/lang/Object;
-
     .line 9
-    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/e;
+    :cond_1
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/e;->a(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v2}, Landroidx/core/content/pm/d;->c()Ljava/lang/Object;
 
     .line 10
+    invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->o(Landroid/content/Context;)Landroidx/core/content/pm/d;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroidx/core/content/pm/d;->a(Ljava/util/List;)Ljava/lang/Object;
+
+    .line 11
     invoke-static {p0}, Landroidx/core/content/pm/ShortcutManagerCompat;->n(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p0
@@ -2533,46 +2711,24 @@
     :goto_1
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroidx/core/content/pm/c;
-
-    .line 11
-    invoke-virtual {v0}, Landroidx/core/content/pm/c;->a()V
+    check-cast v1, Landroidx/core/content/pm/c;
 
     .line 12
-    invoke-virtual {v0, p1}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
+    invoke-virtual {v1}, Landroidx/core/content/pm/c;->a()V
+
+    .line 13
+    invoke-virtual {v1, p1}, Landroidx/core/content/pm/c;->b(Ljava/util/List;)V
 
     goto :goto_1
 
     :cond_2
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static z(Ljava/util/List;)V
-    .locals 0
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroidx/core/content/pm/c;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    sput-object p0, Landroidx/core/content/pm/ShortcutManagerCompat;->k:Ljava/util/List;
-
-    return-void
+    return v0
 .end method

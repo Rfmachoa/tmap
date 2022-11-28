@@ -3,34 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lek/e;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/Merger;
+
+.field public final synthetic b:Lcom/amplifyframework/core/model/Model;
+
+.field public final synthetic c:Lcom/amplifyframework/core/Consumer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/n;->a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/n;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/n;->b:Lcom/amplifyframework/core/model/Model;
+
+    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/n;->c:Lcom/amplifyframework/core/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final a(Lek/c;)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/n;->a:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/n;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/n;->b:Lcom/amplifyframework/core/model/Model;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->f(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Ljava/lang/Throwable;)V
+    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/n;->c:Lcom/amplifyframework/core/Consumer;
+
+    invoke-static {v0, v1, v2, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->h(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
 
     return-void
 .end method

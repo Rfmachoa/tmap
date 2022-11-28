@@ -82,7 +82,7 @@
 
     const-string v1, "TmapAgentNotiRegistrationMap()"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iput-object p1, p0, Lcom/skt/tmap/agent/e;->a:Landroid/content/Context;
@@ -163,7 +163,7 @@
 
     const-string v1, "registerNotification"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Landroidx/core/app/NotificationCompat$e;
@@ -175,7 +175,7 @@
     invoke-direct {v0, v1, v2}, Landroidx/core/app/NotificationCompat$e;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/util/e;->B()I
+    invoke-static {}, Lcom/skt/tmap/util/g;->E()I
 
     move-result v1
 
@@ -235,7 +235,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/agent/e;->a:Landroid/content/Context;
 
-    const v2, 0x7f130405
+    const v2, 0x7f140465
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -246,7 +246,7 @@
     .line 14
     iget-object p2, p0, Lcom/skt/tmap/agent/e;->a:Landroid/content/Context;
 
-    const p3, 0x7f130404
+    const p3, 0x7f140464
 
     invoke-virtual {p2, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -349,7 +349,7 @@
 
     const-string v1, "showMessage"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -376,9 +376,9 @@
     .line 1
     sget-object v0, Lcom/skt/tmap/agent/e;->e:Ljava/lang/String;
 
-    const-string/jumbo v1, "unReadShowMessage"
+    const-string v1, "unReadShowMessage"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/agent/e;->a:Landroid/content/Context;

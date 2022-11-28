@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/api/GoogleApiActivity;
 .super Landroid/app/Activity;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnCancelListener;
@@ -228,21 +228,11 @@
 
     move-result-object v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "Activity not found while launching "
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const-string v5, "."
 
-    move-result v5
-
-    add-int/lit8 v5, v5, 0x24
-
-    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v5, "Activity not found while launching "
-
-    const-string v6, "."
-
-    invoke-static {v2, v5, v0, v6}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -259,25 +249,24 @@
 
     const-string v2, " This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store."
 
-    .line 18
     invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 19
+    .line 18
     :cond_4
     invoke-static {v1, v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 20
+    .line 19
     :goto_1
     iput v4, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zaa:I
 
-    .line 21
+    .line 20
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 
-    .line 22
+    .line 21
     :cond_5
     invoke-static {v3}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -289,14 +278,14 @@
 
     move-result v0
 
-    .line 23
+    .line 22
     invoke-static {}, Lcom/google/android/gms/common/GoogleApiAvailability;->getInstance()Lcom/google/android/gms/common/GoogleApiAvailability;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    .line 24
+    .line 23
     invoke-virtual {v1, p0, v0, v2, p0}, Lcom/google/android/gms/common/GoogleApiAvailability;->showErrorDialogFragment(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Z
 
     iput v4, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zaa:I

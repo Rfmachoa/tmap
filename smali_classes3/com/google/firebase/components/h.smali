@@ -3,38 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/google/firebase/inject/Provider;
 
 
-# instance fields
-.field public final synthetic a:Lcom/google/firebase/components/LazySet;
-
-.field public final synthetic b:Lcom/google/firebase/inject/Provider;
+# static fields
+.field public static final synthetic a:Lcom/google/firebase/components/h;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/components/LazySet;Lcom/google/firebase/inject/Provider;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/google/firebase/components/h;
+
+    invoke-direct {v0}, Lcom/google/firebase/components/h;-><init>()V
+
+    sput-object v0, Lcom/google/firebase/components/h;->a:Lcom/google/firebase/components/h;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/firebase/components/h;->a:Lcom/google/firebase/components/LazySet;
-
-    iput-object p2, p0, Lcom/google/firebase/components/h;->b:Lcom/google/firebase/inject/Provider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/firebase/components/h;->a:Lcom/google/firebase/components/LazySet;
+    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
-    iget-object v1, p0, Lcom/google/firebase/components/h;->b:Lcom/google/firebase/inject/Provider;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/google/firebase/components/ComponentRuntime;->c(Lcom/google/firebase/components/LazySet;Lcom/google/firebase/inject/Provider;)V
-
-    return-void
+    return-object v0
 .end method

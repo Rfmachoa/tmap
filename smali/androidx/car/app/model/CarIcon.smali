@@ -403,12 +403,12 @@
 
     .line 2
     :cond_2
-    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->D()I
+    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->B()I
 
     move-result v0
 
     .line 3
-    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->D()I
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->B()I
 
     move-result v3
 
@@ -424,11 +424,11 @@
     .line 4
     iget-object v0, p0, Landroidx/car/app/model/CarIcon;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
-    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->A()Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->z()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->A()Ljava/lang/String;
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->z()Ljava/lang/String;
 
     move-result-object v3
 
@@ -467,11 +467,11 @@
     .line 6
     iget-object v0, p0, Landroidx/car/app/model/CarIcon;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
-    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->F()Landroid/net/Uri;
+    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->C()Landroid/net/Uri;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->F()Landroid/net/Uri;
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->C()Landroid/net/Uri;
 
     move-result-object p1
 
@@ -501,7 +501,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->D()I
+    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->B()I
 
     move-result v0
 
@@ -516,7 +516,7 @@
 
     iget-object v1, p0, Landroidx/car/app/model/CarIcon;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
-    invoke-virtual {v1}, Landroidx/core/graphics/drawable/IconCompat;->A()Ljava/lang/String;
+    invoke-virtual {v1}, Landroidx/core/graphics/drawable/IconCompat;->z()Ljava/lang/String;
 
     move-result-object v1
 
@@ -544,7 +544,7 @@
     .line 4
     iget-object v0, p0, Landroidx/car/app/model/CarIcon;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
-    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->F()Landroid/net/Uri;
+    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->C()Landroid/net/Uri;
 
     move-result-object v0
 

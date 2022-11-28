@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/google/firebase/inject/Provider;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/Map$Entry;
-
-.field public final synthetic b:Lcom/google/firebase/events/Event;
+.field public final synthetic a:Lcom/google/firebase/components/ComponentRegistrar;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/Map$Entry;Lcom/google/firebase/events/Event;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRegistrar;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/firebase/components/k;->a:Ljava/util/Map$Entry;
-
-    iput-object p2, p0, Lcom/google/firebase/components/k;->b:Lcom/google/firebase/events/Event;
+    iput-object p1, p0, Lcom/google/firebase/components/k;->a:Lcom/google/firebase/components/ComponentRegistrar;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/firebase/components/k;->a:Ljava/util/Map$Entry;
+    iget-object v0, p0, Lcom/google/firebase/components/k;->a:Lcom/google/firebase/components/ComponentRegistrar;
 
-    iget-object v1, p0, Lcom/google/firebase/components/k;->b:Lcom/google/firebase/events/Event;
+    invoke-static {v0}, Lcom/google/firebase/components/ComponentRuntime$Builder;->a(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRegistrar;
 
-    invoke-static {v0, v1}, Lcom/google/firebase/components/EventBus;->a(Ljava/util/Map$Entry;Lcom/google/firebase/events/Event;)V
+    move-result-object v0
 
-    return-void
+    return-object v0
 .end method

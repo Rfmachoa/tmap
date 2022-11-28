@@ -42,7 +42,7 @@
     .line 1
     iget-object v0, p0, Landroidx/transition/Transition$b;->a:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/transition/Transition$b;->b:Landroidx/transition/Transition;

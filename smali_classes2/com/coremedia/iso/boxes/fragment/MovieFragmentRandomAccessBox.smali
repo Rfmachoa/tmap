@@ -1,5 +1,5 @@
 .class public Lcom/coremedia/iso/boxes/fragment/MovieFragmentRandomAccessBox;
-.super Ld6/b;
+.super Lb8/b;
 .source "MovieFragmentRandomAccessBox.java"
 
 
@@ -14,7 +14,7 @@
     const-string v0, "mfra"
 
     .line 1
-    invoke-direct {p0, v0}, Ld6/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lb8/b;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -34,7 +34,7 @@
 
     iget-object v1, p0, Lcom/skt/tmap/activity/o;->b:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->t5(Lcom/skt/tmap/activity/BaseWebViewActivity;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->B5(Lcom/skt/tmap/activity/BaseWebViewActivity;Ljava/lang/Object;)V
 
     return-void
 .end method

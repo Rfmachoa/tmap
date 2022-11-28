@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -100,11 +100,11 @@
     return-void
 .end method
 
-.method public static b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;IJ)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/PrivateCommand;
+.method public static a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;IJ)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/PrivateCommand;
     .locals 6
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v1
 
@@ -116,7 +116,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v3, v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->k([BII)V
+    invoke-virtual {p0, v3, v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k([BII)V
 
     .line 4
     new-instance p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/PrivateCommand;

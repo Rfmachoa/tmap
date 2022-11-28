@@ -95,12 +95,12 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->d:Ljava/util/ArrayList;
 
     .line 6
-    new-instance p1, Lle/j;
+    new-instance p1, Log/j;
 
-    invoke-direct {p1, p0}, Lle/j;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;)V
+    invoke-direct {p1, p0}, Log/j;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;)V
 
     .line 7
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->B(Landroid/os/Handler$Callback;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->B(Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -124,7 +124,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->x(Landroid/os/Looper;Landroid/os/Handler$Callback;)Landroid/os/Handler;
+    invoke-static {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->x(Landroid/os/Looper;Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -150,7 +150,7 @@
 
 
 # virtual methods
-.method public H(Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
+.method public D(Lcom/tmapmobility/tmap/exoplayer2/source/d0;Lcom/tmapmobility/tmap/exoplayer2/Timeline;)V
     .locals 6
 
     .line 1
@@ -237,7 +237,7 @@
     iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->c:Lcom/tmapmobility/tmap/exoplayer2/upstream/b;
 
     .line 11
-    invoke-interface {v1, v2, v5, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->O(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
+    invoke-interface {v1, v2, v5, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->L(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;Lcom/tmapmobility/tmap/exoplayer2/upstream/b;J)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
 
     move-result-object v1
 
@@ -265,7 +265,7 @@
     aget-object p2, v1, v0
 
     .line 15
-    invoke-interface {p2, p0, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->g(Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;J)V
+    invoke-interface {p2, p0, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->f(Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;J)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -301,14 +301,14 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->f()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->e()V
 
     .line 4
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->b:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -320,25 +320,102 @@
 
     .line 5
     :cond_2
+    :try_start_0
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->b:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;
 
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper;)V
+    :try_end_0
+    .catch Lcom/tmapmobility/tmap/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 6
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->e:Landroid/os/Handler;
+
+    new-instance v1, Ljava/io/IOException;
+
+    invoke-direct {v1, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 7
+    invoke-virtual {v0, v2, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    :goto_0
     return v2
 .end method
 
-.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/source/x0;)V
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->g:Landroid/os/Handler;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public bridge synthetic d(Lcom/tmapmobility/tmap/exoplayer2/source/y0;)V
     .locals 0
 
     .line 1
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/b0;
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->e(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->c(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
 
     return-void
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
+.method public e()V
+    .locals 2
+
+    .line 1
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->j:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 2
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->j:Z
+
+    .line 3
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->g:Landroid/os/Handler;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
+.method public g(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
     .locals 1
 
     .line 1
@@ -370,59 +447,6 @@
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_0
-    return-void
-.end method
-
-.method public e(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->g:Landroid/os/Handler;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public f()V
-    .locals 2
-
-    .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->j:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 2
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->j:Z
-
-    .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->g:Landroid/os/Handler;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
     return-void
 .end method
 
@@ -479,7 +503,7 @@
     :cond_1
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->a:Lcom/tmapmobility/tmap/exoplayer2/source/d0;
 
-    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->M(Lcom/tmapmobility/tmap/exoplayer2/source/d0$c;)V
+    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->J(Lcom/tmapmobility/tmap/exoplayer2/source/d0$c;)V
 
     .line 6
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->g:Landroid/os/Handler;
@@ -592,7 +616,7 @@
 
     sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;->b:Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;
 
-    invoke-interface {p1, p0, v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->u(Lcom/tmapmobility/tmap/exoplayer2/source/d0$c;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)V
+    invoke-interface {p1, p0, v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/d0;->n(Lcom/tmapmobility/tmap/exoplayer2/source/d0$c;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lcom/tmapmobility/tmap/exoplayer2/analytics/z1;)V
 
     .line 20
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadHelper$f;->g:Landroid/os/Handler;

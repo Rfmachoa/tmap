@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -30,58 +30,23 @@
 .field public zza:Lcom/google/android/gms/analytics/ecommerce/ProductAction;
 
 .field public zzb:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/analytics/ecommerce/Product;",
-            ">;>;"
-        }
-    .end annotation
-.end field
 
 .field public zzc:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/analytics/ecommerce/Promotion;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public zzd:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/analytics/ecommerce/Product;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zze:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
 
-    .line 1
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
@@ -112,20 +77,12 @@
 
 .method private final zza(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")TT;"
-        }
-    .end annotation
 
     if-eqz p2, :cond_0
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
 
-    .line 1
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
@@ -137,14 +94,14 @@
 .method public addImpression(Lcom/google/android/gms/analytics/ecommerce/Product;Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 2
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/Product;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -161,7 +118,7 @@
     const-string p1, "product should be non-null"
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfa;->zze(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfc;->zze(Ljava/lang/String;)V
 
     return-object p0
 
@@ -207,10 +164,10 @@
 .method public addProduct(Lcom/google/android/gms/analytics/ecommerce/Product;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 1
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/Product;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -226,7 +183,7 @@
     const-string p1, "product should be non-null"
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfa;->zze(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfc;->zze(Ljava/lang/String;)V
 
     return-object p0
 
@@ -242,10 +199,10 @@
 .method public addPromotion(Lcom/google/android/gms/analytics/ecommerce/Promotion;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 1
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/Promotion;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -261,7 +218,7 @@
     const-string p1, "promotion should be non-null"
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfa;->zze(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfc;->zze(Ljava/lang/String;)V
 
     return-object p0
 
@@ -275,8 +232,8 @@
 .end method
 
 .method public build()Ljava/util/Map;
-    .locals 12
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .locals 10
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -289,11 +246,11 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
 
-    .line 1
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     iget-object v1, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zza:Lcom/google/android/gms/analytics/ecommerce/ProductAction;
@@ -404,7 +361,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_5
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -436,7 +393,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_4
+    if-eqz v8, :cond_3
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -445,50 +402,26 @@
     check-cast v8, Lcom/google/android/gms/analytics/ecommerce/Product;
 
     .line 11
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v9
-
     invoke-static {v7}, Lcom/google/android/gms/analytics/zzd;->zzi(I)Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Ljava/lang/String;->length()I
-
-    move-result v11
-
-    if-eqz v11, :cond_3
-
-    invoke-virtual {v9, v10}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6, v9}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    goto :goto_4
-
-    :cond_3
-    new-instance v10, Ljava/lang/String;
-
-    invoke-direct {v10, v9}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    move-object v9, v10
-
-    :goto_4
     invoke-virtual {v8, v9}, Lcom/google/android/gms/analytics/ecommerce/Product;->zza(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v8
 
     invoke-virtual {v0, v8}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/2addr v7, v2
 
     goto :goto_3
 
     .line 12
-    :cond_4
+    :cond_3
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
@@ -499,19 +432,15 @@
 
     move-result v5
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_4
+
+    const-string v5, "nm"
+
+    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
 
     .line 13
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "nm"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
@@ -520,30 +449,30 @@
 
     invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_5
+    :cond_4
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    :cond_6
+    :cond_5
     return-object v0
 .end method
 
 .method public get(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
 
-    .line 1
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -556,14 +485,14 @@
 .method public final set(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -577,9 +506,9 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
 
-    .line 1
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -588,7 +517,7 @@
     const-string p1, "HitBuilder.set() called with a null paramName."
 
     .line 2
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfa;->zze(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfc;->zze(Ljava/lang/String;)V
 
     :goto_0
     return-object p0
@@ -597,10 +526,10 @@
 .method public final setAll(Ljava/util/Map;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 2
     .param p1    # Ljava/util/Map;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -617,12 +546,12 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
 
     new-instance v1, Ljava/util/HashMap;
 
-    .line 1
     invoke-direct {v1, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
@@ -633,10 +562,10 @@
 .method public setCampaignParamsFromUrl(Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 14
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -722,7 +651,7 @@
     .line 9
     :cond_3
     :goto_0
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfs;->zzf(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfu;->zzf(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -814,13 +743,12 @@
 
     goto :goto_1
 
-    .line 15
     :cond_6
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 16
+    .line 15
     :catch_0
     :goto_2
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -831,15 +759,15 @@
 
     return-object p0
 
-    .line 17
+    .line 16
     :cond_7
-    invoke-static {v1}, Lcom/google/android/gms/internal/gtm/zzfs;->zzf(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v1}, Lcom/google/android/gms/internal/gtm/zzfu;->zzf(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p1
 
     const-string v0, "utm_content"
 
-    .line 18
+    .line 17
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -852,7 +780,7 @@
 
     const-string v0, "utm_medium"
 
-    .line 19
+    .line 18
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -865,7 +793,7 @@
 
     const-string v0, "utm_campaign"
 
-    .line 20
+    .line 19
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -878,7 +806,7 @@
 
     const-string v0, "utm_source"
 
-    .line 21
+    .line 20
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -891,7 +819,7 @@
 
     const-string v0, "utm_term"
 
-    .line 22
+    .line 21
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -904,7 +832,7 @@
 
     const-string v0, "utm_id"
 
-    .line 23
+    .line 22
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -917,7 +845,7 @@
 
     const-string v0, "anid"
 
-    .line 24
+    .line 23
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -930,7 +858,7 @@
 
     const-string v0, "gclid"
 
-    .line 25
+    .line 24
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -943,7 +871,7 @@
 
     const-string v0, "dclid"
 
-    .line 26
+    .line 25
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -956,7 +884,7 @@
 
     const-string v0, "aclid"
 
-    .line 27
+    .line 26
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -969,7 +897,7 @@
 
     const-string v0, "gmob_t"
 
-    .line 28
+    .line 27
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -986,10 +914,10 @@
 .method public setCustomDimension(ILjava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1012,7 +940,7 @@
 
 .method public setCustomMetric(IF)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1038,10 +966,10 @@
 .method public setHitType(Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1062,7 +990,7 @@
 
 .method public setNewSession()Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 2
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1083,7 +1011,7 @@
 
 .method public setNonInteraction(Z)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1092,13 +1020,13 @@
         }
     .end annotation
 
-    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfs;->zzc(Z)Ljava/lang/String;
+    .line 1
+    invoke-static {p1}, Lcom/google/android/gms/internal/gtm/zzfu;->zzc(Z)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "&ni"
 
-    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->set(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
 
     return-object p0
@@ -1107,10 +1035,10 @@
 .method public setProductAction(Lcom/google/android/gms/analytics/ecommerce/ProductAction;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/ProductAction;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1129,10 +1057,10 @@
 .method public setPromotionAction(Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -1143,11 +1071,11 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;->zze:Ljava/util/Map;
 
     const-string v1, "&promoa"
 
-    .line 1
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0

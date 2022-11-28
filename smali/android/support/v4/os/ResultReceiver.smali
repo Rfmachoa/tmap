@@ -110,7 +110,7 @@
 
 
 # virtual methods
-.method public b(ILandroid/os/Bundle;)V
+.method public a(ILandroid/os/Bundle;)V
     .locals 0
 
     return-void
@@ -140,7 +140,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->b(ILandroid/os/Bundle;)V
+    invoke-virtual {p0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->a(ILandroid/os/Bundle;)V
 
     :goto_0
     return-void
@@ -172,6 +172,10 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     monitor-enter p0

@@ -1,5 +1,5 @@
 .class Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody$1;
-.super Lzj/r;
+.super Lem/r;
 .source "OkHttpCall.java"
 
 
@@ -19,20 +19,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody;Lzj/m0;)V
+.method public constructor <init>(Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody;Lem/m0;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody$1;->this$0:Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody;
 
-    invoke-direct {p0, p2}, Lzj/r;-><init>(Lzj/m0;)V
+    invoke-direct {p0, p2}, Lem/r;-><init>(Lem/m0;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public read(Lzj/m;J)J
+.method public read(Lem/m;J)J
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -42,7 +42,7 @@
 
     .line 1
     :try_start_0
-    invoke-super {p0, p1, p2, p3}, Lzj/r;->read(Lzj/m;J)J
+    invoke-super {p0, p1, p2, p3}, Lem/r;->read(Lem/m;J)J
 
     move-result-wide p1
     :try_end_0

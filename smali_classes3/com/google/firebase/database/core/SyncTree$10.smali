@@ -91,7 +91,7 @@
 
     iget-object v1, p0, Lcom/google/firebase/database/core/SyncTree$10;->val$tag:Lcom/google/firebase/database/core/Tag;
 
-    invoke-static {v0, v1}, Lcom/google/firebase/database/core/SyncTree;->access$500(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/Tag;)Lcom/google/firebase/database/core/view/QuerySpec;
+    invoke-static {v0, v1}, Lcom/google/firebase/database/core/SyncTree;->access$400(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/Tag;)Lcom/google/firebase/database/core/view/QuerySpec;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
     .line 5
     iget-object v3, p0, Lcom/google/firebase/database/core/SyncTree$10;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v3}, Lcom/google/firebase/database/core/SyncTree;->access$200(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/persistence/PersistenceManager;
+    invoke-static {v3}, Lcom/google/firebase/database/core/SyncTree;->access$100(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/persistence/PersistenceManager;
 
     move-result-object v3
 
@@ -143,7 +143,7 @@
     .line 8
     iget-object v1, p0, Lcom/google/firebase/database/core/SyncTree$10;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
-    invoke-static {v1, v0, v3}, Lcom/google/firebase/database/core/SyncTree;->access$600(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/operation/Operation;)Ljava/util/List;
+    invoke-static {v1, v0, v3}, Lcom/google/firebase/database/core/SyncTree;->access$500(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/operation/Operation;)Ljava/util/List;
 
     move-result-object v0
 

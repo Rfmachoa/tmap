@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public g:Lwc/m;
+.field public g:Lcom/skt/tmap/setting/fragment/n;
 
 .field public h:Z
 
@@ -26,7 +26,83 @@
 
 
 # virtual methods
-.method public A5(Z)V
+.method public D5()Landroid/view/View;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public E5()Landroidx/fragment/app/Fragment;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance v0, Lcom/skt/tmap/setting/fragment/n;
+
+    invoke-direct {v0}, Lcom/skt/tmap/setting/fragment/n;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
+
+    return-object v0
+.end method
+
+.method public F5()Ljava/lang/String;
+    .locals 1
+
+    const v0, 0x7f140a9d
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final K5()Z
+    .locals 2
+
+    .line 1
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f140089
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public L5(Z)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -38,7 +114,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
     if-nez v0, :cond_0
 
@@ -57,9 +133,9 @@
     if-eqz v1, :cond_1
 
     .line 3
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
-    invoke-virtual {p1}, Lwc/m;->o0()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/n;->p0()V
 
     goto :goto_0
 
@@ -69,21 +145,21 @@
     if-nez v1, :cond_2
 
     .line 4
-    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->F(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->L6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->N6()V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public B5(Z)V
+.method public M5(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -95,7 +171,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->S6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->U6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -107,20 +183,20 @@
     const-string v0, "feature.nuguStartChatWithCallName"
 
     .line 2
-    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->F(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->F2()I
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->H2()I
 
     move-result v0
 
@@ -129,11 +205,11 @@
     if-eq v0, v1, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lwc/m;->e0(Z)Z
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/setting/fragment/n;->f0(Z)Z
 
     move-result v0
 
@@ -152,7 +228,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
@@ -166,14 +242,14 @@
     const-wide/16 v1, 0x0
 
     :goto_0
-    const-string/jumbo p1, "tap.voiceinvoke"
+    const-string p1, "tap.voiceinvoke"
 
-    invoke-virtual {v0, p1, v1, v2}, Ldc/d;->T(Ljava/lang/String;J)V
+    invoke-virtual {v0, p1, v1, v2}, Lbe/e;->U(Ljava/lang/String;J)V
 
     return-void
 .end method
 
-.method public C5(Z)V
+.method public N5(Z)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -185,7 +261,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->S6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->U6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -195,29 +271,29 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->V5(Z)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->X5(Z)V
 
     :cond_1
     const-string v0, "feature.nuguStartChatSound"
 
     .line 4
-    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->F(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->H(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method public D5()V
+.method public O5()V
     .locals 7
 
     .line 1
@@ -245,7 +321,7 @@
     if-nez v2, :cond_2
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->z5()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->K5()Z
 
     move-result v2
 
@@ -264,11 +340,11 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p0, v1}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->F5(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->Q5(Ljava/lang/String;)V
 
     .line 7
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->z5()Z
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->K5()Z
 
     move-result v1
 
@@ -300,7 +376,7 @@
     if-eqz v3, :cond_4
 
     .line 10
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->B5(Z)V
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->M5(Z)V
 
     goto :goto_0
 
@@ -313,7 +389,7 @@
     if-eqz v1, :cond_5
 
     .line 12
-    invoke-virtual {p0, v4}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->B5(Z)V
+    invoke-virtual {p0, v4}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->M5(Z)V
 
     :cond_5
     :goto_0
@@ -332,12 +408,12 @@
     if-eqz v3, :cond_6
 
     .line 15
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object v1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
     if-eqz v1, :cond_7
 
     .line 16
-    invoke-virtual {v1, v5}, Lwc/m;->k0(Z)V
+    invoke-virtual {v1, v5}, Lcom/skt/tmap/setting/fragment/n;->l0(Z)V
 
     goto :goto_1
 
@@ -350,12 +426,12 @@
     if-eqz v1, :cond_7
 
     .line 18
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object v1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
     if-eqz v1, :cond_7
 
     .line 19
-    invoke-virtual {v1, v4}, Lwc/m;->k0(Z)V
+    invoke-virtual {v1, v4}, Lcom/skt/tmap/setting/fragment/n;->l0(Z)V
 
     :cond_7
     :goto_1
@@ -374,7 +450,7 @@
     if-eqz v3, :cond_8
 
     .line 22
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->C5(Z)V
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->N5(Z)V
 
     goto :goto_2
 
@@ -387,7 +463,7 @@
     if-eqz v1, :cond_9
 
     .line 24
-    invoke-virtual {p0, v4}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->C5(Z)V
+    invoke-virtual {p0, v4}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->N5(Z)V
 
     :cond_9
     :goto_2
@@ -406,7 +482,7 @@
     if-eqz v1, :cond_a
 
     .line 27
-    invoke-virtual {p0, v5}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->A5(Z)V
+    invoke-virtual {p0, v5}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->L5(Z)V
 
     goto :goto_3
 
@@ -419,14 +495,14 @@
     if-eqz v0, :cond_b
 
     .line 29
-    invoke-virtual {p0, v4}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->A5(Z)V
+    invoke-virtual {p0, v4}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->L5(Z)V
 
     :cond_b
     :goto_3
     return-void
 .end method
 
-.method public E5(I)V
+.method public P5(I)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -437,7 +513,7 @@
         }
     .end annotation
 
-    const v0, 0x7f0a018b
+    const v0, 0x7f0a01a2
 
     .line 1
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -453,7 +529,7 @@
     return-void
 .end method
 
-.method public F5(Ljava/lang/String;)V
+.method public Q5(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -471,7 +547,7 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
     if-eqz v0, :cond_3
 
@@ -505,7 +581,7 @@
     goto :goto_0
 
     :sswitch_1
-    const-string/jumbo v1, "tip"
+    const-string v1, "tip"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -541,31 +617,29 @@
 
     .line 3
     :pswitch_0
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
-    invoke-virtual {p1}, Lwc/m;->q0()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/n;->r0()V
 
     goto :goto_1
 
     .line 4
     :pswitch_1
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
-    invoke-virtual {p1}, Lwc/m;->p0()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/n;->q0()V
 
     goto :goto_1
 
     .line 5
     :pswitch_2
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
-    invoke-virtual {p1}, Lwc/m;->r0()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/n;->s0()V
 
     :cond_3
     :goto_1
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -605,9 +679,9 @@
     invoke-super {p0, p1, p2, p3}, Lcom/skt/tmap/activity/BaseActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
-    invoke-virtual {v0, p1, p2, p3}, Lwc/m;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/skt/tmap/setting/fragment/n;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -634,7 +708,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     return-void
 .end method
@@ -651,20 +725,20 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onNewIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onNewIntent(Landroid/content/Intent;)V
 
     const/16 p1, 0x8
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->E5(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->P5(I)V
 
     .line 3
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lcom/skt/tmap/setting/fragment/n;
 
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Lwc/m;->f0()V
+    invoke-virtual {p1}, Lcom/skt/tmap/setting/fragment/n;->g0()V
 
     :cond_0
     return-void
@@ -677,7 +751,7 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onPause()V
 
     .line 2
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->N(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->P(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -689,7 +763,7 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
 
     .line 2
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->I(Landroid/content/Context;)V
 
     .line 3
     iget-boolean v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->h:Z
@@ -697,7 +771,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->D5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->O5()V
 
     :cond_0
     const/4 v0, 0x0
@@ -706,7 +780,7 @@
     iput-boolean v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->h:Z
 
     .line 6
-    invoke-static {}, Lcom/skt/tmap/service/LoginService;->e1()Lcom/skt/tmap/service/LoginService$AdditionalState;
+    invoke-static {}, Lcom/skt/tmap/service/LoginService;->s1()Lcom/skt/tmap/service/LoginService$AdditionalState;
 
     move-result-object v1
 
@@ -715,7 +789,7 @@
     if-ne v1, v2, :cond_1
 
     .line 7
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->E5(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->P5(I)V
 
     goto :goto_0
 
@@ -723,84 +797,8 @@
     const/16 v0, 0x8
 
     .line 8
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->E5(I)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->P5(I)V
 
     :goto_0
     return-void
-.end method
-
-.method public u5()Landroid/view/View;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public v5()Landroidx/fragment/app/Fragment;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Lwc/m;
-
-    invoke-direct {v0}, Lwc/m;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;->g:Lwc/m;
-
-    return-object v0
-.end method
-
-.method public w5()Ljava/lang/String;
-    .locals 1
-
-    const v0, 0x7f130a18
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final z5()Z
-    .locals 2
-
-    .line 1
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const v0, 0x7f130088
-
-    .line 2
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
 .end method

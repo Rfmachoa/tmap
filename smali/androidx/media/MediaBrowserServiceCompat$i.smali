@@ -290,10 +290,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lr1/i;
+    check-cast v1, Landroidx/core/util/k;
 
     .line 3
-    iget-object v2, v1, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v2, v1, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/os/Bundle;
 
@@ -306,7 +306,7 @@
     .line 4
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$i;->b:Landroidx/media/MediaBrowserServiceCompat;
 
-    iget-object v1, v1, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v1, v1, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Bundle;
 

@@ -111,10 +111,10 @@
     return-void
 .end method
 
-.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/g;
+.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lek/g;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$merge$5(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/g;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$merge$5(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lek/g;
 
     move-result-object p0
 
@@ -131,15 +131,15 @@
     return p0
 .end method
 
-.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lai/c;)V
+.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$save$12(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lai/c;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$save$12(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
 
     return-void
 .end method
 
-.method private delete(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lai/a;
+.method private delete(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lek/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -149,26 +149,26 @@
             "Lcom/amplifyframework/core/Consumer<",
             "Lcom/amplifyframework/datastore/storage/StorageItemChange$Type;",
             ">;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/k;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/n;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/k;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/n;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)V
 
-    invoke-static {v0}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {v0}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public static synthetic e(Lcom/amplifyframework/datastore/syncengine/Merger;ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lai/g;
+.method public static synthetic e(Lcom/amplifyframework/datastore/syncengine/Merger;ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lek/g;
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$1(ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lai/g;
+    invoke-direct/range {p0 .. p5}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$1(ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lek/g;
 
     move-result-object p0
 
@@ -183,18 +183,18 @@
     return-void
 .end method
 
-.method public static synthetic g(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method public static synthetic g(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$8(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$8(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method
 
-.method public static synthetic h(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lai/c;)V
+.method public static synthetic h(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$delete$10(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lai/c;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$delete$10(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
 
     return-void
 .end method
@@ -217,23 +217,23 @@
     return-void
 .end method
 
-.method public static synthetic k(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/DataStoreException;)V
+.method public static synthetic k(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/DataStoreException;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$9(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/DataStoreException;)V
+    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$9(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/DataStoreException;)V
 
     return-void
 .end method
 
-.method public static synthetic l(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method public static synthetic l(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$11(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->lambda$null$11(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$delete$10(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lai/c;)V
+.method private synthetic lambda$delete$10(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -250,13 +250,13 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/amplifyframework/datastore/syncengine/i;
+    new-instance v4, Lcom/amplifyframework/datastore/syncengine/k;
 
-    invoke-direct {v4, p2, p3}, Lcom/amplifyframework/datastore/syncengine/i;-><init>(Lcom/amplifyframework/core/Consumer;Lai/c;)V
+    invoke-direct {v4, p2, p3}, Lcom/amplifyframework/datastore/syncengine/k;-><init>(Lcom/amplifyframework/core/Consumer;Lek/c;)V
 
-    new-instance v5, Lcom/amplifyframework/datastore/syncengine/h;
+    new-instance v5, Lcom/amplifyframework/datastore/syncengine/g;
 
-    invoke-direct {v5, p2, p3}, Lcom/amplifyframework/datastore/syncengine/h;-><init>(Lcom/amplifyframework/core/Consumer;Lai/c;)V
+    invoke-direct {v5, p2, p3}, Lcom/amplifyframework/datastore/syncengine/g;-><init>(Lcom/amplifyframework/core/Consumer;Lek/c;)V
 
     move-object v1, p1
 
@@ -265,7 +265,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$merge$5(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/g;
+.method private synthetic lambda$merge$5(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lek/g;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -356,7 +356,7 @@
     invoke-interface {p1, p2}, Lcom/amplifyframework/logging/Logger;->info(Ljava/lang/String;)V
 
     .line 7
-    invoke-static {}, Lai/a;->t()Lai/a;
+    invoke-static {}, Lek/a;->t()Lek/a;
 
     move-result-object p1
 
@@ -366,7 +366,7 @@
     :cond_1
     iget-object v4, p0, Lcom/amplifyframework/datastore/syncengine/Merger;->versionRepository:Lcom/amplifyframework/datastore/syncengine/VersionRepository;
 
-    invoke-virtual {v4, v3}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->findModelVersion(Lcom/amplifyframework/core/model/Model;)Lai/p0;
+    invoke-virtual {v4, v3}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->findModelVersion(Lcom/amplifyframework/core/model/Model;)Lek/p0;
 
     move-result-object v4
 
@@ -375,20 +375,20 @@
 
     move-result-object v1
 
-    invoke-virtual {v4, v1}, Lai/p0;->o1(Ljava/lang/Object;)Lai/p0;
+    invoke-virtual {v4, v1}, Lek/p0;->o1(Ljava/lang/Object;)Lek/p0;
 
     move-result-object v1
 
-    new-instance v4, Lcom/amplifyframework/datastore/syncengine/q;
+    new-instance v4, Lcom/amplifyframework/datastore/syncengine/h;
 
-    invoke-direct {v4, v0}, Lcom/amplifyframework/datastore/syncengine/q;-><init>(I)V
+    invoke-direct {v4, v0}, Lcom/amplifyframework/datastore/syncengine/h;-><init>(I)V
 
     .line 10
-    invoke-virtual {v1, v4}, Lai/p0;->q0(Lci/r;)Lai/v;
+    invoke-virtual {v1, v4}, Lek/p0;->q0(Lgk/r;)Lek/v;
 
     move-result-object v6
 
-    new-instance v7, Lcom/amplifyframework/datastore/syncengine/p;
+    new-instance v7, Lcom/amplifyframework/datastore/syncengine/s;
 
     move-object v0, v7
 
@@ -396,37 +396,37 @@
 
     move-object v4, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/p;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
+    invoke-direct/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/s;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
 
     .line 11
-    invoke-virtual {v6, v7}, Lai/v;->v0(Lci/o;)Lai/a;
+    invoke-virtual {v6, v7}, Lek/v;->v0(Lgk/o;)Lek/a;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/l;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/o;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/l;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/o;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
 
     .line 12
-    invoke-virtual {p2, v0}, Lai/a;->N(Lci/a;)Lai/a;
+    invoke-virtual {p2, v0}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/r;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/i;
 
-    invoke-direct {v0, p1}, Lcom/amplifyframework/datastore/syncengine/r;-><init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+    invoke-direct {v0, p1}, Lcom/amplifyframework/datastore/syncengine/i;-><init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
 
     .line 13
-    invoke-virtual {p2, v0}, Lai/a;->x0(Lci/r;)Lai/a;
+    invoke-virtual {p2, v0}, Lek/a;->x0(Lgk/r;)Lek/a;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/n;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/q;
 
-    invoke-direct {v0, p1}, Lcom/amplifyframework/datastore/syncengine/n;-><init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+    invoke-direct {v0, p1}, Lcom/amplifyframework/datastore/syncengine/q;-><init>(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
 
     .line 14
-    invoke-virtual {p2, v0}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {p2, v0}, Lek/a;->P(Lgk/g;)Lek/a;
 
     move-result-object p1
 
@@ -544,7 +544,7 @@
     return p0
 .end method
 
-.method private synthetic lambda$null$1(ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lai/g;
+.method private synthetic lambda$null$1(ZLcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Ljava/lang/Integer;)Lek/g;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -555,14 +555,14 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-direct {p0, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->delete(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lai/a;
+    invoke-direct {p0, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->delete(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lek/a;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->save(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lai/a;
+    invoke-direct {p0, p2, p3}, Lcom/amplifyframework/datastore/syncengine/Merger;->save(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lek/a;
 
     move-result-object p1
 
@@ -572,18 +572,18 @@
 
     move-result-object p2
 
-    invoke-direct {p0, p4, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->save(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lai/a;
+    invoke-direct {p0, p4, p2}, Lcom/amplifyframework/datastore/syncengine/Merger;->save(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lek/a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {p1, p2}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private static synthetic lambda$null$11(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method private static synthetic lambda$null$11(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
     .line 1
@@ -594,7 +594,7 @@
     invoke-interface {p0, p2}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
 
     .line 2
-    invoke-interface {p1}, Lai/c;->onComplete()V
+    invoke-interface {p1}, Lek/c;->onComplete()V
 
     return-void
 .end method
@@ -708,7 +708,7 @@
     return-void
 .end method
 
-.method private static synthetic lambda$null$8(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
+.method private static synthetic lambda$null$8(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
     .locals 0
 
     .line 1
@@ -719,12 +719,12 @@
     invoke-interface {p0, p2}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
 
     .line 2
-    invoke-interface {p1}, Lai/c;->onComplete()V
+    invoke-interface {p1}, Lek/c;->onComplete()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$null$9(Lcom/amplifyframework/core/Consumer;Lai/c;Lcom/amplifyframework/datastore/DataStoreException;)V
+.method private static synthetic lambda$null$9(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/DataStoreException;)V
     .locals 2
 
     .line 1
@@ -756,12 +756,12 @@
     invoke-interface {p0, p2}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
 
     .line 5
-    invoke-interface {p1}, Lai/c;->onComplete()V
+    invoke-interface {p1}, Lek/c;->onComplete()V
 
     return-void
 .end method
 
-.method private synthetic lambda$save$12(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lai/c;)V
+.method private synthetic lambda$save$12(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;Lek/c;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -778,15 +778,15 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/amplifyframework/datastore/syncengine/j;
+    new-instance v4, Lcom/amplifyframework/datastore/syncengine/l;
 
-    invoke-direct {v4, p2, p3}, Lcom/amplifyframework/datastore/syncengine/j;-><init>(Lcom/amplifyframework/core/Consumer;Lai/c;)V
+    invoke-direct {v4, p2, p3}, Lcom/amplifyframework/datastore/syncengine/l;-><init>(Lcom/amplifyframework/core/Consumer;Lek/c;)V
 
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lcom/amplifyframework/datastore/n;
+    new-instance v5, Lcom/amplifyframework/datastore/h;
 
-    invoke-direct {v5, p3}, Lcom/amplifyframework/datastore/n;-><init>(Lai/c;)V
+    invoke-direct {v5, p3}, Lcom/amplifyframework/datastore/h;-><init>(Lek/c;)V
 
     move-object v1, p1
 
@@ -803,7 +803,7 @@
     return-void
 .end method
 
-.method private save(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lai/a;
+.method private save(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)Lek/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -813,16 +813,16 @@
             "Lcom/amplifyframework/core/Consumer<",
             "Lcom/amplifyframework/datastore/storage/StorageItemChange$Type;",
             ">;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/g;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/m;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/g;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/m;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/Consumer;)V
 
-    invoke-static {v0}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {v0}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object p1
 
@@ -831,7 +831,7 @@
 
 
 # virtual methods
-.method public merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lai/a;
+.method public merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Lek/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -840,7 +840,7 @@
             ">(",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 
@@ -849,14 +849,14 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/a;
+    invoke-virtual {p0, p1, v0}, Lcom/amplifyframework/datastore/syncengine/Merger;->merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lek/a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lai/a;
+.method public merge(Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)Lek/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -868,7 +868,7 @@
             "Lcom/amplifyframework/core/Consumer<",
             "Lcom/amplifyframework/datastore/storage/StorageItemChange$Type;",
             ">;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 
@@ -878,29 +878,29 @@
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 3
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/s;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/j;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/s;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/j;-><init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;Lcom/amplifyframework/core/Consumer;)V
 
-    invoke-static {v1}, Lai/a;->F(Lci/s;)Lai/a;
+    invoke-static {v1}, Lek/a;->F(Lgk/s;)Lek/a;
 
     move-result-object p1
 
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/o;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/r;
 
-    invoke-direct {p2, v0}, Lcom/amplifyframework/datastore/syncengine/o;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-direct {p2, v0}, Lcom/amplifyframework/datastore/syncengine/r;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
 
     .line 4
-    invoke-virtual {p1, p2}, Lai/a;->T(Lci/g;)Lai/a;
+    invoke-virtual {p1, p2}, Lek/a;->T(Lgk/g;)Lek/a;
 
     move-result-object p1
 
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/m;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/p;
 
-    invoke-direct {p2, v0}, Lcom/amplifyframework/datastore/syncengine/m;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
+    invoke-direct {p2, v0}, Lcom/amplifyframework/datastore/syncengine/p;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
 
     .line 5
-    invoke-virtual {p1, p2}, Lai/a;->U(Lci/a;)Lai/a;
+    invoke-virtual {p1, p2}, Lek/a;->U(Lgk/a;)Lek/a;
 
     move-result-object p1
 

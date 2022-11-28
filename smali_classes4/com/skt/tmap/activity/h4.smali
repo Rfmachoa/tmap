@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
-
-.field public final synthetic b:Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity$z;Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/h4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/h4;->b:Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;
+    iput-object p1, p0, Lcom/skt/tmap/activity/h4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/h4;->a:Lcom/skt/tmap/activity/TmapNaviActivity$z;
+    iget-object v0, p0, Lcom/skt/tmap/activity/h4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/h4;->b:Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapNaviActivity$z;->d(Lcom/skt/tmap/activity/TmapNaviActivity$z;Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->f8(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Integer;)V
 
     return-void
 .end method

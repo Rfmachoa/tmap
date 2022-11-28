@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->p(ILej/a;)V
+    value = Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->q(ILgl/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,16 +43,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lej/a;
+.field public final synthetic b:Lgl/a;
 
 
 # direct methods
-.method public constructor <init>(ILej/a;)V
+.method public constructor <init>(ILgl/a;)V
     .locals 0
 
     iput p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;->a:I
 
-    iput-object p2, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;->b:Lej/a;
+    iput-object p2, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;->b:Lgl/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;->b:Lej/a;
+    iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;->b:Lgl/a;
 
-    invoke-interface {p1}, Lej/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lgl/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

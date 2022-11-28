@@ -61,11 +61,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-interface {p1}, Landroid/text/Editable;->length()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/material/textfield/TextInputLayout;->updateCounter(I)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->updateCounter(Landroid/text/Editable;)V
 
     .line 4
     :cond_0
@@ -80,11 +76,7 @@
     .line 5
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout$1;->this$0:Lcom/google/android/material/textfield/TextInputLayout;
 
-    invoke-interface {p1}, Landroid/text/Editable;->length()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->access$200(Lcom/google/android/material/textfield/TextInputLayout;I)V
+    invoke-static {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->access$200(Lcom/google/android/material/textfield/TextInputLayout;Landroid/text/Editable;)V
 
     :cond_1
     return-void

@@ -130,6 +130,55 @@
     return-object v0
 .end method
 
+.method public canConvertToExactIntegral()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/DecimalNode;->_value:Ljava/math/BigDecimal;
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->signum()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/DecimalNode;->_value:Ljava/math/BigDecimal;
+
+    .line 2
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->scale()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/DecimalNode;->_value:Ljava/math/BigDecimal;
+
+    .line 3
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->stripTrailingZeros()Ljava/math/BigDecimal;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/math/BigDecimal;->scale()I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+.end method
+
 .method public canConvertToInt()Z
     .locals 2
 

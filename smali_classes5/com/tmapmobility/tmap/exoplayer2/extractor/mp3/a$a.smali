@@ -1,5 +1,5 @@
 .class public Lcom/tmapmobility/tmap/exoplayer2/extractor/mp3/a$a;
-.super Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;
+.super Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;
 .source "Seeker.java"
 
 # interfaces
@@ -24,7 +24,7 @@
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 1
-    invoke-direct {p0, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;-><init>(J)V
+    invoke-direct {p0, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;-><init>(J)V
 
     return-void
 .end method

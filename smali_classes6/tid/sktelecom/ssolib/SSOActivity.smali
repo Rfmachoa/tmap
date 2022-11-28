@@ -2928,7 +2928,7 @@
 
     const-string v1, "android.permission.GET_ACCOUNTS"
 
-    invoke-static {v0, v1}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 
@@ -2991,7 +2991,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1, v0}, Landroidx/core/app/a;->E(Landroid/app/Activity;[Ljava/lang/String;I)V
+    invoke-static {p0, v1, v0}, Landroidx/core/app/b;->l(Landroid/app/Activity;[Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -3468,7 +3468,7 @@
 
     const-string v2, "\', \'"
 
-    invoke-static {v1, p2, v2, p1, v2}, Lr1/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p2, v2, p1, v2}, Landroidx/constraintlayout/core/parser/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

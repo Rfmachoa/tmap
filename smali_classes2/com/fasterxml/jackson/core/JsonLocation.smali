@@ -7,6 +7,8 @@
 
 
 # static fields
+.field public static final MAX_CONTENT_SNIPPET:I = 0x1f4
+
 .field public static final NA:Lcom/fasterxml/jackson/core/JsonLocation;
 
 .field private static final serialVersionUID:J = 0x1L
@@ -31,7 +33,7 @@
     .line 1
     new-instance v8, Lcom/fasterxml/jackson/core/JsonLocation;
 
-    const-string v1, "N/A"
+    const/4 v1, 0x0
 
     const-wide/16 v2, -0x1
 
@@ -95,8 +97,239 @@
     return-void
 .end method
 
+.method private _append(Ljava/lang/StringBuilder;Ljava/lang/String;)I
+    .locals 1
+
+    const/16 v0, 0x22
+
+    .line 1
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 2
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    return p1
+.end method
+
 
 # virtual methods
+.method public _appendSourceDesc(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/JsonLocation;->_sourceRef:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "UNKNOWN"
+
+    .line 2
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-object p1
+
+    .line 3
+    :cond_0
+    instance-of v1, v0, Ljava/lang/Class;
+
+    if-eqz v1, :cond_1
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/lang/Class;
+
+    goto :goto_0
+
+    .line 4
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    .line 5
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "java."
+
+    .line 6
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 7
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    .line 8
+    :cond_2
+    instance-of v1, v0, [B
+
+    if-eqz v1, :cond_3
+
+    const-string v2, "byte[]"
+
+    goto :goto_1
+
+    .line 9
+    :cond_3
+    instance-of v1, v0, [C
+
+    if-eqz v1, :cond_4
+
+    const-string v2, "char[]"
+
+    :cond_4
+    :goto_1
+    const/16 v1, 0x28
+
+    .line 10
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 11
+    instance-of v1, v0, Ljava/lang/CharSequence;
+
+    const/16 v2, 0x1f4
+
+    const/4 v3, 0x0
+
+    const-string v4, " chars"
+
+    if-eqz v1, :cond_5
+
+    .line 12
+    check-cast v0, Ljava/lang/CharSequence;
+
+    .line 13
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v1
+
+    .line 14
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    invoke-interface {v0, v3, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, v0}, Lcom/fasterxml/jackson/core/JsonLocation;->_append(Ljava/lang/StringBuilder;Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_2
+    sub-int v3, v1, v0
+
+    goto :goto_3
+
+    .line 15
+    :cond_5
+    instance-of v1, v0, [C
+
+    if-eqz v1, :cond_6
+
+    .line 16
+    check-cast v0, [C
+
+    .line 17
+    array-length v1, v0
+
+    .line 18
+    new-instance v5, Ljava/lang/String;
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    invoke-direct {v5, v0, v3, v2}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-direct {p0, p1, v5}, Lcom/fasterxml/jackson/core/JsonLocation;->_append(Ljava/lang/StringBuilder;Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_2
+
+    .line 19
+    :cond_6
+    instance-of v1, v0, [B
+
+    if-eqz v1, :cond_7
+
+    .line 20
+    check-cast v0, [B
+
+    .line 21
+    array-length v1, v0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    .line 22
+    new-instance v2, Ljava/lang/String;
+
+    const-string v4, "UTF-8"
+
+    invoke-static {v4}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v4
+
+    invoke-direct {v2, v0, v3, v1, v4}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
+
+    invoke-direct {p0, p1, v2}, Lcom/fasterxml/jackson/core/JsonLocation;->_append(Ljava/lang/StringBuilder;Ljava/lang/String;)I
+
+    .line 23
+    array-length v0, v0
+
+    sub-int v3, v0, v1
+
+    const-string v4, " bytes"
+
+    :cond_7
+    :goto_3
+    if-lez v3, :cond_8
+
+    const-string v0, "[truncated "
+
+    .line 24
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x5d
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_8
+    return-object p1
+.end method
+
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
@@ -171,6 +404,7 @@
 
     if-nez v2, :cond_5
 
+    .line 7
     invoke-virtual {p0}, Lcom/fasterxml/jackson/core/JsonLocation;->getByteOffset()J
 
     move-result-wide v2
@@ -282,60 +516,66 @@
     return v0
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    const/16 v0, 0x50
-
-    const-string v1, "[Source: "
+.method public sourceDescription()Ljava/lang/String;
+    .locals 2
 
     .line 1
-    invoke-static {v0, v1}, Landroidx/fragment/app/a;->a(ILjava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x64
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/JsonLocation;->_appendSourceDesc(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 3
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x50
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "[Source: "
+
     .line 2
-    iget-object v1, p0, Lcom/fasterxml/jackson/core/JsonLocation;->_sourceRef:Ljava/lang/Object;
-
-    if-nez v1, :cond_0
-
-    const-string v1, "UNKNOWN"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 3
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/JsonLocation;->_appendSourceDesc(Ljava/lang/StringBuilder;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_0
     const-string v1, "; line: "
 
-    .line 5
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 6
+    .line 5
     iget v1, p0, Lcom/fasterxml/jackson/core/JsonLocation;->_lineNr:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", column: "
 
-    .line 7
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
+    .line 7
     iget v1, p0, Lcom/fasterxml/jackson/core/JsonLocation;->_columnNr:I
 
     const/16 v2, 0x5d
 
-    invoke-static {v0, v1, v2}, Lc1/k;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lv1/j;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 

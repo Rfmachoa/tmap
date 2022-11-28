@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Lcom/tmapmobility/tmap/exoplayer2/TracksInfo$TrackGroupInfo;
+.field public final a:Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
 
 .field public final b:I
 
@@ -23,14 +23,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;IILjava/lang/String;)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/Tracks;IILjava/lang/String;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;->b()Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/Tracks;->c()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
 
@@ -38,9 +38,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/TracksInfo$TrackGroupInfo;
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$k;->a:Lcom/tmapmobility/tmap/exoplayer2/TracksInfo$TrackGroupInfo;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$k;->a:Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
 
     .line 3
     iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$k;->b:I
@@ -57,11 +57,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$k;->a:Lcom/tmapmobility/tmap/exoplayer2/TracksInfo$TrackGroupInfo;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$k;->a:Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;
 
     iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$k;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/TracksInfo$TrackGroupInfo;->i(I)Z
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/Tracks$Group;->j(I)Z
 
     move-result v0
 

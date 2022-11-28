@@ -81,3 +81,12 @@
 
     return-object p1
 .end method
+
+.method public logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/databind/type/LogicalType;->Untyped:Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    return-object v0
+.end method

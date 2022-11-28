@@ -19,26 +19,26 @@
 
 .field public d:Z
 
-.field public e:Landroidx/fragment/app/f$d;
+.field public e:Landroidx/fragment/app/j$a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Ll1/b;Z)V
+.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/d;Z)V
     .locals 0
     .param p1    # Landroidx/fragment/app/SpecialEffectsController$Operation;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ll1/b;
+    .param p2    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-direct {p0, p1, p2}, Landroidx/fragment/app/c$l;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Ll1/b;)V
+    invoke-direct {p0, p1, p2}, Landroidx/fragment/app/c$l;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/d;)V
 
     const/4 p1, 0x0
 
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public e(Landroid/content/Context;)Landroidx/fragment/app/f$d;
+.method public e(Landroid/content/Context;)Landroidx/fragment/app/j$a;
     .locals 4
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -68,7 +68,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object p1, p0, Landroidx/fragment/app/c$k;->e:Landroidx/fragment/app/f$d;
+    iget-object p1, p0, Landroidx/fragment/app/c$k;->e:Landroidx/fragment/app/j$a;
 
     return-object p1
 
@@ -108,11 +108,11 @@
     iget-boolean v2, p0, Landroidx/fragment/app/c$k;->c:Z
 
     .line 5
-    invoke-static {p1, v0, v1, v2}, Landroidx/fragment/app/f;->c(Landroid/content/Context;Landroidx/fragment/app/Fragment;ZZ)Landroidx/fragment/app/f$d;
+    invoke-static {p1, v0, v1, v2}, Landroidx/fragment/app/j;->b(Landroid/content/Context;Landroidx/fragment/app/Fragment;ZZ)Landroidx/fragment/app/j$a;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/fragment/app/c$k;->e:Landroidx/fragment/app/f$d;
+    iput-object p1, p0, Landroidx/fragment/app/c$k;->e:Landroidx/fragment/app/j$a;
 
     .line 6
     iput-boolean v3, p0, Landroidx/fragment/app/c$k;->d:Z

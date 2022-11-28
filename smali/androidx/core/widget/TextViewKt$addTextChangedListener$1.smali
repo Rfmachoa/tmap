@@ -3,12 +3,12 @@
 .source "TextView.kt"
 
 # interfaces
-.implements Lej/r;
+.implements Lgl/r;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->b(Landroid/widget/TextView;Lej/r;Lej/r;Lej/l;ILjava/lang/Object;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->b(Landroid/widget/TextView;Lgl/r;Lgl/r;Lgl/l;ILjava/lang/Object;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/r<",
+        "Lgl/r<",
         "Ljava/lang/CharSequence;",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
@@ -53,8 +53,8 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -91,6 +91,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/CharSequence;
 
     check-cast p2, Ljava/lang/Number;

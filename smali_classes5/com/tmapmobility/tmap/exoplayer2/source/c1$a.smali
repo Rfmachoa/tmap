@@ -1,6 +1,6 @@
 .class public synthetic Lcom/tmapmobility/tmap/exoplayer2/source/c1$a;
 .super Ljava/lang/Object;
-.source "SingleSampleMediaSource.java"
+.source "SingleSampleMediaPeriod.java"
 
 
 # annotations

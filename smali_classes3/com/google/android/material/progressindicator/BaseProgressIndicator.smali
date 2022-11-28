@@ -50,7 +50,7 @@
 
 .field private final delayedShow:Ljava/lang/Runnable;
 
-.field private final hideAnimationCallback:Li3/b$a;
+.field private final hideAnimationCallback:Lq4/b$a;
 
 .field private isIndeterminateModeChangeRequested:Z
 
@@ -74,7 +74,7 @@
 
 .field private storedProgressAnimated:Z
 
-.field private final switchIndeterminateModeCallback:Li3/b$a;
+.field private final switchIndeterminateModeCallback:Lq4/b$a;
 
 .field private visibilityAfterHide:I
 
@@ -153,14 +153,14 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator$3;-><init>(Lcom/google/android/material/progressindicator/BaseProgressIndicator;)V
 
-    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Li3/b$a;
+    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Lq4/b$a;
 
     .line 8
     new-instance v0, Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;
 
     invoke-direct {v0, p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator$4;-><init>(Lcom/google/android/material/progressindicator/BaseProgressIndicator;)V
 
-    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Li3/b$a;
+    iput-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Lq4/b$a;
 
     .line 9
     invoke-virtual {p0}, Landroid/widget/ProgressBar;->getContext()Landroid/content/Context;
@@ -501,10 +501,10 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Li3/b$a;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Lq4/b$a;
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->registerAnimatorsCompleteCallback(Li3/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->registerAnimatorsCompleteCallback(Lq4/b$a;)V
 
     .line 5
     :cond_0
@@ -519,9 +519,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Li3/b$a;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Lq4/b$a;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->registerAnimationCallback(Li3/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->registerAnimationCallback(Lq4/b$a;)V
 
     .line 7
     :cond_1
@@ -536,9 +536,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Li3/b$a;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Lq4/b$a;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->registerAnimationCallback(Li3/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->registerAnimationCallback(Lq4/b$a;)V
 
     :cond_2
     return-void
@@ -559,9 +559,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Li3/b$a;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Lq4/b$a;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->unregisterAnimationCallback(Li3/b$a;)Z
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->unregisterAnimationCallback(Lq4/b$a;)Z
 
     .line 3
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getIndeterminateDrawable()Lcom/google/android/material/progressindicator/IndeterminateDrawable;
@@ -587,9 +587,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Li3/b$a;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->hideAnimationCallback:Lq4/b$a;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->unregisterAnimationCallback(Li3/b$a;)Z
+    invoke-virtual {v0, v1}, Lcom/google/android/material/progressindicator/DeterminateDrawable;->unregisterAnimationCallback(Lq4/b$a;)Z
 
     :cond_1
     return-void
@@ -1147,94 +1147,107 @@
 .end method
 
 .method public declared-synchronized onMeasure(II)V
-    .locals 1
+    .locals 2
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/widget/ProgressBar;->onMeasure(II)V
-
-    .line 2
     invoke-direct {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getCurrentDrawingDelegate()Lcom/google/android/material/progressindicator/DrawingDelegate;
 
-    move-result-object p1
+    move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez p1, :cond_0
+    if-nez v0, :cond_0
 
-    .line 3
+    .line 2
     monitor-exit p0
 
     return-void
 
-    .line 4
+    .line 3
     :cond_0
     :try_start_1
-    invoke-virtual {p1}, Lcom/google/android/material/progressindicator/DrawingDelegate;->getPreferredWidth()I
+    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawingDelegate;->getPreferredWidth()I
 
-    move-result p2
+    move-result v1
 
-    .line 5
-    invoke-virtual {p1}, Lcom/google/android/material/progressindicator/DrawingDelegate;->getPreferredHeight()I
+    if-gez v1, :cond_1
+
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getSuggestedMinimumWidth()I
+
+    move-result v1
+
+    invoke-static {v1, p1}, Landroid/widget/ProgressBar;->getDefaultSize(II)I
 
     move-result p1
-
-    if-gez p2, :cond_1
-
-    .line 6
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMeasuredWidth()I
-
-    move-result p2
 
     goto :goto_0
 
-    .line 7
+    .line 5
     :cond_1
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getPaddingLeft()I
-
-    move-result v0
-
-    add-int/2addr p2, v0
-
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getPaddingRight()I
-
-    move-result v0
-
-    add-int/2addr p2, v0
-
-    :goto_0
-    if-gez p1, :cond_2
-
-    .line 8
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMeasuredHeight()I
+    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawingDelegate;->getPreferredWidth()I
 
     move-result p1
 
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getPaddingLeft()I
+
+    move-result v1
+
+    add-int/2addr p1, v1
+
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getPaddingRight()I
+
+    move-result v1
+
+    add-int/2addr p1, v1
+
+    .line 6
+    :goto_0
+    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawingDelegate;->getPreferredHeight()I
+
+    move-result v1
+
+    if-gez v1, :cond_2
+
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getSuggestedMinimumHeight()I
+
+    move-result v0
+
+    invoke-static {v0, p2}, Landroid/widget/ProgressBar;->getDefaultSize(II)I
+
+    move-result p2
+
     goto :goto_1
 
-    .line 9
+    .line 8
     :cond_2
+    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawingDelegate;->getPreferredHeight()I
+
+    move-result p2
+
     invoke-virtual {p0}, Landroid/widget/ProgressBar;->getPaddingTop()I
 
     move-result v0
 
-    add-int/2addr p1, v0
+    add-int/2addr p2, v0
 
     invoke-virtual {p0}, Landroid/widget/ProgressBar;->getPaddingBottom()I
 
     move-result v0
 
-    add-int/2addr p1, v0
+    add-int/2addr p2, v0
 
-    .line 10
+    .line 9
     :goto_1
-    invoke-virtual {p0, p2, p1}, Landroid/widget/ProgressBar;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/widget/ProgressBar;->setMeasuredDimension(II)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 11
+    .line 10
     monitor-exit p0
 
     return-void
@@ -1375,45 +1388,22 @@
     .line 3
     :cond_0
     :try_start_1
-    invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->visibleToUser()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    .line 4
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Cannot switch to indeterminate mode while the progress indicator is visible."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    .line 5
-    :cond_2
-    :goto_0
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
-    .line 6
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->hideNow()Z
 
-    .line 7
-    :cond_3
+    .line 5
+    :cond_1
     invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
-    .line 8
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -1422,17 +1412,38 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_2
 
-    .line 9
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->visibleToUser()Z
 
     move-result v1
 
     invoke-virtual {p1, v1, v0, v0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->setVisible(ZZZ)Z
 
+    .line 8
+    :cond_2
+    instance-of v1, p1, Lcom/google/android/material/progressindicator/IndeterminateDrawable;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->visibleToUser()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 9
+    check-cast p1, Lcom/google/android/material/progressindicator/IndeterminateDrawable;
+
+    invoke-virtual {p1}, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->getAnimatorDelegate()Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/google/android/material/progressindicator/IndeterminateAnimatorDelegate;->startAnimator()V
+
     .line 10
-    :cond_4
+    :cond_3
     iput-boolean v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->isIndeterminateModeChangeRequested:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1685,13 +1696,13 @@
     .line 10
     :cond_1
     :goto_0
-    iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Li3/b$a;
+    iget-object p1, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->switchIndeterminateModeCallback:Lq4/b$a;
 
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getIndeterminateDrawable()Lcom/google/android/material/progressindicator/IndeterminateDrawable;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Li3/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, p2}, Lq4/b$a;->onAnimationEnd(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 

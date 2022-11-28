@@ -6,6 +6,14 @@
 .implements Landroid/content/DialogInterface$OnClickListener;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/preference/k$a;
+    }
+.end annotation
+
+
 # static fields
 .field public static final i:Ljava/lang/String; = "key"
 
@@ -55,7 +63,7 @@
 
 
 # virtual methods
-.method public h()Landroidx/preference/DialogPreference;
+.method public i()Landroidx/preference/DialogPreference;
     .locals 2
 
     .line 1
@@ -64,7 +72,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -97,7 +105,7 @@
     return-object v0
 .end method
 
-.method public i()Z
+.method public j()Z
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -110,8 +118,12 @@
     return v0
 .end method
 
-.method public j(Landroid/view/View;)V
+.method public k(Landroid/view/View;)V
     .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const v0, 0x102000b
 
@@ -164,59 +176,88 @@
     return-void
 .end method
 
-.method public k(Landroid/content/Context;)Landroid/view/View;
+.method public l(Landroid/content/Context;)Landroid/view/View;
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget v0, p0, Landroidx/preference/k;->f:I
+    iget p1, p0, Landroidx/preference/k;->f:I
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
-    return-object v1
+    return-object v0
 
     .line 2
     :cond_0
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getLayoutInflater()Landroid/view/LayoutInflater;
 
-    move-result-object p1
+    move-result-object v1
 
-    .line 3
-    invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v1, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public abstract l(Z)V
+.method public abstract m(Z)V
 .end method
 
-.method public m(Landroidx/appcompat/app/c$a;)V
+.method public n(Landroidx/appcompat/app/c$a;)V
     .locals 0
+    .param p1    # Landroidx/appcompat/app/c$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     return-void
 .end method
 
-.method public final n(Landroid/app/Dialog;)V
-    .locals 1
+.method public final o(Landroid/app/Dialog;)V
+    .locals 2
+    .param p1    # Landroid/app/Dialog;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    const/4 v0, 0x5
-
     .line 2
-    invoke-virtual {p1, v0}, Landroid/view/Window;->setSoftInputMode(I)V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
+    invoke-static {p1}, Landroidx/preference/k$a;->a(Landroid/view/Window;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Landroidx/preference/k;->p()V
+
+    :goto_0
     return-void
 .end method
 
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
+    .param p1    # Landroid/content/DialogInterface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iput p2, p0, Landroidx/preference/k;->h:I
@@ -226,6 +267,10 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/d;->onCreate(Landroid/os/Bundle;)V
@@ -244,7 +289,7 @@
     check-cast v0, Landroidx/preference/DialogPreference$a;
 
     .line 5
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -469,92 +514,99 @@
 .end method
 
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
-    .locals 2
+    .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    const/4 p1, -0x2
+
     .line 1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p1
-
-    const/4 v0, -0x2
+    iput p1, p0, Landroidx/preference/k;->h:I
 
     .line 2
-    iput v0, p0, Landroidx/preference/k;->h:I
+    new-instance p1, Landroidx/appcompat/app/c$a;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Landroidx/appcompat/app/c$a;-><init>(Landroid/content/Context;)V
+
+    iget-object v0, p0, Landroidx/preference/k;->b:Ljava/lang/CharSequence;
 
     .line 3
-    new-instance v0, Landroidx/appcompat/app/c$a;
-
-    invoke-direct {v0, p1}, Landroidx/appcompat/app/c$a;-><init>(Landroid/content/Context;)V
-
-    iget-object v1, p0, Landroidx/preference/k;->b:Ljava/lang/CharSequence;
-
-    .line 4
-    invoke-virtual {v0, v1}, Landroidx/appcompat/app/c$a;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/c$a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroidx/preference/k;->g:Landroid/graphics/drawable/BitmapDrawable;
-
-    .line 5
-    invoke-virtual {v0, v1}, Landroidx/appcompat/app/c$a;->setIcon(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/app/c$a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroidx/preference/k;->c:Ljava/lang/CharSequence;
-
-    .line 6
-    invoke-virtual {v0, v1, p0}, Landroidx/appcompat/app/c$a;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/c$a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroidx/preference/k;->d:Ljava/lang/CharSequence;
-
-    .line 7
-    invoke-virtual {v0, v1, p0}, Landroidx/appcompat/app/c$a;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/c$a;
-
-    move-result-object v0
-
-    .line 8
-    invoke-virtual {p0, p1}, Landroidx/preference/k;->k(Landroid/content/Context;)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/c$a;->setTitle(Ljava/lang/CharSequence;)Landroidx/appcompat/app/c$a;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Landroidx/preference/k;->g:Landroid/graphics/drawable/BitmapDrawable;
+
+    .line 4
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/c$a;->setIcon(Landroid/graphics/drawable/Drawable;)Landroidx/appcompat/app/c$a;
+
+    move-result-object p1
+
+    iget-object v0, p0, Landroidx/preference/k;->c:Ljava/lang/CharSequence;
+
+    .line 5
+    invoke-virtual {p1, v0, p0}, Landroidx/appcompat/app/c$a;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/c$a;
+
+    move-result-object p1
+
+    iget-object v0, p0, Landroidx/preference/k;->d:Ljava/lang/CharSequence;
+
+    .line 6
+    invoke-virtual {p1, v0, p0}, Landroidx/appcompat/app/c$a;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/c$a;
+
+    move-result-object p1
+
+    .line 7
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroidx/preference/k;->l(Landroid/content/Context;)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 8
+    invoke-virtual {p0, v0}, Landroidx/preference/k;->k(Landroid/view/View;)V
 
     .line 9
-    invoke-virtual {p0, p1}, Landroidx/preference/k;->j(Landroid/view/View;)V
-
-    .line 10
-    invoke-virtual {v0, p1}, Landroidx/appcompat/app/c$a;->setView(Landroid/view/View;)Landroidx/appcompat/app/c$a;
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/c$a;->setView(Landroid/view/View;)Landroidx/appcompat/app/c$a;
 
     goto :goto_0
 
-    .line 11
+    .line 10
     :cond_0
-    iget-object p1, p0, Landroidx/preference/k;->e:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/k;->e:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/app/c$a;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/c$a;
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/c$a;->setMessage(Ljava/lang/CharSequence;)Landroidx/appcompat/app/c$a;
+
+    .line 11
+    :goto_0
+    invoke-virtual {p0, p1}, Landroidx/preference/k;->n(Landroidx/appcompat/app/c$a;)V
 
     .line 12
-    :goto_0
-    invoke-virtual {p0, v0}, Landroidx/preference/k;->m(Landroidx/appcompat/app/c$a;)V
-
-    .line 13
-    invoke-virtual {v0}, Landroidx/appcompat/app/c$a;->create()Landroidx/appcompat/app/c;
+    invoke-virtual {p1}, Landroidx/appcompat/app/c$a;->create()Landroidx/appcompat/app/c;
 
     move-result-object p1
 
-    .line 14
-    invoke-virtual {p0}, Landroidx/preference/k;->i()Z
+    .line 13
+    invoke-virtual {p0}, Landroidx/preference/k;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 15
-    invoke-virtual {p0, p1}, Landroidx/preference/k;->n(Landroid/app/Dialog;)V
+    .line 14
+    invoke-virtual {p0, p1}, Landroidx/preference/k;->o(Landroid/app/Dialog;)V
 
     :cond_1
     return-object p1
@@ -585,7 +637,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p0, p1}, Landroidx/preference/k;->l(Z)V
+    invoke-virtual {p0, p1}, Landroidx/preference/k;->m(Z)V
 
     return-void
 .end method
@@ -650,5 +702,16 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public p()V
+    .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
     return-void
 .end method

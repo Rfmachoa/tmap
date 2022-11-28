@@ -3,12 +3,12 @@
 .source "AppBarConfiguration.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/ui/AppBarConfigurationKt;->b(Landroidx/navigation/a0;Ly1/c;Lej/a;)Landroidx/navigation/ui/b;
+    value = Landroidx/navigation/ui/AppBarConfigurationKt;->e(Landroidx/navigation/NavGraph;Lp2/c;Lgl/a;ILjava/lang/Object;)Lu3/d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,36 +19,33 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAppBarConfiguration.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppBarConfiguration.kt\nandroidx/navigation/ui/AppBarConfigurationKt$AppBarConfiguration$1\n*L\n1#1,99:1\n*E\n"
+    value = "SMAP\nAppBarConfiguration.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppBarConfiguration.kt\nandroidx/navigation/ui/AppBarConfigurationKt$AppBarConfiguration$1\n*L\n1#1,279:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0010\u000b\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\n\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
         "<anonymous>",
         "",
-        "invoke"
+        "invoke",
+        "()Ljava/lang/Boolean;"
     }
     k = 0x3
     mv = {
         0x1,
-        0x1,
-        0x10
+        0x6,
+        0x0
     }
+    xi = 0xb0
 .end annotation
 
 
@@ -81,24 +78,24 @@
 
 
 # virtual methods
-.method public bridge synthetic invoke()Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Boolean;
     .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
-    invoke-virtual {p0}, Landroidx/navigation/ui/AppBarConfigurationKt$AppBarConfiguration$1;->invoke()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
+    .line 1
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object v0
 .end method
 
-.method public final invoke()Z
+.method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    .line 2
+    invoke-virtual {p0}, Landroidx/navigation/ui/AppBarConfigurationKt$AppBarConfiguration$1;->invoke()Ljava/lang/Boolean;
 
-    return v0
+    move-result-object v0
+
+    return-object v0
 .end method

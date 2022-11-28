@@ -1,21 +1,14 @@
 .class public final Lef/a;
 .super Ljava/lang/Object;
-.source "AUTH.java"
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
+.source "BuildConfig.java"
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "WWW-Authenticate"
+.field public static final a:Z = false
 
-.field public static final b:Ljava/lang/String; = "Authorization"
+.field public static final b:Ljava/lang/String; = "com.skt.tmap.tmapuidgenerator"
 
-.field public static final c:Ljava/lang/String; = "Proxy-Authenticate"
-
-.field public static final d:Ljava/lang/String; = "Proxy-Authorization"
+.field public static final c:Ljava/lang/String; = "release"
 
 
 # direct methods

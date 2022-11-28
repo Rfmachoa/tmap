@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/analytics/FirebaseAnalytics$Event;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 
 # annotations
@@ -55,24 +55,8 @@
     .end annotation
 .end field
 
-.field public static final CHECKOUT_PROGRESS:Ljava/lang/String; = "checkout_progress"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 .field public static final EARN_VIRTUAL_CURRENCY:Ljava/lang/String; = "earn_virtual_currency"
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final ECOMMERCE_PURCHASE:Ljava/lang/String; = "ecommerce_purchase"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
@@ -111,24 +95,8 @@
     .end annotation
 .end field
 
-.field public static final PRESENT_OFFER:Ljava/lang/String; = "present_offer"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 .field public static final PURCHASE:Ljava/lang/String; = "purchase"
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final PURCHASE_REFUND:Ljava/lang/String; = "purchase_refund"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
@@ -164,14 +132,6 @@
 
 .field public static final SELECT_PROMOTION:Ljava/lang/String; = "select_promotion"
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public static final SET_CHECKOUT_OPTION:Ljava/lang/String; = "set_checkout_option"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 

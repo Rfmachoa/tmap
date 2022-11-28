@@ -1,38 +1,24 @@
-.class public interface abstract Lya/e;
+.class public Lya/e;
 .super Ljava/lang/Object;
-.source "NogTaskFactory.java"
+.source "QuerySmsProject.java"
 
 
-# virtual methods
-.method public abstract a(Lxa/b;I)Lya/d;
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lya/e$c;,
+        Lya/e$b;,
+        Lya/e$a;
+    }
+.end annotation
 
-.method public abstract b(Lxa/b;Ljava/util/List;)Lya/b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lxa/b;",
-            "Ljava/util/List<",
-            "Lxa/e;",
-            ">;)",
-            "Lya/b;"
-        }
-    .end annotation
-.end method
 
-.method public abstract c(Lxa/b;Ljava/lang/String;)Lya/c;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract d(Ljava/util/List;Ljava/lang/String;I)Lya/f;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lxa/e;",
-            ">;",
-            "Ljava/lang/String;",
-            "I)",
-            "Lya/f;"
-        }
-    .end annotation
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

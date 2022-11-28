@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/ActionMenuPresenter$d$a;
-.super Landroidx/appcompat/widget/s;
+.super Landroidx/appcompat/widget/x;
 .source "ActionMenuPresenter.java"
 
 
@@ -29,14 +29,14 @@
 
     iput-object p3, p0, Landroidx/appcompat/widget/ActionMenuPresenter$d$a;->j:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    invoke-direct {p0, p2}, Landroidx/appcompat/widget/s;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Lj/g;
+.method public b()Ll/g;
     .locals 1
 
     .line 1
@@ -44,7 +44,7 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$d;->a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->d1:Landroidx/appcompat/widget/ActionMenuPresenter$e;
+    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->f1:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
     if-nez v0, :cond_0
 
@@ -54,7 +54,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {v0}, Landroidx/appcompat/view/menu/h;->e()Lj/e;
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/h;->e()Ll/e;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter$d;->a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->f1:Landroidx/appcompat/widget/ActionMenuPresenter$c;
+    iget-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->h1:Landroidx/appcompat/widget/ActionMenuPresenter$c;
 
     if-eqz v1, :cond_0
 

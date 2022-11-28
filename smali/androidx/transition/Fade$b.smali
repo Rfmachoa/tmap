@@ -48,7 +48,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v0}, Lh3/x;->h(Landroid/view/View;F)V
+    invoke-static {p1, v0}, Lp4/x;->h(Landroid/view/View;F)V
 
     .line 2
     iget-boolean p1, p0, Landroidx/transition/Fade$b;->b:Z

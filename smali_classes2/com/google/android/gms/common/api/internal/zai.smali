@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/api/internal/zai;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
@@ -78,14 +78,6 @@
 .end method
 
 .method public abstract zaf(Lcom/google/android/gms/common/api/internal/zabq;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)V"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/DeadObjectException;

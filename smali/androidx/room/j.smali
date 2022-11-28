@@ -1,53 +1,50 @@
-.class public Landroidx/room/j;
+.class public final synthetic Landroidx/room/j;
 .super Ljava/lang/Object;
-.source "RoomMasterTable.java"
+.source "R8$$SyntheticClass"
 
-
-# annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
+# interfaces
+.implements Lp/a;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "room_master_table"
-
-.field public static final b:Ljava/lang/String; = "room_master_table"
-
-.field public static final c:Ljava/lang/String; = "id"
-
-.field public static final d:Ljava/lang/String; = "identity_hash"
-
-.field public static final e:Ljava/lang/String; = "42"
-
-.field public static final f:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)"
-
-.field public static final g:Ljava/lang/String; = "SELECT identity_hash FROM room_master_table WHERE id = 42 LIMIT 1"
+.field public static final synthetic a:Landroidx/room/j;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/room/j;
+
+    invoke-direct {v0}, Landroidx/room/j;-><init>()V
+
+    sput-object v0, Landroidx/room/j;->a:Landroidx/room/j;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
 
-    const-string v0, "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \'"
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v1, "\')"
+    check-cast p1, Lj4/d;
 
-    .line 1
-    invoke-static {v0, p0, v1}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1}, Lj4/d;->K1()Z
 
-    move-result-object p0
+    move-result p1
 
-    return-object p0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

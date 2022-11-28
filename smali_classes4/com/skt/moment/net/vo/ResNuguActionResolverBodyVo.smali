@@ -34,6 +34,14 @@
 
 .method public setResolveType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resolveType"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResNuguActionResolverBodyVo;->resolveType:Ljava/lang/String;

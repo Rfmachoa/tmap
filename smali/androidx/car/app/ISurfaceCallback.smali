@@ -9,13 +9,26 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/car/app/ISurfaceCallback$a;,
         Landroidx/car/app/ISurfaceCallback$Stub;,
         Landroidx/car/app/ISurfaceCallback$Default;
     }
 .end annotation
 
 
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.ISurfaceCallback"
+
+
 # virtual methods
+.method public abstract onClick(FF)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract onFling(FF)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

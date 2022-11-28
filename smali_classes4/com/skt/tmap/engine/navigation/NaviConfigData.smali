@@ -5,11 +5,6 @@
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u001e\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u000e\n\u0000\u0008\u0086\u0008\u0018\u00002\u00020\u0001BA\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\tJ\t\u0010\u0018\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u0019\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u001a\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u001b\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u001c\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u001d\u001a\u00020\u0003H\u00c6\u0003JE\u0010\u001e\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0003H\u00c6\u0001J\u0013\u0010\u001f\u001a\u00020\u00032\u0008\u0010 \u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010!\u001a\u00020\"H\u00d6\u0001J\t\u0010#\u001a\u00020$H\u00d6\u0001R\u001a\u0010\u0006\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\n\u0010\u000b\"\u0004\u0008\u000c\u0010\rR\u001a\u0010\u0007\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000e\u0010\u000b\"\u0004\u0008\u000f\u0010\rR\u001a\u0010\u0005\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0010\u0010\u000b\"\u0004\u0008\u0011\u0010\rR\u001a\u0010\u0008\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0012\u0010\u000b\"\u0004\u0008\u0013\u0010\rR\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0014\u0010\u000b\"\u0004\u0008\u0015\u0010\rR\u001a\u0010\u0004\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0016\u0010\u000b\"\u0004\u0008\u0017\u0010\r\u00a8\u0006%"
     }
@@ -51,14 +46,15 @@
         "",
         "toString",
         "",
-        "navigation-sdk_release"
+        "TmapEngineCommonData_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -109,16 +105,22 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->realTimeAutoReroute:Z
 
+    .line 3
     iput-boolean p2, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->vmsInfoAvailable:Z
 
+    .line 4
     iput-boolean p3, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->nightMode:Z
 
+    .line 5
     iput-boolean p4, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->breakawayReroute:Z
 
+    .line 6
     iput-boolean p5, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->inViaPointReroute:Z
 
+    .line 7
     iput-boolean p6, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->periodicReRoute:Z
 
     return-void
@@ -210,7 +212,7 @@
 
     move p6, v4
 
-    .line 2
+    .line 8
     invoke-direct/range {p1 .. p7}, Lcom/skt/tmap/engine/navigation/NaviConfigData;-><init>(ZZZZZZ)V
 
     return-void
@@ -369,68 +371,85 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
     .param p1    # Ljava/lang/Object;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
 
-    if-eq p0, p1, :cond_1
+    const/4 v0, 0x1
 
-    instance-of v0, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_0
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;
 
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->realTimeAutoReroute:Z
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->realTimeAutoReroute:Z
 
-    iget-boolean v1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->realTimeAutoReroute:Z
+    iget-boolean v3, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->realTimeAutoReroute:Z
 
-    if-ne v0, v1, :cond_0
+    if-eq v1, v3, :cond_2
 
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->vmsInfoAvailable:Z
+    return v2
 
-    iget-boolean v1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->vmsInfoAvailable:Z
+    :cond_2
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->vmsInfoAvailable:Z
 
-    if-ne v0, v1, :cond_0
+    iget-boolean v3, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->vmsInfoAvailable:Z
 
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->nightMode:Z
+    if-eq v1, v3, :cond_3
 
-    iget-boolean v1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->nightMode:Z
+    return v2
 
-    if-ne v0, v1, :cond_0
+    :cond_3
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->nightMode:Z
 
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->breakawayReroute:Z
+    iget-boolean v3, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->nightMode:Z
 
-    iget-boolean v1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->breakawayReroute:Z
+    if-eq v1, v3, :cond_4
 
-    if-ne v0, v1, :cond_0
+    return v2
 
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->inViaPointReroute:Z
+    :cond_4
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->breakawayReroute:Z
 
-    iget-boolean v1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->inViaPointReroute:Z
+    iget-boolean v3, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->breakawayReroute:Z
 
-    if-ne v0, v1, :cond_0
+    if-eq v1, v3, :cond_5
 
-    iget-boolean v0, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->periodicReRoute:Z
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->inViaPointReroute:Z
+
+    iget-boolean v3, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->inViaPointReroute:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->periodicReRoute:Z
 
     iget-boolean p1, p1, Lcom/skt/tmap/engine/navigation/NaviConfigData;->periodicReRoute:Z
 
-    if-ne v0, p1, :cond_0
+    if-eq v1, p1, :cond_7
 
-    goto :goto_0
+    return v2
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    :cond_7
+    return v0
 .end method
 
 .method public final getBreakawayReroute()Z
@@ -667,9 +686,9 @@
 
     iget-boolean v1, p0, Lcom/skt/tmap/engine/navigation/NaviConfigData;->periodicReRoute:Z
 
-    const-string v2, ")"
+    const/16 v2, 0x29
 
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lk2/g;->a(Ljava/lang/StringBuilder;ZC)Ljava/lang/String;
 
     move-result-object v0
 

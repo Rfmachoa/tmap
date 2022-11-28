@@ -322,7 +322,7 @@
 
     const-string v3, ", name = "
 
-    invoke-static {v1, p1, v2, p2, v3}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -393,11 +393,11 @@
 
     iget-object v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c;->b:Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;
 
-    invoke-static {v0}, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;->F0(Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;)Lma/c;
+    invoke-static {v0}, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;->F0(Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage;)Ljc/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v0}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v5
 

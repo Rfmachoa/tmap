@@ -3,42 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor$SubscriptionMethod;
+.implements Lgk/o;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/appsync/AppSync;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/l2;->a:Lcom/amplifyframework/datastore/appsync/AppSync;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/l2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final subscribe(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
-    .locals 6
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/l2;->a:Lcom/amplifyframework/datastore/appsync/AppSync;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/l2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
 
-    move-object v1, p1
+    check-cast p1, Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;
 
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-interface/range {v0 .. v5}, Lcom/amplifyframework/datastore/appsync/AppSync;->onCreate(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->m(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/syncengine/SubscriptionEvent;)Lek/a;
 
     move-result-object p1
 

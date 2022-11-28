@@ -1,515 +1,268 @@
-.class public final Lr/b;
-.super Lw/o;
-.source "Camera2ImplConfig.java"
+.class public Lr/b;
+.super Landroid/widget/BaseAdapter;
+.source "BrowserActionsFallbackMenuAdapter.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/experimental/UseExperimental;
-    markerClass = Landroidx/camera/camera2/interop/ExperimentalCamera2Interop;
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lr/b$b;,
-        Lr/b$a;
+        Lr/b$c;
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
-# static fields
-.field public static final A:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
 
+# instance fields
+.field public final a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Landroid/hardware/camera2/CameraCaptureSession$StateCallback;",
+            "Ljava/util/List<",
+            "Lr/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public static final B:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final C:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Lr/d;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final D:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final x:Ljava/lang/String; = "camera2.captureRequest.option."
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-.end field
-
-.field public static final y:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final z:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Landroid/hardware/camera2/CameraDevice$StateCallback;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final b:Landroid/content/Context;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 1
-    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-string v1, "camera2.captureRequest.templateType"
-
-    .line 2
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lr/b;->y:Landroidx/camera/core/impl/Config$a;
-
-    .line 3
-    const-class v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
-
-    const-string v1, "camera2.cameraDevice.stateCallback"
-
-    .line 4
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lr/b;->z:Landroidx/camera/core/impl/Config$a;
-
-    .line 5
-    const-class v0, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    const-string v1, "camera2.cameraCaptureSession.stateCallback"
-
-    .line 6
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lr/b;->A:Landroidx/camera/core/impl/Config$a;
-
-    .line 7
-    const-class v0, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    const-string v1, "camera2.cameraCaptureSession.captureCallback"
-
-    .line 8
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lr/b;->B:Landroidx/camera/core/impl/Config$a;
-
-    .line 9
-    const-class v0, Lr/d;
-
-    const-string v1, "camera2.cameraEvent.callback"
-
-    .line 10
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lr/b;->C:Landroidx/camera/core/impl/Config$a;
-
-    .line 11
-    const-class v0, Ljava/lang/Object;
-
-    const-string v1, "camera2.captureRequest.tag"
-
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lr/b;->D:Landroidx/camera/core/impl/Config$a;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/camera/core/impl/Config;)V
+.method public constructor <init>(Ljava/util/List;Landroid/content/Context;)V
     .locals 0
-    .param p1    # Landroidx/camera/core/impl/Config;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "config"
-        }
-    .end annotation
-
-    .line 1
-    invoke-direct {p0, p1}, Lw/o;-><init>(Landroidx/camera/core/impl/Config;)V
-
-    return-void
-.end method
-
-.method public static d0(Landroid/hardware/camera2/CaptureRequest$Key;)Landroidx/camera/core/impl/Config$a;
-    .locals 2
-    .param p0    # Landroid/hardware/camera2/CaptureRequest$Key;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "key"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroid/hardware/camera2/CaptureRequest$Key<",
-            "*>;)",
-            "Landroidx/camera/core/impl/Config$a<",
-            "Ljava/lang/Object;",
-            ">;"
+            "Ljava/util/List<",
+            "Lr/a;",
+            ">;",
+            "Landroid/content/Context;",
+            ")V"
         }
     .end annotation
 
-    const-string v0, "camera2.captureRequest.option."
-
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    move-result-object v0
+    .line 2
+    iput-object p1, p0, Lr/b;->a:Ljava/util/List;
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
+    .line 3
+    iput-object p2, p0, Lr/b;->b:Landroid/content/Context;
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-class v1, Ljava/lang/Object;
-
-    invoke-static {v0, v1, p0}, Landroidx/camera/core/impl/Config$a;->b(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public e0(Lr/d;)Lr/d;
-    .locals 2
-    .param p1    # Lr/d;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
-
-    move-result-object v0
-
-    sget-object v1, Lr/b;->C:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr/d;
-
-    return-object p1
-.end method
-
-.method public f0()Lw/o;
+.method public getCount()I
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
+    iget-object v0, p0, Lr/b;->a:Ljava/util/List;
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-static {v0}, Lw/o$a;->g(Landroidx/camera/core/impl/Config;)Lw/o$a;
+    move-result v0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lw/o$a;->e()Lw/o;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public g0(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
+.method public getItem(I)Ljava/lang/Object;
+    .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
+    iget-object v0, p0, Lr/b;->a:Ljava/util/List;
 
-    move-result-object v0
-
-    sget-object v1, Lr/b;->D:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public h0(I)I
+.method public getItemId(I)J
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
+    iget-object p3, p0, Lr/b;->a:Ljava/util/List;
+
+    invoke-interface {p3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lr/a;
+
+    const/4 p3, 0x0
+
+    if-nez p2, :cond_1
+
+    .line 2
+    iget-object p2, p0, Lr/b;->b:Landroid/content/Context;
+
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p2
+
+    sget v0, Landroidx/browser/R$layout;->browser_actions_context_menu_row:I
+
+    invoke-virtual {p2, v0, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 3
+    sget v0, Landroidx/browser/R$id;->browser_actions_menu_item_icon:I
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    sget-object v1, Lr/b;->y:Landroidx/camera/core/impl/Config$a;
+    check-cast v0, Landroid/widget/ImageView;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 4
+    sget v1, Landroidx/browser/R$id;->browser_actions_menu_item_text:I
 
-    move-result-object p1
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    check-cast v1, Landroid/widget/TextView;
 
-    check-cast p1, Ljava/lang/Integer;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    if-eqz v1, :cond_0
+
+    .line 5
+    new-instance v2, Lr/b$c;
+
+    invoke-direct {v2, v0, v1}, Lr/b$c;-><init>(Landroid/widget/ImageView;Landroid/widget/TextView;)V
+
+    .line 6
+    invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Browser Actions fallback UI does not contain necessary Views."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 8
+    :cond_1
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lr/b$c;
+
+    .line 9
+    :goto_0
+    invoke-virtual {p1}, Lr/a;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 10
+    iget-object v1, v2, Lr/b$c;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 11
+    invoke-virtual {p1}, Lr/a;->b()I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 12
+    iget-object v0, p0, Lr/b;->b:Landroid/content/Context;
+
+    .line 13
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lr/a;->b()I
 
     move-result p1
 
-    return p1
-.end method
-
-.method public i0(Landroid/hardware/camera2/CameraDevice$StateCallback;)Landroid/hardware/camera2/CameraDevice$StateCallback;
-    .locals 2
-    .param p1    # Landroid/hardware/camera2/CameraDevice$StateCallback;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
-
-    move-result-object v0
-
-    sget-object v1, Lr/b;->z:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 14
+    invoke-static {v0, p1, p3}, Landroidx/core/content/res/a;->g(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    check-cast p1, Landroid/hardware/camera2/CameraDevice$StateCallback;
+    .line 15
+    iget-object p3, v2, Lr/b$c;->a:Landroid/widget/ImageView;
 
-    return-object p1
-.end method
+    invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-.method public j0(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-    .locals 2
-    .param p1    # Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    goto :goto_1
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
+    .line 16
+    :cond_2
+    invoke-virtual {p1}, Lr/a;->c()Landroid/net/Uri;
 
-    .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
+    move-result-object v1
 
-    move-result-object v0
+    if-eqz v1, :cond_3
 
-    sget-object v1, Lr/b;->B:Landroidx/camera/core/impl/Config$a;
+    .line 17
+    iget-object p3, p0, Lr/b;->b:Landroid/content/Context;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 18
+    invoke-virtual {p3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p3
+
+    invoke-virtual {p1}, Lr/a;->c()Landroid/net/Uri;
 
     move-result-object p1
 
-    check-cast p1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    return-object p1
-.end method
-
-.method public k0(Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-    .locals 2
-    .param p1    # Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lw/o;->a()Landroidx/camera/core/impl/Config;
-
-    move-result-object v0
-
-    sget-object v1, Lr/b;->A:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3, p1}, Lr/e;->l(Landroid/content/ContentResolver;Landroid/net/Uri;)Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p1
 
-    check-cast p1, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+    .line 19
+    new-instance p3, Lr/b$a;
 
-    return-object p1
+    invoke-direct {p3, p0, v0, v2, p1}, Lr/b$a;-><init>(Lr/b;Ljava/lang/String;Lr/b$c;Lcom/google/common/util/concurrent/ListenableFuture;)V
+
+    new-instance v0, Lr/b$b;
+
+    invoke-direct {v0, p0}, Lr/b$b;-><init>(Lr/b;)V
+
+    invoke-interface {p1, p3, v0}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    goto :goto_1
+
+    .line 20
+    :cond_3
+    iget-object p1, v2, Lr/b$c;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    .line 21
+    iget-object p1, v2, Lr/b$c;->a:Landroid/widget/ImageView;
+
+    const/4 p3, 0x4
+
+    invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    :goto_1
+    return-object p2
 .end method

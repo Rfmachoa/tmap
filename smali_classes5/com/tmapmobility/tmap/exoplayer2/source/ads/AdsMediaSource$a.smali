@@ -119,7 +119,7 @@
     invoke-direct {p3, p2, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;-><init>(Ljava/lang/Object;J)V
 
     .line 9
-    invoke-virtual {v0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/w;->f(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)V
+    invoke-virtual {v0, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/w;->c(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)V
 
     :cond_1
     return-object v0
@@ -220,7 +220,7 @@
     invoke-direct {v3, v0, v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;-><init>(Ljava/lang/Object;J)V
 
     .line 7
-    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/w;->f(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)V
+    invoke-virtual {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/source/w;->c(Lcom/tmapmobility/tmap/exoplayer2/source/d0$b;)V
 
     add-int/lit8 v1, v1, 0x1
 

@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/CameraControl$OperationCanceledException;
@@ -12,33 +16,7 @@
 
 
 # virtual methods
-.method public abstract a(I)Lcom/google/common/util/concurrent/ListenableFuture;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/camera/core/ExperimentalExposureCompensation;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "value"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lcom/google/common/util/concurrent/ListenableFuture<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract c(F)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract d(F)Lcom/google/common/util/concurrent/ListenableFuture;
     .param p1    # F
         .annotation build Landroidx/annotation/FloatRange;
             from = 0.0
@@ -46,15 +24,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "linearZoom"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -67,7 +36,7 @@
     .end annotation
 .end method
 
-.method public abstract d()Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract f()Lcom/google/common/util/concurrent/ListenableFuture;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -81,17 +50,8 @@
     .end annotation
 .end method
 
-.method public abstract e(F)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract g(F)Lcom/google/common/util/concurrent/ListenableFuture;
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "ratio"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -104,17 +64,8 @@
     .end annotation
 .end method
 
-.method public abstract h(Z)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract j(Z)Lcom/google/common/util/concurrent/ListenableFuture;
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "torch"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -127,21 +78,12 @@
     .end annotation
 .end method
 
-.method public abstract j(Landroidx/camera/core/FocusMeteringAction;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public abstract l(Landroidx/camera/core/FocusMeteringAction;)Lcom/google/common/util/concurrent/ListenableFuture;
     .param p1    # Landroidx/camera/core/FocusMeteringAction;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "action"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -150,7 +92,21 @@
             "Landroidx/camera/core/FocusMeteringAction;",
             ")",
             "Lcom/google/common/util/concurrent/ListenableFuture<",
-            "Landroidx/camera/core/h0;",
+            "Landroidx/camera/core/i0;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract n(I)Lcom/google/common/util/concurrent/ListenableFuture;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Lcom/google/common/util/concurrent/ListenableFuture<",
+            "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation

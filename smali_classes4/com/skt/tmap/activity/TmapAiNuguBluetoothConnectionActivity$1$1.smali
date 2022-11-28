@@ -84,7 +84,7 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->C5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->K5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1$1;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;

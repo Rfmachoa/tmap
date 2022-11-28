@@ -1,48 +1,56 @@
-.class public final synthetic Lcom/google/android/gms/common/zzd;
+.class final Lcom/google/android/gms/common/zzd;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
-
-# instance fields
-.field public final synthetic zza:Z
-
-.field public final synthetic zzb:Ljava/lang/String;
-
-.field public final synthetic zzc:Lcom/google/android/gms/common/zzi;
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLjava/lang/String;Lcom/google/android/gms/common/zzi;)V
-    .locals 0
+.method public static zza(I)I
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-boolean p1, p0, Lcom/google/android/gms/common/zzd;->zza:Z
+    new-array v1, v0, [I
 
-    iput-object p2, p0, Lcom/google/android/gms/common/zzd;->zzb:Ljava/lang/String;
+    .line 1
+    fill-array-data v1, :array_0
 
-    iput-object p3, p0, Lcom/google/android/gms/common/zzd;->zzc:Lcom/google/android/gms/common/zzi;
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    :goto_0
+    if-ge v2, v0, :cond_2
 
+    aget v3, v1, v2
 
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 3
+    add-int/lit8 v4, v3, -0x1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/zzd;->zza:Z
+    if-eqz v3, :cond_1
 
-    iget-object v1, p0, Lcom/google/android/gms/common/zzd;->zzb:Ljava/lang/String;
+    if-ne v4, p0, :cond_0
 
-    iget-object v2, p0, Lcom/google/android/gms/common/zzd;->zzc:Lcom/google/android/gms/common/zzi;
+    return v3
 
-    invoke-static {v0, v1, v2}, Lcom/google/android/gms/common/zzm;->zzc(ZLjava/lang/String;Lcom/google/android/gms/common/zzi;)Ljava/lang/String;
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
-    move-result-object v0
+    goto :goto_0
 
-    return-object v0
+    :cond_1
+    const/4 p0, 0x0
+
+    .line 2
+    throw p0
+
+    :cond_2
+    const/4 p0, 0x1
+
+    return p0
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x1
+        0x2
+        0x3
+    .end array-data
 .end method

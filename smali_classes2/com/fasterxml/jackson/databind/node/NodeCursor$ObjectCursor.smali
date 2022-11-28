@@ -69,33 +69,6 @@
 
 
 # virtual methods
-.method public currentHasChildren()Z
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->currentNode()Lcom/fasterxml/jackson/databind/JsonNode;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/fasterxml/jackson/databind/node/ContainerNode;
-
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/node/ContainerNode;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
 .method public currentNode()Lcom/fasterxml/jackson/databind/JsonNode;
     .locals 1
 
@@ -119,15 +92,6 @@
     return-object v0
 .end method
 
-.method public endToken()Lcom/fasterxml/jackson/core/JsonToken;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/fasterxml/jackson/core/JsonToken;->END_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;
-
-    return-object v0
-.end method
-
 .method public bridge synthetic getParent()Lcom/fasterxml/jackson/core/JsonStreamContext;
     .locals 1
 
@@ -140,10 +104,12 @@
 .end method
 
 .method public nextToken()Lcom/fasterxml/jackson/core/JsonToken;
-    .locals 2
+    .locals 3
 
     .line 1
     iget-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_needEntry:Z
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_2
 
@@ -154,25 +120,35 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     if-nez v0, :cond_0
 
     .line 3
-    iput-object v1, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor;->_currentName:Ljava/lang/String;
+    iput-object v2, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor;->_currentName:Ljava/lang/String;
 
     .line 4
-    iput-object v1, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_current:Ljava/util/Map$Entry;
-
-    return-object v1
-
-    :cond_0
-    const/4 v0, 0x0
+    iput-object v2, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_current:Ljava/util/Map$Entry;
 
     .line 5
-    iput-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_needEntry:Z
+    sget-object v0, Lcom/fasterxml/jackson/core/JsonToken;->END_OBJECT:Lcom/fasterxml/jackson/core/JsonToken;
+
+    return-object v0
 
     .line 6
+    :cond_0
+    iget v0, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_index:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/fasterxml/jackson/core/JsonStreamContext;->_index:I
+
+    const/4 v0, 0x0
+
+    .line 7
+    iput-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_needEntry:Z
+
+    .line 8
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_contents:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -187,31 +163,29 @@
 
     goto :goto_0
 
-    .line 7
+    .line 9
     :cond_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v1, v0
+    move-object v2, v0
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
     :goto_0
-    iput-object v1, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor;->_currentName:Ljava/lang/String;
+    iput-object v2, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor;->_currentName:Ljava/lang/String;
 
-    .line 8
+    .line 10
     sget-object v0, Lcom/fasterxml/jackson/core/JsonToken;->FIELD_NAME:Lcom/fasterxml/jackson/core/JsonToken;
 
     return-object v0
 
+    .line 11
     :cond_2
-    const/4 v0, 0x1
+    iput-boolean v1, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_needEntry:Z
 
-    .line 9
-    iput-boolean v0, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_needEntry:Z
-
-    .line 10
+    .line 12
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->_current:Ljava/util/Map$Entry;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -227,24 +201,32 @@
     return-object v0
 .end method
 
-.method public nextValue()Lcom/fasterxml/jackson/core/JsonToken;
+.method public startArray()Lcom/fasterxml/jackson/databind/node/NodeCursor;
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
+    new-instance v0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ArrayCursor;
 
-    move-result-object v0
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->currentNode()Lcom/fasterxml/jackson/databind/JsonNode;
 
-    .line 2
-    sget-object v1, Lcom/fasterxml/jackson/core/JsonToken;->FIELD_NAME:Lcom/fasterxml/jackson/core/JsonToken;
+    move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v0, v1, p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ArrayCursor;-><init>(Lcom/fasterxml/jackson/databind/JsonNode;Lcom/fasterxml/jackson/databind/node/NodeCursor;)V
 
-    .line 3
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->nextToken()Lcom/fasterxml/jackson/core/JsonToken;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public startObject()Lcom/fasterxml/jackson/databind/node/NodeCursor;
+    .locals 2
 
-    :cond_0
+    .line 1
+    new-instance v0, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;
+
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;->currentNode()Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0}, Lcom/fasterxml/jackson/databind/node/NodeCursor$ObjectCursor;-><init>(Lcom/fasterxml/jackson/databind/JsonNode;Lcom/fasterxml/jackson/databind/node/NodeCursor;)V
+
     return-object v0
 .end method

@@ -3,12 +3,12 @@
 .source "UpdateUserContextInfoInput.java"
 
 # interfaces
-.implements Lc4/f$b;
+.implements Lz5/f$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Ltype/a$a;->marshal(Lc4/f;)V
+    value = Ltype/a$a;->marshal(Lz5/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public write(Lc4/f$a;)V
+.method public write(Lz5/f$a;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -65,11 +65,11 @@
 
     iget-object v0, v0, Ltype/a$a;->a:Ltype/a;
 
-    invoke-static {v0}, Ltype/a;->e(Ltype/a;)Lc4/d;
+    invoke-static {v0}, Ltype/a;->e(Ltype/a;)Lz5/d;
 
     move-result-object v0
 
-    iget-object v0, v0, Lc4/d;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lz5/d;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/List;
 
@@ -93,7 +93,7 @@
     .line 2
     sget-object v2, Ltype/CustomType;->AWSJSON:Ltype/CustomType;
 
-    invoke-interface {p1, v2, v1}, Lc4/f$a;->a(Lc4/o;Ljava/lang/Object;)V
+    invoke-interface {p1, v2, v1}, Lz5/f$a;->a(Lz5/o;Ljava/lang/Object;)V
 
     goto :goto_0
 

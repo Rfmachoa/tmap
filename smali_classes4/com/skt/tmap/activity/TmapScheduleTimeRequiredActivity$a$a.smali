@@ -51,12 +51,12 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity$a;->a:Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity$a$a;->a:Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity$a;
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void
@@ -79,12 +79,12 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity$a;->a:Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity$a$a;->a:Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity$a;
@@ -93,7 +93,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void

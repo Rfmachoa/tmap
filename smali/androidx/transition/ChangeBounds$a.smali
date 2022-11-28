@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lh3/o;Lh3/o;)Landroid/animation/Animator;
+    value = Landroidx/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Lp4/o;Lp4/o;)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -54,20 +54,20 @@
     .line 1
     iget-object p1, p0, Landroidx/transition/ChangeBounds$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lh3/x;->b(Landroid/view/View;)Lh3/w;
+    invoke-static {p1}, Lp4/x;->b(Landroid/view/View;)Lp4/w;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/ChangeBounds$a;->b:Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-interface {p1, v0}, Lh3/w;->remove(Landroid/graphics/drawable/Drawable;)V
+    invoke-interface {p1, v0}, Lp4/w;->remove(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
     iget-object p1, p0, Landroidx/transition/ChangeBounds$a;->c:Landroid/view/View;
 
     iget v0, p0, Landroidx/transition/ChangeBounds$a;->d:F
 
-    invoke-static {p1, v0}, Lh3/x;->h(Landroid/view/View;F)V
+    invoke-static {p1, v0}, Lp4/x;->h(Landroid/view/View;F)V
 
     return-void
 .end method

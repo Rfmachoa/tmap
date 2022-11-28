@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroidx/camera/core/impl/ImageOutputConfig$a;
-.implements Lz/g$a;
-.implements Landroidx/camera/core/impl/s$a;
+.implements Ld0/h$a;
+.implements Landroidx/camera/core/impl/q$a;
 
 
 # annotations
@@ -24,12 +24,12 @@
         "Landroidx/camera/core/impl/ImageOutputConfig$a<",
         "Landroidx/camera/core/ImageAnalysis$b;",
         ">;",
-        "Lz/g$a<",
+        "Ld0/h$a<",
         "Landroidx/camera/core/ImageAnalysis$b;",
         ">;",
-        "Landroidx/camera/core/impl/s$a<",
+        "Landroidx/camera/core/impl/q$a<",
         "Landroidx/camera/core/ImageAnalysis;",
-        "Landroidx/camera/core/impl/j;",
+        "Landroidx/camera/core/impl/h;",
         "Landroidx/camera/core/ImageAnalysis$b;",
         ">;"
     }
@@ -37,7 +37,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/camera/core/impl/n;
+.field public final a:Landroidx/camera/core/impl/l;
 
 
 # direct methods
@@ -45,25 +45,17 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/n;->f0()Landroidx/camera/core/impl/n;
+    invoke-static {}, Landroidx/camera/core/impl/l;->k0()Landroidx/camera/core/impl/l;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Landroidx/camera/core/ImageAnalysis$b;-><init>(Landroidx/camera/core/impl/n;)V
+    invoke-direct {p0, v0}, Landroidx/camera/core/ImageAnalysis$b;-><init>(Landroidx/camera/core/impl/l;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/camera/core/impl/n;)V
+.method public constructor <init>(Landroidx/camera/core/impl/l;)V
     .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mutableConfig"
-        }
-    .end annotation
 
     .line 2
     const-class v0, Landroidx/camera/core/ImageAnalysis;
@@ -71,15 +63,15 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Landroidx/camera/core/ImageAnalysis$b;->a:Landroidx/camera/core/impl/n;
+    iput-object p1, p0, Landroidx/camera/core/ImageAnalysis$b;->a:Landroidx/camera/core/impl/l;
 
     .line 4
-    sget-object v1, Lz/f;->t:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Ld0/g;->A:Landroidx/camera/core/impl/Config$a;
 
     const/4 v2, 0x0
 
     .line 5
-    invoke-virtual {p1, v1, v2}, Landroidx/camera/core/impl/o;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v1, v2}, Landroidx/camera/core/impl/m;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -127,12 +119,12 @@
     .line 8
     :cond_1
     :goto_0
-    invoke-virtual {p0, v0}, Landroidx/camera/core/ImageAnalysis$b;->M(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, v0}, Landroidx/camera/core/ImageAnalysis$b;->N(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$b;
 
     return-void
 .end method
 
-.method public static u(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/ImageAnalysis$b;
+.method public static t(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 1
     .param p0    # Landroidx/camera/core/impl/Config;
         .annotation build Landroidx/annotation/NonNull;
@@ -147,30 +139,21 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "configuration"
-        }
-    .end annotation
-
     .line 1
     new-instance v0, Landroidx/camera/core/ImageAnalysis$b;
 
-    invoke-static {p0}, Landroidx/camera/core/impl/n;->g0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/n;
+    invoke-static {p0}, Landroidx/camera/core/impl/l;->l0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/l;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Landroidx/camera/core/ImageAnalysis$b;-><init>(Landroidx/camera/core/impl/n;)V
+    invoke-direct {v0, p0}, Landroidx/camera/core/ImageAnalysis$b;-><init>(Landroidx/camera/core/impl/l;)V
 
     return-object v0
 .end method
 
-.method public static v(Landroidx/camera/core/impl/j;)Landroidx/camera/core/ImageAnalysis$b;
+.method public static u(Landroidx/camera/core/impl/h;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 1
-    .param p0    # Landroidx/camera/core/impl/j;
+    .param p0    # Landroidx/camera/core/impl/h;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -183,68 +166,23 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "configuration"
-        }
-    .end annotation
-
     .line 1
     new-instance v0, Landroidx/camera/core/ImageAnalysis$b;
 
-    invoke-static {p0}, Landroidx/camera/core/impl/n;->g0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/n;
+    invoke-static {p0}, Landroidx/camera/core/impl/l;->l0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/l;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Landroidx/camera/core/ImageAnalysis$b;-><init>(Landroidx/camera/core/impl/n;)V
+    invoke-direct {v0, p0}, Landroidx/camera/core/ImageAnalysis$b;-><init>(Landroidx/camera/core/impl/l;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public A(Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/ImageAnalysis$b;
+.method public A(Landroidx/camera/core/impl/e;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
-    .param p1    # Landroidx/camera/core/CameraSelector;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraSelector"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/camera/core/impl/s;->p:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
-
-    return-object p0
-.end method
-
-.method public B(Landroidx/camera/core/impl/g$b;)Landroidx/camera/core/ImageAnalysis$b;
-    .locals 2
-    .param p1    # Landroidx/camera/core/impl/g$b;
+    .param p1    # Landroidx/camera/core/impl/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -257,64 +195,19 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "optionUnpacker"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/s;->n:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/q;->s:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public C(Landroidx/camera/core/impl/g;)Landroidx/camera/core/ImageAnalysis$b;
-    .locals 2
-    .param p1    # Landroidx/camera/core/impl/g;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "captureConfig"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/camera/core/impl/s;->l:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
-
-    return-object p0
-.end method
-
-.method public D(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+.method public B(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Landroid/util/Size;
         .annotation build Landroidx/annotation/NonNull;
@@ -329,28 +222,19 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->h:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->o:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public E(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/ImageAnalysis$b;
+.method public C(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Landroidx/camera/core/impl/SessionConfig;
         .annotation build Landroidx/annotation/NonNull;
@@ -365,60 +249,42 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "sessionConfig"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/s;->k:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/q;->r:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public F(I)Landroidx/camera/core/ImageAnalysis$b;
+.method public D(I)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "depth"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/j;->y:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/h;->F:Landroidx/camera/core/impl/Config$a;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public G(Landroidx/camera/core/r1;)Landroidx/camera/core/ImageAnalysis$b;
+.method public E(Landroidx/camera/core/o1;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
-    .param p1    # Landroidx/camera/core/r1;
+    .param p1    # Landroidx/camera/core/o1;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -431,28 +297,19 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "imageReaderProxyProvider"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/j;->z:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/h;->G:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public H(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+.method public F(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Landroid/util/Size;
         .annotation build Landroidx/annotation/NonNull;
@@ -467,28 +324,92 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->i:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->p:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public I(Landroidx/camera/core/impl/SessionConfig$d;)Landroidx/camera/core/ImageAnalysis$b;
+.method public G(Z)Landroidx/camera/core/ImageAnalysis$b;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/camera/core/impl/h;->I:Landroidx/camera/core/impl/Config$a;
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    .line 3
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public H(I)Landroidx/camera/core/ImageAnalysis$b;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/camera/core/impl/h;->H:Landroidx/camera/core/impl/Config$a;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public I(Z)Landroidx/camera/core/ImageAnalysis$b;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/camera/core/impl/h;->J:Landroidx/camera/core/impl/Config$a;
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    .line 3
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public J(Landroidx/camera/core/impl/SessionConfig$d;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Landroidx/camera/core/impl/SessionConfig$d;
         .annotation build Landroidx/annotation/NonNull;
@@ -503,28 +424,19 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "optionUnpacker"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/s;->m:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/q;->t:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public J(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$b;
+.method public K(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -536,15 +448,6 @@
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolutions"
         }
     .end annotation
 
@@ -562,18 +465,18 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->j:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->q:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public K(I)Landroidx/camera/core/ImageAnalysis$b;
+.method public L(I)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -584,62 +487,44 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "priority"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/s;->o:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/q;->v:Landroidx/camera/core/impl/Config$a;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public L(I)Landroidx/camera/core/ImageAnalysis$b;
+.method public M(I)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "aspectRatio"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->e:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->k:Landroidx/camera/core/impl/Config$a;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public M(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$b;
+.method public N(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 3
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -654,15 +539,6 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "targetClass"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -674,24 +550,24 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Lz/f;->t:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Ld0/g;->A:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     .line 2
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Lz/f;->s:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Ld0/g;->z:Landroidx/camera/core/impl/Config$a;
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v1, v2}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v2}, Landroidx/camera/core/impl/Config;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -723,13 +599,13 @@
     move-result-object p1
 
     .line 4
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->N(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->O(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$b;
 
     :cond_0
     return-object p0
 .end method
 
-.method public N(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$b;
+.method public O(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -738,28 +614,19 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "targetName"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Lz/f;->s:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Ld0/g;->z:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public O(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+.method public P(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Landroid/util/Size;
         .annotation build Landroidx/annotation/NonNull;
@@ -768,59 +635,41 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->g:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->n:Landroidx/camera/core/impl/Config$a;
 
     .line 2
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public P(I)Landroidx/camera/core/ImageAnalysis$b;
+.method public Q(I)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rotation"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->f:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->l:Landroidx/camera/core/impl/Config$a;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public Q(Landroidx/camera/core/UseCase$b;)Landroidx/camera/core/ImageAnalysis$b;
+.method public R(Landroidx/camera/core/UseCase$b;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Landroidx/camera/core/UseCase$b;
         .annotation build Landroidx/annotation/NonNull;
@@ -835,23 +684,14 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "useCaseEventCallback"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Lz/h;->v:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Ld0/i;->C:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
@@ -871,17 +711,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "cameraSelector"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->A(Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->y(Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -903,17 +734,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "useCaseEventCallback"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->Q(Landroidx/camera/core/UseCase$b;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->R(Landroidx/camera/core/UseCase$b;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -926,14 +748,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->t()Landroidx/camera/core/ImageAnalysis;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->s()Landroidx/camera/core/ImageAnalysis;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public c()Landroidx/camera/core/impl/m;
+.method public c()Landroidx/camera/core/impl/k;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -945,14 +767,14 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/ImageAnalysis$b;->a:Landroidx/camera/core/impl/n;
+    iget-object v0, p0, Landroidx/camera/core/ImageAnalysis$b;->a:Landroidx/camera/core/impl/l;
 
     return-object v0
 .end method
 
-.method public bridge synthetic d(Landroidx/camera/core/impl/g$b;)Ljava/lang/Object;
+.method public bridge synthetic d(Landroidx/camera/core/impl/e$b;)Ljava/lang/Object;
     .locals 0
-    .param p1    # Landroidx/camera/core/impl/g$b;
+    .param p1    # Landroidx/camera/core/impl/e$b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -965,17 +787,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "optionUnpacker"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->B(Landroidx/camera/core/impl/g$b;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->z(Landroidx/camera/core/impl/e$b;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -987,17 +800,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "rotation"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->P(I)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->Q(I)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1013,17 +817,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "executor"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->y(Ljava/util/concurrent/Executor;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->w(Ljava/util/concurrent/Executor;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1039,17 +834,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "targetName"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->N(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->O(Ljava/lang/String;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1071,17 +857,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->D(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->B(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1103,17 +880,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "sessionConfig"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->E(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->C(Landroidx/camera/core/impl/SessionConfig;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1135,17 +903,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->H(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->F(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1167,17 +926,8 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "targetClass"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->M(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->N(Ljava/lang/Class;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1193,17 +943,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "resolution"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->O(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->P(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
@@ -1215,24 +956,15 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "aspectRatio"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->L(I)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->M(I)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic n()Landroidx/camera/core/impl/s;
+.method public bridge synthetic n()Landroidx/camera/core/impl/q;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1244,46 +976,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->w()Landroidx/camera/core/impl/j;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->v()Landroidx/camera/core/impl/h;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic o(Lr1/c;)Ljava/lang/Object;
-    .locals 0
-    .param p1    # Lr1/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "attachedUseCasesUpdateListener"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->x(Lr1/c;)Landroidx/camera/core/ImageAnalysis$b;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic p(Landroidx/camera/core/impl/SessionConfig$d;)Ljava/lang/Object;
+.method public bridge synthetic o(Landroidx/camera/core/impl/SessionConfig$d;)Ljava/lang/Object;
     .locals 0
     .param p1    # Landroidx/camera/core/impl/SessionConfig$d;
         .annotation build Landroidx/annotation/NonNull;
@@ -1298,24 +998,15 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "optionUnpacker"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->I(Landroidx/camera/core/impl/SessionConfig$d;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->J(Landroidx/camera/core/impl/SessionConfig$d;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic q(Ljava/util/List;)Ljava/lang/Object;
+.method public bridge synthetic p(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
     .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/NonNull;
@@ -1330,26 +1021,17 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "resolutions"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->J(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->K(Ljava/util/List;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic r(Landroidx/camera/core/impl/g;)Ljava/lang/Object;
+.method public bridge synthetic q(Landroidx/camera/core/impl/e;)Ljava/lang/Object;
     .locals 0
-    .param p1    # Landroidx/camera/core/impl/g;
+    .param p1    # Landroidx/camera/core/impl/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1362,24 +1044,15 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "captureConfig"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->C(Landroidx/camera/core/impl/g;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->A(Landroidx/camera/core/impl/e;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic s(I)Ljava/lang/Object;
+.method public bridge synthetic r(I)Ljava/lang/Object;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1390,51 +1063,42 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "priority"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->K(I)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageAnalysis$b;->L(I)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public t()Landroidx/camera/core/ImageAnalysis;
+.method public s()Landroidx/camera/core/ImageAnalysis;
     .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->e:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->k:Landroidx/camera/core/impl/Config$a;
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v1, v2}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v2}, Landroidx/camera/core/impl/Config;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->g:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/ImageOutputConfig;->n:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, v2}, Landroidx/camera/core/impl/Config;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v2}, Landroidx/camera/core/impl/Config;->i(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1457,16 +1121,16 @@
     :goto_0
     new-instance v0, Landroidx/camera/core/ImageAnalysis;
 
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->w()Landroidx/camera/core/impl/j;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->v()Landroidx/camera/core/impl/h;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/camera/core/ImageAnalysis;-><init>(Landroidx/camera/core/impl/j;)V
+    invoke-direct {v0, v1}, Landroidx/camera/core/ImageAnalysis;-><init>(Landroidx/camera/core/impl/h;)V
 
     return-object v0
 .end method
 
-.method public w()Landroidx/camera/core/impl/j;
+.method public v()Landroidx/camera/core/impl/h;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1478,67 +1142,20 @@
     .end annotation
 
     .line 1
-    new-instance v0, Landroidx/camera/core/impl/j;
+    new-instance v0, Landroidx/camera/core/impl/h;
 
-    iget-object v1, p0, Landroidx/camera/core/ImageAnalysis$b;->a:Landroidx/camera/core/impl/n;
+    iget-object v1, p0, Landroidx/camera/core/ImageAnalysis$b;->a:Landroidx/camera/core/impl/l;
 
-    invoke-static {v1}, Landroidx/camera/core/impl/o;->d0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/o;
+    invoke-static {v1}, Landroidx/camera/core/impl/m;->i0(Landroidx/camera/core/impl/Config;)Landroidx/camera/core/impl/m;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/camera/core/impl/j;-><init>(Landroidx/camera/core/impl/o;)V
+    invoke-direct {v0, v1}, Landroidx/camera/core/impl/h;-><init>(Landroidx/camera/core/impl/m;)V
 
     return-object v0
 .end method
 
-.method public x(Lr1/c;)Landroidx/camera/core/ImageAnalysis$b;
-    .locals 2
-    .param p1    # Lr1/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "attachedUseCasesUpdateListener"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lr1/c<",
-            "Ljava/util/Collection<",
-            "Landroidx/camera/core/UseCase;",
-            ">;>;)",
-            "Landroidx/camera/core/ImageAnalysis$b;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/camera/core/impl/s;->q:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
-
-    return-object p0
-.end method
-
-.method public y(Ljava/util/concurrent/Executor;)Landroidx/camera/core/ImageAnalysis$b;
+.method public w(Ljava/util/concurrent/Executor;)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .param p1    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/NonNull;
@@ -1547,53 +1164,89 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "executor"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Lz/g;->u:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Ld0/h;->B:Landroidx/camera/core/impl/Config$a;
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method
 
-.method public z(I)Landroidx/camera/core/ImageAnalysis$b;
+.method public x(I)Landroidx/camera/core/ImageAnalysis$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "strategy"
-        }
-    .end annotation
-
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/m;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/camera/core/impl/j;->x:Landroidx/camera/core/impl/Config$a;
+    sget-object v1, Landroidx/camera/core/impl/h;->E:Landroidx/camera/core/impl/Config$a;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public y(Landroidx/camera/core/CameraSelector;)Landroidx/camera/core/ImageAnalysis$b;
+    .locals 2
+    .param p1    # Landroidx/camera/core/CameraSelector;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/camera/core/impl/q;->w:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public z(Landroidx/camera/core/impl/e$b;)Landroidx/camera/core/ImageAnalysis$b;
+    .locals 2
+    .param p1    # Landroidx/camera/core/impl/e$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$b;->c()Landroidx/camera/core/impl/k;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/camera/core/impl/q;->u:Landroidx/camera/core/impl/Config$a;
+
+    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/k;->v(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
 
     return-object p0
 .end method

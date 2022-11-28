@@ -272,7 +272,7 @@
     iget-object v3, p1, Landroidx/media/a;->b:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     .line 4
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -283,7 +283,7 @@
     iget-object v3, p1, Landroidx/media/a;->c:Landroid/os/Handler;
 
     .line 5
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -294,7 +294,7 @@
     iget-object p1, p1, Landroidx/media/a;->d:Landroidx/media/AudioAttributesCompat;
 
     .line 6
-    invoke-static {v1, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -378,7 +378,7 @@
     aput-object v1, v0, v2
 
     .line 4
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 

@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/internal/BaseGmsClient;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -9,11 +9,11 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;,
-        Lcom/google/android/gms/common/internal/BaseGmsClient$SignOutCallbacks;,
-        Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;,
+        Lcom/google/android/gms/common/internal/BaseGmsClient$BaseConnectionCallbacks;,
         Lcom/google/android/gms/common/internal/BaseGmsClient$BaseOnConnectionFailedListener;,
-        Lcom/google/android/gms/common/internal/BaseGmsClient$BaseConnectionCallbacks;
+        Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;,
+        Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;,
+        Lcom/google/android/gms/common/internal/BaseGmsClient$SignOutCallbacks;
     }
 .end annotation
 
@@ -151,35 +151,15 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
         value = "mLock"
     .end annotation
 .end field
 
 .field private final zzt:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/internal/zzc<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
 
 .field private zzu:Lcom/google/android/gms/common/internal/zze;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/internal/zze;"
-        }
     .end annotation
 
     .annotation build Ljavax/annotation/concurrent/GuardedBy;
@@ -821,11 +801,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITT;)V"
-        }
-    .end annotation
 
     const/4 v0, 0x4
 
@@ -914,44 +889,24 @@
 
     move-result-object p1
 
+    new-instance v2, Ljava/lang/StringBuilder;
+
     .line 4
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    const-string v5, "Calling connect() while still connected, missing disconnect() for "
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x46
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    add-int/2addr v2, v5
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Calling connect() while still connected, missing disconnect() for "
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, " on "
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1105,15 +1060,19 @@
 
     const v0, 0x1110e58
 
-    if-ge p2, v0, :cond_8
+    if-lt p2, v0, :cond_7
 
+    goto :goto_3
+
+    .line 24
+    :cond_7
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string p2, "Internal Error, the minimum apk version of this BaseGmsClient is too low to support dynamic lookup. Start service action: "
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zza:Lcom/google/android/gms/common/internal/zzu;
 
-    .line 24
+    .line 25
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/zzu;->zzc()Ljava/lang/String;
 
     move-result-object v0
@@ -1122,33 +1081,17 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
     invoke-virtual {p2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    goto :goto_3
-
-    .line 25
-    :cond_7
-    new-instance v0, Ljava/lang/String;
-
-    .line 26
-    invoke-direct {v0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    move-object p2, v0
-
-    :goto_3
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
+    .line 26
     :cond_8
+    :goto_3
     iget-object p2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzn:Lcom/google/android/gms/common/internal/GmsClientSupervisor;
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zza:Lcom/google/android/gms/common/internal/zzu;
@@ -1203,59 +1146,39 @@
 
     if-nez p1, :cond_a
 
-    const-string p1, "GmsClient"
+    iget-object p1, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zza:Lcom/google/android/gms/common/internal/zzu;
+
+    .line 35
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/zzu;->zzc()Ljava/lang/String;
+
+    move-result-object p1
 
     iget-object p2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zza:Lcom/google/android/gms/common/internal/zzu;
 
-    .line 35
-    invoke-virtual {p2}, Lcom/google/android/gms/common/internal/zzu;->zzc()Ljava/lang/String;
+    .line 36
+    invoke-virtual {p2}, Lcom/google/android/gms/common/internal/zzu;->zzb()Ljava/lang/String;
 
     move-result-object p2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zza:Lcom/google/android/gms/common/internal/zzu;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 36
-    invoke-virtual {v0}, Lcom/google/android/gms/common/internal/zzu;->zzb()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x22
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/2addr v2, v4
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "unable to connect to service: "
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p2, " on "
+    const-string p1, " on "
 
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string p1, "GmsClient"
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
@@ -1576,7 +1499,7 @@
 .end method
 
 .method public dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-    .locals 10
+    .locals 9
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -1823,29 +1746,19 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
-
-    move-result v8
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v8, v8, 0x15
-
-    invoke-direct {v9, v8}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v9, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v4, " "
 
-    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1925,29 +1838,19 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x15
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v0, " "
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1999,29 +1902,19 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x15
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string p3, " "
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
@@ -2265,7 +2158,7 @@
 .end method
 
 .method public getRemoteService(Lcom/google/android/gms/common/internal/IAccountAccessor;Ljava/util/Set;)V
-    .locals 4
+    .locals 21
     .param p1    # Lcom/google/android/gms/common/internal/IAccountAccessor;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -2290,131 +2183,175 @@
         }
     .end annotation
 
+    move-object/from16 v1, p0
+
+    move-object/from16 v0, p2
+
     .line 1
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getGetServiceRequestExtraArgs()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/google/android/gms/common/internal/GetServiceRequest;
-
-    iget v2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzy:I
-
-    iget-object v3, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzA:Ljava/lang/String;
-
-    .line 2
-    invoke-direct {v1, v2, v3}, Lcom/google/android/gms/common/internal/GetServiceRequest;-><init>(ILjava/lang/String;)V
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzl:Landroid/content/Context;
-
-    .line 3
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getGetServiceRequestExtraArgs()Landroid/os/Bundle;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzd:Ljava/lang/String;
+    new-instance v15, Lcom/google/android/gms/common/internal/GetServiceRequest;
 
-    iput-object v0, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzg:Landroid/os/Bundle;
+    iget v5, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzy:I
 
-    if-eqz p2, :cond_0
+    iget-object v14, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzA:Ljava/lang/String;
+
+    .line 2
+    sget v6, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
+
+    sget-object v9, Lcom/google/android/gms/common/internal/GetServiceRequest;->zza:[Lcom/google/android/gms/common/api/Scope;
+
+    new-instance v10, Landroid/os/Bundle;
+
+    invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
+
+    sget-object v13, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzb:[Lcom/google/android/gms/common/Feature;
+
+    const/4 v4, 0x6
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v11, 0x0
+
+    const/16 v16, 0x1
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    move-object v3, v15
+
+    move-object v12, v13
+
+    move-object/from16 v19, v14
+
+    move/from16 v14, v16
+
+    move-object/from16 v20, v15
+
+    move/from16 v15, v17
+
+    move/from16 v16, v18
+
+    move-object/from16 v17, v19
+
+    invoke-direct/range {v3 .. v17}, Lcom/google/android/gms/common/internal/GetServiceRequest;-><init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;[Lcom/google/android/gms/common/Feature;[Lcom/google/android/gms/common/Feature;ZIZLjava/lang/String;)V
+
+    iget-object v3, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzl:Landroid/content/Context;
+
+    .line 3
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v4, v20
+
+    iput-object v3, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzf:Ljava/lang/String;
+
+    iput-object v2, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzi:Landroid/os/Bundle;
+
+    if-eqz v0, :cond_0
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Lcom/google/android/gms/common/api/Scope;
 
     .line 4
-    invoke-interface {p2}, Ljava/util/Collection;->size()I
+    invoke-interface {v0, v2}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    new-array v0, v0, [Lcom/google/android/gms/common/api/Scope;
+    check-cast v0, [Lcom/google/android/gms/common/api/Scope;
 
-    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, [Lcom/google/android/gms/common/api/Scope;
-
-    iput-object p2, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzf:[Lcom/google/android/gms/common/api/Scope;
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzh:[Lcom/google/android/gms/common/api/Scope;
 
     .line 5
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->requiresSignIn()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->requiresSignIn()Z
 
-    move-result p2
+    move-result v0
 
-    if-eqz p2, :cond_2
+    if-eqz v0, :cond_2
 
     .line 6
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getAccount()Landroid/accounts/Account;
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getAccount()Landroid/accounts/Account;
 
-    move-result-object p2
+    move-result-object v0
 
-    if-nez p2, :cond_1
+    if-nez v0, :cond_1
 
-    new-instance p2, Landroid/accounts/Account;
+    new-instance v0, Landroid/accounts/Account;
 
-    const-string v0, "<<default account>>"
+    const-string v2, "<<default account>>"
 
-    const-string v2, "com.google"
+    const-string v3, "com.google"
 
     .line 7
-    invoke-direct {p2, v0, v2}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v3}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    iput-object p2, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzh:Landroid/accounts/Account;
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzj:Landroid/accounts/Account;
 
     if-eqz p1, :cond_3
 
     .line 8
-    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    invoke-interface/range {p1 .. p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zze:Landroid/os/IBinder;
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzg:Landroid/os/IBinder;
 
     goto :goto_0
 
     .line 9
     :cond_2
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->requiresAccount()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->requiresAccount()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_3
+    if-eqz v0, :cond_3
 
     .line 10
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getAccount()Landroid/accounts/Account;
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getAccount()Landroid/accounts/Account;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzh:Landroid/accounts/Account;
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzj:Landroid/accounts/Account;
 
     .line 11
     :cond_3
     :goto_0
-    sget-object p1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zze:[Lcom/google/android/gms/common/Feature;
+    sget-object v0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zze:[Lcom/google/android/gms/common/Feature;
 
-    iput-object p1, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzi:[Lcom/google/android/gms/common/Feature;
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzk:[Lcom/google/android/gms/common/Feature;
 
     .line 12
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getApiFeatures()[Lcom/google/android/gms/common/Feature;
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getApiFeatures()[Lcom/google/android/gms/common/Feature;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzj:[Lcom/google/android/gms/common/Feature;
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzl:[Lcom/google/android/gms/common/Feature;
 
     .line 13
-    invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->usesClientTelemetry()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->usesClientTelemetry()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_4
+    if-eqz v0, :cond_4
 
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    iput-boolean p1, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzm:Z
+    iput-boolean v0, v4, Lcom/google/android/gms/common/internal/GetServiceRequest;->zzo:Z
 
     :cond_4
     :try_start_0
-    iget-object p1, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzq:Ljava/lang/Object;
+    iget-object v2, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzq:Ljava/lang/Object;
 
-    monitor-enter p1
+    monitor-enter v2
     :try_end_0
     .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
@@ -2422,49 +2359,49 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object p2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzr:Lcom/google/android/gms/common/internal/IGmsServiceBroker;
+    iget-object v0, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzr:Lcom/google/android/gms/common/internal/IGmsServiceBroker;
 
-    if-eqz p2, :cond_5
+    if-eqz v0, :cond_5
 
-    new-instance v0, Lcom/google/android/gms/common/internal/zzd;
+    new-instance v3, Lcom/google/android/gms/common/internal/zzd;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzd:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v5, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzd:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 14
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    move-result v2
+    move-result v5
 
-    invoke-direct {v0, p0, v2}, Lcom/google/android/gms/common/internal/zzd;-><init>(Lcom/google/android/gms/common/internal/BaseGmsClient;I)V
+    invoke-direct {v3, v1, v5}, Lcom/google/android/gms/common/internal/zzd;-><init>(Lcom/google/android/gms/common/internal/BaseGmsClient;I)V
 
     .line 15
-    invoke-interface {p2, v0, v1}, Lcom/google/android/gms/common/internal/IGmsServiceBroker;->getService(Lcom/google/android/gms/common/internal/IGmsCallbacks;Lcom/google/android/gms/common/internal/GetServiceRequest;)V
+    invoke-interface {v0, v3, v4}, Lcom/google/android/gms/common/internal/IGmsServiceBroker;->getService(Lcom/google/android/gms/common/internal/IGmsCallbacks;Lcom/google/android/gms/common/internal/GetServiceRequest;)V
 
     goto :goto_1
 
     :cond_5
-    const-string p2, "GmsClient"
+    const-string v0, "GmsClient"
 
-    const-string v0, "mServiceBroker is null, client disconnected"
+    const-string v3, "mServiceBroker is null, client disconnected"
 
     .line 16
-    invoke-static {p2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 17
     :goto_1
-    monitor-exit p1
+    monitor-exit v2
 
     return-void
 
     :catchall_0
-    move-exception p2
+    move-exception v0
 
-    monitor-exit p1
+    monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    throw p2
+    throw v0
     :try_end_2
     .catch Landroid/os/DeadObjectException; {:try_start_2 .. :try_end_2} :catch_3
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_2
@@ -2472,57 +2409,57 @@
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
-    move-exception p1
+    move-exception v0
 
     goto :goto_2
 
     :catch_1
-    move-exception p1
+    move-exception v0
 
     :goto_2
-    const-string p2, "GmsClient"
+    const-string v2, "GmsClient"
 
-    const-string v0, "IGmsServiceBroker.getService failed"
+    const-string v3, "IGmsServiceBroker.getService failed"
 
     .line 18
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    const/16 p1, 0x8
+    const/16 v0, 0x8
 
-    iget-object p2, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzd:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v2, v1, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzd:Ljava/util/concurrent/atomic/AtomicInteger;
 
     .line 19
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    move-result p2
+    move-result v2
 
-    const/4 v0, 0x0
+    const/4 v3, 0x0
 
     .line 20
-    invoke-virtual {p0, p1, v0, v0, p2}, Lcom/google/android/gms/common/internal/BaseGmsClient;->onPostInitHandler(ILandroid/os/IBinder;Landroid/os/Bundle;I)V
+    invoke-virtual {v1, v0, v3, v3, v2}, Lcom/google/android/gms/common/internal/BaseGmsClient;->onPostInitHandler(ILandroid/os/IBinder;Landroid/os/Bundle;I)V
 
     return-void
 
     :catch_2
-    move-exception p1
+    move-exception v0
 
     .line 21
-    throw p1
+    throw v0
 
     :catch_3
-    move-exception p1
+    move-exception v0
 
-    const-string p2, "GmsClient"
+    const-string v2, "GmsClient"
 
-    const-string v0, "IGmsServiceBroker.getService failed"
+    const-string v3, "IGmsServiceBroker.getService failed"
 
     .line 22
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    const/4 p1, 0x3
+    const/4 v0, 0x3
 
     .line 23
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->triggerConnectionSuspended(I)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->triggerConnectionSuspended(I)V
 
     return-void
 .end method

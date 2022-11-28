@@ -67,13 +67,13 @@
 
     iget-object p2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$e;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->K5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
 
     move-result-object p2
 
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$e;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->D5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)F
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->L5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)F
 
     move-result v0
 
@@ -93,7 +93,7 @@
 
     iget-object p2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$e;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->K5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
 
     move-result-object p2
 

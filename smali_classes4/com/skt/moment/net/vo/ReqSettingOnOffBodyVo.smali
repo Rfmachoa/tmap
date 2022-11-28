@@ -30,6 +30,14 @@
 
 .method public setOnOff(Ljava/lang/Boolean;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "onOff"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqSettingOnOffBodyVo;->onOff:Ljava/lang/Boolean;

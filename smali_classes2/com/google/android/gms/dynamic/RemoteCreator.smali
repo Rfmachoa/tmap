@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/dynamic/RemoteCreator;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -27,12 +27,6 @@
 .field private final zza:Ljava/lang/String;
 
 .field private zzb:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

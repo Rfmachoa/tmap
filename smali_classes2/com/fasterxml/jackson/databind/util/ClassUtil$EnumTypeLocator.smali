@@ -110,7 +110,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->getDeclaredFields(Ljava/lang/Class;)[Ljava/lang/reflect/Field;
+    invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object p0
 
@@ -235,7 +235,7 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Can not figure out type for EnumMap (odd JDK platform?)"
+    const-string v0, "Cannot figure out type for EnumMap (odd JDK platform?)"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -274,7 +274,7 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Can not figure out type for EnumSet (odd JDK platform?)"
+    const-string v0, "Cannot figure out type for EnumSet (odd JDK platform?)"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

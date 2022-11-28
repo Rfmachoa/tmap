@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/impl/utils/futures/f;->m(ZLcom/google/common/util/concurrent/ListenableFuture;Ln/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
+    value = Landroidx/camera/core/impl/utils/futures/f;->m(ZLcom/google/common/util/concurrent/ListenableFuture;Lp/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,14 +24,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010
-        }
-        names = {
-            "val$input"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/f$d;->a:Lcom/google/common/util/concurrent/ListenableFuture;

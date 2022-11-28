@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/StandardExceptionParser;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/analytics/ExceptionParser;
@@ -13,25 +13,17 @@
 
 # instance fields
 .field private final zza:Ljava/util/TreeSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/TreeSet<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/Collection;)V
     .locals 1
     .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Ljava/util/Collection;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -44,11 +36,11 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/TreeSet;
 
-    .line 1
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/analytics/StandardExceptionParser;->zza:Ljava/util/TreeSet;
@@ -64,10 +56,10 @@
 .method public getBestStackTraceElement(Ljava/lang/Throwable;)Ljava/lang/StackTraceElement;
     .locals 7
     .param p1    # Ljava/lang/Throwable;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNullable;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
@@ -145,10 +137,10 @@
 .method public getCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
     .locals 1
     .param p1    # Ljava/lang/Throwable;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -177,10 +169,10 @@
         .end annotation
     .end param
     .param p2    # Ljava/lang/Throwable;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -206,7 +198,7 @@
 .method public getDescription(Ljava/lang/Throwable;Ljava/lang/StackTraceElement;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
     .param p1    # Ljava/lang/Throwable;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/StackTraceElement;
@@ -217,12 +209,12 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 2
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 3
@@ -321,7 +313,6 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 10
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -333,11 +324,11 @@
 .method public setIncludedPackages(Landroid/content/Context;Ljava/util/Collection;)V
     .locals 4
     .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Ljava/util/Collection;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -350,9 +341,9 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/StandardExceptionParser;->zza:Ljava/util/TreeSet;
 
-    .line 1
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
     new-instance v0, Ljava/util/HashSet;

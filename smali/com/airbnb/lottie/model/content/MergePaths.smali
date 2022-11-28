@@ -3,7 +3,7 @@
 .source "MergePaths.java"
 
 # interfaces
-.implements Ls3/b;
+.implements Lo5/b;
 
 
 # annotations
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Ln3/c;
+.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Lj5/c;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -58,7 +58,7 @@
     const-string p1, "Animation contains merge paths but they are disabled."
 
     .line 2
-    invoke-static {p1}, Lw3/d;->d(Ljava/lang/String;)V
+    invoke-static {p1}, Ls5/d;->d(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -66,9 +66,9 @@
 
     .line 3
     :cond_0
-    new-instance p1, Ln3/l;
+    new-instance p1, Lj5/l;
 
-    invoke-direct {p1, p0}, Ln3/l;-><init>(Lcom/airbnb/lottie/model/content/MergePaths;)V
+    invoke-direct {p1, p0}, Lj5/l;-><init>(Lcom/airbnb/lottie/model/content/MergePaths;)V
 
     return-object p1
 .end method

@@ -16,4 +16,8 @@
 
 # virtual methods
 .method public abstract a(Landroidx/preference/Preference;Ljava/lang/Object;)Z
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

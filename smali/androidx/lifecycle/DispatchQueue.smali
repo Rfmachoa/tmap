@@ -39,8 +39,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
@@ -59,6 +59,9 @@
             "Ljava/lang/Runnable;",
             ">;"
         }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
@@ -85,8 +88,24 @@
     return-void
 .end method
 
-.method public static final synthetic access$enqueue(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
+.method public static synthetic a(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
     .locals 0
+
+    invoke-static {p0, p1}, Landroidx/lifecycle/DispatchQueue;->dispatchAndEnqueue$lambda-2$lambda-1(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method private static final dispatchAndEnqueue$lambda-2$lambda-1(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "$runnable"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0, p1}, Landroidx/lifecycle/DispatchQueue;->enqueue(Ljava/lang/Runnable;)V
@@ -187,11 +206,11 @@
     invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
@@ -219,9 +238,9 @@
     .line 4
     :cond_1
     :goto_0
-    new-instance v1, Landroidx/lifecycle/DispatchQueue$dispatchAndEnqueue$$inlined$with$lambda$1;
+    new-instance v1, Landroidx/lifecycle/b;
 
-    invoke-direct {v1, p0, p1, p2}, Landroidx/lifecycle/DispatchQueue$dispatchAndEnqueue$$inlined$with$lambda$1;-><init>(Landroidx/lifecycle/DispatchQueue;Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
+    invoke-direct {v1, p0, p2}, Landroidx/lifecycle/b;-><init>(Landroidx/lifecycle/DispatchQueue;Ljava/lang/Runnable;)V
 
     invoke-virtual {v0, p1, v1}, Lkotlinx/coroutines/CoroutineDispatcher;->dispatch(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
 

@@ -1,14 +1,11 @@
 .class Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;
-.super Ljava/lang/Object;
+.super Landroidx/core/view/a;
 .source "AppBarLayout.java"
-
-# interfaces
-.implements Lt1/f;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->addAccessibilityScrollActions(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;)V
+    value = Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->updateAccessibilityActions(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,80 +17,48 @@
 # instance fields
 .field public final synthetic this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-.field public final synthetic val$appBarLayout:Lcom/google/android/material/appbar/AppBarLayout;
-
-.field public final synthetic val$coordinatorLayout:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-.field public final synthetic val$dy:I
-
-.field public final synthetic val$scrollingView:Landroid/view/View;
-
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;I)V
+.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-    iput-object p2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$coordinatorLayout:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    iput-object p3, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$appBarLayout:Lcom/google/android/material/appbar/AppBarLayout;
-
-    iput-object p4, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$scrollingView:Landroid/view/View;
-
-    iput p5, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$dy:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public perform(Landroid/view/View;Lt1/f$a;)Z
-    .locals 8
-    .param p1    # Landroid/view/View;
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
+    .locals 0
+    .param p2    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lt1/f$a;
-        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
 
-    iget-object v1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$coordinatorLayout:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+    .line 2
+    iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->this$0:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-    iget-object v2, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$appBarLayout:Lcom/google/android/material/appbar/AppBarLayout;
+    invoke-static {p1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->access$200(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;)Z
 
-    iget-object v3, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$scrollingView:Landroid/view/View;
+    move-result p1
 
-    iget v5, p0, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior$2;->val$dy:I
+    invoke-virtual {p2, p1}, Lk2/c;->I1(Z)V
 
-    const/4 p1, 0x2
+    .line 3
+    const-class p1, Landroid/widget/ScrollView;
 
-    new-array v6, p1, [I
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    fill-array-data v6, :array_0
+    move-result-object p1
 
-    const/4 v4, 0x0
+    invoke-virtual {p2, p1}, Lk2/c;->Z0(Ljava/lang/CharSequence;)V
 
-    const/4 v7, 0x1
-
-    invoke-virtual/range {v0 .. v7}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->onNestedPreScroll(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Lcom/google/android/material/appbar/AppBarLayout;Landroid/view/View;II[II)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x0
-    .end array-data
+    return-void
 .end method

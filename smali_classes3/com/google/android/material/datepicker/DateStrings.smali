@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method public static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Lr1/i;
+.method public static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Landroidx/core/util/k;
     .locals 1
     .param p0    # Ljava/lang/Long;
         .annotation build Landroidx/annotation/Nullable;
@@ -29,7 +29,7 @@
             "Ljava/lang/Long;",
             "Ljava/lang/Long;",
             ")",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -39,14 +39,14 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, p1, v0}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Lr1/i;
+    invoke-static {p0, p1, v0}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Landroidx/core/util/k;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Lr1/i;
+.method public static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Landroidx/core/util/k;
     .locals 5
     .param p0    # Ljava/lang/Long;
         .annotation build Landroidx/annotation/Nullable;
@@ -67,7 +67,7 @@
             "Ljava/lang/Long;",
             "Ljava/text/SimpleDateFormat;",
             ")",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -81,7 +81,7 @@
     if-nez p1, :cond_0
 
     .line 2
-    invoke-static {v0, v0}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {v0, v0}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -99,7 +99,7 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {v0, p0}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -117,7 +117,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v0}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {p0, v0}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -183,7 +183,7 @@
     move-result-object p0
 
     .line 13
-    invoke-static {p1, p0}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {p1, p0}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -240,7 +240,7 @@
     move-result-object p1
 
     .line 17
-    invoke-static {p0, p1}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {p0, p1}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -273,7 +273,7 @@
     move-result-object p1
 
     .line 19
-    invoke-static {p0, p1}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {p0, p1}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -306,7 +306,7 @@
     move-result-object p1
 
     .line 21
-    invoke-static {p0, p1}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {p0, p1}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
@@ -458,26 +458,15 @@
     return-object p0
 .end method
 
-.method public static getYearMonth(Landroid/content/Context;J)Ljava/lang/String;
+.method public static getYearMonth(J)Ljava/lang/String;
     .locals 2
 
+    const/4 v0, 0x0
+
+    const/16 v1, 0x2024
+
     .line 1
-    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/TimeZone;->getOffset(J)I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    sub-long/2addr p1, v0
-
-    const/16 v0, 0x24
-
-    .line 2
-    invoke-static {p0, p1, p2, v0}, Landroid/text/format/DateUtils;->formatDateTime(Landroid/content/Context;JI)Ljava/lang/String;
+    invoke-static {v0, p0, p1, v1}, Landroid/text/format/DateUtils;->formatDateTime(Landroid/content/Context;JI)Ljava/lang/String;
 
     move-result-object p0
 

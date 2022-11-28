@@ -3,24 +3,24 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/g0;
+.implements Landroidx/car/app/k0;
 
 
 # instance fields
 .field public final synthetic a:Landroidx/car/app/AppManager;
 
-.field public final synthetic b:Landroidx/car/app/u0;
+.field public final synthetic b:Landroidx/car/app/a1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/AppManager;Landroidx/car/app/u0;)V
+.method public synthetic constructor <init>(Landroidx/car/app/AppManager;Landroidx/car/app/a1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroidx/car/app/c;->a:Landroidx/car/app/AppManager;
 
-    iput-object p2, p0, Landroidx/car/app/c;->b:Landroidx/car/app/u0;
+    iput-object p2, p0, Landroidx/car/app/c;->b:Landroidx/car/app/a1;
 
     return-void
 .end method
@@ -32,11 +32,11 @@
 
     iget-object v0, p0, Landroidx/car/app/c;->a:Landroidx/car/app/AppManager;
 
-    iget-object v1, p0, Landroidx/car/app/c;->b:Landroidx/car/app/u0;
+    iget-object v1, p0, Landroidx/car/app/c;->b:Landroidx/car/app/a1;
 
     check-cast p1, Landroidx/car/app/IAppHost;
 
-    invoke-static {v0, v1, p1}, Landroidx/car/app/AppManager;->g(Landroidx/car/app/AppManager;Landroidx/car/app/u0;Landroidx/car/app/IAppHost;)Ljava/lang/Object;
+    invoke-static {v0, v1, p1}, Landroidx/car/app/AppManager;->j(Landroidx/car/app/AppManager;Landroidx/car/app/a1;Landroidx/car/app/IAppHost;)Ljava/lang/Object;
 
     move-result-object p1
 

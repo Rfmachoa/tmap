@@ -1,38 +1,12 @@
 .class public final Lcom/google/android/gms/common/api/internal/zag;
 .super Lcom/google/android/gms/common/api/internal/zac;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<ResultT:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/google/android/gms/common/api/internal/zac;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zaa:Lcom/google/android/gms/common/api/internal/TaskApiCall;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/TaskApiCall<",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "TResultT;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Lcom/google/android/gms/tasks/TaskCompletionSource;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TResultT;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zad:Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;
 
@@ -40,18 +14,6 @@
 # direct methods
 .method public constructor <init>(ILcom/google/android/gms/common/api/internal/TaskApiCall;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lcom/google/android/gms/common/api/internal/TaskApiCall<",
-            "Lcom/google/android/gms/common/api/Api$AnyClient;",
-            "TResultT;>;",
-            "Lcom/google/android/gms/tasks/TaskCompletionSource<",
-            "TResultT;>;",
-            "Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/zac;-><init>(I)V
@@ -94,13 +56,6 @@
 # virtual methods
 .method public final zaa(Lcom/google/android/gms/common/api/internal/zabq;)Z
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)Z"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zag;->zaa:Lcom/google/android/gms/common/api/internal/TaskApiCall;
@@ -115,15 +70,6 @@
 .method public final zab(Lcom/google/android/gms/common/api/internal/zabq;)[Lcom/google/android/gms/common/Feature;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)[",
-            "Lcom/google/android/gms/common/Feature;"
-        }
     .end annotation
 
     .line 1
@@ -174,14 +120,6 @@
 
 .method public final zaf(Lcom/google/android/gms/common/api/internal/zabq;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/zabq<",
-            "*>;)V"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/DeadObjectException;

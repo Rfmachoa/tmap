@@ -21,6 +21,14 @@
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/utils/widget/ImageFilterButton;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterButton$b;->a:Landroidx/constraintlayout/utils/widget/ImageFilterButton;
@@ -34,6 +42,16 @@
 # virtual methods
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "outline"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterButton$b;->a:Landroidx/constraintlayout/utils/widget/ImageFilterButton;

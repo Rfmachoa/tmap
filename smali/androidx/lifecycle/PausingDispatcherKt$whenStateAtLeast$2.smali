@@ -3,12 +3,12 @@
 .source "PausingDispatcher.kt"
 
 # interfaces
-.implements Lej/p;
+.implements Lgl/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    value = Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
-        "Lej/p<",
-        "Lkotlinx/coroutines/n0;",
+        "Lgl/p<",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/coroutines/c<",
         "-TT;>;",
         "Ljava/lang/Object;",
@@ -31,20 +31,18 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0004\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u0000*\u00020\u0001H\u008a@\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
+        "\u0000\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0002\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u0000*\u00020\u0001H\u008a@"
     }
     d2 = {
         "T",
-        "Lkotlinx/coroutines/n0;",
-        "invoke",
-        "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+        "Lkotlinx/coroutines/p0;",
         "<anonymous>"
     }
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
@@ -68,7 +66,18 @@
 
 
 # instance fields
-.field public final synthetic $block:Lej/p;
+.field public final synthetic $block:Lgl/p;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/p<",
+            "Lkotlinx/coroutines/p0;",
+            "Lkotlin/coroutines/c<",
+            "-TT;>;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field public final synthetic $minState:Landroidx/lifecycle/Lifecycle$State;
 
@@ -80,14 +89,33 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)V
+.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/Lifecycle;",
+            "Landroidx/lifecycle/Lifecycle$State;",
+            "Lgl/p<",
+            "-",
+            "Lkotlinx/coroutines/p0;",
+            "-",
+            "Lkotlin/coroutines/c<",
+            "-TT;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/c<",
+            "-",
+            "Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;",
+            ">;)V"
+        }
+    .end annotation
 
     iput-object p1, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$this_whenStateAtLeast:Landroidx/lifecycle/Lifecycle;
 
     iput-object p2, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$minState:Landroidx/lifecycle/Lifecycle$State;
 
-    iput-object p3, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$block:Lej/p;
+    iput-object p3, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$block:Lgl/p;
 
     const/4 p1, 0x2
 
@@ -123,29 +151,57 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "completion"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
     new-instance v0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;
 
     iget-object v1, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$this_whenStateAtLeast:Landroidx/lifecycle/Lifecycle;
 
     iget-object v2, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$minState:Landroidx/lifecycle/Lifecycle$State;
 
-    iget-object v3, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$block:Lej/p;
+    iget-object v3, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$block:Lgl/p;
 
-    invoke-direct {v0, v1, v2, v3, p2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)V
+    invoke-direct {v0, v1, v2, v3, p2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)V
 
     iput-object p1, v0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->L$0:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lkotlinx/coroutines/p0;
+
     check-cast p2, Lkotlin/coroutines/c;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->invoke(Lkotlinx/coroutines/p0;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invoke(Lkotlinx/coroutines/p0;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 0
+    .param p1    # Lkotlinx/coroutines/p0;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/c;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/p0;",
+            "Lkotlin/coroutines/c<",
+            "-TT;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 
     invoke-virtual {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->create(Ljava/lang/Object;Lkotlin/coroutines/c;)Lkotlin/coroutines/c;
 
@@ -171,7 +227,7 @@
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -216,14 +272,14 @@
 
     iget-object p1, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->L$0:Ljava/lang/Object;
 
-    check-cast p1, Lkotlinx/coroutines/n0;
+    check-cast p1, Lkotlinx/coroutines/p0;
 
     .line 4
-    invoke-interface {p1}, Lkotlinx/coroutines/n0;->getCoroutineContext()Lkotlin/coroutines/CoroutineContext;
+    invoke-interface {p1}, Lkotlinx/coroutines/p0;->getCoroutineContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p1
 
-    sget-object v1, Lkotlinx/coroutines/y1;->q0:Lkotlinx/coroutines/y1$b;
+    sget-object v1, Lkotlinx/coroutines/y1;->A0:Lkotlinx/coroutines/y1$b;
 
     invoke-interface {p1, v1}, Lkotlin/coroutines/CoroutineContext;->get(Lkotlin/coroutines/CoroutineContext$b;)Lkotlin/coroutines/CoroutineContext$a;
 
@@ -251,13 +307,13 @@
 
     .line 7
     :try_start_1
-    iget-object p1, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$block:Lej/p;
+    iget-object p1, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->$block:Lgl/p;
 
     iput-object v3, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->L$0:Ljava/lang/Object;
 
     iput v2, p0, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;->label:I
 
-    invoke-static {v1, p1, p0}, Lkotlinx/coroutines/g;->i(Lkotlin/coroutines/CoroutineContext;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {v1, p1, p0}, Lkotlinx/coroutines/i;->h(Lkotlin/coroutines/CoroutineContext;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p1
     :try_end_1

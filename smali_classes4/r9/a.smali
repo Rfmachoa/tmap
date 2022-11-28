@@ -1,18 +1,11 @@
-.class public Lr9/a;
+.class public interface abstract Lr9/a;
 .super Ljava/lang/Object;
-.source "PlayServiceId.java"
+.source "OnFastScrollStateChangeListener.java"
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "nugu.builtin.music"
+# virtual methods
+.method public abstract a()V
+.end method
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract b()V
 .end method

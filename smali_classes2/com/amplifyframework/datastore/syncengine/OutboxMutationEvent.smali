@@ -260,7 +260,7 @@
 
     iget-object v3, p1, Lcom/amplifyframework/datastore/syncengine/OutboxMutationEvent;->modelName:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -271,7 +271,7 @@
     iget-object p1, p1, Lcom/amplifyframework/datastore/syncengine/OutboxMutationEvent;->element:Lcom/amplifyframework/datastore/syncengine/OutboxMutationEvent$OutboxMutationEventElement;
 
     .line 4
-    invoke-static {v2, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -404,7 +404,7 @@
 
     const-string v3, ", element=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/OutboxMutationEvent;->element:Lcom/amplifyframework/datastore/syncengine/OutboxMutationEvent$OutboxMutationEventElement;
 

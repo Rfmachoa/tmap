@@ -65,7 +65,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -246,7 +246,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapBluetoothManager$2;->a:Lcom/skt/tmap/engine/TmapBluetoothManager;
@@ -267,25 +267,25 @@
     invoke-static {v0, p2}, Lcom/skt/tmap/engine/TmapBluetoothManager;->d(Lcom/skt/tmap/engine/TmapBluetoothManager;Ljava/lang/String;)Ljava/lang/String;
 
     .line 19
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p2
 
     if-eqz p2, :cond_7
 
     .line 20
-    sget v0, Lcom/skt/voice/tyche/AiConstant;->O:I
-
-    invoke-virtual {p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->D5(I)V
-
-    .line 21
-    sget v0, Lcom/skt/voice/tyche/AiConstant;->Q:I
+    sget v0, Lcom/skt/voice/tyche/AiConstant;->S:I
 
     invoke-virtual {p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
 
+    .line 21
+    sget v0, Lcom/skt/voice/tyche/AiConstant;->U:I
+
+    invoke-virtual {p2, v0}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
+
     .line 22
     :cond_7
-    invoke-static {p1}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
+    invoke-static {p1}, Lbe/e;->a(Landroid/content/Context;)Lbe/e;
 
     move-result-object p1
 
@@ -302,7 +302,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v0, v1}, Ldc/d;->R(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p1, p2, v0, v1}, Lbe/e;->S(Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto/16 :goto_0
 
@@ -370,7 +370,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapBluetoothManager$2;->a:Lcom/skt/tmap/engine/TmapBluetoothManager;
@@ -379,14 +379,14 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p2
 
     if-nez p2, :cond_9
 
     .line 31
-    invoke-static {p1}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
+    invoke-static {p1}, Lbe/e;->a(Landroid/content/Context;)Lbe/e;
 
     move-result-object p1
 
@@ -403,7 +403,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, p2, v1, v2}, Ldc/d;->R(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p1, p2, v1, v2}, Lbe/e;->S(Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 33
     :cond_9
@@ -417,32 +417,32 @@
     invoke-static {p1, v0}, Lcom/skt/tmap/engine/TmapBluetoothManager;->d(Lcom/skt/tmap/engine/TmapBluetoothManager;Ljava/lang/String;)Ljava/lang/String;
 
     .line 35
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p1
 
     if-eqz p1, :cond_b
 
     .line 36
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->S2()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->U2()Z
 
     move-result p2
 
     if-eqz p2, :cond_a
 
     .line 37
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->R4()V
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T4()V
 
     .line 38
     :cond_a
-    sget p2, Lcom/skt/voice/tyche/AiConstant;->N:I
-
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->D5(I)V
-
-    .line 39
-    sget p2, Lcom/skt/voice/tyche/AiConstant;->P:I
+    sget p2, Lcom/skt/voice/tyche/AiConstant;->R:I
 
     invoke-virtual {p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->F5(I)V
+
+    .line 39
+    sget p2, Lcom/skt/voice/tyche/AiConstant;->T:I
+
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/engine/TmapAiManager;->H5(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

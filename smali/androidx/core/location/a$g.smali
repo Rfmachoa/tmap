@@ -1,13 +1,9 @@
 .class public Landroidx/core/location/a$g;
-.super Landroid/location/GnssStatus$Callback;
+.super Ljava/lang/Object;
 .source "LocationManagerCompat.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/RequiresApi;
-    value = 0x1e
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/location/a;
 .end annotation
@@ -18,84 +14,42 @@
 .end annotation
 
 
-# instance fields
-.field public final a:Landroidx/core/location/GnssStatusCompat$a;
+# static fields
+.field public static final a:Landroidx/collection/m;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "sGnssStatusListeners"
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/collection/m<",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroidx/core/location/GnssStatusCompat$a;)V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Landroid/location/GnssStatus$Callback;-><init>()V
+    new-instance v0, Landroidx/collection/m;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0}, Landroidx/collection/m;-><init>()V
 
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const-string v1, "invalid null callback"
-
-    .line 2
-    invoke-static {v0, v1}, Lr1/o;->b(ZLjava/lang/Object;)V
-
-    .line 3
-    iput-object p1, p0, Landroidx/core/location/a$g;->a:Landroidx/core/location/GnssStatusCompat$a;
+    sput-object v0, Landroidx/core/location/a$g;->a:Landroidx/collection/m;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public onFirstFix(I)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    iget-object v0, p0, Landroidx/core/location/a$g;->a:Landroidx/core/location/GnssStatusCompat$a;
-
-    invoke-virtual {v0, p1}, Landroidx/core/location/GnssStatusCompat$a;->a(I)V
-
-    return-void
-.end method
-
-.method public onSatelliteStatusChanged(Landroid/location/GnssStatus;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/core/location/a$g;->a:Landroidx/core/location/GnssStatusCompat$a;
-
-    invoke-static {p1}, Landroidx/core/location/GnssStatusCompat;->n(Landroid/location/GnssStatus;)Landroidx/core/location/GnssStatusCompat;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroidx/core/location/GnssStatusCompat$a;->b(Landroidx/core/location/GnssStatusCompat;)V
-
-    return-void
-.end method
-
-.method public onStarted()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/core/location/a$g;->a:Landroidx/core/location/GnssStatusCompat$a;
-
-    invoke-virtual {v0}, Landroidx/core/location/GnssStatusCompat$a;->c()V
-
-    return-void
-.end method
-
-.method public onStopped()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/core/location/a$g;->a:Landroidx/core/location/GnssStatusCompat$a;
-
-    invoke-virtual {v0}, Landroidx/core/location/GnssStatusCompat$a;->d()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

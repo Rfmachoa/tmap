@@ -21,13 +21,13 @@
 
 
 # virtual methods
-.method public a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+.method public a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 1
-    invoke-interface {p0, p1, p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+    invoke-interface {p0, p1, p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     .end param
 .end method
 
-.method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+.method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 .end method
 
 .method public abstract e(Lcom/tmapmobility/tmap/exoplayer2/upstream/j;IZI)I

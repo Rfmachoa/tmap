@@ -1,36 +1,37 @@
-.class public final synthetic Landroidx/camera/core/p;
+.class public interface abstract Landroidx/camera/core/p;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
-
-# interfaces
-.implements Landroidx/camera/core/a0$b;
+.source "CameraProvider.java"
 
 
-# instance fields
-.field public final synthetic a:Landroidx/camera/core/a0;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/a0;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroidx/camera/core/p;->a:Landroidx/camera/core/a0;
-
-    return-void
-.end method
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # virtual methods
-.method public final getCameraXConfig()Landroidx/camera/core/a0;
-    .locals 1
+.method public abstract c(Landroidx/camera/core/CameraSelector;)Z
+    .param p1    # Landroidx/camera/core/CameraSelector;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroidx/camera/core/CameraInfoUnavailableException;
+        }
+    .end annotation
+.end method
 
-    iget-object v0, p0, Landroidx/camera/core/p;->a:Landroidx/camera/core/a0;
+.method public abstract d()Ljava/util/List;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    invoke-static {v0}, Landroidx/camera/core/CameraX;->e(Landroidx/camera/core/a0;)Landroidx/camera/core/a0;
-
-    move-result-object v0
-
-    return-object v0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/CameraInfo;",
+            ">;"
+        }
+    .end annotation
 .end method

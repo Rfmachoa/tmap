@@ -1,1143 +1,1119 @@
 .class public Lyb/b;
-.super Ljava/lang/Object;
-.source "MenuNoticeDbAdapter.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lyb/b$a;
-    }
-.end annotation
-
-
-# static fields
-.field public static final j:Ljava/lang/String; = "_idx"
-
-.field public static final k:Ljava/lang/String; = "menuNoticeTitle"
-
-.field public static final l:Ljava/lang/String; = "menuNoticeDate"
-
-.field public static final m:Ljava/lang/String; = "menuNoticeMessage"
-
-.field public static final n:Ljava/lang/String; = "menuNoticeIsNew"
-
-.field public static final o:[Ljava/lang/String;
-
-.field public static final p:Ljava/lang/String; = "MenuNoticeDbAdapter"
-
-.field public static final q:Ljava/lang/String; = "menunotice.db"
-
-.field public static final r:Ljava/lang/String; = "menunotice"
-
-.field public static final s:I = 0x4
-
-.field public static final t:Ljava/lang/String; = "create table menunotice (_idx INTEGER, menuNoticeTitle TEXT, menuNoticeDate TEXT, menuNoticeMessage TEXT, menuNoticeIsNew INTEGER);"
+.super Lyb/a;
+.source "StateCommonMedia.java"
 
 
 # instance fields
-.field public a:I
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:I
-
-.field public f:Lyb/b$a;
-
-.field public g:Landroid/database/sqlite/SQLiteDatabase;
-
-.field public h:Landroid/database/Cursor;
-
-.field public i:Landroid/content/Context;
+.field public final x:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
-
-    const-string v0, "_idx"
-
-    const-string v1, "menuNoticeTitle"
-
-    const-string v2, "menuNoticeDate"
-
-    const-string v3, "menuNoticeMessage"
-
-    const-string v4, "menuNoticeIsNew"
+.method public constructor <init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+    .locals 0
 
     .line 1
-    filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/String;
+    invoke-direct {p0, p1}, Lyb/a;-><init>(Lcom/skt/aicloud/speaker/service/api/c;)V
 
-    move-result-object v0
-
-    sput-object v0, Lyb/b;->o:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "ctx"
-        }
-    .end annotation
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
+    const-string p1, "StateCommonMedia"
 
     .line 2
-    iput v0, p0, Lyb/b;->e:I
+    iput-object p1, p0, Lyb/b;->x:Ljava/lang/String;
 
     .line 3
-    iput-object p1, p0, Lyb/b;->i:Landroid/content/Context;
+    sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_COMMON_MEDIA:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    const/4 p1, 0x0
+
+    .line 4
+    iput-boolean p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->k:Z
+
+    .line 5
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lcom/skt/aicloud/mobile/service/aod/a;->v0(Lyb/b;)V
+
+    const/4 p1, 0x0
+
+    .line 6
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->e:Lcom/skt/aicloud/speaker/lib/state/AppState;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public A(Ljava/lang/String;)V
+    .locals 8
+
+    const-string v0, "pauseByUC : cardType = "
+
+    const-string v1, "StateCommonMedia"
 
     .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
+    invoke-static {v0, p1, v1}, Lcom/diotek/diotts/pttsnet/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    .line 2
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljc/c;->e()Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljc/a;->d(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
-
     .line 3
-    iput-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p0}, Lyb/b;->pause()V
 
     .line 4
-    :cond_0
-    iget-object v0, p0, Lyb/b;->f:Lyb/b$a;
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lic/a;->c0(Z)V
+
+    const/4 v4, 0x1
 
     .line 5
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 6
-    iput-object v1, p0, Lyb/b;->f:Lyb/b$a;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_1
-    return-void
-.end method
-
-.method public b()J
-    .locals 5
-
-    .line 1
-    new-instance v0, Landroid/content/ContentValues;
-
-    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
-
-    const-string v1, "_idx"
-
-    .line 2
-    iget v2, p0, Lyb/b;->a:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    const-string v1, "menuNoticeTitle"
-
-    .line 3
-    iget-object v2, p0, Lyb/b;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "menuNoticeDate"
-
-    .line 4
-    iget-object v2, p0, Lyb/b;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "menuNoticeMessage"
-
-    .line 5
-    iget-object v2, p0, Lyb/b;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "menuNoticeIsNew"
-
-    .line 6
-    iget v2, p0, Lyb/b;->e:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 7
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v1
-
-    .line 8
-    :try_start_0
-    iget-object v2, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v3, "menunotice"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v4, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-
-    move-result-wide v2
-
-    monitor-exit v1
-
-    return-wide v2
-
-    :catchall_0
-    move-exception v0
-
-    .line 9
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public c()V
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "DROP TABLE IF EXISTS menunotice"
-
-    invoke-virtual {v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 3
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "create table menunotice (_idx INTEGER, menuNoticeTitle TEXT, menuNoticeDate TEXT, menuNoticeMessage TEXT, menuNoticeIsNew INTEGER);"
-
-    invoke-virtual {v1, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    .line 4
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public d(I)V
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rowId"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "menunotice"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "_idx="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-
-    .line 3
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public e()Landroid/database/Cursor;
-    .locals 9
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "menunotice"
-
-    sget-object v3, Lyb/b;->o:[Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
     move-result-object v1
 
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v1
+    const-string v1, ":pauseByUC"
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    throw v1
+    move-result-object v7
+
+    const-string v3, "StateCommonMedia"
+
+    const-string v6, "asr"
+
+    move-object v2, p0
+
+    move-object v5, p1
+
+    invoke-virtual/range {v2 .. v7}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-virtual {p0}, Lyb/a;->u0()V
+
+    :goto_0
+    return-void
 .end method
 
-.method public f(I)Landroid/database/Cursor;
-    .locals 11
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rowId"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/database/SQLException;
-        }
-    .end annotation
+.method public final A0()Z
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    monitor-enter v0
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public B()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, ""
+
+    return-object v0
+.end method
+
+.method public b0(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/skt/aicloud/speaker/service/state/a;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {p0}, Lyb/a;->u0()V
 
-    const/4 v2, 0x1
+    return-void
+.end method
 
-    const-string v3, "menunotice"
+.method public e(Ljava/lang/String;)Z
+    .locals 0
 
-    sget-object v4, Lyb/b;->o:[Ljava/lang/String;
+    const/4 p1, 0x1
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    return p1
+.end method
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+.method public f(Ljava/lang/String;)V
+    .locals 8
 
-    const-string v6, "_idx="
+    const-string v0, "stopByUC : cardType = "
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "StateCommonMedia"
 
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 1
+    invoke-static {v0, p1, v1}, Lcom/diotek/diotts/pttsnet/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 2
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    move-result-object v5
+    invoke-virtual {v0}, Ljc/c;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljc/a;->g(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->o:J
+
+    .line 4
+    invoke-virtual {p0}, Lyb/b;->stop()V
+
+    const/4 v4, 0x1
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
+    .line 5
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v8, 0x0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v9, 0x0
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
-    const/4 v10, 0x0
+    move-result-object v1
 
-    invoke-virtual/range {v1 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(ZLjava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":stopByUC"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v3, "StateCommonMedia"
+
+    move-object v2, p0
+
+    move-object v5, p1
+
+    invoke-virtual/range {v2 .. v7}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 6
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->c:Lcom/skt/aicloud/speaker/service/api/c;
+
+    sget-object v0, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_IDLE:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, v1}, Lcom/skt/aicloud/speaker/service/api/c;->o0(Lcom/skt/aicloud/speaker/lib/state/AppState;Landroid/content/Intent;Ljc/c;)V
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0}, Lyb/a;->u0()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public g(Landroid/content/Intent;Ljc/c;)V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->e:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, v0}, Lyb/a;->y0(Z)V
+
+    if-eqz p1, :cond_2
+
+    .line 3
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ACTION_RESUME_AFTER_ALARM"
+
+    .line 4
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v3, "setAction : "
+
+    if-eqz v2, :cond_0
+
+    .line 5
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lyb/b;->h:Landroid/database/Cursor;
+    const-string p2, "StateCommonMedia"
+
+    invoke-static {p2, p1}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "resume.after.alarm"
+
+    .line 6
+    invoke-virtual {p0, p1}, Lyb/b;->resume(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const-string v2, "ACTION_REPEAT"
+
+    .line 7
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 8
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    const-string p2, "EXTRA_CARD_TYPE"
+
+    .line 9
+    invoke-virtual {p1, p2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 10
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    const-string p1, "repeat"
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lyb/b;->j(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    if-eqz p2, :cond_3
+
+    .line 11
+    invoke-virtual {p0, p2}, Lcom/skt/aicloud/speaker/service/state/a;->a0(Ljc/c;)V
+
+    .line 12
+    :cond_3
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/mobile/service/aod/a;->Q(Z)V
+
+    .line 13
+    invoke-virtual {p0}, Lyb/a;->w0()V
+
+    return-void
+.end method
+
+.method public h()Z
+    .locals 2
+
+    const-string v0, "StateCommonMedia"
+
+    const-string v1, "canReadContentInfo = true"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public j(Ljava/lang/String;)V
+    .locals 10
+
+    const-string v0, "StateCommonMedia"
+
+    const-string v1, "repeat"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->j(Ljava/lang/String;)V
+
+    .line 3
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v1}, Ljc/c;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Ljc/a;->f(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 4
+    invoke-virtual {p0}, Lyb/b;->A0()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 5
+    invoke-virtual {p0}, Lyb/a;->t0()V
+
+    .line 6
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->q0()V
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x1
+
+    .line 7
+    invoke-virtual {p0, p1}, Lyb/a;->z0(Z)V
+
+    .line 8
+    invoke-virtual {p0}, Lyb/b;->pause()V
+
+    .line 9
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->c()Ljc/b0;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/skt/aicloud/mobile/service/presentation/d;
+
+    if-eqz p1, :cond_1
+
+    .line 10
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/skt/aicloud/mobile/service/aod/a;->w0(Lcom/skt/aicloud/mobile/service/presentation/d;)V
+
+    .line 11
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->D()Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;->getDomain()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "skip"
+
+    const-string v2, "resume"
+
+    const-string v3, "play"
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->b1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    const/4 v6, 0x1
+
+    .line 12
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ":repeat"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v5, "StateCommonMedia"
+
+    const-string v7, "repeat"
+
+    const-string v8, "asr"
+
+    move-object v4, p0
+
+    invoke-virtual/range {v4 .. v9}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "not has url"
+
+    .line 13
+    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    invoke-virtual {p0}, Lyb/a;->t0()V
+
+    .line 15
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->q0()V
+
+    return-void
+
+    .line 16
+    :cond_2
+    invoke-virtual {p0}, Lyb/a;->u0()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public m(Ljava/lang/String;)Z
+    .locals 2
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "canNext("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ") : true"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "StateCommonMedia"
+
+    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public m0()Lic/a;
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public n(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public n0()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
+
+    sget v1, Lcom/skt/aicloud/speaker/service/R$string;->service_name_media:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 3
+    :cond_0
+    invoke-virtual {v0}, Ljc/c;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public pause()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->pause()V
+
+    const-string v0, "StateCommonMedia"
+
+    const-string v1, "pause()"
+
+    .line 2
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/state/a;->U(Lcom/skt/aicloud/speaker/lib/state/AppState;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
+
+    .line 5
+    :cond_0
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/mobile/service/aod/a;->H()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lic/a;->pause()V
+
+    .line 7
+    :cond_1
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lic/a;->c0(Z)V
+
+    return-void
+.end method
+
+.method public r(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public resume(Ljava/lang/String;)V
+    .locals 6
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "resume : cardType = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StateCommonMedia"
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->resume(Ljava/lang/String;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljc/a;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 4
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/aod/a;->H()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "Already Playing"
+
+    .line 5
+    invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/aod/a;->F()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "Resume Media"
+
+    .line 7
+    invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 8
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/aod/a;->resume()V
+
+    :goto_0
+    const/4 v2, 0x1
+
+    .line 9
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ":continue"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v1, "StateCommonMedia"
+
+    const-string v3, "continue"
+
+    const-string v4, "asr"
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_1
+    const-string p1, "Does not Action"
+
+    .line 10
+    invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 11
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->q0()V
+
+    .line 12
+    invoke-virtual {p0}, Lyb/a;->t0()V
+
+    return-void
+
+    .line 13
+    :cond_2
+    invoke-virtual {p0}, Lyb/a;->u0()V
+
+    :goto_1
+    return-void
+.end method
+
+.method public s(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public stop()V
+    .locals 2
+
+    const-string v0, "StateCommonMedia"
+
+    const-string v1, "stop"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->stop()V
+
+    .line 3
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lic/a;->stop()V
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/state/a;->U(Lcom/skt/aicloud/speaker/lib/state/AppState;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public t(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->t(Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljc/a;->c(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 4
-    :cond_0
-    iget-object p1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    monitor-exit v0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    .line 5
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public g()Landroid/database/Cursor;
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "select max(_idx) from menunotice"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    .line 3
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 4
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public h()Landroid/database/Cursor;
-    .locals 4
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "select min(_idx) from menunotice"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    .line 3
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 4
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public i(Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "where"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "select * from menunotice "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " order by _id "
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
 
     move-result-object p1
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, p1, v2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    .line 3
-    monitor-exit v0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    .line 4
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public j()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lyb/b;->a:I
-
-    return v0
-.end method
-
-.method public k()I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lyb/b;->g()Landroid/database/Cursor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    .line 2
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    .line 3
-    iget-object v0, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    .line 4
-    iget-object v1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    return v0
-.end method
-
-.method public l()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public m()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lyb/b;->e:I
-
-    return v0
-.end method
-
-.method public n()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public o()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public p()I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lyb/b;->h()Landroid/database/Cursor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    .line 2
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    .line 3
-    iget-object v0, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    .line 4
-    iget-object v1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    return v0
-.end method
-
-.method public q()I
-    .locals 9
-
-    .line 1
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v2, "menunotice"
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    .line 3
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v1
-
-    .line 4
-    iget-object v2, p0, Lyb/b;->h:Landroid/database/Cursor;
-
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    .line 5
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 6
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public r(Ljava/lang/String;)I
-    .locals 11
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "searchTerm"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    new-array v6, v0, [Ljava/lang/String;
-
-    .line 1
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    aput-object p1, v6, v0
-
-    .line 2
-    iget-object p1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter p1
-
-    .line 3
-    :try_start_0
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const/4 v2, 0x1
-
-    const-string v3, "menunotice"
-
-    sget-object v4, Lyb/b;->o:[Ljava/lang/String;
-
-    const-string v5, "menuNoticeTitle= ? "
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    invoke-virtual/range {v1 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(ZLjava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    const/4 v1, -0x1
-
-    if-eqz v0, :cond_1
-
-    .line 4
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 5
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 6
-    monitor-exit p1
-
-    return v1
-
-    .line 7
-    :cond_0
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    const-string v1, "_idx"
-
-    .line 8
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v1
-
-    .line 9
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v1
-
-    .line 10
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 11
-    :cond_1
-    monitor-exit p1
-
-    return v1
-
-    :catchall_0
-    move-exception v0
-
-    .line 12
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public s()V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/database/SQLException;
-        }
-    .end annotation
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lyb/b;->f:Lyb/b$a;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/aod/a;->next()V
 
     goto :goto_0
 
-    .line 3
-    :cond_0
-    new-instance v0, Lyb/b$a;
-
-    iget-object v1, p0, Lyb/b;->i:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lyb/b$a;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lyb/b;->f:Lyb/b$a;
-
     .line 4
+    :cond_0
+    invoke-virtual {p0}, Lyb/a;->u0()V
+
     :goto_0
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 5
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
-
-    .line 6
-    :cond_1
-    iget-object v0, p0, Lyb/b;->f:Lyb/b$a;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
     return-void
 .end method
 
-.method public t()V
+.method public v(Ljava/lang/String;)Z
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/database/SQLException;
-        }
-    .end annotation
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Lyb/b;->f:Lyb/b$a;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
+    const-string v1, "canPrev("
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
-    :cond_0
-    new-instance v0, Lyb/b$a;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lyb/b;->i:Landroid/content/Context;
+    const-string p1, ") : true"
 
-    invoke-direct {v0, v1}, Lyb/b$a;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lyb/b;->f:Lyb/b$a;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 4
-    :goto_0
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    const-string v0, "StateCommonMedia"
 
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+    invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    const/4 p1, 0x1
 
-    if-eqz v0, :cond_1
-
-    .line 5
-    iget-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
-
-    .line 6
-    :cond_1
-    iget-object v0, p0, Lyb/b;->f:Lyb/b$a;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-void
-.end method
-
-.method public u(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "idx"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Lyb/b;->a:I
-
-    return-void
-.end method
-
-.method public v(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "date"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Lyb/b;->c:Ljava/lang/String;
-
-    return-void
+    return p1
 .end method
 
 .method public w(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "message"
-        }
-    .end annotation
+    .locals 2
 
     .line 1
-    iput-object p1, p0, Lyb/b;->d:Ljava/lang/String;
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->w(Ljava/lang/String;)V
+
+    .line 2
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "ACTION_REPEAT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "EXTRA_CARD_TYPE"
+
+    .line 3
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    invoke-virtual {p1, v1, v0}, Lcom/skt/aicloud/speaker/service/api/c;->n0(Lcom/skt/aicloud/speaker/lib/state/AppState;Landroid/content/Intent;)V
 
     return-void
 .end method
 
 .method public x(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "title"
-        }
-    .end annotation
+    .locals 1
 
     .line 1
-    iput-object p1, p0, Lyb/b;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public y(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "isNew"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Lyb/b;->e:I
-
-    return-void
-.end method
-
-.method public z(J)V
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "rowId"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Landroid/content/ContentValues;
-
-    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
-
-    const-string v1, "menuNoticeIsNew"
-
-    const/4 v2, 0x0
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->x(Ljava/lang/String;)V
 
     .line 2
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljc/c;->e()Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljc/a;->e(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     .line 3
-    iget-object v1, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    monitor-enter v1
-
-    .line 4
-    :try_start_0
-    iget-object v2, p0, Lyb/b;->g:Landroid/database/sqlite/SQLiteDatabase;
-
-    const-string v3, "menunotice"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "_idx="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
 
     move-result-object p1
 
-    const/4 p2, 0x0
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/aod/a;->b()V
 
-    invoke-virtual {v2, v3, v0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    goto :goto_0
 
-    .line 5
-    monitor-exit v1
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Lyb/a;->u0()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public x0()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->c()Ljc/b0;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/aicloud/mobile/service/presentation/d;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "StateCommonMedia"
+
+    const-string v1, "play() : NOT has URL"
+
+    .line 2
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    invoke-virtual {p0}, Lyb/a;->s0()V
 
     return-void
 
-    :catchall_0
-    move-exception p1
+    .line 4
+    :cond_0
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/aod/a;->q0()Lcom/skt/aicloud/mobile/service/aod/a;
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v1
 
-    throw p1
+    invoke-virtual {v1, v0}, Lcom/skt/aicloud/mobile/service/aod/a;->w0(Lcom/skt/aicloud/mobile/service/presentation/d;)V
+
+    return-void
+.end method
+
+.method public y(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public z(Landroid/content/Intent;)V
+    .locals 2
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->z(Landroid/content/Intent;)V
+
+    .line 2
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ACTION_MEDIA_FINISHED"
+
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setAction : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    .line 5
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->o:J
+
+    .line 6
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->q0()V
+
+    :cond_0
+    return-void
 .end method

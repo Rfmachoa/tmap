@@ -3,7 +3,11 @@
 .source "BaseJsonNode.java"
 
 # interfaces
-.implements Lcom/fasterxml/jackson/databind/JsonSerializable;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field private static final serialVersionUID:J = 0x1L
 
 
 # direct methods
@@ -51,6 +55,70 @@
     return-object v0
 .end method
 
+.method public required(I)Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 2
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aput-object v0, p1, v1
+
+    const-string v0, "Node of type `%s` has no indexed values"
+
+    .line 4
+    invoke-virtual {p0, v0, p1}, Lcom/fasterxml/jackson/databind/JsonNode;->_reportRequiredViolation(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/fasterxml/jackson/databind/JsonNode;
+
+    return-object p1
+.end method
+
+.method public required(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 2
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aput-object v0, p1, v1
+
+    const-string v0, "Node of type `%s` has no fields"
+
+    .line 2
+    invoke-virtual {p0, v0, p1}, Lcom/fasterxml/jackson/databind/JsonNode;->_reportRequiredViolation(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/fasterxml/jackson/databind/JsonNode;
+
+    return-object p1
+.end method
+
 .method public abstract serialize(Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/databind/SerializerProvider;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -67,6 +135,28 @@
             Lcom/fasterxml/jackson/core/JsonProcessingException;
         }
     .end annotation
+.end method
+
+.method public toPrettyString()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lcom/fasterxml/jackson/databind/node/InternalNodeMapper;->nodeToPrettyString(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lcom/fasterxml/jackson/databind/node/InternalNodeMapper;->nodeToString(Lcom/fasterxml/jackson/databind/JsonNode;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public traverse()Lcom/fasterxml/jackson/core/JsonParser;
@@ -87,6 +177,17 @@
     new-instance v0, Lcom/fasterxml/jackson/databind/node/TreeTraversingParser;
 
     invoke-direct {v0, p0, p1}, Lcom/fasterxml/jackson/databind/node/TreeTraversingParser;-><init>(Lcom/fasterxml/jackson/databind/JsonNode;Lcom/fasterxml/jackson/core/ObjectCodec;)V
+
+    return-object v0
+.end method
+
+.method writeReplace()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lcom/fasterxml/jackson/databind/node/NodeSerialization;->from(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/node/NodeSerialization;
+
+    move-result-object v0
 
     return-object v0
 .end method

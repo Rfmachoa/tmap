@@ -70,7 +70,7 @@
 
     check-cast v0, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->a:Landroidx/appcompat/widget/u;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->a:Landroidx/appcompat/widget/z;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->J()Z
 
@@ -118,7 +118,7 @@
     check-cast v1, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;
 
     .line 6
-    iget-object v1, v1, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->a:Landroidx/appcompat/widget/u;
+    iget-object v1, v1, Landroidx/appcompat/view/menu/CascadingMenuPopup$d;->a:Landroidx/appcompat/widget/z;
 
     invoke-virtual {v1}, Landroidx/appcompat/widget/ListPopupWindow;->show()V
 

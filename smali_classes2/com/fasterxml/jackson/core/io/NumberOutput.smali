@@ -6,11 +6,7 @@
 # static fields
 .field private static BILLION:I = 0x3b9aca00
 
-.field private static final FULL_3:[C
-
-.field private static final FULL_TRIPLETS_B:[B
-
-.field private static final LEAD_3:[C
+.field private static BILLION_L:J = 0x3b9aca00L
 
 .field private static MAX_INT_AS_LONG:J = 0x7fffffffL
 
@@ -18,13 +14,11 @@
 
 .field private static MIN_INT_AS_LONG:J = -0x80000000L
 
-.field private static final NC:C = '\u0000'
+.field public static final SMALLEST_INT:Ljava/lang/String;
 
 .field public static final SMALLEST_LONG:Ljava/lang/String;
 
-.field private static TEN_BILLION_L:J = 0x2540be400L
-
-.field private static THOUSAND_L:J = 0x3e8L
+.field private static final TRIPLET_TO_CHARS:[I
 
 .field private static final sSmallIntStrs:[Ljava/lang/String;
 
@@ -33,175 +27,116 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 15
+    .locals 14
+
+    const/high16 v0, -0x80000000
+
+    .line 1
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_INT:Ljava/lang/String;
 
     const-wide/high16 v0, -0x8000000000000000L
 
-    .line 1
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
 
-    const/16 v0, 0xfa0
+    const/16 v0, 0x3e8
 
-    new-array v1, v0, [C
-
-    .line 2
-    sput-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->LEAD_3:[C
-
-    new-array v1, v0, [C
+    new-array v0, v0, [I
 
     .line 3
-    sput-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_3:[C
+    sput-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
+
+    move v1, v0
 
     move v2, v1
 
-    move v3, v2
-
     :goto_0
-    const/16 v4, 0xa
+    const/16 v3, 0xa
 
-    if-ge v2, v4, :cond_4
+    if-ge v1, v3, :cond_2
 
-    add-int/lit8 v5, v2, 0x30
-
-    int-to-char v5, v5
-
-    if-nez v2, :cond_0
-
-    move v6, v1
-
-    goto :goto_1
-
-    :cond_0
-    move v6, v5
+    move v4, v0
 
     :goto_1
-    move v7, v1
+    if-ge v4, v3, :cond_1
+
+    move v5, v0
 
     :goto_2
-    if-ge v7, v4, :cond_3
+    if-ge v5, v3, :cond_0
 
-    add-int/lit8 v8, v7, 0x30
+    add-int/lit8 v6, v1, 0x30
 
-    int-to-char v8, v8
+    shl-int/lit8 v6, v6, 0x10
 
-    if-nez v2, :cond_1
+    add-int/lit8 v7, v4, 0x30
 
-    if-nez v7, :cond_1
+    shl-int/lit8 v7, v7, 0x8
 
-    move v9, v1
+    or-int/2addr v6, v7
 
-    goto :goto_3
+    add-int/lit8 v7, v5, 0x30
 
-    :cond_1
-    move v9, v8
-
-    :goto_3
-    move v10, v1
-
-    :goto_4
-    if-ge v10, v4, :cond_2
-
-    add-int/lit8 v11, v10, 0x30
-
-    int-to-char v11, v11
+    or-int/2addr v6, v7
 
     .line 4
-    sget-object v12, Lcom/fasterxml/jackson/core/io/NumberOutput;->LEAD_3:[C
+    sget-object v7, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
 
-    aput-char v6, v12, v3
+    add-int/lit8 v8, v2, 0x1
 
-    add-int/lit8 v13, v3, 0x1
+    aput v6, v7, v2
 
-    .line 5
-    aput-char v9, v12, v13
+    add-int/lit8 v5, v5, 0x1
 
-    add-int/lit8 v14, v3, 0x2
-
-    .line 6
-    aput-char v11, v12, v14
-
-    .line 7
-    sget-object v12, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_3:[C
-
-    aput-char v5, v12, v3
-
-    .line 8
-    aput-char v8, v12, v13
-
-    .line 9
-    aput-char v11, v12, v14
-
-    add-int/lit8 v3, v3, 0x4
-
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_4
-
-    :cond_2
-    add-int/lit8 v7, v7, 0x1
+    move v2, v8
 
     goto :goto_2
 
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_4
-    new-array v2, v0, [B
+    :cond_2
+    const-string v3, "0"
 
-    .line 10
-    sput-object v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_TRIPLETS_B:[B
+    const-string v4, "1"
 
-    :goto_5
-    if-ge v1, v0, :cond_5
+    const-string v5, "2"
 
-    .line 11
-    sget-object v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_TRIPLETS_B:[B
+    const-string v6, "3"
 
-    sget-object v3, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_3:[C
+    const-string v7, "4"
 
-    aget-char v3, v3, v1
+    const-string v8, "5"
 
-    int-to-byte v3, v3
+    const-string v9, "6"
 
-    aput-byte v3, v2, v1
+    const-string v10, "7"
 
-    add-int/lit8 v1, v1, 0x1
+    const-string v11, "8"
 
-    goto :goto_5
+    const-string v12, "9"
 
-    :cond_5
-    const-string v2, "0"
+    const-string v13, "10"
 
-    const-string v3, "1"
-
-    const-string v4, "2"
-
-    const-string v5, "3"
-
-    const-string v6, "4"
-
-    const-string v7, "5"
-
-    const-string v8, "6"
-
-    const-string v9, "7"
-
-    const-string v10, "8"
-
-    const-string v11, "9"
-
-    const-string v12, "10"
-
-    .line 12
-    filled-new-array/range {v2 .. v12}, [Ljava/lang/String;
+    .line 5
+    filled-new-array/range {v3 .. v13}, [Ljava/lang/String;
 
     move-result-object v0
 
@@ -227,7 +162,7 @@
 
     const-string v10, "-10"
 
-    .line 13
+    .line 6
     filled-new-array/range {v1 .. v10}, [Ljava/lang/String;
 
     move-result-object v0
@@ -246,217 +181,992 @@
     return-void
 .end method
 
-.method private static calcLongStrLength(J)I
-    .locals 6
-
-    .line 1
-    sget-wide v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TEN_BILLION_L:J
-
-    const/16 v2, 0xa
-
-    :goto_0
-    cmp-long v3, p0, v0
-
-    if-ltz v3, :cond_1
-
-    const/16 v3, 0x13
-
-    if-ne v2, v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    const/4 v3, 0x3
-
-    shl-long v3, v0, v3
-
-    const/4 v5, 0x1
-
-    shl-long/2addr v0, v5
-
-    add-long/2addr v0, v3
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return v2
-.end method
-
-.method private static full3(I[BI)I
-    .locals 3
-
-    shl-int/lit8 p0, p0, 0x2
-
-    add-int/lit8 v0, p2, 0x1
-
-    .line 4
-    sget-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_TRIPLETS_B:[B
-
-    add-int/lit8 v2, p0, 0x1
-
-    aget-byte p0, v1, p0
-
-    aput-byte p0, p1, p2
-
-    add-int/lit8 p0, v0, 0x1
-
-    add-int/lit8 p2, v2, 0x1
+.method private static _full3(I[BI)I
+    .locals 2
 
     .line 5
-    aget-byte v2, v1, v2
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
 
-    aput-byte v2, p1, v0
-
-    add-int/lit8 v0, p0, 0x1
-
-    .line 6
-    aget-byte p2, v1, p2
-
-    aput-byte p2, p1, p0
-
-    return v0
-.end method
-
-.method private static full3(I[CI)I
-    .locals 3
-
-    shl-int/lit8 p0, p0, 0x2
+    aget p0, v0, p0
 
     add-int/lit8 v0, p2, 0x1
 
-    .line 1
-    sget-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->FULL_3:[C
-
-    add-int/lit8 v2, p0, 0x1
-
-    aget-char p0, v1, p0
-
-    aput-char p0, p1, p2
-
-    add-int/lit8 p0, v0, 0x1
-
-    add-int/lit8 p2, v2, 0x1
-
-    .line 2
-    aget-char v2, v1, v2
-
-    aput-char v2, p1, v0
-
-    add-int/lit8 v0, p0, 0x1
-
-    .line 3
-    aget-char p2, v1, p2
-
-    aput-char p2, p1, p0
-
-    return v0
-.end method
-
-.method private static leading3(I[BI)I
-    .locals 3
-
-    shl-int/lit8 p0, p0, 0x2
-
-    .line 6
-    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->LEAD_3:[C
-
-    add-int/lit8 v1, p0, 0x1
-
-    aget-char p0, v0, p0
-
-    if-eqz p0, :cond_0
-
-    add-int/lit8 v2, p2, 0x1
-
-    int-to-byte p0, p0
-
-    .line 7
-    aput-byte p0, p1, p2
-
-    move p2, v2
-
-    :cond_0
-    add-int/lit8 p0, v1, 0x1
-
-    .line 8
-    aget-char v1, v0, v1
-
-    if-eqz v1, :cond_1
-
-    add-int/lit8 v2, p2, 0x1
+    shr-int/lit8 v1, p0, 0x10
 
     int-to-byte v1, v1
 
-    .line 9
+    .line 6
     aput-byte v1, p1, p2
 
-    move p2, v2
+    add-int/lit8 p2, v0, 0x1
 
-    :cond_1
-    add-int/lit8 v1, p2, 0x1
+    shr-int/lit8 v1, p0, 0x8
 
-    .line 10
-    aget-char p0, v0, p0
+    int-to-byte v1, v1
+
+    .line 7
+    aput-byte v1, p1, v0
+
+    add-int/lit8 v0, p2, 0x1
 
     int-to-byte p0, p0
 
+    .line 8
     aput-byte p0, p1, p2
+
+    return v0
+.end method
+
+.method private static _full3(I[CI)I
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget p0, v0, p0
+
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p0, 0x10
+
+    int-to-char v1, v1
+
+    .line 2
+    aput-char v1, p1, p2
+
+    add-int/lit8 p2, v0, 0x1
+
+    shr-int/lit8 v1, p0, 0x8
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    .line 3
+    aput-char v1, p1, v0
+
+    add-int/lit8 v0, p2, 0x1
+
+    and-int/lit8 p0, p0, 0x7f
+
+    int-to-char p0, p0
+
+    .line 4
+    aput-char p0, p1, p2
+
+    return v0
+.end method
+
+.method private static _leading3(I[BI)I
+    .locals 2
+
+    .line 5
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v0, v0, p0
+
+    const/16 v1, 0x9
+
+    if-le p0, v1, :cond_1
+
+    const/16 v1, 0x63
+
+    if-le p0, v1, :cond_0
+
+    add-int/lit8 p0, p2, 0x1
+
+    shr-int/lit8 v1, v0, 0x10
+
+    int-to-byte v1, v1
+
+    .line 6
+    aput-byte v1, p1, p2
+
+    move p2, p0
+
+    :cond_0
+    add-int/lit8 p0, p2, 0x1
+
+    shr-int/lit8 v1, v0, 0x8
+
+    int-to-byte v1, v1
+
+    .line 7
+    aput-byte v1, p1, p2
+
+    move p2, p0
+
+    :cond_1
+    add-int/lit8 p0, p2, 0x1
+
+    int-to-byte v0, v0
+
+    .line 8
+    aput-byte v0, p1, p2
+
+    return p0
+.end method
+
+.method private static _leading3(I[CI)I
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v0, v0, p0
+
+    const/16 v1, 0x9
+
+    if-le p0, v1, :cond_1
+
+    const/16 v1, 0x63
+
+    if-le p0, v1, :cond_0
+
+    add-int/lit8 p0, p2, 0x1
+
+    shr-int/lit8 v1, v0, 0x10
+
+    int-to-char v1, v1
+
+    .line 2
+    aput-char v1, p1, p2
+
+    move p2, p0
+
+    :cond_0
+    add-int/lit8 p0, p2, 0x1
+
+    shr-int/lit8 v1, v0, 0x8
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    .line 3
+    aput-char v1, p1, p2
+
+    move p2, p0
+
+    :cond_1
+    add-int/lit8 p0, p2, 0x1
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    .line 4
+    aput-char v0, p1, p2
+
+    return p0
+.end method
+
+.method private static _outputFullBillion(I[BI)I
+    .locals 5
+
+    .line 15
+    div-int/lit16 v0, p0, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p0, v1
+
+    .line 16
+    div-int/lit16 v1, v0, 0x3e8
+
+    mul-int/lit16 v2, v1, 0x3e8
+
+    sub-int/2addr v0, v2
+
+    .line 17
+    sget-object v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v1, v2, v1
+
+    add-int/lit8 v3, p2, 0x1
+
+    shr-int/lit8 v4, v1, 0x10
+
+    int-to-byte v4, v4
+
+    .line 18
+    aput-byte v4, p1, p2
+
+    add-int/lit8 p2, v3, 0x1
+
+    shr-int/lit8 v4, v1, 0x8
+
+    int-to-byte v4, v4
+
+    .line 19
+    aput-byte v4, p1, v3
+
+    add-int/lit8 v3, p2, 0x1
+
+    int-to-byte v1, v1
+
+    .line 20
+    aput-byte v1, p1, p2
+
+    .line 21
+    aget p2, v2, v0
+
+    add-int/lit8 v0, v3, 0x1
+
+    shr-int/lit8 v1, p2, 0x10
+
+    int-to-byte v1, v1
+
+    .line 22
+    aput-byte v1, p1, v3
+
+    add-int/lit8 v1, v0, 0x1
+
+    shr-int/lit8 v3, p2, 0x8
+
+    int-to-byte v3, v3
+
+    .line 23
+    aput-byte v3, p1, v0
+
+    add-int/lit8 v0, v1, 0x1
+
+    int-to-byte p2, p2
+
+    .line 24
+    aput-byte p2, p1, v1
+
+    .line 25
+    aget p0, v2, p0
+
+    add-int/lit8 p2, v0, 0x1
+
+    shr-int/lit8 v1, p0, 0x10
+
+    int-to-byte v1, v1
+
+    .line 26
+    aput-byte v1, p1, v0
+
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p0, 0x8
+
+    int-to-byte v1, v1
+
+    .line 27
+    aput-byte v1, p1, p2
+
+    add-int/lit8 p2, v0, 0x1
+
+    int-to-byte p0, p0
+
+    .line 28
+    aput-byte p0, p1, v0
+
+    return p2
+.end method
+
+.method private static _outputFullBillion(I[CI)I
+    .locals 6
+
+    .line 1
+    div-int/lit16 v0, p0, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p0, v1
+
+    .line 2
+    div-int/lit16 v1, v0, 0x3e8
+
+    .line 3
+    sget-object v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v3, v2, v1
+
+    add-int/lit8 v4, p2, 0x1
+
+    shr-int/lit8 v5, v3, 0x10
+
+    int-to-char v5, v5
+
+    .line 4
+    aput-char v5, p1, p2
+
+    add-int/lit8 p2, v4, 0x1
+
+    shr-int/lit8 v5, v3, 0x8
+
+    and-int/lit8 v5, v5, 0x7f
+
+    int-to-char v5, v5
+
+    .line 5
+    aput-char v5, p1, v4
+
+    add-int/lit8 v4, p2, 0x1
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    .line 6
+    aput-char v3, p1, p2
+
+    mul-int/lit16 v1, v1, 0x3e8
+
+    sub-int/2addr v0, v1
+
+    .line 7
+    aget p2, v2, v0
+
+    add-int/lit8 v0, v4, 0x1
+
+    shr-int/lit8 v1, p2, 0x10
+
+    int-to-char v1, v1
+
+    .line 8
+    aput-char v1, p1, v4
+
+    add-int/lit8 v1, v0, 0x1
+
+    shr-int/lit8 v3, p2, 0x8
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    .line 9
+    aput-char v3, p1, v0
+
+    add-int/lit8 v0, v1, 0x1
+
+    and-int/lit8 p2, p2, 0x7f
+
+    int-to-char p2, p2
+
+    .line 10
+    aput-char p2, p1, v1
+
+    .line 11
+    aget p0, v2, p0
+
+    add-int/lit8 p2, v0, 0x1
+
+    shr-int/lit8 v1, p0, 0x10
+
+    int-to-char v1, v1
+
+    .line 12
+    aput-char v1, p1, v0
+
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p0, 0x8
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    .line 13
+    aput-char v1, p1, p2
+
+    add-int/lit8 p2, v0, 0x1
+
+    and-int/lit8 p0, p0, 0x7f
+
+    int-to-char p0, p0
+
+    .line 14
+    aput-char p0, p1, v0
+
+    return p2
+.end method
+
+.method private static _outputSmallestI([BI)I
+    .locals 4
+
+    .line 3
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_INT:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    add-int/lit8 v2, p1, 0x1
+
+    .line 4
+    sget-object v3, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_INT:Ljava/lang/String;
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    int-to-byte v3, v3
+
+    aput-byte v3, p0, p1
+
+    add-int/lit8 v1, v1, 0x1
+
+    move p1, v2
+
+    goto :goto_0
+
+    :cond_0
+    return p1
+.end method
+
+.method private static _outputSmallestI([CI)I
+    .locals 3
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_INT:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    .line 2
+    invoke-virtual {v0, v2, v1, p0, p1}, Ljava/lang/String;->getChars(II[CI)V
+
+    add-int/2addr v1, p1
 
     return v1
 .end method
 
-.method private static leading3(I[CI)I
+.method private static _outputSmallestL([BI)I
+    .locals 4
+
+    .line 3
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    add-int/lit8 v2, p1, 0x1
+
+    .line 4
+    sget-object v3, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    int-to-byte v3, v3
+
+    aput-byte v3, p0, p1
+
+    add-int/lit8 v1, v1, 0x1
+
+    move p1, v2
+
+    goto :goto_0
+
+    :cond_0
+    return p1
+.end method
+
+.method private static _outputSmallestL([CI)I
     .locals 3
 
-    shl-int/lit8 p0, p0, 0x2
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    .line 2
+    invoke-virtual {v0, v2, v1, p0, p1}, Ljava/lang/String;->getChars(II[CI)V
+
+    add-int/2addr v1, p1
+
+    return v1
+.end method
+
+.method private static _outputUptoBillion(I[BI)I
+    .locals 4
+
+    .line 16
+    sget v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->MILLION:I
+
+    if-ge p0, v0, :cond_1
+
+    const/16 v0, 0x3e8
+
+    if-ge p0, v0, :cond_0
+
+    .line 17
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[BI)I
+
+    move-result p0
+
+    return p0
+
+    .line 18
+    :cond_0
+    div-int/lit16 v0, p0, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p0, v1
+
+    .line 19
+    invoke-static {p1, p2, v0, p0}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputUptoMillion([BIII)I
+
+    move-result p0
+
+    return p0
+
+    .line 20
+    :cond_1
+    div-int/lit16 v0, p0, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p0, v1
+
+    .line 21
+    div-int/lit16 v1, v0, 0x3e8
+
+    mul-int/lit16 v2, v1, 0x3e8
+
+    sub-int/2addr v0, v2
+
+    .line 22
+    invoke-static {v1, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[BI)I
+
+    move-result p2
+
+    .line 23
+    sget-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v0, v1, v0
+
+    add-int/lit8 v2, p2, 0x1
+
+    shr-int/lit8 v3, v0, 0x10
+
+    int-to-byte v3, v3
+
+    .line 24
+    aput-byte v3, p1, p2
+
+    add-int/lit8 p2, v2, 0x1
+
+    shr-int/lit8 v3, v0, 0x8
+
+    int-to-byte v3, v3
+
+    .line 25
+    aput-byte v3, p1, v2
+
+    add-int/lit8 v2, p2, 0x1
+
+    int-to-byte v0, v0
+
+    .line 26
+    aput-byte v0, p1, p2
+
+    .line 27
+    aget p0, v1, p0
+
+    add-int/lit8 p2, v2, 0x1
+
+    shr-int/lit8 v0, p0, 0x10
+
+    int-to-byte v0, v0
+
+    .line 28
+    aput-byte v0, p1, v2
+
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p0, 0x8
+
+    int-to-byte v1, v1
+
+    .line 29
+    aput-byte v1, p1, p2
+
+    add-int/lit8 p2, v0, 0x1
+
+    int-to-byte p0, p0
+
+    .line 30
+    aput-byte p0, p1, v0
+
+    return p2
+.end method
+
+.method private static _outputUptoBillion(I[CI)I
+    .locals 4
 
     .line 1
-    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->LEAD_3:[C
+    sget v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->MILLION:I
 
-    add-int/lit8 v1, p0, 0x1
+    if-ge p0, v0, :cond_1
 
-    aget-char p0, v0, p0
+    const/16 v0, 0x3e8
+
+    if-ge p0, v0, :cond_0
+
+    .line 2
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[CI)I
+
+    move-result p0
+
+    return p0
+
+    .line 3
+    :cond_0
+    div-int/lit16 v0, p0, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p0, v1
+
+    .line 4
+    invoke-static {p1, p2, v0, p0}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputUptoMillion([CIII)I
+
+    move-result p0
+
+    return p0
+
+    .line 5
+    :cond_1
+    div-int/lit16 v0, p0, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p0, v1
+
+    .line 6
+    div-int/lit16 v1, v0, 0x3e8
+
+    mul-int/lit16 v2, v1, 0x3e8
+
+    sub-int/2addr v0, v2
+
+    .line 7
+    invoke-static {v1, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[CI)I
+
+    move-result p2
+
+    .line 8
+    sget-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v0, v1, v0
+
+    add-int/lit8 v2, p2, 0x1
+
+    shr-int/lit8 v3, v0, 0x10
+
+    int-to-char v3, v3
+
+    .line 9
+    aput-char v3, p1, p2
+
+    add-int/lit8 p2, v2, 0x1
+
+    shr-int/lit8 v3, v0, 0x8
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    .line 10
+    aput-char v3, p1, v2
+
+    add-int/lit8 v2, p2, 0x1
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    .line 11
+    aput-char v0, p1, p2
+
+    .line 12
+    aget p0, v1, p0
+
+    add-int/lit8 p2, v2, 0x1
+
+    shr-int/lit8 v0, p0, 0x10
+
+    int-to-char v0, v0
+
+    .line 13
+    aput-char v0, p1, v2
+
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p0, 0x8
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    .line 14
+    aput-char v1, p1, p2
+
+    add-int/lit8 p2, v0, 0x1
+
+    and-int/lit8 p0, p0, 0x7f
+
+    int-to-char p0, p0
+
+    .line 15
+    aput-char p0, p1, v0
+
+    return p2
+.end method
+
+.method private static _outputUptoMillion([BIII)I
+    .locals 3
+
+    .line 9
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v1, v0, p2
+
+    const/16 v2, 0x9
+
+    if-le p2, v2, :cond_1
+
+    const/16 v2, 0x63
+
+    if-le p2, v2, :cond_0
+
+    add-int/lit8 p2, p1, 0x1
+
+    shr-int/lit8 v2, v1, 0x10
+
+    int-to-byte v2, v2
+
+    .line 10
+    aput-byte v2, p0, p1
+
+    move p1, p2
+
+    :cond_0
+    add-int/lit8 p2, p1, 0x1
+
+    shr-int/lit8 v2, v1, 0x8
+
+    int-to-byte v2, v2
+
+    .line 11
+    aput-byte v2, p0, p1
+
+    move p1, p2
+
+    :cond_1
+    add-int/lit8 p2, p1, 0x1
+
+    int-to-byte v1, v1
+
+    .line 12
+    aput-byte v1, p0, p1
+
+    .line 13
+    aget p1, v0, p3
+
+    add-int/lit8 p3, p2, 0x1
+
+    shr-int/lit8 v0, p1, 0x10
+
+    int-to-byte v0, v0
+
+    .line 14
+    aput-byte v0, p0, p2
+
+    add-int/lit8 p2, p3, 0x1
+
+    shr-int/lit8 v0, p1, 0x8
+
+    int-to-byte v0, v0
+
+    .line 15
+    aput-byte v0, p0, p3
+
+    add-int/lit8 p3, p2, 0x1
+
+    int-to-byte p1, p1
+
+    .line 16
+    aput-byte p1, p0, p2
+
+    return p3
+.end method
+
+.method private static _outputUptoMillion([CIII)I
+    .locals 3
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->TRIPLET_TO_CHARS:[I
+
+    aget v1, v0, p2
+
+    const/16 v2, 0x9
+
+    if-le p2, v2, :cond_1
+
+    const/16 v2, 0x63
+
+    if-le p2, v2, :cond_0
+
+    add-int/lit8 p2, p1, 0x1
+
+    shr-int/lit8 v2, v1, 0x10
+
+    int-to-char v2, v2
+
+    .line 2
+    aput-char v2, p0, p1
+
+    move p1, p2
+
+    :cond_0
+    add-int/lit8 p2, p1, 0x1
+
+    shr-int/lit8 v2, v1, 0x8
+
+    and-int/lit8 v2, v2, 0x7f
+
+    int-to-char v2, v2
+
+    .line 3
+    aput-char v2, p0, p1
+
+    move p1, p2
+
+    :cond_1
+    add-int/lit8 p2, p1, 0x1
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    .line 4
+    aput-char v1, p0, p1
+
+    .line 5
+    aget p1, v0, p3
+
+    add-int/lit8 p3, p2, 0x1
+
+    shr-int/lit8 v0, p1, 0x10
+
+    int-to-char v0, v0
+
+    .line 6
+    aput-char v0, p0, p2
+
+    add-int/lit8 p2, p3, 0x1
+
+    shr-int/lit8 v0, p1, 0x8
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    .line 7
+    aput-char v0, p0, p3
+
+    add-int/lit8 p3, p2, 0x1
+
+    and-int/lit8 p1, p1, 0x7f
+
+    int-to-char p1, p1
+
+    .line 8
+    aput-char p1, p0, p2
+
+    return p3
+.end method
+
+.method public static notFinite(D)Z
+    .locals 1
+
+    .line 1
+    invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p0, p1}, Ljava/lang/Double;->isInfinite(D)Z
+
+    move-result p0
 
     if-eqz p0, :cond_0
 
-    add-int/lit8 v2, p2, 0x1
-
-    .line 2
-    aput-char p0, p1, p2
-
-    move p2, v2
+    goto :goto_0
 
     :cond_0
-    add-int/lit8 p0, v1, 0x1
+    const/4 p0, 0x0
 
-    .line 3
-    aget-char v1, v0, v1
-
-    if-eqz v1, :cond_1
-
-    add-int/lit8 v2, p2, 0x1
-
-    .line 4
-    aput-char v1, p1, p2
-
-    move p2, v2
+    goto :goto_1
 
     :cond_1
-    add-int/lit8 v1, p2, 0x1
+    :goto_0
+    const/4 p0, 0x1
 
-    .line 5
-    aget-char p0, v0, p0
+    :goto_1
+    return p0
+.end method
 
-    aput-char p0, p1, p2
+.method public static notFinite(F)Z
+    .locals 1
 
-    return v1
+    .line 2
+    invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p0}, Ljava/lang/Float;->isInfinite(F)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
 .end method
 
 .method public static outputInt(I[BI)I
-    .locals 4
+    .locals 3
 
     if-gez p0, :cond_1
 
@@ -464,10 +1174,8 @@
 
     if-ne p0, v0, :cond_0
 
-    int-to-long v0, p0
-
     .line 18
-    invoke-static {v0, v1, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->outputLong(J[BI)I
+    invoke-static {p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputSmallestI([BI)I
 
     move-result p0
 
@@ -512,7 +1220,7 @@
 
     .line 22
     :cond_2
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[BI)I
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[BI)I
 
     move-result v0
 
@@ -527,12 +1235,12 @@
     sub-int/2addr p0, v1
 
     .line 24
-    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[BI)I
+    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[BI)I
 
     move-result p2
 
     .line 25
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[BI)I
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_full3(I[BI)I
 
     move-result v0
 
@@ -543,82 +1251,66 @@
     :cond_4
     sget v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->BILLION:I
 
-    if-lt p0, v0, :cond_5
-
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    const/4 v1, 0x0
-
-    :goto_1
-    if-eqz v1, :cond_7
-
-    sub-int/2addr p0, v0
-
     if-lt p0, v0, :cond_6
 
     sub-int/2addr p0, v0
 
+    if-lt p0, v0, :cond_5
+
+    sub-int/2addr p0, v0
+
     add-int/lit8 v0, p2, 0x1
 
-    const/16 v2, 0x32
+    const/16 v1, 0x32
 
     .line 27
-    aput-byte v2, p1, p2
+    aput-byte v1, p1, p2
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_6
+    :cond_5
     add-int/lit8 v0, p2, 0x1
 
-    const/16 v2, 0x31
+    const/16 v1, 0x31
 
     .line 28
-    aput-byte v2, p1, p2
-
-    :goto_2
-    move p2, v0
+    aput-byte v1, p1, p2
 
     .line 29
-    :cond_7
-    div-int/lit16 v0, p0, 0x3e8
+    :goto_1
+    invoke-static {p0, p1, v0}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputFullBillion(I[BI)I
 
-    mul-int/lit16 v2, v0, 0x3e8
+    move-result p0
 
-    sub-int/2addr p0, v2
+    return p0
 
     .line 30
-    div-int/lit16 v2, v0, 0x3e8
+    :cond_6
+    div-int/lit16 v0, p0, 0x3e8
 
-    mul-int/lit16 v3, v2, 0x3e8
+    mul-int/lit16 v1, v0, 0x3e8
 
-    sub-int/2addr v0, v3
-
-    if-eqz v1, :cond_8
+    sub-int/2addr p0, v1
 
     .line 31
-    invoke-static {v2, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[BI)I
+    div-int/lit16 v1, v0, 0x3e8
 
-    move-result p2
+    mul-int/lit16 v2, v1, 0x3e8
 
-    goto :goto_3
+    sub-int/2addr v0, v2
 
     .line 32
-    :cond_8
-    invoke-static {v2, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[BI)I
+    invoke-static {v1, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[BI)I
 
     move-result p2
 
     .line 33
-    :goto_3
-    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[BI)I
+    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_full3(I[BI)I
 
     move-result p2
 
     .line 34
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[BI)I
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_full3(I[BI)I
 
     move-result p0
 
@@ -626,7 +1318,7 @@
 .end method
 
 .method public static outputInt(I[CI)I
-    .locals 4
+    .locals 3
 
     if-gez p0, :cond_1
 
@@ -634,10 +1326,8 @@
 
     if-ne p0, v0, :cond_0
 
-    int-to-long v0, p0
-
     .line 1
-    invoke-static {v0, v1, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->outputLong(J[CI)I
+    invoke-static {p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputSmallestI([CI)I
 
     move-result p0
 
@@ -669,8 +1359,6 @@
 
     if-ge p0, v0, :cond_2
 
-    add-int/lit8 v0, p2, 0x1
-
     add-int/lit8 p0, p0, 0x30
 
     int-to-char p0, p0
@@ -678,15 +1366,17 @@
     .line 4
     aput-char p0, p1, p2
 
-    goto :goto_0
+    add-int/lit8 p2, p2, 0x1
+
+    return p2
 
     .line 5
     :cond_2
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[CI)I
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[CI)I
 
-    move-result v0
+    move-result p0
 
-    goto :goto_0
+    return p0
 
     .line 6
     :cond_3
@@ -697,98 +1387,81 @@
     sub-int/2addr p0, v1
 
     .line 7
-    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[CI)I
+    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[CI)I
 
     move-result p2
 
     .line 8
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[CI)I
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_full3(I[CI)I
 
-    move-result v0
+    move-result p0
 
-    :goto_0
-    return v0
+    return p0
 
     .line 9
     :cond_4
     sget v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->BILLION:I
 
-    if-lt p0, v0, :cond_5
-
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    const/4 v1, 0x0
-
-    :goto_1
-    if-eqz v1, :cond_7
-
-    sub-int/2addr p0, v0
-
     if-lt p0, v0, :cond_6
 
     sub-int/2addr p0, v0
 
+    if-lt p0, v0, :cond_5
+
+    sub-int/2addr p0, v0
+
     add-int/lit8 v0, p2, 0x1
 
-    const/16 v2, 0x32
+    const/16 v1, 0x32
 
     .line 10
-    aput-char v2, p1, p2
+    aput-char v1, p1, p2
 
-    goto :goto_2
+    goto :goto_0
 
-    :cond_6
+    :cond_5
     add-int/lit8 v0, p2, 0x1
 
-    const/16 v2, 0x31
+    const/16 v1, 0x31
 
     .line 11
-    aput-char v2, p1, p2
-
-    :goto_2
-    move p2, v0
+    aput-char v1, p1, p2
 
     .line 12
-    :cond_7
-    div-int/lit16 v0, p0, 0x3e8
+    :goto_0
+    invoke-static {p0, p1, v0}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputFullBillion(I[CI)I
 
-    mul-int/lit16 v2, v0, 0x3e8
+    move-result p0
 
-    sub-int/2addr p0, v2
+    return p0
 
     .line 13
-    div-int/lit16 v2, v0, 0x3e8
+    :cond_6
+    div-int/lit16 v0, p0, 0x3e8
 
-    mul-int/lit16 v3, v2, 0x3e8
+    mul-int/lit16 v1, v0, 0x3e8
 
-    sub-int/2addr v0, v3
-
-    if-eqz v1, :cond_8
+    sub-int/2addr p0, v1
 
     .line 14
-    invoke-static {v2, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[CI)I
+    div-int/lit16 v1, v0, 0x3e8
 
-    move-result p2
+    mul-int/lit16 v2, v1, 0x3e8
 
-    goto :goto_3
+    sub-int/2addr v0, v2
 
     .line 15
-    :cond_8
-    invoke-static {v2, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[CI)I
+    invoke-static {v1, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[CI)I
 
     move-result p2
 
     .line 16
-    :goto_3
-    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[CI)I
+    invoke-static {v0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_full3(I[CI)I
 
     move-result p2
 
     .line 17
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[CI)I
+    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_full3(I[CI)I
 
     move-result p0
 
@@ -802,9 +1475,9 @@
 
     cmp-long v0, p0, v0
 
-    if-gez v0, :cond_3
+    if-gez v0, :cond_2
 
-    .line 15
+    .line 13
     sget-wide v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->MIN_INT_AS_LONG:J
 
     cmp-long v0, p0, v0
@@ -813,7 +1486,7 @@
 
     long-to-int p0, p0
 
-    .line 16
+    .line 14
     invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->outputInt(I[BI)I
 
     move-result p0
@@ -825,141 +1498,101 @@
 
     cmp-long v0, p0, v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    .line 17
-    sget-object p0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    .line 15
+    invoke-static {p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputSmallestL([BI)I
 
     move-result p0
 
-    const/4 p1, 0x0
-
-    :goto_0
-    if-ge p1, p0, :cond_1
-
-    add-int/lit8 v0, p3, 0x1
-
-    .line 18
-    sget-object v1, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    int-to-byte v1, v1
-
-    aput-byte v1, p2, p3
-
-    add-int/lit8 p1, p1, 0x1
-
-    move p3, v0
-
-    goto :goto_0
+    return p0
 
     :cond_1
-    return p3
-
-    :cond_2
     add-int/lit8 v0, p3, 0x1
 
     const/16 v1, 0x2d
 
-    .line 19
+    .line 16
     aput-byte v1, p2, p3
 
     neg-long p0, p0
 
     move p3, v0
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 20
-    :cond_3
+    .line 17
+    :cond_2
     sget-wide v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->MAX_INT_AS_LONG:J
 
     cmp-long v0, p0, v0
 
-    if-gtz v0, :cond_4
+    if-gtz v0, :cond_3
 
     long-to-int p0, p0
 
-    .line 21
+    .line 18
     invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->outputInt(I[BI)I
 
     move-result p0
 
     return p0
 
-    .line 22
+    .line 19
+    :cond_3
+    :goto_0
+    sget-wide v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->BILLION_L:J
+
+    div-long v2, p0, v0
+
+    mul-long v4, v2, v0
+
+    sub-long/2addr p0, v4
+
+    cmp-long v4, v2, v0
+
+    if-gez v4, :cond_4
+
+    long-to-int v0, v2
+
+    .line 20
+    invoke-static {v0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputUptoBillion(I[BI)I
+
+    move-result p3
+
+    goto :goto_1
+
+    .line 21
     :cond_4
-    :goto_1
-    invoke-static {p0, p1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->calcLongStrLength(J)I
+    div-long v4, v2, v0
 
-    move-result v0
+    mul-long/2addr v0, v4
 
-    add-int/2addr v0, p3
+    sub-long/2addr v2, v0
 
-    move v1, v0
+    long-to-int v0, v4
+
+    .line 22
+    invoke-static {v0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[BI)I
+
+    move-result p3
+
+    long-to-int v0, v2
 
     .line 23
-    :goto_2
-    sget-wide v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->MAX_INT_AS_LONG:J
+    invoke-static {v0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputFullBillion(I[BI)I
 
-    cmp-long v2, p0, v2
+    move-result p3
 
-    if-lez v2, :cond_5
-
-    add-int/lit8 v1, v1, -0x3
+    :goto_1
+    long-to-int p0, p0
 
     .line 24
-    sget-wide v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->THOUSAND_L:J
+    invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputFullBillion(I[BI)I
 
-    div-long v4, p0, v2
+    move-result p0
 
-    mul-long/2addr v2, v4
-
-    sub-long/2addr p0, v2
-
-    long-to-int p0, p0
-
-    .line 25
-    invoke-static {p0, p2, v1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[BI)I
-
-    move-wide p0, v4
-
-    goto :goto_2
-
-    :cond_5
-    long-to-int p0, p0
-
-    :goto_3
-    const/16 p1, 0x3e8
-
-    if-lt p0, p1, :cond_6
-
-    add-int/lit8 v1, v1, -0x3
-
-    .line 26
-    div-int/lit16 p1, p0, 0x3e8
-
-    mul-int/lit16 v2, p1, 0x3e8
-
-    sub-int/2addr p0, v2
-
-    .line 27
-    invoke-static {p0, p2, v1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[BI)I
-
-    move p0, p1
-
-    goto :goto_3
-
-    .line 28
-    :cond_6
-    invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[BI)I
-
-    return v0
+    return p0
 .end method
 
 .method public static outputLong(J[CI)I
@@ -995,27 +1628,18 @@
     if-nez v0, :cond_1
 
     .line 3
-    sget-object p0, Lcom/fasterxml/jackson/core/io/NumberOutput;->SMALLEST_LONG:Ljava/lang/String;
+    invoke-static {p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputSmallestL([CI)I
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    move-result p0
 
-    move-result p1
-
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-virtual {p0, v0, p1, p2, p3}, Ljava/lang/String;->getChars(II[CI)V
-
-    add-int/2addr p1, p3
-
-    return p1
+    return p0
 
     :cond_1
     add-int/lit8 v0, p3, 0x1
 
     const/16 v1, 0x2d
 
-    .line 5
+    .line 4
     aput-char v1, p2, p3
 
     neg-long p0, p0
@@ -1024,7 +1648,7 @@
 
     goto :goto_0
 
-    .line 6
+    .line 5
     :cond_2
     sget-wide v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->MAX_INT_AS_LONG:J
 
@@ -1034,81 +1658,68 @@
 
     long-to-int p0, p0
 
-    .line 7
+    .line 6
     invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->outputInt(I[CI)I
 
     move-result p0
 
     return p0
 
-    .line 8
+    .line 7
     :cond_3
     :goto_0
-    invoke-static {p0, p1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->calcLongStrLength(J)I
+    sget-wide v0, Lcom/fasterxml/jackson/core/io/NumberOutput;->BILLION_L:J
 
-    move-result v0
+    div-long v2, p0, v0
 
-    add-int/2addr v0, p3
+    mul-long v4, v2, v0
 
-    move v1, v0
+    sub-long/2addr p0, v4
 
-    .line 9
-    :goto_1
-    sget-wide v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->MAX_INT_AS_LONG:J
+    cmp-long v4, v2, v0
 
-    cmp-long v2, p0, v2
+    if-gez v4, :cond_4
 
-    if-lez v2, :cond_4
+    long-to-int v0, v2
 
-    add-int/lit8 v1, v1, -0x3
+    .line 8
+    invoke-static {v0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputUptoBillion(I[CI)I
 
-    .line 10
-    sget-wide v2, Lcom/fasterxml/jackson/core/io/NumberOutput;->THOUSAND_L:J
-
-    div-long v4, p0, v2
-
-    mul-long/2addr v2, v4
-
-    sub-long/2addr p0, v2
-
-    long-to-int p0, p0
-
-    .line 11
-    invoke-static {p0, p2, v1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[CI)I
-
-    move-wide p0, v4
+    move-result p3
 
     goto :goto_1
 
+    .line 9
     :cond_4
+    div-long v4, v2, v0
+
+    mul-long/2addr v0, v4
+
+    sub-long/2addr v2, v0
+
+    long-to-int v0, v4
+
+    .line 10
+    invoke-static {v0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_leading3(I[CI)I
+
+    move-result p3
+
+    long-to-int v0, v2
+
+    .line 11
+    invoke-static {v0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputFullBillion(I[CI)I
+
+    move-result p3
+
+    :goto_1
     long-to-int p0, p0
 
-    :goto_2
-    const/16 p1, 0x3e8
-
-    if-lt p0, p1, :cond_5
-
-    add-int/lit8 v1, v1, -0x3
-
     .line 12
-    div-int/lit16 p1, p0, 0x3e8
+    invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->_outputFullBillion(I[CI)I
 
-    mul-int/lit16 v2, p1, 0x3e8
+    move-result p0
 
-    sub-int/2addr p0, v2
-
-    .line 13
-    invoke-static {p0, p2, v1}, Lcom/fasterxml/jackson/core/io/NumberOutput;->full3(I[CI)I
-
-    move p0, p1
-
-    goto :goto_2
-
-    .line 14
-    :cond_5
-    invoke-static {p0, p2, p3}, Lcom/fasterxml/jackson/core/io/NumberOutput;->leading3(I[CI)I
-
-    return v0
+    return p0
 .end method
 
 .method public static toString(D)Ljava/lang/String;

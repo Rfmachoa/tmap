@@ -1,26 +1,13 @@
 .class final Lcom/google/android/gms/tagmanager/zzen;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 # interfaces
-.implements Lcom/google/android/gms/tagmanager/zzr;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tagmanager/zzr<",
-        "Lcom/google/android/gms/internal/gtm/zzro;",
-        "Lcom/google/android/gms/tagmanager/zzds<",
-        "Lcom/google/android/gms/internal/gtm/zzak;",
-        ">;>;"
-    }
-.end annotation
+.implements Lcom/google/android/gms/tagmanager/zzq;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzeu;)V
+.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -30,24 +17,24 @@
 
 
 # virtual methods
-.method public final bridge synthetic zza(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final synthetic zza(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzro;
+    check-cast p1, Ljava/lang/String;
 
-    check-cast p2, Lcom/google/android/gms/tagmanager/zzds;
+    check-cast p2, Lcom/google/android/gms/tagmanager/zzer;
 
     .line 2
-    invoke-virtual {p2}, Lcom/google/android/gms/tagmanager/zzds;->zza()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/internal/gtm/zzak;
-
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/gtm/zzuz;->zzX()I
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p1
+
+    invoke-virtual {p2}, Lcom/google/android/gms/tagmanager/zzer;->zza()I
+
+    move-result p2
+
+    add-int/2addr p1, p2
 
     return p1
 .end method

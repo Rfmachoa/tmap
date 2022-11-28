@@ -130,6 +130,14 @@
 
 .method public setConfirmTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "confirmTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->confirmTitle:Ljava/lang/String;
@@ -139,6 +147,14 @@
 
 .method public setFailConfirmTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failConfirmTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->failConfirmTitle:Ljava/lang/String;
@@ -148,6 +164,14 @@
 
 .method public setFailMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->failMessage:Ljava/lang/String;
@@ -157,6 +181,14 @@
 
 .method public setFailTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->failTitle:Ljava/lang/String;
@@ -166,6 +198,14 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->message:Ljava/lang/String;
@@ -176,6 +216,15 @@
 .method public setSuccess(Z)V
     .locals 1
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "success"
+        }
     .end annotation
 
     const/4 v0, 0x1
@@ -201,6 +250,14 @@
 
 .method public setSuccessYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "successYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->successYn:Ljava/lang/String;
@@ -210,6 +267,14 @@
 
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "title"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResJackpotHappenBodyVo$ResJackpotVo;->title:Ljava/lang/String;

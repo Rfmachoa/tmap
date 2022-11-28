@@ -136,9 +136,9 @@
     return-object v0
 .end method
 
-.method public b(Ls1/d;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public b(Landroidx/core/view/f;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p1    # Ls1/d;
+    .param p1    # Landroidx/core/view/f;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -148,14 +148,14 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->c(Ls1/d;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->c(Landroidx/core/view/f;)V
 
     return-object p0
 .end method
 
-.method public c(ILc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public c(ILv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p2    # Lc1/l;
+    .param p2    # Lv1/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -165,14 +165,14 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/core/view/WindowInsetsCompat$f;->d(ILc1/l;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/core/view/WindowInsetsCompat$f;->d(ILv1/k;)V
 
     return-object p0
 .end method
 
-.method public d(ILc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public d(ILv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p2    # Lc1/l;
+    .param p2    # Lv1/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -182,34 +182,14 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/core/view/WindowInsetsCompat$f;->e(ILc1/l;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/core/view/WindowInsetsCompat$f;->e(ILv1/k;)V
 
     return-object p0
 .end method
 
-.method public e(Lc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public e(Lv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p1    # Lc1/l;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
-
-    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->f(Lc1/l;)V
-
-    return-object p0
-.end method
-
-.method public f(Lc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
-    .locals 1
-    .param p1    # Lc1/l;
+    .param p1    # Lv1/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -222,14 +202,14 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->g(Lc1/l;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->f(Lv1/k;)V
 
     return-object p0
 .end method
 
-.method public g(Lc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public f(Lv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p1    # Lc1/l;
+    .param p1    # Lv1/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -242,14 +222,14 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->h(Lc1/l;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->g(Lv1/k;)V
 
     return-object p0
 .end method
 
-.method public h(Lc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public g(Lv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p1    # Lc1/l;
+    .param p1    # Lv1/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -262,14 +242,14 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->i(Lc1/l;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->h(Lv1/k;)V
 
     return-object p0
 .end method
 
-.method public i(Lc1/l;)Landroidx/core/view/WindowInsetsCompat$b;
+.method public h(Lv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
     .locals 1
-    .param p1    # Lc1/l;
+    .param p1    # Lv1/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -282,7 +262,27 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
 
-    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->j(Lc1/l;)V
+    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->i(Lv1/k;)V
+
+    return-object p0
+.end method
+
+.method public i(Lv1/k;)Landroidx/core/view/WindowInsetsCompat$b;
+    .locals 1
+    .param p1    # Lv1/k;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$b;->a:Landroidx/core/view/WindowInsetsCompat$f;
+
+    invoke-virtual {v0, p1}, Landroidx/core/view/WindowInsetsCompat$f;->j(Lv1/k;)V
 
     return-object p0
 .end method

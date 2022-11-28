@@ -3,53 +3,49 @@
 .source "AladdinAlarmManager.java"
 
 # interfaces
-.implements Lla/b;
+.implements Lic/b;
 
 
 # static fields
-.field public static final b1:Ljava/lang/String; = "a"
+.field public static final d1:Ljava/lang/String; = "a"
 
-.field public static final c1:I = 0x2bf20
+.field public static final e1:I = 0x2bf20
 
-.field public static final d1:I = 0x7d0
+.field public static final f1:I = 0x7d0
 
-.field public static final e1:I = 0x2710
+.field public static final g1:I = 0x2710
 
-.field public static final f1:I = 0x7530
+.field public static final h1:I = 0x7530
 
-.field public static final g1:F = 0.25f
+.field public static final i1:F = 0.25f
 
-.field public static final h1:F = 0.8f
+.field public static final j1:F = 0.8f
 
-.field public static final i1:I = 0x5265c00
+.field public static final k1:I = 0x5265c00
 
-.field public static final j1:I = 0x3e8
+.field public static final l1:I = 0x3e8
 
-.field public static final k1:I = 0x1
+.field public static final m1:I = 0x1
 
-.field public static final l1:I = 0x2
+.field public static final n1:I = 0x2
 
-.field public static final m1:I = 0x3
+.field public static final o1:I = 0x3
 
-.field public static final n1:I = 0x4
+.field public static final p1:I = 0x4
 
-.field public static final o1:I = 0x5
+.field public static final q1:I = 0x5
 
-.field public static final p1:I = 0x6
+.field public static final r1:I = 0x6
 
-.field public static final q1:I = 0x7
+.field public static final s1:I = 0x7
 
-.field public static final r1:Ljava/lang/String; = "timer_id"
+.field public static final t1:Ljava/lang/String; = "timer_id"
 
-.field public static final s1:Ljava/lang/String; = "sleep_timer_id"
+.field public static final u1:Ljava/lang/String; = "sleep_timer_id"
 
 
 # instance fields
 .field public K0:Lcom/skt/aicloud/speaker/lib/state/AppState;
-
-.field public V0:Landroid/os/Handler;
-
-.field public W0:Ljava/lang/Runnable;
 
 .field public X0:Landroid/os/Handler;
 
@@ -61,7 +57,11 @@
 
 .field public b:Landroid/media/Ringtone;
 
+.field public b1:Landroid/os/Handler;
+
 .field public c:Landroid/content/Context;
+
+.field public c1:Ljava/lang/Runnable;
 
 .field public d:Landroid/app/PendingIntent;
 
@@ -73,7 +73,7 @@
 
 .field public h:I
 
-.field public i:Lpa/a;
+.field public i:Lmc/a;
 
 .field public j:Z
 
@@ -91,7 +91,7 @@
 
 .field public l:I
 
-.field public p:[Lpa/a;
+.field public p:[Lmc/a;
 
 .field public u:I
 
@@ -124,10 +124,10 @@
 
     const/4 v0, 0x4
 
-    new-array v0, v0, [Lpa/a;
+    new-array v0, v0, [Lmc/a;
 
     .line 18
-    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     .line 19
     iput p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->u:I
@@ -144,42 +144,42 @@
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->V0:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
 
     .line 22
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/a$a;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/a$a;-><init>(Lcom/skt/aicloud/speaker/service/api/a;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->W0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
 
     .line 23
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
 
     .line 24
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/a$b;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/a$b;-><init>(Lcom/skt/aicloud/speaker/service/api/a;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
 
     .line 25
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Landroid/os/Handler;
 
     .line 26
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/a$c;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/a$c;-><init>(Lcom/skt/aicloud/speaker/service/api/a;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c1:Ljava/lang/Runnable;
 
     .line 27
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/b;->r()Landroid/content/Context;
@@ -236,10 +236,10 @@
 
     const/4 p2, 0x4
 
-    new-array p2, p2, [Lpa/a;
+    new-array p2, p2, [Lmc/a;
 
     .line 5
-    iput-object p2, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iput-object p2, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     .line 6
     iput p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->u:I
@@ -256,42 +256,42 @@
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->V0:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
 
     .line 9
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/a$a;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/a$a;-><init>(Lcom/skt/aicloud/speaker/service/api/a;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->W0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
 
     .line 10
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
 
     .line 11
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/a$b;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/a$b;-><init>(Lcom/skt/aicloud/speaker/service/api/a;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
 
     .line 12
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Landroid/os/Handler;
 
     .line 13
     new-instance p1, Lcom/skt/aicloud/speaker/service/api/a$c;
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/api/a$c;-><init>(Lcom/skt/aicloud/speaker/service/api/a;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c1:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -319,9 +319,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lg9/a;
+    new-instance v0, Ldb/a;
 
-    invoke-direct {v0, p0}, Lg9/a;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;)V
+    invoke-direct {v0, p0}, Ldb/a;-><init>(Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;)V
 
     return-object v0
 .end method
@@ -330,7 +330,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -424,14 +424,14 @@
     if-eqz v1, :cond_3
 
     .line 4
-    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v4, "AlarmAlert >> AlarmAlert : Alert Initialize!!"
 
     invoke-static {v1, v4}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     if-eqz v1, :cond_1
 
@@ -441,22 +441,22 @@
     if-ne v1, v3, :cond_0
 
     .line 7
-    invoke-static {}, Lla/g;->r0()Lla/g;
+    invoke-static {}, Lic/g;->r0()Lic/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lla/g;->H()Z
+    invoke-virtual {v1}, Lic/g;->H()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 8
-    invoke-static {}, Lla/g;->r0()Lla/g;
+    invoke-static {}, Lic/g;->r0()Lic/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lla/a;->stop()V
+    invoke-virtual {v1}, Lic/a;->stop()V
 
     goto :goto_0
 
@@ -483,22 +483,22 @@
     invoke-virtual {v1}, Landroid/media/Ringtone;->stop()V
 
     .line 12
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->V0:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
 
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->W0:Ljava/lang/Runnable;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 13
     :cond_1
     :goto_0
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     if-eqz v1, :cond_2
 
-    const-string/jumbo v4, "timer_id"
+    const-string v4, "timer_id"
 
-    iget-object v1, v1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v1, v1, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -511,7 +511,7 @@
 
     .line 15
     :cond_2
-    iput-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iput-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     .line 16
     iput-boolean v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->j:Z
@@ -520,7 +520,7 @@
 
     .line 17
     :goto_1
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     array-length v5, v4
 
@@ -560,7 +560,7 @@
     iput-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->K0:Lcom/skt/aicloud/speaker/lib/state/AppState;
 
     .line 22
-    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -582,7 +582,7 @@
 
     .line 23
     :cond_4
-    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -676,14 +676,14 @@
     invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
     .line 31
-    new-instance v6, Lpa/a;
+    new-instance v6, Lmc/a;
 
-    invoke-direct {v6, v5}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v6, v5}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
-    const-string/jumbo v7, "timer_id"
+    const-string v7, "timer_id"
 
     .line 32
-    iget-object v8, v6, Lpa/a;->b:Ljava/lang/String;
+    iget-object v8, v6, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -692,14 +692,14 @@
     if-eqz v7, :cond_9
 
     .line 33
-    invoke-virtual {v6}, Lpa/a;->a()I
+    invoke-virtual {v6}, Lmc/a;->a()I
 
     move-result v7
 
     if-eqz v7, :cond_8
 
     .line 34
-    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v7, "TIMER is expired!!"
 
@@ -709,14 +709,14 @@
 
     .line 35
     :cond_8
-    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v8, "TIMER Add!!"
 
     invoke-static {v7, v8}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 36
-    iget-object v7, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v7, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     aput-object v6, v7, v0
     :try_end_2
@@ -727,7 +727,7 @@
     :try_start_3
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2, v6, v3}, Lcom/skt/aicloud/speaker/service/sync/database/b;->u(Landroid/content/Context;Lpa/a;I)V
+    invoke-static {v2, v6, v3}, Lcom/skt/aicloud/speaker/service/sync/database/b;->u(Landroid/content/Context;Lmc/a;I)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -755,7 +755,7 @@
     const-string v7, "sleep_timer_id"
 
     .line 38
-    iget-object v8, v6, Lpa/a;->b:Ljava/lang/String;
+    iget-object v8, v6, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -764,14 +764,14 @@
     if-eqz v7, :cond_b
 
     .line 39
-    invoke-virtual {v6}, Lpa/a;->a()I
+    invoke-virtual {v6}, Lmc/a;->a()I
 
     move-result v7
 
     if-eqz v7, :cond_a
 
     .line 40
-    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v7, "SLEEP is expired!!"
 
@@ -781,14 +781,14 @@
 
     .line 41
     :cond_a
-    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v8, "SLEEP Add!!"
 
     invoke-static {v7, v8}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 42
-    iget-object v7, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v7, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     const/4 v8, 0x3
 
@@ -801,7 +801,7 @@
     :try_start_5
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2, v6, v3}, Lcom/skt/aicloud/speaker/service/sync/database/b;->u(Landroid/content/Context;Lpa/a;I)V
+    invoke-static {v2, v6, v3}, Lcom/skt/aicloud/speaker/service/sync/database/b;->u(Landroid/content/Context;Lmc/a;I)V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -811,7 +811,7 @@
     .line 44
     :cond_b
     :try_start_6
-    invoke-virtual {v6}, Lpa/a;->a()I
+    invoke-virtual {v6}, Lmc/a;->a()I
 
     move-result v7
 
@@ -822,7 +822,7 @@
     if-ne v7, v8, :cond_c
 
     .line 45
-    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v7, "ALARM is expired!!"
 
@@ -832,14 +832,14 @@
 
     .line 46
     :cond_c
-    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v8, "ALARM Add!!"
 
     invoke-static {v7, v8}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 47
-    iget-object v7, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v7, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     aput-object v6, v7, v3
     :try_end_6
@@ -848,7 +848,7 @@
 
     .line 48
     :try_start_7
-    invoke-virtual {p0, v6}, Lcom/skt/aicloud/speaker/service/api/a;->e0(Lpa/a;)V
+    invoke-virtual {p0, v6}, Lcom/skt/aicloud/speaker/service/api/a;->e0(Lmc/a;)V
 
     .line 49
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
@@ -857,7 +857,7 @@
 
     move-result v7
 
-    invoke-static {v2, v6, v7}, Lcom/skt/aicloud/speaker/service/sync/database/b;->u(Landroid/content/Context;Lpa/a;I)V
+    invoke-static {v2, v6, v7}, Lcom/skt/aicloud/speaker/service/sync/database/b;->u(Landroid/content/Context;Lmc/a;I)V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
@@ -884,7 +884,7 @@
     .line 51
     :goto_5
     :try_start_9
-    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v7, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v7, v6}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_9
@@ -903,7 +903,7 @@
     .line 54
     :cond_d
     :goto_7
-    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v7, "There is no data in alarmList!"
 
@@ -918,7 +918,7 @@
 
     .line 56
     :cond_e
-    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -954,7 +954,7 @@
 
     .line 59
     :cond_f
-    invoke-virtual {p0, v2}, Lcom/skt/aicloud/speaker/service/api/a;->l0(Lpa/a;)V
+    invoke-virtual {p0, v2}, Lcom/skt/aicloud/speaker/service/api/a;->l0(Lmc/a;)V
 
     .line 60
     invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/api/a;->i0(I)V
@@ -983,7 +983,7 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "alertRingtone"
 
@@ -1023,7 +1023,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v1, v3, v3}, Lcom/skt/aicloud/speaker/service/api/c;->o0(Lcom/skt/aicloud/speaker/lib/state/AppState;Landroid/content/Intent;Lma/c;)V
+    invoke-virtual {v2, v1, v3, v3}, Lcom/skt/aicloud/speaker/service/api/c;->o0(Lcom/skt/aicloud/speaker/lib/state/AppState;Landroid/content/Intent;Ljc/c;)V
 
     :cond_1
     const/4 v1, 0x1
@@ -1040,7 +1040,7 @@
 
     invoke-virtual {v1, v2, v4, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    const-string/jumbo v1, "timer_id"
+    const-string v1, "timer_id"
 
     .line 7
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1266,16 +1266,16 @@
     iput-boolean v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->f:Z
 
     .line 34
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->V0:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->W0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 35
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->V0:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->W0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
 
     const-wide/32 v1, 0x2bf20
 
@@ -1324,7 +1324,7 @@
     invoke-virtual {p1}, Ljava/text/ParseException;->printStackTrace()V
 
     .line 7
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/SLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -1337,7 +1337,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "checkTimeSync()"
 
@@ -1390,11 +1390,11 @@
     return-void
 .end method
 
-.method public L()Lpa/a;
+.method public L()Lmc/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     return-object v0
 .end method
@@ -1403,14 +1403,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/a;->L()Lpa/a;
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/a;->L()Lmc/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v0, v0, Lmc/a;->b:Ljava/lang/String;
 
     goto :goto_0
 
@@ -1497,7 +1497,7 @@
     .end array-data
 .end method
 
-.method public O(Lpa/a;)I
+.method public O(Lmc/a;)I
     .locals 13
 
     .line 1
@@ -1550,18 +1550,18 @@
     move-result v1
 
     .line 4
-    invoke-virtual {p1}, Lpa/a;->a()I
+    invoke-virtual {p1}, Lmc/a;->a()I
 
     move-result v4
 
     .line 5
-    sget-object v5, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v5, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "today : "
+    const-string v7, "today : "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1600,7 +1600,7 @@
     if-eqz v8, :cond_2
 
     .line 6
-    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v6, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v9, "days : "
 
@@ -1620,7 +1620,7 @@
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v10, p1, Lpa/a;->f:J
+    iget-wide v10, p1, Lmc/a;->f:J
 
     invoke-virtual {v9, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -1635,7 +1635,7 @@
 
     move-result-wide v9
 
-    iget-wide v11, p1, Lpa/a;->f:J
+    iget-wide v11, p1, Lmc/a;->f:J
 
     cmp-long v9, v9, v11
 
@@ -1788,13 +1788,13 @@
     div-long/2addr v1, v9
 
     .line 7
-    sget-object v11, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v11, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v13, "time : "
+    const-string v13, "time : "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1866,7 +1866,7 @@
     return-object v1
 
     :cond_0
-    const-string/jumbo v13, "timer_id"
+    const-string v13, "timer_id"
 
     .line 11
     invoke-virtual {v13, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2043,7 +2043,7 @@
     move-result-object v1
 
     .line 23
-    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2082,13 +2082,13 @@
     div-long v0, p1, v0
 
     .line 2
-    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "time : "
+    const-string v4, "time : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2184,7 +2184,7 @@
     move-result-object p2
 
     :goto_1
-    const-string/jumbo v0, "timer_id"
+    const-string v0, "timer_id"
 
     .line 13
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2291,7 +2291,7 @@
     if-nez p1, :cond_0
 
     .line 1
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v2, "getTimes() :: id is null"
 
@@ -2331,12 +2331,12 @@
 
     .line 5
     :cond_2
-    new-instance v3, Lpa/a;
+    new-instance v3, Lmc/a;
 
-    invoke-direct {v3, v2}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v3, v2}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
     .line 6
-    iget-object v4, v3, Lpa/a;->b:Ljava/lang/String;
+    iget-object v4, v3, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2345,7 +2345,7 @@
     if-eqz v4, :cond_3
 
     .line 7
-    iget-wide v0, v3, Lpa/a;->f:J
+    iget-wide v0, v3, Lmc/a;->f:J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2385,7 +2385,7 @@
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     .line 13
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v2, "getTimes() :: There is no Data"
 
@@ -2396,7 +2396,7 @@
     .line 14
     :cond_5
     :goto_1
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v3, "There is no data."
 
@@ -2495,7 +2495,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "initialize()"
 
@@ -2504,7 +2504,7 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     const/4 v1, 0x0
 
@@ -2516,7 +2516,7 @@
 
     .line 5
     :goto_0
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     array-length v3, v2
 
@@ -2563,7 +2563,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "registerAlarm()"
 
@@ -2669,14 +2669,14 @@
     if-eqz v0, :cond_4
 
     .line 10
-    new-instance v0, Lpa/a;
+    new-instance v0, Lmc/a;
 
-    invoke-direct {v0, v2}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v0, v2}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
-    const-string/jumbo v3, "timer_id"
+    const-string v3, "timer_id"
 
     .line 11
-    iget-object v8, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v8, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2686,7 +2686,7 @@
 
     const-string v3, "sleep_timer_id"
 
-    iget-object v8, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v8, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2698,7 +2698,7 @@
 
     .line 12
     :cond_2
-    iget-boolean v3, v0, Lpa/a;->h:Z
+    iget-boolean v3, v0, Lmc/a;->h:Z
 
     if-eqz v3, :cond_1
 
@@ -2707,7 +2707,7 @@
 
     move-result-wide v8
 
-    iget-wide v10, v0, Lpa/a;->f:J
+    iget-wide v10, v0, Lmc/a;->f:J
 
     cmp-long v3, v8, v10
 
@@ -2727,12 +2727,12 @@
     move-result-object v8
 
     .line 15
-    iget v9, v0, Lpa/a;->c:I
+    iget v9, v0, Lmc/a;->c:I
 
     invoke-virtual {v8, v4, v9}, Ljava/util/Calendar;->set(II)V
 
     .line 16
-    iget v9, v0, Lpa/a;->d:I
+    iget v9, v0, Lmc/a;->d:I
 
     invoke-virtual {v8, v5, v9}, Ljava/util/Calendar;->set(II)V
 
@@ -2758,7 +2758,7 @@
     const-string v11, "alarmId"
 
     .line 20
-    iget-object v12, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v12, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v10, v11, v12}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2770,7 +2770,7 @@
     .line 22
     iget-object v10, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v11, v0, Lpa/a;->a:I
+    iget v11, v0, Lmc/a;->a:I
 
     add-int/lit16 v11, v11, 0x2710
 
@@ -2809,7 +2809,7 @@
     invoke-virtual {v3, v6, v9, v10, v11}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
     .line 27
-    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -2819,7 +2819,7 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v12, v0, Lpa/a;->a:I
+    iget v12, v0, Lmc/a;->a:I
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2827,7 +2827,7 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v12, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v12, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2835,7 +2835,7 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v12, v0, Lpa/a;->c:I
+    iget v12, v0, Lmc/a;->c:I
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2843,7 +2843,7 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v12, v0, Lpa/a;->d:I
+    iget v12, v0, Lmc/a;->d:I
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2877,14 +2877,14 @@
     invoke-static {v3, v8}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    iget-boolean v3, v0, Lpa/a;->n:Z
+    iget-boolean v3, v0, Lmc/a;->n:Z
 
     if-nez v3, :cond_1
 
     .line 32
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v3, v0, v6}, Lcom/skt/aicloud/speaker/service/sync/database/b;->h(Landroid/content/Context;Lpa/a;I)V
+    invoke-static {v3, v0, v6}, Lcom/skt/aicloud/speaker/service/sync/database/b;->h(Landroid/content/Context;Lmc/a;I)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -2911,7 +2911,7 @@
 
     .line 34
     :try_start_4
-    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_4
@@ -2973,7 +2973,7 @@
     .end param
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3024,7 +3024,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/a;->L()Lpa/a;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/a;->L()Lmc/a;
 
     move-result-object p1
 
@@ -3051,7 +3051,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "registerSleepTimer()"
 
@@ -3108,14 +3108,14 @@
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     .line 8
-    new-instance v2, Lpa/a;
+    new-instance v2, Lmc/a;
 
-    invoke-direct {v2, v1}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v2, v1}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
     const-string v3, "sleep_timer_id"
 
     .line 9
-    iget-object v4, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v4, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3131,21 +3131,21 @@
     const/16 v4, 0xb
 
     .line 11
-    iget v5, v2, Lpa/a;->c:I
+    iget v5, v2, Lmc/a;->c:I
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->set(II)V
 
     const/16 v4, 0xc
 
     .line 12
-    iget v5, v2, Lpa/a;->d:I
+    iget v5, v2, Lmc/a;->d:I
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->set(II)V
 
     const/16 v4, 0xd
 
     .line 13
-    iget v5, v2, Lpa/a;->e:I
+    iget v5, v2, Lmc/a;->e:I
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->set(II)V
 
@@ -3166,7 +3166,7 @@
     const-string v6, "alarmId"
 
     .line 16
-    iget-object v7, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v7, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3178,7 +3178,7 @@
     .line 18
     iget-object v5, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v6, v2, Lpa/a;->a:I
+    iget v6, v2, Lmc/a;->a:I
 
     add-int/lit16 v6, v6, 0x7530
 
@@ -3199,7 +3199,7 @@
     const v4, 0x5265c00
 
     .line 21
-    iget-object v5, v2, Lpa/a;->p:Ljava/lang/String;
+    iget-object v5, v2, Lmc/a;->p:Ljava/lang/String;
 
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -3234,7 +3234,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v2, Lpa/a;->a:I
+    iget v5, v2, Lmc/a;->a:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3242,7 +3242,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v5, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3250,7 +3250,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v2, Lpa/a;->c:I
+    iget v5, v2, Lmc/a;->c:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3258,7 +3258,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, v2, Lpa/a;->d:I
+    iget v2, v2, Lmc/a;->d:I
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3327,7 +3327,7 @@
     .line 31
     :catch_0
     :try_start_4
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v0, "registerSleepTimer ERROR(2)"
 
@@ -3397,7 +3397,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "registerTimer()"
 
@@ -3427,7 +3427,7 @@
     :try_start_1
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    const-string/jumbo v2, "timer_id"
+    const-string v2, "timer_id"
 
     invoke-static {v1, v2}, Lcom/skt/aicloud/speaker/service/sync/database/b;->k(Landroid/content/Context;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -3454,14 +3454,14 @@
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     .line 8
-    new-instance v2, Lpa/a;
+    new-instance v2, Lmc/a;
 
-    invoke-direct {v2, v1}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v2, v1}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
-    const-string/jumbo v3, "timer_id"
+    const-string v3, "timer_id"
 
     .line 9
-    iget-object v4, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v4, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3477,21 +3477,21 @@
     const/16 v4, 0xb
 
     .line 11
-    iget v5, v2, Lpa/a;->c:I
+    iget v5, v2, Lmc/a;->c:I
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->set(II)V
 
     const/16 v4, 0xc
 
     .line 12
-    iget v5, v2, Lpa/a;->d:I
+    iget v5, v2, Lmc/a;->d:I
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->set(II)V
 
     const/16 v4, 0xd
 
     .line 13
-    iget v5, v2, Lpa/a;->e:I
+    iget v5, v2, Lmc/a;->e:I
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->set(II)V
 
@@ -3512,7 +3512,7 @@
     const-string v6, "alarmId"
 
     .line 16
-    iget-object v7, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v7, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3524,7 +3524,7 @@
     .line 18
     iget-object v5, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v6, v2, Lpa/a;->a:I
+    iget v6, v2, Lmc/a;->a:I
 
     add-int/lit16 v6, v6, 0x7530
 
@@ -3545,7 +3545,7 @@
     const v4, 0x5265c00
 
     .line 21
-    iget-object v5, v2, Lpa/a;->p:Ljava/lang/String;
+    iget-object v5, v2, Lmc/a;->p:Ljava/lang/String;
 
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -3580,7 +3580,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v2, Lpa/a;->a:I
+    iget v5, v2, Lmc/a;->a:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3588,7 +3588,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v5, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3596,7 +3596,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v2, Lpa/a;->c:I
+    iget v5, v2, Lmc/a;->c:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3604,7 +3604,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, v2, Lpa/a;->d:I
+    iget v2, v2, Lmc/a;->d:I
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3673,7 +3673,7 @@
     .line 31
     :catch_0
     :try_start_4
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v0, "registerTimer ERROR(2)"
 
@@ -3725,21 +3725,21 @@
     throw p1
 .end method
 
-.method public declared-synchronized e0(Lpa/a;)V
+.method public declared-synchronized e0(Lmc/a;)V
     .locals 8
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "repeatAlarm()"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-boolean v1, p1, Lpa/a;->n:Z
+    iget-boolean v1, p1, Lmc/a;->n:Z
 
     if-nez v1, :cond_0
 
@@ -3765,14 +3765,14 @@
     const/16 v2, 0xb
 
     .line 6
-    iget v3, p1, Lpa/a;->c:I
+    iget v3, p1, Lmc/a;->c:I
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->set(II)V
 
     const/16 v2, 0xc
 
     .line 7
-    iget v3, p1, Lpa/a;->d:I
+    iget v3, p1, Lmc/a;->d:I
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->set(II)V
 
@@ -3800,7 +3800,7 @@
     const-string v5, "alarmId"
 
     .line 11
-    iget-object v6, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v6, p1, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3812,7 +3812,7 @@
     .line 13
     iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v5, p1, Lpa/a;->a:I
+    iget v5, p1, Lmc/a;->a:I
 
     add-int/lit16 v5, v5, 0x2710
 
@@ -3855,7 +3855,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p1, Lpa/a;->a:I
+    iget v3, p1, Lmc/a;->a:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3863,7 +3863,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v3, p1, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3871,7 +3871,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v3, p1, Lpa/a;->c:I
+    iget v3, p1, Lmc/a;->c:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3879,7 +3879,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lpa/a;->d:I
+    iget p1, p1, Lmc/a;->d:I
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3931,7 +3931,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "prevState : "
 
@@ -4036,16 +4036,16 @@
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c1:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 7
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c1:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x3e8
 
@@ -4080,7 +4080,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4127,13 +4127,13 @@
     invoke-static {v0, p2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    invoke-static {}, Lla/g;->r0()Lla/g;
+    invoke-static {}, Lic/g;->r0()Lic/g;
 
     move-result-object p2
 
     const-string v0, "from alarm"
 
-    invoke-virtual {p2, p1, v0}, Lla/g;->u0(ZLjava/lang/String;)V
+    invoke-virtual {p2, p1, v0}, Lic/g;->u0(ZLjava/lang/String;)V
 
     goto :goto_0
 
@@ -4184,7 +4184,7 @@
     move-result v0
 
     .line 2
-    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v3, "maxVolume : "
 
@@ -4256,26 +4256,26 @@
     .locals 11
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "startAlarmSync()"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {}, Lp8/d;->b()Ljava/lang/String;
+    invoke-static {}, Lma/d;->b()Ljava/lang/String;
 
     move-result-object v1
 
     .line 3
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2}, Lua/d;->E(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lrc/d;->E(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 4
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -4346,14 +4346,14 @@
     .line 13
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2}, Lua/d;->z(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lrc/d;->z(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 14
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v3}, Lua/d;->x(Landroid/content/Context;)J
+    invoke-static {v3}, Lrc/d;->x(Landroid/content/Context;)J
 
     move-result-wide v3
 
@@ -4413,7 +4413,7 @@
 
     move-result-wide v3
 
-    const-string/jumbo v9, "timer_id"
+    const-string v9, "timer_id"
 
     invoke-static {v2, v3, v4, v9}, Lcom/skt/aicloud/speaker/service/sync/database/b;->s(Landroid/content/Context;JLjava/lang/String;)V
 
@@ -4435,7 +4435,7 @@
     .line 21
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2}, Lua/d;->y(Landroid/content/Context;)Z
+    invoke-static {v2}, Lrc/d;->y(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -4443,7 +4443,7 @@
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2}, Lua/d;->w(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lrc/d;->w(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -4487,14 +4487,14 @@
     .line 27
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v3}, Lua/d;->u(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v3}, Lrc/d;->u(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 28
     iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v4}, Lua/d;->s(Landroid/content/Context;)J
+    invoke-static {v4}, Lrc/d;->s(Landroid/content/Context;)J
 
     move-result-wide v9
 
@@ -4576,7 +4576,7 @@
 
     iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v4}, Lua/d;->t(Landroid/content/Context;)Z
+    invoke-static {v4}, Lrc/d;->t(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -4588,7 +4588,7 @@
 
     iget-object v4, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v4}, Lua/d;->r(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v4}, Lrc/d;->r(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -4603,7 +4603,7 @@
     .line 36
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v0}, Lua/d;->t(Landroid/content/Context;)Z
+    invoke-static {v0}, Lrc/d;->t(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -4611,7 +4611,7 @@
 
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v0}, Lua/d;->r(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lrc/d;->r(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4653,11 +4653,11 @@
     return-void
 .end method
 
-.method public l0(Lpa/a;)V
+.method public l0(Lmc/a;)V
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "startAlertAlarm()"
 
@@ -4702,7 +4702,7 @@
     if-ne p1, v2, :cond_0
 
     .line 5
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v0, "AlertTable is empty"
 
@@ -4715,21 +4715,21 @@
 
     .line 7
     :cond_0
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     aget-object v0, v0, p1
 
     if-eqz v0, :cond_1
 
     .line 8
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string/jumbo v0, "while if in()"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     iget v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->l:I
 
@@ -4765,10 +4765,10 @@
     if-eqz p1, :cond_8
 
     .line 13
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     .line 14
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v1, "start alert alarm id : "
 
@@ -4776,9 +4776,9 @@
 
     move-result-object v1
 
-    iget-object v6, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v6, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
-    iget-object v6, v6, Lpa/a;->b:Ljava/lang/String;
+    iget-object v6, v6, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4789,7 +4789,7 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
-    iget-object v1, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v1, p1, Lmc/a;->b:Ljava/lang/String;
 
     const-string v6, "sleep_timer_id"
 
@@ -4812,12 +4812,12 @@
     .line 18
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
-    invoke-static {p1, v0}, Lcom/skt/aicloud/speaker/service/sync/database/b;->j(Landroid/content/Context;Lpa/a;)V
+    invoke-static {p1, v0}, Lcom/skt/aicloud/speaker/service/sync/database/b;->j(Landroid/content/Context;Lmc/a;)V
 
     .line 19
-    iput-object v5, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iput-object v5, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     .line 20
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/b;->m()Lcom/skt/aicloud/speaker/service/api/c;
@@ -4832,22 +4832,22 @@
     .line 22
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v6, v7}, Lua/d;->W(Landroid/content/Context;J)V
+    invoke-static {p1, v6, v7}, Lrc/d;->W(Landroid/content/Context;J)V
 
     .line 23
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v3}, Lua/d;->X(Landroid/content/Context;Z)V
+    invoke-static {p1, v3}, Lrc/d;->X(Landroid/content/Context;Z)V
 
     .line 24
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v5}, Lua/d;->Y(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lrc/d;->Y(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 25
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v5}, Lua/d;->V(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lrc/d;->V(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 
@@ -4872,7 +4872,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p1, Lpa/a;->g:Ljava/lang/String;
+    iget-object v2, p1, Lmc/a;->g:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4883,7 +4883,7 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 28
-    iget-object v1, p1, Lpa/a;->g:Ljava/lang/String;
+    iget-object v1, p1, Lmc/a;->g:Ljava/lang/String;
 
     const-string v2, "SOD_MLN"
 
@@ -4893,7 +4893,7 @@
 
     if-eqz v1, :cond_6
 
-    iget-object v1, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v1, p1, Lmc/a;->b:Ljava/lang/String;
 
     if-eqz v1, :cond_6
 
@@ -4906,7 +4906,7 @@
     if-eqz v1, :cond_6
 
     .line 29
-    iget-object v1, p1, Lpa/a;->i:Ljava/lang/String;
+    iget-object v1, p1, Lmc/a;->i:Ljava/lang/String;
 
     if-nez v1, :cond_5
 
@@ -4917,7 +4917,7 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Lpa/a;->i:Ljava/lang/String;
+    iget-object v2, p1, Lmc/a;->i:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4932,7 +4932,7 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 31
-    iget-object p1, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object p1, p1, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/api/a;->F(Ljava/lang/String;)V
 
@@ -4953,7 +4953,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lpa/a;->i:Ljava/lang/String;
+    iget-object p1, p1, Lmc/a;->i:Ljava/lang/String;
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4973,14 +4973,14 @@
 
     .line 36
     :cond_6
-    iget-object v1, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v1, p1, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Lcom/skt/aicloud/speaker/service/api/a;->F(Ljava/lang/String;)V
 
     .line 37
-    iget-object p1, p1, Lpa/a;->b:Ljava/lang/String;
+    iget-object p1, p1, Lmc/a;->b:Ljava/lang/String;
 
-    const-string/jumbo v1, "timer_id"
+    const-string v1, "timer_id"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4994,29 +4994,29 @@
     .line 39
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
-    invoke-static {p1, v1}, Lcom/skt/aicloud/speaker/service/sync/database/b;->j(Landroid/content/Context;Lpa/a;)V
+    invoke-static {p1, v1}, Lcom/skt/aicloud/speaker/service/sync/database/b;->j(Landroid/content/Context;Lmc/a;)V
 
     .line 40
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v6, v7}, Lua/d;->b0(Landroid/content/Context;J)V
+    invoke-static {p1, v6, v7}, Lrc/d;->b0(Landroid/content/Context;J)V
 
     .line 41
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v3}, Lua/d;->c0(Landroid/content/Context;Z)V
+    invoke-static {p1, v3}, Lrc/d;->c0(Landroid/content/Context;Z)V
 
     .line 42
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v5}, Lua/d;->d0(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lrc/d;->d0(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 43
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1, v5}, Lua/d;->a0(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lrc/d;->a0(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_7
     :goto_2
@@ -5041,7 +5041,7 @@
 
     .line 45
     :cond_8
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     const-string v0, "startAlertAlarm : alarm is null"
 
@@ -5061,7 +5061,7 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -5100,7 +5100,7 @@
 
     .line 5
     :cond_0
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     if-eqz v1, :cond_6
 
@@ -5113,9 +5113,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
-    iget-object v2, v2, Lpa/a;->b:Ljava/lang/String;
+    iget-object v2, v2, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5131,22 +5131,22 @@
     if-eqz v0, :cond_1
 
     .line 8
-    invoke-static {}, Lla/g;->r0()Lla/g;
+    invoke-static {}, Lic/g;->r0()Lic/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lla/g;->H()Z
+    invoke-virtual {v0}, Lic/g;->H()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 9
-    invoke-static {}, Lla/g;->r0()Lla/g;
+    invoke-static {}, Lic/g;->r0()Lic/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lla/a;->stop()V
+    invoke-virtual {v0}, Lic/a;->stop()V
 
     goto :goto_0
 
@@ -5173,20 +5173,20 @@
     invoke-virtual {v0}, Landroid/media/Ringtone;->stop()V
 
     .line 13
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->V0:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->W0:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     :cond_2
     :goto_0
-    const-string/jumbo v0, "timer_id"
+    const-string v0, "timer_id"
 
     .line 14
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
-    iget-object v1, v1, Lpa/a;->b:Ljava/lang/String;
+    iget-object v1, v1, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5203,7 +5203,7 @@
     const/4 v0, 0x0
 
     .line 16
-    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iput-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     .line 17
     iget-boolean v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->g:Z
@@ -5211,16 +5211,16 @@
     if-eqz v1, :cond_4
 
     .line 18
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 19
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->X0:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->Z0:Landroid/os/Handler;
 
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->Y0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->a1:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0x7d0
 
@@ -5234,7 +5234,7 @@
 
     .line 21
     :goto_1
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->p:[Lmc/a;
 
     array-length v2, v1
 
@@ -5291,9 +5291,9 @@
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     .line 4
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v2, "syncDateValidCheck() : "
+    const-string v2, "syncDateValidCheck() : "
 
     invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5367,9 +5367,9 @@
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 6
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v2, "syncDateValidCheck() : "
+    const-string v2, "syncDateValidCheck() : "
 
     invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5408,7 +5408,7 @@
     move-exception p1
 
     .line 8
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -5424,9 +5424,9 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v1, "unRegisterSleepTimer()"
+    const-string v1, "unRegisterSleepTimer()"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5458,7 +5458,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "unRegisterSleepTimer : count = "
+    const-string v3, "unRegisterSleepTimer : count = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5486,14 +5486,14 @@
 
     .line 6
     :cond_1
-    new-instance v0, Lpa/a;
+    new-instance v0, Lmc/a;
 
-    invoke-direct {v0, v1}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v0, v1}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
     const-string v2, "sleep_timer_id"
 
     .line 7
-    iget-object v3, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v3, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5513,7 +5513,7 @@
     .line 9
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v4, v0, Lpa/a;->a:I
+    iget v4, v0, Lmc/a;->a:I
 
     add-int/lit16 v4, v4, 0x7530
 
@@ -5534,7 +5534,7 @@
     if-nez v3, :cond_2
 
     .line 12
-    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5544,7 +5544,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lpa/a;->a:I
+    iget v0, v0, Lmc/a;->a:I
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5558,17 +5558,17 @@
 
     .line 13
     :cond_2
-    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "unRegisterSleepTimer : uniqueId = "
+    const-string v5, "unRegisterSleepTimer : uniqueId = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v0, Lpa/a;->a:I
+    iget v5, v0, Lmc/a;->a:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5576,7 +5576,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v5, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5589,7 +5589,7 @@
     .line 14
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v0, v0, Lpa/a;->a:I
+    iget v0, v0, Lmc/a;->a:I
 
     add-int/lit16 v0, v0, 0x7530
 
@@ -5656,7 +5656,7 @@
 
     .line 22
     :try_start_3
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
@@ -5719,16 +5719,16 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v1, "unRegisterTimer()"
+    const-string v1, "unRegisterTimer()"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    const-string/jumbo v2, "timer_id"
+    const-string v2, "timer_id"
 
     invoke-static {v1, v2}, Lcom/skt/aicloud/speaker/service/sync/database/b;->k(Landroid/content/Context;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -5753,7 +5753,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "unRegisterTimer : count = "
+    const-string v3, "unRegisterTimer : count = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5781,14 +5781,14 @@
 
     .line 6
     :cond_1
-    new-instance v0, Lpa/a;
+    new-instance v0, Lmc/a;
 
-    invoke-direct {v0, v1}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v0, v1}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
-    const-string/jumbo v2, "timer_id"
+    const-string v2, "timer_id"
 
     .line 7
-    iget-object v3, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v3, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -5808,7 +5808,7 @@
     .line 9
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v4, v0, Lpa/a;->a:I
+    iget v4, v0, Lmc/a;->a:I
 
     add-int/lit16 v4, v4, 0x7530
 
@@ -5829,7 +5829,7 @@
     if-nez v3, :cond_2
 
     .line 12
-    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5839,7 +5839,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lpa/a;->a:I
+    iget v0, v0, Lmc/a;->a:I
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5853,17 +5853,17 @@
 
     .line 13
     :cond_2
-    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "unRegisterTimer : uniqueId = "
+    const-string v5, "unRegisterTimer : uniqueId = "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v0, Lpa/a;->a:I
+    iget v5, v0, Lmc/a;->a:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -5871,7 +5871,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v5, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5884,7 +5884,7 @@
     .line 14
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v0, v0, Lpa/a;->a:I
+    iget v0, v0, Lmc/a;->a:I
 
     add-int/lit16 v0, v0, 0x7530
 
@@ -5951,7 +5951,7 @@
 
     .line 22
     :try_start_3
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
@@ -6008,9 +6008,9 @@
 
     .line 1
     :try_start_0
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v1, "unregisterAlarm()"
+    const-string v1, "unregisterAlarm()"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/SLog;->v(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6051,14 +6051,14 @@
     if-eqz v0, :cond_3
 
     .line 5
-    new-instance v0, Lpa/a;
+    new-instance v0, Lmc/a;
 
-    invoke-direct {v0, v1}, Lpa/a;-><init>(Landroid/database/Cursor;)V
+    invoke-direct {v0, v1}, Lmc/a;-><init>(Landroid/database/Cursor;)V
 
-    const-string/jumbo v2, "timer_id"
+    const-string v2, "timer_id"
 
     .line 6
-    iget-object v3, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v3, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -6068,7 +6068,7 @@
 
     const-string v2, "sleep_timer_id"
 
-    iget-object v3, v0, Lpa/a;->b:Ljava/lang/String;
+    iget-object v3, v0, Lmc/a;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -6091,7 +6091,7 @@
     .line 8
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v4, v0, Lpa/a;->a:I
+    iget v4, v0, Lmc/a;->a:I
 
     add-int/lit16 v4, v4, 0x2710
 
@@ -6110,17 +6110,17 @@
     iput-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->d:Landroid/app/PendingIntent;
 
     .line 11
-    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v3, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "unregisterAlarm() uniqueid : "
+    const-string v5, "unregisterAlarm() uniqueid : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v0, Lpa/a;->a:I
+    iget v5, v0, Lmc/a;->a:I
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -6151,7 +6151,7 @@
     .line 15
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    iget v0, v0, Lpa/a;->a:I
+    iget v0, v0, Lmc/a;->a:I
 
     add-int/lit16 v0, v0, 0x2710
 
@@ -6204,7 +6204,7 @@
 
     .line 21
     :try_start_3
-    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v2, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
@@ -6287,18 +6287,18 @@
     .locals 5
 
     .line 1
-    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateAlarmAutomaticInactive()"
+    const-string v1, "updateAlarmAutomaticInactive()"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lpa/a;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/a;->i:Lmc/a;
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "updateAlarmAutomaticInactive : alarm is null"
+    const-string v1, "updateAlarmAutomaticInactive : alarm is null"
 
     .line 3
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
@@ -6307,7 +6307,7 @@
 
     .line 4
     :cond_0
-    iget-boolean v1, v1, Lpa/a;->n:Z
+    iget-boolean v1, v1, Lmc/a;->n:Z
 
     if-eqz v1, :cond_1
 
@@ -6320,26 +6320,26 @@
 
     .line 6
     :cond_1
-    invoke-static {}, Lp8/d;->b()Ljava/lang/String;
+    invoke-static {}, Lma/d;->b()Ljava/lang/String;
 
     move-result-object v1
 
     .line 7
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v2}, Lua/d;->E(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lrc/d;->E(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 8
     iget-object v3, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v3}, Lua/d;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v3}, Lrc/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 9
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v4
 
@@ -6416,14 +6416,14 @@
     :pswitch_0
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {p1}, Lua/d;->E(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lrc/d;->E(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 2
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/a;->c:Landroid/content/Context;
 
-    invoke-static {v0}, Lua/d;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lrc/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -6435,9 +6435,9 @@
     if-eqz v1, :cond_0
 
     .line 4
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateSettingTimer() :: There is no userId"
+    const-string v0, "updateSettingTimer() :: There is no userId"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6452,9 +6452,9 @@
     if-eqz v1, :cond_1
 
     .line 6
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateSettingTimer() :: There is no deviceId"
+    const-string v0, "updateSettingTimer() :: There is no deviceId"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6471,9 +6471,9 @@
     invoke-virtual {v1, v2, v0, p1}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: GET_TIMES"
+    const-string v0, "updateDeviceSetting() :: GET_TIMES"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6501,9 +6501,9 @@
     invoke-virtual {p1, v0, v2, v3}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->a(Landroid/content/Context;J)V
 
     .line 11
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: SLEEP_SET"
+    const-string v0, "updateDeviceSetting() :: SLEEP_SET"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6520,9 +6520,9 @@
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->e(Landroid/content/Context;)V
 
     .line 13
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: SLEEP_CANCEL"
+    const-string v0, "updateDeviceSetting() :: SLEEP_CANCEL"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6539,16 +6539,16 @@
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->f(Landroid/content/Context;)V
 
     .line 15
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: SLEEP_FINISH"
+    const-string v0, "updateDeviceSetting() :: SLEEP_FINISH"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :pswitch_4
-    const-string/jumbo p1, "timer_id"
+    const-string p1, "timer_id"
 
     .line 16
     invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/api/a;->W(Ljava/lang/String;)J
@@ -6569,9 +6569,9 @@
     invoke-virtual {p1, v0, v2, v3}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->b(Landroid/content/Context;J)V
 
     .line 18
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: TIMER_SET"
+    const-string v0, "updateDeviceSetting() :: TIMER_SET"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6588,9 +6588,9 @@
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->g(Landroid/content/Context;)V
 
     .line 20
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: TIMER_CANCEL"
+    const-string v0, "updateDeviceSetting() :: TIMER_CANCEL"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6607,9 +6607,9 @@
     invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/b;->h(Landroid/content/Context;)V
 
     .line 22
-    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object p1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
-    const-string/jumbo v0, "updateDeviceSetting() :: TIMER_FINISH"
+    const-string v0, "updateDeviceSetting() :: TIMER_FINISH"
 
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -6693,7 +6693,7 @@
     move-result-object v3
 
     .line 4
-    sget-object v5, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v5, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -6744,7 +6744,7 @@
 
     if-gez v8, :cond_0
 
-    const-string/jumbo v3, "today in"
+    const-string v3, "today in"
 
     .line 6
     invoke-static {v5, v3}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -6842,7 +6842,7 @@
 
     if-ltz v3, :cond_1
 
-    const-string/jumbo v3, "tomorrow in"
+    const-string v3, "tomorrow in"
 
     .line 15
     invoke-static {v5, v3}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -6968,7 +6968,7 @@
     move-exception v0
 
     .line 27
-    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->b1:Ljava/lang/String;
+    sget-object v1, Lcom/skt/aicloud/speaker/service/api/a;->d1:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
 

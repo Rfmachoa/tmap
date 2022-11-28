@@ -3,12 +3,12 @@
 .source "TmapCarSession.kt"
 
 # interfaces
-.implements Landroidx/car/app/navigation/g;
+.implements Lcom/skt/tmap/util/j2$l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/car/TmapCarSession;->onCreate(Landroidx/lifecycle/LifecycleOwner;)V
+    value = Lcom/skt/tmap/car/TmapCarSession;->G()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,21 +19,28 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0016J\u0008\u0010\u0004\u001a\u00020\u0002H\u0016\u00a8\u0006\u0005"
+        "\u0000\u001f\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0016J\u0018\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004H\u0016J\u001a\u0010\u000b\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00042\u0008\u0010\n\u001a\u0004\u0018\u00010\tH\u0016\u00a8\u0006\u000c"
     }
     d2 = {
         "com/skt/tmap/car/TmapCarSession$c",
-        "Landroidx/car/app/navigation/g;",
+        "Lcom/skt/tmap/util/j2$l;",
         "Lkotlin/d1;",
-        "b",
+        "onSuccess",
+        "",
+        "count",
+        "total",
         "a",
+        "errorCode",
+        "",
+        "errorMsg",
+        "onError",
         "tmap_android_phoneKUShip"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -41,19 +48,18 @@
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/car/TmapCarSession;
 
+.field public final synthetic b:Lcom/skt/tmap/util/j2;
+
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/car/TmapCarSession;)V
+.method public constructor <init>(Lcom/skt/tmap/car/TmapCarSession;Lcom/skt/tmap/util/j2;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
 
+    iput-object p2, p0, Lcom/skt/tmap/car/TmapCarSession$c;->b:Lcom/skt/tmap/util/j2;
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,76 +67,59 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 5
+.method public a(II)V
+    .locals 0
 
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
-
-    invoke-virtual {v0}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "TmapCarSession"
-
-    const-string v2, "onStopNavigation"
-
-    .line 2
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 3
-    invoke-static {v0}, Lcom/skt/tmap/route/RGAudioHelper;->GetInstance(Landroid/content/Context;)Lcom/skt/tmap/route/RGAudioHelper;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/tmap/route/RGAudioHelper;->stop()V
-
-    .line 4
-    invoke-static {}, Lcom/skt/tmap/car/a;->f()Lcom/skt/tmap/car/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/skt/tmap/car/a;->h(Landroid/content/Context;)V
-
-    .line 5
-    sget-object v1, Lcom/skt/tmap/engine/l0;->Z:Lcom/skt/tmap/engine/l0$a;
-
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/l0$a;->c()Lcom/skt/tmap/engine/l0;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-static {v1, v2, v3, v4}, Lcom/skt/tmap/engine/l0;->g1(Lcom/skt/tmap/engine/l0;ZILjava/lang/Object;)V
-
-    .line 6
-    const-class v1, Landroidx/car/app/ScreenManager;
-
-    invoke-virtual {v0, v1}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/car/app/ScreenManager;
-
-    sget-object v1, Lcom/skt/tmap/car/screen/HomeScreen;->K0:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroidx/car/app/ScreenManager;->p(Ljava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public b()V
-    .locals 3
+.method public onError(ILjava/lang/String;)V
+    .locals 4
+    .param p2    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/engine/g0;->d()Lcom/skt/tmap/engine/g0;
+    iget-object p1, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    invoke-virtual {p1}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lbe/e;->a(Landroid/content/Context;)Lbe/e;
+
+    move-result-object p1
+
+    const-string p2, "tap.map_alert"
+
+    invoke-virtual {p1, p2}, Lbe/e;->E(Ljava/lang/String;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    invoke-virtual {p1}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
+
+    move-result-object p1
+
+    const-class p2, Landroidx/car/app/ScreenManager;
+
+    invoke-virtual {p1, p2}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string p2, "carContext.getCarService\u2026creenManager::class.java)"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p1, Landroidx/car/app/ScreenManager;
+
+    .line 3
+    new-instance p2, Lcom/skt/tmap/car/screen/InitializeAlertScreen;
+
+    iget-object v0, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    invoke-virtual {v0}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
 
     move-result-object v0
 
@@ -140,9 +129,180 @@
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    const v2, 0x7f140122
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/g0;->t(Landroid/content/Context;Z)V
+    invoke-virtual {v1, v2}, Landroid/content/ContextWrapper;->getString(I)Ljava/lang/String;
 
+    move-result-object v1
+
+    sget-object v2, Lcom/skt/tmap/car/TmapCarAppService$InitStatus;->INIT_VSM_FAIL:Lcom/skt/tmap/car/TmapCarAppService$InitStatus;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const v3, 0x7f08058a
+
+    invoke-direct {p2, v0, v1, v3, v2}, Lcom/skt/tmap/car/screen/InitializeAlertScreen;-><init>(Landroidx/car/app/CarContext;Ljava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Landroidx/car/app/ScreenManager;->s(Landroidx/car/app/y0;)V
+
+    return-void
+.end method
+
+.method public onSuccess()V
+    .locals 6
+
+    const-string v0, "TmapCarSession"
+
+    const-string v1, "initVSM onSuccess"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    invoke-static {v0}, Lcom/skt/tmap/car/TmapCarSession;->q(Lcom/skt/tmap/car/TmapCarSession;)Lcom/skt/tmap/car/TmapCarSurface;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    invoke-static {v0}, Lcom/skt/tmap/car/TmapCarSession;->r(Lcom/skt/tmap/car/TmapCarSession;)V
+
+    .line 4
+    :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    invoke-virtual {v0}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/skt/tmap/car/TmapCarSession$c;->b:Lcom/skt/tmap/util/j2;
+
+    iget-object v2, p0, Lcom/skt/tmap/car/TmapCarSession$c;->a:Lcom/skt/tmap/car/TmapCarSession;
+
+    .line 5
+    invoke-static {}, Lcom/skt/tmap/util/s0;->c()Lcom/skt/tmap/util/s0;
+
+    move-result-object v3
+
+    invoke-virtual {v1}, Lcom/skt/tmap/util/j2;->z()Lcom/skt/tmap/vsm/config/ConfigurationData;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Lcom/skt/tmap/util/s0;->m(Lcom/skt/tmap/vsm/config/ConfigurationData;)V
+
+    .line 6
+    const-class v1, Landroidx/car/app/ScreenManager;
+
+    invoke-virtual {v0, v1}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "context.getCarService(ScreenManager::class.java)"
+
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v0, Landroidx/car/app/ScreenManager;
+
+    .line 7
+    invoke-static {}, Lcom/skt/tmap/service/LoginService;->J1()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    if-eqz v0, :cond_6
+
+    .line 8
+    :try_start_0
+    invoke-static {v0}, Lcom/skt/tmap/car/h;->C(Landroidx/car/app/ScreenManager;)Landroidx/car/app/y0;
+
+    move-result-object v1
+
+    .line 9
+    instance-of v1, v1, Lcom/skt/tmap/car/screen/InitializeAlertScreen;
+
+    if-eqz v1, :cond_1
+
+    .line 10
+    invoke-virtual {v0}, Landroidx/car/app/ScreenManager;->o()V
+
+    .line 11
+    :cond_1
+    invoke-static {v2}, Lcom/skt/tmap/car/TmapCarSession;->n(Lcom/skt/tmap/car/TmapCarSession;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-eqz v1, :cond_3
+
+    .line 12
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v5
+
+    if-lez v5, :cond_2
+
+    move v5, v3
+
+    goto :goto_0
+
+    :cond_2
+    move v5, v4
+
+    :goto_0
+    if-ne v5, v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v3, v4
+
+    :goto_1
+    if-eqz v3, :cond_4
+
+    .line 13
+    invoke-static {v2}, Lcom/skt/tmap/car/TmapCarSession;->m(Lcom/skt/tmap/car/TmapCarSession;)V
+
+    .line 14
+    new-instance v3, Lcom/skt/tmap/car/screen/SearchResultScreen;
+
+    invoke-virtual {v2}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
+
+    move-result-object v2
+
+    invoke-direct {v3, v2, v1}, Lcom/skt/tmap/car/screen/SearchResultScreen;-><init>(Landroidx/car/app/CarContext;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3}, Landroidx/car/app/ScreenManager;->s(Landroidx/car/app/y0;)V
+
+    .line 15
+    :cond_4
+    sget-object v0, Lkotlin/d1;->a:Lkotlin/d1;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    .line 16
+    :catch_0
+    sget-object v0, Lkotlin/d1;->a:Lkotlin/d1;
+
+    goto :goto_2
+
+    .line 17
+    :cond_5
+    invoke-static {v2, v0}, Lcom/skt/tmap/car/TmapCarSession;->p(Lcom/skt/tmap/car/TmapCarSession;Landroidx/car/app/ScreenManager;)V
+
+    :cond_6
+    :goto_2
     return-void
 .end method

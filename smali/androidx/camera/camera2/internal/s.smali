@@ -6,17 +6,27 @@
 .implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic a:Lx/i;
+# static fields
+.field public static final synthetic a:Landroidx/camera/camera2/internal/s;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx/i;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/camera/camera2/internal/s;
+
+    invoke-direct {v0}, Landroidx/camera/camera2/internal/s;-><init>()V
+
+    sput-object v0, Landroidx/camera/camera2/internal/s;->a:Landroidx/camera/camera2/internal/s;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroidx/camera/camera2/internal/s;->a:Lx/i;
 
     return-void
 .end method
@@ -24,11 +34,9 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/s;->a:Lx/i;
-
-    invoke-static {v0}, Landroidx/camera/camera2/internal/v$a;->e(Lx/i;)V
+    invoke-static {}, Landroidx/camera/camera2/internal/w;->y()V
 
     return-void
 .end method

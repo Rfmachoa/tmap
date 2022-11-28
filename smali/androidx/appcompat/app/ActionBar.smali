@@ -91,7 +91,7 @@
     return v0
 .end method
 
-.method public C0(Li/b$a;)Li/b;
+.method public C0(Lk/b$a;)Lk/b;
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {

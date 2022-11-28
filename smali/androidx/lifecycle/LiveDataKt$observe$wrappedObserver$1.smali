@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/LiveDataKt;->observe(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/LifecycleOwner;Lej/l;)Landroidx/lifecycle/Observer;
+    value = Landroidx/lifecycle/LiveDataKt;->observe(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/LifecycleOwner;Lgl/l;)Landroidx/lifecycle/Observer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Landroidx/lifecycle/Observer<",
-        "TT;>;"
+        "Landroidx/lifecycle/Observer;"
     }
 .end annotation
 
@@ -48,21 +47,39 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic $onChanged:Lej/l;
+.field public final synthetic $onChanged:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "TT;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lej/l;)V
+.method public constructor <init>(Lgl/l;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgl/l<",
+            "-TT;",
+            "Lkotlin/d1;",
+            ">;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lej/l;
+    iput-object p1, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lgl/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,9 +97,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lej/l;
+    iget-object v0, p0, Landroidx/lifecycle/LiveDataKt$observe$wrappedObserver$1;->$onChanged:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

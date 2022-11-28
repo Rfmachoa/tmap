@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field public final a:Lu4/b;
+.field public final a:Lr6/b;
 
 .field public final b:Z
 
@@ -44,9 +44,9 @@
 
 
 # direct methods
-.method public constructor <init>(Lu4/b;Lcom/bumptech/glide/load/engine/n;Ljava/lang/ref/ReferenceQueue;Z)V
+.method public constructor <init>(Lr6/b;Lcom/bumptech/glide/load/engine/n;Ljava/lang/ref/ReferenceQueue;Z)V
     .locals 0
-    .param p1    # Lu4/b;
+    .param p1    # Lr6/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -61,7 +61,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/n<",
             "*>;",
             "Ljava/lang/ref/ReferenceQueue<",
@@ -75,13 +75,13 @@
     invoke-direct {p0, p2, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
     .line 2
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lu4/b;
+    check-cast p1, Lr6/b;
 
-    iput-object p1, p0, Lcom/bumptech/glide/load/engine/a$d;->a:Lu4/b;
+    iput-object p1, p0, Lcom/bumptech/glide/load/engine/a$d;->a:Lr6/b;
 
     .line 3
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/n;->e()Z
@@ -97,7 +97,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

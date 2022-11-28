@@ -26,7 +26,7 @@
 
 .field private final responseHeaders:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-.field private final statusLine:Ldf/b0;
+.field private final statusLine:Lhh/b0;
 
 .field private final variantMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Date;Ljava/util/Date;Ldf/b0;[Ldf/d;Lcz/msebera/android/httpclient/client/cache/Resource;)V
+.method public constructor <init>(Ljava/util/Date;Ljava/util/Date;Lhh/b0;[Lhh/d;Lcz/msebera/android/httpclient/client/cache/Resource;)V
     .locals 7
 
     .line 14
@@ -61,21 +61,21 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v6}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;-><init>(Ljava/util/Date;Ljava/util/Date;Ldf/b0;[Ldf/d;Lcz/msebera/android/httpclient/client/cache/Resource;Ljava/util/Map;)V
+    invoke-direct/range {v0 .. v6}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;-><init>(Ljava/util/Date;Ljava/util/Date;Lhh/b0;[Lhh/d;Lcz/msebera/android/httpclient/client/cache/Resource;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Date;Ljava/util/Date;Ldf/b0;[Ldf/d;Lcz/msebera/android/httpclient/client/cache/Resource;Ljava/util/Map;)V
+.method public constructor <init>(Ljava/util/Date;Ljava/util/Date;Lhh/b0;[Lhh/d;Lcz/msebera/android/httpclient/client/cache/Resource;Ljava/util/Map;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Date;",
             "Ljava/util/Date;",
-            "Ldf/b0;",
+            "Lhh/b0;",
             "[",
-            "Ldf/d;",
+            "Lhh/d;",
             "Lcz/msebera/android/httpclient/client/cache/Resource;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
@@ -90,22 +90,22 @@
     const-string v0, "Request date"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "Response date"
 
     .line 3
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "Status line"
 
     .line 4
-    invoke-static {p3, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p3, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "Response headers"
 
     .line 5
-    invoke-static {p4, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p4, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 6
     iput-object p1, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->requestDate:Ljava/util/Date;
@@ -114,7 +114,7 @@
     iput-object p2, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->responseDate:Ljava/util/Date;
 
     .line 8
-    iput-object p3, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Ldf/b0;
+    iput-object p3, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Lhh/b0;
 
     .line 9
     new-instance p1, Lcz/msebera/android/httpclient/message/HeaderGroup;
@@ -124,7 +124,7 @@
     iput-object p1, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->responseHeaders:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
     .line 10
-    invoke-virtual {p1, p4}, Lcz/msebera/android/httpclient/message/HeaderGroup;->setHeaders([Ldf/d;)V
+    invoke-virtual {p1, p4}, Lcz/msebera/android/httpclient/message/HeaderGroup;->setHeaders([Lhh/d;)V
 
     .line 11
     iput-object p5, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->resource:Lcz/msebera/android/httpclient/client/cache/Resource;
@@ -160,7 +160,7 @@
     const-string v0, "Date"
 
     .line 1
-    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object v0
 
@@ -172,11 +172,11 @@
 
     .line 2
     :cond_0
-    invoke-interface {v0}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lnf/b;->d(Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {v0}, Lrh/b;->d(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v0
 
@@ -185,13 +185,13 @@
 
 
 # virtual methods
-.method public getAllHeaders()[Ldf/d;
+.method public getAllHeaders()[Lhh/d;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->responseHeaders:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getAllHeaders()[Ldf/d;
+    invoke-virtual {v0}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getAllHeaders()[Lhh/d;
 
     move-result-object v0
 
@@ -207,26 +207,26 @@
     return-object v0
 .end method
 
-.method public getFirstHeader(Ljava/lang/String;)Ldf/d;
+.method public getFirstHeader(Ljava/lang/String;)Lhh/d;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->responseHeaders:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public getHeaders(Ljava/lang/String;)[Ldf/d;
+.method public getHeaders(Ljava/lang/String;)[Lhh/d;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->responseHeaders:Lcz/msebera/android/httpclient/message/HeaderGroup;
 
-    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-virtual {v0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Lhh/d;
 
     move-result-object p1
 
@@ -237,9 +237,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Ldf/b0;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Lhh/b0;
 
-    invoke-interface {v0}, Ldf/b0;->getProtocolVersion()Lcz/msebera/android/httpclient/ProtocolVersion;
+    invoke-interface {v0}, Lhh/b0;->getProtocolVersion()Lcz/msebera/android/httpclient/ProtocolVersion;
 
     move-result-object v0
 
@@ -250,9 +250,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Ldf/b0;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Lhh/b0;
 
-    invoke-interface {v0}, Ldf/b0;->getReasonPhrase()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/b0;->getReasonPhrase()Ljava/lang/String;
 
     move-result-object v0
 
@@ -290,20 +290,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Ldf/b0;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Lhh/b0;
 
-    invoke-interface {v0}, Ldf/b0;->getStatusCode()I
+    invoke-interface {v0}, Lhh/b0;->getStatusCode()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public getStatusLine()Ldf/b0;
+.method public getStatusLine()Lhh/b0;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Ldf/b0;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Lhh/b0;
 
     return-object v0
 .end method
@@ -336,7 +336,7 @@
     const-string v0, "Vary"
 
     .line 1
-    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object v0
 
@@ -379,7 +379,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Ldf/b0;
+    iget-object v1, p0, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->statusLine:Lhh/b0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

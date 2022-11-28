@@ -15,32 +15,24 @@
 
 
 # instance fields
-.field public final synthetic j:Landroidx/camera/core/SurfaceRequest;
+.field public final synthetic n:Landroidx/camera/core/SurfaceRequest;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/core/SurfaceRequest;)V
+.method public constructor <init>(Landroidx/camera/core/SurfaceRequest;Landroid/util/Size;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$b;->j:Landroidx/camera/core/SurfaceRequest;
+    iput-object p1, p0, Landroidx/camera/core/SurfaceRequest$b;->n:Landroidx/camera/core/SurfaceRequest;
 
-    invoke-direct {p0}, Landroidx/camera/core/impl/DeferrableSurface;-><init>()V
+    invoke-direct {p0, p2, p3}, Landroidx/camera/core/impl/DeferrableSurface;-><init>(Landroid/util/Size;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public l()Lcom/google/common/util/concurrent/ListenableFuture;
+.method public o()Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -55,9 +47,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/SurfaceRequest$b;->j:Landroidx/camera/core/SurfaceRequest;
+    iget-object v0, p0, Landroidx/camera/core/SurfaceRequest$b;->n:Landroidx/camera/core/SurfaceRequest;
 
-    iget-object v0, v0, Landroidx/camera/core/SurfaceRequest;->d:Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object v0, v0, Landroidx/camera/core/SurfaceRequest;->e:Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-object v0
 .end method

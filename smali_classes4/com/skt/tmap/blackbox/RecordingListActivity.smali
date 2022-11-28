@@ -7,31 +7,33 @@
 
 
 # static fields
-.field public static final a1:Ljava/lang/String;
+.field public static final d1:Ljava/lang/String;
 
-.field public static final b1:I = 0x65
+.field public static final e1:I = 0x65
 
-.field public static final c1:I = 0x64
+.field public static final f1:I = 0x64
 
 
 # instance fields
 .field public K0:I
 
-.field public V0:I
-
-.field public W0:Z
-
 .field public X0:I
 
 .field public Y0:Z
 
-.field public Z0:Landroid/net/Uri;
+.field public Z0:I
 
 .field public a:Z
 
+.field public a1:Z
+
 .field public final b:I
 
+.field public b1:Landroid/net/Uri;
+
 .field public final c:I
+
+.field public c1:Landroid/view/View;
 
 .field public final d:I
 
@@ -43,7 +45,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lwb/b;",
+            "Lud/b;",
             ">;"
         }
     .end annotation
@@ -51,7 +53,7 @@
 
 .field public h:Landroid/widget/ListView;
 
-.field public i:Lwb/p;
+.field public i:Lud/t;
 
 .field public j:Landroid/widget/Button;
 
@@ -84,7 +86,7 @@
 
     const-string v0, "RecordingListActivity"
 
-    sput-object v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->a1:Ljava/lang/String;
+    sput-object v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->d1:Ljava/lang/String;
 
     return-void
 .end method
@@ -129,118 +131,49 @@
     iput v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->K0:I
 
     .line 9
-    iput v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->V0:I
-
-    .line 10
-    iput-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->W0:Z
-
-    .line 11
     iput v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->X0:I
 
+    .line 10
+    iput-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Y0:Z
+
+    .line 11
+    iput v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Z0:I
+
     .line 12
-    iput-boolean v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Y0:Z
+    iput-boolean v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->a1:Z
 
     .line 13
-    iput-object v2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Z0:Landroid/net/Uri;
+    iput-object v2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->b1:Landroid/net/Uri;
 
     return-void
 .end method
 
-.method public static synthetic A5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
+.method public static synthetic B5(Lcom/skt/tmap/blackbox/RecordingListActivity;Ljava/util/List;)V
     .locals 0
 
-    .line 1
-    iget p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->K0:I
-
-    return p0
-.end method
-
-.method public static synthetic B5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->K0:I
-
-    return p1
-.end method
-
-.method public static synthetic C5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->k0:Ljava/util/HashMap;
-
-    return-object p0
-.end method
-
-.method public static synthetic D5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Lwb/p;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->i:Lwb/p;
-
-    return-object p0
-.end method
-
-.method public static synthetic E5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->V0:I
-
-    return p1
-.end method
-
-.method private synthetic J5(Ljava/util/List;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->g:Ljava/util/List;
-
-    .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->M5()V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->U5(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method private synthetic K5(Ljava/util/List;)V
+.method public static synthetic C5(Lcom/skt/tmap/blackbox/RecordingListActivity;Ljava/util/List;)V
     .locals 0
 
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->g:Ljava/util/List;
-
-    .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->M5()V
+    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->T5(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static synthetic t5(Lcom/skt/tmap/blackbox/RecordingListActivity;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->K5(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public static synthetic u5(Lcom/skt/tmap/blackbox/RecordingListActivity;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->J5(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public static synthetic v5()Ljava/lang/String;
+.method public static synthetic D5()Ljava/lang/String;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->a1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->d1:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static synthetic w5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/List;
+.method public static synthetic E5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -249,7 +182,16 @@
     return-object p0
 .end method
 
-.method public static synthetic x5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
+.method public static synthetic F5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->X0:I
+
+    return p1
+.end method
+
+.method public static synthetic G5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
     .locals 0
 
     .line 1
@@ -258,36 +200,114 @@
     return p0
 .end method
 
-.method public static synthetic y5(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
+.method public static synthetic H5(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->H5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->R5()V
 
     return-void
 .end method
 
-.method public static synthetic z5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
+.method public static synthetic I5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
     .locals 0
 
     .line 1
-    iget-boolean p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->W0:Z
+    iget-boolean p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Y0:Z
 
     return p0
 .end method
 
+.method public static synthetic J5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->K0:I
+
+    return p0
+.end method
+
+.method public static synthetic K5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->K0:I
+
+    return p1
+.end method
+
+.method public static synthetic L5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->k0:Ljava/util/HashMap;
+
+    return-object p0
+.end method
+
+.method public static synthetic M5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Lud/t;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->i:Lud/t;
+
+    return-object p0
+.end method
+
+.method public static synthetic N5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Landroid/widget/ListView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->h:Landroid/widget/ListView;
+
+    return-object p0
+.end method
+
+.method public static synthetic O5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->c1:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method private synthetic T5(Ljava/util/List;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->g:Ljava/util/List;
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->W5()V
+
+    return-void
+.end method
+
+.method private synthetic U5(Ljava/util/List;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->g:Ljava/util/List;
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->W5()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public F5()I
+.method public P5()I
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->V0:I
+    iget v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->X0:I
 
     return v0
 .end method
 
-.method public G5()I
+.method public Q5()I
     .locals 1
 
     .line 1
@@ -296,7 +316,7 @@
     return v0
 .end method
 
-.method public final H5()V
+.method public final R5()V
     .locals 2
 
     .line 1
@@ -313,7 +333,7 @@
     check-cast v0, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->g()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->d()V
 
     .line 3
     iget v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->e:I
@@ -321,13 +341,13 @@
     if-nez v1, :cond_0
 
     .line 4
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->e()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->b()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
-    new-instance v1, Lwb/m;
+    new-instance v1, Lud/o;
 
-    invoke-direct {v1, p0}, Lwb/m;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
+    invoke-direct {v1, p0}, Lud/o;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
 
     invoke-virtual {v0, p0, v1}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
@@ -335,13 +355,13 @@
 
     .line 5
     :cond_0
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->f()Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/viewmodel/TmapBlackBoxViewModel;->c()Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
-    new-instance v1, Lwb/l;
+    new-instance v1, Lud/n;
 
-    invoke-direct {v1, p0}, Lwb/l;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
+    invoke-direct {v1, p0}, Lud/n;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
 
     invoke-virtual {v0, p0, v1}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
@@ -349,16 +369,16 @@
     return-void
 .end method
 
-.method public I5()Z
+.method public S5()Z
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->W0:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Y0:Z
 
     return v0
 .end method
 
-.method public L5(Z)V
+.method public V5(Z)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -370,27 +390,27 @@
     .end annotation
 
     .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->W0:Z
+    iput-boolean p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Y0:Z
 
     return-void
 .end method
 
-.method public final M5()V
+.method public final W5()V
     .locals 4
 
     const/4 v0, 0x1
 
     .line 1
-    iput-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->W0:Z
+    iput-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Y0:Z
 
     .line 2
-    new-instance v1, Lwb/p;
+    new-instance v1, Lud/t;
 
     iget-object v2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->g:Ljava/util/List;
 
-    invoke-direct {v1, p0, v2}, Lwb/p;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;Ljava/util/List;)V
+    invoke-direct {v1, p0, v2}, Lud/t;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;Ljava/util/List;)V
 
-    iput-object v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->i:Lwb/p;
+    iput-object v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->i:Lud/t;
 
     .line 3
     iget-object v2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->h:Landroid/widget/ListView;
@@ -471,7 +491,7 @@
     if-nez v0, :cond_3
 
     :cond_2
-    const v0, 0x7f13015d
+    const v0, 0x7f140162
 
     .line 12
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -563,7 +583,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Z0:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->b1:Landroid/net/Uri;
 
     .line 7
     invoke-virtual {p3}, Landroid/content/Intent;->getFlags()I
@@ -577,7 +597,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->Z0:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->b1:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, p3}, Landroid/content/ContentResolver;->takePersistableUriPermission(Landroid/net/Uri;I)V
 
@@ -590,7 +610,7 @@
     .line 10
     :cond_5
     :goto_0
-    sget-object p3, Lcom/skt/tmap/blackbox/RecordingListActivity;->a1:Ljava/lang/String;
+    sget-object p3, Lcom/skt/tmap/blackbox/RecordingListActivity;->d1:Ljava/lang/String;
 
     const-string v0, "onActivityResult() requestCode : "
 
@@ -598,7 +618,7 @@
 
     const-string v2, ", isNeedToResume : "
 
-    invoke-static {v0, p1, v1, p2, v2}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1, v1, p2, v2}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -610,7 +630,7 @@
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -636,7 +656,7 @@
     goto :goto_0
 
     :sswitch_0
-    const v0, 0x7f0a0b3e
+    const v0, 0x7f0a0bc8
 
     if-ne p1, v0, :cond_0
 
@@ -678,7 +698,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f13015d
+    const v0, 0x7f140162
 
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -705,7 +725,7 @@
     .line 9
     iget-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->p:Ljava/lang/String;
 
-    const-string/jumbo v1, "title"
+    const-string v1, "title"
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -732,13 +752,11 @@
     :goto_0
     return-void
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
-        0x7f0a0555 -> :sswitch_1
-        0x7f0a0b3d -> :sswitch_0
-        0x7f0a0b3e -> :sswitch_0
+        0x7f0a0586 -> :sswitch_1
+        0x7f0a0bc7 -> :sswitch_0
+        0x7f0a0bc8 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -765,7 +783,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -774,7 +792,7 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d01a1
+    const p1, 0x7f0d01ac
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
@@ -793,11 +811,11 @@
 
     move-result v0
 
-    const v1, 0x7f0a0b3e
+    const v1, 0x7f0a0bc8
 
     const/16 v2, 0x8
 
-    const v3, 0x7f0a0b3d
+    const v3, 0x7f0a0bc7
 
     if-eqz v0, :cond_1
 
@@ -839,7 +857,7 @@
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :goto_0
-    const v0, 0x7f0a0555
+    const v0, 0x7f0a0586
 
     .line 12
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -853,7 +871,7 @@
     .line 13
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const-string/jumbo v0, "title"
+    const-string v0, "title"
 
     .line 14
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -862,7 +880,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->p:Ljava/lang/String;
 
-    const p1, 0x7f0a0ae2
+    const p1, 0x7f0a0b5e
 
     .line 15
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -906,9 +924,18 @@
 
     iput-boolean p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->f:Z
 
-    const p1, 0x7f0a090a
+    const p1, 0x7f0a0ba3
 
     .line 19
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->c1:Landroid/view/View;
+
+    const p1, 0x7f0a0989
+
+    .line 20
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -917,21 +944,21 @@
 
     iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->h:Landroid/widget/ListView;
 
-    .line 20
+    .line 21
     new-instance v0, Lcom/skt/tmap/blackbox/RecordingListActivity$a;
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/blackbox/RecordingListActivity$a;-><init>(Lcom/skt/tmap/blackbox/RecordingListActivity;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 21
+    .line 22
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->h:Landroid/widget/ListView;
 
-    invoke-static {p1, v1}, Ls1/q0;->f(Landroid/view/ViewGroup;Z)V
+    invoke-static {p1, v1}, Landroidx/core/view/u0;->f(Landroid/view/ViewGroup;Z)V
 
-    const p1, 0x7f0a0337
+    const p1, 0x7f0a036c
 
-    .line 22
+    .line 23
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -940,7 +967,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->l:Landroid/widget/TextView;
 
-    .line 23
+    .line 24
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -955,7 +982,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->u:Landroid/net/wifi/WifiManager;
 
-    .line 24
+    .line 25
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -1016,7 +1043,7 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
 
     .line 2
-    sget-object v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->a1:Ljava/lang/String;
+    sget-object v0, Lcom/skt/tmap/blackbox/RecordingListActivity;->d1:Ljava/lang/String;
 
     const-string v1, "onResume() isNeedToResume : "
 
@@ -1032,7 +1059,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-boolean v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->a:Z
@@ -1099,15 +1126,15 @@
 
     move-result-object v3
 
-    check-cast v3, Lwb/b;
+    check-cast v3, Lud/b;
 
     .line 3
-    iget-boolean v4, v3, Lwb/b;->a:Z
+    iget-boolean v4, v3, Lud/b;->h:Z
 
     if-eqz v4, :cond_0
 
     .line 4
-    iput-boolean v1, v3, Lwb/b;->a:Z
+    iput-boolean v1, v3, Lud/b;->h:Z
 
     const/4 v2, 0x1
 
@@ -1120,7 +1147,7 @@
     if-eqz v1, :cond_3
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->i:Lwb/p;
+    iget-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity;->i:Lud/t;
 
     invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 

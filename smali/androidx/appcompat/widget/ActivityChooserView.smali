@@ -25,9 +25,9 @@
 # instance fields
 .field public K0:I
 
-.field public V0:Z
+.field public X0:Z
 
-.field public W0:I
+.field public Y0:I
 
 .field public final a:Landroidx/appcompat/widget/ActivityChooserView$f;
 
@@ -47,7 +47,7 @@
 
 .field public final i:I
 
-.field public j:Ls1/a;
+.field public j:Landroidx/core/view/b;
 
 .field public final k:Landroid/database/DataSetObserver;
 
@@ -393,7 +393,7 @@
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->V0:Z
+    iget-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->X0:Z
 
     if-nez v0, :cond_0
 
@@ -558,12 +558,12 @@
     invoke-virtual {p1}, Landroidx/appcompat/widget/ListPopupWindow;->show()V
 
     .line 18
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->j:Ls1/a;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->j:Landroidx/core/view/b;
 
     if-eqz v0, :cond_4
 
     .line 19
-    invoke-virtual {v0, v1}, Ls1/a;->m(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/b;->m(Z)V
 
     .line 20
     :cond_4
@@ -703,7 +703,7 @@
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 11
-    iget v4, p0, Landroidx/appcompat/widget/ActivityChooserView;->W0:I
+    iget v4, p0, Landroidx/appcompat/widget/ActivityChooserView;->Y0:I
 
     if-eqz v4, :cond_3
 
@@ -717,7 +717,7 @@
 
     move-result-object v3
 
-    iget v4, p0, Landroidx/appcompat/widget/ActivityChooserView;->W0:I
+    iget v4, p0, Landroidx/appcompat/widget/ActivityChooserView;->Y0:I
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -766,6 +766,11 @@
 
 .method public getDataModel()Landroidx/appcompat/widget/c;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->a:Landroidx/appcompat/widget/ActivityChooserView$f;
@@ -858,7 +863,7 @@
     const/4 v0, 0x1
 
     .line 4
-    iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->V0:Z
+    iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->X0:Z
 
     return-void
 .end method
@@ -916,7 +921,7 @@
     const/4 v0, 0x0
 
     .line 9
-    iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->V0:Z
+    iput-boolean v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->X0:Z
 
     return-void
 .end method
@@ -995,6 +1000,11 @@
 
 .method public setActivityChooserModel(Landroidx/appcompat/widget/c;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->a:Landroidx/appcompat/widget/ActivityChooserView$f;
@@ -1022,7 +1032,7 @@
     .locals 0
 
     .line 1
-    iput p1, p0, Landroidx/appcompat/widget/ActivityChooserView;->W0:I
+    iput p1, p0, Landroidx/appcompat/widget/ActivityChooserView;->Y0:I
 
     return-void
 .end method
@@ -1076,7 +1086,7 @@
     return-void
 .end method
 
-.method public setProvider(Ls1/a;)V
+.method public setProvider(Landroidx/core/view/b;)V
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -1085,7 +1095,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView;->j:Ls1/a;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView;->j:Landroidx/core/view/b;
 
     return-void
 .end method

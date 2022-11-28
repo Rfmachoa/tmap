@@ -3,38 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-.field public final synthetic b:Lcom/skt/tmap/mapinfo/MapInfoType;
+# static fields
+.field public static final synthetic a:Lcom/skt/tmap/activity/d3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mapinfo/MapInfoType;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/skt/tmap/activity/d3;
+
+    invoke-direct {v0}, Lcom/skt/tmap/activity/d3;-><init>()V
+
+    sput-object v0, Lcom/skt/tmap/activity/d3;->a:Lcom/skt/tmap/activity/d3;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/d3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/d3;->b:Lcom/skt/tmap/mapinfo/MapInfoType;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCompleteAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
-    .locals 2
+.method public final onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/d3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    iget-object v1, p0, Lcom/skt/tmap/activity/d3;->b:Lcom/skt/tmap/mapinfo/MapInfoType;
-
-    invoke-static {v0, v1, p1, p2}, Lcom/skt/tmap/activity/TmapNaviActivity;->r7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mapinfo/MapInfoType;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+    invoke-static {p1, p2, p3, p4}, Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;->D5(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

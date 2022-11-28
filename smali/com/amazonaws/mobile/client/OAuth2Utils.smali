@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private customTabsCallback:Landroidx/browser/customtabs/a;
+.field private customTabsCallback:Landroidx/browser/customtabs/b;
 
 .field private final mContext:Landroid/content/Context;
 
 .field private mCustomTabsClient:Landroidx/browser/customtabs/CustomTabsClient;
 
-.field private mCustomTabsServiceConnection:Landroidx/browser/customtabs/c;
+.field private mCustomTabsServiceConnection:Landroidx/browser/customtabs/d;
 
-.field private mCustomTabsSession:Landroidx/browser/customtabs/d;
+.field private mCustomTabsSession:Landroidx/browser/customtabs/CustomTabsSession;
 
 .field private mError:Ljava/lang/String;
 
@@ -37,11 +37,11 @@
     iput-object p2, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mSignInRedirectUri:Landroid/net/Uri;
 
     .line 4
-    new-instance p1, Landroidx/browser/customtabs/a;
+    new-instance p1, Landroidx/browser/customtabs/b;
 
-    invoke-direct {p1}, Landroidx/browser/customtabs/a;-><init>()V
+    invoke-direct {p1}, Landroidx/browser/customtabs/b;-><init>()V
 
-    iput-object p1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->customTabsCallback:Landroidx/browser/customtabs/a;
+    iput-object p1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->customTabsCallback:Landroidx/browser/customtabs/b;
 
     return-void
 .end method
@@ -64,20 +64,20 @@
     return-object p1
 .end method
 
-.method public static synthetic access$102(Lcom/amazonaws/mobile/client/OAuth2Utils;Landroidx/browser/customtabs/d;)Landroidx/browser/customtabs/d;
+.method public static synthetic access$102(Lcom/amazonaws/mobile/client/OAuth2Utils;Landroidx/browser/customtabs/CustomTabsSession;)Landroidx/browser/customtabs/CustomTabsSession;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mCustomTabsSession:Landroidx/browser/customtabs/d;
+    iput-object p1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mCustomTabsSession:Landroidx/browser/customtabs/CustomTabsSession;
 
     return-object p1
 .end method
 
-.method public static synthetic access$200(Lcom/amazonaws/mobile/client/OAuth2Utils;)Landroidx/browser/customtabs/a;
+.method public static synthetic access$200(Lcom/amazonaws/mobile/client/OAuth2Utils;)Landroidx/browser/customtabs/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->customTabsCallback:Landroidx/browser/customtabs/a;
+    iget-object p0, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->customTabsCallback:Landroidx/browser/customtabs/b;
 
     return-object p0
 .end method
@@ -226,33 +226,33 @@
     .locals 3
 
     .line 1
-    new-instance v0, Landroidx/browser/customtabs/b$a;
+    new-instance v0, Landroidx/browser/customtabs/CustomTabsIntent$a;
 
-    iget-object v1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mCustomTabsSession:Landroidx/browser/customtabs/d;
+    iget-object v1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mCustomTabsSession:Landroidx/browser/customtabs/CustomTabsSession;
 
-    invoke-direct {v0, v1}, Landroidx/browser/customtabs/b$a;-><init>(Landroidx/browser/customtabs/d;)V
+    invoke-direct {v0, v1}, Landroidx/browser/customtabs/CustomTabsIntent$a;-><init>(Landroidx/browser/customtabs/CustomTabsSession;)V
 
     .line 2
-    invoke-virtual {v0}, Landroidx/browser/customtabs/b$a;->d()Landroidx/browser/customtabs/b;
+    invoke-virtual {v0}, Landroidx/browser/customtabs/CustomTabsIntent$a;->d()Landroidx/browser/customtabs/CustomTabsIntent;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, v0, Landroidx/browser/customtabs/b;->a:Landroid/content/Intent;
+    iget-object v1, v0, Landroidx/browser/customtabs/CustomTabsIntent;->a:Landroid/content/Intent;
 
     const-string v2, "com.android.chrome"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 4
-    iget-object v1, v0, Landroidx/browser/customtabs/b;->a:Landroid/content/Intent;
+    iget-object v1, v0, Landroidx/browser/customtabs/CustomTabsIntent;->a:Landroid/content/Intent;
 
     const/high16 v2, 0x40000000    # 2.0f
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 5
-    iget-object v1, v0, Landroidx/browser/customtabs/b;->a:Landroid/content/Intent;
+    iget-object v1, v0, Landroidx/browser/customtabs/CustomTabsIntent;->a:Landroid/content/Intent;
 
     const/high16 v2, 0x10000000
 
@@ -261,7 +261,7 @@
     .line 6
     iget-object v1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1, p1}, Landroidx/browser/customtabs/b;->b(Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-virtual {v0, v1, p1}, Landroidx/browser/customtabs/CustomTabsIntent;->c(Landroid/content/Context;Landroid/net/Uri;)V
 
     return-void
 .end method
@@ -402,14 +402,14 @@
 
     invoke-direct {v0, p0}, Lcom/amazonaws/mobile/client/OAuth2Utils$1;-><init>(Lcom/amazonaws/mobile/client/OAuth2Utils;)V
 
-    iput-object v0, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mCustomTabsServiceConnection:Landroidx/browser/customtabs/c;
+    iput-object v0, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mCustomTabsServiceConnection:Landroidx/browser/customtabs/d;
 
     .line 2
     iget-object v1, p0, Lcom/amazonaws/mobile/client/OAuth2Utils;->mContext:Landroid/content/Context;
 
     const-string v2, "com.android.chrome"
 
-    invoke-static {v1, v2, v0}, Landroidx/browser/customtabs/CustomTabsClient;->a(Landroid/content/Context;Ljava/lang/String;Landroidx/browser/customtabs/c;)Z
+    invoke-static {v1, v2, v0}, Landroidx/browser/customtabs/CustomTabsClient;->b(Landroid/content/Context;Ljava/lang/String;Landroidx/browser/customtabs/d;)Z
 
     return-void
 .end method

@@ -63,7 +63,7 @@
     .line 1
     invoke-super {p0, p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d002f
+    const p1, 0x7f0d0032
 
     .line 2
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
@@ -86,11 +86,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/d2;->b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/o2;->b(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    const v0, 0x7f0a007d
+    const v0, 0x7f0a008b
 
     .line 5
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -106,7 +106,7 @@
     .line 6
     invoke-virtual {v0, p0, p1, v1}, Lcom/skt/tmap/view/TmapWebView;->init(Landroid/app/Activity;Ljava/lang/String;Z)V
 
-    const p1, 0x7f0a0256
+    const p1, 0x7f0a0281
 
     .line 7
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;

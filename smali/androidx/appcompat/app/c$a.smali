@@ -31,7 +31,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p1, v0}, Landroidx/appcompat/app/c;->c(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Landroidx/appcompat/app/c;->d(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -60,7 +60,7 @@
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
     .line 4
-    invoke-static {p1, p2}, Landroidx/appcompat/app/c;->c(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Landroidx/appcompat/app/c;->d(Landroid/content/Context;I)I
 
     move-result v2
 

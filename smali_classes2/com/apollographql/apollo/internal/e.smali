@@ -13,7 +13,7 @@
 
 .field public final c:Lokhttp3/Call$Factory;
 
-.field public final d:Lo4/d;
+.field public final d:Ll6/d;
 
 .field public final e:Ljava/util/concurrent/Executor;
 
@@ -47,7 +47,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/apollographql/apollo/api/b;Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lo4/d;Ljava/util/concurrent/Executor;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/a;Z)V
+.method public constructor <init>(Lcom/apollographql/apollo/api/b;Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Ll6/d;Ljava/util/concurrent/Executor;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/a;Z)V
     .locals 11
 
     move-object v0, p0
@@ -89,7 +89,7 @@
     move-object v6, p4
 
     .line 7
-    iput-object v6, v0, Lcom/apollographql/apollo/internal/e;->d:Lo4/d;
+    iput-object v6, v0, Lcom/apollographql/apollo/internal/e;->d:Ll6/d;
 
     move-object/from16 v1, p5
 
@@ -112,9 +112,9 @@
     iput-boolean v8, v0, Lcom/apollographql/apollo/internal/e;->i:Z
 
     .line 12
-    new-instance v9, Lm4/e;
+    new-instance v9, Lj6/e;
 
-    new-instance v10, Lm4/c;
+    new-instance v10, Lj6/c;
 
     sget-object v4, Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy;->b:Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;
 
@@ -122,13 +122,13 @@
 
     move-object v1, v10
 
-    invoke-direct/range {v1 .. v8}, Lm4/c;-><init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;ZLo4/d;Lcom/apollographql/apollo/internal/b;Z)V
+    invoke-direct/range {v1 .. v8}, Lj6/c;-><init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;ZLl6/d;Lcom/apollographql/apollo/internal/b;Z)V
 
     invoke-static {v10}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-direct {v9, v1}, Lm4/e;-><init>(Ljava/util/List;)V
+    invoke-direct {v9, v1}, Lj6/e;-><init>(Ljava/util/List;)V
 
     iput-object v9, v0, Lcom/apollographql/apollo/internal/e;->h:Lcom/apollographql/apollo/interceptor/a;
 
@@ -417,7 +417,7 @@
 
     iget-object v3, p0, Lcom/apollographql/apollo/internal/e;->c:Lokhttp3/Call$Factory;
 
-    iget-object v4, p0, Lcom/apollographql/apollo/internal/e;->d:Lo4/d;
+    iget-object v4, p0, Lcom/apollographql/apollo/internal/e;->d:Ll6/d;
 
     iget-object v5, p0, Lcom/apollographql/apollo/internal/e;->e:Ljava/util/concurrent/Executor;
 
@@ -429,7 +429,7 @@
 
     move-object v0, v9
 
-    invoke-direct/range {v0 .. v8}, Lcom/apollographql/apollo/internal/e;-><init>(Lcom/apollographql/apollo/api/b;Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lo4/d;Ljava/util/concurrent/Executor;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/a;Z)V
+    invoke-direct/range {v0 .. v8}, Lcom/apollographql/apollo/internal/e;-><init>(Lcom/apollographql/apollo/api/b;Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Ll6/d;Ljava/util/concurrent/Executor;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/a;Z)V
 
     return-object v9
 .end method
@@ -678,11 +678,11 @@
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v3}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v3}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v3
 

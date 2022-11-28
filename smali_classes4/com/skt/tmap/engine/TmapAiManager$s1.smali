@@ -3,12 +3,12 @@
 .source "TmapAiManager.java"
 
 # interfaces
-.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnCancel;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->w2(Ljava/lang/String;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->y2(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,8 +43,22 @@
 
 
 # virtual methods
-.method public onCancelAction()V
+.method public onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "resp",
+            "errorType",
+            "errorCode",
+            "errorMessage"
+        }
+    .end annotation
 
     return-void
 .end method

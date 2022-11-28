@@ -3,7 +3,7 @@
 .source "ImageAnalysis.java"
 
 # interfaces
-.implements Lx/y;
+.implements Lb0/g0;
 
 
 # annotations
@@ -25,8 +25,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lx/y<",
-        "Landroidx/camera/core/impl/j;",
+        "Lb0/g0<",
+        "Landroidx/camera/core/impl/h;",
         ">;"
     }
 .end annotation
@@ -35,18 +35,16 @@
 # static fields
 .field public static final a:Landroid/util/Size;
 
-.field public static final b:Landroid/util/Size;
+.field public static final b:I = 0x1
 
-.field public static final c:I = 0x1
+.field public static final c:I
 
-.field public static final d:I
-
-.field public static final e:Landroidx/camera/core/impl/j;
+.field public static final d:Landroidx/camera/core/impl/h;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .line 1
     new-instance v0, Landroid/util/Size;
@@ -60,51 +58,35 @@
     sput-object v0, Landroidx/camera/core/ImageAnalysis$c;->a:Landroid/util/Size;
 
     .line 2
-    new-instance v1, Landroid/util/Size;
+    new-instance v1, Landroidx/camera/core/ImageAnalysis$b;
 
-    const/16 v2, 0x780
-
-    const/16 v3, 0x438
-
-    invoke-direct {v1, v2, v3}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v1, Landroidx/camera/core/ImageAnalysis$c;->b:Landroid/util/Size;
+    invoke-direct {v1}, Landroidx/camera/core/ImageAnalysis$b;-><init>()V
 
     .line 3
-    new-instance v2, Landroidx/camera/core/ImageAnalysis$b;
-
-    invoke-direct {v2}, Landroidx/camera/core/ImageAnalysis$b;-><init>()V
-
-    .line 4
-    invoke-virtual {v2, v0}, Landroidx/camera/core/ImageAnalysis$b;->D(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
-
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {v0, v1}, Landroidx/camera/core/ImageAnalysis$b;->H(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
+    invoke-virtual {v1, v0}, Landroidx/camera/core/ImageAnalysis$b;->B(Landroid/util/Size;)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 6
-    invoke-virtual {v0, v1}, Landroidx/camera/core/ImageAnalysis$b;->K(I)Landroidx/camera/core/ImageAnalysis$b;
+    .line 4
+    invoke-virtual {v0, v1}, Landroidx/camera/core/ImageAnalysis$b;->L(I)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 7
-    invoke-virtual {v0, v1}, Landroidx/camera/core/ImageAnalysis$b;->L(I)Landroidx/camera/core/ImageAnalysis$b;
+    .line 5
+    invoke-virtual {v0, v1}, Landroidx/camera/core/ImageAnalysis$b;->M(I)Landroidx/camera/core/ImageAnalysis$b;
 
     move-result-object v0
 
-    .line 8
-    invoke-virtual {v0}, Landroidx/camera/core/ImageAnalysis$b;->w()Landroidx/camera/core/impl/j;
+    .line 6
+    invoke-virtual {v0}, Landroidx/camera/core/ImageAnalysis$b;->v()Landroidx/camera/core/impl/h;
 
     move-result-object v0
 
-    sput-object v0, Landroidx/camera/core/ImageAnalysis$c;->e:Landroidx/camera/core/impl/j;
+    sput-object v0, Landroidx/camera/core/ImageAnalysis$c;->d:Landroidx/camera/core/impl/h;
 
     return-void
 .end method
@@ -126,20 +108,20 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$c;->b()Landroidx/camera/core/impl/j;
+    invoke-virtual {p0}, Landroidx/camera/core/ImageAnalysis$c;->b()Landroidx/camera/core/impl/h;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public b()Landroidx/camera/core/impl/j;
+.method public b()Landroidx/camera/core/impl/h;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    sget-object v0, Landroidx/camera/core/ImageAnalysis$c;->e:Landroidx/camera/core/impl/j;
+    sget-object v0, Landroidx/camera/core/ImageAnalysis$c;->d:Landroidx/camera/core/impl/h;
 
     return-object v0
 .end method

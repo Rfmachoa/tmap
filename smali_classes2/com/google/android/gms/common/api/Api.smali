@@ -1,17 +1,17 @@
 .class public final Lcom/google/android/gms/common/api/Api;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;,
+        Lcom/google/android/gms/common/api/Api$ClientKey;,
         Lcom/google/android/gms/common/api/Api$Client;,
         Lcom/google/android/gms/common/api/Api$AnyClient;,
-        Lcom/google/android/gms/common/api/Api$ClientKey;,
         Lcom/google/android/gms/common/api/Api$AnyClientKey;,
         Lcom/google/android/gms/common/api/Api$ApiOptions;,
-        Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;,
         Lcom/google/android/gms/common/api/Api$BaseClientBuilder;
     }
 .end annotation
@@ -28,22 +28,8 @@
 
 # instance fields
 .field private final zaa:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "*TO;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Lcom/google/android/gms/common/api/Api$ClientKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$ClientKey<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Ljava/lang/String;
 
@@ -107,14 +93,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "*TO;>;"
-        }
-    .end annotation
-
     iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zaa:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
     return-object v0
@@ -125,14 +103,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/api/Api$AnyClientKey<",
-            "*>;"
-        }
-    .end annotation
-
     iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zab:Lcom/google/android/gms/common/api/Api$ClientKey;
 
     return-object v0
@@ -141,14 +111,6 @@
 .method public final zac()Lcom/google/android/gms/common/api/Api$BaseClientBuilder;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/api/Api$BaseClientBuilder<",
-            "*TO;>;"
-        }
     .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zaa:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;

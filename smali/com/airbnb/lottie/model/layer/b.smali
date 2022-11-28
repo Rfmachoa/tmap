@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public A:Lo3/a;
+.field public A:Lk5/a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lo3/a<",
+            "Lk5/a<",
             "Ljava/lang/Float;",
             "Ljava/lang/Float;",
             ">;"
@@ -84,7 +84,7 @@
     iput-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->D:Landroid/graphics/RectF;
 
     .line 5
-    invoke-virtual {p2}, Lcom/airbnb/lottie/model/layer/Layer;->s()Lr3/b;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/layer/Layer;->s()Ln5/b;
 
     move-result-object p2
 
@@ -93,25 +93,25 @@
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-virtual {p2}, Lr3/b;->a()Lo3/a;
+    invoke-virtual {p2}, Ln5/b;->a()Lk5/a;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iput-object p2, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
     .line 7
-    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/model/layer/a;->h(Lo3/a;)V
+    invoke-virtual {p0, p2}, Lcom/airbnb/lottie/model/layer/a;->h(Lk5/a;)V
 
     .line 8
-    iget-object p2, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iget-object p2, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
-    invoke-virtual {p2, p0}, Lo3/a;->a(Lo3/a$a;)V
+    invoke-virtual {p2, p0}, Lk5/a;->a(Lk5/a$a;)V
 
     goto :goto_0
 
     .line 9
     :cond_0
-    iput-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iput-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
     .line 10
     :goto_0
@@ -274,17 +274,17 @@
 
 
 # virtual methods
-.method public B(Lq3/d;ILjava/util/List;Lq3/d;)V
+.method public B(Lm5/d;ILjava/util/List;Lm5/d;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lq3/d;",
+            "Lm5/d;",
             "I",
             "Ljava/util/List<",
-            "Lq3/d;",
+            "Lm5/d;",
             ">;",
-            "Lq3/d;",
+            "Lm5/d;",
             ")V"
         }
     .end annotation
@@ -310,7 +310,7 @@
 
     check-cast v1, Lcom/airbnb/lottie/model/layer/a;
 
-    invoke-virtual {v1, p1, p2, p3, p4}, Lcom/airbnb/lottie/model/layer/a;->d(Lq3/d;ILjava/util/List;Lq3/d;)V
+    invoke-virtual {v1, p1, p2, p3, p4}, Lcom/airbnb/lottie/model/layer/a;->c(Lm5/d;ILjava/util/List;Lm5/d;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -333,7 +333,7 @@
     invoke-super {p0, p1}, Lcom/airbnb/lottie/model/layer/a;->F(F)V
 
     .line 2
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
     if-eqz v0, :cond_0
 
@@ -349,9 +349,9 @@
     move-result p1
 
     .line 4
-    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
-    invoke-virtual {v0}, Lo3/a;->h()Ljava/lang/Object;
+    invoke-virtual {v0}, Lk5/a;->h()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -467,7 +467,7 @@
     check-cast v2, Lcom/airbnb/lottie/model/layer/a;
 
     .line 4
-    instance-of v3, v2, Lt3/c;
+    instance-of v3, v2, Lp5/c;
 
     if-eqz v3, :cond_0
 
@@ -609,9 +609,9 @@
     return v0
 .end method
 
-.method public c(Ljava/lang/Object;Lx3/j;)V
+.method public d(Ljava/lang/Object;Lt5/j;)V
     .locals 1
-    .param p2    # Lx3/j;
+    .param p2    # Lt5/j;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -620,13 +620,13 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;",
-            "Lx3/j<",
+            "Lt5/j<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/airbnb/lottie/model/layer/a;->c(Ljava/lang/Object;Lx3/j;)V
+    invoke-super {p0, p1, p2}, Lcom/airbnb/lottie/model/layer/a;->d(Ljava/lang/Object;Lt5/j;)V
 
     .line 2
     sget-object v0, Lcom/airbnb/lottie/l;->A:Ljava/lang/Float;
@@ -638,20 +638,20 @@
     const/4 p1, 0x0
 
     .line 3
-    iput-object p1, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iput-object p1, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
     goto :goto_0
 
     .line 4
     :cond_0
-    new-instance p1, Lo3/p;
+    new-instance p1, Lk5/p;
 
-    invoke-direct {p1, p2}, Lo3/p;-><init>(Lx3/j;)V
+    invoke-direct {p1, p2}, Lk5/p;-><init>(Lt5/j;)V
 
-    iput-object p1, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lo3/a;
+    iput-object p1, p0, Lcom/airbnb/lottie/model/layer/b;->A:Lk5/a;
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/model/layer/a;->h(Lo3/a;)V
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/model/layer/a;->h(Lk5/a;)V
 
     :cond_1
     :goto_0

@@ -24,6 +24,16 @@
 
 
 # static fields
+.field private static final DEFAULT_THEMED_DURATION_ATTR:I
+    .annotation build Landroidx/annotation/AttrRes;
+    .end annotation
+.end field
+
+.field private static final DEFAULT_THEMED_EASING_ATTR:I
+    .annotation build Landroidx/annotation/AttrRes;
+    .end annotation
+.end field
+
 .field public static final X:I = 0x0
 
 .field public static final Y:I = 0x1
@@ -38,6 +48,22 @@
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    sget v0, Lcom/google/android/material/R$attr;->motionDurationLong1:I
+
+    sput v0, Lcom/google/android/material/transition/platform/MaterialSharedAxis;->DEFAULT_THEMED_DURATION_ATTR:I
+
+    .line 2
+    sget v0, Lcom/google/android/material/R$attr;->motionEasingEmphasizedInterpolator:I
+
+    sput v0, Lcom/google/android/material/transition/platform/MaterialSharedAxis;->DEFAULT_THEMED_EASING_ATTR:I
+
+    return-void
+.end method
+
 .method public constructor <init>(IZ)V
     .locals 2
 
@@ -174,6 +200,28 @@
     iget v0, p0, Lcom/google/android/material/transition/platform/MaterialSharedAxis;->axis:I
 
     return v0
+.end method
+
+.method public getDurationThemeAttrResId(Z)I
+    .locals 0
+    .annotation build Landroidx/annotation/AttrRes;
+    .end annotation
+
+    .line 1
+    sget p1, Lcom/google/android/material/transition/platform/MaterialSharedAxis;->DEFAULT_THEMED_DURATION_ATTR:I
+
+    return p1
+.end method
+
+.method public getEasingThemeAttrResId(Z)I
+    .locals 0
+    .annotation build Landroidx/annotation/AttrRes;
+    .end annotation
+
+    .line 1
+    sget p1, Lcom/google/android/material/transition/platform/MaterialSharedAxis;->DEFAULT_THEMED_EASING_ATTR:I
+
+    return p1
 .end method
 
 .method public bridge synthetic getPrimaryAnimatorProvider()Lcom/google/android/material/transition/platform/VisibilityAnimatorProvider;

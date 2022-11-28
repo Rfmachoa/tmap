@@ -1,12 +1,17 @@
 .class public Lcom/google/android/gms/auth/api/credentials/Credentials;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,6 +23,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialsClient;
@@ -39,6 +46,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 2
     new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialsClient;
@@ -54,6 +63,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 3
     new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialsClient;
@@ -75,6 +86,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 4
     new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialsClient;

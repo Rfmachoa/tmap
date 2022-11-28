@@ -117,7 +117,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -156,7 +156,7 @@
     throw p1
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -182,7 +182,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-static {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p0
 
@@ -249,7 +249,7 @@
     move-result-object v1
 
     .line 3
-    invoke-static {v1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    invoke-static {v1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object v1
 
@@ -268,7 +268,15 @@
 
 
 # virtual methods
-.method public d()Landroid/support/v4/media/MediaDescriptionCompat;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()Landroid/support/v4/media/MediaDescriptionCompat;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -279,15 +287,7 @@
     return-object v0
 .end method
 
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()I
+.method public f()I
     .locals 1
 
     .line 1
@@ -296,7 +296,7 @@
     return v0
 .end method
 
-.method public f()Ljava/lang/String;
+.method public h()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -304,14 +304,14 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->j()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public g()Z
+.method public i()Z
     .locals 2
 
     .line 1
@@ -332,7 +332,7 @@
     return v1
 .end method
 
-.method public h()Z
+.method public j()Z
     .locals 1
 
     .line 1

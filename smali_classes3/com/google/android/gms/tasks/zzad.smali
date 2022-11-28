@@ -1,9 +1,22 @@
 .class final Lcom/google/android/gms/tasks/zzad;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/zzae;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/tasks/zzae<",
+        "TT;>;"
+    }
+.end annotation
 
 
 # instance fields
@@ -76,6 +89,11 @@
 
 .method public final onSuccess(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/google/android/gms/tasks/zzad;->zza:Ljava/util/concurrent/CountDownLatch;

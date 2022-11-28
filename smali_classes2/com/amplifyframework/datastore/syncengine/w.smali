@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/o;
 
 
 # instance fields
@@ -34,9 +34,9 @@
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/w;->b:Lcom/amplifyframework/datastore/syncengine/PendingMutation;
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->l(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Ljava/lang/Throwable;)Lai/g;
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/MutationProcessor;->q(Lcom/amplifyframework/datastore/syncengine/MutationProcessor;Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
 
     move-result-object p1
 

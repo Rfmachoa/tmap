@@ -1,29 +1,12 @@
-.class public final Loj/g;
-.super Loj/i;
+.class public interface abstract Loj/g;
+.super Ljava/lang/Object;
+.source "CompletableSource.java"
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "oj/h",
-        "oj/i"
-    }
-    d2 = {}
-    k = 0x4
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
-.end annotation
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Loj/i;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract d(Loj/d;)V
+    .param p1    # Loj/d;
+        .annotation build Lio/reactivex/annotations/NonNull;
+        .end annotation
+    .end param
 .end method

@@ -3,7 +3,7 @@
 .source "BasicMDCAdapter.java"
 
 # interfaces
-.implements Lrk/c;
+.implements Lxm/c;
 
 
 # instance fields

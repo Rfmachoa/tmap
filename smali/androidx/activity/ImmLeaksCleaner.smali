@@ -53,6 +53,12 @@
 
 .method public static a()V
     .locals 3
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "SoonBlockedPrivateApi"
+        }
+    .end annotation
+
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 

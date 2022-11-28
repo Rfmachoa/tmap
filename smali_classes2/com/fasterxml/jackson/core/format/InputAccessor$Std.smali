@@ -57,28 +57,14 @@
 .end method
 
 .method public constructor <init>([B)V
-    .locals 1
+    .locals 2
 
     .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    .line 8
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_in:Ljava/io/InputStream;
-
-    .line 9
-    iput-object p1, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_buffer:[B
-
-    const/4 v0, 0x0
-
-    .line 10
-    iput v0, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_bufferedStart:I
-
-    .line 11
-    array-length p1, p1
-
-    iput p1, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_bufferedEnd:I
+    invoke-direct {p0, p1, v1, v0}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>([BII)V
 
     return-void
 .end method
@@ -86,26 +72,26 @@
 .method public constructor <init>([BII)V
     .locals 1
 
-    .line 12
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 13
+    .line 9
     iput-object v0, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_in:Ljava/io/InputStream;
 
-    .line 14
+    .line 10
     iput-object p1, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_buffer:[B
 
-    .line 15
+    .line 11
     iput p2, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_ptr:I
 
-    .line 16
+    .line 12
     iput p2, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_bufferedStart:I
 
     add-int/2addr p2, p3
 
-    .line 17
+    .line 13
     iput p2, p0, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;->_bufferedEnd:I
 
     return-void

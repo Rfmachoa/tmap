@@ -1,10 +1,13 @@
 .class public Lcom/google/android/gms/common/internal/LibraryVersion;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
 .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
@@ -16,15 +19,6 @@
 
 # instance fields
 .field private zzc:Ljava/util/concurrent/ConcurrentHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -85,7 +79,7 @@
 
 # virtual methods
 .method public getVersion(Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
+    .locals 8
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -94,6 +88,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     const-string v0, "Failed to get app version for libraryName: "
@@ -174,109 +171,79 @@
 
     sget-object v2, Lcom/google/android/gms/common/internal/LibraryVersion;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    new-instance v5, Ljava/lang/StringBuilder;
+
     .line 9
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v5
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    const-string v6, " version is "
 
-    move-result v5
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v5, v5, 0xc
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    add-int/2addr v5, v6
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " version is "
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v2, v1, v5}, Lcom/google/android/gms/common/internal/GmsLogger;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_0
 
     .line 10
     :cond_1
     sget-object v2, Lcom/google/android/gms/common/internal/LibraryVersion;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    new-instance v5, Ljava/lang/StringBuilder;
+
     .line 11
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v5, Ljava/lang/String;
-
-    invoke-direct {v5, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
     invoke-virtual {v2, v1, v5}, Lcom/google/android/gms/common/internal/GmsLogger;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :goto_1
-    if-eqz v3, :cond_5
+    :goto_0
+    if-eqz v3, :cond_3
 
     .line 12
     invoke-static {v3}, Lcom/google/android/gms/common/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    goto :goto_4
+    goto :goto_2
 
     :catchall_0
     move-exception p1
 
     move-object v4, v3
 
-    goto :goto_5
+    goto :goto_3
 
     :catch_0
     move-exception v2
 
-    move-object v8, v4
+    move-object v7, v4
 
     move-object v4, v3
 
-    move-object v3, v8
+    move-object v3, v7
 
-    goto :goto_2
+    goto :goto_1
 
     :catchall_1
     move-exception p1
 
-    goto :goto_5
+    goto :goto_3
 
     :catch_1
     move-exception v2
@@ -284,77 +251,63 @@
     move-object v3, v4
 
     .line 13
-    :goto_2
+    :goto_1
     :try_start_2
     sget-object v5, Lcom/google/android/gms/common/internal/LibraryVersion;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    new-instance v6, Ljava/lang/StringBuilder;
+
     .line 14
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v6
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    invoke-virtual {v0, v6}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_3
-
-    .line 15
-    :cond_3
-    new-instance v6, Ljava/lang/String;
-
-    .line 16
-    invoke-direct {v6, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    move-object v0, v6
-
-    :goto_3
     invoke-virtual {v5, v1, v0, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_2
 
-    .line 17
+    .line 15
     invoke-static {v4}, Lcom/google/android/gms/common/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    :cond_4
+    :cond_2
     move-object v4, v3
 
-    :cond_5
-    :goto_4
-    if-nez v4, :cond_6
+    :cond_3
+    :goto_2
+    if-nez v4, :cond_4
 
     sget-object v0, Lcom/google/android/gms/common/internal/LibraryVersion;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v2, ".properties file is dropped during release process. Failure to read app version is expected during Google internal testing where locally-built libraries are used"
 
-    .line 18
+    .line 16
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v4, "UNKNOWN"
 
-    :cond_6
+    :cond_4
     iget-object v0, p0, Lcom/google/android/gms/common/internal/LibraryVersion;->zzc:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 19
+    .line 17
     invoke-virtual {v0, p1, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v4
 
-    :goto_5
-    if-eqz v4, :cond_7
+    :goto_3
+    if-eqz v4, :cond_5
 
-    .line 20
+    .line 18
     invoke-static {v4}, Lcom/google/android/gms/common/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 21
-    :cond_7
+    .line 19
+    :cond_5
     throw p1
 .end method

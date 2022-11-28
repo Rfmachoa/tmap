@@ -21,7 +21,7 @@
 
 .field public final c:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-.field public final d:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
+.field public final d:Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -59,9 +59,9 @@
     if-eqz p1, :cond_0
 
     .line 6
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z;-><init>()V
+    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;-><init>()V
 
     goto :goto_0
 
@@ -70,7 +70,7 @@
 
     .line 7
     :goto_0
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/Mp4Extractor$a;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/Mp4Extractor$a;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;
 
     return-void
 .end method

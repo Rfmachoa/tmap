@@ -3,34 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/SettingSoundScreen;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/SearchScreen;
+
+.field public final synthetic b:Lcom/skt/tmap/data/TmapMainSearchHistoryItem;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SettingSoundScreen;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SearchScreen;Lcom/skt/tmap/data/TmapMainSearchHistoryItem;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/y1;->a:Lcom/skt/tmap/car/screen/SettingSoundScreen;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/y1;->a:Lcom/skt/tmap/car/screen/SearchScreen;
+
+    iput-object p2, p0, Lcom/skt/tmap/car/screen/y1;->b:Lcom/skt/tmap/data/TmapMainSearchHistoryItem;
+
+    iput p3, p0, Lcom/skt/tmap/car/screen/y1;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/y1;->a:Lcom/skt/tmap/car/screen/SettingSoundScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/y1;->a:Lcom/skt/tmap/car/screen/SearchScreen;
 
-    check-cast p1, Lxb/a;
+    iget-object v1, p0, Lcom/skt/tmap/car/screen/y1;->b:Lcom/skt/tmap/data/TmapMainSearchHistoryItem;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/SettingSoundScreen;->K(Lcom/skt/tmap/car/screen/SettingSoundScreen;Lxb/a;)V
+    iget v2, p0, Lcom/skt/tmap/car/screen/y1;->c:I
+
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/car/screen/SearchScreen;->O(Lcom/skt/tmap/car/screen/SearchScreen;Lcom/skt/tmap/data/TmapMainSearchHistoryItem;I)V
 
     return-void
 .end method

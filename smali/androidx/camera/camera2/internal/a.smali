@@ -3,7 +3,7 @@
 .source "AndroidRZoomImpl.java"
 
 # interfaces
-.implements Landroidx/camera/camera2/internal/x2$b;
+.implements Landroidx/camera/camera2/internal/b4$b;
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field public final a:Ls/d;
+.field public final a:Lw/u;
 
 .field public final b:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
@@ -45,20 +45,12 @@
 
 
 # direct methods
-.method public constructor <init>(Ls/d;)V
+.method public constructor <init>(Lw/u;)V
     .locals 1
-    .param p1    # Ls/d;
+    .param p1    # Lw/u;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraCharacteristics"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -72,13 +64,13 @@
     iput v0, p0, Landroidx/camera/camera2/internal/a;->e:F
 
     .line 4
-    iput-object p1, p0, Landroidx/camera/camera2/internal/a;->a:Ls/d;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/a;->a:Lw/u;
 
     .line 5
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_ZOOM_RATIO_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     .line 6
-    invoke-virtual {p1, v0}, Ls/d;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lw/u;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -92,111 +84,76 @@
 
 # virtual methods
 .method public a(Landroid/hardware/camera2/TotalCaptureResult;)V
-    .locals 1
+    .locals 2
     .param p1    # Landroid/hardware/camera2/TotalCaptureResult;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "captureResult"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/a;->d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 2
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureResult$Key;
+    invoke-virtual {p1}, Landroid/hardware/camera2/TotalCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
-    invoke-virtual {p1, v0}, Landroid/hardware/camera2/TotalCaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    move-object p1, v0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Float;
 
-    if-nez p1, :cond_0
+    :goto_0
+    if-nez p1, :cond_1
 
     return-void
 
-    .line 3
-    :cond_0
+    .line 4
+    :cond_1
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
 
-    .line 4
-    iget v0, p0, Landroidx/camera/camera2/internal/a;->e:F
-
-    cmpl-float p1, v0, p1
-
-    if-nez p1, :cond_1
-
     .line 5
-    iget-object p1, p0, Landroidx/camera/camera2/internal/a;->d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+    iget v1, p0, Landroidx/camera/camera2/internal/a;->e:F
 
-    const/4 v0, 0x0
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_2
+
+    .line 6
+    iget-object p1, p0, Landroidx/camera/camera2/internal/a;->d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
     invoke-virtual {p1, v0}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->c(Ljava/lang/Object;)Z
 
-    .line 6
+    .line 7
     iput-object v0, p0, Landroidx/camera/camera2/internal/a;->d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
-.method public b(Lr/b$a;)V
-    .locals 2
-    .param p1    # Lr/b$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "builder"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    iget v1, p0, Landroidx/camera/camera2/internal/a;->c:F
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lr/b$a;->f(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lr/b$a;
-
-    return-void
-.end method
-
-.method public c(FLandroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
+.method public b(FLandroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
     .locals 2
     .param p2    # Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "zoomRatio",
-            "completer"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(F",
@@ -235,7 +192,7 @@
     return-void
 .end method
 
-.method public d()F
+.method public c()F
     .locals 1
 
     .line 1
@@ -252,6 +209,27 @@
     move-result v0
 
     return v0
+.end method
+
+.method public d(Lv/b$a;)V
+    .locals 2
+    .param p1    # Lv/b$a;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ZOOM_RATIO:Landroid/hardware/camera2/CaptureRequest$Key;
+
+    iget v1, p0, Landroidx/camera/camera2/internal/a;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lv/b$a;->f(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lv/b$a;
+
+    return-void
 .end method
 
 .method public e()V
@@ -311,19 +289,19 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/camera2/internal/a;->a:Ls/d;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/a;->a:Lw/u;
 
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     .line 2
-    invoke-virtual {v0, v1}, Ls/d;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lw/u;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/graphics/Rect;
 
     .line 3
-    invoke-static {v0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

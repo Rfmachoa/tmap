@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field public static final A0:Ljava/lang/String; = "service"
+.field public static final A0:Ljava/lang/String; = "transport"
 
 .field public static final B:Ljava/lang/String; = "android.title.big"
     .annotation build Landroid/annotation/SuppressLint;
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field public static final B0:Ljava/lang/String; = "reminder"
+.field public static final B0:Ljava/lang/String; = "sys"
 
 .field public static final C:Ljava/lang/String; = "android.text"
     .annotation build Landroid/annotation/SuppressLint;
@@ -56,7 +56,7 @@
     .end annotation
 .end field
 
-.field public static final C0:Ljava/lang/String; = "recommendation"
+.field public static final C0:Ljava/lang/String; = "service"
 
 .field public static final D:Ljava/lang/String; = "android.subText"
     .annotation build Landroid/annotation/SuppressLint;
@@ -66,7 +66,7 @@
     .end annotation
 .end field
 
-.field public static final D0:Ljava/lang/String; = "status"
+.field public static final D0:Ljava/lang/String; = "reminder"
 
 .field public static final E:Ljava/lang/String; = "android.remoteInputHistory"
     .annotation build Landroid/annotation/SuppressLint;
@@ -76,7 +76,7 @@
     .end annotation
 .end field
 
-.field public static final E0:Ljava/lang/String; = "workout"
+.field public static final E0:Ljava/lang/String; = "recommendation"
 
 .field public static final F:Ljava/lang/String; = "android.infoText"
     .annotation build Landroid/annotation/SuppressLint;
@@ -86,7 +86,7 @@
     .end annotation
 .end field
 
-.field public static final F0:Ljava/lang/String; = "location_sharing"
+.field public static final F0:Ljava/lang/String; = "status"
 
 .field public static final G:Ljava/lang/String; = "android.summaryText"
     .annotation build Landroid/annotation/SuppressLint;
@@ -96,7 +96,7 @@
     .end annotation
 .end field
 
-.field public static final G0:Ljava/lang/String; = "stopwatch"
+.field public static final G0:Ljava/lang/String; = "workout"
 
 .field public static final H:Ljava/lang/String; = "android.bigText"
     .annotation build Landroid/annotation/SuppressLint;
@@ -106,7 +106,7 @@
     .end annotation
 .end field
 
-.field public static final H0:Ljava/lang/String; = "missed_call"
+.field public static final H0:Ljava/lang/String; = "location_sharing"
 
 .field public static final I:Ljava/lang/String; = "android.icon"
     .annotation build Landroid/annotation/SuppressLint;
@@ -116,7 +116,7 @@
     .end annotation
 .end field
 
-.field public static final I0:I = 0x0
+.field public static final I0:Ljava/lang/String; = "stopwatch"
 
 .field public static final J:Ljava/lang/String; = "android.largeIcon"
     .annotation build Landroid/annotation/SuppressLint;
@@ -126,7 +126,7 @@
     .end annotation
 .end field
 
-.field public static final J0:I = 0x1
+.field public static final J0:Ljava/lang/String; = "missed_call"
 
 .field public static final K:Ljava/lang/String; = "android.largeIcon.big"
     .annotation build Landroid/annotation/SuppressLint;
@@ -136,7 +136,7 @@
     .end annotation
 .end field
 
-.field public static final K0:I = 0x2
+.field public static final K0:I = 0x0
 
 .field public static final L:Ljava/lang/String; = "android.progress"
     .annotation build Landroid/annotation/SuppressLint;
@@ -146,7 +146,7 @@
     .end annotation
 .end field
 
-.field public static final L0:I = 0x0
+.field public static final L0:I = 0x1
 
 .field public static final M:Ljava/lang/String; = "android.progressMax"
     .annotation build Landroid/annotation/SuppressLint;
@@ -156,7 +156,7 @@
     .end annotation
 .end field
 
-.field public static final M0:I = 0x1
+.field public static final M0:I = 0x2
 
 .field public static final N:Ljava/lang/String; = "android.progressIndeterminate"
     .annotation build Landroid/annotation/SuppressLint;
@@ -166,7 +166,7 @@
     .end annotation
 .end field
 
-.field public static final N0:I = 0x2
+.field public static final N0:I = 0x0
 
 .field public static final O:Ljava/lang/String; = "android.showChronometer"
     .annotation build Landroid/annotation/SuppressLint;
@@ -176,7 +176,7 @@
     .end annotation
 .end field
 
-.field public static final O0:Ljava/lang/String; = "silent"
+.field public static final O0:I = 0x1
 
 .field public static final P:Ljava/lang/String; = "android.chronometerCountDown"
     .annotation build Landroid/annotation/SuppressLint;
@@ -186,7 +186,7 @@
     .end annotation
 .end field
 
-.field public static final P0:I = 0x0
+.field public static final P0:I = 0x2
 
 .field public static final Q:Ljava/lang/String; = "android.colorized"
     .annotation build Landroid/annotation/SuppressLint;
@@ -196,7 +196,7 @@
     .end annotation
 .end field
 
-.field public static final Q0:I = 0x1
+.field public static final Q0:Ljava/lang/String; = "silent"
 
 .field public static final R:Ljava/lang/String; = "android.showWhen"
     .annotation build Landroid/annotation/SuppressLint;
@@ -206,7 +206,7 @@
     .end annotation
 .end field
 
-.field public static final R0:I = 0x2
+.field public static final R0:I = 0x0
 
 .field public static final S:Ljava/lang/String; = "android.picture"
     .annotation build Landroid/annotation/SuppressLint;
@@ -216,7 +216,9 @@
     .end annotation
 .end field
 
-.field public static final T:Ljava/lang/String; = "android.showBigPictureWhenCollapsed"
+.field public static final S0:I = 0x1
+
+.field public static final T:Ljava/lang/String; = "android.pictureIcon"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -224,7 +226,9 @@
     .end annotation
 .end field
 
-.field public static final U:Ljava/lang/String; = "android.textLines"
+.field public static final T0:I = 0x2
+
+.field public static final U:Ljava/lang/String; = "android.pictureContentDescription"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -232,7 +236,7 @@
     .end annotation
 .end field
 
-.field public static final V:Ljava/lang/String; = "android.template"
+.field public static final V:Ljava/lang/String; = "android.showBigPictureWhenCollapsed"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -240,9 +244,25 @@
     .end annotation
 .end field
 
-.field public static final W:Ljava/lang/String; = "androidx.core.app.extra.COMPAT_TEMPLATE"
+.field public static final W:Ljava/lang/String; = "android.textLines"
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ActionValue"
+        }
+    .end annotation
+.end field
 
-.field public static final X:Ljava/lang/String; = "android.people"
+.field public static final X:Ljava/lang/String; = "android.template"
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ActionValue"
+        }
+    .end annotation
+.end field
+
+.field public static final Y:Ljava/lang/String; = "androidx.core.app.extra.COMPAT_TEMPLATE"
+
+.field public static final Z:Ljava/lang/String; = "android.people"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -250,22 +270,6 @@
     .end annotation
 
     .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final Y:Ljava/lang/String; = "android.people.list"
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ActionValue"
-        }
-    .end annotation
-.end field
-
-.field public static final Z:Ljava/lang/String; = "android.backgroundImageUri"
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ActionValue"
-        }
     .end annotation
 .end field
 
@@ -277,7 +281,7 @@
     .end annotation
 .end field
 
-.field public static final a0:Ljava/lang/String; = "android.mediaSession"
+.field public static final a0:Ljava/lang/String; = "android.people.list"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -293,7 +297,7 @@
     .end annotation
 .end field
 
-.field public static final b0:Ljava/lang/String; = "android.compactActions"
+.field public static final b0:Ljava/lang/String; = "android.backgroundImageUri"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -309,7 +313,7 @@
     .end annotation
 .end field
 
-.field public static final c0:Ljava/lang/String; = "android.selfDisplayName"
+.field public static final c0:Ljava/lang/String; = "android.mediaSession"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -325,7 +329,7 @@
     .end annotation
 .end field
 
-.field public static final d0:Ljava/lang/String; = "android.messagingStyleUser"
+.field public static final d0:Ljava/lang/String; = "android.compactActions"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -341,7 +345,7 @@
     .end annotation
 .end field
 
-.field public static final e0:Ljava/lang/String; = "android.conversationTitle"
+.field public static final e0:Ljava/lang/String; = "android.selfDisplayName"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -351,7 +355,7 @@
 
 .field public static final f:I = -0x1
 
-.field public static final f0:Ljava/lang/String; = "android.messages"
+.field public static final f0:Ljava/lang/String; = "android.messagingStyleUser"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -361,7 +365,7 @@
 
 .field public static final g:I = 0x1
 
-.field public static final g0:Ljava/lang/String; = "android.messages.historic"
+.field public static final g0:Ljava/lang/String; = "android.conversationTitle"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -371,7 +375,7 @@
 
 .field public static final h:I = 0x2
 
-.field public static final h0:Ljava/lang/String; = "android.isGroupConversation"
+.field public static final h0:Ljava/lang/String; = "android.messages"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -381,7 +385,7 @@
 
 .field public static final i:I = 0x4
 
-.field public static final i0:Ljava/lang/String; = "android.hiddenConversationTitle"
+.field public static final i0:Ljava/lang/String; = "android.messages.historic"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -391,7 +395,7 @@
 
 .field public static final j:I = -0x1
 
-.field public static final j0:Ljava/lang/String; = "android.audioContents"
+.field public static final j0:Ljava/lang/String; = "android.isGroupConversation"
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "ActionValue"
@@ -401,73 +405,85 @@
 
 .field public static final k:I = 0x1
 
-.field public static final k0:I = 0x0
-    .annotation build Landroidx/annotation/ColorInt;
+.field public static final k0:Ljava/lang/String; = "android.hiddenConversationTitle"
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ActionValue"
+        }
     .end annotation
 .end field
 
 .field public static final l:I = 0x2
 
-.field public static final l0:I = 0x1
+.field public static final l0:Ljava/lang/String; = "android.audioContents"
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ActionValue"
+        }
+    .end annotation
+.end field
 
 .field public static final m:I = 0x4
 
 .field public static final m0:I = 0x0
+    .annotation build Landroidx/annotation/ColorInt;
+    .end annotation
+.end field
 
 .field public static final n:I = 0x8
 
-.field public static final n0:I = -0x1
+.field public static final n0:I = 0x1
 
 .field public static final o:I = 0x10
 
-.field public static final o0:Ljava/lang/String; = "call"
+.field public static final o0:I = 0x0
 
 .field public static final p:I = 0x20
 
-.field public static final p0:Ljava/lang/String; = "navigation"
+.field public static final p0:I = -0x1
 
 .field public static final q:I = 0x40
 
-.field public static final q0:Ljava/lang/String; = "msg"
+.field public static final q0:Ljava/lang/String; = "call"
 
 .field public static final r:I = 0x80
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
-.field public static final r0:Ljava/lang/String; = "email"
+.field public static final r0:Ljava/lang/String; = "navigation"
 
 .field public static final s:I = 0x100
 
-.field public static final s0:Ljava/lang/String; = "event"
+.field public static final s0:Ljava/lang/String; = "msg"
 
 .field public static final t:I = 0x200
 
-.field public static final t0:Ljava/lang/String; = "promo"
+.field public static final t0:Ljava/lang/String; = "email"
 
 .field public static final u:I = 0x1000
 
-.field public static final u0:Ljava/lang/String; = "alarm"
+.field public static final u0:Ljava/lang/String; = "event"
 
 .field public static final v:I = 0x0
 
-.field public static final v0:Ljava/lang/String; = "progress"
+.field public static final v0:Ljava/lang/String; = "promo"
 
 .field public static final w:I = -0x1
 
-.field public static final w0:Ljava/lang/String; = "social"
+.field public static final w0:Ljava/lang/String; = "alarm"
 
 .field public static final x:I = -0x2
 
-.field public static final x0:Ljava/lang/String; = "err"
+.field public static final x0:Ljava/lang/String; = "progress"
 
 .field public static final y:I = 0x1
 
-.field public static final y0:Ljava/lang/String; = "transport"
+.field public static final y0:Ljava/lang/String; = "social"
 
 .field public static final z:I = 0x2
 
-.field public static final z0:Ljava/lang/String; = "sys"
+.field public static final z0:Ljava/lang/String; = "err"
 
 
 # direct methods
@@ -684,7 +700,7 @@
 .end method
 
 .method public static b(Landroid/app/Notification$Action;)Landroidx/core/app/NotificationCompat$Action;
-    .locals 18
+    .locals 19
     .param p0    # Landroid/app/Notification$Action;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -873,30 +889,47 @@
     .line 19
     invoke-virtual/range {p0 .. p0}, Landroid/app/Notification$Action;->isContextual()Z
 
-    move-result v4
+    move-result v2
+
+    move/from16 v17, v2
+
+    goto :goto_6
 
     :cond_6
     move/from16 v17, v4
 
+    :goto_6
+    const/16 v2, 0x1f
+
+    if-lt v1, v2, :cond_7
+
     .line 20
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Notification$Action;->isAuthenticationRequired()Z
+
+    move-result v4
+
+    :cond_7
+    move/from16 v18, v4
+
+    .line 21
     invoke-virtual/range {p0 .. p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     iget v8, v0, Landroid/app/Notification$Action;->icon:I
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_8
 
-    .line 21
+    .line 22
     new-instance v1, Landroidx/core/app/NotificationCompat$Action;
 
     iget-object v9, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
 
     iget-object v10, v0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
-    .line 22
+    .line 23
     invoke-virtual/range {p0 .. p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
     move-result-object v11
@@ -905,22 +938,22 @@
 
     move-object v7, v1
 
-    invoke-direct/range {v7 .. v17}, Landroidx/core/app/NotificationCompat$Action;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+    invoke-direct/range {v7 .. v18}, Landroidx/core/app/NotificationCompat$Action;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
 
     return-object v1
 
-    .line 23
-    :cond_7
+    .line 24
+    :cond_8
     invoke-virtual/range {p0 .. p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
-    goto :goto_6
+    goto :goto_7
 
-    .line 24
-    :cond_8
+    .line 25
+    :cond_9
     invoke-virtual/range {p0 .. p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
     move-result-object v1
@@ -929,10 +962,10 @@
 
     move-result-object v3
 
-    :goto_6
+    :goto_7
     move-object v8, v3
 
-    .line 25
+    .line 26
     new-instance v1, Landroidx/core/app/NotificationCompat$Action;
 
     iget-object v9, v0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
@@ -947,7 +980,7 @@
 
     move-object v7, v1
 
-    invoke-direct/range {v7 .. v17}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+    invoke-direct/range {v7 .. v18}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
 
     return-object v1
 .end method
@@ -1381,7 +1414,7 @@
     move-result-object v2
 
     .line 7
-    invoke-static {v2}, Landroidx/core/app/q;->g(Landroid/os/Bundle;)Landroidx/core/app/NotificationCompat$Action;
+    invoke-static {v2}, Landroidx/core/app/u;->g(Landroid/os/Bundle;)Landroidx/core/app/NotificationCompat$Action;
 
     move-result-object v2
 
@@ -1420,7 +1453,7 @@
     return p0
 .end method
 
-.method public static t(Landroid/app/Notification;)Landroidx/core/content/g;
+.method public static t(Landroid/app/Notification;)Landroidx/core/content/c0;
     .locals 3
     .param p0    # Landroid/app/Notification;
         .annotation build Landroidx/annotation/NonNull;
@@ -1449,7 +1482,7 @@
 
     .line 3
     :cond_0
-    invoke-static {p0}, Landroidx/core/content/g;->d(Landroid/content/LocusId;)Landroidx/core/content/g;
+    invoke-static {p0}, Landroidx/core/content/c0;->d(Landroid/content/LocusId;)Landroidx/core/content/c0;
 
     move-result-object v1
 
@@ -1589,7 +1622,7 @@
             "Landroid/app/Notification;",
             ")",
             "Ljava/util/List<",
-            "Landroidx/core/app/s;",
+            "Landroidx/core/app/z;",
             ">;"
         }
     .end annotation
@@ -1644,7 +1677,7 @@
     check-cast v1, Landroid/app/Person;
 
     .line 7
-    invoke-static {v1}, Landroidx/core/app/s;->a(Landroid/app/Person;)Landroidx/core/app/s;
+    invoke-static {v1}, Landroidx/core/app/z;->a(Landroid/app/Person;)Landroidx/core/app/z;
 
     move-result-object v1
 
@@ -1680,15 +1713,15 @@
     aget-object v3, p0, v2
 
     .line 11
-    new-instance v4, Landroidx/core/app/s$a;
+    new-instance v4, Landroidx/core/app/z$c;
 
-    invoke-direct {v4}, Landroidx/core/app/s$a;-><init>()V
+    invoke-direct {v4}, Landroidx/core/app/z$c;-><init>()V
 
-    invoke-virtual {v4, v3}, Landroidx/core/app/s$a;->g(Ljava/lang/String;)Landroidx/core/app/s$a;
+    invoke-virtual {v4, v3}, Landroidx/core/app/z$c;->g(Ljava/lang/String;)Landroidx/core/app/z$c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroidx/core/app/s$a;->a()Landroidx/core/app/s;
+    invoke-virtual {v3}, Landroidx/core/app/z$c;->a()Landroidx/core/app/z;
 
     move-result-object v3
 

@@ -3,46 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/SearchScreen;
-
-.field public final synthetic b:Landroidx/lifecycle/LiveData;
-
-.field public final synthetic c:Ljava/lang/String;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SearchScreen;Landroidx/lifecycle/LiveData;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/w0;->a:Lcom/skt/tmap/car/screen/SearchScreen;
-
-    iput-object p2, p0, Lcom/skt/tmap/car/screen/w0;->b:Landroidx/lifecycle/LiveData;
-
-    iput-object p3, p0, Lcom/skt/tmap/car/screen/w0;->c:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/w0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
-    .locals 3
+.method public final a()V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/w0;->a:Lcom/skt/tmap/car/screen/SearchScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/w0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    iget-object v1, p0, Lcom/skt/tmap/car/screen/w0;->b:Landroidx/lifecycle/LiveData;
-
-    iget-object v2, p0, Lcom/skt/tmap/car/screen/w0;->c:Ljava/lang/String;
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    invoke-static {v0, v1, v2, p1}, Lcom/skt/tmap/car/screen/SearchScreen;->M(Lcom/skt/tmap/car/screen/SearchScreen;Landroidx/lifecycle/LiveData;Ljava/lang/String;Ljava/util/ArrayList;)V
+    invoke-static {v0}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->e0(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
 
     return-void
 .end method

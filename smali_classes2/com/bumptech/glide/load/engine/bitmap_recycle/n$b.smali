@@ -104,7 +104,7 @@
 
     iget-object p1, p1, Lcom/bumptech/glide/load/engine/bitmap_recycle/n$b;->c:Landroid/graphics/Bitmap$Config;
 
-    invoke-static {v0, p1}, Lm5/m;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lj7/n;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

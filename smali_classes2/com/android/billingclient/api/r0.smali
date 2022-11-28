@@ -1,56 +1,48 @@
-.class public final Lcom/android/billingclient/api/r0;
+.class public final synthetic Lcom/android/billingclient/api/r0;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/billingclient/api/g$b;
+.field public final synthetic a:Lcom/android/billingclient/api/d;
 
-.field public final synthetic b:Lcom/android/billingclient/api/s0;
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/billingclient/api/s0;Lcom/android/billingclient/api/g$b;)V
+.method public synthetic constructor <init>(Lcom/android/billingclient/api/d;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 1
-    iput-object p1, p0, Lcom/android/billingclient/api/r0;->b:Lcom/android/billingclient/api/s0;
-
-    iput-object p2, p0, Lcom/android/billingclient/api/r0;->a:Lcom/android/billingclient/api/g$b;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/billingclient/api/r0;->a:Lcom/android/billingclient/api/d;
+
+    iput-object p2, p0, Lcom/android/billingclient/api/r0;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/android/billingclient/api/r0;->c:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final call()Ljava/lang/Object;
     .locals 3
 
-    .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/r0;->b:Lcom/android/billingclient/api/s0;
+    iget-object v0, p0, Lcom/android/billingclient/api/r0;->a:Lcom/android/billingclient/api/d;
 
-    iget-object v0, v0, Lcom/android/billingclient/api/s0;->b:Lcom/android/billingclient/api/p;
+    iget-object v1, p0, Lcom/android/billingclient/api/r0;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/billingclient/api/r0;->a:Lcom/android/billingclient/api/g$b;
+    iget-object v2, p0, Lcom/android/billingclient/api/r0;->c:Landroid/os/Bundle;
 
-    .line 2
-    invoke-virtual {v1}, Lcom/android/billingclient/api/g$b;->a()Lcom/android/billingclient/api/i;
+    invoke-virtual {v0, v1, v2}, Lcom/android/billingclient/api/d;->H(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/android/billingclient/api/r0;->a:Lcom/android/billingclient/api/g$b;
-
-    invoke-virtual {v2}, Lcom/android/billingclient/api/g$b;->b()Ljava/util/List;
-
-    move-result-object v2
-
-    .line 3
-    invoke-interface {v0, v1, v2}, Lcom/android/billingclient/api/p;->f(Lcom/android/billingclient/api/i;Ljava/util/List;)V
-
-    return-void
+    return-object v0
 .end method

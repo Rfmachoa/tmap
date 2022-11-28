@@ -12,20 +12,24 @@
 
 
 # instance fields
-.field public A1:Ljava/lang/CharSequence;
+.field public A1:Z
 
-.field public B1:Z
+.field public B1:Ljava/lang/CharSequence;
 
-.field public C1:Z
+.field public C1:Ljava/lang/CharSequence;
 
-.field public y1:Z
+.field public D1:Z
 
-.field public z1:Ljava/lang/CharSequence;
+.field public E1:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -37,6 +41,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -48,6 +60,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -59,6 +79,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -103,7 +131,7 @@
     .locals 3
 
     .line 1
-    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->C1:Z
+    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->E1:Z
 
     const/4 v1, 0x1
 
@@ -111,12 +139,12 @@
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     if-nez v0, :cond_1
 
@@ -149,6 +177,12 @@
 
 .method public d0(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 1
+    .param p1    # Landroid/content/res/TypedArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -166,6 +200,10 @@
 
 .method public h0(Landroid/os/Parcelable;)V
     .locals 2
+    .param p1    # Landroid/os/Parcelable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_1
 
@@ -212,6 +250,8 @@
 
 .method public i0()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-super {p0}, Landroidx/preference/Preference;->i0()Landroid/os/Parcelable;
@@ -247,7 +287,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->C1:Z
+    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->E1:Z
 
     return v0
 .end method
@@ -279,18 +319,22 @@
 
 .method public j1()Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->A1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->C1:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
 
 .method public k1()Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->z1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->B1:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -299,7 +343,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     return v0
 .end method
@@ -308,7 +352,7 @@
     .locals 3
 
     .line 1
-    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v0, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     const/4 v1, 0x1
 
@@ -325,16 +369,16 @@
     if-nez v0, :cond_1
 
     .line 2
-    iget-boolean v2, p0, Landroidx/preference/TwoStatePreference;->B1:Z
+    iget-boolean v2, p0, Landroidx/preference/TwoStatePreference;->D1:Z
 
     if-nez v2, :cond_2
 
     .line 3
     :cond_1
-    iput-boolean p1, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iput-boolean p1, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     .line 4
-    iput-boolean v1, p0, Landroidx/preference/TwoStatePreference;->B1:Z
+    iput-boolean v1, p0, Landroidx/preference/TwoStatePreference;->D1:Z
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->o0(Z)Z
@@ -359,7 +403,7 @@
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Landroidx/preference/TwoStatePreference;->C1:Z
+    iput-boolean p1, p0, Landroidx/preference/TwoStatePreference;->E1:Z
 
     return-void
 .end method
@@ -383,9 +427,13 @@
 
 .method public p1(Ljava/lang/CharSequence;)V
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/TwoStatePreference;->A1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/TwoStatePreference;->C1:Ljava/lang/CharSequence;
 
     .line 2
     invoke-virtual {p0}, Landroidx/preference/TwoStatePreference;->l1()Z
@@ -420,9 +468,13 @@
 
 .method public r1(Ljava/lang/CharSequence;)V
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/TwoStatePreference;->z1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/TwoStatePreference;->B1:Ljava/lang/CharSequence;
 
     .line 2
     invoke-virtual {p0}, Landroidx/preference/TwoStatePreference;->l1()Z
@@ -460,13 +512,13 @@
     const/4 v0, 0x1
 
     .line 3
-    iget-boolean v1, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v1, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Landroidx/preference/TwoStatePreference;->z1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Landroidx/preference/TwoStatePreference;->B1:Ljava/lang/CharSequence;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -475,7 +527,7 @@
     if-nez v1, :cond_1
 
     .line 4
-    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->z1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->B1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -486,11 +538,11 @@
 
     .line 5
     :cond_1
-    iget-boolean v1, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v1, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Landroidx/preference/TwoStatePreference;->A1:Ljava/lang/CharSequence;
+    iget-object v1, p0, Landroidx/preference/TwoStatePreference;->C1:Ljava/lang/CharSequence;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -499,7 +551,7 @@
     if-nez v1, :cond_2
 
     .line 6
-    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->A1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/TwoStatePreference;->C1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -551,13 +603,17 @@
     return-void
 .end method
 
-.method public t1(Landroidx/preference/s;)V
+.method public t1(Landroidx/preference/v;)V
     .locals 1
+    .param p1    # Landroidx/preference/v;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const v0, 0x1020010
 
     .line 1
-    invoke-virtual {p1, v0}, Landroidx/preference/s;->d(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroidx/preference/v;->d(I)Landroid/view/View;
 
     move-result-object p1
 

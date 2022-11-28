@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Jb()V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->cc()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,11 +49,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$e0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->P9()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->da()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->l4(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->p4(Z)V
 
     return-void
 .end method

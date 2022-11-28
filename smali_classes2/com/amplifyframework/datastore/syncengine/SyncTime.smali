@@ -116,7 +116,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/datastore/syncengine/SyncTime;->time:Ljava/lang/Long;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

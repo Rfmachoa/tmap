@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/concurrent/Future;
-.implements Lj5/p;
+.implements Lg7/p;
 
 
 # annotations
@@ -16,7 +16,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Future<",
         "TR;>;",
-        "Lj5/p<",
+        "Lg7/p<",
         "TR;>;"
     }
 .end annotation

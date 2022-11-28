@@ -26,10 +26,7 @@
 
 
 # virtual methods
-.method public abstract B0(Z)V
-.end method
-
-.method public abstract D0()V
+.method public abstract J()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -37,7 +34,7 @@
     .end annotation
 .end method
 
-.method public abstract G()D
+.method public abstract T()J
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -45,7 +42,7 @@
     .end annotation
 .end method
 
-.method public abstract L()I
+.method public abstract U()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -53,23 +50,7 @@
     .end annotation
 .end method
 
-.method public abstract N()J
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract O()Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract W()Ljava/lang/Object;
+.method public abstract V()Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -85,23 +66,7 @@
     .end annotation
 .end method
 
-.method public abstract Y()Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
 .method public abstract a()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract a0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -117,7 +82,7 @@
     .end annotation
 .end method
 
-.method public abstract c()V
+.method public abstract b0()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -125,7 +90,7 @@
     .end annotation
 .end method
 
-.method public abstract c0()V
+.method public abstract c()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -141,13 +106,18 @@
     .end annotation
 .end method
 
-.method public abstract e0(Z)V
-.end method
-
-.method public abstract f()Z
+.method public abstract g()Z
 .end method
 
 .method public abstract getPath()Ljava/lang/String;
+.end method
+
+.method public abstract h0()Lcom/apollographql/apollo/internal/json/JsonReader$Token;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method
 
 .method public abstract k()Z
@@ -158,10 +128,40 @@
     .end annotation
 .end method
 
-.method public abstract u()Z
+.method public abstract k0()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method
 
-.method public abstract v()Z
+.method public abstract o0(Z)V
+.end method
+
+.method public abstract q0(Z)V
+.end method
+
+.method public abstract s()Z
+.end method
+
+.method public abstract v0()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public abstract w()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public abstract x()D
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

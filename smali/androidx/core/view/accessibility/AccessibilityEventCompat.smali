@@ -6,13 +6,21 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/core/view/accessibility/AccessibilityEventCompat$a;,
+        Landroidx/core/view/accessibility/AccessibilityEventCompat$b;,
         Landroidx/core/view/accessibility/AccessibilityEventCompat$ContentChangeType;
     }
 .end annotation
 
 
 # static fields
-.field public static final A:I = -0x1
+.field public static final A:I = 0x80
+
+.field public static final B:I = 0x100
+
+.field public static final C:I = 0x200
+
+.field public static final D:I = -0x1
 
 .field public static final a:I = 0x80
     .annotation runtime Ljava/lang/Deprecated;
@@ -98,13 +106,13 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/accessibility/AccessibilityEvent;Lt1/e;)V
+.method public static a(Landroid/view/accessibility/AccessibilityEvent;Lk2/e;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lt1/e;->g()Ljava/lang/Object;
+    invoke-virtual {p1}, Lk2/e;->g()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -115,24 +123,28 @@
     return-void
 .end method
 
-.method public static b(Landroid/view/accessibility/AccessibilityEvent;)Lt1/e;
+.method public static b(Landroid/view/accessibility/AccessibilityEvent;)Lk2/e;
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    new-instance v0, Lt1/e;
+    new-instance v0, Lk2/e;
 
-    invoke-direct {v0, p0}, Lt1/e;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Lk2/e;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
 
 .method public static c(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 0
+    .param p0    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getAction()I
+    invoke-static {p0}, Landroidx/core/view/accessibility/AccessibilityEventCompat$a;->a(Landroid/view/accessibility/AccessibilityEvent;)I
 
     move-result p0
 
@@ -141,9 +153,13 @@
 
 .method public static d(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 0
+    .param p0    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getContentChangeTypes()I
+    invoke-static {p0}, Landroidx/core/view/accessibility/AccessibilityEventCompat$b;->a(Landroid/view/accessibility/AccessibilityEvent;)I
 
     move-result p0
 
@@ -152,28 +168,32 @@
 
 .method public static e(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 0
+    .param p0    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getMovementGranularity()I
+    invoke-static {p0}, Landroidx/core/view/accessibility/AccessibilityEventCompat$a;->b(Landroid/view/accessibility/AccessibilityEvent;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static f(Landroid/view/accessibility/AccessibilityEvent;I)Lt1/e;
+.method public static f(Landroid/view/accessibility/AccessibilityEvent;I)Lk2/e;
     .locals 1
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    new-instance v0, Lt1/e;
+    new-instance v0, Lk2/e;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->getRecord(I)Landroid/view/accessibility/AccessibilityRecord;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lt1/e;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Lk2/e;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -193,27 +213,39 @@
 
 .method public static h(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 0
+    .param p0    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setAction(I)V
+    invoke-static {p0, p1}, Landroidx/core/view/accessibility/AccessibilityEventCompat$a;->c(Landroid/view/accessibility/AccessibilityEvent;I)V
 
     return-void
 .end method
 
 .method public static i(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 0
+    .param p0    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
+    invoke-static {p0, p1}, Landroidx/core/view/accessibility/AccessibilityEventCompat$b;->b(Landroid/view/accessibility/AccessibilityEvent;I)V
 
     return-void
 .end method
 
 .method public static j(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 0
+    .param p0    # Landroid/view/accessibility/AccessibilityEvent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setMovementGranularity(I)V
+    invoke-static {p0, p1}, Landroidx/core/view/accessibility/AccessibilityEventCompat$a;->d(Landroid/view/accessibility/AccessibilityEvent;I)V
 
     return-void
 .end method

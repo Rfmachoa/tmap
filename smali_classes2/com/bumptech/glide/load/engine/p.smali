@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;>;"
         }
@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;>;"
         }
@@ -53,12 +53,12 @@
 
 
 # virtual methods
-.method public a(Lu4/b;Z)Lcom/bumptech/glide/load/engine/j;
+.method public a(Lr6/b;Z)Lcom/bumptech/glide/load/engine/j;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Z)",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;"
@@ -88,7 +88,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;>;"
         }
@@ -110,7 +110,7 @@
         value = {
             "(Z)",
             "Ljava/util/Map<",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;>;"
         }
@@ -130,12 +130,12 @@
     return-object p1
 .end method
 
-.method public d(Lu4/b;Lcom/bumptech/glide/load/engine/j;)V
+.method public d(Lr6/b;Lcom/bumptech/glide/load/engine/j;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;)V"
         }
@@ -155,12 +155,12 @@
     return-void
 .end method
 
-.method public e(Lu4/b;Lcom/bumptech/glide/load/engine/j;)V
+.method public e(Lr6/b;Lcom/bumptech/glide/load/engine/j;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;)V"
         }

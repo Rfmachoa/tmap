@@ -77,11 +77,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget-object v0, Lm0/c;->b:Lm0/c;
+    sget-object v0, La1/c;->b:La1/c;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/c;->a(Landroidx/core/graphics/drawable/IconCompat;)Landroidx/core/graphics/drawable/IconCompat;
+    invoke-virtual {v0, p1}, La1/c;->a(Landroidx/core/graphics/drawable/IconCompat;)Landroidx/core/graphics/drawable/IconCompat;
 
     const/4 v0, 0x1
 
@@ -130,11 +130,11 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/b;->b:Lm0/b;
+    sget-object v0, La1/b;->b:La1/b;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/b;->b(Landroidx/car/app/model/CarColor;)V
+    invoke-virtual {v0, p1}, La1/b;->b(Landroidx/car/app/model/CarColor;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/CarIcon$a;->b:Landroidx/car/app/model/CarColor;

@@ -98,6 +98,14 @@
 
 .method public setLatitude(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "latitude"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
@@ -140,6 +148,15 @@
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "latitude"
+        }
+    .end annotation
+
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHappenBodyVo$ResLocationVo;->latitude:Ljava/lang/Double;
 
@@ -148,6 +165,14 @@
 
 .method public setLongitude(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "longitude"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
@@ -188,6 +213,15 @@
 .method public setLongitudeD(Ljava/lang/Double;)V
     .locals 0
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "longitude"
+        }
     .end annotation
 
     .line 1

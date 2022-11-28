@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message UnexpAccidentEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 유고정보 데이터 Collection */
+  repeated UnexpAccidentElement elements = 2;
+}
+
+
+message UnexpAccidentElement {
+
+  /** 해당 보간점 Idx */
+  int32 vertexIndex =  1;
+
+  /** 내용구분코드(1:사고, 2:공사, 3:행사, 4:재해, 5:통제) */
+  int32 kindCode = 2;
+
+  /** 도로 명칭 (NULL포함) */
+  string name = 3;
+}

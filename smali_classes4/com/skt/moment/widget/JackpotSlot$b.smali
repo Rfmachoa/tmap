@@ -26,6 +26,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/widget/JackpotSlot;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$what"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/widget/JackpotSlot$b;->b:Lcom/skt/moment/widget/JackpotSlot;
@@ -41,12 +51,28 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animator"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animator"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/widget/JackpotSlot$b;->b:Lcom/skt/moment/widget/JackpotSlot;
@@ -83,12 +109,28 @@
 
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animator"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animator"
+        }
+    .end annotation
 
     return-void
 .end method

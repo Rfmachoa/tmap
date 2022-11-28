@@ -1,536 +1,227 @@
 .class public final Landroidx/navigation/p;
 .super Ljava/lang/Object;
-.source "NavBackStackEntry.java"
-
-# interfaces
-.implements Landroidx/lifecycle/LifecycleOwner;
-.implements Landroidx/lifecycle/ViewModelStoreOwner;
-.implements Landroidx/lifecycle/HasDefaultViewModelProviderFactory;
-.implements Landroidx/savedstate/b;
+.source "NavDestinationBuilder.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/navigation/p$c;,
-        Landroidx/navigation/p$b;
+.annotation runtime Landroidx/navigation/NavDestinationDsl;
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0014\u0008\u0007\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0006\u0010\u0003\u001a\u00020\u0002R\u0014\u0010\u0006\u001a\u00020\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u0010\u0005R\u001c\u0010\n\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u00078\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0008\u0010\tR*\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u000c\u001a\u00020\u000b8\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\r\u0010\u000e\u001a\u0004\u0008\r\u0010\u000f\"\u0004\u0008\u0010\u0010\u0011R.\u0010\u0018\u001a\u0004\u0018\u00010\u00012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u00018\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0013\u0010\u0014\u001a\u0004\u0008\u0008\u0010\u0015\"\u0004\u0008\u0016\u0010\u0017R,\u0010\u001c\u001a\u0006\u0012\u0002\u0008\u00030\u00072\n\u0010\u000c\u001a\u0006\u0012\u0002\u0008\u00030\u00078F@FX\u0086\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\u0013\u0010\u0019\"\u0004\u0008\u001a\u0010\u001b\u00a8\u0006\u001f"
+    }
+    d2 = {
+        "Landroidx/navigation/p;",
+        "",
+        "Landroidx/navigation/o;",
+        "a",
+        "Landroidx/navigation/o$a;",
+        "Landroidx/navigation/o$a;",
+        "builder",
+        "Landroidx/navigation/n0;",
+        "b",
+        "Landroidx/navigation/n0;",
+        "_type",
+        "",
+        "value",
+        "c",
+        "Z",
+        "()Z",
+        "f",
+        "(Z)V",
+        "nullable",
+        "d",
+        "Ljava/lang/Object;",
+        "()Ljava/lang/Object;",
+        "e",
+        "(Ljava/lang/Object;)V",
+        "defaultValue",
+        "()Landroidx/navigation/n0;",
+        "g",
+        "(Landroidx/navigation/n0;)V",
+        "type",
+        "<init>",
+        "()V",
+        "navigation-common_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Landroidx/navigation/NavDestination;
-
-.field public c:Landroid/os/Bundle;
-
-.field public final d:Landroidx/lifecycle/LifecycleRegistry;
-
-.field public final e:Landroidx/savedstate/a;
-
-.field public final f:Ljava/util/UUID;
-    .annotation build Landroidx/annotation/NonNull;
+.field public final a:Landroidx/navigation/o$a;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
-.field public g:Landroidx/lifecycle/Lifecycle$State;
+.field public b:Landroidx/navigation/n0;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/navigation/n0<",
+            "*>;"
+        }
+    .end annotation
 
-.field public h:Landroidx/lifecycle/Lifecycle$State;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field public i:Landroidx/navigation/s;
+.field public c:Z
 
-.field public j:Landroidx/lifecycle/ViewModelProvider$Factory;
-
-.field public k:Landroidx/lifecycle/SavedStateHandle;
+.field public d:Ljava/lang/Object;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/navigation/NavDestination;Landroid/os/Bundle;Landroidx/lifecycle/LifecycleOwner;Landroidx/navigation/s;)V
-    .locals 8
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/navigation/NavDestination;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroidx/lifecycle/LifecycleOwner;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Landroidx/navigation/s;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    .line 2
-    invoke-direct/range {v0 .. v7}, Landroidx/navigation/p;-><init>(Landroid/content/Context;Landroidx/navigation/NavDestination;Landroid/os/Bundle;Landroidx/lifecycle/LifecycleOwner;Landroidx/navigation/s;Ljava/util/UUID;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroidx/navigation/NavDestination;Landroid/os/Bundle;Landroidx/lifecycle/LifecycleOwner;Landroidx/navigation/s;Ljava/util/UUID;Landroid/os/Bundle;)V
-    .locals 2
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/navigation/NavDestination;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroidx/lifecycle/LifecycleOwner;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Landroidx/navigation/s;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p6    # Ljava/util/UUID;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p7    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    new-instance v0, Landroidx/lifecycle/LifecycleRegistry;
-
-    invoke-direct {v0, p0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
-
-    iput-object v0, p0, Landroidx/navigation/p;->d:Landroidx/lifecycle/LifecycleRegistry;
-
-    .line 5
-    invoke-static {p0}, Landroidx/savedstate/a;->a(Landroidx/savedstate/b;)Landroidx/savedstate/a;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/navigation/p;->e:Landroidx/savedstate/a;
-
-    .line 6
-    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
-
-    iput-object v1, p0, Landroidx/navigation/p;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    .line 7
-    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
-
-    iput-object v1, p0, Landroidx/navigation/p;->h:Landroidx/lifecycle/Lifecycle$State;
-
-    .line 8
-    iput-object p1, p0, Landroidx/navigation/p;->a:Landroid/content/Context;
-
-    .line 9
-    iput-object p6, p0, Landroidx/navigation/p;->f:Ljava/util/UUID;
-
-    .line 10
-    iput-object p2, p0, Landroidx/navigation/p;->b:Landroidx/navigation/NavDestination;
-
-    .line 11
-    iput-object p3, p0, Landroidx/navigation/p;->c:Landroid/os/Bundle;
-
-    .line 12
-    iput-object p5, p0, Landroidx/navigation/p;->i:Landroidx/navigation/s;
-
-    .line 13
-    invoke-virtual {v0, p7}, Landroidx/savedstate/a;->c(Landroid/os/Bundle;)V
-
-    if-eqz p4, :cond_0
-
-    .line 14
-    invoke-interface {p4}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/Lifecycle;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/navigation/p;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    :cond_0
-    return-void
-.end method
-
-.method public static e(Landroidx/lifecycle/Lifecycle$Event;)Landroidx/lifecycle/Lifecycle$State;
-    .locals 3
-    .param p0    # Landroidx/lifecycle/Lifecycle$Event;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    sget-object v0, Landroidx/navigation/p$a;->a:[I
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    packed-switch v0, :pswitch_data_0
-
     .line 2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Landroidx/navigation/o$a;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Landroidx/navigation/o$a;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iput-object v0, p0, Landroidx/navigation/p;->a:Landroidx/navigation/o$a;
 
-    const-string v2, "Unexpected event value "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 3
-    :pswitch_0
-    sget-object p0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
-
-    return-object p0
-
-    .line 4
-    :pswitch_1
-    sget-object p0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
-
-    return-object p0
-
-    .line 5
-    :pswitch_2
-    sget-object p0, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
-
-    return-object p0
-
-    .line 6
-    :pswitch_3
-    sget-object p0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/os/Bundle;
+.method public final a()Landroidx/navigation/o;
     .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->c:Landroid/os/Bundle;
+    iget-object v0, p0, Landroidx/navigation/p;->a:Landroidx/navigation/o$a;
 
-    return-object v0
-.end method
-
-.method public b()Landroidx/navigation/NavDestination;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->b:Landroidx/navigation/NavDestination;
-
-    return-object v0
-.end method
-
-.method public c()Landroidx/lifecycle/Lifecycle$State;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->h:Landroidx/lifecycle/Lifecycle$State;
-
-    return-object v0
-.end method
-
-.method public d()Landroidx/lifecycle/SavedStateHandle;
-    .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->k:Landroidx/lifecycle/SavedStateHandle;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Landroidx/lifecycle/ViewModelProvider;
-
-    new-instance v1, Landroidx/navigation/p$b;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Landroidx/navigation/p$b;-><init>(Landroidx/savedstate/b;Landroid/os/Bundle;)V
-
-    invoke-direct {v0, p0, v1}, Landroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStoreOwner;Landroidx/lifecycle/ViewModelProvider$Factory;)V
-
-    const-class v1, Landroidx/navigation/p$c;
-
-    .line 3
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/navigation/p$c;
-
-    invoke-virtual {v0}, Landroidx/navigation/p$c;->a()Landroidx/lifecycle/SavedStateHandle;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/navigation/p;->k:Landroidx/lifecycle/SavedStateHandle;
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Landroidx/navigation/p;->k:Landroidx/lifecycle/SavedStateHandle;
-
-    return-object v0
-.end method
-
-.method public f(Landroidx/lifecycle/Lifecycle$Event;)V
-    .locals 0
-    .param p1    # Landroidx/lifecycle/Lifecycle$Event;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-static {p1}, Landroidx/navigation/p;->e(Landroidx/lifecycle/Lifecycle$Event;)Landroidx/lifecycle/Lifecycle$State;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/navigation/p;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/navigation/p;->j()V
-
-    return-void
-.end method
-
-.method public g(Landroid/os/Bundle;)V
-    .locals 0
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    iput-object p1, p0, Landroidx/navigation/p;->c:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-.method public getDefaultViewModelProviderFactory()Landroidx/lifecycle/ViewModelProvider$Factory;
-    .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->j:Landroidx/lifecycle/ViewModelProvider$Factory;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Landroidx/lifecycle/SavedStateViewModelFactory;
-
-    iget-object v1, p0, Landroidx/navigation/p;->a:Landroid/content/Context;
-
-    .line 3
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/app/Application;
-
-    iget-object v2, p0, Landroidx/navigation/p;->c:Landroid/os/Bundle;
-
-    invoke-direct {v0, v1, p0, v2}, Landroidx/lifecycle/SavedStateViewModelFactory;-><init>(Landroid/app/Application;Landroidx/savedstate/b;Landroid/os/Bundle;)V
-
-    iput-object v0, p0, Landroidx/navigation/p;->j:Landroidx/lifecycle/ViewModelProvider$Factory;
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Landroidx/navigation/p;->j:Landroidx/lifecycle/ViewModelProvider$Factory;
-
-    return-object v0
-.end method
-
-.method public getLifecycle()Landroidx/lifecycle/Lifecycle;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->d:Landroidx/lifecycle/LifecycleRegistry;
-
-    return-object v0
-.end method
-
-.method public getSavedStateRegistry()Landroidx/savedstate/SavedStateRegistry;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->e:Landroidx/savedstate/a;
-
-    invoke-virtual {v0}, Landroidx/savedstate/a;->b()Landroidx/savedstate/SavedStateRegistry;
+    invoke-virtual {v0}, Landroidx/navigation/o$a;->a()Landroidx/navigation/o;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getViewModelStore()Landroidx/lifecycle/ViewModelStore;
+.method public final b()Ljava/lang/Object;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/navigation/p;->d:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/navigation/p;->c:Z
+
+    return v0
+.end method
+
+.method public final d()Landroidx/navigation/n0;
     .locals 2
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/navigation/n0<",
+            "*>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->i:Landroidx/navigation/s;
+    iget-object v0, p0, Landroidx/navigation/p;->b:Landroidx/navigation/n0;
 
     if-eqz v0, :cond_0
 
-    .line 2
-    iget-object v1, p0, Landroidx/navigation/p;->f:Ljava/util/UUID;
-
-    invoke-virtual {v0, v1}, Landroidx/navigation/s;->c(Ljava/util/UUID;)Landroidx/lifecycle/ViewModelStore;
-
-    move-result-object v0
-
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "You must call setViewModelStore() on your NavHostController before accessing the ViewModelStore of a navigation graph."
+    const-string v1, "NavType has not been set on this builder."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public h(Landroid/os/Bundle;)V
+.method public final e(Ljava/lang/Object;)V
     .locals 1
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->e:Landroidx/savedstate/a;
+    iput-object p1, p0, Landroidx/navigation/p;->d:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Landroidx/savedstate/a;->d(Landroid/os/Bundle;)V
+    .line 2
+    iget-object v0, p0, Landroidx/navigation/p;->a:Landroidx/navigation/o$a;
+
+    invoke-virtual {v0, p1}, Landroidx/navigation/o$a;->b(Ljava/lang/Object;)Landroidx/navigation/o$a;
 
     return-void
 .end method
 
-.method public i(Landroidx/lifecycle/Lifecycle$State;)V
-    .locals 0
-    .param p1    # Landroidx/lifecycle/Lifecycle$State;
-        .annotation build Landroidx/annotation/NonNull;
+.method public final f(Z)V
+    .locals 1
+
+    .line 1
+    iput-boolean p1, p0, Landroidx/navigation/p;->c:Z
+
+    .line 2
+    iget-object v0, p0, Landroidx/navigation/p;->a:Landroidx/navigation/o$a;
+
+    invoke-virtual {v0, p1}, Landroidx/navigation/o$a;->c(Z)Landroidx/navigation/o$a;
+
+    return-void
+.end method
+
+.method public final g(Landroidx/navigation/n0;)V
+    .locals 1
+    .param p1    # Landroidx/navigation/n0;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/navigation/n0<",
+            "*>;)V"
+        }
+    .end annotation
+
+    const-string v0, "value"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iput-object p1, p0, Landroidx/navigation/p;->h:Landroidx/lifecycle/Lifecycle$State;
+    iput-object p1, p0, Landroidx/navigation/p;->b:Landroidx/navigation/n0;
 
     .line 2
-    invoke-virtual {p0}, Landroidx/navigation/p;->j()V
+    iget-object v0, p0, Landroidx/navigation/p;->a:Landroidx/navigation/o$a;
 
-    return-void
-.end method
+    invoke-virtual {v0, p1}, Landroidx/navigation/o$a;->d(Landroidx/navigation/n0;)Landroidx/navigation/o$a;
 
-.method public j()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/p;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    iget-object v1, p0, Landroidx/navigation/p;->h:Landroidx/lifecycle/Lifecycle$State;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 2
-    iget-object v0, p0, Landroidx/navigation/p;->d:Landroidx/lifecycle/LifecycleRegistry;
-
-    iget-object v1, p0, Landroidx/navigation/p;->g:Landroidx/lifecycle/Lifecycle$State;
-
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->setCurrentState(Landroidx/lifecycle/Lifecycle$State;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/navigation/p;->d:Landroidx/lifecycle/LifecycleRegistry;
-
-    iget-object v1, p0, Landroidx/navigation/p;->h:Landroidx/lifecycle/Lifecycle$State;
-
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->setCurrentState(Landroidx/lifecycle/Lifecycle$State;)V
-
-    :goto_0
     return-void
 .end method

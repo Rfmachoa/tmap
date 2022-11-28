@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public final b:Lt1/f;
+.field public final b:Lk2/f;
 
-.field public final c:Lt1/f;
+.field public final c:Lk2/f;
 
 .field public d:Landroidx/recyclerview/widget/RecyclerView$i;
 
@@ -40,14 +40,14 @@
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/widget/ViewPager2$j$a;-><init>(Landroidx/viewpager2/widget/ViewPager2$j;)V
 
-    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$j;->b:Lt1/f;
+    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$j;->b:Lk2/f;
 
     .line 3
     new-instance p1, Landroidx/viewpager2/widget/ViewPager2$j$b;
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/widget/ViewPager2$j$b;-><init>(Landroidx/viewpager2/widget/ViewPager2$j;)V
 
-    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$j;->c:Lt1/f;
+    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$j;->c:Lk2/f;
 
     return-void
 .end method
@@ -404,17 +404,17 @@
 
     .line 5
     :goto_0
-    invoke-static {p1}, Lt1/c;->V1(Landroid/view/accessibility/AccessibilityNodeInfo;)Lt1/c;
+    invoke-static {p1}, Lk2/c;->c2(Landroid/view/accessibility/AccessibilityNodeInfo;)Lk2/c;
 
     move-result-object p1
 
     .line 6
-    invoke-static {v0, v2, v1, v1}, Lt1/c$b;->f(IIZI)Lt1/c$b;
+    invoke-static {v0, v2, v1, v1}, Lk2/c$c;->f(IIZI)Lk2/c$c;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {p1, v0}, Lt1/c;->W0(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lk2/c;->b1(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -623,13 +623,13 @@
     if-ge v2, v5, :cond_5
 
     .line 12
-    new-instance v2, Lt1/c$a;
+    new-instance v2, Lk2/c$a;
 
-    invoke-direct {v2, v4, v7}, Lt1/c$a;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v2, v4, v7}, Lk2/c$a;-><init>(ILjava/lang/CharSequence;)V
 
-    iget-object v3, p0, Landroidx/viewpager2/widget/ViewPager2$j;->b:Lt1/f;
+    iget-object v3, p0, Landroidx/viewpager2/widget/ViewPager2$j;->b:Lk2/f;
 
-    invoke-static {v0, v2, v7, v3}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lt1/c$a;Ljava/lang/CharSequence;Lt1/f;)V
+    invoke-static {v0, v2, v7, v3}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lk2/c$a;Ljava/lang/CharSequence;Lk2/f;)V
 
     .line 13
     :cond_5
@@ -640,13 +640,13 @@
     if-lez v2, :cond_8
 
     .line 14
-    new-instance v2, Lt1/c$a;
+    new-instance v2, Lk2/c$a;
 
-    invoke-direct {v2, v1, v7}, Lt1/c$a;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v2, v1, v7}, Lk2/c$a;-><init>(ILjava/lang/CharSequence;)V
 
-    iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2$j;->c:Lt1/f;
+    iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2$j;->c:Lk2/f;
 
-    invoke-static {v0, v2, v7, v1}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lt1/c$a;Ljava/lang/CharSequence;Lt1/f;)V
+    invoke-static {v0, v2, v7, v1}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lk2/c$a;Ljava/lang/CharSequence;Lk2/f;)V
 
     goto :goto_1
 
@@ -661,13 +661,13 @@
     if-ge v1, v5, :cond_7
 
     .line 16
-    new-instance v1, Lt1/c$a;
+    new-instance v1, Lk2/c$a;
 
-    invoke-direct {v1, v4, v7}, Lt1/c$a;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v1, v4, v7}, Lk2/c$a;-><init>(ILjava/lang/CharSequence;)V
 
-    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2$j;->b:Lt1/f;
+    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2$j;->b:Lk2/f;
 
-    invoke-static {v0, v1, v7, v2}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lt1/c$a;Ljava/lang/CharSequence;Lt1/f;)V
+    invoke-static {v0, v1, v7, v2}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lk2/c$a;Ljava/lang/CharSequence;Lk2/f;)V
 
     .line 17
     :cond_7
@@ -678,13 +678,13 @@
     if-lez v1, :cond_8
 
     .line 18
-    new-instance v1, Lt1/c$a;
+    new-instance v1, Lk2/c$a;
 
-    invoke-direct {v1, v3, v7}, Lt1/c$a;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v1, v3, v7}, Lk2/c$a;-><init>(ILjava/lang/CharSequence;)V
 
-    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2$j;->c:Lt1/f;
+    iget-object v2, p0, Landroidx/viewpager2/widget/ViewPager2$j;->c:Lk2/f;
 
-    invoke-static {v0, v1, v7, v2}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lt1/c$a;Ljava/lang/CharSequence;Lt1/f;)V
+    invoke-static {v0, v1, v7, v2}, Landroidx/core/view/ViewCompat;->u1(Landroid/view/View;Lk2/c$a;Ljava/lang/CharSequence;Lk2/f;)V
 
     :cond_8
     :goto_1

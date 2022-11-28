@@ -1,9 +1,13 @@
 .class public Lcom/google/android/gms/auth/api/proxy/ProxyRequest;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # annotations
 .annotation build Lcom/google/android/gms/common/annotation/KeepForSdkWithMembers;
+.end annotation
+
+.annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
 .end annotation
 
 .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Class;
@@ -19,6 +23,9 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -51,6 +58,9 @@
 
 # instance fields
 .field public final body:[B
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x4
     .end annotation
@@ -69,18 +79,21 @@
 .end field
 
 .field public final url:Ljava/lang/String;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x1
     .end annotation
 .end field
 
-.field private final versionCode:I
+.field public final zza:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
         id = 0x3e8
     .end annotation
 .end field
 
-.field private zzby:Landroid/os/Bundle;
+.field public zzb:Landroid/os/Bundle;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x5
     .end annotation
@@ -91,7 +104,6 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
     new-instance v0, Lcom/google/android/gms/auth/api/proxy/zza;
 
     invoke-direct {v0}, Lcom/google/android/gms/auth/api/proxy/zza;-><init>()V
@@ -100,45 +112,36 @@
 
     const/4 v0, 0x0
 
-    .line 2
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_GET:I
 
     const/4 v0, 0x1
 
-    .line 3
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_POST:I
 
     const/4 v0, 0x2
 
-    .line 4
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_PUT:I
 
     const/4 v0, 0x3
 
-    .line 5
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_DELETE:I
 
     const/4 v0, 0x4
 
-    .line 6
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_HEAD:I
 
     const/4 v0, 0x5
 
-    .line 7
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_OPTIONS:I
 
     const/4 v0, 0x6
 
-    .line 8
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_TRACE:I
 
     const/4 v0, 0x7
 
-    .line 9
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_PATCH:I
 
-    .line 10
     sput v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->LAST_CODE:I
 
     return-void
@@ -182,23 +185,17 @@
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    .line 2
-    iput p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->versionCode:I
+    iput p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zza:I
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->url:Ljava/lang/String;
 
-    .line 4
     iput p3, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->httpMethod:I
 
-    .line 5
     iput-wide p4, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->timeoutMillis:J
 
-    .line 6
     iput-object p6, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->body:[B
 
-    .line 7
-    iput-object p7, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzby:Landroid/os/Bundle;
+    iput-object p7, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzb:Landroid/os/Bundle;
 
     return-void
 .end method
@@ -207,6 +204,9 @@
 # virtual methods
 .method public getHeaderMap()Ljava/util/Map;
     .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -220,7 +220,7 @@
     .line 1
     new-instance v0, Ljava/util/LinkedHashMap;
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzby:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzb:Landroid/os/Bundle;
 
     invoke-virtual {v1}, Landroid/os/Bundle;->size()I
 
@@ -228,9 +228,9 @@
 
     invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
 
-    .line 2
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzby:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzb:Landroid/os/Bundle;
 
+    .line 2
     invoke-virtual {v1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -244,7 +244,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -252,19 +252,25 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3
-    iget-object v3, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzby:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzb:Landroid/os/Bundle;
 
+    .line 3
     invoke-virtual {v3, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
+    if-nez v3, :cond_0
+
+    const-string v3, ""
+
+    .line 4
+    :cond_0
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 4
-    :cond_0
+    .line 5
+    :cond_1
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -274,39 +280,35 @@
 
 .method public toString()Ljava/lang/String;
     .locals 4
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->url:Ljava/lang/String;
 
     iget v1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->httpMethod:I
 
-    const/16 v2, 0x2a
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v2
+    const-string v3, "ProxyRequest[ url: "
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "ProxyRequest[ url: "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, ", method: "
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v0, " ]"
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -315,54 +317,58 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    .line 2
     iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->url:Ljava/lang/String;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    .line 3
     iget v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->httpMethod:I
 
     const/4 v1, 0x2
 
+    .line 3
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    .line 4
     iget-wide v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->timeoutMillis:J
 
     const/4 v3, 0x3
 
+    .line 4
     invoke-static {p1, v3, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->body:[B
 
     const/4 v1, 0x4
 
+    .line 5
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeByteArray(Landroid/os/Parcel;I[BZ)V
 
-    .line 6
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzby:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zzb:Landroid/os/Bundle;
 
     const/4 v1, 0x5
 
+    .line 6
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBundle(Landroid/os/Parcel;ILandroid/os/Bundle;Z)V
 
-    .line 7
-    iget v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->versionCode:I
+    iget v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->zza:I
 
     const/16 v1, 0x3e8
 
+    .line 7
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     .line 8

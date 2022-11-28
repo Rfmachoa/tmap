@@ -59,7 +59,7 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->onBackPressed()V
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->e()V
 
     .line 2
     new-instance p1, Landroid/view/KeyEvent;

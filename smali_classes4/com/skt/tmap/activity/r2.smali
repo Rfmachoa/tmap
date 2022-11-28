@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-.field public final synthetic b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/r2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/r2;->b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    iput-object p1, p0, Lcom/skt/tmap/activity/r2;->a:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
     return-void
 .end method
@@ -28,15 +24,13 @@
 
 # virtual methods
 .method public final onChanged(Ljava/lang/Object;)V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/r2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/r2;->a:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/r2;->b:Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    check-cast p1, Lkotlin/Pair;
 
-    check-cast p1, Lxb/a;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->w7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;Lxb/a;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->C5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;Lkotlin/Pair;)V
 
     return-void
 .end method

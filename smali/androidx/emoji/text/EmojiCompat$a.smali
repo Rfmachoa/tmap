@@ -42,11 +42,11 @@
     .line 1
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat$a;->c:Landroidx/emoji/text/c;
 
-    invoke-virtual {v0}, Landroidx/emoji/text/c;->f()Lf3/d;
+    invoke-virtual {v0}, Landroidx/emoji/text/c;->f()Ln4/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/d;->D()Ljava/lang/String;
+    invoke-virtual {v0}, Ln4/d;->D()Ljava/lang/String;
 
     move-result-object v0
 

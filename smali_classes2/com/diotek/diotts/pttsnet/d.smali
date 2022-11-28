@@ -61,19 +61,19 @@
 
 .field public c:Ljava/lang/String;
 
-.field public d:Lr5/c;
+.field public d:Lo7/c;
 
 .field public e:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lr5/b;",
+            "Lo7/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public f:Lr5/b;
+.field public f:Lo7/b;
 
 .field public g:I
 
@@ -122,70 +122,7 @@
 
 
 # virtual methods
-.method public abstract a()Z
-.end method
-
-.method public abstract b(Ljava/lang/String;)Z
-.end method
-
-.method public c(I)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lcom/diotek/diotts/pttsnet/d;->g:I
-
-    return-void
-.end method
-
-.method public abstract cancel()V
-.end method
-
-.method public abstract connect()Z
-.end method
-
-.method public d()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lcom/diotek/diotts/pttsnet/d;->i:I
-
-    return v0
-.end method
-
-.method public abstract disconnect()V
-.end method
-
-.method public abstract e()Ljava/lang/String;
-.end method
-
-.method public f()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lcom/diotek/diotts/pttsnet/d;->g:I
-
-    return v0
-.end method
-
-.method public g(I)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lcom/diotek/diotts/pttsnet/d;->i:I
-
-    return-void
-.end method
-
-.method public abstract h(Ljava/lang/String;)Z
-.end method
-
-.method public abstract i()Z
-.end method
-
-.method public abstract isPlaying()Z
-.end method
-
-.method public j()Z
+.method public a()Z
     .locals 2
 
     .line 1
@@ -200,7 +137,7 @@
     return v0
 .end method
 
-.method public k()V
+.method public b()V
     .locals 1
 
     const/16 v0, 0x64
@@ -217,7 +154,7 @@
     return-void
 .end method
 
-.method public l(Z)V
+.method public c(Z)V
     .locals 3
 
     const-string v0, "7000"
@@ -255,7 +192,7 @@
     const-string v2, ", "
 
     .line 5
-    invoke-static {v1, p1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -286,4 +223,67 @@
     invoke-static {v0, p1}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method public abstract cancel()V
+.end method
+
+.method public abstract connect()Z
+.end method
+
+.method public abstract disconnect()V
+.end method
+
+.method public abstract isPlaying()Z
+.end method
+
+.method public n()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/diotek/diotts/pttsnet/d;->g:I
+
+    return v0
+.end method
+
+.method public abstract o()Z
+.end method
+
+.method public abstract p(Ljava/lang/String;)Z
+.end method
+
+.method public q(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lcom/diotek/diotts/pttsnet/d;->g:I
+
+    return-void
+.end method
+
+.method public r()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/diotek/diotts/pttsnet/d;->i:I
+
+    return v0
+.end method
+
+.method public abstract s()Ljava/lang/String;
+.end method
+
+.method public t(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Lcom/diotek/diotts/pttsnet/d;->i:I
+
+    return-void
+.end method
+
+.method public abstract u(Ljava/lang/String;)Z
+.end method
+
+.method public abstract v()Z
 .end method

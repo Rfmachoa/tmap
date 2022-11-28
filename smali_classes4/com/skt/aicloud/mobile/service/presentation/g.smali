@@ -49,7 +49,7 @@
     const-string v0, "im"
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;->h(Ljava/lang/String;)Lma/b0;
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;->h(Ljava/lang/String;)Ljc/b0;
 
     return-void
 .end method

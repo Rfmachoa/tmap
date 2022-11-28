@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Landroidx/biometric/k$a;->a:Landroidx/biometric/k;
 
-    invoke-virtual {v0}, Landroidx/biometric/k;->l()V
+    invoke-virtual {v0}, Landroidx/biometric/k;->m()V
 
     return-void
 .end method

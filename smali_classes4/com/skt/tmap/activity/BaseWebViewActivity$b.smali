@@ -3,7 +3,7 @@
 .source "BaseWebViewActivity.java"
 
 # interfaces
-.implements Lub/c$a;
+.implements Lsd/c$a;
 
 
 # annotations
@@ -77,13 +77,9 @@
 
 
 # virtual methods
-.method public onResponseComplete(Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
+.method public onResponseComplete(Landroid/content/Context;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .param p1    # Ljava/util/ArrayList;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/String;
+    .param p2    # Ljava/util/ArrayList;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -91,13 +87,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .param p4    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
+            0x0,
             0x0,
             0x0,
             0x0
         }
         names = {
+            "context",
             "playList",
             "successWord",
             "failWord"
@@ -107,6 +109,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Landroid/content/Context;",
             "Ljava/util/ArrayList<",
             "[B>;",
             "Ljava/lang/String;",
@@ -116,109 +119,56 @@
     .end annotation
 
     .line 1
-    iget-object p3, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
+    invoke-static {p1}, Lcom/skt/tmap/route/RGAudioHelper;->GetInstance(Landroid/content/Context;)Lcom/skt/tmap/route/RGAudioHelper;
 
-    invoke-virtual {p3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-static {p3}, Lcom/skt/tmap/GlobalDataManager;->b(Landroid/content/Context;)Lcom/skt/tmap/GlobalDataManager;
-
-    move-result-object p3
-
-    sget-object v0, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->SEND_VOICE_LOG:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
-
-    invoke-virtual {p3, v0}, Lcom/skt/tmap/GlobalDataManager;->w(Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_0
-
-    .line 2
-    iget-object p3, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
-
-    invoke-virtual {p3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-static {p3}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
-
-    move-result-object p3
-
-    const-string v0, "$successWord::$failWord"
-
-    invoke-virtual {p3, v0}, Ldc/d;->D(Ljava/lang/String;)V
-
-    .line 3
-    :cond_0
-    iget-object p3, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
-
-    invoke-virtual {p3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    invoke-static {p3}, Lcom/skt/tmap/route/RGAudioHelper;->GetInstance(Landroid/content/Context;)Lcom/skt/tmap/route/RGAudioHelper;
-
-    move-result-object p3
+    move-result-object p4
 
     const/4 v0, 0x1
 
-    invoke-virtual {p3, v0, p1}, Lcom/skt/tmap/route/RGAudioHelper;->writeAudioBuffer(ILjava/util/ArrayList;)Z
+    invoke-virtual {p4, p1, v0, p2}, Lcom/skt/tmap/route/RGAudioHelper;->writeAudioBuffer(Landroid/content/Context;ILjava/util/ArrayList;)Z
 
-    .line 4
-    iget-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
+    .line 2
+    invoke-static {p1}, Lsd/b;->h(Landroid/content/Context;)Lsd/b;
 
-    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    move-result-object p2
 
-    move-result-object p1
+    iget-object p4, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->a:Ljava/lang/String;
 
-    invoke-static {p1}, Lub/b;->h(Landroid/content/Context;)Lub/b;
+    invoke-virtual {p2, p4}, Lsd/b;->p(Ljava/lang/String;)V
 
-    move-result-object p1
-
-    iget-object p3, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p3}, Lub/b;->p(Ljava/lang/String;)V
-
-    .line 5
-    iget-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
+    .line 3
     invoke-static {p1}, Lcom/skt/tmap/route/RGAudioHelper;->GetInstance(Landroid/content/Context;)Lcom/skt/tmap/route/RGAudioHelper;
 
     move-result-object p1
 
-    new-instance p3, Lcom/skt/tmap/activity/s;
+    new-instance p2, Lcom/skt/tmap/activity/s;
 
-    invoke-direct {p3, p0}, Lcom/skt/tmap/activity/s;-><init>(Lcom/skt/tmap/activity/BaseWebViewActivity$b;)V
+    invoke-direct {p2, p0}, Lcom/skt/tmap/activity/s;-><init>(Lcom/skt/tmap/activity/BaseWebViewActivity$b;)V
 
-    invoke-virtual {p1, p3}, Lcom/skt/tmap/route/RGAudioHelper;->setTmapTTSPlayCompleteListener(Lcom/skt/tmap/route/RGAudioHelper$TmapTTSPlayCompleteListener;)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/route/RGAudioHelper;->setTmapTTSPlayCompleteListener(Lcom/skt/tmap/route/RGAudioHelper$TmapTTSPlayCompleteListener;)V
 
-    .line 6
-    invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
+    .line 4
+    invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    .line 7
+    .line 5
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
 
     iget-object p2, p1, Lcom/skt/tmap/activity/BaseWebViewActivity;->callBackJs:Ljava/lang/String;
 
     invoke-static {p1, p2}, Lcom/skt/tmap/activity/BaseWebViewActivity;->access$000(Lcom/skt/tmap/activity/BaseWebViewActivity;Ljava/lang/String;)V
 
-    .line 8
+    .line 6
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity$b;->b:Lcom/skt/tmap/activity/BaseWebViewActivity;
 
     const/4 p2, 0x0
 
     iput-object p2, p1, Lcom/skt/tmap/activity/BaseWebViewActivity;->callBackJs:Ljava/lang/String;
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 

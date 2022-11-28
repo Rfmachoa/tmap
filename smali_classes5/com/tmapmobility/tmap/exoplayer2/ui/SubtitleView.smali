@@ -2,9 +2,6 @@
 .super Landroid/widget/FrameLayout;
 .source "SubtitleView.java"
 
-# interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/Player$c;
-
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -190,7 +187,7 @@
 
     check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
 
-    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->l(Lcom/tmapmobility/tmap/exoplayer2/text/Cue;)Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->a(Lcom/tmapmobility/tmap/exoplayer2/text/Cue;)Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
 
     move-result-object v2
 
@@ -208,7 +205,7 @@
     .locals 3
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -261,7 +258,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x13
 
@@ -372,7 +369,44 @@
 
 
 # virtual methods
-.method public C(IF)V
+.method public final a(Lcom/tmapmobility/tmap/exoplayer2/text/Cue;)Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->b()Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;
+
+    move-result-object p1
+
+    .line 2
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->f:Z
+
+    if-nez v0, :cond_0
+
+    .line 3
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/o0;->e(Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g:Z
+
+    if-nez v0, :cond_1
+
+    .line 5
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/o0;->f(Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;)V
+
+    .line 6
+    :cond_1
+    :goto_0
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;->a()Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b(IF)V
     .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/Dimension;
@@ -412,21 +446,21 @@
     move-result p1
 
     .line 5
-    invoke-virtual {p0, v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->E(IF)V
+    invoke-virtual {p0, v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->d(IF)V
 
     return-void
 .end method
 
-.method public D(FZ)V
+.method public c(FZ)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->E(IF)V
+    invoke-virtual {p0, p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->d(IF)V
 
     return-void
 .end method
 
-.method public final E(IF)V
+.method public final d(IF)V
     .locals 0
 
     .line 1
@@ -436,12 +470,12 @@
     iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->d:F
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->Q()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g()V
 
     return-void
 .end method
 
-.method public I()V
+.method public e()V
     .locals 1
 
     .line 1
@@ -454,7 +488,7 @@
     return-void
 .end method
 
-.method public J()V
+.method public f()V
     .locals 2
 
     .line 1
@@ -471,7 +505,7 @@
     return-void
 .end method
 
-.method public final Q()V
+.method public final g()V
     .locals 6
 
     .line 1
@@ -496,60 +530,6 @@
     return-void
 .end method
 
-.method public final l(Lcom/tmapmobility/tmap/exoplayer2/text/Cue;)Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->b()Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;
-
-    move-result-object p1
-
-    .line 2
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->f:Z
-
-    if-nez v0, :cond_0
-
-    .line 3
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/o0;->e(Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;)V
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g:Z
-
-    if-nez v0, :cond_1
-
-    .line 5
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/o0;->f(Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;)V
-
-    .line 6
-    :cond_1
-    :goto_0
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;->a()Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public onCues(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/text/Cue;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->setCues(Ljava/util/List;)V
-
-    return-void
-.end method
-
 .method public setApplyEmbeddedFontSizes(Z)V
     .locals 0
 
@@ -557,7 +537,7 @@
     iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g:Z
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->Q()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g()V
 
     return-void
 .end method
@@ -569,7 +549,7 @@
     iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->f:Z
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->Q()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g()V
 
     return-void
 .end method
@@ -581,7 +561,7 @@
     iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->e:F
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->Q()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g()V
 
     return-void
 .end method
@@ -615,7 +595,7 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->a:Ljava/util/List;
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->Q()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g()V
 
     return-void
 .end method
@@ -626,7 +606,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->D(FZ)V
+    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->c(FZ)V
 
     return-void
 .end method
@@ -638,7 +618,7 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->b:Lcom/tmapmobility/tmap/exoplayer2/ui/CaptionStyleCompat;
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->Q()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->g()V
 
     return-void
 .end method

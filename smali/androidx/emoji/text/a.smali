@@ -123,13 +123,13 @@
 
     .line 5
     :cond_1
-    const-class v2, Lg2/a;
+    const-class v2, Lx2/a;
 
     invoke-interface {p0, p1, v1, v2}, Landroid/text/Editable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, [Lg2/a;
+    check-cast v1, [Lx2/a;
 
     if-eqz v1, :cond_6
 
@@ -299,13 +299,13 @@
 
     .line 10
     :cond_5
-    const-class p4, Lg2/a;
+    const-class p4, Lx2/a;
 
     invoke-interface {p1, p2, p3, p4}, Landroid/text/Editable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p4
 
-    check-cast p4, [Lg2/a;
+    check-cast p4, [Lx2/a;
 
     if-eqz p4, :cond_7
 
@@ -486,7 +486,7 @@
     .line 1
     iget-object v0, p0, Landroidx/emoji/text/a;->a:Landroidx/emoji/text/EmojiCompat$h;
 
-    invoke-virtual {v0, p2}, Landroidx/emoji/text/EmojiCompat$h;->a(Landroidx/emoji/text/EmojiMetadata;)Lg2/a;
+    invoke-virtual {v0, p2}, Landroidx/emoji/text/EmojiCompat$h;->a(Landroidx/emoji/text/EmojiMetadata;)Lx2/a;
 
     move-result-object p2
 
@@ -641,16 +641,16 @@
     .end param
 
     .line 1
-    instance-of v0, p1, Lh2/j;
+    instance-of v0, p1, Ly2/j;
 
     if-eqz v0, :cond_0
 
     .line 2
     move-object v1, p1
 
-    check-cast v1, Lh2/j;
+    check-cast v1, Ly2/j;
 
-    invoke-virtual {v1}, Lh2/j;->a()V
+    invoke-virtual {v1}, Ly2/j;->a()V
 
     :cond_0
     const/4 v1, 0x0
@@ -680,7 +680,7 @@
 
     add-int/lit8 v4, p3, 0x1
 
-    const-class v5, Lg2/a;
+    const-class v5, Lx2/a;
 
     invoke-interface {v2, v3, v4, v5}, Landroid/text/Spanned;->nextSpanTransition(IILjava/lang/Class;)I
 
@@ -709,13 +709,13 @@
     if-eqz v1, :cond_5
 
     .line 8
-    const-class v3, Lg2/a;
+    const-class v3, Lx2/a;
 
     invoke-interface {v1, p2, p3, v3}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, [Lg2/a;
+    check-cast v3, [Lx2/a;
 
     if-eqz v3, :cond_5
 
@@ -789,13 +789,13 @@
 
     move-result v3
 
-    const-class v4, Lg2/a;
+    const-class v4, Lx2/a;
 
     invoke-interface {v1, v2, v3, v4}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, [Lg2/a;
+    check-cast v3, [Lx2/a;
 
     array-length v3, v3
 
@@ -988,9 +988,9 @@
     if-eqz v0, :cond_15
 
     .line 35
-    check-cast p1, Lh2/j;
+    check-cast p1, Ly2/j;
 
-    invoke-virtual {p1}, Lh2/j;->d()V
+    invoke-virtual {p1}, Ly2/j;->d()V
 
     :cond_15
     return-object v2
@@ -1001,9 +1001,9 @@
 
     move-object p2, p1
 
-    check-cast p2, Lh2/j;
+    check-cast p2, Ly2/j;
 
-    invoke-virtual {p2}, Lh2/j;->d()V
+    invoke-virtual {p2}, Ly2/j;->d()V
 
     :cond_17
     return-object p1
@@ -1013,9 +1013,9 @@
 
     if-eqz v0, :cond_18
 
-    check-cast p1, Lh2/j;
+    check-cast p1, Ly2/j;
 
-    invoke-virtual {p1}, Lh2/j;->d()V
+    invoke-virtual {p1}, Ly2/j;->d()V
 
     .line 36
     :cond_18
@@ -1030,7 +1030,7 @@
     .end param
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iput-object p1, p0, Landroidx/emoji/text/a;->c:Landroidx/emoji/text/a$b;

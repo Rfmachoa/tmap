@@ -1,163 +1,149 @@
-.class public final Lpg/f;
+.class public abstract Lpg/f;
 .super Ljava/lang/Object;
-.source "HTTP.java"
+.source "Chunk.java"
+
+# interfaces
+.implements Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$e;
 
 
-# static fields
-.field public static final A:Ljava/lang/String; = "ISO-8859-1"
-    .annotation runtime Ljava/lang/Deprecated;
+# instance fields
+.field public final a:J
+
+.field public final b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+
+.field public final c:I
+
+.field public final d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+
+.field public final e:I
+
+.field public final f:Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public static final B:Ljava/lang/String; = "US-ASCII"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
+.field public final g:J
 
-.field public static final C:Ljava/lang/String; = "application/octet-stream"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
+.field public final h:J
 
-.field public static final D:Ljava/lang/String; = "text/plain"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final E:Ljava/lang/String; = "; charset="
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final F:Ljava/lang/String; = "application/octet-stream"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final a:I = 0xd
-
-.field public static final b:I = 0xa
-
-.field public static final c:I = 0x20
-
-.field public static final d:I = 0x9
-
-.field public static final e:Ljava/lang/String; = "Transfer-Encoding"
-
-.field public static final f:Ljava/lang/String; = "Content-Length"
-
-.field public static final g:Ljava/lang/String; = "Content-Type"
-
-.field public static final h:Ljava/lang/String; = "Content-Encoding"
-
-.field public static final i:Ljava/lang/String; = "Expect"
-
-.field public static final j:Ljava/lang/String; = "Connection"
-
-.field public static final k:Ljava/lang/String; = "Host"
-
-.field public static final l:Ljava/lang/String; = "User-Agent"
-
-.field public static final m:Ljava/lang/String; = "Date"
-
-.field public static final n:Ljava/lang/String; = "Server"
-
-.field public static final o:Ljava/lang/String; = "100-continue"
-
-.field public static final p:Ljava/lang/String; = "Close"
-
-.field public static final q:Ljava/lang/String; = "Keep-Alive"
-
-.field public static final r:Ljava/lang/String; = "chunked"
-
-.field public static final s:Ljava/lang/String; = "identity"
-
-.field public static final t:Ljava/nio/charset/Charset;
-
-.field public static final u:Ljava/nio/charset/Charset;
-
-.field public static final v:Ljava/lang/String; = "UTF-8"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final w:Ljava/lang/String; = "UTF-16"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final x:Ljava/lang/String; = "US-ASCII"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final y:Ljava/lang/String; = "ASCII"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field public static final z:Ljava/lang/String; = "ISO-8859-1"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
+.field public final i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;ILcom/tmapmobility/tmap/exoplayer2/Format;ILjava/lang/Object;JJ)V
     .locals 1
-
-    .line 1
-    sget-object v0, Ldf/b;->g:Ljava/nio/charset/Charset;
-
-    sput-object v0, Lpg/f;->t:Ljava/nio/charset/Charset;
-
-    .line 2
-    sget-object v0, Ldf/b;->f:Ljava/nio/charset/Charset;
-
-    sput-object v0, Lpg/f;->u:Ljava/nio/charset/Charset;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
+    .param p6    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
+
+    invoke-direct {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;)V
+
+    iput-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
+
+    .line 3
+    invoke-static {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+
+    iput-object p1, p0, Lpg/f;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+
+    .line 4
+    iput p3, p0, Lpg/f;->c:I
+
+    .line 5
+    iput-object p4, p0, Lpg/f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+
+    .line 6
+    iput p5, p0, Lpg/f;->e:I
+
+    .line 7
+    iput-object p6, p0, Lpg/f;->f:Ljava/lang/Object;
+
+    .line 8
+    iput-wide p7, p0, Lpg/f;->g:J
+
+    .line 9
+    iput-wide p9, p0, Lpg/f;->h:J
+
+    .line 10
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/source/u;->a()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lpg/f;->a:J
+
     return-void
 .end method
 
-.method public static a(C)Z
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;->g()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final b()J
+    .locals 4
+
+    .line 1
+    iget-wide v0, p0, Lpg/f;->h:J
+
+    iget-wide v2, p0, Lpg/f;->g:J
+
+    sub-long/2addr v0, v2
+
+    return-wide v0
+.end method
+
+.method public final c()Ljava/util/Map;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;->i()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d()Landroid/net/Uri;
     .locals 1
 
-    const/16 v0, 0x20
+    .line 1
+    iget-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
 
-    if-eq p0, v0, :cond_1
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;->h()Landroid/net/Uri;
 
-    const/16 v0, 0x9
+    move-result-object v0
 
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0xd
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0xa
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    :goto_1
-    return p0
+    return-object v0
 .end method

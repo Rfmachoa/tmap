@@ -18,7 +18,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/io/File;)Ldg/l;
+.method public static a(Ljava/io/File;)Lhi/l;
     .locals 1
 
     .line 1
@@ -30,14 +30,14 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ldg/f0;->f()Ldg/l;
+    invoke-virtual {p0}, Lhi/f0;->f()Lhi/l;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static b()Ldg/l;
+.method public static b()Lhi/l;
     .locals 1
 
     .line 1
@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ldg/f0;->f()Ldg/l;
+    invoke-virtual {v0}, Lhi/f0;->f()Lhi/l;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "TmapMainActivity.java"
 
 # interfaces
-.implements Lbd/e;
+.implements Lcf/e;
 
 
 # annotations
@@ -114,7 +114,7 @@
     :cond_4
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$k;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/o1;->h0(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapUtil;->r0(Landroid/app/Activity;)V
 
     return v0
 
@@ -122,7 +122,7 @@
     :cond_5
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$k;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/o1;->g0(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapUtil;->p0(Landroid/app/Activity;)V
 
     return v0
 .end method

@@ -124,7 +124,7 @@
 
     const-string v3, "Must provide a valid RetryPolicy: "
 
-    invoke-static {v1, v3, v2}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v3, v2}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -158,7 +158,7 @@
 
     const-string v2, "InitialBackoffSeconds can\'t be negative: "
 
-    invoke-static {v1, v2, v3}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -205,7 +205,7 @@
 
     const-string v3, "MaximumBackoffSeconds must be greater than InitialBackoffSeconds: "
 
-    invoke-static {v2, v3, v0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v3, v0}, Lcom/google/android/gms/gcm/d;->a(ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

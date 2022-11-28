@@ -3,7 +3,7 @@
 .source "GraphQLCall.java"
 
 # interfaces
-.implements Lq4/a;
+.implements Ln6/a;
 
 
 # annotations
@@ -20,7 +20,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lq4/a;"
+        "Ln6/a;"
     }
 .end annotation
 
@@ -40,15 +40,15 @@
     .end annotation
 .end method
 
-.method public abstract cacheHeaders(Le4/a;)Lcom/apollographql/apollo/GraphQLCall;
-    .param p1    # Le4/a;
+.method public abstract cacheHeaders(Lb6/a;)Lcom/apollographql/apollo/GraphQLCall;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le4/a;",
+            "Lb6/a;",
             ")",
             "Lcom/apollographql/apollo/GraphQLCall<",
             "TT;>;"

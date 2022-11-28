@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;->R1(Lcom/skt/tmap/data/DateTimeInfoItem;)V
+    value = Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;->T1(Lcom/skt/tmap/data/DateTimeInfoItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -59,7 +59,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;->v5(Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;Lcom/skt/tmap/dialog/c;)Lcom/skt/tmap/dialog/c;
+    invoke-static {p1, v0}, Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;->D5(Lcom/skt/tmap/activity/TmapScheduleTimeRequiredActivity;Lcom/skt/tmap/dialog/g;)Lcom/skt/tmap/dialog/g;
 
     return-void
 .end method

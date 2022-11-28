@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
@@ -23,14 +23,12 @@
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/dialog/j;->a:Lcom/skt/tmap/dialog/k;
 
-    check-cast p1, Lcom/skt/tmap/data/TmapLayerData;
-
-    invoke-static {v0, p1}, Lcom/skt/tmap/dialog/k;->h(Lcom/skt/tmap/dialog/k;Lcom/skt/tmap/data/TmapLayerData;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/dialog/k;->i(Lcom/skt/tmap/dialog/k;Landroid/content/DialogInterface;)V
 
     return-void
 .end method

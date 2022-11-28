@@ -37,6 +37,17 @@
     return-object v0
 .end method
 
+.method public onClick(FF)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
 .method public onFling(FF)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;

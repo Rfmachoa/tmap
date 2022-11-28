@@ -223,7 +223,7 @@
     const-string p0, "eglChooseConfig failed: success=%b, numConfigs[0]=%d, configs[0]=%s"
 
     .line 7
-    invoke-static {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->H(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->H(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -410,7 +410,7 @@
     invoke-static {v0, p0, v1}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
     .line 2
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     return-void
 .end method
@@ -643,7 +643,7 @@
 
     .line 11
     :cond_3
-    sget v2, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v2, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     if-lt v2, v0, :cond_4
 
@@ -743,7 +743,7 @@
 
     .line 25
     :cond_8
-    sget v3, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v3, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     if-lt v3, v0, :cond_9
 

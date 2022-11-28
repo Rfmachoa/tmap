@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->V3(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
+    value = Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->Z3(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -97,7 +97,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$a;->a:Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->D5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->L5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
     return-void
 .end method

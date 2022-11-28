@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
 .super Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # annotations
@@ -9,9 +10,15 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final DEFAULT:Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,31 +30,20 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;-><init>()V
 
-    invoke-virtual {v0}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;->zzc()Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
+    invoke-virtual {v0}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;->build()Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
 
     move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
 
     sput-object v0, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;->DEFAULT:Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;)V
+.method public synthetic constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;Lcom/google/android/gms/auth/api/credentials/zbd;)V
     .locals 0
 
     .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;-><init>(Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;Lcom/google/android/gms/auth/api/credentials/zzh;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;-><init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;)V
 
     return-void
 .end method

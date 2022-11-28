@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public abstract name()Lc4/h;
+.method public abstract name()Lz5/h;
     .annotation runtime Ljavax/annotation/Nonnull;
     .end annotation
 .end method
@@ -58,11 +58,11 @@
 .method public abstract queryDocument()Ljava/lang/String;
 .end method
 
-.method public abstract responseFieldMapper()Lc4/j;
+.method public abstract responseFieldMapper()Lz5/j;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc4/j<",
+            "Lz5/j<",
             "TD;>;"
         }
     .end annotation

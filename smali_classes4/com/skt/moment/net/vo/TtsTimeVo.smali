@@ -167,6 +167,15 @@
 
 .method public setAsrText(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "asrText"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -184,6 +193,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->campaignId:Ljava/lang/Integer;
@@ -193,6 +210,14 @@
 
 .method public setChromeNeeded(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "chromeNeeded"
+        }
+    .end annotation
 
     .line 1
     iput-boolean p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->chromeNeeded:Z
@@ -202,6 +227,15 @@
 
 .method public setCommandText(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "commandText"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -219,6 +253,14 @@
 
 .method public setSignalTime(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "signalTime"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->signalTime:I
@@ -228,6 +270,14 @@
 
 .method public setSoundFileId(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "soundFileId"
+        }
+    .end annotation
 
     .line 1
     iput-wide p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->soundFileId:J
@@ -237,6 +287,14 @@
 
 .method public setSoundFilePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "soundFilePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->soundFilePath:Ljava/lang/String;
@@ -246,6 +304,14 @@
 
 .method public setSoundFileUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "soundFileUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->soundFileUrl:Ljava/lang/String;
@@ -255,6 +321,14 @@
 
 .method public setText(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->text:Ljava/lang/String;
@@ -264,6 +338,14 @@
 
 .method public setTtsType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ttsType"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/TtsTimeVo;->ttsType:Ljava/lang/String;

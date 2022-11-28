@@ -1,139 +1,398 @@
-.class public final Lk1/e;
+.class public Lk1/e;
 .super Ljava/lang/Object;
-.source "Uri.kt"
+.source "Easing.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nUri.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,43:1\n*E\n"
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lk1/e$a;
+    }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0012\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a\r\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0086\u0008\u001a\r\u0010\u0004\u001a\u00020\u0001*\u00020\u0003H\u0086\u0008\u001a\n\u0010\u0005\u001a\u00020\u0003*\u00020\u0001\u00a8\u0006\u0006"
-    }
-    d2 = {
-        "",
-        "Landroid/net/Uri;",
-        "c",
-        "Ljava/io/File;",
-        "b",
-        "a",
-        "core-ktx_release"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x4,
-        0x0
-    }
-.end annotation
+
+# static fields
+.field public static b:Lk1/e; = null
+
+.field public static final c:Ljava/lang/String; = "cubic(0.4, 0.0, 0.2, 1)"
+
+.field public static final d:Ljava/lang/String; = "cubic(0.4, 0.05, 0.8, 0.7)"
+
+.field public static final e:Ljava/lang/String; = "cubic(0.0, 0.0, 0.2, 0.95)"
+
+.field public static final f:Ljava/lang/String; = "cubic(1, 1, 0, 0)"
+
+.field public static final g:Ljava/lang/String; = "cubic(0.36, 0, 0.66, -0.56)"
+
+.field public static final h:Ljava/lang/String; = "cubic(0.34, 1.56, 0.64, 1)"
+
+.field public static final i:Ljava/lang/String; = "decelerate"
+
+.field public static final j:Ljava/lang/String; = "accelerate"
+
+.field public static final k:Ljava/lang/String; = "standard"
+
+.field public static final l:Ljava/lang/String; = "linear"
+
+.field public static final m:Ljava/lang/String; = "anticipate"
+
+.field public static final n:Ljava/lang/String; = "overshoot"
+
+.field public static o:[Ljava/lang/String;
+
+
+# instance fields
+.field public a:Ljava/lang/String;
 
 
 # direct methods
-.method public static final a(Landroid/net/Uri;)Ljava/io/File;
-    .locals 2
-    .param p0    # Landroid/net/Uri;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$toFile"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+.method public static constructor <clinit>()V
+    .locals 4
 
     .line 1
-    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    new-instance v0, Lk1/e;
+
+    invoke-direct {v0}, Lk1/e;-><init>()V
+
+    sput-object v0, Lk1/e;->b:Lk1/e;
+
+    const-string v0, "standard"
+
+    const-string v1, "accelerate"
+
+    const-string v2, "decelerate"
+
+    const-string v3, "linear"
+
+    .line 2
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "file"
+    sput-object v0, Lk1/e;->o:[Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "identity"
+
+    .line 2
+    iput-object v0, p0, Lk1/e;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static c(Ljava/lang/String;)Lk1/e;
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const-string v0, "cubic"
+
+    .line 1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 2
-    new-instance v0, Ljava/io/File;
+    new-instance v0, Lk1/e$a;
 
-    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
 
     return-object v0
 
-    :cond_0
-    const-string v0, "Uri lacks \'file\' scheme: "
+    :cond_1
+    const-string v0, "spline"
 
     .line 3
-    invoke-static {v0, p0}, Landroidx/appcompat/widget/b0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-object p0
+    move-result v0
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 4
+    new-instance v0, Lk1/r;
 
-    move-result-object p0
+    invoke-direct {v0, p0}, Lk1/r;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    throw v0
-.end method
+    :cond_2
+    const-string v0, "Schlick"
 
-.method public static final b(Ljava/io/File;)Landroid/net/Uri;
-    .locals 1
-    .param p0    # Ljava/io/File;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
+    .line 5
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    const-string v0, "$this$toUri"
+    move-result v0
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz v0, :cond_3
 
-    .line 1
-    invoke-static {p0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    .line 6
+    new-instance v0, Lk1/o;
 
-    move-result-object p0
+    invoke-direct {v0, p0}, Lk1/o;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "Uri.fromFile(this)"
+    return-object v0
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 7
+    :cond_3
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    sparse-switch v1, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v1, "standard"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v0, 0x5
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v1, "overshoot"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v1, "linear"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v1, "anticipate"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v1, "decelerate"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v1, "accelerate"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    const/4 v0, 0x0
+
+    :goto_0
+    packed-switch v0, :pswitch_data_0
+
+    .line 8
+    sget-object p0, Ljava/lang/System;->err:Ljava/io/PrintStream;
+
+    const-string v0, "transitionEasing syntax error syntax:transitionEasing=\"cubic(1.0,0.5,0.0,0.6)\" or "
+
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Lk1/e;->o:[Ljava/lang/String;
+
+    .line 9
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 10
+    invoke-virtual {p0, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    .line 11
+    sget-object p0, Lk1/e;->b:Lk1/e;
 
     return-object p0
-.end method
 
-.method public static final c(Ljava/lang/String;)Landroid/net/Uri;
-    .locals 1
-    .param p0    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
+    .line 12
+    :pswitch_0
+    new-instance p0, Lk1/e$a;
 
-    const-string v0, "$this$toUri"
+    const-string v0, "cubic(0.4, 0.0, 0.2, 1)"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    const-string v0, "Uri.parse(this)"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
 
     return-object p0
+
+    .line 13
+    :pswitch_1
+    new-instance p0, Lk1/e$a;
+
+    const-string v0, "cubic(0.34, 1.56, 0.64, 1)"
+
+    invoke-direct {p0, v0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    .line 14
+    :pswitch_2
+    new-instance p0, Lk1/e$a;
+
+    const-string v0, "cubic(1, 1, 0, 0)"
+
+    invoke-direct {p0, v0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    .line 15
+    :pswitch_3
+    new-instance p0, Lk1/e$a;
+
+    const-string v0, "cubic(0.36, 0, 0.66, -0.56)"
+
+    invoke-direct {p0, v0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    .line 16
+    :pswitch_4
+    new-instance p0, Lk1/e$a;
+
+    const-string v0, "cubic(0.0, 0.0, 0.2, 0.95)"
+
+    invoke-direct {p0, v0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    .line 17
+    :pswitch_5
+    new-instance p0, Lk1/e$a;
+
+    const-string v0, "cubic(0.4, 0.05, 0.8, 0.7)"
+
+    invoke-direct {p0, v0}, Lk1/e$a;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x50bb8523 -> :sswitch_5
+        -0x4b5653c4 -> :sswitch_4
+        -0x47620096 -> :sswitch_3
+        -0x41b970db -> :sswitch_2
+        -0x2ca5d435 -> :sswitch_1
+        0x4e3d1ebd -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public a(D)D
+    .locals 0
+
+    return-wide p1
+.end method
+
+.method public b(D)D
+    .locals 0
+
+    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+
+    return-wide p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lk1/e;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

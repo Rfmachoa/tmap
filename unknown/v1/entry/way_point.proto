@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message WayPointEntry {
+
+  /** 정보인덱스 Type */
+  // default = 0x03
+  int32 infoIndexType = 1;
+
+  /** 경유지 데이터 Collection */
+  repeated WayPointElement elements = 2;
+
+}
+
+message WayPointElement {
+
+  /** 해당 마지막 보간점 Index */
+  int32 lastVertexIndex = 1;
+
+  /** 까지의 소요거리(m) */
+  int32 spentDistance = 2;
+
+  /** 까지의 소요시간(초) */
+  int32 spentTime = 3;
+
+}

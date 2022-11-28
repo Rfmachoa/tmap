@@ -1,270 +1,391 @@
-.class public Lcg/f;
+.class public final Lcg/f;
 .super Ljava/lang/Object;
-.source "DefaultBHttpClientConnectionFactory.java"
+.source "VbriSeeker.java"
 
 # interfaces
-.implements Ldf/j;
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ldf/j<",
-        "Lcg/e;",
-        ">;"
-    }
-.end annotation
+.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/mp3/a;
 
 
 # static fields
-.field public static final f:Lcg/f;
+.field public static final h:Ljava/lang/String; = "VbriSeeker"
 
 
 # instance fields
-.field public final a:Lpf/a;
+.field public final d:[J
 
-.field public final b:Lzf/e;
+.field public final e:[J
 
-.field public final c:Lzf/e;
+.field public final f:J
 
-.field public final d:Llg/f;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Llg/f<",
-            "Ldf/q;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public final e:Llg/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Llg/d<",
-            "Ldf/t;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final g:J
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    new-instance v0, Lcg/f;
-
-    invoke-direct {v0}, Lcg/f;-><init>()V
-
-    sput-object v0, Lcg/f;->f:Lcg/f;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 6
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    .line 9
-    invoke-direct/range {v0 .. v5}, Lcg/f;-><init>(Lpf/a;Lzf/e;Lzf/e;Llg/f;Llg/d;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpf/a;)V
-    .locals 6
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    .line 8
-    invoke-direct/range {v0 .. v5}, Lcg/f;-><init>(Lpf/a;Lzf/e;Lzf/e;Llg/f;Llg/d;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpf/a;Llg/f;Llg/d;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lpf/a;",
-            "Llg/f<",
-            "Ldf/q;",
-            ">;",
-            "Llg/d<",
-            "Ldf/t;",
-            ">;)V"
-        }
-    .end annotation
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    .line 7
-    invoke-direct/range {v0 .. v5}, Lcg/f;-><init>(Lpf/a;Lzf/e;Lzf/e;Llg/f;Llg/d;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpf/a;Lzf/e;Lzf/e;Llg/f;Llg/d;)V
+.method public constructor <init>([J[JJJ)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lpf/a;",
-            "Lzf/e;",
-            "Lzf/e;",
-            "Llg/f<",
-            "Ldf/q;",
-            ">;",
-            "Llg/d<",
-            "Ldf/t;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
     .line 2
-    :cond_0
-    sget-object p1, Lpf/a;->g:Lpf/a;
-
-    :goto_0
-    iput-object p1, p0, Lcg/f;->a:Lpf/a;
+    iput-object p1, p0, Lcg/f;->d:[J
 
     .line 3
-    iput-object p2, p0, Lcg/f;->b:Lzf/e;
+    iput-object p2, p0, Lcg/f;->e:[J
 
     .line 4
-    iput-object p3, p0, Lcg/f;->c:Lzf/e;
+    iput-wide p3, p0, Lcg/f;->f:J
 
     .line 5
-    iput-object p4, p0, Lcg/f;->d:Llg/f;
-
-    .line 6
-    iput-object p5, p0, Lcg/f;->e:Llg/d;
+    iput-wide p5, p0, Lcg/f;->g:J
 
     return-void
 .end method
 
-
-# virtual methods
-.method public bridge synthetic a(Ljava/net/Socket;)Ldf/i;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
+.method public static b(JJLcom/tmapmobility/tmap/exoplayer2/audio/w$a;Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcg/f;
+    .locals 19
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    invoke-virtual {p0, p1}, Lcg/f;->b(Ljava/net/Socket;)Lcg/e;
+    move-wide/from16 v0, p0
 
-    move-result-object p1
+    move-object/from16 v2, p4
+
+    move-object/from16 v3, p5
+
+    const/16 v4, 0xa
+
+    .line 1
+    invoke-virtual {v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->T(I)V
+
+    .line 2
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->o()I
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    if-gtz v4, :cond_0
+
+    return-object v5
+
+    .line 3
+    :cond_0
+    iget v5, v2, Lcom/tmapmobility/tmap/exoplayer2/audio/w$a;->d:I
+
+    int-to-long v6, v4
+
+    const-wide/32 v8, 0xf4240
+
+    const/16 v4, 0x7d00
+
+    if-lt v5, v4, :cond_1
+
+    const/16 v4, 0x480
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v4, 0x240
+
+    :goto_0
+    int-to-long v10, v4
+
+    mul-long/2addr v8, v10
+
+    int-to-long v10, v5
+
+    .line 4
+    invoke-static/range {v6 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->o1(JJJ)J
+
+    move-result-wide v15
+
+    .line 5
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
+
+    move-result v4
+
+    .line 6
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
+
+    move-result v5
+
+    .line 7
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
+
+    move-result v6
+
+    const/4 v7, 0x2
+
+    .line 8
+    invoke-virtual {v3, v7}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->T(I)V
+
+    .line 9
+    iget v2, v2, Lcom/tmapmobility/tmap/exoplayer2/audio/w$a;->c:I
+
+    int-to-long v7, v2
+
+    add-long v7, p2, v7
+
+    .line 10
+    new-array v13, v4, [J
+
+    .line 11
+    new-array v14, v4, [J
+
+    const/4 v2, 0x0
+
+    move-wide/from16 v9, p2
+
+    :goto_1
+    if-ge v2, v4, :cond_6
+
+    int-to-long v11, v2
+
+    mul-long/2addr v11, v15
+
+    int-to-long v0, v4
+
+    .line 12
+    div-long/2addr v11, v0
+
+    aput-wide v11, v13, v2
+
+    .line 13
+    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    aput-wide v0, v14, v2
+
+    const/4 v0, 0x1
+
+    if-eq v6, v0, :cond_5
+
+    const/4 v0, 0x2
+
+    if-eq v6, v0, :cond_4
+
+    const/4 v0, 0x3
+
+    if-eq v6, v0, :cond_3
+
+    const/4 v0, 0x4
+
+    if-eq v6, v0, :cond_2
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 14
+    :cond_2
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->K()I
+
+    move-result v0
+
+    goto :goto_2
+
+    .line 15
+    :cond_3
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->J()I
+
+    move-result v0
+
+    goto :goto_2
+
+    .line 16
+    :cond_4
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
+
+    move-result v0
+
+    goto :goto_2
+
+    .line 17
+    :cond_5
+    invoke-virtual/range {p5 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
+
+    move-result v0
+
+    :goto_2
+    int-to-long v0, v0
+
+    int-to-long v11, v5
+
+    mul-long/2addr v0, v11
+
+    add-long/2addr v9, v0
+
+    add-int/lit8 v2, v2, 0x1
+
+    move-wide/from16 v0, p0
+
+    goto :goto_1
+
+    :cond_6
+    const-wide/16 v0, -0x1
+
+    move-wide/from16 v2, p0
+
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_7
+
+    cmp-long v0, v2, v9
+
+    if-eqz v0, :cond_7
+
+    const-string v0, "VBRI data size mismatch: "
+
+    const-string v1, ", "
+
+    .line 18
+    invoke-static {v0, v2, v3, v1}, Landroidx/camera/core/v;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VbriSeeker"
+
+    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 19
+    :cond_7
+    new-instance v0, Lcg/f;
+
+    move-object v12, v0
+
+    move-wide/from16 v17, v9
+
+    invoke-direct/range {v12 .. v18}, Lcg/f;-><init>([J[JJJ)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public a(J)Lcom/tmapmobility/tmap/exoplayer2/extractor/z$a;
+    .locals 8
+
+    .line 1
+    iget-object v0, p0, Lcg/f;->d:[J
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, p1, p2, v1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->j([JJZZ)I
+
+    move-result v0
+
+    .line 2
+    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;
+
+    iget-object v3, p0, Lcg/f;->d:[J
+
+    aget-wide v4, v3, v0
+
+    iget-object v3, p0, Lcg/f;->e:[J
+
+    aget-wide v6, v3, v0
+
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;-><init>(JJ)V
+
+    .line 3
+    iget-wide v3, v2, Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;->a:J
+
+    cmp-long p1, v3, p1
+
+    if-gez p1, :cond_1
+
+    iget-object p1, p0, Lcg/f;->d:[J
+
+    array-length p1, p1
+
+    sub-int/2addr p1, v1
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;
+
+    iget-object p2, p0, Lcg/f;->d:[J
+
+    add-int/2addr v0, v1
+
+    aget-wide v3, p2, v0
+
+    iget-object p2, p0, Lcg/f;->e:[J
+
+    aget-wide v0, p2, v0
+
+    invoke-direct {p1, v3, v4, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;-><init>(JJ)V
+
+    .line 5
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$a;
+
+    invoke-direct {p2, v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;)V
+
+    return-object p2
+
+    .line 6
+    :cond_1
+    :goto_0
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$a;
+
+    invoke-direct {p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/a0;)V
 
     return-object p1
 .end method
 
-.method public b(Ljava/net/Socket;)Lcg/e;
-    .locals 11
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+.method public e()J
+    .locals 2
 
     .line 1
-    new-instance v10, Lcg/e;
+    iget-wide v0, p0, Lcg/f;->g:J
 
-    iget-object v0, p0, Lcg/f;->a:Lpf/a;
+    return-wide v0
+.end method
 
-    .line 2
-    invoke-virtual {v0}, Lpf/a;->d()I
+.method public getDurationUs()J
+    .locals 2
 
-    move-result v1
+    .line 1
+    iget-wide v0, p0, Lcg/f;->f:J
 
-    iget-object v0, p0, Lcg/f;->a:Lpf/a;
+    return-wide v0
+.end method
 
-    .line 3
-    invoke-virtual {v0}, Lpf/a;->f()I
+.method public getTimeUs(J)J
+    .locals 3
 
-    move-result v2
+    .line 1
+    iget-object v0, p0, Lcg/f;->d:[J
 
-    iget-object v0, p0, Lcg/f;->a:Lpf/a;
+    iget-object v1, p0, Lcg/f;->e:[J
 
-    .line 4
-    invoke-static {v0}, Lcg/d;->a(Lpf/a;)Ljava/nio/charset/CharsetDecoder;
+    const/4 v2, 0x1
 
-    move-result-object v3
+    invoke-static {v1, p1, p2, v2, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->j([JJZZ)I
 
-    iget-object v0, p0, Lcg/f;->a:Lpf/a;
+    move-result p1
 
-    .line 5
-    invoke-static {v0}, Lcg/d;->b(Lpf/a;)Ljava/nio/charset/CharsetEncoder;
+    aget-wide p1, v0, p1
 
-    move-result-object v4
+    return-wide p1
+.end method
 
-    iget-object v0, p0, Lcg/f;->a:Lpf/a;
+.method public isSeekable()Z
+    .locals 1
 
-    .line 6
-    invoke-virtual {v0}, Lpf/a;->h()Lpf/c;
+    const/4 v0, 0x1
 
-    move-result-object v5
-
-    iget-object v6, p0, Lcg/f;->b:Lzf/e;
-
-    iget-object v7, p0, Lcg/f;->c:Lzf/e;
-
-    iget-object v8, p0, Lcg/f;->d:Llg/f;
-
-    iget-object v9, p0, Lcg/f;->e:Llg/d;
-
-    move-object v0, v10
-
-    invoke-direct/range {v0 .. v9}, Lcg/e;-><init>(IILjava/nio/charset/CharsetDecoder;Ljava/nio/charset/CharsetEncoder;Lpf/c;Lzf/e;Lzf/e;Llg/f;Llg/d;)V
-
-    .line 7
-    invoke-virtual {v10, p1}, Lcg/e;->v1(Ljava/net/Socket;)V
-
-    return-object v10
+    return v0
 .end method

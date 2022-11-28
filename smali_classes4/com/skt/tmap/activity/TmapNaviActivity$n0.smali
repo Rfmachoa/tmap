@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Vb(Z)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->nc(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,13 +49,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$n0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->A8(Lcom/skt/tmap/activity/TmapNaviActivity;)Llb/w1;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->N8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lid/m2;
 
     move-result-object v0
 
-    iget-object v0, v0, Llb/w1;->t1:Llb/q2;
-
-    iget-object v0, v0, Llb/q2;->j1:Landroid/widget/TextView;
+    iget-object v0, v0, Lid/m2;->q1:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 

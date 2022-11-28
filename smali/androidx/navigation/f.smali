@@ -1,93 +1,177 @@
 .class public final Landroidx/navigation/f;
 .super Ljava/lang/Object;
-.source "ActivityNavigatorExtras.kt"
+.source "NavOptionsBuilder.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nActivityNavigatorExtras.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityNavigatorExtras.kt\nandroidx/navigation/ActivityNavigatorExtrasKt\n*L\n1#1,37:1\n*E\n"
+.annotation runtime Landroidx/navigation/NavOptionsDsl;
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\u001c\u0010\u0005\u001a\u00020\u00042\n\u0008\u0002\u0010\u0001\u001a\u0004\u0018\u00010\u00002\u0008\u0008\u0002\u0010\u0003\u001a\u00020\u0002\u00a8\u0006\u0006"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0012\u0008\u0007\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0012\u0010\u0013R\"\u0010\u0008\u001a\u00020\u00028\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0003\u0010\u0005\"\u0004\u0008\u0006\u0010\u0007R\"\u0010\u000b\u001a\u00020\u00028\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010\u0004\u001a\u0004\u0008\t\u0010\u0005\"\u0004\u0008\n\u0010\u0007R\"\u0010\u000e\u001a\u00020\u00028\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000c\u0010\u0004\u001a\u0004\u0008\u000c\u0010\u0005\"\u0004\u0008\r\u0010\u0007R\"\u0010\u0011\u001a\u00020\u00028\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000f\u0010\u0004\u001a\u0004\u0008\u000f\u0010\u0005\"\u0004\u0008\u0010\u0010\u0007\u00a8\u0006\u0014"
     }
     d2 = {
-        "Landroidx/core/app/c;",
-        "activityOptions",
+        "Landroidx/navigation/f;",
         "",
-        "flags",
-        "Landroidx/navigation/c$b;",
+        "",
         "a",
-        "navigation-runtime-ktx_release"
+        "I",
+        "()I",
+        "e",
+        "(I)V",
+        "enter",
+        "b",
+        "f",
+        "exit",
+        "c",
+        "g",
+        "popEnter",
+        "d",
+        "h",
+        "popExit",
+        "<init>",
+        "()V",
+        "navigation-common_release"
     }
-    k = 0x2
+    k = 0x1
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
 
 
-# direct methods
-.method public static final a(Landroidx/core/app/c;I)Landroidx/navigation/c$b;
-    .locals 1
-    .param p0    # Landroidx/core/app/c;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/NotNull;
+# instance fields
+.field public a:I
+    .annotation build Landroidx/annotation/AnimRes;
     .end annotation
 
+    .annotation build Landroidx/annotation/AnimatorRes;
+    .end annotation
+.end field
+
+.field public b:I
+    .annotation build Landroidx/annotation/AnimRes;
+    .end annotation
+
+    .annotation build Landroidx/annotation/AnimatorRes;
+    .end annotation
+.end field
+
+.field public c:I
+    .annotation build Landroidx/annotation/AnimRes;
+    .end annotation
+
+    .annotation build Landroidx/annotation/AnimatorRes;
+    .end annotation
+.end field
+
+.field public d:I
+    .annotation build Landroidx/annotation/AnimRes;
+    .end annotation
+
+    .annotation build Landroidx/annotation/AnimatorRes;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
     .line 1
-    new-instance v0, Landroidx/navigation/c$b$a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroidx/navigation/c$b$a;-><init>()V
-
-    if-eqz p0, :cond_0
+    const/4 v0, -0x1
 
     .line 2
-    invoke-virtual {v0, p0}, Landroidx/navigation/c$b$a;->c(Landroidx/core/app/c;)Landroidx/navigation/c$b$a;
+    iput v0, p0, Landroidx/navigation/f;->a:I
 
     .line 3
-    :cond_0
-    invoke-virtual {v0, p1}, Landroidx/navigation/c$b$a;->a(I)Landroidx/navigation/c$b$a;
+    iput v0, p0, Landroidx/navigation/f;->b:I
 
     .line 4
-    invoke-virtual {v0}, Landroidx/navigation/c$b$a;->b()Landroidx/navigation/c$b;
+    iput v0, p0, Landroidx/navigation/f;->c:I
 
-    move-result-object p0
+    .line 5
+    iput v0, p0, Landroidx/navigation/f;->d:I
 
-    const-string p1, "ActivityNavigator.Extras\u2026(flags)\n        }.build()"
-
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    return-object p0
+    return-void
 .end method
 
-.method public static synthetic b(Landroidx/core/app/c;IILjava/lang/Object;)Landroidx/navigation/c$b;
-    .locals 0
 
-    and-int/lit8 p3, p2, 0x1
-
-    if-eqz p3, :cond_0
-
-    const/4 p0, 0x0
-
-    :cond_0
-    and-int/lit8 p2, p2, 0x2
-
-    if-eqz p2, :cond_1
-
-    const/4 p1, 0x0
+# virtual methods
+.method public final a()I
+    .locals 1
 
     .line 1
-    :cond_1
-    invoke-static {p0, p1}, Landroidx/navigation/f;->a(Landroidx/core/app/c;I)Landroidx/navigation/c$b;
+    iget v0, p0, Landroidx/navigation/f;->a:I
 
-    move-result-object p0
+    return v0
+.end method
 
-    return-object p0
+.method public final b()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/navigation/f;->b:I
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/navigation/f;->c:I
+
+    return v0
+.end method
+
+.method public final d()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/navigation/f;->d:I
+
+    return v0
+.end method
+
+.method public final e(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Landroidx/navigation/f;->a:I
+
+    return-void
+.end method
+
+.method public final f(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Landroidx/navigation/f;->b:I
+
+    return-void
+.end method
+
+.method public final g(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Landroidx/navigation/f;->c:I
+
+    return-void
+.end method
+
+.method public final h(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Landroidx/navigation/f;->d:I
+
+    return-void
 .end method

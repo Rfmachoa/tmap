@@ -181,14 +181,14 @@
     throw p1
 .end method
 
-.method public declared-synchronized setParameter(Ljava/lang/String;Ljava/lang/Object;)Lng/i;
+.method public declared-synchronized setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
     .locals 0
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    invoke-super {p0, p1, p2}, Lcz/msebera/android/httpclient/params/BasicHttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lng/i;
+    invoke-super {p0, p1, p2}, Lcz/msebera/android/httpclient/params/BasicHttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
 
     move-result-object p1
     :try_end_0

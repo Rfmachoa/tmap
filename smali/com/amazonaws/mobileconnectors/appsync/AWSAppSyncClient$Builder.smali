@@ -19,8 +19,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lc4/o;",
-            "Lb4/b;",
+            "Lz5/o;",
+            "Ly5/b;",
             ">;"
         }
     .end annotation
@@ -32,7 +32,7 @@
 
 .field public mAwsConfiguration:Lcom/amazonaws/mobile/config/AWSConfiguration;
 
-.field public mCacheHeaders:Le4/a;
+.field public mCacheHeaders:Lb6/a;
 
 .field public mClientDatabasePrefix:Ljava/lang/String;
 
@@ -44,13 +44,13 @@
 
 .field public mCredentialsProvider:Lcom/amazonaws/auth/AWSCredentialsProvider;
 
-.field public mDefaultResponseFetcher:Li4/a;
+.field public mDefaultResponseFetcher:Lf6/a;
 
 .field public mDispatcher:Ljava/util/concurrent/Executor;
 
 .field public mMutationQueueExecutionTimeout:J
 
-.field public mNormalizedCacheFactory:Lf4/g;
+.field public mNormalizedCacheFactory:Lc6/g;
 
 .field public mOidcAuthProvider:Lcom/amazonaws/mobileconnectors/appsync/sigv4/OidcAuthProvider;
 
@@ -60,9 +60,9 @@
 
 .field public mRegion:Lcom/amazonaws/regions/Regions;
 
-.field public mResolver:Lf4/c;
+.field public mResolver:Lc6/c;
 
-.field public mS3ObjectManager:Lc4/n;
+.field public mS3ObjectManager:Lz5/n;
 
 .field public mServerUrl:Ljava/lang/String;
 
@@ -96,9 +96,9 @@
     iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->customTypeAdapters:Ljava/util/Map;
 
     .line 6
-    sget-object v0, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->CACHE_FIRST:Li4/a;
+    sget-object v0, Lcom/amazonaws/mobileconnectors/appsync/fetcher/AppSyncResponseFetchers;->CACHE_FIRST:Lf6/a;
 
-    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mDefaultResponseFetcher:Li4/a;
+    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mDefaultResponseFetcher:Lf6/a;
 
     return-void
 .end method
@@ -114,15 +114,15 @@
 
 
 # virtual methods
-.method public addCustomTypeAdapter(Lc4/o;Lb4/b;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
+.method public addCustomTypeAdapter(Lz5/o;Ly5/b;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc4/o;",
-            "Lb4/b<",
+            "Lz5/o;",
+            "Ly5/b<",
             "TT;>;)",
             "Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;"
         }
@@ -685,7 +685,7 @@
     .line 48
     :cond_f
     :goto_7
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lf4/c;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lc6/c;
 
     if-nez v0, :cond_10
 
@@ -694,7 +694,7 @@
 
     invoke-direct {v0, p0}, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder$1;-><init>(Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;)V
 
-    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lf4/c;
+    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lc6/c;
 
     .line 50
     :cond_10
@@ -811,20 +811,20 @@
     return-object p0
 .end method
 
-.method public defaultCacheHeaders(Le4/a;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
+.method public defaultCacheHeaders(Lb6/a;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mCacheHeaders:Le4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mCacheHeaders:Lb6/a;
 
     return-object p0
 .end method
 
-.method public defaultResponseFetcher(Li4/a;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
+.method public defaultResponseFetcher(Lf6/a;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mDefaultResponseFetcher:Li4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mDefaultResponseFetcher:Lf6/a;
 
     return-object p0
 .end method
@@ -847,11 +847,11 @@
     return-object p0
 .end method
 
-.method public normalizedCache(Lf4/g;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
+.method public normalizedCache(Lc6/g;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lf4/g;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mNormalizedCacheFactory:Lc6/g;
 
     return-object p0
 .end method
@@ -892,20 +892,20 @@
     return-object p0
 .end method
 
-.method public resolver(Lf4/c;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
+.method public resolver(Lc6/c;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lf4/c;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mResolver:Lc6/c;
 
     return-object p0
 .end method
 
-.method public s3ObjectManager(Lc4/n;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
+.method public s3ObjectManager(Lz5/n;)Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lc4/n;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncClient$Builder;->mS3ObjectManager:Lz5/n;
 
     return-object p0
 .end method

@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/util/ForEach$Mapping;
+.implements Lgk/s;
 
 
-# static fields
-.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/h3;
+# instance fields
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncTime;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/h3;
-
-    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/h3;-><init>()V
-
-    sput-object v0, Lcom/amplifyframework/datastore/syncengine/h3;->a:Lcom/amplifyframework/datastore/syncengine/h3;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncTime;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/h3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTime;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lcom/amplifyframework/core/model/ModelSchema;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/h3;->a:Lcom/amplifyframework/datastore/syncengine/SyncTime;
 
-    invoke-virtual {p1}, Lcom/amplifyframework/core/model/ModelSchema;->getName()Ljava/lang/String;
+    invoke-static {v0}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->k(Lcom/amplifyframework/datastore/syncengine/SyncTime;)Lcom/amplifyframework/datastore/syncengine/SyncType;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
 .end method

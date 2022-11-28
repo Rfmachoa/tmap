@@ -1,4 +1,4 @@
-.class final Landroidx/lifecycle/Transformations$1;
+.class Landroidx/lifecycle/Transformations$1;
 .super Ljava/lang/Object;
 .source "Transformations.java"
 
@@ -8,11 +8,11 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/Transformations;->map(Landroidx/lifecycle/LiveData;Ln/a;)Landroidx/lifecycle/LiveData;
+    value = Landroidx/lifecycle/Transformations;->map(Landroidx/lifecycle/LiveData;Lp/a;)Landroidx/lifecycle/LiveData;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -26,19 +26,19 @@
 
 
 # instance fields
-.field public final synthetic val$mapFunction:Ln/a;
+.field public final synthetic val$mapFunction:Lp/a;
 
 .field public final synthetic val$result:Landroidx/lifecycle/MediatorLiveData;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/MediatorLiveData;Ln/a;)V
+.method public constructor <init>(Landroidx/lifecycle/MediatorLiveData;Lp/a;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/lifecycle/Transformations$1;->val$result:Landroidx/lifecycle/MediatorLiveData;
 
-    iput-object p2, p0, Landroidx/lifecycle/Transformations$1;->val$mapFunction:Ln/a;
+    iput-object p2, p0, Landroidx/lifecycle/Transformations$1;->val$mapFunction:Lp/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,9 +62,9 @@
     .line 1
     iget-object v0, p0, Landroidx/lifecycle/Transformations$1;->val$result:Landroidx/lifecycle/MediatorLiveData;
 
-    iget-object v1, p0, Landroidx/lifecycle/Transformations$1;->val$mapFunction:Ln/a;
+    iget-object v1, p0, Landroidx/lifecycle/Transformations$1;->val$mapFunction:Lp/a;
 
-    invoke-interface {v1, p1}, Ln/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lp/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -54,6 +54,26 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "serverAlias",
+            "accessKey",
+            "momentCode",
+            "latitude",
+            "longitude",
+            "importData"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -225,6 +245,17 @@
 # virtual methods
 .method public final Q(Ljava/io/File;Ljava/util/Calendar;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "momentDir",
+            "from"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -281,7 +312,7 @@
 
     aget-object v5, v4, v1
 
-    const-string/jumbo v6, "tts"
+    const-string v6, "tts"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -315,6 +346,15 @@
 
 .method public final R(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fileUrl"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -348,6 +388,14 @@
 
 .method public S(I)Lcom/skt/moment/net/vo/HappenForTTS;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "socketTimeout"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -459,19 +507,19 @@
 
     .line 13
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "Other Exception"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 14
     :catch_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
@@ -493,7 +541,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 15
     :goto_1
@@ -507,6 +555,14 @@
 
 .method public T(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -596,39 +652,39 @@
     .line 5
     :catch_3
     :goto_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v1, "IOException"
 
-    invoke-virtual {p1, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 6
     :catch_4
     :goto_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v1, "JsonMappingException"
 
-    invoke-virtual {p1, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 7
     :catch_5
     :goto_2
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v1, "JsonParseException"
 
-    invoke-virtual {p1, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     :goto_3
     move-object p1, v0
@@ -640,6 +696,16 @@
 
 .method public U(Ljava/lang/String;Ljava/lang/Object;)Lcom/skt/moment/net/vo/ResHappenBodyVo;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "actionType",
+            "value"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p2}, Lcom/skt/moment/task/i;->X(Ljava/lang/Object;)V
@@ -685,6 +751,15 @@
 
 .method public final V(Ljava/lang/Object;)Ljava/util/List;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -729,6 +804,14 @@
 
 .method public final W(Ljava/lang/Object;)Lcom/skt/moment/net/vo/ResHappenBodyVo;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/i;->q:Lcom/fasterxml/jackson/databind/ObjectMapper;
@@ -790,6 +873,14 @@
 
 .method public final X(Ljava/lang/Object;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/i;->q:Lcom/fasterxml/jackson/databind/ObjectMapper;
@@ -828,7 +919,7 @@
     move-exception p1
 
     .line 5
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
@@ -846,7 +937,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lfd/b;->i(Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -855,6 +946,17 @@
 
 .method public final Y(Ljava/io/File;Lcom/skt/moment/net/vo/TtsTimeVo;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x10
+        }
+        names = {
+            "momentDir",
+            "ttsTimeVo"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -909,7 +1011,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo p1, "tts"
+    const-string p1, "tts"
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1041,6 +1143,15 @@
 
 .method public final Z(Ljava/util/List;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "ttsTimes"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1079,6 +1190,15 @@
 
 .method public final a0(Ljava/util/List;)Lcom/skt/moment/net/vo/ResTtsHappenBodyVo;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pois"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1140,6 +1260,14 @@
 
 .method public final b0(Lcom/skt/moment/net/vo/TtsTimeVo;)Lcom/skt/moment/net/vo/HappenForTTS;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ttsTimeVo"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Lcom/skt/moment/net/vo/HappenForTTS;

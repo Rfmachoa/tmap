@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$g;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v1, v0, Landroidx/appcompat/widget/SearchView;->s1:Landroid/app/SearchableInfo;
+    iget-object v1, v0, Landroidx/appcompat/widget/SearchView;->u1:Landroid/app/SearchableInfo;
 
     const/4 v2, 0x0
 

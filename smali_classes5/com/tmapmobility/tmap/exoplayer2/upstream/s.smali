@@ -245,7 +245,7 @@
     .line 3
     iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;->a:Landroid/net/Uri;
 
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->K0(Landroid/net/Uri;)Z
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->L0(Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -806,7 +806,7 @@
     const-string v1, "Attempting to play RTMP stream without depending on the RTMP extension"
 
     .line 6
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     :goto_0

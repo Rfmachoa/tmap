@@ -1,25 +1,16 @@
-.class public Ljh/a;
+.class public interface abstract Ljh/a;
 .super Ljava/lang/Object;
-.source "androidx_hilt_lifecycle_ViewModelFactoryModules_ActivityModuleModuleDeps.java"
+.source "AuthPNames.java"
 
 
 # annotations
-.annotation build Ldagger/hilt/processor/internal/aggregateddeps/AggregatedDeps;
-    components = {
-        "dagger.hilt.android.components.ActivityComponent"
-    }
-    modules = {
-        "androidx.hilt.lifecycle.ViewModelFactoryModules.ActivityModule"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# static fields
+.field public static final c:Ljava/lang/String; = "http.auth.credential-charset"
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static final d:Ljava/lang/String; = "http.auth.target-scheme-pref"
 
-    return-void
-.end method
+.field public static final e:Ljava/lang/String; = "http.auth.proxy-scheme-pref"

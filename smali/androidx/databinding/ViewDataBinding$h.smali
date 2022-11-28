@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Landroidx/databinding/ViewDataBinding$h;->a:Landroidx/databinding/ViewDataBinding;
 
-    invoke-static {p1}, Landroidx/databinding/ViewDataBinding;->e(Landroidx/databinding/ViewDataBinding;)Ljava/lang/Runnable;
+    invoke-static {p1}, Landroidx/databinding/ViewDataBinding;->h(Landroidx/databinding/ViewDataBinding;)Ljava/lang/Runnable;
 
     move-result-object p1
 

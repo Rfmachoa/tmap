@@ -22,12 +22,12 @@
         ">",
         "Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory<",
         "TK;TV;",
-        "Loi/a<",
+        "Lsk/a<",
         "TV;>;>;",
         "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
         "Ljava/util/Map<",
         "TK;",
-        "Loi/a<",
+        "Lsk/a<",
         "TV;>;>;>;"
     }
 .end annotation
@@ -41,7 +41,7 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;)V"
         }
     .end annotation
@@ -105,7 +105,7 @@
             "()",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;"
         }
     .end annotation

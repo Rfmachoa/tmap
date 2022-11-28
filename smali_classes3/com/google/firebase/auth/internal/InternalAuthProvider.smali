@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/firebase/auth/internal/InternalAuthProvider;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-auth-interop@@20.0.0"
+.source "com.google.firebase:firebase-auth-interop@@19.0.2"
 
 # interfaces
 .implements Lcom/google/firebase/internal/InternalTokenProvider;

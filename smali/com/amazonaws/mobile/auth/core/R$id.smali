@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static final large:I = 0x7f0a051c
+.field public static final large:I = 0x7f0a0558
 
-.field public static final small:I = 0x7f0a0a24
+.field public static final small:I = 0x7f0a0aaa
 
 
 # direct methods

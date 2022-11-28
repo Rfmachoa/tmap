@@ -88,7 +88,7 @@
     const-string p1, "data_callback_token"
 
     .line 3
-    invoke-static {v0, p1, p2}, Landroidx/core/app/i;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {v0, p1, p2}, Landroidx/core/app/k;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     const-string p1, "data_options"
 
@@ -322,7 +322,7 @@
     const-string p1, "data_callback_token"
 
     .line 3
-    invoke-static {v0, p1, p2}, Landroidx/core/app/i;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {v0, p1, p2}, Landroidx/core/app/k;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     const/4 p1, 0x4
 

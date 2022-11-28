@@ -3,12 +3,12 @@
 .source "ViewDataBindingKtx.kt"
 
 # interfaces
-.implements Lej/p;
+.implements Lgl/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/f;)V
+    value = Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/e;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
-        "Lej/p<",
-        "Lkotlinx/coroutines/n0;",
+        "Lgl/p<",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/coroutines/c<",
         "-",
         "Lkotlin/d1;",
@@ -40,7 +40,7 @@
         "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0004\u001a\u00020\u0001*\u00020\u0000H\u008a@\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/d1;",
         "invoke",
         "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
@@ -68,7 +68,7 @@
 
 
 # instance fields
-.field public final synthetic $flow:Lkotlinx/coroutines/flow/f;
+.field public final synthetic $flow:Lkotlinx/coroutines/flow/e;
 
 .field public label:I
 
@@ -76,12 +76,12 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)V
+.method public constructor <init>(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/c;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->this$0:Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;
 
-    iput-object p2, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->$flow:Lkotlinx/coroutines/flow/f;
+    iput-object p2, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->$flow:Lkotlinx/coroutines/flow/e;
 
     const/4 p1, 0x2
 
@@ -125,9 +125,9 @@
 
     iget-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->this$0:Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;
 
-    iget-object v1, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->$flow:Lkotlinx/coroutines/flow/f;
+    iget-object v1, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->$flow:Lkotlinx/coroutines/flow/e;
 
-    invoke-direct {p1, v0, v1, p2}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;-><init>(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)V
+    invoke-direct {p1, v0, v1, p2}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;-><init>(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/c;)V
 
     return-object p1
 .end method
@@ -161,7 +161,7 @@
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
     invoke-static {p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
 
     .line 4
-    iget-object p1, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->$flow:Lkotlinx/coroutines/flow/f;
+    iget-object p1, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->$flow:Lkotlinx/coroutines/flow/e;
 
     .line 5
     new-instance v1, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1$a;
@@ -202,7 +202,7 @@
 
     iput v2, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->label:I
 
-    invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/f;->e(Lkotlinx/coroutines/flow/g;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-interface {p1, v1, p0}, Lkotlinx/coroutines/flow/e;->a(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p1
 

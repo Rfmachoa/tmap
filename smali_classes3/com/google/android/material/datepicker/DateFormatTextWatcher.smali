@@ -58,51 +58,193 @@
     iput-object p2, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->outOfRange:Ljava/lang/String;
 
     .line 6
-    new-instance p2, Lcom/google/android/material/datepicker/DateFormatTextWatcher$1;
+    new-instance p2, Lcom/google/android/material/datepicker/b;
 
-    invoke-direct {p2, p0, p1}, Lcom/google/android/material/datepicker/DateFormatTextWatcher$1;-><init>(Lcom/google/android/material/datepicker/DateFormatTextWatcher;Ljava/lang/String;)V
+    invoke-direct {p2, p0, p1}, Lcom/google/android/material/datepicker/b;-><init>(Lcom/google/android/material/datepicker/DateFormatTextWatcher;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->setErrorCallback:Ljava/lang/Runnable;
 
     return-void
 .end method
 
-.method public static synthetic access$000(Lcom/google/android/material/datepicker/DateFormatTextWatcher;)Lcom/google/android/material/textfield/TextInputLayout;
+.method public static synthetic a(Lcom/google/android/material/datepicker/DateFormatTextWatcher;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+    invoke-direct {p0, p1}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->lambda$new$0(Ljava/lang/String;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/datepicker/DateFormatTextWatcher;)Ljava/text/DateFormat;
+.method public static synthetic b(Lcom/google/android/material/datepicker/DateFormatTextWatcher;J)V
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->dateFormat:Ljava/text/DateFormat;
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->lambda$createRangeErrorCallback$1(J)V
 
-    return-object p0
-.end method
-
-.method public static synthetic access$200(Lcom/google/android/material/datepicker/DateFormatTextWatcher;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->outOfRange:Ljava/lang/String;
-
-    return-object p0
+    return-void
 .end method
 
 .method private createRangeErrorCallback(J)Ljava/lang/Runnable;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/google/android/material/datepicker/DateFormatTextWatcher$2;
+    new-instance v0, Lcom/google/android/material/datepicker/a;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/material/datepicker/DateFormatTextWatcher$2;-><init>(Lcom/google/android/material/datepicker/DateFormatTextWatcher;J)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/material/datepicker/a;-><init>(Lcom/google/android/material/datepicker/DateFormatTextWatcher;J)V
 
     return-object v0
+.end method
+
+.method private synthetic lambda$createRangeErrorCallback$1(J)V
+    .locals 3
+
+    .line 1
+    invoke-static {p1, p2}, Lcom/google/android/material/datepicker/DateStrings;->getDateString(J)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 2
+    iget-object p2, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+
+    iget-object v0, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->outOfRange:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->sanitizeDateString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setError(Ljava/lang/CharSequence;)V
+
+    .line 3
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->onInvalidDate()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$new$0(Ljava/lang/String;)V
+    .locals 10
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->textInputLayout:Lcom/google/android/material/textfield/TextInputLayout;
+
+    .line 2
+    iget-object v1, p0, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->dateFormat:Ljava/text/DateFormat;
+
+    .line 3
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    .line 4
+    sget v3, Lcom/google/android/material/R$string;->mtrl_picker_invalid_format:I
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 5
+    sget v4, Lcom/google/android/material/R$string;->mtrl_picker_invalid_format_use:I
+
+    .line 6
+    invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x1
+
+    new-array v6, v5, [Ljava/lang/Object;
+
+    .line 7
+    invoke-direct {p0, p1}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->sanitizeDateString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v7, 0x0
+
+    aput-object p1, v6, v7
+
+    .line 8
+    invoke-static {v4, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 9
+    sget v4, Lcom/google/android/material/R$string;->mtrl_picker_invalid_format_example:I
+
+    .line 10
+    invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-array v4, v5, [Ljava/lang/Object;
+
+    new-instance v5, Ljava/util/Date;
+
+    .line 11
+    invoke-static {}, Lcom/google/android/material/datepicker/UtcDates;->getTodayCalendar()Ljava/util/Calendar;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v8
+
+    invoke-direct {v5, v8, v9}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v1, v5}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 12
+    invoke-direct {p0, v1}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->sanitizeDateString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v4, v7
+
+    .line 13
+    invoke-static {v2, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "\n"
+
+    .line 14
+    invoke-static {v3, v2, p1, v2, v1}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->setError(Ljava/lang/CharSequence;)V
+
+    .line 15
+    invoke-virtual {p0}, Lcom/google/android/material/datepicker/DateFormatTextWatcher;->onInvalidDate()V
+
+    return-void
+.end method
+
+.method private sanitizeDateString(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    const/16 v0, 0x20
+
+    const/16 v1, 0xa0
+
+    .line 1
+    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 

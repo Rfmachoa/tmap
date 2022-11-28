@@ -16,6 +16,12 @@
     name = "BodyCallAdapter"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$BodyCallback;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<R:",
@@ -76,14 +82,14 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$1;
+    new-instance v0, Lretrofit2/CompletableFutureCallAdapterFactory$CallCancelCompletableFuture;
 
-    invoke-direct {v0, p0, p1}, Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$1;-><init>(Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter;Lretrofit2/Call;)V
+    invoke-direct {v0, p1}, Lretrofit2/CompletableFutureCallAdapterFactory$CallCancelCompletableFuture;-><init>(Lretrofit2/Call;)V
 
     .line 3
-    new-instance v1, Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$2;
+    new-instance v1, Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$BodyCallback;
 
-    invoke-direct {v1, p0, v0}, Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$2;-><init>(Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter;Ljava/util/concurrent/CompletableFuture;)V
+    invoke-direct {v1, p0, v0}, Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter$BodyCallback;-><init>(Lretrofit2/CompletableFutureCallAdapterFactory$BodyCallAdapter;Ljava/util/concurrent/CompletableFuture;)V
 
     invoke-interface {p1, v1}, Lretrofit2/Call;->enqueue(Lretrofit2/Callback;)V
 

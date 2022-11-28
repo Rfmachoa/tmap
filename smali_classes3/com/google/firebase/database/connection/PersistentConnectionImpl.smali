@@ -22,8 +22,6 @@
 
 
 # static fields
-.field private static final GET_CONNECT_TIMEOUT:J = 0xbb8L
-
 .field private static final IDLE_INTERRUPT_REASON:Ljava/lang/String; = "connection_idle"
 
 .field private static final IDLE_TIMEOUT:J = 0xea60L
@@ -453,7 +451,7 @@
 
     const-string v2, "pc_"
 
-    invoke-static {v2, p2, p3}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v2, p2, p3}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object p2
 
@@ -472,10 +470,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/firebase/database/connection/PersistentConnectionImpl;Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;JLcom/google/android/gms/tasks/TaskCompletionSource;)V
+.method public static synthetic a(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$get$1(Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;JLcom/google/android/gms/tasks/TaskCompletionSource;)V
+    invoke-direct {p0, p1, p2}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$tryScheduleReconnect$3(ZZ)V
 
     return-void
 .end method
@@ -659,18 +657,18 @@
     return-object p1
 .end method
 
-.method public static synthetic b(Lcom/google/firebase/database/connection/PersistentConnectionImpl;JLcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/Task;Ljava/lang/Void;)V
+.method public static synthetic b(Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/util/Map;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$tryScheduleReconnect$2(JLcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/Task;Ljava/lang/Void;)V
+    invoke-static {p0, p1}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$get$0(Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZLjava/util/Map;)V
+.method public static synthetic c(Lcom/google/firebase/database/connection/PersistentConnectionImpl;JLjava/lang/Exception;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$sendAppCheckTokenHelper$5(ZLjava/util/Map;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$tryScheduleReconnect$2(JLjava/lang/Exception;)V
 
     return-void
 .end method
@@ -851,10 +849,10 @@
     return v0
 .end method
 
-.method public static synthetic d(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZZ)V
+.method public static synthetic d(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZLjava/util/Map;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$tryScheduleReconnect$4(ZZ)V
+    invoke-direct {p0, p1, p2}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$sendAppCheckTokenHelper$4(ZLjava/util/Map;)V
 
     return-void
 .end method
@@ -927,18 +925,10 @@
     return-void
 .end method
 
-.method public static synthetic e(Lcom/google/firebase/database/connection/PersistentConnectionImpl;JLjava/lang/Exception;)V
+.method public static synthetic e(Lcom/google/firebase/database/connection/PersistentConnectionImpl;JLcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/Task;Ljava/lang/Void;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$tryScheduleReconnect$3(JLjava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public static synthetic f(Lcom/google/firebase/database/connection/PersistentConnectionImpl;Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/util/Map;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$get$0(Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/util/Map;)V
+    invoke-direct/range {p0 .. p5}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->lambda$tryScheduleReconnect$1(JLcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/Task;Ljava/lang/Void;)V
 
     return-void
 .end method
@@ -1221,13 +1211,13 @@
     return v0
 .end method
 
-.method private synthetic lambda$get$0(Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/util/Map;)V
-    .locals 3
+.method private static synthetic lambda$get$0(Lcom/google/android/gms/tasks/TaskCompletionSource;Ljava/util/Map;)V
+    .locals 2
 
     const-string v0, "s"
 
     .line 1
-    invoke-interface {p3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1245,108 +1235,34 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {p3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    .line 4
-    iget-object v0, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->delegate:Lcom/google/firebase/database/connection/PersistentConnection$Delegate;
-
-    invoke-static {p1}, Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;->access$100(Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;)Ljava/util/List;
+    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, p1, p3, v1, v2}, Lcom/google/firebase/database/connection/PersistentConnection$Delegate;->onDataUpdate(Ljava/util/List;Ljava/lang/Object;ZLjava/lang/Long;)V
-
-    .line 5
-    invoke-virtual {p2, p3}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
+    .line 4
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 6
+    .line 5
     :cond_0
-    new-instance p1, Ljava/lang/Exception;
+    new-instance v0, Ljava/lang/Exception;
 
-    invoke-interface {p3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object p1
 
-    check-cast p3, Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-direct {p1, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
     :goto_0
     return-void
 .end method
 
-.method private synthetic lambda$get$1(Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;JLcom/google/android/gms/tasks/TaskCompletionSource;)V
-    .locals 2
-
-    .line 1
-    invoke-static {p1}, Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;->access$2100(Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    iget-object p1, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->logger:Lcom/google/firebase/database/logging/LogWrapper;
-
-    invoke-virtual {p1}, Lcom/google/firebase/database/logging/LogWrapper;->logsDebug()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 3
-    iget-object p1, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->logger:Lcom/google/firebase/database/logging/LogWrapper;
-
-    const-string v0, "get "
-
-    const-string v1, " timed out waiting for connection"
-
-    invoke-static {v0, p2, p3, v1}, Landroidx/concurrent/futures/a;->a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/firebase/database/logging/LogWrapper;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 4
-    :cond_1
-    iget-object p1, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->outstandingGets:Ljava/util/Map;
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    invoke-interface {p1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    new-instance p1, Ljava/lang/Exception;
-
-    const-string p2, "Client is offline"
-
-    invoke-direct {p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p4, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method private synthetic lambda$sendAppCheckTokenHelper$5(ZLjava/util/Map;)V
+.method private synthetic lambda$sendAppCheckTokenHelper$4(ZLjava/util/Map;)V
     .locals 6
 
     const-string v0, "s"
@@ -1403,7 +1319,7 @@
 
     const-string v5, ")"
 
-    invoke-static {v3, v0, v4, p2, v5}, Ls/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0, v4, p2, v5}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1421,7 +1337,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$tryScheduleReconnect$2(JLcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/Task;Ljava/lang/Void;)V
+.method private synthetic lambda$tryScheduleReconnect$1(JLcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/Task;Ljava/lang/Void;)V
     .locals 2
 
     .line 1
@@ -1498,7 +1414,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$tryScheduleReconnect$3(JLjava/lang/Exception;)V
+.method private synthetic lambda$tryScheduleReconnect$2(JLjava/lang/Exception;)V
     .locals 2
 
     .line 1
@@ -1555,7 +1471,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$tryScheduleReconnect$4(ZZ)V
+.method private synthetic lambda$tryScheduleReconnect$3(ZZ)V
     .locals 12
 
     .line 1
@@ -1678,7 +1594,7 @@
 
     const-string v3, ")"
 
-    invoke-static {v1, p1, v2, p2, v3}, Ls/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2, p2, v3}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1713,7 +1629,7 @@
 
     const-string v3, ")"
 
-    invoke-static {v1, p1, v2, p2, v3}, Ls/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2, p2, v3}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1958,7 +1874,7 @@
 
     const-string v0, "Ignoring empty range merge for path "
 
-    invoke-static {v0, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2090,7 +2006,7 @@
 
     const-string v0, "Unrecognized action from server: "
 
-    invoke-static {v0, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2158,7 +2074,7 @@
 
     const-string p2, "ignoring empty merge for path "
 
-    invoke-static {p2, v2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -3988,9 +3904,9 @@
     .line 8
     iget-object v2, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->retryHelper:Lcom/google/firebase/database/connection/util/RetryHelper;
 
-    new-instance v3, Lcom/google/firebase/database/connection/f;
+    new-instance v3, Lcom/google/firebase/database/connection/e;
 
-    invoke-direct {v3, p0, v0, v1}, Lcom/google/firebase/database/connection/f;-><init>(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZZ)V
+    invoke-direct {v3, p0, v0, v1}, Lcom/google/firebase/database/connection/e;-><init>(Lcom/google/firebase/database/connection/PersistentConnectionImpl;ZZ)V
 
     invoke-virtual {v2, v3}, Lcom/google/firebase/database/connection/util/RetryHelper;->retry(Ljava/lang/Runnable;)V
 
@@ -4076,7 +3992,7 @@
 
     const-string v2, "\' at "
 
-    invoke-static {v1, p1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -4142,7 +4058,7 @@
 .end method
 
 .method public get(Ljava/util/List;Ljava/util/Map;)Lcom/google/android/gms/tasks/Task;
-    .locals 9
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -4170,13 +4086,13 @@
     invoke-direct {p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>()V
 
     .line 3
-    iget-wide v7, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->readCounter:J
+    iget-wide v1, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->readCounter:J
 
-    const-wide/16 v1, 0x1
+    const-wide/16 v3, 0x1
 
-    add-long/2addr v1, v7
+    add-long/2addr v3, v1
 
-    iput-wide v1, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->readCounter:J
+    iput-wide v3, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->readCounter:J
 
     .line 4
     new-instance p2, Ljava/util/HashMap;
@@ -4186,95 +4102,66 @@
     .line 5
     invoke-static {v0}, Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;->access$100(Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {v1}, Lcom/google/firebase/database/connection/ConnectionUtils;->pathToString(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/google/firebase/database/connection/ConnectionUtils;->pathToString(Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    const-string v2, "p"
+    const-string v4, "p"
 
-    invoke-virtual {p2, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
     invoke-static {v0}, Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;->access$200(Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;)Ljava/util/Map;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "q"
+    const-string v3, "q"
 
-    invoke-virtual {p2, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 7
-    new-instance v3, Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;
+    new-instance v0, Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;
 
-    new-instance v1, Lcom/google/firebase/database/connection/c;
+    new-instance v3, Lcom/google/firebase/database/connection/c;
 
-    invoke-direct {v1, p0, v0, p1}, Lcom/google/firebase/database/connection/c;-><init>(Lcom/google/firebase/database/connection/PersistentConnectionImpl;Lcom/google/firebase/database/connection/PersistentConnectionImpl$QuerySpec;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    invoke-direct {v3, p1}, Lcom/google/firebase/database/connection/c;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
-    const-string v0, "g"
+    const-string v4, "g"
 
-    const/4 v2, 0x0
+    const/4 v5, 0x0
 
-    invoke-direct {v3, v0, p2, v1, v2}, Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;-><init>(Ljava/lang/String;Ljava/util/Map;Lcom/google/firebase/database/connection/PersistentConnectionImpl$ConnectionRequestCallback;Lcom/google/firebase/database/connection/PersistentConnectionImpl$1;)V
+    invoke-direct {v0, v4, p2, v3, v5}, Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;-><init>(Ljava/lang/String;Ljava/util/Map;Lcom/google/firebase/database/connection/PersistentConnectionImpl$ConnectionRequestCallback;Lcom/google/firebase/database/connection/PersistentConnectionImpl$1;)V
 
     .line 8
     iget-object p2, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->outstandingGets:Ljava/util/Map;
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-interface {p2, v0, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
-    invoke-direct {p0}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->connected()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    .line 10
-    iget-object p2, p0, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->executorService:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v0, Lcom/google/firebase/database/connection/e;
-
-    move-object v1, v0
-
-    move-object v2, p0
-
-    move-wide v4, v7
-
-    move-object v6, p1
-
-    invoke-direct/range {v1 .. v6}, Lcom/google/firebase/database/connection/e;-><init>(Lcom/google/firebase/database/connection/PersistentConnectionImpl;Lcom/google/firebase/database/connection/PersistentConnectionImpl$OutstandingGet;JLcom/google/android/gms/tasks/TaskCompletionSource;)V
-
-    const-wide/16 v1, 0xbb8
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {p2, v0, v1, v2, v3}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    .line 11
-    :cond_0
     invoke-direct {p0}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->canSendReads()Z
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_0
 
-    .line 12
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 10
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
     invoke-direct {p0, p2}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->sendGet(Ljava/lang/Long;)V
 
-    .line 13
-    :cond_1
+    .line 11
+    :cond_0
     invoke-direct {p0}, Lcom/google/firebase/database/connection/PersistentConnectionImpl;->doIdleCheck()V
 
-    .line 14
+    .line 12
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
@@ -4322,7 +4209,7 @@
 
     const-string v1, "Connection interrupted for: "
 
-    invoke-static {v1, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -5529,7 +5416,7 @@
 
     const-string v1, "Connection no longer interrupted for: "
 
-    invoke-static {v1, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

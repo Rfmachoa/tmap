@@ -25,6 +25,20 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/k;Ljava/io/File;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "file",
+            "val$imagePathInCache",
+            "val$imageUrls"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/k$b;->A:Lcom/skt/moment/task/k;
@@ -42,12 +56,36 @@
 # virtual methods
 .method public A(JJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bytesWritten",
+            "totalSize"
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method public N(I[Ldf/d;Ljava/lang/Throwable;Ljava/io/File;)V
+.method public N(I[Lhh/d;Ljava/lang/Throwable;Ljava/io/File;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "throwable",
+            "file"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/k$b;->A:Lcom/skt/moment/task/k;
@@ -103,8 +141,20 @@
     return-void
 .end method
 
-.method public O(I[Ldf/d;Ljava/io/File;)V
+.method public O(I[Lhh/d;Ljava/io/File;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "file"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/k$b;->A:Lcom/skt/moment/task/k;

@@ -36,11 +36,11 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;
 
-    check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;
+    check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;
 
-    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;->d(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;)I
+    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;->c(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;)I
 
     move-result p1
 

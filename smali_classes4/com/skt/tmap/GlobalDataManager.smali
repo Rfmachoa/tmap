@@ -4,51 +4,51 @@
 
 
 # static fields
-.field public static A0:Z = false
+.field public static final A0:Ljava/lang/String; = "TmapHpsCollectRfData"
 
-.field public static final B0:Ljava/lang/String; = "TmapHpsCollectRfData"
+.field public static final B0:Ljava/lang/String; = "TmapHpsCollectRfData_KU"
 
-.field public static final C0:Ljava/lang/String; = "TmapHpsCollectRfData_KU"
+.field public static final C0:Ljava/lang/String; = "TmapClientBehavior"
 
-.field public static final D0:Ljava/lang/String; = "TmapClientBehavior"
+.field public static final D0:Ljava/lang/String; = "TmapServiceInfra"
 
-.field public static final E0:Ljava/lang/String; = "TmapServiceInfra"
+.field public static final E0:Ljava/lang/String; = "TmapClientLimitation"
 
-.field public static final F0:Ljava/lang/String; = "TmapClientLimitation"
+.field public static final synthetic F0:Z = false
 
-.field public static final synthetic G0:Z = false
+.field public static final j0:Ljava/lang/String; = "GlobalDataManager"
 
-.field public static final k0:Ljava/lang/String; = "GlobalDataManager"
+.field public static volatile k0:Lcom/skt/tmap/GlobalDataManager; = null
 
-.field public static volatile l0:Lcom/skt/tmap/GlobalDataManager; = null
+.field public static final l0:S = 0x0s
 
-.field public static final m0:S = 0x0s
+.field public static final m0:S = 0x2s
 
-.field public static final n0:S = 0x2s
+.field public static final n0:S = 0x3s
 
-.field public static final o0:S = 0x3s
+.field public static final o0:S = 0x4s
 
-.field public static final p0:S = 0x4s
+.field public static final p0:S = 0x5s
 
-.field public static final q0:S = 0x5s
+.field public static final q0:S = 0x7s
 
-.field public static final r0:S = 0x7s
+.field public static final r0:S = 0x0s
 
-.field public static final s0:S = 0x0s
+.field public static final s0:S = 0x1s
 
-.field public static final t0:S = 0x1s
+.field public static final t0:S = 0x2s
 
-.field public static final u0:S = 0x2s
+.field public static u0:I = 0x1
 
-.field public static v0:I = 0x1
+.field public static v0:Z = false
 
-.field public static w0:Z = false
+.field public static w0:I = 0x493e0
 
-.field public static x0:I = 0x493e0
+.field public static final x0:I = 0x927c0
 
-.field public static final y0:I = 0x927c0
+.field public static y0:J = 0x0L
 
-.field public static z0:J
+.field public static z0:Z = false
 
 
 # instance fields
@@ -66,17 +66,15 @@
 
 .field public G:Ljava/lang/String;
 
-.field public H:Ljava/lang/String;
+.field public H:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisResponseDto;
 
-.field public I:Lcom/skt/tmap/network/ndds/dto/poi/search/findpois/FindPoisResponseDto;
+.field public I:Z
 
 .field public J:Z
 
 .field public K:Z
 
-.field public L:Z
-
-.field public M:Ljava/util/List;
+.field public L:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -86,83 +84,81 @@
     .end annotation
 .end field
 
-.field public N:Lsc/a;
+.field public M:Lre/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lsc/a<",
+            "Lre/a<",
             "Lcom/skt/tmap/route/search/TmapRequestConstant$HpsRfDataReportType;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public O:Lsc/a;
+.field public N:Lre/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lsc/a<",
+            "Lre/a<",
             "Lcom/skt/tmap/route/search/TmapRequestConstant$HpsRfDataReportType;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public P:Lsc/a;
+.field public O:Lre/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lsc/a<",
+            "Lre/a<",
             "Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;",
             ">;"
         }
     .end annotation
 .end field
 
+.field public P:Ljava/lang/String;
+
 .field public Q:Ljava/lang/String;
 
-.field public R:Ljava/lang/String;
+.field public final R:Ljava/lang/String;
 
-.field public final S:Ljava/lang/String;
+.field public S:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
-.field public T:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
+.field public T:Z
 
-.field public U:Z
+.field public U:Landroid/content/Intent;
 
-.field public V:Landroid/content/Intent;
+.field public V:Z
 
-.field public W:Z
+.field public W:J
 
-.field public X:J
+.field public X:F
 
 .field public Y:F
 
-.field public Z:F
+.field public Z:I
 
 .field public a:Landroid/content/BroadcastReceiver;
 
-.field public a0:I
+.field public a0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
 
 .field public b:Landroid/content/BroadcastReceiver;
 
-.field public b0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+.field public b0:Landroid/telephony/TelephonyManager;
 
 .field public final c:Ljava/lang/String;
 
-.field public c0:Landroid/telephony/TelephonyManager;
+.field public final c0:I
 
 .field public d:S
 
-.field public final d0:I
+.field public d0:Landroid/content/Context;
 
 .field public e:S
 
-.field public e0:Landroid/content/Context;
+.field public e0:J
 
 .field public f:Z
 
-.field public f0:J
-
-.field public g:Z
-
-.field public g0:Landroidx/lifecycle/MutableLiveData;
+.field public f0:Landroidx/lifecycle/MutableLiveData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/MutableLiveData<",
@@ -172,25 +168,27 @@
     .end annotation
 .end field
 
+.field public g:Z
+
+.field public g0:Ljava/lang/StringBuffer;
+
 .field public h:Z
 
-.field public h0:Ljava/lang/StringBuffer;
-
-.field public i:J
-
-.field public i0:Ljava/util/ArrayList;
+.field public h0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lwb/b;",
+            "Lud/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public j:Lcom/skt/tmap/util/HiddenSettingData;
+.field public i:J
 
-.field public j0:Z
+.field public i0:Z
+
+.field public j:Lcom/skt/tmap/util/HiddenSettingData;
 
 .field public k:Ljava/lang/String;
 
@@ -344,7 +342,7 @@
     iput-object v9, p0, Lcom/skt/tmap/GlobalDataManager;->G:Ljava/lang/String;
 
     .line 23
-    iput-object v9, p0, Lcom/skt/tmap/GlobalDataManager;->H:Ljava/lang/String;
+    iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->I:Z
 
     .line 24
     iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->J:Z
@@ -353,114 +351,111 @@
     iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->K:Z
 
     .line 26
-    iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->L:Z
-
-    .line 27
-    new-instance v10, Lsc/a;
+    new-instance v10, Lre/a;
 
     sget-object v11, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     const-string v12, "TmapHpsCollectRfData"
 
-    invoke-direct {v10, v2, v12, v11}, Lsc/a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-direct {v10, v2, v12, v11}, Lre/a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    iput-object v10, p0, Lcom/skt/tmap/GlobalDataManager;->N:Lsc/a;
+    iput-object v10, p0, Lcom/skt/tmap/GlobalDataManager;->M:Lre/a;
 
-    .line 28
-    new-instance v10, Lsc/a;
+    .line 27
+    new-instance v10, Lre/a;
 
     const-string v12, "TmapHpsCollectRfData_KU"
 
-    invoke-direct {v10, v2, v12, v11}, Lsc/a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-direct {v10, v2, v12, v11}, Lre/a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    iput-object v10, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lsc/a;
+    iput-object v10, p0, Lcom/skt/tmap/GlobalDataManager;->N:Lre/a;
 
-    .line 29
-    new-instance v2, Lsc/a;
+    .line 28
+    new-instance v2, Lre/a;
 
     const-class v10, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
     const-string v12, "TmapClientBehavior"
 
-    invoke-direct {v2, v10, v12, v11}, Lsc/a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Boolean;)V
+    invoke-direct {v2, v10, v12, v11}, Lre/a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     const-string v2, "\\|"
+
+    .line 29
+    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->P:Ljava/lang/String;
+
+    const-string v2, ","
 
     .line 30
     iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->Q:Ljava/lang/String;
 
-    const-string v2, ","
+    const-string v2, "="
 
     .line 31
     iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->R:Ljava/lang/String;
 
-    const-string v2, "="
-
     .line 32
-    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->S:Ljava/lang/String;
+    iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->T:Z
 
     .line 33
-    iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->U:Z
-
-    .line 34
-    iput-boolean v6, p0, Lcom/skt/tmap/GlobalDataManager;->W:Z
+    iput-boolean v6, p0, Lcom/skt/tmap/GlobalDataManager;->V:Z
 
     const/4 v2, 0x0
+
+    .line 34
+    iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->X:F
 
     .line 35
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
 
-    .line 36
-    iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->Z:F
-
     const/16 v2, 0xa
 
+    .line 36
+    iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->Z:I
+
     .line 37
-    iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->a0:I
+    iput v5, p0, Lcom/skt/tmap/GlobalDataManager;->c0:I
 
     .line 38
-    iput v5, p0, Lcom/skt/tmap/GlobalDataManager;->d0:I
+    iput-wide v7, p0, Lcom/skt/tmap/GlobalDataManager;->e0:J
 
     .line 39
-    iput-wide v7, p0, Lcom/skt/tmap/GlobalDataManager;->f0:J
-
-    .line 40
     new-instance v2, Landroidx/lifecycle/MutableLiveData;
 
     invoke-direct {v2}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
-    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->g0:Landroidx/lifecycle/MutableLiveData;
+    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->f0:Landroidx/lifecycle/MutableLiveData;
 
-    .line 41
+    .line 40
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
-    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->h0:Ljava/lang/StringBuffer;
+    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->g0:Ljava/lang/StringBuffer;
 
-    .line 42
+    .line 41
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->i0:Ljava/util/ArrayList;
+    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->h0:Ljava/util/ArrayList;
+
+    .line 42
+    iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->i0:Z
 
     .line 43
-    iput-boolean v5, p0, Lcom/skt/tmap/GlobalDataManager;->j0:Z
+    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->d0:Landroid/content/Context;
 
     .line 44
-    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->e0:Landroid/content/Context;
-
-    .line 45
     new-instance v2, Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
     invoke-direct {v2, p1}, Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->T:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
+    iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->S:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
-    .line 46
+    .line 45
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v2
@@ -469,7 +464,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 47
+    .line 46
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v2
@@ -488,9 +483,9 @@
     move v2, v5
 
     :goto_0
-    sput-boolean v2, Lcom/skt/tmap/GlobalDataManager;->w0:Z
+    sput-boolean v2, Lcom/skt/tmap/GlobalDataManager;->v0:Z
 
-    .line 48
+    .line 47
     :cond_1
     new-instance v2, Lcom/skt/tmap/util/HiddenSettingData;
 
@@ -498,52 +493,52 @@
 
     iput-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    .line 49
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->g()I
+    .line 48
+    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->k()I
 
     move-result v2
 
-    sput v2, Lcom/skt/tmap/GlobalDataManager;->v0:I
+    sput v2, Lcom/skt/tmap/GlobalDataManager;->u0:I
 
-    .line 50
-    sget-boolean v2, Lcom/skt/tmap/GlobalDataManager;->w0:Z
+    .line 49
+    sget-boolean v2, Lcom/skt/tmap/GlobalDataManager;->v0:Z
 
     if-eqz v2, :cond_2
 
-    .line 51
-    invoke-static {v2}, Lcom/skt/tmap/util/c1;->g(Z)V
+    .line 50
+    invoke-static {v2}, Lcom/skt/tmap/util/j1;->g(Z)V
 
-    .line 52
-    sget-boolean v2, Lcom/skt/tmap/GlobalDataManager;->w0:Z
+    .line 51
+    sget-boolean v2, Lcom/skt/tmap/GlobalDataManager;->v0:Z
 
     invoke-static {v2}, Lcom/skt/aicloud/mobile/service/defeature/SDKFeature;->n(Z)V
 
     goto :goto_1
 
-    .line 53
+    .line 52
     :cond_2
     iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->Q()Z
+    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->Y()Z
 
     move-result v2
 
-    invoke-static {v2}, Lcom/skt/tmap/util/c1;->g(Z)V
+    invoke-static {v2}, Lcom/skt/tmap/util/j1;->g(Z)V
 
-    .line 54
+    .line 53
     iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->Q()Z
+    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->Y()Z
 
     move-result v2
 
     invoke-static {v2}, Lcom/skt/aicloud/mobile/service/defeature/SDKFeature;->n(Z)V
 
-    .line 55
+    .line 54
     :goto_1
     iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->k()I
+    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->o()I
 
     move-result v2
 
@@ -551,7 +546,7 @@
 
     iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->k()I
+    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->o()I
 
     move-result v2
 
@@ -561,20 +556,20 @@
     const v2, 0x493e0
 
     :goto_2
-    sput v2, Lcom/skt/tmap/GlobalDataManager;->x0:I
+    sput v2, Lcom/skt/tmap/GlobalDataManager;->w0:I
 
-    .line 56
+    .line 55
     iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->K()Z
+    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->T()Z
 
     move-result v2
 
-    sput-boolean v2, Lcom/skt/tmap/GlobalDataManager;->A0:Z
+    sput-boolean v2, Lcom/skt/tmap/GlobalDataManager;->z0:Z
 
     const-string/jumbo v2, "window"
 
-    .line 57
+    .line 56
     invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -585,25 +580,25 @@
 
     move-result-object v2
 
-    .line 58
+    .line 57
     new-instance v8, Landroid/util/DisplayMetrics;
 
     invoke-direct {v8}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 59
+    .line 58
     invoke-virtual {v2, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 60
+    .line 59
     iget v2, v8, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->p:I
 
-    .line 61
+    .line 60
     iget v2, v8, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->q:I
 
-    .line 62
+    .line 61
     iget v2, v8, Landroid/util/DisplayMetrics;->densityDpi:I
 
     int-to-float v2, v2
@@ -614,14 +609,14 @@
 
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->o:F
 
-    .line 63
+    .line 62
     invoke-static {p1}, Lcom/skt/tmap/GlobalDataManager;->E(Landroid/content/Context;)Z
 
     move-result v2
 
     if-eqz v2, :cond_6
 
-    .line 64
+    .line 63
     iget v2, v8, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v10, v8, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -638,7 +633,7 @@
 
     if-ne v11, v12, :cond_4
 
-    .line 65
+    .line 64
     iput v4, p0, Lcom/skt/tmap/GlobalDataManager;->o:F
 
     goto :goto_3
@@ -650,7 +645,7 @@
 
     if-le v4, v11, :cond_5
 
-    .line 66
+    .line 65
     iget v4, v8, Landroid/util/DisplayMetrics;->densityDpi:I
 
     const/16 v11, 0xf0
@@ -659,7 +654,7 @@
 
     const/high16 v2, 0x40400000    # 3.0f
 
-    .line 67
+    .line 66
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->o:F
 
     goto :goto_3
@@ -671,7 +666,7 @@
 
     if-le v2, v4, :cond_6
 
-    .line 68
+    .line 67
     iget v2, v8, Landroid/util/DisplayMetrics;->densityDpi:I
 
     const/16 v4, 0x140
@@ -680,14 +675,14 @@
 
     const/high16 v2, 0x40800000    # 4.0f
 
-    .line 69
+    .line 68
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->o:F
 
     :cond_6
     :goto_3
     const/16 v2, 0x270f
 
-    .line 70
+    .line 69
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -701,14 +696,14 @@
 
     move-result-object v4
 
-    .line 71
+    .line 70
     iget-object v8, v4, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v8, v8, Landroid/content/pm/ApplicationInfo;->labelRes:I
 
     if-eqz v8, :cond_7
 
-    .line 72
+    .line 71
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
@@ -721,22 +716,22 @@
 
     goto :goto_4
 
-    .line 73
+    .line 72
     :cond_7
     iput-object v1, p0, Lcom/skt/tmap/GlobalDataManager;->k:Ljava/lang/String;
 
-    .line 74
+    .line 73
     :goto_4
     iget-object v8, v4, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     if-eqz v8, :cond_d
 
-    .line 75
+    .line 74
     new-instance v10, Ljava/util/StringTokenizer;
 
     invoke-direct {v10, v8, v3}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
+    .line 75
     invoke-virtual {v10}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v11
@@ -745,26 +740,26 @@
 
     if-ge v11, v12, :cond_8
 
-    .line 77
+    .line 76
     iput-object v8, p0, Lcom/skt/tmap/GlobalDataManager;->l:Ljava/lang/String;
 
-    .line 78
+    .line 77
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->n:I
 
     goto :goto_8
 
-    .line 79
+    .line 78
     :cond_8
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 80
+    .line 79
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 81
+    .line 80
     :goto_5
     invoke-virtual {v10}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -781,7 +776,7 @@
 
     if-ge v5, v13, :cond_a
 
-    .line 82
+    .line 81
     invoke-virtual {v10}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v13
@@ -790,12 +785,12 @@
 
     if-ge v5, v7, :cond_b
 
-    .line 83
+    .line 82
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_6
 
-    .line 84
+    .line 83
     :cond_a
     invoke-virtual {v10}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
@@ -809,7 +804,7 @@
 
     goto :goto_5
 
-    .line 85
+    .line 84
     :cond_c
     :goto_7
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -820,7 +815,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 86
+    .line 85
     :try_start_1
     invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -837,21 +832,21 @@
 
     goto :goto_8
 
-    .line 87
+    .line 86
     :catch_0
     :try_start_2
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->n:I
 
     goto :goto_8
 
-    .line 88
+    .line 87
     :cond_d
     iput-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->l:Ljava/lang/String;
 
-    .line 89
+    .line 88
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->n:I
 
-    .line 90
+    .line 89
     :goto_8
     iget v4, v4, Landroid/content/pm/PackageInfo;->versionCode:I
 
@@ -865,22 +860,22 @@
 
     goto :goto_9
 
-    .line 91
+    .line 90
     :catch_1
     iput-object v1, p0, Lcom/skt/tmap/GlobalDataManager;->k:Ljava/lang/String;
 
-    .line 92
+    .line 91
     iput-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->l:Ljava/lang/String;
 
     const-string v0, "834"
 
-    .line 93
+    .line 92
     iput-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->m:Ljava/lang/String;
 
-    .line 94
+    .line 93
     iput v2, p0, Lcom/skt/tmap/GlobalDataManager;->n:I
 
-    .line 95
+    .line 94
     :goto_9
     iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->p:I
 
@@ -888,20 +883,20 @@
 
     add-int/2addr v0, v1
 
-    invoke-static {v0}, Lcom/skt/tmap/util/x0;->p(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/e1;->q(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "Tmap4"
 
-    .line 96
-    invoke-static {v1, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 95
+    invoke-static {v1, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/skt/tmap/GlobalDataManager;->r:Ljava/lang/String;
 
-    .line 97
+    .line 96
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -922,66 +917,87 @@
 
     iput-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->s:Ljava/lang/String;
 
-    .line 98
+    .line 97
     iput-boolean v6, p0, Lcom/skt/tmap/GlobalDataManager;->f:Z
 
-    .line 99
+    .line 98
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    sput-wide v0, Lcom/skt/tmap/GlobalDataManager;->z0:J
+    sput-wide v0, Lcom/skt/tmap/GlobalDataManager;->y0:J
 
-    .line 100
+    .line 99
     invoke-static {p1}, Lcom/skt/tmap/font/TypefaceManager;->a(Landroid/content/Context;)Lcom/skt/tmap/font/TypefaceManager;
 
     move-result-object v0
 
     const v1, 0x7f090004
 
-    .line 101
+    .line 100
     sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->SKP_GO_M:Lcom/skt/tmap/font/TypefaceManager$FontType;
 
     invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
 
     const v1, 0x7f090003
 
-    .line 102
+    .line 101
     sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->SKP_GO_B:Lcom/skt/tmap/font/TypefaceManager$FontType;
 
     invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
 
     const/high16 v1, 0x7f090000
 
-    .line 103
+    .line 102
     sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->ROBOTO_B:Lcom/skt/tmap/font/TypefaceManager$FontType;
 
     invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
 
     const v1, 0x7f090001
 
-    .line 104
+    .line 103
     sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->ROBOTO_M:Lcom/skt/tmap/font/TypefaceManager$FontType;
 
     invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
 
+    const v1, 0x7f090005
+
+    .line 104
+    sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->TMOBI_300:Lcom/skt/tmap/font/TypefaceManager$FontType;
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
+
+    const v1, 0x7f090006
+
     .line 105
+    sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->TMOBI_500:Lcom/skt/tmap/font/TypefaceManager$FontType;
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
+
+    const v1, 0x7f090007
+
+    .line 106
+    sget-object v2, Lcom/skt/tmap/font/TypefaceManager$FontType;->TMOBI_700:Lcom/skt/tmap/font/TypefaceManager$FontType;
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->h(ILcom/skt/tmap/font/TypefaceManager$FontType;)V
+
+    .line 107
     invoke-static {}, Lcom/skt/tmap/blackbox/a;->r()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->j0:Z
+    iput-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->i0:Z
 
     const-string v0, "phone"
 
-    .line 106
+    .line 108
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/telephony/TelephonyManager;
 
-    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->c0:Landroid/telephony/TelephonyManager;
+    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->b0:Landroid/telephony/TelephonyManager;
 
     return-void
 .end method
@@ -1038,7 +1054,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object v0, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     return-object v0
 .end method
@@ -1055,7 +1071,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object v0, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     if-nez v0, :cond_1
 
@@ -1068,7 +1084,7 @@
 
     .line 3
     :try_start_0
-    sget-object v1, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object v1, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     if-nez v1, :cond_0
 
@@ -1077,7 +1093,7 @@
 
     invoke-direct {v1, p0}, Lcom/skt/tmap/GlobalDataManager;-><init>(Landroid/content/Context;)V
 
-    sput-object v1, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sput-object v1, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     .line 5
     :cond_0
@@ -1097,7 +1113,7 @@
     .line 6
     :cond_1
     :goto_0
-    sget-object p0, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object p0, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     return-object p0
 .end method
@@ -1120,24 +1136,24 @@
 
     .line 2
     :try_start_0
-    sget-object v1, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object v1, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     if-eqz v1, :cond_0
 
     .line 3
-    sget-object v1, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object v1, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     invoke-virtual {v1, p0}, Lcom/skt/tmap/GlobalDataManager;->d0(Landroid/content/Context;)V
 
     .line 4
-    sget-object p0, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sget-object p0, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     invoke-virtual {p0}, Lcom/skt/tmap/GlobalDataManager;->d()V
 
     const/4 p0, 0x0
 
     .line 5
-    sput-object p0, Lcom/skt/tmap/GlobalDataManager;->l0:Lcom/skt/tmap/GlobalDataManager;
+    sput-object p0, Lcom/skt/tmap/GlobalDataManager;->k0:Lcom/skt/tmap/GlobalDataManager;
 
     .line 6
     :cond_0
@@ -1161,7 +1177,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->L:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->K:Z
 
     return v0
 .end method
@@ -1170,7 +1186,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->c0:Landroid/telephony/TelephonyManager;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->b0:Landroid/telephony/TelephonyManager;
 
     if-eqz v0, :cond_1
 
@@ -1210,7 +1226,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->T:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->S:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
     if-eqz v0, :cond_1
 
@@ -1238,7 +1254,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->T:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->S:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
     if-nez v0, :cond_0
 
@@ -1407,7 +1423,7 @@
 
     const-string v0, "GlobalDataManager"
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_1
@@ -1420,12 +1436,12 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->W:Z
+    iput-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->V:Z
 
     const-wide/16 v0, 0x0
 
     .line 2
-    iput-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->X:J
+    iput-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->W:J
 
     return-void
 .end method
@@ -1446,9 +1462,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lsc/a;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3}, Lre/a;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1465,7 +1481,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->g0:Landroidx/lifecycle/MutableLiveData;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->f0:Landroidx/lifecycle/MutableLiveData;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1480,134 +1496,134 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->NUGU_OFF:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
     sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_AIP_NUGU:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
     sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {v0, v1, v3}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v3}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->NUGU_CALL:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v3}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v3}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->NUGU_PCM_SEND:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->NUGU_LOG_SEND:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 6
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_SKT_DBP:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 7
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_OIL_DISCOUNT:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 8
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_AERIALMAP:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 9
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_TMAP_PARKING:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 10
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_HPS_LOC:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 11
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_MOLOCO_AD:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 12
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
-
-    sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->SEND_VOICE_LOG:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
-
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
-
-    .line 13
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_SHOPPING:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
-    .line 14
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    .line 13
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_PLATFORM9_AD:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
-    .line 15
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    .line 14
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->PLUS:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+
+    .line 15
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
+
+    sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_HYBRID_SEARCH:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
+
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     .line 16
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
-
-    sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_WEB_SEARCH:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
-
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
-
-    .line 17
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->TNOW:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v3}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v3}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
-    .line 18
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    .line 17
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_LAB_MENU:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
-    invoke-virtual {v0, v1, v2}, Lsc/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
+
+    .line 18
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
+
+    sget-object v1, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->USE_TUNNEL_ALGORITHM:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
+
+    invoke-virtual {v0, v1, v2}, Lre/a;->e(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1650,7 +1666,7 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->T:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->S:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;->e(Lcom/skt/tmap/policy/labmenu/TmapClientLabManager$ClientLabMenu;Z)V
 
@@ -1695,7 +1711,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->M:Ljava/util/List;
+    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->L:Ljava/util/List;
 
     return-void
 .end method
@@ -1716,9 +1732,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->N:Lre/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lsc/a;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3}, Lre/a;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1739,9 +1755,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->N:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->M:Lre/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lsc/a;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3}, Lre/a;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1775,7 +1791,7 @@
     .end annotation
 
     .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/GlobalDataManager;->W:Z
+    iput-boolean p1, p0, Lcom/skt/tmap/GlobalDataManager;->V:Z
 
     if-nez p1, :cond_0
 
@@ -1784,7 +1800,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->X:J
+    iput-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->W:J
 
     :cond_0
     return-void
@@ -1802,7 +1818,7 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->b0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+    iput-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->a0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
 
     return-void
 .end method
@@ -1836,7 +1852,7 @@
     .end annotation
 
     .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/GlobalDataManager;->L:Z
+    iput-boolean p1, p0, Lcom/skt/tmap/GlobalDataManager;->K:Z
 
     return-void
 .end method
@@ -1859,7 +1875,7 @@
     float-to-int p1, p1
 
     .line 1
-    sput p1, Lcom/skt/tmap/GlobalDataManager;->x0:I
+    sput p1, Lcom/skt/tmap/GlobalDataManager;->w0:I
 
     return-void
 .end method
@@ -1893,7 +1909,7 @@
     .end annotation
 
     .line 1
-    iput p1, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
+    iput p1, p0, Lcom/skt/tmap/GlobalDataManager;->X:F
 
     return-void
 .end method
@@ -1927,7 +1943,7 @@
     if-eqz p2, :cond_4
 
     .line 2
-    iget-object p2, p0, Lcom/skt/tmap/GlobalDataManager;->Q:Ljava/lang/String;
+    iget-object p2, p0, Lcom/skt/tmap/GlobalDataManager;->P:Ljava/lang/String;
 
     invoke-virtual {p4, p2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -2055,7 +2071,7 @@
 
     iget-object p2, p2, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {p2}, Lcom/skt/tmap/util/HiddenSettingData;->l()I
+    invoke-virtual {p2}, Lcom/skt/tmap/util/HiddenSettingData;->q()I
 
     move-result p2
 
@@ -2086,7 +2102,7 @@
     .end annotation
 
     .line 1
-    iput p1, p0, Lcom/skt/tmap/GlobalDataManager;->Z:F
+    iput p1, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
 
     return-void
 .end method
@@ -2103,7 +2119,7 @@
     .end annotation
 
     .line 1
-    iput-wide p1, p0, Lcom/skt/tmap/GlobalDataManager;->f0:J
+    iput-wide p1, p0, Lcom/skt/tmap/GlobalDataManager;->e0:J
 
     return-void
 .end method
@@ -2120,7 +2136,7 @@
     .end annotation
 
     .line 1
-    iput p1, p0, Lcom/skt/tmap/GlobalDataManager;->a0:I
+    iput p1, p0, Lcom/skt/tmap/GlobalDataManager;->Z:I
 
     return-void
 .end method
@@ -2137,7 +2153,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->g0:Landroidx/lifecycle/MutableLiveData;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->f0:Landroidx/lifecycle/MutableLiveData;
 
     return-object v0
 .end method
@@ -2146,7 +2162,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->M:Ljava/util/List;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->L:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
@@ -2231,7 +2247,7 @@
 
     const-string v0, "GlobalDataManager"
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_1
@@ -2250,7 +2266,7 @@
     .end annotation
 
     .line 1
-    iput-boolean p1, p0, Lcom/skt/tmap/GlobalDataManager;->U:Z
+    iput-boolean p1, p0, Lcom/skt/tmap/GlobalDataManager;->T:Z
 
     return-void
 .end method
@@ -2261,7 +2277,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->G0()V
+    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->W0()V
 
     return-void
 .end method
@@ -2287,7 +2303,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->M:Ljava/util/List;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->L:Ljava/util/List;
 
     return-object v0
 .end method
@@ -2305,7 +2321,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->X:J
+    iget-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->W:J
 
     return-wide v0
 .end method
@@ -2314,7 +2330,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->W:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->V:Z
 
     return v0
 .end method
@@ -2323,7 +2339,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->b0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->a0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
 
     return-object v0
 .end method
@@ -2341,7 +2357,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/skt/tmap/GlobalDataManager;->x0:I
+    sget v0, Lcom/skt/tmap/GlobalDataManager;->w0:I
 
     div-int/lit16 v0, v0, 0x3e8
 
@@ -2354,7 +2370,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
+    iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->X:F
 
     return v0
 .end method
@@ -2368,7 +2384,7 @@
     if-eqz v0, :cond_3
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->O()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->X()Z
 
     move-result v0
 
@@ -2382,7 +2398,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->l()I
+    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->q()I
 
     move-result v0
 
@@ -2417,7 +2433,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->Z:F
+    iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
 
     return v0
 .end method
@@ -2426,7 +2442,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->f0:J
+    iget-wide v0, p0, Lcom/skt/tmap/GlobalDataManager;->e0:J
 
     return-wide v0
 .end method
@@ -2435,7 +2451,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->a0:I
+    iget v0, p0, Lcom/skt/tmap/GlobalDataManager;->Z:I
 
     return v0
 .end method
@@ -2456,7 +2472,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->T:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->S:Lcom/skt/tmap/policy/labmenu/TmapClientLabManager;
 
     if-nez v0, :cond_0
 
@@ -2485,14 +2501,14 @@
     .end annotation
 
     .line 1
-    invoke-static {p3}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
     .line 2
-    invoke-static {p2}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2507,7 +2523,7 @@
     if-eqz p2, :cond_4
 
     .line 3
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p2
 
@@ -2525,7 +2541,7 @@
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->Q:Ljava/lang/String;
+    iget-object p1, p0, Lcom/skt/tmap/GlobalDataManager;->P:Ljava/lang/String;
 
     invoke-virtual {p3, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -2580,7 +2596,7 @@
     .line 9
     aget-object v3, v1, v2
 
-    invoke-static {v3}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -2589,7 +2605,7 @@
     .line 10
     aget-object v1, v1, v2
 
-    iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->R:Ljava/lang/String;
+    iget-object v2, p0, Lcom/skt/tmap/GlobalDataManager;->Q:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -2626,18 +2642,18 @@
     invoke-static {v4, v5, v6}, Lcom/skt/tmap/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 14
-    iget-object v4, p0, Lcom/skt/tmap/GlobalDataManager;->e0:Landroid/content/Context;
+    iget-object v4, p0, Lcom/skt/tmap/GlobalDataManager;->d0:Landroid/content/Context;
 
-    invoke-static {v4, p3}, Lcom/skt/tmap/util/TmapSharedPreference;->T3(Landroid/content/Context;Z)V
+    invoke-static {v4, p3}, Lcom/skt/tmap/util/TmapSharedPreference;->k4(Landroid/content/Context;Z)V
 
     .line 15
-    iget-object v4, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v4, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
     sget-object v5, Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;->NUGU_CALL:Lcom/skt/tmap/route/search/TmapRequestConstant$ClientBehaviorType;
 
     sget-object v6, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {v4, v5, v6}, Lsc/a;->a(Ljava/lang/Enum;Ljava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Lre/a;->a(Ljava/lang/Enum;Ljava/lang/Object;)V
 
     :cond_2
     add-int/lit8 v3, v3, 0x1
@@ -2661,20 +2677,20 @@
     const/4 v0, 0x0
 
     .line 1
-    iput-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->b0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+    iput-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->a0:Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
 
     const/4 v0, 0x0
 
     .line 2
-    iput v0, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
+    iput v0, p0, Lcom/skt/tmap/GlobalDataManager;->X:F
 
     .line 3
-    iput v0, p0, Lcom/skt/tmap/GlobalDataManager;->Z:F
+    iput v0, p0, Lcom/skt/tmap/GlobalDataManager;->Y:F
 
     const/16 v0, 0xa
 
     .line 4
-    iput v0, p0, Lcom/skt/tmap/GlobalDataManager;->a0:I
+    iput v0, p0, Lcom/skt/tmap/GlobalDataManager;->Z:I
 
     return-void
 .end method
@@ -2683,7 +2699,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->j0:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->i0:Z
 
     return v0
 .end method
@@ -2700,9 +2716,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->P:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lre/a;
 
-    invoke-virtual {v0, p1}, Lsc/a;->d(Ljava/lang/Enum;)Z
+    invoke-virtual {v0, p1}, Lre/a;->d(Ljava/lang/Enum;)Z
 
     move-result p1
 
@@ -2721,17 +2737,17 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->N:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->M:Lre/a;
 
-    invoke-virtual {v0, p1}, Lsc/a;->d(Ljava/lang/Enum;)Z
+    invoke-virtual {v0, p1}, Lre/a;->d(Ljava/lang/Enum;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->O:Lsc/a;
+    iget-object v0, p0, Lcom/skt/tmap/GlobalDataManager;->N:Lre/a;
 
-    invoke-virtual {v0, p1}, Lsc/a;->d(Ljava/lang/Enum;)Z
+    invoke-virtual {v0, p1}, Lre/a;->d(Ljava/lang/Enum;)Z
 
     move-result p1
 
@@ -2765,7 +2781,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->U:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/GlobalDataManager;->T:Z
 
     return v0
 .end method

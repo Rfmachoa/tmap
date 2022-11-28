@@ -220,7 +220,7 @@
     .line 18
     iget-object v2, p0, Lcom/fingram/mi/scanner/CardScanner$a;->a:Lcom/fingram/mi/scanner/CardScanner;
 
-    iget-object v3, v2, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v3, v2, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-static {v2}, Lcom/fingram/mi/scanner/CardScanner;->j(Lcom/fingram/mi/scanner/CardScanner;)Z
 
@@ -241,7 +241,7 @@
 
     iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner$a;->a:Lcom/fingram/mi/scanner/CardScanner;
 
-    iget-object v3, v3, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v3, v3, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
     invoke-static {v2, v3}, Lcom/fingram/mi/bankcard/BankCardScanner;->RecognizeCardPreview([BLcom/fingram/mi/bankcard/ScannerConfig;)Lcom/fingram/mi/bankcard/ScanResult;
 
@@ -258,15 +258,15 @@
     :cond_5
     iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner$a;->a:Lcom/fingram/mi/scanner/CardScanner;
 
-    invoke-static {v3}, Lcom/fingram/mi/scanner/CardScanner;->k(Lcom/fingram/mi/scanner/CardScanner;)Lw5/e;
+    invoke-static {v3}, Lcom/fingram/mi/scanner/CardScanner;->k(Lcom/fingram/mi/scanner/CardScanner;)Lt7/e;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/fingram/mi/scanner/CardScanner$a;->a:Lcom/fingram/mi/scanner/CardScanner;
 
-    iget-object v4, v4, Lcom/fingram/mi/scanner/CardScanner;->u:Lw5/b;
+    iget-object v4, v4, Lcom/fingram/mi/scanner/CardScanner;->u:Lt7/b;
 
-    invoke-virtual {v3, v2, v4}, Lw5/e;->a(Lcom/fingram/mi/bankcard/ScanResult;Lcom/fingram/mi/bankcard/ScannerConfig;)Z
+    invoke-virtual {v3, v2, v4}, Lt7/e;->a(Lcom/fingram/mi/bankcard/ScanResult;Lcom/fingram/mi/bankcard/ScannerConfig;)Z
 
     .line 22
     iget-object v3, p0, Lcom/fingram/mi/scanner/CardScanner$a;->a:Lcom/fingram/mi/scanner/CardScanner;
@@ -281,13 +281,13 @@
 
     .line 23
     :cond_6
-    iget-object v4, v3, Lcom/fingram/mi/scanner/CardScanner;->K0:Lx5/a;
+    iget-object v4, v3, Lcom/fingram/mi/scanner/CardScanner;->K0:Lu7/a;
 
-    invoke-static {v3}, Lcom/fingram/mi/scanner/CardScanner;->k(Lcom/fingram/mi/scanner/CardScanner;)Lw5/e;
+    invoke-static {v3}, Lcom/fingram/mi/scanner/CardScanner;->k(Lcom/fingram/mi/scanner/CardScanner;)Lt7/e;
 
     move-result-object v3
 
-    invoke-interface {v4, v3}, Lx5/a;->c(Lw5/e;)V
+    invoke-interface {v4, v3}, Lu7/a;->c(Lt7/e;)V
 
     .line 24
     iget v2, v2, Lcom/fingram/mi/bankcard/ScanResult;->creditCardType:I
@@ -307,13 +307,13 @@
 
     .line 26
     :cond_7
-    iget-object v2, v1, Lcom/fingram/mi/scanner/CardScanner;->K0:Lx5/a;
+    iget-object v2, v1, Lcom/fingram/mi/scanner/CardScanner;->K0:Lu7/a;
 
-    invoke-static {v1}, Lcom/fingram/mi/scanner/CardScanner;->k(Lcom/fingram/mi/scanner/CardScanner;)Lw5/e;
+    invoke-static {v1}, Lcom/fingram/mi/scanner/CardScanner;->k(Lcom/fingram/mi/scanner/CardScanner;)Lt7/e;
 
     move-result-object v1
 
-    invoke-interface {v2, v1}, Lx5/a;->a(Lw5/e;)V
+    invoke-interface {v2, v1}, Lu7/a;->a(Lt7/e;)V
 
     .line 27
     monitor-exit v0

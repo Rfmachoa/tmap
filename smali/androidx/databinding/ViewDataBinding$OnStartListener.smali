@@ -75,7 +75,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->r()V
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->u()V
 
     :cond_0
     return-void

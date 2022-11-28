@@ -1,9 +1,9 @@
 .class public Landroidx/recyclerview/widget/n$a;
 .super Ljava/lang/Object;
-.source "GapWorker.java"
+.source "ItemTouchHelper.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -16,21 +16,18 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator<",
-        "Landroidx/recyclerview/widget/n$c;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field public final synthetic a:Landroidx/recyclerview/widget/n;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroidx/recyclerview/widget/n;)V
     .locals 0
 
     .line 1
+    iput-object p1, p0, Landroidx/recyclerview/widget/n$a;->a:Landroidx/recyclerview/widget/n;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,106 +35,49 @@
 
 
 # virtual methods
-.method public a(Landroidx/recyclerview/widget/n$c;Landroidx/recyclerview/widget/n$c;)I
-    .locals 6
+.method public run()V
+    .locals 2
 
     .line 1
-    iget-object v0, p1, Landroidx/recyclerview/widget/n$c;->d:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Landroidx/recyclerview/widget/n$a;->a:Landroidx/recyclerview/widget/n;
 
-    const/4 v1, 0x0
+    iget-object v1, v0, Landroidx/recyclerview/widget/n;->c:Landroidx/recyclerview/widget/RecyclerView$a0;
 
-    const/4 v2, 0x1
+    if-eqz v1, :cond_1
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/n;->y()Z
 
-    move v3, v2
+    move-result v0
 
-    goto :goto_0
-
-    :cond_0
-    move v3, v1
-
-    :goto_0
-    iget-object v4, p2, Landroidx/recyclerview/widget/n$c;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-nez v4, :cond_1
-
-    move v4, v2
-
-    goto :goto_1
-
-    :cond_1
-    move v4, v1
-
-    :goto_1
-    const/4 v5, -0x1
-
-    if-eq v3, v4, :cond_3
-
-    if-nez v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v5
-
-    :goto_2
-    return v2
+    if-eqz v0, :cond_1
 
     .line 2
-    :cond_3
-    iget-boolean v0, p1, Landroidx/recyclerview/widget/n$c;->a:Z
+    iget-object v0, p0, Landroidx/recyclerview/widget/n$a;->a:Landroidx/recyclerview/widget/n;
 
-    iget-boolean v3, p2, Landroidx/recyclerview/widget/n$c;->a:Z
+    iget-object v1, v0, Landroidx/recyclerview/widget/n;->c:Landroidx/recyclerview/widget/RecyclerView$a0;
 
-    if-eq v0, v3, :cond_5
-
-    if-eqz v0, :cond_4
-
-    move v2, v5
-
-    :cond_4
-    return v2
+    if-eqz v1, :cond_0
 
     .line 3
-    :cond_5
-    iget v0, p2, Landroidx/recyclerview/widget/n$c;->b:I
-
-    iget v2, p1, Landroidx/recyclerview/widget/n$c;->b:I
-
-    sub-int/2addr v0, v2
-
-    if-eqz v0, :cond_6
-
-    return v0
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/n;->t(Landroidx/recyclerview/widget/RecyclerView$a0;)V
 
     .line 4
-    :cond_6
-    iget p1, p1, Landroidx/recyclerview/widget/n$c;->c:I
+    :cond_0
+    iget-object v0, p0, Landroidx/recyclerview/widget/n$a;->a:Landroidx/recyclerview/widget/n;
 
-    iget p2, p2, Landroidx/recyclerview/widget/n$c;->c:I
+    iget-object v1, v0, Landroidx/recyclerview/widget/n;->Y0:Landroidx/recyclerview/widget/RecyclerView;
 
-    sub-int/2addr p1, p2
+    iget-object v0, v0, Landroidx/recyclerview/widget/n;->Z0:Ljava/lang/Runnable;
 
-    if-eqz p1, :cond_7
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    return p1
+    .line 5
+    iget-object v0, p0, Landroidx/recyclerview/widget/n$a;->a:Landroidx/recyclerview/widget/n;
 
-    :cond_7
-    return v1
-.end method
+    iget-object v0, v0, Landroidx/recyclerview/widget/n;->Y0:Landroidx/recyclerview/widget/RecyclerView;
 
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+    invoke-static {v0, p0}, Landroidx/core/view/ViewCompat;->p1(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 1
-    check-cast p1, Landroidx/recyclerview/widget/n$c;
-
-    check-cast p2, Landroidx/recyclerview/widget/n$c;
-
-    invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/n$a;->a(Landroidx/recyclerview/widget/n$c;Landroidx/recyclerview/widget/n$c;)I
-
-    move-result p1
-
-    return p1
+    :cond_1
+    return-void
 .end method

@@ -35,19 +35,19 @@
 
 .field public static final K0:J = 0x4L
 
-.field public static final V0:J = 0x5L
+.field public static final X0:J = 0x5L
 
-.field public static final W0:J = 0x6L
+.field public static final Y0:J = 0x6L
 
-.field public static final X0:Ljava/lang/String; = "android.media.extra.DOWNLOAD_STATUS"
+.field public static final Z0:Ljava/lang/String; = "android.media.extra.DOWNLOAD_STATUS"
 
-.field public static final Y0:J = 0x0L
+.field public static final a1:J = 0x0L
 
-.field public static final Z0:J = 0x1L
+.field public static final b1:J = 0x1L
 
-.field public static final a1:J = 0x2L
+.field public static final c1:J = 0x2L
 
-.field public static final b1:Ljava/lang/String; = "android.support.v4.media.description.MEDIA_URI"
+.field public static final d1:Ljava/lang/String; = "android.support.v4.media.description.MEDIA_URI"
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
@@ -55,7 +55,7 @@
     .end annotation
 .end field
 
-.field public static final c1:Ljava/lang/String; = "android.support.v4.media.description.NULL_BUNDLE_FLAG"
+.field public static final e1:Ljava/lang/String; = "android.support.v4.media.description.NULL_BUNDLE_FLAG"
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
@@ -263,7 +263,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -434,7 +434,15 @@
     return-object v0
 .end method
 
-.method public d()Landroid/os/Bundle;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()Landroid/os/Bundle;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -445,15 +453,7 @@
     return-object v0
 .end method
 
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()Landroid/graphics/Bitmap;
+.method public f()Landroid/graphics/Bitmap;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -464,7 +464,7 @@
     return-object v0
 .end method
 
-.method public f()Landroid/net/Uri;
+.method public h()Landroid/net/Uri;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -475,7 +475,7 @@
     return-object v0
 .end method
 
-.method public g()Ljava/lang/Object;
+.method public i()Ljava/lang/Object;
     .locals 2
 
     .line 1
@@ -539,7 +539,7 @@
     return-object v0
 .end method
 
-.method public h()Ljava/lang/String;
+.method public j()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -550,7 +550,7 @@
     return-object v0
 .end method
 
-.method public i()Landroid/net/Uri;
+.method public l()Landroid/net/Uri;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -561,7 +561,7 @@
     return-object v0
 .end method
 
-.method public j()Ljava/lang/CharSequence;
+.method public m()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -572,7 +572,7 @@
     return-object v0
 .end method
 
-.method public l()Ljava/lang/CharSequence;
+.method public n()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -630,7 +630,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->g()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->i()Ljava/lang/Object;
 
     move-result-object v0
 

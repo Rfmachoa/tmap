@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lej/l;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -23,16 +23,12 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/engine/e;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    check-cast p1, Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->b(Lcom/skt/tmap/engine/TmapAiManager;)V
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Lkotlin/d1;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

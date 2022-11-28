@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/k$a;->a:Landroidx/appcompat/view/menu/k;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/k;->i:Landroidx/appcompat/widget/u;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/k;->i:Landroidx/appcompat/widget/z;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->J()Z
 
@@ -77,7 +77,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/k$a;->a:Landroidx/appcompat/view/menu/k;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/k;->i:Landroidx/appcompat/widget/u;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/k;->i:Landroidx/appcompat/widget/z;
 
     invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->show()V
 

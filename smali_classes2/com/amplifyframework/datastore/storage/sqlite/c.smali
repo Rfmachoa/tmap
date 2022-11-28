@@ -7,16 +7,20 @@
 
 
 # instance fields
-.field public final synthetic a:Lai/r0;
+.field public final synthetic a:Lek/r0;
+
+.field public final synthetic b:Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/r0;)V
+.method public synthetic constructor <init>(Lek/r0;Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/c;->a:Lai/r0;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/c;->a:Lek/r0;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/storage/sqlite/c;->b:Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;
 
     return-void
 .end method
@@ -24,13 +28,15 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/c;->a:Lai/r0;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/c;->a:Lek/r0;
 
-    check-cast p1, Lcom/amplifyframework/datastore/DataStoreException;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/storage/sqlite/c;->b:Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;
 
-    invoke-interface {v0, p1}, Lai/r0;->onError(Ljava/lang/Throwable;)V
+    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
+
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;->a(Lek/r0;Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method

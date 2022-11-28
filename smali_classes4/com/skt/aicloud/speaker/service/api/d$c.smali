@@ -18,14 +18,14 @@
 .method public abstract a()Z
 .end method
 
-.method public abstract b()Z
-.end method
-
-.method public abstract c(Z)V
+.method public abstract b(Z)V
 .end method
 
 .method public abstract cancel()V
 .end method
 
 .method public abstract isPlaying()Z
+.end method
+
+.method public abstract o()Z
 .end method

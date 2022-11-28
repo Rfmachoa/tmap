@@ -1,106 +1,46 @@
-.class public Landroidx/room/e;
+.class public final synthetic Landroidx/room/e;
 .super Ljava/lang/Object;
-.source "InvalidationLiveDataContainer.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Lp/a;
 
 
-# instance fields
-.field public final a:Ljava/util/Set;
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Landroidx/lifecycle/LiveData;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public final b:Landroidx/room/RoomDatabase;
+# static fields
+.field public static final synthetic a:Landroidx/room/e;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/room/RoomDatabase;)V
+.method public static synthetic constructor <clinit>()V
     .locals 1
 
-    .line 1
+    new-instance v0, Landroidx/room/e;
+
+    invoke-direct {v0}, Landroidx/room/e;-><init>()V
+
+    sput-object v0, Landroidx/room/e;->a:Landroidx/room/e;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 0
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/IdentityHashMap;
-
-    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
-
-    .line 3
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/room/e;->a:Ljava/util/Set;
-
-    .line 4
-    iput-object p1, p0, Landroidx/room/e;->b:Landroidx/room/RoomDatabase;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a([Ljava/lang/String;ZLjava/util/concurrent/Callable;)Landroidx/lifecycle/LiveData;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([",
-            "Ljava/lang/String;",
-            "Z",
-            "Ljava/util/concurrent/Callable<",
-            "TT;>;)",
-            "Landroidx/lifecycle/LiveData<",
-            "TT;>;"
-        }
-    .end annotation
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 1
-    new-instance v6, Landroidx/room/n;
+    check-cast p1, Lj4/d;
 
-    iget-object v1, p0, Landroidx/room/e;->b:Landroidx/room/RoomDatabase;
+    invoke-static {p1}, Landroidx/room/z$a;->T(Lj4/d;)Ljava/lang/Boolean;
 
-    move-object v0, v6
+    move-result-object p1
 
-    move-object v2, p0
-
-    move v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p1
-
-    invoke-direct/range {v0 .. v5}, Landroidx/room/n;-><init>(Landroidx/room/RoomDatabase;Landroidx/room/e;ZLjava/util/concurrent/Callable;[Ljava/lang/String;)V
-
-    return-object v6
-.end method
-
-.method public b(Landroidx/lifecycle/LiveData;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/room/e;->a:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public c(Landroidx/lifecycle/LiveData;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/room/e;->a:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    return-void
+    return-object p1
 .end method

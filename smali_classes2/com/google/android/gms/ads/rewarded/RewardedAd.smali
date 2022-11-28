@@ -1,203 +1,325 @@
-.class public final Lcom/google/android/gms/ads/rewarded/RewardedAd;
+.class public abstract Lcom/google/android/gms/ads/rewarded/RewardedAd;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
-
-
-# instance fields
-.field private final zzhax:Lcom/google/android/gms/internal/ads/zzatu;
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "context cannot be null"
+    return-void
+.end method
+
+.method public static load(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/ads/AdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/gms/ads/AdRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const-string v0, "Context cannot be null."
+
+    .line 1
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "AdUnitId cannot be null."
 
     .line 2
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "adUnitID cannot be null"
+    const-string v0, "AdRequest cannot be null."
 
     .line 3
     invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    const-string v0, "LoadCallback cannot be null."
+
     .line 4
-    new-instance v0, Lcom/google/android/gms/internal/ads/zzatu;
+    invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/ads/zzatu;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    const-string v0, "#008 Must be called on the main UI thread."
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
+    .line 5
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkMainThread(Ljava/lang/String;)V
+
+    .line 6
+    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzbjc;->zzc(Landroid/content/Context;)V
+
+    .line 7
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbkq;->zzl:Lcom/google/android/gms/internal/ads/zzbke;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzbke;->zze()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbjc;->zziM:Lcom/google/android/gms/internal/ads/zzbiu;
+
+    .line 8
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzay;->zzc()Lcom/google/android/gms/internal/ads/zzbja;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/ads/zzbja;->zzb(Lcom/google/android/gms/internal/ads/zzbiu;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 9
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 10
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzcge;->zzb:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lcom/google/android/gms/ads/rewarded/zzc;
+
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/google/android/gms/ads/rewarded/zzc;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/ads/AdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :cond_0
+    const-string v0, "Loading on UI thread"
+
+    .line 11
+    invoke-static {v0}, Lcom/google/android/gms/internal/ads/zzcgp;->zze(Ljava/lang/String;)V
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzccu;
+
+    .line 12
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/ads/zzccu;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 13
+    invoke-virtual {p2}, Lcom/google/android/gms/ads/AdRequest;->zza()Lcom/google/android/gms/ads/internal/client/zzdr;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0, p3}, Lcom/google/android/gms/internal/ads/zzccu;->zza(Lcom/google/android/gms/ads/internal/client/zzdr;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
+
+    return-void
+.end method
+
+.method public static load(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const-string v0, "Context cannot be null."
+
+    .line 14
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "AdUnitId cannot be null."
+
+    .line 15
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "AdManagerAdRequest cannot be null."
+
+    .line 16
+    invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "LoadCallback cannot be null."
+
+    .line 17
+    invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "#008 Must be called on the main UI thread."
+
+    .line 18
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkMainThread(Ljava/lang/String;)V
+
+    .line 19
+    invoke-static {p0}, Lcom/google/android/gms/internal/ads/zzbjc;->zzc(Landroid/content/Context;)V
+
+    .line 20
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbkq;->zzl:Lcom/google/android/gms/internal/ads/zzbke;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzbke;->zze()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbjc;->zziM:Lcom/google/android/gms/internal/ads/zzbiu;
+
+    .line 21
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzay;->zzc()Lcom/google/android/gms/internal/ads/zzbja;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/ads/zzbja;->zzb(Lcom/google/android/gms/internal/ads/zzbiu;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 22
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Loading on background thread"
+
+    .line 23
+    invoke-static {v0}, Lcom/google/android/gms/internal/ads/zzcgp;->zze(Ljava/lang/String;)V
+
+    .line 24
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzcge;->zzb:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lcom/google/android/gms/ads/rewarded/zzb;
+
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/google/android/gms/ads/rewarded/zzb;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :cond_0
+    const-string v0, "Loading on UI thread"
+
+    .line 25
+    invoke-static {v0}, Lcom/google/android/gms/internal/ads/zzcgp;->zze(Ljava/lang/String;)V
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzccu;
+
+    .line 26
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/ads/zzccu;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 27
+    invoke-virtual {p2}, Lcom/google/android/gms/ads/admanager/AdManagerAdRequest;->zza()Lcom/google/android/gms/ads/internal/client/zzdr;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0, p3}, Lcom/google/android/gms/internal/ads/zzccu;->zza(Lcom/google/android/gms/ads/internal/client/zzdr;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getAdMetadata()Landroid/os/Bundle;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzatu;->getAdMetadata()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getMediationAdapterClassName()Ljava/lang/String;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
+.method public abstract getAdMetadata()Landroid/os/Bundle;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzatu;->getMediationAdapterClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
-.method public final getResponseInfo()Lcom/google/android/gms/ads/ResponseInfo;
-    .locals 1
+.method public abstract getAdUnitId()Ljava/lang/String;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract getFullScreenContentCallback()Lcom/google/android/gms/ads/FullScreenContentCallback;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzatu;->getResponseInfo()Lcom/google/android/gms/ads/ResponseInfo;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
-.method public final getRewardItem()Lcom/google/android/gms/ads/rewarded/RewardItem;
-    .locals 1
+.method public abstract getOnAdMetadataChangedListener()Lcom/google/android/gms/ads/rewarded/OnAdMetadataChangedListener;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzatu;->getRewardItem()Lcom/google/android/gms/ads/rewarded/RewardItem;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
-.method public final isLoaded()Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzatu;->isLoaded()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final loadAd(Lcom/google/android/gms/ads/AdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
-    .locals 1
-    .annotation build Landroidx/annotation/RequiresPermission;
-        value = "android.permission.INTERNET"
+.method public abstract getOnPaidEventListener()Lcom/google/android/gms/ads/OnPaidEventListener;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdRequest;->zzdq()Lcom/google/android/gms/internal/ads/zzxt;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/ads/zzatu;->zza(Lcom/google/android/gms/internal/ads/zzxt;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
-
-    return-void
 .end method
 
-.method public final loadAd(Lcom/google/android/gms/ads/doubleclick/PublisherAdRequest;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
-    .locals 1
-    .annotation build Landroidx/annotation/RequiresPermission;
-        value = "android.permission.INTERNET"
+.method public abstract getResponseInfo()Lcom/google/android/gms/ads/ResponseInfo;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .line 2
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/doubleclick/PublisherAdRequest;->zzdq()Lcom/google/android/gms/internal/ads/zzxt;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/ads/zzatu;->zza(Lcom/google/android/gms/internal/ads/zzxt;Lcom/google/android/gms/ads/rewarded/RewardedAdLoadCallback;)V
-
-    return-void
 .end method
 
-.method public final setOnAdMetadataChangedListener(Lcom/google/android/gms/ads/rewarded/OnAdMetadataChangedListener;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzatu;->setOnAdMetadataChangedListener(Lcom/google/android/gms/ads/rewarded/OnAdMetadataChangedListener;)V
-
-    return-void
+.method public abstract getRewardItem()Lcom/google/android/gms/ads/rewarded/RewardItem;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
-.method public final setOnPaidEventListener(Lcom/google/android/gms/ads/OnPaidEventListener;)V
-    .locals 1
+.method public abstract setFullScreenContentCallback(Lcom/google/android/gms/ads/FullScreenContentCallback;)V
+    .param p1    # Lcom/google/android/gms/ads/FullScreenContentCallback;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract setImmersiveMode(Z)V
+.end method
+
+.method public abstract setOnAdMetadataChangedListener(Lcom/google/android/gms/ads/rewarded/OnAdMetadataChangedListener;)V
+    .param p1    # Lcom/google/android/gms/ads/rewarded/OnAdMetadataChangedListener;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract setOnPaidEventListener(Lcom/google/android/gms/ads/OnPaidEventListener;)V
     .param p1    # Lcom/google/android/gms/ads/OnPaidEventListener;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzatu;->setOnPaidEventListener(Lcom/google/android/gms/ads/OnPaidEventListener;)V
-
-    return-void
 .end method
 
-.method public final setServerSideVerificationOptions(Lcom/google/android/gms/ads/rewarded/ServerSideVerificationOptions;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzatu;->setServerSideVerificationOptions(Lcom/google/android/gms/ads/rewarded/ServerSideVerificationOptions;)V
-
-    return-void
+.method public abstract setServerSideVerificationOptions(Lcom/google/android/gms/ads/rewarded/ServerSideVerificationOptions;)V
+    .param p1    # Lcom/google/android/gms/ads/rewarded/ServerSideVerificationOptions;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
-.method public final show(Landroid/app/Activity;Lcom/google/android/gms/ads/rewarded/RewardedAdCallback;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/ads/zzatu;->show(Landroid/app/Activity;Lcom/google/android/gms/ads/rewarded/RewardedAdCallback;)V
-
-    return-void
-.end method
-
-.method public final show(Landroid/app/Activity;Lcom/google/android/gms/ads/rewarded/RewardedAdCallback;Z)V
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lcom/google/android/gms/ads/rewarded/RewardedAd;->zzhax:Lcom/google/android/gms/internal/ads/zzatu;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/internal/ads/zzatu;->show(Landroid/app/Activity;Lcom/google/android/gms/ads/rewarded/RewardedAdCallback;Z)V
-
-    return-void
+.method public abstract show(Landroid/app/Activity;Lcom/google/android/gms/ads/OnUserEarnedRewardListener;)V
+    .param p1    # Landroid/app/Activity;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/gms/ads/OnUserEarnedRewardListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

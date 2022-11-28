@@ -988,23 +988,26 @@
     move/from16 v7, v16
 
     :goto_a
-    add-int/2addr v2, v3
+    invoke-static {v2, v3, v7, v1}, Lcom/google/android/exoplayer2/extractor/ts/a;->a(IIII)I
 
-    mul-int/2addr v2, v7
+    move-result v1
 
-    sub-int/2addr v1, v2
+    invoke-static {v6, v8, v15, v4}, Lcom/google/android/exoplayer2/extractor/ts/a;->a(IIII)I
 
-    add-int/2addr v6, v8
+    move-result v2
 
-    mul-int/2addr v6, v15
+    move v6, v1
 
-    sub-int/2addr v4, v6
+    move v7, v2
+
+    goto :goto_b
 
     :cond_e
     move v6, v1
 
     move v7, v4
 
+    :goto_b
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 34
@@ -1054,7 +1057,7 @@
 
     div-float/2addr v1, v0
 
-    goto :goto_b
+    goto :goto_c
 
     .line 39
     :cond_f
@@ -1069,7 +1072,7 @@
 
     move v8, v0
 
-    goto :goto_c
+    goto :goto_d
 
     :cond_10
     const-string v0, "Unexpected aspect_ratio_idc value: "
@@ -1077,14 +1080,14 @@
     const-string v3, "NalUnitUtil"
 
     .line 41
-    invoke-static {v0, v2, v3}, Ld1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0, v2, v3}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     :cond_11
-    :goto_b
+    :goto_c
     move v8, v1
 
     .line 42
-    :goto_c
+    :goto_d
     new-instance v0, Lcom/google/android/exoplayer2/util/NalUnitUtil$SpsData;
 
     move-object v4, v0

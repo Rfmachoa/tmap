@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -58,15 +62,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "nullableReference"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -99,15 +94,6 @@
 
 .method public static of(Ljava/lang/Object;)Landroidx/camera/core/impl/utils/Optional;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "reference"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -121,7 +107,7 @@
     .line 1
     new-instance v0, Landroidx/camera/core/impl/utils/Present;
 
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -137,14 +123,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "object"
-        }
-    .end annotation
 .end method
 
 .method public abstract get()Ljava/lang/Object;
@@ -162,15 +140,6 @@
 .end method
 
 .method public abstract or(Landroidx/camera/core/impl/utils/Optional;)Landroidx/camera/core/impl/utils/Optional;
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "secondChoice"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -182,38 +151,20 @@
     .end annotation
 .end method
 
-.method public abstract or(Ljava/lang/Object;)Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "defaultValue"
-        }
-    .end annotation
-
+.method public abstract or(Landroidx/core/util/e0;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TT;)TT;"
+            "(",
+            "Landroidx/core/util/e0<",
+            "+TT;>;)TT;"
         }
     .end annotation
 .end method
 
-.method public abstract or(Lr1/w;)Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "supplier"
-        }
-    .end annotation
-
+.method public abstract or(Ljava/lang/Object;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lr1/w<",
-            "+TT;>;)TT;"
+            "(TT;)TT;"
         }
     .end annotation
 .end method

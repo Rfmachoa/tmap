@@ -1,39 +1,61 @@
 .class public interface abstract Lkh/c;
 .super Ljava/lang/Object;
-.source "CompletableEmitter.java"
+.source "AuthenticationStrategy.java"
 
 
 # virtual methods
-.method public abstract isDisposed()Z
+.method public abstract a(Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lti/g;)Z
 .end method
 
-.method public abstract onComplete()V
+.method public abstract b(Ljava/util/Map;Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lti/g;)Ljava/util/Queue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lhh/d;",
+            ">;",
+            "Lcz/msebera/android/httpclient/HttpHost;",
+            "Lhh/t;",
+            "Lti/g;",
+            ")",
+            "Ljava/util/Queue<",
+            "Lih/b;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
+        }
+    .end annotation
 .end method
 
-.method public abstract onError(Ljava/lang/Throwable;)V
-    .param p1    # Ljava/lang/Throwable;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
+.method public abstract c(Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lti/g;)Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcz/msebera/android/httpclient/HttpHost;",
+            "Lhh/t;",
+            "Lti/g;",
+            ")",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lhh/d;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
+        }
+    .end annotation
 .end method
 
-.method public abstract setCancellable(Lph/f;)V
-    .param p1    # Lph/f;
-        .annotation build Lio/reactivex/annotations/Nullable;
-        .end annotation
-    .end param
+.method public abstract d(Lcz/msebera/android/httpclient/HttpHost;Lih/c;Lti/g;)V
 .end method
 
-.method public abstract setDisposable(Lio/reactivex/disposables/b;)V
-    .param p1    # Lio/reactivex/disposables/b;
-        .annotation build Lio/reactivex/annotations/Nullable;
-        .end annotation
-    .end param
-.end method
-
-.method public abstract tryOnError(Ljava/lang/Throwable;)Z
-    .param p1    # Ljava/lang/Throwable;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
+.method public abstract e(Lcz/msebera/android/httpclient/HttpHost;Lih/c;Lti/g;)V
 .end method

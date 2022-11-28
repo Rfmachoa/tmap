@@ -7,9 +7,6 @@
 
 
 # annotations
-.annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/camera/core/impl/ImageOutputConfig;
 .end annotation

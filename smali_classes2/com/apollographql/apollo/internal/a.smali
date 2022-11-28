@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncPrefetch;",
             ">;>;"
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;",
             ">;>;"
@@ -32,7 +32,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;",
             ">;>;"
@@ -44,7 +44,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryWatcher;",
             ">;>;"
@@ -54,7 +54,7 @@
 
 .field public final e:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public f:Lb4/c;
+.field public f:Ly5/c;
 
 
 # direct methods
@@ -104,9 +104,9 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/Map;Lc4/h;)Ljava/util/Set;
+.method public final a(Ljava/util/Map;Lz5/h;)Ljava/util/Set;
     .locals 1
-    .param p2    # Lc4/h;
+    .param p2    # Lz5/h;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -116,12 +116,12 @@
             "LL:Ljava/lang/Object;",
             ">(",
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "TCA",
             "LL;",
             ">;>;",
-            "Lc4/h;",
+            "Lz5/h;",
             ")",
             "Ljava/util/Set<",
             "TCA",
@@ -189,16 +189,16 @@
     return v0
 .end method
 
-.method public c(Lc4/h;)Ljava/util/Set;
+.method public c(Lz5/h;)Ljava/util/Set;
     .locals 1
-    .param p1    # Lc4/h;
+    .param p1    # Lz5/h;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/h;",
+            "Lz5/h;",
             ")",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;",
@@ -212,23 +212,23 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/a;->c:Ljava/util/Map;
 
-    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lc4/h;)Ljava/util/Set;
+    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lz5/h;)Ljava/util/Set;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public d(Lc4/h;)Ljava/util/Set;
+.method public d(Lz5/h;)Ljava/util/Set;
     .locals 1
-    .param p1    # Lc4/h;
+    .param p1    # Lz5/h;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/h;",
+            "Lz5/h;",
             ")",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncPrefetch;",
@@ -242,23 +242,23 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/a;->a:Ljava/util/Map;
 
-    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lc4/h;)Ljava/util/Set;
+    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lz5/h;)Ljava/util/Set;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public e(Lc4/h;)Ljava/util/Set;
+.method public e(Lz5/h;)Ljava/util/Set;
     .locals 1
-    .param p1    # Lc4/h;
+    .param p1    # Lz5/h;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/h;",
+            "Lz5/h;",
             ")",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;",
@@ -272,23 +272,23 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/a;->b:Ljava/util/Map;
 
-    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lc4/h;)Ljava/util/Set;
+    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lz5/h;)Ljava/util/Set;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public f(Lc4/h;)Ljava/util/Set;
+.method public f(Lz5/h;)Ljava/util/Set;
     .locals 1
-    .param p1    # Lc4/h;
+    .param p1    # Lz5/h;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/h;",
+            "Lz5/h;",
             ")",
             "Ljava/util/Set<",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryWatcher;",
@@ -302,7 +302,7 @@
     .line 1
     iget-object v0, p0, Lcom/apollographql/apollo/internal/a;->d:Ljava/util/Map;
 
-    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lc4/h;)Ljava/util/Set;
+    invoke-virtual {p0, v0, p1}, Lcom/apollographql/apollo/internal/a;->a(Ljava/util/Map;Lz5/h;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -313,12 +313,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/a;->f:Lb4/c;
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/a;->f:Ly5/c;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lb4/c;->a()V
+    invoke-interface {v0}, Ly5/c;->a()V
 
     :cond_0
     return-void
@@ -386,7 +386,7 @@
     throw p1
 .end method
 
-.method public final i(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+.method public final i(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -394,12 +394,12 @@
             "LL:Ljava/lang/Object;",
             ">(",
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "TCA",
             "LL;",
             ">;>;",
-            "Lc4/h;",
+            "Lz5/h;",
             "TCA",
             "LL;",
             ")V"
@@ -472,14 +472,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->c:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -501,14 +501,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->a:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -530,14 +530,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->b:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -559,26 +559,26 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->d:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->i(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public declared-synchronized n(Lb4/c;)V
+.method public declared-synchronized n(Ly5/c;)V
     .locals 0
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    iput-object p1, p0, Lcom/apollographql/apollo/internal/a;->f:Lb4/c;
+    iput-object p1, p0, Lcom/apollographql/apollo/internal/a;->f:Ly5/c;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -657,7 +657,7 @@
     throw p1
 .end method
 
-.method public final p(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+.method public final p(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -665,12 +665,12 @@
             "LL:Ljava/lang/Object;",
             ">(",
             "Ljava/util/Map<",
-            "Lc4/h;",
+            "Lz5/h;",
             "Ljava/util/Set<",
             "TCA",
             "LL;",
             ">;>;",
-            "Lc4/h;",
+            "Lz5/h;",
             "TCA",
             "LL;",
             ")V"
@@ -767,14 +767,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->c:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -796,14 +796,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->a:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -825,14 +825,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->b:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -854,14 +854,14 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v0}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v0
 
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/a;->d:Ljava/util/Map;
 
-    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lc4/h;Ljava/lang/Object;)V
+    invoke-virtual {p0, v1, v0, p1}, Lcom/apollographql/apollo/internal/a;->p(Ljava/util/Map;Lz5/h;Ljava/lang/Object;)V
 
     return-void
 .end method

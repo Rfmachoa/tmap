@@ -8,10 +8,10 @@
 
 
 # instance fields
-.field private final propertyValues:Landroidx/collection/l;
+.field private final propertyValues:Landroidx/collection/m;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/l<",
+            "Landroidx/collection/m<",
             "Ljava/lang/String;",
             "[",
             "Landroid/animation/PropertyValuesHolder;",
@@ -20,10 +20,10 @@
     .end annotation
 .end field
 
-.field private final timings:Landroidx/collection/l;
+.field private final timings:Landroidx/collection/m;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/collection/l<",
+            "Landroidx/collection/m<",
             "Ljava/lang/String;",
             "Lcom/google/android/material/animation/MotionTiming;",
             ">;"
@@ -40,18 +40,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroidx/collection/l;
+    new-instance v0, Landroidx/collection/m;
 
-    invoke-direct {v0}, Landroidx/collection/l;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/m;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
     .line 3
-    new-instance v0, Landroidx/collection/l;
+    new-instance v0, Landroidx/collection/m;
 
-    invoke-direct {v0}, Landroidx/collection/l;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/m;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/l;
+    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/m;
 
     return-void
 .end method
@@ -370,11 +370,11 @@
     check-cast p1, Lcom/google/android/material/animation/MotionSpec;
 
     .line 3
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    iget-object p1, p1, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object p1, p1, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -446,9 +446,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -480,9 +480,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -503,9 +503,9 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v0}, Landroidx/collection/l;->size()I
+    invoke-virtual {v0}, Landroidx/collection/m;->size()I
 
     move-result v0
 
@@ -517,9 +517,9 @@
     if-ge v3, v0, :cond_0
 
     .line 2
-    iget-object v4, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v4, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v4, v3}, Landroidx/collection/l;->q(I)Ljava/lang/Object;
+    invoke-virtual {v4, v3}, Landroidx/collection/m;->q(I)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -552,9 +552,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -575,9 +575,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -598,9 +598,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v0}, Landroidx/collection/l;->hashCode()I
+    invoke-virtual {v0}, Landroidx/collection/m;->hashCode()I
 
     move-result v0
 
@@ -611,9 +611,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -626,9 +626,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -641,7 +641,7 @@
     const/16 v0, 0xa
 
     .line 1
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/a;->a(C)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroidx/emoji2/text/flatbuffer/j;->a(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -678,7 +678,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 6
-    iget-object v1, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/l;
+    iget-object v1, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/m;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

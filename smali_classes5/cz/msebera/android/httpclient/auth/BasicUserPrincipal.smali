@@ -30,7 +30,7 @@
     const-string v0, "User name"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     iput-object p1, p0, Lcz/msebera/android/httpclient/auth/BasicUserPrincipal;->username:Ljava/lang/String;
@@ -63,7 +63,7 @@
 
     iget-object p1, p1, Lcz/msebera/android/httpclient/auth/BasicUserPrincipal;->username:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -94,7 +94,7 @@
 
     const/16 v1, 0x11
 
-    invoke-static {v1, v0}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v1, v0}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     const-string v2, "]"
 
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

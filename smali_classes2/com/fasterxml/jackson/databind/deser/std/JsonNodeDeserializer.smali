@@ -39,12 +39,14 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 1
     const-class v0, Lcom/fasterxml/jackson/databind/JsonNode;
 
-    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/deser/std/BaseNodeDeserializer;-><init>(Ljava/lang/Class;)V
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lcom/fasterxml/jackson/databind/deser/std/BaseNodeDeserializer;-><init>(Ljava/lang/Class;Ljava/lang/Boolean;)V
 
     return-void
 .end method
@@ -106,7 +108,7 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->getCurrentTokenId()I
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/core/JsonParser;->currentTokenId()I
 
     move-result v0
 
@@ -187,39 +189,19 @@
     return-object p1
 .end method
 
-.method public getNullValue()Lcom/fasterxml/jackson/databind/JsonNode;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 4
-    invoke-static {}, Lcom/fasterxml/jackson/databind/node/NullNode;->getInstance()Lcom/fasterxml/jackson/databind/node/NullNode;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonNode;
     .locals 0
 
-    .line 3
-    invoke-static {}, Lcom/fasterxml/jackson/databind/node/NullNode;->getInstance()Lcom/fasterxml/jackson/databind/node/NullNode;
+    .line 2
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getNodeFactory()Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public bridge synthetic getNullValue()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/JsonNodeDeserializer;->getNullValue()Lcom/fasterxml/jackson/databind/JsonNode;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public bridge synthetic getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
@@ -230,7 +212,7 @@
         }
     .end annotation
 
-    .line 2
+    .line 1
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/deser/std/JsonNodeDeserializer;->getNullValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Lcom/fasterxml/jackson/databind/JsonNode;
 
     move-result-object p1
@@ -247,4 +229,26 @@
     move-result v0
 
     return v0
+.end method
+
+.method public bridge synthetic logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/fasterxml/jackson/databind/deser/std/BaseNodeDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic supportsUpdate(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Ljava/lang/Boolean;
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/fasterxml/jackson/databind/deser/std/BaseNodeDeserializer;->supportsUpdate(Lcom/fasterxml/jackson/databind/DeserializationConfig;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

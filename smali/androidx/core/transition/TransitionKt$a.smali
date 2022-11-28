@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/transition/TransitionKt;->a(Landroid/transition/Transition;Lej/l;Lej/l;Lej/l;Lej/l;Lej/l;)Landroid/transition/Transition$TransitionListener;
+    value = Landroidx/core/transition/TransitionKt;->a(Landroid/transition/Transition;Lgl/l;Lgl/l;Lgl/l;Lgl/l;Lgl/l;)Landroid/transition/Transition$TransitionListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTransition.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$listener$1\n*L\n1#1,78:1\n*E\n"
+    value = "SMAP\nTransition.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$listener$1\n*L\n1#1,86:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -41,39 +41,114 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lej/l;
+.field public final synthetic a:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Lej/l;
+.field public final synthetic b:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic c:Lej/l;
+.field public final synthetic c:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic d:Lej/l;
+.field public final synthetic d:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic e:Lej/l;
+.field public final synthetic e:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lej/l;Lej/l;Lej/l;Lej/l;Lej/l;)V
+.method public constructor <init>(Lgl/l;Lgl/l;Lgl/l;Lgl/l;Lgl/l;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgl/l<",
+            "-",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/l<",
+            "-",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/l<",
+            "-",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/l<",
+            "-",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/l<",
+            "-",
+            "Landroid/transition/Transition;",
+            "Lkotlin/d1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/core/transition/TransitionKt$a;->a:Lgl/l;
+
+    iput-object p2, p0, Landroidx/core/transition/TransitionKt$a;->b:Lgl/l;
+
+    iput-object p3, p0, Landroidx/core/transition/TransitionKt$a;->c:Lgl/l;
+
+    iput-object p4, p0, Landroidx/core/transition/TransitionKt$a;->d:Lgl/l;
+
+    iput-object p5, p0, Landroidx/core/transition/TransitionKt$a;->e:Lgl/l;
 
     .line 1
-    iput-object p1, p0, Landroidx/core/transition/TransitionKt$a;->a:Lej/l;
-
-    iput-object p2, p0, Landroidx/core/transition/TransitionKt$a;->b:Lej/l;
-
-    iput-object p3, p0, Landroidx/core/transition/TransitionKt$a;->c:Lej/l;
-
-    iput-object p4, p0, Landroidx/core/transition/TransitionKt$a;->d:Lej/l;
-
-    iput-object p5, p0, Landroidx/core/transition/TransitionKt$a;->e:Lej/l;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -90,12 +165,12 @@
 
     const-string v0, "transition"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->d:Lej/l;
+    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->d:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -109,12 +184,12 @@
 
     const-string v0, "transition"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->a:Lej/l;
+    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->a:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -128,12 +203,12 @@
 
     const-string v0, "transition"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->c:Lej/l;
+    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->c:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -147,12 +222,12 @@
 
     const-string v0, "transition"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->b:Lej/l;
+    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->b:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -166,12 +241,12 @@
 
     const-string v0, "transition"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->e:Lej/l;
+    iget-object v0, p0, Landroidx/core/transition/TransitionKt$a;->e:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

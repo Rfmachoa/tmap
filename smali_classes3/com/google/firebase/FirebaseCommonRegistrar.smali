@@ -294,7 +294,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 3
-    invoke-static {}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;->component()Lcom/google/firebase/components/Component;
+    invoke-static {}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->component()Lcom/google/firebase/components/Component;
 
     move-result-object v1
 
@@ -319,7 +319,7 @@
 
     const-string v1, "fire-core"
 
-    const-string v2, "20.0.0"
+    const-string v2, "20.1.2"
 
     .line 7
     invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
@@ -374,7 +374,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 11
-    sget-object v1, Lcom/google/firebase/c;->a:Lcom/google/firebase/c;
+    sget-object v1, Lcom/google/firebase/d;->a:Lcom/google/firebase/d;
 
     const-string v2, "android-target-sdk"
 
@@ -387,7 +387,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 14
-    sget-object v1, Lcom/google/firebase/d;->a:Lcom/google/firebase/d;
+    sget-object v1, Lcom/google/firebase/e;->a:Lcom/google/firebase/e;
 
     const-string v2, "android-min-sdk"
 
@@ -400,7 +400,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 17
-    sget-object v1, Lcom/google/firebase/e;->a:Lcom/google/firebase/e;
+    sget-object v1, Lcom/google/firebase/f;->a:Lcom/google/firebase/f;
 
     const-string v2, "android-platform"
 
@@ -413,7 +413,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 20
-    sget-object v1, Lcom/google/firebase/b;->a:Lcom/google/firebase/b;
+    sget-object v1, Lcom/google/firebase/c;->a:Lcom/google/firebase/c;
 
     const-string v2, "android-installer"
 

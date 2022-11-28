@@ -1,56 +1,25 @@
-.class public Landroidx/appcompat/widget/h0;
+.class public final synthetic Landroidx/appcompat/widget/h0;
 .super Ljava/lang/Object;
-.source "TintInfo.java"
-
-
-# annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
-
-# instance fields
-.field public a:Landroid/content/res/ColorStateList;
-
-.field public b:Landroid/graphics/PorterDuff$Mode;
-
-.field public c:Z
-
-.field public d:Z
+.source "R8$$SyntheticClass"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-# virtual methods
-.method public a()V
-    .locals 2
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 1
-    iput-object v0, p0, Landroidx/appcompat/widget/h0;->a:Landroid/content/res/ColorStateList;
+    move-result-object p0
 
-    const/4 v1, 0x0
-
-    .line 2
-    iput-boolean v1, p0, Landroidx/appcompat/widget/h0;->d:Z
-
-    .line 3
-    iput-object v0, p0, Landroidx/appcompat/widget/h0;->b:Landroid/graphics/PorterDuff$Mode;
-
-    .line 4
-    iput-boolean v1, p0, Landroidx/appcompat/widget/h0;->c:Z
+    invoke-static {p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

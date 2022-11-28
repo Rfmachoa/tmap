@@ -130,7 +130,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;-><init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
 
-    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->a2(Landroid/view/View;Ls1/e0;)V
+    invoke-static {p0, p1}, Landroidx/core/view/ViewCompat;->a2(Landroid/view/View;Landroidx/core/view/i0;)V
 
     return-void
 .end method

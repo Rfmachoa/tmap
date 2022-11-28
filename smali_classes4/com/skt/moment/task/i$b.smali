@@ -26,6 +26,16 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/i;Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$ttsTimes"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/i$b;->b:Lcom/skt/moment/task/i;
@@ -114,7 +124,7 @@
     move-exception v0
 
     .line 6
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v1
 
@@ -132,7 +142,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     :cond_1
     return-void

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/Visibility;->onDisappear(Landroid/view/ViewGroup;Lh3/o;ILh3/o;I)Landroid/animation/Animator;
+    value = Landroidx/transition/Visibility;->onDisappear(Landroid/view/ViewGroup;Lp4/o;ILp4/o;I)Landroid/animation/Animator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -63,13 +63,13 @@
     .line 2
     iget-object v0, p0, Landroidx/transition/Visibility$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {v0}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/transition/Visibility$a;->b:Landroid/view/View;
 
-    invoke-interface {v0, v1}, Lh3/s;->remove(Landroid/view/View;)V
+    invoke-interface {v0, v1}, Lp4/s;->remove(Landroid/view/View;)V
 
     .line 3
     invoke-virtual {p1, p0}, Landroidx/transition/Transition;->removeListener(Landroidx/transition/Transition$g;)Landroidx/transition/Transition;
@@ -87,13 +87,13 @@
     .line 1
     iget-object p1, p0, Landroidx/transition/Visibility$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {p1}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/Visibility$a;->b:Landroid/view/View;
 
-    invoke-interface {p1, v0}, Lh3/s;->remove(Landroid/view/View;)V
+    invoke-interface {p1, v0}, Lp4/s;->remove(Landroid/view/View;)V
 
     return-void
 .end method
@@ -117,13 +117,13 @@
     .line 2
     iget-object p1, p0, Landroidx/transition/Visibility$a;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1}, Lh3/t;->b(Landroid/view/ViewGroup;)Lh3/s;
+    invoke-static {p1}, Lp4/t;->b(Landroid/view/ViewGroup;)Lp4/s;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/Visibility$a;->b:Landroid/view/View;
 
-    invoke-interface {p1, v0}, Lh3/s;->add(Landroid/view/View;)V
+    invoke-interface {p1, v0}, Lp4/s;->add(Landroid/view/View;)V
 
     goto :goto_0
 

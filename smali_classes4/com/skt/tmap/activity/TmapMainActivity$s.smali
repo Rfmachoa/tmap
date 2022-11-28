@@ -3,7 +3,7 @@
 .source "TmapMainActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/activity/TmapMainActivity$b0;
+.implements Lcom/skt/tmap/activity/TmapMainActivity$c0;
 
 
 # annotations
@@ -57,7 +57,7 @@
 
     move-result p1
 
-    const v0, 0x7f0a0b3c
+    const v0, 0x7f0a0bc6
 
     if-eq p1, v0, :cond_0
 
@@ -67,7 +67,7 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$s;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->d7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
 
     move-result-object p1
 
@@ -78,16 +78,16 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo v0, "tap.search_box"
+    const-string v0, "tap.search_box"
 
-    invoke-virtual {p1, v0}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 4
-    sget-object p1, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->b:Lcom/skt/tmap/log/AppsFlyerLibWrapper;
+    sget-object p1, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->a:Lcom/skt/tmap/log/AppsFlyerLibWrapper;
 
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$s;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
@@ -97,7 +97,12 @@
 
     sget-object v1, Lcom/skt/tmap/log/AppsFlyerLibWrapper$EventValue;->search:Lcom/skt/tmap/log/AppsFlyerLibWrapper$EventValue;
 
-    invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->e(Landroid/content/Context;Lcom/skt/tmap/log/AppsFlyerLibWrapper$EventValue;)V
+    invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->f(Landroid/content/Context;Lcom/skt/tmap/log/AppsFlyerLibWrapper$EventValue;)V
+
+    .line 5
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$s;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->G4()V
 
     :goto_0
     return-void
@@ -119,9 +124,9 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$s;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    new-instance v1, Lcom/skt/tmap/activity/c1;
+    new-instance v1, Lcom/skt/tmap/activity/l2;
 
-    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/activity/c1;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$s;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/skt/tmap/activity/l2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$s;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity;->i(Ljava/lang/Runnable;)V
 

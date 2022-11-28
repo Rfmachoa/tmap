@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/ads/VideoOptions$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -15,101 +15,98 @@
 
 
 # instance fields
-.field private zzacy:Z
+.field private zza:Z
 
-.field private zzacz:Z
+.field private zzb:Z
 
-.field private zzada:Z
+.field private zzc:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzacy:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zza:Z
 
     const/4 v0, 0x0
 
-    .line 3
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzacz:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzb:Z
 
-    .line 4
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzada:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzc:Z
 
     return-void
 .end method
 
-.method public static synthetic zza(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
+.method public static bridge synthetic zza(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
     .locals 0
 
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzacy:Z
+    iget-boolean p0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzc:Z
 
     return p0
 .end method
 
-.method public static synthetic zzb(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
+.method public static bridge synthetic zzb(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
     .locals 0
 
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzacz:Z
+    iget-boolean p0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzb:Z
 
     return p0
 .end method
 
-.method public static synthetic zzc(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
+.method public static bridge synthetic zzc(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
     .locals 0
 
-    .line 1
-    iget-boolean p0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzada:Z
+    iget-boolean p0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zza:Z
 
     return p0
 .end method
 
 
 # virtual methods
-.method public final build()Lcom/google/android/gms/ads/VideoOptions;
+.method public build()Lcom/google/android/gms/ads/VideoOptions;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
     new-instance v0, Lcom/google/android/gms/ads/VideoOptions;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/VideoOptions;-><init>(Lcom/google/android/gms/ads/VideoOptions$Builder;Lcom/google/android/gms/ads/zzd;)V
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/VideoOptions;-><init>(Lcom/google/android/gms/ads/VideoOptions$Builder;Lcom/google/android/gms/ads/zzi;)V
 
     return-object v0
 .end method
 
-.method public final setClickToExpandRequested(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
+.method public setClickToExpandRequested(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzada:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzc:Z
 
     return-object p0
 .end method
 
-.method public final setCustomControlsRequested(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
+.method public setCustomControlsRequested(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzacz:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzb:Z
 
     return-object p0
 .end method
 
-.method public final setStartMuted(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
+.method public setStartMuted(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzacy:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zza:Z
 
     return-object p0
 .end method

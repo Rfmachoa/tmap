@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/tagmanager/zzp;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # annotations
@@ -12,9 +12,9 @@
 .method public static zza([B)Ljava/lang/String;
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 1
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 2
@@ -50,12 +50,12 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object p0

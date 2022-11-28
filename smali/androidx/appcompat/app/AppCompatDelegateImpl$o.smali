@@ -5,7 +5,7 @@
 
 # annotations
 .annotation build Landroidx/annotation/RequiresApi;
-    value = 0x18
+    value = 0x1a
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -29,7 +29,7 @@
 .end method
 
 .method public static a(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
-    .locals 1
+    .locals 3
     .param p0    # Landroid/content/res/Configuration;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -44,30 +44,46 @@
     .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    iget v0, p0, Landroid/content/res/Configuration;->colorMode:I
 
-    move-result-object p0
+    and-int/lit8 v0, v0, 0x3
+
+    iget v1, p1, Landroid/content/res/Configuration;->colorMode:I
+
+    and-int/lit8 v2, v1, 0x3
+
+    if-eq v0, v2, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    iget v0, p2, Landroid/content/res/Configuration;->colorMode:I
 
-    move-result-object v0
+    and-int/lit8 v1, v1, 0x3
+
+    or-int/2addr v0, v1
+
+    iput v0, p2, Landroid/content/res/Configuration;->colorMode:I
 
     .line 3
-    invoke-virtual {p0, v0}, Landroid/os/LocaleList;->equals(Ljava/lang/Object;)Z
+    :cond_0
+    iget p0, p0, Landroid/content/res/Configuration;->colorMode:I
 
-    move-result p0
+    and-int/lit8 p0, p0, 0xc
 
-    if-nez p0, :cond_0
+    iget p1, p1, Landroid/content/res/Configuration;->colorMode:I
+
+    and-int/lit8 v0, p1, 0xc
+
+    if-eq p0, v0, :cond_1
 
     .line 4
-    invoke-virtual {p2, v0}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
+    iget p0, p2, Landroid/content/res/Configuration;->colorMode:I
 
-    .line 5
-    iget-object p0, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    and-int/lit8 p1, p1, 0xc
 
-    iput-object p0, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    or-int/2addr p0, p1
 
-    :cond_0
+    iput p0, p2, Landroid/content/res/Configuration;->colorMode:I
+
+    :cond_1
     return-void
 .end method

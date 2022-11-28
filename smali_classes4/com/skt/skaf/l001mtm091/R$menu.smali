@@ -14,17 +14,13 @@
 
 
 # static fields
-.field public static final dev_menu_logs_menu:I = 0x7f0e0000
+.field public static final dev_menu_logs_menu:I = 0x7f0f0000
 
-.field public static final example_menu:I = 0x7f0e0001
+.field public static final hiddenmenu:I = 0x7f0f0001
 
-.field public static final example_menu2:I = 0x7f0e0002
+.field public static final main:I = 0x7f0f0002
 
-.field public static final hiddenmenu:I = 0x7f0e0003
-
-.field public static final main:I = 0x7f0e0004
-
-.field public static final main_bottom_menu:I = 0x7f0e0005
+.field public static final main_bottom_menu:I = 0x7f0f0003
 
 
 # direct methods

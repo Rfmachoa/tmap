@@ -3,7 +3,7 @@
 .source "DoubleCheck.java"
 
 # interfaces
-.implements Loi/a;
+.implements Lsk/a;
 .implements Lcom/google/android/datatransport/runtime/dagger/Lazy;
 
 
@@ -14,7 +14,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Loi/a<",
+        "Lsk/a<",
         "TT;>;",
         "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
         "TT;>;"
@@ -31,10 +31,10 @@
 # instance fields
 .field private volatile instance:Ljava/lang/Object;
 
-.field private volatile provider:Loi/a;
+.field private volatile provider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -55,12 +55,12 @@
     return-void
 .end method
 
-.method private constructor <init>(Loi/a;)V
+.method private constructor <init>(Lsk/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -74,17 +74,17 @@
     iput-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->instance:Ljava/lang/Object;
 
     .line 3
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider:Lsk/a;
 
     return-void
 .end method
 
-.method public static lazy(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
+.method public static lazy(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<P::",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;T:",
             "Ljava/lang/Object;",
             ">(TP;)",
@@ -111,23 +111,23 @@
 
     move-result-object p0
 
-    check-cast p0, Loi/a;
+    check-cast p0, Lsk/a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
 
-.method public static provider(Loi/a;)Loi/a;
+.method public static provider(Lsk/a;)Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<P::",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;T:",
             "Ljava/lang/Object;",
             ">(TP;)",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -146,7 +146,7 @@
     :cond_0
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
@@ -242,9 +242,9 @@
     if-ne v0, v1, :cond_0
 
     .line 5
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider:Lsk/a;
 
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -260,7 +260,7 @@
     const/4 v1, 0x0
 
     .line 7
-    iput-object v1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider:Loi/a;
+    iput-object v1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider:Lsk/a;
 
     .line 8
     :cond_0

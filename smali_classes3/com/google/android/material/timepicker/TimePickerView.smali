@@ -16,6 +16,10 @@
 .end annotation
 
 
+# static fields
+.field public static final GENERIC_VIEW_ACCESSIBILITY_CLASS_NAME:Ljava/lang/String; = "android.view.View"
+
+
 # instance fields
 .field private final clockFace:Lcom/google/android/material/timepicker/ClockFaceView;
 
@@ -112,9 +116,9 @@
     iput-object p1, p0, Lcom/google/android/material/timepicker/TimePickerView;->toggle:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
     .line 8
-    new-instance p2, Lcom/google/android/material/timepicker/TimePickerView$2;
+    new-instance p2, Lcom/google/android/material/timepicker/d;
 
-    invoke-direct {p2, p0}, Lcom/google/android/material/timepicker/TimePickerView$2;-><init>(Lcom/google/android/material/timepicker/TimePickerView;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/timepicker/d;-><init>(Lcom/google/android/material/timepicker/TimePickerView;)V
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->addOnButtonCheckedListener(Lcom/google/android/material/button/MaterialButtonToggleGroup$OnButtonCheckedListener;)V
 
@@ -160,6 +164,14 @@
     return-void
 .end method
 
+.method public static synthetic a(Lcom/google/android/material/timepicker/TimePickerView;Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/material/timepicker/TimePickerView;->lambda$new$0(Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V
+
+    return-void
+.end method
+
 .method public static synthetic access$000(Lcom/google/android/material/timepicker/TimePickerView;)Lcom/google/android/material/timepicker/TimePickerView$OnSelectionChange;
     .locals 0
 
@@ -169,22 +181,46 @@
     return-object p0
 .end method
 
-.method public static synthetic access$100(Lcom/google/android/material/timepicker/TimePickerView;)Lcom/google/android/material/timepicker/TimePickerView$OnPeriodChangeListener;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/android/material/timepicker/TimePickerView;->onPeriodChangeListener:Lcom/google/android/material/timepicker/TimePickerView$OnPeriodChangeListener;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$200(Lcom/google/android/material/timepicker/TimePickerView;)Lcom/google/android/material/timepicker/TimePickerView$OnDoubleTapListener;
+.method public static synthetic access$100(Lcom/google/android/material/timepicker/TimePickerView;)Lcom/google/android/material/timepicker/TimePickerView$OnDoubleTapListener;
     .locals 0
 
     .line 1
     iget-object p0, p0, Lcom/google/android/material/timepicker/TimePickerView;->onDoubleTapListener:Lcom/google/android/material/timepicker/TimePickerView$OnDoubleTapListener;
 
     return-object p0
+.end method
+
+.method private synthetic lambda$new$0(Lcom/google/android/material/button/MaterialButtonToggleGroup;IZ)V
+    .locals 0
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    .line 1
+    :cond_0
+    iget-object p1, p0, Lcom/google/android/material/timepicker/TimePickerView;->onPeriodChangeListener:Lcom/google/android/material/timepicker/TimePickerView$OnPeriodChangeListener;
+
+    if-eqz p1, :cond_2
+
+    .line 2
+    sget p3, Lcom/google/android/material/R$id;->material_clock_period_pm_button:I
+
+    if-ne p2, p3, :cond_1
+
+    const/4 p2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p2, 0x0
+
+    .line 3
+    :goto_0
+    invoke-interface {p1, p2}, Lcom/google/android/material/timepicker/TimePickerView$OnPeriodChangeListener;->onPeriodChange(I)V
+
+    :cond_2
+    return-void
 .end method
 
 .method private setUpDisplay()V
@@ -228,6 +264,18 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 5
+    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->minuteView:Lcom/google/android/material/chip/Chip;
+
+    const-string v1, "android.view.View"
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/chip/Chip;->setAccessibilityClassName(Ljava/lang/CharSequence;)V
+
+    .line 6
+    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->hourView:Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/chip/Chip;->setAccessibilityClassName(Ljava/lang/CharSequence;)V
+
     return-void
 .end method
 
@@ -247,16 +295,16 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/google/android/material/timepicker/TimePickerView$3;
+    new-instance v2, Lcom/google/android/material/timepicker/TimePickerView$2;
 
-    invoke-direct {v2, p0}, Lcom/google/android/material/timepicker/TimePickerView$3;-><init>(Lcom/google/android/material/timepicker/TimePickerView;)V
+    invoke-direct {v2, p0}, Lcom/google/android/material/timepicker/TimePickerView$2;-><init>(Lcom/google/android/material/timepicker/TimePickerView;)V
 
     invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     .line 3
-    new-instance v1, Lcom/google/android/material/timepicker/TimePickerView$4;
+    new-instance v1, Lcom/google/android/material/timepicker/TimePickerView$3;
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/material/timepicker/TimePickerView$4;-><init>(Lcom/google/android/material/timepicker/TimePickerView;Landroid/view/GestureDetector;)V
+    invoke-direct {v1, p0, v0}, Lcom/google/android/material/timepicker/TimePickerView$3;-><init>(Lcom/google/android/material/timepicker/TimePickerView;Landroid/view/GestureDetector;)V
 
     .line 4
     iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->minuteView:Lcom/google/android/material/chip/Chip;
@@ -271,57 +319,25 @@
     return-void
 .end method
 
-.method private updateToggleConstraints()V
-    .locals 3
+.method private updateSelection(Lcom/google/android/material/chip/Chip;Z)V
+    .locals 0
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->toggle:Lcom/google/android/material/button/MaterialButtonToggleGroup;
+    invoke-virtual {p1, p2}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getVisibility()I
+    if-eqz p2, :cond_0
 
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 2
-    new-instance v0, Landroidx/constraintlayout/widget/c;
-
-    invoke-direct {v0}, Landroidx/constraintlayout/widget/c;-><init>()V
-
-    .line 3
-    invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/c;->A(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    .line 4
-    invoke-static {p0}, Landroidx/core/view/ViewCompat;->Z(Landroid/view/View;)I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_0
-
-    move v1, v2
+    const/4 p2, 0x2
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 p2, 0x0
 
+    .line 2
     :goto_0
-    if-eqz v1, :cond_1
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->D1(Landroid/view/View;I)V
 
-    const/4 v2, 0x2
-
-    .line 5
-    :cond_1
-    sget v1, Lcom/google/android/material/R$id;->material_clock_display:I
-
-    invoke-virtual {v0, v1, v2}, Landroidx/constraintlayout/widget/c;->y(II)V
-
-    .line 6
-    invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/c;->l(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    :cond_2
     return-void
 .end method
 
@@ -338,16 +354,17 @@
     return-void
 .end method
 
-.method public onAttachedToWindow()V
-    .locals 0
+.method public getCurrentLevel()I
+    .locals 1
 
     .line 1
-    invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
+    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->clockFace:Lcom/google/android/material/timepicker/ClockFaceView;
 
-    .line 2
-    invoke-direct {p0}, Lcom/google/android/material/timepicker/TimePickerView;->updateToggleConstraints()V
+    invoke-virtual {v0}, Lcom/google/android/material/timepicker/ClockFaceView;->getCurrentLevel()I
 
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
 .method public onVisibilityChanged(Landroid/view/View;I)V
@@ -365,7 +382,11 @@
     if-nez p2, :cond_0
 
     .line 2
-    invoke-direct {p0}, Lcom/google/android/material/timepicker/TimePickerView;->updateToggleConstraints()V
+    iget-object p1, p0, Lcom/google/android/material/timepicker/TimePickerView;->hourView:Lcom/google/android/material/chip/Chip;
+
+    const/16 p2, 0x8
+
+    invoke-virtual {p1, p2}, Landroid/widget/CheckBox;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
@@ -393,7 +414,7 @@
     move v3, v2
 
     :goto_0
-    invoke-virtual {v0, v3}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
+    invoke-direct {p0, v0, v3}, Lcom/google/android/material/timepicker/TimePickerView;->updateSelection(Lcom/google/android/material/chip/Chip;Z)V
 
     .line 2
     iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->hourView:Lcom/google/android/material/chip/Chip;
@@ -408,7 +429,7 @@
     move v1, v2
 
     :goto_1
-    invoke-virtual {v0, v1}, Lcom/google/android/material/chip/Chip;->setChecked(Z)V
+    invoke-direct {p0, v0, v1}, Lcom/google/android/material/timepicker/TimePickerView;->updateSelection(Lcom/google/android/material/chip/Chip;Z)V
 
     return-void
 .end method
@@ -420,6 +441,17 @@
     iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->clockHandView:Lcom/google/android/material/timepicker/ClockHandView;
 
     invoke-virtual {v0, p1}, Lcom/google/android/material/timepicker/ClockHandView;->setAnimateOnTouchUp(Z)V
+
+    return-void
+.end method
+
+.method public setCurrentLevel(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/material/timepicker/TimePickerView;->clockFace:Lcom/google/android/material/timepicker/ClockFaceView;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/timepicker/ClockFaceView;->setCurrentLevel(I)V
 
     return-void
 .end method
@@ -555,16 +587,17 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     sget p1, Lcom/google/android/material/R$id;->material_clock_period_am_button:I
 
-    .line 2
+    .line 3
     :goto_0
     iget-object v1, p0, Lcom/google/android/material/timepicker/TimePickerView;->toggle:Lcom/google/android/material/button/MaterialButtonToggleGroup;
 
     invoke-virtual {v1, p1}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->check(I)V
 
-    .line 3
+    .line 4
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -577,7 +610,7 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 4
+    .line 5
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -594,7 +627,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 5
+    .line 6
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -605,15 +638,43 @@
 
     move-result-object p1
 
-    .line 6
+    .line 7
+    iget-object p2, p0, Lcom/google/android/material/timepicker/TimePickerView;->minuteView:Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {p2}, Landroid/widget/CheckBox;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-static {p2, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    .line 8
     iget-object p2, p0, Lcom/google/android/material/timepicker/TimePickerView;->minuteView:Lcom/google/android/material/chip/Chip;
 
     invoke-virtual {p2, v1}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
-    .line 7
+    .line 9
+    :cond_1
+    iget-object p2, p0, Lcom/google/android/material/timepicker/TimePickerView;->hourView:Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {p2}, Landroid/widget/CheckBox;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-static {p2, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    .line 10
     iget-object p2, p0, Lcom/google/android/material/timepicker/TimePickerView;->hourView:Lcom/google/android/material/chip/Chip;
 
     invoke-virtual {p2, p1}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
 
+    :cond_2
     return-void
 .end method

@@ -9,6 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/fasterxml/jackson/databind/BeanProperty$Bogus;,
         Lcom/fasterxml/jackson/databind/BeanProperty$Std;
     }
 .end annotation
@@ -51,7 +52,22 @@
     .end annotation
 .end method
 
+.method public abstract findAliases(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;)Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/cfg/MapperConfig<",
+            "*>;)",
+            "Ljava/util/List<",
+            "Lcom/fasterxml/jackson/databind/PropertyName;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public abstract findFormatOverrides(Lcom/fasterxml/jackson/databind/AnnotationIntrospector;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract findPropertyFormat(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;

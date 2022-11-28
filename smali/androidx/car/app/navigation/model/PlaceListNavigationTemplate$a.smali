@@ -27,12 +27,12 @@
     .end annotation
 .end field
 
-.field public d:Landroidx/car/app/model/Action;
+.field public d:Landroidx/car/app/model/Header;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public e:Landroidx/car/app/model/ActionStrip;
+.field public e:Landroidx/car/app/model/Action;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -42,7 +42,17 @@
     .end annotation
 .end field
 
-.field public g:Landroidx/car/app/navigation/model/b;
+.field public g:Landroidx/car/app/model/ActionStrip;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public h:Landroidx/car/app/navigation/model/b;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public i:Landroidx/car/app/model/o;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -81,44 +91,17 @@
     :goto_0
     iget-boolean v1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->b:Z
 
-    if-eq v1, v0, :cond_3
+    if-eq v1, v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->a:Landroidx/car/app/model/CarText;
-
-    invoke-static {v0}, Landroidx/car/app/model/CarText;->h(Landroidx/car/app/model/CarText;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->d:Landroidx/car/app/model/Action;
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    .line 4
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Either the title or header action must be set"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 5
-    :cond_2
-    :goto_1
     new-instance v0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate;
 
     invoke-direct {v0, p0}, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate;-><init>(Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;)V
 
     return-object v0
 
-    .line 6
-    :cond_3
+    .line 4
+    :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Template is in a loading state but a list is set, or vice versa"
@@ -138,23 +121,45 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->k:Lm0/a;
+    sget-object v0, La1/a;->o:La1/a;
 
+    .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p1}, Landroidx/car/app/model/ActionStrip;->a()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
-    .line 2
-    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->e:Landroidx/car/app/model/ActionStrip;
+    .line 3
+    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->f:Landroidx/car/app/model/ActionStrip;
 
     return-object p0
 .end method
 
-.method public c(Landroidx/car/app/model/Action;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public c(Landroidx/car/app/model/Header;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+    .locals 0
+    .param p1    # Landroidx/car/app/model/Header;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->d:Landroidx/car/app/model/Header;
+
+    return-object p0
+.end method
+
+.method public d(Landroidx/car/app/model/Action;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 2
     .param p1    # Landroidx/car/app/model/Action;
         .annotation build Landroidx/annotation/NonNull;
@@ -163,8 +168,11 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
     .line 1
-    sget-object v0, Lm0/a;->j:Lm0/a;
+    sget-object v0, La1/a;->i:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -174,15 +182,15 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
-    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->d:Landroidx/car/app/model/Action;
+    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->e:Landroidx/car/app/model/Action;
 
     return-object p0
 .end method
 
-.method public d(Landroidx/car/app/model/ItemList;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public e(Landroidx/car/app/model/ItemList;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 2
     .param p1    # Landroidx/car/app/model/ItemList;
         .annotation build Landroidx/annotation/NonNull;
@@ -199,18 +207,18 @@
     move-result-object v0
 
     .line 2
-    sget-object v1, Lm0/f;->f:Lm0/f;
+    sget-object v1, La1/f;->f:La1/f;
 
-    invoke-virtual {v1, p1}, Lm0/f;->d(Landroidx/car/app/model/ItemList;)V
+    invoke-virtual {v1, p1}, La1/f;->d(Landroidx/car/app/model/ItemList;)V
 
     .line 3
-    invoke-static {v0}, Landroidx/car/app/model/f;->c(Ljava/util/List;)V
+    invoke-static {v0}, Landroidx/car/app/model/i;->c(Ljava/util/List;)V
 
     .line 4
-    invoke-static {v0}, Landroidx/car/app/model/f;->e(Ljava/util/List;)V
+    invoke-static {v0}, Landroidx/car/app/model/i;->e(Ljava/util/List;)V
 
     .line 5
-    invoke-static {v0}, Landroidx/car/app/model/f;->f(Ljava/util/List;)V
+    invoke-static {v0}, Landroidx/car/app/model/i;->f(Ljava/util/List;)V
 
     .line 6
     iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->c:Landroidx/car/app/model/ItemList;
@@ -218,7 +226,7 @@
     return-object p0
 .end method
 
-.method public e(Z)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public f(Z)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -229,7 +237,7 @@
     return-object p0
 .end method
 
-.method public f(Landroidx/car/app/model/ActionStrip;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public g(Landroidx/car/app/model/ActionStrip;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 2
     .param p1    # Landroidx/car/app/model/ActionStrip;
         .annotation build Landroidx/annotation/NonNull;
@@ -238,15 +246,12 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
-    .end annotation
-
     .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
         value = 0x4
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->m:Lm0/a;
+    sget-object v0, La1/a;->p:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -256,15 +261,41 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
-    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->f:Landroidx/car/app/model/ActionStrip;
+    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->g:Landroidx/car/app/model/ActionStrip;
 
     return-object p0
 .end method
 
-.method public g(Landroidx/car/app/navigation/model/d;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public h(Landroidx/car/app/model/q;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+    .locals 0
+    .param p1    # Landroidx/car/app/model/q;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "MissingGetterMatchingBuilder",
+            "ExecutorRegistration"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Landroidx/car/app/model/OnContentRefreshDelegateImpl;->b(Landroidx/car/app/model/q;)Landroidx/car/app/model/o;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->i:Landroidx/car/app/model/o;
+
+    return-object p0
+.end method
+
+.method public i(Landroidx/car/app/navigation/model/d;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 0
     .param p1    # Landroidx/car/app/navigation/model/d;
         .annotation build Landroidx/annotation/NonNull;
@@ -280,9 +311,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
-    .end annotation
-
     .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
         value = 0x4
     .end annotation
@@ -295,12 +323,12 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->g:Landroidx/car/app/navigation/model/b;
+    iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->h:Landroidx/car/app/navigation/model/b;
 
     return-object p0
 .end method
 
-.method public h(Landroidx/car/app/model/CarText;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public j(Landroidx/car/app/model/CarText;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 1
     .param p1    # Landroidx/car/app/model/CarText;
         .annotation build Landroidx/annotation/NonNull;
@@ -309,26 +337,32 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
     .line 1
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->a:Landroidx/car/app/model/CarText;
 
     .line 2
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->f:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     return-object p0
 .end method
 
-.method public i(Ljava/lang/CharSequence;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
+.method public k(Ljava/lang/CharSequence;)Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;
     .locals 1
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
@@ -343,9 +377,9 @@
     iput-object p1, p0, Landroidx/car/app/navigation/model/PlaceListNavigationTemplate$a;->a:Landroidx/car/app/model/CarText;
 
     .line 2
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->f:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     return-object p0
 .end method

@@ -107,13 +107,13 @@
 
 .field public locationProviderManager:Lcom/skt/tmap/engine/navigation/location/LocationProviderManager;
 
+.field public locationReliabilityChecker:Lcom/skt/tmap/engine/navigation/location/LocationReliabilityChecker;
+
 .field public locationRequestTimer:Ljava/util/Timer;
 
 .field private locationServiceInitialize:Z
 
 .field public needToSaveLocationData:Z
-
-.field public reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
 
 .field public removeListenerArrayList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -126,6 +126,8 @@
 .end field
 
 .field private removeLocationRunnable:Ljava/lang/Runnable;
+
+.field public shadeAreaCheckerForSDK:Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;
 
 
 # direct methods
@@ -244,29 +246,43 @@
 
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->gpsStatusListener:Lcom/skt/tmap/engine/navigation/location/GpsStatusListener;
 
+    .line 16
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;
+
+    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->shadeAreaCheckerForSDK:Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;
+
+    .line 17
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/LocationReliabilityChecker;
+
+    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/location/LocationReliabilityChecker;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->locationReliabilityChecker:Lcom/skt/tmap/engine/navigation/location/LocationReliabilityChecker;
+
     const-wide v2, 0x4042c8536ce8f629L    # 37.56504594206883
 
-    .line 16
+    .line 18
     iput-wide v2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->defaultLatitude:D
 
     const-wide v2, 0x405fbf2d6facd710L    # 126.9871482074634
 
-    .line 17
+    .line 19
     iput-wide v2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->defaultLongitude:D
 
-    .line 18
+    .line 20
     new-instance v0, Landroid/location/Location;
 
     invoke-direct {v0, v1}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->currentLocation:Landroid/location/Location;
 
-    .line 19
+    .line 21
     iget-wide v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->defaultLongitude:D
 
     invoke-virtual {v0, v1, v2}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 20
+    .line 22
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->currentLocation:Landroid/location/Location;
 
     iget-wide v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->defaultLatitude:D
@@ -293,18 +309,7 @@
     return-object v0
 .end method
 
-.method public static synthetic access$100(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;Landroid/location/Location;)Z
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->isNight(Landroid/location/Location;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic access$200(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;)Z
+.method public static synthetic access$100(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;)Z
     .locals 0
 
     .line 1
@@ -313,7 +318,7 @@
     return p0
 .end method
 
-.method public static synthetic access$302(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+.method public static synthetic access$202(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;Ljava/lang/Runnable;)Ljava/lang/Runnable;
     .locals 0
 
     .line 1
@@ -516,95 +521,6 @@
     return p0
 .end method
 
-.method private isNight(Landroid/location/Location;)Z
-    .locals 6
-
-    if-eqz p1, :cond_1
-
-    .line 1
-    invoke-static {p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->isDummyLocation(Landroid/location/Location;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 2
-    new-instance v0, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseLocation;
-
-    invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v1
-
-    invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v3
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseLocation;-><init>(DD)V
-
-    .line 3
-    new-instance p1, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseSunsetCalculator;
-
-    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/TimeZone;->getID()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p1, v0, v1}, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseSunsetCalculator;-><init>(Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseLocation;Ljava/lang/String;)V
-
-    .line 4
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseSunsetCalculator;->getOfficialSunsetCalendarForDate(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    move-result-object v1
-
-    .line 6
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/location/sunrisesunset/SunriseSunsetCalculator;->getOfficialSunriseCalendarForDate(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    move-result-object p1
-
-    .line 7
-    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    cmp-long p1, v2, v4
-
-    if-gez p1, :cond_0
-
-    invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-gtz p1, :cond_1
-
-    :cond_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method private synthetic lambda$removeLocationListener$0()V
     .locals 5
 
@@ -776,7 +692,7 @@
 .method private loadLocation(Landroid/content/Context;)Landroid/location/Location;
     .locals 9
 
-    const-string/jumbo v0, "tmap_default"
+    const-string v0, "tmap_default"
 
     :try_start_0
     const-string v1, "PREFERENCE_LOCATION"
@@ -974,14 +890,14 @@
 
     sget-object v5, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->saveLocationDirPath:Landroid/net/Uri;
 
-    invoke-static {v4, v5}, Le2/a;->j(Landroid/content/Context;Landroid/net/Uri;)Le2/a;
+    invoke-static {v4, v5}, Lv2/a;->j(Landroid/content/Context;Landroid/net/Uri;)Lv2/a;
 
     move-result-object v4
 
     if-eqz v4, :cond_a
 
     .line 13
-    invoke-virtual {v4}, Le2/a;->f()Z
+    invoke-virtual {v4}, Lv2/a;->f()Z
 
     move-result v5
 
@@ -993,14 +909,14 @@
     const-string v5, "GPS"
 
     .line 14
-    invoke-virtual {v4, v5}, Le2/a;->g(Ljava/lang/String;)Le2/a;
+    invoke-virtual {v4, v5}, Lv2/a;->g(Ljava/lang/String;)Lv2/a;
 
     move-result-object v5
 
     if-eqz v5, :cond_3
 
     .line 15
-    invoke-virtual {v5}, Le2/a;->f()Z
+    invoke-virtual {v5}, Lv2/a;->f()Z
 
     move-result v6
 
@@ -1010,14 +926,14 @@
     const-string v5, "GPS"
 
     .line 16
-    invoke-virtual {v4, v5}, Le2/a;->c(Ljava/lang/String;)Le2/a;
+    invoke-virtual {v4, v5}, Lv2/a;->c(Ljava/lang/String;)Lv2/a;
 
     move-result-object v5
 
     if-eqz v5, :cond_9
 
     .line 17
-    invoke-virtual {v5}, Le2/a;->f()Z
+    invoke-virtual {v5}, Lv2/a;->f()Z
 
     move-result v4
 
@@ -1027,24 +943,24 @@
 
     .line 18
     :cond_4
-    invoke-virtual {v5, v3}, Le2/a;->g(Ljava/lang/String;)Le2/a;
+    invoke-virtual {v5, v3}, Lv2/a;->g(Ljava/lang/String;)Lv2/a;
 
     move-result-object v4
 
     if-eqz v4, :cond_5
 
     .line 19
-    invoke-virtual {v4}, Le2/a;->f()Z
+    invoke-virtual {v4}, Lv2/a;->f()Z
 
     move-result v6
 
     if-nez v6, :cond_6
 
     :cond_5
-    const-string/jumbo v4, "text"
+    const-string v4, "text"
 
     .line 20
-    invoke-virtual {v5, v4, v3}, Le2/a;->d(Ljava/lang/String;Ljava/lang/String;)Le2/a;
+    invoke-virtual {v5, v4, v3}, Lv2/a;->d(Ljava/lang/String;Ljava/lang/String;)Lv2/a;
 
     move-result-object v4
 
@@ -1052,7 +968,7 @@
     if-eqz v4, :cond_8
 
     .line 21
-    invoke-virtual {v4}, Le2/a;->f()Z
+    invoke-virtual {v4}, Lv2/a;->f()Z
 
     move-result v3
 
@@ -1072,7 +988,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v4}, Le2/a;->n()Landroid/net/Uri;
+    invoke-virtual {v4}, Lv2/a;->n()Landroid/net/Uri;
 
     move-result-object v4
 
@@ -1848,16 +1764,11 @@
     sput-object v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->saveLocationDirPath:Landroid/net/Uri;
 
     .line 5
-    iget-object v0, p2, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->activityStatusChecker:Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;
+    iget-object p2, p2, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->activityStatusChecker:Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;
 
-    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->activityStatusChecker:Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;
+    iput-object p2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->activityStatusChecker:Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;
 
     .line 6
-    iget-object p2, p2, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    iput-object p2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    .line 7
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -1865,30 +1776,30 @@
 
     iput-object p2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->context:Landroid/content/Context;
 
-    .line 8
+    .line 7
     invoke-direct {p0, p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->setLastSavedLocation(Landroid/content/Context;)V
 
-    .line 9
+    .line 8
     iget-object p2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->locationProviderManager:Lcom/skt/tmap/engine/navigation/location/LocationProviderManager;
 
     invoke-virtual {p2, p0}, Lcom/skt/tmap/engine/navigation/location/LocationProviderManager;->initializeAllProvider(Lcom/skt/tmap/engine/navigation/location/LocationProviderListener;)V
 
     const/4 p2, 0x0
 
-    .line 10
+    .line 9
     invoke-virtual {p0, p2}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->scheduleDummyLocation(Z)V
 
-    .line 11
+    .line 10
     iget-object p2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->gpsStatusListener:Lcom/skt/tmap/engine/navigation/location/GpsStatusListener;
 
     invoke-virtual {p2, p1}, Lcom/skt/tmap/engine/navigation/location/GpsStatusListener;->initStatusListener(Landroid/content/Context;)V
 
-    .line 12
+    .line 11
     iget-object p2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->activityStatusChecker:Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;
 
     if-eqz p2, :cond_1
 
-    .line 13
+    .line 12
     invoke-interface {p2, p1}, Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;->initStatusListener(Landroid/content/Context;)V
 
     :cond_1
@@ -1904,8 +1815,21 @@
     return v0
 .end method
 
+.method public isShadeAreaAndWeakGpsSignal()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->shadeAreaCheckerForSDK:Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;->isShadeAreaAndWeakGpsSignal()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public onLocationChanged(Landroid/location/Location;)V
-    .locals 6
+    .locals 5
 
     if-eqz p1, :cond_0
 
@@ -1951,71 +1875,135 @@
 
     .line 6
     :cond_3
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+    new-instance v0, Landroid/os/Bundle;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getLastRGData()Lcom/skt/tmap/engine/navigation/data/RGData;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_8
 
     .line 7
-    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
+    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->gpsStatusListener:Lcom/skt/tmap/engine/navigation/location/GpsStatusListener;
 
-    if-eqz v1, :cond_4
-
-    instance-of v2, v1, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;
-
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_6
 
     .line 8
-    check-cast v1, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;
+    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/location/GpsStatusListener;->getFixedSatelliteCount()I
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->isGpsProvider(Landroid/location/Location;)Z
+    move-result v1
+
+    .line 9
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1f
+
+    const/4 v4, 0x4
+
+    if-lt v2, v3, :cond_4
+
+    .line 10
+    invoke-virtual {p1}, Landroid/location/Location;->isMock()Z
 
     move-result v2
 
+    if-eqz v2, :cond_5
+
+    goto :goto_0
+
+    .line 11
+    :cond_4
+    invoke-virtual {p1}, Landroid/location/Location;->isFromMockProvider()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    :goto_0
+    move v1, v4
+
+    :cond_5
+    const-string v2, "satelliteCount"
+
+    .line 12
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 13
+    :cond_6
+    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->activityStatusChecker:Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;
+
+    if-eqz v1, :cond_7
+
+    .line 14
+    invoke-interface {v1}, Lcom/skt/tmap/engine/navigation/location/GmsActivityStatusInterface;->getActivityType()I
+
+    move-result v1
+
+    const-string v2, "activityType"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 15
+    :cond_7
+    invoke-virtual {p1, v0}, Landroid/location/Location;->setExtras(Landroid/os/Bundle;)V
+
+    .line 16
+    :cond_8
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getLastRGData()Lcom/skt/tmap/engine/navigation/data/RGData;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a
+
+    if-eqz p1, :cond_a
+
+    .line 17
+    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->shadeAreaCheckerForSDK:Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;
+
+    invoke-static {p1}, Lcom/skt/tmap/engine/navigation/util/TmapExtenstionKt;->getSatelliteCount(Landroid/location/Location;)I
+
+    move-result v2
+
+    if-lez v2, :cond_9
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_9
+    const/4 v2, 0x0
+
+    :goto_1
     iget v3, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->eVirtualGps:I
 
     iget v4, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->nLinkFacil:I
 
-    iget v5, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->nNextLinkFacil:I
+    iget v0, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->nNextLinkFacil:I
 
-    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;->updateRouteInfo(ZIII)V
+    invoke-virtual {v1, v2, v3, v4, v0}, Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;->updateRouteInfo(ZIII)V
 
-    .line 9
-    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
+    :cond_a
+    if-eqz p1, :cond_d
 
-    check-cast v1, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;
+    .line 18
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->locationReliabilityChecker:Lcom/skt/tmap/engine/navigation/location/LocationReliabilityChecker;
 
-    iget v2, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->linkId:I
+    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->shadeAreaCheckerForSDK:Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;
 
-    iget-short v3, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->meshId:S
+    .line 19
+    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/location/ShadeAreaCheckerForSDK;->isInShadedAreaLink()Z
 
-    iget-short v4, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->linkDirection:S
+    move-result v1
 
-    iget v0, v0, Lcom/skt/tmap/engine/navigation/data/RGData;->mapVersion:I
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;->updateLinkInfo(ISSI)V
-
-    :cond_4
-    if-eqz p1, :cond_7
-
-    .line 10
-    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    const-string v1, "fake_gps"
-
-    if-eqz v0, :cond_5
-
-    .line 11
-    invoke-interface {v0, p1}, Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;->isReliableLocation(Landroid/location/Location;)Z
+    invoke-virtual {v0, p1, v1}, Lcom/skt/tmap/engine/navigation/location/LocationReliabilityChecker;->isReliableLocation(Landroid/location/Location;Z)Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    const-string v1, "fake_gps"
+
+    if-nez v0, :cond_b
 
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
@@ -2025,24 +2013,24 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_b
 
-    goto :goto_0
+    goto :goto_2
 
-    .line 12
-    :cond_5
+    .line 20
+    :cond_b
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->handler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->dummyLocationSender:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 13
+    .line 21
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_c
 
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
@@ -2054,7 +2042,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_c
 
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
 
@@ -2064,29 +2052,29 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_c
 
-    .line 14
+    .line 22
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->currentLocation:Landroid/location/Location;
 
-    .line 15
-    :cond_6
+    .line 23
+    :cond_c
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->locationProcessRunnable:Lcom/skt/tmap/engine/navigation/location/LocationProcessInterface;
 
     invoke-interface {v0, p1}, Lcom/skt/tmap/engine/navigation/location/LocationProcessInterface;->addLocation(Landroid/location/Location;)V
 
-    .line 16
+    .line 24
     invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->checkMockLocation(Landroid/location/Location;)V
 
-    .line 17
+    .line 25
     invoke-static {p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->isDummyLocation(Landroid/location/Location;)Z
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->scheduleDummyLocation(Z)V
 
-    :cond_7
-    :goto_0
+    :cond_d
+    :goto_2
     return-void
 .end method
 
@@ -2210,9 +2198,9 @@
     .line 6
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->handler:Landroid/os/Handler;
 
-    new-instance v0, Lcom/skt/tmap/engine/navigation/location/a;
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/b;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/navigation/location/a;-><init>(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/navigation/location/b;-><init>(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2253,7 +2241,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "tmap_default"
+    const-string v1, "tmap_default"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2430,34 +2418,21 @@
 
     if-eqz p2, :cond_0
 
-    .line 1
-    invoke-virtual {p2}, Landroid/location/Location;->getProvider()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "gps"
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     const/4 v0, 0x0
 
     const-string v1, "PREFERENCE_LOCATION"
 
-    .line 2
+    .line 1
     invoke-virtual {p1, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
 
-    .line 3
+    .line 2
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
 
-    .line 4
+    .line 3
     invoke-virtual {p2}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
@@ -2468,7 +2443,7 @@
 
     invoke-interface {p1, v1, v0}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 5
+    .line 4
     invoke-virtual {p2}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v0
@@ -2479,7 +2454,7 @@
 
     invoke-interface {p1, v0, p2}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 6
+    .line 5
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     :cond_0

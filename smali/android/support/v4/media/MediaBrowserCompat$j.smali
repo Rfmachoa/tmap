@@ -448,7 +448,7 @@
     :cond_1
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$j;->f:Landroidx/collection/a;
 
-    invoke-virtual {v1, p2}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p2}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1490,7 +1490,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$j;->f:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1506,7 +1506,7 @@
     .line 3
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$j;->f:Landroidx/collection/a;
 
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     if-nez p2, :cond_1
@@ -1702,7 +1702,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$j;->f:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1827,7 +1827,7 @@
     :cond_5
     iget-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$j;->f:Landroidx/collection/a;
 
-    invoke-virtual {p2, p1}, Landroidx/collection/l;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroidx/collection/m;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_6
     return-void

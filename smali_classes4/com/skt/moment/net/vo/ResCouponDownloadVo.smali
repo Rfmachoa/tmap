@@ -38,6 +38,14 @@
 
 .method public setCoupon(Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "coupon"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCouponDownloadVo;->coupon:Lcom/skt/moment/net/vo/ResCouponDownloadVo$ResCouponVo;

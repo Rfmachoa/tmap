@@ -915,7 +915,7 @@
     .line 2
     iget p1, p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->g:I
 
-    invoke-static {p1, p2}, Ls1/h;->d(II)I
+    invoke-static {p1, p2}, Landroidx/core/view/l;->d(II)I
 
     move-result p1
 
@@ -925,7 +925,7 @@
     iget v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$d;->h:I
 
     .line 4
-    invoke-static {v0, p2}, Ls1/h;->d(II)I
+    invoke-static {v0, p2}, Landroidx/core/view/l;->d(II)I
 
     move-result p2
 

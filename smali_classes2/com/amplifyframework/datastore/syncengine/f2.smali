@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
-# static fields
-.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/f2;
+# instance fields
+.field public final synthetic a:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/f2;
-
-    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/f2;-><init>()V
-
-    sput-object v0, Lcom/amplifyframework/datastore/syncengine/f2;->a:Lcom/amplifyframework/datastore/syncengine/f2;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lio/reactivex/rxjava3/subjects/ReplaySubject;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/f2;->a:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/f2;->a:Lio/reactivex/rxjava3/subjects/ReplaySubject;
 
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->d(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lio/reactivex/rxjava3/subjects/ReplaySubject;->onError(Ljava/lang/Throwable;)V
 
-    return-object p1
+    return-void
 .end method

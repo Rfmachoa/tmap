@@ -14,26 +14,13 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0018\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\u0010\u0007\u001a\u0004\u0018\u00010\u0006\"\u0004\u0008\u0000\u0010\u00002\u000c\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00012\u000c\u0010\u0005\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0003H\u0080@"
-    }
-    d2 = {
-        "T",
-        "Landroidx/lifecycle/LiveData;",
-        "source",
-        "Lkotlin/coroutines/c;",
-        "Lkotlinx/coroutines/e1;",
-        "continuation",
-        "",
-        "emitSource"
-    }
     k = 0x3
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
+    xi = 0x30
 .end annotation
 
 .annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
@@ -42,25 +29,22 @@
     i = {
         0x0,
         0x0,
-        0x1,
         0x1
     }
     l = {
-        0xe3,
-        0xe4
+        0xe5,
+        0xe6
     }
     m = "emitSource$lifecycle_livedata_ktx_release"
     n = {
         "this",
         "source",
-        "this",
-        "source"
+        "this"
     }
     s = {
         "L$0",
         "L$1",
-        "L$0",
-        "L$1"
+        "L$0"
     }
 .end annotation
 
@@ -75,11 +59,29 @@
 .field public synthetic result:Ljava/lang/Object;
 
 .field public final synthetic this$0:Landroidx/lifecycle/CoroutineLiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/CoroutineLiveData<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/CoroutineLiveData;Lkotlin/coroutines/c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/CoroutineLiveData<",
+            "TT;>;",
+            "Lkotlin/coroutines/c<",
+            "-",
+            "Landroidx/lifecycle/CoroutineLiveData$emitSource$1;",
+            ">;)V"
+        }
+    .end annotation
 
     iput-object p1, p0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->this$0:Landroidx/lifecycle/CoroutineLiveData;
 

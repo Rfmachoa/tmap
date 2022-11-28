@@ -133,7 +133,7 @@
 
     move-result v3
 
-    invoke-static {v4, v0, v3}, Lj1/a;->e(III)I
+    invoke-static {v4, v0, v3}, Ld2/a;->e(III)I
 
     move-result v3
 
@@ -167,22 +167,64 @@
     :cond_4
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
-    .line 16
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v0
 
+    .line 16
     iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
+    .line 17
     invoke-static {v1}, Landroidx/core/view/ViewCompat;->e0(Landroid/view/View;)I
 
     move-result v1
 
-    sub-int/2addr v0, v1
+    sub-int v1, v0, v1
+
+    sub-int/2addr v1, p1
+
+    .line 18
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
+
+    invoke-virtual {p1}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->getScrimVisibleHeightTrigger()I
+
+    move-result p1
 
     sub-int/2addr v0, p1
 
-    .line 17
+    .line 19
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
+
+    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    int-to-float v0, v0
+
+    int-to-float v3, v1
+
+    div-float/2addr v0, v3
+
+    .line 20
+    invoke-static {v2, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    .line 21
+    invoke-virtual {p1, v0}, Lcom/google/android/material/internal/CollapsingTextHelper;->setFadeModeStartFraction(F)V
+
+    .line 22
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
+
+    iget-object v0, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
+
+    iget p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->currentOffset:I
+
+    add-int/2addr p1, v1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/CollapsingTextHelper;->setCurrentOffsetY(I)V
+
+    .line 23
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
     iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
@@ -193,9 +235,7 @@
 
     int-to-float p2, p2
 
-    int-to-float v0, v0
-
-    div-float/2addr p2, v0
+    div-float/2addr p2, v3
 
     invoke-virtual {p1, p2}, Lcom/google/android/material/internal/CollapsingTextHelper;->setExpansionFraction(F)V
 

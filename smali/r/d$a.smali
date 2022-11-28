@@ -1,333 +1,98 @@
-.class public final Lr/d$a;
+.class public Lr/d$a;
 .super Ljava/lang/Object;
-.source "CameraEventCallbacks.java"
+.source "BrowserActionsFallbackMenuUi.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lr/d;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lr/d;->a()Ljava/lang/Runnable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
-    name = "a"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lr/c;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final synthetic a:Lr/d;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "callbacks"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lr/c;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>(Lr/d;)V
+    .locals 0
 
     .line 1
+    iput-object p1, p0, Lr/d$a;->a:Lr/d;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lr/d$a;->a:Ljava/util/List;
-
-    .line 3
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr/c;
-
-    .line 4
-    iget-object v1, p0, Lr/d$a;->a:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/util/List;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lr/c;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lr/d$a;->a:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public b()Ljava/util/List;
+.method public run()V
     .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/g;",
-            ">;"
-        }
-    .end annotation
 
     .line 1
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lr/d$a;->a:Lr/d;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iget-object v0, v0, Lr/d;->a:Landroid/content/Context;
+
+    const-string v1, "clipboard"
 
     .line 2
-    iget-object v1, p0, Lr/d$a;->a:Ljava/util/List;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object v0
+
+    check-cast v0, Landroid/content/ClipboardManager;
+
+    .line 3
+    iget-object v1, p0, Lr/d$a;->a:Lr/d;
+
+    iget-object v1, v1, Lr/d;->b:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const-string v2, "url"
 
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr/c;
-
-    .line 3
-    invoke-virtual {v2}, Lr/c;->d()Landroidx/camera/core/impl/g;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 4
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public c()Ljava/util/List;
-    .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/g;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 2
-    iget-object v1, p0, Lr/d$a;->a:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {v2, v1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
     move-result-object v1
 
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr/c;
-
-    .line 3
-    invoke-virtual {v2}, Lr/c;->e()Landroidx/camera/core/impl/g;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
     .line 4
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    goto :goto_0
+    .line 5
+    iget-object v0, p0, Lr/d$a;->a:Lr/d;
 
-    :cond_1
-    return-object v0
-.end method
+    iget-object v0, v0, Lr/d;->a:Landroid/content/Context;
 
-.method public d()Ljava/util/List;
-    .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+    sget v1, Landroidx/browser/R$string;->copy_toast_msg:I
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/g;",
-            ">;"
-        }
-    .end annotation
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 6
+    iget-object v1, p0, Lr/d$a;->a:Lr/d;
 
-    .line 2
-    iget-object v1, p0, Lr/d$a;->a:Ljava/util/List;
+    iget-object v1, v1, Lr/d;->a:Landroid/content/Context;
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    invoke-static {v1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v0
 
-    move-result v2
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr/c;
-
-    .line 3
-    invoke-virtual {v2}, Lr/c;->f()Landroidx/camera/core/impl/g;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 4
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public e()Ljava/util/List;
-    .locals 3
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroidx/camera/core/impl/g;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 2
-    iget-object v1, p0, Lr/d$a;->a:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr/c;
-
-    .line 3
-    invoke-virtual {v2}, Lr/c;->g()Landroidx/camera/core/impl/g;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 4
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
+    return-void
 .end method

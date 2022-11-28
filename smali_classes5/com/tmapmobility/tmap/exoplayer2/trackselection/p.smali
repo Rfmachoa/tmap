@@ -1,111 +1,48 @@
-.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+.class public final synthetic Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
 .super Ljava/lang/Object;
-.source "ExoTrackSelection.java"
+.source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelection;
+.implements Ljava/util/Comparator;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$b;,
-        Lcom/tmapmobility/tmap/exoplayer2/trackselection/p$a;
-    }
-.end annotation
+# static fields
+.field public static final synthetic a:Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+
+
+# direct methods
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;-><init>()V
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;->a:Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract b(JJJLjava/util/List;[Lme/o;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(JJJ",
-            "Ljava/util/List<",
-            "+",
-            "Lme/n;",
-            ">;[",
-            "Lme/o;",
-            ")V"
-        }
-    .end annotation
-.end method
-
-.method public abstract blacklist(IJ)Z
-.end method
-
-.method public abstract c(IJ)Z
-.end method
-
-.method public abstract d(F)V
-.end method
-
-.method public abstract disable()V
-.end method
-
-.method public e()V
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    return-void
-.end method
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;
 
-.method public abstract enable()V
-.end method
+    check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;
 
-.method public abstract evaluateQueueSize(JLjava/util/List;)I
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Ljava/util/List<",
-            "+",
-            "Lme/n;",
-            ">;)I"
-        }
-    .end annotation
-.end method
+    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;->d(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$i;)I
 
-.method public f(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(JLme/f;Ljava/util/List;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Lme/f;",
-            "Ljava/util/List<",
-            "+",
-            "Lme/n;",
-            ">;)Z"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
+    move-result p1
 
     return p1
-.end method
-
-.method public abstract getSelectedFormat()Lcom/tmapmobility/tmap/exoplayer2/Format;
-.end method
-
-.method public abstract getSelectedIndex()I
-.end method
-
-.method public abstract getSelectedIndexInTrackGroup()I
-.end method
-
-.method public abstract getSelectionData()Ljava/lang/Object;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end method
-
-.method public abstract getSelectionReason()I
-.end method
-
-.method public h()V
-    .locals 0
-
-    return-void
 .end method

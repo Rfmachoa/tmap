@@ -1,5 +1,5 @@
 .class public Lcom/coremedia/iso/boxes/DataReferenceBox;
-.super Ld6/d;
+.super Lb8/d;
 .source "DataReferenceBox.java"
 
 
@@ -14,7 +14,7 @@
     const-string v0, "dref"
 
     .line 1
-    invoke-direct {p0, v0}, Ld6/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lb8/d;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -25,7 +25,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
+    invoke-virtual {p0, p1}, Lb8/c;->parseVersionAndFlags(Ljava/nio/ByteBuffer;)J
 
     const/4 v0, 0x4
 
@@ -35,7 +35,7 @@
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     .line 3
-    invoke-virtual {p0, p1}, Ld6/d;->parseChildBoxes(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/d;->parseChildBoxes(Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method
@@ -44,10 +44,10 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0, p1}, Ld6/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/c;->writeVersionAndFlags(Ljava/nio/ByteBuffer;)V
 
     .line 2
-    invoke-virtual {p0}, Ld6/d;->getBoxes()Ljava/util/List;
+    invoke-virtual {p0}, Lb8/d;->getBoxes()Ljava/util/List;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
     invoke-static {p1, v0, v1}, Lcom/coremedia/iso/IsoTypeWriter;->writeUInt32(Ljava/nio/ByteBuffer;J)V
 
     .line 3
-    invoke-virtual {p0, p1}, Ld6/d;->writeChildBoxes(Ljava/nio/ByteBuffer;)V
+    invoke-virtual {p0, p1}, Lb8/d;->writeChildBoxes(Ljava/nio/ByteBuffer;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0}, Ld6/d;->getContentSize()J
+    invoke-super {p0}, Lb8/d;->getContentSize()J
 
     move-result-wide v0
 

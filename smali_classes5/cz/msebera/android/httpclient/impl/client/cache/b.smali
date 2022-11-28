@@ -171,7 +171,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized f(Lcz/msebera/android/httpclient/impl/client/cache/n;Lcz/msebera/android/httpclient/conn/routing/a;Lkf/o;Lmf/c;Lkf/g;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
+.method public declared-synchronized g(Lcz/msebera/android/httpclient/impl/client/cache/n;Lcz/msebera/android/httpclient/conn/routing/a;Loh/o;Lqh/c;Loh/g;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)V
     .locals 13
 
     move-object v11, p0
@@ -182,7 +182,7 @@
     :try_start_0
     iget-object v0, v11, Lcz/msebera/android/httpclient/impl/client/cache/b;->c:Lcz/msebera/android/httpclient/impl/client/cache/i;
 
-    invoke-virtual/range {p4 .. p4}, Lpg/h;->h()Lcz/msebera/android/httpclient/HttpHost;
+    invoke-virtual/range {p4 .. p4}, Lti/h;->h()Lcz/msebera/android/httpclient/HttpHost;
 
     move-result-object v1
 
@@ -190,7 +190,7 @@
 
     move-object/from16 v8, p6
 
-    invoke-virtual {v0, v1, v5, v8}, Lcz/msebera/android/httpclient/impl/client/cache/i;->f(Lcz/msebera/android/httpclient/HttpHost;Ldf/q;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v5, v8}, Lcz/msebera/android/httpclient/impl/client/cache/i;->f(Lcz/msebera/android/httpclient/HttpHost;Lhh/q;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Ljava/lang/String;
 
     move-result-object v12
 
@@ -231,7 +231,7 @@
 
     move-object v9, v12
 
-    invoke-direct/range {v1 .. v10}, Lcz/msebera/android/httpclient/impl/client/cache/a;-><init>(Lcz/msebera/android/httpclient/impl/client/cache/b;Lcz/msebera/android/httpclient/impl/client/cache/n;Lcz/msebera/android/httpclient/conn/routing/a;Lkf/o;Lmf/c;Lkf/g;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;Ljava/lang/String;I)V
+    invoke-direct/range {v1 .. v10}, Lcz/msebera/android/httpclient/impl/client/cache/a;-><init>(Lcz/msebera/android/httpclient/impl/client/cache/b;Lcz/msebera/android/httpclient/impl/client/cache/n;Lcz/msebera/android/httpclient/conn/routing/a;Loh/o;Lqh/c;Loh/g;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;Ljava/lang/String;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -239,7 +239,7 @@
     :try_start_1
     iget-object v1, v11, Lcz/msebera/android/httpclient/impl/client/cache/b;->a:Lcz/msebera/android/httpclient/impl/client/cache/l0;
 
-    invoke-interface {v1, v0}, Lcz/msebera/android/httpclient/impl/client/cache/l0;->B(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
+    invoke-interface {v1, v0}, Lcz/msebera/android/httpclient/impl/client/cache/l0;->D(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
 
     .line 6
     iget-object v0, v11, Lcz/msebera/android/httpclient/impl/client/cache/b;->b:Ljava/util/Set;

@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNavDeepLinkDslBuilder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavDeepLinkDslBuilder.kt\nandroidx/navigation/NavDeepLinkDslBuilderKt\n*L\n1#1,67:1\n*E\n"
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
@@ -19,35 +15,35 @@
         "Lkotlin/d1;",
         "Lkotlin/ExtensionFunctionType;",
         "deepLinkBuilder",
-        "Landroidx/navigation/t;",
+        "Landroidx/navigation/NavDeepLink;",
         "a",
-        "navigation-common-ktx_release"
+        "navigation-common_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
 
 
 # direct methods
-.method public static final a(Lej/l;)Landroidx/navigation/t;
+.method public static final a(Lgl/l;)Landroidx/navigation/NavDeepLink;
     .locals 1
-    .param p0    # Lej/l;
+    .param p0    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Landroidx/navigation/v;",
             "Lkotlin/d1;",
             ">;)",
-            "Landroidx/navigation/t;"
+            "Landroidx/navigation/NavDeepLink;"
         }
     .end annotation
 
@@ -56,16 +52,16 @@
 
     const-string v0, "deepLinkBuilder"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Landroidx/navigation/v;
 
     invoke-direct {v0}, Landroidx/navigation/v;-><init>()V
 
-    invoke-interface {p0, v0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroidx/navigation/v;->a()Landroidx/navigation/t;
+    invoke-virtual {v0}, Landroidx/navigation/v;->a()Landroidx/navigation/NavDeepLink;
 
     move-result-object p0
 

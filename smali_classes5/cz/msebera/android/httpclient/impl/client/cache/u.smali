@@ -160,7 +160,7 @@
 
     const-string p2, " may not be negative"
 
-    invoke-static {p0, p2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -191,7 +191,7 @@
 
     const-string v0, " may not be null"
 
-    invoke-static {p0, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -223,7 +223,7 @@
 
 
 # virtual methods
-.method public B(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
+.method public D(Lcz/msebera/android/httpclient/impl/client/cache/a;)V
     .locals 4
 
     const-string v0, "revalidationRequest"
@@ -304,7 +304,7 @@
     return-void
 .end method
 
-.method public f()J
+.method public g()J
     .locals 2
 
     .line 1
@@ -322,7 +322,7 @@
     return-wide v0
 .end method
 
-.method public u()J
+.method public s()J
     .locals 2
 
     .line 1

@@ -1,34 +1,30 @@
-.class public final synthetic Lcom/skt/tmap/activity/a0;
+.class public interface abstract Lcom/skt/tmap/activity/a0;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/a0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    return-void
-.end method
+.source "MapControlInterface.java"
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public abstract G4()V
+.end method
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/a0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+.method public abstract e(Lcom/skt/tmap/mapview/streaming/a;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callback"
+        }
+    .end annotation
+.end method
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->R6(Lcom/skt/tmap/activity/TmapMainActivity;)V
-
-    return-void
+.method public abstract k(Lcom/skt/tmap/mapview/streaming/a;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callback"
+        }
+    .end annotation
 .end method

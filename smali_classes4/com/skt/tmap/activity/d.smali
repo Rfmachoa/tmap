@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroidx/core/view/i0;
 
 
 # instance fields
@@ -23,14 +23,14 @@
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public final onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
     .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/activity/d;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    check-cast p1, Lxb/c;
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->G5(Lcom/skt/tmap/activity/BaseAiActivity;Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseAiActivity;->v5(Lcom/skt/tmap/activity/BaseAiActivity;Lxb/c;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

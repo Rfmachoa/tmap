@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/car/app/AppManager;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/m0;Landroidx/lifecycle/Lifecycle;)V
+    value = Landroidx/car/app/AppManager;-><init>(Landroidx/car/app/CarContext;Landroidx/car/app/r0;Landroidx/lifecycle/Lifecycle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -73,7 +73,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/car/app/CarContext;->u()Landroidx/activity/OnBackPressedDispatcher;
+    invoke-virtual {p0}, Landroidx/car/app/CarContext;->v()Landroidx/activity/OnBackPressedDispatcher;
 
     move-result-object p0
 
@@ -95,13 +95,13 @@
     .line 1
     const-class v0, Landroidx/car/app/AppManager;
 
-    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroidx/car/app/AppManager;
 
-    invoke-virtual {p0}, Landroidx/car/app/AppManager;->v()V
+    invoke-virtual {p0}, Landroidx/car/app/AppManager;->F()V
 
     const/4 p0, 0x0
 
@@ -119,13 +119,13 @@
     .line 1
     const-class v0, Landroidx/car/app/AppManager;
 
-    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroidx/car/app/AppManager;
 
-    invoke-virtual {p0}, Landroidx/car/app/AppManager;->w()V
+    invoke-virtual {p0}, Landroidx/car/app/AppManager;->G()V
 
     const/4 p0, 0x0
 
@@ -140,7 +140,7 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/AppManager$1;->this$0:Landroidx/car/app/AppManager;
 
-    invoke-virtual {v0}, Landroidx/car/app/AppManager;->m()Landroidx/lifecycle/Lifecycle;
+    invoke-virtual {v0}, Landroidx/car/app/AppManager;->r()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
@@ -149,7 +149,7 @@
     const-class v2, Landroidx/car/app/ScreenManager;
 
     .line 2
-    invoke-virtual {v1, v2}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroidx/car/app/CarContext;->q(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -157,9 +157,9 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Landroidx/car/app/i;
+    new-instance v2, Landroidx/car/app/l;
 
-    invoke-direct {v2, v1}, Landroidx/car/app/i;-><init>(Landroidx/car/app/ScreenManager;)V
+    invoke-direct {v2, v1}, Landroidx/car/app/l;-><init>(Landroidx/car/app/ScreenManager;)V
 
     const-string v1, "getTemplate"
 
@@ -175,15 +175,15 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/AppManager$1;->this$0:Landroidx/car/app/AppManager;
 
-    invoke-virtual {v0}, Landroidx/car/app/AppManager;->m()Landroidx/lifecycle/Lifecycle;
+    invoke-virtual {v0}, Landroidx/car/app/AppManager;->r()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
 
-    new-instance v2, Landroidx/car/app/f;
+    new-instance v2, Landroidx/car/app/i;
 
-    invoke-direct {v2, v1}, Landroidx/car/app/f;-><init>(Landroidx/car/app/CarContext;)V
+    invoke-direct {v2, v1}, Landroidx/car/app/i;-><init>(Landroidx/car/app/CarContext;)V
 
     const-string v1, "onBackPressed"
 
@@ -193,58 +193,99 @@
 .end method
 
 .method public startLocationUpdates(Landroidx/car/app/IOnDoneCallback;)V
-    .locals 4
+    .locals 7
 
     .line 1
     iget-object v0, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
 
-    const-string v1, "android.permission.ACCESS_FINE_LOCATION"
-
-    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->checkSelfPermission(Ljava/lang/String;)I
-
-    move-result v0
-
-    const-string v1, "startLocationUpdates"
-
-    const/4 v2, -0x1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
-
-    const-string v3, "android.permission.ACCESS_COARSE_LOCATION"
-
-    .line 2
-    invoke-virtual {v0, v3}, Landroid/content/ContextWrapper;->checkSelfPermission(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-ne v0, v2, :cond_0
-
-    .line 3
-    new-instance v0, Ljava/lang/SecurityException;
-
-    const-string v2, "Location permission(s) not granted."
-
-    invoke-direct {v0, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, v1, v0}, Landroidx/car/app/utils/RemoteUtils;->q(Landroidx/car/app/IOnDoneCallback;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 4
-    :cond_0
-    iget-object v0, p0, Landroidx/car/app/AppManager$1;->this$0:Landroidx/car/app/AppManager;
-
-    invoke-virtual {v0}, Landroidx/car/app/AppManager;->m()Landroidx/lifecycle/Lifecycle;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
+    .line 2
+    iget-object v1, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
+
+    .line 3
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "android.permission.ACCESS_FINE_LOCATION"
+
+    .line 4
+    invoke-virtual {v0, v2, v1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, -0x1
+
+    if-ne v1, v4, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v3
+
+    .line 5
+    :goto_0
+    iget-object v5, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
+
+    .line 6
+    invoke-virtual {v5}, Landroid/content/ContextWrapper;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "android.permission.ACCESS_COARSE_LOCATION"
+
+    .line 7
+    invoke-virtual {v0, v6, v5}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ne v0, v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    const-string v0, "startLocationUpdates"
+
+    if-eqz v1, :cond_2
+
+    if-eqz v2, :cond_2
+
+    .line 8
+    new-instance v1, Ljava/lang/SecurityException;
+
+    const-string v2, "Location permission(s) not granted."
+
+    invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, v0, v1}, Landroidx/car/app/utils/RemoteUtils;->q(Landroidx/car/app/IOnDoneCallback;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 9
+    :cond_2
+    iget-object v1, p0, Landroidx/car/app/AppManager$1;->this$0:Landroidx/car/app/AppManager;
+
+    invoke-virtual {v1}, Landroidx/car/app/AppManager;->r()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object v1
+
     iget-object v2, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
 
-    new-instance v3, Landroidx/car/app/h;
+    new-instance v3, Landroidx/car/app/k;
 
-    invoke-direct {v3, v2}, Landroidx/car/app/h;-><init>(Landroidx/car/app/CarContext;)V
+    invoke-direct {v3, v2}, Landroidx/car/app/k;-><init>(Landroidx/car/app/CarContext;)V
 
-    invoke-static {v0, p1, v1, v3}, Landroidx/car/app/utils/RemoteUtils;->h(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/IOnDoneCallback;Ljava/lang/String;Landroidx/car/app/utils/RemoteUtils$a;)V
+    invoke-static {v1, p1, v0, v3}, Landroidx/car/app/utils/RemoteUtils;->h(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/IOnDoneCallback;Ljava/lang/String;Landroidx/car/app/utils/RemoteUtils$a;)V
 
     return-void
 .end method
@@ -255,15 +296,15 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/AppManager$1;->this$0:Landroidx/car/app/AppManager;
 
-    invoke-virtual {v0}, Landroidx/car/app/AppManager;->m()Landroidx/lifecycle/Lifecycle;
+    invoke-virtual {v0}, Landroidx/car/app/AppManager;->r()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
     iget-object v1, p0, Landroidx/car/app/AppManager$1;->val$carContext:Landroidx/car/app/CarContext;
 
-    new-instance v2, Landroidx/car/app/g;
+    new-instance v2, Landroidx/car/app/j;
 
-    invoke-direct {v2, v1}, Landroidx/car/app/g;-><init>(Landroidx/car/app/CarContext;)V
+    invoke-direct {v2, v1}, Landroidx/car/app/j;-><init>(Landroidx/car/app/CarContext;)V
 
     const-string v1, "stopLocationUpdates"
 

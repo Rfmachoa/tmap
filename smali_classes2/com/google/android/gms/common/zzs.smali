@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/zzs;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field private final zzb:Lcom/google/android/gms/common/zzi;
+.field private final zzb:Lcom/google/android/gms/common/zzj;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getCallingCertificateBinder"
         id = 0x2
@@ -142,10 +142,10 @@
     if-eqz p2, :cond_2
 
     .line 3
-    new-instance p1, Lcom/google/android/gms/common/zzj;
+    new-instance p1, Lcom/google/android/gms/common/zzk;
 
     .line 4
-    invoke-direct {p1, p2}, Lcom/google/android/gms/common/zzj;-><init>([B)V
+    invoke-direct {p1, p2}, Lcom/google/android/gms/common/zzk;-><init>([B)V
 
     goto :goto_1
 
@@ -163,7 +163,7 @@
 
     .line 7
     :goto_1
-    iput-object p1, p0, Lcom/google/android/gms/common/zzs;->zzb:Lcom/google/android/gms/common/zzi;
+    iput-object p1, p0, Lcom/google/android/gms/common/zzs;->zzb:Lcom/google/android/gms/common/zzj;
 
     iput-boolean p3, p0, Lcom/google/android/gms/common/zzs;->zzc:Z
 
@@ -172,9 +172,9 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lcom/google/android/gms/common/zzi;ZZ)V
+.method public constructor <init>(Ljava/lang/String;Lcom/google/android/gms/common/zzj;ZZ)V
     .locals 0
-    .param p2    # Lcom/google/android/gms/common/zzi;
+    .param p2    # Lcom/google/android/gms/common/zzj;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
@@ -183,7 +183,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/common/zzs;->zza:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/google/android/gms/common/zzs;->zzb:Lcom/google/android/gms/common/zzi;
+    iput-object p2, p0, Lcom/google/android/gms/common/zzs;->zzb:Lcom/google/android/gms/common/zzj;
 
     iput-boolean p3, p0, Lcom/google/android/gms/common/zzs;->zzc:Z
 
@@ -211,7 +211,7 @@
     .line 2
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    iget-object v0, p0, Lcom/google/android/gms/common/zzs;->zzb:Lcom/google/android/gms/common/zzi;
+    iget-object v0, p0, Lcom/google/android/gms/common/zzs;->zzb:Lcom/google/android/gms/common/zzj;
 
     if-nez v0, :cond_0
 

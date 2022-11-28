@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
     .line 2
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     move-result-object v0
 
@@ -74,18 +74,18 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->G5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->F5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->E5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -100,13 +100,13 @@
     :goto_0
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->F5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/Runnable;
+    invoke-static {v1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->E5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/Runnable;
 
     move-result-object v1
 

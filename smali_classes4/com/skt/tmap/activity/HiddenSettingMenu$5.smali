@@ -47,14 +47,14 @@
     .line 2
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const-string/jumbo v0, "\uc0c1\uc6a9\uc11c\ubc84"
+    const-string v0, "ON"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    const-string/jumbo v0, "\uac1c\ubc1c\uc11c\ubc84"
+    const-string v0, "OFF"
 
     invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

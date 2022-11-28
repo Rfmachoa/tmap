@@ -1,40 +1,41 @@
-.class public final synthetic Landroidx/camera/core/n1;
+.class public final Landroidx/camera/core/n1;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "ImageReaderFormatRecommender.java"
 
 
-# instance fields
-.field public final synthetic a:Landroidx/camera/core/ImageCapture$m;
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
-.field public final synthetic b:Landroidx/camera/core/p1;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/camera/core/n1$a;
+    }
+.end annotation
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/ImageCapture$m;Landroidx/camera/core/p1;)V
+.method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroidx/camera/core/n1;->a:Landroidx/camera/core/ImageCapture$m;
-
-    iput-object p2, p0, Landroidx/camera/core/n1;->b:Landroidx/camera/core/p1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static a()Landroidx/camera/core/n1$a;
     .locals 2
 
-    iget-object v0, p0, Landroidx/camera/core/n1;->a:Landroidx/camera/core/ImageCapture$m;
+    const/16 v0, 0x100
 
-    iget-object v1, p0, Landroidx/camera/core/n1;->b:Landroidx/camera/core/p1;
+    const/16 v1, 0x23
 
-    invoke-static {v0, v1}, Landroidx/camera/core/ImageCapture$m;->b(Landroidx/camera/core/ImageCapture$m;Landroidx/camera/core/p1;)V
+    .line 1
+    invoke-static {v0, v1}, Landroidx/camera/core/n1$a;->a(II)Landroidx/camera/core/n1$a;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -5,7 +5,17 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/firebase/messaging/R$string;
+        Lcom/google/firebase/messaging/R$attr;,
+        Lcom/google/firebase/messaging/R$color;,
+        Lcom/google/firebase/messaging/R$dimen;,
+        Lcom/google/firebase/messaging/R$drawable;,
+        Lcom/google/firebase/messaging/R$id;,
+        Lcom/google/firebase/messaging/R$integer;,
+        Lcom/google/firebase/messaging/R$layout;,
+        Lcom/google/firebase/messaging/R$raw;,
+        Lcom/google/firebase/messaging/R$string;,
+        Lcom/google/firebase/messaging/R$style;,
+        Lcom/google/firebase/messaging/R$styleable;
     }
 .end annotation
 

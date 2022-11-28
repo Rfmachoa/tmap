@@ -1,37 +1,34 @@
 .class public Lu9/g;
-.super Lu9/a;
-.source "PlaybackStopped.java"
+.super Ljava/lang/Object;
+.source "Version.java"
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field private a:Ljava/lang/Short;
     .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "type"
+        value = "major"
+    .end annotation
+.end field
+
+.field private b:Ljava/lang/Short;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "minor"
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Short;Ljava/lang/Short;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Lu9/a;-><init>()V
-
-    const-string v0, "AudioPlayer.PlaybackStopped"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object v0, p0, Lu9/g;->c:Ljava/lang/String;
+    iput-object p1, p0, Lu9/g;->a:Ljava/lang/Short;
+
+    .line 3
+    iput-object p2, p0, Lu9/g;->b:Ljava/lang/Short;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "PlaybackStopped"
-
-    return-object v0
 .end method

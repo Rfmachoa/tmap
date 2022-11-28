@@ -2,18 +2,33 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/camera/core/impl/DeferrableSurface;
+
 
 # direct methods
-.method public static a(Ljava/lang/StringBuilder;FLjava/lang/String;)Ljava/lang/String;
+.method public synthetic constructor <init>(Landroidx/camera/core/impl/DeferrableSurface;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/y2;->a:Landroidx/camera/core/impl/DeferrableSurface;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object p0
 
-    return-object p0
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/camera/camera2/internal/y2;->a:Landroidx/camera/core/impl/DeferrableSurface;
+
+    invoke-static {v0}, Landroidx/camera/camera2/internal/ProcessingCaptureSession;->j(Landroidx/camera/core/impl/DeferrableSurface;)V
+
+    return-void
 .end method

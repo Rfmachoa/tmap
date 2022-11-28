@@ -6,17 +6,27 @@
 .implements Landroidx/lifecycle/Observer;
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
+# static fields
+.field public static final synthetic a:Lcom/skt/tmap/activity/v1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/skt/tmap/activity/v1;
+
+    invoke-direct {v0}, Lcom/skt/tmap/activity/v1;-><init>()V
+
+    sput-object v0, Lcom/skt/tmap/activity/v1;->a:Lcom/skt/tmap/activity/v1;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/v1;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     return-void
 .end method
@@ -24,13 +34,11 @@
 
 # virtual methods
 .method public final onChanged(Ljava/lang/Object;)V
-    .locals 1
+    .locals 0
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/v1;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    check-cast p1, Ljava/lang/String;
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->d7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Boolean;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->a7(Ljava/lang/String;)V
 
     return-void
 .end method

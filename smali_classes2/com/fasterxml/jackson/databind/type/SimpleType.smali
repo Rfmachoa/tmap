@@ -254,6 +254,7 @@
     .line 5
     new-instance v0, Lcom/fasterxml/jackson/databind/type/SimpleType;
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v1
@@ -278,35 +279,17 @@
 
     return-object v0
 
-    .line 6
+    .line 7
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "Can not construct SimpleType for an array (class: "
+    const-string v2, "Cannot construct SimpleType for an array (class: "
 
     invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-static {p0, v2, v1}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 7
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v2, "Can not construct SimpleType for a Collection (class: "
-
-    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {p0, v2, v1}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v1}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -315,16 +298,34 @@
     throw v0
 
     .line 8
-    :cond_2
+    :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "Can not construct SimpleType for a Map (class: "
+    const-string v2, "Cannot construct SimpleType for a Collection (class: "
 
     invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-static {p0, v2, v1}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v1}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 9
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Cannot construct SimpleType for a Map (class: "
+
+    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {p0, v2, v1}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -609,7 +610,7 @@
     :cond_6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "Internal error: Can not resolve sub-type for Class "
+    const-string v2, "Internal error: Cannot resolve sub-type for Class "
 
     invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -627,7 +628,8 @@
 
     iget-object v1, p0, Lcom/fasterxml/jackson/databind/JavaType;->_class:Ljava/lang/Class;
 
-    invoke-static {v1, v2}, Li/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .line 18
+    invoke-static {v1, v2}, Lk/g;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -662,9 +664,16 @@
 
     if-lez v1, :cond_2
 
+    .line 4
+    invoke-virtual {p0, v1}, Lcom/fasterxml/jackson/databind/type/TypeBase;->_hasNTypeParameters(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
     const/16 v2, 0x3c
 
-    .line 4
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 v2, 0x0
@@ -672,7 +681,7 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 5
+    .line 6
     invoke-virtual {p0, v2}, Lcom/fasterxml/jackson/databind/type/TypeBase;->containedType(I)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object v3
@@ -681,10 +690,10 @@
 
     const/16 v4, 0x2c
 
-    .line 6
+    .line 7
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 7
+    .line 8
     :cond_0
     invoke-virtual {v3}, Lcom/fasterxml/jackson/core/type/ResolvedType;->toCanonical()Ljava/lang/String;
 
@@ -699,10 +708,10 @@
     :cond_1
     const/16 v1, 0x3e
 
-    .line 8
+    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 9
+    .line 10
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -839,6 +848,14 @@
     return-object p1
 .end method
 
+.method public hasContentType()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public isContainerType()Z
     .locals 1
 
@@ -905,7 +922,7 @@
     .line 1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Simple types have no content types; can not call withContentType()"
+    const-string v0, "Simple types have no content types; cannot call withContentType()"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -918,7 +935,7 @@
     .line 1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Simple types have no content types; can not call withContenTypeHandler()"
+    const-string v0, "Simple types have no content types; cannot call withContenTypeHandler()"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -942,7 +959,7 @@
     .line 2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Simple types have no content types; can not call withContenValueHandler()"
+    const-string v0, "Simple types have no content types; cannot call withContenValueHandler()"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

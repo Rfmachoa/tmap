@@ -21,7 +21,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Ldf/d;",
+            "Lhh/d;",
             ">;"
         }
     .end annotation
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method public addHeader(Ldf/d;)V
+.method public addHeader(Lhh/d;)V
     .locals 1
 
     if-nez p1, :cond_0
@@ -116,10 +116,10 @@
 
     move-result-object v2
 
-    check-cast v2, Ldf/d;
+    check-cast v2, Lhh/d;
 
     .line 3
-    invoke-interface {v2}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {v2}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -160,7 +160,7 @@
     return-object v0
 .end method
 
-.method public getAllHeaders()[Ldf/d;
+.method public getAllHeaders()[Lhh/d;
     .locals 2
 
     .line 1
@@ -170,22 +170,22 @@
 
     move-result v1
 
-    new-array v1, v1, [Ldf/d;
+    new-array v1, v1, [Lhh/d;
 
     invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Ldf/d;
+    check-cast v0, [Lhh/d;
 
     return-object v0
 .end method
 
-.method public getCondensedHeader(Ljava/lang/String;)Ldf/d;
+.method public getCondensedHeader(Ljava/lang/String;)Lhh/d;
     .locals 5
 
     .line 1
-    invoke-virtual {p0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-virtual {p0, p1}, Lcz/msebera/android/httpclient/message/HeaderGroup;->getHeaders(Ljava/lang/String;)[Lhh/d;
 
     move-result-object v0
 
@@ -224,7 +224,7 @@
     .line 6
     aget-object v2, v0, v2
 
-    invoke-interface {v2}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {v2}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object v2
 
@@ -244,7 +244,7 @@
     .line 9
     aget-object v2, v0, v3
 
-    invoke-interface {v2}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {v2}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object v2
 
@@ -273,7 +273,7 @@
     return-object v0
 .end method
 
-.method public getFirstHeader(Ljava/lang/String;)Ldf/d;
+.method public getFirstHeader(Ljava/lang/String;)Lhh/d;
     .locals 3
 
     const/4 v0, 0x0
@@ -295,10 +295,10 @@
 
     move-result-object v1
 
-    check-cast v1, Ldf/d;
+    check-cast v1, Lhh/d;
 
     .line 3
-    invoke-interface {v1}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {v1}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -321,7 +321,7 @@
     return-object p1
 .end method
 
-.method public getHeaders(Ljava/lang/String;)[Ldf/d;
+.method public getHeaders(Ljava/lang/String;)[Lhh/d;
     .locals 4
 
     .line 1
@@ -348,10 +348,10 @@
 
     move-result-object v2
 
-    check-cast v2, Ldf/d;
+    check-cast v2, Lhh/d;
 
     .line 4
-    invoke-interface {v2}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {v2}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v3
 
@@ -375,18 +375,18 @@
 
     move-result p1
 
-    new-array p1, p1, [Ldf/d;
+    new-array p1, p1, [Lhh/d;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, [Ldf/d;
+    check-cast p1, [Lhh/d;
 
     return-object p1
 .end method
 
-.method public getLastHeader(Ljava/lang/String;)Ldf/d;
+.method public getLastHeader(Ljava/lang/String;)Lhh/d;
     .locals 3
 
     .line 1
@@ -408,10 +408,10 @@
 
     move-result-object v1
 
-    check-cast v1, Ldf/d;
+    check-cast v1, Lhh/d;
 
     .line 3
-    invoke-interface {v1}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {v1}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -434,35 +434,35 @@
     return-object p1
 .end method
 
-.method public iterator()Ldf/g;
+.method public iterator()Lhh/g;
     .locals 3
 
     .line 1
-    new-instance v0, Lmg/l;
+    new-instance v0, Lqi/l;
 
     iget-object v1, p0, Lcz/msebera/android/httpclient/message/HeaderGroup;->headers:Ljava/util/List;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lmg/l;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lqi/l;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public iterator(Ljava/lang/String;)Ldf/g;
+.method public iterator(Ljava/lang/String;)Lhh/g;
     .locals 2
 
     .line 2
-    new-instance v0, Lmg/l;
+    new-instance v0, Lqi/l;
 
     iget-object v1, p0, Lcz/msebera/android/httpclient/message/HeaderGroup;->headers:Ljava/util/List;
 
-    invoke-direct {v0, v1, p1}, Lmg/l;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lqi/l;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public removeHeader(Ldf/d;)V
+.method public removeHeader(Lhh/d;)V
     .locals 1
 
     if-nez p1, :cond_0
@@ -478,7 +478,7 @@
     return-void
 .end method
 
-.method public setHeaders([Ldf/d;)V
+.method public setHeaders([Lhh/d;)V
     .locals 1
 
     .line 1
@@ -510,7 +510,7 @@
     return-object v0
 .end method
 
-.method public updateHeader(Ldf/d;)V
+.method public updateHeader(Lhh/d;)V
     .locals 3
 
     if-nez p1, :cond_0
@@ -537,14 +537,14 @@
 
     move-result-object v1
 
-    check-cast v1, Ldf/d;
+    check-cast v1, Lhh/d;
 
     .line 3
-    invoke-interface {v1}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {v1}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {p1}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v2
 

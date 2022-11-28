@@ -17,7 +17,7 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u0000 \u00192\u00020\u0001:\u0001(B\u0007\u00a2\u0006\u0004\u0008&\u0010\'J\u001a\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016J\u0008\u0010\u0008\u001a\u00020\u0006H\u0016J \u0010\u000e\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000bH\u0014J\u0008\u0010\u000f\u001a\u00020\u0006H\u0014J\u0012\u0010\u0011\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0010\u001a\u00020\tH\u0014J\u0010\u0010\u0014\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002J\u0012\u0010\u0016\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0015\u001a\u00020\tH\u0002J \u0010\u0019\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0015\u001a\u00020\t2\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0017H\u0002R\u0018\u0010\u001d\u001a\u0004\u0018\u00010\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u0018\u0010!\u001a\u0004\u0018\u00010\u001e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 R\u0018\u0010%\u001a\u0004\u0018\u00010\"8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008#\u0010$\u00a8\u0006)"
+        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u0000 \u000e2\u00020\u0001:\u0001(B\u0007\u00a2\u0006\u0004\u0008&\u0010\'J\u001a\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016J\u0008\u0010\u0008\u001a\u00020\u0006H\u0016J \u0010\u000e\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000bH\u0014J\u0008\u0010\u000f\u001a\u00020\u0006H\u0014J\u0012\u0010\u0011\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0010\u001a\u00020\tH\u0014J\u0010\u0010\u0014\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002J\u0012\u0010\u0016\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0015\u001a\u00020\tH\u0002J \u0010\u0019\u001a\u00020\u00062\u0008\u0008\u0001\u0010\u0015\u001a\u00020\t2\u000c\u0010\u0018\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0017H\u0002R\u0018\u0010\u001d\u001a\u0004\u0018\u00010\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u0018\u0010!\u001a\u0004\u0018\u00010\u001e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 R\u0018\u0010%\u001a\u0004\u0018\u00010\"8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008#\u0010$\u00a8\u0006)"
     }
     d2 = {
         "Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;",
@@ -34,18 +34,18 @@
         "",
         "bytesDownloaded",
         "bytesTotal",
-        "o",
-        "l",
-        "errorCode",
+        "p",
         "m",
+        "errorCode",
+        "n",
         "Landroid/widget/ImageView;",
         "activityIcon",
-        "r",
+        "s",
         "text",
-        "q",
+        "r",
         "Lkotlin/Function0;",
         "onClick",
-        "p",
+        "q",
         "Landroid/widget/TextView;",
         "h",
         "Landroid/widget/TextView;",
@@ -116,13 +116,13 @@
 
 
 # virtual methods
-.method public l()V
+.method public m()V
     .locals 2
 
     .line 1
     sget v0, Landroidx/navigation/dynamicfeatures/fragment/R$string;->installation_cancelled:I
 
-    invoke-virtual {p0, v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->q(I)V
+    invoke-virtual {p0, v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->r(I)V
 
     .line 2
     sget v0, Landroidx/navigation/dynamicfeatures/fragment/R$string;->retry:I
@@ -131,12 +131,12 @@
 
     invoke-direct {v1, p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$onCancelled$1;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;)V
 
-    invoke-virtual {p0, v0, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->p(ILej/a;)V
+    invoke-virtual {p0, v0, v1}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->q(ILgl/a;)V
 
     return-void
 .end method
 
-.method public m(I)V
+.method public n(I)V
     .locals 2
     .param p1    # I
         .annotation build Lcom/google/android/play/core/splitinstall/model/SplitInstallErrorCode;
@@ -148,12 +148,12 @@
     const-string v1, "DefaultProgressFragment"
 
     .line 1
-    invoke-static {v0, p1, v1}, Ld1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0, p1, v1}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     .line 2
     sget p1, Landroidx/navigation/dynamicfeatures/fragment/R$string;->installation_failed:I
 
-    invoke-virtual {p0, p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->q(I)V
+    invoke-virtual {p0, p1}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->r(I)V
 
     .line 3
     sget p1, Landroidx/navigation/dynamicfeatures/fragment/R$string;->ok:I
@@ -162,56 +162,8 @@
 
     invoke-direct {v0, p0}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$onFailed$1;-><init>(Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;)V
 
-    invoke-virtual {p0, p1, v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->p(ILej/a;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->q(ILgl/a;)V
 
-    return-void
-.end method
-
-.method public o(IJJ)V
-    .locals 3
-
-    .line 1
-    iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->i:Landroid/widget/ProgressBar;
-
-    if-eqz p1, :cond_1
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v1, p4, v1
-
-    if-nez v1, :cond_0
-
-    const/4 p2, 0x1
-
-    .line 3
-    invoke-virtual {p1, p2}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x64
-
-    int-to-long v1, v1
-
-    mul-long/2addr v1, p2
-
-    .line 4
-    div-long/2addr v1, p4
-
-    long-to-int p2, v1
-
-    invoke-virtual {p1, p2}, Landroid/widget/ProgressBar;->setProgress(I)V
-
-    .line 5
-    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
@@ -288,7 +240,7 @@
 
     check-cast p2, Landroid/widget/ImageView;
 
-    invoke-virtual {p0, p2}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->r(Landroid/widget/ImageView;)V
+    invoke-virtual {p0, p2}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->s(Landroid/widget/ImageView;)V
 
     .line 5
     sget p2, Landroidx/navigation/dynamicfeatures/fragment/R$id;->progress_action:I
@@ -304,7 +256,55 @@
     return-void
 .end method
 
-.method public final p(ILej/a;)V
+.method public p(IJJ)V
+    .locals 3
+
+    .line 1
+    iget-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment;->i:Landroid/widget/ProgressBar;
+
+    if-eqz p1, :cond_1
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    const-wide/16 v1, 0x0
+
+    cmp-long v1, p4, v1
+
+    if-nez v1, :cond_0
+
+    const/4 p2, 0x1
+
+    .line 3
+    invoke-virtual {p1, p2}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x64
+
+    int-to-long v1, v1
+
+    mul-long/2addr v1, p2
+
+    .line 4
+    div-long/2addr v1, p4
+
+    long-to-int p2, v1
+
+    invoke-virtual {p1, p2}, Landroid/widget/ProgressBar;->setProgress(I)V
+
+    .line 5
+    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final q(ILgl/a;)V
     .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -313,7 +313,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lej/a<",
+            "Lgl/a<",
             "Lkotlin/d1;",
             ">;)V"
         }
@@ -330,7 +330,7 @@
     .line 3
     new-instance v1, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;
 
-    invoke-direct {v1, p1, p2}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;-><init>(ILej/a;)V
+    invoke-direct {v1, p1, p2}, Landroidx/navigation/dynamicfeatures/fragment/ui/DefaultProgressFragment$b;-><init>(ILgl/a;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -343,7 +343,7 @@
     return-void
 .end method
 
-.method public final q(I)V
+.method public final r(I)V
     .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -371,7 +371,7 @@
     return-void
 .end method
 
-.method public final r(Landroid/widget/ImageView;)V
+.method public final s(Landroid/widget/ImageView;)V
     .locals 4
 
     .line 1

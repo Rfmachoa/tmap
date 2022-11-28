@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/GooglePlayServicesUtilLight;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -218,10 +218,8 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x39
-
     .line 4
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "GooglePlayServices not available due to error "
 
@@ -806,6 +804,7 @@
 
     move-result-object p0
 
+    .line 18
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_4
@@ -819,7 +818,7 @@
     :goto_5
     const/16 v9, 0x40
 
-    .line 18
+    .line 19
     :try_start_2
     invoke-virtual {v6, v2, v9}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
@@ -827,17 +826,16 @@
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 19
+    .line 20
     invoke-static {p0}, Lcom/google/android/gms/common/GoogleSignatureVerifier;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/common/GoogleSignatureVerifier;
 
-    .line 20
+    .line 21
     invoke-static {v9, v3}, Lcom/google/android/gms/common/GoogleSignatureVerifier;->zzb(Landroid/content/pm/PackageInfo;Z)Z
 
     move-result p0
 
     if-nez p0, :cond_7
 
-    .line 21
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -848,6 +846,7 @@
 
     move-result-object p0
 
+    .line 22
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
@@ -855,17 +854,16 @@
     :cond_7
     if-eqz v1, :cond_8
 
-    .line 22
+    .line 23
     invoke-static {v8}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
+    .line 24
     invoke-static {v8, v3}, Lcom/google/android/gms/common/GoogleSignatureVerifier;->zzb(Landroid/content/pm/PackageInfo;Z)Z
 
     move-result p0
 
     if-nez p0, :cond_8
 
-    .line 24
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -876,6 +874,7 @@
 
     move-result-object p0
 
+    .line 25
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
@@ -885,7 +884,7 @@
 
     if-eqz v8, :cond_9
 
-    .line 25
+    .line 26
     iget-object p0, v8, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     aget-object p0, p0, v4
@@ -894,14 +893,13 @@
 
     aget-object v1, v1, v4
 
-    .line 26
+    .line 27
     invoke-virtual {p0, v1}, Landroid/content/pm/Signature;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_9
 
-    .line 27
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -912,11 +910,12 @@
 
     move-result-object p0
 
+    .line 28
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
-    .line 28
+    .line 29
     :cond_9
     iget p0, v9, Landroid/content/pm/PackageInfo;->versionCode:I
 
@@ -930,42 +929,32 @@
 
     if-ge p0, v1, :cond_a
 
-    .line 29
+    .line 30
     iget p0, v9, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    const-string v2, "Google Play services out of date for "
 
-    move-result v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v1, 0x52
+    const-string v2, ".  Requires "
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "Google Play services out of date for "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ".  Requires "
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string p1, " but found "
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -975,13 +964,13 @@
 
     goto :goto_7
 
-    .line 30
+    .line 31
     :cond_a
     iget-object p0, v9, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-nez p0, :cond_b
 
-    .line 31
+    .line 32
     :try_start_3
     invoke-virtual {v6, v2, v4}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
@@ -994,7 +983,7 @@
     :catch_1
     move-exception p0
 
-    .line 32
+    .line 33
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -1005,11 +994,12 @@
 
     move-result-object p1
 
+    .line 34
     invoke-static {v0, p1, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_7
 
-    .line 33
+    .line 35
     :cond_b
     :goto_6
     iget-boolean p0, p0, Landroid/content/pm/ApplicationInfo;->enabled:Z
@@ -1023,7 +1013,7 @@
     :cond_c
     return v4
 
-    .line 34
+    .line 36
     :catch_2
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1035,6 +1025,7 @@
 
     move-result-object p0
 
+    .line 37
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_7

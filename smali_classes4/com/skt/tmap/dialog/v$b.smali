@@ -1,9 +1,9 @@
 .class public Lcom/skt/tmap/dialog/v$b;
 .super Ljava/lang/Object;
-.source "TmapCommonDialog.java"
+.source "SimpleInputDialog.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -43,25 +43,57 @@
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public onClick(Landroid/view/View;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
             0x0
         }
         names = {
-            "view",
-            "motionEvent"
+            "v"
         }
     .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/dialog/v$b;->a:Lcom/skt/tmap/dialog/v;
 
-    invoke-static {p1}, Lcom/skt/tmap/dialog/v;->C(Lcom/skt/tmap/dialog/v;)V
+    invoke-static {p1}, Lcom/skt/tmap/dialog/v;->A(Lcom/skt/tmap/dialog/v;)Landroid/widget/TextView;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/tmap/dialog/v$b;->a:Lcom/skt/tmap/dialog/v;
+
+    invoke-static {p1}, Lcom/skt/tmap/dialog/v;->B(Lcom/skt/tmap/dialog/v;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    iget-object p1, p0, Lcom/skt/tmap/dialog/v$b;->a:Lcom/skt/tmap/dialog/v;
+
+    invoke-static {p1}, Lcom/skt/tmap/dialog/v;->C(Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v$d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    iget-object p1, p0, Lcom/skt/tmap/dialog/v$b;->a:Lcom/skt/tmap/dialog/v;
+
+    invoke-static {p1}, Lcom/skt/tmap/dialog/v;->C(Lcom/skt/tmap/dialog/v;)Lcom/skt/tmap/dialog/v$d;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lcom/skt/tmap/dialog/v$d;->a()V
+
+    :cond_0
+    return-void
 .end method

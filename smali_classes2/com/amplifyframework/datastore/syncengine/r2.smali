@@ -3,40 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor$SubscriptionMethod;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/api/graphql/SubscriptionType;
-
-.field public final synthetic b:Lcom/amplifyframework/core/model/ModelSchema;
+.field public final synthetic a:Lcom/amplifyframework/datastore/appsync/AppSync;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/appsync/AppSync;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/r2;->a:Lcom/amplifyframework/api/graphql/SubscriptionType;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/r2;->b:Lcom/amplifyframework/core/model/ModelSchema;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/r2;->a:Lcom/amplifyframework/datastore/appsync/AppSync;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final subscribe(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
+    .locals 6
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/r2;->a:Lcom/amplifyframework/api/graphql/SubscriptionType;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/r2;->a:Lcom/amplifyframework/datastore/appsync/AppSync;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/r2;->b:Lcom/amplifyframework/core/model/ModelSchema;
+    move-object v1, p1
 
-    check-cast p1, Ljava/lang/Throwable;
+    move-object v2, p2
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->e(Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Ljava/lang/Throwable;)V
+    move-object v3, p3
 
-    return-void
+    move-object v4, p4
+
+    move-object v5, p5
+
+    invoke-interface/range {v0 .. v5}, Lcom/amplifyframework/datastore/appsync/AppSync;->onCreate(Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Action;)Lcom/amplifyframework/core/async/Cancelable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

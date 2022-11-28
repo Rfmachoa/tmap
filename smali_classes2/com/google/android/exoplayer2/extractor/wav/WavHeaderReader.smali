@@ -294,7 +294,7 @@
 
     const-string v2, "; got: "
 
-    invoke-static {v1, v0, v2, v12}, Lc3/d;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0, v2, v12}, Landroidx/emoji2/text/flatbuffer/x;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

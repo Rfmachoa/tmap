@@ -3,7 +3,7 @@
 .source "BaseActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/util/y1$o;
+.implements Lcom/skt/tmap/util/j2$o;
 
 
 # annotations
@@ -85,7 +85,7 @@
     .line 2
     iget-object p2, p0, Lcom/skt/tmap/activity/BaseActivity$f;->a:Lcom/skt/tmap/activity/BaseActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/BaseActivity;->access$400(Lcom/skt/tmap/activity/BaseActivity;)Lcom/skt/tmap/dialog/n;
+    invoke-static {p2}, Lcom/skt/tmap/activity/BaseActivity;->access$400(Lcom/skt/tmap/activity/BaseActivity;)Lcom/skt/tmap/dialog/s;
 
     move-result-object p2
 
@@ -94,11 +94,11 @@
     .line 3
     iget-object p2, p0, Lcom/skt/tmap/activity/BaseActivity$f;->a:Lcom/skt/tmap/activity/BaseActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/BaseActivity;->access$400(Lcom/skt/tmap/activity/BaseActivity;)Lcom/skt/tmap/dialog/n;
+    invoke-static {p2}, Lcom/skt/tmap/activity/BaseActivity;->access$400(Lcom/skt/tmap/activity/BaseActivity;)Lcom/skt/tmap/dialog/s;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/dialog/n;->y(F)V
+    invoke-virtual {p2, p1}, Lcom/skt/tmap/dialog/s;->y(F)V
 
     :cond_0
     return-void

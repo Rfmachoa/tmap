@@ -3,7 +3,7 @@
 .source "AladdinSpeakerService.java"
 
 # interfaces
-.implements Lh9/a$a;
+.implements Leb/a$a;
 
 
 # annotations

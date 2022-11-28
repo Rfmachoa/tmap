@@ -41,6 +41,14 @@
 
 .method public setInformationId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "informationId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqInformationParticipateBodyVo;->informationId:Ljava/lang/Integer;
@@ -50,6 +58,14 @@
 
 .method public setMomentCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqInformationParticipateBodyVo;->momentCode:Ljava/lang/String;

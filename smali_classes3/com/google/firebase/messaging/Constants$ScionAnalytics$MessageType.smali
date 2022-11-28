@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/firebase/messaging/Constants$ScionAnalytics$MessageType;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "Constants.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -19,11 +19,5 @@
 
 # static fields
 .field public static final DATA_MESSAGE:Ljava/lang/String; = "data"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final DISPLAY_NOTIFICATION:Ljava/lang/String; = "display"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field

@@ -1,20 +1,20 @@
-.class public Lqk/a;
+.class public final Lqk/a;
 .super Ljava/lang/Object;
-.source "EventConstants.java"
+.source "BuildConfig.java"
 
 
 # static fields
-.field public static final a:I = 0x28
+.field public static final a:Z = false
 
-.field public static final b:I = 0x1e
+.field public static final b:Ljava/lang/String; = "it.sephiroth.android.library.tooltip"
 
-.field public static final c:I = 0x14
+.field public static final c:Ljava/lang/String; = "release"
 
-.field public static final d:I = 0xa
+.field public static final d:Ljava/lang/String; = ""
 
-.field public static final e:I = 0x0
+.field public static final e:I = 0x1
 
-.field public static final f:Ljava/lang/String; = "NA/SubstituteLogger"
+.field public static final f:Ljava/lang/String; = "1.3.15"
 
 
 # direct methods

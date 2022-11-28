@@ -42,7 +42,7 @@
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$g;->a:Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$f;
 
-    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$f;->f()V
+    invoke-interface {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$f;->g()V
 
     return-void
 .end method

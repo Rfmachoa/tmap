@@ -99,7 +99,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -141,7 +141,7 @@
     move-result v0
 
     .line 4
-    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->l(F)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->n(F)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
@@ -154,7 +154,7 @@
     move-result v0
 
     .line 6
-    invoke-static {v2, v0}, Landroid/support/v4/media/RatingCompat;->m(IF)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v2, v0}, Landroid/support/v4/media/RatingCompat;->o(IF)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
@@ -166,7 +166,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->n(Z)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->p(Z)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
@@ -178,7 +178,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->j(Z)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->m(Z)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
@@ -186,7 +186,7 @@
 
     .line 9
     :cond_0
-    invoke-static {v2}, Landroid/support/v4/media/RatingCompat;->o(I)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v2}, Landroid/support/v4/media/RatingCompat;->q(I)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
@@ -210,7 +210,7 @@
     .end packed-switch
 .end method
 
-.method public static j(Z)Landroid/support/v4/media/RatingCompat;
+.method public static m(Z)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -241,7 +241,7 @@
     return-object v0
 .end method
 
-.method public static l(F)Landroid/support/v4/media/RatingCompat;
+.method public static n(F)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -290,7 +290,7 @@
     return-object p0
 .end method
 
-.method public static m(IF)Landroid/support/v4/media/RatingCompat;
+.method public static o(IF)Landroid/support/v4/media/RatingCompat;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -386,7 +386,7 @@
     return-object v1
 .end method
 
-.method public static n(Z)Landroid/support/v4/media/RatingCompat;
+.method public static p(Z)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -417,7 +417,7 @@
     return-object v0
 .end method
 
-.method public static o(I)Landroid/support/v4/media/RatingCompat;
+.method public static q(I)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -469,7 +469,7 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->j()Z
 
     move-result v0
 
@@ -490,7 +490,16 @@
     return v0
 .end method
 
-.method public d()Ljava/lang/Object;
+.method public describeContents()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+
+    return v0
+.end method
+
+.method public e()Ljava/lang/Object;
     .locals 2
 
     .line 1
@@ -499,7 +508,7 @@
     if-nez v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->j()Z
 
     move-result v0
 
@@ -530,7 +539,7 @@
 
     .line 5
     :pswitch_1
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->f()F
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()F
 
     move-result v1
 
@@ -545,7 +554,7 @@
 
     .line 7
     :pswitch_2
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->i()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->l()Z
 
     move-result v0
 
@@ -559,7 +568,7 @@
 
     .line 8
     :pswitch_3
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->g()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->i()Z
 
     move-result v0
 
@@ -599,7 +608,7 @@
     .end packed-switch
 .end method
 
-.method public describeContents()I
+.method public f()I
     .locals 1
 
     .line 1
@@ -608,16 +617,7 @@
     return v0
 .end method
 
-.method public e()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
-
-    return v0
-.end method
-
-.method public f()F
+.method public h()F
     .locals 2
 
     .line 1
@@ -639,7 +639,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->j()Z
 
     move-result v0
 
@@ -657,7 +657,7 @@
     return v0
 .end method
 
-.method public g()Z
+.method public i()Z
     .locals 4
 
     .line 1
@@ -687,7 +687,7 @@
     return v1
 .end method
 
-.method public h()Z
+.method public j()Z
     .locals 2
 
     .line 1
@@ -710,7 +710,7 @@
     return v0
 .end method
 
-.method public i()Z
+.method public l()Z
     .locals 3
 
     .line 1

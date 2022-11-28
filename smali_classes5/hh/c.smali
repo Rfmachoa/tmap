@@ -1,20 +1,14 @@
-.class public Lhh/c;
+.class public interface abstract Lhh/c;
 .super Ljava/lang/Object;
-.source "dagger_hilt_DefineComponent.java"
+.source "FormattedHeader.java"
+
+# interfaces
+.implements Lhh/d;
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/DefineComponent;
-.end annotation
+# virtual methods
+.method public abstract getBuffer()Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+.end method
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract getValuePos()I
 .end method

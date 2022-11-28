@@ -1,11 +1,14 @@
 .class Lcom/google/android/material/snackbar/BaseTransientBottomBar$5;
-.super Landroidx/core/view/a;
+.super Ljava/lang/Object;
 .source "BaseTransientBottomBar.java"
+
+# interfaces
+.implements Lcom/google/android/material/snackbar/SnackbarManager$Callback;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;Lcom/google/android/material/snackbar/ContentViewCallback;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,57 +28,51 @@
     .line 1
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$5;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
-    .locals 0
-    .param p2    # Lt1/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public dismiss(I)V
+    .locals 4
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+    sget-object v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->handler:Landroid/os/Handler;
 
-    const/high16 p1, 0x100000
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$5;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
 
     .line 2
-    invoke-virtual {p2, p1}, Lt1/c;->a(I)V
+    invoke-virtual {v0, v2, p1, v3, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    const/4 p1, 0x1
+    move-result-object p1
 
     .line 3
-    invoke-virtual {p2, p1}, Lt1/c;->b1(Z)V
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 .end method
 
-.method public performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
-    .locals 1
-
-    const/high16 v0, 0x100000
-
-    if-ne p2, v0, :cond_0
+.method public show()V
+    .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$5;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+    sget-object v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->handler:Landroid/os/Handler;
 
-    invoke-virtual {p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->dismiss()V
+    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$5;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    const/4 p1, 0x1
+    const/4 v2, 0x0
 
-    return p1
+    invoke-virtual {v0, v2, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    .line 2
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroidx/core/view/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    move-result-object v1
 
-    move-result p1
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    return p1
+    return-void
 .end method

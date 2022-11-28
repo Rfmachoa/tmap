@@ -24,8 +24,6 @@
 
 
 # static fields
-.field private static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.model.IOnItemVisibilityChangedListener"
-
 .field public static final TRANSACTION_onItemVisibilityChanged:I = 0x2
 
 
@@ -82,48 +80,6 @@
     return-object v0
 .end method
 
-.method public static getDefaultImpl()Landroidx/car/app/model/IOnItemVisibilityChangedListener;
-    .locals 1
-
-    .line 1
-    sget-object v0, Landroidx/car/app/model/IOnItemVisibilityChangedListener$Stub$Proxy;->sDefaultImpl:Landroidx/car/app/model/IOnItemVisibilityChangedListener;
-
-    return-object v0
-.end method
-
-.method public static setDefaultImpl(Landroidx/car/app/model/IOnItemVisibilityChangedListener;)Z
-    .locals 1
-
-    .line 1
-    sget-object v0, Landroidx/car/app/model/IOnItemVisibilityChangedListener$Stub$Proxy;->sDefaultImpl:Landroidx/car/app/model/IOnItemVisibilityChangedListener;
-
-    if-nez v0, :cond_1
-
-    if-eqz p0, :cond_0
-
-    .line 2
-    sput-object p0, Landroidx/car/app/model/IOnItemVisibilityChangedListener$Stub$Proxy;->sDefaultImpl:Landroidx/car/app/model/IOnItemVisibilityChangedListener;
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 3
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "setDefaultImpl() called twice"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;
@@ -140,46 +96,47 @@
         }
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    const-string v1, "androidx.car.app.model.IOnItemVisibilityChangedListener"
 
-    const-string v2, "androidx.car.app.model.IOnItemVisibilityChangedListener"
+    if-lt p1, v0, :cond_0
 
-    if-eq p1, v0, :cond_1
+    const v2, 0xffffff
 
-    const v0, 0x5f4e5446
-
-    if-eq p1, v0, :cond_0
+    if-gt p1, v2, :cond_0
 
     .line 1
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    :cond_0
+    const v2, 0x5f4e5446
+
+    if-eq p1, v2, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_1
+
+    .line 2
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p1
 
     return p1
 
-    .line 2
-    :cond_0
-    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return v1
-
     .line 3
     :cond_1
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 5
+    .line 4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
-    .line 6
+    .line 5
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -188,8 +145,14 @@
 
     move-result-object p2
 
-    .line 7
+    .line 6
     invoke-interface {p0, p1, p3, p2}, Landroidx/car/app/model/IOnItemVisibilityChangedListener;->onItemVisibilityChanged(IILandroidx/car/app/IOnDoneCallback;)V
 
-    return v1
+    return v0
+
+    .line 7
+    :cond_2
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v0
 .end method

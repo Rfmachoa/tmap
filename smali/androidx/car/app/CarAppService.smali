@@ -4,44 +4,60 @@
 
 
 # static fields
-.field public static final g:Ljava/lang/String; = "androidx.car.app.CarAppService"
+.field public static final d:Ljava/lang/String; = "androidx.car.app.CarAppService"
 
-.field public static final h:Ljava/lang/String; = "androidx.car.app.category.NAVIGATION"
+.field public static final e:Ljava/lang/String; = "androidx.car.app.category.FEATURE_CLUSTER"
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x6
+    .end annotation
+.end field
 
-.field public static final i:Ljava/lang/String; = "androidx.car.app.category.PARKING"
+.field public static final f:Ljava/lang/String; = "androidx.car.app.category.NAVIGATION"
 
-.field public static final j:Ljava/lang/String; = "androidx.car.app.category.CHARGING"
+.field public static final g:Ljava/lang/String; = "androidx.car.app.category.PARKING"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final h:Ljava/lang/String; = "androidx.car.app.category.CHARGING"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final i:Ljava/lang/String; = "androidx.car.app.category.POI"
+
+.field public static final j:Ljava/lang/String; = "androidx.car.app.category.SETTINGS"
+    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
+    .end annotation
+.end field
 
 .field public static final k:Ljava/lang/String; = "AUTO_DRIVE"
 
 
 # instance fields
-.field public a:Landroidx/car/app/AppInfo;
+.field public final a:Ljava/util/Map;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Landroidx/car/app/SessionInfo;",
+            "Landroidx/car/app/CarAppBinder;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public b:Landroidx/car/app/AppInfo;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public b:Landroidx/car/app/Session;
+.field public c:Landroidx/car/app/s0;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
-
-.field public c:Lp0/a;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public d:Landroidx/car/app/n0;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public e:Landroidx/car/app/HandshakeInfo;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public final f:Landroidx/car/app/ICarApp$Stub;
 
 
 # direct methods
@@ -52,19 +68,19 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 2
-    new-instance v0, Landroidx/car/app/CarAppService$1;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0, p0}, Landroidx/car/app/CarAppService$1;-><init>(Landroidx/car/app/CarAppService;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/car/app/CarAppService;->f:Landroidx/car/app/ICarApp$Stub;
+    iput-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public static synthetic a(Landroidx/car/app/CarAppService;)V
+.method public static synthetic a(Landroidx/car/app/CarAppService;Landroidx/car/app/SessionInfo;)V
     .locals 0
 
-    invoke-direct {p0}, Landroidx/car/app/CarAppService;->k()V
+    invoke-direct {p0, p1}, Landroidx/car/app/CarAppService;->i(Landroidx/car/app/SessionInfo;)V
 
     return-void
 .end method
@@ -72,82 +88,144 @@
 .method public static synthetic b(Landroidx/car/app/CarAppService;)V
     .locals 0
 
-    invoke-direct {p0}, Landroidx/car/app/CarAppService;->l()V
+    invoke-direct {p0}, Landroidx/car/app/CarAppService;->h()V
 
     return-void
 .end method
 
-.method private synthetic k()V
-    .locals 2
+.method private synthetic h()V
+    .locals 6
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/Session;
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
 
-    if-eqz v0, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-virtual {v0}, Landroidx/car/app/Session;->b()Landroidx/car/app/CarContext;
+    :try_start_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
 
-    move-result-object v0
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    const-class v1, Landroidx/car/app/navigation/NavigationManager;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/car/app/CarContext;->p(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroidx/car/app/navigation/NavigationManager;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/car/app/CarAppBinder;
+
+    const-string v3, "CarApp"
+
+    const/4 v4, 0x3
 
     .line 3
-    invoke-virtual {v0}, Landroidx/car/app/navigation/NavigationManager;->s()V
+    invoke-static {v3, v4}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "CarApp"
+
+    .line 4
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Executing onAutoDriveEnabled for "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 5
+    invoke-virtual {v2}, Landroidx/car/app/CarAppBinder;->getCurrentSessionInfo()Landroidx/car/app/SessionInfo;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 6
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 7
     :cond_0
-    return-void
-.end method
-
-.method private synthetic l()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/Session;
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    invoke-virtual {p0}, Landroidx/car/app/CarAppService;->j()Landroidx/lifecycle/LifecycleRegistry;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "CarApp"
-
-    const-string v1, "Null Session when unbinding"
-
-    .line 3
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v2}, Landroidx/car/app/CarAppBinder;->onAutoDriveEnabled()V
 
     goto :goto_0
 
-    .line 4
-    :cond_0
-    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
-
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
-
+    .line 8
     :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    .line 5
-    iput-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/Session;
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method private synthetic i(Landroidx/car/app/SessionInfo;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/car/app/CarAppBinder;
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    invoke-virtual {p1}, Landroidx/car/app/CarAppBinder;->onDestroyLifecycle()V
+
+    .line 4
+    :cond_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public abstract c()Lp0/a;
+.method public abstract c()Ld1/a;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
@@ -158,7 +236,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Landroidx/car/app/AppInfo;
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/AppInfo;
 
     if-nez v0, :cond_0
 
@@ -167,11 +245,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/car/app/CarAppService;->a:Landroidx/car/app/AppInfo;
+    iput-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/AppInfo;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Landroidx/car/app/AppInfo;
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/AppInfo;
 
     return-object v0
 .end method
@@ -202,7 +280,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    if-ge p2, p1, :cond_2
+    if-ge p2, p1, :cond_1
 
     aget-object v0, p3, p2
 
@@ -213,147 +291,210 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x3
-
-    const-string v1, "CarApp"
-
-    .line 4
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
     if-eqz v0, :cond_0
 
-    const-string v0, "Executing onAutoDriveEnabled"
+    .line 4
+    new-instance v0, Landroidx/car/app/w;
 
-    .line 5
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v0, p0}, Landroidx/car/app/w;-><init>(Landroidx/car/app/CarAppService;)V
 
-    .line 6
+    invoke-static {v0}, Landroidx/car/app/utils/r;->b(Ljava/lang/Runnable;)V
+
     :cond_0
-    new-instance v0, Landroidx/car/app/k;
-
-    invoke-direct {v0, p0}, Landroidx/car/app/k;-><init>(Landroidx/car/app/CarAppService;)V
-
-    invoke-static {v0}, Landroidx/car/app/utils/q;->b(Ljava/lang/Runnable;)V
-
-    :cond_1
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     return-void
 .end method
 
 .method public final e()Landroidx/car/app/Session;
-    .locals 1
+    .locals 4
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/Session;
-
-    return-object v0
-.end method
-
-.method public f()Landroidx/car/app/HandshakeInfo;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->e:Landroidx/car/app/HandshakeInfo;
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
 
-    return-object v0
-.end method
-
-.method public final g()Landroidx/car/app/n0;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->d:Landroidx/car/app/n0;
-
-    return-object v0
-.end method
-
-.method public h()Lp0/a;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->c:Lp0/a;
-
-    if-nez v0, :cond_0
+    monitor-enter v0
 
     .line 2
-    invoke-virtual {p0}, Landroidx/car/app/CarAppService;->c()Lp0/a;
+    :try_start_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
 
-    move-result-object v0
+    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    iput-object v0, p0, Landroidx/car/app/CarAppService;->c:Lp0/a;
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
 
     .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/car/app/CarAppService;->c:Lp0/a;
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v3
 
-.method i()Landroidx/lifecycle/LifecycleRegistry;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+    check-cast v3, Landroidx/car/app/SessionInfo;
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/car/app/CarAppService;->j()Landroidx/lifecycle/LifecycleRegistry;
+    invoke-virtual {v3}, Landroidx/car/app/SessionInfo;->a()I
 
-    move-result-object v0
+    move-result v3
 
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v3, :cond_0
 
-    return-object v0
-.end method
+    .line 4
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-.method public j()Landroidx/lifecycle/LifecycleRegistry;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    move-result-object v1
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/car/app/CarAppService;->e()Landroidx/car/app/Session;
+    check-cast v1, Landroidx/car/app/CarAppBinder;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroidx/car/app/CarAppBinder;->getCurrentSession()Landroidx/car/app/Session;
 
-    if-nez v0, :cond_0
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    .line 5
+    :cond_1
+    monitor-exit v0
 
     const/4 v0, 0x0
 
-    goto :goto_0
+    return-object v0
 
-    .line 2
-    :cond_0
-    invoke-virtual {v0}, Landroidx/car/app/Session;->c()Landroidx/lifecycle/Lifecycle;
+    :catchall_0
+    move-exception v1
 
-    move-result-object v0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v0, Landroidx/lifecycle/LifecycleRegistry;
+    throw v1
+.end method
 
-    :goto_0
+.method public final f()Landroidx/car/app/s0;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->c:Landroidx/car/app/s0;
+
     return-object v0
 .end method
 
-.method public abstract m()Landroidx/car/app/Session;
-    .annotation build Landroidx/annotation/NonNull;
+.method public final g(Landroidx/car/app/SessionInfo;)Landroidx/car/app/Session;
+    .locals 2
+    .param p1    # Landroidx/car/app/SessionInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/car/app/CarAppBinder;
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 3
+    monitor-exit v0
+
+    return-object p1
+
+    .line 4
+    :cond_0
+    invoke-virtual {p1}, Landroidx/car/app/CarAppBinder;->getCurrentSession()Landroidx/car/app/Session;
+
+    move-result-object p1
+
+    monitor-exit v0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 5
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method
 
-.method public n(Landroidx/car/app/AppInfo;)V
+.method public j()Landroidx/car/app/Session;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Please override and implement CarAppService#onCreateSession(SessionInfo)."
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public k(Landroidx/car/app/SessionInfo;)Landroidx/car/app/Session;
+    .locals 0
+    .param p1    # Landroidx/car/app/SessionInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x6
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/car/app/CarAppService;->j()Landroidx/car/app/Session;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public l(Landroidx/car/app/AppInfo;)V
     .locals 0
     .param p1    # Landroidx/car/app/AppInfo;
         .annotation build Landroidx/annotation/Nullable;
@@ -363,26 +504,57 @@
     .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/car/app/CarAppService;->a:Landroidx/car/app/AppInfo;
+    iput-object p1, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/AppInfo;
 
     return-void
 .end method
 
-.method public o(Landroidx/car/app/Session;)V
+.method public m(Landroidx/car/app/SessionInfo;Landroidx/car/app/CarAppBinder;)V
+    .locals 1
+    .param p1    # Landroidx/car/app/SessionInfo;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/car/app/CarAppBinder;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    if-nez p2, :cond_0
+
+    .line 1
+    iget-object p2, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public n(Landroidx/car/app/s0;)V
     .locals 0
-    .param p1    # Landroidx/car/app/Session;
+    .param p1    # Landroidx/car/app/s0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/car/app/CarAppService;->b:Landroidx/car/app/Session;
+    iput-object p1, p0, Landroidx/car/app/CarAppService;->c:Landroidx/car/app/s0;
 
     return-void
 .end method
 
 .method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
-    .locals 0
+    .locals 3
     .param p1    # Landroid/content/Intent;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -394,9 +566,136 @@
     .end annotation
 
     .line 1
-    iget-object p1, p0, Landroidx/car/app/CarAppService;->f:Landroidx/car/app/ICarApp$Stub;
+    invoke-static {p1}, Landroidx/car/app/z0;->a(Landroid/content/Intent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-static {p1}, Landroidx/car/app/z0;->b(Landroid/content/Intent;)Landroidx/car/app/SessionInfo;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    sget-object p1, Landroidx/car/app/SessionInfo;->f:Landroidx/car/app/SessionInfo;
+
+    .line 4
+    :goto_0
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    monitor-enter v0
+
+    .line 5
+    :try_start_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 6
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    new-instance v2, Landroidx/car/app/CarAppBinder;
+
+    invoke-direct {v2, p0, p1}, Landroidx/car/app/CarAppBinder;-><init>(Landroidx/car/app/CarAppService;Landroidx/car/app/SessionInfo;)V
+
+    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    :cond_1
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/car/app/CarAppBinder;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/IBinder;
+
+    monitor-exit v0
 
     return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 8
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public onDestroy()V
+    .locals 3
+    .annotation build Landroidx/annotation/CallSuper;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/car/app/CarAppBinder;
+
+    .line 3
+    invoke-virtual {v2}, Landroidx/car/app/CarAppBinder;->destroy()V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    iget-object v1, p0, Landroidx/car/app/CarAppService;->a:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->clear()V
+
+    .line 5
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method public final onUnbind(Landroid/content/Intent;)Z
@@ -430,108 +729,51 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 3
     :cond_0
-    new-instance p1, Landroidx/car/app/l;
+    invoke-static {p1}, Landroidx/car/app/z0;->a(Landroid/content/Intent;)Z
 
-    invoke-direct {p1, p0}, Landroidx/car/app/l;-><init>(Landroidx/car/app/CarAppService;)V
+    move-result v2
 
-    invoke-static {p1}, Landroidx/car/app/utils/q;->b(Ljava/lang/Runnable;)V
+    if-eqz v2, :cond_1
 
     .line 4
+    invoke-static {p1}, Landroidx/car/app/z0;->b(Landroid/content/Intent;)Landroidx/car/app/SessionInfo;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    sget-object p1, Landroidx/car/app/SessionInfo;->f:Landroidx/car/app/SessionInfo;
+
+    .line 6
+    :goto_0
+    new-instance v2, Landroidx/car/app/x;
+
+    invoke-direct {v2, p0, p1}, Landroidx/car/app/x;-><init>(Landroidx/car/app/CarAppService;Landroidx/car/app/SessionInfo;)V
+
+    invoke-static {v2}, Landroidx/car/app/utils/r;->b(Ljava/lang/Runnable;)V
+
+    .line 7
     invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     const-string p1, "onUnbind completed"
 
-    .line 5
+    .line 8
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     const/4 p1, 0x1
 
     return p1
-.end method
-
-.method public p(Landroidx/car/app/HandshakeInfo;)V
-    .locals 2
-    .param p1    # Landroidx/car/app/HandshakeInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Landroidx/car/app/HandshakeInfo;->a()I
-
-    move-result v0
-
-    .line 2
-    invoke-static {v0}, Lq0/a;->c(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 3
-    iput-object p1, p0, Landroidx/car/app/CarAppService;->e:Landroidx/car/app/HandshakeInfo;
-
-    return-void
-
-    .line 4
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Invalid Car App API level received: "
-
-    invoke-static {v1, v0}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public q(Landroidx/car/app/n0;)V
-    .locals 0
-    .param p1    # Landroidx/car/app/n0;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    iput-object p1, p0, Landroidx/car/app/CarAppService;->d:Landroidx/car/app/n0;
-
-    return-void
-.end method
-
-.method public r(Landroidx/car/app/Session;)Landroidx/car/app/Session;
-    .locals 1
-    .param p1    # Landroidx/car/app/Session;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    if-eqz p1, :cond_0
-
-    return-object p1
-
-    .line 1
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Null session found when non-null expected"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

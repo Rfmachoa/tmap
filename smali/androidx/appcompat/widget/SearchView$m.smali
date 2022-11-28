@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract onSuggestionClick(I)Z
+.method public abstract onQueryTextChange(Ljava/lang/String;)Z
 .end method
 
-.method public abstract onSuggestionSelect(I)Z
+.method public abstract onQueryTextSubmit(Ljava/lang/String;)Z
 .end method

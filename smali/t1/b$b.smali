@@ -1,22 +1,20 @@
-.class public abstract Lt1/b$b;
+.class public Lt1/b$b;
 .super Ljava/lang/Object;
-.source "AccessibilityManagerCompat.java"
-
-# interfaces
-.implements Lt1/b$a;
+.source "CursorWindowCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1c
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lt1/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x9
     name = "b"
-.end annotation
-
-.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
@@ -28,4 +26,17 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/String;J)Landroid/database/CursorWindow;
+    .locals 1
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/database/CursorWindow;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/database/CursorWindow;-><init>(Ljava/lang/String;J)V
+
+    return-object v0
 .end method

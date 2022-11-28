@@ -4,9 +4,6 @@
 
 
 # annotations
-.annotation build Landroidx/camera/core/ExperimentalUseCaseGroup;
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/camera/core/ViewPort;
 .end annotation
@@ -40,16 +37,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "aspectRatio",
-            "rotation"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -85,7 +72,7 @@
 
     const-string v1, "The crop aspect ratio must be set."
 
-    invoke-static {v0, v1}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     new-instance v0, Landroidx/camera/core/ViewPort;
@@ -108,15 +95,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "layoutDirection"
-        }
-    .end annotation
-
     .line 1
     iput p1, p0, Landroidx/camera/core/ViewPort$a;->d:I
 
@@ -126,15 +104,6 @@
 .method public c(I)Landroidx/camera/core/ViewPort$a;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "scaleType"
-        }
     .end annotation
 
     .line 1

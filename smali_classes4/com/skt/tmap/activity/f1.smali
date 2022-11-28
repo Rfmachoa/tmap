@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity$y;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity$y;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/f1;->a:Lcom/skt/tmap/activity/TmapMainActivity$y;
+    iput-object p1, p0, Lcom/skt/tmap/activity/f1;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/f1;->a:Lcom/skt/tmap/activity/TmapMainActivity$y;
+    iget-object v0, p0, Lcom/skt/tmap/activity/f1;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity$y;->b(Lcom/skt/tmap/activity/TmapMainActivity$y;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->b7(Lcom/skt/tmap/activity/TmapMainActivity;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Landroidx/preference/n$b;
-.super Landroidx/recyclerview/widget/k$b;
+.super Landroidx/recyclerview/widget/j$b;
 .source "PreferenceGroupAdapter.java"
 
 
@@ -19,13 +19,13 @@
 
 .field public final synthetic b:Ljava/util/List;
 
-.field public final synthetic c:Landroidx/preference/p$d;
+.field public final synthetic c:Landroidx/preference/t$d;
 
 .field public final synthetic d:Landroidx/preference/n;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/preference/n;Ljava/util/List;Ljava/util/List;Landroidx/preference/p$d;)V
+.method public constructor <init>(Landroidx/preference/n;Ljava/util/List;Ljava/util/List;Landroidx/preference/t$d;)V
     .locals 0
 
     .line 1
@@ -35,9 +35,9 @@
 
     iput-object p3, p0, Landroidx/preference/n$b;->b:Ljava/util/List;
 
-    iput-object p4, p0, Landroidx/preference/n$b;->c:Landroidx/preference/p$d;
+    iput-object p4, p0, Landroidx/preference/n$b;->c:Landroidx/preference/t$d;
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/k$b;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/j$b;-><init>()V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/n$b;->c:Landroidx/preference/p$d;
+    iget-object v0, p0, Landroidx/preference/n$b;->c:Landroidx/preference/t$d;
 
     iget-object v1, p0, Landroidx/preference/n$b;->a:Ljava/util/List;
 
@@ -69,7 +69,7 @@
     check-cast p2, Landroidx/preference/Preference;
 
     .line 4
-    invoke-virtual {v0, p1, p2}, Landroidx/preference/p$d;->a(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
+    invoke-virtual {v0, p1, p2}, Landroidx/preference/t$d;->a(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
 
     move-result p1
 
@@ -80,7 +80,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/n$b;->c:Landroidx/preference/p$d;
+    iget-object v0, p0, Landroidx/preference/n$b;->c:Landroidx/preference/t$d;
 
     iget-object v1, p0, Landroidx/preference/n$b;->a:Ljava/util/List;
 
@@ -101,7 +101,7 @@
     check-cast p2, Landroidx/preference/Preference;
 
     .line 4
-    invoke-virtual {v0, p1, p2}, Landroidx/preference/p$d;->b(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
+    invoke-virtual {v0, p1, p2}, Landroidx/preference/t$d;->b(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
 
     move-result p1
 

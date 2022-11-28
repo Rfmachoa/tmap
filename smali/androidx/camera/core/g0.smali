@@ -1,38 +1,36 @@
 .class public interface abstract Landroidx/camera/core/g0;
 .super Ljava/lang/Object;
-.source "ExtendableBuilder.java"
+.source "ExposureState.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
 # virtual methods
-.method public abstract build()Ljava/lang/Object;
+.method public abstract a()I
+.end method
+
+.method public abstract b()Landroid/util/Rational;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract c()Z
+.end method
+
+.method public abstract d()Landroid/util/Range;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()TT;"
-        }
-    .end annotation
-.end method
-
-.method public abstract c()Landroidx/camera/core/impl/m;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+            "()",
+            "Landroid/util/Range<",
+            "Ljava/lang/Integer;",
+            ">;"
         }
     .end annotation
 .end method

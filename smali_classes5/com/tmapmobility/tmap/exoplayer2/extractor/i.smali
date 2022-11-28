@@ -1,124 +1,42 @@
-.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
+.class public final Lcom/tmapmobility/tmap/exoplayer2/extractor/i;
 .super Ljava/lang/Object;
-.source "ExtractorInput.java"
+.source "DummyExtractorOutput.java"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/upstream/j;
+.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract advancePeekPosition(I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/z;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract advancePeekPosition(IZ)Z
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+.method public endTracks()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract f([BII)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
+.method public track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
+    .locals 0
 
-.method public abstract getLength()J
-.end method
+    .line 1
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
 
-.method public abstract getPeekPosition()J
-.end method
+    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;-><init>()V
 
-.method public abstract getPosition()J
-.end method
-
-.method public abstract peekFully([BII)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract peekFully([BIIZ)Z
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract read([BII)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract readFully([BII)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract readFully([BIIZ)Z
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract resetPeekPosition()V
-.end method
-
-.method public abstract setRetryPosition(JLjava/lang/Throwable;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<E:",
-            "Ljava/lang/Throwable;",
-            ">(JTE;)V^TE;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Throwable;
-        }
-    .end annotation
-.end method
-
-.method public abstract skip(I)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract skipFully(I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract skipFully(IZ)Z
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+    return-object p1
 .end method

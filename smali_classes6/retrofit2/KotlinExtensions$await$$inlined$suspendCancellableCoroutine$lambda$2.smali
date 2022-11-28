@@ -3,7 +3,7 @@
 .source "KotlinExtensions.kt"
 
 # interfaces
-.implements Lej/l;
+.implements Lgl/l;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/l<",
+        "Lgl/l<",
         "Ljava/lang/Throwable;",
         "Lkotlin/d1;",
         ">;"

@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/messaging/FcmBroadcastProcessor;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "FcmBroadcastProcessor.java"
 
 
 # annotations
@@ -9,8 +9,12 @@
 
 
 # static fields
+.field private static final EXTRA_BINARY_DATA:Ljava/lang/String; = "rawData"
+
+.field private static final EXTRA_BINARY_DATA_BASE_64:Ljava/lang/String; = "gcm.rawData64"
+
 .field private static fcmServiceConn:Lcom/google/firebase/messaging/WithinAppServiceConnection;
-    .annotation build Ljavax/annotation/concurrent/GuardedBy;
+    .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
     .end annotation
 .end field
@@ -28,6 +32,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +44,15 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->context:Landroid/content/Context;
 
-    sget-object p1, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda4;->INSTANCE:Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda4;
+    .line 3
+    sget-object p1, Landroidx/window/layout/r;->a:Landroidx/window/layout/r;
 
     iput-object p1, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->executor:Ljava/util/concurrent/Executor;
 
@@ -57,22 +61,37 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/util/concurrent/ExecutorService;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
     iput-object p1, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->context:Landroid/content/Context;
 
+    .line 6
     iput-object p2, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->executor:Ljava/util/concurrent/Executor;
 
     return-void
+.end method
+
+.method public static synthetic a(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/Integer;
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->lambda$startMessagingService$0(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic b(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Integer;
+    .locals 0
+
+    invoke-static {p0}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->lambda$startMessagingService$1(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private static bindToMessagingService(Landroid/content/Context;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
@@ -105,25 +124,57 @@
     .line 2
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    const-string v0, "com.google.firebase.MESSAGING_EVENT"
-
     .line 3
-    invoke-static {p0, v0}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->getServiceConnection(Landroid/content/Context;Ljava/lang/String;)Lcom/google/firebase/messaging/WithinAppServiceConnection;
+    :cond_0
+    invoke-static {}, Lcom/google/firebase/messaging/ServiceStarter;->getInstance()Lcom/google/firebase/messaging/ServiceStarter;
 
-    move-result-object p0
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/ServiceStarter;->hasWakeLockPermission(Landroid/content/Context;)Z
+
+    move-result v0
+
+    const-string v1, "com.google.firebase.MESSAGING_EVENT"
+
+    if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/WithinAppServiceConnection;->sendIntent(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
+    invoke-static {p0, v1}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->getServiceConnection(Landroid/content/Context;Ljava/lang/String;)Lcom/google/firebase/messaging/WithinAppServiceConnection;
+
+    move-result-object v0
+
+    .line 5
+    invoke-static {p0, v0, p1}, Lcom/google/firebase/messaging/WakeLockHolder;->sendWakefulServiceIntent(Landroid/content/Context;Lcom/google/firebase/messaging/WithinAppServiceConnection;Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_1
+    invoke-static {p0, v1}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->getServiceConnection(Landroid/content/Context;Ljava/lang/String;)Lcom/google/firebase/messaging/WithinAppServiceConnection;
 
     move-result-object p0
 
-    sget-object p1, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda4;->INSTANCE:Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda4;
+    invoke-virtual {p0, p1}, Lcom/google/firebase/messaging/WithinAppServiceConnection;->sendIntent(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
 
-    sget-object v0, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda1;->INSTANCE:Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda1;
+    :goto_0
+    const/4 p0, -0x1
 
-    .line 5
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/tasks/Task;->continueWith(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
+    .line 7
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic c(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->lambda$startMessagingService$2(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
 
@@ -133,29 +184,28 @@
 .method private static getServiceConnection(Landroid/content/Context;Ljava/lang/String;)Lcom/google/firebase/messaging/WithinAppServiceConnection;
     .locals 2
 
-    const-string p1, "com.google.firebase.MESSAGING_EVENT"
-
     .line 1
     sget-object v0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->fcmServiceConn:Lcom/google/firebase/messaging/WithinAppServiceConnection;
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance v1, Lcom/google/firebase/messaging/WithinAppServiceConnection;
 
-    .line 2
     invoke-direct {v1, p0, p1}, Lcom/google/firebase/messaging/WithinAppServiceConnection;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     sput-object v1, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->fcmServiceConn:Lcom/google/firebase/messaging/WithinAppServiceConnection;
 
+    .line 4
     :cond_0
     sget-object p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->fcmServiceConn:Lcom/google/firebase/messaging/WithinAppServiceConnection;
 
-    .line 3
     monitor-exit v0
 
     return-object p0
@@ -163,7 +213,7 @@
     :catchall_0
     move-exception p0
 
-    .line 4
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -171,25 +221,7 @@
     throw p0
 .end method
 
-.method public static synthetic lambda$bindToMessagingService$3(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Integer;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    const/4 p0, -0x1
-
-    .line 1
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic lambda$startMessagingService$0(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/Integer;
+.method private static synthetic lambda$startMessagingService$0(Landroid/content/Context;Landroid/content/Intent;)Ljava/lang/Integer;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -213,7 +245,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$startMessagingService$1(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Integer;
+.method private static synthetic lambda$startMessagingService$1(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Integer;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -231,7 +263,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$startMessagingService$2(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
+.method private static synthetic lambda$startMessagingService$2(Landroid/content/Context;Landroid/content/Intent;Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -269,9 +301,9 @@
 
     move-result-object p0
 
-    sget-object p1, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda4;->INSTANCE:Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda4;
+    sget-object p1, Landroidx/window/layout/r;->a:Landroidx/window/layout/r;
 
-    sget-object p2, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda2;->INSTANCE:Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda2;
+    sget-object p2, Lcom/google/firebase/messaging/d;->a:Lcom/google/firebase/messaging/d;
 
     .line 4
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/tasks/Task;->continueWith(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
@@ -297,10 +329,11 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     sput-object v1, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->fcmServiceConn:Lcom/google/firebase/messaging/WithinAppServiceConnection;
 
-    .line 2
+    .line 3
     monitor-exit v0
 
     return-void
@@ -319,13 +352,6 @@
 # virtual methods
 .method public process(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
     .locals 3
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -363,10 +389,10 @@
     .line 3
     invoke-virtual {p1, v0}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->context:Landroid/content/Context;
 
-    .line 4
     invoke-virtual {p0, v0, p1}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->startMessagingService(Landroid/content/Context;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
@@ -375,22 +401,11 @@
 .end method
 
 .method public startMessagingService(Landroid/content/Context;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
-    .locals 3
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .locals 5
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "InlinedApi"
         }
-    .end annotation
-
-    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -410,7 +425,9 @@
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
@@ -421,25 +438,38 @@
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    const/16 v2, 0x1a
+    const/16 v3, 0x1a
 
-    if-lt v0, v2, :cond_0
+    if-lt v0, v3, :cond_0
 
-    const/4 v1, 0x1
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
 
     .line 3
-    :cond_0
+    :goto_0
     invoke-virtual {p2}, Landroid/content/Intent;->getFlags()I
 
-    move-result v0
+    move-result v3
 
-    const/high16 v2, 0x10000000
+    const/high16 v4, 0x10000000
 
-    and-int/2addr v0, v2
+    and-int/2addr v3, v4
 
-    if-eqz v1, :cond_1
+    if-eqz v3, :cond_1
 
-    if-nez v0, :cond_1
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    if-nez v1, :cond_2
 
     .line 4
     invoke-static {p1, p2}, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->bindToMessagingService(Landroid/content/Context;Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
@@ -448,24 +478,25 @@
 
     return-object p1
 
-    :cond_1
+    .line 5
+    :cond_2
     iget-object v0, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->executor:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda3;
+    new-instance v1, Lcom/google/firebase/messaging/e;
 
-    invoke-direct {v1, p1, p2}, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda3;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {v1, p1, p2}, Lcom/google/firebase/messaging/e;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 5
+    .line 6
     invoke-static {v0, v1}, Lcom/google/android/gms/tasks/Tasks;->call(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v0
 
+    .line 7
     iget-object v1, p0, Lcom/google/firebase/messaging/FcmBroadcastProcessor;->executor:Ljava/util/concurrent/Executor;
 
-    .line 6
-    new-instance v2, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda0;
+    new-instance v2, Lcom/google/firebase/messaging/c;
 
-    invoke-direct {v2, p1, p2}, Lcom/google/firebase/messaging/FcmBroadcastProcessor$$ExternalSyntheticLambda0;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {v2, p1, p2}, Lcom/google/firebase/messaging/c;-><init>(Landroid/content/Context;Landroid/content/Intent;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/tasks/Task;->continueWithTask(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
 

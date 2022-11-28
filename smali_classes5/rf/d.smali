@@ -1,63 +1,34 @@
 .class public Lrf/d;
-.super Lng/e;
-.source "ConnManagerParamBean.java"
+.super Ljava/lang/Object;
+.source ""
 
 
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/NotThreadSafe;
-.end annotation
+# instance fields
+.field private a:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/Expose;
+    .end annotation
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "name"
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lng/i;)V
+.method public constructor <init>()V
     .locals 0
 
-    .line 1
-    invoke-direct {p0, p1}, Lng/e;-><init>(Lng/i;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lrf/g;)V
-    .locals 2
+.method public a()Ljava/lang/String;
+    .locals 1
 
-    .line 1
-    iget-object v0, p0, Lng/e;->a:Lng/i;
+    iget-object v0, p0, Lrf/d;->a:Ljava/lang/String;
 
-    const-string v1, "http.conn-manager.max-per-route"
-
-    invoke-interface {v0, v1, p1}, Lng/i;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lng/i;
-
-    return-void
-.end method
-
-.method public b(I)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lng/e;->a:Lng/i;
-
-    const-string v1, "http.conn-manager.max-total"
-
-    invoke-interface {v0, v1, p1}, Lng/i;->setIntParameter(Ljava/lang/String;I)Lng/i;
-
-    return-void
-.end method
-
-.method public c(J)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lng/e;->a:Lng/i;
-
-    const-string v1, "http.conn-manager.timeout"
-
-    invoke-interface {v0, v1, p1, p2}, Lng/i;->setLongParameter(Ljava/lang/String;J)Lng/i;
-
-    return-void
+    return-object v0
 .end method

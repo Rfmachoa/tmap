@@ -29,7 +29,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/apollographql/apollo/api/internal/Optional<",
-            "Lc4/i;",
+            "Lz5/i;",
             ">;"
         }
     .end annotation
@@ -40,7 +40,7 @@
         value = {
             "Lcom/apollographql/apollo/api/internal/Optional<",
             "Ljava/util/Collection<",
-            "Lf4/i;",
+            "Lc6/i;",
             ">;>;"
         }
     .end annotation
@@ -64,20 +64,20 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v0}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$c;-><init>(Lokhttp3/Response;Lc4/i;Ljava/util/Collection;)V
+    invoke-direct {p0, p1, v0, v0}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$c;-><init>(Lokhttp3/Response;Lz5/i;Ljava/util/Collection;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lokhttp3/Response;Lc4/i;Ljava/util/Collection;)V
+.method public constructor <init>(Lokhttp3/Response;Lz5/i;Ljava/util/Collection;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lokhttp3/Response;",
-            "Lc4/i;",
+            "Lz5/i;",
             "Ljava/util/Collection<",
-            "Lf4/i;",
+            "Lc6/i;",
             ">;)V"
         }
     .end annotation
@@ -118,15 +118,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lokhttp3/Response;Lc4/i;Ljava/util/Collection;Ljava/lang/String;)V
+.method public constructor <init>(Lokhttp3/Response;Lz5/i;Ljava/util/Collection;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lokhttp3/Response;",
-            "Lc4/i;",
+            "Lz5/i;",
             "Ljava/util/Collection<",
-            "Lf4/i;",
+            "Lc6/i;",
             ">;",
             "Ljava/lang/String;",
             ")V"

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/car/app/utils/RemoteUtils;->f(Landroidx/car/app/o0;)Landroidx/car/app/IOnDoneCallback;
+    value = Landroidx/car/app/utils/RemoteUtils;->f(Landroidx/car/app/t0;)Landroidx/car/app/IOnDoneCallback;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public final synthetic val$callback:Landroidx/car/app/o0;
+.field public final synthetic val$callback:Landroidx/car/app/t0;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/car/app/o0;)V
+.method public constructor <init>(Landroidx/car/app/t0;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/car/app/utils/RemoteUtils$1;->val$callback:Landroidx/car/app/o0;
+    iput-object p1, p0, Landroidx/car/app/utils/RemoteUtils$1;->val$callback:Landroidx/car/app/t0;
 
     invoke-direct {p0}, Landroidx/car/app/IOnDoneCallback$Stub;-><init>()V
 
@@ -36,9 +36,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$1;->val$callback:Landroidx/car/app/o0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$1;->val$callback:Landroidx/car/app/t0;
 
-    invoke-interface {v0, p1}, Landroidx/car/app/o0;->onFailure(Landroidx/car/app/serialization/Bundleable;)V
+    invoke-interface {v0, p1}, Landroidx/car/app/t0;->onFailure(Landroidx/car/app/serialization/Bundleable;)V
 
     return-void
 .end method
@@ -47,9 +47,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$1;->val$callback:Landroidx/car/app/o0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$1;->val$callback:Landroidx/car/app/t0;
 
-    invoke-interface {v0, p1}, Landroidx/car/app/o0;->onSuccess(Landroidx/car/app/serialization/Bundleable;)V
+    invoke-interface {v0, p1}, Landroidx/car/app/t0;->onSuccess(Landroidx/car/app/serialization/Bundleable;)V
 
     return-void
 .end method

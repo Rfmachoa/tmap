@@ -1,99 +1,41 @@
-.class public final Lcom/google/android/gms/tagmanager/zzfs;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
-
-
-# annotations
-.annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
-.end annotation
-
-
-# instance fields
-.field private zza:Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-.field private final zzb:Landroid/content/Context;
-
-.field private zzc:Lcom/google/android/gms/analytics/Tracker;
+.class abstract Lcom/google/android/gms/tagmanager/zzfs;
+.super Lcom/google/android/gms/tagmanager/zzbt;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public varargs constructor <init>(Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zzb:Landroid/content/Context;
-
-    return-void
-.end method
-
-.method private final declared-synchronized zzb(Ljava/lang/String;)V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zza:Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zzb:Landroid/content/Context;
-
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/analytics/GoogleAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zza:Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    new-instance v0, Lcom/google/android/gms/tagmanager/zzfr;
-
-    invoke-direct {v0}, Lcom/google/android/gms/tagmanager/zzfr;-><init>()V
-
-    .line 2
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/analytics/GoogleAnalytics;->setLogger(Lcom/google/android/gms/analytics/Logger;)V
-
-    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zza:Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    const-string v0, "_GTM_DEFAULT_TRACKER_"
-
-    .line 3
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/analytics/GoogleAnalytics;->newTracker(Ljava/lang/String;)Lcom/google/android/gms/analytics/Tracker;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zzc:Lcom/google/android/gms/analytics/Tracker;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
+    invoke-direct {p0, p1, p2}, Lcom/google/android/gms/tagmanager/zzbt;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
 
     return-void
-
-    :cond_0
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final zza(Ljava/lang/String;)Lcom/google/android/gms/analytics/Tracker;
+.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzam;
     .locals 0
 
-    const-string p1, "_GTM_DEFAULT_TRACKER_"
-
     .line 1
-    invoke-direct {p0, p1}, Lcom/google/android/gms/tagmanager/zzfs;->zzb(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/tagmanager/zzfs;->zzc(Ljava/util/Map;)V
 
-    iget-object p1, p0, Lcom/google/android/gms/tagmanager/zzfs;->zzc:Lcom/google/android/gms/analytics/Tracker;
+    .line 2
+    invoke-static {}, Lcom/google/android/gms/tagmanager/zzfu;->zzb()Lcom/google/android/gms/internal/gtm/zzam;
+
+    move-result-object p1
 
     return-object p1
+.end method
+
+.method public zzb()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract zzc(Ljava/util/Map;)V
 .end method

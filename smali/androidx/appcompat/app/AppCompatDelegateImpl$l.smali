@@ -1,105 +1,77 @@
 .class public Landroidx/appcompat/app/AppCompatDelegateImpl$l;
-.super Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
+.super Ljava/lang/Object;
 .source "AppCompatDelegateImpl.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x11
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/app/AppCompatDelegateImpl;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x9
     name = "l"
 .end annotation
 
 
-# instance fields
-.field public final c:Landroid/os/PowerManager;
-
-.field public final synthetic d:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroid/content/Context;)V
+.method public constructor <init>()V
     .locals 0
-    .param p1    # Landroidx/appcompat/app/AppCompatDelegateImpl;
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/content/res/Configuration;)Landroid/content/Context;
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/res/Configuration;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$l;->d:Landroidx/appcompat/app/AppCompatDelegateImpl;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
 
-    invoke-direct {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
+    move-result-object p0
 
-    .line 2
-    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string p2, "power"
-
-    .line 3
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/PowerManager;
-
-    iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$l;->c:Landroid/os/PowerManager;
-
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public b()Landroid/content/IntentFilter;
-    .locals 2
+.method public static b(Landroid/content/res/Configuration;Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+    .locals 0
+    .param p0    # Landroid/content/res/Configuration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/content/res/Configuration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Configuration;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    new-instance v0, Landroid/content/IntentFilter;
+    iget p0, p0, Landroid/content/res/Configuration;->densityDpi:I
 
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+    iget p1, p1, Landroid/content/res/Configuration;->densityDpi:I
 
-    const-string v1, "android.os.action.POWER_SAVE_MODE_CHANGED"
+    if-eq p0, p1, :cond_0
 
     .line 2
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$l;->c:Landroid/os/PowerManager;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x2
-
-    goto :goto_0
+    iput p1, p2, Landroid/content/res/Configuration;->densityDpi:I
 
     :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-.end method
-
-.method public e()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$l;->d:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->c()Z
-
     return-void
 .end method

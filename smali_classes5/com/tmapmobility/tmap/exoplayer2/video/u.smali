@@ -18,12 +18,6 @@
     return-void
 .end method
 
-.method public f(Lvd/f;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public h(Lcom/tmapmobility/tmap/exoplayer2/Format;Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderReuseEvaluation;)V
     .locals 0
     .param p2    # Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderReuseEvaluation;
@@ -46,13 +40,13 @@
     return-void
 .end method
 
-.method public n(Ljava/lang/Object;J)V
+.method public l(Lyf/f;)V
     .locals 0
 
     return-void
 .end method
 
-.method public o(Lvd/f;)V
+.method public o(Ljava/lang/Object;J)V
     .locals 0
 
     return-void
@@ -70,13 +64,19 @@
     return-void
 .end method
 
-.method public s(JI)V
+.method public s(Lyf/f;)V
     .locals 0
 
     return-void
 .end method
 
-.method public x(Lcom/tmapmobility/tmap/exoplayer2/Format;)V
+.method public u(JI)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public y(Lcom/tmapmobility/tmap/exoplayer2/Format;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation

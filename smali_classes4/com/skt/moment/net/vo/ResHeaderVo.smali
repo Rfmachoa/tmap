@@ -45,6 +45,14 @@
 
 .method public setStatusCode(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "statusCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHeaderVo;->statusCode:Ljava/lang/Integer;
@@ -54,6 +62,14 @@
 
 .method public setStatusMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "statusMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHeaderVo;->statusMessage:Ljava/lang/String;

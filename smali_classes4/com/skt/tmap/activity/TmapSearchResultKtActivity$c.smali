@@ -31,8 +31,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -44,15 +44,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$i;-><init>()V
 
     return-void
@@ -61,7 +56,7 @@
 
 # virtual methods
 .method public onItemRangeInserted(II)V
-    .locals 6
+    .locals 8
 
     .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$i;->onItemRangeInserted(II)V
@@ -89,7 +84,7 @@
 
     const-string v1, "TmapSearchResultKtActivity"
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p2, :cond_0
 
@@ -99,15 +94,26 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->J5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lpb/f1;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->Z5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lmd/l1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/paging/i;->k()Landroidx/paging/h;
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "tmapSearchResultAdapter"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object v0, v1
+
+    :cond_1
+    invoke-virtual {v0}, Landroidx/paging/PagedListAdapter;->l()Landroidx/paging/PagedList;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     add-int/2addr p2, p1
 
@@ -115,74 +121,93 @@
 
     move-result-object p2
 
+    move-object v6, p2
+
     goto :goto_0
 
-    :cond_1
-    const/4 p2, 0x0
-
-    :goto_0
-    move-object v4, p2
+    :cond_2
+    move-object v6, v1
 
     .line 4
-    invoke-static {}, Lcom/skt/tmap/util/y1;->B()Lcom/skt/tmap/util/y1;
+    :goto_0
+    invoke-static {}, Lcom/skt/tmap/util/j2;->B()Lcom/skt/tmap/util/j2;
 
-    move-result-object v0
+    move-result-object v2
 
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
     invoke-virtual {p2}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v3
 
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {p2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object p2
 
-    iget-object v2, p2, Llb/y5;->B1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    const-string v0, "searchResultActivityBinding"
+
+    if-nez p2, :cond_3
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p2, v1
+
+    :cond_3
+    iget-object v4, p2, Lid/y6;->D1:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
     const/4 p2, 0x0
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_4
 
-    const/4 v3, 0x1
+    const/4 v5, 0x1
 
-    move v5, v3
+    move v7, v5
 
     goto :goto_1
 
-    :cond_2
-    move v5, p2
+    :cond_4
+    move v7, p2
 
     :goto_1
-    move v3, p1
+    move v5, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/skt/tmap/util/y1;->u(Landroid/content/res/Resources;Lcom/skt/tmap/mapview/streaming/MapViewStreaming;ILjava/util/List;Z)V
+    invoke-virtual/range {v2 .. v7}, Lcom/skt/tmap/util/j2;->u(Landroid/content/res/Resources;Lcom/skt/tmap/mapview/streaming/MapViewStreaming;ILjava/util/List;Z)V
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_6
 
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->e6(I)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->l6(I)V
 
     .line 6
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->G5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Llb/y5;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->W5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)Lid/y6;
 
     move-result-object p1
 
-    iget-object p1, p1, Llb/y5;->D1:Landroidx/recyclerview/widget/RecyclerView;
+    if-nez p1, :cond_5
+
+    invoke-static {v0}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_5
+    move-object v1, p1
+
+    :goto_2
+    iget-object p1, v1, Lid/y6;->F1:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
     .line 7
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSearchResultKtActivity$c;->a:Lcom/skt/tmap/activity/TmapSearchResultKtActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->N5(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapSearchResultKtActivity;->d6(Lcom/skt/tmap/activity/TmapSearchResultKtActivity;)V
 
-    :cond_3
+    :cond_6
     return-void
 .end method

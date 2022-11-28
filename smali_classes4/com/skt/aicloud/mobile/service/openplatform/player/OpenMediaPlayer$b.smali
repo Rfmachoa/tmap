@@ -176,11 +176,11 @@
 
     move-result-object p1
 
-    invoke-static {v0, v1, p1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->q(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lcom/skt/aicloud/mobile/service/openplatform/events/audioplayer/ErrorTypes;Ljava/lang/String;)Lu9/a;
+    invoke-static {v0, v1, p1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->q(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lcom/skt/aicloud/mobile/service/openplatform/events/audioplayer/ErrorTypes;Ljava/lang/String;)Lrb/a;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lu9/a;)V
+    invoke-static {v0, p1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lrb/a;)V
 
     :goto_2
     return-void

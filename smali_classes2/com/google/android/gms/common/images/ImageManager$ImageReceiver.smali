@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;
 .super Landroid/os/ResultReceiver;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -23,14 +23,6 @@
 .field private final zab:Landroid/net/Uri;
 
 .field private final zac:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/images/zag;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -40,13 +32,13 @@
     .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager$ImageReceiver;->zaa:Lcom/google/android/gms/common/images/ImageManager;
 
-    new-instance p1, Lcom/google/android/gms/internal/base/zaq;
+    new-instance p1, Lcom/google/android/gms/internal/base/zau;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/google/android/gms/internal/base/zaq;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p1, v0}, Lcom/google/android/gms/internal/base/zau;-><init>(Landroid/os/Looper;)V
 
     invoke-direct {p0, p1}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 

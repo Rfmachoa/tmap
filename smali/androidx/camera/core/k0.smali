@@ -3,54 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/SessionConfig$c;
+.implements Landroidx/camera/core/ImageAnalysis$a;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/ImageAnalysis;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Landroidx/camera/core/impl/j;
-
-.field public final synthetic d:Landroid/util/Size;
+.field public final synthetic a:Landroidx/camera/core/ImageAnalysis$a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/ImageAnalysis;Ljava/lang/String;Landroidx/camera/core/impl/j;Landroid/util/Size;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/ImageAnalysis$a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/k0;->a:Landroidx/camera/core/ImageAnalysis;
-
-    iput-object p2, p0, Landroidx/camera/core/k0;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Landroidx/camera/core/k0;->c:Landroidx/camera/core/impl/j;
-
-    iput-object p4, p0, Landroidx/camera/core/k0;->d:Landroid/util/Size;
+    iput-object p1, p0, Landroidx/camera/core/k0;->a:Landroidx/camera/core/ImageAnalysis$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
-    .locals 6
+.method public final d(Landroidx/camera/core/m1;)V
+    .locals 1
 
-    iget-object v0, p0, Landroidx/camera/core/k0;->a:Landroidx/camera/core/ImageAnalysis;
+    iget-object v0, p0, Landroidx/camera/core/k0;->a:Landroidx/camera/core/ImageAnalysis$a;
 
-    iget-object v1, p0, Landroidx/camera/core/k0;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Landroidx/camera/core/k0;->c:Landroidx/camera/core/impl/j;
-
-    iget-object v3, p0, Landroidx/camera/core/k0;->d:Landroid/util/Size;
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    invoke-static/range {v0 .. v5}, Landroidx/camera/core/ImageAnalysis;->J(Landroidx/camera/core/ImageAnalysis;Ljava/lang/String;Landroidx/camera/core/impl/j;Landroid/util/Size;Landroidx/camera/core/impl/SessionConfig;Landroidx/camera/core/impl/SessionConfig$SessionError;)V
+    invoke-static {v0, p1}, Landroidx/camera/core/ImageAnalysis;->N(Landroidx/camera/core/ImageAnalysis$a;Landroidx/camera/core/m1;)V
 
     return-void
 .end method

@@ -50,7 +50,7 @@
 
     iget-object v1, v1, Landroidx/transition/i$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

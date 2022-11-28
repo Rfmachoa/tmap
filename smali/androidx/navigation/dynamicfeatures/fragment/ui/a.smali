@@ -13,20 +13,21 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008\u0000\u0018\u0000 \u00072\u00020\u0001:\u0001\u0005B\u0007\u00a2\u0006\u0004\u0008\t\u0010\nR$\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006\"\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\u000b"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\n\u0008\u0000\u0018\u0000 \u00052\u00020\u0001:\u0001\u000bB\u0007\u00a2\u0006\u0004\u0008\t\u0010\nR$\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006\"\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\u000c"
     }
     d2 = {
         "Landroidx/navigation/dynamicfeatures/fragment/ui/a;",
         "Landroidx/lifecycle/ViewModel;",
-        "Lu2/l;",
+        "Lq3/k;",
         "installMonitor",
-        "Lu2/l;",
-        "b",
-        "()Lu2/l;",
+        "Lq3/k;",
         "c",
-        "(Lu2/l;)V",
+        "()Lq3/k;",
+        "d",
+        "(Lq3/k;)V",
         "<init>",
         "()V",
+        "b",
         "navigation-dynamic-features-fragment_release"
     }
     k = 0x1
@@ -48,7 +49,7 @@
 
 
 # instance fields
-.field public a:Lu2/l;
+.field public a:Lq3/k;
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 .end field
@@ -85,7 +86,7 @@
     return-void
 .end method
 
-.method public static final synthetic a()Landroidx/lifecycle/ViewModelProvider$Factory;
+.method public static final synthetic b()Landroidx/lifecycle/ViewModelProvider$Factory;
     .locals 1
 
     .line 1
@@ -96,26 +97,26 @@
 
 
 # virtual methods
-.method public final b()Lu2/l;
+.method public final c()Lq3/k;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->a:Lu2/l;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->a:Lq3/k;
 
     return-object v0
 .end method
 
-.method public final c(Lu2/l;)V
+.method public final d(Lq3/k;)V
     .locals 0
-    .param p1    # Lu2/l;
+    .param p1    # Lq3/k;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->a:Lu2/l;
+    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/a;->a:Lq3/k;
 
     return-void
 .end method

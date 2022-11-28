@@ -15,8 +15,5 @@
 
 
 # virtual methods
-.method public abstract onQueryTextChange(Ljava/lang/String;)Z
-.end method
-
-.method public abstract onQueryTextSubmit(Ljava/lang/String;)Z
+.method public abstract onClose()Z
 .end method

@@ -159,7 +159,32 @@
     return-void
 .end method
 
-.method public static B0(Lzj/n;Ljava/lang/String;)V
+.method public static U(Lem/o;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
+    .locals 1
+
+    .line 1
+    new-instance v0, Lcom/airbnb/lottie/parser/moshi/b;
+
+    invoke-direct {v0, p0}, Lcom/airbnb/lottie/parser/moshi/b;-><init>(Lem/o;)V
+
+    return-object v0
+.end method
+
+.method public static synthetic a(Lem/n;Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->q0(Lem/n;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static q0(Lem/n;Ljava/lang/String;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -173,7 +198,7 @@
     const/16 v1, 0x22
 
     .line 2
-    invoke-interface {p0, v1}, Lzj/n;->writeByte(I)Lzj/n;
+    invoke-interface {p0, v1}, Lem/n;->writeByte(I)Lem/n;
 
     .line 3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -224,11 +249,11 @@
     if-ge v4, v3, :cond_3
 
     .line 6
-    invoke-interface {p0, p1, v4, v3}, Lzj/n;->U(Ljava/lang/String;II)Lzj/n;
+    invoke-interface {p0, p1, v4, v3}, Lem/n;->f0(Ljava/lang/String;II)Lem/n;
 
     .line 7
     :cond_3
-    invoke-interface {p0, v5}, Lzj/n;->P(Ljava/lang/String;)Lzj/n;
+    invoke-interface {p0, v5}, Lem/n;->X(Ljava/lang/String;)Lem/n;
 
     add-int/lit8 v4, v3, 0x1
 
@@ -242,75 +267,18 @@
     if-ge v4, v2, :cond_6
 
     .line 8
-    invoke-interface {p0, p1, v4, v2}, Lzj/n;->U(Ljava/lang/String;II)Lzj/n;
+    invoke-interface {p0, p1, v4, v2}, Lem/n;->f0(Ljava/lang/String;II)Lem/n;
 
     .line 9
     :cond_6
-    invoke-interface {p0, v1}, Lzj/n;->writeByte(I)Lzj/n;
-
-    return-void
-.end method
-
-.method public static O(Lzj/o;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lcom/airbnb/lottie/parser/moshi/c;
-
-    invoke-direct {v0, p0}, Lcom/airbnb/lottie/parser/moshi/c;-><init>(Lzj/o;)V
-
-    return-object v0
-.end method
-
-.method public static synthetic a(Lzj/n;Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->B0(Lzj/n;Ljava/lang/String;)V
+    invoke-interface {p0, v1}, Lem/n;->writeByte(I)Lem/n;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final D0(Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
-
-    const-string v1, " at path "
-
-    invoke-static {p1, v1}, Landroid/support/v4/media/e;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public abstract G()I
+.method public abstract J()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -318,7 +286,7 @@
     .end annotation
 .end method
 
-.method public abstract L()Ljava/lang/String;
+.method public abstract T()Ljava/lang/String;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -326,7 +294,7 @@
     .end annotation
 .end method
 
-.method public abstract N()Ljava/lang/String;
+.method public abstract V()Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -334,7 +302,7 @@
     .end annotation
 .end method
 
-.method public abstract W()Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
+.method public abstract b()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -342,7 +310,7 @@
     .end annotation
 .end method
 
-.method public final Y(I)V
+.method public final b0(I)V
     .locals 3
 
     .line 1
@@ -439,31 +407,7 @@
     return-void
 .end method
 
-.method public abstract a0(Lcom/airbnb/lottie/parser/moshi/JsonReader$a;)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract b()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
 .method public abstract c()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract c0()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -479,15 +423,7 @@
     .end annotation
 .end method
 
-.method public abstract e0()V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract f()V
+.method public abstract g()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -507,11 +443,19 @@
 
     iget-object v3, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->d:[I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/airbnb/lottie/parser/moshi/b;->a(I[I[Ljava/lang/String;[I)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lcom/airbnb/lottie/parser/moshi/a;->a(I[I[Ljava/lang/String;[I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public abstract h0(Lcom/airbnb/lottie/parser/moshi/JsonReader$a;)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method
 
 .method public abstract k()Z
@@ -522,7 +466,7 @@
     .end annotation
 .end method
 
-.method public abstract u()Z
+.method public abstract k0()V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -530,7 +474,63 @@
     .end annotation
 .end method
 
-.method public abstract v()D
+.method public abstract o0()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public abstract s()Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public final v0(Ljava/lang/String;)Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
+
+    const-string v1, " at path "
+
+    invoke-static {p1, v1}, Landroid/support/v4/media/e;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public abstract w()D
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public abstract x()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

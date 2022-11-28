@@ -1,784 +1,470 @@
-.class public final Lgc/e;
+.class public Lgc/e;
 .super Ljava/lang/Object;
-.source "MapOverlayRenderer.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lgc/e$a;
-    }
-.end annotation
+.source "PlayInfo.java"
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "o_position"
+.field public static final c:Ljava/lang/String; = "e"
 
-.field public static final b:Ljava/lang/String; = "o_texCoord"
+.field public static final d:Ljava/lang/String; = "media_context"
 
-.field public static final c:Ljava/lang/String; = "o_texture"
+.field public static final e:Ljava/lang/String; = "play_type"
 
-.field public static final d:Ljava/lang/String; = "o_mvpMatrix"
+.field public static final f:Ljava/lang/String; = "play_status"
 
-.field public static final e:Ljava/lang/String; = "uniform mat4 o_mvpMatrix;\nattribute vec4 o_position;\nattribute vec2 o_texCoord;\nvarying vec2 v_texCoord;\nvoid main() {\n  v_texCoord = o_texCoord;\n  gl_Position = o_mvpMatrix * o_position;\n}\n"
+.field public static final g:Ljava/lang/String; = "move_type"
 
-.field public static final f:Ljava/lang/String; = "precision mediump float;\nuniform sampler2D o_texture;\nvarying vec2 v_texCoord;\nvoid main() {\n  gl_FragColor = texture2D(o_texture, v_texCoord);\n}\n"
 
-.field public static final g:Ljava/nio/ShortBuffer;
+# instance fields
+.field public a:Ljava/lang/String;
 
-.field public static final h:Ljava/nio/FloatBuffer;
-
-.field public static i:Ljava/nio/FloatBuffer;
-
-.field public static j:Ljava/nio/FloatBuffer;
+.field public b:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lgc/e;->f()Ljava/nio/ShortBuffer;
-
-    move-result-object v0
-
-    sput-object v0, Lgc/e;->g:Ljava/nio/ShortBuffer;
-
-    .line 2
-    invoke-static {}, Lgc/e;->g()Ljava/nio/FloatBuffer;
-
-    move-result-object v0
-
-    sput-object v0, Lgc/e;->h:Ljava/nio/FloatBuffer;
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public static a(Lgc/e$a;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "renderData"
-        }
-    .end annotation
-
-    .line 1
-    iget v0, p0, Lgc/e$a;->c:I
-
-    if-eqz v0, :cond_0
+    const-string v0, ""
 
     .line 2
-    invoke-static {v0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+    iput-object v0, p0, Lgc/e;->a:Ljava/lang/String;
 
     .line 3
-    :cond_0
-    iget v0, p0, Lgc/e$a;->b:I
-
-    if-eqz v0, :cond_1
+    iput-object v0, p0, Lgc/e;->b:Ljava/lang/String;
 
     .line 4
-    invoke-static {v0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
-
-    .line 5
-    :cond_1
-    iget p0, p0, Lgc/e$a;->a:I
-
-    if-eqz p0, :cond_2
-
-    .line 6
-    invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public static b(Lgc/e$a;I[F[FLandroid/graphics/Bitmap;)V
-    .locals 14
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "renderData",
-            "textureId",
-            "posCoords",
-            "transform",
-            "bitmap"
-        }
-    .end annotation
-
-    move-object v0, p0
-
-    move v1, p1
-
-    if-nez v1, :cond_0
-
-    return-void
-
-    .line 1
-    :cond_0
-    iget v2, v0, Lgc/e$a;->b:I
-
-    const/4 v3, 0x3
-
-    const/16 v4, 0x1406
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0xc
-
-    invoke-static/range {p2 .. p2}, Lgc/e;->d([F)Ljava/nio/FloatBuffer;
-
-    move-result-object v7
-
-    invoke-static/range {v2 .. v7}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
-
-    .line 2
-    iget v8, v0, Lgc/e$a;->c:I
-
-    const/4 v9, 0x2
-
-    const/16 v10, 0x1406
-
-    const/4 v11, 0x0
-
-    const/16 v12, 0x8
-
-    sget-object v13, Lgc/e;->h:Ljava/nio/FloatBuffer;
-
-    invoke-static/range {v8 .. v13}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
-
-    .line 3
-    iget v2, v0, Lgc/e$a;->e:I
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-static/range {p3 .. p3}, Lgc/e;->c([F)Ljava/nio/FloatBuffer;
-
-    move-result-object v5
-
-    invoke-static {v2, v3, v4, v5}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZLjava/nio/FloatBuffer;)V
-
-    const v2, 0x84c2
-
-    .line 4
-    invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
-
-    const/16 v2, 0xde1
-
-    .line 5
-    invoke-static {v2, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
-    if-eqz p4, :cond_1
-
-    const/16 v3, 0xde1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/16 v8, 0x1908
-
-    const/16 v9, 0x1401
-
-    move-object/from16 v7, p4
-
-    .line 6
-    invoke-static/range {v3 .. v9}, Landroid/opengl/GLUtils;->texSubImage2D(IIIILandroid/graphics/Bitmap;II)V
-
-    .line 7
-    invoke-virtual/range {p4 .. p4}, Landroid/graphics/Bitmap;->recycle()V
-
-    .line 8
-    :cond_1
-    iget v0, v0, Lgc/e$a;->d:I
-
-    const/4 v1, 0x2
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
-
-    const/4 v0, 0x4
-
-    const/4 v1, 0x6
-
-    const/16 v2, 0x1403
-
-    .line 9
-    sget-object v3, Lgc/e;->g:Ljava/nio/ShortBuffer;
-
-    invoke-static {v0, v1, v2, v3}, Landroid/opengl/GLES20;->glDrawElements(IIILjava/nio/Buffer;)V
+    invoke-virtual {p0, p1, p2}, Lgc/e;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static c([F)Ljava/nio/FloatBuffer;
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "matrix"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lgc/e;->j:Ljava/nio/FloatBuffer;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    array-length v0, p0
-
-    mul-int/lit8 v0, v0, 0x4
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    .line 3
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 4
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
-
-    move-result-object v0
-
-    sput-object v0, Lgc/e;->j:Ljava/nio/FloatBuffer;
-
-    .line 5
-    :cond_0
-    sget-object v0, Lgc/e;->j:Ljava/nio/FloatBuffer;
-
-    invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
-
-    .line 6
-    sget-object p0, Lgc/e;->j:Ljava/nio/FloatBuffer;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 7
-    sget-object p0, Lgc/e;->j:Ljava/nio/FloatBuffer;
-
-    return-object p0
-.end method
-
-.method public static d([F)Ljava/nio/FloatBuffer;
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "posCoords"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lgc/e;->i:Ljava/nio/FloatBuffer;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    array-length v0, p0
-
-    mul-int/lit8 v0, v0, 0x4
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    .line 3
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 4
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
-
-    move-result-object v0
-
-    sput-object v0, Lgc/e;->i:Ljava/nio/FloatBuffer;
-
-    .line 5
-    :cond_0
-    sget-object v0, Lgc/e;->i:Ljava/nio/FloatBuffer;
-
-    invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
-
-    .line 6
-    sget-object p0, Lgc/e;->i:Ljava/nio/FloatBuffer;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 7
-    sget-object p0, Lgc/e;->i:Ljava/nio/FloatBuffer;
-
-    return-object p0
-.end method
-
-.method public static e()Lgc/e$a;
+.method public static a()Lgc/e;
     .locals 3
 
     .line 1
-    new-instance v0, Lgc/e$a;
+    new-instance v0, Lgc/e;
 
-    invoke-direct {v0}, Lgc/e$a;-><init>()V
+    const-string v1, ""
+
+    invoke-direct {v0, v1, v1}, Lgc/e;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {}, Lgc/e;->h()I
+    invoke-static {}, Lgc/e;->b()Lcom/skt/aicloud/speaker/service/api/c;
 
-    move-result v1
+    move-result-object v1
 
-    iput v1, v0, Lgc/e$a;->a:I
-
-    const-string v2, "o_position"
+    if-nez v1, :cond_0
 
     .line 3
-    invoke-static {v1, v2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+    sget-object v1, Lgc/e;->c:Ljava/lang/String;
 
-    move-result v1
+    const-string v2, "createCurrentInfo() : StateManager is null."
 
-    iput v1, v0, Lgc/e$a;->b:I
+    invoke-static {v1, v2}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 
     .line 4
-    iget v1, v0, Lgc/e$a;->a:I
+    :cond_0
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/c;->V()Lcom/skt/aicloud/speaker/service/state/b;
 
-    const-string v2, "o_texCoord"
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+    invoke-interface {v1}, Lcom/skt/aicloud/speaker/service/state/b;->getDomain()Ljava/lang/String;
 
-    move-result v1
-
-    iput v1, v0, Lgc/e$a;->c:I
+    move-result-object v1
 
     .line 5
-    iget v1, v0, Lgc/e$a;->a:I
+    invoke-static {}, Lgc/e;->d()Ljava/lang/String;
 
-    const-string v2, "o_mvpMatrix"
-
-    invoke-static {v1, v2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Lgc/e$a;->e:I
+    move-result-object v2
 
     .line 6
-    iget v1, v0, Lgc/e$a;->a:I
-
-    const-string v2, "o_texture"
-
-    invoke-static {v1, v2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Lgc/e$a;->d:I
-
-    .line 7
-    iget v1, v0, Lgc/e$a;->b:I
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
-
-    .line 8
-    iget v1, v0, Lgc/e$a;->c:I
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
+    invoke-virtual {v0, v1, v2}, Lgc/e;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public static f()Ljava/nio/ShortBuffer;
-    .locals 3
-
-    const/4 v0, 0x6
-
-    new-array v0, v0, [S
+.method public static b()Lcom/skt/aicloud/speaker/service/api/c;
+    .locals 2
 
     .line 1
-    fill-array-data v0, :array_0
+    :try_start_0
+    invoke-static {}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getInstance()Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;
 
-    const/16 v1, 0xc
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getAladdinStateManager()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
 
     .line 2
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    sget-object v1, Lgc/e;->c:Ljava/lang/String;
 
-    move-result-object v1
-
-    .line 3
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 4
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
-
-    move-result-object v1
-
-    .line 5
-    invoke-virtual {v1, v0}, Ljava/nio/ShortBuffer;->put([S)Ljava/nio/ShortBuffer;
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 v0, 0x0
 
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/nio/ShortBuffer;->position(I)Ljava/nio/Buffer;
-
-    return-object v1
-
-    nop
-
-    :array_0
-    .array-data 2
-        0x0s
-        0x1s
-        0x2s
-        0x0s
-        0x2s
-        0x3s
-    .end array-data
+    return-object v0
 .end method
 
-.method public static g()Ljava/nio/FloatBuffer;
-    .locals 3
-
-    const/16 v0, 0x8
-
-    new-array v0, v0, [F
+.method public static c()Lcom/skt/aicloud/speaker/service/api/g;
+    .locals 2
 
     .line 1
-    fill-array-data v0, :array_0
+    :try_start_0
+    invoke-static {}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getInstance()Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;
 
-    const/16 v1, 0x20
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getMediaStateManager()Lcom/skt/aicloud/speaker/service/api/g;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
 
     .line 2
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    sget-object v1, Lgc/e;->c:Ljava/lang/String;
 
-    move-result-object v1
-
-    .line 3
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 4
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
-
-    move-result-object v1
-
-    .line 5
-    invoke-virtual {v1, v0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 v0, 0x0
 
-    .line 6
-    invoke-virtual {v1, v0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
-
-    return-object v1
-
-    :array_0
-    .array-data 4
-        0x0
-        0x0
-        0x0
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
+    return-object v0
 .end method
 
-.method public static h()I
-    .locals 5
-
-    const v0, 0x8b31
-
-    const-string/jumbo v1, "uniform mat4 o_mvpMatrix;\nattribute vec4 o_position;\nattribute vec2 o_texCoord;\nvarying vec2 v_texCoord;\nvoid main() {\n  v_texCoord = o_texCoord;\n  gl_Position = o_mvpMatrix * o_position;\n}\n"
+.method public static d()Ljava/lang/String;
+    .locals 3
 
     .line 1
-    invoke-static {v0, v1}, Lgc/e;->i(ILjava/lang/String;)I
+    invoke-static {}, Lgc/e;->b()Lcom/skt/aicloud/speaker/service/api/c;
 
-    move-result v0
+    move-result-object v0
 
-    const/4 v1, 0x0
+    .line 2
+    invoke-static {}, Lgc/e;->c()Lcom/skt/aicloud/speaker/service/api/g;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    return v1
+    if-eqz v0, :cond_3
 
+    if-nez v1, :cond_0
+
+    goto :goto_2
+
+    .line 3
     :cond_0
-    const v2, 0x8b30
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/c;->V()Lcom/skt/aicloud/speaker/service/state/b;
 
-    const-string v3, "precision mediump float;\nuniform sampler2D o_texture;\nvarying vec2 v_texCoord;\nvoid main() {\n  gl_FragColor = texture2D(o_texture, v_texCoord);\n}\n"
+    move-result-object v0
 
-    .line 2
-    invoke-static {v2, v3}, Lgc/e;->i(ILjava/lang/String;)I
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/state/b;->getAppState()Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    move-result-object v0
+
+    .line 4
+    invoke-static {v0}, Lcom/skt/aicloud/speaker/service/player/MediaState;->getMediaState(Lcom/skt/aicloud/speaker/lib/state/AppState;)Lcom/skt/aicloud/speaker/service/player/MediaState;
+
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {v1, v0}, Lcom/skt/aicloud/speaker/service/api/g;->K(Lcom/skt/aicloud/speaker/service/player/MediaState;)Z
 
     move-result v2
 
-    if-nez v2, :cond_1
-
-    return v1
-
-    .line 3
-    :cond_1
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 4
-    invoke-static {v3, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    .line 5
-    invoke-static {v3, v2}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
     .line 6
-    invoke-static {v3}, Landroid/opengl/GLES20;->glLinkProgram(I)V
+    invoke-virtual {v1, v0}, Lcom/skt/aicloud/speaker/service/api/g;->I(Lcom/skt/aicloud/speaker/service/player/MediaState;)Z
+
+    move-result v0
+
+    if-nez v2, :cond_2
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "stop"
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const-string v0, "play"
+
+    :goto_1
+    return-object v0
+
+    .line 7
+    :cond_3
+    :goto_2
+    sget-object v0, Lgc/e;->c:Ljava/lang/String;
+
+    const-string v1, "getPlayStatus() : StateManager or MediaStateManager is null."
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public e()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lgc/e;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    new-array v2, v0, [I
+    if-ne p0, p1, :cond_0
 
-    const v4, 0x8b82
+    return v0
 
-    .line 7
-    invoke-static {v3, v4, v2, v1}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+    :cond_0
+    const/4 v1, 0x0
 
-    .line 8
-    aget v2, v2, v1
+    if-eqz p1, :cond_4
 
-    if-eq v2, v0, :cond_2
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 9
-    invoke-static {v3}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_1
+
+    .line 2
+    :cond_1
+    check-cast p1, Lgc/e;
+
+    .line 3
+    iget-object v2, p0, Lgc/e;->a:Ljava/lang/String;
+
+    invoke-virtual {p1}, Lgc/e;->f()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/skt/aicloud/mobile/service/util/z;->f(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    iget-object v2, p0, Lgc/e;->b:Ljava/lang/String;
+
+    .line 4
+    invoke-virtual {p1}, Lgc/e;->e()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Lcom/skt/aicloud/mobile/service/util/z;->f(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    move v1, v3
+    move v0, v1
 
+    :cond_3
     :goto_0
+    return v0
+
+    :cond_4
+    :goto_1
     return v1
 .end method
 
-.method public static i(ILjava/lang/String;)I
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "shaderType",
-            "source"
-        }
-    .end annotation
+.method public f()Ljava/lang/String;
+    .locals 1
 
     .line 1
-    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
+    iget-object v0, p0, Lgc/e;->a:Ljava/lang/String;
 
-    move-result p0
+    return-object v0
+.end method
 
-    const/4 v0, 0x0
+.method public g(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    .locals 2
 
-    if-eqz p0, :cond_0
+    :try_start_0
+    const-string v0, "play_type"
+
+    .line 1
+    iget-object v1, p0, Lgc/e;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v0, "play_status"
 
     .line 2
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
+    iget-object v1, p0, Lgc/e;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
 
     .line 3
-    invoke-static {p0}, Landroid/opengl/GLES20;->glCompileShader(I)V
+    sget-object v1, Lgc/e;->c:Ljava/lang/String;
 
-    const/4 p1, 0x1
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-array p1, p1, [I
+    :goto_0
+    return-object p1
+.end method
 
-    const v1, 0x8b81
+.method public final h(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    .line 4
-    invoke-static {p0, v1, p1, v0}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
+    .line 1
+    invoke-static {p1}, Lcom/skt/aicloud/mobile/service/util/z;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 5
-    aget p1, p1, v0
+    move-result-object p1
+
+    iput-object p1, p0, Lgc/e;->a:Ljava/lang/String;
+
+    .line 2
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
 
     if-nez p1, :cond_0
 
-    .line 6
-    invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+    invoke-static {p2}, Lcom/skt/aicloud/mobile/service/util/z;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    move p0, v0
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_0
-    return p0
+    const-string p1, ""
+
+    :goto_0
+    iput-object p1, p0, Lgc/e;->b:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public static j(IILandroid/graphics/Bitmap;)I
-    .locals 19
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "width",
-            "height",
-            "bitmap"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    new-array v1, v0, [I
-
-    const/4 v2, 0x0
+.method public i()V
+    .locals 2
 
     .line 1
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
+    invoke-static {}, Lgc/e;->b()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
 
     .line 2
-    aget v1, v1, v2
+    sget-object v0, Lgc/e;->c:Ljava/lang/String;
 
-    const/16 v2, 0xde1
+    const-string v1, "updateCurrentInfo() : StateManager is null."
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 
     .line 3
-    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    :cond_0
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/c;->V()Lcom/skt/aicloud/speaker/service/state/b;
 
-    const/16 v3, 0x2801
+    move-result-object v0
 
-    const/16 v4, 0x2601
+    invoke-interface {v0}, Lcom/skt/aicloud/speaker/service/state/b;->getDomain()Ljava/lang/String;
+
+    move-result-object v0
 
     .line 4
-    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    invoke-static {}, Lgc/e;->d()Ljava/lang/String;
 
-    const/16 v3, 0x2800
+    move-result-object v1
+
+    if-nez v1, :cond_1
 
     .line 5
-    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    sget-object v0, Lgc/e;->c:Ljava/lang/String;
 
-    const/16 v3, 0x2802
+    const-string v1, "updateCurrentInfo() : status is null."
 
-    const v4, 0x812f
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 
     .line 6
-    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    :cond_1
+    invoke-virtual {p0, v0, v1}, Lgc/e;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v3, 0x2803
-
-    .line 7
-    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    const/16 v2, 0xcf5
-
-    .line 8
-    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glPixelStorei(II)V
-
-    const/16 v3, 0xde1
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0x1908
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x1908
-
-    const/16 v10, 0x1401
-
-    const/4 v11, 0x0
-
-    move/from16 v6, p0
-
-    move/from16 v7, p1
-
-    .line 9
-    invoke-static/range {v3 .. v11}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
-
-    if-eqz p2, :cond_0
-
-    const/16 v12, 0xde1
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v17, 0x1908
-
-    const/16 v18, 0x1401
-
-    move-object/from16 v16, p2
-
-    .line 10
-    invoke-static/range {v12 .. v18}, Landroid/opengl/GLUtils;->texSubImage2D(IIIILandroid/graphics/Bitmap;II)V
-
-    .line 11
-    invoke-virtual/range {p2 .. p2}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_0
-    return v1
+    return-void
 .end method
 
-.method public static k(I)V
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "textureId"
-        }
-    .end annotation
+.method public toString()Ljava/lang/String;
+    .locals 4
 
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x1
-
-    new-array v1, v0, [I
-
-    const/4 v2, 0x0
-
-    aput p0, v1, v2
+    const-string v0, "AudioPlayerPlay{mStatus=\'"
 
     .line 1
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
+    move-result-object v0
+
+    iget-object v1, p0, Lgc/e;->b:Ljava/lang/String;
+
+    const/16 v2, 0x27
+
+    const-string v3, ", mType=\'"
+
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+
+    iget-object v1, p0, Lgc/e;->a:Ljava/lang/String;
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lg4/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -29,11 +29,11 @@
 
 
 # static fields
-.field public static final A1:J = -0x1L
+.field public static final A1:I = 0xa
 
-.field public static final B1:I = -0x1
+.field public static final B1:I = 0xb
 
-.field public static final C1:I = 0x0
+.field public static final C1:J = -0x1L
 
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
@@ -45,120 +45,120 @@
     .end annotation
 .end field
 
-.field public static final D1:I = 0x1
+.field public static final D1:I = -0x1
 
-.field public static final E1:I = 0x2
+.field public static final E1:I = 0x0
 
-.field public static final F1:I = 0x3
+.field public static final F1:I = 0x1
 
-.field public static final G1:I = -0x1
+.field public static final G1:I = 0x2
 
-.field public static final H1:I = 0x0
+.field public static final H1:I = 0x3
 
-.field public static final I1:I = 0x1
+.field public static final I1:I = -0x1
 
-.field public static final J1:I = 0x2
+.field public static final J1:I = 0x0
 
 .field public static final K0:J = 0x8L
 
-.field public static final K1:I = 0x0
+.field public static final K1:I = 0x1
 
-.field public static final L1:I = 0x1
+.field public static final L1:I = 0x2
 
-.field public static final M1:I = 0x2
+.field public static final M1:I = 0x0
 
-.field public static final N1:I = 0x3
+.field public static final N1:I = 0x1
 
-.field public static final O1:I = 0x4
+.field public static final O1:I = 0x2
 
-.field public static final P1:I = 0x5
+.field public static final P1:I = 0x3
 
-.field public static final Q1:I = 0x6
+.field public static final Q1:I = 0x4
 
-.field public static final R1:I = 0x7
+.field public static final R1:I = 0x5
 
-.field public static final S1:I = 0x8
+.field public static final S1:I = 0x6
 
-.field public static final T1:I = 0x9
+.field public static final T1:I = 0x7
 
-.field public static final U1:I = 0xa
+.field public static final U1:I = 0x8
 
-.field public static final V0:J = 0x10L
+.field public static final V1:I = 0x9
 
-.field public static final V1:I = 0xb
+.field public static final W1:I = 0xa
 
-.field public static final W0:J = 0x20L
+.field public static final X0:J = 0x10L
 
-.field public static final W1:I = 0x7f
+.field public static final X1:I = 0xb
 
-.field public static final X0:J = 0x40L
+.field public static final Y0:J = 0x20L
 
-.field public static final X1:I = 0x7e
+.field public static final Y1:I = 0x7f
 
-.field public static final Y0:J = 0x80L
+.field public static final Z0:J = 0x40L
 
-.field public static final Z0:J = 0x100L
+.field public static final Z1:I = 0x7e
 
-.field public static final a1:J = 0x200L
+.field public static final a1:J = 0x80L
 
-.field public static final b1:J = 0x400L
+.field public static final b1:J = 0x100L
 
-.field public static final c1:J = 0x800L
+.field public static final c1:J = 0x200L
 
-.field public static final d1:J = 0x1000L
+.field public static final d1:J = 0x400L
 
-.field public static final e1:J = 0x2000L
+.field public static final e1:J = 0x800L
 
-.field public static final f1:J = 0x4000L
+.field public static final f1:J = 0x1000L
 
-.field public static final g1:J = 0x8000L
+.field public static final g1:J = 0x2000L
 
-.field public static final h1:J = 0x10000L
+.field public static final h1:J = 0x4000L
 
-.field public static final i1:J = 0x20000L
+.field public static final i1:J = 0x8000L
 
-.field public static final j1:J = 0x40000L
+.field public static final j1:J = 0x10000L
 
 .field public static final k0:J = 0x4L
 
-.field public static final k1:J = 0x80000L
+.field public static final k1:J = 0x20000L
+
+.field public static final l1:J = 0x40000L
+
+.field public static final m1:J = 0x80000L
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
 
-.field public static final l1:J = 0x100000L
+.field public static final n1:J = 0x100000L
 
-.field public static final m1:J = 0x200000L
-
-.field public static final n1:J = 0x400000L
-
-.field public static final o1:I = 0x0
+.field public static final o1:J = 0x200000L
 
 .field public static final p:J = 0x1L
 
-.field public static final p1:I = 0x1
+.field public static final p1:J = 0x400000L
 
-.field public static final q1:I = 0x2
+.field public static final q1:I = 0x0
 
-.field public static final r1:I = 0x3
+.field public static final r1:I = 0x1
 
-.field public static final s1:I = 0x4
+.field public static final s1:I = 0x2
 
-.field public static final t1:I = 0x5
+.field public static final t1:I = 0x3
 
 .field public static final u:J = 0x2L
 
-.field public static final u1:I = 0x6
+.field public static final u1:I = 0x4
 
-.field public static final v1:I = 0x7
+.field public static final v1:I = 0x5
 
-.field public static final w1:I = 0x8
+.field public static final w1:I = 0x6
 
-.field public static final x1:I = 0x9
+.field public static final x1:I = 0x7
 
-.field public static final y1:I = 0xa
+.field public static final y1:I = 0x8
 
-.field public static final z1:I = 0xb
+.field public static final z1:I = 0x9
 
 
 # instance fields
@@ -426,7 +426,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat;
     .locals 21
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -479,7 +479,7 @@
     move-result-object v3
 
     .line 5
-    invoke-static {v3}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->b(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
+    invoke-static {v3}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->a(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
 
     move-result-object v3
 
@@ -554,7 +554,7 @@
     return-object v0
 .end method
 
-.method public static q(J)I
+.method public static s(J)I
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -669,15 +669,6 @@
     return-wide v0
 .end method
 
-.method public d()J
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->j:J
-
-    return-wide v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -690,12 +681,21 @@
     .locals 2
 
     .line 1
+    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->j:J
+
+    return-wide v0
+.end method
+
+.method public f()J
+    .locals 2
+
+    .line 1
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->c:J
 
     return-wide v0
 .end method
 
-.method public f(Ljava/lang/Long;)J
+.method public h(Ljava/lang/Long;)J
     .locals 7
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -754,7 +754,7 @@
     return-wide v0
 .end method
 
-.method public g()Ljava/util/List;
+.method public i()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -771,7 +771,7 @@
     return-object v0
 .end method
 
-.method public h()I
+.method public j()I
     .locals 1
 
     .line 1
@@ -780,7 +780,7 @@
     return v0
 .end method
 
-.method public i()Ljava/lang/CharSequence;
+.method public l()Ljava/lang/CharSequence;
     .locals 1
 
     .line 1
@@ -789,7 +789,7 @@
     return-object v0
 .end method
 
-.method public j()Landroid/os/Bundle;
+.method public m()Landroid/os/Bundle;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -800,7 +800,7 @@
     return-object v0
 .end method
 
-.method public l()J
+.method public n()J
     .locals 2
 
     .line 1
@@ -809,7 +809,7 @@
     return-wide v0
 .end method
 
-.method public m()F
+.method public o()F
     .locals 1
 
     .line 1
@@ -818,7 +818,7 @@
     return v0
 .end method
 
-.method public n()Ljava/lang/Object;
+.method public p()Ljava/lang/Object;
     .locals 8
 
     .line 1
@@ -880,7 +880,7 @@
     check-cast v2, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
 
     .line 8
-    invoke-virtual {v2}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->d()Ljava/lang/Object;
+    invoke-virtual {v2}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->e()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -916,7 +916,7 @@
     return-object v0
 .end method
 
-.method public o()J
+.method public q()J
     .locals 2
 
     .line 1
@@ -925,7 +925,7 @@
     return-wide v0
 .end method
 
-.method public p()I
+.method public r()I
     .locals 1
 
     .line 1

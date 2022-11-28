@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.skt.tmap.setting.fragment.customLayout.SettingUserInfoHeaderPreference android:key="@string/setting_user_info_header" />
-    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference app:isTextViewDivider="false">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_name" android:key="@string/setting_user_name" app:isTextViewDivider="false" app:isUseValue="false" />
         <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_t_id" android:key="@string/setting_tid" app:isUseValue="false" />
         <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_phone_number" android:key="@string/setting_mdn" app:isUseValue="false" />
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
     <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
-        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_one_time_password">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_one_time_password" app:isTextViewDivider="false">
             <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapOTPActivity" />
         </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
     <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
-        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/str_version" app:clickLogActionId="tap.version_update">
-            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSettingUpdateActivity" />
-        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_logout" android:key="@string/setting_logout" app:clickLogActionId="tap.logout" app:isTextViewDivider="false" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_dropout" android:key="@string/setting_dropout" />
     </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
-    <com.skt.tmap.setting.fragment.customLayout.SettingUserInfoFooterPreference android:layout="@layout/setting_footer_myinfo" android:key="@string/setting_user_info_footer" />
 </PreferenceScreen>

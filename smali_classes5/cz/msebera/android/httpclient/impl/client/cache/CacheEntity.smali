@@ -3,7 +3,7 @@
 .source "CacheEntity.java"
 
 # interfaces
-.implements Ldf/l;
+.implements Lhh/l;
 .implements Ljava/io/Serializable;
 
 
@@ -84,7 +84,7 @@
     return-object v0
 .end method
 
-.method public getContentEncoding()Ldf/d;
+.method public getContentEncoding()Lhh/d;
     .locals 2
 
     .line 1
@@ -92,7 +92,7 @@
 
     const-string v1, "Content-Encoding"
 
-    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
     return-wide v0
 .end method
 
-.method public getContentType()Ldf/d;
+.method public getContentType()Lhh/d;
     .locals 2
 
     .line 1
@@ -124,7 +124,7 @@
 
     const-string v1, "Content-Type"
 
-    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object v0
 
@@ -166,7 +166,7 @@
     const-string v0, "Output stream"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Lcz/msebera/android/httpclient/impl/client/cache/CacheEntity;->cacheEntry:Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;

@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -155,7 +155,7 @@
     return-object p1
 .end method
 
-.method public getApplicationLabelAndIcon(Ljava/lang/String;)Lr1/i;
+.method public getApplicationLabelAndIcon(Ljava/lang/String;)Landroidx/core/util/k;
     .locals 2
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -172,7 +172,7 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Ljava/lang/CharSequence;",
             "Landroid/graphics/drawable/Drawable;",
             ">;"
@@ -221,7 +221,7 @@
     move-result-object p1
 
     .line 4
-    invoke-static {v0, p1}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {v0, p1}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p1
 

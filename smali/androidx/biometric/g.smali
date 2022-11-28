@@ -24,7 +24,7 @@
     .end annotation
 .end field
 
-.field public c:Ll1/b;
+.field public c:Landroidx/core/os/d;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -97,13 +97,13 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Landroidx/biometric/g;->c:Ll1/b;
+    iget-object v0, p0, Landroidx/biometric/g;->c:Landroidx/core/os/d;
 
     if-eqz v0, :cond_1
 
     .line 6
     :try_start_1
-    invoke-virtual {v0}, Ll1/b;->a()V
+    invoke-virtual {v0}, Landroidx/core/os/d;->a()V
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -119,7 +119,7 @@
 
     .line 8
     :goto_1
-    iput-object v1, p0, Landroidx/biometric/g;->c:Ll1/b;
+    iput-object v1, p0, Landroidx/biometric/g;->c:Landroidx/core/os/d;
 
     :cond_1
     return-void
@@ -155,28 +155,28 @@
     return-object v0
 .end method
 
-.method public c()Ll1/b;
+.method public c()Landroidx/core/os/d;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/biometric/g;->c:Ll1/b;
+    iget-object v0, p0, Landroidx/biometric/g;->c:Landroidx/core/os/d;
 
     if-nez v0, :cond_0
 
     .line 2
     iget-object v0, p0, Landroidx/biometric/g;->a:Landroidx/biometric/g$c;
 
-    invoke-interface {v0}, Landroidx/biometric/g$c;->a()Ll1/b;
+    invoke-interface {v0}, Landroidx/biometric/g$c;->a()Landroidx/core/os/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/biometric/g;->c:Ll1/b;
+    iput-object v0, p0, Landroidx/biometric/g;->c:Landroidx/core/os/d;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/biometric/g;->c:Ll1/b;
+    iget-object v0, p0, Landroidx/biometric/g;->c:Landroidx/core/os/d;
 
     return-object v0
 .end method

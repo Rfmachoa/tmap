@@ -7,6 +7,7 @@
 .implements Landroid/view/View$OnLayoutChangeListener;
 .implements Landroid/view/View$OnClickListener;
 .implements Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$m;
+.implements Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerControlView$d;
 
 
 # annotations
@@ -52,49 +53,62 @@
 
 
 # virtual methods
-.method public j(Lcom/tmapmobility/tmap/exoplayer2/video/VideoSize;)V
+.method public A(Lcom/tmapmobility/tmap/exoplayer2/Player$PositionInfo;Lcom/tmapmobility/tmap/exoplayer2/Player$PositionInfo;I)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->o(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public l(I)V
-    .locals 0
+    if-eqz p1, :cond_0
 
-    .line 1
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->p(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public onClick(Landroid/view/View;)V
-    .locals 0
+    if-eqz p1, :cond_0
 
-    .line 1
+    .line 2
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->w()V
 
+    :cond_0
     return-void
 .end method
 
-.method public onCues(Ljava/util/List;)V
+.method public G(Z)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/text/Cue;",
-            ">;)V"
-        }
-    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$c;->a(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public d(Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;)V
+    .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
@@ -112,9 +126,79 @@
 
     move-result-object v0
 
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/text/CueGroup;->a:Lcom/google/common/collect/ImmutableList;
+
     invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/SubtitleView;->setCues(Ljava/util/List;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public j(Lcom/tmapmobility/tmap/exoplayer2/video/VideoSize;)V
+    .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->b(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+
+    return-void
+.end method
+
+.method public j0(ZI)V
+    .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->l(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->n(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+
+    return-void
+.end method
+
+.method public k(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->f(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$b;->a(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->e(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+
     return-void
 .end method
 
@@ -135,39 +219,23 @@
     return-void
 .end method
 
-.method public onPlayWhenReadyChanged(ZI)V
-    .locals 0
-
-    .line 1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
-
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
-
-    .line 2
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
-
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->l(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
-
-    return-void
-.end method
-
 .method public onPlaybackStateChanged(I)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->l(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
 
     .line 2
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->k(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->m(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
 
     .line 3
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->l(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->n(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)V
 
     return-void
 .end method
@@ -178,7 +246,7 @@
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
 
     move-result-object v0
 
@@ -187,7 +255,7 @@
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->g(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
 
     move-result-object v0
 
@@ -199,13 +267,13 @@
     return-void
 .end method
 
-.method public u(Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;)V
+.method public y(Lcom/tmapmobility/tmap/exoplayer2/Tracks;)V
     .locals 4
 
     .line 1
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->h(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/Player;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->j(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Lcom/tmapmobility/tmap/exoplayer2/Player;
 
     move-result-object p1
 
@@ -236,15 +304,11 @@
 
     .line 5
     :cond_0
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->C0()Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->p0()Lcom/tmapmobility/tmap/exoplayer2/Tracks;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/TracksInfo;->b()Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/Tracks;->d()Z
 
     move-result v1
 
@@ -314,36 +378,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->i(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;Z)V
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->k(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;Z)V
 
-    return-void
-.end method
-
-.method public x(Lcom/tmapmobility/tmap/exoplayer2/Player$PositionInfo;Lcom/tmapmobility/tmap/exoplayer2/Player$PositionInfo;I)V
-    .locals 0
-
-    .line 1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
-
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->m(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
-
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->n(Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView$a;->c:Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;
-
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/StyledPlayerView;->u()V
-
-    :cond_0
     return-void
 .end method

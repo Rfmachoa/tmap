@@ -1,196 +1,408 @@
 .class public Lid/f;
-.super Ljava/lang/Object;
-.source "InetAddressUtils.java"
+.super Lid/e;
+.source "AutoCompleteListFragmentBindingImpl.java"
 
 
 # static fields
-.field public static final a:Ljava/util/regex/Pattern;
+.field public static final p1:Landroidx/databinding/ViewDataBinding$i;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field public static final b:Ljava/util/regex/Pattern;
+.field public static final q1:Landroid/util/SparseIntArray;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
-.field public static final c:Ljava/util/regex/Pattern;
+
+# instance fields
+.field public final n1:Landroid/widget/RelativeLayout;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public o1:J
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$"
+    .locals 3
 
     .line 1
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    sput-object v0, Lid/f;->a:Ljava/util/regex/Pattern;
+    sput-object v0, Lid/f;->q1:Landroid/util/SparseIntArray;
 
-    const-string v0, "^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
+    const v1, 0x7f0a0186
+
+    const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lid/f;->b:Ljava/util/regex/Pattern;
-
-    const-string v0, "^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$"
-
-    .line 3
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lid/f;->c:Ljava/util/regex/Pattern;
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroidx/databinding/f;Landroid/view/View;)V
+    .locals 3
+    .param p1    # Landroidx/databinding/f;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bindingComponent",
+            "root"
+        }
+    .end annotation
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lid/f;->p1:Landroidx/databinding/ViewDataBinding$i;
+
+    sget-object v1, Lid/f;->q1:Landroid/util/SparseIntArray;
+
+    const/4 v2, 0x2
+
+    invoke-static {p1, p2, v2, v0, v1}, Landroidx/databinding/ViewDataBinding;->c0(Landroidx/databinding/f;Landroid/view/View;ILandroidx/databinding/ViewDataBinding$i;Landroid/util/SparseIntArray;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, p2, v0}, Lid/f;-><init>(Landroidx/databinding/f;Landroid/view/View;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)[B
+.method public constructor <init>(Landroidx/databinding/f;Landroid/view/View;[Ljava/lang/Object;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "bindingComponent",
+            "root",
+            "bindings"
+        }
+    .end annotation
 
-    const-string v0, "\\."
-
-    .line 1
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
+    const/4 v0, 0x1
 
     .line 2
-    array-length v0, p0
+    aget-object v0, p3, v0
 
-    new-array v0, v0, [B
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v1, 0x0
 
-    .line 3
-    :goto_0
-    array-length v2, p0
+    invoke-direct {p0, p1, p2, v1, v0}, Lid/e;-><init>(Ljava/lang/Object;Landroid/view/View;ILandroidx/recyclerview/widget/RecyclerView;)V
 
-    if-ge v1, v2, :cond_1
+    const-wide/16 v2, -0x1
+
+    .line 3
+    iput-wide v2, p0, Lid/f;->o1:J
 
     .line 4
-    aget-object v2, p0, v1
+    aget-object p1, p3, v1
 
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    check-cast p1, Landroid/widget/RelativeLayout;
 
-    move-result v2
+    iput-object p1, p0, Lid/f;->n1:Landroid/widget/RelativeLayout;
 
-    if-ltz v2, :cond_0
-
-    const/16 v3, 0xff
-
-    if-gt v2, v3, :cond_0
-
-    int-to-byte v2, v2
+    const/4 p3, 0x0
 
     .line 5
-    aput-byte v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    invoke-virtual {p1, p3}, Landroid/widget/RelativeLayout;->setTag(Ljava/lang/Object;)V
 
     .line 6
-    :cond_0
-    new-instance p0, Ljava/lang/NumberFormatException;
+    invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->D0(Landroid/view/View;)V
 
-    const-string v0, "ERROR: IP Address numbers must be between 0 and 255"
+    .line 7
+    invoke-virtual {p0}, Lid/f;->Z()V
 
-    invoke-direct {p0, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    return-object v0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/String;)Z
+
+# virtual methods
+.method public W0(ILjava/lang/Object;)Z
     .locals 1
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "variableId",
+            "variable"
+        }
+    .end annotation
+
+    const/16 v0, 0x88
+
+    if-ne v0, p1, :cond_0
 
     .line 1
-    sget-object v0, Lid/f;->a:Ljava/util/regex/Pattern;
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object p0
+    move-result p1
 
-    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
+    invoke-virtual {p0, p1}, Lid/f;->l1(Z)V
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Ljava/lang/String;)Z
-    .locals 1
-
-    .line 1
-    invoke-static {p0}, Lid/f;->e(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {p0}, Lid/f;->d(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    goto :goto_1
+    :goto_0
+    return p1
+.end method
+
+.method public X()Z
+    .locals 4
+
+    .line 1
+    monitor-enter p0
+
+    .line 2
+    :try_start_0
+    iget-wide v0, p0, Lid/f;->o1:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 3
+    monitor-exit p0
+
+    return v0
+
+    .line 4
+    :cond_0
+    monitor-exit p0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public Z()V
+    .locals 2
+
+    .line 1
+    monitor-enter p0
+
+    const-wide/16 v0, 0x2
+
+    .line 2
+    :try_start_0
+    iput-wide v0, p0, Lid/f;->o1:J
+
+    .line 3
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/databinding/ViewDataBinding;->r0()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    .line 5
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public e0(ILjava/lang/Object;I)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "localFieldId",
+            "object",
+            "fieldId"
+        }
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public l1(Z)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "IsEmpty"
+        }
+    .end annotation
+
+    .line 1
+    iput-boolean p1, p0, Lid/e;->m1:Z
+
+    .line 2
+    monitor-enter p0
+
+    .line 3
+    :try_start_0
+    iget-wide v0, p0, Lid/f;->o1:J
+
+    const-wide/16 v2, 0x1
+
+    or-long/2addr v0, v2
+
+    iput-wide v0, p0, Lid/f;->o1:J
+
+    .line 4
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/16 p1, 0x88
+
+    .line 5
+    invoke-virtual {p0, p1}, Landroidx/databinding/a;->notifyPropertyChanged(I)V
+
+    .line 6
+    invoke-super {p0}, Landroidx/databinding/ViewDataBinding;->r0()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 7
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public r()V
+    .locals 11
+
+    .line 1
+    monitor-enter p0
+
+    .line 2
+    :try_start_0
+    iget-wide v0, p0, Lid/f;->o1:J
+
+    const-wide/16 v2, 0x0
+
+    .line 3
+    iput-wide v2, p0, Lid/f;->o1:J
+
+    .line 4
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 5
+    iget-boolean v4, p0, Lid/e;->m1:Z
+
+    const-wide/16 v5, 0x3
+
+    and-long v7, v0, v5
+
+    cmp-long v7, v7, v2
+
+    const/4 v8, 0x0
+
+    if-eqz v7, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-eqz v4, :cond_0
+
+    const-wide/16 v9, 0x8
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v9, 0x4
+
+    :goto_0
+    or-long/2addr v0, v9
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    if-eqz v4, :cond_2
 
-    :goto_1
-    return p0
-.end method
+    const/16 v4, 0x8
 
-.method public static d(Ljava/lang/String;)Z
-    .locals 1
+    move v8, v4
 
-    .line 1
-    sget-object v0, Lid/f;->c:Ljava/util/regex/Pattern;
+    :cond_2
+    and-long/2addr v0, v5
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    cmp-long v0, v0, v2
 
-    move-result-object p0
+    if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
+    .line 6
+    iget-object v0, p0, Lid/f;->n1:Landroid/widget/RelativeLayout;
 
-    move-result p0
+    invoke-virtual {v0, v8}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    return p0
-.end method
+    :cond_3
+    return-void
 
-.method public static e(Ljava/lang/String;)Z
-    .locals 1
+    :catchall_0
+    move-exception v0
 
-    .line 1
-    sget-object v0, Lid/f;->b:Ljava/util/regex/Pattern;
+    .line 7
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result p0
-
-    return p0
+    throw v0
 .end method

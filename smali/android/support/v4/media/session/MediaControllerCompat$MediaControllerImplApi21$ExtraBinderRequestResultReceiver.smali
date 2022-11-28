@@ -96,7 +96,7 @@
     const-string v2, "android.support.v4.media.session.EXTRA_BINDER"
 
     .line 4
-    invoke-static {p2, v2}, Landroidx/core/app/i;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {p2, v2}, Landroidx/core/app/k;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
 
@@ -106,7 +106,7 @@
     move-result-object v2
 
     .line 6
-    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->h(Landroid/support/v4/media/session/IMediaSession;)V
+    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->j(Landroid/support/v4/media/session/IMediaSession;)V
 
     .line 7
     iget-object v1, p1, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
@@ -114,12 +114,12 @@
     const-string v2, "android.support.v4.media.session.SESSION_TOKEN2"
 
     .line 8
-    invoke-static {p2, v2}, Lj3/a;->c(Landroid/os/Bundle;Ljava/lang/String;)Lj3/d;
+    invoke-static {p2, v2}, Lr4/a;->c(Landroid/os/Bundle;Ljava/lang/String;)Lr4/d;
 
     move-result-object p2
 
     .line 9
-    invoke-virtual {v1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i(Lj3/d;)V
+    invoke-virtual {v1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->l(Lr4/d;)V
 
     .line 10
     invoke-virtual {p1}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->n()V

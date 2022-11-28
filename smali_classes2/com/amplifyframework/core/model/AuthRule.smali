@@ -247,7 +247,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/AuthRule;->ownerField:Ljava/lang/String;
 
     .line 4
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -258,7 +258,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/AuthRule;->identityClaim:Ljava/lang/String;
 
     .line 5
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -269,7 +269,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/AuthRule;->groupsField:Ljava/lang/String;
 
     .line 6
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -280,7 +280,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/AuthRule;->groupClaim:Ljava/lang/String;
 
     .line 7
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -291,7 +291,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/AuthRule;->groups:Ljava/util/List;
 
     .line 8
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -302,7 +302,7 @@
     iget-object p1, p1, Lcom/amplifyframework/core/model/AuthRule;->operations:Ljava/util/List;
 
     .line 9
-    invoke-static {v2, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -566,7 +566,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -597,25 +597,25 @@
 
     const-string v3, ", identityClaim=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/core/model/AuthRule;->identityClaim:Ljava/lang/String;
 
     const-string v3, ", groupsField=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/core/model/AuthRule;->groupsField:Ljava/lang/String;
 
     const-string v3, ", groupClaim=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/core/model/AuthRule;->groupClaim:Ljava/lang/String;
 
     const-string v3, ", groups="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/core/model/AuthRule;->groups:Ljava/util/List;
 

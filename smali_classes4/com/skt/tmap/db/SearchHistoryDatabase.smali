@@ -14,15 +14,15 @@
 
 .annotation build Landroidx/room/TypeConverters;
     value = {
-        Lzb/a;
+        Lwd/a;
     }
 .end annotation
 
 
 # static fields
-.field public static n:Lcom/skt/tmap/db/SearchHistoryDatabase; = null
+.field public static q:Lcom/skt/tmap/db/SearchHistoryDatabase; = null
 
-.field public static final o:Ljava/lang/String; = "search_history"
+.field public static final r:Ljava/lang/String; = "search_history"
 
 
 # direct methods
@@ -35,7 +35,16 @@
     return-void
 .end method
 
-.method public static B(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
+.method public static synthetic M(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1}, Lcom/skt/tmap/db/SearchHistoryDatabase;->U(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+
+    return-void
+.end method
+
+.method public static N(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -51,7 +60,7 @@
 
     const-string v1, "search_history"
 
-    invoke-static {p0, v0, v1}, Landroidx/room/i;->a(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)Landroidx/room/RoomDatabase$a;
+    invoke-static {p0, v0, v1}, Landroidx/room/n1;->a(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)Landroidx/room/RoomDatabase$a;
 
     move-result-object p0
 
@@ -60,16 +69,16 @@
     invoke-direct {v0}, Lcom/skt/tmap/db/SearchHistoryDatabase$a;-><init>()V
 
     .line 2
-    invoke-virtual {p0, v0}, Landroidx/room/RoomDatabase$a;->a(Landroidx/room/RoomDatabase$b;)Landroidx/room/RoomDatabase$a;
+    invoke-virtual {p0, v0}, Landroidx/room/RoomDatabase$a;->b(Landroidx/room/RoomDatabase$b;)Landroidx/room/RoomDatabase$a;
 
     move-result-object p0
 
     .line 3
-    invoke-virtual {p0}, Landroidx/room/RoomDatabase$a;->c()Landroidx/room/RoomDatabase$a;
+    invoke-virtual {p0}, Landroidx/room/RoomDatabase$a;->e()Landroidx/room/RoomDatabase$a;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroidx/room/RoomDatabase$a;->d()Landroidx/room/RoomDatabase;
+    invoke-virtual {p0}, Landroidx/room/RoomDatabase$a;->f()Landroidx/room/RoomDatabase;
 
     move-result-object p0
 
@@ -78,7 +87,32 @@
     return-object p0
 .end method
 
-.method public static C(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+.method public static O(Lcom/skt/tmap/db/SearchHistoryDatabase;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "database"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/skt/tmap/db/SearchHistoryDatabase$e;
+
+    invoke-direct {v1, p0}, Lcom/skt/tmap/db/SearchHistoryDatabase$e;-><init>(Lcom/skt/tmap/db/SearchHistoryDatabase;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static P(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -105,7 +139,7 @@
     return-void
 .end method
 
-.method public static D(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/lang/String;)V
+.method public static Q(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -132,7 +166,7 @@
     return-void
 .end method
 
-.method public static E(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/util/List;)V
+.method public static R(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -172,9 +206,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/skt/tmap/db/SearchHistoryDatabase$e;
+    new-instance v1, Lcom/skt/tmap/db/SearchHistoryDatabase$f;
 
-    invoke-direct {v1, p1, p0}, Lcom/skt/tmap/db/SearchHistoryDatabase$e;-><init>(Ljava/util/List;Lcom/skt/tmap/db/SearchHistoryDatabase;)V
+    invoke-direct {v1, p1, p0}, Lcom/skt/tmap/db/SearchHistoryDatabase$f;-><init>(Ljava/util/List;Lcom/skt/tmap/db/SearchHistoryDatabase;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
@@ -183,7 +217,82 @@
     return-void
 .end method
 
-.method public static F(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
+.method public static S(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/util/List;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10
+        }
+        names = {
+            "database",
+            "searchHistoryItems"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/skt/tmap/db/SearchHistoryDatabase;",
+            "Ljava/util/List<",
+            "Lcom/skt/tmap/db/entity/SearchHistoryEntity;",
+            ">;)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_1
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    .line 2
+    :cond_0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/db/entity/SearchHistoryEntity;
+
+    .line 3
+    invoke-virtual {p0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->X()Lxd/h;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Lcom/skt/tmap/db/entity/SearchHistoryEntity;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    invoke-interface {v1, v2}, Lxd/h;->b([Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public static T(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -195,7 +304,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/skt/tmap/db/SearchHistoryDatabase;->n:Lcom/skt/tmap/db/SearchHistoryDatabase;
+    sget-object v0, Lcom/skt/tmap/db/SearchHistoryDatabase;->q:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
     if-nez v0, :cond_1
 
@@ -206,16 +315,16 @@
 
     .line 3
     :try_start_0
-    sget-object v1, Lcom/skt/tmap/db/SearchHistoryDatabase;->n:Lcom/skt/tmap/db/SearchHistoryDatabase;
+    sget-object v1, Lcom/skt/tmap/db/SearchHistoryDatabase;->q:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
     if-nez v1, :cond_0
 
     .line 4
-    invoke-static {p0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->B(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
+    invoke-static {p0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->N(Landroid/content/Context;)Lcom/skt/tmap/db/SearchHistoryDatabase;
 
     move-result-object p0
 
-    sput-object p0, Lcom/skt/tmap/db/SearchHistoryDatabase;->n:Lcom/skt/tmap/db/SearchHistoryDatabase;
+    sput-object p0, Lcom/skt/tmap/db/SearchHistoryDatabase;->q:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
     .line 5
     :cond_0
@@ -235,12 +344,76 @@
     .line 6
     :cond_1
     :goto_0
-    sget-object p0, Lcom/skt/tmap/db/SearchHistoryDatabase;->n:Lcom/skt/tmap/db/SearchHistoryDatabase;
+    sget-object p0, Lcom/skt/tmap/db/SearchHistoryDatabase;->q:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
     return-object p0
 .end method
 
-.method public static G(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+.method public static U(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10
+        }
+        names = {
+            "database",
+            "searchHistory"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->X()Lxd/h;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/skt/tmap/db/entity/SearchHistoryEntity;->getSearchWord()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lxd/h;->c(Ljava/lang/String;)Lcom/skt/tmap/db/entity/SearchHistoryEntity;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->X()Lxd/h;
+
+    move-result-object p0
+
+    invoke-interface {p0, p1}, Lxd/h;->g(Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-virtual {p1}, Lcom/skt/tmap/db/entity/SearchHistoryEntity;->getSearchDate()Ljava/util/Date;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/db/entity/SearchHistoryEntity;->setSearchDate(Ljava/util/Date;)V
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->X()Lxd/h;
+
+    move-result-object p0
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [Lcom/skt/tmap/db/entity/SearchHistoryEntity;
+
+    const/4 v1, 0x0
+
+    aput-object v0, p1, v1
+
+    invoke-interface {p0, p1}, Lxd/h;->d([Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public static V(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -267,7 +440,70 @@
     return-void
 .end method
 
+.method public static W(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10
+        }
+        names = {
+            "database",
+            "searchHistoryItems"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/skt/tmap/db/SearchHistoryDatabase;",
+            "Ljava/util/List<",
+            "Lcom/skt/tmap/db/entity/SearchHistoryEntity;",
+            ">;)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_1
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    .line 2
+    :cond_0
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/db/entity/SearchHistoryEntity;
+
+    .line 3
+    invoke-static {p0, v0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->U(Lcom/skt/tmap/db/SearchHistoryDatabase;Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract H()Lac/h;
+.method public abstract X()Lxd/h;
 .end method

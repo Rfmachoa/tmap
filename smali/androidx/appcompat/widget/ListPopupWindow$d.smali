@@ -2,46 +2,41 @@
 .super Ljava/lang/Object;
 .source "ListPopupWindow.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x18
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/ListPopupWindow;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x9
     name = "d"
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Landroidx/appcompat/widget/ListPopupWindow;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$d;->a:Landroidx/appcompat/widget/ListPopupWindow;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public run()V
-    .locals 1
+.method public static a(Landroid/widget/PopupWindow;Landroid/view/View;IZ)I
+    .locals 0
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$d;->a:Landroidx/appcompat/widget/ListPopupWindow;
+    invoke-virtual {p0, p1, p2, p3}, Landroid/widget/PopupWindow;->getMaxAvailableHeight(Landroid/view/View;IZ)I
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ListPopupWindow;->q()V
+    move-result p0
 
-    return-void
+    return p0
 .end method

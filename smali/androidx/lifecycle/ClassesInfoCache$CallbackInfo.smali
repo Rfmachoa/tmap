@@ -13,6 +13,9 @@
     name = "CallbackInfo"
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # instance fields
 .field public final mEventToHandlers:Ljava/util/Map;
@@ -120,6 +123,8 @@
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Landroidx/lifecycle/ClassesInfoCache$MethodReference;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

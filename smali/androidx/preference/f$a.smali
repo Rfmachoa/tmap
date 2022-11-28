@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/preference/f;->m(Landroidx/appcompat/app/c$a;)V
+    value = Landroidx/preference/f;->n(Landroidx/appcompat/app/c$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

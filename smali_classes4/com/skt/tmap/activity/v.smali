@@ -3,42 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroid/view/View$OnScrollChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/ClientCommListActivity;
+.field public final synthetic a:Lcom/skt/tmap/activity/CctvActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/ClientCommListActivity;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/CctvActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/v;->a:Lcom/skt/tmap/activity/ClientCommListActivity;
+    iput-object p1, p0, Lcom/skt/tmap/activity/v;->a:Lcom/skt/tmap/activity/CctvActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onScrollChange(Landroid/view/View;IIII)V
-    .locals 6
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/v;->a:Lcom/skt/tmap/activity/ClientCommListActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/v;->a:Lcom/skt/tmap/activity/CctvActivity;
 
-    move-object v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move v5, p5
-
-    invoke-static/range {v0 .. v5}, Lcom/skt/tmap/activity/ClientCommListActivity;->t5(Lcom/skt/tmap/activity/ClientCommListActivity;Landroid/view/View;IIII)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/CctvActivity;->B5(Lcom/skt/tmap/activity/CctvActivity;Landroid/view/View;)V
 
     return-void
 .end method

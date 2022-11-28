@@ -14,9 +14,9 @@
 
 
 # instance fields
-.field public E1:Ljava/lang/String;
+.field public G1:Ljava/lang/String;
 
-.field public F1:Landroidx/preference/EditTextPreference$a;
+.field public H1:Landroidx/preference/EditTextPreference$a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -25,6 +25,10 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -36,13 +40,21 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 7
     sget v0, Landroidx/preference/R$attr;->editTextPreferenceStyle:I
 
     const v1, 0x1010092
 
-    invoke-static {p1, v0, v1}, Lz0/i;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Ls1/l;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -53,6 +65,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -64,6 +84,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/DialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -80,7 +108,7 @@
 
     const/4 p3, 0x0
 
-    invoke-static {p1, p2, p2, p3}, Lz0/i;->b(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p2, p3}, Ls1/l;->b(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -104,9 +132,11 @@
 # virtual methods
 .method public A1()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/EditTextPreference;->E1:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/preference/EditTextPreference;->G1:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -119,13 +149,17 @@
     .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/EditTextPreference;->F1:Landroidx/preference/EditTextPreference$a;
+    iput-object p1, p0, Landroidx/preference/EditTextPreference;->H1:Landroidx/preference/EditTextPreference$a;
 
     return-void
 .end method
 
 .method public C1(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p0}, Landroidx/preference/EditTextPreference;->c1()Z
@@ -133,7 +167,7 @@
     move-result v0
 
     .line 2
-    iput-object p1, p0, Landroidx/preference/EditTextPreference;->E1:Ljava/lang/String;
+    iput-object p1, p0, Landroidx/preference/EditTextPreference;->G1:Ljava/lang/String;
 
     .line 3
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->s0(Ljava/lang/String;)Z
@@ -159,7 +193,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/EditTextPreference;->E1:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/preference/EditTextPreference;->G1:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -190,6 +224,10 @@
 
 .method public d0(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
+    .param p1    # Landroid/content/res/TypedArray;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -201,6 +239,10 @@
 
 .method public h0(Landroid/os/Parcelable;)V
     .locals 2
+    .param p1    # Landroid/os/Parcelable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_1
 
@@ -247,6 +289,8 @@
 
 .method public i0()Landroid/os/Parcelable;
     .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
     invoke-super {p0}, Landroidx/preference/Preference;->i0()Landroid/os/Parcelable;
@@ -299,7 +343,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/EditTextPreference;->F1:Landroidx/preference/EditTextPreference$a;
+    iget-object v0, p0, Landroidx/preference/EditTextPreference;->H1:Landroidx/preference/EditTextPreference$a;
 
     return-object v0
 .end method

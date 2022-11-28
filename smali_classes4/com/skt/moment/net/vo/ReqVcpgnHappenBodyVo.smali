@@ -63,6 +63,14 @@
 
 .method public setCampaignId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqVcpgnHappenBodyVo;->campaignId:Ljava/lang/Integer;
@@ -72,6 +80,14 @@
 
 .method public setDisplayLocationCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "displayLocationCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqVcpgnHappenBodyVo;->displayLocationCode:Ljava/lang/String;
@@ -81,6 +97,14 @@
 
 .method public setInformationId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "informationId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqVcpgnHappenBodyVo;->informationId:Ljava/lang/Integer;
@@ -90,6 +114,14 @@
 
 .method public setStampCount(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stampCount"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqVcpgnHappenBodyVo;->stampCount:Ljava/lang/Integer;

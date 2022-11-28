@@ -2,20 +2,35 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
+# interfaces
+.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/camera/core/e0;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;JLjava/lang/String;)Ljava/lang/StringBuilder;
+.method public synthetic constructor <init>(Landroidx/camera/core/e0;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/core/z;->a:Landroidx/camera/core/e0;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Landroidx/camera/core/z;->a:Landroidx/camera/core/e0;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0, p1}, Landroidx/camera/core/e0;->f(Landroidx/camera/core/e0;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/credentials/Credential;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
@@ -22,9 +23,15 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -35,10 +42,13 @@
 .end field
 
 .field public static final EXTRA_KEY:Ljava/lang/String; = "com.google.android.gms.credentials.Credential"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # instance fields
-.field private final mId:Ljava/lang/String;
+.field private final zba:Ljava/lang/String;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getId"
         id = 0x1
@@ -48,7 +58,7 @@
     .end annotation
 .end field
 
-.field private final mName:Ljava/lang/String;
+.field private final zbb:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -58,7 +68,7 @@
     .end annotation
 .end field
 
-.field private final zzo:Landroid/net/Uri;
+.field private final zbc:Landroid/net/Uri;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -68,25 +78,17 @@
     .end annotation
 .end field
 
-.field private final zzp:Ljava/util/List;
+.field private final zbd:Ljava/util/List;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getIdTokens"
         id = 0x4
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/auth/api/credentials/IdToken;",
-            ">;"
-        }
     .end annotation
 
     .annotation runtime Ljavax/annotation/Nonnull;
     .end annotation
 .end field
 
-.field private final zzq:Ljava/lang/String;
+.field private final zbe:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -96,7 +98,7 @@
     .end annotation
 .end field
 
-.field private final zzr:Ljava/lang/String;
+.field private final zbf:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -106,7 +108,7 @@
     .end annotation
 .end field
 
-.field private final zzs:Ljava/lang/String;
+.field private final zbg:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -116,7 +118,7 @@
     .end annotation
 .end field
 
-.field private final zzt:Ljava/lang/String;
+.field private final zbh:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -131,10 +133,9 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    new-instance v0, Lcom/google/android/gms/auth/api/credentials/zzc;
+    new-instance v0, Lcom/google/android/gms/auth/api/credentials/zba;
 
-    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/zzc;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/zba;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/auth/api/credentials/Credential;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -142,18 +143,24 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+    .locals 3
     .param p1    # Ljava/lang/String;
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x1
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x2
         .end annotation
     .end param
     .param p3    # Landroid/net/Uri;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x3
         .end annotation
@@ -164,43 +171,38 @@
         .end annotation
     .end param
     .param p5    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x5
         .end annotation
     .end param
     .param p6    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x6
         .end annotation
     .end param
     .param p7    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x9
         .end annotation
     .end param
     .param p8    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0xa
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Landroid/net/Uri;",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/auth/api/credentials/IdToken;",
-            ">;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
-        }
     .end annotation
 
     .line 1
@@ -241,154 +243,173 @@
 
     const-string p2, "Password must not be empty if set"
 
+    .line 6
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
     :goto_0
-    if-eqz p6, :cond_6
+    if-eqz p6, :cond_8
 
-    .line 6
+    .line 7
     invoke-static {p6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_2
 
-    if-nez v0, :cond_4
+    .line 8
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 7
+    goto :goto_3
+
+    .line 9
+    :cond_2
     invoke-static {p6}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 8
+    .line 10
     invoke-virtual {v0}, Landroid/net/Uri;->isAbsolute()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_4
-
-    .line 9
-    invoke-virtual {v0}, Landroid/net/Uri;->isHierarchical()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 10
-    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
+    if-eqz v1, :cond_6
 
     .line 11
-    invoke-virtual {v0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/net/Uri;->isHierarchical()Z
 
-    move-result-object v2
+    move-result v1
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    goto :goto_1
+    if-eqz v1, :cond_6
 
     .line 12
-    :cond_2
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    const-string v3, "http"
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result v1
 
-    move-result v2
-
-    if-nez v2, :cond_3
+    if-nez v1, :cond_6
 
     .line 13
+    invoke-virtual {v0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto :goto_2
+
+    .line 14
+    :cond_3
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "http"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_5
+
+    .line 15
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "https"
+    const-string v1, "https"
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    :cond_3
-    const/4 v1, 0x1
+    goto :goto_1
 
-    .line 14
     :cond_4
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    .line 15
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    goto :goto_2
+    const/4 v2, 0x0
 
     .line 16
     :cond_5
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :goto_1
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const-string p2, "Account type must be a valid Http/Https URI"
+    move-result-object v0
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_3
 
     .line 17
     :cond_6
     :goto_2
-    invoke-static {p6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    invoke-static {p5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 18
+    :goto_3
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    goto :goto_3
+    goto :goto_4
 
-    .line 18
+    .line 19
     :cond_7
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p2, "Password and AccountType are mutually exclusive"
+    const-string p2, "Account type must be a valid Http/Https URI"
 
+    .line 20
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
+    .line 21
     :cond_8
-    :goto_3
-    if-eqz p2, :cond_9
+    :goto_4
+    invoke-static {p6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 19
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    invoke-static {p5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto :goto_5
+
+    .line 22
+    :cond_9
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Password and AccountType are mutually exclusive"
+
+    .line 23
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_a
+    :goto_5
+    if-eqz p2, :cond_b
+
+    .line 24
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -397,121 +418,107 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_b
 
     const/4 p2, 0x0
 
-    .line 20
-    :cond_9
-    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mName:Ljava/lang/String;
+    :cond_b
+    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbb:Ljava/lang/String;
 
-    .line 21
-    iput-object p3, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzo:Landroid/net/Uri;
+    iput-object p3, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbc:Landroid/net/Uri;
 
-    if-nez p4, :cond_a
+    if-nez p4, :cond_c
 
-    .line 22
+    .line 25
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p2
 
-    goto :goto_4
+    goto :goto_6
 
-    .line 23
-    :cond_a
+    .line 26
+    :cond_c
     invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
-    :goto_4
-    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzp:Ljava/util/List;
-
-    .line 24
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mId:Ljava/lang/String;
-
-    .line 25
-    iput-object p5, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzq:Ljava/lang/String;
-
-    .line 26
-    iput-object p6, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzr:Ljava/lang/String;
-
     .line 27
-    iput-object p7, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzs:Ljava/lang/String;
+    :goto_6
+    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbd:Ljava/util/List;
 
-    .line 28
-    iput-object p8, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzt:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zba:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbe:Ljava/lang/String;
+
+    iput-object p6, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbf:Ljava/lang/String;
+
+    iput-object p7, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbg:Ljava/lang/String;
+
+    iput-object p8, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbh:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static synthetic zzc(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
+.method public static bridge synthetic zba(Lcom/google/android/gms/auth/api/credentials/Credential;)Landroid/net/Uri;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mId:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbc:Landroid/net/Uri;
 
     return-object p0
 .end method
 
-.method public static synthetic zzd(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
+.method public static bridge synthetic zbb(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mName:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbf:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static synthetic zze(Lcom/google/android/gms/auth/api/credentials/Credential;)Landroid/net/Uri;
+.method public static bridge synthetic zbc(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzo:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbh:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static synthetic zzf(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/util/List;
+.method public static bridge synthetic zbd(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzp:Ljava/util/List;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbg:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static synthetic zzg(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
+.method public static bridge synthetic zbe(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzq:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zba:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static synthetic zzh(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
+.method public static bridge synthetic zbf(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzr:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbb:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static synthetic zzi(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
+.method public static bridge synthetic zbg(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzs:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbe:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static synthetic zzj(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/lang/String;
+.method public static bridge synthetic zbh(Lcom/google/android/gms/auth/api/credentials/Credential;)Ljava/util/List;
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzt:Ljava/lang/String;
+    iget-object p0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbd:Ljava/util/List;
 
     return-object p0
 .end method
@@ -520,6 +527,10 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x1
 
@@ -541,10 +552,10 @@
     :cond_1
     check-cast p1, Lcom/google/android/gms/auth/api/credentials/Credential;
 
-    .line 3
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mId:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zba:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->mId:Ljava/lang/String;
+    .line 3
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zba:Ljava/lang/String;
 
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -552,9 +563,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbb:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->mName:Ljava/lang/String;
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zbb:Ljava/lang/String;
 
     .line 4
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -563,9 +574,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzo:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbc:Landroid/net/Uri;
 
-    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zzo:Landroid/net/Uri;
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zbc:Landroid/net/Uri;
 
     .line 5
     invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -574,9 +585,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbe:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zzq:Ljava/lang/String;
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zbe:Ljava/lang/String;
 
     .line 6
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -585,9 +596,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbf:Ljava/lang/String;
 
-    iget-object p1, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zzr:Ljava/lang/String;
+    iget-object p1, p1, Lcom/google/android/gms/auth/api/credentials/Credential;->zbf:Ljava/lang/String;
 
     .line 7
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -607,8 +618,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbf:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -618,8 +628,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzt:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbh:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -629,8 +638,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzs:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbg:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -640,8 +648,7 @@
     .annotation runtime Ljavax/annotation/Nonnull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mId:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zba:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -660,8 +667,7 @@
     .annotation runtime Ljavax/annotation/Nonnull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzp:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbd:Ljava/util/List;
 
     return-object v0
 .end method
@@ -671,8 +677,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mName:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbb:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -682,8 +687,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbe:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -693,8 +697,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzo:Landroid/net/Uri;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbc:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -707,31 +710,31 @@
     new-array v0, v0, [Ljava/lang/Object;
 
     .line 1
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mId:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zba:Ljava/lang/String;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->mName:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbb:Ljava/lang/String;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzo:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbc:Landroid/net/Uri;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzq:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbe:Ljava/lang/String;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zzr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/auth/api/credentials/Credential;->zbf:Ljava/lang/String;
 
     const/4 v2, 0x4
 
@@ -746,6 +749,10 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I

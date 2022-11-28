@@ -14,13 +14,13 @@
 
 
 # static fields
-.field public static final banner_card_in_1:I = 0x7f120004
+.field public static final banner_card_in_1:I = 0x7f130004
 
-.field public static final banner_card_out_1:I = 0x7f120005
+.field public static final banner_card_out_1:I = 0x7f130005
 
-.field public static final card_in_1:I = 0x7f120006
+.field public static final card_in_1:I = 0x7f130006
 
-.field public static final zxing_beep:I = 0x7f120022
+.field public static final zxing_beep:I = 0x7f130023
 
 
 # direct methods

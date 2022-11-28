@@ -85,7 +85,7 @@
 
     iget v1, p0, Landroidx/transition/Visibility$b;->b:I
 
-    invoke-static {v0, v1}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lp4/x;->i(Landroid/view/View;I)V
 
     .line 3
     iget-object v0, p0, Landroidx/transition/Visibility$b;->c:Landroid/view/ViewGroup;
@@ -124,7 +124,7 @@
     iput-boolean p1, p0, Landroidx/transition/Visibility$b;->e:Z
 
     .line 3
-    invoke-static {v0, p1}, Lh3/t;->d(Landroid/view/ViewGroup;Z)V
+    invoke-static {v0, p1}, Lp4/t;->d(Landroid/view/ViewGroup;Z)V
 
     :cond_0
     return-void
@@ -163,7 +163,7 @@
 
     iget v0, p0, Landroidx/transition/Visibility$b;->b:I
 
-    invoke-static {p1, v0}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lp4/x;->i(Landroid/view/View;I)V
 
     :cond_0
     return-void
@@ -188,7 +188,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lp4/x;->i(Landroid/view/View;I)V
 
     :cond_0
     return-void

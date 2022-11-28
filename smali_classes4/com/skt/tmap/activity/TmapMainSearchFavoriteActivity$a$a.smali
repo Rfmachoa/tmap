@@ -71,7 +71,7 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object p1
 
@@ -82,11 +82,11 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {p1}, Lcom/skt/tmap/dialog/v;->c()V
 
     :cond_0
     return-void
@@ -102,34 +102,47 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->A5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lpb/y;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->J5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lmd/b0;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2, p1}, Lpb/y;->s(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;I)V
+    invoke-virtual {v0, p2, p1}, Lmd/b0;->s(Lcom/skt/tmap/network/ndds/dto/info/UsedFavoriteRouteInfo;I)V
 
     .line 2
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;->b:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;
+
+    iget-object p1, p1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->G5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/presenter/i0;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/mvp/presenter/i0;->Q(Z)V
+
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;->b:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;
 
     iget-object p1, p1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 3
+    .line 4
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;->b:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;
 
     iget-object p1, p1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {p1}, Lcom/skt/tmap/dialog/v;->c()V
 
     :cond_1
     return-void
@@ -145,7 +158,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
@@ -156,11 +169,11 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
 
     :cond_0
     return-void
@@ -174,11 +187,11 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/q;->D()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->D()Ljava/lang/String;
 
     move-result-object v0
 
@@ -204,7 +217,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->y5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)I
+    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->H5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)I
 
     move-result v1
 
@@ -222,7 +235,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f130979
+    const v1, 0x7f1409fe
 
     invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -235,7 +248,7 @@
     .line 5
     :cond_1
     :goto_0
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->I(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/d1;->M(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -248,7 +261,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    const v1, 0x7f130225
+    const v1, 0x7f14023e
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -268,14 +281,14 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->y5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)I
+    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->H5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)I
 
     move-result v1
 
     if-nez v1, :cond_4
 
     .line 8
-    invoke-static {v0}, Lcom/skt/tmap/util/w0;->K(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/d1;->P(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -290,7 +303,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f130223
+    const v1, 0x7f14023c
 
     invoke-static {v0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -306,7 +319,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->x5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/presenter/h0;
+    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->G5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/presenter/i0;
 
     move-result-object v1
 
@@ -314,12 +327,12 @@
 
     iget v2, v2, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->b:I
 
-    invoke-virtual {v1, v2}, Lcom/skt/tmap/mvp/presenter/h0;->F(I)Ljc/r;
+    invoke-virtual {v1, v2}, Lcom/skt/tmap/mvp/presenter/i0;->H(I)Lhe/r;
 
     move-result-object v1
 
     .line 11
-    invoke-static {v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/h;->K(Ljc/r;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
+    invoke-static {v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/z;->M(Lhe/r;)Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;
 
     move-result-object v1
 
@@ -328,7 +341,7 @@
 
     iget-object v2, v2, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->z5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->I5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v2
 
@@ -336,7 +349,7 @@
 
     iget-object v3, v3, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-virtual {v2, v3, v0, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->Z(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v2, v3, v0, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->D0(Landroid/content/Context;Ljava/lang/String;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -344,9 +357,9 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    new-instance v2, Lcom/skt/tmap/activity/i1;
+    new-instance v2, Lcom/skt/tmap/activity/s2;
 
-    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/i1;-><init>(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;)V
+    invoke-direct {v2, p0}, Lcom/skt/tmap/activity/s2;-><init>(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;)V
 
     .line 13
     invoke-virtual {v0, v1, v2}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
@@ -357,7 +370,7 @@
     const/16 v1, 0x1e
 
     .line 14
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/w0;->L(Ljava/lang/String;I)Z
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/d1;->Q(Ljava/lang/String;I)Z
 
     move-result v4
 
@@ -368,7 +381,7 @@
 
     iget-object v4, v4, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    const v5, 0x7f130222
+    const v5, 0x7f14023b
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -393,7 +406,7 @@
 
     iget-object v2, v2, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v2}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v2
 
@@ -401,7 +414,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/skt/tmap/dialog/q;->G(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v0}, Lcom/skt/tmap/dialog/v;->G(Ljava/lang/CharSequence;)V
 
     return-void
 
@@ -411,7 +424,7 @@
 
     iget-object v1, v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->z5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v1}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->I5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v1
 
@@ -421,7 +434,7 @@
 
     iget-object v2, v2, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v3, v2, v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->U(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v1, v3, v2, v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->y0(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
@@ -431,9 +444,9 @@
 
     iget v1, v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->b:I
 
-    new-instance v3, Lcom/skt/tmap/activity/j1;
+    new-instance v3, Lcom/skt/tmap/activity/t2;
 
-    invoke-direct {v3, p0, v1}, Lcom/skt/tmap/activity/j1;-><init>(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;I)V
+    invoke-direct {v3, p0, v1}, Lcom/skt/tmap/activity/t2;-><init>(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a$a;I)V
 
     .line 18
     invoke-virtual {v0, v2, v3}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
@@ -446,7 +459,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
@@ -457,11 +470,11 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity$a;->e:Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->v5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/q;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;->E5(Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;)Lcom/skt/tmap/dialog/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/q;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
 
     :cond_7
     :goto_1

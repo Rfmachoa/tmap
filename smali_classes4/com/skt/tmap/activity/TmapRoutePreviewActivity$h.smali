@@ -3,12 +3,12 @@
 .source "TmapRoutePreviewActivity.kt"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Lcom/skt/tmap/mvp/fragment/q2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->D6()V
+    value = Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->X6(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,53 +16,44 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Landroidx/lifecycle/Observer<",
-        "Ljava/util/ArrayList<",
-        "Lcom/skt/tmap/data/RouteHeaderItem;",
-        ">;>;"
-    }
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0006\u001a\u00020\u000520\u0010\u0004\u001a,\u0012\u0004\u0012\u00020\u0001 \u0003*\u0016\u0012\u0004\u0012\u00020\u0001\u0018\u00010\u0000j\n\u0012\u0004\u0012\u00020\u0001\u0018\u0001`\u00020\u0000j\u0008\u0012\u0004\u0012\u00020\u0001`\u0002H\n\u00a2\u0006\u0004\u0008\u0006\u0010\u0007"
+        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0012\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0016\u00a8\u0006\u0006"
     }
     d2 = {
-        "Ljava/util/ArrayList;",
-        "Lcom/skt/tmap/data/RouteHeaderItem;",
-        "Lkotlin/collections/ArrayList;",
-        "kotlin.jvm.PlatformType",
-        "it",
+        "com/skt/tmap/activity/TmapRoutePreviewActivity$h",
+        "Lcom/skt/tmap/mvp/fragment/q2;",
+        "Landroid/view/View;",
+        "view",
         "Lkotlin/d1;",
         "a",
-        "(Ljava/util/ArrayList;)V"
+        "tmap_android_phoneKUShip"
     }
-    k = 0x3
+    k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)V
+.method public constructor <init>(ILcom/skt/tmap/activity/TmapRoutePreviewActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
+    iput p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->a:I
 
+    iput-object p2, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->b:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,65 +61,54 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/RouteHeaderItem;",
-            ">;)V"
-        }
-    .end annotation
+.method public a(Landroid/view/View;)V
+    .locals 2
+    .param p1    # Landroid/view/View;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
+    iget p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->a:I
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->w5(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)Llb/g2;
+    const/4 v0, 0x3
 
-    move-result-object v0
+    if-ne p1, v0, :cond_0
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
+    .line 2
+    new-instance p1, Landroid/content/Intent;
 
-    invoke-static {v1}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->K5(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapRoutePreviewViewModel;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->b:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-    move-result-object v1
+    const-class v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
 
-    invoke-virtual {v1}, Lcom/skt/tmap/mvp/viewmodel/TmapRoutePreviewViewModel;->h0()Z
+    invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result v1
+    const-string v0, "POI_TAB_MODE"
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    if-eqz v1, :cond_0
+    .line 3
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    const-string v0, "from_where"
+
+    .line 4
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->b:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
+
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/activity/BaseActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->b:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-    move-result p1
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->w6(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)V
 
-    const/4 v1, 0x4
-
-    if-gt p1, v1, :cond_1
-
-    const/4 v2, 0x1
-
-    :cond_1
     :goto_0
-    invoke-virtual {v0, v2}, Llb/g2;->L1(Z)V
-
-    return-void
-.end method
-
-.method public bridge synthetic onChanged(Ljava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    check-cast p1, Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$h;->a(Ljava/util/ArrayList;)V
-
     return-void
 .end method

@@ -113,6 +113,17 @@
 
 
 # virtual methods
+.method public argCount()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/MemberKey;->_argTypes:[Ljava/lang/Class;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
@@ -199,6 +210,15 @@
 
     :cond_6
     return v0
+.end method
+
+.method public getName()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/MemberKey;->_name:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public hashCode()I

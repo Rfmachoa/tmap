@@ -3,7 +3,7 @@
 .source "Factory.java"
 
 # interfaces
-.implements Loi/a;
+.implements Lsk/a;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Loi/a<",
+        "Lsk/a<",
         "TT;>;"
     }
 .end annotation

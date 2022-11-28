@@ -134,7 +134,7 @@
 
     float-to-int p1, p1
 
-    invoke-static {p1, v1, v0}, Lj1/a;->e(III)I
+    invoke-static {p1, v1, v0}, Ld2/a;->e(III)I
 
     move-result v1
 
@@ -343,7 +343,7 @@
     move v7, p3
 
     .line 20
-    invoke-static/range {v2 .. v7}, Ls1/h;->b(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-static/range {v2 .. v7}, Landroidx/core/view/l;->b(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     .line 21
     invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->getOverlapPixelsForOffset(Landroid/view/View;)I
@@ -506,6 +506,11 @@
     goto :goto_1
 
     :cond_3
+    const/4 v3, 0x0
+
+    .line 14
+    invoke-virtual {p2, v3}, Landroid/view/View;->setTranslationY(F)V
+
     sub-int/2addr p5, v2
 
     :goto_1
@@ -518,7 +523,7 @@
     :cond_4
     const/high16 v0, -0x80000000
 
-    .line 14
+    .line 15
     :goto_2
     invoke-static {p5, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -534,7 +539,7 @@
 
     move v6, p6
 
-    .line 15
+    .line 16
     invoke-virtual/range {v1 .. v6}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->onMeasureChild(Landroid/view/View;IIII)V
 
     const/4 p1, 0x1

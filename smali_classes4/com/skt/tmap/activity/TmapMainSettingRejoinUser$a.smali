@@ -57,7 +57,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainSettingRejoinUser$a;->a:Lcom/skt/tmap/activity/TmapMainSettingRejoinUser;
 
-    invoke-static {p1}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     return-void
 .end method

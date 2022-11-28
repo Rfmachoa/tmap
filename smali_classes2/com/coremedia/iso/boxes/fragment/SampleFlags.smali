@@ -36,14 +36,14 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    new-instance v0, Lo6/c;
+    new-instance v0, Lm8/c;
 
-    invoke-direct {v0, p1}, Lo6/c;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v0, p1}, Lm8/c;-><init>(Ljava/nio/ByteBuffer;)V
 
     const/4 p1, 0x6
 
     .line 4
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result p1
 
@@ -52,21 +52,21 @@
     const/4 p1, 0x2
 
     .line 5
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleDependsOn:I
 
     .line 6
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleIsDependedOn:I
 
     .line 7
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result p1
 
@@ -75,7 +75,7 @@
     const/4 p1, 0x3
 
     .line 8
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result p1
 
@@ -84,7 +84,7 @@
     const/4 p1, 0x1
 
     .line 9
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result v1
 
@@ -101,7 +101,7 @@
     const/16 p1, 0x10
 
     .line 10
-    invoke-virtual {v0, p1}, Lo6/c;->c(I)I
+    invoke-virtual {v0, p1}, Lm8/c;->c(I)I
 
     move-result p1
 
@@ -224,54 +224,54 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lo6/d;
+    new-instance v0, Lm8/d;
 
-    invoke-direct {v0, p1}, Lo6/d;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v0, p1}, Lm8/d;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 2
     iget p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->reserved:I
 
     const/4 v1, 0x6
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     .line 3
     iget p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleDependsOn:I
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     .line 4
     iget p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleIsDependedOn:I
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     .line 5
     iget p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleHasRedundancy:I
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     .line 6
     iget p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->samplePaddingValue:I
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     .line 7
     iget-boolean p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleIsDifferenceSample:Z
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     .line 8
     iget p1, p0, Lcom/coremedia/iso/boxes/fragment/SampleFlags;->sampleDegradationPriority:I
 
     const/16 v1, 0x10
 
-    invoke-virtual {v0, p1, v1}, Lo6/d;->a(II)V
+    invoke-virtual {v0, p1, v1}, Lm8/d;->a(II)V
 
     return-void
 .end method
@@ -513,7 +513,7 @@
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lc1/k;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lv1/j;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,5 +1,5 @@
 .class Ltid/sktelecom/ssolib/c/a$b;
-.super Landroidx/browser/customtabs/a;
+.super Landroidx/browser/customtabs/b;
 .source "CustomTabActivityHelper.java"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Landroidx/browser/customtabs/a;-><init>()V
+    invoke-direct {p0}, Landroidx/browser/customtabs/b;-><init>()V
 
     return-void
 .end method

@@ -4903,7 +4903,7 @@
     const-string v0, "android.permission.ACCESS_NETWORK_STATE"
 
     .line 1
-    invoke-static {p1, v0}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 

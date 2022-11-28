@@ -3,7 +3,7 @@
 .source "TmapMainActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/dialog/h$a;
+.implements Lcom/skt/tmap/dialog/m$a;
 
 
 # annotations
@@ -94,12 +94,12 @@
 
     iget p1, p1, Lcom/skt/tmap/data/GridItemData;->dbIdx:I
 
-    invoke-static {p2, p1}, Lfc/k;->k(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;I)V
+    invoke-static {p2, p1}, Lde/j;->k(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;I)V
 
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const p2, 0x7f130742
+    const p2, 0x7f1407b8
 
     invoke-static {p1, p2, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -152,20 +152,20 @@
     .line 2
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p2, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->S7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
+    invoke-static {p2, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->g8(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
 
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo p2, "tap.deletebookmark"
+    const-string p2, "tap.deletebookmark"
 
-    invoke-virtual {p1, p2}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->c0(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -173,7 +173,7 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const p2, 0x7f130991
+    const p2, 0x7f140a16
 
     const/4 v0, 0x0
 
@@ -197,7 +197,7 @@
 
     sget-object v1, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$Status;->SUCCESS:Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$Status;
 
-    if-ne v0, v1, :cond_2
+    if-ne v0, v1, :cond_3
 
     .line 2
     invoke-virtual {p2}, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;->j()Ljava/lang/Object;
@@ -218,41 +218,51 @@
 
     sget-object v2, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$CRUD;->ADD:Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$CRUD;
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v2, :cond_2
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object p2, p1, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->W(Landroid/content/Context;)Z
 
-    invoke-static {p1, p2, v0}, Lfc/k;->m(Landroid/content/Context;Lcom/skt/tmap/mapview/streaming/MapViewStreaming;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
+    move-result p1
+
+    if-eqz p1, :cond_1
 
     .line 5
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+    iget-object p2, p1, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object p1
-
-    const-string/jumbo p2, "tap.addbookmark"
-
-    invoke-virtual {p1, p2}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    goto :goto_0
+    invoke-static {p1, p2, v0}, Lde/j;->m(Landroid/content/Context;Lcom/skt/tmap/mapview/streaming/MapViewStreaming;Lcom/skt/tmap/network/ndds/dto/info/PoiFavoritesInfo;)V
 
     .line 6
     :cond_1
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
+    const-string p2, "tap.addbookmark"
+
+    invoke-virtual {p1, p2}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 7
+    :cond_2
     invoke-virtual {p2}, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;->i()Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$CRUD;
 
     move-result-object p2
 
     sget-object v1, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$CRUD;->DELETE:Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse$CRUD;
 
-    if-ne p2, v1, :cond_2
+    if-ne p2, v1, :cond_3
 
-    .line 7
+    .line 8
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
@@ -261,27 +271,27 @@
 
     move-result v0
 
-    invoke-static {p2, v0}, Lfc/k;->j(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;I)V
-
-    .line 8
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {p2, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->S7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
+    invoke-static {p2, v0}, Lde/j;->j(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;I)V
 
     .line 9
+    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p2, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->g8(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
+
+    .line 10
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo p2, "tap.deletebookmark"
+    const-string p2, "tap.deletebookmark"
 
-    invoke-virtual {p1, p2}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->c0(Ljava/lang/String;)V
 
-    :cond_2
+    :cond_3
     :goto_0
     return-void
 .end method
@@ -318,18 +328,18 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo p2, "tap.unpin"
+    const-string p2, "tap.unpin"
 
-    invoke-virtual {p1, p2}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const p2, 0x7f130999
+    const p2, 0x7f140a1e
 
     invoke-virtual {p1, p2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -349,13 +359,13 @@
 
     iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object p1
 
-    const-string/jumbo v1, "tap.pin"
+    const-string v1, "tap.pin"
 
-    invoke-virtual {p1, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     if-lez p2, :cond_1
 
@@ -381,7 +391,7 @@
     .line 7
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const v2, 0x7f130998
+    const v2, 0x7f140a1d
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -418,7 +428,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -427,7 +437,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -439,13 +449,13 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.editbookmark"
+    const-string v1, "tap.editbookmark"
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 4
     iget v0, p1, Lcom/skt/tmap/data/GridItemData;->type:I
@@ -474,7 +484,7 @@
 
     const/16 v0, 0x6f
 
-    invoke-static {p1, v2, v1, v0}, Lcom/skt/tmap/util/o1;->l(Landroid/app/Activity;III)V
+    invoke-static {p1, v2, v1, v0}, Lcom/skt/tmap/util/TmapUtil;->r(Landroid/app/Activity;III)V
 
     goto :goto_0
 
@@ -484,7 +494,7 @@
 
     const/16 v0, 0x6e
 
-    invoke-static {p1, v2, v1, v0}, Lcom/skt/tmap/util/o1;->l(Landroid/app/Activity;III)V
+    invoke-static {p1, v2, v1, v0}, Lcom/skt/tmap/util/TmapUtil;->r(Landroid/app/Activity;III)V
 
     goto :goto_0
 
@@ -492,7 +502,7 @@
     :cond_3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->R7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->f8(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
 
     :goto_0
     return-void
@@ -514,18 +524,18 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.info"
+    const-string v1, "tap.info"
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -534,7 +544,7 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -648,7 +658,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -657,7 +667,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -691,21 +701,21 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->e8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {v0, v1, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->e0(Landroid/content/Context;Lcom/skt/tmap/data/GridItemData;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0, v1, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->K0(Landroid/content/Context;Lcom/skt/tmap/data/GridItemData;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    new-instance v2, Lcom/skt/tmap/activity/x0;
+    new-instance v2, Lcom/skt/tmap/activity/f2;
 
-    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/x0;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Lcom/skt/tmap/data/GridItemData;)V
+    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/f2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Lcom/skt/tmap/data/GridItemData;)V
 
     .line 5
     invoke-virtual {v0, v1, v2}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
@@ -716,21 +726,21 @@
     :cond_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->e8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {v0, v1, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->X(Landroid/content/Context;Lcom/skt/tmap/data/GridItemData;)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0, v1, p1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->B0(Landroid/content/Context;Lcom/skt/tmap/data/GridItemData;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    new-instance v2, Lcom/skt/tmap/activity/v0;
+    new-instance v2, Lcom/skt/tmap/activity/d2;
 
-    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/v0;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Lcom/skt/tmap/data/GridItemData;)V
+    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/d2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Lcom/skt/tmap/data/GridItemData;)V
 
     invoke-virtual {v0, v1, v2}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
 
@@ -739,7 +749,7 @@
 .end method
 
 .method public d(Lcom/skt/tmap/data/GridItemData;)V
-    .locals 5
+    .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x10
@@ -752,7 +762,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -761,7 +771,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -778,50 +788,42 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.delete"
+    const-string v1, "tap.delete"
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->c0(Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->e8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const/4 v2, 0x1
+    iget v2, p1, Lcom/skt/tmap/data/GridItemData;->dbIdx:I
 
-    new-array v2, v2, [Ljava/lang/Integer;
-
-    const/4 v3, 0x0
-
-    iget v4, p1, Lcom/skt/tmap/data/GridItemData;->dbIdx:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->p0(Landroid/content/Context;Ljava/util/List;)Landroidx/lifecycle/LiveData;
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->V0(Landroid/content/Context;Ljava/util/List;)Landroidx/lifecycle/LiveData;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    new-instance v2, Lcom/skt/tmap/activity/w0;
+    new-instance v2, Lcom/skt/tmap/activity/e2;
 
-    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/w0;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Lcom/skt/tmap/data/GridItemData;)V
+    invoke-direct {v2, p0, p1}, Lcom/skt/tmap/activity/e2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Lcom/skt/tmap/data/GridItemData;)V
 
     .line 5
     invoke-virtual {v0, v1, v2}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V
@@ -843,7 +845,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -852,7 +854,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->N7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/h;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->d8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/dialog/m;
 
     move-result-object v0
 
@@ -870,7 +872,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -882,7 +884,7 @@
     :cond_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->e8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v0
 
@@ -890,15 +892,15 @@
 
     iget p1, p1, Lcom/skt/tmap/data/GridItemData;->dbIdx:I
 
-    invoke-virtual {v0, v2, p1, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->y0(Landroid/content/Context;IZ)Landroidx/lifecycle/LiveData;
+    invoke-virtual {v0, v2, p1, v1}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->e1(Landroid/content/Context;IZ)Landroidx/lifecycle/LiveData;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$g;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    new-instance v2, Lcom/skt/tmap/activity/y0;
+    new-instance v2, Lcom/skt/tmap/activity/g2;
 
-    invoke-direct {v2, p0, v1}, Lcom/skt/tmap/activity/y0;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Z)V
+    invoke-direct {v2, p0, v1}, Lcom/skt/tmap/activity/g2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$g;Z)V
 
     .line 5
     invoke-virtual {p1, v0, v2}, Landroidx/lifecycle/LiveData;->observe(Landroidx/lifecycle/LifecycleOwner;Landroidx/lifecycle/Observer;)V

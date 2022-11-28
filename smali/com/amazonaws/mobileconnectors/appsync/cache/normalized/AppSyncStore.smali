@@ -4,90 +4,90 @@
 
 
 # instance fields
-.field private mStore:Lf4/a;
+.field private mStore:Lc6/a;
 
 
 # direct methods
-.method public constructor <init>(Lf4/a;)V
+.method public constructor <init>(Lc6/a;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public cacheKeyResolver()Lf4/c;
+.method public cacheKeyResolver()Lc6/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0}, Lf4/a;->e()Lf4/c;
+    invoke-interface {v0}, Lc6/a;->c()Lc6/c;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public cacheResponseNormalizer()Lj4/h;
+.method public cacheResponseNormalizer()Lg6/h;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lj4/h<",
-            "Lf4/i;",
+            "Lg6/h<",
+            "Lc6/i;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0}, Lf4/a;->l()Lj4/h;
+    invoke-interface {v0}, Lc6/a;->i()Lg6/h;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public clearAll()Lf4/e;
+.method public clearAll()Lc6/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lf4/e<",
+            "Lc6/e<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0}, Lf4/a;->w()Lf4/e;
+    invoke-interface {v0}, Lc6/a;->u()Lc6/e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public merge(Lf4/i;Le4/a;)Ljava/util/Set;
+.method public merge(Lc6/i;Lb6/a;)Ljava/util/Set;
     .locals 1
-    .param p2    # Le4/a;
+    .param p2    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lf4/i;",
-            "Le4/a;",
+            "Lc6/i;",
+            "Lb6/a;",
             ")",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
@@ -96,24 +96,24 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    check-cast v0, Lj4/j;
+    check-cast v0, Lg6/j;
 
-    invoke-interface {v0, p1, p2}, Lj4/j;->c(Lf4/i;Le4/a;)Ljava/util/Set;
+    invoke-interface {v0, p1, p2}, Lg6/j;->j(Lc6/i;Lb6/a;)Ljava/util/Set;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public merge(Ljava/util/Collection;Le4/a;)Ljava/util/Set;
+.method public merge(Ljava/util/Collection;Lb6/a;)Ljava/util/Set;
     .locals 1
     .param p1    # Ljava/util/Collection;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p2    # Le4/a;
+    .param p2    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -121,9 +121,9 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lf4/i;",
+            "Lc6/i;",
             ">;",
-            "Le4/a;",
+            "Lb6/a;",
             ")",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
@@ -132,23 +132,23 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    check-cast v0, Lj4/j;
+    check-cast v0, Lg6/j;
 
-    invoke-interface {v0, p1, p2}, Lj4/j;->k(Ljava/util/Collection;Le4/a;)Ljava/util/Set;
+    invoke-interface {v0, p1, p2}, Lg6/j;->k(Ljava/util/Collection;Lb6/a;)Ljava/util/Set;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public networkResponseNormalizer()Lj4/h;
+.method public networkResponseNormalizer()Lg6/h;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lj4/h<",
+            "Lg6/h<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -157,22 +157,22 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0}, Lf4/a;->o()Lj4/h;
+    invoke-interface {v0}, Lc6/a;->m()Lg6/h;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public normalizedCache()Lf4/f;
+.method public normalizedCache()Lc6/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0}, Lf4/a;->A()Lf4/f;
+    invoke-interface {v0}, Lc6/a;->z()Lc6/f;
 
     move-result-object v0
 
@@ -195,53 +195,14 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->v(Ljava/util/Set;)V
+    invoke-interface {v0, p1}, Lc6/a;->t(Ljava/util/Set;)V
 
     return-void
 .end method
 
-.method public read(Lc4/j;Lf4/b;Lcom/apollographql/apollo/api/b$b;)Lf4/e;
-    .locals 1
-    .param p1    # Lc4/j;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .param p2    # Lf4/b;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .param p3    # Lcom/apollographql/apollo/api/b$b;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<F::",
-            "Lc4/c;",
-            ">(",
-            "Lc4/j<",
-            "TF;>;",
-            "Lf4/b;",
-            "Lcom/apollographql/apollo/api/b$b;",
-            ")",
-            "Lf4/e<",
-            "TF;>;"
-        }
-    .end annotation
-
-    .line 5
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
-
-    invoke-interface {v0, p1, p2, p3}, Lf4/a;->m(Lc4/j;Lf4/b;Lcom/apollographql/apollo/api/b$b;)Lf4/e;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public read(Lcom/apollographql/apollo/api/b;)Lf4/e;
+.method public read(Lcom/apollographql/apollo/api/b;)Lc6/e;
     .locals 1
     .param p1    # Lcom/apollographql/apollo/api/b;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -258,36 +219,36 @@
             ">(",
             "Lcom/apollographql/apollo/api/b<",
             "TD;TT;TV;>;)",
-            "Lf4/e<",
+            "Lc6/e<",
             "TT;>;"
         }
     .end annotation
 
     .line 3
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->g(Lcom/apollographql/apollo/api/b;)Lf4/e;
+    invoke-interface {v0, p1}, Lc6/a;->e(Lcom/apollographql/apollo/api/b;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public read(Lcom/apollographql/apollo/api/b;Lc4/j;Lj4/h;Le4/a;)Lf4/e;
+.method public read(Lcom/apollographql/apollo/api/b;Lz5/j;Lg6/h;Lb6/a;)Lc6/e;
     .locals 1
     .param p1    # Lcom/apollographql/apollo/api/b;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p2    # Lc4/j;
+    .param p2    # Lz5/j;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p3    # Lj4/h;
+    .param p3    # Lg6/h;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p4    # Le4/a;
+    .param p4    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -302,59 +263,98 @@
             ">(",
             "Lcom/apollographql/apollo/api/b<",
             "TD;TT;TV;>;",
-            "Lc4/j<",
+            "Lz5/j<",
             "TD;>;",
-            "Lj4/h<",
-            "Lf4/i;",
+            "Lg6/h<",
+            "Lc6/i;",
             ">;",
-            "Le4/a;",
+            "Lb6/a;",
             ")",
-            "Lf4/e<",
-            "Lc4/i<",
+            "Lc6/e<",
+            "Lz5/i<",
             "TT;>;>;"
         }
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lf4/a;->n(Lcom/apollographql/apollo/api/b;Lc4/j;Lj4/h;Le4/a;)Lf4/e;
+    invoke-interface {v0, p1, p2, p3, p4}, Lc6/a;->h(Lcom/apollographql/apollo/api/b;Lz5/j;Lg6/h;Lb6/a;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public read(Ljava/lang/String;Le4/a;)Lf4/i;
+.method public read(Lz5/j;Lc6/b;Lcom/apollographql/apollo/api/b$b;)Lc6/e;
+    .locals 1
+    .param p1    # Lz5/j;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .param p2    # Lc6/b;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .param p3    # Lcom/apollographql/apollo/api/b$b;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<F::",
+            "Lz5/c;",
+            ">(",
+            "Lz5/j<",
+            "TF;>;",
+            "Lc6/b;",
+            "Lcom/apollographql/apollo/api/b$b;",
+            ")",
+            "Lc6/e<",
+            "TF;>;"
+        }
+    .end annotation
+
+    .line 5
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
+
+    invoke-interface {v0, p1, p2, p3}, Lc6/a;->A(Lz5/j;Lc6/b;Lcom/apollographql/apollo/api/b$b;)Lc6/e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public read(Ljava/lang/String;Lb6/a;)Lc6/i;
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p2    # Le4/a;
+    .param p2    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    check-cast v0, Lj4/d;
+    check-cast v0, Lg6/d;
 
-    invoke-interface {v0, p1, p2}, Lj4/d;->a(Ljava/lang/String;Le4/a;)Lf4/i;
+    invoke-interface {v0, p1, p2}, Lg6/d;->v(Ljava/lang/String;Lb6/a;)Lc6/i;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public read(Ljava/util/Collection;Le4/a;)Ljava/util/Collection;
+.method public read(Ljava/util/Collection;Lb6/a;)Ljava/util/Collection;
     .locals 1
     .param p1    # Ljava/util/Collection;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p2    # Le4/a;
+    .param p2    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -364,77 +364,77 @@
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;",
-            "Le4/a;",
+            "Lb6/a;",
             ")",
             "Ljava/util/Collection<",
-            "Lf4/i;",
+            "Lc6/i;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    check-cast v0, Lj4/d;
+    check-cast v0, Lg6/d;
 
-    invoke-interface {v0, p1, p2}, Lj4/d;->j(Ljava/util/Collection;Le4/a;)Ljava/util/Collection;
+    invoke-interface {v0, p1, p2}, Lg6/d;->l(Ljava/util/Collection;Lb6/a;)Ljava/util/Collection;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public readTransaction(Lj4/i;)Ljava/lang/Object;
+.method public readTransaction(Lg6/i;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lj4/i<",
-            "Lj4/d;",
+            "Lg6/i<",
+            "Lg6/d;",
             "TR;>;)TR;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->u(Lj4/i;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lc6/a;->d(Lg6/i;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public remove(Lf4/b;)Lf4/e;
+.method public remove(Lc6/b;)Lc6/e;
     .locals 1
-    .param p1    # Lf4/b;
+    .param p1    # Lc6/b;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lf4/b;",
+            "Lc6/b;",
             ")",
-            "Lf4/e<",
+            "Lc6/e<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->f(Lf4/b;)Lf4/e;
+    invoke-interface {v0, p1}, Lc6/a;->a(Lc6/b;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public remove(Ljava/util/List;)Lf4/e;
+.method public remove(Ljava/util/List;)Lc6/e;
     .locals 1
     .param p1    # Ljava/util/List;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -444,34 +444,34 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lf4/b;",
+            "Lc6/b;",
             ">;)",
-            "Lf4/e<",
+            "Lc6/e<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->p(Ljava/util/List;)Lf4/e;
+    invoke-interface {v0, p1}, Lc6/a;->o(Ljava/util/List;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public declared-synchronized subscribe(Lf4/a$a;)V
+.method public declared-synchronized subscribe(Lc6/a$a;)V
     .locals 1
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->q(Lf4/a$a;)V
+    invoke-interface {v0, p1}, Lc6/a;->n(Lc6/a$a;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -488,16 +488,16 @@
     throw p1
 .end method
 
-.method public declared-synchronized unsubscribe(Lf4/a$a;)V
+.method public declared-synchronized unsubscribe(Lc6/a$a;)V
     .locals 1
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->i(Lf4/a$a;)V
+    invoke-interface {v0, p1}, Lc6/a;->p(Lc6/a$a;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -514,45 +514,7 @@
     throw p1
 .end method
 
-.method public write(Lc4/c;Lf4/b;Lcom/apollographql/apollo/api/b$b;)Lf4/e;
-    .locals 1
-    .param p1    # Lc4/c;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .param p2    # Lf4/b;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .param p3    # Lcom/apollographql/apollo/api/b$b;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lc4/c;",
-            "Lf4/b;",
-            "Lcom/apollographql/apollo/api/b$b;",
-            ")",
-            "Lf4/e<",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;>;"
-        }
-    .end annotation
-
-    .line 2
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
-
-    invoke-interface {v0, p1, p2, p3}, Lf4/a;->h(Lc4/c;Lf4/b;Lcom/apollographql/apollo/api/b$b;)Lf4/e;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public write(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lf4/e;
+.method public write(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lc6/e;
     .locals 1
     .param p1    # Lcom/apollographql/apollo/api/b;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -573,7 +535,7 @@
             ">(",
             "Lcom/apollographql/apollo/api/b<",
             "TD;TT;TV;>;TD;)",
-            "Lf4/e<",
+            "Lc6/e<",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
             ">;>;"
@@ -581,22 +543,22 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1, p2}, Lf4/a;->y(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lf4/e;
+    invoke-interface {v0, p1, p2}, Lc6/a;->x(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public writeAndPublish(Lc4/c;Lf4/b;Lcom/apollographql/apollo/api/b$b;)Lf4/e;
+.method public write(Lz5/c;Lc6/b;Lcom/apollographql/apollo/api/b$b;)Lc6/e;
     .locals 1
-    .param p1    # Lc4/c;
+    .param p1    # Lz5/c;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
-    .param p2    # Lf4/b;
+    .param p2    # Lc6/b;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -607,27 +569,28 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/c;",
-            "Lf4/b;",
+            "Lz5/c;",
+            "Lc6/b;",
             "Lcom/apollographql/apollo/api/b$b;",
             ")",
-            "Lf4/e<",
-            "Ljava/lang/Boolean;",
-            ">;"
+            "Lc6/e<",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;>;"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1, p2, p3}, Lf4/a;->b(Lc4/c;Lf4/b;Lcom/apollographql/apollo/api/b$b;)Lf4/e;
+    invoke-interface {v0, p1, p2, p3}, Lc6/a;->q(Lz5/c;Lc6/b;Lcom/apollographql/apollo/api/b$b;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public writeAndPublish(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lf4/e;
+.method public writeAndPublish(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lc6/e;
     .locals 1
     .param p1    # Lcom/apollographql/apollo/api/b;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -648,39 +611,76 @@
             ">(",
             "Lcom/apollographql/apollo/api/b<",
             "TD;TT;TV;>;TD;)",
-            "Lf4/e<",
+            "Lc6/e<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1, p2}, Lf4/a;->z(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lf4/e;
+    invoke-interface {v0, p1, p2}, Lc6/a;->y(Lcom/apollographql/apollo/api/b;Lcom/apollographql/apollo/api/b$a;)Lc6/e;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public writeTransaction(Lj4/i;)Ljava/lang/Object;
+.method public writeAndPublish(Lz5/c;Lc6/b;Lcom/apollographql/apollo/api/b$b;)Lc6/e;
+    .locals 1
+    .param p1    # Lz5/c;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .param p2    # Lc6/b;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .param p3    # Lcom/apollographql/apollo/api/b$b;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lz5/c;",
+            "Lc6/b;",
+            "Lcom/apollographql/apollo/api/b$b;",
+            ")",
+            "Lc6/e<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
+
+    invoke-interface {v0, p1, p2, p3}, Lc6/a;->g(Lz5/c;Lc6/b;Lcom/apollographql/apollo/api/b$b;)Lc6/e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public writeTransaction(Lg6/i;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lj4/i<",
-            "Lj4/j;",
+            "Lg6/i<",
+            "Lg6/j;",
             "TR;>;)TR;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lf4/a;
+    iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/cache/normalized/AppSyncStore;->mStore:Lc6/a;
 
-    invoke-interface {v0, p1}, Lf4/a;->t(Lj4/i;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lc6/a;->f(Lg6/i;)Ljava/lang/Object;
 
     move-result-object p1
 

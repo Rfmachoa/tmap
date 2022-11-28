@@ -74,7 +74,7 @@
     iget-object v0, p0, Lcom/google/firebase/iid/Store;->context:Landroid/content/Context;
 
     .line 1
-    invoke-static {v0}, Landroidx/core/content/d;->m(Landroid/content/Context;)Ljava/io/File;
+    invoke-static {v0}, Landroidx/core/content/ContextCompat;->getNoBackupFilesDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
@@ -189,7 +189,7 @@
 
     const-string p1, "|S|cre"
 
-    invoke-static {v0, p0, p1}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, p1}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -238,7 +238,7 @@
 
     const-string v1, "|"
 
-    invoke-static {v3, p1, v0, p2, v1}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p1, v0, p2, v1}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

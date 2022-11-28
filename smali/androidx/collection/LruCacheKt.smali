@@ -48,17 +48,17 @@
 
 
 # direct methods
-.method public static final a(ILej/p;Lej/l;Lej/r;)Landroidx/collection/j;
+.method public static final a(ILgl/p;Lgl/l;Lgl/r;)Landroidx/collection/j;
     .locals 7
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lej/l;
+    .param p2    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p3    # Lej/r;
+    .param p3    # Lgl/r;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -69,13 +69,13 @@
             "V:",
             "Ljava/lang/Object;",
             ">(I",
-            "Lej/p<",
+            "Lgl/p<",
             "-TK;-TV;",
             "Ljava/lang/Integer;",
             ">;",
-            "Lej/l<",
+            "Lgl/l<",
             "-TK;+TV;>;",
-            "Lej/r<",
+            "Lgl/r<",
             "-",
             "Ljava/lang/Boolean;",
             "-TK;-TV;-TV;",
@@ -116,12 +116,12 @@
 
     move v6, p0
 
-    invoke-direct/range {v1 .. v6}, Landroidx/collection/LruCacheKt$a;-><init>(Lej/p;Lej/l;Lej/r;II)V
+    invoke-direct/range {v1 .. v6}, Landroidx/collection/LruCacheKt$a;-><init>(Lgl/p;Lgl/l;Lgl/r;II)V
 
     return-object v0
 .end method
 
-.method public static synthetic b(ILej/p;Lej/l;Lej/r;ILjava/lang/Object;)Landroidx/collection/j;
+.method public static synthetic b(ILgl/p;Lgl/l;Lgl/r;ILjava/lang/Object;)Landroidx/collection/j;
     .locals 6
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
@@ -177,7 +177,7 @@
 
     move v5, p0
 
-    invoke-direct/range {v0 .. v5}, Landroidx/collection/LruCacheKt$a;-><init>(Lej/p;Lej/l;Lej/r;II)V
+    invoke-direct/range {v0 .. v5}, Landroidx/collection/LruCacheKt$a;-><init>(Lgl/p;Lgl/l;Lgl/r;II)V
 
     return-object p1
 .end method

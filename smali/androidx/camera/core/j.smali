@@ -1,262 +1,164 @@
-.class public Landroidx/camera/core/j;
-.super Ljava/lang/Object;
-.source "CameraExecutor.java"
-
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# static fields
-.field public static final c:I = 0x1
-
-.field public static final d:I = 0x1
-
-.field public static final e:Ljava/util/concurrent/ThreadFactory;
+.class public final Landroidx/camera/core/j;
+.super Landroidx/camera/core/SurfaceRequest$Result;
+.source "AutoValue_SurfaceRequest_Result.java"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final f:I
 
-.field public b:Ljava/util/concurrent/ThreadPoolExecutor;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mExecutorLock"
-    .end annotation
-
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
+.field public final g:Landroid/view/Surface;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILandroid/view/Surface;)V
+    .locals 0
 
     .line 1
-    new-instance v0, Landroidx/camera/core/j$a;
-
-    invoke-direct {v0}, Landroidx/camera/core/j$a;-><init>()V
-
-    sput-object v0, Landroidx/camera/core/j;->e:Ljava/util/concurrent/ThreadFactory;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroidx/camera/core/SurfaceRequest$Result;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/lang/Object;
+    iput p1, p0, Landroidx/camera/core/j;->f:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Landroidx/camera/core/j;->a:Ljava/lang/Object;
+    const-string p1, "Null surface"
 
     .line 3
-    invoke-static {}, Landroidx/camera/core/j;->a()Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+    .line 4
+    iput-object p2, p0, Landroidx/camera/core/j;->g:Landroid/view/Surface;
 
     return-void
-.end method
-
-.method public static a()Ljava/util/concurrent/ThreadPoolExecutor;
-    .locals 9
-
-    .line 1
-    new-instance v8, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    sget-object v7, Landroidx/camera/core/j;->e:Ljava/util/concurrent/ThreadFactory;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0x0
-
-    move-object v0, v8
-
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    return-object v8
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 2
+.method public a()I
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/j;->a:Ljava/lang/Object;
+    iget v0, p0, Landroidx/camera/core/j;->f:I
 
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 3
-    iget-object v1, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
-
-    .line 4
-    :cond_0
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return v0
 .end method
 
-.method public c(Lx/m;)V
-    .locals 2
-    .param p1    # Lx/m;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraFactory"
-        }
+.method public b()Landroid/view/Surface;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Landroidx/camera/core/j;->g:Landroid/view/Surface;
 
-    .line 2
-    iget-object v0, p0, Landroidx/camera/core/j;->a:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    monitor-enter v0
-
-    .line 3
-    :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 4
-    invoke-static {}, Landroidx/camera/core/j;->a()Ljava/util/concurrent/ThreadPoolExecutor;
-
-    move-result-object v1
-
-    iput-object v1, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 5
-    :cond_0
-    iget-object v1, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
-
-    .line 6
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 7
-    invoke-interface {p1}, Lx/m;->c()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p1
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    .line 8
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    .line 1
+    :cond_0
+    instance-of v1, p1, Landroidx/camera/core/SurfaceRequest$Result;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    .line 2
+    check-cast p1, Landroidx/camera/core/SurfaceRequest$Result;
+
+    .line 3
+    iget v1, p0, Landroidx/camera/core/j;->f:I
+
+    invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest$Result;->a()I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget-object v1, p0, Landroidx/camera/core/j;->g:Landroid/view/Surface;
+
+    .line 4
+    invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest$Result;->b()Landroid/view/Surface;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    .line 9
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setMaximumPoolSize(I)V
+    if-eqz p1, :cond_1
 
-    .line 10
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setCorePoolSize(I)V
+    goto :goto_0
 
-    return-void
+    :cond_1
+    move v0, v2
 
-    :catchall_0
-    move-exception p1
+    :goto_0
+    return v0
 
-    .line 11
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    :cond_2
+    return v2
 .end method
 
-.method public execute(Ljava/lang/Runnable;)V
+.method public hashCode()I
     .locals 2
-    .param p1    # Ljava/lang/Runnable;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "runnable"
-        }
-    .end annotation
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Landroidx/camera/core/j;->f:I
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/core/j;->a:Ljava/lang/Object;
+    iget-object v1, p0, Landroidx/camera/core/j;->g:Landroid/view/Surface;
 
-    monitor-enter v0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    .line 3
-    :try_start_0
-    iget-object v1, p0, Landroidx/camera/core/j;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+    move-result v1
 
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+    xor-int/2addr v0, v1
 
-    .line 4
-    monitor-exit v0
+    return v0
+.end method
 
-    return-void
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    :catchall_0
-    move-exception p1
+    const-string v0, "Result{resultCode="
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw p1
+    move-result-object v0
+
+    iget v1, p0, Landroidx/camera/core/j;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", surface="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Landroidx/camera/core/j;->g:Landroid/view/Surface;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

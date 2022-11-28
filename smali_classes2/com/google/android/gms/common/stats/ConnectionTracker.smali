@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/stats/ConnectionTracker;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -23,15 +23,6 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Landroid/content/ServiceConnection;",
-            "Landroid/content/ServiceConnection;",
-            ">;"
-        }
     .end annotation
 .end field
 

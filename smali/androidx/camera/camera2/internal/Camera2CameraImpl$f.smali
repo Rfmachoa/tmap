@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/camera/camera2/internal/Camera2CameraImpl;
 .end annotation
@@ -19,10 +23,6 @@
         Landroidx/camera/camera2/internal/Camera2CameraImpl$f$b;
     }
 .end annotation
-
-
-# static fields
-.field public static final g:I = 0x2bc
 
 
 # instance fields
@@ -60,18 +60,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x0,
-            0x0
-        }
-        names = {
-            "this$0",
-            "executor",
-            "scheduler"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
@@ -123,7 +111,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->M(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->O(Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->c:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$b;
@@ -155,21 +143,11 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "cameraDevice",
-            "error"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     sget-object v1, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->OPENING:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
@@ -181,7 +159,7 @@
 
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     sget-object v1, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->OPENED:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
@@ -189,7 +167,7 @@
 
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     sget-object v1, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->REOPENING:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
@@ -215,7 +193,7 @@
 
     iget-object v4, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v4, v4, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v4, v4, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -223,19 +201,19 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     const-string v0, "Camera2CameraImpl"
 
     const/4 v1, 0x2
 
-    if-eq p2, v3, :cond_2
+    if-eq p2, v3, :cond_3
 
-    if-eq p2, v1, :cond_2
+    if-eq p2, v1, :cond_3
 
     const/4 v4, 0x4
 
-    if-eq p2, v4, :cond_2
+    if-eq p2, v4, :cond_3
 
     const-string v1, "Error observed on open (or opening) camera device "
 
@@ -256,7 +234,7 @@
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 4
-    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->R(I)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->T(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -271,23 +249,39 @@
     move-result-object p1
 
     .line 5
-    invoke-static {v0, p1}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
-    iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+    const/4 p1, 0x3
 
-    sget-object p2, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->CLOSING:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    if-ne p2, p1, :cond_2
 
-    invoke-virtual {p1, p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->v0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;)V
-
-    .line 7
-    iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
-
-    invoke-virtual {p1, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->I(Z)V
+    const/4 p1, 0x5
 
     goto :goto_2
 
     :cond_2
+    const/4 p1, 0x6
+
+    .line 6
+    :goto_2
+    iget-object p2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+
+    sget-object v0, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->CLOSING:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+
+    invoke-static {p1}, Landroidx/camera/core/CameraState$a;->a(I)Landroidx/camera/core/CameraState$a;
+
+    move-result-object p1
+
+    invoke-virtual {p2, v0, p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->B0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;Landroidx/camera/core/CameraState$a;)V
+
+    .line 7
+    iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+
+    invoke-virtual {p1, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->K(Z)V
+
+    goto :goto_3
+
+    :cond_3
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 8
@@ -297,7 +291,7 @@
 
     aput-object p1, v1, v2
 
-    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->R(I)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->T(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -310,28 +304,30 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->c()V
+    invoke-virtual {p0, p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->c(I)V
 
-    :goto_2
+    :goto_3
     return-void
 .end method
 
-.method public final c()V
-    .locals 3
+.method public final c(I)V
+    .locals 4
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->j:I
+    iget v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
 
     const/4 v1, 0x0
 
+    const/4 v2, 0x1
+
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    move v0, v2
 
     goto :goto_0
 
@@ -339,21 +335,40 @@
     move v0, v1
 
     :goto_0
-    const-string v2, "Can only reopen camera device after error if the camera device is actually in an error state."
+    const-string v3, "Can only reopen camera device after error if the camera device is actually in an error state."
 
-    invoke-static {v0, v2}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v3}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    if-eq p1, v2, :cond_1
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v2, 0x3
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v0
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+    :cond_2
+    :goto_1
+    iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    sget-object v2, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->REOPENING:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    sget-object v0, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->REOPENING:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
-    invoke-virtual {v0, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->v0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;)V
+    invoke-static {v2}, Landroidx/camera/core/CameraState$a;->a(I)Landroidx/camera/core/CameraState$a;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v0, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->B0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;Landroidx/camera/core/CameraState$a;)V
 
     .line 3
-    iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+    iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->I(Z)V
+    invoke-virtual {p1, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->K(Z)V
 
     return-void
 .end method
@@ -364,7 +379,7 @@
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;
 
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;->b()V
+    invoke-virtual {v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;->e()V
 
     return-void
 .end method
@@ -389,7 +404,7 @@
     move v0, v2
 
     :goto_0
-    invoke-static {v0}, Lr1/o;->m(Z)V
+    invoke-static {v0}, Landroidx/core/util/p;->n(Z)V
 
     .line 2
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->d:Ljava/util/concurrent/ScheduledFuture;
@@ -402,7 +417,7 @@
     move v1, v2
 
     :goto_1
-    invoke-static {v1}, Lr1/o;->m(Z)V
+    invoke-static {v1}, Landroidx/core/util/p;->n(Z)V
 
     .line 3
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;
@@ -425,31 +440,63 @@
     .line 5
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    const-string v1, "Attempting camera re-open in 700ms: "
+    const-string v1, "Attempting camera re-open in "
 
     invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
+    iget-object v2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;
+
+    .line 6
+    invoke-virtual {v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;->c()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "ms: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     iget-object v2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->c:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$b;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " activeResuming = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+
+    iget-boolean v2, v2, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i1:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->M(Ljava/lang/String;)V
+    .line 7
+    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->O(Ljava/lang/String;)V
 
-    .line 6
+    .line 8
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
     iget-object v1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->c:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$b;
 
-    const-wide/16 v2, 0x2bc
+    iget-object v2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;
+
+    .line 9
+    invoke-virtual {v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;->c()I
+
+    move-result v2
+
+    int-to-long v2, v2
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
+    .line 10
     invoke-interface {v0, v1, v2, v3, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object v0
@@ -459,22 +506,76 @@
     goto :goto_2
 
     :cond_2
-    const-string v0, "Camera2CameraImpl"
+    const-string v0, "Camera reopening attempted for "
 
-    const-string v1, "Camera reopening attempted for 10000ms without success."
+    .line 11
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
-    invoke-static {v0, v1}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 8
+    iget-object v1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;
+
+    .line 12
+    invoke-virtual {v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f$a;->d()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "ms without success."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Camera2CameraImpl"
+
+    .line 13
+    invoke-static {v1, v0}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
     sget-object v1, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->PENDING_OPEN:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
-    invoke-virtual {v0, v1, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->w0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;Z)V
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->C0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;Landroidx/camera/core/CameraState$a;Z)V
 
     :goto_2
     return-void
+.end method
+
+.method public f()Z
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
+
+    iget-boolean v1, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i1:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    iget v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :cond_1
+    :goto_0
+    return v2
 .end method
 
 .method public onClosed(Landroid/hardware/camera2/CameraDevice;)V
@@ -483,26 +584,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraDevice"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
     const-string v1, "CameraDevice.onClosed()"
 
-    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->M(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->O(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
 
     const/4 v1, 0x0
 
@@ -530,14 +623,14 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 3
     sget-object p1, Landroidx/camera/camera2/internal/Camera2CameraImpl$c;->a:[I
 
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -571,7 +664,7 @@
 
     iget-object v1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v1, v1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v1, v1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -587,7 +680,7 @@
     :cond_2
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->j:I
+    iget v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
 
     if-eqz v0, :cond_3
 
@@ -600,9 +693,9 @@
 
     iget-object v1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget v1, v1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->j:I
+    iget v1, v1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
 
-    invoke-static {v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->R(I)Ljava/lang/String;
+    invoke-static {v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->T(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -612,7 +705,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->M(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->O(Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->e()V
@@ -621,7 +714,7 @@
 
     .line 8
     :cond_3
-    invoke-virtual {p1, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->B0(Z)V
+    invoke-virtual {p1, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->I0(Z)V
 
     goto :goto_2
 
@@ -630,16 +723,16 @@
     :goto_1
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->U()Z
+    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->X()Z
 
     move-result p1
 
-    invoke-static {p1}, Lr1/o;->m(Z)V
+    invoke-static {p1}, Landroidx/core/util/p;->n(Z)V
 
     .line 10
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->P()V
+    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->R()V
 
     :goto_2
     return-void
@@ -651,21 +744,13 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraDevice"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
     const-string v1, "CameraDevice.onDisconnected()"
 
-    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->M(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->O(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -681,29 +766,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "cameraDevice",
-            "error"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iput-object p1, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iput-object p1, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
 
     .line 2
-    iput p2, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->j:I
+    iput p2, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
 
     .line 3
     sget-object v1, Landroidx/camera/camera2/internal/Camera2CameraImpl$c;->a:[I
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -753,7 +828,7 @@
 
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -775,7 +850,7 @@
 
     aput-object v5, v0, v4
 
-    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->R(I)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->T(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -783,7 +858,7 @@
 
     iget-object v2, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v2, v2, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v2, v2, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -798,7 +873,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {p0, p1, p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->b(Landroid/hardware/camera2/CameraDevice;I)V
@@ -816,7 +891,7 @@
 
     aput-object p1, v0, v4
 
-    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->R(I)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->T(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -824,7 +899,7 @@
 
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -839,12 +914,12 @@
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1, v4}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->I(Z)V
+    invoke-virtual {p1, v4}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->K(Z)V
 
     :goto_1
     return-void
@@ -856,47 +931,39 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraDevice"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
     const-string v1, "CameraDevice.onOpened()"
 
-    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->M(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->O(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iput-object p1, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iput-object p1, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
+
+    const/4 p1, 0x0
 
     .line 3
-    invoke-virtual {v0, p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->E0(Landroid/hardware/camera2/CameraDevice;)V
+    iput p1, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->l:I
 
     .line 4
-    iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
-
-    const/4 v0, 0x0
-
-    iput v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->j:I
+    invoke-virtual {p0}, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->d()V
 
     .line 5
-    sget-object v0, Landroidx/camera/camera2/internal/Camera2CameraImpl$c;->a:[I
+    sget-object p1, Landroidx/camera/camera2/internal/Camera2CameraImpl$c;->a:[I
 
-    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, v0, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
-    aget p1, v0, p1
+    move-result v0
+
+    aget p1, p1, v0
 
     const/4 v0, 0x3
 
@@ -928,7 +995,7 @@
 
     iget-object v1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v1, v1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->d:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
+    iget-object v1, v1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->e:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -946,12 +1013,12 @@
 
     sget-object v0, Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;->OPENED:Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;
 
-    invoke-virtual {p1, v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->v0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;)V
+    invoke-virtual {p1, v0}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->A0(Landroidx/camera/camera2/internal/Camera2CameraImpl$InternalState;)V
 
     .line 8
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->n0()V
+    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->s0()V
 
     goto :goto_1
 
@@ -960,16 +1027,16 @@
     :goto_0
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->U()Z
+    invoke-virtual {p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->X()Z
 
     move-result p1
 
-    invoke-static {p1}, Lr1/o;->m(Z)V
+    invoke-static {p1}, Landroidx/core/util/p;->n(Z)V
 
     .line 10
     iget-object p1, p0, Landroidx/camera/camera2/internal/Camera2CameraImpl$f;->f:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iget-object p1, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
 
     invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->close()V
 
@@ -978,7 +1045,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->i:Landroid/hardware/camera2/CameraDevice;
+    iput-object v0, p1, Landroidx/camera/camera2/internal/Camera2CameraImpl;->k:Landroid/hardware/camera2/CameraDevice;
 
     :goto_1
     return-void

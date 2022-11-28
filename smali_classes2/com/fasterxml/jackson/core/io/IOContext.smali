@@ -50,7 +50,7 @@
     .line 1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Trying to release buffer not owned by the context"
+    const-string v1, "Trying to release buffer smaller than original"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -87,7 +87,7 @@
 
     array-length p2, p2
 
-    if-le p1, p2, :cond_0
+    if-lt p1, p2, :cond_0
 
     goto :goto_0
 
@@ -113,7 +113,7 @@
 
     array-length p2, p2
 
-    if-le p1, p2, :cond_0
+    if-lt p1, p2, :cond_0
 
     goto :goto_0
 
@@ -149,6 +149,28 @@
     iput-object v0, p0, Lcom/fasterxml/jackson/core/io/IOContext;->_base64Buffer:[B
 
     return-object v0
+.end method
+
+.method public allocBase64Buffer(I)[B
+    .locals 2
+
+    .line 3
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/io/IOContext;->_base64Buffer:[B
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/io/IOContext;->_verifyAlloc(Ljava/lang/Object;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/io/IOContext;->_bufferRecycler:Lcom/fasterxml/jackson/core/util/BufferRecycler;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1, p1}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->allocByteBuffer(II)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/io/IOContext;->_base64Buffer:[B
+
+    return-object p1
 .end method
 
 .method public allocConcatBuffer()[C

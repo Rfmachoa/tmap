@@ -14,57 +14,39 @@
 
 
 # static fields
-.field public static final action:I = 0x7f040000
+.field public static final action:I = 0x7f040002
 
-.field public static final alpha:I = 0x7f040033
+.field public static final argType:I = 0x7f040045
 
-.field public static final argType:I = 0x7f04003d
+.field public static final destination:I = 0x7f04017d
 
-.field public static final destination:I = 0x7f040136
+.field public static final enterAnim:I = 0x7f0401bf
 
-.field public static final enterAnim:I = 0x7f04016d
+.field public static final exitAnim:I = 0x7f0401cb
 
-.field public static final exitAnim:I = 0x7f040177
+.field public static final launchSingleTop:I = 0x7f0402ac
 
-.field public static final font:I = 0x7f0401b5
+.field public static final mimeType:I = 0x7f04035e
 
-.field public static final fontProviderAuthority:I = 0x7f0401b7
+.field public static final nullable:I = 0x7f0403a7
 
-.field public static final fontProviderCerts:I = 0x7f0401b8
+.field public static final popEnterAnim:I = 0x7f0403db
 
-.field public static final fontProviderFetchStrategy:I = 0x7f0401b9
+.field public static final popExitAnim:I = 0x7f0403dc
 
-.field public static final fontProviderFetchTimeout:I = 0x7f0401ba
+.field public static final popUpTo:I = 0x7f0403dd
 
-.field public static final fontProviderPackage:I = 0x7f0401bb
+.field public static final popUpToInclusive:I = 0x7f0403de
 
-.field public static final fontProviderQuery:I = 0x7f0401bc
+.field public static final popUpToSaveState:I = 0x7f0403df
 
-.field public static final fontStyle:I = 0x7f0401be
+.field public static final restoreState:I = 0x7f040414
 
-.field public static final fontVariationSettings:I = 0x7f0401bf
+.field public static final route:I = 0x7f04041b
 
-.field public static final fontWeight:I = 0x7f0401c0
+.field public static final startDestination:I = 0x7f04047e
 
-.field public static final launchSingleTop:I = 0x7f04022d
-
-.field public static final mimeType:I = 0x7f0402c1
-
-.field public static final nullable:I = 0x7f0402e4
-
-.field public static final popEnterAnim:I = 0x7f040315
-
-.field public static final popExitAnim:I = 0x7f040316
-
-.field public static final popUpTo:I = 0x7f040317
-
-.field public static final popUpToInclusive:I = 0x7f040318
-
-.field public static final startDestination:I = 0x7f040390
-
-.field public static final ttcIndex:I = 0x7f040438
-
-.field public static final uri:I = 0x7f040448
+.field public static final uri:I = 0x7f040572
 
 
 # direct methods

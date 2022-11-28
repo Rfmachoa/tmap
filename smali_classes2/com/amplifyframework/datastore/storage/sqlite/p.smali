@@ -3,36 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
+.field public final synthetic a:Lcom/amplifyframework/core/Consumer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/core/Consumer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/p;->a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/p;->a:Lcom/amplifyframework/core/Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/p;->a:Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/p;->a:Lcom/amplifyframework/core/Consumer;
 
-    check-cast p1, Ljava/util/Iterator;
+    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->i(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Ljava/util/Iterator;)Lai/v0;
+    invoke-interface {v0, p1}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

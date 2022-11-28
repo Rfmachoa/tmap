@@ -91,6 +91,14 @@
 
 .method public setAppCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "appCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResqPackageInfoVo;->appCode:Ljava/lang/String;
@@ -100,6 +108,14 @@
 
 .method public setInstallYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "installYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResqPackageInfoVo;->installYn:Ljava/lang/String;
@@ -110,6 +126,15 @@
 .method public setInstalled(Z)V
     .locals 1
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "installed"
+        }
     .end annotation
 
     const/4 v0, 0x1
@@ -135,6 +160,14 @@
 
 .method public setName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResqPackageInfoVo;->name:Ljava/lang/String;

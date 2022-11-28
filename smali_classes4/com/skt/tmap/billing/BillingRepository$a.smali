@@ -40,8 +40,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -59,7 +59,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/billing/BillingRepository$a;-><init>()V
 
     return-void
@@ -81,28 +80,22 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/billing/BillingRepository;->f()Lcom/skt/tmap/billing/BillingRepository;
+    invoke-static {}, Lcom/skt/tmap/billing/BillingRepository;->k()Lcom/skt/tmap/billing/BillingRepository;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
-    goto :goto_1
-
-    :cond_0
     monitor-enter p0
 
     .line 2
     :try_start_0
-    invoke-static {}, Lcom/skt/tmap/billing/BillingRepository;->f()Lcom/skt/tmap/billing/BillingRepository;
+    invoke-static {}, Lcom/skt/tmap/billing/BillingRepository;->k()Lcom/skt/tmap/billing/BillingRepository;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    goto :goto_0
-
-    :cond_1
     new-instance v0, Lcom/skt/tmap/billing/BillingRepository;
 
     const/4 v1, 0x0
@@ -110,19 +103,20 @@
     invoke-direct {v0, p1, v1}, Lcom/skt/tmap/billing/BillingRepository;-><init>(Landroid/app/Activity;Lkotlin/jvm/internal/u;)V
 
     .line 3
-    invoke-static {v0}, Lcom/skt/tmap/billing/BillingRepository;->k(Lcom/skt/tmap/billing/BillingRepository;)V
+    sget-object p1, Lcom/skt/tmap/billing/BillingRepository;->f:Lcom/skt/tmap/billing/BillingRepository$a;
+
+    invoke-static {v0}, Lcom/skt/tmap/billing/BillingRepository;->n(Lcom/skt/tmap/billing/BillingRepository;)V
 
     .line 4
-    invoke-virtual {v0}, Lcom/skt/tmap/billing/BillingRepository;->l()V
+    invoke-virtual {v0}, Lcom/skt/tmap/billing/BillingRepository;->o()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 5
-    :goto_0
+    :cond_0
     monitor-exit p0
 
-    :goto_1
-    return-object v0
+    goto :goto_0
 
     :catchall_0
     move-exception p1
@@ -130,4 +124,8 @@
     monitor-exit p0
 
     throw p1
+
+    :cond_1
+    :goto_0
+    return-object v0
 .end method

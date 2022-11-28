@@ -49,6 +49,24 @@
     .end annotation
 .end method
 
+.method public includeFilterInstance(Lcom/fasterxml/jackson/databind/SerializationConfig;Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/SerializationConfig;",
+            "Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
 .method public abstract keyDeserializerInstance(Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/databind/introspect/Annotated;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/KeyDeserializer;
     .annotation system Ldalvik/annotation/Signature;
         value = {

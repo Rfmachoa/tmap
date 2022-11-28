@@ -1,6 +1,6 @@
 .class public Lj9/c;
-.super Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
-.source "QueryGetIsUserExternalDuplication.java"
+.super Ljava/lang/Object;
+.source "Table.java"
 
 
 # annotations
@@ -11,80 +11,157 @@
 .end annotation
 
 
+# static fields
+.field public static final b:Ljava/lang/String; = "rake"
+
+.field public static c:Lj9/a;
+
+
+# instance fields
+.field public a:Ljava/lang/Object;
+
+
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    .locals 3
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lj9/c;->a:Ljava/lang/Object;
+
+    .line 3
+    monitor-enter v0
+
+    .line 4
+    :try_start_0
+    sget-object v1, Lj9/c;->c:Lj9/a;
+
+    if-nez v1, :cond_0
+
+    .line 5
+    new-instance v1, Lj9/a;
+
+    const-string v2, "rake"
+
+    invoke-direct {v1, p1, v2}, Lj9/a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    sput-object v1, Lj9/c;->c:Lj9/a;
+
+    .line 6
+    :cond_0
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public getExecutor()Lretrofit2/Call;
-    .locals 4
+.method public a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result p2
+
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b(Lj9/c$a;)Ljava/lang/Object;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
-            ">;"
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lj9/c$a<",
+            "TT;>;)TT;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->c:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;
+    :try_start_0
+    sget-object v0, Lj9/c;->c:Lj9/a;
 
-    invoke-static {}, Lp8/d;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 2
-    invoke-static {}, Lp8/d;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->getHeaders()Ljava/util/Map;
-
-    move-result-object v3
-
-    .line 3
-    invoke-interface {v0, v1, v2, v3}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;->getIsUserExternalDuplication(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lretrofit2/Call;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-interface {p1, v0}, Lj9/c$a;->a(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
 
-.method public parseResponse(Lokhttp3/Request;Lretrofit2/Response;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->parseResponse(Lokhttp3/Request;Lretrofit2/Response;Ljava/lang/String;)V
+    move-result-object p1
+    :try_end_0
+    .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 2
-    new-instance p1, Lcom/google/gson/Gson;
+    :goto_0
+    sget-object v0, Lj9/c;->c:Lj9/a;
 
-    invoke-direct {p1}, Lcom/google/gson/Gson;-><init>()V
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    const-class p2, Lj9/c$a;
+    return-object p1
 
-    invoke-virtual {p1, p3, p2}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    .line 3
+    :try_start_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "[SQLite] query execution error : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lj9/c$a;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3
-    iget-object p2, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->e:Li9/d;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz p2, :cond_0
+    move-result-object p1
+
+    invoke-static {p1}, Lp9/b;->e(Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     .line 4
-    invoke-virtual {p2, p1}, Li9/d;->b(Ljava/lang/Object;)V
+    :goto_1
+    sget-object v0, Lj9/c;->c:Lj9/a;
 
-    :cond_0
-    return-void
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
+
+    throw p1
 .end method

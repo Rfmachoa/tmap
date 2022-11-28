@@ -1,6 +1,6 @@
 .class public final enum Lcom/google/ads/AdRequest$Gender;
 .super Ljava/lang/Enum;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -24,12 +24,21 @@
 
 # static fields
 .field public static final enum FEMALE:Lcom/google/ads/AdRequest$Gender;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field public static final enum MALE:Lcom/google/ads/AdRequest$Gender;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 .field public static final enum UNKNOWN:Lcom/google/ads/AdRequest$Gender;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field private static final synthetic zzdj:[Lcom/google/ads/AdRequest$Gender;
+.field private static final synthetic zza:[Lcom/google/ads/AdRequest$Gender;
 
 
 # direct methods
@@ -47,24 +56,24 @@
 
     sput-object v0, Lcom/google/ads/AdRequest$Gender;->UNKNOWN:Lcom/google/ads/AdRequest$Gender;
 
-    .line 2
     new-instance v1, Lcom/google/ads/AdRequest$Gender;
 
     const-string v3, "MALE"
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4}, Lcom/google/ads/AdRequest$Gender;-><init>(Ljava/lang/String;I)V
 
     sput-object v1, Lcom/google/ads/AdRequest$Gender;->MALE:Lcom/google/ads/AdRequest$Gender;
 
-    .line 3
     new-instance v3, Lcom/google/ads/AdRequest$Gender;
 
     const-string v5, "FEMALE"
 
     const/4 v6, 0x2
 
+    .line 3
     invoke-direct {v3, v5, v6}, Lcom/google/ads/AdRequest$Gender;-><init>(Ljava/lang/String;I)V
 
     sput-object v3, Lcom/google/ads/AdRequest$Gender;->FEMALE:Lcom/google/ads/AdRequest$Gender;
@@ -79,19 +88,13 @@
 
     aput-object v3, v5, v6
 
-    .line 4
-    sput-object v5, Lcom/google/ads/AdRequest$Gender;->zzdj:[Lcom/google/ads/AdRequest$Gender;
+    sput-object v5, Lcom/google/ads/AdRequest$Gender;->zza:[Lcom/google/ads/AdRequest$Gender;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -101,6 +104,12 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/ads/AdRequest$Gender;
     .locals 1
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
     const-class v0, Lcom/google/ads/AdRequest$Gender;
@@ -116,9 +125,11 @@
 
 .method public static values()[Lcom/google/ads/AdRequest$Gender;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    sget-object v0, Lcom/google/ads/AdRequest$Gender;->zzdj:[Lcom/google/ads/AdRequest$Gender;
+    sget-object v0, Lcom/google/ads/AdRequest$Gender;->zza:[Lcom/google/ads/AdRequest$Gender;
 
     invoke-virtual {v0}, [Lcom/google/ads/AdRequest$Gender;->clone()Ljava/lang/Object;
 

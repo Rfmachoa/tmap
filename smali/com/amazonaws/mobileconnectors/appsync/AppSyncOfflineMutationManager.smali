@@ -41,7 +41,7 @@
 
 .field private queueHandler:Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationInterceptor$QueueUpdateHandler;
 
-.field private scalarTypeAdapters:Lo4/d;
+.field private scalarTypeAdapters:Ll6/d;
 
 .field private shouldProcessMutations:Z
 
@@ -62,8 +62,8 @@
             "(",
             "Landroid/content/Context;",
             "Ljava/util/Map<",
-            "Lc4/o;",
-            "Lb4/b;",
+            "Lz5/o;",
+            "Ly5/b;",
             ">;",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationSqlCacheOperations;",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncCustomNetworkInvoker;",
@@ -100,7 +100,7 @@
 
     const-string v3, "-AWSAppSyncOfflineMutationsHandlerThread"
 
-    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -153,11 +153,11 @@
     invoke-virtual {v0}, Lcom/amazonaws/mobileconnectors/appsync/ConnectivityWatcher;->register()V
 
     .line 12
-    new-instance p1, Lo4/d;
+    new-instance p1, Ll6/d;
 
-    invoke-direct {p1, p2}, Lo4/d;-><init>(Ljava/util/Map;)V
+    invoke-direct {p1, p2}, Ll6/d;-><init>(Ljava/util/Map;)V
 
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;->scalarTypeAdapters:Lo4/d;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;->scalarTypeAdapters:Ll6/d;
 
     .line 13
     iput-object p3, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;->mutationSqlCacheOperations:Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationSqlCacheOperations;
@@ -210,22 +210,22 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lzj/m;
+    new-instance v0, Lem/m;
 
-    invoke-direct {v0}, Lzj/m;-><init>()V
+    invoke-direct {v0}, Lem/m;-><init>()V
 
     .line 2
-    invoke-static {v0}, Ln4/f;->L(Lzj/n;)Ln4/f;
+    invoke-static {v0}, Lk6/f;->J(Lem/n;)Lk6/f;
 
     move-result-object v1
 
     .line 3
-    invoke-virtual {v1}, Ln4/f;->b()Ln4/f;
+    invoke-virtual {v1}, Lk6/f;->b()Lk6/f;
 
     const-string v2, "query"
 
     .line 4
-    invoke-virtual {v1, v2}, Ln4/f;->v(Ljava/lang/String;)Ln4/f;
+    invoke-virtual {v1, v2}, Lk6/f;->w(Ljava/lang/String;)Lk6/f;
 
     move-result-object v2
 
@@ -241,45 +241,45 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ln4/f;->j1(Ljava/lang/String;)Ln4/f;
+    invoke-virtual {v2, v3}, Lk6/f;->e1(Ljava/lang/String;)Lk6/f;
 
     const-string v2, "variables"
 
     .line 5
-    invoke-virtual {v1, v2}, Ln4/f;->v(Ljava/lang/String;)Ln4/f;
+    invoke-virtual {v1, v2}, Lk6/f;->w(Ljava/lang/String;)Lk6/f;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ln4/f;->b()Ln4/f;
+    invoke-virtual {v2}, Lk6/f;->b()Lk6/f;
 
     .line 6
     invoke-interface {p1}, Lcom/apollographql/apollo/api/b;->variables()Lcom/apollographql/apollo/api/b$b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/apollographql/apollo/api/b$b;->marshaller()Lc4/e;
+    invoke-virtual {p1}, Lcom/apollographql/apollo/api/b$b;->marshaller()Lz5/e;
 
     move-result-object p1
 
-    new-instance v2, Ln4/c;
+    new-instance v2, Lk6/c;
 
-    iget-object v3, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;->scalarTypeAdapters:Lo4/d;
+    iget-object v3, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationManager;->scalarTypeAdapters:Ll6/d;
 
-    invoke-direct {v2, v1, v3}, Ln4/c;-><init>(Ln4/f;Lo4/d;)V
+    invoke-direct {v2, v1, v3}, Lk6/c;-><init>(Lk6/f;Ll6/d;)V
 
-    invoke-interface {p1, v2}, Lc4/e;->marshal(Lc4/f;)V
+    invoke-interface {p1, v2}, Lz5/e;->marshal(Lz5/f;)V
 
     .line 7
-    invoke-virtual {v1}, Ln4/f;->d()Ln4/f;
+    invoke-virtual {v1}, Lk6/f;->d()Lk6/f;
 
     .line 8
-    invoke-virtual {v1}, Ln4/f;->d()Ln4/f;
+    invoke-virtual {v1}, Lk6/f;->d()Lk6/f;
 
     .line 9
     invoke-interface {v1}, Ljava/io/Closeable;->close()V
 
     .line 10
-    invoke-virtual {v0}, Lzj/m;->q1()Ljava/lang/String;
+    invoke-virtual {v0}, Lem/m;->M1()Ljava/lang/String;
 
     move-result-object p1
 
@@ -355,7 +355,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/amazonaws/mobileconnectors/appsync/S3ObjectManagerImplementation;->getS3ComplexObject(Ljava/util/Map;)Lc4/l;
+    invoke-static {v4}, Lcom/amazonaws/mobileconnectors/appsync/S3ObjectManagerImplementation;->getS3ComplexObject(Ljava/util/Map;)Lz5/l;
 
     move-result-object v4
 
@@ -485,27 +485,27 @@
     move-result-object v11
 
     .line 14
-    invoke-interface {v4}, Lc4/m;->bucket()Ljava/lang/String;
+    invoke-interface {v4}, Lz5/m;->bucket()Ljava/lang/String;
 
     move-result-object v12
 
     .line 15
-    invoke-interface {v4}, Lc4/m;->key()Ljava/lang/String;
+    invoke-interface {v4}, Lz5/m;->key()Ljava/lang/String;
 
     move-result-object v13
 
     .line 16
-    invoke-interface {v4}, Lc4/m;->region()Ljava/lang/String;
+    invoke-interface {v4}, Lz5/m;->region()Ljava/lang/String;
 
     move-result-object v14
 
     .line 17
-    invoke-interface {v4}, Lc4/l;->localUri()Ljava/lang/String;
+    invoke-interface {v4}, Lz5/l;->localUri()Ljava/lang/String;
 
     move-result-object v16
 
     .line 18
-    invoke-interface {v4}, Lc4/l;->mimeType()Ljava/lang/String;
+    invoke-interface {v4}, Lz5/l;->mimeType()Ljava/lang/String;
 
     move-result-object v4
 

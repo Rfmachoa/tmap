@@ -56,7 +56,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
-    invoke-virtual {p1}, Ld6/c;->getVersion()I
+    invoke-virtual {p1}, Lb8/c;->getVersion()I
 
     move-result v0
 
@@ -179,7 +179,7 @@
     .line 1
     iget-object v0, p0, Lcom/coremedia/iso/boxes/ItemLocationBox$Extent;->this$0:Lcom/coremedia/iso/boxes/ItemLocationBox;
 
-    invoke-virtual {v0}, Ld6/c;->getVersion()I
+    invoke-virtual {v0}, Lb8/c;->getVersion()I
 
     move-result v0
 
@@ -325,7 +325,7 @@
 
     const/16 v3, 0x7d
 
-    invoke-static {v0, v1, v2, v3}, Lz3/a;->a(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lv5/a;->a(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 

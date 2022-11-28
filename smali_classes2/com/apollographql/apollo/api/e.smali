@@ -24,7 +24,18 @@
     .end param
 .end method
 
-.method public abstract b(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
+.method public abstract b(Lcom/apollographql/apollo/api/ResponseField;Lz5/k;)V
+    .param p1    # Lcom/apollographql/apollo/api/ResponseField;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .param p2    # Lz5/k;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract c(Lcom/apollographql/apollo/api/ResponseField;Ljava/util/List;Lcom/apollographql/apollo/api/e$b;)V
     .param p1    # Lcom/apollographql/apollo/api/ResponseField;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
@@ -39,7 +50,7 @@
     .end param
 .end method
 
-.method public abstract c(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
+.method public abstract d(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/String;)V
     .param p1    # Lcom/apollographql/apollo/api/ResponseField;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
@@ -50,7 +61,7 @@
     .end param
 .end method
 
-.method public abstract d(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/Integer;)V
+.method public abstract e(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/Integer;)V
     .param p1    # Lcom/apollographql/apollo/api/ResponseField;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
@@ -61,23 +72,12 @@
     .end param
 .end method
 
-.method public abstract e(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/Long;)V
+.method public abstract f(Lcom/apollographql/apollo/api/ResponseField;Ljava/lang/Long;)V
     .param p1    # Lcom/apollographql/apollo/api/ResponseField;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .param p2    # Ljava/lang/Long;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
-.end method
-
-.method public abstract f(Lcom/apollographql/apollo/api/ResponseField;Lc4/k;)V
-    .param p1    # Lcom/apollographql/apollo/api/ResponseField;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .param p2    # Lc4/k;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param

@@ -43,7 +43,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x1a
 
@@ -135,11 +135,11 @@
     move-result-object v1
 
     .line 4
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->h()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f()I
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->h()I
 
     move-result v2
 
@@ -154,7 +154,7 @@
     const-string v1, "PlatformScheduler"
 
     .line 5
-    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     :cond_0
@@ -163,7 +163,7 @@
     invoke-direct {v0, p0, p1}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
     .line 7
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->p()Z
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->r()Z
 
     move-result p0
 
@@ -180,7 +180,7 @@
 
     .line 9
     :cond_1
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->m()Z
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->o()Z
 
     move-result p0
 
@@ -192,27 +192,27 @@
     .line 11
     :cond_2
     :goto_0
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->j()Z
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->m()Z
 
     move-result p0
 
     invoke-virtual {v0, p0}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
     .line 12
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->g()Z
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->i()Z
 
     move-result p0
 
     invoke-virtual {v0, p0}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
 
     .line 13
-    sget p0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget p0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x1a
 
     if-lt p0, v1, :cond_3
 
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->o()Z
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->q()Z
 
     move-result p0
 
@@ -241,7 +241,7 @@
     invoke-virtual {p0, p1, p4}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 19
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f()I
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->h()I
 
     move-result p1
 

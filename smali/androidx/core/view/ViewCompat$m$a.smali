@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/view/ViewCompat$m;->u(Landroid/view/View;Ls1/e0;)V
+    value = Landroidx/core/view/ViewCompat$m;->u(Landroid/view/View;Landroidx/core/view/i0;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,17 +22,17 @@
 
 .field public final synthetic b:Landroid/view/View;
 
-.field public final synthetic c:Ls1/e0;
+.field public final synthetic c:Landroidx/core/view/i0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ls1/e0;)V
+.method public constructor <init>(Landroid/view/View;Landroidx/core/view/i0;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Landroidx/core/view/ViewCompat$m$a;->b:Landroid/view/View;
 
-    iput-object p2, p0, Landroidx/core/view/ViewCompat$m$a;->c:Ls1/e0;
+    iput-object p2, p0, Landroidx/core/view/ViewCompat$m$a;->c:Landroidx/core/view/i0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -76,9 +76,9 @@
     if-eqz p2, :cond_0
 
     .line 5
-    iget-object p2, p0, Landroidx/core/view/ViewCompat$m$a;->c:Ls1/e0;
+    iget-object p2, p0, Landroidx/core/view/ViewCompat$m$a;->c:Landroidx/core/view/i0;
 
-    invoke-interface {p2, p1, v0}, Ls1/e0;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+    invoke-interface {p2, p1, v0}, Landroidx/core/view/i0;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
 
     move-result-object p1
 
@@ -94,9 +94,9 @@
     iput-object v0, p0, Landroidx/core/view/ViewCompat$m$a;->a:Landroidx/core/view/WindowInsetsCompat;
 
     .line 8
-    iget-object p2, p0, Landroidx/core/view/ViewCompat$m$a;->c:Ls1/e0;
+    iget-object p2, p0, Landroidx/core/view/ViewCompat$m$a;->c:Landroidx/core/view/i0;
 
-    invoke-interface {p2, p1, v0}, Ls1/e0;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+    invoke-interface {p2, p1, v0}, Landroidx/core/view/i0;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
 
     move-result-object p2
 

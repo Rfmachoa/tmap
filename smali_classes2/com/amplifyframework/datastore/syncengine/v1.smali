@@ -3,36 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/a;
 
 
-# instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/MutationOutbox;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/v1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/MutationOutbox;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/v1;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/v1;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/v1;->a:Lcom/amplifyframework/datastore/syncengine/v1;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/v1;->a:Lcom/amplifyframework/datastore/syncengine/MutationOutbox;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/v1;->a:Lcom/amplifyframework/datastore/syncengine/MutationOutbox;
+    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/StorageObserver;->f()V
 
-    check-cast p1, Lcom/amplifyframework/datastore/syncengine/PendingMutation;
-
-    invoke-interface {v0, p1}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->enqueue(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/a;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

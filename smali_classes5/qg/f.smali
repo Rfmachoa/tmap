@@ -1,97 +1,39 @@
-.class public final Lqg/f;
+.class public interface abstract Lqg/f;
 .super Ljava/lang/Object;
-.source "ExceptionUtils.java"
-
-
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.source "DashSegmentIndex.java"
 
 
 # static fields
-.field public static final a:Ljava/lang/reflect/Method;
+.field public static final a:I = -0x1
 
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lqg/f;->a()Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Lqg/f;->a:Ljava/lang/reflect/Method;
-
-    return-void
+# virtual methods
+.method public abstract a(JJ)J
 .end method
 
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract b(JJ)J
 .end method
 
-.method public static a()Ljava/lang/reflect/Method;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    :try_start_0
-    new-array v0, v0, [Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    .line 1
-    const-class v2, Ljava/lang/Throwable;
-
-    aput-object v2, v0, v1
-
-    .line 2
-    const-class v1, Ljava/lang/Throwable;
-
-    const-string v2, "initCause"
-
-    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract c(JJ)J
 .end method
 
-.method public static b(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-    .locals 3
+.method public abstract d(J)Lrg/i;
+.end method
 
-    .line 1
-    sget-object v0, Lqg/f;->a:Ljava/lang/reflect/Method;
+.method public abstract e(JJ)J
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract f(J)J
+.end method
 
-    const/4 v1, 0x1
+.method public abstract g()Z
+.end method
 
-    :try_start_0
-    new-array v1, v1, [Ljava/lang/Object;
+.method public abstract getTimeUs(J)J
+.end method
 
-    const/4 v2, 0x0
+.method public abstract h()J
+.end method
 
-    aput-object p1, v1, v2
-
-    .line 2
-    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    return-void
+.method public abstract i(JJ)J
 .end method

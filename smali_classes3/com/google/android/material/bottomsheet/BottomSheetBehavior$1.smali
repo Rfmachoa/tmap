@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->settleToStatePendingLayout(I)V
+    value = Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setState(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,7 +44,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$1;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
@@ -53,7 +53,9 @@
 
     iget v2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$1;->val$finalState:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->settleToState(Landroid/view/View;I)V
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->access$100(Lcom/google/android/material/bottomsheet/BottomSheetBehavior;Landroid/view/View;IZ)V
 
     return-void
 .end method

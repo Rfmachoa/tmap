@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
 # instance fields
@@ -23,16 +23,14 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/q3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
 
-    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLRequest;
+    check-cast p1, Lio/reactivex/rxjava3/disposables/c;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->a(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)Lok/c;
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->e(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lio/reactivex/rxjava3/disposables/c;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

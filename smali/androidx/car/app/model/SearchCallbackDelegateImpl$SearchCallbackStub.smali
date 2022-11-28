@@ -96,9 +96,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/car/app/model/q;
+    new-instance v0, Landroidx/car/app/model/w;
 
-    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/q;-><init>(Landroidx/car/app/model/SearchCallbackDelegateImpl$SearchCallbackStub;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/w;-><init>(Landroidx/car/app/model/SearchCallbackDelegateImpl$SearchCallbackStub;Ljava/lang/String;)V
 
     const-string p1, "onSearchSubmitted"
 
@@ -111,9 +111,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/car/app/model/r;
+    new-instance v0, Landroidx/car/app/model/x;
 
-    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/r;-><init>(Landroidx/car/app/model/SearchCallbackDelegateImpl$SearchCallbackStub;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Landroidx/car/app/model/x;-><init>(Landroidx/car/app/model/SearchCallbackDelegateImpl$SearchCallbackStub;Ljava/lang/String;)V
 
     const-string p1, "onSearchTextChanged"
 

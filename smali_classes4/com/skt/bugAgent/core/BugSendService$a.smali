@@ -97,7 +97,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-static {p1, v0}, Lcom/skt/bugAgent/core/BugSendService;->g(Lcom/skt/bugAgent/core/BugSendService;Ljava/lang/Thread;)V
+    invoke-static {p1, v0}, Lcom/skt/bugAgent/core/BugSendService;->f(Lcom/skt/bugAgent/core/BugSendService;Ljava/lang/Thread;)V
 
     .line 7
     iget-object p1, p0, Lcom/skt/bugAgent/core/BugSendService$a;->a:Lcom/skt/bugAgent/core/BugSendService;

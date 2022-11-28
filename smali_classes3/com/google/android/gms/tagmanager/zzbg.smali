@@ -1,90 +1,129 @@
 .class public final Lcom/google/android/gms/tagmanager/zzbg;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
-# annotations
-.annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
-.end annotation
+# static fields
+.field private static zza:Lcom/google/android/gms/tagmanager/zzbg;
+
+.field private static final zzb:Ljava/lang/Object;
 
 
 # instance fields
-.field private zza:I
+.field private final zzc:Lcom/google/android/gms/tagmanager/zzeb;
+
+.field private final zzd:Lcom/google/android/gms/tagmanager/zzcb;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/tagmanager/zzbg;->zzb:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    .line 1
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzcb;->zzb(Landroid/content/Context;)Lcom/google/android/gms/tagmanager/zzcb;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/google/android/gms/tagmanager/zzew;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tagmanager/zzew;-><init>()V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x5
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzbg;->zzd:Lcom/google/android/gms/tagmanager/zzcb;
 
-    iput v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zza:I
+    iput-object v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zzc:Lcom/google/android/gms/tagmanager/zzeb;
 
     return-void
+.end method
+
+.method public static zzb(Landroid/content/Context;)Lcom/google/android/gms/tagmanager/zzbg;
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzbg;->zzb:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lcom/google/android/gms/tagmanager/zzbg;->zza:Lcom/google/android/gms/tagmanager/zzbg;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lcom/google/android/gms/tagmanager/zzbg;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/tagmanager/zzbg;-><init>(Landroid/content/Context;)V
+
+    sput-object v1, Lcom/google/android/gms/tagmanager/zzbg;->zza:Lcom/google/android/gms/tagmanager/zzbg;
+
+    :cond_0
+    sget-object p0, Lcom/google/android/gms/tagmanager/zzbg;->zza:Lcom/google/android/gms/tagmanager/zzbg;
+
+    .line 2
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    .line 3
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final zza(Ljava/lang/String;)V
-    .locals 2
-
-    iget v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zza:I
-
-    const/4 v1, 0x3
-
-    if-gt v0, v1, :cond_0
-
-    const-string v0, "GoogleTagManager"
+.method public final zza(Ljava/lang/String;)Z
+    .locals 3
 
     .line 1
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zzc:Lcom/google/android/gms/tagmanager/zzeb;
+
+    invoke-interface {v0}, Lcom/google/android/gms/tagmanager/zzeb;->zza()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string p1, "GoogleTagManager"
+
+    const-string v0, "Too many urls sent too quickly with the TagManagerSender, rate limiting invoked."
+
+    .line 2
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_0
-    return-void
-.end method
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zzd:Lcom/google/android/gms/tagmanager/zzcb;
 
-.method public final zzb(Ljava/lang/String;)V
-    .locals 2
+    .line 3
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zza:I
+    move-result-wide v1
 
-    const/4 v1, 0x4
+    .line 4
+    invoke-virtual {v0, p1, v1, v2}, Lcom/google/android/gms/tagmanager/zzcb;->zzf(Ljava/lang/String;J)V
 
-    if-gt v0, v1, :cond_0
+    const/4 p1, 0x1
 
-    const-string v0, "GoogleTagManager"
-
-    .line 1
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public final zzc(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/gms/tagmanager/zzbg;->zza:I
-
-    return-void
-.end method
-
-.method public final zzd(Ljava/lang/String;)V
-    .locals 2
-
-    iget v0, p0, Lcom/google/android/gms/tagmanager/zzbg;->zza:I
-
-    const/4 v1, 0x2
-
-    if-gt v0, v1, :cond_0
-
-    const-string v0, "GoogleTagManager"
-
-    .line 1
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
+    return p1
 .end method

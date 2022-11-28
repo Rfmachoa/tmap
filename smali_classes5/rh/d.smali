@@ -1,26 +1,8 @@
 .class public interface abstract Lrh/d;
 .super Ljava/lang/Object;
-.source "FuseToObservable.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+.source "Idn.java"
 
 
 # virtual methods
-.method public abstract a()Lkh/z;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lkh/z<",
-            "TT;>;"
-        }
-    .end annotation
+.method public abstract toUnicode(Ljava/lang/String;)Ljava/lang/String;
 .end method

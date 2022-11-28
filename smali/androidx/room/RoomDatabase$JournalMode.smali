@@ -111,7 +111,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0}, Landroid/app/ActivityManager;->isLowRamDevice()Z
+    invoke-static {p0}, Lj4/c$b;->b(Landroid/app/ActivityManager;)Z
 
     move-result p0
 
@@ -152,11 +152,6 @@
 # virtual methods
 .method public resolve(Landroid/content/Context;)Landroidx/room/RoomDatabase$JournalMode;
     .locals 1
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "NewApi"
-        }
-    .end annotation
 
     .line 1
     sget-object v0, Landroidx/room/RoomDatabase$JournalMode;->AUTOMATIC:Landroidx/room/RoomDatabase$JournalMode;

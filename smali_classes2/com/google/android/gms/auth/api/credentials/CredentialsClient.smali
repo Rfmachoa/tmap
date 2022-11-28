@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/credentials/CredentialsClient;
 .super Lcom/google/android/gms/common/api/GoogleApi;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 
 # annotations
@@ -9,6 +10,9 @@
         "Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;",
         ">;"
     }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
@@ -24,7 +28,7 @@
         .end annotation
     .end param
 
-    .line 2
+    .line 1
     sget-object v0, Lcom/google/android/gms/auth/api/Auth;->CREDENTIALS_API:Lcom/google/android/gms/common/api/Api;
 
     new-instance v1, Lcom/google/android/gms/common/api/internal/ApiExceptionMapper;
@@ -47,7 +51,7 @@
         .end annotation
     .end param
 
-    .line 1
+    .line 2
     sget-object v0, Lcom/google/android/gms/auth/api/Auth;->CREDENTIALS_API:Lcom/google/android/gms/common/api/Api;
 
     new-instance v1, Lcom/google/android/gms/common/api/internal/ApiExceptionMapper;
@@ -67,6 +71,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,6 +83,9 @@
             "Ljava/lang/Void;",
             ">;"
         }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
@@ -100,6 +110,9 @@
 
 .method public disableAutoSignIn()Lcom/google/android/gms/tasks/Task;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -107,6 +120,9 @@
             "Ljava/lang/Void;",
             ">;"
         }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
@@ -128,11 +144,16 @@
 .end method
 
 .method public getHintPickerIntent(Lcom/google/android/gms/auth/api/credentials/HintRequest;)Landroid/app/PendingIntent;
-    .locals 2
+    .locals 3
     .param p1    # Lcom/google/android/gms/auth/api/credentials/HintRequest;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApi;->getApplicationContext()Landroid/content/Context;
@@ -145,8 +166,18 @@
 
     check-cast v1, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
 
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApi;->getApiOptions()Lcom/google/android/gms/common/api/Api$ApiOptions;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
+
+    invoke-virtual {v2}, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;->zbd()Ljava/lang/String;
+
+    move-result-object v2
+
     .line 2
-    invoke-static {v0, v1, p1}, Lcom/google/android/gms/internal/auth-api/zzq;->zzc(Landroid/content/Context;Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;Lcom/google/android/gms/auth/api/credentials/HintRequest;)Landroid/app/PendingIntent;
+    invoke-static {v0, v1, p1, v2}, Lcom/google/android/gms/internal/auth-api/zbn;->zba(Landroid/content/Context;Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;Lcom/google/android/gms/auth/api/credentials/HintRequest;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object p1
 
@@ -159,6 +190,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -168,6 +202,9 @@
             "Lcom/google/android/gms/auth/api/credentials/CredentialRequestResponse;",
             ">;"
         }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
@@ -200,6 +237,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -209,6 +249,9 @@
             "Ljava/lang/Void;",
             ">;"
         }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1

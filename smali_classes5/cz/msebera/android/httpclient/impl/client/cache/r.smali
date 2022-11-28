@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method public a(Lkf/o;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Lkf/o;
+.method public a(Loh/o;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Loh/o;
     .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -29,63 +29,63 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lkf/o;->h()Ldf/q;
+    invoke-virtual {p1}, Loh/o;->h()Lhh/q;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkf/o;->l(Ldf/q;)Lkf/o;
+    invoke-static {v0}, Loh/o;->l(Lhh/q;)Loh/o;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Lmg/a;->getAllHeaders()[Ldf/d;
+    invoke-virtual {p1}, Lqi/a;->getAllHeaders()[Lhh/d;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lmg/a;->f([Ldf/d;)V
+    invoke-virtual {v0, p1}, Lqi/a;->g([Lhh/d;)V
 
     const-string p1, "ETag"
 
     .line 3
-    invoke-virtual {p2, p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {p2, p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 4
-    invoke-interface {p1}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "If-None-Match"
 
-    invoke-virtual {v0, v1, p1}, Lmg/a;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lqi/a;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     const-string p1, "Last-Modified"
 
     .line 5
-    invoke-virtual {p2, p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Ldf/d;
+    invoke-virtual {p2, p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getFirstHeader(Ljava/lang/String;)Lhh/d;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 6
-    invoke-interface {p1}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "If-Modified-Since"
 
-    invoke-virtual {v0, v1, p1}, Lmg/a;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lqi/a;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     const-string p1, "Cache-Control"
 
     .line 7
-    invoke-virtual {p2, p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-virtual {p2, p1}, Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;->getHeaders(Ljava/lang/String;)[Lhh/d;
 
     move-result-object p2
 
@@ -103,7 +103,7 @@
     aget-object v5, p2, v3
 
     .line 8
-    invoke-interface {v5}, Ldf/d;->getElements()[Ldf/e;
+    invoke-interface {v5}, Lhh/d;->getElements()[Lhh/e;
 
     move-result-object v5
 
@@ -117,7 +117,7 @@
     aget-object v8, v5, v7
 
     .line 9
-    invoke-interface {v8}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {v8}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v9
 
@@ -130,7 +130,7 @@
     if-nez v9, :cond_3
 
     .line 10
-    invoke-interface {v8}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {v8}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v8
 
@@ -164,41 +164,41 @@
     const-string p2, "max-age=0"
 
     .line 11
-    invoke-virtual {v0, p1, p2}, Lmg/a;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Lqi/a;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     return-object v0
 .end method
 
-.method public b(Lkf/o;Ljava/util/Map;)Lkf/o;
+.method public b(Loh/o;Ljava/util/Map;)Loh/o;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkf/o;",
+            "Loh/o;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Lcz/msebera/android/httpclient/impl/client/cache/n0;",
             ">;)",
-            "Lkf/o;"
+            "Loh/o;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lkf/o;->h()Ldf/q;
+    invoke-virtual {p1}, Loh/o;->h()Lhh/q;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkf/o;->l(Ldf/q;)Lkf/o;
+    invoke-static {v0}, Loh/o;->l(Lhh/q;)Loh/o;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Lmg/a;->getAllHeaders()[Ldf/d;
+    invoke-virtual {p1}, Lqi/a;->getAllHeaders()[Lhh/d;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lmg/a;->f([Ldf/d;)V
+    invoke-virtual {v0, p1}, Lqi/a;->g([Lhh/d;)V
 
     .line 3
     new-instance p1, Ljava/lang/StringBuilder;
@@ -252,66 +252,66 @@
 
     const-string p2, "If-None-Match"
 
-    invoke-virtual {v0, p2, p1}, Lmg/a;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p2, p1}, Lqi/a;->setHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public c(Lkf/o;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Lkf/o;
+.method public c(Loh/o;Lcz/msebera/android/httpclient/client/cache/HttpCacheEntry;)Loh/o;
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lkf/o;->h()Ldf/q;
+    invoke-virtual {p1}, Loh/o;->h()Lhh/q;
 
     move-result-object p2
 
-    invoke-static {p2}, Lkf/o;->l(Ldf/q;)Lkf/o;
+    invoke-static {p2}, Loh/o;->l(Lhh/q;)Loh/o;
 
     move-result-object p2
 
     .line 2
-    invoke-virtual {p1}, Lmg/a;->getAllHeaders()[Ldf/d;
+    invoke-virtual {p1}, Lqi/a;->getAllHeaders()[Lhh/d;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lmg/a;->f([Ldf/d;)V
+    invoke-virtual {p2, p1}, Lqi/a;->g([Lhh/d;)V
 
     const-string p1, "Cache-Control"
 
     const-string v0, "no-cache"
 
     .line 3
-    invoke-virtual {p2, p1, v0}, Lmg/a;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, p1, v0}, Lqi/a;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "Pragma"
 
     .line 4
-    invoke-virtual {p2, p1, v0}, Lmg/a;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, p1, v0}, Lqi/a;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "If-Range"
 
     .line 5
-    invoke-virtual {p2, p1}, Lmg/a;->removeHeaders(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lqi/a;->removeHeaders(Ljava/lang/String;)V
 
     const-string p1, "If-Match"
 
     .line 6
-    invoke-virtual {p2, p1}, Lmg/a;->removeHeaders(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lqi/a;->removeHeaders(Ljava/lang/String;)V
 
     const-string p1, "If-None-Match"
 
     .line 7
-    invoke-virtual {p2, p1}, Lmg/a;->removeHeaders(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lqi/a;->removeHeaders(Ljava/lang/String;)V
 
     const-string p1, "If-Unmodified-Since"
 
     .line 8
-    invoke-virtual {p2, p1}, Lmg/a;->removeHeaders(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lqi/a;->removeHeaders(Ljava/lang/String;)V
 
     const-string p1, "If-Modified-Since"
 
     .line 9
-    invoke-virtual {p2, p1}, Lmg/a;->removeHeaders(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lqi/a;->removeHeaders(Ljava/lang/String;)V
 
     return-object p2
 .end method

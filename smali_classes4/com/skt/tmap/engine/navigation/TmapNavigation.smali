@@ -37,6 +37,8 @@
 
 .field private lastMatchResult:I
 
+.field private lastRGData:Lcom/skt/tmap/engine/navigation/data/RGData;
+
 .field private mAudioHelper:Lcom/skt/tmap/engine/navigation/TmapNavigationAudio;
 
 .field private mContext:Landroid/content/Context;
@@ -59,7 +61,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
     .line 1
@@ -81,14 +83,7 @@
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/TmapNavigation;->mContext:Landroid/content/Context;
 
     .line 5
-    invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->nativeCreate()V
-
-    .line 6
-    new-instance p1, Lcom/skt/tmap/engine/navigation/util/MapMatchingDebugger;
-
-    invoke-direct {p1}, Lcom/skt/tmap/engine/navigation/util/MapMatchingDebugger;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/TmapNavigation;->mapMatchingDebugger:Lcom/skt/tmap/engine/navigation/util/MapMatchingDebugger;
+    invoke-virtual {p0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->init()V
 
     return-void
 .end method
@@ -999,7 +994,7 @@
     const-string v2, " tileY:"
 
     .line 1
-    invoke-static {v0, p1, v1, p2, v2}, Landroidx/recyclerview/widget/h;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1, v1, p2, v2}, Landroidx/camera/video/internal/i;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1064,6 +1059,12 @@
 .end method
 
 .method private native nativeGetRouteRenderData()[Lcom/skt/tmap/engine/navigation/data/RouteRenderData;
+.end method
+
+.method private native nativeGetTVASLinkInfo()[Lcom/skt/tmap/engine/navigation/route/data/TVASLinkInfo;
+.end method
+
+.method private native nativeGetTVASLinkTraffic()[Lcom/skt/tmap/engine/navigation/route/data/TVASLinkTraffic;
 .end method
 
 .method private native nativeGetTunnelInfo()Lcom/skt/tmap/engine/navigation/data/TunnelInfo;
@@ -1602,6 +1603,29 @@
     return-object v0
 .end method
 
+.method public declared-synchronized getLastRGData()Lcom/skt/tmap/engine/navigation/data/RGData;
+    .locals 1
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/TmapNavigation;->lastRGData:Lcom/skt/tmap/engine/navigation/data/RGData;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public getLinkTraceData()[Lcom/skt/tmap/engine/navigation/data/LinkInformation;
     .locals 1
 
@@ -1847,18 +1871,22 @@
     :cond_1
     invoke-direct {p0, p1}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->GetRouteGuidance(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v0
+
+    .line 7
+    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/TmapNavigation;->lastRGData:Lcom/skt/tmap/engine/navigation/data/RGData;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     monitor-exit p0
 
-    return p1
+    return v0
 
     :cond_2
     const/4 p1, 0x0
 
-    .line 7
+    .line 9
     monitor-exit p0
 
     return p1
@@ -2324,6 +2352,28 @@
     return-object p1
 .end method
 
+.method public getTVASLinkInfo()[Lcom/skt/tmap/engine/navigation/route/data/TVASLinkInfo;
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->nativeGetTVASLinkInfo()[Lcom/skt/tmap/engine/navigation/route/data/TVASLinkInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getTVASLinkTraffic()[Lcom/skt/tmap/engine/navigation/route/data/TVASLinkTraffic;
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->nativeGetTVASLinkTraffic()[Lcom/skt/tmap/engine/navigation/route/data/TVASLinkTraffic;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getTunnelInfo()Lcom/skt/tmap/engine/navigation/data/TunnelInfo;
     .locals 1
 
@@ -2366,6 +2416,22 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public init()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->nativeCreate()V
+
+    .line 2
+    new-instance v0, Lcom/skt/tmap/engine/navigation/util/MapMatchingDebugger;
+
+    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/util/MapMatchingDebugger;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/engine/navigation/TmapNavigation;->mapMatchingDebugger:Lcom/skt/tmap/engine/navigation/util/MapMatchingDebugger;
+
+    return-void
 .end method
 
 .method public inputPosition(II)Z
@@ -2633,7 +2699,7 @@
     return p1
 .end method
 
-.method public final setLocationData(Landroid/location/Location;II)I
+.method public setLocationData(Landroid/location/Location;II)I
     .locals 18
 
     move-object/from16 v15, p0

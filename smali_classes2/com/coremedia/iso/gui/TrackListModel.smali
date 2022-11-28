@@ -49,7 +49,7 @@
     .line 4
     const-class v0, Lcom/coremedia/iso/boxes/MovieBox;
 
-    invoke-virtual {p1, v0}, Ld6/b;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {p1, v0}, Lb8/b;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v1}, Ld6/b;->getBoxes(Ljava/lang/Class;Z)Ljava/util/List;
+    invoke-virtual {p1, v0, v1}, Lb8/b;->getBoxes(Ljava/lang/Class;Z)Ljava/util/List;
 
     move-result-object p1
 
@@ -165,7 +165,7 @@
     .line 2
     const-class v1, Lcom/coremedia/iso/boxes/TrackBox;
 
-    invoke-virtual {v0, v1}, Ld6/b;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lb8/b;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v0
 
@@ -259,7 +259,7 @@
     :cond_0
     const-class v1, Lcom/coremedia/iso/boxes/TrackBox;
 
-    invoke-virtual {v0, v1}, Ld6/b;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lb8/b;->getBoxes(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v0
 

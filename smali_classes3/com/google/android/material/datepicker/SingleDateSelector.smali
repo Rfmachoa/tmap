@@ -174,7 +174,7 @@
         value = {
             "()",
             "Ljava/util/Collection<",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Ljava/lang/Long;",
             "Ljava/lang/Long;",
             ">;>;"
@@ -289,7 +289,7 @@
 .end method
 
 .method public onCreateTextInputView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)Landroid/view/View;
-    .locals 7
+    .locals 8
     .param p1    # Landroid/view/LayoutInflater;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -336,12 +336,12 @@
 
     move-result-object p2
 
-    move-object v4, p2
+    move-object v5, p2
 
-    check-cast v4, Lcom/google/android/material/textfield/TextInputLayout;
+    check-cast v5, Lcom/google/android/material/textfield/TextInputLayout;
 
     .line 3
-    invoke-virtual {v4}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+    invoke-virtual {v5}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
     move-result-object p2
 
@@ -361,19 +361,19 @@
     :cond_0
     invoke-static {}, Lcom/google/android/material/datepicker/UtcDates;->getTextInputFormat()Ljava/text/SimpleDateFormat;
 
-    move-result-object v3
+    move-result-object v4
 
     .line 7
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    invoke-static {p3, v3}, Lcom/google/android/material/datepicker/UtcDates;->getTextInputHint(Landroid/content/res/Resources;Ljava/text/SimpleDateFormat;)Ljava/lang/String;
+    invoke-static {p3, v4}, Lcom/google/android/material/datepicker/UtcDates;->getTextInputHint(Landroid/content/res/Resources;Ljava/text/SimpleDateFormat;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
     .line 8
-    invoke-virtual {v4, v2}, Lcom/google/android/material/textfield/TextInputLayout;->setPlaceholderText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v5, v3}, Lcom/google/android/material/textfield/TextInputLayout;->setPlaceholderText(Ljava/lang/CharSequence;)V
 
     .line 9
     iget-object p3, p0, Lcom/google/android/material/datepicker/SingleDateSelector;->selectedItem:Ljava/lang/Long;
@@ -381,7 +381,7 @@
     if-eqz p3, :cond_1
 
     .line 10
-    invoke-virtual {v3, p3}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v4, p3}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -391,20 +391,26 @@
     :cond_1
     new-instance p3, Lcom/google/android/material/datepicker/SingleDateSelector$1;
 
-    move-object v0, p3
+    move-object v1, p3
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v5, p4
+    move-object v6, p4
 
-    move-object v6, p5
+    move-object v7, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/material/datepicker/SingleDateSelector$1;-><init>(Lcom/google/android/material/datepicker/SingleDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/material/datepicker/SingleDateSelector$1;-><init>(Lcom/google/android/material/datepicker/SingleDateSelector;Ljava/lang/String;Ljava/text/DateFormat;Lcom/google/android/material/textfield/TextInputLayout;Lcom/google/android/material/datepicker/CalendarConstraints;Lcom/google/android/material/datepicker/OnSelectionChangedListener;)V
 
     invoke-virtual {p2, p3}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
+    const/4 p3, 0x1
+
+    new-array p3, p3, [Landroid/widget/EditText;
+
+    aput-object p2, p3, v0
+
     .line 12
-    invoke-static {p2}, Lcom/google/android/material/internal/ViewUtils;->requestFocusAndShowKeyboard(Landroid/view/View;)V
+    invoke-static {p3}, Lcom/google/android/material/datepicker/DateSelector;->showKeyboardWithAutoHideBehavior([Landroid/widget/EditText;)V
 
     return-object p1
 .end method

@@ -1,534 +1,1400 @@
 .class public Landroidx/constraintlayout/motion/widget/j;
-.super Ljava/lang/Object;
-.source "KeyFrames.java"
+.super Landroidx/constraintlayout/motion/widget/k;
+.source "KeyPosition.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/constraintlayout/motion/widget/j$a;
+    }
+.end annotation
 
 
 # static fields
-.field public static final b:I = -0x1
+.field public static final R:Ljava/lang/String; = "KeyPosition"
 
-.field public static c:Ljava/util/HashMap; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/reflect/Constructor<",
-            "+",
-            "Landroidx/constraintlayout/motion/widget/e;",
-            ">;>;"
-        }
-    .end annotation
-.end field
+.field public static final S:Ljava/lang/String; = "KeyPosition"
 
-.field public static final d:Ljava/lang/String; = "KeyFrames"
+.field public static final T:I = 0x2
+
+.field public static final U:I = 0x1
+
+.field public static final V:I = 0x0
+
+.field public static final W:Ljava/lang/String; = "transitionEasing"
+
+.field public static final X:Ljava/lang/String; = "drawPath"
+
+.field public static final Y:Ljava/lang/String; = "percentWidth"
+
+.field public static final Z:Ljava/lang/String; = "percentHeight"
+
+.field public static final a0:Ljava/lang/String; = "sizePercent"
+
+.field public static final b0:Ljava/lang/String; = "percentX"
+
+.field public static final c0:Ljava/lang/String; = "percentY"
+
+.field public static final d0:I = 0x2
 
 
 # instance fields
-.field public a:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/Integer;",
-            "Ljava/util/ArrayList<",
-            "Landroidx/constraintlayout/motion/widget/e;",
-            ">;>;"
-        }
-    .end annotation
-.end field
+.field public F:Ljava/lang/String;
+
+.field public G:I
+
+.field public H:I
+
+.field public I:F
+
+.field public J:F
+
+.field public K:F
+
+.field public L:F
+
+.field public M:F
+
+.field public N:F
+
+.field public O:I
+
+.field public P:F
+
+.field public Q:F
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 2
 
     .line 1
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    :try_start_0
-    const-string v1, "KeyAttribute"
-
-    .line 2
-    const-class v2, Landroidx/constraintlayout/motion/widget/f;
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 3
-    sget-object v0, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    const-string v1, "KeyPosition"
-
-    const-class v2, Landroidx/constraintlayout/motion/widget/k;
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 4
-    sget-object v0, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    const-string v1, "KeyCycle"
-
-    const-class v2, Landroidx/constraintlayout/motion/widget/h;
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    sget-object v0, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    const-string v1, "KeyTimeCycle"
-
-    const-class v2, Landroidx/constraintlayout/motion/widget/m;
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 6
-    sget-object v0, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    const-string v1, "KeyTrigger"
-
-    const-class v2, Landroidx/constraintlayout/motion/widget/n;
-
-    new-array v3, v3, [Ljava/lang/Class;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "KeyFrames"
-
-    const-string v2, "unable to load"
-
-    .line 7
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_0
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)V
-    .locals 5
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/k;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
+    iput-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->F:Ljava/lang/String;
+
     .line 3
-    :try_start_0
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
+    sget v0, Landroidx/constraintlayout/motion/widget/f;->f:I
 
-    move-result v1
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->G:I
 
-    :goto_0
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_4
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_1
-
-    const/4 v2, 0x3
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    const-string v1, "KeyFrameSet"
+    const/4 v0, 0x0
 
     .line 4
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->H:I
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return-void
+    const/high16 v1, 0x7fc00000    # Float.NaN
 
     .line 5
-    :cond_1
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object v1
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->I:F
 
     .line 6
-    sget-object v2, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v2
-    :try_end_0
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-
-    if-eqz v2, :cond_2
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->J:F
 
     .line 7
-    :try_start_1
-    sget-object v2, Landroidx/constraintlayout/motion/widget/j;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/reflect/Constructor;
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/constraintlayout/motion/widget/e;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
 
     .line 8
-    :try_start_2
-    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
-
-    move-result-object v0
-
-    invoke-virtual {v1, p1, v0}, Landroidx/constraintlayout/motion/widget/e;->c(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->L:F
 
     .line 9
-    invoke-virtual {p0, v1}, Landroidx/constraintlayout/motion/widget/j;->b(Landroidx/constraintlayout/motion/widget/e;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v1
-
-    move-object v4, v1
-
-    move-object v1, v0
-
-    move-object v0, v4
-
-    :goto_1
-    :try_start_3
-    const-string v2, "KeyFrames"
-
-    const-string v3, "unable to create "
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->M:F
 
     .line 10
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_2
-    move-object v0, v1
-
-    goto :goto_3
-
-    :cond_2
-    const-string v2, "CustomAttribute"
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->N:F
 
     .line 11
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    if-eqz v0, :cond_3
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->O:I
 
     .line 12
-    iget-object v1, v0, Landroidx/constraintlayout/motion/widget/e;->e:Ljava/util/HashMap;
-
-    if-eqz v1, :cond_3
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
 
     .line 13
-    invoke-static {p1, p2, v1}, Landroidx/constraintlayout/widget/ConstraintAttribute;->h(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashMap;)V
+    iput v1, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    const/4 v0, 0x2
 
     .line 14
-    :cond_3
-    :goto_3
-    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/f;->d:I
 
-    move-result v1
-    :try_end_3
-    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
-
-    goto :goto_0
-
-    :catch_2
-    move-exception p1
-
-    .line 15
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_4
-
-    :catch_3
-    move-exception p1
-
-    .line 16
-    invoke-virtual {p1}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
-
-    :cond_4
-    :goto_4
     return-void
-.end method
-
-.method public static e(ILandroid/content/Context;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/constraintlayout/motion/widget/p;)V
-    .locals 3
+.method public a(Ljava/util/HashMap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "splines"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Lo1/d;",
+            ">;)V"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public b()Landroidx/constraintlayout/motion/widget/f;
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    new-instance v0, Landroidx/constraintlayout/motion/widget/j;
 
-    iget v1, p1, Landroidx/constraintlayout/motion/widget/p;->b:I
+    invoke-direct {v0}, Landroidx/constraintlayout/motion/widget/j;-><init>()V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Landroidx/constraintlayout/motion/widget/j;->c(Landroidx/constraintlayout/motion/widget/f;)Landroidx/constraintlayout/motion/widget/f;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/ArrayList;
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public c(Landroidx/constraintlayout/motion/widget/f;)Landroidx/constraintlayout/motion/widget/f;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "src"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/constraintlayout/motion/widget/f;->c(Landroidx/constraintlayout/motion/widget/f;)Landroidx/constraintlayout/motion/widget/f;
 
     .line 2
-    invoke-virtual {p1, v0}, Landroidx/constraintlayout/motion/widget/p;->b(Ljava/util/ArrayList;)V
+    check-cast p1, Landroidx/constraintlayout/motion/widget/j;
 
     .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    iget-object v0, p1, Landroidx/constraintlayout/motion/widget/j;->F:Ljava/lang/String;
+
+    iput-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->F:Ljava/lang/String;
+
+    .line 4
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->G:I
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->G:I
+
+    .line 5
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->H:I
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->H:I
+
+    .line 6
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->I:F
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->I:F
+
+    const/high16 v0, 0x7fc00000    # Float.NaN
+
+    .line 7
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->J:F
+
+    .line 8
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->K:F
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
+
+    .line 9
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->L:F
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->L:F
+
+    .line 10
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->M:F
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->M:F
+
+    .line 11
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->N:F
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->N:F
+
+    .line 12
+    iget v0, p1, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    .line 13
+    iget p1, p1, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    return-object p0
+.end method
+
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/CloneNotSupportedException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/constraintlayout/motion/widget/j;->b()Landroidx/constraintlayout/motion/widget/f;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public f(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Landroidx/constraintlayout/widget/R$styleable;->KeyPosition:[I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    .line 2
+    invoke-static {p0, p1}, Landroidx/constraintlayout/motion/widget/j$a;->a(Landroidx/constraintlayout/motion/widget/j;Landroid/content/res/TypedArray;)V
+
+    return-void
+.end method
+
+.method public j(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "tag",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     const/4 v1, -0x1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sparse-switch v0, :sswitch_data_0
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :sswitch_0
+    const-string v0, "percentY"
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, Ljava/util/ArrayList;
+    move-result p1
 
-    if-eqz v0, :cond_2
+    if-nez p1, :cond_0
 
-    .line 4
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_0
+    const/4 v1, 0x6
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "percentX"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
 
     :cond_1
+    const/4 v1, 0x5
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "sizePercent"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "drawPath"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v1, 0x3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "percentHeight"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "percentWidth"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "transitionEasing"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    const/4 v1, 0x0
+
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    packed-switch v1, :pswitch_data_0
 
-    move-result v1
+    goto :goto_1
 
-    if-eqz v1, :cond_2
+    .line 2
+    :pswitch_0
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/f;->m(Ljava/lang/Object;)F
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v1
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->L:F
 
-    check-cast v1, Landroidx/constraintlayout/motion/widget/e;
+    goto :goto_1
+
+    .line 3
+    :pswitch_1
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/f;->m(Ljava/lang/Object;)F
+
+    move-result p1
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
+
+    goto :goto_1
+
+    .line 4
+    :pswitch_2
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/f;->m(Ljava/lang/Object;)F
+
+    move-result p1
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->I:F
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->J:F
+
+    goto :goto_1
 
     .line 5
-    iget-object v2, p1, Landroidx/constraintlayout/motion/widget/p;->a:Landroid/view/View;
+    :pswitch_3
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/f;->n(Ljava/lang/Object;)I
 
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-result p1
 
-    move-result-object v2
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->H:I
 
-    check-cast v2, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
-
-    iget-object v2, v2, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->V:Ljava/lang/String;
+    goto :goto_1
 
     .line 6
-    invoke-virtual {v1, v2}, Landroidx/constraintlayout/motion/widget/e;->d(Ljava/lang/String;)Z
+    :pswitch_4
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/f;->m(Ljava/lang/Object;)F
+
+    move-result p1
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->J:F
+
+    goto :goto_1
+
+    .line 7
+    :pswitch_5
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/f;->m(Ljava/lang/Object;)F
+
+    move-result p1
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->I:F
+
+    goto :goto_1
+
+    .line 8
+    :pswitch_6
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/constraintlayout/motion/widget/j;->F:Ljava/lang/String;
+
+    :goto_1
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6c0d7d20 -> :sswitch_6
+        -0x4330437f -> :sswitch_5
+        -0x3ca72634 -> :sswitch_4
+        -0x314b3c77 -> :sswitch_3
+        -0xbefb6fc -> :sswitch_2
+        0x198424b3 -> :sswitch_1
+        0x198424b4 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public o(IIFFFF)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutWidth",
+            "layoutHeight",
+            "start_x",
+            "start_y",
+            "end_x",
+            "end_y"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Landroidx/constraintlayout/motion/widget/j;->O:I
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p3, p4, p5, p6}, Landroidx/constraintlayout/motion/widget/j;->t(FFFF)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/motion/widget/j;->v(II)V
+
+    return-void
+
+    .line 4
+    :cond_1
+    invoke-virtual {p0, p3, p4, p5, p6}, Landroidx/constraintlayout/motion/widget/j;->u(FFFF)V
+
+    return-void
+.end method
+
+.method public p()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    return v0
+.end method
+
+.method public q()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    return v0
+.end method
+
+.method public r(IILandroid/graphics/RectF;Landroid/graphics/RectF;FF)Z
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutWidth",
+            "layoutHeight",
+            "start",
+            "end",
+            "x",
+            "y"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p3}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v3
+
+    invoke-virtual {p3}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v4
+
+    invoke-virtual {p4}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v5
+
+    invoke-virtual {p4}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v6
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move v2, p2
+
+    invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/motion/widget/j;->o(IIFFFF)V
+
+    .line 2
+    iget p1, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    sub-float/2addr p5, p1
+
+    invoke-static {p5}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    const/high16 p2, 0x41a00000    # 20.0f
+
+    cmpg-float p1, p1, p2
+
+    if-gez p1, :cond_0
+
+    iget p1, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    sub-float/2addr p6, p1
+
+    .line 3
+    invoke-static {p6}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    cmpg-float p1, p1, p2
+
+    if-gez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public s(Landroid/view/View;Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "start",
+            "end",
+            "x",
+            "y",
+            "attribute",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Landroidx/constraintlayout/motion/widget/j;->O:I
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move v3, p4
+
+    move v4, p5
+
+    move-object v5, p6
+
+    move-object v6, p7
+
+    .line 2
+    invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/motion/widget/j;->w(Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual/range {p0 .. p7}, Landroidx/constraintlayout/motion/widget/j;->y(Landroid/view/View;Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+
+    return-void
+
+    :cond_1
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move v3, p4
+
+    move v4, p5
+
+    move-object v5, p6
+
+    move-object v6, p7
+
+    .line 4
+    invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/motion/widget/j;->x(Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+
+    return-void
+.end method
+
+.method public final t(FFFF)V
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "start_x",
+            "start_y",
+            "end_x",
+            "end_y"
+        }
+    .end annotation
+
+    sub-float/2addr p3, p1
+
+    sub-float/2addr p4, p2
+
+    .line 1
+    iget v0, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
+
+    invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
+
+    .line 2
+    :goto_0
+    iget v2, p0, Landroidx/constraintlayout/motion/widget/j;->N:F
+
+    invoke-static {v2}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 7
-    invoke-virtual {p1, v1}, Landroidx/constraintlayout/motion/widget/p;->a(Landroidx/constraintlayout/motion/widget/e;)V
+    move v2, v1
 
-    goto :goto_0
+    goto :goto_1
+
+    :cond_1
+    iget v2, p0, Landroidx/constraintlayout/motion/widget/j;->N:F
+
+    .line 3
+    :goto_1
+    iget v3, p0, Landroidx/constraintlayout/motion/widget/j;->L:F
+
+    invoke-static {v3}, Ljava/lang/Float;->isNaN(F)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    move v3, v1
+
+    goto :goto_2
 
     :cond_2
+    iget v3, p0, Landroidx/constraintlayout/motion/widget/j;->L:F
+
+    .line 4
+    :goto_2
+    iget v4, p0, Landroidx/constraintlayout/motion/widget/j;->M:F
+
+    invoke-static {v4}, Ljava/lang/Float;->isNaN(F)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    iget v1, p0, Landroidx/constraintlayout/motion/widget/j;->M:F
+
+    :goto_3
+    mul-float/2addr v0, p3
+
+    add-float/2addr v0, p1
+
+    mul-float/2addr v1, p4
+
+    add-float/2addr v1, v0
+
+    float-to-int p1, v1
+
+    int-to-float p1, p1
+
+    .line 5
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    mul-float/2addr p3, v2
+
+    add-float/2addr p3, p2
+
+    mul-float/2addr p4, v3
+
+    add-float/2addr p4, p3
+
+    float-to-int p1, p4
+
+    int-to-float p1, p1
+
+    .line 6
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
     return-void
 .end method
 
-.method public final b(Landroidx/constraintlayout/motion/widget/e;)V
+.method public final u(FFFF)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "start_x",
+            "start_y",
+            "end_x",
+            "end_y"
+        }
+    .end annotation
+
+    sub-float/2addr p3, p1
+
+    sub-float/2addr p4, p2
+
+    neg-float v0, p4
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    iget v1, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
 
-    iget v1, p1, Landroidx/constraintlayout/motion/widget/e;->b:I
+    mul-float v2, p3, v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    add-float/2addr v2, p1
 
-    move-result-object v1
+    iget p1, p0, Landroidx/constraintlayout/motion/widget/j;->L:F
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    mul-float/2addr v0, p1
+
+    add-float/2addr v0, v2
+
+    iput v0, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    mul-float/2addr p4, v1
+
+    add-float/2addr p4, p2
+
+    mul-float/2addr p3, p1
+
+    add-float/2addr p3, p4
+
+    .line 2
+    iput p3, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    return-void
+.end method
+
+.method public final v(II)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutWidth",
+            "layoutHeight"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    sub-int/2addr p1, v0
+
+    int-to-float p1, p1
+
+    .line 1
+    iget v1, p0, Landroidx/constraintlayout/motion/widget/j;->K:F
+
+    mul-float/2addr p1, v1
+
+    int-to-float v2, v0
+
+    add-float/2addr p1, v2
+
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->P:F
+
+    sub-int/2addr p2, v0
+
+    int-to-float p1, p2
+
+    mul-float/2addr p1, v1
+
+    add-float/2addr p1, v2
+
+    .line 2
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->Q:F
+
+    return-void
+.end method
+
+.method public w(Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+    .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "start",
+            "end",
+            "x",
+            "y",
+            "attribute",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerX()F
 
     move-result v0
 
-    if-nez v0, :cond_0
-
     .line 2
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerY()F
 
-    iget v1, p1, Landroidx/constraintlayout/motion/widget/e;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
     .line 3
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v1
+
+    .line 4
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
+
+    move-result p2
+
+    sub-float/2addr v1, v0
+
+    sub-float/2addr p2, p1
+
+    const/4 v2, 0x0
+
+    .line 5
+    aget-object v3, p5, v2
+
+    const-string v4, "percentX"
+
+    const/4 v5, 0x1
+
+    if-eqz v3, :cond_1
+
+    .line 6
+    aget-object p5, p5, v2
+
+    invoke-virtual {v4, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_0
+
+    sub-float/2addr p3, v0
+
+    div-float/2addr p3, v1
+
+    .line 7
+    aput p3, p6, v2
+
+    sub-float/2addr p4, p1
+
+    div-float/2addr p4, p2
+
+    .line 8
+    aput p4, p6, v5
+
+    goto :goto_0
+
     :cond_0
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    sub-float/2addr p3, v0
 
-    iget v1, p1, Landroidx/constraintlayout/motion/widget/e;->b:I
+    div-float/2addr p3, v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 9
+    aput p3, p6, v5
 
-    move-result-object v1
+    sub-float/2addr p4, p1
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    div-float/2addr p4, p2
 
-    move-result-object v0
+    .line 10
+    aput p4, p6, v2
 
-    check-cast v0, Ljava/util/ArrayList;
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 11
+    :cond_1
+    aput-object v4, p5, v2
 
+    sub-float/2addr p3, v0
+
+    div-float/2addr p3, v1
+
+    .line 12
+    aput p3, p6, v2
+
+    const-string p3, "percentY"
+
+    .line 13
+    aput-object p3, p5, v5
+
+    sub-float/2addr p4, p1
+
+    div-float/2addr p4, p2
+
+    .line 14
+    aput p4, p6, v5
+
+    :goto_0
     return-void
 .end method
 
-.method public c(I)Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Ljava/util/ArrayList<",
-            "Landroidx/constraintlayout/motion/widget/e;",
-            ">;"
+.method public x(Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "start",
+            "end",
+            "x",
+            "y",
+            "attribute",
+            "value"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerX()F
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v0
 
-    move-result-object p1
+    .line 2
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerY()F
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p1
+    .line 3
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
 
-    check-cast p1, Ljava/util/ArrayList;
+    move-result v1
 
-    return-object p1
+    .line 4
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
+
+    move-result p2
+
+    sub-float/2addr v1, v0
+
+    sub-float/2addr p2, p1
+
+    float-to-double v2, v1
+
+    float-to-double v4, p2
+
+    .line 5
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->hypot(DD)D
+
+    move-result-wide v2
+
+    double-to-float v2, v2
+
+    float-to-double v3, v2
+
+    const-wide v5, 0x3f1a36e2eb1c432dL    # 1.0E-4
+
+    cmpg-double v3, v3, v5
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-gez v3, :cond_0
+
+    .line 6
+    sget-object p1, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    const-string p2, "distance ~ 0"
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    .line 7
+    aput p1, p6, v5
+
+    .line 8
+    aput p1, p6, v4
+
+    return-void
+
+    :cond_0
+    div-float/2addr v1, v2
+
+    div-float/2addr p2, v2
+
+    sub-float/2addr p4, p1
+
+    mul-float p1, v1, p4
+
+    sub-float/2addr p3, v0
+
+    mul-float v0, p3, p2
+
+    sub-float/2addr p1, v0
+
+    div-float/2addr p1, v2
+
+    mul-float/2addr v1, p3
+
+    mul-float/2addr p2, p4
+
+    add-float/2addr p2, v1
+
+    div-float/2addr p2, v2
+
+    .line 9
+    aget-object p3, p5, v5
+
+    const-string p4, "percentX"
+
+    if-eqz p3, :cond_1
+
+    .line 10
+    aget-object p3, p5, v5
+
+    invoke-virtual {p4, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_2
+
+    .line 11
+    aput p2, p6, v5
+
+    .line 12
+    aput p1, p6, v4
+
+    goto :goto_0
+
+    .line 13
+    :cond_1
+    aput-object p4, p5, v5
+
+    const-string p3, "percentY"
+
+    .line 14
+    aput-object p3, p5, v4
+
+    .line 15
+    aput p2, p6, v5
+
+    .line 16
+    aput p1, p6, v4
+
+    :cond_2
+    :goto_0
+    return-void
 .end method
 
-.method public d()Ljava/util/Set;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "Ljava/lang/Integer;",
-            ">;"
+.method public y(Landroid/view/View;Landroid/graphics/RectF;Landroid/graphics/RectF;FF[Ljava/lang/String;[F)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "start",
+            "end",
+            "x",
+            "y",
+            "attribute",
+            "value"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/j;->a:Ljava/util/HashMap;
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+    .line 2
+    invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
 
-    move-result-object v0
+    .line 3
+    invoke-virtual {p3}, Landroid/graphics/RectF;->centerX()F
 
-    return-object v0
+    .line 4
+    invoke-virtual {p3}, Landroid/graphics/RectF;->centerY()F
+
+    .line 5
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    .line 6
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
+
+    move-result p2
+
+    .line 7
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result p1
+
+    const/4 p3, 0x0
+
+    .line 8
+    aget-object v0, p6, p3
+
+    const-string v1, "percentX"
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    .line 9
+    aget-object p6, p6, p3
+
+    invoke-virtual {v1, p6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p6
+
+    if-eqz p6, :cond_0
+
+    int-to-float p2, p2
+
+    div-float/2addr p4, p2
+
+    .line 10
+    aput p4, p7, p3
+
+    int-to-float p1, p1
+
+    div-float/2addr p5, p1
+
+    .line 11
+    aput p5, p7, v2
+
+    goto :goto_0
+
+    :cond_0
+    int-to-float p2, p2
+
+    div-float/2addr p4, p2
+
+    .line 12
+    aput p4, p7, v2
+
+    int-to-float p1, p1
+
+    div-float/2addr p5, p1
+
+    .line 13
+    aput p5, p7, p3
+
+    goto :goto_0
+
+    .line 14
+    :cond_1
+    aput-object v1, p6, p3
+
+    int-to-float p2, p2
+
+    div-float/2addr p4, p2
+
+    .line 15
+    aput p4, p7, p3
+
+    const-string p2, "percentY"
+
+    .line 16
+    aput-object p2, p6, v2
+
+    int-to-float p1, p1
+
+    div-float/2addr p5, p1
+
+    .line 17
+    aput p5, p7, v2
+
+    :goto_0
+    return-void
+.end method
+
+.method public z(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
+
+    .line 1
+    iput p1, p0, Landroidx/constraintlayout/motion/widget/j;->O:I
+
+    return-void
 .end method

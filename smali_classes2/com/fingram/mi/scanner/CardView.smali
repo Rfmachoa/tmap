@@ -10,19 +10,19 @@
 
 
 # instance fields
-.field public a:Lw5/c;
+.field public a:Lt7/c;
 
 .field public b:Lcom/fingram/mi/scanner/a;
 
 .field public c:Lcom/fingram/mi/scanner/CardScanner;
 
-.field public d:Lw5/b;
+.field public d:Lt7/b;
 
 .field public e:Landroid/content/Context;
 
 .field public f:I
 
-.field public g:Lx5/b;
+.field public g:Lu7/b;
 
 
 # direct methods
@@ -93,11 +93,11 @@
     return-void
 .end method
 
-.method public static synthetic b(Lcom/fingram/mi/scanner/CardView;)Lx5/b;
+.method public static synthetic b(Lcom/fingram/mi/scanner/CardView;)Lu7/b;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/fingram/mi/scanner/CardView;->g:Lx5/b;
+    iget-object p0, p0, Lcom/fingram/mi/scanner/CardView;->g:Lu7/b;
 
     return-object p0
 .end method
@@ -106,7 +106,7 @@
     .locals 7
 
     .line 1
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->d:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->d:Lt7/b;
 
     invoke-virtual {v0, p1}, Lcom/fingram/mi/bankcard/ScannerConfig;->getGuideFrame(Landroid/view/SurfaceView;)Landroid/graphics/Rect;
 
@@ -161,16 +161,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->d:Lw5/b;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->d:Lt7/b;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/fingram/mi/bankcard/ScannerConfig;->changeGuideRect(FFFLcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;)I
 
     move-result p1
 
     .line 2
-    iget-object p2, p0, Lcom/fingram/mi/scanner/CardView;->a:Lw5/c;
+    iget-object p2, p0, Lcom/fingram/mi/scanner/CardView;->a:Lt7/c;
 
-    invoke-virtual {p2}, Lw5/c;->getSurfaceView()Landroid/view/SurfaceView;
+    invoke-virtual {p2}, Lt7/c;->getSurfaceView()Landroid/view/SurfaceView;
 
     move-result-object p2
 
@@ -206,11 +206,11 @@
     return v0
 .end method
 
-.method public f(Landroid/content/Context;Lw5/b;)V
+.method public f(Landroid/content/Context;Lt7/b;)V
     .locals 2
 
     .line 1
-    iput-object p2, p0, Lcom/fingram/mi/scanner/CardView;->d:Lw5/b;
+    iput-object p2, p0, Lcom/fingram/mi/scanner/CardView;->d:Lt7/b;
 
     .line 2
     iput-object p1, p0, Lcom/fingram/mi/scanner/CardView;->e:Landroid/content/Context;
@@ -218,12 +218,12 @@
     .line 3
     new-instance v0, Lcom/fingram/mi/scanner/CardScanner;
 
-    invoke-direct {v0, p1, p2}, Lcom/fingram/mi/scanner/CardScanner;-><init>(Landroid/content/Context;Lw5/b;)V
+    invoke-direct {v0, p1, p2}, Lcom/fingram/mi/scanner/CardScanner;-><init>(Landroid/content/Context;Lt7/b;)V
 
     iput-object v0, p0, Lcom/fingram/mi/scanner/CardView;->c:Lcom/fingram/mi/scanner/CardScanner;
 
     .line 4
-    invoke-virtual {v0, p2}, Lcom/fingram/mi/scanner/CardScanner;->t(Lw5/b;)Z
+    invoke-virtual {v0, p2}, Lcom/fingram/mi/scanner/CardScanner;->t(Lt7/b;)Z
 
     .line 5
     iget v0, p2, Lcom/fingram/mi/bankcard/ScannerConfig;->cwPreviewDegree:I
@@ -231,7 +231,7 @@
     invoke-virtual {p0, p1, v0}, Lcom/fingram/mi/scanner/CardView;->h(Landroid/content/Context;I)V
 
     .line 6
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->a:Lw5/c;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->a:Lt7/c;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
@@ -240,7 +240,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, p2}, Lcom/fingram/mi/scanner/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;Lw5/b;)V
+    invoke-direct {v0, p1, v1, p2}, Lcom/fingram/mi/scanner/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;Lt7/b;)V
 
     iput-object v0, p0, Lcom/fingram/mi/scanner/CardView;->b:Lcom/fingram/mi/scanner/a;
 
@@ -265,7 +265,7 @@
 
     invoke-direct {p2, p0}, Lcom/fingram/mi/scanner/CardView$a;-><init>(Lcom/fingram/mi/scanner/CardView;)V
 
-    invoke-virtual {p1, p2}, Lcom/fingram/mi/scanner/CardScanner;->n(Lx5/a;)V
+    invoke-virtual {p1, p2}, Lcom/fingram/mi/scanner/CardScanner;->n(Lu7/a;)V
 
     return-void
 .end method
@@ -295,17 +295,17 @@
     iput p2, p0, Lcom/fingram/mi/scanner/CardView;->f:I
 
     .line 3
-    new-instance v0, Lw5/c;
+    new-instance v0, Lt7/c;
 
     const/4 v3, 0x0
 
-    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->d:Lw5/b;
+    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->d:Lt7/b;
 
     invoke-virtual {v1}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewWidth()I
 
     move-result v4
 
-    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->d:Lw5/b;
+    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->d:Lt7/b;
 
     invoke-virtual {v1}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
 
@@ -317,9 +317,9 @@
 
     move v6, p2
 
-    invoke-direct/range {v1 .. v6}, Lw5/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;III)V
+    invoke-direct/range {v1 .. v6}, Lt7/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;III)V
 
-    iput-object v0, p0, Lcom/fingram/mi/scanner/CardView;->a:Lw5/c;
+    iput-object v0, p0, Lcom/fingram/mi/scanner/CardView;->a:Lt7/c;
 
     .line 4
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
@@ -340,13 +340,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->a:Lw5/c;
+    iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->a:Lt7/c;
 
-    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->d:Lw5/b;
+    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->d:Lt7/b;
 
     iget v1, v1, Lcom/fingram/mi/bankcard/ScannerConfig;->cwPreviewDegree:I
 
-    invoke-virtual {v0, v1}, Lw5/c;->setOrientationInfo(I)V
+    invoke-virtual {v0, v1}, Lt7/c;->setOrientationInfo(I)V
 
     .line 2
     iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->b:Lcom/fingram/mi/scanner/a;
@@ -356,7 +356,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/fingram/mi/scanner/a;->setResultInfo(Lw5/e;)V
+    invoke-virtual {v0, v1}, Lcom/fingram/mi/scanner/a;->setResultInfo(Lt7/e;)V
 
     .line 4
     :cond_0
@@ -367,9 +367,9 @@
     .line 5
     iget-object v0, p0, Lcom/fingram/mi/scanner/CardView;->c:Lcom/fingram/mi/scanner/CardScanner;
 
-    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->a:Lw5/c;
+    iget-object v1, p0, Lcom/fingram/mi/scanner/CardView;->a:Lt7/c;
 
-    invoke-virtual {v1}, Lw5/c;->getSurfaceHolder()Landroid/view/SurfaceHolder;
+    invoke-virtual {v1}, Lt7/c;->getSurfaceHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v1
 
@@ -380,11 +380,11 @@
     return v0
 .end method
 
-.method public setCardViewListener(Lx5/b;)V
+.method public setCardViewListener(Lu7/b;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/fingram/mi/scanner/CardView;->g:Lx5/b;
+    iput-object p1, p0, Lcom/fingram/mi/scanner/CardView;->g:Lu7/b;
 
     return-void
 .end method

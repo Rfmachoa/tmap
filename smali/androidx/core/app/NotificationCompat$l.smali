@@ -455,120 +455,135 @@
 .end method
 
 .method public static i(Landroidx/core/app/NotificationCompat$Action;)Landroid/app/Notification$Action;
-    .locals 4
+    .locals 5
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x14
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->f()Landroidx/core/graphics/drawable/IconCompat;
-
-    move-result-object v0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     .line 2
-    new-instance v1, Landroid/app/Notification$Action$Builder;
+    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->f()Landroidx/core/graphics/drawable/IconCompat;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    const/4 v0, 0x0
+    .line 3
+    new-instance v2, Landroid/app/Notification$Action$Builder;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 3
+    .line 4
     :cond_0
-    invoke-virtual {v0}, Landroidx/core/graphics/drawable/IconCompat;->O()Landroid/graphics/drawable/Icon;
+    invoke-virtual {v1}, Landroidx/core/graphics/drawable/IconCompat;->K()Landroid/graphics/drawable/Icon;
 
-    move-result-object v0
+    move-result-object v1
 
     :goto_0
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->j()Ljava/lang/CharSequence;
 
-    move-result-object v2
+    move-result-object v3
 
-    .line 4
+    .line 5
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->a()Landroid/app/PendingIntent;
+
+    move-result-object v4
+
+    invoke-direct {v2, v1, v3, v4}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    .line 6
+    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->d()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 7
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->d()Landroid/os/Bundle;
 
     move-result-object v3
 
-    invoke-direct {v1, v0, v2, v3}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
-
-    .line 5
-    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->d()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 6
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->d()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v1, v3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     goto :goto_1
 
-    .line 7
-    :cond_1
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
     .line 8
+    :cond_1
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    .line 9
     :goto_1
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->b()Z
 
-    move-result v2
+    move-result v3
 
-    const-string v3, "android.support.allowGeneratedReplies"
-
-    .line 9
-    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    const-string v4, "android.support.allowGeneratedReplies"
 
     .line 10
-    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->b()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
+    invoke-virtual {v1, v4, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 11
-    invoke-virtual {v1, v0}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->b()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
+
+    const/16 v3, 0x1f
+
+    if-lt v0, v3, :cond_2
 
     .line 12
+    invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->k()Z
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Landroid/app/Notification$Action$Builder;->setAuthenticationRequired(Z)Landroid/app/Notification$Action$Builder;
+
+    .line 13
+    :cond_2
+    invoke-virtual {v2, v1}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+
+    .line 14
     invoke-virtual {p0}, Landroidx/core/app/NotificationCompat$Action;->g()[Landroidx/core/app/RemoteInput;
 
     move-result-object p0
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_3
 
-    .line 13
+    .line 15
     invoke-static {p0}, Landroidx/core/app/RemoteInput;->d([Landroidx/core/app/RemoteInput;)[Landroid/app/RemoteInput;
 
     move-result-object p0
 
-    .line 14
+    .line 16
     array-length v0, p0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_2
-    if-ge v2, v0, :cond_2
+    if-ge v1, v0, :cond_3
 
-    aget-object v3, p0, v2
+    aget-object v3, p0, v1
 
-    .line 15
-    invoke-virtual {v1, v3}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
+    .line 17
+    invoke-virtual {v2, v3}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 16
-    :cond_2
-    invoke-virtual {v1}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
+    .line 18
+    :cond_3
+    invoke-virtual {v2}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
     move-result-object p0
 

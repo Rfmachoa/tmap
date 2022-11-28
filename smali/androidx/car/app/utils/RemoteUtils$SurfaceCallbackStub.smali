@@ -17,11 +17,11 @@
 # instance fields
 .field private final mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-.field private final mSurfaceCallback:Landroidx/car/app/u0;
+.field private final mSurfaceCallback:Landroidx/car/app/a1;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/u0;)V
+.method public constructor <init>(Landroidx/lifecycle/Lifecycle;Landroidx/car/app/a1;)V
     .locals 0
 
     .line 1
@@ -31,7 +31,7 @@
     iput-object p1, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     .line 3
-    iput-object p2, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iput-object p2, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
     return-void
 .end method
@@ -76,7 +76,17 @@
     return-object p0
 .end method
 
-.method public static synthetic e(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)Ljava/lang/Object;
+.method public static synthetic e(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->lambda$onClick$7(FF)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic f(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)Ljava/lang/Object;
     .locals 0
 
     invoke-direct {p0, p1}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->lambda$onStableAreaChanged$2(Landroid/graphics/Rect;)Ljava/lang/Object;
@@ -86,7 +96,7 @@
     return-object p0
 .end method
 
-.method public static synthetic f(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FFF)Ljava/lang/Object;
+.method public static synthetic g(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FFF)Ljava/lang/Object;
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->lambda$onScale$6(FFF)Ljava/lang/Object;
@@ -96,7 +106,7 @@
     return-object p0
 .end method
 
-.method public static synthetic g(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)Ljava/lang/Object;
+.method public static synthetic h(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)Ljava/lang/Object;
     .locals 0
 
     invoke-direct {p0, p1, p2}, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->lambda$onScroll$4(FF)Ljava/lang/Object;
@@ -104,6 +114,24 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private synthetic lambda$onClick$7(FF)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroidx/car/app/serialization/BundlerException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
+
+    invoke-interface {v0, p1, p2}, Landroidx/car/app/a1;->onClick(FF)V
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
 .method private synthetic lambda$onFling$5(FF)Ljava/lang/Object;
@@ -115,9 +143,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
-    invoke-interface {v0, p1, p2}, Landroidx/car/app/u0;->onFling(FF)V
+    invoke-interface {v0, p1, p2}, Landroidx/car/app/a1;->onFling(FF)V
 
     const/4 p1, 0x0
 
@@ -133,9 +161,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
-    invoke-interface {v0, p1, p2, p3}, Landroidx/car/app/u0;->onScale(FFF)V
+    invoke-interface {v0, p1, p2, p3}, Landroidx/car/app/a1;->onScale(FFF)V
 
     const/4 p1, 0x0
 
@@ -151,9 +179,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
-    invoke-interface {v0, p1, p2}, Landroidx/car/app/u0;->onScroll(FF)V
+    invoke-interface {v0, p1, p2}, Landroidx/car/app/a1;->onScroll(FF)V
 
     const/4 p1, 0x0
 
@@ -169,9 +197,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
-    invoke-interface {v0, p1}, Landroidx/car/app/u0;->b(Landroid/graphics/Rect;)V
+    invoke-interface {v0, p1}, Landroidx/car/app/a1;->b(Landroid/graphics/Rect;)V
 
     const/4 p1, 0x0
 
@@ -187,7 +215,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
     .line 2
     invoke-virtual {p1}, Landroidx/car/app/serialization/Bundleable;->c()Ljava/lang/Object;
@@ -197,7 +225,7 @@
     check-cast p1, Landroidx/car/app/SurfaceContainer;
 
     .line 3
-    invoke-interface {v0, p1}, Landroidx/car/app/u0;->c(Landroidx/car/app/SurfaceContainer;)V
+    invoke-interface {v0, p1}, Landroidx/car/app/a1;->c(Landroidx/car/app/SurfaceContainer;)V
 
     const/4 p1, 0x0
 
@@ -213,7 +241,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
     .line 2
     invoke-virtual {p1}, Landroidx/car/app/serialization/Bundleable;->c()Ljava/lang/Object;
@@ -223,7 +251,7 @@
     check-cast p1, Landroidx/car/app/SurfaceContainer;
 
     .line 3
-    invoke-interface {v0, p1}, Landroidx/car/app/u0;->d(Landroidx/car/app/SurfaceContainer;)V
+    invoke-interface {v0, p1}, Landroidx/car/app/a1;->d(Landroidx/car/app/SurfaceContainer;)V
 
     const/4 p1, 0x0
 
@@ -239,9 +267,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/u0;
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mSurfaceCallback:Landroidx/car/app/a1;
 
-    invoke-interface {v0, p1}, Landroidx/car/app/u0;->a(Landroid/graphics/Rect;)V
+    invoke-interface {v0, p1}, Landroidx/car/app/a1;->a(Landroid/graphics/Rect;)V
 
     const/4 p1, 0x0
 
@@ -250,6 +278,32 @@
 
 
 # virtual methods
+.method public onClick(FF)V
+    .locals 2
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
+
+    new-instance v1, Landroidx/car/app/utils/j;
+
+    invoke-direct {v1, p0, p1, p2}, Landroidx/car/app/utils/j;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)V
+
+    const-string p1, "onClick"
+
+    invoke-static {v0, p1, v1}, Landroidx/car/app/utils/RemoteUtils;->i(Landroidx/lifecycle/Lifecycle;Ljava/lang/String;Landroidx/car/app/utils/RemoteUtils$a;)V
+
+    return-void
+.end method
+
 .method public onFling(FF)V
     .locals 2
     .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
@@ -279,9 +333,9 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    new-instance v1, Landroidx/car/app/utils/k;
+    new-instance v1, Landroidx/car/app/utils/l;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Landroidx/car/app/utils/k;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FFF)V
+    invoke-direct {v1, p0, p1, p2, p3}, Landroidx/car/app/utils/l;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FFF)V
 
     const-string p1, "onScale"
 
@@ -299,9 +353,9 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    new-instance v1, Landroidx/car/app/utils/j;
+    new-instance v1, Landroidx/car/app/utils/k;
 
-    invoke-direct {v1, p0, p1, p2}, Landroidx/car/app/utils/j;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)V
+    invoke-direct {v1, p0, p1, p2}, Landroidx/car/app/utils/k;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;FF)V
 
     const-string p1, "onScroll"
 
@@ -316,9 +370,9 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    new-instance v1, Landroidx/car/app/utils/m;
+    new-instance v1, Landroidx/car/app/utils/n;
 
-    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/m;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)V
+    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/n;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)V
 
     const-string p1, "onStableAreaChanged"
 
@@ -333,9 +387,9 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    new-instance v1, Landroidx/car/app/utils/o;
+    new-instance v1, Landroidx/car/app/utils/p;
 
-    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/o;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroidx/car/app/serialization/Bundleable;)V
+    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/p;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroidx/car/app/serialization/Bundleable;)V
 
     const-string p1, "onSurfaceAvailable"
 
@@ -350,9 +404,9 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    new-instance v1, Landroidx/car/app/utils/n;
+    new-instance v1, Landroidx/car/app/utils/o;
 
-    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/n;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroidx/car/app/serialization/Bundleable;)V
+    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/o;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroidx/car/app/serialization/Bundleable;)V
 
     const-string p1, "onSurfaceDestroyed"
 
@@ -367,9 +421,9 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
-    new-instance v1, Landroidx/car/app/utils/l;
+    new-instance v1, Landroidx/car/app/utils/m;
 
-    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/l;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)V
+    invoke-direct {v1, p0, p1}, Landroidx/car/app/utils/m;-><init>(Landroidx/car/app/utils/RemoteUtils$SurfaceCallbackStub;Landroid/graphics/Rect;)V
 
     const-string p1, "onVisibleAreaChanged"
 

@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method public static synthetic f(Lcom/tmapmobility/tmap/exoplayer2/source/m0$b;)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
+.method public static synthetic c(Lcom/tmapmobility/tmap/exoplayer2/source/m0$b;)Lcom/tmapmobility/tmap/exoplayer2/source/b0;
     .locals 0
 
     .line 1
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public a(JLcom/tmapmobility/tmap/exoplayer2/i3;)J
+.method public a(JLcom/tmapmobility/tmap/exoplayer2/j3;)J
     .locals 3
 
     .line 1
@@ -63,7 +63,7 @@
 
     sub-long/2addr p1, v1
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->a(JLcom/tmapmobility/tmap/exoplayer2/i3;)J
+    invoke-interface {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->a(JLcom/tmapmobility/tmap/exoplayer2/j3;)J
 
     move-result-wide p1
 
@@ -89,17 +89,6 @@
     return-void
 .end method
 
-.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/source/x0;)V
-    .locals 0
-
-    .line 1
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/b0;
-
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/m0$b;->i(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
-
-    return-void
-.end method
-
 .method public continueLoading(J)Z
     .locals 3
 
@@ -117,19 +106,13 @@
     return p1
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
+.method public bridge synthetic d(Lcom/tmapmobility/tmap/exoplayer2/source/y0;)V
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/m0$b;->c:Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/b0;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;
-
-    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;->d(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/m0$b;->i(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
 
     return-void
 .end method
@@ -140,7 +123,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;",
@@ -158,7 +141,7 @@
     return-object p1
 .end method
 
-.method public g(Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;J)V
+.method public f(Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;J)V
     .locals 2
 
     .line 1
@@ -171,7 +154,24 @@
 
     sub-long/2addr p2, v0
 
-    invoke-interface {p1, p0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->g(Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;J)V
+    invoke-interface {p1, p0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->f(Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;J)V
+
+    return-void
+.end method
+
+.method public g(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
+    .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/m0$b;->c:Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;
+
+    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;->g(Lcom/tmapmobility/tmap/exoplayer2/source/b0;)V
 
     return-void
 .end method
@@ -245,7 +245,7 @@
     return-object v0
 .end method
 
-.method public h([Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;[Z[Lcom/tmapmobility/tmap/exoplayer2/source/SampleStream;[ZJ)J
+.method public h([Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;[Z[Lcom/tmapmobility/tmap/exoplayer2/source/SampleStream;[ZJ)J
     .locals 12
 
     move-object v0, p0
@@ -305,7 +305,7 @@
     move-object/from16 v7, p4
 
     .line 6
-    invoke-interface/range {v3 .. v9}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->h([Lcom/tmapmobility/tmap/exoplayer2/trackselection/p;[Z[Lcom/tmapmobility/tmap/exoplayer2/source/SampleStream;[ZJ)J
+    invoke-interface/range {v3 .. v9}, Lcom/tmapmobility/tmap/exoplayer2/source/b0;->h([Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;[Z[Lcom/tmapmobility/tmap/exoplayer2/source/SampleStream;[ZJ)J
 
     move-result-wide v3
 
@@ -379,7 +379,7 @@
 
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/b0$a;
 
-    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/x0$a;->c(Lcom/tmapmobility/tmap/exoplayer2/source/x0;)V
+    invoke-interface {p1, p0}, Lcom/tmapmobility/tmap/exoplayer2/source/y0$a;->d(Lcom/tmapmobility/tmap/exoplayer2/source/y0;)V
 
     return-void
 .end method

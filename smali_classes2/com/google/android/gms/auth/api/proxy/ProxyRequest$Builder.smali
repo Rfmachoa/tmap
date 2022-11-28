@@ -1,9 +1,13 @@
 .class public Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;
 .super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # annotations
 .annotation build Lcom/google/android/gms/common/annotation/KeepForSdkWithMembers;
+.end annotation
+
+.annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -17,50 +21,53 @@
 
 
 # instance fields
-.field private zzbz:Ljava/lang/String;
+.field private final zza:Ljava/lang/String;
 
-.field private zzca:I
+.field private zzb:I
 
-.field private zzcb:J
+.field private zzc:J
 
-.field private zzcc:[B
+.field private zzd:[B
 
-.field private zzcd:Landroid/os/Bundle;
+.field private final zze:Landroid/os/Bundle;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 4
+    .locals 3
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->HTTP_METHOD_GET:I
 
-    iput v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzca:I
+    iput v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzb:I
 
     const-wide/16 v0, 0xbb8
 
-    .line 3
-    iput-wide v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcb:J
+    iput-wide v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzc:J
 
     const/4 v0, 0x0
 
-    .line 4
-    iput-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcc:[B
+    new-array v0, v0, [B
 
-    .line 5
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzd:[B
+
     new-instance v0, Landroid/os/Bundle;
 
+    .line 2
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcd:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zze:Landroid/os/Bundle;
 
-    .line 6
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 7
+    .line 4
     sget-object v0, Landroid/util/Patterns;->WEB_URL:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -73,29 +80,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzbz:Ljava/lang/String;
+    .line 5
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zza:Ljava/lang/String;
 
     return-void
 
-    .line 9
+    .line 6
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/16 v1, 0x33
+    const-string v1, "The supplied url [ "
 
-    invoke-static {p1, v1}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    const-string v2, "] is not match Patterns.WEB_URL!"
 
-    move-result v1
-
-    const-string v2, "The supplied url [ "
-
-    const-string v3, "] is not match Patterns.WEB_URL!"
-
-    invoke-static {v1, v2, p1, v3}, Lcom/google/android/gms/ads/internal/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 7
     invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -105,9 +107,11 @@
 # virtual methods
 .method public build()Lcom/google/android/gms/auth/api/proxy/ProxyRequest;
     .locals 9
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcc:[B
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzd:[B
 
     if-nez v0, :cond_0
 
@@ -115,24 +119,22 @@
 
     new-array v0, v0, [B
 
-    .line 2
-    iput-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcc:[B
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzd:[B
 
-    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;
 
     const/4 v2, 0x2
 
-    iget-object v3, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzbz:Ljava/lang/String;
+    iget-object v3, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zza:Ljava/lang/String;
 
-    iget v4, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzca:I
+    iget v4, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzb:I
 
-    iget-wide v5, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcb:J
+    iget-wide v5, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzc:J
 
-    iget-object v7, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcc:[B
+    iget-object v7, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzd:[B
 
-    iget-object v8, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcd:Landroid/os/Bundle;
+    iget-object v8, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zze:Landroid/os/Bundle;
 
     move-object v1, v0
 
@@ -143,19 +145,29 @@
 
 .method public putHeader(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const-string v0, "Header name cannot be null or empty!"
 
     .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 2
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcd:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zze:Landroid/os/Bundle;
 
     if-nez p2, :cond_0
 
     const-string p2, ""
 
+    .line 2
     :cond_0
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -164,43 +176,48 @@
 
 .method public setBody([B)Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;
     .locals 0
+    .param p1    # [B
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcc:[B
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzd:[B
 
     return-object p0
 .end method
 
 .method public setHttpMethod(I)Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    const/4 v0, 0x0
 
     if-ltz p1, :cond_0
 
     .line 1
-    sget v0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->LAST_CODE:I
+    sget v1, Lcom/google/android/gms/auth/api/proxy/ProxyRequest;->LAST_CODE:I
 
-    if-gt p1, v0, :cond_0
+    if-gt p1, v1, :cond_0
 
     const/4 v0, 0x1
 
-    goto :goto_0
-
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     const-string v1, "Unrecognized http method code."
 
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 2
-    iput p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzca:I
+    iput p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzb:I
 
     return-object p0
 .end method
 
 .method public setTimeoutMillis(J)Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;
     .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     const-wide/16 v0, 0x0
 
@@ -221,8 +238,7 @@
     .line 1
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
-    .line 2
-    iput-wide p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzcb:J
+    iput-wide p1, p0, Lcom/google/android/gms/auth/api/proxy/ProxyRequest$Builder;->zzc:J
 
     return-object p0
 .end method

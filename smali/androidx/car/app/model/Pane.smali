@@ -154,9 +154,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
-    .end annotation
-
     .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
         value = 0x4
     .end annotation

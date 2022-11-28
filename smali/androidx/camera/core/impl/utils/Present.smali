@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -32,15 +36,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "reference"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -64,14 +59,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "object"
-        }
-    .end annotation
 
     .line 1
     instance-of v0, p1, Landroidx/camera/core/impl/utils/Present;
@@ -139,15 +126,6 @@
 
 .method public or(Landroidx/camera/core/impl/utils/Optional;)Landroidx/camera/core/impl/utils/Optional;
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "secondChoice"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -159,22 +137,32 @@
     .end annotation
 
     .line 3
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 .end method
 
-.method public or(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "defaultValue"
+.method public or(Landroidx/core/util/e0;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/core/util/e0<",
+            "+TT;>;)TT;"
         }
     .end annotation
 
+    .line 4
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5
+    iget-object p1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public or(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TT;"
@@ -184,37 +172,9 @@
     const-string v0, "use Optional.orNull() instead of Optional.or(null)"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object p1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public or(Lr1/w;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "supplier"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lr1/w<",
-            "+TT;>;)TT;"
-        }
-    .end annotation
-
-    .line 4
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
     iget-object p1, p0, Landroidx/camera/core/impl/utils/Present;->mReference:Ljava/lang/Object;
 
     return-object p1
@@ -248,7 +208,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v0, v1, v2}, Lx/c;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lb0/e;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lej/l;
+.implements Lgl/l;
 
 
 # instance fields
@@ -30,7 +30,7 @@
 
     check-cast p1, Lcom/skt/tmap/data/TmapRerouteResponseData;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->e(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+    invoke-static {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
 
     move-result-object p1
 

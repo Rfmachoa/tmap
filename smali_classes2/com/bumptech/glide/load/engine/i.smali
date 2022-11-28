@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/bumptech/glide/load/engine/k;
-.implements Lw4/j$a;
+.implements Lt6/j$a;
 .implements Lcom/bumptech/glide/load/engine/n$a;
 
 
@@ -32,7 +32,7 @@
 
 .field public final b:Lcom/bumptech/glide/load/engine/m;
 
-.field public final c:Lw4/j;
+.field public final c:Lt6/j;
 
 .field public final d:Lcom/bumptech/glide/load/engine/i$b;
 
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lw4/j;Lw4/a$a;Lx4/a;Lx4/a;Lx4/a;Lx4/a;Lcom/bumptech/glide/load/engine/p;Lcom/bumptech/glide/load/engine/m;Lcom/bumptech/glide/load/engine/a;Lcom/bumptech/glide/load/engine/i$b;Lcom/bumptech/glide/load/engine/i$a;Lcom/bumptech/glide/load/engine/v;Z)V
+.method public constructor <init>(Lt6/j;Lt6/a$a;Lu6/a;Lu6/a;Lu6/a;Lu6/a;Lcom/bumptech/glide/load/engine/p;Lcom/bumptech/glide/load/engine/m;Lcom/bumptech/glide/load/engine/a;Lcom/bumptech/glide/load/engine/i$b;Lcom/bumptech/glide/load/engine/i$a;Lcom/bumptech/glide/load/engine/v;Z)V
     .locals 11
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -76,14 +76,14 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object v8, v7, Lcom/bumptech/glide/load/engine/i;->c:Lw4/j;
+    iput-object v8, v7, Lcom/bumptech/glide/load/engine/i;->c:Lt6/j;
 
     .line 4
     new-instance v9, Lcom/bumptech/glide/load/engine/i$c;
 
     move-object v0, p2
 
-    invoke-direct {v9, p2}, Lcom/bumptech/glide/load/engine/i$c;-><init>(Lw4/a$a;)V
+    invoke-direct {v9, p2}, Lcom/bumptech/glide/load/engine/i$c;-><init>(Lt6/a$a;)V
 
     iput-object v9, v7, Lcom/bumptech/glide/load/engine/i;->f:Lcom/bumptech/glide/load/engine/i$c;
 
@@ -159,7 +159,7 @@
 
     move-object v6, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/bumptech/glide/load/engine/i$b;-><init>(Lx4/a;Lx4/a;Lx4/a;Lx4/a;Lcom/bumptech/glide/load/engine/k;Lcom/bumptech/glide/load/engine/n$a;)V
+    invoke-direct/range {v0 .. v6}, Lcom/bumptech/glide/load/engine/i$b;-><init>(Lu6/a;Lu6/a;Lu6/a;Lu6/a;Lcom/bumptech/glide/load/engine/k;Lcom/bumptech/glide/load/engine/n$a;)V
 
     goto :goto_3
 
@@ -203,12 +203,12 @@
     iput-object v0, v7, Lcom/bumptech/glide/load/engine/i;->e:Lcom/bumptech/glide/load/engine/v;
 
     .line 18
-    invoke-interface {p1, p0}, Lw4/j;->h(Lw4/j$a;)V
+    invoke-interface {p1, p0}, Lt6/j;->g(Lt6/j$a;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lw4/j;Lw4/a$a;Lx4/a;Lx4/a;Lx4/a;Lx4/a;Z)V
+.method public constructor <init>(Lt6/j;Lt6/a$a;Lu6/a;Lu6/a;Lu6/a;Lu6/a;Z)V
     .locals 14
 
     const/4 v7, 0x0
@@ -240,12 +240,12 @@
     move/from16 v13, p7
 
     .line 1
-    invoke-direct/range {v0 .. v13}, Lcom/bumptech/glide/load/engine/i;-><init>(Lw4/j;Lw4/a$a;Lx4/a;Lx4/a;Lx4/a;Lx4/a;Lcom/bumptech/glide/load/engine/p;Lcom/bumptech/glide/load/engine/m;Lcom/bumptech/glide/load/engine/a;Lcom/bumptech/glide/load/engine/i$b;Lcom/bumptech/glide/load/engine/i$a;Lcom/bumptech/glide/load/engine/v;Z)V
+    invoke-direct/range {v0 .. v13}, Lcom/bumptech/glide/load/engine/i;-><init>(Lt6/j;Lt6/a$a;Lu6/a;Lu6/a;Lu6/a;Lu6/a;Lcom/bumptech/glide/load/engine/p;Lcom/bumptech/glide/load/engine/m;Lcom/bumptech/glide/load/engine/a;Lcom/bumptech/glide/load/engine/i$b;Lcom/bumptech/glide/load/engine/i$a;Lcom/bumptech/glide/load/engine/v;Z)V
 
     return-void
 .end method
 
-.method public static k(Ljava/lang/String;JLu4/b;)V
+.method public static k(Ljava/lang/String;JLr6/b;)V
     .locals 1
 
     const-string v0, " in "
@@ -255,7 +255,7 @@
 
     move-result-object p0
 
-    invoke-static {p1, p2}, Lm5/h;->a(J)D
+    invoke-static {p1, p2}, Lj7/i;->a(J)D
 
     move-result-wide p1
 
@@ -304,14 +304,91 @@
     return-void
 .end method
 
-.method public declared-synchronized b(Lcom/bumptech/glide/load/engine/j;Lu4/b;Lcom/bumptech/glide/load/engine/n;)V
+.method public b(Lr6/b;Lcom/bumptech/glide/load/engine/n;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lr6/b;",
+            "Lcom/bumptech/glide/load/engine/n<",
+            "*>;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->h:Lcom/bumptech/glide/load/engine/a;
+
+    invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/a;->d(Lr6/b;)V
+
+    .line 2
+    invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/n;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->c:Lt6/j;
+
+    invoke-interface {v0, p1, p2}, Lt6/j;->f(Lr6/b;Lcom/bumptech/glide/load/engine/s;)Lcom/bumptech/glide/load/engine/s;
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    iget-object p1, p0, Lcom/bumptech/glide/load/engine/i;->e:Lcom/bumptech/glide/load/engine/v;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p2, v0}, Lcom/bumptech/glide/load/engine/v;->a(Lcom/bumptech/glide/load/engine/s;Z)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public declared-synchronized c(Lcom/bumptech/glide/load/engine/j;Lr6/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;",
-            "Lu4/b;",
+            "Lr6/b;",
+            ")V"
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->a:Lcom/bumptech/glide/load/engine/p;
+
+    invoke-virtual {v0, p2, p1}, Lcom/bumptech/glide/load/engine/p;->e(Lr6/b;Lcom/bumptech/glide/load/engine/j;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 2
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public declared-synchronized d(Lcom/bumptech/glide/load/engine/j;Lr6/b;Lcom/bumptech/glide/load/engine/n;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bumptech/glide/load/engine/j<",
+            "*>;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/engine/n<",
             "*>;)V"
         }
@@ -332,94 +409,17 @@
     .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->h:Lcom/bumptech/glide/load/engine/a;
 
-    invoke-virtual {v0, p2, p3}, Lcom/bumptech/glide/load/engine/a;->a(Lu4/b;Lcom/bumptech/glide/load/engine/n;)V
+    invoke-virtual {v0, p2, p3}, Lcom/bumptech/glide/load/engine/a;->a(Lr6/b;Lcom/bumptech/glide/load/engine/n;)V
 
     .line 3
     :cond_0
     iget-object p3, p0, Lcom/bumptech/glide/load/engine/i;->a:Lcom/bumptech/glide/load/engine/p;
 
-    invoke-virtual {p3, p2, p1}, Lcom/bumptech/glide/load/engine/p;->e(Lu4/b;Lcom/bumptech/glide/load/engine/j;)V
+    invoke-virtual {p3, p2, p1}, Lcom/bumptech/glide/load/engine/p;->e(Lr6/b;Lcom/bumptech/glide/load/engine/j;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public c(Lu4/b;Lcom/bumptech/glide/load/engine/n;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lu4/b;",
-            "Lcom/bumptech/glide/load/engine/n<",
-            "*>;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->h:Lcom/bumptech/glide/load/engine/a;
-
-    invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/a;->d(Lu4/b;)V
-
-    .line 2
-    invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/n;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->c:Lw4/j;
-
-    invoke-interface {v0, p1, p2}, Lw4/j;->g(Lu4/b;Lcom/bumptech/glide/load/engine/s;)Lcom/bumptech/glide/load/engine/s;
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    iget-object p1, p0, Lcom/bumptech/glide/load/engine/i;->e:Lcom/bumptech/glide/load/engine/v;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p2, v0}, Lcom/bumptech/glide/load/engine/v;->a(Lcom/bumptech/glide/load/engine/s;Z)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public declared-synchronized d(Lcom/bumptech/glide/load/engine/j;Lu4/b;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bumptech/glide/load/engine/j<",
-            "*>;",
-            "Lu4/b;",
-            ")V"
-        }
-    .end annotation
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->a:Lcom/bumptech/glide/load/engine/p;
-
-    invoke-virtual {v0, p2, p1}, Lcom/bumptech/glide/load/engine/p;->e(Lu4/b;Lcom/bumptech/glide/load/engine/j;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2
     monitor-exit p0
 
     return-void
@@ -438,21 +438,21 @@
     .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->f:Lcom/bumptech/glide/load/engine/i$c;
 
-    invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/i$c;->a()Lw4/a;
+    invoke-virtual {v0}, Lcom/bumptech/glide/load/engine/i$c;->a()Lt6/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lw4/a;->clear()V
+    invoke-interface {v0}, Lt6/a;->clear()V
 
     return-void
 .end method
 
-.method public final f(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+.method public final f(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             ")",
             "Lcom/bumptech/glide/load/engine/n<",
             "*>;"
@@ -460,9 +460,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->c:Lw4/j;
+    iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->c:Lt6/j;
 
-    invoke-interface {v0, p1}, Lw4/j;->f(Lu4/b;)Lcom/bumptech/glide/load/engine/s;
+    invoke-interface {v0, p1}, Lt6/j;->h(Lr6/b;)Lcom/bumptech/glide/load/engine/s;
 
     move-result-object v2
 
@@ -499,7 +499,7 @@
 
     move-object v6, p0
 
-    invoke-direct/range {v1 .. v6}, Lcom/bumptech/glide/load/engine/n;-><init>(Lcom/bumptech/glide/load/engine/s;ZZLu4/b;Lcom/bumptech/glide/load/engine/n$a;)V
+    invoke-direct/range {v1 .. v6}, Lcom/bumptech/glide/load/engine/n;-><init>(Lcom/bumptech/glide/load/engine/s;ZZLr6/b;Lcom/bumptech/glide/load/engine/n$a;)V
 
     move-object p1, v0
 
@@ -507,7 +507,7 @@
     return-object p1
 .end method
 
-.method public g(Lcom/bumptech/glide/d;Ljava/lang/Object;Lu4/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZLu4/e;ZZZZLcom/bumptech/glide/request/i;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/load/engine/i$d;
+.method public g(Lcom/bumptech/glide/d;Ljava/lang/Object;Lr6/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZLr6/e;ZZZZLcom/bumptech/glide/request/i;Ljava/util/concurrent/Executor;)Lcom/bumptech/glide/load/engine/i$d;
     .locals 24
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -516,7 +516,7 @@
             ">(",
             "Lcom/bumptech/glide/d;",
             "Ljava/lang/Object;",
-            "Lu4/b;",
+            "Lr6/b;",
             "II",
             "Ljava/lang/Class<",
             "*>;",
@@ -527,9 +527,9 @@
             "Ljava/util/Map<",
             "Ljava/lang/Class<",
             "*>;",
-            "Lu4/h<",
+            "Lr6/h<",
             "*>;>;ZZ",
-            "Lu4/e;",
+            "Lr6/e;",
             "ZZZZ",
             "Lcom/bumptech/glide/request/i;",
             "Ljava/util/concurrent/Executor;",
@@ -545,7 +545,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lm5/h;->b()J
+    invoke-static {}, Lj7/i;->b()J
 
     move-result-wide v0
 
@@ -577,7 +577,7 @@
     move-object/from16 v8, p13
 
     .line 3
-    invoke-virtual/range {v0 .. v8}, Lcom/bumptech/glide/load/engine/m;->a(Ljava/lang/Object;Lu4/b;IILjava/util/Map;Ljava/lang/Class;Ljava/lang/Class;Lu4/e;)Lcom/bumptech/glide/load/engine/l;
+    invoke-virtual/range {v0 .. v8}, Lcom/bumptech/glide/load/engine/m;->a(Ljava/lang/Object;Lr6/b;IILjava/util/Map;Ljava/lang/Class;Ljava/lang/Class;Lr6/e;)Lcom/bumptech/glide/load/engine/l;
 
     move-result-object v0
 
@@ -639,7 +639,7 @@
     move-object/from16 v21, v0
 
     .line 6
-    invoke-virtual/range {v1 .. v23}, Lcom/bumptech/glide/load/engine/i;->n(Lcom/bumptech/glide/d;Ljava/lang/Object;Lu4/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZLu4/e;ZZZZLcom/bumptech/glide/request/i;Ljava/util/concurrent/Executor;Lcom/bumptech/glide/load/engine/l;J)Lcom/bumptech/glide/load/engine/i$d;
+    invoke-virtual/range {v1 .. v23}, Lcom/bumptech/glide/load/engine/i;->n(Lcom/bumptech/glide/d;Ljava/lang/Object;Lr6/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZLr6/e;ZZZZLcom/bumptech/glide/request/i;Ljava/util/concurrent/Executor;Lcom/bumptech/glide/load/engine/l;J)Lcom/bumptech/glide/load/engine/i$d;
 
     move-result-object v0
 
@@ -678,7 +678,7 @@
     throw v0
 .end method
 
-.method public final h(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+.method public final h(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -686,7 +686,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             ")",
             "Lcom/bumptech/glide/load/engine/n<",
             "*>;"
@@ -696,7 +696,7 @@
     .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/i;->h:Lcom/bumptech/glide/load/engine/a;
 
-    invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/a;->e(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+    invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/engine/a;->e(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
 
     move-result-object p1
 
@@ -709,12 +709,12 @@
     return-object p1
 .end method
 
-.method public final i(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+.method public final i(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             ")",
             "Lcom/bumptech/glide/load/engine/n<",
             "*>;"
@@ -722,7 +722,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/i;->f(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/i;->f(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
 
     move-result-object v0
 
@@ -734,7 +734,7 @@
     .line 3
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/i;->h:Lcom/bumptech/glide/load/engine/a;
 
-    invoke-virtual {v1, p1, v0}, Lcom/bumptech/glide/load/engine/a;->a(Lu4/b;Lcom/bumptech/glide/load/engine/n;)V
+    invoke-virtual {v1, p1, v0}, Lcom/bumptech/glide/load/engine/a;->a(Lr6/b;Lcom/bumptech/glide/load/engine/n;)V
 
     :cond_0
     return-object v0
@@ -763,7 +763,7 @@
 
     .line 1
     :cond_0
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/i;->h(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/i;->h(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
 
     move-result-object p2
 
@@ -777,14 +777,14 @@
     const-string v0, "Loaded resource from active resources"
 
     .line 3
-    invoke-static {v0, p3, p4, p1}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLu4/b;)V
+    invoke-static {v0, p3, p4, p1}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLr6/b;)V
 
     :cond_1
     return-object p2
 
     .line 4
     :cond_2
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/i;->i(Lu4/b;)Lcom/bumptech/glide/load/engine/n;
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/engine/i;->i(Lr6/b;)Lcom/bumptech/glide/load/engine/n;
 
     move-result-object p2
 
@@ -798,7 +798,7 @@
     const-string v0, "Loaded resource from cache"
 
     .line 6
-    invoke-static {v0, p3, p4, p1}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLu4/b;)V
+    invoke-static {v0, p3, p4, p1}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLr6/b;)V
 
     :cond_3
     return-object p2
@@ -863,7 +863,7 @@
     return-void
 .end method
 
-.method public final n(Lcom/bumptech/glide/d;Ljava/lang/Object;Lu4/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZLu4/e;ZZZZLcom/bumptech/glide/request/i;Ljava/util/concurrent/Executor;Lcom/bumptech/glide/load/engine/l;J)Lcom/bumptech/glide/load/engine/i$d;
+.method public final n(Lcom/bumptech/glide/d;Ljava/lang/Object;Lr6/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZLr6/e;ZZZZLcom/bumptech/glide/request/i;Ljava/util/concurrent/Executor;Lcom/bumptech/glide/load/engine/l;J)Lcom/bumptech/glide/load/engine/i$d;
     .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -872,7 +872,7 @@
             ">(",
             "Lcom/bumptech/glide/d;",
             "Ljava/lang/Object;",
-            "Lu4/b;",
+            "Lr6/b;",
             "II",
             "Ljava/lang/Class<",
             "*>;",
@@ -883,9 +883,9 @@
             "Ljava/util/Map<",
             "Ljava/lang/Class<",
             "*>;",
-            "Lu4/h<",
+            "Lr6/h<",
             "*>;>;ZZ",
-            "Lu4/e;",
+            "Lr6/e;",
             "ZZZZ",
             "Lcom/bumptech/glide/request/i;",
             "Ljava/util/concurrent/Executor;",
@@ -910,7 +910,7 @@
 
     move/from16 v12, p17
 
-    invoke-virtual {v3, v15, v12}, Lcom/bumptech/glide/load/engine/p;->a(Lu4/b;Z)Lcom/bumptech/glide/load/engine/j;
+    invoke-virtual {v3, v15, v12}, Lcom/bumptech/glide/load/engine/p;->a(Lr6/b;Z)Lcom/bumptech/glide/load/engine/j;
 
     move-result-object v3
 
@@ -927,7 +927,7 @@
     const-string v2, "Added to existing load"
 
     .line 4
-    invoke-static {v2, v13, v14, v15}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLu4/b;)V
+    invoke-static {v2, v13, v14, v15}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLr6/b;)V
 
     .line 5
     :cond_0
@@ -952,7 +952,7 @@
     move/from16 v8, p17
 
     .line 7
-    invoke-virtual/range {v3 .. v8}, Lcom/bumptech/glide/load/engine/i$b;->a(Lu4/b;ZZZZ)Lcom/bumptech/glide/load/engine/j;
+    invoke-virtual/range {v3 .. v8}, Lcom/bumptech/glide/load/engine/i$b;->a(Lr6/b;ZZZZ)Lcom/bumptech/glide/load/engine/j;
 
     move-result-object v11
 
@@ -996,14 +996,14 @@
     move-object/from16 v18, p13
 
     .line 9
-    invoke-virtual/range {v3 .. v19}, Lcom/bumptech/glide/load/engine/i$a;->a(Lcom/bumptech/glide/d;Ljava/lang/Object;Lcom/bumptech/glide/load/engine/l;Lu4/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZZLu4/e;Lcom/bumptech/glide/load/engine/DecodeJob$b;)Lcom/bumptech/glide/load/engine/DecodeJob;
+    invoke-virtual/range {v3 .. v19}, Lcom/bumptech/glide/load/engine/i$a;->a(Lcom/bumptech/glide/d;Ljava/lang/Object;Lcom/bumptech/glide/load/engine/l;Lr6/b;IILjava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/engine/h;Ljava/util/Map;ZZZLr6/e;Lcom/bumptech/glide/load/engine/DecodeJob$b;)Lcom/bumptech/glide/load/engine/DecodeJob;
 
     move-result-object v3
 
     .line 10
     iget-object v4, v0, Lcom/bumptech/glide/load/engine/i;->a:Lcom/bumptech/glide/load/engine/p;
 
-    invoke-virtual {v4, v2, v1}, Lcom/bumptech/glide/load/engine/p;->d(Lu4/b;Lcom/bumptech/glide/load/engine/j;)V
+    invoke-virtual {v4, v2, v1}, Lcom/bumptech/glide/load/engine/p;->d(Lr6/b;Lcom/bumptech/glide/load/engine/j;)V
 
     move-object v5, v1
 
@@ -1029,7 +1029,7 @@
     move-wide/from16 v6, p21
 
     .line 14
-    invoke-static {v2, v6, v7, v4}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLu4/b;)V
+    invoke-static {v2, v6, v7, v4}, Lcom/bumptech/glide/load/engine/i;->k(Ljava/lang/String;JLr6/b;)V
 
     .line 15
     :cond_2

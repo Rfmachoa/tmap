@@ -74,7 +74,7 @@
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-virtual {p1}, Landroid/view/View;->cancelPendingInputEvents()V
+    invoke-static {p1}, Landroidx/activity/ComponentActivity$c;->a(Landroid/view/View;)V
 
     :cond_1
     return-void

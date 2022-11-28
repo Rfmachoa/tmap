@@ -30,7 +30,7 @@
 
 .field public h:Ljava/lang/String;
 
-.field public i:Lcom/skt/tmap/util/w$b;
+.field public i:Lcom/skt/tmap/util/y$b;
 
 
 # direct methods
@@ -86,7 +86,7 @@
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/TmapApplication$a;-><init>(Lcom/skt/tmap/TmapApplication;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/TmapApplication;->i:Lcom/skt/tmap/util/w$b;
+    iput-object v0, p0, Lcom/skt/tmap/TmapApplication;->i:Lcom/skt/tmap/util/y$b;
 
     return-void
 .end method
@@ -141,13 +141,13 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->j1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->o1(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -174,7 +174,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 5
-    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->k1(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/util/TmapSharedPreference;->p1(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -182,13 +182,13 @@
 
     const/4 p1, 0x1
 
-    const-string/jumbo v1, "tmap_ble_foreground_service"
+    const-string v1, "tmap_ble_foreground_service"
 
     .line 6
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 7
-    invoke-static {p0, v0}, Landroidx/core/content/d;->u(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->startForegroundService(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -327,7 +327,7 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lm1/c;
+    new-instance v0, Lf2/d;
 
     const-string v1, "com.google.android.gms.fonts"
 
@@ -337,7 +337,7 @@
 
     const v4, 0x7f030004
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lm1/c;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lf2/d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 2
     new-instance v1, Landroidx/emoji/text/b;
@@ -346,7 +346,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Landroidx/emoji/text/b;-><init>(Landroid/content/Context;Lm1/c;)V
+    invoke-direct {v1, v2, v0}, Landroidx/emoji/text/b;-><init>(Landroid/content/Context;Lf2/d;)V
 
     const/4 v0, 0x1
 
@@ -367,7 +367,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f160007
+    const v1, 0x7f170008
 
     .line 2
     invoke-virtual {v0, v1}, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;->setDefaultsAsync(I)Lcom/google/android/gms/tasks/Task;
@@ -401,7 +401,7 @@
 
     const-string v3, "/crash/"
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -510,7 +510,7 @@
 
     const-string v1, "runCaptureLoggingException"
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -565,7 +565,7 @@
     iput-object v0, p0, Lcom/skt/tmap/TmapApplication;->f:Landroidx/core/app/NotificationCompat$e;
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/util/e;->B()I
+    invoke-static {}, Lcom/skt/tmap/util/g;->E()I
 
     move-result v2
 
@@ -666,7 +666,7 @@
 
     iget-object p2, p0, Lcom/skt/tmap/TmapApplication;->h:Ljava/lang/String;
 
-    const p3, 0x7f130401
+    const p3, 0x7f140461
 
     invoke-virtual {p0, p3}, Landroid/app/Application;->getString(I)Ljava/lang/String;
 
@@ -676,7 +676,7 @@
 
     invoke-direct {p1, p2, p3, v0}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
 
-    const p2, 0x7f130400
+    const p2, 0x7f140460
 
     .line 19
     invoke-virtual {p0, p2}, Landroid/app/Application;->getString(I)Ljava/lang/String;
@@ -729,7 +729,7 @@
     .line 3
     iget-object v1, v0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v1}, Lcom/skt/tmap/util/HiddenSettingData;->j()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/tmap/util/HiddenSettingData;->n()Ljava/lang/String;
 
     move-result-object v1
 
@@ -953,7 +953,7 @@
 
     .line 14
     :goto_5
-    sget-boolean v1, Lcom/skt/tmap/GlobalDataManager;->w0:Z
+    sget-boolean v1, Lcom/skt/tmap/GlobalDataManager;->v0:Z
 
     if-nez v1, :cond_7
 
@@ -962,7 +962,7 @@
 
     .line 16
     :cond_7
-    sget-object v1, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->b:Lcom/skt/tmap/log/AppsFlyerLibWrapper;
+    sget-object v1, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->a:Lcom/skt/tmap/log/AppsFlyerLibWrapper;
 
     invoke-virtual {v1, p0}, Lcom/skt/tmap/log/AppsFlyerLibWrapper;->b(Landroid/content/Context;)V
 
@@ -1009,31 +1009,31 @@
     const-string v2, "INIT T map Application Process"
 
     .line 22
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/c1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/skt/tmap/util/j1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 23
-    invoke-static {p0}, Lcom/skt/tmap/util/y1;->r(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/j2;->r(Landroid/content/Context;)V
 
     .line 24
-    invoke-static {p0}, Lcom/skt/tmap/util/m0;->g(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/s0;->g(Landroid/content/Context;)V
 
     .line 25
-    invoke-static {p0}, Lcom/skt/tmap/util/w;->j(Landroid/app/Application;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/y;->j(Landroid/app/Application;)V
 
     .line 26
-    invoke-static {}, Lcom/skt/tmap/util/w;->g()Lcom/skt/tmap/util/w;
+    invoke-static {}, Lcom/skt/tmap/util/y;->g()Lcom/skt/tmap/util/y;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/skt/tmap/TmapApplication;->i:Lcom/skt/tmap/util/w$b;
+    iget-object v3, p0, Lcom/skt/tmap/TmapApplication;->i:Lcom/skt/tmap/util/y$b;
 
-    invoke-virtual {v2, v3}, Lcom/skt/tmap/util/w;->f(Lcom/skt/tmap/util/w$b;)V
+    invoke-virtual {v2, v3}, Lcom/skt/tmap/util/y;->f(Lcom/skt/tmap/util/y$b;)V
 
     .line 27
     iput-boolean v6, p0, Lcom/skt/tmap/TmapApplication;->b:Z
 
     .line 28
-    invoke-static {}, Lcom/skt/tmap/dialog/e;->b()V
+    invoke-static {}, Lcom/skt/tmap/dialog/i;->b()V
 
     .line 29
     invoke-virtual {p0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
@@ -1047,10 +1047,10 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/skt/tmap/util/e;->f(Landroid/content/Context;)V
+    invoke-static {v2}, Lcom/skt/tmap/util/g;->g(Landroid/content/Context;)V
 
     .line 31
-    sget-boolean v2, Lcom/skt/tmap/GlobalDataManager;->w0:Z
+    sget-boolean v2, Lcom/skt/tmap/GlobalDataManager;->v0:Z
 
     if-eqz v2, :cond_a
 
@@ -1167,16 +1167,16 @@
     const-string v2, "StrictMode On"
 
     .line 54
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 55
     :cond_a
-    invoke-static {p0}, Lcom/skt/tmap/util/u0;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/b1;->b(Landroid/content/Context;)V
 
     .line 56
     iget-object v0, v0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->Q()Z
+    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->Y()Z
 
     move-result v0
 

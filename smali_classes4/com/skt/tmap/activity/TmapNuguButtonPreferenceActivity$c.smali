@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;->B5()V
+    value = Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;->M5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -59,7 +59,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity$c$a;-><init>(Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity$c;Landroid/view/View;)V
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e0;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/l0;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method

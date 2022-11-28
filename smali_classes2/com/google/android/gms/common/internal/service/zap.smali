@@ -1,16 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/service/zap;
 .super Lcom/google/android/gms/common/internal/GmsClient;
-.source "com.google.android.gms:play-services-base@@18.0.1"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/internal/GmsClient<",
-        "Lcom/google/android/gms/common/internal/service/zai;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
@@ -91,7 +81,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/internal/base/zad;->zab:[Lcom/google/android/gms/common/Feature;
+    sget-object v0, Lcom/google/android/gms/internal/base/zaf;->zab:[Lcom/google/android/gms/common/Feature;
 
     return-object v0
 .end method

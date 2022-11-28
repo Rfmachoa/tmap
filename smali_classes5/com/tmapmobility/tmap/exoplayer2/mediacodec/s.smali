@@ -39,7 +39,7 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->a:Landroid/media/MediaCodec;
 
     .line 4
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -112,38 +112,13 @@
     return-object v0
 .end method
 
-.method public b(IILvd/d;JI)V
-    .locals 7
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->a:Landroid/media/MediaCodec;
-
-    .line 2
-    invoke-virtual {p3}, Lvd/d;->a()Landroid/media/MediaCodec$CryptoInfo;
-
-    move-result-object v3
-
-    move v1, p1
-
-    move v2, p2
-
-    move-wide v4, p4
-
-    move v6, p6
-
-    .line 3
-    invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueSecureInputBuffer(IILandroid/media/MediaCodec$CryptoInfo;JI)V
-
-    return-void
-.end method
-
-.method public c(I)Ljava/nio/ByteBuffer;
+.method public b(I)Ljava/nio/ByteBuffer;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -162,7 +137,7 @@
     :cond_0
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->b:[Ljava/nio/ByteBuffer;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -173,7 +148,7 @@
     return-object p1
 .end method
 
-.method public d(Landroid/view/Surface;)V
+.method public c(Landroid/view/Surface;)V
     .locals 1
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x17
@@ -187,18 +162,7 @@
     return-void
 .end method
 
-.method public e(I)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->a:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0, p1}, Landroid/media/MediaCodec;->setVideoScalingMode(I)V
-
-    return-void
-.end method
-
-.method public f(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$c;Landroid/os/Handler;)V
+.method public d(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$c;Landroid/os/Handler;)V
     .locals 2
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x17
@@ -216,18 +180,18 @@
     return-void
 .end method
 
-.method public flush()V
+.method public e(I)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->a:Landroid/media/MediaCodec;
 
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->flush()V
+    invoke-virtual {v0, p1}, Landroid/media/MediaCodec;->setVideoScalingMode(I)V
 
     return-void
 .end method
 
-.method public g(IIIJI)V
+.method public f(IIIJI)V
     .locals 7
 
     .line 1
@@ -244,6 +208,42 @@
     move v6, p6
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
+
+    return-void
+.end method
+
+.method public flush()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->a:Landroid/media/MediaCodec;
+
+    invoke-virtual {v0}, Landroid/media/MediaCodec;->flush()V
+
+    return-void
+.end method
+
+.method public g(IILyf/d;JI)V
+    .locals 7
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->a:Landroid/media/MediaCodec;
+
+    .line 2
+    invoke-virtual {p3}, Lyf/d;->a()Landroid/media/MediaCodec$CryptoInfo;
+
+    move-result-object v3
+
+    move v1, p1
+
+    move v2, p2
+
+    move-wide v4, p4
+
+    move v6, p6
+
+    .line 3
+    invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueSecureInputBuffer(IILandroid/media/MediaCodec$CryptoInfo;JI)V
 
     return-void
 .end method
@@ -333,7 +333,7 @@
     if-ne v0, v1, :cond_1
 
     .line 2
-    sget v2, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v2, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v3, 0x15
 
@@ -371,7 +371,7 @@
     .end annotation
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -390,7 +390,7 @@
     :cond_0
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s;->c:[Ljava/nio/ByteBuffer;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

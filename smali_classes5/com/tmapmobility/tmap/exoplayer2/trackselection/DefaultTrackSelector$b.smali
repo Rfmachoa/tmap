@@ -1,5 +1,5 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;
-.super Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;
+.super Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;
 .source "DefaultTrackSelector.java"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f<",
+        "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h<",
         "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;",
         ">;",
         "Ljava/lang/Comparable<",
@@ -31,17 +31,17 @@
 # instance fields
 .field public final K0:Z
 
-.field public final V0:I
-
-.field public final W0:I
-
 .field public final X0:I
 
 .field public final Y0:I
 
-.field public final Z0:Z
+.field public final Z0:I
 
-.field public final a1:Z
+.field public final a1:I
+
+.field public final b1:Z
+
+.field public final c1:Z
 
 .field public final e:I
 
@@ -52,7 +52,7 @@
     .end annotation
 .end field
 
-.field public final h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+.field public final h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
 .field public final i:Z
 
@@ -70,21 +70,33 @@
 
 
 # direct methods
-.method public constructor <init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;IZ)V
-    .locals 4
+.method public constructor <init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;IZLcom/google/common/base/Predicate;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
+            "I",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;",
+            "IZ",
+            "Lcom/google/common/base/Predicate<",
+            "Lcom/tmapmobility/tmap/exoplayer2/Format;",
+            ">;)V"
+        }
+    .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;-><init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;-><init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;I)V
 
     .line 2
-    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->c:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->S(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->V(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -93,7 +105,7 @@
     const/4 p1, 0x0
 
     .line 4
-    invoke-static {p5, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->K(IZ)Z
+    invoke-static {p5, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->N(IZ)Z
 
     move-result p2
 
@@ -103,7 +115,7 @@
 
     .line 5
     :goto_0
-    iget-object p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->u:Lcom/google/common/collect/ImmutableList;
+    iget-object p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->u:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
 
@@ -114,9 +126,9 @@
     if-ge p2, p3, :cond_1
 
     .line 6
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget-object v1, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->u:Lcom/google/common/collect/ImmutableList;
+    iget-object v1, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->u:Lcom/google/common/collect/ImmutableList;
 
     .line 7
     invoke-interface {v1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -126,7 +138,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 8
-    invoke-static {p3, v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->B(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/String;Z)I
+    invoke-static {p3, v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->F(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/String;Z)I
 
     move-result p3
 
@@ -152,21 +164,21 @@
     iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->j:I
 
     .line 11
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget p2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->e:I
 
-    iget p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->k0:I
+    iget p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->k0:I
 
     .line 12
-    invoke-static {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->u(II)I
+    invoke-static {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->w(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->l:I
 
     .line 13
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->e:I
 
@@ -210,99 +222,103 @@
     iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->K0:Z
 
     .line 15
-    iget p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->d1:I
+    iget p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->f1:I
 
-    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->V0:I
+    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
 
     .line 16
-    iget v2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->e1:I
+    iget v2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->g1:I
 
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->W0:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Y0:I
 
     .line 17
-    iget p2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->h:I
+    iget v2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->h:I
 
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:I
 
-    const/4 v2, -0x1
+    const/4 v3, -0x1
 
-    if-eq p2, v2, :cond_5
+    if-eq v2, v3, :cond_5
 
     .line 18
-    iget v3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->V0:I
+    iget v4, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->X0:I
 
-    if-gt p2, v3, :cond_6
+    if-gt v2, v4, :cond_7
 
     :cond_5
-    if-eq p3, v2, :cond_7
+    if-eq p3, v3, :cond_6
 
-    iget p2, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->K0:I
+    iget v2, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->K0:I
 
-    if-gt p3, p2, :cond_6
+    if-gt p3, v2, :cond_7
+
+    .line 19
+    :cond_6
+    invoke-interface {p7, p2}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_7
+
+    move p2, v1
 
     goto :goto_5
 
-    :cond_6
+    :cond_7
     move p2, p1
 
-    goto :goto_6
-
-    :cond_7
     :goto_5
-    move p2, v1
-
-    :goto_6
     iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->f:Z
 
-    .line 19
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->t0()[Ljava/lang/String;
+    .line 20
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->t0()[Ljava/lang/String;
 
     move-result-object p2
 
     move p3, p1
 
-    .line 20
-    :goto_7
-    array-length v2, p2
-
-    if-ge p3, v2, :cond_9
-
     .line 21
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    :goto_6
+    array-length p7, p2
 
-    aget-object v3, p2, p3
+    if-ge p3, p7, :cond_9
 
     .line 22
-    invoke-static {v2, v3, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->B(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/String;Z)I
+    iget-object p7, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    move-result v2
+    aget-object v2, p2, p3
 
-    if-lez v2, :cond_8
+    .line 23
+    invoke-static {p7, v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->F(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/String;Z)I
 
-    goto :goto_8
+    move-result p7
+
+    if-lez p7, :cond_8
+
+    goto :goto_7
 
     :cond_8
     add-int/lit8 p3, p3, 0x1
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_9
-    move v2, p1
+    move p7, p1
 
     move p3, v0
 
-    .line 23
-    :goto_8
+    .line 24
+    :goto_7
     iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->u:I
 
-    .line 24
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->k0:I
+    .line 25
+    iput p7, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->k0:I
 
     move p2, p1
 
-    .line 25
-    :goto_9
-    iget-object p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->W0:Lcom/google/common/collect/ImmutableList;
+    .line 26
+    :goto_8
+    iget-object p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->Y0:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
 
@@ -310,21 +326,21 @@
 
     if-ge p2, p3, :cond_b
 
-    .line 26
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    .line 27
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object p3, p3, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
 
     if-eqz p3, :cond_a
 
-    iget-object v2, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->W0:Lcom/google/common/collect/ImmutableList;
+    iget-object p7, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->Y0:Lcom/google/common/collect/ImmutableList;
 
-    .line 27
-    invoke-interface {v2, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 28
+    invoke-interface {p7, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p7
 
-    invoke-virtual {p3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p3, p7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
@@ -332,20 +348,20 @@
 
     move v0, p2
 
-    goto :goto_a
+    goto :goto_9
 
     :cond_a
     add-int/lit8 p2, p2, 0x1
 
-    goto :goto_9
-
-    .line 28
-    :cond_b
-    :goto_a
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Y0:I
+    goto :goto_8
 
     .line 29
-    invoke-static {p5}, Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;->a(I)I
+    :cond_b
+    :goto_9
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:I
+
+    .line 30
+    invoke-static {p5}, Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;->c(I)I
 
     move-result p2
 
@@ -355,15 +371,15 @@
 
     move p2, v1
 
-    goto :goto_b
+    goto :goto_a
 
     :cond_c
     move p2, p1
 
-    :goto_b
-    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:Z
+    :goto_a
+    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->b1:Z
 
-    .line 30
+    .line 31
     invoke-static {p5}, Lcom/tmapmobility/tmap/exoplayer2/RendererCapabilities;->i(I)I
 
     move-result p2
@@ -375,9 +391,9 @@
     move p1, v1
 
     :cond_d
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c1:Z
 
-    .line 31
+    .line 32
     invoke-virtual {p0, p5, p6}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->f(IZ)I
 
     move-result p1
@@ -421,14 +437,17 @@
     return p0
 .end method
 
-.method public static e(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[IZ)Lcom/google/common/collect/ImmutableList;
-    .locals 10
+.method public static e(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;[IZLcom/google/common/base/Predicate;)Lcom/google/common/collect/ImmutableList;
+    .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;",
-            "[IZ)",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;",
+            "[IZ",
+            "Lcom/google/common/base/Predicate<",
+            "Lcom/tmapmobility/tmap/exoplayer2/Format;",
+            ">;)",
             "Lcom/google/common/collect/ImmutableList<",
             "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;",
             ">;"
@@ -442,18 +461,20 @@
 
     const/4 v1, 0x0
 
+    move-object v10, p1
+
     .line 2
     :goto_0
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
+    iget v2, v10, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
 
     if-ge v1, v2, :cond_0
 
     .line 3
-    new-instance v9, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;
+    new-instance v11, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;
 
     aget v7, p3, v1
 
-    move-object v2, v9
+    move-object v2, v11
 
     move v3, p0
 
@@ -463,11 +484,13 @@
 
     move-object v6, p2
 
-    move v8, p4
+    move/from16 v8, p4
 
-    invoke-direct/range {v2 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;-><init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;IZ)V
+    move-object/from16 v9, p5
 
-    invoke-virtual {v0, v9}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
+    invoke-direct/range {v2 .. v9}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;-><init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;IZLcom/google/common/base/Predicate;)V
+
+    invoke-virtual {v0, v11}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -477,9 +500,9 @@
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 
@@ -493,7 +516,7 @@
     return v0
 .end method
 
-.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;)Z
+.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;)Z
     .locals 0
 
     .line 1
@@ -532,7 +555,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->w()Lcom/google/common/collect/Ordering;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->y()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
 
@@ -540,7 +563,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->w()Lcom/google/common/collect/Ordering;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->y()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
 
@@ -673,14 +696,14 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Y0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:I
 
     .line 20
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Y0:I
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:I
 
     .line 21
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -701,14 +724,14 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:I
 
     .line 24
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:I
 
     .line 25
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -716,13 +739,13 @@
     move-result-object v3
 
     .line 26
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
-    iget-boolean v4, v4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->a1:Z
+    iget-boolean v4, v4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->d1:Z
 
     if-eqz v4, :cond_1
 
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->w()Lcom/google/common/collect/Ordering;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->y()Lcom/google/common/collect/Ordering;
 
     move-result-object v4
 
@@ -733,7 +756,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->x()Lcom/google/common/collect/Ordering;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->z()Lcom/google/common/collect/Ordering;
 
     move-result-object v4
 
@@ -743,32 +766,32 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->b1:Z
 
-    iget-boolean v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:Z
+    iget-boolean v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->b1:Z
 
     .line 28
     invoke-virtual {v1, v2, v3}, Lcom/google/common/collect/ComparisonChain;->compareFalseFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c1:Z
 
-    iget-boolean v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:Z
+    iget-boolean v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c1:Z
 
     .line 29
     invoke-virtual {v1, v2, v3}, Lcom/google/common/collect/ComparisonChain;->compareFalseFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->V0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
 
     .line 30
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->V0:I
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -778,14 +801,14 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->W0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Y0:I
 
     .line 31
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->W0:I
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Y0:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -795,14 +818,14 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:I
 
     .line 32
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->X0:I
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:I
 
     .line 33
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -814,7 +837,7 @@
 
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->g:Ljava/lang/String;
 
-    invoke-static {v4, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -823,7 +846,7 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->x()Lcom/google/common/collect/Ordering;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->z()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
 
@@ -845,11 +868,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
-    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->R1:Z
+    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->V1:Z
 
-    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->K(IZ)Z
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->N(IZ)Z
 
     move-result v0
 
@@ -865,9 +888,9 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
-    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->M1:Z
+    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->P1:Z
 
     if-nez v0, :cond_1
 
@@ -875,7 +898,7 @@
 
     .line 3
     :cond_1
-    invoke-static {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->K(IZ)Z
+    invoke-static {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->N(IZ)Z
 
     move-result p1
 
@@ -885,7 +908,7 @@
 
     if-eqz p1, :cond_3
 
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->h:I
 
@@ -893,17 +916,17 @@
 
     if-eq p1, v0, :cond_3
 
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
-    iget-boolean v0, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->b1:Z
-
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->a1:Z
+    iget-boolean v0, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->e1:Z
 
     if-nez v0, :cond_3
 
-    iget-boolean p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->T1:Z
+    iget-boolean v0, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;->d1:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->X1:Z
 
     if-nez p1, :cond_2
 
@@ -925,38 +948,38 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
-    iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->P1:Z
+    iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->S1:Z
 
     const/4 v2, -0x1
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/Format;->d1:I
+    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/Format;->f1:I
 
     if-eq v1, v2, :cond_3
 
-    iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget v3, v3, Lcom/tmapmobility/tmap/exoplayer2/Format;->d1:I
+    iget v3, v3, Lcom/tmapmobility/tmap/exoplayer2/Format;->f1:I
 
     if-ne v1, v3, :cond_3
 
     :cond_0
-    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->N1:Z
+    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->Q1:Z
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v1, v1, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
 
@@ -968,38 +991,38 @@
     if-eqz v0, :cond_3
 
     :cond_1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->h:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
 
-    iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->O1:Z
+    iget-boolean v1, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->R1:Z
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/Format;->e1:I
+    iget v1, v1, Lcom/tmapmobility/tmap/exoplayer2/Format;->g1:I
 
     if-eq v1, v2, :cond_3
 
-    iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$h;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget v2, v2, Lcom/tmapmobility/tmap/exoplayer2/Format;->e1:I
+    iget v2, v2, Lcom/tmapmobility/tmap/exoplayer2/Format;->g1:I
 
     if-ne v1, v2, :cond_3
 
     :cond_2
-    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->Q1:Z
+    iget-boolean v0, v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;->T1:Z
 
     if-nez v0, :cond_4
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->b1:Z
 
-    iget-boolean v1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->Z0:Z
+    iget-boolean v1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->b1:Z
 
     if-ne v0, v1, :cond_3
 
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c1:Z
 
-    iget-boolean p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->a1:Z
+    iget-boolean p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$b;->c1:Z
 
     if-ne v0, p1, :cond_3
 

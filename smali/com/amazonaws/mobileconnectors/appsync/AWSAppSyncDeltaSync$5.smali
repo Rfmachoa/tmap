@@ -115,9 +115,9 @@
     return-void
 .end method
 
-.method public onResponse(Lc4/i;)V
+.method public onResponse(Lz5/i;)V
     .locals 6
-    .param p1    # Lc4/i;
+    .param p1    # Lz5/i;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -139,7 +139,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2, v0}, Lj2/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2
     iget-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync$5;->this$0:Lcom/amazonaws/mobileconnectors/appsync/AWSAppSyncDeltaSync;
@@ -282,7 +288,7 @@
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lc4/i;)V
+    invoke-interface {v1, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lz5/i;)V
 
     .line 13
     :cond_1

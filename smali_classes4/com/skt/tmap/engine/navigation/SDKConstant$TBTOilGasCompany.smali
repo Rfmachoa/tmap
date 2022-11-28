@@ -22,11 +22,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u001c\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008j\u0002\u0008\tj\u0002\u0008\nj\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013j\u0002\u0008\u0014j\u0002\u0008\u0015j\u0002\u0008\u0016j\u0002\u0008\u0017j\u0002\u0008\u0018j\u0002\u0008\u0019j\u0002\u0008\u001aj\u0002\u0008\u001bj\u0002\u0008\u001cj\u0002\u0008\u001dj\u0002\u0008\u001e\u00a8\u0006\u001f"
     }
@@ -62,14 +57,15 @@
         "gasEX",
         "oilEX",
         "NA",
-        "navigation-sdk_release"
+        "TmapEngineCommonData_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -133,376 +129,478 @@
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method private static final synthetic $values()[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    .locals 3
 
     const/16 v0, 0x18
 
     new-array v0, v0, [Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSK:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v2, "oilSK"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aput-object v1, v0, v2
 
-    const-string v4, "SK \uc8fc\uc720\uc18c"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilGS:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    .line 1
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/4 v2, 0x1
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSK:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    aput-object v1, v0, v2
 
-    aput-object v1, v0, v3
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilHD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    const/4 v2, 0x2
 
-    const-string v2, "oilGS"
+    aput-object v1, v0, v2
 
-    const/4 v3, 0x1
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSOil:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v4, "GS\uce7c\ud14d\uc2a4 \uc8fc\uc720\uc18c"
+    const/4 v2, 0x3
 
-    .line 2
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aput-object v1, v0, v2
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilGS:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilTiger:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    aput-object v1, v0, v3
+    const/4 v2, 0x4
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    aput-object v1, v0, v2
 
-    const-string v2, "oilHD"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilInCheon:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const/4 v3, 0x2
+    const/4 v2, 0x5
 
-    const-string/jumbo v4, "\ud604\ub300\uc624\uc77c \uc8fc\uc720\uc18c"
+    aput-object v1, v0, v2
 
-    .line 3
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilNC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilHD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    const/4 v2, 0x6
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilNH:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v2, "oilSOil"
+    const/4 v2, 0x7
 
-    const/4 v3, 0x3
+    aput-object v1, v0, v2
 
-    const-string v4, "S-Oil \uc8fc\uc720\uc18c"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSevenD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    .line 4
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/16 v2, 0x8
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSOil:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    aput-object v1, v0, v2
 
-    aput-object v1, v0, v3
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilEconomic:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    const/16 v2, 0x9
 
-    const-string v2, "oilTiger"
+    aput-object v1, v0, v2
 
-    const/4 v3, 0x4
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilETC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v4, "TigerOil \uc8fc\uc720\uc18c"
+    const/16 v2, 0xa
 
-    .line 5
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aput-object v1, v0, v2
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilTiger:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSK:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    aput-object v1, v0, v3
+    const/16 v2, 0xb
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    aput-object v1, v0, v2
 
-    const-string v2, "oilInCheon"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasGS:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const/4 v3, 0x5
+    const/16 v2, 0xc
 
-    const-string/jumbo v4, "\uc778\ucc9c\uc815\uc720 \uc8fc\uc720\uc18c"
+    aput-object v1, v0, v2
 
-    .line 6
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasHD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilInCheon:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    const/16 v2, 0xd
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSOil:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v2, "oilNC"
+    const/16 v2, 0xe
 
-    const/4 v3, 0x6
+    aput-object v1, v0, v2
 
-    const-string v4, "NC-Oil \uc8fc\uc720\uc18c"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasE1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    .line 7
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/16 v2, 0xf
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilNC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    aput-object v1, v0, v2
 
-    aput-object v1, v0, v3
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasInCheon:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    const/16 v2, 0x10
 
-    const-string v2, "oilNH"
+    aput-object v1, v0, v2
 
-    const/4 v3, 0x7
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasNC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v4, "NH-Oil \uc8fc\uc720\uc18c"
+    const/16 v2, 0x11
 
-    .line 8
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    aput-object v1, v0, v2
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilNH:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasNH:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    aput-object v1, v0, v3
+    const/16 v2, 0x12
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    aput-object v1, v0, v2
 
-    const-string v2, "oilSevenD"
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSevenD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const/16 v3, 0x8
+    const/16 v2, 0x13
 
-    const-string v4, "SevenD-Oil \uc8fc\uc720\uc18c"
+    aput-object v1, v0, v2
 
-    .line 9
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasETC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSevenD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    const/16 v2, 0x14
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasEX:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    const-string v2, "oilEconomic"
+    const/16 v2, 0x15
 
-    const/16 v3, 0x9
+    aput-object v1, v0, v2
 
-    const-string/jumbo v4, "\uc54c\ub730 \uc8fc\uc720\uc18c"
-
-    .line 10
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilEconomic:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "oilETC"
-
-    const/16 v3, 0xa
-
-    const-string/jumbo v4, "\uae30\ud0c0 \uc8fc\uc720\uc18c"
-
-    .line 11
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilETC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasSK"
-
-    const/16 v3, 0xb
-
-    const-string v4, "SK \ucda9\uc804\uc18c"
-
-    .line 12
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSK:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasGS"
-
-    const/16 v3, 0xc
-
-    const-string v4, "GS\uce7c\ud14d\uc2a4 \ucda9\uc804\uc18c"
-
-    .line 13
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasGS:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasHD"
-
-    const/16 v3, 0xd
-
-    const-string/jumbo v4, "\ud604\ub300\uc624\uc77c \ucda9\uc804\uc18c"
-
-    .line 14
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasHD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasSOil"
-
-    const/16 v3, 0xe
-
-    const-string v4, "S-Oil \ucda9\uc804\uc18c"
-
-    .line 15
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSOil:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasE1"
-
-    const/16 v3, 0xf
-
-    const-string v4, "E1 \ucda9\uc804\uc18c"
-
-    .line 16
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasE1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasInCheon"
-
-    const/16 v3, 0x10
-
-    const-string/jumbo v4, "\uc778\ucc9c\uc815\uc720 \ucda9\uc804\uc18c"
-
-    .line 17
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasInCheon:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasNC"
-
-    const/16 v3, 0x11
-
-    const-string v4, "NC-Oil \ucda9\uc804\uc18c"
-
-    .line 18
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasNC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasNH"
-
-    const/16 v3, 0x12
-
-    const-string v4, "NH-Oil \ucda9\uc804\uc18c"
-
-    .line 19
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasNH:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasSevenD"
-
-    const/16 v3, 0x13
-
-    const-string v4, "SevenD-Oil \ucda9\uc804\uc18c"
-
-    .line 20
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSevenD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasETC"
-
-    const/16 v3, 0x14
-
-    const-string/jumbo v4, "\uae30\ud0c0 \ucda9\uc804\uc18c"
-
-    .line 21
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasETC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "gasEX"
-
-    const/16 v3, 0x15
-
-    const-string v4, "EX \ucda9\uc804\uc18c"
-
-    .line 22
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasEX:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    aput-object v1, v0, v3
-
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "oilEX"
-
-    const/16 v3, 0x16
-
-    const-string v4, "EX \uc8fc\uc720\uc18c"
-
-    .line 23
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilEX:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilEX:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
     const/16 v2, 0x16
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
-
-    const-string v2, "NA"
-
-    const/16 v3, 0x17
-
-    const-string v4, ""
-
-    .line 24
-    invoke-direct {v1, v2, v3, v4}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->NA:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+    sget-object v1, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->NA:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
     const/16 v2, 0x17
 
     aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static constructor <clinit>()V
+    .locals 4
+
+    .line 1
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilSK"
+
+    const/4 v2, 0x0
+
+    const-string v3, "SK \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSK:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 2
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilGS"
+
+    const/4 v2, 0x1
+
+    const-string v3, "GS\uce7c\ud14d\uc2a4 \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilGS:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 3
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilHD"
+
+    const/4 v2, 0x2
+
+    const-string/jumbo v3, "\ud604\ub300\uc624\uc77c \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilHD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 4
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilSOil"
+
+    const/4 v2, 0x3
+
+    const-string v3, "S-Oil \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSOil:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 5
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilTiger"
+
+    const/4 v2, 0x4
+
+    const-string v3, "TigerOil \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilTiger:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 6
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilInCheon"
+
+    const/4 v2, 0x5
+
+    const-string/jumbo v3, "\uc778\ucc9c\uc815\uc720 \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilInCheon:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 7
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilNC"
+
+    const/4 v2, 0x6
+
+    const-string v3, "NC-Oil \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilNC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 8
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilNH"
+
+    const/4 v2, 0x7
+
+    const-string v3, "NH-Oil \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilNH:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 9
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilSevenD"
+
+    const/16 v2, 0x8
+
+    const-string v3, "SevenD-Oil \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilSevenD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 10
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilEconomic"
+
+    const/16 v2, 0x9
+
+    const-string/jumbo v3, "\uc54c\ub730 \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilEconomic:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 11
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilETC"
+
+    const/16 v2, 0xa
+
+    const-string/jumbo v3, "\uae30\ud0c0 \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilETC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 12
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasSK"
+
+    const/16 v2, 0xb
+
+    const-string v3, "SK \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSK:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 13
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasGS"
+
+    const/16 v2, 0xc
+
+    const-string v3, "GS\uce7c\ud14d\uc2a4 \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasGS:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 14
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasHD"
+
+    const/16 v2, 0xd
+
+    const-string/jumbo v3, "\ud604\ub300\uc624\uc77c \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasHD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 15
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasSOil"
+
+    const/16 v2, 0xe
+
+    const-string v3, "S-Oil \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSOil:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 16
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasE1"
+
+    const/16 v2, 0xf
+
+    const-string v3, "E1 \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasE1:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 17
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasInCheon"
+
+    const/16 v2, 0x10
+
+    const-string/jumbo v3, "\uc778\ucc9c\uc815\uc720 \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasInCheon:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 18
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasNC"
+
+    const/16 v2, 0x11
+
+    const-string v3, "NC-Oil \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasNC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 19
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasNH"
+
+    const/16 v2, 0x12
+
+    const-string v3, "NH-Oil \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasNH:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 20
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasSevenD"
+
+    const/16 v2, 0x13
+
+    const-string v3, "SevenD-Oil \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasSevenD:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 21
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasETC"
+
+    const/16 v2, 0x14
+
+    const-string/jumbo v3, "\uae30\ud0c0 \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasETC:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 22
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "gasEX"
+
+    const/16 v2, 0x15
+
+    const-string v3, "EX \ucda9\uc804\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->gasEX:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 23
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "oilEX"
+
+    const/16 v2, 0x16
+
+    const-string v3, "EX \uc8fc\uc720\uc18c"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->oilEX:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    .line 24
+    new-instance v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    const-string v1, "NA"
+
+    const/16 v2, 0x17
+
+    const-string v3, ""
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->NA:Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->$values()[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
+
+    move-result-object v0
 
     sput-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->$VALUES:[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
@@ -546,7 +644,7 @@
 
     sget-object v0, Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->$VALUES:[Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;
 
-    invoke-virtual {v0}, [Lcom/skt/tmap/engine/navigation/SDKConstant$TBTOilGasCompany;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

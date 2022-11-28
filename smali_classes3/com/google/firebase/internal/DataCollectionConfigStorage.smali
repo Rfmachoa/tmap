@@ -77,7 +77,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Landroidx/core/content/d;->b(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p0}, Landroidx/core/content/ContextCompat;->createDeviceProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 

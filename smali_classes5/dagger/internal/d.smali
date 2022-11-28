@@ -3,8 +3,8 @@
 .source "DoubleCheck.java"
 
 # interfaces
-.implements Loi/a;
-.implements Lsg/a;
+.implements Lsk/a;
+.implements Lwi/a;
 
 
 # annotations
@@ -14,9 +14,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Loi/a<",
+        "Lsk/a<",
         "TT;>;",
-        "Lsg/a<",
+        "Lwi/a<",
         "TT;>;"
     }
 .end annotation
@@ -29,10 +29,10 @@
 
 
 # instance fields
-.field public volatile a:Loi/a;
+.field public volatile a:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -55,12 +55,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Loi/a;)V
+.method public constructor <init>(Lsk/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -74,32 +74,32 @@
     iput-object v0, p0, Ldagger/internal/d;->b:Ljava/lang/Object;
 
     .line 3
-    iput-object p1, p0, Ldagger/internal/d;->a:Loi/a;
+    iput-object p1, p0, Ldagger/internal/d;->a:Lsk/a;
 
     return-void
 .end method
 
-.method public static a(Loi/a;)Lsg/a;
+.method public static a(Lsk/a;)Lwi/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<P::",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;T:",
             "Ljava/lang/Object;",
             ">(TP;)",
-            "Lsg/a<",
+            "Lwi/a<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    instance-of v0, p0, Lsg/a;
+    instance-of v0, p0, Lwi/a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p0, Lsg/a;
+    check-cast p0, Lwi/a;
 
     return-object p0
 
@@ -111,23 +111,23 @@
 
     move-result-object p0
 
-    check-cast p0, Loi/a;
+    check-cast p0, Lsk/a;
 
-    invoke-direct {v0, p0}, Ldagger/internal/d;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Ldagger/internal/d;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
 
-.method public static b(Loi/a;)Loi/a;
+.method public static b(Lsk/a;)Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<P::",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;T:",
             "Ljava/lang/Object;",
             ">(TP;)",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -146,7 +146,7 @@
     :cond_0
     new-instance v0, Ldagger/internal/d;
 
-    invoke-direct {v0, p0}, Ldagger/internal/d;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Ldagger/internal/d;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
@@ -242,9 +242,9 @@
     if-ne v0, v1, :cond_0
 
     .line 5
-    iget-object v0, p0, Ldagger/internal/d;->a:Loi/a;
+    iget-object v0, p0, Ldagger/internal/d;->a:Lsk/a;
 
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -260,7 +260,7 @@
     const/4 v1, 0x0
 
     .line 7
-    iput-object v1, p0, Ldagger/internal/d;->a:Loi/a;
+    iput-object v1, p0, Ldagger/internal/d;->a:Lsk/a;
 
     .line 8
     :cond_0

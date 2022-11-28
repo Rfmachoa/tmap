@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zabq;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;
@@ -8,32 +8,10 @@
 .implements Lcom/google/android/gms/common/api/internal/zau;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<O::",
-        "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;",
-        "Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;",
-        "Lcom/google/android/gms/common/api/internal/zau;"
-    }
-.end annotation
-
-
 # instance fields
 .field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
 .field private final zab:Ljava/util/Queue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Queue<",
-            "Lcom/google/android/gms/common/api/internal/zai;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Lcom/google/android/gms/common/api/Api$Client;
     .annotation runtime Lorg/checkerframework/checker/initialization/qual/NotOnlyInitialized;
@@ -41,37 +19,12 @@
 .end field
 
 .field private final zad:Lcom/google/android/gms/common/api/internal/ApiKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "TO;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zae:Lcom/google/android/gms/common/api/internal/zaad;
 
 .field private final zaf:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/zal;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zag:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/internal/zaci;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zah:I
 
@@ -83,14 +36,6 @@
 .field private zaj:Z
 
 .field private final zak:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/api/internal/zabs;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zal:Lcom/google/android/gms/common/ConnectionResult;
     .annotation build Landroidx/annotation/Nullable;
@@ -104,14 +49,6 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/GoogleApiManager;Lcom/google/android/gms/common/api/GoogleApi;)V
     .locals 3
     .annotation build Landroidx/annotation/WorkerThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApi<",
-            "TO;>;)V"
-        }
     .end annotation
 
     .line 1
@@ -960,7 +897,7 @@
 .end method
 
 .method private final zaL(Lcom/google/android/gms/common/api/internal/zai;)Z
-    .locals 9
+    .locals 7
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
@@ -1020,39 +957,29 @@
 
     move-result-wide v4
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result v6
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    const-string p1, " could not execute call because it requires feature ("
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v7
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    const-string p1, ", "
 
-    add-int/lit8 v6, v6, 0x4d
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v6, v7
-
-    invoke-direct {v8, v6}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v6, " could not execute call because it requires feature ("
-
-    const-string v7, ", "
-
-    invoke-static {v8, p1, v6, v3, v7}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v8, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string p1, ")."
 
-    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1728,14 +1655,6 @@
 
 .method public final zaa(Lcom/google/android/gms/common/ConnectionResult;Lcom/google/android/gms/common/api/Api;Z)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;Z)V"
-        }
-    .end annotation
 
     const/4 p1, 0x0
 
@@ -1792,16 +1711,6 @@
 
 .method public final zah()Ljava/util/Map;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/internal/zaci;",
-            ">;"
-        }
-    .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabq;->zag:Ljava/util/Map;
 
@@ -1830,7 +1739,7 @@
 .end method
 
 .method public final zao()V
-    .locals 8
+    .locals 7
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
@@ -1892,52 +1801,40 @@
 
     invoke-direct {v2, v1, v3}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
 
-    const-string v1, "GoogleApiManager"
-
-    iget-object v4, p0, Lcom/google/android/gms/common/api/internal/zabq;->zac:Lcom/google/android/gms/common/api/Api$Client;
+    iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabq;->zac:Lcom/google/android/gms/common/api/Api$Client;
 
     .line 5
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
     invoke-virtual {v2}, Lcom/google/android/gms/common/ConnectionResult;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    move-result v6
-
-    add-int/lit8 v6, v6, 0x23
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    add-int/2addr v6, v7
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v6}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v6, "The service for "
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, " is not available: "
+    const-string v1, " is not available: "
 
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "GoogleApiManager"
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2383,7 +2280,7 @@
 .end method
 
 .method public final zas(Lcom/google/android/gms/common/ConnectionResult;)V
-    .locals 6
+    .locals 5
     .param p1    # Lcom/google/android/gms/common/ConnectionResult;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -2415,27 +2312,23 @@
 
     move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result v3
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v4, "onSignInFailed for "
 
-    move-result v4
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v3, v3, 0x19
+    const-string v1, " with "
 
-    add-int/2addr v3, v4
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "onSignInFailed for "
-
-    const-string v4, " with "
-
-    invoke-static {v5, v3, v1, v4, v2}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 

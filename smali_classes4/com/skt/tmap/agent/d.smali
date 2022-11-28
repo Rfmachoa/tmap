@@ -87,7 +87,7 @@
 
     const-string v1, "TmapAgentNotiRegistration()"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iput-object p1, p0, Lcom/skt/tmap/agent/d;->b:Landroid/content/Context;
@@ -246,7 +246,7 @@
 
     const-string v1, "registerNotification"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Ljava/lang/Thread;
@@ -351,7 +351,7 @@
 
     const-string v1, "showMessage"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput-object p1, p0, Lcom/skt/tmap/agent/d;->d:Ljava/lang/String;
@@ -389,9 +389,9 @@
 
     const-string v1, "showUnreadMessage"
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "unreadMessage"
+    const-string v0, "unreadMessage"
 
     .line 2
     iput-object v0, p0, Lcom/skt/tmap/agent/d;->d:Ljava/lang/String;

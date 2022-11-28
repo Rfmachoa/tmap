@@ -25,7 +25,7 @@
         "Landroidx/lifecycle/MediatorLiveData;",
         "Landroidx/lifecycle/LiveData;",
         "source",
-        "Lkotlinx/coroutines/e1;",
+        "Lkotlinx/coroutines/f1;",
         "emitSource$lifecycle_livedata_ktx_release",
         "(Landroidx/lifecycle/LiveData;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "emitSource",
@@ -52,13 +52,13 @@
         "Lkotlin/ExtensionFunctionType;",
         "block",
         "<init>",
-        "(Lkotlin/coroutines/CoroutineContext;JLej/p;)V",
+        "(Lkotlin/coroutines/CoroutineContext;JLgl/p;)V",
         "lifecycle-livedata-ktx_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -72,19 +72,25 @@
             "TT;>;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 .end field
 
 .field private emittedSource:Landroidx/lifecycle/EmittedSource;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/CoroutineContext;JLej/p;)V
+.method public constructor <init>(Lkotlin/coroutines/CoroutineContext;JLgl/p;)V
     .locals 7
     .param p1    # Lkotlin/coroutines/CoroutineContext;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p4    # Lej/p;
+    .param p4    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -93,7 +99,7 @@
             "(",
             "Lkotlin/coroutines/CoroutineContext;",
             "J",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
             "Landroidx/lifecycle/LiveDataScope<",
             "TT;>;-",
@@ -108,17 +114,17 @@
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "block"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-direct {p0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
     .line 4
-    sget-object v0, Lkotlinx/coroutines/y1;->q0:Lkotlinx/coroutines/y1$b;
+    sget-object v0, Lkotlinx/coroutines/y1;->A0:Lkotlinx/coroutines/y1$b;
 
     invoke-interface {p1, v0}, Lkotlin/coroutines/CoroutineContext;->get(Lkotlin/coroutines/CoroutineContext$b;)Lkotlin/coroutines/CoroutineContext$a;
 
@@ -126,16 +132,16 @@
 
     check-cast v0, Lkotlinx/coroutines/y1;
 
-    invoke-static {v0}, Lkotlinx/coroutines/a3;->a(Lkotlinx/coroutines/y1;)Lkotlinx/coroutines/z;
+    invoke-static {v0}, Lkotlinx/coroutines/z2;->a(Lkotlinx/coroutines/y1;)Lkotlinx/coroutines/b0;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v1}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v1
 
@@ -147,14 +153,13 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lkotlinx/coroutines/o0;->a(Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/n0;
+    invoke-static {p1}, Lkotlinx/coroutines/q0;->a(Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/p0;
 
     move-result-object v5
 
     .line 6
     new-instance p1, Landroidx/lifecycle/BlockRunner;
 
-    .line 7
     new-instance v6, Landroidx/lifecycle/CoroutineLiveData$1;
 
     invoke-direct {v6, p0}, Landroidx/lifecycle/CoroutineLiveData$1;-><init>(Landroidx/lifecycle/CoroutineLiveData;)V
@@ -167,15 +172,14 @@
 
     move-wide v3, p2
 
-    .line 8
-    invoke-direct/range {v0 .. v6}, Landroidx/lifecycle/BlockRunner;-><init>(Landroidx/lifecycle/CoroutineLiveData;Lej/p;JLkotlinx/coroutines/n0;Lej/a;)V
+    invoke-direct/range {v0 .. v6}, Landroidx/lifecycle/BlockRunner;-><init>(Landroidx/lifecycle/CoroutineLiveData;Lgl/p;JLkotlinx/coroutines/p0;Lgl/a;)V
 
     iput-object p1, p0, Landroidx/lifecycle/CoroutineLiveData;->blockRunner:Landroidx/lifecycle/BlockRunner;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/coroutines/CoroutineContext;JLej/p;ILkotlin/jvm/internal/u;)V
+.method public synthetic constructor <init>(Lkotlin/coroutines/CoroutineContext;JLgl/p;ILkotlin/jvm/internal/u;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x1
@@ -194,18 +198,9 @@
 
     .line 2
     :cond_1
-    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/lifecycle/CoroutineLiveData;-><init>(Lkotlin/coroutines/CoroutineContext;JLej/p;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/lifecycle/CoroutineLiveData;-><init>(Lkotlin/coroutines/CoroutineContext;JLgl/p;)V
 
     return-void
-.end method
-
-.method public static final synthetic access$getBlockRunner$p(Landroidx/lifecycle/CoroutineLiveData;)Landroidx/lifecycle/BlockRunner;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Landroidx/lifecycle/CoroutineLiveData;->blockRunner:Landroidx/lifecycle/BlockRunner;
-
-    return-object p0
 .end method
 
 .method public static final synthetic access$setBlockRunner$p(Landroidx/lifecycle/CoroutineLiveData;Landroidx/lifecycle/BlockRunner;)V
@@ -269,7 +264,7 @@
     :goto_0
     iget-object p1, v0, Landroidx/lifecycle/CoroutineLiveData$clearSource$1;->result:Ljava/lang/Object;
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -307,7 +302,7 @@
     .line 4
     iget-object p1, p0, Landroidx/lifecycle/CoroutineLiveData;->emittedSource:Landroidx/lifecycle/EmittedSource;
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_3
 
     iput-object p0, v0, Landroidx/lifecycle/CoroutineLiveData$clearSource$1;->L$0:Ljava/lang/Object;
 
@@ -324,22 +319,13 @@
     :cond_3
     move-object v0, p0
 
-    .line 5
     :goto_1
-    check-cast p1, Lkotlin/d1;
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, p0
-
-    :goto_2
     const/4 p1, 0x0
 
-    .line 6
+    .line 5
     iput-object p1, v0, Landroidx/lifecycle/CoroutineLiveData;->emittedSource:Landroidx/lifecycle/EmittedSource;
 
-    .line 7
+    .line 6
     sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
 
     return-object p1
@@ -362,7 +348,7 @@
             "TT;>;",
             "Lkotlin/coroutines/c<",
             "-",
-            "Lkotlinx/coroutines/e1;",
+            "Lkotlinx/coroutines/f1;",
             ">;)",
             "Ljava/lang/Object;"
         }
@@ -401,7 +387,7 @@
     :goto_0
     iget-object p2, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->result:Ljava/lang/Object;
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -417,10 +403,6 @@
     if-eq v2, v4, :cond_2
 
     if-ne v2, v3, :cond_1
-
-    iget-object p1, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->L$1:Ljava/lang/Object;
-
-    check-cast p1, Landroidx/lifecycle/LiveData;
 
     iget-object p1, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->L$0:Ljava/lang/Object;
 
@@ -485,7 +467,9 @@
     :goto_1
     iput-object p1, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->L$0:Ljava/lang/Object;
 
-    iput-object p2, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->L$1:Ljava/lang/Object;
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->L$1:Ljava/lang/Object;
 
     iput v3, v0, Landroidx/lifecycle/CoroutineLiveData$emitSource$1;->label:I
 

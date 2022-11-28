@@ -25,43 +25,43 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lai/r0;)V
+.method public static synthetic a(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lek/r0;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$resolve$0(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lai/r0;)V
+    invoke-static {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$resolve$0(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lek/r0;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+.method public static synthetic b(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
     .locals 0
 
-    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$publish$3(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$publish$3(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic c(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lai/v0;
+.method public static synthetic c(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lek/v0;
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$resolve$1(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lai/v0;
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$resolve$1(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lek/v0;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/core/model/Model;ILai/r0;)V
+.method public static synthetic d(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/core/model/Model;ILek/r0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$publish$2(Lcom/amplifyframework/core/model/Model;ILai/r0;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->lambda$publish$2(Lcom/amplifyframework/core/model/Model;ILek/r0;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$publish$2(Lcom/amplifyframework/core/model/Model;ILai/r0;)V
+.method private synthetic lambda$publish$2(Lcom/amplifyframework/core/model/Model;ILek/r0;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -87,13 +87,13 @@
 
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v5, Lcom/amplifyframework/datastore/syncengine/e;
+    new-instance v5, Lcom/amplifyframework/datastore/syncengine/a;
 
-    invoke-direct {v5, p3}, Lcom/amplifyframework/datastore/syncengine/e;-><init>(Lai/r0;)V
+    invoke-direct {v5, p3}, Lcom/amplifyframework/datastore/syncengine/a;-><init>(Lek/r0;)V
 
-    new-instance v6, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance v6, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {v6, p3}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {v6, p3}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     move-object v2, p1
 
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method private static synthetic lambda$publish$3(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+.method private static synthetic lambda$publish$3(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lek/v0;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -131,7 +131,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lai/p0;->N0(Ljava/lang/Object;)Lai/p0;
+    invoke-static {p0}, Lek/p0;->N0(Ljava/lang/Object;)Lek/p0;
 
     move-result-object p0
 
@@ -148,14 +148,14 @@
 
     invoke-direct {p0, v0, v1}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Lai/p0;->p0(Ljava/lang/Throwable;)Lai/p0;
+    invoke-static {p0}, Lek/p0;->p0(Ljava/lang/Throwable;)Lek/p0;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$resolve$0(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lai/r0;)V
+.method private static synthetic lambda$resolve$0(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lek/r0;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -166,16 +166,16 @@
     .line 1
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/f;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/b;
 
-    invoke-direct {v0, p2}, Lcom/amplifyframework/datastore/syncengine/f;-><init>(Lai/r0;)V
+    invoke-direct {v0, p2}, Lcom/amplifyframework/datastore/syncengine/b;-><init>(Lek/r0;)V
 
     invoke-interface {p0, p1, v0}, Lcom/amplifyframework/datastore/DataStoreConflictHandler;->onConflictDetected(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/core/Consumer;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$resolve$1(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lai/v0;
+.method private synthetic lambda$resolve$1(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lek/v0;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -184,14 +184,14 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->resolveModelAndMetadata(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lai/p0;
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->resolveModelAndMetadata(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private publish(Lcom/amplifyframework/core/model/Model;I)Lai/p0;
+.method private publish(Lcom/amplifyframework/core/model/Model;I)Lek/p0;
     .locals 1
     .param p1    # Lcom/amplifyframework/core/model/Model;
         .annotation build Landroidx/annotation/NonNull;
@@ -205,33 +205,33 @@
             "<T::",
             "Lcom/amplifyframework/core/model/Model;",
             ">(TT;I)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/b;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/d;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/b;-><init>(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/core/model/Model;I)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/d;-><init>(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/core/model/Model;I)V
 
     .line 2
-    invoke-static {v0}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p1
 
-    sget-object p2, Lcom/amplifyframework/datastore/syncengine/d;->a:Lcom/amplifyframework/datastore/syncengine/d;
+    sget-object p2, Lcom/amplifyframework/datastore/syncengine/f;->a:Lcom/amplifyframework/datastore/syncengine/f;
 
     .line 3
-    invoke-virtual {p1, p2}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    invoke-virtual {p1, p2}, Lek/p0;->r0(Lgk/o;)Lek/p0;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private resolveModelAndMetadata(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lai/p0;
+.method private resolveModelAndMetadata(Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision;)Lek/p0;
     .locals 2
     .param p1    # Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;
         .annotation build Landroidx/annotation/NonNull;
@@ -258,7 +258,7 @@
             "Lcom/amplifyframework/datastore/appsync/ModelMetadata;",
             "Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictResolutionDecision<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -302,7 +302,7 @@
 
     move-result p2
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->publish(Lcom/amplifyframework/core/model/Model;I)Lai/p0;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->publish(Lcom/amplifyframework/core/model/Model;I)Lek/p0;
 
     move-result-object p1
 
@@ -342,7 +342,7 @@
 
     invoke-direct {p3, p1, p2}, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;-><init>(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
 
-    invoke-static {p3}, Lai/p0;->N0(Ljava/lang/Object;)Lai/p0;
+    invoke-static {p3}, Lek/p0;->N0(Ljava/lang/Object;)Lek/p0;
 
     move-result-object p1
 
@@ -362,7 +362,7 @@
 
     move-result p2
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->publish(Lcom/amplifyframework/core/model/Model;I)Lai/p0;
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->publish(Lcom/amplifyframework/core/model/Model;I)Lek/p0;
 
     move-result-object p1
 
@@ -371,7 +371,7 @@
 
 
 # virtual methods
-.method public resolve(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/AppSyncConflictUnhandledError;)Lai/p0;
+.method public resolve(Lcom/amplifyframework/datastore/syncengine/PendingMutation;Lcom/amplifyframework/datastore/appsync/AppSyncConflictUnhandledError;)Lek/p0;
     .locals 2
     .param p1    # Lcom/amplifyframework/datastore/syncengine/PendingMutation;
         .annotation build Landroidx/annotation/NonNull;
@@ -393,7 +393,7 @@
             "TT;>;",
             "Lcom/amplifyframework/datastore/appsync/AppSyncConflictUnhandledError<",
             "TT;>;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Lcom/amplifyframework/datastore/appsync/ModelWithMetadata<",
             "TT;>;>;"
         }
@@ -439,21 +439,21 @@
     move-result-object p1
 
     .line 7
-    new-instance p2, Lcom/amplifyframework/datastore/syncengine/a;
+    new-instance p2, Lcom/amplifyframework/datastore/syncengine/c;
 
-    invoke-direct {p2, v0, p1}, Lcom/amplifyframework/datastore/syncengine/a;-><init>(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;)V
+    invoke-direct {p2, v0, p1}, Lcom/amplifyframework/datastore/syncengine/c;-><init>(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;)V
 
     .line 8
-    invoke-static {p2}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {p2}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p2
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/c;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/e;
 
-    invoke-direct {v0, p0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/c;-><init>(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
+    invoke-direct {v0, p0, p1, v1}, Lcom/amplifyframework/datastore/syncengine/e;-><init>(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lcom/amplifyframework/datastore/appsync/ModelMetadata;)V
 
     .line 9
-    invoke-virtual {p2, v0}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    invoke-virtual {p2, v0}, Lek/p0;->r0(Lgk/o;)Lek/p0;
 
     move-result-object p1
 
@@ -463,7 +463,7 @@
     move-exception p1
 
     .line 10
-    invoke-static {p1}, Lai/p0;->p0(Ljava/lang/Throwable;)Lai/p0;
+    invoke-static {p1}, Lek/p0;->p0(Ljava/lang/Throwable;)Lek/p0;
 
     move-result-object p1
 

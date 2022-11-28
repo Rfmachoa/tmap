@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->R3(Lcom/skt/voice/tyche/data/CardResult;)Z
+    value = Lcom/skt/tmap/engine/TmapAiManager;->T3(Lcom/skt/voice/tyche/data/CardResult;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,9 +57,9 @@
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$o;->a:Lcom/skt/voice/tyche/data/CardResult;
 
-    sget-object v2, Lcom/skt/voice/tyche/AiConstant$AiVolume;->MUTE:Lcom/skt/voice/tyche/AiConstant$AiVolume;
+    sget-object v2, Lcom/skt/voice/tyche/AiConstant$AiVolume;->DOWN:Lcom/skt/voice/tyche/AiConstant$AiVolume;
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->w0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->A0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
 
     return-void
 .end method

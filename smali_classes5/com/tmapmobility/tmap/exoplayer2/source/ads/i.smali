@@ -34,7 +34,7 @@
 
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/ads/i;->b:Lcom/google/common/collect/ImmutableMap;
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/j;->k0(Lcom/tmapmobility/tmap/exoplayer2/source/ads/j;Lcom/google/common/collect/ImmutableMap;)V
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/ads/j;->j0(Lcom/tmapmobility/tmap/exoplayer2/source/ads/j;Lcom/google/common/collect/ImmutableMap;)V
 
     return-void
 .end method

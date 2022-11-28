@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public static synthetic B5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
+.method public static synthetic J5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)Lcom/skt/tmap/engine/TmapBluetoothManager;
     .locals 0
 
     .line 1
@@ -58,43 +58,43 @@
     return-object p0
 .end method
 
-.method public static synthetic C5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+.method public static synthetic K5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->I5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->Q5()V
 
     return-void
 .end method
 
-.method public static synthetic D5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+.method public static synthetic L5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->J5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->R5()V
 
     return-void
 .end method
 
-.method public static synthetic E5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+.method public static synthetic M5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->K5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->S5()V
 
     return-void
 .end method
 
-.method public static synthetic F5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
+.method public static synthetic N5(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->L5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->T5()V
 
     return-void
 .end method
 
-.method public static N5(Landroid/app/Activity;)V
+.method public static V5(Landroid/app/Activity;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -130,15 +130,15 @@
 
 
 # virtual methods
-.method public final G5()V
+.method public final O5()V
     .locals 4
 
-    const v0, 0x7f0d0206
+    const v0, 0x7f0d0207
 
     .line 1
     invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const v0, 0x7f0a0194
+    const v0, 0x7f0a01ab
 
     .line 2
     invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
@@ -154,7 +154,7 @@
 
     iput-object v0, p0, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->d:Lcom/skt/tmap/font/TypefaceManager;
 
-    const v1, 0x7f0a0193
+    const v1, 0x7f0a01aa
 
     .line 4
     invoke-virtual {p0, v1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -165,7 +165,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/font/TypefaceManager;->j(Landroid/view/View;Lcom/skt/tmap/font/TypefaceManager$FontType;)V
 
-    const v0, 0x7f0a0b79
+    const v0, 0x7f0a0c02
 
     .line 5
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -179,7 +179,7 @@
     const-string v0, "/tmap2/mobile/nuguBtn_connect.jsp"
 
     .line 6
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
 
     invoke-virtual {v1, p0, v0, v3}, Lcom/skt/tmap/view/TmapWebView;->init(Landroid/app/Activity;Ljava/lang/String;Z)V
 
-    const v0, 0x7f0a018d
+    const v0, 0x7f0a01a4
 
     .line 8
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -208,7 +208,7 @@
     return-void
 .end method
 
-.method public H5()V
+.method public P5()V
     .locals 5
 
     .line 1
@@ -216,7 +216,7 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
@@ -235,38 +235,38 @@
     const/4 v0, 0x1
 
     .line 4
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f130897
+    const v1, 0x7f140919
 
     .line 5
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->t(Landroid/text/Spanned;)V
 
     .line 6
-    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->P2(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/skt/tmap/engine/TmapAiManager;->R2(Landroid/content/Context;)Z
 
     move-result v0
 
-    const v1, 0x7f130438
+    const v1, 0x7f1404a9
 
     if-eqz v0, :cond_1
 
     .line 7
-    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v3, 0x7f130899
+    const v3, 0x7f14091b
 
     invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -275,7 +275,7 @@
     invoke-virtual {v2, v3}, Lcom/skt/tmap/dialog/TmapBaseDialog;->n(Ljava/lang/String;)V
 
     .line 8
-    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     sget-object v3, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_1_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
@@ -285,28 +285,28 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v3, v1, v4}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v1, v4}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 9
     :cond_1
-    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v3, 0x7f130898
+    const v3, 0x7f14091a
 
     invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v3}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Lcom/skt/tmap/dialog/TmapBaseDialog;->m(Landroid/text/Spanned;)V
 
     .line 10
-    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v2, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     sget-object v3, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
@@ -314,17 +314,17 @@
 
     move-result-object v1
 
-    const v4, 0x7f130431
+    const v4, 0x7f1404a2
 
     invoke-virtual {p0, v4}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v1, v4}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v1, v4}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     :goto_0
-    iget-object v1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v1, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v2, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$b;
 
@@ -333,7 +333,7 @@
     invoke-virtual {v1, v2}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
     .line 12
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 
@@ -352,46 +352,46 @@
     throw v0
 .end method
 
-.method public final I5()V
+.method public final Q5()V
     .locals 3
 
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {v0}, Lno/nordicsemi/android/ble/ScannerFragment;->t(Ljava/util/UUID;)Lno/nordicsemi/android/ble/ScannerFragment;
+    invoke-static {v0}, Lno/nordicsemi/android/ble/ScannerFragment;->u(Ljava/util/UUID;)Lno/nordicsemi/android/ble/ScannerFragment;
 
     move-result-object v0
 
     const-string v1, "NUGU"
 
     .line 2
-    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->y(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->z(Ljava/lang/String;)V
 
-    const v1, 0x7f0d007e
+    const v1, 0x7f0d0080
 
     .line 3
-    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->z(I)V
-
-    const v1, 0x7f0a099c
-
-    .line 4
     invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->A(I)V
 
-    const v1, 0x7f0a0995
+    const v1, 0x7f0a0a16
+
+    .line 4
+    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->B(I)V
+
+    const v1, 0x7f0a0a0f
 
     .line 5
-    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->w(I)V
+    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->x(I)V
 
     .line 6
-    new-instance v1, Lzc/a;
+    new-instance v1, Laf/a;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lzc/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Laf/a;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->x(Lno/nordicsemi/android/ble/e;)V
+    invoke-virtual {v0, v1}, Lno/nordicsemi/android/ble/ScannerFragment;->y(Lno/nordicsemi/android/ble/e;)V
 
     .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -405,48 +405,48 @@
     return-void
 .end method
 
-.method public final J5()V
+.method public final R5()V
     .locals 4
 
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f13089d
+    const v1, 0x7f14091f
 
     .line 2
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->t(Landroid/text/Spanned;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f1308a8
+    const v1, 0x7f14092a
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->m(Landroid/text/Spanned;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_1_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
@@ -454,7 +454,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f130432
+    const v3, 0x7f1404a3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -462,10 +462,10 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$e;
 
@@ -474,64 +474,64 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
     .line 6
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$f;
 
     invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$f;-><init>(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/v;->O(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/a0;->O(Landroid/view/View$OnClickListener;)V
 
     .line 7
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 
     return-void
 .end method
 
-.method public final K5()V
+.method public final S5()V
     .locals 4
 
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f1308a9
+    const v1, 0x7f14092b
 
     .line 2
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->t(Landroid/text/Spanned;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f1308a8
+    const v1, 0x7f14092a
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->m(Landroid/text/Spanned;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_1_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
@@ -539,7 +539,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f130432
+    const v3, 0x7f1404a3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -547,10 +547,10 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$c;
 
@@ -559,55 +559,55 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
     .line 6
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$d;
 
     invoke-direct {v1, p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$d;-><init>(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/v;->O(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/a0;->O(Landroid/view/View$OnClickListener;)V
 
     .line 7
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 
     return-void
 .end method
 
-.method public final L5()V
+.method public final T5()V
     .locals 4
 
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/v;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/dialog/a0;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 2
     sget-object v1, Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;->DIALOG_TYPE_2_BUTTON:Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;
 
-    const v2, 0x7f130438
+    const v2, 0x7f1404a9
 
     invoke-virtual {p0, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f130431
+    const v3, 0x7f1404a2
 
     invoke-virtual {p0, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/v;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/skt/tmap/dialog/a0;->a0(Lcom/skt/tmap/dialog/TmapBaseDialog$DialogButtonType;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f13089c
+    const v1, 0x7f14091e
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -616,22 +616,22 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->u(Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    const v1, 0x7f13089b
+    const v1, 0x7f14091d
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/skt/tmap/util/l;->a(Ljava/lang/String;)Landroid/text/Spanned;
+    invoke-static {v1}, Lcom/skt/tmap/util/n;->a(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->m(Landroid/text/Spanned;)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     new-instance v1, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$1;
 
@@ -640,14 +640,14 @@
     invoke-virtual {v0, v1}, Lcom/skt/tmap/dialog/TmapBaseDialog;->r(Lcom/skt/tmap/dialog/TmapBaseDialog$e;)V
 
     .line 6
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     invoke-virtual {v0}, Lcom/skt/tmap/dialog/TmapBaseDialog;->w()V
 
     return-void
 .end method
 
-.method public final M5(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
+.method public final U5(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -667,7 +667,7 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string/jumbo v1, "tmap_ble_button_connect"
+    const-string v1, "tmap_ble_button_connect"
 
     .line 2
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -688,7 +688,7 @@
     return-void
 .end method
 
-.method public V3(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
+.method public Z3(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -781,13 +781,13 @@
 
     .line 11
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->M5(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->U5(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
 
     :goto_0
     return-void
 .end method
 
-.method public f0(Lno/nordicsemi/android/ble/ScannerFragment$ScannerResult;)V
+.method public h0(Lno/nordicsemi/android/ble/ScannerFragment$ScannerResult;)V
     .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -804,7 +804,7 @@
     if-ne p1, v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->L5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->T5()V
 
     :cond_0
     return-void
@@ -850,7 +850,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->M5(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->U5(Landroid/bluetooth/BluetoothDevice;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -874,7 +874,7 @@
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity$g;-><init>(Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->l(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->n(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -896,7 +896,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -906,7 +906,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->G5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapAiNuguBluetoothConnectionActivity;->O5()V
 
     .line 4
     new-instance p1, Lcom/skt/tmap/engine/TmapBluetoothManager;
@@ -921,16 +921,16 @@
     invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
 
     .line 6
-    sget-object v0, Lno/nordicsemi/android/ble/BleManager;->a1:Ljava/lang/String;
+    sget-object v0, Lno/nordicsemi/android/ble/BleManager;->c1:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "tmap_ble_button_has_connection_with_other"
+    const-string v0, "tmap_ble_button_has_connection_with_other"
 
     .line 7
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string/jumbo v0, "tmap_ble_button_already_connected"
+    const-string v0, "tmap_ble_button_already_connected"
 
     .line 8
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
@@ -984,7 +984,7 @@
 
     const-string v1, "scan_fragment"
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->q0(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->s0(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
@@ -996,15 +996,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->u()Landroidx/fragment/app/j0;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroidx/fragment/app/a0;->B(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/a0;
+    invoke-virtual {v1, v0}, Landroidx/fragment/app/j0;->B(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/j0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a0;->q()I
+    invoke-virtual {v0}, Landroidx/fragment/app/j0;->q()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

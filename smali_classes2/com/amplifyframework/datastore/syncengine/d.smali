@@ -3,44 +3,44 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lek/t0;
 
 
-# static fields
-.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/d;
+# instance fields
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/ConflictResolver;
+
+.field public final synthetic b:Lcom/amplifyframework/core/model/Model;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/d;
-
-    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/d;-><init>()V
-
-    sput-object v0, Lcom/amplifyframework/datastore/syncengine/d;->a:Lcom/amplifyframework/datastore/syncengine/d;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/core/model/Model;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/d;->a:Lcom/amplifyframework/datastore/syncengine/ConflictResolver;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/d;->b:Lcom/amplifyframework/core/model/Model;
+
+    iput p3, p0, Lcom/amplifyframework/datastore/syncengine/d;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lek/r0;)V
+    .locals 3
 
-    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/d;->a:Lcom/amplifyframework/datastore/syncengine/ConflictResolver;
 
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->b(Lcom/amplifyframework/api/graphql/GraphQLResponse;)Lai/v0;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/d;->b:Lcom/amplifyframework/core/model/Model;
 
-    move-result-object p1
+    iget v2, p0, Lcom/amplifyframework/datastore/syncengine/d;->c:I
 
-    return-object p1
+    invoke-static {v0, v1, v2, p1}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->d(Lcom/amplifyframework/datastore/syncengine/ConflictResolver;Lcom/amplifyframework/core/model/Model;ILek/r0;)V
+
+    return-void
 .end method

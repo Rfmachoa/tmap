@@ -67,11 +67,11 @@
     invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->J1()V
 
     .line 5
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lu8/a;->d()V
+    invoke-virtual {v1}, Lra/a;->d()V
 
     .line 6
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager$f;->a:Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;
@@ -175,7 +175,7 @@
     .line 18
     sget-object v0, Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;->NETWORK_DELAYED_TRY_AGAIN:Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;
 
-    invoke-virtual {v2, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lsa/d;)Z
+    invoke-virtual {v2, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lpc/d;)Z
 
     :cond_2
     return-void

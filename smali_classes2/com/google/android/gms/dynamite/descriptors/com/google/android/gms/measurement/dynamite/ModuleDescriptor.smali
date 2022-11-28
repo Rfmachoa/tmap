@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/dynamite/descriptors/com/google/android/gms/measurement/dynamite/ModuleDescriptor;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-sdk@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-sdk@@21.1.1"
 
 
 # annotations
@@ -20,7 +20,7 @@
     .end annotation
 .end field
 
-.field public static final MODULE_VERSION:I = 0x40
+.field public static final MODULE_VERSION:I = 0x53
     .annotation build Lcom/google/android/gms/common/util/RetainForClient;
     .end annotation
 .end field

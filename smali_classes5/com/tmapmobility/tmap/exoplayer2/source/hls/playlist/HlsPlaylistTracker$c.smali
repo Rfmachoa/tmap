@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract A(Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;)V
+.method public abstract z(Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;)V
 .end method

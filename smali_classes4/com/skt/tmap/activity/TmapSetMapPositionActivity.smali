@@ -3,7 +3,7 @@
 .source "TmapSetMapPositionActivity.java"
 
 # interfaces
-.implements Llc/y;
+.implements Lje/b0;
 .implements Lcom/skt/tmap/engine/navigation/location/TmapLocationListener;
 
 
@@ -30,7 +30,7 @@
 
 .field public k:Landroid/view/View;
 
-.field public k0:Lcom/skt/tmap/mvp/presenter/g1;
+.field public k0:Lcom/skt/tmap/mvp/presenter/f1;
 
 .field public l:Landroid/widget/LinearLayout;
 
@@ -51,13 +51,106 @@
 
 
 # virtual methods
-.method public C1()V
+.method public final B5()V
+    .locals 7
+
+    .line 1
+    invoke-static {}, Lcom/skt/tmap/vsm/map/VSMMap;->getInstance()Lcom/skt/tmap/vsm/map/VSMMap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->u:Lcom/skt/tmap/vsm/map/VSMMap;
+
+    const v0, 0x7f0a0666
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    .line 3
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setNaviMoveMode(IZ)V
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    const v1, 0x7f0802cd
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_CURRENT_MARKER_IMG(I)V
+
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    const v1, 0x7f080a45
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_NORMAL_MARKER_IMG(I)V
+
+    .line 6
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    const v1, 0x7f0809c8
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_START_MARKER_IMG(I)V
+
+    .line 7
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    const v1, 0x7f0809c7
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_GOAL_MARKER_IMG(I)V
+
+    .line 8
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v0, v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setPositionIconType(I)V
+
+    .line 9
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setClickable(Z)V
+
+    .line 10
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getCurrentPosition()Landroid/location/Location;
+
+    move-result-object v0
+
+    .line 11
+    iget-object v1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+
+    invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v2
+
+    invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v4
+
+    const/4 v6, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setMapCenter(DDZ)Z
+
+    return-void
+.end method
+
+.method public E1()V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->f:Landroid/widget/Button;
 
-    const v1, 0x7f130736
+    const v1, 0x7f1407ac
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -86,7 +179,7 @@
     return-void
 .end method
 
-.method public I1()V
+.method public K1()V
     .locals 2
 
     .line 1
@@ -114,7 +207,7 @@
     return-void
 .end method
 
-.method public I2()V
+.method public K2()V
     .locals 2
 
     .line 1
@@ -151,7 +244,7 @@
     return-object v0
 .end method
 
-.method public L1()Landroid/widget/TextView;
+.method public N1()Landroid/widget/TextView;
     .locals 1
 
     .line 1
@@ -160,7 +253,7 @@
     return-object v0
 .end method
 
-.method public R0()Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+.method public U0()Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
     .locals 1
 
     .line 1
@@ -169,7 +262,7 @@
     return-object v0
 .end method
 
-.method public W()V
+.method public X()V
     .locals 4
 
     .line 1
@@ -197,7 +290,7 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->b:Landroid/widget/ImageButton;
 
-    const v3, 0x7f0800fa
+    const v3, 0x7f08010f
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -237,7 +330,7 @@
     return-void
 .end method
 
-.method public X0()Landroid/widget/ImageButton;
+.method public a1()Landroid/widget/ImageButton;
     .locals 1
 
     .line 1
@@ -246,7 +339,7 @@
     return-object v0
 .end method
 
-.method public Z2()V
+.method public b3()V
     .locals 2
 
     .line 1
@@ -274,7 +367,7 @@
     return-void
 .end method
 
-.method public a5()Landroid/view/View;
+.method public d5()Landroid/view/View;
     .locals 1
 
     .line 1
@@ -302,9 +395,9 @@
     invoke-super {p0, p1, p2, p3}, Lcom/skt/tmap/activity/BaseActivity;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/skt/tmap/mvp/presenter/g1;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/skt/tmap/mvp/presenter/f1;->g(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -326,7 +419,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -335,7 +428,7 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0210
+    const p1, 0x7f0d0211
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
@@ -356,7 +449,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/skt/tmap/font/TypefaceManager;->j(Landroid/view/View;Lcom/skt/tmap/font/TypefaceManager$FontType;)V
 
-    const p1, 0x7f0a0257
+    const p1, 0x7f0a0282
 
     .line 6
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -365,7 +458,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->d:Landroid/view/View;
 
-    const p1, 0x7f0a06bd
+    const p1, 0x7f0a0706
 
     .line 7
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -376,7 +469,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->b:Landroid/widget/ImageButton;
 
-    const p1, 0x7f0a06be
+    const p1, 0x7f0a0707
 
     .line 8
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -385,7 +478,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->c:Landroid/view/View;
 
-    const p1, 0x7f0a08c4
+    const p1, 0x7f0a093d
 
     .line 9
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -396,7 +489,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->a:Landroid/widget/TextView;
 
-    const p1, 0x7f0a01d5
+    const p1, 0x7f0a01ef
 
     .line 10
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -405,7 +498,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->e:Landroid/view/View;
 
-    const p1, 0x7f0a01d6
+    const p1, 0x7f0a01f0
 
     .line 11
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -416,7 +509,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->f:Landroid/widget/Button;
 
-    const p1, 0x7f0a01d7
+    const p1, 0x7f0a01f1
 
     .line 12
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -427,7 +520,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->h:Landroid/widget/Button;
 
-    const p1, 0x7f0a01d8
+    const p1, 0x7f0a01f2
 
     .line 13
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -438,7 +531,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->g:Landroid/widget/Button;
 
-    const p1, 0x7f0a01d9
+    const p1, 0x7f0a01f3
 
     .line 14
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -447,7 +540,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->i:Landroid/view/View;
 
-    const p1, 0x7f0a01d0
+    const p1, 0x7f0a01ea
 
     .line 15
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -456,7 +549,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->j:Landroid/view/View;
 
-    const p1, 0x7f0a01d1
+    const p1, 0x7f0a01eb
 
     .line 16
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -465,7 +558,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k:Landroid/view/View;
 
-    const p1, 0x7f0a01da
+    const p1, 0x7f0a01f4
 
     .line 17
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -476,7 +569,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->l:Landroid/widget/LinearLayout;
 
-    const p1, 0x7f0a01db
+    const p1, 0x7f0a01f5
 
     .line 18
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -488,70 +581,70 @@
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->p:Landroid/widget/LinearLayout;
 
     .line 19
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->t5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->B5()V
 
     .line 20
-    new-instance p1, Lcom/skt/tmap/mvp/presenter/g1;
+    new-instance p1, Lcom/skt/tmap/mvp/presenter/f1;
 
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-direct {p1, p0, v0}, Lcom/skt/tmap/mvp/presenter/g1;-><init>(Lcom/skt/tmap/activity/TmapSetMapPositionActivity;Lcom/skt/tmap/mvp/presenter/BasePresenter;)V
+    invoke-direct {p1, p0, v0}, Lcom/skt/tmap/mvp/presenter/f1;-><init>(Lcom/skt/tmap/activity/TmapSetMapPositionActivity;Lcom/skt/tmap/mvp/presenter/BasePresenter;)V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iput-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     .line 21
-    invoke-virtual {p1, p0}, Lcom/skt/tmap/mvp/presenter/g1;->v(Llc/y;)V
+    invoke-virtual {p1, p0}, Lcom/skt/tmap/mvp/presenter/f1;->x(Lje/b0;)V
 
     .line 22
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/g1;->onCreate()V
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/f1;->onCreate()V
 
     .line 23
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    iget-object v0, v0, Lcom/skt/tmap/mvp/presenter/g1;->l:Lcom/skt/tmap/mapview/streaming/MapViewStreaming$l;
+    iget-object v0, v0, Lcom/skt/tmap/mvp/presenter/f1;->l:Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setOnMapTouchListener(Lcom/skt/tmap/mapview/streaming/MapViewStreaming$l;)V
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setOnMapTouchListener(Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;)V
 
     .line 24
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    iget-object v0, v0, Lcom/skt/tmap/mvp/presenter/g1;->p:Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;
+    iget-object v0, v0, Lcom/skt/tmap/mvp/presenter/f1;->p:Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setOnAddressChangeListener(Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;)V
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setOnAddressChangeListener(Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;)V
 
     .line 25
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    iget-object v0, v0, Lcom/skt/tmap/mvp/presenter/g1;->g:Lcom/skt/tmap/vsm/map/MapEngine$OnMapLoadedListener;
+    iget-object v0, v0, Lcom/skt/tmap/mvp/presenter/f1;->g:Lcom/skt/tmap/vsm/map/MapEngine$OnMapLoadedListener;
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setMapLoadedListener(Lcom/skt/tmap/vsm/map/MapEngine$OnMapLoadedListener;)V
 
     .line 26
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->d:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 27
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->b:Landroid/widget/ImageButton;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 28
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->e:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -565,35 +658,35 @@
     .line 30
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->f:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 31
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->g:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 32
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->h:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 33
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->i:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 34
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->p:Landroid/widget/LinearLayout;
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -631,12 +724,12 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onPause()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/g1;->onPause()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/f1;->onPause()V
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/location/h;->t()Lcom/skt/tmap/location/h;
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
@@ -652,9 +745,9 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/g1;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->k0:Lcom/skt/tmap/mvp/presenter/f1;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/g1;->onResume()V
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/f1;->onResume()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->u:Lcom/skt/tmap/vsm/map/VSMMap;
@@ -689,104 +782,11 @@
 
     .line 6
     :cond_1
-    invoke-static {}, Lcom/skt/tmap/location/h;->t()Lcom/skt/tmap/location/h;
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/skt/tmap/location/h;->addLocationListener(Lcom/skt/tmap/engine/navigation/location/TmapLocationListener;)V
-
-    return-void
-.end method
-
-.method public final t5()V
-    .locals 7
-
-    .line 1
-    invoke-static {}, Lcom/skt/tmap/vsm/map/VSMMap;->getInstance()Lcom/skt/tmap/vsm/map/VSMMap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapSetMapPositionActivity;->u:Lcom/skt/tmap/vsm/map/VSMMap;
-
-    const v0, 0x7f0a063a
-
-    .line 2
-    invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    .line 3
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setNaviMoveMode(IZ)V
-
-    .line 4
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    const v1, 0x7f0802c4
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_CURRENT_MARKER_IMG(I)V
-
-    .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    const v1, 0x7f080ac4
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_NORMAL_MARKER_IMG(I)V
-
-    .line 6
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    const v1, 0x7f080a41
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_START_MARKER_IMG(I)V
-
-    .line 7
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    const v1, 0x7f080a40
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setRES_GOAL_MARKER_IMG(I)V
-
-    .line 8
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-virtual {v0, v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->setPositionIconType(I)V
-
-    .line 9
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setClickable(Z)V
-
-    .line 10
-    invoke-static {}, Lcom/skt/tmap/location/h;->t()Lcom/skt/tmap/location/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getCurrentPosition()Landroid/location/Location;
-
-    move-result-object v0
-
-    .line 11
-    iget-object v1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v2
-
-    invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v4
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Lcom/skt/tmap/vsm/map/VSMNavigationView;->setMapCenter(DDZ)Z
+    invoke-virtual {v0, p0}, Lcom/skt/tmap/location/m;->addLocationListener(Lcom/skt/tmap/engine/navigation/location/TmapLocationListener;)V
 
     return-void
 .end method
@@ -811,7 +811,7 @@
     return-void
 .end method
 
-.method public v2()V
+.method public x2()V
     .locals 2
 
     .line 1
@@ -829,7 +829,7 @@
     return-void
 .end method
 
-.method public w1()V
+.method public z1()V
     .locals 2
 
     .line 1

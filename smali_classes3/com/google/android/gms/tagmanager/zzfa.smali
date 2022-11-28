@@ -1,39 +1,19 @@
-.class final Lcom/google/android/gms/tagmanager/zzfa;
+.class public interface abstract Lcom/google/android/gms/tagmanager/zzfa;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
-# instance fields
-.field public final synthetic zza:Lcom/google/android/gms/tagmanager/zzff;
-
-
-# direct methods
-.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzff;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzfa;->zza:Lcom/google/android/gms/tagmanager/zzff;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+.end annotation
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public abstract zza()V
+.end method
 
-    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzfa;->zza:Lcom/google/android/gms/tagmanager/zzff;
+.method public abstract zzb()V
+.end method
 
-    invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzff;->zze(Lcom/google/android/gms/tagmanager/zzff;)Lcom/google/android/gms/tagmanager/zzcd;
-
-    move-result-object v0
-
-    .line 1
-    invoke-interface {v0}, Lcom/google/android/gms/tagmanager/zzcd;->zza()V
-
-    return-void
+.method public abstract zzc(J)V
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/dynamite/zzb;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # static fields
@@ -69,7 +69,7 @@
 .end method
 
 .method private static declared-synchronized zzb()Ljava/lang/ClassLoader;
-    .locals 7
+    .locals 6
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -127,54 +127,42 @@
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto :goto_2
+    goto :goto_1
 
     :catchall_0
     move-exception v2
 
-    goto :goto_3
+    goto :goto_2
 
     :catch_0
     move-exception v3
 
-    :try_start_3
-    const-string v4, "DynamiteLoaderV2CL"
-
-    const-string v5, "Failed to get thread context classloader "
-
     .line 6
+    :try_start_3
     invoke-virtual {v3}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    const-string v5, "Failed to get thread context classloader "
 
-    move-result v6
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v6, :cond_2
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v3, "DynamiteLoaderV2CL"
 
-    move-result-object v3
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 7
-    :cond_2
-    new-instance v3, Ljava/lang/String;
-
-    .line 8
-    invoke-direct {v3, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
     :goto_1
-    invoke-static {v4, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 9
-    :goto_2
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -183,8 +171,8 @@
 
     return-object v2
 
-    .line 10
-    :goto_3
+    .line 8
+    :goto_2
     :try_start_4
     monitor-exit v1
     :try_end_4
@@ -342,7 +330,7 @@
     move-object v5, v2
 
     :goto_3
-    if-nez v5, :cond_7
+    if-nez v5, :cond_6
 
     :try_start_3
     new-instance v1, Lcom/google/android/gms/dynamite/zza;
@@ -365,7 +353,7 @@
     .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    goto :goto_6
+    goto :goto_5
 
     :catch_0
     move-exception v2
@@ -384,7 +372,7 @@
     :catchall_0
     move-exception v1
 
-    goto :goto_7
+    goto :goto_6
 
     :catch_2
     move-exception v1
@@ -395,48 +383,36 @@
 
     move-object v1, v11
 
+    .line 14
     :goto_4
     :try_start_5
-    const-string v4, "DynamiteLoaderV2CL"
-
-    const-string v5, "Failed to enumerate thread/threadgroup "
-
-    .line 14
     invoke-virtual {v2}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v5, "Failed to enumerate thread/threadgroup "
 
-    move-result v6
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v6, :cond_6
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, "DynamiteLoaderV2CL"
 
-    move-result-object v2
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto :goto_5
+    move-result-object v4
+
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_5
+    move-object v5, v1
 
     .line 15
     :cond_6
-    new-instance v2, Ljava/lang/String;
-
-    .line 16
-    invoke-direct {v2, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_5
-    invoke-static {v4, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_6
-    move-object v5, v1
-
-    .line 17
-    :cond_7
     monitor-exit v3
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -445,8 +421,8 @@
 
     return-object v5
 
-    .line 18
-    :goto_7
+    .line 16
+    :goto_6
     :try_start_6
     monitor-exit v3
     :try_end_6

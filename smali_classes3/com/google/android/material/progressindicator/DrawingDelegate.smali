@@ -46,12 +46,16 @@
 
 
 # virtual methods
-.method public abstract adjustCanvas(Landroid/graphics/Canvas;F)V
+.method public abstract adjustCanvas(Landroid/graphics/Canvas;Landroid/graphics/Rect;F)V
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # F
+    .param p2    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # F
         .annotation build Landroidx/annotation/FloatRange;
             from = 0.0
             to = 1.0
@@ -116,13 +120,17 @@
     return-void
 .end method
 
-.method public validateSpecAndAdjustCanvas(Landroid/graphics/Canvas;F)V
+.method public validateSpecAndAdjustCanvas(Landroid/graphics/Canvas;Landroid/graphics/Rect;F)V
     .locals 1
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # F
+    .param p2    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # F
         .annotation build Landroidx/annotation/FloatRange;
             from = 0.0
             to = 1.0
@@ -135,7 +143,7 @@
     invoke-virtual {v0}, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->validateSpec()V
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/progressindicator/DrawingDelegate;->adjustCanvas(Landroid/graphics/Canvas;F)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/progressindicator/DrawingDelegate;->adjustCanvas(Landroid/graphics/Canvas;Landroid/graphics/Rect;F)V
 
     return-void
 .end method

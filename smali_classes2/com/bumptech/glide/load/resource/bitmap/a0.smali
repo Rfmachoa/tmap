@@ -18,7 +18,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lu4/b;->b:Ljava/nio/charset/Charset;
+    sget-object v0, Lr6/b;->b:Ljava/nio/charset/Charset;
 
     const-string v1, "com.bumptech.glide.load.resource.bitmap.Rotate"
 
@@ -133,13 +133,13 @@
     .line 1
     iget v0, p0, Lcom/bumptech/glide/load/resource/bitmap/a0;->c:I
 
-    invoke-static {v0}, Lm5/m;->o(I)I
+    invoke-static {v0}, Lj7/n;->o(I)I
 
     move-result v0
 
     const v1, -0x38a7c59c
 
-    invoke-static {v1, v0}, Lm5/m;->p(II)I
+    invoke-static {v1, v0}, Lj7/n;->p(II)I
 
     move-result v0
 

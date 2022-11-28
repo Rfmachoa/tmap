@@ -15,6 +15,10 @@
 .end annotation
 
 
+# static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.model.IOnSelectedListener"
+
+
 # virtual methods
 .method public abstract onSelected(ILandroidx/car/app/IOnDoneCallback;)V
     .annotation system Ldalvik/annotation/Throws;

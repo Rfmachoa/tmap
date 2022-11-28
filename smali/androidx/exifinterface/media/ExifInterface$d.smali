@@ -121,7 +121,7 @@
 
     .line 4
     :cond_0
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->n7:Ljava/nio/charset/Charset;
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->k7:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -160,7 +160,7 @@
     .locals 5
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     const/16 v1, 0xc
 
@@ -234,7 +234,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     const/16 v1, 0x9
 
@@ -308,7 +308,7 @@
     .locals 6
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     const/16 v1, 0xa
 
@@ -373,22 +373,14 @@
 .method public static h(Ljava/lang/String;)Landroidx/exifinterface/media/ExifInterface$d;
     .locals 3
 
+    const/4 v0, 0x0
+
     .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0, v0}, Landroidx/camera/core/impl/utils/h;->a(Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object p0
 
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->n7:Ljava/nio/charset/Charset;
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->k7:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -429,7 +421,7 @@
     .locals 5
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     const/4 v1, 0x4
 
@@ -505,7 +497,7 @@
     .locals 6
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     const/4 v1, 0x5
 
@@ -590,7 +582,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     const/4 v1, 0x3
 
@@ -1157,7 +1149,7 @@
 
     .line 2
     :try_start_1
-    invoke-virtual {v3, p1}, Landroidx/exifinterface/media/ExifInterface$b;->f(Ljava/nio/ByteOrder;)V
+    invoke-virtual {v3, p1}, Landroidx/exifinterface/media/ExifInterface$b;->g(Ljava/nio/ByteOrder;)V
 
     .line 3
     iget p1, p0, Landroidx/exifinterface/media/ExifInterface$d;->a:I
@@ -1560,7 +1552,7 @@
     :try_start_11
     iget p1, p0, Landroidx/exifinterface/media/ExifInterface$d;->b:I
 
-    sget-object v6, Landroidx/exifinterface/media/ExifInterface;->K6:[B
+    sget-object v6, Landroidx/exifinterface/media/ExifInterface;->H6:[B
 
     array-length v6, v6
 
@@ -1570,7 +1562,7 @@
 
     .line 49
     :goto_10
-    sget-object v6, Landroidx/exifinterface/media/ExifInterface;->K6:[B
+    sget-object v6, Landroidx/exifinterface/media/ExifInterface;->H6:[B
 
     array-length v7, v6
 
@@ -1729,7 +1721,7 @@
     :try_start_15
     new-instance v4, Ljava/lang/String;
 
-    sget-object v5, Landroidx/exifinterface/media/ExifInterface;->n7:Ljava/nio/charset/Charset;
+    sget-object v5, Landroidx/exifinterface/media/ExifInterface;->k7:Ljava/nio/charset/Charset;
 
     invoke-direct {v4, p1, v5}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
     :try_end_15
@@ -1863,7 +1855,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->J6:[I
+    sget-object v0, Landroidx/exifinterface/media/ExifInterface;->G6:[I
 
     iget v1, p0, Landroidx/exifinterface/media/ExifInterface$d;->a:I
 
@@ -1886,7 +1878,7 @@
 
     move-result-object v0
 
-    sget-object v1, Landroidx/exifinterface/media/ExifInterface;->I6:[Ljava/lang/String;
+    sget-object v1, Landroidx/exifinterface/media/ExifInterface;->F6:[Ljava/lang/String;
 
     iget v2, p0, Landroidx/exifinterface/media/ExifInterface$d;->a:I
 

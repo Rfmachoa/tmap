@@ -1,0 +1,87 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message NearLinkEntry {
+
+  /** 정보 인덱스 Type */
+  // default =  0x01
+  int32 infoIndexType = 1;
+
+  /** 경로주변 링크정보 목록 */
+  repeated NearLinkElement elements = 2;
+
+}
+
+message NearLinkElement {
+
+  /** 해당보간점 Idx  */
+  int32 vertexIndex = 1;
+
+  /** 진입 RSD회전코드 (코드 테이블 참고 : https://tmobi.atlassian.net/wiki/spaces/RSD/pages/139926141) */
+  int32 turnCode = 2;
+
+  /**
+   * 상세위치 도로구분
+   * 1: 고속도로
+   * 2: 자동차전용도로
+   * 4: 고가도로
+   * 8: 지하차도
+   * 16: 일반도로
+   */
+  int32 roadtype = 3;
+
+
+  /** 경로주변 보간점 개수  */
+  int32 routeNearVtxCnt = 4;
+
+  /** 링크ID  */
+  int32 linkId = 5;
+
+  /** X방향 타일코드 */
+  int32 tileXPos = 6;
+
+  /** Y방향 타일코드 */
+  int32 tileYPos = 7;
+
+  /** 방향 (0: 정방향, 1: 역방향) */
+  int32 direction = 8;
+
+  /** 링크종별
+  * 1 : 본선비분리
+  * 2 : 본선분리,
+  * 3 : 연결로(JC)
+  * 4 : 교차점내링크,
+  * 5 : 연결로(IC)
+  * 6 : P-Turn
+  * 7 : SA(휴게소)링크
+  * 8 : 로터리링크
+  * 9 : U-Turn링크
+  */
+  int32 linkType = 9;
+
+  /** 차선수(본선분리일때만 차선수*2배 제공) */
+  int32 laneCount = 10;
+
+  // WGS84 절대 X좌표.
+  double wgs84Xpos = 11;
+
+  // WGS84 절대 Y좌표.
+  double wgs84Ypos = 12;
+
+  /** 경로주변 보간점정보 목록 */
+  repeated NearLinkVertexElement elements = 13;
+}
+
+
+message NearLinkVertexElement {
+
+  /** X좌표 */
+  int32 posX = 1;
+
+  /** Y좌표 */
+  int32 posY = 2;
+}

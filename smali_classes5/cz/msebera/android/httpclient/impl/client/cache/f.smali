@@ -17,27 +17,27 @@
 # static fields
 .field public static final K0:I = 0x3e8
 
-.field public static final V0:I = 0x1
-
-.field public static final W0:Z = false
-
-.field public static final X0:Z = false
+.field public static final X0:I = 0x1
 
 .field public static final Y0:Z = false
 
-.field public static final Z0:F = 0.1f
+.field public static final Z0:Z = false
 
-.field public static final a1:J = 0x0L
+.field public static final a1:Z = false
 
-.field public static final b1:I = 0x1
+.field public static final b1:F = 0.1f
 
-.field public static final c1:I = 0x1
+.field public static final c1:J = 0x0L
 
-.field public static final d1:I = 0x3c
+.field public static final d1:I = 0x1
 
-.field public static final e1:I = 0x64
+.field public static final e1:I = 0x1
 
-.field public static final f1:Lcz/msebera/android/httpclient/impl/client/cache/f;
+.field public static final f1:I = 0x3c
+
+.field public static final g1:I = 0x64
+
+.field public static final h1:Lcz/msebera/android/httpclient/impl/client/cache/f;
 
 .field public static final k0:I = 0x2000
 
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcz/msebera/android/httpclient/impl/client/cache/f;->f1:Lcz/msebera/android/httpclient/impl/client/cache/f;
+    sput-object v0, Lcz/msebera/android/httpclient/impl/client/cache/f;->h1:Lcz/msebera/android/httpclient/impl/client/cache/f;
 
     return-void
 .end method
@@ -238,7 +238,7 @@
     const-string v0, "Cache config"
 
     .line 1
-    invoke-static {p0, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     new-instance v0, Lcz/msebera/android/httpclient/impl/client/cache/f$a;
@@ -767,7 +767,7 @@
 
     const-string v2, "]"
 
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ld/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

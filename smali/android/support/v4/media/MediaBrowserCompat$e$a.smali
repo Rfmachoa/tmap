@@ -81,7 +81,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$e$a;->a:Landroid/support/v4/media/MediaBrowserCompat$e;
 
-    invoke-static {p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    invoke-static {p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object p1
 

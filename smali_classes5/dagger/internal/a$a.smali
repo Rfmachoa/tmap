@@ -33,7 +33,7 @@
         value = {
             "Ljava/util/LinkedHashMap<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;"
         }
     .end annotation
@@ -59,12 +59,12 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Loi/a;)Ldagger/internal/a$a;
+.method public a(Ljava/lang/Object;Lsk/a;)Ldagger/internal/a$a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;)",
             "Ldagger/internal/a$a<",
             "TK;TV;TV2;>;"
@@ -91,12 +91,12 @@
     return-object p0
 .end method
 
-.method public b(Loi/a;)Ldagger/internal/a$a;
+.method public b(Lsk/a;)Ldagger/internal/a$a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Map<",
             "TK;TV2;>;>;)",
             "Ldagger/internal/a$a<",
@@ -113,11 +113,11 @@
     check-cast p1, Ldagger/internal/c;
 
     .line 3
-    invoke-virtual {p1}, Ldagger/internal/c;->a()Loi/a;
+    invoke-virtual {p1}, Ldagger/internal/c;->a()Lsk/a;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ldagger/internal/a$a;->b(Loi/a;)Ldagger/internal/a$a;
+    invoke-virtual {p0, p1}, Ldagger/internal/a$a;->b(Lsk/a;)Ldagger/internal/a$a;
 
     move-result-object p1
 

@@ -13,14 +13,15 @@
         Lcom/skt/tmap/engine/navigation/SDKManager$MAPViewInfo;,
         Lcom/skt/tmap/engine/navigation/SDKManager$DriveStatus;,
         Lcom/skt/tmap/engine/navigation/SDKManager$DriveInfo;,
-        Lcom/skt/tmap/engine/navigation/SDKManager$Companion;
+        Lcom/skt/tmap/engine/navigation/SDKManager$Companion;,
+        Lcom/skt/tmap/engine/navigation/SDKManager$WhenMappings;
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u00a4\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010!\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0011\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0013\n\u0002\u0010\n\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u000b*\u0002\u00a7\u0001\u0018\u0000 \u00ac\u00012\u00020\u0001:\n\u00ac\u0001\u00ad\u0001\u00ae\u0001\u00af\u0001\u00b0\u0001B\u000b\u0008\u0012\u00a2\u0006\u0006\u0008\u00aa\u0001\u0010\u00ab\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\"\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u00072\u0010\u0010\u0006\u001a\u000c\u0012\u0006\u0012\u0004\u0018\u00010\u0005\u0018\u00010\u0004H\u0002J,\u0010\u000c\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0010\u0010\u0006\u001a\u000c\u0012\u0006\u0012\u0004\u0018\u00010\u0005\u0018\u00010\u00042\u0008\u0010\u000b\u001a\u0004\u0018\u00010\u0005H\u0002J\u0010\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\u0002H\u0002J\u001a\u0010\u0012\u001a\u00020\u000e2\u0006\u0010\n\u001a\u00020\t2\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0002J\u0010\u0010\u0015\u001a\u00020\u000e2\u0006\u0010\u0014\u001a\u00020\u0013H\u0002J\u0008\u0010\u0016\u001a\u00020\u0002H\u0002J\u0008\u0010\u0017\u001a\u00020\u000eH\u0002J\u0008\u0010\u0018\u001a\u00020\u000eH\u0002J\u0008\u0010\u0019\u001a\u00020\u000eH\u0002J\u0008\u0010\u001a\u001a\u00020\u000eH\u0002J\u0008\u0010\u001b\u001a\u00020\u0002H\u0002J\u000e\u0010\u001d\u001a\u00020\u000e2\u0006\u0010\u001c\u001a\u00020\u0002J\u0006\u0010\u001e\u001a\u00020\u0005J\u0006\u0010 \u001a\u00020\u001fJ\u0006\u0010!\u001a\u00020\u0005J\u0006\u0010\"\u001a\u00020\u0005J \u0010\'\u001a\u00020\u000e2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010$\u001a\u00020#2\u0008\u0010&\u001a\u0004\u0018\u00010%J\u0006\u0010(\u001a\u00020\u000eJ\u0006\u0010*\u001a\u00020)J\u0010\u0010-\u001a\u00020\u000e2\u0008\u0010,\u001a\u0004\u0018\u00010+J\u0010\u0010.\u001a\u00020\u000e2\u0008\u0010,\u001a\u0004\u0018\u00010+J\u0018\u00103\u001a\u00020\u000e2\u0006\u00100\u001a\u00020/2\u0008\u00102\u001a\u0004\u0018\u000101J\u0006\u00104\u001a\u00020\u0002J\u0008\u00106\u001a\u0004\u0018\u000105J\u0008\u00108\u001a\u0004\u0018\u000107JN\u0010D\u001a\u00020\u000e2\u0006\u0010:\u001a\u0002092\u0008\u0010;\u001a\u0004\u0018\u0001052\u0006\u0010=\u001a\u00020<2\u0008\u0008\u0002\u0010>\u001a\u00020\u001f2\u0008\u0008\u0002\u0010?\u001a\u00020\u001f2\n\u0008\u0002\u0010A\u001a\u0004\u0018\u00010@2\n\u0008\u0002\u0010C\u001a\u0004\u0018\u00010BH\u0007J\u0006\u0010E\u001a\u00020\u000eJ\u0006\u0010F\u001a\u00020\u000eJ\u0006\u0010G\u001a\u00020\u000eJ\u0010\u0010J\u001a\u00020\u000e2\u0008\u0010I\u001a\u0004\u0018\u00010HJ\u0010\u0010K\u001a\u00020\u000e2\u0008\u0010I\u001a\u0004\u0018\u00010HJ\u0006\u0010L\u001a\u00020\u000eJ!\u0010O\u001a\u00020\u000e2\u0010\u0010N\u001a\u000c\u0012\u0006\u0008\u0001\u0012\u00020\u0005\u0018\u00010MH\u0016\u00a2\u0006\u0004\u0008O\u0010PR\u001a\u0010R\u001a\u00020Q8\u0006X\u0086D\u00a2\u0006\u000c\n\u0004\u0008R\u0010S\u001a\u0004\u0008T\u0010UR\u001a\u0010V\u001a\u00020Q8\u0006X\u0086D\u00a2\u0006\u000c\n\u0004\u0008V\u0010S\u001a\u0004\u0008W\u0010UR\u0014\u0010X\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008X\u0010YR\u0016\u0010Z\u001a\u00020\u00028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008Z\u0010[R\u0014\u0010\\\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008\\\u0010YR\u0014\u0010]\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008]\u0010YR\u0014\u0010^\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008^\u0010YR\u0014\u0010_\u001a\u00020\u001f8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008_\u0010`R\u0014\u0010a\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008a\u0010YR\u0014\u0010b\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008b\u0010YR\u0014\u0010c\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008c\u0010YR\u0014\u0010d\u001a\u00020\u001f8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008d\u0010`R\u0014\u0010f\u001a\u00020e8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008f\u0010gR$\u0010\n\u001a\u0004\u0018\u00010\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\n\u0010h\u001a\u0004\u0008i\u0010j\"\u0004\u0008k\u0010lR$\u0010n\u001a\u0004\u0018\u00010m8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008n\u0010o\u001a\u0004\u0008p\u0010q\"\u0004\u0008r\u0010sR\u0018\u0010u\u001a\u0004\u0018\u00010t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008u\u0010vR\u0018\u0010w\u001a\u0004\u0018\u00010\u00108\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008w\u0010xR\u0016\u0010y\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008y\u0010YR\u0018\u0010;\u001a\u0004\u0018\u0001058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008;\u0010zR\u0018\u0010|\u001a\u0004\u0018\u00010{8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008|\u0010}R\u0018\u0010~\u001a\u0004\u0018\u00010\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008~\u0010YR#\u0010\u0081\u0001\u001a\t\u0012\u0005\u0012\u00030\u0080\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0081\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u0083\u0001\u0010\u0084\u0001R#\u0010\u0086\u0001\u001a\t\u0012\u0005\u0012\u00030\u0085\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0086\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u0087\u0001\u0010\u0084\u0001R#\u0010\u0089\u0001\u001a\t\u0012\u0005\u0012\u00030\u0088\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0089\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u008a\u0001\u0010\u0084\u0001R#\u0010\u008c\u0001\u001a\t\u0012\u0005\u0012\u00030\u008b\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u008c\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u008d\u0001\u0010\u0084\u0001R#\u0010\u008f\u0001\u001a\t\u0012\u0005\u0012\u00030\u008e\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u008f\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u0090\u0001\u0010\u0084\u0001R#\u0010\u0092\u0001\u001a\t\u0012\u0005\u0012\u00030\u0091\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0092\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u0093\u0001\u0010\u0084\u0001R#\u0010\u0095\u0001\u001a\t\u0012\u0005\u0012\u00030\u0094\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0095\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u0096\u0001\u0010\u0084\u0001R\"\u0010\u0097\u0001\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0097\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u0098\u0001\u0010\u0084\u0001R\"\u0010\u0099\u0001\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0099\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u009a\u0001\u0010\u0084\u0001R#\u0010\u009c\u0001\u001a\t\u0012\u0005\u0012\u00030\u009b\u00010\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u009c\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u009d\u0001\u0010\u0084\u0001R\"\u0010\u009e\u0001\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u009e\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u009f\u0001\u0010\u0084\u0001R\"\u0010\u00a0\u0001\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u00a0\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u00a1\u0001\u0010\u0084\u0001R(\u0010\u00a2\u0001\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00050\u00070\u007f8\u0006\u00a2\u0006\u0010\n\u0006\u0008\u00a2\u0001\u0010\u0082\u0001\u001a\u0006\u0008\u00a3\u0001\u0010\u0084\u0001R\u0018\u0010\u00a5\u0001\u001a\u00030\u00a4\u00018\u0002X\u0082\u0004\u00a2\u0006\u0008\n\u0006\u0008\u00a5\u0001\u0010\u00a6\u0001R\u0018\u0010\u00a8\u0001\u001a\u00030\u00a7\u00018\u0002X\u0082\u0004\u00a2\u0006\u0008\n\u0006\u0008\u00a8\u0001\u0010\u00a9\u0001\u00a8\u0006\u00b1\u0001"
+        "\u0000\u00a4\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010!\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0011\n\u0002\u0008\u0004\n\u0002\u0010\u0006\n\u0002\u0008\u0013\n\u0002\u0010\n\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u000b*\u0002\u00ab\u0001\u0018\u0000 \u00b0\u00012\u00020\u0001:\n\u00b0\u0001\u00b1\u0001\u00b2\u0001\u00b3\u0001\u00b4\u0001B\u000b\u0008\u0012\u00a2\u0006\u0006\u0008\u00ae\u0001\u0010\u00af\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\"\u0010\u0008\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u00072\u0010\u0010\u0006\u001a\u000c\u0012\u0006\u0012\u0004\u0018\u00010\u0005\u0018\u00010\u0004H\u0002J,\u0010\u000c\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0010\u0010\u0006\u001a\u000c\u0012\u0006\u0012\u0004\u0018\u00010\u0005\u0018\u00010\u00042\u0008\u0010\u000b\u001a\u0004\u0018\u00010\u0005H\u0002J\u0010\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\u0002H\u0002J\u001a\u0010\u0012\u001a\u00020\u000e2\u0006\u0010\n\u001a\u00020\t2\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0002J\u0010\u0010\u0015\u001a\u00020\u000e2\u0006\u0010\u0014\u001a\u00020\u0013H\u0002J\u0008\u0010\u0016\u001a\u00020\u0002H\u0002J\u0008\u0010\u0017\u001a\u00020\u000eH\u0002J\u0008\u0010\u0018\u001a\u00020\u000eH\u0002J\u0008\u0010\u0019\u001a\u00020\u000eH\u0002J\u0008\u0010\u001a\u001a\u00020\u000eH\u0002J\u0008\u0010\u001b\u001a\u00020\u000eH\u0002J\u0008\u0010\u001c\u001a\u00020\u0002H\u0002J\u000e\u0010\u001e\u001a\u00020\u000e2\u0006\u0010\u001d\u001a\u00020\u0002J\u0006\u0010\u001f\u001a\u00020\u0005J\u0006\u0010!\u001a\u00020 J\u0006\u0010\"\u001a\u00020\u0005J\u0006\u0010#\u001a\u00020\u0005J \u0010(\u001a\u00020\u000e2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010%\u001a\u00020$2\u0008\u0010\'\u001a\u0004\u0018\u00010&J\u0006\u0010)\u001a\u00020\u000eJ\u0006\u0010+\u001a\u00020*J\u0010\u0010.\u001a\u00020\u000e2\u0008\u0010-\u001a\u0004\u0018\u00010,J\u0010\u0010/\u001a\u00020\u000e2\u0008\u0010-\u001a\u0004\u0018\u00010,J\u0018\u00104\u001a\u00020\u000e2\u0006\u00101\u001a\u0002002\u0008\u00103\u001a\u0004\u0018\u000102J\u0006\u00105\u001a\u00020\u0002J\u0008\u00107\u001a\u0004\u0018\u000106J\u0008\u00109\u001a\u0004\u0018\u000108JN\u0010E\u001a\u00020\u000e2\u0006\u0010;\u001a\u00020:2\u0008\u0010<\u001a\u0004\u0018\u0001062\u0006\u0010>\u001a\u00020=2\u0008\u0008\u0002\u0010?\u001a\u00020 2\u0008\u0008\u0002\u0010@\u001a\u00020 2\n\u0008\u0002\u0010B\u001a\u0004\u0018\u00010A2\n\u0008\u0002\u0010D\u001a\u0004\u0018\u00010CH\u0007J\u0006\u0010F\u001a\u00020\u000eJ\u0006\u0010G\u001a\u00020\u000eJ\u0006\u0010H\u001a\u00020\u000eJ\u0006\u0010I\u001a\u00020\u000eJ\u0010\u0010L\u001a\u00020\u000e2\u0008\u0010K\u001a\u0004\u0018\u00010JJ\u0010\u0010M\u001a\u00020\u000e2\u0008\u0010K\u001a\u0004\u0018\u00010JJ\u0006\u0010N\u001a\u00020\u000eJ\u0006\u0010O\u001a\u00020\u000eJ!\u0010R\u001a\u00020\u000e2\u0010\u0010Q\u001a\u000c\u0012\u0006\u0008\u0001\u0012\u00020\u0005\u0018\u00010PH\u0016\u00a2\u0006\u0004\u0008R\u0010SJ\u0006\u0010T\u001a\u00020\u000eR\u001a\u0010V\u001a\u00020U8\u0006X\u0086D\u00a2\u0006\u000c\n\u0004\u0008V\u0010W\u001a\u0004\u0008X\u0010YR\u001a\u0010Z\u001a\u00020U8\u0006X\u0086D\u00a2\u0006\u000c\n\u0004\u0008Z\u0010W\u001a\u0004\u0008[\u0010YR\u0014\u0010\\\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008\\\u0010]R\u0016\u0010^\u001a\u00020\u00028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008^\u0010_R\u0014\u0010`\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008`\u0010]R\u0014\u0010a\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008a\u0010]R\u0014\u0010b\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008b\u0010]R\u0014\u0010c\u001a\u00020 8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008c\u0010dR\u0014\u0010e\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008e\u0010]R\u0014\u0010f\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008f\u0010]R\u0014\u0010g\u001a\u00020\u00058\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008g\u0010]R\u0014\u0010h\u001a\u00020 8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008h\u0010dR\u0014\u0010j\u001a\u00020i8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008j\u0010kR$\u0010\n\u001a\u0004\u0018\u00010\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\n\u0010l\u001a\u0004\u0008m\u0010n\"\u0004\u0008o\u0010pR$\u0010r\u001a\u0004\u0018\u00010q8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008r\u0010s\u001a\u0004\u0008t\u0010u\"\u0004\u0008v\u0010wR\u0018\u0010y\u001a\u0004\u0018\u00010x8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008y\u0010zR\u0018\u0010{\u001a\u0004\u0018\u00010\u00108\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008{\u0010|R\u0016\u0010}\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008}\u0010]R\u0018\u0010<\u001a\u0004\u0018\u0001068\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008<\u0010~R\u001b\u0010\u0080\u0001\u001a\u0004\u0018\u00010\u007f8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u0080\u0001\u0010\u0081\u0001R\u001a\u0010\u0082\u0001\u001a\u0004\u0018\u00010\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0007\n\u0005\u0008\u0082\u0001\u0010]R$\u0010\u0085\u0001\u001a\n\u0012\u0005\u0012\u00030\u0084\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0085\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u0087\u0001\u0010\u0088\u0001R$\u0010\u008a\u0001\u001a\n\u0012\u0005\u0012\u00030\u0089\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u008a\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u008b\u0001\u0010\u0088\u0001R$\u0010\u008d\u0001\u001a\n\u0012\u0005\u0012\u00030\u008c\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u008d\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u008e\u0001\u0010\u0088\u0001R$\u0010\u0090\u0001\u001a\n\u0012\u0005\u0012\u00030\u008f\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0090\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u0091\u0001\u0010\u0088\u0001R$\u0010\u0093\u0001\u001a\n\u0012\u0005\u0012\u00030\u0092\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0093\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u0094\u0001\u0010\u0088\u0001R$\u0010\u0096\u0001\u001a\n\u0012\u0005\u0012\u00030\u0095\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0096\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u0097\u0001\u0010\u0088\u0001R$\u0010\u0099\u0001\u001a\n\u0012\u0005\u0012\u00030\u0098\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u0099\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u009a\u0001\u0010\u0088\u0001R#\u0010\u009b\u0001\u001a\t\u0012\u0004\u0012\u00020\u00050\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u009b\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u009c\u0001\u0010\u0088\u0001R#\u0010\u009d\u0001\u001a\t\u0012\u0004\u0012\u00020\u00050\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u009d\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u009e\u0001\u0010\u0088\u0001R$\u0010\u00a0\u0001\u001a\n\u0012\u0005\u0012\u00030\u009f\u00010\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u00a0\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u00a1\u0001\u0010\u0088\u0001R#\u0010\u00a2\u0001\u001a\t\u0012\u0004\u0012\u00020\u00020\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u00a2\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u00a3\u0001\u0010\u0088\u0001R#\u0010\u00a4\u0001\u001a\t\u0012\u0004\u0012\u00020\u00020\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u00a4\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u00a5\u0001\u0010\u0088\u0001R)\u0010\u00a6\u0001\u001a\u000f\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00050\u00070\u0083\u00018\u0006\u00a2\u0006\u0010\n\u0006\u0008\u00a6\u0001\u0010\u0086\u0001\u001a\u0006\u0008\u00a7\u0001\u0010\u0088\u0001R\u0018\u0010\u00a9\u0001\u001a\u00030\u00a8\u00018\u0002X\u0082\u0004\u00a2\u0006\u0008\n\u0006\u0008\u00a9\u0001\u0010\u00aa\u0001R\u0018\u0010\u00ac\u0001\u001a\u00030\u00ab\u00018\u0002X\u0082\u0004\u00a2\u0006\u0008\n\u0006\u0008\u00ac\u0001\u0010\u00ad\u0001\u00a8\u0006\u00b5\u0001"
     }
     d2 = {
         "Lcom/skt/tmap/engine/navigation/SDKManager;",
@@ -50,6 +51,7 @@
         "finishTTS",
         "initLocationManager",
         "clearDrivingInfo",
+        "clearObservableData",
         "isAuthorized",
         "enabled",
         "setLog",
@@ -93,6 +95,7 @@
         "driveOption",
         "startDriving",
         "stopDriving",
+        "passViaPoint",
         "resumeDriving",
         "pauseDriving",
         "Lcom/skt/tmap/engine/navigation/MapViewInterface;",
@@ -100,10 +103,12 @@
         "attachMapView",
         "detachMapView",
         "changeAlternativeRoute",
+        "cancelAllRequest",
         "",
         "scriptArray",
         "audioScript",
         "([Ljava/lang/String;)V",
+        "turnOnGps",
         "",
         "DEFAULT_LATITUDE",
         "D",
@@ -205,8 +210,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -218,6 +223,9 @@
 .end field
 
 .field private static volatile instance:Lcom/skt/tmap/engine/navigation/SDKManager;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # instance fields
@@ -226,30 +234,60 @@
 .field private final DEFAULT_LONGITUDE:D
 
 .field private final HOST_COMMERCE:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final HOST_DEVELOP:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final HOST_PORT:I
 
 .field private final HOST_SAME_COMMERCE:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final HOST_TMAP_COMMERCE:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final HOST_TMAP_DEVELOP:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final HOST_TMAP_PORT:I
 
 .field private final HOST_TMAP_SAME_COMMERCE:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final SVC_TYPE_TMAP_B2B:S
 
 .field private final TAG:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private accessKey:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final accessKeyController:Lcom/skt/tmap/engine/navigation/SDKManager$accessKeyController$1;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private channelName:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private clientInfo:Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;
     .annotation build Lorg/jetbrains/annotations/Nullable;
@@ -257,8 +295,14 @@
 .end field
 
 .field private clientLocationInitParam:Lcom/skt/tmap/engine/navigation/SDKLocationInitParam;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private clientMapviewInfo:Lcom/skt/tmap/engine/navigation/SDKManager$MAPViewInfo;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private context:Landroid/content/Context;
     .annotation build Lorg/jetbrains/annotations/Nullable;
@@ -266,10 +310,16 @@
 .end field
 
 .field private drivingInfo:Lcom/skt/tmap/engine/navigation/SDKManager$DriveInfo;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private initialized:Z
 
 .field private final locationThread:Landroid/os/HandlerThread;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final observableCrossroadAutoUrl:Landroidx/lifecycle/MutableLiveData;
     .annotation system Ldalvik/annotation/Signature;
@@ -442,6 +492,9 @@
 .end field
 
 .field private routeResult:Lcom/skt/tmap/engine/navigation/route/RouteResult;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -462,75 +515,71 @@
 .method private constructor <init>()V
     .locals 2
 
-    .line 2
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, 0x4042c85a22a1cce6L    # 37.56525071049127
 
-    .line 3
+    .line 2
     iput-wide v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->DEFAULT_LATITUDE:D
 
     const-wide v0, 0x405fbf274945e23fL    # 126.98677284073436
 
-    .line 4
+    .line 3
     iput-wide v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->DEFAULT_LONGITUDE:D
 
     const-string v0, "TmapSDKManager"
 
-    .line 5
+    .line 4
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
 
-    const-string v0, "nfappdev.tmap.co.kr"
+    const-string v0, "apis.openapi.sk.com"
 
-    .line 6
+    .line 5
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_DEVELOP:Ljava/lang/String;
 
-    const-string v0, "nfappstg.tmap.co.kr"
-
-    .line 7
+    .line 6
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_SAME_COMMERCE:Ljava/lang/String;
 
-    const-string v0, "nfapp.tmap.co.kr"
-
-    .line 8
+    .line 7
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_COMMERCE:Ljava/lang/String;
 
-    const/16 v0, 0x247f
+    const/16 v0, 0x1bb
 
-    .line 9
+    .line 8
     iput v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_PORT:I
 
     const-string v0, "ntmapdev.tmap.co.kr"
 
-    .line 10
+    .line 9
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_TMAP_DEVELOP:Ljava/lang/String;
 
     const-string v0, "ntmapstg.tmap.co.kr"
 
-    .line 11
+    .line 10
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_TMAP_SAME_COMMERCE:Ljava/lang/String;
 
     const-string v0, "ntmap.tmap.co.kr"
 
-    .line 12
+    .line 11
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_TMAP_COMMERCE:Ljava/lang/String;
 
     const/16 v0, 0x24e3
 
-    .line 13
+    .line 12
     iput v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->HOST_TMAP_PORT:I
 
     const/16 v0, 0x60
 
-    .line 14
+    .line 13
     iput-short v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->SVC_TYPE_TMAP_B2B:S
 
     const-string v0, ""
 
-    .line 15
+    .line 14
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->accessKey:Ljava/lang/String;
 
-    .line 16
+    .line 15
     sget-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager;->Companion:Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
@@ -543,7 +592,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableLocationData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 17
+    .line 16
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -554,7 +603,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableMapData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 18
+    .line 17
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -565,7 +614,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableSDIDataOnMapOnMap:Landroidx/lifecycle/MutableLiveData;
 
-    .line 19
+    .line 18
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -576,7 +625,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableSDIData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 20
+    .line 19
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -587,7 +636,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableTBTData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 21
+    .line 20
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -598,7 +647,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableHighwayData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 22
+    .line 21
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -609,7 +658,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableDrivingData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 23
+    .line 22
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -620,7 +669,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableCrossroadUrl:Landroidx/lifecycle/MutableLiveData;
 
-    .line 24
+    .line 23
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -631,7 +680,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableCrossroadAutoUrl:Landroidx/lifecycle/MutableLiveData;
 
-    .line 25
+    .line 24
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -642,7 +691,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableLaneData:Landroidx/lifecycle/MutableLiveData;
 
-    .line 26
+    .line 25
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v1
@@ -653,7 +702,7 @@
 
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->passedDestinationOpposite:Landroidx/lifecycle/MutableLiveData;
 
-    .line 27
+    .line 26
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
 
     move-result-object v0
@@ -664,14 +713,14 @@
 
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->requestingRoute:Landroidx/lifecycle/MutableLiveData;
 
-    .line 28
+    .line 27
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MutableLiveData;-><init>()V
 
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableTTSScript:Landroidx/lifecycle/MutableLiveData;
 
-    .line 29
+    .line 28
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "LOCATION_THREAD"
@@ -680,7 +729,7 @@
 
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->locationThread:Landroid/os/HandlerThread;
 
-    .line 30
+    .line 29
     new-instance v0, Lcom/skt/tmap/engine/navigation/SDKManager$accessKeyController$1;
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/engine/navigation/SDKManager$accessKeyController$1;-><init>(Lcom/skt/tmap/engine/navigation/SDKManager;)V
@@ -693,7 +742,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/SDKManager;-><init>()V
 
     return-void
@@ -715,15 +763,6 @@
     sget-object v0, Lcom/skt/tmap/engine/navigation/SDKManager;->instance:Lcom/skt/tmap/engine/navigation/SDKManager;
 
     return-object v0
-.end method
-
-.method public static final synthetic access$getRouteResult$p(Lcom/skt/tmap/engine/navigation/SDKManager;)Lcom/skt/tmap/engine/navigation/route/RouteResult;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->routeResult:Lcom/skt/tmap/engine/navigation/route/RouteResult;
-
-    return-object p0
 .end method
 
 .method public static final synthetic access$getTAG$p(Lcom/skt/tmap/engine/navigation/SDKManager;)Ljava/lang/String;
@@ -976,8 +1015,53 @@
     return-void
 .end method
 
+.method private final clearObservableData()V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableSDIDataOnMapOnMap:Landroidx/lifecycle/MutableLiveData;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableSDIData:Landroidx/lifecycle/MutableLiveData;
+
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableTBTData:Landroidx/lifecycle/MutableLiveData;
+
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableDrivingData:Landroidx/lifecycle/MutableLiveData;
+
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    .line 5
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableCrossroadUrl:Landroidx/lifecycle/MutableLiveData;
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v2}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    .line 6
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableLaneData:Landroidx/lifecycle/MutableLiveData;
+
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    .line 7
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableTTSScript:Landroidx/lifecycle/MutableLiveData;
+
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
 .method private final finishTTS()V
-    .locals 4
+    .locals 3
 
     .line 1
     invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
@@ -1025,10 +1109,6 @@
     move-result-object v2
 
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v3, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -1087,7 +1167,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_0
 
     .line 4
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
@@ -1145,7 +1225,7 @@
     invoke-static {v5, v4}, Lcom/skt/tmap/engine/navigation/util/TmapNavigationLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     .line 11
     invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/SDKLocationInitParam;->getSaveGpsLog()Z
@@ -1157,70 +1237,24 @@
     .line 12
     iput-object v3, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->saveGpsLogDirPath:Landroid/net/Uri;
 
+    goto :goto_1
+
     .line 13
     :cond_0
-    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->clientLocationInitParam:Lcom/skt/tmap/engine/navigation/SDKLocationInitParam;
-
-    invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/SDKLocationInitParam;->getFilter()Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 14
-    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->clientLocationInitParam:Lcom/skt/tmap/engine/navigation/SDKLocationInitParam;
-
-    invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/SDKLocationInitParam;->getFilter()Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    goto :goto_1
-
-    .line 15
-    :cond_1
-    iget-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
-
-    const-string v3, "location filter is null. use default filter"
-
-    invoke-static {v1, v3}, Lcom/skt/tmap/engine/navigation/util/TmapNavigationLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 16
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;
-
-    invoke-direct {v1}, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;-><init>()V
-
-    iput-object v1, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    goto :goto_1
-
-    .line 17
-    :cond_2
     iget-wide v3, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->DEFAULT_LATITUDE:D
 
     iput-wide v3, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->defaultLatitude:D
 
-    .line 18
+    .line 14
     iget-wide v3, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->DEFAULT_LONGITUDE:D
 
     iput-wide v3, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->defaultLongitude:D
 
-    .line 19
+    .line 15
     iput-boolean v2, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->saveGpsLog:Z
 
-    .line 20
-    new-instance v1, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;
-
-    invoke-direct {v1}, Lcom/skt/tmap/engine/navigation/location/TmapSDKReliabilityChecker;-><init>()V
-
-    iput-object v1, v0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;->reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
-    .line 21
+    .line 16
+    :cond_1
     :goto_1
     invoke-static {}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getInstance()Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
 
@@ -1230,19 +1264,29 @@
 
     invoke-virtual {v1, v3, v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->initialize(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$InitParam;)V
 
-    .line 22
+    .line 17
+    iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->locationThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->isAlive()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 18
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->locationThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 23
+    .line 19
+    :cond_2
     invoke-direct {p0, v2}, Lcom/skt/tmap/engine/navigation/SDKManager;->initLocationProvider(Z)V
 
     return-void
 .end method
 
 .method private final initLocationProvider(Z)V
-    .locals 4
+    .locals 3
 
     .line 1
     invoke-static {}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getInstance()Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
@@ -1261,15 +1305,11 @@
     .line 3
     new-instance p1, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
     new-instance v1, Lcom/skt/tmap/engine/navigation/location/FusedLocationProvider;
 
-    iget-object v2, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->context:Landroid/content/Context;
+    iget-object v2, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->locationThread:Landroid/os/HandlerThread;
 
-    iget-object v3, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->locationThread:Landroid/os/HandlerThread;
-
-    invoke-direct {v1, v2, v3}, Lcom/skt/tmap/engine/navigation/location/FusedLocationProvider;-><init>(Landroid/content/Context;Landroid/os/HandlerThread;)V
+    invoke-direct {v1, v0, v2}, Lcom/skt/tmap/engine/navigation/location/FusedLocationProvider;-><init>(Landroid/content/Context;Landroid/os/HandlerThread;)V
 
     invoke-direct {p1, v0, v1}, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;-><init>(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/location/LocationProviderInterface;)V
 
@@ -1330,10 +1370,6 @@
     move-result-object v4
 
     invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v5, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -1423,8 +1459,6 @@
 
     invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -1449,18 +1483,16 @@
 
     if-eqz v3, :cond_3
 
-    .line 9
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
     const-string/jumbo v2, "window"
 
+    .line 9
     invoke-virtual {v3, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
     const-string v4, "null cannot be cast to non-null type android.view.WindowManager"
 
-    invoke-static {v2, v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/f0;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Landroid/view/WindowManager;
 
@@ -1497,7 +1529,7 @@
 
     move-result-object v6
 
-    const/16 v7, 0x460
+    const/4 v7, 0x1
 
     .line 15
     iget v8, v4, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -1514,9 +1546,9 @@
     iget-object v12, v0, Lcom/skt/tmap/engine/navigation/SDKManager;->accessKeyController:Lcom/skt/tmap/engine/navigation/SDKManager$accessKeyController$1;
 
     .line 19
-    new-instance v14, Lcom/skt/tmap/engine/navigation/SDKManager$initNetworkManager$$inlined$let$lambda$1;
+    new-instance v14, Lcom/skt/tmap/engine/navigation/SDKManager$initNetworkManager$3$1;
 
-    invoke-direct {v14, v0, v15, v1}, Lcom/skt/tmap/engine/navigation/SDKManager$initNetworkManager$$inlined$let$lambda$1;-><init>(Lcom/skt/tmap/engine/navigation/SDKManager;Ljava/util/LinkedHashMap;Lcom/skt/tmap/engine/navigation/network/ChannelDomainType;)V
+    invoke-direct {v14, v0}, Lcom/skt/tmap/engine/navigation/SDKManager$initNetworkManager$3$1;-><init>(Lcom/skt/tmap/engine/navigation/SDKManager;)V
 
     const-string v13, ""
 
@@ -1559,34 +1591,22 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v1, v3}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->setChannel(Lcom/skt/tmap/engine/navigation/network/ChannelDomainType;Ljava/lang/String;)V
+    iget-object v4, v0, Lcom/skt/tmap/engine/navigation/SDKManager;->clientInfo:Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;
 
-    .line 23
-    sget-object v2, Lcom/skt/tmap/engine/navigation/network/ChannelDomainType;->FAPP:Lcom/skt/tmap/engine/navigation/network/ChannelDomainType;
+    invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    if-ne v1, v2, :cond_3
+    invoke-virtual {v4}, Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;->getApiKey()Ljava/lang/String;
 
-    .line 24
-    sget-object v1, Lcom/skt/tmap/engine/navigation/NavigationManager;->Companion:Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;
+    move-result-object v4
 
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getNaviConfigData()Lcom/skt/tmap/engine/navigation/NaviConfigData;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/skt/tmap/engine/navigation/NaviConfigData;->setVmsInfoAvailable(Z)V
+    invoke-virtual {v2, v1, v3, v4}, Lcom/skt/tmap/engine/navigation/network/NetworkManagerV3;->setChannel(Lcom/skt/tmap/engine/navigation/network/ChannelDomainType;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     return-void
 .end method
 
 .method private final initTTS()V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -1602,10 +1622,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -1718,10 +1734,6 @@
 
     invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v3, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -1786,11 +1798,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 3
-    invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
     const-string v3, "android.permission.ACCESS_COARSE_LOCATION"
 
+    .line 3
     invoke-direct {p0, v1, p1, v3}, Lcom/skt/tmap/engine/navigation/SDKManager;->addPermission(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;)Z
 
     move-result v3
@@ -1868,7 +1878,7 @@
 .end method
 
 .method private final needPermissions()Z
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -1908,10 +1918,6 @@
     move-result-object v3
 
     invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v4, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -2086,7 +2092,7 @@
 
     move-object v2, p1
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/ArraysKt___ArraysKt;->Ig([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lej/l;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/ArraysKt___ArraysKt;->Mh([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lgl/l;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2101,13 +2107,28 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->observableTTSScript:Landroidx/lifecycle/MutableLiveData;
 
-    invoke-static {p1}, Lkotlin/collections/ArraysKt___ArraysKt;->ey([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/collections/ArraysKt___ArraysKt;->iz([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public final cancelAllRequest()V
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager;->Companion:Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->cancelAllRequest()V
+
     return-void
 .end method
 
@@ -2149,7 +2170,7 @@
 .end method
 
 .method public final finalize()V
-    .locals 3
+    .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -2165,10 +2186,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -2236,12 +2253,15 @@
     .line 10
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->routeResult:Lcom/skt/tmap/engine/navigation/route/RouteResult;
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
     invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->setRouteOption(Lcom/skt/tmap/engine/navigation/route/RouteOption;)V
 
     .line 11
-    :cond_1
+    :goto_0
     iput-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->routeResult:Lcom/skt/tmap/engine/navigation/route/RouteResult;
 
     const-string v0, ""
@@ -2294,14 +2314,11 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->channelName:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
     const-string v0, "NA"
 
-    :goto_0
+    :cond_0
     return-object v0
 .end method
 
@@ -2328,7 +2345,7 @@
 .end method
 
 .method public final getCurrentPosition()Landroid/location/Location;
-    .locals 3
+    .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
@@ -2347,10 +2364,6 @@
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -2362,15 +2375,11 @@
 
     move-result-object v0
 
-    const-string v1, "TmapLocationManager.getInstance()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getCurrentPosition()Landroid/location/Location;
 
     move-result-object v0
 
-    const-string v1, "TmapLocationManager.getInstance().currentPosition"
+    const-string v1, "getInstance().currentPosition"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2657,7 +2666,7 @@
 .end method
 
 .method public final getRouteOption()Lcom/skt/tmap/engine/navigation/route/RouteOption;
-    .locals 5
+    .locals 4
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
@@ -2675,10 +2684,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -2698,35 +2703,33 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v4, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteOption$2;
+    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteOption$2;
 
-    invoke-direct {v4}, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteOption$2;-><init>()V
+    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteOption$2;-><init>()V
 
-    const-class v4, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteOption$2;
+    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteOption$2;
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " not authorized"
 
-    const-string v2, " not authorized"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2749,7 +2752,7 @@
 .end method
 
 .method public final getRouteResult()Lcom/skt/tmap/engine/navigation/route/RouteResult;
-    .locals 4
+    .locals 3
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
@@ -2767,10 +2770,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -2792,21 +2791,19 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteResult$2;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteResult$2;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteResult$2;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteResult$2;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteResult$2;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$getRouteResult$2;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2836,7 +2833,7 @@
 .method public final getVersionCode()I
     .locals 1
 
-    const/16 v0, 0x460
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -2846,13 +2843,13 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "8.12.0"
+    const-string v0, "1.0.0.0001"
 
     return-object v0
 .end method
 
 .method public final init(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;Lcom/skt/tmap/engine/navigation/network/AuthEventListener;)V
-    .locals 20
+    .locals 19
     .param p1    # Landroid/content/Context;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -2897,10 +2894,6 @@
 
     invoke-static {v5}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v6, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -2924,9 +2917,9 @@
 
     move-result v5
 
-    const/4 v7, 0x1
+    const/4 v6, 0x1
 
-    if-ne v5, v7, :cond_1
+    if-ne v5, v6, :cond_1
 
     .line 5
     :cond_0
@@ -2934,39 +2927,39 @@
 
     move-result-object v3
 
-    const-string v5, "SystemInfo.getDeviceID(context)"
+    const-string v5, "getDeviceID(context)"
 
     invoke-static {v3, v5}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_1
-    move-object v13, v3
+    move-object v12, v3
 
     .line 6
     new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getClientServiceName()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v7
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getClientAppVersion()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v8
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getClientID()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v9
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getClientApiKey()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v10
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getClientApCode()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v11
 
-    move-object v7, v3
+    move-object v6, v3
 
-    invoke-direct/range {v7 .. v13}, Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v6 .. v12}, Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v3, v0, Lcom/skt/tmap/engine/navigation/SDKManager;->clientInfo:Lcom/skt/tmap/engine/navigation/SDKManager$SDKClientInfo;
 
@@ -2975,27 +2968,27 @@
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getMapViewType()Lcom/skt/tmap/engine/navigation/MapViewType;
 
-    move-result-object v15
+    move-result-object v14
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getMapLayerId()I
 
-    move-result v16
+    move-result v15
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getMapLinkStackId()I
 
-    move-result v17
+    move-result v16
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getMapSdiStackId()I
 
-    move-result v18
+    move-result v17
 
     invoke-virtual/range {p2 .. p2}, Lcom/skt/tmap/engine/navigation/SDKOption$InitOption;->getMapTileSource()Lcom/skt/tmap/engine/navigation/safedrive/TileSource;
 
-    move-result-object v19
+    move-result-object v18
 
-    move-object v14, v3
+    move-object v13, v3
 
-    invoke-direct/range {v14 .. v19}, Lcom/skt/tmap/engine/navigation/SDKManager$MAPViewInfo;-><init>(Lcom/skt/tmap/engine/navigation/MapViewType;IIILcom/skt/tmap/engine/navigation/safedrive/TileSource;)V
+    invoke-direct/range {v13 .. v18}, Lcom/skt/tmap/engine/navigation/SDKManager$MAPViewInfo;-><init>(Lcom/skt/tmap/engine/navigation/MapViewType;IIILcom/skt/tmap/engine/navigation/safedrive/TileSource;)V
 
     iput-object v3, v0, Lcom/skt/tmap/engine/navigation/SDKManager;->clientMapviewInfo:Lcom/skt/tmap/engine/navigation/SDKManager$MAPViewInfo;
 
@@ -3031,8 +3024,6 @@
     move-result-object v4
 
     invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -3148,8 +3139,23 @@
     return-void
 .end method
 
+.method public final passViaPoint()V
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/skt/tmap/engine/navigation/NavigationManager;->Companion:Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager$Companion;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/NavigationManager;->passViaPoint()V
+
+    return-void
+.end method
+
 .method public final pauseDriving()V
-    .locals 5
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -3165,10 +3171,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -3190,21 +3192,19 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$2;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$2;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$2;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$2;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$2;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$2;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3254,33 +3254,31 @@
     .line 7
     iget-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v4, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$4$1;
+    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$4$1;
 
-    invoke-direct {v4}, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$4$1;-><init>()V
+    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$4$1;-><init>()V
 
-    const-class v4, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$4$1;
+    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$4$1;
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " DriveStatus:"
 
-    const-string v2, " DriveStatus:"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/SDKManager$DriveInfo;->getStatus()Lcom/skt/tmap/engine/navigation/SDKManager$DriveStatus;
 
@@ -3290,9 +3288,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3326,21 +3324,19 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$3;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$3;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$3;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$3;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$3;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$pauseDriving$3;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3396,7 +3392,7 @@
 .end method
 
 .method public final requestRoute(Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
-    .locals 4
+    .locals 3
     .param p1    # Lcom/skt/tmap/engine/navigation/route/RouteOption$Builder;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -3425,10 +3421,6 @@
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -3451,21 +3443,19 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$2;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$2;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$2;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$2;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$2;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$2;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3519,13 +3509,13 @@
 
     move-result v0
 
-    sget-object v3, Lcom/skt/tmap/engine/navigation/SDKConstant$SDKLimitation;->INSTANCE:Lcom/skt/tmap/engine/navigation/SDKConstant$SDKLimitation;
+    sget-object v2, Lcom/skt/tmap/engine/navigation/SDKConstant$SDKLimitation;->INSTANCE:Lcom/skt/tmap/engine/navigation/SDKConstant$SDKLimitation;
 
-    invoke-virtual {v3}, Lcom/skt/tmap/engine/navigation/SDKConstant$SDKLimitation;->getMAX_WAYPOINT_COUNT()I
+    invoke-virtual {v2}, Lcom/skt/tmap/engine/navigation/SDKConstant$SDKLimitation;->getMAX_WAYPOINT_COUNT()I
 
-    move-result v3
+    move-result v2
 
-    if-le v0, v3, :cond_3
+    if-le v0, v2, :cond_3
 
     .line 8
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -3534,21 +3524,19 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$4;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$4;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$4;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$4;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$4;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$4;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3610,9 +3598,9 @@
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$$inlined$let$lambda$1;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$6$1;
 
-    invoke-direct {v2, p0, p1, p2}, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$$inlined$let$lambda$1;-><init>(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/route/RouteOption;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
+    invoke-direct {v2, p0, p2}, Lcom/skt/tmap/engine/navigation/SDKManager$requestRoute$6$1;-><init>(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)V
 
     invoke-virtual {v1, v0, p1, v2}, Lcom/skt/tmap/engine/navigation/route/RouteRepository$Companion;->requestRoute(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/route/RouteOption;Lcom/skt/tmap/engine/navigation/route/RouteEventListener;)Lretrofit2/Call;
 
@@ -3621,7 +3609,7 @@
 .end method
 
 .method public final resumeDriving()V
-    .locals 5
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -3637,10 +3625,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -3662,21 +3646,19 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$2;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$2;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$2;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$2;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$2;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$2;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3712,45 +3694,43 @@
     .line 6
     iget-object v1, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v4, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$3$1;
+    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$3$1;
 
-    invoke-direct {v4}, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$3$1;-><init>()V
+    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$3$1;-><init>()V
 
-    const-class v4, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$3$1;
+    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$resumeDriving$3$1;
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " DriveStatus:"
 
-    const-string v2, " DriveStatus:"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/SDKManager$DriveInfo;->getStatus()Lcom/skt/tmap/engine/navigation/SDKManager$DriveStatus;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3815,7 +3795,7 @@
 .end method
 
 .method public final startDriving(Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;)V
-    .locals 10
+    .locals 11
     .param p1    # Lcom/skt/tmap/engine/navigation/data/DriveMode;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -3831,7 +3811,13 @@
     .annotation build Lkotlin/jvm/JvmOverloads;
     .end annotation
 
-    const/4 v4, 0x0
+    const-string v0, "mode"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "notification"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -3839,25 +3825,27 @@
 
     const/4 v7, 0x0
 
-    const/16 v8, 0x78
+    const/4 v8, 0x0
 
-    const/4 v9, 0x0
+    const/16 v9, 0x78
 
-    move-object v0, p0
+    const/4 v10, 0x0
 
-    move-object v1, p1
+    move-object v1, p0
 
-    move-object v2, p2
+    move-object v2, p1
 
-    move-object v3, p3
+    move-object v3, p2
 
-    invoke-static/range {v0 .. v9}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
+    move-object v4, p3
+
+    invoke-static/range {v1 .. v10}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final startDriving(Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;I)V
-    .locals 10
+    .locals 11
     .param p1    # Lcom/skt/tmap/engine/navigation/data/DriveMode;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -3873,33 +3861,41 @@
     .annotation build Lkotlin/jvm/JvmOverloads;
     .end annotation
 
-    const/4 v5, 0x0
+    const-string v0, "mode"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "notification"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    const/16 v8, 0x70
+    const/4 v8, 0x0
 
-    const/4 v9, 0x0
+    const/16 v9, 0x70
 
-    move-object v0, p0
+    const/4 v10, 0x0
 
-    move-object v1, p1
+    move-object v1, p0
 
-    move-object v2, p2
+    move-object v2, p1
 
-    move-object v3, p3
+    move-object v3, p2
 
-    move v4, p4
+    move-object v4, p3
 
-    invoke-static/range {v0 .. v9}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
+    move v5, p4
+
+    invoke-static/range {v1 .. v10}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final startDriving(Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;II)V
-    .locals 10
+    .locals 11
     .param p1    # Lcom/skt/tmap/engine/navigation/data/DriveMode;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -3915,33 +3911,41 @@
     .annotation build Lkotlin/jvm/JvmOverloads;
     .end annotation
 
-    const/4 v6, 0x0
+    const-string v0, "mode"
+
+    move-object v2, p1
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "notification"
+
+    move-object v4, p3
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
-    const/16 v8, 0x60
+    const/4 v8, 0x0
 
-    const/4 v9, 0x0
+    const/16 v9, 0x60
 
-    move-object v0, p0
+    const/4 v10, 0x0
 
-    move-object v1, p1
+    move-object v1, p0
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-object v3, p3
+    move v5, p4
 
-    move v4, p4
+    move/from16 v6, p5
 
-    move v5, p5
-
-    invoke-static/range {v0 .. v9}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v10}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final startDriving(Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;)V
-    .locals 10
+    .locals 11
     .param p1    # Lcom/skt/tmap/engine/navigation/data/DriveMode;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -3961,27 +3965,35 @@
     .annotation build Lkotlin/jvm/JvmOverloads;
     .end annotation
 
-    const/4 v7, 0x0
+    const-string v0, "mode"
 
-    const/16 v8, 0x40
+    move-object v2, p1
 
-    const/4 v9, 0x0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v0, p0
+    const-string v0, "notification"
 
-    move-object v1, p1
+    move-object v4, p3
 
-    move-object v2, p2
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v3, p3
+    const/4 v8, 0x0
 
-    move v4, p4
+    const/16 v9, 0x40
 
-    move v5, p5
+    const/4 v10, 0x0
 
-    move-object/from16 v6, p6
+    move-object v1, p0
 
-    invoke-static/range {v0 .. v9}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
+    move-object v3, p2
+
+    move v5, p4
+
+    move/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    invoke-static/range {v1 .. v10}, Lcom/skt/tmap/engine/navigation/SDKManager;->startDriving$default(Lcom/skt/tmap/engine/navigation/SDKManager;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteResult;Landroid/app/Notification;IILcom/skt/tmap/engine/navigation/DriveStatusChangedListener;Lcom/skt/tmap/engine/navigation/SDKOption$DriveOption;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -4040,10 +4052,6 @@
 
     invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    const-string v4, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -4056,11 +4064,11 @@
     .line 3
     sget-object v3, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SIMULATION_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     if-ne v1, v3, :cond_0
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
     goto :goto_0
 
@@ -4074,7 +4082,7 @@
 
     :cond_1
     :goto_0
-    move v1, v5
+    move v1, v4
 
     .line 5
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/SDKManager;->isAuthorized()Z
@@ -4101,8 +4109,6 @@
     move-result-object v3
 
     invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -4240,7 +4246,7 @@
 .end method
 
 .method public final stopDriving()V
-    .locals 4
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -4256,10 +4262,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -4281,21 +4283,19 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$stopDriving$2;
+    new-instance v2, Lcom/skt/tmap/engine/navigation/SDKManager$stopDriving$2;
 
-    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$stopDriving$2;-><init>()V
+    invoke-direct {v2}, Lcom/skt/tmap/engine/navigation/SDKManager$stopDriving$2;-><init>()V
 
-    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$stopDriving$2;
+    const-class v2, Lcom/skt/tmap/engine/navigation/SDKManager$stopDriving$2;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v2}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -4367,18 +4367,34 @@
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->stop()V
 
     .line 9
+    invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/SDKManager;->clearObservableData()V
+
+    .line 10
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/SDKManager;->clearDrivingInfo()V
 
     const/4 v0, 0x0
 
-    .line 10
+    .line 11
     invoke-direct {p0, v0}, Lcom/skt/tmap/engine/navigation/SDKManager;->initLocationProvider(Z)V
 
     return-void
 .end method
 
+.method public final turnOnGps()V
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->getInstance()Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->turnOnGps()V
+
+    return-void
+.end method
+
 .method public final userRouteRequest()Z
-    .locals 5
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
@@ -4394,10 +4410,6 @@
     move-result-object v1
 
     invoke-static {v1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-string v2, "object {}.javaClass.enclosingMethod!!"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
@@ -4417,35 +4429,33 @@
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/SDKManager;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v4, Lcom/skt/tmap/engine/navigation/SDKManager$userRouteRequest$2;
+    new-instance v3, Lcom/skt/tmap/engine/navigation/SDKManager$userRouteRequest$2;
 
-    invoke-direct {v4}, Lcom/skt/tmap/engine/navigation/SDKManager$userRouteRequest$2;-><init>()V
+    invoke-direct {v3}, Lcom/skt/tmap/engine/navigation/SDKManager$userRouteRequest$2;-><init>()V
 
-    const-class v4, Lcom/skt/tmap/engine/navigation/SDKManager$userRouteRequest$2;
+    const-class v3, Lcom/skt/tmap/engine/navigation/SDKManager$userRouteRequest$2;
 
-    invoke-virtual {v4}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
+    invoke-virtual {v3}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v2
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, " not authorized"
 
-    const-string v2, " not authorized"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 

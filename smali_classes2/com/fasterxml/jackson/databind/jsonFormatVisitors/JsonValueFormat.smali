@@ -42,6 +42,8 @@
 
 .field public static final enum UTC_MILLISEC:Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
 
+.field public static final enum UUID:Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
+
 
 # instance fields
 .field private final _desc:Ljava/lang/String;
@@ -49,7 +51,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 16
+    .locals 17
 
     .line 1
     new-instance v0, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
@@ -220,62 +222,81 @@
 
     sput-object v4, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;->UTC_MILLISEC:Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
 
-    const/16 v2, 0xd
+    .line 14
+    new-instance v2, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
 
-    new-array v2, v2, [Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
+    const-string v15, "UUID"
+
+    const/16 v14, 0xd
+
+    move-object/from16 v16, v4
+
+    const-string v4, "uuid"
+
+    invoke-direct {v2, v15, v14, v4}, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;->UUID:Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
+
+    const/16 v4, 0xe
+
+    new-array v4, v4, [Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
 
     const/4 v15, 0x0
 
-    aput-object v0, v2, v15
+    aput-object v0, v4, v15
 
     const/4 v0, 0x1
 
-    aput-object v1, v2, v0
+    aput-object v1, v4, v0
 
     const/4 v0, 0x2
 
-    aput-object v3, v2, v0
+    aput-object v3, v4, v0
 
     const/4 v0, 0x3
 
-    aput-object v5, v2, v0
+    aput-object v5, v4, v0
 
     const/4 v0, 0x4
 
-    aput-object v7, v2, v0
+    aput-object v7, v4, v0
 
     const/4 v0, 0x5
 
-    aput-object v9, v2, v0
+    aput-object v9, v4, v0
 
     const/4 v0, 0x6
 
-    aput-object v11, v2, v0
+    aput-object v11, v4, v0
 
     const/4 v0, 0x7
 
-    aput-object v13, v2, v0
+    aput-object v13, v4, v0
 
     const/16 v0, 0x8
 
-    aput-object v12, v2, v0
+    aput-object v12, v4, v0
 
     const/16 v0, 0x9
 
-    aput-object v10, v2, v0
+    aput-object v10, v4, v0
 
     const/16 v0, 0xa
 
-    aput-object v8, v2, v0
+    aput-object v8, v4, v0
 
     const/16 v0, 0xb
 
-    aput-object v6, v2, v0
+    aput-object v6, v4, v0
 
-    aput-object v4, v2, v14
+    const/16 v0, 0xc
 
-    .line 14
-    sput-object v2, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;->$VALUES:[Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
+    aput-object v16, v4, v0
+
+    aput-object v2, v4, v14
+
+    .line 15
+    sput-object v4, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;->$VALUES:[Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonValueFormat;
 
     return-void
 .end method

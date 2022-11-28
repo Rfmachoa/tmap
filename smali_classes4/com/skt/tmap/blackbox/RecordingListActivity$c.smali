@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/blackbox/RecordingListActivity;->M5()V
+    value = Lcom/skt/tmap/blackbox/RecordingListActivity;->W5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -65,18 +65,18 @@
 
     add-int/2addr p2, p3
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->B5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
+    invoke-static {p1, p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->K5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p1, p3}, Lcom/skt/tmap/blackbox/RecordingListActivity;->E5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
+    invoke-static {p1, p3}, Lcom/skt/tmap/blackbox/RecordingListActivity;->F5(Lcom/skt/tmap/blackbox/RecordingListActivity;I)I
 
     return-void
 .end method
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -91,9 +91,11 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->z5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->I5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Z
 
     move-result p1
+
+    const/4 v0, 0x1
 
     if-nez p1, :cond_1
 
@@ -102,13 +104,13 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->C5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->L5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->A5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
+    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->J5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
 
     move-result p2
 
@@ -124,13 +126,13 @@
 
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->C5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->L5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->A5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
+    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->J5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
 
     move-result p2
 
@@ -150,13 +152,13 @@
 
     if-nez p1, :cond_1
 
-    const/4 p1, 0x1
+    move p1, v0
 
     .line 3
     :goto_0
     iget-object p2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->A5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
+    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->J5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
 
     move-result p2
 
@@ -165,17 +167,17 @@
     .line 4
     iget-object p2, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->C5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
+    invoke-static {p2}, Lcom/skt/tmap/blackbox/RecordingListActivity;->L5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Ljava/util/HashMap;
 
     move-result-object p2
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {p2, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 p1, p1, 0x1
 
@@ -185,14 +187,14 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->D5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Lwb/p;
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->M5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Lud/t;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     .line 6
-    invoke-static {}, Lcom/skt/tmap/blackbox/RecordingListActivity;->v5()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/blackbox/RecordingListActivity;->D5()Ljava/lang/String;
 
     move-result-object p1
 
@@ -202,20 +204,59 @@
 
     move-result-object p2
 
-    iget-object v0, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
+    iget-object v1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/blackbox/RecordingListActivity;->A5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
+    invoke-static {v1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->J5(Lcom/skt/tmap/blackbox/RecordingListActivity;)I
 
-    move-result v0
+    move-result v1
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 7
     :cond_1
+    iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->N5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Landroid/widget/ListView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/widget/ListView;->canScrollVertically(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 8
+    iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->O5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Landroid/view/View;
+
+    move-result-object p1
+
+    const/16 p2, 0x8
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_1
+
+    .line 9
+    :cond_2
+    iget-object p1, p0, Lcom/skt/tmap/blackbox/RecordingListActivity$c;->a:Lcom/skt/tmap/blackbox/RecordingListActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/blackbox/RecordingListActivity;->O5(Lcom/skt/tmap/blackbox/RecordingListActivity;)Landroid/view/View;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_1
     return-void
 .end method

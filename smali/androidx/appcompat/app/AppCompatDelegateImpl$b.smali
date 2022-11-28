@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$b;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget v1, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->L1:I
+    iget v1, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->N1:I
 
     and-int/lit8 v1, v1, 0x1
 
@@ -56,7 +56,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$b;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget v1, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->L1:I
+    iget v1, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->N1:I
 
     and-int/lit16 v1, v1, 0x1000
 
@@ -71,10 +71,10 @@
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$b;->a:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iput-boolean v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->K1:Z
+    iput-boolean v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->M1:Z
 
     .line 6
-    iput v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->L1:I
+    iput v2, v0, Landroidx/appcompat/app/AppCompatDelegateImpl;->N1:I
 
     return-void
 .end method

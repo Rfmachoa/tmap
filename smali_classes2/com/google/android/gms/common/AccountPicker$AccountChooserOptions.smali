@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/AccountPicker$AccountChooserOptions;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -31,26 +31,10 @@
 .field private zzc:Ljava/util/ArrayList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Landroid/accounts/Account;",
-            ">;"
-        }
-    .end annotation
 .end field
 
 .field private zzd:Ljava/util/ArrayList;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
     .end annotation
 .end field
 

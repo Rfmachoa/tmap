@@ -29,7 +29,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lw3/f;",
+            "Ls5/f;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Ljava/lang/String;",
             "Ljava/lang/Float;",
             ">;>;"
@@ -114,7 +114,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lr1/i<",
+            "Landroidx/core/util/k<",
             "Ljava/lang/String;",
             "Ljava/lang/Float;",
             ">;>;"
@@ -170,7 +170,7 @@
     check-cast v2, Ljava/util/Map$Entry;
 
     .line 5
-    new-instance v3, Lr1/i;
+    new-instance v3, Landroidx/core/util/k;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -180,9 +180,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lw3/f;
+    check-cast v2, Ls5/f;
 
-    invoke-virtual {v2}, Lw3/f;->b()F
+    invoke-virtual {v2}, Ls5/f;->b()F
 
     move-result v2
 
@@ -190,7 +190,7 @@
 
     move-result-object v2
 
-    invoke-direct {v3, v4, v2}, Lr1/i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v3, v4, v2}, Landroidx/core/util/k;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -245,18 +245,18 @@
 
     move-result-object v4
 
-    check-cast v4, Lr1/i;
+    check-cast v4, Landroidx/core/util/k;
 
     const/4 v5, 0x2
 
     new-array v5, v5, [Ljava/lang/Object;
 
     .line 6
-    iget-object v6, v4, Lr1/i;->a:Ljava/lang/Object;
+    iget-object v6, v4, Landroidx/core/util/k;->a:Ljava/lang/Object;
 
     aput-object v6, v5, v2
 
-    iget-object v4, v4, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v4, v4, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     const/4 v6, 0x1
 
@@ -296,14 +296,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lw3/f;
+    check-cast v0, Ls5/f;
 
     if-nez v0, :cond_1
 
     .line 3
-    new-instance v0, Lw3/f;
+    new-instance v0, Ls5/f;
 
-    invoke-direct {v0}, Lw3/f;-><init>()V
+    invoke-direct {v0}, Ls5/f;-><init>()V
 
     .line 4
     iget-object v1, p0, Lcom/airbnb/lottie/p;->c:Ljava/util/Map;
@@ -312,7 +312,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {v0, p2}, Lw3/f;->a(F)V
+    invoke-virtual {v0, p2}, Ls5/f;->a(F)V
 
     const-string v0, "__container"
 

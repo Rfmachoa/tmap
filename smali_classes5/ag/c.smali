@@ -1,465 +1,165 @@
-.class public Lag/c;
-.super Ljava/lang/Object;
-.source "Header.java"
-
-# interfaces
-.implements Ljava/lang/Iterable;
+.class public final Lag/c;
+.super Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource$a;
+.source "OkHttpDataSourceFactory.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/lang/Iterable<",
-        "Lag/h;",
-        ">;"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # instance fields
-.field public final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lag/h;",
-            ">;"
-        }
+.field public final b:Lokhttp3/Call$Factory;
+
+.field public final c:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public final b:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/util/List<",
-            "Lag/h;",
-            ">;>;"
-        }
+.field public final d:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public final e:Lokhttp3/CacheControl;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lokhttp3/Call$Factory;)V
     .locals 1
 
+    const/4 v0, 0x0
+
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0, v0, v0}, Lag/c;-><init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lokhttp3/CacheControl;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lokhttp3/Call$Factory;Ljava/lang/String;)V
+    .locals 1
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
 
     .line 2
-    new-instance v0, Ljava/util/LinkedList;
+    invoke-direct {p0, p1, p2, v0, v0}, Lag/c;-><init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lokhttp3/CacheControl;)V
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lag/c;->a:Ljava/util/List;
+.method public constructor <init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
+    .locals 1
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
+
+    .line 4
+    invoke-direct {p0, p1, p2, p3, v0}, Lag/c;-><init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lokhttp3/CacheControl;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lokhttp3/CacheControl;)V
+    .locals 0
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p4    # Lokhttp3/CacheControl;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 5
+    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource$a;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Lag/c;->b:Lokhttp3/Call$Factory;
+
+    .line 7
+    iput-object p2, p0, Lag/c;->c:Ljava/lang/String;
+
+    .line 8
+    iput-object p3, p0, Lag/c;->d:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
+
+    .line 9
+    iput-object p4, p0, Lag/c;->e:Lokhttp3/CacheControl;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lokhttp3/CacheControl;)V
+    .locals 1
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Lokhttp3/CacheControl;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x0
 
     .line 3
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lag/c;->b:Ljava/util/Map;
+    invoke-direct {p0, p1, p2, v0, p3}, Lag/c;-><init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;Lokhttp3/CacheControl;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lag/h;)V
-    .locals 3
-
-    if-nez p1, :cond_0
-
-    return-void
+.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource$c;)Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource;
+    .locals 0
 
     .line 1
-    :cond_0
-    invoke-virtual {p1}, Lag/h;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, Lag/c;->b:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    if-nez v1, :cond_1
-
-    .line 3
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 4
-    iget-object v2, p0, Lag/c;->b:Ljava/util/Map;
-
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 5
-    :cond_1
-    invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 6
-    iget-object v0, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)Lag/h;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
-
-    return-object v0
-
-    .line 1
-    :cond_0
-    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 2
-    iget-object v1, p0, Lag/c;->b:Ljava/util/Map;
-
-    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    if-eqz p1, :cond_1
-
-    .line 3
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const/4 v0, 0x0
-
-    .line 4
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lag/h;
-
-    return-object p1
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public c()Ljava/util/List;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lag/h;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-.end method
-
-.method public d(Ljava/lang/String;)Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/List<",
-            "Lag/h;",
-            ">;"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 1
-    :cond_0
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 2
-    iget-object v0, p0, Lag/c;->b:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    if-eqz p1, :cond_2
-
-    .line 3
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_0
-
-    .line 4
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-
-    .line 5
-    :cond_2
-    :goto_0
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    invoke-virtual {p0, p1}, Lag/c;->c(Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource$c;)Lag/b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public e(Ljava/lang/String;)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
-
-    return v0
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource$c;)Lag/b;
+    .locals 4
 
     .line 1
-    :cond_0
-    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    new-instance v0, Lag/b;
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    iget-object v1, p0, Lag/c;->b:Lokhttp3/Call$Factory;
 
-    move-result-object p1
+    iget-object v2, p0, Lag/c;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lag/c;->e:Lokhttp3/CacheControl;
+
+    invoke-direct {v0, v1, v2, v3, p1}, Lag/b;-><init>(Lokhttp3/Call$Factory;Ljava/lang/String;Lokhttp3/CacheControl;Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource$c;)V
 
     .line 2
-    iget-object v1, p0, Lag/c;->b:Ljava/util/Map;
+    iget-object p1, p0, Lag/c;->d:Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;
 
-    invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_0
 
     .line 3
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/e;->d(Lcom/tmapmobility/tmap/exoplayer2/upstream/o0;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    .line 4
-    :cond_1
-    iget-object v0, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
-
-    .line 5
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    return v0
-.end method
-
-.method public f(Lag/h;)V
-    .locals 6
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    .line 1
     :cond_0
-    invoke-virtual {p1}, Lag/h;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, Lag/c;->b:Ljava/util/Map;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    if-eqz v0, :cond_4
-
-    .line 3
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    .line 4
-    :cond_1
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    .line 5
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    const/4 v0, 0x0
-
-    .line 6
-    iget-object v1, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    const/4 v2, -0x1
-
-    move v3, v2
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    .line 7
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lag/h;
-
-    .line 8
-    invoke-virtual {v4}, Lag/h;->b()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p1}, Lag/h;->b()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    .line 9
-    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
-
-    if-ne v3, v2, :cond_2
-
-    move v3, v0
-
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 10
-    :cond_3
-    iget-object v0, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-interface {v0, v3, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 11
-    :cond_4
-    :goto_1
-    invoke-virtual {p0, p1}, Lag/c;->a(Lag/h;)V
-
-    return-void
-.end method
-
-.method public iterator()Ljava/util/Iterator;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Iterator<",
-            "Lag/h;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lag/c;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     return-object v0
 .end method

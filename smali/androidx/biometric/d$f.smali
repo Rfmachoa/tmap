@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/biometric/d;->m()V
+    value = Landroidx/biometric/d;->n()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,7 +57,7 @@
     .line 2
     iget-object p1, p0, Landroidx/biometric/d$f;->a:Landroidx/biometric/d;
 
-    invoke-virtual {p1}, Landroidx/biometric/d;->y()V
+    invoke-virtual {p1}, Landroidx/biometric/d;->z()V
 
     .line 3
     iget-object p1, p0, Landroidx/biometric/d$f;->a:Landroidx/biometric/d;
@@ -66,7 +66,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroidx/biometric/f;->F(Z)V
+    invoke-virtual {p1, v0}, Landroidx/biometric/f;->G(Z)V
 
     :cond_0
     return-void

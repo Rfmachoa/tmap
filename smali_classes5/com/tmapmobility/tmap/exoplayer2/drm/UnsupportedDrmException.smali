@@ -19,18 +19,11 @@
 
 # instance fields
 .field public final reason:I
-    .annotation build Lcom/tmapmobility/tmap/exoplayer2/drm/UnsupportedDrmException$Reason;
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
-    .param p1    # I
-        .annotation build Lcom/tmapmobility/tmap/exoplayer2/drm/UnsupportedDrmException$Reason;
-        .end annotation
-    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
@@ -43,10 +36,6 @@
 
 .method public constructor <init>(ILjava/lang/Exception;)V
     .locals 0
-    .param p1    # I
-        .annotation build Lcom/tmapmobility/tmap/exoplayer2/drm/UnsupportedDrmException$Reason;
-        .end annotation
-    .end param
 
     .line 3
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V

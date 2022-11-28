@@ -1,64 +1,33 @@
-.class public final Lkc/a$b;
+.class public Lkc/a$b;
 .super Ljava/lang/Object;
-.source "BadgeRepository.kt"
+.source "ActionAlarmSet.java"
 
 # interfaces
-.implements Lretrofit2/Callback;
+.implements Lpc/d;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkc/a;->d(Landroid/content/Context;Ljava/util/List;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkc/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x1
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lretrofit2/Callback<",
-        "Lcom/skt/tmap/network/frontman/BadgesResponseDto;",
-        ">;"
-    }
-.end annotation
 
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\'\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001J$\u0010\u0008\u001a\u00020\u00072\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00032\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u0005H\u0016J\u001e\u0010\u000b\u001a\u00020\u00072\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00032\u0006\u0010\n\u001a\u00020\tH\u0016\u00a8\u0006\u000c"
-    }
-    d2 = {
-        "kc/a$b",
-        "Lretrofit2/Callback;",
-        "Lcom/skt/tmap/network/frontman/BadgesResponseDto;",
-        "Lretrofit2/Call;",
-        "call",
-        "Lretrofit2/Response;",
-        "response",
-        "Lkotlin/d1;",
-        "onResponse",
-        "",
-        "t",
-        "onFailure",
-        "tmap_android_phoneKUShip"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
+# instance fields
+.field public final synthetic a:Lkc/a;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lkc/a;)V
     .locals 0
 
     .line 1
+    iput-object p1, p0, Lkc/a$b;->a:Lkc/a;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,132 +35,141 @@
 
 
 # virtual methods
-.method public onFailure(Lretrofit2/Call;Ljava/lang/Throwable;)V
-    .locals 1
-    .param p1    # Lretrofit2/Call;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/Throwable;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lretrofit2/Call<",
-            "Lcom/skt/tmap/network/frontman/BadgesResponseDto;",
-            ">;",
-            "Ljava/lang/Throwable;",
-            ")V"
-        }
-    .end annotation
-
-    const-string v0, "call"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string/jumbo p1, "t"
-
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p1, "BadgeRepository"
-
-    const-string/jumbo p2, "updateBadgesInfo onFailure"
+.method public onCanceled()V
+    .locals 3
 
     .line 1
-    invoke-static {p1, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {v0}, Lkc/a;->p0(Lkc/a;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {v2}, Lkc/a;->q0(Lkc/a;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ":TTS onCanceled"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public onResponse(Lretrofit2/Call;Lretrofit2/Response;)V
-    .locals 1
-    .param p1    # Lretrofit2/Call;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Lretrofit2/Response;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lretrofit2/Call<",
-            "Lcom/skt/tmap/network/frontman/BadgesResponseDto;",
-            ">;",
-            "Lretrofit2/Response<",
-            "Lcom/skt/tmap/network/frontman/BadgesResponseDto;",
-            ">;)V"
-        }
-    .end annotation
-
-    const-string v0, "call"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p1, "response"
-
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+.method public onCompletion()V
+    .locals 6
 
     .line 1
+    iget-object v0, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {v0}, Lkc/a;->k0(Lkc/a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {v2}, Lkc/a;->l0(Lkc/a;)Ljc/c;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljc/c;->n()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v4, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {v4}, Lkc/a;->m0(Lkc/a;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ":TTS onCompletion"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const/4 v2, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Lkc/a;->n0(Lkc/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onError(I)V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {v0}, Lkc/a;->g0(Lkc/a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object p1, p0, Lkc/a$b;->a:Lkc/a;
+
+    invoke-static {p1}, Lkc/a;->h0(Lkc/a;)Ljc/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljc/c;->n()Ljava/lang/String;
+
+    move-result-object v3
+
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v0, "updateBadgesInfo onResponse "
+    iget-object v2, p0, Lkc/a$b;->a:Lkc/a;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Lkc/a;->i0(Lkc/a;)Ljava/lang/String;
 
-    invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lcom/skt/tmap/network/frontman/BadgesResponseDto;
+    const-string v2, ":TTS onError"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v5
 
-    const-string v0, "BadgeRepository"
+    const/4 v2, 0x1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x0
 
-    .line 2
-    sget-object p1, Lkc/a;->d:Lkc/a;
+    invoke-static/range {v0 .. v5}, Lkc/a;->j0(Lkc/a;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lkc/a;->a(Lkc/a;)Landroidx/lifecycle/MutableLiveData;
+    return-void
+.end method
 
-    move-result-object p1
-
-    invoke-virtual {p2}, Lretrofit2/Response;->body()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lcom/skt/tmap/network/frontman/BadgesResponseDto;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Lcom/skt/tmap/network/frontman/BadgesResponseDto;->getData()Lcom/skt/tmap/network/frontman/BadgeData;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Lcom/skt/tmap/network/frontman/BadgeData;->getBadges()Ljava/util/List;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {p1, p2}, Landroidx/lifecycle/MutableLiveData;->setValue(Ljava/lang/Object;)V
+.method public onStart()V
+    .locals 0
 
     return-void
 .end method

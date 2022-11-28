@@ -18,13 +18,13 @@
         "Lkotlin/d1;",
         "audioScript",
         "([Ljava/lang/String;)V",
-        "navigation-sdk_release"
+        "TmapEngineCommonData_release"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 

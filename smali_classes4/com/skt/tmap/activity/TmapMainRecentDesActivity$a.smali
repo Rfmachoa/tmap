@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainRecentDesActivity$a;->a:Lcom/skt/tmap/activity/TmapMainRecentDesActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->t5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)Landroid/widget/RelativeLayout;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->B5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainRecentDesActivity$a;->a:Lcom/skt/tmap/activity/TmapMainRecentDesActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->t5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)Landroid/widget/RelativeLayout;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->B5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
 
@@ -74,12 +74,12 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainRecentDesActivity$a;->a:Lcom/skt/tmap/activity/TmapMainRecentDesActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->u5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->C5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainRecentDesActivity$a;->a:Lcom/skt/tmap/activity/TmapMainRecentDesActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->t5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)Landroid/widget/RelativeLayout;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->B5(Lcom/skt/tmap/activity/TmapMainRecentDesActivity;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
 

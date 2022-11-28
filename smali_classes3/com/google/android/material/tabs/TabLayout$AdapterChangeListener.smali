@@ -37,17 +37,17 @@
 
 
 # virtual methods
-.method public onAdapterChanged(Landroidx/viewpager/widget/ViewPager;Ll3/a;Ll3/a;)V
+.method public onAdapterChanged(Landroidx/viewpager/widget/ViewPager;Lt4/a;Lt4/a;)V
     .locals 1
     .param p1    # Landroidx/viewpager/widget/ViewPager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ll3/a;
+    .param p2    # Lt4/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Ll3/a;
+    .param p3    # Lt4/a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -62,7 +62,7 @@
     .line 2
     iget-boolean p1, p0, Lcom/google/android/material/tabs/TabLayout$AdapterChangeListener;->autoRefresh:Z
 
-    invoke-virtual {p2, p3, p1}, Lcom/google/android/material/tabs/TabLayout;->setPagerAdapter(Ll3/a;Z)V
+    invoke-virtual {p2, p3, p1}, Lcom/google/android/material/tabs/TabLayout;->setPagerAdapter(Lt4/a;Z)V
 
     :cond_0
     return-void

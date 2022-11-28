@@ -15,11 +15,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u001a\n\u0002\u0018\u0002\n\u0002\u0008\u0015\u0008\u0086\u0008\u0018\u0000 =2\u00020\u0001:\u0001=B7\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\u0008\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\t\u00a2\u0006\u0002\u0010\u000cJ\t\u00102\u001a\u00020\u0003H\u00c6\u0003J\u000b\u00103\u001a\u0004\u0018\u00010\u0005H\u00c6\u0003J\t\u00104\u001a\u00020\u0007H\u00c6\u0003J\t\u00105\u001a\u00020\tH\u00c6\u0003J\t\u00106\u001a\u00020\tH\u00c6\u0003J\t\u00107\u001a\u00020\tH\u00c6\u0003JG\u00108\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u0008\u001a\u00020\t2\u0008\u0008\u0002\u0010\n\u001a\u00020\t2\u0008\u0008\u0002\u0010\u000b\u001a\u00020\tH\u00c6\u0001J\u0013\u00109\u001a\u00020\t2\u0008\u0010:\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010;\u001a\u00020\u0003H\u00d6\u0001J\t\u0010<\u001a\u00020\u0007H\u00d6\u0001R\u001c\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000f\u0010\u0010\"\u0004\u0008\u0011\u0010\u0012R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\u0014\"\u0004\u0008\u0015\u0010\u0016R\u001a\u0010\u0006\u001a\u00020\u0007X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0017\u0010\u0018\"\u0004\u0008\u0019\u0010\u001aR\u001a\u0010\u000b\u001a\u00020\tX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000b\u0010\u001b\"\u0004\u0008\u001c\u0010\u001dR\u001a\u0010\u001e\u001a\u00020\tX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001e\u0010\u001b\"\u0004\u0008\u001f\u0010\u001dR\u001a\u0010\n\u001a\u00020\tX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\n\u0010\u001b\"\u0004\u0008 \u0010\u001dR\u001a\u0010!\u001a\u00020\tX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\"\u0010\u001b\"\u0004\u0008#\u0010\u001dR\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008$\u0010%\"\u0004\u0008&\u0010\'R\u001c\u0010(\u001a\u0004\u0018\u00010)X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008*\u0010+\"\u0004\u0008,\u0010-R\u001a\u0010\u0008\u001a\u00020\tX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008.\u0010\u001b\"\u0004\u0008/\u0010\u001dR\u0011\u00100\u001a\u00020\u00038F\u00a2\u0006\u0006\u001a\u0004\u00081\u0010\u0014\u00a8\u0006>"
     }
@@ -91,9 +86,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -171,16 +167,22 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayIndex:I
 
+    .line 3
     iput-object p2, p0, Lcom/skt/tmap/data/RoutePreviewData;->routePlanType:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
+    .line 4
     iput-object p3, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayName:Ljava/lang/String;
 
+    .line 5
     iput-boolean p4, p0, Lcom/skt/tmap/data/RoutePreviewData;->selected:Z
 
+    .line 6
     iput-boolean p5, p0, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
 
+    .line 7
     iput-boolean p6, p0, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
 
     return-void
@@ -355,76 +357,89 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
     .param p1    # Ljava/lang/Object;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
 
-    if-eq p0, p1, :cond_1
+    const/4 v0, 0x1
 
-    instance-of v0, p1, Lcom/skt/tmap/data/RoutePreviewData;
+    if-ne p0, p1, :cond_0
 
-    if-eqz v0, :cond_0
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lcom/skt/tmap/data/RoutePreviewData;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lcom/skt/tmap/data/RoutePreviewData;
 
-    iget v0, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayIndex:I
+    iget v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayIndex:I
 
-    iget v1, p1, Lcom/skt/tmap/data/RoutePreviewData;->displayIndex:I
+    iget v3, p1, Lcom/skt/tmap/data/RoutePreviewData;->displayIndex:I
 
-    if-ne v0, v1, :cond_0
+    if-eq v1, v3, :cond_2
 
-    iget-object v0, p0, Lcom/skt/tmap/data/RoutePreviewData;->routePlanType:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
+    return v2
 
-    iget-object v1, p1, Lcom/skt/tmap/data/RoutePreviewData;->routePlanType:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
+    :cond_2
+    iget-object v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->routePlanType:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, p1, Lcom/skt/tmap/data/RoutePreviewData;->routePlanType:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    move-result v0
+    if-eq v1, v3, :cond_3
 
-    if-eqz v0, :cond_0
+    return v2
 
-    iget-object v0, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayName:Ljava/lang/String;
+    :cond_3
+    iget-object v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayName:Ljava/lang/String;
 
-    iget-object v1, p1, Lcom/skt/tmap/data/RoutePreviewData;->displayName:Ljava/lang/String;
+    iget-object v3, p1, Lcom/skt/tmap/data/RoutePreviewData;->displayName:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-nez v1, :cond_4
 
-    iget-boolean v0, p0, Lcom/skt/tmap/data/RoutePreviewData;->selected:Z
+    return v2
 
-    iget-boolean v1, p1, Lcom/skt/tmap/data/RoutePreviewData;->selected:Z
+    :cond_4
+    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->selected:Z
 
-    if-ne v0, v1, :cond_0
+    iget-boolean v3, p1, Lcom/skt/tmap/data/RoutePreviewData;->selected:Z
 
-    iget-boolean v0, p0, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
+    if-eq v1, v3, :cond_5
 
-    iget-boolean v1, p1, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
+    return v2
 
-    if-ne v0, v1, :cond_0
+    :cond_5
+    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
 
-    iget-boolean v0, p0, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
+    iget-boolean v3, p1, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
 
     iget-boolean p1, p1, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
 
-    if-ne v0, p1, :cond_0
+    if-eq v1, p1, :cond_7
 
-    goto :goto_0
+    return v2
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    :cond_7
+    return v0
 .end method
 
 .method public final getCurrentRouteInfo()Lcom/skt/tmap/engine/navigation/route/data/RouteInfo;
@@ -536,18 +551,16 @@
 
     iget-object v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->routePlanType:Lcom/skt/tmap/engine/navigation/route/RoutePlanType;
 
-    const/4 v2, 0x0
+    if-nez v1, :cond_0
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    invoke-virtual {v1}, Ljava/lang/Enum;->hashCode()I
+
+    move-result v1
 
     :goto_0
     add-int/2addr v0, v1
@@ -556,20 +569,26 @@
 
     iget-object v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->displayName:Ljava/lang/String;
 
-    if-eqz v1, :cond_1
+    const/16 v2, 0x1f
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v1, v0, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
 
-    move-result v2
-
-    :cond_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
+    move-result v0
 
     iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->selected:Z
 
     const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
 
     if-eqz v1, :cond_2
 
@@ -580,24 +599,13 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isProgressLoading:Z
+    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
 
     if-eqz v1, :cond_3
 
-    move v1, v2
-
-    :cond_3
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
-
-    if-eqz v1, :cond_4
-
     goto :goto_1
 
-    :cond_4
+    :cond_3
     move v2, v1
 
     :goto_1
@@ -796,9 +804,9 @@
 
     iget-boolean v1, p0, Lcom/skt/tmap/data/RoutePreviewData;->isFamilyApp:Z
 
-    const-string v2, ")"
+    const/16 v2, 0x29
 
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lk2/g;->a(Ljava/lang/StringBuilder;ZC)Ljava/lang/String;
 
     move-result-object v0
 

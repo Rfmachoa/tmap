@@ -95,35 +95,35 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->a:Ljava/lang/String;
 
     .line 3
-    invoke-virtual {p0, p2}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->b:Ljava/lang/String;
 
     .line 4
-    invoke-virtual {p0, p3}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p3}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->c:Ljava/lang/String;
 
     .line 5
-    invoke-virtual {p0, p4}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p4}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->d:Ljava/lang/String;
 
     .line 6
-    invoke-virtual {p0, p5}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p5}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -134,7 +134,7 @@
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;)Ljava/lang/String;
+.method public final a(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     if-eqz p1, :cond_0
@@ -157,15 +157,6 @@
     return-object v0
 .end method
 
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->e:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -178,7 +169,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->c:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->e:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -187,12 +178,21 @@
     .locals 1
 
     .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public h()Ljava/lang/String;
+    .locals 1
+
+    .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->a:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public g()Ljava/lang/String;
+.method public i()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -201,11 +201,11 @@
     return-object v0
 .end method
 
-.method public h(Ljava/lang/String;)V
+.method public j(Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -214,13 +214,13 @@
     return-void
 .end method
 
-.method public i(Ljava/lang/String;)V
+.method public l(Ljava/lang/String;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->e:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -229,13 +229,13 @@
     return-void
 .end method
 
-.method public j(Ljava/lang/String;)V
+.method public m(Ljava/lang/String;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->c:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -244,11 +244,11 @@
     return-void
 .end method
 
-.method public l(Ljava/lang/String;)V
+.method public n(Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -257,11 +257,11 @@
     return-void
 .end method
 
-.method public m(Ljava/lang/String;)V
+.method public o(Ljava/lang/String;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/UserInfo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -286,31 +286,31 @@
 
     const-string v3, ", mDeviceId=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->b:Ljava/lang/String;
 
     const-string v3, ", mDeviceUniqueIdEncYesno=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->c:Ljava/lang/String;
 
     const-string v3, ", mTid=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->d:Ljava/lang/String;
 
     const-string v3, ", mDeviceTypeCode=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/UserInfo;->e:Ljava/lang/String;
 
     const/16 v3, 0x7d
 
-    invoke-static {v0, v1, v2, v3}, Lb3/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lg4/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
 
     move-result-object v0
 

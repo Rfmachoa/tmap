@@ -143,7 +143,7 @@
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v1}, Ld6/a;->getType()Ljava/lang/String;
+    invoke-virtual {v1}, Lb8/a;->getType()Ljava/lang/String;
 
     move-result-object v3
 
@@ -155,7 +155,7 @@
 
     if-nez v3, :cond_0
 
-    invoke-virtual {v1}, Ld6/a;->getType()Ljava/lang/String;
+    invoke-virtual {v1}, Lb8/a;->getType()Ljava/lang/String;
 
     move-result-object v3
 
@@ -167,7 +167,7 @@
 
     if-nez v3, :cond_0
 
-    invoke-virtual {v1}, Ld6/a;->getType()Ljava/lang/String;
+    invoke-virtual {v1}, Lb8/a;->getType()Ljava/lang/String;
 
     move-result-object v3
 

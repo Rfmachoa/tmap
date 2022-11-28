@@ -26,24 +26,24 @@
     iput-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingUserNameActivity;->l:Ljava/lang/String;
 
     .line 3
-    sget-object v0, Lcom/skt/tmap/activity/p1;->a:Lcom/skt/tmap/activity/p1;
+    sget-object v0, Lcom/skt/tmap/activity/l3;->a:Lcom/skt/tmap/activity/l3;
 
     iput-object v0, p0, Lcom/skt/tmap/activity/TmapMainSettingUserNameActivity;->p:Landroid/text/InputFilter;
 
     return-void
 .end method
 
-.method public static synthetic H5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+.method public static synthetic P5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-static/range {p0 .. p5}, Lcom/skt/tmap/activity/TmapMainSettingUserNameActivity;->I5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    invoke-static/range {p0 .. p5}, Lcom/skt/tmap/activity/TmapMainSettingUserNameActivity;->Q5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic I5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+.method public static synthetic Q5(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
     .locals 0
 
     :goto_0
@@ -78,10 +78,10 @@
 
 
 # virtual methods
-.method public A5()Ljava/lang/String;
+.method public H5()Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f130a05
+    const v0, 0x7f140a85
 
     .line 1
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -91,7 +91,20 @@
     return-object v0
 .end method
 
-.method public B5()Ljava/lang/String;
+.method public I5()Ljava/lang/String;
+    .locals 1
+
+    const v0, 0x7f140a8a
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public J5()Ljava/lang/String;
     .locals 2
 
     .line 1
@@ -137,7 +150,7 @@
     return-object v0
 .end method
 
-.method public F5(Ljava/lang/String;)V
+.method public N5(Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -159,7 +172,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->I(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->M(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -170,7 +183,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f130225
+    const v0, 0x7f14023e
 
     const/4 v1, 0x0
 
@@ -250,17 +263,4 @@
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     return-void
-.end method
-
-.method public z5()Ljava/lang/String;
-    .locals 1
-
-    const v0, 0x7f130a00
-
-    .line 1
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

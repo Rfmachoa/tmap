@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/analytics/ktx/AnalyticsKt;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-analytics-ktx@@20.1.0"
+.source "com.google.firebase:firebase-analytics-ktx@@21.1.1"
 
 
 # annotations
@@ -43,8 +43,8 @@
     k = 0x2
     mv = {
         0x1,
-        0x6,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -116,9 +116,7 @@
 
     .line 3
     :try_start_0
-    invoke-static {}, Lcom/google/firebase/analytics/ktx/AnalyticsKt;->getANALYTICS()Lcom/google/firebase/analytics/FirebaseAnalytics;
-
-    move-result-object v0
+    sget-object v0, Lcom/google/firebase/analytics/ktx/AnalyticsKt;->zza:Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     if-nez v0, :cond_0
 
@@ -137,7 +135,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/firebase/analytics/ktx/AnalyticsKt;->setANALYTICS(Lcom/google/firebase/analytics/FirebaseAnalytics;)V
+    sput-object v0, Lcom/google/firebase/analytics/ktx/AnalyticsKt;->zza:Lcom/google/firebase/analytics/FirebaseAnalytics;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -175,7 +173,7 @@
     return-object v0
 .end method
 
-.method public static final logEvent(Lcom/google/firebase/analytics/FirebaseAnalytics;Ljava/lang/String;Lej/l;)V
+.method public static final logEvent(Lcom/google/firebase/analytics/FirebaseAnalytics;Ljava/lang/String;Lgl/l;)V
     .locals 1
     .param p0    # Lcom/google/firebase/analytics/FirebaseAnalytics;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -185,7 +183,7 @@
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lej/l;
+    .param p2    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -194,7 +192,7 @@
             "(",
             "Lcom/google/firebase/analytics/FirebaseAnalytics;",
             "Ljava/lang/String;",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Lcom/google/firebase/analytics/ktx/ParametersBuilder;",
             "Lkotlin/d1;",
@@ -220,7 +218,7 @@
     invoke-direct {v0}, Lcom/google/firebase/analytics/ktx/ParametersBuilder;-><init>()V
 
     .line 2
-    invoke-interface {p2, v0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     invoke-virtual {v0}, Lcom/google/firebase/analytics/ktx/ParametersBuilder;->getBundle()Landroid/os/Bundle;
@@ -245,13 +243,13 @@
     return-void
 .end method
 
-.method public static final setConsent(Lcom/google/firebase/analytics/FirebaseAnalytics;Lej/l;)V
+.method public static final setConsent(Lcom/google/firebase/analytics/FirebaseAnalytics;Lgl/l;)V
     .locals 1
     .param p0    # Lcom/google/firebase/analytics/FirebaseAnalytics;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/l;
+    .param p1    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -259,7 +257,7 @@
         value = {
             "(",
             "Lcom/google/firebase/analytics/FirebaseAnalytics;",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Lcom/google/firebase/analytics/ktx/ConsentBuilder;",
             "Lkotlin/d1;",
@@ -281,7 +279,7 @@
     invoke-direct {v0}, Lcom/google/firebase/analytics/ktx/ConsentBuilder;-><init>()V
 
     .line 2
-    invoke-interface {p1, v0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     invoke-virtual {v0}, Lcom/google/firebase/analytics/ktx/ConsentBuilder;->asMap()Ljava/util/Map;

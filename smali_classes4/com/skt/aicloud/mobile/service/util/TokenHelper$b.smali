@@ -39,13 +39,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lp8/d;->e()Ljava/lang/String;
+    invoke-static {}, Lma/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lp8/d;->e()Ljava/lang/String;
+    invoke-static {}, Lma/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lj9/e;
+    new-instance v0, Lgb/e;
 
     iget-object v1, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper$b;->a:Lcom/skt/aicloud/mobile/service/util/TokenHelper;
 
@@ -70,15 +70,15 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lj9/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lgb/e;-><init>(Landroid/content/Context;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/mobile/service/util/TokenHelper$b;->a:Lcom/skt/aicloud/mobile/service/util/TokenHelper;
 
-    invoke-static {v1}, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->k(Lcom/skt/aicloud/mobile/service/util/TokenHelper;)Li9/e;
+    invoke-static {v1}, Lcom/skt/aicloud/mobile/service/util/TokenHelper;->k(Lcom/skt/aicloud/mobile/service/util/TokenHelper;)Lfb/e;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->t(Li9/d;)V
+    invoke-virtual {v0, v1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->t(Lfb/d;)V
 
     :cond_0
     return-void

@@ -19,6 +19,8 @@
 
 .field public static final instance:Lcom/fasterxml/jackson/core/util/InternCache;
 
+.field private static final serialVersionUID:J = 0x1L
+
 
 # instance fields
 .field private final lock:Ljava/lang/Object;

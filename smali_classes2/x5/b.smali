@@ -1,8 +1,12 @@
-.class public interface abstract Lx5/b;
+.class public final Lx5/b;
 .super Ljava/lang/Object;
-.source "CardViewListener.java"
 
 
-# virtual methods
-.method public abstract a(Lw5/e;)V
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

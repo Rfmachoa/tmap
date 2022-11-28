@@ -22,6 +22,24 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "serverAlias",
+            "accessKey",
+            "moveTypeCode",
+            "placeCampaignId",
+            "seed"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -119,6 +137,14 @@
 # virtual methods
 .method public L(I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "socketTimeout"
+        }
+    .end annotation
 
     .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -154,19 +180,19 @@
 
     .line 5
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string v0, "Other Exception"
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 6
     :catch_1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
@@ -188,7 +214,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 7
     :goto_0

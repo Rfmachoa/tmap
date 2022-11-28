@@ -3,12 +3,12 @@
 .source "FlowLiveData.kt"
 
 # interfaces
-.implements Lej/p;
+.implements Lgl/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/FlowLiveDataConversions;->asFlow(Landroidx/lifecycle/LiveData;)Lkotlinx/coroutines/flow/f;
+    value = Landroidx/lifecycle/FlowLiveDataConversions;->asFlow(Landroidx/lifecycle/LiveData;)Lkotlinx/coroutines/flow/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
-        "Lej/p<",
-        "Lkotlinx/coroutines/flow/g<",
+        "Lgl/p<",
+        "Lkotlinx/coroutines/flow/f<",
         "-TT;>;",
         "Lkotlin/coroutines/c<",
         "-",
@@ -34,20 +34,18 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u0002\"\u0004\u0008\u0000\u0010\u0000*\u0008\u0012\u0004\u0012\u00028\u00000\u0001H\u008a@\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
+        "\u0000\u000c\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0003\u001a\u00020\u0002\"\u0004\u0008\u0000\u0010\u0000*\u0008\u0012\u0004\u0012\u00028\u00000\u0001H\u008a@"
     }
     d2 = {
         "T",
-        "Lkotlinx/coroutines/flow/g;",
+        "Lkotlinx/coroutines/flow/f;",
         "Lkotlin/d1;",
-        "invoke",
-        "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
         "<anonymous>"
     }
     k = 0x3
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -61,16 +59,13 @@
         0x0,
         0x1,
         0x1,
-        0x1,
-        0x2,
-        0x2,
         0x2,
         0x2
     }
     l = {
-        0x5b,
-        0x5f,
-        0x60
+        0x61,
+        0x65,
+        0x66
     }
     m = "invokeSuspend"
     n = {
@@ -78,12 +73,9 @@
         "channel",
         "observer",
         "$this$flow",
-        "channel",
         "observer",
         "$this$flow",
-        "channel",
-        "observer",
-        "value"
+        "observer"
     }
     s = {
         "L$0",
@@ -91,42 +83,68 @@
         "L$2",
         "L$0",
         "L$1",
-        "L$2",
         "L$0",
-        "L$1",
-        "L$2",
-        "L$3"
+        "L$1"
     }
 .end annotation
 
 
 # instance fields
 .field public final synthetic $this_asFlow:Landroidx/lifecycle/LiveData;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/LiveData<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
 
-.field public L$0:Ljava/lang/Object;
+.field private synthetic L$0:Ljava/lang/Object;
 
 .field public L$1:Ljava/lang/Object;
 
 .field public L$2:Ljava/lang/Object;
 
-.field public L$3:Ljava/lang/Object;
-
-.field public L$4:Ljava/lang/Object;
-
 .field public label:I
-
-.field private p$:Lkotlinx/coroutines/flow/g;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/LiveData;Lkotlin/coroutines/c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/LiveData<",
+            "TT;>;",
+            "Lkotlin/coroutines/c<",
+            "-",
+            "Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;",
+            ">;)V"
+        }
+    .end annotation
 
     iput-object p1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->$this_asFlow:Landroidx/lifecycle/LiveData;
 
     const/4 p1, 0x2
 
     invoke-direct {p0, p1, p2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/c;)V
+
+    return-void
+.end method
+
+.method public static synthetic d(Lkotlinx/coroutines/channels/k;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->invokeSuspend$lambda-0(Lkotlinx/coroutines/channels/k;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method private static final invokeSuspend$lambda-0(Lkotlinx/coroutines/channels/k;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    invoke-interface {p0, p1}, Lkotlinx/coroutines/channels/b0;->q(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -158,27 +176,56 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string v0, "completion"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
     new-instance v0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;
 
     iget-object v1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->$this_asFlow:Landroidx/lifecycle/LiveData;
 
     invoke-direct {v0, v1, p2}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;-><init>(Landroidx/lifecycle/LiveData;Lkotlin/coroutines/c;)V
 
-    check-cast p1, Lkotlinx/coroutines/flow/g;
-
-    iput-object p1, v0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->p$:Lkotlinx/coroutines/flow/g;
+    iput-object p1, v0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lkotlinx/coroutines/flow/f;
+
     check-cast p2, Lkotlin/coroutines/c;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->invoke(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invoke(Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 0
+    .param p1    # Lkotlinx/coroutines/flow/f;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/c;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/flow/f<",
+            "-TT;>;",
+            "Lkotlin/coroutines/c<",
+            "-",
+            "Lkotlin/d1;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 
     invoke-virtual {p0, p1, p2}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->create(Ljava/lang/Object;Lkotlin/coroutines/c;)Lkotlin/coroutines/c;
 
@@ -196,7 +243,7 @@
 .end method
 
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+    .locals 14
     .param p1    # Ljava/lang/Object;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -204,333 +251,333 @@
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
-    move-object/from16 v1, p0
-
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v0
 
     .line 1
-    iget v2, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
+    iget v1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
 
-    const/4 v3, 0x3
+    const/4 v2, 0x3
 
-    const/4 v4, 0x2
+    const/4 v3, 0x2
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_3
 
-    if-eq v2, v5, :cond_3
+    if-eq v1, v4, :cond_2
 
-    if-eq v2, v4, :cond_2
+    if-eq v1, v3, :cond_1
 
-    if-ne v2, v3, :cond_1
+    if-ne v1, v2, :cond_0
 
-    iget-object v2, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$4:Ljava/lang/Object;
+    iget-object v1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
 
-    check-cast v2, Lkotlinx/coroutines/channels/ChannelIterator;
+    check-cast v1, Lkotlinx/coroutines/channels/ChannelIterator;
 
-    iget-object v5, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+    iget-object v4, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
 
-    check-cast v5, Landroidx/lifecycle/Observer;
+    check-cast v4, Landroidx/lifecycle/Observer;
 
-    iget-object v7, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+    iget-object v6, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
 
-    check-cast v7, Lkotlinx/coroutines/channels/l;
-
-    iget-object v8, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
-
-    check-cast v8, Lkotlinx/coroutines/flow/g;
+    check-cast v6, Lkotlinx/coroutines/flow/f;
 
     :try_start_0
-    invoke-static/range {p1 .. p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
+    invoke-static {p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v9, v1
-
-    :cond_0
-    move-object/from16 v16, v8
-
-    move-object v8, v2
-
-    move-object v2, v5
-
-    move-object v5, v7
-
-    move-object/from16 v7, v16
-
-    goto :goto_1
-
-    .line 2
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 3
-    :cond_2
-    iget-object v2, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$3:Ljava/lang/Object;
-
-    check-cast v2, Lkotlinx/coroutines/channels/ChannelIterator;
-
-    iget-object v5, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
-
-    check-cast v5, Landroidx/lifecycle/Observer;
-
-    iget-object v7, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
-
-    check-cast v7, Lkotlinx/coroutines/channels/l;
-
-    iget-object v8, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
-
-    check-cast v8, Lkotlinx/coroutines/flow/g;
-
-    :try_start_1
-    invoke-static/range {p1 .. p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-object/from16 v10, p1
-
-    move-object v9, v1
+    move-object p1, v1
 
     goto :goto_2
 
+    .line 2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 3
+    :cond_1
+    iget-object v1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/channels/ChannelIterator;
+
+    iget-object v4, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+
+    check-cast v4, Landroidx/lifecycle/Observer;
+
+    iget-object v6, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
+
+    check-cast v6, Lkotlinx/coroutines/flow/f;
+
+    :try_start_1
+    invoke-static {p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move-object v7, v6
+
+    move-object v6, v4
+
+    move-object v4, v1
+
+    move-object v1, p0
+
+    goto :goto_4
+
     :catchall_0
-    move-exception v0
+    move-exception p1
 
-    move-object v9, v1
+    :goto_0
+    move-object v1, p0
 
-    goto/16 :goto_4
+    goto/16 :goto_5
+
+    :cond_2
+    iget-object v1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/lifecycle/Observer;
+
+    iget-object v4, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+
+    check-cast v4, Lkotlinx/coroutines/channels/k;
+
+    iget-object v6, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
+
+    check-cast v6, Lkotlinx/coroutines/flow/f;
+
+    invoke-static {p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_3
-    iget-object v2, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+    invoke-static {p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
 
-    check-cast v2, Landroidx/lifecycle/Observer;
+    iget-object p1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
 
-    iget-object v5, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+    move-object v6, p1
 
-    check-cast v5, Lkotlinx/coroutines/channels/l;
+    check-cast v6, Lkotlinx/coroutines/flow/f;
 
-    iget-object v7, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
+    const/4 p1, -0x1
 
-    check-cast v7, Lkotlinx/coroutines/flow/g;
-
-    invoke-static/range {p1 .. p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static/range {p1 .. p1}, Lkotlin/d0;->n(Ljava/lang/Object;)V
-
-    iget-object v7, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->p$:Lkotlinx/coroutines/flow/g;
-
-    const/4 v2, -0x1
+    const/4 v1, 0x6
 
     .line 4
-    invoke-static {v2}, Lkotlinx/coroutines/channels/n;->a(I)Lkotlinx/coroutines/channels/l;
+    invoke-static {p1, v5, v5, v1, v5}, Lkotlinx/coroutines/channels/m;->d(ILkotlinx/coroutines/channels/BufferOverflow;Lgl/l;ILjava/lang/Object;)Lkotlinx/coroutines/channels/k;
 
-    move-result-object v2
+    move-result-object p1
 
     .line 5
-    new-instance v8, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$observer$1;
+    new-instance v1, Landroidx/lifecycle/c;
 
-    invoke-direct {v8, v2}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$observer$1;-><init>(Lkotlinx/coroutines/channels/l;)V
+    invoke-direct {v1, p1}, Landroidx/lifecycle/c;-><init>(Lkotlinx/coroutines/channels/k;)V
 
     .line 6
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
-    move-result-object v9
+    move-result-object v7
 
-    invoke-virtual {v9}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v7}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
-    move-result-object v9
+    move-result-object v7
 
-    new-instance v10, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$1;
+    new-instance v8, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$1;
 
-    invoke-direct {v10, v1, v8, v6}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$1;-><init>(Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;Landroidx/lifecycle/Observer;Lkotlin/coroutines/c;)V
+    iget-object v9, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->$this_asFlow:Landroidx/lifecycle/LiveData;
 
-    iput-object v7, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
+    invoke-direct {v8, v9, v1, v5}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$1;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;Lkotlin/coroutines/c;)V
 
-    iput-object v2, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+    iput-object v6, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
 
-    iput-object v8, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+    iput-object p1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
 
-    iput v5, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
+    iput-object v1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
 
-    invoke-static {v9, v10, v1}, Lkotlinx/coroutines/g;->i(Lkotlin/coroutines/CoroutineContext;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    iput v4, p0, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
 
-    move-result-object v5
+    invoke-static {v7, v8, p0}, Lkotlinx/coroutines/i;->h(Lkotlin/coroutines/CoroutineContext;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
-    if-ne v5, v0, :cond_5
+    move-result-object v4
+
+    if-ne v4, v0, :cond_4
+
+    return-object v0
+
+    :cond_4
+    move-object v4, p1
+
+    .line 7
+    :goto_1
+    :try_start_2
+    invoke-interface {v4}, Lkotlinx/coroutines/channels/ReceiveChannel;->iterator()Lkotlinx/coroutines/channels/ChannelIterator;
+
+    move-result-object p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+
+    move-object v4, v1
+
+    :goto_2
+    move-object v1, p0
+
+    :goto_3
+    :try_start_3
+    iput-object v6, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
+
+    iput-object v4, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+
+    iput-object p1, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+
+    iput v3, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
+
+    invoke-interface {p1, v1}, Lkotlinx/coroutines/channels/ChannelIterator;->b(Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object v7
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    if-ne v7, v0, :cond_5
 
     return-object v0
 
     :cond_5
-    move-object v5, v2
+    move-object v13, v4
 
-    move-object v2, v8
+    move-object v4, p1
 
-    .line 7
-    :goto_0
-    :try_start_2
-    invoke-interface {v5}, Lkotlinx/coroutines/channels/z;->iterator()Lkotlinx/coroutines/channels/ChannelIterator;
+    move-object p1, v7
 
-    move-result-object v8
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+    move-object v7, v6
 
-    move-object v9, v1
+    move-object v6, v13
 
-    :goto_1
-    :try_start_3
-    iput-object v7, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
+    :goto_4
+    :try_start_4
+    check-cast p1, Ljava/lang/Boolean;
 
-    iput-object v5, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput-object v2, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+    move-result p1
 
-    iput-object v8, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$3:Ljava/lang/Object;
+    if-eqz p1, :cond_7
 
-    iput v4, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
+    invoke-interface {v4}, Lkotlinx/coroutines/channels/ChannelIterator;->next()Ljava/lang/Object;
 
-    invoke-interface {v8, v9}, Lkotlinx/coroutines/channels/ChannelIterator;->b(Lkotlin/coroutines/c;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v10
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    .line 8
+    iput-object v7, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
 
-    if-ne v10, v0, :cond_6
+    iput-object v6, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
+
+    iput-object v4, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
+
+    iput v2, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
+
+    invoke-interface {v7, p1, v1}, Lkotlinx/coroutines/flow/f;->emit(Ljava/lang/Object;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    if-ne p1, v0, :cond_6
 
     return-object v0
 
     :cond_6
-    move-object/from16 v16, v5
+    move-object p1, v4
 
-    move-object v5, v2
+    move-object v4, v6
 
-    move-object v2, v8
-
-    move-object v8, v7
-
-    move-object/from16 v7, v16
-
-    .line 8
-    :goto_2
-    :try_start_4
-    check-cast v10, Ljava/lang/Boolean;
-
-    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_7
-
-    invoke-interface {v2}, Lkotlinx/coroutines/channels/ChannelIterator;->next()Ljava/lang/Object;
-
-    move-result-object v10
-
-    .line 9
-    iput-object v8, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$0:Ljava/lang/Object;
-
-    iput-object v7, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$1:Ljava/lang/Object;
-
-    iput-object v5, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$2:Ljava/lang/Object;
-
-    iput-object v10, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$3:Ljava/lang/Object;
-
-    iput-object v2, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->L$4:Ljava/lang/Object;
-
-    iput v3, v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->label:I
-
-    invoke-interface {v8, v10, v9}, Lkotlinx/coroutines/flow/g;->emit(Ljava/lang/Object;Lkotlin/coroutines/c;)Ljava/lang/Object;
-
-    move-result-object v10
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    if-ne v10, v0, :cond_0
-
-    return-object v0
-
-    .line 10
-    :cond_7
-    sget-object v10, Lkotlinx/coroutines/r1;->a:Lkotlinx/coroutines/r1;
-
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
-
-    move-result-object v11
-
-    const/4 v12, 0x0
-
-    new-instance v13, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;
-
-    invoke-direct {v13, v9, v5, v6}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;-><init>(Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;Landroidx/lifecycle/Observer;Lkotlin/coroutines/c;)V
-
-    const/4 v14, 0x2
-
-    const/4 v15, 0x0
-
-    invoke-static/range {v10 .. v15}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
-
-    .line 11
-    sget-object v0, Lkotlin/d1;->a:Lkotlin/d1;
-
-    return-object v0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception v0
+    move-object v6, v7
 
     goto :goto_3
 
-    :catchall_3
-    move-exception v0
+    .line 9
+    :cond_7
+    sget-object v7, Lkotlinx/coroutines/r1;->a:Lkotlinx/coroutines/r1;
 
-    move-object v9, v1
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
-    :goto_3
-    move-object v5, v2
+    move-result-object p1
 
-    .line 12
-    :goto_4
-    sget-object v10, Lkotlinx/coroutines/r1;->a:Lkotlinx/coroutines/r1;
+    invoke-virtual {p1}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    move-result-object v8
 
-    move-result-object v2
+    const/4 v9, 0x0
 
-    invoke-virtual {v2}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    new-instance v10, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;
 
-    move-result-object v11
+    iget-object p1, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->$this_asFlow:Landroidx/lifecycle/LiveData;
+
+    invoke-direct {v10, p1, v6, v5}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;Lkotlin/coroutines/c;)V
+
+    const/4 v11, 0x2
 
     const/4 v12, 0x0
 
-    new-instance v13, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;
+    invoke-static/range {v7 .. v12}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
-    invoke-direct {v13, v9, v5, v6}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;-><init>(Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;Landroidx/lifecycle/Observer;Lkotlin/coroutines/c;)V
+    .line 10
+    sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
 
-    const/4 v14, 0x2
+    return-object p1
 
-    const/4 v15, 0x0
+    :catchall_1
+    move-exception p1
 
-    invoke-static/range {v10 .. v15}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    move-object v4, v6
 
-    throw v0
+    goto :goto_5
+
+    :catchall_2
+    move-exception p1
+
+    goto :goto_5
+
+    :catchall_3
+    move-exception p1
+
+    move-object v4, v1
+
+    goto/16 :goto_0
+
+    .line 11
+    :goto_5
+    sget-object v6, Lkotlinx/coroutines/r1;->a:Lkotlinx/coroutines/r1;
+
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    new-instance v9, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;
+
+    iget-object v0, v1, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1;->$this_asFlow:Landroidx/lifecycle/LiveData;
+
+    invoke-direct {v9, v0, v4, v5}, Landroidx/lifecycle/FlowLiveDataConversions$asFlow$1$2;-><init>(Landroidx/lifecycle/LiveData;Landroidx/lifecycle/Observer;Lkotlin/coroutines/c;)V
+
+    const/4 v10, 0x2
+
+    const/4 v11, 0x0
+
+    invoke-static/range {v6 .. v11}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+
+    throw p1
 .end method

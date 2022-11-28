@@ -36,7 +36,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->i:Landroidx/car/app/hardware/common/CarValue;
+    sget-object v0, Landroidx/car/app/hardware/common/CarValue;->k:Landroidx/car/app/hardware/common/CarValue;
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/Accelerometer;->mForces:Landroidx/car/app/hardware/common/CarValue;
 

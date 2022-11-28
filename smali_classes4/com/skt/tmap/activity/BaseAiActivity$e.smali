@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    value = Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -63,7 +63,7 @@
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/activity/BaseAiActivity$e$a;-><init>(Lcom/skt/tmap/activity/BaseAiActivity$e;)V
 
-    invoke-virtual {p1, v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->n(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->p(Ljava/lang/Runnable;)V
 
     return-void
 .end method

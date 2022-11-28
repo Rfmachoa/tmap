@@ -222,14 +222,14 @@
     iput v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->avcLevelIndication:I
 
     .line 29
-    new-instance v1, Lo6/c;
+    new-instance v1, Lm8/c;
 
-    invoke-direct {v1, p1}, Lo6/c;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v1, p1}, Lm8/c;-><init>(Ljava/nio/ByteBuffer;)V
 
     const/4 v2, 0x6
 
     .line 30
-    invoke-virtual {v1, v2}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v2}, Lm8/c;->c(I)I
 
     move-result v3
 
@@ -238,7 +238,7 @@
     const/4 v3, 0x2
 
     .line 31
-    invoke-virtual {v1, v3}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v3}, Lm8/c;->c(I)I
 
     move-result v4
 
@@ -247,7 +247,7 @@
     const/4 v4, 0x3
 
     .line 32
-    invoke-virtual {v1, v4}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v4}, Lm8/c;->c(I)I
 
     move-result v5
 
@@ -256,7 +256,7 @@
     const/4 v5, 0x5
 
     .line 33
-    invoke-virtual {v1, v5}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v5}, Lm8/c;->c(I)I
 
     move-result v1
 
@@ -319,47 +319,47 @@
 
     .line 38
     :cond_1
-    new-instance v1, Lo6/c;
+    new-instance v1, Lm8/c;
 
-    invoke-direct {v1, p1}, Lo6/c;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v1, p1}, Lm8/c;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 39
-    invoke-virtual {v1, v2}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v2}, Lm8/c;->c(I)I
 
     move-result v2
 
     iput v2, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->chromaFormatPaddingBits:I
 
     .line 40
-    invoke-virtual {v1, v3}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v3}, Lm8/c;->c(I)I
 
     move-result v2
 
     iput v2, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->chromaFormat:I
 
     .line 41
-    invoke-virtual {v1, v5}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v5}, Lm8/c;->c(I)I
 
     move-result v2
 
     iput v2, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthLumaMinus8PaddingBits:I
 
     .line 42
-    invoke-virtual {v1, v4}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v4}, Lm8/c;->c(I)I
 
     move-result v2
 
     iput v2, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthLumaMinus8:I
 
     .line 43
-    invoke-virtual {v1, v5}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v5}, Lm8/c;->c(I)I
 
     move-result v2
 
     iput v2, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthChromaMinus8PaddingBits:I
 
     .line 44
-    invoke-virtual {v1, v4}, Lo6/c;->c(I)I
+    invoke-virtual {v1, v4}, Lm8/c;->c(I)I
 
     move-result v1
 
@@ -486,30 +486,30 @@
     invoke-static {p1, v0}, Lcom/coremedia/iso/IsoTypeWriter;->writeUInt8(Ljava/nio/ByteBuffer;I)V
 
     .line 5
-    new-instance v0, Lo6/d;
+    new-instance v0, Lm8/d;
 
-    invoke-direct {v0, p1}, Lo6/d;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v0, p1}, Lm8/d;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 6
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->lengthSizeMinusOnePaddingBits:I
 
     const/4 v2, 0x6
 
-    invoke-virtual {v0, v1, v2}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v2}, Lm8/d;->a(II)V
 
     .line 7
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->lengthSizeMinusOne:I
 
     const/4 v3, 0x2
 
-    invoke-virtual {v0, v1, v3}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v3}, Lm8/d;->a(II)V
 
     .line 8
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->numberOfSeuqenceParameterSetsPaddingBits:I
 
     const/4 v4, 0x3
 
-    invoke-virtual {v0, v1, v4}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v4}, Lm8/d;->a(II)V
 
     .line 9
     iget-object v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->pictureParameterSets:Ljava/util/List;
@@ -520,7 +520,7 @@
 
     const/4 v5, 0x5
 
-    invoke-virtual {v0, v1, v5}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v5}, Lm8/d;->a(II)V
 
     .line 10
     iget-object v0, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->sequenceParameterSets:Ljava/util/List;
@@ -584,39 +584,39 @@
 
     .line 14
     :cond_0
-    new-instance v0, Lo6/d;
+    new-instance v0, Lm8/d;
 
-    invoke-direct {v0, p1}, Lo6/d;-><init>(Ljava/nio/ByteBuffer;)V
+    invoke-direct {v0, p1}, Lm8/d;-><init>(Ljava/nio/ByteBuffer;)V
 
     .line 15
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->chromaFormatPaddingBits:I
 
-    invoke-virtual {v0, v1, v2}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v2}, Lm8/d;->a(II)V
 
     .line 16
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->chromaFormat:I
 
-    invoke-virtual {v0, v1, v3}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v3}, Lm8/d;->a(II)V
 
     .line 17
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthLumaMinus8PaddingBits:I
 
-    invoke-virtual {v0, v1, v5}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v5}, Lm8/d;->a(II)V
 
     .line 18
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthLumaMinus8:I
 
-    invoke-virtual {v0, v1, v4}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v4}, Lm8/d;->a(II)V
 
     .line 19
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthChromaMinus8PaddingBits:I
 
-    invoke-virtual {v0, v1, v5}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v5}, Lm8/d;->a(II)V
 
     .line 20
     iget v1, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->bitDepthChromaMinus8:I
 
-    invoke-virtual {v0, v1, v4}, Lo6/d;->a(II)V
+    invoke-virtual {v0, v1, v4}, Lm8/d;->a(II)V
 
     .line 21
     iget-object v0, p0, Lcom/coremedia/iso/boxes/h264/AvcConfigurationBox$AVCDecoderConfigurationRecord;->sequenceParameterSetExts:Ljava/util/List;
@@ -883,11 +883,11 @@
 
     .line 5
     :try_start_0
-    invoke-static {v2}, Lt6/f;->c([B)Lt6/f;
+    invoke-static {v2}, Lr8/e;->c([B)Lr8/e;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lt6/f;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lr8/e;->toString()Ljava/lang/String;
 
     move-result-object v2
     :try_end_0
@@ -1015,11 +1015,11 @@
 
     invoke-direct {v3, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    invoke-static {v3}, Lt6/i;->c(Ljava/io/InputStream;)Lt6/i;
+    invoke-static {v3}, Lr8/h;->c(Ljava/io/InputStream;)Lr8/h;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lt6/i;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lr8/h;->toString()Ljava/lang/String;
 
     move-result-object v2
     :try_end_0

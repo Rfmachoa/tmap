@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public static d(I)Ljava/lang/String;
+.method public static e(I)Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -141,7 +141,7 @@
 
 
 # virtual methods
-.method public b()Landroid/content/Intent;
+.method public a()Landroid/content/Intent;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -182,7 +182,7 @@
     iget v1, p0, Landroidx/activity/result/ActivityResult;->a:I
 
     .line 2
-    invoke-static {v1}, Landroidx/activity/result/ActivityResult;->d(I)Ljava/lang/String;
+    invoke-static {v1}, Landroidx/activity/result/ActivityResult;->e(I)Ljava/lang/String;
 
     move-result-object v1
 

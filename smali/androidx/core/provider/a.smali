@@ -30,7 +30,7 @@
     iput-object p1, p0, Landroidx/core/provider/a;->a:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
     .line 6
-    invoke-static {}, Lm1/a;->a()Landroid/os/Handler;
+    invoke-static {}, Lf2/a;->a()Landroid/os/Handler;
 
     move-result-object p1
 

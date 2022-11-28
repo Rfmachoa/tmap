@@ -12,7 +12,7 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/t;
+.method public abstract a(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/u;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -21,7 +21,7 @@
             "Ljava/lang/ref/ReferenceQueue<",
             "Landroidx/databinding/ViewDataBinding;",
             ">;)",
-            "Landroidx/databinding/t;"
+            "Landroidx/databinding/u;"
         }
     .end annotation
 .end method

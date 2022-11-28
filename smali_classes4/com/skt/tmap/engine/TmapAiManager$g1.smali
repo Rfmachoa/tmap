@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->m4(Lcom/skt/voice/tyche/data/CardResult;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,23 +18,29 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/engine/TmapAiManager;
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Lcom/skt/tmap/engine/TmapAiManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;)V
+.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010
+            0x8010,
+            0x1010
         }
         names = {
-            "this$0"
+            "this$0",
+            "val$string"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$g1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$g1;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    iput-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager$g1;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,12 +50,18 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$g1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$g1;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->h0(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/NuguSdkManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$g1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/skt/voice/tyche/NuguSdkManager;->Q(Ljava/lang/String;)V
 
     return-void
 .end method

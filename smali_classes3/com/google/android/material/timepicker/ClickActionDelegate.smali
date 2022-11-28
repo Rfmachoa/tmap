@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final clickAction:Lt1/c$a;
+.field private final clickAction:Lk2/c$a;
 
 
 # direct methods
@@ -15,7 +15,7 @@
     invoke-direct {p0}, Landroidx/core/view/a;-><init>()V
 
     .line 2
-    new-instance v0, Lt1/c$a;
+    new-instance v0, Lk2/c$a;
 
     .line 3
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -24,25 +24,25 @@
 
     const/16 p2, 0x10
 
-    invoke-direct {v0, p2, p1}, Lt1/c$a;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v0, p2, p1}, Lk2/c$a;-><init>(ILjava/lang/CharSequence;)V
 
-    iput-object v0, p0, Lcom/google/android/material/timepicker/ClickActionDelegate;->clickAction:Lt1/c$a;
+    iput-object v0, p0, Lcom/google/android/material/timepicker/ClickActionDelegate;->clickAction:Lk2/c$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
 
     .line 2
-    iget-object p1, p0, Lcom/google/android/material/timepicker/ClickActionDelegate;->clickAction:Lt1/c$a;
+    iget-object p1, p0, Lcom/google/android/material/timepicker/ClickActionDelegate;->clickAction:Lk2/c$a;
 
-    invoke-virtual {p2, p1}, Lt1/c;->b(Lt1/c$a;)V
+    invoke-virtual {p2, p1}, Lk2/c;->b(Lk2/c$a;)V
 
     return-void
 .end method

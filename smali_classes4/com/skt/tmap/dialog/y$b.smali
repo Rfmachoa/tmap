@@ -1,39 +1,100 @@
-.class public interface abstract Lcom/skt/tmap/dialog/y$b;
+.class public Lcom/skt/tmap/dialog/y$b;
 .super Ljava/lang/Object;
-.source "TmapSatisfactionDialog.kt"
+.source "TimePredictionDialog.java"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/skt/tmap/dialog/y;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/dialog/y;->p()Landroid/animation/Animator$AnimatorListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
-    name = "b"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008f\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H&\u00a8\u0006\u0004"
-    }
-    d2 = {
-        "Lcom/skt/tmap/dialog/y$b;",
-        "",
-        "Lkotlin/d1;",
-        "onDismiss",
-        "tmap_android_phoneKUShip"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
+
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/dialog/y;
+
+
+# direct methods
+.method public constructor <init>(Lcom/skt/tmap/dialog/y;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/dialog/y$b;->a:Lcom/skt/tmap/dialog/y;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract onDismiss()V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    return-void
 .end method

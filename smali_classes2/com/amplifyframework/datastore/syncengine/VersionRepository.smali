@@ -28,18 +28,18 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lai/r0;Lcom/amplifyframework/core/model/Model;Ljava/util/Iterator;)V
+.method public static synthetic a(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lek/r0;Lcom/amplifyframework/core/model/Model;Ljava/util/Iterator;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->lambda$null$0(Lai/r0;Lcom/amplifyframework/core/model/Model;Ljava/util/Iterator;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->lambda$null$0(Lek/r0;Lcom/amplifyframework/core/model/Model;Ljava/util/Iterator;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lcom/amplifyframework/core/model/Model;Lai/r0;)V
+.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lcom/amplifyframework/core/model/Model;Lek/r0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->lambda$findModelVersion$1(Lcom/amplifyframework/core/model/Model;Lai/r0;)V
+    invoke-direct {p0, p1, p2}, Lcom/amplifyframework/datastore/syncengine/VersionRepository;->lambda$findModelVersion$1(Lcom/amplifyframework/core/model/Model;Lek/r0;)V
 
     return-void
 .end method
@@ -190,7 +190,7 @@
     throw p2
 .end method
 
-.method private synthetic lambda$findModelVersion$1(Lcom/amplifyframework/core/model/Model;Lai/r0;)V
+.method private synthetic lambda$findModelVersion$1(Lcom/amplifyframework/core/model/Model;Lek/r0;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -211,22 +211,22 @@
 
     move-result-object v2
 
-    new-instance v3, Lcom/amplifyframework/datastore/syncengine/a4;
+    new-instance v3, Lcom/amplifyframework/datastore/syncengine/z3;
 
-    invoke-direct {v3, p0, p2, p1}, Lcom/amplifyframework/datastore/syncengine/a4;-><init>(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lai/r0;Lcom/amplifyframework/core/model/Model;)V
+    invoke-direct {v3, p0, p2, p1}, Lcom/amplifyframework/datastore/syncengine/z3;-><init>(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lek/r0;Lcom/amplifyframework/core/model/Model;)V
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     invoke-interface {v0, v1, v2, v3, p1}, Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;->query(Ljava/lang/Class;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$null$0(Lai/r0;Lcom/amplifyframework/core/model/Model;Ljava/util/Iterator;)V
+.method private synthetic lambda$null$0(Lek/r0;Lcom/amplifyframework/core/model/Model;Ljava/util/Iterator;)V
     .locals 0
 
     .line 1
@@ -239,7 +239,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lai/r0;->onSuccess(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Lek/r0;->onSuccess(Ljava/lang/Object;)V
     :try_end_0
     .catch Lcom/amplifyframework/datastore/DataStoreException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -249,7 +249,7 @@
     move-exception p2
 
     .line 2
-    invoke-interface {p1, p2}, Lai/r0;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, p2}, Lek/r0;->onError(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -257,25 +257,25 @@
 
 
 # virtual methods
-.method public findModelVersion(Lcom/amplifyframework/core/model/Model;)Lai/p0;
+.method public findModelVersion(Lcom/amplifyframework/core/model/Model;)Lek/p0;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
             "Lcom/amplifyframework/core/model/Model;",
             ">(TT;)",
-            "Lai/p0<",
+            "Lek/p0<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/z3;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/a4;
 
-    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/z3;-><init>(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lcom/amplifyframework/core/model/Model;)V
+    invoke-direct {v0, p0, p1}, Lcom/amplifyframework/datastore/syncengine/a4;-><init>(Lcom/amplifyframework/datastore/syncengine/VersionRepository;Lcom/amplifyframework/core/model/Model;)V
 
-    invoke-static {v0}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {v0}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p1
 

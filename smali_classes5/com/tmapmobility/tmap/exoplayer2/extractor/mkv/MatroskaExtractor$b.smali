@@ -44,7 +44,7 @@
 
 
 # virtual methods
-.method public a(IILcom/tmapmobility/tmap/exoplayer2/extractor/i;)V
+.method public a(IILcom/tmapmobility/tmap/exoplayer2/extractor/k;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -55,7 +55,7 @@
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$b;->g:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k(IILcom/tmapmobility/tmap/exoplayer2/extractor/i;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k(IILcom/tmapmobility/tmap/exoplayer2/extractor/k;)V
 
     return-void
 .end method

@@ -14,17 +14,17 @@
 
 
 # static fields
-.field public static final aladdin:I = 0x7f120000
+.field public static final aladdin:I = 0x7f130000
 
-.field public static final asr_ready_56:I = 0x7f120002
+.field public static final asr_ready_56:I = 0x7f130002
 
-.field public static final read_next_text_message:I = 0x7f12001a
+.field public static final read_next_text_message:I = 0x7f13001b
 
-.field public static final responce_fail:I = 0x7f12001c
+.field public static final responce_fail:I = 0x7f13001d
 
-.field public static final skl42031:I = 0x7f12001f
+.field public static final skl42031:I = 0x7f130020
 
-.field public static final skl42041:I = 0x7f120020
+.field public static final skl42041:I = 0x7f130021
 
 
 # direct methods

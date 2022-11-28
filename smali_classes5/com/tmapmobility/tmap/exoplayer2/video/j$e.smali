@@ -82,7 +82,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->x(Landroid/os/Looper;Landroid/os/Handler$Callback;)Landroid/os/Handler;
+    invoke-static {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->x(Landroid/os/Looper;Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -169,7 +169,7 @@
     const-string v2, "Vsync sampling disabled due to platform error"
 
     .line 2
-    invoke-static {v1, v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

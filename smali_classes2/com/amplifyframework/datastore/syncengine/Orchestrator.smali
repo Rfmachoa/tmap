@@ -50,10 +50,10 @@
 
 .field private final syncProcessor:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
 
-.field private final targetState:Lr1/w;
+.field private final targetState:Landroidx/core/util/e0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lr1/w<",
+            "Landroidx/core/util/e0<",
             "Lcom/amplifyframework/datastore/syncengine/Orchestrator$State;",
             ">;"
         }
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/amplifyframework/core/model/ModelProvider;Lcom/amplifyframework/core/model/ModelSchemaRegistry;Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/datastore/DataStoreConfigurationProvider;Lr1/w;)V
+.method public constructor <init>(Lcom/amplifyframework/core/model/ModelProvider;Lcom/amplifyframework/core/model/ModelSchemaRegistry;Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/datastore/DataStoreConfigurationProvider;Landroidx/core/util/e0;)V
     .locals 7
     .param p1    # Lcom/amplifyframework/core/model/ModelProvider;
         .annotation build Landroidx/annotation/NonNull;
@@ -101,7 +101,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p6    # Lr1/w;
+    .param p6    # Landroidx/core/util/e0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -113,7 +113,7 @@
             "Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;",
             "Lcom/amplifyframework/datastore/appsync/AppSync;",
             "Lcom/amplifyframework/datastore/DataStoreConfigurationProvider;",
-            "Lr1/w<",
+            "Landroidx/core/util/e0<",
             "Lcom/amplifyframework/datastore/syncengine/Orchestrator$State;",
             ">;)V"
         }
@@ -282,9 +282,9 @@
 
     move-result-object p2
 
-    new-instance p4, Lcom/amplifyframework/datastore/syncengine/o0;
+    new-instance p4, Lcom/amplifyframework/datastore/syncengine/l0;
 
-    invoke-direct {p4, p0}, Lcom/amplifyframework/datastore/syncengine/o0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {p4, p0}, Lcom/amplifyframework/datastore/syncengine/l0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     .line 34
     invoke-interface {p2, p4}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor$OnFailureStep;->onFailure(Lcom/amplifyframework/core/Consumer;)Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor$BuildStep;
@@ -315,7 +315,7 @@
     iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->currentState:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 38
-    iput-object p6, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->targetState:Lr1/w;
+    iput-object p6, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->targetState:Landroidx/core/util/e0;
 
     .line 39
     new-instance p2, Lio/reactivex/rxjava3/disposables/a;
@@ -368,10 +368,10 @@
     return-void
 .end method
 
-.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lai/c;)V
+.method public static synthetic b(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->lambda$startApiSync$3(Lai/c;)V
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->lambda$startApiSync$3(Lek/c;)V
 
     return-void
 .end method
@@ -508,9 +508,9 @@
     .line 1
     sget-object v0, Lcom/amplifyframework/datastore/syncengine/Orchestrator$1;->$SwitchMap$com$amplifyframework$datastore$syncengine$Orchestrator$State:[I
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->targetState:Lr1/w;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->targetState:Landroidx/core/util/e0;
 
-    invoke-interface {v1}, Lr1/w;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Landroidx/core/util/e0;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -546,7 +546,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$startApiSync$3(Lai/c;)V
+.method private synthetic lambda$startApiSync$3(Lek/c;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -590,7 +590,7 @@
     :try_start_0
     iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->syncProcessor:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
 
-    invoke-virtual {v3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->hydrate()Lai/a;
+    invoke-virtual {v3}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->hydrate()Lek/a;
 
     move-result-object v3
 
@@ -599,7 +599,7 @@
     sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 8
-    invoke-virtual {v3, v4, v5, v6}, Lai/a;->n(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v3, v4, v5, v6}, Lek/a;->n(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result v3
 
@@ -650,7 +650,7 @@
     invoke-virtual {v0}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->startDrainingMutationBuffer()V
 
     .line 13
-    invoke-interface {p1}, Lai/c;->onComplete()V
+    invoke-interface {p1}, Lek/c;->onComplete()V
 
     return-void
 
@@ -671,7 +671,7 @@
     move-exception v0
 
     .line 15
-    invoke-interface {p1}, Lai/c;->isDisposed()Z
+    invoke-interface {p1}, Lek/c;->isDisposed()Z
 
     move-result v1
 
@@ -686,7 +686,7 @@
 
     invoke-direct {v1, v2, v0, v3}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;)V
 
-    invoke-interface {p1, v1}, Lai/c;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v1}, Lek/c;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -697,7 +697,7 @@
     invoke-interface {v1, v2, v0}, Lcom/amplifyframework/logging/Logger;->warn(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 18
-    invoke-interface {p1}, Lai/c;->onComplete()V
+    invoke-interface {p1}, Lek/c;->onComplete()V
 
     :goto_0
     return-void
@@ -757,7 +757,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$startObservingStorageChanges$2(Lai/c;)V
+.method private synthetic lambda$startObservingStorageChanges$2(Lek/c;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -770,9 +770,9 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/amplifyframework/datastore/h0;
+    new-instance v1, Lcom/amplifyframework/datastore/d;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/h0;-><init>(Lai/c;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/d;-><init>(Lek/c;)V
 
     invoke-virtual {v0, v1}, Lcom/amplifyframework/datastore/syncengine/StorageObserver;->startObservingStorageChanges(Lcom/amplifyframework/core/Action;)V
 
@@ -793,10 +793,10 @@
     return-void
 .end method
 
-.method public static synthetic m(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lai/c;)V
+.method public static synthetic m(Lcom/amplifyframework/datastore/syncengine/Orchestrator;Lek/c;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->lambda$startObservingStorageChanges$2(Lai/c;)V
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->lambda$startObservingStorageChanges$2(Lek/c;)V
 
     return-void
 .end method
@@ -835,28 +835,28 @@
     invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->publishNetworkStatusEvent(Z)V
 
     .line 4
-    new-instance p1, Lcom/amplifyframework/datastore/syncengine/r0;
+    new-instance p1, Lcom/amplifyframework/datastore/syncengine/s0;
 
-    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/r0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {p1, p0}, Lcom/amplifyframework/datastore/syncengine/s0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
-    invoke-static {p1}, Lai/a;->X(Lci/a;)Lai/a;
+    invoke-static {p1}, Lek/a;->X(Lgk/a;)Lek/a;
 
     move-result-object p1
 
-    sget-object v0, Lcom/amplifyframework/datastore/syncengine/n0;->a:Lcom/amplifyframework/datastore/syncengine/n0;
+    sget-object v0, Lcom/amplifyframework/datastore/syncengine/o0;->a:Lcom/amplifyframework/datastore/syncengine/o0;
 
     .line 5
-    invoke-virtual {p1, v0}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {p1, v0}, Lek/a;->P(Lgk/g;)Lek/a;
 
     move-result-object p1
 
     .line 6
-    invoke-virtual {p1}, Lai/a;->V0()Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {p1}, Lek/a;->V0()Lio/reactivex/rxjava3/disposables/c;
 
     return-void
 .end method
 
-.method private performSynchronized(Lci/a;)Lai/a;
+.method private performSynchronized(Lgk/a;)Lek/a;
     .locals 6
 
     const-string v0, "Retry your request."
@@ -918,7 +918,7 @@
 
     invoke-direct {p1, v1, v0}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lai/a;->W(Ljava/lang/Throwable;)Lai/a;
+    invoke-static {p1}, Lek/a;->W(Ljava/lang/Throwable;)Lek/a;
 
     move-result-object p1
     :try_end_0
@@ -933,16 +933,16 @@
     invoke-interface {v2, v0}, Lcom/amplifyframework/logging/Logger;->info(Ljava/lang/String;)V
 
     .line 6
-    invoke-static {p1}, Lai/a;->X(Lci/a;)Lai/a;
+    invoke-static {p1}, Lek/a;->X(Lgk/a;)Lek/a;
 
     move-result-object p1
 
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/q0;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/r0;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/q0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/r0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     .line 7
-    invoke-virtual {p1, v0}, Lai/a;->M(Lci/a;)Lai/a;
+    invoke-virtual {p1, v0}, Lek/a;->M(Lgk/a;)Lek/a;
 
     move-result-object p1
 
@@ -956,7 +956,7 @@
 
     invoke-direct {p1, v1, v0}, Lcom/amplifyframework/datastore/DataStoreException;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lai/a;->W(Ljava/lang/Throwable;)Lai/a;
+    invoke-static {p1}, Lek/a;->W(Ljava/lang/Throwable;)Lek/a;
 
     move-result-object p1
 
@@ -1027,55 +1027,55 @@
     .line 3
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->disposables:Lio/reactivex/rxjava3/disposables/a;
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/l0;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/p0;
 
-    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/syncengine/l0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/syncengine/p0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     .line 4
-    invoke-static {v1}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {v1}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object v1
 
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/m0;->a:Lcom/amplifyframework/datastore/syncengine/m0;
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/n0;->a:Lcom/amplifyframework/datastore/syncengine/n0;
 
     .line 5
-    invoke-virtual {v1, v2}, Lai/a;->P(Lci/g;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/a;->P(Lgk/g;)Lek/a;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/amplifyframework/datastore/syncengine/x0;->a:Lcom/amplifyframework/datastore/syncengine/x0;
+
+    .line 6
+    invoke-virtual {v1, v2}, Lek/a;->N(Lgk/a;)Lek/a;
 
     move-result-object v1
 
     sget-object v2, Lcom/amplifyframework/datastore/syncengine/w0;->a:Lcom/amplifyframework/datastore/syncengine/w0;
 
-    .line 6
-    invoke-virtual {v1, v2}, Lai/a;->N(Lci/a;)Lai/a;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/amplifyframework/datastore/syncengine/v0;->a:Lcom/amplifyframework/datastore/syncengine/v0;
-
     .line 7
-    invoke-virtual {v1, v2}, Lai/a;->O(Lci/a;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/a;->O(Lgk/a;)Lek/a;
 
     move-result-object v1
 
     .line 8
-    invoke-static {}, Lki/b;->e()Lai/o0;
+    invoke-static {}, Lok/b;->e()Lek/o0;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lai/a;->Z0(Lai/o0;)Lai/a;
+    invoke-virtual {v1, v2}, Lek/a;->Z0(Lek/o0;)Lek/a;
 
     move-result-object v1
 
-    new-instance v2, Lcom/amplifyframework/datastore/syncengine/u0;
+    new-instance v2, Lcom/amplifyframework/datastore/syncengine/v0;
 
-    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/u0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v2, p0}, Lcom/amplifyframework/datastore/syncengine/v0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
-    new-instance v3, Lcom/amplifyframework/datastore/syncengine/x0;
+    new-instance v3, Lcom/amplifyframework/datastore/syncengine/m0;
 
-    invoke-direct {v3, p0}, Lcom/amplifyframework/datastore/syncengine/x0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v3, p0}, Lcom/amplifyframework/datastore/syncengine/m0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     .line 9
-    invoke-virtual {v1, v2, v3}, Lai/a;->X0(Lci/a;Lci/g;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v1, v2, v3}, Lek/a;->X0(Lgk/a;Lgk/g;)Lio/reactivex/rxjava3/disposables/c;
 
     move-result-object v1
 
@@ -1104,20 +1104,20 @@
     :try_start_0
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->mutationOutbox:Lcom/amplifyframework/datastore/syncengine/MutationOutbox;
 
-    invoke-interface {v0}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->load()Lai/a;
+    invoke-interface {v0}, Lcom/amplifyframework/datastore/syncengine/MutationOutbox;->load()Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/syncengine/p0;
+    new-instance v1, Lcom/amplifyframework/datastore/syncengine/q0;
 
-    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/syncengine/p0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/syncengine/q0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
     .line 3
-    invoke-static {v1}, Lai/a;->E(Lai/e;)Lai/a;
+    invoke-static {v1}, Lek/a;->E(Lek/e;)Lek/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lai/a;->h(Lai/g;)Lai/a;
+    invoke-virtual {v0, v1}, Lek/a;->h(Lek/g;)Lek/a;
 
     move-result-object v0
 
@@ -1126,7 +1126,7 @@
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     .line 4
-    invoke-virtual {v0, v1, v2, v3}, Lai/a;->n(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v0, v1, v2, v3}, Lek/a;->n(JLjava/util/concurrent/TimeUnit;)Z
 
     move-result v0
 
@@ -1509,18 +1509,18 @@
 
 
 # virtual methods
-.method public declared-synchronized start()Lai/a;
+.method public declared-synchronized start()Lek/a;
     .locals 1
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/t0;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/u0;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/t0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/u0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
-    invoke-direct {p0, v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->performSynchronized(Lci/a;)Lai/a;
+    invoke-direct {p0, v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->performSynchronized(Lgk/a;)Lek/a;
 
     move-result-object v0
     :try_end_0
@@ -1538,18 +1538,18 @@
     throw v0
 .end method
 
-.method public declared-synchronized stop()Lai/a;
+.method public declared-synchronized stop()Lek/a;
     .locals 1
 
     monitor-enter p0
 
     .line 1
     :try_start_0
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/s0;
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/t0;
 
-    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/s0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
+    invoke-direct {v0, p0}, Lcom/amplifyframework/datastore/syncengine/t0;-><init>(Lcom/amplifyframework/datastore/syncengine/Orchestrator;)V
 
-    invoke-direct {p0, v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->performSynchronized(Lci/a;)Lai/a;
+    invoke-direct {p0, v0}, Lcom/amplifyframework/datastore/syncengine/Orchestrator;->performSynchronized(Lgk/a;)Lek/a;
 
     move-result-object v0
     :try_end_0

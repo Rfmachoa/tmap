@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
 
 
 # instance fields
 .field public final synthetic a:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-.field public final synthetic b:Landroidx/camera/core/UseCase;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/Camera2CameraImpl;Landroidx/camera/core/UseCase;)V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/Camera2CameraImpl;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Landroidx/camera/camera2/internal/z;->a:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iput-object p2, p0, Landroidx/camera/camera2/internal/z;->b:Landroidx/camera/core/UseCase;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    .locals 1
 
     iget-object v0, p0, Landroidx/camera/camera2/internal/z;->a:Landroidx/camera/camera2/internal/Camera2CameraImpl;
 
-    iget-object v1, p0, Landroidx/camera/camera2/internal/z;->b:Landroidx/camera/core/UseCase;
+    invoke-static {v0, p1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->x(Landroidx/camera/camera2/internal/Camera2CameraImpl;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Landroidx/camera/camera2/internal/Camera2CameraImpl;->D(Landroidx/camera/camera2/internal/Camera2CameraImpl;Landroidx/camera/core/UseCase;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

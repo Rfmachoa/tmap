@@ -49,18 +49,18 @@
 
 
 # virtual methods
-.method public a(JLcom/tmapmobility/tmap/exoplayer2/util/a0;)V
+.method public a(JLcom/tmapmobility/tmap/exoplayer2/util/b0;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/y;->b:[Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-    invoke-static {p1, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/b;->a(JLcom/tmapmobility/tmap/exoplayer2/util/a0;[Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;)V
+    invoke-static {p1, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/b;->a(JLcom/tmapmobility/tmap/exoplayer2/util/b0;[Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;)V
 
     return-void
 .end method
 
-.method public b(Lcom/tmapmobility/tmap/exoplayer2/extractor/j;Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/TsPayloadReader$d;)V
+.method public b(Lcom/tmapmobility/tmap/exoplayer2/extractor/l;Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/TsPayloadReader$d;)V
     .locals 8
 
     const/4 v0, 0x0
@@ -85,7 +85,7 @@
 
     const/4 v3, 0x3
 
-    invoke-interface {p1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
+    invoke-interface {p1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
     move-result-object v2
 
@@ -190,7 +190,7 @@
 
     move-result-object v4
 
-    iget v5, v3, Lcom/tmapmobility/tmap/exoplayer2/Format;->i1:I
+    iget v5, v3, Lcom/tmapmobility/tmap/exoplayer2/Format;->k1:I
 
     .line 15
     invoke-virtual {v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/Format$b;->F(I)Lcom/tmapmobility/tmap/exoplayer2/Format$b;

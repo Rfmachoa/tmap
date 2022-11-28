@@ -40,105 +40,19 @@
     return-void
 .end method
 
-.method private static drawRoundedEnd(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFZLandroid/graphics/RectF;)V
-    .locals 10
-
-    move-object v6, p0
-
-    move v0, p2
-
-    move v1, p3
-
-    .line 1
-    invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
-
-    const/4 v7, 0x0
-
-    move v2, p4
-
-    .line 2
-    invoke-virtual {p0, p4, v7}, Landroid/graphics/Canvas;->translate(FF)V
-
-    if-nez p5, :cond_0
-
-    const/high16 v2, 0x43340000    # 180.0f
-
-    .line 3
-    invoke-virtual {p0, v2}, Landroid/graphics/Canvas;->rotate(F)V
-
-    :cond_0
-    neg-float v2, v1
-
-    neg-float v3, v0
-
-    const/high16 v4, 0x40000000    # 2.0f
-
-    div-float/2addr v3, v4
-
-    add-float v8, v3, v1
-
-    const/4 v3, 0x0
-
-    div-float/2addr v0, v4
-
-    sub-float v9, v0, v1
-
-    move-object v0, p0
-
-    move v1, v2
-
-    move v2, v8
-
-    move v4, v9
-
-    move-object v5, p1
-
-    .line 4
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
-
-    .line 5
-    invoke-virtual {p0}, Landroid/graphics/Canvas;->save()I
-
-    .line 6
-    invoke-virtual {p0, v7, v8}, Landroid/graphics/Canvas;->translate(FF)V
-
-    const/high16 v2, 0x43340000    # 180.0f
-
-    const/high16 v3, 0x42b40000    # 90.0f
-
-    const/4 v4, 0x1
-
-    move-object/from16 v1, p6
-
-    .line 7
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
-
-    .line 8
-    invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
-
-    .line 9
-    invoke-virtual {p0, v7, v9}, Landroid/graphics/Canvas;->translate(FF)V
-
-    const/high16 v3, -0x3d4c0000    # -90.0f
-
-    .line 10
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
-
-    .line 11
-    invoke-virtual {p0}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public adjustCanvas(Landroid/graphics/Canvas;F)V
-    .locals 7
+.method public adjustCanvas(Landroid/graphics/Canvas;Landroid/graphics/Rect;F)V
+    .locals 6
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # F
+    .param p2    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # F
         .annotation build Landroidx/annotation/FloatRange;
             from = 0.0
             to = 1.0
@@ -146,30 +60,30 @@
     .end param
 
     .line 1
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getClipBounds()Landroid/graphics/Rect;
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    move-result-object v0
+    move-result v0
+
+    int-to-float v0, v0
+
+    iput v0, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
 
     .line 2
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    move-result v1
+    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    int-to-float v1, v1
+    iget v0, v0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
 
-    iput v1, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
+    int-to-float v0, v0
 
     .line 3
-    iget-object v1, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
-
-    check-cast v1, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
-
-    iget v1, v1, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
+    iget v1, p2, Landroid/graphics/Rect;->left:I
 
     int-to-float v1, v1
 
     .line 4
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
@@ -179,8 +93,14 @@
 
     div-float/2addr v2, v3
 
+    add-float/2addr v2, v1
+
+    iget v1, p2, Landroid/graphics/Rect;->top:I
+
+    int-to-float v1, v1
+
     .line 5
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result v4
 
@@ -188,88 +108,90 @@
 
     div-float/2addr v4, v3
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+    add-float/2addr v4, v1
 
-    move-result v0
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
-    iget-object v5, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
+    move-result p2
 
-    check-cast v5, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+    iget-object v1, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    iget v5, v5, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
+    check-cast v1, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    sub-int/2addr v0, v5
+    iget v1, v1, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
 
-    int-to-float v0, v0
+    sub-int/2addr p2, v1
 
-    div-float/2addr v0, v3
+    int-to-float p2, p2
 
-    const/4 v5, 0x0
+    div-float/2addr p2, v3
 
-    invoke-static {v5, v0}, Ljava/lang/Math;->max(FF)F
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-static {v1, p2}, Ljava/lang/Math;->max(FF)F
 
-    add-float/2addr v0, v4
+    move-result p2
+
+    add-float/2addr p2, v4
 
     .line 6
-    invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p1, v2, p2}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 7
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+    check-cast p2, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    iget-boolean v0, v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;->drawHorizontallyInverse:Z
+    iget-boolean p2, p2, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;->drawHorizontallyInverse:Z
 
     const/high16 v2, -0x40800000    # -1.0f
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_0
 
     .line 8
     invoke-virtual {p1, v2, v4}, Landroid/graphics/Canvas;->scale(FF)V
 
     .line 9
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
 
-    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isShowing()Z
+    invoke-virtual {p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isShowing()Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+    check-cast p2, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    iget v0, v0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->showAnimationBehavior:I
+    iget p2, p2, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->showAnimationBehavior:I
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    if-eq v0, v6, :cond_2
+    if-eq p2, v5, :cond_2
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
 
     .line 10
-    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isHiding()Z
+    invoke-virtual {p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isHiding()Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_3
+    if-eqz p2, :cond_3
 
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+    check-cast p2, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    iget v0, v0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->hideAnimationBehavior:I
+    iget p2, p2, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->hideAnimationBehavior:I
 
-    const/4 v6, 0x2
+    const/4 v5, 0x2
 
-    if-ne v0, v6, :cond_3
+    if-ne p2, v5, :cond_3
 
     .line 11
     :cond_2
@@ -277,72 +199,72 @@
 
     .line 12
     :cond_3
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
 
-    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isShowing()Z
+    invoke-virtual {p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isShowing()Z
 
-    move-result v0
+    move-result p2
 
-    if-nez v0, :cond_4
+    if-nez p2, :cond_4
 
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->drawable:Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;
 
-    invoke-virtual {v0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isHiding()Z
+    invoke-virtual {p2}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->isHiding()Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_5
+    if-eqz p2, :cond_5
 
     .line 13
     :cond_4
-    iget-object v0, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
+    iget-object p2, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+    check-cast p2, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    iget v0, v0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
+    iget p2, p2, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
 
-    int-to-float v0, v0
+    int-to-float p2, p2
 
-    sub-float v2, p2, v4
+    sub-float v2, p3, v4
 
-    mul-float/2addr v2, v0
+    mul-float/2addr v2, p2
 
     div-float/2addr v2, v3
 
-    invoke-virtual {p1, v5, v2}, Landroid/graphics/Canvas;->translate(FF)V
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
     .line 14
     :cond_5
-    iget v0, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
+    iget p2, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
+
+    neg-float v1, p2
+
+    div-float/2addr v1, v3
 
     neg-float v2, v0
 
     div-float/2addr v2, v3
 
-    neg-float v4, v1
-
-    div-float/2addr v4, v3
+    div-float/2addr p2, v3
 
     div-float/2addr v0, v3
 
-    div-float/2addr v1, v3
-
-    invoke-virtual {p1, v2, v4, v0, v1}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
+    invoke-virtual {p1, v1, v2, p2, v0}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
     .line 15
     iget-object p1, p0, Lcom/google/android/material/progressindicator/DrawingDelegate;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
-    move-object v0, p1
+    move-object p2, p1
 
-    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+    check-cast p2, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
 
-    iget v0, v0, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
+    iget p2, p2, Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;->trackThickness:I
 
-    int-to-float v0, v0
+    int-to-float p2, p2
 
-    mul-float/2addr v0, p2
+    mul-float/2addr p2, p3
 
-    iput v0, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
+    iput p2, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
 
     .line 16
     check-cast p1, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
@@ -351,7 +273,7 @@
 
     int-to-float p1, p1
 
-    mul-float/2addr p1, p2
+    mul-float/2addr p1, p3
 
     iput p1, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
 
@@ -359,7 +281,7 @@
 .end method
 
 .method public fillIndicator(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFI)V
-    .locals 11
+    .locals 5
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -385,132 +307,84 @@
         .end annotation
     .end param
 
-    move-object v0, p0
+    cmpl-float v0, p3, p4
 
-    move-object v8, p2
-
-    cmpl-float v1, p3, p4
-
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     .line 1
     :cond_0
-    iget v1, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
+    iget v0, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
 
-    neg-float v2, v1
+    neg-float v1, v0
 
-    const/high16 v3, 0x40000000    # 2.0f
+    const/high16 v2, 0x40000000    # 2.0f
 
-    div-float/2addr v2, v3
+    div-float/2addr v1, v2
 
-    iget v4, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
+    iget v3, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
 
-    add-float/2addr v2, v4
+    mul-float v4, v3, v2
 
-    mul-float v5, v4, v3
+    sub-float v4, v0, v4
 
-    sub-float v5, v1, v5
+    mul-float/2addr v4, p3
 
-    mul-float/2addr v5, p3
+    add-float/2addr v4, v1
 
-    add-float v7, v5, v2
+    neg-float p3, v0
 
-    neg-float v2, v1
+    div-float/2addr p3, v2
 
-    div-float/2addr v2, v3
+    mul-float v1, v3, v2
 
-    add-float/2addr v2, v4
+    sub-float/2addr v0, v1
 
-    mul-float/2addr v4, v3
+    mul-float/2addr v0, p4
 
-    sub-float/2addr v1, v4
+    add-float/2addr v0, p3
 
-    mul-float/2addr v1, p4
+    mul-float/2addr v3, v2
 
-    add-float v9, v1, v2
+    add-float/2addr v3, v0
 
     .line 2
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+    sget-object p3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    const/4 v1, 0x1
+    const/4 p3, 0x1
 
     .line 3
-    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    move/from16 v1, p5
+    invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 4
-    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {p2, p5}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 5
-    iget v1, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
+    new-instance p3, Landroid/graphics/RectF;
 
-    neg-float v2, v1
+    iget p4, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
 
-    div-float v4, v2, v3
+    neg-float p5, p4
 
-    div-float v5, v1, v3
+    div-float/2addr p5, v2
 
-    move-object v1, p1
+    div-float/2addr p4, v2
 
-    move v2, v7
-
-    move v3, v4
-
-    move v4, v9
-
-    move-object v6, p2
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    invoke-direct {p3, v4, p5, v3, p4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     .line 6
-    new-instance v10, Landroid/graphics/RectF;
+    iget p4, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
 
-    iget v1, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
-
-    neg-float v2, v1
-
-    neg-float v3, v1
-
-    invoke-direct {v10, v2, v3, v1, v1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    .line 7
-    iget v3, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
-
-    iget v4, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
-
-    const/4 v6, 0x1
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v5, v7
-
-    move-object v7, v10
-
-    invoke-static/range {v1 .. v7}, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->drawRoundedEnd(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFZLandroid/graphics/RectF;)V
-
-    .line 8
-    iget v3, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
-
-    iget v4, v0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
-
-    const/4 v6, 0x0
-
-    move v5, v9
-
-    invoke-static/range {v1 .. v7}, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->drawRoundedEnd(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFZLandroid/graphics/RectF;)V
+    invoke-virtual {p1, p3, p4, p4, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method
 
 .method public fillTrack(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
-    .locals 12
+    .locals 6
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -538,96 +412,45 @@
     move-result v0
 
     .line 2
-    iget v1, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    neg-float v1, v1
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v2
-
-    iget v3, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
-
-    add-float/2addr v1, v3
-
-    neg-float v11, v1
+    const/4 v1, 0x1
 
     .line 3
-    sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    const/4 v3, 0x1
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 4
-    invoke-virtual {p2, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    .line 5
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 6
-    iget v0, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
-
-    neg-float v3, v0
-
-    div-float v6, v3, v2
-
-    div-float v8, v0, v2
-
-    move-object v4, p1
-
-    move v5, v1
-
-    move v7, v11
-
-    move-object v9, p2
-
-    invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
-
-    .line 7
+    .line 5
     new-instance v0, Landroid/graphics/RectF;
 
-    iget v2, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
+    iget v1, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->trackLength:F
 
-    neg-float v3, v2
+    neg-float v2, v1
 
-    neg-float v4, v2
+    const/high16 v3, 0x40000000    # 2.0f
 
-    invoke-direct {v0, v3, v4, v2, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
+    div-float/2addr v2, v3
 
-    .line 8
-    iget v6, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
+    iget v4, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
 
-    iget v7, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
+    neg-float v5, v4
 
-    const/4 v9, 0x1
+    div-float/2addr v5, v3
 
-    move-object v4, p1
+    div-float/2addr v1, v3
 
-    move-object v5, p2
+    div-float/2addr v4, v3
 
-    move v8, v1
+    invoke-direct {v0, v2, v5, v1, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    move-object v10, v0
+    .line 6
+    iget v1, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
 
-    invoke-static/range {v4 .. v10}, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->drawRoundedEnd(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFZLandroid/graphics/RectF;)V
-
-    .line 9
-    iget v5, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedTrackThickness:F
-
-    iget v6, p0, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->displayedCornerRadius:F
-
-    const/4 v8, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move v7, v11
-
-    move-object v9, v0
-
-    invoke-static/range {v3 .. v9}, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;->drawRoundedEnd(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFZLandroid/graphics/RectF;)V
+    invoke-virtual {p1, v0, v1, v1, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method

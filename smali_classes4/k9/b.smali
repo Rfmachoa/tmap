@@ -1,101 +1,124 @@
 .class public Lk9/b;
-.super Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
-.source "QuerySetContactUploadAgreement.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lk9/b$a;
-    }
-.end annotation
+.super Ljava/lang/Object;
+.source "LogBundle.java"
 
 
 # instance fields
-.field public i:Lk9/b$a;
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Lorg/json/JSONArray;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 9
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v8, Lk9/b$a;
+    new-instance v0, Lorg/json/JSONArray;
 
-    invoke-static {p1}, Lua/d;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
 
-    move-result-object v2
-
-    .line 3
-    invoke-static {}, Lp8/d;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {}, Lp8/d;->b()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 4
-    invoke-static {}, Lp8/d;->e()Ljava/lang/String;
-
-    move-result-object v7
-
-    move-object v0, v8
-
-    move-object v1, p2
-
-    move-object v5, p4
-
-    move-object v6, p3
-
-    invoke-direct/range {v0 .. v7}, Lk9/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v8, p0, Lk9/b;->i:Lk9/b$a;
+    iput-object v0, p0, Lk9/b;->d:Lorg/json/JSONArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getExecutor()Lretrofit2/Call;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
-            ">;"
-        }
-    .end annotation
+.method public a(Lorg/json/JSONObject;)V
+    .locals 1
 
     .line 1
-    new-instance v0, Lcom/google/gson/Gson;
+    iget-object v0, p0, Lk9/b;->d:Lorg/json/JSONArray;
 
-    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+    invoke-virtual {v0, p1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    iget-object v1, p0, Lk9/b;->i:Lk9/b$a;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+.method public b()I
+    .locals 1
 
-    move-result-object v0
+    .line 1
+    iget-object v0, p0, Lk9/b;->d:Lorg/json/JSONArray;
 
-    invoke-virtual {p0, v0}, Lcom/skt/aicloud/mobile/service/net/http/lib/AbsQueryBase;->getJsonRequestBody(Ljava/lang/String;)Lokhttp3/RequestBody;
+    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
-    move-result-object v0
+    move-result v0
 
-    .line 2
-    iget-object v1, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->c:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->getHeaders()Ljava/util/Map;
+.method public c()Ljava/lang/String;
+    .locals 1
 
-    move-result-object v2
+    .line 1
+    iget-object v0, p0, Lk9/b;->c:Ljava/lang/String;
 
-    invoke-interface {v1, v2, v0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;->setContactUploadAgreement(Ljava/util/Map;Lokhttp3/RequestBody;)Lretrofit2/Call;
+    return-object v0
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lk9/b;->d:Lorg/json/JSONArray;
+
+    invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public e()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lk9/b;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public f()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lk9/b;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public g(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lk9/b;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public h(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lk9/b;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public i(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lk9/b;->b:Ljava/lang/String;
+
+    return-void
 .end method

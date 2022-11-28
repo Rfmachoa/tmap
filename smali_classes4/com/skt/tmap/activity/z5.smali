@@ -1,60 +1,40 @@
 .class public final synthetic Lcom/skt/tmap/activity/z5;
 .super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
-    k = 0x3
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
+# instance fields
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-
-# static fields
-.field public static final synthetic a:[I
+.field public final synthetic b:Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;)V
+    .locals 0
 
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/data/DriveMode;->values()[Lcom/skt/tmap/engine/navigation/data/DriveMode;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lcom/skt/tmap/activity/z5;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    array-length v0, v0
+    iput-object p2, p0, Lcom/skt/tmap/activity/z5;->b:Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    sput-object v0, Lcom/skt/tmap/activity/z5;->a:[I
 
-    sget-object v1, Lcom/skt/tmap/engine/navigation/data/DriveMode;->REAL_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, Lcom/skt/tmap/activity/z5;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    move-result v1
+    iget-object v1, p0, Lcom/skt/tmap/activity/z5;->b:Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
 
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-
-    sget-object v1, Lcom/skt/tmap/engine/navigation/data/DriveMode;->SAFE_DRIVE:Lcom/skt/tmap/engine/navigation/data/DriveMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapNaviActivity;->g8(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;)V
 
     return-void
 .end method

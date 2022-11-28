@@ -3,7 +3,7 @@
 .source "BaseActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/dialog/n$a;
+.implements Lcom/skt/tmap/dialog/s$a;
 
 
 # annotations
@@ -47,11 +47,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/util/y1;->B()Lcom/skt/tmap/util/y1;
+    invoke-static {}, Lcom/skt/tmap/util/j2;->B()Lcom/skt/tmap/util/j2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/util/y1;->Z()V
+    invoke-virtual {v0}, Lcom/skt/tmap/util/j2;->Z()V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity$e;->a:Lcom/skt/tmap/activity/BaseActivity;

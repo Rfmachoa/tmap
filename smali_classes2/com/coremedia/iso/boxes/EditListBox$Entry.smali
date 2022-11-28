@@ -53,7 +53,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
-    invoke-virtual {p1}, Ld6/c;->getVersion()I
+    invoke-virtual {p1}, Lb8/c;->getVersion()I
 
     move-result v0
 
@@ -183,7 +183,7 @@
     .line 1
     iget-object v0, p0, Lcom/coremedia/iso/boxes/EditListBox$Entry;->editListBox:Lcom/coremedia/iso/boxes/EditListBox;
 
-    invoke-virtual {v0}, Ld6/c;->getVersion()I
+    invoke-virtual {v0}, Lb8/c;->getVersion()I
 
     move-result v0
 
@@ -207,7 +207,7 @@
     :cond_0
     iget-wide v0, p0, Lcom/coremedia/iso/boxes/EditListBox$Entry;->segmentDuration:J
 
-    invoke-static {v0, v1}, Ly6/b;->a(J)I
+    invoke-static {v0, v1}, Lw8/b;->a(J)I
 
     move-result v0
 
@@ -218,7 +218,7 @@
     .line 5
     iget-wide v0, p0, Lcom/coremedia/iso/boxes/EditListBox$Entry;->mediaTime:J
 
-    invoke-static {v0, v1}, Ly6/b;->a(J)I
+    invoke-static {v0, v1}, Lw8/b;->a(J)I
 
     move-result v0
 

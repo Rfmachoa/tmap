@@ -16,4 +16,16 @@
 
 # virtual methods
 .method public abstract a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "appContext",
+            "serviceId",
+            "callbackCode"
+        }
+    .end annotation
 .end method

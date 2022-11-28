@@ -1,51 +1,39 @@
 .class public Lgb/d$b;
 .super Ljava/lang/Object;
-.source "MomentWebChromeClient.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.source "QueryRequestOTP.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lgb/d;->onJsConfirm(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lgb/d;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x9
+    name = "b"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/webkit/JsResult;
+.field public a:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "otp"
+    .end annotation
+.end field
 
-.field public final synthetic b:Lgb/d;
+.field public b:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "expireDate"
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lgb/d;Landroid/webkit/JsResult;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lgb/d$b;->b:Lgb/d;
-
-    iput-object p2, p0, Lgb/d$b;->a:Landroid/webkit/JsResult;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
-
-    .line 1
-    iget-object p1, p0, Lgb/d$b;->a:Landroid/webkit/JsResult;
-
-    invoke-virtual {p1}, Landroid/webkit/JsResult;->cancel()V
 
     return-void
 .end method

@@ -292,7 +292,7 @@
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/ads/AdPlaybackState;
 
     .line 5
-    iget-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->V0:J
+    iget-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->X0:J
 
     const/4 v0, -0x1
 
@@ -357,7 +357,7 @@
     .line 13
     :cond_2
     :goto_1
-    iput-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->V0:J
+    iput-wide p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Timeline$Window;->X0:J
 
     return-object p2
 .end method

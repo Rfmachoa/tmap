@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;
+.implements Lcom/google/common/base/Predicate;
 
 
 # static fields
@@ -33,12 +33,14 @@
 
 
 # virtual methods
-.method public final createDataSource()Lcom/tmapmobility/tmap/exoplayer2/upstream/m;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/upstream/z;->g()Lcom/tmapmobility/tmap/exoplayer2/upstream/z;
+    check-cast p1, Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/HttpDataSource;->b(Ljava/lang/String;)Z
 
-    return-object v0
+    move-result p1
+
+    return p1
 .end method

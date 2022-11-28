@@ -78,6 +78,9 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x1d
+    .end annotation
 
     .line 1
     new-instance p2, Landroidx/lifecycle/ProcessLifecycleOwner$3$1;

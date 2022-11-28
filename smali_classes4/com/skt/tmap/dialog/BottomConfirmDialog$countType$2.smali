@@ -3,7 +3,7 @@
 .source "BottomConfirmDialog.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
@@ -19,32 +19,29 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0010\u000b\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\n\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
         "<anonymous>",
         "",
-        "invoke"
+        "invoke",
+        "()Ljava/lang/Boolean;"
     }
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -67,25 +64,12 @@
 
 
 # virtual methods
-.method public bridge synthetic invoke()Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Boolean;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/dialog/BottomConfirmDialog$countType$2;->invoke()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final invoke()Z
-    .locals 2
-
-    .line 2
     iget-object v0, p0, Lcom/skt/tmap/dialog/BottomConfirmDialog$countType$2;->this$0:Lcom/skt/tmap/dialog/BottomConfirmDialog;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -106,5 +90,20 @@
     const/4 v0, 0x0
 
     :goto_0
-    return v0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/skt/tmap/dialog/BottomConfirmDialog$countType$2;->invoke()Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 .end method

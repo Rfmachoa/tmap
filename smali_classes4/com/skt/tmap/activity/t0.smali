@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity$f;
-
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapHybridSearchActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity$f;Landroid/view/View;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapHybridSearchActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/t0;->a:Lcom/skt/tmap/activity/TmapMainActivity$f;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/t0;->b:Landroid/view/View;
+    iput-object p1, p0, Lcom/skt/tmap/activity/t0;->a:Lcom/skt/tmap/activity/TmapHybridSearchActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/t0;->a:Lcom/skt/tmap/activity/TmapMainActivity$f;
+    iget-object v0, p0, Lcom/skt/tmap/activity/t0;->a:Lcom/skt/tmap/activity/TmapHybridSearchActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/t0;->b:Landroid/view/View;
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/TmapHybridSearchActivity;->O5(Lcom/skt/tmap/activity/TmapHybridSearchActivity;Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapMainActivity$f;->g(Lcom/skt/tmap/activity/TmapMainActivity$f;Landroid/view/View;)V
+    move-result p1
 
-    return-void
+    return p1
 .end method

@@ -18,13 +18,13 @@
 
 
 # virtual methods
-.method public a(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;)V
+.method public b(Lcom/tmapmobility/tmap/exoplayer2/MediaMetadata$b;)V
     .locals 0
 
     return-void
 .end method
 
-.method public k()Lcom/tmapmobility/tmap/exoplayer2/Format;
+.method public g()Lcom/tmapmobility/tmap/exoplayer2/Format;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -34,7 +34,7 @@
     return-object v0
 .end method
 
-.method public u()[B
+.method public k()[B
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation

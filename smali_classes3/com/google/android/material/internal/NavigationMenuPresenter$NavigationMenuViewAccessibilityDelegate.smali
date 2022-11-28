@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuViewAccessibilityDelegate;
-.super Landroidx/recyclerview/widget/c0;
+.super Landroidx/recyclerview/widget/b0;
 .source "NavigationMenuPresenter.java"
 
 
@@ -30,39 +30,44 @@
     iput-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuViewAccessibilityDelegate;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     .line 2
-    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/c0;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/b0;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
-    .locals 1
-    .param p2    # Lt1/c;
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
+    .locals 2
+    .param p2    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/c0;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/b0;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
 
     .line 2
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuViewAccessibilityDelegate;->this$0:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
     iget-object p1, p1, Lcom/google/android/material/internal/NavigationMenuPresenter;->adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;->getRowCount()I
 
     move-result p1
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {p1, v0, v0}, Lt1/c$b;->e(IIZ)Lt1/c$b;
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-static {p1, v0, v1}, Lk2/c$c;->e(IIZ)Lk2/c$c;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lt1/c;->W0(Ljava/lang/Object;)V
+    .line 5
+    invoke-virtual {p2, p1}, Lk2/c;->b1(Ljava/lang/Object;)V
 
     return-void
 .end method

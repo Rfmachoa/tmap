@@ -1,150 +1,154 @@
 .class public Lqf/a;
 .super Ljava/lang/Object;
-.source "BasicEofSensorWatcher.java"
-
-# interfaces
-.implements Lqf/l;
+.source "ServiceGenerator.java"
 
 
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/NotThreadSafe;
-.end annotation
+# static fields
+.field public static a:Ljava/lang/String; = "https://apis.openapi.sk.com/"
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.field public static b:Lretrofit2/Retrofit$Builder;
 
+.field public static c:Lokhttp3/logging/HttpLoggingInterceptor;
 
-# instance fields
-.field public final a:Lqf/p;
-
-.field public final b:Z
+.field public static d:Lokhttp3/OkHttpClient$Builder;
 
 
 # direct methods
-.method public constructor <init>(Lqf/p;Z)V
-    .locals 1
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lretrofit2/Retrofit$Builder;
 
-    const-string v0, "Connection"
+    invoke-direct {v0}, Lretrofit2/Retrofit$Builder;-><init>()V
+
+    sget-object v1, Lqf/a;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->baseUrl(Ljava/lang/String;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object v0
+
+    invoke-static {}, Lretrofit2/converter/gson/GsonConverterFactory;->create()Lretrofit2/converter/gson/GsonConverterFactory;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->addConverterFactory(Lretrofit2/Converter$Factory;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object v0
+
+    sput-object v0, Lqf/a;->b:Lretrofit2/Retrofit$Builder;
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    new-instance v0, Lokhttp3/logging/HttpLoggingInterceptor;
+
+    invoke-direct {v0}, Lokhttp3/logging/HttpLoggingInterceptor;-><init>()V
+
+    sput-object v0, Lqf/a;->c:Lokhttp3/logging/HttpLoggingInterceptor;
 
     .line 3
-    iput-object p1, p0, Lqf/a;->a:Lqf/p;
+    new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
-    .line 4
-    iput-boolean p2, p0, Lqf/a;->b:Z
+    invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
+
+    sget-object v1, Lqf/a;->c:Lokhttp3/logging/HttpLoggingInterceptor;
+
+    sget-object v2, Lokhttp3/logging/HttpLoggingInterceptor$Level;->BODY:Lokhttp3/logging/HttpLoggingInterceptor$Level;
+
+    invoke-virtual {v1, v2}, Lokhttp3/logging/HttpLoggingInterceptor;->setLevel(Lokhttp3/logging/HttpLoggingInterceptor$Level;)Lokhttp3/logging/HttpLoggingInterceptor;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$Builder;->addInterceptor(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$Builder;
+
+    move-result-object v0
+
+    sput-object v0, Lqf/a;->d:Lokhttp3/OkHttpClient$Builder;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public eofDetected(Ljava/io/InputStream;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    :try_start_0
-    iget-boolean v0, p0, Lqf/a;->b:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
-
-    .line 3
-    iget-object p1, p0, Lqf/a;->a:Lqf/p;
-
-    invoke-interface {p1}, Lqf/p;->markReusable()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    :cond_0
-    iget-object p1, p0, Lqf/a;->a:Lqf/p;
-
-    invoke-interface {p1}, Lqf/h;->releaseConnection()V
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Lqf/a;->a:Lqf/p;
-
-    invoke-interface {v0}, Lqf/h;->releaseConnection()V
-
-    throw p1
-.end method
-
-.method public streamAbort(Ljava/io/InputStream;)Z
+.method public constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     .line 1
-    iget-object p1, p0, Lqf/a;->a:Lqf/p;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Lqf/h;->abortConnection()V
-
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public streamClosed(Ljava/io/InputStream;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
+.method public static a()V
+    .locals 2
+
+    const-string v0, "https://ovs.sktelecom.com:8080/"
+
+    .line 1
+    sput-object v0, Lqf/a;->a:Ljava/lang/String;
+
+    .line 2
+    new-instance v0, Lretrofit2/Retrofit$Builder;
+
+    invoke-direct {v0}, Lretrofit2/Retrofit$Builder;-><init>()V
+
+    sget-object v1, Lqf/a;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->baseUrl(Ljava/lang/String;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object v0
+
+    invoke-static {}, Lretrofit2/converter/gson/GsonConverterFactory;->create()Lretrofit2/converter/gson/GsonConverterFactory;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->addConverterFactory(Lretrofit2/Converter$Factory;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object v0
+
+    sput-object v0, Lqf/a;->b:Lretrofit2/Retrofit$Builder;
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Ljava/io/IOException;
+            "<S:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Class<",
+            "TS;>;)TS;"
         }
     .end annotation
 
     .line 1
-    :try_start_0
-    iget-boolean v0, p0, Lqf/a;->b:Z
+    sget-object v0, Lqf/a;->b:Lretrofit2/Retrofit$Builder;
 
-    if-eqz v0, :cond_0
+    sget-object v1, Lqf/a;->d:Lokhttp3/OkHttpClient$Builder;
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0x3c
+
+    invoke-virtual {v1, v3, v4, v2}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->client(Lokhttp3/OkHttpClient;)Lretrofit2/Retrofit$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lretrofit2/Retrofit$Builder;->build()Lretrofit2/Retrofit;
+
+    move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0, p0}, Lretrofit2/Retrofit;->create(Ljava/lang/Class;)Ljava/lang/Object;
 
-    .line 3
-    iget-object p1, p0, Lqf/a;->a:Lqf/p;
+    move-result-object p0
 
-    invoke-interface {p1}, Lqf/p;->markReusable()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    :cond_0
-    iget-object p1, p0, Lqf/a;->a:Lqf/p;
-
-    invoke-interface {p1}, Lqf/h;->releaseConnection()V
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    iget-object v0, p0, Lqf/a;->a:Lqf/p;
-
-    invoke-interface {v0}, Lqf/h;->releaseConnection()V
-
-    throw p1
+    return-object p0
 .end method

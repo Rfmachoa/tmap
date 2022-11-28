@@ -140,9 +140,9 @@
     return-void
 .end method
 
-.method public j(Lt1/c;)V
+.method public j(Lk2/c;)V
     .locals 0
-    .param p1    # Lt1/c;
+    .param p1    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

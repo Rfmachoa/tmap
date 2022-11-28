@@ -1,33 +1,18 @@
-.class public Lb0/a;
+.class public abstract Lb0/a;
 .super Ljava/lang/Object;
-.source "DeviceQuirks.java"
+.source "AttachedSurfaceInfo.java"
 
 
-# static fields
-.field public static final a:Lx/b1;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation build Lcom/google/auto/value/AutoValue;
+.end annotation
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 1
-    new-instance v0, Lx/b1;
-
-    invoke-static {}, Lb0/b;->a()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lx/b1;-><init>(Ljava/util/List;)V
-
-    sput-object v0, Lb0/a;->a:Lx/b1;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
@@ -37,40 +22,69 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/Class;)Lx/a1;
+.method public static a(Landroidx/camera/core/impl/SurfaceConfig;ILandroid/util/Size;Landroid/util/Range;)Lb0/a;
     .locals 1
-    .param p0    # Ljava/lang/Class;
+    .param p0    # Landroidx/camera/core/impl/SurfaceConfig;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "quirkClass"
-        }
+    .param p2    # Landroid/util/Size;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/util/Range;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T::",
-            "Lx/a1;",
-            ">(",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
+            "(",
+            "Landroidx/camera/core/impl/SurfaceConfig;",
+            "I",
+            "Landroid/util/Size;",
+            "Landroid/util/Range<",
+            "Ljava/lang/Integer;",
+            ">;)",
+            "Lb0/a;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lb0/a;->a:Lx/b1;
+    new-instance v0, Lb0/b;
 
-    invoke-virtual {v0, p0}, Lx/b1;->b(Ljava/lang/Class;)Lx/a1;
+    invoke-direct {v0, p0, p1, p2, p3}, Lb0/b;-><init>(Landroidx/camera/core/impl/SurfaceConfig;ILandroid/util/Size;Landroid/util/Range;)V
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    return-object p0
+
+# virtual methods
+.method public abstract b()I
+.end method
+
+.method public abstract c()Landroid/util/Size;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract d()Landroidx/camera/core/impl/SurfaceConfig;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract e()Landroid/util/Range;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/Range<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 .end method

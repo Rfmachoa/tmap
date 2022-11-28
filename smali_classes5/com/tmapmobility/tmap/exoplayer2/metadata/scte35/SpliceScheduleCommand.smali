@@ -126,11 +126,11 @@
     return-void
 .end method
 
-.method public static b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand;
+.method public static a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand;
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
@@ -145,7 +145,7 @@
     if-ge v2, v0, :cond_0
 
     .line 3
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;->b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;->b(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
 
     move-result-object v3
 

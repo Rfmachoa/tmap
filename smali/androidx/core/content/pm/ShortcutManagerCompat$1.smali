@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/content/pm/ShortcutManagerCompat;->x(Landroid/content/Context;Landroidx/core/content/pm/d;Landroid/content/IntentSender;)Z
+    value = Landroidx/core/content/pm/ShortcutManagerCompat;->y(Landroid/content/Context;Landroidx/core/content/pm/ShortcutInfoCompat;Landroid/content/IntentSender;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

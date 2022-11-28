@@ -249,7 +249,7 @@
     :goto_0
     const-string v2, "EmojiCompat is not initialized. Please call EmojiCompat.init() first"
 
-    invoke-static {v1, v2}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v1, v2}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 3
     sget-object v1, Landroidx/emoji/text/EmojiCompat;->z:Landroidx/emoji/text/EmojiCompat;
@@ -472,7 +472,7 @@
 
     const-string v1, "Not initialized yet"
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat;->e:Landroidx/emoji/text/EmojiCompat$b;
@@ -559,12 +559,12 @@
 
     const-string v1, "Not initialized yet"
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     const-string v0, "sequence cannot be null"
 
     .line 2
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat;->e:Landroidx/emoji/text/EmojiCompat$b;
@@ -595,12 +595,12 @@
 
     const-string v1, "Not initialized yet"
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     const-string v0, "sequence cannot be null"
 
     .line 2
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat;->e:Landroidx/emoji/text/EmojiCompat$b;
@@ -667,7 +667,7 @@
     :goto_0
     const-string v0, "Set metadataLoadStrategy to LOAD_STRATEGY_MANUAL to execute manual loading"
 
-    invoke-static {v2, v0}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v2, v0}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/emoji/text/EmojiCompat;->k()Z
@@ -1098,22 +1098,22 @@
 
     const-string v1, "Not initialized yet"
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     const-string v0, "start cannot be negative"
 
     .line 2
-    invoke-static {p2, v0}, Lr1/o;->i(ILjava/lang/String;)I
+    invoke-static {p2, v0}, Landroidx/core/util/p;->j(ILjava/lang/String;)I
 
     const-string v0, "end cannot be negative"
 
     .line 3
-    invoke-static {p3, v0}, Lr1/o;->i(ILjava/lang/String;)I
+    invoke-static {p3, v0}, Landroidx/core/util/p;->j(ILjava/lang/String;)I
 
     const-string v0, "maxEmojiCount cannot be negative"
 
     .line 4
-    invoke-static {p4, v0}, Lr1/o;->i(ILjava/lang/String;)I
+    invoke-static {p4, v0}, Landroidx/core/util/p;->j(ILjava/lang/String;)I
 
     const/4 v0, 0x0
 
@@ -1132,7 +1132,7 @@
     const-string v3, "start should be <= than end"
 
     .line 5
-    invoke-static {v2, v3}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v2, v3}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     if-nez p1, :cond_1
 
@@ -1156,7 +1156,7 @@
     :goto_1
     const-string v3, "start should be < than charSequence length"
 
-    invoke-static {v2, v3}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v2, v3}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     .line 7
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -1175,7 +1175,7 @@
     :goto_2
     const-string v3, "end should be < than charSequence length"
 
-    invoke-static {v2, v3}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v2, v3}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     .line 8
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -1237,7 +1237,7 @@
     const-string v0, "initCallback cannot be null"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat;->a:Ljava/util/concurrent/locks/ReadWriteLock;
@@ -1343,7 +1343,7 @@
     const-string v0, "initCallback cannot be null"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Landroidx/emoji/text/EmojiCompat;->a:Ljava/util/concurrent/locks/ReadWriteLock;

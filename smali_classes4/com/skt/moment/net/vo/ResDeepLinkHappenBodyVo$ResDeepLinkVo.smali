@@ -183,6 +183,14 @@
 
 .method public setCallbackCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callbackCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->callbackCode:Ljava/lang/String;
@@ -192,6 +200,14 @@
 
 .method public setFailConfirmTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failConfirmTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->failConfirmTitle:Ljava/lang/String;
@@ -201,6 +217,14 @@
 
 .method public setFailImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failImagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->failImagePath:Ljava/lang/String;
@@ -210,6 +234,14 @@
 
 .method public setFailMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->failMessage:Ljava/lang/String;
@@ -219,6 +251,14 @@
 
 .method public setFailTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "failTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->failTitle:Ljava/lang/String;
@@ -228,6 +268,14 @@
 
 .method public setNoRewardButtonTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "noRewardButtonTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->noRewardButtonTitle:Ljava/lang/String;
@@ -237,6 +285,14 @@
 
 .method public setNoRewardImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "noRewardImagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->noRewardImagePath:Ljava/lang/String;
@@ -246,6 +302,14 @@
 
 .method public setNoRewardMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "noRewardMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->noRewardMessage:Ljava/lang/String;
@@ -255,6 +319,14 @@
 
 .method public setNoRewardTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "noRewardTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->noRewardTitle:Ljava/lang/String;
@@ -264,6 +336,14 @@
 
 .method public setRewardYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rewardYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->rewardYn:Ljava/lang/String;
@@ -273,6 +353,14 @@
 
 .method public setWebUseYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "webUseYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->webUseYn:Ljava/lang/String;
@@ -282,6 +370,14 @@
 
 .method public setWebviewTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "webviewTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->webviewTitle:Ljava/lang/String;
@@ -291,6 +387,14 @@
 
 .method public setWebviewUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "webviewUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResDeepLinkHappenBodyVo$ResDeepLinkVo;->webviewUrl:Ljava/lang/String;

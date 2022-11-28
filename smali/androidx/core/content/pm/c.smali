@@ -44,7 +44,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)V"
         }
     .end annotation
@@ -86,7 +86,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroidx/core/content/pm/d;",
+            "Landroidx/core/content/pm/ShortcutInfoCompat;",
             ">;)V"
         }
     .end annotation

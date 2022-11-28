@@ -85,6 +85,14 @@
 
 .method public setCancelTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cancelTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;->cancelTitle:Ljava/lang/String;
@@ -94,6 +102,14 @@
 
 .method public setConfirmTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "confirmTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;->confirmTitle:Ljava/lang/String;
@@ -103,6 +119,14 @@
 
 .method public setImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;->imagePath:Ljava/lang/String;
@@ -112,6 +136,14 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;->message:Ljava/lang/String;
@@ -121,6 +153,14 @@
 
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "title"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo$ResOfferPopsVo;->title:Ljava/lang/String;

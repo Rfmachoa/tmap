@@ -1,6 +1,6 @@
 .class public Lcom/google/firebase/auth/FirebaseAuthException;
 .super Lcom/google/firebase/FirebaseException;
-.source "com.google.firebase:firebase-auth-interop@@20.0.0"
+.source "com.google.firebase:firebase-auth-interop@@19.0.2"
 
 
 # instance fields

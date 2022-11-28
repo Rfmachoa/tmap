@@ -98,7 +98,7 @@
     return v0
 .end method
 
-.method public d()Lf1/a;
+.method public d()Ly1/a;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -106,7 +106,7 @@
     .line 1
     iget-object v0, p0, Landroidx/biometric/e$d;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lf1/a;->b(Landroid/content/Context;)Lf1/a;
+    invoke-static {v0}, Ly1/a;->b(Landroid/content/Context;)Ly1/a;
 
     move-result-object v0
 

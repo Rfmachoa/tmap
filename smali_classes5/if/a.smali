@@ -1,23 +1,25 @@
 .class public final Lif/a;
 .super Ljava/lang/Object;
-.source "AuthSchemes.java"
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
+.source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "Basic"
+.field public static final a:Z = false
 
-.field public static final b:Ljava/lang/String; = "Digest"
+.field public static final b:Ljava/lang/String; = "com.skt.tmap.vsmsdk"
 
-.field public static final c:Ljava/lang/String; = "NTLM"
+.field public static final c:Ljava/lang/String; = "com.skt.tmap.vsmsdk"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
-.field public static final d:Ljava/lang/String; = "negotiate"
+.field public static final d:Ljava/lang/String; = "release"
 
-.field public static final e:Ljava/lang/String; = "Kerberos"
+.field public static final e:Ljava/lang/String; = ""
+
+.field public static final f:I = 0x1
+
+.field public static final g:Ljava/lang/String; = "1.6.104"
 
 
 # direct methods

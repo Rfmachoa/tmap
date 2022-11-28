@@ -137,7 +137,7 @@
 
 
 # virtual methods
-.method public varargs b([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
+.method public varargs a([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
     .locals 2
 
     .line 1
@@ -153,7 +153,7 @@
 
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->a:[Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
 
-    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->Z0([Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->d1([Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -179,20 +179,9 @@
     :cond_0
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->a:[Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->b([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->a([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
 
     move-result-object p1
-
-    return-object p1
-.end method
-
-.method public d(I)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->a:[Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
-
-    aget-object p1, v0, p1
 
     return-object p1
 .end method
@@ -205,15 +194,15 @@
     return v0
 .end method
 
-.method public e()I
+.method public e(I)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->a:[Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
 
-    array-length v0, v0
+    aget-object p1, v0, p1
 
-    return v0
+    return-object p1
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -263,6 +252,17 @@
     const/4 p1, 0x0
 
     return p1
+.end method
+
+.method public f()I
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->a:[Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
+
+    array-length v0, v0
+
+    return v0
 .end method
 
 .method public hashCode()I

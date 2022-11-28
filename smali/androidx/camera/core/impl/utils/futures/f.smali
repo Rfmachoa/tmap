@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/utils/futures/f$e;
@@ -12,10 +16,10 @@
 
 
 # static fields
-.field public static final a:Ln/a;
+.field public static final a:Lp/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ln/a<",
+            "Lp/a<",
             "**>;"
         }
     .end annotation
@@ -31,7 +35,7 @@
 
     invoke-direct {v0}, Landroidx/camera/core/impl/utils/futures/f$b;-><init>()V
 
-    sput-object v0, Landroidx/camera/core/impl/utils/futures/f;->a:Ln/a;
+    sput-object v0, Landroidx/camera/core/impl/utils/futures/f;->a:Lp/a;
 
     return-void
 .end method
@@ -69,19 +73,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x10,
-            0x0
-        }
-        names = {
-            "future",
-            "callback",
-            "executor"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -97,7 +88,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     new-instance v0, Landroidx/camera/core/impl/utils/futures/f$e;
@@ -116,15 +107,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "futures"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -169,15 +151,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "future"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -213,7 +186,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lr1/o;->n(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/core/util/p;->o(ZLjava/lang/String;)V
 
     .line 2
     invoke-static {p0}, Landroidx/camera/core/impl/utils/futures/f;->e(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -230,15 +203,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "future"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -311,15 +275,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cause"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -349,15 +304,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cause"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -385,15 +331,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "value"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -433,7 +370,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroidx/camera/core/impl/utils/futures/f;->a:Ln/a;
+    sget-object v0, Landroidx/camera/core/impl/utils/futures/f;->a:Lp/a;
 
     .line 2
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/a;->a()Ljava/util/concurrent/Executor;
@@ -443,7 +380,7 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v2, p0, v0, p1, v1}, Landroidx/camera/core/impl/utils/futures/f;->m(ZLcom/google/common/util/concurrent/ListenableFuture;Ln/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
+    invoke-static {v2, p0, v0, p1, v1}, Landroidx/camera/core/impl/utils/futures/f;->m(ZLcom/google/common/util/concurrent/ListenableFuture;Lp/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
 
     .line 4
     new-instance p1, Ljava/lang/StringBuilder;
@@ -476,15 +413,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "future"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -498,7 +426,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
@@ -532,17 +460,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x10
-        }
-        names = {
-            "input",
-            "completer"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -556,25 +473,25 @@
     .end annotation
 
     .line 1
-    sget-object v0, Landroidx/camera/core/impl/utils/futures/f;->a:Ln/a;
+    sget-object v0, Landroidx/camera/core/impl/utils/futures/f;->a:Lp/a;
 
     .line 2
     invoke-static {}, Landroidx/camera/core/impl/utils/executor/a;->a()Ljava/util/concurrent/Executor;
 
     move-result-object v1
 
-    invoke-static {p0, v0, p1, v1}, Landroidx/camera/core/impl/utils/futures/f;->l(Lcom/google/common/util/concurrent/ListenableFuture;Ln/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
+    invoke-static {p0, v0, p1, v1}, Landroidx/camera/core/impl/utils/futures/f;->l(Lcom/google/common/util/concurrent/ListenableFuture;Lp/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
 
     return-void
 .end method
 
-.method public static l(Lcom/google/common/util/concurrent/ListenableFuture;Ln/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
+.method public static l(Lcom/google/common/util/concurrent/ListenableFuture;Lp/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
     .locals 1
     .param p0    # Lcom/google/common/util/concurrent/ListenableFuture;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ln/a;
+    .param p1    # Lp/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -586,21 +503,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x10,
-            0x10,
-            0x0
-        }
-        names = {
-            "input",
-            "function",
-            "completer",
-            "executor"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<I:",
@@ -610,7 +512,7 @@
             ">(",
             "Lcom/google/common/util/concurrent/ListenableFuture<",
             "TI;>;",
-            "Ln/a<",
+            "Lp/a<",
             "-TI;+TO;>;",
             "Landroidx/concurrent/futures/CallbackToFutureAdapter$a<",
             "TO;>;",
@@ -622,18 +524,18 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {v0, p0, p1, p2, p3}, Landroidx/camera/core/impl/utils/futures/f;->m(ZLcom/google/common/util/concurrent/ListenableFuture;Ln/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
+    invoke-static {v0, p0, p1, p2, p3}, Landroidx/camera/core/impl/utils/futures/f;->m(ZLcom/google/common/util/concurrent/ListenableFuture;Lp/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
 
     return-void
 .end method
 
-.method public static m(ZLcom/google/common/util/concurrent/ListenableFuture;Ln/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
+.method public static m(ZLcom/google/common/util/concurrent/ListenableFuture;Lp/a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ljava/util/concurrent/Executor;)V
     .locals 1
     .param p1    # Lcom/google/common/util/concurrent/ListenableFuture;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ln/a;
+    .param p2    # Lp/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -645,23 +547,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x10,
-            0x10,
-            0x10,
-            0x0
-        }
-        names = {
-            "propagateCancellation",
-            "input",
-            "function",
-            "completer",
-            "executor"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<I:",
@@ -671,7 +556,7 @@
             ">(Z",
             "Lcom/google/common/util/concurrent/ListenableFuture<",
             "TI;>;",
-            "Ln/a<",
+            "Lp/a<",
             "-TI;+TO;>;",
             "Landroidx/concurrent/futures/CallbackToFutureAdapter$a<",
             "TO;>;",
@@ -681,21 +566,21 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    invoke-static {p2}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    invoke-static {p3}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
-    invoke-static {p4}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p4}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     new-instance v0, Landroidx/camera/core/impl/utils/futures/f$c;
 
-    invoke-direct {v0, p3, p2}, Landroidx/camera/core/impl/utils/futures/f$c;-><init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Ln/a;)V
+    invoke-direct {v0, p3, p2}, Landroidx/camera/core/impl/utils/futures/f$c;-><init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;Lp/a;)V
 
     invoke-static {p1, v0, p4}, Landroidx/camera/core/impl/utils/futures/f;->b(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/camera/core/impl/utils/futures/c;Ljava/util/concurrent/Executor;)V
 
@@ -725,15 +610,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "futures"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -770,13 +646,13 @@
     return-object v0
 .end method
 
-.method public static o(Lcom/google/common/util/concurrent/ListenableFuture;Ln/a;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public static o(Lcom/google/common/util/concurrent/ListenableFuture;Lp/a;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 1
     .param p0    # Lcom/google/common/util/concurrent/ListenableFuture;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ln/a;
+    .param p1    # Lp/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -785,19 +661,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "input",
-            "function",
-            "executor"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -809,7 +672,7 @@
             ">(",
             "Lcom/google/common/util/concurrent/ListenableFuture<",
             "TI;>;",
-            "Ln/a<",
+            "Lp/a<",
             "-TI;+TO;>;",
             "Ljava/util/concurrent/Executor;",
             ")",
@@ -819,12 +682,12 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     new-instance v0, Landroidx/camera/core/impl/utils/futures/f$a;
 
-    invoke-direct {v0, p1}, Landroidx/camera/core/impl/utils/futures/f$a;-><init>(Ln/a;)V
+    invoke-direct {v0, p1}, Landroidx/camera/core/impl/utils/futures/f$a;-><init>(Lp/a;)V
 
     invoke-static {p0, v0, p2}, Landroidx/camera/core/impl/utils/futures/f;->p(Lcom/google/common/util/concurrent/ListenableFuture;Landroidx/camera/core/impl/utils/futures/a;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/ListenableFuture;
 
@@ -848,19 +711,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "input",
-            "function",
-            "executor"
-        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate$2;
+.class Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate$2;
 .super Landroid/util/Property;
 .source "LinearIndeterminateContiguousAnimatorDelegate.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

@@ -7,12 +7,6 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem$Creator;
-    }
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
@@ -72,8 +66,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -89,6 +83,9 @@
             "Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;",
             ">;"
         }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
@@ -313,30 +310,43 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemType:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->partnerId:Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemId:Ljava/lang/String;
 
+    .line 5
     iput-object p4, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemName:Ljava/lang/String;
 
+    .line 6
     iput-object p5, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemStatus:Ljava/lang/String;
 
+    .line 7
     iput-object p6, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemStatusDatetime:Ljava/lang/String;
 
+    .line 8
     iput-object p7, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemEndYn:Ljava/lang/String;
 
+    .line 9
     iput-object p8, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->placeName:Ljava/lang/String;
 
+    .line 10
     iput-object p9, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->poiId:Ljava/lang/String;
 
+    .line 11
     iput-object p10, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->noorX:Ljava/lang/String;
 
+    .line 12
     iput-object p11, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->noorY:Ljava/lang/String;
 
+    .line 13
     iput-object p12, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->carNumber:Ljava/lang/String;
 
+    .line 14
     iput-object p13, p0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;->itemInfo:Ljava/util/Map;
 
     return-void
@@ -580,7 +590,7 @@
         .end annotation
     .end param
 
-    const-string p2, "parcel"
+    const-string p2, "out"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -658,6 +668,8 @@
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 

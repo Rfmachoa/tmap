@@ -1,166 +1,188 @@
 .class public final Lcom/google/android/gms/common/zzo;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+.super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator<",
-        "Lcom/google/android/gms/common/zzn;",
-        ">;"
-    }
+.annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Class;
+    creator = "GoogleCertificatesLookupQueryCreator"
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcom/google/android/gms/common/zzo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+# instance fields
+.field private final zza:Ljava/lang/String;
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getCallingPackage"
+        id = 0x1
+    .end annotation
+.end field
+
+.field private final zzb:Z
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getAllowTestKeys"
+        id = 0x2
+    .end annotation
+.end field
+
+.field private final zzc:Z
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        defaultValue = "false"
+        getter = "getIgnoreTestKeysOverride"
+        id = 0x3
+    .end annotation
+.end field
+
+.field private final zzd:Landroid/content/Context;
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getCallingContextBinder"
+        id = 0x4
+        type = "android.os.IBinder"
+    .end annotation
+.end field
+
+.field private final zze:Z
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getIsChimeraPackage"
+        id = 0x5
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/common/zzp;
+
+    invoke-direct {v0}, Lcom/google/android/gms/common/zzp;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/common/zzo;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ZZLandroid/os/IBinder;Z)V
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
+            id = 0x1
+        .end annotation
+    .end param
+    .param p2    # Z
+        .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
+            id = 0x2
+        .end annotation
+    .end param
+    .param p3    # Z
+        .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
+            id = 0x3
+        .end annotation
+    .end param
+    .param p4    # Landroid/os/IBinder;
+        .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
+            id = 0x4
+        .end annotation
+    .end param
+    .param p5    # Z
+        .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
+            id = 0x5
+        .end annotation
+    .end param
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/common/zzo;->zza:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lcom/google/android/gms/common/zzo;->zzb:Z
+
+    iput-boolean p3, p0, Lcom/google/android/gms/common/zzo;->zzc:Z
+
+    invoke-static {p4}, Lcom/google/android/gms/dynamic/IObjectWrapper$Stub;->asInterface(Landroid/os/IBinder;)Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/google/android/gms/dynamic/ObjectWrapper;->unwrap(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/Context;
+
+    iput-object p1, p0, Lcom/google/android/gms/common/zzo;->zzd:Landroid/content/Context;
+
+    iput-boolean p5, p0, Lcom/google/android/gms/common/zzo;->zze:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 9
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
-    move-result v0
+    move-result p2
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/google/android/gms/common/zzo;->zza:Ljava/lang/String;
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    move-object v4, v1
-
-    move-object v7, v4
-
-    move v5, v2
-
-    move v6, v5
-
-    move v8, v6
-
     .line 2
-    :goto_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+    invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    move-result v1
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zzo;->zzb:Z
 
-    if-ge v1, v0, :cond_5
+    const/4 v1, 0x2
 
     .line 3
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    move-result v1
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zzo;->zzc:Z
 
-    invoke-static {v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-eq v2, v3, :cond_4
-
-    const/4 v3, 0x2
-
-    if-eq v2, v3, :cond_3
-
-    const/4 v3, 0x3
-
-    if-eq v2, v3, :cond_2
-
-    const/4 v3, 0x4
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v3, 0x5
-
-    if-eq v2, v3, :cond_0
+    const/4 v1, 0x3
 
     .line 4
-    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    goto :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/common/zzo;->zzd:Landroid/content/Context;
 
     .line 5
-    :cond_0
-    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readBoolean(Landroid/os/Parcel;I)Z
+    invoke-static {v0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
-    move-result v1
+    move-result-object v0
 
-    move v8, v1
-
-    goto :goto_0
+    const/4 v1, 0x4
 
     .line 6
-    :cond_1
-    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readIBinder(Landroid/os/Parcel;I)Landroid/os/IBinder;
+    invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeIBinder(Landroid/os/Parcel;ILandroid/os/IBinder;Z)V
 
-    move-result-object v1
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zzo;->zze:Z
 
-    move-object v7, v1
-
-    goto :goto_0
+    const/4 v1, 0x5
 
     .line 7
-    :cond_2
-    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readBoolean(Landroid/os/Parcel;I)Z
-
-    move-result v1
-
-    move v6, v1
-
-    goto :goto_0
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
     .line 8
-    :cond_3
-    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readBoolean(Landroid/os/Parcel;I)Z
+    invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
-    move-result v1
-
-    move v5, v1
-
-    goto :goto_0
-
-    .line 9
-    :cond_4
-    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    move-object v4, v1
-
-    goto :goto_0
-
-    .line 10
-    :cond_5
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
-
-    new-instance p1, Lcom/google/android/gms/common/zzn;
-
-    move-object v3, p1
-
-    .line 11
-    invoke-direct/range {v3 .. v8}, Lcom/google/android/gms/common/zzn;-><init>(Ljava/lang/String;ZZLandroid/os/IBinder;Z)V
-
-    return-object p1
-.end method
-
-.method public final synthetic newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    new-array p1, p1, [Lcom/google/android/gms/common/zzn;
-
-    return-object p1
+    return-void
 .end method

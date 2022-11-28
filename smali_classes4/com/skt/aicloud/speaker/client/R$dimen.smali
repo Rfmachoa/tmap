@@ -116,59 +116,59 @@
 
 .field public static final abc_select_dialog_padding_start_material:I = 0x7f07003a
 
-.field public static final abc_switch_padding:I = 0x7f07003b
+.field public static final abc_switch_padding:I = 0x7f07003e
 
-.field public static final abc_text_size_body_1_material:I = 0x7f07003c
+.field public static final abc_text_size_body_1_material:I = 0x7f07003f
 
-.field public static final abc_text_size_body_2_material:I = 0x7f07003d
+.field public static final abc_text_size_body_2_material:I = 0x7f070040
 
-.field public static final abc_text_size_button_material:I = 0x7f07003e
+.field public static final abc_text_size_button_material:I = 0x7f070041
 
-.field public static final abc_text_size_caption_material:I = 0x7f07003f
+.field public static final abc_text_size_caption_material:I = 0x7f070042
 
-.field public static final abc_text_size_display_1_material:I = 0x7f070040
+.field public static final abc_text_size_display_1_material:I = 0x7f070043
 
-.field public static final abc_text_size_display_2_material:I = 0x7f070041
+.field public static final abc_text_size_display_2_material:I = 0x7f070044
 
-.field public static final abc_text_size_display_3_material:I = 0x7f070042
+.field public static final abc_text_size_display_3_material:I = 0x7f070045
 
-.field public static final abc_text_size_display_4_material:I = 0x7f070043
+.field public static final abc_text_size_display_4_material:I = 0x7f070046
 
-.field public static final abc_text_size_headline_material:I = 0x7f070044
+.field public static final abc_text_size_headline_material:I = 0x7f070047
 
-.field public static final abc_text_size_large_material:I = 0x7f070045
+.field public static final abc_text_size_large_material:I = 0x7f070048
 
-.field public static final abc_text_size_medium_material:I = 0x7f070046
+.field public static final abc_text_size_medium_material:I = 0x7f070049
 
-.field public static final abc_text_size_menu_header_material:I = 0x7f070047
+.field public static final abc_text_size_menu_header_material:I = 0x7f07004a
 
-.field public static final abc_text_size_menu_material:I = 0x7f070048
+.field public static final abc_text_size_menu_material:I = 0x7f07004b
 
-.field public static final abc_text_size_small_material:I = 0x7f070049
+.field public static final abc_text_size_small_material:I = 0x7f07004c
 
-.field public static final abc_text_size_subhead_material:I = 0x7f07004a
+.field public static final abc_text_size_subhead_material:I = 0x7f07004d
 
-.field public static final abc_text_size_subtitle_material_toolbar:I = 0x7f07004b
+.field public static final abc_text_size_subtitle_material_toolbar:I = 0x7f07004e
 
-.field public static final abc_text_size_title_material:I = 0x7f07004c
+.field public static final abc_text_size_title_material:I = 0x7f07004f
 
-.field public static final abc_text_size_title_material_toolbar:I = 0x7f07004d
+.field public static final abc_text_size_title_material_toolbar:I = 0x7f070050
 
-.field public static final disabled_alpha_material_dark:I = 0x7f0700c9
+.field public static final disabled_alpha_material_dark:I = 0x7f0700cb
 
-.field public static final disabled_alpha_material_light:I = 0x7f0700ca
+.field public static final disabled_alpha_material_light:I = 0x7f0700cc
 
-.field public static final highlight_alpha_material_colored:I = 0x7f0700f6
+.field public static final highlight_alpha_material_colored:I = 0x7f0700f8
 
-.field public static final highlight_alpha_material_dark:I = 0x7f0700f7
+.field public static final highlight_alpha_material_dark:I = 0x7f0700f9
 
-.field public static final highlight_alpha_material_light:I = 0x7f0700f8
+.field public static final highlight_alpha_material_light:I = 0x7f0700fa
 
-.field public static final notification_large_icon_height:I = 0x7f070279
+.field public static final notification_large_icon_height:I = 0x7f07035f
 
-.field public static final notification_large_icon_width:I = 0x7f07027a
+.field public static final notification_large_icon_width:I = 0x7f070360
 
-.field public static final notification_subtext_size:I = 0x7f070281
+.field public static final notification_subtext_size:I = 0x7f070367
 
 
 # direct methods

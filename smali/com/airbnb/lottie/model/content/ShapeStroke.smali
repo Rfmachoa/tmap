@@ -3,7 +3,7 @@
 .source "ShapeStroke.java"
 
 # interfaces
-.implements Ls3/b;
+.implements Lo5/b;
 
 
 # annotations
@@ -18,7 +18,7 @@
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Lr3/b;
+.field public final b:Ln5/b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -27,17 +27,17 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lr3/b;",
+            "Ln5/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final d:Lr3/a;
+.field public final d:Ln5/a;
 
-.field public final e:Lr3/d;
+.field public final e:Ln5/d;
 
-.field public final f:Lr3/b;
+.field public final f:Ln5/b;
 
 .field public final g:Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
 
@@ -49,9 +49,9 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lr3/b;Ljava/util/List;Lr3/a;Lr3/d;Lr3/b;Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;FZ)V
+.method public constructor <init>(Ljava/lang/String;Ln5/b;Ljava/util/List;Ln5/a;Ln5/d;Ln5/b;Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;FZ)V
     .locals 0
-    .param p2    # Lr3/b;
+    .param p2    # Ln5/b;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -59,13 +59,13 @@
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lr3/b;",
+            "Ln5/b;",
             "Ljava/util/List<",
-            "Lr3/b;",
+            "Ln5/b;",
             ">;",
-            "Lr3/a;",
-            "Lr3/d;",
-            "Lr3/b;",
+            "Ln5/a;",
+            "Ln5/d;",
+            "Ln5/b;",
             "Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;",
             "Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;",
             "FZ)V"
@@ -79,19 +79,19 @@
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->a:Ljava/lang/String;
 
     .line 3
-    iput-object p2, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->b:Lr3/b;
+    iput-object p2, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->b:Ln5/b;
 
     .line 4
     iput-object p3, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->c:Ljava/util/List;
 
     .line 5
-    iput-object p4, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->d:Lr3/a;
+    iput-object p4, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->d:Ln5/a;
 
     .line 6
-    iput-object p5, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->e:Lr3/d;
+    iput-object p5, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->e:Ln5/d;
 
     .line 7
-    iput-object p6, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->f:Lr3/b;
+    iput-object p6, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->f:Ln5/b;
 
     .line 8
     iput-object p7, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->g:Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
@@ -110,13 +110,13 @@
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Ln3/c;
+.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Lj5/c;
     .locals 1
 
     .line 1
-    new-instance v0, Ln3/s;
+    new-instance v0, Lj5/s;
 
-    invoke-direct {v0, p1, p2, p0}, Ln3/s;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/ShapeStroke;)V
+    invoke-direct {v0, p1, p2, p0}, Lj5/s;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/ShapeStroke;)V
 
     return-object v0
 .end method
@@ -130,20 +130,20 @@
     return-object v0
 .end method
 
-.method public c()Lr3/a;
+.method public c()Ln5/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->d:Lr3/a;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->d:Ln5/a;
 
     return-object v0
 .end method
 
-.method public d()Lr3/b;
+.method public d()Ln5/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->b:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->b:Ln5/b;
 
     return-object v0
 .end method
@@ -163,7 +163,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lr3/b;",
+            "Ln5/b;",
             ">;"
         }
     .end annotation
@@ -192,20 +192,20 @@
     return-object v0
 .end method
 
-.method public i()Lr3/d;
+.method public i()Ln5/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->e:Lr3/d;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->e:Ln5/d;
 
     return-object v0
 .end method
 
-.method public j()Lr3/b;
+.method public j()Ln5/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->f:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeStroke;->f:Ln5/b;
 
     return-object v0
 .end method

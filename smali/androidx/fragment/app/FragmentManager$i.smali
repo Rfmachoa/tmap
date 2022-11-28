@@ -3,12 +3,12 @@
 .source "FragmentManager.java"
 
 # interfaces
-.implements Landroidx/fragment/app/s;
+.implements Landroidx/activity/result/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/FragmentManager;->p(Landroidx/fragment/app/j;Landroidx/fragment/app/g;Landroidx/fragment/app/Fragment;)V
+    value = Landroidx/fragment/app/FragmentManager;->s(Landroidx/fragment/app/n;Landroidx/fragment/app/k;Landroidx/fragment/app/Fragment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,21 +16,26 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroidx/activity/result/a<",
+        "Landroidx/activity/result/ActivityResult;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field public final synthetic a:Landroidx/fragment/app/Fragment;
-
-.field public final synthetic b:Landroidx/fragment/app/FragmentManager;
+.field public final synthetic a:Landroidx/fragment/app/FragmentManager;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$i;->b:Landroidx/fragment/app/FragmentManager;
-
-    iput-object p2, p0, Landroidx/fragment/app/FragmentManager$i;->a:Landroidx/fragment/app/Fragment;
+    iput-object p1, p0, Landroidx/fragment/app/FragmentManager$i;->a:Landroidx/fragment/app/FragmentManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,21 +44,94 @@
 
 
 # virtual methods
-.method public a(Landroidx/fragment/app/FragmentManager;Landroidx/fragment/app/Fragment;)V
+.method public bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
-    .param p1    # Landroidx/fragment/app/FragmentManager;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/fragment/app/Fragment;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
-    iget-object p1, p0, Landroidx/fragment/app/FragmentManager$i;->a:Landroidx/fragment/app/Fragment;
+    check-cast p1, Landroidx/activity/result/ActivityResult;
 
-    invoke-virtual {p1, p2}, Landroidx/fragment/app/Fragment;->onAttachFragment(Landroidx/fragment/app/Fragment;)V
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManager$i;->b(Landroidx/activity/result/ActivityResult;)V
+
+    return-void
+.end method
+
+.method public b(Landroidx/activity/result/ActivityResult;)V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$i;->a:Landroidx/fragment/app/FragmentManager;
+
+    iget-object v0, v0, Landroidx/fragment/app/FragmentManager;->G:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
+
+    const-string v1, "FragmentManager"
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "No IntentSenders were started for "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget-object v2, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->a:Ljava/lang/String;
+
+    .line 4
+    iget v0, v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->b:I
+
+    .line 5
+    iget-object v3, p0, Landroidx/fragment/app/FragmentManager$i;->a:Landroidx/fragment/app/FragmentManager;
+
+    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->l(Landroidx/fragment/app/FragmentManager;)Landroidx/fragment/app/h0;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroidx/fragment/app/h0;->i(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1
+
+    const-string p1, "Intent Sender result delivered for unknown Fragment "
+
+    .line 6
+    invoke-static {p1, v2, v1}, Landroidx/appcompat/widget/h0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    .line 7
+    :cond_1
+    invoke-virtual {p1}, Landroidx/activity/result/ActivityResult;->c()I
+
+    move-result v1
+
+    .line 8
+    invoke-virtual {p1}, Landroidx/activity/result/ActivityResult;->a()Landroid/content/Intent;
+
+    move-result-object p1
+
+    .line 9
+    invoke-virtual {v3, v0, v1, p1}, Landroidx/fragment/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method

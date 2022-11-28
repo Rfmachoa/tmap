@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Zb(Z)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->sc(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->q2(Landroid/content/Context;Z)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->D2(Landroid/content/Context;Z)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$x;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
@@ -84,7 +84,7 @@
 
     iget-object v2, v2, Lcom/skt/tmap/engine/navigation/data/RouteSummaryInfo;->szGoalName:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/TmapSharedPreference;->v2(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/TmapSharedPreference;->I2(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
     invoke-static {}, Lcom/skt/tmap/engine/navigation/NavigationManager;->getInstance()Lcom/skt/tmap/engine/navigation/NavigationManager;
@@ -128,7 +128,7 @@
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$x;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->c0(Landroid/content/Context;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
+    invoke-static {v0}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->H0(Landroid/content/Context;)Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;
 
     move-result-object v0
 
@@ -144,10 +144,10 @@
 
     invoke-direct {v2, v4}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;-><init>(Lcom/skt/tmap/engine/navigation/route/data/WayPoint;)V
 
-    invoke-virtual {v0, v2}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->u0(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
+    invoke-virtual {v0, v2}, Lcom/skt/tmap/mvp/viewmodel/userdata/UserDataDbHelper;->a1(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     .line 7
-    invoke-static {}, Lcom/skt/tmap/engine/l0;->g0()Lcom/skt/tmap/engine/l0;
+    invoke-static {}, Lcom/skt/tmap/engine/v0;->t0()Lcom/skt/tmap/engine/v0;
 
     move-result-object v4
 
@@ -160,12 +160,12 @@
 
     move-result-object v0
 
-    invoke-static {v5, v6, v0}, Lcom/skt/tmap/engine/h0;->a(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteOption;)Landroid/app/Notification;
+    invoke-static {v5, v6, v0}, Lcom/skt/tmap/engine/j0;->a(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/data/DriveMode;Lcom/skt/tmap/engine/navigation/route/RouteOption;)Landroid/app/Notification;
 
     move-result-object v7
 
     .line 9
-    invoke-static {}, Lcom/skt/tmap/engine/h0;->d()I
+    invoke-static {}, Lcom/skt/tmap/engine/j0;->d()I
 
     move-result v8
 
@@ -174,7 +174,7 @@
     move-object v11, p1
 
     .line 10
-    invoke-virtual/range {v4 .. v12}, Lcom/skt/tmap/engine/l0;->c1(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/data/DriveMode;Landroid/app/Notification;IZZLcom/skt/tmap/engine/navigation/route/RouteResult;I)V
+    invoke-virtual/range {v4 .. v12}, Lcom/skt/tmap/engine/v0;->t1(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/data/DriveMode;Landroid/app/Notification;IZZLcom/skt/tmap/engine/navigation/route/RouteResult;I)V
 
     .line 11
     new-instance p1, Landroid/content/Intent;

@@ -307,15 +307,15 @@
 
 
 # virtual methods
-.method public A(Lq3/d;)Ljava/util/List;
+.method public A(Lm5/d;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lq3/d;",
+            "Lm5/d;",
             ")",
             "Ljava/util/List<",
-            "Lq3/d;",
+            "Lm5/d;",
             ">;"
         }
     .end annotation
@@ -323,7 +323,7 @@
     .line 1
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView;->c:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->Q(Lq3/d;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->Q(Lm5/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -406,15 +406,15 @@
 
     invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    invoke-static {v0}, Lzj/z;->m(Ljava/io/InputStream;)Lzj/m0;
+    invoke-static {v0}, Lem/z;->m(Ljava/io/InputStream;)Lem/m0;
 
     move-result-object p1
 
-    invoke-static {p1}, Lzj/z;->d(Lzj/m0;)Lzj/o;
+    invoke-static {p1}, Lem/z;->d(Lem/m0;)Lem/o;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->O(Lzj/o;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
+    invoke-static {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->U(Lem/o;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
 
     move-result-object p1
 
@@ -554,16 +554,16 @@
     return p1
 .end method
 
-.method public f(Lq3/d;Ljava/lang/Object;Lx3/j;)V
+.method public f(Lm5/d;Ljava/lang/Object;Lt5/j;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lq3/d;",
+            "Lm5/d;",
             "TT;",
-            "Lx3/j<",
+            "Lt5/j<",
             "TT;>;)V"
         }
     .end annotation
@@ -571,21 +571,21 @@
     .line 1
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView;->c:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/airbnb/lottie/LottieDrawable;->e(Lq3/d;Ljava/lang/Object;Lx3/j;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/airbnb/lottie/LottieDrawable;->e(Lm5/d;Ljava/lang/Object;Lt5/j;)V
 
     return-void
 .end method
 
-.method public g(Lq3/d;Ljava/lang/Object;Lx3/l;)V
+.method public g(Lm5/d;Ljava/lang/Object;Lt5/l;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lq3/d;",
+            "Lm5/d;",
             "TT;",
-            "Lx3/l<",
+            "Lt5/l<",
             "TT;>;)V"
         }
     .end annotation
@@ -595,9 +595,9 @@
 
     new-instance v1, Lcom/airbnb/lottie/LottieAnimationView$c;
 
-    invoke-direct {v1, p0, p3}, Lcom/airbnb/lottie/LottieAnimationView$c;-><init>(Lcom/airbnb/lottie/LottieAnimationView;Lx3/l;)V
+    invoke-direct {v1, p0, p3}, Lcom/airbnb/lottie/LottieAnimationView$c;-><init>(Lcom/airbnb/lottie/LottieAnimationView;Lt5/l;)V
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/airbnb/lottie/LottieDrawable;->e(Lq3/d;Ljava/lang/Object;Lx3/j;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/airbnb/lottie/LottieDrawable;->e(Lm5/d;Ljava/lang/Object;Lt5/j;)V
 
     return-void
 .end method
@@ -1241,7 +1241,7 @@
     invoke-direct {v5, v0}, Lcom/airbnb/lottie/q;-><init>(I)V
 
     .line 30
-    new-instance v0, Lq3/d;
+    new-instance v0, Lm5/d;
 
     const-string v6, "**"
 
@@ -1249,17 +1249,17 @@
 
     move-result-object v6
 
-    invoke-direct {v0, v6}, Lq3/d;-><init>([Ljava/lang/String;)V
+    invoke-direct {v0, v6}, Lm5/d;-><init>([Ljava/lang/String;)V
 
     .line 31
-    new-instance v6, Lx3/j;
+    new-instance v6, Lt5/j;
 
-    invoke-direct {v6, v5}, Lx3/j;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v6, v5}, Lt5/j;-><init>(Ljava/lang/Object;)V
 
     .line 32
     sget-object v5, Lcom/airbnb/lottie/l;->B:Landroid/graphics/ColorFilter;
 
-    invoke-virtual {p0, v0, v5, v6}, Lcom/airbnb/lottie/LottieAnimationView;->f(Lq3/d;Ljava/lang/Object;Lx3/j;)V
+    invoke-virtual {p0, v0, v5, v6}, Lcom/airbnb/lottie/LottieAnimationView;->f(Lm5/d;Ljava/lang/Object;Lt5/j;)V
 
     .line 33
     :cond_a
@@ -1336,7 +1336,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lw3/h;->f(Landroid/content/Context;)F
+    invoke-static {v0}, Ls5/h;->f(Landroid/content/Context;)F
 
     move-result v0
 

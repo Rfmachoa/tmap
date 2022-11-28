@@ -3,7 +3,7 @@
 .source "FragmentViewModelLazy.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroidx/lifecycle/ViewModelStore;",
         ">;"
     }
@@ -56,14 +56,14 @@
 
 
 # instance fields
-.field public final synthetic $ownerProducer:Lej/a;
+.field public final synthetic $ownerProducer:Lgl/a;
 
 
 # direct methods
-.method public constructor <init>(Lej/a;)V
+.method public constructor <init>(Lgl/a;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;->$ownerProducer:Lej/a;
+    iput-object p1, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;->$ownerProducer:Lgl/a;
 
     const/4 p1, 0x0
 
@@ -80,9 +80,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;->$ownerProducer:Lej/a;
+    iget-object v0, p0, Landroidx/navigation/dynamicfeatures/fragment/ui/AbstractProgressFragment$$special$$inlined$viewModels$4;->$ownerProducer:Lgl/a;
 
-    invoke-interface {v0}, Lej/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lgl/a;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

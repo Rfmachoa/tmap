@@ -26,16 +26,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/futures/b;Lcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$outputFuture"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/futures/b$a;->b:Landroidx/camera/core/impl/utils/futures/b;

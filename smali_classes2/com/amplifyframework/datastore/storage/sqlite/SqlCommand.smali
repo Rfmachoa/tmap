@@ -125,7 +125,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/storage/sqlite/SqlCommand;->tableName:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -139,7 +139,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/storage/sqlite/SqlCommand;->sqlStatement:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -153,7 +153,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/datastore/storage/sqlite/SqlCommand;->bindings:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -358,19 +358,19 @@
 
     const-string v3, ", sqlStatement=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/storage/sqlite/SqlCommand;->sqlStatement:Ljava/lang/String;
 
     const-string v3, ", bindings="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/storage/sqlite/SqlCommand;->bindings:Ljava/util/List;
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lb3/l;->a(Ljava/lang/StringBuilder;Ljava/util/List;C)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lw0/c;->a(Ljava/lang/StringBuilder;Ljava/util/List;C)Ljava/lang/String;
 
     move-result-object v0
 

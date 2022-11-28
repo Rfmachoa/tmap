@@ -1,98 +1,42 @@
-.class public final Landroidx/camera/camera2/internal/c1;
+.class public final synthetic Landroidx/camera/camera2/internal/c1;
 .super Ljava/lang/Object;
-.source "CameraUnavailableExceptionHelper.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/camera/camera2/internal/x0$c;
+
+.field public final synthetic b:Landroidx/camera/core/impl/e$a;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/x0$c;Landroidx/camera/core/impl/e$a;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/camera2/internal/c1;->a:Landroidx/camera/camera2/internal/x0$c;
+
+    iput-object p2, p0, Landroidx/camera/camera2/internal/c1;->b:Landroidx/camera/core/impl/e$a;
 
     return-void
 .end method
 
-.method public static a(Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;)Landroidx/camera/core/CameraUnavailableException;
-    .locals 6
-    .param p0    # Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "e"
-        }
-    .end annotation
+# virtual methods
+.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    .locals 2
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;->getReason()I
+    iget-object v0, p0, Landroidx/camera/camera2/internal/c1;->a:Landroidx/camera/camera2/internal/x0$c;
 
-    move-result v0
+    iget-object v1, p0, Landroidx/camera/camera2/internal/c1;->b:Landroidx/camera/core/impl/e$a;
 
-    const/4 v1, 0x5
+    invoke-static {v0, v1, p1}, Landroidx/camera/camera2/internal/x0$c;->b(Landroidx/camera/camera2/internal/x0$c;Landroidx/camera/core/impl/e$a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
-    const/4 v2, 0x4
+    move-result-object p1
 
-    const/4 v3, 0x3
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    if-eq v0, v5, :cond_4
-
-    if-eq v0, v4, :cond_3
-
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x2711
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x6
-
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_2
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_3
-    move v1, v4
-
-    goto :goto_0
-
-    :cond_4
-    move v1, v5
-
-    .line 2
-    :cond_5
-    :goto_0
-    new-instance v0, Landroidx/camera/core/CameraUnavailableException;
-
-    invoke-direct {v0, v1, p0}, Landroidx/camera/core/CameraUnavailableException;-><init>(ILjava/lang/Throwable;)V
-
-    return-object v0
+    return-object p1
 .end method

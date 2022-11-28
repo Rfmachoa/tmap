@@ -205,6 +205,14 @@
 
 .method public setConfirmTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "confirmTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResStampHappenBodyVo$ResStampVo;->confirmTitle:Ljava/lang/String;
@@ -214,6 +222,14 @@
 
 .method public setMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResStampHappenBodyVo$ResStampVo;->message:Ljava/lang/String;
@@ -223,6 +239,14 @@
 
 .method public setStampCount(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stampCount"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResStampHappenBodyVo$ResStampVo;->stampCount:Ljava/lang/Integer;
@@ -232,6 +256,14 @@
 
 .method public setStampMaxCount(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stampMaxCount"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResStampHappenBodyVo$ResStampVo;->stampMaxCount:Ljava/lang/Integer;
@@ -241,6 +273,14 @@
 
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "title"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResStampHappenBodyVo$ResStampVo;->title:Ljava/lang/String;

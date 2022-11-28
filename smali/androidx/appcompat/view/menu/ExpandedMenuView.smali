@@ -75,19 +75,19 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/j0;->G(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/j0;
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/o0;->G(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/o0;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/j0;->C(I)Z
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/o0;->C(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/j0;->h(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/o0;->h(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -97,14 +97,14 @@
     const/4 p2, 0x1
 
     .line 7
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/j0;->C(I)Z
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/o0;->C(I)Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
     .line 8
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/j0;->h(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/o0;->h(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -112,7 +112,7 @@
 
     .line 9
     :cond_1
-    invoke-virtual {p1}, Landroidx/appcompat/widget/j0;->I()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/o0;->I()V
 
     return-void
 .end method

@@ -1,37 +1,24 @@
-.class public Landroidx/recyclerview/widget/j$b;
+.class public abstract Landroidx/recyclerview/widget/j$b;
 .super Ljava/lang/Object;
-.source "DefaultItemAnimator.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "DiffUtil.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/recyclerview/widget/j;->x()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/recyclerview/widget/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x409
+    name = "b"
 .end annotation
 
 
-# instance fields
-.field public final synthetic a:Ljava/util/ArrayList;
-
-.field public final synthetic b:Landroidx/recyclerview/widget/j;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/j;Ljava/util/ArrayList;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/recyclerview/widget/j$b;->b:Landroidx/recyclerview/widget/j;
-
-    iput-object p2, p0, Landroidx/recyclerview/widget/j$b;->a:Ljava/util/ArrayList;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,50 +26,24 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public abstract a(II)Z
+.end method
 
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$b;->a:Ljava/util/ArrayList;
+.method public abstract b(II)Z
+.end method
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+.method public c(II)Ljava/lang/Object;
+    .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object p1
+.end method
 
-    move-result v1
+.method public abstract d()I
+.end method
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/recyclerview/widget/j$i;
-
-    .line 2
-    iget-object v2, p0, Landroidx/recyclerview/widget/j$b;->b:Landroidx/recyclerview/widget/j;
-
-    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/j;->a0(Landroidx/recyclerview/widget/j$i;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$b;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    .line 4
-    iget-object v0, p0, Landroidx/recyclerview/widget/j$b;->b:Landroidx/recyclerview/widget/j;
-
-    iget-object v0, v0, Landroidx/recyclerview/widget/j;->u:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/j$b;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
+.method public abstract e()I
 .end method

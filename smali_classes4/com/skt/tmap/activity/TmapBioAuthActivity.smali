@@ -19,7 +19,7 @@
         "",
         "title",
         "description",
-        "v5",
+        "D5",
         "<init>",
         "()V",
         "tmap_android_phoneKUShip"
@@ -27,21 +27,39 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public a:Ljava/util/HashMap;
+.field public a:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/Map;
+
     invoke-direct {p0}, Lcom/skt/tmap/activity/BaseActivity;-><init>()V
 
     return-void
@@ -49,138 +67,66 @@
 
 
 # virtual methods
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
+.method public B5()V
+    .locals 1
 
-    .line 1
-    invoke-super {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/Map;
 
-    const p1, 0x7f0d0027
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 2
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
+    return-void
+.end method
 
-    .line 3
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+.method public C5(I)Landroid/view/View;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string/jumbo v0, "title"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, ""
-
-    if-eqz p1, :cond_0
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    move-object p1, v0
+    const/4 v1, 0x0
 
+    :cond_1
     :goto_0
-    const-string v1, "intent.getStringExtra(\"title\") ?: \"\""
-
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 4
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "description"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    const-string v1, "intent.getStringExtra(\"description\") ?: \"\""
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 5
-    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/activity/TmapBioAuthActivity;->v5(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v1
 .end method
 
-.method public t5()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/HashMap;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public u5(I)Landroid/view/View;
-    .locals 2
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/HashMap;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/HashMap;
-
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapBioAuthActivity;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public final v5(Ljava/lang/String;Ljava/lang/String;)V
+.method public final D5(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .line 1
-    invoke-static {p0}, Landroidx/core/content/d;->l(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    invoke-static {p0}, Landroidx/core/content/ContextCompat;->getMainExecutor(Landroid/content/Context;)Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
-    const-string v1, "ContextCompat.getMainExecutor(this)"
+    const-string v1, "getMainExecutor(this)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -213,7 +159,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f1301b3
+    const v0, 0x7f1401bc
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -228,12 +174,70 @@
 
     move-result-object p1
 
-    const-string p2, "BiometricPrompt.PromptIn\u2026\n                .build()"
+    const-string p2, "Builder()\n              \u2026\n                .build()"
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     invoke-virtual {v1, p1}, Landroidx/biometric/BiometricPrompt;->b(Landroidx/biometric/BiometricPrompt$d;)V
+
+    return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 3
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->onCreate(Landroid/os/Bundle;)V
+
+    const p1, 0x7f0d0028
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
+
+    .line 3
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object p1
+
+    const-string v0, "title"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, ""
+
+    if-nez p1, :cond_0
+
+    move-object p1, v0
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v2, "description"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, v1
+
+    .line 5
+    :goto_0
+    invoke-virtual {p0, p1, v0}, Lcom/skt/tmap/activity/TmapBioAuthActivity;->D5(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

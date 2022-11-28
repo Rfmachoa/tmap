@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/google/firebase/messaging/RemoteMessage$MessagePriority;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "RemoteMessage.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

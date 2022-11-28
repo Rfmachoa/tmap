@@ -2,21 +2,33 @@
 .super Lcom/fasterxml/jackson/databind/ser/std/StdScalarSerializer;
 .source "NumberSerializer.java"
 
+# interfaces
+.implements Lcom/fasterxml/jackson/databind/ser/ContextualSerializer;
+
 
 # annotations
 .annotation runtime Lcom/fasterxml/jackson/databind/annotation/JacksonStdImpl;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fasterxml/jackson/databind/ser/std/NumberSerializer$BigDecimalAsStringSerializer;
+    }
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/fasterxml/jackson/databind/ser/std/StdScalarSerializer<",
         "Ljava/lang/Number;",
-        ">;"
+        ">;",
+        "Lcom/fasterxml/jackson/databind/ser/ContextualSerializer;"
     }
 .end annotation
 
 
 # static fields
+.field public static final MAX_BIG_DECIMAL_SCALE:I = 0x270f
+
 .field public static final instance:Lcom/fasterxml/jackson/databind/ser/std/NumberSerializer;
 
 
@@ -70,6 +82,22 @@
     return-void
 .end method
 
+.method public static bigDecimalAsStringSerializer()Lcom/fasterxml/jackson/databind/JsonSerializer;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/fasterxml/jackson/databind/JsonSerializer<",
+            "*>;"
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/databind/ser/std/NumberSerializer$BigDecimalAsStringSerializer;->BD_INSTANCE:Lcom/fasterxml/jackson/databind/ser/std/NumberSerializer$BigDecimalAsStringSerializer;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public acceptJsonFormatVisitor(Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatVisitorWrapper;Lcom/fasterxml/jackson/databind/JavaType;)V
@@ -98,24 +126,100 @@
 
     move-result-object v0
 
-    .line 4
     const-class v1, Ljava/math/BigDecimal;
 
     if-ne v0, v1, :cond_1
 
-    .line 5
+    .line 4
     sget-object v0, Lcom/fasterxml/jackson/core/JsonParser$NumberType;->BIG_DECIMAL:Lcom/fasterxml/jackson/core/JsonParser$NumberType;
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/fasterxml/jackson/databind/ser/std/StdSerializer;->visitFloatFormat(Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatVisitorWrapper;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/core/JsonParser$NumberType;)V
 
     goto :goto_0
 
-    .line 6
+    .line 5
     :cond_1
     invoke-interface {p1, p2}, Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonFormatVisitorWrapper;->expectNumberFormat(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/jsonFormatVisitors/JsonNumberFormatVisitor;
 
     :goto_0
     return-void
+.end method
+
+.method public createContextual(Lcom/fasterxml/jackson/databind/SerializerProvider;Lcom/fasterxml/jackson/databind/BeanProperty;)Lcom/fasterxml/jackson/databind/JsonSerializer;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/SerializerProvider;",
+            "Lcom/fasterxml/jackson/databind/BeanProperty;",
+            ")",
+            "Lcom/fasterxml/jackson/databind/JsonSerializer<",
+            "*>;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/ser/std/StdSerializer;->handledType()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, p2, v0}, Lcom/fasterxml/jackson/databind/ser/std/StdSerializer;->findFormatOverrides(Lcom/fasterxml/jackson/databind/SerializerProvider;Lcom/fasterxml/jackson/databind/BeanProperty;Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 2
+    sget-object p2, Lcom/fasterxml/jackson/databind/ser/std/NumberSerializer$1;->$SwitchMap$com$fasterxml$jackson$annotation$JsonFormat$Shape:[I
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/annotation/JsonFormat$Value;->getShape()Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    aget p1, p2, p1
+
+    const/4 p2, 0x1
+
+    if-eq p1, p2, :cond_0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/ser/std/StdSerializer;->handledType()Ljava/lang/Class;
+
+    move-result-object p1
+
+    const-class p2, Ljava/math/BigDecimal;
+
+    if-ne p1, p2, :cond_1
+
+    .line 4
+    invoke-static {}, Lcom/fasterxml/jackson/databind/ser/std/NumberSerializer;->bigDecimalAsStringSerializer()Lcom/fasterxml/jackson/databind/JsonSerializer;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 5
+    :cond_1
+    sget-object p1, Lcom/fasterxml/jackson/databind/ser/std/ToStringSerializer;->instance:Lcom/fasterxml/jackson/databind/ser/std/ToStringSerializer;
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    return-object p0
 .end method
 
 .method public getSchema(Lcom/fasterxml/jackson/databind/SerializerProvider;Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/JsonNode;

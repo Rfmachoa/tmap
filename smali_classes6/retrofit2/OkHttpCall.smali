@@ -9,8 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody;,
-        Lretrofit2/OkHttpCall$NoContentResponseBody;
+        Lretrofit2/OkHttpCall$NoContentResponseBody;,
+        Lretrofit2/OkHttpCall$ExceptionCatchingResponseBody;
     }
 .end annotation
 
@@ -133,6 +133,97 @@
     invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method private getRawCall()Lokhttp3/Call;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .annotation build Ljavax/annotation/concurrent/GuardedBy;
+        value = "this"
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lretrofit2/OkHttpCall;->rawCall:Lokhttp3/Call;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
+
+    if-eqz v0, :cond_3
+
+    .line 3
+    instance-of v1, v0, Ljava/io/IOException;
+
+    if-nez v1, :cond_2
+
+    .line 4
+    instance-of v1, v0, Ljava/lang/RuntimeException;
+
+    if-eqz v1, :cond_1
+
+    .line 5
+    check-cast v0, Ljava/lang/RuntimeException;
+
+    throw v0
+
+    .line 6
+    :cond_1
+    check-cast v0, Ljava/lang/Error;
+
+    throw v0
+
+    .line 7
+    :cond_2
+    check-cast v0, Ljava/io/IOException;
+
+    throw v0
+
+    .line 8
+    :cond_3
+    :try_start_0
+    invoke-direct {p0}, Lretrofit2/OkHttpCall;->createRawCall()Lokhttp3/Call;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lretrofit2/OkHttpCall;->rawCall:Lokhttp3/Call;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    .line 9
+    :goto_0
+    invoke-static {v0}, Lretrofit2/Utils;->throwIfFatal(Ljava/lang/Throwable;)V
+
+    .line 10
+    iput-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
+
+    .line 11
+    throw v0
 .end method
 
 
@@ -373,7 +464,7 @@
     :try_start_0
     iget-boolean v0, p0, Lretrofit2/OkHttpCall;->executed:Z
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
@@ -381,101 +472,25 @@
     iput-boolean v0, p0, Lretrofit2/OkHttpCall;->executed:Z
 
     .line 4
-    iget-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
+    invoke-direct {p0}, Lretrofit2/OkHttpCall;->getRawCall()Lokhttp3/Call;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
     .line 5
-    instance-of v1, v0, Ljava/io/IOException;
-
-    if-nez v1, :cond_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 6
-    instance-of v1, v0, Ljava/lang/RuntimeException;
+    iget-boolean v1, p0, Lretrofit2/OkHttpCall;->canceled:Z
 
     if-eqz v1, :cond_0
 
     .line 7
-    check-cast v0, Ljava/lang/RuntimeException;
-
-    throw v0
+    invoke-interface {v0}, Lokhttp3/Call;->cancel()V
 
     .line 8
     :cond_0
-    check-cast v0, Ljava/lang/Error;
-
-    throw v0
-
-    .line 9
-    :cond_1
-    check-cast v0, Ljava/io/IOException;
-
-    throw v0
-
-    .line 10
-    :cond_2
-    iget-object v0, p0, Lretrofit2/OkHttpCall;->rawCall:Lokhttp3/Call;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v0, :cond_3
-
-    .line 11
-    :try_start_1
-    invoke-direct {p0}, Lretrofit2/OkHttpCall;->createRawCall()Lokhttp3/Call;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lretrofit2/OkHttpCall;->rawCall:Lokhttp3/Call;
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v0
-
-    .line 12
-    :goto_0
-    :try_start_2
-    invoke-static {v0}, Lretrofit2/Utils;->throwIfFatal(Ljava/lang/Throwable;)V
-
-    .line 13
-    iput-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
-
-    .line 14
-    throw v0
-
-    .line 15
-    :cond_3
-    :goto_1
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    .line 16
-    iget-boolean v1, p0, Lretrofit2/OkHttpCall;->canceled:Z
-
-    if-eqz v1, :cond_4
-
-    .line 17
-    invoke-interface {v0}, Lokhttp3/Call;->cancel()V
-
-    .line 18
-    :cond_4
     invoke-interface {v0}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object v0
@@ -486,9 +501,9 @@
 
     return-object v0
 
-    .line 19
-    :cond_5
-    :try_start_3
+    .line 9
+    :cond_1
+    :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Already executed."
@@ -500,10 +515,10 @@
     :catchall_0
     move-exception v0
 
-    .line 20
+    .line 10
     monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 .end method
@@ -727,6 +742,7 @@
 
     invoke-virtual {v0}, Lokhttp3/ResponseBody;->close()V
 
+    .line 16
     throw p1
 .end method
 
@@ -737,93 +753,31 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lretrofit2/OkHttpCall;->rawCall:Lokhttp3/Call;
+    invoke-direct {p0}, Lretrofit2/OkHttpCall;->getRawCall()Lokhttp3/Call;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 2
     invoke-interface {v0}, Lokhttp3/Call;->request()Lokhttp3/Request;
 
     move-result-object v0
     :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
     return-object v0
 
-    .line 3
-    :cond_0
-    :try_start_1
-    iget-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
+    :catchall_0
+    move-exception v0
 
-    if-eqz v0, :cond_3
-
-    .line 4
-    instance-of v1, v0, Ljava/io/IOException;
-
-    if-nez v1, :cond_2
-
-    .line 5
-    instance-of v1, v0, Ljava/lang/RuntimeException;
-
-    if-eqz v1, :cond_1
-
-    .line 6
-    check-cast v0, Ljava/lang/RuntimeException;
-
-    throw v0
-
-    .line 7
-    :cond_1
-    check-cast v0, Ljava/lang/Error;
-
-    throw v0
-
-    .line 8
-    :cond_2
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Unable to create request."
-
-    iget-object v2, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 9
-    :cond_3
-    :try_start_2
-    invoke-direct {p0}, Lretrofit2/OkHttpCall;->createRawCall()Lokhttp3/Call;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lretrofit2/OkHttpCall;->rawCall:Lokhttp3/Call;
-
-    invoke-interface {v0}, Lokhttp3/Call;->request()Lokhttp3/Request;
-
-    move-result-object v0
-    :try_end_2
-    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    .line 10
-    :try_start_3
-    iput-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
-
-    .line 11
+    .line 2
+    :try_start_1
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Unable to create request."
@@ -831,30 +785,58 @@
     invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :catch_1
-    move-exception v0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v0
-
-    .line 12
     :goto_0
-    invoke-static {v0}, Lretrofit2/Utils;->throwIfFatal(Ljava/lang/Throwable;)V
+    monitor-exit p0
 
-    .line 13
-    iput-object v0, p0, Lretrofit2/OkHttpCall;->creationFailure:Ljava/lang/Throwable;
-
-    .line 14
     throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+.end method
+
+.method public declared-synchronized timeout()Lem/o0;
+    .locals 3
+
+    monitor-enter p0
+
+    .line 1
+    :try_start_0
+    invoke-direct {p0}, Lretrofit2/OkHttpCall;->getRawCall()Lokhttp3/Call;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lokhttp3/Call;->timeout()Lem/o0;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
 
     :catchall_0
     move-exception v0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 2
+    :try_start_1
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    const-string v2, "Unable to create call."
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
     monitor-exit p0
 
     throw v0

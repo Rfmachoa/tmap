@@ -1,15 +1,22 @@
 .class public Landroidx/paging/ContiguousPagedList;
-.super Landroidx/paging/h;
-.source "ContiguousPagedList.java"
+.super Landroidx/paging/PagedList;
+.source "ContiguousPagedList.kt"
 
 # interfaces
-.implements Landroidx/paging/j$a;
+.implements Landroidx/paging/g0$a;
+.implements Landroidx/paging/LegacyPageFetcher$b;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/paging/ContiguousPagedList$FetchState;
+        Landroidx/paging/ContiguousPagedList$a;
     }
 .end annotation
 
@@ -20,343 +27,955 @@
         "V:",
         "Ljava/lang/Object;",
         ">",
-        "Landroidx/paging/h<",
+        "Landroidx/paging/PagedList<",
         "TV;>;",
-        "Landroidx/paging/j$a;"
+        "Landroidx/paging/g0$a;",
+        "Landroidx/paging/LegacyPageFetcher$b<",
+        "TV;>;"
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nContiguousPagedList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContiguousPagedList.kt\nandroidx/paging/ContiguousPagedList\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,411:1\n1#2:412\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000~\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u000e\n\u0002\u0010 \n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0019\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u0017\u0018\u0000 j*\u0008\u0008\u0000\u0010\u0002*\u00020\u0001*\u0008\u0008\u0001\u0010\u0003*\u00020\u00012\u0008\u0012\u0004\u0012\u00028\u00010\u00042\u00020\u00052\u0008\u0012\u0004\u0012\u00028\u00010\u0006:\u0001+Bi\u0012\u0012\u00108\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u000103\u0012\u0006\u0010a\u001a\u00020`\u0012\u0006\u0010c\u001a\u00020b\u0012\u0006\u0010d\u001a\u00020b\u0012\u000e\u0010>\u001a\n\u0012\u0004\u0012\u00028\u0001\u0018\u000109\u0012\u0006\u0010f\u001a\u00020e\u0012\u0012\u0010g\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00010\t\u0012\u0008\u0010A\u001a\u0004\u0018\u00018\u0000\u00a2\u0006\u0004\u0008h\u0010iJ\"\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\u0008\u001a\u00020\u00072\u0010\u0010\n\u001a\u000c\u0012\u0002\u0008\u0003\u0012\u0004\u0012\u00028\u00010\tH\u0016J\u0018\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\rH\u0016J\'\u0010\u0014\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\u000b2\u0006\u0010\u0012\u001a\u00020\u000b2\u0006\u0010\u0013\u001a\u00020\u000bH\u0001\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0008\u0010\u0016\u001a\u00020\u000fH\u0016J\"\u0010\u0019\u001a\u00020\u000f2\u0018\u0010\u0018\u001a\u0014\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020\u000f0\u0017H\u0016J\u0018\u0010\u001c\u001a\u00020\u000f2\u0006\u0010\u001a\u001a\u00020\u00072\u0006\u0010\u001b\u001a\u00020\rH\u0016J\u0010\u0010\u001f\u001a\u00020\u000f2\u0006\u0010\u001e\u001a\u00020\u001dH\u0017J\u0008\u0010 \u001a\u00020\u000fH\u0016J\u0010\u0010\"\u001a\u00020\u000f2\u0006\u0010!\u001a\u00020\u001dH\u0017J \u0010&\u001a\u00020\u000f2\u0006\u0010#\u001a\u00020\u001d2\u0006\u0010$\u001a\u00020\u001d2\u0006\u0010%\u001a\u00020\u001dH\u0017J \u0010(\u001a\u00020\u000f2\u0006\u0010\'\u001a\u00020\u001d2\u0006\u0010$\u001a\u00020\u001d2\u0006\u0010%\u001a\u00020\u001dH\u0017J\u0018\u0010*\u001a\u00020\u000f2\u0006\u0010)\u001a\u00020\u001d2\u0006\u0010!\u001a\u00020\u001dH\u0016J\u0018\u0010+\u001a\u00020\u000f2\u0006\u0010)\u001a\u00020\u001d2\u0006\u0010!\u001a\u00020\u001dH\u0016J\u001e\u0010-\u001a\u00020\u000f2\u0006\u0010\u0008\u001a\u00020\u00072\u000c\u0010\n\u001a\u0008\u0012\u0004\u0012\u00028\u00010,H\u0002J\u0010\u0010/\u001a\u00020\u000f2\u0006\u0010.\u001a\u00020\u000bH\u0002J\u0018\u00102\u001a\u00020\u000f2\u0006\u00100\u001a\u00020\u000b2\u0006\u00101\u001a\u00020\u000bH\u0002R#\u00108\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001038\u0006\u00a2\u0006\u000c\n\u0004\u00084\u00105\u001a\u0004\u00086\u00107R\"\u0010>\u001a\n\u0012\u0004\u0012\u00028\u0001\u0018\u0001098\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008:\u0010;\u001a\u0004\u0008<\u0010=R\u0016\u0010A\u001a\u0004\u0018\u00018\u00008\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008?\u0010@R\u0016\u0010D\u001a\u00020\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008B\u0010CR\u0016\u0010F\u001a\u00020\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008E\u0010CR\u0016\u0010H\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008G\u0010<R\u0016\u0010J\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008I\u0010<R\u0016\u0010L\u001a\u00020\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008K\u0010CR\u0016\u0010N\u001a\u00020\u001d8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008M\u0010CR\u0016\u0010P\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008O\u0010<R\u0014\u0010R\u001a\u00020\u000b8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008Q\u0010<R&\u0010X\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00010S8\u0002X\u0082\u0004\u00a2\u0006\u000c\n\u0004\u0008T\u0010U\u0012\u0004\u0008V\u0010WR\u001c\u0010\\\u001a\u0004\u0018\u00018\u00008VX\u0096\u0004\u00a2\u0006\u000c\u0012\u0004\u0008[\u0010W\u001a\u0004\u0008Y\u0010ZR\u0014\u0010_\u001a\u00020\u000b8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008]\u0010^\u00a8\u0006k"
+    }
+    d2 = {
+        "Landroidx/paging/ContiguousPagedList;",
+        "",
+        "K",
+        "V",
+        "Landroidx/paging/PagedList;",
+        "Landroidx/paging/g0$a;",
+        "Landroidx/paging/LegacyPageFetcher$b;",
+        "Landroidx/paging/LoadType;",
+        "type",
+        "Landroidx/paging/PagingSource$b$c;",
+        "page",
+        "",
+        "e",
+        "Landroidx/paging/p;",
+        "state",
+        "Lkotlin/d1;",
+        "g",
+        "deferEmpty",
+        "deferBegin",
+        "deferEnd",
+        "X",
+        "(ZZZ)V",
+        "O",
+        "Lkotlin/Function2;",
+        "callback",
+        "n",
+        "loadType",
+        "loadState",
+        "P",
+        "",
+        "index",
+        "H",
+        "m",
+        "count",
+        "f",
+        "leadingNulls",
+        "changed",
+        "added",
+        "d",
+        "endPosition",
+        "c",
+        "startOfDrops",
+        "b",
+        "a",
+        "",
+        "c0",
+        "post",
+        "d0",
+        "begin",
+        "end",
+        "Y",
+        "Landroidx/paging/PagingSource;",
+        "k",
+        "Landroidx/paging/PagingSource;",
+        "x",
+        "()Landroidx/paging/PagingSource;",
+        "pagingSource",
+        "Landroidx/paging/PagedList$a;",
+        "l",
+        "Landroidx/paging/PagedList$a;",
+        "Z",
+        "()Landroidx/paging/PagedList$a;",
+        "boundaryCallback",
+        "p",
+        "Ljava/lang/Object;",
+        "initialLastKey",
+        "u",
+        "I",
+        "prependItemsRequested",
+        "k0",
+        "appendItemsRequested",
+        "K0",
+        "boundaryCallbackBeginDeferred",
+        "X0",
+        "boundaryCallbackEndDeferred",
+        "Y0",
+        "lowestIndexAccessed",
+        "Z0",
+        "highestIndexAccessed",
+        "a1",
+        "replacePagesWithNulls",
+        "b1",
+        "shouldTrim",
+        "Landroidx/paging/LegacyPageFetcher;",
+        "c1",
+        "Landroidx/paging/LegacyPageFetcher;",
+        "getPager$annotations",
+        "()V",
+        "pager",
+        "t",
+        "()Ljava/lang/Object;",
+        "getLastKey$annotations",
+        "lastKey",
+        "D",
+        "()Z",
+        "isDetached",
+        "Lkotlinx/coroutines/p0;",
+        "coroutineScope",
+        "Lkotlinx/coroutines/CoroutineDispatcher;",
+        "notifyDispatcher",
+        "backgroundDispatcher",
+        "Landroidx/paging/PagedList$d;",
+        "config",
+        "initialPage",
+        "<init>",
+        "(Landroidx/paging/PagingSource;Lkotlinx/coroutines/p0;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;Landroidx/paging/PagedList$a;Landroidx/paging/PagedList$d;Landroidx/paging/PagingSource$b$c;Ljava/lang/Object;)V",
+        "d1",
+        "paging-common"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
     }
 .end annotation
 
 
 # static fields
-.field public static final b1:I = 0x0
-
-.field public static final c1:I = 0x1
-
-.field public static final d1:I = 0x2
-
-.field public static final e1:I = -0x1
+.field public static final d1:Landroidx/paging/ContiguousPagedList$a;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # instance fields
-.field public K0:I
+.field public K0:Z
 
-.field public V0:I
+.field public X0:Z
 
-.field public W0:I
+.field public Y0:I
 
-.field public X0:I
+.field public Z0:I
 
-.field public Y0:Z
+.field public a1:Z
 
-.field public final Z0:Z
+.field public final b1:Z
 
-.field public a1:Landroidx/paging/PageResult$a;
+.field public final c1:Landroidx/paging/LegacyPageFetcher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/paging/PageResult$a<",
-            "TV;>;"
-        }
-    .end annotation
-.end field
-
-.field public final k0:Landroidx/paging/b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/paging/b<",
+            "Landroidx/paging/LegacyPageFetcher<",
             "TK;TV;>;"
         }
     .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end field
+
+.field public final k:Landroidx/paging/PagingSource;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/paging/PagingSource<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field public k0:I
+
+.field public final l:Landroidx/paging/PagedList$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/paging/PagedList$a<",
+            "TV;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public final p:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TK;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
+
+.field public u:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/paging/b;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/paging/h$c;Landroidx/paging/h$f;Ljava/lang/Object;I)V
-    .locals 7
-    .param p1    # Landroidx/paging/b;
-        .annotation build Landroidx/annotation/NonNull;
+.method public static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroidx/paging/ContiguousPagedList$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroidx/paging/ContiguousPagedList$a;-><init>(Lkotlin/jvm/internal/u;)V
+
+    sput-object v0, Landroidx/paging/ContiguousPagedList;->d1:Landroidx/paging/ContiguousPagedList$a;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/paging/PagingSource;Lkotlinx/coroutines/p0;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;Landroidx/paging/PagedList$a;Landroidx/paging/PagedList$d;Landroidx/paging/PagingSource$b$c;Ljava/lang/Object;)V
+    .locals 17
+    .param p1    # Landroidx/paging/PagingSource;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p2    # Lkotlinx/coroutines/p0;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p3    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p3    # Lkotlinx/coroutines/CoroutineDispatcher;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p4    # Landroidx/paging/h$c;
-        .annotation build Landroidx/annotation/Nullable;
+    .param p4    # Lkotlinx/coroutines/CoroutineDispatcher;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p5    # Landroidx/paging/h$f;
-        .annotation build Landroidx/annotation/NonNull;
+    .param p5    # Landroidx/paging/PagedList$a;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .param p6    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+    .param p6    # Landroidx/paging/PagedList$d;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p7    # Landroidx/paging/PagingSource$b$c;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p8    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/paging/b<",
+            "Landroidx/paging/PagingSource<",
             "TK;TV;>;",
-            "Ljava/util/concurrent/Executor;",
-            "Ljava/util/concurrent/Executor;",
-            "Landroidx/paging/h$c<",
+            "Lkotlinx/coroutines/p0;",
+            "Lkotlinx/coroutines/CoroutineDispatcher;",
+            "Lkotlinx/coroutines/CoroutineDispatcher;",
+            "Landroidx/paging/PagedList$a<",
             "TV;>;",
-            "Landroidx/paging/h$f;",
-            "TK;I)V"
+            "Landroidx/paging/PagedList$d;",
+            "Landroidx/paging/PagingSource$b$c<",
+            "TK;TV;>;TK;)V"
         }
     .end annotation
 
+    move-object/from16 v8, p0
+
+    move-object/from16 v6, p1
+
+    move-object/from16 v9, p6
+
+    const-string v0, "pagingSource"
+
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "coroutineScope"
+
+    move-object/from16 v7, p2
+
+    invoke-static {v7, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "notifyDispatcher"
+
+    move-object/from16 v10, p3
+
+    invoke-static {v10, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "backgroundDispatcher"
+
+    move-object/from16 v11, p4
+
+    invoke-static {v11, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "config"
+
+    invoke-static {v9, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "initialPage"
+
+    move-object/from16 v12, p7
+
+    invoke-static {v12, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
     .line 1
-    new-instance v1, Landroidx/paging/j;
+    new-instance v4, Landroidx/paging/g0;
 
-    invoke-direct {v1}, Landroidx/paging/j;-><init>()V
+    invoke-direct {v4}, Landroidx/paging/g0;-><init>()V
 
-    move-object v0, p0
+    move-object/from16 v0, p0
 
-    move-object v2, p2
+    move-object/from16 v1, p1
 
-    move-object v3, p3
+    move-object/from16 v2, p2
 
-    move-object v4, p4
+    move-object/from16 v3, p3
 
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v5}, Landroidx/paging/h;-><init>(Landroidx/paging/j;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Landroidx/paging/h$c;Landroidx/paging/h$f;)V
-
-    const/4 p2, 0x0
+    move-object/from16 v5, p6
 
     .line 2
-    iput p2, p0, Landroidx/paging/ContiguousPagedList;->K0:I
+    invoke-direct/range {v0 .. v5}, Landroidx/paging/PagedList;-><init>(Landroidx/paging/PagingSource;Lkotlinx/coroutines/p0;Lkotlinx/coroutines/CoroutineDispatcher;Landroidx/paging/g0;Landroidx/paging/PagedList$d;)V
 
     .line 3
-    iput p2, p0, Landroidx/paging/ContiguousPagedList;->V0:I
+    iput-object v6, v8, Landroidx/paging/ContiguousPagedList;->k:Landroidx/paging/PagingSource;
+
+    move-object/from16 v0, p5
 
     .line 4
-    iput p2, p0, Landroidx/paging/ContiguousPagedList;->W0:I
+    iput-object v0, v8, Landroidx/paging/ContiguousPagedList;->l:Landroidx/paging/PagedList$a;
+
+    move-object/from16 v0, p8
 
     .line 5
-    iput p2, p0, Landroidx/paging/ContiguousPagedList;->X0:I
+    iput-object v0, v8, Landroidx/paging/ContiguousPagedList;->p:Ljava/lang/Object;
+
+    const v0, 0x7fffffff
 
     .line 6
-    iput-boolean p2, p0, Landroidx/paging/ContiguousPagedList;->Y0:Z
+    iput v0, v8, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    const/high16 v13, -0x80000000
 
     .line 7
-    new-instance p3, Landroidx/paging/ContiguousPagedList$a;
-
-    invoke-direct {p3, p0}, Landroidx/paging/ContiguousPagedList$a;-><init>(Landroidx/paging/ContiguousPagedList;)V
-
-    iput-object p3, p0, Landroidx/paging/ContiguousPagedList;->a1:Landroidx/paging/PageResult$a;
+    iput v13, v8, Landroidx/paging/ContiguousPagedList;->Z0:I
 
     .line 8
-    iput-object p1, p0, Landroidx/paging/ContiguousPagedList;->k0:Landroidx/paging/b;
+    iget v1, v9, Landroidx/paging/PagedList$d;->e:I
 
-    .line 9
-    iput p7, p0, Landroidx/paging/h;->f:I
+    const/4 v14, 0x1
 
-    .line 10
-    invoke-virtual {p1}, Landroidx/paging/c;->f()Z
+    const/4 v15, 0x0
 
-    move-result p3
+    if-eq v1, v0, :cond_0
 
-    if-eqz p3, :cond_0
-
-    .line 11
-    invoke-virtual {p0}, Landroidx/paging/h;->m()V
+    move v0, v14
 
     goto :goto_0
 
-    .line 12
     :cond_0
-    iget-object p3, p0, Landroidx/paging/h;->d:Landroidx/paging/h$f;
+    move v0, v15
 
-    iget v2, p3, Landroidx/paging/h$f;->e:I
+    :goto_0
+    iput-boolean v0, v8, Landroidx/paging/ContiguousPagedList;->b1:Z
 
-    iget v3, p3, Landroidx/paging/h$f;->a:I
+    .line 9
+    new-instance v5, Landroidx/paging/LegacyPageFetcher;
 
-    iget-boolean v4, p3, Landroidx/paging/h$f;->c:Z
+    .line 10
+    invoke-virtual/range {p0 .. p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
 
-    iget-object v5, p0, Landroidx/paging/h;->a:Ljava/util/concurrent/Executor;
+    move-result-object v16
 
-    iget-object v6, p0, Landroidx/paging/ContiguousPagedList;->a1:Landroidx/paging/PageResult$a;
+    move-object v0, v5
 
-    move-object v0, p1
+    move-object/from16 v1, p2
 
-    move-object v1, p6
+    move-object/from16 v2, p6
 
-    invoke-virtual/range {v0 .. v6}, Landroidx/paging/b;->l(Ljava/lang/Object;IIZLjava/util/concurrent/Executor;Landroidx/paging/PageResult$a;)V
+    move-object/from16 v3, p1
+
+    move-object/from16 v4, p3
+
+    move-object v10, v5
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p0
+
+    move-object/from16 v7, v16
+
+    .line 11
+    invoke-direct/range {v0 .. v7}, Landroidx/paging/LegacyPageFetcher;-><init>(Lkotlinx/coroutines/p0;Landroidx/paging/PagedList$d;Landroidx/paging/PagingSource;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;Landroidx/paging/LegacyPageFetcher$b;Landroidx/paging/LegacyPageFetcher$a;)V
+
+    iput-object v10, v8, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    .line 12
+    iget-boolean v0, v9, Landroidx/paging/PagedList$d;->c:Z
+
+    if-eqz v0, :cond_4
 
     .line 13
-    :goto_0
-    invoke-virtual {p1}, Landroidx/paging/b;->n()Z
+    invoke-virtual/range {p0 .. p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
 
-    move-result p1
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    .line 14
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->k()I
 
-    iget-object p1, p0, Landroidx/paging/h;->d:Landroidx/paging/h$f;
+    move-result v1
 
-    iget p1, p1, Landroidx/paging/h$f;->d:I
+    if-eq v1, v13, :cond_1
 
-    const p3, 0x7fffffff
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->k()I
 
-    if-eq p1, p3, :cond_1
+    move-result v1
 
-    const/4 p2, 0x1
+    goto :goto_1
 
     :cond_1
-    iput-boolean p2, p0, Landroidx/paging/ContiguousPagedList;->Z0:Z
+    move v1, v15
+
+    .line 15
+    :goto_1
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->j()I
+
+    move-result v2
+
+    if-eq v2, v13, :cond_2
+
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->j()I
+
+    move-result v2
+
+    move v3, v2
+
+    goto :goto_2
+
+    :cond_2
+    move v3, v15
+
+    :goto_2
+    const/4 v4, 0x0
+
+    .line 16
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->k()I
+
+    move-result v2
+
+    if-eq v2, v13, :cond_3
+
+    .line 17
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->j()I
+
+    move-result v2
+
+    if-eq v2, v13, :cond_3
+
+    move v6, v14
+
+    goto :goto_3
+
+    :cond_3
+    move v6, v15
+
+    :goto_3
+    move-object/from16 v2, p7
+
+    move-object/from16 v5, p0
+
+    .line 18
+    invoke-virtual/range {v0 .. v6}, Landroidx/paging/g0;->p(ILandroidx/paging/PagingSource$b$c;IILandroidx/paging/g0$a;Z)V
+
+    goto :goto_5
+
+    .line 19
+    :cond_4
+    invoke-virtual/range {p0 .. p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    .line 20
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->k()I
+
+    move-result v2
+
+    if-eq v2, v13, :cond_5
+
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->k()I
+
+    move-result v2
+
+    move v4, v2
+
+    goto :goto_4
+
+    :cond_5
+    move v4, v15
+
+    :goto_4
+    const/4 v6, 0x0
+
+    move-object/from16 v2, p7
+
+    move-object/from16 v5, p0
+
+    .line 21
+    invoke-virtual/range {v0 .. v6}, Landroidx/paging/g0;->p(ILandroidx/paging/PagingSource$b$c;IILandroidx/paging/g0$a;Z)V
+
+    .line 22
+    :goto_5
+    sget-object v0, Landroidx/paging/LoadType;->REFRESH:Landroidx/paging/LoadType;
+
+    invoke-virtual/range {p7 .. p7}, Landroidx/paging/PagingSource$b$c;->i()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual {v8, v0, v1}, Landroidx/paging/ContiguousPagedList;->c0(Landroidx/paging/LoadType;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public static G(III)I
+.method public static final synthetic T(Landroidx/paging/ContiguousPagedList;ZZ)V
     .locals 0
 
-    add-int/2addr p1, p0
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/ContiguousPagedList;->Y(ZZ)V
 
-    add-int/lit8 p1, p1, 0x1
-
-    sub-int/2addr p1, p2
-
-    return p1
+    return-void
 .end method
 
-.method public static H(III)I
+.method public static final synthetic U(Landroidx/paging/ContiguousPagedList;Z)V
     .locals 0
 
-    sub-int/2addr p1, p2
+    .line 1
+    iput-boolean p1, p0, Landroidx/paging/ContiguousPagedList;->K0:Z
 
-    sub-int/2addr p0, p1
+    return-void
+.end method
 
-    return p0
+.method public static final synthetic V(Landroidx/paging/ContiguousPagedList;Z)V
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Landroidx/paging/ContiguousPagedList;->X0:Z
+
+    return-void
+.end method
+
+.method public static final synthetic W(Landroidx/paging/ContiguousPagedList;Z)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroidx/paging/ContiguousPagedList;->d0(Z)V
+
+    return-void
+.end method
+
+.method public static synthetic a0()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static synthetic b0()V
+    .locals 0
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final I()V
-    .locals 4
+.method public D()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->k()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public H(I)V
+    .locals 5
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
     .line 1
-    iget v0, p0, Landroidx/paging/ContiguousPagedList;->V0:I
+    sget-object v0, Landroidx/paging/ContiguousPagedList;->d1:Landroidx/paging/ContiguousPagedList$a;
 
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 2
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->V0:I
-
-    .line 3
-    iget-object v1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v1}, Landroidx/paging/j;->h()I
-
-    move-result v1
-
-    iget-object v2, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    .line 4
-    invoke-virtual {v2}, Landroidx/paging/j;->o()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    sub-int/2addr v2, v0
-
-    iget-object v0, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v0}, Landroidx/paging/j;->n()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    .line 5
-    iget-object v1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v1}, Landroidx/paging/j;->g()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
 
     move-result-object v1
 
+    iget v1, v1, Landroidx/paging/PagedList$d;->b:I
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroidx/paging/g0;->c()I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, p1, v2}, Landroidx/paging/ContiguousPagedList$a;->b(III)I
+
+    move-result v1
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v2
+
+    iget v2, v2, Landroidx/paging/PagedList$d;->b:I
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroidx/paging/g0;->c()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroidx/paging/g0;->b()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    .line 4
+    invoke-virtual {v0, v2, p1, v4}, Landroidx/paging/ContiguousPagedList$a;->a(III)I
+
+    move-result v0
+
+    .line 5
+    iget v2, p0, Landroidx/paging/ContiguousPagedList;->u:I
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroidx/paging/ContiguousPagedList;->u:I
+
+    if-lez v1, :cond_0
+
     .line 6
-    iget-object v2, p0, Landroidx/paging/h;->b:Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
 
-    new-instance v3, Landroidx/paging/ContiguousPagedList$c;
+    invoke-virtual {v1}, Landroidx/paging/LegacyPageFetcher;->u()V
 
-    invoke-direct {v3, p0, v0, v1}, Landroidx/paging/ContiguousPagedList$c;-><init>(Landroidx/paging/ContiguousPagedList;ILjava/lang/Object;)V
+    .line 7
+    :cond_0
+    iget v1, p0, Landroidx/paging/ContiguousPagedList;->k0:I
 
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Landroidx/paging/ContiguousPagedList;->k0:I
+
+    if-lez v0, :cond_1
+
+    .line 8
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->t()V
+
+    .line 9
+    :cond_1
+    iget v0, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    iput v0, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    .line 10
+    iget v0, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iput p1, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
+
+    const/4 p1, 0x1
+
+    .line 11
+    invoke-virtual {p0, p1}, Landroidx/paging/ContiguousPagedList;->d0(Z)V
 
     return-void
 .end method
 
-.method public final J()V
-    .locals 4
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
+.method public O()V
+    .locals 1
 
     .line 1
-    iget v0, p0, Landroidx/paging/ContiguousPagedList;->K0:I
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
+    invoke-super {p0}, Landroidx/paging/PagedList;->O()V
 
     .line 2
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->K0:I
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->o()V
 
     .line 3
-    iget-object v0, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
 
-    invoke-virtual {v0}, Landroidx/paging/j;->h()I
-
-    move-result v0
-
-    iget-object v1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v1}, Landroidx/paging/j;->n()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    .line 4
-    iget-object v0, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v0}, Landroidx/paging/j;->f()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Landroidx/paging/PagedList$e;->c()Landroidx/paging/p;
+
+    move-result-object v0
+
+    .line 4
+    instance-of v0, v0, Landroidx/paging/p$a;
+
+    if-eqz v0, :cond_1
+
     .line 5
-    iget-object v2, p0, Landroidx/paging/h;->b:Ljava/util/concurrent/Executor;
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->z()Ljava/lang/Runnable;
 
-    new-instance v3, Landroidx/paging/ContiguousPagedList$b;
+    move-result-object v0
 
-    invoke-direct {v3, p0, v1, v0}, Landroidx/paging/ContiguousPagedList$b;-><init>(Landroidx/paging/ContiguousPagedList;ILjava/lang/Object;)V
+    if-nez v0, :cond_0
 
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public P(Landroidx/paging/LoadType;Landroidx/paging/p;)V
+    .locals 1
+    .param p1    # Landroidx/paging/LoadType;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/paging/p;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "loadType"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "loadState"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Landroidx/paging/PagedList$e;->i(Landroidx/paging/LoadType;Landroidx/paging/p;)V
 
     return-void
+.end method
+
+.method public final X(ZZZ)V
+    .locals 10
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->l:Landroidx/paging/PagedList$a;
+
+    if-eqz v0, :cond_4
+
+    .line 2
+    iget v0, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    const v1, 0x7fffffff
+
+    if-ne v0, v1, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/paging/g0;->size()I
+
+    move-result v0
+
+    iput v0, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    .line 4
+    :cond_0
+    iget v0, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
+
+    const/high16 v1, -0x80000000
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput v0, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    if-nez p2, :cond_2
+
+    if-eqz p3, :cond_3
+
+    .line 6
+    :cond_2
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->q()Lkotlinx/coroutines/p0;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->v()Lkotlinx/coroutines/CoroutineDispatcher;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    new-instance v0, Landroidx/paging/ContiguousPagedList$deferBoundaryCallbacks$1;
+
+    const/4 v9, 0x0
+
+    move-object v4, v0
+
+    move v5, p1
+
+    move-object v6, p0
+
+    move v7, p2
+
+    move v8, p3
+
+    invoke-direct/range {v4 .. v9}, Landroidx/paging/ContiguousPagedList$deferBoundaryCallbacks$1;-><init>(ZLandroidx/paging/ContiguousPagedList;ZZLkotlin/coroutines/c;)V
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+
+    :cond_3
+    return-void
+
+    .line 7
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Can\'t defer BoundaryCallback, no instance"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final Y(ZZ)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    iget-object p1, p0, Landroidx/paging/ContiguousPagedList;->l:Landroidx/paging/PagedList$a;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/paging/g0;->j()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/paging/PagedList$a;->b(Ljava/lang/Object;)V
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    .line 2
+    iget-object p1, p0, Landroidx/paging/ContiguousPagedList;->l:Landroidx/paging/PagedList$a;
+
+    invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/paging/g0;->l()Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroidx/paging/PagedList$a;->a(Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final Z()Landroidx/paging/PagedList$a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/paging/PagedList$a<",
+            "TV;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->l:Landroidx/paging/PagedList$a;
+
+    return-object v0
 .end method
 
 .method public a(II)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroidx/paging/h;->z(II)V
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/PagedList;->I(II)V
 
     return-void
 .end method
@@ -365,113 +984,605 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroidx/paging/h;->B(II)V
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/PagedList;->K(II)V
 
     return-void
 .end method
 
-.method public c(II)V
+.method public c(III)V
     .locals 0
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
     .line 1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Tiled callback on ContiguousPagedList"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public d(III)V
-    .locals 2
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
-
-    .line 1
-    iget v0, p0, Landroidx/paging/ContiguousPagedList;->X0:I
-
-    sub-int/2addr v0, p2
-
-    sub-int/2addr v0, p3
-
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->X0:I
-
-    const/4 v1, 0x0
-
-    .line 2
-    iput v1, p0, Landroidx/paging/ContiguousPagedList;->V0:I
-
-    if-lez v0, :cond_0
-
-    .line 3
-    invoke-virtual {p0}, Landroidx/paging/ContiguousPagedList;->I()V
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Landroidx/paging/h;->z(II)V
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/PagedList;->I(II)V
 
     add-int/2addr p1, p2
 
-    .line 5
-    invoke-virtual {p0, p1, p3}, Landroidx/paging/h;->A(II)V
+    .line 2
+    invoke-virtual {p0, p1, p3}, Landroidx/paging/PagedList;->J(II)V
 
     return-void
 .end method
 
-.method public e()V
-    .locals 1
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
-
-    const/4 v0, 0x2
-
-    .line 1
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->V0:I
-
-    return-void
-.end method
-
-.method public f(III)V
-    .locals 2
-    .annotation build Landroidx/annotation/MainThread;
+.method public final c0(Landroidx/paging/LoadType;Ljava/util/List;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/paging/LoadType;",
+            "Ljava/util/List<",
+            "+TV;>;)V"
+        }
     .end annotation
 
     .line 1
-    iget v0, p0, Landroidx/paging/ContiguousPagedList;->W0:I
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->l:Landroidx/paging/PagedList$a;
 
-    sub-int/2addr v0, p2
-
-    sub-int/2addr v0, p3
-
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->W0:I
-
-    const/4 v1, 0x0
+    if-eqz v0, :cond_3
 
     .line 2
-    iput v1, p0, Landroidx/paging/ContiguousPagedList;->K0:I
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
 
-    if-lez v0, :cond_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/paging/g0;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    if-nez v0, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Landroidx/paging/ContiguousPagedList;->J()V
+    sget-object v3, Landroidx/paging/LoadType;->PREPEND:Landroidx/paging/LoadType;
+
+    if-ne p1, v3, :cond_1
+
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    move v3, v1
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v2
+
+    :goto_1
+    if-nez v0, :cond_2
 
     .line 4
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Landroidx/paging/h;->z(II)V
+    sget-object v4, Landroidx/paging/LoadType;->APPEND:Landroidx/paging/LoadType;
+
+    if-ne p1, v4, :cond_2
+
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
 
     .line 5
-    invoke-virtual {p0, v1, p3}, Landroidx/paging/h;->A(II)V
+    :goto_2
+    invoke-virtual {p0, v0, v3, v1}, Landroidx/paging/ContiguousPagedList;->X(ZZZ)V
 
-    .line 6
-    invoke-virtual {p0, p3}, Landroidx/paging/h;->C(I)V
+    :cond_3
+    return-void
+.end method
+
+.method public d(III)V
+    .locals 0
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/PagedList;->I(II)V
+
+    const/4 p1, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, p3}, Landroidx/paging/PagedList;->J(II)V
+
+    .line 3
+    iget p1, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    .line 4
+    iget p1, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
 
     return-void
 .end method
 
-.method public g(I)V
+.method public final d0(Z)V
+    .locals 9
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/paging/ContiguousPagedList;->K0:Z
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget v0, p0, Landroidx/paging/ContiguousPagedList;->Y0:I
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v3
+
+    iget v3, v3, Landroidx/paging/PagedList$d;->b:I
+
+    if-gt v0, v3, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    .line 3
+    :goto_0
+    iget-boolean v3, p0, Landroidx/paging/ContiguousPagedList;->X0:Z
+
+    if-eqz v3, :cond_1
+
+    .line 4
+    iget v3, p0, Landroidx/paging/ContiguousPagedList;->Z0:I
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->size()I
+
+    move-result v4
+
+    sub-int/2addr v4, v1
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v5
+
+    iget v5, v5, Landroidx/paging/PagedList$d;->b:I
+
+    sub-int/2addr v4, v5
+
+    if-lt v3, v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    if-nez v0, :cond_2
+
+    if-nez v1, :cond_2
+
+    return-void
+
+    :cond_2
+    if-eqz v0, :cond_3
+
+    .line 5
+    iput-boolean v2, p0, Landroidx/paging/ContiguousPagedList;->K0:Z
+
+    :cond_3
+    if-eqz v1, :cond_4
+
+    .line 6
+    iput-boolean v2, p0, Landroidx/paging/ContiguousPagedList;->X0:Z
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    .line 7
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->q()Lkotlinx/coroutines/p0;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->v()Lkotlinx/coroutines/CoroutineDispatcher;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    new-instance v6, Landroidx/paging/ContiguousPagedList$tryDispatchBoundaryCallbacks$1;
+
+    const/4 p1, 0x0
+
+    invoke-direct {v6, p0, v0, v1, p1}, Landroidx/paging/ContiguousPagedList$tryDispatchBoundaryCallbacks$1;-><init>(Landroidx/paging/ContiguousPagedList;ZZLkotlin/coroutines/c;)V
+
+    const/4 v7, 0x2
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v3 .. v8}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+
+    goto :goto_2
+
+    .line 8
+    :cond_5
+    invoke-virtual {p0, v0, v1}, Landroidx/paging/ContiguousPagedList;->Y(ZZ)V
+
+    :goto_2
+    return-void
+.end method
+
+.method public e(Landroidx/paging/LoadType;Landroidx/paging/PagingSource$b$c;)Z
+    .locals 8
+    .param p1    # Landroidx/paging/LoadType;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/paging/PagingSource$b$c;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/paging/LoadType;",
+            "Landroidx/paging/PagingSource$b$c<",
+            "*TV;>;)Z"
+        }
+    .end annotation
+
+    const-string v0, "type"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "page"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-virtual {p2}, Landroidx/paging/PagingSource$b$c;->i()Ljava/util/List;
+
+    move-result-object v0
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->F()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroidx/paging/g0;->m()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-le v1, v2, :cond_0
+
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v3
+
+    .line 3
+    :goto_0
+    iget-boolean v2, p0, Landroidx/paging/ContiguousPagedList;->b1:Z
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v2
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v5
+
+    iget v5, v5, Landroidx/paging/PagedList$d;->e:I
+
+    .line 5
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->A()I
+
+    move-result v6
+
+    .line 6
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v7
+
+    .line 7
+    invoke-virtual {v2, v5, v6, v7}, Landroidx/paging/g0;->z(III)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move v2, v4
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    .line 8
+    :goto_1
+    sget-object v5, Landroidx/paging/LoadType;->APPEND:Landroidx/paging/LoadType;
+
+    if-ne p1, v5, :cond_3
+
+    if-eqz v2, :cond_2
+
+    if-nez v1, :cond_2
+
+    .line 9
+    iput v3, p0, Landroidx/paging/ContiguousPagedList;->k0:I
+
+    goto :goto_3
+
+    .line 10
+    :cond_2
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2, p0}, Landroidx/paging/g0;->h(Landroidx/paging/PagingSource$b$c;Landroidx/paging/g0$a;)V
+
+    .line 11
+    iget p2, p0, Landroidx/paging/ContiguousPagedList;->k0:I
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    sub-int/2addr p2, v2
+
+    iput p2, p0, Landroidx/paging/ContiguousPagedList;->k0:I
+
+    if-lez p2, :cond_5
+
+    .line 12
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p2
+
+    xor-int/2addr p2, v4
+
+    if-eqz p2, :cond_5
+
+    :goto_2
+    move v3, v4
+
+    goto :goto_3
+
+    .line 13
+    :cond_3
+    sget-object v6, Landroidx/paging/LoadType;->PREPEND:Landroidx/paging/LoadType;
+
+    if-ne p1, v6, :cond_8
+
+    if-eqz v2, :cond_4
+
+    if-eqz v1, :cond_4
+
+    .line 14
+    iput v3, p0, Landroidx/paging/ContiguousPagedList;->u:I
+
+    goto :goto_3
+
+    .line 15
+    :cond_4
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2, p0}, Landroidx/paging/g0;->v(Landroidx/paging/PagingSource$b$c;Landroidx/paging/g0$a;)V
+
+    .line 16
+    iget p2, p0, Landroidx/paging/ContiguousPagedList;->u:I
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    sub-int/2addr p2, v2
+
+    iput p2, p0, Landroidx/paging/ContiguousPagedList;->u:I
+
+    if-lez p2, :cond_5
+
+    .line 17
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p2
+
+    xor-int/2addr p2, v4
+
+    if-eqz p2, :cond_5
+
+    goto :goto_2
+
+    .line 18
+    :cond_5
+    :goto_3
+    iget-boolean p2, p0, Landroidx/paging/ContiguousPagedList;->b1:Z
+
+    if-eqz p2, :cond_7
+
+    if-eqz v1, :cond_6
+
+    .line 19
+    iget-object p2, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {p2}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/paging/PagedList$e;->d()Landroidx/paging/p;
+
+    move-result-object p2
+
+    instance-of p2, p2, Landroidx/paging/p$b;
+
+    if-nez p2, :cond_7
+
+    .line 20
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object p2
+
+    .line 21
+    iget-boolean v1, p0, Landroidx/paging/ContiguousPagedList;->a1:Z
+
+    .line 22
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v2
+
+    iget v2, v2, Landroidx/paging/PagedList$d;->e:I
+
+    .line 23
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->A()I
+
+    move-result v4
+
+    .line 24
+    invoke-virtual {p2, v1, v2, v4, p0}, Landroidx/paging/g0;->D(ZIILandroidx/paging/g0$a;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_7
+
+    .line 25
+    iget-object p2, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {p2}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
+
+    move-result-object p2
+
+    sget-object v1, Landroidx/paging/LoadType;->PREPEND:Landroidx/paging/LoadType;
+
+    sget-object v2, Landroidx/paging/p$c;->b:Landroidx/paging/p$c$a;
+
+    invoke-virtual {v2}, Landroidx/paging/p$c$a;->b()Landroidx/paging/p$c;
+
+    move-result-object v2
+
+    invoke-virtual {p2, v1, v2}, Landroidx/paging/PagedList$e;->i(Landroidx/paging/LoadType;Landroidx/paging/p;)V
+
+    goto :goto_4
+
+    .line 26
+    :cond_6
+    iget-object p2, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {p2}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/paging/PagedList$e;->b()Landroidx/paging/p;
+
+    move-result-object p2
+
+    instance-of p2, p2, Landroidx/paging/p$b;
+
+    if-nez p2, :cond_7
+
+    .line 27
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
+
+    move-result-object p2
+
+    .line 28
+    iget-boolean v1, p0, Landroidx/paging/ContiguousPagedList;->a1:Z
+
+    .line 29
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v2
+
+    iget v2, v2, Landroidx/paging/PagedList$d;->e:I
+
+    .line 30
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->A()I
+
+    move-result v4
+
+    .line 31
+    invoke-virtual {p2, v1, v2, v4, p0}, Landroidx/paging/g0;->C(ZIILandroidx/paging/g0$a;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_7
+
+    .line 32
+    iget-object p2, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {p2}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
+
+    move-result-object p2
+
+    sget-object v1, Landroidx/paging/p$c;->b:Landroidx/paging/p$c$a;
+
+    invoke-virtual {v1}, Landroidx/paging/p$c$a;->b()Landroidx/paging/p$c;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v5, v1}, Landroidx/paging/PagedList$e;->i(Landroidx/paging/LoadType;Landroidx/paging/p;)V
+
+    .line 33
+    :cond_7
+    :goto_4
+    invoke-virtual {p0, p1, v0}, Landroidx/paging/ContiguousPagedList;->c0(Landroidx/paging/LoadType;Ljava/util/List;)V
+
+    return v3
+
+    .line 34
+    :cond_8
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "unexpected result type "
+
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/f0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public f(I)V
     .locals 1
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -479,21 +1590,25 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, v0, p1}, Landroidx/paging/h;->A(II)V
+    invoke-virtual {p0, v0, p1}, Landroidx/paging/PagedList;->J(II)V
 
     .line 2
-    iget-object p1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
 
-    .line 3
-    invoke-virtual {p1}, Landroidx/paging/j;->h()I
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/paging/g0;->c()I
 
     move-result p1
 
     if-gtz p1, :cond_0
 
-    iget-object p1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
+    .line 3
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
 
-    invoke-virtual {p1}, Landroidx/paging/j;->p()I
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/paging/g0;->e()I
 
     move-result p1
 
@@ -502,353 +1617,149 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 4
     :cond_1
-    iput-boolean v0, p0, Landroidx/paging/ContiguousPagedList;->Y0:Z
+    iput-boolean v0, p0, Landroidx/paging/ContiguousPagedList;->a1:Z
 
     return-void
 .end method
 
-.method public h(I)V
+.method public g(Landroidx/paging/LoadType;Landroidx/paging/p;)V
     .locals 1
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
+    .param p1    # Landroidx/paging/LoadType;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/paging/p;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "type"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "state"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Tiled callback on ContiguousPagedList"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public i()V
-    .locals 1
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
-
-    const/4 v0, 0x2
-
-    .line 1
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->K0:I
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/PagedList;->o(Landroidx/paging/LoadType;Landroidx/paging/p;)V
 
     return-void
 .end method
 
-.method public o(Landroidx/paging/h;Landroidx/paging/h$e;)V
-    .locals 7
-    .param p1    # Landroidx/paging/h;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/h$e;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
+.method public m()V
+    .locals 1
 
+    .line 1
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
+
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->e()V
+
+    return-void
+.end method
+
+.method public n(Lgl/p;)V
+    .locals 1
+    .param p1    # Lgl/p;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/paging/h<",
-            "TV;>;",
-            "Landroidx/paging/h$e;",
-            ")V"
+            "Lgl/p<",
+            "-",
+            "Landroidx/paging/LoadType;",
+            "-",
+            "Landroidx/paging/p;",
+            "Lkotlin/d1;",
+            ">;)V"
         }
     .end annotation
 
-    .line 1
-    iget-object p1, p1, Landroidx/paging/h;->e:Landroidx/paging/j;
+    const-string v0, "callback"
 
-    .line 2
-    iget-object v0, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v0}, Landroidx/paging/j;->k()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroidx/paging/j;->k()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    .line 3
-    iget-object v1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v1}, Landroidx/paging/j;->l()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroidx/paging/j;->l()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    .line 4
-    invoke-virtual {p1}, Landroidx/paging/j;->p()I
-
-    move-result v2
-
-    .line 5
-    invoke-virtual {p1}, Landroidx/paging/j;->h()I
-
-    move-result v3
-
-    .line 6
-    invoke-virtual {p1}, Ljava/util/AbstractList;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    if-ltz v0, :cond_4
-
-    if-ltz v1, :cond_4
-
-    iget-object v4, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    .line 7
-    invoke-virtual {v4}, Landroidx/paging/j;->p()I
-
-    move-result v4
-
-    sub-int v5, v2, v0
-
-    const/4 v6, 0x0
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    if-ne v4, v5, :cond_4
-
-    iget-object v4, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    .line 8
-    invoke-virtual {v4}, Landroidx/paging/j;->h()I
-
-    move-result v4
-
-    sub-int v5, v3, v1
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    if-ne v4, v5, :cond_4
-
-    iget-object v4, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    .line 9
-    invoke-virtual {v4}, Landroidx/paging/j;->o()I
-
-    move-result v4
-
-    .line 10
-    invoke-virtual {p1}, Landroidx/paging/j;->o()I
-
-    move-result v5
-
-    add-int/2addr v5, v0
-
-    add-int/2addr v5, v1
-
-    if-ne v4, v5, :cond_4
-
-    if-eqz v0, :cond_1
-
-    .line 11
-    invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    sub-int/2addr v0, v2
-
-    .line 12
-    invoke-virtual {p1}, Landroidx/paging/j;->h()I
-
-    move-result v4
-
-    invoke-virtual {p1}, Landroidx/paging/j;->o()I
-
-    move-result p1
-
-    add-int/2addr p1, v4
-
-    if-eqz v2, :cond_0
-
-    .line 13
-    invoke-virtual {p2, p1, v2}, Landroidx/paging/h$e;->a(II)V
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    add-int/2addr p1, v2
-
-    .line 14
-    invoke-virtual {p2, p1, v0}, Landroidx/paging/h$e;->b(II)V
-
-    :cond_1
-    if-eqz v1, :cond_3
-
-    .line 15
-    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    sub-int/2addr v1, p1
-
-    if-eqz p1, :cond_2
-
-    .line 16
-    invoke-virtual {p2, v3, p1}, Landroidx/paging/h$e;->a(II)V
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    .line 17
-    invoke-virtual {p2, v6, v1}, Landroidx/paging/h$e;->b(II)V
-
-    :cond_3
-    return-void
-
-    .line 18
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Invalid snapshot provided - doesn\'t appear to be a snapshot of this PagedList"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public q()Landroidx/paging/c;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroidx/paging/c<",
-            "*TV;>;"
-        }
-    .end annotation
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->k0:Landroidx/paging/b;
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->c1:Landroidx/paging/LegacyPageFetcher;
 
-    return-object v0
-.end method
-
-.method public r()Ljava/lang/Object;
-    .locals 3
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->k0:Landroidx/paging/b;
-
-    iget v1, p0, Landroidx/paging/h;->f:I
-
-    iget-object v2, p0, Landroidx/paging/h;->g:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1, v2}, Landroidx/paging/b;->m(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/paging/LegacyPageFetcher;->g()Landroidx/paging/PagedList$e;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0, p1}, Landroidx/paging/PagedList$e;->a(Lgl/p;)V
+
+    return-void
 .end method
 
-.method public u()Z
-    .locals 1
+.method public t()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TK;"
+        }
+    .end annotation
 
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public y(I)V
-    .locals 4
-    .annotation build Landroidx/annotation/MainThread;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/paging/h;->d:Landroidx/paging/h$f;
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->C()Landroidx/paging/g0;
 
-    iget v0, v0, Landroidx/paging/h$f;->b:I
+    move-result-object v0
 
-    iget-object v1, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
+    invoke-virtual {p0}, Landroidx/paging/PagedList;->p()Landroidx/paging/PagedList$d;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/paging/g0;->o(Landroidx/paging/PagedList$d;)Landroidx/paging/l0;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 
     .line 2
-    invoke-virtual {v1}, Landroidx/paging/j;->h()I
+    :cond_0
+    invoke-virtual {p0}, Landroidx/paging/ContiguousPagedList;->x()Landroidx/paging/PagingSource;
 
-    move-result v1
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroidx/paging/PagingSource;->e(Landroidx/paging/l0;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    :goto_0
+    if-nez v0, :cond_1
 
     .line 3
-    invoke-static {v0, p1, v1}, Landroidx/paging/ContiguousPagedList;->H(III)I
-
-    move-result v0
-
-    .line 4
-    iget-object v1, p0, Landroidx/paging/h;->d:Landroidx/paging/h$f;
-
-    iget v1, v1, Landroidx/paging/h$f;->b:I
-
-    iget-object v2, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    .line 5
-    invoke-virtual {v2}, Landroidx/paging/j;->h()I
-
-    move-result v2
-
-    iget-object v3, p0, Landroidx/paging/h;->e:Landroidx/paging/j;
-
-    invoke-virtual {v3}, Landroidx/paging/j;->o()I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    .line 6
-    invoke-static {v1, p1, v3}, Landroidx/paging/ContiguousPagedList;->G(III)I
-
-    move-result p1
-
-    .line 7
-    iget v1, p0, Landroidx/paging/ContiguousPagedList;->W0:I
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iput v0, p0, Landroidx/paging/ContiguousPagedList;->W0:I
-
-    if-lez v0, :cond_0
-
-    .line 8
-    invoke-virtual {p0}, Landroidx/paging/ContiguousPagedList;->J()V
-
-    .line 9
-    :cond_0
-    iget v0, p0, Landroidx/paging/ContiguousPagedList;->X0:I
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/paging/ContiguousPagedList;->X0:I
-
-    if-lez p1, :cond_1
-
-    .line 10
-    invoke-virtual {p0}, Landroidx/paging/ContiguousPagedList;->I()V
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->p:Ljava/lang/Object;
 
     :cond_1
-    return-void
+    return-object v0
+.end method
+
+.method public final x()Landroidx/paging/PagingSource;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/paging/PagingSource<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/paging/ContiguousPagedList;->k:Landroidx/paging/PagingSource;
+
+    return-object v0
 .end method

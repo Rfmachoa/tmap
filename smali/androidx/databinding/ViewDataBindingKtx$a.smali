@@ -29,10 +29,10 @@
         "localFieldId",
         "Ljava/lang/ref/ReferenceQueue;",
         "referenceQueue",
-        "Landroidx/databinding/t;",
+        "Landroidx/databinding/u;",
         "",
         "a",
-        "(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/t;"
+        "(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/u;"
     }
     k = 0x3
     mv = {
@@ -70,7 +70,7 @@
 
 
 # virtual methods
-.method public final a(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/t;
+.method public final a(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)Landroidx/databinding/u;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -80,7 +80,7 @@
             "Ljava/lang/ref/ReferenceQueue<",
             "Landroidx/databinding/ViewDataBinding;",
             ">;)",
-            "Landroidx/databinding/t<",
+            "Landroidx/databinding/u<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -95,7 +95,7 @@
 
     invoke-direct {v0, p1, p2, p3}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;-><init>(Landroidx/databinding/ViewDataBinding;ILjava/lang/ref/ReferenceQueue;)V
 
-    invoke-virtual {v0}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c()Landroidx/databinding/t;
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c()Landroidx/databinding/u;
 
     move-result-object p1
 

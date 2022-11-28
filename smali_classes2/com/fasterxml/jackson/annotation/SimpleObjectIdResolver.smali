@@ -50,21 +50,17 @@
 
     .line 3
     :cond_0
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 4
-    :goto_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/annotation/SimpleObjectIdResolver;->_items:Ljava/util/Map;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v0, p2, :cond_1
 
     return-void
 
-    .line 5
+    .line 4
     :cond_1
     new-instance p2, Ljava/lang/IllegalStateException;
 
@@ -103,6 +99,15 @@
     invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p2
+
+    .line 5
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/annotation/SimpleObjectIdResolver;->_items:Ljava/util/Map;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method
 
 .method public canUseFor(Lcom/fasterxml/jackson/annotation/ObjectIdResolver;)Z

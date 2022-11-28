@@ -1,88 +1,85 @@
-.class public Le0/b;
-.super Landroidx/camera/extensions/c;
-.source "AutoPreviewExtender.java"
+.class public final Le0/b;
+.super Ljava/lang/Object;
+.source "ImageWriterCompatApi23Impl.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Le0/b$c;,
-        Le0/b$b;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x17
 .end annotation
-
-
-# static fields
-.field public static final g:Ljava/lang/String; = "AutoPreviewExtender"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Landroidx/camera/extensions/c;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Le0/b$a;)V
+.method public static a(Landroid/media/ImageWriter;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Le0/b;-><init>()V
+    invoke-virtual {p0}, Landroid/media/ImageWriter;->close()V
 
     return-void
 .end method
 
-.method public static j(Landroidx/camera/core/g2$b;)Le0/b;
-    .locals 1
-    .param p0    # Landroidx/camera/core/g2$b;
+.method public static b(Landroid/media/ImageWriter;)Landroid/media/Image;
+    .locals 0
+    .param p0    # Landroid/media/ImageWriter;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "builder"
-        }
+    .line 1
+    invoke-virtual {p0}, Landroid/media/ImageWriter;->dequeueInputImage()Landroid/media/Image;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/view/Surface;I)Landroid/media/ImageWriter;
+    .locals 0
+    .param p0    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Le0/k;->d()Z
+    invoke-static {p0, p1}, Landroid/media/ImageWriter;->newInstance(Landroid/view/Surface;I)Landroid/media/ImageWriter;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    :try_start_0
-    new-instance v0, Le0/b$c;
-
-    invoke-direct {v0, p0}, Le0/b$c;-><init>(Landroidx/camera/core/g2$b;)V
-    :try_end_0
-    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    const-string p0, "AutoPreviewExtender"
-
-    const-string v0, "No auto preview extender found. Falling back to default."
-
-    .line 3
-    invoke-static {p0, v0}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    :cond_0
-    new-instance p0, Le0/b$b;
-
-    invoke-direct {p0}, Le0/b$b;-><init>()V
+    move-result-object p0
 
     return-object p0
+.end method
+
+.method public static d(Landroid/media/ImageWriter;Landroid/media/Image;)V
+    .locals 0
+    .param p0    # Landroid/media/ImageWriter;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Landroid/media/Image;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/media/ImageWriter;->queueInputImage(Landroid/media/Image;)V
+
+    return-void
 .end method

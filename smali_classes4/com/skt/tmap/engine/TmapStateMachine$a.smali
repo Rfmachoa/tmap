@@ -3,7 +3,7 @@
 .source "TmapStateMachine.java"
 
 # interfaces
-.implements Lsk/o;
+.implements Lzm/o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lsk/o<",
+        "Lzm/o<",
         "Lcom/skt/tmap/engine/TmapStateMachine$TmapState;",
         ">;"
     }
@@ -91,11 +91,11 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapStateMachine$a;->a:Lcom/skt/tmap/engine/TmapStateMachine;
 
-    iget-object p1, p1, Lcom/skt/tmap/engine/TmapStateMachine;->a:Lsk/b;
+    iget-object p1, p1, Lcom/skt/tmap/engine/TmapStateMachine;->a:Lzm/b;
 
     sget-object p2, Lcom/skt/tmap/engine/TmapStateMachine$TmapState;->AUTHENTICATING:Lcom/skt/tmap/engine/TmapStateMachine$TmapState;
 
-    invoke-virtual {p1, p2}, Lsk/p;->r(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lzm/p;->q(Ljava/lang/Object;)Z
 
     return-void
 .end method

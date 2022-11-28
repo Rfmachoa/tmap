@@ -3,42 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/r;
+.implements Lgk/g;
 
 
-# instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
-
-.field public final synthetic b:Lcom/amplifyframework/core/model/ModelSchema;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/g2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/syncengine/g2;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/g2;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/syncengine/g2;->a:Lcom/amplifyframework/datastore/syncengine/g2;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/g2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/g2;->b:Lcom/amplifyframework/core/model/ModelSchema;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/g2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
+    check-cast p1, Lio/reactivex/rxjava3/disposables/c;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/g2;->b:Lcom/amplifyframework/core/model/ModelSchema;
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->b(Lio/reactivex/rxjava3/disposables/c;)V
 
-    check-cast p1, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
-
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->k(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

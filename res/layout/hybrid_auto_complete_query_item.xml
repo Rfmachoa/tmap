@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/hybrid_auto_complete_query_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/gray_900" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/suggest_text" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_56dp" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginRight="@dimen/tmap_20dp" android:maxLines="1" android:includeFontPadding="false" android:fontFamily="@font/tmobi500" />
+    <View android:background="@color/gray_200" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_below="@id/suggest_text" />
+</RelativeLayout>

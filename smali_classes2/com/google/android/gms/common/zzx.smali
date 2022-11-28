@@ -1,216 +1,273 @@
-.class final Lcom/google/android/gms/common/zzx;
+.class Lcom/google/android/gms/common/zzx;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
+
+
+# annotations
+.annotation runtime Lcom/google/errorprone/annotations/CheckReturnValue;
+.end annotation
+
+
+# static fields
+.field private static final zze:Lcom/google/android/gms/common/zzx;
 
 
 # instance fields
-.field private zza:Ljava/lang/String;
-    .annotation build Landroidx/annotation/Nullable;
+.field public final zza:Z
+
+.field public final zzb:Ljava/lang/String;
+    .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 .end field
 
-.field private zzb:J
-
-.field private zzc:Lcom/google/android/gms/internal/common/zzag;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/common/zzag<",
-            "[B>;"
-        }
+.field public final zzc:Ljava/lang/Throwable;
+    .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 .end field
 
-.field private zzd:Lcom/google/android/gms/internal/common/zzag;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/common/zzag<",
-            "[B>;"
-        }
-    .end annotation
-.end field
+.field public final zzd:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public static constructor <clinit>()V
+    .locals 7
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v6, Lcom/google/android/gms/common/zzx;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lcom/google/android/gms/common/zzx;->zza:Ljava/lang/String;
+    const/4 v2, 0x3
 
-    const-wide/16 v0, -0x1
+    const/4 v3, 0x1
 
-    iput-wide v0, p0, Lcom/google/android/gms/common/zzx;->zzb:J
+    const/4 v4, 0x0
 
-    invoke-static {}, Lcom/google/android/gms/internal/common/zzag;->zzl()Lcom/google/android/gms/internal/common/zzag;
+    const/4 v5, 0x0
 
-    move-result-object v0
+    move-object v0, v6
 
-    iput-object v0, p0, Lcom/google/android/gms/common/zzx;->zzc:Lcom/google/android/gms/internal/common/zzag;
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 2
-    invoke-static {}, Lcom/google/android/gms/internal/common/zzag;->zzl()Lcom/google/android/gms/internal/common/zzag;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/gms/common/zzx;->zzd:Lcom/google/android/gms/internal/common/zzag;
+    sput-object v6, Lcom/google/android/gms/common/zzx;->zze:Lcom/google/android/gms/common/zzx;
 
     return-void
 .end method
 
+.method private constructor <init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+    .param p4    # Ljava/lang/String;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p5    # Ljava/lang/Throwable;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lcom/google/android/gms/common/zzx;->zza:Z
+
+    iput p2, p0, Lcom/google/android/gms/common/zzx;->zzd:I
+
+    iput-object p4, p0, Lcom/google/android/gms/common/zzx;->zzb:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/google/android/gms/common/zzx;->zzc:Ljava/lang/Throwable;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ZIILjava/lang/String;Ljava/lang/Throwable;Lcom/google/android/gms/common/zzw;)V
+    .locals 0
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x1
+
+    const/4 p4, 0x5
+
+    const/4 p5, 0x0
+
+    const/4 p6, 0x0
+
+    move-object p1, p0
+
+    invoke-direct/range {p1 .. p6}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static zzb()Lcom/google/android/gms/common/zzx;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    sget-object v0, Lcom/google/android/gms/common/zzx;->zze:Lcom/google/android/gms/common/zzx;
+
+    return-object v0
+.end method
+
+.method public static zzc(Ljava/lang/String;)Lcom/google/android/gms/common/zzx;
+    .locals 7
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    new-instance v6, Lcom/google/android/gms/common/zzx;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x5
+
+    const/4 v5, 0x0
+
+    move-object v0, v6
+
+    move-object v4, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v6
+.end method
+
+.method public static zzd(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/gms/common/zzx;
+    .locals 7
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    new-instance v6, Lcom/google/android/gms/common/zzx;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x5
+
+    move-object v0, v6
+
+    move-object v4, p0
+
+    move-object v5, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v6
+.end method
+
+.method public static zzf(I)Lcom/google/android/gms/common/zzx;
+    .locals 7
+
+    new-instance v6, Lcom/google/android/gms/common/zzx;
+
+    const/4 v1, 0x1
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v0, v6
+
+    move v2, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v6
+.end method
+
+.method public static zzg(IILjava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/gms/common/zzx;
+    .locals 7
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Throwable;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+
+    new-instance v6, Lcom/google/android/gms/common/zzx;
+
+    const/4 v1, 0x0
+
+    move-object v0, v6
+
+    move v2, p0
+
+    move v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v6
+.end method
+
 
 # virtual methods
-.method public final zza(J)Lcom/google/android/gms/common/zzx;
-    .locals 0
-
-    iput-wide p1, p0, Lcom/google/android/gms/common/zzx;->zzb:J
-
-    return-object p0
-.end method
-
-.method public final zzb(Ljava/util/List;)Lcom/google/android/gms/common/zzx;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "[B>;)",
-            "Lcom/google/android/gms/common/zzx;"
-        }
+.method public zza()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 
-    .line 1
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/android/gms/common/zzx;->zzb:Ljava/lang/String;
 
-    .line 2
-    invoke-static {p1}, Lcom/google/android/gms/internal/common/zzag;->zzk(Ljava/util/Collection;)Lcom/google/android/gms/internal/common/zzag;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/android/gms/common/zzx;->zzd:Lcom/google/android/gms/internal/common/zzag;
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public final zzc(Ljava/util/List;)Lcom/google/android/gms/common/zzx;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "[B>;)",
-            "Lcom/google/android/gms/common/zzx;"
-        }
-    .end annotation
+.method public final zze()V
+    .locals 3
 
     .line 1
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zzx;->zza:Z
 
-    .line 2
-    invoke-static {p1}, Lcom/google/android/gms/internal/common/zzag;->zzk(Ljava/util/Collection;)Lcom/google/android/gms/internal/common/zzag;
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Lcom/google/android/gms/common/zzx;->zzc:Lcom/google/android/gms/internal/common/zzag;
+    const-string v1, "GoogleCertificatesRslt"
 
-    return-object p0
-.end method
-
-.method public final zzd(Ljava/lang/String;)Lcom/google/android/gms/common/zzx;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/common/zzx;->zza:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final zze()Lcom/google/android/gms/common/zzz;
-    .locals 9
-
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/common/zzx;->zza:Ljava/lang/String;
-
-    if-eqz v0, :cond_3
-
-    iget-wide v0, p0, Lcom/google/android/gms/common/zzx;->zzb:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-ltz v0, :cond_2
-
-    .line 2
-    iget-object v0, p0, Lcom/google/android/gms/common/zzx;->zzc:Lcom/google/android/gms/internal/common/zzag;
-
-    .line 3
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/zzx;->zzd:Lcom/google/android/gms/internal/common/zzag;
+    iget-object v0, p0, Lcom/google/android/gms/common/zzx;->zzc:Ljava/lang/Throwable;
 
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+    if-eqz v0, :cond_0
 
-    move-result v0
+    .line 2
+    invoke-virtual {p0}, Lcom/google/android/gms/common/zzx;->zza()Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    iget-object v2, p0, Lcom/google/android/gms/common/zzx;->zzc:Ljava/lang/Throwable;
 
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+
+    .line 3
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0}, Lcom/google/android/gms/common/zzx;->zza()Ljava/lang/String;
 
-    const-string v1, "Either orderedTestCerts or orderedProdCerts must have at least one cert"
+    move-result-object v0
 
-    .line 4
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    :goto_0
-    new-instance v0, Lcom/google/android/gms/common/zzz;
-
-    iget-object v3, p0, Lcom/google/android/gms/common/zzx;->zza:Ljava/lang/String;
-
-    iget-wide v4, p0, Lcom/google/android/gms/common/zzx;->zzb:J
-
-    iget-object v6, p0, Lcom/google/android/gms/common/zzx;->zzc:Lcom/google/android/gms/internal/common/zzag;
-
-    iget-object v7, p0, Lcom/google/android/gms/common/zzx;->zzd:Lcom/google/android/gms/internal/common/zzag;
-
-    const/4 v8, 0x0
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/common/zzz;-><init>(Ljava/lang/String;JLcom/google/android/gms/internal/common/zzag;Lcom/google/android/gms/internal/common/zzag;Lcom/google/android/gms/common/zzy;)V
-
-    return-object v0
-
-    .line 5
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "minimumStampedVersionNumber must be greater than or equal to 0"
-
-    .line 6
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 7
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "packageName must be defined"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

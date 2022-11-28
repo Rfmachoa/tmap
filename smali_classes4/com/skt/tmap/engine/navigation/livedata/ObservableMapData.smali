@@ -77,14 +77,17 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
 .field private final TAG:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final VALID_DISTANCE_FOR_ALTERNATIVE_ROUTE:I
 
@@ -110,6 +113,9 @@
 .field private zoomLevel:I
 
 .field private final zoomLevelController:Lcom/skt/tmap/engine/navigation/livedata/ZoomLevelController;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -196,9 +202,7 @@
     .line 2
     aget p1, v11, v0
 
-    const/16 p2, 0xa
-
-    int-to-float p2, p2
+    const/high16 p2, 0x41200000    # 10.0f
 
     cmpl-float p1, p1, p2
 
@@ -512,6 +516,8 @@
     move-result p1
 
     float-to-int p1, p1
+
+    rsub-int/lit8 p1, p1, 0x5a
 
     iput p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableMapData;->tilt:I
 

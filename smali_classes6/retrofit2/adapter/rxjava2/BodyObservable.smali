@@ -1,5 +1,5 @@
 .class final Lretrofit2/adapter/rxjava2/BodyObservable;
-.super Lkh/z;
+.super Loj/z;
 .source "BodyObservable.java"
 
 
@@ -15,17 +15,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lkh/z<",
+        "Loj/z<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private final upstream:Lkh/z;
+.field private final upstream:Loj/z;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkh/z<",
+            "Loj/z<",
             "Lretrofit2/Response<",
             "TT;>;>;"
         }
@@ -34,46 +34,46 @@
 
 
 # direct methods
-.method public constructor <init>(Lkh/z;)V
+.method public constructor <init>(Loj/z;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkh/z<",
+            "Loj/z<",
             "Lretrofit2/Response<",
             "TT;>;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lkh/z;-><init>()V
+    invoke-direct {p0}, Loj/z;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable;->upstream:Lkh/z;
+    iput-object p1, p0, Lretrofit2/adapter/rxjava2/BodyObservable;->upstream:Loj/z;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public subscribeActual(Lkh/g0;)V
+.method public subscribeActual(Loj/g0;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkh/g0<",
+            "Loj/g0<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable;->upstream:Lkh/z;
+    iget-object v0, p0, Lretrofit2/adapter/rxjava2/BodyObservable;->upstream:Loj/z;
 
     new-instance v1, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;
 
-    invoke-direct {v1, p1}, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;-><init>(Lkh/g0;)V
+    invoke-direct {v1, p1}, Lretrofit2/adapter/rxjava2/BodyObservable$BodyObserver;-><init>(Loj/g0;)V
 
-    invoke-virtual {v0, v1}, Lkh/z;->subscribe(Lkh/g0;)V
+    invoke-virtual {v0, v1}, Loj/z;->subscribe(Loj/g0;)V
 
     return-void
 .end method

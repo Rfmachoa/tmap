@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/util/i0;Lcom/tmapmobility/tmap/exoplayer2/extractor/j;Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/TsPayloadReader$d;)V
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/util/j0;Lcom/tmapmobility/tmap/exoplayer2/extractor/l;Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/TsPayloadReader$d;)V
 .end method
 
-.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)V
+.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)V
 .end method

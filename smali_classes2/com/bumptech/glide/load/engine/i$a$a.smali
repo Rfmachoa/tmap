@@ -3,7 +3,7 @@
 .source "Engine.java"
 
 # interfaces
-.implements Ln5/a$d;
+.implements Lk7/a$d;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ln5/a$d<",
+        "Lk7/a$d<",
         "Lcom/bumptech/glide/load/engine/DecodeJob<",
         "*>;>;"
     }
@@ -61,9 +61,9 @@
 
     iget-object v2, v1, Lcom/bumptech/glide/load/engine/i$a;->a:Lcom/bumptech/glide/load/engine/DecodeJob$e;
 
-    iget-object v1, v1, Lcom/bumptech/glide/load/engine/i$a;->b:Lr1/n$a;
+    iget-object v1, v1, Lcom/bumptech/glide/load/engine/i$a;->b:Landroidx/core/util/o$a;
 
-    invoke-direct {v0, v2, v1}, Lcom/bumptech/glide/load/engine/DecodeJob;-><init>(Lcom/bumptech/glide/load/engine/DecodeJob$e;Lr1/n$a;)V
+    invoke-direct {v0, v2, v1}, Lcom/bumptech/glide/load/engine/DecodeJob;-><init>(Lcom/bumptech/glide/load/engine/DecodeJob$e;Landroidx/core/util/o$a;)V
 
     return-object v0
 .end method

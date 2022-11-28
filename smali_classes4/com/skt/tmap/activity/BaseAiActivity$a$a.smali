@@ -51,12 +51,12 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$a;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$a;
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0
@@ -77,21 +77,21 @@
 
     const-string v2, "Y"
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$a;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$a;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->R(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->T(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$a;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$a;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseAiActivity;->H6()V
+    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseAiActivity;->Q6()V
 
     .line 7
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$a;
@@ -100,7 +100,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->r6(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->A6(Z)V
 
     return-void
 .end method

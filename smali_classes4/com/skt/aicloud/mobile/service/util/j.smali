@@ -684,7 +684,7 @@
 
     const-string v4, "EventManagerHelper"
 
-    const-string/jumbo v5, "unknown network type:%s"
+    const-string v5, "unknown network type:%s"
 
     new-array v3, v3, [Ljava/lang/Object;
 

@@ -12,6 +12,7 @@
 
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/fasterxml/jackson/annotation/JsonFormat;
+        lenient = .enum Lcom/fasterxml/jackson/annotation/OptBoolean;->DEFAULT:Lcom/fasterxml/jackson/annotation/OptBoolean;
         locale = "##default"
         pattern = ""
         shape = .enum Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->ANY:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
@@ -52,6 +53,9 @@
 
 
 # virtual methods
+.method public abstract lenient()Lcom/fasterxml/jackson/annotation/OptBoolean;
+.end method
+
 .method public abstract locale()Ljava/lang/String;
 .end method
 

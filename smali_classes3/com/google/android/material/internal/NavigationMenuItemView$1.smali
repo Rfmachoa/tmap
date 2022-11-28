@@ -32,22 +32,22 @@
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
     .locals 0
-    .param p2    # Lt1/c;
+    .param p2    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
 
     .line 2
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView$1;->this$0:Lcom/google/android/material/internal/NavigationMenuItemView;
 
     iget-boolean p1, p1, Lcom/google/android/material/internal/NavigationMenuItemView;->checkable:Z
 
-    invoke-virtual {p2, p1}, Lt1/c;->S0(Z)V
+    invoke-virtual {p2, p1}, Lk2/c;->X0(Z)V
 
     return-void
 .end method

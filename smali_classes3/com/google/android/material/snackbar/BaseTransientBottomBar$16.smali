@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;->startSlideInAnimation()V
+    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;->startSlideOutAnimation(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,22 +22,20 @@
 
 .field public final synthetic this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-.field public final synthetic val$translationYBottom:I
-
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;I)V
+.method public constructor <init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$16;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$16;->val$translationYBottom:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 p1, 0x0
+
     .line 2
-    iput p2, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$16;->previousAnimatedIntValue:I
+    iput p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$16;->previousAnimatedIntValue:I
 
     return-void
 .end method

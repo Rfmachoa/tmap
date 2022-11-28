@@ -28,9 +28,15 @@
     <include android:id="@id/navi_vms" layout="@layout/navi_vms_view" />
     <include android:id="@id/navi_v2x" layout="@layout/navi_v2x_view" />
     <include android:id="@id/navi_v2v" layout="@layout/navi_v2v_view" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/navi_button_ui_ev_search_layout" android:tag="binding_5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/navi_button_ui_ev_search_button_layout" android:tag="binding_6" android:layout_width="@dimen/tmap_142dp" android:layout_height="@dimen/tmap_89dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent">
+            <ImageView android:id="@id/navi_button_ui_ev_search_button" android:tag="binding_7" android:layout_width="@dimen/tmap_58dp" android:layout_height="@dimen/tmap_58dp" android:layout_marginRight="@dimen/tmap_10dp" android:src="@drawable/btn_ev_search_selector" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
+            <TextView android:textSize="@dimen/tmap_12dp" android:textColor="@color/color_00a1cf" android:gravity="center" android:id="@id/ev_search_bubble_text" android:background="@drawable/tooltip_evstation" android:paddingLeft="@dimen/tmap_17dp" android:paddingTop="@dimen/tmap_17dp" android:paddingRight="@dimen/tmap_17dp" android:paddingBottom="@dimen/tmap_19dp" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_51dp" android:text="@string/ev_station_search" android:fontFamily="@font/tmobi500" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <include android:id="@id/navi_pickup_approaching" layout="@layout/navi_pickup_via_approaching_sheet" />
     <include android:id="@id/navi_arrive_info" layout="@layout/navi_arrive_info_view" />
-    <include android:id="@id/traffic_signal_view" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/traffic_signal_layout" />
+    <include android:id="@id/traffic_signal_view" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/traffic_signal_view" />
     <com.skt.tmap.view.HUDView android:layout_gravity="center|left|top" android:id="@id/hudView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <View android:id="@id/hud_caution_layout" android:background="#4dff0000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

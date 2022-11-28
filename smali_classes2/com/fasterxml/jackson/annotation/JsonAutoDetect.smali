@@ -22,6 +22,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;,
         Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;
     }
 .end annotation

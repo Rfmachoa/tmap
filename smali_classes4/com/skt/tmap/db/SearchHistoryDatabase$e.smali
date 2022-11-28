@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/db/SearchHistoryDatabase;->E(Lcom/skt/tmap/db/SearchHistoryDatabase;Ljava/util/List;)V
+    value = Lcom/skt/tmap/db/SearchHistoryDatabase;->O(Lcom/skt/tmap/db/SearchHistoryDatabase;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,29 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/List;
-
-.field public final synthetic b:Lcom/skt/tmap/db/SearchHistoryDatabase;
+.field public final synthetic a:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/skt/tmap/db/SearchHistoryDatabase;)V
+.method public constructor <init>(Lcom/skt/tmap/db/SearchHistoryDatabase;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x1010,
             0x1010
         }
         names = {
-            "val$searchHistoryItems",
             "val$database"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$e;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$e;->b:Lcom/skt/tmap/db/SearchHistoryDatabase;
+    iput-object p1, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$e;->a:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,47 +44,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$e;->a:Ljava/util/List;
+    iget-object v0, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$e;->a:Lcom/skt/tmap/db/SearchHistoryDatabase;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lcom/skt/tmap/db/SearchHistoryDatabase;->X()Lxd/h;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Lxd/h;->f()V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/skt/tmap/db/entity/SearchHistoryEntity;
-
-    .line 2
-    iget-object v2, p0, Lcom/skt/tmap/db/SearchHistoryDatabase$e;->b:Lcom/skt/tmap/db/SearchHistoryDatabase;
-
-    invoke-virtual {v2}, Lcom/skt/tmap/db/SearchHistoryDatabase;->H()Lac/h;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Lcom/skt/tmap/db/entity/SearchHistoryEntity;
-
-    const/4 v4, 0x0
-
-    aput-object v1, v3, v4
-
-    invoke-interface {v2, v3}, Lac/h;->b([Lcom/skt/tmap/db/entity/SearchHistoryEntity;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

@@ -14,11 +14,11 @@
 
 
 # static fields
-.field public static final adSize:I = 0x7f040024
+.field public static final adSize:I = 0x7f04002a
 
-.field public static final adSizes:I = 0x7f040025
+.field public static final adSizes:I = 0x7f04002b
 
-.field public static final adUnitId:I = 0x7f040026
+.field public static final adUnitId:I = 0x7f04002c
 
 
 # direct methods

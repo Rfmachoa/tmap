@@ -29,13 +29,11 @@
         }
     .end annotation
 
-    .line 2
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v0
+    const/4 v0, 0x0
 
     new-array v0, v0, [Lcom/fasterxml/jackson/core/JsonFactory;
 
+    .line 2
     invoke-interface {p1, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -263,7 +261,7 @@
     const/16 v0, 0x5b
 
     .line 1
-    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/a;->a(C)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Landroidx/emoji2/text/flatbuffer/j;->a(C)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

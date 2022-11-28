@@ -80,7 +80,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {p2, v2}, Lvd/a;->i(I)V
+    invoke-virtual {p2, v2}, Lyf/a;->j(I)V
 
     return v3
 
@@ -108,11 +108,11 @@
     check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 6
-    iget p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->g1:I
+    iget p3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->i1:I
 
     if-nez p3, :cond_2
 
-    iget v1, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->h1:I
+    iget v1, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->j1:I
 
     if-eqz v1, :cond_5
 
@@ -143,7 +143,7 @@
     goto :goto_0
 
     :cond_4
-    iget v3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->h1:I
+    iget v3, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->j1:I
 
     .line 9
     :goto_0
@@ -210,7 +210,7 @@
     invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->b()V
 
     .line 16
-    invoke-virtual {p2, v2}, Lvd/a;->i(I)V
+    invoke-virtual {p2, v2}, Lyf/a;->j(I)V
 
     const/4 p1, 0x1
 

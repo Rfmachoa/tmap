@@ -100,7 +100,7 @@
     const-string v1, " ,y="
 
     .line 4
-    invoke-static {v0, p1, v1, p2}, Lc3/d;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p1, v1, p2}, Landroidx/emoji2/text/flatbuffer/x;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

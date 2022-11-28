@@ -1,14 +1,14 @@
 .class public Lcom/skt/tmap/dialog/r$b;
 .super Ljava/lang/Object;
-.source "SimpleItemSelectDialog.java"
+.source "PoiFavoriteDialog.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/dialog/r;-><init>(Landroid/app/Activity;[Ljava/lang/String;ILcom/skt/tmap/dialog/r$d;)V
+    value = Lcom/skt/tmap/dialog/r;->i(Landroid/app/Dialog;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,93 +43,40 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 4
+.method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
+            0x0,
+            0x0,
             0x0
         }
         names = {
-            "view"
+            "v",
+            "actionId",
+            "event"
         }
     .end annotation
 
+    const/4 p3, 0x6
+
+    if-ne p2, p3, :cond_0
+
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/r$b;->a:Lcom/skt/tmap/dialog/r;
+    iget-object p2, p0, Lcom/skt/tmap/dialog/r$b;->a:Lcom/skt/tmap/dialog/r;
 
-    invoke-static {v0}, Lcom/skt/tmap/dialog/r;->x(Lcom/skt/tmap/dialog/r;)Ljava/util/ArrayList;
+    invoke-static {p2}, Lcom/skt/tmap/dialog/r;->x(Lcom/skt/tmap/dialog/r;)Landroid/widget/EditText;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/RadioButton;
-
-    .line 2
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/widget/RadioButton;->getId()I
-
-    move-result v3
-
-    if-ne v2, v3, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_1
-    invoke-virtual {v1, v2}, Landroid/widget/RadioButton;->setChecked(Z)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    iget-object v0, p0, Lcom/skt/tmap/dialog/r$b;->a:Lcom/skt/tmap/dialog/r;
-
-    invoke-static {v0}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Lcom/skt/tmap/dialog/r$d;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    .line 4
-    iget-object v0, p0, Lcom/skt/tmap/dialog/r$b;->a:Lcom/skt/tmap/dialog/r;
-
-    invoke-static {v0}, Lcom/skt/tmap/dialog/r;->y(Lcom/skt/tmap/dialog/r;)Lcom/skt/tmap/dialog/r$d;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p2, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :cond_0
+    const/4 p1, 0x0
 
-    move-result p1
-
-    invoke-interface {v0, p1}, Lcom/skt/tmap/dialog/r$d;->b(I)V
-
-    :cond_2
-    return-void
+    return p1
 .end method

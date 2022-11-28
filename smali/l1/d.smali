@@ -1,37 +1,79 @@
-.class public final Ll1/d;
-.super Ljava/lang/Object;
-.source "EnvironmentCompat.java"
+.class public Ll1/d;
+.super Landroidx/constraintlayout/core/state/a;
+.source "ChainReference.java"
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "EnvironmentCompat"
+# instance fields
+.field public n0:F
 
-.field public static final b:Ljava/lang/String; = "unknown"
+.field public o0:Landroidx/constraintlayout/core/state/State$Chain;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroidx/constraintlayout/core/state/State;Landroidx/constraintlayout/core/state/State$Helper;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/core/state/a;-><init>(Landroidx/constraintlayout/core/state/State;Landroidx/constraintlayout/core/state/State$Helper;)V
+
+    const/high16 p1, 0x3f000000    # 0.5f
+
+    .line 2
+    iput p1, p0, Ll1/d;->n0:F
+
+    .line 3
+    sget-object p1, Landroidx/constraintlayout/core/state/State$Chain;->SPREAD:Landroidx/constraintlayout/core/state/State$Chain;
+
+    iput-object p1, p0, Ll1/d;->o0:Landroidx/constraintlayout/core/state/State$Chain;
 
     return-void
 .end method
 
-.method public static a(Ljava/io/File;)Ljava/lang/String;
+
+# virtual methods
+.method public Q0(F)Ll1/d;
     .locals 0
-    .param p0    # Ljava/io/File;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
-    invoke-static {p0}, Landroid/os/Environment;->getExternalStorageState(Ljava/io/File;)Ljava/lang/String;
-
-    move-result-object p0
+    iput p1, p0, Ll1/d;->n0:F
 
     return-object p0
+.end method
+
+.method public R0()F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Ll1/d;->n0:F
+
+    return v0
+.end method
+
+.method public S0()Landroidx/constraintlayout/core/state/State$Chain;
+    .locals 1
+
+    .line 1
+    sget-object v0, Landroidx/constraintlayout/core/state/State$Chain;->SPREAD:Landroidx/constraintlayout/core/state/State$Chain;
+
+    return-object v0
+.end method
+
+.method public T0(Landroidx/constraintlayout/core/state/State$Chain;)Ll1/d;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Ll1/d;->o0:Landroidx/constraintlayout/core/state/State$Chain;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic n(F)Landroidx/constraintlayout/core/state/ConstraintReference;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Ll1/d;->Q0(F)Ll1/d;
+
+    move-result-object p1
+
+    return-object p1
 .end method

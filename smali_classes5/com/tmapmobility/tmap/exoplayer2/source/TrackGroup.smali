@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final e:Ljava/lang/String; = "TrackGroup"
+.field public static final f:Ljava/lang/String; = "TrackGroup"
 
-.field public static final f:I = 0x0
+.field public static final g:I = 0x0
 
-.field public static final g:I = 0x1
+.field public static final h:I = 0x1
 
-.field public static final h:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+.field public static final i:Lcom/tmapmobility/tmap/exoplayer2/h$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
@@ -37,9 +37,11 @@
 
 .field public final b:Ljava/lang/String;
 
-.field public final c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+.field public final c:I
 
-.field public d:I
+.field public final d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+
+.field public e:I
 
 
 # direct methods
@@ -47,21 +49,23 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/f1;->a:Lcom/tmapmobility/tmap/exoplayer2/source/f1;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/g1;->a:Lcom/tmapmobility/tmap/exoplayer2/source/g1;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->h:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->i:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
     return-void
 .end method
 
 .method public varargs constructor <init>(Ljava/lang/String;[Lcom/tmapmobility/tmap/exoplayer2/Format;)V
-    .locals 1
+    .locals 2
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     array-length v0, p2
+
+    const/4 v1, 0x0
 
     if-lez v0, :cond_0
 
@@ -70,7 +74,7 @@
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v1
 
     :goto_0
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
@@ -79,7 +83,7 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->b:Ljava/lang/String;
 
     .line 5
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     .line 6
     array-length p1, p2
@@ -87,6 +91,32 @@
     iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
 
     .line 7
+    aget-object p1, p2, v1
+
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->l(Ljava/lang/String;)I
+
+    move-result p1
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_1
+
+    .line 8
+    aget-object p1, p2, v1
+
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->k:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->l(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 9
+    :cond_1
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:I
+
+    .line 10
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->j()V
 
     return-void
@@ -129,33 +159,38 @@
 .method public static synthetic f(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
     .locals 4
 
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/Format;->S1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    .line 1
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
 
     .line 2
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->e(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
-    move-result-object v3
+    move-result-object v1
 
-    .line 4
-    invoke-static {v0, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->c(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+    goto :goto_0
 
-    move-result-object v0
+    .line 3
+    :cond_0
+    sget-object v2, Lcom/tmapmobility/tmap/exoplayer2/Format;->U1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
+    invoke-static {v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->b(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;)Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v1
+
+    :goto_0
     const/4 v2, 0x1
 
-    .line 5
+    .line 4
     invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->e(I)Ljava/lang/String;
 
     move-result-object v2
@@ -166,12 +201,12 @@
 
     move-result-object p0
 
-    .line 6
+    .line 5
     new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
 
-    new-array v1, v1, [Lcom/tmapmobility/tmap/exoplayer2/Format;
+    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -202,7 +237,7 @@
 
     const-string v3, "\' (track 0) and \'"
 
-    invoke-static {v1, p0, v2, p1, v3}, Lr1/l;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p0, v2, p1, v3}, Landroidx/constraintlayout/core/parser/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -276,7 +311,7 @@
     .line 1
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-direct {v0, p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;-><init>(Ljava/lang/String;[Lcom/tmapmobility/tmap/exoplayer2/Format;)V
 
@@ -287,7 +322,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     aget-object p1, v0, p1
 
@@ -301,7 +336,7 @@
 
     .line 1
     :goto_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     array-length v2, v1
 
@@ -359,12 +394,6 @@
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;
 
     .line 3
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
-
-    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
-
-    if-ne v2, v3, :cond_2
-
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->b:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->b:Ljava/lang/String;
@@ -375,9 +404,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
-    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
@@ -402,7 +431,7 @@
     .locals 3
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->e:I
 
     if-nez v0, :cond_0
 
@@ -413,12 +442,12 @@
 
     const/16 v2, 0x1f
 
-    invoke-static {v0, v1, v2}, Lb3/k;->a(Ljava/lang/String;II)I
+    invoke-static {v0, v1, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
 
     move-result v0
 
     .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
@@ -427,11 +456,11 @@
     add-int/2addr v0, v1
 
     .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->e:I
 
     .line 5
     :cond_0
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->e:I
 
     return v0
 .end method
@@ -440,7 +469,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     const/4 v1, 0x0
 
@@ -453,7 +482,7 @@
     move-result-object v0
 
     .line 2
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     aget-object v2, v2, v1
 
@@ -467,7 +496,7 @@
 
     .line 3
     :goto_0
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     array-length v5, v4
 
@@ -489,7 +518,7 @@
     if-nez v4, :cond_0
 
     .line 5
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     aget-object v1, v0, v1
 
@@ -507,7 +536,7 @@
 
     .line 6
     :cond_0
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     aget-object v4, v4, v3
 
@@ -520,7 +549,7 @@
     if-eq v2, v4, :cond_1
 
     .line 7
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     aget-object v0, v0, v1
 
@@ -531,7 +560,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     aget-object v1, v1, v3
 
@@ -573,13 +602,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->c:[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->d:[Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     invoke-static {v2}, Lcom/google/common/collect/Lists;->newArrayList([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->g(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->d(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v2
 

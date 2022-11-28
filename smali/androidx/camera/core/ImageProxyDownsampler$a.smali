@@ -3,12 +3,12 @@
 .source "ImageProxyDownsampler.java"
 
 # interfaces
-.implements Landroidx/camera/core/p1$a;
+.implements Landroidx/camera/core/m1$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/ImageProxyDownsampler;->a(II[B)Landroidx/camera/core/p1$a;
+    value = Landroidx/camera/core/ImageProxyDownsampler;->a(II[B)Landroidx/camera/core/m1$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,18 +30,6 @@
 # direct methods
 .method public constructor <init>([BII)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010,
-            0x1010,
-            0x1010
-        }
-        names = {
-            "val$data",
-            "val$rowStride",
-            "val$pixelStride"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/ImageProxyDownsampler$a;->b:[B

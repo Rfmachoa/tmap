@@ -29,10 +29,10 @@
 
 
 # instance fields
-.field public final a:Landroidx/databinding/t;
+.field public final a:Landroidx/databinding/u;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/databinding/t<",
+            "Landroidx/databinding/u<",
             "Landroidx/lifecycle/LiveData<",
             "*>;>;"
         }
@@ -76,11 +76,11 @@
     iput-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->b:Ljava/lang/ref/WeakReference;
 
     .line 3
-    new-instance v0, Landroidx/databinding/t;
+    new-instance v0, Landroidx/databinding/u;
 
-    invoke-direct {v0, p1, p2, p0, p3}, Landroidx/databinding/t;-><init>(Landroidx/databinding/ViewDataBinding;ILandroidx/databinding/p;Ljava/lang/ref/ReferenceQueue;)V
+    invoke-direct {v0, p1, p2, p0, p3}, Landroidx/databinding/u;-><init>(Landroidx/databinding/ViewDataBinding;ILandroidx/databinding/p;Ljava/lang/ref/ReferenceQueue;)V
 
-    iput-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/t;
+    iput-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/u;
 
     return-void
 .end method
@@ -124,9 +124,9 @@
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/t;
+    iget-object v1, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/u;
 
-    invoke-virtual {v1}, Landroidx/databinding/t;->b()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroidx/databinding/u;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -159,19 +159,19 @@
     return-void
 .end method
 
-.method public c()Landroidx/databinding/t;
+.method public c()Landroidx/databinding/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/databinding/t<",
+            "Landroidx/databinding/u<",
             "Landroidx/lifecycle/LiveData<",
             "*>;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/u;
 
     return-object v0
 .end method
@@ -247,26 +247,26 @@
     .end param
 
     .line 1
-    iget-object p1, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/t;
+    iget-object p1, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/u;
 
-    invoke-virtual {p1}, Landroidx/databinding/t;->a()Landroidx/databinding/ViewDataBinding;
+    invoke-virtual {p1}, Landroidx/databinding/u;->a()Landroidx/databinding/ViewDataBinding;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$j;->a:Landroidx/databinding/u;
 
-    iget v1, v0, Landroidx/databinding/t;->b:I
+    iget v1, v0, Landroidx/databinding/u;->b:I
 
-    invoke-virtual {v0}, Landroidx/databinding/t;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/databinding/u;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v1, v0, v2}, Landroidx/databinding/ViewDataBinding;->U(ILjava/lang/Object;I)V
+    invoke-virtual {p1, v1, v0, v2}, Landroidx/databinding/ViewDataBinding;->W(ILjava/lang/Object;I)V
 
     :cond_0
     return-void

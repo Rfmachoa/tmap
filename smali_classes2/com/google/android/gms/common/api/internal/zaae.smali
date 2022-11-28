@@ -1,18 +1,10 @@
 .class public final Lcom/google/android/gms/common/api/internal/zaae;
 .super Lcom/google/android/gms/common/api/internal/zap;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field private final zad:Landroidx/collection/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/collection/c<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zae:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
@@ -48,16 +40,6 @@
 .method public static zad(Landroid/app/Activity;Lcom/google/android/gms/common/api/internal/GoogleApiManager;Lcom/google/android/gms/common/api/internal/ApiKey;)V
     .locals 2
     .annotation build Landroidx/annotation/MainThread;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/Activity;",
-            "Lcom/google/android/gms/common/api/internal/GoogleApiManager;",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;)V"
-        }
     .end annotation
 
     .line 1
@@ -167,14 +149,6 @@
 
 .method public final zaa()Landroidx/collection/c;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Landroidx/collection/c<",
-            "Lcom/google/android/gms/common/api/internal/ApiKey<",
-            "*>;>;"
-        }
-    .end annotation
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaae;->zad:Landroidx/collection/c;
 

@@ -7,7 +7,7 @@
 
 
 # virtual methods
-.method public abstract c()Z
+.method public abstract b()Z
 .end method
 
 .method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/upstream/cache/Cache;Ljava/lang/String;JJ)V

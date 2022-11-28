@@ -113,9 +113,9 @@
 
     check-cast p2, Landroid/os/Handler;
 
-    new-instance v0, Lwd/i;
+    new-instance v0, Lzf/i;
 
-    invoke-direct {v0, p1}, Lwd/i;-><init>(Lcom/tmapmobility/tmap/exoplayer2/drm/DefaultDrmSession;)V
+    invoke-direct {v0, p1}, Lzf/i;-><init>(Lcom/tmapmobility/tmap/exoplayer2/drm/DefaultDrmSession;)V
 
     .line 4
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J

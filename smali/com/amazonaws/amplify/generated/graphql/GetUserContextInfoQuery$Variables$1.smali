@@ -3,12 +3,12 @@
 .source "GetUserContextInfoQuery.java"
 
 # interfaces
-.implements Lc4/e;
+.implements Lz5/e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/amplify/generated/graphql/GetUserContextInfoQuery$Variables;->marshaller()Lc4/e;
+    value = Lcom/amazonaws/amplify/generated/graphql/GetUserContextInfoQuery$Variables;->marshaller()Lz5/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public marshal(Lc4/f;)V
+.method public marshal(Lz5/f;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -69,7 +69,7 @@
 
     const-string v1, "userKey"
 
-    invoke-interface {p1, v1, v0}, Lc4/f;->h(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v0}, Lz5/f;->h(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -12,6 +12,7 @@
         Lcom/google/firebase/crashlytics/R$id;,
         Lcom/google/firebase/crashlytics/R$integer;,
         Lcom/google/firebase/crashlytics/R$layout;,
+        Lcom/google/firebase/crashlytics/R$raw;,
         Lcom/google/firebase/crashlytics/R$string;,
         Lcom/google/firebase/crashlytics/R$style;,
         Lcom/google/firebase/crashlytics/R$styleable;

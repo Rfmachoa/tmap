@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/Scopes;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # static fields
@@ -51,6 +51,22 @@
 .end field
 
 .field public static final GAMES_LITE:Ljava/lang/String; = "https://www.googleapis.com/auth/games_lite"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+.end field
+
+.field public static final LEGACY_USERINFO_EMAIL:Ljava/lang/String; = "https://www.googleapis.com/auth/userinfo.email"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+.end field
+
+.field public static final LEGACY_USERINFO_PROFILE:Ljava/lang/String; = "https://www.googleapis.com/auth/userinfo.profile"
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 

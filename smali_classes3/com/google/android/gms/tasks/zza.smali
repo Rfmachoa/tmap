@@ -1,20 +1,9 @@
 .class final Lcom/google/android/gms/tasks/zza;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/OnSuccessListener;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/OnSuccessListener<",
-        "Ljava/lang/Void;",
-        ">;"
-    }
-.end annotation
 
 
 # instance fields

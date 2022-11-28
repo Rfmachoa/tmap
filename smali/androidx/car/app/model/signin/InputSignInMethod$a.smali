@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Landroidx/car/app/model/b;
+.field public final a:Landroidx/car/app/model/e;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -43,9 +43,9 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/car/app/model/a;)V
+.method public constructor <init>(Landroidx/car/app/model/d;)V
     .locals 1
-    .param p1    # Landroidx/car/app/model/a;
+    .param p1    # Landroidx/car/app/model/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -69,14 +69,14 @@
     .line 4
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Landroidx/car/app/model/a;
+    check-cast p1, Landroidx/car/app/model/d;
 
     .line 5
-    invoke-static {p1}, Landroidx/car/app/model/InputCallbackDelegateImpl;->c(Landroidx/car/app/model/a;)Landroidx/car/app/model/b;
+    invoke-static {p1}, Landroidx/car/app/model/InputCallbackDelegateImpl;->c(Landroidx/car/app/model/d;)Landroidx/car/app/model/e;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/car/app/model/signin/InputSignInMethod$a;->a:Landroidx/car/app/model/b;
+    iput-object p1, p0, Landroidx/car/app/model/signin/InputSignInMethod$a;->a:Landroidx/car/app/model/e;
 
     return-void
 .end method

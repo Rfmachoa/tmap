@@ -27,7 +27,7 @@
         value = {
             "Ljava/lang/Class<",
             "+",
-            "Lt9/a;",
+            "Lqb/a;",
             ">;"
         }
     .end annotation
@@ -43,7 +43,7 @@
     .line 1
     new-instance v0, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/content/AudioContentType;
 
-    const-class v1, Lt9/b;
+    const-class v1, Lqb/b;
 
     const-string v2, "Template1"
 
@@ -58,7 +58,7 @@
     .line 2
     new-instance v1, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/content/AudioContentType;
 
-    const-class v2, Lt9/c;
+    const-class v2, Lqb/c;
 
     const-string v4, "Template2"
 
@@ -91,7 +91,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Lt9/a;",
+            "Lqb/a;",
             ">;",
             "Ljava/lang/String;",
             ")V"
@@ -119,7 +119,7 @@
             ")",
             "Ljava/lang/Class<",
             "+",
-            "Lt9/a;",
+            "Lqb/a;",
             ">;"
         }
     .end annotation
@@ -228,7 +228,7 @@
             "()",
             "Ljava/lang/Class<",
             "+",
-            "Lt9/a;",
+            "Lqb/a;",
             ">;"
         }
     .end annotation

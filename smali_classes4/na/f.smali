@@ -1,187 +1,337 @@
 .class public Lna/f;
-.super Lcom/skt/aicloud/speaker/service/state/a;
-.source "ActionBeep.java"
+.super Lna/b;
+.source "TTSPlayableTask.java"
 
 
 # static fields
-.field public static final s:Ljava/lang/String; = "ActionBeep"
+.field public static final i:Ljava/lang/String; = "TTSPlayableTask"
+
+
+# instance fields
+.field public g:Lcom/skt/aicloud/speaker/service/api/d;
+
+.field public h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/api/d;Ljava/lang/String;Lna/d;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;-><init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+    invoke-direct {p0, p1, p4}, Lna/b;-><init>(Landroid/content/Context;Lna/d;)V
+
+    const-string p1, "tts"
 
     .line 2
-    sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_BEEP:Lcom/skt/aicloud/speaker/lib/state/AppState;
-
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
-
-    const/4 p1, 0x0
+    iput-object p1, p0, Lna/b;->f:Ljava/lang/String;
 
     .line 3
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->e:Lcom/skt/aicloud/speaker/lib/state/AppState;
+    iput-object p2, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
+
+    .line 4
+    iput-object p3, p0, Lna/f;->h:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A(Ljava/lang/String;)V
-    .locals 0
+.method public a()V
+    .locals 2
 
-    return-void
-.end method
+    const-string v0, "TTSPlayableTask"
 
-.method public B()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, ""
-
-    return-object v0
-.end method
-
-.method public Z(Lma/c;)V
-    .locals 6
+    const-string v1, "prepare()"
 
     .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->Z(Lma/c;)V
-
-    const-string p1, "ActionBeep"
-
-    const-string v0, "processReceivedCard()"
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lna/b;->d:Ljava/lang/Object;
+
+    monitor-enter v0
 
     .line 3
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
+    :try_start_0
+    iget-object v1, p0, Lna/b;->c:Lna/d;
 
-    invoke-static {p1}, Lcom/skt/aicloud/mobile/service/util/x;->c(Landroid/content/Context;)Lcom/skt/aicloud/mobile/service/util/x;
+    if-eqz v1, :cond_0
 
-    move-result-object p1
-
-    sget v0, Lcom/skt/aicloud/speaker/service/R$raw;->responce_fail:I
-
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/mobile/service/util/x;->g(I)Z
+    const/4 v1, 0x1
 
     .line 4
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    invoke-virtual {p0, v1}, Lna/b;->f(Z)V
 
-    invoke-virtual {p1}, Lma/c;->n()Ljava/lang/String;
+    .line 5
+    iget-object v1, p0, Lna/b;->c:Lna/d;
 
-    move-result-object v3
+    invoke-virtual {v1, p0}, Lna/d;->f(Lna/b;)V
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    .line 6
+    :cond_0
+    monitor-exit v0
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    return-void
 
-    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public isPlaying()Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "isPlaying() = "
+
+    .line 2
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
 
-    const-string v0, ":Action Finished"
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/d;->D()Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->h()Z
 
-    move-result-object v5
+    move-result v1
 
-    const-string v1, "ActionBeep"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x0
+    move-result-object v0
 
-    move-object v0, p0
+    const-string v1, "TTSPlayableTask"
 
-    invoke-virtual/range {v0 .. v5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    .line 3
+    iget-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
 
-.method public f(Ljava/lang/String;)V
-    .locals 0
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->D()Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public i(Landroid/content/Intent;Lma/c;)V
-    .locals 0
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->h()Z
 
-    if-nez p2, :cond_0
+    move-result v0
 
-    const-string p1, "ActionBeep"
+    return v0
 
-    const-string p2, "setAction() : card is null"
-
-    .line 1
-    invoke-static {p1, p2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    .line 2
     :cond_0
-    invoke-virtual {p0, p2}, Lna/f;->Z(Lma/c;)V
+    const/4 v0, 0x0
 
-    return-void
-.end method
-
-.method public j(Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->j(Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method
 
 .method public pause()V
-    .locals 0
+    .locals 2
+
+    const-string v0, "TTSPlayableTask"
+
+    const-string v1, "pause()"
 
     .line 1
-    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->pause()V
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lna/b;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 3
+    iget-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->D()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->l()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public release()V
+    .locals 2
+
+    const-string v0, "TTSPlayableTask"
+
+    const-string v1, "release()"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-super {p0}, Lna/b;->release()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
 
     return-void
 .end method
 
-.method public resume(Ljava/lang/String;)V
-    .locals 0
+.method public resume()V
+    .locals 2
+
+    const-string v0, "TTSPlayableTask"
+
+    const-string v1, "resume()"
 
     .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->resume(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
+    iget-object v0, p0, Lna/b;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    iget-object v0, p0, Lna/b;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 4
+    iget-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->D()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->i()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 7
+    invoke-virtual {p0}, Lna/f;->start()V
+
+    return-void
+
+    .line 8
+    :cond_0
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->n()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public start()V
+    .locals 4
+
+    const-string v0, "TTSPlayableTask"
+
+    const-string v1, "start()"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    iget-object v0, p0, Lna/b;->d:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 4
+    :try_start_0
+    iget-object v1, p0, Lna/b;->c:Lna/d;
+
+    if-eqz v1, :cond_0
+
+    .line 5
+    iget-object v1, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
+
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/d;->D()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lna/f;->h:Ljava/lang/String;
+
+    iget-object v3, p0, Lna/b;->c:Lna/d;
+
+    invoke-virtual {v3}, Lna/d;->c()Lpc/d;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
+
+    .line 6
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 .method public stop()V
-    .locals 0
+    .locals 2
+
+    const-string v0, "TTSPlayableTask"
+
+    const-string v1, "stop()"
 
     .line 1
-    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->stop()V
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    .line 2
+    iget-object v0, p0, Lna/f;->g:Lcom/skt/aicloud/speaker/service/api/d;
 
-.method public t(Ljava/lang/String;)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->t(Ljava/lang/String;)V
+    .line 3
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->D()Lcom/skt/aicloud/speaker/service/api/d$b;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public x(Ljava/lang/String;)V
-    .locals 0
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
 
-    .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->x(Ljava/lang/String;)V
-
+    :cond_0
     return-void
 .end method

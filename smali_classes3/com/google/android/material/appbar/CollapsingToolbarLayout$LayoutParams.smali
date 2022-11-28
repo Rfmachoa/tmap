@@ -191,6 +191,42 @@
     return-void
 .end method
 
+.method public constructor <init>(Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;)V
+    .locals 1
+    .param p1    # Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x13
+    .end annotation
+
+    .line 26
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/widget/FrameLayout$LayoutParams;)V
+
+    const/4 v0, 0x0
+
+    .line 27
+    iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;->collapseMode:I
+
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    .line 28
+    iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;->parallaxMult:F
+
+    .line 29
+    iget v0, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;->collapseMode:I
+
+    iput v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;->collapseMode:I
+
+    .line 30
+    iget p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;->parallaxMult:F
+
+    iput p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$LayoutParams;->parallaxMult:F
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public getCollapseMode()I

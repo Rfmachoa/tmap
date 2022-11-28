@@ -34,7 +34,7 @@
 
     iget v1, p0, Lcom/skt/tmap/activity/h;->b:I
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->x5(Lcom/skt/tmap/activity/BaseAiActivity;I)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->C5(Lcom/skt/tmap/activity/BaseAiActivity;I)V
 
     return-void
 .end method

@@ -17,10 +17,6 @@
 .end annotation
 
 
-# static fields
-.field public static sDefaultImpl:Landroidx/car/app/IOnRequestPermissionsListener;
-
-
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 
@@ -58,7 +54,7 @@
 .end method
 
 .method public onRequestPermissionsResult([Ljava/lang/String;[Ljava/lang/String;)V
-    .locals 5
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -88,53 +84,23 @@
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
     .line 6
-    iget-object v2, p0, Landroidx/car/app/IOnRequestPermissionsListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+    iget-object p1, p0, Landroidx/car/app/IOnRequestPermissionsListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    const/4 v3, 0x2
+    const/4 p2, 0x2
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {v2, v3, v0, v1, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
+    invoke-interface {p1, p2, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     .line 7
-    invoke-static {}, Landroidx/car/app/IOnRequestPermissionsListener$Stub;->getDefaultImpl()Landroidx/car/app/IOnRequestPermissionsListener;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 8
-    invoke-static {}, Landroidx/car/app/IOnRequestPermissionsListener$Stub;->getDefaultImpl()Landroidx/car/app/IOnRequestPermissionsListener;
-
-    move-result-object v2
-
-    invoke-interface {v2, p1, p2}, Landroidx/car/app/IOnRequestPermissionsListener;->onRequestPermissionsResult([Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
     .line 9
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 10
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-void
-
-    .line 11
-    :cond_0
-    :try_start_1
-    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 12
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -142,12 +108,12 @@
     :catchall_0
     move-exception p1
 
-    .line 14
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 15
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 16
+    .line 12
     throw p1
 .end method

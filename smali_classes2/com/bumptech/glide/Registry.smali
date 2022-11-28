@@ -16,40 +16,45 @@
 
 
 # static fields
-.field public static final k:Ljava/lang/String; = "Gif"
+.field public static final k:Ljava/lang/String; = "Animation"
 
-.field public static final l:Ljava/lang/String; = "Bitmap"
+.field public static final l:Ljava/lang/String; = "Animation"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
-.field public static final m:Ljava/lang/String; = "BitmapDrawable"
+.field public static final m:Ljava/lang/String; = "Bitmap"
 
-.field public static final n:Ljava/lang/String; = "legacy_prepend_all"
+.field public static final n:Ljava/lang/String; = "BitmapDrawable"
 
-.field public static final o:Ljava/lang/String; = "legacy_append"
+.field public static final o:Ljava/lang/String; = "legacy_prepend_all"
+
+.field public static final p:Ljava/lang/String; = "legacy_append"
 
 
 # instance fields
-.field public final a:Lz4/p;
+.field public final a:Lw6/p;
 
-.field public final b:Li5/a;
+.field public final b:Lf7/a;
 
-.field public final c:Li5/e;
+.field public final c:Lf7/e;
 
-.field public final d:Li5/f;
+.field public final d:Lf7/f;
 
 .field public final e:Lcom/bumptech/glide/load/data/f;
 
-.field public final f:Lg5/f;
+.field public final f:Ld7/f;
 
-.field public final g:Li5/b;
+.field public final g:Lf7/b;
 
-.field public final h:Li5/d;
+.field public final h:Lf7/d;
 
-.field public final i:Li5/c;
+.field public final i:Lf7/c;
 
-.field public final j:Lr1/n$a;
+.field public final j:Landroidx/core/util/o$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lr1/n$a<",
+            "Landroidx/core/util/o$a<",
             "Ljava/util/List<",
             "Ljava/lang/Throwable;",
             ">;>;"
@@ -66,53 +71,53 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Li5/d;
+    new-instance v0, Lf7/d;
 
-    invoke-direct {v0}, Li5/d;-><init>()V
+    invoke-direct {v0}, Lf7/d;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->h:Li5/d;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->h:Lf7/d;
 
     .line 3
-    new-instance v0, Li5/c;
+    new-instance v0, Lf7/c;
 
-    invoke-direct {v0}, Li5/c;-><init>()V
+    invoke-direct {v0}, Lf7/c;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->i:Li5/c;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->i:Lf7/c;
 
     .line 4
-    invoke-static {}, Ln5/a;->f()Lr1/n$a;
+    invoke-static {}, Lk7/a;->f()Landroidx/core/util/o$a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->j:Lr1/n$a;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->j:Landroidx/core/util/o$a;
 
     .line 5
-    new-instance v1, Lz4/p;
+    new-instance v1, Lw6/p;
 
-    invoke-direct {v1, v0}, Lz4/p;-><init>(Lr1/n$a;)V
+    invoke-direct {v1, v0}, Lw6/p;-><init>(Landroidx/core/util/o$a;)V
 
-    iput-object v1, p0, Lcom/bumptech/glide/Registry;->a:Lz4/p;
+    iput-object v1, p0, Lcom/bumptech/glide/Registry;->a:Lw6/p;
 
     .line 6
-    new-instance v0, Li5/a;
+    new-instance v0, Lf7/a;
 
-    invoke-direct {v0}, Li5/a;-><init>()V
+    invoke-direct {v0}, Lf7/a;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->b:Li5/a;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->b:Lf7/a;
 
     .line 7
-    new-instance v0, Li5/e;
+    new-instance v0, Lf7/e;
 
-    invoke-direct {v0}, Li5/e;-><init>()V
+    invoke-direct {v0}, Lf7/e;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
     .line 8
-    new-instance v0, Li5/f;
+    new-instance v0, Lf7/f;
 
-    invoke-direct {v0}, Li5/f;-><init>()V
+    invoke-direct {v0}, Lf7/f;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->d:Li5/f;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->d:Lf7/f;
 
     .line 9
     new-instance v0, Lcom/bumptech/glide/load/data/f;
@@ -122,20 +127,20 @@
     iput-object v0, p0, Lcom/bumptech/glide/Registry;->e:Lcom/bumptech/glide/load/data/f;
 
     .line 10
-    new-instance v0, Lg5/f;
+    new-instance v0, Ld7/f;
 
-    invoke-direct {v0}, Lg5/f;-><init>()V
+    invoke-direct {v0}, Ld7/f;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->f:Lg5/f;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->f:Ld7/f;
 
     .line 11
-    new-instance v0, Li5/b;
+    new-instance v0, Lf7/b;
 
-    invoke-direct {v0}, Li5/b;-><init>()V
+    invoke-direct {v0}, Lf7/b;-><init>()V
 
-    iput-object v0, p0, Lcom/bumptech/glide/Registry;->g:Li5/b;
+    iput-object v0, p0, Lcom/bumptech/glide/Registry;->g:Lf7/b;
 
-    const-string v0, "Gif"
+    const-string v0, "Animation"
 
     const-string v1, "Bitmap"
 
@@ -159,7 +164,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Class;Ljava/lang/Class;Lu4/f;)Lcom/bumptech/glide/Registry;
+.method public a(Ljava/lang/Class;Ljava/lang/Class;Lr6/f;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -169,7 +174,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lu4/f;
+    .param p3    # Lr6/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -187,7 +192,7 @@
             "TData;>;",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/f<",
+            "Lr6/f<",
             "TData;TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
@@ -196,12 +201,12 @@
     const-string v0, "legacy_append"
 
     .line 1
-    invoke-virtual {p0, v0, p1, p2, p3}, Lcom/bumptech/glide/Registry;->e(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lu4/f;)Lcom/bumptech/glide/Registry;
+    invoke-virtual {p0, v0, p1, p2, p3}, Lcom/bumptech/glide/Registry;->e(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lr6/f;)Lcom/bumptech/glide/Registry;
 
     return-object p0
 .end method
 
-.method public b(Ljava/lang/Class;Ljava/lang/Class;Lz4/o;)Lcom/bumptech/glide/Registry;
+.method public b(Ljava/lang/Class;Ljava/lang/Class;Lw6/o;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -211,7 +216,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lz4/o;
+    .param p3    # Lw6/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -229,27 +234,27 @@
             "TModel;>;",
             "Ljava/lang/Class<",
             "TData;>;",
-            "Lz4/o<",
+            "Lw6/o<",
             "TModel;TData;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lz4/p;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lw6/p;
 
-    invoke-virtual {v0, p1, p2, p3}, Lz4/p;->a(Ljava/lang/Class;Ljava/lang/Class;Lz4/o;)V
+    invoke-virtual {v0, p1, p2, p3}, Lw6/p;->a(Ljava/lang/Class;Ljava/lang/Class;Lw6/o;)V
 
     return-object p0
 .end method
 
-.method public c(Ljava/lang/Class;Lu4/a;)Lcom/bumptech/glide/Registry;
+.method public c(Ljava/lang/Class;Lr6/a;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/a;
+    .param p2    # Lr6/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -263,27 +268,27 @@
             ">(",
             "Ljava/lang/Class<",
             "TData;>;",
-            "Lu4/a<",
+            "Lr6/a<",
             "TData;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->b:Li5/a;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->b:Lf7/a;
 
-    invoke-virtual {v0, p1, p2}, Li5/a;->a(Ljava/lang/Class;Lu4/a;)V
+    invoke-virtual {v0, p1, p2}, Lf7/a;->a(Ljava/lang/Class;Lr6/a;)V
 
     return-object p0
 .end method
 
-.method public d(Ljava/lang/Class;Lu4/g;)Lcom/bumptech/glide/Registry;
+.method public d(Ljava/lang/Class;Lr6/g;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/g;
+    .param p2    # Lr6/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -297,21 +302,21 @@
             ">(",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/g<",
+            "Lr6/g<",
             "TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Li5/f;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Lf7/f;
 
-    invoke-virtual {v0, p1, p2}, Li5/f;->a(Ljava/lang/Class;Lu4/g;)V
+    invoke-virtual {v0, p1, p2}, Lf7/f;->a(Ljava/lang/Class;Lr6/g;)V
 
     return-object p0
 .end method
 
-.method public e(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lu4/f;)Lcom/bumptech/glide/Registry;
+.method public e(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lr6/f;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -325,7 +330,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/f;
+    .param p4    # Lr6/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -344,16 +349,16 @@
             "TData;>;",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/f<",
+            "Lr6/f<",
             "TData;TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
-    invoke-virtual {v0, p1, p4, p2, p3}, Li5/e;->a(Ljava/lang/String;Lu4/f;Ljava/lang/Class;Ljava/lang/Class;)V
+    invoke-virtual {v0, p1, p4, p2, p3}, Lf7/e;->a(Ljava/lang/String;Lr6/f;Ljava/lang/Class;Ljava/lang/Class;)V
 
     return-object p0
 .end method
@@ -402,10 +407,10 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 2
-    iget-object v1, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iget-object v1, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
     .line 3
-    invoke-virtual {v1, p1, p2}, Li5/e;->d(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v1, p1, p2}, Lf7/e;->d(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object p2
 
@@ -428,10 +433,10 @@
     check-cast v1, Ljava/lang/Class;
 
     .line 5
-    iget-object v2, p0, Lcom/bumptech/glide/Registry;->f:Lg5/f;
+    iget-object v2, p0, Lcom/bumptech/glide/Registry;->f:Ld7/f;
 
     .line 6
-    invoke-virtual {v2, v1, p3}, Lg5/f;->b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v2, v1, p3}, Ld7/f;->b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v2
 
@@ -456,25 +461,25 @@
     check-cast v5, Ljava/lang/Class;
 
     .line 8
-    iget-object v2, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iget-object v2, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
     .line 9
-    invoke-virtual {v2, p1, v1}, Li5/e;->b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v2, p1, v1}, Lf7/e;->b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v6
 
     .line 10
-    iget-object v2, p0, Lcom/bumptech/glide/Registry;->f:Lg5/f;
+    iget-object v2, p0, Lcom/bumptech/glide/Registry;->f:Ld7/f;
 
     .line 11
-    invoke-virtual {v2, v1, v5}, Lg5/f;->a(Ljava/lang/Class;Ljava/lang/Class;)Lg5/e;
+    invoke-virtual {v2, v1, v5}, Ld7/f;->a(Ljava/lang/Class;Ljava/lang/Class;)Ld7/e;
 
     move-result-object v7
 
     .line 12
     new-instance v10, Lcom/bumptech/glide/load/engine/g;
 
-    iget-object v8, p0, Lcom/bumptech/glide/Registry;->j:Lr1/n$a;
+    iget-object v8, p0, Lcom/bumptech/glide/Registry;->j:Landroidx/core/util/o$a;
 
     move-object v2, v10
 
@@ -482,7 +487,7 @@
 
     move-object v4, v1
 
-    invoke-direct/range {v2 .. v8}, Lcom/bumptech/glide/load/engine/g;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Lg5/e;Lr1/n$a;)V
+    invoke-direct/range {v2 .. v8}, Lcom/bumptech/glide/load/engine/g;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Ld7/e;Landroidx/core/util/o$a;)V
 
     .line 13
     invoke-virtual {v0, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -508,9 +513,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->g:Li5/b;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->g:Lf7/b;
 
-    invoke-virtual {v0}, Li5/b;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lf7/b;->b()Ljava/util/List;
 
     move-result-object v0
 
@@ -570,17 +575,17 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->i:Li5/c;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->i:Lf7/c;
 
     .line 2
-    invoke-virtual {v0, p1, p2, p3}, Li5/c;->a(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Lcom/bumptech/glide/load/engine/q;
+    invoke-virtual {v0, p1, p2, p3}, Lf7/c;->a(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Lcom/bumptech/glide/load/engine/q;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/bumptech/glide/Registry;->i:Li5/c;
+    iget-object v1, p0, Lcom/bumptech/glide/Registry;->i:Lf7/c;
 
-    invoke-virtual {v1, v0}, Li5/c;->c(Lcom/bumptech/glide/load/engine/q;)Z
+    invoke-virtual {v1, v0}, Lf7/c;->c(Lcom/bumptech/glide/load/engine/q;)Z
 
     move-result v1
 
@@ -613,7 +618,7 @@
     :cond_1
     new-instance v0, Lcom/bumptech/glide/load/engine/q;
 
-    iget-object v8, p0, Lcom/bumptech/glide/Registry;->j:Lr1/n$a;
+    iget-object v8, p0, Lcom/bumptech/glide/Registry;->j:Landroidx/core/util/o$a;
 
     move-object v3, v0
 
@@ -623,13 +628,13 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v3 .. v8}, Lcom/bumptech/glide/load/engine/q;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Lr1/n$a;)V
+    invoke-direct/range {v3 .. v8}, Lcom/bumptech/glide/load/engine/q;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Landroidx/core/util/o$a;)V
 
     .line 7
     :goto_0
-    iget-object v1, p0, Lcom/bumptech/glide/Registry;->i:Li5/c;
+    iget-object v1, p0, Lcom/bumptech/glide/Registry;->i:Lf7/c;
 
-    invoke-virtual {v1, p1, p2, p3, v0}, Li5/c;->d(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/load/engine/q;)V
+    invoke-virtual {v1, p1, p2, p3, v0}, Lf7/c;->d(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Lcom/bumptech/glide/load/engine/q;)V
 
     :cond_2
     return-object v0
@@ -650,15 +655,15 @@
             "Ljava/lang/Object;",
             ">(TModel;)",
             "Ljava/util/List<",
-            "Lz4/n<",
+            "Lw6/n<",
             "TModel;*>;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lz4/p;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lw6/p;
 
-    invoke-virtual {v0, p1}, Lz4/p;->e(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lw6/p;->e(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
@@ -704,10 +709,10 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->h:Li5/d;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->h:Lf7/d;
 
     .line 2
-    invoke-virtual {v0, p1, p2, p3}, Li5/d;->b(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v0, p1, p2, p3}, Lf7/d;->b(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v0
 
@@ -719,9 +724,9 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 4
-    iget-object v1, p0, Lcom/bumptech/glide/Registry;->a:Lz4/p;
+    iget-object v1, p0, Lcom/bumptech/glide/Registry;->a:Lw6/p;
 
-    invoke-virtual {v1, p1}, Lz4/p;->d(Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Lw6/p;->d(Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v1
 
@@ -744,10 +749,10 @@
     check-cast v2, Ljava/lang/Class;
 
     .line 6
-    iget-object v3, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iget-object v3, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
     .line 7
-    invoke-virtual {v3, v2, p2}, Li5/e;->d(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v3, v2, p2}, Lf7/e;->d(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v2
 
@@ -771,10 +776,10 @@
     check-cast v3, Ljava/lang/Class;
 
     .line 9
-    iget-object v4, p0, Lcom/bumptech/glide/Registry;->f:Lg5/f;
+    iget-object v4, p0, Lcom/bumptech/glide/Registry;->f:Ld7/f;
 
     .line 10
-    invoke-virtual {v4, v3, p3}, Lg5/f;->b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
+    invoke-virtual {v4, v3, p3}, Ld7/f;->b(Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/List;
 
     move-result-object v4
 
@@ -798,7 +803,7 @@
 
     .line 13
     :cond_2
-    iget-object v1, p0, Lcom/bumptech/glide/Registry;->h:Li5/d;
+    iget-object v1, p0, Lcom/bumptech/glide/Registry;->h:Lf7/d;
 
     .line 14
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -806,13 +811,13 @@
     move-result-object v2
 
     .line 15
-    invoke-virtual {v1, p1, p2, p3, v2}, Li5/d;->c(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;)V
+    invoke-virtual {v1, p1, p2, p3, v2}, Lf7/d;->c(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;)V
 
     :cond_3
     return-object v0
 .end method
 
-.method public k(Lcom/bumptech/glide/load/engine/s;)Lu4/g;
+.method public k(Lcom/bumptech/glide/load/engine/s;)Lr6/g;
     .locals 2
     .param p1    # Lcom/bumptech/glide/load/engine/s;
         .annotation build Landroidx/annotation/NonNull;
@@ -828,7 +833,7 @@
             ">(",
             "Lcom/bumptech/glide/load/engine/s<",
             "TX;>;)",
-            "Lu4/g<",
+            "Lr6/g<",
             "TX;>;"
         }
     .end annotation
@@ -840,13 +845,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Li5/f;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Lf7/f;
 
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/s;->b()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Li5/f;->b(Ljava/lang/Class;)Lu4/g;
+    invoke-virtual {v0, v1}, Lf7/f;->b(Ljava/lang/Class;)Lr6/g;
 
     move-result-object v0
 
@@ -896,7 +901,7 @@
     return-object p1
 .end method
 
-.method public m(Ljava/lang/Object;)Lu4/a;
+.method public m(Ljava/lang/Object;)Lr6/a;
     .locals 2
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
@@ -910,7 +915,7 @@
             "<X:",
             "Ljava/lang/Object;",
             ">(TX;)",
-            "Lu4/a<",
+            "Lr6/a<",
             "TX;>;"
         }
     .end annotation
@@ -922,13 +927,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->b:Li5/a;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->b:Lf7/a;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Li5/a;->b(Ljava/lang/Class;)Lu4/a;
+    invoke-virtual {v0, v1}, Lf7/a;->b(Ljava/lang/Class;)Lr6/a;
 
     move-result-object v0
 
@@ -964,13 +969,13 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Li5/f;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Lf7/f;
 
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/s;->b()Ljava/lang/Class;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Li5/f;->b(Ljava/lang/Class;)Lu4/g;
+    invoke-virtual {v0, p1}, Lf7/f;->b(Ljava/lang/Class;)Lr6/g;
 
     move-result-object p1
 
@@ -987,7 +992,7 @@
     return p1
 .end method
 
-.method public o(Ljava/lang/Class;Ljava/lang/Class;Lu4/f;)Lcom/bumptech/glide/Registry;
+.method public o(Ljava/lang/Class;Ljava/lang/Class;Lr6/f;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -997,7 +1002,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lu4/f;
+    .param p3    # Lr6/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1015,7 +1020,7 @@
             "TData;>;",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/f<",
+            "Lr6/f<",
             "TData;TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
@@ -1024,12 +1029,12 @@
     const-string v0, "legacy_prepend_all"
 
     .line 1
-    invoke-virtual {p0, v0, p1, p2, p3}, Lcom/bumptech/glide/Registry;->s(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lu4/f;)Lcom/bumptech/glide/Registry;
+    invoke-virtual {p0, v0, p1, p2, p3}, Lcom/bumptech/glide/Registry;->s(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lr6/f;)Lcom/bumptech/glide/Registry;
 
     return-object p0
 .end method
 
-.method public p(Ljava/lang/Class;Ljava/lang/Class;Lz4/o;)Lcom/bumptech/glide/Registry;
+.method public p(Ljava/lang/Class;Ljava/lang/Class;Lw6/o;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -1039,7 +1044,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lz4/o;
+    .param p3    # Lw6/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1057,27 +1062,27 @@
             "TModel;>;",
             "Ljava/lang/Class<",
             "TData;>;",
-            "Lz4/o<",
+            "Lw6/o<",
             "TModel;TData;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lz4/p;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lw6/p;
 
-    invoke-virtual {v0, p1, p2, p3}, Lz4/p;->g(Ljava/lang/Class;Ljava/lang/Class;Lz4/o;)V
+    invoke-virtual {v0, p1, p2, p3}, Lw6/p;->g(Ljava/lang/Class;Ljava/lang/Class;Lw6/o;)V
 
     return-object p0
 .end method
 
-.method public q(Ljava/lang/Class;Lu4/a;)Lcom/bumptech/glide/Registry;
+.method public q(Ljava/lang/Class;Lr6/a;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/a;
+    .param p2    # Lr6/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1091,27 +1096,27 @@
             ">(",
             "Ljava/lang/Class<",
             "TData;>;",
-            "Lu4/a<",
+            "Lr6/a<",
             "TData;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->b:Li5/a;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->b:Lf7/a;
 
-    invoke-virtual {v0, p1, p2}, Li5/a;->c(Ljava/lang/Class;Lu4/a;)V
+    invoke-virtual {v0, p1, p2}, Lf7/a;->c(Ljava/lang/Class;Lr6/a;)V
 
     return-object p0
 .end method
 
-.method public r(Ljava/lang/Class;Lu4/g;)Lcom/bumptech/glide/Registry;
+.method public r(Ljava/lang/Class;Lr6/g;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/g;
+    .param p2    # Lr6/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1125,21 +1130,21 @@
             ">(",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/g<",
+            "Lr6/g<",
             "TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Li5/f;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->d:Lf7/f;
 
-    invoke-virtual {v0, p1, p2}, Li5/f;->c(Ljava/lang/Class;Lu4/g;)V
+    invoke-virtual {v0, p1, p2}, Lf7/f;->c(Ljava/lang/Class;Lr6/g;)V
 
     return-object p0
 .end method
 
-.method public s(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lu4/f;)Lcom/bumptech/glide/Registry;
+.method public s(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Lr6/f;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -1153,7 +1158,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/f;
+    .param p4    # Lr6/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1172,16 +1177,16 @@
             "TData;>;",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/f<",
+            "Lr6/f<",
             "TData;TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
-    invoke-virtual {v0, p1, p4, p2, p3}, Li5/e;->e(Ljava/lang/String;Lu4/f;Ljava/lang/Class;Ljava/lang/Class;)V
+    invoke-virtual {v0, p1, p4, p2, p3}, Lf7/e;->e(Ljava/lang/String;Lr6/f;Ljava/lang/Class;Ljava/lang/Class;)V
 
     return-object p0
 .end method
@@ -1196,9 +1201,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->g:Li5/b;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->g:Lf7/b;
 
-    invoke-virtual {v0, p1}, Li5/b;->a(Lcom/bumptech/glide/load/ImageHeaderParser;)V
+    invoke-virtual {v0, p1}, Lf7/b;->a(Lcom/bumptech/glide/load/ImageHeaderParser;)V
 
     return-object p0
 .end method
@@ -1229,7 +1234,7 @@
     return-object p0
 .end method
 
-.method public v(Ljava/lang/Class;Ljava/lang/Class;Lg5/e;)Lcom/bumptech/glide/Registry;
+.method public v(Ljava/lang/Class;Ljava/lang/Class;Ld7/e;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -1239,7 +1244,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lg5/e;
+    .param p3    # Ld7/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1257,27 +1262,27 @@
             "TTResource;>;",
             "Ljava/lang/Class<",
             "TTranscode;>;",
-            "Lg5/e<",
+            "Ld7/e<",
             "TTResource;TTranscode;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->f:Lg5/f;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->f:Ld7/f;
 
-    invoke-virtual {v0, p1, p2, p3}, Lg5/f;->c(Ljava/lang/Class;Ljava/lang/Class;Lg5/e;)V
+    invoke-virtual {v0, p1, p2, p3}, Ld7/f;->c(Ljava/lang/Class;Ljava/lang/Class;Ld7/e;)V
 
     return-object p0
 .end method
 
-.method public w(Ljava/lang/Class;Lu4/a;)Lcom/bumptech/glide/Registry;
+.method public w(Ljava/lang/Class;Lr6/a;)Lcom/bumptech/glide/Registry;
     .locals 0
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/a;
+    .param p2    # Lr6/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1291,7 +1296,7 @@
             ">(",
             "Ljava/lang/Class<",
             "TData;>;",
-            "Lu4/a<",
+            "Lr6/a<",
             "TData;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
@@ -1301,20 +1306,20 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/Registry;->c(Ljava/lang/Class;Lu4/a;)Lcom/bumptech/glide/Registry;
+    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/Registry;->c(Ljava/lang/Class;Lr6/a;)Lcom/bumptech/glide/Registry;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public x(Ljava/lang/Class;Lu4/g;)Lcom/bumptech/glide/Registry;
+.method public x(Ljava/lang/Class;Lr6/g;)Lcom/bumptech/glide/Registry;
     .locals 0
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/g;
+    .param p2    # Lr6/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1328,7 +1333,7 @@
             ">(",
             "Ljava/lang/Class<",
             "TTResource;>;",
-            "Lu4/g<",
+            "Lr6/g<",
             "TTResource;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
@@ -1338,14 +1343,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/Registry;->d(Ljava/lang/Class;Lu4/g;)Lcom/bumptech/glide/Registry;
+    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/Registry;->d(Ljava/lang/Class;Lr6/g;)Lcom/bumptech/glide/Registry;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public y(Ljava/lang/Class;Ljava/lang/Class;Lz4/o;)Lcom/bumptech/glide/Registry;
+.method public y(Ljava/lang/Class;Ljava/lang/Class;Lw6/o;)Lcom/bumptech/glide/Registry;
     .locals 1
     .param p1    # Ljava/lang/Class;
         .annotation build Landroidx/annotation/NonNull;
@@ -1355,7 +1360,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lz4/o;
+    .param p3    # Lw6/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -1373,16 +1378,16 @@
             "TModel;>;",
             "Ljava/lang/Class<",
             "TData;>;",
-            "Lz4/o<",
+            "Lw6/o<",
             "+TModel;+TData;>;)",
             "Lcom/bumptech/glide/Registry;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lz4/p;
+    iget-object v0, p0, Lcom/bumptech/glide/Registry;->a:Lw6/p;
 
-    invoke-virtual {v0, p1, p2, p3}, Lz4/p;->i(Ljava/lang/Class;Ljava/lang/Class;Lz4/o;)V
+    invoke-virtual {v0, p1, p2, p3}, Lw6/p;->i(Ljava/lang/Class;Ljava/lang/Class;Lw6/o;)V
 
     return-object p0
 .end method
@@ -1450,9 +1455,9 @@
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 6
-    iget-object p1, p0, Lcom/bumptech/glide/Registry;->c:Li5/e;
+    iget-object p1, p0, Lcom/bumptech/glide/Registry;->c:Lf7/e;
 
-    invoke-virtual {p1, v0}, Li5/e;->f(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lf7/e;->f(Ljava/util/List;)V
 
     return-object p0
 .end method

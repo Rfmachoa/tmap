@@ -4,6 +4,12 @@
 
 
 # static fields
+.field public static final LEVEL_1:I = 0x1
+
+.field public static final LEVEL_2:I = 0x2
+
+.field public static final LEVEL_RADIUS_RATIO:F = 0.66f
+
 .field private static final SKIP_TAG:Ljava/lang/String; = "skip"
 
 
@@ -100,15 +106,76 @@
     iput p2, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
 
     .line 9
-    new-instance p2, Lcom/google/android/material/timepicker/RadialViewGroup$1;
+    new-instance p2, Lcom/google/android/material/timepicker/b;
 
-    invoke-direct {p2, p0}, Lcom/google/android/material/timepicker/RadialViewGroup$1;-><init>(Lcom/google/android/material/timepicker/RadialViewGroup;)V
+    invoke-direct {p2, p0}, Lcom/google/android/material/timepicker/b;-><init>(Lcom/google/android/material/timepicker/RadialViewGroup;)V
 
     iput-object p2, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->updateLayoutParametersRunnable:Ljava/lang/Runnable;
 
     .line 10
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    return-void
+.end method
+
+.method private addConstraints(Ljava/util/List;Landroidx/constraintlayout/widget/c;I)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/view/View;",
+            ">;",
+            "Landroidx/constraintlayout/widget/c;",
+            "I)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    .line 2
+    invoke-virtual {v2}, Landroid/view/View;->getId()I
+
+    move-result v2
+
+    sget v3, Lcom/google/android/material/R$id;->circle_center:I
+
+    invoke-virtual {p2, v2, v3, p3, v1}, Landroidx/constraintlayout/widget/c;->M(IIIF)V
+
+    const/high16 v2, 0x43b40000    # 360.0f
+
+    .line 3
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    add-float/2addr v1, v2
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
@@ -195,7 +262,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     .line 2
     invoke-virtual {p1}, Landroid/view/View;->getId()I
@@ -218,6 +285,37 @@
     invoke-direct {p0}, Lcom/google/android/material/timepicker/RadialViewGroup;->updateLayoutParamsAsync()V
 
     return-void
+.end method
+
+.method public getLeveledRadius(I)I
+    .locals 1
+    .annotation build Landroidx/annotation/Dimension;
+    .end annotation
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_0
+
+    .line 1
+    iget p1, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
+
+    int-to-float p1, p1
+
+    const v0, 0x3f28f5c3    # 0.66f
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    iget p1, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
+
+    :goto_0
+    return p1
 .end method
 
 .method public getRadius()I
@@ -291,108 +389,154 @@
 .end method
 
 .method public updateLayoutParams()V
-    .locals 8
+    .locals 6
 
     .line 1
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    new-instance v0, Landroidx/constraintlayout/widget/c;
 
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v0, :cond_1
+    invoke-direct {v0}, Landroidx/constraintlayout/widget/c;-><init>()V
 
     .line 2
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
+    invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/c;->H(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     .line 3
-    invoke-static {v4}, Lcom/google/android/material/timepicker/RadialViewGroup;->shouldSkipView(Landroid/view/View;)Z
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    const/4 v2, 0x0
+
+    .line 4
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_4
+
+    .line 5
+    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    .line 6
+    invoke-virtual {v3}, Landroid/view/View;->getId()I
+
+    move-result v4
+
+    sget v5, Lcom/google/android/material/R$id;->circle_center:I
+
+    if-eq v4, v5, :cond_3
+
+    invoke-static {v3}, Lcom/google/android/material/timepicker/RadialViewGroup;->shouldSkipView(Landroid/view/View;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    add-int/lit8 v2, v2, 0x1
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 4
-    :cond_1
-    new-instance v3, Landroidx/constraintlayout/widget/c;
-
-    invoke-direct {v3}, Landroidx/constraintlayout/widget/c;-><init>()V
-
-    .line 5
-    invoke-virtual {v3, p0}, Landroidx/constraintlayout/widget/c;->A(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    const/4 v4, 0x0
-
-    :goto_1
-    if-ge v1, v0, :cond_4
-
-    .line 6
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v5
+    goto :goto_1
 
     .line 7
-    invoke-virtual {v5}, Landroid/view/View;->getId()I
+    :cond_0
+    sget v4, Lcom/google/android/material/R$id;->material_clock_level:I
 
-    move-result v6
+    invoke-virtual {v3, v4}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    sget v7, Lcom/google/android/material/R$id;->circle_center:I
+    move-result-object v4
 
-    if-eq v6, v7, :cond_3
+    check-cast v4, Ljava/lang/Integer;
 
-    invoke-static {v5}, Lcom/google/android/material/timepicker/RadialViewGroup;->shouldSkipView(Landroid/view/View;)Z
+    if-nez v4, :cond_1
 
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    goto :goto_2
+    const/4 v4, 0x1
 
     .line 8
-    :cond_2
-    invoke-virtual {v5}, Landroid/view/View;->getId()I
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    .line 9
+    :cond_1
+    invoke-virtual {v1, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v5
 
-    iget v6, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
+    if-nez v5, :cond_2
 
-    invoke-virtual {v3, v5, v7, v6, v4}, Landroidx/constraintlayout/widget/c;->F(IIIF)V
+    .line 10
+    new-instance v5, Ljava/util/ArrayList;
 
-    const/high16 v5, 0x43b40000    # 360.0f
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    sub-int v6, v0, v2
+    invoke-virtual {v1, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    int-to-float v6, v6
+    .line 11
+    :cond_2
+    invoke-virtual {v1, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    div-float/2addr v5, v6
+    move-result-object v4
 
-    add-float/2addr v5, v4
+    check-cast v4, Ljava/util/List;
 
-    move v4, v5
+    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_3
-    :goto_2
-    add-int/lit8 v1, v1, 0x1
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 9
+    .line 12
     :cond_4
-    invoke-virtual {v3, p0}, Landroidx/constraintlayout/widget/c;->l(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Map$Entry;
+
+    .line 13
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    invoke-virtual {p0, v2}, Lcom/google/android/material/timepicker/RadialViewGroup;->getLeveledRadius(I)I
+
+    move-result v2
+
+    invoke-direct {p0, v3, v0, v2}, Lcom/google/android/material/timepicker/RadialViewGroup;->addConstraints(Ljava/util/List;Landroidx/constraintlayout/widget/c;I)V
+
+    goto :goto_2
+
+    .line 14
+    :cond_5
+    invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/c;->r(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     return-void
 .end method

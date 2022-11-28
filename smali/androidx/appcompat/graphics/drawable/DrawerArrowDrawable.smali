@@ -312,7 +312,7 @@
     if-eq v3, v6, :cond_0
 
     .line 3
-    invoke-static/range {p0 .. p0}, Ld1/c;->f(Landroid/graphics/drawable/Drawable;)I
+    invoke-static/range {p0 .. p0}, Lw1/c;->f(Landroid/graphics/drawable/Drawable;)I
 
     move-result v3
 
@@ -322,7 +322,7 @@
 
     .line 4
     :cond_0
-    invoke-static/range {p0 .. p0}, Ld1/c;->f(Landroid/graphics/drawable/Drawable;)I
+    invoke-static/range {p0 .. p0}, Lw1/c;->f(Landroid/graphics/drawable/Drawable;)I
 
     move-result v3
 

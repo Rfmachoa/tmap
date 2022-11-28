@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final a:I = 0x12
+.field public static final a:I = 0x6
 
 .field public static final b:I
 

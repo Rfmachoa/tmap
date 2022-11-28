@@ -17,7 +17,8 @@
         Lcom/amazonaws/mobileconnectors/appsync/R$layout;,
         Lcom/amazonaws/mobileconnectors/appsync/R$string;,
         Lcom/amazonaws/mobileconnectors/appsync/R$style;,
-        Lcom/amazonaws/mobileconnectors/appsync/R$styleable;
+        Lcom/amazonaws/mobileconnectors/appsync/R$styleable;,
+        Lcom/amazonaws/mobileconnectors/appsync/R$xml;
     }
 .end annotation
 

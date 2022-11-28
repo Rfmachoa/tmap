@@ -1,18 +1,14 @@
-.class public Ls2/a;
+.class public final Ls2/a;
 .super Ljava/lang/Object;
-.source "NotificationCompat.java"
+.source "BuildConfig.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Ls2/a$c;,
-        Ls2/a$b;,
-        Ls2/a$a;,
-        Ls2/a$d;,
-        Ls2/a$e;
-    }
-.end annotation
+# static fields
+.field public static final a:Z = false
+
+.field public static final b:Ljava/lang/String; = "androidx.databinding.library"
+
+.field public static final c:Ljava/lang/String; = "release"
 
 
 # direct methods

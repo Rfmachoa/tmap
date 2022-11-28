@@ -1,63 +1,20 @@
-.class public Lfg/c;
-.super Ljava/lang/ref/WeakReference;
-.source "BasicPoolEntryRef.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/ref/WeakReference<",
-        "Lfg/b;",
-        ">;"
-    }
-.end annotation
-
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.class public final Lfg/c;
+.super Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
+.source "MetadataInputBuffer.java"
 
 
 # instance fields
-.field public final a:Lcz/msebera/android/httpclient/conn/routing/a;
+.field public p:J
 
 
 # direct methods
-.method public constructor <init>(Lfg/b;Ljava/lang/ref/ReferenceQueue;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lfg/b;",
-            "Ljava/lang/ref/ReferenceQueue<",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
-
-    const-string p2, "Pool entry"
-
-    .line 2
-    invoke-static {p1, p2}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    invoke-virtual {p1}, Lfg/b;->k()Lcz/msebera/android/httpclient/conn/routing/a;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lfg/c;->a:Lcz/msebera/android/httpclient/conn/routing/a;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lcz/msebera/android/httpclient/conn/routing/a;
+.method public constructor <init>()V
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lfg/c;->a:Lcz/msebera/android/httpclient/conn/routing/a;
+    const/4 v0, 0x1
 
-    return-object v0
+    .line 1
+    invoke-direct {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;-><init>(I)V
+
+    return-void
 .end method

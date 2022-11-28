@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Ja(Lcom/skt/tmap/engine/navigation/livedata/Event;)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity;->Ya(Lcom/skt/tmap/engine/navigation/livedata/Event;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/dialog/v;
+.field public final synthetic a:Lcom/skt/tmap/dialog/a0;
 
 .field public final synthetic b:Ljava/lang/String;
 
@@ -26,7 +26,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/dialog/v;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/dialog/a0;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -44,7 +44,7 @@
     .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->c:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iput-object p2, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->a:Lcom/skt/tmap/dialog/v;
+    iput-object p2, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->a:Lcom/skt/tmap/dialog/a0;
 
     iput-object p3, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->b:Ljava/lang/String;
 
@@ -65,12 +65,12 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->a:Lcom/skt/tmap/dialog/v;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->a:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     :cond_0
@@ -89,20 +89,33 @@
 
     const-string v1, ""
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->Y1(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->h2(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 5
+    invoke-static {}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->getInstance()Lcom/google/firebase/crashlytics/FirebaseCrashlytics;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/Exception;
+
+    const-string v2, "LOGOUT: ERROR_CODE_INVALID_ACCESS_KEY in navigation"
+
+    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/crashlytics/FirebaseCrashlytics;->recordException(Ljava/lang/Throwable;)V
+
+    .line 6
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->c:Lcom/skt/tmap/activity/TmapNaviActivity;
 
     sget-object v1, Lcom/skt/tmap/service/LoginService$LoginState;->LOGOUT:Lcom/skt/tmap/service/LoginService$LoginState;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/e;->V(Landroid/content/Context;Lcom/skt/tmap/service/LoginService$LoginState;Z)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/g;->a0(Landroid/content/Context;Lcom/skt/tmap/service/LoginService$LoginState;Z)V
 
     goto :goto_0
 
-    .line 6
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->b:Ljava/lang/String;
 
@@ -118,10 +131,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
+    .line 8
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$k;->c:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     :cond_2
     :goto_0

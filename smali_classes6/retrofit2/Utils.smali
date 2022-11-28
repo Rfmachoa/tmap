@@ -6,9 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lretrofit2/Utils$WildcardTypeImpl;,
         Lretrofit2/Utils$GenericArrayTypeImpl;,
-        Lretrofit2/Utils$ParameterizedTypeImpl;
+        Lretrofit2/Utils$ParameterizedTypeImpl;,
+        Lretrofit2/Utils$WildcardTypeImpl;
     }
 .end annotation
 
@@ -49,16 +49,16 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lzj/m;
+    new-instance v0, Lem/m;
 
-    invoke-direct {v0}, Lzj/m;-><init>()V
+    invoke-direct {v0}, Lem/m;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Lokhttp3/ResponseBody;->source()Lzj/o;
+    invoke-virtual {p0}, Lokhttp3/ResponseBody;->source()Lem/o;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lzj/o;->U0(Lzj/k0;)J
+    invoke-interface {v1, v0}, Lem/o;->u0(Lem/k0;)J
 
     .line 3
     invoke-virtual {p0}, Lokhttp3/ResponseBody;->contentType()Lokhttp3/MediaType;
@@ -69,7 +69,7 @@
 
     move-result-wide v2
 
-    invoke-static {v1, v2, v3, v0}, Lokhttp3/ResponseBody;->create(Lokhttp3/MediaType;JLzj/o;)Lokhttp3/ResponseBody;
+    invoke-static {v1, v2, v3, v0}, Lokhttp3/ResponseBody;->create(Lokhttp3/MediaType;JLem/o;)Lokhttp3/ResponseBody;
 
     move-result-object p0
 

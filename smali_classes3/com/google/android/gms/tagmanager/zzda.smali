@@ -1,37 +1,58 @@
 .class final Lcom/google/android/gms/tagmanager/zzda;
-.super Landroid/util/LruCache;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
+
+
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xc
+.end annotation
 
 
 # instance fields
-.field public final synthetic zza:Lcom/google/android/gms/tagmanager/zzr;
+.field private final zza:Landroid/util/LruCache;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/tagmanager/zzdb;ILcom/google/android/gms/tagmanager/zzr;)V
-    .locals 0
-
-    iput-object p3, p0, Lcom/google/android/gms/tagmanager/zzda;->zza:Lcom/google/android/gms/tagmanager/zzr;
-
-    const/high16 p1, 0x100000
+.method public constructor <init>(ILcom/google/android/gms/tagmanager/zzq;)V
+    .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Landroid/util/LruCache;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lcom/google/android/gms/tagmanager/zzcz;
+
+    const/high16 v0, 0x100000
+
+    invoke-direct {p1, p0, v0, p2}, Lcom/google/android/gms/tagmanager/zzcz;-><init>(Lcom/google/android/gms/tagmanager/zzda;ILcom/google/android/gms/tagmanager/zzq;)V
+
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzda;->zza:Landroid/util/LruCache;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final zza(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzda;->zza:Lcom/google/android/gms/tagmanager/zzr;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzda;->zza:Landroid/util/LruCache;
+
+    invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final zzb(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
     .line 1
-    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/tagmanager/zzr;->zza(Ljava/lang/Object;Ljava/lang/Object;)I
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzda;->zza:Landroid/util/LruCache;
 
-    move-result p1
+    invoke-virtual {v0, p1, p2}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
+    return-void
 .end method

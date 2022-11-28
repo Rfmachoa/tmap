@@ -398,7 +398,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     const-string v0, "android.messagingStyleUser"
 
@@ -409,7 +409,7 @@
 
     if-eqz v0, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     const-string v0, "android.picture"
@@ -419,14 +419,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_5
+
+    const-string v0, "android.pictureIcon"
 
     .line 5
-    new-instance p0, Landroidx/core/app/NotificationCompat$b;
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
-    invoke-direct {p0}, Landroidx/core/app/NotificationCompat$b;-><init>()V
+    move-result v0
 
-    return-object p0
+    if-eqz v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
     const-string v0, "android.bigText"
@@ -479,6 +483,15 @@
     .line 11
     :cond_5
     :goto_0
+    new-instance p0, Landroidx/core/app/NotificationCompat$b;
+
+    invoke-direct {p0}, Landroidx/core/app/NotificationCompat$b;-><init>()V
+
+    return-object p0
+
+    .line 12
+    :cond_6
+    :goto_1
     new-instance p0, Landroidx/core/app/NotificationCompat$j;
 
     invoke-direct {p0}, Landroidx/core/app/NotificationCompat$j;-><init>()V
@@ -608,7 +621,7 @@
     return-void
 .end method
 
-.method public b(Landroidx/core/app/l;)V
+.method public b(Landroidx/core/app/p;)V
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -1361,7 +1374,7 @@
 
     iget-object v0, v0, Landroidx/core/app/NotificationCompat$e;->a:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Landroidx/core/graphics/drawable/IconCompat;->I(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v0}, Landroidx/core/graphics/drawable/IconCompat;->E(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1546,7 +1559,7 @@
     return-void
 .end method
 
-.method public v(Landroidx/core/app/l;)Landroid/widget/RemoteViews;
+.method public v(Landroidx/core/app/p;)Landroid/widget/RemoteViews;
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -1559,7 +1572,7 @@
     return-object p1
 .end method
 
-.method public w(Landroidx/core/app/l;)Landroid/widget/RemoteViews;
+.method public w(Landroidx/core/app/p;)Landroid/widget/RemoteViews;
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -1572,7 +1585,7 @@
     return-object p1
 .end method
 
-.method public x(Landroidx/core/app/l;)Landroid/widget/RemoteViews;
+.method public x(Landroidx/core/app/p;)Landroid/widget/RemoteViews;
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {

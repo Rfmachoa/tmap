@@ -108,7 +108,7 @@
     iget-object v3, p0, Lcom/google/firebase/database/core/SyncTree$16;->this$0:Lcom/google/firebase/database/core/SyncTree;
 
     .line 7
-    invoke-static {v3, p1, p2, v0, v1}, Lcom/google/firebase/database/core/SyncTree;->access$1700(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/operation/Operation;Lcom/google/firebase/database/core/utilities/ImmutableTree;Lcom/google/firebase/database/snapshot/Node;Lcom/google/firebase/database/core/WriteTreeRef;)Ljava/util/List;
+    invoke-static {v3, p1, p2, v0, v1}, Lcom/google/firebase/database/core/SyncTree;->access$1600(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/operation/Operation;Lcom/google/firebase/database/core/utilities/ImmutableTree;Lcom/google/firebase/database/snapshot/Node;Lcom/google/firebase/database/core/WriteTreeRef;)Ljava/util/List;
 
     move-result-object p1
 

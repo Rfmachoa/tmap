@@ -21,6 +21,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/widget/JackpotSlot;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/widget/JackpotSlot$a;->a:Lcom/skt/moment/widget/JackpotSlot;
@@ -34,6 +42,14 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/widget/JackpotSlot$a;->a:Lcom/skt/moment/widget/JackpotSlot;

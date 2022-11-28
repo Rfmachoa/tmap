@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/internal/IGmsServiceBroker$Stub;
 .super Landroid/os/Binder;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/IGmsServiceBroker;
@@ -40,6 +40,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     return-object p0

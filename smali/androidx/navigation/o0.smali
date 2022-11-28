@@ -1,23 +1,44 @@
-.class public final synthetic Landroidx/navigation/o0;
+.class public interface abstract Landroidx/navigation/o0;
 .super Ljava/lang/Object;
-.source "R8$$SyntheticClass"
+.source "NavViewModelStoreProvider.kt"
 
 
-# direct methods
-.method public static a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008g\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&\u00a8\u0006\u0006"
+    }
+    d2 = {
+        "Landroidx/navigation/o0;",
+        "",
+        "",
+        "backStackEntryId",
+        "Landroidx/lifecycle/ViewModelStore;",
+        "a",
+        "navigation-common_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+.end annotation
 
-    move-result-object p0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+# virtual methods
+.method public abstract a(Ljava/lang/String;)Landroidx/lifecycle/ViewModelStore;
+    .param p1    # Ljava/lang/String;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 .end method

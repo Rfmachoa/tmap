@@ -152,16 +152,19 @@
 
     invoke-direct {v1, p1}, Lcom/google/android/material/progressindicator/LinearDrawingDelegate;-><init>(Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;)V
 
+    .line 2
     iget v2, p1, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;->indeterminateAnimationType:I
 
     if-nez v2, :cond_0
 
+    .line 3
     new-instance v2, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;
 
     invoke-direct {v2, p1}, Lcom/google/android/material/progressindicator/LinearIndeterminateContiguousAnimatorDelegate;-><init>(Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v2, Lcom/google/android/material/progressindicator/LinearIndeterminateDisjointAnimatorDelegate;
 
@@ -228,11 +231,15 @@
     .line 4
     iget-object v0, p0, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->drawingDelegate:Lcom/google/android/material/progressindicator/DrawingDelegate;
 
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->getGrowFraction()F
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/progressindicator/DrawingDelegate;->validateSpecAndAdjustCanvas(Landroid/graphics/Canvas;F)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/google/android/material/progressindicator/DrawingDelegate;->validateSpecAndAdjustCanvas(Landroid/graphics/Canvas;Landroid/graphics/Rect;F)V
 
     .line 5
     iget-object v0, p0, Lcom/google/android/material/progressindicator/IndeterminateDrawable;->drawingDelegate:Lcom/google/android/material/progressindicator/DrawingDelegate;
@@ -418,15 +425,15 @@
     return v0
 .end method
 
-.method public bridge synthetic registerAnimationCallback(Li3/b$a;)V
+.method public bridge synthetic registerAnimationCallback(Lq4/b$a;)V
     .locals 0
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->registerAnimationCallback(Li3/b$a;)V
+    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->registerAnimationCallback(Lq4/b$a;)V
 
     return-void
 .end method
@@ -590,15 +597,15 @@
     return-void
 .end method
 
-.method public bridge synthetic unregisterAnimationCallback(Li3/b$a;)Z
+.method public bridge synthetic unregisterAnimationCallback(Lq4/b$a;)Z
     .locals 0
-    .param p1    # Li3/b$a;
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->unregisterAnimationCallback(Li3/b$a;)Z
+    invoke-super {p0, p1}, Lcom/google/android/material/progressindicator/DrawableWithAnimatedVisibilityChange;->unregisterAnimationCallback(Lq4/b$a;)Z
 
     move-result p1
 

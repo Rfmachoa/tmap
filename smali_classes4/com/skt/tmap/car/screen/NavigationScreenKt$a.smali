@@ -16,7 +16,7 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0005\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u000b\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002R\u001f\u0010\u0008\u001a\n \u0007*\u0004\u0018\u00010\u00060\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\t\u001a\u0004\u0008\n\u0010\u000bR\u0014\u0010\r\u001a\u00020\u000c8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000eR\u0014\u0010\u000f\u001a\u00020\u000c8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010\u000eR\u0014\u0010\u0011\u001a\u00020\u00108\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0011\u0010\u0012R\u0014\u0010\u0013\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010\tR\u0014\u0010\u0014\u001a\u00020\u00108\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0014\u0010\u0012R\u0014\u0010\u0015\u001a\u00020\u000c8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u000eR\u0014\u0010\u0016\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0016\u0010\tR\u0014\u0010\u0017\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010\tR\u0014\u0010\u0018\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\t\u00a8\u0006\u001b"
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u000b\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002R\u0017\u0010\u0007\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010\u0008\u001a\u0004\u0008\t\u0010\nR\u0014\u0010\u000c\u001a\u00020\u000b8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u000c\u0010\rR\u0014\u0010\u000e\u001a\u00020\u000b8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u000e\u0010\rR\u0014\u0010\u0010\u001a\u00020\u000f8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0010\u0010\u0011R\u0014\u0010\u0012\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0012\u0010\u0008R\u0014\u0010\u0013\u001a\u00020\u000f8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010\u0011R\u0014\u0010\u0014\u001a\u00020\u000b8\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0014\u0010\rR\u0014\u0010\u0015\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u0008R\u0014\u0010\u0016\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0016\u0010\u0008R\u0014\u0010\u0017\u001a\u00020\u00068\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010\u0008\u00a8\u0006\u001a"
     }
     d2 = {
         "Lcom/skt/tmap/car/screen/NavigationScreenKt$a;",
@@ -26,7 +26,6 @@
         "Landroidx/car/app/model/CarColor;",
         "a",
         "",
-        "kotlin.jvm.PlatformType",
         "TAG",
         "Ljava/lang/String;",
         "b",
@@ -51,8 +50,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -70,7 +69,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/car/screen/NavigationScreenKt$a;-><init>()V
 
     return-void
@@ -87,7 +85,7 @@
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const-string/jumbo v0, "tbtData"
+    const-string v0, "tbtData"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -110,7 +108,7 @@
 
     move-result-object v0
 
-    const-string v1, "CarColor.DEFAULT"
+    const-string v1, "DEFAULT"
 
     if-eqz v0, :cond_a
 
@@ -160,6 +158,10 @@
     aget-object v11, v0, v10
 
     if-eqz v11, :cond_5
+
+    const-string v12, "trafficListInfos[i]"
+
+    invoke-static {v11, v12}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-ne v10, p1, :cond_1
 
@@ -240,9 +242,7 @@
 
     mul-float/2addr v4, v3
 
-    const/16 p1, 0x4b
-
-    int-to-float p1, p1
+    const/high16 p1, 0x42960000    # 75.0f
 
     cmpl-float p1, v2, p1
 
@@ -256,9 +256,7 @@
     return-object p1
 
     :cond_7
-    const/16 p1, 0x3c
-
-    int-to-float p1, p1
+    const/high16 p1, 0x42700000    # 60.0f
 
     cmpl-float p1, v4, p1
 
@@ -267,16 +265,14 @@
     .line 10
     sget-object p1, Landroidx/car/app/model/CarColor;->m:Landroidx/car/app/model/CarColor;
 
-    const-string v0, "CarColor.GREEN"
+    const-string v0, "GREEN"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     :cond_8
-    const/16 p1, -0x14
-
-    int-to-float p1, p1
+    const/high16 p1, -0x3e600000    # -20.0f
 
     cmpg-float p1, v4, p1
 
@@ -285,7 +281,7 @@
     .line 11
     sget-object p1, Landroidx/car/app/model/CarColor;->l:Landroidx/car/app/model/CarColor;
 
-    const-string v0, "CarColor.RED"
+    const-string v0, "RED"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -295,7 +291,7 @@
     :cond_9
     sget-object p1, Landroidx/car/app/model/CarColor;->o:Landroidx/car/app/model/CarColor;
 
-    const-string v0, "CarColor.YELLOW"
+    const-string v0, "YELLOW"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -312,9 +308,11 @@
 
 .method public final b()Ljava/lang/String;
     .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->M()Ljava/lang/String;
+    invoke-static {}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->q0()Ljava/lang/String;
 
     move-result-object v0
 

@@ -24,15 +24,7 @@
 
 
 # instance fields
-.field private final transport:Lcom/google/android/datatransport/Transport;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/datatransport/Transport<",
-            "Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final reportQueue:Lcom/google/firebase/crashlytics/internal/send/ReportQueue;
 
 .field private final transportTransform:Lcom/google/android/datatransport/Transformer;
     .annotation system Ldalvik/annotation/Signature;
@@ -79,21 +71,19 @@
     sput-object v0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->CRASHLYTICS_API_KEY:Ljava/lang/String;
 
     .line 4
-    sget-object v0, Lb6/a;->a:Lb6/a;
+    sget-object v0, Lcom/google/firebase/crashlytics/internal/send/a;->a:Lcom/google/firebase/crashlytics/internal/send/a;
 
     sput-object v0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->DEFAULT_TRANSFORM:Lcom/google/android/datatransport/Transformer;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/datatransport/Transport;Lcom/google/android/datatransport/Transformer;)V
+.method public constructor <init>(Lcom/google/firebase/crashlytics/internal/send/ReportQueue;Lcom/google/android/datatransport/Transformer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/android/datatransport/Transport<",
-            "Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;",
-            ">;",
+            "Lcom/google/firebase/crashlytics/internal/send/ReportQueue;",
             "Lcom/google/android/datatransport/Transformer<",
             "Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;",
             "[B>;)V"
@@ -104,7 +94,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->transport:Lcom/google/android/datatransport/Transport;
+    iput-object p1, p0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->reportQueue:Lcom/google/firebase/crashlytics/internal/send/ReportQueue;
 
     .line 3
     iput-object p2, p0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->transportTransform:Lcom/google/android/datatransport/Transformer;
@@ -122,15 +112,7 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;Ljava/lang/Exception;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->lambda$sendReport$1(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public static create(Landroid/content/Context;)Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
+.method public static create(Landroid/content/Context;Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;Lcom/google/firebase/crashlytics/internal/common/OnDemandCounter;)Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
     .locals 4
 
     .line 1
@@ -173,28 +155,21 @@
     move-result-object p0
 
     .line 6
-    new-instance v0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
+    new-instance v0, Lcom/google/firebase/crashlytics/internal/send/ReportQueue;
 
-    invoke-direct {v0, p0, v2}, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;-><init>(Lcom/google/android/datatransport/Transport;Lcom/google/android/datatransport/Transformer;)V
+    .line 7
+    invoke-interface {p1}, Lcom/google/firebase/crashlytics/internal/settings/SettingsProvider;->getSettingsSync()Lcom/google/firebase/crashlytics/internal/settings/Settings;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method private static synthetic lambda$sendReport$1(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;Ljava/lang/Exception;)V
-    .locals 0
+    invoke-direct {v0, p0, p1, p2}, Lcom/google/firebase/crashlytics/internal/send/ReportQueue;-><init>(Lcom/google/android/datatransport/Transport;Lcom/google/firebase/crashlytics/internal/settings/Settings;Lcom/google/firebase/crashlytics/internal/common/OnDemandCounter;)V
 
-    if-eqz p2, :cond_0
+    .line 8
+    new-instance p0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;
 
-    .line 1
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetException(Ljava/lang/Exception;)Z
+    invoke-direct {p0, v0, v2}, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;-><init>(Lcom/google/firebase/crashlytics/internal/send/ReportQueue;Lcom/google/android/datatransport/Transformer;)V
 
-    return-void
-
-    .line 2
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetResult(Ljava/lang/Object;)Z
-
-    return-void
+    return-object p0
 .end method
 
 .method private static synthetic lambda$static$0(Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;)[B
@@ -312,8 +287,8 @@
 
 
 # virtual methods
-.method public sendReport(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;)Lcom/google/android/gms/tasks/Task;
-    .locals 4
+.method public enqueueReport(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;Z)Lcom/google/android/gms/tasks/Task;
+    .locals 1
     .param p1    # Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -325,7 +300,7 @@
         value = {
             "(",
             "Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;",
-            ")",
+            "Z)",
             "Lcom/google/android/gms/tasks/Task<",
             "Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;",
             ">;"
@@ -333,32 +308,13 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;->getReport()Lcom/google/firebase/crashlytics/internal/model/CrashlyticsReport;
+    iget-object v0, p0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->reportQueue:Lcom/google/firebase/crashlytics/internal/send/ReportQueue;
 
-    move-result-object v0
+    invoke-virtual {v0, p1, p2}, Lcom/google/firebase/crashlytics/internal/send/ReportQueue;->enqueueReport(Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;Z)Lcom/google/android/gms/tasks/TaskCompletionSource;
 
-    .line 2
-    new-instance v1, Lcom/google/android/gms/tasks/TaskCompletionSource;
+    move-result-object p1
 
-    invoke-direct {v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>()V
-
-    .line 3
-    iget-object v2, p0, Lcom/google/firebase/crashlytics/internal/send/DataTransportCrashlyticsReportSender;->transport:Lcom/google/android/datatransport/Transport;
-
-    .line 4
-    invoke-static {v0}, Lcom/google/android/datatransport/Event;->ofUrgent(Ljava/lang/Object;)Lcom/google/android/datatransport/Event;
-
-    move-result-object v0
-
-    new-instance v3, Lb6/b;
-
-    invoke-direct {v3, v1, p1}, Lb6/b;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/firebase/crashlytics/internal/common/CrashlyticsReportWithSessionId;)V
-
-    .line 5
-    invoke-interface {v2, v0, v3}, Lcom/google/android/datatransport/Transport;->schedule(Lcom/google/android/datatransport/Event;Lcom/google/android/datatransport/TransportScheduleCallback;)V
-
-    .line 6
-    invoke-virtual {v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
 

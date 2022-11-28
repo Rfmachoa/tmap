@@ -1,349 +1,59 @@
 .class public Lsf/a;
-.super Ljava/lang/Object;
-.source "BasicRouteDirector.java"
-
-# interfaces
-.implements Lsf/b;
+.super Landroid/database/sqlite/SQLiteOpenHelper;
+.source ""
 
 
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
+# static fields
+.field public static a:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS new_pref_info( smartlbpwz_key TEXT PRIMARY KEY, smartlbpwz_val TEXT );"
+
+.field public static b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS base_info( user_idx TEXT PRIMARY KEY, base_setting_interval TEXT, collection_running_time TEXT, collection_interval TEXT, app_collection_interval TEXT, popup_interval TEXT, ble_rssi_limit TEXT, wifi_rssi_limit TEXT, gps_accuracy TEXT, has_cps_update_delay TEXT, has_cps_max_delay TEXT, no_have_cps_update_delay TEXT, no_have_cps_max_delay TEXT, periodic_job_interval TEXT, job_maximum_running_time TEXT, spremiums_delay TEXT, spremiums_pull_count TEXT, spremiums_pull_interval TEXT, collect_stay_timeout TEXT, work_service_interval TEXT );"
+
+.field public static c:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS smartlbpwz_log_info( type TEXT, thread TEXT, line TEXT, date TEXT, message TEXT );"
+
+.field public static d:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS smartlbpwz_prec_info( t TEXT, iu TEXT, it TEXT, lu TEXT, lt TEXT, p TEXT, cl TEXT, rl TEXT, ua TEXT, r TEXT, ib TEXT, an TEXT );"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "smartlbpwz_info.db"
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x3
+
+    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
-    .locals 2
-
-    const-string v0, "Planned route"
-
-    .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    if-eqz p2, :cond_2
-
-    .line 2
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
-
-    move-result v0
-
-    if-le v0, v1, :cond_1
-
-    .line 4
-    invoke-virtual {p0, p1, p2}, Lsf/a;->d(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
-
-    move-result p1
-
-    goto :goto_1
-
-    .line 5
-    :cond_1
-    invoke-virtual {p0, p1, p2}, Lsf/a;->b(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
-
-    move-result p1
-
-    goto :goto_1
-
-    .line 6
-    :cond_2
-    :goto_0
-    invoke-virtual {p0, p1}, Lsf/a;->c(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
-
-    move-result p1
-
-    :goto_1
-    return p1
-.end method
-
-.method public b(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
-    .locals 3
-
-    .line 1
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x1
-
-    if-le v0, v2, :cond_0
-
-    return v1
-
-    .line 2
-    :cond_0
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getTargetHost()Lcz/msebera/android/httpclient/HttpHost;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getTargetHost()Lcz/msebera/android/httpclient/HttpHost;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcz/msebera/android/httpclient/HttpHost;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    .line 3
-    :cond_1
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isSecure()Z
-
-    move-result v0
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isSecure()Z
-
-    move-result v2
-
-    if-eq v0, v2, :cond_2
-
-    return v1
-
-    .line 4
-    :cond_2
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getLocalAddress()Ljava/net/InetAddress;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    .line 5
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getLocalAddress()Ljava/net/InetAddress;
-
-    move-result-object p1
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getLocalAddress()Ljava/net/InetAddress;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/net/InetAddress;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public c(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
+.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
-    .line 1
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
+    sget-object v0, Lsf/a;->a:Ljava/lang/String;
 
-    move-result p1
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const/4 v0, 0x1
+    sget-object v0, Lsf/a;->b:Ljava/lang/String;
 
-    if-le p1, v0, :cond_0
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const/4 v0, 0x2
+    sget-object v0, Lsf/a;->c:Ljava/lang/String;
 
-    :cond_0
-    return v0
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    sget-object v0, Lsf/a;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public d(Lcz/msebera/android/httpclient/conn/routing/RouteInfo;Lcz/msebera/android/httpclient/conn/routing/RouteInfo;)I
-    .locals 7
+.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 0
 
-    .line 1
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, -0x1
-
-    if-gt v0, v1, :cond_0
-
-    return v2
-
-    .line 2
-    :cond_0
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getTargetHost()Lcz/msebera/android/httpclient/HttpHost;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getTargetHost()Lcz/msebera/android/httpclient/HttpHost;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/HttpHost;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return v2
-
-    .line 3
-    :cond_1
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
-
-    move-result v0
-
-    .line 4
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopCount()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_2
-
-    return v2
-
-    :cond_2
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_0
-    add-int/lit8 v5, v1, -0x1
-
-    if-ge v4, v5, :cond_4
-
-    .line 5
-    invoke-interface {p1, v4}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopTarget(I)Lcz/msebera/android/httpclient/HttpHost;
-
-    move-result-object v5
-
-    invoke-interface {p2, v4}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->getHopTarget(I)Lcz/msebera/android/httpclient/HttpHost;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lcz/msebera/android/httpclient/HttpHost;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    return v2
-
-    :cond_3
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    if-le v0, v1, :cond_5
-
-    const/4 p1, 0x4
-
-    return p1
-
-    .line 6
-    :cond_5
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isTunnelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isTunnelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    .line 7
-    :cond_6
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isLayered()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isLayered()Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    :cond_7
-    return v2
-
-    .line 8
-    :cond_8
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isTunnelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isTunnelled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    const/4 p1, 0x3
-
-    return p1
-
-    .line 9
-    :cond_9
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isLayered()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isLayered()Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    const/4 p1, 0x5
-
-    return p1
-
-    .line 10
-    :cond_a
-    invoke-interface {p1}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isSecure()Z
-
-    move-result p1
-
-    invoke-interface {p2}, Lcz/msebera/android/httpclient/conn/routing/RouteInfo;->isSecure()Z
-
-    move-result p2
-
-    if-eq p1, p2, :cond_b
-
-    return v2
-
-    :cond_b
-    return v3
+    return-void
 .end method

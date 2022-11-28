@@ -143,16 +143,19 @@
 
 
 # virtual methods
-.method public declared-synchronized a(Ljava/lang/Object;Ljava/lang/Object;Lj5/p;Lcom/bumptech/glide/load/DataSource;Z)Z
+.method public declared-synchronized a(Lcom/bumptech/glide/load/engine/GlideException;Ljava/lang/Object;Lg7/p;Z)Z
     .locals 0
+    .param p1    # Lcom/bumptech/glide/load/engine/GlideException;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TR;",
+            "(",
+            "Lcom/bumptech/glide/load/engine/GlideException;",
             "Ljava/lang/Object;",
-            "Lj5/p<",
-            "TR;>;",
-            "Lcom/bumptech/glide/load/DataSource;",
-            "Z)Z"
+            "Lg7/p<",
+            "TR;>;Z)Z"
         }
     .end annotation
 
@@ -162,10 +165,10 @@
 
     .line 1
     :try_start_0
-    iput-boolean p2, p0, Lcom/bumptech/glide/request/f;->h:Z
+    iput-boolean p2, p0, Lcom/bumptech/glide/request/f;->i:Z
 
     .line 2
-    iput-object p1, p0, Lcom/bumptech/glide/request/f;->e:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/bumptech/glide/request/f;->j:Lcom/bumptech/glide/load/engine/GlideException;
 
     .line 3
     iget-object p1, p0, Lcom/bumptech/glide/request/f;->d:Lcom/bumptech/glide/request/f$a;
@@ -189,19 +192,16 @@
     throw p1
 .end method
 
-.method public declared-synchronized b(Lcom/bumptech/glide/load/engine/GlideException;Ljava/lang/Object;Lj5/p;Z)Z
+.method public declared-synchronized b(Ljava/lang/Object;Ljava/lang/Object;Lg7/p;Lcom/bumptech/glide/load/DataSource;Z)Z
     .locals 0
-    .param p1    # Lcom/bumptech/glide/load/engine/GlideException;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lcom/bumptech/glide/load/engine/GlideException;",
+            "(TR;",
             "Ljava/lang/Object;",
-            "Lj5/p<",
-            "TR;>;Z)Z"
+            "Lg7/p<",
+            "TR;>;",
+            "Lcom/bumptech/glide/load/DataSource;",
+            "Z)Z"
         }
     .end annotation
 
@@ -211,10 +211,10 @@
 
     .line 1
     :try_start_0
-    iput-boolean p2, p0, Lcom/bumptech/glide/request/f;->i:Z
+    iput-boolean p2, p0, Lcom/bumptech/glide/request/f;->h:Z
 
     .line 2
-    iput-object p1, p0, Lcom/bumptech/glide/request/f;->j:Lcom/bumptech/glide/load/engine/GlideException;
+    iput-object p1, p0, Lcom/bumptech/glide/request/f;->e:Ljava/lang/Object;
 
     .line 3
     iget-object p1, p0, Lcom/bumptech/glide/request/f;->d:Lcom/bumptech/glide/request/f$a;
@@ -271,7 +271,7 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-static {}, Lm5/m;->a()V
+    invoke-static {}, Lj7/n;->a()V
 
     .line 3
     :cond_0
@@ -525,9 +525,9 @@
     throw p1
 .end method
 
-.method public f(Lj5/o;)V
+.method public e(Lg7/o;)V
     .locals 0
-    .param p1    # Lj5/o;
+    .param p1    # Lg7/o;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -535,28 +535,12 @@
     return-void
 .end method
 
-.method public declared-synchronized g(Ljava/lang/Object;Lk5/f;)V
+.method public g(Landroid/graphics/drawable/Drawable;)V
     .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lk5/f;
+    .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;",
-            "Lk5/f<",
-            "-TR;>;)V"
-        }
-    .end annotation
-
-    monitor-enter p0
-
-    .line 1
-    monitor-exit p0
 
     return-void
 .end method
@@ -637,17 +621,7 @@
     return-object p1
 .end method
 
-.method public h(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-    .param p1    # Landroid/graphics/drawable/Drawable;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    return-void
-.end method
-
-.method public declared-synchronized i()Lcom/bumptech/glide/request/e;
+.method public declared-synchronized h()Lcom/bumptech/glide/request/e;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -670,6 +644,16 @@
     monitor-exit p0
 
     throw v0
+.end method
+
+.method public i(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    return-void
 .end method
 
 .method public declared-synchronized isCancelled()Z
@@ -740,34 +724,7 @@
     throw v0
 .end method
 
-.method public j(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-    .param p1    # Landroid/graphics/drawable/Drawable;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    return-void
-.end method
-
-.method public k(Lj5/o;)V
-    .locals 2
-    .param p1    # Lj5/o;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    iget v0, p0, Lcom/bumptech/glide/request/f;->a:I
-
-    iget v1, p0, Lcom/bumptech/glide/request/f;->b:I
-
-    invoke-interface {p1, v0, v1}, Lj5/o;->d(II)V
-
-    return-void
-.end method
-
-.method public declared-synchronized m(Lcom/bumptech/glide/request/e;)V
+.method public declared-synchronized k(Lcom/bumptech/glide/request/e;)V
     .locals 0
     .param p1    # Lcom/bumptech/glide/request/e;
         .annotation build Landroidx/annotation/Nullable;
@@ -795,7 +752,7 @@
     throw p1
 .end method
 
-.method public declared-synchronized n(Landroid/graphics/drawable/Drawable;)V
+.method public declared-synchronized l(Landroid/graphics/drawable/Drawable;)V
     .locals 0
     .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/Nullable;
@@ -806,6 +763,49 @@
 
     .line 1
     monitor-exit p0
+
+    return-void
+.end method
+
+.method public declared-synchronized n(Ljava/lang/Object;Lh7/f;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lh7/f;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TR;",
+            "Lh7/f<",
+            "-TR;>;)V"
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1
+    monitor-exit p0
+
+    return-void
+.end method
+
+.method public o(Lg7/o;)V
+    .locals 2
+    .param p1    # Lg7/o;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget v0, p0, Lcom/bumptech/glide/request/f;->a:I
+
+    iget v1, p0, Lcom/bumptech/glide/request/f;->b:I
+
+    invoke-interface {p1, v0, v1}, Lg7/o;->d(II)V
 
     return-void
 .end method
@@ -826,4 +826,118 @@
     .locals 0
 
     return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 4
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "[status="
+
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2
+    monitor-enter p0
+
+    .line 3
+    :try_start_0
+    iget-boolean v1, p0, Lcom/bumptech/glide/request/f;->g:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "CANCELLED"
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    iget-boolean v1, p0, Lcom/bumptech/glide/request/f;->i:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "FAILURE"
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    iget-boolean v1, p0, Lcom/bumptech/glide/request/f;->h:Z
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "SUCCESS"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "PENDING"
+
+    .line 6
+    iget-object v2, p0, Lcom/bumptech/glide/request/f;->f:Lcom/bumptech/glide/request/e;
+
+    .line 7
+    :goto_0
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v2, :cond_3
+
+    .line 8
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", request=["
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]]"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_3
+    const-string v2, "]"
+
+    .line 9
+    invoke-static {v0, v1, v2}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    .line 10
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

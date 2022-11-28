@@ -1,8 +1,8 @@
-.class public interface abstract Ldg/k;
+.class public interface abstract synthetic Ldg/k;
 .super Ljava/lang/Object;
-.source "Clock.java"
+.source "package-info.java"
 
 
-# virtual methods
-.method public abstract getCurrentTime()J
-.end method
+# annotations
+.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
+.end annotation

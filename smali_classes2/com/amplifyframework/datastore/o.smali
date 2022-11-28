@@ -3,34 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lcom/amplifyframework/hub/HubEventFilter;
 
 
-# instance fields
-.field public final synthetic a:Lai/c;
+# static fields
+.field public static final synthetic a:Lcom/amplifyframework/datastore/o;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/c;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/amplifyframework/datastore/o;
+
+    invoke-direct {v0}, Lcom/amplifyframework/datastore/o;-><init>()V
+
+    sput-object v0, Lcom/amplifyframework/datastore/o;->a:Lcom/amplifyframework/datastore/o;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/amplifyframework/datastore/o;->a:Lai/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final filter(Lcom/amplifyframework/hub/HubEvent;)Z
+    .locals 0
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/o;->a:Lai/c;
+    invoke-static {p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->t(Lcom/amplifyframework/hub/HubEvent;)Z
 
-    check-cast p1, Ljava/util/List;
+    move-result p1
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/AWSDataStorePlugin;->s(Lai/c;Ljava/util/List;)V
-
-    return-void
+    return p1
 .end method

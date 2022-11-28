@@ -1,37 +1,14 @@
-.class public Lcom/bumptech/glide/manager/m;
+.class public interface abstract Lcom/bumptech/glide/manager/m;
 .super Ljava/lang/Object;
-.source "NullConnectivityMonitor.java"
-
-# interfaces
-.implements Lcom/bumptech/glide/manager/c;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.source "LifecycleListener.java"
 
 
 # virtual methods
-.method public onDestroy()V
-    .locals 0
-
-    return-void
+.method public abstract onDestroy()V
 .end method
 
-.method public onStart()V
-    .locals 0
-
-    return-void
+.method public abstract onStart()V
 .end method
 
-.method public onStop()V
-    .locals 0
-
-    return-void
+.method public abstract onStop()V
 .end method

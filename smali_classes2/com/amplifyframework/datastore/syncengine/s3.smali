@@ -3,42 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/o;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
-
-.field public final synthetic b:Lcom/amplifyframework/core/model/ModelSchema;
+.field public final synthetic a:Lio/reactivex/rxjava3/processors/BehaviorProcessor;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;)V
+.method public synthetic constructor <init>(Lio/reactivex/rxjava3/processors/BehaviorProcessor;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/s3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/s3;->b:Lcom/amplifyframework/core/model/ModelSchema;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/s3;->a:Lio/reactivex/rxjava3/processors/BehaviorProcessor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/s3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
-
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/s3;->b:Lcom/amplifyframework/core/model/ModelSchema;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/s3;->a:Lio/reactivex/rxjava3/processors/BehaviorProcessor;
 
     check-cast p1, Lcom/amplifyframework/api/graphql/PaginatedResult;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->l(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/api/graphql/PaginatedResult;)Ljava/util/List;
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->m(Lio/reactivex/rxjava3/processors/BehaviorProcessor;Lcom/amplifyframework/api/graphql/PaginatedResult;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

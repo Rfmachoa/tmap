@@ -1,185 +1,42 @@
-.class public final Lb1/b;
+.class public final synthetic Lb1/b;
 .super Ljava/lang/Object;
-.source "SQLiteDatabase.kt"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/car/app/utils/RemoteUtils$b;
 
 
-# annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nSQLiteDatabase.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SQLiteDatabase.kt\nandroidx/core/database/sqlite/SQLiteDatabaseKt\n*L\n1#1,43:1\n30#1,13:44\n*E\n"
-.end annotation
+# instance fields
+.field public final synthetic a:Landroidx/car/app/IStartCarApp;
 
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0018\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u001a=\u0010\u0007\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u0000*\u00020\u00012\u0008\u0008\u0002\u0010\u0003\u001a\u00020\u00022\u0017\u0010\u0006\u001a\u0013\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00028\u00000\u0004\u00a2\u0006\u0002\u0008\u0005H\u0086\u0008\u00a2\u0006\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\t"
-    }
-    d2 = {
-        "T",
-        "Landroid/database/sqlite/SQLiteDatabase;",
-        "",
-        "exclusive",
-        "Lkotlin/Function1;",
-        "Lkotlin/ExtensionFunctionType;",
-        "body",
-        "a",
-        "(Landroid/database/sqlite/SQLiteDatabase;ZLej/l;)Ljava/lang/Object;",
-        "core-ktx_release"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x4,
-        0x0
-    }
-.end annotation
+.field public final synthetic b:Landroid/content/Intent;
 
 
 # direct methods
-.method public static final a(Landroid/database/sqlite/SQLiteDatabase;ZLej/l;)Ljava/lang/Object;
-    .locals 1
-    .param p0    # Landroid/database/sqlite/SQLiteDatabase;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Lej/l;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/database/sqlite/SQLiteDatabase;",
-            "Z",
-            "Lej/l<",
-            "-",
-            "Landroid/database/sqlite/SQLiteDatabase;",
-            "+TT;>;)TT;"
-        }
-    .end annotation
-
-    const-string v0, "$this$transaction"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "body"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    if-eqz p1, :cond_0
-
-    .line 1
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
-
-    goto :goto_0
-
-    .line 2
-    :cond_0
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransactionNonExclusive()V
-
-    :goto_0
-    const/4 p1, 0x1
-
-    .line 3
-    :try_start_0
-    invoke-interface {p2, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    .line 4
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/c0;->d(I)V
-
-    .line 6
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    invoke-static {p1}, Lkotlin/jvm/internal/c0;->c(I)V
-
-    return-object p2
-
-    :catchall_0
-    move-exception p2
-
-    .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/c0;->d(I)V
-
-    .line 8
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    invoke-static {p1}, Lkotlin/jvm/internal/c0;->c(I)V
-
-    throw p2
-.end method
-
-.method public static synthetic b(Landroid/database/sqlite/SQLiteDatabase;ZLej/l;ILjava/lang/Object;)Ljava/lang/Object;
+.method public synthetic constructor <init>(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)V
     .locals 0
 
-    const/4 p4, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/2addr p3, p4
+    iput-object p1, p0, Lb1/b;->a:Landroidx/car/app/IStartCarApp;
 
-    if-eqz p3, :cond_0
+    iput-object p2, p0, Lb1/b;->b:Landroid/content/Intent;
 
-    move p1, p4
+    return-void
+.end method
 
-    :cond_0
-    const-string p3, "$this$transaction"
 
-    .line 1
-    invoke-static {p0, p3}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 2
 
-    const-string p3, "body"
+    iget-object v0, p0, Lb1/b;->a:Landroidx/car/app/IStartCarApp;
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v1, p0, Lb1/b;->b:Landroid/content/Intent;
 
-    if-eqz p1, :cond_1
+    invoke-static {v0, v1}, Landroidx/car/app/notification/CarAppNotificationBroadcastReceiver;->a(Landroidx/car/app/IStartCarApp;Landroid/content/Intent;)Ljava/lang/Object;
 
-    .line 2
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+    move-result-object v0
 
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransactionNonExclusive()V
-
-    .line 4
-    :goto_0
-    :try_start_0
-    invoke-interface {p2, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 5
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 6
-    invoke-static {p4}, Lkotlin/jvm/internal/c0;->d(I)V
-
-    .line 7
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    invoke-static {p4}, Lkotlin/jvm/internal/c0;->c(I)V
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    .line 8
-    invoke-static {p4}, Lkotlin/jvm/internal/c0;->d(I)V
-
-    .line 9
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    invoke-static {p4}, Lkotlin/jvm/internal/c0;->c(I)V
-
-    throw p1
+    return-object v0
 .end method

@@ -108,7 +108,7 @@
 
     check-cast v1, Lcom/coremedia/iso/boxes/Box;
 
-    invoke-static {v1}, Ly6/d;->a(Lcom/coremedia/iso/boxes/Box;)Ljava/lang/String;
+    invoke-static {v1}, Lw8/d;->a(Lcom/coremedia/iso/boxes/Box;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -163,7 +163,7 @@
 
     check-cast v0, Lcom/coremedia/iso/boxes/Box;
 
-    invoke-static {v0, p2}, Ly6/d;->c(Lcom/coremedia/iso/boxes/Box;Ljava/lang/String;)Lcom/coremedia/iso/boxes/Box;
+    invoke-static {v0, p2}, Lw8/d;->c(Lcom/coremedia/iso/boxes/Box;Ljava/lang/String;)Lcom/coremedia/iso/boxes/Box;
 
     move-result-object p2
 

@@ -38,23 +38,23 @@
 
 .field public static final abc_tooltip_exit:I = 0x7f01000b
 
-.field public static final design_bottom_sheet_slide_in:I = 0x7f010019
+.field public static final design_bottom_sheet_slide_in:I = 0x7f010018
 
-.field public static final design_bottom_sheet_slide_out:I = 0x7f01001a
+.field public static final design_bottom_sheet_slide_out:I = 0x7f010019
 
-.field public static final design_snackbar_in:I = 0x7f01001b
+.field public static final design_snackbar_in:I = 0x7f01001a
 
-.field public static final design_snackbar_out:I = 0x7f01001c
+.field public static final design_snackbar_out:I = 0x7f01001b
 
-.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010022
+.field public static final fragment_fast_out_extra_slow_in:I = 0x7f01001f
 
-.field public static final nav_default_enter_anim:I = 0x7f010026
+.field public static final nav_default_enter_anim:I = 0x7f010027
 
-.field public static final nav_default_exit_anim:I = 0x7f010027
+.field public static final nav_default_exit_anim:I = 0x7f010028
 
-.field public static final nav_default_pop_enter_anim:I = 0x7f010028
+.field public static final nav_default_pop_enter_anim:I = 0x7f010029
 
-.field public static final nav_default_pop_exit_anim:I = 0x7f010029
+.field public static final nav_default_pop_exit_anim:I = 0x7f01002a
 
 
 # direct methods

@@ -16,9 +16,13 @@
 
 
 # static fields
+.field public static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.hardware.ICarHardwareResultTypes"
+
 .field public static final TYPE_INFO_ENERGY_LEVEL:I = 0x4
 
 .field public static final TYPE_INFO_ENERGY_PROFILE:I = 0x2
+
+.field public static final TYPE_INFO_EV_STATUS:I = 0x7
 
 .field public static final TYPE_INFO_MILEAGE:I = 0x6
 

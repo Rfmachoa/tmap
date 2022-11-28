@@ -54,7 +54,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/car/screen/RouteOverviewScreen$a;->a:Lcom/skt/tmap/car/screen/RouteOverviewScreen;
 
-    invoke-virtual {p1}, Landroidx/car/app/t0;->d()V
+    invoke-virtual {p1}, Landroidx/car/app/y0;->d()V
 
     return-void
 .end method

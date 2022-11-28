@@ -43,6 +43,16 @@
 
 .method public static getHeaderVO(Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/net/vo/ReqHeaderVo;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "appCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Lcom/skt/moment/net/vo/ReqHeaderVo;
@@ -56,121 +66,121 @@
     iput-object p1, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->accessKey:Ljava/lang/String;
 
     .line 4
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->a()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->a()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->appVersion:Ljava/lang/String;
 
     .line 5
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->r()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->r()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->momentVersion:Ljava/lang/String;
 
     .line 6
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->s()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->s()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->osCode:Ljava/lang/String;
 
     .line 7
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->v()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->v()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->osVersion:Ljava/lang/String;
 
     .line 8
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->q()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->q()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->modelName:Ljava/lang/String;
 
     .line 9
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->p()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->p()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->networkOperator:Ljava/lang/String;
 
     .line 10
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->i()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->i()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->fingerprint:Ljava/lang/String;
 
     .line 11
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->o()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->o()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->manufacturer:Ljava/lang/String;
 
     .line 12
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->f()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->device:Ljava/lang/String;
 
     .line 13
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->c()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->c()Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lcom/skt/moment/net/vo/ReqHeaderVo;->brand:Ljava/lang/String;
 
     .line 14
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->u()Ljava/lang/String;
+    invoke-virtual {p0}, Lcd/b;->u()Ljava/lang/String;
 
     move-result-object p0
 
@@ -300,6 +310,14 @@
 
 .method public setAccessKey(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->accessKey:Ljava/lang/String;
@@ -309,6 +327,14 @@
 
 .method public setAppCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "appCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->appCode:Ljava/lang/String;
@@ -318,6 +344,14 @@
 
 .method public setAppVersion(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "appVersion"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->appVersion:Ljava/lang/String;
@@ -327,6 +361,14 @@
 
 .method public setBrand(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "brand"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->brand:Ljava/lang/String;
@@ -336,6 +378,14 @@
 
 .method public setDevice(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->device:Ljava/lang/String;
@@ -345,6 +395,14 @@
 
 .method public setFingerprint(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fingerprint"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->fingerprint:Ljava/lang/String;
@@ -354,6 +412,14 @@
 
 .method public setManufacturer(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "manufacturer"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->manufacturer:Ljava/lang/String;
@@ -363,6 +429,14 @@
 
 .method public setModelName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modelName"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->modelName:Ljava/lang/String;
@@ -372,6 +446,14 @@
 
 .method public setMomentVersion(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentVersion"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->momentVersion:Ljava/lang/String;
@@ -381,6 +463,14 @@
 
 .method public setNetworkOperator(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "networkOperator"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->networkOperator:Ljava/lang/String;
@@ -390,6 +480,14 @@
 
 .method public setOsCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "osCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->osCode:Ljava/lang/String;
@@ -399,6 +497,14 @@
 
 .method public setOsVersion(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "osVersion"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->osVersion:Ljava/lang/String;
@@ -408,6 +514,14 @@
 
 .method public setProduct(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "product"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHeaderVo;->product:Ljava/lang/String;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapMusicMateWebActivity;->E5()V
+    value = Lcom/skt/tmap/activity/TmapMusicMateWebActivity;->M5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,7 +57,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMusicMateWebActivity$a;->a:Lcom/skt/tmap/activity/TmapMusicMateWebActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMusicMateWebActivity;->C5()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMusicMateWebActivity;->K5()V
 
     return-void
 .end method

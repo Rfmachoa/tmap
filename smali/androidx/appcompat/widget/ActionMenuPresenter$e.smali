@@ -46,7 +46,7 @@
     invoke-virtual {p0, p2}, Landroidx/appcompat/view/menu/h;->j(I)V
 
     .line 4
-    iget-object p1, p1, Landroidx/appcompat/widget/ActionMenuPresenter;->h1:Landroidx/appcompat/widget/ActionMenuPresenter$f;
+    iget-object p1, p1, Landroidx/appcompat/widget/ActionMenuPresenter;->j1:Landroidx/appcompat/widget/ActionMenuPresenter$f;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/h;->a(Landroidx/appcompat/view/menu/i$a;)V
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->d1:Landroidx/appcompat/widget/ActionMenuPresenter$e;
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->f1:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
     .line 4
     invoke-super {p0}, Landroidx/appcompat/view/menu/h;->g()V

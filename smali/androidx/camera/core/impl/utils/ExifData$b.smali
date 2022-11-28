@@ -29,7 +29,7 @@
             "Ljava/util/List<",
             "Ljava/util/HashMap<",
             "Ljava/lang/String;",
-            "Landroidx/camera/core/impl/utils/i;",
+            "Landroidx/camera/core/impl/utils/m;",
             ">;>;"
         }
     .end annotation
@@ -43,7 +43,7 @@
             "Ljava/util/List<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Landroidx/camera/core/impl/utils/e;",
+            "Landroidx/camera/core/impl/utils/i;",
             ">;>;"
         }
     .end annotation
@@ -104,14 +104,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "byteOrder"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -135,15 +127,6 @@
 
 .method public static b(Ljava/lang/String;)Landroid/util/Pair;
     .locals 10
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "entryValue"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -811,15 +794,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "tag"
-        }
-    .end annotation
-
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/utils/ExifData$b;->a:Ljava/util/List;
 
@@ -841,17 +815,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "tag",
-            "value"
-        }
     .end annotation
 
     .line 1
@@ -876,19 +839,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "tag",
-            "value",
-            "attributes"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -897,7 +847,7 @@
             "Ljava/util/List<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Landroidx/camera/core/impl/utils/e;",
+            "Landroidx/camera/core/impl/utils/i;",
             ">;>;)V"
         }
     .end annotation
@@ -950,19 +900,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "tag",
-            "value",
-            "attributes"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -971,7 +908,7 @@
             "Ljava/util/List<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Landroidx/camera/core/impl/utils/e;",
+            "Landroidx/camera/core/impl/utils/i;",
             ">;>;)V"
         }
     .end annotation
@@ -1088,7 +1025,7 @@
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1163,7 +1100,7 @@
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1177,7 +1114,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v4}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1198,7 +1135,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v5}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -1219,7 +1156,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v4}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1249,11 +1186,11 @@
     move-result-wide v8
 
     .line 19
-    new-instance v10, Landroidx/camera/core/impl/utils/j;
+    new-instance v10, Landroidx/camera/core/impl/utils/n;
 
-    invoke-direct {v10, v8, v9}, Landroidx/camera/core/impl/utils/j;-><init>(D)V
+    invoke-direct {v10, v8, v9}, Landroidx/camera/core/impl/utils/n;-><init>(D)V
 
-    invoke-virtual {v10}, Landroidx/camera/core/impl/utils/j;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Landroidx/camera/core/impl/utils/n;->toString()Ljava/lang/String;
 
     move-result-object v1
     :try_end_0
@@ -1265,11 +1202,11 @@
     move-exception v0
 
     .line 20
-    invoke-static {v5, v3, v4, v1}, Landroidx/camera/core/impl/utils/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v3, v4, v1}, Landroidx/camera/core/impl/utils/k;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v6, v1, v0}, Landroidx/camera/core/x1;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v6, v1, v0}, Landroidx/camera/core/u1;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -1283,7 +1220,7 @@
 
     .line 21
     :goto_3
-    sget-object v8, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/i;
+    sget-object v8, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/m;
 
     array-length v8, v8
 
@@ -1302,7 +1239,7 @@
 
     move-result-object v8
 
-    check-cast v8, Landroidx/camera/core/impl/utils/i;
+    check-cast v8, Landroidx/camera/core/impl/utils/m;
 
     if-eqz v8, :cond_14
 
@@ -1326,7 +1263,7 @@
     move-result-object v9
 
     .line 25
-    iget v10, v8, Landroidx/camera/core/impl/utils/i;->c:I
+    iget v10, v8, Landroidx/camera/core/impl/utils/m;->c:I
 
     iget-object v11, v9, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -1340,7 +1277,7 @@
 
     if-eq v10, v11, :cond_d
 
-    iget v10, v8, Landroidx/camera/core/impl/utils/i;->c:I
+    iget v10, v8, Landroidx/camera/core/impl/utils/m;->c:I
 
     iget-object v11, v9, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -1357,7 +1294,7 @@
 
     .line 27
     :cond_9
-    iget v10, v8, Landroidx/camera/core/impl/utils/i;->d:I
+    iget v10, v8, Landroidx/camera/core/impl/utils/m;->d:I
 
     if-eq v10, v12, :cond_b
 
@@ -1372,7 +1309,7 @@
 
     if-eq v10, v11, :cond_a
 
-    iget v10, v8, Landroidx/camera/core/impl/utils/i;->d:I
+    iget v10, v8, Landroidx/camera/core/impl/utils/m;->d:I
 
     iget-object v9, v9, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -1387,13 +1324,13 @@
 
     .line 30
     :cond_a
-    iget v0, v8, Landroidx/camera/core/impl/utils/i;->d:I
+    iget v0, v8, Landroidx/camera/core/impl/utils/m;->d:I
 
     goto :goto_5
 
     .line 31
     :cond_b
-    iget v8, v8, Landroidx/camera/core/impl/utils/i;->c:I
+    iget v8, v8, Landroidx/camera/core/impl/utils/m;->c:I
 
     if-eq v8, v7, :cond_c
 
@@ -1411,7 +1348,7 @@
     .line 32
     :cond_d
     :goto_4
-    iget v0, v8, Landroidx/camera/core/impl/utils/i;->c:I
+    iget v0, v8, Landroidx/camera/core/impl/utils/m;->c:I
 
     :goto_5
     const-string v8, "/"
@@ -1464,7 +1401,7 @@
     iget-object v5, v6, Landroidx/camera/core/impl/utils/ExifData$b;->b:Ljava/nio/ByteOrder;
 
     .line 38
-    invoke-static {v8, v5}, Landroidx/camera/core/impl/utils/e;->c([DLjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v8, v5}, Landroidx/camera/core/impl/utils/i;->c([DLjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1482,7 +1419,7 @@
     .line 41
     array-length v6, v0
 
-    new-array v6, v6, [Landroidx/camera/core/impl/utils/j;
+    new-array v6, v6, [Landroidx/camera/core/impl/utils/n;
 
     move v9, v5
 
@@ -1500,7 +1437,7 @@
     move-result-object v10
 
     .line 44
-    new-instance v11, Landroidx/camera/core/impl/utils/j;
+    new-instance v11, Landroidx/camera/core/impl/utils/n;
 
     aget-object v13, v10, v5
 
@@ -1522,7 +1459,7 @@
 
     double-to-long v7, v7
 
-    invoke-direct {v11, v13, v14, v7, v8}, Landroidx/camera/core/impl/utils/j;-><init>(JJ)V
+    invoke-direct {v11, v13, v14, v7, v8}, Landroidx/camera/core/impl/utils/n;-><init>(JJ)V
 
     aput-object v11, v6, v9
 
@@ -1547,7 +1484,7 @@
     iget-object v5, v8, Landroidx/camera/core/impl/utils/ExifData$b;->b:Ljava/nio/ByteOrder;
 
     .line 48
-    invoke-static {v6, v5}, Landroidx/camera/core/impl/utils/e;->g([Landroidx/camera/core/impl/utils/j;Ljava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v6, v5}, Landroidx/camera/core/impl/utils/i;->g([Landroidx/camera/core/impl/utils/n;Ljava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1601,7 +1538,7 @@
     iget-object v5, v6, Landroidx/camera/core/impl/utils/ExifData$b;->b:Ljava/nio/ByteOrder;
 
     .line 55
-    invoke-static {v7, v5}, Landroidx/camera/core/impl/utils/e;->e([ILjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v7, v5}, Landroidx/camera/core/impl/utils/i;->e([ILjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1626,7 +1563,7 @@
     .line 58
     array-length v7, v0
 
-    new-array v7, v7, [Landroidx/camera/core/impl/utils/j;
+    new-array v7, v7, [Landroidx/camera/core/impl/utils/n;
 
     move v9, v5
 
@@ -1646,7 +1583,7 @@
     move-result-object v10
 
     .line 61
-    new-instance v13, Landroidx/camera/core/impl/utils/j;
+    new-instance v13, Landroidx/camera/core/impl/utils/n;
 
     aget-object v9, v10, v9
 
@@ -1668,7 +1605,7 @@
 
     double-to-long v9, v9
 
-    invoke-direct {v13, v14, v15, v9, v10}, Landroidx/camera/core/impl/utils/j;-><init>(JJ)V
+    invoke-direct {v13, v14, v15, v9, v10}, Landroidx/camera/core/impl/utils/n;-><init>(JJ)V
 
     aput-object v13, v7, v5
 
@@ -1691,7 +1628,7 @@
     iget-object v9, v6, Landroidx/camera/core/impl/utils/ExifData$b;->b:Ljava/nio/ByteOrder;
 
     .line 65
-    invoke-static {v7, v9}, Landroidx/camera/core/impl/utils/e;->l([Landroidx/camera/core/impl/utils/j;Ljava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v7, v9}, Landroidx/camera/core/impl/utils/i;->l([Landroidx/camera/core/impl/utils/n;Ljava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v7
 
@@ -1748,7 +1685,7 @@
     iget-object v9, v6, Landroidx/camera/core/impl/utils/ExifData$b;->b:Ljava/nio/ByteOrder;
 
     .line 72
-    invoke-static {v5, v9}, Landroidx/camera/core/impl/utils/e;->j([JLjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v5, v9}, Landroidx/camera/core/impl/utils/i;->j([JLjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1802,7 +1739,7 @@
     iget-object v9, v6, Landroidx/camera/core/impl/utils/ExifData$b;->b:Ljava/nio/ByteOrder;
 
     .line 79
-    invoke-static {v5, v9}, Landroidx/camera/core/impl/utils/e;->n([ILjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v5, v9}, Landroidx/camera/core/impl/utils/i;->n([ILjava/nio/ByteOrder;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1821,7 +1758,7 @@
 
     check-cast v0, Ljava/util/Map;
 
-    invoke-static {v1}, Landroidx/camera/core/impl/utils/e;->h(Ljava/lang/String;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v1}, Landroidx/camera/core/impl/utils/i;->h(Ljava/lang/String;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1839,7 +1776,7 @@
 
     check-cast v0, Ljava/util/Map;
 
-    invoke-static {v1}, Landroidx/camera/core/impl/utils/e;->a(Ljava/lang/String;)Landroidx/camera/core/impl/utils/e;
+    invoke-static {v1}, Landroidx/camera/core/impl/utils/i;->a(Ljava/lang/String;)Landroidx/camera/core/impl/utils/i;
 
     move-result-object v5
 
@@ -1887,15 +1824,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "exposureTimeNs"
-        }
-    .end annotation
-
     long-to-double p1, p1
 
     .line 1
@@ -1933,15 +1861,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "flashState"
-        }
     .end annotation
 
     .line 1
@@ -1990,7 +1909,7 @@
 
     const-string v0, "ExifData"
 
-    invoke-static {v0, p1}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p0
 
@@ -2043,17 +1962,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "focalLength"
-        }
-    .end annotation
-
     .line 1
-    new-instance v0, Landroidx/camera/core/impl/utils/j;
+    new-instance v0, Landroidx/camera/core/impl/utils/n;
 
     const/high16 v1, 0x447a0000    # 1000.0f
 
@@ -2063,10 +1973,10 @@
 
     const-wide/16 v3, 0x3e8
 
-    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/camera/core/impl/utils/j;-><init>(JJ)V
+    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/camera/core/impl/utils/n;-><init>(JJ)V
 
     .line 2
-    invoke-virtual {v0}, Landroidx/camera/core/impl/utils/j;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/camera/core/impl/utils/n;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -2082,15 +1992,6 @@
 .method public j(I)Landroidx/camera/core/impl/utils/ExifData$b;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "height"
-        }
     .end annotation
 
     .line 1
@@ -2112,15 +2013,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "width"
-        }
-    .end annotation
-
     .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2138,15 +2030,6 @@
 .method public l(I)Landroidx/camera/core/impl/utils/ExifData$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "iso"
-        }
     .end annotation
 
     const/4 v0, 0x3
@@ -2187,15 +2070,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "fNumber"
-        }
-    .end annotation
-
     .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
@@ -2213,15 +2087,6 @@
 .method public n(I)Landroidx/camera/core/impl/utils/ExifData$b;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "orientationDegrees"
-        }
     .end annotation
 
     if-eqz p1, :cond_3
@@ -2259,7 +2124,7 @@
 
     const-string v0, "ExifData"
 
-    invoke-static {v0, p1}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2305,15 +2170,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "whiteBalanceMode"
-        }
     .end annotation
 
     .line 1

@@ -35,19 +35,11 @@
 .method public abstract a()[I
 .end method
 
-.method public abstract b(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
-    .param p1    # Lwd/q;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
 .end method
 
-.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
 .end method
 
-.method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+.method public abstract d(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
 .end method

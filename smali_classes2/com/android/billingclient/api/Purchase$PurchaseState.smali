@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/android/billingclient/api/Purchase$PurchaseState;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;
@@ -22,8 +22,8 @@
 
 
 # static fields
-.field public static final c0:I = 0x0
+.field public static final h0:I = 0x0
 
-.field public static final d0:I = 0x1
+.field public static final i0:I = 0x1
 
-.field public static final e0:I = 0x2
+.field public static final j0:I = 0x2

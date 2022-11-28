@@ -1,6 +1,9 @@
-.class public Landroidx/camera/core/impl/utils/d$c;
-.super Ljava/lang/ThreadLocal;
-.source "Exif.java"
+.class public final Landroidx/camera/core/impl/utils/d$c;
+.super Ljava/lang/Object;
+.source "CloseGuardHelper.java"
+
+# interfaces
+.implements Landroidx/camera/core/impl/utils/d$b;
 
 
 # annotations
@@ -9,16 +12,8 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/ThreadLocal<",
-        "Ljava/text/SimpleDateFormat;",
-        ">;"
-    }
+    accessFlags = 0x19
+    name = "c"
 .end annotation
 
 
@@ -27,35 +22,36 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/text/SimpleDateFormat;
-    .locals 3
+.method public a(Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const-string v0, "CloseMethodName must not be null."
 
     .line 1
-    new-instance v0, Ljava/text/SimpleDateFormat;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v2, "yyyy:MM:dd HH:mm:ss"
-
-    invoke-direct {v0, v2, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public bridge synthetic initialValue()Ljava/lang/Object;
-    .locals 1
+.method public b()V
+    .locals 0
 
-    .line 1
-    invoke-virtual {p0}, Landroidx/camera/core/impl/utils/d$c;->a()Ljava/text/SimpleDateFormat;
+    return-void
+.end method
 
-    move-result-object v0
+.method public close()V
+    .locals 0
 
-    return-object v0
+    return-void
 .end method

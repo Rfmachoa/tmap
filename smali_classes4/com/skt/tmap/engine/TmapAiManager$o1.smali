@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->Z4(Ljava/lang/String;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->m6(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
         }
         names = {
             "this$0",
-            "val$tts"
+            "val$message"
         }
     .end annotation
 
@@ -50,38 +50,77 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
 
     move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->b:Lcom/skt/tmap/engine/TmapAiManager;
-
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->T(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
     iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->Q4(Ljava/lang/String;Z)V
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
-    :cond_0
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v1}, Lcom/skt/tmap/engine/TmapAiManager;->S(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v1
+
+    const v2, 0x7f0d004a
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/widget/Toast;->setView(Landroid/view/View;)V
+
+    .line 4
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->b:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-virtual {v2}, Lcom/skt/tmap/engine/TmapAiManager;->V1()Landroid/app/Activity;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/skt/tmap/font/TypefaceManager;->a(Landroid/content/Context;)Lcom/skt/tmap/font/TypefaceManager;
+
+    move-result-object v2
+
+    const v3, 0x7f0a0126
+
+    .line 5
+    invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    .line 6
+    sget-object v3, Lcom/skt/tmap/font/TypefaceManager$FontType;->SKP_GO_M:Lcom/skt/tmap/font/TypefaceManager$FontType;
+
+    invoke-virtual {v2, v1, v3}, Lcom/skt/tmap/font/TypefaceManager;->j(Landroid/view/View;Lcom/skt/tmap/font/TypefaceManager$FontType;)V
+
+    .line 7
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager$o1;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 8
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
     return-void
 .end method

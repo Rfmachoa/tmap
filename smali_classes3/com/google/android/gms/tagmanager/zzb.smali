@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/tagmanager/zzb;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzb;->zza:Lcom/google/android/gms/tagmanager/zzd;
 
-    .line 1
     invoke-static {v0}, Lcom/google/android/gms/tagmanager/zzd;->zzd(Lcom/google/android/gms/tagmanager/zzd;)V
 
     return-void

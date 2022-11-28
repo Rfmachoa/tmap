@@ -26,9 +26,23 @@
 
 
 # instance fields
-.field public final _byteBuffers:[[B
+.field public final _byteBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/atomic/AtomicReferenceArray<",
+            "[B>;"
+        }
+    .end annotation
+.end field
 
-.field public final _charBuffers:[[C
+.field public final _charBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/atomic/AtomicReferenceArray<",
+            "[C>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -82,20 +96,24 @@
 .end method
 
 .method public constructor <init>(II)V
-    .locals 0
+    .locals 1
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    new-array p1, p1, [[B
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_byteBuffers:[[B
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_byteBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     .line 4
-    new-array p1, p2, [[C
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_charBuffers:[[C
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_charBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method
@@ -116,7 +134,7 @@
 .end method
 
 .method public allocByteBuffer(II)[B
-    .locals 3
+    .locals 2
 
     .line 2
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->byteBufferLength(I)I
@@ -129,36 +147,31 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_byteBuffers:[[B
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_byteBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    aget-object v1, v0, p1
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [B
+
+    if-eqz p1, :cond_1
 
     .line 4
-    array-length v2, v1
+    array-length v0, p1
 
-    if-ge v2, p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x0
+    if-ge v0, p2, :cond_2
 
     .line 5
-    aput-object p2, v0, p1
-
-    goto :goto_1
-
-    .line 6
-    :cond_2
-    :goto_0
+    :cond_1
     invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->balloc(I)[B
 
-    move-result-object v1
+    move-result-object p1
 
-    :goto_1
-    return-object v1
+    :cond_2
+    return-object p1
 .end method
 
 .method public final allocCharBuffer(I)[C
@@ -175,7 +188,7 @@
 .end method
 
 .method public allocCharBuffer(II)[C
-    .locals 3
+    .locals 2
 
     .line 2
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->charBufferLength(I)I
@@ -188,36 +201,31 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_charBuffers:[[C
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_charBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    aget-object v1, v0, p1
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [C
+
+    if-eqz p1, :cond_1
 
     .line 4
-    array-length v2, v1
+    array-length v0, p1
 
-    if-ge v2, p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x0
+    if-ge v0, p2, :cond_2
 
     .line 5
-    aput-object p2, v0, p1
-
-    goto :goto_1
-
-    .line 6
-    :cond_2
-    :goto_0
+    :cond_1
     invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->calloc(I)[C
 
-    move-result-object v1
+    move-result-object p1
 
-    :goto_1
-    return-object v1
+    :cond_2
+    return-object p1
 .end method
 
 .method public balloc(I)[B
@@ -260,13 +268,13 @@
     return p1
 .end method
 
-.method public final releaseByteBuffer(I[B)V
+.method public releaseByteBuffer(I[B)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_byteBuffers:[[B
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_byteBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    aput-object p2, v0, p1
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -275,9 +283,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_charBuffers:[[C
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/BufferRecycler;->_charBuffers:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    aput-object p2, v0, p1
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
 
     return-void
 .end method

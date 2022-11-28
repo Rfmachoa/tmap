@@ -1,18 +1,10 @@
 .class final Lcom/google/android/gms/tasks/zzb;
 .super Lcom/google/android/gms/tasks/CancellationToken;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # instance fields
 .field private final zza:Lcom/google/android/gms/tasks/zzw;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tasks/zzw<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

@@ -1,5 +1,5 @@
 .class public final Landroidx/camera/camera2/internal/CaptureSession$d;
-.super Landroidx/camera/camera2/internal/e2$a;
+.super Landroidx/camera/camera2/internal/f3$a;
 .source "CaptureSession.java"
 
 
@@ -21,39 +21,23 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/camera2/internal/CaptureSession;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    invoke-direct {p0}, Landroidx/camera/camera2/internal/e2$a;-><init>()V
+    invoke-direct {p0}, Landroidx/camera/camera2/internal/f3$a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public t(Landroidx/camera/camera2/internal/e2;)V
+.method public A(Landroidx/camera/camera2/internal/f3;)V
     .locals 3
-    .param p1    # Landroidx/camera/camera2/internal/e2;
+    .param p1    # Landroidx/camera/camera2/internal/f3;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "session"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
@@ -74,15 +58,15 @@
 
     const-string v0, "CaptureSession"
 
-    const-string v1, "CameraCaptureSession.onClosed()"
+    const-string v1, "onSessionFinished()"
 
     .line 3
-    invoke-static {v0, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/CaptureSession;->h()V
+    invoke-virtual {v0}, Landroidx/camera/camera2/internal/CaptureSession;->m()V
 
     .line 5
     monitor-exit p1
@@ -97,7 +81,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onClosed() should not be possible in state: "
+    const-string v2, "onSessionFinished() should not be possible in state: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -126,20 +110,12 @@
     throw v0
 .end method
 
-.method public u(Landroidx/camera/camera2/internal/e2;)V
+.method public x(Landroidx/camera/camera2/internal/f3;)V
     .locals 3
-    .param p1    # Landroidx/camera/camera2/internal/e2;
+    .param p1    # Landroidx/camera/camera2/internal/f3;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "session"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
@@ -172,7 +148,7 @@
     const-string v1, "ConfigureFailed callback after change to RELEASED state"
 
     .line 3
-    invoke-static {v0, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -180,7 +156,7 @@
     :pswitch_1
     iget-object v0, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    invoke-virtual {v0}, Landroidx/camera/camera2/internal/CaptureSession;->h()V
+    invoke-virtual {v0}, Landroidx/camera/camera2/internal/CaptureSession;->m()V
 
     goto :goto_0
 
@@ -232,7 +208,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     monitor-exit p1
@@ -263,20 +239,12 @@
     .end packed-switch
 .end method
 
-.method public v(Landroidx/camera/camera2/internal/e2;)V
+.method public y(Landroidx/camera/camera2/internal/f3;)V
     .locals 3
-    .param p1    # Landroidx/camera/camera2/internal/e2;
+    .param p1    # Landroidx/camera/camera2/internal/f3;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "session"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
@@ -305,7 +273,7 @@
 
     .line 3
     :pswitch_0
-    invoke-interface {p1}, Landroidx/camera/camera2/internal/e2;->close()V
+    invoke-interface {p1}, Landroidx/camera/camera2/internal/f3;->close()V
 
     goto :goto_0
 
@@ -313,7 +281,7 @@
     :pswitch_1
     iget-object v1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    iput-object p1, v1, Landroidx/camera/camera2/internal/CaptureSession;->f:Landroidx/camera/camera2/internal/e2;
+    iput-object p1, v1, Landroidx/camera/camera2/internal/CaptureSession;->f:Landroidx/camera/camera2/internal/f3;
 
     goto :goto_0
 
@@ -326,7 +294,7 @@
     iput-object v2, v1, Landroidx/camera/camera2/internal/CaptureSession;->l:Landroidx/camera/camera2/internal/CaptureSession$State;
 
     .line 6
-    iput-object p1, v1, Landroidx/camera/camera2/internal/CaptureSession;->f:Landroidx/camera/camera2/internal/e2;
+    iput-object p1, v1, Landroidx/camera/camera2/internal/CaptureSession;->f:Landroidx/camera/camera2/internal/f3;
 
     .line 7
     iget-object p1, v1, Landroidx/camera/camera2/internal/CaptureSession;->g:Landroidx/camera/core/impl/SessionConfig;
@@ -334,16 +302,14 @@
     if-eqz p1, :cond_0
 
     .line 8
-    iget-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
-
-    iget-object p1, p1, Landroidx/camera/camera2/internal/CaptureSession;->i:Lr/d;
+    iget-object p1, v1, Landroidx/camera/camera2/internal/CaptureSession;->i:Lv/d;
 
     .line 9
-    invoke-virtual {p1}, Lr/d;->d()Lr/d$a;
+    invoke-virtual {p1}, Lv/d;->d()Lv/d$a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lr/d$a;->c()Ljava/util/List;
+    invoke-virtual {p1}, Lv/d$a;->c()Ljava/util/List;
 
     move-result-object p1
 
@@ -357,11 +323,11 @@
     .line 11
     iget-object v1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    invoke-virtual {v1, p1}, Landroidx/camera/camera2/internal/CaptureSession;->x(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v1, p1}, Landroidx/camera/camera2/internal/CaptureSession;->w(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Landroidx/camera/camera2/internal/CaptureSession;->l(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Landroidx/camera/camera2/internal/CaptureSession;->o(Ljava/util/List;)I
 
     :cond_0
     const-string p1, "CaptureSession"
@@ -369,17 +335,19 @@
     const-string v1, "Attempting to send capture request onConfigured"
 
     .line 12
-    invoke-static {p1, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     iget-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/CaptureSession;->o()V
+    iget-object v1, p1, Landroidx/camera/camera2/internal/CaptureSession;->g:Landroidx/camera/core/impl/SessionConfig;
+
+    invoke-virtual {p1, v1}, Landroidx/camera/camera2/internal/CaptureSession;->q(Landroidx/camera/core/impl/SessionConfig;)I
 
     .line 14
     iget-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
 
-    invoke-virtual {p1}, Landroidx/camera/camera2/internal/CaptureSession;->n()V
+    invoke-virtual {p1}, Landroidx/camera/camera2/internal/CaptureSession;->p()V
 
     goto :goto_0
 
@@ -431,7 +399,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     monitor-exit v0
@@ -462,20 +430,12 @@
     .end packed-switch
 .end method
 
-.method public w(Landroidx/camera/camera2/internal/e2;)V
+.method public z(Landroidx/camera/camera2/internal/f3;)V
     .locals 3
-    .param p1    # Landroidx/camera/camera2/internal/e2;
+    .param p1    # Landroidx/camera/camera2/internal/f3;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "session"
-        }
-    .end annotation
 
     .line 1
     iget-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$d;->a:Landroidx/camera/camera2/internal/CaptureSession;
@@ -523,7 +483,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     monitor-exit p1

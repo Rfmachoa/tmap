@@ -1,833 +1,692 @@
-.class public abstract Landroidx/constraintlayout/motion/widget/i;
+.class public Landroidx/constraintlayout/motion/widget/i;
 .super Ljava/lang/Object;
-.source "KeyCycleOscillator.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/constraintlayout/motion/widget/i$d;,
-        Landroidx/constraintlayout/motion/widget/i$g;,
-        Landroidx/constraintlayout/motion/widget/i$f;,
-        Landroidx/constraintlayout/motion/widget/i$i;,
-        Landroidx/constraintlayout/motion/widget/i$c;,
-        Landroidx/constraintlayout/motion/widget/i$q;,
-        Landroidx/constraintlayout/motion/widget/i$p;,
-        Landroidx/constraintlayout/motion/widget/i$o;,
-        Landroidx/constraintlayout/motion/widget/i$n;,
-        Landroidx/constraintlayout/motion/widget/i$m;,
-        Landroidx/constraintlayout/motion/widget/i$h;,
-        Landroidx/constraintlayout/motion/widget/i$l;,
-        Landroidx/constraintlayout/motion/widget/i$k;,
-        Landroidx/constraintlayout/motion/widget/i$j;,
-        Landroidx/constraintlayout/motion/widget/i$b;,
-        Landroidx/constraintlayout/motion/widget/i$e;,
-        Landroidx/constraintlayout/motion/widget/i$r;
-    }
-.end annotation
+.source "KeyFrames.java"
 
 
 # static fields
-.field public static final h:Ljava/lang/String; = "KeyCycleOscillator"
+.field public static final b:I = -0x1
+
+.field public static final c:Ljava/lang/String; = "CustomMethod"
+
+.field public static final d:Ljava/lang/String; = "CustomAttribute"
+
+.field public static e:Ljava/util/HashMap; = null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Ljava/lang/reflect/Constructor<",
+            "+",
+            "Landroidx/constraintlayout/motion/widget/f;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field public static final f:Ljava/lang/String; = "KeyFrames"
 
 
 # instance fields
-.field public a:Ls0/c;
-
-.field public b:Landroidx/constraintlayout/motion/widget/i$d;
-
-.field public c:Landroidx/constraintlayout/widget/ConstraintAttribute;
-
-.field public d:Ljava/lang/String;
-
-.field public e:I
-
-.field public f:I
-
-.field public g:Ljava/util/ArrayList;
+.field public a:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/Integer;",
             "Ljava/util/ArrayList<",
-            "Landroidx/constraintlayout/motion/widget/i$r;",
-            ">;"
+            "Landroidx/constraintlayout/motion/widget/f;",
+            ">;>;"
         }
     .end annotation
 .end field
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .locals 5
+
+    .line 1
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
+
+    :try_start_0
+    const-string v1, "KeyAttribute"
+
+    .line 2
+    const-class v2, Landroidx/constraintlayout/motion/widget/g;
+
+    const/4 v3, 0x0
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    sget-object v0, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
+
+    const-string v1, "KeyPosition"
+
+    const-class v2, Landroidx/constraintlayout/motion/widget/j;
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 4
+    sget-object v0, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
+
+    const-string v1, "KeyCycle"
+
+    const-class v2, Landroidx/constraintlayout/motion/widget/h;
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5
+    sget-object v0, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
+
+    const-string v1, "KeyTimeCycle"
+
+    const-class v2, Landroidx/constraintlayout/motion/widget/l;
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v4}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 6
+    sget-object v0, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
+
+    const-string v1, "KeyTrigger"
+
+    const-class v2, Landroidx/constraintlayout/motion/widget/m;
+
+    new-array v3, v3, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "KeyFrames"
+
+    const-string v2, "unable to load"
+
+    .line 7
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
     .line 2
-    iput v0, p0, Landroidx/constraintlayout/motion/widget/i;->e:I
+    new-instance v0, Ljava/util/HashMap;
 
-    .line 3
-    iput v0, p0, Landroidx/constraintlayout/motion/widget/i;->f:I
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 4
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
+    iput-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
 
     return-void
 .end method
 
-.method public static d(Ljava/lang/String;)Landroidx/constraintlayout/motion/widget/i;
-    .locals 2
-
-    const-string v0, "CUSTOM"
-
-    .line 1
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$c;
-
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$c;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, -0x1
+.method public constructor <init>(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "parser"
+        }
+    .end annotation
 
     .line 3
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    .line 5
+    :try_start_0
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
 
-    sparse-switch v1, :sswitch_data_0
-
-    goto/16 :goto_0
-
-    :sswitch_0
-    const-string v1, "waveOffset"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    const/16 v0, 0xd
-
-    goto/16 :goto_0
-
-    :sswitch_1
-    const-string v1, "alpha"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    const/16 v0, 0xc
-
-    goto/16 :goto_0
-
-    :sswitch_2
-    const-string v1, "transitionPathRotate"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
-    const/16 v0, 0xb
-
-    goto/16 :goto_0
-
-    :sswitch_3
-    const-string v1, "elevation"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    goto/16 :goto_0
-
-    :cond_4
-    const/16 v0, 0xa
-
-    goto/16 :goto_0
-
-    :sswitch_4
-    const-string v1, "rotation"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    goto/16 :goto_0
-
-    :cond_5
-    const/16 v0, 0x9
-
-    goto/16 :goto_0
-
-    :sswitch_5
-    const-string v1, "waveVariesBy"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    goto/16 :goto_0
-
-    :cond_6
-    const/16 v0, 0x8
-
-    goto/16 :goto_0
-
-    :sswitch_6
-    const-string v1, "scaleY"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    const/4 v0, 0x7
-
-    goto :goto_0
-
-    :sswitch_7
-    const-string v1, "scaleX"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    const/4 v0, 0x6
-
-    goto :goto_0
-
-    :sswitch_8
-    const-string v1, "progress"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    const/4 v0, 0x5
-
-    goto :goto_0
-
-    :sswitch_9
-    const-string v1, "translationZ"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    const/4 v0, 0x4
-
-    goto :goto_0
-
-    :sswitch_a
-    const-string v1, "translationY"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_b
-
-    goto :goto_0
-
-    :cond_b
-    const/4 v0, 0x3
-
-    goto :goto_0
-
-    :sswitch_b
-    const-string v1, "translationX"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_c
-
-    goto :goto_0
-
-    :cond_c
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    :sswitch_c
-    const-string v1, "rotationY"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_d
-
-    goto :goto_0
-
-    :cond_d
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :sswitch_d
-    const-string v1, "rotationX"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_e
-
-    goto :goto_0
-
-    :cond_e
-    const/4 v0, 0x0
-
     :goto_0
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x1
 
-    const/4 p0, 0x0
+    if-eq v1, v2, :cond_6
 
-    return-object p0
+    const/4 v2, 0x2
 
-    .line 4
-    :pswitch_0
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$b;
+    if-eq v1, v2, :cond_1
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$b;-><init>()V
+    const/4 v2, 0x3
 
-    return-object p0
+    if-eq v1, v2, :cond_0
 
-    .line 5
-    :pswitch_1
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$b;
+    goto/16 :goto_3
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$b;-><init>()V
-
-    return-object p0
+    :cond_0
+    const-string v1, "KeyFrameSet"
 
     .line 6
-    :pswitch_2
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$h;
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$h;-><init>()V
+    move-result-object v2
 
-    return-object p0
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return-void
 
     .line 7
-    :pswitch_3
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$e;
+    :cond_1
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$e;-><init>()V
-
-    return-object p0
+    move-result-object v1
 
     .line 8
-    :pswitch_4
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$j;
+    sget-object v2, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$j;-><init>()V
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result v2
+    :try_end_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+
+    if-eqz v2, :cond_3
 
     .line 9
-    :pswitch_5
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$b;
+    :try_start_1
+    sget-object v2, Landroidx/constraintlayout/motion/widget/i;->e:Ljava/util/HashMap;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$b;-><init>()V
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/reflect/Constructor;
+
+    if-eqz v2, :cond_2
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
 
     .line 10
-    :pswitch_6
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$n;
+    invoke-virtual {v2, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$n;-><init>()V
+    move-result-object v1
 
-    return-object p0
+    check-cast v1, Landroidx/constraintlayout/motion/widget/f;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 11
-    :pswitch_7
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$m;
+    :try_start_2
+    invoke-static {p2}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$m;-><init>()V
+    move-result-object v0
 
-    return-object p0
+    invoke-virtual {v1, p1, v0}, Landroidx/constraintlayout/motion/widget/f;->f(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 12
-    :pswitch_8
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$i;
+    invoke-virtual {p0, v1}, Landroidx/constraintlayout/motion/widget/i;->c(Landroidx/constraintlayout/motion/widget/f;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$i;-><init>()V
+    goto :goto_2
 
-    return-object p0
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
 
     .line 13
-    :pswitch_9
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$q;
+    :cond_2
+    :try_start_3
+    new-instance v2, Ljava/lang/NullPointerException;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$q;-><init>()V
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    return-object p0
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Keymaker for "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " not found"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    :catch_1
+    move-exception v1
+
+    move-object v5, v1
+
+    move-object v1, v0
+
+    move-object v0, v5
+
+    :goto_1
+    :try_start_4
+    const-string v2, "KeyFrames"
+
+    const-string v3, "unable to create "
 
     .line 14
-    :pswitch_a
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$p;
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$p;-><init>()V
+    :goto_2
+    move-object v0, v1
 
-    return-object p0
+    goto :goto_3
+
+    :cond_3
+    const-string v2, "CustomAttribute"
 
     .line 15
-    :pswitch_b
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$o;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$o;-><init>()V
+    move-result v2
 
-    return-object p0
+    if-eqz v2, :cond_4
+
+    if-eqz v0, :cond_5
 
     .line 16
-    :pswitch_c
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$l;
+    iget-object v1, v0, Landroidx/constraintlayout/motion/widget/f;->e:Ljava/util/HashMap;
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$l;-><init>()V
-
-    return-object p0
+    if-eqz v1, :cond_5
 
     .line 17
-    :pswitch_d
-    new-instance p0, Landroidx/constraintlayout/motion/widget/i$k;
+    invoke-static {p1, p2, v1}, Landroidx/constraintlayout/widget/ConstraintAttribute;->q(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashMap;)V
 
-    invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/i$k;-><init>()V
+    goto :goto_3
+
+    :cond_4
+    const-string v2, "CustomMethod"
+
+    .line 18
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    if-eqz v0, :cond_5
+
+    .line 19
+    iget-object v1, v0, Landroidx/constraintlayout/motion/widget/f;->e:Ljava/util/HashMap;
+
+    if-eqz v1, :cond_5
+
+    .line 20
+    invoke-static {p1, p2, v1}, Landroidx/constraintlayout/widget/ConstraintAttribute;->q(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Ljava/util/HashMap;)V
+
+    .line 21
+    :cond_5
+    :goto_3
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+
+    move-result v1
+    :try_end_4
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_3
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    goto/16 :goto_0
+
+    :catch_2
+    move-exception p1
+
+    .line 22
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_4
+
+    :catch_3
+    move-exception p1
+
+    .line 23
+    invoke-virtual {p1}, Lorg/xmlpull/v1/XmlPullParserException;->printStackTrace()V
+
+    :cond_6
+    :goto_4
+    return-void
+.end method
+
+.method public static f(ILandroid/content/Context;)Ljava/lang/String;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewId",
+            "context"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x4a771f66 -> :sswitch_d
-        -0x4a771f65 -> :sswitch_c
-        -0x490b9c39 -> :sswitch_b
-        -0x490b9c38 -> :sswitch_a
-        -0x490b9c37 -> :sswitch_9
-        -0x3bab3dd3 -> :sswitch_8
-        -0x3621dfb2 -> :sswitch_7
-        -0x3621dfb1 -> :sswitch_6
-        -0x2f893320 -> :sswitch_5
-        -0x266f082 -> :sswitch_4
-        -0x42d1a3 -> :sswitch_3
-        0x2382115 -> :sswitch_2
-        0x589b15e -> :sswitch_1
-        0x94e04ec -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(F)F
+.method public a(Landroidx/constraintlayout/motion/widget/o;)V
     .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->b:Landroidx/constraintlayout/motion/widget/i$d;
-
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/motion/widget/i$d;->c(F)D
-
-    move-result-wide v0
-
-    double-to-float p1, v0
-
-    return p1
-.end method
-
-.method public b()Ls0/c;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ls0/c;
-
-    return-object v0
-.end method
-
-.method public c(F)F
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->b:Landroidx/constraintlayout/motion/widget/i$d;
-
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/motion/widget/i$d;->b(F)D
-
-    move-result-wide v0
-
-    double-to-float p1, v0
-
-    return p1
-.end method
-
-.method public e(IIIFFF)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
-
-    new-instance v1, Landroidx/constraintlayout/motion/widget/i$r;
-
-    invoke-direct {v1, p1, p4, p5, p6}, Landroidx/constraintlayout/motion/widget/i$r;-><init>(IFFF)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/4 p1, -0x1
-
-    if-eq p3, p1, :cond_0
-
-    .line 2
-    iput p3, p0, Landroidx/constraintlayout/motion/widget/i;->f:I
-
-    .line 3
-    :cond_0
-    iput p2, p0, Landroidx/constraintlayout/motion/widget/i;->e:I
-
-    return-void
-.end method
-
-.method public f(IIIFFFLandroidx/constraintlayout/widget/ConstraintAttribute;)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
-
-    new-instance v1, Landroidx/constraintlayout/motion/widget/i$r;
-
-    invoke-direct {v1, p1, p4, p5, p6}, Landroidx/constraintlayout/motion/widget/i$r;-><init>(IFFF)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/4 p1, -0x1
-
-    if-eq p3, p1, :cond_0
-
-    .line 2
-    iput p3, p0, Landroidx/constraintlayout/motion/widget/i;->f:I
-
-    .line 3
-    :cond_0
-    iput p2, p0, Landroidx/constraintlayout/motion/widget/i;->e:I
-
-    .line 4
-    iput-object p7, p0, Landroidx/constraintlayout/motion/widget/i;->c:Landroidx/constraintlayout/widget/ConstraintAttribute;
-
-    return-void
-.end method
-
-.method public abstract g(Landroid/view/View;F)V
-.end method
-
-.method public h(Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Landroidx/constraintlayout/motion/widget/i;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public i(F)V
-    .locals 14
-    .annotation build Landroid/annotation/TargetApi;
-        value = 0x13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "motionController"
+        }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p1, v0}, Landroidx/constraintlayout/motion/widget/o;->b(Ljava/util/ArrayList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b(Landroidx/constraintlayout/motion/widget/o;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "motionController"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
+
+    iget v1, p1, Landroidx/constraintlayout/motion/widget/o;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p1, v0}, Landroidx/constraintlayout/motion/widget/o;->b(Ljava/util/ArrayList;)V
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_2
+
+    .line 4
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/constraintlayout/motion/widget/f;
+
+    .line 5
+    iget-object v2, p1, Landroidx/constraintlayout/motion/widget/o;->b:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
+
+    iget-object v2, v2, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->c0:Ljava/lang/String;
+
+    .line 6
+    invoke-virtual {v1, v2}, Landroidx/constraintlayout/motion/widget/f;->g(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 7
+    invoke-virtual {p1, v1}, Landroidx/constraintlayout/motion/widget/o;->a(Landroidx/constraintlayout/motion/widget/f;)V
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public c(Landroidx/constraintlayout/motion/widget/f;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
+
+    iget v1, p1, Landroidx/constraintlayout/motion/widget/f;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    return-void
-
     .line 2
-    :cond_0
-    iget-object v1, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
 
-    new-instance v2, Landroidx/constraintlayout/motion/widget/i$a;
+    iget v1, p1, Landroidx/constraintlayout/motion/widget/f;->b:I
 
-    invoke-direct {v2, p0}, Landroidx/constraintlayout/motion/widget/i$a;-><init>(Landroidx/constraintlayout/motion/widget/i;)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v1, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+    move-result-object v1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    new-array v1, v0, [D
+    :cond_0
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
 
-    const/4 v2, 0x2
+    iget v1, p1, Landroidx/constraintlayout/motion/widget/f;->b:I
 
-    new-array v3, v2, [I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v4, 0x1
+    move-result-object v1
 
-    aput v2, v3, v4
-
-    const/4 v2, 0x0
-
-    aput v0, v3, v2
-
-    .line 4
-    const-class v5, D
-
-    invoke-static {v5, v3}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, [[D
-
-    .line 5
-    new-instance v5, Landroidx/constraintlayout/motion/widget/i$d;
-
-    iget v6, p0, Landroidx/constraintlayout/motion/widget/i;->e:I
-
-    iget v7, p0, Landroidx/constraintlayout/motion/widget/i;->f:I
-
-    invoke-direct {v5, v6, v7, v0}, Landroidx/constraintlayout/motion/widget/i$d;-><init>(III)V
-
-    iput-object v5, p0, Landroidx/constraintlayout/motion/widget/i;->b:Landroidx/constraintlayout/motion/widget/i$d;
-
-    .line 6
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    move v11, v2
+    check-cast v0, Ljava/util/ArrayList;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_1
 
-    move-result v5
+    .line 4
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-eqz v5, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroidx/constraintlayout/motion/widget/i$r;
-
-    .line 7
-    iget v8, v5, Landroidx/constraintlayout/motion/widget/i$r;->d:F
-
-    float-to-double v6, v8
-
-    const-wide v9, 0x3f847ae147ae147bL    # 0.01
-
-    mul-double/2addr v6, v9
-
-    aput-wide v6, v1, v11
-
-    .line 8
-    aget-object v6, v3, v11
-
-    iget v10, v5, Landroidx/constraintlayout/motion/widget/i$r;->b:F
-
-    float-to-double v12, v10
-
-    aput-wide v12, v6, v2
-
-    .line 9
-    aget-object v6, v3, v11
-
-    iget v9, v5, Landroidx/constraintlayout/motion/widget/i$r;->c:F
-
-    float-to-double v12, v9
-
-    aput-wide v12, v6, v4
-
-    .line 10
-    iget-object v6, p0, Landroidx/constraintlayout/motion/widget/i;->b:Landroidx/constraintlayout/motion/widget/i$d;
-
-    iget v7, v5, Landroidx/constraintlayout/motion/widget/i$r;->a:I
-
-    move-object v5, v6
-
-    move v6, v11
-
-    invoke-virtual/range {v5 .. v10}, Landroidx/constraintlayout/motion/widget/i$d;->d(IIFFF)V
-
-    add-int/2addr v11, v4
-
-    goto :goto_0
-
-    .line 11
     :cond_1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->b:Landroidx/constraintlayout/motion/widget/i$d;
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/motion/widget/i$d;->e(F)V
+.method public d(I)Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "id"
+        }
+    .end annotation
 
-    .line 12
-    invoke-static {v2, v1, v3}, Ls0/c;->a(I[D[[D)Ls0/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/ArrayList<",
+            "Landroidx/constraintlayout/motion/widget/f;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ls0/c;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    return-object p1
 .end method
 
-.method public j()Z
-    .locals 2
+.method public e()Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    iget v0, p0, Landroidx/constraintlayout/motion/widget/i;->f:I
+    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->a:Ljava/util/HashMap;
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    return v1
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 5
-
-    .line 1
-    iget-object v0, p0, Landroidx/constraintlayout/motion/widget/i;->d:Ljava/lang/String;
-
-    .line 2
-    new-instance v1, Ljava/text/DecimalFormat;
-
-    const-string v2, "##.##"
-
-    invoke-direct {v1, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    .line 3
-    iget-object v2, p0, Landroidx/constraintlayout/motion/widget/i;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroidx/constraintlayout/motion/widget/i$r;
-
-    const-string v4, "["
-
-    .line 4
-    invoke-static {v0, v4}, Landroid/support/v4/media/e;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    iget v4, v3, Landroidx/constraintlayout/motion/widget/i$r;->a:I
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " , "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v3, v3, Landroidx/constraintlayout/motion/widget/i$r;->b:F
-
-    float-to-double v3, v3
-
-    invoke-virtual {v1, v3, v4}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, "] "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
     return-object v0
 .end method

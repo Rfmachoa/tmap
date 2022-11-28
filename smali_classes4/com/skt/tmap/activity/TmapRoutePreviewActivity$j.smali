@@ -3,12 +3,12 @@
 .source "TmapRoutePreviewActivity.kt"
 
 # interfaces
-.implements Lcom/skt/tmap/mvp/fragment/y1;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->F6(I)V
+    value = Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,20 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0012\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0016\u00a8\u0006\u0006"
+        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0004"
     }
     d2 = {
         "com/skt/tmap/activity/TmapRoutePreviewActivity$j",
-        "Lcom/skt/tmap/mvp/fragment/y1;",
-        "Landroid/view/View;",
-        "view",
+        "Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;",
         "Lkotlin/d1;",
-        "a",
+        "onGlobalLayout",
         "tmap_android_phoneKUShip"
     }
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -42,23 +40,14 @@
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-.field public final synthetic b:I
-
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;I)V
+.method public constructor <init>(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-    iput p2, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->b:I
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,54 +55,59 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;)V
-    .locals 2
-    .param p1    # Landroid/view/View;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
+.method public onGlobalLayout()V
+    .locals 4
 
     .line 1
-    iget p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->b:I
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-    const/4 v0, 0x3
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->d6(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)Landroid/widget/FrameLayout;
 
-    if-ne p1, v0, :cond_0
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "calloutBottomSheet"
+
+    if-nez v0, :cond_0
+
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object v0, v1
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     .line 2
-    new-instance p1, Landroid/content/Intent;
-
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-    const-class v1, Lcom/skt/tmap/activity/TmapMainSearchFavoriteActivity;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->c6(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;
 
-    invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v0
 
-    const-string v0, "POI_TAB_MODE"
+    iget-object v3, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
 
-    const/4 v1, 0x1
+    invoke-static {v3}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->d6(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)Landroid/widget/FrameLayout;
 
-    .line 3
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    move-result-object v3
 
-    const-string v0, "from_where"
+    if-nez v3, :cond_1
 
-    .line 4
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
-
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/activity/BaseActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 6
-    :cond_0
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapRoutePreviewActivity$j;->a:Lcom/skt/tmap/activity/TmapRoutePreviewActivity;
-
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapRoutePreviewActivity;->j6(Lcom/skt/tmap/activity/TmapRoutePreviewActivity;)V
+    :cond_1
+    move-object v1, v3
 
     :goto_0
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;->a(Landroid/view/View;F)V
+
     return-void
 .end method

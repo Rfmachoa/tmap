@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
@@ -45,14 +45,6 @@
 .field public zac:Ljava/util/List;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0xa
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
     .end annotation
 .end field
 
@@ -151,14 +143,6 @@
 .end field
 
 .field private zan:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -268,26 +252,6 @@
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Landroid/net/Uri;",
-            "Ljava/lang/String;",
-            "J",
-            "Ljava/lang/String;",
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
-        }
     .end annotation
 
     .line 1
@@ -422,25 +386,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Landroid/net/Uri;",
-            "Ljava/lang/Long;",
-            "Ljava/lang/String;",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;)",
-            "Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;"
-        }
     .end annotation
 
     .line 1
@@ -755,16 +700,6 @@
 
 .method private static zae(Landroid/accounts/Account;Ljava/util/Set;)Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
     .locals 10
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/accounts/Account;",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;)",
-            "Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;"
-        }
-    .end annotation
 
     .line 1
     iget-object v2, p0, Landroid/accounts/Account;->name:Ljava/lang/String;
@@ -854,7 +789,7 @@
 
     move-result-object v2
 
-    invoke-interface {p1, v2}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1036,7 +971,7 @@
 
     const/16 v2, 0x1f
 
-    invoke-static {v0, v1, v2}, Lb3/k;->a(Ljava/lang/String;II)I
+    invoke-static {v0, v1, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
 
     move-result v0
 
@@ -1045,7 +980,7 @@
 
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -1100,6 +1035,9 @@
     .end annotation
 
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     if-eqz p1, :cond_0

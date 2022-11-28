@@ -3,42 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/utils/futures/a;
+.implements Landroidx/camera/camera2/internal/w$c;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/i2;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/i2;Ljava/util/List;)V
+.method public synthetic constructor <init>(ILandroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/f2;->a:Landroidx/camera/camera2/internal/i2;
+    iput p1, p0, Landroidx/camera/camera2/internal/f2;->a:I
 
-    iput-object p2, p0, Landroidx/camera/camera2/internal/f2;->b:Ljava/util/List;
+    iput-object p2, p0, Landroidx/camera/camera2/internal/f2;->b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 2
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/f2;->a:Landroidx/camera/camera2/internal/i2;
+    iget v0, p0, Landroidx/camera/camera2/internal/f2;->a:I
 
-    iget-object v1, p0, Landroidx/camera/camera2/internal/f2;->b:Ljava/util/List;
+    iget-object v1, p0, Landroidx/camera/camera2/internal/f2;->b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    check-cast p1, Ljava/util/List;
+    invoke-static {v0, v1, p1}, Landroidx/camera/camera2/internal/i2;->c(ILandroidx/concurrent/futures/CallbackToFutureAdapter$a;Landroid/hardware/camera2/TotalCaptureResult;)Z
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/camera2/internal/i2;->z(Landroidx/camera/camera2/internal/i2;Ljava/util/List;Ljava/util/List;)Lcom/google/common/util/concurrent/ListenableFuture;
+    move-result p1
 
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method

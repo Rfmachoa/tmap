@@ -1,6 +1,6 @@
 .class public Lcom/android/billingclient/api/Purchase$a;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 
 # annotations
@@ -28,13 +28,13 @@
     .end annotation
 .end field
 
-.field public final b:Lcom/android/billingclient/api/i;
+.field public final b:Lcom/android/billingclient/api/f;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/billingclient/api/i;Ljava/util/List;)V
+.method public constructor <init>(Lcom/android/billingclient/api/f;Ljava/util/List;)V
     .locals 0
-    .param p1    # Lcom/android/billingclient/api/i;
+    .param p1    # Lcom/android/billingclient/api/f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -45,32 +45,30 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/android/billingclient/api/i;",
+            "Lcom/android/billingclient/api/f;",
             "Ljava/util/List<",
             "Lcom/android/billingclient/api/Purchase;",
             ">;)V"
         }
     .end annotation
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lcom/android/billingclient/api/Purchase$a;->a:Ljava/util/List;
 
-    .line 3
-    iput-object p1, p0, Lcom/android/billingclient/api/Purchase$a;->b:Lcom/android/billingclient/api/i;
+    iput-object p1, p0, Lcom/android/billingclient/api/Purchase$a;->b:Lcom/android/billingclient/api/f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/android/billingclient/api/i;
+.method public a()Lcom/android/billingclient/api/f;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/Purchase$a;->b:Lcom/android/billingclient/api/i;
+    iget-object v0, p0, Lcom/android/billingclient/api/Purchase$a;->b:Lcom/android/billingclient/api/f;
 
     return-object v0
 .end method
@@ -89,7 +87,6 @@
         }
     .end annotation
 
-    .line 1
     iget-object v0, p0, Lcom/android/billingclient/api/Purchase$a;->a:Ljava/util/List;
 
     return-object v0
@@ -99,11 +96,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/android/billingclient/api/Purchase$a;->a()Lcom/android/billingclient/api/i;
+    invoke-virtual {p0}, Lcom/android/billingclient/api/Purchase$a;->a()Lcom/android/billingclient/api/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/billingclient/api/i;->b()I
+    invoke-virtual {v0}, Lcom/android/billingclient/api/f;->b()I
 
     move-result v0
 

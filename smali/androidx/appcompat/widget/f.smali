@@ -1,381 +1,418 @@
-.class public final Landroidx/appcompat/widget/f;
+.class public Landroidx/appcompat/widget/f;
 .super Ljava/lang/Object;
-.source "AppCompatDrawableManager.java"
-
-
-# annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
-
-
-# static fields
-.field public static final b:Ljava/lang/String; = "AppCompatDrawableManag"
-
-.field public static final c:Z = false
-
-.field public static final d:Landroid/graphics/PorterDuff$Mode;
-
-.field public static e:Landroidx/appcompat/widget/f;
+.source "AppCompatCompoundButtonHelper.java"
 
 
 # instance fields
-.field public a:Landroidx/appcompat/widget/w;
+.field public final a:Landroid/widget/CompoundButton;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field public b:Landroid/content/res/ColorStateList;
+
+.field public c:Landroid/graphics/PorterDuff$Mode;
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Landroid/widget/CompoundButton;)V
     .locals 1
-
-    .line 1
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    sput-object v0, Landroidx/appcompat/widget/f;->d:Landroid/graphics/PorterDuff$Mode;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
+    .param p1    # Landroid/widget/CompoundButton;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public static synthetic a()Landroid/graphics/PorterDuff$Mode;
-    .locals 1
-
-    .line 1
-    sget-object v0, Landroidx/appcompat/widget/f;->d:Landroid/graphics/PorterDuff$Mode;
-
-    return-object v0
-.end method
-
-.method public static declared-synchronized b()Landroidx/appcompat/widget/f;
-    .locals 2
-
-    const-class v0, Landroidx/appcompat/widget/f;
-
-    monitor-enter v0
-
-    .line 1
-    :try_start_0
-    sget-object v1, Landroidx/appcompat/widget/f;->e:Landroidx/appcompat/widget/f;
-
-    if-nez v1, :cond_0
+    const/4 v0, 0x0
 
     .line 2
-    invoke-static {}, Landroidx/appcompat/widget/f;->i()V
+    iput-object v0, p0, Landroidx/appcompat/widget/f;->b:Landroid/content/res/ColorStateList;
 
     .line 3
-    :cond_0
-    sget-object v1, Landroidx/appcompat/widget/f;->e:Landroidx/appcompat/widget/f;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object v0, p0, Landroidx/appcompat/widget/f;->c:Landroid/graphics/PorterDuff$Mode;
 
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public static declared-synchronized e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-    .locals 1
-
-    const-class v0, Landroidx/appcompat/widget/f;
-
-    monitor-enter v0
-
-    .line 1
-    :try_start_0
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/w;->l(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
-
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
-.method public static declared-synchronized i()V
-    .locals 3
-
-    const-class v0, Landroidx/appcompat/widget/f;
-
-    monitor-enter v0
-
-    .line 1
-    :try_start_0
-    sget-object v1, Landroidx/appcompat/widget/f;->e:Landroidx/appcompat/widget/f;
-
-    if-nez v1, :cond_0
-
-    .line 2
-    new-instance v1, Landroidx/appcompat/widget/f;
-
-    invoke-direct {v1}, Landroidx/appcompat/widget/f;-><init>()V
-
-    sput-object v1, Landroidx/appcompat/widget/f;->e:Landroidx/appcompat/widget/f;
-
-    .line 3
-    invoke-static {}, Landroidx/appcompat/widget/w;->h()Landroidx/appcompat/widget/w;
-
-    move-result-object v2
-
-    iput-object v2, v1, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
+    const/4 v0, 0x0
 
     .line 4
-    sget-object v1, Landroidx/appcompat/widget/f;->e:Landroidx/appcompat/widget/f;
-
-    iget-object v1, v1, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
-
-    new-instance v2, Landroidx/appcompat/widget/f$a;
-
-    invoke-direct {v2}, Landroidx/appcompat/widget/f$a;-><init>()V
-
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/w;->u(Landroidx/appcompat/widget/w$e;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-boolean v0, p0, Landroidx/appcompat/widget/f;->d:Z
 
     .line 5
-    :cond_0
-    monitor-exit v0
+    iput-boolean v0, p0, Landroidx/appcompat/widget/f;->e:Z
 
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public static j(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/h0;[I)V
-    .locals 0
-
-    .line 1
-    invoke-static {p0, p1, p2}, Landroidx/appcompat/widget/w;->w(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/h0;[I)V
+    .line 6
+    iput-object p1, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # I
-        .annotation build Landroidx/annotation/DrawableRes;
-        .end annotation
-    .end param
-
-    monitor-enter p0
+.method public a()V
+    .locals 2
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/w;->j(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Landroidx/core/widget/d;->a(Landroid/widget/CompoundButton;)Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    monitor-exit p0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized d(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # I
-        .annotation build Landroidx/annotation/DrawableRes;
-        .end annotation
-    .end param
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/appcompat/widget/w;->k(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized f(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # I
-        .annotation build Landroidx/annotation/DrawableRes;
-        .end annotation
-    .end param
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
-
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/w;->m(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public declared-synchronized g(Landroid/content/Context;)V
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    monitor-enter p0
-
-    .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/w;->s(Landroid/content/Context;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v0, :cond_4
 
     .line 2
-    monitor-exit p0
+    iget-boolean v1, p0, Landroidx/appcompat/widget/f;->d:Z
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p0, Landroidx/appcompat/widget/f;->e:Z
+
+    if-eqz v1, :cond_4
+
+    .line 3
+    :cond_0
+    invoke-static {v0}, Lw1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 5
+    iget-boolean v1, p0, Landroidx/appcompat/widget/f;->d:Z
+
+    if-eqz v1, :cond_1
+
+    .line 6
+    iget-object v1, p0, Landroidx/appcompat/widget/f;->b:Landroid/content/res/ColorStateList;
+
+    invoke-static {v0, v1}, Lw1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    .line 7
+    :cond_1
+    iget-boolean v1, p0, Landroidx/appcompat/widget/f;->e:Z
+
+    if-eqz v1, :cond_2
+
+    .line 8
+    iget-object v1, p0, Landroidx/appcompat/widget/f;->c:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-static {v0, v1}, Lw1/c;->p(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+
+    .line 9
+    :cond_2
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 10
+    iget-object v1, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v1}, Landroid/widget/CompoundButton;->getDrawableState()[I
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    .line 11
+    :cond_3
+    iget-object v1, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v1, v0}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_4
+    return-void
+.end method
+
+.method public b(I)I
+    .locals 0
+
+    return p1
+.end method
+
+.method public c()Landroid/content/res/ColorStateList;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/widget/f;->b:Landroid/content/res/ColorStateList;
+
+    return-object v0
+.end method
+
+.method public d()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/widget/f;->c:Landroid/graphics/PorterDuff$Mode;
+
+    return-object v0
+.end method
+
+.method public e(Landroid/util/AttributeSet;I)V
+    .locals 9
+    .param p1    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    .line 2
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget-object v3, Landroidx/appcompat/R$styleable;->CompoundButton:[I
+
+    const/4 v8, 0x0
+
+    invoke-static {v0, p1, v3, p2, v8}, Landroidx/appcompat/widget/o0;->G(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/o0;
+
+    move-result-object v0
+
+    .line 3
+    iget-object v1, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    invoke-virtual {v1}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    .line 4
+    invoke-virtual {v0}, Landroidx/appcompat/widget/o0;->B()Landroid/content/res/TypedArray;
+
+    move-result-object v5
+
+    const/4 v7, 0x0
+
+    move-object v4, p1
+
+    move v6, p2
+
+    .line 5
+    invoke-static/range {v1 .. v7}, Landroidx/core/view/ViewCompat;->z1(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+
+    .line 6
+    :try_start_0
+    sget p1, Landroidx/appcompat/R$styleable;->CompoundButton_buttonCompat:I
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/o0;->C(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    .line 7
+    invoke-virtual {v0, p1, v8}, Landroidx/appcompat/widget/o0;->u(II)I
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz p1, :cond_0
+
+    .line 8
+    :try_start_1
+    iget-object p2, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    .line 9
+    invoke-virtual {p2}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    .line 10
+    invoke-virtual {p2, p1}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+    :try_end_1
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    :cond_0
+    move p1, v8
+
+    :goto_0
+    if-nez p1, :cond_1
+
+    .line 11
+    :try_start_2
+    sget p1, Landroidx/appcompat/R$styleable;->CompoundButton_android_button:I
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/o0;->C(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    .line 12
+    invoke-virtual {v0, p1, v8}, Landroidx/appcompat/widget/o0;->u(II)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 13
+    iget-object p2, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    .line 14
+    invoke-virtual {p2}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, p1}, Lh/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    .line 15
+    invoke-virtual {p2, p1}, Landroid/widget/CompoundButton;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 16
+    :cond_1
+    sget p1, Landroidx/appcompat/R$styleable;->CompoundButton_buttonTint:I
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/o0;->C(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    .line 17
+    iget-object p2, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    .line 18
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/o0;->d(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    .line 19
+    invoke-static {p2, p1}, Landroidx/core/widget/d;->d(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+
+    .line 20
+    :cond_2
+    sget p1, Landroidx/appcompat/R$styleable;->CompoundButton_buttonTintMode:I
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/o0;->C(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    .line 21
+    iget-object p2, p0, Landroidx/appcompat/widget/f;->a:Landroid/widget/CompoundButton;
+
+    const/4 v1, -0x1
+
+    .line 22
+    invoke-virtual {v0, p1, v1}, Landroidx/appcompat/widget/o0;->o(II)I
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    .line 23
+    invoke-static {p1, v1}, Landroidx/appcompat/widget/t;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object p1
+
+    .line 24
+    invoke-static {p2, p1}, Landroidx/core/widget/d;->e(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 25
+    :cond_3
+    invoke-virtual {v0}, Landroidx/appcompat/widget/o0;->I()V
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    monitor-exit p0
+    invoke-virtual {v0}, Landroidx/appcompat/widget/o0;->I()V
 
+    .line 26
     throw p1
 .end method
 
-.method public declared-synchronized h(Landroid/content/Context;Landroidx/appcompat/widget/o0;I)Landroid/graphics/drawable/Drawable;
+.method public f()V
     .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/appcompat/widget/o0;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # I
-        .annotation build Landroidx/annotation/DrawableRes;
-        .end annotation
-    .end param
-
-    monitor-enter p0
 
     .line 1
-    :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
+    iget-boolean v0, p0, Landroidx/appcompat/widget/f;->f:Z
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/appcompat/widget/w;->t(Landroid/content/Context;Landroidx/appcompat/widget/o0;I)Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v0, 0x0
 
-    monitor-exit p0
+    .line 2
+    iput-boolean v0, p0, Landroidx/appcompat/widget/f;->f:Z
 
-    return-object p1
+    return-void
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    const/4 v0, 0x1
 
-    monitor-exit p0
+    .line 3
+    iput-boolean v0, p0, Landroidx/appcompat/widget/f;->f:Z
 
-    throw p1
+    .line 4
+    invoke-virtual {p0}, Landroidx/appcompat/widget/f;->a()V
+
+    return-void
 .end method
 
-.method public k(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # I
-        .annotation build Landroidx/annotation/DrawableRes;
-        .end annotation
-    .end param
-    .param p3    # Landroid/graphics/drawable/Drawable;
-        .annotation build Landroidx/annotation/NonNull;
+.method public g(Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Landroidx/appcompat/widget/f;->b:Landroid/content/res/ColorStateList;
+
+    const/4 p1, 0x1
+
+    .line 2
+    iput-boolean p1, p0, Landroidx/appcompat/widget/f;->d:Z
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/appcompat/widget/f;->a()V
+
+    return-void
+.end method
+
+.method public h(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/f;->a:Landroidx/appcompat/widget/w;
+    iput-object p1, p0, Landroidx/appcompat/widget/f;->c:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/appcompat/widget/w;->x(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
+    const/4 p1, 0x1
 
-    move-result p1
+    .line 2
+    iput-boolean p1, p0, Landroidx/appcompat/widget/f;->e:Z
 
-    return p1
+    .line 3
+    invoke-virtual {p0}, Landroidx/appcompat/widget/f;->a()V
+
+    return-void
 .end method

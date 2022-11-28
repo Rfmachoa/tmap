@@ -6,15 +6,16 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/skt/moment/a$k;,
         Lcom/skt/moment/a$g;,
         Lcom/skt/moment/a$h;,
         Lcom/skt/moment/a$f;,
         Lcom/skt/moment/a$d;,
         Lcom/skt/moment/a$b;,
         Lcom/skt/moment/a$c;,
-        Lcom/skt/moment/a$l;,
+        Lcom/skt/moment/a$m;,
         Lcom/skt/moment/a$j;,
-        Lcom/skt/moment/a$k;,
+        Lcom/skt/moment/a$l;,
         Lcom/skt/moment/a$e;,
         Lcom/skt/moment/a$i;
     }
@@ -26,41 +27,41 @@
 
 .field public static final B:I
 
-.field public static final C:Ljava/lang/String; = "dev"
+.field public static final C:I
 
-.field public static final D:Ljava/lang/String; = "stg"
+.field public static final D:Ljava/lang/String; = "dev"
 
-.field public static final E:Ljava/lang/String; = "prd"
+.field public static final E:Ljava/lang/String; = "stg"
 
-.field public static F:Ljava/lang/String; = null
+.field public static final F:Ljava/lang/String; = "prd"
 
-.field public static final G:Ljava/lang/String; = "LANDING"
+.field public static G:Ljava/lang/String; = null
 
-.field public static final H:Ljava/lang/String; = "POI_DETAIL"
+.field public static final H:Ljava/lang/String; = "LANDING"
 
-.field public static final I:Ljava/lang/String; = "ROUTE"
+.field public static final I:Ljava/lang/String; = "POI_DETAIL"
 
-.field public static J:Lcom/skt/moment/net/vo/NewCoupon; = null
+.field public static final J:Ljava/lang/String; = "ROUTE"
 
-.field public static final K:I = 0x0
+.field public static K:Lcom/skt/moment/net/vo/NewCoupon; = null
 
-.field public static final L:I = 0x1
+.field public static final L:I = 0x0
 
-.field public static final M:I = 0x2
+.field public static final M:I = 0x1
 
-.field public static final N:I = 0x3
+.field public static final N:I = 0x2
 
-.field public static final O:I = 0x4
+.field public static final O:I = 0x3
 
-.field public static final P:I = 0x5
+.field public static final P:I = 0x4
 
-.field public static final Q:I = 0x6
+.field public static final Q:I = 0x5
 
-.field public static u:Z = false
+.field public static final R:I = 0x6
 
-.field public static v:I
+.field public static v:Z = false
 
-.field public static final w:I
+.field public static w:I
 
 .field public static final x:I
 
@@ -92,23 +93,25 @@
 
 .field public k:Lcom/skt/moment/a$h;
 
-.field public l:Ljava/lang/Integer;
+.field public l:Lcom/skt/moment/a$k;
 
 .field public m:Ljava/lang/Integer;
 
-.field public n:Ljava/lang/String;
+.field public n:Ljava/lang/Integer;
 
-.field public o:Ljava/lang/Integer;
+.field public o:Ljava/lang/String;
 
 .field public p:Ljava/lang/Integer;
 
-.field public q:Ljava/lang/String;
+.field public q:Ljava/lang/Integer;
 
-.field public r:Ljava/lang/Integer;
+.field public r:Ljava/lang/String;
 
-.field public s:Ljava/lang/String;
+.field public s:Ljava/lang/Integer;
 
 .field public t:Ljava/lang/String;
+
+.field public u:Ljava/lang/String;
 
 
 # direct methods
@@ -120,50 +123,60 @@
     add-int/lit8 v0, v0, 0x1
 
     .line 1
-    sput v0, Lcom/skt/moment/a;->v:I
-
     sput v0, Lcom/skt/moment/a;->w:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    .line 2
-    sput v0, Lcom/skt/moment/a;->v:I
 
     sput v0, Lcom/skt/moment/a;->x:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 3
-    sput v0, Lcom/skt/moment/a;->v:I
+    .line 2
+    sput v0, Lcom/skt/moment/a;->w:I
 
     sput v0, Lcom/skt/moment/a;->y:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 4
-    sput v0, Lcom/skt/moment/a;->v:I
+    .line 3
+    sput v0, Lcom/skt/moment/a;->w:I
 
     sput v0, Lcom/skt/moment/a;->z:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 5
-    sput v0, Lcom/skt/moment/a;->v:I
+    .line 4
+    sput v0, Lcom/skt/moment/a;->w:I
 
     sput v0, Lcom/skt/moment/a;->A:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 6
-    sput v0, Lcom/skt/moment/a;->v:I
+    .line 5
+    sput v0, Lcom/skt/moment/a;->w:I
 
     sput v0, Lcom/skt/moment/a;->B:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 6
+    sput v0, Lcom/skt/moment/a;->w:I
+
+    sput v0, Lcom/skt/moment/a;->C:I
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "type"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -188,16 +201,28 @@
 
 .method public static G(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "accessKey",
+            "enable"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p0}, Lcom/skt/moment/a;->m(Landroid/content/Context;)V
 
     .line 2
-    invoke-static {}, Lfb/c;->c()Lfb/c;
+    invoke-static {}, Lcd/c;->c()Lcd/c;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Lfb/c;->m(Z)V
+    invoke-virtual {p0, p2}, Lcd/c;->m(Z)V
 
     .line 3
     invoke-static {}, Lcom/skt/moment/task/b0;->j()Lcom/skt/moment/task/b0;
@@ -213,7 +238,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v0, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     const-string v1, ""
 
@@ -243,44 +268,76 @@
 
 .method public static M(Lcom/skt/moment/a$f;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "checker"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {}, Lgb/b;->d()Lgb/b;
+    invoke-static {}, Ldd/b;->d()Ldd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lgb/b;->e(Lcom/skt/moment/a$f;)V
+    invoke-virtual {v0, p0}, Ldd/b;->e(Lcom/skt/moment/a$f;)V
 
     return-void
 .end method
 
 .method public static O(Lcom/skt/moment/a$g;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentDisplay"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {}, Lgb/c;->c()Lgb/c;
+    invoke-static {}, Ldd/c;->c()Ldd/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lgb/c;->f(Lcom/skt/moment/a$g;)V
+    invoke-virtual {v0, p0}, Ldd/c;->f(Lcom/skt/moment/a$g;)V
 
     return-void
 .end method
 
 .method public static P(Lcom/skt/moment/net/vo/NewCoupon;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCoupon"
+        }
+    .end annotation
 
     .line 1
-    sput-object p0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sput-object p0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     return-void
 .end method
 
-.method public static T(Ljava/lang/String;)V
+.method public static U(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "serverAlias"
+        }
+    .end annotation
 
     .line 1
-    sput-object p0, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sput-object p0, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     return-void
 .end method
@@ -289,7 +346,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/moment/a;->U(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/moment/a;->V(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -298,7 +355,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/skt/moment/a;->z:I
+    sget v0, Lcom/skt/moment/a;->A:I
 
     return v0
 .end method
@@ -307,7 +364,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/moment/a;->R(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/moment/a;->S(I)V
 
     return-void
 .end method
@@ -379,16 +436,24 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/moment/a;->V(I)V
+    invoke-virtual {p0, p1}, Lcom/skt/moment/a;->W(I)V
 
     return-void
 .end method
 
 .method public static m(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
-    sget-boolean v0, Lcom/skt/moment/a;->u:Z
+    sget-boolean v0, Lcom/skt/moment/a;->v:Z
 
     if-nez v0, :cond_0
 
@@ -431,7 +496,7 @@
     .locals 2
 
     .line 1
-    sget-boolean v0, Lcom/skt/moment/a;->u:Z
+    sget-boolean v0, Lcom/skt/moment/a;->v:Z
 
     if-nez v0, :cond_0
 
@@ -450,7 +515,7 @@
     const/4 v0, 0x0
 
     .line 3
-    sput-boolean v0, Lcom/skt/moment/a;->u:Z
+    sput-boolean v0, Lcom/skt/moment/a;->v:Z
 
     return-void
 .end method
@@ -459,7 +524,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v0, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -468,7 +533,7 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sget-object v0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     const/4 v1, 0x1
 
@@ -485,7 +550,7 @@
 
     invoke-direct {v0, v2, v1}, Lcom/skt/moment/net/vo/NewCoupon;-><init>(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    sput-object v0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sput-object v0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     goto :goto_0
 
@@ -494,7 +559,7 @@
     invoke-virtual {v0, v2}, Lcom/skt/moment/net/vo/NewCoupon;->setNewCouponYn(Ljava/lang/String;)V
 
     .line 4
-    sget-object v0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sget-object v0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     invoke-virtual {v0}, Lcom/skt/moment/net/vo/NewCoupon;->getNewCouponCnt()Ljava/lang/Integer;
 
@@ -518,6 +583,14 @@
 
 .method public static s(Landroid/content/Context;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -525,11 +598,11 @@
     move-result-object p0
 
     .line 2
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lfb/b;->F(Landroid/content/Context;)Lfb/b;
+    invoke-virtual {v0, p0}, Lcd/b;->F(Landroid/content/Context;)Lcd/b;
 
     .line 3
     invoke-static {}, Lcom/skt/moment/task/b0;->j()Lcom/skt/moment/task/b0;
@@ -539,69 +612,77 @@
     invoke-virtual {v0, p0}, Lcom/skt/moment/task/b0;->q(Landroid/content/Context;)V
 
     .line 4
-    invoke-static {}, Lfb/a;->c()Lfb/a;
+    invoke-static {}, Lcd/a;->c()Lcd/a;
 
     .line 5
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lhb/a;->n(Landroid/content/Context;)Lhb/a;
+    invoke-virtual {v0, p0}, Led/a;->n(Landroid/content/Context;)Led/a;
 
     .line 6
-    invoke-static {}, Lgb/a;->b()Lgb/a;
+    invoke-static {}, Ldd/a;->b()Ldd/a;
 
     .line 7
-    invoke-static {}, Lgb/b;->d()Lgb/b;
+    invoke-static {}, Ldd/b;->d()Ldd/b;
 
     .line 8
-    invoke-static {}, Lfb/c;->c()Lfb/c;
+    invoke-static {}, Lcd/c;->c()Lcd/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lfb/c;->n(Landroid/content/Context;)Lfb/c;
+    invoke-virtual {v0, p0}, Lcd/c;->n(Landroid/content/Context;)Lcd/c;
 
     .line 9
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Leb/b;->c(Landroid/content/Context;)Leb/b;
+    invoke-virtual {v0, p0}, Lbd/b;->c(Landroid/content/Context;)Lbd/b;
 
     .line 10
-    invoke-static {}, Lib/a;->b()Lib/a;
+    invoke-static {}, Lfd/a;->b()Lfd/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lib/a;->e(Landroid/content/Context;)Lib/a;
+    invoke-virtual {v0, p0}, Lfd/a;->e(Landroid/content/Context;)Lfd/a;
 
     .line 11
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lib/b;->l(Landroid/content/Context;)Lib/b;
+    invoke-virtual {v0, p0}, Lfd/b;->l(Landroid/content/Context;)Lfd/b;
 
     const/4 p0, 0x1
 
     .line 12
-    sput-boolean p0, Lcom/skt/moment/a;->u:Z
+    sput-boolean p0, Lcom/skt/moment/a;->v:Z
 
     return p0
 .end method
 
 .method public static t(Landroid/content/Context;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p0}, Lcom/skt/moment/a;->m(Landroid/content/Context;)V
 
     .line 2
-    invoke-static {}, Lfb/c;->c()Lfb/c;
+    invoke-static {}, Lcd/c;->c()Lcd/c;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/c;->f()Z
+    invoke-virtual {p0}, Lcd/c;->f()Z
 
     move-result p0
 
@@ -610,11 +691,27 @@
 
 .method public static u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "accessKey",
+            "placeCampaignId",
+            "seed",
+            "moveTypeCode"
+        }
+    .end annotation
 
     .line 1
     new-instance v7, Lcom/skt/moment/task/l;
 
-    sget-object v2, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v2, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     move-object v0, v7
 
@@ -631,11 +728,11 @@
     invoke-direct/range {v0 .. v6}, Lcom/skt/moment/task/l;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     .line 2
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->k()I
+    invoke-virtual {p0}, Lcd/b;->k()I
 
     move-result p0
 
@@ -646,11 +743,23 @@
 
 .method public static v(Landroid/content/Context;Ljava/lang/String;Z)Lcom/skt/moment/net/vo/NewCoupon;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "accessKey",
+            "isServer"
+        }
+    .end annotation
 
     if-nez p2, :cond_0
 
     .line 1
-    sget-object p2, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sget-object p2, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     if-nez p2, :cond_1
 
@@ -658,16 +767,16 @@
     :cond_0
     new-instance p2, Lcom/skt/moment/task/m;
 
-    sget-object v0, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v0, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     invoke-direct {p2, p0, v0, p1}, Lcom/skt/moment/task/m;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->k()I
+    invoke-virtual {p0}, Lcd/b;->k()I
 
     move-result p0
 
@@ -675,7 +784,7 @@
 
     move-result-object p0
 
-    sput-object p0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sput-object p0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     if-nez p0, :cond_1
 
@@ -692,57 +801,68 @@
 
     invoke-direct {p0, p2, p1}, Lcom/skt/moment/net/vo/NewCoupon;-><init>(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    sput-object p0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sput-object p0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     .line 5
     :cond_1
-    sget-object p0, Lcom/skt/moment/a;->J:Lcom/skt/moment/net/vo/NewCoupon;
+    sget-object p0, Lcom/skt/moment/a;->K:Lcom/skt/moment/net/vo/NewCoupon;
 
     return-object p0
 .end method
 
 .method public static w(Landroid/content/Context;Ljava/lang/String;Lcom/skt/moment/a$d;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "callbackCode",
+            "callback"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p0}, Lcom/skt/moment/a;->m(Landroid/content/Context;)V
 
     .line 2
-    invoke-static {}, Lgb/a;->b()Lgb/a;
+    invoke-static {}, Ldd/a;->b()Ldd/a;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lgb/a;->c(Ljava/lang/String;Lcom/skt/moment/a$d;)Lcom/skt/moment/a$d;
+    invoke-virtual {p0, p1, p2}, Ldd/a;->c(Ljava/lang/String;Lcom/skt/moment/a$d;)Lcom/skt/moment/a$d;
 
     return-void
 .end method
 
 .method public static y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;)Lcom/skt/moment/net/vo/HappenForPlace;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "momentCode",
+            "accessKey",
+            "latitude",
+            "longitude",
+            "importData"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {}, Lfb/c;->c()Lfb/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lfb/c;->f()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance p0, Lcom/skt/moment/net/vo/HappenForPlace;
-
-    invoke-direct {p0}, Lcom/skt/moment/net/vo/HappenForPlace;-><init>()V
-
-    return-object p0
-
-    .line 3
-    :cond_0
     new-instance v8, Lcom/skt/moment/task/h;
 
-    sget-object v2, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v2, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     move-object v0, v8
 
@@ -760,12 +880,12 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/skt/moment/task/h;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;)V
 
-    .line 4
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    .line 2
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->k()I
+    invoke-virtual {p0}, Lcd/b;->k()I
 
     move-result p0
 
@@ -778,11 +898,45 @@
 
 .method public static z(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;)Lcom/skt/moment/net/vo/HappenForTTS;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "momentCode",
+            "accessKey",
+            "latitude",
+            "longitude",
+            "importData"
+        }
+    .end annotation
 
     .line 1
+    invoke-static {}, Lcd/c;->c()Lcd/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcd/c;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 2
+    :cond_0
     new-instance v8, Lcom/skt/moment/task/i;
 
-    sget-object v2, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v2, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     move-object v0, v8
 
@@ -800,12 +954,12 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/skt/moment/task/i;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/String;)V
 
-    .line 2
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    .line 3
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lfb/b;->k()I
+    invoke-virtual {p0}, Lcd/b;->k()I
 
     move-result p0
 
@@ -820,6 +974,14 @@
 # virtual methods
 .method public final A(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->d:Ljava/lang/String;
@@ -829,15 +991,31 @@
 
 .method public B(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "action"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->t:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/moment/a;->u:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final C(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "appCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
@@ -847,42 +1025,82 @@
 
 .method public final D(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "campaignId"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->p:Ljava/lang/Integer;
+    iput-object p1, p0, Lcom/skt/moment/a;->q:Ljava/lang/Integer;
 
     return-void
 .end method
 
 .method public final E(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "displayLocationCode"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->q:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/moment/a;->r:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public F(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "domain"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->s:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/moment/a;->t:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public final H(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "errorString"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->n:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/moment/a;->o:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public I(Lcom/skt/moment/a$h;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "iconCallback"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->k:Lcom/skt/moment/a$h;
@@ -892,6 +1110,14 @@
 
 .method public final J(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "importData"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->j:Ljava/lang/String;
@@ -901,15 +1127,33 @@
 
 .method public final K(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "informationId"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->o:Ljava/lang/Integer;
+    iput-object p1, p0, Lcom/skt/moment/a;->p:Ljava/lang/Integer;
 
     return-void
 .end method
 
 .method public L(Ljava/lang/Double;Ljava/lang/Double;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "latitude",
+            "longitude"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->h:Ljava/lang/Double;
@@ -922,6 +1166,14 @@
 
 .method public final N(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->f:Ljava/lang/String;
@@ -929,26 +1181,33 @@
     return-void
 .end method
 
-.method public Q(Ljava/lang/Integer;)V
+.method public Q(Lcom/skt/moment/a$k;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCallback"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/moment/a;->l:Ljava/lang/Integer;
+    iput-object p1, p0, Lcom/skt/moment/a;->l:Lcom/skt/moment/a$k;
 
     return-void
 .end method
 
-.method public final R(I)V
+.method public R(Ljava/lang/Integer;)V
     .locals 0
-
-    .line 1
-    iput p1, p0, Lcom/skt/moment/a;->g:I
-
-    return-void
-.end method
-
-.method public S(Ljava/lang/Integer;)V
-    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCampaignId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->m:Ljava/lang/Integer;
@@ -956,8 +1215,50 @@
     return-void
 .end method
 
-.method public final U(Ljava/lang/String;)V
+.method public final S(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resultCode"
+        }
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/skt/moment/a;->g:I
+
+    return-void
+.end method
+
+.method public T(Ljava/lang/Integer;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seed"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/moment/a;->n:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+.method public final V(Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "serviceId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/a;->c:Ljava/lang/String;
@@ -965,15 +1266,23 @@
     return-void
 .end method
 
-.method public final V(I)V
+.method public final W(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stampCount"
+        }
+    .end annotation
 
     .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/moment/a;->r:Ljava/lang/Integer;
+    iput-object p1, p0, Lcom/skt/moment/a;->s:Ljava/lang/Integer;
 
     return-void
 .end method
@@ -997,7 +1306,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/moment/a;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/moment/a;->o:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -1006,7 +1315,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/moment/a;->l:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/skt/moment/a;->m:Ljava/lang/Integer;
 
     return-object v0
 .end method
@@ -1020,7 +1329,7 @@
     invoke-static {v0}, Lcom/skt/moment/a;->m(Landroid/content/Context;)V
 
     .line 2
-    sget v0, Lcom/skt/moment/a;->w:I
+    sget v0, Lcom/skt/moment/a;->x:I
 
     iget v1, p0, Lcom/skt/moment/a;->b:I
 
@@ -1042,7 +1351,7 @@
     if-ne v3, v1, :cond_0
 
     .line 4
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
@@ -1054,7 +1363,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/moment/a;->a:Landroid/content/Context;
@@ -1073,7 +1382,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v2, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     iget-object v4, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
 
@@ -1100,14 +1409,14 @@
     :cond_1
     iget-object v0, p0, Lcom/skt/moment/a;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lib/d;->n(Landroid/content/Context;)Z
+    invoke-static {v0}, Lfd/d;->n(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 9
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
@@ -1119,7 +1428,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lcom/skt/moment/a;->a:Landroid/content/Context;
@@ -1134,7 +1443,7 @@
 
     .line 11
     :cond_2
-    sget v0, Lcom/skt/moment/a;->y:I
+    sget v0, Lcom/skt/moment/a;->z:I
 
     iget v1, p0, Lcom/skt/moment/a;->b:I
 
@@ -1145,19 +1454,19 @@
 
     move-result-object v0
 
-    sget-object v4, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v4, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     iget-object v5, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/skt/moment/a;->d:Ljava/lang/String;
 
-    iget-object v7, p0, Lcom/skt/moment/a;->o:Ljava/lang/Integer;
+    iget-object v7, p0, Lcom/skt/moment/a;->p:Ljava/lang/Integer;
 
-    iget-object v8, p0, Lcom/skt/moment/a;->p:Ljava/lang/Integer;
+    iget-object v8, p0, Lcom/skt/moment/a;->q:Ljava/lang/Integer;
 
-    iget-object v9, p0, Lcom/skt/moment/a;->q:Ljava/lang/String;
+    iget-object v9, p0, Lcom/skt/moment/a;->r:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/skt/moment/a;->r:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/skt/moment/a;->s:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -1182,22 +1491,26 @@
 
     .line 14
     :cond_3
-    sget v0, Lcom/skt/moment/a;->A:I
+    sget v0, Lcom/skt/moment/a;->B:I
 
     if-eq v0, v1, :cond_4
 
-    invoke-static {}, Lfb/c;->c()Lfb/c;
+    sget v4, Lcom/skt/moment/a;->C:I
+
+    if-eq v4, v1, :cond_4
+
+    invoke-static {}, Lcd/c;->c()Lcd/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lfb/c;->f()Z
+    invoke-virtual {v1}, Lcd/c;->f()Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
     .line 15
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object v0
 
@@ -1209,7 +1522,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lfd/b;->i(Ljava/lang/String;)V
 
     .line 16
     iget-object v0, p0, Lcom/skt/moment/a;->a:Landroid/content/Context;
@@ -1221,19 +1534,19 @@
     invoke-virtual {p0, v0}, Lcom/skt/moment/a;->H(Ljava/lang/String;)V
 
     .line 17
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object v0
 
     sget v1, Lcom/skt/moment/R$string;->debugging_setting_disabled:I
 
-    invoke-virtual {v0, v1}, Leb/b;->b(I)V
+    invoke-virtual {v0, v1}, Lbd/b;->b(I)V
 
     return v2
 
     .line 18
     :cond_4
-    sget v1, Lcom/skt/moment/a;->x:I
+    sget v1, Lcom/skt/moment/a;->y:I
 
     iget v2, p0, Lcom/skt/moment/a;->b:I
 
@@ -1244,7 +1557,7 @@
 
     move-result-object v0
 
-    sget-object v4, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v4, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     iget-object v5, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
 
@@ -1279,7 +1592,7 @@
 
     .line 21
     :cond_5
-    sget v1, Lcom/skt/moment/a;->z:I
+    sget v1, Lcom/skt/moment/a;->A:I
 
     if-ne v1, v2, :cond_7
 
@@ -1329,7 +1642,7 @@
 
     move-result-object v0
 
-    sget-object v4, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v4, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
     iget-object v5, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
 
@@ -1337,11 +1650,11 @@
 
     iget-object v7, p0, Lcom/skt/moment/a;->f:Ljava/lang/String;
 
-    iget-object v8, p0, Lcom/skt/moment/a;->p:Ljava/lang/Integer;
+    iget-object v8, p0, Lcom/skt/moment/a;->q:Ljava/lang/Integer;
 
-    iget-object v9, p0, Lcom/skt/moment/a;->s:Ljava/lang/String;
+    iget-object v9, p0, Lcom/skt/moment/a;->t:Ljava/lang/String;
 
-    iget-object v10, p0, Lcom/skt/moment/a;->t:Ljava/lang/String;
+    iget-object v10, p0, Lcom/skt/moment/a;->u:Ljava/lang/String;
 
     invoke-static/range {v4 .. v10}, Lcom/skt/moment/task/a0;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/moment/task/z;
 
@@ -1362,7 +1675,7 @@
 
     .line 27
     :cond_8
-    sget v0, Lcom/skt/moment/a;->B:I
+    sget v0, Lcom/skt/moment/a;->C:I
 
     if-ne v0, v2, :cond_9
 
@@ -1371,25 +1684,27 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/skt/moment/a;->F:Ljava/lang/String;
+    sget-object v4, Lcom/skt/moment/a;->G:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
+    iget-object v5, p0, Lcom/skt/moment/a;->e:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/skt/moment/a;->d:Ljava/lang/String;
+    iget-object v6, p0, Lcom/skt/moment/a;->d:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/skt/moment/a;->l:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/skt/moment/a;->m:Ljava/lang/Integer;
 
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v5
+    move-result v7
 
-    iget-object v6, p0, Lcom/skt/moment/a;->m:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/skt/moment/a;->n:Ljava/lang/Integer;
 
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v6
+    move-result v8
 
-    invoke-static {v1, v2, v4, v5, v6}, Lcom/skt/moment/task/a0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)Lcom/skt/moment/task/z;
+    iget-object v9, p0, Lcom/skt/moment/a;->l:Lcom/skt/moment/a$k;
+
+    invoke-static/range {v4 .. v9}, Lcom/skt/moment/task/a0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/skt/moment/a$k;)Lcom/skt/moment/task/z;
 
     move-result-object v1
 

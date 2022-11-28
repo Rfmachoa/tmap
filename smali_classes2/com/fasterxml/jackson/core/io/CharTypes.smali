@@ -3,26 +3,34 @@
 .source "CharTypes.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fasterxml/jackson/core/io/CharTypes$AltEscapes;
+    }
+.end annotation
+
+
 # static fields
-.field private static final HB:[B
+.field public static final HB:[B
 
-.field private static final HC:[C
+.field public static final HC:[C
 
-.field private static final sHexValues:[I
+.field public static final sHexValues:[I
 
-.field private static final sInputCodes:[I
+.field public static final sInputCodes:[I
 
-.field private static final sInputCodesComment:[I
+.field public static final sInputCodesComment:[I
 
-.field private static final sInputCodesJsNames:[I
+.field public static final sInputCodesJsNames:[I
 
-.field private static final sInputCodesUTF8:[I
+.field public static final sInputCodesUTF8:[I
 
-.field private static final sInputCodesUtf8JsNames:[I
+.field public static final sInputCodesUtf8JsNames:[I
 
-.field private static final sInputCodesWS:[I
+.field public static final sInputCodesWS:[I
 
-.field private static final sOutputEscapes128:[I
+.field public static final sOutputEscapes128:[I
 
 
 # direct methods
@@ -254,32 +262,32 @@
     .line 20
     sput-object v8, Lcom/fasterxml/jackson/core/io/CharTypes;->sInputCodesComment:[I
 
-    new-array v0, v0, [I
+    new-array v8, v0, [I
 
     .line 21
-    invoke-static {v11, v2, v0, v2, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v11, v2, v8, v2, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 22
-    invoke-static {v0, v1, v4, v5}, Ljava/util/Arrays;->fill([IIII)V
+    invoke-static {v8, v1, v4, v5}, Ljava/util/Arrays;->fill([IIII)V
 
-    aput v6, v0, v4
+    aput v6, v8, v4
 
-    aput v6, v0, v12
+    aput v6, v8, v12
 
-    aput v13, v0, v13
+    aput v13, v8, v13
 
-    aput v14, v0, v14
+    aput v14, v8, v14
 
     const/16 v6, 0x2f
 
-    aput v6, v0, v6
+    aput v6, v8, v6
 
-    aput v9, v0, v9
+    aput v9, v8, v9
 
     .line 23
-    sput-object v0, Lcom/fasterxml/jackson/core/io/CharTypes;->sInputCodesWS:[I
+    sput-object v8, Lcom/fasterxml/jackson/core/io/CharTypes;->sInputCodesWS:[I
 
-    new-array v0, v2, [I
+    new-array v2, v2, [I
 
     move v6, v1
 
@@ -287,45 +295,45 @@
     if-ge v6, v4, :cond_8
 
     .line 24
-    aput v5, v0, v6
+    aput v5, v2, v6
 
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_5
 
     :cond_8
-    aput v3, v0, v3
+    aput v3, v2, v3
 
-    aput v7, v0, v7
+    aput v7, v2, v7
 
     const/16 v3, 0x8
 
     const/16 v4, 0x62
 
-    aput v4, v0, v3
+    aput v4, v2, v3
 
     const/16 v3, 0x74
 
-    aput v3, v0, v12
+    aput v3, v2, v12
 
     const/16 v3, 0xc
 
     const/16 v4, 0x66
 
-    aput v4, v0, v3
+    aput v4, v2, v3
 
     const/16 v3, 0x6e
 
-    aput v3, v0, v13
+    aput v3, v2, v13
 
     const/16 v3, 0x72
 
-    aput v3, v0, v14
+    aput v3, v2, v14
 
     .line 25
-    sput-object v0, Lcom/fasterxml/jackson/core/io/CharTypes;->sOutputEscapes128:[I
+    sput-object v2, Lcom/fasterxml/jackson/core/io/CharTypes;->sOutputEscapes128:[I
 
-    new-array v0, v2, [I
+    new-array v0, v0, [I
 
     .line 26
     sput-object v0, Lcom/fasterxml/jackson/core/io/CharTypes;->sHexValues:[I
@@ -486,21 +494,13 @@
 .method public static charToHex(I)I
     .locals 1
 
-    const/16 v0, 0x7f
-
-    if-le p0, v0, :cond_0
-
-    const/4 p0, -0x1
-
-    goto :goto_0
-
     .line 1
-    :cond_0
     sget-object v0, Lcom/fasterxml/jackson/core/io/CharTypes;->sHexValues:[I
+
+    and-int/lit16 p0, p0, 0xff
 
     aget p0, v0, p0
 
-    :goto_0
     return p0
 .end method
 
@@ -541,6 +541,29 @@
     sget-object v0, Lcom/fasterxml/jackson/core/io/CharTypes;->sOutputEscapes128:[I
 
     return-object v0
+.end method
+
+.method public static get7BitOutputEscapes(I)[I
+    .locals 1
+
+    const/16 v0, 0x22
+
+    if-ne p0, v0, :cond_0
+
+    .line 2
+    sget-object p0, Lcom/fasterxml/jackson/core/io/CharTypes;->sOutputEscapes128:[I
+
+    return-object p0
+
+    .line 3
+    :cond_0
+    sget-object v0, Lcom/fasterxml/jackson/core/io/CharTypes$AltEscapes;->instance:Lcom/fasterxml/jackson/core/io/CharTypes$AltEscapes;
+
+    invoke-virtual {v0, p0}, Lcom/fasterxml/jackson/core/io/CharTypes$AltEscapes;->escapesFor(I)[I
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public static getInputCodeComment()[I

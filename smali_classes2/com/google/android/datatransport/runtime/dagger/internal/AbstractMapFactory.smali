@@ -36,7 +36,7 @@
         value = {
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;"
         }
     .end annotation
@@ -51,7 +51,7 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;)V"
         }
     .end annotation
@@ -87,7 +87,7 @@
             "()",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;"
         }
     .end annotation

@@ -276,7 +276,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;->id:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -290,7 +290,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;->modelClassName:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -304,7 +304,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;->lastSyncType:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -318,7 +318,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;->lastSyncTime:Ljava/lang/Long;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -386,7 +386,7 @@
 
     const/16 v2, 0x1f
 
-    invoke-static {v1, v0, v2}, Lb3/k;->a(Ljava/lang/String;II)I
+    invoke-static {v1, v0, v2}, Landroidx/navigation/y;->a(Ljava/lang/String;II)I
 
     move-result v0
 
@@ -429,13 +429,13 @@
 
     const-string v3, ", modelClassName=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;->modelClassName:Ljava/lang/String;
 
     const-string v3, ", lastSyncTime="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/LastSyncMetadata;->lastSyncTime:Ljava/lang/Long;
 
@@ -449,7 +449,7 @@
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lu2/g;->a(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lh1/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object v0
 

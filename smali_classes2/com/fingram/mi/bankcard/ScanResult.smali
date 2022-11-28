@@ -9,7 +9,7 @@
 # static fields
 .field public static final MAX_NUM_SIZE:I = 0x20
 
-.field public static final version:Ljava/lang/String; = "2.12.1"
+.field public static final version:Ljava/lang/String; = "2.13.0"
 
 
 # instance fields
@@ -64,6 +64,8 @@
 
 .field public numberPos:[F
 
+.field public resultCode:I
+
 .field public rightEdge:Z
 
 .field public scanTime:J
@@ -90,38 +92,41 @@
     const/4 v0, 0x0
 
     .line 2
-    iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->verticalCard:Z
+    iput v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->resultCode:I
 
     .line 3
+    iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->verticalCard:Z
+
+    .line 4
     iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->complete:Z
 
     const/16 v0, 0x20
 
     new-array v1, v0, [I
 
-    .line 4
+    .line 5
     iput-object v1, p0, Lcom/fingram/mi/bankcard/ScanResult;->cardNumber:[I
 
     new-array v0, v0, [I
 
-    .line 5
+    .line 6
     iput-object v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->spaceIndices:[I
 
     const/16 v0, 0x80
 
     new-array v0, v0, [F
 
-    .line 6
+    .line 7
     iput-object v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->numberPos:[F
 
     const/4 v0, 0x4
 
     new-array v0, v0, [F
 
-    .line 7
+    .line 8
     iput-object v0, p0, Lcom/fingram/mi/bankcard/ScanResult;->expiryPos:[F
 
-    .line 8
+    .line 9
     invoke-virtual {p0}, Lcom/fingram/mi/bankcard/ScanResult;->reset()V
 
     return-void

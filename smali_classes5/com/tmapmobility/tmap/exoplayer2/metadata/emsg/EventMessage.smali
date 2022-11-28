@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -149,7 +149,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -249,7 +249,7 @@
     iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->a:Ljava/lang/String;
 
     .line 4
-    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -260,7 +260,7 @@
     iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->b:Ljava/lang/String;
 
     .line 5
-    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -290,99 +290,7 @@
     return v1
 .end method
 
-.method public hashCode()I
-    .locals 6
-
-    .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->f:I
-
-    if-nez v0, :cond_2
-
-    const/16 v0, 0x20f
-
-    .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :cond_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 4
-    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->c:J
-
-    const/16 v3, 0x20
-
-    ushr-long v4, v1, v3
-
-    xor-long/2addr v1, v4
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 5
-    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->d:J
-
-    ushr-long v3, v1, v3
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 6
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->e:[B
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    .line 7
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->f:I
-
-    .line 8
-    :cond_2
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->f:I
-
-    return v0
-.end method
-
-.method public k()Lcom/tmapmobility/tmap/exoplayer2/Format;
+.method public g()Lcom/tmapmobility/tmap/exoplayer2/Format;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -484,6 +392,121 @@
     .end packed-switch
 .end method
 
+.method public hashCode()I
+    .locals 6
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->f:I
+
+    if-nez v0, :cond_2
+
+    const/16 v0, 0x20f
+
+    .line 2
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 3
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :cond_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 4
+    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->c:J
+
+    const/16 v3, 0x20
+
+    ushr-long v4, v1, v3
+
+    xor-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 5
+    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->d:J
+
+    ushr-long v3, v1, v3
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 6
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->e:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    .line 7
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->f:I
+
+    .line 8
+    :cond_2
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->f:I
+
+    return v0
+.end method
+
+.method public k()[B
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->g()Lcom/tmapmobility/tmap/exoplayer2/Format;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->e:[B
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 3
 
@@ -526,29 +549,6 @@
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public u()[B
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->k()Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->e:[B
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     return-object v0
 .end method
 

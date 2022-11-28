@@ -75,7 +75,7 @@
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/car/screen/RoutePreviewScreen$a;->a:Lcom/skt/tmap/car/screen/RoutePreviewScreen;
 
-    invoke-virtual {v0}, Landroidx/car/app/t0;->l()V
+    invoke-virtual {v0}, Landroidx/car/app/y0;->l()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/car/screen/RoutePreviewScreen$a;->a:Lcom/skt/tmap/car/screen/RoutePreviewScreen;
@@ -96,7 +96,7 @@
     .line 5
     iget-object v0, p0, Lcom/skt/tmap/car/screen/RoutePreviewScreen$a;->a:Lcom/skt/tmap/car/screen/RoutePreviewScreen;
 
-    invoke-virtual {v0}, Landroidx/car/app/t0;->e()Landroidx/car/app/CarContext;
+    invoke-virtual {v0}, Landroidx/car/app/y0;->e()Landroidx/car/app/CarContext;
 
     move-result-object v1
 

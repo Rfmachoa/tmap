@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->a(Landroid/widget/TextView;Lej/r;Lej/r;Lej/l;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->a(Landroid/widget/TextView;Lgl/r;Lgl/r;Lgl/l;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -46,31 +46,96 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lej/l;
+.field public final synthetic a:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/text/Editable;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Lej/r;
+.field public final synthetic b:Lgl/r;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/r<",
+            "Ljava/lang/CharSequence;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic c:Lej/r;
+.field public final synthetic c:Lgl/r;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/r<",
+            "Ljava/lang/CharSequence;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/d1;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lej/l;Lej/r;Lej/r;)V
+.method public constructor <init>(Lgl/l;Lgl/r;Lgl/r;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgl/l<",
+            "-",
+            "Landroid/text/Editable;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/r<",
+            "-",
+            "Ljava/lang/CharSequence;",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/d1;",
+            ">;",
+            "Lgl/r<",
+            "-",
+            "Ljava/lang/CharSequence;",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Integer;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/d1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/core/widget/TextViewKt$a;->a:Lgl/l;
+
+    iput-object p2, p0, Landroidx/core/widget/TextViewKt$a;->b:Lgl/r;
+
+    iput-object p3, p0, Landroidx/core/widget/TextViewKt$a;->c:Lgl/r;
 
     .line 1
-    iput-object p1, p0, Landroidx/core/widget/TextViewKt$a;->a:Lej/l;
-
-    iput-object p2, p0, Landroidx/core/widget/TextViewKt$a;->b:Lej/r;
-
-    iput-object p3, p0, Landroidx/core/widget/TextViewKt$a;->c:Lej/r;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,9 +151,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$a;->a:Lej/l;
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$a;->a:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -101,7 +166,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$a;->b:Lej/r;
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$a;->b:Lgl/r;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -115,7 +180,7 @@
 
     move-result-object p4
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lej/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lgl/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -128,7 +193,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/core/widget/TextViewKt$a;->c:Lej/r;
+    iget-object v0, p0, Landroidx/core/widget/TextViewKt$a;->c:Lgl/r;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -142,7 +207,7 @@
 
     move-result-object p4
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lej/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3, p4}, Lgl/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

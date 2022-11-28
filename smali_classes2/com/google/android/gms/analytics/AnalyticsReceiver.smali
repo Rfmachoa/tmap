@@ -1,10 +1,10 @@
 .class public final Lcom/google/android/gms/analytics/AnalyticsReceiver;
 .super Landroid/content/BroadcastReceiver;
-.source "com.google.android.gms:play-services-analytics@@17.0.1"
+.source "com.google.android.gms:play-services-analytics@@18.0.2"
 
 
 # instance fields
-.field private zza:Lcom/google/android/gms/internal/gtm/zzfi;
+.field private zza:Lcom/google/android/gms/internal/gtm/zzfk;
 
 
 # direct methods
@@ -22,11 +22,11 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
     .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p2    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/RequiresPermission;
@@ -36,19 +36,19 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsReceiver;->zza:Lcom/google/android/gms/internal/gtm/zzfi;
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsReceiver;->zza:Lcom/google/android/gms/internal/gtm/zzfk;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/gms/internal/gtm/zzfi;
+    new-instance v0, Lcom/google/android/gms/internal/gtm/zzfk;
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/gtm/zzfi;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/internal/gtm/zzfk;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsReceiver;->zza:Lcom/google/android/gms/internal/gtm/zzfi;
+    iput-object v0, p0, Lcom/google/android/gms/analytics/AnalyticsReceiver;->zza:Lcom/google/android/gms/internal/gtm/zzfk;
 
-    .line 1
     :cond_0
-    invoke-static {p1, p2}, Lcom/google/android/gms/internal/gtm/zzfi;->zzb(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p1, p2}, Lcom/google/android/gms/internal/gtm/zzfk;->zzb(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method

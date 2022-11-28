@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final MAX_SEGMENT_LEN:I = 0x40000
+.field public static final MAX_SEGMENT_LEN:I = 0x10000
 
-.field public static final MIN_SEGMENT_LEN:I = 0x3e8
+.field public static final MIN_SEGMENT_LEN:I = 0x1f4
 
 .field public static final NO_CHARS:[C
 
@@ -68,6 +68,31 @@
     return-void
 .end method
 
+.method public constructor <init>(Lcom/fasterxml/jackson/core/util/BufferRecycler;[C)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_allocator:Lcom/fasterxml/jackson/core/util/BufferRecycler;
+
+    .line 5
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    .line 6
+    array-length p1, p2
+
+    iput p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    const/4 p1, -0x1
+
+    .line 7
+    iput p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    return-void
+.end method
+
 .method private buf(I)[C
     .locals 2
 
@@ -86,7 +111,7 @@
     return-object p1
 
     :cond_0
-    const/16 v0, 0x3e8
+    const/16 v0, 0x1f4
 
     .line 3
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
@@ -178,9 +203,9 @@
 
     add-int/2addr p1, v0
 
-    const/high16 v0, 0x40000
+    const/high16 v0, 0x10000
 
-    const/16 v1, 0x3e8
+    const/16 v1, 0x1f4
 
     if-ge p1, v1, :cond_1
 
@@ -203,6 +228,19 @@
     iput-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
 
     return-void
+.end method
+
+.method public static fromInitial([C)Lcom/fasterxml/jackson/core/util/TextBuffer;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lcom/fasterxml/jackson/core/util/TextBuffer;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lcom/fasterxml/jackson/core/util/TextBuffer;-><init>(Lcom/fasterxml/jackson/core/util/BufferRecycler;[C)V
+
+    return-object v0
 .end method
 
 .method private resultArray()[C
@@ -756,6 +794,154 @@
     return-wide v0
 .end method
 
+.method public contentsAsInt(Z)I
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    const/4 v1, 0x1
+
+    if-ltz v0, :cond_1
+
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputBuffer:[C
+
+    if-eqz v2, :cond_1
+
+    if-eqz p1, :cond_0
+
+    add-int/2addr v0, v1
+
+    .line 2
+    iget p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
+
+    sub-int/2addr p1, v1
+
+    invoke-static {v2, v0, p1}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseInt([CII)I
+
+    move-result p1
+
+    neg-int p1, p1
+
+    return p1
+
+    .line 3
+    :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
+
+    invoke-static {v2, v0, p1}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseInt([CII)I
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    .line 4
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {p1, v1, v0}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseInt([CII)I
+
+    move-result p1
+
+    neg-int p1, p1
+
+    return p1
+
+    .line 5
+    :cond_2
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    const/4 v0, 0x0
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    invoke-static {p1, v0, v1}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseInt([CII)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public contentsAsLong(Z)J
+    .locals 3
+
+    .line 1
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    const/4 v1, 0x1
+
+    if-ltz v0, :cond_1
+
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputBuffer:[C
+
+    if-eqz v2, :cond_1
+
+    if-eqz p1, :cond_0
+
+    add-int/2addr v0, v1
+
+    .line 2
+    iget p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
+
+    sub-int/2addr p1, v1
+
+    invoke-static {v2, v0, p1}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseLong([CII)J
+
+    move-result-wide v0
+
+    neg-long v0, v0
+
+    return-wide v0
+
+    .line 3
+    :cond_0
+    iget p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
+
+    invoke-static {v2, v0, p1}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseLong([CII)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    .line 4
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {p1, v1, v0}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseLong([CII)J
+
+    move-result-wide v0
+
+    neg-long v0, v0
+
+    return-wide v0
+
+    .line 5
+    :cond_2
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    const/4 v0, 0x0
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    invoke-static {p1, v0, v1}, Lcom/fasterxml/jackson/core/io/NumberInput;->parseLong([CII)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
 .method public contentsAsString()Ljava/lang/String;
     .locals 6
 
@@ -902,6 +1088,127 @@
     return-object v0
 .end method
 
+.method public contentsToWriter(Ljava/io/Writer;)I
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultArray:[C
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p1, v0}, Ljava/io/Writer;->write([C)V
+
+    .line 3
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultArray:[C
+
+    array-length p1, p1
+
+    return p1
+
+    .line 4
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultString:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    .line 6
+    iget-object p1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultString:Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    return p1
+
+    .line 7
+    :cond_1
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    if-ltz v0, :cond_3
+
+    .line 8
+    iget v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
+
+    if-lez v1, :cond_2
+
+    .line 9
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputBuffer:[C
+
+    invoke-virtual {p1, v2, v0, v1}, Ljava/io/Writer;->write([CII)V
+
+    :cond_2
+    return v1
+
+    .line 10
+    :cond_3
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_segments:Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_4
+
+    .line 11
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_0
+    if-ge v2, v0, :cond_5
+
+    .line 12
+    iget-object v4, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_segments:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, [C
+
+    .line 13
+    array-length v5, v4
+
+    .line 14
+    invoke-virtual {p1, v4, v1, v5}, Ljava/io/Writer;->write([CII)V
+
+    add-int/2addr v3, v5
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    move v3, v1
+
+    .line 15
+    :cond_5
+    iget v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    if-lez v0, :cond_6
+
+    .line 16
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    invoke-virtual {p1, v2, v1, v0}, Ljava/io/Writer;->write([CII)V
+
+    add-int/2addr v3, v0
+
+    :cond_6
+    return v3
+.end method
+
 .method public emptyAndGetCurrentSegment()[C
     .locals 2
 
@@ -984,7 +1291,7 @@
 
     add-int/2addr v2, v1
 
-    const/high16 v3, 0x40000
+    const/high16 v3, 0x10000
 
     if-le v2, v3, :cond_0
 
@@ -1076,9 +1383,9 @@
 
     add-int/2addr v0, v1
 
-    const/high16 v1, 0x40000
+    const/high16 v1, 0x10000
 
-    const/16 v2, 0x3e8
+    const/16 v2, 0x1f4
 
     if-ge v0, v2, :cond_1
 
@@ -1100,6 +1407,15 @@
 
     .line 9
     iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    return-object v0
+.end method
+
+.method public getBufferWithoutReset()[C
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
 
     return-object v0
 .end method
@@ -1275,42 +1591,176 @@
 .method public releaseBuffers()V
     .locals 3
 
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_allocator:Lcom/fasterxml/jackson/core/util/BufferRecycler;
+    const/4 v0, -0x1
 
-    if-nez v0, :cond_0
+    .line 1
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/util/TextBuffer;->resetWithEmpty()V
-
-    goto :goto_0
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
 
     .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
 
-    if-eqz v0, :cond_1
+    const/4 v0, 0x0
 
     .line 4
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/util/TextBuffer;->resetWithEmpty()V
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputBuffer:[C
 
     .line 5
-    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultArray:[C
+
+    .line 6
+    iget-boolean v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_hasSegments:Z
+
+    if-eqz v1, :cond_0
+
+    .line 7
+    invoke-direct {p0}, Lcom/fasterxml/jackson/core/util/TextBuffer;->clearSegments()V
+
+    .line 8
+    :cond_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_allocator:Lcom/fasterxml/jackson/core/util/BufferRecycler;
+
+    if-eqz v1, :cond_1
+
+    .line 9
+    iget-object v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    if-eqz v2, :cond_1
+
+    .line 10
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    const/4 v0, 0x2
+
+    .line 11
+    invoke-virtual {v1, v0, v2}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->releaseCharBuffer(I[C)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public resetWith(C)V
+    .locals 3
+
+    const/4 v0, -0x1
+
+    .line 1
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
 
     const/4 v1, 0x0
 
+    .line 3
+    iput-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultString:Ljava/lang/String;
+
+    .line 4
+    iput-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultArray:[C
+
+    .line 5
+    iget-boolean v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_hasSegments:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
     .line 6
-    iput-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+    invoke-direct {p0}, Lcom/fasterxml/jackson/core/util/TextBuffer;->clearSegments()V
+
+    goto :goto_0
 
     .line 7
-    iget-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_allocator:Lcom/fasterxml/jackson/core/util/BufferRecycler;
+    :cond_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
 
-    const/4 v2, 0x2
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1, v2, v0}, Lcom/fasterxml/jackson/core/util/BufferRecycler;->releaseCharBuffer(I[C)V
+    .line 8
+    invoke-direct {p0, v2}, Lcom/fasterxml/jackson/core/util/TextBuffer;->buf(I)[C
 
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    .line 9
     :cond_1
     :goto_0
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    aput-char p1, v1, v0
+
+    .line 10
+    iput v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_segmentSize:I
+
+    iput v2, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    return-void
+.end method
+
+.method public resetWithCopy(Ljava/lang/String;II)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 12
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputBuffer:[C
+
+    const/4 v1, -0x1
+
+    .line 13
+    iput v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputStart:I
+
+    const/4 v1, 0x0
+
+    .line 14
+    iput v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_inputLen:I
+
+    .line 15
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultString:Ljava/lang/String;
+
+    .line 16
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_resultArray:[C
+
+    .line 17
+    iget-boolean v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_hasSegments:Z
+
+    if-eqz v0, :cond_0
+
+    .line 18
+    invoke-direct {p0}, Lcom/fasterxml/jackson/core/util/TextBuffer;->clearSegments()V
+
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    iget-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    if-nez v0, :cond_1
+
+    .line 20
+    invoke-direct {p0, p3}, Lcom/fasterxml/jackson/core/util/TextBuffer;->buf(I)[C
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSegment:[C
+
+    .line 21
+    :cond_1
+    :goto_0
+    iput v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_segmentSize:I
+
+    iput v1, p0, Lcom/fasterxml/jackson/core/util/TextBuffer;->_currentSize:I
+
+    .line 22
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/util/TextBuffer;->append(Ljava/lang/String;II)V
+
     return-void
 .end method
 

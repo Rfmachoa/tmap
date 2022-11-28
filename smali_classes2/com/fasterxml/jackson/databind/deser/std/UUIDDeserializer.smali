@@ -94,95 +94,32 @@
     return-void
 .end method
 
-.method public static _badChar(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;C)I
-    .locals 2
+.method private _badFormat(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/util/UUID;
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Lcom/fasterxml/jackson/databind/JsonMappingException;
-        }
-    .end annotation
-
-    const/4 p1, 0x3
-
-    new-array p1, p1, [Ljava/lang/Object;
-
-    .line 1
-    invoke-static {p3}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aput-object v0, p1, v1
-
-    invoke-static {p3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p3
-
-    const/4 v0, 0x1
-
-    aput-object p3, p1, v0
-
-    const/4 p3, 0x2
-
-    aput-object p0, p1, p3
-
-    const-string p3, "Non-hex character \'%c\' (value 0x%s), not valid for UUID String: input String \'%s\'"
-
-    invoke-static {p3, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 2
-    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getParser()Lcom/fasterxml/jackson/core/JsonParser;
-
-    move-result-object p2
-
-    const-class p3, Ljava/util/UUID;
-
-    invoke-static {p2, p1, p0, p3}, Lcom/fasterxml/jackson/databind/exc/InvalidFormatException;->from(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/exc/InvalidFormatException;
-
-    move-result-object p0
-
-    throw p0
-.end method
-
-.method private _badFormat(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/fasterxml/jackson/databind/JsonMappingException;
+            Ljava/io/IOException;
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getParser()Lcom/fasterxml/jackson/core/JsonParser;
-
-    move-result-object p2
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    aput-object p1, v0, v1
-
-    const-string v1, "UUID has to be represented by standard 36-char representation: input String \'%s\'"
-
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->handledType()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {p2, v0, p1, v1}, Lcom/fasterxml/jackson/databind/exc/InvalidFormatException;->from(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/exc/InvalidFormatException;
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "UUID has to be represented by standard 36-char representation"
+
+    invoke-virtual {p2, v0, p1, v2, v1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleWeirdStringValue(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Ljava/util/UUID;
+
+    return-object p1
 .end method
 
 .method private _fromBytes([BLcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/util/UUID;
@@ -239,10 +176,12 @@
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->handledType()Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 5
     invoke-static {p2, v0, p1, v1}, Lcom/fasterxml/jackson/databind/exc/InvalidFormatException;->from(Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/exc/InvalidFormatException;
 
     move-result-object p1
@@ -321,151 +260,57 @@
     return-wide p0
 .end method
 
-.method public static byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-    .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/fasterxml/jackson/databind/JsonMappingException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    add-int/lit8 v1, p1, 0x1
-
-    .line 2
-    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    const/16 v3, 0x7f
-
-    if-gt v0, v3, :cond_0
-
-    if-gt v2, v3, :cond_0
-
-    .line 3
-    sget-object v4, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->HEX_DIGITS:[I
-
-    aget v5, v4, v0
-
-    shl-int/lit8 v5, v5, 0x4
-
-    aget v4, v4, v2
-
-    or-int/2addr v4, v5
-
-    if-ltz v4, :cond_0
-
-    return v4
-
-    :cond_0
-    if-gt v0, v3, :cond_2
-
-    .line 4
-    sget-object v3, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->HEX_DIGITS:[I
-
-    aget v3, v3, v0
-
-    if-gez v3, :cond_1
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    invoke-static {p0, v1, p2, v2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badChar(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;C)I
-
-    move-result p0
-
-    return p0
-
-    .line 6
-    :cond_2
-    :goto_0
-    invoke-static {p0, p1, p2, v0}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badChar(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;C)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static intFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/fasterxml/jackson/databind/JsonMappingException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-
-    move-result v0
-
-    shl-int/lit8 v0, v0, 0x18
-
-    add-int/lit8 v1, p1, 0x2
-
-    invoke-static {p0, v1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-
-    move-result v1
-
-    shl-int/lit8 v1, v1, 0x10
-
-    add-int/2addr v0, v1
-
-    add-int/lit8 v1, p1, 0x4
-
-    invoke-static {p0, v1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-
-    move-result v1
-
-    shl-int/lit8 v1, v1, 0x8
-
-    add-int/2addr v0, v1
-
-    add-int/lit8 p1, p1, 0x6
-
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/fasterxml/jackson/databind/JsonMappingException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-
-    move-result v0
-
-    shl-int/lit8 v0, v0, 0x8
-
-    add-int/lit8 p1, p1, 0x2
-
-    invoke-static {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
 
 # virtual methods
+.method public _badChar(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;C)I
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/std/StdDeserializer;->handledType()Ljava/lang/Class;
+
+    move-result-object p2
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    .line 2
+    invoke-static {p4}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    invoke-static {p4}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p4
+
+    const/4 v1, 0x1
+
+    aput-object p4, v0, v1
+
+    const-string p4, "Non-hex character \'%c\' (value 0x%s), not valid for UUID String"
+
+    .line 3
+    invoke-static {p4, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 4
+    invoke-virtual {p3, p1, p2, p4}, Lcom/fasterxml/jackson/databind/DeserializationContext;->weirdStringException(Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+
+    move-result-object p1
+
+    throw p1
+.end method
+
 .method public bridge synthetic _deserialize(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -526,7 +371,11 @@
 
     .line 6
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badFormat(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)V
+    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badFormat(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/util/UUID;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_1
     const/16 v0, 0x8
@@ -550,6 +399,7 @@
 
     const/16 v0, 0x12
 
+    .line 8
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
@@ -564,15 +414,15 @@
 
     if-eq v0, v2, :cond_3
 
-    .line 8
+    .line 9
     :cond_2
-    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badFormat(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)V
+    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badFormat(Ljava/lang/String;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/util/UUID;
 
     :cond_3
     const/4 v0, 0x0
 
-    .line 9
-    invoke-static {p1, v0, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->intFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .line 10
+    invoke-virtual {p0, p1, v0, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->intFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
 
     move-result v0
 
@@ -584,8 +434,8 @@
 
     const/16 v4, 0x9
 
-    .line 10
-    invoke-static {p1, v4, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .line 11
+    invoke-virtual {p0, p1, v4, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
 
     move-result v4
 
@@ -597,8 +447,8 @@
 
     const/16 v7, 0xe
 
-    .line 11
-    invoke-static {p1, v7, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .line 12
+    invoke-virtual {p0, p1, v7, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
 
     move-result v7
 
@@ -610,14 +460,14 @@
 
     const/16 v4, 0x13
 
-    .line 12
-    invoke-static {p1, v4, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .line 13
+    invoke-virtual {p0, p1, v4, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
 
     move-result v4
 
     shl-int/2addr v4, v6
 
-    invoke-static {p1, v1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    invoke-virtual {p0, p1, v1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
 
     move-result v1
 
@@ -629,8 +479,8 @@
 
     const/16 v1, 0x1c
 
-    .line 13
-    invoke-static {p1, v1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->intFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .line 14
+    invoke-virtual {p0, p1, v1, p2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->intFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
 
     move-result p1
 
@@ -642,7 +492,7 @@
 
     or-long/2addr p1, v4
 
-    .line 14
+    .line 15
     new-instance v0, Ljava/util/UUID;
 
     invoke-direct {v0, v2, v3, p1, p2}, Ljava/util/UUID;-><init>(JJ)V
@@ -692,7 +542,168 @@
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/FromStringDeserializer;->_deserializeEmbedded(Ljava/lang/Object;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p1
+
+    check-cast p1, Ljava/util/UUID;
 
     return-object p1
+.end method
+
+.method public byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1, p2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    add-int/lit8 v1, p2, 0x1
+
+    .line 2
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    const/16 v3, 0x7f
+
+    if-gt v0, v3, :cond_0
+
+    if-gt v2, v3, :cond_0
+
+    .line 3
+    sget-object v4, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->HEX_DIGITS:[I
+
+    aget v5, v4, v0
+
+    shl-int/lit8 v5, v5, 0x4
+
+    aget v4, v4, v2
+
+    or-int/2addr v4, v5
+
+    if-ltz v4, :cond_0
+
+    return v4
+
+    :cond_0
+    if-gt v0, v3, :cond_2
+
+    .line 4
+    sget-object v3, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->HEX_DIGITS:[I
+
+    aget v3, v3, v0
+
+    if-gez v3, :cond_1
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    invoke-virtual {p0, p1, v1, p3, v2}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badChar(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;C)I
+
+    move-result p1
+
+    return p1
+
+    .line 6
+    :cond_2
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->_badChar(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;C)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    new-instance p1, Ljava/util/UUID;
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p1, v0, v1, v0, v1}, Ljava/util/UUID;-><init>(JJ)V
+
+    return-object p1
+.end method
+
+.method public intFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+
+    move-result v0
+
+    shl-int/lit8 v0, v0, 0x18
+
+    add-int/lit8 v1, p2, 0x2
+
+    .line 2
+    invoke-virtual {p0, p1, v1, p3}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+
+    move-result v1
+
+    shl-int/lit8 v1, v1, 0x10
+
+    add-int/2addr v0, v1
+
+    add-int/lit8 v1, p2, 0x4
+
+    .line 3
+    invoke-virtual {p0, p1, v1, p3}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+
+    move-result v1
+
+    shl-int/lit8 v1, v1, 0x8
+
+    add-int/2addr v0, v1
+
+    add-int/lit8 p2, p2, 0x6
+
+    .line 4
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+
+    move-result p1
+
+    add-int/2addr p1, v0
+
+    return p1
+.end method
+
+.method public shortFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+
+    move-result v0
+
+    shl-int/lit8 v0, v0, 0x8
+
+    add-int/lit8 p2, p2, 0x2
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/deser/std/UUIDDeserializer;->byteFromChars(Ljava/lang/String;ILcom/fasterxml/jackson/databind/DeserializationContext;)I
+
+    move-result p1
+
+    add-int/2addr p1, v0
+
+    return p1
 .end method

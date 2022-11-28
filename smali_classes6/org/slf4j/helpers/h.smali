@@ -3,7 +3,7 @@
 .source "SubstituteLoggerFactory.java"
 
 # interfaces
-.implements Lpk/a;
+.implements Lvm/a;
 
 
 # instance fields
@@ -24,7 +24,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/LinkedBlockingQueue<",
-            "Lqk/d;",
+            "Lwm/d;",
             ">;"
         }
     .end annotation
@@ -62,7 +62,7 @@
 
 
 # virtual methods
-.method public declared-synchronized a(Ljava/lang/String;)Lpk/c;
+.method public declared-synchronized a(Ljava/lang/String;)Lvm/c;
     .locals 3
 
     monitor-enter p0
@@ -131,7 +131,7 @@
         value = {
             "()",
             "Ljava/util/concurrent/LinkedBlockingQueue<",
-            "Lqk/d;",
+            "Lwm/d;",
             ">;"
         }
     .end annotation

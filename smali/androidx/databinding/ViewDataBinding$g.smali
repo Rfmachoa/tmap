@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Landroidx/databinding/ViewDataBinding;->f(Landroidx/databinding/ViewDataBinding;Z)Z
+    invoke-static {v0, v1}, Landroidx/databinding/ViewDataBinding;->i(Landroidx/databinding/ViewDataBinding;Z)Z
 
     .line 3
     monitor-exit p0
@@ -55,12 +55,12 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
-    invoke-static {}, Landroidx/databinding/ViewDataBinding;->g()V
+    invoke-static {}, Landroidx/databinding/ViewDataBinding;->j()V
 
     .line 5
     iget-object v0, p0, Landroidx/databinding/ViewDataBinding$g;->a:Landroidx/databinding/ViewDataBinding;
 
-    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->h(Landroidx/databinding/ViewDataBinding;)Landroid/view/View;
+    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->l(Landroidx/databinding/ViewDataBinding;)Landroid/view/View;
 
     move-result-object v0
 
@@ -73,11 +73,11 @@
     .line 6
     iget-object v0, p0, Landroidx/databinding/ViewDataBinding$g;->a:Landroidx/databinding/ViewDataBinding;
 
-    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->h(Landroidx/databinding/ViewDataBinding;)Landroid/view/View;
+    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->l(Landroidx/databinding/ViewDataBinding;)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {}, Landroidx/databinding/ViewDataBinding;->i()Landroid/view/View$OnAttachStateChangeListener;
+    invoke-static {}, Landroidx/databinding/ViewDataBinding;->m()Landroid/view/View$OnAttachStateChangeListener;
 
     move-result-object v1
 
@@ -86,11 +86,11 @@
     .line 7
     iget-object v0, p0, Landroidx/databinding/ViewDataBinding$g;->a:Landroidx/databinding/ViewDataBinding;
 
-    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->h(Landroidx/databinding/ViewDataBinding;)Landroid/view/View;
+    invoke-static {v0}, Landroidx/databinding/ViewDataBinding;->l(Landroidx/databinding/ViewDataBinding;)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {}, Landroidx/databinding/ViewDataBinding;->i()Landroid/view/View$OnAttachStateChangeListener;
+    invoke-static {}, Landroidx/databinding/ViewDataBinding;->m()Landroid/view/View$OnAttachStateChangeListener;
 
     move-result-object v1
 
@@ -102,7 +102,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/databinding/ViewDataBinding$g;->a:Landroidx/databinding/ViewDataBinding;
 
-    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->r()V
+    invoke-virtual {v0}, Landroidx/databinding/ViewDataBinding;->u()V
 
     return-void
 

@@ -71,12 +71,6 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Landroidx/annotation/OptIn;
-        markerClass = {
-            Landroidx/car/app/annotations/ExperimentalCarApi;
-        }
-    .end annotation
-
     .line 1
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -158,9 +152,9 @@
     if-eqz v1, :cond_2
 
     .line 8
-    sget-object v2, Lm0/d;->b:Lm0/d;
+    sget-object v2, La1/d;->b:La1/d;
 
-    invoke-virtual {v2, v1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v2, v1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     .line 9
     :cond_2

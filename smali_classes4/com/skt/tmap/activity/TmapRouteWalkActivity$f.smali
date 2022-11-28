@@ -3,7 +3,7 @@
 .source "TmapRouteWalkActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/vsm/map/MapEngine$OnMapLoadedListener;
+.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$j;
 
 
 # annotations
@@ -43,19 +43,31 @@
 
 
 # virtual methods
-.method public onMapLoadComplete()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onMapLoadFail()V
+.method public onComplete(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "address"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapRouteWalkActivity$f;->a:Lcom/skt/tmap/activity/TmapRouteWalkActivity;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseActivity;->createMapLoadedFailPopup()V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapRouteWalkActivity;->K5(Lcom/skt/tmap/activity/TmapRouteWalkActivity;)Lid/y2;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lid/y2;->w1(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onFail()V
+    .locals 0
 
     return-void
 .end method

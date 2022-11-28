@@ -3,8 +3,8 @@
 .source "BasicClientCookie.java"
 
 # interfaces
-.implements Lxf/k;
-.implements Lxf/a;
+.implements Lbi/k;
+.implements Lbi/a;
 .implements Ljava/lang/Cloneable;
 .implements Ljava/io/Serializable;
 
@@ -57,7 +57,7 @@
     const-string v0, "Name"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
     iput-object p1, p0, Lcz/msebera/android/httpclient/impl/cookie/BasicClientCookie;->name:Ljava/lang/String;
@@ -227,7 +227,7 @@
     const-string v0, "Date"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Lcz/msebera/android/httpclient/impl/cookie/BasicClientCookie;->cookieExpiryDate:Ljava/util/Date;

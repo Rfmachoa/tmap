@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field public final b:Landroidx/camera/core/impl/g$a;
+.field public final b:Landroidx/camera/core/impl/e$a;
 
 .field public final c:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -61,9 +61,14 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lx/i;",
+            "Lb0/m;",
             ">;"
         }
+    .end annotation
+.end field
+
+.field public g:Landroid/hardware/camera2/params/InputConfiguration;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
@@ -76,18 +81,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->a:Ljava/util/Set;
 
     .line 3
-    new-instance v0, Landroidx/camera/core/impl/g$a;
+    new-instance v0, Landroidx/camera/core/impl/e$a;
 
-    invoke-direct {v0}, Landroidx/camera/core/impl/g$a;-><init>()V
+    invoke-direct {v0}, Landroidx/camera/core/impl/e$a;-><init>()V
 
-    iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/g$a;
+    iput-object v0, p0, Landroidx/camera/core/impl/SessionConfig$a;->b:Landroidx/camera/core/impl/e$a;
 
     .line 4
     new-instance v0, Ljava/util/ArrayList;

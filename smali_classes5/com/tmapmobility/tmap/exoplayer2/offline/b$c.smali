@@ -23,9 +23,9 @@
 
 .field public final b:Landroid/os/HandlerThread;
 
-.field public final c:Lle/v;
+.field public final c:Log/v;
 
-.field public final d:Lle/r;
+.field public final d:Log/r;
 
 .field public final e:Landroid/os/Handler;
 
@@ -62,7 +62,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/HandlerThread;Lle/v;Lle/r;Landroid/os/Handler;IIZ)V
+.method public constructor <init>(Landroid/os/HandlerThread;Log/v;Log/r;Landroid/os/Handler;IIZ)V
     .locals 1
 
     .line 1
@@ -76,10 +76,10 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->b:Landroid/os/HandlerThread;
 
     .line 3
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
     .line 4
-    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->d:Lle/r;
+    iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->d:Log/r;
 
     .line 5
     iput-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->e:Landroid/os/Handler;
@@ -128,7 +128,7 @@
 
     iget-wide p0, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->c:J
 
-    invoke-static {v0, v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->q(JJ)I
+    invoke-static {v0, v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->q(JJ)I
 
     move-result p0
 
@@ -152,7 +152,7 @@
 
     iget-wide v7, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->e:J
 
-    iget-object v11, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v11, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     const/4 v10, 0x0
 
@@ -162,7 +162,7 @@
 
     move v9, p2
 
-    invoke-direct/range {v0 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILle/o;)V
+    invoke-direct/range {v0 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILog/o;)V
 
     return-object v12
 .end method
@@ -348,9 +348,9 @@
 
     .line 4
     :try_start_0
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v2, v1}, Lle/v;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)V
+    invoke-interface {v2, v1}, Log/v;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -503,9 +503,9 @@
 
     .line 3
     :try_start_0
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {p2, p1}, Lle/k;->g(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
+    invoke-interface {p2, p1}, Log/k;->g(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
 
     move-result-object p1
     :try_end_0
@@ -601,12 +601,12 @@
 
     .line 2
     :try_start_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v1}, Lle/v;->f()V
+    invoke-interface {v1}, Log/v;->f()V
 
     .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
     const/4 v2, 0x5
 
@@ -633,13 +633,13 @@
     aput v4, v3, v2
 
     .line 4
-    invoke-interface {v1, v3}, Lle/k;->d([I)Lle/b;
+    invoke-interface {v1, v3}, Log/k;->d([I)Log/b;
 
     move-result-object v0
 
     .line 5
     :goto_0
-    invoke-interface {v0}, Lle/b;->moveToNext()Z
+    invoke-interface {v0}, Log/b;->moveToNext()Z
 
     move-result v1
 
@@ -648,7 +648,7 @@
     .line 6
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->f:Ljava/util/ArrayList;
 
-    invoke-interface {v0}, Lle/b;->f0()Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
+    invoke-interface {v0}, Log/b;->w0()Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
 
     move-result-object v2
 
@@ -684,7 +684,7 @@
 
     .line 9
     :cond_0
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->p(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->p(Ljava/io/Closeable;)V
 
     .line 10
     new-instance v0, Ljava/util/ArrayList;
@@ -709,7 +709,7 @@
 
     .line 13
     :goto_1
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->p(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->p(Ljava/io/Closeable;)V
 
     .line 14
     throw p1
@@ -757,7 +757,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
-    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->A1(II)J
+    invoke-static {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->D1(II)J
 
     move-result-wide v1
 
@@ -969,13 +969,13 @@
 
     iget v11, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->g:I
 
-    iget-object v12, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v12, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     move-object v1, v13
 
     move-wide/from16 v8, p2
 
-    invoke-direct/range {v1 .. v12}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILle/o;)V
+    invoke-direct/range {v1 .. v12}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILog/o;)V
 
     .line 6
     invoke-virtual {p0, v13}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->m(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
@@ -1042,7 +1042,7 @@
 
     .line 4
     :goto_1
-    iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     move-object v3, v15
 
@@ -1050,7 +1050,7 @@
 
     move-object v14, v0
 
-    invoke-direct/range {v3 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILle/o;)V
+    invoke-direct/range {v3 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILog/o;)V
 
     .line 5
     iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->f:Ljava/util/ArrayList;
@@ -1067,9 +1067,9 @@
 
     .line 6
     :try_start_0
-    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v0, v15}, Lle/v;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)V
+    invoke-interface {v0, v15}, Log/v;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1160,13 +1160,13 @@
 
     .line 7
     :try_start_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
     iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->a:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
 
     iget-object v2, v2, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;->a:Ljava/lang/String;
 
-    invoke-interface {v0, v2}, Lle/v;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v2}, Log/v;->b(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1407,7 +1407,7 @@
     .line 4
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->f:Ljava/util/ArrayList;
 
-    sget-object v1, Lle/n;->a:Lle/n;
+    sget-object v1, Log/n;->a:Log/n;
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -1447,7 +1447,7 @@
     .line 7
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->f:Ljava/util/ArrayList;
 
-    sget-object v1, Lle/n;->a:Lle/n;
+    sget-object v1, Log/n;->a:Log/n;
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -1455,9 +1455,9 @@
     :cond_3
     :goto_2
     :try_start_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v0, p1}, Lle/v;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)V
+    invoke-interface {v0, p1}, Log/v;->h(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1572,9 +1572,9 @@
     .line 3
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v0}, Lle/v;->f()V
+    invoke-interface {v0}, Log/v;->f()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1642,7 +1642,7 @@
 
     .line 2
     :try_start_0
-    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
     new-array v5, v2, [I
 
@@ -1656,7 +1656,7 @@
 
     aput v6, v5, v7
 
-    invoke-interface {v4, v5}, Lle/k;->d([I)Lle/b;
+    invoke-interface {v4, v5}, Log/k;->d([I)Log/b;
 
     move-result-object v4
     :try_end_0
@@ -1665,14 +1665,14 @@
     .line 3
     :goto_0
     :try_start_1
-    invoke-interface {v4}, Lle/b;->moveToNext()Z
+    invoke-interface {v4}, Log/b;->moveToNext()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
     .line 4
-    invoke-interface {v4}, Lle/b;->f0()Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
+    invoke-interface {v4}, Log/b;->w0()Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
 
     move-result-object v5
 
@@ -1685,7 +1685,7 @@
     .line 5
     :cond_0
     :try_start_2
-    invoke-interface {v4}, Lle/b;->close()V
+    invoke-interface {v4}, Log/b;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -1698,7 +1698,7 @@
 
     .line 6
     :try_start_3
-    invoke-interface {v4}, Lle/b;->close()V
+    invoke-interface {v4}, Log/b;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -1792,15 +1792,15 @@
     :cond_3
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->f:Ljava/util/ArrayList;
 
-    sget-object v4, Lle/n;->a:Lle/n;
+    sget-object v4, Log/n;->a:Log/n;
 
     invoke-static {v1, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 15
     :try_start_5
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v1}, Lle/v;->e()V
+    invoke-interface {v1}, Log/v;->e()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
@@ -2022,13 +2022,13 @@
 
     const/4 v11, 0x0
 
-    iget-object v12, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v12, v1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     move-object v1, v13
 
     move/from16 v10, p2
 
-    invoke-direct/range {v1 .. v12}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILle/o;)V
+    invoke-direct/range {v1 .. v12}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILog/o;)V
 
     .line 7
     invoke-virtual {p0, v13}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->m(Lcom/tmapmobility/tmap/exoplayer2/offline/Download;)Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
@@ -2079,9 +2079,9 @@
     .line 3
     :cond_0
     :try_start_0
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {p1, p2}, Lle/v;->c(I)V
+    invoke-interface {p1, p2}, Log/v;->c(I)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2113,9 +2113,9 @@
     .line 7
     :cond_2
     :try_start_1
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Lle/v;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->c:Log/v;
 
-    invoke-interface {v1, p1, p2}, Lle/v;->a(Ljava/lang/String;I)V
+    invoke-interface {v1, p1, p2}, Log/v;->a(Ljava/lang/String;I)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -2239,11 +2239,11 @@
     move-result-object p1
 
     .line 5
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->d:Lle/r;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->d:Log/r;
 
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->a:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
 
-    invoke-interface {p2, v0}, Lle/r;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
+    invoke-interface {p2, v0}, Log/r;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
 
     move-result-object v3
 
@@ -2252,7 +2252,7 @@
 
     iget-object v2, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->a:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
 
-    iget-object v4, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v4, p1, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     const/4 v5, 0x0
 
@@ -2264,7 +2264,7 @@
 
     move-object v7, p0
 
-    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Lle/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;Lcom/tmapmobility/tmap/exoplayer2/offline/b$a;)V
+    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Log/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;Lcom/tmapmobility/tmap/exoplayer2/offline/b$a;)V
 
     .line 7
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->g:Ljava/util/HashMap;
@@ -2330,11 +2330,11 @@
 
     .line 3
     :cond_1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->d:Lle/r;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->d:Log/r;
 
     iget-object v0, p2, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->a:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
 
-    invoke-interface {p1, v0}, Lle/r;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
+    invoke-interface {p1, v0}, Log/r;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;)Lcom/tmapmobility/tmap/exoplayer2/offline/c;
 
     move-result-object v3
 
@@ -2343,7 +2343,7 @@
 
     iget-object v2, p2, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->a:Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;
 
-    iget-object v4, p2, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v4, p2, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     const/4 v5, 0x1
 
@@ -2355,7 +2355,7 @@
 
     move-object v7, p0
 
-    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Lle/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;Lcom/tmapmobility/tmap/exoplayer2/offline/b$a;)V
+    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/offline/b$e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;Lcom/tmapmobility/tmap/exoplayer2/offline/c;Log/o;ZILcom/tmapmobility/tmap/exoplayer2/offline/b$c;Lcom/tmapmobility/tmap/exoplayer2/offline/b$a;)V
 
     .line 5
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/b$c;->g:Ljava/util/HashMap;

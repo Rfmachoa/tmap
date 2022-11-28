@@ -3,7 +3,7 @@
 .source "Collect.kt"
 
 # interfaces
-.implements Lkotlinx/coroutines/flow/g;
+.implements Lkotlinx/coroutines/flow/f;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlinx/coroutines/flow/g<",
+        "Lkotlinx/coroutines/flow/f<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -36,7 +36,7 @@
     }
     d2 = {
         "kotlinx/coroutines/flow/FlowKt__CollectKt$collect$3",
-        "Lkotlinx/coroutines/flow/g;",
+        "Lkotlinx/coroutines/flow/f;",
         "value",
         "Lkotlin/d1;",
         "emit",
@@ -84,11 +84,11 @@
 
     iget-object p1, p1, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->this$0:Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;
 
-    invoke-static {p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/t;
+    invoke-static {p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/u;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/databinding/t;->a()Landroidx/databinding/ViewDataBinding;
+    invoke-virtual {p1}, Landroidx/databinding/u;->a()Landroidx/databinding/ViewDataBinding;
 
     move-result-object p1
 
@@ -98,27 +98,27 @@
 
     iget-object p2, p2, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->this$0:Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;
 
-    invoke-static {p2}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/t;
+    invoke-static {p2}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/u;
 
     move-result-object p2
 
-    iget p2, p2, Landroidx/databinding/t;->b:I
+    iget p2, p2, Landroidx/databinding/u;->b:I
 
     iget-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1$a;->a:Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;
 
     iget-object v0, v0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;->this$0:Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;
 
-    invoke-static {v0}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/t;
+    invoke-static {v0}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/u;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/databinding/t;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/databinding/u;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, p2, v0, v1}, Landroidx/databinding/ViewDataBinding;->U(ILjava/lang/Object;I)V
+    invoke-virtual {p1, p2, v0, v1}, Landroidx/databinding/ViewDataBinding;->W(ILjava/lang/Object;I)V
 
     sget-object p1, Lkotlin/d1;->a:Lkotlin/d1;
 
@@ -128,7 +128,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object p2
 

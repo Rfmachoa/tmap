@@ -339,23 +339,25 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    if-eqz p2, :cond_0
-
     .line 13
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
     invoke-direct {v0, p0, p1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    move p1, p2
-
-    move-object p0, v0
+    if-eqz p2, :cond_0
 
     .line 14
-    :cond_0
-    sget-object p2, Lcom/google/android/material/R$styleable;->ShapeAppearance:[I
+    new-instance p0, Landroid/view/ContextThemeWrapper;
+
+    invoke-direct {p0, v0, p2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    move-object v0, p0
 
     .line 15
-    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    :cond_0
+    sget-object p0, Lcom/google/android/material/R$styleable;->ShapeAppearance:[I
+
+    invoke-virtual {v0, p0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 

@@ -1,5 +1,5 @@
 .class public Lcz/msebera/android/httpclient/params/BasicHttpParams;
-.super Lng/a;
+.super Lri/a;
 .source "BasicHttpParams.java"
 
 # interfaces
@@ -37,7 +37,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lng/a;-><init>()V
+    invoke-direct {p0}, Lri/a;-><init>()V
 
     .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
@@ -78,12 +78,12 @@
     check-cast v0, Lcz/msebera/android/httpclient/params/BasicHttpParams;
 
     .line 2
-    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/params/BasicHttpParams;->copyParams(Lng/i;)V
+    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/params/BasicHttpParams;->copyParams(Lri/i;)V
 
     return-object v0
 .end method
 
-.method public copy()Lng/i;
+.method public copy()Lri/i;
     .locals 2
 
     .line 1
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lng/i;
+    check-cast v0, Lri/i;
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -109,7 +109,7 @@
     throw v0
 .end method
 
-.method public copyParams(Lng/i;)V
+.method public copyParams(Lri/i;)V
     .locals 3
 
     .line 1
@@ -147,7 +147,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v2, v1}, Lng/i;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lng/i;
+    invoke-interface {p1, v2, v1}, Lri/i;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
 
     goto :goto_0
 
@@ -264,7 +264,7 @@
     return p1
 .end method
 
-.method public setParameter(Ljava/lang/String;Ljava/lang/Object;)Lng/i;
+.method public setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
     .locals 1
 
     if-nez p1, :cond_0
@@ -305,7 +305,7 @@
     aget-object v2, p1, v1
 
     .line 2
-    invoke-virtual {p0, v2, p2}, Lcz/msebera/android/httpclient/params/BasicHttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lng/i;
+    invoke-virtual {p0, v2, p2}, Lcz/msebera/android/httpclient/params/BasicHttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lri/i;
 
     add-int/lit8 v1, v1, 0x1
 

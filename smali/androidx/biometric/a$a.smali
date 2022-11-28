@@ -1,11 +1,11 @@
 .class public Landroidx/biometric/a$a;
-.super Lf1/a$b;
+.super Ly1/a$c;
 .source "AuthenticationCallbackProvider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/biometric/a;->b()Lf1/a$b;
+    value = Landroidx/biometric/a;->b()Ly1/a$c;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Landroidx/biometric/a$a;->a:Landroidx/biometric/a;
 
-    invoke-direct {p0}, Lf1/a$b;-><init>()V
+    invoke-direct {p0}, Ly1/a$c;-><init>()V
 
     return-void
 .end method
@@ -71,18 +71,18 @@
     return-void
 .end method
 
-.method public d(Lf1/a$c;)V
+.method public d(Ly1/a$d;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p1}, Lf1/a$c;->a()Lf1/a$d;
+    invoke-virtual {p1}, Ly1/a$d;->a()Ly1/a$e;
 
     move-result-object p1
 
     .line 2
-    invoke-static {p1}, Landroidx/biometric/h;->c(Lf1/a$d;)Landroidx/biometric/BiometricPrompt$c;
+    invoke-static {p1}, Landroidx/biometric/h;->c(Ly1/a$e;)Landroidx/biometric/BiometricPrompt$c;
 
     move-result-object p1
 

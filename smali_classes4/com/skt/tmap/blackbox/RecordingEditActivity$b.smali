@@ -3,7 +3,7 @@
 .source "RecordingEditActivity.java"
 
 # interfaces
-.implements Lpb/d0;
+.implements Lmd/g0;
 
 
 # annotations

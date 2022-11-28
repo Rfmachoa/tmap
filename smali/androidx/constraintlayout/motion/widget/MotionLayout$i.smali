@@ -15,14 +15,71 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/constraintlayout/motion/widget/MotionLayout;IIF)V
+.method public abstract a()V
 .end method
 
-.method public abstract b(Landroidx/constraintlayout/motion/widget/MotionLayout;I)V
+.method public abstract b(I)F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "id"
+        }
+    .end annotation
 .end method
 
-.method public abstract c(Landroidx/constraintlayout/motion/widget/MotionLayout;II)V
+.method public abstract c(Landroid/view/MotionEvent;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "event"
+        }
+    .end annotation
 .end method
 
-.method public abstract d(Landroidx/constraintlayout/motion/widget/MotionLayout;IZF)V
+.method public abstract clear()V
+.end method
+
+.method public abstract d()F
+.end method
+
+.method public abstract e()F
+.end method
+
+.method public abstract f(IF)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "units",
+            "maxVelocity"
+        }
+    .end annotation
+.end method
+
+.method public abstract g(I)F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "id"
+        }
+    .end annotation
+.end method
+
+.method public abstract h(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "units"
+        }
+    .end annotation
 .end method

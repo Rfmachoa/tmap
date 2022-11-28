@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/internal/GmsClient;
 .super Lcom/google/android/gms/common/internal/BaseGmsClient;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Api$Client;
@@ -35,14 +35,6 @@
 .field private final zab:Lcom/google/android/gms/common/internal/ClientSettings;
 
 .field private final zac:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zad:Landroid/accounts/Account;
     .annotation build Landroidx/annotation/Nullable;
@@ -398,17 +390,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;)",
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/GmsClient;->validateScopes(Ljava/util/Set;)Ljava/util/Set;

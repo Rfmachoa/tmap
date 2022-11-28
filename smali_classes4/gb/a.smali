@@ -1,105 +1,83 @@
 .class public Lgb/a;
-.super Ljava/lang/Object;
-.source "DeepLinkCallbackManager.java"
-
-
-# static fields
-.field public static b:Lgb/a;
-
-
-# instance fields
-.field public a:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/skt/moment/a$d;",
-            ">;"
-        }
-    .end annotation
-.end field
+.super Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
+.source "QueryDeleteDevice.java"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v0, p0, Lgb/a;->a:Ljava/util/Map;
+    invoke-direct {p0, p1}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public static b()Lgb/a;
-    .locals 1
+
+# virtual methods
+.method public getExecutor()Lretrofit2/Call;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lretrofit2/Call<",
+            "Lokhttp3/ResponseBody;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    sget-object v0, Lgb/a;->b:Lgb/a;
+    invoke-virtual {p0}, Lgb/a;->getHeaders()Ljava/util/Map;
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Lgb/a;
-
-    invoke-direct {v0}, Lgb/a;-><init>()V
-
-    sput-object v0, Lgb/a;->b:Lgb/a;
+    move-result-object v0
 
     .line 2
-    :cond_0
-    sget-object v0, Lgb/a;->b:Lgb/a;
+    invoke-static {}, Lma/d;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 3
+    iget-object v2, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->d:Landroid/content/Context;
+
+    invoke-static {v2}, Lrc/d;->d(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 4
+    iget-object v3, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->c:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;
+
+    invoke-interface {v3, v0, v1, v2}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguServiceApiForHabilis;->deleteDevice(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)Lretrofit2/Call;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-
-# virtual methods
-.method public a(Ljava/lang/String;)Lcom/skt/moment/a$d;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lgb/a;->a:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/moment/a$d;
-
-    return-object p1
-.end method
-
-.method public c(Ljava/lang/String;Lcom/skt/moment/a$d;)Lcom/skt/moment/a$d;
-    .locals 1
-
-    if-nez p2, :cond_0
+.method public getHeaders()Ljava/util/Map;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
     .line 1
-    iget-object p2, p0, Lgb/a;->a:Ljava/util/Map;
+    invoke-super {p0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->getHeaders()Ljava/util/Map;
 
-    invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/moment/a$d;
-
-    return-object p1
+    move-result-object v0
 
     .line 2
-    :cond_0
-    iget-object v0, p0, Lgb/a;->a:Ljava/util/Map;
+    invoke-static {}, Lma/d;->a()Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    const-string v2, "App-Version"
 
-    check-cast p1, Lcom/skt/moment/a$d;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method

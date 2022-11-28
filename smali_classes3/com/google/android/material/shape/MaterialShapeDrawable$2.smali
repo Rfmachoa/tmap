@@ -55,6 +55,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/material/shape/AdjustedCornerSize;
 

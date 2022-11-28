@@ -3,7 +3,7 @@
 .source "SingleCheck.java"
 
 # interfaces
-.implements Loi/a;
+.implements Lsk/a;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Loi/a<",
+        "Lsk/a<",
         "TT;>;"
     }
 .end annotation
@@ -28,10 +28,10 @@
 # instance fields
 .field private volatile instance:Ljava/lang/Object;
 
-.field private volatile provider:Loi/a;
+.field private volatile provider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -52,12 +52,12 @@
     return-void
 .end method
 
-.method private constructor <init>(Loi/a;)V
+.method private constructor <init>(Lsk/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -71,21 +71,21 @@
     iput-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->instance:Ljava/lang/Object;
 
     .line 3
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->provider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->provider:Lsk/a;
 
     return-void
 .end method
 
-.method public static provider(Loi/a;)Loi/a;
+.method public static provider(Lsk/a;)Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<P::",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;T:",
             "Ljava/lang/Object;",
             ">(TP;)",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -109,9 +109,9 @@
 
     move-result-object p0
 
-    check-cast p0, Loi/a;
+    check-cast p0, Lsk/a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;-><init>(Lsk/a;)V
 
     return-object v0
 
@@ -139,7 +139,7 @@
     if-ne v0, v1, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->provider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->provider:Lsk/a;
 
     if-nez v0, :cond_0
 
@@ -150,7 +150,7 @@
 
     .line 5
     :cond_0
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -160,7 +160,7 @@
     const/4 v1, 0x0
 
     .line 7
-    iput-object v1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->provider:Loi/a;
+    iput-object v1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SingleCheck;->provider:Lsk/a;
 
     :cond_1
     :goto_0

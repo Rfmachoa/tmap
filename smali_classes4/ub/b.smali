@@ -1,1252 +1,1052 @@
-.class public final Lub/b;
-.super Ljava/lang/Object;
-.source "TmapVoiceManager.kt"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lub/b$c;
-    }
-.end annotation
-
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTmapVoiceManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TmapVoiceManager.kt\ncom/skt/tmap/audio/TmapVoiceManager\n+ 2 OkHttpClient.kt\nokhttp3/OkHttpClient$Builder\n*L\n1#1,193:1\n578#2:194\n563#2:195\n*E\n*S KotlinDebug\n*F\n+ 1 TmapVoiceManager.kt\ncom/skt/tmap/audio/TmapVoiceManager\n*L\n76#1:194\n84#1:195\n*E\n"
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010$\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0002\u0008\r\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u000c\u0018\u00002\u00020\u0001:\u0001\u0015B\u000f\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u00a2\u0006\u0004\u00083\u00104J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u000e\u0010\u0008\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006J2\u0010\u000f\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u000e0\r2\u0006\u0010\t\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\u00022\u0012\u0010\u000c\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020\u000bJ\u0010\u0010\u0012\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0002J\u0012\u0010\u0015\u001a\u0004\u0018\u00010\u00142\u0008\u0010\u0013\u001a\u0004\u0018\u00010\u0002J\u0006\u0010\u0016\u001a\u00020\u0004J\u000e\u0010\u0018\u001a\u00020\u00112\u0006\u0010\u0017\u001a\u00020\u0002R\"\u0010\u0019\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0019\u0010\u001a\u001a\u0004\u0008\u001b\u0010\u001c\"\u0004\u0008\u001d\u0010\u001eR\u0017\u0010\u0007\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010\u001f\u001a\u0004\u0008 \u0010!R\"\u0010#\u001a\u00020\"8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008#\u0010$\u001a\u0004\u0008%\u0010&\"\u0004\u0008\'\u0010(R\"\u0010*\u001a\u00020)8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008*\u0010+\u001a\u0004\u0008,\u0010-\"\u0004\u0008.\u0010/R$\u00100\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u00080\u0010\u001a\u001a\u0004\u00081\u0010\u001c\"\u0004\u00082\u0010\u001e\u00a8\u00065"
-    }
-    d2 = {
-        "Lub/b;",
-        "",
-        "",
-        "voiceType",
-        "",
-        "l",
-        "Landroid/content/Context;",
-        "context",
-        "m",
-        "speaker",
-        "word",
-        "",
-        "map",
-        "Lretrofit2/Call;",
-        "Lokhttp3/ResponseBody;",
-        "k",
-        "cdn",
-        "Lkotlin/d1;",
-        "p",
-        "alarmWave",
-        "",
-        "c",
-        "i",
-        "productId",
-        "r",
-        "baseUrl",
-        "Ljava/lang/String;",
-        "d",
-        "()Ljava/lang/String;",
-        "n",
-        "(Ljava/lang/String;)V",
-        "Landroid/content/Context;",
-        "g",
-        "()Landroid/content/Context;",
-        "",
-        "cacheTime",
-        "I",
-        "e",
-        "()I",
-        "o",
-        "(I)V",
-        "Lcom/skt/tmap/audio/TtsLoadApi;",
-        "service",
-        "Lcom/skt/tmap/audio/TtsLoadApi;",
-        "j",
-        "()Lcom/skt/tmap/audio/TtsLoadApi;",
-        "s",
-        "(Lcom/skt/tmap/audio/TtsLoadApi;)V",
-        "celebUrl",
-        "f",
-        "q",
-        "<init>",
-        "(Landroid/content/Context;)V",
-        "tmap_android_phoneKUShip"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
+.class public Lub/b;
+.super Lyb/a;
+.source "StateOpenPlatform.java"
 
 
 # static fields
-.field public static final j:Ljava/lang/String; = "https://tts.tmap.co.kr/tmap/v1/"
-
-.field public static final k:Ljava/lang/String; = "https://tts-stg.tmap.co.kr/tmap/v1/"
-
-.field public static final l:Ljava/lang/String; = "https://tts-dev.tmap.co.kr/tmap/v1/"
-
-.field public static final m:Ljava/lang/String; = "xinapse"
-
-.field public static final n:J = 0x1L
-
-.field public static final o:J = 0x1L
-
-.field public static final p:J = 0x1L
-
-.field public static q:Lub/b;
-
-.field public static final r:Lub/b$c;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
+.field public static final y:Ljava/lang/String; = "StateOpenPlatform"
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
-
-.field public final b:Landroid/content/Context;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
-
-.field public c:I
-
-.field public d:Lcom/skt/tmap/audio/TtsLoadApi;
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-.end field
-
-.field public e:Lretrofit2/Retrofit;
-
-.field public f:Lokhttp3/OkHttpClient;
-
-.field public g:Ljava/lang/String;
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-.end field
-
-.field public h:Lretrofit2/Retrofit;
-
-.field public i:Lcom/skt/tmap/audio/TtsLoadApi;
+.field public x:Lpc/d;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lub/b$c;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lub/b$c;-><init>(Lkotlin/jvm/internal/u;)V
-
-    sput-object v0, Lub/b;->r:Lub/b$c;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
-    .param p1    # Landroid/content/Context;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-
-    const-string v0, "context"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, "https://tts.tmap.co.kr/tmap/v1/"
-
-    .line 2
-    iput-object v0, p0, Lub/b;->a:Ljava/lang/String;
-
-    const/16 v1, 0x2760
-
-    .line 3
-    iput v1, p0, Lub/b;->c:I
-
-    .line 4
-    invoke-static {p1}, Lcom/skt/tmap/GlobalDataManager;->b(Landroid/content/Context;)Lcom/skt/tmap/GlobalDataManager;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
-
-    const-string v3, "GlobalDataManager.GetIns\u2026ntext).engineeringSetting"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Lcom/skt/tmap/util/HiddenSettingData;->l()I
-
-    move-result v2
-
-    const/4 v4, 0x1
-
-    const/16 v5, 0x258
-
-    if-eq v2, v4, :cond_2
-
-    const/4 v4, 0x2
-
-    if-eq v2, v4, :cond_1
-
-    const/4 v4, 0x3
-
-    if-eq v2, v4, :cond_0
-
-    goto :goto_0
-
-    .line 5
-    :cond_0
-    iput-object v0, p0, Lub/b;->a:Ljava/lang/String;
-
-    .line 6
-    iput v1, p0, Lub/b;->c:I
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "https://tts-stg.tmap.co.kr/tmap/v1/"
-
-    .line 7
-    iput-object v0, p0, Lub/b;->a:Ljava/lang/String;
-
-    .line 8
-    iput v5, p0, Lub/b;->c:I
-
-    goto :goto_0
-
-    :cond_2
-    const-string v0, "https://tts-dev.tmap.co.kr/tmap/v1/"
-
-    .line 9
-    iput-object v0, p0, Lub/b;->a:Ljava/lang/String;
-
-    .line 10
-    iput v5, p0, Lub/b;->c:I
-
-    .line 11
-    :goto_0
-    new-instance v0, Ljava/io/File;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v1
-
-    const-string v2, "TtsCache"
-
-    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    .line 12
-    invoke-static {p1}, Lcom/skt/tmap/GlobalDataManager;->b(Landroid/content/Context;)Lcom/skt/tmap/GlobalDataManager;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/skt/tmap/util/HiddenSettingData;->I()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 13
-    new-instance v1, Lokhttp3/Cache;
-
-    const-wide/32 v2, 0xa00000
-
-    invoke-direct {v1, v0, v2, v3}, Lokhttp3/Cache;-><init>(Ljava/io/File;J)V
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v1, 0x0
-
-    .line 14
-    :goto_1
-    invoke-static {}, Lcom/skt/tmap/util/u0;->a()Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 15
-    new-instance v2, Lub/b$b;
-
-    invoke-direct {v2}, Lub/b$b;-><init>()V
-
-    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$Builder;->addNetworkInterceptor(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 16
-    new-instance v2, Lub/b$a;
-
-    invoke-direct {v2, p1}, Lub/b$a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$Builder;->addInterceptor(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 17
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v3, 0x1
-
-    invoke-virtual {v0, v3, v4, v2}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 18
-    invoke-virtual {v0, v3, v4, v2}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 19
-    invoke-virtual {v0, v3, v4, v2}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 20
-    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$Builder;->cache(Lokhttp3/Cache;)Lokhttp3/OkHttpClient$Builder;
-
-    move-result-object v0
-
-    .line 21
-    invoke-virtual {v0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lub/b;->f:Lokhttp3/OkHttpClient;
-
-    .line 22
-    new-instance v0, Lretrofit2/Retrofit$Builder;
-
-    invoke-direct {v0}, Lretrofit2/Retrofit$Builder;-><init>()V
-
-    iget-object v1, p0, Lub/b;->f:Lokhttp3/OkHttpClient;
-
-    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->client(Lokhttp3/OkHttpClient;)Lretrofit2/Retrofit$Builder;
-
-    move-result-object v0
-
-    .line 23
-    iget-object v1, p0, Lub/b;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->baseUrl(Ljava/lang/String;)Lretrofit2/Retrofit$Builder;
-
-    move-result-object v0
-
-    .line 24
-    invoke-static {}, Lretrofit2/converter/gson/GsonConverterFactory;->create()Lretrofit2/converter/gson/GsonConverterFactory;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->addConverterFactory(Lretrofit2/Converter$Factory;)Lretrofit2/Retrofit$Builder;
-
-    move-result-object v0
-
-    .line 25
-    invoke-static {}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->create()Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->addCallAdapterFactory(Lretrofit2/CallAdapter$Factory;)Lretrofit2/Retrofit$Builder;
-
-    move-result-object v0
-
-    .line 26
-    invoke-virtual {v0}, Lretrofit2/Retrofit$Builder;->build()Lretrofit2/Retrofit;
-
-    move-result-object v0
-
-    const-string v1, "Retrofit.Builder().clien\u2026\n                .build()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lub/b;->e:Lretrofit2/Retrofit;
-
-    .line 27
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v0, "context.applicationContext"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lub/b;->b:Landroid/content/Context;
-
-    .line 28
-    iget-object p1, p0, Lub/b;->e:Lretrofit2/Retrofit;
-
-    const-class v0, Lcom/skt/tmap/audio/TtsLoadApi;
-
-    invoke-virtual {p1, v0}, Lretrofit2/Retrofit;->create(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "retrofit.create(TtsLoadApi::class.java)"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p1, Lcom/skt/tmap/audio/TtsLoadApi;
-
-    iput-object p1, p0, Lub/b;->d:Lcom/skt/tmap/audio/TtsLoadApi;
-
-    return-void
-.end method
-
-.method public static final synthetic a()Lub/b;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lub/b;->q:Lub/b;
-
-    return-object v0
-.end method
-
-.method public static final synthetic b(Lub/b;)V
+.method public constructor <init>(Lcom/skt/aicloud/speaker/service/api/c;)V
     .locals 0
 
     .line 1
-    sput-object p0, Lub/b;->q:Lub/b;
+    invoke-direct {p0, p1}, Lyb/a;-><init>(Lcom/skt/aicloud/speaker/service/api/c;)V
+
+    .line 2
+    new-instance p1, Lub/b$a;
+
+    invoke-direct {p1, p0}, Lub/b$a;-><init>(Lub/b;)V
+
+    iput-object p1, p0, Lub/b;->x:Lpc/d;
+
+    .line 3
+    sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_OPEN_PLATFORM:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    .line 4
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lub/a;->F0(Lub/b;)V
 
     return-void
 .end method
 
-.method public static final h(Landroid/content/Context;)Lub/b;
-    .locals 1
-    .param p0    # Landroid/content/Context;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation runtime Lkotlin/jvm/JvmStatic;
-    .end annotation
+.method public static synthetic A0(Lub/b;)Ljava/lang/String;
+    .locals 0
 
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    sget-object v0, Lub/b;->r:Lub/b$c;
-
-    invoke-virtual {v0, p0}, Lub/b$c;->a(Landroid/content/Context;)Lub/b;
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-
-# virtual methods
-.method public final c(Ljava/lang/String;)[B
-    .locals 3
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
-    if-eqz p1, :cond_7
+.method public static synthetic B0(Lub/b;)Ljava/lang/String;
+    .locals 0
 
     .line 1
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p0
 
-    if-lez v0, :cond_0
+    return-object p0
+.end method
+
+.method public static synthetic C0(Lub/b;)Lcom/skt/aicloud/speaker/service/api/c;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic D0(Lub/b;)Lcom/skt/aicloud/speaker/service/api/g;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->O()Lcom/skt/aicloud/speaker/service/api/g;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic E0(Lub/b;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lub/b;->L0()V
+
+    return-void
+.end method
+
+.method public static synthetic F0(Lub/b;)Ljc/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic G0(Lub/b;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic H0(Lub/b;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual/range {p0 .. p5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public A(Ljava/lang/String;)V
+    .locals 8
 
     const/4 v0, 0x1
 
-    goto :goto_0
+    new-array v1, v0, [Ljava/lang/Object;
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    :goto_0
-    if-eqz v0, :cond_7
+    aput-object p1, v1, v2
+
+    const-string v2, "pauseByUC(cardType:%s)"
+
+    .line 1
+    invoke-static {v2, v1}, Lcom/skt/aicloud/mobile/service/util/z;->i(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "StateOpenPlatform"
+
+    invoke-static {v2, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+    invoke-static {}, Lub/a;->x0()Lub/a;
 
-    move-result v0
-
-    const/16 v1, 0x65d
-
-    const/4 v2, -0x1
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x666
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x67d
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x660
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x661
-
-    if-eq v0, v1, :cond_1
-
-    packed-switch v0, :pswitch_data_0
-
-    packed-switch v0, :pswitch_data_1
-
-    goto/16 :goto_1
-
-    :pswitch_0
-    const-string v0, "157"
+    move-result-object v1
 
     .line 3
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f12000d
-
-    goto/16 :goto_2
-
-    :pswitch_1
-    const-string v0, "156"
+    invoke-virtual {v1, v0}, Lic/a;->c0(Z)V
 
     .line 4
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f12000c
-
-    goto/16 :goto_2
-
-    :pswitch_2
-    const-string v0, "29"
+    invoke-virtual {v1, v0}, Lub/a;->E0(Z)V
 
     .line 5
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f120012
-
-    goto/16 :goto_2
-
-    :pswitch_3
-    const-string v0, "28"
+    invoke-virtual {v1}, Lub/a;->O()V
 
     .line 6
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz p1, :cond_6
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
-    const p1, 0x7f120011
+    move-result-object v1
 
-    goto :goto_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_4
-    const-string v0, "27"
+    const-string v1, ":pauseByUC"
 
-    .line 7
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz p1, :cond_6
+    move-result-object v7
 
-    const p1, 0x7f120010
+    const-string v3, "StateOpenPlatform"
 
-    goto :goto_2
+    const/4 v4, 0x1
 
-    :pswitch_5
-    const-string v0, "26"
+    const-string v6, "asr"
 
-    .line 8
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-object v2, p0
 
-    move-result p1
+    move-object v5, p1
 
-    if-eqz p1, :cond_6
+    invoke-virtual/range {v2 .. v7}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const p1, 0x7f12000f
+    return-void
+.end method
 
-    goto :goto_2
+.method public B()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_6
-    const-string v0, "25"
+    const/4 v0, 0x0
 
-    .line 9
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    return-object v0
+.end method
 
-    move-result p1
+.method public final I0()Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;
+    .locals 5
 
-    if-eqz p1, :cond_6
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    const p1, 0x7f12000e
-
-    goto :goto_2
-
-    :cond_1
-    const-string v0, "34"
-
-    .line 10
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f120015
-
-    goto :goto_2
-
-    :cond_2
-    const-string v0, "33"
-
-    .line 11
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f120014
-
-    goto :goto_2
-
-    :cond_3
-    const-string v0, "41"
-
-    .line 12
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f120017
-
-    goto :goto_2
-
-    :cond_4
-    const-string v0, "39"
-
-    .line 13
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f120016
-
-    goto :goto_2
-
-    :cond_5
-    const-string v0, "30"
-
-    .line 14
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const p1, 0x7f120013
-
-    goto :goto_2
-
-    :cond_6
-    :goto_1
-    move p1, v2
-
-    :goto_2
-    if-eq p1, v2, :cond_7
-
-    .line 15
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Ljc/c;->d()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    const-string v0, "context.resources.openRawResource(rawId)"
+    return-object v1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 16
-    :try_start_0
-    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
-
-    move-result v0
-
-    new-array v0, v0, [B
-
-    .line 17
-    invoke-virtual {p1, v0}, Ljava/io/InputStream;->read([B)I
-
-    .line 18
-    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception p1
-
-    .line 19
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    :cond_7
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x643
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0xbe92
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lub/b;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final e()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lub/b;->c:I
-
-    return v0
-.end method
-
-.method public final f()Ljava/lang/String;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lub/b;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final g()Landroid/content/Context;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method public final i()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
-
-    const-string v1, "connectivity"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "null cannot be cast to non-null type android.net.ConnectivityManager"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->L(Landroid/net/ConnectivityManager;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final j()Lcom/skt/tmap/audio/TtsLoadApi;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lub/b;->d:Lcom/skt/tmap/audio/TtsLoadApi;
-
-    return-object v0
-.end method
-
-.method public final k(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lretrofit2/Call;
-    .locals 1
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/util/Map;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)",
-            "Lretrofit2/Call<",
-            "Lokhttp3/ResponseBody;",
-            ">;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "speaker"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string/jumbo v0, "word"
-
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "map"
-
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    invoke-virtual {p0, p1}, Lub/b;->l(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    :cond_0
+    const/4 v2, 0x0
 
     .line 2
-    iget-object v0, p0, Lub/b;->d:Lcom/skt/tmap/audio/TtsLoadApi;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-interface {v0, p1, p2, p3}, Lcom/skt/tmap/audio/TtsLoadApi;->getTtsFile(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lretrofit2/Call;
+    move-result v3
 
-    move-result-object p1
+    if-ge v2, v3, :cond_2
+
+    .line 3
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/AbstractDirective;
+
+    .line 4
+    instance-of v4, v3, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;
+
+    if-eqz v4, :cond_1
+
+    .line 5
+    check-cast v3, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;
+
+    return-object v3
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lub/b;->i:Lcom/skt/tmap/audio/TtsLoadApi;
-
-    if-nez v0, :cond_1
-
-    .line 4
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/skt/tmap/util/TmapSharedPreference;->I1(Landroid/content/Context;)Lcom/skt/tmap/data/StarVoiceData;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/skt/tmap/data/StarVoiceData;->getProductCDN()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lub/b;->p(Ljava/lang/String;)V
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Lub/b;->i:Lcom/skt/tmap/audio/TtsLoadApi;
-
-    invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    invoke-interface {v0, p1, p2, p3}, Lcom/skt/tmap/audio/TtsLoadApi;->getTtsFile(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lretrofit2/Call;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
+    :cond_2
+    return-object v1
 .end method
 
-.method public final l(Ljava/lang/String;)Z
-    .locals 1
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method public final J0(Ljava/lang/Long;Ljava/lang/String;)Z
+    .locals 3
 
-    const-string/jumbo v0, "voiceType"
+    const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    const-string v0, "female"
+    if-eqz p1, :cond_0
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->y()Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;
 
-    move-result v0
+    move-result-object v2
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Long;->intValue()I
 
-    const-string v0, "male"
+    move-result p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v2, p2, p1}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->J(Ljava/lang/String;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    move p1, v0
+
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    move p1, v1
 
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    const/4 p1, 0x1
+    new-array p2, v0, [Ljava/lang/Object;
 
-    :goto_1
-    return p1
-.end method
+    .line 2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public final m(Landroid/content/Context;)Z
-    .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+    move-result-object v0
 
-    const-string v0, "context"
+    aput-object v0, p2, v1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "isResume() : isResume(%s)"
 
-    .line 1
-    invoke-static {p1}, Lcom/skt/tmap/util/TmapSharedPreference;->I1(Landroid/content/Context;)Lcom/skt/tmap/data/StarVoiceData;
+    invoke-static {v0, p2}, Lcom/skt/aicloud/mobile/service/util/z;->i(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-virtual {p1}, Lcom/skt/tmap/data/StarVoiceData;->getOriginType()Ljava/lang/String;
+    const-string v0, "StateOpenPlatform"
 
-    move-result-object p1
-
-    const-string/jumbo v0, "xinapse"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
+    invoke-static {v0, p2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return p1
 .end method
 
-.method public final n(Ljava/lang/String;)V
-    .locals 1
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-
-    const-string v0, "<set-?>"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+.method public final K0()Z
+    .locals 5
 
     .line 1
-    iput-object p1, p0, Lub/b;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljc/c;->g()Ljava/lang/String;
 
-.method public final o(I)V
-    .locals 0
+    move-result-object v0
 
-    .line 1
-    iput p1, p0, Lub/b;->c:I
+    const/4 v1, 0x0
 
-    return-void
-.end method
-
-.method public final p(Ljava/lang/String;)V
-    .locals 2
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-
-    if-eqz p1, :cond_1
-
-    .line 1
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
+    const-string v2, "StateOpenPlatform"
 
     if-nez v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    if-eqz v0, :cond_2
-
-    const/4 p1, 0x0
+    const-string v0, "isSamePlayService() : mCard.getPlayServiceId() is null"
 
     .line 2
-    iput-object p1, p0, Lub/b;->g:Ljava/lang/String;
+    invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
 
     .line 3
-    iput-object p1, p0, Lub/b;->h:Lretrofit2/Retrofit;
+    :cond_0
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lub/a;->w0()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
 
     .line 4
-    iput-object p1, p0, Lub/b;->i:Lcom/skt/tmap/audio/TtsLoadApi;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    goto :goto_2
+    move-result-object v4
+
+    aput-object v4, v3, v1
+
+    const-string v1, "isSamePlayService() : isSamePlayService(%s)"
+
+    invoke-static {v1, v3}, Lcom/skt/aicloud/mobile/service/util/z;->i(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v0
+.end method
+
+.method public final L0()V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->d()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/AbstractDirective;
+
+    const/4 v2, 0x1
+
+    new-array v3, v2, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object v1, v3, v4
+
+    const-string v4, "processCard(directive:%s)"
+
+    .line 2
+    invoke-static {v4, v3}, Lcom/skt/aicloud/mobile/service/util/z;->i(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "StateOpenPlatform"
+
+    invoke-static {v4, v3}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    instance-of v3, v1, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/a;
+
+    if-eqz v3, :cond_1
+
+    .line 4
+    invoke-virtual {p0, v4}, Lub/b;->A(Ljava/lang/String;)V
+
+    goto :goto_0
 
     .line 5
-    :cond_2
-    iput-object p1, p0, Lub/b;->g:Ljava/lang/String;
+    :cond_1
+    instance-of v3, v1, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/c;
+
+    if-eqz v3, :cond_2
 
     .line 6
-    new-instance v0, Lretrofit2/Retrofit$Builder;
+    invoke-virtual {p0, v4}, Lub/b;->f(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Lretrofit2/Retrofit$Builder;-><init>()V
+    goto :goto_0
 
-    iget-object v1, p0, Lub/b;->f:Lokhttp3/OkHttpClient;
+    .line 7
+    :cond_2
+    instance-of v3, v1, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;
 
-    invoke-virtual {v0, v1}, Lretrofit2/Retrofit$Builder;->client(Lokhttp3/OkHttpClient;)Lretrofit2/Retrofit$Builder;
+    if-eqz v3, :cond_0
+
+    .line 8
+    check-cast v1, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;
+
+    .line 9
+    invoke-virtual {v1}, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;->d()Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$b;
+
+    move-result-object v3
+
+    if-nez v3, :cond_3
+
+    goto :goto_0
+
+    .line 10
+    :cond_3
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->D()Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/skt/aicloud/speaker/service/api/AladdinAiCloudManager;->u0()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    .line 11
+    invoke-virtual {p0, v2}, Lyb/a;->y0(Z)V
+
+    .line 12
+    :cond_4
+    new-instance v2, Landroid/util/Pair;
+
+    iget-object v3, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v3}, Ljc/c;->g()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v4}, Ljc/c;->h()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v2, v3, v4}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 13
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1, v2}, Lub/a;->I0(Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;Landroid/util/Pair;)V
+
+    goto :goto_0
+
+    :cond_5
+    return-void
+.end method
+
+.method public final M0()V
+    .locals 3
+
+    .line 1
+    invoke-virtual {p0}, Lub/b;->I0()Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;
+
+    move-result-object v0
+
+    const-string v1, "StateOpenPlatform"
+
+    if-nez v0, :cond_0
+
+    const-string v0, "stopIfNeed() : play directive info is null"
+
+    .line 2
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {v0}, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b;->d()Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$b;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "stopIfNeed() : stream is null."
+
+    .line 4
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    .line 5
+    :cond_1
+    invoke-virtual {v0}, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$b;->c()Ljava/lang/Long;
+
+    move-result-object v1
+
+    .line 6
+    invoke-virtual {v0}, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$b;->e()Ljava/lang/String;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, p1}, Lretrofit2/Retrofit$Builder;->baseUrl(Ljava/lang/String;)Lretrofit2/Retrofit$Builder;
+    invoke-static {}, Lub/a;->x0()Lub/a;
 
-    move-result-object p1
+    move-result-object v2
 
     .line 8
-    invoke-static {}, Lretrofit2/converter/gson/GsonConverterFactory;->create()Lretrofit2/converter/gson/GsonConverterFactory;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lretrofit2/Retrofit$Builder;->addConverterFactory(Lretrofit2/Converter$Factory;)Lretrofit2/Retrofit$Builder;
-
-    move-result-object p1
-
-    .line 9
-    invoke-static {}, Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;->create()Lretrofit2/adapter/rxjava2/RxJava2CallAdapterFactory;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lretrofit2/Retrofit$Builder;->addCallAdapterFactory(Lretrofit2/CallAdapter$Factory;)Lretrofit2/Retrofit$Builder;
-
-    move-result-object p1
-
-    .line 10
-    invoke-virtual {p1}, Lretrofit2/Retrofit$Builder;->build()Lretrofit2/Retrofit;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lub/b;->h:Lretrofit2/Retrofit;
-
-    .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
-
-    const-class v0, Lcom/skt/tmap/audio/TtsLoadApi;
-
-    invoke-virtual {p1, v0}, Lretrofit2/Retrofit;->create(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/tmap/audio/TtsLoadApi;
-
-    iput-object p1, p0, Lub/b;->i:Lcom/skt/tmap/audio/TtsLoadApi;
-
-    :goto_2
-    return-void
-.end method
-
-.method public final q(Ljava/lang/String;)V
-    .locals 0
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    iput-object p1, p0, Lub/b;->g:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final r(Ljava/lang/String;)V
-    .locals 8
-    .param p1    # Ljava/lang/String;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-
-    const-string v0, "productId"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/skt/tmap/GlobalDataManager;->b(Landroid/content/Context;)Lcom/skt/tmap/GlobalDataManager;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/skt/tmap/GlobalDataManager;->j:Lcom/skt/tmap/util/HiddenSettingData;
-
-    const-string v1, "GlobalDataManager.GetIns\u2026ntext).engineeringSetting"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/skt/tmap/util/HiddenSettingData;->l()I
+    invoke-virtual {p0, v1, v0}, Lub/b;->J0(Ljava/lang/Long;Ljava/lang/String;)Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_3
 
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "https://tts.tmap.co.kr/tmap/v1/"
-
-    :goto_0
-    move-object v4, v0
-
-    goto :goto_1
-
-    :cond_0
-    const-string v0, "https://tts-stg.tmap.co.kr/tmap/v1/"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "https://tts-dev.tmap.co.kr/tmap/v1/"
-
-    goto :goto_0
-
-    .line 2
-    :goto_1
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
-
-    const-string v1, "guidance.starvoiceType"
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "male"
-
-    .line 3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Lub/b;->K0()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    const-string/jumbo v0, "\ub0a8\uc131"
+    goto :goto_0
 
-    goto :goto_2
-
+    .line 9
     :cond_2
-    const-string/jumbo v0, "\uc5ec\uc131"
+    invoke-virtual {v2}, Lub/a;->stop()V
 
-    :goto_2
-    move-object v3, v0
+    goto :goto_1
+
+    .line 10
+    :cond_3
+    :goto_0
+    invoke-virtual {v2}, Lub/a;->J0()V
+
+    :goto_1
+    return-void
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 8
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "stopByUC : cardType = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StateOpenPlatform"
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->o:J
+
+    .line 3
+    invoke-virtual {p0}, Lub/b;->stop()V
 
     .line 4
-    iget-object v0, p0, Lub/b;->b:Landroid/content/Context;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v7, Lcom/skt/tmap/data/StarVoiceData;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, ""
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
 
-    const-string v6, ""
+    move-result-object v1
 
-    move-object v1, v7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v2, p1
+    const-string v1, ":stopByUC"
 
-    invoke-direct/range {v1 .. v6}, Lcom/skt/tmap/data/StarVoiceData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v7}, Lcom/skt/tmap/util/TmapSharedPreference;->n4(Landroid/content/Context;Lcom/skt/tmap/data/StarVoiceData;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v3, "StateOpenPlatform"
+
+    const/4 v4, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p0
+
+    move-object v5, p1
+
+    invoke-virtual/range {v2 .. v7}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 5
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->c:Lcom/skt/aicloud/speaker/service/api/c;
+
+    sget-object v0, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_IDLE:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, v1}, Lcom/skt/aicloud/speaker/service/api/c;->o0(Lcom/skt/aicloud/speaker/lib/state/AppState;Landroid/content/Intent;Ljc/c;)V
 
     return-void
 .end method
 
-.method public final s(Lcom/skt/tmap/audio/TtsLoadApi;)V
-    .locals 1
-    .param p1    # Lcom/skt/tmap/audio/TtsLoadApi;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+.method public g(Landroid/content/Intent;Ljc/c;)V
+    .locals 0
 
-    const-string v0, "<set-?>"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 p1, 0x0
 
     .line 1
-    iput-object p1, p0, Lub/b;->d:Lcom/skt/tmap/audio/TtsLoadApi;
+    invoke-virtual {p0, p1}, Lyb/a;->y0(Z)V
+
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/skt/aicloud/speaker/service/state/a;->a0(Ljc/c;)V
+
+    .line 3
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {p1}, Ljc/c;->j()Ljc/d;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljc/d;->n(Ljc/d;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
+
+    .line 5
+    :cond_0
+    invoke-virtual {p0}, Lub/b;->M0()V
+
+    .line 6
+    invoke-virtual {p0}, Lub/b;->w0()V
+
+    return-void
+.end method
+
+.method public m0()Lic/a;
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public n0()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
+
+    sget v1, Lcom/skt/aicloud/speaker/service/R$string;->service_name_media:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public pause()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Lcom/skt/aicloud/speaker/service/state/a;->pause()V
+
+    const-string v0, "StateOpenPlatform"
+
+    const-string v1, "pause()"
+
+    .line 2
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->d:Lcom/skt/aicloud/speaker/lib/state/AppState;
+
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/state/a;->U(Lcom/skt/aicloud/speaker/lib/state/AppState;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->d()V
+
+    .line 5
+    :cond_0
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object v0
+
+    .line 6
+    invoke-virtual {v0}, Lic/a;->H()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 7
+    invoke-virtual {v0}, Lic/a;->pause()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public resume(Ljava/lang/String;)V
+    .locals 6
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "resume : cardType = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StateOpenPlatform"
+
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/SLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->resume(Ljava/lang/String;)V
+
+    .line 3
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object p1
+
+    .line 4
+    invoke-virtual {p1}, Lic/a;->H()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string p1, "Already Playing"
+
+    .line 5
+    invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-virtual {p1}, Lic/a;->F()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "Resume Media"
+
+    .line 7
+    invoke-static {v1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {p1}, Lub/a;->resume()V
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "Does not Action"
+
+    .line 9
+    invoke-static {v1, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 10
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->J()Lcom/skt/aicloud/speaker/service/api/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/service/api/c;->q0()V
+
+    .line 11
+    invoke-virtual {p0}, Lyb/a;->t0()V
+
+    const/4 v2, 0x1
+
+    .line 12
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ":continue"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v1, "StateOpenPlatform"
+
+    const-string v3, "continue"
+
+    const-string v4, "asr"
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/skt/aicloud/speaker/service/state/a;->X(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public stop()V
+    .locals 2
+
+    const-string v0, "StateOpenPlatform"
+
+    const-string v1, "stop()"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lub/a;->stop()V
+
+    return-void
+.end method
+
+.method public w0()V
+    .locals 11
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->m()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v1}, Ljc/c;->j()Ljc/d;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object v1, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object v0, v2, v3
+
+    const-string v4, "onCardReceived() : requestId(%s), tts(%s)"
+
+    .line 3
+    invoke-static {v4, v2}, Lcom/skt/aicloud/mobile/service/util/z;->i(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v4, "StateOpenPlatform"
+
+    invoke-static {v4, v2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 5
+    invoke-virtual {p0}, Lub/b;->L0()V
+
+    const/4 v6, 0x1
+
+    .line 6
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
+
+    invoke-virtual {v0}, Ljc/c;->n()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v1}, Ljc/d;->j()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v1}, Ljc/d;->e()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->N()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":TTS Empty"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v5, "StateOpenPlatform"
+
+    move-object v4, p0
+
+    invoke-virtual/range {v4 .. v10}, Lcom/skt/aicloud/speaker/service/state/a;->Y(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->O()Lcom/skt/aicloud/speaker/service/api/g;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/g;->z()Lic/a;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 8
+    invoke-virtual {v1, v3}, Lic/a;->U(Z)V
+
+    .line 9
+    :cond_1
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->K()Lcom/skt/aicloud/speaker/service/api/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/d;->F()Lcom/skt/aicloud/speaker/service/api/d$b;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lub/b;->x:Lpc/d;
+
+    invoke-virtual {v1, v0, v2}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
+
+    :goto_0
+    return-void
+.end method
+
+.method public x0()V
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lub/a;->x0()Lub/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lub/a;->H0()V
 
     return-void
 .end method

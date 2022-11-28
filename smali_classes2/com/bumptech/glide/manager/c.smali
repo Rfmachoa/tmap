@@ -3,7 +3,7 @@
 .source "ConnectivityMonitor.java"
 
 # interfaces
-.implements Lcom/bumptech/glide/manager/l;
+.implements Lcom/bumptech/glide/manager/m;
 
 
 # annotations

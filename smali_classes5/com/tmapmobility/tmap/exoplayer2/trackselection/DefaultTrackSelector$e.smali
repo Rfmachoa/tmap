@@ -1,9 +1,6 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
-.super Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;
+.super Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
 .source "DefaultTrackSelector.java"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # annotations
@@ -16,578 +13,1143 @@
     name = "e"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f<",
-        "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;",
-        ">;",
-        "Ljava/lang/Comparable<",
-        "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;",
-        ">;"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # instance fields
-.field public final e:I
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final p:Z
+.field public final A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
 
 # direct methods
-.method public constructor <init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ILjava/lang/String;)V
-    .locals 5
-    .param p6    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public constructor <init>()V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;-><init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;I)V
-
-    const/4 p1, 0x0
+    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;-><init>()V
 
     .line 2
-    invoke-static {p5, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->K(IZ)Z
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
-    move-result p2
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;-><init>()V
 
-    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->f:Z
-
-    .line 3
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    iget p2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->d:I
-
-    iget p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->H1:I
-
-    not-int p3, p3
-
-    and-int/2addr p2, p3
-
-    and-int/lit8 p3, p2, 0x1
-
-    const/4 v0, 0x1
-
-    if-eqz p3, :cond_0
-
-    move p3, v0
-
-    goto :goto_0
-
-    :cond_0
-    move p3, p1
-
-    .line 4
-    :goto_0
-    iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->g:Z
-
-    and-int/lit8 p2, p2, 0x2
-
-    if-eqz p2, :cond_1
-
-    move p2, v0
-
-    goto :goto_1
-
-    :cond_1
-    move p2, p1
-
-    .line 5
-    :goto_1
-    iput-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->h:Z
-
-    const p2, 0x7fffffff
-
-    .line 6
-    iget-object p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->X0:Lcom/google/common/collect/ImmutableList;
-
-    invoke-virtual {p3}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_2
-
-    const-string p3, ""
-
-    .line 7
-    invoke-static {p3}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    move-result-object p3
-
-    goto :goto_2
-
-    .line 8
-    :cond_2
-    iget-object p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->X0:Lcom/google/common/collect/ImmutableList;
-
-    :goto_2
-    move v1, p1
-
-    .line 9
-    :goto_3
-    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_4
-
-    .line 10
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    .line 11
-    invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    iget-boolean v4, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->Z0:Z
-
-    .line 12
-    invoke-static {v2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->B(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/String;Z)I
-
-    move-result v2
-
-    if-lez v2, :cond_3
-
-    move p2, v1
-
-    goto :goto_4
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    :cond_4
-    move v2, p1
-
-    .line 13
-    :goto_4
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->i:I
-
-    .line 14
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->j:I
-
-    .line 15
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    iget p2, p2, Lcom/tmapmobility/tmap/exoplayer2/Format;->e:I
-
-    iget p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->Y0:I
-
-    .line 16
-    invoke-static {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->u(II)I
-
-    move-result p2
-
-    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->k:I
-
-    .line 17
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    iget p3, p3, Lcom/tmapmobility/tmap/exoplayer2/Format;->e:I
-
-    and-int/lit16 p3, p3, 0x440
-
-    if-eqz p3, :cond_5
-
-    move p3, v0
-
-    goto :goto_5
-
-    :cond_5
-    move p3, p1
-
-    :goto_5
-    iput-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->p:Z
-
-    .line 18
-    invoke-static {p6}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->S(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
-    if-nez p3, :cond_6
-
-    move p3, v0
-
-    goto :goto_6
-
-    :cond_6
-    move p3, p1
-
-    .line 19
-    :goto_6
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;->d:Lcom/tmapmobility/tmap/exoplayer2/Format;
-
-    .line 20
-    invoke-static {v1, p6, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->B(Lcom/tmapmobility/tmap/exoplayer2/Format;Ljava/lang/String;Z)I
-
-    move-result p3
-
-    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->l:I
-
-    if-gtz v2, :cond_9
-
-    .line 21
-    iget-object p6, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionParameters;->X0:Lcom/google/common/collect/ImmutableList;
-
-    .line 22
-    invoke-virtual {p6}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result p6
-
-    if-eqz p6, :cond_7
-
-    if-gtz p2, :cond_9
-
-    :cond_7
-    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->g:Z
-
-    if-nez p2, :cond_9
-
-    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->h:Z
-
-    if-eqz p2, :cond_8
-
-    if-lez p3, :cond_8
-
-    goto :goto_7
-
-    :cond_8
-    move p2, p1
-
-    goto :goto_8
-
-    :cond_9
-    :goto_7
-    move p2, v0
-
-    .line 23
-    :goto_8
-    iget-boolean p3, p4, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->R1:Z
-
-    .line 24
-    invoke-static {p5, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector;->K(IZ)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_a
-
-    if-eqz p2, :cond_a
-
-    move p1, v0
-
-    .line 25
-    :cond_a
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->e:I
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
     return-void
 .end method
 
-.method public static c(Ljava/util/List;Ljava/util/List;)I
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;",
-            ">;",
-            "Ljava/util/List<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;",
-            ">;)I"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
-
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->d(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static e(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[ILjava/lang/String;)Lcom/google/common/collect/ImmutableList;
-    .locals 10
-    .param p4    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;",
-            "[I",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/common/collect/ImmutableList<",
-            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 2
-    :goto_0
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;->a:I
-
-    if-ge v1, v2, :cond_0
 
     .line 3
-    new-instance v9, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
-
-    aget v7, p3, v1
-
-    move-object v2, v9
-
-    move v3, p0
-
-    move-object v4, p1
-
-    move v5, v1
-
-    move-object v6, p2
-
-    move-object v8, p4
-
-    invoke-direct/range {v2 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;-><init>(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;ILcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ILjava/lang/String;)V
-
-    invoke-virtual {v0, v9}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;-><init>()V
 
     .line 4
-    :cond_0
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
-    move-result-object p0
+    invoke-direct {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;-><init>(Landroid/content/Context;)V
 
-    return-object p0
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()I
+.method public bridge synthetic A(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->p0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public A0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->e:I
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
-    return v0
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->S0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
 .end method
 
-.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$f;)Z
+.method public bridge synthetic B()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->q0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public B0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->T0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic C(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->r0(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->f(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;)Z
+    move-result-object p1
 
-    move-result p1
-
-    return p1
+    return-object p1
 .end method
 
-.method public bridge synthetic compareTo(Ljava/lang/Object;)I
+.method public C0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->U0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic D()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->s0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public D0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->V0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic E(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->t0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->d(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;)I
+    move-result-object p1
 
-    move-result p1
-
-    return p1
+    return-object p1
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;)I
-    .locals 4
+.method public E0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
 
     .line 1
-    invoke-static {}, Lcom/google/common/collect/ComparisonChain;->start()Lcom/google/common/collect/ComparisonChain;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->W0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
 
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->f:Z
-
-    iget-boolean v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->f:Z
-
-    .line 2
-    invoke-virtual {v0, v1, v2}, Lcom/google/common/collect/ComparisonChain;->compareFalseFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->i:I
-
-    .line 3
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->i:I
-
-    .line 4
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    .line 5
-    invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/google/common/collect/Ordering;->reverse()Lcom/google/common/collect/Ordering;
-
-    move-result-object v3
-
-    .line 6
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/collect/ComparisonChain;->compare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->j:I
-
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->j:I
-
-    .line 7
-    invoke-virtual {v0, v1, v2}, Lcom/google/common/collect/ComparisonChain;->compare(II)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->k:I
-
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->k:I
-
-    .line 8
-    invoke-virtual {v0, v1, v2}, Lcom/google/common/collect/ComparisonChain;->compare(II)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->g:Z
-
-    iget-boolean v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->g:Z
-
-    .line 9
-    invoke-virtual {v0, v1, v2}, Lcom/google/common/collect/ComparisonChain;->compareFalseFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->h:Z
-
-    .line 10
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iget-boolean v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->h:Z
-
-    .line 11
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    .line 12
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->j:I
-
-    if-nez v3, :cond_0
-
-    invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/google/common/collect/Ordering;->reverse()Lcom/google/common/collect/Ordering;
-
-    move-result-object v3
-
-    .line 13
-    :goto_0
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/collect/ComparisonChain;->compare(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->l:I
-
-    iget v2, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->l:I
-
-    .line 14
-    invoke-virtual {v0, v1, v2}, Lcom/google/common/collect/ComparisonChain;->compare(II)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    .line 15
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->k:I
-
-    if-nez v1, :cond_1
-
-    .line 16
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->p:Z
-
-    iget-boolean p1, p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->p:Z
-
-    invoke-virtual {v0, v1, p1}, Lcom/google/common/collect/ComparisonChain;->compareTrueFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
-
-    move-result-object v0
-
-    .line 17
-    :cond_1
-    invoke-virtual {v0}, Lcom/google/common/collect/ComparisonChain;->result()I
-
-    move-result p1
-
-    return p1
+    return-object p0
 .end method
 
-.method public f(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;)Z
+.method public bridge synthetic F()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public F0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->X0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic G()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->y0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public G0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->Y0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public H0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->Z0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public I0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->b1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic J(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
     .locals 0
 
-    const/4 p1, 0x0
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->z0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
 
-    return p1
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public J0(Ljava/util/Set;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Set<",
+            "Ljava/lang/Integer;",
+            ">;)",
+            "Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->c1(Ljava/util/Set;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic K(Ljava/util/Set;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->J0(Ljava/util/Set;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public K0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->d1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic L(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->N0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public L0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->e1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic M(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->O0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public M0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->f1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic N(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->P0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public N0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->g1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic O(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->Q0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public O0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->h1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic P(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->R0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public P0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->i1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic Q(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->S0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public Q0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->j1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic R(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->T0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public R0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->k1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic S(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->U0(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public S0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->l1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic T()Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->V0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public T0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->m1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic U(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->W0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public U0(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->n1(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic V(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->X0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public V0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->o1()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic W(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->Y0(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public W0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->p1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic X(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->Z0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public X0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->q1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic Y(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->a1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public Y0(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->r1(II)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic Z([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->b1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public Z0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->s1(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic a0(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->c1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public a1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->t1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic b0([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->d1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs b1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->u1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic c0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->e1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public c1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->v1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic d0(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->f1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs d1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->w1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic e0(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->g1(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public e1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->x1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public f1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->y1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic g0([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->h1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public g1(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->z1(Landroid/content/Context;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic h0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->i1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs h1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->A1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic i0(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->j1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public i1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->B1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic j0([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->k1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public j1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->C1(Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic k0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->l1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public varargs k1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->D1([Ljava/lang/String;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic l0(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->n1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public l1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->E1(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic m0(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->p1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public m1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic n0(IIZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->r1(IIZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public n1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->G1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic o0(Landroid/content/Context;Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/x$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->s1(Landroid/content/Context;Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public o1(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .param p3    # Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->H1(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public p0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->E0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelectionOverride;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public p1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->J1(IZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public q0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->F0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public q1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->K1(Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public r0(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->G0(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public r1(IIZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->L1(IIZ)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public s0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->H0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public s1(Landroid/content/Context;Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->M1(Landroid/content/Context;Z)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public t0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->I0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public u0(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->J0(ILcom/tmapmobility/tmap/exoplayer2/source/TrackGroupArray;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public v0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->K0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public w0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->L0(I)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public x0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->M0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public y0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->N0()Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
+.end method
+
+.method public z0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$e;->A:Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;->R0(Lcom/tmapmobility/tmap/exoplayer2/trackselection/x;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$d$a;
+
+    return-object p0
 .end method

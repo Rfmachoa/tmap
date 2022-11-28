@@ -3,7 +3,7 @@
 .source "TmapNearActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/mapview/streaming/MapViewStreaming$k;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
@@ -43,31 +43,50 @@
 
 
 # virtual methods
-.method public onComplete(Ljava/lang/String;)V
-    .locals 1
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
+            0x0,
             0x0
         }
         names = {
-            "address"
+            "view",
+            "motionEvent"
         }
     .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNearActivity$i;->a:Lcom/skt/tmap/activity/TmapNearActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->C5(Lcom/skt/tmap/activity/TmapNearActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNearActivity;->S5(Lcom/skt/tmap/activity/TmapNearActivity;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->T(Ljava/lang/String;)V
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public onFail()V
-    .locals 0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/skt/tmap/mapview/streaming/a;
+
+    .line 2
+    invoke-virtual {v1, p1, p2}, Lcom/skt/tmap/mapview/streaming/a;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

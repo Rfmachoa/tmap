@@ -3,7 +3,7 @@
 .source "Lifecycle.kt"
 
 # interfaces
-.implements Lkotlinx/coroutines/n0;
+.implements Lkotlinx/coroutines/p0;
 
 
 # annotations
@@ -14,7 +14,7 @@
     }
     d2 = {
         "Landroidx/lifecycle/LifecycleCoroutineScope;",
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/Function2;",
         "Lkotlin/coroutines/c;",
         "Lkotlin/d1;",
@@ -23,7 +23,7 @@
         "block",
         "Lkotlinx/coroutines/y1;",
         "launchWhenCreated",
-        "(Lej/p;)Lkotlinx/coroutines/y1;",
+        "(Lgl/p;)Lkotlinx/coroutines/y1;",
         "launchWhenStarted",
         "launchWhenResumed",
         "Landroidx/lifecycle/Lifecycle;",
@@ -37,8 +37,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
@@ -60,18 +60,18 @@
     .end annotation
 .end method
 
-.method public final launchWhenCreated(Lej/p;)Lkotlinx/coroutines/y1;
+.method public final launchWhenCreated(Lgl/p;)Lkotlinx/coroutines/y1;
     .locals 7
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-",
@@ -95,7 +95,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {v4, p0, p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope$launchWhenCreated$1;-><init>(Landroidx/lifecycle/LifecycleCoroutineScope;Lej/p;Lkotlin/coroutines/c;)V
+    invoke-direct {v4, p0, p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope$launchWhenCreated$1;-><init>(Landroidx/lifecycle/LifecycleCoroutineScope;Lgl/p;Lkotlin/coroutines/c;)V
 
     const/4 v2, 0x0
 
@@ -107,25 +107,25 @@
 
     move-object v1, p0
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final launchWhenResumed(Lej/p;)Lkotlinx/coroutines/y1;
+.method public final launchWhenResumed(Lgl/p;)Lkotlinx/coroutines/y1;
     .locals 7
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-",
@@ -149,7 +149,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {v4, p0, p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope$launchWhenResumed$1;-><init>(Landroidx/lifecycle/LifecycleCoroutineScope;Lej/p;Lkotlin/coroutines/c;)V
+    invoke-direct {v4, p0, p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope$launchWhenResumed$1;-><init>(Landroidx/lifecycle/LifecycleCoroutineScope;Lgl/p;Lkotlin/coroutines/c;)V
 
     const/4 v2, 0x0
 
@@ -161,25 +161,25 @@
 
     move-object v1, p0
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final launchWhenStarted(Lej/p;)Lkotlinx/coroutines/y1;
+.method public final launchWhenStarted(Lgl/p;)Lkotlinx/coroutines/y1;
     .locals 7
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-",
@@ -203,7 +203,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {v4, p0, p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope$launchWhenStarted$1;-><init>(Landroidx/lifecycle/LifecycleCoroutineScope;Lej/p;Lkotlin/coroutines/c;)V
+    invoke-direct {v4, p0, p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope$launchWhenStarted$1;-><init>(Landroidx/lifecycle/LifecycleCoroutineScope;Lgl/p;Lkotlin/coroutines/c;)V
 
     const/4 v2, 0x0
 
@@ -215,7 +215,7 @@
 
     move-object v1, p0
 
-    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/g;->f(Lkotlinx/coroutines/n0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lej/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
+    invoke-static/range {v1 .. v6}, Lkotlinx/coroutines/i;->e(Lkotlinx/coroutines/p0;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lgl/p;ILjava/lang/Object;)Lkotlinx/coroutines/y1;
 
     move-result-object p1
 

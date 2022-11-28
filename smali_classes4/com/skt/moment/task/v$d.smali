@@ -86,6 +86,14 @@
 
 .method public d(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "age"
+        }
+    .end annotation
 
     .line 1
     iput p1, p0, Lcom/skt/moment/task/v$d;->b:I
@@ -95,6 +103,15 @@
 
 .method public e(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "messages"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -112,6 +129,14 @@
 
 .method public f(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/v$d;->a:Ljava/lang/String;

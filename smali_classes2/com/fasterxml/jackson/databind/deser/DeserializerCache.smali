@@ -11,10 +11,10 @@
 
 
 # instance fields
-.field public final _cachedDeserializers:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final _cachedDeserializers:Lcom/fasterxml/jackson/databind/util/LRUMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/concurrent/ConcurrentHashMap<",
+            "Lcom/fasterxml/jackson/databind/util/LRUMap<",
             "Lcom/fasterxml/jackson/databind/JavaType;",
             "Lcom/fasterxml/jackson/databind/JsonDeserializer<",
             "Ljava/lang/Object;",
@@ -38,23 +38,21 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 4
+    .locals 1
+
+    const/16 v0, 0x7d0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
 
     .line 2
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    const/16 v1, 0x40
-
-    const/high16 v2, 0x3f400000    # 0.75f
-
-    const/4 v3, 0x4
-
-    invoke-direct {v0, v1, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(IFI)V
-
-    iput-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
     new-instance v0, Ljava/util/HashMap;
@@ -65,46 +63,86 @@
 
     iput-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_incompleteDeserializers:Ljava/util/HashMap;
 
+    shr-int/lit8 v0, p1, 0x2
+
+    const/16 v1, 0x40
+
+    .line 4
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    .line 5
+    new-instance v1, Lcom/fasterxml/jackson/databind/util/LRUMap;
+
+    invoke-direct {v1, v0, p1}, Lcom/fasterxml/jackson/databind/util/LRUMap;-><init>(II)V
+
+    iput-object v1, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Lcom/fasterxml/jackson/databind/util/LRUMap;
+
     return-void
 .end method
 
-.method private _hasCustomValueHandler(Lcom/fasterxml/jackson/databind/JavaType;)Z
-    .locals 2
+.method private _hasCustomHandlers(Lcom/fasterxml/jackson/databind/JavaType;)Z
+    .locals 3
 
     .line 1
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->isContainerType()Z
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 2
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getContentType()Lcom/fasterxml/jackson/databind/JavaType;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getValueHandler()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JavaType;->getValueHandler()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/JavaType;->getTypeHandler()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getTypeHandler()Ljava/lang/Object;
+    :cond_0
+    return v1
+
+    .line 4
+    :cond_1
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->isMapLikeType()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 5
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getKeyType()Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    .line 6
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getValueHandler()Ljava/lang/Object;
 
-    :cond_0
-    const/4 v1, 0x1
+    move-result-object p1
 
-    :cond_1
+    if-eqz p1, :cond_2
+
     return v1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method private _verifyAsClass(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
@@ -162,7 +200,7 @@
 
     const-string v1, "() returned value of type "
 
-    invoke-static {v0, p2, v1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p2, v1}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
@@ -238,9 +276,6 @@
     move-result-object p3
 
     .line 8
-    invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/type/MapLikeType;->getKeyType()Lcom/fasterxml/jackson/databind/JavaType;
-
-    .line 9
     :cond_1
     invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/JavaType;->getContentType()Lcom/fasterxml/jackson/databind/JavaType;
 
@@ -248,14 +283,14 @@
 
     if-eqz v1, :cond_4
 
-    .line 10
+    .line 9
     invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/JavaType;->getValueHandler()Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_4
 
-    .line 11
+    .line 10
     invoke-virtual {v0, p2}, Lcom/fasterxml/jackson/databind/AnnotationIntrospector;->findContentDeserializer(Lcom/fasterxml/jackson/databind/introspect/Annotated;)Ljava/lang/Object;
 
     move-result-object v1
@@ -264,17 +299,19 @@
 
     const/4 v2, 0x0
 
-    .line 12
+    .line 11
     instance-of v3, v1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     if-eqz v3, :cond_2
 
-    .line 13
-    check-cast v1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+    .line 12
+    move-object v2, v1
+
+    check-cast v2, Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     goto :goto_0
 
-    .line 14
+    .line 13
     :cond_2
     const-class v3, Lcom/fasterxml/jackson/databind/JsonDeserializer$None;
 
@@ -286,7 +323,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 15
+    .line 14
     invoke-virtual {p1, p2, v1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->deserializerInstance(Lcom/fasterxml/jackson/databind/introspect/Annotated;Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object v2
@@ -295,12 +332,12 @@
     :goto_0
     if-eqz v2, :cond_4
 
-    .line 16
+    .line 15
     invoke-virtual {p3, v2}, Lcom/fasterxml/jackson/databind/JavaType;->withContentValueHandler(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p3
 
-    .line 17
+    .line 16
     :cond_4
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getConfig()Lcom/fasterxml/jackson/databind/DeserializationConfig;
 
@@ -352,42 +389,42 @@
 
     .line 2
     :cond_0
-    instance-of v0, p2, Lcom/fasterxml/jackson/databind/deser/ResolvableDeserializer;
+    invoke-direct {p0, p3}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_hasCustomHandlers(Lcom/fasterxml/jackson/databind/JavaType;)Z
 
-    .line 3
-    invoke-direct {p0, p3}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_hasCustomValueHandler(Lcom/fasterxml/jackson/databind/JavaType;)Z
+    move-result v0
 
-    move-result v1
-
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
     invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/JsonDeserializer;->isCachable()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
+    .line 3
     :goto_0
-    if-eqz v0, :cond_2
+    instance-of v1, p2, Lcom/fasterxml/jackson/databind/deser/ResolvableDeserializer;
+
+    if-eqz v1, :cond_2
 
     .line 4
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_incompleteDeserializers:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_incompleteDeserializers:Ljava/util/HashMap;
 
-    invoke-virtual {v0, p3, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p3, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
-    move-object v0, p2
+    move-object v1, p2
 
-    check-cast v0, Lcom/fasterxml/jackson/databind/deser/ResolvableDeserializer;
+    check-cast v1, Lcom/fasterxml/jackson/databind/deser/ResolvableDeserializer;
 
-    invoke-interface {v0, p1}, Lcom/fasterxml/jackson/databind/deser/ResolvableDeserializer;->resolve(Lcom/fasterxml/jackson/databind/DeserializationContext;)V
+    invoke-interface {v1, p1}, Lcom/fasterxml/jackson/databind/deser/ResolvableDeserializer;->resolve(Lcom/fasterxml/jackson/databind/DeserializationContext;)V
 
     .line 6
     iget-object p1, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_incompleteDeserializers:Ljava/util/HashMap;
@@ -395,12 +432,12 @@
     invoke-virtual {p1, p3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    if-eqz v1, :cond_3
+    if-eqz v0, :cond_3
 
     .line 7
-    iget-object p1, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object p1, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Lcom/fasterxml/jackson/databind/util/LRUMap;
 
-    invoke-virtual {p1, p3, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p3, p2}, Lcom/fasterxml/jackson/databind/util/LRUMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     return-object p2
@@ -409,7 +446,7 @@
     move-exception p2
 
     .line 8
-    invoke-virtual {p2}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-static {p2}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->exceptionMessage(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -537,13 +574,14 @@
 
     invoke-virtual {p2}, Ljava/util/HashMap;->clear()V
 
+    .line 12
     :cond_3
     throw p1
 
     :catchall_1
     move-exception p1
 
-    .line 12
+    .line 13
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -613,6 +651,7 @@
 
     move-result-object v2
 
+    .line 6
     invoke-virtual {p0, p1, v2}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->findDeserializerFromAnnotation(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/introspect/Annotated;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object v2
@@ -621,7 +660,7 @@
 
     return-object v2
 
-    .line 6
+    .line 7
     :cond_2
     invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/BeanDescription;->getClassInfo()Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;
 
@@ -633,14 +672,14 @@
 
     if-eq v2, p3, :cond_3
 
-    .line 7
+    .line 8
     invoke-virtual {v0, v2}, Lcom/fasterxml/jackson/databind/DeserializationConfig;->introspect(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/BeanDescription;
 
     move-result-object v1
 
     move-object p3, v2
 
-    .line 8
+    .line 9
     :cond_3
     invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/BeanDescription;->findPOJOBuilder()Ljava/lang/Class;
 
@@ -648,14 +687,14 @@
 
     if-eqz v2, :cond_4
 
-    .line 9
+    .line 10
     invoke-virtual {p2, p1, p3, v1, v2}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createBuilderBasedDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanDescription;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
     return-object p1
 
-    .line 10
+    .line 11
     :cond_4
     invoke-virtual {v1}, Lcom/fasterxml/jackson/databind/BeanDescription;->findDeserializationConverter()Lcom/fasterxml/jackson/databind/util/Converter;
 
@@ -663,14 +702,14 @@
 
     if-nez v2, :cond_5
 
-    .line 11
+    .line 12
     invoke-virtual {p0, p1, p2, p3, v1}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_createDeserializer2(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
     return-object p1
 
-    .line 12
+    .line 13
     :cond_5
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getTypeFactory()Lcom/fasterxml/jackson/databind/type/TypeFactory;
 
@@ -680,7 +719,7 @@
 
     move-result-object v3
 
-    .line 13
+    .line 14
     invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
 
     move-result-object p3
@@ -691,15 +730,16 @@
 
     if-nez p3, :cond_6
 
-    .line 14
+    .line 15
     invoke-virtual {v0, v3}, Lcom/fasterxml/jackson/databind/DeserializationConfig;->introspect(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/BeanDescription;
 
     move-result-object v1
 
-    .line 15
+    .line 16
     :cond_6
     new-instance p3, Lcom/fasterxml/jackson/databind/deser/std/StdDelegatingDeserializer;
 
+    .line 17
     invoke-virtual {p0, p1, p2, v3, v1}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_createDeserializer2(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
@@ -710,7 +750,7 @@
 .end method
 
 .method public _createDeserializer2(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -755,7 +795,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_5
 
     .line 5
     invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/JavaType;->isArrayType()Z
@@ -779,19 +819,33 @@
 
     move-result v1
 
+    const/4 v2, 0x0
+
     if-eqz v1, :cond_3
 
     .line 8
-    check-cast p3, Lcom/fasterxml/jackson/databind/type/MapLikeType;
+    invoke-virtual {p4, v2}, Lcom/fasterxml/jackson/databind/BeanDescription;->findExpectedFormat(Lcom/fasterxml/jackson/annotation/JsonFormat$Value;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;
+
+    move-result-object v1
 
     .line 9
-    invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/type/MapLikeType;->isTrueMapType()Z
+    invoke-virtual {v1}, Lcom/fasterxml/jackson/annotation/JsonFormat$Value;->getShape()Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    move-result v0
+    move-result-object v1
+
+    sget-object v3, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->OBJECT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
+
+    if-eq v1, v3, :cond_3
+
+    .line 10
+    check-cast p3, Lcom/fasterxml/jackson/databind/type/MapLikeType;
+
+    .line 11
+    instance-of v0, p3, Lcom/fasterxml/jackson/databind/type/MapType;
 
     if-eqz v0, :cond_2
 
-    .line 10
+    .line 12
     check-cast p3, Lcom/fasterxml/jackson/databind/type/MapType;
 
     invoke-virtual {p2, p1, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createMapDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/type/MapType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
@@ -800,7 +854,7 @@
 
     return-object p1
 
-    .line 11
+    .line 13
     :cond_2
     invoke-virtual {p2, p1, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createMapLikeDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/type/MapLikeType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
@@ -808,44 +862,37 @@
 
     return-object p1
 
-    .line 12
+    .line 14
     :cond_3
     invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/JavaType;->isCollectionLikeType()Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_5
 
-    const/4 v1, 0x0
-
-    .line 13
-    invoke-virtual {p4, v1}, Lcom/fasterxml/jackson/databind/BeanDescription;->findExpectedFormat(Lcom/fasterxml/jackson/annotation/JsonFormat$Value;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;
+    .line 15
+    invoke-virtual {p4, v2}, Lcom/fasterxml/jackson/databind/BeanDescription;->findExpectedFormat(Lcom/fasterxml/jackson/annotation/JsonFormat$Value;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
-
-    .line 14
+    .line 16
     invoke-virtual {v1}, Lcom/fasterxml/jackson/annotation/JsonFormat$Value;->getShape()Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
     move-result-object v1
 
     sget-object v2, Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;->OBJECT:Lcom/fasterxml/jackson/annotation/JsonFormat$Shape;
 
-    if-eq v1, v2, :cond_6
-
-    .line 15
-    :cond_4
-    check-cast p3, Lcom/fasterxml/jackson/databind/type/CollectionLikeType;
-
-    .line 16
-    invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/type/CollectionLikeType;->isTrueCollectionType()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
+    if-eq v1, v2, :cond_5
 
     .line 17
+    check-cast p3, Lcom/fasterxml/jackson/databind/type/CollectionLikeType;
+
+    .line 18
+    instance-of v0, p3, Lcom/fasterxml/jackson/databind/type/CollectionType;
+
+    if-eqz v0, :cond_4
+
+    .line 19
     check-cast p3, Lcom/fasterxml/jackson/databind/type/CollectionType;
 
     invoke-virtual {p2, p1, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createCollectionDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/type/CollectionType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
@@ -854,23 +901,23 @@
 
     return-object p1
 
-    .line 18
-    :cond_5
+    .line 20
+    :cond_4
     invoke-virtual {p2, p1, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createCollectionLikeDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/type/CollectionLikeType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
     return-object p1
 
-    .line 19
-    :cond_6
+    .line 21
+    :cond_5
     invoke-virtual {p3}, Lcom/fasterxml/jackson/core/type/ResolvedType;->isReferenceType()Z
 
     move-result v1
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_6
 
-    .line 20
+    .line 22
     check-cast p3, Lcom/fasterxml/jackson/databind/type/ReferenceType;
 
     invoke-virtual {p2, p1, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createReferenceDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/type/ReferenceType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
@@ -879,8 +926,8 @@
 
     return-object p1
 
-    .line 21
-    :cond_7
+    .line 23
+    :cond_6
     const-class v1, Lcom/fasterxml/jackson/databind/JsonNode;
 
     invoke-virtual {p3}, Lcom/fasterxml/jackson/databind/JavaType;->getRawClass()Ljava/lang/Class;
@@ -891,17 +938,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
-    .line 22
+    .line 24
     invoke-virtual {p2, v0, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createTreeDeserializer(Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
 
     return-object p1
 
-    .line 23
-    :cond_8
+    .line 25
+    :cond_7
     invoke-virtual {p2, p1, p3, p4}, Lcom/fasterxml/jackson/databind/deser/DeserializerFactory;->createBeanDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
 
     move-result-object p1
@@ -925,7 +972,7 @@
     if-eqz p1, :cond_1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_hasCustomValueHandler(Lcom/fasterxml/jackson/databind/JavaType;)Z
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_hasCustomHandlers(Lcom/fasterxml/jackson/databind/JavaType;)Z
 
     move-result v0
 
@@ -937,9 +984,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Lcom/fasterxml/jackson/databind/util/LRUMap;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/util/LRUMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -971,7 +1018,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Can not find a (Map) Key deserializer for type "
+    const-string v1, "Cannot find a (Map) Key deserializer for type "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -979,13 +1026,15 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonMappingException;->from(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->reportBadDefinition(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Lcom/fasterxml/jackson/databind/KeyDeserializer;
+
+    return-object p1
 .end method
 
 .method public _handleUnknownValueDeserializer(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JsonDeserializer;
@@ -1025,7 +1074,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Can not find a Value deserializer for abstract type "
+    const-string v1, "Cannot find a Value deserializer for abstract type "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1033,13 +1082,15 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonMappingException;->from(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->reportBadDefinition(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    return-object p1
 
     .line 4
     :cond_0
@@ -1047,7 +1098,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Can not find a Value deserializer for type "
+    const-string v1, "Cannot find a Value deserializer for type "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1055,22 +1106,24 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-static {p1, p2}, Lcom/fasterxml/jackson/databind/JsonMappingException;->from(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->reportBadDefinition(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Lcom/fasterxml/jackson/databind/JsonDeserializer;
+
+    return-object p1
 .end method
 
 .method public cachedDeserializersCount()I
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Lcom/fasterxml/jackson/databind/util/LRUMap;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/util/LRUMap;->size()I
 
     move-result v0
 
@@ -1307,9 +1360,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/deser/DeserializerCache;->_cachedDeserializers:Lcom/fasterxml/jackson/databind/util/LRUMap;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/util/LRUMap;->clear()V
 
     return-void
 .end method

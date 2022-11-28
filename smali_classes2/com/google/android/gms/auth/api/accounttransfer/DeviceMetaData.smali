@@ -1,5 +1,6 @@
 .class public Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # annotations
@@ -10,6 +11,9 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -21,30 +25,30 @@
 
 
 # instance fields
-.field private zzbs:Z
+.field public final zza:I
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
+        id = 0x1
+    .end annotation
+.end field
+
+.field private zzb:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isLockScreenSolved"
         id = 0x2
     .end annotation
 .end field
 
-.field private zzbt:J
+.field private zzc:J
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getMinAgeOfLockScreen"
         id = 0x3
     .end annotation
 .end field
 
-.field private final zzbu:Z
+.field private final zzd:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isChallengeAllowed"
         id = 0x4
-    .end annotation
-.end field
-
-.field private final zzv:I
-    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
-        id = 0x1
     .end annotation
 .end field
 
@@ -53,10 +57,9 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    new-instance v0, Lcom/google/android/gms/auth/api/accounttransfer/zzv;
+    new-instance v0, Lcom/google/android/gms/auth/api/accounttransfer/zzy;
 
-    invoke-direct {v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzv;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzy;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -91,17 +94,13 @@
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    .line 2
-    iput p1, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzv:I
+    iput p1, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zza:I
 
-    .line 3
-    iput-boolean p2, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzbs:Z
+    iput-boolean p2, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzb:Z
 
-    .line 4
-    iput-wide p3, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzbt:J
+    iput-wide p3, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzc:J
 
-    .line 5
-    iput-boolean p5, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzbu:Z
+    iput-boolean p5, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzd:Z
 
     return-void
 .end method
@@ -111,8 +110,7 @@
 .method public getMinAgeOfLockScreen()J
     .locals 2
 
-    .line 1
-    iget-wide v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzbt:J
+    iget-wide v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzc:J
 
     return-wide v0
 .end method
@@ -120,8 +118,7 @@
 .method public isChallengeAllowed()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzbu:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzd:Z
 
     return v0
 .end method
@@ -129,25 +126,28 @@
 .method public isLockScreenSolved()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzbs:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzb:Z
 
     return v0
 .end method
 
-.method public writeToParcel(Landroid/os/Parcel;I)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    .line 2
-    iget v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zzv:I
+    iget v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/DeviceMetaData;->zza:I
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     .line 3

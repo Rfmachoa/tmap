@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/Fragment;->startPostponedEnterTransition()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/fragment/app/Fragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,14 +36,12 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
     .line 1
     iget-object v0, p0, Landroidx/fragment/app/Fragment$b;->a:Landroidx/fragment/app/Fragment;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->callStartTransitionListener(Z)V
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->startPostponedEnterTransition()V
 
     return-void
 .end method

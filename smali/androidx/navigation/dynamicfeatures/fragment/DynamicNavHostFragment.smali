@@ -19,9 +19,9 @@
         "Landroidx/navigation/NavController;",
         "navController",
         "Lkotlin/d1;",
-        "m",
+        "o",
         "Lcom/google/android/play/core/splitinstall/SplitInstallManager;",
-        "n",
+        "q",
         "<init>",
         "()V",
         "navigation-dynamic-features-fragment_release"
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public m(Landroidx/navigation/NavController;)V
+.method public o(Landroidx/navigation/NavController;)V
     .locals 7
     .param p1    # Landroidx/navigation/NavController;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -59,10 +59,10 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/navigation/fragment/NavHostFragment;->m(Landroidx/navigation/NavController;)V
+    invoke-super {p0, p1}, Landroidx/navigation/fragment/NavHostFragment;->o(Landroidx/navigation/NavController;)V
 
     .line 2
-    new-instance v0, Lu2/k;
+    new-instance v0, Lq3/j;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
@@ -72,14 +72,14 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment;->n()Lcom/google/android/play/core/splitinstall/SplitInstallManager;
+    invoke-virtual {p0}, Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment;->q()Lcom/google/android/play/core/splitinstall/SplitInstallManager;
 
     move-result-object v3
 
-    invoke-direct {v0, v1, v3}, Lu2/k;-><init>(Landroid/content/Context;Lcom/google/android/play/core/splitinstall/SplitInstallManager;)V
+    invoke-direct {v0, v1, v3}, Lq3/j;-><init>(Landroid/content/Context;Lcom/google/android/play/core/splitinstall/SplitInstallManager;)V
 
     .line 3
-    invoke-virtual {p1}, Landroidx/navigation/NavController;->o()Landroidx/navigation/q0;
+    invoke-virtual {p1}, Landroidx/navigation/NavController;->N()Landroidx/navigation/r0;
 
     move-result-object v1
 
@@ -88,7 +88,7 @@
     invoke-static {v1, v3}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
-    new-instance v3, Lu2/b;
+    new-instance v3, Lq3/b;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -98,10 +98,10 @@
 
     invoke-static {v4, v5}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v3, v4, v0}, Lu2/b;-><init>(Landroid/content/Context;Lu2/k;)V
+    invoke-direct {v3, v4, v0}, Lq3/b;-><init>(Landroid/content/Context;Lq3/j;)V
 
     .line 5
-    invoke-virtual {v1, v3}, Landroidx/navigation/q0;->a(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
+    invoke-virtual {v1, v3}, Landroidx/navigation/r0;->b(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
 
     .line 6
     new-instance v3, Landroidx/navigation/dynamicfeatures/fragment/a;
@@ -126,28 +126,28 @@
     move-result v6
 
     .line 8
-    invoke-direct {v3, v4, v5, v6, v0}, Landroidx/navigation/dynamicfeatures/fragment/a;-><init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILu2/k;)V
+    invoke-direct {v3, v4, v5, v6, v0}, Landroidx/navigation/dynamicfeatures/fragment/a;-><init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILq3/j;)V
 
     .line 9
-    invoke-virtual {v1, v3}, Landroidx/navigation/q0;->a(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
+    invoke-virtual {v1, v3}, Landroidx/navigation/r0;->b(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
 
     .line 10
-    new-instance v4, Lu2/f;
+    new-instance v4, Lq3/f;
 
-    invoke-direct {v4, v1, v0}, Lu2/f;-><init>(Landroidx/navigation/q0;Lu2/k;)V
+    invoke-direct {v4, v1, v0}, Lq3/f;-><init>(Landroidx/navigation/r0;Lq3/j;)V
 
     .line 11
     new-instance v5, Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment$onCreateNavController$1;
 
     invoke-direct {v5, v3}, Landroidx/navigation/dynamicfeatures/fragment/DynamicNavHostFragment$onCreateNavController$1;-><init>(Landroidx/navigation/dynamicfeatures/fragment/a;)V
 
-    invoke-virtual {v4, v5}, Lu2/f;->l(Lej/a;)V
+    invoke-virtual {v4, v5}, Lq3/f;->r(Lgl/a;)V
 
     .line 12
-    invoke-virtual {v1, v4}, Landroidx/navigation/q0;->a(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
+    invoke-virtual {v1, v4}, Landroidx/navigation/r0;->b(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
 
     .line 13
-    new-instance v3, Lu2/h;
+    new-instance v3, Lq3/g;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
@@ -156,7 +156,7 @@
     invoke-static {v4, v2}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-virtual {p1}, Landroidx/navigation/NavController;->n()Landroidx/navigation/i0;
+    invoke-virtual {p1}, Landroidx/navigation/NavController;->M()Landroidx/navigation/j0;
 
     move-result-object p1
 
@@ -165,15 +165,15 @@
     invoke-static {p1, v2}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    invoke-direct {v3, v4, v1, p1, v0}, Lu2/h;-><init>(Landroid/content/Context;Landroidx/navigation/q0;Landroidx/navigation/i0;Lu2/k;)V
+    invoke-direct {v3, v4, v1, p1, v0}, Lq3/g;-><init>(Landroid/content/Context;Landroidx/navigation/r0;Landroidx/navigation/j0;Lq3/j;)V
 
     .line 16
-    invoke-virtual {v1, v3}, Landroidx/navigation/q0;->a(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
+    invoke-virtual {v1, v3}, Landroidx/navigation/r0;->b(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
 
     return-void
 .end method
 
-.method public n()Lcom/google/android/play/core/splitinstall/SplitInstallManager;
+.method public q()Lcom/google/android/play/core/splitinstall/SplitInstallManager;
     .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation

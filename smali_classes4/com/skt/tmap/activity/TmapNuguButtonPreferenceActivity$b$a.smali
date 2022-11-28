@@ -51,7 +51,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity$b;->a:Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;->A5(Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;->L5(Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity$b$a;->a:Lcom/skt/tmap/activity/TmapNuguButtonPreferenceActivity$b;
@@ -62,13 +62,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.nugubutton_connect"
+    const-string v1, "tap.nugubutton_connect"
 
-    invoke-virtual {v0, v1}, Ldc/d;->S(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lbe/e;->T(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -38,37 +38,37 @@
     return-void
 .end method
 
-.method public static synthetic a(Lr1/i;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
+.method public static synthetic a(Landroidx/core/util/k;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
     .locals 0
 
-    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->lambda$resolvePredicates$2(Lr1/i;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
+    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->lambda$resolvePredicates$2(Landroidx/core/util/k;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic b(Ljava/util/Map$Entry;)Lr1/i;
+.method public static synthetic b(Ljava/util/Map$Entry;)Landroidx/core/util/k;
     .locals 0
 
-    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->lambda$resolvePredicates$0(Ljava/util/Map$Entry;)Lr1/i;
+    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->lambda$resolvePredicates$0(Ljava/util/Map$Entry;)Landroidx/core/util/k;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic c(Lr1/i;)Ljava/lang/String;
+.method public static synthetic c(Landroidx/core/util/k;)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->lambda$resolvePredicates$1(Lr1/i;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/amplifyframework/datastore/syncengine/QueryPredicateProvider;->lambda$resolvePredicates$1(Landroidx/core/util/k;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$resolvePredicates$0(Ljava/util/Map$Entry;)Lr1/i;
+.method private static synthetic lambda$resolvePredicates$0(Ljava/util/Map$Entry;)Landroidx/core/util/k;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -91,14 +91,14 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lr1/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Lr1/i;
+    invoke-static {v0, p0}, Landroidx/core/util/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/k;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$resolvePredicates$1(Lr1/i;)Ljava/lang/String;
+.method private static synthetic lambda$resolvePredicates$1(Landroidx/core/util/k;)Ljava/lang/String;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -107,14 +107,14 @@
     .end annotation
 
     .line 1
-    iget-object p0, p0, Lr1/i;->a:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/core/util/k;->a:Ljava/lang/Object;
 
     check-cast p0, Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$resolvePredicates$2(Lr1/i;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
+.method private static synthetic lambda$resolvePredicates$2(Landroidx/core/util/k;)Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -123,7 +123,7 @@
     .end annotation
 
     .line 1
-    iget-object p0, p0, Lr1/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
 
@@ -195,14 +195,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lai/g0;->c3(Ljava/lang/Iterable;)Lai/g0;
+    invoke-static {v0}, Lek/g0;->fromIterable(Ljava/lang/Iterable;)Lek/g0;
 
     move-result-object v0
 
     sget-object v2, Lcom/amplifyframework/datastore/syncengine/q1;->a:Lcom/amplifyframework/datastore/syncengine/q1;
 
     .line 5
-    invoke-virtual {v0, v2}, Lai/g0;->V3(Lci/o;)Lai/g0;
+    invoke-virtual {v0, v2}, Lek/g0;->map(Lgk/o;)Lek/g0;
 
     move-result-object v0
 
@@ -211,12 +211,12 @@
     sget-object v3, Lcom/amplifyframework/datastore/syncengine/o1;->a:Lcom/amplifyframework/datastore/syncengine/o1;
 
     .line 6
-    invoke-virtual {v0, v2, v3}, Lai/g0;->F7(Lci/o;Lci/o;)Lai/p0;
+    invoke-virtual {v0, v2, v3}, Lek/g0;->toMap(Lgk/o;Lgk/o;)Lek/p0;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0}, Lai/p0;->h()Ljava/lang/Object;
+    invoke-virtual {v0}, Lek/p0;->h()Ljava/lang/Object;
 
     move-result-object v0
 

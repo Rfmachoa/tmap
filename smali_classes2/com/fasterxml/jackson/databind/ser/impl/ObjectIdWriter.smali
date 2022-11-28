@@ -67,7 +67,7 @@
 .end method
 
 .method public static construct(Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/PropertyName;Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;Z)Lcom/fasterxml/jackson/databind/ser/impl/ObjectIdWriter;
-    .locals 0
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -79,9 +79,11 @@
         }
     .end annotation
 
+    const/4 v0, 0x0
+
     if-nez p1, :cond_0
 
-    const/4 p1, 0x0
+    move-object p1, v0
 
     goto :goto_0
 
@@ -91,49 +93,21 @@
 
     move-result-object p1
 
-    .line 2
     :goto_0
-    invoke-static {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/ser/impl/ObjectIdWriter;->construct(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/String;Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;Z)Lcom/fasterxml/jackson/databind/ser/impl/ObjectIdWriter;
+    if-nez p1, :cond_1
 
-    move-result-object p0
+    goto :goto_1
 
-    return-object p0
-.end method
-
-.method public static construct(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/String;Lcom/fasterxml/jackson/annotation/ObjectIdGenerator;Z)Lcom/fasterxml/jackson/databind/ser/impl/ObjectIdWriter;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/fasterxml/jackson/databind/JavaType;",
-            "Ljava/lang/String;",
-            "Lcom/fasterxml/jackson/annotation/ObjectIdGenerator<",
-            "*>;Z)",
-            "Lcom/fasterxml/jackson/databind/ser/impl/ObjectIdWriter;"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    move-object v3, p1
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
+    .line 2
+    :cond_1
     new-instance v0, Lcom/fasterxml/jackson/core/io/SerializedString;
 
     invoke-direct {v0, p1}, Lcom/fasterxml/jackson/core/io/SerializedString;-><init>(Ljava/lang/String;)V
 
+    :goto_1
     move-object v3, v0
 
-    .line 4
-    :goto_0
+    .line 3
     new-instance p1, Lcom/fasterxml/jackson/databind/ser/impl/ObjectIdWriter;
 
     const/4 v5, 0x0

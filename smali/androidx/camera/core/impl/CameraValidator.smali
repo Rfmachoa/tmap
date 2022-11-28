@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
@@ -25,13 +29,13 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lx/t;Landroidx/camera/core/CameraSelector;)V
+.method public static a(Landroid/content/Context;Lb0/b0;Landroidx/camera/core/CameraSelector;)V
     .locals 4
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lx/t;
+    .param p1    # Lb0/b0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -39,19 +43,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "cameraRepository",
-            "availableCamerasSelector"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
@@ -73,7 +64,7 @@
     const-string p0, "No lens facing info in the availableCamerasSelector, don\'t verify the camera lens facing."
 
     .line 2
-    invoke-static {v0, p0}, Landroidx/camera/core/x1;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -85,7 +76,7 @@
     const-string p1, "Cannot get lens facing from the availableCamerasSelector don\'t verify the camera lens facing."
 
     .line 3
-    invoke-static {v0, p1, p0}, Landroidx/camera/core/x1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1, p0}, Landroidx/camera/core/u1;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -114,7 +105,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -146,7 +137,7 @@
     :cond_2
     sget-object v2, Landroidx/camera/core/CameraSelector;->e:Landroidx/camera/core/CameraSelector;
 
-    invoke-virtual {p1}, Lx/t;->f()Ljava/util/LinkedHashSet;
+    invoke-virtual {p1}, Lb0/b0;->f()Ljava/util/LinkedHashSet;
 
     move-result-object v3
 
@@ -175,7 +166,7 @@
     :cond_4
     sget-object p0, Landroidx/camera/core/CameraSelector;->d:Landroidx/camera/core/CameraSelector;
 
-    invoke-virtual {p1}, Lx/t;->f()Ljava/util/LinkedHashSet;
+    invoke-virtual {p1}, Lb0/b0;->f()Ljava/util/LinkedHashSet;
 
     move-result-object p2
 
@@ -197,7 +188,7 @@
     move-result-object p2
 
     .line 13
-    invoke-virtual {p1}, Lx/t;->f()Ljava/util/LinkedHashSet;
+    invoke-virtual {p1}, Lb0/b0;->f()Ljava/util/LinkedHashSet;
 
     move-result-object p1
 
@@ -208,7 +199,7 @@
     move-result-object p1
 
     .line 14
-    invoke-static {v0, p1}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroidx/camera/core/u1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
     new-instance p1, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;

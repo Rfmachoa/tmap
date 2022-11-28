@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferStatusCodes;
 .super Lcom/google/android/gms/common/api/CommonStatusCodes;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # static fields
@@ -26,6 +27,8 @@
 
 .method public static getStatusCodeString(I)Ljava/lang/String;
     .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     packed-switch p0, :pswitch_data_0
 

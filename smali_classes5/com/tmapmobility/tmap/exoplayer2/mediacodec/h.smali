@@ -63,7 +63,7 @@
     .locals 2
 
     .line 1
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->e1:I
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->g1:I
 
     int-to-long v0, p1
 
@@ -157,7 +157,7 @@
 
     .line 7
     :cond_2
-    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/audio/x;->m(I)I
+    invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/audio/w;->m(I)I
 
     move-result v0
 
@@ -183,7 +183,7 @@
     const-string v0, "MPEG audio header is invalid."
 
     .line 11
-    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     iget-wide p1, p2, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;->f:J
@@ -192,7 +192,7 @@
 
     .line 13
     :cond_3
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->e1:I
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/Format;->g1:I
 
     int-to-long p1, p1
 

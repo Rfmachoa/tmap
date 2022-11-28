@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .super Lcom/google/android/gms/common/api/PendingResult;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -29,14 +29,6 @@
 
 # static fields
 .field public static final zaa:Ljava/lang/ThreadLocal;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ThreadLocal<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public static final synthetic zad:I
 
@@ -56,25 +48,10 @@
 .field public final zab:Lcom/google/android/gms/common/api/internal/BasePendingResult$CallbackHandler;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/BasePendingResult$CallbackHandler<",
-            "TR;>;"
-        }
-    .end annotation
 .end field
 
 .field public final zac:Ljava/lang/ref/WeakReference;
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            ">;"
-        }
     .end annotation
 .end field
 
@@ -83,45 +60,16 @@
 .field private final zaf:Ljava/util/concurrent/CountDownLatch;
 
 .field private final zag:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/PendingResult$StatusListener;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zah:Lcom/google/android/gms/common/api/ResultCallback;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/ResultCallback<",
-            "-TR;>;"
-        }
-    .end annotation
 .end field
 
 .field private final zai:Ljava/util/concurrent/atomic/AtomicReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lcom/google/android/gms/common/api/internal/zadb;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zaj:Lcom/google/android/gms/common/api/Result;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TR;"
-        }
     .end annotation
 .end field
 
@@ -139,13 +87,6 @@
 .end field
 
 .field private volatile zap:Lcom/google/android/gms/common/api/internal/zada;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/zada<",
-            "TR;>;"
-        }
-    .end annotation
-.end field
 
 .field private zaq:Z
 
@@ -449,11 +390,6 @@
 
 .method private final zaa()Lcom/google/android/gms/common/api/Result;
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TR;"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zae:Ljava/lang/Object;
@@ -537,11 +473,6 @@
 
 .method private final zab(Lcom/google/android/gms/common/api/Result;)V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;)V"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zaj:Lcom/google/android/gms/common/api/Result;

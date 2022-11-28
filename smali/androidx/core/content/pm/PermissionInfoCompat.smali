@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/core/content/pm/PermissionInfoCompat$a;,
         Landroidx/core/content/pm/PermissionInfoCompat$ProtectionFlags;,
         Landroidx/core/content/pm/PermissionInfoCompat$Protection;
     }
@@ -42,7 +43,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/content/pm/PermissionInfo;->getProtection()I
+    invoke-static {p0}, Landroidx/core/content/pm/PermissionInfoCompat$a;->a(Landroid/content/pm/PermissionInfo;)I
 
     move-result p0
 
@@ -77,7 +78,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Landroid/content/pm/PermissionInfo;->getProtectionFlags()I
+    invoke-static {p0}, Landroidx/core/content/pm/PermissionInfoCompat$a;->b(Landroid/content/pm/PermissionInfo;)I
 
     move-result p0
 

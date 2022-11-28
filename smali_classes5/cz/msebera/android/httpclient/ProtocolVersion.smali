@@ -34,7 +34,7 @@
     const-string v0, "Protocol name"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -45,14 +45,14 @@
     const-string p1, "Protocol minor version"
 
     .line 3
-    invoke-static {p2, p1}, Lqg/a;->f(ILjava/lang/String;)I
+    invoke-static {p2, p1}, Lui/a;->f(ILjava/lang/String;)I
 
     move-result p2
 
     iput p2, p0, Lcz/msebera/android/httpclient/ProtocolVersion;->major:I
 
     .line 4
-    invoke-static {p3, p1}, Lqg/a;->f(ILjava/lang/String;)I
+    invoke-static {p3, p1}, Lui/a;->f(ILjava/lang/String;)I
 
     move-result p1
 
@@ -85,7 +85,7 @@
     const-string v0, "Protocol version"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     iget-object v0, p0, Lcz/msebera/android/httpclient/ProtocolVersion;->protocol:Ljava/lang/String;
@@ -110,7 +110,7 @@
 
     const-string v2, "Versions for different protocols cannot be compared: %s %s"
 
-    invoke-static {v0, v2, v1}, Lqg/a;->b(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v1}, Lui/a;->b(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     .line 3
     invoke-virtual {p0}, Lcz/msebera/android/httpclient/ProtocolVersion;->getMajor()I

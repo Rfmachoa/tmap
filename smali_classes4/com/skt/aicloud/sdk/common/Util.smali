@@ -345,7 +345,7 @@
     :cond_0
     if-eqz p6, :cond_1
 
-    const-string/jumbo p1, "text_status"
+    const-string p1, "text_status"
 
     .line 12
     invoke-virtual {p0, p1, p6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;

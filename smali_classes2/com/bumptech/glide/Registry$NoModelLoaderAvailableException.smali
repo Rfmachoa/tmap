@@ -106,7 +106,7 @@
             "Ljava/lang/Object;",
             ">(TM;",
             "Ljava/util/List<",
-            "Lz4/n<",
+            "Lw6/n<",
             "TM;*>;>;)V"
         }
     .end annotation

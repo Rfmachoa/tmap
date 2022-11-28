@@ -3,7 +3,7 @@
 .source "AudioAttributesCompat.java"
 
 # interfaces
-.implements Lj3/d;
+.implements Lr4/d;
 
 
 # annotations
@@ -349,7 +349,7 @@
 
     const-string v0, " in audio attributes"
 
-    invoke-static {p1, p2, v0}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2, v0}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

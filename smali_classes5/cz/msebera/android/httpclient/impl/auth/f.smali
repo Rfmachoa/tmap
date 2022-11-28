@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public final a(Lef/c;Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+.method public final a(Lih/c;Lih/j;Lhh/q;Lti/g;)Lhh/d;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -56,14 +56,14 @@
     .end annotation
 
     .line 1
-    instance-of v0, p1, Lef/i;
+    instance-of v0, p1, Lih/i;
 
     if-eqz v0, :cond_0
 
     .line 2
-    check-cast p1, Lef/i;
+    check-cast p1, Lih/i;
 
-    invoke-interface {p1, p2, p3, p4}, Lef/i;->c(Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+    invoke-interface {p1, p2, p3, p4}, Lih/i;->c(Lih/j;Lhh/q;Lti/g;)Lhh/d;
 
     move-result-object p1
 
@@ -71,25 +71,25 @@
 
     .line 3
     :cond_0
-    invoke-interface {p1, p2, p3}, Lef/c;->b(Lef/j;Ldf/q;)Ldf/d;
+    invoke-interface {p1, p2, p3}, Lih/c;->a(Lih/j;Lhh/q;)Lhh/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final b(Lef/c;)V
+.method public final b(Lih/c;)V
     .locals 1
 
     const-string v0, "Auth scheme"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/b;->e(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lui/b;->e(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public c(Ldf/q;Lef/h;Lpg/g;)V
+.method public c(Lhh/q;Lih/h;Lti/g;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -99,19 +99,19 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p2}, Lef/h;->b()Lef/c;
+    invoke-virtual {p2}, Lih/h;->b()Lih/c;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p2}, Lef/h;->d()Lef/j;
+    invoke-virtual {p2}, Lih/h;->d()Lih/j;
 
     move-result-object v1
 
     .line 3
     sget-object v2, Lcz/msebera/android/httpclient/impl/auth/f$a;->a:[I
 
-    invoke-virtual {p2}, Lef/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
+    invoke-virtual {p2}, Lih/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
     move-result-object v3
 
@@ -142,10 +142,10 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/f;->b(Lef/c;)V
+    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/f;->b(Lih/c;)V
 
     .line 5
-    invoke-interface {v0}, Lef/c;->isConnectionBased()Z
+    invoke-interface {v0}, Lih/c;->isConnectionBased()Z
 
     move-result p2
 
@@ -155,7 +155,7 @@
 
     .line 6
     :cond_2
-    invoke-virtual {p2}, Lef/h;->a()Ljava/util/Queue;
+    invoke-virtual {p2}, Lih/h;->a()Ljava/util/Queue;
 
     move-result-object v2
 
@@ -175,20 +175,20 @@
 
     move-result-object v0
 
-    check-cast v0, Lef/b;
+    check-cast v0, Lih/b;
 
     .line 9
-    invoke-virtual {v0}, Lef/b;->a()Lef/c;
+    invoke-virtual {v0}, Lih/b;->a()Lih/c;
 
     move-result-object v1
 
     .line 10
-    invoke-virtual {v0}, Lef/b;->b()Lef/j;
+    invoke-virtual {v0}, Lih/b;->b()Lih/j;
 
     move-result-object v0
 
     .line 11
-    invoke-virtual {p2, v1, v0}, Lef/h;->n(Lef/c;Lef/j;)V
+    invoke-virtual {p2, v1, v0}, Lih/h;->n(Lih/c;Lih/j;)V
 
     .line 12
     iget-object v3, p0, Lcz/msebera/android/httpclient/impl/auth/f;->a:Lcz/msebera/android/httpclient/extras/b;
@@ -209,7 +209,7 @@
     move-result-object v5
 
     .line 14
-    invoke-interface {v1}, Lef/c;->getSchemeName()Ljava/lang/String;
+    invoke-interface {v1}, Lih/c;->getSchemeName()Ljava/lang/String;
 
     move-result-object v6
 
@@ -229,12 +229,12 @@
     .line 16
     :cond_4
     :try_start_0
-    invoke-virtual {p0, v1, v0, p1, p3}, Lcz/msebera/android/httpclient/impl/auth/f;->a(Lef/c;Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+    invoke-virtual {p0, v1, v0, p1, p3}, Lcz/msebera/android/httpclient/impl/auth/f;->a(Lih/c;Lih/j;Lhh/q;Lti/g;)Lhh/d;
 
     move-result-object v0
 
     .line 17
-    invoke-interface {p1, v0}, Ldf/p;->G(Ldf/d;)V
+    invoke-interface {p1, v0}, Lhh/p;->d(Lhh/d;)V
     :try_end_0
     .catch Lcz/msebera/android/httpclient/auth/AuthenticationException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -283,7 +283,7 @@
 
     .line 20
     :cond_6
-    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/f;->b(Lef/c;)V
+    invoke-virtual {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/f;->b(Lih/c;)V
 
     :cond_7
     :goto_2
@@ -291,12 +291,12 @@
 
     .line 21
     :try_start_1
-    invoke-virtual {p0, v0, v1, p1, p3}, Lcz/msebera/android/httpclient/impl/auth/f;->a(Lef/c;Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+    invoke-virtual {p0, v0, v1, p1, p3}, Lcz/msebera/android/httpclient/impl/auth/f;->a(Lih/c;Lih/j;Lhh/q;Lti/g;)Lhh/d;
 
     move-result-object p2
 
     .line 22
-    invoke-interface {p1, p2}, Ldf/p;->G(Ldf/d;)V
+    invoke-interface {p1, p2}, Lhh/p;->d(Lhh/d;)V
     :try_end_1
     .catch Lcz/msebera/android/httpclient/auth/AuthenticationException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -342,7 +342,7 @@
     return-void
 .end method
 
-.method public d(Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lgf/c;Lef/h;Lpg/g;)Z
+.method public d(Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lkh/c;Lih/h;Lti/g;)Z
     .locals 6
 
     const/4 v0, 0x0
@@ -382,7 +382,7 @@
 
     .line 3
     :cond_0
-    invoke-interface {p3, p1, p2, p5}, Lgf/c;->c(Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lpg/g;)Ljava/util/Map;
+    invoke-interface {p3, p1, p2, p5}, Lkh/c;->c(Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lti/g;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -404,14 +404,14 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p4}, Lef/h;->b()Lef/c;
+    invoke-virtual {p4}, Lih/h;->b()Lih/c;
 
     move-result-object v2
 
     .line 7
     sget-object v3, Lcz/msebera/android/httpclient/impl/auth/f$a;->a:[I
 
-    invoke-virtual {p4}, Lef/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
+    invoke-virtual {p4}, Lih/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
     move-result-object v4
 
@@ -448,7 +448,7 @@
 
     .line 8
     :cond_3
-    invoke-virtual {p4}, Lef/h;->i()V
+    invoke-virtual {p4}, Lih/h;->i()V
 
     goto :goto_0
 
@@ -465,15 +465,15 @@
     const/4 p2, 0x0
 
     .line 10
-    invoke-interface {p3, p1, p2, p5}, Lgf/c;->d(Lcz/msebera/android/httpclient/HttpHost;Lef/c;Lpg/g;)V
+    invoke-interface {p3, p1, p2, p5}, Lkh/c;->e(Lcz/msebera/android/httpclient/HttpHost;Lih/c;Lti/g;)V
 
     .line 11
-    invoke-virtual {p4}, Lef/h;->i()V
+    invoke-virtual {p4}, Lih/h;->i()V
 
     .line 12
     sget-object p1, Lcz/msebera/android/httpclient/auth/AuthProtocolState;->FAILURE:Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
-    invoke-virtual {p4, p1}, Lef/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
+    invoke-virtual {p4, p1}, Lih/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
 
     return v0
 
@@ -481,7 +481,7 @@
     if-eqz v2, :cond_8
 
     .line 13
-    invoke-interface {v2}, Lef/c;->getSchemeName()Ljava/lang/String;
+    invoke-interface {v2}, Lih/c;->getSchemeName()Ljava/lang/String;
 
     move-result-object v3
 
@@ -496,7 +496,7 @@
 
     move-result-object v3
 
-    check-cast v3, Ldf/d;
+    check-cast v3, Lhh/d;
 
     if-eqz v3, :cond_7
 
@@ -508,10 +508,10 @@
     invoke-virtual {p2, v1}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
 
     .line 16
-    invoke-interface {v2, v3}, Lef/c;->a(Ldf/d;)V
+    invoke-interface {v2, v3}, Lih/c;->b(Lhh/d;)V
 
     .line 17
-    invoke-interface {v2}, Lef/c;->isComplete()Z
+    invoke-interface {v2}, Lih/c;->isComplete()Z
 
     move-result p2
 
@@ -525,19 +525,19 @@
     invoke-virtual {p2, v1}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
 
     .line 19
-    invoke-virtual {p4}, Lef/h;->b()Lef/c;
+    invoke-virtual {p4}, Lih/h;->b()Lih/c;
 
     move-result-object p2
 
-    invoke-interface {p3, p1, p2, p5}, Lgf/c;->d(Lcz/msebera/android/httpclient/HttpHost;Lef/c;Lpg/g;)V
+    invoke-interface {p3, p1, p2, p5}, Lkh/c;->e(Lcz/msebera/android/httpclient/HttpHost;Lih/c;Lti/g;)V
 
     .line 20
-    invoke-virtual {p4}, Lef/h;->i()V
+    invoke-virtual {p4}, Lih/h;->i()V
 
     .line 21
     sget-object p1, Lcz/msebera/android/httpclient/auth/AuthProtocolState;->FAILURE:Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
-    invoke-virtual {p4, p1}, Lef/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
+    invoke-virtual {p4, p1}, Lih/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
 
     return v0
 
@@ -545,18 +545,18 @@
     :cond_6
     sget-object p1, Lcz/msebera/android/httpclient/auth/AuthProtocolState;->HANDSHAKE:Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
-    invoke-virtual {p4, p1}, Lef/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
+    invoke-virtual {p4, p1}, Lih/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
 
     return v4
 
     .line 23
     :cond_7
-    invoke-virtual {p4}, Lef/h;->i()V
+    invoke-virtual {p4}, Lih/h;->i()V
 
     .line 24
     :cond_8
     :goto_0
-    invoke-interface {p3, v1, p1, p2, p5}, Lgf/c;->a(Ljava/util/Map;Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lpg/g;)Ljava/util/Queue;
+    invoke-interface {p3, v1, p1, p2, p5}, Lkh/c;->b(Ljava/util/Map;Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lti/g;)Ljava/util/Queue;
 
     move-result-object p1
 
@@ -601,10 +601,10 @@
     :cond_9
     sget-object p2, Lcz/msebera/android/httpclient/auth/AuthProtocolState;->CHALLENGED:Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
-    invoke-virtual {p4, p2}, Lef/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
+    invoke-virtual {p4, p2}, Lih/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
 
     .line 29
-    invoke-virtual {p4, p1}, Lef/h;->o(Ljava/util/Queue;)V
+    invoke-virtual {p4, p1}, Lih/h;->o(Ljava/util/Queue;)V
     :try_end_0
     .catch Lcz/msebera/android/httpclient/auth/MalformedChallengeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -648,16 +648,16 @@
 
     .line 32
     :cond_b
-    invoke-virtual {p4}, Lef/h;->i()V
+    invoke-virtual {p4}, Lih/h;->i()V
 
     return v0
 .end method
 
-.method public e(Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lgf/c;Lef/h;Lpg/g;)Z
+.method public e(Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lkh/c;Lih/h;Lti/g;)Z
     .locals 2
 
     .line 1
-    invoke-interface {p3, p1, p2, p5}, Lgf/c;->b(Lcz/msebera/android/httpclient/HttpHost;Ldf/t;Lpg/g;)Z
+    invoke-interface {p3, p1, p2, p5}, Lkh/c;->a(Lcz/msebera/android/httpclient/HttpHost;Lhh/t;Lti/g;)Z
 
     move-result p2
 
@@ -673,7 +673,7 @@
     invoke-virtual {p2, v1}, Lcz/msebera/android/httpclient/extras/b;->a(Ljava/lang/Object;)V
 
     .line 3
-    invoke-virtual {p4}, Lef/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
+    invoke-virtual {p4}, Lih/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
     move-result-object p2
 
@@ -682,11 +682,11 @@
     if-ne p2, v1, :cond_0
 
     .line 4
-    invoke-virtual {p4}, Lef/h;->b()Lef/c;
+    invoke-virtual {p4}, Lih/h;->b()Lih/c;
 
     move-result-object p2
 
-    invoke-interface {p3, p1, p2, p5}, Lgf/c;->d(Lcz/msebera/android/httpclient/HttpHost;Lef/c;Lpg/g;)V
+    invoke-interface {p3, p1, p2, p5}, Lkh/c;->e(Lcz/msebera/android/httpclient/HttpHost;Lih/c;Lti/g;)V
 
     :cond_0
     return v0
@@ -695,7 +695,7 @@
     :cond_1
     sget-object p2, Lcz/msebera/android/httpclient/impl/auth/f$a;->a:[I
 
-    invoke-virtual {p4}, Lef/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
+    invoke-virtual {p4}, Lih/h;->e()Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
     move-result-object v1
 
@@ -718,7 +718,7 @@
     .line 6
     sget-object p1, Lcz/msebera/android/httpclient/auth/AuthProtocolState;->UNCHALLENGED:Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
-    invoke-virtual {p4, p1}, Lef/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
+    invoke-virtual {p4, p1}, Lih/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
 
     goto :goto_0
 
@@ -733,14 +733,14 @@
     .line 8
     sget-object p2, Lcz/msebera/android/httpclient/auth/AuthProtocolState;->SUCCESS:Lcz/msebera/android/httpclient/auth/AuthProtocolState;
 
-    invoke-virtual {p4, p2}, Lef/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
+    invoke-virtual {p4, p2}, Lih/h;->m(Lcz/msebera/android/httpclient/auth/AuthProtocolState;)V
 
     .line 9
-    invoke-virtual {p4}, Lef/h;->b()Lef/c;
+    invoke-virtual {p4}, Lih/h;->b()Lih/c;
 
     move-result-object p2
 
-    invoke-interface {p3, p1, p2, p5}, Lgf/c;->e(Lcz/msebera/android/httpclient/HttpHost;Lef/c;Lpg/g;)V
+    invoke-interface {p3, p1, p2, p5}, Lkh/c;->d(Lcz/msebera/android/httpclient/HttpHost;Lih/c;Lti/g;)V
 
     :cond_3
     :goto_0

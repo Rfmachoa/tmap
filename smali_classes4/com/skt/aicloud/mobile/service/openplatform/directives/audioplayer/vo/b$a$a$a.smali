@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field private c:Lt9/a;
+.field private c:Lqb/a;
     .annotation runtime Lcom/google/gson/annotations/SerializedName;
         value = "content"
     .end annotation
@@ -52,11 +52,11 @@
 
 
 # virtual methods
-.method public a()Lt9/a;
+.method public a()Lqb/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$a$a;->c:Lt9/a;
+    iget-object v0, p0, Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$a$a;->c:Lqb/a;
 
     return-object v0
 .end method

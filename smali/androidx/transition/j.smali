@@ -88,10 +88,10 @@
     invoke-virtual {v0, v1, p2}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
     .line 3
-    invoke-static {p1, v0}, Lh3/x;->j(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p1, v0}, Lp4/x;->j(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     .line 4
-    invoke-static {p0, v0}, Lh3/x;->k(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p0, v0}, Lp4/x;->k(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     .line 5
     new-instance p2, Landroid/graphics/RectF;

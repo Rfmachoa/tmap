@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->L5()V
+    value = Lcom/skt/tmap/activity/HiddenSettingMenu;->X5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

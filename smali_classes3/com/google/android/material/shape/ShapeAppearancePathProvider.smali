@@ -167,6 +167,9 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 1
+    rem-int/lit8 p1, p1, 0x4
+
     mul-int/lit8 p1, p1, 0x5a
 
     int-to-float p1, p1

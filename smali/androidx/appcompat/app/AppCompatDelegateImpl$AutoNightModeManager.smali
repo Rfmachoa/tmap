@@ -55,7 +55,7 @@
     :try_start_0
     iget-object v1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->b:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AppCompatDelegateImpl;->V0:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/appcompat/app/AppCompatDelegateImpl;->X0:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -140,7 +140,7 @@
     :cond_1
     iget-object v1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->b:Landroidx/appcompat/app/AppCompatDelegateImpl;
 
-    iget-object v1, v1, Landroidx/appcompat/app/AppCompatDelegateImpl;->V0:Landroid/content/Context;
+    iget-object v1, v1, Landroidx/appcompat/app/AppCompatDelegateImpl;->X0:Landroid/content/Context;
 
     iget-object v2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;->a:Landroid/content/BroadcastReceiver;
 

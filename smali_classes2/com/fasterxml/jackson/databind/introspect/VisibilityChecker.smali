@@ -111,6 +111,16 @@
     .end annotation
 .end method
 
+.method public abstract withOverrides(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;)Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Value;",
+            ")TT;"
+        }
+    .end annotation
+.end method
+
 .method public abstract withSetterVisibility(Lcom/fasterxml/jackson/annotation/JsonAutoDetect$Visibility;)Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker;
     .annotation system Ldalvik/annotation/Signature;
         value = {

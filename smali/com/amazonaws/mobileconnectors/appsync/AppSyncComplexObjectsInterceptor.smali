@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final s3ObjectManager:Lc4/n;
+.field public final s3ObjectManager:Lz5/n;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lc4/n;)V
+.method public constructor <init>(Lz5/n;)V
     .locals 3
 
     .line 1
@@ -41,7 +41,7 @@
     invoke-static {v1, v2, v0}, Lcom/amazonaws/mobileconnectors/appsync/a;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;->s3ObjectManager:Lc4/n;
+    iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;->s3ObjectManager:Lz5/n;
 
     return-void
 .end method
@@ -97,7 +97,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/amazonaws/mobileconnectors/appsync/S3ObjectManagerImplementation;->getS3ComplexObject(Ljava/util/Map;)Lc4/l;
+    invoke-static {v1}, Lcom/amazonaws/mobileconnectors/appsync/S3ObjectManagerImplementation;->getS3ComplexObject(Ljava/util/Map;)Lz5/l;
 
     move-result-object v1
 
@@ -150,7 +150,7 @@
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 7
-    iget-object v2, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;->s3ObjectManager:Lc4/n;
+    iget-object v2, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncComplexObjectsInterceptor;->s3ObjectManager:Lz5/n;
 
     if-nez v2, :cond_2
 
@@ -168,7 +168,7 @@
     .line 9
     :cond_2
     :try_start_0
-    invoke-interface {v2, v1}, Lc4/n;->upload(Lc4/l;)V
+    invoke-interface {v2, v1}, Lz5/n;->upload(Lz5/l;)V
     :try_end_0
     .catch Lcom/amazonaws/AmazonClientException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

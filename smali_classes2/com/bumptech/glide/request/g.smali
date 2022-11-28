@@ -15,20 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;Ljava/lang/Object;Lj5/p;Lcom/bumptech/glide/load/DataSource;Z)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TR;",
-            "Ljava/lang/Object;",
-            "Lj5/p<",
-            "TR;>;",
-            "Lcom/bumptech/glide/load/DataSource;",
-            "Z)Z"
-        }
-    .end annotation
-.end method
-
-.method public abstract b(Lcom/bumptech/glide/load/engine/GlideException;Ljava/lang/Object;Lj5/p;Z)Z
+.method public abstract a(Lcom/bumptech/glide/load/engine/GlideException;Ljava/lang/Object;Lg7/p;Z)Z
     .param p1    # Lcom/bumptech/glide/load/engine/GlideException;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -38,8 +25,21 @@
             "(",
             "Lcom/bumptech/glide/load/engine/GlideException;",
             "Ljava/lang/Object;",
-            "Lj5/p<",
+            "Lg7/p<",
             "TR;>;Z)Z"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Ljava/lang/Object;Ljava/lang/Object;Lg7/p;Lcom/bumptech/glide/load/DataSource;Z)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TR;",
+            "Ljava/lang/Object;",
+            "Lg7/p<",
+            "TR;>;",
+            "Lcom/bumptech/glide/load/DataSource;",
+            "Z)Z"
         }
     .end annotation
 .end method

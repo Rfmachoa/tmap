@@ -3,7 +3,7 @@
 .source "UnitBitmapDecoder.java"
 
 # interfaces
-.implements Lu4/f;
+.implements Lr6/f;
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lu4/f<",
+        "Lr6/f<",
         "Landroid/graphics/Bitmap;",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -36,13 +36,13 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
+.method public bridge synthetic a(Ljava/lang/Object;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/e;
+    .param p4    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -55,20 +55,20 @@
     .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/e0;->c(Landroid/graphics/Bitmap;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/load/resource/bitmap/e0;->c(Landroid/graphics/Bitmap;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic b(Ljava/lang/Object;Lu4/e;)Z
+.method public bridge synthetic b(Ljava/lang/Object;Lr6/e;)Z
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/e;
+    .param p2    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -81,20 +81,20 @@
     .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/e0;->d(Landroid/graphics/Bitmap;Lu4/e;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/e0;->d(Landroid/graphics/Bitmap;Lr6/e;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public c(Landroid/graphics/Bitmap;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
+.method public c(Landroid/graphics/Bitmap;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
     .locals 0
     .param p1    # Landroid/graphics/Bitmap;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/e;
+    .param p4    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -103,7 +103,7 @@
             "(",
             "Landroid/graphics/Bitmap;",
             "II",
-            "Lu4/e;",
+            "Lr6/e;",
             ")",
             "Lcom/bumptech/glide/load/engine/s<",
             "Landroid/graphics/Bitmap;",
@@ -119,13 +119,13 @@
     return-object p2
 .end method
 
-.method public d(Landroid/graphics/Bitmap;Lu4/e;)Z
+.method public d(Landroid/graphics/Bitmap;Lr6/e;)Z
     .locals 0
     .param p1    # Landroid/graphics/Bitmap;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/e;
+    .param p2    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

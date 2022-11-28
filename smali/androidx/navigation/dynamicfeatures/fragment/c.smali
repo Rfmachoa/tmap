@@ -16,7 +16,7 @@
     d2 = {
         "Landroidx/fragment/app/Fragment;",
         "F",
-        "Lu2/m;",
+        "Lq3/l;",
         "",
         "id",
         "Lkotlin/d1;",
@@ -41,9 +41,9 @@
 
 
 # direct methods
-.method public static final synthetic a(Lu2/m;I)V
+.method public static final synthetic a(Lq3/l;I)V
     .locals 3
-    .param p0    # Lu2/m;
+    .param p0    # Lq3/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -56,7 +56,7 @@
             "<F:",
             "Landroidx/fragment/app/Fragment;",
             ">(",
-            "Lu2/m;",
+            "Lq3/l;",
             "I)V"
         }
     .end annotation
@@ -66,14 +66,14 @@
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-virtual {p0}, Landroidx/navigation/b0;->m()Landroidx/navigation/q0;
+    invoke-virtual {p0}, Landroidx/navigation/c0;->n()Landroidx/navigation/r0;
 
     move-result-object v0
 
-    const-class v1, Landroidx/navigation/fragment/d;
+    const-class v1, Lr3/h;
 
     .line 2
-    invoke-virtual {v0, v1}, Landroidx/navigation/q0;->d(Ljava/lang/Class;)Landroidx/navigation/Navigator;
+    invoke-virtual {v0, v1}, Landroidx/navigation/r0;->e(Ljava/lang/Class;)Landroidx/navigation/Navigator;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Landroidx/navigation/fragment/d;
+    check-cast v0, Lr3/h;
 
     const/4 v1, 0x4
 
@@ -97,18 +97,18 @@
     move-result-object v1
 
     .line 4
-    new-instance v2, Landroidx/navigation/fragment/e;
+    new-instance v2, Lr3/i;
 
-    invoke-direct {v2, v0, p1, v1}, Landroidx/navigation/fragment/e;-><init>(Landroidx/navigation/fragment/d;ILkotlin/reflect/d;)V
+    invoke-direct {v2, v0, p1, v1}, Lr3/i;-><init>(Lr3/h;ILkotlin/reflect/d;)V
 
-    invoke-virtual {p0, v2}, Landroidx/navigation/b0;->l(Landroidx/navigation/y;)V
+    invoke-virtual {p0, v2}, Landroidx/navigation/c0;->m(Landroidx/navigation/z;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lu2/m;ILej/l;)V
+.method public static final synthetic b(Lq3/l;ILgl/l;)V
     .locals 3
-    .param p0    # Lu2/m;
+    .param p0    # Lq3/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -116,7 +116,7 @@
         .annotation build Landroidx/annotation/IdRes;
         .end annotation
     .end param
-    .param p2    # Lej/l;
+    .param p2    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -125,9 +125,9 @@
             "<F:",
             "Landroidx/fragment/app/Fragment;",
             ">(",
-            "Lu2/m;",
+            "Lq3/l;",
             "I",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Landroidx/navigation/dynamicfeatures/fragment/b;",
             "Lkotlin/d1;",
@@ -161,14 +161,14 @@
     invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Landroidx/navigation/b0;->m()Landroidx/navigation/q0;
+    invoke-virtual {p0}, Landroidx/navigation/c0;->n()Landroidx/navigation/r0;
 
     move-result-object v1
 
     const-class v2, Landroidx/navigation/dynamicfeatures/fragment/a;
 
     .line 3
-    invoke-virtual {v1, v2}, Landroidx/navigation/q0;->d(Ljava/lang/Class;)Landroidx/navigation/Navigator;
+    invoke-virtual {v1, v2}, Landroidx/navigation/r0;->e(Ljava/lang/Class;)Landroidx/navigation/Navigator;
 
     move-result-object v1
 
@@ -184,17 +184,17 @@
     invoke-direct {v2, v1, p1, v0}, Landroidx/navigation/dynamicfeatures/fragment/b;-><init>(Landroidx/navigation/dynamicfeatures/fragment/a;ILjava/lang/String;)V
 
     .line 5
-    invoke-interface {p2, v2}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
-    invoke-virtual {p0, v2}, Landroidx/navigation/b0;->l(Landroidx/navigation/y;)V
+    invoke-virtual {p0, v2}, Landroidx/navigation/c0;->m(Landroidx/navigation/z;)V
 
     return-void
 .end method
 
-.method public static final c(Lu2/m;ILjava/lang/String;Lej/l;)V
+.method public static final c(Lq3/l;ILjava/lang/String;Lgl/l;)V
     .locals 2
-    .param p0    # Lu2/m;
+    .param p0    # Lq3/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -206,17 +206,17 @@
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p3    # Lej/l;
+    .param p3    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu2/m;",
+            "Lq3/l;",
             "I",
             "Ljava/lang/String;",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Landroidx/navigation/dynamicfeatures/fragment/b;",
             "Lkotlin/d1;",
@@ -237,14 +237,14 @@
     invoke-static {p3, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-virtual {p0}, Landroidx/navigation/b0;->m()Landroidx/navigation/q0;
+    invoke-virtual {p0}, Landroidx/navigation/c0;->n()Landroidx/navigation/r0;
 
     move-result-object v0
 
     const-class v1, Landroidx/navigation/dynamicfeatures/fragment/a;
 
     .line 2
-    invoke-virtual {v0, v1}, Landroidx/navigation/q0;->d(Ljava/lang/Class;)Landroidx/navigation/Navigator;
+    invoke-virtual {v0, v1}, Landroidx/navigation/r0;->e(Ljava/lang/Class;)Landroidx/navigation/Navigator;
 
     move-result-object v0
 
@@ -260,10 +260,10 @@
     invoke-direct {v1, v0, p1, p2}, Landroidx/navigation/dynamicfeatures/fragment/b;-><init>(Landroidx/navigation/dynamicfeatures/fragment/a;ILjava/lang/String;)V
 
     .line 4
-    invoke-interface {p3, v1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
-    invoke-virtual {p0, v1}, Landroidx/navigation/b0;->l(Landroidx/navigation/y;)V
+    invoke-virtual {p0, v1}, Landroidx/navigation/c0;->m(Landroidx/navigation/z;)V
 
     return-void
 .end method

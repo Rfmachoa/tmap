@@ -42,6 +42,8 @@
 
 .field private final instantiation:I
 
+.field private final name:Ljava/lang/String;
+
 .field private final providedInterfaces:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -66,11 +68,16 @@
 
 
 # direct methods
-.method private constructor <init>(Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;)V
+.method private constructor <init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;)V
     .locals 0
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ljava/lang/String;",
             "Ljava/util/Set<",
             "Ljava/lang/Class<",
             "-TT;>;>;",
@@ -89,30 +96,33 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    invoke-static {p1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/google/firebase/components/Component;->providedInterfaces:Ljava/util/Set;
+    iput-object p1, p0, Lcom/google/firebase/components/Component;->name:Ljava/lang/String;
 
     .line 4
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/firebase/components/Component;->dependencies:Ljava/util/Set;
+    iput-object p1, p0, Lcom/google/firebase/components/Component;->providedInterfaces:Ljava/util/Set;
 
     .line 5
-    iput p3, p0, Lcom/google/firebase/components/Component;->instantiation:I
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/firebase/components/Component;->dependencies:Ljava/util/Set;
 
     .line 6
-    iput p4, p0, Lcom/google/firebase/components/Component;->type:I
+    iput p4, p0, Lcom/google/firebase/components/Component;->instantiation:I
 
     .line 7
-    iput-object p5, p0, Lcom/google/firebase/components/Component;->factory:Lcom/google/firebase/components/ComponentFactory;
+    iput p5, p0, Lcom/google/firebase/components/Component;->type:I
 
     .line 8
-    invoke-static {p6}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    iput-object p6, p0, Lcom/google/firebase/components/Component;->factory:Lcom/google/firebase/components/ComponentFactory;
+
+    .line 9
+    invoke-static {p7}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -121,11 +131,11 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;Lcom/google/firebase/components/Component$1;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;Lcom/google/firebase/components/Component$1;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p6}, Lcom/google/firebase/components/Component;-><init>(Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;)V
+    invoke-direct/range {p0 .. p7}, Lcom/google/firebase/components/Component;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;)V
 
     return-void
 .end method
@@ -406,6 +416,17 @@
     return-object v0
 .end method
 
+.method public getName()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/google/firebase/components/Component;->name:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public getProvidedInterfaces()Ljava/util/Set;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -590,4 +611,40 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public withFactory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/firebase/components/ComponentFactory<",
+            "TT;>;)",
+            "Lcom/google/firebase/components/Component<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v8, Lcom/google/firebase/components/Component;
+
+    iget-object v1, p0, Lcom/google/firebase/components/Component;->name:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/google/firebase/components/Component;->providedInterfaces:Ljava/util/Set;
+
+    iget-object v3, p0, Lcom/google/firebase/components/Component;->dependencies:Ljava/util/Set;
+
+    iget v4, p0, Lcom/google/firebase/components/Component;->instantiation:I
+
+    iget v5, p0, Lcom/google/firebase/components/Component;->type:I
+
+    iget-object v7, p0, Lcom/google/firebase/components/Component;->publishedEvents:Ljava/util/Set;
+
+    move-object v0, v8
+
+    move-object v6, p1
+
+    invoke-direct/range {v0 .. v7}, Lcom/google/firebase/components/Component;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILcom/google/firebase/components/ComponentFactory;Ljava/util/Set;)V
+
+    return-object v8
 .end method

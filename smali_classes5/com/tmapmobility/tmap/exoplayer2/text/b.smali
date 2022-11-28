@@ -73,7 +73,7 @@
     check-cast p1, Ljava/util/ArrayList;
 
     .line 7
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->A1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->C1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
     invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d;->b(Lcom/tmapmobility/tmap/exoplayer2/h$a;Ljava/util/List;)Lcom/google/common/collect/ImmutableList;
 

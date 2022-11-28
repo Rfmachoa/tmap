@@ -1,241 +1,670 @@
-.class public Ls1/f;
+.class public final Ls1/f;
 .super Ljava/lang/Object;
-.source "DragStartHelper.java"
+.source "GradientColorInflaterCompat.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Ls1/f$c;
+        Ls1/f$a;
     }
 .end annotation
 
 
-# instance fields
-.field public final a:Landroid/view/View;
+# static fields
+.field public static final a:I = 0x0
 
-.field public final b:Ls1/f$c;
+.field public static final b:I = 0x1
 
-.field public c:I
-
-.field public d:I
-
-.field public e:Z
-
-.field public final f:Landroid/view/View$OnLongClickListener;
-
-.field public final g:Landroid/view/View$OnTouchListener;
+.field public static final c:I = 0x2
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ls1/f$c;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ls1/f$a;
-
-    invoke-direct {v0, p0}, Ls1/f$a;-><init>(Ls1/f;)V
-
-    iput-object v0, p0, Ls1/f;->f:Landroid/view/View$OnLongClickListener;
-
-    .line 3
-    new-instance v0, Ls1/f$b;
-
-    invoke-direct {v0, p0}, Ls1/f$b;-><init>(Ls1/f;)V
-
-    iput-object v0, p0, Ls1/f;->g:Landroid/view/View$OnTouchListener;
-
-    .line 4
-    iput-object p1, p0, Ls1/f;->a:Landroid/view/View;
-
-    .line 5
-    iput-object p2, p0, Ls1/f;->b:Ls1/f$c;
-
     return-void
 .end method
 
+.method public static a(Ls1/f$a;IIZI)Ls1/f$a;
+    .locals 0
+    .param p0    # Ls1/f$a;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p2    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
+    .param p4    # I
+        .annotation build Landroidx/annotation/ColorInt;
+        .end annotation
+    .end param
 
-# virtual methods
-.method public a()V
-    .locals 2
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    if-eqz p3, :cond_1
 
     .line 1
-    iget-object v0, p0, Ls1/f;->a:Landroid/view/View;
+    new-instance p0, Ls1/f$a;
 
-    iget-object v1, p0, Ls1/f;->f:Landroid/view/View$OnLongClickListener;
+    invoke-direct {p0, p1, p4, p2}, Ls1/f$a;-><init>(III)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    return-object p0
 
     .line 2
-    iget-object v0, p0, Ls1/f;->a:Landroid/view/View;
+    :cond_1
+    new-instance p0, Ls1/f$a;
 
-    iget-object v1, p0, Ls1/f;->g:Landroid/view/View$OnTouchListener;
+    invoke-direct {p0, p1, p2}, Ls1/f$a;-><init>(II)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    return-void
+    return-object p0
 .end method
 
-.method public b()V
-    .locals 2
+.method public static b(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;
+    .locals 4
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lorg/xmlpull/v1/XmlPullParser;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/xmlpull/v1/XmlPullParserException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Ls1/f;->a:Landroid/view/View;
+    invoke-static {p1}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    move-result-object v0
 
     .line 2
-    iget-object v0, p0, Ls1/f;->a:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    return-void
-.end method
-
-.method public c(Landroid/graphics/Point;)V
-    .locals 2
-
-    .line 1
-    iget v0, p0, Ls1/f;->c:I
-
-    iget v1, p0, Ls1/f;->d:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Point;->set(II)V
-
-    return-void
-.end method
-
-.method public d(Landroid/view/View;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ls1/f;->b:Ls1/f$c;
-
-    invoke-interface {v0, p1, p0}, Ls1/f$c;->a(Landroid/view/View;Ls1/f;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public e(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 6
-
-    .line 1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    .line 2
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    :goto_0
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
-    float-to-int v1, v1
+    const/4 v2, 0x2
 
-    .line 3
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    if-eq v1, v2, :cond_0
 
-    move-result v2
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_5
-
-    const/4 v4, 0x1
-
-    if-eq v2, v4, :cond_4
-
-    const/4 v5, 0x2
-
-    if-eq v2, v5, :cond_0
-
-    const/4 p1, 0x3
-
-    if-eq v2, p1, :cond_4
+    if-eq v1, v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/16 v2, 0x2002
+    if-ne v1, v2, :cond_1
+
+    .line 3
+    invoke-static {p0, p1, v0, p2}, Ls1/f;->c(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;
+
+    move-result-object p0
+
+    return-object p0
 
     .line 4
-    invoke-static {p2, v2}, Ls1/v;->l(Landroid/view/MotionEvent;I)Z
+    :cond_1
+    new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
+
+    const-string p1, "No start tag found"
+
+    invoke-direct {p0, p1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static c(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/Shader;
+    .locals 20
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lorg/xmlpull/v1/XmlPullParser;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lorg/xmlpull/v1/XmlPullParserException;
+        }
+    .end annotation
+
+    move-object/from16 v0, p1
+
+    .line 1
+    invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "gradient"
+
+    .line 2
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_3
+
+    .line 3
+    sget-object v1, Landroidx/core/R$styleable;->GradientColor:[I
+
+    move-object/from16 v2, p0
+
+    move-object/from16 v3, p2
+
+    move-object/from16 v4, p3
+
+    invoke-static {v2, v4, v3, v1}, Ls1/l;->s(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object v1
+
+    .line 4
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_startX:I
+
+    const-string v6, "startX"
+
+    const/4 v7, 0x0
+
+    invoke-static {v1, v0, v6, v5, v7}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+
+    move-result v9
 
     .line 5
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getButtonState()I
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_startY:I
 
-    move-result p2
+    const-string v6, "startY"
 
-    and-int/2addr p2, v4
+    invoke-static {v1, v0, v6, v5, v7}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
-    if-nez p2, :cond_1
+    move-result v10
+
+    .line 6
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_endX:I
+
+    const-string v6, "endX"
+
+    invoke-static {v1, v0, v6, v5, v7}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+
+    move-result v11
+
+    .line 7
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_endY:I
+
+    const-string v6, "endY"
+
+    invoke-static {v1, v0, v6, v5, v7}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+
+    move-result v12
+
+    .line 8
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_centerX:I
+
+    const-string v6, "centerX"
+
+    invoke-static {v1, v0, v6, v5, v7}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+
+    move-result v14
+
+    .line 9
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_centerY:I
+
+    const-string v6, "centerY"
+
+    invoke-static {v1, v0, v6, v5, v7}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+
+    move-result v15
+
+    .line 10
+    sget v5, Landroidx/core/R$styleable;->GradientColor_android_type:I
+
+    const-string v6, "type"
+
+    const/4 v8, 0x0
+
+    invoke-static {v1, v0, v6, v5, v8}, Ls1/l;->k(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+
+    move-result v5
+
+    .line 11
+    sget v6, Landroidx/core/R$styleable;->GradientColor_android_startColor:I
+
+    const-string v13, "startColor"
+
+    invoke-static {v1, v0, v13, v6, v8}, Ls1/l;->f(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+
+    move-result v6
+
+    const-string v13, "centerColor"
+
+    .line 12
+    invoke-static {v0, v13}, Ls1/l;->r(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result v7
+
+    .line 13
+    sget v2, Landroidx/core/R$styleable;->GradientColor_android_centerColor:I
+
+    invoke-static {v1, v0, v13, v2, v8}, Ls1/l;->f(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+
+    move-result v2
+
+    .line 14
+    sget v13, Landroidx/core/R$styleable;->GradientColor_android_endColor:I
+
+    const-string v3, "endColor"
+
+    invoke-static {v1, v0, v3, v13, v8}, Ls1/l;->f(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+
+    move-result v3
+
+    .line 15
+    sget v13, Landroidx/core/R$styleable;->GradientColor_android_tileMode:I
+
+    const-string v4, "tileMode"
+
+    invoke-static {v1, v0, v4, v13, v8}, Ls1/l;->k(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+
+    move-result v4
+
+    .line 16
+    sget v8, Landroidx/core/R$styleable;->GradientColor_android_gradientRadius:I
+
+    const-string v13, "gradientRadius"
+
+    move/from16 v17, v14
+
+    const/4 v14, 0x0
+
+    invoke-static {v1, v0, v13, v8, v14}, Ls1/l;->j(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+
+    move-result v8
+
+    .line 17
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 18
+    invoke-static/range {p0 .. p3}, Ls1/f;->d(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Ls1/f$a;
+
+    move-result-object v0
+
+    .line 19
+    invoke-static {v0, v6, v3, v7, v2}, Ls1/f;->a(Ls1/f$a;IIZI)Ls1/f$a;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    if-eq v5, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v5, v1, :cond_0
+
+    .line 20
+    new-instance v1, Landroid/graphics/LinearGradient;
+
+    iget-object v13, v0, Ls1/f$a;->a:[I
+
+    iget-object v14, v0, Ls1/f$a;->b:[F
+
+    .line 21
+    invoke-static {v4}, Ls1/f;->e(I)Landroid/graphics/Shader$TileMode;
+
+    move-result-object v15
+
+    move-object v8, v1
+
+    invoke-direct/range {v8 .. v15}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    return-object v1
+
+    .line 22
+    :cond_0
+    new-instance v1, Landroid/graphics/SweepGradient;
+
+    iget-object v2, v0, Ls1/f$a;->a:[I
+
+    iget-object v0, v0, Ls1/f$a;->b:[F
+
+    move/from16 v3, v17
+
+    invoke-direct {v1, v3, v15, v2, v0}, Landroid/graphics/SweepGradient;-><init>(FF[I[F)V
+
+    return-object v1
+
+    :cond_1
+    move/from16 v3, v17
+
+    const/4 v1, 0x0
+
+    cmpg-float v1, v8, v1
+
+    if-lez v1, :cond_2
+
+    .line 23
+    new-instance v1, Landroid/graphics/RadialGradient;
+
+    iget-object v2, v0, Ls1/f$a;->a:[I
+
+    iget-object v0, v0, Ls1/f$a;->b:[F
+
+    .line 24
+    invoke-static {v4}, Ls1/f;->e(I)Landroid/graphics/Shader$TileMode;
+
+    move-result-object v19
+
+    move-object v13, v1
+
+    move v14, v3
+
+    move/from16 v16, v8
+
+    move-object/from16 v17, v2
+
+    move-object/from16 v18, v0
+
+    invoke-direct/range {v13 .. v19}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
+
+    return-object v1
+
+    .line 25
+    :cond_2
+    new-instance v0, Lorg/xmlpull/v1/XmlPullParserException;
+
+    const-string v1, "<gradient> tag requires \'gradientRadius\' attribute with radial type"
+
+    invoke-direct {v0, v1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 26
+    :cond_3
+    new-instance v2, Lorg/xmlpull/v1/XmlPullParserException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 27
+    invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ": invalid gradient color tag "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+.end method
+
+.method public static d(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Ls1/f$a;
+    .locals 9
+    .param p0    # Landroid/content/res/Resources;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lorg/xmlpull/v1/XmlPullParser;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/xmlpull/v1/XmlPullParserException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    .line 2
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/16 v3, 0x14
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 3
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 4
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
+
+    move-result v3
+
+    if-eq v3, v1, :cond_5
+
+    .line 5
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+
+    move-result v5
+
+    if-ge v5, v0, :cond_1
+
+    const/4 v6, 0x3
+
+    if-eq v3, v6, :cond_5
+
+    :cond_1
+    const/4 v6, 0x2
+
+    if-eq v3, v6, :cond_2
 
     goto :goto_0
 
-    .line 6
-    :cond_1
-    iget-boolean p2, p0, Ls1/f;->e:Z
+    :cond_2
+    if-gt v5, v0, :cond_0
 
-    if-eqz p2, :cond_2
+    .line 6
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v5, "item"
+
+    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
 
     goto :goto_0
 
     .line 7
-    :cond_2
-    iget p2, p0, Ls1/f;->c:I
+    :cond_3
+    sget-object v3, Landroidx/core/R$styleable;->GradientColorItem:[I
 
-    if-ne p2, v0, :cond_3
+    invoke-static {p0, p3, p2, v3}, Ls1/l;->s(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    iget p2, p0, Ls1/f;->d:I
-
-    if-ne p2, v1, :cond_3
-
-    goto :goto_0
+    move-result-object v3
 
     .line 8
-    :cond_3
-    iput v0, p0, Ls1/f;->c:I
+    sget v5, Landroidx/core/R$styleable;->GradientColorItem_android_color:I
+
+    invoke-virtual {v3, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v6
 
     .line 9
-    iput v1, p0, Ls1/f;->d:I
+    sget v7, Landroidx/core/R$styleable;->GradientColorItem_android_offset:I
+
+    invoke-virtual {v3, v7}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v8
+
+    if-eqz v6, :cond_4
+
+    if-eqz v8, :cond_4
+
+    const/4 v6, 0x0
 
     .line 10
-    iget-object p2, p0, Ls1/f;->b:Ls1/f$c;
+    invoke-virtual {v3, v5, v6}, Landroid/content/res/TypedArray;->getColor(II)I
 
-    invoke-interface {p2, p1, p0}, Ls1/f$c;->a(Landroid/view/View;Ls1/f;)Z
+    move-result v5
 
-    move-result p1
-
-    iput-boolean p1, p0, Ls1/f;->e:Z
-
-    return p1
+    const/4 v6, 0x0
 
     .line 11
-    :cond_4
-    iput-boolean v3, p0, Ls1/f;->e:Z
+    invoke-virtual {v3, v7, v6}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v6
+
+    .line 12
+    invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 13
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 14
+    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 12
-    :cond_5
-    iput v0, p0, Ls1/f;->c:I
+    .line 15
+    :cond_4
+    new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
-    .line 13
-    iput v1, p0, Ls1/f;->d:I
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 16
+    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ": <item> tag requires a \'color\' attribute and a \'offset\' attribute!"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 17
+    :cond_5
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result p0
+
+    if-lez p0, :cond_6
+
+    new-instance p0, Ls1/f$a;
+
+    invoke-direct {p0, v4, v2}, Ls1/f$a;-><init>(Ljava/util/List;Ljava/util/List;)V
+
+    return-object p0
 
     :cond_6
-    :goto_0
-    return v3
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static e(I)Landroid/graphics/Shader$TileMode;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    .line 1
+    sget-object p0, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    return-object p0
+
+    .line 2
+    :cond_0
+    sget-object p0, Landroid/graphics/Shader$TileMode;->MIRROR:Landroid/graphics/Shader$TileMode;
+
+    return-object p0
+
+    .line 3
+    :cond_1
+    sget-object p0, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+
+    return-object p0
 .end method

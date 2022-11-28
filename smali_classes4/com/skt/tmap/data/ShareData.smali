@@ -95,7 +95,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lfc/k;->b(Ljava/lang/String;)Z
+    invoke-static {p1}, Lde/j;->b(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -112,7 +112,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v2, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v2
 
@@ -120,7 +120,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v3, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -138,7 +138,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v2, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v2
 
@@ -146,7 +146,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v3, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -180,7 +180,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -205,7 +205,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -337,7 +337,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -380,7 +380,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -424,7 +424,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -442,7 +442,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -511,7 +511,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lfc/k;->b(Ljava/lang/String;)Z
+    invoke-static {p1}, Lde/j;->b(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -528,7 +528,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v2, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v2
 
@@ -536,7 +536,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v3, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -554,7 +554,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v2, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v2
 
@@ -562,7 +562,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lcom/skt/tmap/util/v0;->o(Ljava/lang/String;I)I
+    invoke-static {v3, v1}, Lcom/skt/tmap/util/c1;->o(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -596,7 +596,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -621,7 +621,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -781,7 +781,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -894,7 +894,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->h([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/c1;->h([B)Ljava/lang/String;
 
     move-result-object p1
 
@@ -961,7 +961,7 @@
 
     const-string v2, "ShareData"
 
-    invoke-static {v2, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/skt/tmap/data/ShareData;->getParamString()Ljava/lang/String;
@@ -1056,74 +1056,44 @@
     :cond_1
     move v3, v1
 
-    .line 7
     :goto_1
-    new-instance v4, Ljava/lang/StringBuffer;
+    const-string v4, "pkey="
 
-    invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
+    .line 7
+    invoke-static {v4}, Lec/a;->a(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string v5, "pkey="
+    move-result-object v4
 
     .line 8
-    invoke-static {v5}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v5, p0, Lcom/skt/tmap/data/ShareData;->pkey:Ljava/lang/String;
 
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/skt/tmap/data/ShareData;->pkey:Ljava/lang/String;
-
-    invoke-static {v6}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v5}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v5, "&poiId="
 
     .line 9
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v5, p0, Lcom/skt/tmap/data/ShareData;->poiId:Ljava/lang/String;
 
-    const-string v6, "&poiId="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, p0, Lcom/skt/tmap/data/ShareData;->poiId:Ljava/lang/String;
-
-    invoke-static {v6}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v5}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    const-string v5, "&navSeq="
+
     .line 10
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v5, p0, Lcom/skt/tmap/data/ShareData;->navSeq:Ljava/lang/String;
 
-    const-string v6, "&navSeq="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, p0, Lcom/skt/tmap/data/ShareData;->navSeq:Ljava/lang/String;
-
-    invoke-static {v6}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v5}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1201,306 +1171,160 @@
     const-string v5, "&createTime="
 
     .line 12
-    invoke-static {v5}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    move-result-object v5
+    iget-object v5, p0, Lcom/skt/tmap/data/ShareData;->time:Ljava/lang/String;
 
-    iget-object v6, p0, Lcom/skt/tmap/data/ShareData;->time:Ljava/lang/String;
-
-    invoke-static {v6}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v5}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v5, "&currentAddress="
 
     .line 13
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v5, p0, Lcom/skt/tmap/data/ShareData;->poiName:Ljava/lang/String;
 
-    const-string v6, "&currentAddress="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, p0, Lcom/skt/tmap/data/ShareData;->poiName:Ljava/lang/String;
-
-    invoke-static {v6}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v5}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    const-string v5, "&currentCenterX="
+
     .line 14
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    const-string v6, "&currentCenterX="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v0, "&currentCenterY="
 
     .line 15
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "&currentCenterY="
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    const-string v0, "&arrivalEstimateTime="
 
     .line 16
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcom/skt/tmap/data/ShareData;->arrivalTime:Ljava/lang/String;
 
-    const-string v2, "&arrivalEstimateTime="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/skt/tmap/data/ShareData;->arrivalTime:Ljava/lang/String;
-
-    invoke-static {v2}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v0, "&arrivalAddress="
 
     .line 17
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcom/skt/tmap/data/ShareData;->arrivalName:Ljava/lang/String;
 
-    const-string v2, "&arrivalAddress="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/skt/tmap/data/ShareData;->arrivalName:Ljava/lang/String;
-
-    invoke-static {v2}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v0, "&arrivalCenterX="
 
     .line 18
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "&arrivalCenterX="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    const-string v0, "&arrivalCenterY="
 
     .line 19
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "&arrivalCenterY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    goto/16 :goto_3
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    goto :goto_3
 
     :pswitch_4
     const-string v1, "&type="
 
     .line 20
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/skt/tmap/data/ShareData;->type:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/skt/tmap/data/ShareData;->type:Ljava/lang/String;
-
-    invoke-static {v3}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v1, "&poiName="
 
     .line 21
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, p0, Lcom/skt/tmap/data/ShareData;->poiName:Ljava/lang/String;
 
-    const-string v3, "&poiName="
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcom/skt/tmap/data/ShareData;->poiName:Ljava/lang/String;
-
-    invoke-static {v3}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    const-string v1, "&centerX="
+
     .line 22
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    const-string v3, "&centerX="
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v0, "&centerY="
 
     .line 23
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "&centerY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    const-string v0, "&time="
 
     .line 24
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcom/skt/tmap/data/ShareData;->time:Ljava/lang/String;
 
-    const-string v1, "&time="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/skt/tmap/data/ShareData;->time:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string v0, "&tel="
 
     .line 25
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcom/skt/tmap/data/ShareData;->tel:Ljava/lang/String;
 
-    const-string v1, "&tel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/skt/tmap/data/ShareData;->tel:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    const-string v0, "&addr="
+
     .line 26
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcom/skt/tmap/data/ShareData;->addr:Ljava/lang/String;
 
-    const-string v1, "&addr="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/skt/tmap/data/ShareData;->addr:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->p(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/util/c1;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1513,6 +1337,8 @@
     move-result-object v0
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x31

@@ -57,7 +57,7 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -65,43 +65,31 @@
 
     return v0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_3
-
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    const-class v1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
 
-    move-result-object v2
+    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->hasClass(Ljava/lang/Object;Ljava/lang/Class;)Z
 
-    const-class v3, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+    move-result v1
 
-    if-eq v2, v3, :cond_1
+    if-eqz v1, :cond_1
 
-    goto :goto_1
-
-    .line 2
-    :cond_1
     check-cast p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
 
     iget-object p1, p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->_field:Ljava/lang/reflect/Field;
 
-    iget-object v2, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->_field:Ljava/lang/reflect/Field;
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->_field:Ljava/lang/reflect/Field;
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v1, :cond_1
 
     goto :goto_0
 
-    :cond_2
-    move v0, v1
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_0
     return v0
-
-    :cond_3
-    :goto_1
-    return v1
 .end method
 
 .method public bridge synthetic getAnnotated()Ljava/lang/reflect/AnnotatedElement;
@@ -151,56 +139,6 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->_field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->getDeclaringClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getFullName()Ljava/lang/String;
-    .locals 2
-
-    .line 1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getDeclaringClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "#"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getGenericType()Ljava/lang/reflect/Type;
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->_field:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v0}, Ljava/lang/reflect/Field;->getGenericType()Ljava/lang/reflect/Type;
 
     move-result-object v0
 
@@ -313,7 +251,8 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getFullName()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getFullName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -430,6 +369,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -475,7 +415,8 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getFullName()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getFullName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -510,7 +451,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;->getFullName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getFullName()Ljava/lang/String;
 
     move-result-object v1
 

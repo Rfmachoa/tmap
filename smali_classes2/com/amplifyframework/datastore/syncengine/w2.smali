@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lgk/a;
 
 
 # static fields
@@ -33,12 +33,10 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final run()V
     .locals 0
 
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->a(Ljava/lang/Throwable;)V
+    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->c()V
 
     return-void
 .end method

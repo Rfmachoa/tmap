@@ -9,13 +9,13 @@
 
 
 # static fields
-.field public static final W0:Ljava/lang/String; = "EditTextPreferenceDialogFragment.text"
+.field public static final Y0:Ljava/lang/String; = "EditTextPreferenceDialogFragment.text"
 
 
 # instance fields
 .field public K0:Landroid/widget/EditText;
 
-.field public V0:Ljava/lang/CharSequence;
+.field public X0:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -32,6 +32,9 @@
 
 .method public static i(Ljava/lang/String;)Landroidx/preference/b;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -75,6 +78,10 @@
 
 .method public c(Landroid/view/View;)V
     .locals 1
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroidx/preference/j;->c(Landroid/view/View;)V
@@ -99,7 +106,7 @@
     if-eqz p1, :cond_0
 
     .line 5
-    iget-object v0, p0, Landroidx/preference/b;->V0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/b;->X0:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -184,6 +191,10 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroidx/preference/j;->onCreate(Landroid/os/Bundle;)V
@@ -199,7 +210,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/b;->V0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/b;->X0:Ljava/lang/CharSequence;
 
     goto :goto_0
 
@@ -211,7 +222,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/b;->V0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/b;->X0:Ljava/lang/CharSequence;
 
     :goto_0
     return-void
@@ -228,7 +239,7 @@
     invoke-super {p0, p1}, Landroidx/preference/j;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/b;->V0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/b;->X0:Ljava/lang/CharSequence;
 
     const-string v1, "EditTextPreferenceDialogFragment.text"
 

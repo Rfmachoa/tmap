@@ -3,14 +3,14 @@
 .source "BitmapTransformation.java"
 
 # interfaces
-.implements Lu4/h;
+.implements Lr6/h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lu4/h<",
+        "Lr6/h<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -56,7 +56,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p3, p4}, Lm5/m;->w(II)Z
+    invoke-static {p3, p4}, Lj7/n;->w(II)Z
 
     move-result v0
 
@@ -129,7 +129,7 @@
 
     const-string v1, " less than or equal to zero and not Target.SIZE_ORIGINAL"
 
-    invoke-static {p2, p3, v0, p4, v1}, Landroidx/room/k;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p3, v0, p4, v1}, Lp0/e;->a(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

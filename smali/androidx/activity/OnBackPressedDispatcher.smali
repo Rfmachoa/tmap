@@ -22,7 +22,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayDeque<",
-            "Landroidx/activity/b;",
+            "Landroidx/activity/i;",
             ">;"
         }
     .end annotation
@@ -66,9 +66,9 @@
 
 
 # virtual methods
-.method public a(Landroidx/activity/b;)V
+.method public a(Landroidx/activity/i;)V
     .locals 0
-    .param p1    # Landroidx/activity/b;
+    .param p1    # Landroidx/activity/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -76,18 +76,18 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/activity/OnBackPressedDispatcher;->c(Landroidx/activity/b;)Landroidx/activity/a;
+    invoke-virtual {p0, p1}, Landroidx/activity/OnBackPressedDispatcher;->c(Landroidx/activity/i;)Landroidx/activity/c;
 
     return-void
 .end method
 
-.method public b(Landroidx/lifecycle/LifecycleOwner;Landroidx/activity/b;)V
+.method public b(Landroidx/lifecycle/LifecycleOwner;Landroidx/activity/i;)V
     .locals 2
     .param p1    # Landroidx/lifecycle/LifecycleOwner;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/activity/b;
+    .param p2    # Landroidx/activity/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -120,16 +120,16 @@
     :cond_0
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/Lifecycle;Landroidx/activity/b;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/Lifecycle;Landroidx/activity/i;)V
 
-    invoke-virtual {p2, v0}, Landroidx/activity/b;->a(Landroidx/activity/a;)V
+    invoke-virtual {p2, v0}, Landroidx/activity/i;->d(Landroidx/activity/c;)V
 
     return-void
 .end method
 
-.method public c(Landroidx/activity/b;)Landroidx/activity/a;
+.method public c(Landroidx/activity/i;)Landroidx/activity/c;
     .locals 1
-    .param p1    # Landroidx/activity/b;
+    .param p1    # Landroidx/activity/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -147,10 +147,10 @@
     .line 2
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher$a;
 
-    invoke-direct {v0, p0, p1}, Landroidx/activity/OnBackPressedDispatcher$a;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/activity/b;)V
+    invoke-direct {v0, p0, p1}, Landroidx/activity/OnBackPressedDispatcher$a;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/activity/i;)V
 
     .line 3
-    invoke-virtual {p1, v0}, Landroidx/activity/b;->a(Landroidx/activity/a;)V
+    invoke-virtual {p1, v0}, Landroidx/activity/i;->d(Landroidx/activity/c;)V
 
     return-object v0
 .end method
@@ -181,9 +181,9 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/activity/b;
+    check-cast v1, Landroidx/activity/i;
 
-    invoke-virtual {v1}, Landroidx/activity/b;->c()Z
+    invoke-virtual {v1}, Landroidx/activity/i;->f()Z
 
     move-result v1
 
@@ -225,17 +225,17 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/activity/b;
+    check-cast v1, Landroidx/activity/i;
 
     .line 5
-    invoke-virtual {v1}, Landroidx/activity/b;->c()Z
+    invoke-virtual {v1}, Landroidx/activity/i;->f()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 6
-    invoke-virtual {v1}, Landroidx/activity/b;->b()V
+    invoke-virtual {v1}, Landroidx/activity/i;->e()V
 
     return-void
 

@@ -30,9 +30,9 @@
     .line 4
     new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/b;
 
-    iget-object v1, p1, Lre/e;->a:Ljava/lang/String;
+    iget-object v1, p1, Lug/e;->a:Ljava/lang/String;
 
-    iget-object v2, p1, Lre/e;->b:Ljava/util/List;
+    iget-object v2, p1, Lug/e;->b:Ljava/util/List;
 
     iget-object v3, p1, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/c;->e:Ljava/util/List;
 
@@ -48,7 +48,7 @@
 
     iget-object v9, p1, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/c;->k:Ljava/util/List;
 
-    iget-boolean v10, p1, Lre/e;->c:Z
+    iget-boolean v10, p1, Lug/e;->c:Z
 
     iget-object v11, p1, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/c;->l:Ljava/util/Map;
 

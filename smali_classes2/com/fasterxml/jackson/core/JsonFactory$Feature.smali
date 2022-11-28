@@ -2,6 +2,9 @@
 .super Ljava/lang/Enum;
 .source "JsonFactory.java"
 
+# interfaces
+.implements Lcom/fasterxml/jackson/core/util/JacksonFeature;
+
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -17,7 +20,8 @@
     value = {
         "Ljava/lang/Enum<",
         "Lcom/fasterxml/jackson/core/JsonFactory$Feature;",
-        ">;"
+        ">;",
+        "Lcom/fasterxml/jackson/core/util/JacksonFeature;"
     }
 .end annotation
 

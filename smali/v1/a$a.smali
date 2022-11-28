@@ -1,11 +1,11 @@
 .class public Lv1/a$a;
 .super Ljava/lang/Object;
-.source "EditorInfoCompat.java"
+.source "BitmapCompat.java"
 
 
 # annotations
 .annotation build Landroidx/annotation/RequiresApi;
-    value = 0x1e
+    value = 0x11
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -28,60 +28,26 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/inputmethod/EditorInfo;I)Ljava/lang/CharSequence;
+.method public static a(Landroid/graphics/Bitmap;)Z
     .locals 0
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/view/inputmethod/EditorInfo;->getInitialSelectedText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasMipMap()Z
 
-    move-result-object p0
+    move-result p0
 
-    return-object p0
+    return p0
 .end method
 
-.method public static b(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
+.method public static b(Landroid/graphics/Bitmap;Z)V
     .locals 0
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/view/inputmethod/EditorInfo;->getInitialTextAfterCursor(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
-    .locals 0
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/view/inputmethod/EditorInfo;->getInitialTextBeforeCursor(II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
-    .locals 0
-    .param p0    # Landroid/view/inputmethod/EditorInfo;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/view/inputmethod/EditorInfo;->setInitialSurroundingSubText(Ljava/lang/CharSequence;I)V
+    invoke-virtual {p0, p1}, Landroid/graphics/Bitmap;->setHasMipMap(Z)V
 
     return-void
 .end method

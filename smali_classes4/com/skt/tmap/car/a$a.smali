@@ -75,7 +75,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/car/a$a;->a:Lcom/skt/tmap/car/a;
@@ -101,7 +101,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/car/NavigationNotificationServiceKt;->l(Landroidx/car/app/navigation/NavigationManager;)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/car/NavigationNotificationServiceKt;->p(Landroidx/car/app/navigation/NavigationManager;)V
 
     return-void
 .end method
@@ -136,7 +136,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/car/a$a;->a:Lcom/skt/tmap/car/a;

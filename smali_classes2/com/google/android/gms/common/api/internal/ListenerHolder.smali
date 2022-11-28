@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/ListenerHolder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -30,26 +30,10 @@
 .field private volatile zab:Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "T",
-            "L;"
-        }
-    .end annotation
 .end field
 
 .field private volatile zac:Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey<",
-            "T",
-            "L;",
-            ">;"
-        }
     .end annotation
 .end field
 
@@ -275,15 +259,6 @@
 
 .method public final zaa(Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier<",
-            "-T",
-            "L;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/ListenerHolder;->zab:Ljava/lang/Object;

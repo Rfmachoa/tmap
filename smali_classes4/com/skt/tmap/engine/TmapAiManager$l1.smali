@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->y3()V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->G3()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$l1;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     move-result-object v0
 
@@ -61,11 +61,11 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$l1;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
     move-result-object v0
 
-    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_NEXT_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
+    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_PREVIOUS_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
 
     const/4 v2, 0x0
 

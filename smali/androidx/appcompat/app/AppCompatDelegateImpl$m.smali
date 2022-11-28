@@ -1,102 +1,40 @@
 .class public Landroidx/appcompat/app/AppCompatDelegateImpl$m;
-.super Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;
+.super Ljava/lang/Object;
 .source "AppCompatDelegateImpl.java"
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/app/AppCompatDelegateImpl;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x9
     name = "m"
 .end annotation
 
 
-# instance fields
-.field public final c:Landroidx/appcompat/app/l;
-
-.field public final synthetic d:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/app/AppCompatDelegateImpl;Landroidx/appcompat/app/l;)V
+.method public constructor <init>()V
     .locals 0
-    .param p1    # Landroidx/appcompat/app/AppCompatDelegateImpl;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$m;->d:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    invoke-direct {p0, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl$AutoNightModeManager;-><init>(Landroidx/appcompat/app/AppCompatDelegateImpl;)V
-
-    .line 2
-    iput-object p2, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$m;->c:Landroidx/appcompat/app/l;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public b()Landroid/content/IntentFilter;
-    .locals 2
+.method public static a(Landroid/os/PowerManager;)Z
+    .locals 0
 
     .line 1
-    new-instance v0, Landroid/content/IntentFilter;
+    invoke-virtual {p0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
 
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+    move-result p0
 
-    const-string v1, "android.intent.action.TIME_SET"
-
-    .line 2
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.TIMEZONE_CHANGED"
-
-    .line 3
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.TIME_TICK"
-
-    .line 4
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$m;->c:Landroidx/appcompat/app/l;
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/l;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-.end method
-
-.method public e()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$m;->d:Landroidx/appcompat/app/AppCompatDelegateImpl;
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDelegateImpl;->c()Z
-
-    return-void
+    return p0
 .end method

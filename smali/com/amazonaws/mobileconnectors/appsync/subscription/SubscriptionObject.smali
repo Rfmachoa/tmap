@@ -39,10 +39,10 @@
     .end annotation
 .end field
 
-.field public normalizer:Lj4/h;
+.field public normalizer:Lg6/h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lj4/h<",
+            "Lg6/h<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field public scalarTypeAdapters:Lo4/d;
+.field public scalarTypeAdapters:Ll6/d;
 
 .field public subscription:Lcom/apollographql/apollo/api/f;
     .annotation system Ldalvik/annotation/Signature;
@@ -181,12 +181,12 @@
     return-void
 .end method
 
-.method private propagateMessageToAllListeners(Lc4/i;)V
+.method private propagateMessageToAllListeners(Lz5/i;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc4/i<",
+            "Lz5/i<",
             "TT;>;)V"
         }
     .end annotation
@@ -233,7 +233,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 3
-    invoke-interface {v1, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lc4/i;)V
+    invoke-interface {v1, p1}, Lcom/amazonaws/mobileconnectors/appsync/AppSyncSubscriptionCall$Callback;->onResponse(Lz5/i;)V
 
     goto :goto_0
 
@@ -353,32 +353,32 @@
     move-result-object v0
 
     .line 2
-    new-instance v1, Lo4/a;
+    new-instance v1, Ll6/a;
 
     iget-object v2, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->subscription:Lcom/apollographql/apollo/api/f;
 
     .line 3
-    invoke-interface {v2}, Lcom/apollographql/apollo/api/b;->responseFieldMapper()Lc4/j;
+    invoke-interface {v2}, Lcom/apollographql/apollo/api/b;->responseFieldMapper()Lz5/j;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->scalarTypeAdapters:Lo4/d;
+    iget-object v4, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->scalarTypeAdapters:Ll6/d;
 
-    iget-object v5, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->normalizer:Lj4/h;
+    iget-object v5, p0, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->normalizer:Lg6/h;
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lo4/a;-><init>(Lcom/apollographql/apollo/api/b;Lc4/j;Lo4/d;Lj4/h;)V
+    invoke-direct {v1, v2, v3, v4, v5}, Ll6/a;-><init>(Lcom/apollographql/apollo/api/b;Lz5/j;Ll6/d;Lg6/h;)V
 
     .line 4
-    invoke-virtual {v0}, Lokhttp3/ResponseBody;->source()Lzj/o;
+    invoke-virtual {v0}, Lokhttp3/ResponseBody;->source()Lem/o;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lo4/a;->g(Lzj/o;)Lc4/i;
+    invoke-virtual {v1, v0}, Ll6/a;->f(Lem/o;)Lz5/i;
 
     move-result-object v0
 
     .line 5
-    invoke-virtual {v0}, Lc4/i;->f()Z
+    invoke-virtual {v0}, Lz5/i;->f()Z
 
     move-result v1
 
@@ -393,7 +393,7 @@
 
     .line 7
     :cond_0
-    invoke-direct {p0, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->propagateMessageToAllListeners(Lc4/i;)V
+    invoke-direct {p0, v0}, Lcom/amazonaws/mobileconnectors/appsync/subscription/SubscriptionObject;->propagateMessageToAllListeners(Lz5/i;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

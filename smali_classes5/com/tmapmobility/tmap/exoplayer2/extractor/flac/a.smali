@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/tmapmobility/tmap/exoplayer2/extractor/q;
+.field public final synthetic a:Lcom/tmapmobility/tmap/exoplayer2/extractor/s;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/q;)V
+.method public synthetic constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/s;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/q;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/s;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final a(J)J
     .locals 1
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/q;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;->a:Lcom/tmapmobility/tmap/exoplayer2/extractor/s;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/q;->l(J)J
+    invoke-virtual {v0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/s;->l(J)J
 
     move-result-wide p1
 

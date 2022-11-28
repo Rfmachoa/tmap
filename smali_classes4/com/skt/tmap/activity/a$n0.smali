@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final a:I = 0x1e
+.field public static final a:Ljava/lang/String; = "need_refresh"
 
 
 # direct methods

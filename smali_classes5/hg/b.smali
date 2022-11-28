@@ -1,178 +1,137 @@
-.class public Lhg/b;
+.class public final Lhg/b;
 .super Ljava/lang/Object;
-.source "EntityDeserializer.java"
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
-
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+.source "EventMessageEncoder.java"
 
 
 # instance fields
-.field public final a:Lzf/e;
+.field public final a:Ljava/io/ByteArrayOutputStream;
+
+.field public final b:Ljava/io/DataOutputStream;
 
 
 # direct methods
-.method public constructor <init>(Lzf/e;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "Content length strategy"
+    .line 2
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    const/16 v1, 0x200
+
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+
+    iput-object v0, p0, Lhg/b;->a:Ljava/io/ByteArrayOutputStream;
+
+    .line 3
+    new-instance v1, Ljava/io/DataOutputStream;
+
+    invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    iput-object v1, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
+
+    return-void
+.end method
+
+.method public static b(Ljava/io/DataOutputStream;Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Ljava/io/DataOutputStream;->writeBytes(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzf/e;
-
-    iput-object p1, p0, Lhg/b;->a:Lzf/e;
+    invoke-virtual {p0, p1}, Ljava/io/DataOutputStream;->writeByte(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Llg/h;Ldf/p;)Ldf/l;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcz/msebera/android/httpclient/HttpException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const-string v0, "Session input buffer"
+.method public a(Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;)[B
+    .locals 3
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v0, p0, Lhg/b;->a:Ljava/io/ByteArrayOutputStream;
 
-    const-string v0, "HTTP message"
-
-    .line 2
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 3
-    invoke-virtual {p0, p1, p2}, Lhg/b;->b(Llg/h;Ldf/p;)Lzf/b;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public b(Llg/h;Ldf/p;)Lzf/b;
-    .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcz/msebera/android/httpclient/HttpException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Lzf/b;
-
-    invoke-direct {v0}, Lzf/b;-><init>()V
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->reset()V
 
     .line 2
-    iget-object v1, p0, Lhg/b;->a:Lzf/e;
+    :try_start_0
+    iget-object v0, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
 
-    invoke-interface {v1, p2}, Lzf/e;->a(Ldf/p;)J
+    iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->a:Ljava/lang/String;
 
-    move-result-wide v1
-
-    const-wide/16 v3, -0x2
-
-    cmp-long v3, v1, v3
-
-    const-wide/16 v4, -0x1
-
-    if-nez v3, :cond_0
-
-    const/4 v1, 0x1
+    invoke-static {v0, v1}, Lhg/b;->b(Ljava/io/DataOutputStream;Ljava/lang/String;)V
 
     .line 3
-    invoke-virtual {v0, v1}, Lzf/a;->a(Z)V
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->b:Ljava/lang/String;
 
-    .line 4
-    invoke-virtual {v0, v4, v5}, Lzf/b;->g(J)V
-
-    .line 5
-    new-instance v1, Ljg/e;
-
-    invoke-direct {v1, p1}, Ljg/e;-><init>(Llg/h;)V
-
-    invoke-virtual {v0, v1}, Lzf/b;->f(Ljava/io/InputStream;)V
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    cmp-long v3, v1, v4
+    const-string v0, ""
 
-    const/4 v6, 0x0
+    .line 4
+    :goto_0
+    iget-object v1, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
 
-    if-nez v3, :cond_1
+    invoke-static {v1, v0}, Lhg/b;->b(Ljava/io/DataOutputStream;Ljava/lang/String;)V
+
+    .line 5
+    iget-object v0, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
+
+    iget-wide v1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
 
     .line 6
-    invoke-virtual {v0, v6}, Lzf/a;->a(Z)V
+    iget-object v0, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
+
+    iget-wide v1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
 
     .line 7
-    invoke-virtual {v0, v4, v5}, Lzf/b;->g(J)V
+    iget-object v0, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
+
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;->e:[B
+
+    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->write([B)V
 
     .line 8
-    new-instance v1, Ljg/v;
+    iget-object p1, p0, Lhg/b;->b:Ljava/io/DataOutputStream;
 
-    invoke-direct {v1, p1}, Ljg/v;-><init>(Llg/h;)V
-
-    invoke-virtual {v0, v1}, Lzf/b;->f(Ljava/io/InputStream;)V
-
-    goto :goto_0
+    invoke-virtual {p1}, Ljava/io/DataOutputStream;->flush()V
 
     .line 9
-    :cond_1
-    invoke-virtual {v0, v6}, Lzf/a;->a(Z)V
+    iget-object p1, p0, Lhg/b;->a:Ljava/io/ByteArrayOutputStream;
+
+    invoke-virtual {p1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
 
     .line 10
-    invoke-virtual {v0, v1, v2}, Lzf/b;->g(J)V
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 11
-    new-instance v3, Ljg/g;
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {v3, p1, v1, v2}, Ljg/g;-><init>(Llg/h;J)V
-
-    invoke-virtual {v0, v3}, Lzf/b;->f(Ljava/io/InputStream;)V
-
-    :goto_0
-    const-string p1, "Content-Type"
-
-    .line 12
-    invoke-interface {p2, p1}, Ldf/p;->getFirstHeader(Ljava/lang/String;)Ldf/d;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    .line 13
-    invoke-virtual {v0, p1}, Lzf/a;->d(Ldf/d;)V
-
-    :cond_2
-    const-string p1, "Content-Encoding"
-
-    .line 14
-    invoke-interface {p2, p1}, Ldf/p;->getFirstHeader(Ljava/lang/String;)Ldf/d;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    .line 15
-    invoke-virtual {v0, p1}, Lzf/a;->b(Ldf/d;)V
-
-    :cond_3
-    return-object v0
+    throw v0
 .end method

@@ -9,7 +9,7 @@
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
             "Ljava/lang/Class;",
-            "Lc4/j;",
+            "Lz5/j;",
             ">;"
         }
     .end annotation
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public a(Lcom/apollographql/apollo/api/b;)Lc4/j;
+.method public a(Lcom/apollographql/apollo/api/b;)Lz5/j;
     .locals 2
     .param p1    # Lcom/apollographql/apollo/api/b;
         .annotation runtime Ljavax/annotation/Nonnull;
@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lc4/j;
+    check-cast v1, Lz5/j;
 
     if-eqz v1, :cond_0
 
@@ -71,7 +71,7 @@
     :cond_0
     iget-object v1, p0, Lcom/apollographql/apollo/internal/h;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {p1}, Lcom/apollographql/apollo/api/b;->responseFieldMapper()Lc4/j;
+    invoke-interface {p1}, Lcom/apollographql/apollo/api/b;->responseFieldMapper()Lz5/j;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lc4/j;
+    check-cast p1, Lz5/j;
 
     return-object p1
 .end method

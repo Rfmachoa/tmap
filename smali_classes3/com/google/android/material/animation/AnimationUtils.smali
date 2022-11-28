@@ -35,23 +35,23 @@
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     .line 2
-    new-instance v0, Lm2/b;
+    new-instance v0, Lh3/b;
 
-    invoke-direct {v0}, Lm2/b;-><init>()V
+    invoke-direct {v0}, Lh3/b;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     .line 3
-    new-instance v0, Lm2/a;
+    new-instance v0, Lh3/a;
 
-    invoke-direct {v0}, Lm2/a;-><init>()V
+    invoke-direct {v0}, Lh3/a;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->FAST_OUT_LINEAR_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
     .line 4
-    new-instance v0, Lm2/c;
+    new-instance v0, Lh3/c;
 
-    invoke-direct {v0}, Lm2/c;-><init>()V
+    invoke-direct {v0}, Lh3/c;-><init>()V
 
     sput-object v0, Lcom/google/android/material/animation/AnimationUtils;->LINEAR_OUT_SLOW_IN_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
@@ -86,35 +86,17 @@
 
 .method public static lerp(FFFFF)F
     .locals 1
-    .param p2    # F
-        .annotation build Landroidx/annotation/FloatRange;
-            from = 0.0
-            to = 1.0
-        .end annotation
-    .end param
-    .param p3    # F
-        .annotation build Landroidx/annotation/FloatRange;
-            from = 0.0
-            to = 1.0
-        .end annotation
-    .end param
-    .param p4    # F
-        .annotation build Landroidx/annotation/FloatRange;
-            from = 0.0
-            to = 1.0
-        .end annotation
-    .end param
 
     cmpg-float v0, p4, p2
 
-    if-gez v0, :cond_0
+    if-gtz v0, :cond_0
 
     return p0
 
     :cond_0
     cmpl-float v0, p4, p3
 
-    if-lez v0, :cond_1
+    if-ltz v0, :cond_1
 
     return p1
 
@@ -140,7 +122,7 @@
 
     int-to-float p1, p1
 
-    invoke-static {p2, p1, p0}, Lw5/d;->a(FFI)I
+    invoke-static {p2, p1, p0}, Lt7/d;->a(FFI)I
 
     move-result p0
 

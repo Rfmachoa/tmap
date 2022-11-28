@@ -98,7 +98,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "type"
+    const-string v5, "type"
 
     .line 6
     invoke-static {v4, v5}, Lcom/skt/aicloud/mobile/service/util/n;->i(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;

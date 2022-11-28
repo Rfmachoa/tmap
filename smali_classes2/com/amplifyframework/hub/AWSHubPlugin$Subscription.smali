@@ -110,7 +110,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/hub/AWSHubPlugin$Subscription;->subscriptionToken:Lcom/amplifyframework/hub/SubscriptionToken;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -134,7 +134,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/hub/AWSHubPlugin$Subscription;->hubEventFilter:Lcom/amplifyframework/hub/HubEventFilter;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -148,7 +148,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/hub/AWSHubPlugin$Subscription;->hubSubscriber:Lcom/amplifyframework/hub/HubSubscriber;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

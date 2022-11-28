@@ -1,11 +1,11 @@
 .class public Landroidx/recyclerview/widget/z$a;
-.super Landroidx/recyclerview/widget/z;
-.source "OrientationHelper.java"
+.super Landroidx/recyclerview/widget/r;
+.source "PagerSnapHelper.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/recyclerview/widget/z;->a(Landroidx/recyclerview/widget/RecyclerView$m;)Landroidx/recyclerview/widget/z;
+    value = Landroidx/recyclerview/widget/z;->e(Landroidx/recyclerview/widget/RecyclerView$m;)Landroidx/recyclerview/widget/RecyclerView$w;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -14,296 +14,106 @@
 .end annotation
 
 
-# direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$m;)V
-    .locals 1
+# instance fields
+.field public final synthetic a:Landroidx/recyclerview/widget/z;
 
-    const/4 v0, 0x0
+
+# direct methods
+.method public constructor <init>(Landroidx/recyclerview/widget/z;Landroid/content/Context;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/z;-><init>(Landroidx/recyclerview/widget/RecyclerView$m;Landroidx/recyclerview/widget/z$a;)V
+    iput-object p1, p0, Landroidx/recyclerview/widget/z$a;->a:Landroidx/recyclerview/widget/z;
+
+    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/r;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public d(Landroid/view/View;)I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
-
-    .line 2
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView$m;->getDecoratedRight(Landroid/view/View;)I
-
-    move-result p1
-
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    add-int/2addr p1, v0
-
-    return p1
-.end method
-
-.method public e(Landroid/view/View;)I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
-
-    .line 2
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView$m;->getDecoratedMeasuredWidth(Landroid/view/View;)I
-
-    move-result p1
-
-    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    add-int/2addr p1, v1
-
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    add-int/2addr p1, v0
-
-    return p1
-.end method
-
-.method public f(Landroid/view/View;)I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
-
-    .line 2
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView$m;->getDecoratedMeasuredHeight(Landroid/view/View;)I
-
-    move-result p1
-
-    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    add-int/2addr p1, v1
-
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    add-int/2addr p1, v0
-
-    return p1
-.end method
-
-.method public g(Landroid/view/View;)I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
-
-    .line 2
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView$m;->getDecoratedLeft(Landroid/view/View;)I
-
-    move-result p1
-
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    sub-int/2addr p1, v0
-
-    return p1
-.end method
-
-.method public h()I
+.method public calculateSpeedPerPixel(Landroid/util/DisplayMetrics;)F
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getWidth()I
+    int-to-float p1, p1
 
-    move-result v0
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr v0, p1
 
     return v0
 .end method
 
-.method public i()I
+.method public calculateTimeForScrolling(I)I
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/recyclerview/widget/r;->calculateTimeForScrolling(I)I
+
+    move-result p1
+
+    const/16 v0, 0x64
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public onTargetFound(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$x;Landroidx/recyclerview/widget/RecyclerView$w$a;)V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
+    iget-object p2, p0, Landroidx/recyclerview/widget/z$a;->a:Landroidx/recyclerview/widget/z;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getWidth()I
+    iget-object v0, p2, Landroidx/recyclerview/widget/e0;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$m;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0, p1}, Landroidx/recyclerview/widget/z;->c(Landroidx/recyclerview/widget/RecyclerView$m;Landroid/view/View;)[I
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    .line 2
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    .line 3
+    aget p1, p1, v0
+
+    .line 4
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView$m;->getPaddingRight()I
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public j()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getPaddingRight()I
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    return v0
-.end method
-
-.method public l()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getWidthMode()I
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/r;->calculateTimeForDeceleration(I)I
 
     move-result v0
 
-    return v0
-.end method
+    if-lez v0, :cond_0
 
-.method public m()I
-    .locals 1
+    .line 5
+    iget-object v1, p0, Landroidx/recyclerview/widget/r;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
+    invoke-virtual {p3, p2, p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$w$a;->l(IIILandroid/view/animation/Interpolator;)V
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getHeightMode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public n()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getPaddingLeft()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public o()I
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$m;->getWidth()I
-
-    move-result v0
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView$m;->getPaddingLeft()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    .line 2
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView$m;->getPaddingRight()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public q(Landroid/view/View;)I
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->c:Landroid/graphics/Rect;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, p1, v2, v1}, Landroidx/recyclerview/widget/RecyclerView$m;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
-
-    .line 2
-    iget-object p1, p0, Landroidx/recyclerview/widget/z;->c:Landroid/graphics/Rect;
-
-    iget p1, p1, Landroid/graphics/Rect;->right:I
-
-    return p1
-.end method
-
-.method public r(Landroid/view/View;)I
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    iget-object v1, p0, Landroidx/recyclerview/widget/z;->c:Landroid/graphics/Rect;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, p1, v2, v1}, Landroidx/recyclerview/widget/RecyclerView$m;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
-
-    .line 2
-    iget-object p1, p0, Landroidx/recyclerview/widget/z;->c:Landroid/graphics/Rect;
-
-    iget p1, p1, Landroid/graphics/Rect;->left:I
-
-    return p1
-.end method
-
-.method public s(Landroid/view/View;I)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p1, p2}, Landroid/view/View;->offsetLeftAndRight(I)V
-
-    return-void
-.end method
-
-.method public t(I)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Landroidx/recyclerview/widget/z;->a:Landroidx/recyclerview/widget/RecyclerView$m;
-
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$m;->offsetChildrenHorizontal(I)V
-
+    :cond_0
     return-void
 .end method

@@ -37,8 +37,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -56,7 +56,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/db/UserDataDatabase$a;-><init>()V
 
     return-void
@@ -81,75 +80,72 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/db/UserDataDatabase;->B()Lcom/skt/tmap/db/UserDataDatabase;
+    invoke-static {}, Lcom/skt/tmap/db/UserDataDatabase;->M()Lcom/skt/tmap/db/UserDataDatabase;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
     monitor-enter p0
 
     .line 2
     :try_start_0
+    sget-object v0, Lcom/skt/tmap/db/UserDataDatabase;->q:Lcom/skt/tmap/db/UserDataDatabase$a;
+
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 3
     const-class v0, Lcom/skt/tmap/db/UserDataDatabase;
 
     const-string/jumbo v1, "userdata.db"
 
+    invoke-static {p1, v0, v1}, Landroidx/room/n1;->a(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)Landroidx/room/RoomDatabase$a;
+
+    move-result-object p1
+
+    .line 3
+    invoke-virtual {p1}, Landroidx/room/RoomDatabase$a;->n()Landroidx/room/RoomDatabase$a;
+
+    move-result-object p1
+
     .line 4
-    invoke-static {p1, v0, v1}, Landroidx/room/i;->a(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)Landroidx/room/RoomDatabase$a;
-
-    move-result-object p1
-
-    .line 5
-    invoke-virtual {p1}, Landroidx/room/RoomDatabase$a;->h()Landroidx/room/RoomDatabase$a;
-
-    move-result-object p1
-
-    .line 6
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroidx/room/RoomDatabase$a;->n(Ljava/util/concurrent/Executor;)Landroidx/room/RoomDatabase$a;
+    invoke-virtual {p1, v0}, Landroidx/room/RoomDatabase$a;->w(Ljava/util/concurrent/Executor;)Landroidx/room/RoomDatabase$a;
 
     move-result-object p1
 
-    .line 7
-    invoke-virtual {p1}, Landroidx/room/RoomDatabase$a;->c()Landroidx/room/RoomDatabase$a;
+    .line 5
+    invoke-virtual {p1}, Landroidx/room/RoomDatabase$a;->e()Landroidx/room/RoomDatabase$a;
 
     move-result-object p1
 
-    .line 8
-    invoke-virtual {p1}, Landroidx/room/RoomDatabase$a;->d()Landroidx/room/RoomDatabase;
+    .line 6
+    invoke-virtual {p1}, Landroidx/room/RoomDatabase$a;->f()Landroidx/room/RoomDatabase;
 
     move-result-object p1
 
     check-cast p1, Lcom/skt/tmap/db/UserDataDatabase;
 
-    invoke-static {p1}, Lcom/skt/tmap/db/UserDataDatabase;->C(Lcom/skt/tmap/db/UserDataDatabase;)V
+    .line 7
+    invoke-static {p1}, Lcom/skt/tmap/db/UserDataDatabase;->N(Lcom/skt/tmap/db/UserDataDatabase;)V
 
-    .line 9
-    invoke-static {}, Lcom/skt/tmap/db/UserDataDatabase;->B()Lcom/skt/tmap/db/UserDataDatabase;
+    .line 8
+    invoke-static {}, Lcom/skt/tmap/db/UserDataDatabase;->M()Lcom/skt/tmap/db/UserDataDatabase;
 
     move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
+    .line 9
     monitor-exit p0
 
     invoke-static {v0}, Lkotlin/jvm/internal/f0;->m(Ljava/lang/Object;)V
 
-    :goto_0
-    return-object v0
+    goto :goto_0
 
     :catchall_0
     move-exception p1
@@ -157,4 +153,8 @@
     monitor-exit p0
 
     throw p1
+
+    :cond_0
+    :goto_0
+    return-object v0
 .end method

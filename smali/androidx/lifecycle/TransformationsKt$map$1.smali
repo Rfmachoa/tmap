@@ -3,12 +3,12 @@
 .source "Transformations.kt"
 
 # interfaces
-.implements Ln/a;
+.implements Lp/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/lifecycle/TransformationsKt;->map(Landroidx/lifecycle/LiveData;Lej/l;)Landroidx/lifecycle/LiveData;
+    value = Landroidx/lifecycle/TransformationsKt;->map(Landroidx/lifecycle/LiveData;Lgl/l;)Landroidx/lifecycle/LiveData;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,51 +24,60 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Ln/a<",
-        "TX;TY;>;"
+        "Lp/a;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTransformations.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transformations.kt\nandroidx/lifecycle/TransformationsKt$map$1\n*L\n1#1,88:1\n*E\n"
+    value = "SMAP\nTransformations.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transformations.kt\nandroidx/lifecycle/TransformationsKt$map$1\n*L\n1#1,93:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
-        "\u0000\u0004\n\u0002\u0008\u0007\u0010\u0000\u001a\u0002H\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u00012\u000e\u0010\u0003\u001a\n \u0004*\u0004\u0018\u0001H\u0002H\u0002H\n\u00a2\u0006\u0004\u0008\u0005\u0010\u0006"
+        "\u0000\u0004\n\u0002\u0008\u0007\u0010\u0000\u001a\n \u0002*\u0004\u0018\u0001H\u0001H\u0001\"\u0004\u0008\u0000\u0010\u0003\"\u0004\u0008\u0001\u0010\u00012\u000e\u0010\u0004\u001a\n \u0002*\u0004\u0018\u0001H\u0003H\u0003H\n\u00a2\u0006\u0004\u0008\u0005\u0010\u0006"
     }
     d2 = {
         "<anonymous>",
         "Y",
+        "kotlin.jvm.PlatformType",
         "X",
         "it",
-        "kotlin.jvm.PlatformType",
         "apply",
         "(Ljava/lang/Object;)Ljava/lang/Object;"
     }
     k = 0x3
     mv = {
         0x1,
-        0x1,
-        0xf
+        0x6,
+        0x0
     }
+    xi = 0xb0
 .end annotation
 
 
 # instance fields
-.field public final synthetic $transform:Lej/l;
+.field public final synthetic $transform:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "TX;TY;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lej/l;)V
+.method public constructor <init>(Lgl/l;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgl/l<",
+            "-TX;+TY;>;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Landroidx/lifecycle/TransformationsKt$map$1;->$transform:Lej/l;
+    iput-object p1, p0, Landroidx/lifecycle/TransformationsKt$map$1;->$transform:Lgl/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -86,9 +95,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/TransformationsKt$map$1;->$transform:Lej/l;
+    iget-object v0, p0, Landroidx/lifecycle/TransformationsKt$map$1;->$transform:Lgl/l;
 
-    invoke-interface {v0, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

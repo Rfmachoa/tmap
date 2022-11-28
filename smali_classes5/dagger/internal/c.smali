@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field public a:Loi/a;
+.field public a:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -40,16 +40,16 @@
     return-void
 .end method
 
-.method public static b(Loi/a;Loi/a;)V
+.method public static b(Lsk/a;Lsk/a;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -61,12 +61,12 @@
     check-cast p0, Ldagger/internal/c;
 
     .line 3
-    iget-object v0, p0, Ldagger/internal/c;->a:Loi/a;
+    iget-object v0, p0, Ldagger/internal/c;->a:Lsk/a;
 
     if-nez v0, :cond_0
 
     .line 4
-    iput-object p1, p0, Ldagger/internal/c;->a:Loi/a;
+    iput-object p1, p0, Ldagger/internal/c;->a:Lsk/a;
 
     return-void
 
@@ -81,34 +81,34 @@
 
 
 # virtual methods
-.method public a()Loi/a;
+.method public a()Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ldagger/internal/c;->a:Loi/a;
+    iget-object v0, p0, Ldagger/internal/c;->a:Lsk/a;
 
     invoke-static {v0}, Ldagger/internal/k;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Loi/a;
+    check-cast v0, Lsk/a;
 
     return-object v0
 .end method
 
-.method public c(Loi/a;)V
+.method public c(Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -117,7 +117,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Ldagger/internal/c;->b(Loi/a;Loi/a;)V
+    invoke-static {p0, p1}, Ldagger/internal/c;->b(Lsk/a;Lsk/a;)V
 
     return-void
 .end method
@@ -131,12 +131,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Ldagger/internal/c;->a:Loi/a;
+    iget-object v0, p0, Ldagger/internal/c;->a:Lsk/a;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 

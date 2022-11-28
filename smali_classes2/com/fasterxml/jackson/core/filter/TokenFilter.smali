@@ -3,6 +3,14 @@
 .source "TokenFilter.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fasterxml/jackson/core/filter/TokenFilter$Inclusion;
+    }
+.end annotation
+
+
 # static fields
 .field public static final INCLUDE_ALL:Lcom/fasterxml/jackson/core/filter/TokenFilter;
 
@@ -201,6 +209,17 @@
     .locals 0
 
     return-object p0
+.end method
+
+.method public includeString(Ljava/io/Reader;I)Z
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/filter/TokenFilter;->_includeScalar()Z
+
+    move-result p1
+
+    return p1
 .end method
 
 .method public includeString(Ljava/lang/String;)Z

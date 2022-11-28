@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/activity/contextaware/ContextAwareKt;->a(La/a;Lej/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    value = Landroidx/activity/contextaware/ContextAwareKt;->a(La/a;Lgl/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,10 +23,10 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0006\u00b8\u0006\u0000"
+        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0006"
     }
     d2 = {
-        "androidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$listener$1",
+        "androidx/activity/contextaware/ContextAwareKt$a",
         "La/c;",
         "Landroid/content/Context;",
         "context",
@@ -37,29 +37,51 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lkotlinx/coroutines/n;
+.field public final synthetic a:Lkotlinx/coroutines/p;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/p<",
+            "TR;>;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:La/a;
-
-.field public final synthetic c:Lej/l;
+.field public final synthetic b:Lgl/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lgl/l<",
+            "Landroid/content/Context;",
+            "TR;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lkotlinx/coroutines/n;La/a;Lej/l;)V
+.method public constructor <init>(Lkotlinx/coroutines/p;Lgl/l;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/p<",
+            "-TR;>;",
+            "Lgl/l<",
+            "-",
+            "Landroid/content/Context;",
+            "+TR;>;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->a:Lkotlinx/coroutines/n;
+    iput-object p1, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->a:Lkotlinx/coroutines/p;
 
-    iput-object p2, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->b:La/a;
-
-    iput-object p3, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->c:Lej/l;
+    iput-object p2, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->b:Lgl/l;
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -70,7 +92,7 @@
 
 # virtual methods
 .method public a(Landroid/content/Context;)V
-    .locals 2
+    .locals 3
     .param p1    # Landroid/content/Context;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -81,14 +103,14 @@
     invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->a:Lkotlinx/coroutines/n;
+    iget-object v0, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->a:Lkotlinx/coroutines/p;
+
+    iget-object v1, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->b:Lgl/l;
 
     :try_start_0
-    sget-object v1, Lkotlin/Result;->Companion:Lkotlin/Result$a;
+    sget-object v2, Lkotlin/Result;->Companion:Lkotlin/Result$a;
 
-    iget-object v1, p0, Landroidx/activity/contextaware/ContextAwareKt$a;->c:Lej/l;
-
-    invoke-interface {v1, p1}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lgl/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

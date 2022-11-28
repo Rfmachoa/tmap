@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ln/a;
+.implements Lp/a;
 
 
 # static fields
@@ -36,9 +36,9 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p1, Ljava/util/List;
 
-    invoke-static {p1}, Landroidx/camera/core/ImageCapture;->P(Ljava/lang/Boolean;)Ljava/lang/Void;
+    invoke-static {p1}, Landroidx/camera/core/ImageCapture;->Y(Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object p1
 

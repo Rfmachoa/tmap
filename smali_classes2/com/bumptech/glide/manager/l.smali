@@ -1,14 +1,19 @@
 .class public interface abstract Lcom/bumptech/glide/manager/l;
 .super Ljava/lang/Object;
-.source "LifecycleListener.java"
+.source "Lifecycle.java"
 
 
 # virtual methods
-.method public abstract onDestroy()V
+.method public abstract a(Lcom/bumptech/glide/manager/m;)V
+    .param p1    # Lcom/bumptech/glide/manager/m;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
-.method public abstract onStart()V
-.end method
-
-.method public abstract onStop()V
+.method public abstract b(Lcom/bumptech/glide/manager/m;)V
+    .param p1    # Lcom/bumptech/glide/manager/m;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method

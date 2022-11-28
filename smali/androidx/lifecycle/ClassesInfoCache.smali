@@ -11,6 +11,9 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field private static final CALL_TYPE_NO_ARG:I = 0x0

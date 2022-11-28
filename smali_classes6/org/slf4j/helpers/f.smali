@@ -3,7 +3,7 @@
 .source "NOPMDCAdapter.java"
 
 # interfaces
-.implements Lrk/c;
+.implements Lxm/c;
 
 
 # direct methods

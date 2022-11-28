@@ -1,6 +1,6 @@
-.class public Landroidx/navigation/u$a;
-.super Landroidx/navigation/q0;
-.source "NavDeepLinkBuilder.java"
+.class public final Landroidx/navigation/u$a;
+.super Ljava/lang/Object;
+.source "NavDeepLinkBuilder.kt"
 
 
 # annotations
@@ -9,83 +9,88 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "a"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u0002\u0018\u00002\u00020\u0001B\u0019\u0012\u0006\u0010\u0007\u001a\u00020\u0002\u0012\u0008\u0010\u000b\u001a\u0004\u0018\u00010\u0008\u00a2\u0006\u0004\u0008\u000c\u0010\rR\u0017\u0010\u0007\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00088\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010\t\u001a\u0004\u0008\u0003\u0010\n\u00a8\u0006\u000e"
+    }
+    d2 = {
+        "Landroidx/navigation/u$a;",
+        "",
+        "",
+        "a",
+        "I",
+        "b",
+        "()I",
+        "destinationId",
+        "Landroid/os/Bundle;",
+        "Landroid/os/Bundle;",
+        "()Landroid/os/Bundle;",
+        "arguments",
+        "<init>",
+        "(ILandroid/os/Bundle;)V",
+        "navigation-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
 .end annotation
 
 
 # instance fields
-.field public final c:Landroidx/navigation/Navigator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/navigation/Navigator<",
-            "Landroidx/navigation/NavDestination;",
-            ">;"
-        }
+.field public final a:I
+
+.field public final b:Landroid/os/Bundle;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILandroid/os/Bundle;)V
+    .locals 0
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-direct {p0}, Landroidx/navigation/q0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroidx/navigation/u$a$a;
-
-    invoke-direct {v0, p0}, Landroidx/navigation/u$a$a;-><init>(Landroidx/navigation/u$a;)V
-
-    iput-object v0, p0, Landroidx/navigation/u$a;->c:Landroidx/navigation/Navigator;
+    iput p1, p0, Landroidx/navigation/u$a;->a:I
 
     .line 3
-    new-instance v0, Landroidx/navigation/e0;
-
-    invoke-direct {v0, p0}, Landroidx/navigation/e0;-><init>(Landroidx/navigation/q0;)V
-
-    invoke-virtual {p0, v0}, Landroidx/navigation/q0;->a(Landroidx/navigation/Navigator;)Landroidx/navigation/Navigator;
+    iput-object p2, p0, Landroidx/navigation/u$a;->b:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public e(Ljava/lang/String;)Landroidx/navigation/Navigator;
-    .locals 0
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Landroidx/navigation/Navigator<",
-            "+",
-            "Landroidx/navigation/NavDestination;",
-            ">;"
-        }
+.method public final a()Landroid/os/Bundle;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
     .line 1
-    :try_start_0
-    invoke-super {p0, p1}, Landroidx/navigation/q0;->e(Ljava/lang/String;)Landroidx/navigation/Navigator;
+    iget-object v0, p0, Landroidx/navigation/u$a;->b:Landroid/os/Bundle;
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
 
-    return-object p1
+.method public final b()I
+    .locals 1
 
-    .line 2
-    :catch_0
-    iget-object p1, p0, Landroidx/navigation/u$a;->c:Landroidx/navigation/Navigator;
+    .line 1
+    iget v0, p0, Landroidx/navigation/u$a;->a:I
 
-    return-object p1
+    return v0
 .end method

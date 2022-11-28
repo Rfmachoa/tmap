@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/ads/AdValue;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -12,36 +12,37 @@
 
 
 # instance fields
-.field private final zzacj:I
+.field private final zza:I
 
-.field private final zzack:Ljava/lang/String;
+.field private final zzb:Ljava/lang/String;
 
-.field private final zzacl:J
+.field private final zzc:J
 
 
 # direct methods
 .method private constructor <init>(ILjava/lang/String;J)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lcom/google/android/gms/ads/AdValue;->zzacj:I
+    iput p1, p0, Lcom/google/android/gms/ads/AdValue;->zza:I
 
-    .line 3
-    iput-object p2, p0, Lcom/google/android/gms/ads/AdValue;->zzack:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/ads/AdValue;->zzb:Ljava/lang/String;
 
-    .line 4
-    iput-wide p3, p0, Lcom/google/android/gms/ads/AdValue;->zzacl:J
+    iput-wide p3, p0, Lcom/google/android/gms/ads/AdValue;->zzc:J
 
     return-void
 .end method
 
 .method public static zza(ILjava/lang/String;J)Lcom/google/android/gms/ads/AdValue;
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
     new-instance v0, Lcom/google/android/gms/ads/AdValue;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/gms/ads/AdValue;-><init>(ILjava/lang/String;J)V
@@ -51,29 +52,28 @@
 
 
 # virtual methods
-.method public final getCurrencyCode()Ljava/lang/String;
+.method public getCurrencyCode()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdValue;->zzack:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdValue;->zzb:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final getPrecisionType()I
+.method public getPrecisionType()I
     .locals 1
 
-    .line 1
-    iget v0, p0, Lcom/google/android/gms/ads/AdValue;->zzacj:I
+    iget v0, p0, Lcom/google/android/gms/ads/AdValue;->zza:I
 
     return v0
 .end method
 
-.method public final getValueMicros()J
+.method public getValueMicros()J
     .locals 2
 
-    .line 1
-    iget-wide v0, p0, Lcom/google/android/gms/ads/AdValue;->zzacl:J
+    iget-wide v0, p0, Lcom/google/android/gms/ads/AdValue;->zzc:J
 
     return-wide v0
 .end method

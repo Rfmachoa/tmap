@@ -79,7 +79,7 @@
 .end method
 
 .method public deserialize(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/sql/Timestamp;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -87,17 +87,52 @@
     .end annotation
 
     .line 2
-    new-instance v0, Ljava/sql/Timestamp;
-
     invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;->_parseDate(Lcom/fasterxml/jackson/core/JsonParser;Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/util/Date;
 
     move-result-object p1
 
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    new-instance p2, Ljava/sql/Timestamp;
+
     invoke-virtual {p1}, Ljava/util/Date;->getTime()J
 
-    move-result-wide p1
+    move-result-wide v0
 
-    invoke-direct {v0, p1, p2}, Ljava/sql/Timestamp;-><init>(J)V
+    invoke-direct {p2, v0, v1}, Ljava/sql/Timestamp;-><init>(J)V
+
+    move-object p1, p2
+
+    :goto_0
+    return-object p1
+.end method
+
+.method public getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    new-instance p1, Ljava/sql/Timestamp;
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p1, v0, v1}, Ljava/sql/Timestamp;-><init>(J)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,77 +1,52 @@
 .class public final Landroidx/camera/core/g;
-.super Landroidx/camera/core/SurfaceRequest$Result;
-.source "AutoValue_SurfaceRequest_Result.java"
+.super Landroidx/camera/core/n1$a;
+.source "AutoValue_ImageReaderFormatRecommender_FormatCombo.java"
 
 
 # instance fields
-.field public final f:I
+.field public final a:I
 
-.field public final g:Landroid/view/Surface;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(ILandroid/view/Surface;)V
+.method public constructor <init>(II)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "resultCode",
-            "surface"
-        }
-    .end annotation
 
     .line 1
-    invoke-direct {p0}, Landroidx/camera/core/SurfaceRequest$Result;-><init>()V
+    invoke-direct {p0}, Landroidx/camera/core/n1$a;-><init>()V
 
     .line 2
-    iput p1, p0, Landroidx/camera/core/g;->f:I
-
-    const-string p1, "Null surface"
+    iput p1, p0, Landroidx/camera/core/g;->a:I
 
     .line 3
-    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 4
-    iput-object p2, p0, Landroidx/camera/core/g;->g:Landroid/view/Surface;
+    iput p2, p0, Landroidx/camera/core/g;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
+.method public b()I
     .locals 1
 
     .line 1
-    iget v0, p0, Landroidx/camera/core/g;->f:I
+    iget v0, p0, Landroidx/camera/core/g;->b:I
 
     return v0
 .end method
 
-.method public b()Landroid/view/Surface;
+.method public c()I
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/g;->g:Landroid/view/Surface;
+    iget v0, p0, Landroidx/camera/core/g;->a:I
 
-    return-object v0
+    return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
 
     const/4 v0, 0x1
 
@@ -81,36 +56,32 @@
 
     .line 1
     :cond_0
-    instance-of v1, p1, Landroidx/camera/core/SurfaceRequest$Result;
+    instance-of v1, p1, Landroidx/camera/core/n1$a;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_2
 
     .line 2
-    check-cast p1, Landroidx/camera/core/SurfaceRequest$Result;
+    check-cast p1, Landroidx/camera/core/n1$a;
 
     .line 3
-    iget v1, p0, Landroidx/camera/core/g;->f:I
+    iget v1, p0, Landroidx/camera/core/g;->a:I
 
-    invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest$Result;->a()I
+    invoke-virtual {p1}, Landroidx/camera/core/n1$a;->c()I
 
     move-result v3
 
     if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Landroidx/camera/core/g;->g:Landroid/view/Surface;
+    iget v1, p0, Landroidx/camera/core/g;->b:I
 
     .line 4
-    invoke-virtual {p1}, Landroidx/camera/core/SurfaceRequest$Result;->b()Landroid/view/Surface;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroidx/camera/core/n1$a;->b()I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-ne v1, p1, :cond_1
 
     goto :goto_0
 
@@ -128,7 +99,7 @@
     .locals 2
 
     .line 1
-    iget v0, p0, Landroidx/camera/core/g;->f:I
+    iget v0, p0, Landroidx/camera/core/g;->a:I
 
     const v1, 0xf4243
 
@@ -137,11 +108,7 @@
     mul-int/2addr v0, v1
 
     .line 2
-    iget-object v1, p0, Landroidx/camera/core/g;->g:Landroid/view/Surface;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    iget v1, p0, Landroidx/camera/core/g;->b:I
 
     xor-int/2addr v0, v1
 
@@ -149,32 +116,28 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    const-string v0, "Result{resultCode="
+    const-string v0, "FormatCombo{imageCaptureFormat="
 
     .line 1
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v1, p0, Landroidx/camera/core/g;->f:I
+    iget v1, p0, Landroidx/camera/core/g;->a:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", surface="
+    const-string v1, ", imageAnalysisFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/camera/core/g;->g:Landroid/view/Surface;
+    iget v1, p0, Landroidx/camera/core/g;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "}"
 
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Landroid/support/v4/media/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

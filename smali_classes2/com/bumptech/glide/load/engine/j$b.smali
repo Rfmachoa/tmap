@@ -77,7 +77,7 @@
     .line 4
     iget-object v2, p0, Lcom/bumptech/glide/load/engine/j$b;->b:Lcom/bumptech/glide/load/engine/j;
 
-    iget-object v2, v2, Lcom/bumptech/glide/load/engine/j;->a1:Lcom/bumptech/glide/load/engine/n;
+    iget-object v2, v2, Lcom/bumptech/glide/load/engine/j;->c1:Lcom/bumptech/glide/load/engine/n;
 
     invoke-virtual {v2}, Lcom/bumptech/glide/load/engine/n;->c()V
 

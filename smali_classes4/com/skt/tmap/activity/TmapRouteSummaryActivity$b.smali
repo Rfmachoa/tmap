@@ -35,8 +35,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -48,15 +48,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
+    .line 1
     invoke-direct {p0}, Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;-><init>()V
 
     return-void
@@ -78,33 +73,56 @@
     .line 1
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->w5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+    invoke-static {p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->G5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
 
     move-result-object p2
 
+    const/4 v0, 0x0
+
+    if-nez p2, :cond_0
+
+    const-string p2, "bottomSheetCalloutBehavior"
+
+    invoke-static {p2}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    move-object p2, v0
+
+    :cond_0
     invoke-virtual {p2}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->isHideable()Z
 
     move-result p2
 
-    if-nez p2, :cond_1
+    if-nez p2, :cond_3
 
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->x5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Landroid/widget/FrameLayout;
+    invoke-static {p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->H5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Landroid/widget/FrameLayout;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Landroid/widget/FrameLayout;->getVisibility()I
+    if-nez p2, :cond_1
+
+    const-string p2, "calloutBottomSheet"
+
+    invoke-static {p2}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, p2
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result p2
 
     const/16 v0, 0x8
 
-    if-ne p2, v0, :cond_0
+    if-ne p2, v0, :cond_2
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_0
+    :cond_2
     const-string p2, "onSlide bottomSheet.getHeight() :: "
 
     .line 2
@@ -124,7 +142,7 @@
 
     const-string v0, "TmapRouteSummaryActivity"
 
-    invoke-static {v0, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
@@ -133,7 +151,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0703e2
+    const v0, 0x7f0704cf
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -150,10 +168,10 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->e6(II)V
+    invoke-virtual {v0, p1, p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->j6(II)V
 
-    :cond_1
-    :goto_0
+    :cond_3
+    :goto_1
     return-void
 .end method
 
@@ -172,52 +190,71 @@
 
     const/4 v0, 0x1
 
-    if-eq p2, v0, :cond_1
+    if-eq p2, v0, :cond_2
 
     if-eq p2, p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     .line 1
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->y5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/mvp/fragment/p;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->I5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/mvp/fragment/p;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p1
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, p2
+
+    :goto_0
+    if-eqz v0, :cond_4
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->y5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/mvp/fragment/p;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->I5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/mvp/fragment/p;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/fragment/p;->g0()V
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/fragment/p;->i0()V
 
-    goto :goto_0
+    goto :goto_1
 
     .line 3
-    :cond_1
+    :cond_2
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapRouteSummaryActivity$b;->a:Lcom/skt/tmap/activity/TmapRouteSummaryActivity;
 
-    invoke-static {p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->w5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+    invoke-static {p2}, Lcom/skt/tmap/activity/TmapRouteSummaryActivity;->G5(Lcom/skt/tmap/activity/TmapRouteSummaryActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
 
     move-result-object p2
 
+    if-nez p2, :cond_3
+
+    const-string p2, "bottomSheetCalloutBehavior"
+
+    invoke-static {p2}, Lkotlin/jvm/internal/f0;->S(Ljava/lang/String;)V
+
+    const/4 p2, 0x0
+
+    :cond_3
     invoke-virtual {p2, p1}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setState(I)V
 
-    :cond_2
-    :goto_0
+    :cond_4
+    :goto_1
     return-void
 .end method

@@ -15,21 +15,19 @@
 
 
 # static fields
-.field public static final e:I = 0x0
+.field public static final d:I = 0x0
 
-.field public static final f:I = 0x1
+.field public static final e:I = 0x1
 
-.field public static final g:I = 0x2
+.field public static final f:I = 0x2
 
-.field public static final h:Ljava/lang/String; = "DMCodecAdapterFactory"
+.field public static final g:Ljava/lang/String; = "DMCodecAdapterFactory"
 
 
 # instance fields
 .field public b:I
 
 .field public c:Z
-
-.field public d:Z
 
 
 # direct methods
@@ -44,18 +42,13 @@
     .line 2
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->b:I
 
-    const/4 v0, 0x1
-
-    .line 3
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->d:Z
-
     return-void
 .end method
 
 
 # virtual methods
 .method public a(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$a;)Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j;
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -63,34 +56,31 @@
     .end annotation
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->b:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
-    const/4 v1, 0x1
+    const/16 v1, 0x17
 
-    if-ne v0, v1, :cond_0
+    if-lt v0, v1, :cond_1
 
-    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->b:I
 
-    const/16 v2, 0x17
+    const/4 v2, 0x1
 
-    if-ge v1, v2, :cond_1
+    if-eq v1, v2, :cond_0
 
-    :cond_0
-    if-nez v0, :cond_2
-
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    if-nez v1, :cond_1
 
     const/16 v1, 0x1f
 
-    if-lt v0, v1, :cond_2
+    if-lt v0, v1, :cond_1
 
     .line 2
-    :cond_1
+    :cond_0
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$a;->c:Lcom/tmapmobility/tmap/exoplayer2/Format;
 
     iget-object v0, v0, Lcom/tmapmobility/tmap/exoplayer2/Format;->l:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/w;->l(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/x;->l(Ljava/lang/String;)I
 
     move-result v0
 
@@ -102,7 +92,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->x0(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->x0(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -122,9 +112,7 @@
 
     iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->c:Z
 
-    iget-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->d:Z
-
-    invoke-direct {v1, v0, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;-><init>(IZZ)V
+    invoke-direct {v1, v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;-><init>(IZ)V
 
     .line 7
     invoke-virtual {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$b;->d(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$a;)Lcom/tmapmobility/tmap/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter;
@@ -134,7 +122,7 @@
     return-object p1
 
     .line 8
-    :cond_2
+    :cond_1
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s$b;
 
     invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/s$b;-><init>()V
@@ -150,21 +138,12 @@
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->d:Z
-
-    return-void
-.end method
-
-.method public c(Z)V
-    .locals 0
-
-    .line 1
     iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;->c:Z
 
     return-void
 .end method
 
-.method public d()Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;
+.method public c()Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;
     .locals 1
 
     const/4 v0, 0x2
@@ -175,7 +154,7 @@
     return-object p0
 .end method
 
-.method public e()Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;
+.method public d()Lcom/tmapmobility/tmap/exoplayer2/mediacodec/DefaultMediaCodecAdapterFactory;
     .locals 1
 
     const/4 v0, 0x1

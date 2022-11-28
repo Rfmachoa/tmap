@@ -17,7 +17,7 @@
     value = {
         "Ljava/util/LinkedHashMap<",
         "Ljava/lang/String;",
-        "Ljava/lang/Boolean;",
+        "Ljava/lang/String;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/activity/HiddenSettingMenu;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x8010
@@ -44,19 +44,20 @@
 
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
+    const-string p1, "NONE"
+
     .line 2
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-virtual {p0, p1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "ON"
-
-    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p1, "AICLOUD_OASR_DEV"
 
     .line 3
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-virtual {p0, p1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "OFF"
+    const-string p1, "AICLOUD_OASR_EVA"
 
-    invoke-virtual {p0, v0, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 4
+    invoke-virtual {p0, p1, p1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

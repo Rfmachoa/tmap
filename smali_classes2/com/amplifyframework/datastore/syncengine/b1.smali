@@ -3,20 +3,20 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/amplifyframework/core/Consumer;
+.implements Lgk/g;
 
 
 # instance fields
-.field public final synthetic a:Lai/x;
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lai/x;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/b1;->a:Lai/x;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/b1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/b1;->a:Lai/x;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/b1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
-    check-cast p1, Lcom/amplifyframework/datastore/DataStoreException;
+    check-cast p1, Lio/reactivex/rxjava3/disposables/c;
 
-    invoke-interface {v0, p1}, Lai/x;->onError(Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;->m(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lio/reactivex/rxjava3/disposables/c;)V
 
     return-void
 .end method

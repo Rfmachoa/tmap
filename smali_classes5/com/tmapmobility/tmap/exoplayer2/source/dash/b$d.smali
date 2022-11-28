@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field public e:Lwd/q;
+.field public e:Lzf/q;
 
 .field public f:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
@@ -33,15 +33,15 @@
 
 .field public h:J
 
-.field public i:Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+.field public i:Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a<",
             "+",
-            "Loe/c;",
+            "Lrg/c;",
             ">;"
         }
     .end annotation
@@ -76,7 +76,7 @@
 
     invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/a;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lwd/q;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lzf/q;
 
     .line 6
     new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/x;
@@ -129,27 +129,8 @@
     return-object v0
 .end method
 
-.method public bridge synthetic b(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
+.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
     .locals 0
-    .param p1    # Lwd/q;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->i(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->k(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
@@ -159,11 +140,22 @@
     return-object p1
 .end method
 
-.method public bridge synthetic d(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
     .locals 0
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic d(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->i(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
 
     move-result-object p1
 
@@ -179,14 +171,14 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
 
     if-nez v0, :cond_0
 
     .line 3
-    new-instance v0, Loe/d;
+    new-instance v0, Lrg/d;
 
-    invoke-direct {v0}, Loe/d;-><init>()V
+    invoke-direct {v0}, Lrg/d;-><init>()V
 
     .line 4
     :cond_0
@@ -202,9 +194,9 @@
     if-nez v3, :cond_1
 
     .line 6
-    new-instance v3, Lle/t;
+    new-instance v3, Log/t;
 
-    invoke-direct {v3, v0, v2}, Lle/t;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;Ljava/util/List;)V
+    invoke-direct {v3, v0, v2}, Log/t;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;Ljava/util/List;)V
 
     move-object v4, v3
 
@@ -225,10 +217,10 @@
 
     iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->f:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lwd/q;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lzf/q;
 
     .line 8
-    invoke-interface {v0, p1}, Lwd/q;->a(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+    invoke-interface {v0, p1}, Lzf/q;->a(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
 
     move-result-object v7
 
@@ -242,12 +234,12 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Loe/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;JLcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
+    invoke-direct/range {v0 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;JLcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
 
     return-object v12
 .end method
 
-.method public f(Loe/c;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
+.method public f(Lrg/c;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
     .locals 2
 
     .line 1
@@ -258,7 +250,7 @@
     sget-object v1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
     move-result-object v0
 
@@ -282,18 +274,18 @@
     move-result-object v0
 
     .line 6
-    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->g(Loe/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
+    invoke-virtual {p0, p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->g(Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public g(Loe/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
+.method public g(Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;
     .locals 13
 
     .line 1
-    iget-boolean v0, p1, Loe/c;->d:Z
+    iget-boolean v0, p1, Lrg/c;->d:Z
 
     xor-int/lit8 v0, v0, 0x1
 
@@ -318,7 +310,7 @@
     .line 4
     sget-object p2, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    invoke-virtual {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->K(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
+    invoke-virtual {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;->L(Landroid/net/Uri;)Lcom/tmapmobility/tmap/exoplayer2/MediaItem$c;
 
     .line 5
     :cond_0
@@ -337,10 +329,10 @@
 
     iget-object v7, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->f:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lwd/q;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lzf/q;
 
     .line 7
-    invoke-interface {v0, v2}, Lwd/q;->a(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
+    invoke-interface {v0, v2}, Lzf/q;->a(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/drm/c;
 
     move-result-object v8
 
@@ -354,53 +346,41 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v1 .. v12}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Loe/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;JLcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
+    invoke-direct/range {v1 .. v12}, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;Lrg/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/m$a;Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;Lcom/tmapmobility/tmap/exoplayer2/source/dash/a$a;Lcom/tmapmobility/tmap/exoplayer2/source/g;Lcom/tmapmobility/tmap/exoplayer2/drm/c;Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;JLcom/tmapmobility/tmap/exoplayer2/source/dash/b$a;)V
 
     return-object p2
 .end method
 
 .method public h(Lcom/tmapmobility/tmap/exoplayer2/source/g;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/source/g;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "DashMediaSource.Factory#setCompositeSequenceableLoaderFactory no longer handles null by instantiating a new DefaultCompositeSequenceableLoaderFactory. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/source/j;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/source/j;-><init>()V
+    move-result-object p1
 
-    :goto_0
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/source/g;
+
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->f:Lcom/tmapmobility/tmap/exoplayer2/source/g;
 
     return-object p0
 .end method
 
-.method public i(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
-    .locals 0
-    .param p1    # Lwd/q;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+.method public i(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "MediaSource.Factory#setDrmSessionManagerProvider no longer handles null by instantiating a new DefaultDrmSessionManagerProvider. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/drm/a;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/drm/a;-><init>()V
+    move-result-object p1
 
-    :goto_0
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lwd/q;
+    check-cast p1, Lzf/q;
+
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->e:Lzf/q;
 
     return-object p0
 .end method
@@ -415,47 +395,41 @@
 .end method
 
 .method public k(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
-    .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
+    .locals 1
 
-    if-eqz p1, :cond_0
-
-    goto :goto_0
+    const-string v0, "MediaSource.Factory#setLoadErrorHandlingPolicy no longer handles null by instantiating a new DefaultLoadErrorHandlingPolicy. Explicitly construct and pass an instance in order to retain the old behavior."
 
     .line 1
-    :cond_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/x;
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->h(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/x;-><init>()V
+    move-result-object p1
 
-    :goto_0
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
+
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->g:Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
     return-object p0
 .end method
 
-.method public l(Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
+.method public l(Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;)Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;
     .locals 0
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a<",
+            "Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a<",
             "+",
-            "Loe/c;",
+            "Lrg/c;",
             ">;)",
             "Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/d0$a;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/source/dash/b$d;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/b0$a;
 
     return-object p0
 .end method

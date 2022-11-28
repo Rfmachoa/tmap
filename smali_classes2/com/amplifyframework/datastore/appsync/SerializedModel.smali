@@ -195,7 +195,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -275,7 +275,7 @@
 
     iget-object v3, p1, Lcom/amplifyframework/datastore/appsync/SerializedModel;->modelId:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -286,7 +286,7 @@
     iget-object v3, p1, Lcom/amplifyframework/datastore/appsync/SerializedModel;->serializedData:Ljava/util/Map;
 
     .line 4
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -297,7 +297,7 @@
     iget-object p1, p1, Lcom/amplifyframework/datastore/appsync/SerializedModel;->modelSchema:Lcom/amplifyframework/core/model/ModelSchema;
 
     .line 5
-    invoke-static {v2, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -427,7 +427,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -452,7 +452,7 @@
 
     const-string v3, ", serializedData="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/appsync/SerializedModel;->serializedData:Ljava/util/Map;
 

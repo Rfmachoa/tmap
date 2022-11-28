@@ -1,524 +1,120 @@
 .class public final Li0/b;
-.super Li0/e;
-.source "AutoValue_OutputFileOptions.java"
+.super Ljava/lang/Object;
+.source "AdaptingCaptureStage.java"
+
+# interfaces
+.implements Landroidx/camera/core/impl/f;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Li0/b$b;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
 # instance fields
-.field public final b:Ljava/io/File;
+.field public final a:Landroidx/camera/core/impl/e;
 
-.field public final c:Landroid/os/ParcelFileDescriptor;
-
-.field public final d:Landroid/content/ContentResolver;
-
-.field public final e:Landroid/net/Uri;
-
-.field public final f:Landroid/content/ContentValues;
-
-.field public final g:Li0/d;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Landroid/os/ParcelFileDescriptor;Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/content/ContentValues;Li0/d;)V
-    .locals 0
-    .param p1    # Ljava/io/File;
-        .annotation build Landroidx/annotation/Nullable;
+.method public constructor <init>(Landroidx/camera/extensions/impl/CaptureStageImpl;)V
+    .locals 3
+    .param p1    # Landroidx/camera/extensions/impl/CaptureStageImpl;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroid/os/ParcelFileDescriptor;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroid/content/ContentResolver;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Landroid/content/ContentValues;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "file",
-            "fileDescriptor",
-            "contentResolver",
-            "saveCollection",
-            "contentValues",
-            "metadata"
-        }
-    .end annotation
-
-    .line 2
-    invoke-direct {p0}, Li0/e;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Li0/b;->b:Ljava/io/File;
-
-    .line 4
-    iput-object p2, p0, Li0/b;->c:Landroid/os/ParcelFileDescriptor;
-
-    .line 5
-    iput-object p3, p0, Li0/b;->d:Landroid/content/ContentResolver;
-
-    .line 6
-    iput-object p4, p0, Li0/b;->e:Landroid/net/Uri;
-
-    .line 7
-    iput-object p5, p0, Li0/b;->f:Landroid/content/ContentValues;
-
-    .line 8
-    iput-object p6, p0, Li0/b;->g:Li0/d;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/io/File;Landroid/os/ParcelFileDescriptor;Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/content/ContentValues;Li0/d;Li0/b$a;)V
-    .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p6}, Li0/b;-><init>(Ljava/io/File;Landroid/os/ParcelFileDescriptor;Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/content/ContentValues;Li0/d;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    invoke-interface {p1}, Landroidx/camera/extensions/impl/CaptureStageImpl;->getId()I
+
+    move-result v0
+
+    iput v0, p0, Li0/b;->b:I
+
+    .line 3
+    new-instance v0, Lv/b$a;
+
+    invoke-direct {v0}, Lv/b$a;-><init>()V
+
+    .line 4
+    invoke-interface {p1}, Landroidx/camera/extensions/impl/CaptureStageImpl;->getParameters()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Pair;
+
+    .line 5
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Landroid/hardware/camera2/CaptureRequest$Key;
+
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    invoke-virtual {v0, v2, v1}, Lv/b$a;->f(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lv/b$a;
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    new-instance p1, Landroidx/camera/core/impl/e$a;
+
+    invoke-direct {p1}, Landroidx/camera/core/impl/e$a;-><init>()V
+
+    .line 7
+    invoke-virtual {v0}, Lv/b$a;->b()Lv/b;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/camera/core/impl/e$a;->e(Landroidx/camera/core/impl/Config;)V
+
+    .line 8
+    invoke-virtual {p1}, Landroidx/camera/core/impl/e$a;->h()Landroidx/camera/core/impl/e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Li0/b;->a:Landroidx/camera/core/impl/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public d()Landroid/content/ContentResolver;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Li0/b;->d:Landroid/content/ContentResolver;
-
-    return-object v0
-.end method
-
-.method public e()Landroid/content/ContentValues;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Li0/b;->f:Landroid/content/ContentValues;
-
-    return-object v0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    .line 1
-    :cond_0
-    instance-of v1, p1, Li0/e;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_7
-
-    .line 2
-    check-cast p1, Li0/e;
-
-    .line 3
-    iget-object v1, p0, Li0/b;->b:Ljava/io/File;
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p1}, Li0/e;->f()Ljava/io/File;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Li0/e;->f()Ljava/io/File;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    :goto_0
-    iget-object v1, p0, Li0/b;->c:Landroid/os/ParcelFileDescriptor;
-
-    if-nez v1, :cond_2
-
-    .line 4
-    invoke-virtual {p1}, Li0/e;->g()Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Li0/e;->g()Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    :goto_1
-    iget-object v1, p0, Li0/b;->d:Landroid/content/ContentResolver;
-
-    if-nez v1, :cond_3
-
-    .line 5
-    invoke-virtual {p1}, Li0/e;->d()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {p1}, Li0/e;->d()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    :goto_2
-    iget-object v1, p0, Li0/b;->e:Landroid/net/Uri;
-
-    if-nez v1, :cond_4
-
-    .line 6
-    invoke-virtual {p1}, Li0/e;->i()Landroid/net/Uri;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p1}, Li0/e;->i()Landroid/net/Uri;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    :goto_3
-    iget-object v1, p0, Li0/b;->f:Landroid/content/ContentValues;
-
-    if-nez v1, :cond_5
-
-    .line 7
-    invoke-virtual {p1}, Li0/e;->e()Landroid/content/ContentValues;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    goto :goto_4
-
-    :cond_5
-    invoke-virtual {p1}, Li0/e;->e()Landroid/content/ContentValues;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/content/ContentValues;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    :goto_4
-    iget-object v1, p0, Li0/b;->g:Li0/d;
-
-    .line 8
-    invoke-virtual {p1}, Li0/e;->h()Li0/d;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    goto :goto_5
-
-    :cond_6
-    move v0, v2
-
-    :goto_5
-    return v0
-
-    :cond_7
-    return v2
-.end method
-
-.method public f()Ljava/io/File;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Li0/b;->b:Ljava/io/File;
-
-    return-object v0
-.end method
-
-.method public g()Landroid/os/ParcelFileDescriptor;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Li0/b;->c:Landroid/os/ParcelFileDescriptor;
-
-    return-object v0
-.end method
-
-.method public h()Li0/d;
+.method public a()Landroidx/camera/core/impl/e;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Li0/b;->g:Li0/d;
+    iget-object v0, p0, Li0/b;->a:Landroidx/camera/core/impl/e;
 
     return-object v0
 .end method
 
-.method public hashCode()I
-    .locals 4
+.method public getId()I
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Li0/b;->b:Ljava/io/File;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    const v2, 0xf4243
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v2
-
-    .line 2
-    iget-object v3, p0, Li0/b;->c:Landroid/os/ParcelFileDescriptor;
-
-    if-nez v3, :cond_1
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v2
-
-    .line 3
-    iget-object v3, p0, Li0/b;->d:Landroid/content/ContentResolver;
-
-    if-nez v3, :cond_2
-
-    move v3, v1
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v2
-
-    .line 4
-    iget-object v3, p0, Li0/b;->e:Landroid/net/Uri;
-
-    if-nez v3, :cond_3
-
-    move v3, v1
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
-
-    move-result v3
-
-    :goto_3
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v2
-
-    .line 5
-    iget-object v3, p0, Li0/b;->f:Landroid/content/ContentValues;
-
-    if-nez v3, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v3}, Landroid/content/ContentValues;->hashCode()I
-
-    move-result v1
-
-    :goto_4
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v2
-
-    .line 6
-    iget-object v1, p0, Li0/b;->g:Li0/d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
+    iget v0, p0, Li0/b;->b:I
 
     return v0
-.end method
-
-.method public i()Landroid/net/Uri;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Li0/b;->e:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "OutputFileOptions{file="
-
-    .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Li0/b;->b:Ljava/io/File;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileDescriptor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li0/b;->c:Landroid/os/ParcelFileDescriptor;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contentResolver="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li0/b;->d:Landroid/content/ContentResolver;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", saveCollection="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li0/b;->e:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contentValues="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li0/b;->f:Landroid/content/ContentValues;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", metadata="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li0/b;->g:Li0/d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

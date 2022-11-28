@@ -1,209 +1,149 @@
-.class public interface abstract Lz/f;
+.class public final Lz/f;
 .super Ljava/lang/Object;
-.source "TargetConfig.java"
-
-# interfaces
-.implements Landroidx/camera/core/impl/q;
+.source "FlashAvailabilityChecker.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lz/f$a;
-    }
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Landroidx/camera/core/impl/q;"
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
 # static fields
-.field public static final s:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final t:Landroidx/camera/core/impl/Config$a;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation build Landroidx/annotation/RestrictTo;
-        value = {
-            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Ljava/lang/Class<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
+.field public static final a:Ljava/lang/String; = "FlashAvailability"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
-    const-class v0, Ljava/lang/String;
-
-    const-string v1, "camerax.core.target.name"
-
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lz/f;->s:Landroidx/camera/core/impl/Config$a;
-
-    .line 2
-    const-class v0, Ljava/lang/Class;
-
-    const-string v1, "camerax.core.target.class"
-
-    .line 3
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
-
-    move-result-object v0
-
-    sput-object v0, Lz/f;->t:Landroidx/camera/core/impl/Config$a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public O(Ljava/lang/Class;)Ljava/lang/Class;
-    .locals 1
-    .param p1    # Ljava/lang/Class;
-        .annotation build Landroidx/annotation/Nullable;
+.method public static a(Lw/u;)Z
+    .locals 2
+    .param p0    # Lw/u;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "TT;>;)",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
 
     .line 1
-    sget-object v0, Lz/f;->t:Landroidx/camera/core/impl/Config$a;
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->FLASH_INFO_AVAILABLE:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/q;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-virtual {p0, v0}, Lw/u;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Class;
+    check-cast p0, Ljava/lang/Boolean;
 
-    return-object p1
+    if-nez p0, :cond_0
+
+    const-string v0, "FlashAvailability"
+
+    const-string v1, "Characteristics did not contain key FLASH_INFO_AVAILABLE. Flash is not available."
+
+    .line 3
+    invoke-static {v0, v1}, Landroidx/camera/core/u1;->p(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    if-eqz p0, :cond_1
+
+    .line 4
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
-.method public U()Ljava/lang/String;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public static b(Lw/u;)Z
+    .locals 0
+    .param p0    # Lw/u;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    sget-object v0, Lz/f;->s:Landroidx/camera/core/impl/Config$a;
+    :try_start_0
+    invoke-static {p0}, Lz/f;->a(Lw/u;)Z
 
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/q;->b(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+    move-result p0
+    :try_end_0
+    .catch Ljava/nio/BufferUnderflowException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static c(Lw/u;)Z
+    .locals 2
+    .param p0    # Lw/u;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    const-class v0, Ly/q;
+
+    invoke-static {v0}, Ly/l;->a(Ljava/lang/Class;)Lb0/m1;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "Device has quirk "
+
+    .line 2
+    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v0, ". Checking for flash availability safely..."
 
-.method public s()Ljava/lang/Class;
-    .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lz/f;->t:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/q;->b(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Class;
+    const-string v1, "FlashAvailability"
 
-    return-object v0
-.end method
+    .line 4
+    invoke-static {v1, v0}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public v(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
+    .line 5
+    invoke-static {p0}, Lz/f;->b(Lw/u;)Z
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
-        }
-    .end annotation
+    move-result p0
 
-    .line 1
-    sget-object v0, Lz/f;->s:Landroidx/camera/core/impl/Config$a;
+    return p0
 
-    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/q;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 6
+    :cond_0
+    invoke-static {p0}, Lz/f;->a(Lw/u;)Z
 
-    move-result-object p1
+    move-result p0
 
-    check-cast p1, Ljava/lang/String;
-
-    return-object p1
+    return p0
 .end method

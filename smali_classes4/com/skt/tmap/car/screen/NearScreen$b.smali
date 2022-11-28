@@ -86,7 +86,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/car/screen/NearScreen$b;->a:Lcom/skt/tmap/car/screen/NearScreen;
 
-    invoke-virtual {p1}, Landroidx/car/app/t0;->l()V
+    invoke-virtual {p1}, Landroidx/car/app/y0;->l()V
 
     :cond_0
     return-void

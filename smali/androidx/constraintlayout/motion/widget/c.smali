@@ -3,6 +3,14 @@
 .source "Debug.java"
 
 
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "LogConditional"
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -15,6 +23,16 @@
 
 .method public static a(Landroid/view/ViewGroup$LayoutParams;Ljava/lang/String;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "param",
+            "str"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Throwable;
@@ -71,7 +89,7 @@
 
     const-string v2, " >>>>>>>>>>>>>>>>>>. dump "
 
-    invoke-static {v2, v0, p1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, p1}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -210,6 +228,16 @@
 
 .method public static b(Landroid/view/ViewGroup;Ljava/lang/String;)V
     .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "layout",
+            "str"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Throwable;
@@ -434,6 +462,14 @@
 
 .method public static c(Ljava/lang/Object;)V
     .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "obj"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Throwable;
@@ -693,6 +729,14 @@
 
 .method public static d(Landroid/view/MotionEvent;)Ljava/lang/String;
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "event"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
@@ -774,6 +818,14 @@
 
 .method public static e(I)Ljava/lang/String;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "n"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Throwable;
@@ -984,6 +1036,16 @@
 
 .method public static i(Landroid/content/Context;I)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "id"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -1021,6 +1083,16 @@
 
 .method public static j(Landroid/content/Context;[I)Ljava/lang/String;
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "id"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -1173,6 +1245,14 @@
 
 .method public static k(Landroid/view/View;)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 1
     :try_start_0
@@ -1205,6 +1285,41 @@
 
 .method public static l(Landroidx/constraintlayout/motion/widget/MotionLayout;I)Ljava/lang/String;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "layout",
+            "stateId"
+        }
+    .end annotation
+
+    const/4 v0, -0x1
+
+    .line 1
+    invoke-static {p0, p1, v0}, Landroidx/constraintlayout/motion/widget/c;->m(Landroidx/constraintlayout/motion/widget/MotionLayout;II)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static m(Landroidx/constraintlayout/motion/widget/MotionLayout;II)Ljava/lang/String;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "layout",
+            "stateId",
+            "len"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -1229,11 +1344,110 @@
 
     move-result-object p0
 
+    if-eq p2, v0, :cond_2
+
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-le p1, p2, :cond_1
+
+    const-string p1, "([^_])[aeiou]+"
+
+    const-string v0, "$1"
+
+    .line 4
+    invoke-virtual {p0, p1, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 5
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-le p1, p2, :cond_2
+
+    const-string p1, "[^_]"
+
+    const-string v0, ""
+
+    .line 6
+    invoke-virtual {p0, p1, v0}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-lez p1, :cond_2
+
+    .line 7
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    sub-int/2addr v0, p2
+
+    div-int/2addr v0, p1
+
+    .line 8
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v0}, Ljava/nio/CharBuffer;->allocate(I)Ljava/nio/CharBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x2e
+
+    invoke-virtual {p2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "_"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 9
+    invoke-virtual {p0, p1, p2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_2
     return-object p0
 .end method
 
-.method public static m(Ljava/lang/String;Ljava/lang/String;I)V
+.method public static n(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tag",
+            "msg",
+            "n"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Throwable;
@@ -1309,7 +1523,7 @@
     move-result-object v4
 
     .line 5
-    invoke-static {v3, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1340,8 +1554,18 @@
     return-void
 .end method
 
-.method public static n(Ljava/lang/String;I)V
+.method public static o(Ljava/lang/String;I)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "msg",
+            "n"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/Throwable;
@@ -1409,7 +1633,7 @@
     move-result-object v4
 
     .line 5
-    invoke-static {v3, v1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

@@ -3,7 +3,7 @@
 .source "BottomConfirmDialog.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
@@ -19,18 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Ljava/lang/String;",
         ">;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u0008\n\u0000\n\u0002\u0010\u000e\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
     }
@@ -42,9 +37,10 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -98,17 +94,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    goto :goto_0
+    if-nez v0, :cond_1
 
     :cond_0
     const-string v0, "default"
 
-    :goto_0
-    const-string v1, "arguments?.getString(\"ri\u2026uttonTitle\") ?: \"default\""
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
+    :cond_1
     return-object v0
 .end method

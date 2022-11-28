@@ -50,7 +50,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/AroundInfoListActivity$i;->a:Lcom/skt/tmap/activity/AroundInfoListActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/AroundInfoListActivity;->v5(Lcom/skt/tmap/activity/AroundInfoListActivity;)Z
+    invoke-static {v0}, Lcom/skt/tmap/activity/AroundInfoListActivity;->D5(Lcom/skt/tmap/activity/AroundInfoListActivity;)Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/AroundInfoListActivity;->w5(Lcom/skt/tmap/activity/AroundInfoListActivity;Z)Z
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/AroundInfoListActivity;->E5(Lcom/skt/tmap/activity/AroundInfoListActivity;Z)Z
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/AroundInfoListActivity$i;->a:Lcom/skt/tmap/activity/AroundInfoListActivity;

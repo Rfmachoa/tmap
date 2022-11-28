@@ -8,7 +8,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/apollographql/apollo/api/internal/Optional<",
-            "Lb4/d;",
+            "Ly5/d;",
             ">;"
         }
     .end annotation
@@ -26,7 +26,7 @@
         value = {
             "(",
             "Lcom/apollographql/apollo/api/internal/Optional<",
-            "Lb4/d;",
+            "Ly5/d;",
             ">;)V"
         }
     .end annotation
@@ -149,13 +149,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lb4/d;
+    check-cast v0, Ly5/d;
 
     invoke-static {p3}, Lcom/apollographql/apollo/api/internal/Optional;->fromNullable(Ljava/lang/Object;)Lcom/apollographql/apollo/api/internal/Optional;
 
     move-result-object p3
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lb4/d;->a(ILjava/lang/String;Lcom/apollographql/apollo/api/internal/Optional;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Ly5/d;->a(ILjava/lang/String;Lcom/apollographql/apollo/api/internal/Optional;[Ljava/lang/Object;)V
 
     :cond_0
     return-void

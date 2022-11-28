@@ -1,56 +1,26 @@
 .class public Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;
 .super Lcom/google/android/gms/common/api/GoogleApi;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient$zzb;,
-        Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient$zzc;,
-        Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient$zza;
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/google/android/gms/common/api/GoogleApi<",
-        "Lcom/google/android/gms/auth/api/accounttransfer/zzn;",
+        "Lcom/google/android/gms/auth/api/accounttransfer/zzr;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final zzaj:Lcom/google/android/gms/common/api/Api$ClientKey;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$ClientKey<",
-            "Lcom/google/android/gms/internal/auth/zzu;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final synthetic zza:I
 
-.field private static final zzak:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "Lcom/google/android/gms/internal/auth/zzu;",
-            "Lcom/google/android/gms/auth/api/accounttransfer/zzn;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static final zzb:Lcom/google/android/gms/common/api/Api$ClientKey;
 
-.field private static final zzal:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api<",
-            "Lcom/google/android/gms/auth/api/accounttransfer/zzn;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static final zzc:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
+
+.field private static final zzd:Lcom/google/android/gms/common/api/Api;
 
 
 # direct methods
@@ -62,14 +32,14 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/common/api/Api$ClientKey;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzaj:Lcom/google/android/gms/common/api/Api$ClientKey;
+    sput-object v0, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzb:Lcom/google/android/gms/common/api/Api$ClientKey;
 
     .line 2
-    new-instance v1, Lcom/google/android/gms/auth/api/accounttransfer/zzc;
+    new-instance v1, Lcom/google/android/gms/auth/api/accounttransfer/zzb;
 
-    invoke-direct {v1}, Lcom/google/android/gms/auth/api/accounttransfer/zzc;-><init>()V
+    invoke-direct {v1}, Lcom/google/android/gms/auth/api/accounttransfer/zzb;-><init>()V
 
-    sput-object v1, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzak:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
+    sput-object v1, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzc:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
     .line 3
     new-instance v2, Lcom/google/android/gms/common/api/Api;
@@ -78,20 +48,65 @@
 
     invoke-direct {v2, v3, v1, v0}, Lcom/google/android/gms/common/api/Api;-><init>(Ljava/lang/String;Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;Lcom/google/android/gms/common/api/Api$ClientKey;)V
 
-    sput-object v2, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzal:Lcom/google/android/gms/common/api/Api;
+    sput-object v2, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzd:Lcom/google/android/gms/common/api/Api;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/google/android/gms/auth/api/accounttransfer/zzr;)V
     .locals 3
     .param p1    # Landroid/app/Activity;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .param p2    # Lcom/google/android/gms/auth/api/accounttransfer/zzr;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    sget-object p2, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzd:Lcom/google/android/gms/common/api/Api;
+
+    sget-object v0, Lcom/google/android/gms/auth/api/accounttransfer/zzr;->zza:Lcom/google/android/gms/auth/api/accounttransfer/zzr;
+
+    new-instance v1, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;
+
+    invoke-direct {v1}, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;-><init>()V
+
+    new-instance v2, Lcom/google/android/gms/common/api/internal/ApiExceptionMapper;
+
+    invoke-direct {v2}, Lcom/google/android/gms/common/api/internal/ApiExceptionMapper;-><init>()V
+
+    .line 2
+    invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->setMapper(Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;)Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->build()Lcom/google/android/gms/common/api/GoogleApi$Settings;
+
+    move-result-object v1
+
+    .line 3
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/gms/common/api/GoogleApi;-><init>(Landroid/app/Activity;Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Lcom/google/android/gms/common/api/GoogleApi$Settings;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/auth/api/accounttransfer/zzr;)V
+    .locals 3
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/google/android/gms/auth/api/accounttransfer/zzr;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 4
-    sget-object v0, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzal:Lcom/google/android/gms/common/api/Api;
+    sget-object p2, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzd:Lcom/google/android/gms/common/api/Api;
+
+    sget-object v0, Lcom/google/android/gms/auth/api/accounttransfer/zzr;->zza:Lcom/google/android/gms/auth/api/accounttransfer/zzr;
 
     new-instance v1, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;
 
@@ -110,67 +125,8 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
     .line 6
-    invoke-direct {p0, p1, v0, v2, v1}, Lcom/google/android/gms/common/api/GoogleApi;-><init>(Landroid/app/Activity;Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Lcom/google/android/gms/common/api/GoogleApi$Settings;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    sget-object v0, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zzal:Lcom/google/android/gms/common/api/Api;
-
-    new-instance v1, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;
-
-    invoke-direct {v1}, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;-><init>()V
-
-    new-instance v2, Lcom/google/android/gms/common/api/internal/ApiExceptionMapper;
-
-    invoke-direct {v2}, Lcom/google/android/gms/common/api/internal/ApiExceptionMapper;-><init>()V
-
-    .line 2
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->setMapper(Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;)Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->build()Lcom/google/android/gms/common/api/GoogleApi$Settings;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    .line 3
-    invoke-direct {p0, p1, v0, v2, v1}, Lcom/google/android/gms/common/api/GoogleApi;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Lcom/google/android/gms/common/api/GoogleApi$Settings;)V
-
-    return-void
-.end method
-
-.method private static zza(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/common/api/Status;)V
-    .locals 1
-
-    .line 1
-    new-instance v0, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferException;
-
-    invoke-direct {v0, p1}, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferException;-><init>(Lcom/google/android/gms/common/api/Status;)V
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public static synthetic zzb(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/common/api/Status;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p0, p1}, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zza(Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/common/api/Status;)V
+    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/gms/common/api/GoogleApi;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Lcom/google/android/gms/common/api/GoogleApi$Settings;)V
 
     return-void
 .end method
@@ -178,7 +134,14 @@
 
 # virtual methods
 .method public getDeviceMetaData(Ljava/lang/String;)Lcom/google/android/gms/tasks/Task;
-    .locals 1
+    .locals 2
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -194,14 +157,16 @@
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    new-instance v0, Lcom/google/android/gms/internal/auth/zzv;
+    new-instance v0, Lcom/google/android/gms/internal/auth/zzaq;
 
-    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/auth/zzv;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/auth/zzaq;-><init>(Ljava/lang/String;)V
 
     .line 3
     new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzg;
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzg;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;Lcom/google/android/gms/internal/auth/zzv;)V
+    const/16 v1, 0x648
+
+    invoke-direct {p1, p0, v1, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzg;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;ILcom/google/android/gms/internal/auth/zzaq;)V
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
@@ -212,6 +177,13 @@
 
 .method public notifyCompletion(Ljava/lang/String;I)Lcom/google/android/gms/tasks/Task;
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -227,14 +199,16 @@
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    new-instance v0, Lcom/google/android/gms/internal/auth/zzab;
+    new-instance v0, Lcom/google/android/gms/internal/auth/zzav;
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/auth/zzab;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/auth/zzav;-><init>(Ljava/lang/String;I)V
 
     .line 3
-    new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzj;
+    new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzi;
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzj;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;Lcom/google/android/gms/internal/auth/zzab;)V
+    const/16 p2, 0x64a
+
+    invoke-direct {p1, p0, p2, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzi;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;ILcom/google/android/gms/internal/auth/zzav;)V
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doWrite(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
@@ -244,7 +218,14 @@
 .end method
 
 .method public retrieveData(Ljava/lang/String;)Lcom/google/android/gms/tasks/Task;
-    .locals 1
+    .locals 2
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -259,14 +240,16 @@
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    new-instance v0, Lcom/google/android/gms/internal/auth/zzad;
+    new-instance v0, Lcom/google/android/gms/internal/auth/zzax;
 
-    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/auth/zzad;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/auth/zzax;-><init>(Ljava/lang/String;)V
 
     .line 3
     new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zze;
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zze;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;Lcom/google/android/gms/internal/auth/zzad;)V
+    const/16 v1, 0x647
+
+    invoke-direct {p1, p0, v1, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zze;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;ILcom/google/android/gms/internal/auth/zzax;)V
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
@@ -277,6 +260,17 @@
 
 .method public sendData(Ljava/lang/String;[B)Lcom/google/android/gms/tasks/Task;
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # [B
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -295,14 +289,16 @@
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    new-instance v0, Lcom/google/android/gms/internal/auth/zzaf;
+    new-instance v0, Lcom/google/android/gms/internal/auth/zzaz;
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/auth/zzaf;-><init>(Ljava/lang/String;[B)V
+    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/auth/zzaz;-><init>(Ljava/lang/String;[B)V
 
     .line 4
-    new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzd;
+    new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzc;
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzd;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;Lcom/google/android/gms/internal/auth/zzaf;)V
+    const/16 p2, 0x646
+
+    invoke-direct {p1, p0, p2, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzc;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;ILcom/google/android/gms/internal/auth/zzaz;)V
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doWrite(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
@@ -313,6 +309,17 @@
 
 .method public showUserChallenge(Ljava/lang/String;Landroid/app/PendingIntent;)Lcom/google/android/gms/tasks/Task;
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/app/PendingIntent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -332,14 +339,16 @@
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    new-instance v0, Lcom/google/android/gms/internal/auth/zzah;
+    new-instance v0, Lcom/google/android/gms/internal/auth/zzbb;
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/auth/zzah;-><init>(Ljava/lang/String;Landroid/app/PendingIntent;)V
+    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/auth/zzbb;-><init>(Ljava/lang/String;Landroid/app/PendingIntent;)V
 
     .line 4
-    new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzi;
+    new-instance p1, Lcom/google/android/gms/auth/api/accounttransfer/zzh;
 
-    invoke-direct {p1, p0, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzi;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;Lcom/google/android/gms/internal/auth/zzah;)V
+    const/16 p2, 0x649
+
+    invoke-direct {p1, p0, p2, v0}, Lcom/google/android/gms/auth/api/accounttransfer/zzh;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;ILcom/google/android/gms/internal/auth/zzbb;)V
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doWrite(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 

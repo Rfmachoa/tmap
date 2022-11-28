@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
 
 # static fields
@@ -33,16 +33,12 @@
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/h;
     .locals 0
 
-    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
 
-    check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;
+    move-result-object p1
 
-    invoke-static {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;->c(Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;Lcom/tmapmobility/tmap/exoplayer2/trackselection/DefaultTrackSelector$g;)I
-
-    move-result p1
-
-    return p1
+    return-object p1
 .end method

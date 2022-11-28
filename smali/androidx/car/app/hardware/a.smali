@@ -3,7 +3,7 @@
 .source "CarHardwareManager.java"
 
 # interfaces
-.implements Ll0/a;
+.implements Lz0/a;
 
 
 # annotations
@@ -16,13 +16,13 @@
 
 
 # direct methods
-.method public static e(Landroidx/car/app/CarContext;Landroidx/car/app/m0;)Landroidx/car/app/hardware/a;
+.method public static e(Landroidx/car/app/CarContext;Landroidx/car/app/r0;)Landroidx/car/app/hardware/a;
     .locals 6
     .param p0    # Landroidx/car/app/CarContext;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroidx/car/app/m0;
+    .param p1    # Landroidx/car/app/r0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -36,7 +36,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/car/app/CarContext;->o()I
+    invoke-virtual {p0}, Landroidx/car/app/CarContext;->p()I
 
     move-result v0
 
@@ -83,7 +83,7 @@
 
     aput-object v3, v2, v4
 
-    const-class v3, Landroidx/car/app/m0;
+    const-class v3, Landroidx/car/app/r0;
 
     const/4 v5, 0x1
 
@@ -150,7 +150,23 @@
 
 
 # virtual methods
-.method public getCarInfo()Lk0/a;
+.method public f()Lw0/b;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/car/app/annotations/ExperimentalCarApi;
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public getCarInfo()Ly0/a;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

@@ -1,35 +1,21 @@
 .class public interface abstract Lkh/k;
 .super Ljava/lang/Object;
-.source "FlowableConverter.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        "R:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+.source "RedirectStrategy.java"
 
 
 # virtual methods
-.method public abstract a(Lkh/j;)Ljava/lang/Object;
-    .param p1    # Lkh/j;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
+.method public abstract a(Lhh/q;Lhh/t;Lti/g;)Z
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(",
-            "Lkh/j<",
-            "TT;>;)TR;"
+            Lcz/msebera/android/httpclient/ProtocolException;
         }
     .end annotation
+.end method
 
-    .annotation build Lio/reactivex/annotations/NonNull;
+.method public abstract b(Lhh/q;Lhh/t;Lti/g;)Loh/q;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/ProtocolException;
+        }
     .end annotation
 .end method

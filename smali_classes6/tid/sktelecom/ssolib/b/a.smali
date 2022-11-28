@@ -106,7 +106,7 @@
     move-result-object p1
 
     .line 154
-    invoke-static {p1}, Lck/a;->m([B)[B
+    invoke-static {p1}, Lhm/a;->m([B)[B
 
     move-result-object p1
 

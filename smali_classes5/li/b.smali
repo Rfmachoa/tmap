@@ -1,318 +1,178 @@
-.class public final Lli/b;
+.class public Lli/b;
 .super Ljava/lang/Object;
-.source "Schedulers.java"
+.source "EntityDeserializer.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lli/b$b;,
-        Lli/b$h;,
-        Lli/b$f;,
-        Lli/b$c;,
-        Lli/b$e;,
-        Lli/b$d;,
-        Lli/b$a;,
-        Lli/b$g;
-    }
+.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# static fields
-.field public static final a:Lkh/h0;
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end field
-
-.field public static final b:Lkh/h0;
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end field
-
-.field public static final c:Lkh/h0;
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end field
-
-.field public static final d:Lkh/h0;
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end field
-
-.field public static final e:Lkh/h0;
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-.end field
+# instance fields
+.field public final a:Ldi/e;
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ldi/e;)V
     .locals 1
-
-    .line 1
-    new-instance v0, Lli/b$h;
-
-    invoke-direct {v0}, Lli/b$h;-><init>()V
-
-    invoke-static {v0}, Lwh/a;->J(Ljava/util/concurrent/Callable;)Lkh/h0;
-
-    move-result-object v0
-
-    sput-object v0, Lli/b;->a:Lkh/h0;
-
-    .line 2
-    new-instance v0, Lli/b$b;
-
-    invoke-direct {v0}, Lli/b$b;-><init>()V
-
-    invoke-static {v0}, Lwh/a;->G(Ljava/util/concurrent/Callable;)Lkh/h0;
-
-    move-result-object v0
-
-    sput-object v0, Lli/b;->b:Lkh/h0;
-
-    .line 3
-    new-instance v0, Lli/b$c;
-
-    invoke-direct {v0}, Lli/b$c;-><init>()V
-
-    invoke-static {v0}, Lwh/a;->H(Ljava/util/concurrent/Callable;)Lkh/h0;
-
-    move-result-object v0
-
-    sput-object v0, Lli/b;->c:Lkh/h0;
-
-    .line 4
-    invoke-static {}, Lio/reactivex/internal/schedulers/l;->k()Lio/reactivex/internal/schedulers/l;
-
-    move-result-object v0
-
-    sput-object v0, Lli/b;->d:Lkh/h0;
-
-    .line 5
-    new-instance v0, Lli/b$f;
-
-    invoke-direct {v0}, Lli/b$f;-><init>()V
-
-    invoke-static {v0}, Lwh/a;->I(Ljava/util/concurrent/Callable;)Lkh/h0;
-
-    move-result-object v0
-
-    sput-object v0, Lli/b;->e:Lkh/h0;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "No instances!"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static a()Lkh/h0;
-    .locals 1
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    sget-object v0, Lli/b;->b:Lkh/h0;
-
-    invoke-static {v0}, Lwh/a;->X(Lkh/h0;)Lkh/h0;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/util/concurrent/Executor;)Lkh/h0;
-    .locals 2
-    .param p0    # Ljava/util/concurrent/Executor;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lio/reactivex/internal/schedulers/ExecutorScheduler;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lio/reactivex/internal/schedulers/ExecutorScheduler;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/util/concurrent/Executor;Z)Lkh/h0;
-    .locals 1
-    .param p0    # Ljava/util/concurrent/Executor;
-        .annotation build Lio/reactivex/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation build Lio/reactivex/annotations/Experimental;
-    .end annotation
-
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lio/reactivex/internal/schedulers/ExecutorScheduler;
-
-    invoke-direct {v0, p0, p1}, Lio/reactivex/internal/schedulers/ExecutorScheduler;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-.end method
-
-.method public static d()Lkh/h0;
-    .locals 1
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    sget-object v0, Lli/b;->c:Lkh/h0;
-
-    invoke-static {v0}, Lwh/a;->Z(Lkh/h0;)Lkh/h0;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static e()Lkh/h0;
-    .locals 1
-    .annotation build Lio/reactivex/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    sget-object v0, Lli/b;->e:Lkh/h0;
-
-    invoke-static {v0}, Lwh/a;->a0(Lkh/h0;)Lkh/h0;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static f()V
-    .locals 1
-
-    .line 1
-    invoke-static {}, Lli/b;->a()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->h()V
+    const-string v0, "Content length strategy"
 
     .line 2
-    invoke-static {}, Lli/b;->d()Lkh/h0;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0}, Lkh/h0;->h()V
+    check-cast p1, Ldi/e;
 
-    .line 3
-    invoke-static {}, Lli/b;->e()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->h()V
-
-    .line 4
-    invoke-static {}, Lli/b;->g()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->h()V
-
-    .line 5
-    invoke-static {}, Lli/b;->i()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->h()V
-
-    .line 6
-    invoke-static {}, Lio/reactivex/internal/schedulers/j;->b()V
+    iput-object p1, p0, Lli/b;->a:Ldi/e;
 
     return-void
 .end method
 
-.method public static g()Lkh/h0;
+
+# virtual methods
+.method public a(Lpi/h;Lhh/p;)Lhh/l;
     .locals 1
-    .annotation build Lio/reactivex/annotations/NonNull;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
     .end annotation
 
-    .line 1
-    sget-object v0, Lli/b;->a:Lkh/h0;
-
-    invoke-static {v0}, Lwh/a;->c0(Lkh/h0;)Lkh/h0;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static h()V
-    .locals 1
+    const-string v0, "Session input buffer"
 
     .line 1
-    invoke-static {}, Lli/b;->a()Lkh/h0;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->i()V
+    const-string v0, "HTTP message"
 
     .line 2
-    invoke-static {}, Lli/b;->d()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->i()V
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
-    invoke-static {}, Lli/b;->e()Lkh/h0;
+    invoke-virtual {p0, p1, p2}, Lli/b;->b(Lpi/h;Lhh/p;)Ldi/b;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0}, Lkh/h0;->i()V
-
-    .line 4
-    invoke-static {}, Lli/b;->g()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->i()V
-
-    .line 5
-    invoke-static {}, Lli/b;->i()Lkh/h0;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkh/h0;->i()V
-
-    .line 6
-    invoke-static {}, Lio/reactivex/internal/schedulers/j;->c()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public static i()Lkh/h0;
-    .locals 1
-    .annotation build Lio/reactivex/annotations/NonNull;
+.method public b(Lpi/h;Lhh/p;)Ldi/b;
+    .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/HttpException;,
+            Ljava/io/IOException;
+        }
     .end annotation
 
     .line 1
-    sget-object v0, Lli/b;->d:Lkh/h0;
+    new-instance v0, Ldi/b;
 
+    invoke-direct {v0}, Ldi/b;-><init>()V
+
+    .line 2
+    iget-object v1, p0, Lli/b;->a:Ldi/e;
+
+    invoke-interface {v1, p2}, Ldi/e;->a(Lhh/p;)J
+
+    move-result-wide v1
+
+    const-wide/16 v3, -0x2
+
+    cmp-long v3, v1, v3
+
+    const-wide/16 v4, -0x1
+
+    if-nez v3, :cond_0
+
+    const/4 v1, 0x1
+
+    .line 3
+    invoke-virtual {v0, v1}, Ldi/a;->a(Z)V
+
+    .line 4
+    invoke-virtual {v0, v4, v5}, Ldi/b;->g(J)V
+
+    .line 5
+    new-instance v1, Lni/e;
+
+    invoke-direct {v1, p1}, Lni/e;-><init>(Lpi/h;)V
+
+    invoke-virtual {v0, v1}, Ldi/b;->f(Ljava/io/InputStream;)V
+
+    goto :goto_0
+
+    :cond_0
+    cmp-long v3, v1, v4
+
+    const/4 v6, 0x0
+
+    if-nez v3, :cond_1
+
+    .line 6
+    invoke-virtual {v0, v6}, Ldi/a;->a(Z)V
+
+    .line 7
+    invoke-virtual {v0, v4, v5}, Ldi/b;->g(J)V
+
+    .line 8
+    new-instance v1, Lni/v;
+
+    invoke-direct {v1, p1}, Lni/v;-><init>(Lpi/h;)V
+
+    invoke-virtual {v0, v1}, Ldi/b;->f(Ljava/io/InputStream;)V
+
+    goto :goto_0
+
+    .line 9
+    :cond_1
+    invoke-virtual {v0, v6}, Ldi/a;->a(Z)V
+
+    .line 10
+    invoke-virtual {v0, v1, v2}, Ldi/b;->g(J)V
+
+    .line 11
+    new-instance v3, Lni/g;
+
+    invoke-direct {v3, p1, v1, v2}, Lni/g;-><init>(Lpi/h;J)V
+
+    invoke-virtual {v0, v3}, Ldi/b;->f(Ljava/io/InputStream;)V
+
+    :goto_0
+    const-string p1, "Content-Type"
+
+    .line 12
+    invoke-interface {p2, p1}, Lhh/p;->getFirstHeader(Ljava/lang/String;)Lhh/d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 13
+    invoke-virtual {v0, p1}, Ldi/a;->d(Lhh/d;)V
+
+    :cond_2
+    const-string p1, "Content-Encoding"
+
+    .line 14
+    invoke-interface {p2, p1}, Lhh/p;->getFirstHeader(Ljava/lang/String;)Lhh/d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    .line 15
+    invoke-virtual {v0, p1}, Ldi/a;->b(Lhh/d;)V
+
+    :cond_3
     return-object v0
 .end method

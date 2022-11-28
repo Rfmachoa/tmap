@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/HasApiKey;
@@ -8,6 +8,16 @@
 
 # annotations
 .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+.end annotation
+
+.annotation runtime Lcom/google/errorprone/annotations/DoNotMock;
+    value = "Use canonical fakes instead. go/cheezhead-testing-methodology"
+.end annotation
+
+.annotation runtime Lcom/google/errorprone/annotations/RestrictedInheritance;
+    allowedOnPath = ".*java.*/com/google/android/gms.*"
+    explanation = "Use canonical fakes instead."
+    link = "go/gmscore-restrictedinheritance"
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;

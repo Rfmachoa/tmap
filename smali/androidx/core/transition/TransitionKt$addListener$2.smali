@@ -3,12 +3,12 @@
 .source "Transition.kt"
 
 # interfaces
-.implements Lej/l;
+.implements Lgl/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/transition/TransitionKt;->b(Landroid/transition/Transition;Lej/l;Lej/l;Lej/l;Lej/l;Lej/l;ILjava/lang/Object;)Landroid/transition/Transition$TransitionListener;
+    value = Landroidx/core/transition/TransitionKt;->b(Landroid/transition/Transition;Lgl/l;Lgl/l;Lgl/l;Lgl/l;Lgl/l;ILjava/lang/Object;)Landroid/transition/Transition$TransitionListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/l<",
+        "Lgl/l<",
         "Landroid/transition/Transition;",
         "Lkotlin/d1;",
         ">;"
@@ -27,7 +27,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTransition.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$2\n*L\n1#1,78:1\n*E\n"
+    value = "SMAP\nTransition.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Transition.kt\nandroidx/core/transition/TransitionKt$addListener$2\n*L\n1#1,86:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -46,8 +46,8 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -84,6 +84,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/transition/Transition;
 
     invoke-virtual {p0, p1}, Landroidx/core/transition/TransitionKt$addListener$2;->invoke(Landroid/transition/Transition;)V
@@ -102,7 +103,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

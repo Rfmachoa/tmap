@@ -3,44 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:I
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;II)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/o1;->a:Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;
-
-    iput p2, p0, Lcom/skt/tmap/activity/o1;->b:I
-
-    iput p3, p0, Lcom/skt/tmap/activity/o1;->c:I
+    iput-object p1, p0, Lcom/skt/tmap/activity/o1;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/o1;->a:Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/o1;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget v1, p0, Lcom/skt/tmap/activity/o1;->b:I
-
-    iget v2, p0, Lcom/skt/tmap/activity/o1;->c:I
-
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;->t5(Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;II)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->d7(Lcom/skt/tmap/activity/TmapMainActivity;Landroid/view/View;)V
 
     return-void
 .end method

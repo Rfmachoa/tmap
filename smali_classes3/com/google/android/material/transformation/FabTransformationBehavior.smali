@@ -1095,6 +1095,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget v0, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->dependencyOriginalTranslationX:F
 
@@ -1103,12 +1104,12 @@
 
     aput v0, v4, v5
 
-    .line 7
+    .line 8
     invoke-static {p1, v2, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 8
+    .line 9
     sget-object v2, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
 
     new-array v3, v3, [F
@@ -1117,27 +1118,28 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
     iget p2, p0, Lcom/google/android/material/transformation/FabTransformationBehavior;->dependencyOriginalTranslationY:F
 
     :goto_1
     aput p2, v3, v5
 
-    .line 9
+    .line 11
     invoke-static {p1, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
 
-    .line 10
+    .line 12
     invoke-virtual {v1, v0}, Lcom/google/android/material/animation/MotionTiming;->apply(Landroid/animation/Animator;)V
 
-    .line 11
+    .line 13
     invoke-virtual {p4, p1}, Lcom/google/android/material/animation/MotionTiming;->apply(Landroid/animation/Animator;)V
 
-    .line 12
+    .line 14
     invoke-interface {p5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 13
+    .line 15
     invoke-interface {p5, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void

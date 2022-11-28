@@ -490,7 +490,7 @@
     const-string p1, " -H \'"
 
     .line 6
-    invoke-static {p2, p1, p4, v0, p0}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1, p4, v0, p0}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p0, "\'"
 

@@ -3,42 +3,58 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lek/j0;
 
 
-# static fields
-.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/u2;
+# instance fields
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
+
+.field public final synthetic b:Lcom/amplifyframework/datastore/appsync/AppSync;
+
+.field public final synthetic c:Lcom/amplifyframework/api/graphql/SubscriptionType;
+
+.field public final synthetic d:Lcom/amplifyframework/core/model/ModelSchema;
+
+.field public final synthetic e:Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/u2;
-
-    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/u2;-><init>()V
-
-    sput-object v0, Lcom/amplifyframework/datastore/syncengine/u2;->a:Lcom/amplifyframework/datastore/syncengine/u2;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/u2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/u2;->b:Lcom/amplifyframework/datastore/appsync/AppSync;
+
+    iput-object p3, p0, Lcom/amplifyframework/datastore/syncengine/u2;->c:Lcom/amplifyframework/api/graphql/SubscriptionType;
+
+    iput-object p4, p0, Lcom/amplifyframework/datastore/syncengine/u2;->d:Lcom/amplifyframework/core/model/ModelSchema;
+
+    iput-object p5, p0, Lcom/amplifyframework/datastore/syncengine/u2;->e:Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Lek/i0;)V
+    .locals 6
 
-    check-cast p1, Lio/reactivex/rxjava3/disposables/c;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/u2;->a:Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;
 
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->b(Lio/reactivex/rxjava3/disposables/c;)V
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/u2;->b:Lcom/amplifyframework/datastore/appsync/AppSync;
+
+    iget-object v2, p0, Lcom/amplifyframework/datastore/syncengine/u2;->c:Lcom/amplifyframework/api/graphql/SubscriptionType;
+
+    iget-object v3, p0, Lcom/amplifyframework/datastore/syncengine/u2;->d:Lcom/amplifyframework/core/model/ModelSchema;
+
+    iget-object v4, p0, Lcom/amplifyframework/datastore/syncengine/u2;->e:Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;
+
+    move-object v5, p1
+
+    invoke-static/range {v0 .. v5}, Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;->n(Lcom/amplifyframework/datastore/syncengine/SubscriptionProcessor;Lcom/amplifyframework/datastore/appsync/AppSync;Lcom/amplifyframework/api/graphql/SubscriptionType;Lcom/amplifyframework/core/model/ModelSchema;Lcom/amplifyframework/datastore/syncengine/AbortableCountDownLatch;Lek/i0;)V
 
     return-void
 .end method

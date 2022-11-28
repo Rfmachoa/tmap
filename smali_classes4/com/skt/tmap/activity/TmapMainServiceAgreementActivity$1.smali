@@ -49,19 +49,19 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$1;->this$0:Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$1;->this$0:Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void
@@ -73,7 +73,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$1;->this$0:Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity;
 
-    iget-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v1, :cond_0
 
@@ -82,21 +82,21 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/e;->V(Landroid/content/Context;Lcom/skt/tmap/service/LoginService$LoginState;Z)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/g;->a0(Landroid/content/Context;Lcom/skt/tmap/service/LoginService$LoginState;Z)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$1;->this$0:Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity$1;->this$0:Lcom/skt/tmap/activity/TmapMainServiceAgreementActivity;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void

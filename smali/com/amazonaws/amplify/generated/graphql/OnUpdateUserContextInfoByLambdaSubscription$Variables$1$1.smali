@@ -3,12 +3,12 @@
 .source "OnUpdateUserContextInfoByLambdaSubscription.java"
 
 # interfaces
-.implements Lc4/f$b;
+.implements Lz5/f$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables$1;->marshal(Lc4/f;)V
+    value = Lcom/amazonaws/amplify/generated/graphql/OnUpdateUserContextInfoByLambdaSubscription$Variables$1;->marshal(Lz5/f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
 
 
 # virtual methods
-.method public write(Lc4/f$a;)V
+.method public write(Lz5/f$a;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -89,7 +89,7 @@
     .line 2
     sget-object v2, Ltype/CustomType;->AWSJSON:Ltype/CustomType;
 
-    invoke-interface {p1, v2, v1}, Lc4/f$a;->a(Lc4/o;Ljava/lang/Object;)V
+    invoke-interface {p1, v2, v1}, Lz5/f$a;->a(Lz5/o;Ljava/lang/Object;)V
 
     goto :goto_0
 

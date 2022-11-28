@@ -99,7 +99,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;->model:Lcom/amplifyframework/core/model/Model;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -113,7 +113,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;->syncMetadata:Lcom/amplifyframework/datastore/appsync/ModelMetadata;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

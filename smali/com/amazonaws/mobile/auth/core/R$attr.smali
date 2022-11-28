@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static final button_style:I = 0x7f04008d
+.field public static final button_style:I = 0x7f0400a2
 
-.field public static final text:I = 0x7f0403d8
+.field public static final text:I = 0x7f0404d1
 
 
 # direct methods

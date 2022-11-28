@@ -42,8 +42,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -55,15 +55,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/NavigationManager;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doPeriodicReroute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -143,22 +138,16 @@
 
     const-string p2, ""
 
-    if-eqz p3, :cond_0
+    if-nez p3, :cond_0
 
-    goto :goto_0
-
-    :cond_0
     move-object p3, p2
 
-    :goto_0
-    if-eqz p4, :cond_1
+    :cond_0
+    if-nez p4, :cond_1
 
-    goto :goto_1
-
-    :cond_1
     move-object p4, p2
 
-    :goto_1
+    :cond_1
     invoke-interface {p1, p3, p4}, Lcom/skt/tmap/engine/navigation/DriveStatusChangedListener;->onFailRouteRequest(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2

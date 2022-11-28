@@ -23,7 +23,7 @@
 
 .field public static final D:I = 0x4e20
 
-.field public static final s:Lcom/tmapmobility/tmap/exoplayer2/extractor/m;
+.field public static final s:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
 .field public static final t:I = 0x1
 
@@ -63,11 +63,11 @@
 
 .field public n:J
 
-.field public o:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+.field public o:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
 .field public p:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-.field public q:Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+.field public q:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
 
 .field public r:Z
 
@@ -77,9 +77,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lyd/a;->b:Lyd/a;
+    sget-object v0, Lbg/a;->b:Lbg/a;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->s:Lcom/tmapmobility/tmap/exoplayer2/extractor/m;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->s:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
     const/16 v0, 0x10
 
@@ -100,7 +100,7 @@
     const-string v1, "#!AMR\n"
 
     .line 4
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->z0(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->z0(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -109,7 +109,7 @@
     const-string v1, "#!AMR-WB\n"
 
     .line 5
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->z0(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->z0(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -274,9 +274,11 @@
 .method public static j(IJ)I
     .locals 4
 
-    mul-int/lit8 p0, p0, 0x8
-
     int-to-long v0, p0
+
+    const-wide/16 v2, 0x8
+
+    mul-long/2addr v0, v2
 
     const-wide/32 v2, 0xf4240
 
@@ -309,7 +311,7 @@
     return-object v0
 .end method
 
-.method public static s(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[B)Z
+.method public static s(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[B)Z
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -318,7 +320,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->resetPeekPosition()V
+    invoke-interface {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->resetPeekPosition()V
 
     .line 2
     array-length v0, p1
@@ -330,7 +332,7 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {p0, v0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->peekFully([BII)V
+    invoke-interface {p0, v0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->peekFully([BII)V
 
     .line 4
     invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
@@ -342,30 +344,30 @@
 
 
 # virtual methods
-.method public b(Lcom/tmapmobility/tmap/exoplayer2/extractor/j;)V
+.method public b(Lcom/tmapmobility/tmap/exoplayer2/extractor/l;)V
     .locals 2
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 2
-    invoke-interface {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
+    invoke-interface {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->track(II)Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
     .line 3
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->endTracks()V
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->endTracks()V
 
     return-void
 .end method
 
-.method public c(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/v;)I
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)I
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -377,7 +379,7 @@
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->g()V
 
     .line 2
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->getPosition()J
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->getPosition()J
 
     move-result-wide v0
 
@@ -388,7 +390,7 @@
     if-nez p2, :cond_1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->u(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->u(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
 
     move-result p2
 
@@ -414,12 +416,12 @@
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q()V
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->v(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)I
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->v(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)I
 
     move-result p2
 
     .line 7
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->getLength()J
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->getLength()J
 
     move-result-wide v0
 
@@ -428,7 +430,7 @@
     return p2
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+.method public d(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -437,7 +439,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->u(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->u(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
 
     move-result p1
 
@@ -459,14 +461,14 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final k(JZ)Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+.method public final k(JZ)Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
     .locals 11
 
     .line 1
@@ -812,16 +814,16 @@
 
     .line 4
     :goto_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->k(JZ)Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->k(JZ)Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
 
     .line 5
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-    invoke-interface {p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)V
+    invoke-interface {p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/z;)V
 
     .line 6
     iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->j:Z
@@ -831,18 +833,18 @@
     .line 7
     :cond_4
     :goto_1
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;
 
     const-wide p2, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;-><init>(J)V
+    invoke-direct {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;-><init>(J)V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
 
     .line 8
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-    invoke-interface {p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)V
+    invoke-interface {p2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/z;)V
 
     .line 9
     iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->j:Z
@@ -879,7 +881,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
 
     instance-of v1, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/d;
 
@@ -904,7 +906,7 @@
     return-void
 .end method
 
-.method public final t(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)I
+.method public final t(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)I
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -913,7 +915,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->resetPeekPosition()V
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->resetPeekPosition()V
 
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->d:[B
@@ -922,7 +924,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->peekFully([BII)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->peekFully([BII)V
 
     .line 3
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->d:[B
@@ -969,7 +971,7 @@
     throw p1
 .end method
 
-.method public final u(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+.method public final u(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -980,7 +982,7 @@
     .line 1
     sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->x:[B
 
-    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->s(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[B)Z
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->s(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[B)Z
 
     move-result v1
 
@@ -996,7 +998,7 @@
     .line 3
     array-length v0, v0
 
-    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->skipFully(I)V
+    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->skipFully(I)V
 
     return v3
 
@@ -1004,7 +1006,7 @@
     :cond_0
     sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->y:[B
 
-    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->s(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[B)Z
+    invoke-static {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->s(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[B)Z
 
     move-result v1
 
@@ -1016,7 +1018,7 @@
     .line 6
     array-length v0, v0
 
-    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->skipFully(I)V
+    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->skipFully(I)V
 
     return v3
 
@@ -1024,7 +1026,7 @@
     return v2
 .end method
 
-.method public final v(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)I
+.method public final v(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)I
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1049,7 +1051,7 @@
 
     .line 2
     :try_start_0
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->t(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)I
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/amr/AmrExtractor;->t(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)I
 
     move-result v0
 
@@ -1066,7 +1068,7 @@
     if-ne v0, v2, :cond_0
 
     .line 5
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->getPosition()J
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->getPosition()J
 
     move-result-wide v3
 

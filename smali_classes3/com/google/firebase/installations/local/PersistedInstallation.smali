@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field private final dataFile:Ljava/io/File;
+.field private dataFile:Ljava/io/File;
 
 .field private final firebaseApp:Lcom/google/firebase/FirebaseApp;
     .annotation build Landroidx/annotation/NonNull;
@@ -40,7 +40,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/google/firebase/FirebaseApp;)V
-    .locals 4
+    .locals 0
     .param p1    # Lcom/google/firebase/FirebaseApp;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -50,10 +50,35 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/io/File;
+    iput-object p1, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->firebaseApp:Lcom/google/firebase/FirebaseApp;
+
+    return-void
+.end method
+
+.method private getDataFile()Ljava/io/File;
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
+
+    if-nez v0, :cond_1
+
+    .line 2
+    monitor-enter p0
 
     .line 3
-    invoke-virtual {p1}, Lcom/google/firebase/FirebaseApp;->getApplicationContext()Landroid/content/Context;
+    :try_start_0
+    iget-object v0, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
+
+    if-nez v0, :cond_0
+
+    .line 4
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->firebaseApp:Lcom/google/firebase/FirebaseApp;
+
+    .line 5
+    invoke-virtual {v1}, Lcom/google/firebase/FirebaseApp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -61,14 +86,18 @@
 
     move-result-object v1
 
-    const-string v2, "PersistedInstallation."
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    const-string v3, "PersistedInstallation."
 
-    .line 4
-    invoke-virtual {p1}, Lcom/google/firebase/FirebaseApp;->getPersistenceKey()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->firebaseApp:Lcom/google/firebase/FirebaseApp;
+
+    .line 6
+    invoke-virtual {v3}, Lcom/google/firebase/FirebaseApp;->getPersistenceKey()Ljava/lang/String;
 
     move-result-object v3
 
@@ -86,10 +115,27 @@
 
     iput-object v0, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
 
-    .line 5
-    iput-object p1, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->firebaseApp:Lcom/google/firebase/FirebaseApp;
+    .line 7
+    :cond_0
+    monitor-exit p0
 
-    return-void
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    .line 8
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
+
+    return-object v0
 .end method
 
 .method private readJSONFromFile()Lorg/json/JSONObject;
@@ -108,7 +154,9 @@
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
 
-    iget-object v4, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
+    invoke-direct {p0}, Lcom/google/firebase/installations/local/PersistedInstallation;->getDataFile()Ljava/io/File;
+
+    move-result-object v4
 
     invoke-direct {v3, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
@@ -193,7 +241,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
+    invoke-direct {p0}, Lcom/google/firebase/installations/local/PersistedInstallation;->getDataFile()Ljava/io/File;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -325,7 +375,9 @@
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
     .line 15
-    iget-object v0, p0, Lcom/google/firebase/installations/local/PersistedInstallation;->dataFile:Ljava/io/File;
+    invoke-direct {p0}, Lcom/google/firebase/installations/local/PersistedInstallation;->getDataFile()Ljava/io/File;
+
+    move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 

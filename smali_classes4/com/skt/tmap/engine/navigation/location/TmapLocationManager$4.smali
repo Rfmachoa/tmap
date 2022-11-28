@@ -51,7 +51,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager$4;->this$0:Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->access$200(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;)Z
+    invoke-static {v0}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->access$100(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;)Z
 
     move-result v0
 
@@ -69,7 +69,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->access$302(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {v0, v1}, Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;->access$202(Lcom/skt/tmap/engine/navigation/location/TmapLocationManager;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     :cond_0
     return-void

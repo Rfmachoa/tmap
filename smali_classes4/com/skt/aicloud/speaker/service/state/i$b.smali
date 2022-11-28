@@ -1,11 +1,11 @@
 .class public Lcom/skt/aicloud/speaker/service/state/i$b;
-.super Li9/d;
+.super Lfb/d;
 .source "StateRadio.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/aicloud/speaker/service/state/i;->D0(Lma/v;)V
+    value = Lcom/skt/aicloud/speaker/service/state/i;->D0(Ljc/v;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/i$b;->a:Lcom/skt/aicloud/speaker/service/state/i;
 
-    invoke-direct {p0}, Li9/d;-><init>()V
+    invoke-direct {p0}, Lfb/d;-><init>()V
 
     return-void
 .end method

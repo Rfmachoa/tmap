@@ -36,14 +36,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cause"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroidx/camera/core/impl/utils/futures/g$a;-><init>(Ljava/lang/Throwable;)V
@@ -59,14 +51,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "delayed"
-        }
-    .end annotation
 
     const/4 p1, -0x1
 
@@ -79,14 +63,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "delayed"
-        }
-    .end annotation
 
     .line 1
     check-cast p1, Ljava/util/concurrent/Delayed;
@@ -104,14 +80,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "timeUnit"
-        }
-    .end annotation
 
     const-wide/16 v0, 0x0
 

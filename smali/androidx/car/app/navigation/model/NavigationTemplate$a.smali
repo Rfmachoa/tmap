@@ -118,7 +118,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->l:Lm0/a;
+    sget-object v0, La1/a;->o:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -128,7 +128,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
     iput-object p1, p0, Landroidx/car/app/navigation/model/NavigationTemplate$a;->d:Landroidx/car/app/model/ActionStrip;
@@ -146,11 +146,11 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/b;->b:Lm0/b;
+    sget-object v0, La1/b;->b:La1/b;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lm0/b;->b(Landroidx/car/app/model/CarColor;)V
+    invoke-virtual {v0, p1}, La1/b;->b(Landroidx/car/app/model/CarColor;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/navigation/model/NavigationTemplate$a;->b:Landroidx/car/app/model/CarColor;
@@ -210,7 +210,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->m:Lm0/a;
+    sget-object v0, La1/a;->p:La1/a;
 
     .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -220,7 +220,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 4
     iput-object p1, p0, Landroidx/car/app/navigation/model/NavigationTemplate$a;->e:Landroidx/car/app/model/ActionStrip;

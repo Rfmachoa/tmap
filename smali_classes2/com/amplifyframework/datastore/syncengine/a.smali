@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lai/t0;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/DataStoreConflictHandler;
-
-.field public final synthetic b:Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;
+.field public final synthetic a:Lek/r0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;)V
+.method public synthetic constructor <init>(Lek/r0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/a;->a:Lcom/amplifyframework/datastore/DataStoreConflictHandler;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/a;->b:Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/a;->a:Lek/r0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai/r0;)V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/a;->a:Lcom/amplifyframework/datastore/DataStoreConflictHandler;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/a;->a:Lek/r0;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/a;->b:Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;
+    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
 
-    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/ConflictResolver;->a(Lcom/amplifyframework/datastore/DataStoreConflictHandler;Lcom/amplifyframework/datastore/DataStoreConflictHandler$ConflictData;Lai/r0;)V
+    invoke-interface {v0, p1}, Lek/r0;->onSuccess(Ljava/lang/Object;)V
 
     return-void
 .end method

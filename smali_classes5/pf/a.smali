@@ -1,307 +1,424 @@
 .class public Lpf/a;
 .super Ljava/lang/Object;
-.source "ConnectionConfig.java"
-
-# interfaces
-.implements Ljava/lang/Cloneable;
-
-
-# annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lpf/a$a;
-    }
-.end annotation
-
-
-# static fields
-.field public static final g:Lpf/a;
+.source "V2VMessageContainer.java"
 
 
 # instance fields
-.field public final a:I
+.field public a:Lcom/sktelecom/smartfleet/android/event/EventType;
 
-.field public final b:I
+.field public b:J
 
-.field public final c:Ljava/nio/charset/Charset;
-
-.field public final d:Ljava/nio/charset/CodingErrorAction;
-
-.field public final e:Ljava/nio/charset/CodingErrorAction;
-
-.field public final f:Lpf/c;
+.field public c:Lcom/google/gson/JsonObject;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    new-instance v0, Lpf/a$a;
-
-    invoke-direct {v0}, Lpf/a$a;-><init>()V
-
-    invoke-virtual {v0}, Lpf/a$a;->a()Lpf/a;
-
-    move-result-object v0
-
-    sput-object v0, Lpf/a;->g:Lpf/a;
-
-    return-void
-.end method
-
-.method public constructor <init>(IILjava/nio/charset/Charset;Ljava/nio/charset/CodingErrorAction;Ljava/nio/charset/CodingErrorAction;Lpf/c;)V
+.method public constructor <init>()V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lpf/a;->a:I
-
-    .line 3
-    iput p2, p0, Lpf/a;->b:I
-
-    .line 4
-    iput-object p3, p0, Lpf/a;->c:Ljava/nio/charset/Charset;
-
-    .line 5
-    iput-object p4, p0, Lpf/a;->d:Ljava/nio/charset/CodingErrorAction;
-
-    .line 6
-    iput-object p5, p0, Lpf/a;->e:Ljava/nio/charset/CodingErrorAction;
-
-    .line 7
-    iput-object p6, p0, Lpf/a;->f:Lpf/c;
-
     return-void
-.end method
-
-.method public static b(Lpf/a;)Lpf/a$a;
-    .locals 2
-
-    const-string v0, "Connection config"
-
-    .line 1
-    invoke-static {p0, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2
-    new-instance v0, Lpf/a$a;
-
-    invoke-direct {v0}, Lpf/a$a;-><init>()V
-
-    .line 3
-    invoke-virtual {p0}, Lpf/a;->e()Ljava/nio/charset/Charset;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lpf/a$a;->c(Ljava/nio/charset/Charset;)Lpf/a$a;
-
-    move-result-object v0
-
-    .line 4
-    invoke-virtual {p0}, Lpf/a;->g()Ljava/nio/charset/CodingErrorAction;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lpf/a$a;->e(Ljava/nio/charset/CodingErrorAction;)Lpf/a$a;
-
-    move-result-object v0
-
-    .line 5
-    invoke-virtual {p0}, Lpf/a;->i()Ljava/nio/charset/CodingErrorAction;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lpf/a$a;->g(Ljava/nio/charset/CodingErrorAction;)Lpf/a$a;
-
-    move-result-object v0
-
-    .line 6
-    invoke-virtual {p0}, Lpf/a;->h()Lpf/c;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lpf/a$a;->f(Lpf/c;)Lpf/a$a;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c()Lpf/a$a;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lpf/a$a;
-
-    invoke-direct {v0}, Lpf/a$a;-><init>()V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public a()Lpf/a;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
+.method public a(Ljava/lang/String;)D
+    .locals 4
 
     .line 1
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+
+    invoke-virtual {v0, p1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
     move-result-object v0
 
-    check-cast v0, Lpf/a;
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsDouble()D
 
-    return-object v0
-.end method
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/CloneNotSupportedException;
-        }
-    .end annotation
+    return-wide v0
 
-    .line 1
-    invoke-virtual {p0}, Lpf/a;->a()Lpf/a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public d()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lpf/a;->a:I
-
-    return v0
-.end method
-
-.method public e()Ljava/nio/charset/Charset;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lpf/a;->c:Ljava/nio/charset/Charset;
-
-    return-object v0
-.end method
-
-.method public f()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lpf/a;->b:I
-
-    return v0
-.end method
-
-.method public g()Ljava/nio/charset/CodingErrorAction;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lpf/a;->d:Ljava/nio/charset/CodingErrorAction;
-
-    return-object v0
-.end method
-
-.method public h()Lpf/c;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lpf/a;->f:Lpf/c;
-
-    return-object v0
-.end method
-
-.method public i()Ljava/nio/charset/CodingErrorAction;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lpf/a;->e:Ljava/nio/charset/CodingErrorAction;
-
-    return-object v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "[bufferSize="
-
-    .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    :catch_0
+    move-exception v0
 
     .line 2
-    iget v1, p0, Lpf/a;->a:I
+    new-instance v1, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v2, 0x3
 
-    const-string v1, ", fragmentSizeHint="
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 p1, 0x1
+
+    iget-object v3, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
 
     .line 3
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    iget v1, p0, Lpf/a;->b:I
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    aput-object v3, v2, p1
 
-    const-string v1, ", charset="
+    const/4 p1, 0x2
 
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpf/a;->c:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", malformedInputAction="
-
-    .line 5
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpf/a;->d:Ljava/nio/charset/CodingErrorAction;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unmappableInputAction="
-
-    .line 6
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpf/a;->e:Ljava/nio/charset/CodingErrorAction;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageConstraints="
-
-    .line 7
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpf/a;->f:Lpf/c;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    .line 8
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 9
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
+    aput-object v0, v2, p1
+
+    const-string p1, "Get value for key %s Error(%s). %s"
+
+    .line 4
+    invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public b()Lcom/sktelecom/smartfleet/android/event/EventType;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
+
     return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)I
+    .locals 4
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+
+    invoke-virtual {v0, p1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsInt()I
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p1
+
+    :catch_0
+    move-exception v0
+
+    .line 2
+    new-instance v1, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 p1, 0x1
+
+    iget-object v3, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
+
+    .line 3
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, p1
+
+    const/4 p1, 0x2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, p1
+
+    const-string p1, "Get value for key %s Error(%s). %s"
+
+    .line 4
+    invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public d(Ljava/lang/String;)Lcom/google/gson/JsonArray;
+    .locals 4
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+
+    invoke-virtual {v0, p1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    .line 2
+    new-instance v1, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 p1, 0x1
+
+    iget-object v3, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
+
+    .line 3
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, p1
+
+    const/4 p1, 0x2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, p1
+
+    const-string p1, "Get value for key %s Error(%s). %s"
+
+    .line 4
+    invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public e()Lcom/google/gson/JsonObject;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+
+    return-object v0
+.end method
+
+.method public f(Ljava/lang/String;)J
+    .locals 4
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+
+    invoke-virtual {v0, p1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsLong()J
+
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-wide v0
+
+    :catch_0
+    move-exception v0
+
+    .line 2
+    new-instance v1, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 p1, 0x1
+
+    iget-object v3, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
+
+    .line 3
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, p1
+
+    const/4 p1, 0x2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, p1
+
+    const-string p1, "Get value for key %s Error(%s). %s"
+
+    .line 4
+    invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public g(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+
+    invoke-virtual {v0, p1}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    .line 2
+    new-instance v1, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 p1, 0x1
+
+    iget-object v3, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
+
+    .line 3
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, p1
+
+    const/4 p1, 0x2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, p1
+
+    const-string p1, "Get value for key %s Error(%s). %s"
+
+    .line 4
+    invoke-static {p1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public h()J
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lpf/a;->b:J
+
+    return-wide v0
+.end method
+
+.method public i(Lcom/google/gson/JsonObject;)V
+    .locals 2
+
+    :try_start_0
+    const-string v0, "et"
+
+    .line 1
+    invoke-virtual {p1, v0}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsInt()I
+
+    move-result v0
+
+    .line 2
+    invoke-static {v0}, Lcom/sktelecom/smartfleet/android/event/EventType;->getByNum(I)Lcom/sktelecom/smartfleet/android/event/EventType;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lpf/a;->a:Lcom/sktelecom/smartfleet/android/event/EventType;
+
+    const-string v0, "ts"
+
+    .line 3
+    invoke-virtual {p1, v0}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/gson/JsonElement;->getAsLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lpf/a;->b:J
+
+    .line 4
+    iput-object p1, p0, Lpf/a;->c:Lcom/google/gson/JsonObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 5
+    new-instance v0, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;
+
+    invoke-direct {v0, p1}, Lcom/sktelecom/smartfleet/android/message/V2XMessageException;-><init>(Ljava/lang/Exception;)V
+
+    throw v0
 .end method

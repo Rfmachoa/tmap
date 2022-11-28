@@ -45,9 +45,9 @@
     :try_start_0
     iget-object v0, p0, Landroidx/preference/PreferenceGroup$a;->a:Landroidx/preference/PreferenceGroup;
 
-    iget-object v0, v0, Landroidx/preference/PreferenceGroup;->y1:Landroidx/collection/l;
+    iget-object v0, v0, Landroidx/preference/PreferenceGroup;->A1:Landroidx/collection/m;
 
-    invoke-virtual {v0}, Landroidx/collection/l;->clear()V
+    invoke-virtual {v0}, Landroidx/collection/m;->clear()V
 
     .line 3
     monitor-exit p0

@@ -1,23 +1,9 @@
 .class final Lcom/google/android/gms/tasks/zzab;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 # interfaces
 .implements Lcom/google/android/gms/tasks/Continuation;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/Continuation<",
-        "Ljava/lang/Void;",
-        "Lcom/google/android/gms/tasks/Task<",
-        "Ljava/util/List<",
-        "Lcom/google/android/gms/tasks/Task<",
-        "*>;>;>;>;"
-    }
-.end annotation
 
 
 # instance fields

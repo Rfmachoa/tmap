@@ -1,5 +1,5 @@
 .class public Lcz/msebera/android/httpclient/impl/cookie/a;
-.super Lgg/l;
+.super Lki/l;
 .source "BrowserCompatSpec.java"
 
 
@@ -86,7 +86,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lgg/l;-><init>()V
+    invoke-direct {p0}, Lki/l;-><init>()V
 
     if-eqz p1, :cond_0
 
@@ -132,7 +132,7 @@
 
     invoke-direct {p1, p0}, Lcz/msebera/android/httpclient/impl/cookie/a$a;-><init>(Lcz/msebera/android/httpclient/impl/cookie/a;)V
 
-    invoke-virtual {p0, v0, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, v0, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     goto :goto_1
 
@@ -148,68 +148,68 @@
 
     .line 7
     :cond_2
-    new-instance p1, Lgg/g;
+    new-instance p1, Lki/g;
 
-    invoke-direct {p1}, Lgg/g;-><init>()V
+    invoke-direct {p1}, Lki/g;-><init>()V
 
-    invoke-virtual {p0, v0, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, v0, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     .line 8
     :goto_1
-    new-instance p1, Lgg/d;
+    new-instance p1, Lki/d;
 
-    invoke-direct {p1}, Lgg/d;-><init>()V
+    invoke-direct {p1}, Lki/d;-><init>()V
 
     const-string p2, "domain"
 
-    invoke-virtual {p0, p2, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, p2, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     .line 9
-    new-instance p1, Lgg/f;
+    new-instance p1, Lki/f;
 
-    invoke-direct {p1}, Lgg/f;-><init>()V
+    invoke-direct {p1}, Lki/f;-><init>()V
 
     const-string p2, "max-age"
 
-    invoke-virtual {p0, p2, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, p2, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     .line 10
-    new-instance p1, Lgg/h;
+    new-instance p1, Lki/h;
 
-    invoke-direct {p1}, Lgg/h;-><init>()V
+    invoke-direct {p1}, Lki/h;-><init>()V
 
     const-string p2, "secure"
 
-    invoke-virtual {p0, p2, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, p2, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     .line 11
-    new-instance p1, Lgg/c;
+    new-instance p1, Lki/c;
 
-    invoke-direct {p1}, Lgg/c;-><init>()V
+    invoke-direct {p1}, Lki/c;-><init>()V
 
     const-string p2, "comment"
 
-    invoke-virtual {p0, p2, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, p2, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     .line 12
-    new-instance p1, Lgg/e;
+    new-instance p1, Lki/e;
 
     iget-object p2, p0, Lcz/msebera/android/httpclient/impl/cookie/a;->b:[Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Lgg/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Lki/e;-><init>([Ljava/lang/String;)V
 
     const-string p2, "expires"
 
-    invoke-virtual {p0, p2, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, p2, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     .line 13
-    new-instance p1, Lgg/k;
+    new-instance p1, Lki/k;
 
-    invoke-direct {p1}, Lgg/k;-><init>()V
+    invoke-direct {p1}, Lki/k;-><init>()V
 
     const-string p2, "version"
 
-    invoke-virtual {p0, p2, p1}, Lgg/b;->g(Ljava/lang/String;Lxf/c;)V
+    invoke-virtual {p0, p2, p1}, Lki/b;->g(Ljava/lang/String;Lbi/c;)V
 
     return-void
 .end method
@@ -247,16 +247,16 @@
 
 
 # virtual methods
-.method public c(Ldf/d;Lxf/d;)Ljava/util/List;
+.method public c(Lhh/d;Lbi/d;)Ljava/util/List;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldf/d;",
-            "Lxf/d;",
+            "Lhh/d;",
+            "Lbi/d;",
             ")",
             "Ljava/util/List<",
-            "Lxf/b;",
+            "Lbi/b;",
             ">;"
         }
     .end annotation
@@ -270,15 +270,15 @@
     const-string v0, "Header"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "Cookie origin"
 
     .line 2
-    invoke-static {p2, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
-    invoke-interface {p1}, Ldf/d;->getName()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -292,7 +292,7 @@
     if-eqz v0, :cond_b
 
     .line 5
-    invoke-interface {p1}, Ldf/d;->getElements()[Ldf/e;
+    invoke-interface {p1}, Lhh/d;->getElements()[Lhh/e;
 
     move-result-object v0
 
@@ -317,7 +317,7 @@
     const-string v8, "version"
 
     .line 7
-    invoke-interface {v7, v8}, Ldf/e;->getParameterByName(Ljava/lang/String;)Ldf/y;
+    invoke-interface {v7, v8}, Lhh/e;->getParameterByName(Ljava/lang/String;)Lhh/y;
 
     move-result-object v8
 
@@ -329,7 +329,7 @@
     const-string v8, "expires"
 
     .line 8
-    invoke-interface {v7, v8}, Ldf/e;->getParameterByName(Ljava/lang/String;)Ldf/y;
+    invoke-interface {v7, v8}, Lhh/e;->getParameterByName(Ljava/lang/String;)Lhh/y;
 
     move-result-object v7
 
@@ -351,7 +351,7 @@
 
     .line 9
     :cond_3
-    invoke-virtual {p0, v0, p2}, Lgg/l;->j([Ldf/e;Lxf/d;)Ljava/util/List;
+    invoke-virtual {p0, v0, p2}, Lki/l;->j([Lhh/e;Lbi/d;)Ljava/util/List;
 
     move-result-object p1
 
@@ -360,25 +360,25 @@
     .line 10
     :cond_4
     :goto_1
-    sget-object v0, Lgg/q;->a:Lgg/q;
+    sget-object v0, Lki/q;->a:Lki/q;
 
     .line 11
-    instance-of v1, p1, Ldf/c;
+    instance-of v1, p1, Lhh/c;
 
     if-eqz v1, :cond_5
 
     .line 12
-    check-cast p1, Ldf/c;
+    check-cast p1, Lhh/c;
 
-    invoke-interface {p1}, Ldf/c;->getBuffer()Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-interface {p1}, Lhh/c;->getBuffer()Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     move-result-object v1
 
     .line 13
-    new-instance v3, Lmg/r;
+    new-instance v3, Lqi/r;
 
     .line 14
-    invoke-interface {p1}, Ldf/c;->getValuePos()I
+    invoke-interface {p1}, Lhh/c;->getValuePos()I
 
     move-result p1
 
@@ -387,13 +387,13 @@
 
     move-result v5
 
-    invoke-direct {v3, p1, v5}, Lmg/r;-><init>(II)V
+    invoke-direct {v3, p1, v5}, Lqi/r;-><init>(II)V
 
     goto :goto_2
 
     .line 16
     :cond_5
-    invoke-interface {p1}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
@@ -412,34 +412,34 @@
     invoke-virtual {v1, p1}, Lcz/msebera/android/httpclient/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     .line 19
-    new-instance v3, Lmg/r;
+    new-instance v3, Lqi/r;
 
     invoke-virtual {v1}, Lcz/msebera/android/httpclient/util/CharArrayBuffer;->length()I
 
     move-result p1
 
-    invoke-direct {v3, v2, p1}, Lmg/r;-><init>(II)V
+    invoke-direct {v3, v2, p1}, Lqi/r;-><init>(II)V
 
     .line 20
     :goto_2
-    invoke-virtual {v0, v1, v3}, Lgg/q;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lmg/r;)Ldf/e;
+    invoke-virtual {v0, v1, v3}, Lki/q;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lqi/r;)Lhh/e;
 
     move-result-object p1
 
     .line 21
-    invoke-interface {p1}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     .line 22
-    invoke-interface {p1}, Ldf/e;->getValue()Ljava/lang/String;
+    invoke-interface {p1}, Lhh/e;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v0, :cond_9
 
     .line 23
-    invoke-static {v0}, Lqg/i;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lui/i;->a(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -451,21 +451,21 @@
     invoke-direct {v3, v0, v1}, Lcz/msebera/android/httpclient/impl/cookie/BasicClientCookie;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 25
-    invoke-static {p2}, Lgg/l;->i(Lxf/d;)Ljava/lang/String;
+    invoke-static {p2}, Lki/l;->i(Lbi/d;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v3, v0}, Lcz/msebera/android/httpclient/impl/cookie/BasicClientCookie;->setPath(Ljava/lang/String;)V
 
     .line 26
-    invoke-static {p2}, Lgg/l;->h(Lxf/d;)Ljava/lang/String;
+    invoke-static {p2}, Lki/l;->h(Lbi/d;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {v3, p2}, Lcz/msebera/android/httpclient/impl/cookie/BasicClientCookie;->setDomain(Ljava/lang/String;)V
 
     .line 27
-    invoke-interface {p1}, Ldf/e;->getParameters()[Ldf/y;
+    invoke-interface {p1}, Lhh/e;->getParameters()[Lhh/y;
 
     move-result-object p1
 
@@ -481,7 +481,7 @@
     aget-object v0, p1, p2
 
     .line 30
-    invoke-interface {v0}, Ldf/y;->getName()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/y;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -492,25 +492,25 @@
     move-result-object v1
 
     .line 31
-    invoke-interface {v0}, Ldf/y;->getValue()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/y;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v3, v1, v5}, Lcz/msebera/android/httpclient/impl/cookie/BasicClientCookie;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 32
-    invoke-virtual {p0, v1}, Lgg/b;->d(Ljava/lang/String;)Lxf/c;
+    invoke-virtual {p0, v1}, Lki/b;->d(Ljava/lang/String;)Lbi/c;
 
     move-result-object v1
 
     if-eqz v1, :cond_6
 
     .line 33
-    invoke-interface {v0}, Ldf/y;->getValue()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/y;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v1, v3, v0}, Lxf/c;->c(Lxf/k;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v0}, Lbi/c;->c(Lbi/k;Ljava/lang/String;)V
 
     :cond_6
     add-int/lit8 p2, p2, -0x1
@@ -587,10 +587,10 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lxf/b;",
+            "Lbi/b;",
             ">;)",
             "Ljava/util/List<",
-            "Ldf/d;",
+            "Lhh/d;",
             ">;"
         }
     .end annotation
@@ -598,7 +598,7 @@
     const-string v0, "List of cookies"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->e(Ljava/util/Collection;Ljava/lang/String;)Ljava/util/Collection;
+    invoke-static {p1, v0}, Lui/a;->e(Ljava/util/Collection;Ljava/lang/String;)Ljava/util/Collection;
 
     .line 2
     new-instance v0, Lcz/msebera/android/httpclient/util/CharArrayBuffer;
@@ -638,7 +638,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lxf/b;
+    check-cast v3, Lbi/b;
 
     if-lez v2, :cond_0
 
@@ -649,17 +649,17 @@
 
     .line 8
     :cond_0
-    invoke-interface {v3}, Lxf/b;->getName()Ljava/lang/String;
+    invoke-interface {v3}, Lbi/b;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     .line 9
-    invoke-interface {v3}, Lxf/b;->getValue()Ljava/lang/String;
+    invoke-interface {v3}, Lbi/b;->getValue()Ljava/lang/String;
 
     move-result-object v5
 
     .line 10
-    invoke-interface {v3}, Lxf/b;->getVersion()I
+    invoke-interface {v3}, Lbi/b;->getVersion()I
 
     move-result v3
 
@@ -672,13 +672,13 @@
     if-nez v3, :cond_1
 
     .line 11
-    sget-object v3, Lmg/e;->b:Lmg/e;
+    sget-object v3, Lqi/e;->b:Lqi/e;
 
-    new-instance v6, Lmg/b;
+    new-instance v6, Lqi/b;
 
-    invoke-direct {v6, v4, v5}, Lmg/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v4, v5}, Lqi/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0, v6, v1}, Lmg/e;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Ldf/e;Z)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-virtual {v3, v0, v6, v1}, Lqi/e;->c(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lhh/e;Z)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     goto :goto_1
 
@@ -728,7 +728,7 @@
     return v0
 .end method
 
-.method public getVersionHeader()Ldf/d;
+.method public getVersionHeader()Lhh/d;
     .locals 1
 
     const/4 v0, 0x0

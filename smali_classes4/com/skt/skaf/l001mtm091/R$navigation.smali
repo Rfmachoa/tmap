@@ -14,7 +14,11 @@
 
 
 # static fields
-.field public static final dev_menu_nav_graph:I = 0x7f100000
+.field public static final dev_menu_nav_graph:I = 0x7f110000
+
+.field public static final mci_error_graph:I = 0x7f110001
+
+.field public static final mci_graph:I = 0x7f110002
 
 
 # direct methods

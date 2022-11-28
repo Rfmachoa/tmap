@@ -7,24 +7,20 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/v;
+.field public final synthetic a:Landroidx/camera/camera2/internal/w;
 
-.field public final synthetic b:Ljava/util/concurrent/Executor;
-
-.field public final synthetic c:Lx/i;
+.field public final synthetic b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/v;Ljava/util/concurrent/Executor;Lx/i;)V
+.method public synthetic constructor <init>(Landroidx/camera/camera2/internal/w;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/p;->a:Landroidx/camera/camera2/internal/v;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/p;->a:Landroidx/camera/camera2/internal/w;
 
-    iput-object p2, p0, Landroidx/camera/camera2/internal/p;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p3, p0, Landroidx/camera/camera2/internal/p;->c:Lx/i;
+    iput-object p2, p0, Landroidx/camera/camera2/internal/p;->b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
     return-void
 .end method
@@ -32,15 +28,13 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/p;->a:Landroidx/camera/camera2/internal/v;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/p;->a:Landroidx/camera/camera2/internal/w;
 
-    iget-object v1, p0, Landroidx/camera/camera2/internal/p;->b:Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Landroidx/camera/camera2/internal/p;->b:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    iget-object v2, p0, Landroidx/camera/camera2/internal/p;->c:Lx/i;
-
-    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/v;->t(Landroidx/camera/camera2/internal/v;Ljava/util/concurrent/Executor;Lx/i;)V
+    invoke-static {v0, v1}, Landroidx/camera/camera2/internal/w;->q(Landroidx/camera/camera2/internal/w;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
 
     return-void
 .end method

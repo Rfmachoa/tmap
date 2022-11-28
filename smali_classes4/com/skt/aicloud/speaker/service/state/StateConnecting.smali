@@ -243,7 +243,7 @@
     return-void
 .end method
 
-.method public i(Landroid/content/Intent;Lma/c;)V
+.method public g(Landroid/content/Intent;Ljc/c;)V
     .locals 5
 
     const-string p2, "setAction"
@@ -908,11 +908,11 @@
 
     sget-object v1, Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;->WIFI_CONNECTION_FAILED_RETRY:Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;
 
-    new-instance v2, Lg9/b;
+    new-instance v2, Ldb/b;
 
-    invoke-direct {v2}, Lg9/b;-><init>()V
+    invoke-direct {v2}, Ldb/b;-><init>()V
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lsa/d;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/speaker/service/api/d;->L(Lcom/skt/aicloud/speaker/service/tts/EmbeddedTTS;Lpc/d;)Z
 
     return-void
 .end method

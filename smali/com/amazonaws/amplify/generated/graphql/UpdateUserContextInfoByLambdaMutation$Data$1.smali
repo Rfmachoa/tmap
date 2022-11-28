@@ -3,12 +3,12 @@
 .source "UpdateUserContextInfoByLambdaMutation.java"
 
 # interfaces
-.implements Lc4/k;
+.implements Lz5/k;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$Data;->marshaller()Lc4/k;
+    value = Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$Data;->marshaller()Lz5/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -67,7 +67,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->marshaller()Lc4/k;
+    invoke-virtual {v1}, Lcom/amazonaws/amplify/generated/graphql/UpdateUserContextInfoByLambdaMutation$UpdateUserContextInfoByLambda;->marshaller()Lz5/k;
 
     move-result-object v1
 
@@ -77,7 +77,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-interface {p1, v0, v1}, Lcom/apollographql/apollo/api/e;->f(Lcom/apollographql/apollo/api/ResponseField;Lc4/k;)V
+    invoke-interface {p1, v0, v1}, Lcom/apollographql/apollo/api/e;->b(Lcom/apollographql/apollo/api/ResponseField;Lz5/k;)V
 
     return-void
 .end method

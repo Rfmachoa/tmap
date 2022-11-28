@@ -1,19 +1,20 @@
-.class public interface abstract Ldc/b;
+.class public Ldc/b;
 .super Ljava/lang/Object;
-.source "LocationCollectorInterface.java"
+.source "ActionHostCode.java"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# static fields
+.field public static final a:Ljava/lang/String; = "app"
 
-.method public abstract onLocationChanged(Landroid/location/Location;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "location"
-        }
-    .end annotation
+.field public static final b:Ljava/lang/String; = "sdk"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

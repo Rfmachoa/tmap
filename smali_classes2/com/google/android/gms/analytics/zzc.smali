@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/analytics/zzc;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -26,11 +26,11 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/zzc;->zza:Landroid/content/BroadcastReceiver$PendingResult;
 
     if-eqz v0, :cond_0
 
-    .line 1
     invoke-virtual {v0}, Landroid/content/BroadcastReceiver$PendingResult;->finish()V
 
     :cond_0

@@ -159,7 +159,7 @@
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/a;->c:[F
 
-    invoke-static {v0, p1}, Lcf/c;->a([F[F)V
+    invoke-static {v0, p1}, Lfh/c;->a([F[F)V
 
     const/4 v0, 0x1
 

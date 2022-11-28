@@ -30,10 +30,10 @@
 
 .field private mNewEventOccurred:Z
 
-.field private mObserverMap:Lm/a;
+.field private mObserverMap:Lo/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lm/a<",
+            "Lo/a<",
             "Landroidx/lifecycle/LifecycleObserver;",
             "Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;",
             ">;"
@@ -81,11 +81,11 @@
     invoke-direct {p0}, Landroidx/lifecycle/Lifecycle;-><init>()V
 
     .line 3
-    new-instance v0, Lm/a;
+    new-instance v0, Lo/a;
 
-    invoke-direct {v0}, Lm/a;-><init>()V
+    invoke-direct {v0}, Lo/a;-><init>()V
 
-    iput-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iput-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
     const/4 v0, 0x0
 
@@ -127,10 +127,10 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
     .line 2
-    invoke-virtual {v0}, Lm/b;->descendingIterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lo/b;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -176,14 +176,16 @@
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v3, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
     .line 7
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lm/a;->contains(Ljava/lang/Object;)Z
+    check-cast v4, Landroidx/lifecycle/LifecycleObserver;
+
+    invoke-virtual {v3, v4}, Lo/a;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -243,9 +245,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v0, p1}, Lm/a;->h(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    invoke-virtual {v0, p1}, Lo/a;->h(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object p1
 
@@ -342,11 +344,11 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Ll/a;->f()Ll/a;
+    invoke-static {}, Ln/a;->f()Ln/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll/a;->c()Z
+    invoke-virtual {v0}, Ln/a;->c()Z
 
     move-result v0
 
@@ -379,10 +381,10 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
     .line 2
-    invoke-virtual {v0}, Lm/b;->c()Lm/b$d;
+    invoke-virtual {v0}, Lo/b;->c()Lo/b$d;
 
     move-result-object v0
 
@@ -428,14 +430,16 @@
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v3, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
     .line 7
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lm/a;->contains(Ljava/lang/Object;)Z
+    check-cast v4, Landroidx/lifecycle/LifecycleObserver;
+
+    invoke-virtual {v3, v4}, Lo/a;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -493,9 +497,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v0}, Lm/b;->size()I
+    invoke-virtual {v0}, Lo/b;->size()I
 
     move-result v0
 
@@ -507,9 +511,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v0}, Lm/b;->a()Ljava/util/Map$Entry;
+    invoke-virtual {v0}, Lo/b;->a()Ljava/util/Map$Entry;
 
     move-result-object v0
 
@@ -522,9 +526,9 @@
     iget-object v0, v0, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;->mState:Landroidx/lifecycle/Lifecycle$State;
 
     .line 3
-    iget-object v2, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v2, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v2}, Lm/b;->d()Ljava/util/Map$Entry;
+    invoke-virtual {v2}, Lo/b;->d()Ljava/util/Map$Entry;
 
     move-result-object v2
 
@@ -579,7 +583,7 @@
 .end method
 
 .method private moveToState(Landroidx/lifecycle/Lifecycle$State;)V
-    .locals 1
+    .locals 2
 
     .line 1
     iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mState:Landroidx/lifecycle/Lifecycle$State;
@@ -590,38 +594,88 @@
 
     .line 2
     :cond_0
-    iput-object p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mState:Landroidx/lifecycle/Lifecycle$State;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
+
+    if-ne v0, v1, :cond_2
+
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    if-eq p1, v0, :cond_1
+
+    goto :goto_0
 
     .line 3
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "no event down from "
+
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry;->mState:Landroidx/lifecycle/Lifecycle$State;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 4
+    :cond_2
+    :goto_0
+    iput-object p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mState:Landroidx/lifecycle/Lifecycle$State;
+
+    .line 5
     iget-boolean p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mHandlingEvent:Z
 
     const/4 v0, 0x1
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_5
 
     iget p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mAddingObserverCounter:I
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 4
-    :cond_1
+    .line 6
+    :cond_3
     iput-boolean v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mHandlingEvent:Z
 
-    .line 5
+    .line 7
     invoke-direct {p0}, Landroidx/lifecycle/LifecycleRegistry;->sync()V
 
     const/4 p1, 0x0
 
-    .line 6
+    .line 8
     iput-boolean p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mHandlingEvent:Z
 
+    .line 9
+    iget-object p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mState:Landroidx/lifecycle/Lifecycle$State;
+
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
+
+    if-ne p1, v0, :cond_4
+
+    .line 10
+    new-instance p1, Lo/a;
+
+    invoke-direct {p1}, Lo/a;-><init>()V
+
+    iput-object p1, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
+
+    :cond_4
     return-void
 
-    .line 7
-    :cond_2
-    :goto_0
+    .line 11
+    :cond_5
+    :goto_1
     iput-boolean v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mNewEventOccurred:Z
 
     return-void
@@ -686,9 +740,9 @@
     .line 4
     iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry;->mState:Landroidx/lifecycle/Lifecycle$State;
 
-    iget-object v2, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v2, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v2}, Lm/b;->a()Ljava/util/Map$Entry;
+    invoke-virtual {v2}, Lo/b;->a()Ljava/util/Map$Entry;
 
     move-result-object v2
 
@@ -711,9 +765,9 @@
 
     .line 6
     :cond_1
-    iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v1}, Lm/b;->d()Ljava/util/Map$Entry;
+    invoke-virtual {v1}, Lo/b;->d()Ljava/util/Map$Entry;
 
     move-result-object v1
 
@@ -796,9 +850,9 @@
     invoke-direct {v0, p1, v1}, Landroidx/lifecycle/LifecycleRegistry$ObserverWithState;-><init>(Landroidx/lifecycle/LifecycleObserver;Landroidx/lifecycle/Lifecycle$State;)V
 
     .line 4
-    iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v1, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v1, p1, v0}, Lm/a;->f(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Lo/a;->f(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -868,10 +922,10 @@
 
     if-gez v4, :cond_6
 
-    iget-object v4, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v4, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
     .line 10
-    invoke-virtual {v4, p1}, Lm/a;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Lo/a;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -963,9 +1017,9 @@
     invoke-direct {p0, v0}, Landroidx/lifecycle/LifecycleRegistry;->enforceMainThreadIfNeeded(Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v0}, Lm/b;->size()I
+    invoke-virtual {v0}, Lo/b;->size()I
 
     move-result v0
 
@@ -1030,9 +1084,9 @@
     invoke-direct {p0, v0}, Landroidx/lifecycle/LifecycleRegistry;->enforceMainThreadIfNeeded(Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lm/a;
+    iget-object v0, p0, Landroidx/lifecycle/LifecycleRegistry;->mObserverMap:Lo/a;
 
-    invoke-virtual {v0, p1}, Lm/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lo/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

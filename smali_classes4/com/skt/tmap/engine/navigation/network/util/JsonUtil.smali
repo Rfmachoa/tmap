@@ -13,6 +13,53 @@
     return-void
 .end method
 
+.method public static GetArrayFromString(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "[TT;>;)",
+            "Ljava/util/List<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .line 1
+    :try_start_0
+    new-instance v0, Lcom/google/gson/Gson;
+
+    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+
+    invoke-virtual {v0, p0, p1}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [Ljava/lang/Object;
+
+    .line 2
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
 .method public static GetJsonString(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 

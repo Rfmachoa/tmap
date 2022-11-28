@@ -239,7 +239,7 @@
     move-result-object p2
 
     .line 7
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e()Landroid/support/v4/media/session/IMediaSession;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Landroid/support/v4/media/session/IMediaSession;
 
     move-result-object v1
 
@@ -257,17 +257,17 @@
 
     .line 9
     :goto_0
-    invoke-static {p1, v3, v2}, Landroidx/core/app/i;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {p1, v3, v2}, Landroidx/core/app/k;->b(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     const-string v1, "android.support.v4.media.session.SESSION_TOKEN2"
 
     .line 10
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Lj3/d;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->h()Lr4/d;
 
     move-result-object p2
 
     .line 11
-    invoke-static {p1, v1, p2}, Lj3/a;->e(Landroid/os/Bundle;Ljava/lang/String;Lj3/d;)V
+    invoke-static {p1, v1, p2}, Lr4/a;->e(Landroid/os/Bundle;Ljava/lang/String;Lr4/d;)V
 
     const/4 p2, 0x0
 
@@ -416,7 +416,7 @@
     .line 31
     iget-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$b$b;->a:Landroid/support/v4/media/session/MediaSessionCompat$b;
 
-    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->d()Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-virtual {v2}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->e()Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p2
 
@@ -1335,7 +1335,7 @@
     .line 3
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$b$b;->a:Landroid/support/v4/media/session/MediaSessionCompat$b;
 
-    invoke-static {p1}, Landroid/support/v4/media/RatingCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
+    invoke-static {p1}, Landroid/support/v4/media/RatingCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
 
     move-result-object p1
 

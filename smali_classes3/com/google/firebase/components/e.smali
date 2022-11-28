@@ -3,34 +3,42 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/google/firebase/inject/Provider;
+.implements Lcom/google/firebase/components/ComponentRegistrarProcessor;
 
 
-# instance fields
-.field public final synthetic a:Lcom/google/firebase/components/ComponentRegistrar;
+# static fields
+.field public static final synthetic a:Lcom/google/firebase/components/e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRegistrar;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/google/firebase/components/e;
+
+    invoke-direct {v0}, Lcom/google/firebase/components/e;-><init>()V
+
+    sput-object v0, Lcom/google/firebase/components/e;->a:Lcom/google/firebase/components/e;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/firebase/components/e;->a:Lcom/google/firebase/components/ComponentRegistrar;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final processRegistrar(Lcom/google/firebase/components/ComponentRegistrar;)Ljava/util/List;
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/firebase/components/e;->a:Lcom/google/firebase/components/ComponentRegistrar;
+    invoke-interface {p1}, Lcom/google/firebase/components/ComponentRegistrar;->getComponents()Ljava/util/List;
 
-    invoke-static {v0}, Lcom/google/firebase/components/ComponentRuntime;->b(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRegistrar;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

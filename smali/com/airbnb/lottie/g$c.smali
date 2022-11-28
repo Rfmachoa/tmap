@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/airbnb/lottie/g$c;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lu3/b;->e(Landroid/content/Context;Ljava/lang/String;)Lcom/airbnb/lottie/m;
+    invoke-static {v0, v1}, Lq5/b;->e(Landroid/content/Context;Ljava/lang/String;)Lcom/airbnb/lottie/m;
 
     move-result-object v0
 

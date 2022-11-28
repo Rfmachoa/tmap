@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->onExceptionResult(Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->onAiServiceRawResult(Lcom/skt/voice/tyche/data/CardResult;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,12 +44,34 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$t1;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->B1()V
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$t1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->f1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_ASR_RESULTS:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
+
+    iget-object v2, p0, Lcom/skt/tmap/engine/TmapAiManager$t1;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v2}, Lcom/skt/tmap/engine/TmapAiManager;->L(Lcom/skt/tmap/engine/TmapAiManager;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->i(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method

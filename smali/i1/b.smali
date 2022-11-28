@@ -1,618 +1,425 @@
-.class public Li1/b;
-.super Landroidx/core/location/GnssStatusCompat;
-.source "GpsStatusWrapper.java"
+.class public abstract Li1/b;
+.super Ljava/lang/Object;
+.source "MotionKey.java"
 
-
-# annotations
-.annotation build Landroidx/annotation/RestrictTo;
-    value = {
-        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
-    }
-.end annotation
+# interfaces
+.implements Lk1/w;
 
 
 # static fields
-.field public static final n:I = 0x0
+.field public static m:I = -0x1
 
-.field public static final o:I = 0x20
+.field public static final n:Ljava/lang/String; = "alpha"
 
-.field public static final p:I = 0x21
+.field public static final o:Ljava/lang/String; = "elevation"
 
-.field public static final q:I = 0x40
+.field public static final p:Ljava/lang/String; = "rotationZ"
 
-.field public static final r:I = -0x57
+.field public static final q:Ljava/lang/String; = "rotationX"
 
-.field public static final s:I = 0x40
+.field public static final r:Ljava/lang/String; = "transitionPathRotate"
 
-.field public static final t:I = 0x18
+.field public static final s:Ljava/lang/String; = "scaleX"
 
-.field public static final u:I = 0xc1
+.field public static final t:Ljava/lang/String; = "scaleY"
 
-.field public static final v:I = 0xc8
+.field public static final u:Ljava/lang/String; = "translationX"
 
-.field public static final w:I = 0xc8
+.field public static final v:Ljava/lang/String; = "translationY"
 
-.field public static final x:I = 0x23
+.field public static final w:Ljava/lang/String; = "CUSTOM"
+
+.field public static final x:Ljava/lang/String; = "visibility"
 
 
 # instance fields
-.field public final i:Landroid/location/GpsStatus;
+.field public h:I
 
-.field public j:I
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mWrapped"
-    .end annotation
-.end field
+.field public i:I
 
-.field public k:Ljava/util/Iterator;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mWrapped"
-    .end annotation
+.field public j:Ljava/lang/String;
 
+.field public k:I
+
+.field public l:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/Iterator<",
-            "Landroid/location/GpsSatellite;",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Lh1/c;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public l:I
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mWrapped"
-    .end annotation
-.end field
-
-.field public m:Landroid/location/GpsSatellite;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mWrapped"
-    .end annotation
-.end field
-
 
 # direct methods
-.method public constructor <init>(Landroid/location/GpsStatus;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Landroidx/core/location/GnssStatusCompat;-><init>()V
-
-    .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/location/GpsStatus;
-
-    iput-object p1, p0, Li1/b;->i:Landroid/location/GpsStatus;
-
-    const/4 v0, -0x1
-
-    .line 3
-    iput v0, p0, Li1/b;->j:I
-
-    .line 4
-    invoke-virtual {p1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Li1/b;->k:Ljava/util/Iterator;
-
-    .line 5
-    iput v0, p0, Li1/b;->l:I
-
-    const/4 p1, 0x0
-
-    .line 6
-    iput-object p1, p0, Li1/b;->m:Landroid/location/GpsSatellite;
+.method public static constructor <clinit>()V
+    .locals 0
 
     return-void
 .end method
 
-.method public static p(I)I
-    .locals 2
-
-    if-lez p0, :cond_0
-
-    const/16 v0, 0x20
-
-    if-gt p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/16 v0, 0x21
-
-    const/16 v1, 0x40
-
-    if-lt p0, v0, :cond_1
-
-    if-gt p0, v1, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    if-le p0, v1, :cond_2
-
-    const/16 v0, 0x58
-
-    if-gt p0, v0, :cond_2
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_2
-    const/16 v0, 0xc8
-
-    if-le p0, v0, :cond_3
-
-    const/16 v1, 0xeb
-
-    if-gt p0, v1, :cond_3
-
-    const/4 p0, 0x5
-
-    return p0
-
-    :cond_3
-    const/16 v1, 0xc1
-
-    if-lt p0, v1, :cond_4
-
-    if-gt p0, v0, :cond_4
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_4
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static r(I)I
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    invoke-static {p0}, Li1/b;->p(I)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    .line 2
+    sget v0, Li1/b;->m:I
 
-    const/4 v1, 0x2
+    iput v0, p0, Li1/b;->h:I
 
-    if-eq v0, v1, :cond_2
+    .line 3
+    iput v0, p0, Li1/b;->i:I
 
-    const/4 v1, 0x3
+    const/4 v0, 0x0
 
-    if-eq v0, v1, :cond_1
+    .line 4
+    iput-object v0, p0, Li1/b;->j:Ljava/lang/String;
 
-    const/4 v1, 0x5
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    add-int/lit16 p0, p0, -0xc8
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 p0, p0, -0x40
-
-    goto :goto_0
-
-    :cond_2
-    add-int/lit8 p0, p0, 0x57
-
-    :goto_0
-    return p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(I)F
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->getAzimuth()F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public b(I)F
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public c(I)F
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public d(I)F
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->getSnr()F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public e(I)I
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->getPrn()I
-
-    move-result p1
-
-    invoke-static {p1}, Li1/b;->p(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
+.method public b(II)Z
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    const/16 v0, 0x64
+
+    if-eq p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 1
+    :cond_0
+    iput p2, p0, Li1/b;->h:I
 
     const/4 p1, 0x1
 
     return p1
+.end method
+
+.method public c(IF)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/CloneNotSupportedException;
+        }
+    .end annotation
 
     .line 1
-    :cond_0
-    instance-of v0, p1, Li1/b;
+    invoke-virtual {p0}, Li1/b;->g()Li1/b;
 
-    if-nez v0, :cond_1
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d(IZ)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public e(ILjava/lang/String;)Z
+    .locals 1
+
+    const/16 v0, 0x65
+
+    if-eq p1, v0, :cond_0
 
     const/4 p1, 0x0
 
     return p1
 
-    .line 2
-    :cond_1
-    check-cast p1, Li1/b;
-
-    .line 3
-    iget-object v0, p0, Li1/b;->i:Landroid/location/GpsStatus;
-
-    iget-object p1, p1, Li1/b;->i:Landroid/location/GpsStatus;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public f(I)F
-    .locals 0
-
     .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->getElevation()F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public g()I
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Li1/b;->i:Landroid/location/GpsStatus;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget v1, p0, Li1/b;->j:I
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_1
-
-    .line 3
-    iget-object v1, p0, Li1/b;->i:Landroid/location/GpsStatus;
-
-    invoke-virtual {v1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/location/GpsSatellite;
-
-    .line 4
-    iget v2, p0, Li1/b;->j:I
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Li1/b;->j:I
-
-    goto :goto_0
-
-    .line 5
     :cond_0
-    iget v1, p0, Li1/b;->j:I
+    iput-object p2, p0, Li1/b;->j:Ljava/lang/String;
 
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Li1/b;->j:I
-
-    .line 6
-    :cond_1
-    iget v1, p0, Li1/b;->j:I
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 7
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public h(I)I
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->getPrn()I
-
-    move-result p1
-
-    invoke-static {p1}, Li1/b;->r(I)I
-
-    move-result p1
+    const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public hashCode()I
+.method public abstract f(Ljava/util/HashMap;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Lk1/p;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract g()Li1/b;
+.end method
+
+.method public h(Li1/b;)Li1/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Li1/b;->i:Landroid/location/GpsStatus;
+    iget v0, p1, Li1/b;->h:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iput v0, p0, Li1/b;->h:I
 
-    move-result v0
+    .line 2
+    iget v0, p1, Li1/b;->i:I
+
+    iput v0, p0, Li1/b;->i:I
+
+    .line 3
+    iget-object v0, p1, Li1/b;->j:Ljava/lang/String;
+
+    iput-object v0, p0, Li1/b;->j:Ljava/lang/String;
+
+    .line 4
+    iget p1, p1, Li1/b;->k:I
+
+    iput p1, p0, Li1/b;->k:I
+
+    return-object p0
+.end method
+
+.method public abstract i(Ljava/util/HashSet;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashSet<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public j()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Li1/b;->h:I
 
     return v0
 .end method
 
-.method public i(I)Z
-    .locals 0
+.method public k(Ljava/lang/String;)Z
+    .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
+    iget-object v0, p0, Li1/b;->j:Ljava/lang/String;
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->hasAlmanac()Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public j(I)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public k(I)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public l(I)Z
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->hasEphemeris()Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public m(I)Z
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Li1/b;->q(I)Landroid/location/GpsSatellite;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/location/GpsSatellite;->usedInFix()Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final q(I)Landroid/location/GpsSatellite;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Li1/b;->i:Landroid/location/GpsStatus;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget v1, p0, Li1/b;->l:I
-
-    if-ge p1, v1, :cond_0
-
-    .line 3
-    iget-object v1, p0, Li1/b;->i:Landroid/location/GpsStatus;
-
-    invoke-virtual {v1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    iput-object v1, p0, Li1/b;->k:Ljava/util/Iterator;
-
-    const/4 v1, -0x1
-
-    .line 4
-    iput v1, p0, Li1/b;->l:I
-
-    .line 5
-    :cond_0
-    :goto_0
-    iget v1, p0, Li1/b;->l:I
-
-    if-ge v1, p1, :cond_2
-
-    add-int/lit8 v1, v1, 0x1
-
-    .line 6
-    iput v1, p0, Li1/b;->l:I
-
-    .line 7
-    iget-object v1, p0, Li1/b;->k:Ljava/util/Iterator;
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    .line 8
-    iput-object p1, p0, Li1/b;->m:Landroid/location/GpsSatellite;
-
-    goto :goto_1
-
-    .line 9
-    :cond_1
-    iget-object v1, p0, Li1/b;->k:Ljava/util/Iterator;
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/location/GpsSatellite;
-
-    iput-object v1, p0, Li1/b;->m:Landroid/location/GpsSatellite;
+    if-nez p1, :cond_0
 
     goto :goto_0
 
-    .line 10
-    :cond_2
-    :goto_1
-    iget-object p1, p0, Li1/b;->m:Landroid/location/GpsSatellite;
+    .line 2
+    :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
-    .line 11
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result p1
 
-    .line 12
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public l(Ljava/lang/String;IF)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Li1/b;->l:Ljava/util/HashMap;
+
+    new-instance v1, Lh1/c;
+
+    invoke-direct {v1, p1, p2, p3}, Lh1/c;-><init>(Ljava/lang/String;IF)V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public m(Ljava/lang/String;II)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Li1/b;->l:Ljava/util/HashMap;
+
+    new-instance v1, Lh1/c;
+
+    invoke-direct {v1, p1, p2, p3}, Lh1/c;-><init>(Ljava/lang/String;II)V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public n(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Li1/b;->l:Ljava/util/HashMap;
+
+    new-instance v1, Lh1/c;
+
+    invoke-direct {v1, p1, p2, p3}, Lh1/c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public o(Ljava/lang/String;IZ)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Li1/b;->l:Ljava/util/HashMap;
+
+    new-instance v1, Lh1/c;
+
+    invoke-direct {v1, p1, p2, p3}, Lh1/c;-><init>(Ljava/lang/String;IZ)V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public p(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Li1/b;->h:I
+
+    return-void
+.end method
+
+.method public q(Ljava/util/HashMap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;)V"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public r(I)Li1/b;
+    .locals 0
+
+    .line 1
+    iput p1, p0, Li1/b;->i:I
+
+    return-object p0
+.end method
+
+.method public s(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 1
+    instance-of v0, p1, Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Landroid/location/GpsSatellite;
+    invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
-    return-object p1
+    move-result p1
 
-    :catchall_0
-    move-exception p1
+    :goto_0
+    return p1
+.end method
 
-    .line 13
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method public t(Ljava/lang/Object;)F
+    .locals 1
 
-    throw p1
+    .line 1
+    instance-of v0, p1, Ljava/lang/Float;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result p1
+
+    :goto_0
+    return p1
+.end method
+
+.method public u(Ljava/lang/Object;)I
+    .locals 1
+
+    .line 1
+    instance-of v0, p1, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
 .end method

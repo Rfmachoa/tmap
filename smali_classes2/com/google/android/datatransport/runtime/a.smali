@@ -2,41 +2,30 @@
 .super Ljava/lang/Object;
 .source "R8$$SyntheticClass"
 
-# interfaces
-.implements Lcom/google/android/datatransport/TransportScheduleCallback;
-
-
-# static fields
-.field public static final synthetic a:Lcom/google/android/datatransport/runtime/a;
-
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
+.method public static a(ILcom/google/firebase/encoders/FieldDescriptor$Builder;)Lcom/google/firebase/encoders/FieldDescriptor;
     .locals 1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/a;
+    invoke-static {}, Lcom/google/firebase/encoders/proto/AtProtobuf;->builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
 
-    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/a;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lcom/google/android/datatransport/runtime/a;->a:Lcom/google/android/datatransport/runtime/a;
+    invoke-virtual {v0, p0}, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public synthetic constructor <init>()V
-    .locals 0
+    invoke-virtual {p0}, Lcom/google/firebase/encoders/proto/AtProtobuf;->build()Lcom/google/firebase/encoders/proto/Protobuf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    return-void
-.end method
+    invoke-virtual {p1, p0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
+    move-result-object p0
 
-# virtual methods
-.method public final onSchedule(Ljava/lang/Exception;)V
-    .locals 0
+    invoke-virtual {p0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/TransportImpl;->a(Ljava/lang/Exception;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method

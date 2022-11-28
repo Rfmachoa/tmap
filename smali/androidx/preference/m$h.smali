@@ -16,6 +16,13 @@
 
 # instance fields
 .field public final a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
+            "*>;"
+        }
+    .end annotation
+.end field
 
 .field public final b:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -27,6 +34,17 @@
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/RecyclerView;Landroidx/preference/Preference;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
+            "*>;",
+            "Landroidx/recyclerview/widget/RecyclerView;",
+            "Landroidx/preference/Preference;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$i;-><init>()V

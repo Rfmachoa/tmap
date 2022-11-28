@@ -3,40 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lek/t0;
 
 
-# static fields
-.field public static final synthetic a:Lcom/amplifyframework/datastore/syncengine/m3;
+# instance fields
+.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
+
+.field public final synthetic b:Lcom/amplifyframework/api/graphql/GraphQLRequest;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/amplifyframework/datastore/syncengine/m3;
-
-    invoke-direct {v0}, Lcom/amplifyframework/datastore/syncengine/m3;-><init>()V
-
-    sput-object v0, Lcom/amplifyframework/datastore/syncengine/m3;->a:Lcom/amplifyframework/datastore/syncengine/m3;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/m3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
+
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/m3;->b:Lcom/amplifyframework/api/graphql/GraphQLRequest;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 0
+.method public final a(Lek/r0;)V
+    .locals 2
 
-    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->q()V
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/m3;->a:Lcom/amplifyframework/datastore/syncengine/SyncProcessor;
+
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/m3;->b:Lcom/amplifyframework/api/graphql/GraphQLRequest;
+
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->n(Lcom/amplifyframework/datastore/syncengine/SyncProcessor;Lcom/amplifyframework/api/graphql/GraphQLRequest;Lek/r0;)V
 
     return-void
 .end method

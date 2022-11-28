@@ -37,7 +37,7 @@
     .locals 0
 
     .line 1
-    instance-of p0, p0, Lwe/b;
+    instance-of p0, p0, Lzg/b;
 
     xor-int/lit8 p0, p0, 0x1
 

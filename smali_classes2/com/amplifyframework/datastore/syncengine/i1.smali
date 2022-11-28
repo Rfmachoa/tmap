@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lek/e;
 
 
 # instance fields
@@ -23,12 +23,12 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final a(Lek/c;)V
     .locals 1
 
     iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/i1;->a:Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;
 
-    invoke-static {v0}, Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;->g(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;->f(Lcom/amplifyframework/datastore/syncengine/PersistentMutationOutbox;Lek/c;)V
 
     return-void
 .end method

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract marshaller()Lc4/k;
+.method public abstract marshaller()Lz5/k;
 .end method

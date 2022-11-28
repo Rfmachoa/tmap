@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/firebase/components/ComponentRuntime;
-
-.field public final synthetic b:Lcom/google/firebase/components/Component;
+.field public final synthetic a:Lcom/google/firebase/components/ComponentRegistrar;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRegistrar;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/firebase/components/f;->a:Lcom/google/firebase/components/ComponentRuntime;
-
-    iput-object p2, p0, Lcom/google/firebase/components/f;->b:Lcom/google/firebase/components/Component;
+    iput-object p1, p0, Lcom/google/firebase/components/f;->a:Lcom/google/firebase/components/ComponentRegistrar;
 
     return-void
 .end method
@@ -28,13 +24,11 @@
 
 # virtual methods
 .method public final get()Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/firebase/components/f;->a:Lcom/google/firebase/components/ComponentRuntime;
+    iget-object v0, p0, Lcom/google/firebase/components/f;->a:Lcom/google/firebase/components/ComponentRegistrar;
 
-    iget-object v1, p0, Lcom/google/firebase/components/f;->b:Lcom/google/firebase/components/Component;
-
-    invoke-static {v0, v1}, Lcom/google/firebase/components/ComponentRuntime;->a(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/google/firebase/components/ComponentRuntime;->b(Lcom/google/firebase/components/ComponentRegistrar;)Lcom/google/firebase/components/ComponentRegistrar;
 
     move-result-object v0
 

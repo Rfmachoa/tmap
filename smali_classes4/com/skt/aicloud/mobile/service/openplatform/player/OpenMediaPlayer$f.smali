@@ -71,13 +71,13 @@
 
     iget-object v3, p0, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer$f;->a:Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;
 
-    invoke-static {v3}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->i(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;)Lw9/b;
+    invoke-static {v3}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->i(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;)Ltb/b;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->R(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$b;Lw9/b;Z)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->R(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/openplatform/directives/audioplayer/vo/b$a$b;Ltb/b;Z)V
 
     return-void
 .end method

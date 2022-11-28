@@ -16,13 +16,18 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0008\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\n\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0007R\u001c\u0010\u0006\u001a\n \u0005*\u0004\u0018\u00010\u00040\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010\u0007R\u0018\u0010\u0008\u001a\u0004\u0018\u00010\u00028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0008\u0010\t\u00a8\u0006\u000c"
+        "\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0002\u0008\u0008\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\n\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0007R\u001a\u0010\u0005\u001a\u00020\u00048\u0006X\u0086D\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010\u0006\u001a\u0004\u0008\u0007\u0010\u0008R\u001c\u0010\u000b\u001a\n \n*\u0004\u0018\u00010\t0\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010\u000cR\u0018\u0010\r\u001a\u0004\u0018\u00010\u00028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000e\u00a8\u0006\u0011"
     }
     d2 = {
         "Lcom/skt/tmap/car/TmapCarSurface$a;",
         "",
         "Lcom/skt/tmap/car/TmapCarSurface;",
         "a",
+        "",
+        "TRAFFIC_SIGNAL_ID",
+        "I",
+        "b",
+        "()I",
         "",
         "kotlin.jvm.PlatformType",
         "TAG",
@@ -36,8 +41,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -55,7 +60,6 @@
 .method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Lcom/skt/tmap/car/TmapCarSurface$a;-><init>()V
 
     return-void
@@ -72,31 +76,33 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->c()Lcom/skt/tmap/car/TmapCarSurface;
+    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->d()Lcom/skt/tmap/car/TmapCarSurface;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2
     const-class v0, Lcom/skt/tmap/car/TmapCarSurface;
 
+    .line 2
     monitor-enter v0
 
     .line 3
     :try_start_0
-    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->c()Lcom/skt/tmap/car/TmapCarSurface;
+    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->d()Lcom/skt/tmap/car/TmapCarSurface;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
     .line 4
+    sget-object v1, Lcom/skt/tmap/car/TmapCarSurface;->g1:Lcom/skt/tmap/car/TmapCarSurface$a;
+
     new-instance v1, Lcom/skt/tmap/car/TmapCarSurface;
 
     invoke-direct {v1}, Lcom/skt/tmap/car/TmapCarSurface;-><init>()V
 
-    invoke-static {v1}, Lcom/skt/tmap/car/TmapCarSurface;->o(Lcom/skt/tmap/car/TmapCarSurface;)V
+    invoke-static {v1}, Lcom/skt/tmap/car/TmapCarSurface;->j(Lcom/skt/tmap/car/TmapCarSurface;)V
 
     .line 5
     :cond_0
@@ -119,9 +125,20 @@
     .line 7
     :cond_1
     :goto_0
-    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->c()Lcom/skt/tmap/car/TmapCarSurface;
+    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->d()Lcom/skt/tmap/car/TmapCarSurface;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lcom/skt/tmap/car/TmapCarSurface;->h()I
+
+    move-result v0
+
+    return v0
 .end method

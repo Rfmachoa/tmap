@@ -71,7 +71,7 @@
     :goto_0
     iget-boolean v2, p0, Landroidx/car/app/model/GridTemplate$a;->a:Z
 
-    if-eq v2, v1, :cond_5
+    if-eq v2, v1, :cond_3
 
     if-eqz v0, :cond_2
 
@@ -95,7 +95,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/car/app/model/e;
+    check-cast v1, Landroidx/car/app/model/h;
 
     .line 4
     instance-of v1, v1, Landroidx/car/app/model/GridItem;
@@ -116,41 +116,14 @@
 
     .line 6
     :cond_2
-    iget-object v0, p0, Landroidx/car/app/model/GridTemplate$a;->c:Landroidx/car/app/model/CarText;
-
-    invoke-static {v0}, Landroidx/car/app/model/CarText;->h(Landroidx/car/app/model/CarText;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Landroidx/car/app/model/GridTemplate$a;->d:Landroidx/car/app/model/Action;
-
-    if-eqz v0, :cond_3
-
-    goto :goto_2
-
-    .line 7
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Either the title or header action must be set"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 8
-    :cond_4
-    :goto_2
     new-instance v0, Landroidx/car/app/model/GridTemplate;
 
     invoke-direct {v0, p0}, Landroidx/car/app/model/GridTemplate;-><init>(Landroidx/car/app/model/GridTemplate$a;)V
 
     return-object v0
 
-    .line 9
-    :cond_5
+    .line 7
+    :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Template is in a loading state but lists are added, or vice versa"
@@ -170,7 +143,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->k:Lm0/a;
+    sget-object v0, La1/a;->n:La1/a;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -178,7 +151,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/GridTemplate$a;->e:Landroidx/car/app/model/ActionStrip;
@@ -196,13 +169,13 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lm0/a;->j:Lm0/a;
+    sget-object v0, La1/a;->i:La1/a;
 
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm0/a;->g(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, La1/a;->i(Ljava/util/List;)V
 
     .line 2
     iput-object p1, p0, Landroidx/car/app/model/GridTemplate$a;->d:Landroidx/car/app/model/Action;
@@ -259,9 +232,9 @@
     iput-object p1, p0, Landroidx/car/app/model/GridTemplate$a;->c:Landroidx/car/app/model/CarText;
 
     .line 2
-    sget-object v0, Lm0/d;->f:Lm0/d;
+    sget-object v0, La1/d;->f:La1/d;
 
-    invoke-virtual {v0, p1}, Lm0/d;->b(Landroidx/car/app/model/CarText;)V
+    invoke-virtual {v0, p1}, La1/d;->b(Landroidx/car/app/model/CarText;)V
 
     return-object p0
 .end method

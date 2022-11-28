@@ -1,5 +1,5 @@
 .class public Lcom/bumptech/glide/load/resource/bitmap/c;
-.super Ld5/b;
+.super La7/c;
 .source "BitmapDrawableResource.java"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ld5/b<",
+        "La7/c<",
         "Landroid/graphics/drawable/BitmapDrawable;",
         ">;",
         "Lcom/bumptech/glide/load/engine/o;"
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Ld5/b;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1}, La7/c;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
     iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/c;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/e;
@@ -42,7 +42,7 @@
     .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/c;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/e;
 
-    iget-object v1, p0, Ld5/b;->a:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, La7/c;->a:Landroid/graphics/drawable/Drawable;
 
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -79,7 +79,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Ld5/b;->a:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, La7/c;->a:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lm5/m;->h(Landroid/graphics/Bitmap;)I
+    invoke-static {v0}, Lj7/n;->h(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
@@ -98,7 +98,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Ld5/b;->a:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, La7/c;->a:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 

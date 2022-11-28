@@ -19,8 +19,7 @@
         Lcom/google/android/material/R$plurals;,
         Lcom/google/android/material/R$string;,
         Lcom/google/android/material/R$style;,
-        Lcom/google/android/material/R$styleable;,
-        Lcom/google/android/material/R$xml;
+        Lcom/google/android/material/R$styleable;
     }
 .end annotation
 

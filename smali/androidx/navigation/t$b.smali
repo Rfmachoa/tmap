@@ -1,9 +1,6 @@
-.class public Landroidx/navigation/t$b;
+.class public final Landroidx/navigation/t$b;
 .super Ljava/lang/Object;
-.source "NavDeepLink.java"
-
-# interfaces
-.implements Ljava/lang/Comparable;
+.source "NavControllerViewModel.kt"
 
 
 # annotations
@@ -12,121 +9,105 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x19
     name = "b"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/lang/Comparable<",
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nNavControllerViewModel.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavControllerViewModel.kt\nandroidx/navigation/NavControllerViewModel$Companion\n+ 2 ViewModelProvider.kt\nandroidx/lifecycle/ViewModelProviderGetKt\n*L\n1#1,82:1\n372#2:83\n*S KotlinDebug\n*F\n+ 1 NavControllerViewModel.kt\nandroidx/navigation/NavControllerViewModel$Companion\n*L\n78#1:83\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0007R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\u000b"
+    }
+    d2 = {
         "Landroidx/navigation/t$b;",
-        ">;"
+        "",
+        "Landroidx/lifecycle/ViewModelStore;",
+        "viewModelStore",
+        "Landroidx/navigation/t;",
+        "a",
+        "Landroidx/lifecycle/ViewModelProvider$Factory;",
+        "FACTORY",
+        "Landroidx/lifecycle/ViewModelProvider$Factory;",
+        "<init>",
+        "()V",
+        "navigation-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x6,
+        0x0
     }
 .end annotation
 
 
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "/"
+    return-void
+.end method
 
-    const/4 v1, -0x1
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/u;)V
+    .locals 0
 
-    .line 2
-    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    .line 3
-    aget-object v0, p1, v0
-
-    iput-object v0, p0, Landroidx/navigation/t$b;->a:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    .line 4
-    aget-object p1, p1, v0
-
-    iput-object p1, p0, Landroidx/navigation/t$b;->b:Ljava/lang/String;
+    invoke-direct {p0}, Landroidx/navigation/t$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/navigation/t$b;)I
-    .locals 2
-    .param p1    # Landroidx/navigation/t$b;
-        .annotation build Landroidx/annotation/NonNull;
+.method public final a(Landroidx/lifecycle/ViewModelStore;)Landroidx/navigation/t;
+    .locals 7
+    .param p1    # Landroidx/lifecycle/ViewModelStore;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
+    .annotation runtime Lkotlin/jvm/JvmStatic;
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "viewModelStore"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    iget-object v0, p0, Landroidx/navigation/t$b;->a:Ljava/lang/String;
+    new-instance v0, Landroidx/lifecycle/ViewModelProvider;
 
-    iget-object v1, p1, Landroidx/navigation/t$b;->a:Ljava/lang/String;
+    invoke-static {}, Landroidx/navigation/t;->b()Landroidx/lifecycle/ViewModelProvider$Factory;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v3
 
-    move-result v0
+    const/4 v4, 0x0
 
-    if-eqz v0, :cond_0
+    const/4 v5, 0x4
 
-    const/4 v0, 0x2
+    const/4 v6, 0x0
 
-    goto :goto_0
+    move-object v1, v0
 
-    :cond_0
-    const/4 v0, 0x0
+    move-object v2, p1
+
+    invoke-direct/range {v1 .. v6}, Landroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;Landroidx/lifecycle/viewmodel/CreationExtras;ILkotlin/jvm/internal/u;)V
 
     .line 2
-    :goto_0
-    iget-object v1, p0, Landroidx/navigation/t$b;->b:Ljava/lang/String;
+    const-class p1, Landroidx/navigation/t;
 
-    iget-object p1, p1, Landroidx/navigation/t$b;->b:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
+    check-cast p1, Landroidx/navigation/t;
 
-    if-eqz p1, :cond_1
-
-    add-int/lit8 v0, v0, 0x1
-
-    :cond_1
-    return v0
-.end method
-
-.method public bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    .line 1
-    check-cast p1, Landroidx/navigation/t$b;
-
-    invoke-virtual {p0, p1}, Landroidx/navigation/t$b;->a(Landroidx/navigation/t$b;)I
-
-    move-result p1
-
-    return p1
+    return-object p1
 .end method

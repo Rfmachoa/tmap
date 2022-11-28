@@ -1,26 +1,11 @@
-.class public interface abstract Lr0/d;
+.class public interface abstract synthetic Lr0/d;
 .super Ljava/lang/Object;
-.source "CardViewDelegate.java"
+.source "package-info.java"
 
 
-# virtual methods
-.method public abstract a(Landroid/graphics/drawable/Drawable;)V
-.end method
-
-.method public abstract b()Z
-.end method
-
-.method public abstract c()Landroid/graphics/drawable/Drawable;
-.end method
-
-.method public abstract d(II)V
-.end method
-
-.method public abstract e()Z
-.end method
-
-.method public abstract f()Landroid/view/View;
-.end method
-
-.method public abstract setShadowPadding(IIII)V
-.end method
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation

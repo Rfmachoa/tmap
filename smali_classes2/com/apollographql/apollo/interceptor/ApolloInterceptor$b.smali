@@ -25,7 +25,7 @@
 
 .field public final b:Lcom/apollographql/apollo/api/b;
 
-.field public final c:Le4/a;
+.field public final c:Lb6/a;
 
 .field public final d:Z
 
@@ -41,13 +41,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/apollographql/apollo/api/b;Le4/a;Lcom/apollographql/apollo/api/internal/Optional;Z)V
+.method public constructor <init>(Lcom/apollographql/apollo/api/b;Lb6/a;Lcom/apollographql/apollo/api/internal/Optional;Z)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/apollographql/apollo/api/b;",
-            "Le4/a;",
+            "Lb6/a;",
             "Lcom/apollographql/apollo/api/internal/Optional<",
             "Lcom/apollographql/apollo/api/b$a;",
             ">;Z)V"
@@ -68,7 +68,7 @@
     iput-object p1, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;->b:Lcom/apollographql/apollo/api/b;
 
     .line 4
-    iput-object p2, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;->c:Le4/a;
+    iput-object p2, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;->c:Lb6/a;
 
     .line 5
     iput-object p3, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;->e:Lcom/apollographql/apollo/api/internal/Optional;
@@ -106,10 +106,10 @@
 
     invoke-direct {v0, v1}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;-><init>(Lcom/apollographql/apollo/api/b;)V
 
-    iget-object v1, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;->c:Le4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b;->c:Lb6/a;
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b(Le4/a;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b(Lb6/a;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;
 
     move-result-object v0
 

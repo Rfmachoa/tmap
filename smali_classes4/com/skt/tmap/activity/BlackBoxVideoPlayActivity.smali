@@ -12,47 +12,47 @@
 
 
 # instance fields
-.field public A1:Ljava/lang/Runnable;
+.field public A1:I
+
+.field public B1:Landroid/net/Uri;
+
+.field public C1:Ljava/lang/Runnable;
 
 .field public K0:F
 
-.field public V0:Ljava/lang/String;
+.field public X0:Ljava/lang/String;
 
-.field public W0:Lgc/c;
+.field public Y0:Lee/c;
 
-.field public X0:I
-
-.field public Y0:I
-
-.field public Z0:J
+.field public Z0:I
 
 .field public final a:Ljava/lang/String;
 
-.field public a1:J
+.field public a1:I
 
 .field public final b:Ljava/lang/String;
 
-.field public b1:Landroid/net/Uri;
+.field public b1:J
 
 .field public c:Ljava/lang/String;
 
-.field public c1:Landroid/net/Uri;
+.field public c1:J
 
 .field public d:Ljava/lang/String;
 
-.field public d1:Landroid/widget/ImageView;
+.field public d1:Landroid/net/Uri;
 
 .field public e:Ljava/lang/String;
 
-.field public e1:Lgc/d;
+.field public e1:Landroid/net/Uri;
 
 .field public f:Ljava/io/InputStream;
 
-.field public f1:Landroid/widget/TextView;
+.field public f1:Landroid/widget/ImageView;
 
 .field public g:Ljava/lang/String;
 
-.field public g1:Landroid/widget/TextView;
+.field public g1:Lee/d;
 
 .field public h:I
 
@@ -78,39 +78,43 @@
     .end annotation
 .end field
 
-.field public k1:Landroid/widget/Button;
+.field public k1:Landroid/widget/TextView;
 
 .field public l:I
 
-.field public l1:Landroid/widget/ToggleButton;
+.field public l1:Landroid/widget/TextView;
 
-.field public m1:Landroid/widget/CheckBox;
+.field public m1:Landroid/widget/Button;
 
-.field public n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+.field public n1:Landroid/widget/ToggleButton;
 
-.field public o1:Z
+.field public o1:Landroid/widget/CheckBox;
 
 .field public p:Lcom/skt/tmap/vsm/map/VSMMap;
 
-.field public p1:I
+.field public p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
-.field public final q1:I
+.field public q1:Z
 
-.field public r1:Landroid/os/Handler;
+.field public r1:I
 
-.field public s1:Lcom/skt/tmap/font/TypefaceManager;
+.field public final s1:I
 
-.field public t1:Landroid/widget/LinearLayout;
+.field public t1:Landroid/os/Handler;
 
 .field public u:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$h;
 
-.field public u1:Landroid/widget/LinearLayout;
+.field public u1:Lcom/skt/tmap/font/TypefaceManager;
 
-.field public v1:Landroid/view/View;
+.field public v1:Landroid/widget/LinearLayout;
 
-.field public w1:Lcom/skt/tmap/location/c;
+.field public w1:Landroid/widget/LinearLayout;
 
-.field public x1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
+.field public x1:Landroid/view/View;
+
+.field public y1:Lcom/skt/tmap/location/c;
+
+.field public z1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider<",
@@ -119,10 +123,6 @@
         }
     .end annotation
 .end field
-
-.field public y1:I
-
-.field public z1:Landroid/net/Uri;
 
 
 # direct methods
@@ -179,118 +179,69 @@
     iput-object v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->k0:Ljava/util/ArrayList;
 
     .line 12
-    iput-boolean v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Z
+    iput-boolean v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->q1:Z
 
     .line 13
-    iput v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:I
+    iput v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:I
 
     const/16 v1, 0x3e8
 
     .line 14
-    iput v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->q1:I
+    iput v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->s1:I
 
     .line 15
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    iput-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->t1:Landroid/os/Handler;
 
     .line 16
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->s1:Lcom/skt/tmap/font/TypefaceManager;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u1:Lcom/skt/tmap/font/TypefaceManager;
 
     .line 17
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     .line 18
     new-instance v0, Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
 
     invoke-direct {v0}, Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;-><init>()V
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
 
     const/4 v0, 0x1
 
     .line 19
-    iput v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:I
+    iput v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A1:I
 
     .line 20
     new-instance v0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;
 
     invoke-direct {v0, p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$g;-><init>(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A1:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C1:Ljava/lang/Runnable;
 
     return-void
 .end method
 
-.method public static synthetic A5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/net/Uri;
+.method public static synthetic B5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;[Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->N5([Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
+
+    return-void
+.end method
+
+.method public static synthetic C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->b1:Landroid/net/Uri;
+    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     return-object p0
 .end method
 
-.method public static synthetic B5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;Z)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->I5(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic D5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)F
-    .locals 0
-
-    .line 1
-    iget p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->K0:F
-
-    return p0
-.end method
-
-.method private synthetic F5([Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
-    .locals 3
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
-
-    int-to-long v1, p2
-
-    invoke-virtual {v0, p1, v1, v2}, Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;->setLocationData([Lcom/skt/tmap/vsm/location/VSMLocationData;J)V
-
-    return-void
-.end method
-
-.method public static synthetic t5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;[Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->F5([Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
-
-    return-void
-.end method
-
-.method public static synthetic u5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
-
-    return-object p0
-.end method
-
-.method public static synthetic v5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/util/ArrayList;
+.method public static synthetic D5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/util/ArrayList;
     .locals 0
 
     .line 1
@@ -299,34 +250,34 @@
     return-object p0
 .end method
 
-.method public static synthetic w5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/Runnable;
+.method public static synthetic E5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/Runnable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A1:Ljava/lang/Runnable;
+    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C1:Ljava/lang/Runnable;
 
     return-object p0
 .end method
 
-.method public static synthetic x5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/os/Handler;
+.method public static synthetic F5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/os/Handler;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->t1:Landroid/os/Handler;
 
     return-object p0
 .end method
 
-.method public static synthetic y5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)V
+.method public static synthetic G5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->J5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->R5()V
 
     return-void
 .end method
 
-.method public static synthetic z5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
+.method public static synthetic H5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
     .locals 0
 
     .line 1
@@ -335,9 +286,58 @@
     return-object p0
 .end method
 
+.method public static synthetic I5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/net/Uri;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->d1:Landroid/net/Uri;
+
+    return-object p0
+.end method
+
+.method public static synthetic J5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;Z)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->Q5(Z)V
+
+    return-void
+.end method
+
+.method public static synthetic K5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic L5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)F
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->K0:F
+
+    return p0
+.end method
+
+.method private synthetic N5([Lcom/skt/tmap/navirenderer/location/MatchedLocation;I)V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
+
+    int-to-long v1, p2
+
+    invoke-virtual {v0, p1, v1, v2}, Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;->setLocationData([Lcom/skt/tmap/vsm/location/VSMLocationData;J)V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public E5(Ljava/lang/String;)V
+.method public M5(Ljava/lang/String;)V
     .locals 12
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -377,7 +377,7 @@
     .line 4
     aget-object v3, v2, v0
 
-    invoke-static {v3}, Lcom/skt/tmap/util/w0;->J(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/skt/tmap/util/d1;->N(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -396,7 +396,7 @@
     iput v3, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->h:I
 
     .line 6
-    iget v3, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:I
+    iget v3, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A1:I
 
     const/4 v4, 0x2
 
@@ -529,7 +529,7 @@
 
     const-string v3, "VideoPlay"
 
-    invoke-static {v3, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -540,7 +540,7 @@
     return-void
 .end method
 
-.method public final G5()V
+.method public final O5()V
     .locals 3
 
     .line 1
@@ -549,7 +549,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c1:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
@@ -575,7 +575,7 @@
     invoke-direct {v2, v1}, Ljava/lang/String;-><init>([B)V
 
     .line 5
-    invoke-virtual {p0, v2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->E5(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->M5(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -630,11 +630,11 @@
 
     .line 10
     :goto_1
-    iget v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:I
+    iget v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:I
 
     if-lez v0, :cond_1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     .line 11
     invoke-virtual {v0}, Landroid/widget/VideoView;->isPlaying()Z
@@ -644,14 +644,14 @@
     if-nez v0, :cond_1
 
     .line 12
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
-    iget v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:I
+    iget v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:I
 
     invoke-virtual {v0, v1}, Lcom/skt/tmap/blackbox/BlackBoxVideoView;->seekTo(I)V
 
     .line 13
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {v0}, Lcom/skt/tmap/blackbox/BlackBoxVideoView;->start()V
 
@@ -659,7 +659,7 @@
     return-void
 .end method
 
-.method public final H5()V
+.method public final P5()V
     .locals 12
 
     .line 1
@@ -667,16 +667,16 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B1:Landroid/net/Uri;
 
-    invoke-static {v0, v1}, Le2/a;->j(Landroid/content/Context;Landroid/net/Uri;)Le2/a;
+    invoke-static {v0, v1}, Lv2/a;->j(Landroid/content/Context;Landroid/net/Uri;)Lv2/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 2
-    invoke-virtual {v0}, Le2/a;->u()[Le2/a;
+    invoke-virtual {v0}, Lv2/a;->u()[Lv2/a;
 
     move-result-object v0
 
@@ -693,13 +693,13 @@
     aget-object v4, v0, v3
 
     .line 4
-    invoke-virtual {v4}, Le2/a;->o()Z
+    invoke-virtual {v4}, Lv2/a;->o()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    invoke-virtual {v4}, Le2/a;->k()Ljava/lang/String;
+    invoke-virtual {v4}, Lv2/a;->k()Ljava/lang/String;
 
     move-result-object v5
 
@@ -712,7 +712,7 @@
     if-eqz v5, :cond_1
 
     .line 5
-    invoke-virtual {v4}, Le2/a;->u()[Le2/a;
+    invoke-virtual {v4}, Lv2/a;->u()[Lv2/a;
 
     move-result-object v4
 
@@ -740,7 +740,7 @@
     aget-object v7, v4, v6
 
     .line 8
-    invoke-virtual {v7}, Le2/a;->k()Ljava/lang/String;
+    invoke-virtual {v7}, Lv2/a;->k()Ljava/lang/String;
 
     move-result-object v8
 
@@ -778,14 +778,14 @@
     if-eqz v8, :cond_0
 
     .line 10
-    invoke-virtual {v7}, Le2/a;->n()Landroid/net/Uri;
+    invoke-virtual {v7}, Lv2/a;->n()Landroid/net/Uri;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c1:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Landroid/net/Uri;
 
     .line 11
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->G5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->O5()V
 
     return-void
 
@@ -803,7 +803,7 @@
     return-void
 .end method
 
-.method public final I5(Z)V
+.method public final Q5(Z)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -831,10 +831,10 @@
 
     const-string v1, "VideoPlay"
 
-    invoke-static {v1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iput-boolean p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Z
+    iput-boolean p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->q1:Z
 
     const/4 v0, 0x1
 
@@ -843,7 +843,7 @@
     .line 3
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->w()I
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->y()I
 
     move-result p1
 
@@ -854,12 +854,12 @@
     if-ne p1, v1, :cond_0
 
     .line 4
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->t1:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->v1:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     .line 5
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u1:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
@@ -867,18 +867,18 @@
 
     .line 6
     :cond_0
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->t1:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->v1:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     .line 7
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u1:Landroid/widget/LinearLayout;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     .line 8
     :goto_0
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->v1:Landroid/view/View;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x1:Landroid/view/View;
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
@@ -886,14 +886,14 @@
 
     .line 9
     :cond_1
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->v1:Landroid/view/View;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x1:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 10
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {p1, v0}, Landroid/widget/VideoView;->setZOrderOnTop(Z)V
 
@@ -901,11 +901,11 @@
     return-void
 .end method
 
-.method public final J5()V
+.method public final R5()V
     .locals 11
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->getCurrentPosition()I
 
@@ -925,7 +925,7 @@
 
     .line 2
     :cond_0
-    iget-object v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iget-object v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     invoke-virtual {v2}, Lcom/skt/tmap/location/c;->e()Z
 
@@ -934,7 +934,7 @@
     if-nez v2, :cond_1
 
     .line 3
-    iget-object v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iget-object v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     invoke-virtual {v2}, Lcom/skt/tmap/location/c;->j()V
 
@@ -971,7 +971,7 @@
     if-gtz v4, :cond_3
 
     .line 6
-    iget v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:I
+    iget v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A1:I
 
     const/4 v1, 0x1
 
@@ -1131,7 +1131,7 @@
     invoke-virtual {v0, v1}, Landroid/location/Location;->setSpeed(F)V
 
     .line 18
-    iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iget-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     invoke-virtual {v1, v0}, Lcom/skt/tmap/location/c;->g(Landroid/location/Location;)V
 
@@ -1184,7 +1184,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B1:Landroid/net/Uri;
 
     .line 3
     invoke-virtual {p3}, Landroid/content/Intent;->getFlags()I
@@ -1198,12 +1198,12 @@
 
     move-result-object p2
 
-    iget-object p3, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Landroid/net/Uri;
+    iget-object p3, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B1:Landroid/net/Uri;
 
     invoke-virtual {p2, p3, p1}, Landroid/content/ContentResolver;->takePersistableUriPermission(Landroid/net/Uri;I)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->H5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->P5()V
 
     :cond_0
     return-void
@@ -1224,9 +1224,9 @@
     invoke-super {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     .line 2
-    iget-boolean p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Z
+    iget-boolean p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->q1:Z
 
-    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->I5(Z)V
+    invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->Q5(Z)V
 
     return-void
 .end method
@@ -1248,7 +1248,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -1257,12 +1257,12 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0218
+    const p1, 0x7f0d0219
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
@@ -1276,20 +1276,20 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->s1:Lcom/skt/tmap/font/TypefaceManager;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u1:Lcom/skt/tmap/font/TypefaceManager;
 
     .line 6
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    const-string/jumbo v0, "title"
+    const-string v0, "title"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->V0:Ljava/lang/String;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->X0:Ljava/lang/String;
 
     .line 7
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1358,7 +1358,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->X0:I
+    iput p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->Z0:I
 
     .line 12
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1371,7 +1371,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->Y0:I
+    iput p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->a1:I
 
     .line 13
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1386,7 +1386,7 @@
 
     move-result-wide v4
 
-    iput-wide v4, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->Z0:J
+    iput-wide v4, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->b1:J
 
     .line 14
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1399,7 +1399,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->a1:J
+    iput-wide v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c1:J
 
     .line 15
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1414,7 +1414,7 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->b1:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->d1:Landroid/net/Uri;
 
     .line 16
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -1429,10 +1429,10 @@
 
     check-cast p1, Landroid/net/Uri;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c1:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Landroid/net/Uri;
 
     .line 17
-    iput v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:I
+    iput v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:I
 
     .line 18
     iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c:Ljava/lang/String;
@@ -1443,7 +1443,7 @@
 
     .line 19
     :cond_1
-    sget-object v0, Lcom/skt/tmap/blackbox/d;->E:Ljava/lang/String;
+    sget-object v0, Lcom/skt/tmap/blackbox/d;->P:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -1454,7 +1454,7 @@
     const/4 p1, 0x2
 
     .line 20
-    iput p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:I
+    iput p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A1:I
 
     :cond_2
     const-string p1, "file path : "
@@ -1474,9 +1474,9 @@
 
     const-string v0, "VideoPlay"
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const p1, 0x7f0a0bc2
+    const p1, 0x7f0a0c4b
 
     .line 22
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1485,13 +1485,13 @@
 
     check-cast p1, Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     .line 23
     invoke-virtual {p1, v1}, Landroid/widget/VideoView;->setBackgroundColor(I)V
 
     .line 24
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     new-instance v0, Landroid/widget/MediaController;
 
@@ -1500,12 +1500,12 @@
     invoke-virtual {p1, v0}, Landroid/widget/VideoView;->setMediaController(Landroid/widget/MediaController;)V
 
     .line 25
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->b1:Landroid/net/Uri;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->d1:Landroid/net/Uri;
 
     if-eqz p1, :cond_3
 
     .line 26
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {v0, p1}, Landroid/widget/VideoView;->setVideoURI(Landroid/net/Uri;)V
 
@@ -1513,7 +1513,7 @@
 
     .line 27
     :cond_3
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->d:Ljava/lang/String;
 
@@ -1521,12 +1521,12 @@
 
     .line 28
     :goto_0
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {p1}, Landroid/widget/VideoView;->requestFocus()Z
 
     .line 29
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     new-instance v0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$a;
 
@@ -1535,7 +1535,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/VideoView;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
     .line 30
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     new-instance v0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$b;
 
@@ -1543,7 +1543,7 @@
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/blackbox/BlackBoxVideoView;->setOnVideoState(Lcom/skt/tmap/blackbox/BlackBoxVideoView$a;)V
 
-    const p1, 0x7f0a0ae2
+    const p1, 0x7f0a0b5e
 
     .line 31
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1552,14 +1552,14 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->f1:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->h1:Landroid/widget/TextView;
 
     .line 32
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->V0:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->X0:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0a0acb
+    const p1, 0x7f0a0b4d
 
     .line 33
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1568,7 +1568,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->g1:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->i1:Landroid/widget/TextView;
 
     .line 34
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c:Ljava/lang/String;
@@ -1585,7 +1585,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0a0ae4
+    const p1, 0x7f0a0b60
 
     .line 35
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1594,10 +1594,10 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->h1:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->j1:Landroid/widget/TextView;
 
     .line 36
-    iget-wide v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->a1:J
+    iget-wide v2, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c1:J
 
     invoke-static {v2, v3}, Lcom/skt/tmap/blackbox/a;->d(J)Ljava/lang/String;
 
@@ -1605,7 +1605,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0a0ae5
+    const p1, 0x7f0a0b61
 
     .line 37
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1614,7 +1614,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->i1:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->k1:Landroid/widget/TextView;
 
     .line 38
     iget v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->K0:F
@@ -1625,7 +1625,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0a0ad4
+    const p1, 0x7f0a0b54
 
     .line 39
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1634,7 +1634,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->j1:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->l1:Landroid/widget/TextView;
 
     .line 40
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e:Ljava/lang/String;
@@ -1642,7 +1642,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 41
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->s1:Lcom/skt/tmap/font/TypefaceManager;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u1:Lcom/skt/tmap/font/TypefaceManager;
 
     const v0, 0x1020002
 
@@ -1654,7 +1654,7 @@
 
     invoke-virtual {p1, v0, v2}, Lcom/skt/tmap/font/TypefaceManager;->j(Landroid/view/View;Lcom/skt/tmap/font/TypefaceManager$FontType;)V
 
-    const p1, 0x7f0a01e9
+    const p1, 0x7f0a0203
 
     .line 42
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1663,7 +1663,7 @@
 
     check-cast p1, Landroid/widget/Button;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->k1:Landroid/widget/Button;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->m1:Landroid/widget/Button;
 
     .line 43
     new-instance v0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$c;
@@ -1672,7 +1672,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a0541
+    const p1, 0x7f0a0570
 
     .line 44
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1681,9 +1681,9 @@
 
     check-cast p1, Landroid/widget/LinearLayout;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->t1:Landroid/widget/LinearLayout;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->v1:Landroid/widget/LinearLayout;
 
-    const p1, 0x7f0a0542
+    const p1, 0x7f0a0571
 
     .line 45
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1692,18 +1692,18 @@
 
     check-cast p1, Landroid/widget/LinearLayout;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u1:Landroid/widget/LinearLayout;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Landroid/widget/LinearLayout;
 
-    const p1, 0x7f0a08bb
+    const p1, 0x7f0a0934
 
     .line 46
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->v1:Landroid/view/View;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x1:Landroid/view/View;
 
-    const p1, 0x7f0a0b7e
+    const p1, 0x7f0a0c05
 
     .line 47
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1712,7 +1712,7 @@
 
     check-cast p1, Landroid/widget/ToggleButton;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->l1:Landroid/widget/ToggleButton;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Landroid/widget/ToggleButton;
 
     .line 48
     new-instance v0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$d;
@@ -1722,13 +1722,13 @@
     invoke-virtual {p1, v0}, Landroid/widget/ToggleButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 49
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->l1:Landroid/widget/ToggleButton;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Landroid/widget/ToggleButton;
 
-    iget-boolean v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->q1:Z
 
     invoke-virtual {p1, v0}, Landroid/widget/ToggleButton;->setChecked(Z)V
 
-    const p1, 0x7f0a023c
+    const p1, 0x7f0a0261
 
     .line 50
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1737,7 +1737,7 @@
 
     check-cast p1, Landroid/widget/CheckBox;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->m1:Landroid/widget/CheckBox;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Landroid/widget/CheckBox;
 
     .line 51
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
@@ -1753,7 +1753,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     .line 52
-    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->m1:Landroid/widget/CheckBox;
+    iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Landroid/widget/CheckBox;
 
     new-instance v0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$e;
 
@@ -1768,7 +1768,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p:Lcom/skt/tmap/vsm/map/VSMMap;
 
-    const p1, 0x7f0a064b
+    const p1, 0x7f0a0677
 
     .line 54
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -1780,11 +1780,11 @@
     iput-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
     .line 55
-    new-instance v0, Lgc/d;
+    new-instance v0, Lee/d;
 
-    invoke-direct {v0, p1}, Lgc/d;-><init>(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;)V
+    invoke-direct {v0, p1}, Lee/d;-><init>(Lcom/skt/tmap/mapview/streaming/MapViewStreaming;)V
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Lgc/d;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->g1:Lee/d;
 
     .line 56
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
@@ -1822,7 +1822,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->x1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Lcom/skt/tmap/navirenderer/location/ArrayLocationProvider;
 
     invoke-virtual {p1, v0}, Lcom/skt/tmap/vsm/location/VSMLocationManager;->setLocationProvider(Lcom/skt/tmap/vsm/location/VSMLocationProvider;)V
 
@@ -1844,7 +1844,7 @@
 
     invoke-direct {p1, v0}, Lcom/skt/tmap/location/c;-><init>(Lcom/skt/tmap/location/c$b;)V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iput-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     return-void
 .end method
@@ -1868,18 +1868,18 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Lgc/d;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->g1:Lee/d;
 
     if-eqz v0, :cond_1
 
     const/high16 v2, 0x10000
 
     .line 4
-    invoke-virtual {v0, v2}, Lgc/d;->g(I)V
+    invoke-virtual {v0, v2}, Lee/d;->g(I)V
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     if-eqz v0, :cond_3
 
@@ -1891,13 +1891,13 @@
     if-eqz v0, :cond_2
 
     .line 7
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {v0}, Lcom/skt/tmap/blackbox/BlackBoxVideoView;->stopPlayback()V
 
     .line 8
     :cond_2
-    iput-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iput-object v1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     .line 9
     :cond_3
@@ -1913,7 +1913,7 @@
     invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onPause()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     invoke-virtual {v0}, Lcom/skt/tmap/location/c;->e()Z
 
@@ -1922,7 +1922,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->w1:Lcom/skt/tmap/location/c;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->y1:Lcom/skt/tmap/location/c;
 
     invoke-virtual {v0}, Lcom/skt/tmap/location/c;->k()V
 
@@ -1933,13 +1933,13 @@
     if-eqz v0, :cond_1
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Lgc/d;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->g1:Lee/d;
 
-    invoke-virtual {v0}, Lgc/d;->f()V
+    invoke-virtual {v0}, Lee/d;->f()V
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     if-eqz v0, :cond_2
 
@@ -1951,18 +1951,18 @@
     if-eqz v0, :cond_2
 
     .line 8
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {v0}, Lcom/skt/tmap/blackbox/BlackBoxVideoView;->pause()V
 
     .line 9
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->n1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->getCurrentPosition()I
 
     move-result v0
 
-    iput v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->p1:I
+    iput v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->r1:I
 
     :cond_2
     return-void
@@ -1980,23 +1980,23 @@
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Lgc/d;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->g1:Lee/d;
 
-    invoke-virtual {v0}, Lgc/d;->c()V
+    invoke-virtual {v0}, Lee/d;->c()V
 
     .line 4
     :cond_0
-    iget-boolean v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->o1:Z
+    iget-boolean v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->q1:Z
 
-    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->I5(Z)V
+    invoke-virtual {p0, v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->Q5(Z)V
 
     .line 5
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->c1:Landroid/net/Uri;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->e1:Landroid/net/Uri;
 
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->G5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->O5()V
 
     goto :goto_0
 
@@ -2010,7 +2010,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B1:Landroid/net/Uri;
 
     .line 8
     new-instance v0, Ljava/io/File;
@@ -2026,20 +2026,20 @@
     if-eqz v0, :cond_3
 
     .line 9
-    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z1:Landroid/net/Uri;
+    iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B1:Landroid/net/Uri;
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f130199
+    const v0, 0x7f14019e
 
     .line 10
-    invoke-static {p0, v0}, Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/v;
+    invoke-static {p0, v0}, Lcom/skt/tmap/blackbox/a;->x(Landroid/app/Activity;I)Lcom/skt/tmap/dialog/a0;
 
     goto :goto_0
 
     .line 11
     :cond_2
-    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->H5()V
+    invoke-virtual {p0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->P5()V
 
     :cond_3
     :goto_0

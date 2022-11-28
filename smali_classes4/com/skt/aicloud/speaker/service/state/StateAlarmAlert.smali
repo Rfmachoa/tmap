@@ -18,7 +18,7 @@
 
 .field public u:Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert$StateAlarmAlertSub;
 
-.field public v:Lsa/d;
+.field public v:Lpc/d;
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert$a;-><init>(Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert;->v:Lsa/d;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert;->v:Lpc/d;
 
     .line 5
     sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_ALARM_ALERT:Lcom/skt/aicloud/speaker/lib/state/AppState;
@@ -139,16 +139,16 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v0}, Lma/c;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Ljc/c;->f()Ljava/lang/String;
 
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v1}, Lma/c;->m()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/c;->m()Ljava/lang/String;
 
     move-result-object v1
 
@@ -178,16 +178,16 @@
     invoke-static {v2, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v0}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v0}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v0
 
-    check-cast v0, Lma/e;
+    check-cast v0, Ljc/e;
 
     .line 5
-    invoke-virtual {v0}, Lma/e;->p()Ljava/lang/String;
+    invoke-virtual {v0}, Ljc/e;->p()Ljava/lang/String;
 
     move-result-object v1
 
@@ -212,13 +212,13 @@
     invoke-virtual {v1}, Lcom/skt/aicloud/speaker/service/api/g;->N()V
 
     .line 8
-    invoke-static {}, Lla/g;->r0()Lla/g;
+    invoke-static {}, Lic/g;->r0()Lic/g;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/state/a;->b:Landroid/content/Context;
 
-    invoke-virtual {v1, v0, v2}, Lla/g;->v0(Lma/e;Landroid/content/Context;)V
+    invoke-virtual {v1, v0, v2}, Lic/g;->v0(Ljc/e;Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -278,7 +278,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v5, "timer_id"
+    const-string v5, "timer_id"
 
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -330,9 +330,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert;->v:Lsa/d;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert;->v:Lpc/d;
 
-    invoke-virtual {v0, v2, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lsa/d;)Z
+    invoke-virtual {v0, v2, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
 
     return-void
 .end method
@@ -470,22 +470,7 @@
     return-void
 .end method
 
-.method public g()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
-
-    const-string v1, "canReadContentInfo = true"
-
-    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public i(Landroid/content/Intent;Lma/c;)V
+.method public g(Landroid/content/Intent;Ljc/c;)V
     .locals 2
 
     const-string v0, "setAction"
@@ -514,7 +499,7 @@
     if-eqz p2, :cond_1
 
     .line 5
-    iput-object p2, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iput-object p2, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
     .line 6
     sget-object p1, Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert$StateAlarmAlertSub;->SUBSTATE_CARD_RECEIVED:Lcom/skt/aicloud/speaker/service/state/StateAlarmAlert$StateAlarmAlertSub;
@@ -568,6 +553,21 @@
     iput-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->e:Lcom/skt/aicloud/speaker/lib/state/AppState;
 
     return-void
+.end method
+
+.method public h()Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
+
+    const-string v1, "canReadContentInfo = true"
+
+    invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method public j(Ljava/lang/String;)V

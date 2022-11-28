@@ -25,7 +25,7 @@
     const-string v0, "The operation has been canceled."
 
     .line 2
-    invoke-static {p1, v0}, Lr1/h;->f(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroidx/core/util/j;->f(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

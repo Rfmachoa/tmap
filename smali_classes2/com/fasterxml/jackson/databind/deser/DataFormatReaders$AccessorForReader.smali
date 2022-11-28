@@ -9,48 +9,35 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
+    accessFlags = 0x9
     name = "AccessorForReader"
 .end annotation
 
 
-# instance fields
-.field public final synthetic this$0:Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;
-
-
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;Ljava/io/InputStream;[B)V
+.method public constructor <init>(Ljava/io/InputStream;[B)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$AccessorForReader;->this$0:Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;
-
-    .line 2
-    invoke-direct {p0, p2, p3}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>(Ljava/io/InputStream;[B)V
+    invoke-direct {p0, p1, p2}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>(Ljava/io/InputStream;[B)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;[B)V
+.method public constructor <init>([B)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0, p1}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>([B)V
+
+    return-void
+.end method
+
+.method public constructor <init>([BII)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$AccessorForReader;->this$0:Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;
-
-    .line 4
-    invoke-direct {p0, p2}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>([B)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;[BII)V
-    .locals 0
-
-    .line 5
-    iput-object p1, p0, Lcom/fasterxml/jackson/databind/deser/DataFormatReaders$AccessorForReader;->this$0:Lcom/fasterxml/jackson/databind/deser/DataFormatReaders;
-
-    .line 6
-    invoke-direct {p0, p2, p3, p4}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>([BII)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/format/InputAccessor$Std;-><init>([BII)V
 
     return-void
 .end method

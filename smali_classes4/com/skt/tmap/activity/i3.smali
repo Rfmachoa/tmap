@@ -3,34 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/i3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iput-object p1, p0, Lcom/skt/tmap/activity/i3;->a:Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/i3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/i3;->a:Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;
 
-    check-cast p1, Lcom/skt/tmap/data/TmapLayerData;
-
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->Q7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/data/TmapLayerData;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;->D5(Lcom/skt/tmap/activity/TmapMainSettingUpdateActivity;Landroid/view/View;)V
 
     return-void
 .end method

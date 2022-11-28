@@ -3,6 +3,14 @@
 .source "ListViewCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/m$a;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -21,7 +29,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/ListView;->canScrollList(I)Z
+    invoke-static {p0, p1}, Landroidx/core/widget/m$a;->a(Landroid/widget/ListView;I)Z
 
     move-result p0
 
@@ -36,7 +44,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/ListView;->scrollListBy(I)V
+    invoke-static {p0, p1}, Landroidx/core/widget/m$a;->b(Landroid/widget/ListView;I)V
 
     return-void
 .end method

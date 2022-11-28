@@ -38,34 +38,40 @@
 
 # virtual methods
 .method public _problem(Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
-    .locals 3
+    .locals 4
 
     .line 1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Failed to parse type \'"
+    const/4 v1, 0x3
 
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    move-result-object v1
-
+    .line 2
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->getAllInput()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    const-string v2, "\' (remaining: \'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v2, v1, v3
 
     invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->getRemainingInput()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v2, "\'): "
+    const/4 v2, 0x1
 
-    invoke-static {v1, p1, v2, p2}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    aput-object p1, v1, v2
+
+    const/4 p1, 0x2
+
+    aput-object p2, v1, p1
+
+    const-string p1, "Failed to parse type \'%s\' (remaining: \'%s\'): %s"
+
+    .line 3
+    invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -103,32 +109,30 @@
     move-exception v0
 
     .line 2
-    instance-of v1, v0, Ljava/lang/RuntimeException;
-
-    if-eqz v1, :cond_0
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->throwIfRTE(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 3
-    check-cast v0, Ljava/lang/RuntimeException;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    throw v0
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_0
-    const-string v1, "Can not locate class \'"
+    const-string v2, "Cannot locate class \'"
 
-    const-string v2, "\', problem: "
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 4
-    invoke-static {v1, p1, v2}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string p1, "\', problem: "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -148,21 +152,20 @@
     .end annotation
 
     .line 1
+    new-instance v0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;
+
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2
-    new-instance v0, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;
-
     invoke-direct {v0, p1}, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;-><init>(Ljava/lang/String;)V
 
-    .line 3
+    .line 2
     invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/type/TypeParser;->parseType(Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
 
-    .line 4
+    .line 3
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;->hasMoreTokens()Z
 
     move-result v1
@@ -174,7 +177,7 @@
     :cond_0
     const-string p1, "Unexpected tokens after complete type"
 
-    .line 5
+    .line 4
     invoke-virtual {p0, v0, p1}, Lcom/fasterxml/jackson/databind/type/TypeParser;->_problem(Lcom/fasterxml/jackson/databind/type/TypeParser$MyTokenizer;Ljava/lang/String;)Ljava/lang/IllegalArgumentException;
 
     move-result-object p1
@@ -256,7 +259,11 @@
     :cond_1
     iget-object p1, p0, Lcom/fasterxml/jackson/databind/type/TypeParser;->_factory:Lcom/fasterxml/jackson/databind/type/TypeFactory;
 
-    invoke-virtual {p1, v2, v0, v2}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->_fromClass(Lcom/fasterxml/jackson/databind/type/ClassStack;Ljava/lang/Class;Lcom/fasterxml/jackson/databind/type/TypeBindings;)Lcom/fasterxml/jackson/databind/JavaType;
+    invoke-static {}, Lcom/fasterxml/jackson/databind/type/TypeBindings;->emptyBindings()Lcom/fasterxml/jackson/databind/type/TypeBindings;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v2, v0, v1}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->_fromClass(Lcom/fasterxml/jackson/databind/type/ClassStack;Ljava/lang/Class;Lcom/fasterxml/jackson/databind/type/TypeBindings;)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
 

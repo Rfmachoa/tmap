@@ -3,7 +3,7 @@
 .source "WebLinkPopsTask.java"
 
 # interfaces
-.implements Lib/d$c;
+.implements Lfd/d$c;
 
 
 # annotations
@@ -24,6 +24,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/WebLinkPopsTask;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/WebLinkPopsTask$f;->a:Lcom/skt/moment/task/WebLinkPopsTask;
@@ -37,6 +45,14 @@
 # virtual methods
 .method public a(Landroid/graphics/Bitmap;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 

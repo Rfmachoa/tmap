@@ -1,14 +1,14 @@
-.class public final Landroidx/core/animation/AnimatorKt$addPauseListener$1;
+.class final Landroidx/core/animation/AnimatorKt$addPauseListener$1;
 .super Lkotlin/jvm/internal/Lambda;
 .source "Animator.kt"
 
 # interfaces
-.implements Lej/l;
+.implements Lgl/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/animation/AnimatorKt;->d(Landroid/animation/Animator;Lej/l;Lej/l;ILjava/lang/Object;)Landroid/animation/Animator$AnimatorPauseListener;
+    value = Landroidx/core/animation/AnimatorKt;->d(Landroid/animation/Animator;Lgl/l;Lgl/l;ILjava/lang/Object;)Landroid/animation/Animator$AnimatorPauseListener;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,15 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/l<",
+        "Lgl/l<",
         "Landroid/animation/Animator;",
         "Lkotlin/d1;",
         ">;"
     }
-.end annotation
-
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAnimator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Animator.kt\nandroidx/core/animation/AnimatorKt$addPauseListener$1\n*L\n1#1,115:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -46,8 +42,8 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -84,6 +80,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/animation/Animator;
 
     invoke-virtual {p0, p1}, Landroidx/core/animation/AnimatorKt$addPauseListener$1;->invoke(Landroid/animation/Animator;)V
@@ -102,7 +99,7 @@
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

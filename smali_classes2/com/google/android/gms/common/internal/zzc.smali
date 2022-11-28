@@ -1,29 +1,11 @@
 .class public abstract Lcom/google/android/gms/common/internal/zzc;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T",
-        "Listener:Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # instance fields
 .field private zza:Ljava/lang/Object;
     .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT",
-            "Listener;"
-        }
     .end annotation
 .end field
 
@@ -35,13 +17,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/internal/BaseGmsClient;Ljava/lang/Object;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT",
-            "Listener;",
-            ")V"
-        }
-    .end annotation
 
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zzc;->zzd:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
@@ -59,20 +34,13 @@
 
 # virtual methods
 .method public abstract zza(Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT",
-            "Listener;",
-            ")V"
-        }
-    .end annotation
 .end method
 
 .method public abstract zzc()V
 .end method
 
 .method public final zze()V
-    .locals 5
+    .locals 4
 
     .line 1
     monitor-enter p0
@@ -84,33 +52,27 @@
 
     if-eqz v1, :cond_0
 
-    const-string v1, "GmsClient"
-
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x2f
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Callback proxy "
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, " being reused. This is not safe."
+    const-string v1, " being reused. This is not safe."
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "GmsClient"
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 

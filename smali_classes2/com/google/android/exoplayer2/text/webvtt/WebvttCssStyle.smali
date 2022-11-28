@@ -403,15 +403,11 @@
     :cond_1
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetClasses:Ljava/util/List;
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    invoke-static {p2, v0, p1}, Ll7/b;->a(Ljava/util/List;II)I
 
-    move-result p2
+    move-result p1
 
-    mul-int/2addr p2, v0
-
-    add-int/2addr p2, p1
-
-    return p2
+    return p1
 
     :cond_2
     :goto_0

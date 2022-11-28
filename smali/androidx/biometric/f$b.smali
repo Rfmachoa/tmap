@@ -77,7 +77,7 @@
 
     check-cast v0, Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->w()Z
+    invoke-virtual {v0}, Landroidx/biometric/f;->x()Z
 
     move-result v0
 
@@ -92,7 +92,7 @@
 
     check-cast v0, Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->u()Z
+    invoke-virtual {v0}, Landroidx/biometric/f;->v()Z
 
     move-result v0
 
@@ -111,7 +111,7 @@
 
     invoke-direct {v1, p1, p2}, Landroidx/biometric/c;-><init>(ILjava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v1}, Landroidx/biometric/f;->E(Landroidx/biometric/c;)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/f;->F(Landroidx/biometric/c;)V
 
     :cond_0
     return-void
@@ -137,7 +137,7 @@
 
     check-cast v0, Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->u()Z
+    invoke-virtual {v0}, Landroidx/biometric/f;->v()Z
 
     move-result v0
 
@@ -154,7 +154,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/biometric/f;->F(Z)V
+    invoke-virtual {v0, v1}, Landroidx/biometric/f;->G(Z)V
 
     :cond_0
     return-void
@@ -185,7 +185,7 @@
 
     check-cast v0, Landroidx/biometric/f;
 
-    invoke-virtual {v0, p1}, Landroidx/biometric/f;->G(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroidx/biometric/f;->H(Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void
@@ -215,7 +215,7 @@
 
     check-cast v0, Landroidx/biometric/f;
 
-    invoke-virtual {v0}, Landroidx/biometric/f;->u()Z
+    invoke-virtual {v0}, Landroidx/biometric/f;->v()Z
 
     move-result v0
 
@@ -247,7 +247,7 @@
 
     check-cast v1, Landroidx/biometric/f;
 
-    invoke-virtual {v1}, Landroidx/biometric/f;->o()I
+    invoke-virtual {v1}, Landroidx/biometric/f;->p()I
 
     move-result v1
 
@@ -265,7 +265,7 @@
 
     check-cast v0, Landroidx/biometric/f;
 
-    invoke-virtual {v0, p1}, Landroidx/biometric/f;->H(Landroidx/biometric/BiometricPrompt$b;)V
+    invoke-virtual {v0, p1}, Landroidx/biometric/f;->I(Landroidx/biometric/BiometricPrompt$b;)V
 
     :cond_1
     return-void

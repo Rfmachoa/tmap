@@ -3,32 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/skt/tmap/dialog/TmapBaseDialog$d;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapCameraBase;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapCameraBase;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/c0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iput-object p1, p0, Lcom/skt/tmap/activity/c0;->a:Lcom/skt/tmap/activity/TmapCameraBase;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a()V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/c0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/c0;->a:Lcom/skt/tmap/activity/TmapCameraBase;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->X6(Lcom/skt/tmap/activity/TmapMainActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapCameraBase;->B5(Lcom/skt/tmap/activity/TmapCameraBase;)V
 
     return-void
 .end method

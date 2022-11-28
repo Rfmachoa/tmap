@@ -46,7 +46,7 @@
     return-void
 .end method
 
-.method public static synthetic access$1300(Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
+.method public static synthetic access$1100(Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
     .locals 0
 
     .line 1

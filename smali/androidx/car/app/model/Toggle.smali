@@ -18,7 +18,12 @@
     .end annotation
 .end field
 
-.field private final mOnCheckedChangeDelegate:Landroidx/car/app/model/g;
+.field private final mIsEnabled:Z
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+.end field
+
+.field private final mOnCheckedChangeDelegate:Landroidx/car/app/model/j;
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
@@ -31,18 +36,23 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 4
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 5
-    iput-object v0, p0, Landroidx/car/app/model/Toggle;->mOnCheckedChangeDelegate:Landroidx/car/app/model/g;
+    .line 6
+    iput-object v0, p0, Landroidx/car/app/model/Toggle;->mOnCheckedChangeDelegate:Landroidx/car/app/model/j;
 
     const/4 v0, 0x0
 
-    .line 6
+    .line 7
     iput-boolean v0, p0, Landroidx/car/app/model/Toggle;->mIsChecked:Z
+
+    const/4 v0, 0x1
+
+    .line 8
+    iput-boolean v0, p0, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
 
     return-void
 .end method
@@ -59,26 +69,31 @@
     iput-boolean v0, p0, Landroidx/car/app/model/Toggle;->mIsChecked:Z
 
     .line 3
-    iget-object p1, p1, Landroidx/car/app/model/Toggle$a;->a:Landroidx/car/app/model/g;
+    iget-boolean v0, p1, Landroidx/car/app/model/Toggle$a;->c:Z
 
-    iput-object p1, p0, Landroidx/car/app/model/Toggle;->mOnCheckedChangeDelegate:Landroidx/car/app/model/g;
+    iput-boolean v0, p0, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
+
+    .line 4
+    iget-object p1, p1, Landroidx/car/app/model/Toggle$a;->a:Landroidx/car/app/model/j;
+
+    iput-object p1, p0, Landroidx/car/app/model/Toggle;->mOnCheckedChangeDelegate:Landroidx/car/app/model/j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroidx/car/app/model/g;
+.method public a()Landroidx/car/app/model/j;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/model/Toggle;->mOnCheckedChangeDelegate:Landroidx/car/app/model/g;
+    iget-object v0, p0, Landroidx/car/app/model/Toggle;->mOnCheckedChangeDelegate:Landroidx/car/app/model/j;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Landroidx/car/app/model/g;
+    check-cast v0, Landroidx/car/app/model/j;
 
     return-object v0
 .end method
@@ -92,8 +107,20 @@
     return v0
 .end method
 
+.method public c()Z
+    .locals 1
+    .annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
+        value = 0x5
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
+
+    return v0
+.end method
+
 .method public equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -122,7 +149,13 @@
     .line 3
     iget-boolean v1, p0, Landroidx/car/app/model/Toggle;->mIsChecked:Z
 
-    iget-boolean p1, p1, Landroidx/car/app/model/Toggle;->mIsChecked:Z
+    iget-boolean v3, p1, Landroidx/car/app/model/Toggle;->mIsChecked:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
+
+    iget-boolean p1, p1, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
 
     if-ne v1, p1, :cond_2
 
@@ -136,16 +169,34 @@
 .end method
 
 .method public hashCode()I
-    .locals 1
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
 
     .line 1
-    iget-boolean v0, p0, Landroidx/car/app/model/Toggle;->mIsChecked:Z
+    iget-boolean v1, p0, Landroidx/car/app/model/Toggle;->mIsChecked:Z
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->hashCode()I
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    iget-boolean v1, p0, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -166,9 +217,17 @@
 
     iget-boolean v1, p0, Landroidx/car/app/model/Toggle;->mIsChecked:Z
 
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Landroidx/car/app/model/Toggle;->mIsEnabled:Z
+
     const-string v2, "]"
 
-    invoke-static {v0, v1, v2}, Lc/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ld/e;->a(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,34 +1,42 @@
-.class public final Llf/b;
+.class public interface abstract Llf/b;
 .super Ljava/lang/Object;
-.source "AuthPolicy.java"
+.source "IAudioRecordFactory.java"
 
 
 # annotations
-.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<A::",
+        "Llf/a;",
+        "T:",
+        "Llf/a$a;",
+        ">",
+        "Ljava/lang/Object;"
+    }
 .end annotation
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
 
+# virtual methods
+.method public abstract a()Llf/a$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+.end method
 
-# static fields
-.field public static final a:Ljava/lang/String; = "NTLM"
+.method public abstract b(Llf/a$a;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+.end method
 
-.field public static final b:Ljava/lang/String; = "Digest"
-
-.field public static final c:Ljava/lang/String; = "Basic"
-
-.field public static final d:Ljava/lang/String; = "negotiate"
-
-.field public static final e:Ljava/lang/String; = "Kerberos"
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract create()Llf/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TA;"
+        }
+    .end annotation
 .end method

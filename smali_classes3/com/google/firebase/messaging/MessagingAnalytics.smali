@@ -1,12 +1,25 @@
 .class public Lcom/google/firebase/messaging/MessagingAnalytics;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "MessagingAnalytics.java"
+
+
+# static fields
+.field private static final DELIVERY_METRICS_EXPORT_TO_BIG_QUERY_PREF:Ljava/lang/String; = "export_to_big_query"
+
+.field private static final FCM_PREFERENCES:Ljava/lang/String; = "com.google.firebase.messaging"
+
+.field private static final MANIFEST_DELIVERY_METRICS_EXPORT_TO_BIG_QUERY_ENABLED:Ljava/lang/String; = "delivery_metrics_exported_to_big_query_enabled"
+
+.field private static final REENGAGEMENT_MEDIUM:Ljava/lang/String; = "notification"
+
+.field private static final REENGAGEMENT_SOURCE:Ljava/lang/String; = "Firebase"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -119,7 +132,7 @@
 .end method
 
 .method public static eventToProto(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;Landroid/content/Intent;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent;
-    .locals 3
+    .locals 4
 
     if-nez p1, :cond_0
 
@@ -135,122 +148,135 @@
 
     if-nez p1, :cond_1
 
+    .line 2
     sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    .line 2
+    .line 3
     :cond_1
     invoke-static {}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent;->newBuilder()Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     move-result-object v0
 
-    .line 3
+    .line 4
     invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getTtl(Landroid/os/Bundle;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setTtl(I)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
-    .line 4
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setEvent(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    move-result-object v0
 
     .line 5
-    invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getInstanceId(Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setEvent(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     move-result-object p0
-
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setInstanceId(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     .line 6
-    invoke-static {}, Lcom/google/firebase/messaging/MessagingAnalytics;->getPackageName()Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getInstanceId(Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setInstanceId(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     move-result-object p0
-
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setPackageName(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
-
-    sget-object p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->ANDROID:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     .line 7
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setSdkPlatform(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    invoke-static {}, Lcom/google/firebase/messaging/MessagingAnalytics;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setPackageName(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    move-result-object p0
+
+    sget-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;->ANDROID:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;
 
     .line 8
-    invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getMessageTypeForFirelog(Landroid/os/Bundle;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setSdkPlatform(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$SDKPlatform;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     move-result-object p0
-
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setMessageType(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     .line 9
-    invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getMessageId(Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getMessageTypeForFirelog(Landroid/os/Bundle;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setMessageType(Lcom/google/firebase/messaging/reporting/MessagingClientEvent$MessageType;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
 
     move-result-object p0
 
-    if-eqz p0, :cond_2
-
     .line 10
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setMessageId(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getMessageId(Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
 
     .line 11
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setMessageId(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    .line 12
     :cond_2
     invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getTopic(Landroid/os/Bundle;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_3
-
-    .line 12
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setTopic(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    if-eqz v0, :cond_3
 
     .line 13
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setTopic(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    .line 14
     :cond_3
     invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getCollapseKey(Landroid/os/Bundle;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_4
-
-    .line 14
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setCollapseKey(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    if-eqz v0, :cond_4
 
     .line 15
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setCollapseKey(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    .line 16
     :cond_4
     invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getMessageLabel(Landroid/os/Bundle;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_5
-
-    .line 16
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setAnalyticsLabel(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    if-eqz v0, :cond_5
 
     .line 17
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setAnalyticsLabel(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    .line 18
     :cond_5
     invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getComposerLabel(Landroid/os/Bundle;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_6
-
-    .line 18
-    invoke-virtual {v0, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setComposerLabel(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    if-eqz v0, :cond_6
 
     .line 19
+    invoke-virtual {p0, v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setComposerLabel(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    .line 20
     :cond_6
     invoke-static {p1}, Lcom/google/firebase/messaging/MessagingAnalytics;->getProjectNumber(Landroid/os/Bundle;)J
 
-    move-result-wide p0
+    move-result-wide v0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v1, p0, v1
+    cmp-long p1, v0, v2
 
-    if-lez v1, :cond_7
-
-    .line 20
-    invoke-virtual {v0, p0, p1}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setProjectNumber(J)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+    if-lez p1, :cond_7
 
     .line 21
+    invoke-virtual {p0, v0, v1}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->setProjectNumber(J)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;
+
+    .line 22
     :cond_7
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->build()Lcom/google/firebase/messaging/reporting/MessagingClientEvent;
+    invoke-virtual {p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Builder;->build()Lcom/google/firebase/messaging/reporting/MessagingClientEvent;
 
     move-result-object p0
 
@@ -357,10 +383,10 @@
     :catch_1
     move-exception p0
 
+    .line 4
     :goto_0
     new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 4
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v0
@@ -400,9 +426,7 @@
     .line 2
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
-
-    return-object p0
+    move-result-object v0
 
     :cond_0
     return-object v0
@@ -421,6 +445,75 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private static getMessagePriority(Ljava/lang/String;)I
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    const-string v0, "high"
+
+    .line 1
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const-string v0, "normal"
+
+    .line 2
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static getMessagePriorityForFirelog(Landroid/os/Bundle;)I
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lcom/google/firebase/messaging/MessagingAnalytics;->getPriority(Landroid/os/Bundle;)I
+
+    move-result p0
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x5
+
+    return p0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_1
+
+    const/16 p0, 0xa
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public static getMessageTime(Landroid/os/Bundle;)Ljava/lang/String;
@@ -466,26 +559,27 @@
 .end method
 
 .method public static getMessageTypeForScion(Landroid/os/Bundle;)Ljava/lang/String;
-    .locals 1
+    .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
+
+    if-eqz p0, :cond_0
 
     .line 1
     invoke-static {p0}, Lcom/google/firebase/messaging/NotificationParams;->isNotification(Landroid/os/Bundle;)Z
 
     move-result p0
 
-    const/4 v0, 0x1
+    if-eqz p0, :cond_0
 
-    if-eq v0, p0, :cond_0
-
-    const-string p0, "data"
-
-    return-object p0
-
-    :cond_0
     const-string p0, "display"
 
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "data"
+
+    :goto_0
     return-object p0
 .end method
 
@@ -508,6 +602,56 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public static getPriority(Landroid/os/Bundle;)I
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    const-string v0, "google.delivered_priority"
+
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "google.priority_reduced"
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "1"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_0
+    const-string v0, "google.priority"
+
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 4
+    :cond_1
+    invoke-static {v0}, Lcom/google/firebase/messaging/MessagingAnalytics;->getMessagePriority(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static getProjectNumber(Landroid/os/Bundle;)J
@@ -700,16 +844,17 @@
 
     if-eqz v0, :cond_0
 
-    return-object p0
+    goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
+    :goto_0
     return-object p0
 .end method
 
 .method public static getTtl(Landroid/os/Bundle;)I
-    .locals 1
+    .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -756,13 +901,17 @@
 
     .line 6
     :catch_0
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "Invalid TTL: "
+    const-string v1, "Invalid TTL: "
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -822,10 +971,6 @@
 
 .method public static logNotificationDismiss(Landroid/content/Intent;)V
     .locals 1
-    .param p0    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -841,10 +986,6 @@
 
 .method public static logNotificationForeground(Landroid/content/Intent;)V
     .locals 1
-    .param p0    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -860,10 +1001,6 @@
 
 .method public static logNotificationOpen(Landroid/os/Bundle;)V
     .locals 1
-    .param p0    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     invoke-static {p0}, Lcom/google/firebase/messaging/MessagingAnalytics;->setUserPropertyIfRequired(Landroid/os/Bundle;)V
@@ -878,10 +1015,6 @@
 
 .method public static logNotificationReceived(Landroid/content/Intent;)V
     .locals 2
-    .param p0    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     invoke-static {p0}, Lcom/google/firebase/messaging/MessagingAnalytics;->shouldUploadScionMetrics(Landroid/content/Intent;)Z
@@ -954,58 +1087,64 @@
     :try_start_0
     const-string p1, "FCM_CLIENT_EVENT_LOGGING"
 
+    .line 3
     const-class v1, Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension;
 
     const-string v2, "proto"
 
-    .line 3
+    .line 4
     invoke-static {v2}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
 
     move-result-object v2
 
-    sget-object v3, Lcom/google/firebase/messaging/MessagingAnalytics$$ExternalSyntheticLambda0;->INSTANCE:Lcom/google/firebase/messaging/MessagingAnalytics$$ExternalSyntheticLambda0;
+    sget-object v3, Lcom/google/firebase/messaging/w;->a:Lcom/google/firebase/messaging/w;
 
-    .line 4
+    .line 5
     invoke-interface {p2, p1, v1, v2, v3}, Lcom/google/android/datatransport/TransportFactory;->getTransport(Ljava/lang/String;Ljava/lang/Class;Lcom/google/android/datatransport/Encoding;Lcom/google/android/datatransport/Transformer;)Lcom/google/android/datatransport/Transport;
 
     move-result-object p1
 
+    .line 6
     invoke-static {}, Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension;->newBuilder()Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension$Builder;
 
     move-result-object p2
 
-    .line 5
+    .line 7
     invoke-virtual {p2, p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension$Builder;->setMessagingClientEvent(Lcom/google/firebase/messaging/reporting/MessagingClientEvent;)Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension$Builder;
 
-    invoke-virtual {p2}, Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension$Builder;->build()Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension;
+    move-result-object p0
+
+    .line 8
+    invoke-virtual {p0}, Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension$Builder;->build()Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension;
 
     move-result-object p0
 
-    .line 6
-    invoke-static {p0}, Lcom/google/android/datatransport/Event;->ofTelemetry(Ljava/lang/Object;)Lcom/google/android/datatransport/Event;
+    .line 9
+    invoke-static {p0}, Lcom/google/android/datatransport/Event;->ofData(Ljava/lang/Object;)Lcom/google/android/datatransport/Event;
 
     move-result-object p0
 
-    .line 7
+    .line 10
     invoke-interface {p1, p0}, Lcom/google/android/datatransport/Transport;->send(Lcom/google/android/datatransport/Event;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    goto :goto_0
 
     :catch_0
     move-exception p0
 
     const-string p1, "Failed to send big query analytics payload."
 
-    .line 8
+    .line 11
     invoke-static {v0, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    :goto_0
     return-void
 .end method
 
 .method public static logToScion(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 5
+    .locals 4
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
@@ -1019,15 +1158,15 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     new-instance p1, Landroid/os/Bundle;
 
-    .line 2
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
+    .line 3
     :cond_0
     new-instance v1, Landroid/os/Bundle;
 
-    .line 3
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 4
@@ -1208,31 +1347,23 @@
     if-eqz p1, :cond_a
 
     .line 28
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "Logging to scion event="
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v3, v3, 0x25
+    const-string v2, " scionPayload="
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v4
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v4, v3
-
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "Logging to scion event="
-
-    const-string v4, " scionPayload="
-
-    invoke-static {v2, v3, p0, v4, p1}, Lr1/k;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1259,7 +1390,7 @@
     .line 30
     invoke-interface {p1, v0, p0, v1}, Lcom/google/firebase/analytics/connector/AnalyticsConnector;->logEvent(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    return-void
+    goto :goto_2
 
     :cond_b
     const-string p0, "Unable to log event: analytics library is missing"
@@ -1267,6 +1398,7 @@
     .line 31
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    :goto_2
     return-void
 
     :catch_2
@@ -1387,9 +1519,9 @@
     .line 7
     invoke-interface {v0, v1, v2, p0}, Lcom/google/firebase/analytics/connector/AnalyticsConnector;->setUserProperty(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
+    .line 8
     new-instance v2, Landroid/os/Bundle;
 
-    .line 8
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     const-string v3, "source"
@@ -1416,7 +1548,7 @@
     .line 12
     invoke-interface {v0, v1, p0, v2}, Lcom/google/firebase/analytics/connector/AnalyticsConnector;->logEvent(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    return-void
+    goto :goto_0
 
     :cond_2
     const-string p0, "Unable to set user property for conversion tracking:  analytics library is missing"
@@ -1424,7 +1556,7 @@
     .line 13
     invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-void
+    goto :goto_0
 
     .line 14
     :cond_3
@@ -1440,15 +1572,12 @@
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
+    :goto_0
     return-void
 .end method
 
 .method public static shouldUploadFirelogAnalytics(Landroid/content/Intent;)Z
     .locals 0
-    .param p0    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     if-eqz p0, :cond_1
 
@@ -1478,10 +1607,6 @@
 
 .method public static shouldUploadScionMetrics(Landroid/content/Intent;)Z
     .locals 1
-    .param p0    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     if-eqz p0, :cond_1
 
@@ -1515,10 +1640,6 @@
 
 .method public static shouldUploadScionMetrics(Landroid/os/Bundle;)Z
     .locals 1
-    .param p0    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     if-nez p0, :cond_0
 

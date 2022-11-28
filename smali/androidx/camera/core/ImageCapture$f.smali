@@ -3,12 +3,12 @@
 .source "ImageCapture.java"
 
 # interfaces
-.implements Landroidx/camera/core/ImageCapture$k$b;
+.implements Landroidx/camera/core/impl/utils/futures/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/core/ImageCapture;->l0()Lcom/google/common/util/concurrent/ListenableFuture;
+    value = Landroidx/camera/core/ImageCapture;->B0(Landroidx/camera/core/ImageCapture$k;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,31 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Landroidx/camera/core/ImageCapture$k$b<",
-        "Landroidx/camera/core/impl/c;",
+        "Landroidx/camera/core/impl/utils/futures/c<",
+        "Ljava/lang/Void;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/ImageCapture;
+.field public final synthetic a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+.field public final synthetic b:Landroidx/camera/core/ImageCapture;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/core/ImageCapture;)V
+.method public constructor <init>(Landroidx/camera/core/ImageCapture;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/core/ImageCapture$f;->a:Landroidx/camera/core/ImageCapture;
+    iput-object p1, p0, Landroidx/camera/core/ImageCapture$f;->b:Landroidx/camera/core/ImageCapture;
+
+    iput-object p2, p0, Landroidx/camera/core/ImageCapture$f;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,95 +48,40 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Landroidx/camera/core/impl/c;)Ljava/lang/Object;
+.method public a(Ljava/lang/Void;)V
     .locals 0
-    .param p1    # Landroidx/camera/core/impl/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "captureResult"
-        }
-    .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageCapture$f;->b(Landroidx/camera/core/impl/c;)Landroidx/camera/core/impl/c;
+    iget-object p1, p0, Landroidx/camera/core/ImageCapture$f;->b:Landroidx/camera/core/ImageCapture;
 
-    move-result-object p1
+    invoke-virtual {p1}, Landroidx/camera/core/ImageCapture;->L0()V
 
-    return-object p1
+    return-void
 .end method
 
-.method public b(Landroidx/camera/core/impl/c;)Landroidx/camera/core/impl/c;
-    .locals 3
-    .param p1    # Landroidx/camera/core/impl/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "captureResult"
-        }
-    .end annotation
-
-    const-string v0, "ImageCapture"
+.method public onFailure(Ljava/lang/Throwable;)V
+    .locals 1
 
     .line 1
-    invoke-static {v0}, Landroidx/camera/core/x1;->g(Ljava/lang/String;)Z
+    iget-object v0, p0, Landroidx/camera/core/ImageCapture$f;->b:Landroidx/camera/core/ImageCapture;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "preCaptureState, AE="
+    invoke-virtual {v0}, Landroidx/camera/core/ImageCapture;->L0()V
 
     .line 2
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Landroidx/camera/core/ImageCapture$f;->a:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Landroidx/concurrent/futures/CallbackToFutureAdapter$a;->f(Ljava/lang/Throwable;)Z
 
-    invoke-interface {p1}, Landroidx/camera/core/impl/c;->h()Landroidx/camera/core/impl/CameraCaptureMetaData$AeState;
+    return-void
+.end method
 
-    move-result-object v2
+.method public bridge synthetic onSuccess(Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 1
+    check-cast p1, Ljava/lang/Void;
 
-    const-string v2, " AF ="
+    invoke-virtual {p0, p1}, Landroidx/camera/core/ImageCapture$f;->a(Ljava/lang/Void;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 3
-    invoke-interface {p1}, Landroidx/camera/core/impl/c;->e()Landroidx/camera/core/impl/CameraCaptureMetaData$AfState;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " AWB="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 4
-    invoke-interface {p1}, Landroidx/camera/core/impl/c;->f()Landroidx/camera/core/impl/CameraCaptureMetaData$AwbState;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 5
-    invoke-static {v0, v1}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-object p1
+    return-void
 .end method

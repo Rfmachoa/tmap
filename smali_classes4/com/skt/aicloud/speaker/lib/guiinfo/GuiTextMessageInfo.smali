@@ -139,14 +139,23 @@
     iput-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->K0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
     .line 21
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->i(Landroid/os/Parcel;)V
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->l(Landroid/os/Parcel;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A()Z
+.method public A()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->p:I
+
+    return v0
+.end method
+
+.method public B()Z
     .locals 1
 
     .line 1
@@ -165,7 +174,7 @@
     return v0
 .end method
 
-.method public B()Z
+.method public C()Z
     .locals 1
 
     .line 1
@@ -174,7 +183,7 @@
     return v0
 .end method
 
-.method public C(Ljava/lang/String;)V
+.method public D(Ljava/lang/String;)V
     .locals 0
 
     .line 1
@@ -183,7 +192,7 @@
     return-void
 .end method
 
-.method public D(Z)V
+.method public E(Z)V
     .locals 0
 
     .line 1
@@ -192,30 +201,11 @@
     return-void
 .end method
 
-.method public E(Ljava/lang/String;)V
+.method public F(Ljava/lang/String;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->j:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public F(Ljava/lang/String;)V
-    .locals 1
-
-    .line 1
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->h:Ljava/lang/String;
 
     return-void
 .end method
@@ -234,12 +224,31 @@
 
     .line 2
     :cond_0
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->h:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public H(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
     iput-object p1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->i:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public H(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
+.method public I(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
     .locals 0
 
     .line 1
@@ -248,7 +257,7 @@
     return-void
 .end method
 
-.method public I(Ljava/util/ArrayList;)V
+.method public J(Ljava/util/ArrayList;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -279,7 +288,7 @@
     return-void
 .end method
 
-.method public J(Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;)V
+.method public K(Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;)V
     .locals 0
 
     .line 1
@@ -288,7 +297,7 @@
     return-void
 .end method
 
-.method public K(I)V
+.method public L(I)V
     .locals 0
 
     .line 1
@@ -305,11 +314,11 @@
     return v0
 .end method
 
-.method public i(Landroid/os/Parcel;)V
+.method public l(Landroid/os/Parcel;)V
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i(Landroid/os/Parcel;)V
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->l(Landroid/os/Parcel;)V
 
     .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -425,29 +434,11 @@
     return-void
 .end method
 
-.method public r()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->k:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public s()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->j:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public t()Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->h:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->k:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -476,25 +467,25 @@
 
     const-string v3, ", mPhoneNumber=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->i:Ljava/lang/String;
 
     const-string v3, ", mMessage=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->j:Ljava/lang/String;
 
     const-string v3, ", mASRText=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->k:Ljava/lang/String;
 
     const-string v3, ", mSearchResultInfoList="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->l:Ljava/util/ArrayList;
 
@@ -543,9 +534,18 @@
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lu2/g;->a(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lh1/b;->a(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public u()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->j:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -554,16 +554,16 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->i:Ljava/lang/String;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public w()Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+.method public w()Ljava/lang/String;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->K0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->i:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -622,7 +622,16 @@
     return-void
 .end method
 
-.method public x()Ljava/util/ArrayList;
+.method public x()Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->K0:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
+
+    return-object v0
+.end method
+
+.method public y()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -639,20 +648,11 @@
     return-object v0
 .end method
 
-.method public y()Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
+.method public z()Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->u:Lcom/skt/aicloud/speaker/lib/guiinfo/SearchResultInfoType;
 
     return-object v0
-.end method
-
-.method public z()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->p:I
-
-    return v0
 .end method

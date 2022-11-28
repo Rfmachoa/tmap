@@ -1,6 +1,6 @@
-.class public Lcom/google/android/gms/ads/appopen/AppOpenAd$AppOpenAdLoadCallback;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.class public abstract Lcom/google/android/gms/ads/appopen/AppOpenAd$AppOpenAdLoadCallback;
+.super Lcom/google/android/gms/ads/AdLoadCallback;
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -13,27 +13,20 @@
     name = "AppOpenAdLoadCallback"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/ads/AdLoadCallback<",
+        "Lcom/google/android/gms/ads/appopen/AppOpenAd;",
+        ">;"
+    }
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onAppOpenAdFailedToLoad(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAppOpenAdLoaded(Lcom/google/android/gms/ads/appopen/AppOpenAd;)V
-    .locals 0
+    invoke-direct {p0}, Lcom/google/android/gms/ads/AdLoadCallback;-><init>()V
 
     return-void
 .end method

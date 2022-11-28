@@ -55,14 +55,14 @@
 
     const-string v1, "iAladdinPersonalInfoAgreementListener : onConnectionError : "
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$1;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
     const-string v1, "setPersonalInfoAgreement : ConnectionError"
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -82,14 +82,14 @@
 
     const-string v1, "iAladdinPersonalInfoAgreementListener : onParseError : "
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$1;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
     const-string v1, "setPersonalInfoAgreement : ParseError"
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->J6(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/skt/tmap/engine/TmapAiManager;->L6(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -180,7 +180,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -189,7 +189,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$1;->this$0:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->L6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->N6()V
 
     :cond_0
     return-void

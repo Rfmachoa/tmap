@@ -32,7 +32,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -41,12 +41,12 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0211
+    const p1, 0x7f0d0212
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0bdf
+    const p1, 0x7f0a0c6b
 
     .line 4
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -57,7 +57,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
 
-    const p1, 0x7f0a0b1a
+    const p1, 0x7f0a0b96
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -66,7 +66,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    const v0, 0x7f130a27
+    const v0, 0x7f140aac
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
@@ -74,7 +74,7 @@
     const-string p1, "/tmap2/mobile/nuguBtn_help.jsp"
 
     .line 7
-    invoke-static {p0, p1}, Lcom/skt/tmap/util/d2;->y(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/skt/tmap/util/o2;->B(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0, p0, p1, v1}, Lcom/skt/tmap/view/TmapWebView;->init(Landroid/app/Activity;Ljava/lang/String;Z)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 9
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V

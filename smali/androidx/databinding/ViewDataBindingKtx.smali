@@ -28,7 +28,7 @@
         "viewDataBinding",
         "",
         "localFieldId",
-        "Lkotlinx/coroutines/flow/f;",
+        "Lkotlinx/coroutines/flow/e;",
         "observable",
         "",
         "a",
@@ -86,13 +86,13 @@
     return-void
 .end method
 
-.method public static final a(Landroidx/databinding/ViewDataBinding;ILkotlinx/coroutines/flow/f;)Z
+.method public static final a(Landroidx/databinding/ViewDataBinding;ILkotlinx/coroutines/flow/e;)Z
     .locals 2
     .param p0    # Landroidx/databinding/ViewDataBinding;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lkotlinx/coroutines/flow/f;
+    .param p2    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
@@ -107,7 +107,7 @@
             "(",
             "Landroidx/databinding/ViewDataBinding;",
             "I",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "*>;)Z"
         }
     .end annotation
@@ -131,7 +131,7 @@
     sget-object v1, Landroidx/databinding/ViewDataBindingKtx;->a:Landroidx/databinding/d;
 
     .line 3
-    invoke-virtual {p0, p1, p2, v1}, Landroidx/databinding/ViewDataBinding;->b1(ILjava/lang/Object;Landroidx/databinding/d;)Z
+    invoke-virtual {p0, p1, p2, v1}, Landroidx/databinding/ViewDataBinding;->d1(ILjava/lang/Object;Landroidx/databinding/d;)Z
 
     move-result p1
     :try_end_0

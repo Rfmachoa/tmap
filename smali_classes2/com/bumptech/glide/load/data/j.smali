@@ -46,7 +46,7 @@
 
 
 # instance fields
-.field public final a:Lz4/g;
+.field public final a:Lw6/g;
 
 .field public final b:I
 
@@ -73,18 +73,18 @@
     return-void
 .end method
 
-.method public constructor <init>(Lz4/g;I)V
+.method public constructor <init>(Lw6/g;I)V
     .locals 1
 
     .line 1
     sget-object v0, Lcom/bumptech/glide/load/data/j;->j:Lcom/bumptech/glide/load/data/j$b;
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/bumptech/glide/load/data/j;-><init>(Lz4/g;ILcom/bumptech/glide/load/data/j$b;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/bumptech/glide/load/data/j;-><init>(Lw6/g;ILcom/bumptech/glide/load/data/j$b;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lz4/g;ILcom/bumptech/glide/load/data/j$b;)V
+.method public constructor <init>(Lw6/g;ILcom/bumptech/glide/load/data/j$b;)V
     .locals 0
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
@@ -93,7 +93,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Lcom/bumptech/glide/load/data/j;->a:Lz4/g;
+    iput-object p1, p0, Lcom/bumptech/glide/load/data/j;->a:Lw6/g;
 
     .line 4
     iput p2, p0, Lcom/bumptech/glide/load/data/j;->b:I
@@ -395,7 +395,7 @@
     const-string v0, "HttpUrlFetcher"
 
     .line 1
-    invoke-static {}, Lm5/h;->b()J
+    invoke-static {}, Lj7/i;->b()J
 
     move-result-wide v1
 
@@ -403,9 +403,9 @@
 
     .line 2
     :try_start_0
-    iget-object v4, p0, Lcom/bumptech/glide/load/data/j;->a:Lz4/g;
+    iget-object v4, p0, Lcom/bumptech/glide/load/data/j;->a:Lw6/g;
 
-    invoke-virtual {v4}, Lz4/g;->i()Ljava/net/URL;
+    invoke-virtual {v4}, Lw6/g;->i()Ljava/net/URL;
 
     move-result-object v4
 
@@ -413,9 +413,9 @@
 
     const/4 v6, 0x0
 
-    iget-object v7, p0, Lcom/bumptech/glide/load/data/j;->a:Lz4/g;
+    iget-object v7, p0, Lcom/bumptech/glide/load/data/j;->a:Lw6/g;
 
-    invoke-virtual {v7}, Lz4/g;->e()Ljava/util/Map;
+    invoke-virtual {v7}, Lw6/g;->e()Ljava/util/Map;
 
     move-result-object v7
 
@@ -487,7 +487,7 @@
     :goto_0
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2}, Lm5/h;->a(J)D
+    invoke-static {v1, v2}, Lj7/i;->a(J)D
 
     move-result-wide v1
 
@@ -515,7 +515,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, v2}, Lm5/h;->a(J)D
+    invoke-static {v1, v2}, Lj7/i;->a(J)D
 
     move-result-wide v1
 
@@ -565,7 +565,7 @@
 
     int-to-long v2, v0
 
-    invoke-static {v1, v2, v3}, Lm5/c;->b(Ljava/io/InputStream;J)Ljava/io/InputStream;
+    invoke-static {v1, v2, v3}, Lj7/c;->b(Ljava/io/InputStream;J)Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -808,7 +808,7 @@
 
     const-string p4, "Bad redirect url: "
 
-    invoke-static {p4, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p4
 

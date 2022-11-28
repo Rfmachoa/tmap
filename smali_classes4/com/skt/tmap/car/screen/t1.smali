@@ -3,32 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/model/k;
+.implements Lue/g$a;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/SettingScreen;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/RoutePreviewScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SettingScreen;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/RoutePreviewScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/t1;->a:Lcom/skt/tmap/car/screen/SettingScreen;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/t1;->a:Lcom/skt/tmap/car/screen/RoutePreviewScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick()V
+.method public final a(Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/t1;->a:Lcom/skt/tmap/car/screen/SettingScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/t1;->a:Lcom/skt/tmap/car/screen/RoutePreviewScreen;
 
-    invoke-static {v0}, Lcom/skt/tmap/car/screen/SettingScreen;->N(Lcom/skt/tmap/car/screen/SettingScreen;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/RoutePreviewScreen;->K(Lcom/skt/tmap/car/screen/RoutePreviewScreen;Lcom/skt/tmap/engine/navigation/network/RouteSearchData;)V
 
     return-void
 .end method

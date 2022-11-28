@@ -1,95 +1,156 @@
-.class public interface abstract Lz/h;
+.class public Lz/h;
 .super Ljava/lang/Object;
-.source "UseCaseEventConfig.java"
-
-# interfaces
-.implements Landroidx/camera/core/impl/q;
+.source "ForceCloseDeferrableSurface.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lz/h$a;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
 
-# static fields
-.field public static final v:Landroidx/camera/core/impl/Config$a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/impl/Config$a<",
-            "Landroidx/camera/core/UseCase$b;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lb0/n1;Lb0/n1;)V
+    .locals 1
+    .param p1    # Lb0/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lb0/n1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    const-class v0, Landroidx/camera/core/UseCase$b;
-
-    const-string v1, "camerax.core.useCaseEventCallback"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {v1, v0}, Landroidx/camera/core/impl/Config$a;->a(Ljava/lang/String;Ljava/lang/Class;)Landroidx/camera/core/impl/Config$a;
+    const-class v0, Ly/a0;
 
-    move-result-object v0
+    invoke-virtual {p2, v0}, Lb0/n1;->a(Ljava/lang/Class;)Z
 
-    sput-object v0, Lz/h;->v:Landroidx/camera/core/impl/Config$a;
+    move-result p2
+
+    iput-boolean p2, p0, Lz/h;->a:Z
+
+    .line 3
+    const-class p2, Ly/w;
+
+    invoke-virtual {p1, p2}, Lb0/n1;->a(Ljava/lang/Class;)Z
+
+    move-result p2
+
+    iput-boolean p2, p0, Lz/h;->b:Z
+
+    .line 4
+    const-class p2, Ly/j;
+
+    .line 5
+    invoke-virtual {p1, p2}, Lb0/n1;->a(Ljava/lang/Class;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lz/h;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public G()Landroidx/camera/core/UseCase$b;
+.method public a(Ljava/util/List;)V
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    sget-object v0, Lz/h;->v:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {p0, v0}, Landroidx/camera/core/impl/q;->b(Landroidx/camera/core/impl/Config$a;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/core/UseCase$b;
-
-    return-object v0
-.end method
-
-.method public X(Landroidx/camera/core/UseCase$b;)Landroidx/camera/core/UseCase$b;
-    .locals 1
-    .param p1    # Landroidx/camera/core/UseCase$b;
+    .param p1    # Ljava/util/List;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "valueIfMissing"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroidx/camera/core/impl/DeferrableSurface;",
+            ">;)V"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lz/h;->v:Landroidx/camera/core/impl/Config$a;
+    invoke-virtual {p0}, Lz/h;->b()Z
 
-    invoke-interface {p0, v0, p1}, Landroidx/camera/core/impl/q;->h(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-eqz p1, :cond_1
+
+    .line 2
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/camera/core/UseCase$b;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p1
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/camera/core/impl/DeferrableSurface;
+
+    .line 3
+    invoke-virtual {v0}, Landroidx/camera/core/impl/DeferrableSurface;->c()V
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "ForceCloseDeferrableSurface"
+
+    const-string v0, "deferrableSurface closed"
+
+    .line 4
+    invoke-static {p1, v0}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public b()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lz/h;->a:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lz/h;->b:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lz/h;->c:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
 .end method

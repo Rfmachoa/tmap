@@ -29,6 +29,80 @@
     return-void
 .end method
 
+.method public static createFromCornerSize(Landroid/graphics/RectF;Lcom/google/android/material/shape/CornerSize;)Lcom/google/android/material/shape/RelativeCornerSize;
+    .locals 1
+    .param p0    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Lcom/google/android/material/shape/CornerSize;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .line 1
+    instance-of v0, p1, Lcom/google/android/material/shape/RelativeCornerSize;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    check-cast p1, Lcom/google/android/material/shape/RelativeCornerSize;
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    new-instance v0, Lcom/google/android/material/shape/RelativeCornerSize;
+
+    invoke-interface {p1, p0}, Lcom/google/android/material/shape/CornerSize;->getCornerSize(Landroid/graphics/RectF;)F
+
+    move-result p1
+
+    invoke-static {p0}, Lcom/google/android/material/shape/RelativeCornerSize;->getMaxCornerSize(Landroid/graphics/RectF;)F
+
+    move-result p0
+
+    div-float/2addr p1, p0
+
+    invoke-direct {v0, p1}, Lcom/google/android/material/shape/RelativeCornerSize;-><init>(F)V
+
+    move-object p1, v0
+
+    :goto_0
+    return-object p1
+.end method
+
+.method private static getMaxCornerSize(Landroid/graphics/RectF;)F
+    .locals 1
+    .param p0    # Landroid/graphics/RectF;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
+
+    move-result p0
+
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(FF)F
+
+    move-result p0
+
+    return p0
+.end method
+
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
@@ -82,13 +156,13 @@
     .line 1
     iget v0, p0, Lcom/google/android/material/shape/RelativeCornerSize;->percent:F
 
-    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
+    invoke-static {p1}, Lcom/google/android/material/shape/RelativeCornerSize;->getMaxCornerSize(Landroid/graphics/RectF;)F
 
     move-result p1
 
-    mul-float/2addr p1, v0
+    mul-float/2addr v0, p1
 
-    return p1
+    return v0
 .end method
 
 .method public getRelativePercent()F

@@ -3,32 +3,76 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
+.field public final synthetic b:Landroid/animation/ValueAnimator;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+.field public final synthetic e:I
+
+.field public final synthetic f:I
+
+.field public final synthetic g:I
+
+.field public final synthetic h:I
+
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Landroid/animation/ValueAnimator;IIIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/skt/tmap/activity/n3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
+    iput-object p2, p0, Lcom/skt/tmap/activity/n3;->b:Landroid/animation/ValueAnimator;
+
+    iput p3, p0, Lcom/skt/tmap/activity/n3;->c:I
+
+    iput p4, p0, Lcom/skt/tmap/activity/n3;->d:I
+
+    iput p5, p0, Lcom/skt/tmap/activity/n3;->e:I
+
+    iput p6, p0, Lcom/skt/tmap/activity/n3;->f:I
+
+    iput p7, p0, Lcom/skt/tmap/activity/n3;->g:I
+
+    iput p8, p0, Lcom/skt/tmap/activity/n3;->h:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 9
 
     iget-object v0, p0, Lcom/skt/tmap/activity/n3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->f7(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+    iget-object v1, p0, Lcom/skt/tmap/activity/n3;->b:Landroid/animation/ValueAnimator;
+
+    iget v2, p0, Lcom/skt/tmap/activity/n3;->c:I
+
+    iget v3, p0, Lcom/skt/tmap/activity/n3;->d:I
+
+    iget v4, p0, Lcom/skt/tmap/activity/n3;->e:I
+
+    iget v5, p0, Lcom/skt/tmap/activity/n3;->f:I
+
+    iget v6, p0, Lcom/skt/tmap/activity/n3;->g:I
+
+    iget v7, p0, Lcom/skt/tmap/activity/n3;->h:I
+
+    move-object v8, p1
+
+    invoke-static/range {v0 .. v8}, Lcom/skt/tmap/activity/TmapNaviActivity;->w7(Lcom/skt/tmap/activity/TmapNaviActivity;Landroid/animation/ValueAnimator;IIIIIILandroid/animation/ValueAnimator;)V
 
     return-void
 .end method

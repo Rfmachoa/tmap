@@ -14,7 +14,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    const-string v0, "2.7.5"
+    const-string v0, "2.12.7"
 
     const-string v1, "com.fasterxml.jackson.core"
 

@@ -12,8 +12,8 @@
 
 
 # virtual methods
-.method public abstract b()Z
+.method public abstract cancel()V
 .end method
 
-.method public abstract cancel()V
+.method public abstract d()Z
 .end method

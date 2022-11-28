@@ -1,14 +1,11 @@
 .class public Landroidx/fragment/app/Fragment$c;
-.super Ljava/lang/Object;
+.super Landroidx/fragment/app/Fragment$l;
 .source "Fragment.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/Fragment;->callStartTransitionListener(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/fragment/app/Fragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,34 +15,39 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/fragment/app/SpecialEffectsController;
-
-.field public final synthetic b:Landroidx/fragment/app/Fragment;
+.field public final synthetic a:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/SpecialEffectsController;)V
+.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Landroidx/fragment/app/Fragment$c;->b:Landroidx/fragment/app/Fragment;
+    iput-object p1, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/Fragment;
 
-    iput-object p2, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/SpecialEffectsController;
+    const/4 p1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroidx/fragment/app/Fragment$l;-><init>(Landroidx/fragment/app/Fragment$b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public a()V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/SpecialEffectsController;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/Fragment;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/SpecialEffectsController;->g()V
+    iget-object v0, v0, Landroidx/fragment/app/Fragment;->mSavedStateRegistryController:Landroidx/savedstate/c;
+
+    invoke-virtual {v0}, Landroidx/savedstate/c;->c()V
+
+    .line 2
+    iget-object v0, p0, Landroidx/fragment/app/Fragment$c;->a:Landroidx/fragment/app/Fragment;
+
+    invoke-static {v0}, Landroidx/lifecycle/SavedStateHandleSupport;->enableSavedStateHandles(Landroidx/savedstate/d;)V
 
     return-void
 .end method

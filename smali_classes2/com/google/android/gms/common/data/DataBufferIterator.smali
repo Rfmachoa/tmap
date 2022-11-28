@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/data/DataBufferIterator;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Ljava/util/Iterator;
@@ -26,13 +26,6 @@
 .field public final zaa:Lcom/google/android/gms/common/data/DataBuffer;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/data/DataBuffer<",
-            "TT;>;"
-        }
-    .end annotation
 .end field
 
 .field public zab:I
@@ -45,13 +38,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/data/DataBuffer<",
-            "TT;>;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -100,14 +86,8 @@
 .end method
 
 .method public next()Ljava/lang/Object;
-    .locals 4
+    .locals 3
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
     .end annotation
 
     .line 1
@@ -139,11 +119,9 @@
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zab:I
 
-    const/16 v2, 0x2e
+    const-string v2, "Cannot advance the iterator beyond "
 
-    const-string v3, "Cannot advance the iterator beyond "
-
-    invoke-static {v2, v3, v1}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 

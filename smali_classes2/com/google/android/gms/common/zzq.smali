@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/zzq;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -46,6 +46,13 @@
     .end annotation
 .end field
 
+.field private final zzd:I
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getFirstPartyStatusValue"
+        id = 0x4
+    .end annotation
+.end field
+
 
 # direct methods
 .method public static constructor <clinit>()V
@@ -60,7 +67,7 @@
     return-void
 .end method
 
-.method public constructor <init>(ZLjava/lang/String;I)V
+.method public constructor <init>(ZLjava/lang/String;II)V
     .locals 0
     .param p1    # Z
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
@@ -77,6 +84,11 @@
             id = 0x3
         .end annotation
     .end param
+    .param p4    # I
+        .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
+            id = 0x4
+        .end annotation
+    .end param
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
     .end annotation
 
@@ -87,13 +99,22 @@
 
     iput-object p2, p0, Lcom/google/android/gms/common/zzq;->zzb:Ljava/lang/String;
 
-    invoke-static {p3}, Lcom/google/android/gms/common/zzp;->zza(I)I
+    invoke-static {p3}, Lcom/google/android/gms/common/zzy;->zza(I)I
 
     move-result p1
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/google/android/gms/common/zzq;->zzc:I
+
+    .line 2
+    invoke-static {p4}, Lcom/google/android/gms/common/zzd;->zza(I)I
+
+    move-result p1
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lcom/google/android/gms/common/zzq;->zzd:I
 
     return-void
 .end method
@@ -131,7 +152,14 @@
     .line 4
     invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
+    iget v0, p0, Lcom/google/android/gms/common/zzq;->zzd:I
+
+    const/4 v1, 0x4
+
     .line 5
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+
+    .line 6
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void
@@ -159,9 +187,22 @@
     .locals 1
 
     .line 1
+    iget v0, p0, Lcom/google/android/gms/common/zzq;->zzd:I
+
+    invoke-static {v0}, Lcom/google/android/gms/common/zzd;->zza(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final zzd()I
+    .locals 1
+
+    .line 1
     iget v0, p0, Lcom/google/android/gms/common/zzq;->zzc:I
 
-    invoke-static {v0}, Lcom/google/android/gms/common/zzp;->zza(I)I
+    invoke-static {v0}, Lcom/google/android/gms/common/zzy;->zza(I)I
 
     move-result v0
 

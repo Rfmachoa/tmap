@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract registerForActivityResult(Lb/a;Landroidx/activity/result/ActivityResultRegistry;Landroidx/activity/result/a;)Landroidx/activity/result/e;
-    .param p1    # Lb/a;
+.method public abstract registerForActivityResult(Lc/a;Landroidx/activity/result/ActivityResultRegistry;Landroidx/activity/result/a;)Landroidx/activity/result/g;
+    .param p1    # Lc/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -27,19 +27,19 @@
             "O:",
             "Ljava/lang/Object;",
             ">(",
-            "Lb/a<",
+            "Lc/a<",
             "TI;TO;>;",
             "Landroidx/activity/result/ActivityResultRegistry;",
             "Landroidx/activity/result/a<",
             "TO;>;)",
-            "Landroidx/activity/result/e<",
+            "Landroidx/activity/result/g<",
             "TI;>;"
         }
     .end annotation
 .end method
 
-.method public abstract registerForActivityResult(Lb/a;Landroidx/activity/result/a;)Landroidx/activity/result/e;
-    .param p1    # Lb/a;
+.method public abstract registerForActivityResult(Lc/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
+    .param p1    # Lc/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -57,11 +57,11 @@
             "O:",
             "Ljava/lang/Object;",
             ">(",
-            "Lb/a<",
+            "Lc/a<",
             "TI;TO;>;",
             "Landroidx/activity/result/a<",
             "TO;>;)",
-            "Landroidx/activity/result/e<",
+            "Landroidx/activity/result/g<",
             "TI;>;"
         }
     .end annotation

@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/utils/futures/a;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -11,9 +11,15 @@
 
 .field public final synthetic b:Landroid/content/Context;
 
+.field public final synthetic c:Ljava/util/concurrent/Executor;
+
+.field public final synthetic d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+.field public final synthetic e:J
+
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/CameraX;Landroid/content/Context;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/CameraX;Landroid/content/Context;Ljava/util/concurrent/Executor;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -22,23 +28,31 @@
 
     iput-object p2, p0, Landroidx/camera/core/s;->b:Landroid/content/Context;
 
+    iput-object p3, p0, Landroidx/camera/core/s;->c:Ljava/util/concurrent/Executor;
+
+    iput-object p4, p0, Landroidx/camera/core/s;->d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
+
+    iput-wide p5, p0, Landroidx/camera/core/s;->e:J
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 2
+.method public final run()V
+    .locals 6
 
     iget-object v0, p0, Landroidx/camera/core/s;->a:Landroidx/camera/core/CameraX;
 
     iget-object v1, p0, Landroidx/camera/core/s;->b:Landroid/content/Context;
 
-    check-cast p1, Ljava/lang/Void;
+    iget-object v2, p0, Landroidx/camera/core/s;->c:Ljava/util/concurrent/Executor;
 
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/CameraX;->g(Landroidx/camera/core/CameraX;Landroid/content/Context;Ljava/lang/Void;)Lcom/google/common/util/concurrent/ListenableFuture;
+    iget-object v3, p0, Landroidx/camera/core/s;->d:Landroidx/concurrent/futures/CallbackToFutureAdapter$a;
 
-    move-result-object p1
+    iget-wide v4, p0, Landroidx/camera/core/s;->e:J
 
-    return-object p1
+    invoke-static/range {v0 .. v5}, Landroidx/camera/core/CameraX;->c(Landroidx/camera/core/CameraX;Landroid/content/Context;Ljava/util/concurrent/Executor;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;J)V
+
+    return-void
 .end method

@@ -1,45 +1,51 @@
-.class public final Lgi/f;
-.super Ljava/util/concurrent/CountDownLatch;
-.source "FutureSubscriber.java"
+.class public Lgi/f;
+.super Ljava/lang/Object;
+.source "DefaultBHttpClientConnectionFactory.java"
 
 # interfaces
-.implements Lai/r;
-.implements Ljava/util/concurrent/Future;
-.implements Lok/e;
+.implements Lhh/j;
 
 
 # annotations
+.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<T:",
         "Ljava/lang/Object;",
-        ">",
-        "Ljava/util/concurrent/CountDownLatch;",
-        "Lai/r<",
-        "TT;>;",
-        "Ljava/util/concurrent/Future<",
-        "TT;>;",
-        "Lok/e;"
+        "Lhh/j<",
+        "Lgi/e;",
+        ">;"
     }
 .end annotation
 
 
+# static fields
+.field public static final f:Lgi/f;
+
+
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final a:Lth/a;
+
+.field public final b:Ldi/e;
+
+.field public final c:Ldi/e;
+
+.field public final d:Lpi/f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "TT;"
+            "Lpi/f<",
+            "Lhh/q;",
+            ">;"
         }
     .end annotation
 .end field
 
-.field public b:Ljava/lang/Throwable;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final e:Lpi/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lok/e;",
+            "Lpi/d<",
+            "Lhh/t;",
             ">;"
         }
     .end annotation
@@ -47,507 +53,218 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    .line 1
+    new-instance v0, Lgi/f;
+
+    invoke-direct {v0}, Lgi/f;-><init>()V
+
+    sput-object v0, Lgi/f;->f:Lgi/f;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 6
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    .line 9
+    invoke-direct/range {v0 .. v5}, Lgi/f;-><init>(Lth/a;Ldi/e;Ldi/e;Lpi/f;Lpi/d;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lth/a;)V
+    .locals 6
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    .line 8
+    invoke-direct/range {v0 .. v5}, Lgi/f;-><init>(Lth/a;Ldi/e;Ldi/e;Lpi/f;Lpi/d;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lth/a;Ldi/e;Ldi/e;Lpi/f;Lpi/d;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lth/a;",
+            "Ldi/e;",
+            "Ldi/e;",
+            "Lpi/f<",
+            "Lhh/q;",
+            ">;",
+            "Lpi/d<",
+            "Lhh/t;",
+            ">;)V"
+        }
+    .end annotation
 
     .line 1
-    invoke-direct {p0, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
 
     .line 2
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    :cond_0
+    sget-object p1, Lth/a;->g:Lth/a;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    :goto_0
+    iput-object p1, p0, Lgi/f;->a:Lth/a;
 
-    iput-object v0, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    .line 3
+    iput-object p2, p0, Lgi/f;->b:Ldi/e;
+
+    .line 4
+    iput-object p3, p0, Lgi/f;->c:Ldi/e;
+
+    .line 5
+    iput-object p4, p0, Lgi/f;->d:Lpi/f;
+
+    .line 6
+    iput-object p5, p0, Lgi/f;->e:Lpi/d;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lth/a;Lpi/f;Lpi/d;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lth/a;",
+            "Lpi/f<",
+            "Lhh/q;",
+            ">;",
+            "Lpi/d<",
+            "Lhh/t;",
+            ">;)V"
+        }
+    .end annotation
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    .line 7
+    invoke-direct/range {v0 .. v5}, Lgi/f;-><init>(Lth/a;Ldi/e;Ldi/e;Lpi/f;Lpi/d;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()V
+.method public bridge synthetic a(Ljava/net/Socket;)Lhh/i;
     .locals 0
-
-    return-void
-.end method
-
-.method public cancel(Z)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mayInterruptIfRunning"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
         }
     .end annotation
 
     .line 1
-    :cond_0
-    iget-object p1, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lgi/f;->b(Ljava/net/Socket;)Lgi/e;
 
     move-result-object p1
-
-    check-cast p1, Lok/e;
-
-    if-eq p1, p0, :cond_3
-
-    .line 2
-    sget-object v0, Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;
-
-    if-ne p1, v0, :cond_1
-
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    iget-object v1, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_2
-
-    .line 4
-    invoke-interface {p1}, Lok/e;->cancel()V
-
-    .line 5
-    :cond_2
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_3
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public get()Ljava/lang/Object;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/ExecutionException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-static {}, Lio/reactivex/rxjava3/internal/util/c;->b()V
-
-    .line 3
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-
-    .line 4
-    :cond_0
-    invoke-virtual {p0}, Lgi/f;->isCancelled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 5
-    iget-object v0, p0, Lgi/f;->b:Ljava/lang/Throwable;
-
-    if-nez v0, :cond_1
-
-    .line 6
-    iget-object v0, p0, Lgi/f;->a:Ljava/lang/Object;
-
-    return-object v0
-
-    .line 7
-    :cond_1
-    new-instance v1, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    .line 8
-    :cond_2
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 4
-    .param p3    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "timeout",
-            "unit"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/ExecutionException;,
-            Ljava/util/concurrent/TimeoutException;
-        }
-    .end annotation
-
-    .line 9
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    .line 10
-    invoke-static {}, Lio/reactivex/rxjava3/internal/util/c;->b()V
-
-    .line 11
-    invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 12
-    :cond_0
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    invoke-static {p1, p2, p3}, Lio/reactivex/rxjava3/internal/util/ExceptionHelper;->h(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 13
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lgi/f;->isCancelled()Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    .line 14
-    iget-object p1, p0, Lgi/f;->b:Ljava/lang/Throwable;
-
-    if-nez p1, :cond_2
-
-    .line 15
-    iget-object p1, p0, Lgi/f;->a:Ljava/lang/Object;
 
     return-object p1
-
-    .line 16
-    :cond_2
-    new-instance p2, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
-
-    .line 17
-    :cond_3
-    new-instance p1, Ljava/util/concurrent/CancellationException;
-
-    invoke-direct {p1}, Ljava/util/concurrent/CancellationException;-><init>()V
-
-    throw p1
 .end method
 
-.method public isCancelled()Z
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public isDone()Z
-    .locals 4
-
-    .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public onComplete()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lgi/f;->a:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    const-string v1, "The source is empty"
-
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Lgi/f;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lok/e;
-
-    if-eq v0, p0, :cond_2
-
-    .line 4
-    sget-object v1, Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;
-
-    if-ne v0, v1, :cond_1
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    iget-object v1, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1, v0, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 6
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public onError(Ljava/lang/Throwable;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
+.method public b(Ljava/net/Socket;)Lgi/e;
+    .locals 11
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lgi/f;->b:Ljava/lang/Throwable;
+    new-instance v10, Lgi/e;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lgi/f;->a:Lth/a;
 
     .line 2
-    iget-object v0, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v0}, Lth/a;->d()I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
-
-    check-cast v0, Lok/e;
-
-    if-eq v0, p0, :cond_0
+    iget-object v0, p0, Lgi/f;->a:Lth/a;
 
     .line 3
-    sget-object v1, Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;
+    invoke-virtual {v0}, Lth/a;->f()I
 
-    if-eq v0, v1, :cond_0
+    move-result v2
 
-    iget-object v1, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lgi/f;->a:Lth/a;
 
     .line 4
-    invoke-virtual {v1, v0, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0}, Lgi/d;->a(Lth/a;)Ljava/nio/charset/CharsetDecoder;
 
-    move-result v0
+    move-result-object v3
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lgi/f;->a:Lth/a;
 
     .line 5
-    iput-object p1, p0, Lgi/f;->b:Ljava/lang/Throwable;
+    invoke-static {v0}, Lgi/d;->b(Lth/a;)Ljava/nio/charset/CharsetEncoder;
+
+    move-result-object v4
+
+    iget-object v0, p0, Lgi/f;->a:Lth/a;
 
     .line 6
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {v0}, Lth/a;->h()Lth/c;
 
-    return-void
+    move-result-object v5
+
+    iget-object v6, p0, Lgi/f;->b:Ldi/e;
+
+    iget-object v7, p0, Lgi/f;->c:Ldi/e;
+
+    iget-object v8, p0, Lgi/f;->d:Lpi/f;
+
+    iget-object v9, p0, Lgi/f;->e:Lpi/d;
+
+    move-object v0, v10
+
+    invoke-direct/range {v0 .. v9}, Lgi/e;-><init>(IILjava/nio/charset/CharsetDecoder;Ljava/nio/charset/CharsetEncoder;Lth/c;Ldi/e;Ldi/e;Lpi/f;Lpi/d;)V
 
     .line 7
-    :cond_0
-    invoke-static {p1}, Lji/a;->Y(Ljava/lang/Throwable;)V
+    invoke-virtual {v10, p1}, Lgi/e;->R1(Ljava/net/Socket;)V
 
-    return-void
-.end method
-
-.method public onNext(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "t"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lgi/f;->a:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    iget-object p1, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lok/e;
-
-    invoke-interface {p1}, Lok/e;->cancel()V
-
-    .line 3
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v0, "More than one element received"
-
-    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lgi/f;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    .line 4
-    :cond_0
-    iput-object p1, p0, Lgi/f;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public onSubscribe(Lok/e;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "s"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lgi/f;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const-wide v1, 0x7fffffffffffffffL
-
-    invoke-static {v0, p1, v1, v2}, Lio/reactivex/rxjava3/internal/subscriptions/SubscriptionHelper;->setOnce(Ljava/util/concurrent/atomic/AtomicReference;Lok/e;J)Z
-
-    return-void
-.end method
-
-.method public request(J)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "n"
-        }
-    .end annotation
-
-    return-void
+    return-object v10
 .end method

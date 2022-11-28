@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lx/i;
-
-.field public final synthetic b:Landroidx/camera/core/impl/CameraCaptureFailure;
+.field public final synthetic a:Lb0/m;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx/i;Landroidx/camera/core/impl/CameraCaptureFailure;)V
+.method public synthetic constructor <init>(Lb0/m;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/t;->a:Lx/i;
-
-    iput-object p2, p0, Landroidx/camera/camera2/internal/t;->b:Landroidx/camera/core/impl/CameraCaptureFailure;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/t;->a:Lb0/m;
 
     return-void
 .end method
@@ -28,13 +24,11 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Landroidx/camera/camera2/internal/t;->a:Lx/i;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/t;->a:Lb0/m;
 
-    iget-object v1, p0, Landroidx/camera/camera2/internal/t;->b:Landroidx/camera/core/impl/CameraCaptureFailure;
-
-    invoke-static {v0, v1}, Landroidx/camera/camera2/internal/v$a;->f(Lx/i;Landroidx/camera/core/impl/CameraCaptureFailure;)V
+    invoke-static {v0}, Landroidx/camera/camera2/internal/w$a;->e(Lb0/m;)V
 
     return-void
 .end method

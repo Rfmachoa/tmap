@@ -3,14 +3,16 @@
 .source "AppCompatImageButton.java"
 
 # interfaces
-.implements Ls1/l0;
+.implements Landroidx/core/view/p0;
 .implements Landroidx/core/widget/u;
 
 
 # instance fields
 .field private final mBackgroundTintHelper:Landroidx/appcompat/widget/d;
 
-.field private final mImageHelper:Landroidx/appcompat/widget/h;
+.field private mHasLevel:Z
+
+.field private final mImageHelper:Landroidx/appcompat/widget/k;
 
 
 # direct methods
@@ -60,38 +62,43 @@
     .end param
 
     .line 3
-    invoke-static {p1}, Landroidx/appcompat/widget/g0;->b(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/l0;->b(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    const/4 p1, 0x0
+
     .line 4
+    iput-boolean p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mHasLevel:Z
+
+    .line 5
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/e0;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/j0;->a(Landroid/view/View;Landroid/content/Context;)V
 
-    .line 5
+    .line 6
     new-instance p1, Landroidx/appcompat/widget/d;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/d;-><init>(Landroid/view/View;)V
 
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mBackgroundTintHelper:Landroidx/appcompat/widget/d;
 
-    .line 6
+    .line 7
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/d;->e(Landroid/util/AttributeSet;I)V
 
-    .line 7
-    new-instance p1, Landroidx/appcompat/widget/h;
-
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/h;-><init>(Landroid/widget/ImageView;)V
-
-    iput-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
-
     .line 8
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/h;->f(Landroid/util/AttributeSet;I)V
+    new-instance p1, Landroidx/appcompat/widget/k;
+
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/k;-><init>(Landroid/widget/ImageView;)V
+
+    iput-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
+
+    .line 9
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/k;->g(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
@@ -114,12 +121,12 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {v0}, Landroidx/appcompat/widget/h;->b()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/k;->c()V
 
     :cond_1
     return-void
@@ -197,12 +204,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Landroidx/appcompat/widget/h;->c()Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/k;->d()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -227,12 +234,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Landroidx/appcompat/widget/h;->d()Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/k;->e()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
 
@@ -249,9 +256,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/h;->e()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/k;->f()Z
 
     move-result v0
 
@@ -276,6 +283,10 @@
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -321,36 +332,75 @@
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 2
-    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-virtual {p1}, Landroidx/appcompat/widget/h;->b()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/k;->c()V
 
     :cond_0
     return-void
 .end method
 
 .method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    .locals 2
     .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
-    .line 2
-    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 3
-    invoke-virtual {p1}, Landroidx/appcompat/widget/h;->b()V
+    iget-boolean v1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mHasLevel:Z
 
+    if-nez v1, :cond_0
+
+    .line 2
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/k;->h(Landroid/graphics/drawable/Drawable;)V
+
+    .line 3
     :cond_0
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 4
+    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
+
+    if-eqz p1, :cond_1
+
+    .line 5
+    invoke-virtual {p1}, Landroidx/appcompat/widget/k;->c()V
+
+    .line 6
+    iget-boolean p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mHasLevel:Z
+
+    if-nez p1, :cond_1
+
+    .line 7
+    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
+
+    invoke-virtual {p1}, Landroidx/appcompat/widget/k;->b()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public setImageLevel(I)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageLevel(I)V
+
+    const/4 p1, 0x1
+
+    .line 2
+    iput-boolean p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mHasLevel:Z
+
     return-void
 .end method
 
@@ -362,9 +412,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/h;->g(I)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/k;->i(I)V
 
     return-void
 .end method
@@ -380,12 +430,12 @@
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setImageURI(Landroid/net/Uri;)V
 
     .line 2
-    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object p1, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz p1, :cond_0
 
     .line 3
-    invoke-virtual {p1}, Landroidx/appcompat/widget/h;->b()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/k;->c()V
 
     :cond_0
     return-void
@@ -452,12 +502,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/h;->i(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/k;->k(Landroid/content/res/ColorStateList;)V
 
     :cond_0
     return-void
@@ -476,12 +526,12 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/h;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatImageButton;->mImageHelper:Landroidx/appcompat/widget/k;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/h;->j(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/k;->l(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     return-void

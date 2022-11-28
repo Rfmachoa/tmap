@@ -18,11 +18,11 @@
         "onCreate",
         "onResume",
         "",
-        "w5",
+        "F5",
         "Landroidx/fragment/app/Fragment;",
-        "v5",
+        "E5",
         "Landroid/view/View;",
-        "u5",
+        "D5",
         "<init>",
         "()V",
         "tmap_android_phoneKUShip"
@@ -30,21 +30,39 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public g:Ljava/util/HashMap;
+.field public g:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/Map;
+
     invoke-direct {p0}, Lcom/skt/tmap/setting/base/SettingPreferenceActivityBase;-><init>()V
 
     return-void
@@ -52,140 +70,7 @@
 
 
 # virtual methods
-.method public A5(I)Landroid/view/View;
-    .locals 2
-
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/HashMap;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/HashMap;
-
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
-    .param p1    # Landroid/os/Bundle;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-super {p0, p1}, Lcom/skt/tmap/setting/base/SettingPreferenceActivityBase;->onCreate(Landroid/os/Bundle;)V
-
-    .line 2
-    iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    const-string v0, "basePresenter"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    const p1, 0x7f0a0b86
-
-    .line 3
-    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    const-string v1, "findViewById(R.id.traffi\u2026light_description_layout)"
-
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast p1, Landroid/widget/LinearLayout;
-
-    const/4 v1, 0x0
-
-    .line 4
-    invoke-virtual {p1, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 5
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v1
-
-    const v2, 0x7f0d0216
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, p1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    .line 6
-    iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    const-string/jumbo v1, "tab.c-its_guide"
-
-    invoke-static {p1, v0, v1}, Lcom/skt/tmap/activity/x;->a(Lcom/skt/tmap/mvp/presenter/BasePresenter;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 2
-
-    .line 1
-    invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
-
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    const-string v1, "basePresenter"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object v0
-
-    const-string v1, "/setting/laboratory/c-its"
-
-    invoke-virtual {v0, v1}, Ldc/d;->k0(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public u5()Landroid/view/View;
+.method public D5()Landroid/view/View;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
@@ -195,27 +80,27 @@
     return-object v0
 .end method
 
-.method public v5()Landroidx/fragment/app/Fragment;
+.method public E5()Landroidx/fragment/app/Fragment;
     .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    new-instance v0, Lwc/t;
+    new-instance v0, Lcom/skt/tmap/setting/fragment/u;
 
-    const v1, 0x7f160011
+    const v1, 0x7f170012
 
-    invoke-direct {v0, v1}, Lwc/t;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/skt/tmap/setting/fragment/u;-><init>(I)V
 
     return-object v0
 .end method
 
-.method public w5()Ljava/lang/String;
+.method public F5()Ljava/lang/String;
     .locals 2
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    const v0, 0x7f13097f
+    const v0, 0x7f140a04
 
     .line 1
     invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -229,15 +114,138 @@
     return-object v0
 .end method
 
-.method public z5()V
+.method public K5()V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/Map;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+    return-void
+.end method
+
+.method public L5(I)Landroid/view/View;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapTrafficLightSettingActivity;->g:Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_0
+    const/4 v1, 0x0
+
+    :cond_1
+    :goto_0
+    return-object v1
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 3
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/skt/tmap/setting/base/SettingPreferenceActivityBase;->onCreate(Landroid/os/Bundle;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    const p1, 0x7f0a0c0d
+
+    .line 3
+    invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    const-string v0, "findViewById(R.id.traffi\u2026light_description_layout)"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast p1, Landroid/widget/LinearLayout;
+
+    const/4 v0, 0x0
+
+    .line 4
+    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 5
+    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0d0217
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    .line 6
+    iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
+    const-string v0, "tab.c-its_guide"
+
+    invoke-virtual {p1, v0}, Lbe/e;->T(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->onResume()V
+
+    .line 2
+    iget-object v0, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    const-string v1, "/setting/laboratory/c-its"
+
+    invoke-virtual {v0, v1}, Lbe/e;->l0(Ljava/lang/String;)V
+
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class public final Landroidx/transition/Slide$e;
+.class public Landroidx/transition/Slide$e;
 .super Landroidx/transition/Slide$h;
 .source "Slide.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

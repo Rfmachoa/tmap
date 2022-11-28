@@ -142,7 +142,7 @@
         value = 0x15
     .end annotation
 
-    const-string/jumbo v0, "telecom"
+    const-string v0, "telecom"
 
     .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

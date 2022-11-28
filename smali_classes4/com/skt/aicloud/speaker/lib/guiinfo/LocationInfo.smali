@@ -64,7 +64,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->e(Landroid/os/Parcel;)V
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->f(Landroid/os/Parcel;)V
 
     return-void
 .end method
@@ -89,7 +89,7 @@
 
 
 # virtual methods
-.method public b()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -107,15 +107,6 @@
     return-object v0
 .end method
 
-.method public d()Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo$Type;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->a:Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo$Type;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -124,7 +115,16 @@
     return v0
 .end method
 
-.method public e(Landroid/os/Parcel;)V
+.method public e()Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo$Type;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->a:Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo$Type;
+
+    return-object v0
+.end method
+
+.method public f(Landroid/os/Parcel;)V
     .locals 1
 
     .line 1
@@ -159,7 +159,7 @@
     return-void
 .end method
 
-.method public f(Ljava/lang/String;Ljava/lang/String;)V
+.method public h(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .line 1

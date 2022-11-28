@@ -3,7 +3,7 @@
 .source "GradientStroke.java"
 
 # interfaces
-.implements Ls3/b;
+.implements Lo5/b;
 
 
 # instance fields
@@ -11,15 +11,15 @@
 
 .field public final b:Lcom/airbnb/lottie/model/content/GradientType;
 
-.field public final c:Lr3/c;
+.field public final c:Ln5/c;
 
-.field public final d:Lr3/d;
+.field public final d:Ln5/d;
 
-.field public final e:Lr3/f;
+.field public final e:Ln5/f;
 
-.field public final f:Lr3/f;
+.field public final f:Ln5/f;
 
-.field public final g:Lr3/b;
+.field public final g:Ln5/b;
 
 .field public final h:Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
 
@@ -31,13 +31,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lr3/b;",
+            "Ln5/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final l:Lr3/b;
+.field public final l:Ln5/b;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -46,9 +46,9 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/GradientType;Lr3/c;Lr3/d;Lr3/f;Lr3/f;Lr3/b;Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;FLjava/util/List;Lr3/b;Z)V
+.method public constructor <init>(Ljava/lang/String;Lcom/airbnb/lottie/model/content/GradientType;Ln5/c;Ln5/d;Ln5/f;Ln5/f;Ln5/b;Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;FLjava/util/List;Ln5/b;Z)V
     .locals 0
-    .param p12    # Lr3/b;
+    .param p12    # Ln5/b;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -57,18 +57,18 @@
             "(",
             "Ljava/lang/String;",
             "Lcom/airbnb/lottie/model/content/GradientType;",
-            "Lr3/c;",
-            "Lr3/d;",
-            "Lr3/f;",
-            "Lr3/f;",
-            "Lr3/b;",
+            "Ln5/c;",
+            "Ln5/d;",
+            "Ln5/f;",
+            "Ln5/f;",
+            "Ln5/b;",
             "Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;",
             "Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;",
             "F",
             "Ljava/util/List<",
-            "Lr3/b;",
+            "Ln5/b;",
             ">;",
-            "Lr3/b;",
+            "Ln5/b;",
             "Z)V"
         }
     .end annotation
@@ -83,19 +83,19 @@
     iput-object p2, p0, Lcom/airbnb/lottie/model/content/a;->b:Lcom/airbnb/lottie/model/content/GradientType;
 
     .line 4
-    iput-object p3, p0, Lcom/airbnb/lottie/model/content/a;->c:Lr3/c;
+    iput-object p3, p0, Lcom/airbnb/lottie/model/content/a;->c:Ln5/c;
 
     .line 5
-    iput-object p4, p0, Lcom/airbnb/lottie/model/content/a;->d:Lr3/d;
+    iput-object p4, p0, Lcom/airbnb/lottie/model/content/a;->d:Ln5/d;
 
     .line 6
-    iput-object p5, p0, Lcom/airbnb/lottie/model/content/a;->e:Lr3/f;
+    iput-object p5, p0, Lcom/airbnb/lottie/model/content/a;->e:Ln5/f;
 
     .line 7
-    iput-object p6, p0, Lcom/airbnb/lottie/model/content/a;->f:Lr3/f;
+    iput-object p6, p0, Lcom/airbnb/lottie/model/content/a;->f:Ln5/f;
 
     .line 8
-    iput-object p7, p0, Lcom/airbnb/lottie/model/content/a;->g:Lr3/b;
+    iput-object p7, p0, Lcom/airbnb/lottie/model/content/a;->g:Ln5/b;
 
     .line 9
     iput-object p8, p0, Lcom/airbnb/lottie/model/content/a;->h:Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
@@ -110,7 +110,7 @@
     iput-object p11, p0, Lcom/airbnb/lottie/model/content/a;->k:Ljava/util/List;
 
     .line 13
-    iput-object p12, p0, Lcom/airbnb/lottie/model/content/a;->l:Lr3/b;
+    iput-object p12, p0, Lcom/airbnb/lottie/model/content/a;->l:Ln5/b;
 
     .line 14
     iput-boolean p13, p0, Lcom/airbnb/lottie/model/content/a;->m:Z
@@ -120,13 +120,13 @@
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Ln3/c;
+.method public a(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;)Lj5/c;
     .locals 1
 
     .line 1
-    new-instance v0, Ln3/i;
+    new-instance v0, Lj5/i;
 
-    invoke-direct {v0, p1, p2, p0}, Ln3/i;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/a;)V
+    invoke-direct {v0, p1, p2, p0}, Lj5/i;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/a;)V
 
     return-object v0
 .end method
@@ -140,31 +140,31 @@
     return-object v0
 .end method
 
-.method public c()Lr3/b;
+.method public c()Ln5/b;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->l:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->l:Ln5/b;
 
     return-object v0
 .end method
 
-.method public d()Lr3/f;
+.method public d()Ln5/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->f:Lr3/f;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->f:Ln5/f;
 
     return-object v0
 .end method
 
-.method public e()Lr3/c;
+.method public e()Ln5/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->c:Lr3/c;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->c:Ln5/c;
 
     return-object v0
 .end method
@@ -193,7 +193,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lr3/b;",
+            "Ln5/b;",
             ">;"
         }
     .end annotation
@@ -222,29 +222,29 @@
     return-object v0
 .end method
 
-.method public k()Lr3/d;
+.method public k()Ln5/d;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->d:Lr3/d;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->d:Ln5/d;
 
     return-object v0
 .end method
 
-.method public l()Lr3/f;
+.method public l()Ln5/f;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->e:Lr3/f;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->e:Ln5/f;
 
     return-object v0
 .end method
 
-.method public m()Lr3/b;
+.method public m()Ln5/b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->g:Lr3/b;
+    iget-object v0, p0, Lcom/airbnb/lottie/model/content/a;->g:Ln5/b;
 
     return-object v0
 .end method

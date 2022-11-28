@@ -17,29 +17,31 @@
 # static fields
 .field public static final K0:Ljava/lang/String; = "INTENT_VALUE_TOAST_MESSAGE"
 
-.field public static final V0:Ljava/lang/String; = "INTENT_VALUE_NETWORK_ERROR_MESSAGE"
+.field public static final X0:Ljava/lang/String; = "INTENT_VALUE_NETWORK_ERROR_MESSAGE"
 
-.field public static final W0:Ljava/lang/String; = "INTENT_VALUE_NETWORK_ERROR_CODE"
+.field public static final Y0:Ljava/lang/String; = "INTENT_VALUE_NETWORK_ERROR_CODE"
 
-.field public static final X0:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_NAV_NOTIFICATION_OPEN_APP"
+.field public static final Z0:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_NAV_NOTIFICATION_OPEN_APP"
 
-.field public static final Y0:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_LOGIN_COMPLETE"
+.field public static final a1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_LOGIN_COMPLETE"
 
-.field public static final Z0:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_LOGOUT"
+.field public static final b1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_LOGOUT"
 
-.field public static final a1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_START_MAIN"
+.field public static final c1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_START_MAIN"
 
-.field public static final b1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_ROUTE_GUIDE_SIMULATOR_BIND"
+.field public static final d1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_ROUTE_GUIDE_SIMULATOR_BIND"
 
-.field public static final c1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_FINISH_ROUTE"
+.field public static final e1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_FINISH_ROUTE"
 
-.field public static final d1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_REROUTE_DESTINATION_END"
+.field public static final f1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_REROUTE_DESTINATION_END"
 
-.field public static final e1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_SHOW_TOAST"
+.field public static final g1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_SHOW_TOAST"
 
-.field public static final f1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_NETWORK_ERROR"
+.field public static final h1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_NETWORK_ERROR"
 
-.field public static final g1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_FINISH_CAR_APP"
+.field public static final i1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_FINISH_CAR_APP"
+
+.field public static final j1:Ljava/lang/String; = "com.skt.tmap.action.INTENT_ACTION_CONTINUE_ROUTE"
 
 .field public static final k0:I = 0xf4628
 
@@ -73,7 +75,7 @@
     return-void
 .end method
 
-.method public static final s(Landroid/content/Context;)Landroid/app/Notification;
+.method public static final o(Landroid/content/Context;)Landroid/app/Notification;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -87,11 +89,11 @@
     const-string v0, "noti_channel_car"
 
     .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/car/TmapCarAppService;->t(Landroid/content/Context;Ljava/lang/String;)Landroidx/core/app/NotificationCompat$e;
+    invoke-static {p0, v0}, Lcom/skt/tmap/car/TmapCarAppService;->p(Landroid/content/Context;Ljava/lang/String;)Landroidx/core/app/NotificationCompat$e;
 
     move-result-object v0
 
-    const v1, 0x7f1303fa
+    const v1, 0x7f14045a
 
     .line 2
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -103,7 +105,7 @@
     move-result-object p0
 
     .line 3
-    invoke-static {}, Lcom/skt/tmap/util/e;->B()I
+    invoke-static {}, Lcom/skt/tmap/util/g;->E()I
 
     move-result v0
 
@@ -126,7 +128,7 @@
     return-object p0
 .end method
 
-.method public static final t(Landroid/content/Context;Ljava/lang/String;)Landroidx/core/app/NotificationCompat$e;
+.method public static final p(Landroid/content/Context;Ljava/lang/String;)Landroidx/core/app/NotificationCompat$e;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -163,7 +165,7 @@
     return-object v0
 .end method
 
-.method public static final u(Landroid/content/Context;)V
+.method public static final q(Landroid/content/Context;)V
     .locals 3
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -182,54 +184,54 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    new-instance v0, Landroidx/core/app/m$a;
+    new-instance v0, Landroidx/core/app/q$a;
 
     const/4 v1, 0x4
 
     const-string v2, "noti_channel_car"
 
-    invoke-direct {v0, v2, v1}, Landroidx/core/app/m$a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Landroidx/core/app/q$a;-><init>(Ljava/lang/String;I)V
 
-    const v1, 0x7f1303fc
+    const v1, 0x7f14045c
 
     .line 3
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/core/app/m$a;->h(Ljava/lang/CharSequence;)Landroidx/core/app/m$a;
+    invoke-virtual {v0, v1}, Landroidx/core/app/q$a;->h(Ljava/lang/CharSequence;)Landroidx/core/app/q$a;
 
     move-result-object v0
 
-    const v1, 0x7f1303fb
+    const v1, 0x7f14045b
 
     .line 4
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroidx/core/app/m$a;->c(Ljava/lang/String;)Landroidx/core/app/m$a;
+    invoke-virtual {v0, v1}, Landroidx/core/app/q$a;->c(Ljava/lang/String;)Landroidx/core/app/q$a;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
     .line 5
-    invoke-virtual {v0, v1}, Landroidx/core/app/m$a;->i(Z)Landroidx/core/app/m$a;
+    invoke-virtual {v0, v1}, Landroidx/core/app/q$a;->i(Z)Landroidx/core/app/q$a;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0}, Landroidx/core/app/m$a;->a()Landroidx/core/app/m;
+    invoke-virtual {v0}, Landroidx/core/app/q$a;->a()Landroidx/core/app/q;
 
     move-result-object v0
 
     .line 7
-    invoke-static {p0}, Ln0/c;->l(Landroid/content/Context;)Ln0/c;
+    invoke-static {p0}, Lb1/c;->l(Landroid/content/Context;)Lb1/c;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Ln0/c;->e(Landroidx/core/app/m;)V
+    invoke-virtual {p0, v0}, Lb1/c;->e(Landroidx/core/app/q;)V
 
     :cond_0
     return-void
@@ -237,45 +239,45 @@
 
 
 # virtual methods
-.method public c()Lp0/a;
+.method public c()Ld1/a;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    sget-boolean v0, Lcom/skt/tmap/GlobalDataManager;->w0:Z
+    sget-boolean v0, Lcom/skt/tmap/GlobalDataManager;->v0:Z
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lp0/a;->f:Lp0/a;
+    sget-object v0, Ld1/a;->f:Ld1/a;
 
     return-object v0
 
     .line 3
     :cond_0
-    new-instance v0, Lp0/a$b;
+    new-instance v0, Ld1/a$b;
 
     invoke-virtual {p0}, Landroid/app/Service;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lp0/a$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Ld1/a$b;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f03000e
 
-    invoke-virtual {v0, v1}, Lp0/a$b;->b(I)Lp0/a$b;
+    invoke-virtual {v0, v1}, Ld1/a$b;->b(I)Ld1/a$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lp0/a$b;->c()Lp0/a;
+    invoke-virtual {v0}, Ld1/a$b;->c()Ld1/a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public m()Landroidx/car/app/Session;
+.method public j()Landroidx/car/app/Session;
     .locals 3
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -285,10 +287,10 @@
 
     const-string v1, "TmapCarAppService.onCreateSession "
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    invoke-static {p0}, Lcom/skt/tmap/car/TmapCarAppService;->u(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/car/TmapCarAppService;->q(Landroid/content/Context;)V
 
     .line 3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -300,7 +302,7 @@
     if-lt v0, v2, :cond_0
 
     .line 4
-    invoke-static {p0}, Lcom/skt/tmap/car/TmapCarAppService;->s(Landroid/content/Context;)Landroid/app/Notification;
+    invoke-static {p0}, Lcom/skt/tmap/car/TmapCarAppService;->o(Landroid/content/Context;)Landroid/app/Notification;
 
     move-result-object v0
 
@@ -312,7 +314,7 @@
 
     .line 5
     :cond_0
-    invoke-static {p0}, Lcom/skt/tmap/car/TmapCarAppService;->s(Landroid/content/Context;)Landroid/app/Notification;
+    invoke-static {p0}, Lcom/skt/tmap/car/TmapCarAppService;->o(Landroid/content/Context;)Landroid/app/Notification;
 
     move-result-object v0
 

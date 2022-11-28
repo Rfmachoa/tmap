@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/HitBuilders$ScreenViewBuilder;
 .super Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -47,14 +47,14 @@
 .method public final bridge synthetic addImpression(Lcom/google/android/gms/analytics/ecommerce/Product;Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/Product;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -66,10 +66,10 @@
 .method public final bridge synthetic addProduct(Lcom/google/android/gms/analytics/ecommerce/Product;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/Product;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -81,10 +81,10 @@
 .method public final bridge synthetic addPromotion(Lcom/google/android/gms/analytics/ecommerce/Promotion;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/Promotion;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -96,10 +96,10 @@
 .method public final bridge synthetic setCampaignParamsFromUrl(Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -111,10 +111,10 @@
 .method public final bridge synthetic setCustomDimension(ILjava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -125,7 +125,7 @@
 
 .method public final bridge synthetic setCustomMetric(IF)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -136,7 +136,7 @@
 
 .method public final bridge synthetic setNewSession()Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -147,7 +147,7 @@
 
 .method public final bridge synthetic setNonInteraction(Z)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -159,10 +159,10 @@
 .method public final bridge synthetic setProductAction(Lcom/google/android/gms/analytics/ecommerce/ProductAction;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Lcom/google/android/gms/analytics/ecommerce/ProductAction;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -174,10 +174,10 @@
 .method public final bridge synthetic setPromotionAction(Ljava/lang/String;)Lcom/google/android/gms/analytics/HitBuilders$HitBuilder;
     .locals 0
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1

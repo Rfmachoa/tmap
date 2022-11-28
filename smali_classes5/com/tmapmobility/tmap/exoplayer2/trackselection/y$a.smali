@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/trackselection/y$a;
 .super Ljava/lang/Object;
-.source "TrackSelector.java"
+.source "TrackSelectionUtil.java"
 
 
 # annotations
@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onTrackSelectionsInvalidated()V
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$a;)Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
 .end method

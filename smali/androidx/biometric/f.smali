@@ -204,7 +204,7 @@
     return-void
 .end method
 
-.method public static Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+.method public static a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -250,12 +250,21 @@
     .locals 1
 
     .line 1
+    iget-boolean v0, p0, Landroidx/biometric/f;->t:Z
+
+    return v0
+.end method
+
+.method public B()Z
+    .locals 1
+
+    .line 1
     iget-boolean v0, p0, Landroidx/biometric/f;->n:Z
 
     return v0
 .end method
 
-.method public B()Landroidx/lifecycle/LiveData;
+.method public C()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -288,7 +297,7 @@
     return-object v0
 .end method
 
-.method public C()Z
+.method public D()Z
     .locals 1
 
     .line 1
@@ -297,7 +306,7 @@
     return v0
 .end method
 
-.method public D()V
+.method public E()V
     .locals 1
 
     const/4 v0, 0x0
@@ -308,7 +317,7 @@
     return-void
 .end method
 
-.method public E(Landroidx/biometric/c;)V
+.method public F(Landroidx/biometric/c;)V
     .locals 1
     .param p1    # Landroidx/biometric/c;
         .annotation build Landroidx/annotation/Nullable;
@@ -331,12 +340,12 @@
     :cond_0
     iget-object v0, p0, Landroidx/biometric/f;->p:Landroidx/lifecycle/MutableLiveData;
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public F(Z)V
+.method public G(Z)V
     .locals 1
 
     .line 1
@@ -359,12 +368,12 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public G(Ljava/lang/CharSequence;)V
+.method public H(Ljava/lang/CharSequence;)V
     .locals 1
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/Nullable;
@@ -387,12 +396,12 @@
     :cond_0
     iget-object v0, p0, Landroidx/biometric/f;->q:Landroidx/lifecycle/MutableLiveData;
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public H(Landroidx/biometric/BiometricPrompt$b;)V
+.method public I(Landroidx/biometric/BiometricPrompt$b;)V
     .locals 1
     .param p1    # Landroidx/biometric/BiometricPrompt$b;
         .annotation build Landroidx/annotation/Nullable;
@@ -415,12 +424,12 @@
     :cond_0
     iget-object v0, p0, Landroidx/biometric/f;->o:Landroidx/lifecycle/MutableLiveData;
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public I(Z)V
+.method public J(Z)V
     .locals 0
 
     .line 1
@@ -429,7 +438,7 @@
     return-void
 .end method
 
-.method public J(I)V
+.method public K(I)V
     .locals 0
 
     .line 1
@@ -438,7 +447,7 @@
     return-void
 .end method
 
-.method public K(Landroidx/biometric/BiometricPrompt$a;)V
+.method public L(Landroidx/biometric/BiometricPrompt$a;)V
     .locals 0
     .param p1    # Landroidx/biometric/BiometricPrompt$a;
         .annotation build Landroidx/annotation/NonNull;
@@ -451,7 +460,7 @@
     return-void
 .end method
 
-.method public L(Ljava/util/concurrent/Executor;)V
+.method public M(Ljava/util/concurrent/Executor;)V
     .locals 0
     .param p1    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/NonNull;
@@ -464,7 +473,7 @@
     return-void
 .end method
 
-.method public M(Z)V
+.method public N(Z)V
     .locals 0
 
     .line 1
@@ -473,7 +482,7 @@
     return-void
 .end method
 
-.method public N(Landroidx/biometric/BiometricPrompt$c;)V
+.method public O(Landroidx/biometric/BiometricPrompt$c;)V
     .locals 0
     .param p1    # Landroidx/biometric/BiometricPrompt$c;
         .annotation build Landroidx/annotation/Nullable;
@@ -486,7 +495,7 @@
     return-void
 .end method
 
-.method public O(Z)V
+.method public P(Z)V
     .locals 0
 
     .line 1
@@ -495,7 +504,7 @@
     return-void
 .end method
 
-.method public P(Z)V
+.method public Q(Z)V
     .locals 1
 
     .line 1
@@ -518,12 +527,12 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public Q(Z)V
+.method public R(Z)V
     .locals 0
 
     .line 1
@@ -532,7 +541,7 @@
     return-void
 .end method
 
-.method public R(Ljava/lang/CharSequence;)V
+.method public S(Ljava/lang/CharSequence;)V
     .locals 1
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/NonNull;
@@ -555,12 +564,12 @@
     :cond_0
     iget-object v0, p0, Landroidx/biometric/f;->x:Landroidx/lifecycle/MutableLiveData;
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public S(I)V
+.method public T(I)V
     .locals 0
 
     .line 1
@@ -569,7 +578,7 @@
     return-void
 .end method
 
-.method public T(I)V
+.method public U(I)V
     .locals 1
 
     .line 1
@@ -592,12 +601,12 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public U(Z)V
+.method public V(Z)V
     .locals 0
 
     .line 1
@@ -606,7 +615,7 @@
     return-void
 .end method
 
-.method public V(Z)V
+.method public W(Z)V
     .locals 1
 
     .line 1
@@ -629,12 +638,12 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/biometric/f;->Z(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Landroidx/biometric/f;->a0(Landroidx/lifecycle/MutableLiveData;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public W(Ljava/lang/CharSequence;)V
+.method public X(Ljava/lang/CharSequence;)V
     .locals 0
     .param p1    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/Nullable;
@@ -647,7 +656,7 @@
     return-void
 .end method
 
-.method public X(Landroidx/biometric/BiometricPrompt$d;)V
+.method public Y(Landroidx/biometric/BiometricPrompt$d;)V
     .locals 0
     .param p1    # Landroidx/biometric/BiometricPrompt$d;
         .annotation build Landroidx/annotation/Nullable;
@@ -660,7 +669,7 @@
     return-void
 .end method
 
-.method public Y(Z)V
+.method public Z(Z)V
     .locals 0
 
     .line 1
@@ -669,7 +678,7 @@
     return-void
 .end method
 
-.method public a()I
+.method public b()I
     .locals 2
 
     .line 1
@@ -693,7 +702,7 @@
     return v0
 .end method
 
-.method public b()Landroidx/biometric/a;
+.method public c()Landroidx/biometric/a;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -721,7 +730,7 @@
     return-object v0
 .end method
 
-.method public c()Landroidx/lifecycle/MutableLiveData;
+.method public d()Landroidx/lifecycle/MutableLiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -754,7 +763,7 @@
     return-object v0
 .end method
 
-.method public d()Landroidx/lifecycle/LiveData;
+.method public e()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -787,7 +796,7 @@
     return-object v0
 .end method
 
-.method public e()Landroidx/lifecycle/LiveData;
+.method public f()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -820,7 +829,7 @@
     return-object v0
 .end method
 
-.method public f()I
+.method public g()I
     .locals 1
 
     .line 1
@@ -829,7 +838,7 @@
     return v0
 .end method
 
-.method public g()Landroidx/biometric/g;
+.method public h()Landroidx/biometric/g;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -853,7 +862,7 @@
     return-object v0
 .end method
 
-.method public h()Landroidx/biometric/BiometricPrompt$a;
+.method public i()Landroidx/biometric/BiometricPrompt$a;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -877,7 +886,7 @@
     return-object v0
 .end method
 
-.method public i()Ljava/util/concurrent/Executor;
+.method public j()Ljava/util/concurrent/Executor;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -898,7 +907,7 @@
     return-object v0
 .end method
 
-.method public j()Landroidx/biometric/BiometricPrompt$c;
+.method public k()Landroidx/biometric/BiometricPrompt$c;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -909,7 +918,7 @@
     return-object v0
 .end method
 
-.method public k()Ljava/lang/CharSequence;
+.method public l()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -932,7 +941,7 @@
     return-object v0
 .end method
 
-.method public l()Landroidx/lifecycle/LiveData;
+.method public m()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -965,7 +974,7 @@
     return-object v0
 .end method
 
-.method public m()I
+.method public n()I
     .locals 1
 
     .line 1
@@ -974,7 +983,7 @@
     return v0
 .end method
 
-.method public n()Landroidx/lifecycle/LiveData;
+.method public o()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1007,11 +1016,11 @@
     return-object v0
 .end method
 
-.method public o()I
+.method public p()I
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Landroidx/biometric/f;->a()I
+    invoke-virtual {p0}, Landroidx/biometric/f;->b()I
 
     move-result v0
 
@@ -1039,7 +1048,7 @@
     return v0
 .end method
 
-.method public p()Landroid/content/DialogInterface$OnClickListener;
+.method public q()Landroid/content/DialogInterface$OnClickListener;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1063,7 +1072,7 @@
     return-object v0
 .end method
 
-.method public q()Ljava/lang/CharSequence;
+.method public r()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -1094,7 +1103,7 @@
     return-object v0
 .end method
 
-.method public r()Ljava/lang/CharSequence;
+.method public s()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -1117,7 +1126,7 @@
     return-object v0
 .end method
 
-.method public s()Ljava/lang/CharSequence;
+.method public t()Ljava/lang/CharSequence;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -1140,7 +1149,7 @@
     return-object v0
 .end method
 
-.method public t()Landroidx/lifecycle/LiveData;
+.method public u()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1173,7 +1182,7 @@
     return-object v0
 .end method
 
-.method public u()Z
+.method public v()Z
     .locals 1
 
     .line 1
@@ -1182,7 +1191,7 @@
     return v0
 .end method
 
-.method public v()Z
+.method public w()Z
     .locals 1
 
     .line 1
@@ -1211,7 +1220,7 @@
     return v0
 .end method
 
-.method public w()Z
+.method public x()Z
     .locals 1
 
     .line 1
@@ -1220,7 +1229,7 @@
     return v0
 .end method
 
-.method public x()Z
+.method public y()Z
     .locals 1
 
     .line 1
@@ -1229,7 +1238,7 @@
     return v0
 .end method
 
-.method public y()Landroidx/lifecycle/LiveData;
+.method public z()Landroidx/lifecycle/LiveData;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -1260,13 +1269,4 @@
     iget-object v0, p0, Landroidx/biometric/f;->u:Landroidx/lifecycle/MutableLiveData;
 
     return-object v0
-.end method
-
-.method public z()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Landroidx/biometric/f;->t:Z
-
-    return v0
 .end method

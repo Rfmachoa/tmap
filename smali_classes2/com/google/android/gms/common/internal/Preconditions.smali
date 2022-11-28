@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/Preconditions;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -151,41 +151,13 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x24
-
-    add-int/2addr v2, v3
-
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v2, "Must be called on "
 
     const-string v3, " thread, but got "
 
-    invoke-static {v4, v2, p0, v3, v0}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, "."
 
-    const-string p0, "."
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, p0, v3, v0, v4}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -232,6 +204,19 @@
     throw p0
 .end method
 
+.method public static checkMainThread()V
+    .locals 1
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    const-string v0, "Must be called on the main application thread"
+
+    .line 1
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkMainThread(Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public static checkMainThread(Ljava/lang/String;)V
     .locals 1
     .param p0    # Ljava/lang/String;
@@ -241,7 +226,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
-    .line 1
+    .line 2
     invoke-static {}, Lcom/google/android/gms/common/util/zzb;->zza()Z
 
     move-result v0
@@ -253,7 +238,7 @@
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 2
+    .line 3
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/GooglePlayServicesMissingManifestValueException;
 .super Lcom/google/android/gms/common/GooglePlayServicesManifestException;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations

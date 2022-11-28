@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/amplifyframework/devmenu/c;->a:Lcom/amplifyframework/devmenu/DevMenuLogsFragment;
 
-    invoke-static {v0, p1}, Lcom/amplifyframework/devmenu/DevMenuLogsFragment;->h(Lcom/amplifyframework/devmenu/DevMenuLogsFragment;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/devmenu/DevMenuLogsFragment;->i(Lcom/amplifyframework/devmenu/DevMenuLogsFragment;Landroid/view/View;)V
 
     return-void
 .end method

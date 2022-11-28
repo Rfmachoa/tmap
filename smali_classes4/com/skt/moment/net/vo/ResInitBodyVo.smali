@@ -194,6 +194,14 @@
 
 .method public setBannerDisplayTimeout(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bannerDisplayTimeout"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->bannerDisplayTimeout:Ljava/lang/Integer;
@@ -203,6 +211,15 @@
 
 .method public setExceptionalModels(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "exceptionalModels"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -220,6 +237,14 @@
 
 .method public setHappenTimeout(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "happenTimeout"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->happenTimeout:Ljava/lang/Integer;
@@ -229,6 +254,14 @@
 
 .method public setHappenTtsTimeout(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "happenTtsTimeout"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->happenTtsTimeout:Ljava/lang/Integer;
@@ -238,6 +271,14 @@
 
 .method public setNewCouponCnt(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCouponCnt"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->newCouponCnt:Ljava/lang/Integer;
@@ -247,6 +288,14 @@
 
 .method public setNewCouponYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCouponYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->newCouponYn:Ljava/lang/String;
@@ -256,6 +305,14 @@
 
 .method public setNotiImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notiImagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->notiImagePath:Ljava/lang/String;
@@ -265,6 +322,14 @@
 
 .method public setNotiMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notiMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->notiMessage:Ljava/lang/String;
@@ -274,6 +339,14 @@
 
 .method public setNotiMessage2(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notiMessage2"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->notiMessage2:Ljava/lang/String;
@@ -283,6 +356,14 @@
 
 .method public setNotiTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notiTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->notiTitle:Ljava/lang/String;
@@ -292,6 +373,14 @@
 
 .method public setOnOff(Ljava/lang/Boolean;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "onOff"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->onOff:Ljava/lang/Boolean;
@@ -301,6 +390,15 @@
 
 .method public setPackages(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "packageInfos"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -318,6 +416,14 @@
 
 .method public setSocketTimeout(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "socketTimeout"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResInitBodyVo;->socketTimeout:Ljava/lang/Integer;

@@ -3,7 +3,7 @@
 .source "BaseLayer.java"
 
 # interfaces
-.implements Lo3/a$a;
+.implements Lk5/a$a;
 
 
 # annotations
@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Lo3/c;
+.field public final synthetic a:Lk5/c;
 
 .field public final synthetic b:Lcom/airbnb/lottie/model/layer/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/airbnb/lottie/model/layer/a;Lo3/c;)V
+.method public constructor <init>(Lcom/airbnb/lottie/model/layer/a;Lk5/c;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/airbnb/lottie/model/layer/a$a;->b:Lcom/airbnb/lottie/model/layer/a;
 
-    iput-object p2, p0, Lcom/airbnb/lottie/model/layer/a$a;->a:Lo3/c;
+    iput-object p2, p0, Lcom/airbnb/lottie/model/layer/a$a;->a:Lk5/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
     .line 1
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/a$a;->b:Lcom/airbnb/lottie/model/layer/a;
 
-    iget-object v1, p0, Lcom/airbnb/lottie/model/layer/a$a;->a:Lo3/c;
+    iget-object v1, p0, Lcom/airbnb/lottie/model/layer/a$a;->a:Lk5/c;
 
-    invoke-virtual {v1}, Lo3/c;->n()F
+    invoke-virtual {v1}, Lk5/c;->n()F
 
     move-result v1
 

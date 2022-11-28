@@ -49,19 +49,60 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$f;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->W1()Lcom/skt/aicloud/speaker/lib/state/AsrState;
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->i0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
 
     move-result-object v0
 
-    sget-object v1, Lcom/skt/aicloud/speaker/lib/state/AsrState;->SPEECH_END:Lcom/skt/aicloud/speaker/lib/state/AsrState;
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_1
 
     .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
     iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$f;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->j1()V
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->j0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioFocusRequest;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$f;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->i0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$f;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v1}, Lcom/skt/tmap/engine/TmapAiManager;->j0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioFocusRequest;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
+
+    goto :goto_0
+
+    .line 5
     :cond_0
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$f;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->i0(Lcom/skt/tmap/engine/TmapAiManager;)Landroid/media/AudioManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$f;->a:Lcom/skt/tmap/engine/TmapAiManager;
+
+    iget-object v1, v1, Lcom/skt/tmap/engine/TmapAiManager;->F0:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+
+    :cond_1
+    :goto_0
     return-void
 .end method

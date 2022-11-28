@@ -30,7 +30,56 @@
 .method public abstract findAnyGetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
 .end method
 
-.method public abstract findAnySetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+.method public findAnySetter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/BeanDescription;->findAnySetterAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    move-result-object v0
+
+    .line 2
+    instance-of v1, v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    check-cast v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract findAnySetterAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+.end method
+
+.method public findAnySetterField()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/BeanDescription;->findAnySetterAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+
+    move-result-object v0
+
+    .line 2
+    instance-of v1, v0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedField;
+
+    if-eqz v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public abstract findBackReferenceProperties()Ljava/util/Map;
@@ -40,6 +89,20 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract findBackReferences()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/fasterxml/jackson/databind/introspect/BeanPropertyDefinition;",
             ">;"
         }
     .end annotation
@@ -54,6 +117,16 @@
 .end method
 
 .method public abstract findDefaultConstructor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedConstructor;
+.end method
+
+.method public abstract findDefaultViews()[Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
 .end method
 
 .method public abstract findDeserializationConverter()Lcom/fasterxml/jackson/databind/util/Converter;
@@ -94,7 +167,20 @@
     .end annotation
 .end method
 
+.method public findJsonKeyAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract findJsonValueAccessor()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;
+.end method
+
 .method public abstract findJsonValueMethod()Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract findMethod(Ljava/lang/String;[Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/introspect/AnnotatedMethod;
@@ -238,5 +324,22 @@
 .method public abstract instantiateBean(Z)Ljava/lang/Object;
 .end method
 
+.method public isNonStaticInnerClass()Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/BeanDescription;->getClassInfo()Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;->isNonStaticInnerClass()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public abstract resolveType(Ljava/lang/reflect/Type;)Lcom/fasterxml/jackson/databind/JavaType;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method

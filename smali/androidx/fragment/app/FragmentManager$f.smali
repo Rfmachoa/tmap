@@ -3,7 +3,7 @@
 .source "FragmentManager.java"
 
 # interfaces
-.implements Landroidx/fragment/app/i0;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -35,19 +35,15 @@
 
 
 # virtual methods
-.method public a(Landroid/view/ViewGroup;)Landroidx/fragment/app/SpecialEffectsController;
-    .locals 1
-    .param p1    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public run()V
+    .locals 2
 
     .line 1
-    new-instance v0, Landroidx/fragment/app/c;
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManager$f;->a:Landroidx/fragment/app/FragmentManager;
 
-    invoke-direct {v0, p1}, Landroidx/fragment/app/c;-><init>(Landroid/view/ViewGroup;)V
+    const/4 v1, 0x1
 
-    return-object v0
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->j0(Z)Z
+
+    return-void
 .end method

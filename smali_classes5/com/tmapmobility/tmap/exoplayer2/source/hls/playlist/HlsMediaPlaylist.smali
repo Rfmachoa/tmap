@@ -1,5 +1,5 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;
-.super Lre/e;
+.super Lug/e;
 .source "HlsMediaPlaylist.java"
 
 
@@ -132,7 +132,7 @@
     move/from16 v5, p18
 
     .line 1
-    invoke-direct {p0, p2, p3, v5}, Lre/e;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
+    invoke-direct {p0, p2, p3, v5}, Lug/e;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
     move v3, p1
 
@@ -375,9 +375,9 @@
 
     iget v2, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->d:I
 
-    iget-object v3, v0, Lre/e;->a:Ljava/lang/String;
+    iget-object v3, v0, Lug/e;->a:Ljava/lang/String;
 
-    iget-object v4, v0, Lre/e;->b:Ljava/util/List;
+    iget-object v4, v0, Lug/e;->b:Ljava/util/List;
 
     iget-wide v5, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->e:J
 
@@ -399,7 +399,7 @@
 
     move-wide/from16 v17, v1
 
-    iget-boolean v1, v0, Lre/e;->c:Z
+    iget-boolean v1, v0, Lug/e;->c:Z
 
     move/from16 v19, v1
 
@@ -462,9 +462,9 @@
 
     iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->d:I
 
-    iget-object v4, v0, Lre/e;->a:Ljava/lang/String;
+    iget-object v4, v0, Lug/e;->a:Ljava/lang/String;
 
-    iget-object v5, v0, Lre/e;->b:Ljava/util/List;
+    iget-object v5, v0, Lug/e;->b:Ljava/util/List;
 
     iget-wide v6, v0, Lcom/tmapmobility/tmap/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->e:J
 
@@ -492,7 +492,7 @@
 
     move-wide/from16 v18, v1
 
-    iget-boolean v1, v0, Lre/e;->c:Z
+    iget-boolean v1, v0, Lug/e;->c:Z
 
     move/from16 v20, v1
 

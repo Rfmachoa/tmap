@@ -95,7 +95,7 @@
 
     const-string v2, "Failed to create Temporal.Time object from "
 
-    invoke-static {v2, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -253,7 +253,7 @@
 
     iget-object v3, p1, Lcom/amplifyframework/core/model/temporal/Temporal$Time;->localTime:Ljava/time/LocalTime;
 
-    invoke-static {v2, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -264,7 +264,7 @@
     iget-object p1, p1, Lcom/amplifyframework/core/model/temporal/Temporal$Time;->zoneOffset:Ljava/time/ZoneOffset;
 
     .line 4
-    invoke-static {v2, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

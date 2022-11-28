@@ -12,16 +12,20 @@
 
 
 # instance fields
-.field public final D1:Landroidx/preference/SwitchPreference$a;
+.field public final F1:Landroidx/preference/SwitchPreference$a;
 
-.field public E1:Ljava/lang/CharSequence;
+.field public G1:Ljava/lang/CharSequence;
 
-.field public F1:Ljava/lang/CharSequence;
+.field public H1:Ljava/lang/CharSequence;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -33,13 +37,21 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 11
     sget v0, Landroidx/preference/R$attr;->switchPreferenceStyle:I
 
     const v1, 0x101036d
 
-    invoke-static {p1, v0, v1}, Lz0/i;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Ls1/l;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -50,6 +62,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     const/4 v0, 0x0
 
@@ -61,6 +81,14 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/TwoStatePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -70,7 +98,7 @@
 
     invoke-direct {v0, p0}, Landroidx/preference/SwitchPreference$a;-><init>(Landroidx/preference/SwitchPreference;)V
 
-    iput-object v0, p0, Landroidx/preference/SwitchPreference;->D1:Landroidx/preference/SwitchPreference$a;
+    iput-object v0, p0, Landroidx/preference/SwitchPreference;->F1:Landroidx/preference/SwitchPreference$a;
 
     .line 3
     sget-object v0, Landroidx/preference/R$styleable;->SwitchPreference:[I
@@ -84,7 +112,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_summaryOn:I
 
-    invoke-static {p1, p2, p3}, Lz0/i;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Ls1/l;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -95,7 +123,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_summaryOff:I
 
-    invoke-static {p1, p2, p3}, Lz0/i;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Ls1/l;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -106,7 +134,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_switchTextOn:I
 
-    invoke-static {p1, p2, p3}, Lz0/i;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Ls1/l;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -117,7 +145,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_switchTextOff:I
 
-    invoke-static {p1, p2, p3}, Lz0/i;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Ls1/l;->o(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -130,7 +158,7 @@
 
     const/4 p4, 0x0
 
-    invoke-static {p1, p2, p3, p4}, Lz0/i;->b(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, p4}, Ls1/l;->b(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -173,7 +201,7 @@
 
     check-cast v1, Landroid/widget/Checkable;
 
-    iget-boolean v2, p0, Landroidx/preference/TwoStatePreference;->y1:Z
+    iget-boolean v2, p0, Landroidx/preference/TwoStatePreference;->A1:Z
 
     invoke-interface {v1, v2}, Landroid/widget/Checkable;->setChecked(Z)V
 
@@ -184,17 +212,17 @@
     check-cast p1, Landroid/widget/Switch;
 
     .line 7
-    iget-object v0, p0, Landroidx/preference/SwitchPreference;->E1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->G1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/widget/Switch;->setTextOn(Ljava/lang/CharSequence;)V
 
     .line 8
-    iget-object v0, p0, Landroidx/preference/SwitchPreference;->F1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->H1:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Landroid/widget/Switch;->setTextOff(Ljava/lang/CharSequence;)V
 
     .line 9
-    iget-object v0, p0, Landroidx/preference/SwitchPreference;->D1:Landroidx/preference/SwitchPreference$a;
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->F1:Landroidx/preference/SwitchPreference$a;
 
     invoke-virtual {p1, v0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -251,16 +279,20 @@
     return-void
 .end method
 
-.method public Z(Landroidx/preference/s;)V
+.method public Z(Landroidx/preference/v;)V
     .locals 1
+    .param p1    # Landroidx/preference/v;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-super {p0, p1}, Landroidx/preference/Preference;->Z(Landroidx/preference/s;)V
+    invoke-super {p0, p1}, Landroidx/preference/Preference;->Z(Landroidx/preference/v;)V
 
     const v0, 0x1020040
 
     .line 2
-    invoke-virtual {p1, v0}, Landroidx/preference/s;->d(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroidx/preference/v;->d(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -268,13 +300,17 @@
     invoke-virtual {p0, v0}, Landroidx/preference/SwitchPreference;->A1(Landroid/view/View;)V
 
     .line 4
-    invoke-virtual {p0, p1}, Landroidx/preference/TwoStatePreference;->t1(Landroidx/preference/s;)V
+    invoke-virtual {p0, p1}, Landroidx/preference/TwoStatePreference;->t1(Landroidx/preference/v;)V
 
     return-void
 .end method
 
 .method public n0(Landroid/view/View;)V
     .locals 0
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
@@ -292,18 +328,22 @@
 
 .method public u1()Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/SwitchPreference;->F1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->H1:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
 
 .method public v1()Ljava/lang/CharSequence;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/preference/SwitchPreference;->E1:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/SwitchPreference;->G1:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -327,9 +367,13 @@
 
 .method public x1(Ljava/lang/CharSequence;)V
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/SwitchPreference;->F1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/SwitchPreference;->H1:Ljava/lang/CharSequence;
 
     .line 2
     invoke-virtual {p0}, Landroidx/preference/Preference;->T()V
@@ -356,9 +400,13 @@
 
 .method public z1(Ljava/lang/CharSequence;)V
     .locals 0
+    .param p1    # Ljava/lang/CharSequence;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/preference/SwitchPreference;->E1:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/SwitchPreference;->G1:Ljava/lang/CharSequence;
 
     .line 2
     invoke-virtual {p0}, Landroidx/preference/Preference;->T()V

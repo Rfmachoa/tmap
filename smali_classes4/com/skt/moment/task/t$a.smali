@@ -21,6 +21,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/t;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/t$a;->t:Lcom/skt/moment/task/t;
@@ -34,12 +42,34 @@
 # virtual methods
 .method public A(JJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bytesWritten",
+            "totalSize"
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method public D(I[Ldf/d;[B)V
+.method public D(I[Lhh/d;[B)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "responseBody"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/t$a;->t:Lcom/skt/moment/task/t;
@@ -210,13 +240,13 @@
 
     .line 19
     :cond_2
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object p1
 
     sget p2, Lcom/skt/moment/R$string;->debugging_happen_fail:I
 
-    invoke-virtual {p1, p2}, Leb/b;->b(I)V
+    invoke-virtual {p1, p2}, Lbd/b;->b(I)V
 
     .line 20
     iget-object p1, p0, Lcom/skt/moment/task/t$a;->t:Lcom/skt/moment/task/t;
@@ -228,8 +258,22 @@
     return-void
 .end method
 
-.method public y(I[Ldf/d;[BLjava/lang/Throwable;)V
+.method public y(I[Lhh/d;[BLjava/lang/Throwable;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "responseBody",
+            "error"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/t$a;->t:Lcom/skt/moment/task/t;
@@ -239,13 +283,13 @@
     invoke-static {p1, p2}, Lcom/skt/moment/task/t;->e0(Lcom/skt/moment/task/t;Lcom/loopj/android/http/x;)Lcom/loopj/android/http/x;
 
     .line 2
-    invoke-static {}, Leb/b;->a()Leb/b;
+    invoke-static {}, Lbd/b;->a()Lbd/b;
 
     move-result-object p1
 
     sget p2, Lcom/skt/moment/R$string;->debugging_happen_fail:I
 
-    invoke-virtual {p1, p2}, Leb/b;->b(I)V
+    invoke-virtual {p1, p2}, Lbd/b;->b(I)V
 
     .line 3
     iget-object p1, p0, Lcom/skt/moment/task/t$a;->t:Lcom/skt/moment/task/t;

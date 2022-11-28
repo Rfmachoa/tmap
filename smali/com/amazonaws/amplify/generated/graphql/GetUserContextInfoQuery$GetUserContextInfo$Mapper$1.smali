@@ -85,7 +85,7 @@
     .line 2
     sget-object v0, Ltype/CustomType;->AWSJSON:Ltype/CustomType;
 
-    invoke-interface {p1, v0}, Lcom/apollographql/apollo/api/d$b;->c(Lc4/o;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcom/apollographql/apollo/api/d$b;->c(Lz5/o;)Ljava/lang/Object;
 
     move-result-object p1
 

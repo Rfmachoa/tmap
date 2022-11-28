@@ -48,12 +48,12 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v1}, Lh3/x;->h(Landroid/view/View;F)V
+    invoke-static {v0, v1}, Lp4/x;->h(Landroid/view/View;F)V
 
     .line 2
     iget-object v0, p0, Landroidx/transition/Fade$a;->a:Landroid/view/View;
 
-    invoke-static {v0}, Lh3/x;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lp4/x;->a(Landroid/view/View;)V
 
     .line 3
     invoke-virtual {p1, p0}, Landroidx/transition/Transition;->removeListener(Landroidx/transition/Transition$g;)Landroidx/transition/Transition;

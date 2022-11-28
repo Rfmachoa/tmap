@@ -1,26 +1,32 @@
-.class public interface abstract Lfj/f;
+.class public final Lfj/f;
 .super Ljava/lang/Object;
-.source "KMarkers.kt"
-
-# interfaces
-.implements Lfj/d;
+.source "HiltWrapper_ActivityModule.java"
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0008f\u0018\u00002\u00020\u0001\u00a8\u0006\u0002"
-    }
-    d2 = {
-        "Lfj/f;",
-        "Lfj/d;",
-        "kotlin-stdlib"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x5,
-        0x1
+.annotation runtime Ldagger/Module;
+    includes = {
+        Lfj/a;
     }
 .end annotation
+
+.annotation build Ldagger/hilt/InstallIn;
+    value = {
+        Lzi/a;
+    }
+.end annotation
+
+.annotation build Ldagger/hilt/codegen/OriginatingElement;
+    topLevelClass = Lfj/a;
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

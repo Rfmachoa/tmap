@@ -49,7 +49,7 @@
 
 .field public final g:I
 
-.field public final h:Lle/o;
+.field public final h:Log/o;
 
 
 # direct methods
@@ -57,9 +57,9 @@
     .locals 12
 
     .line 1
-    new-instance v11, Lle/o;
+    new-instance v11, Log/o;
 
-    invoke-direct {v11}, Lle/o;-><init>()V
+    invoke-direct {v11}, Log/o;-><init>()V
 
     move-object v0, p0
 
@@ -77,12 +77,12 @@
 
     move/from16 v10, p10
 
-    invoke-direct/range {v0 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILle/o;)V
+    invoke-direct/range {v0 .. v11}, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILog/o;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILle/o;)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadRequest;IJJJIILog/o;)V
     .locals 4
 
     .line 2
@@ -170,7 +170,7 @@
     iput p10, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->g:I
 
     .line 13
-    iput-object p11, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iput-object p11, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
     return-void
 .end method
@@ -181,9 +181,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
-    iget-wide v0, v0, Lle/o;->a:J
+    iget-wide v0, v0, Log/o;->a:J
 
     return-wide v0
 .end method
@@ -192,9 +192,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Lle/o;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/Download;->h:Log/o;
 
-    iget v0, v0, Lle/o;->b:F
+    iget v0, v0, Log/o;->b:F
 
     return v0
 .end method

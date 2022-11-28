@@ -24,14 +24,4 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "sessionConfig",
-            "error"
-        }
-    .end annotation
 .end method

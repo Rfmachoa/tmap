@@ -3,11 +3,15 @@
 .source "CameraInternal.java"
 
 # interfaces
-.implements Landroidx/camera/core/i;
+.implements Landroidx/camera/core/l;
 .implements Landroidx/camera/core/UseCase$c;
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/impl/CameraInternal$State;
@@ -22,20 +26,20 @@
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->h()Landroidx/camera/core/impl/CameraControlInternal;
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->i()Landroidx/camera/core/impl/CameraControlInternal;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public b()Landroidx/camera/core/impl/d;
+.method public b()Landroidx/camera/core/impl/CameraConfig;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    invoke-static {}, Landroidx/camera/core/impl/e;->a()Landroidx/camera/core/impl/d;
+    invoke-static {}, Lb0/r;->a()Landroidx/camera/core/impl/CameraConfig;
 
     move-result-object v0
 
@@ -48,7 +52,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->k()Lx/q;
+    invoke-interface {p0}, Landroidx/camera/core/impl/CameraInternal;->m()Lb0/y;
 
     move-result-object v0
 
@@ -58,31 +62,31 @@
 .method public abstract close()V
 .end method
 
-.method public d(Landroidx/camera/core/impl/d;)V
+.method public d(Landroidx/camera/core/impl/CameraConfig;)V
     .locals 0
-    .param p1    # Landroidx/camera/core/impl/d;
+    .param p1    # Landroidx/camera/core/impl/CameraConfig;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraConfig"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroidx/camera/core/internal/CameraUseCaseAdapter$CameraException;
-        }
-    .end annotation
 
     return-void
 .end method
 
-.method public e()Ljava/util/LinkedHashSet;
+.method public abstract e()Lb0/j1;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lb0/j1<",
+            "Landroidx/camera/core/impl/CameraInternal$State;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public f()Ljava/util/LinkedHashSet;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -108,25 +112,22 @@
     return-object v0
 .end method
 
-.method public abstract h()Landroidx/camera/core/impl/CameraControlInternal;
+.method public abstract i()Landroidx/camera/core/impl/CameraControlInternal;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
 
-.method public abstract i(Ljava/util/Collection;)V
+.method public j(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract k(Ljava/util/Collection;)V
     .param p1    # Ljava/util/Collection;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "useCases"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -137,20 +138,11 @@
     .end annotation
 .end method
 
-.method public abstract j(Ljava/util/Collection;)V
+.method public abstract l(Ljava/util/Collection;)V
     .param p1    # Ljava/util/Collection;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "useCases"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -161,22 +153,8 @@
     .end annotation
 .end method
 
-.method public abstract k()Lx/q;
+.method public abstract m()Lb0/y;
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end method
-
-.method public abstract m()Lx/y0;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lx/y0<",
-            "Landroidx/camera/core/impl/CameraInternal$State;",
-            ">;"
-        }
     .end annotation
 .end method
 

@@ -38,11 +38,11 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Ls5/a;->g()Lu5/d;
+    invoke-static {}, Lp7/a;->g()Lr7/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lu5/d;->b()Ljava/util/UUID;
+    invoke-virtual {v0}, Lr7/d;->b()Ljava/util/UUID;
 
     move-result-object v0
 

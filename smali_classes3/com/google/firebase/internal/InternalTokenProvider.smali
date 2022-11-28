@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/firebase/internal/InternalTokenProvider;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-auth-interop@@20.0.0"
+.source "com.google.firebase:firebase-auth-interop@@19.0.2"
 
 
 # annotations
@@ -10,9 +10,6 @@
 
 # virtual methods
 .method public abstract getAccessToken(Z)Lcom/google/android/gms/tasks/Task;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 

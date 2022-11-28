@@ -197,6 +197,32 @@
 
 
 # virtual methods
+.method public bridge synthetic addOnChangeListener(Lcom/google/android/material/slider/BaseOnChangeListener;)V
+    .locals 0
+    .param p1    # Lcom/google/android/material/slider/BaseOnChangeListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->addOnChangeListener(Lcom/google/android/material/slider/BaseOnChangeListener;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic addOnSliderTouchListener(Lcom/google/android/material/slider/BaseOnSliderTouchListener;)V
+    .locals 0
+    .param p1    # Lcom/google/android/material/slider/BaseOnSliderTouchListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->addOnSliderTouchListener(Lcom/google/android/material/slider/BaseOnSliderTouchListener;)V
+
+    return-void
+.end method
+
 .method public bridge synthetic clearOnChangeListeners()V
     .locals 0
 
@@ -687,6 +713,87 @@
     move-result p1
 
     return p1
+.end method
+
+.method public bridge synthetic removeOnChangeListener(Lcom/google/android/material/slider/BaseOnChangeListener;)V
+    .locals 0
+    .param p1    # Lcom/google/android/material/slider/BaseOnChangeListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->removeOnChangeListener(Lcom/google/android/material/slider/BaseOnChangeListener;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic removeOnSliderTouchListener(Lcom/google/android/material/slider/BaseOnSliderTouchListener;)V
+    .locals 0
+    .param p1    # Lcom/google/android/material/slider/BaseOnSliderTouchListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->removeOnSliderTouchListener(Lcom/google/android/material/slider/BaseOnSliderTouchListener;)V
+
+    return-void
+.end method
+
+.method public setCustomThumbDrawable(I)V
+    .locals 0
+    .param p1    # I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->setCustomThumbDrawable(I)V
+
+    return-void
+.end method
+
+.method public setCustomThumbDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->setCustomThumbDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public varargs setCustomThumbDrawablesForValues([I)V
+    .locals 0
+    .param p1    # [I
+        .annotation build Landroidx/annotation/DrawableRes;
+        .end annotation
+
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->setCustomThumbDrawablesForValues([I)V
+
+    return-void
+.end method
+
+.method public varargs setCustomThumbDrawablesForValues([Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+    .param p1    # [Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/google/android/material/slider/BaseSlider;->setCustomThumbDrawablesForValues([Landroid/graphics/drawable/Drawable;)V
+
+    return-void
 .end method
 
 .method public bridge synthetic setEnabled(Z)V

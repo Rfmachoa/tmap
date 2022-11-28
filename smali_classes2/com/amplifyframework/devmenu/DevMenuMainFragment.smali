@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method public static synthetic h(Landroid/view/View;)V
+.method public static synthetic i(Landroid/view/View;)V
     .locals 0
 
     invoke-static {p0}, Lcom/amplifyframework/devmenu/DevMenuMainFragment;->lambda$onCreateView$2(Landroid/view/View;)V
@@ -21,7 +21,7 @@
     return-void
 .end method
 
-.method public static synthetic i(Landroid/view/View;)V
+.method public static synthetic j(Landroid/view/View;)V
     .locals 0
 
     invoke-static {p0}, Lcom/amplifyframework/devmenu/DevMenuMainFragment;->lambda$onCreateView$0(Landroid/view/View;)V
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public static synthetic j(Landroid/view/View;)V
+.method public static synthetic k(Landroid/view/View;)V
     .locals 0
 
     invoke-static {p0}, Lcom/amplifyframework/devmenu/DevMenuMainFragment;->lambda$onCreateView$1(Landroid/view/View;)V
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method public static synthetic k(Landroid/view/View;)V
+.method public static synthetic l(Landroid/view/View;)V
     .locals 0
 
     invoke-static {p0}, Lcom/amplifyframework/devmenu/DevMenuMainFragment;->lambda$onCreateView$3(Landroid/view/View;)V
@@ -49,13 +49,13 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Landroidx/navigation/p0;->e(Landroid/view/View;)Landroidx/navigation/NavController;
+    invoke-static {p0}, Landroidx/navigation/Navigation;->k(Landroid/view/View;)Landroidx/navigation/NavController;
 
     move-result-object p0
 
     sget v0, Lcom/amplifyframework/core/R$id;->show_env_info:I
 
-    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->s(I)V
+    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->V(I)V
 
     return-void
 .end method
@@ -64,13 +64,13 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Landroidx/navigation/p0;->e(Landroid/view/View;)Landroidx/navigation/NavController;
+    invoke-static {p0}, Landroidx/navigation/Navigation;->k(Landroid/view/View;)Landroidx/navigation/NavController;
 
     move-result-object p0
 
     sget v0, Lcom/amplifyframework/core/R$id;->show_device_info:I
 
-    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->s(I)V
+    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->V(I)V
 
     return-void
 .end method
@@ -79,13 +79,13 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Landroidx/navigation/p0;->e(Landroid/view/View;)Landroidx/navigation/NavController;
+    invoke-static {p0}, Landroidx/navigation/Navigation;->k(Landroid/view/View;)Landroidx/navigation/NavController;
 
     move-result-object p0
 
     sget v0, Lcom/amplifyframework/core/R$id;->show_logs:I
 
-    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->s(I)V
+    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->V(I)V
 
     return-void
 .end method
@@ -94,13 +94,13 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Landroidx/navigation/p0;->e(Landroid/view/View;)Landroidx/navigation/NavController;
+    invoke-static {p0}, Landroidx/navigation/Navigation;->k(Landroid/view/View;)Landroidx/navigation/NavController;
 
     move-result-object p0
 
     sget v0, Lcom/amplifyframework/core/R$id;->show_file_issue:I
 
-    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->s(I)V
+    invoke-virtual {p0, v0}, Landroidx/navigation/NavController;->V(I)V
 
     return-void
 .end method

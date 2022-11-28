@@ -86,7 +86,7 @@
     return-void
 .end method
 
-.method public B(Landroid/content/Context;Lma/c;)V
+.method public B(Landroid/content/Context;Ljc/c;)V
     .locals 8
 
     if-nez p2, :cond_0
@@ -102,11 +102,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p2}, Lma/c;->c()Lma/b0;
+    invoke-virtual {p2}, Ljc/c;->c()Ljc/b0;
 
     move-result-object p2
 
-    check-cast p2, Lma/z;
+    check-cast p2, Ljc/z;
 
     if-nez p2, :cond_1
 
@@ -121,7 +121,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p2}, Lma/z;->j()Z
+    invoke-virtual {p2}, Ljc/z;->j()Z
 
     move-result v0
 
@@ -159,7 +159,7 @@
     move-result v3
 
     .line 9
-    invoke-virtual {p2}, Lma/z;->i()I
+    invoke-virtual {p2}, Ljc/z;->i()I
 
     move-result p2
 
@@ -261,7 +261,7 @@
     .line 3
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/f;->b:Ljava/lang/String;
 
-    const-string/jumbo v2, "unmute : curVol = "
+    const-string v2, "unmute : curVol = "
 
     invoke-static {v2, v0, v1}, Lcom/skt/aicloud/mobile/service/api/d;->a(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -272,7 +272,7 @@
     .line 4
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/f;->b:Ljava/lang/String;
 
-    const-string/jumbo v1, "unmute : skip"
+    const-string v1, "unmute : skip"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 

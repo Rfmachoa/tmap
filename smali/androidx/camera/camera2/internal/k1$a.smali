@@ -1,6 +1,6 @@
 .class public Landroidx/camera/camera2/internal/k1$a;
-.super Landroid/hardware/camera2/CameraDevice$StateCallback;
-.source "CaptureSessionRepository.java"
+.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+.source "Camera2RequestProcessor.java"
 
 
 # annotations
@@ -10,179 +10,236 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x1
-    name = null
+    name = "a"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/camera2/internal/k1;
+.field public final a:Lb0/o1$a;
+
+.field public final b:Lb0/o1$b;
+
+.field public final c:Z
+
+.field public final synthetic d:Landroidx/camera/camera2/internal/k1;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/camera2/internal/k1;)V
+.method public constructor <init>(Landroidx/camera/camera2/internal/k1;Lb0/o1$b;Lb0/o1$a;Z)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
+    .param p1    # Landroidx/camera/camera2/internal/k1;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lb0/o1$b;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Landroidx/camera/camera2/internal/k1;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->d:Landroidx/camera/camera2/internal/k1;
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
-
-    return-void
-.end method
-
-.method public static synthetic a(Landroidx/camera/camera2/internal/k1$a;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroidx/camera/camera2/internal/k1$a;->c()V
-
-    return-void
-.end method
-
-.method private synthetic c()V
-    .locals 4
-
-    .line 1
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
 
     .line 2
-    iget-object v1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Landroidx/camera/camera2/internal/k1;
-
-    iget-object v1, v1, Landroidx/camera/camera2/internal/k1;->b:Ljava/lang/Object;
-
-    monitor-enter v1
+    iput-object p3, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
 
     .line 3
-    :try_start_0
-    new-instance v2, Ljava/util/LinkedHashSet;
-
-    iget-object v3, p0, Landroidx/camera/camera2/internal/k1$a;->a:Landroidx/camera/camera2/internal/k1;
-
-    iget-object v3, v3, Landroidx/camera/camera2/internal/k1;->e:Ljava/util/Set;
-
-    invoke-direct {v2, v3}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0, v2}, Ljava/util/LinkedHashSet;->addAll(Ljava/util/Collection;)Z
+    iput-object p2, p0, Landroidx/camera/camera2/internal/k1$a;->b:Lb0/o1$b;
 
     .line 4
-    new-instance v2, Ljava/util/LinkedHashSet;
-
-    iget-object v3, p0, Landroidx/camera/camera2/internal/k1$a;->a:Landroidx/camera/camera2/internal/k1;
-
-    iget-object v3, v3, Landroidx/camera/camera2/internal/k1;->c:Ljava/util/Set;
-
-    invoke-direct {v2, v3}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0, v2}, Ljava/util/LinkedHashSet;->addAll(Ljava/util/Collection;)Z
-
-    .line 5
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 6
-    invoke-static {v0}, Landroidx/camera/camera2/internal/k1;->a(Ljava/util/Set;)V
+    iput-boolean p4, p0, Landroidx/camera/camera2/internal/k1$a;->c:Z
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    .line 7
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+    .locals 1
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/hardware/camera2/CaptureRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
+
+    iget-object p2, p0, Landroidx/camera/camera2/internal/k1$a;->b:Lb0/o1$b;
+
+    iget-object v0, p0, Landroidx/camera/camera2/internal/k1$a;->d:Landroidx/camera/camera2/internal/k1;
+
+    .line 2
+    invoke-virtual {v0, p3}, Landroidx/camera/camera2/internal/k1;->h(Landroid/view/Surface;)I
+
+    move-result p3
+
+    .line 3
+    invoke-interface {p1, p2, p4, p5, p3}, Lb0/o1$a;->g(Lb0/o1$b;JI)V
+
+    return-void
+.end method
+
+.method public onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
+    .locals 1
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/hardware/camera2/CaptureRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/hardware/camera2/TotalCaptureResult;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
+
+    iget-object p2, p0, Landroidx/camera/camera2/internal/k1$a;->b:Lb0/o1$b;
+
+    new-instance v0, Landroidx/camera/camera2/internal/h;
+
+    invoke-direct {v0, p3}, Landroidx/camera/camera2/internal/h;-><init>(Landroid/hardware/camera2/CaptureResult;)V
+
+    invoke-interface {p1, p2, v0}, Lb0/o1$a;->e(Lb0/o1$b;Landroidx/camera/core/impl/c;)V
+
+    return-void
+.end method
+
+.method public onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
     .locals 2
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/hardware/camera2/CaptureRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/hardware/camera2/CaptureFailure;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/camera2/internal/k1$a;->a:Landroidx/camera/camera2/internal/k1;
+    iget-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
 
-    iget-object v0, v0, Landroidx/camera/camera2/internal/k1;->a:Ljava/util/concurrent/Executor;
+    iget-object p2, p0, Landroidx/camera/camera2/internal/k1$a;->b:Lb0/o1$b;
 
-    new-instance v1, Landroidx/camera/camera2/internal/j1;
+    new-instance v0, Landroidx/camera/camera2/internal/g;
 
-    invoke-direct {v1, p0}, Landroidx/camera/camera2/internal/j1;-><init>(Landroidx/camera/camera2/internal/k1$a;)V
+    sget-object v1, Landroidx/camera/core/impl/CameraCaptureFailure$Reason;->ERROR:Landroidx/camera/core/impl/CameraCaptureFailure$Reason;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v1, p3}, Landroidx/camera/camera2/internal/g;-><init>(Landroidx/camera/core/impl/CameraCaptureFailure$Reason;Landroid/hardware/camera2/CaptureFailure;)V
+
+    invoke-interface {p1, p2, v0}, Lb0/o1$a;->d(Lb0/o1$b;Landroidx/camera/core/impl/CameraCaptureFailure;)V
 
     return-void
 .end method
 
-.method public onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
-    .param p1    # Landroid/hardware/camera2/CameraDevice;
+.method public onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
+    .locals 1
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "camera"
-        }
-    .end annotation
+    .param p2    # Landroid/hardware/camera2/CaptureRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/hardware/camera2/CaptureResult;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/k1$a;->b()V
+    iget-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
+
+    iget-object p2, p0, Landroidx/camera/camera2/internal/k1$a;->b:Lb0/o1$b;
+
+    new-instance v0, Landroidx/camera/camera2/internal/h;
+
+    invoke-direct {v0, p3}, Landroidx/camera/camera2/internal/h;-><init>(Landroid/hardware/camera2/CaptureResult;)V
+
+    invoke-interface {p1, p2, v0}, Lb0/o1$a;->c(Lb0/o1$b;Landroidx/camera/core/impl/c;)V
 
     return-void
 .end method
 
-.method public onError(Landroid/hardware/camera2/CameraDevice;I)V
+.method public onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
     .locals 0
-    .param p1    # Landroid/hardware/camera2/CameraDevice;
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "camera",
-            "error"
-        }
-    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroidx/camera/camera2/internal/k1$a;->b()V
+    iget-boolean p1, p0, Landroidx/camera/camera2/internal/k1$a;->c:Z
 
+    if-eqz p1, :cond_0
+
+    .line 2
+    iget-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
+
+    invoke-interface {p1, p2}, Lb0/o1$a;->a(I)V
+
+    :cond_0
     return-void
 .end method
 
-.method public onOpened(Landroid/hardware/camera2/CameraDevice;)V
+.method public onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
     .locals 0
-    .param p1    # Landroid/hardware/camera2/CameraDevice;
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "camera"
-        }
-    .end annotation
+
+    .line 1
+    iget-boolean p1, p0, Landroidx/camera/camera2/internal/k1$a;->c:Z
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    iget-object p1, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
+
+    invoke-interface {p1, p2, p3, p4}, Lb0/o1$a;->b(IJ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
+    .locals 6
+    .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/hardware/camera2/CaptureRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/camera/camera2/internal/k1$a;->a:Lb0/o1$a;
+
+    iget-object v1, p0, Landroidx/camera/camera2/internal/k1$a;->b:Lb0/o1$b;
+
+    move-wide v2, p5
+
+    move-wide v4, p3
+
+    invoke-interface/range {v0 .. v5}, Lb0/o1$a;->f(Lb0/o1$b;JJ)V
 
     return-void
 .end method

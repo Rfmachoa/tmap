@@ -28,6 +28,8 @@
 
 .field public static final ITEM_RECENT_NONE:I = 0xa
 
+.field public static final NO_CHARGER:I = -0x64
+
 
 # instance fields
 .field public adBackgroundColor:I
@@ -211,7 +213,7 @@
     .line 3
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->poiId:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -237,7 +239,7 @@
     .line 7
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->name:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -246,7 +248,7 @@
     .line 8
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->addr:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/skt/tmap/util/c1;->d(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -361,31 +363,31 @@
 
     const-string v3, ", name=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->name:Ljava/lang/String;
 
     const-string v3, ", addr=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->addr:Ljava/lang/String;
 
     const-string v3, ", poiId=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->poiId:Ljava/lang/String;
 
     const-string v3, ", navSeq=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->navSeq:Ljava/lang/String;
 
     const-string v3, ", time="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget v1, p0, Lcom/skt/tmap/data/GridItemData;->time:I
 
@@ -415,25 +417,25 @@
 
     const-string v3, ", coordY=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->coordY:Ljava/lang/String;
 
     const-string v3, ", centerX=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->centerX:Ljava/lang/String;
 
     const-string v3, ", centerY=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->centerY:Ljava/lang/String;
 
     const-string v3, ", frequency="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget v1, p0, Lcom/skt/tmap/data/GridItemData;->frequency:I
 
@@ -471,31 +473,31 @@
 
     const-string v3, ", iconInfo=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->iconInfo:Ljava/lang/String;
 
     const-string v3, ", fixedIndex=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->fixedIndex:Ljava/lang/String;
 
     const-string v3, ", adStartDate=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->adStartDate:Ljava/lang/String;
 
     const-string v3, ", adEndDate=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->adEndDate:Ljava/lang/String;
 
     const-string v3, ", adLandPos="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget v1, p0, Lcom/skt/tmap/data/GridItemData;->adLandPos:I
 
@@ -517,7 +519,7 @@
 
     const-string v3, ", defaultImage="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->defaultImage:Landroid/graphics/drawable/Drawable;
 
@@ -531,13 +533,13 @@
 
     const-string v3, ", adCode=\'"
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/skt/tmap/data/GridItemData;->adCode:Ljava/lang/String;
 
     const-string v3, ", isTaskStarted="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-boolean v1, p0, Lcom/skt/tmap/data/GridItemData;->isTaskStarted:Z
 
@@ -575,7 +577,7 @@
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lc1/k;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lv1/j;->a(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 

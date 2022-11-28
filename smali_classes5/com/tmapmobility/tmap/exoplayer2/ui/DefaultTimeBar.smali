@@ -7,73 +7,77 @@
 
 
 # static fields
-.field public static final A1:I = -0x1
+.field public static final A1:I = 0x0
 
-.field public static final B1:I = 0x33ffffff
+.field public static final B1:I = 0x10
 
-.field public static final C1:I = -0x33000001
+.field public static final C1:I = -0x1
 
-.field public static final D1:I = -0x1
+.field public static final D1:I = 0x33ffffff
 
-.field public static final E1:I = -0x4d000100
+.field public static final E1:I = -0x33000001
 
-.field public static final F1:I = 0x33ffff00
+.field public static final F1:I = -0x1
 
-.field public static final G1:I = 0x0
+.field public static final G1:I = -0x4d000100
 
-.field public static final H1:I = 0x1
+.field public static final H1:I = 0x33ffff00
 
-.field public static final I1:I = -0x32
+.field public static final I1:I = 0x0
 
-.field public static final J1:I = 0x3
+.field public static final J1:I = 0x1
 
-.field public static final K1:J = 0x3e8L
+.field public static final K1:I = -0x32
 
-.field public static final L1:I = 0x14
+.field public static final L1:I = 0x3
 
-.field public static final M1:F = 1.0f
+.field public static final M1:J = 0x3e8L
 
-.field public static final N1:F = 0.0f
+.field public static final N1:I = 0x14
 
-.field public static final O1:Ljava/lang/String; = "android.widget.SeekBar"
+.field public static final O1:F = 1.0f
 
-.field public static final u1:I = 0x4
+.field public static final P1:F = 0.0f
 
-.field public static final v1:I = 0x1a
+.field public static final Q1:Ljava/lang/String; = "android.widget.SeekBar"
 
 .field public static final w1:I = 0x4
 
-.field public static final x1:I = 0xc
+.field public static final x1:I = 0x1a
 
-.field public static final y1:I = 0x0
+.field public static final y1:I = 0x4
 
-.field public static final z1:I = 0x10
+.field public static final z1:I = 0xc
 
 
 # instance fields
 .field public final K0:I
 
-.field public final V0:I
-
-.field public final W0:I
-
 .field public final X0:I
 
 .field public final Y0:I
 
-.field public final Z0:Ljava/lang/StringBuilder;
+.field public final Z0:I
 
 .field public final a:Landroid/graphics/Rect;
 
-.field public final a1:Ljava/util/Formatter;
+.field public final a1:I
 
 .field public final b:Landroid/graphics/Rect;
 
-.field public final b1:Ljava/lang/Runnable;
+.field public final b1:Ljava/lang/StringBuilder;
 
 .field public final c:Landroid/graphics/Rect;
 
-.field public final c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final c1:Ljava/util/Formatter;
+
+.field public final d:Landroid/graphics/Rect;
+
+.field public final d1:Ljava/lang/Runnable;
+
+.field public final e:Landroid/graphics/Paint;
+
+.field public final e1:Ljava/util/concurrent/CopyOnWriteArraySet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/CopyOnWriteArraySet<",
@@ -83,21 +87,13 @@
     .end annotation
 .end field
 
-.field public final d:Landroid/graphics/Rect;
-
-.field public final d1:Landroid/graphics/Point;
-
-.field public final e:Landroid/graphics/Paint;
-
-.field public final e1:F
-
 .field public final f:Landroid/graphics/Paint;
 
-.field public f1:I
+.field public final f1:Landroid/graphics/Point;
 
 .field public final g:Landroid/graphics/Paint;
 
-.field public g1:J
+.field public final g1:F
 
 .field public final h:Landroid/graphics/Paint;
 
@@ -105,11 +101,11 @@
 
 .field public final i:Landroid/graphics/Paint;
 
-.field public i1:Landroid/graphics/Rect;
+.field public i1:J
 
 .field public final j:Landroid/graphics/Paint;
 
-.field public j1:Landroid/animation/ValueAnimator;
+.field public j1:I
 
 .field public final k:Landroid/graphics/drawable/Drawable;
     .annotation build Landroidx/annotation/Nullable;
@@ -118,17 +114,17 @@
 
 .field public final k0:I
 
-.field public k1:F
+.field public k1:Landroid/graphics/Rect;
 
 .field public final l:I
 
-.field public l1:Z
+.field public l1:Landroid/animation/ValueAnimator;
 
-.field public m1:Z
+.field public m1:F
 
-.field public n1:J
+.field public n1:Z
 
-.field public o1:J
+.field public o1:Z
 
 .field public final p:I
 
@@ -136,19 +132,23 @@
 
 .field public q1:J
 
-.field public r1:I
+.field public r1:J
 
-.field public s1:[J
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field public s1:J
 
-.field public t1:[Z
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field public t1:I
 
 .field public final u:I
+
+.field public u1:[J
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public v1:[Z
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -318,14 +318,14 @@
 
     invoke-direct {v9}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    iput-object v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     .line 18
     new-instance v9, Landroid/graphics/Point;
 
     invoke-direct {v9}, Landroid/graphics/Point;-><init>()V
 
-    iput-object v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Landroid/graphics/Point;
+    iput-object v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:Landroid/graphics/Point;
 
     .line 19
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -340,7 +340,7 @@
     .line 21
     iget v9, v9, Landroid/util/DisplayMetrics;->density:F
 
-    iput v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:F
+    iput v9, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->g1:F
 
     const/16 v10, -0x32
 
@@ -349,7 +349,7 @@
 
     move-result v10
 
-    iput v10, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Y0:I
+    iput v10, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a1:I
 
     const/4 v10, 0x4
 
@@ -497,7 +497,7 @@
 
     move-result v0
 
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->V0:I
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
 
     .line 45
     sget v0, Lcom/tmapmobility/tmap/exoplayer2/ui/R$styleable;->DefaultTimeBar_scrubber_dragged_size:I
@@ -507,7 +507,7 @@
 
     move-result v0
 
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->W0:I
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Y0:I
 
     .line 47
     sget v0, Lcom/tmapmobility/tmap/exoplayer2/ui/R$styleable;->DefaultTimeBar_played_color:I
@@ -624,10 +624,10 @@
     iput v13, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->K0:I
 
     .line 71
-    iput v15, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->V0:I
+    iput v15, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
 
     .line 72
-    iput v8, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->W0:I
+    iput v8, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Y0:I
 
     const/4 v5, -0x1
 
@@ -668,7 +668,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Z0:Ljava/lang/StringBuilder;
+    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b1:Ljava/lang/StringBuilder;
 
     .line 81
     new-instance v2, Ljava/util/Formatter;
@@ -679,14 +679,14 @@
 
     invoke-direct {v2, v0, v3}, Ljava/util/Formatter;-><init>(Ljava/lang/Appendable;Ljava/util/Locale;)V
 
-    iput-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a1:Ljava/util/Formatter;
+    iput-object v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/Formatter;
 
     .line 82
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/ui/e;
 
     invoke-direct {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/ui/e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;)V
 
-    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b1:Ljava/lang/Runnable;
+    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Ljava/lang/Runnable;
 
     .line 83
     iget-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k:Landroid/graphics/drawable/Drawable;
@@ -704,7 +704,7 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Z0:I
 
     goto :goto_1
 
@@ -712,11 +712,11 @@
     const/4 v2, 0x1
 
     .line 85
-    iget v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->V0:I
+    iget v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
 
     iget v3, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->K0:I
 
-    iget v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->W0:I
+    iget v4, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Y0:I
 
     .line 86
     invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
@@ -731,20 +731,20 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Z0:I
 
     :goto_1
     const/high16 v0, 0x3f800000    # 1.0f
 
     .line 87
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     .line 88
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
 
-    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iput-object v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     .line 89
     new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/ui/d;
@@ -756,15 +756,15 @@
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 90
-    iput-wide v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iput-wide v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     .line 91
-    iput-wide v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->g1:J
+    iput-wide v2, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:J
 
     const/16 v0, 0x14
 
     .line 92
-    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:I
+    iput v0, v1, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->h1:I
 
     const/4 v0, 0x1
 
@@ -821,7 +821,7 @@
     .locals 5
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->g1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -830,7 +830,7 @@
     if-nez v4, :cond_1
 
     .line 2
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     cmp-long v2, v0, v2
 
@@ -841,7 +841,7 @@
     goto :goto_0
 
     :cond_0
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->h1:I
 
     int-to-long v2, v2
 
@@ -856,13 +856,13 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Z0:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b1:Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a1:Ljava/util/Formatter;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/Formatter;
 
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:J
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->s0(Ljava/lang/StringBuilder;Ljava/util/Formatter;J)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->s0(Ljava/lang/StringBuilder;Ljava/util/Formatter;J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -881,7 +881,7 @@
 
     if-lez v0, :cond_1
 
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -901,7 +901,7 @@
 
     int-to-long v0, v0
 
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     mul-long/2addr v0, v2
 
@@ -949,7 +949,7 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     .line 2
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a:Landroid/graphics/Rect;
@@ -975,7 +975,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x17
 
@@ -1004,7 +1004,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
 
     cmp-long v0, v0, p1
 
@@ -1014,10 +1014,10 @@
 
     .line 2
     :cond_0
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
 
     .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
@@ -1037,7 +1037,7 @@
     check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;
 
     .line 4
-    invoke-interface {v1, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;->D(Lcom/tmapmobility/tmap/exoplayer2/ui/p0;J)V
+    invoke-interface {v1, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;->H(Lcom/tmapmobility/tmap/exoplayer2/ui/p0;J)V
 
     goto :goto_0
 
@@ -1049,7 +1049,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
@@ -1063,7 +1063,7 @@
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
@@ -1103,13 +1103,13 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
 
     .line 2
-    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:I
+    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->t1:I
 
     .line 3
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->s1:[J
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->u1:[J
 
     .line 4
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->t1:[Z
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->v1:[Z
 
     .line 5
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->y()V
@@ -1133,7 +1133,7 @@
     .locals 7
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v2, 0x0
 
@@ -1155,7 +1155,7 @@
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
 
-    invoke-static {v1, v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->s(III)I
+    invoke-static {v1, v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->s(III)I
 
     move-result v0
 
@@ -1172,7 +1172,7 @@
     if-nez v2, :cond_4
 
     .line 5
-    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-nez v2, :cond_3
 
@@ -1197,20 +1197,20 @@
     goto :goto_1
 
     :cond_2
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->V0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
 
     goto :goto_1
 
     .line 7
     :cond_3
     :goto_0
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->W0:I
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Y0:I
 
     :goto_1
     int-to-float v2, v2
 
     .line 8
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     mul-float/2addr v2, v3
 
@@ -1241,7 +1241,7 @@
 
     int-to-float v2, v2
 
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     mul-float/2addr v2, v3
 
@@ -1256,7 +1256,7 @@
 
     int-to-float v3, v3
 
-    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     mul-float/2addr v3, v4
 
@@ -1292,7 +1292,7 @@
     .locals 5
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:F
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->g1:F
 
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b:Landroid/graphics/Rect;
 
@@ -1307,7 +1307,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v3, 0x0
 
@@ -1365,7 +1365,7 @@
     add-int/2addr v1, v2
 
     .line 3
-    iget-wide v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v5, 0x0
 
@@ -1504,7 +1504,7 @@
 
     .line 14
     :cond_3
-    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:I
+    iget v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->t1:I
 
     if-nez v3, :cond_4
 
@@ -1512,7 +1512,7 @@
 
     .line 15
     :cond_4
-    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->s1:[J
+    iget-object v3, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->u1:[J
 
     invoke-static {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1521,7 +1521,7 @@
     check-cast v3, [J
 
     .line 16
-    iget-object v4, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->t1:[Z
+    iget-object v4, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->v1:[Z
 
     invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1540,7 +1540,7 @@
 
     .line 18
     :goto_0
-    iget v8, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:I
+    iget v8, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->t1:I
 
     if-ge v7, v8, :cond_6
 
@@ -1549,9 +1549,9 @@
 
     const-wide/16 v11, 0x0
 
-    iget-wide v13, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v13, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
-    invoke-static/range {v9 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->t(JJJ)J
+    invoke-static/range {v9 .. v14}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->t(JJJ)J
 
     move-result-wide v8
 
@@ -1567,7 +1567,7 @@
 
     mul-long/2addr v10, v8
 
-    iget-wide v8, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v8, v0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     div-long/2addr v10, v8
 
@@ -1643,7 +1643,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -1652,13 +1652,13 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
 
@@ -1666,7 +1666,7 @@
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     aput v3, v1, v2
 
@@ -1679,12 +1679,12 @@
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
     .line 4
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 5
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
@@ -1695,7 +1695,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -1704,18 +1704,18 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 3
     :cond_0
-    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Z
+    iput-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:Z
 
     const/4 p1, 0x0
 
     .line 4
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     .line 5
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a:Landroid/graphics/Rect;
@@ -1774,7 +1774,7 @@
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
-    invoke-static {p1, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->s(III)I
+    invoke-static {p1, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->s(III)I
 
     move-result p1
 
@@ -1812,7 +1812,7 @@
     invoke-super {p0, p1, p2, p3}, Landroid/view/View;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
     .line 2
-    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean p2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz p2, :cond_0
 
@@ -1881,7 +1881,7 @@
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 4
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v2, 0x0
 
@@ -1893,7 +1893,7 @@
 
     .line 5
     :cond_0
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x15
 
@@ -1963,12 +1963,12 @@
     if-eqz v0, :cond_1
 
     .line 4
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b1:Ljava/lang/Runnable;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Ljava/lang/Runnable;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 5
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b1:Ljava/lang/Runnable;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x3e8
 
@@ -1979,7 +1979,7 @@
     .line 6
     :cond_0
     :pswitch_2
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz v0, :cond_1
 
@@ -2029,7 +2029,7 @@
     sub-int p2, p4, p2
 
     .line 3
-    iget-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Z
+    iget-boolean p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:Z
 
     const/4 v0, 0x0
 
@@ -2040,7 +2040,7 @@
     goto :goto_0
 
     :cond_0
-    iget p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->X0:I
+    iget p3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Z0:I
 
     .line 4
     :goto_0
@@ -2129,7 +2129,7 @@
     invoke-virtual {p1, v0, v2, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 11
-    sget p1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget p1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 p2, 0x1d
 
@@ -2227,7 +2227,7 @@
 
     if-eqz v0, :cond_6
 
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v4, 0x0
 
@@ -2272,17 +2272,17 @@
 
     .line 6
     :cond_1
-    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz p1, :cond_6
 
     .line 7
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->Y0:I
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a1:I
 
     if-ge v0, p1, :cond_2
 
     .line 8
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->h1:I
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:I
 
     sub-int/2addr v2, p1
 
@@ -2299,7 +2299,7 @@
 
     .line 10
     :cond_2
-    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->h1:I
+    iput v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:I
 
     int-to-float p1, v2
 
@@ -2324,7 +2324,7 @@
 
     .line 15
     :cond_3
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz v0, :cond_6
 
@@ -2381,7 +2381,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2398,7 +2398,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/graphics/Point;->set(II)V
 
     .line 2
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Landroid/graphics/Point;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:Landroid/graphics/Point;
 
     return-object p1
 .end method
@@ -2423,7 +2423,7 @@
 
     .line 2
     :cond_0
-    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v3, 0x0
 
@@ -2494,7 +2494,7 @@
     .locals 9
 
     .line 1
-    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v0, 0x0
 
@@ -2508,16 +2508,16 @@
 
     .line 2
     :cond_0
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz v0, :cond_1
 
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
 
     goto :goto_0
 
     :cond_1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:J
 
     :goto_0
     move-wide v7, v0
@@ -2527,7 +2527,7 @@
     const-wide/16 v2, 0x0
 
     .line 3
-    invoke-static/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->t(JJJ)J
+    invoke-static/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->t(JJJ)J
 
     move-result-wide p1
 
@@ -2539,7 +2539,7 @@
 
     .line 4
     :cond_2
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-nez v0, :cond_3
 
@@ -2565,7 +2565,7 @@
     .locals 2
 
     .line 1
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x17
 
@@ -2636,6 +2636,28 @@
     .locals 2
 
     .line 1
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->s1:J
+
+    cmp-long v0, v0, p1
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->s1:J
+
+    .line 3
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->y()V
+
+    return-void
+.end method
+
+.method public setDuration(J)V
+    .locals 2
+
+    .line 1
     iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     cmp-long v0, v0, p1
@@ -2649,29 +2671,7 @@
     iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     .line 3
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->y()V
-
-    return-void
-.end method
-
-.method public setDuration(J)V
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
-
-    cmp-long v0, v0, p1
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 2
-    :cond_0
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
-
-    .line 3
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz v0, :cond_1
 
@@ -2700,7 +2700,7 @@
     invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     .line 2
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz v0, :cond_0
 
@@ -2732,12 +2732,12 @@
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
 
     .line 2
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->h1:I
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     .line 3
-    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->g1:J
+    iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:J
 
     return-void
 .end method
@@ -2765,10 +2765,10 @@
     const/4 v0, -0x1
 
     .line 2
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->f1:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->h1:I
 
     .line 3
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->g1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:J
 
     return-void
 .end method
@@ -2817,7 +2817,7 @@
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:J
 
     cmp-long v0, v0, p1
 
@@ -2827,7 +2827,7 @@
 
     .line 2
     :cond_0
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:J
 
     .line 3
     invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->getProgressText()Ljava/lang/String;
@@ -2889,7 +2889,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_0
 
@@ -2900,7 +2900,7 @@
 
     if-ne v0, p1, :cond_0
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:Landroid/graphics/Rect;
 
     .line 3
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -2919,7 +2919,7 @@
 
     invoke-direct {v0, v1, v1, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->i1:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:Landroid/graphics/Rect;
 
     .line 5
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
@@ -2935,7 +2935,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -2944,7 +2944,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -2952,12 +2952,12 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:Z
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     .line 4
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     .line 5
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->a:Landroid/graphics/Rect;
@@ -2971,7 +2971,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isStarted()Z
 
@@ -2980,7 +2980,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -2988,16 +2988,16 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:Z
 
     .line 4
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     const/4 v2, 0x2
 
     new-array v2, v2, [F
 
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->k1:F
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:F
 
     aput v3, v2, v0
 
@@ -3010,12 +3010,12 @@
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
     .line 5
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 6
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->j1:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->l1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
@@ -3026,12 +3026,12 @@
     .locals 2
 
     .line 1
-    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:J
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
 
     const/4 v0, 0x1
 
     .line 2
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->setPressed(Z)V
@@ -3048,7 +3048,7 @@
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
@@ -3068,7 +3068,7 @@
     check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;
 
     .line 7
-    invoke-interface {v1, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;->C(Lcom/tmapmobility/tmap/exoplayer2/ui/p0;J)V
+    invoke-interface {v1, p0, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;->G(Lcom/tmapmobility/tmap/exoplayer2/ui/p0;J)V
 
     goto :goto_0
 
@@ -3080,14 +3080,14 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->b1:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->d1:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     const/4 v0, 0x0
 
     .line 2
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->setPressed(Z)V
@@ -3107,7 +3107,7 @@
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     .line 7
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->c1:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->e1:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
@@ -3127,9 +3127,9 @@
     check-cast v1, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;
 
     .line 8
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
 
-    invoke-interface {v1, p0, v2, v3, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;->l(Lcom/tmapmobility/tmap/exoplayer2/ui/p0;JZ)V
+    invoke-interface {v1, p0, v2, v3, p1}, Lcom/tmapmobility/tmap/exoplayer2/ui/p0$a;->k(Lcom/tmapmobility/tmap/exoplayer2/ui/p0;JZ)V
 
     goto :goto_0
 
@@ -3155,20 +3155,20 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     .line 3
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->m1:Z
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:Z
 
     if-eqz v0, :cond_0
 
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->n1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
 
     goto :goto_0
 
     :cond_0
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->p1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->r1:J
 
     .line 4
     :goto_0
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     const-wide/16 v4, 0x0
 
@@ -3185,11 +3185,11 @@
 
     int-to-long v2, v2
 
-    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
+    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->s1:J
 
     mul-long/2addr v2, v4
 
-    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v4, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     div-long/2addr v2, v4
 
@@ -3223,7 +3223,7 @@
 
     mul-long/2addr v2, v0
 
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->o1:J
+    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/ui/DefaultTimeBar;->q1:J
 
     div-long/2addr v2, v0
 

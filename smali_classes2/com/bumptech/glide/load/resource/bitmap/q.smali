@@ -3,14 +3,14 @@
 .source "DrawableTransformation.java"
 
 # interfaces
-.implements Lu4/h;
+.implements Lr6/h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lu4/h<",
+        "Lr6/h<",
         "Landroid/graphics/drawable/Drawable;",
         ">;"
     }
@@ -18,10 +18,10 @@
 
 
 # instance fields
-.field public final c:Lu4/h;
+.field public final c:Lr6/h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lu4/h<",
+            "Lr6/h<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -32,12 +32,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lu4/h;Z)V
+.method public constructor <init>(Lr6/h;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/h<",
+            "Lr6/h<",
             "Landroid/graphics/Bitmap;",
             ">;Z)V"
         }
@@ -47,7 +47,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lu4/h;
+    iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lr6/h;
 
     .line 3
     iput-boolean p2, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->d:Z
@@ -141,10 +141,10 @@
 
     .line 6
     :cond_1
-    iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lu4/h;
+    iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lr6/h;
 
     .line 7
-    invoke-interface {v1, p1, v0, p3, p4}, Lu4/h;->a(Landroid/content/Context;Lcom/bumptech/glide/load/engine/s;II)Lcom/bumptech/glide/load/engine/s;
+    invoke-interface {v1, p1, v0, p3, p4}, Lr6/h;->a(Landroid/content/Context;Lcom/bumptech/glide/load/engine/s;II)Lcom/bumptech/glide/load/engine/s;
 
     move-result-object p3
 
@@ -177,19 +177,19 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lr6/h;
 
-    invoke-interface {v0, p1}, Lu4/b;->b(Ljava/security/MessageDigest;)V
+    invoke-interface {v0, p1}, Lr6/b;->b(Ljava/security/MessageDigest;)V
 
     return-void
 .end method
 
-.method public c()Lu4/h;
+.method public c()Lr6/h;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lu4/h<",
+            "Lr6/h<",
             "Landroid/graphics/drawable/BitmapDrawable;",
             ">;"
         }
@@ -237,9 +237,9 @@
     check-cast p1, Lcom/bumptech/glide/load/resource/bitmap/q;
 
     .line 3
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lr6/h;
 
-    iget-object p1, p1, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lu4/h;
+    iget-object p1, p1, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lr6/h;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -257,7 +257,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/q;->c:Lr6/h;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 

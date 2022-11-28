@@ -3,12 +3,12 @@
 .source "AladdinStateManager.java"
 
 # interfaces
-.implements Lsa/d;
+.implements Lpc/d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/aicloud/speaker/service/api/c;->x0(Ljava/lang/String;Lma/c;)V
+    value = Lcom/skt/aicloud/speaker/service/api/c;->x0(Ljava/lang/String;Ljc/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

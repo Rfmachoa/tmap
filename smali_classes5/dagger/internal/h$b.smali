@@ -47,22 +47,22 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Ljava/lang/Object;Loi/a;)Ldagger/internal/a$a;
+.method public bridge synthetic a(Ljava/lang/Object;Lsk/a;)Ldagger/internal/a$a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Ldagger/internal/h$b;->d(Ljava/lang/Object;Loi/a;)Ldagger/internal/h$b;
+    invoke-virtual {p0, p1, p2}, Ldagger/internal/h$b;->d(Ljava/lang/Object;Lsk/a;)Ldagger/internal/h$b;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic b(Loi/a;)Ldagger/internal/a$a;
+.method public bridge synthetic b(Lsk/a;)Ldagger/internal/a$a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Ldagger/internal/h$b;->e(Loi/a;)Ldagger/internal/h$b;
+    invoke-virtual {p0, p1}, Ldagger/internal/h$b;->e(Lsk/a;)Ldagger/internal/h$b;
 
     move-result-object p1
 
@@ -91,12 +91,12 @@
     return-object v0
 .end method
 
-.method public d(Ljava/lang/Object;Loi/a;)Ldagger/internal/h$b;
+.method public d(Ljava/lang/Object;Lsk/a;)Ldagger/internal/h$b;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;)",
             "Ldagger/internal/h$b<",
             "TK;TV;>;"
@@ -104,17 +104,17 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1, p2}, Ldagger/internal/a$a;->a(Ljava/lang/Object;Loi/a;)Ldagger/internal/a$a;
+    invoke-super {p0, p1, p2}, Ldagger/internal/a$a;->a(Ljava/lang/Object;Lsk/a;)Ldagger/internal/a$a;
 
     return-object p0
 .end method
 
-.method public e(Loi/a;)Ldagger/internal/h$b;
+.method public e(Lsk/a;)Ldagger/internal/h$b;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Map<",
             "TK;TV;>;>;)",
             "Ldagger/internal/h$b<",
@@ -123,7 +123,7 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Ldagger/internal/a$a;->b(Loi/a;)Ldagger/internal/a$a;
+    invoke-super {p0, p1}, Ldagger/internal/a$a;->b(Lsk/a;)Ldagger/internal/a$a;
 
     return-object p0
 .end method

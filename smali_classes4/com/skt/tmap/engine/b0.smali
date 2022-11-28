@@ -1,6 +1,6 @@
 .class public Lcom/skt/tmap/engine/b0;
 .super Ljava/lang/Object;
-.source "TmapConfigurationManager.java"
+.source "TmapBlackBoxManager.java"
 
 
 # direct methods

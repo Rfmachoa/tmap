@@ -20,20 +20,20 @@
     .end annotation
 .end field
 
-.field public final b:Ll1/b;
+.field public final b:Landroidx/core/os/d;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Ll1/b;)V
+.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/core/os/d;)V
     .locals 0
     .param p1    # Landroidx/fragment/app/SpecialEffectsController$Operation;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Ll1/b;
+    .param p2    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -45,7 +45,7 @@
     iput-object p1, p0, Landroidx/fragment/app/c$l;->a:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     .line 3
-    iput-object p2, p0, Landroidx/fragment/app/c$l;->b:Ll1/b;
+    iput-object p2, p0, Landroidx/fragment/app/c$l;->b:Landroidx/core/os/d;
 
     return-void
 .end method
@@ -58,9 +58,9 @@
     .line 1
     iget-object v0, p0, Landroidx/fragment/app/c$l;->a:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-    iget-object v1, p0, Landroidx/fragment/app/c$l;->b:Ll1/b;
+    iget-object v1, p0, Landroidx/fragment/app/c$l;->b:Landroidx/core/os/d;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->d(Ll1/b;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/SpecialEffectsController$Operation;->d(Landroidx/core/os/d;)V
 
     return-void
 .end method
@@ -76,13 +76,13 @@
     return-object v0
 .end method
 
-.method public c()Ll1/b;
+.method public c()Landroidx/core/os/d;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/fragment/app/c$l;->b:Ll1/b;
+    iget-object v0, p0, Landroidx/fragment/app/c$l;->b:Landroidx/core/os/d;
 
     return-object v0
 .end method

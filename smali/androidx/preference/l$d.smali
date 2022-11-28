@@ -54,6 +54,10 @@
 
 .method public g(Landroid/graphics/drawable/Drawable;)V
     .locals 1
+    .param p1    # Landroid/graphics/drawable/Drawable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     if-eqz p1, :cond_0
 
@@ -88,6 +92,22 @@
 
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$x;)V
     .locals 0
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/recyclerview/widget/RecyclerView$x;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p0, p2, p3}, Landroidx/preference/l$d;->i(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)Z
@@ -123,6 +143,14 @@
 
 .method public final i(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)Z
     .locals 4
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$a0;
@@ -130,7 +158,7 @@
     move-result-object v0
 
     .line 2
-    instance-of v1, v0, Landroidx/preference/s;
+    instance-of v1, v0, Landroidx/preference/v;
 
     const/4 v2, 0x0
 
@@ -138,10 +166,10 @@
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Landroidx/preference/s;
+    check-cast v0, Landroidx/preference/v;
 
     .line 3
-    invoke-virtual {v0}, Landroidx/preference/s;->f()Z
+    invoke-virtual {v0}, Landroidx/preference/v;->f()Z
 
     move-result v0
 
@@ -190,14 +218,14 @@
     move-result-object p1
 
     .line 9
-    instance-of p2, p1, Landroidx/preference/s;
+    instance-of p2, p1, Landroidx/preference/v;
 
     if-eqz p2, :cond_2
 
-    check-cast p1, Landroidx/preference/s;
+    check-cast p1, Landroidx/preference/v;
 
     .line 10
-    invoke-virtual {p1}, Landroidx/preference/s;->e()Z
+    invoke-virtual {p1}, Landroidx/preference/v;->e()Z
 
     move-result p1
 
@@ -214,6 +242,18 @@
 
 .method public onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$x;)V
     .locals 6
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroidx/recyclerview/widget/RecyclerView$x;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget-object p3, p0, Landroidx/preference/l$d;->a:Landroid/graphics/drawable/Drawable;

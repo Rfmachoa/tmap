@@ -6,21 +6,27 @@
 .implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;
-
-.field public final synthetic b:F
+# static fields
+.field public static final synthetic a:Lcom/skt/tmap/activity/a6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;F)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/skt/tmap/activity/a6;
+
+    invoke-direct {v0}, Lcom/skt/tmap/activity/a6;-><init>()V
+
+    sput-object v0, Lcom/skt/tmap/activity/a6;->a:Lcom/skt/tmap/activity/a6;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/a6;->a:Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;
-
-    iput p2, p0, Lcom/skt/tmap/activity/a6;->b:F
 
     return-void
 .end method
@@ -28,13 +34,9 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 0
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/a6;->a:Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;
-
-    iget v1, p0, Lcom/skt/tmap/activity/a6;->b:F
-
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;->a(Lcom/skt/tmap/activity/TmapRouteWalkActivity$g;F)V
+    invoke-static {}, Lcom/skt/tmap/activity/TmapNaviActivity;->T7()V
 
     return-void
 .end method

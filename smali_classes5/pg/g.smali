@@ -1,18 +1,42 @@
 .class public interface abstract Lpg/g;
 .super Ljava/lang/Object;
-.source "HttpContext.java"
+.source "ChunkExtractor.java"
 
 
-# static fields
-.field public static final y0:Ljava/lang/String; = "http."
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lpg/g$b;,
+        Lpg/g$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public abstract getAttribute(Ljava/lang/String;)Ljava/lang/Object;
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method
 
-.method public abstract removeAttribute(Ljava/lang/String;)Ljava/lang/Object;
+.method public abstract b(Lpg/g$b;JJ)V
+    .param p1    # Lpg/g$b;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 .end method
 
-.method public abstract setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+.method public abstract c()Lcom/tmapmobility/tmap/exoplayer2/extractor/c;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end method
+
+.method public abstract e()[Lcom/tmapmobility/tmap/exoplayer2/Format;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end method
+
+.method public abstract release()V
 .end method

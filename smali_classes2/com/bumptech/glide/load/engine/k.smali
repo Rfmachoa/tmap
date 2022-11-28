@@ -4,27 +4,27 @@
 
 
 # virtual methods
-.method public abstract b(Lcom/bumptech/glide/load/engine/j;Lu4/b;Lcom/bumptech/glide/load/engine/n;)V
+.method public abstract c(Lcom/bumptech/glide/load/engine/j;Lr6/b;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;",
-            "Lu4/b;",
-            "Lcom/bumptech/glide/load/engine/n<",
-            "*>;)V"
+            "Lr6/b;",
+            ")V"
         }
     .end annotation
 .end method
 
-.method public abstract d(Lcom/bumptech/glide/load/engine/j;Lu4/b;)V
+.method public abstract d(Lcom/bumptech/glide/load/engine/j;Lr6/b;Lcom/bumptech/glide/load/engine/n;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/bumptech/glide/load/engine/j<",
             "*>;",
-            "Lu4/b;",
-            ")V"
+            "Lr6/b;",
+            "Lcom/bumptech/glide/load/engine/n<",
+            "*>;)V"
         }
     .end annotation
 .end method

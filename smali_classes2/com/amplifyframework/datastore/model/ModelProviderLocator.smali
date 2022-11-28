@@ -173,7 +173,7 @@
     move-result-object v2
 
     .line 11
-    invoke-static {p0, v2, v4}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v4}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -196,7 +196,7 @@
     const-string v5, ", however it had no static method named getInstance()!"
 
     .line 13
-    invoke-static {p0, v3, v5}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v3, v5}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -205,7 +205,7 @@
     move-result-object v2
 
     .line 14
-    invoke-static {p0, v2, v4}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v4}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -254,7 +254,7 @@
     move-result-object v2
 
     .line 18
-    invoke-static {p0, v2, v4}, Landroidx/navigation/o0;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v4}, Lw5/a;->a(Ljava/lang/Class;Ljava/lang/StringBuilder;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

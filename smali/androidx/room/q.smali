@@ -1,87 +1,50 @@
-.class public Landroidx/room/q;
+.class public final synthetic Landroidx/room/q;
 .super Ljava/lang/Object;
-.source "SQLiteCopyOpenHelperFactory.java"
+.source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lc3/e$c;
+.implements Lp/a;
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public final b:Ljava/io/File;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public final c:Lc3/e$c;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
+# static fields
+.field public static final synthetic a:Landroidx/room/q;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/io/File;Lc3/e$c;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/room/q;
+
+    invoke-direct {v0}, Landroidx/room/q;-><init>()V
+
+    sput-object v0, Landroidx/room/q;->a:Landroidx/room/q;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Ljava/io/File;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Lc3/e$c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Landroidx/room/q;->a:Ljava/lang/String;
-
-    .line 3
-    iput-object p2, p0, Landroidx/room/q;->b:Ljava/io/File;
-
-    .line 4
-    iput-object p3, p0, Landroidx/room/q;->c:Lc3/e$c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lc3/e$b;)Lc3/e;
-    .locals 7
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    .line 1
-    new-instance v6, Landroidx/room/p;
+    check-cast p1, Lj4/d;
 
-    iget-object v1, p1, Lc3/e$b;->a:Landroid/content/Context;
+    invoke-interface {p1}, Lj4/d;->getPageSize()J
 
-    iget-object v2, p0, Landroidx/room/q;->a:Ljava/lang/String;
+    move-result-wide v0
 
-    iget-object v3, p0, Landroidx/room/q;->b:Ljava/io/File;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, p1, Lc3/e$b;->c:Lc3/e$a;
+    move-result-object p1
 
-    iget v4, v0, Lc3/e$a;->a:I
-
-    iget-object v0, p0, Landroidx/room/q;->c:Lc3/e$c;
-
-    .line 2
-    invoke-interface {v0, p1}, Lc3/e$c;->a(Lc3/e$b;)Lc3/e;
-
-    move-result-object v5
-
-    move-object v0, v6
-
-    invoke-direct/range {v0 .. v5}, Landroidx/room/p;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;ILc3/e;)V
-
-    return-object v6
+    return-object p1
 .end method

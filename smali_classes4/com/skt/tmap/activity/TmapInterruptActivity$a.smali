@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapInterruptActivity;->t5()V
+    value = Lcom/skt/tmap/activity/TmapInterruptActivity;->B5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapInterruptActivity$a;->a:Lcom/skt/tmap/activity/TmapInterruptActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -60,25 +60,25 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapInterruptActivity$a;->a:Lcom/skt/tmap/activity/TmapInterruptActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapInterruptActivity$a;->a:Lcom/skt/tmap/activity/TmapInterruptActivity;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapInterruptActivity$a;->a:Lcom/skt/tmap/activity/TmapInterruptActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/e;->i(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/skt/tmap/util/g;->j(Landroid/app/Activity;)V
 
     return-void
 .end method

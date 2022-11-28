@@ -74,7 +74,7 @@
     .locals 1
 
     .line 4
-    sget-object v0, Ldf/b;->f:Ljava/nio/charset/Charset;
+    sget-object v0, Lhh/b;->f:Ljava/nio/charset/Charset;
 
     invoke-direct {p0, v0}, Lcz/msebera/android/httpclient/impl/auth/d;-><init>(Ljava/nio/charset/Charset;)V
 
@@ -153,7 +153,7 @@
 
     const-string v1, "Unsupported algorithm in HTTP Digest authentication: "
 
-    invoke-static {v1, p0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -221,26 +221,7 @@
 
 
 # virtual methods
-.method public a(Ldf/d;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-super {p0, p1}, Lcz/msebera/android/httpclient/impl/auth/a;->a(Ldf/d;)V
-
-    const/4 p1, 0x1
-
-    .line 2
-    iput-boolean p1, p0, Lcz/msebera/android/httpclient/impl/auth/d;->d:Z
-
-    return-void
-.end method
-
-.method public b(Lef/j;Ldf/q;)Ldf/d;
+.method public a(Lih/j;Lhh/q;)Lhh/d;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -252,18 +233,37 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lpg/a;
+    new-instance v0, Lti/a;
 
-    invoke-direct {v0}, Lpg/a;-><init>()V
+    invoke-direct {v0}, Lti/a;-><init>()V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcz/msebera/android/httpclient/impl/auth/d;->c(Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+    invoke-virtual {p0, p1, p2, v0}, Lcz/msebera/android/httpclient/impl/auth/d;->c(Lih/j;Lhh/q;Lti/g;)Lhh/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public c(Lef/j;Ldf/q;Lpg/g;)Ldf/d;
+.method public b(Lhh/d;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/auth/MalformedChallengeException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcz/msebera/android/httpclient/impl/auth/a;->b(Lhh/d;)V
+
+    const/4 p1, 0x1
+
+    .line 2
+    iput-boolean p1, p0, Lcz/msebera/android/httpclient/impl/auth/d;->d:Z
+
+    return-void
+.end method
+
+.method public c(Lih/j;Lhh/q;Lti/g;)Lhh/d;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -274,12 +274,12 @@
     const-string p3, "Credentials"
 
     .line 1
-    invoke-static {p1, p3}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, p3}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string p3, "HTTP request"
 
     .line 2
-    invoke-static {p2, p3}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p2, p3}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string p3, "realm"
 
@@ -304,11 +304,11 @@
 
     move-result-object p3
 
-    invoke-interface {p2}, Ldf/q;->getRequestLine()Ldf/a0;
+    invoke-interface {p2}, Lhh/q;->getRequestLine()Lhh/a0;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ldf/a0;->getMethod()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/a0;->getMethod()Ljava/lang/String;
 
     move-result-object v0
 
@@ -321,11 +321,11 @@
 
     move-result-object p3
 
-    invoke-interface {p2}, Ldf/q;->getRequestLine()Ldf/a0;
+    invoke-interface {p2}, Lhh/q;->getRequestLine()Lhh/a0;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ldf/a0;->getUri()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/a0;->getUri()Ljava/lang/String;
 
     move-result-object v0
 
@@ -347,7 +347,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/auth/l;->g(Ldf/q;)Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lcz/msebera/android/httpclient/impl/auth/l;->g(Lhh/q;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -355,7 +355,7 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcz/msebera/android/httpclient/impl/auth/d;->k(Lef/j;Ldf/q;)Ldf/d;
+    invoke-virtual {p0, p1, p2}, Lcz/msebera/android/httpclient/impl/auth/d;->k(Lih/j;Lhh/q;)Lhh/d;
 
     move-result-object p1
 
@@ -428,7 +428,7 @@
     return v0
 .end method
 
-.method public final k(Lef/j;Ldf/q;)Ldf/d;
+.method public final k(Lih/j;Lhh/q;)Lhh/d;
     .locals 29
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -560,7 +560,7 @@
 
     .line 13
     :cond_1
-    instance-of v11, v0, Ldf/m;
+    instance-of v11, v0, Lhh/m;
 
     if-eqz v11, :cond_2
 
@@ -643,7 +643,7 @@
     .catch Lcz/msebera/android/httpclient/impl/auth/UnsupportedDigestAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 18
-    invoke-interface/range {p1 .. p1}, Lef/j;->getUserPrincipal()Ljava/security/Principal;
+    invoke-interface/range {p1 .. p1}, Lih/j;->getUserPrincipal()Ljava/security/Principal;
 
     move-result-object v16
 
@@ -656,7 +656,7 @@
     move-object/from16 v23, v6
 
     .line 19
-    invoke-interface/range {p1 .. p1}, Lef/j;->getPassword()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lih/j;->getPassword()Ljava/lang/String;
 
     move-result-object v6
 
@@ -799,7 +799,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v13}, Lqg/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {v6, v13}, Lui/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v6
 
@@ -864,7 +864,7 @@
     :goto_4
     iget-object v6, v1, Lcz/msebera/android/httpclient/impl/auth/d;->h:Ljava/lang/String;
 
-    invoke-static {v6, v13}, Lqg/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {v6, v13}, Lui/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v6
 
@@ -882,49 +882,39 @@
 
     if-ne v11, v9, :cond_a
 
+    move-object/from16 v9, v25
+
+    move-object/from16 v15, v27
+
     .line 45
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v9, v27
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-object/from16 v10, v25
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v15, v10, v9}, Lq1/a;->a(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, v1, Lcz/msebera/android/httpclient/impl/auth/d;->i:Ljava/lang/String;
 
-    move-object/from16 v15, v26
+    move-object/from16 v10, v26
 
     goto/16 :goto_6
 
     :cond_a
-    move-object/from16 v10, v25
+    move-object/from16 v9, v25
 
-    move-object/from16 v9, v27
+    move-object/from16 v15, v27
 
-    const/4 v15, 0x1
+    const/4 v10, 0x1
 
-    if-ne v11, v15, :cond_f
+    if-ne v11, v10, :cond_f
 
     .line 46
-    instance-of v15, v0, Ldf/m;
+    instance-of v10, v0, Lhh/m;
 
-    if-eqz v15, :cond_b
+    if-eqz v10, :cond_b
 
     .line 47
-    check-cast v0, Ldf/m;
+    check-cast v0, Lhh/m;
 
-    invoke-interface {v0}, Ldf/m;->getEntity()Ldf/l;
+    invoke-interface {v0}, Lhh/m;->getEntity()Lhh/l;
 
     move-result-object v0
 
@@ -937,35 +927,25 @@
     if-eqz v0, :cond_d
 
     .line 48
-    invoke-interface {v0}, Ldf/l;->isRepeatable()Z
+    invoke-interface {v0}, Lhh/l;->isRepeatable()Z
 
-    move-result v15
+    move-result v10
 
-    if-nez v15, :cond_d
+    if-nez v10, :cond_d
 
-    move-object/from16 v15, v26
+    move-object/from16 v10, v26
 
     .line 49
-    invoke-virtual {v14, v15}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v10}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
+    const/16 v0, 0x3a
+
     .line 50
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v9, 0x3a
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v15, v0, v9}, Lq1/a;->a(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -986,7 +966,7 @@
     throw v0
 
     :cond_d
-    move-object/from16 v15, v26
+    move-object/from16 v10, v26
 
     .line 52
     new-instance v14, Lcz/msebera/android/httpclient/impl/auth/g;
@@ -997,7 +977,7 @@
 
     .line 53
     :try_start_1
-    invoke-interface {v0, v14}, Ldf/l;->writeTo(Ljava/io/OutputStream;)V
+    invoke-interface {v0, v14}, Lhh/l;->writeTo(Ljava/io/OutputStream;)V
 
     .line 54
     :cond_e
@@ -1010,25 +990,25 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v15, 0x3a
+
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v9, 0x3a
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v14}, Lcz/msebera/android/httpclient/impl/auth/g;->a()[B
 
-    move-result-object v9
+    move-result-object v14
 
-    invoke-static {v9}, Lcz/msebera/android/httpclient/impl/auth/d;->m([B)Ljava/lang/String;
+    invoke-static {v14}, Lcz/msebera/android/httpclient/impl/auth/d;->m([B)Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v14
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1051,22 +1031,12 @@
     throw v2
 
     :cond_f
-    move-object/from16 v15, v26
+    move-object/from16 v10, v26
+
+    const/16 v0, 0x3a
 
     .line 57
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v9, 0x3a
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v15, v0, v9}, Lq1/a;->a(Ljava/lang/String;CLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1076,7 +1046,7 @@
     :goto_6
     iget-object v0, v1, Lcz/msebera/android/httpclient/impl/auth/d;->i:Ljava/lang/String;
 
-    invoke-static {v0, v13}, Lqg/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {v0, v13}, Lui/d;->d(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v0
 
@@ -1090,10 +1060,10 @@
 
     if-nez v11, :cond_10
 
-    const/4 v9, 0x0
+    const/4 v13, 0x0
 
     .line 59
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->setLength(I)V
 
     .line 60
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1116,32 +1086,32 @@
     goto :goto_8
 
     :cond_10
-    const/4 v9, 0x0
+    const/4 v13, 0x0
 
-    const/16 v13, 0x3a
+    const/16 v14, 0x3a
 
     .line 62
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->setLength(I)V
 
     .line 63
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     iget-object v6, v1, Lcz/msebera/android/httpclient/impl/auth/d;->g:Ljava/lang/String;
 
     .line 64
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 v6, 0x1
 
@@ -1152,13 +1122,13 @@
     goto :goto_7
 
     :cond_11
-    move-object v6, v15
+    move-object v6, v10
 
     :goto_7
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 65
-    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1169,7 +1139,7 @@
 
     .line 67
     :goto_8
-    invoke-static {v0}, Lqg/d;->a(Ljava/lang/String;)[B
+    invoke-static {v0}, Lui/d;->a(Ljava/lang/String;)[B
 
     move-result-object v0
 
@@ -1224,9 +1194,9 @@
     .line 74
     new-instance v8, Lcz/msebera/android/httpclient/message/BasicNameValuePair;
 
-    const-string v13, "username"
+    const-string v14, "username"
 
-    invoke-direct {v8, v13, v2}, Lcz/msebera/android/httpclient/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v8, v14, v2}, Lcz/msebera/android/httpclient/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v6, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1253,7 +1223,7 @@
 
     move-object/from16 v5, v22
 
-    invoke-direct {v2, v5, v10}, Lcz/msebera/android/httpclient/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v5, v9}, Lcz/msebera/android/httpclient/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1284,7 +1254,7 @@
     goto :goto_a
 
     :cond_13
-    move-object v8, v15
+    move-object v8, v10
 
     move-object/from16 v5, v20
 
@@ -1340,7 +1310,7 @@
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_15
-    move v2, v9
+    move v2, v13
 
     .line 84
     :goto_c
@@ -1373,15 +1343,15 @@
     .line 88
     invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v9
 
-    if-nez v10, :cond_18
+    if-nez v9, :cond_18
 
     invoke-virtual {v5, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v9
 
-    if-nez v10, :cond_18
+    if-nez v9, :cond_18
 
     .line 89
     invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1393,7 +1363,7 @@
     goto :goto_d
 
     :cond_17
-    move v8, v9
+    move v8, v13
 
     goto :goto_e
 
@@ -1403,11 +1373,11 @@
 
     .line 90
     :goto_e
-    sget-object v10, Lmg/e;->b:Lmg/e;
+    sget-object v9, Lqi/e;->b:Lqi/e;
 
     xor-int/lit8 v8, v8, 0x1
 
-    invoke-virtual {v10, v3, v7, v8}, Lmg/e;->c(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Ldf/y;Z)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-virtual {v9, v3, v7, v8}, Lqi/e;->b(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lhh/y;Z)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -1429,7 +1399,7 @@
 
     move-object/from16 v12, v16
 
-    invoke-static {v2, v12}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v12}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1443,7 +1413,7 @@
 
     const-string v2, "None of the qop methods is supported: "
 
-    invoke-static {v2, v13}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v13}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

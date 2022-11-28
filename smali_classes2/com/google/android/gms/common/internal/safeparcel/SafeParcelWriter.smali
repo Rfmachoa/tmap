@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # direct methods
@@ -2872,15 +2872,6 @@
 
 .method private static zzd(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Landroid/os/Parcelable;",
-            ">(",
-            "Landroid/os/Parcel;",
-            "TT;I)V"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I

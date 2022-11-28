@@ -23,9 +23,19 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
-    sget v0, Lcom/skt/moment/a;->w:I
+    sget v0, Lcom/skt/moment/a;->x:I
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 

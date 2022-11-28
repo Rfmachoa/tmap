@@ -6,6 +6,12 @@
 .implements Ljava/util/concurrent/Executor;
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
 # static fields
 .field public static volatile a:Landroidx/camera/core/impl/utils/executor/b;
 
@@ -79,14 +85,6 @@
 # virtual methods
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "command"
-        }
-    .end annotation
 
     .line 1
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

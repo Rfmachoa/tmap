@@ -3,7 +3,7 @@
 .source "HlsSampleStreamWrapper.java"
 
 # interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/source/x0$a;
+.implements Lcom/tmapmobility/tmap/exoplayer2/source/y0$a;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/tmapmobility/tmap/exoplayer2/source/x0$a<",
+        "Lcom/tmapmobility/tmap/exoplayer2/source/y0$a<",
         "Lcom/tmapmobility/tmap/exoplayer2/source/hls/p;",
         ">;"
     }

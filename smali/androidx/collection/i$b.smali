@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
-.implements Lfj/a;
+.implements Lhl/a;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         "Ljava/util/Iterator<",
         "TT;>;",
-        "Lfj/a;"
+        "Lhl/a;"
     }
 .end annotation
 

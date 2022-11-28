@@ -3,6 +3,14 @@
 .source "FontProvider.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/provider/b$a;
+    }
+.end annotation
+
+
 # static fields
 .field public static final a:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
@@ -19,9 +27,7 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/core/provider/b$a;
-
-    invoke-direct {v0}, Landroidx/core/provider/b$a;-><init>()V
+    sget-object v0, Lf2/c;->a:Lf2/c;
 
     sput-object v0, Landroidx/core/provider/b;->a:Ljava/util/Comparator;
 
@@ -37,8 +43,18 @@
     return-void
 .end method
 
-.method public static a([Landroid/content/pm/Signature;)Ljava/util/List;
-    .locals 3
+.method public static synthetic a([B[B)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroidx/core/provider/b;->g([B[B)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b([Landroid/content/pm/Signature;)Ljava/util/List;
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -54,24 +70,24 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v1, 0x0
-
     .line 2
-    :goto_0
-    array-length v2, p0
+    array-length v1, p0
 
-    if-ge v1, v2, :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, p0, v2
 
     .line 3
-    aget-object v2, p0, v1
+    invoke-virtual {v3}, Landroid/content/pm/Signature;->toByteArray()[B
 
-    invoke-virtual {v2}, Landroid/content/pm/Signature;->toByteArray()[B
+    move-result-object v3
 
-    move-result-object v2
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -79,7 +95,7 @@
     return-object v0
 .end method
 
-.method public static b(Ljava/util/List;Ljava/util/List;)Z
+.method public static c(Ljava/util/List;Ljava/util/List;)Z
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -149,12 +165,12 @@
     return p0
 .end method
 
-.method public static c(Lm1/c;Landroid/content/res/Resources;)Ljava/util/List;
+.method public static d(Lf2/d;Landroid/content/res/Resources;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lm1/c;",
+            "Lf2/d;",
             "Landroid/content/res/Resources;",
             ")",
             "Ljava/util/List<",
@@ -164,14 +180,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lm1/c;->b()Ljava/util/List;
+    invoke-virtual {p0}, Lf2/d;->b()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lm1/c;->b()Ljava/util/List;
+    invoke-virtual {p0}, Lf2/d;->b()Ljava/util/List;
 
     move-result-object p0
 
@@ -179,7 +195,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lm1/c;->c()I
+    invoke-virtual {p0}, Lf2/d;->c()I
 
     move-result p0
 
@@ -191,13 +207,13 @@
     return-object p0
 .end method
 
-.method public static d(Landroid/content/Context;Lm1/c;Landroid/os/CancellationSignal;)Landroidx/core/provider/FontsContractCompat$b;
+.method public static e(Landroid/content/Context;Lf2/d;Landroid/os/CancellationSignal;)Landroidx/core/provider/FontsContractCompat$b;
     .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lm1/c;
+    .param p1    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -224,7 +240,7 @@
     move-result-object v1
 
     .line 2
-    invoke-static {v0, p1, v1}, Landroidx/core/provider/b;->e(Landroid/content/pm/PackageManager;Lm1/c;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
+    invoke-static {v0, p1, v1}, Landroidx/core/provider/b;->f(Landroid/content/pm/PackageManager;Lf2/d;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
 
     move-result-object v0
 
@@ -245,7 +261,7 @@
     :cond_0
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    invoke-static {p0, p1, v0, p2}, Landroidx/core/provider/b;->f(Landroid/content/Context;Lm1/c;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$c;
+    invoke-static {p0, p1, v0, p2}, Landroidx/core/provider/b;->h(Landroid/content/Context;Lf2/d;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$c;
 
     move-result-object p0
 
@@ -259,13 +275,13 @@
     return-object p0
 .end method
 
-.method public static e(Landroid/content/pm/PackageManager;Lm1/c;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
+.method public static f(Landroid/content/pm/PackageManager;Lf2/d;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
     .locals 5
     .param p0    # Landroid/content/pm/PackageManager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lm1/c;
+    .param p1    # Lf2/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -286,7 +302,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lm1/c;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lf2/d;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -302,7 +318,7 @@
     .line 3
     iget-object v3, v2, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lm1/c;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lf2/d;->g()Ljava/lang/String;
 
     move-result-object v4
 
@@ -324,7 +340,7 @@
     .line 5
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    invoke-static {p0}, Landroidx/core/provider/b;->a([Landroid/content/pm/Signature;)Ljava/util/List;
+    invoke-static {p0}, Landroidx/core/provider/b;->b([Landroid/content/pm/Signature;)Ljava/util/List;
 
     move-result-object p0
 
@@ -334,7 +350,7 @@
     invoke-static {p0, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 7
-    invoke-static {p1, p2}, Landroidx/core/provider/b;->c(Lm1/c;Landroid/content/res/Resources;)Ljava/util/List;
+    invoke-static {p1, p2}, Landroidx/core/provider/b;->d(Lf2/d;Landroid/content/res/Resources;)Ljava/util/List;
 
     move-result-object p1
 
@@ -363,7 +379,7 @@
     invoke-static {p2, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 11
-    invoke-static {p0, p2}, Landroidx/core/provider/b;->b(Ljava/util/List;Ljava/util/List;)Z
+    invoke-static {p0, p2}, Landroidx/core/provider/b;->c(Ljava/util/List;Ljava/util/List;)Z
 
     move-result p2
 
@@ -389,12 +405,12 @@
 
     const-string v1, ", but package was not "
 
-    invoke-static {p2, v0, v1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p2, v0, v1}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p2
 
     .line 13
-    invoke-virtual {p1}, Lm1/c;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lf2/d;->g()Ljava/lang/String;
 
     move-result-object p1
 
@@ -414,7 +430,7 @@
 
     const-string p1, "No package found for authority: "
 
-    invoke-static {p1, v0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -423,7 +439,61 @@
     throw p0
 .end method
 
-.method public static f(Landroid/content/Context;Lm1/c;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$c;
+.method public static synthetic g([B[B)I
+    .locals 4
+
+    .line 1
+    array-length v0, p0
+
+    array-length v1, p1
+
+    if-eq v0, v1, :cond_0
+
+    .line 2
+    array-length p0, p0
+
+    array-length p1, p1
+
+    :goto_0
+    sub-int/2addr p0, p1
+
+    return p0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    .line 3
+    :goto_1
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_2
+
+    .line 4
+    aget-byte v2, p0, v1
+
+    aget-byte v3, p1, v1
+
+    if-eq v2, v3, :cond_1
+
+    .line 5
+    aget-byte p0, p0, v1
+
+    aget-byte p1, p1, v1
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    return v0
+.end method
+
+.method public static h(Landroid/content/Context;Lf2/d;Ljava/lang/String;Landroid/os/CancellationSignal;)[Landroidx/core/provider/FontsContractCompat$c;
     .locals 16
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -519,7 +589,7 @@
     new-array v8, v11, [Ljava/lang/String;
 
     .line 11
-    invoke-virtual/range {p1 .. p1}, Lm1/c;->h()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lf2/d;->h()Ljava/lang/String;
 
     move-result-object v5
 
@@ -534,7 +604,7 @@
     move-object/from16 v10, p3
 
     .line 12
-    invoke-virtual/range {v4 .. v10}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+    invoke-static/range {v4 .. v10}, Landroidx/core/provider/b$a;->a(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Landroid/database/Cursor;
 
     move-result-object v3
 

@@ -17,10 +17,6 @@
 .end annotation
 
 
-# static fields
-.field public static sDefaultImpl:Landroidx/car/app/navigation/model/IPanModeListener;
-
-
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 
@@ -58,7 +54,7 @@
 .end method
 
 .method public onPanModeChanged(ZLandroidx/car/app/IOnDoneCallback;)V
-    .locals 5
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -80,67 +76,32 @@
 
     if-eqz p1, :cond_0
 
-    move v2, v1
+    move p1, v1
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 p1, 0x0
 
     .line 3
     :goto_0
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 4
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongInterface(Landroid/os/IInterface;)V
+
+    .line 5
+    iget-object p1, p0, Landroidx/car/app/navigation/model/IPanModeListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/4 p2, 0x2
 
     const/4 v2, 0x0
 
-    if-eqz p2, :cond_1
-
-    .line 4
-    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v3
-
-    goto :goto_1
-
-    :cond_1
-    move-object v3, v2
-
-    :goto_1
-    invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    .line 5
-    iget-object v3, p0, Landroidx/car/app/navigation/model/IPanModeListener$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/4 v4, 0x2
-
-    invoke-interface {v3, v4, v0, v2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 6
-    invoke-static {}, Landroidx/car/app/navigation/model/IPanModeListener$Stub;->getDefaultImpl()Landroidx/car/app/navigation/model/IPanModeListener;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    .line 7
-    invoke-static {}, Landroidx/car/app/navigation/model/IPanModeListener$Stub;->getDefaultImpl()Landroidx/car/app/navigation/model/IPanModeListener;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1, p2}, Landroidx/car/app/navigation/model/IPanModeListener;->onPanModeChanged(ZLandroidx/car/app/IOnDoneCallback;)V
+    invoke-interface {p1, p2, v0, v2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-void
-
-    :cond_2
+    .line 6
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -150,6 +111,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 9
+    .line 7
     throw p1
 .end method

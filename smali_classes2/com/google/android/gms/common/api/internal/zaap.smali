@@ -1,33 +1,17 @@
 .class final Lcom/google/android/gms/common/api/internal/zaap;
 .super Lcom/google/android/gms/common/api/internal/zaav;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # instance fields
 .field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
 .field private final zac:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;Ljava/util/ArrayList;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/Api$Client;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaap;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;

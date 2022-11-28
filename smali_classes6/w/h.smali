@@ -7,20 +7,28 @@
 
 
 # instance fields
-.field public final synthetic a:Lw/i;
+.field public final synthetic a:Lw/b$b;
 
-.field public final synthetic b:Z
+.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
+
+.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
+
+.field public final synthetic d:Landroid/hardware/camera2/TotalCaptureResult;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw/i;Z)V
+.method public synthetic constructor <init>(Lw/b$b;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw/h;->a:Lw/i;
+    iput-object p1, p0, Lw/h;->a:Lw/b$b;
 
-    iput-boolean p2, p0, Lw/h;->b:Z
+    iput-object p2, p0, Lw/h;->b:Landroid/hardware/camera2/CameraCaptureSession;
+
+    iput-object p3, p0, Lw/h;->c:Landroid/hardware/camera2/CaptureRequest;
+
+    iput-object p4, p0, Lw/h;->d:Landroid/hardware/camera2/TotalCaptureResult;
 
     return-void
 .end method
@@ -28,13 +36,17 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 4
 
-    iget-object v0, p0, Lw/h;->a:Lw/i;
+    iget-object v0, p0, Lw/h;->a:Lw/b$b;
 
-    iget-boolean v1, p0, Lw/h;->b:Z
+    iget-object v1, p0, Lw/h;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
-    invoke-static {v0, v1}, Lw/i;->g(Lw/i;Z)V
+    iget-object v2, p0, Lw/h;->c:Landroid/hardware/camera2/CaptureRequest;
+
+    iget-object v3, p0, Lw/h;->d:Landroid/hardware/camera2/TotalCaptureResult;
+
+    invoke-static {v0, v1, v2, v3}, Lw/b$b;->f(Lw/b$b;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
 
     return-void
 .end method

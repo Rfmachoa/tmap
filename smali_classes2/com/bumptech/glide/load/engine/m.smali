@@ -15,24 +15,24 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Lu4/b;IILjava/util/Map;Ljava/lang/Class;Ljava/lang/Class;Lu4/e;)Lcom/bumptech/glide/load/engine/l;
+.method public a(Ljava/lang/Object;Lr6/b;IILjava/util/Map;Ljava/lang/Class;Ljava/lang/Class;Lr6/e;)Lcom/bumptech/glide/load/engine/l;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
-            "Lu4/b;",
+            "Lr6/b;",
             "II",
             "Ljava/util/Map<",
             "Ljava/lang/Class<",
             "*>;",
-            "Lu4/h<",
+            "Lr6/h<",
             "*>;>;",
             "Ljava/lang/Class<",
             "*>;",
             "Ljava/lang/Class<",
             "*>;",
-            "Lu4/e;",
+            "Lr6/e;",
             ")",
             "Lcom/bumptech/glide/load/engine/l;"
         }
@@ -59,7 +59,7 @@
 
     move-object/from16 v8, p8
 
-    invoke-direct/range {v0 .. v8}, Lcom/bumptech/glide/load/engine/l;-><init>(Ljava/lang/Object;Lu4/b;IILjava/util/Map;Ljava/lang/Class;Ljava/lang/Class;Lu4/e;)V
+    invoke-direct/range {v0 .. v8}, Lcom/bumptech/glide/load/engine/l;-><init>(Ljava/lang/Object;Lr6/b;IILjava/util/Map;Ljava/lang/Class;Ljava/lang/Class;Lr6/e;)V
 
     return-object v9
 .end method

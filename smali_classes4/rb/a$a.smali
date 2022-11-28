@@ -1,82 +1,94 @@
 .class public Lrb/a$a;
 .super Ljava/lang/Object;
-.source "TmapAgentCollectDeviceInfo.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "GeneralEvent.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lrb/a;->b(Landroid/content/Context;Ljava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lrb/a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x9
+    name = "a"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Landroid/content/Context;
+.field public a:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "type"
+    .end annotation
+.end field
+
+.field public b:Ljava/lang/String;
+    .annotation runtime Lcom/google/gson/annotations/SerializedName;
+        value = "message"
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1010
-        }
-        names = {
-            "val$context"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Lrb/a$a;->a:Landroid/content/Context;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lrb/a$a;->a:Ljava/lang/String;
+
+    .line 3
+    iput-object p2, p0, Lrb/a$a;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a()Ljava/lang/String;
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lrb/a$a;->a:Landroid/content/Context;
+    iget-object v0, p0, Lrb/a$a;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/skt/tmap/agent/b;->d(Landroid/content/Context;)Z
+    return-object v0
+.end method
 
-    move-result v0
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    if-nez v0, :cond_0
+    .line 1
+    iget-object v0, p0, Lrb/a$a;->a:Ljava/lang/String;
 
-    return-void
+    return-object v0
+.end method
 
-    .line 2
-    :cond_0
-    new-instance v0, Lcom/skt/tmap/engine/navigation/LockableHandler;
+.method public toString()Ljava/lang/String;
+    .locals 4
 
-    iget-object v1, p0, Lrb/a$a;->a:Landroid/content/Context;
+    const-string v0, "Error{mType=\'"
 
-    invoke-virtual {v1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    iget-object v1, p0, Lrb/a$a;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/LockableHandler;-><init>(Landroid/os/Looper;I)V
+    const/16 v2, 0x27
 
-    .line 3
-    new-instance v1, Lrb/a$a$a;
+    const-string v3, ", mMessage=\'"
 
-    invoke-direct {v1, p0}, Lrb/a$a$a;-><init>(Lrb/a$a;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/LockableHandler;->put(Ljava/lang/Runnable;)V
+    iget-object v1, p0, Lrb/a$a;->b:Ljava/lang/String;
 
-    return-void
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lg4/i;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

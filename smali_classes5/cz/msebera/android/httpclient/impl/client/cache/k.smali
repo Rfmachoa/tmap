@@ -35,24 +35,24 @@
 
 
 # virtual methods
-.method public a(Ldf/q;)Z
+.method public a(Lhh/q;)Z
     .locals 9
 
     .line 1
-    invoke-interface {p1}, Ldf/q;->getRequestLine()Ldf/a0;
+    invoke-interface {p1}, Lhh/q;->getRequestLine()Lhh/a0;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ldf/a0;->getMethod()Ljava/lang/String;
+    invoke-interface {v0}, Lhh/a0;->getMethod()Ljava/lang/String;
 
     move-result-object v0
 
     .line 2
-    invoke-interface {p1}, Ldf/q;->getRequestLine()Ldf/a0;
+    invoke-interface {p1}, Lhh/q;->getRequestLine()Lhh/a0;
 
     move-result-object v1
 
-    invoke-interface {v1}, Ldf/a0;->getProtocolVersion()Lcz/msebera/android/httpclient/ProtocolVersion;
+    invoke-interface {v1}, Lhh/a0;->getProtocolVersion()Lcz/msebera/android/httpclient/ProtocolVersion;
 
     move-result-object v1
 
@@ -99,7 +99,7 @@
     const-string v0, "Pragma"
 
     .line 7
-    invoke-interface {p1, v0}, Ldf/p;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-interface {p1, v0}, Lhh/p;->getHeaders(Ljava/lang/String;)[Lhh/d;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
     const-string v0, "Cache-Control"
 
     .line 9
-    invoke-interface {p1, v0}, Ldf/p;->getHeaders(Ljava/lang/String;)[Ldf/d;
+    invoke-interface {p1, v0}, Lhh/p;->getHeaders(Ljava/lang/String;)[Lhh/d;
 
     move-result-object p1
 
@@ -135,7 +135,7 @@
     aget-object v3, p1, v1
 
     .line 11
-    invoke-interface {v3}, Ldf/d;->getElements()[Ldf/e;
+    invoke-interface {v3}, Lhh/d;->getElements()[Lhh/e;
 
     move-result-object v3
 
@@ -149,7 +149,7 @@
     aget-object v6, v3, v5
 
     .line 12
-    invoke-interface {v6}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {v6}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v7
 
@@ -173,7 +173,7 @@
 
     .line 15
     :cond_3
-    invoke-interface {v6}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {v6}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v6
 

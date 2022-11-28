@@ -1,6 +1,58 @@
 .class public final Lee/a;
-.super Lce/e;
-.source "EventMessageDecoder.java"
+.super Ljava/lang/Object;
+.source "MapConstant.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lee/a$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:Ljava/lang/String; = "map_mode"
+
+.field public static final b:I = 0x0
+
+.field public static final c:I = 0x1
+
+.field public static final d:I = 0x2
+
+.field public static final e:I = 0x3
+
+.field public static final f:I = 0x1
+
+.field public static final g:I = 0x2
+
+.field public static final h:I = 0x3
+
+.field public static final i:I = 0x1
+
+.field public static final j:I = 0x2
+
+.field public static final k:I = 0x3
+
+.field public static final l:I = 0x1
+
+.field public static final m:I = 0x2
+
+.field public static final n:I = 0x3
+
+.field public static final o:Ljava/lang/String; = "TMAP:DEFAULT"
+
+.field public static final p:Ljava/lang/String; = "TMAP:NIGHT"
+
+.field public static final q:Ljava/lang/String; = "SAM:DEFAULT"
+
+.field public static final r:I = 0x3
+
+.field public static final s:I = 0x4
+
+.field public static final t:I = 0x5
+
+.field public static final u:I = 0x6
 
 
 # direct methods
@@ -8,110 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lce/e;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public b(Lce/c;Ljava/nio/ByteBuffer;)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
-    .locals 3
-
-    .line 1
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
-
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v2
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->limit()I
-
-    move-result p2
-
-    invoke-direct {v1, v2, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>([BI)V
-
-    invoke-virtual {p0, v1}, Lee/a;->c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;
-
-    move-result-object p2
-
-    const/4 v1, 0x0
-
-    aput-object p2, v0, v1
-
-    invoke-direct {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;-><init>([Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;)V
-
-    return-object p1
-.end method
-
-.method public c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;
-    .locals 9
-
-    .line 1
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->A()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v2, v0
-
-    check-cast v2, Ljava/lang/String;
-
-    .line 2
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->A()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Ljava/lang/String;
-
-    .line 3
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->z()J
-
-    move-result-wide v4
-
-    .line 4
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->z()J
-
-    move-result-wide v6
-
-    .line 5
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->e()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
-
-    move-result p1
-
-    invoke-static {v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([BII)[B
-
-    move-result-object v8
-
-    .line 6
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;
-
-    move-object v1, p1
-
-    invoke-direct/range {v1 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/metadata/emsg/EventMessage;-><init>(Ljava/lang/String;Ljava/lang/String;JJ[B)V
-
-    return-object p1
 .end method

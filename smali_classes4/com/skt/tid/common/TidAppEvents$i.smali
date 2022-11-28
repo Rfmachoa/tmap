@@ -3,7 +3,7 @@
 .source "TidAppEvents.kt"
 
 # interfaces
-.implements Lnb/b;
+.implements Lkd/b;
 
 
 # annotations

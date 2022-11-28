@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/logging/Logger;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -45,7 +45,7 @@
     const/16 v1, 0x5b
 
     .line 2
-    invoke-static {v1}, Lcom/airbnb/lottie/parser/moshi/a;->a(C)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Landroidx/emoji2/text/flatbuffer/j;->a(C)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -139,7 +139,7 @@
         .end annotation
     .end param
     .param p2    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -178,7 +178,7 @@
         .end annotation
     .end param
     .param p3    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -203,7 +203,7 @@
         .end annotation
     .end param
     .param p2    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -228,7 +228,7 @@
         .end annotation
     .end param
     .param p2    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
@@ -281,7 +281,7 @@
         .end annotation
     .end param
     .param p2    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -329,7 +329,7 @@
         .end annotation
     .end param
     .param p3    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -364,7 +364,7 @@
         .end annotation
     .end param
     .param p2    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -399,7 +399,7 @@
         .end annotation
     .end param
     .param p2    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
@@ -428,7 +428,7 @@
         .end annotation
     .end param
     .param p3    # [Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;

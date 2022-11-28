@@ -1,45 +1,75 @@
-.class public final Lcom/google/android/gms/ads/internal/overlay/zzp;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads@@19.1.0"
+.class final Lcom/google/android/gms/ads/internal/overlay/zzp;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "com.google.android.gms:play-services-ads@@21.3.0"
 
 
 # instance fields
-.field public paddingBottom:I
-
-.field public paddingLeft:I
-
-.field public paddingRight:I
-
-.field public paddingTop:I
-
-.field public size:I
+.field public final synthetic zza:Lcom/google/android/gms/ads/internal/overlay/zzr;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/google/android/gms/ads/internal/overlay/zzr;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->zza:Lcom/google/android/gms/ads/internal/overlay/zzr;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+.method private final zza(Z)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->zza:Lcom/google/android/gms/ads/internal/overlay/zzr;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setClickable(Z)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->zza:Lcom/google/android/gms/ads/internal/overlay/zzr;
+
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/overlay/zzr;->zza(Lcom/google/android/gms/ads/internal/overlay/zzr;)Landroid/widget/ImageButton;
+
+    move-result-object v0
 
     .line 2
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->paddingLeft:I
+    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setClickable(Z)V
 
-    .line 3
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->paddingRight:I
+    return-void
+.end method
 
-    .line 4
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->paddingTop:I
 
-    .line 5
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->paddingBottom:I
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/16 v0, 0x20
+    const/4 p1, 0x1
 
-    .line 6
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzp;->size:I
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/android/gms/ads/internal/overlay/zzp;->zza(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/android/gms/ads/internal/overlay/zzp;->zza(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/android/gms/ads/internal/overlay/zzp;->zza(Z)V
 
     return-void
 .end method

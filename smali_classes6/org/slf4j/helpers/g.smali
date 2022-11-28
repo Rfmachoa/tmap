@@ -3,25 +3,25 @@
 .source "SubstituteLogger.java"
 
 # interfaces
-.implements Lpk/c;
+.implements Lvm/c;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public volatile b:Lpk/c;
+.field public volatile b:Lvm/c;
 
 .field public c:Ljava/lang/Boolean;
 
 .field public d:Ljava/lang/reflect/Method;
 
-.field public e:Lqk/b;
+.field public e:Lwm/b;
 
 .field public f:Ljava/util/Queue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Queue<",
-            "Lqk/d;",
+            "Lwm/d;",
             ">;"
         }
     .end annotation
@@ -38,7 +38,7 @@
             "(",
             "Ljava/lang/String;",
             "Ljava/util/Queue<",
-            "Lqk/d;",
+            "Lwm/d;",
             ">;Z)V"
         }
     .end annotation
@@ -60,16 +60,16 @@
 
 
 # virtual methods
-.method public b()Lpk/c;
+.method public b()Lvm/c;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     return-object v0
 
@@ -86,33 +86,33 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->c()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->c()Lvm/c;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final c()Lpk/c;
+.method public final c()Lvm/c;
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->e:Lqk/b;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->e:Lwm/b;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lqk/b;
+    new-instance v0, Lwm/b;
 
     iget-object v1, p0, Lorg/slf4j/helpers/g;->f:Ljava/util/Queue;
 
-    invoke-direct {v0, p0, v1}, Lqk/b;-><init>(Lorg/slf4j/helpers/g;Ljava/util/Queue;)V
+    invoke-direct {v0, p0, v1}, Lwm/b;-><init>(Lorg/slf4j/helpers/g;Ljava/util/Queue;)V
 
-    iput-object v0, p0, Lorg/slf4j/helpers/g;->e:Lqk/b;
+    iput-object v0, p0, Lorg/slf4j/helpers/g;->e:Lwm/b;
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->e:Lqk/b;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->e:Lwm/b;
 
     return-object v0
 .end method
@@ -135,7 +135,7 @@
     .line 3
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -149,7 +149,7 @@
 
     const/4 v3, 0x0
 
-    const-class v4, Lqk/c;
+    const-class v4, Lwm/c;
 
     aput-object v4, v2, v3
 
@@ -189,11 +189,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->debug(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lvm/c;->debug(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -202,11 +202,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->debug(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->debug(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -215,11 +215,11 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->debug(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->debug(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -228,11 +228,11 @@
     .locals 1
 
     .line 5
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->debug(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->debug(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -241,11 +241,11 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -254,11 +254,11 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -267,11 +267,11 @@
     .locals 1
 
     .line 7
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -280,11 +280,11 @@
     .locals 1
 
     .line 8
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lpk/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lvm/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -293,11 +293,11 @@
     .locals 1
 
     .line 10
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -306,11 +306,11 @@
     .locals 1
 
     .line 9
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->debug(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -319,7 +319,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     instance-of v0, v0, Lorg/slf4j/helpers/NOPLogger;
 
@@ -382,11 +382,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->error(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lvm/c;->error(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -395,11 +395,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->error(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->error(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -408,11 +408,11 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->error(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->error(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -421,11 +421,11 @@
     .locals 1
 
     .line 5
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->error(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -434,11 +434,11 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->error(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->error(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -447,11 +447,11 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -460,11 +460,11 @@
     .locals 1
 
     .line 7
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -473,11 +473,11 @@
     .locals 1
 
     .line 8
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lpk/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lvm/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -486,11 +486,11 @@
     .locals 1
 
     .line 10
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -499,11 +499,11 @@
     .locals 1
 
     .line 9
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->error(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -512,7 +512,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iget-object v0, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     if-nez v0, :cond_0
 
@@ -527,7 +527,7 @@
     return v0
 .end method
 
-.method public g(Lqk/c;)V
+.method public g(Lwm/c;)V
     .locals 4
 
     .line 1
@@ -541,7 +541,7 @@
     :try_start_0
     iget-object v0, p0, Lorg/slf4j/helpers/g;->d:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iget-object v1, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     const/4 v2, 0x1
 
@@ -571,11 +571,11 @@
     return-object v0
 .end method
 
-.method public h(Lpk/c;)V
+.method public h(Lvm/c;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lorg/slf4j/helpers/g;->b:Lpk/c;
+    iput-object p1, p0, Lorg/slf4j/helpers/g;->b:Lvm/c;
 
     return-void
 .end method
@@ -597,11 +597,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->info(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lvm/c;->info(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -610,11 +610,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->info(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->info(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -623,11 +623,11 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->info(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -636,11 +636,11 @@
     .locals 1
 
     .line 5
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->info(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->info(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -649,11 +649,11 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->info(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->info(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -662,11 +662,11 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -675,11 +675,11 @@
     .locals 1
 
     .line 7
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -688,11 +688,11 @@
     .locals 1
 
     .line 8
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lpk/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lvm/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -701,11 +701,11 @@
     .locals 1
 
     .line 10
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -714,11 +714,11 @@
     .locals 1
 
     .line 9
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->info(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -727,11 +727,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lpk/c;->isDebugEnabled()Z
+    invoke-interface {v0}, Lvm/c;->isDebugEnabled()Z
 
     move-result v0
 
@@ -742,11 +742,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->isDebugEnabled(Lorg/slf4j/Marker;)Z
+    invoke-interface {v0, p1}, Lvm/c;->isDebugEnabled(Lorg/slf4j/Marker;)Z
 
     move-result p1
 
@@ -757,11 +757,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lpk/c;->isErrorEnabled()Z
+    invoke-interface {v0}, Lvm/c;->isErrorEnabled()Z
 
     move-result v0
 
@@ -772,11 +772,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->isErrorEnabled(Lorg/slf4j/Marker;)Z
+    invoke-interface {v0, p1}, Lvm/c;->isErrorEnabled(Lorg/slf4j/Marker;)Z
 
     move-result p1
 
@@ -787,11 +787,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lpk/c;->isInfoEnabled()Z
+    invoke-interface {v0}, Lvm/c;->isInfoEnabled()Z
 
     move-result v0
 
@@ -802,11 +802,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->isInfoEnabled(Lorg/slf4j/Marker;)Z
+    invoke-interface {v0, p1}, Lvm/c;->isInfoEnabled(Lorg/slf4j/Marker;)Z
 
     move-result p1
 
@@ -817,11 +817,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lpk/c;->isTraceEnabled()Z
+    invoke-interface {v0}, Lvm/c;->isTraceEnabled()Z
 
     move-result v0
 
@@ -832,11 +832,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->isTraceEnabled(Lorg/slf4j/Marker;)Z
+    invoke-interface {v0, p1}, Lvm/c;->isTraceEnabled(Lorg/slf4j/Marker;)Z
 
     move-result p1
 
@@ -847,11 +847,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lpk/c;->isWarnEnabled()Z
+    invoke-interface {v0}, Lvm/c;->isWarnEnabled()Z
 
     move-result v0
 
@@ -862,11 +862,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->isWarnEnabled(Lorg/slf4j/Marker;)Z
+    invoke-interface {v0, p1}, Lvm/c;->isWarnEnabled(Lorg/slf4j/Marker;)Z
 
     move-result p1
 
@@ -877,11 +877,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->trace(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lvm/c;->trace(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -890,11 +890,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->trace(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->trace(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -903,11 +903,11 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->trace(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->trace(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -916,11 +916,11 @@
     .locals 1
 
     .line 5
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->trace(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->trace(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -929,11 +929,11 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->trace(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->trace(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -942,11 +942,11 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -955,11 +955,11 @@
     .locals 1
 
     .line 7
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -968,11 +968,11 @@
     .locals 1
 
     .line 8
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lpk/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lvm/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -981,11 +981,11 @@
     .locals 1
 
     .line 10
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -994,11 +994,11 @@
     .locals 1
 
     .line 9
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->trace(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1007,11 +1007,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lpk/c;->warn(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lvm/c;->warn(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1020,11 +1020,11 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->warn(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1033,11 +1033,11 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1046,11 +1046,11 @@
     .locals 1
 
     .line 5
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->warn(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->warn(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1059,11 +1059,11 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->warn(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->warn(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1072,11 +1072,11 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lpk/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lvm/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1085,11 +1085,11 @@
     .locals 1
 
     .line 7
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1098,11 +1098,11 @@
     .locals 1
 
     .line 8
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lpk/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lvm/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1111,11 +1111,11 @@
     .locals 1
 
     .line 10
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1124,11 +1124,11 @@
     .locals 1
 
     .line 9
-    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lpk/c;
+    invoke-virtual {p0}, Lorg/slf4j/helpers/g;->b()Lvm/c;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2, p3}, Lpk/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v0, p1, p2, p3}, Lvm/c;->warn(Lorg/slf4j/Marker;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method

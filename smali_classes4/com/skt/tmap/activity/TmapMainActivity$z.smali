@@ -3,7 +3,7 @@
 .source "TmapMainActivity.java"
 
 # interfaces
-.implements Lcom/skt/tmap/vsm/map/MapEngine$OnHitObjectListener;
+.implements Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemSelectedListener;
 
 
 # annotations
@@ -41,533 +41,658 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public OnHitObjectAlternativeRoute(Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)Z
+.method public static synthetic a(Lcom/skt/tmap/activity/TmapMainActivity$z;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "point"
-        }
-    .end annotation
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Lcom/skt/tmap/activity/TmapMainActivity$z;->d()V
 
-    return p1
+    return-void
 .end method
 
-.method public OnHitObjectCctv(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;Landroid/os/Bundle;)Z
-    .locals 8
+.method public static synthetic b(Lcom/skt/tmap/activity/TmapMainActivity$z;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/skt/tmap/activity/TmapMainActivity$z;->c()V
+
+    return-void
+.end method
+
+.method private synthetic c()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->G7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/x;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/mvp/fragment/e1;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/fragment/a2;->F()V
+
+    return-void
+.end method
+
+.method private synthetic d()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->H7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/a2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/fragment/a2;->F()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onNavigationItemSelected(Landroid/view/MenuItem;)Z
+    .locals 5
+    .param p1    # Landroid/view/MenuItem;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x0,
-            0x0,
-            0x0,
             0x0
         }
         names = {
-            "name",
-            "cctvId",
-            "vsmMapPoint",
-            "bundle"
+            "item"
         }
     .end annotation
 
-    const/4 p2, 0x0
-
-    if-nez p4, :cond_0
-
-    return p2
-
     .line 1
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->x7(Lcom/skt/tmap/activity/TmapMainActivity;)Z
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x1
+
+    const v2, 0x7f140236
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    goto/16 :goto_1
 
     .line 2
+    :pswitch_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->y7(Lcom/skt/tmap/activity/TmapMainActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->TNOW:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
+
+    iget v3, v3, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+
+    invoke-virtual {v0, v3}, Lcom/skt/tmap/data/MainTabController;->isBadgeVisible(I)Z
+
+    move-result v0
+
+    const-string v3, "tap.place"
+
+    if-eqz v0, :cond_0
 
     .line 3
-    :cond_1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string v1, "click.cctvmarker"
+    iget-object v4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    const-string v0, "roadName"
-
-    const-string v1, ""
-
-    .line 4
-    invoke-virtual {p4, v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v0, "offer"
-
-    .line 5
-    invoke-virtual {p4, v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v0, "liveUrl"
-
-    .line 6
-    invoke-virtual {p4, v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string/jumbo v0, "vodUrl"
-
-    .line 7
-    invoke-virtual {p4, v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 8
-    new-instance p4, Lcom/skt/tmap/data/CctvData;
-
-    move-object v2, p4
-
-    move-object v3, p1
-
-    invoke-direct/range {v2 .. v7}, Lcom/skt/tmap/data/CctvData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 9
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object v0, p1, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-static {p1, v0, p4, p3}, Lcom/skt/tmap/util/o1;->g(Landroid/content/Context;Lcom/skt/tmap/mapview/streaming/MapViewStreaming;Lcom/skt/tmap/data/CctvData;Lcom/skt/tmap/vsm/data/VSMMapPoint;)V
-
-    .line 10
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->b8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p4}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->V(Lcom/skt/tmap/data/CctvData;)V
-
-    return p2
-.end method
-
-.method public OnHitObjectMarker(Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;Landroid/os/Bundle;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "vsmMarkerBase",
-            "extras"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v0, "_FAVORITE"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_0
-
-    .line 2
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    invoke-virtual {p2}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object p2
-
-    const-string/jumbo v1, "tap.map_bookmark"
-
-    invoke-virtual {p2, v1}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v1, "_RECENTLY"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    .line 4
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    invoke-virtual {p2}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object p2
-
-    const-string/jumbo v1, "tap.map_history"
-
-    invoke-virtual {p2, v1}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v1, "CCTV"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_6
-
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v2, "CCTV_POI"
-
-    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    goto :goto_1
-
-    .line 6
-    :cond_2
-    :goto_0
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {p2, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->v7(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    return v0
-
-    .line 7
-    :cond_3
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v1, "POI_SELECT"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    return v0
-
-    .line 8
-    :cond_4
-    instance-of p2, p1, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
-
-    if-nez p2, :cond_5
-
-    return v0
-
-    .line 9
-    :cond_5
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object p2, p2, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    invoke-virtual {p2, v0, p1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->X0(ILcom/skt/tmap/vsm/map/marker/VSMMarkerBase;)V
-
-    .line 10
-    check-cast p1, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;
-
-    .line 11
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerBase;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;->getText()Ljava/lang/String;
+    invoke-virtual {v4, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 12
-    invoke-virtual {p1}, Lcom/skt/tmap/vsm/map/marker/VSMMarkerPoint;->getPosition()Lcom/skt/tmap/vsm/data/VSMMapPoint;
+    invoke-virtual {v0, v3, v2}, Lbe/e;->Y(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    goto/16 :goto_1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
-
-    move-result-object p1
-
-    .line 13
-    invoke-static {p2, v1, v2, p1, v0}, Lcom/skt/tmap/activity/TmapMainActivity;->u7(Lcom/skt/tmap/activity/TmapMainActivity;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/route/data/MapPoint;I)V
-
-    return v0
-
-    .line 14
-    :cond_6
-    :goto_1
-    new-instance p1, Landroid/content/Intent;
-
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    const-class v2, Lcom/skt/tmap/activity/CctvActivity;
-
-    invoke-direct {p1, p2, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 15
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {p2}, Lcom/skt/tmap/activity/TmapMainActivity;->b8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->u()Lcom/skt/tmap/data/CctvData;
-
-    move-result-object p2
-
-    invoke-virtual {p1, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 16
-    iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-virtual {p2, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->startActivity(Landroid/content/Intent;)V
-
-    return v0
-.end method
-
-.method public OnHitObjectNone(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "vsmMapPoint"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectOilInfo(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "id",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectPOI(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;Landroid/os/Bundle;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "id",
-            "point",
-            "extras"
-        }
-    .end annotation
-
-    .line 1
-    iget-object p4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object p4, p4, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
-
-    invoke-virtual {p4}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
-
-    move-result-object p4
-
-    const-string/jumbo v0, "tap.map_poi"
-
-    invoke-virtual {p4, v0}, Ldc/d;->c0(Ljava/lang/String;)V
-
-    .line 2
-    iget-object p4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object p4, p4, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p4, v0, p2, v0}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->Y0(III)V
-
-    .line 3
-    iget-object p4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p3}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
-
-    move-result-object p3
-
-    invoke-static {p4, p2, p1, p3, v0}, Lcom/skt/tmap/activity/TmapMainActivity;->u7(Lcom/skt/tmap/activity/TmapMainActivity;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/route/data/MapPoint;I)V
-
-    return v0
-.end method
-
-.method public OnHitObjectRouteFlag(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "id",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectRouteLine(Ljava/lang/String;ILcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "routeLineID",
-            "point"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public OnHitObjectTraffic(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/vsm/data/VSMMapPoint;)Z
-    .locals 9
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "name",
-            "trafficID",
-            "contents",
-            "iconPath",
-            "infoSource",
-            "point"
-        }
-    .end annotation
-
-    .line 1
+    .line 4
+    :cond_0
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->v()Ldc/d;
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
 
     move-result-object v0
 
-    const-string/jumbo v1, "tap.map_event"
+    invoke-virtual {v0, v3}, Lbe/e;->c0(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ldc/d;->c0(Ljava/lang/String;)V
+    goto/16 :goto_1
 
-    .line 2
+    .line 5
+    :pswitch_2
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    const/4 v2, 0x1
+    sget-object v3, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->MY:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
 
-    invoke-virtual {v0, v1, p2, v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->Y0(III)V
+    iget v3, v3, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
 
-    .line 3
+    invoke-virtual {v0, v3}, Lcom/skt/tmap/data/MainTabController;->isBadgeVisible(I)Z
+
+    move-result v0
+
+    const-string v3, "tap.my"
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    iget-object v4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-virtual {v4, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v3, v2}, Lbe/e;->Y(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 7
+    :cond_1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    .line 8
+    :pswitch_3
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->LIFE:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
+
+    iget v3, v3, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+
+    invoke-virtual {v0, v3}, Lcom/skt/tmap/data/MainTabController;->isBadgeVisible(I)Z
+
+    move-result v0
+
+    const-string v3, "tap.drivinglife"
+
+    if-eqz v0, :cond_2
+
+    .line 9
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    iget-object v4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-virtual {v4, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v3, v2}, Lbe/e;->Y(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 10
+    :cond_2
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 11
+    :pswitch_4
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object v0
+
+    const-string v2, "tap.main"
+
+    invoke-virtual {v0, v2}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 12
+    :pswitch_5
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
+
+    move-result-object p1
+
+    sget-object v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->DESIGNATE:Lcom/skt/tmap/activity/TmapMainActivity$TabType;
+
+    iget v0, v0, Lcom/skt/tmap/activity/TmapMainActivity$TabType;->itemId:I
+
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/data/MainTabController;->isBadgeVisible(I)Z
+
+    move-result p1
+
+    const-string v0, "tap.driver_tab"
+
+    if-eqz p1, :cond_3
+
+    .line 13
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
     iget-object v3, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p6}, Lcom/skt/tmap/util/d0;->b(Lcom/skt/tmap/vsm/data/VSMMapPoint;)Lcom/skt/tmap/engine/navigation/route/data/MapPoint;
+    invoke-virtual {v3, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v2
 
-    move-object v4, p1
+    invoke-virtual {p1, v0, v2}, Lbe/e;->Y(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v5, p3
+    goto :goto_0
 
-    move-object v6, p4
+    .line 14
+    :cond_3
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    move-object v7, p5
+    iget-object p1, p1, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-static/range {v3 .. v8}, Lcom/skt/tmap/activity/TmapMainActivity;->w7(Lcom/skt/tmap/activity/TmapMainActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/tmap/engine/navigation/route/data/MapPoint;)V
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->x()Lbe/e;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lbe/e;->c0(Ljava/lang/String;)V
+
+    .line 15
+    :goto_0
+    new-instance p1, Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    const-class v2, Lcom/skt/tmap/activity/TmapDesignateDriverActivity;
+
+    invoke-direct {p1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 16
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->startActivity(Landroid/content/Intent;)V
 
     return v1
+
+    .line 17
+    :goto_1
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->C7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    if-ne v0, p1, :cond_5
+
+    .line 18
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->F7(Lcom/skt/tmap/activity/TmapMainActivity;)V
+
+    .line 19
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result p1
+
+    packed-switch p1, :pswitch_data_1
+
+    :pswitch_6
+    goto :goto_2
+
+    .line 20
+    :pswitch_7
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->G7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/x;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->G7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/x;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/skt/tmap/mvp/fragment/e1;
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->G7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/x;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->isVisible()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    .line 21
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    new-instance v0, Lcom/skt/tmap/activity/o2;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/o2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$z;)V
+
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/activity/TmapMainActivity;->i(Ljava/lang/Runnable;)V
+
+    goto :goto_2
+
+    .line 22
+    :pswitch_8
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->H7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/a2;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->H7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/a2;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lcom/skt/tmap/mvp/fragment/l0;
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->H7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/a2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->isVisible()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    .line 23
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    new-instance v0, Lcom/skt/tmap/activity/n2;
+
+    invoke-direct {v0, p0}, Lcom/skt/tmap/activity/n2;-><init>(Lcom/skt/tmap/activity/TmapMainActivity$z;)V
+
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/activity/TmapMainActivity;->i(Ljava/lang/Runnable;)V
+
+    goto :goto_2
+
+    .line 24
+    :pswitch_9
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    .line 25
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setState(I)V
+
+    :cond_4
+    :goto_2
+    return v1
+
+    .line 26
+    :cond_5
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->C7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->C7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    const v3, 0x7f0a086c
+
+    if-eq v0, v3, :cond_6
+
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    if-ne v0, v3, :cond_6
+
+    .line 27
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->E7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/fragment/s1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/mvp/fragment/s1;->x0()V
+
+    .line 28
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->I7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->s8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    .line 29
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->I7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v3}, Lcom/skt/tmap/activity/TmapMainActivity;->P7(Lcom/skt/tmap/activity/TmapMainActivity;)Landroid/widget/FrameLayout;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v4}, Lcom/skt/tmap/activity/TmapMainActivity;->s8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/skt/tmap/mvp/viewmodel/TmapMainViewModel;->U()F
+
+    move-result v4
+
+    invoke-virtual {v0, v3, v4}, Lcom/skt/tmap/view/TmapBottomSheetBehavior$d;->a(Landroid/view/View;F)V
+
+    .line 30
+    :cond_6
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->B7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/data/MainTabController;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/data/MainTabController;->onNavigationItemSelected(Landroid/view/MenuItem;)V
+
+    .line 31
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->p8(Lcom/skt/tmap/activity/TmapMainActivity;Landroid/view/MenuItem;)Landroid/view/MenuItem;
+
+    .line 32
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->D7(Lcom/skt/tmap/activity/TmapMainActivity;Landroid/view/MenuItem;)Landroid/view/MenuItem;
+
+    .line 33
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_8
+
+    .line 34
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->J7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/m;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_7
+
+    .line 35
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setSaveFlags(I)V
+
+    goto :goto_3
+
+    .line 36
+    :cond_7
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainActivity;->r8(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/view/TmapBottomSheetBehavior;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->getState()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/view/TmapBottomSheetBehavior;->setSaveFlags(I)V
+
+    .line 37
+    :goto_3
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$z;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->q8(Lcom/skt/tmap/activity/TmapMainActivity;)V
+
+    :cond_8
+    return v1
+
+    :pswitch_data_0
+    .packed-switch 0x7f0a086a
+        :pswitch_5
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x7f0a086c
+        :pswitch_9
+        :pswitch_8
+        :pswitch_6
+        :pswitch_7
+    .end packed-switch
 .end method

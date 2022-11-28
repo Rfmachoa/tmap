@@ -3,14 +3,14 @@
 .source "BitmapDrawableTransformation.java"
 
 # interfaces
-.implements Lu4/h;
+.implements Lr6/h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lu4/h<",
+        "Lr6/h<",
         "Landroid/graphics/drawable/BitmapDrawable;",
         ">;"
     }
@@ -21,10 +21,10 @@
 
 
 # instance fields
-.field public final c:Lu4/h;
+.field public final c:Lr6/h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lu4/h<",
+            "Lr6/h<",
             "Landroid/graphics/drawable/Drawable;",
             ">;"
         }
@@ -33,12 +33,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lu4/h;)V
+.method public constructor <init>(Lr6/h;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/h<",
+            "Lr6/h<",
             "Landroid/graphics/Bitmap;",
             ">;)V"
         }
@@ -52,16 +52,16 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/bumptech/glide/load/resource/bitmap/q;-><init>(Lu4/h;Z)V
+    invoke-direct {v0, p1, v1}, Lcom/bumptech/glide/load/resource/bitmap/q;-><init>(Lr6/h;Z)V
 
     .line 3
-    invoke-static {v0}, Lm5/l;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lj7/m;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lu4/h;
+    check-cast p1, Lr6/h;
 
-    iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lu4/h;
+    iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lr6/h;
 
     return-void
 .end method
@@ -168,9 +168,9 @@
     move-result-object p2
 
     .line 2
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lr6/h;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lu4/h;->a(Landroid/content/Context;Lcom/bumptech/glide/load/engine/s;II)Lcom/bumptech/glide/load/engine/s;
+    invoke-interface {v0, p1, p2, p3, p4}, Lr6/h;->a(Landroid/content/Context;Lcom/bumptech/glide/load/engine/s;II)Lcom/bumptech/glide/load/engine/s;
 
     move-result-object p1
 
@@ -190,9 +190,9 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lr6/h;
 
-    invoke-interface {v0, p1}, Lu4/b;->b(Ljava/security/MessageDigest;)V
+    invoke-interface {v0, p1}, Lr6/b;->b(Ljava/security/MessageDigest;)V
 
     return-void
 .end method
@@ -209,9 +209,9 @@
     check-cast p1, Lcom/bumptech/glide/load/resource/bitmap/d;
 
     .line 3
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lr6/h;
 
-    iget-object p1, p1, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lu4/h;
+    iget-object p1, p1, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lr6/h;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -229,7 +229,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lu4/h;
+    iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/d;->c:Lr6/h;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 

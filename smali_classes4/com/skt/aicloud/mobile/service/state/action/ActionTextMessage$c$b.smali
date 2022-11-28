@@ -61,32 +61,32 @@
     .line 1
     sget-object v0, Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;->PROGRESS:Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->H(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->I(Lcom/skt/aicloud/speaker/lib/guiinfo/ReadMessageState;)V
 
     .line 2
     iget v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c$b;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->l(I)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->n(I)V
 
     .line 3
     iget v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c$b;->b:I
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->q(I)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->s(I)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c$b;->c:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->F(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->G(Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c$b;->d:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->G(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->H(Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lcom/skt/aicloud/mobile/service/state/action/ActionTextMessage$c$b;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->E(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiTextMessageInfo;->F(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -57,7 +57,7 @@
 
     .line 2
     :cond_0
-    iget v1, v0, Lcom/skt/tmap/blackbox/d;->o:I
+    iget v1, v0, Lcom/skt/tmap/blackbox/d;->n:I
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -72,7 +72,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/blackbox/b;->a:Lcom/skt/tmap/blackbox/d;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/blackbox/d;->n()V
+    invoke-virtual {v0}, Lcom/skt/tmap/blackbox/d;->t()V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/blackbox/b$b;->a:Lcom/skt/tmap/blackbox/b;
@@ -94,10 +94,10 @@
 
     iget-object v0, v0, Lcom/skt/tmap/blackbox/b;->a:Lcom/skt/tmap/blackbox/d;
 
-    iput v2, v0, Lcom/skt/tmap/blackbox/d;->o:I
+    iput v2, v0, Lcom/skt/tmap/blackbox/d;->n:I
 
     .line 6
-    iget-object v0, v0, Lcom/skt/tmap/blackbox/d;->l:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/skt/tmap/blackbox/d;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
@@ -114,11 +114,11 @@
 
     iget-object v1, v0, Lcom/skt/tmap/blackbox/b;->a:Lcom/skt/tmap/blackbox/d;
 
-    iget v3, v1, Lcom/skt/tmap/blackbox/d;->o:I
+    iget v3, v1, Lcom/skt/tmap/blackbox/d;->n:I
 
     add-int/lit8 v3, v3, 0x1
 
-    iput v3, v1, Lcom/skt/tmap/blackbox/d;->o:I
+    iput v3, v1, Lcom/skt/tmap/blackbox/d;->n:I
 
     .line 9
     rem-int/lit8 v3, v3, 0xa
@@ -146,7 +146,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/blackbox/b;->a:Lcom/skt/tmap/blackbox/d;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/blackbox/d;->h()I
+    invoke-virtual {v0}, Lcom/skt/tmap/blackbox/d;->k()I
 
     move-result v0
 
@@ -156,16 +156,16 @@
 
     iget-object v3, v1, Lcom/skt/tmap/blackbox/b;->a:Lcom/skt/tmap/blackbox/d;
 
-    iget v4, v3, Lcom/skt/tmap/blackbox/d;->o:I
+    iget v4, v3, Lcom/skt/tmap/blackbox/d;->n:I
 
     if-gt v0, v4, :cond_3
 
-    iget-boolean v0, v3, Lcom/skt/tmap/blackbox/d;->k:Z
+    iget-boolean v0, v3, Lcom/skt/tmap/blackbox/d;->j:Z
 
     if-eqz v0, :cond_3
 
     .line 12
-    iput-boolean v2, v3, Lcom/skt/tmap/blackbox/d;->k:Z
+    iput-boolean v2, v3, Lcom/skt/tmap/blackbox/d;->j:Z
 
     .line 13
     :cond_3

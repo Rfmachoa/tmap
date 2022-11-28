@@ -254,7 +254,7 @@
     :pswitch_5
     new-instance v1, Lorg/kc7bfi/jflac/frame/BadHeaderException;
 
-    invoke-static {v12, v9, v15}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v9, v15}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -330,7 +330,7 @@
     :pswitch_e
     new-instance v1, Lorg/kc7bfi/jflac/frame/BadHeaderException;
 
-    invoke-static {v12, v9, v15}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v9, v15}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -399,7 +399,7 @@
 
     const-string v2, "Bad Channel Assignment ("
 
-    invoke-static {v2, v12, v15}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v12, v15}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -472,7 +472,7 @@
     :pswitch_14
     new-instance v1, Lorg/kc7bfi/jflac/frame/BadHeaderException;
 
-    invoke-static {v12, v6, v15}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v6, v15}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -508,7 +508,7 @@
     :cond_a
     new-instance v1, Lorg/kc7bfi/jflac/frame/BadHeaderException;
 
-    invoke-static {v12, v6, v15}, Landroidx/camera/core/impl/utils/f;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v6, v15}, Landroidx/camera/core/impl/utils/j;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

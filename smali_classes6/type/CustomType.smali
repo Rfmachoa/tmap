@@ -3,7 +3,7 @@
 .source "CustomType.java"
 
 # interfaces
-.implements Lc4/o;
+.implements Lz5/o;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/lang/Enum<",
         "Ltype/CustomType;",
         ">;",
-        "Lc4/o;"
+        "Lz5/o;"
     }
 .end annotation
 

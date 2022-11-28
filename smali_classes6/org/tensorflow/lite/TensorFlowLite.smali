@@ -6,14 +6,16 @@
 # static fields
 .field public static final a:Ljava/lang/String; = "tensorflowlite_jni"
 
-.field public static final b:Ljava/lang/Throwable;
+.field public static final b:Ljava/lang/String; = "tensorflowlite_jni_stable"
 
-.field public static volatile c:Z = false
+.field public static final c:Ljava/lang/Throwable;
+
+.field public static volatile d:Z = false
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     :try_start_0
     const-string v0, "tensorflowlite_jni"
@@ -23,16 +25,25 @@
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x0
-
     goto :goto_0
 
     :catch_0
     move-exception v0
 
+    :try_start_1
+    const-string v1, "tensorflowlite_jni_stable"
+
     .line 2
+    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_1 .. :try_end_1} :catch_1
+
     :goto_0
-    sput-object v0, Lorg/tensorflow/lite/TensorFlowLite;->b:Ljava/lang/Throwable;
+    const/4 v0, 0x0
+
+    .line 3
+    :catch_1
+    sput-object v0, Lorg/tensorflow/lite/TensorFlowLite;->c:Ljava/lang/Throwable;
 
     return-void
 .end method
@@ -50,7 +61,7 @@
     .locals 4
 
     .line 1
-    sget-boolean v0, Lorg/tensorflow/lite/TensorFlowLite;->c:Z
+    sget-boolean v0, Lorg/tensorflow/lite/TensorFlowLite;->d:Z
 
     if-eqz v0, :cond_0
 
@@ -59,12 +70,12 @@
     .line 2
     :cond_0
     :try_start_0
-    invoke-static {}, Lorg/tensorflow/lite/TensorFlowLite;->nativeRuntimeVersion()Ljava/lang/String;
+    invoke-static {}, Lorg/tensorflow/lite/TensorFlowLite;->nativeDoNothing()V
 
     const/4 v0, 0x1
 
     .line 3
-    sput-boolean v0, Lorg/tensorflow/lite/TensorFlowLite;->c:Z
+    sput-boolean v0, Lorg/tensorflow/lite/TensorFlowLite;->d:Z
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -74,7 +85,7 @@
     move-exception v0
 
     .line 4
-    sget-object v1, Lorg/tensorflow/lite/TensorFlowLite;->b:Ljava/lang/Throwable;
+    sget-object v1, Lorg/tensorflow/lite/TensorFlowLite;->c:Ljava/lang/Throwable;
 
     if-eqz v1, :cond_1
 
@@ -144,8 +155,11 @@
     return-object v0
 .end method
 
-.method public static native nativeRuntimeVersion()Ljava/lang/String;
+.method private static native nativeDoNothing()V
 .end method
 
-.method public static native nativeSchemaVersion()Ljava/lang/String;
+.method private static native nativeRuntimeVersion()Ljava/lang/String;
+.end method
+
+.method private static native nativeSchemaVersion()Ljava/lang/String;
 .end method

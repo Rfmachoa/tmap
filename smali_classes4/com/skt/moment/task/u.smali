@@ -38,6 +38,22 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "resHappenVo"
+        }
+    .end annotation
 
     .line 1
     invoke-direct/range {p0 .. p5}, Lcom/skt/moment/task/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
@@ -49,6 +65,19 @@
 # virtual methods
 .method public e(Ljava/util/List;Ljava/lang/String;Landroid/os/Bundle;)Z
     .locals 16
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "taskSeeds",
+            "name",
+            "extras"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -83,7 +112,7 @@
     return v6
 
     :cond_0
-    const-string/jumbo v5, "type"
+    const-string v5, "type"
 
     .line 2
     invoke-virtual {v2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -224,25 +253,25 @@
     .line 21
     iget-object v3, v1, Lcom/skt/moment/task/a;->r:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->p(Ljava/lang/String;)V
 
     .line 22
     iget-object v3, v1, Lcom/skt/moment/task/a;->s:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->k(Ljava/lang/String;)V
 
     .line 23
     iget-object v3, v1, Lcom/skt/moment/task/a;->t:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->i(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
 
     .line 24
     iget-object v3, v1, Lcom/skt/moment/task/a;->q:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->l(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/String;)V
 
     .line 25
-    invoke-virtual {v2, v14}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/Object;)V
+    invoke-virtual {v2, v14}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/Object;)V
 
     .line 26
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -465,25 +494,25 @@
     .line 53
     iget-object v2, v1, Lcom/skt/moment/task/a;->r:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->p(Ljava/lang/String;)V
 
     .line 54
     iget-object v2, v1, Lcom/skt/moment/task/a;->s:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->k(Ljava/lang/String;)V
 
     .line 55
     iget-object v2, v1, Lcom/skt/moment/task/a;->t:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->i(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
 
     .line 56
     iget-object v2, v1, Lcom/skt/moment/task/a;->q:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->l(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/String;)V
 
     .line 57
-    invoke-virtual {v0, v10}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/Object;)V
+    invoke-virtual {v0, v10}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/Object;)V
 
     move-object/from16 v2, p1
 

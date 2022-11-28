@@ -298,19 +298,19 @@
     .line 15
     iget-object p1, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase$a;->a:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
 
-    invoke-static {p1, v4}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->b(Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Ljava/lang/String;)Lka/a;
+    invoke-static {p1, v4}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->b(Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Ljava/lang/String;)Lhc/a;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 16
-    invoke-virtual {p1}, Lka/a;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lhc/a;->a()Ljava/lang/String;
 
     move-result-object v2
 
     .line 17
-    invoke-virtual {p1}, Lka/a;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lhc/a;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -399,14 +399,14 @@
     .line 25
     iget-object v2, p0, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase$a;->a:Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;
 
-    invoke-static {v2, v0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->b(Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Ljava/lang/String;)Lka/a;
+    invoke-static {v2, v0}, Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;->b(Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Ljava/lang/String;)Lhc/a;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
     .line 26
-    invoke-virtual {v0}, Lka/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lhc/a;->a()Ljava/lang/String;
 
     move-result-object v2
     :try_end_2
@@ -414,7 +414,7 @@
 
     .line 27
     :try_start_3
-    invoke-virtual {v0}, Lka/a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lhc/a;->b()Ljava/lang/String;
 
     move-result-object v5
 

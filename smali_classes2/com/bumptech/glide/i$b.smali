@@ -1,5 +1,5 @@
 .class public Lcom/bumptech/glide/i$b;
-.super Lj5/f;
+.super Lg7/f;
 .source "RequestManager.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lj5/f<",
+        "Lg7/f<",
         "Landroid/view/View;",
         "Ljava/lang/Object;",
         ">;"
@@ -32,33 +32,19 @@
     .end param
 
     .line 1
-    invoke-direct {p0, p1}, Lj5/f;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lg7/f;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public g(Ljava/lang/Object;Lk5/f;)V
+.method public j(Landroid/graphics/drawable/Drawable;)V
     .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lk5/f;
+    .param p1    # Landroid/graphics/drawable/Drawable;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Object;",
-            "Lk5/f<",
-            "-",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
 
     return-void
 .end method
@@ -73,12 +59,26 @@
     return-void
 .end method
 
-.method public n(Landroid/graphics/drawable/Drawable;)V
+.method public n(Ljava/lang/Object;Lh7/f;)V
     .locals 0
-    .param p1    # Landroid/graphics/drawable/Drawable;
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lh7/f;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lh7/f<",
+            "-",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
 
     return-void
 .end method

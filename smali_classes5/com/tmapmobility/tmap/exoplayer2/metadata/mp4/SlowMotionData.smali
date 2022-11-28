@@ -70,7 +70,7 @@
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/metadata/mp4/SlowMotionData;->a:Ljava/util/List;
 
     .line 3
-    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/mp4/SlowMotionData;->b(Ljava/util/List;)Z
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/mp4/SlowMotionData;->a(Ljava/util/List;)Z
 
     move-result p1
 
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/util/List;)Z
+.method public static a(Ljava/util/List;)Z
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {

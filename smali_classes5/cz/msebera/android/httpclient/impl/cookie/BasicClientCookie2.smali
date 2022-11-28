@@ -3,7 +3,7 @@
 .source "BasicClientCookie2.java"
 
 # interfaces
-.implements Lxf/j;
+.implements Lbi/j;
 
 
 # annotations

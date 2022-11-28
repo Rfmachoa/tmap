@@ -3,34 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/g;
+.implements Lcom/amplifyframework/core/async/Cancelable;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/core/Consumer;
+.field public final synthetic a:Lio/reactivex/rxjava3/disposables/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/core/Consumer;)V
+.method public synthetic constructor <init>(Lio/reactivex/rxjava3/disposables/c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/m;->a:Lcom/amplifyframework/core/Consumer;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/m;->a:Lio/reactivex/rxjava3/disposables/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final cancel()V
     .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/m;->a:Lcom/amplifyframework/core/Consumer;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/m;->a:Lio/reactivex/rxjava3/disposables/c;
 
-    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
-
-    invoke-interface {v0, p1}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lio/reactivex/rxjava3/disposables/c;->dispose()V
 
     return-void
 .end method

@@ -16,45 +16,45 @@
 
 
 # static fields
-.field public static final W0:F = 0.0f
-
-.field public static final X0:F = 3.4028235E38f
-
 .field public static final Y0:F = 0.0f
 
-.field public static final Z0:I = 0x0
+.field public static final Z0:F = 3.4028235E38f
 
-.field public static final a1:I = 0x1
+.field public static final a1:F = 0.0f
 
-.field public static final b1:I = 0x2
+.field public static final b1:I = 0x0
 
-.field public static final c1:I = 0x0
+.field public static final c1:I = 0x1
 
-.field public static final d1:I = 0x1
+.field public static final d1:I = 0x2
 
-.field public static final e1:I = 0x1
+.field public static final e1:I = 0x0
 
-.field public static final f1:I = 0x13b
+.field public static final f1:I = 0x1
 
-.field public static final g1:I = 0x627
+.field public static final g1:I = 0x1
 
-.field public static final h1:F = 3.4028235E38f
+.field public static final h1:I = 0x13b
 
-.field public static final i1:F = 0.2f
+.field public static final i1:I = 0x627
 
-.field public static final j1:F = 1.0f
+.field public static final j1:F = 3.4028235E38f
 
-.field public static final k1:I
+.field public static final k1:F = 0.2f
 
-.field public static final l1:I = 0x1f4
+.field public static final l1:F = 1.0f
 
-.field public static final m1:I = 0x1f4
+.field public static final m1:I
+
+.field public static final n1:I = 0x1f4
+
+.field public static final o1:I = 0x1f4
 
 
 # instance fields
 .field public K0:Z
 
-.field public V0:Z
+.field public X0:Z
 
 .field public final a:Landroidx/core/widget/a$a;
 
@@ -96,7 +96,7 @@
 
     move-result v0
 
-    sput v0, Landroidx/core/widget/a;->k1:I
+    sput v0, Landroidx/core/widget/a;->m1:I
 
     return-void
 .end method
@@ -226,7 +226,7 @@
     invoke-virtual {p0, p1, p1}, Landroidx/core/widget/a;->w(FF)Landroidx/core/widget/a;
 
     .line 18
-    sget p1, Landroidx/core/widget/a;->k1:I
+    sget p1, Landroidx/core/widget/a;->m1:I
 
     invoke-virtual {p0, p1}, Landroidx/core/widget/a;->m(I)Landroidx/core/widget/a;
 
@@ -573,7 +573,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Landroidx/core/widget/a;->V0:Z
+    iget-boolean v0, p0, Landroidx/core/widget/a;->X0:Z
 
     return v0
 .end method
@@ -766,7 +766,7 @@
     .line 13
     :cond_4
     :goto_0
-    iget-boolean p1, p0, Landroidx/core/widget/a;->V0:Z
+    iget-boolean p1, p0, Landroidx/core/widget/a;->X0:Z
 
     if-eqz p1, :cond_5
 
@@ -784,7 +784,7 @@
     .locals 0
 
     .line 1
-    iput-boolean p1, p0, Landroidx/core/widget/a;->V0:Z
+    iput-boolean p1, p0, Landroidx/core/widget/a;->X0:Z
 
     return-object p0
 .end method

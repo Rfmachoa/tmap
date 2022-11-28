@@ -10,6 +10,12 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/appcompat/widget/ActionBarContainer$a;
+    }
+.end annotation
+
 
 # instance fields
 .field public a:Z
@@ -906,7 +912,7 @@
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     .line 14
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidateOutline()V
+    invoke-static {p0}, Landroidx/appcompat/widget/ActionBarContainer$a;->a(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     return-void
 .end method
@@ -998,7 +1004,7 @@
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     .line 12
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidateOutline()V
+    invoke-static {p0}, Landroidx/appcompat/widget/ActionBarContainer$a;->a(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     return-void
 .end method
@@ -1107,12 +1113,12 @@
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     .line 14
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidateOutline()V
+    invoke-static {p0}, Landroidx/appcompat/widget/ActionBarContainer$a;->a(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     return-void
 .end method
 
-.method public setTabContainer(Landroidx/appcompat/widget/z;)V
+.method public setTabContainer(Landroidx/appcompat/widget/e0;)V
     .locals 2
 
     .line 1
@@ -1150,7 +1156,7 @@
     const/4 v0, 0x0
 
     .line 8
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/z;->setAllowCollapse(Z)V
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/e0;->setAllowCollapse(Z)V
 
     :cond_1
     return-void

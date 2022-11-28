@@ -1,158 +1,179 @@
-.class public Lb0/d;
-.super Ljava/lang/Object;
-.source "IncompleteCameraListQuirk.java"
-
-# interfaces
-.implements Lx/a1;
+.class public final Lb0/d;
+.super Lb0/d0;
+.source "AutoValue_CameraThreadConfig.java"
 
 
-# static fields
-.field public static final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final a:Ljava/util/concurrent/Executor;
+
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 43
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+    .locals 1
 
     .line 1
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {p0}, Lb0/d0;-><init>()V
 
-    const-string v1, "a5y17lte"
-
-    const-string v2, "tb-8704x"
-
-    const-string v3, "a7y17lte"
-
-    const-string v4, "on7xelte"
-
-    const-string v5, "heroqltevzw"
-
-    const-string v6, "1816"
-
-    const-string v7, "1814"
-
-    const-string v8, "1815"
-
-    const-string v9, "santoni"
-
-    const-string v10, "htc_oclul"
-
-    const-string v11, "asus_z01h_1"
-
-    const-string v12, "vox_alpha_plus"
-
-    const-string v13, "a5y17ltecan"
-
-    const-string v14, "x304l"
-
-    const-string v15, "hero2qltevzw"
-
-    const-string v16, "a5y17lteskt"
-
-    const-string v17, "1801"
-
-    const-string v18, "a5y17lteskt"
-
-    const-string v19, "1801"
-
-    const-string v20, "a5y17ltelgt"
-
-    const-string v21, "herolte"
-
-    const-string v22, "htc_hiau_ml_tuhl"
-
-    const-string v23, "a6plte"
-
-    const-string v24, "hwtrt-q"
-
-    const-string v25, "co2_sprout"
-
-    const-string v26, "h3223"
-
-    const-string v27, "davinci"
-
-    const-string v28, "vince"
-
-    const-string v29, "armor_x5"
-
-    const-string v30, "a2corelte"
-
-    const-string v31, "j6lte"
-
-    const-string v32, "walleye"
-
-    const-string v33, "taimen"
-
-    const-string v34, "blueline"
-
-    const-string v35, "crosshatch"
-
-    const-string v36, "bonito"
-
-    const-string v37, "sargo"
-
-    const-string v38, "coral"
-
-    const-string v39, "flame"
-
-    const-string v40, "sunfish"
-
-    const-string v41, "bramble"
-
-    const-string v42, "redfin"
-
-    filled-new-array/range {v1 .. v42}, [Ljava/lang/String;
-
-    move-result-object v1
+    const-string v0, "Null cameraExecutor"
 
     .line 2
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v1
+    .line 3
+    iput-object p1, p0, Lb0/d;->a:Ljava/util/concurrent/Executor;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    const-string p1, "Null schedulerHandler"
 
-    sput-object v0, Lb0/d;->a:Ljava/util/List;
+    .line 4
+    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    iput-object p2, p0, Lb0/d;->b:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method public static a()Z
-    .locals 3
+
+# virtual methods
+.method public b()Ljava/util/concurrent/Executor;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    sget-object v0, Lb0/d;->a:Ljava/util/List;
+    iget-object v0, p0, Lb0/d;->a:Ljava/util/concurrent/Executor;
 
-    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+.method public c()Landroid/os/Handler;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    move-result-object v2
+    .line 1
+    iget-object v0, p0, Lb0/d;->b:Landroid/os/Handler;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    .line 1
+    :cond_0
+    instance-of v1, p1, Lb0/d0;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    .line 2
+    check-cast p1, Lb0/d0;
+
+    .line 3
+    iget-object v1, p0, Lb0/d;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {p1}, Lb0/d0;->b()Ljava/util/concurrent/Executor;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lb0/d;->b:Landroid/os/Handler;
+
+    .line 4
+    invoke-virtual {p1}, Lb0/d0;->c()Landroid/os/Handler;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    :goto_0
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lb0/d;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    .line 2
+    iget-object v1, p0, Lb0/d;->b:Landroid/os/Handler;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
     return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "CameraThreadConfig{cameraExecutor="
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lb0/d;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", schedulerHandler="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lb0/d;->b:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

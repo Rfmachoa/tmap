@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/Batch$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -16,14 +16,6 @@
 
 # instance fields
 .field private zaa:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/google/android/gms/common/api/PendingResult<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
 
 .field private zab:Lcom/google/android/gms/common/api/GoogleApiClient;
 

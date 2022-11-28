@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Landroidx/car/app/navigation/d;->a:Landroidx/car/app/navigation/NavigationManager;
 
-    invoke-static {v0}, Landroidx/car/app/navigation/NavigationManager;->g(Landroidx/car/app/navigation/NavigationManager;)V
+    invoke-static {v0}, Landroidx/car/app/navigation/NavigationManager;->h(Landroidx/car/app/navigation/NavigationManager;)V
 
     return-void
 .end method

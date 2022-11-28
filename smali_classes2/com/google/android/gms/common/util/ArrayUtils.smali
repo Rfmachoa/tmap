@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/util/ArrayUtils;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -571,11 +571,11 @@
     if-eqz p0, :cond_2
 
     .line 1
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
+    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_1
 

@@ -128,54 +128,16 @@
 
     invoke-virtual {p2, v0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeNumber(J)V
 
-    goto :goto_0
+    return-void
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase;->_customFormat:Ljava/text/DateFormat;
-
-    if-eqz v0, :cond_1
-
-    .line 5
-    monitor-enter v0
-
-    .line 6
-    :try_start_0
-    iget-object p3, p0, Lcom/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase;->_customFormat:Ljava/text/DateFormat;
-
     invoke-virtual {p1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object p1
 
-    invoke-virtual {p3, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase;->_serializeAsString(Ljava/util/Date;Lcom/fasterxml/jackson/core/JsonGenerator;Lcom/fasterxml/jackson/databind/SerializerProvider;)V
 
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeString(Ljava/lang/String;)V
-
-    .line 7
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-
-    .line 8
-    :cond_1
-    invoke-virtual {p1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
-
-    move-result-object p1
-
-    invoke-virtual {p3, p1, p2}, Lcom/fasterxml/jackson/databind/SerializerProvider;->defaultSerializeDateValue(Ljava/util/Date;Lcom/fasterxml/jackson/core/JsonGenerator;)V
-
-    :goto_0
     return-void
 .end method
 

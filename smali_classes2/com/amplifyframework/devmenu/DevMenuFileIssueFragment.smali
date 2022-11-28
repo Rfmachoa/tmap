@@ -140,7 +140,7 @@
     return-object v0
 .end method
 
-.method public static synthetic h(Lcom/amplifyframework/devmenu/DevMenuFileIssueFragment;Landroid/view/View;)V
+.method public static synthetic i(Lcom/amplifyframework/devmenu/DevMenuFileIssueFragment;Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amplifyframework/devmenu/DevMenuFileIssueFragment;->lambda$onCreateView$0(Landroid/view/View;)V
@@ -148,7 +148,7 @@
     return-void
 .end method
 
-.method public static synthetic i(Lcom/amplifyframework/devmenu/DevMenuFileIssueFragment;Landroid/content/Context;Landroid/view/View;)V
+.method public static synthetic j(Lcom/amplifyframework/devmenu/DevMenuFileIssueFragment;Landroid/content/Context;Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/amplifyframework/devmenu/DevMenuFileIssueFragment;->lambda$onCreateView$1(Landroid/content/Context;Landroid/view/View;)V

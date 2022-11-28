@@ -10,6 +10,12 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/material/ripple/RippleUtils$RippleUtilsLollipop;
+    }
+.end annotation
+
 
 # static fields
 .field private static final ENABLED_PRESSED_STATE_SET:[I
@@ -43,6 +49,10 @@
 .end field
 
 .field public static final USE_FRAMEWORK_RIPPLE:Z
+    .annotation build Landroidx/annotation/ChecksSdkIntAtLeast;
+        api = 0x15
+    .end annotation
+.end field
 
 
 # direct methods
@@ -195,7 +205,7 @@
 .end method
 
 .method public static convertToRippleDrawableColor(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
-    .locals 6
+    .locals 7
     .param p0    # Landroid/content/res/ColorStateList;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -206,11 +216,13 @@
     .line 1
     sget-boolean v0, Lcom/google/android/material/ripple/RippleUtils;->USE_FRAMEWORK_RIPPLE:Z
 
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
 
     if-eqz v0, :cond_0
 
@@ -219,25 +231,37 @@
     new-array v1, v1, [I
 
     .line 2
-    sget-object v4, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_STATE_SET:[I
+    sget-object v5, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_STATE_SET:[I
+
+    aput-object v5, v0, v4
+
+    .line 3
+    sget-object v5, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_PRESSED_STATE_SET:[I
+
+    invoke-static {p0, v5}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
+
+    move-result v5
+
+    aput v5, v1, v4
+
+    .line 4
+    sget-object v4, Lcom/google/android/material/ripple/RippleUtils;->FOCUSED_STATE_SET:[I
 
     aput-object v4, v0, v3
 
-    .line 3
-    sget-object v4, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_PRESSED_STATE_SET:[I
-
+    .line 5
     invoke-static {p0, v4}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
 
     move-result v4
 
     aput v4, v1, v3
 
-    .line 4
+    .line 6
     sget-object v3, Landroid/util/StateSet;->NOTHING:[I
 
     aput-object v3, v0, v2
 
-    .line 5
+    .line 7
     sget-object v3, Lcom/google/android/material/ripple/RippleUtils;->PRESSED_STATE_SET:[I
 
     invoke-static {p0, v3}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
@@ -246,7 +270,7 @@
 
     aput p0, v1, v2
 
-    .line 6
+    .line 8
     new-instance p0, Landroid/content/res/ColorStateList;
 
     invoke-direct {p0, v0, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
@@ -256,54 +280,52 @@
     :cond_0
     const/16 v0, 0xa
 
-    new-array v4, v0, [[I
+    new-array v5, v0, [[I
 
     new-array v0, v0, [I
 
-    .line 7
-    sget-object v5, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_PRESSED_STATE_SET:[I
-
-    aput-object v5, v4, v3
-
-    .line 8
-    invoke-static {p0, v5}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
-
-    move-result v5
-
-    aput v5, v0, v3
-
     .line 9
-    sget-object v5, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_HOVERED_FOCUSED_STATE_SET:[I
+    sget-object v6, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_PRESSED_STATE_SET:[I
 
-    aput-object v5, v4, v2
+    aput-object v6, v5, v4
 
     .line 10
-    invoke-static {p0, v5}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
+    invoke-static {p0, v6}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
 
-    move-result v5
+    move-result v6
 
-    aput v5, v0, v2
+    aput v6, v0, v4
 
     .line 11
-    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_FOCUSED_STATE_SET:[I
+    sget-object v6, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_HOVERED_FOCUSED_STATE_SET:[I
 
-    aput-object v2, v4, v1
+    aput-object v6, v5, v3
 
     .line 12
-    invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
+    invoke-static {p0, v6}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
 
-    move-result v2
+    move-result v6
 
-    aput v2, v0, v1
-
-    const/4 v1, 0x3
+    aput v6, v0, v3
 
     .line 13
-    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_HOVERED_STATE_SET:[I
+    sget-object v3, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_FOCUSED_STATE_SET:[I
 
-    aput-object v2, v4, v1
+    aput-object v3, v5, v2
 
     .line 14
+    invoke-static {p0, v3}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
+
+    move-result v3
+
+    aput v3, v0, v2
+
+    .line 15
+    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_HOVERED_STATE_SET:[I
+
+    aput-object v2, v5, v1
+
+    .line 16
     invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
 
     move-result v2
@@ -312,33 +334,19 @@
 
     const/4 v1, 0x4
 
-    .line 15
+    .line 17
     sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->SELECTED_STATE_SET:[I
 
-    aput-object v2, v4, v1
+    aput-object v2, v5, v1
 
-    aput v3, v0, v1
+    aput v4, v0, v1
 
     const/4 v1, 0x5
 
-    .line 16
+    .line 18
     sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->PRESSED_STATE_SET:[I
 
-    aput-object v2, v4, v1
-
-    .line 17
-    invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
-
-    move-result v2
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x6
-
-    .line 18
-    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->HOVERED_FOCUSED_STATE_SET:[I
-
-    aput-object v2, v4, v1
+    aput-object v2, v5, v1
 
     .line 19
     invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
@@ -347,12 +355,12 @@
 
     aput v2, v0, v1
 
-    const/4 v1, 0x7
+    const/4 v1, 0x6
 
     .line 20
-    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->FOCUSED_STATE_SET:[I
+    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->HOVERED_FOCUSED_STATE_SET:[I
 
-    aput-object v2, v4, v1
+    aput-object v2, v5, v1
 
     .line 21
     invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
@@ -361,14 +369,28 @@
 
     aput v2, v0, v1
 
-    const/16 v1, 0x8
+    const/4 v1, 0x7
 
     .line 22
-    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->HOVERED_STATE_SET:[I
+    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->FOCUSED_STATE_SET:[I
 
-    aput-object v2, v4, v1
+    aput-object v2, v5, v1
 
     .line 23
+    invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
+
+    move-result v2
+
+    aput v2, v0, v1
+
+    const/16 v1, 0x8
+
+    .line 24
+    sget-object v2, Lcom/google/android/material/ripple/RippleUtils;->HOVERED_STATE_SET:[I
+
+    aput-object v2, v5, v1
+
+    .line 25
     invoke-static {p0, v2}, Lcom/google/android/material/ripple/RippleUtils;->getColorForState(Landroid/content/res/ColorStateList;[I)I
 
     move-result p0
@@ -377,17 +399,42 @@
 
     const/16 p0, 0x9
 
-    .line 24
+    .line 26
     sget-object v1, Landroid/util/StateSet;->NOTHING:[I
 
-    aput-object v1, v4, p0
+    aput-object v1, v5, p0
 
-    aput v3, v0, p0
+    aput v4, v0, p0
 
-    .line 25
+    .line 27
     new-instance p0, Landroid/content/res/ColorStateList;
 
-    invoke-direct {p0, v4, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+    invoke-direct {p0, v5, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    return-object p0
+.end method
+
+.method public static createOvalRippleLollipop(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 0
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/Px;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
+    .line 1
+    invoke-static {p0, p1}, Lcom/google/android/material/ripple/RippleUtils$RippleUtilsLollipop;->access$000(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
 
     return-object p0
 .end method
@@ -419,7 +466,7 @@
     move-result v0
 
     .line 2
-    invoke-static {p0, v0}, Lc1/i;->B(II)I
+    invoke-static {p0, v0}, Lv1/h;->B(II)I
 
     move-result p0
 

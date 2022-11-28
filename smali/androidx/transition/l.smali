@@ -31,6 +31,11 @@
 
 .method public static a(Landroid/animation/LayoutTransition;)V
     .locals 7
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "SoonBlockedPrivateApi"
+        }
+    .end annotation
 
     .line 1
     sget-boolean v0, Landroidx/transition/l;->g:Z

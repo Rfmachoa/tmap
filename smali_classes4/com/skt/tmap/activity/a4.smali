@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/a4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    check-cast p1, Lcom/skt/tmap/engine/navigation/data/DriveMode;
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->R6(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/engine/navigation/data/DriveMode;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->P7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Boolean;)V
 
     return-void
 .end method

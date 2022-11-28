@@ -3,38 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/skt/tmap/dialog/BottomConfirmDialog$a;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-.field public final synthetic b:Lcom/skt/tmap/route/l;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/route/l;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/z2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/z2;->b:Lcom/skt/tmap/route/l;
+    iput-object p1, p0, Lcom/skt/tmap/activity/z2;->a:Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;)V
-    .locals 2
+.method public final onCompleteAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/z2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/z2;->a:Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/z2;->b:Lcom/skt/tmap/route/l;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->Z6(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/route/l;Landroid/view/View;)V
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;->I5(Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
 
     return-void
 .end method

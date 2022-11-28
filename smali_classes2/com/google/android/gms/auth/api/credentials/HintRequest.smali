@@ -1,5 +1,6 @@
 .class public final Lcom/google/android/gms/auth/api/credentials/HintRequest;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.source "com.google.android.gms:play-services-auth@@20.3.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
@@ -16,9 +17,15 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -30,58 +37,64 @@
 
 
 # instance fields
-.field private final zzaa:[Ljava/lang/String;
+.field public final zba:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        getter = "getAccountTypes"
-        id = 0x4
+        id = 0x3e8
     .end annotation
 .end field
 
-.field private final zzad:Z
-    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        getter = "isIdTokenRequested"
-        id = 0x5
-    .end annotation
-.end field
-
-.field private final zzae:Ljava/lang/String;
-    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        getter = "getServerClientId"
-        id = 0x6
-    .end annotation
-.end field
-
-.field private final zzaf:Ljava/lang/String;
-    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        getter = "getIdTokenNonce"
-        id = 0x7
-    .end annotation
-.end field
-
-.field private final zzah:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+.field private final zbb:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getHintPickerConfig"
         id = 0x1
     .end annotation
 .end field
 
-.field private final zzai:Z
+.field private final zbc:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isEmailAddressIdentifierSupported"
         id = 0x2
     .end annotation
 .end field
 
-.field private final zzaj:Z
+.field private final zbd:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isPhoneNumberIdentifierSupported"
         id = 0x3
     .end annotation
 .end field
 
-.field private final zzu:I
+.field private final zbe:[Ljava/lang/String;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
-        id = 0x3e8
+        getter = "getAccountTypes"
+        id = 0x4
+    .end annotation
+.end field
+
+.field private final zbf:Z
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "isIdTokenRequested"
+        id = 0x5
+    .end annotation
+.end field
+
+.field private final zbg:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getServerClientId"
+        id = 0x6
+    .end annotation
+.end field
+
+.field private final zbh:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
+        getter = "getIdTokenNonce"
+        id = 0x7
     .end annotation
 .end field
 
@@ -90,10 +103,9 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    new-instance v0, Lcom/google/android/gms/auth/api/credentials/zzj;
+    new-instance v0, Lcom/google/android/gms/auth/api/credentials/zbe;
 
-    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/zzj;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/zbe;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -133,11 +145,17 @@
         .end annotation
     .end param
     .param p7    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x6
         .end annotation
     .end param
     .param p8    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+
         .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Param;
             id = 0x7
         .end annotation
@@ -148,32 +166,29 @@
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
-    .line 2
-    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzu:I
+    iput p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zba:I
 
-    .line 3
+    .line 2
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
-    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzah:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbb:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
-    .line 4
-    iput-boolean p3, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzai:Z
+    iput-boolean p3, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbc:Z
 
-    .line 5
-    iput-boolean p4, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaj:Z
+    iput-boolean p4, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbd:Z
 
-    .line 6
+    .line 3
     invoke-static {p5}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, [Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaa:[Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbe:[Ljava/lang/String;
 
     const/4 p2, 0x2
 
@@ -181,162 +196,96 @@
 
     const/4 p1, 0x1
 
-    .line 7
-    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzad:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbf:Z
 
     const/4 p1, 0x0
 
-    .line 8
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzae:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbg:Ljava/lang/String;
 
-    .line 9
-    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaf:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbh:Ljava/lang/String;
 
     return-void
 
-    .line 10
     :cond_0
-    iput-boolean p6, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzad:Z
+    iput-boolean p6, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbf:Z
 
-    .line 11
-    iput-object p7, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzae:Ljava/lang/String;
+    iput-object p7, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbg:Ljava/lang/String;
 
-    .line 12
-    iput-object p8, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaf:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method private constructor <init>(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)V
-    .locals 9
-
-    .line 13
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zzc(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
-
-    move-result-object v2
-
-    .line 14
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zzd(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)Z
-
-    move-result v3
-
-    .line 15
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zze(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)Z
-
-    move-result v4
-
-    .line 16
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zzf(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)[Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 17
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zzg(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)Z
-
-    move-result v6
-
-    .line 18
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zzh(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 19
-    invoke-static {p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;->zzi(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)Ljava/lang/String;
-
-    move-result-object v8
-
-    const/4 v1, 0x2
-
-    move-object v0, p0
-
-    .line 20
-    invoke-direct/range {v0 .. v8}, Lcom/google/android/gms/auth/api/credentials/HintRequest;-><init>(ILcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;ZZ[Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;Lcom/google/android/gms/auth/api/credentials/zzi;)V
-    .locals 0
-
-    .line 21
-    invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/credentials/HintRequest;-><init>(Lcom/google/android/gms/auth/api/credentials/HintRequest$Builder;)V
+    iput-object p8, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbh:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getAccountTypes()[Ljava/lang/String;
+.method public getAccountTypes()[Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaa:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbe:[Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final getHintPickerConfig()Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+.method public getHintPickerConfig()Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzah:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbb:Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
     return-object v0
 .end method
 
-.method public final getIdTokenNonce()Ljava/lang/String;
+.method public getIdTokenNonce()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaf:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbh:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final getServerClientId()Ljava/lang/String;
+.method public getServerClientId()Ljava/lang/String;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzae:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbg:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final isEmailAddressIdentifierSupported()Z
+.method public isEmailAddressIdentifierSupported()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzai:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbc:Z
 
     return v0
 .end method
 
-.method public final isIdTokenRequested()Z
+.method public isIdTokenRequested()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzad:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbf:Z
 
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result v0
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/HintRequest;->getHintPickerConfig()Lcom/google/android/gms/auth/api/credentials/CredentialPickerConfig;
 
     move-result-object v1
@@ -345,75 +294,69 @@
 
     const/4 v3, 0x0
 
-    .line 3
+    .line 2
     invoke-static {p1, v2, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
 
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/HintRequest;->isEmailAddressIdentifierSupported()Z
 
     move-result p2
 
     const/4 v1, 0x2
 
-    .line 5
+    .line 3
     invoke-static {p1, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    .line 6
-    iget-boolean p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzaj:Z
+    iget-boolean p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zbd:Z
 
     const/4 v1, 0x3
 
-    .line 7
+    .line 4
     invoke-static {p1, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    .line 8
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/HintRequest;->getAccountTypes()[Ljava/lang/String;
 
     move-result-object p2
 
     const/4 v1, 0x4
 
-    .line 9
+    .line 5
     invoke-static {p1, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeStringArray(Landroid/os/Parcel;I[Ljava/lang/String;Z)V
 
-    .line 10
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/HintRequest;->isIdTokenRequested()Z
 
     move-result p2
 
     const/4 v1, 0x5
 
-    .line 11
+    .line 6
     invoke-static {p1, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    .line 12
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/HintRequest;->getServerClientId()Ljava/lang/String;
 
     move-result-object p2
 
     const/4 v1, 0x6
 
-    .line 13
+    .line 7
     invoke-static {p1, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    .line 14
     invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/HintRequest;->getIdTokenNonce()Ljava/lang/String;
 
     move-result-object p2
 
     const/4 v1, 0x7
 
-    .line 15
+    .line 8
     invoke-static {p1, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    .line 16
-    iget p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zzu:I
+    iget p2, p0, Lcom/google/android/gms/auth/api/credentials/HintRequest;->zba:I
 
     const/16 v1, 0x3e8
 
+    .line 9
     invoke-static {p1, v1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    .line 17
+    .line 10
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

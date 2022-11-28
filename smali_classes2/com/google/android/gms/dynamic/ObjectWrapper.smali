@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/dynamic/ObjectWrapper;
 .super Lcom/google/android/gms/dynamic/IObjectWrapper$Stub;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -22,22 +22,11 @@
 
 # instance fields
 .field private final zza:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method private constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/google/android/gms/dynamic/IObjectWrapper$Stub;-><init>()V
@@ -198,11 +187,9 @@
     .line 17
     array-length v0, v0
 
-    const/16 v1, 0x40
+    const-string v1, "Unexpected number of IObjectWrapper declared fields: "
 
-    const-string v2, "Unexpected number of IObjectWrapper declared fields: "
-
-    invoke-static {v1, v2, v0}, Lcom/google/android/gms/ads/a;->a(ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v0}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 

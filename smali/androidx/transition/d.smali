@@ -3,7 +3,7 @@
 .source "GhostViewPort.java"
 
 # interfaces
-.implements Lh3/d;
+.implements Lp4/d;
 
 
 # annotations
@@ -57,11 +57,14 @@
     .line 4
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
+    .line 5
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+
     const/4 p1, 0x2
 
     const/4 v0, 0x0
 
-    .line 5
+    .line 6
     invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->setLayerType(ILandroid/graphics/Paint;)V
 
     return-void
@@ -202,7 +205,7 @@
     invoke-virtual {p2}, Landroid/graphics/Matrix;->reset()V
 
     .line 3
-    invoke-static {p0, p2}, Lh3/x;->j(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p0, p2}, Lp4/x;->j(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     .line 4
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getScrollX()I
@@ -224,7 +227,7 @@
     invoke-virtual {p2, v0, p0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     .line 5
-    invoke-static {p1, p2}, Lh3/x;->k(Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-static {p1, p2}, Lp4/x;->k(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method
@@ -265,7 +268,7 @@
     add-int/2addr p0, v2
 
     .line 5
-    invoke-static {p1, v0, v1, v3, p0}, Lh3/x;->g(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, v1, v3, p0}, Lp4/x;->g(Landroid/view/View;IIII)V
 
     return-void
 .end method
@@ -391,7 +394,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v0, v1}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lp4/x;->i(Landroid/view/View;I)V
 
     .line 5
     iget-object v0, p0, Landroidx/transition/d;->c:Landroid/view/View;
@@ -436,7 +439,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lp4/x;->i(Landroid/view/View;I)V
 
     .line 3
     iget-object v0, p0, Landroidx/transition/d;->c:Landroid/view/View;
@@ -478,7 +481,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-static {p1, v0}, Lh3/a;->a(Landroid/graphics/Canvas;Z)V
+    invoke-static {p1, v0}, Lp4/a;->a(Landroid/graphics/Canvas;Z)V
 
     .line 2
     iget-object v0, p0, Landroidx/transition/d;->e:Landroid/graphics/Matrix;
@@ -490,7 +493,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lp4/x;->i(Landroid/view/View;I)V
 
     .line 4
     iget-object v0, p0, Landroidx/transition/d;->c:Landroid/view/View;
@@ -502,7 +505,7 @@
 
     const/4 v2, 0x4
 
-    invoke-static {v0, v2}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lp4/x;->i(Landroid/view/View;I)V
 
     .line 6
     iget-object v0, p0, Landroidx/transition/d;->c:Landroid/view/View;
@@ -514,7 +517,7 @@
     invoke-virtual {p0, p1, v0, v2, v3}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     .line 7
-    invoke-static {p1, v1}, Lh3/a;->a(Landroid/graphics/Canvas;Z)V
+    invoke-static {p1, v1}, Lp4/a;->a(Landroid/graphics/Canvas;Z)V
 
     return-void
 .end method
@@ -553,7 +556,7 @@
     :goto_0
     iget-object v0, p0, Landroidx/transition/d;->c:Landroid/view/View;
 
-    invoke-static {v0, p1}, Lh3/x;->i(Landroid/view/View;I)V
+    invoke-static {v0, p1}, Lp4/x;->i(Landroid/view/View;I)V
 
     :cond_1
     return-void

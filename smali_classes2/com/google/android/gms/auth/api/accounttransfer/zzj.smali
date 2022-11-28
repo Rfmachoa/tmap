@@ -1,41 +1,42 @@
-.class final Lcom/google/android/gms/auth/api/accounttransfer/zzj;
-.super Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient$zzc;
+.class Lcom/google/android/gms/auth/api/accounttransfer/zzj;
+.super Lcom/google/android/gms/internal/auth/zzan;
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # instance fields
-.field private final synthetic zzau:Lcom/google/android/gms/internal/auth/zzab;
+.field public final zzb:Lcom/google/android/gms/auth/api/accounttransfer/zzl;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;Lcom/google/android/gms/internal/auth/zzab;)V
+.method public constructor <init>(Lcom/google/android/gms/auth/api/accounttransfer/zzl;)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lcom/google/android/gms/auth/api/accounttransfer/zzj;->zzau:Lcom/google/android/gms/internal/auth/zzab;
+    invoke-direct {p0}, Lcom/google/android/gms/internal/auth/zzan;-><init>()V
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient$zzc;-><init>(Lcom/google/android/gms/auth/api/accounttransfer/zzc;)V
+    iput-object p1, p0, Lcom/google/android/gms/auth/api/accounttransfer/zzj;->zzb:Lcom/google/android/gms/auth/api/accounttransfer/zzl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zza(Lcom/google/android/gms/internal/auth/zzz;)V
+.method public final zzd(Lcom/google/android/gms/common/api/Status;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient$zzc;->zzax:Lcom/google/android/gms/internal/auth/zzy;
+    iget-object v0, p0, Lcom/google/android/gms/auth/api/accounttransfer/zzj;->zzb:Lcom/google/android/gms/auth/api/accounttransfer/zzl;
 
-    iget-object v1, p0, Lcom/google/android/gms/auth/api/accounttransfer/zzj;->zzau:Lcom/google/android/gms/internal/auth/zzab;
+    iget-object v0, v0, Lcom/google/android/gms/auth/api/accounttransfer/zzl;->zzb:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
-    invoke-interface {p1, v0, v1}, Lcom/google/android/gms/internal/auth/zzz;->zza(Lcom/google/android/gms/internal/auth/zzx;Lcom/google/android/gms/internal/auth/zzab;)V
+    sget v1, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferClient;->zza:I
+
+    .line 2
+    new-instance v1, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferException;
+
+    invoke-direct {v1, p1}, Lcom/google/android/gms/auth/api/accounttransfer/AccountTransferException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
     return-void
 .end method

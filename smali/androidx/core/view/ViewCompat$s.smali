@@ -41,7 +41,7 @@
     return-object p0
 .end method
 
-.method public static b(Landroid/view/View;)Landroidx/core/view/b;
+.method public static b(Landroid/view/View;)Landroidx/core/view/g1;
     .locals 0
     .param p0    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
@@ -58,7 +58,7 @@
     if-eqz p0, :cond_0
 
     .line 2
-    invoke-static {p0}, Landroidx/core/view/b;->l(Landroid/view/WindowInsetsController;)Landroidx/core/view/b;
+    invoke-static {p0}, Landroidx/core/view/g1;->l(Landroid/view/WindowInsetsController;)Landroidx/core/view/g1;
 
     move-result-object p0
 

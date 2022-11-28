@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/analytics/Logger;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -20,7 +20,7 @@
 # virtual methods
 .method public abstract error(Ljava/lang/Exception;)V
     .param p1    # Ljava/lang/Exception;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation runtime Ljava/lang/Deprecated;
@@ -29,7 +29,7 @@
 
 .method public abstract error(Ljava/lang/String;)V
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation runtime Ljava/lang/Deprecated;
@@ -43,7 +43,7 @@
 
 .method public abstract info(Ljava/lang/String;)V
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation runtime Ljava/lang/Deprecated;
@@ -57,7 +57,7 @@
 
 .method public abstract verbose(Ljava/lang/String;)V
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation runtime Ljava/lang/Deprecated;
@@ -66,7 +66,7 @@
 
 .method public abstract warn(Ljava/lang/String;)V
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation runtime Ljava/lang/Deprecated;

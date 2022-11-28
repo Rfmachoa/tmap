@@ -65,18 +65,18 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/api/g;->f()Lma/d;
+    invoke-virtual {p1}, Lcom/skt/aicloud/mobile/service/api/g;->f()Ljc/d;
 
     move-result-object p1
 
     .line 3
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v0
 
     sget-object v1, Lcom/skt/aicloud/mobile/service/common/logsender/item/TTSLogSenderItem$TTSCode;->SEND_MESSAGE_SUCCESS:Lcom/skt/aicloud/mobile/service/common/logsender/item/TTSLogSenderItem$TTSCode;
 
-    invoke-virtual {v0, p1, v1}, Lu8/a;->s(Lma/d;Lcom/skt/aicloud/mobile/service/common/logsender/item/TTSLogSenderItem$TTSCode;)V
+    invoke-virtual {v0, p1, v1}, Lra/a;->s(Ljc/d;Lcom/skt/aicloud/mobile/service/common/logsender/item/TTSLogSenderItem$TTSCode;)V
 
     :cond_0
     return-void

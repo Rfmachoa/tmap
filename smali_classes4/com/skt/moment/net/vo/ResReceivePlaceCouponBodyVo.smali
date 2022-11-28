@@ -199,6 +199,14 @@
 
 .method public setCouponNumber(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "couponNumber"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->couponNumber:Ljava/lang/String;
@@ -208,6 +216,14 @@
 
 .method public setDisplayName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "displayName"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->displayName:Ljava/lang/String;
@@ -217,6 +233,14 @@
 
 .method public setExpireYmd(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "expireYmd"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->expireYmd:Ljava/lang/String;
@@ -226,6 +250,14 @@
 
 .method public setHelpDesk(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "helpDesk"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->helpDesk:Ljava/lang/String;
@@ -235,6 +267,14 @@
 
 .method public setIntroMsg1(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMsg1"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->introMsg1:Ljava/lang/String;
@@ -244,6 +284,14 @@
 
 .method public setIntroMsg2(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMsg2"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->introMsg2:Ljava/lang/String;
@@ -253,6 +301,14 @@
 
 .method public setIntroMsg3(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMsg3"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->introMsg3:Ljava/lang/String;
@@ -262,6 +318,14 @@
 
 .method public setIntroMsg4(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMsg4"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->introMsg4:Ljava/lang/String;
@@ -271,6 +335,14 @@
 
 .method public setIntroMsg5(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "introMsg5"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->introMsg5:Ljava/lang/String;
@@ -280,6 +352,14 @@
 
 .method public setLogoImageFilePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "logoImageFilePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->logoImageFilePath:Ljava/lang/String;
@@ -289,6 +369,14 @@
 
 .method public setPlaceContractId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeContractId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->placeContractId:Ljava/lang/Integer;
@@ -298,6 +386,14 @@
 
 .method public setPlaceCouponTicketId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placeCouponTicketId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->placeCouponTicketId:Ljava/lang/Integer;
@@ -307,6 +403,14 @@
 
 .method public setPlacePoiId(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "placePoiId"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->placePoiId:Ljava/lang/Integer;
@@ -316,6 +420,14 @@
 
 .method public setUsePlace(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "usePlace"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->usePlace:Ljava/lang/String;
@@ -325,6 +437,14 @@
 
 .method public setUseYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "useYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->useYn:Ljava/lang/String;
@@ -334,6 +454,14 @@
 
 .method public setUserKey(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "userKey"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResReceivePlaceCouponBodyVo;->userKey:Ljava/lang/String;

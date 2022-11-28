@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract evaluate(FFF)Lcom/google/android/material/transition/FadeModeResult;
+.method public abstract evaluate(FFFF)Lcom/google/android/material/transition/FadeModeResult;
 .end method

@@ -13,6 +13,9 @@
     name = "UpperCamelCaseStrategy"
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
@@ -32,11 +35,11 @@
     if-eqz p1, :cond_2
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 

@@ -3,12 +3,12 @@
 .source "CameraController.java"
 
 # interfaces
-.implements Landroidx/camera/core/VideoCapture$e;
+.implements Landroidx/camera/core/impl/utils/futures/c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/camera/view/CameraController;->X(Li0/e;Ljava/util/concurrent/Executor;Landroidx/camera/view/video/OnVideoSavedCallback;)V
+    value = Landroidx/camera/view/CameraController;->S(Landroidx/camera/core/z1;FF)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,31 +16,26 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroidx/camera/core/impl/utils/futures/c<",
+        "Landroidx/camera/core/i0;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/view/video/OnVideoSavedCallback;
-
-.field public final synthetic b:Landroidx/camera/view/CameraController;
+.field public final synthetic a:Landroidx/camera/view/CameraController;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/view/CameraController;Landroidx/camera/view/video/OnVideoSavedCallback;)V
+.method public constructor <init>(Landroidx/camera/view/CameraController;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010,
-            0x1010
-        }
-        names = {
-            "this$0",
-            "val$callback"
-        }
-    .end annotation
 
     .line 1
-    iput-object p1, p0, Landroidx/camera/view/CameraController$b;->b:Landroidx/camera/view/CameraController;
-
-    iput-object p2, p0, Landroidx/camera/view/CameraController$b;->a:Landroidx/camera/view/video/OnVideoSavedCallback;
+    iput-object p1, p0, Landroidx/camera/view/CameraController$b;->a:Landroidx/camera/view/CameraController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,84 +44,117 @@
 
 
 # virtual methods
-.method public a(ILjava/lang/String;Ljava/lang/Throwable;)V
+.method public a(Landroidx/camera/core/i0;)V
     .locals 2
-    .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/Throwable;
+    .param p1    # Landroidx/camera/core/i0;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "videoCaptureError",
-            "message",
-            "cause"
-        }
-    .end annotation
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string v0, "Tap to focus onSuccess: "
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/CameraController$b;->b:Landroidx/camera/view/CameraController;
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Landroidx/camera/view/CameraController;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Landroidx/camera/core/i0;->c()Z
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "CameraController"
+
+    invoke-static {v1, v0}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/CameraController$b;->a:Landroidx/camera/view/video/OnVideoSavedCallback;
+    iget-object v0, p0, Landroidx/camera/view/CameraController$b;->a:Landroidx/camera/view/CameraController;
 
-    invoke-interface {v0, p1, p2, p3}, Landroidx/camera/view/video/OnVideoSavedCallback;->a(ILjava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v0, v0, Landroidx/camera/view/CameraController;->A:Landroidx/lifecycle/MutableLiveData;
+
+    invoke-virtual {p1}, Landroidx/camera/core/i0;->c()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x2
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x3
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public b(Landroidx/camera/core/VideoCapture$g;)V
+.method public onFailure(Ljava/lang/Throwable;)V
     .locals 2
-    .param p1    # Landroidx/camera/core/VideoCapture$g;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "outputFileResults"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/view/CameraController$b;->b:Landroidx/camera/view/CameraController;
+    instance-of v0, p1, Landroidx/camera/core/CameraControl$OperationCanceledException;
 
-    iget-object v0, v0, Landroidx/camera/view/CameraController;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v1, "CameraController"
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    const-string p1, "Tap-to-focus is canceled by new action."
 
     .line 2
-    iget-object v0, p0, Landroidx/camera/view/CameraController$b;->a:Landroidx/camera/view/video/OnVideoSavedCallback;
+    invoke-static {v1, p1}, Landroidx/camera/core/u1;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const-string v0, "Tap to focus failed."
 
     .line 3
-    invoke-virtual {p1}, Landroidx/camera/core/VideoCapture$g;->a()Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-static {p1}, Li0/f;->a(Landroid/net/Uri;)Li0/f;
-
-    move-result-object p1
+    invoke-static {v1, v0, p1}, Landroidx/camera/core/u1;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 4
-    invoke-interface {v0, p1}, Landroidx/camera/view/video/OnVideoSavedCallback;->b(Li0/f;)V
+    iget-object p1, p0, Landroidx/camera/view/CameraController$b;->a:Landroidx/camera/view/CameraController;
+
+    iget-object p1, p1, Landroidx/camera/view/CameraController;->A:Landroidx/lifecycle/MutableLiveData;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic onSuccess(Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    check-cast p1, Landroidx/camera/core/i0;
+
+    invoke-virtual {p0, p1}, Landroidx/camera/view/CameraController$b;->a(Landroidx/camera/core/i0;)V
 
     return-void
 .end method

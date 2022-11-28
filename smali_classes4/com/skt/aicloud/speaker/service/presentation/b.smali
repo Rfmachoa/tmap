@@ -47,7 +47,7 @@
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "ttsUrl"
+    const-string v0, "ttsUrl"
 
     .line 3
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z

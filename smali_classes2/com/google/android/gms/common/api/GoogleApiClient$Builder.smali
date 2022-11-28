@@ -1,12 +1,9 @@
 .class public final Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
-.annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/gms/common/api/GoogleApiClient;
 .end annotation
@@ -27,24 +24,8 @@
 .end field
 
 .field private final zab:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zad:I
 
@@ -55,30 +36,10 @@
 .field private zag:Ljava/lang/String;
 
 .field private final zah:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Lcom/google/android/gms/common/internal/zab;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zai:Landroid/content/Context;
 
 .field private final zaj:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private zak:Lcom/google/android/gms/common/api/internal/LifecycleActivity;
 
@@ -94,36 +55,10 @@
 .field private zao:Lcom/google/android/gms/common/GoogleApiAvailability;
 
 .field private zap:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-            "+",
-            "Lcom/google/android/gms/signin/zae;",
-            "Lcom/google/android/gms/signin/SignInOptions;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zaq:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zar:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -133,8 +68,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -240,8 +173,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     .line 12
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;-><init>(Landroid/content/Context;)V
@@ -275,17 +206,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<O::",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-            ">(",
-            "Lcom/google/android/gms/common/api/Api<",
-            "TO;>;TO;[",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ")V"
-        }
-    .end annotation
 
     .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Api;->zac()Lcom/google/android/gms/common/api/Api$BaseClientBuilder;
@@ -349,6 +269,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -417,6 +340,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -494,6 +420,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<O::",
@@ -541,6 +470,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -583,6 +515,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     const-string v0, "Listener must not be null"
 
     .line 1
@@ -605,6 +540,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     const-string v0, "Listener must not be null"
 
     .line 1
@@ -625,6 +563,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     const-string v0, "Scope must not be null"
@@ -842,33 +783,9 @@
 
     move-result-object v3
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v4, v4, 0x15
-
-    add-int/2addr v4, v5
-
-    invoke-direct {v6, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v4, " cannot be used with "
 
-    invoke-static {v6, v2, v4, v3}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v4, v3}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -912,7 +829,7 @@
     iget-object v4, v1, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zac:Ljava/util/Set;
 
     .line 20
-    invoke-interface {v3, v4}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -939,29 +856,15 @@
 
     move-result-object v2
 
-    .line 23
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x52
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v3, "With using "
 
-    const-string v5, ", GamesOptions can only be specified within GoogleSignInOptions.Builder"
+    const-string v4, ", GamesOptions can only be specified within GoogleSignInOptions.Builder"
 
-    invoke-static {v4, v3, v2, v5}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2, v4}, Landroid/support/v4/media/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 23
     invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -1136,6 +1039,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
@@ -1163,6 +1069,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     iput p1, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zad:I
 
     return-object p0
@@ -1175,6 +1084,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     const-string v0, "Handler must not be null"
@@ -1199,6 +1111,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     const-string v0, "View must not be null"

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$6;
+.class Lcom/google/android/material/floatingactionbutton/ExtendedFloatingActionButton$6;
 .super Landroid/util/Property;
 .source "ExtendedFloatingActionButton.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;
-
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic a:Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/firebase/heartbeatinfo/d;->a:Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;
-
-    iput-object p2, p0, Lcom/google/firebase/heartbeatinfo/d;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/firebase/heartbeatinfo/d;->a:Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
 
     return-void
 .end method
@@ -28,13 +24,11 @@
 
 # virtual methods
 .method public final call()Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/firebase/heartbeatinfo/d;->a:Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;
+    iget-object v0, p0, Lcom/google/firebase/heartbeatinfo/d;->a:Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;
 
-    iget-object v1, p0, Lcom/google/firebase/heartbeatinfo/d;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;->d(Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatInfo;Ljava/lang/String;)Ljava/lang/Void;
+    invoke-static {v0}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->e(Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;)Ljava/lang/Void;
 
     move-result-object v0
 

@@ -57,7 +57,7 @@
     .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2$e;->e:Landroidx/browser/customtabs/CustomTabsClient$2;
 
-    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     iget v1, p0, Landroidx/browser/customtabs/CustomTabsClient$2$e;->a:I
 
@@ -67,7 +67,7 @@
 
     iget-object v4, p0, Landroidx/browser/customtabs/CustomTabsClient$2$e;->d:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroidx/browser/customtabs/a;->onRelationshipValidationResult(ILandroid/net/Uri;ZLandroid/os/Bundle;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroidx/browser/customtabs/b;->onRelationshipValidationResult(ILandroid/net/Uri;ZLandroid/os/Bundle;)V
 
     return-void
 .end method

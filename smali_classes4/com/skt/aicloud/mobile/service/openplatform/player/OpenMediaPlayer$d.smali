@@ -76,11 +76,11 @@
     .line 5
     iget-object p1, p0, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer$d;->a:Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;
 
-    new-instance v0, Lu9/c;
+    new-instance v0, Lrb/c;
 
-    invoke-direct {v0}, Lu9/c;-><init>()V
+    invoke-direct {v0}, Lrb/c;-><init>()V
 
-    invoke-static {p1, v0}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lu9/a;)V
+    invoke-static {p1, v0}, Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;->r(Lcom/skt/aicloud/mobile/service/openplatform/player/OpenMediaPlayer;Lrb/a;)V
 
     return-void
 .end method

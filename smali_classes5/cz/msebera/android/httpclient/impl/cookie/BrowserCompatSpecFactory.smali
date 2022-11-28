@@ -3,8 +3,8 @@
 .source "BrowserCompatSpecFactory.java"
 
 # interfaces
-.implements Lxf/f;
-.implements Lxf/g;
+.implements Lbi/f;
+.implements Lbi/g;
 
 
 # annotations
@@ -68,20 +68,7 @@
 
 
 # virtual methods
-.method public a(Lpg/g;)Lxf/e;
-    .locals 1
-
-    .line 1
-    new-instance p1, Lcz/msebera/android/httpclient/impl/cookie/a;
-
-    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/cookie/BrowserCompatSpecFactory;->a:[Ljava/lang/String;
-
-    invoke-direct {p1, v0}, Lcz/msebera/android/httpclient/impl/cookie/a;-><init>([Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public b(Lng/i;)Lxf/e;
+.method public a(Lri/i;)Lbi/e;
     .locals 2
 
     const/4 v0, 0x0
@@ -91,7 +78,7 @@
     const-string v1, "http.protocol.cookie-datepatterns"
 
     .line 1
-    invoke-interface {p1, v1}, Lng/i;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lri/i;->getParameter(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -132,6 +119,19 @@
     iget-object v1, p0, Lcz/msebera/android/httpclient/impl/cookie/BrowserCompatSpecFactory;->b:Lcz/msebera/android/httpclient/impl/cookie/BrowserCompatSpecFactory$SecurityLevel;
 
     invoke-direct {p1, v0, v1}, Lcz/msebera/android/httpclient/impl/cookie/a;-><init>([Ljava/lang/String;Lcz/msebera/android/httpclient/impl/cookie/BrowserCompatSpecFactory$SecurityLevel;)V
+
+    return-object p1
+.end method
+
+.method public b(Lti/g;)Lbi/e;
+    .locals 1
+
+    .line 1
+    new-instance p1, Lcz/msebera/android/httpclient/impl/cookie/a;
+
+    iget-object v0, p0, Lcz/msebera/android/httpclient/impl/cookie/BrowserCompatSpecFactory;->a:[Ljava/lang/String;
+
+    invoke-direct {p1, v0}, Lcz/msebera/android/httpclient/impl/cookie/a;-><init>([Ljava/lang/String;)V
 
     return-object p1
 .end method

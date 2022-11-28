@@ -321,9 +321,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lc4/i;
+    check-cast p1, Lz5/i;
 
-    invoke-virtual {p1}, Lc4/i;->d()Ljava/util/List;
+    invoke-virtual {p1}, Lz5/i;->d()Ljava/util/List;
 
     move-result-object p1
 
@@ -331,9 +331,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lc4/a;
+    check-cast p1, Lz5/a;
 
-    invoke-virtual {p1}, Lc4/a;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lz5/a;->a()Ljava/util/Map;
 
     move-result-object p1
 

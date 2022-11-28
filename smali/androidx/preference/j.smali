@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/preference/j$a;
+    }
+.end annotation
+
 .annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
@@ -124,6 +130,10 @@
 
 .method public c(Landroid/view/View;)V
     .locals 3
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -180,6 +190,13 @@
 
 .method public d(Landroid/content/Context;)Landroid/view/View;
     .locals 2
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -213,6 +230,10 @@
 
 .method public f(Landroid/app/AlertDialog$Builder;)V
     .locals 0
+    .param p1    # Landroid/app/AlertDialog$Builder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -220,23 +241,45 @@
 .end method
 
 .method public final g(Landroid/app/Dialog;)V
-    .locals 1
+    .locals 2
+    .param p1    # Landroid/app/Dialog;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
+    invoke-static {p1}, Landroidx/preference/j$a;->a(Landroid/view/Window;)V
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x5
 
-    .line 2
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/Window;->setSoftInputMode(I)V
 
+    :goto_0
     return-void
 .end method
 
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
+    .param p1    # Landroid/content/DialogInterface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -248,6 +291,10 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
@@ -492,6 +539,10 @@
 
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 2
+    .param p1    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -584,6 +635,10 @@
 
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
+    .param p1    # Landroid/content/DialogInterface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onDismiss(Landroid/content/DialogInterface;)V

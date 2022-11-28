@@ -30,7 +30,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)Z
+.method public final a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)Z
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -39,13 +39,13 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Z
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->b(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)Z
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flv/TagPayloadReader;->c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)Z
 
     move-result p1
 
@@ -62,7 +62,7 @@
     return p1
 .end method
 
-.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Z
+.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/tmapmobility/tmap/exoplayer2/ParserException;
@@ -70,7 +70,7 @@
     .end annotation
 .end method
 
-.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/util/a0;J)Z
+.method public abstract c(Lcom/tmapmobility/tmap/exoplayer2/util/b0;J)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/tmapmobility/tmap/exoplayer2/ParserException;

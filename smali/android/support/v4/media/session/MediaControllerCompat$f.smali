@@ -474,7 +474,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Landroid/support/v4/media/RatingCompat;->d()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/support/v4/media/RatingCompat;->e()Ljava/lang/Object;
 
     move-result-object p1
 

@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/server/response/zan;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -32,17 +32,6 @@
 .end field
 
 .field private final zab:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/String;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;>;>;"
-        }
-    .end annotation
-.end field
 
 .field private final zac:Ljava/lang/String;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
@@ -83,17 +72,6 @@
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/ArrayList<",
-            "Lcom/google/android/gms/common/server/response/zal;",
-            ">;",
-            "Ljava/lang/String;",
-            ")V"
-        }
     .end annotation
 
     .line 1
@@ -199,15 +177,6 @@
 
 .method public constructor <init>(Ljava/lang/Class;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "+",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse;",
-            ">;)V"
-        }
-    .end annotation
 
     .line 13
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
@@ -431,18 +400,6 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;>;"
-        }
-    .end annotation
-
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/zan;->zab:Ljava/util/HashMap;
 
@@ -622,19 +579,6 @@
 
 .method public final zae(Ljava/lang/Class;Ljava/util/Map;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "+",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse;",
-            ">;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse$Field<",
-            "**>;>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/zan;->zab:Ljava/util/HashMap;
@@ -656,15 +600,6 @@
 
 .method public final zaf(Ljava/lang/Class;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class<",
-            "+",
-            "Lcom/google/android/gms/common/server/response/FastJsonResponse;",
-            ">;)Z"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/zan;->zab:Ljava/util/HashMap;

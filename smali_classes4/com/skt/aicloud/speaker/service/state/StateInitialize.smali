@@ -32,7 +32,7 @@
 
 .field public C:Ljava/lang/Runnable;
 
-.field public D:Li9/e;
+.field public D:Lfb/e;
 
 .field public final s:Ljava/lang/String;
 
@@ -48,7 +48,7 @@
 
 .field public y:Lcom/skt/aicloud/speaker/service/state/StateInitialize$StateInitializeSub;
 
-.field public z:Lsa/d;
+.field public z:Lpc/d;
 
 
 # direct methods
@@ -94,7 +94,7 @@
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/state/StateInitialize$a;-><init>(Lcom/skt/aicloud/speaker/service/state/StateInitialize;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->z:Lsa/d;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->z:Lpc/d;
 
     .line 10
     new-instance p1, Lcom/skt/aicloud/speaker/service/state/StateInitialize$b;
@@ -122,7 +122,7 @@
 
     invoke-direct {p1, p0}, Lcom/skt/aicloud/speaker/service/state/StateInitialize$e;-><init>(Lcom/skt/aicloud/speaker/service/state/StateInitialize;)V
 
-    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->D:Li9/e;
+    iput-object p1, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->D:Lfb/e;
 
     .line 14
     sget-object p1, Lcom/skt/aicloud/speaker/lib/state/AppState;->APP_STATE_INITIALIZE:Lcom/skt/aicloud/speaker/lib/state/AppState;
@@ -164,11 +164,11 @@
     return-object p1
 .end method
 
-.method public static synthetic f0(Lcom/skt/aicloud/speaker/service/state/StateInitialize;)Li9/e;
+.method public static synthetic f0(Lcom/skt/aicloud/speaker/service/state/StateInitialize;)Lfb/e;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->D:Li9/e;
+    iget-object p0, p0, Lcom/skt/aicloud/speaker/service/state/StateInitialize;->D:Lfb/e;
 
     return-object p0
 .end method
@@ -262,7 +262,7 @@
     return-void
 .end method
 
-.method public i(Landroid/content/Intent;Lma/c;)V
+.method public g(Landroid/content/Intent;Ljc/c;)V
     .locals 2
 
     const-string p2, "setAction"
@@ -581,13 +581,13 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lp8/d;->e()Ljava/lang/String;
+    invoke-static {}, Lma/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lp8/d;->e()Ljava/lang/String;
+    invoke-static {}, Lma/d;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -611,7 +611,7 @@
     .line 3
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateDeviceToken : retry = "
+    const-string v1, "updateDeviceToken : retry = "
 
     invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -664,7 +664,7 @@
     :cond_0
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->a:Ljava/lang/String;
 
-    const-string/jumbo v1, "updateDeviceToken : userExternalId is null"
+    const-string v1, "updateDeviceToken : userExternalId is null"
 
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 

@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lcom/amplifyframework/util/ForEach$Mapping;
 
 
 # static fields
@@ -33,10 +33,14 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-static {}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->b()V
+    check-cast p1, Lcom/amplifyframework/core/model/ModelSchema;
 
-    return-void
+    invoke-virtual {p1}, Lcom/amplifyframework/core/model/ModelSchema;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 .end method

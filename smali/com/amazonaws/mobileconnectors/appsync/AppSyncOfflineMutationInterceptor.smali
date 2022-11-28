@@ -66,7 +66,7 @@
 
 .field private queueHandlerThread:Landroid/os/HandlerThread;
 
-.field public final scalarTypeAdapters:Lo4/d;
+.field public final scalarTypeAdapters:Ll6/d;
 
 .field public final sendOperationIdentifiers:Z
 
@@ -109,11 +109,11 @@
     invoke-direct {p3}, Ljava/util/LinkedHashMap;-><init>()V
 
     .line 3
-    new-instance v0, Lo4/d;
+    new-instance v0, Ll6/d;
 
-    invoke-direct {v0, p3}, Lo4/d;-><init>(Ljava/util/Map;)V
+    invoke-direct {v0, p3}, Ll6/d;-><init>(Ljava/util/Map;)V
 
-    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationInterceptor;->scalarTypeAdapters:Lo4/d;
+    iput-object v0, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationInterceptor;->scalarTypeAdapters:Ll6/d;
 
     .line 4
     iput-boolean p2, p0, Lcom/amazonaws/mobileconnectors/appsync/AppSyncOfflineMutationInterceptor;->sendOperationIdentifiers:Z

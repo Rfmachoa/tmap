@@ -59,7 +59,13 @@
     .line 1
     iget-object v0, p0, Landroidx/core/view/ViewCompat$e;->a:Ljava/util/WeakHashMap;
 
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p1}, Landroid/view/View;->isShown()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getWindowVisibility()I
 
     move-result v1
 
@@ -103,7 +109,13 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p1}, Landroid/view/View;->isShown()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getWindowVisibility()I
 
     move-result v0
 

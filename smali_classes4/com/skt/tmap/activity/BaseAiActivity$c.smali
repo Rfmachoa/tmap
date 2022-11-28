@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/BaseAiActivity;->L5()V
+    value = Lcom/skt/tmap/activity/BaseAiActivity;->U5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

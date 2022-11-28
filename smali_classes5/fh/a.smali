@@ -1,14 +1,11 @@
-.class public final Lfh/a;
+.class public interface abstract Lfh/a;
 .super Ljava/lang/Object;
-.source "DefineComponentNoParent.java"
+.source "CameraMotionListener.java"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract c(J[F)V
+.end method
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract d()V
 .end method

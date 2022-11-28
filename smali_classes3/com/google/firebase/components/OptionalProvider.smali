@@ -73,12 +73,12 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/firebase/components/m;->a:Lcom/google/firebase/components/m;
+    sget-object v0, Lcom/google/firebase/components/n;->a:Lcom/google/firebase/components/n;
 
     sput-object v0, Lcom/google/firebase/components/OptionalProvider;->NOOP_HANDLER:Lcom/google/firebase/inject/Deferred$DeferredHandler;
 
     .line 2
-    sget-object v0, Lcom/google/firebase/components/n;->a:Lcom/google/firebase/components/n;
+    sget-object v0, Lcom/google/firebase/components/o;->a:Lcom/google/firebase/components/o;
 
     sput-object v0, Lcom/google/firebase/components/OptionalProvider;->EMPTY_PROVIDER:Lcom/google/firebase/inject/Provider;
 
@@ -341,9 +341,9 @@
     iget-object v1, p0, Lcom/google/firebase/components/OptionalProvider;->handler:Lcom/google/firebase/inject/Deferred$DeferredHandler;
 
     .line 7
-    new-instance v3, Lcom/google/firebase/components/l;
+    new-instance v3, Lcom/google/firebase/components/m;
 
-    invoke-direct {v3, v1, p1}, Lcom/google/firebase/components/l;-><init>(Lcom/google/firebase/inject/Deferred$DeferredHandler;Lcom/google/firebase/inject/Deferred$DeferredHandler;)V
+    invoke-direct {v3, v1, p1}, Lcom/google/firebase/components/m;-><init>(Lcom/google/firebase/inject/Deferred$DeferredHandler;Lcom/google/firebase/inject/Deferred$DeferredHandler;)V
 
     iput-object v3, p0, Lcom/google/firebase/components/OptionalProvider;->handler:Lcom/google/firebase/inject/Deferred$DeferredHandler;
 

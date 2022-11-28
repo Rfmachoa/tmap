@@ -3,7 +3,7 @@
 .source "ViewPager2.java"
 
 # interfaces
-.implements Lt1/f;
+.implements Lk2/f;
 
 
 # annotations
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public perform(Landroid/view/View;Lt1/f$a;)Z
+.method public perform(Landroid/view/View;Lk2/f$a;)Z
     .locals 1
     .param p1    # Landroid/view/View;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lt1/f$a;
+    .param p2    # Lk2/f$a;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

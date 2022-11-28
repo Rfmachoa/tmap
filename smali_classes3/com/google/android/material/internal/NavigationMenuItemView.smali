@@ -196,7 +196,7 @@
     const/4 v1, -0x1
 
     .line 5
-    iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     .line 6
     iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->actionArea:Landroid/widget/FrameLayout;
@@ -228,7 +228,7 @@
     const/4 v1, -0x2
 
     .line 10
-    iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     .line 11
     iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->actionArea:Landroid/widget/FrameLayout;
@@ -516,7 +516,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/l0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/r0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 15
     invoke-direct {p0}, Lcom/google/android/material/internal/NavigationMenuItemView;->adjustAppearance()V
@@ -634,12 +634,18 @@
 .end method
 
 .method public setHorizontalPadding(I)V
-    .locals 1
-
-    const/4 v0, 0x0
+    .locals 2
 
     .line 1
-    invoke-virtual {p0, p1, v0, p1, v0}, Landroid/view/ViewGroup;->setPadding(IIII)V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingBottom()I
+
+    move-result v1
+
+    invoke-virtual {p0, p1, v0, p1, v1}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     return-void
 .end method
@@ -676,7 +682,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Ld1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1}, Lw1/c;->r(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -687,7 +693,7 @@
     .line 4
     iget-object v1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->iconTintList:Landroid/content/res/ColorStateList;
 
-    invoke-static {p1, v1}, Ld1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, v1}, Lw1/c;->o(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     .line 5
     :cond_1
@@ -724,7 +730,7 @@
     move-result-object v2
 
     .line 9
-    invoke-static {p1, v1, v2}, Landroidx/core/content/res/a;->f(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v1, v2}, Landroidx/core/content/res/a;->g(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

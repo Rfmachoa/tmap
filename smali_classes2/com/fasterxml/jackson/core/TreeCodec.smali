@@ -21,6 +21,22 @@
 .method public abstract createObjectNode()Lcom/fasterxml/jackson/core/TreeNode;
 .end method
 
+.method public missingNode()Lcom/fasterxml/jackson/core/TreeNode;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public nullNode()Lcom/fasterxml/jackson/core/TreeNode;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public abstract readTree(Lcom/fasterxml/jackson/core/JsonParser;)Lcom/fasterxml/jackson/core/TreeNode;
     .annotation system Ldalvik/annotation/Signature;
         value = {

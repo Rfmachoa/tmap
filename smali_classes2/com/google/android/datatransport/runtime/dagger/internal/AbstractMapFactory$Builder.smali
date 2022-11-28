@@ -33,7 +33,7 @@
         value = {
             "Ljava/util/LinkedHashMap<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;"
         }
     .end annotation
@@ -59,12 +59,12 @@
 
 
 # virtual methods
-.method public put(Ljava/lang/Object;Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+.method public put(Ljava/lang/Object;Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder<",
             "TK;TV;TV2;>;"
@@ -91,12 +91,12 @@
     return-object p0
 .end method
 
-.method public putAll(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+.method public putAll(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Ljava/util/Map<",
             "TK;TV2;>;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder<",
@@ -113,11 +113,11 @@
     check-cast p1, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;
 
     .line 3
-    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->getDelegate()Loi/a;
+    invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->getDelegate()Lsk/a;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->putAll(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->putAll(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
 
     move-result-object p1
 

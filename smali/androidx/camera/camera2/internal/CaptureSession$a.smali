@@ -21,14 +21,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/camera2/internal/CaptureSession;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/camera2/internal/CaptureSession$a;->a:Landroidx/camera/camera2/internal/CaptureSession;
@@ -54,18 +46,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "session",
-            "request",
-            "result"
-        }
-    .end annotation
 
     return-void
 .end method

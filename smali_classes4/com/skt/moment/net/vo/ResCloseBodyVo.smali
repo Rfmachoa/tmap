@@ -52,6 +52,14 @@
 
 .method public setOnOff(Ljava/lang/Boolean;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "onOff"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCloseBodyVo;->onOff:Ljava/lang/Boolean;
@@ -61,6 +69,14 @@
 
 .method public setRefuseCount(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "refuseCount"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCloseBodyVo;->refuseCount:Ljava/lang/Integer;
@@ -70,6 +86,14 @@
 
 .method public setRefuseUser(Ljava/lang/Boolean;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "refuseUser"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResCloseBodyVo;->refuseUser:Ljava/lang/Boolean;

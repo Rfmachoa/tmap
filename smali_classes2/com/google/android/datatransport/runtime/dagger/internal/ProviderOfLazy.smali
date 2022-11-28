@@ -3,7 +3,7 @@
 .source "ProviderOfLazy.java"
 
 # interfaces
-.implements Loi/a;
+.implements Lsk/a;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Loi/a<",
+        "Lsk/a<",
         "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
         "TT;>;>;"
     }
@@ -25,10 +25,10 @@
 
 
 # instance fields
-.field private final provider:Loi/a;
+.field private final provider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;"
         }
     .end annotation
@@ -42,12 +42,12 @@
     return-void
 .end method
 
-.method private constructor <init>(Loi/a;)V
+.method private constructor <init>(Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)V"
         }
     .end annotation
@@ -56,21 +56,21 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Lsk/a;
 
     return-void
 .end method
 
-.method public static create(Loi/a;)Loi/a;
+.method public static create(Lsk/a;)Lsk/a;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Loi/a<",
+            "Lsk/a<",
             "TT;>;)",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
             "TT;>;>;"
         }
@@ -83,9 +83,9 @@
 
     move-result-object p0
 
-    check-cast p0, Loi/a;
+    check-cast p0, Lsk/a;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;-><init>(Loi/a;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;-><init>(Lsk/a;)V
 
     return-object v0
 .end method
@@ -103,9 +103,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Lsk/a;
 
-    invoke-static {v0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->lazy(Loi/a;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
+    invoke-static {v0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->lazy(Lsk/a;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
 
     move-result-object v0
 

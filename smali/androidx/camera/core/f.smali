@@ -1,93 +1,58 @@
 .class public final Landroidx/camera/core/f;
-.super Landroidx/camera/core/w1;
-.source "AutoValue_ImmutableImageInfo.java"
+.super Landroidx/camera/core/CameraState$a;
+.source "AutoValue_CameraState_StateError.java"
 
 
 # instance fields
-.field public final a:Lx/g1;
+.field public final a:I
 
-.field public final b:J
-
-.field public final c:I
+.field public final b:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Lx/g1;JI)V
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "tagBundle",
-            "timestamp",
-            "rotationDegrees"
-        }
-    .end annotation
+.method public constructor <init>(ILjava/lang/Throwable;)V
+    .locals 0
+    .param p2    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-direct {p0}, Landroidx/camera/core/w1;-><init>()V
-
-    const-string v0, "Null tagBundle"
+    invoke-direct {p0}, Landroidx/camera/core/CameraState$a;-><init>()V
 
     .line 2
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iput p1, p0, Landroidx/camera/core/f;->a:I
 
     .line 3
-    iput-object p1, p0, Landroidx/camera/core/f;->a:Lx/g1;
-
-    .line 4
-    iput-wide p2, p0, Landroidx/camera/core/f;->b:J
-
-    .line 5
-    iput p4, p0, Landroidx/camera/core/f;->c:I
+    iput-object p2, p0, Landroidx/camera/core/f;->b:Ljava/lang/Throwable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Lx/g1;
+.method public c()Ljava/lang/Throwable;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/f;->a:Lx/g1;
+    iget-object v0, p0, Landroidx/camera/core/f;->b:Ljava/lang/Throwable;
 
     return-object v0
-.end method
-
-.method public c()J
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Landroidx/camera/core/f;->b:J
-
-    return-wide v0
 .end method
 
 .method public d()I
     .locals 1
 
     .line 1
-    iget v0, p0, Landroidx/camera/core/f;->c:I
+    iget v0, p0, Landroidx/camera/core/f;->a:I
 
     return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 7
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -97,69 +62,65 @@
 
     .line 1
     :cond_0
-    instance-of v1, p1, Landroidx/camera/core/w1;
+    instance-of v1, p1, Landroidx/camera/core/CameraState$a;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     .line 2
-    check-cast p1, Landroidx/camera/core/w1;
+    check-cast p1, Landroidx/camera/core/CameraState$a;
 
     .line 3
-    iget-object v1, p0, Landroidx/camera/core/f;->a:Lx/g1;
+    iget v1, p0, Landroidx/camera/core/f;->a:I
 
-    invoke-virtual {p1}, Landroidx/camera/core/w1;->b()Lx/g1;
+    invoke-virtual {p1}, Landroidx/camera/core/CameraState$a;->d()I
 
-    move-result-object v3
+    move-result v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_2
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-wide v3, p0, Landroidx/camera/core/f;->b:J
-
-    .line 4
-    invoke-virtual {p1}, Landroidx/camera/core/w1;->c()J
-
-    move-result-wide v5
-
-    cmp-long v1, v3, v5
+    iget-object v1, p0, Landroidx/camera/core/f;->b:Ljava/lang/Throwable;
 
     if-nez v1, :cond_1
 
-    iget v1, p0, Landroidx/camera/core/f;->c:I
+    .line 4
+    invoke-virtual {p1}, Landroidx/camera/core/CameraState$a;->c()Ljava/lang/Throwable;
 
-    .line 5
-    invoke-virtual {p1}, Landroidx/camera/core/w1;->d()I
+    move-result-object p1
 
-    move-result p1
-
-    if-ne v1, p1, :cond_1
+    if-nez p1, :cond_2
 
     goto :goto_0
 
     :cond_1
+    invoke-virtual {p1}, Landroidx/camera/core/CameraState$a;->c()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
     move v0, v2
 
     :goto_0
     return v0
 
-    :cond_2
+    :cond_3
     return v2
 .end method
 
 .method public hashCode()I
-    .locals 6
+    .locals 2
 
     .line 1
-    iget-object v0, p0, Landroidx/camera/core/f;->a:Lx/g1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Landroidx/camera/core/f;->a:I
 
     const v1, 0xf4243
 
@@ -168,59 +129,52 @@
     mul-int/2addr v0, v1
 
     .line 2
-    iget-wide v2, p0, Landroidx/camera/core/f;->b:J
+    iget-object v1, p0, Landroidx/camera/core/f;->b:Ljava/lang/Throwable;
 
-    const/16 v4, 0x20
+    if-nez v1, :cond_0
 
-    ushr-long v4, v2, v4
+    const/4 v1, 0x0
 
-    xor-long/2addr v2, v4
+    goto :goto_0
 
-    long-to-int v2, v2
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    xor-int/2addr v0, v2
+    move-result v1
 
-    mul-int/2addr v0, v1
-
-    .line 3
-    iget v1, p0, Landroidx/camera/core/f;->c:I
-
+    :goto_0
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "ImmutableImageInfo{tagBundle="
+    const-string v0, "StateError{code="
 
     .line 1
     invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/camera/core/f;->a:Lx/g1;
+    iget v1, p0, Landroidx/camera/core/f;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cause="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Landroidx/camera/core/f;->b:Ljava/lang/Throwable;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", timestamp="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Landroidx/camera/core/f;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rotationDegrees="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Landroidx/camera/core/f;->c:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Landroid/support/v4/media/c;->a(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

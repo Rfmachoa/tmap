@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # annotations
@@ -12,9 +12,15 @@
     }
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final ASSET_NAME_VIDEO:Ljava/lang/String; = "_videoMediaView"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
 
 # virtual methods
@@ -22,6 +28,9 @@
 .end method
 
 .method public abstract getAvailableAssetNames()Ljava/util/List;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -33,24 +42,48 @@
 .end method
 
 .method public abstract getCustomTemplateId()Ljava/lang/String;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getDisplayOpenMeasurement()Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$DisplayOpenMeasurement;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getImage(Ljava/lang/String;)Lcom/google/android/gms/ads/formats/NativeAd$Image;
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getVideoController()Lcom/google/android/gms/ads/VideoController;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract getVideoMediaView()Lcom/google/android/gms/ads/formats/MediaView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 .end method
 
 .method public abstract performClick(Ljava/lang/String;)V
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 .end method
 
 .method public abstract recordImpression()V

@@ -38,7 +38,7 @@
 
     check-cast p1, Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->v(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->w(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
 
     move-result-object p1
 

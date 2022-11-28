@@ -26,6 +26,22 @@
     .end annotation
 .end field
 
+.field public static final b:Landroidx/car/app/hardware/common/CarValue;
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/car/app/hardware/common/CarValue<",
+            "Landroid/location/Location;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
 .field private final mLocation:Landroidx/car/app/hardware/common/CarValue;
@@ -62,6 +78,15 @@
 
     sput-object v0, Landroidx/car/app/hardware/info/CarHardwareLocation;->a:Landroidx/car/app/hardware/common/CarValue;
 
+    .line 2
+    new-instance v0, Landroidx/car/app/hardware/common/CarValue;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/car/app/hardware/common/CarValue;-><init>(Ljava/lang/Object;JI)V
+
+    sput-object v0, Landroidx/car/app/hardware/info/CarHardwareLocation;->b:Landroidx/car/app/hardware/common/CarValue;
+
     return-void
 .end method
 
@@ -72,7 +97,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    sget-object v0, Landroidx/car/app/hardware/info/CarHardwareLocation;->a:Landroidx/car/app/hardware/common/CarValue;
+    sget-object v0, Landroidx/car/app/hardware/info/CarHardwareLocation;->b:Landroidx/car/app/hardware/common/CarValue;
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/CarHardwareLocation;->mLocation:Landroidx/car/app/hardware/common/CarValue;
 

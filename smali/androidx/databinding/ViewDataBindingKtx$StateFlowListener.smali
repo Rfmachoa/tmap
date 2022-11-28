@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/databinding/p<",
-        "Lkotlinx/coroutines/flow/f<",
+        "Lkotlinx/coroutines/flow/e<",
         "+",
         "Ljava/lang/Object;",
         ">;>;"
@@ -35,9 +35,9 @@
     d2 = {
         "Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;",
         "Landroidx/databinding/p;",
-        "Lkotlinx/coroutines/flow/f;",
+        "Lkotlinx/coroutines/flow/e;",
         "",
-        "Landroidx/databinding/t;",
+        "Landroidx/databinding/u;",
         "c",
         "target",
         "Lkotlin/d1;",
@@ -56,7 +56,7 @@
         "Lkotlinx/coroutines/y1;",
         "Lkotlinx/coroutines/y1;",
         "observerJob",
-        "Landroidx/databinding/t;",
+        "Landroidx/databinding/u;",
         "listener",
         "Landroidx/databinding/ViewDataBinding;",
         "binder",
@@ -90,11 +90,11 @@
 
 .field public b:Lkotlinx/coroutines/y1;
 
-.field public final c:Landroidx/databinding/t;
+.field public final c:Landroidx/databinding/u;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/databinding/t<",
-            "Lkotlinx/coroutines/flow/f<",
+            "Landroidx/databinding/u<",
+            "Lkotlinx/coroutines/flow/e<",
             "Ljava/lang/Object;",
             ">;>;"
         }
@@ -132,20 +132,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Landroidx/databinding/t;
+    new-instance v0, Landroidx/databinding/u;
 
-    invoke-direct {v0, p1, p2, p0, p3}, Landroidx/databinding/t;-><init>(Landroidx/databinding/ViewDataBinding;ILandroidx/databinding/p;Ljava/lang/ref/ReferenceQueue;)V
+    invoke-direct {v0, p1, p2, p0, p3}, Landroidx/databinding/u;-><init>(Landroidx/databinding/ViewDataBinding;ILandroidx/databinding/p;Ljava/lang/ref/ReferenceQueue;)V
 
-    iput-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/t;
+    iput-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/u;
 
     return-void
 .end method
 
-.method public static final synthetic a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/t;
+.method public static final synthetic a(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;)Landroidx/databinding/u;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/t;
+    iget-object p0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/u;
 
     return-object p0
 .end method
@@ -209,30 +209,30 @@
     iput-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->a:Ljava/lang/ref/WeakReference;
 
     .line 5
-    iget-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/u;
 
-    invoke-virtual {v0}, Landroidx/databinding/t;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/databinding/u;->b()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlinx/coroutines/flow/f;
+    check-cast v0, Lkotlinx/coroutines/flow/e;
 
     if-eqz v0, :cond_4
 
     .line 6
-    invoke-virtual {p0, p1, v0}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/f;)V
+    invoke-virtual {p0, p1, v0}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/e;)V
 
     :cond_4
     return-void
 .end method
 
-.method public c()Landroidx/databinding/t;
+.method public c()Landroidx/databinding/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/databinding/t<",
-            "Lkotlinx/coroutines/flow/f<",
+            "Landroidx/databinding/u<",
+            "Lkotlinx/coroutines/flow/e<",
             "Ljava/lang/Object;",
             ">;>;"
         }
@@ -242,7 +242,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->c:Landroidx/databinding/u;
 
     return-object v0
 .end method
@@ -251,9 +251,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlinx/coroutines/flow/f;
+    check-cast p1, Lkotlinx/coroutines/flow/e;
 
-    invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->g(Lkotlinx/coroutines/flow/f;)V
+    invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->g(Lkotlinx/coroutines/flow/e;)V
 
     return-void
 .end method
@@ -262,23 +262,23 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlinx/coroutines/flow/f;
+    check-cast p1, Lkotlinx/coroutines/flow/e;
 
-    invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->f(Lkotlinx/coroutines/flow/f;)V
+    invoke-virtual {p0, p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->f(Lkotlinx/coroutines/flow/e;)V
 
     return-void
 .end method
 
-.method public f(Lkotlinx/coroutines/flow/f;)V
+.method public f(Lkotlinx/coroutines/flow/e;)V
     .locals 2
-    .param p1    # Lkotlinx/coroutines/flow/f;
+    .param p1    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+",
             "Ljava/lang/Object;",
             ">;)V"
@@ -305,22 +305,22 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/f;)V
+    invoke-virtual {p0, v0, p1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;->h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/e;)V
 
     :cond_0
     return-void
 .end method
 
-.method public g(Lkotlinx/coroutines/flow/f;)V
+.method public g(Lkotlinx/coroutines/flow/e;)V
     .locals 2
-    .param p1    # Lkotlinx/coroutines/flow/f;
+    .param p1    # Lkotlinx/coroutines/flow/e;
         .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+",
             "Ljava/lang/Object;",
             ">;)V"
@@ -345,13 +345,13 @@
     return-void
 .end method
 
-.method public final h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/f;)V
+.method public final h(Landroidx/lifecycle/LifecycleOwner;Lkotlinx/coroutines/flow/e;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/lifecycle/LifecycleOwner;",
-            "Lkotlinx/coroutines/flow/f<",
+            "Lkotlinx/coroutines/flow/e<",
             "+",
             "Ljava/lang/Object;",
             ">;)V"
@@ -377,9 +377,9 @@
 
     new-instance v0, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;
 
-    invoke-direct {v0, p0, p2, v1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;-><init>(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;Lkotlinx/coroutines/flow/f;Lkotlin/coroutines/c;)V
+    invoke-direct {v0, p0, p2, v1}, Landroidx/databinding/ViewDataBindingKtx$StateFlowListener$startCollection$1;-><init>(Landroidx/databinding/ViewDataBindingKtx$StateFlowListener;Lkotlinx/coroutines/flow/e;Lkotlin/coroutines/c;)V
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope;->launchWhenCreated(Lej/p;)Lkotlinx/coroutines/y1;
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/LifecycleCoroutineScope;->launchWhenCreated(Lgl/p;)Lkotlinx/coroutines/y1;
 
     move-result-object p1
 

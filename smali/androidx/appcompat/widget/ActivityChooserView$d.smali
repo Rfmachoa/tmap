@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/ActivityChooserView$d;
-.super Landroidx/appcompat/widget/s;
+.super Landroidx/appcompat/widget/x;
 .source "ActivityChooserView.java"
 
 
@@ -25,14 +25,14 @@
     .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$d;->j:Landroidx/appcompat/widget/ActivityChooserView;
 
-    invoke-direct {p0, p2}, Landroidx/appcompat/widget/s;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Lj/g;
+.method public b()Ll/g;
     .locals 1
 
     .line 1

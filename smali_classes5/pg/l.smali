@@ -1,335 +1,207 @@
-.class public Lpg/l;
-.super Ljava/lang/Object;
-.source "HttpProcessorBuilder.java"
+.class public abstract Lpg/l;
+.super Lpg/f;
+.source "DataChunk.java"
+
+
+# static fields
+.field public static final l:I = 0x4000
 
 
 # instance fields
-.field public a:Lpg/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lpg/c<",
-            "Ldf/s;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public j:[B
 
-.field public b:Lpg/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lpg/c<",
-            "Ldf/v;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public volatile k:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;ILcom/tmapmobility/tmap/exoplayer2/Format;ILjava/lang/Object;[B)V
+    .locals 11
+    .param p6    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p7    # [B
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
+
+    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    move/from16 v5, p5
+
+    move-object/from16 v6, p6
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {v0 .. v10}, Lpg/f;-><init>(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;ILcom/tmapmobility/tmap/exoplayer2/Format;ILjava/lang/Object;JJ)V
 
-    return-void
-.end method
-
-.method public static n()Lpg/l;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lpg/l;
-
-    invoke-direct {v0}, Lpg/l;-><init>()V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public a(Ldf/s;)Lpg/l;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lpg/l;->k(Ldf/s;)Lpg/l;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public b(Ldf/v;)Lpg/l;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lpg/l;->l(Ldf/v;)Lpg/l;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public varargs c([Ldf/s;)Lpg/l;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lpg/l;->g([Ldf/s;)Lpg/l;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public varargs d([Ldf/v;)Lpg/l;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lpg/l;->h([Ldf/v;)Lpg/l;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public varargs e([Ldf/s;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->o()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->b([Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public varargs f([Ldf/v;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->p()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->b([Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public varargs g([Ldf/s;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->o()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->d([Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public varargs h([Ldf/v;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->p()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->d([Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public i(Ldf/s;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->o()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->e(Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public j(Ldf/v;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->p()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->e(Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public k(Ldf/s;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->o()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->f(Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public l(Ldf/v;)Lpg/l;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    return-object p0
-
-    .line 1
-    :cond_0
-    invoke-virtual {p0}, Lpg/l;->p()Lpg/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lpg/c;->f(Ljava/lang/Object;)Lpg/c;
-
-    return-object p0
-.end method
-
-.method public m()Lpg/k;
-    .locals 4
-
-    .line 1
-    new-instance v0, Lpg/u;
-
-    iget-object v1, p0, Lpg/l;->a:Lpg/c;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
+    if-nez p7, :cond_0
 
     .line 2
-    invoke-virtual {v1}, Lpg/c;->g()Ljava/util/LinkedList;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->f:[B
 
-    move-result-object v1
+    move-object v1, p0
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v2
+    move-object v1, p0
+
+    move-object/from16 v0, p7
 
     :goto_0
-    iget-object v3, p0, Lpg/l;->b:Lpg/c;
+    iput-object v0, v1, Lpg/l;->j:[B
 
-    if-eqz v3, :cond_1
+    return-void
+.end method
+
+
+# virtual methods
+.method public final cancelLoad()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 1
+    iput-boolean v0, p0, Lpg/l;->k:Z
+
+    return-void
+.end method
+
+.method public abstract e([BI)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public f()[B
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lpg/l;->j:[B
+
+    return-object v0
+.end method
+
+.method public final g(I)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lpg/l;->j:[B
+
+    array-length v1, v0
+
+    add-int/lit16 p1, p1, 0x4000
+
+    if-ge v1, p1, :cond_0
+
+    .line 2
+    array-length p1, v0
+
+    add-int/lit16 p1, p1, 0x4000
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lpg/l;->j:[B
+
+    :cond_0
+    return-void
+.end method
+
+.method public final load()V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
+
+    iget-object v1, p0, Lpg/f;->b:Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;
+
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;->a(Lcom/tmapmobility/tmap/exoplayer2/upstream/DataSpec;)J
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :cond_0
+    :goto_0
+    const/4 v2, -0x1
+
+    if-eq v0, v2, :cond_1
+
+    .line 2
+    iget-boolean v0, p0, Lpg/l;->k:Z
+
+    if-nez v0, :cond_1
 
     .line 3
-    invoke-virtual {v3}, Lpg/c;->g()Ljava/util/LinkedList;
+    invoke-virtual {p0, v1}, Lpg/l;->g(I)V
 
-    move-result-object v2
+    .line 4
+    iget-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
 
+    iget-object v3, p0, Lpg/l;->j:[B
+
+    const/16 v4, 0x4000
+
+    invoke-virtual {v0, v3, v1, v4}, Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;->read([BII)I
+
+    move-result v0
+
+    if-eq v0, v2, :cond_0
+
+    add-int/2addr v1, v0
+
+    goto :goto_0
+
+    .line 5
     :cond_1
-    invoke-direct {v0, v1, v2}, Lpg/u;-><init>(Ljava/util/List;Ljava/util/List;)V
+    iget-boolean v0, p0, Lpg/l;->k:Z
 
-    return-object v0
-.end method
+    if-nez v0, :cond_2
 
-.method public final o()Lpg/c;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lpg/c<",
-            "Ldf/s;",
-            ">;"
-        }
-    .end annotation
+    .line 6
+    iget-object v0, p0, Lpg/l;->j:[B
 
-    .line 1
-    iget-object v0, p0, Lpg/l;->a:Lpg/c;
+    invoke-virtual {p0, v0, v1}, Lpg/l;->e([BI)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_0
+    .line 7
+    :cond_2
+    iget-object v0, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
 
-    .line 2
-    new-instance v0, Lpg/c;
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/o;->a(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;)V
 
-    invoke-direct {v0}, Lpg/c;-><init>()V
+    return-void
 
-    iput-object v0, p0, Lpg/l;->a:Lpg/c;
+    :catchall_0
+    move-exception v0
 
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lpg/l;->a:Lpg/c;
+    iget-object v1, p0, Lpg/f;->i:Lcom/tmapmobility/tmap/exoplayer2/upstream/l0;
 
-    return-object v0
-.end method
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/o;->a(Lcom/tmapmobility/tmap/exoplayer2/upstream/m;)V
 
-.method public final p()Lpg/c;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lpg/c<",
-            "Ldf/v;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lpg/l;->b:Lpg/c;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Lpg/c;
-
-    invoke-direct {v0}, Lpg/c;-><init>()V
-
-    iput-object v0, p0, Lpg/l;->b:Lpg/c;
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lpg/l;->b:Lpg/c;
-
-    return-object v0
+    .line 8
+    throw v0
 .end method

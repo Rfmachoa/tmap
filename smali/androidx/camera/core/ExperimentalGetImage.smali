@@ -7,7 +7,11 @@
 
 
 # annotations
-.annotation build Landroidx/annotation/experimental/Experimental;
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation build Landroidx/annotation/RequiresOptIn;
 .end annotation
 
 .annotation runtime Ljava/lang/annotation/Retention;

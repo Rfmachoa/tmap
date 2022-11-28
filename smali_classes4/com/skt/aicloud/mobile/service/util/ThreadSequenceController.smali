@@ -244,7 +244,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/skt/aicloud/mobile/service/util/ThreadSequenceController$a;-><init>(Lcom/skt/aicloud/mobile/service/util/ThreadSequenceController;Lcom/skt/aicloud/mobile/service/util/ThreadSequenceController$b;)V
 
-    invoke-static {v0}, Ld9/a;->b(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lab/a;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method

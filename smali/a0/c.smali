@@ -1,55 +1,36 @@
-.class public final La0/c;
+.class public final synthetic La0/c;
 .super Ljava/lang/Object;
-.source "ImageWriterCompatApi29Impl.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
 
 
-# annotations
-.annotation build Landroidx/annotation/RequiresApi;
-    value = 0x1d
-.end annotation
+# instance fields
+.field public final synthetic a:La0/i;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(La0/i;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La0/c;->a:La0/i;
 
     return-void
 .end method
 
-.method public static a(Landroid/view/Surface;II)Landroid/media/ImageWriter;
-    .locals 0
-    .param p0    # Landroid/view/Surface;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # I
-        .annotation build Landroidx/annotation/IntRange;
-            from = 0x1L
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "surface",
-            "maxImages",
-            "format"
-        }
-    .end annotation
+# virtual methods
+.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
+    .locals 1
 
-    .line 1
-    invoke-static {p0, p1, p2}, Landroid/media/ImageWriter;->newInstance(Landroid/view/Surface;II)Landroid/media/ImageWriter;
+    iget-object v0, p0, La0/c;->a:La0/i;
 
-    move-result-object p0
+    invoke-static {v0, p1}, La0/i;->f(La0/i;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method

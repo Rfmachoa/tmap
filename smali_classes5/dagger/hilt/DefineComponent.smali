@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Ldagger/hilt/DefineComponent;
-        parent = Lfh/a;
+        parent = Ljj/a;
     .end subannotation
 .end annotation
 

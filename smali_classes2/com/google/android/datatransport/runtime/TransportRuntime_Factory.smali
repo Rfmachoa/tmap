@@ -18,50 +18,50 @@
 
 
 # instance fields
-.field private final eventClockProvider:Loi/a;
+.field private final eventClockProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final initializerProvider:Loi/a;
+.field private final initializerProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final schedulerProvider:Loi/a;
+.field private final schedulerProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/Scheduler;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final uploaderProvider:Loi/a;
+.field private final uploaderProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final uptimeClockProvider:Loi/a;
+.field private final uptimeClockProvider:Lsk/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
@@ -70,24 +70,24 @@
 
 
 # direct methods
-.method public constructor <init>(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)V
+.method public constructor <init>(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/Scheduler;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;",
             ">;)V"
         }
@@ -97,41 +97,41 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->eventClockProvider:Loi/a;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->eventClockProvider:Lsk/a;
 
     .line 3
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uptimeClockProvider:Loi/a;
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uptimeClockProvider:Lsk/a;
 
     .line 4
-    iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->schedulerProvider:Loi/a;
+    iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->schedulerProvider:Lsk/a;
 
     .line 5
-    iput-object p4, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uploaderProvider:Loi/a;
+    iput-object p4, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uploaderProvider:Lsk/a;
 
     .line 6
-    iput-object p5, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->initializerProvider:Loi/a;
+    iput-object p5, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->initializerProvider:Lsk/a;
 
     return-void
 .end method
 
-.method public static create(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;
+.method public static create(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/Scheduler;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;",
             ">;",
-            "Loi/a<",
+            "Lsk/a<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;"
@@ -153,7 +153,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;-><init>(Loi/a;Loi/a;Loi/a;Loi/a;Loi/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;-><init>(Lsk/a;Lsk/a;Lsk/a;Lsk/a;Lsk/a;)V
 
     return-object v6
 .end method
@@ -187,41 +187,41 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->eventClockProvider:Loi/a;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->eventClockProvider:Lsk/a;
 
-    invoke-interface {v0}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/datatransport/runtime/time/Clock;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uptimeClockProvider:Loi/a;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uptimeClockProvider:Lsk/a;
 
-    invoke-interface {v1}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/datatransport/runtime/time/Clock;
 
-    iget-object v2, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->schedulerProvider:Loi/a;
+    iget-object v2, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->schedulerProvider:Lsk/a;
 
-    invoke-interface {v2}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v2}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/datatransport/runtime/scheduling/Scheduler;
 
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uploaderProvider:Loi/a;
+    iget-object v3, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->uploaderProvider:Lsk/a;
 
-    invoke-interface {v3}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
-    iget-object v4, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->initializerProvider:Loi/a;
+    iget-object v4, p0, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->initializerProvider:Lsk/a;
 
-    invoke-interface {v4}, Loi/a;->get()Ljava/lang/Object;
+    invoke-interface {v4}, Lsk/a;->get()Ljava/lang/Object;
 
     move-result-object v4
 

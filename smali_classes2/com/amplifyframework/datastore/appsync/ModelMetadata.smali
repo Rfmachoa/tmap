@@ -114,7 +114,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/appsync/ModelMetadata;->id:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -128,7 +128,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/appsync/ModelMetadata;->_deleted:Ljava/lang/Boolean;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -142,7 +142,7 @@
 
     iget-object v2, p1, Lcom/amplifyframework/datastore/appsync/ModelMetadata;->_version:Ljava/lang/Integer;
 
-    invoke-static {v1, v2}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -156,7 +156,7 @@
 
     iget-object p1, p1, Lcom/amplifyframework/datastore/appsync/ModelMetadata;->_lastChangedAt:Lcom/amplifyframework/core/model/temporal/Temporal$Timestamp;
 
-    invoke-static {v0, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -294,7 +294,7 @@
 
     const-string v3, ", _deleted="
 
-    invoke-static {v0, v1, v2, v3}, Lb3/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lg4/e;->a(Ljava/lang/StringBuilder;Ljava/lang/String;CLjava/lang/String;)V
 
     iget-object v1, p0, Lcom/amplifyframework/datastore/appsync/ModelMetadata;->_deleted:Ljava/lang/Boolean;
 

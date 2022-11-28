@@ -220,7 +220,7 @@
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;->p:I
 
     .line 36
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->V0:F
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->X0:F
 
     iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue$b;->q:F
 

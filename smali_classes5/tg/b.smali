@@ -4,5 +4,5 @@
 
 
 # annotations
-.annotation runtime Ljavax/annotation/ParametersAreNonnullByDefault;
+.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
 .end annotation

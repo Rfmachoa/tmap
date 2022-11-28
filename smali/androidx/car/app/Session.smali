@@ -60,7 +60,7 @@
     .line 6
     iget-object v0, p0, Landroidx/car/app/Session;->a:Landroidx/lifecycle/LifecycleRegistry;
 
-    invoke-static {v0}, Landroidx/car/app/CarContext;->l(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/CarContext;
+    invoke-static {v0}, Landroidx/car/app/CarContext;->m(Landroidx/lifecycle/Lifecycle;)Landroidx/car/app/CarContext;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Landroidx/car/app/HandshakeInfo;Landroidx/car/app/n0;Landroidx/car/app/ICarHost;Landroid/content/res/Configuration;)V
+.method public a(Landroid/content/Context;Landroidx/car/app/HandshakeInfo;Landroidx/car/app/s0;Landroidx/car/app/ICarHost;Landroid/content/res/Configuration;)V
     .locals 1
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -81,7 +81,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Landroidx/car/app/n0;
+    .param p3    # Landroidx/car/app/s0;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -97,22 +97,22 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/Session;->c:Landroidx/car/app/CarContext;
 
-    invoke-virtual {v0, p2}, Landroidx/car/app/CarContext;->N(Landroidx/car/app/HandshakeInfo;)V
+    invoke-virtual {v0, p2}, Landroidx/car/app/CarContext;->P(Landroidx/car/app/HandshakeInfo;)V
 
     .line 2
     iget-object p2, p0, Landroidx/car/app/Session;->c:Landroidx/car/app/CarContext;
 
-    invoke-virtual {p2, p3}, Landroidx/car/app/CarContext;->O(Landroidx/car/app/n0;)V
+    invoke-virtual {p2, p3}, Landroidx/car/app/CarContext;->Q(Landroidx/car/app/s0;)V
 
     .line 3
     iget-object p2, p0, Landroidx/car/app/Session;->c:Landroidx/car/app/CarContext;
 
-    invoke-virtual {p2, p1, p5}, Landroidx/car/app/CarContext;->k(Landroid/content/Context;Landroid/content/res/Configuration;)V
+    invoke-virtual {p2, p1, p5}, Landroidx/car/app/CarContext;->l(Landroid/content/Context;Landroid/content/res/Configuration;)V
 
     .line 4
     iget-object p1, p0, Landroidx/car/app/Session;->c:Landroidx/car/app/CarContext;
 
-    invoke-virtual {p1, p4}, Landroidx/car/app/CarContext;->K(Landroidx/car/app/ICarHost;)V
+    invoke-virtual {p1, p4}, Landroidx/car/app/CarContext;->M(Landroidx/car/app/ICarHost;)V
 
     return-void
 .end method
@@ -139,13 +139,27 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
     .line 1
     iget-object v0, p0, Landroidx/car/app/Session;->a:Landroidx/lifecycle/LifecycleRegistry;
 
     return-object v0
 .end method
 
-.method public d(Landroid/content/res/Configuration;)V
+.method d(Landroidx/lifecycle/Lifecycle$Event;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/Session;->a:Landroidx/lifecycle/LifecycleRegistry;
+
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
+
+    return-void
+.end method
+
+.method public e(Landroid/content/res/Configuration;)V
     .locals 0
     .param p1    # Landroid/content/res/Configuration;
         .annotation build Landroidx/annotation/NonNull;
@@ -155,7 +169,7 @@
     return-void
 .end method
 
-.method public e(Landroid/content/res/Configuration;)V
+.method public f(Landroid/content/res/Configuration;)V
     .locals 1
     .param p1    # Landroid/content/res/Configuration;
         .annotation build Landroidx/annotation/NonNull;
@@ -165,7 +179,7 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/Session;->c:Landroidx/car/app/CarContext;
 
-    invoke-virtual {v0, p1}, Landroidx/car/app/CarContext;->G(Landroid/content/res/Configuration;)V
+    invoke-virtual {v0, p1}, Landroidx/car/app/CarContext;->I(Landroid/content/res/Configuration;)V
 
     .line 2
     iget-object p1, p0, Landroidx/car/app/Session;->c:Landroidx/car/app/CarContext;
@@ -178,28 +192,18 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroidx/car/app/Session;->d(Landroid/content/res/Configuration;)V
+    invoke-virtual {p0, p1}, Landroidx/car/app/Session;->e(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
-.method public abstract f(Landroid/content/Intent;)Landroidx/car/app/t0;
+.method public abstract g(Landroid/content/Intent;)Landroidx/car/app/y0;
     .param p1    # Landroid/content/Intent;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
-.end method
-
-.method public g(Landroid/content/Intent;)V
-    .locals 0
-    .param p1    # Landroid/content/Intent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    return-void
 .end method
 
 .method public getLifecycle()Landroidx/lifecycle/Lifecycle;
@@ -213,7 +217,17 @@
     return-object v0
 .end method
 
-.method public h(Landroidx/car/app/CarContext;)V
+.method public h(Landroid/content/Intent;)V
+    .locals 0
+    .param p1    # Landroid/content/Intent;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    return-void
+.end method
+
+.method public i(Landroidx/car/app/CarContext;)V
     .locals 0
     .param p1    # Landroidx/car/app/CarContext;
         .annotation build Landroidx/annotation/NonNull;
@@ -231,7 +245,7 @@
     return-void
 .end method
 
-.method public i(Landroidx/lifecycle/LifecycleRegistry;)V
+.method public j(Landroidx/lifecycle/LifecycleRegistry;)V
     .locals 1
     .param p1    # Landroidx/lifecycle/LifecycleRegistry;
         .annotation build Landroidx/annotation/NonNull;

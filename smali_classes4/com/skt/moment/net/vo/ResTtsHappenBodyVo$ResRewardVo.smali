@@ -74,6 +74,14 @@
 
 .method public setBrandName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "brandName"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResRewardVo;->brandName:Ljava/lang/String;
@@ -83,6 +91,14 @@
 
 .method public setImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResRewardVo;->imagePath:Ljava/lang/String;
@@ -92,6 +108,14 @@
 
 .method public setName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResRewardVo;->name:Ljava/lang/String;
@@ -101,6 +125,14 @@
 
 .method public setNotiImagePath(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notiImagePath"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTtsHappenBodyVo$ResRewardVo;->notiImagePath:Ljava/lang/String;

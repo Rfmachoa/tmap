@@ -1,6 +1,9 @@
 .class public Landroidx/recyclerview/widget/l0$a;
 .super Ljava/lang/Object;
-.source "ViewInfoStore.java"
+.source "ViewTypeStorage.java"
+
+# interfaces
+.implements Landroidx/recyclerview/widget/l0;
 
 
 # annotations
@@ -13,134 +16,159 @@
     name = "a"
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/recyclerview/widget/l0$a$a;
+    }
+.end annotation
 
-# static fields
-.field public static final d:I = 0x1
 
-.field public static final e:I = 0x2
-
-.field public static final f:I = 0x4
-
-.field public static final g:I = 0x8
-
-.field public static final h:I = 0x3
-
-.field public static final i:I = 0xc
-
-.field public static final j:I = 0xe
-
-.field public static k:Lr1/n$a;
+# instance fields
+.field public a:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lr1/n$a<",
-            "Landroidx/recyclerview/widget/l0$a;",
+            "Landroid/util/SparseArray<",
+            "Landroidx/recyclerview/widget/w;",
             ">;"
         }
     .end annotation
 .end field
 
-
-# instance fields
-.field public a:I
-
-.field public b:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$c;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public c:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$c;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field public b:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
-
-    .line 1
-    new-instance v0, Lr1/n$b;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lr1/n$b;-><init>(I)V
-
-    sput-object v0, Landroidx/recyclerview/widget/l0$a;->k:Lr1/n$a;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Landroidx/recyclerview/widget/l0$a;->a:Landroid/util/SparseArray;
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput v0, p0, Landroidx/recyclerview/widget/l0$a;->b:I
+
     return-void
 .end method
 
-.method public static a()V
-    .locals 1
+
+# virtual methods
+.method public a(I)Landroidx/recyclerview/widget/w;
+    .locals 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    :goto_0
-    sget-object v0, Landroidx/recyclerview/widget/l0$a;->k:Lr1/n$a;
+    iget-object v0, p0, Landroidx/recyclerview/widget/l0$a;->a:Landroid/util/SparseArray;
 
-    invoke-interface {v0}, Lr1/n$a;->a()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Landroidx/recyclerview/widget/w;
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b()Landroidx/recyclerview/widget/l0$a;
-    .locals 1
-
-    .line 1
-    sget-object v0, Landroidx/recyclerview/widget/l0$a;->k:Lr1/n$a;
-
-    invoke-interface {v0}, Lr1/n$a;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/l0$a;
-
-    if-nez v0, :cond_0
+    return-object v0
 
     .line 2
-    new-instance v0, Landroidx/recyclerview/widget/l0$a;
-
-    invoke-direct {v0}, Landroidx/recyclerview/widget/l0$a;-><init>()V
-
     :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Cannot find the wrapper for global view type "
+
+    invoke-static {v1, p1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public b(Landroidx/recyclerview/widget/w;)Landroidx/recyclerview/widget/l0$c;
+    .locals 1
+    .param p1    # Landroidx/recyclerview/widget/w;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroidx/recyclerview/widget/l0$a$a;
+
+    invoke-direct {v0, p0, p1}, Landroidx/recyclerview/widget/l0$a$a;-><init>(Landroidx/recyclerview/widget/l0$a;Landroidx/recyclerview/widget/w;)V
+
     return-object v0
 .end method
 
-.method public static c(Landroidx/recyclerview/widget/l0$a;)V
-    .locals 1
-
-    const/4 v0, 0x0
+.method public c(Landroidx/recyclerview/widget/w;)I
+    .locals 2
 
     .line 1
-    iput v0, p0, Landroidx/recyclerview/widget/l0$a;->a:I
+    iget v0, p0, Landroidx/recyclerview/widget/l0$a;->b:I
 
-    const/4 v0, 0x0
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Landroidx/recyclerview/widget/l0$a;->b:I
 
     .line 2
-    iput-object v0, p0, Landroidx/recyclerview/widget/l0$a;->b:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$c;
+    iget-object v1, p0, Landroidx/recyclerview/widget/l0$a;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, v0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    return v0
+.end method
+
+.method public d(Landroidx/recyclerview/widget/w;)V
+    .locals 2
+    .param p1    # Landroidx/recyclerview/widget/w;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/l0$a;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_0
+    if-ltz v0, :cond_1
+
+    .line 2
+    iget-object v1, p0, Landroidx/recyclerview/widget/l0$a;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/recyclerview/widget/w;
+
+    if-ne v1, p1, :cond_0
 
     .line 3
-    iput-object v0, p0, Landroidx/recyclerview/widget/l0$a;->c:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$c;
+    iget-object v1, p0, Landroidx/recyclerview/widget/l0$a;->a:Landroid/util/SparseArray;
 
-    .line 4
-    sget-object v0, Landroidx/recyclerview/widget/l0$a;->k:Lr1/n$a;
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->removeAt(I)V
 
-    invoke-interface {v0, p0}, Lr1/n$a;->b(Ljava/lang/Object;)Z
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
 
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method

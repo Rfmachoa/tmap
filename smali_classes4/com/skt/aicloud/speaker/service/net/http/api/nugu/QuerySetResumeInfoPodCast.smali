@@ -165,11 +165,11 @@
     invoke-super {p0, p1, p2}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;->n(Lretrofit2/Call;Lretrofit2/Response;)V
 
     .line 2
-    invoke-static {}, Lh9/a;->b()Lh9/a;
+    invoke-static {}, Leb/a;->b()Leb/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lh9/a;->a()V
+    invoke-virtual {p1}, Leb/a;->a()V
 
     return-void
 .end method
@@ -211,11 +211,11 @@
     invoke-static {p2, p1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lh9/a;->b()Lh9/a;
+    invoke-static {}, Leb/a;->b()Leb/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lh9/a;->a()V
+    invoke-virtual {p1}, Leb/a;->a()V
 
     return-void
 .end method

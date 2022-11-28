@@ -18,27 +18,27 @@
 # static fields
 .field public static final K0:F = 2.5f
 
-.field public static final V0:I = 0xa
+.field public static final X0:I = 0xa
 
-.field public static final W0:I = 0x5
+.field public static final Y0:I = 0x5
 
-.field public static final X0:[I
+.field public static final Z0:[I
 
-.field public static final Y0:F = 0.75f
+.field public static final a1:F = 0.75f
 
-.field public static final Z0:F = 0.5f
+.field public static final b1:F = 0.5f
 
-.field public static final a1:I = 0x534
+.field public static final c1:I = 0x534
 
-.field public static final b1:F = 216.0f
+.field public static final d1:F = 216.0f
 
-.field public static final c1:F = 0.8f
+.field public static final e1:F = 0.8f
 
-.field public static final d1:F = 0.01f
-
-.field public static final e1:F = 0.20999998f
+.field public static final f1:F = 0.01f
 
 .field public static final g:Landroid/view/animation/Interpolator;
+
+.field public static final g1:F = 0.20999998f
 
 .field public static final h:Landroid/view/animation/Interpolator;
 
@@ -83,9 +83,9 @@
     sput-object v0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->g:Landroid/view/animation/Interpolator;
 
     .line 2
-    new-instance v0, Lm2/b;
+    new-instance v0, Lh3/b;
 
-    invoke-direct {v0}, Lm2/b;-><init>()V
+    invoke-direct {v0}, Lh3/b;-><init>()V
 
     sput-object v0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->h:Landroid/view/animation/Interpolator;
 
@@ -100,7 +100,7 @@
     aput v2, v0, v1
 
     .line 3
-    sput-object v0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->X0:[I
+    sput-object v0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->Z0:[I
 
     return-void
 .end method
@@ -116,7 +116,7 @@
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -136,7 +136,7 @@
     iput-object p1, p0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->a:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable$c;
 
     .line 4
-    sget-object v0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->X0:[I
+    sget-object v0, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;->Z0:[I
 
     invoke-virtual {p1, v0}, Landroidx/swiperefreshlayout/widget/CircularProgressDrawable$c;->F([I)V
 

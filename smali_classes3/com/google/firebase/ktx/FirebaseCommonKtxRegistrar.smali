@@ -31,8 +31,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x1,
-        0x10
+        0x4,
+        0x2
     }
 .end annotation
 
@@ -65,7 +65,7 @@
 
     const-string v0, "fire-core-ktx"
 
-    const-string v1, "20.0.0"
+    const-string v1, "20.1.2"
 
     .line 1
     invoke-static {v0, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
@@ -73,7 +73,7 @@
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lkotlin/collections/w;->k(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/collections/y;->l(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 

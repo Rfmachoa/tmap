@@ -452,7 +452,7 @@
 
     iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/p;->b:I
 
-    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->m(II)I
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->m(II)I
 
     move-result v0
 

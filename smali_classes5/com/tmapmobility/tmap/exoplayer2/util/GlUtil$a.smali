@@ -54,7 +54,7 @@
     aput v3, v0, v1
 
     .line 1
-    invoke-static {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$a;->e(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
+    invoke-static {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$a;->f(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
 
     move-result-object p2
 
@@ -85,11 +85,11 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->G(Ljava/lang/String;)V
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     return-object p2
 .end method
@@ -119,7 +119,7 @@
 
     const-string v4, "No EGL display."
 
-    invoke-static {v2, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->f(ZLjava/lang/String;)V
+    invoke-static {v2, v4}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->a(ZLjava/lang/String;)V
 
     new-array v2, v3, [I
 
@@ -135,17 +135,42 @@
     const-string v0, "Error in eglInitialize."
 
     .line 4
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->G(Ljava/lang/String;)V
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->i()V
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     return-object v1
 .end method
 
-.method public static c(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)V
-    .locals 7
+.method public static c(Landroid/opengl/EGLDisplay;[I[I)Landroid/opengl/EGLSurface;
+    .locals 1
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    .line 1
+    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$a;->f(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-static {p0, p1, p2, v0}, Landroid/opengl/EGL14;->eglCreatePbufferSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;[II)Landroid/opengl/EGLSurface;
+
+    move-result-object p0
+
+    const-string p1, "Error creating surface"
+
+    .line 3
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)V
+    .locals 2
     .param p0    # Landroid/opengl/EGLDisplay;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -169,154 +194,42 @@
 
     invoke-static {p0, v0, v0, v1}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
+    const-string v0, "Error releasing context"
+
     .line 2
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x3000
-
-    if-ne v0, v3, :cond_1
-
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v2
+    if-eqz p1, :cond_1
 
     .line 3
-    :goto_0
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Error releasing context: "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->f(ZLjava/lang/String;)V
-
-    if-eqz p1, :cond_3
-
-    .line 4
     invoke-static {p0, p1}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
 
+    const-string p1, "Error destroying context"
+
+    .line 4
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
+
     .line 5
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
-
-    move-result p1
-
-    if-ne p1, v3, :cond_2
-
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_2
-    move v0, v2
-
-    .line 6
-    :goto_1
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Error destroying context: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->f(ZLjava/lang/String;)V
-
-    .line 7
-    :cond_3
+    :cond_1
     invoke-static {}, Landroid/opengl/EGL14;->eglReleaseThread()Z
 
-    .line 8
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
+    const-string p1, "Error releasing thread"
 
-    move-result p1
+    .line 6
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
 
-    if-ne p1, v3, :cond_4
-
-    move v0, v1
-
-    goto :goto_2
-
-    :cond_4
-    move v0, v2
-
-    .line 9
-    :goto_2
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Error releasing thread: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->f(ZLjava/lang/String;)V
-
-    .line 10
+    .line 7
     invoke-static {p0}, Landroid/opengl/EGL14;->eglTerminate(Landroid/opengl/EGLDisplay;)Z
 
-    .line 11
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
+    const-string p0, "Error terminating display"
 
-    move-result p0
-
-    if-ne p0, v3, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v1, v2
-
-    .line 12
-    :goto_3
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Error terminating display: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->f(ZLjava/lang/String;)V
+    .line 8
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static d(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;Landroid/opengl/EGLSurface;II)V
+.method public static e(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;Landroid/opengl/EGLSurface;III)V
     .locals 3
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
@@ -335,24 +248,35 @@
     .line 2
     aget v0, v0, v2
 
-    if-eqz v0, :cond_0
+    if-eq v0, p3, :cond_0
 
     const v0, 0x8d40
 
     .line 3
-    invoke-static {v0, v2}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
+    invoke-static {v0, p3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
     .line 4
     :cond_0
-    invoke-static {p0, p2, p2, p1}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     .line 5
-    invoke-static {v2, v2, p3, p4}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    invoke-static {p0, p2, p2, p1}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
+
+    const-string p0, "Error making context current"
+
+    .line 6
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
+
+    .line 7
+    invoke-static {v2, v2, p4, p5}, Landroid/opengl/GLES20;->glViewport(IIII)V
+
+    .line 8
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->g()V
 
     return-void
 .end method
 
-.method private static e(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
+.method private static f(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
     .locals 10
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
@@ -387,7 +311,7 @@
     const-string p0, "eglChooseConfig failed."
 
     .line 2
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->G(Ljava/lang/String;)V
 
     :cond_0
     const/4 p0, 0x0
@@ -398,13 +322,13 @@
     return-object p0
 .end method
 
-.method public static f(Landroid/opengl/EGLDisplay;Ljava/lang/Object;[I[I)Landroid/opengl/EGLSurface;
+.method public static g(Landroid/opengl/EGLDisplay;Ljava/lang/Object;[I[I)Landroid/opengl/EGLSurface;
     .locals 1
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
     .line 1
-    invoke-static {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$a;->e(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
+    invoke-static {p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil$a;->f(Landroid/opengl/EGLDisplay;[I)Landroid/opengl/EGLConfig;
 
     move-result-object p2
 
@@ -414,6 +338,11 @@
     invoke-static {p0, p2, p1, p3, v0}, Landroid/opengl/EGL14;->eglCreateWindowSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Ljava/lang/Object;[II)Landroid/opengl/EGLSurface;
 
     move-result-object p0
+
+    const-string p1, "Error creating surface"
+
+    .line 3
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/GlUtil;->b(Ljava/lang/String;)V
 
     return-object p0
 .end method

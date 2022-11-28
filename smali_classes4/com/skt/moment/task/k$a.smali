@@ -21,6 +21,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/k;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/k$a;->t:Lcom/skt/moment/task/k;
@@ -34,12 +42,34 @@
 # virtual methods
 .method public A(JJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bytesWritten",
+            "totalSize"
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method public D(I[Ldf/d;[B)V
+.method public D(I[Lhh/d;[B)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "responseBody"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/k$a;->t:Lcom/skt/moment/task/k;
@@ -112,8 +142,22 @@
     return-void
 .end method
 
-.method public y(I[Ldf/d;[BLjava/lang/Throwable;)V
+.method public y(I[Lhh/d;[BLjava/lang/Throwable;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "responseBody",
+            "error"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/k$a;->t:Lcom/skt/moment/task/k;

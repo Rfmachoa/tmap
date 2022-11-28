@@ -6,6 +6,11 @@
 .implements Landroidx/lifecycle/LifecycleEventObserver;
 
 
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
 # instance fields
 .field private final mInfo:Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 

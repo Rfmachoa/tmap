@@ -40,22 +40,7 @@
     throw v0
 .end method
 
-.method public bridge synthetic b(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
-    .locals 0
-    .param p1    # Lwd/q;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/l0$a;->e(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/l0;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic c(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
+.method public bridge synthetic b(Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
     .locals 0
     .param p1    # Lcom/tmapmobility/tmap/exoplayer2/upstream/LoadErrorHandlingPolicy;
         .annotation build Landroidx/annotation/Nullable;
@@ -70,7 +55,7 @@
     return-object p1
 .end method
 
-.method public d(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/MediaItem;)Lcom/tmapmobility/tmap/exoplayer2/source/d0;
     .locals 0
 
     .line 1
@@ -81,9 +66,24 @@
     throw p1
 .end method
 
-.method public e(Lwd/q;)Lcom/tmapmobility/tmap/exoplayer2/source/l0;
+.method public bridge synthetic d(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/d0$a;
     .locals 0
-    .param p1    # Lwd/q;
+    .param p1    # Lzf/q;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/source/l0$a;->e(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/l0;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public e(Lzf/q;)Lcom/tmapmobility/tmap/exoplayer2/source/l0;
+    .locals 0
+    .param p1    # Lzf/q;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param

@@ -48,7 +48,7 @@
 
 .field private final mimeType:Ljava/lang/String;
 
-.field private final params:[Ldf/y;
+.field private final params:[Lhh/y;
 
 
 # direct methods
@@ -56,7 +56,7 @@
     .locals 5
 
     .line 1
-    sget-object v0, Ldf/b;->g:Ljava/nio/charset/Charset;
+    sget-object v0, Lhh/b;->g:Ljava/nio/charset/Charset;
 
     const-string v1, "application/atom+xml"
 
@@ -76,7 +76,7 @@
     sput-object v1, Lcz/msebera/android/httpclient/entity/ContentType;->APPLICATION_FORM_URLENCODED:Lcz/msebera/android/httpclient/entity/ContentType;
 
     .line 3
-    sget-object v1, Ldf/b;->e:Ljava/nio/charset/Charset;
+    sget-object v1, Lhh/b;->e:Ljava/nio/charset/Charset;
 
     const-string v2, "application/json"
 
@@ -193,12 +193,12 @@
     const/4 p1, 0x0
 
     .line 4
-    iput-object p1, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Ldf/y;
+    iput-object p1, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Lhh/y;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;[Ldf/y;)V
+.method public constructor <init>(Ljava/lang/String;[Lhh/y;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -213,7 +213,7 @@
     iput-object p1, p0, Lcz/msebera/android/httpclient/entity/ContentType;->mimeType:Ljava/lang/String;
 
     .line 7
-    iput-object p2, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Ldf/y;
+    iput-object p2, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Lhh/y;
 
     const-string p1, "charset"
 
@@ -223,7 +223,7 @@
     move-result-object p1
 
     .line 9
-    invoke-static {p1}, Lqg/i;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lui/i;->a(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
@@ -244,16 +244,16 @@
     return-void
 .end method
 
-.method private static create(Ldf/e;)Lcz/msebera/android/httpclient/entity/ContentType;
+.method private static create(Lhh/e;)Lcz/msebera/android/httpclient/entity/ContentType;
     .locals 3
 
     .line 6
-    invoke-interface {p0}, Ldf/e;->getName()Ljava/lang/String;
+    invoke-interface {p0}, Lhh/e;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     .line 7
-    invoke-interface {p0}, Ldf/e;->getParameters()[Ldf/y;
+    invoke-interface {p0}, Lhh/e;->getParameters()[Lhh/y;
 
     move-result-object p0
 
@@ -272,7 +272,7 @@
     const/4 p0, 0x0
 
     :goto_0
-    invoke-direct {v1, v0, p0}, Lcz/msebera/android/httpclient/entity/ContentType;-><init>(Ljava/lang/String;[Ldf/y;)V
+    invoke-direct {v1, v0, p0}, Lcz/msebera/android/httpclient/entity/ContentType;-><init>(Ljava/lang/String;[Lhh/y;)V
 
     return-object v1
 .end method
@@ -299,7 +299,7 @@
     .end annotation
 
     .line 5
-    invoke-static {p1}, Lqg/i;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lui/i;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -328,7 +328,7 @@
     const-string v0, "MIME type"
 
     .line 1
-    invoke-static {p0, v0}, Lqg/a;->c(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {p0, v0}, Lui/a;->c(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -347,7 +347,7 @@
 
     const-string v1, "MIME type may not contain reserved characters"
 
-    invoke-static {v0, v1}, Lqg/a;->a(ZLjava/lang/String;)V
+    invoke-static {v0, v1}, Lui/a;->a(ZLjava/lang/String;)V
 
     .line 3
     new-instance v0, Lcz/msebera/android/httpclient/entity/ContentType;
@@ -357,7 +357,7 @@
     return-object v0
 .end method
 
-.method public static get(Ldf/l;)Lcz/msebera/android/httpclient/entity/ContentType;
+.method public static get(Lhh/l;)Lcz/msebera/android/httpclient/entity/ContentType;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -374,14 +374,14 @@
 
     .line 1
     :cond_0
-    invoke-interface {p0}, Ldf/l;->getContentType()Ldf/d;
+    invoke-interface {p0}, Lhh/l;->getContentType()Lhh/d;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
     .line 2
-    invoke-interface {p0}, Ldf/d;->getElements()[Ldf/e;
+    invoke-interface {p0}, Lhh/d;->getElements()[Lhh/e;
 
     move-result-object p0
 
@@ -395,7 +395,7 @@
     .line 4
     aget-object p0, p0, v0
 
-    invoke-static {p0}, Lcz/msebera/android/httpclient/entity/ContentType;->create(Ldf/e;)Lcz/msebera/android/httpclient/entity/ContentType;
+    invoke-static {p0}, Lcz/msebera/android/httpclient/entity/ContentType;->create(Lhh/e;)Lcz/msebera/android/httpclient/entity/ContentType;
 
     move-result-object p0
 
@@ -405,7 +405,7 @@
     return-object v0
 .end method
 
-.method public static getOrDefault(Ldf/l;)Lcz/msebera/android/httpclient/entity/ContentType;
+.method public static getOrDefault(Lhh/l;)Lcz/msebera/android/httpclient/entity/ContentType;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -415,7 +415,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0}, Lcz/msebera/android/httpclient/entity/ContentType;->get(Ldf/l;)Lcz/msebera/android/httpclient/entity/ContentType;
+    invoke-static {p0}, Lcz/msebera/android/httpclient/entity/ContentType;->get(Lhh/l;)Lcz/msebera/android/httpclient/entity/ContentType;
 
     move-result-object p0
 
@@ -443,7 +443,7 @@
     const-string v0, "Content type"
 
     .line 1
-    invoke-static {p0, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 2
     new-instance v0, Lcz/msebera/android/httpclient/util/CharArrayBuffer;
@@ -458,7 +458,7 @@
     invoke-virtual {v0, p0}, Lcz/msebera/android/httpclient/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     .line 4
-    new-instance v1, Lmg/r;
+    new-instance v1, Lqi/r;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -466,12 +466,12 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v3, v2}, Lmg/r;-><init>(II)V
+    invoke-direct {v1, v3, v2}, Lqi/r;-><init>(II)V
 
     .line 5
-    sget-object v2, Lmg/f;->b:Lmg/f;
+    sget-object v2, Lqi/f;->b:Lqi/f;
 
-    invoke-virtual {v2, v0, v1}, Lmg/f;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lmg/r;)[Ldf/e;
+    invoke-virtual {v2, v0, v1}, Lqi/f;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lqi/r;)[Lhh/e;
 
     move-result-object v0
 
@@ -483,7 +483,7 @@
     .line 7
     aget-object p0, v0, v3
 
-    invoke-static {p0}, Lcz/msebera/android/httpclient/entity/ContentType;->create(Ldf/e;)Lcz/msebera/android/httpclient/entity/ContentType;
+    invoke-static {p0}, Lcz/msebera/android/httpclient/entity/ContentType;->create(Lhh/e;)Lcz/msebera/android/httpclient/entity/ContentType;
 
     move-result-object p0
 
@@ -495,7 +495,7 @@
 
     const-string v1, "Invalid content type: "
 
-    invoke-static {v1, p0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -579,10 +579,10 @@
     const-string v0, "Parameter name"
 
     .line 1
-    invoke-static {p1, v0}, Lqg/a;->d(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {p1, v0}, Lui/a;->d(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
 
     .line 2
-    iget-object v0, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Ldf/y;
+    iget-object v0, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Lhh/y;
 
     const/4 v1, 0x0
 
@@ -602,7 +602,7 @@
     aget-object v4, v0, v3
 
     .line 4
-    invoke-interface {v4}, Ldf/y;->getName()Ljava/lang/String;
+    invoke-interface {v4}, Lhh/y;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -613,7 +613,7 @@
     if-eqz v5, :cond_1
 
     .line 5
-    invoke-interface {v4}, Ldf/y;->getValue()Ljava/lang/String;
+    invoke-interface {v4}, Lhh/y;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
@@ -644,7 +644,7 @@
     invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     .line 3
-    iget-object v1, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Ldf/y;
+    iget-object v1, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Lhh/y;
 
     if-eqz v1, :cond_0
 
@@ -654,13 +654,13 @@
     invoke-virtual {v0, v1}, Lcz/msebera/android/httpclient/util/CharArrayBuffer;->append(Ljava/lang/String;)V
 
     .line 5
-    sget-object v1, Lmg/e;->b:Lmg/e;
+    sget-object v1, Lqi/e;->b:Lqi/e;
 
-    iget-object v2, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Ldf/y;
+    iget-object v2, p0, Lcz/msebera/android/httpclient/entity/ContentType;->params:[Lhh/y;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v0, v2, v3}, Lmg/e;->d(Lcz/msebera/android/httpclient/util/CharArrayBuffer;[Ldf/y;Z)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-virtual {v1, v0, v2, v3}, Lqi/e;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;[Lhh/y;Z)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     goto :goto_0
 

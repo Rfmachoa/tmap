@@ -56,7 +56,7 @@
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Landroidx/appcompat/widget/l0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p2}, Landroidx/appcompat/widget/r0;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 8
     new-instance p2, Landroidx/appcompat/widget/ActionMenuPresenter$d$a;
@@ -194,7 +194,7 @@
     add-int/2addr p4, v0
 
     .line 11
-    invoke-static {p3, v1, v2, p2, p4}, Ld1/c;->l(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-static {p3, v1, v2, p2, p4}, Lw1/c;->l(Landroid/graphics/drawable/Drawable;IIII)V
 
     :cond_0
     return p1

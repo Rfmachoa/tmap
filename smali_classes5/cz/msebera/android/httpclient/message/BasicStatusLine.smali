@@ -3,7 +3,7 @@
 .source "BasicStatusLine.java"
 
 # interfaces
-.implements Ldf/b0;
+.implements Lhh/b0;
 .implements Ljava/lang/Cloneable;
 .implements Ljava/io/Serializable;
 
@@ -35,7 +35,7 @@
     const-string v0, "Version"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -46,7 +46,7 @@
     const-string p1, "Status code"
 
     .line 3
-    invoke-static {p2, p1}, Lqg/a;->f(ILjava/lang/String;)I
+    invoke-static {p2, p1}, Lui/a;->f(ILjava/lang/String;)I
 
     move-result p1
 
@@ -107,11 +107,11 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lmg/j;->b:Lmg/j;
+    sget-object v0, Lqi/j;->b:Lqi/j;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p0}, Lmg/j;->d(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Ldf/b0;)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
+    invoke-virtual {v0, v1, p0}, Lqi/j;->a(Lcz/msebera/android/httpclient/util/CharArrayBuffer;Lhh/b0;)Lcz/msebera/android/httpclient/util/CharArrayBuffer;
 
     move-result-object v0
 

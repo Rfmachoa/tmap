@@ -36,7 +36,7 @@
 
 .field private static final GZIP_CONTENT_ENCODING:Ljava/lang/String; = "gzip"
 
-.field private static final HEART_BEAT_HEADER:Ljava/lang/String; = "x-firebase-client-log-type"
+.field private static final HEART_BEAT_HEADER:Ljava/lang/String; = "x-firebase-client"
 
 .field private static final JSON_CONTENT_TYPE:Ljava/lang/String; = "application/json"
 
@@ -59,8 +59,6 @@
 
 .field private static final TRAFFIC_STATS_GENERATE_AUTH_TOKEN_TAG:I = 0x8003
 
-.field private static final USER_AGENT_HEADER:Ljava/lang/String; = "x-firebase-client"
-
 .field private static final UTF_8:Ljava/nio/charset/Charset;
 
 .field private static final X_ANDROID_CERT_HEADER_KEY:Ljava/lang/String; = "X-Android-Cert"
@@ -73,11 +71,11 @@
 # instance fields
 .field private final context:Landroid/content/Context;
 
-.field private final heartbeatInfo:Lcom/google/firebase/inject/Provider;
+.field private final heartBeatProvider:Lcom/google/firebase/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/firebase/inject/Provider<",
-            "Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;",
+            "Lcom/google/firebase/heartbeatinfo/HeartBeatController;",
             ">;"
         }
     .end annotation
@@ -86,16 +84,6 @@
 .field private final requestLimiter:Lcom/google/firebase/installations/remote/RequestLimiter;
 
 .field private shouldServerErrorRetry:Z
-
-.field private final userAgentPublisher:Lcom/google/firebase/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/firebase/inject/Provider<",
-            "Lcom/google/firebase/platforminfo/UserAgentPublisher;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -123,7 +111,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/google/firebase/inject/Provider;Lcom/google/firebase/inject/Provider;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/google/firebase/inject/Provider;)V
     .locals 0
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -133,19 +121,12 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lcom/google/firebase/inject/Provider;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Lcom/google/firebase/inject/Provider<",
-            "Lcom/google/firebase/platforminfo/UserAgentPublisher;",
-            ">;",
-            "Lcom/google/firebase/inject/Provider<",
-            "Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;",
+            "Lcom/google/firebase/heartbeatinfo/HeartBeatController;",
             ">;)V"
         }
     .end annotation
@@ -157,12 +138,9 @@
     iput-object p1, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->context:Landroid/content/Context;
 
     .line 3
-    iput-object p2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->userAgentPublisher:Lcom/google/firebase/inject/Provider;
+    iput-object p2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartBeatProvider:Lcom/google/firebase/inject/Provider;
 
     .line 4
-    iput-object p3, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartbeatInfo:Lcom/google/firebase/inject/Provider;
-
-    .line 5
     new-instance p1, Lcom/google/firebase/installations/remote/RequestLimiter;
 
     invoke-direct {p1}, Lcom/google/firebase/installations/remote/RequestLimiter;-><init>()V
@@ -213,7 +191,7 @@
     :cond_0
     const-string p1, ", "
 
-    invoke-static {p1, p0}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -268,7 +246,7 @@
 
     const-string p0, "sdkVersion"
 
-    const-string p1, "a:17.0.0"
+    const-string p1, "a:17.0.2"
 
     .line 5
     invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -299,7 +277,7 @@
 
     const-string v1, "sdkVersion"
 
-    const-string v2, "a:17.0.0"
+    const-string v2, "a:17.0.2"
 
     .line 2
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -577,12 +555,16 @@
 .end method
 
 .method private openHttpURLConnection(Ljava/net/URL;Ljava/lang/String;)Ljava/net/HttpURLConnection;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/firebase/installations/FirebaseInstallationsException;
         }
     .end annotation
+
+    const-string v0, "Failed to get heartbeats header"
+
+    const-string v1, "ContentValues"
 
     .line 1
     :try_start_0
@@ -592,131 +574,115 @@
 
     check-cast p1, Ljava/net/HttpURLConnection;
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/16 v0, 0x2710
+    const/16 v2, 0x2710
 
     .line 2
-    invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+    invoke-virtual {p1, v2}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     .line 3
-    invoke-virtual {p1, v1}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
+    invoke-virtual {p1, v3}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
     .line 4
-    invoke-virtual {p1, v0}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
+    invoke-virtual {p1, v2}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    const-string v0, "Content-Type"
+    const-string v2, "Content-Type"
 
-    const-string v1, "application/json"
+    const-string v3, "application/json"
 
     .line 5
-    invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v3}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "Accept"
+    const-string v2, "Accept"
 
     .line 6
-    invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v3}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "Content-Encoding"
+    const-string v2, "Content-Encoding"
 
-    const-string v1, "gzip"
+    const-string v3, "gzip"
 
     .line 7
-    invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v3}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "Cache-Control"
+    const-string v2, "Cache-Control"
 
-    const-string v1, "no-cache"
+    const-string v3, "no-cache"
 
     .line 8
-    invoke-virtual {p1, v0, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v3}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
-    iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->context:Landroid/content/Context;
+    iget-object v2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->context:Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "X-Android-Package"
+    const-string v3, "X-Android-Package"
 
-    invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v3, v2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
-    iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartbeatInfo:Lcom/google/firebase/inject/Provider;
+    iget-object v2, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartBeatProvider:Lcom/google/firebase/inject/Provider;
 
-    invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v2}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    if-eqz v0, :cond_0
+    check-cast v2, Lcom/google/firebase/heartbeatinfo/HeartBeatController;
 
-    iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->userAgentPublisher:Lcom/google/firebase/inject/Provider;
+    if-eqz v2, :cond_0
 
-    invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
+    :try_start_1
+    const-string v3, "x-firebase-client"
 
     .line 11
-    iget-object v0, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->heartbeatInfo:Lcom/google/firebase/inject/Provider;
+    invoke-interface {v2}, Lcom/google/firebase/heartbeatinfo/HeartBeatController;->getHeartBeatsHeader()Lcom/google/android/gms/tasks/Task;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/google/android/gms/tasks/Tasks;->await(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
 
     .line 12
-    invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
+    invoke-virtual {p1, v3, v2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;
-
-    const-string v1, "fire-installations-id"
-
-    invoke-interface {v0, v1}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo;->getHeartBeatCode(Ljava/lang/String;)Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;
-
-    move-result-object v0
+    :catch_0
+    move-exception v2
 
     .line 13
-    sget-object v1, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->NONE:Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    if-eq v0, v1, :cond_0
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Thread;->interrupt()V
 
     .line 14
-    iget-object v1, p0, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->userAgentPublisher:Lcom/google/firebase/inject/Provider;
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v2
 
     .line 15
-    invoke-interface {v1}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/firebase/platforminfo/UserAgentPublisher;
-
-    invoke-interface {v1}, Lcom/google/firebase/platforminfo/UserAgentPublisher;->getUserAgent()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "x-firebase-client"
+    invoke-static {v1, v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 16
-    invoke-virtual {p1, v2, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 17
-    invoke-virtual {v0}, Lcom/google/firebase/heartbeatinfo/HeartBeatInfo$HeartBeat;->getCode()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "x-firebase-client-log-type"
-
-    .line 18
-    invoke-virtual {p1, v1, v0}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 19
     :cond_0
+    :goto_0
     invoke-direct {p0}, Lcom/google/firebase/installations/remote/FirebaseInstallationServiceClient;->getFingerprintHashForPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -727,13 +693,13 @@
 
     const-string v0, "x-goog-api-key"
 
-    .line 20
+    .line 17
     invoke-virtual {p1, v0, p2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p1
 
-    .line 21
-    :catch_0
+    .line 18
+    :catch_2
     new-instance p1, Lcom/google/firebase/installations/FirebaseInstallationsException;
 
     sget-object p2, Lcom/google/firebase/installations/FirebaseInstallationsException$Status;->UNAVAILABLE:Lcom/google/firebase/installations/FirebaseInstallationsException$Status;

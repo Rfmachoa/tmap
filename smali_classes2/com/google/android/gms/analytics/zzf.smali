@@ -1,20 +1,9 @@
 .class final Lcom/google/android/gms/analytics/zzf;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 # interfaces
 .implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator<",
-        "Lcom/google/android/gms/analytics/zzj;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods

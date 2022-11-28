@@ -45,7 +45,7 @@
     .locals 5
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->onMeasure(II)V
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
@@ -166,6 +166,15 @@
 
     .line 1
     invoke-super {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->setBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method

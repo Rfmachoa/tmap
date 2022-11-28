@@ -3,40 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-.field public final synthetic b:Lcom/skt/tmap/data/GridItemData;
+# static fields
+.field public static final synthetic a:Lcom/skt/tmap/activity/j0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/skt/tmap/activity/j0;
+
+    invoke-direct {v0}, Lcom/skt/tmap/activity/j0;-><init>()V
+
+    sput-object v0, Lcom/skt/tmap/activity/j0;->a:Lcom/skt/tmap/activity/j0;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/j0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iput-object p2, p0, Lcom/skt/tmap/activity/j0;->b:Lcom/skt/tmap/data/GridItemData;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
-    .locals 2
+.method public final onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/j0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
-
-    iget-object v1, p0, Lcom/skt/tmap/activity/j0;->b:Lcom/skt/tmap/data/GridItemData;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->O6(Lcom/skt/tmap/activity/TmapMainActivity;Lcom/skt/tmap/data/GridItemData;Ljava/lang/Integer;)V
+    invoke-static {p1, p2, p3, p4}, Lcom/skt/tmap/activity/TmapEVSearchActivity;->I5(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

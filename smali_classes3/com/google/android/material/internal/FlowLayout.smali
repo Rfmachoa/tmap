@@ -387,12 +387,12 @@
     check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 15
-    invoke-static {v5}, Ls1/m;->c(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Landroidx/core/view/q;->c(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v6
 
     .line 16
-    invoke-static {v5}, Ls1/m;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Landroidx/core/view/q;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v5
 

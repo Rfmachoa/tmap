@@ -8,7 +8,7 @@
 
 # annotations
 .annotation build Landroidx/annotation/IntRange;
-    from = 0x1L
+    from = -0x2L
 .end annotation
 
 .annotation build Landroidx/annotation/RestrictTo;

@@ -16,23 +16,11 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;I)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
+.method public constructor <init>(Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;I)V
+    .locals 0
 
     .line 1
-    :cond_0
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getTypeContext()Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-direct {p0, v0, p3}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;-><init>(Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)V
+    invoke-direct {p0, p3, p4}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;-><init>(Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)V
 
     .line 2
     iput-object p1, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_owner:Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
@@ -41,7 +29,7 @@
     iput-object p2, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_type:Lcom/fasterxml/jackson/databind/JavaType;
 
     .line 4
-    iput p4, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_index:I
+    iput p5, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_index:I
 
     return-void
 .end method
@@ -57,54 +45,48 @@
 
     return v0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_3
-
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    const-class v1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
 
-    move-result-object v2
+    invoke-static {p1, v1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->hasClass(Ljava/lang/Object;Ljava/lang/Class;)Z
 
-    const-class v3, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
+    move-result v1
 
-    if-eq v2, v3, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_1
+    if-nez v1, :cond_1
+
+    return v2
 
     .line 2
     :cond_1
     check-cast p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
 
     .line 3
-    iget-object v2, p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_owner:Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
+    iget-object v1, p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_owner:Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
 
     iget-object v3, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_owner:Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
 
-    invoke-virtual {v2, v3}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
     iget p1, p1, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_index:I
 
-    iget v2, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_index:I
+    iget v1, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_index:I
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    move v0, v1
+    move v0, v2
 
     :goto_0
     return v0
-
-    :cond_3
-    :goto_1
-    return v1
 .end method
 
 .method public getAnnotated()Ljava/lang/reflect/AnnotatedElement;
@@ -129,23 +111,6 @@
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_owner:Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getDeclaringClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getGenericType()Ljava/lang/reflect/Type;
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_owner:Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
-
-    iget v1, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->_index:I
-
-    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;->getGenericParameterType(I)Ljava/lang/reflect/Type;
 
     move-result-object v0
 
@@ -259,6 +224,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -312,6 +278,7 @@
 
     move-result-object p2
 
+    .line 2
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v0

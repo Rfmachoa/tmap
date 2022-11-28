@@ -9,13 +9,13 @@
 
 
 # static fields
-.field public static final Y0:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.values"
+.field public static final a1:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.values"
 
-.field public static final Z0:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.changed"
+.field public static final b1:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.changed"
 
-.field public static final a1:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.entries"
+.field public static final c1:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.entries"
 
-.field public static final b1:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.entryValues"
+.field public static final d1:Ljava/lang/String; = "MultiSelectListPreferenceDialogFragment.entryValues"
 
 
 # instance fields
@@ -29,11 +29,11 @@
     .end annotation
 .end field
 
-.field public V0:Z
+.field public X0:Z
 
-.field public W0:[Ljava/lang/CharSequence;
+.field public Y0:[Ljava/lang/CharSequence;
 
-.field public X0:[Ljava/lang/CharSequence;
+.field public Z0:[Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -57,6 +57,9 @@
 
 .method public static i(Ljava/lang/String;)Landroidx/preference/g;
     .locals 3
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -98,7 +101,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    iget-boolean p1, p0, Landroidx/preference/g;->V0:Z
+    iget-boolean p1, p0, Landroidx/preference/g;->X0:Z
 
     if-eqz p1, :cond_0
 
@@ -119,19 +122,23 @@
     const/4 p1, 0x0
 
     .line 6
-    iput-boolean p1, p0, Landroidx/preference/g;->V0:Z
+    iput-boolean p1, p0, Landroidx/preference/g;->X0:Z
 
     return-void
 .end method
 
 .method public f(Landroid/app/AlertDialog$Builder;)V
     .locals 5
+    .param p1    # Landroid/app/AlertDialog$Builder;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-super {p0, p1}, Landroidx/preference/j;->f(Landroid/app/AlertDialog$Builder;)V
 
     .line 2
-    iget-object v0, p0, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     array-length v0, v0
 
@@ -146,7 +153,7 @@
     .line 4
     iget-object v3, p0, Landroidx/preference/g;->K0:Ljava/util/Set;
 
-    iget-object v4, p0, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iget-object v4, p0, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     aget-object v4, v4, v2
 
@@ -166,7 +173,7 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Landroidx/preference/g;->W0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/g;->Y0:[Ljava/lang/CharSequence;
 
     new-instance v2, Landroidx/preference/g$a;
 
@@ -233,21 +240,21 @@
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     .line 6
-    iput-boolean v0, p0, Landroidx/preference/g;->V0:Z
+    iput-boolean v0, p0, Landroidx/preference/g;->X0:Z
 
     .line 7
     invoke-virtual {p1}, Landroidx/preference/MultiSelectListPreference;->A1()[Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/preference/g;->W0:[Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/preference/g;->Y0:[Ljava/lang/CharSequence;
 
     .line 8
     invoke-virtual {p1}, Landroidx/preference/MultiSelectListPreference;->B1()[Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     goto :goto_0
 
@@ -285,7 +292,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Landroidx/preference/g;->V0:Z
+    iput-boolean v0, p0, Landroidx/preference/g;->X0:Z
 
     const-string v0, "MultiSelectListPreferenceDialogFragment.entries"
 
@@ -294,7 +301,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/preference/g;->W0:[Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroidx/preference/g;->Y0:[Ljava/lang/CharSequence;
 
     const-string v0, "MultiSelectListPreferenceDialogFragment.entryValues"
 
@@ -303,7 +310,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     :goto_0
     return-void
@@ -331,21 +338,21 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 3
-    iget-boolean v0, p0, Landroidx/preference/g;->V0:Z
+    iget-boolean v0, p0, Landroidx/preference/g;->X0:Z
 
     const-string v1, "MultiSelectListPreferenceDialogFragment.changed"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 4
-    iget-object v0, p0, Landroidx/preference/g;->W0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/g;->Y0:[Ljava/lang/CharSequence;
 
     const-string v1, "MultiSelectListPreferenceDialogFragment.entries"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
     .line 5
-    iget-object v0, p0, Landroidx/preference/g;->X0:[Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/g;->Z0:[Ljava/lang/CharSequence;
 
     const-string v1, "MultiSelectListPreferenceDialogFragment.entryValues"
 

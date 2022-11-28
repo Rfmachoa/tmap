@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field public final a:Lf3/d;
+.field public final a:Ln4/d;
 
 .field public final b:[C
 
@@ -50,7 +50,7 @@
     iput-object v0, p0, Landroidx/emoji/text/c;->d:Landroid/graphics/Typeface;
 
     .line 3
-    iput-object v0, p0, Landroidx/emoji/text/c;->a:Lf3/d;
+    iput-object v0, p0, Landroidx/emoji/text/c;->a:Ln4/d;
 
     .line 4
     new-instance v0, Landroidx/emoji/text/c$a;
@@ -71,13 +71,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/graphics/Typeface;Lf3/d;)V
+.method public constructor <init>(Landroid/graphics/Typeface;Ln4/d;)V
     .locals 1
     .param p1    # Landroid/graphics/Typeface;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lf3/d;
+    .param p2    # Ln4/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -89,7 +89,7 @@
     iput-object p1, p0, Landroidx/emoji/text/c;->d:Landroid/graphics/Typeface;
 
     .line 8
-    iput-object p2, p0, Landroidx/emoji/text/c;->a:Lf3/d;
+    iput-object p2, p0, Landroidx/emoji/text/c;->a:Ln4/d;
 
     .line 9
     new-instance p1, Landroidx/emoji/text/c$a;
@@ -101,7 +101,7 @@
     iput-object p1, p0, Landroidx/emoji/text/c;->c:Landroidx/emoji/text/c$a;
 
     .line 10
-    invoke-virtual {p2}, Lf3/d;->C()I
+    invoke-virtual {p2}, Ln4/d;->C()I
 
     move-result p1
 
@@ -112,7 +112,7 @@
     iput-object p1, p0, Landroidx/emoji/text/c;->b:[C
 
     .line 11
-    invoke-virtual {p0, p2}, Landroidx/emoji/text/c;->a(Lf3/d;)V
+    invoke-virtual {p0, p2}, Landroidx/emoji/text/c;->a(Ln4/d;)V
 
     return-void
 .end method
@@ -137,11 +137,11 @@
     .line 2
     new-instance v1, Landroidx/emoji/text/c;
 
-    invoke-static {p0, p1}, Lg2/b;->b(Landroid/content/res/AssetManager;Ljava/lang/String;)Lf3/d;
+    invoke-static {p0, p1}, Lx2/b;->b(Landroid/content/res/AssetManager;Ljava/lang/String;)Ln4/d;
 
     move-result-object p0
 
-    invoke-direct {v1, v0, p0}, Landroidx/emoji/text/c;-><init>(Landroid/graphics/Typeface;Lf3/d;)V
+    invoke-direct {v1, v0, p0}, Landroidx/emoji/text/c;-><init>(Landroid/graphics/Typeface;Ln4/d;)V
 
     return-object v1
 .end method
@@ -165,11 +165,11 @@
     .line 1
     new-instance v0, Landroidx/emoji/text/c;
 
-    invoke-static {p1}, Lg2/b;->c(Ljava/io/InputStream;)Lf3/d;
+    invoke-static {p1}, Lx2/b;->c(Ljava/io/InputStream;)Ln4/d;
 
     move-result-object p1
 
-    invoke-direct {v0, p0, p1}, Landroidx/emoji/text/c;-><init>(Landroid/graphics/Typeface;Lf3/d;)V
+    invoke-direct {v0, p0, p1}, Landroidx/emoji/text/c;-><init>(Landroid/graphics/Typeface;Ln4/d;)V
 
     return-object v0
 .end method
@@ -193,22 +193,22 @@
     .line 1
     new-instance v0, Landroidx/emoji/text/c;
 
-    invoke-static {p1}, Lg2/b;->d(Ljava/nio/ByteBuffer;)Lf3/d;
+    invoke-static {p1}, Lx2/b;->d(Ljava/nio/ByteBuffer;)Ln4/d;
 
     move-result-object p1
 
-    invoke-direct {v0, p0, p1}, Landroidx/emoji/text/c;-><init>(Landroid/graphics/Typeface;Lf3/d;)V
+    invoke-direct {v0, p0, p1}, Landroidx/emoji/text/c;-><init>(Landroid/graphics/Typeface;Ln4/d;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lf3/d;)V
+.method public final a(Ln4/d;)V
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lf3/d;->C()I
+    invoke-virtual {p1}, Ln4/d;->C()I
 
     move-result p1
 
@@ -258,7 +258,7 @@
     return-object v0
 .end method
 
-.method public f()Lf3/d;
+.method public f()Ln4/d;
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -267,7 +267,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/emoji/text/c;->a:Lf3/d;
+    iget-object v0, p0, Landroidx/emoji/text/c;->a:Ln4/d;
 
     return-object v0
 .end method
@@ -281,9 +281,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/emoji/text/c;->a:Lf3/d;
+    iget-object v0, p0, Landroidx/emoji/text/c;->a:Ln4/d;
 
-    invoke-virtual {v0}, Lf3/d;->H()I
+    invoke-virtual {v0}, Ln4/d;->H()I
 
     move-result v0
 
@@ -336,7 +336,7 @@
     const-string v0, "emoji metadata cannot be null"
 
     .line 1
-    invoke-static {p1, v0}, Lr1/o;->l(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p1}, Landroidx/emoji/text/EmojiMetadata;->c()I
@@ -359,7 +359,7 @@
     :goto_0
     const-string v3, "invalid metadata codepoint length"
 
-    invoke-static {v0, v3}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v3}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Landroidx/emoji/text/c;->c:Landroidx/emoji/text/c$a;

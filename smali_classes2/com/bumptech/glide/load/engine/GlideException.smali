@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field private key:Lu4/b;
+.field private key:Lr6/b;
 
 
 # direct methods
@@ -469,7 +469,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 5
-    iget-object v1, p0, Lcom/bumptech/glide/load/engine/GlideException;->key:Lu4/b;
+    iget-object v1, p0, Lcom/bumptech/glide/load/engine/GlideException;->key:Lr6/b;
 
     if-eqz v1, :cond_2
 
@@ -477,7 +477,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bumptech/glide/load/engine/GlideException;->key:Lu4/b;
+    iget-object v2, p0, Lcom/bumptech/glide/load/engine/GlideException;->key:Lr6/b;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -729,23 +729,23 @@
     return-void
 .end method
 
-.method public setLoggingDetails(Lu4/b;Lcom/bumptech/glide/load/DataSource;)V
+.method public setLoggingDetails(Lr6/b;Lcom/bumptech/glide/load/DataSource;)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p0, p1, p2, v0}, Lcom/bumptech/glide/load/engine/GlideException;->setLoggingDetails(Lu4/b;Lcom/bumptech/glide/load/DataSource;Ljava/lang/Class;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/bumptech/glide/load/engine/GlideException;->setLoggingDetails(Lr6/b;Lcom/bumptech/glide/load/DataSource;Ljava/lang/Class;)V
 
     return-void
 .end method
 
-.method public setLoggingDetails(Lu4/b;Lcom/bumptech/glide/load/DataSource;Ljava/lang/Class;)V
+.method public setLoggingDetails(Lr6/b;Lcom/bumptech/glide/load/DataSource;Ljava/lang/Class;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lu4/b;",
+            "Lr6/b;",
             "Lcom/bumptech/glide/load/DataSource;",
             "Ljava/lang/Class<",
             "*>;)V"
@@ -753,7 +753,7 @@
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/bumptech/glide/load/engine/GlideException;->key:Lu4/b;
+    iput-object p1, p0, Lcom/bumptech/glide/load/engine/GlideException;->key:Lr6/b;
 
     .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/GlideException;->dataSource:Lcom/bumptech/glide/load/DataSource;

@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/model/k;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NearSearchResultScreen;ILcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NavigationScreenKt;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/f0;->a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
-
-    iput p2, p0, Lcom/skt/tmap/car/screen/f0;->b:I
-
-    iput-object p3, p0, Lcom/skt/tmap/car/screen/f0;->c:Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/f0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick()V
-    .locals 3
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/f0;->a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/f0;->a:Lcom/skt/tmap/car/screen/NavigationScreenKt;
 
-    iget v1, p0, Lcom/skt/tmap/car/screen/f0;->b:I
+    check-cast p1, Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData;
 
-    iget-object v2, p0, Lcom/skt/tmap/car/screen/f0;->c:Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;
-
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/car/screen/NearSearchResultScreen;->J(Lcom/skt/tmap/car/screen/NearSearchResultScreen;ILcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/NavigationScreenKt;->i0(Lcom/skt/tmap/car/screen/NavigationScreenKt;Lcom/skt/tmap/engine/navigation/livedata/ObservableLocationData;)V
 
     return-void
 .end method

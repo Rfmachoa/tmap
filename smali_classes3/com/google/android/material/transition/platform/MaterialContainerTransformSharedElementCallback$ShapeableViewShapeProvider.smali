@@ -43,9 +43,9 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/android/material/shape/Shapeable;
 
-    .line 2
     invoke-interface {p1}, Lcom/google/android/material/shape/Shapeable;->getShapeAppearanceModel()Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     move-result-object p1

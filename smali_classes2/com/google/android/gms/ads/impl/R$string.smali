@@ -14,19 +14,33 @@
 
 
 # static fields
-.field public static final s1:I = 0x7f1304c4
+.field public static final offline_notification_text:I = 0x7f140471
 
-.field public static final s2:I = 0x7f1304c5
+.field public static final offline_notification_title:I = 0x7f140472
 
-.field public static final s3:I = 0x7f1304c6
+.field public static final offline_opt_in_confirm:I = 0x7f140473
 
-.field public static final s4:I = 0x7f1304c7
+.field public static final offline_opt_in_confirmation:I = 0x7f140474
 
-.field public static final s5:I = 0x7f1304c8
+.field public static final offline_opt_in_decline:I = 0x7f140475
 
-.field public static final s6:I = 0x7f1304c9
+.field public static final offline_opt_in_message:I = 0x7f140476
 
-.field public static final s7:I = 0x7f1304ca
+.field public static final offline_opt_in_title:I = 0x7f140477
+
+.field public static final s1:I = 0x7f140530
+
+.field public static final s2:I = 0x7f140531
+
+.field public static final s3:I = 0x7f140532
+
+.field public static final s4:I = 0x7f140533
+
+.field public static final s5:I = 0x7f140534
+
+.field public static final s6:I = 0x7f140535
+
+.field public static final s7:I = 0x7f140536
 
 
 # direct methods

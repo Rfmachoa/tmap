@@ -1,615 +1,270 @@
-.class public abstract Landroidx/paging/g;
-.super Landroidx/paging/b;
-.source "PageKeyedDataSource.java"
+.class public final Landroidx/paging/g;
+.super Ljava/lang/Object;
+.source "PageFetcherSnapshot.kt"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/paging/g$b;,
-        Landroidx/paging/g$d;,
-        Landroidx/paging/g$a;,
-        Landroidx/paging/g$c;,
-        Landroidx/paging/g$f;,
-        Landroidx/paging/g$e;
-    }
+.annotation build Landroidx/annotation/VisibleForTesting;
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<Key:",
-        "Ljava/lang/Object;",
-        "Value:",
-        "Ljava/lang/Object;",
-        ">",
-        "Landroidx/paging/b<",
-        "TKey;TValue;>;"
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\n\u0008\u0081\u0008\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0006\u001a\u00020\u0002\u0012\u0006\u0010\u0007\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\t\u0010\u0003\u001a\u00020\u0002H\u00c6\u0003J\t\u0010\u0005\u001a\u00020\u0004H\u00c6\u0003J\u001d\u0010\u0008\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u0004H\u00c6\u0001J\t\u0010\n\u001a\u00020\tH\u00d6\u0001J\t\u0010\u000b\u001a\u00020\u0002H\u00d6\u0001J\u0013\u0010\u000e\u001a\u00020\r2\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003R\u0017\u0010\u0006\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u000f\u001a\u0004\u0008\u0010\u0010\u0011R\u0017\u0010\u0007\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010\u0012\u001a\u0004\u0008\u0013\u0010\u0014\u00a8\u0006\u0017"
+    }
+    d2 = {
+        "Landroidx/paging/g;",
+        "",
+        "",
+        "a",
+        "Landroidx/paging/v0;",
+        "b",
+        "generationId",
+        "hint",
+        "c",
+        "",
+        "toString",
+        "hashCode",
+        "other",
+        "",
+        "equals",
+        "I",
+        "e",
+        "()I",
+        "Landroidx/paging/v0;",
+        "f",
+        "()Landroidx/paging/v0;",
+        "<init>",
+        "(ILandroidx/paging/v0;)V",
+        "paging-common"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public final c:Ljava/lang/Object;
+.field public final a:I
 
-.field public d:Ljava/lang/Object;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mKeyLock"
-    .end annotation
-
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TKey;"
-        }
-    .end annotation
-.end field
-
-.field public e:Ljava/lang/Object;
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "mKeyLock"
-    .end annotation
-
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TKey;"
-        }
+.field public final b:Landroidx/paging/v0;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(ILandroidx/paging/v0;)V
     .locals 1
+    .param p2    # Landroidx/paging/v0;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "hint"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-direct {p0}, Landroidx/paging/b;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/lang/Object;
+    iput p1, p0, Landroidx/paging/g;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Landroidx/paging/g;->c:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    .line 3
-    iput-object v0, p0, Landroidx/paging/g;->d:Ljava/lang/Object;
-
-    .line 4
-    iput-object v0, p0, Landroidx/paging/g;->e:Ljava/lang/Object;
+    iput-object p2, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
 
     return-void
+.end method
+
+.method public static synthetic d(Landroidx/paging/g;ILandroidx/paging/v0;ILjava/lang/Object;)Landroidx/paging/g;
+    .locals 0
+
+    and-int/lit8 p4, p3, 0x1
+
+    if-eqz p4, :cond_0
+
+    iget p1, p0, Landroidx/paging/g;->a:I
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_1
+
+    iget-object p2, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
+
+    :cond_1
+    invoke-virtual {p0, p1, p2}, Landroidx/paging/g;->c(ILandroidx/paging/v0;)Landroidx/paging/g;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public bridge synthetic g(Ln/a;)Landroidx/paging/c;
-    .locals 0
-    .param p1    # Ln/a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroidx/paging/g;->u(Ln/a;)Landroidx/paging/g;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public bridge synthetic h(Ln/a;)Landroidx/paging/c;
-    .locals 0
-    .param p1    # Ln/a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0, p1}, Landroidx/paging/g;->v(Ln/a;)Landroidx/paging/g;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final j(ILjava/lang/Object;ILjava/util/concurrent/Executor;Landroidx/paging/PageResult$a;)V
-    .locals 1
-    .param p2    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p5    # Landroidx/paging/PageResult$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITValue;I",
-            "Ljava/util/concurrent/Executor;",
-            "Landroidx/paging/PageResult$a<",
-            "TValue;>;)V"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/paging/g;->o()Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    new-instance v0, Landroidx/paging/g$f;
-
-    invoke-direct {v0, p1, p3}, Landroidx/paging/g$f;-><init>(Ljava/lang/Object;I)V
-
-    new-instance p1, Landroidx/paging/g$b;
-
-    invoke-direct {p1, p0, p2, p4, p5}, Landroidx/paging/g$b;-><init>(Landroidx/paging/g;ILjava/util/concurrent/Executor;Landroidx/paging/PageResult$a;)V
-
-    invoke-virtual {p0, v0, p1}, Landroidx/paging/g;->r(Landroidx/paging/g$f;Landroidx/paging/g$a;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-static {}, Landroidx/paging/PageResult;->a()Landroidx/paging/PageResult;
-
-    move-result-object p1
-
-    invoke-virtual {p5, p2, p1}, Landroidx/paging/PageResult$a;->a(ILandroidx/paging/PageResult;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public final k(ILjava/lang/Object;ILjava/util/concurrent/Executor;Landroidx/paging/PageResult$a;)V
-    .locals 1
-    .param p2    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p5    # Landroidx/paging/PageResult$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITValue;I",
-            "Ljava/util/concurrent/Executor;",
-            "Landroidx/paging/PageResult$a<",
-            "TValue;>;)V"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Landroidx/paging/g;->p()Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 p2, 0x2
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    new-instance v0, Landroidx/paging/g$f;
-
-    invoke-direct {v0, p1, p3}, Landroidx/paging/g$f;-><init>(Ljava/lang/Object;I)V
-
-    new-instance p1, Landroidx/paging/g$b;
-
-    invoke-direct {p1, p0, p2, p4, p5}, Landroidx/paging/g$b;-><init>(Landroidx/paging/g;ILjava/util/concurrent/Executor;Landroidx/paging/PageResult$a;)V
-
-    invoke-virtual {p0, v0, p1}, Landroidx/paging/g;->s(Landroidx/paging/g$f;Landroidx/paging/g$a;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-static {}, Landroidx/paging/PageResult;->a()Landroidx/paging/PageResult;
-
-    move-result-object p1
-
-    invoke-virtual {p5, p2, p1}, Landroidx/paging/PageResult$a;->a(ILandroidx/paging/PageResult;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public final l(Ljava/lang/Object;IIZLjava/util/concurrent/Executor;Landroidx/paging/PageResult$a;)V
-    .locals 0
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p6    # Landroidx/paging/PageResult$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TKey;IIZ",
-            "Ljava/util/concurrent/Executor;",
-            "Landroidx/paging/PageResult$a<",
-            "TValue;>;)V"
-        }
-    .end annotation
-
-    .line 1
-    new-instance p1, Landroidx/paging/g$d;
-
-    invoke-direct {p1, p0, p4, p6}, Landroidx/paging/g$d;-><init>(Landroidx/paging/g;ZLandroidx/paging/PageResult$a;)V
-
-    .line 2
-    new-instance p3, Landroidx/paging/g$e;
-
-    invoke-direct {p3, p2, p4}, Landroidx/paging/g$e;-><init>(IZ)V
-
-    invoke-virtual {p0, p3, p1}, Landroidx/paging/g;->t(Landroidx/paging/g$e;Landroidx/paging/g$c;)V
-
-    .line 3
-    iget-object p1, p1, Landroidx/paging/g$d;->a:Landroidx/paging/c$d;
-
-    invoke-virtual {p1, p5}, Landroidx/paging/c$d;->c(Ljava/util/concurrent/Executor;)V
-
-    return-void
-.end method
-
-.method public final m(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITValue;)TKey;"
-        }
-    .end annotation
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public n()Z
+.method public final a()I
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Landroidx/paging/g;->a:I
 
     return v0
 .end method
 
-.method public final o()Ljava/lang/Object;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TKey;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/paging/g;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Landroidx/paging/g;->d:Ljava/lang/Object;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final p()Ljava/lang/Object;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TKey;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/paging/g;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iget-object v1, p0, Landroidx/paging/g;->e:Ljava/lang/Object;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public q(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final b()Landroidx/paging/v0;
     .locals 1
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TKey;TKey;)V"
-        }
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Landroidx/paging/g;->c:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    iput-object p1, p0, Landroidx/paging/g;->e:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Landroidx/paging/g;->d:Ljava/lang/Object;
-
-    .line 4
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public abstract r(Landroidx/paging/g$f;Landroidx/paging/g$a;)V
-    .param p1    # Landroidx/paging/g$f;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/g$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/paging/g$f<",
-            "TKey;>;",
-            "Landroidx/paging/g$a<",
-            "TKey;TValue;>;)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract s(Landroidx/paging/g$f;Landroidx/paging/g$a;)V
-    .param p1    # Landroidx/paging/g$f;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/g$a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/paging/g$f<",
-            "TKey;>;",
-            "Landroidx/paging/g$a<",
-            "TKey;TValue;>;)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract t(Landroidx/paging/g$e;Landroidx/paging/g$c;)V
-    .param p1    # Landroidx/paging/g$e;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/paging/g$c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/paging/g$e<",
-            "TKey;>;",
-            "Landroidx/paging/g$c<",
-            "TKey;TValue;>;)V"
-        }
-    .end annotation
-.end method
-
-.method public final u(Ln/a;)Landroidx/paging/g;
-    .locals 0
-    .param p1    # Ln/a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<ToValue:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ln/a<",
-            "TValue;TToValue;>;)",
-            "Landroidx/paging/g<",
-            "TKey;TToValue;>;"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p1}, Landroidx/paging/c;->c(Ln/a;)Ln/a;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroidx/paging/g;->v(Ln/a;)Landroidx/paging/g;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final v(Ln/a;)Landroidx/paging/g;
-    .locals 1
-    .param p1    # Ln/a;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<ToValue:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ln/a<",
-            "Ljava/util/List<",
-            "TValue;>;",
-            "Ljava/util/List<",
-            "TToValue;>;>;)",
-            "Landroidx/paging/g<",
-            "TKey;TToValue;>;"
-        }
-    .end annotation
-
-    .line 1
-    new-instance v0, Landroidx/paging/q;
-
-    invoke-direct {v0, p0, p1}, Landroidx/paging/q;-><init>(Landroidx/paging/g;Ln/a;)V
+    iget-object v0, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
 
     return-object v0
 .end method
 
-.method public w(Ljava/lang/Object;)V
+.method public final c(ILandroidx/paging/v0;)Landroidx/paging/g;
     .locals 1
-    .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+    .param p2    # Landroidx/paging/v0;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TKey;)V"
-        }
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Landroidx/paging/g;->c:Ljava/lang/Object;
+    const-string v0, "hint"
 
-    monitor-enter v0
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 2
-    :try_start_0
-    iput-object p1, p0, Landroidx/paging/g;->d:Ljava/lang/Object;
+    new-instance v0, Landroidx/paging/g;
 
-    .line 3
-    monitor-exit v0
+    invoke-direct {v0, p1, p2}, Landroidx/paging/g;-><init>(ILandroidx/paging/v0;)V
 
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
+    return-object v0
 .end method
 
-.method public x(Ljava/lang/Object;)V
+.method public final e()I
     .locals 1
+
+    .line 1
+    iget v0, p0, Landroidx/paging/g;->a:I
+
+    return v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
     .param p1    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TKey;)V"
-        }
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Landroidx/paging/g;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Landroidx/paging/g;
+
+    iget v1, p0, Landroidx/paging/g;->a:I
+
+    iget v3, p1, Landroidx/paging/g;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
+
+    iget-object p1, p1, Landroidx/paging/g;->b:Landroidx/paging/v0;
+
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/f0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final f()Landroidx/paging/v0;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/paging/g;->c:Ljava/lang/Object;
+    iget-object v0, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
 
-    monitor-enter v0
+    return-object v0
+.end method
 
-    .line 2
-    :try_start_0
-    iput-object p1, p0, Landroidx/paging/g;->e:Ljava/lang/Object;
+.method public hashCode()I
+    .locals 2
 
-    .line 3
-    monitor-exit v0
+    iget v0, p0, Landroidx/paging/g;->a:I
 
-    return-void
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    :catchall_0
-    move-exception p1
+    move-result v0
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    throw p1
+    iget-object v1, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
+
+    invoke-virtual {v1}, Landroidx/paging/v0;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "GenerationalViewportHint(generationId="
+
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/paging/g;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hint="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Landroidx/paging/g;->b:Landroidx/paging/v0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

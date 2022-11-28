@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapMainSoundSettingActivity$c;->a:Lcom/skt/tmap/activity/TmapMainSoundSettingActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSoundSettingActivity;->y5(Lcom/skt/tmap/activity/TmapMainSoundSettingActivity;)V
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapMainSoundSettingActivity;->G5(Lcom/skt/tmap/activity/TmapMainSoundSettingActivity;)V
 
     return-void
 .end method

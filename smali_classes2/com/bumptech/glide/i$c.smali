@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public final a:Lcom/bumptech/glide/manager/q;
+.field public final a:Lcom/bumptech/glide/manager/r;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "RequestManager.this"
     .end annotation
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/bumptech/glide/i;Lcom/bumptech/glide/manager/q;)V
+.method public constructor <init>(Lcom/bumptech/glide/i;Lcom/bumptech/glide/manager/r;)V
     .locals 0
     .param p1    # Lcom/bumptech/glide/i;
         .annotation build Landroidx/annotation/NonNull;
@@ -41,7 +41,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p2, p0, Lcom/bumptech/glide/i$c;->a:Lcom/bumptech/glide/manager/q;
+    iput-object p2, p0, Lcom/bumptech/glide/i$c;->a:Lcom/bumptech/glide/manager/r;
 
     return-void
 .end method
@@ -60,9 +60,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lcom/bumptech/glide/i$c;->a:Lcom/bumptech/glide/manager/q;
+    iget-object v0, p0, Lcom/bumptech/glide/i$c;->a:Lcom/bumptech/glide/manager/r;
 
-    invoke-virtual {v0}, Lcom/bumptech/glide/manager/q;->g()V
+    invoke-virtual {v0}, Lcom/bumptech/glide/manager/r;->g()V
 
     .line 3
     monitor-exit p1

@@ -156,13 +156,13 @@
     return-object p0
 .end method
 
-.method public static h(Landroid/content/ClipData;Lr1/p;)Landroid/util/Pair;
+.method public static h(Landroid/content/ClipData;Landroidx/core/util/v;)Landroid/util/Pair;
     .locals 6
     .param p0    # Landroid/content/ClipData;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Lr1/p;
+    .param p1    # Landroidx/core/util/v;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -173,7 +173,7 @@
         value = {
             "(",
             "Landroid/content/ClipData;",
-            "Lr1/p<",
+            "Landroidx/core/util/v<",
             "Landroid/content/ClipData$Item;",
             ">;)",
             "Landroid/util/Pair<",
@@ -205,7 +205,7 @@
     move-result-object v4
 
     .line 3
-    invoke-interface {p1, v4}, Lr1/p;->test(Ljava/lang/Object;)Z
+    invoke-interface {p1, v4}, Landroidx/core/util/v;->test(Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -496,9 +496,9 @@
     return v0
 .end method
 
-.method public j(Lr1/p;)Landroid/util/Pair;
+.method public j(Landroidx/core/util/v;)Landroid/util/Pair;
     .locals 4
-    .param p1    # Lr1/p;
+    .param p1    # Landroidx/core/util/v;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -508,7 +508,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lr1/p<",
+            "Landroidx/core/util/v<",
             "Landroid/content/ClipData$Item;",
             ">;)",
             "Landroid/util/Pair<",
@@ -543,7 +543,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lr1/p;->test(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Landroidx/core/util/v;->test(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -574,7 +574,7 @@
 
     .line 5
     :cond_2
-    invoke-static {v0, p1}, Landroidx/core/view/ContentInfoCompat;->h(Landroid/content/ClipData;Lr1/p;)Landroid/util/Pair;
+    invoke-static {v0, p1}, Landroidx/core/view/ContentInfoCompat;->h(Landroid/content/ClipData;Landroidx/core/util/v;)Landroid/util/Pair;
 
     move-result-object p1
 
@@ -648,7 +648,7 @@
 .end method
 
 .method public l()Landroid/view/ContentInfo;
-    .locals 1
+    .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -662,6 +662,12 @@
     invoke-interface {v0}, Landroidx/core/view/ContentInfoCompat$g;->b()Landroid/view/ContentInfo;
 
     move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object v1, v0
+
+    check-cast v1, Landroid/view/ContentInfo;
 
     return-object v0
 .end method

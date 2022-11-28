@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/internal/GmsLogger;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -140,6 +140,8 @@
 
 .method private final varargs zzb(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
+    .annotation build Lcom/google/errorprone/annotations/FormatMethod;
+    .end annotation
 
     .line 1
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -337,12 +339,18 @@
     .param p2    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
+
+        .annotation build Lcom/google/errorprone/annotations/FormatString;
+        .end annotation
     .end param
     .param p3    # [Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/FormatMethod;
     .end annotation
 
     const/4 v0, 0x6
@@ -620,12 +628,18 @@
     .param p2    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
+
+        .annotation build Lcom/google/errorprone/annotations/FormatString;
+        .end annotation
     .end param
     .param p3    # [Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/FormatMethod;
     .end annotation
 
     const/4 p1, 0x5

@@ -18,18 +18,18 @@
 
 
 # instance fields
-.field private final mOnClickListener:Landroidx/car/app/model/k;
+.field private final mOnClickListener:Landroidx/car/app/model/n;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/car/app/model/k;)V
+.method public constructor <init>(Landroidx/car/app/model/n;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Landroidx/car/app/model/IOnClickListener$Stub;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;->mOnClickListener:Landroidx/car/app/model/k;
+    iput-object p1, p0, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;->mOnClickListener:Landroidx/car/app/model/n;
 
     return-void
 .end method
@@ -53,9 +53,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;->mOnClickListener:Landroidx/car/app/model/k;
+    iget-object v0, p0, Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;->mOnClickListener:Landroidx/car/app/model/n;
 
-    invoke-interface {v0}, Landroidx/car/app/model/k;->onClick()V
+    invoke-interface {v0}, Landroidx/car/app/model/n;->a()V
 
     const/4 v0, 0x0
 
@@ -68,9 +68,9 @@
     .locals 2
 
     .line 1
-    new-instance v0, Landroidx/car/app/model/j;
+    new-instance v0, Landroidx/car/app/model/m;
 
-    invoke-direct {v0, p0}, Landroidx/car/app/model/j;-><init>(Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;)V
+    invoke-direct {v0, p0}, Landroidx/car/app/model/m;-><init>(Landroidx/car/app/model/OnClickDelegateImpl$OnClickListenerStub;)V
 
     const-string v1, "onClick"
 

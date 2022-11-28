@@ -29,7 +29,7 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {v0}, Lja/f;->b(Z)Ljava/lang/String;
+    invoke-static {v0}, Lgc/f;->b(Z)Ljava/lang/String;
 
     move-result-object v0
 
@@ -70,11 +70,11 @@
     return-void
 .end method
 
-.method public static synthetic c(Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;Ljava/lang/String;)Lka/a;
+.method public static synthetic c(Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;Ljava/lang/String;)Lhc/a;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;->o(Ljava/lang/String;)Lka/a;
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;->o(Ljava/lang/String;)Lhc/a;
 
     move-result-object p0
 
@@ -193,7 +193,7 @@
     .line 2
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/net/http/api/nugu/a;->d:Landroid/content/Context;
 
-    invoke-static {v1}, Lua/d;->E(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lrc/d;->E(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -202,7 +202,7 @@
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -335,11 +335,11 @@
     return-void
 .end method
 
-.method public final o(Ljava/lang/String;)Lka/a;
+.method public final o(Ljava/lang/String;)Lhc/a;
     .locals 3
 
     .line 1
-    const-class v0, Lka/a;
+    const-class v0, Lhc/a;
 
     :try_start_0
     new-instance v1, Lcom/google/gson/GsonBuilder;
@@ -370,7 +370,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lka/a;
+    check-cast p1, Lhc/a;
 
     const-string v0, "AbsQueryBase"
 

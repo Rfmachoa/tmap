@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
@@ -23,12 +23,14 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onChanged(Ljava/lang/Object;)V
     .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/activity/o3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->m7(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+    check-cast p1, Lcom/skt/tmap/network/ndds/dto/poi/detailinfo/FindPoiDetailInfoForAutoResponseDto;
+
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->H7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/network/ndds/dto/poi/detailinfo/FindPoiDetailInfoForAutoResponseDto;)V
 
     return-void
 .end method

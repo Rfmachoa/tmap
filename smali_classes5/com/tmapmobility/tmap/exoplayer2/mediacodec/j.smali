@@ -17,15 +17,18 @@
 .method public abstract a()Landroid/media/MediaFormat;
 .end method
 
-.method public abstract b(IILvd/d;JI)V
-.end method
-
-.method public abstract c(I)Ljava/nio/ByteBuffer;
+.method public abstract b(I)Ljava/nio/ByteBuffer;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end method
 
-.method public abstract d(Landroid/view/Surface;)V
+.method public abstract c(Landroid/view/Surface;)V
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x17
+    .end annotation
+.end method
+
+.method public abstract d(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$c;Landroid/os/Handler;)V
     .annotation build Landroidx/annotation/RequiresApi;
         value = 0x17
     .end annotation
@@ -34,16 +37,13 @@
 .method public abstract e(I)V
 .end method
 
-.method public abstract f(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/j$c;Landroid/os/Handler;)V
-    .annotation build Landroidx/annotation/RequiresApi;
-        value = 0x17
-    .end annotation
+.method public abstract f(IIIJI)V
 .end method
 
 .method public abstract flush()V
 .end method
 
-.method public abstract g(IIIJI)V
+.method public abstract g(IILyf/d;JI)V
 .end method
 
 .method public abstract getMetrics()Landroid/os/PersistableBundle;

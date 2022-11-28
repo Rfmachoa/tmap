@@ -1,33 +1,25 @@
 .class public interface abstract Lti/e;
 .super Ljava/lang/Object;
-.source "Effect.kt"
+.source "ExecutionContext.java"
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\u0008g\u0018\u00002\u00020\u0001\u00a8\u0006\u0002"
-    }
-    d2 = {
-        "Lti/e;",
-        "",
-        "kotlin-stdlib"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
-.annotation build Lkotlin/SinceKotlin;
-    version = "1.3"
-.end annotation
 
-.annotation build Lkotlin/contracts/ExperimentalContracts;
-.end annotation
+# static fields
+.field public static final a:Ljava/lang/String; = "http.connection"
 
-.annotation build Lkotlin/internal/ContractsDsl;
-.end annotation
+.field public static final b:Ljava/lang/String; = "http.request"
+
+.field public static final c:Ljava/lang/String; = "http.response"
+
+.field public static final d:Ljava/lang/String; = "http.target_host"
+
+.field public static final e:Ljava/lang/String; = "http.proxy_host"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final f:Ljava/lang/String; = "http.request_sent"

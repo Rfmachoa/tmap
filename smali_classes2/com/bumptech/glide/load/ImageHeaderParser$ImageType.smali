@@ -25,6 +25,10 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+.field public static final enum ANIMATED_WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+.field public static final enum AVIF:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
 .field public static final enum GIF:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
 .field public static final enum JPEG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
@@ -130,38 +134,72 @@
     .line 8
     new-instance v13, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    const-string v15, "UNKNOWN"
+    const-string v15, "ANIMATED_WEBP"
 
     const/4 v14, 0x7
 
-    invoke-direct {v13, v15, v14, v2}, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;-><init>(Ljava/lang/String;IZ)V
+    invoke-direct {v13, v15, v14, v3}, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;-><init>(Ljava/lang/String;IZ)V
 
-    sput-object v13, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    sput-object v13, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->ANIMATED_WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    const/16 v15, 0x8
+    .line 9
+    new-instance v15, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    new-array v15, v15, [Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    const-string v14, "AVIF"
 
-    aput-object v0, v15, v2
+    const/16 v12, 0x8
 
-    aput-object v1, v15, v3
+    invoke-direct {v15, v14, v12, v3}, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;-><init>(Ljava/lang/String;IZ)V
 
-    aput-object v4, v15, v6
+    sput-object v15, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->AVIF:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    aput-object v5, v15, v8
+    .line 10
+    new-instance v14, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
-    aput-object v7, v15, v10
+    const-string v12, "UNKNOWN"
 
-    aput-object v9, v15, v12
+    const/16 v10, 0x9
+
+    invoke-direct {v14, v12, v10, v2}, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v14, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+    const/16 v12, 0xa
+
+    new-array v12, v12, [Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+
+    aput-object v0, v12, v2
+
+    aput-object v1, v12, v3
+
+    aput-object v4, v12, v6
+
+    aput-object v5, v12, v8
+
+    const/4 v0, 0x4
+
+    aput-object v7, v12, v0
+
+    const/4 v0, 0x5
+
+    aput-object v9, v12, v0
 
     const/4 v0, 0x6
 
-    aput-object v11, v15, v0
+    aput-object v11, v12, v0
 
-    aput-object v13, v15, v14
+    const/4 v0, 0x7
 
-    .line 9
-    sput-object v15, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->$VALUES:[Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    aput-object v13, v12, v0
+
+    const/16 v0, 0x8
+
+    aput-object v15, v12, v0
+
+    aput-object v14, v12, v10
+
+    .line 11
+    sput-object v12, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->$VALUES:[Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-void
 .end method
@@ -222,4 +260,36 @@
     iget-boolean v0, p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->hasAlpha:Z
 
     return v0
+.end method
+
+.method public isWebp()Z
+    .locals 3
+
+    .line 1
+    sget-object v0, Lcom/bumptech/glide/load/ImageHeaderParser$a;->a:[I
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    return v1
 .end method

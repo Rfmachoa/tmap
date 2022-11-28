@@ -194,7 +194,7 @@
     return-void
 .end method
 
-.method public static getMediaPlayer(Lcom/skt/aicloud/speaker/lib/state/AppState;)Lla/b;
+.method public static getMediaPlayer(Lcom/skt/aicloud/speaker/lib/state/AppState;)Lic/b;
     .locals 0
 
     if-nez p0, :cond_0
@@ -210,14 +210,14 @@
     move-result-object p0
 
     .line 2
-    invoke-static {p0}, Lcom/skt/aicloud/speaker/service/player/MediaState;->getMediaPlayer(Lcom/skt/aicloud/speaker/service/player/MediaState;)Lla/b;
+    invoke-static {p0}, Lcom/skt/aicloud/speaker/service/player/MediaState;->getMediaPlayer(Lcom/skt/aicloud/speaker/service/player/MediaState;)Lic/b;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static getMediaPlayer(Lcom/skt/aicloud/speaker/service/player/MediaState;)Lla/b;
+.method public static getMediaPlayer(Lcom/skt/aicloud/speaker/service/player/MediaState;)Lic/b;
     .locals 3
 
     const/4 v0, 0x0
@@ -263,7 +263,7 @@
 
     .line 5
     :pswitch_0
-    invoke-static {}, Lx9/a;->x0()Lx9/a;
+    invoke-static {}, Lub/a;->x0()Lub/a;
 
     move-result-object p0
 
@@ -279,7 +279,7 @@
 
     .line 7
     :pswitch_2
-    invoke-static {}, Lla/e;->u0()Lla/e;
+    invoke-static {}, Lic/e;->u0()Lic/e;
 
     move-result-object p0
 
@@ -287,7 +287,7 @@
 
     .line 8
     :pswitch_3
-    invoke-static {}, Lla/d;->h0()Lla/d;
+    invoke-static {}, Lic/d;->h0()Lic/d;
 
     move-result-object p0
 
@@ -295,7 +295,7 @@
 
     .line 9
     :pswitch_4
-    invoke-static {}, Lla/f;->p0()Lla/f;
+    invoke-static {}, Lic/f;->p0()Lic/f;
 
     move-result-object p0
 
@@ -303,7 +303,7 @@
 
     .line 10
     :pswitch_5
-    invoke-static {}, Lla/c;->C0()Lla/c;
+    invoke-static {}, Lic/c;->C0()Lic/c;
 
     move-result-object p0
 

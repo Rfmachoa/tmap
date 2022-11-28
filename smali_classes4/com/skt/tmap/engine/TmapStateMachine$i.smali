@@ -3,7 +3,7 @@
 .source "TmapStateMachine.java"
 
 # interfaces
-.implements Lsk/o;
+.implements Lzm/o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lsk/o<",
+        "Lzm/o<",
         "Lcom/skt/tmap/engine/TmapStateMachine$TmapState;",
         ">;"
     }

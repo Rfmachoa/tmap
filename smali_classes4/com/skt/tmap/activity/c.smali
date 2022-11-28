@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/c;->a:Lcom/skt/tmap/activity/BaseActivity;
 
-    check-cast p1, Lxb/c;
+    check-cast p1, Lcom/skt/tmap/car/data/c;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseActivity;->s5(Lcom/skt/tmap/activity/BaseActivity;Lxb/c;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseActivity;->A5(Lcom/skt/tmap/activity/BaseActivity;Lcom/skt/tmap/car/data/c;)V
 
     return-void
 .end method

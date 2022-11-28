@@ -308,7 +308,7 @@
 
     iget-object p1, p1, Landroidx/viewpager2/adapter/FragmentStateAdapter;->b:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->r()Landroidx/fragment/app/a0;
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->u()Landroidx/fragment/app/j0;
 
     move-result-object p1
 
@@ -370,7 +370,7 @@
     .line 17
     sget-object v6, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1, v5, v6}, Landroidx/fragment/app/a0;->O(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/a0;
+    invoke-virtual {p1, v5, v6}, Landroidx/fragment/app/j0;->O(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/j0;
 
     goto :goto_1
 
@@ -406,18 +406,18 @@
     .line 19
     sget-object v1, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/a0;->O(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/a0;
+    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/j0;->O(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/j0;
 
     .line 20
     :cond_a
-    invoke-virtual {p1}, Landroidx/fragment/app/a0;->A()Z
+    invoke-virtual {p1}, Landroidx/fragment/app/j0;->A()Z
 
     move-result v0
 
     if-nez v0, :cond_b
 
     .line 21
-    invoke-virtual {p1}, Landroidx/fragment/app/a0;->s()V
+    invoke-virtual {p1}, Landroidx/fragment/app/j0;->s()V
 
     :cond_b
     :goto_4

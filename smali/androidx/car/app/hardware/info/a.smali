@@ -3,7 +3,7 @@
 .source "ProjectedCarInfo.java"
 
 # interfaces
-.implements Lk0/a;
+.implements Ly0/a;
 
 
 # annotations
@@ -75,14 +75,29 @@
     .end annotation
 .end field
 
+.field public final g:Landroidx/car/app/hardware/common/CarResultStub;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/car/app/hardware/common/CarResultStub<",
+            "Landroidx/car/app/hardware/info/EvStatus;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
-.method public constructor <init>(Lj0/e;)V
+.method public constructor <init>(Lx0/e;)V
     .locals 13
-    .param p1    # Lj0/e;
+    .param p1    # Lx0/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/OptIn;
+        markerClass = {
+            Landroidx/car/app/annotations/ExperimentalCarApi;
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -109,7 +124,7 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v5}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lj0/e;)V
+    invoke-direct/range {v0 .. v5}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
 
     iput-object v6, p0, Landroidx/car/app/hardware/info/a;->a:Landroidx/car/app/hardware/common/CarResultStub;
 
@@ -135,7 +150,7 @@
 
     move-object v12, p1
 
-    invoke-direct/range {v7 .. v12}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lj0/e;)V
+    invoke-direct/range {v7 .. v12}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/a;->b:Landroidx/car/app/hardware/common/CarResultStub;
 
@@ -161,7 +176,7 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v1 .. v6}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lj0/e;)V
+    invoke-direct/range {v1 .. v6}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/a;->c:Landroidx/car/app/hardware/common/CarResultStub;
 
@@ -187,7 +202,7 @@
 
     move-object v11, p1
 
-    invoke-direct/range {v6 .. v11}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lj0/e;)V
+    invoke-direct/range {v6 .. v11}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/a;->d:Landroidx/car/app/hardware/common/CarResultStub;
 
@@ -209,7 +224,7 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v1 .. v6}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lj0/e;)V
+    invoke-direct/range {v1 .. v6}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/a;->e:Landroidx/car/app/hardware/common/CarResultStub;
 
@@ -229,45 +244,67 @@
 
     move-object v6, v0
 
-    invoke-direct/range {v6 .. v11}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lj0/e;)V
+    invoke-direct/range {v6 .. v11}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
 
     iput-object v0, p0, Landroidx/car/app/hardware/info/a;->f:Landroidx/car/app/hardware/common/CarResultStub;
+
+    .line 14
+    new-instance v0, Landroidx/car/app/hardware/common/CarResultStub;
+
+    new-instance v1, Landroidx/car/app/hardware/info/EvStatus$a;
+
+    invoke-direct {v1}, Landroidx/car/app/hardware/info/EvStatus$a;-><init>()V
+
+    .line 15
+    invoke-virtual {v1}, Landroidx/car/app/hardware/info/EvStatus$a;->a()Landroidx/car/app/hardware/info/EvStatus;
+
+    move-result-object v5
+
+    const/4 v2, 0x7
+
+    move-object v1, v0
+
+    move-object v6, p1
+
+    invoke-direct/range {v1 .. v6}, Landroidx/car/app/hardware/common/CarResultStub;-><init>(ILandroidx/car/app/serialization/Bundleable;ZLjava/lang/Object;Lx0/e;)V
+
+    iput-object v0, p0, Landroidx/car/app/hardware/info/a;->g:Landroidx/car/app/hardware/common/CarResultStub;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lj0/i;)V
+.method public a(Lx0/i;)V
     .locals 1
-    .param p1    # Lj0/i;
+    .param p1    # Lx0/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/EnergyLevel;",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/Speed;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->d:Landroidx/car/app/hardware/common/CarResultStub;
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->e:Landroidx/car/app/hardware/common/CarResultStub;
 
-    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lj0/i;)Z
+    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lx0/i;)Z
 
     return-void
 .end method
 
-.method public b(Ljava/util/concurrent/Executor;Lj0/i;)V
+.method public b(Ljava/util/concurrent/Executor;Lx0/i;)V
     .locals 1
     .param p1    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lj0/i;
+    .param p2    # Lx0/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -275,7 +312,7 @@
         value = {
             "(",
             "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
+            "Lx0/i<",
             "Landroidx/car/app/hardware/info/Model;",
             ">;)V"
         }
@@ -284,18 +321,18 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/hardware/info/a;->a:Landroidx/car/app/hardware/common/CarResultStub;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lj0/i;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
 
     return-void
 .end method
 
-.method public c(Ljava/util/concurrent/Executor;Lj0/i;)V
+.method public c(Ljava/util/concurrent/Executor;Lx0/i;)V
     .locals 1
     .param p1    # Ljava/util/concurrent/Executor;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lj0/i;
+    .param p2    # Lx0/i;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -303,188 +340,7 @@
         value = {
             "(",
             "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Speed;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->e:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lj0/i;)V
-
-    return-void
-.end method
-
-.method public d(Lj0/i;)V
-    .locals 1
-    .param p1    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Speed;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->e:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lj0/i;)Z
-
-    return-void
-.end method
-
-.method public e(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .locals 1
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/TollCard;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->c:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lj0/i;)V
-
-    return-void
-.end method
-
-.method public f(Lj0/i;)V
-    .locals 1
-    .param p1    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Mileage;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->f:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lj0/i;)Z
-
-    return-void
-.end method
-
-.method public g(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .locals 1
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/EnergyLevel;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->d:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lj0/i;)V
-
-    return-void
-.end method
-
-.method public h(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .locals 1
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Mileage;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->f:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lj0/i;)V
-
-    return-void
-.end method
-
-.method public i(Lj0/i;)V
-    .locals 1
-    .param p1    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/TollCard;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->c:Landroidx/car/app/hardware/common/CarResultStub;
-
-    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lj0/i;)Z
-
-    return-void
-.end method
-
-.method public j(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .locals 1
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
+            "Lx0/i<",
             "Landroidx/car/app/hardware/info/EnergyProfile;",
             ">;)V"
         }
@@ -493,7 +349,251 @@
     .line 1
     iget-object v0, p0, Landroidx/car/app/hardware/info/a;->b:Landroidx/car/app/hardware/common/CarResultStub;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lj0/i;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
+
+    return-void
+.end method
+
+.method public d(Lx0/i;)V
+    .locals 1
+    .param p1    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/Mileage;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->f:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lx0/i;)Z
+
+    return-void
+.end method
+
+.method public e(Ljava/util/concurrent/Executor;Lx0/i;)V
+    .locals 1
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Executor;",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/Mileage;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->f:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
+
+    return-void
+.end method
+
+.method public f(Lx0/i;)V
+    .locals 1
+    .param p1    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/TollCard;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->c:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lx0/i;)Z
+
+    return-void
+.end method
+
+.method public g(Ljava/util/concurrent/Executor;Lx0/i;)V
+    .locals 1
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Executor;",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/EnergyLevel;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->d:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
+
+    return-void
+.end method
+
+.method public h(Lx0/i;)V
+    .locals 1
+    .param p1    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/EnergyLevel;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->d:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lx0/i;)Z
+
+    return-void
+.end method
+
+.method public i(Ljava/util/concurrent/Executor;Lx0/i;)V
+    .locals 1
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/OptIn;
+        markerClass = {
+            Landroidx/car/app/annotations/ExperimentalCarApi;
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Executor;",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/EvStatus;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->g:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
+
+    return-void
+.end method
+
+.method public j(Ljava/util/concurrent/Executor;Lx0/i;)V
+    .locals 1
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Executor;",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/Speed;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->e:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
+
+    return-void
+.end method
+
+.method public k(Ljava/util/concurrent/Executor;Lx0/i;)V
+    .locals 1
+    .param p1    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Executor;",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/TollCard;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->c:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1, p2}, Landroidx/car/app/hardware/common/CarResultStub;->addListener(Ljava/util/concurrent/Executor;Lx0/i;)V
+
+    return-void
+.end method
+
+.method public l(Lx0/i;)V
+    .locals 1
+    .param p1    # Lx0/i;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/OptIn;
+        markerClass = {
+            Landroidx/car/app/annotations/ExperimentalCarApi;
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lx0/i<",
+            "Landroidx/car/app/hardware/info/EvStatus;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/car/app/hardware/info/a;->g:Landroidx/car/app/hardware/common/CarResultStub;
+
+    invoke-virtual {v0, p1}, Landroidx/car/app/hardware/common/CarResultStub;->removeListener(Lx0/i;)Z
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "DefaultDownloadIndex.java"
 
 # interfaces
-.implements Lle/b;
+.implements Log/b;
 
 
 # annotations
@@ -56,19 +56,6 @@
     return-void
 .end method
 
-.method public f0()Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/a$b;->a:Landroid/database/Cursor;
-
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/a;->i(Landroid/database/Cursor;)Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public getCount()I
     .locals 1
 
@@ -119,4 +106,17 @@
     move-result p1
 
     return p1
+.end method
+
+.method public w0()Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/a$b;->a:Landroid/database/Cursor;
+
+    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/offline/a;->i(Landroid/database/Cursor;)Lcom/tmapmobility/tmap/exoplayer2/offline/Download;
+
+    move-result-object v0
+
+    return-object v0
 .end method

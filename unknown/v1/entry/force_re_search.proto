@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.tmap.rp.protocol.v1.entry";
+option java_multiple_files = true;
+
+message ForceReSearchEntry {
+
+  /** 정보 인덱스 type */
+  // default = 0x01
+  int32 infoIndexType = 1;
+
+  /** 강제재탐색 데이터 Collection */
+  repeated ForceReSearchElement elements = 2;
+}
+
+message ForceReSearchElement {
+
+  /** 해당 보간점 Idx */
+  int32 vertexIndex = 1;
+
+  /** 강제재탐색Type (1:강제재탐색, 4:갈림길 대안경로, 5:정체회피 대안경로, 6:목적지방향성 재탐색지점) */
+  int32 forceReSearchType = 2;
+
+  /** 전방안내 거리(m) */
+  int32 distance = 3;
+
+  /** 정체RID */
+  int32 tcRid = 4;
+}

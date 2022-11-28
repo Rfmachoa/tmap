@@ -20,6 +20,17 @@
 
 .field public tunnelLength:I
 
+.field public tunnelLinkList:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field public tunnelName:Ljava/lang/String;
 
 

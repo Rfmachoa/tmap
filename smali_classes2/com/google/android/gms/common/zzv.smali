@@ -1,32 +1,34 @@
 .class final Lcom/google/android/gms/common/zzv;
-.super Lcom/google/android/gms/common/zzw;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.super Lcom/google/android/gms/common/zzx;
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # instance fields
-.field private final zzd:Ljava/util/concurrent/Callable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/Callable<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final zze:Ljava/util/concurrent/Callable;
 
 
 # direct methods
 .method public synthetic constructor <init>(Ljava/util/concurrent/Callable;Lcom/google/android/gms/common/zzu;)V
-    .locals 1
+    .locals 7
 
-    const/4 p2, 0x0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    const/4 v2, 0x1
+
+    const/4 v3, 0x5
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
 
     .line 1
-    invoke-direct {p0, p2, v0, v0}, Lcom/google/android/gms/common/zzw;-><init>(ZLjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/common/zzx;-><init>(ZIILjava/lang/String;Ljava/lang/Throwable;Lcom/google/android/gms/common/zzw;)V
 
-    iput-object p1, p0, Lcom/google/android/gms/common/zzv;->zzd:Ljava/util/concurrent/Callable;
+    iput-object p1, p0, Lcom/google/android/gms/common/zzv;->zze:Ljava/util/concurrent/Callable;
 
     return-void
 .end method
@@ -38,7 +40,7 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/common/zzv;->zzd:Ljava/util/concurrent/Callable;
+    iget-object v0, p0, Lcom/google/android/gms/common/zzv;->zze:Ljava/util/concurrent/Callable;
 
     invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 

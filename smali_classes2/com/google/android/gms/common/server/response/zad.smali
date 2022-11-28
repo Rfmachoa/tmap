@@ -1,20 +1,9 @@
 .class final Lcom/google/android/gms/common/server/response/zad;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/server/response/zai;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/common/server/response/zai<",
-        "Ljava/lang/Double;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods

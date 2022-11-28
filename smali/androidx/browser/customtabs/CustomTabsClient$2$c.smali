@@ -45,11 +45,11 @@
     .line 1
     iget-object v0, p0, Landroidx/browser/customtabs/CustomTabsClient$2$c;->b:Landroidx/browser/customtabs/CustomTabsClient$2;
 
-    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/a;
+    iget-object v0, v0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/b;
 
     iget-object v1, p0, Landroidx/browser/customtabs/CustomTabsClient$2$c;->a:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Landroidx/browser/customtabs/a;->onMessageChannelReady(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Landroidx/browser/customtabs/b;->onMessageChannelReady(Landroid/os/Bundle;)V
 
     return-void
 .end method

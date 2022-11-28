@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lej/l;
+.implements Lgl/l;
 
 
 # instance fields
@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/engine/d;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    check-cast p1, Lcom/skt/tmap/data/TmapRerouteResponseData;
+    check-cast p1, Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->m(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/data/TmapRerouteResponseData;)Lkotlin/d1;
+    invoke-static {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->w(Lcom/skt/tmap/engine/TmapAiManager;Ljava/lang/String;)Lkotlin/d1;
 
     move-result-object p1
 

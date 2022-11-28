@@ -3,34 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/lifecycle/Observer;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
+.field public final synthetic a:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public synthetic constructor <init>(Landroid/view/View;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/x2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iput-object p1, p0, Lcom/skt/tmap/activity/x2;->a:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(Ljava/lang/Object;)V
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/x2;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/x2;->a:Landroid/view/View;
 
-    check-cast p1, Lcom/skt/tmap/data/TmapDrivingData;
-
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->B7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/data/TmapDrivingData;)V
+    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/TmapMainSettingRemoveUser;->C5(Landroid/view/View;Landroid/widget/CompoundButton;Z)V
 
     return-void
 .end method

@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapMainActivity;
+.field public final synthetic a:Lcom/skt/tmap/activity/TmapEVSearchActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapMainActivity;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapEVSearchActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/f0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iput-object p1, p0, Lcom/skt/tmap/activity/f0;->a:Lcom/skt/tmap/activity/TmapEVSearchActivity;
 
     return-void
 .end method
@@ -26,11 +26,11 @@
 .method public final onChanged(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/f0;->a:Lcom/skt/tmap/activity/TmapMainActivity;
+    iget-object v0, p0, Lcom/skt/tmap/activity/f0;->a:Lcom/skt/tmap/activity/TmapEVSearchActivity;
 
-    check-cast p1, Lbc/d;
+    check-cast p1, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapMainActivity;->V6(Lcom/skt/tmap/activity/TmapMainActivity;Lbc/d;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapEVSearchActivity;->E5(Lcom/skt/tmap/activity/TmapEVSearchActivity;Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;)V
 
     return-void
 .end method

@@ -411,6 +411,26 @@
     return p0
 .end method
 
+.method public static isMaterial3Theme(Landroid/content/Context;)Z
+    .locals 2
+    .param p0    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    sget v0, Lcom/google/android/material/R$attr;->isMaterial3Theme:I
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-static {p0, v0, v1}, Lcom/google/android/material/resources/MaterialAttributes;->resolveBoolean(Landroid/content/Context;IZ)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static isMaterialTheme(Landroid/content/Context;)Z
     .locals 1
     .param p0    # Landroid/content/Context;
@@ -522,7 +542,7 @@
     return-object p0
 .end method
 
-.method public static varargs obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/j0;
+.method public static varargs obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/o0;
     .locals 0
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -555,7 +575,7 @@
     invoke-static/range {p0 .. p5}, Lcom/google/android/material/internal/ThemeEnforcement;->checkTextAppearance(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
     .line 3
-    invoke-static {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/j0;->G(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/j0;
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/o0;->G(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/o0;
 
     move-result-object p0
 

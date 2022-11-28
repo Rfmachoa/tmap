@@ -17,10 +17,6 @@
 .end annotation
 
 
-# static fields
-.field public static sDefaultImpl:Landroid/support/v4/os/IResultReceiver;
-
-
 # instance fields
 .field private mRemote:Landroid/os/IBinder;
 
@@ -58,7 +54,7 @@
 .end method
 
 .method public send(ILandroid/os/Bundle;)V
-    .locals 4
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -79,58 +75,23 @@
     .line 3
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz p2, :cond_0
+    const/4 p1, 0x0
 
     .line 4
-    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v0, p2, p1}, Landroid/support/v4/os/IResultReceiver$a;->b(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
 
     .line 5
-    invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    iget-object p1, p0, Landroid/support/v4/os/IResultReceiver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    goto :goto_0
+    const/4 p2, 0x0
 
-    .line 6
-    :cond_0
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v1, 0x1
 
-    .line 7
-    :goto_0
-    iget-object v1, p0, Landroid/support/v4/os/IResultReceiver$Stub$Proxy;->mRemote:Landroid/os/IBinder;
-
-    const/4 v3, 0x0
-
-    invoke-interface {v1, v2, v0, v3, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 8
-    invoke-static {}, Landroid/support/v4/os/IResultReceiver$Stub;->getDefaultImpl()Landroid/support/v4/os/IResultReceiver;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 9
-    invoke-static {}, Landroid/support/v4/os/IResultReceiver$Stub;->getDefaultImpl()Landroid/support/v4/os/IResultReceiver;
-
-    move-result-object v1
-
-    invoke-interface {v1, p1, p2}, Landroid/support/v4/os/IResultReceiver;->send(ILandroid/os/Bundle;)V
+    invoke-interface {p1, v1, v0, p2, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-void
-
-    :cond_1
+    .line 6
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -140,6 +101,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 11
+    .line 7
     throw p1
 .end method

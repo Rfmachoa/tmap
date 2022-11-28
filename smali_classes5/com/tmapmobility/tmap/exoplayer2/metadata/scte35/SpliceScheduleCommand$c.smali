@@ -264,11 +264,11 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
+.method public static synthetic b(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;->e(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;->e(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
 
     move-result-object p0
 
@@ -295,16 +295,16 @@
     return-object v0
 .end method
 
-.method public static e(Lcom/tmapmobility/tmap/exoplayer2/util/a0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
+.method public static e(Lcom/tmapmobility/tmap/exoplayer2/util/b0;)Lcom/tmapmobility/tmap/exoplayer2/metadata/scte35/SpliceScheduleCommand$c;
     .locals 21
 
     .line 1
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v1
 
     .line 2
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
@@ -328,7 +328,7 @@
     if-nez v5, :cond_9
 
     .line 4
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v8
 
@@ -373,7 +373,7 @@
     if-eqz v10, :cond_4
 
     .line 5
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v12
 
@@ -386,7 +386,7 @@
     if-nez v10, :cond_6
 
     .line 6
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v0
 
@@ -401,12 +401,12 @@
     if-ge v15, v0, :cond_5
 
     .line 8
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v3
 
     .line 9
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v6
 
@@ -432,7 +432,7 @@
     if-eqz v8, :cond_8
 
     .line 11
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v3
 
@@ -465,7 +465,7 @@
     shl-long/2addr v3, v6
 
     .line 12
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v6
 
@@ -491,17 +491,17 @@
 
     .line 14
     :goto_7
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->M()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
 
     move-result v3
 
     .line 15
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v8
 
     .line 16
-    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual/range {p0 .. p0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v11
 

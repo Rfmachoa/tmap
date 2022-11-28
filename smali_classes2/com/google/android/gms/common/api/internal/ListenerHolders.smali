@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/common/api/internal/ListenerHolders;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -10,14 +10,6 @@
 
 # instance fields
 .field private final zaa:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder<",
-            "*>;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -228,22 +220,6 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<",
-            "L:Ljava/lang/Object;",
-            ">(T",
-            "L;",
-            "Landroid/os/Looper;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/common/api/internal/ListenerHolder<",
-            "T",
-            "L;",
-            ">;"
-        }
     .end annotation
 
     const-string p3, "NO_TYPE"

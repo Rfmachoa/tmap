@@ -66,3 +66,6 @@
 
 .method public abstract request()Lokhttp3/Request;
 .end method
+
+.method public abstract timeout()Lem/o0;
+.end method

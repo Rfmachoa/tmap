@@ -1,6 +1,6 @@
-.class public interface abstract Lo2/a$a;
-.super Ljava/lang/Object;
-.source "LoaderManager.java"
+.class public Lo2/a$a;
+.super Landroid/database/ContentObserver;
+.source "CursorAdapter.java"
 
 
 # annotations
@@ -9,73 +9,49 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x1
     name = "a"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<D:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+
+# instance fields
+.field public final synthetic a:Lo2/a;
+
+
+# direct methods
+.method public constructor <init>(Lo2/a;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lo2/a$a;->a:Lo2/a;
+
+    .line 2
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract onCreateLoader(ILandroid/os/Bundle;)Lp2/c;
-    .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
+.method public deliverSelfNotifications()Z
+    .locals 1
 
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+    const/4 v0, 0x1
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Landroid/os/Bundle;",
-            ")",
-            "Lp2/c<",
-            "TD;>;"
-        }
-    .end annotation
+    return v0
 .end method
 
-.method public abstract onLoadFinished(Lp2/c;Ljava/lang/Object;)V
-    .param p1    # Lp2/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
+.method public onChange(Z)V
+    .locals 0
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lp2/c<",
-            "TD;>;TD;)V"
-        }
-    .end annotation
-.end method
+    .line 1
+    iget-object p1, p0, Lo2/a$a;->a:Lo2/a;
 
-.method public abstract onLoaderReset(Lp2/c;)V
-    .param p1    # Lp2/c;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
+    invoke-virtual {p1}, Lo2/a;->k()V
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lp2/c<",
-            "TD;>;)V"
-        }
-    .end annotation
+    return-void
 .end method

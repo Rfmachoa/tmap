@@ -3,38 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/Merger;
+.field public final synthetic a:Lcom/amplifyframework/core/Consumer;
 
-.field public final synthetic b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+.field public final synthetic b:Lek/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+.method public synthetic constructor <init>(Lcom/amplifyframework/core/Consumer;Lek/c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/l;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/l;->a:Lcom/amplifyframework/core/Consumer;
 
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/l;->b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/l;->b:Lek/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final accept(Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/l;->a:Lcom/amplifyframework/datastore/syncengine/Merger;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/l;->a:Lcom/amplifyframework/core/Consumer;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/l;->b:Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;
+    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/l;->b:Lek/c;
 
-    invoke-static {v0, v1}, Lcom/amplifyframework/datastore/syncengine/Merger;->a(Lcom/amplifyframework/datastore/syncengine/Merger;Lcom/amplifyframework/datastore/appsync/ModelWithMetadata;)V
+    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
+
+    invoke-static {v0, v1, p1}, Lcom/amplifyframework/datastore/syncengine/Merger;->l(Lcom/amplifyframework/core/Consumer;Lek/c;Lcom/amplifyframework/datastore/storage/StorageItemChange;)V
 
     return-void
 .end method

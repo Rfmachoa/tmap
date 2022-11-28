@@ -1,20 +1,23 @@
-.class public Lhh/k;
+.class public interface abstract Lhh/k;
 .super Ljava/lang/Object;
-.source "dagger_hilt_internal_GeneratedEntryPoint.java"
+.source "HttpConnectionMetrics.java"
 
 
-# annotations
-.annotation build Ldagger/hilt/internal/generatesrootinput/GeneratesRootInputPropagatedData;
-    value = Ldagger/hilt/internal/GeneratedEntryPoint;
-.end annotation
+# virtual methods
+.method public abstract getMetric(Ljava/lang/String;)Ljava/lang/Object;
+.end method
 
+.method public abstract getReceivedBytesCount()J
+.end method
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public abstract getRequestCount()J
+.end method
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract getResponseCount()J
+.end method
 
-    return-void
+.method public abstract getSentBytesCount()J
+.end method
+
+.method public abstract reset()V
 .end method

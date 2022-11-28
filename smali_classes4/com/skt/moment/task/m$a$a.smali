@@ -21,6 +21,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/m$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$1"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/m$a$a;->t:Lcom/skt/moment/task/m$a;
@@ -32,8 +40,20 @@
 
 
 # virtual methods
-.method public D(I[Ldf/d;[B)V
+.method public D(I[Lhh/d;[B)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "responseBody"
+        }
+    .end annotation
 
     .line 1
     iget-object p1, p0, Lcom/skt/moment/task/m$a$a;->t:Lcom/skt/moment/task/m$a;
@@ -88,23 +108,37 @@
 
     .line 5
     :catch_0
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p1
 
     const-string p2, "UnsupportedEncodingException"
 
-    invoke-virtual {p1, p2}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lfd/b;->i(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public y(I[Ldf/d;[BLjava/lang/Throwable;)V
+.method public y(I[Lhh/d;[BLjava/lang/Throwable;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "statusCode",
+            "headers",
+            "responseBody",
+            "error"
+        }
+    .end annotation
 
     .line 1
-    invoke-static {}, Lib/b;->d()Lib/b;
+    invoke-static {}, Lfd/b;->d()Lfd/b;
 
     move-result-object p2
 
@@ -122,7 +156,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lib/b;->i(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lfd/b;->i(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -3,34 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ls1/e0;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/activity/BaseAiActivity;
 
+.field public final synthetic b:I
+
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/BaseAiActivity;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/BaseAiActivity;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/skt/tmap/activity/j;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
+    iput p2, p0, Lcom/skt/tmap/activity/j;->b:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
-    .locals 1
+.method public final run()V
+    .locals 2
 
     iget-object v0, p0, Lcom/skt/tmap/activity/j;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-static {v0, p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->y5(Lcom/skt/tmap/activity/BaseAiActivity;Landroid/view/View;Landroidx/core/view/WindowInsetsCompat;)Landroidx/core/view/WindowInsetsCompat;
+    iget v1, p0, Lcom/skt/tmap/activity/j;->b:I
 
-    move-result-object p1
+    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->H5(Lcom/skt/tmap/activity/BaseAiActivity;I)V
 
-    return-object p1
+    return-void
 .end method

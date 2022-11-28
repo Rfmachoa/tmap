@@ -240,28 +240,56 @@
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->contentType()Lokhttp3/MediaType;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lokhttp3/MediaType;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lokhttp3/MediaType;->type()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lokhttp3/MediaType;->type()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 4
+    invoke-virtual {p1}, Lokhttp3/ResponseBody;->contentType()Lokhttp3/MediaType;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lokhttp3/MediaType;->subtype()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lokhttp3/MediaType;->subtype()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3
+    .line 5
     :try_start_0
     new-instance v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
     invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;-><init>()V
 
-    .line 4
+    .line 6
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->bytes()[B
 
     move-result-object v1
 
-    .line 5
+    .line 7
     invoke-static {v1, v0}, Lcom/skt/tmap/engine/navigation/network/TmapGsonResponseBodyConverter;->readBinaryData([BLcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;)Z
 
     move-result v1
@@ -272,7 +300,7 @@
 
     const/4 v0, 0x0
 
-    .line 6
+    .line 8
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
     return-object v0
@@ -287,10 +315,10 @@
 
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
-    .line 7
+    .line 9
     throw v0
 
-    .line 8
+    .line 10
     :cond_1
     iget-object v0, p0, Lcom/skt/tmap/engine/navigation/network/TmapGsonResponseBodyConverter;->gson:Lcom/google/gson/Gson;
 
@@ -302,7 +330,7 @@
 
     move-result-object v0
 
-    .line 9
+    .line 11
     :try_start_1
     iget-object v1, p0, Lcom/skt/tmap/engine/navigation/network/TmapGsonResponseBodyConverter;->adapter:Lcom/google/gson/TypeAdapter;
 
@@ -312,7 +340,7 @@
 
     check-cast v1, Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
-    .line 10
+    .line 12
     invoke-virtual {v0}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -323,12 +351,12 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 11
+    .line 13
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
     return-object v1
 
-    .line 12
+    .line 14
     :cond_2
     :try_start_2
     new-instance v0, Lcom/google/gson/JsonIOException;
@@ -344,10 +372,10 @@
     :catchall_1
     move-exception v0
 
-    .line 13
+    .line 15
     invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
-    .line 14
+    .line 16
     throw v0
 .end method
 

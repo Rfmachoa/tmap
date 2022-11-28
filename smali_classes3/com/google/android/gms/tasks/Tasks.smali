@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/tasks/Tasks;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # direct methods
@@ -826,9 +826,9 @@
 
     invoke-direct {v2, v3}, Lcom/google/android/gms/internal/tasks/zza;-><init>(Landroid/os/Looper;)V
 
-    new-instance v3, Lcom/google/android/gms/tasks/zzy;
+    new-instance v3, Lcom/google/android/gms/tasks/zzx;
 
-    invoke-direct {v3, v1}, Lcom/google/android/gms/tasks/zzy;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    invoke-direct {v3, v1}, Lcom/google/android/gms/tasks/zzx;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
     .line 7
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
@@ -838,9 +838,9 @@
     .line 8
     invoke-virtual {v2, v3, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    new-instance p1, Lcom/google/android/gms/tasks/zzx;
+    new-instance p1, Lcom/google/android/gms/tasks/zzy;
 
-    invoke-direct {p1, v2, v1, v0}, Lcom/google/android/gms/tasks/zzx;-><init>(Lcom/google/android/gms/internal/tasks/zza;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/tasks/zzb;)V
+    invoke-direct {p1, v2, v1, v0}, Lcom/google/android/gms/tasks/zzy;-><init>(Lcom/google/android/gms/internal/tasks/zza;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/tasks/zzb;)V
 
     .line 9
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
@@ -858,16 +858,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<TResult:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TTResult;>;)TTResult;"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/util/concurrent/ExecutionException;
@@ -920,17 +910,6 @@
 
 .method private static zzb(Lcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/zzae;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/tasks/Task<",
-            "TT;>;",
-            "Lcom/google/android/gms/tasks/zzae<",
-            "-TT;>;)V"
-        }
-    .end annotation
 
     .line 1
     sget-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->zza:Ljava/util/concurrent/Executor;

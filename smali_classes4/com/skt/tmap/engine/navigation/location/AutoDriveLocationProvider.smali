@@ -10,7 +10,7 @@
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0007\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010(\u001a\u00020\'\u0012\u0006\u0010*\u001a\u00020\u0001\u00a2\u0006\u0004\u0008,\u0010-J\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\u0012\u0010\u0006\u001a\u00020\u00022\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016J\u0008\u0010\u0008\u001a\u00020\u0007H\u0016J\u0008\u0010\t\u001a\u00020\u0002H\u0016J\u0008\u0010\n\u001a\u00020\u0002H\u0016J\u0010\u0010\r\u001a\u00020\u00022\u0006\u0010\u000c\u001a\u00020\u000bH\u0016J\u0008\u0010\u000e\u001a\u00020\u0002H\u0016J\u0008\u0010\u000f\u001a\u00020\u0002H\u0016J\u0012\u0010\u0012\u001a\u00020\u00022\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0016J\u0006\u0010\u0013\u001a\u00020\u0002R\u0014\u0010\u0014\u001a\u00020\u00078\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008\u0014\u0010\u0015R\u0018\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010\u0016R\u0018\u0010\u0018\u001a\u0004\u0018\u00010\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\u0019R\u0014\u0010\u001a\u001a\u00020\u000b8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008\u001a\u0010\u001bR\u0016\u0010\u001c\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001c\u0010\u001bR\"\u0010\u001e\u001a\u00020\u001d8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u001e\u0010\u001f\u001a\u0004\u0008 \u0010!\"\u0004\u0008\"\u0010#R\u0018\u0010%\u001a\u0004\u0018\u00010$8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008%\u0010&R\u0014\u0010(\u001a\u00020\'8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008(\u0010)R\u0014\u0010*\u001a\u00020\u00018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008*\u0010+\u00a8\u0006."
+        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0007\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0001\u00a2\u0006\u0004\u0008,\u0010-J\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\u0012\u0010\u0006\u001a\u00020\u00022\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016J\u0008\u0010\u0008\u001a\u00020\u0007H\u0016J\u0008\u0010\t\u001a\u00020\u0002H\u0016J\u0008\u0010\n\u001a\u00020\u0002H\u0016J\u0010\u0010\r\u001a\u00020\u00022\u0006\u0010\u000c\u001a\u00020\u000bH\u0016J\u0008\u0010\u000e\u001a\u00020\u0002H\u0016J\u0008\u0010\u000f\u001a\u00020\u0002H\u0016J\u0012\u0010\u0012\u001a\u00020\u00022\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0016J\u0006\u0010\u0013\u001a\u00020\u0002R\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u0016R\u0014\u0010\u0017\u001a\u00020\u00018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010\u0018R\u0014\u0010\u0019\u001a\u00020\u00078\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008\u0019\u0010\u001aR\u0018\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010\u001bR\u0018\u0010\u001d\u001a\u0004\u0018\u00010\u001c8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u001eR\u0014\u0010\u001f\u001a\u00020\u000b8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 R\u0016\u0010!\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008!\u0010 R\"\u0010#\u001a\u00020\"8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008#\u0010$\u001a\u0004\u0008%\u0010&\"\u0004\u0008\'\u0010(R\u0018\u0010*\u001a\u0004\u0018\u00010)8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008*\u0010+\u00a8\u0006."
     }
     d2 = {
         "Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;",
@@ -33,6 +33,11 @@
         "errorListener",
         "setErrorListener",
         "reset",
+        "Landroid/content/Context;",
+        "context",
+        "Landroid/content/Context;",
+        "realLocationProvider",
+        "Lcom/skt/tmap/engine/navigation/location/LocationProviderInterface;",
         "NAME",
         "Ljava/lang/String;",
         "Lcom/skt/tmap/engine/navigation/location/LocationProviderListener;",
@@ -52,11 +57,6 @@
         "Landroid/location/Location;",
         "realLocation",
         "Landroid/location/Location;",
-        "Landroid/content/Context;",
-        "context",
-        "Landroid/content/Context;",
-        "realLocationProvider",
-        "Lcom/skt/tmap/engine/navigation/location/LocationProviderInterface;",
         "<init>",
         "(Landroid/content/Context;Lcom/skt/tmap/engine/navigation/location/LocationProviderInterface;)V",
         "navigation-sdk_release"
@@ -64,8 +64,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -74,20 +74,38 @@
 .field private final INITIAL_SPEED:I
 
 .field private final NAME:Ljava/lang/String;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private final context:Landroid/content/Context;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private currentSpeed:I
 
 .field private listener:Lcom/skt/tmap/engine/navigation/location/LocationProviderListener;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private realLocation:Landroid/location/Location;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 .field private final realLocationProvider:Lcom/skt/tmap/engine/navigation/location/LocationProviderInterface;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 .field private speedMultiples:F
 
 .field private timer:Ljava/util/Timer;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -138,29 +156,19 @@
     return-void
 .end method
 
+.method public static synthetic a(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;Landroid/location/Location;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;->initializeProvider$lambda$0(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;Landroid/location/Location;)V
+
+    return-void
+.end method
+
 .method public static final synthetic access$getLocation(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;->getLocation()V
-
-    return-void
-.end method
-
-.method public static final synthetic access$getRealLocation$p(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;)Landroid/location/Location;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;->realLocation:Landroid/location/Location;
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$setRealLocation$p(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;Landroid/location/Location;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;->realLocation:Landroid/location/Location;
 
     return-void
 .end method
@@ -172,10 +180,6 @@
     invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
 
     move-result-object v0
-
-    const-string v1, "TmapNavigation.getInstance()"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->isNaviPlaying()Z
 
@@ -251,6 +255,19 @@
     return-void
 .end method
 
+.method private static final initializeProvider$lambda$0(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;Landroid/location/Location;)V
+    .locals 1
+
+    const-string v0, "this$0"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iput-object p1, p0, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;->realLocation:Landroid/location/Location;
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public getName()Ljava/lang/String;
@@ -288,9 +305,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v0, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider$initializeProvider$1;
+    new-instance v0, Lcom/skt/tmap/engine/navigation/location/a;
 
-    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider$initializeProvider$1;-><init>(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;)V
+    invoke-direct {v0, p0}, Lcom/skt/tmap/engine/navigation/location/a;-><init>(Lcom/skt/tmap/engine/navigation/location/AutoDriveLocationProvider;)V
 
     invoke-interface {p1, v0}, Lcom/skt/tmap/engine/navigation/location/LocationProviderInterface;->initializeProvider(Lcom/skt/tmap/engine/navigation/location/LocationProviderListener;)V
 

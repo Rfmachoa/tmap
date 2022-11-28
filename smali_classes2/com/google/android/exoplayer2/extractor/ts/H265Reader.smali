@@ -563,17 +563,13 @@
     move v7, v10
 
     :goto_3
-    add-int/2addr v9, v11
+    invoke-static {v9, v11, v14, v1}, Lcom/google/android/exoplayer2/extractor/ts/a;->a(IIII)I
 
-    mul-int/2addr v9, v14
+    move-result v1
 
-    sub-int/2addr v1, v9
+    invoke-static {v12, v13, v7, v8}, Lcom/google/android/exoplayer2/extractor/ts/a;->a(IIII)I
 
-    add-int/2addr v12, v13
-
-    mul-int/2addr v12, v7
-
-    sub-int/2addr v8, v12
+    move-result v8
 
     :cond_8
     move/from16 v16, v1
@@ -784,7 +780,7 @@
     const-string v3, "H265Reader"
 
     .line 59
-    invoke-static {v0, v2, v3}, Ld1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v0, v2, v3}, Lw1/e;->a(Ljava/lang/String;ILjava/lang/String;)V
 
     :cond_10
     :goto_6

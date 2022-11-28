@@ -3,7 +3,7 @@
 .source "NOPLoggerFactory.java"
 
 # interfaces
-.implements Lpk/a;
+.implements Lvm/a;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Lpk/c;
+.method public a(Ljava/lang/String;)Lvm/c;
     .locals 0
 
     .line 1

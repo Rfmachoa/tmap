@@ -192,7 +192,7 @@
 .end method
 
 .method public forcedNarrowBy(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JavaType;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -218,40 +218,6 @@
 
     move-result-object p1
 
-    .line 3
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_valueHandler:Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getValueHandler()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    .line 4
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_valueHandler:Ljava/lang/Object;
-
-    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/databind/JavaType;->withValueHandler(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JavaType;
-
-    move-result-object p1
-
-    .line 5
-    :cond_1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_typeHandler:Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getTypeHandler()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_2
-
-    .line 6
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_typeHandler:Ljava/lang/Object;
-
-    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/databind/JavaType;->withTypeHandler(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JavaType;
-
-    move-result-object p1
-
-    :cond_2
     return-object p1
 .end method
 
@@ -459,6 +425,14 @@
     return-object v0
 .end method
 
+.method public hasContentType()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method public hasGenericTypes()Z
     .locals 1
 
@@ -477,6 +451,33 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public hasHandlers()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_typeHandler:Ljava/lang/Object;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_valueHandler:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
     return v0
 .end method
 
@@ -599,13 +600,42 @@
 .method public abstract isContainerType()Z
 .end method
 
+.method public final isEnumImplType()Z
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_class:Ljava/lang/Class;
+
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->isEnumType(Ljava/lang/Class;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_class:Ljava/lang/Class;
+
+    const-class v1, Ljava/lang/Enum;
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public final isEnumType()Z
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_class:Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->isEnum()Z
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->isEnumType(Ljava/lang/Class;)Z
 
     move-result v0
 
@@ -684,6 +714,19 @@
     return v0
 .end method
 
+.method public final isRecordType()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_class:Ljava/lang/Class;
+
+    invoke-static {v0}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->isRecordType(Ljava/lang/Class;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public isThrowable()Z
     .locals 2
 
@@ -715,6 +758,42 @@
     if-eq v0, p1, :cond_1
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+.end method
+
+.method public final isTypeOrSuperTypeOf(Ljava/lang/Class;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/JavaType;->_class:Ljava/lang/Class;
+
+    if-eq v0, p1, :cond_1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result p1
 
@@ -770,6 +849,49 @@
 .end method
 
 .method public abstract withContentValueHandler(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JavaType;
+.end method
+
+.method public withHandlersFrom(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JavaType;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getTypeHandler()Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/JavaType;->_typeHandler:Ljava/lang/Object;
+
+    if-eq v0, v1, :cond_0
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/JavaType;->withTypeHandler(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, p0
+
+    .line 4
+    :goto_0
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/JavaType;->getValueHandler()Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 5
+    iget-object v1, p0, Lcom/fasterxml/jackson/databind/JavaType;->_valueHandler:Ljava/lang/Object;
+
+    if-eq p1, v1, :cond_1
+
+    .line 6
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/JavaType;->withValueHandler(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JavaType;
+
+    move-result-object v0
+
+    :cond_1
+    return-object v0
 .end method
 
 .method public abstract withStaticTyping()Lcom/fasterxml/jackson/databind/JavaType;

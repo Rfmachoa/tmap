@@ -18,11 +18,28 @@
 .end annotation
 
 
+# static fields
+.field private static final serialVersionUID:J = 0x1L
+
+
 # instance fields
 .field public final _nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
 
 # direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 3
+    invoke-direct {p0}, Lcom/fasterxml/jackson/databind/node/BaseJsonNode;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
+
+    return-void
+.end method
+
 .method public constructor <init>(Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;)V
     .locals 0
 
@@ -48,6 +65,19 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final arrayNode(I)Lcom/fasterxml/jackson/databind/node/ArrayNode;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->arrayNode(I)Lcom/fasterxml/jackson/databind/node/ArrayNode;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public asText()Ljava/lang/String;
@@ -161,6 +191,19 @@
 .method public abstract get(Ljava/lang/String;)Lcom/fasterxml/jackson/databind/JsonNode;
 .end method
 
+.method public missingNode()Lcom/fasterxml/jackson/databind/JsonNode;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->missingNode()Lcom/fasterxml/jackson/databind/JsonNode;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final nullNode()Lcom/fasterxml/jackson/databind/node/NullNode;
     .locals 1
 
@@ -188,7 +231,7 @@
 .method public final numberNode(B)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 1
 
-    .line 9
+    .line 7
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(B)Lcom/fasterxml/jackson/databind/node/NumericNode;
@@ -201,7 +244,7 @@
 .method public final numberNode(D)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 1
 
-    .line 15
+    .line 12
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(D)Lcom/fasterxml/jackson/databind/node/NumericNode;
@@ -214,7 +257,7 @@
 .method public final numberNode(F)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 1
 
-    .line 14
+    .line 11
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(F)Lcom/fasterxml/jackson/databind/node/NumericNode;
@@ -227,7 +270,7 @@
 .method public final numberNode(I)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 1
 
-    .line 11
+    .line 9
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(I)Lcom/fasterxml/jackson/databind/node/NumericNode;
@@ -240,7 +283,7 @@
 .method public final numberNode(J)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 1
 
-    .line 12
+    .line 10
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(J)Lcom/fasterxml/jackson/databind/node/NumericNode;
@@ -250,36 +293,10 @@
     return-object p1
 .end method
 
-.method public final numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/NumericNode;
-    .locals 1
-
-    .line 16
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
-
-    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/NumericNode;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/NumericNode;
-    .locals 1
-
-    .line 13
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
-
-    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/NumericNode;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public final numberNode(S)Lcom/fasterxml/jackson/databind/node/NumericNode;
     .locals 1
 
-    .line 10
+    .line 8
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(S)Lcom/fasterxml/jackson/databind/node/NumericNode;
@@ -347,7 +364,7 @@
 .method public final numberNode(Ljava/lang/Byte;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 1
 
-    .line 17
+    .line 15
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/lang/Byte;)Lcom/fasterxml/jackson/databind/node/ValueNode;
@@ -360,7 +377,7 @@
 .method public final numberNode(Ljava/lang/Double;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 1
 
-    .line 22
+    .line 20
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/lang/Double;)Lcom/fasterxml/jackson/databind/node/ValueNode;
@@ -373,7 +390,7 @@
 .method public final numberNode(Ljava/lang/Float;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 1
 
-    .line 21
+    .line 19
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/lang/Float;)Lcom/fasterxml/jackson/databind/node/ValueNode;
@@ -386,7 +403,7 @@
 .method public final numberNode(Ljava/lang/Integer;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 1
 
-    .line 19
+    .line 17
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/lang/Integer;)Lcom/fasterxml/jackson/databind/node/ValueNode;
@@ -399,7 +416,7 @@
 .method public final numberNode(Ljava/lang/Long;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 1
 
-    .line 20
+    .line 18
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/lang/Long;)Lcom/fasterxml/jackson/databind/node/ValueNode;
@@ -412,7 +429,7 @@
 .method public final numberNode(Ljava/lang/Short;)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 1
 
-    .line 18
+    .line 16
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
 
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/lang/Short;)Lcom/fasterxml/jackson/databind/node/ValueNode;
@@ -422,22 +439,26 @@
     return-object p1
 .end method
 
-.method public bridge synthetic numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/ValueNode;
-    .locals 0
+.method public final numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/ValueNode;
+    .locals 1
 
-    .line 6
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/node/ContainerNode;->numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/NumericNode;
+    .line 14
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/math/BigDecimal;)Lcom/fasterxml/jackson/databind/node/ValueNode;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/ValueNode;
-    .locals 0
+.method public final numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/ValueNode;
+    .locals 1
 
-    .line 7
-    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/node/ContainerNode;->numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/NumericNode;
+    .line 13
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/node/ContainerNode;->_nodeFactory:Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;
+
+    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;->numberNode(Ljava/math/BigInteger;)Lcom/fasterxml/jackson/databind/node/ValueNode;
 
     move-result-object p1
 
@@ -447,7 +468,7 @@
 .method public bridge synthetic numberNode(S)Lcom/fasterxml/jackson/databind/node/ValueNode;
     .locals 0
 
-    .line 8
+    .line 6
     invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/node/ContainerNode;->numberNode(S)Lcom/fasterxml/jackson/databind/node/NumericNode;
 
     move-result-object p1

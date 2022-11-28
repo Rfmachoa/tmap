@@ -3,34 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/ImageCapture$n$b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/ImageCapture;
+.field public final synthetic a:Landroidx/camera/core/r0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/ImageCapture;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/r0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/t0;->a:Landroidx/camera/core/ImageCapture;
+    iput-object p1, p0, Landroidx/camera/core/t0;->a:Landroidx/camera/core/r0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/camera/core/ImageCapture$m;)Lcom/google/common/util/concurrent/ListenableFuture;
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, Landroidx/camera/core/t0;->a:Landroidx/camera/core/ImageCapture;
+    iget-object v0, p0, Landroidx/camera/core/t0;->a:Landroidx/camera/core/r0;
 
-    invoke-static {v0, p1}, Landroidx/camera/core/ImageCapture;->J(Landroidx/camera/core/ImageCapture;Landroidx/camera/core/ImageCapture$m;)Lcom/google/common/util/concurrent/ListenableFuture;
+    invoke-static {v0}, Landroidx/camera/core/r0$b;->d(Landroidx/camera/core/r0;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

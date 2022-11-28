@@ -54,7 +54,7 @@
     iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/MediaCodecDecoderException;->codecInfo:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/k;
 
     .line 3
-    sget p2, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget p2, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v0, 0x15
 

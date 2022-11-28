@@ -43,11 +43,11 @@
     .line 1
     iget-object p3, p0, Landroidx/preference/SeekBarPreference$a;->a:Landroidx/preference/SeekBarPreference;
 
-    iget-boolean v0, p3, Landroidx/preference/SeekBarPreference;->H1:Z
+    iget-boolean v0, p3, Landroidx/preference/SeekBarPreference;->J1:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p3, Landroidx/preference/SeekBarPreference;->C1:Z
+    iget-boolean v0, p3, Landroidx/preference/SeekBarPreference;->E1:Z
 
     if-nez v0, :cond_1
 
@@ -61,7 +61,7 @@
     :cond_1
     iget-object p1, p0, Landroidx/preference/SeekBarPreference$a;->a:Landroidx/preference/SeekBarPreference;
 
-    iget p3, p1, Landroidx/preference/SeekBarPreference;->z1:I
+    iget p3, p1, Landroidx/preference/SeekBarPreference;->B1:I
 
     add-int/2addr p2, p3
 
@@ -79,7 +79,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p1, Landroidx/preference/SeekBarPreference;->C1:Z
+    iput-boolean v0, p1, Landroidx/preference/SeekBarPreference;->E1:Z
 
     return-void
 .end method
@@ -92,7 +92,7 @@
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Landroidx/preference/SeekBarPreference;->C1:Z
+    iput-boolean v1, v0, Landroidx/preference/SeekBarPreference;->E1:Z
 
     .line 2
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
@@ -101,11 +101,11 @@
 
     iget-object v1, p0, Landroidx/preference/SeekBarPreference$a;->a:Landroidx/preference/SeekBarPreference;
 
-    iget v2, v1, Landroidx/preference/SeekBarPreference;->z1:I
+    iget v2, v1, Landroidx/preference/SeekBarPreference;->B1:I
 
     add-int/2addr v0, v2
 
-    iget v2, v1, Landroidx/preference/SeekBarPreference;->y1:I
+    iget v2, v1, Landroidx/preference/SeekBarPreference;->A1:I
 
     if-eq v0, v2, :cond_0
 

@@ -59,7 +59,7 @@
 
     const-string v2, "Y"
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->G(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$l$a$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$l$a$a;
@@ -70,7 +70,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$l;->b:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->R(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->T(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$l$a$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$l$a$a;
@@ -83,7 +83,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->Z3(Landroid/content/Context;Z)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/TmapSharedPreference;->p4(Landroid/content/Context;Z)V
 
     .line 4
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseAiActivity$l$a$a$a;->a:Lcom/skt/tmap/activity/BaseAiActivity$l$a$a;
@@ -94,21 +94,21 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$l;->b:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->r6(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->A6(Z)V
 
     .line 5
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->Q5(Z)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/TmapAiManager;->S5(Z)V
 
     .line 7
     :cond_0
@@ -122,7 +122,7 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/BaseAiActivity$l;->a:Lcom/skt/voice/tyche/AiConstant$AiViewMode;
 
-    invoke-virtual {v1, v0}, Lcom/skt/tmap/activity/BaseAiActivity;->E6(Lcom/skt/voice/tyche/AiConstant$AiViewMode;)V
+    invoke-virtual {v1, v0}, Lcom/skt/tmap/activity/BaseAiActivity;->N6(Lcom/skt/voice/tyche/AiConstant$AiViewMode;)V
 
     return-void
 .end method

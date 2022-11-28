@@ -3,7 +3,7 @@
 .source "SearchTemplate.java"
 
 # interfaces
-.implements Landroidx/car/app/model/s;
+.implements Landroidx/car/app/model/y;
 
 
 # annotations
@@ -53,7 +53,7 @@
     .end annotation
 .end field
 
-.field private final mSearchCallbackDelegate:Landroidx/car/app/model/p;
+.field private final mSearchCallbackDelegate:Landroidx/car/app/model/v;
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
@@ -105,7 +105,7 @@
     iput-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mActionStrip:Landroidx/car/app/model/ActionStrip;
 
     .line 17
-    iput-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mSearchCallbackDelegate:Landroidx/car/app/model/p;
+    iput-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mSearchCallbackDelegate:Landroidx/car/app/model/v;
 
     const/4 v0, 0x1
 
@@ -142,9 +142,9 @@
     iput-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mItemList:Landroidx/car/app/model/ItemList;
 
     .line 6
-    iget-object v0, p1, Landroidx/car/app/model/SearchTemplate$a;->a:Landroidx/car/app/model/p;
+    iget-object v0, p1, Landroidx/car/app/model/SearchTemplate$a;->a:Landroidx/car/app/model/v;
 
-    iput-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mSearchCallbackDelegate:Landroidx/car/app/model/p;
+    iput-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mSearchCallbackDelegate:Landroidx/car/app/model/v;
 
     .line 7
     iget-boolean v0, p1, Landroidx/car/app/model/SearchTemplate$a;->f:Z
@@ -210,17 +210,17 @@
     return-object v0
 .end method
 
-.method public e()Landroidx/car/app/model/p;
+.method public e()Landroidx/car/app/model/v;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mSearchCallbackDelegate:Landroidx/car/app/model/p;
+    iget-object v0, p0, Landroidx/car/app/model/SearchTemplate;->mSearchCallbackDelegate:Landroidx/car/app/model/v;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Landroidx/car/app/model/p;
+    check-cast v0, Landroidx/car/app/model/v;
 
     return-object v0
 .end method

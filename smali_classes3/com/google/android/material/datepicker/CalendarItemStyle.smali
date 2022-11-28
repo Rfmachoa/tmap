@@ -34,22 +34,22 @@
     .line 2
     iget v0, p6, Landroid/graphics/Rect;->left:I
 
-    invoke-static {v0}, Lr1/o;->h(I)I
+    invoke-static {v0}, Landroidx/core/util/p;->i(I)I
 
     .line 3
     iget v0, p6, Landroid/graphics/Rect;->top:I
 
-    invoke-static {v0}, Lr1/o;->h(I)I
+    invoke-static {v0}, Landroidx/core/util/p;->i(I)I
 
     .line 4
     iget v0, p6, Landroid/graphics/Rect;->right:I
 
-    invoke-static {v0}, Lr1/o;->h(I)I
+    invoke-static {v0}, Landroidx/core/util/p;->i(I)I
 
     .line 5
     iget v0, p6, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {v0}, Lr1/o;->h(I)I
+    invoke-static {v0}, Landroidx/core/util/p;->i(I)I
 
     .line 6
     iput-object p6, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->insets:Landroid/graphics/Rect;
@@ -100,7 +100,7 @@
     const-string v2, "Cannot create a CalendarItemStyle with a styleResId of 0"
 
     .line 1
-    invoke-static {v1, v2}, Lr1/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v1, v2}, Landroidx/core/util/p;->b(ZLjava/lang/Object;)V
 
     .line 2
     sget-object v1, Lcom/google/android/material/R$styleable;->MaterialCalendarItem:[I
@@ -265,82 +265,108 @@
 .end method
 
 .method public styleItem(Landroid/widget/TextView;)V
-    .locals 9
+    .locals 1
     .param p1    # Landroid/widget/TextView;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
+    const/4 v0, 0x0
+
     .line 1
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/datepicker/CalendarItemStyle;->styleItem(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public styleItem(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
+    .locals 8
+    .param p1    # Landroid/widget/TextView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .line 2
     new-instance v0, Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-direct {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>()V
 
-    .line 2
+    .line 3
     new-instance v1, Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     invoke-direct {v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;-><init>()V
 
-    .line 3
+    .line 4
     iget-object v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->itemShape:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     invoke-virtual {v0, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
-    .line 4
+    .line 5
     iget-object v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->itemShape:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
     invoke-virtual {v1, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
 
-    .line 5
-    iget-object v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->backgroundColor:Landroid/content/res/ColorStateList;
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setFillColor(Landroid/content/res/ColorStateList;)V
+    goto :goto_0
 
     .line 6
-    iget v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->strokeWidth:I
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->strokeColor:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v0, v2, v3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setStroke(FLandroid/content/res/ColorStateList;)V
+    :cond_0
+    iget-object p2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->backgroundColor:Landroid/content/res/ColorStateList;
 
     .line 7
-    iget-object v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->textColor:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {p1, v2}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+    :goto_0
+    invoke-virtual {v0, p2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setFillColor(Landroid/content/res/ColorStateList;)V
 
     .line 8
-    new-instance v4, Landroid/graphics/drawable/RippleDrawable;
+    iget p2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->strokeWidth:I
 
-    iget-object v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->textColor:Landroid/content/res/ColorStateList;
+    int-to-float p2, p2
 
-    const/16 v3, 0x1e
+    iget-object v2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->strokeColor:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v2, v3}, Landroid/content/res/ColorStateList;->withAlpha(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    invoke-direct {v4, v2, v0, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p2, v2}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setStroke(FLandroid/content/res/ColorStateList;)V
 
     .line 9
-    new-instance v0, Landroid/graphics/drawable/InsetDrawable;
+    iget-object p2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->textColor:Landroid/content/res/ColorStateList;
 
-    iget-object v1, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->insets:Landroid/graphics/Rect;
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    iget v5, v1, Landroid/graphics/Rect;->left:I
+    .line 10
+    new-instance v3, Landroid/graphics/drawable/RippleDrawable;
 
-    iget v6, v1, Landroid/graphics/Rect;->top:I
+    iget-object p2, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->textColor:Landroid/content/res/ColorStateList;
 
-    iget v7, v1, Landroid/graphics/Rect;->right:I
+    const/16 v2, 0x1e
 
-    iget v8, v1, Landroid/graphics/Rect;->bottom:I
+    invoke-virtual {p2, v2}, Landroid/content/res/ColorStateList;->withAlpha(I)Landroid/content/res/ColorStateList;
 
-    move-object v3, v0
+    move-result-object p2
 
-    invoke-direct/range {v3 .. v8}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-direct {v3, p2, v0, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {p1, v0}, Landroidx/core/view/ViewCompat;->I1(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    .line 11
+    new-instance p2, Landroid/graphics/drawable/InsetDrawable;
+
+    iget-object v0, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->insets:Landroid/graphics/Rect;
+
+    iget v4, v0, Landroid/graphics/Rect;->left:I
+
+    iget v5, v0, Landroid/graphics/Rect;->top:I
+
+    iget v6, v0, Landroid/graphics/Rect;->right:I
+
+    iget v7, v0, Landroid/graphics/Rect;->bottom:I
+
+    move-object v2, p2
+
+    invoke-direct/range {v2 .. v7}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->I1(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

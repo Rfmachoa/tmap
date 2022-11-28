@@ -23,6 +23,14 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/moment/task/v;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/v$c;->b:Lcom/skt/moment/task/v;

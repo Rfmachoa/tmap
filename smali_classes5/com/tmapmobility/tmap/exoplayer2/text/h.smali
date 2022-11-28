@@ -1,20 +1,30 @@
-.class public Lcom/tmapmobility/tmap/exoplayer2/text/h;
-.super Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;
-.source "SubtitleInputBuffer.java"
+.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/text/h;
+.super Ljava/lang/Object;
+.source "SubtitleDecoderFactory.java"
 
 
-# instance fields
-.field public p:J
+# static fields
+.field public static final a:Lcom/tmapmobility/tmap/exoplayer2/text/h;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
-
     .line 1
-    invoke-direct {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/decoder/DecoderInputBuffer;-><init>(I)V
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/text/h$a;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/text/h$a;-><init>()V
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/h;->a:Lcom/tmapmobility/tmap/exoplayer2/text/h;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/Format;)Lcom/tmapmobility/tmap/exoplayer2/text/g;
+.end method
+
+.method public abstract b(Lcom/tmapmobility/tmap/exoplayer2/Format;)Z
 .end method

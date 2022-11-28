@@ -32,17 +32,17 @@
 
 
 # virtual methods
-.method public a()Lj/g;
+.method public a()Ll/g;
     .locals 1
 
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$b;->a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->e1:Landroidx/appcompat/widget/ActionMenuPresenter$a;
+    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->g1:Landroidx/appcompat/widget/ActionMenuPresenter$a;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/appcompat/view/menu/h;->e()Lj/e;
+    invoke-virtual {v0}, Landroidx/appcompat/view/menu/h;->e()Ll/e;
 
     move-result-object v0
 

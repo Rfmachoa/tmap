@@ -37,6 +37,17 @@
     return-object v0
 .end method
 
+.method public dismissAlert(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
 .method public invalidate()V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -46,6 +57,19 @@
     .end annotation
 
     return-void
+.end method
+
+.method public openMicrophone(Landroidx/car/app/serialization/Bundleable;)Landroidx/car/app/serialization/Bundleable;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
 .method public sendLocation(Landroid/location/Location;)V
@@ -60,6 +84,17 @@
 .end method
 
 .method public setSurfaceCallback(Landroidx/car/app/ISurfaceCallback;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public showAlert(Landroidx/car/app/serialization/Bundleable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

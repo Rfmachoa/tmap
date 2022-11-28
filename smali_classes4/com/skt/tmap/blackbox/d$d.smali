@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/tmap/blackbox/d$d;->a:Lcom/skt/tmap/blackbox/d;
 
-    invoke-static {v0}, Lcom/skt/tmap/blackbox/d;->d(Lcom/skt/tmap/blackbox/d;)Lcom/skt/tmap/blackbox/d$e;
+    invoke-static {v0}, Lcom/skt/tmap/blackbox/d;->g(Lcom/skt/tmap/blackbox/d;)Lcom/skt/tmap/blackbox/d$e;
 
     move-result-object v0
 
@@ -60,10 +60,10 @@
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/skt/tmap/blackbox/d;->k:Z
+    iput-boolean v1, v0, Lcom/skt/tmap/blackbox/d;->j:Z
 
     .line 3
-    invoke-static {v0}, Lcom/skt/tmap/blackbox/d;->d(Lcom/skt/tmap/blackbox/d;)Lcom/skt/tmap/blackbox/d$e;
+    invoke-static {v0}, Lcom/skt/tmap/blackbox/d;->g(Lcom/skt/tmap/blackbox/d;)Lcom/skt/tmap/blackbox/d$e;
 
     move-result-object v0
 

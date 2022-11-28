@@ -1,37 +1,40 @@
-.class public final Landroidx/camera/core/q1;
+.class public final synthetic Landroidx/camera/core/q1;
 .super Ljava/lang/Object;
-.source "ImageReaderFormatRecommender.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/camera/core/q1$a;
-    }
-.end annotation
+# instance fields
+.field public final synthetic a:Landroidx/camera/core/ImageSaver;
+
+.field public final synthetic b:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Landroidx/camera/core/ImageSaver;Landroid/net/Uri;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/core/q1;->a:Landroidx/camera/core/ImageSaver;
+
+    iput-object p2, p0, Landroidx/camera/core/q1;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
-.method public static a()Landroidx/camera/core/q1$a;
+
+# virtual methods
+.method public final run()V
     .locals 2
 
-    const/16 v0, 0x100
+    iget-object v0, p0, Landroidx/camera/core/q1;->a:Landroidx/camera/core/ImageSaver;
 
-    const/16 v1, 0x23
+    iget-object v1, p0, Landroidx/camera/core/q1;->b:Landroid/net/Uri;
 
-    .line 1
-    invoke-static {v0, v1}, Landroidx/camera/core/q1$a;->a(II)Landroidx/camera/core/q1$a;
+    invoke-static {v0, v1}, Landroidx/camera/core/ImageSaver;->a(Landroidx/camera/core/ImageSaver;Landroid/net/Uri;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

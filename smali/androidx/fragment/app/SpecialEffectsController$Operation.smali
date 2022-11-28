@@ -57,7 +57,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet<",
-            "Ll1/b;",
+            "Landroidx/core/os/d;",
             ">;"
         }
     .end annotation
@@ -69,7 +69,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/Fragment;Ll1/b;)V
+.method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation$State;Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;Landroidx/fragment/app/Fragment;Landroidx/core/os/d;)V
     .locals 1
     .param p1    # Landroidx/fragment/app/SpecialEffectsController$Operation$State;
         .annotation build Landroidx/annotation/NonNull;
@@ -83,7 +83,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Ll1/b;
+    .param p4    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -127,7 +127,7 @@
 
     invoke-direct {p1, p0}, Landroidx/fragment/app/SpecialEffectsController$Operation$a;-><init>(Landroidx/fragment/app/SpecialEffectsController$Operation;)V
 
-    invoke-virtual {p4, p1}, Ll1/b;->d(Ll1/b$a;)V
+    invoke-virtual {p4, p1}, Landroidx/core/os/d;->d(Landroidx/core/os/d$b;)V
 
     return-void
 .end method
@@ -205,10 +205,10 @@
 
     move-result-object v1
 
-    check-cast v1, Ll1/b;
+    check-cast v1, Landroidx/core/os/d;
 
     .line 7
-    invoke-virtual {v1}, Ll1/b;->a()V
+    invoke-virtual {v1}, Landroidx/core/os/d;->a()V
 
     goto :goto_0
 
@@ -233,7 +233,7 @@
     const/4 v0, 0x2
 
     .line 2
-    invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->T0(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
 
     move-result v0
 
@@ -297,9 +297,9 @@
     return-void
 .end method
 
-.method public final d(Ll1/b;)V
+.method public final d(Landroidx/core/os/d;)V
     .locals 1
-    .param p1    # Ll1/b;
+    .param p1    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -379,9 +379,9 @@
     return v0
 .end method
 
-.method public final j(Ll1/b;)V
+.method public final j(Landroidx/core/os/d;)V
     .locals 1
-    .param p1    # Ll1/b;
+    .param p1    # Landroidx/core/os/d;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -446,7 +446,7 @@
     if-eq p2, v4, :cond_6
 
     .line 3
-    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->T0(I)Z
+    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
 
     move-result p2
 
@@ -491,7 +491,7 @@
 
     .line 6
     :cond_2
-    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->T0(I)Z
+    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
 
     move-result p1
 
@@ -552,7 +552,7 @@
     if-ne p1, p2, :cond_6
 
     .line 11
-    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->T0(I)Z
+    invoke-static {v3}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
 
     move-result p1
 

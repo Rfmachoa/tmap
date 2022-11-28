@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapNaviActivity$i0;->h(Landroid/view/View;)V
+    value = Lcom/skt/tmap/activity/TmapNaviActivity$i0;->i(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,12 +57,12 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity$i0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$i0$a;->b:Lcom/skt/tmap/activity/TmapNaviActivity$i0;
@@ -71,7 +71,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     :cond_0
     return-void
@@ -85,12 +85,12 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity$i0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iget-object v0, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/skt/tmap/dialog/v;->c()V
+    invoke-virtual {v0}, Lcom/skt/tmap/dialog/a0;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$i0$a;->b:Lcom/skt/tmap/activity/TmapNaviActivity$i0;
@@ -99,7 +99,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/v;
+    iput-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->commonDialog:Lcom/skt/tmap/dialog/a0;
 
     .line 4
     :cond_0
@@ -120,11 +120,11 @@
 
     iget-object v1, v0, Lcom/skt/tmap/activity/BaseActivity;->mapView:Lcom/skt/tmap/mapview/streaming/MapViewStreaming;
 
-    invoke-static {v0}, Lcom/skt/tmap/util/r;->f(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/skt/tmap/util/s;->f(Landroid/content/Context;)Z
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->o1(Landroid/content/Context;Z)V
+    invoke-virtual {v1, v0, v2}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->p1(Landroid/content/Context;Z)V
 
     .line 6
     iget-object v0, p0, Lcom/skt/tmap/activity/TmapNaviActivity$i0$a;->b:Lcom/skt/tmap/activity/TmapNaviActivity$i0;
@@ -140,13 +140,13 @@
 
     iget-object v0, v0, Lcom/skt/tmap/activity/TmapNaviActivity$i0;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->c8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
+    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->p8(Lcom/skt/tmap/activity/TmapNaviActivity;)Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$i0$a;->a:Lcom/skt/tmap/data/TmapLayerData;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->D0(Lcom/skt/tmap/data/TmapLayerData;)V
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/viewmodel/TmapNaviViewModel;->O0(Lcom/skt/tmap/data/TmapLayerData;)V
 
     return-void
 .end method

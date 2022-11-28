@@ -56,7 +56,7 @@
 
 
 # instance fields
-.field public a:Landroidx/core/app/FrameMetricsAggregator$b;
+.field public final a:Landroidx/core/app/FrameMetricsAggregator$b;
 
 
 # direct methods

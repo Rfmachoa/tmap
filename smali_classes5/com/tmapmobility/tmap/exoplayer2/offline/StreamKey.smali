@@ -125,7 +125,7 @@
 
 
 # virtual methods
-.method public b(Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;)I
+.method public a(Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;)I
     .locals 2
 
     .line 1
@@ -163,7 +163,7 @@
     .line 1
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;->b(Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;)I
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;->a(Lcom/tmapmobility/tmap/exoplayer2/offline/StreamKey;)I
 
     move-result p1
 

@@ -3,42 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/camera/core/impl/utils/futures/a;
+.implements Lb0/w0$a;
 
 
-# instance fields
-.field public final synthetic a:Landroidx/camera/core/ImageCapture;
-
-.field public final synthetic b:Landroidx/camera/core/ImageCapture$m;
+# static fields
+.field public static final synthetic a:Landroidx/camera/core/c1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/ImageCapture;Landroidx/camera/core/ImageCapture$m;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/camera/core/c1;
+
+    invoke-direct {v0}, Landroidx/camera/core/c1;-><init>()V
+
+    sput-object v0, Landroidx/camera/core/c1;->a:Landroidx/camera/core/c1;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroidx/camera/core/c1;->a:Landroidx/camera/core/ImageCapture;
-
-    iput-object p2, p0, Landroidx/camera/core/c1;->b:Landroidx/camera/core/ImageCapture$m;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;
-    .locals 2
+.method public final a(Lb0/w0;)V
+    .locals 0
 
-    iget-object v0, p0, Landroidx/camera/core/c1;->a:Landroidx/camera/core/ImageCapture;
+    invoke-static {p1}, Landroidx/camera/core/ImageCapture;->X(Lb0/w0;)V
 
-    iget-object v1, p0, Landroidx/camera/core/c1;->b:Landroidx/camera/core/ImageCapture$m;
-
-    check-cast p1, Ljava/lang/Void;
-
-    invoke-static {v0, v1, p1}, Landroidx/camera/core/ImageCapture;->K(Landroidx/camera/core/ImageCapture;Landroidx/camera/core/ImageCapture$m;Ljava/lang/Void;)Lcom/google/common/util/concurrent/ListenableFuture;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

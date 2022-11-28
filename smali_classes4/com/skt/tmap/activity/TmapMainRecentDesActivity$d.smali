@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->x5()V
+    value = Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->F5()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -71,7 +71,7 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainRecentDesActivity$d;->a:Lcom/skt/tmap/activity/TmapMainRecentDesActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->o4()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/TmapMainRecentDesActivity;->s4()V
 
     :cond_1
     :goto_0

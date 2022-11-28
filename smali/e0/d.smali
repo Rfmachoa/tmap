@@ -1,88 +1,42 @@
-.class public Le0/d;
-.super Landroidx/camera/extensions/b;
-.source "BeautyImageCaptureExtender.java"
+.class public final Le0/d;
+.super Ljava/lang/Object;
+.source "ImageWriterCompatApi29Impl.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Le0/d$c;,
-        Le0/d$b;
-    }
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x1d
 .end annotation
-
-
-# static fields
-.field public static final g:Ljava/lang/String; = "BeautyICExtender"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Landroidx/camera/extensions/b;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Le0/d$a;)V
-    .locals 0
-
     .line 1
-    invoke-direct {p0}, Le0/d;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static j(Landroidx/camera/core/ImageCapture$j;)Le0/d;
-    .locals 1
-    .param p0    # Landroidx/camera/core/ImageCapture$j;
+.method public static a(Landroid/view/Surface;II)Landroid/media/ImageWriter;
+    .locals 0
+    .param p0    # Landroid/view/Surface;
         .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # I
+        .annotation build Landroidx/annotation/IntRange;
+            from = 0x1L
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "builder"
-        }
-    .end annotation
-
     .line 1
-    invoke-static {}, Le0/k;->d()Z
+    invoke-static {p0, p1, p2}, Landroid/media/ImageWriter;->newInstance(Landroid/view/Surface;II)Landroid/media/ImageWriter;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    :try_start_0
-    new-instance v0, Le0/d$c;
-
-    invoke-direct {v0, p0}, Le0/d$c;-><init>(Landroidx/camera/core/ImageCapture$j;)V
-    :try_end_0
-    .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    const-string p0, "BeautyICExtender"
-
-    const-string v0, "No beauty image capture extender found. Falling back to default."
-
-    .line 3
-    invoke-static {p0, v0}, Landroidx/camera/core/x1;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    :cond_0
-    new-instance p0, Le0/d$b;
-
-    invoke-direct {p0}, Le0/d$b;-><init>()V
+    move-result-object p0
 
     return-object p0
 .end method

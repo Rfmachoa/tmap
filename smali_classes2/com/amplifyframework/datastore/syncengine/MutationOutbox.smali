@@ -12,7 +12,7 @@
 
 
 # virtual methods
-.method public abstract enqueue(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lai/a;
+.method public abstract enqueue(Lcom/amplifyframework/datastore/syncengine/PendingMutation;)Lek/a;
     .param p1    # Lcom/amplifyframework/datastore/syncengine/PendingMutation;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -27,19 +27,19 @@
             ">(",
             "Lcom/amplifyframework/datastore/syncengine/PendingMutation<",
             "TT;>;)",
-            "Lai/a;"
+            "Lek/a;"
         }
     .end annotation
 .end method
 
-.method public abstract events()Lai/g0;
+.method public abstract events()Lek/g0;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lai/g0<",
+            "Lek/g0<",
             "Lcom/amplifyframework/datastore/syncengine/MutationOutbox$OutboxEvent;",
             ">;"
         }
@@ -53,12 +53,12 @@
     .end param
 .end method
 
-.method public abstract load()Lai/a;
+.method public abstract load()Lek/a;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
 
-.method public abstract markInFlight(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lai/a;
+.method public abstract markInFlight(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lek/a;
     .param p1    # Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -80,7 +80,7 @@
     .end annotation
 .end method
 
-.method public abstract remove(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lai/a;
+.method public abstract remove(Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;)Lek/a;
     .param p1    # Lcom/amplifyframework/datastore/syncengine/TimeBasedUuid;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation

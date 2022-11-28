@@ -3,7 +3,7 @@
 .source "Engine.java"
 
 # interfaces
-.implements Ln5/a$d;
+.implements Lk7/a$d;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ln5/a$d<",
+        "Lk7/a$d<",
         "Lcom/bumptech/glide/load/engine/j<",
         "*>;>;"
     }
@@ -59,23 +59,23 @@
 
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/i$b$a;->a:Lcom/bumptech/glide/load/engine/i$b;
 
-    iget-object v1, v0, Lcom/bumptech/glide/load/engine/i$b;->a:Lx4/a;
+    iget-object v1, v0, Lcom/bumptech/glide/load/engine/i$b;->a:Lu6/a;
 
-    iget-object v2, v0, Lcom/bumptech/glide/load/engine/i$b;->b:Lx4/a;
+    iget-object v2, v0, Lcom/bumptech/glide/load/engine/i$b;->b:Lu6/a;
 
-    iget-object v3, v0, Lcom/bumptech/glide/load/engine/i$b;->c:Lx4/a;
+    iget-object v3, v0, Lcom/bumptech/glide/load/engine/i$b;->c:Lu6/a;
 
-    iget-object v4, v0, Lcom/bumptech/glide/load/engine/i$b;->d:Lx4/a;
+    iget-object v4, v0, Lcom/bumptech/glide/load/engine/i$b;->d:Lu6/a;
 
     iget-object v5, v0, Lcom/bumptech/glide/load/engine/i$b;->e:Lcom/bumptech/glide/load/engine/k;
 
     iget-object v6, v0, Lcom/bumptech/glide/load/engine/i$b;->f:Lcom/bumptech/glide/load/engine/n$a;
 
-    iget-object v7, v0, Lcom/bumptech/glide/load/engine/i$b;->g:Lr1/n$a;
+    iget-object v7, v0, Lcom/bumptech/glide/load/engine/i$b;->g:Landroidx/core/util/o$a;
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v7}, Lcom/bumptech/glide/load/engine/j;-><init>(Lx4/a;Lx4/a;Lx4/a;Lx4/a;Lcom/bumptech/glide/load/engine/k;Lcom/bumptech/glide/load/engine/n$a;Lr1/n$a;)V
+    invoke-direct/range {v0 .. v7}, Lcom/bumptech/glide/load/engine/j;-><init>(Lu6/a;Lu6/a;Lu6/a;Lu6/a;Lcom/bumptech/glide/load/engine/k;Lcom/bumptech/glide/load/engine/n$a;Landroidx/core/util/o$a;)V
 
     return-object v8
 .end method

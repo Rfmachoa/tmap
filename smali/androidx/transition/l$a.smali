@@ -1,4 +1,4 @@
-.class public final Landroidx/transition/l$a;
+.class public Landroidx/transition/l$a;
 .super Landroid/animation/LayoutTransition;
 .source "ViewGroupUtilsApi14.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 

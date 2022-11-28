@@ -24,8 +24,6 @@
 
 
 # static fields
-.field private static final DESCRIPTOR:Ljava/lang/String; = "androidx.car.app.hardware.ICarHardwareHost"
-
 .field public static final TRANSACTION_getCarHardwareResult:I = 0x2
 
 .field public static final TRANSACTION_subscribeCarHardwareResult:I = 0x3
@@ -86,48 +84,6 @@
     return-object v0
 .end method
 
-.method public static getDefaultImpl()Landroidx/car/app/hardware/ICarHardwareHost;
-    .locals 1
-
-    .line 1
-    sget-object v0, Landroidx/car/app/hardware/ICarHardwareHost$Stub$Proxy;->sDefaultImpl:Landroidx/car/app/hardware/ICarHardwareHost;
-
-    return-object v0
-.end method
-
-.method public static setDefaultImpl(Landroidx/car/app/hardware/ICarHardwareHost;)Z
-    .locals 1
-
-    .line 1
-    sget-object v0, Landroidx/car/app/hardware/ICarHardwareHost$Stub$Proxy;->sDefaultImpl:Landroidx/car/app/hardware/ICarHardwareHost;
-
-    if-nez v0, :cond_1
-
-    if-eqz p0, :cond_0
-
-    .line 2
-    sput-object p0, Landroidx/car/app/hardware/ICarHardwareHost$Stub$Proxy;->sDefaultImpl:Landroidx/car/app/hardware/ICarHardwareHost;
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 3
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "setDefaultImpl() called twice"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
 
 # virtual methods
 .method public asBinder()Landroid/os/IBinder;
@@ -137,158 +93,121 @@
 .end method
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    const-string v1, "androidx.car.app.hardware.ICarHardwareHost"
 
-    const/4 v2, 0x1
+    if-lt p1, v0, :cond_0
 
-    const-string v3, "androidx.car.app.hardware.ICarHardwareHost"
+    const v2, 0xffffff
 
-    if-eq p1, v0, :cond_5
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_3
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_1
-
-    const v0, 0x5f4e5446
-
-    if-eq p1, v0, :cond_0
+    if-gt p1, v2, :cond_0
 
     .line 1
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    :cond_0
+    const v2, 0x5f4e5446
+
+    if-eq p1, v2, :cond_4
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_3
+
+    const/4 v1, 0x3
+
+    if-eq p1, v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq p1, v1, :cond_1
+
+    .line 2
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p1
 
     return p1
 
-    .line 2
-    :cond_0
-    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return v2
-
     .line 3
     :cond_1
-    invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 5
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p4
-
-    if-eqz p4, :cond_2
-
-    .line 6
+    .line 4
     sget-object p4, Landroidx/car/app/serialization/Bundleable;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {p2, p4}, Landroidx/car/app/hardware/ICarHardwareHost$a;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
     move-result-object p2
 
-    move-object v1, p2
+    check-cast p2, Landroidx/car/app/serialization/Bundleable;
 
-    check-cast v1, Landroidx/car/app/serialization/Bundleable;
+    .line 5
+    invoke-interface {p0, p1, p2}, Landroidx/car/app/hardware/ICarHardwareHost;->unsubscribeCarHardwareResult(ILandroidx/car/app/serialization/Bundleable;)V
+
+    .line 6
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_0
 
     .line 7
     :cond_2
-    invoke-interface {p0, p1, v1}, Landroidx/car/app/hardware/ICarHardwareHost;->unsubscribeCarHardwareResult(ILandroidx/car/app/serialization/Bundleable;)V
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
 
     .line 8
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    sget-object p4, Landroidx/car/app/serialization/Bundleable;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    return v2
+    invoke-static {p2, p4}, Landroidx/car/app/hardware/ICarHardwareHost$a;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Landroidx/car/app/serialization/Bundleable;
 
     .line 9
-    :cond_3
-    invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroidx/car/app/hardware/ICarHardwareResult$Stub;->asInterface(Landroid/os/IBinder;)Landroidx/car/app/hardware/ICarHardwareResult;
+
+    move-result-object p2
 
     .line 10
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
+    invoke-interface {p0, p1, p4, p2}, Landroidx/car/app/hardware/ICarHardwareHost;->subscribeCarHardwareResult(ILandroidx/car/app/serialization/Bundleable;Landroidx/car/app/hardware/ICarHardwareResult;)V
 
     .line 11
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p4
-
-    if-eqz p4, :cond_4
-
-    .line 12
-    sget-object p4, Landroidx/car/app/serialization/Bundleable;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p4
-
-    move-object v1, p4
-
-    check-cast v1, Landroidx/car/app/serialization/Bundleable;
-
-    .line 13
-    :cond_4
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroidx/car/app/hardware/ICarHardwareResult$Stub;->asInterface(Landroid/os/IBinder;)Landroidx/car/app/hardware/ICarHardwareResult;
-
-    move-result-object p2
-
-    .line 14
-    invoke-interface {p0, p1, v1, p2}, Landroidx/car/app/hardware/ICarHardwareHost;->subscribeCarHardwareResult(ILandroidx/car/app/serialization/Bundleable;Landroidx/car/app/hardware/ICarHardwareResult;)V
-
-    .line 15
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    return v2
+    goto :goto_0
 
-    .line 16
-    :cond_5
-    invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 17
+    .line 12
+    :cond_3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    .line 18
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p4
-
-    if-eqz p4, :cond_6
-
-    .line 19
+    .line 13
     sget-object p4, Landroidx/car/app/serialization/Bundleable;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-interface {p4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {p2, p4}, Landroidx/car/app/hardware/ICarHardwareHost$a;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
 
     move-result-object p4
 
-    move-object v1, p4
+    check-cast p4, Landroidx/car/app/serialization/Bundleable;
 
-    check-cast v1, Landroidx/car/app/serialization/Bundleable;
-
-    .line 20
-    :cond_6
+    .line 14
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p2
@@ -297,11 +216,18 @@
 
     move-result-object p2
 
-    .line 21
-    invoke-interface {p0, p1, v1, p2}, Landroidx/car/app/hardware/ICarHardwareHost;->getCarHardwareResult(ILandroidx/car/app/serialization/Bundleable;Landroidx/car/app/hardware/ICarHardwareResult;)V
+    .line 15
+    invoke-interface {p0, p1, p4, p2}, Landroidx/car/app/hardware/ICarHardwareHost;->getCarHardwareResult(ILandroidx/car/app/serialization/Bundleable;Landroidx/car/app/hardware/ICarHardwareResult;)V
 
-    .line 22
+    .line 16
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    return v2
+    :goto_0
+    return v0
+
+    .line 17
+    :cond_4
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v0
 .end method

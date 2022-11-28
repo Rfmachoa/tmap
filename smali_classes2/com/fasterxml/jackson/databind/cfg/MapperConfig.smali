@@ -25,7 +25,7 @@
 
 .field public static final EMPTY_INCLUDE:Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
 
-.field private static final serialVersionUID:J = 0x1L
+.field private static final serialVersionUID:J = 0x2L
 
 
 # instance fields
@@ -230,7 +230,7 @@
 .end method
 
 .method public constructSpecializedType(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JavaType;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -246,7 +246,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->constructSpecializedType(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/JavaType;
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p1, p2, v1}, Lcom/fasterxml/jackson/databind/type/TypeFactory;->constructSpecializedType(Lcom/fasterxml/jackson/databind/JavaType;Ljava/lang/Class;Z)Lcom/fasterxml/jackson/databind/JavaType;
 
     move-result-object p1
 
@@ -303,6 +305,17 @@
     return-object p1
 .end method
 
+.method public abstract findConfigOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;"
+        }
+    .end annotation
+.end method
+
 .method public abstract findRootName(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/PropertyName;
 .end method
 
@@ -315,6 +328,19 @@
             "Lcom/fasterxml/jackson/databind/PropertyName;"
         }
     .end annotation
+.end method
+
+.method public final getAccessorNaming()Lcom/fasterxml/jackson/databind/introspect/AccessorNamingStrategy$Provider;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->_base:Lcom/fasterxml/jackson/databind/cfg/BaseSettings;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/cfg/BaseSettings;->getAccessorNaming()Lcom/fasterxml/jackson/databind/introspect/AccessorNamingStrategy$Provider;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public abstract getActiveView()Ljava/lang/Class;
@@ -331,11 +357,26 @@
     .locals 1
 
     .line 1
+    sget-object v0, Lcom/fasterxml/jackson/databind/MapperFeature;->USE_ANNOTATIONS:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->isEnabled(Lcom/fasterxml/jackson/databind/MapperFeature;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->_base:Lcom/fasterxml/jackson/databind/cfg/BaseSettings;
 
     invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/cfg/BaseSettings;->getAnnotationIntrospector()Lcom/fasterxml/jackson/databind/AnnotationIntrospector;
 
     move-result-object v0
+
+    return-object v0
+
+    .line 3
+    :cond_0
+    sget-object v0, Lcom/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector;->instance:Lcom/fasterxml/jackson/databind/introspect/NopAnnotationIntrospector;
 
     return-object v0
 .end method
@@ -369,6 +410,17 @@
     return-object v0
 .end method
 
+.method public abstract getConfigOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;"
+        }
+    .end annotation
+.end method
+
 .method public final getDateFormat()Ljava/text/DateFormat;
     .locals 1
 
@@ -382,6 +434,90 @@
     return-object v0
 .end method
 
+.method public abstract getDefaultInclusion(Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+        }
+    .end annotation
+.end method
+
+.method public getDefaultInclusion(Ljava/lang/Class;Ljava/lang/Class;Lcom/fasterxml/jackson/annotation/JsonInclude$Value;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;",
+            ")",
+            "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getConfigOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;->getInclude()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+
+    move-result-object p1
+
+    .line 2
+    invoke-virtual {p0, p2}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getConfigOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;->getIncludeAsProperty()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+
+    move-result-object p2
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+
+    const/4 v1, 0x0
+
+    aput-object p3, v0, v1
+
+    const/4 p3, 0x1
+
+    aput-object p1, v0, p3
+
+    const/4 p1, 0x2
+
+    aput-object p2, v0, p1
+
+    .line 3
+    invoke-static {v0}, Lcom/fasterxml/jackson/annotation/JsonInclude$Value;->mergeAll([Lcom/fasterxml/jackson/annotation/JsonInclude$Value;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract getDefaultMergeable()Ljava/lang/Boolean;
+.end method
+
+.method public abstract getDefaultMergeable(Ljava/lang/Class;)Ljava/lang/Boolean;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Ljava/lang/Boolean;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getDefaultPropertyFormat(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonFormat$Value;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -389,6 +525,30 @@
             "Ljava/lang/Class<",
             "*>;)",
             "Lcom/fasterxml/jackson/annotation/JsonFormat$Value;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getDefaultPropertyIgnorals(Ljava/lang/Class;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getDefaultPropertyIgnorals(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;)Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;",
+            ")",
+            "Lcom/fasterxml/jackson/annotation/JsonIgnoreProperties$Value;"
         }
     .end annotation
 .end method
@@ -405,6 +565,52 @@
             "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
         }
     .end annotation
+.end method
+
+.method public getDefaultPropertyInclusion(Ljava/lang/Class;Lcom/fasterxml/jackson/annotation/JsonInclude$Value;)Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;",
+            ")",
+            "Lcom/fasterxml/jackson/annotation/JsonInclude$Value;"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getConfigOverride(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/cfg/ConfigOverride;->getInclude()Lcom/fasterxml/jackson/annotation/JsonInclude$Value;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    return-object p1
+
+    :cond_0
+    return-object p2
+.end method
+
+.method public abstract getDefaultPropertyInclusions(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;)Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;",
+            ")",
+            "Lcom/fasterxml/jackson/annotation/JsonIncludeProperties$Value;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getDefaultSetterInfo()Lcom/fasterxml/jackson/annotation/JsonSetter$Value;
 .end method
 
 .method public final getDefaultTyper(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/jsontype/TypeResolverBuilder;
@@ -429,8 +635,7 @@
     return-object p1
 .end method
 
-.method public getDefaultVisibilityChecker()Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker;
-    .locals 1
+.method public abstract getDefaultVisibilityChecker()Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -438,15 +643,20 @@
             "*>;"
         }
     .end annotation
+.end method
 
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->_base:Lcom/fasterxml/jackson/databind/cfg/BaseSettings;
-
-    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/cfg/BaseSettings;->getVisibilityChecker()Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract getDefaultVisibilityChecker(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;)Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Lcom/fasterxml/jackson/databind/introspect/AnnotatedClass;",
+            ")",
+            "Lcom/fasterxml/jackson/databind/introspect/VisibilityChecker<",
+            "*>;"
+        }
+    .end annotation
 .end method
 
 .method public final getHandlerInstantiator()Lcom/fasterxml/jackson/databind/cfg/HandlerInstantiator;
@@ -472,6 +682,39 @@
 
     move-result-object v0
 
+    return-object v0
+.end method
+
+.method public getPolymorphicTypeValidator()Lcom/fasterxml/jackson/databind/jsontype/PolymorphicTypeValidator;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->_base:Lcom/fasterxml/jackson/databind/cfg/BaseSettings;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/cfg/BaseSettings;->getPolymorphicTypeValidator()Lcom/fasterxml/jackson/databind/jsontype/PolymorphicTypeValidator;
+
+    move-result-object v0
+
+    .line 2
+    sget-object v1, Lcom/fasterxml/jackson/databind/jsontype/impl/LaissezFaireSubTypeValidator;->instance:Lcom/fasterxml/jackson/databind/jsontype/impl/LaissezFaireSubTypeValidator;
+
+    if-ne v0, v1, :cond_0
+
+    .line 3
+    sget-object v1, Lcom/fasterxml/jackson/databind/MapperFeature;->BLOCK_UNSAFE_POLYMORPHIC_BASE_TYPES:Lcom/fasterxml/jackson/databind/MapperFeature;
+
+    invoke-virtual {p0, v1}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->isEnabled(Lcom/fasterxml/jackson/databind/MapperFeature;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 4
+    new-instance v0, Lcom/fasterxml/jackson/databind/jsontype/DefaultBaseTypeLimitingValidator;
+
+    invoke-direct {v0}, Lcom/fasterxml/jackson/databind/jsontype/DefaultBaseTypeLimitingValidator;-><init>()V
+
+    :cond_0
     return-object v0
 .end method
 
@@ -517,6 +760,19 @@
     return-object v0
 .end method
 
+.method public hasExplicitTimeZone()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->_base:Lcom/fasterxml/jackson/databind/cfg/BaseSettings;
+
+    invoke-virtual {v0}, Lcom/fasterxml/jackson/databind/cfg/BaseSettings;->hasExplicitTimeZone()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final hasMapperFeatures(I)Z
     .locals 1
 
@@ -538,7 +794,19 @@
     return p1
 .end method
 
-.method public abstract introspectClassAnnotations(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/BeanDescription;
+.method public introspectClassAnnotations(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/BeanDescription;
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getClassIntrospector()Lcom/fasterxml/jackson/databind/introspect/ClassIntrospector;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, p1, p0}, Lcom/fasterxml/jackson/databind/introspect/ClassIntrospector;->forClassAnnotations(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/introspect/ClassIntrospector$MixInResolver;)Lcom/fasterxml/jackson/databind/BeanDescription;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public introspectClassAnnotations(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/BeanDescription;
@@ -564,7 +832,19 @@
     return-object p1
 .end method
 
-.method public abstract introspectDirectClassAnnotations(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/BeanDescription;
+.method public final introspectDirectClassAnnotations(Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/BeanDescription;
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->getClassIntrospector()Lcom/fasterxml/jackson/databind/introspect/ClassIntrospector;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0, p1, p0}, Lcom/fasterxml/jackson/databind/introspect/ClassIntrospector;->forDirectClassAnnotations(Lcom/fasterxml/jackson/databind/cfg/MapperConfig;Lcom/fasterxml/jackson/databind/JavaType;Lcom/fasterxml/jackson/databind/introspect/ClassIntrospector$MixInResolver;)Lcom/fasterxml/jackson/databind/BeanDescription;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public introspectDirectClassAnnotations(Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/BeanDescription;
@@ -609,22 +889,10 @@
     .line 1
     iget v0, p0, Lcom/fasterxml/jackson/databind/cfg/MapperConfig;->_mapperFeatures:I
 
-    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/MapperFeature;->getMask()I
+    invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/databind/MapperFeature;->enabledIn(I)Z
 
     move-result p1
 
-    and-int/2addr p1, v0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
     return p1
 .end method
 

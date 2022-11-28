@@ -3,12 +3,12 @@
 .source "FontRequestWorker.java"
 
 # interfaces
-.implements Lr1/c;
+.implements Landroidx/core/util/d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/provider/c;->d(Landroid/content/Context;Lm1/c;ILjava/util/concurrent/Executor;Landroidx/core/provider/a;)Landroid/graphics/Typeface;
+    value = Landroidx/core/provider/c;->d(Landroid/content/Context;Lf2/d;ILjava/util/concurrent/Executor;Landroidx/core/provider/a;)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lr1/c<",
+        "Landroidx/core/util/d<",
         "Landroidx/core/provider/c$e;",
         ">;"
     }

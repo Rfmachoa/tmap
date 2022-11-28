@@ -1387,7 +1387,7 @@
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {p0, p2}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p0
 

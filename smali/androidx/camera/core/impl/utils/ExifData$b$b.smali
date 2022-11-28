@@ -22,7 +22,7 @@
         "Ljava/util/Enumeration<",
         "Ljava/util/Map<",
         "Ljava/lang/String;",
-        "Landroidx/camera/core/impl/utils/e;",
+        "Landroidx/camera/core/impl/utils/i;",
         ">;>;"
     }
 .end annotation
@@ -37,14 +37,6 @@
 # direct methods
 .method public constructor <init>(Landroidx/camera/core/impl/utils/ExifData$b;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x8010
-        }
-        names = {
-            "this$0"
-        }
-    .end annotation
 
     .line 1
     iput-object p1, p0, Landroidx/camera/core/impl/utils/ExifData$b$b;->b:Landroidx/camera/core/impl/utils/ExifData$b;
@@ -68,7 +60,7 @@
             "()",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Landroidx/camera/core/impl/utils/e;",
+            "Landroidx/camera/core/impl/utils/i;",
             ">;"
         }
     .end annotation
@@ -94,7 +86,7 @@
     .line 1
     iget v0, p0, Landroidx/camera/core/impl/utils/ExifData$b$b;->a:I
 
-    sget-object v1, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/i;
+    sget-object v1, Landroidx/camera/core/impl/utils/ExifData;->o:[[Landroidx/camera/core/impl/utils/m;
 
     array-length v1, v1
 

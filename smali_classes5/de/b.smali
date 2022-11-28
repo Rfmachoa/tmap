@@ -1,8 +1,36 @@
-.class public interface abstract synthetic Lde/b;
+.class public final synthetic Lde/b;
 .super Ljava/lang/Object;
-.source "package-info.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/lifecycle/Observer;
 
 
-# annotations
-.annotation build Lcom/tmapmobility/tmap/exoplayer2/util/NonNullApi;
-.end annotation
+# instance fields
+.field public final synthetic a:Lde/f;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lde/f;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lde/b;->a:Lde/f;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lde/b;->a:Lde/f;
+
+    check-cast p1, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;
+
+    invoke-static {v0, p1}, Lde/f;->e(Lde/f;Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
+
+    return-void
+.end method

@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/a;
+.implements Lcom/amplifyframework/core/Consumer;
 
 
 # instance fields
-.field public final synthetic a:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
-
-.field public final synthetic b:Lcom/amplifyframework/datastore/syncengine/SyncType;
+.field public final synthetic a:Lek/r0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)V
+.method public synthetic constructor <init>(Lek/r0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/i3;->a:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
-
-    iput-object p2, p0, Lcom/amplifyframework/datastore/syncengine/i3;->b:Lcom/amplifyframework/datastore/syncengine/SyncType;
+    iput-object p1, p0, Lcom/amplifyframework/datastore/syncengine/i3;->a:Lek/r0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/i3;->a:Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;
+    iget-object v0, p0, Lcom/amplifyframework/datastore/syncengine/i3;->a:Lek/r0;
 
-    iget-object v1, p0, Lcom/amplifyframework/datastore/syncengine/i3;->b:Lcom/amplifyframework/datastore/syncengine/SyncType;
+    check-cast p1, Lcom/amplifyframework/api/graphql/GraphQLResponse;
 
-    invoke-static {v0, v1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->p(Lcom/amplifyframework/datastore/syncengine/ModelSyncMetricsAccumulator;Lcom/amplifyframework/datastore/syncengine/SyncType;)V
+    invoke-static {v0, p1}, Lcom/amplifyframework/datastore/syncengine/SyncProcessor;->d(Lek/r0;Lcom/amplifyframework/api/graphql/GraphQLResponse;)V
 
     return-void
 .end method

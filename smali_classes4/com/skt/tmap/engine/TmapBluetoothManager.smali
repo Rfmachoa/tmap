@@ -190,7 +190,7 @@
 
     const-string v2, "headset is connected"
 
-    invoke-static {v0, v2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iput-boolean v1, p0, Lcom/skt/tmap/engine/TmapBluetoothManager;->a:Z

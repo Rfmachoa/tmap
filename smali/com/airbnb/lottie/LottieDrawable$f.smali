@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/airbnb/lottie/LottieDrawable;->e(Lq3/d;Ljava/lang/Object;Lx3/j;)V
+    value = Lcom/airbnb/lottie/LottieDrawable;->e(Lm5/d;Ljava/lang/Object;Lt5/j;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,27 +18,27 @@
 
 
 # instance fields
-.field public final synthetic a:Lq3/d;
+.field public final synthetic a:Lm5/d;
 
 .field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:Lx3/j;
+.field public final synthetic c:Lt5/j;
 
 .field public final synthetic d:Lcom/airbnb/lottie/LottieDrawable;
 
 
 # direct methods
-.method public constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lq3/d;Ljava/lang/Object;Lx3/j;)V
+.method public constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lm5/d;Ljava/lang/Object;Lt5/j;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$f;->d:Lcom/airbnb/lottie/LottieDrawable;
 
-    iput-object p2, p0, Lcom/airbnb/lottie/LottieDrawable$f;->a:Lq3/d;
+    iput-object p2, p0, Lcom/airbnb/lottie/LottieDrawable$f;->a:Lm5/d;
 
     iput-object p3, p0, Lcom/airbnb/lottie/LottieDrawable$f;->b:Ljava/lang/Object;
 
-    iput-object p4, p0, Lcom/airbnb/lottie/LottieDrawable$f;->c:Lx3/j;
+    iput-object p4, p0, Lcom/airbnb/lottie/LottieDrawable$f;->c:Lt5/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,13 +53,13 @@
     .line 1
     iget-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$f;->d:Lcom/airbnb/lottie/LottieDrawable;
 
-    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable$f;->a:Lq3/d;
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable$f;->a:Lm5/d;
 
     iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable$f;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/airbnb/lottie/LottieDrawable$f;->c:Lx3/j;
+    iget-object v2, p0, Lcom/airbnb/lottie/LottieDrawable$f;->c:Lt5/j;
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/airbnb/lottie/LottieDrawable;->e(Lq3/d;Ljava/lang/Object;Lx3/j;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/airbnb/lottie/LottieDrawable;->e(Lm5/d;Ljava/lang/Object;Lt5/j;)V
 
     return-void
 .end method

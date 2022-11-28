@@ -3,7 +3,7 @@
 .source "OnUpdateUserContextInfoByLambdaSubscription.java"
 
 # interfaces
-.implements Lc4/h;
+.implements Lz5/h;
 
 
 # annotations

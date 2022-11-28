@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->w0(I)V
+    value = Lcom/skt/tmap/activity/TmapQMTotalSearchActivity;->A0(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/e;->X(Landroid/app/Activity;Z)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/g;->c0(Landroid/app/Activity;Z)V
 
     return-void
 .end method

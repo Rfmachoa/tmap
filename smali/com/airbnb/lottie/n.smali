@@ -372,7 +372,7 @@
     const-string v0, "Lottie encountered an error but no failure listener was added:"
 
     .line 3
-    invoke-static {v0, p1}, Lw3/d;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Ls5/d;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

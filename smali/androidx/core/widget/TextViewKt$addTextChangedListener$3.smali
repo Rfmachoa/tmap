@@ -3,12 +3,12 @@
 .source "TextView.kt"
 
 # interfaces
-.implements Lej/l;
+.implements Lgl/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/widget/TextViewKt;->b(Landroid/widget/TextView;Lej/r;Lej/r;Lej/l;ILjava/lang/Object;)Landroid/text/TextWatcher;
+    value = Landroidx/core/widget/TextViewKt;->b(Landroid/widget/TextView;Lgl/r;Lgl/r;Lgl/l;ILjava/lang/Object;)Landroid/text/TextWatcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/l<",
+        "Lgl/l<",
         "Landroid/text/Editable;",
         "Lkotlin/d1;",
         ">;"
@@ -46,8 +46,8 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -84,6 +84,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/text/Editable;
 
     invoke-virtual {p0, p1}, Landroidx/core/widget/TextViewKt$addTextChangedListener$3;->invoke(Landroid/text/Editable;)V

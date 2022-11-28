@@ -20,13 +20,35 @@
 
 .field public static final DEFAULT_PREVIEW_WIDTH:I = 0x780
 
+.field public static final ERR_CODE_ALLOC_FAILED:I = -0x64
+
+.field public static final ERR_CODE_EXPIRED:I = -0x1
+
+.field public static final ERR_CODE_FAILED_TO_LOAD_DATA:I = -0x3
+
+.field public static final ERR_CODE_INVALID_PACKAGE:I = -0x2
+
+.field public static final ERR_CODE_LICENSEKEY_ALL_FAILED:I = -0x3e9
+
+.field public static final ERR_CODE_LICENSEKEY_INVALIDATE:I = -0x3ea
+
+.field public static final ERR_CODE_LICENSEKEY_VERSION_FAILED:I = -0x3e8
+
+.field public static final ERR_CODE_NONE:I = 0x0
+
+.field public static final ERR_CODE_TIME_OUT:I = -0xc8
+
 .field public static final SCAN_TYPE_CREDITCARD:I = 0x0
 
-.field public static final version:Ljava/lang/String; = "2.12.1"
+.field public static final version:Ljava/lang/String; = "2.13.0"
 
 
 # instance fields
 .field private final TAG:Ljava/lang/String;
+
+.field public cameraPictureHeight:I
+
+.field public cameraPictureWidth:I
 
 .field public cameraPreviewHeight:I
 
@@ -48,15 +70,9 @@
 
 .field public frameBuffer:Ljava/nio/ByteBuffer;
 
+.field public fullScreen:Z
+
 .field public guide_h:I
-
-.field private guide_initial_h:I
-
-.field private guide_initial_w:I
-
-.field private guide_initial_x:I
-
-.field private guide_initial_y:I
 
 .field public guide_w:I
 
@@ -67,6 +83,8 @@
 .field public handle:J
 
 .field public licenseKey:Ljava/lang/String;
+
+.field public licenseKeyFile:Ljava/lang/String;
 
 .field public orientation:I
 
@@ -141,80 +159,91 @@
     .line 5
     iput-object v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->licenseKey:Ljava/lang/String;
 
+    const-string v1, "fincubelicense.flk"
+
     .line 6
+    iput-object v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->licenseKeyFile:Ljava/lang/String;
+
+    .line 7
     iput v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->scannerType:I
 
     const/4 v1, 0x1
 
-    .line 7
+    .line 8
     iput-boolean v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->scanExpiry:Z
 
-    .line 8
+    .line 9
     iput-boolean v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->scanName:Z
 
-    .line 9
+    .line 10
     iput-boolean v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->validateNumber:Z
 
-    .line 10
+    .line 11
     iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->validateExpiry:Z
 
     const/16 v2, 0x780
 
-    .line 11
+    .line 12
     iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
 
     const/16 v2, 0x438
 
-    .line 12
+    .line 13
     iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
 
-    const/16 v2, 0x3c
-
-    .line 13
-    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_y:I
-
-    const/16 v2, 0x292
-
     .line 14
-    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_x:I
-
-    const/16 v2, 0x3c0
-
-    .line 15
-    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_h:I
-
-    const/16 v2, 0x25c
-
-    .line 16
-    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_w:I
-
-    .line 17
     iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->complete:Z
 
     const/16 v2, 0x5a
 
-    .line 18
+    .line 15
     iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cwPreviewDegree:I
 
     const-wide/16 v2, 0x0
 
-    .line 19
+    .line 16
     iput-wide v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->handle:J
 
-    .line 20
+    .line 17
     iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->reverseCamera:Z
 
+    const/16 v2, 0x292
+
+    .line 18
+    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
+
+    const/16 v2, 0x3c
+
+    .line 19
+    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
+
+    const/16 v2, 0x25c
+
+    .line 20
+    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
+
+    const/16 v2, 0x3c0
+
     .line 21
-    iput-boolean v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->useMultiThread:Z
+    iput v2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
     .line 22
+    iput v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->orientation:I
+
+    .line 23
+    iput-boolean v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->useMultiThread:Z
+
+    .line 24
+    iput-boolean v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->fullScreen:Z
+
+    .line 25
     new-instance v0, Lcom/fingram/mi/bankcard/ScanResult;
 
     invoke-direct {v0}, Lcom/fingram/mi/bankcard/ScanResult;-><init>()V
 
     iput-object v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->dInfo:Lcom/fingram/mi/bankcard/ScanResult;
 
-    .line 23
+    .line 26
     sget-object v0, Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;->HORIZONTAL:Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -224,92 +253,6 @@
     invoke-virtual {p0, v1, v1, v2, v0}, Lcom/fingram/mi/bankcard/ScannerConfig;->changeGuideRect(FFFLcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;)I
 
     return-void
-.end method
-
-.method private setGuideLine(IIII)Z
-    .locals 4
-
-    add-int v0, p1, p3
-
-    .line 1
-    iget v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
-
-    const/4 v2, 0x0
-
-    const-string v3, "QURAM"
-
-    if-le v0, v1, :cond_0
-
-    const-string p1, "guide over cameraPreviewWidth"
-
-    .line 2
-    invoke-static {v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v2
-
-    :cond_0
-    add-int v0, p2, p4
-
-    .line 3
-    iget v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
-
-    if-le v0, v1, :cond_1
-
-    const-string p1, "guide over cameraPreviewHeight"
-
-    .line 4
-    invoke-static {v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v2
-
-    :cond_1
-    if-lez p3, :cond_5
-
-    if-gtz p4, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    if-lez p1, :cond_4
-
-    if-gtz p2, :cond_3
-
-    goto :goto_0
-
-    .line 5
-    :cond_3
-    iput p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
-
-    .line 6
-    iput p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
-
-    .line 7
-    iput p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
-
-    .line 8
-    iput p4, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_4
-    :goto_0
-    const-string p1, "guide x or y is zero"
-
-    .line 9
-    invoke-static {v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v2
-
-    :cond_5
-    :goto_1
-    const-string p1, "guide width or height is zero"
-
-    .line 10
-    invoke-static {v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v2
 .end method
 
 
@@ -340,19 +283,8 @@
     :cond_1
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    cmpg-float v1, p3, v1
-
-    if-gtz v1, :cond_2
-
-    const/high16 p3, 0x3f800000    # 1.0f
-
     .line 4
-    :cond_2
-    invoke-virtual {p4}, Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;->getInt()I
-
-    move-result v1
+    iget v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->orientation:I
 
     const/4 v2, 0x1
 
@@ -360,15 +292,15 @@
 
     const/4 v4, 0x2
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
-    if-eq v1, v2, :cond_3
+    if-eq v1, v2, :cond_2
 
-    if-eq v1, v4, :cond_4
+    if-eq v1, v4, :cond_3
 
     const/4 v5, 0x3
 
-    if-eq v1, v5, :cond_3
+    if-eq v1, v5, :cond_2
 
     move p1, v3
 
@@ -376,7 +308,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     move v10, p2
 
     move p2, p1
@@ -384,7 +316,7 @@
     move p1, v10
 
     .line 5
-    :cond_4
+    :cond_3
     :goto_0
     iget v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
 
@@ -462,27 +394,19 @@
     move-result p2
 
     .line 11
-    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_w:I
-
-    iput v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
-
-    .line 12
-    iget v6, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_h:I
-
-    iput v6, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
+    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
     int-to-float v3, v3
 
     mul-float/2addr v3, p3
 
-    .line 13
     invoke-static {v3}, Ljava/lang/Math;->round(F)I
 
     move-result v3
 
     iput v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
-    .line 14
+    .line 12
     iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
     int-to-float v3, v3
@@ -495,53 +419,61 @@
 
     iput p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
-    .line 15
-    sget-object v3, Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;->HORIZONTAL:Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;
+    .line 13
+    iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->changeGuideRectOrientation:I
 
-    if-ne v3, p4, :cond_5
+    invoke-virtual {p4}, Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;->getInt()I
+
+    move-result v3
+
+    if-eq p3, v3, :cond_4
+
+    .line 14
+    iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
+
+    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
+
+    sub-int/2addr p3, v3
+
+    div-int/2addr p3, v4
+
+    .line 15
+    iget v6, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
+
+    iget v8, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
+
+    sub-int/2addr v6, v8
+
+    div-int/2addr v6, v4
 
     .line 16
-    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
-
-    iget v6, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
-
-    sub-int/2addr v3, v6
-
-    div-int/2addr v3, v4
-
-    .line 17
-    iget v8, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
-
-    sub-int/2addr v8, p3
-
-    div-int/2addr v8, v4
-
-    .line 18
-    invoke-direct {p0, v8, v3, p3, v6}, Lcom/fingram/mi/bankcard/ScannerConfig;->setGuideLine(IIII)Z
+    invoke-virtual {p0, v6, p3, v8, v3}, Lcom/fingram/mi/bankcard/ScannerConfig;->setGuideLine(IIII)Z
 
     goto :goto_1
 
+    .line 17
+    :cond_4
+    iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
+
+    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
+
+    sub-int/2addr p3, v3
+
+    div-int/2addr p3, v4
+
+    .line 18
+    iget v6, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
+
+    iget v8, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
+
+    sub-int/2addr v6, v8
+
+    div-int/2addr v6, v4
+
     .line 19
-    :cond_5
-    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
-
-    iget v6, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
-
-    sub-int/2addr v3, v6
-
-    div-int/2addr v3, v4
+    invoke-virtual {p0, p3, v6, v3, v8}, Lcom/fingram/mi/bankcard/ScannerConfig;->setGuideLine(IIII)Z
 
     .line 20
-    iget v8, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
-
-    sub-int/2addr v8, p3
-
-    div-int/2addr v8, v4
-
-    .line 21
-    invoke-direct {p0, v3, v8, v6, p3}, Lcom/fingram/mi/bankcard/ScannerConfig;->setGuideLine(IIII)Z
-
-    .line 22
     :goto_1
     invoke-virtual {p4}, Lcom/fingram/mi/bankcard/BankCardScanner$CardOrientation;->getInt()I
 
@@ -549,64 +481,64 @@
 
     iput p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->changeGuideRectOrientation:I
 
-    .line 23
+    .line 21
     iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
 
     add-int/2addr p3, p1
 
-    .line 24
+    .line 22
     iget p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
 
     add-int/2addr p1, p2
 
-    if-ge p3, v1, :cond_6
+    if-ge p3, v1, :cond_5
 
     move v0, v2
 
     goto :goto_2
 
-    :cond_6
+    :cond_5
     move v1, p3
 
     :goto_2
-    if-ge p1, v5, :cond_7
+    if-ge p1, v5, :cond_6
 
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_3
 
-    :cond_7
+    :cond_6
     move v5, p1
 
-    .line 25
+    .line 23
     :goto_3
     iget p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
     add-int p2, v1, p1
 
-    if-le p2, v7, :cond_8
+    if-le p2, v7, :cond_7
 
     sub-int v1, v7, p1
 
     add-int/lit8 v0, v0, 0x4
 
-    .line 26
-    :cond_8
+    .line 24
+    :cond_7
     iget p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
     add-int p2, v5, p1
 
-    if-le p2, v9, :cond_9
+    if-le p2, v9, :cond_8
 
     sub-int v5, v9, p1
 
     add-int/lit8 v0, v0, 0x8
 
-    .line 27
-    :cond_9
+    .line 25
+    :cond_8
     iput v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
 
-    .line 28
+    .line 26
     iput v5, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
 
     return v0
@@ -646,126 +578,39 @@
 .method public getGuideFrame(III)Landroid/graphics/Rect;
     .locals 4
 
-    .line 1
-    iget p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cwPreviewDegree:I
-
-    const/16 v0, 0x5a
-
-    if-eq p1, v0, :cond_3
-
-    const/16 v0, 0x10e
+    const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    goto :goto_1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const/16 v0, 0xb4
-
-    if-ne p1, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_0
     int-to-float p1, p2
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    int-to-float p2, p3
+
+    invoke-virtual {p0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewWidth()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float/2addr p2, p3
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
 
     .line 2
-    iget p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
+    invoke-virtual {p0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
 
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    int-to-float p2, p3
-
-    iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
-
-    int-to-float p3, p3
-
-    div-float/2addr p2, p3
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
-
-    move-result p1
-
-    .line 3
-    new-instance p2, Landroid/graphics/Rect;
-
-    iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
-
-    int-to-float v0, p3
-
-    mul-float/2addr v0, p1
-
-    float-to-int v0, v0
-
-    iget v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
-
-    int-to-float v2, v1
-
-    mul-float/2addr v2, p1
-
-    float-to-int v2, v2
-
-    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
-
-    add-int/2addr p3, v3
-
-    int-to-float p3, p3
-
-    mul-float/2addr p3, p1
-
-    float-to-int p3, p3
-
-    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
-
-    add-int/2addr v1, v3
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, p1
-
-    float-to-int p1, v1
-
-    invoke-direct {p2, v0, v2, p3, p1}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    move-object p1, p2
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    int-to-float p1, p2
-
-    .line 4
-    iget p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    int-to-float p2, p3
-
-    iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
-
-    int-to-float p3, p3
-
-    div-float/2addr p2, p3
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
-
-    move-result p1
-
-    .line 5
-    iget p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
+    move-result p2
 
     iget p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
 
@@ -775,7 +620,7 @@
 
     sub-int/2addr p2, p3
 
-    .line 6
+    .line 3
     new-instance p3, Landroid/graphics/Rect;
 
     int-to-float v0, p2
@@ -814,16 +659,98 @@
 
     invoke-direct {p3, v0, v2, p2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    move-object p1, p3
+    goto :goto_1
 
-    :goto_2
-    return-object p1
+    :cond_0
+    if-eqz p1, :cond_2
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p3, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    int-to-float p1, p2
+
+    .line 4
+    invoke-virtual {p0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewHeight()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    int-to-float p2, p3
+
+    invoke-virtual {p0}, Lcom/fingram/mi/bankcard/ScannerConfig;->getCameraPreviewWidth()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float/2addr p2, p3
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    .line 5
+    new-instance p3, Landroid/graphics/Rect;
+
+    iget p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
+
+    int-to-float v0, p2
+
+    mul-float/2addr v0, p1
+
+    float-to-int v0, v0
+
+    iget v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
+
+    int-to-float v2, v1
+
+    mul-float/2addr v2, p1
+
+    float-to-int v2, v2
+
+    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
+
+    add-int/2addr p2, v3
+
+    int-to-float p2, p2
+
+    mul-float/2addr p2, p1
+
+    float-to-int p2, p2
+
+    iget v3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
+
+    add-int/2addr v1, v3
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p1
+
+    float-to-int p1, v1
+
+    invoke-direct {p3, v0, v2, p2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    :goto_1
+    return-object p3
 .end method
 
 .method public getGuideFrame(Landroid/view/SurfaceView;)Landroid/graphics/Rect;
     .locals 3
 
-    .line 7
+    .line 6
     iget v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->orientation:I
 
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getWidth()I
@@ -838,7 +765,7 @@
 
     move-result-object v0
 
-    .line 8
+    .line 7
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getTop()I
@@ -849,7 +776,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->top:I
 
-    .line 9
+    .line 8
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getTop()I
@@ -860,7 +787,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 10
+    .line 9
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getLeft()I
@@ -871,7 +798,7 @@
 
     iput v2, v0, Landroid/graphics/Rect;->left:I
 
-    .line 11
+    .line 10
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1}, Landroid/view/SurfaceView;->getLeft()I
@@ -886,7 +813,7 @@
 .end method
 
 .method public setCameraPreviewResolution(II)V
-    .locals 3
+    .locals 0
 
     .line 1
     iput p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewWidth:I
@@ -894,43 +821,25 @@
     .line 2
     iput p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->cameraPreviewHeight:I
 
-    int-to-float v0, p2
+    return-void
+.end method
 
-    const/high16 v1, 0x44870000    # 1080.0f
+.method public setGuideLine(IIII)Z
+    .locals 0
 
-    div-float/2addr v0, v1
+    .line 1
+    iput p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_x:I
 
-    const/high16 v1, 0x44700000    # 960.0f
-
-    mul-float/2addr v1, v0
-
-    float-to-int v1, v1
+    .line 2
+    iput p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_y:I
 
     .line 3
-    iput v1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_w:I
-
-    const/high16 v2, 0x44170000    # 604.0f
-
-    mul-float/2addr v0, v2
-
-    float-to-int v0, v0
+    iput p3, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_w:I
 
     .line 4
-    iput v0, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_h:I
+    iput p4, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_h:I
 
-    sub-int/2addr p1, v1
+    const/4 p1, 0x1
 
-    .line 5
-    div-int/lit8 p1, p1, 0x2
-
-    iput p1, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_x:I
-
-    sub-int/2addr p2, v0
-
-    .line 6
-    div-int/lit8 p2, p2, 0x2
-
-    iput p2, p0, Lcom/fingram/mi/bankcard/ScannerConfig;->guide_initial_y:I
-
-    return-void
+    return p1
 .end method

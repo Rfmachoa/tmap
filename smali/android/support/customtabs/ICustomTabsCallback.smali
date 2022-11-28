@@ -9,13 +9,22 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/customtabs/ICustomTabsCallback$Stub;
+        Landroid/support/customtabs/ICustomTabsCallback$Stub;,
+        Landroid/support/customtabs/ICustomTabsCallback$Default;
     }
 .end annotation
 
 
 # virtual methods
 .method public abstract extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract extraCallbackWithResult(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

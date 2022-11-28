@@ -88,6 +88,14 @@
 
 .method public setResponse(Lcom/skt/moment/net/vo/ResponseVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "response"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ServiceResVo;->response:Lcom/skt/moment/net/vo/ResponseVo;

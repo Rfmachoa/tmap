@@ -3,7 +3,7 @@
 .source "BasicMarkerFactory.java"
 
 # interfaces
-.implements Lpk/b;
+.implements Lvm/b;
 
 
 # instance fields

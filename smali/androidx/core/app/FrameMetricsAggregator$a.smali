@@ -33,7 +33,7 @@
 
 .field public b:[Landroid/util/SparseIntArray;
 
-.field public c:Ljava/util/ArrayList;
+.field public final c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",

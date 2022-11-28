@@ -772,7 +772,7 @@
 
     const-string v2, ", totalBytesToDownload="
 
-    invoke-static {v0, v1, v7, v8, v2}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v0, v1, v7, v8, v2}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     invoke-virtual {v0, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -782,7 +782,7 @@
 
     move-wide/from16 v3, v18
 
-    invoke-static {v0, v1, v3, v4, v2}, Landroidx/multidex/c;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {v0, v1, v3, v4, v2}, Landroidx/multidex/d;->a(Ljava/lang/StringBuilder;Ljava/lang/String;JLjava/lang/String;)V
 
     move-wide/from16 v1, v16
 
@@ -798,13 +798,13 @@
 
     const-string v2, ", immediateDestructiveUpdateIntent="
 
-    invoke-static {v0, v1, v13, v2, v14}, Landroidx/room/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v13, v2, v14}, Landroidx/room/o0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, ", flexibleDestructiveUpdateIntent="
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v11, v2}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v11, v2}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

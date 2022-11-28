@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/chip/Chip$ChipTouchHelper;
-.super Ly1/a;
+.super Lp2/a;
 .source "Chip.java"
 
 
@@ -26,7 +26,7 @@
     iput-object p1, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
 
     .line 2
-    invoke-direct {p0, p2}, Ly1/a;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lp2/a;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
@@ -168,9 +168,9 @@
     return p1
 .end method
 
-.method public onPopulateNodeForHost(Lt1/c;)V
+.method public onPopulateNodeForHost(Lk2/c;)V
     .locals 1
-    .param p1    # Lt1/c;
+    .param p1    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -182,7 +182,7 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lt1/c;->S0(Z)V
+    invoke-virtual {p1, v0}, Lk2/c;->X0(Z)V
 
     .line 2
     iget-object v0, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
@@ -191,75 +191,33 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lt1/c;->V0(Z)V
+    invoke-virtual {p1, v0}, Lk2/c;->a1(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
 
-    invoke-virtual {v0}, Lcom/google/android/material/chip/Chip;->isCheckable()Z
+    invoke-virtual {v0}, Lcom/google/android/material/chip/Chip;->getAccessibilityClassName()Ljava/lang/CharSequence;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
-
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isClickable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "android.view.View"
+    invoke-virtual {p1, v0}, Lk2/c;->Z0(Ljava/lang/CharSequence;)V
 
     .line 4
-    invoke-virtual {p1, v0}, Lt1/c;->U0(Ljava/lang/CharSequence;)V
-
-    goto :goto_2
-
-    .line 5
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
-
-    .line 6
-    invoke-virtual {v0}, Lcom/google/android/material/chip/Chip;->isCheckable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "android.widget.CompoundButton"
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "android.widget.Button"
-
-    .line 7
-    :goto_1
-    invoke-virtual {p1, v0}, Lt1/c;->U0(Ljava/lang/CharSequence;)V
-
-    .line 8
-    :goto_2
     iget-object v0, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 9
-    invoke-virtual {p1, v0}, Lt1/c;->J1(Ljava/lang/CharSequence;)V
+    .line 5
+    invoke-virtual {p1, v0}, Lk2/c;->O1(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public onPopulateNodeForVirtualView(ILt1/c;)V
+.method public onPopulateNodeForVirtualView(ILk2/c;)V
     .locals 6
-    .param p2    # Lt1/c;
+    .param p2    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -280,7 +238,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p2, p1}, Lt1/c;->Y0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lk2/c;->d1(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -329,7 +287,7 @@
     move-result-object p1
 
     .line 9
-    invoke-virtual {p2, p1}, Lt1/c;->Y0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lk2/c;->d1(Ljava/lang/CharSequence;)V
 
     .line 10
     :goto_0
@@ -339,12 +297,12 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lt1/c;->P0(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, p1}, Lk2/c;->U0(Landroid/graphics/Rect;)V
 
     .line 11
-    sget-object p1, Lt1/c$a;->j:Lt1/c$a;
+    sget-object p1, Lk2/c$a;->j:Lk2/c$a;
 
-    invoke-virtual {p2, p1}, Lt1/c;->b(Lt1/c$a;)V
+    invoke-virtual {p2, p1}, Lk2/c;->b(Lk2/c$a;)V
 
     .line 12
     iget-object p1, p0, Lcom/google/android/material/chip/Chip$ChipTouchHelper;->this$0:Lcom/google/android/material/chip/Chip;
@@ -353,20 +311,20 @@
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lt1/c;->e1(Z)V
+    invoke-virtual {p2, p1}, Lk2/c;->j1(Z)V
 
     goto :goto_1
 
     .line 13
     :cond_2
-    invoke-virtual {p2, v0}, Lt1/c;->Y0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lk2/c;->d1(Ljava/lang/CharSequence;)V
 
     .line 14
     invoke-static {}, Lcom/google/android/material/chip/Chip;->access$600()Landroid/graphics/Rect;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lt1/c;->P0(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, p1}, Lk2/c;->U0(Landroid/graphics/Rect;)V
 
     :goto_1
     return-void

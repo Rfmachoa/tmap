@@ -116,11 +116,11 @@
     const/16 v1, 0x22
 
     .line 9
-    invoke-static {v2, v1}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {v2, v1}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v1
 
-    invoke-static {p1, v1}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {p1, v1}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v1
 
@@ -128,7 +128,7 @@
 
     const-string v5, " command:"
 
-    invoke-static {v1, v4, v2, v5, p1}, Lcom/android/billingclient/api/f;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v4, v2, v5, p1}, Lcom/google/android/gms/gcm/c;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

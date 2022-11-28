@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/camera2/Camera2Config$DefaultProvider;
@@ -31,59 +35,59 @@
     return-object p0
 .end method
 
-.method public static synthetic b(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Lx/l;
+.method public static synthetic b(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Lb0/s;
     .locals 0
 
-    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/Camera2Config;->d(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Lx/l;
+    invoke-static {p0, p1, p2}, Landroidx/camera/camera2/Camera2Config;->d(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Lb0/s;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c()Landroidx/camera/core/a0;
+.method public static c()Landroidx/camera/core/w;
     .locals 4
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    sget-object v0, Lq/c;->a:Lq/c;
+    sget-object v0, Lu/c;->a:Lu/c;
 
     .line 2
-    sget-object v1, Lq/b;->a:Lq/b;
+    sget-object v1, Lu/b;->a:Lu/b;
 
     .line 3
-    sget-object v2, Lq/a;->a:Lq/a;
+    sget-object v2, Lu/a;->a:Lu/a;
 
     .line 4
-    new-instance v3, Landroidx/camera/core/a0$a;
+    new-instance v3, Landroidx/camera/core/w$a;
 
-    invoke-direct {v3}, Landroidx/camera/core/a0$a;-><init>()V
+    invoke-direct {v3}, Landroidx/camera/core/w$a;-><init>()V
 
     .line 5
-    invoke-virtual {v3, v0}, Landroidx/camera/core/a0$a;->j(Lx/m$a;)Landroidx/camera/core/a0$a;
+    invoke-virtual {v3, v0}, Landroidx/camera/core/w$a;->j(Lb0/t$a;)Landroidx/camera/core/w$a;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {v0, v1}, Landroidx/camera/core/a0$a;->l(Lx/l$a;)Landroidx/camera/core/a0$a;
+    invoke-virtual {v0, v1}, Landroidx/camera/core/w$a;->l(Lb0/s$a;)Landroidx/camera/core/w$a;
 
     move-result-object v0
 
     .line 7
-    invoke-virtual {v0, v2}, Landroidx/camera/core/a0$a;->v(Landroidx/camera/core/impl/UseCaseConfigFactory$a;)Landroidx/camera/core/a0$a;
+    invoke-virtual {v0, v2}, Landroidx/camera/core/w$a;->u(Landroidx/camera/core/impl/UseCaseConfigFactory$b;)Landroidx/camera/core/w$a;
 
     move-result-object v0
 
     .line 8
-    invoke-virtual {v0}, Landroidx/camera/core/a0$a;->b()Landroidx/camera/core/a0;
+    invoke-virtual {v0}, Landroidx/camera/core/w$a;->b()Landroidx/camera/core/w;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static synthetic d(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Lx/l;
+.method public static synthetic d(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)Lb0/s;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -93,9 +97,9 @@
 
     .line 1
     :try_start_0
-    new-instance v0, Landroidx/camera/camera2/internal/u0;
+    new-instance v0, Landroidx/camera/camera2/internal/j1;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/camera/camera2/internal/u0;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/camera/camera2/internal/j1;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/Set;)V
     :try_end_0
     .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -121,9 +125,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Landroidx/camera/camera2/internal/w0;
+    new-instance v0, Landroidx/camera/camera2/internal/m1;
 
-    invoke-direct {v0, p0}, Landroidx/camera/camera2/internal/w0;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Landroidx/camera/camera2/internal/m1;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method

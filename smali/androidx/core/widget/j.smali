@@ -3,6 +3,14 @@
 .source "ImageViewCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/j$a;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -23,7 +31,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+    invoke-static {p0}, Landroidx/core/widget/j$a;->a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
@@ -40,7 +48,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-static {p0}, Landroidx/core/widget/j$a;->b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0
 
@@ -59,7 +67,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    invoke-static {p0, p1}, Landroidx/core/widget/j$a;->c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
@@ -76,7 +84,7 @@
     .end param
 
     .line 1
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-static {p0, p1}, Landroidx/core/widget/j$a;->d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
 
     return-void
 .end method

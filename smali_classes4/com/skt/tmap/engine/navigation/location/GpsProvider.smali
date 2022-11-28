@@ -86,7 +86,7 @@
     const-string v1, "android.permission.ACCESS_FINE_LOCATION"
 
     .line 1
-    invoke-static {p0, v1}, Landroidx/core/content/d;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v1}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
 

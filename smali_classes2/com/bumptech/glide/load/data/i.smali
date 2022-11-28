@@ -121,7 +121,7 @@
 
     const-string v0, "FileDescriptor is null for: "
 
-    invoke-static {v0, p1}, Landroidx/appcompat/widget/b0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0, p1}, Landroidx/appcompat/widget/g0;->a(Ljava/lang/String;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 

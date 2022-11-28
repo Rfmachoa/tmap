@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/common/api/internal/zap;
 .super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnCancelListener;
@@ -10,14 +10,6 @@
 .field public volatile zaa:Z
 
 .field public final zab:Ljava/util/concurrent/atomic/AtomicReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lcom/google/android/gms/common/api/internal/zam;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field public final zac:Lcom/google/android/gms/common/GoogleApiAvailability;
 
@@ -42,14 +34,14 @@
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zap;->zab:Ljava/util/concurrent/atomic/AtomicReference;
 
-    new-instance p1, Lcom/google/android/gms/internal/base/zaq;
+    new-instance p1, Lcom/google/android/gms/internal/base/zau;
 
     .line 3
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/google/android/gms/internal/base/zaq;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p1, v0}, Lcom/google/android/gms/internal/base/zau;-><init>(Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zap;->zad:Landroid/os/Handler;
 
@@ -479,14 +471,15 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zap;->zab:Ljava/util/concurrent/atomic/AtomicReference;
 
+    :cond_0
     const/4 p2, 0x0
 
     .line 2
     invoke-virtual {p1, p2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_1
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zap;->zad:Landroid/os/Handler;
 
@@ -497,6 +490,15 @@
     .line 3
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_0
+    return-void
+
+    .line 4
+    :cond_1
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
     return-void
 .end method

@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/messaging/Constants$MessageTypes;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "Constants.java"
 
 
 # annotations
@@ -16,30 +16,19 @@
 
 # static fields
 .field public static final DELETED:Ljava/lang/String; = "deleted_messages"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final MESSAGE:Ljava/lang/String; = "gcm"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final SEND_ERROR:Ljava/lang/String; = "send_error"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final SEND_EVENT:Ljava/lang/String; = "send_event"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

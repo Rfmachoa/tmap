@@ -238,6 +238,14 @@
 
 .method public setActionType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "actionType"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo;->actionType:Ljava/lang/String;
@@ -260,6 +268,14 @@
 
 .method public setDisplayLocationCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "displayLocationCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo;->displayLocationCode:Ljava/lang/String;
@@ -282,6 +298,14 @@
 
 .method public setIcon(Lcom/skt/moment/net/vo/IconVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "icon"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResHappenBodyVo;->icon:Lcom/skt/moment/net/vo/IconVo;

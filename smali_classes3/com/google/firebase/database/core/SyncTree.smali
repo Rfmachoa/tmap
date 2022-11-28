@@ -147,18 +147,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$000(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic access$100(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/logging/LogWrapper;
+.method public static synthetic access$000(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/logging/LogWrapper;
     .locals 0
 
     .line 1
@@ -167,16 +156,16 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1000(Lcom/google/firebase/database/core/SyncTree;)Ljava/util/Map;
+.method public static synthetic access$100(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/persistence/PersistenceManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/google/firebase/database/core/SyncTree;->tagToQueryMap:Ljava/util/Map;
+    iget-object p0, p0, Lcom/google/firebase/database/core/SyncTree;->persistenceManager:Lcom/google/firebase/database/core/persistence/PersistenceManager;
 
     return-object p0
 .end method
 
-.method public static synthetic access$1100(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/view/View;)V
+.method public static synthetic access$1000(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/view/View;)V
     .locals 0
 
     .line 1
@@ -185,7 +174,7 @@
     return-void
 .end method
 
-.method public static synthetic access$1200(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Ljava/util/List;
+.method public static synthetic access$1100(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -196,7 +185,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1300(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
+.method public static synthetic access$1200(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/view/QuerySpec;
     .locals 0
 
     .line 1
@@ -207,7 +196,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1500(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
+.method public static synthetic access$1400(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/SyncTree$ListenProvider;
     .locals 0
 
     .line 1
@@ -216,7 +205,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$1600(Lcom/google/firebase/database/core/SyncTree;Ljava/util/List;)V
+.method public static synthetic access$1500(Lcom/google/firebase/database/core/SyncTree;Ljava/util/List;)V
     .locals 0
 
     .line 1
@@ -225,7 +214,7 @@
     return-void
 .end method
 
-.method public static synthetic access$1700(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/operation/Operation;Lcom/google/firebase/database/core/utilities/ImmutableTree;Lcom/google/firebase/database/snapshot/Node;Lcom/google/firebase/database/core/WriteTreeRef;)Ljava/util/List;
+.method public static synthetic access$1600(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/operation/Operation;Lcom/google/firebase/database/core/utilities/ImmutableTree;Lcom/google/firebase/database/snapshot/Node;Lcom/google/firebase/database/core/WriteTreeRef;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -236,16 +225,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$200(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/persistence/PersistenceManager;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/google/firebase/database/core/SyncTree;->persistenceManager:Lcom/google/firebase/database/core/persistence/PersistenceManager;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$300(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/WriteTree;
+.method public static synthetic access$200(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/WriteTree;
     .locals 0
 
     .line 1
@@ -254,7 +234,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$400(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/operation/Operation;)Ljava/util/List;
+.method public static synthetic access$300(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/operation/Operation;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -265,7 +245,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$500(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/Tag;)Lcom/google/firebase/database/core/view/QuerySpec;
+.method public static synthetic access$400(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/Tag;)Lcom/google/firebase/database/core/view/QuerySpec;
     .locals 0
 
     .line 1
@@ -276,7 +256,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$600(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/operation/Operation;)Ljava/util/List;
+.method public static synthetic access$500(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/operation/Operation;)Ljava/util/List;
     .locals 0
 
     .line 1
@@ -287,7 +267,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$700(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+.method public static synthetic access$600(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
     .locals 0
 
     .line 1
@@ -296,7 +276,7 @@
     return-object p0
 .end method
 
-.method public static synthetic access$702(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
+.method public static synthetic access$602(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/utilities/ImmutableTree;)Lcom/google/firebase/database/core/utilities/ImmutableTree;
     .locals 0
 
     .line 1
@@ -305,7 +285,7 @@
     return-object p1
 .end method
 
-.method public static synthetic access$800(Lcom/google/firebase/database/core/SyncTree;)Ljava/util/Map;
+.method public static synthetic access$700(Lcom/google/firebase/database/core/SyncTree;)Ljava/util/Map;
     .locals 0
 
     .line 1
@@ -314,13 +294,22 @@
     return-object p0
 .end method
 
-.method public static synthetic access$900(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/Tag;
+.method public static synthetic access$800(Lcom/google/firebase/database/core/SyncTree;)Lcom/google/firebase/database/core/Tag;
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/google/firebase/database/core/SyncTree;->getNextQueryTag()Lcom/google/firebase/database/core/Tag;
 
     move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic access$900(Lcom/google/firebase/database/core/SyncTree;)Ljava/util/Map;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/google/firebase/database/core/SyncTree;->tagToQueryMap:Ljava/util/Map;
 
     return-object p0
 .end method
@@ -1023,8 +1012,8 @@
     return-object p1
 .end method
 
-.method private removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;)Ljava/util/List;
-    .locals 2
+.method private removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)Ljava/util/List;
+    .locals 8
     .param p1    # Lcom/google/firebase/database/core/view/QuerySpec;
         .annotation build Lcom/google/firebase/database/annotations/NotNull;
         .end annotation
@@ -1043,21 +1032,33 @@
             "Lcom/google/firebase/database/core/view/QuerySpec;",
             "Lcom/google/firebase/database/core/EventRegistration;",
             "Lcom/google/firebase/database/DatabaseError;",
-            ")",
+            "Z)",
             "Ljava/util/List<",
             "Lcom/google/firebase/database/core/view/Event;",
             ">;"
         }
     .end annotation
 
-    .line 2
+    .line 5
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree;->persistenceManager:Lcom/google/firebase/database/core/persistence/PersistenceManager;
 
-    new-instance v1, Lcom/google/firebase/database/core/SyncTree$14;
+    new-instance v7, Lcom/google/firebase/database/core/SyncTree$14;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/google/firebase/database/core/SyncTree$14;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;)V
+    move-object v1, v7
 
-    invoke-interface {v0, v1}, Lcom/google/firebase/database/core/persistence/PersistenceManager;->runInTransaction(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    move-object v2, p0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move v6, p4
+
+    invoke-direct/range {v1 .. v6}, Lcom/google/firebase/database/core/SyncTree$14;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)V
+
+    invoke-interface {v0, v7}, Lcom/google/firebase/database/core/persistence/PersistenceManager;->runInTransaction(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1104,7 +1105,7 @@
     if-nez v1, :cond_0
 
     .line 3
-    invoke-direct {p0, v0}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
+    invoke-virtual {p0, v0}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
 
     move-result-object v1
 
@@ -1146,7 +1147,7 @@
     move-result-object v0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
+    invoke-virtual {p0, p1}, Lcom/google/firebase/database/core/SyncTree;->tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
 
     move-result-object v1
 
@@ -1205,21 +1206,6 @@
     return-void
 .end method
 
-.method private tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree;->queryToTagMap:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/firebase/database/core/Tag;
-
-    return-object p1
-.end method
-
 
 # virtual methods
 .method public ackUserWrite(JZZLcom/google/firebase/database/core/utilities/Clock;)Ljava/util/List;
@@ -1265,7 +1251,7 @@
 .end method
 
 .method public addEventRegistration(Lcom/google/firebase/database/core/EventRegistration;)Ljava/util/List;
-    .locals 2
+    .locals 1
     .param p1    # Lcom/google/firebase/database/core/EventRegistration;
         .annotation build Lcom/google/firebase/database/annotations/NotNull;
         .end annotation
@@ -1282,12 +1268,40 @@
         }
     .end annotation
 
+    const/4 v0, 0x0
+
     .line 1
+    invoke-virtual {p0, p1, v0}, Lcom/google/firebase/database/core/SyncTree;->addEventRegistration(Lcom/google/firebase/database/core/EventRegistration;Z)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public addEventRegistration(Lcom/google/firebase/database/core/EventRegistration;Z)Ljava/util/List;
+    .locals 2
+    .param p1    # Lcom/google/firebase/database/core/EventRegistration;
+        .annotation build Lcom/google/firebase/database/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/firebase/database/core/EventRegistration;",
+            "Z)",
+            "Ljava/util/List<",
+            "+",
+            "Lcom/google/firebase/database/core/view/Event;",
+            ">;"
+        }
+    .end annotation
+
+    .line 2
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree;->persistenceManager:Lcom/google/firebase/database/core/persistence/PersistenceManager;
 
     new-instance v1, Lcom/google/firebase/database/core/SyncTree$13;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/firebase/database/core/SyncTree$13;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/EventRegistration;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/google/firebase/database/core/SyncTree$13;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/EventRegistration;Z)V
 
     invoke-interface {v0, v1}, Lcom/google/firebase/database/core/persistence/PersistenceManager;->runInTransaction(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
@@ -2004,9 +2018,9 @@
     .line 1
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree;->persistenceManager:Lcom/google/firebase/database/core/persistence/PersistenceManager;
 
-    new-instance v1, Lcom/google/firebase/database/core/d;
+    new-instance v1, Lcom/google/firebase/database/core/f;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/firebase/database/core/d;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/firebase/database/core/f;-><init>(Lcom/google/firebase/database/core/SyncTree;Lcom/google/firebase/database/core/view/QuerySpec;)V
 
     invoke-interface {v0, v1}, Lcom/google/firebase/database/core/persistence/PersistenceManager;->runInTransaction(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
@@ -2050,9 +2064,20 @@
 .method public keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;Z)V
     .locals 1
 
-    if-eqz p2, :cond_0
+    const/4 v0, 0x0
 
     .line 1
+    invoke-virtual {p0, p1, p2, v0}, Lcom/google/firebase/database/core/SyncTree;->keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
+
+    return-void
+.end method
+
+.method public keepSynced(Lcom/google/firebase/database/core/view/QuerySpec;ZZ)V
+    .locals 1
+
+    if-eqz p2, :cond_0
+
+    .line 2
     iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree;->keepSyncedQueries:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2061,14 +2086,14 @@
 
     if-nez v0, :cond_0
 
-    .line 2
+    .line 3
     new-instance p2, Lcom/google/firebase/database/core/SyncTree$KeepSyncedEventRegistration;
 
     invoke-direct {p2, p1}, Lcom/google/firebase/database/core/SyncTree$KeepSyncedEventRegistration;-><init>(Lcom/google/firebase/database/core/view/QuerySpec;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/firebase/database/core/SyncTree;->addEventRegistration(Lcom/google/firebase/database/core/EventRegistration;)Ljava/util/List;
+    invoke-virtual {p0, p2, p3}, Lcom/google/firebase/database/core/SyncTree;->addEventRegistration(Lcom/google/firebase/database/core/EventRegistration;Z)Ljava/util/List;
 
-    .line 3
+    .line 4
     iget-object p2, p0, Lcom/google/firebase/database/core/SyncTree;->keepSyncedQueries:Ljava/util/Set;
 
     invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -2078,7 +2103,7 @@
     :cond_0
     if-nez p2, :cond_1
 
-    .line 4
+    .line 5
     iget-object p2, p0, Lcom/google/firebase/database/core/SyncTree;->keepSyncedQueries:Ljava/util/Set;
 
     invoke-interface {p2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2087,14 +2112,14 @@
 
     if-eqz p2, :cond_1
 
-    .line 5
+    .line 6
     new-instance p2, Lcom/google/firebase/database/core/SyncTree$KeepSyncedEventRegistration;
 
     invoke-direct {p2, p1}, Lcom/google/firebase/database/core/SyncTree$KeepSyncedEventRegistration;-><init>(Lcom/google/firebase/database/core/view/QuerySpec;)V
 
-    invoke-virtual {p0, p2}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/EventRegistration;)Ljava/util/List;
+    invoke-virtual {p0, p2, p3}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/EventRegistration;Z)Ljava/util/List;
 
-    .line 6
+    .line 7
     iget-object p2, p0, Lcom/google/firebase/database/core/SyncTree;->keepSyncedQueries:Ljava/util/Set;
 
     invoke-interface {p2, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -2135,7 +2160,7 @@
 .end method
 
 .method public removeAllEventRegistrations(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/DatabaseError;)Ljava/util/List;
-    .locals 1
+    .locals 2
     .param p1    # Lcom/google/firebase/database/core/view/QuerySpec;
         .annotation build Lcom/google/firebase/database/annotations/NotNull;
         .end annotation
@@ -2158,8 +2183,10 @@
 
     const/4 v0, 0x0
 
+    const/4 v1, 0x0
+
     .line 1
-    invoke-direct {p0, p1, v0, p2}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;)Ljava/util/List;
+    invoke-direct {p0, p1, v0, p2, v1}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)Ljava/util/List;
 
     move-result-object p1
 
@@ -2195,7 +2222,7 @@
 .end method
 
 .method public removeEventRegistration(Lcom/google/firebase/database/core/EventRegistration;)Ljava/util/List;
-    .locals 2
+    .locals 3
     .param p1    # Lcom/google/firebase/database/core/EventRegistration;
         .annotation build Lcom/google/firebase/database/annotations/NotNull;
         .end annotation
@@ -2218,7 +2245,42 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, p1, v1}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;)Ljava/util/List;
+    const/4 v2, 0x0
+
+    .line 2
+    invoke-direct {p0, v0, p1, v1, v2}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public removeEventRegistration(Lcom/google/firebase/database/core/EventRegistration;Z)Ljava/util/List;
+    .locals 2
+    .param p1    # Lcom/google/firebase/database/core/EventRegistration;
+        .annotation build Lcom/google/firebase/database/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/firebase/database/core/EventRegistration;",
+            "Z)",
+            "Ljava/util/List<",
+            "Lcom/google/firebase/database/core/view/Event;",
+            ">;"
+        }
+    .end annotation
+
+    .line 3
+    invoke-virtual {p1}, Lcom/google/firebase/database/core/EventRegistration;->getQuerySpec()Lcom/google/firebase/database/core/view/QuerySpec;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {p0, v0, p1, v1, p2}, Lcom/google/firebase/database/core/SyncTree;->removeEventRegistration(Lcom/google/firebase/database/core/view/QuerySpec;Lcom/google/firebase/database/core/EventRegistration;Lcom/google/firebase/database/DatabaseError;Z)Ljava/util/List;
 
     move-result-object p1
 
@@ -2253,4 +2315,19 @@
     invoke-interface {v0, v1}, Lcom/google/firebase/database/core/persistence/PersistenceManager;->runInTransaction(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public tagForQuery(Lcom/google/firebase/database/core/view/QuerySpec;)Lcom/google/firebase/database/core/Tag;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/firebase/database/core/SyncTree;->queryToTagMap:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/firebase/database/core/Tag;
+
+    return-object p1
 .end method

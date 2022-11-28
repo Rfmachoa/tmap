@@ -63,19 +63,6 @@
 # direct methods
 .method public constructor <init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x0,
-            0x10
-        }
-        names = {
-            "handler",
-            "runAtMillis",
-            "task"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -122,14 +109,6 @@
 # virtual methods
 .method public a(Ljava/util/concurrent/Delayed;)I
     .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
 
     .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -151,14 +130,6 @@
 
 .method public cancel(Z)Z
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mayInterruptIfRunning"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/c$c;->d:Lcom/google/common/util/concurrent/ListenableFuture;
@@ -172,14 +143,6 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x1000
-        }
-        names = {
-            "o"
-        }
-    .end annotation
 
     .line 1
     check-cast p1, Ljava/util/concurrent/Delayed;
@@ -222,17 +185,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "timeout",
-            "unit"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
@@ -261,14 +213,6 @@
 
 .method public getDelay(Ljava/util/concurrent/TimeUnit;)J
     .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "unit"
-        }
-    .end annotation
 
     .line 1
     iget-wide v0, p0, Landroidx/camera/core/impl/utils/executor/c$c;->b:J

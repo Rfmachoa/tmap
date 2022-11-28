@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/internal/zat;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;
@@ -9,13 +9,6 @@
 
 # instance fields
 .field public final zaa:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;"
-        }
-    .end annotation
-.end field
 
 .field private final zab:Z
 
@@ -28,13 +21,6 @@
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/Api;Z)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api<",
-            "*>;Z)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

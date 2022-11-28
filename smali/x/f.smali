@@ -1,246 +1,342 @@
-.class public final Lx/f;
-.super Lx/f1;
-.source "AutoValue_SurfaceSizeDefinition.java"
+.class public Lx/f;
+.super Ljava/lang/Object;
+.source "OutputConfigurationCompatBaseImpl.java"
+
+# interfaces
+.implements Lx/b$a;
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lx/f$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final b:Ljava/lang/String; = "OutputConfigCompat"
 
 
 # instance fields
-.field public final a:Landroid/util/Size;
-
-.field public final b:Landroid/util/Size;
-
-.field public final c:Landroid/util/Size;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Size;Landroid/util/Size;Landroid/util/Size;)V
+.method public constructor <init>(Landroid/view/Surface;)V
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "analysisSize",
-            "previewSize",
-            "recordSize"
-        }
-    .end annotation
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    invoke-direct {p0}, Lx/f1;-><init>()V
-
-    const-string v0, "Null analysisSize"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    new-instance v0, Lx/f$a;
+
+    invoke-direct {v0, p1}, Lx/f$a;-><init>(Landroid/view/Surface;)V
+
+    iput-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 3
-    iput-object p1, p0, Lx/f;->a:Landroid/util/Size;
-
-    const-string p1, "Null previewSize"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 4
-    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 5
-    iput-object p2, p0, Lx/f;->b:Landroid/util/Size;
-
-    const-string p1, "Null recordSize"
-
-    .line 6
-    invoke-static {p3, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 7
-    iput-object p3, p0, Lx/f;->c:Landroid/util/Size;
+    iput-object p1, p0, Lx/f;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()Landroid/util/Size;
+.method public a(Landroid/view/Surface;)V
     .locals 1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    const-string v0, "Surface must not be null"
 
     .line 1
-    iget-object v0, p0, Lx/f;->a:Landroid/util/Size;
+    invoke-static {p1, v0}, Landroidx/core/util/p;->m(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 2
+    invoke-virtual {p0}, Lx/f;->c()Landroid/view/Surface;
+
+    move-result-object v0
+
+    if-eq v0, p1, :cond_1
+
+    .line 3
+    invoke-virtual {p0}, Lx/f;->k()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot have 2 surfaces for a non-sharing configuration"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 5
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Exceeds maximum number of surfaces"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 6
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Surface is already added!"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public b(Landroid/view/Surface;)V
+    .locals 1
+    .param p1    # Landroid/view/Surface;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-virtual {p0}, Lx/f;->c()Landroid/view/Surface;
+
+    move-result-object v0
+
+    if-ne v0, p1, :cond_0
+
+    .line 2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot remove surface associated with this output configuration"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 3
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Surface is not part of this output configuration"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public c()Landroid/view/Surface;
+    .locals 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/f$a;
+
+    iget-object v0, v0, Lx/f$a;->a:Ljava/util/List;
+
+    .line 2
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 3
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/Surface;
 
     return-object v0
 .end method
 
-.method public c()Landroid/util/Size;
+.method public d()I
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lx/f;->b:Landroid/util/Size;
+    const/4 v0, -0x1
 
-    return-object v0
+    return v0
 .end method
 
-.method public d()Landroid/util/Size;
+.method public e()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lx/f;->c:Landroid/util/Size;
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/f$a;
+
+    iget-object v0, v0, Lx/f$a;->e:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "o"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
+    .locals 1
 
     .line 1
-    :cond_0
-    instance-of v1, p1, Lx/f1;
+    instance-of v0, p1, Lx/f;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_0
 
-    if-eqz v1, :cond_2
+    const/4 p1, 0x0
+
+    return p1
 
     .line 2
-    check-cast p1, Lx/f1;
+    :cond_0
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
 
-    .line 3
-    iget-object v1, p0, Lx/f;->a:Landroid/util/Size;
+    check-cast p1, Lx/f;
 
-    invoke-virtual {p1}, Lx/f1;->b()Landroid/util/Size;
+    iget-object p1, p1, Lx/f;->a:Ljava/lang/Object;
 
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lx/f;->b:Landroid/util/Size;
-
-    .line 4
-    invoke-virtual {p1}, Lx/f1;->c()Landroid/util/Size;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lx/f;->c:Landroid/util/Size;
-
-    .line 5
-    invoke-virtual {p1}, Lx/f1;->d()Landroid/util/Size;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    return p1
+.end method
 
-    goto :goto_0
+.method public f(Ljava/lang/String;)V
+    .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
 
-    :cond_1
-    move v0, v2
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
 
-    :goto_0
+    check-cast v0, Lx/f$a;
+
+    iput-object p1, v0, Lx/f$a;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public g()I
+    .locals 1
+
+    const/4 v0, 0x1
+
     return v0
+.end method
 
-    :cond_2
-    return v2
+.method public h()Ljava/util/List;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/view/Surface;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/f$a;
+
+    iget-object v0, v0, Lx/f$a;->a:Ljava/util/List;
+
+    return-object v0
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lx/f;->a:Landroid/util/Size;
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    .line 2
-    iget-object v2, p0, Lx/f;->b:Landroid/util/Size;
-
-    invoke-virtual {v2}, Landroid/util/Size;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    .line 3
-    iget-object v1, p0, Lx/f;->c:Landroid/util/Size;
-
-    invoke-virtual {v1}, Landroid/util/Size;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public toString()Ljava/lang/String;
+.method public i()V
     .locals 2
 
-    const-string v0, "SurfaceSizeDefinition{analysisSize="
-
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lx/f$a;
 
-    iget-object v1, p0, Lx/f;->a:Landroid/util/Size;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-boolean v1, v0, Lx/f$a;->f:Z
 
-    const-string v1, ", previewSize="
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public j()Ljava/lang/Object;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
-    iget-object v1, p0, Lx/f;->b:Landroid/util/Size;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recordSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx/f;->c:Landroid/util/Size;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public k()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lx/f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lx/f$a;
+
+    iget-boolean v0, v0, Lx/f$a;->f:Z
+
+    return v0
 .end method

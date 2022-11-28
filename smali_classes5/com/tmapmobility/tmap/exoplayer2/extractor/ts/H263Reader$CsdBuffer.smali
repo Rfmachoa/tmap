@@ -207,7 +207,7 @@
     if-eq p1, p2, :cond_3
 
     .line 5
-    invoke-static {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->c()V
@@ -231,7 +231,7 @@
     if-le p1, p2, :cond_5
 
     .line 9
-    invoke-static {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->c()V
@@ -248,7 +248,7 @@
     if-eq p1, v3, :cond_7
 
     .line 12
-    invoke-static {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->c()V

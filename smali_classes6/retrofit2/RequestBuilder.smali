@@ -261,18 +261,18 @@
     .line 5
     :cond_1
     :goto_1
-    new-instance v3, Lzj/m;
+    new-instance v3, Lem/m;
 
-    invoke-direct {v3}, Lzj/m;-><init>()V
+    invoke-direct {v3}, Lem/m;-><init>()V
 
     .line 6
-    invoke-virtual {v3, p0, v1, v2}, Lzj/m;->o2(Ljava/lang/String;II)Lzj/m;
+    invoke-virtual {v3, p0, v1, v2}, Lem/m;->H2(Ljava/lang/String;II)Lem/m;
 
     .line 7
-    invoke-static {v3, p0, v2, v0, p1}, Lretrofit2/RequestBuilder;->canonicalizeForPath(Lzj/m;Ljava/lang/String;IIZ)V
+    invoke-static {v3, p0, v2, v0, p1}, Lretrofit2/RequestBuilder;->canonicalizeForPath(Lem/m;Ljava/lang/String;IIZ)V
 
     .line 8
-    invoke-virtual {v3}, Lzj/m;->q1()Ljava/lang/String;
+    invoke-virtual {v3}, Lem/m;->M1()Ljava/lang/String;
 
     move-result-object p0
 
@@ -280,7 +280,7 @@
     return-object p0
 .end method
 
-.method private static canonicalizeForPath(Lzj/m;Ljava/lang/String;IIZ)V
+.method private static canonicalizeForPath(Lem/m;Ljava/lang/String;IIZ)V
     .locals 6
 
     const/4 v0, 0x0
@@ -347,7 +347,7 @@
 
     .line 11
     :cond_1
-    invoke-virtual {p0, v1}, Lzj/m;->p2(I)Lzj/m;
+    invoke-virtual {p0, v1}, Lem/m;->I2(I)Lem/m;
 
     goto :goto_3
 
@@ -356,31 +356,31 @@
     if-nez v0, :cond_3
 
     .line 12
-    new-instance v0, Lzj/m;
+    new-instance v0, Lem/m;
 
-    invoke-direct {v0}, Lzj/m;-><init>()V
+    invoke-direct {v0}, Lem/m;-><init>()V
 
     .line 13
     :cond_3
-    invoke-virtual {v0, v1}, Lzj/m;->p2(I)Lzj/m;
+    invoke-virtual {v0, v1}, Lem/m;->I2(I)Lem/m;
 
     .line 14
     :goto_2
-    invoke-virtual {v0}, Lzj/m;->H0()Z
+    invoke-virtual {v0}, Lem/m;->b1()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
     .line 15
-    invoke-virtual {v0}, Lzj/m;->readByte()B
+    invoke-virtual {v0}, Lem/m;->readByte()B
 
     move-result v2
 
     and-int/lit16 v2, v2, 0xff
 
     .line 16
-    invoke-virtual {p0, v3}, Lzj/m;->Z1(I)Lzj/m;
+    invoke-virtual {p0, v3}, Lem/m;->s2(I)Lem/m;
 
     .line 17
     sget-object v4, Lretrofit2/RequestBuilder;->HEX_DIGITS:[C
@@ -391,14 +391,14 @@
 
     aget-char v5, v4, v5
 
-    invoke-virtual {p0, v5}, Lzj/m;->Z1(I)Lzj/m;
+    invoke-virtual {p0, v5}, Lem/m;->s2(I)Lem/m;
 
     and-int/lit8 v2, v2, 0xf
 
     .line 18
     aget-char v2, v4, v2
 
-    invoke-virtual {p0, v2}, Lzj/m;->Z1(I)Lzj/m;
+    invoke-virtual {p0, v2}, Lem/m;->s2(I)Lem/m;
 
     goto :goto_2
 
@@ -473,7 +473,7 @@
 
     const-string v1, "Malformed content type: "
 
-    invoke-static {v1, p2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -586,7 +586,7 @@
 
     const-string p3, "@Path parameters shouldn\'t perform path traversal (\'.\' or \'..\'): "
 
-    invoke-static {p3, p2}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p2}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -818,14 +818,12 @@
     :goto_2
     iget-object v2, p0, Lretrofit2/RequestBuilder;->requestBuilder:Lokhttp3/Request$Builder;
 
-    .line 15
     invoke-virtual {v2, v0}, Lokhttp3/Request$Builder;->url(Lokhttp3/HttpUrl;)Lokhttp3/Request$Builder;
 
     move-result-object v0
 
     iget-object v2, p0, Lretrofit2/RequestBuilder;->headersBuilder:Lokhttp3/Headers$Builder;
 
-    .line 16
     invoke-virtual {v2}, Lokhttp3/Headers$Builder;->build()Lokhttp3/Headers;
 
     move-result-object v2
@@ -836,14 +834,13 @@
 
     iget-object v2, p0, Lretrofit2/RequestBuilder;->method:Ljava/lang/String;
 
-    .line 17
     invoke-virtual {v0, v2, v1}, Lokhttp3/Request$Builder;->method(Ljava/lang/String;Lokhttp3/RequestBody;)Lokhttp3/Request$Builder;
 
     move-result-object v0
 
     return-object v0
 
-    .line 18
+    .line 15
     :cond_6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

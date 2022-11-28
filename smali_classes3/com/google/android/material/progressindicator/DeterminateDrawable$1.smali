@@ -1,5 +1,5 @@
-.class final Lcom/google/android/material/progressindicator/DeterminateDrawable$1;
-.super Lf2/d;
+.class Lcom/google/android/material/progressindicator/DeterminateDrawable$1;
+.super Lw2/d;
 .source "DeterminateDrawable.java"
 
 
@@ -9,13 +9,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lf2/d<",
+        "Lw2/d<",
         "Lcom/google/android/material/progressindicator/DeterminateDrawable;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lf2/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lw2/d;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

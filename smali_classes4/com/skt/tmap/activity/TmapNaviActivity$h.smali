@@ -88,7 +88,7 @@
     :cond_0
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapNaviActivity$h;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 
     :cond_1
     :goto_0

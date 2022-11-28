@@ -122,11 +122,11 @@
     iput-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->gson:Lcom/google/gson/Gson;
 
     .line 5
-    invoke-static {}, Lio/reactivex/rxjava3/subjects/PublishSubject;->O8()Lio/reactivex/rxjava3/subjects/PublishSubject;
+    invoke-static {}, Lio/reactivex/rxjava3/subjects/PublishSubject;->g()Lio/reactivex/rxjava3/subjects/PublishSubject;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lio/reactivex/rxjava3/subjects/c;->M8()Lio/reactivex/rxjava3/subjects/c;
+    invoke-virtual {p1}, Lio/reactivex/rxjava3/subjects/c;->e()Lio/reactivex/rxjava3/subjects/c;
 
     move-result-object p1
 
@@ -221,10 +221,10 @@
     return-object v0
 .end method
 
-.method public static synthetic g(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lai/r0;)V
+.method public static synthetic g(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lek/r0;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->lambda$query$11(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lai/r0;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->lambda$query$11(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lek/r0;)V
 
     return-void
 .end method
@@ -318,10 +318,10 @@
     return-void
 .end method
 
-.method public static synthetic i(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Ljava/util/Iterator;)Lai/v0;
+.method public static synthetic i(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Ljava/util/Iterator;)Lek/v0;
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->lambda$updateModels$12(Ljava/util/Iterator;)Lai/v0;
+    invoke-direct {p0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->lambda$updateModels$12(Ljava/util/Iterator;)Lek/v0;
 
     move-result-object p0
 
@@ -625,7 +625,7 @@
     move-result-object v2
 
     .line 28
-    invoke-interface {v4, v2}, Lai/n0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {v4, v2}, Lek/n0;->onNext(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -679,7 +679,7 @@
     .line 37
     iget-object p3, p0, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->itemChangeSubject:Lio/reactivex/rxjava3/subjects/c;
 
-    invoke-interface {p3, p1}, Lai/n0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {p3, p1}, Lek/n0;->onNext(Ljava/lang/Object;)V
 
     .line 38
     invoke-interface {p2, p1}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
@@ -929,7 +929,7 @@
     move-result-object p2
 
     .line 28
-    invoke-interface {v2, p2}, Lai/n0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {v2, p2}, Lek/n0;->onNext(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -1096,19 +1096,19 @@
     .line 9
     iget-object p1, p0, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->toBeDisposed:Lio/reactivex/rxjava3/disposables/a;
 
-    invoke-direct {p0}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->updateModels()Lai/a;
+    invoke-direct {p0}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->updateModels()Lek/a;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/l;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/o;
 
-    invoke-direct {v1, p0, p2}, Lcom/amplifyframework/datastore/storage/sqlite/l;-><init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p0, p2}, Lcom/amplifyframework/datastore/storage/sqlite/o;-><init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/Consumer;)V
 
-    new-instance p2, Lcom/amplifyframework/datastore/storage/sqlite/o;
+    new-instance p2, Lcom/amplifyframework/datastore/storage/sqlite/r;
 
-    invoke-direct {p2, p3}, Lcom/amplifyframework/datastore/storage/sqlite/o;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {p2, p3}, Lcom/amplifyframework/datastore/storage/sqlite/r;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
-    invoke-virtual {v0, v1, p2}, Lai/a;->X0(Lci/a;Lci/g;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v1, p2}, Lek/a;->X0(Lgk/a;Lgk/g;)Lio/reactivex/rxjava3/disposables/c;
 
     move-result-object p2
 
@@ -1227,7 +1227,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$query$11(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lai/r0;)V
+.method private synthetic lambda$query$11(Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;Lek/r0;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1251,13 +1251,13 @@
 
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lcom/amplifyframework/datastore/storage/sqlite/d;
+    new-instance v0, Lcom/amplifyframework/datastore/storage/sqlite/b;
 
-    invoke-direct {v0, p3}, Lcom/amplifyframework/datastore/storage/sqlite/d;-><init>(Lai/r0;)V
+    invoke-direct {v0, p3}, Lcom/amplifyframework/datastore/storage/sqlite/b;-><init>(Lek/r0;)V
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {v1, p3}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {v1, p3}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->query(Ljava/lang/String;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1275,13 +1275,13 @@
 
     invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lcom/amplifyframework/datastore/storage/sqlite/d;
+    new-instance v0, Lcom/amplifyframework/datastore/storage/sqlite/b;
 
-    invoke-direct {v0, p3}, Lcom/amplifyframework/datastore/storage/sqlite/d;-><init>(Lai/r0;)V
+    invoke-direct {v0, p3}, Lcom/amplifyframework/datastore/storage/sqlite/b;-><init>(Lek/r0;)V
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/c;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/a;
 
-    invoke-direct {v1, p3}, Lcom/amplifyframework/datastore/storage/sqlite/c;-><init>(Lai/r0;)V
+    invoke-direct {v1, p3}, Lcom/amplifyframework/datastore/storage/sqlite/a;-><init>(Lek/r0;)V
 
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->query(Ljava/lang/Class;Lcom/amplifyframework/core/model/query/QueryOptions;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
 
@@ -1978,7 +1978,7 @@
     .line 19
     iget-object p3, p0, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->itemChangeSubject:Lio/reactivex/rxjava3/subjects/c;
 
-    invoke-interface {p3, p2}, Lai/n0;->onNext(Ljava/lang/Object;)V
+    invoke-interface {p3, p2}, Lek/n0;->onNext(Ljava/lang/Object;)V
 
     .line 20
     invoke-interface {p4, p2}, Lcom/amplifyframework/core/Consumer;->accept(Ljava/lang/Object;)V
@@ -2037,7 +2037,7 @@
 
     const-string p4, "Error in saving the model: "
 
-    invoke-static {p4, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2060,7 +2060,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$updateModels$12(Ljava/util/Iterator;)Lai/v0;
+.method private synthetic lambda$updateModels$12(Ljava/util/Iterator;)Lek/v0;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2102,7 +2102,7 @@
     move-result-object v1
 
     .line 6
-    invoke-static {p1, v1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -2161,7 +2161,7 @@
     invoke-direct {p1, v0}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;-><init>(Ljava/lang/String;)V
 
     .line 12
-    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;->saveToLocalStorage(Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;)Lai/p0;
+    invoke-static {p0, p1}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;->saveToLocalStorage(Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;)Lek/p0;
 
     move-result-object p1
 
@@ -2292,16 +2292,16 @@
     move-result-object v0
 
     .line 16
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/f;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/n;
 
-    invoke-direct {v1, p0, p1, v0}, Lcom/amplifyframework/datastore/storage/sqlite/f;-><init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;)V
+    invoke-direct {v1, p0, p1, v0}, Lcom/amplifyframework/datastore/storage/sqlite/n;-><init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;Lcom/amplifyframework/core/model/Model;Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;)V
 
-    invoke-static {v1}, Lai/p0;->R(Lai/t0;)Lai/p0;
+    invoke-static {v1}, Lek/p0;->R(Lek/t0;)Lek/p0;
 
     move-result-object p1
 
     .line 17
-    invoke-virtual {p1}, Lai/p0;->h()Ljava/lang/Object;
+    invoke-virtual {p1}, Lek/p0;->h()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -2329,24 +2329,24 @@
     return-object p1
 .end method
 
-.method private updateModels()Lai/a;
+.method private updateModels()Lek/a;
     .locals 2
 
     .line 1
-    invoke-static {p0}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;->fromLocalStorage(Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;)Lai/p0;
+    invoke-static {p0}, Lcom/amplifyframework/datastore/storage/sqlite/PersistentModelVersion;->fromLocalStorage(Lcom/amplifyframework/datastore/storage/LocalStorageAdapter;)Lek/p0;
 
     move-result-object v0
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/p;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/s;
 
-    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/storage/sqlite/p;-><init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;)V
+    invoke-direct {v1, p0}, Lcom/amplifyframework/datastore/storage/sqlite/s;-><init>(Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;)V
 
-    invoke-virtual {v0, v1}, Lai/p0;->r0(Lci/o;)Lai/p0;
+    invoke-virtual {v0, v1}, Lek/p0;->r0(Lgk/o;)Lek/p0;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lai/p0;->M0()Lai/a;
+    invoke-virtual {v0}, Lek/p0;->M0()Lek/a;
 
     move-result-object v0
 
@@ -2722,13 +2722,13 @@
     .line 14
     iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->context:Landroid/content/Context;
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/q;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/f;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/storage/sqlite/q;-><init>(Lcom/amplifyframework/core/Action;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/storage/sqlite/f;-><init>(Lcom/amplifyframework/core/Action;)V
 
-    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/r;
+    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/l;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/r;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/l;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->initialize(Landroid/content/Context;Lcom/amplifyframework/core/Consumer;Lcom/amplifyframework/core/Consumer;)V
     :try_end_1
@@ -3032,28 +3032,28 @@
     .line 4
     iget-object v0, p0, Lcom/amplifyframework/datastore/storage/sqlite/SQLiteStorageAdapter;->itemChangeSubject:Lio/reactivex/rxjava3/subjects/c;
 
-    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/m;
+    new-instance v1, Lcom/amplifyframework/datastore/storage/sqlite/p;
 
-    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/storage/sqlite/m;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {v1, p1}, Lcom/amplifyframework/datastore/storage/sqlite/p;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
-    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/n;
+    new-instance p1, Lcom/amplifyframework/datastore/storage/sqlite/q;
 
-    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/n;-><init>(Lcom/amplifyframework/core/Consumer;)V
+    invoke-direct {p1, p2}, Lcom/amplifyframework/datastore/storage/sqlite/q;-><init>(Lcom/amplifyframework/core/Consumer;)V
 
-    new-instance p2, Lcom/amplifyframework/datastore/x;
+    new-instance p2, Lcom/amplifyframework/datastore/t;
 
-    invoke-direct {p2, p3}, Lcom/amplifyframework/datastore/x;-><init>(Lcom/amplifyframework/core/Action;)V
+    invoke-direct {p2, p3}, Lcom/amplifyframework/datastore/t;-><init>(Lcom/amplifyframework/core/Action;)V
 
-    invoke-virtual {v0, v1, p1, p2}, Lai/g0;->k6(Lci/g;Lci/g;Lci/a;)Lio/reactivex/rxjava3/disposables/c;
+    invoke-virtual {v0, v1, p1, p2}, Lek/g0;->subscribe(Lgk/g;Lgk/g;Lgk/a;)Lio/reactivex/rxjava3/disposables/c;
 
     move-result-object p1
 
     .line 5
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance p2, Lcom/amplifyframework/datastore/storage/sqlite/s;
+    new-instance p2, Lcom/amplifyframework/datastore/storage/sqlite/m;
 
-    invoke-direct {p2, p1}, Lcom/amplifyframework/datastore/storage/sqlite/s;-><init>(Lio/reactivex/rxjava3/disposables/c;)V
+    invoke-direct {p2, p1}, Lcom/amplifyframework/datastore/storage/sqlite/m;-><init>(Lio/reactivex/rxjava3/disposables/c;)V
 
     return-object p2
 .end method
@@ -3304,7 +3304,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-interface {v0}, Lai/n0;->onComplete()V
+    invoke-interface {v0}, Lek/n0;->onComplete()V
 
     .line 5
     :cond_1

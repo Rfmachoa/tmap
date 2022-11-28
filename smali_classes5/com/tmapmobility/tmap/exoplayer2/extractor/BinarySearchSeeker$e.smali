@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;J)Lcom/tmapmobility/tmap/exoplayer2/extractor/BinarySearchSeeker$TimestampSearchResult;
+.method public abstract a(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;J)Lcom/tmapmobility/tmap/exoplayer2/extractor/BinarySearchSeeker$TimestampSearchResult;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

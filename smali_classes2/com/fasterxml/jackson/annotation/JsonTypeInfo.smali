@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lcom/fasterxml/jackson/annotation/JsonTypeInfo;
-        defaultImpl = Lcom/fasterxml/jackson/annotation/JsonTypeInfo$None;
+        defaultImpl = Lcom/fasterxml/jackson/annotation/JsonTypeInfo;
         include = .enum Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;->PROPERTY:Lcom/fasterxml/jackson/annotation/JsonTypeInfo$As;
         property = ""
         visible = false

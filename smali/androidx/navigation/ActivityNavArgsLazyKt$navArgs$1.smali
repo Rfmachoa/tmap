@@ -3,12 +3,12 @@
 .source "ActivityNavArgsLazy.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/ActivityNavArgsLazyKt;->a(Landroid/app/Activity;)Landroidx/navigation/l;
+    value = Landroidx/navigation/ActivityNavArgsLazyKt;->a(Landroid/app/Activity;)Landroidx/navigation/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,14 +19,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroid/os/Bundle;",
         ">;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nActivityNavArgsLazy.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityNavArgsLazy.kt\nandroidx/navigation/ActivityNavArgsLazyKt$navArgs$1\n*L\n1#1,45:1\n*E\n"
+    value = "SMAP\nActivityNavArgsLazy.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityNavArgsLazy.kt\nandroidx/navigation/ActivityNavArgsLazyKt$navArgs$1\n*L\n1#1,47:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -35,7 +35,7 @@
         "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u0002\"\n\u0008\u0000\u0010\u0001\u0018\u0001*\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Landroidx/navigation/k;",
+        "Landroidx/navigation/l;",
         "Args",
         "Landroid/os/Bundle;",
         "invoke",
@@ -45,7 +45,7 @@
     k = 0x3
     mv = {
         0x1,
-        0x4,
+        0x6,
         0x0
     }
 .end annotation
@@ -71,11 +71,11 @@
 
 # virtual methods
 .method public final invoke()Landroid/os/Bundle;
-    .locals 4
+    .locals 5
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 1
+    .line 2
     iget-object v0, p0, Landroidx/navigation/ActivityNavArgsLazyKt$navArgs$1;->$this_navArgs:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -86,42 +86,53 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
+    iget-object v2, p0, Landroidx/navigation/ActivityNavArgsLazyKt$navArgs$1;->$this_navArgs:Landroid/app/Activity;
+
+    .line 3
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    return-object v2
+    goto :goto_0
 
+    .line 4
     :cond_0
-    new-instance v2, Ljava/lang/IllegalStateException;
+    new-instance v3, Ljava/lang/IllegalStateException;
 
-    invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Landroidx/navigation/ActivityNavArgsLazyKt$navArgs$1;->$this_navArgs:Landroid/app/Activity;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v3, " has null extras in "
+    const-string v1, " has null extras in "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v2
+    throw v3
 
-    .line 3
     :cond_1
+    const/4 v3, 0x0
+
+    :goto_0
+    if-eqz v3, :cond_2
+
+    return-object v3
+
+    .line 5
+    :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-static {v1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -148,6 +159,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/navigation/ActivityNavArgsLazyKt$navArgs$1;->invoke()Landroid/os/Bundle;
 
     move-result-object v0

@@ -3,7 +3,7 @@
 .source "BasicNameValuePair.java"
 
 # interfaces
-.implements Ldf/y;
+.implements Lhh/y;
 .implements Ljava/lang/Cloneable;
 .implements Ljava/io/Serializable;
 
@@ -33,7 +33,7 @@
     const-string v0, "Name"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -76,7 +76,7 @@
 
     .line 1
     :cond_0
-    instance-of v1, p1, Ldf/y;
+    instance-of v1, p1, Lhh/y;
 
     const/4 v2, 0x0
 
@@ -101,7 +101,7 @@
     iget-object p1, p1, Lcz/msebera/android/httpclient/message/BasicNameValuePair;->value:Ljava/lang/String;
 
     .line 4
-    invoke-static {v1, p1}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -145,14 +145,14 @@
 
     const/16 v1, 0x11
 
-    invoke-static {v1, v0}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v1, v0}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
     .line 2
     iget-object v1, p0, Lcz/msebera/android/httpclient/message/BasicNameValuePair;->value:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 

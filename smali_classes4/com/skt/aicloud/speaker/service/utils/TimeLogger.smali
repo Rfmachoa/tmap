@@ -71,7 +71,7 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;Lma/d;Ljava/lang/String;)V
+.method public a(Landroid/content/Context;Lcom/skt/aicloud/speaker/service/utils/TimeLogger$KEY;Ljc/d;Ljava/lang/String;)V
     .locals 2
 
     .line 1
@@ -112,13 +112,13 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p3}, Lma/d;->l()Z
+    invoke-virtual {p3}, Ljc/d;->l()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p3}, Lma/d;->j()Ljava/lang/String;
+    invoke-virtual {p3}, Ljc/d;->j()Ljava/lang/String;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
     invoke-static {p1, v0}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p3}, Lma/d;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljc/d;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -630,7 +630,7 @@
 
     move-result-object v12
 
-    const-string/jumbo v13, "tts.reqeust"
+    const-string v13, "tts.reqeust"
 
     .line 27
     invoke-virtual {v3, v13, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -680,7 +680,7 @@
 
     move-result-object v12
 
-    const-string/jumbo v13, "tts.con"
+    const-string v13, "tts.con"
 
     .line 31
     invoke-virtual {v3, v13, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -730,7 +730,7 @@
 
     move-result-object v12
 
-    const-string/jumbo v13, "tts.audio"
+    const-string v13, "tts.audio"
 
     .line 35
     invoke-virtual {v3, v13, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -817,7 +817,7 @@
 
     const-string v4, "spk_fw"
 
-    const-string v6, "1.26.20"
+    const-string v6, "1.26.22"
 
     .line 42
     invoke-virtual {v3, v4, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
@@ -829,7 +829,7 @@
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ", spk_fw = 1.26.20"
+    const-string v0, ", spk_fw = 1.26.22"
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

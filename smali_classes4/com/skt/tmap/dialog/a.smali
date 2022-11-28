@@ -75,7 +75,7 @@
 
     iput-object v0, p0, Lcom/skt/tmap/dialog/a;->h:Landroid/view/View$OnClickListener;
 
-    const v0, 0x7f0d0078
+    const v0, 0x7f0d007a
 
     const/4 v1, 0x0
 
@@ -86,7 +86,7 @@
 
     iput-object p1, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const v0, 0x7f0a0033
+    const v0, 0x7f0a0034
 
     .line 6
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -105,7 +105,7 @@
     .line 8
     iget-object p1, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const v0, 0x7f0a0bac
+    const v0, 0x7f0a0c33
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -128,7 +128,7 @@
     .line 11
     iget-object p1, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const p2, 0x7f0a0bab
+    const p2, 0x7f0a0c32
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -157,7 +157,7 @@
     .line 14
     iget-object p1, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const p2, 0x7f0a0ba8
+    const p2, 0x7f0a0c2f
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
     .line 19
     iget-object p2, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const p3, 0x7f0a04f7
+    const p3, 0x7f0a0532
 
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -231,7 +231,7 @@
     .line 22
     iget-object p1, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const p2, 0x7f0a01c3
+    const p2, 0x7f0a01de
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -249,7 +249,7 @@
     .line 24
     iget-object p1, p0, Lcom/skt/tmap/dialog/a;->a:Landroid/view/View;
 
-    const p2, 0x7f0a01cf
+    const p2, 0x7f0a01e9
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

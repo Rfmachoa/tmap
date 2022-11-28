@@ -28,9 +28,9 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/c4;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    check-cast p1, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->M7(Lcom/skt/tmap/activity/TmapNaviActivity;Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/PartnerServiceItem;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->W7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Boolean;)V
 
     return-void
 .end method

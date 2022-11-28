@@ -259,6 +259,17 @@
     .end annotation
 .end method
 
+.method public abstract hasExplicitDeserializerFor(Lcom/fasterxml/jackson/databind/DeserializationConfig;Ljava/lang/Class;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/fasterxml/jackson/databind/DeserializationConfig;",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+.end method
+
 .method public abstract mapAbstractType(Lcom/fasterxml/jackson/databind/DeserializationConfig;Lcom/fasterxml/jackson/databind/JavaType;)Lcom/fasterxml/jackson/databind/JavaType;
     .annotation system Ldalvik/annotation/Throws;
         value = {

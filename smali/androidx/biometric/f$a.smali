@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/biometric/f;->h()Landroidx/biometric/BiometricPrompt$a;
+    value = Landroidx/biometric/f;->i()Landroidx/biometric/BiometricPrompt$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -3,7 +3,7 @@
 .source "UsernamePasswordCredentials.java"
 
 # interfaces
-.implements Lef/j;
+.implements Lih/j;
 .implements Ljava/io/Serializable;
 
 
@@ -32,7 +32,7 @@
     const-string v0, "Username:password string"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/16 v0, 0x3a
 
@@ -93,7 +93,7 @@
     const-string v0, "Username"
 
     .line 9
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 10
     new-instance v0, Lcz/msebera/android/httpclient/auth/BasicUserPrincipal;
@@ -133,7 +133,7 @@
 
     iget-object p1, p1, Lcz/msebera/android/httpclient/auth/UsernamePasswordCredentials;->principal:Lcz/msebera/android/httpclient/auth/BasicUserPrincipal;
 
-    invoke-static {v1, p1}, Lqg/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lui/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

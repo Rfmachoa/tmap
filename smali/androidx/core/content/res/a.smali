@@ -6,12 +6,14 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/content/res/a$f;,
+        Landroidx/core/content/res/a$h;,
         Landroidx/core/content/res/a$a;,
-        Landroidx/core/content/res/a$e;,
-        Landroidx/core/content/res/a$d;,
         Landroidx/core/content/res/a$b;,
-        Landroidx/core/content/res/a$c;
+        Landroidx/core/content/res/a$c;,
+        Landroidx/core/content/res/a$d;,
+        Landroidx/core/content/res/a$g;,
+        Landroidx/core/content/res/a$e;,
+        Landroidx/core/content/res/a$f;
     }
 .end annotation
 
@@ -30,12 +32,16 @@
 .end field
 
 .field public static final c:Ljava/util/WeakHashMap;
+    .annotation build Landroidx/annotation/GuardedBy;
+        value = "sColorStateCacheLock"
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/WeakHashMap<",
-            "Landroidx/core/content/res/a$c;",
+            "Landroidx/core/content/res/a$f;",
             "Landroid/util/SparseArray<",
-            "Landroidx/core/content/res/a$b;",
+            "Landroidx/core/content/res/a$e;",
             ">;>;"
         }
     .end annotation
@@ -88,9 +94,9 @@
     return-void
 .end method
 
-.method public static a(Landroidx/core/content/res/a$c;ILandroid/content/res/ColorStateList;)V
+.method public static a(Landroidx/core/content/res/a$f;ILandroid/content/res/ColorStateList;Landroid/content/res/Resources$Theme;)V
     .locals 3
-    .param p0    # Landroidx/core/content/res/a$c;
+    .param p0    # Landroidx/core/content/res/a$f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -100,6 +106,10 @@
     .end param
     .param p2    # Landroid/content/res/ColorStateList;
         .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
@@ -130,16 +140,16 @@
 
     .line 5
     :cond_0
-    new-instance v1, Landroidx/core/content/res/a$b;
+    new-instance v1, Landroidx/core/content/res/a$e;
 
-    iget-object p0, p0, Landroidx/core/content/res/a$c;->a:Landroid/content/res/Resources;
+    iget-object p0, p0, Landroidx/core/content/res/a$f;->a:Landroid/content/res/Resources;
 
     .line 6
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p0
 
-    invoke-direct {v1, p2, p0}, Landroidx/core/content/res/a$b;-><init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;)V
+    invoke-direct {v1, p2, p0, p3}, Landroidx/core/content/res/a$e;-><init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;Landroid/content/res/Resources$Theme;)V
 
     .line 7
     invoke-virtual {v2, p1, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
@@ -159,9 +169,81 @@
     throw p0
 .end method
 
-.method public static b(Landroidx/core/content/res/a$c;I)Landroid/content/res/ColorStateList;
-    .locals 4
-    .param p0    # Landroidx/core/content/res/a$c;
+.method public static b(Landroid/content/res/Resources$Theme;)V
+    .locals 3
+    .param p0    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    sget-object v0, Landroidx/core/content/res/a;->d:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    sget-object v1, Landroidx/core/content/res/a;->c:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v1}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .line 3
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 4
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/core/content/res/a$f;
+
+    if-eqz v2, :cond_0
+
+    .line 5
+    iget-object v2, v2, Landroidx/core/content/res/a$f;->b:Landroid/content/res/Resources$Theme;
+
+    invoke-virtual {p0, v2}, Landroid/content/res/Resources$Theme;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 6
+    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_0
+
+    .line 7
+    :cond_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static c(Landroidx/core/content/res/a$f;I)Landroid/content/res/ColorStateList;
+    .locals 5
+    .param p0    # Landroidx/core/content/res/a$f;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -187,52 +269,73 @@
 
     check-cast v1, Landroid/util/SparseArray;
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
     .line 3
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
     move-result v2
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_3
 
     .line 4
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/core/content/res/a$b;
+    check-cast v2, Landroidx/core/content/res/a$e;
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_3
 
     .line 5
-    iget-object v3, v2, Landroidx/core/content/res/a$b;->b:Landroid/content/res/Configuration;
+    iget-object v3, v2, Landroidx/core/content/res/a$e;->b:Landroid/content/res/Configuration;
 
-    iget-object p0, p0, Landroidx/core/content/res/a$c;->a:Landroid/content/res/Resources;
+    iget-object v4, p0, Landroidx/core/content/res/a$f;->a:Landroid/content/res/Resources;
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object p0
+    move-result-object v4
 
-    invoke-virtual {v3, p0}, Landroid/content/res/Configuration;->equals(Landroid/content/res/Configuration;)Z
+    invoke-virtual {v3, v4}, Landroid/content/res/Configuration;->equals(Landroid/content/res/Configuration;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object p0, p0, Landroidx/core/content/res/a$f;->b:Landroid/content/res/Resources$Theme;
+
+    if-nez p0, :cond_0
+
+    iget v3, v2, Landroidx/core/content/res/a$e;->c:I
+
+    if-eqz v3, :cond_1
+
+    :cond_0
+    if-eqz p0, :cond_2
+
+    iget v3, v2, Landroidx/core/content/res/a$e;->c:I
+
+    .line 6
+    invoke-virtual {p0}, Landroid/content/res/Resources$Theme;->hashCode()I
 
     move-result p0
 
-    if-eqz p0, :cond_0
+    if-ne v3, p0, :cond_2
 
-    .line 6
-    iget-object p0, v2, Landroidx/core/content/res/a$b;->a:Landroid/content/res/ColorStateList;
+    .line 7
+    :cond_1
+    iget-object p0, v2, Landroidx/core/content/res/a$e;->a:Landroid/content/res/ColorStateList;
 
     monitor-exit v0
 
     return-object p0
 
-    .line 7
-    :cond_0
+    .line 8
+    :cond_2
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 8
-    :cond_1
+    .line 9
+    :cond_3
     monitor-exit v0
 
     const/4 p0, 0x0
@@ -249,7 +352,7 @@
     throw p0
 .end method
 
-.method public static c(Landroid/content/Context;I)Landroid/graphics/Typeface;
+.method public static d(Landroid/content/Context;I)Landroid/graphics/Typeface;
     .locals 8
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -299,14 +402,14 @@
 
     move v1, p1
 
-    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->o(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->p(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static d(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
+.method public static e(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
     .locals 0
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -330,14 +433,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
+    invoke-static {p0, p1, p2}, Landroidx/core/content/res/a$c;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static e(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+.method public static f(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
     .locals 2
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -361,12 +464,12 @@
     .end annotation
 
     .line 1
-    new-instance v0, Landroidx/core/content/res/a$c;
+    new-instance v0, Landroidx/core/content/res/a$f;
 
-    invoke-direct {v0, p0, p2}, Landroidx/core/content/res/a$c;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
+    invoke-direct {v0, p0, p2}, Landroidx/core/content/res/a$f;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
 
     .line 2
-    invoke-static {v0, p1}, Landroidx/core/content/res/a;->b(Landroidx/core/content/res/a$c;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Landroidx/core/content/res/a;->c(Landroidx/core/content/res/a$f;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -376,27 +479,27 @@
 
     .line 3
     :cond_0
-    invoke-static {p0, p1, p2}, Landroidx/core/content/res/a;->m(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1, p2}, Landroidx/core/content/res/a;->n(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 4
-    invoke-static {v0, p1, v1}, Landroidx/core/content/res/a;->a(Landroidx/core/content/res/a$c;ILandroid/content/res/ColorStateList;)V
+    invoke-static {v0, p1, v1, p2}, Landroidx/core/content/res/a;->a(Landroidx/core/content/res/a$f;ILandroid/content/res/ColorStateList;Landroid/content/res/Resources$Theme;)V
 
     return-object v1
 
     .line 5
     :cond_1
-    invoke-static {p0, p1, p2}, Landroidx/core/content/res/a$a;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1, p2}, Landroidx/core/content/res/a$c;->b(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static f(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+.method public static g(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -420,14 +523,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1, p2}, Landroidx/core/content/res/a$b;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static g(Landroid/content/res/Resources;IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+.method public static h(Landroid/content/res/Resources;IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 0
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -451,14 +554,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1, p2, p3}, Landroidx/core/content/res/a$b;->b(Landroid/content/res/Resources;IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static h(Landroid/content/res/Resources;I)F
+.method public static i(Landroid/content/res/Resources;I)F
     .locals 2
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -477,7 +580,7 @@
     if-lt v0, v1, :cond_0
 
     .line 2
-    invoke-static {p0, p1}, Landroidx/core/content/res/a$e;->a(Landroid/content/res/Resources;I)F
+    invoke-static {p0, p1}, Landroidx/core/content/res/a$d;->a(Landroid/content/res/Resources;I)F
 
     move-result p0
 
@@ -485,7 +588,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Landroidx/core/content/res/a;->l()Landroid/util/TypedValue;
+    invoke-static {}, Landroidx/core/content/res/a;->m()Landroid/util/TypedValue;
 
     move-result-object v0
 
@@ -550,7 +653,7 @@
     throw p0
 .end method
 
-.method public static i(Landroid/content/Context;I)Landroid/graphics/Typeface;
+.method public static j(Landroid/content/Context;I)Landroid/graphics/Typeface;
     .locals 8
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -600,14 +703,14 @@
 
     move v1, p1
 
-    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->o(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->p(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static j(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;)Landroid/graphics/Typeface;
+.method public static k(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$g;)Landroid/graphics/Typeface;
     .locals 8
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -617,10 +720,17 @@
         .annotation build Landroidx/annotation/FontRes;
         .end annotation
     .end param
-    .param p4    # Landroidx/core/content/res/a$d;
+    .param p2    # Landroid/util/TypedValue;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/core/content/res/a$g;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
@@ -662,14 +772,14 @@
     move-object v4, p4
 
     .line 2
-    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->o(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->p(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static k(Landroid/content/Context;ILandroidx/core/content/res/a$d;Landroid/os/Handler;)V
+.method public static l(Landroid/content/Context;ILandroidx/core/content/res/a$g;Landroid/os/Handler;)V
     .locals 8
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -679,7 +789,7 @@
         .annotation build Landroidx/annotation/FontRes;
         .end annotation
     .end param
-    .param p2    # Landroidx/core/content/res/a$d;
+    .param p2    # Landroidx/core/content/res/a$g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -694,7 +804,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p2}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Landroidx/core/util/p;->l(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 2
     invoke-virtual {p0}, Landroid/content/Context;->isRestricted()Z
@@ -706,7 +816,7 @@
     const/4 p0, -0x4
 
     .line 3
-    invoke-virtual {p2, p0, p3}, Landroidx/core/content/res/a$d;->callbackFailAsync(ILandroid/os/Handler;)V
+    invoke-virtual {p2, p0, p3}, Landroidx/core/content/res/a$g;->callbackFailAsync(ILandroid/os/Handler;)V
 
     return-void
 
@@ -730,12 +840,12 @@
 
     move-object v5, p3
 
-    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->o(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+    invoke-static/range {v0 .. v7}, Landroidx/core/content/res/a;->p(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
 
     return-void
 .end method
 
-.method public static l()Landroid/util/TypedValue;
+.method public static m()Landroid/util/TypedValue;
     .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
@@ -763,7 +873,7 @@
     return-object v1
 .end method
 
-.method public static m(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+.method public static n(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
     .locals 2
     .param p2    # Landroid/content/res/Resources$Theme;
         .annotation build Landroidx/annotation/Nullable;
@@ -773,7 +883,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Landroidx/core/content/res/a;->n(Landroid/content/res/Resources;I)Z
+    invoke-static {p0, p1}, Landroidx/core/content/res/a;->o(Landroid/content/res/Resources;I)Z
 
     move-result v0
 
@@ -791,7 +901,7 @@
 
     .line 3
     :try_start_0
-    invoke-static {p0, p1, p2}, Lz0/c;->a(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1, p2}, Ls1/c;->a(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
 
     move-result-object p0
     :try_end_0
@@ -812,7 +922,7 @@
     return-object v1
 .end method
 
-.method public static n(Landroid/content/res/Resources;I)Z
+.method public static o(Landroid/content/res/Resources;I)Z
     .locals 2
     .param p0    # Landroid/content/res/Resources;
         .annotation build Landroidx/annotation/NonNull;
@@ -824,7 +934,7 @@
     .end param
 
     .line 1
-    invoke-static {}, Landroidx/core/content/res/a;->l()Landroid/util/TypedValue;
+    invoke-static {}, Landroidx/core/content/res/a;->m()Landroid/util/TypedValue;
 
     move-result-object v0
 
@@ -853,13 +963,17 @@
     return v1
 .end method
 
-.method public static o(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+.method public static p(Landroid/content/Context;ILandroid/util/TypedValue;ILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
     .locals 10
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Landroidx/core/content/res/a$d;
+    .param p2    # Landroid/util/TypedValue;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/core/content/res/a$g;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -897,7 +1011,7 @@
     move/from16 v8, p7
 
     .line 3
-    invoke-static/range {v0 .. v8}, Landroidx/core/content/res/a;->p(Landroid/content/Context;Landroid/content/res/Resources;Landroid/util/TypedValue;IILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+    invoke-static/range {v0 .. v8}, Landroidx/core/content/res/a;->q(Landroid/content/Context;Landroid/content/res/Resources;Landroid/util/TypedValue;IILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
 
     move-result-object v0
 
@@ -943,13 +1057,17 @@
     return-object v0
 .end method
 
-.method public static p(Landroid/content/Context;Landroid/content/res/Resources;Landroid/util/TypedValue;IILandroidx/core/content/res/a$d;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
-    .locals 15
+.method public static q(Landroid/content/Context;Landroid/content/res/Resources;Landroid/util/TypedValue;IILandroidx/core/content/res/a$g;Landroid/os/Handler;ZZ)Landroid/graphics/Typeface;
+    .locals 17
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p5    # Landroidx/core/content/res/a$d;
+    .param p2    # Landroid/util/TypedValue;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p5    # Landroidx/core/content/res/a$g;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -964,13 +1082,11 @@
 
     move/from16 v4, p3
 
-    move/from16 v5, p4
+    move-object/from16 v11, p5
 
-    move-object/from16 v9, p5
+    move-object/from16 v12, p6
 
-    move-object/from16 v10, p6
-
-    const-string v11, "ResourcesCompat"
+    const-string v13, "ResourcesCompat"
 
     .line 1
     iget-object v2, v1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
@@ -980,72 +1096,76 @@
     .line 2
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v14
 
-    const-string v1, "res/"
+    const-string v2, "res/"
 
     .line 3
-    invoke-virtual {v12, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v14, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v2
 
-    const/4 v13, -0x3
+    const/4 v15, -0x3
 
-    const/4 v14, 0x0
+    const/16 v16, 0x0
 
-    if-nez v1, :cond_1
+    if-nez v2, :cond_1
 
-    if-eqz v9, :cond_0
+    if-eqz v11, :cond_0
 
     .line 4
-    invoke-virtual {v9, v13, v10}, Landroidx/core/content/res/a$d;->callbackFailAsync(ILandroid/os/Handler;)V
+    invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/a$g;->callbackFailAsync(ILandroid/os/Handler;)V
 
     :cond_0
-    return-object v14
+    return-object v16
 
     .line 5
     :cond_1
-    invoke-static {v0, v4, v5}, Lc1/y;->g(Landroid/content/res/Resources;II)Landroid/graphics/Typeface;
+    iget v2, v1, Landroid/util/TypedValue;->assetCookie:I
 
-    move-result-object v1
+    move/from16 v7, p4
 
-    if-eqz v1, :cond_3
+    invoke-static {v0, v4, v14, v2, v7}, Lv1/y;->k(Landroid/content/res/Resources;ILjava/lang/String;II)Landroid/graphics/Typeface;
 
-    if-eqz v9, :cond_2
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    if-eqz v11, :cond_2
 
     .line 6
-    invoke-virtual {v9, v1, v10}, Landroidx/core/content/res/a$d;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
+    invoke-virtual {v11, v2, v12}, Landroidx/core/content/res/a$g;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
     :cond_2
-    return-object v1
+    return-object v2
 
     :cond_3
     if-eqz p8, :cond_4
 
-    return-object v14
+    return-object v16
 
     .line 7
     :cond_4
     :try_start_0
-    invoke-virtual {v12}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, ".xml"
+    const-string v3, ".xml"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_7
+    if-eqz v2, :cond_7
 
     .line 8
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 9
-    invoke-static {v1, v0}, Landroidx/core/content/res/FontResourcesParserCompat;->b(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$a;
+    invoke-static {v2, v0}, Landroidx/core/content/res/FontResourcesParserCompat;->b(Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources;)Landroidx/core/content/res/FontResourcesParserCompat$b;
 
     move-result-object v2
 
@@ -1054,58 +1174,72 @@
     const-string v0, "Failed to find font-family tag"
 
     .line 10
-    invoke-static {v11, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v9, :cond_5
+    if-eqz v11, :cond_5
 
     .line 11
-    invoke-virtual {v9, v13, v10}, Landroidx/core/content/res/a$d;->callbackFailAsync(ILandroid/os/Handler;)V
+    invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/a$g;->callbackFailAsync(ILandroid/os/Handler;)V
 
     :cond_5
-    return-object v14
+    return-object v16
 
+    .line 12
     :cond_6
-    move-object v1, p0
+    iget v6, v1, Landroid/util/TypedValue;->assetCookie:I
+
+    move-object/from16 v1, p0
 
     move-object/from16 v3, p1
 
     move/from16 v4, p3
 
-    move/from16 v5, p4
+    move-object v5, v14
 
-    move-object/from16 v6, p5
+    move/from16 v7, p4
 
-    move-object/from16 v7, p6
+    move-object/from16 v8, p5
 
-    move/from16 v8, p7
+    move-object/from16 v9, p6
 
-    .line 12
-    invoke-static/range {v1 .. v8}, Lc1/y;->d(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$a;Landroid/content/res/Resources;IILandroidx/core/content/res/a$d;Landroid/os/Handler;Z)Landroid/graphics/Typeface;
+    move/from16 v10, p7
+
+    invoke-static/range {v1 .. v10}, Lv1/y;->f(Landroid/content/Context;Landroidx/core/content/res/FontResourcesParserCompat$b;Landroid/content/res/Resources;ILjava/lang/String;IILandroidx/core/content/res/a$g;Landroid/os/Handler;Z)Landroid/graphics/Typeface;
 
     move-result-object v0
 
     return-object v0
 
-    :cond_7
-    move-object v1, p0
-
     .line 13
-    invoke-static {p0, v0, v4, v12, v5}, Lc1/y;->e(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
+    :cond_7
+    iget v5, v1, Landroid/util/TypedValue;->assetCookie:I
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v2, p1
+
+    move/from16 v3, p3
+
+    move-object v4, v14
+
+    move/from16 v6, p4
+
+    invoke-static/range {v1 .. v6}, Lv1/y;->h(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;II)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    if-eqz v9, :cond_9
+    if-eqz v11, :cond_9
 
     if-eqz v0, :cond_8
 
     .line 14
-    invoke-virtual {v9, v0, v10}, Landroidx/core/content/res/a$d;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
+    invoke-virtual {v11, v0, v12}, Landroidx/core/content/res/a$g;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
     goto :goto_0
 
     .line 15
     :cond_8
-    invoke-virtual {v9, v13, v10}, Landroidx/core/content/res/a$d;->callbackFailAsync(ILandroid/os/Handler;)V
+    invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/a$g;->callbackFailAsync(ILandroid/os/Handler;)V
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1126,13 +1260,13 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v11, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v13, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
 
@@ -1148,22 +1282,22 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v11, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v13, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
-    if-eqz v9, :cond_a
+    if-eqz v11, :cond_a
 
     .line 18
-    invoke-virtual {v9, v13, v10}, Landroidx/core/content/res/a$d;->callbackFailAsync(ILandroid/os/Handler;)V
+    invoke-virtual {v11, v15, v12}, Landroidx/core/content/res/a$g;->callbackFailAsync(ILandroid/os/Handler;)V
 
     :cond_a
-    return-object v14
+    return-object v16
 
     .line 19
     :cond_b

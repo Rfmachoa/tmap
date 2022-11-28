@@ -1,9 +1,10 @@
 .class public Lg9/b;
 .super Ljava/lang/Object;
-.source "MockITTSListener.java"
+.source "DisposableManager.java"
 
-# interfaces
-.implements Lsa/d;
+
+# static fields
+.field public static a:Lio/reactivex/disposables/a;
 
 
 # direct methods
@@ -16,28 +17,57 @@
     return-void
 .end method
 
+.method public static a(Lio/reactivex/disposables/b;)V
+    .locals 1
 
-# virtual methods
-.method public onCanceled()V
-    .locals 0
+    .line 1
+    invoke-static {}, Lg9/b;->c()Lio/reactivex/disposables/a;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public onCompletion()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onError(I)V
-    .locals 0
+    invoke-virtual {v0, p0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
 
     return-void
 .end method
 
-.method public onStart()V
-    .locals 0
+.method public static b()V
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lg9/b;->c()Lio/reactivex/disposables/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->dispose()V
 
     return-void
+.end method
+
+.method public static c()Lio/reactivex/disposables/a;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lg9/b;->a:Lio/reactivex/disposables/a;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lio/reactivex/disposables/a;->isDisposed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    :cond_0
+    new-instance v0, Lio/reactivex/disposables/a;
+
+    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+
+    sput-object v0, Lg9/b;->a:Lio/reactivex/disposables/a;
+
+    .line 3
+    :cond_1
+    sget-object v0, Lg9/b;->a:Lio/reactivex/disposables/a;
+
+    return-object v0
 .end method

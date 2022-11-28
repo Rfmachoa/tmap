@@ -3,7 +3,7 @@
 .source "AppSyncQueryWatcher.java"
 
 # interfaces
-.implements Lq4/a;
+.implements Ln6/a;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lq4/a;"
+        "Ln6/a;"
     }
 .end annotation
 
@@ -46,15 +46,15 @@
 .method public abstract refetch()V
 .end method
 
-.method public abstract refetchResponseFetcher(Li4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryWatcher;
-    .param p1    # Li4/a;
+.method public abstract refetchResponseFetcher(Lf6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryWatcher;
+    .param p1    # Lf6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Li4/a;",
+            "Lf6/a;",
             ")",
             "Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryWatcher<",
             "TT;>;"

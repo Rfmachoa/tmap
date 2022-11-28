@@ -42,7 +42,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->h0(Lj3/d;I)Lj3/d;
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->h0(Lr4/d;I)Lr4/d;
 
     move-result-object p0
 
@@ -76,7 +76,7 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->m1(Lj3/d;I)V
+    invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->m1(Lr4/d;I)V
 
     return-void
 .end method

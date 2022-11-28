@@ -50,14 +50,14 @@
 
     .line 1
     :cond_0
-    new-instance v0, Landroidx/core/content/l;
+    new-instance v0, Landroidx/core/content/j0;
 
-    invoke-direct {v0, p1}, Landroidx/core/content/l;-><init>(Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;)V
+    invoke-direct {v0, p1}, Landroidx/core/content/j0;-><init>(Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;)V
 
     .line 2
     iget-object p1, p0, Landroidx/core/content/UnusedAppRestrictionsBackportService$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportService;
 
-    invoke-virtual {p1, v0}, Landroidx/core/content/UnusedAppRestrictionsBackportService;->a(Landroidx/core/content/l;)V
+    invoke-virtual {p1, v0}, Landroidx/core/content/UnusedAppRestrictionsBackportService;->a(Landroidx/core/content/j0;)V
 
     return-void
 .end method

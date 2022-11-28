@@ -3,44 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Lcom/skt/tmap/route/l;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;Landroid/view/View;Lcom/skt/tmap/route/l;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/skt/tmap/activity/v3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iput-object p2, p0, Lcom/skt/tmap/activity/v3;->b:Landroid/view/View;
-
-    iput-object p3, p0, Lcom/skt/tmap/activity/v3;->c:Lcom/skt/tmap/route/l;
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/activity/v3;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/v3;->b:Landroid/view/View;
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v2, p0, Lcom/skt/tmap/activity/v3;->c:Lcom/skt/tmap/route/l;
-
-    invoke-static {v0, v1, v2}, Lcom/skt/tmap/activity/TmapNaviActivity;->S6(Lcom/skt/tmap/activity/TmapNaviActivity;Landroid/view/View;Lcom/skt/tmap/route/l;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/TmapNaviActivity;->s7(Lcom/skt/tmap/activity/TmapNaviActivity;Ljava/lang/Boolean;)V
 
     return-void
 .end method

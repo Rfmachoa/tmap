@@ -3,32 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/car/app/model/ItemList$c;
+.implements Landroidx/car/app/model/n;
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/car/screen/SettingMapViewModeScreen;
+.field public final synthetic a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/SettingMapViewModeScreen;)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/car/screen/NearSearchResultScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/skt/tmap/car/screen/g1;->a:Lcom/skt/tmap/car/screen/SettingMapViewModeScreen;
+    iput-object p1, p0, Lcom/skt/tmap/car/screen/g1;->a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final a()V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/car/screen/g1;->a:Lcom/skt/tmap/car/screen/SettingMapViewModeScreen;
+    iget-object v0, p0, Lcom/skt/tmap/car/screen/g1;->a:Lcom/skt/tmap/car/screen/NearSearchResultScreen;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/car/screen/SettingMapViewModeScreen;->J(Lcom/skt/tmap/car/screen/SettingMapViewModeScreen;I)V
+    invoke-static {v0}, Lcom/skt/tmap/car/screen/NearSearchResultScreen;->L(Lcom/skt/tmap/car/screen/NearSearchResultScreen;)V
 
     return-void
 .end method

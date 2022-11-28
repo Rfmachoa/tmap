@@ -56,7 +56,7 @@
     iput-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->c:Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;
 
     .line 5
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->A()Landroid/os/Handler;
+    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->A()Landroid/os/Handler;
 
     move-result-object p1
 
@@ -111,7 +111,7 @@
 
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->e(Landroid/content/Context;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f(Landroid/content/Context;)I
 
     move-result v0
 
@@ -207,7 +207,7 @@
 
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->e(Landroid/content/Context;)I
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->f(Landroid/content/Context;)I
 
     move-result v0
 
@@ -221,14 +221,14 @@
     .line 3
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->c:Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->m()Z
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->o()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 4
-    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v2, 0x18
 
@@ -250,7 +250,7 @@
     :goto_0
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->c:Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->g()Z
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->i()Z
 
     move-result v1
 
@@ -270,14 +270,14 @@
     :cond_2
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->c:Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->j()Z
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->m()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 11
-    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v2, 0x17
 
@@ -306,7 +306,7 @@
     :goto_1
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->c:Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->o()Z
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/scheduler/Requirements;->q()Z
 
     move-result v1
 
@@ -367,7 +367,7 @@
     iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher;->e:Lcom/tmapmobility/tmap/exoplayer2/scheduler/RequirementsWatcher$DeviceStatusChangeReceiver;
 
     .line 3
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x18
 

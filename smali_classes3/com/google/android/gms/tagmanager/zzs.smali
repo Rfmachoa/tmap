@@ -1,70 +1,97 @@
 .class final Lcom/google/android/gms/tagmanager/zzs;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.super Lcom/google/android/gms/tagmanager/zzbt;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
-# annotations
-.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-.end annotation
+# static fields
+.field private static final zza:Ljava/lang/String;
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<K:",
-        "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
-
-
-# instance fields
-.field public final zza:Lcom/google/android/gms/tagmanager/zzr;
-    .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/tagmanager/zzr<",
-            "TK;TV;>;"
-        }
-    .end annotation
-.end field
+.field private static final zzb:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzg:Lcom/google/android/gms/internal/gtm/zza;
 
-    new-instance v0, Lcom/google/android/gms/tagmanager/zzq;
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/tagmanager/zzq;-><init>(Lcom/google/android/gms/tagmanager/zzs;)V
+    move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/tagmanager/zzs;->zza:Lcom/google/android/gms/tagmanager/zzr;
+    sput-object v0, Lcom/google/android/gms/tagmanager/zzs;->zza:Ljava/lang/String;
+
+    .line 2
+    sget-object v0, Lcom/google/android/gms/internal/gtm/zzb;->zzed:Lcom/google/android/gms/internal/gtm/zzb;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzb;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/gms/tagmanager/zzs;->zzb:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final zza(ILcom/google/android/gms/tagmanager/zzr;)Lcom/google/android/gms/tagmanager/zzdb;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lcom/google/android/gms/tagmanager/zzr<",
-            "TK;TV;>;)",
-            "Lcom/google/android/gms/tagmanager/zzdb;"
-        }
-    .end annotation
-
-    new-instance p0, Lcom/google/android/gms/tagmanager/zzdb;
-
-    const/high16 v0, 0x100000
+.method public constructor <init>()V
+    .locals 4
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/google/android/gms/tagmanager/zzdb;-><init>(ILcom/google/android/gms/tagmanager/zzr;)V
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzs;->zza:Ljava/lang/String;
 
-    return-object p0
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    sget-object v2, Lcom/google/android/gms/tagmanager/zzs;->zzb:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    aput-object v2, v1, v3
+
+    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbt;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static zzc()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzs;->zza:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static zzd()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzs;->zzb:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzam;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzs;->zzb:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/internal/gtm/zzam;
+
+    return-object p1
+.end method
+
+.method public final zzb()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

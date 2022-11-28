@@ -1,9 +1,9 @@
 .class final Lcom/google/firebase/analytics/zzc;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-measurement-api@@20.1.0"
+.source "com.google.android.gms:play-services-measurement-api@@21.1.1"
 
 # interfaces
-.implements Lcom/google/android/gms/measurement/internal/zzhx;
+.implements Lcom/google/android/gms/measurement/internal/zzie;
 
 
 # instance fields
@@ -237,13 +237,13 @@
     return-void
 .end method
 
-.method public final zzu(Lcom/google/android/gms/measurement/internal/zzgs;)V
+.method public final zzu(Lcom/google/android/gms/measurement/internal/zzgz;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/google/firebase/analytics/zzc;->zza:Lcom/google/android/gms/internal/measurement/zzee;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzee;->zzB(Lcom/google/android/gms/measurement/internal/zzgs;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzee;->zzB(Lcom/google/android/gms/measurement/internal/zzgz;)V
 
     return-void
 .end method
@@ -259,24 +259,24 @@
     return-void
 .end method
 
-.method public final zzw(Lcom/google/android/gms/measurement/internal/zzgr;)V
+.method public final zzw(Lcom/google/android/gms/measurement/internal/zzgy;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/google/firebase/analytics/zzc;->zza:Lcom/google/android/gms/internal/measurement/zzee;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzee;->zzJ(Lcom/google/android/gms/measurement/internal/zzgr;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzee;->zzJ(Lcom/google/android/gms/measurement/internal/zzgy;)V
 
     return-void
 .end method
 
-.method public final zzx(Lcom/google/android/gms/measurement/internal/zzgs;)V
+.method public final zzx(Lcom/google/android/gms/measurement/internal/zzgz;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/google/firebase/analytics/zzc;->zza:Lcom/google/android/gms/internal/measurement/zzee;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzee;->zzO(Lcom/google/android/gms/measurement/internal/zzgs;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/measurement/zzee;->zzO(Lcom/google/android/gms/measurement/internal/zzgz;)V
 
     return-void
 .end method

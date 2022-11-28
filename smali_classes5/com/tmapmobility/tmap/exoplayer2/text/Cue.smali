@@ -20,7 +20,11 @@
 
 
 # static fields
-.field public static final A1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+.field public static final A1:I = 0xf
+
+.field public static final B1:I = 0x10
+
+.field public static final C1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
@@ -30,71 +34,67 @@
     .end annotation
 .end field
 
-.field public static final W0:Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
+.field public static final Y0:Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
 
-.field public static final X0:F = -3.4028235E38f
+.field public static final Z0:F = -3.4028235E38f
 
-.field public static final Y0:I = -0x80000000
+.field public static final a1:I = -0x80000000
 
-.field public static final Z0:I = 0x0
+.field public static final b1:I = 0x0
 
-.field public static final a1:I = 0x1
+.field public static final c1:I = 0x1
 
-.field public static final b1:I = 0x2
-
-.field public static final c1:I = 0x0
-
-.field public static final d1:I = 0x1
+.field public static final d1:I = 0x2
 
 .field public static final e1:I = 0x0
 
 .field public static final f1:I = 0x1
 
-.field public static final g1:I = 0x2
+.field public static final g1:I = 0x0
 
 .field public static final h1:I = 0x1
 
 .field public static final i1:I = 0x2
 
-.field public static final j1:I = 0x0
+.field public static final j1:I = 0x1
 
-.field public static final k1:I = 0x1
+.field public static final k1:I = 0x2
 
-.field public static final l1:I = 0x2
+.field public static final l1:I = 0x0
 
-.field public static final m1:I = 0x3
+.field public static final m1:I = 0x1
 
-.field public static final n1:I = 0x4
+.field public static final n1:I = 0x2
 
-.field public static final o1:I = 0x5
+.field public static final o1:I = 0x3
 
-.field public static final p1:I = 0x6
+.field public static final p1:I = 0x4
 
-.field public static final q1:I = 0x7
+.field public static final q1:I = 0x5
 
-.field public static final r1:I = 0x8
+.field public static final r1:I = 0x6
 
-.field public static final s1:I = 0x9
+.field public static final s1:I = 0x7
 
-.field public static final t1:I = 0xa
+.field public static final t1:I = 0x8
 
-.field public static final u1:I = 0xb
+.field public static final u1:I = 0x9
 
-.field public static final v1:I = 0xc
+.field public static final v1:I = 0xa
 
-.field public static final w1:I = 0xd
+.field public static final w1:I = 0xb
 
-.field public static final x1:I = 0xe
+.field public static final x1:I = 0xc
 
-.field public static final y1:I = 0xf
+.field public static final y1:I = 0xd
 
-.field public static final z1:I = 0x10
+.field public static final z1:I = 0xe
 
 
 # instance fields
 .field public final K0:I
 
-.field public final V0:F
+.field public final X0:F
 
 .field public final a:Ljava/lang/CharSequence;
     .annotation build Landroidx/annotation/Nullable;
@@ -158,12 +158,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->W0:Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->Y0:Lcom/tmapmobility/tmap/exoplayer2/text/Cue;
 
     .line 2
     sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/a;->a:Lcom/tmapmobility/tmap/exoplayer2/text/a;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->A1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->C1:Lcom/tmapmobility/tmap/exoplayer2/h$a;
 
     return-void
 .end method
@@ -498,7 +498,7 @@
     move/from16 v1, p17
 
     .line 28
-    iput v1, v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->V0:F
+    iput v1, v0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->X0:F
 
     return-void
 .end method
@@ -1113,9 +1113,9 @@
 
     if-ne v2, v3, :cond_3
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->V0:F
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->X0:F
 
-    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->V0:F
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->X0:F
 
     cmpl-float p1, v2, p1
 
@@ -1298,7 +1298,7 @@
 
     aput-object v1, v0, v2
 
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->V0:F
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->X0:F
 
     .line 14
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -1508,7 +1508,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->V0:F
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/text/Cue;->X0:F
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 

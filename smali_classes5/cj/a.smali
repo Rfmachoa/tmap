@@ -1,152 +1,168 @@
 .class public final Lcj/a;
 .super Ljava/lang/Object;
-.source "AutoCloseable.kt"
+.source "HiltViewModelFactory.java"
+
+# interfaces
+.implements Landroidx/lifecycle/ViewModelProvider$Factory;
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0003\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001aJ\u0010\u0005\u001a\u00028\u0001\"\n\u0008\u0000\u0010\u0001*\u0004\u0018\u00010\u0000\"\u0004\u0008\u0001\u0010\u0002*\u00028\u00002\u0012\u0010\u0004\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00010\u0003H\u0087\u0008\u00f8\u0001\u0000\u0082\u0002\n\n\u0008\u0008\u0001\u0012\u0002\u0010\u0001 \u0001\u00a2\u0006\u0004\u0008\u0005\u0010\u0006\u001a\u0018\u0010\n\u001a\u00020\t*\u0004\u0018\u00010\u00002\u0008\u0010\u0008\u001a\u0004\u0018\u00010\u0007H\u0001\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u000b"
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcj/a$c;,
+        Lcj/a$b;
     }
-    d2 = {
-        "Ljava/lang/AutoCloseable;",
-        "T",
-        "R",
-        "Lkotlin/Function1;",
-        "block",
-        "b",
-        "(Ljava/lang/AutoCloseable;Lej/l;)Ljava/lang/Object;",
-        "",
-        "cause",
-        "Lkotlin/d1;",
-        "a",
-        "kotlin-stdlib-jdk7"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x4,
-        0x1
-    }
-    pn = "kotlin"
 .end annotation
 
-.annotation build Lkotlin/jvm/JvmName;
-    name = "AutoCloseableKt"
-.end annotation
+
+# instance fields
+.field public final a:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final b:Landroidx/lifecycle/ViewModelProvider$Factory;
+
+.field public final c:Landroidx/lifecycle/AbstractSavedStateViewModelFactory;
 
 
 # direct methods
-.method public static final a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+.method public constructor <init>(Landroidx/savedstate/d;Landroid/os/Bundle;Ljava/util/Set;Landroidx/lifecycle/ViewModelProvider$Factory;Lbj/f;)V
     .locals 0
-    .param p0    # Ljava/lang/AutoCloseable;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
+    .param p1    # Landroidx/savedstate/d;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Ljava/lang/Throwable;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
+    .param p2    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lkotlin/PublishedApi;
-    .end annotation
-
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.2"
-    .end annotation
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    .line 1
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
-
-    goto :goto_0
-
-    .line 2
-    :cond_1
-    :try_start_0
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    .line 3
-    invoke-static {p1, p0}, Lkotlin/i;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public static final b(Ljava/lang/AutoCloseable;Lej/l;)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Ljava/lang/AutoCloseable;",
-            "R:",
-            "Ljava/lang/Object;",
-            ">(TT;",
-            "Lej/l<",
-            "-TT;+TR;>;)TR;"
+    .param p3    # Ljava/util/Set;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/lifecycle/ViewModelProvider$Factory;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p5    # Lbj/f;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "owner",
+            "defaultArgs",
+            "viewModelInjectKeys",
+            "delegateFactory",
+            "viewModelComponentBuilder"
         }
     .end annotation
 
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.2"
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/savedstate/d;",
+            "Landroid/os/Bundle;",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;",
+            "Landroidx/lifecycle/ViewModelProvider$Factory;",
+            "Lbj/f;",
+            ")V"
+        }
     .end annotation
-
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
-
-    const/4 v0, 0x1
 
     .line 1
-    :try_start_0
-    invoke-interface {p1, p0}, Lej/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v0}, Lkotlin/jvm/internal/c0;->d(I)V
-
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p0, v1}, Lcj/a;->a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+    iput-object p3, p0, Lcj/a;->a:Ljava/util/Set;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/c0;->c(I)V
+    .line 3
+    iput-object p4, p0, Lcj/a;->b:Landroidx/lifecycle/ViewModelProvider$Factory;
+
+    .line 4
+    new-instance p3, Lcj/a$a;
+
+    invoke-direct {p3, p0, p1, p2, p5}, Lcj/a$a;-><init>(Lcj/a;Landroidx/savedstate/d;Landroid/os/Bundle;Lbj/f;)V
+
+    iput-object p3, p0, Lcj/a;->c:Landroidx/lifecycle/AbstractSavedStateViewModelFactory;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+    .locals 2
+    .param p1    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modelClass"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Landroidx/lifecycle/ViewModel;",
+            ">(",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcj/a;->a:Ljava/util/Set;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcj/a;->c:Landroidx/lifecycle/AbstractSavedStateViewModelFactory;
+
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/AbstractSavedStateViewModelFactory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+
+    move-result-object p1
 
     return-object p1
 
-    :catchall_0
-    move-exception p1
-
     .line 3
-    :try_start_1
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :cond_0
+    iget-object v0, p0, Lcj/a;->b:Landroidx/lifecycle/ViewModelProvider$Factory;
 
-    :catchall_1
-    move-exception v1
+    invoke-interface {v0, p1}, Landroidx/lifecycle/ViewModelProvider$Factory;->create(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
 
-    .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/c0;->d(I)V
+    move-result-object p1
 
-    .line 5
-    invoke-static {p0, p1}, Lcj/a;->a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
-
-    invoke-static {v0}, Lkotlin/jvm/internal/c0;->c(I)V
-
-    throw v1
+    return-object p1
 .end method

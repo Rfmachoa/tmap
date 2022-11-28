@@ -112,7 +112,7 @@
 
     iget-object v3, p1, Lcom/amplifyframework/core/model/query/QueryOptions;->queryPredicate:Lcom/amplifyframework/core/model/query/predicate/QueryPredicate;
 
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -123,7 +123,7 @@
     iget-object v3, p1, Lcom/amplifyframework/core/model/query/QueryOptions;->paginationInput:Lcom/amplifyframework/core/model/query/QueryPaginationInput;
 
     .line 4
-    invoke-static {v1, v3}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -134,7 +134,7 @@
     iget-object p1, p1, Lcom/amplifyframework/core/model/query/QueryOptions;->sortBy:Ljava/util/List;
 
     .line 5
-    invoke-static {v1, p1}, Lr1/h;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Landroidx/core/util/j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -217,7 +217,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lr1/h;->b([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/j;->b([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -331,7 +331,7 @@
 
     const/16 v2, 0x7d
 
-    invoke-static {v0, v1, v2}, Lb3/l;->a(Ljava/lang/StringBuilder;Ljava/util/List;C)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lw0/c;->a(Ljava/lang/StringBuilder;Ljava/util/List;C)Ljava/lang/String;
 
     move-result-object v0
 

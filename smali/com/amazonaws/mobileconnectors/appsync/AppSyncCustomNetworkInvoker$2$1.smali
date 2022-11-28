@@ -3,7 +3,7 @@
 .source "AppSyncCustomNetworkInvoker.java"
 
 # interfaces
-.implements Lc4/l;
+.implements Lz5/l;
 
 
 # annotations

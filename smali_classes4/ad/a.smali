@@ -1,78 +1,6 @@
 .class public final Lad/a;
-.super Landroidx/recyclerview/widget/RecyclerView$Adapter;
-.source "NoticeItemListAdapter.kt"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lad/a$a;
-    }
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lad/a$a;",
-        ">;"
-    }
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0002\u0008\n\u0018\u00002\u000c\u0012\u0008\u0012\u00060\u0002R\u00020\u00000\u0001:\u0001\u0018B\u0007\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u0004\u001a\u00020\u0003J\u001c\u0010\n\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u0003H\u0016J\u001c\u0010\r\u001a\u00020\u000c2\n\u0010\u000b\u001a\u00060\u0002R\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u0003H\u0016J\u0008\u0010\u000e\u001a\u00020\u0003H\u0016R*\u0010\u0010\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u000f8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0010\u0010\u0011\u001a\u0004\u0008\u0012\u0010\u0013\"\u0004\u0008\u0014\u0010\u0015\u00a8\u0006\u0019"
-    }
-    d2 = {
-        "Lad/a;",
-        "Landroidx/recyclerview/widget/RecyclerView$Adapter;",
-        "Lad/a$a;",
-        "",
-        "position",
-        "Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;",
-        "k",
-        "Landroid/view/ViewGroup;",
-        "parent",
-        "viewType",
-        "n",
-        "holder",
-        "Lkotlin/d1;",
-        "m",
-        "getItemCount",
-        "",
-        "items",
-        "Ljava/util/List;",
-        "l",
-        "()Ljava/util/List;",
-        "o",
-        "(Ljava/util/List;)V",
-        "<init>",
-        "()V",
-        "a",
-        "tmap_android_phoneKUShip"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x4,
-        0x2
-    }
-.end annotation
-
-
-# instance fields
-.field public a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;",
-            ">;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-.end field
+.super Ljava/lang/Object;
+.source "CSVFileUtil.java"
 
 
 # direct methods
@@ -80,180 +8,587 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public getItemCount()I
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lad/a;->a:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public final k(I)Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;
-    .locals 1
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lad/a;->a:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return-object p1
-.end method
-
-.method public final l()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;",
-            ">;"
+.method public static a(Landroid/content/Context;)V
+    .locals 29
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
         }
     .end annotation
 
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
+    const-string v1, "MainActivity"
+
+    if-eqz p0, :cond_e
 
     .line 1
-    iget-object v0, p0, Lad/a;->a:Ljava/util/List;
+    new-instance v0, Lad/c;
 
-    return-object v0
-.end method
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-.method public m(Lad/a$a;I)V
-    .locals 1
-    .param p1    # Lad/a$a;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
+    move-result-object v2
 
-    const-string v0, "holder"
+    invoke-direct {v0, v2}, Lad/c;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 2
+    invoke-virtual {v0}, Lad/c;->h()V
 
-    .line 1
-    invoke-virtual {p0, p2}, Lad/a;->k(I)Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;
+    .line 3
+    invoke-virtual {v0}, Lad/c;->g()I
 
-    move-result-object p2
+    move-result v2
 
-    invoke-virtual {p1, p2}, Lad/a$a;->c(Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;)V
+    if-nez v2, :cond_0
+
+    .line 4
+    invoke-virtual {v0}, Lad/c;->f()V
 
     return-void
-.end method
 
-.method public n(Landroid/view/ViewGroup;I)Lad/a$a;
-    .locals 3
-    .param p1    # Landroid/view/ViewGroup;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
+    .line 5
+    :cond_0
+    invoke-virtual {v0}, Lad/c;->f()V
 
-    const-string p2, "parent"
+    .line 6
+    new-instance v2, Lad/d;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/f0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    .line 1
-    new-instance p2, Lad/a$a;
+    move-result-object v3
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+    invoke-direct {v2, v3}, Lad/d;-><init>(Landroid/content/Context;)V
 
-    move-result-object v0
+    .line 7
+    new-instance v3, Lad/e;
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v4
 
-    const v1, 0x7f0d016c
+    invoke-direct {v3, v4}, Lad/e;-><init>(Landroid/content/Context;)V
 
-    const/4 v2, 0x0
+    .line 8
+    new-instance v4, Ljava/io/File;
 
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    sget-object v5, Lcom/skt/tmap/CommonConstant$v;->g:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "LayoutInflater.from(pare\u2026em_layout, parent, false)"
+    .line 9
+    invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result v5
 
-    invoke-direct {p2, p0, p1}, Lad/a$a;-><init>(Lad/a;Landroid/view/View;)V
+    if-nez v5, :cond_1
 
-    return-object p2
-.end method
+    .line 10
+    invoke-virtual {v4}, Ljava/io/File;->mkdirs()Z
 
-.method public final o(Ljava/util/List;)V
-    .locals 0
-    .param p1    # Ljava/util/List;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/skt/tmap/network/ndds/dto/heimdall/withdrawal/Item;",
-            ">;)V"
-        }
-    .end annotation
+    .line 11
+    :cond_1
+    new-instance v5, Ljava/io/File;
 
-    .line 1
-    iput-object p1, p0, Lad/a;->a:Ljava/util/List;
+    const-string v6, "TMAP_3_CARACCOUNT_DATA.csv"
 
+    invoke-direct {v5, v4, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 12
+    :try_start_0
+    invoke-virtual {v5}, Ljava/io/File;->createNewFile()Z
+
+    .line 13
+    new-instance v4, Lad/b;
+
+    new-instance v6, Ljava/io/FileWriter;
+
+    invoke-direct {v6, v5}, Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
+
+    invoke-direct {v4, v6}, Lad/b;-><init>(Ljava/io/Writer;)V
+
+    .line 14
+    invoke-virtual {v4}, Lad/b;->c()V
+
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    :goto_0
+    const/4 v7, 0x4
+
+    if-ge v6, v7, :cond_d
+
+    const/4 v12, 0x6
+
+    const/4 v13, 0x5
+
+    const/4 v15, 0x3
+
+    const/4 v9, 0x2
+
+    const/4 v8, 0x1
+
+    if-eqz v6, :cond_9
+
+    if-eq v6, v8, :cond_5
+
+    if-eq v6, v9, :cond_2
+
+    goto/16 :goto_3
+
+    :cond_2
+    const-string v10, "Index"
+
+    const-string/jumbo v11, "\uc815\ube44\ud56d\ubaa9"
+
+    const-string/jumbo v12, "\uad50\ud658\uc8fc\uae30"
+
+    const-string/jumbo v13, "\uad50\ud658\uc2dc \ucd1d \uc8fc\ud589\uac70\ub9ac"
+
+    .line 15
+    filled-new-array {v10, v11, v12, v13}, [Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string/jumbo v11, "\ucc28\uacc4\ubd80_\uc18c\ubaa8\ud488\uad00\ub9ac"
+
+    .line 16
+    filled-new-array {v11}, [Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 17
+    invoke-virtual {v2}, Lad/d;->k()V
+
+    .line 18
+    invoke-virtual {v2}, Lad/d;->b()Landroid/database/Cursor;
+
+    move-result-object v12
+
+    .line 19
+    invoke-virtual {v4, v11}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 20
+    invoke-virtual {v4, v10}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 21
+    :cond_3
+    invoke-interface {v12}, Landroid/database/Cursor;->getCount()I
+
+    move-result v10
+
+    if-lez v10, :cond_4
+
+    new-array v10, v7, [Ljava/lang/String;
+
+    .line 22
+    invoke-interface {v12, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    aput-object v11, v10, v5
+
+    invoke-interface {v12, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    aput-object v11, v10, v8
+
+    invoke-interface {v12, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    aput-object v11, v10, v9
+
+    invoke-interface {v12, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    aput-object v11, v10, v15
+
+    .line 23
+    invoke-virtual {v4, v10}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 24
+    invoke-interface {v12}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v10
+
+    if-nez v10, :cond_3
+
+    .line 25
+    :cond_4
+    invoke-interface {v12}, Landroid/database/Cursor;->close()V
+
+    .line 26
+    invoke-virtual {v2}, Lad/d;->i()V
+
+    goto/16 :goto_3
+
+    :cond_5
+    const-string v17, "Index"
+
+    const-string/jumbo v18, "\ub144"
+
+    const-string/jumbo v19, "\uc6d4"
+
+    const-string/jumbo v20, "\uc77c"
+
+    const-string/jumbo v21, "\uc2dc"
+
+    const-string/jumbo v22, "\ubd84"
+
+    const-string/jumbo v23, "\uc9c0\ubd88\uc218\ub2e8"
+
+    const-string/jumbo v24, "\uc8fc\uc720\uc18c \uba85"
+
+    const-string/jumbo v25, "\uacb0\uc7ac\uae08\uc561"
+
+    const-string/jumbo v26, "\uc8fc\uc720\ub7c9"
+
+    const-string/jumbo v27, "\uae30\ud0c0"
+
+    const-string/jumbo v28, "\uc8fc\ud589\uac70\ub9ac"
+
+    .line 27
+    filled-new-array/range {v17 .. v28}, [Ljava/lang/String;
+
+    move-result-object v14
+
+    const-string/jumbo v17, "\ucc28\uacc4\ubd80_\uc8fc\uc720\ube44\uc6a9\uad00\ub9ac"
+
+    .line 28
+    filled-new-array/range {v17 .. v17}, [Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 29
+    invoke-virtual {v3}, Lad/e;->s()V
+
+    .line 30
+    invoke-virtual {v3}, Lad/e;->g()Landroid/database/Cursor;
+
+    move-result-object v11
+
+    if-nez v11, :cond_6
+
+    goto/16 :goto_3
+
+    .line 31
+    :cond_6
+    invoke-interface {v11}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 32
+    invoke-virtual {v4, v10}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 33
+    invoke-virtual {v4, v14}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 34
+    :cond_7
+    invoke-interface {v11}, Landroid/database/Cursor;->getCount()I
+
+    move-result v10
+
+    if-lez v10, :cond_8
+
+    const/16 v10, 0xc
+
+    new-array v10, v10, [Ljava/lang/String;
+
+    .line 35
+    invoke-interface {v11, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v5
+
+    invoke-interface {v11, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v8
+
+    invoke-interface {v11, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v9
+
+    invoke-interface {v11, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v15
+
+    .line 36
+    invoke-interface {v11, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v7
+
+    invoke-interface {v11, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v13
+
+    invoke-interface {v11, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    aput-object v14, v10, v12
+
+    const/4 v14, 0x7
+
+    invoke-interface {v11, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    aput-object v17, v10, v14
+
+    const/16 v14, 0x8
+
+    .line 37
+    invoke-interface {v11, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v18
+
+    aput-object v18, v10, v14
+
+    const/16 v14, 0x9
+
+    const/16 v19, 0x0
+
+    aput-object v19, v10, v14
+
+    const/16 v14, 0xa
+
+    aput-object v19, v10, v14
+
+    const/16 v14, 0xb
+
+    aput-object v19, v10, v14
+
+    .line 38
+    invoke-virtual {v4, v10}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 39
+    invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v10
+
+    if-nez v10, :cond_7
+
+    .line 40
+    :cond_8
+    invoke-interface {v11}, Landroid/database/Cursor;->close()V
+
+    .line 41
+    invoke-virtual {v3}, Lad/e;->a()V
+
+    goto/16 :goto_3
+
+    :cond_9
+    const-string/jumbo v10, "\ucc28\uacc4\ubd80_\ucc28\ub7c9\uc815\ubcf4"
+
+    .line 42
+    filled-new-array {v10}, [Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v19, "Index"
+
+    const-string/jumbo v20, "\uc0ac\uc6a9\uc790\uc774\ub984"
+
+    const-string/jumbo v21, "\ucc28\ub7c9\uc81c\uc870\uc0ac"
+
+    const-string/jumbo v22, "\ucc28\ub7c9\uba85"
+
+    const-string/jumbo v23, "\uc720\uc885"
+
+    const-string/jumbo v24, "\ucc28\ub7c9\uc5f0\uc2dd"
+
+    const-string/jumbo v25, "\ucc28\ub7c9\ubbf8\uc158"
+
+    const-string/jumbo v26, "\ucd1d\uc8fc\ud589\uac70\ub9ac"
+
+    const-string/jumbo v27, "\ucc28\uc885"
+
+    const-string/jumbo v28, "\uc5f0\ube44\uacc4\uc0b0\uae30\uc900\uc810"
+
+    .line 43
+    filled-new-array/range {v19 .. v28}, [Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 44
+    invoke-virtual {v0}, Lad/c;->h()V
+
+    .line 45
+    invoke-virtual {v0}, Lad/c;->a()Landroid/database/Cursor;
+
+    move-result-object v14
+
+    if-nez v14, :cond_a
+
+    goto :goto_3
+
+    .line 46
+    :cond_a
+    invoke-interface {v14}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 47
+    invoke-virtual {v4, v10}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 48
+    invoke-virtual {v4, v11}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 49
+    :goto_1
+    invoke-interface {v14}, Landroid/database/Cursor;->getCount()I
+
+    move-result v10
+
+    if-lez v10, :cond_c
+
+    const/16 v10, 0xa
+
+    new-array v11, v10, [Ljava/lang/String;
+
+    .line 50
+    invoke-interface {v14, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v5
+
+    invoke-interface {v14, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v8
+
+    invoke-interface {v14, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v9
+
+    invoke-interface {v14, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v15
+
+    .line 51
+    invoke-interface {v14, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v7
+
+    invoke-interface {v14, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v13
+
+    invoke-interface {v14, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v19
+
+    aput-object v19, v11, v12
+
+    const/4 v5, 0x7
+
+    invoke-interface {v14, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v17
+
+    aput-object v17, v11, v5
+
+    const/16 v17, 0x8
+
+    const/16 v18, 0x0
+
+    aput-object v18, v11, v17
+
+    const/16 v16, 0x9
+
+    aput-object v18, v11, v16
+
+    .line 52
+    invoke-virtual {v4, v11}, Lad/b;->d([Ljava/lang/String;)V
+
+    .line 53
+    invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v11
+
+    if-nez v11, :cond_b
+
+    goto :goto_2
+
+    :cond_b
+    const/4 v5, 0x0
+
+    goto :goto_1
+
+    .line 54
+    :cond_c
+    :goto_2
+    invoke-interface {v14}, Landroid/database/Cursor;->close()V
+
+    .line 55
+    invoke-virtual {v0}, Lad/c;->f()V
+
+    :goto_3
+    add-int/lit8 v6, v6, 0x1
+
+    const/4 v5, 0x0
+
+    goto/16 :goto_0
+
+    .line 56
+    :cond_d
+    invoke-virtual {v4}, Lad/b;->a()V
+    :try_end_0
+    .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_4
+
+    :catch_0
+    move-exception v0
+
+    .line 57
+    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_4
+
+    :catch_1
+    move-exception v0
+
+    .line 58
+    invoke-virtual {v0}, Landroid/database/SQLException;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_e
+    :goto_4
     return-void
-.end method
-
-.method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$a0;I)V
-    .locals 0
-
-    .line 1
-    check-cast p1, Lad/a$a;
-
-    invoke-virtual {p0, p1, p2}, Lad/a;->m(Lad/a$a;I)V
-
-    return-void
-.end method
-
-.method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$a0;
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1, p2}, Lad/a;->n(Landroid/view/ViewGroup;I)Lad/a$a;
-
-    move-result-object p1
-
-    return-object p1
 .end method

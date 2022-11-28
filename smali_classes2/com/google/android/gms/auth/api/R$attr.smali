@@ -14,17 +14,73 @@
 
 
 # static fields
-.field public static final buttonSize:I = 0x7f040088
+.field public static final alpha:I = 0x7f040039
 
-.field public static final circleCrop:I = 0x7f0400bc
+.field public static final buttonSize:I = 0x7f04009d
 
-.field public static final colorScheme:I = 0x7f0400e8
+.field public static final circleCrop:I = 0x7f0400e1
 
-.field public static final imageAspectRatio:I = 0x7f0401ee
+.field public static final colorScheme:I = 0x7f040127
 
-.field public static final imageAspectRatioAdjust:I = 0x7f0401ef
+.field public static final coordinatorLayoutStyle:I = 0x7f04014d
 
-.field public static final scopeUris:I = 0x7f040348
+.field public static final drawerLayoutStyle:I = 0x7f0401a0
+
+.field public static final elevation:I = 0x7f0401aa
+
+.field public static final font:I = 0x7f040220
+
+.field public static final fontProviderAuthority:I = 0x7f040222
+
+.field public static final fontProviderCerts:I = 0x7f040223
+
+.field public static final fontProviderFetchStrategy:I = 0x7f040224
+
+.field public static final fontProviderFetchTimeout:I = 0x7f040225
+
+.field public static final fontProviderPackage:I = 0x7f040226
+
+.field public static final fontProviderQuery:I = 0x7f040227
+
+.field public static final fontProviderSystemFontFamily:I = 0x7f040228
+
+.field public static final fontStyle:I = 0x7f040229
+
+.field public static final fontVariationSettings:I = 0x7f04022a
+
+.field public static final fontWeight:I = 0x7f04022b
+
+.field public static final imageAspectRatio:I = 0x7f04025e
+
+.field public static final imageAspectRatioAdjust:I = 0x7f04025f
+
+.field public static final keylines:I = 0x7f0402a3
+
+.field public static final lStar:I = 0x7f0402a4
+
+.field public static final layout_anchor:I = 0x7f0402b1
+
+.field public static final layout_anchorGravity:I = 0x7f0402b2
+
+.field public static final layout_behavior:I = 0x7f0402b3
+
+.field public static final layout_dodgeInsetEdges:I = 0x7f0402e4
+
+.field public static final layout_insetEdge:I = 0x7f0402ee
+
+.field public static final layout_keyline:I = 0x7f0402ef
+
+.field public static final nestedScrollViewStyle:I = 0x7f0403a5
+
+.field public static final queryPatterns:I = 0x7f0403ff
+
+.field public static final scopeUris:I = 0x7f04041f
+
+.field public static final shortcutMatchRequired:I = 0x7f040445
+
+.field public static final statusBarBackground:I = 0x7f04048f
+
+.field public static final ttcIndex:I = 0x7f040561
 
 
 # direct methods

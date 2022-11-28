@@ -1,357 +1,505 @@
 .class public Lid/d;
-.super Ljava/lang/Object;
-.source "DnsRequest.java"
+.super Lid/c;
+.source "ActivityTmapQrCodeScanBindingImpl.java"
+
+
+# static fields
+.field public static final w1:Landroidx/databinding/ViewDataBinding$i;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public static final x1:Landroid/util/SparseIntArray;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final u1:Landroidx/constraintlayout/widget/ConstraintLayout;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
 
-.field public b:Lcom/sktelecom/DnsClient/QueryType;
+.field public v1:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lcom/sktelecom/DnsClient/QueryType;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 3
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    sput-object v0, Lid/d;->x1:Landroid/util/SparseIntArray;
+
+    const v1, 0x7f0a0975
+
+    const/4 v2, 0x2
 
     .line 2
-    iput-object p1, p0, Lid/d;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v1, 0x7f0a097c
+
+    const/4 v2, 0x3
 
     .line 3
-    iput-object p2, p0, Lid/d;->b:Lcom/sktelecom/DnsClient/QueryType;
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v1, 0x7f0a097b
+
+    const/4 v2, 0x4
+
+    .line 4
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v1, 0x7f0a097a
+
+    const/4 v2, 0x5
+
+    .line 5
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v1, 0x7f0a0976
+
+    const/4 v2, 0x6
+
+    .line 6
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v1, 0x7f0a0977
+
+    const/4 v2, 0x7
+
+    .line 7
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v1, 0x7f0a0978
+
+    const/16 v2, 0x8
+
+    .line 8
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
     return-void
 .end method
 
-.method public static e(Ljava/lang/String;)[B
-    .locals 7
+.method public constructor <init>(Landroidx/databinding/f;Landroid/view/View;)V
+    .locals 3
+    .param p1    # Landroidx/databinding/f;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bindingComponent",
+            "root"
+        }
+    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    sget-object v0, Lid/d;->w1:Landroidx/databinding/ViewDataBinding$i;
 
-    move-result v0
+    sget-object v1, Lid/d;->x1:Landroid/util/SparseIntArray;
+
+    const/16 v2, 0x9
+
+    invoke-static {p1, p2, v2, v0, v1}, Landroidx/databinding/ViewDataBinding;->c0(Landroidx/databinding/f;Landroid/view/View;ILandroidx/databinding/ViewDataBinding$i;Landroid/util/SparseIntArray;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, p2, v0}, Lid/d;-><init>(Landroidx/databinding/f;Landroid/view/View;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/databinding/f;Landroid/view/View;[Ljava/lang/Object;)V
+    .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "bindingComponent",
+            "root",
+            "bindings"
+        }
+    .end annotation
+
+    move-object v12, p0
+
+    const/4 v0, 0x2
 
     .line 2
-    div-int/lit8 v1, v0, 0x2
+    aget-object v0, p3, v0
 
-    new-array v1, v1, [B
+    move-object v4, v0
 
-    const/4 v2, 0x0
+    check-cast v4, Landroid/widget/ImageButton;
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    const/4 v0, 0x6
+
+    aget-object v0, p3, v0
+
+    move-object v5, v0
+
+    check-cast v5, Landroidx/constraintlayout/widget/ConstraintLayout;
+
+    const/4 v0, 0x7
+
+    aget-object v0, p3, v0
+
+    move-object v6, v0
+
+    check-cast v6, Landroid/widget/ImageView;
+
+    const/16 v0, 0x8
+
+    aget-object v0, p3, v0
+
+    move-object v7, v0
+
+    check-cast v7, Landroid/widget/TextView;
+
+    const/4 v0, 0x1
+
+    aget-object v0, p3, v0
+
+    move-object v8, v0
+
+    check-cast v8, Landroid/widget/CheckBox;
+
+    const/4 v0, 0x5
+
+    aget-object v0, p3, v0
+
+    move-object v9, v0
+
+    check-cast v9, Landroid/widget/TextView;
+
+    const/4 v0, 0x4
+
+    aget-object v0, p3, v0
+
+    move-object v10, v0
+
+    check-cast v10, Lcom/journeyapps/barcodescanner/DecoratedBarcodeView;
+
+    const/4 v0, 0x3
+
+    aget-object v0, p3, v0
+
+    move-object v11, v0
+
+    check-cast v11, Landroid/widget/TextView;
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-direct/range {v0 .. v11}, Lid/c;-><init>(Ljava/lang/Object;Landroid/view/View;ILandroid/widget/ImageButton;Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/widget/ImageView;Landroid/widget/TextView;Landroid/widget/CheckBox;Landroid/widget/TextView;Lcom/journeyapps/barcodescanner/DecoratedBarcodeView;Landroid/widget/TextView;)V
+
+    const-wide/16 v0, -0x1
 
     .line 3
-    div-int/lit8 v3, v2, 0x2
+    iput-wide v0, v12, Lid/d;->v1:J
 
-    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
-
-    move-result v4
-
-    const/16 v5, 0x10
-
-    invoke-static {v4, v5}, Ljava/lang/Character;->digit(CI)I
-
-    move-result v4
-
-    shl-int/lit8 v4, v4, 0x4
-
-    add-int/lit8 v6, v2, 0x1
+    const/4 v0, 0x0
 
     .line 4
-    invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
+    aget-object v0, p3, v0
 
-    move-result v6
+    check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    invoke-static {v6, v5}, Ljava/lang/Character;->digit(CI)I
+    iput-object v0, v12, Lid/d;->u1:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    move-result v5
+    const/4 v1, 0x0
 
-    add-int/2addr v5, v4
+    .line 5
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
-    int-to-byte v4, v5
+    .line 6
+    iget-object v0, v12, Lid/c;->p1:Landroid/widget/CheckBox;
 
-    aput-byte v4, v1, v3
+    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setTag(Ljava/lang/Object;)V
 
-    add-int/lit8 v2, v2, 0x2
+    move-object v0, p2
 
-    goto :goto_0
+    .line 7
+    invoke-virtual {p0, p2}, Landroidx/databinding/ViewDataBinding;->D0(Landroid/view/View;)V
 
-    :cond_0
-    return-object v1
+    .line 8
+    invoke-virtual {p0}, Lid/d;->Z()V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)[B
-    .locals 5
+.method public W0(ILjava/lang/Object;)Z
+    .locals 1
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "variableId",
+            "variable"
+        }
+    .end annotation
 
-    add-int/lit8 p1, p1, 0x5
+    const/16 v0, 0x8c
+
+    if-ne v0, p1, :cond_0
 
     .line 1
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    check-cast p2, Ljava/lang/Boolean;
 
-    move-result-object p1
+    invoke-virtual {p0, p2}, Lid/d;->l1(Ljava/lang/Boolean;)V
 
-    .line 2
-    iget-object v0, p0, Lid/d;->a:Ljava/lang/String;
-
-    const-string v1, "\\."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    .line 3
-    :goto_0
-    array-length v3, v0
-
-    if-ge v2, v3, :cond_1
-
-    .line 4
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    int-to-byte v3, v3
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    move v3, v1
-
-    .line 5
-    :goto_1
-    aget-object v4, v0, v2
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_0
-
-    .line 6
-    aget-object v4, v0, v2
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->charAt(I)C
-
-    move-result v4
-
-    int-to-byte v4, v4
-
-    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    const/4 p1, 0x1
 
     goto :goto_0
 
-    .line 7
-    :cond_1
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    :cond_0
+    const/4 p1, 0x0
 
-    .line 8
-    new-instance v0, Ljava/lang/StringBuilder;
+    :goto_0
+    return p1
+.end method
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+.method public X()Z
+    .locals 4
 
-    const-string v2, "000"
+    .line 1
+    monitor-enter p0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    :try_start_0
+    iget-wide v0, p0, Lid/d;->v1:J
 
-    iget-object v2, p0, Lid/d;->b:Lcom/sktelecom/DnsClient/QueryType;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p0, v2}, Lid/d;->f(Lcom/sktelecom/DnsClient/QueryType;)C
+    cmp-long v0, v0, v2
 
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lid/d;->e(Ljava/lang/String;)[B
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    .line 9
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 10
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    .line 11
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final b()[B
-    .locals 3
-
-    const/16 v0, 0xc
-
-    .line 1
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [B
-
-    .line 2
-    new-instance v2, Ljava/util/Random;
-
-    invoke-direct {v2}, Ljava/util/Random;-><init>()V
-
-    invoke-virtual {v2, v1}, Ljava/util/Random;->nextBytes([B)V
-
     .line 3
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    monitor-exit p0
 
-    const/4 v1, 0x1
+    return v0
 
     .line 4
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    :cond_0
+    monitor-exit p0
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public Z()V
+    .locals 2
+
+    .line 1
+    monitor-enter p0
+
+    const-wide/16 v0, 0x2
+
+    .line 2
+    :try_start_0
+    iput-wide v0, p0, Lid/d;->v1:J
+
+    .line 3
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/databinding/ViewDataBinding;->r0()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
 
     .line 5
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public e0(ILjava/lang/Object;I)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "localFieldId",
+            "object",
+            "fieldId"
+        }
+    .end annotation
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public l1(Ljava/lang/Boolean;)V
+    .locals 4
+    .param p1    # Ljava/lang/Boolean;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "IsFlashOn"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lid/c;->t1:Ljava/lang/Boolean;
+
+    .line 2
+    monitor-enter p0
+
+    .line 3
+    :try_start_0
+    iget-wide v0, p0, Lid/d;->v1:J
+
+    const-wide/16 v2, 0x1
+
+    or-long/2addr v0, v2
+
+    iput-wide v0, p0, Lid/d;->v1:J
+
+    .line 4
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/16 p1, 0x8c
+
+    .line 5
+    invoke-virtual {p0, p1}, Landroidx/databinding/a;->notifyPropertyChanged(I)V
 
     .line 6
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    invoke-super {p0}, Landroidx/databinding/ViewDataBinding;->r0()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
 
     .line 7
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method
 
-.method public final c()I
-    .locals 5
+.method public r()V
+    .locals 8
 
     .line 1
-    iget-object v0, p0, Lid/d;->a:Ljava/lang/String;
-
-    const-string v1, "\\."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
+    monitor-enter p0
 
     .line 2
-    :goto_0
-    array-length v3, v0
+    :try_start_0
+    iget-wide v0, p0, Lid/d;->v1:J
 
-    if-ge v1, v3, :cond_0
-
-    .line 3
-    aget-object v3, v0, v1
-
-    const/4 v4, 0x1
-
-    invoke-static {v3, v4, v2}, Lp5/a;->a(Ljava/lang/String;II)I
-
-    move-result v2
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v2
-.end method
-
-.method public d()[B
-    .locals 3
-
-    .line 1
-    invoke-virtual {p0}, Lid/d;->c()I
-
-    move-result v0
-
-    add-int/lit8 v1, v0, 0x11
-
-    .line 2
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
+    const-wide/16 v2, 0x0
 
     .line 3
-    invoke-virtual {p0}, Lid/d;->b()[B
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    iput-wide v2, p0, Lid/d;->v1:J
 
     .line 4
-    invoke-virtual {p0, v0}, Lid/d;->a(I)[B
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    const/4 v4, 0x0
 
     .line 5
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+    iget-object v5, p0, Lid/c;->t1:Ljava/lang/Boolean;
 
-    move-result-object v0
+    const-wide/16 v6, 0x3
 
-    return-object v0
-.end method
+    and-long/2addr v0, v6
 
-.method public final f(Lcom/sktelecom/DnsClient/QueryType;)C
-    .locals 1
+    cmp-long v0, v0, v2
 
-    .line 1
-    sget-object v0, Lcom/sktelecom/DnsClient/QueryType;->A:Lcom/sktelecom/DnsClient/QueryType;
+    if-eqz v0, :cond_0
 
-    if-ne p1, v0, :cond_0
+    .line 6
+    invoke-static {v5}, Landroidx/databinding/ViewDataBinding;->z0(Ljava/lang/Boolean;)Z
 
-    const/16 p1, 0x31
+    move-result v4
 
-    return p1
-
-    .line 2
     :cond_0
-    sget-object v0, Lcom/sktelecom/DnsClient/QueryType;->NS:Lcom/sktelecom/DnsClient/QueryType;
+    if-eqz v0, :cond_1
 
-    if-ne p1, v0, :cond_1
+    .line 7
+    iget-object v0, p0, Lid/c;->p1:Landroid/widget/CheckBox;
 
-    const/16 p1, 0x32
-
-    return p1
+    invoke-static {v0, v4}, Lq2/k;->a(Landroid/widget/CompoundButton;Z)V
 
     :cond_1
-    const/16 p1, 0x46
+    return-void
 
-    return p1
+    :catchall_0
+    move-exception v0
+
+    .line 8
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

@@ -23,6 +23,12 @@
 
 .field public static final d:I = 0x3
 
+.field public static final e:I = 0x4
+
+.field public static final f:I = 0x5
+
+.field public static final g:I = 0x6
+
 
 # direct methods
 .method public constructor <init>()V

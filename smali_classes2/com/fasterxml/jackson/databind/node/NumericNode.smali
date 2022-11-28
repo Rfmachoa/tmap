@@ -3,6 +3,10 @@
 .source "NumericNode.java"
 
 
+# static fields
+.field private static final serialVersionUID:J = 0x1L
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -109,6 +113,14 @@
 .end method
 
 .method public abstract intValue()I
+.end method
+
+.method public isNaN()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public abstract longValue()J

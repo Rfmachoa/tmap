@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field public a:Landroidx/camera/core/impl/s;
+.field public a:Landroidx/camera/core/impl/q;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/camera/core/impl/s<",
+            "Landroidx/camera/core/impl/q<",
             "*>;"
         }
     .end annotation
 .end field
 
-.field public b:Landroidx/camera/core/impl/s;
+.field public b:Landroidx/camera/core/impl/q;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/camera/core/impl/s<",
+            "Landroidx/camera/core/impl/q<",
             "*>;"
         }
     .end annotation
@@ -35,25 +35,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/core/impl/s;Landroidx/camera/core/impl/s;)V
+.method public constructor <init>(Landroidx/camera/core/impl/q;Landroidx/camera/core/impl/q;)V
     .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "extendedConfig",
-            "cameraConfig"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/camera/core/impl/s<",
+            "Landroidx/camera/core/impl/q<",
             "*>;",
-            "Landroidx/camera/core/impl/s<",
+            "Landroidx/camera/core/impl/q<",
             "*>;)V"
         }
     .end annotation
@@ -62,10 +51,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$b;->a:Landroidx/camera/core/impl/s;
+    iput-object p1, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$b;->a:Landroidx/camera/core/impl/q;
 
     .line 3
-    iput-object p2, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$b;->b:Landroidx/camera/core/impl/s;
+    iput-object p2, p0, Landroidx/camera/core/internal/CameraUseCaseAdapter$b;->b:Landroidx/camera/core/impl/q;
 
     return-void
 .end method

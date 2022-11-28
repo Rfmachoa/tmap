@@ -191,7 +191,7 @@
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Lc1/h;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-static {v0, v4}, Lh1/a;->a(ILjava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v4
 

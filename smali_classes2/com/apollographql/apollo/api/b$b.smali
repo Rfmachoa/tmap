@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method public marshaller()Lc4/e;
+.method public marshaller()Lz5/e;
     .locals 1
     .annotation runtime Ljavax/annotation/Nonnull;
     .end annotation

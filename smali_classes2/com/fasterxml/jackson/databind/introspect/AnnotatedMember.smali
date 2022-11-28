@@ -53,32 +53,6 @@
 
 
 # virtual methods
-.method public final addIfNotPresent(Ljava/lang/annotation/Annotation;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->_annotations:Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
-
-    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;->addIfNotPresent(Ljava/lang/annotation/Annotation;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final addOrOverride(Ljava/lang/annotation/Annotation;)Z
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->_annotations:Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;
-
-    invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;->add(Ljava/lang/annotation/Annotation;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
 .method public annotations()Ljava/lang/Iterable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -88,6 +62,9 @@
             "Ljava/lang/annotation/Annotation;",
             ">;"
         }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 1
@@ -111,19 +88,6 @@
     return-object v0
 .end method
 
-.method public final fixAccess()V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    const/4 v0, 0x1
-
-    .line 2
-    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->fixAccess(Z)V
-
-    return-void
-.end method
-
 .method public final fixAccess(Z)V
     .locals 1
 
@@ -132,8 +96,12 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    .line 2
     invoke-static {v0, p1}, Lcom/fasterxml/jackson/databind/util/ClassUtil;->checkAndFixAccess(Ljava/lang/reflect/Member;Z)V
 
+    :cond_0
     return-void
 .end method
 
@@ -186,11 +154,48 @@
     .end annotation
 .end method
 
+.method public getFullName()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->getDeclaringClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "#"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/introspect/Annotated;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public abstract getMember()Ljava/lang/reflect/Member;
 .end method
 
 .method public getTypeContext()Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/databind/introspect/AnnotatedMember;->_typeContext:Lcom/fasterxml/jackson/databind/introspect/TypeResolutionContext;
@@ -272,4 +277,7 @@
             Ljava/lang/IllegalArgumentException;
         }
     .end annotation
+.end method
+
+.method public abstract withAnnotations(Lcom/fasterxml/jackson/databind/introspect/AnnotationMap;)Lcom/fasterxml/jackson/databind/introspect/Annotated;
 .end method

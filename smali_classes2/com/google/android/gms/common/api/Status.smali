@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/api/Status;
 .super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 # interfaces
 .implements Lcom/google/android/gms/common/api/Result;
@@ -8,9 +8,6 @@
 
 
 # annotations
-.annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-.end annotation
-
 .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Class;
     creator = "StatusCreator"
 .end annotation
@@ -72,6 +69,20 @@
 .end field
 
 .field public static final RESULT_SUCCESS:Lcom/google/android/gms/common/api/Status;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
+    .end annotation
+.end field
+
+.field public static final RESULT_SUCCESS_CACHE:Lcom/google/android/gms/common/api/Status;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -156,6 +167,14 @@
 
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/common/api/Status;-><init>(I)V
+
+    sput-object v0, Lcom/google/android/gms/common/api/Status;->RESULT_SUCCESS_CACHE:Lcom/google/android/gms/common/api/Status;
+
+    new-instance v0, Lcom/google/android/gms/common/api/Status;
+
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/google/android/gms/common/api/Status;-><init>(I)V
@@ -221,44 +240,11 @@
 
 .method public constructor <init>(I)V
     .locals 1
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     const/4 v0, 0x0
 
     .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(IILjava/lang/String;Landroid/app/PendingIntent;)V
-    .locals 6
-    .param p3    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Landroid/app/PendingIntent;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    .line 2
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/api/Status;-><init>(IILjava/lang/String;Landroid/app/PendingIntent;Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void
 .end method
@@ -299,9 +285,6 @@
             id = 0x4
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
-
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
     .end annotation
 
@@ -321,26 +304,32 @@
 .end method
 
 .method public constructor <init>(ILjava/lang/String;)V
-    .locals 2
+    .locals 6
     .param p2    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    .line 3
-    invoke-direct {p0, v0, p1, p2, v1}, Lcom/google/android/gms/common/api/Status;-><init>(IILjava/lang/String;Landroid/app/PendingIntent;)V
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move v2, p1
+
+    move-object v3, p2
+
+    .line 2
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/api/Status;-><init>(IILjava/lang/String;Landroid/app/PendingIntent;Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void
 .end method
 
 .method public constructor <init>(ILjava/lang/String;Landroid/app/PendingIntent;)V
-    .locals 1
+    .locals 6
     .param p2    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -349,13 +338,21 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    .line 4
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/google/android/gms/common/api/Status;-><init>(IILjava/lang/String;Landroid/app/PendingIntent;)V
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    .line 3
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/api/Status;-><init>(IILjava/lang/String;Landroid/app/PendingIntent;Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void
 .end method
@@ -373,7 +370,7 @@
 
     const/16 v0, 0x11
 
-    .line 5
+    .line 4
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/common/api/Status;-><init>(Lcom/google/android/gms/common/ConnectionResult;Ljava/lang/String;I)V
 
     return-void
@@ -395,7 +392,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 6
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->getResolution()Landroid/app/PendingIntent;
 
     move-result-object v4
@@ -410,7 +407,7 @@
 
     move-object v5, p1
 
-    .line 7
+    .line 6
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/api/Status;-><init>(IILjava/lang/String;Landroid/app/PendingIntent;Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void
@@ -517,7 +514,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     return-object p0
@@ -654,6 +651,8 @@
 
 .method public isSuccess()Z
     .locals 1
+    .annotation runtime Lcom/google/errorprone/annotations/CheckReturnValue;
+    .end annotation
 
     iget v0, p0, Lcom/google/android/gms/common/api/Status;->zzc:I
 
@@ -757,8 +756,6 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I

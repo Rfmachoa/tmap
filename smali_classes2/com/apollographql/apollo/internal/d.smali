@@ -35,19 +35,19 @@
 
 .field public final c:Lokhttp3/Call$Factory;
 
-.field public final d:Ld4/a;
+.field public final d:La6/a;
 
 .field public final e:Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;
 
 .field public final f:Lcom/apollographql/apollo/internal/h;
 
-.field public final g:Lo4/d;
+.field public final g:Ll6/d;
 
-.field public final h:Lf4/a;
+.field public final h:Lc6/a;
 
-.field public final i:Le4/a;
+.field public final i:Lb6/a;
 
-.field public final j:Li4/a;
+.field public final j:Lf6/a;
 
 .field public final k:Lcom/apollographql/apollo/interceptor/a;
 
@@ -71,7 +71,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lc4/h;",
+            "Lz5/h;",
             ">;"
         }
     .end annotation
@@ -129,7 +129,7 @@
     .end annotation
 .end field
 
-.field public w:Lp4/b;
+.field public w:Lm6/b;
 
 
 # direct methods
@@ -178,9 +178,9 @@
     iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->c:Lokhttp3/Call$Factory;
 
     .line 8
-    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->d:Ld4/a;
+    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->d:La6/a;
 
-    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->d:Ld4/a;
+    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->d:La6/a;
 
     .line 9
     iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->e:Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;
@@ -193,24 +193,24 @@
     iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->f:Lcom/apollographql/apollo/internal/h;
 
     .line 11
-    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->g:Lo4/d;
+    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->g:Ll6/d;
 
-    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->g:Lo4/d;
+    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->g:Ll6/d;
 
     .line 12
-    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->h:Lf4/a;
+    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->h:Lc6/a;
 
-    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lf4/a;
+    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lc6/a;
 
     .line 13
-    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->i:Li4/a;
+    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->i:Lf6/a;
 
-    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->j:Li4/a;
+    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->j:Lf6/a;
 
     .line 14
-    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->j:Le4/a;
+    iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->j:Lb6/a;
 
-    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->i:Le4/a;
+    iput-object v1, p0, Lcom/apollographql/apollo/internal/d;->i:Lb6/a;
 
     .line 15
     iget-object v1, p1, Lcom/apollographql/apollo/internal/d$d;->l:Ljava/util/concurrent/Executor;
@@ -243,9 +243,9 @@
     iput-object v3, p0, Lcom/apollographql/apollo/internal/d;->n:Lcom/apollographql/apollo/internal/a;
 
     .line 21
-    iget-object v3, p1, Lcom/apollographql/apollo/internal/d$d;->t:Lp4/b;
+    iget-object v3, p1, Lcom/apollographql/apollo/internal/d$d;->t:Lm6/b;
 
-    iput-object v3, p0, Lcom/apollographql/apollo/internal/d;->w:Lp4/b;
+    iput-object v3, p0, Lcom/apollographql/apollo/internal/d;->w:Lm6/b;
 
     .line 22
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
@@ -261,7 +261,7 @@
     if-nez v2, :cond_1
 
     :cond_0
-    iget-object v2, p1, Lcom/apollographql/apollo/internal/d$d;->h:Lf4/a;
+    iget-object v2, p1, Lcom/apollographql/apollo/internal/d$d;->h:Lc6/a;
 
     if-nez v2, :cond_2
 
@@ -314,17 +314,17 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/apollographql/apollo/internal/d$d;->g:Lo4/d;
+    iget-object v2, p1, Lcom/apollographql/apollo/internal/d$d;->g:Ll6/d;
 
     .line 30
-    invoke-virtual {v1, v2}, Lcom/apollographql/apollo/internal/c$b;->k(Lo4/d;)Lcom/apollographql/apollo/internal/c$b;
+    invoke-virtual {v1, v2}, Lcom/apollographql/apollo/internal/c$b;->k(Ll6/d;)Lcom/apollographql/apollo/internal/c$b;
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/apollographql/apollo/internal/d$d;->h:Lf4/a;
+    iget-object v2, p1, Lcom/apollographql/apollo/internal/d$d;->h:Lc6/a;
 
     .line 31
-    invoke-virtual {v1, v2}, Lcom/apollographql/apollo/internal/c$b;->a(Lf4/a;)Lcom/apollographql/apollo/internal/c$b;
+    invoke-virtual {v1, v2}, Lcom/apollographql/apollo/internal/c$b;->a(Lc6/a;)Lcom/apollographql/apollo/internal/c$b;
 
     move-result-object v1
 
@@ -475,10 +475,10 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->i:Le4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->i:Lb6/a;
 
     .line 3
-    invoke-virtual {p1, v1}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b(Le4/a;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;
+    invoke-virtual {p1, v1}, Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;->b(Lb6/a;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor$b$a;
 
     move-result-object p1
 
@@ -534,11 +534,11 @@
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/apollographql/apollo/api/b;->name()Lc4/h;
+    invoke-interface {v3}, Lcom/apollographql/apollo/api/b;->name()Lz5/h;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lc4/h;->name()Ljava/lang/String;
+    invoke-interface {v3}, Lz5/h;->name()Ljava/lang/String;
 
     move-result-object v3
 
@@ -552,9 +552,9 @@
     return-void
 .end method
 
-.method public bridge synthetic cacheHeaders(Le4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
+.method public bridge synthetic cacheHeaders(Lb6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
     .locals 0
-    .param p1    # Le4/a;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -562,16 +562,16 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->f(Le4/a;)Lcom/apollographql/apollo/internal/d;
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->f(Lb6/a;)Lcom/apollographql/apollo/internal/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic cacheHeaders(Le4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+.method public bridge synthetic cacheHeaders(Lb6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
     .locals 0
-    .param p1    # Le4/a;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -579,16 +579,16 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->f(Le4/a;)Lcom/apollographql/apollo/internal/d;
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->f(Lb6/a;)Lcom/apollographql/apollo/internal/d;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public bridge synthetic cacheHeaders(Le4/a;)Lcom/apollographql/apollo/GraphQLCall;
+.method public bridge synthetic cacheHeaders(Lb6/a;)Lcom/apollographql/apollo/GraphQLCall;
     .locals 0
-    .param p1    # Le4/a;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -596,7 +596,7 @@
     .end annotation
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->f(Le4/a;)Lcom/apollographql/apollo/internal/d;
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->f(Lb6/a;)Lcom/apollographql/apollo/internal/d;
 
     move-result-object p1
 
@@ -950,16 +950,16 @@
     throw p1
 .end method
 
-.method public f(Le4/a;)Lcom/apollographql/apollo/internal/d;
+.method public f(Lb6/a;)Lcom/apollographql/apollo/internal/d;
     .locals 2
-    .param p1    # Le4/a;
+    .param p1    # Lb6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le4/a;",
+            "Lb6/a;",
             ")",
             "Lcom/apollographql/apollo/internal/d<",
             "TT;>;"
@@ -992,9 +992,9 @@
 
     move-result-object p1
 
-    check-cast p1, Le4/a;
+    check-cast p1, Lb6/a;
 
-    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/internal/d$d;->d(Le4/a;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/internal/d$d;->d(Lb6/a;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object p1
 
@@ -1292,7 +1292,7 @@
     .line 3
     iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->f:Lcom/apollographql/apollo/internal/h;
 
-    invoke-virtual {v1, p1}, Lcom/apollographql/apollo/internal/h;->a(Lcom/apollographql/apollo/api/b;)Lc4/j;
+    invoke-virtual {v1, p1}, Lcom/apollographql/apollo/internal/h;->a(Lcom/apollographql/apollo/api/b;)Lz5/j;
 
     move-result-object v9
 
@@ -1302,67 +1302,67 @@
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     .line 5
-    iget-object p1, p0, Lcom/apollographql/apollo/internal/d;->j:Li4/a;
+    iget-object p1, p0, Lcom/apollographql/apollo/internal/d;->j:Lf6/a;
 
     iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->m:Lcom/apollographql/apollo/internal/b;
 
-    invoke-interface {p1, v1}, Li4/a;->a(Lcom/apollographql/apollo/internal/b;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor;
+    invoke-interface {p1, v1}, Lf6/a;->a(Lcom/apollographql/apollo/internal/b;)Lcom/apollographql/apollo/interceptor/ApolloInterceptor;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 6
-    new-instance p1, Lm4/a;
+    new-instance p1, Lj6/a;
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lf4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lc6/a;
 
     iget-object v2, p0, Lcom/apollographql/apollo/internal/d;->l:Ljava/util/concurrent/Executor;
 
     iget-object v3, p0, Lcom/apollographql/apollo/internal/d;->m:Lcom/apollographql/apollo/internal/b;
 
-    invoke-direct {p1, v1, v9, v2, v3}, Lm4/a;-><init>(Lf4/a;Lc4/j;Ljava/util/concurrent/Executor;Lcom/apollographql/apollo/internal/b;)V
+    invoke-direct {p1, v1, v9, v2, v3}, Lj6/a;-><init>(Lc6/a;Lz5/j;Ljava/util/concurrent/Executor;Lcom/apollographql/apollo/internal/b;)V
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 7
-    new-instance p1, Lm4/b;
+    new-instance p1, Lj6/b;
 
-    iget-object v7, p0, Lcom/apollographql/apollo/internal/d;->d:Ld4/a;
+    iget-object v7, p0, Lcom/apollographql/apollo/internal/d;->d:La6/a;
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lf4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lc6/a;
 
-    invoke-interface {v1}, Lf4/a;->o()Lj4/h;
+    invoke-interface {v1}, Lc6/a;->m()Lg6/h;
 
     move-result-object v8
 
-    iget-object v10, p0, Lcom/apollographql/apollo/internal/d;->g:Lo4/d;
+    iget-object v10, p0, Lcom/apollographql/apollo/internal/d;->g:Ll6/d;
 
     iget-object v11, p0, Lcom/apollographql/apollo/internal/d;->m:Lcom/apollographql/apollo/internal/b;
 
     move-object v6, p1
 
-    invoke-direct/range {v6 .. v11}, Lm4/b;-><init>(Ld4/a;Lj4/h;Lc4/j;Lo4/d;Lcom/apollographql/apollo/internal/b;)V
+    invoke-direct/range {v6 .. v11}, Lj6/b;-><init>(La6/a;Lg6/h;Lz5/j;Ll6/d;Lcom/apollographql/apollo/internal/b;)V
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 8
-    new-instance p1, Lm4/d;
+    new-instance p1, Lj6/d;
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->w:Lp4/b;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->w:Lm6/b;
 
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/d;->h:Lf4/a;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/d;->h:Lc6/a;
 
-    invoke-interface {v2}, Lf4/a;->o()Lj4/h;
+    invoke-interface {v2}, Lc6/a;->m()Lg6/h;
 
     move-result-object v2
 
-    invoke-direct {p1, v1, v2}, Lm4/d;-><init>(Lp4/b;Lj4/h;)V
+    invoke-direct {p1, v1, v2}, Lj6/d;-><init>(Lm6/b;Lg6/h;)V
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 9
-    new-instance p1, Lm4/c;
+    new-instance p1, Lj6/c;
 
     iget-object v3, p0, Lcom/apollographql/apollo/internal/d;->b:Lokhttp3/HttpUrl;
 
@@ -1370,7 +1370,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v7, p0, Lcom/apollographql/apollo/internal/d;->g:Lo4/d;
+    iget-object v7, p0, Lcom/apollographql/apollo/internal/d;->g:Ll6/d;
 
     iget-object v8, p0, Lcom/apollographql/apollo/internal/d;->m:Lcom/apollographql/apollo/internal/b;
 
@@ -1378,14 +1378,14 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v9}, Lm4/c;-><init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;ZLo4/d;Lcom/apollographql/apollo/internal/b;Z)V
+    invoke-direct/range {v2 .. v9}, Lj6/c;-><init>(Lokhttp3/HttpUrl;Lokhttp3/Call$Factory;Lcom/apollographql/apollo/api/cache/http/HttpCachePolicy$b;ZLl6/d;Lcom/apollographql/apollo/internal/b;Z)V
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 10
-    new-instance p1, Lm4/e;
+    new-instance p1, Lj6/e;
 
-    invoke-direct {p1, v0}, Lm4/e;-><init>(Ljava/util/List;)V
+    invoke-direct {p1, v0}, Lj6/e;-><init>(Ljava/util/List;)V
 
     return-object p1
 .end method
@@ -1509,16 +1509,16 @@
     throw v0
 .end method
 
-.method public m(Li4/a;)Lcom/apollographql/apollo/internal/d;
+.method public m(Lf6/a;)Lcom/apollographql/apollo/internal/d;
     .locals 2
-    .param p1    # Li4/a;
+    .param p1    # Lf6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Li4/a;",
+            "Lf6/a;",
             ")",
             "Lcom/apollographql/apollo/internal/d<",
             "TT;>;"
@@ -1551,9 +1551,9 @@
 
     move-result-object p1
 
-    check-cast p1, Li4/a;
+    check-cast p1, Lf6/a;
 
-    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/internal/d$d;->n(Li4/a;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/internal/d$d;->n(Lf6/a;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object p1
 
@@ -1763,10 +1763,10 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->d:Ld4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->d:La6/a;
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->f(Ld4/a;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->f(La6/a;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object v0
 
@@ -1784,31 +1784,31 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->g:Lo4/d;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->g:Ll6/d;
 
     .line 8
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->p(Lo4/d;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->p(Ll6/d;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lf4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->h:Lc6/a;
 
     .line 9
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->a(Lf4/a;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->a(Lc6/a;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->i:Le4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->i:Lb6/a;
 
     .line 10
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->d(Le4/a;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->d(Lb6/a;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->j:Li4/a;
+    iget-object v1, p0, Lcom/apollographql/apollo/internal/d;->j:Lf6/a;
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->n(Li4/a;)Lcom/apollographql/apollo/internal/d$d;
+    invoke-virtual {v0, v1}, Lcom/apollographql/apollo/internal/d$d;->n(Lf6/a;)Lcom/apollographql/apollo/internal/d$d;
 
     move-result-object v0
 
@@ -1902,85 +1902,15 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/apollographql/apollo/internal/d;->h:Lf4/a;
+    iget-object v2, p0, Lcom/apollographql/apollo/internal/d;->h:Lc6/a;
 
     iget-object v3, p0, Lcom/apollographql/apollo/internal/d;->m:Lcom/apollographql/apollo/internal/b;
 
     iget-object v4, p0, Lcom/apollographql/apollo/internal/d;->n:Lcom/apollographql/apollo/internal/a;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/apollographql/apollo/internal/f;-><init>(Lcom/apollographql/apollo/internal/d;Lf4/a;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/a;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/apollographql/apollo/internal/f;-><init>(Lcom/apollographql/apollo/internal/d;Lc6/a;Lcom/apollographql/apollo/internal/b;Lcom/apollographql/apollo/internal/a;)V
 
     return-object v0
-.end method
-
-.method public varargs refetchQueries([Lc4/h;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
-    .locals 2
-    .param p1    # [Lc4/h;
-        .annotation runtime Ljavax/annotation/Nonnull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Lc4/h;",
-            ")",
-            "Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Ljavax/annotation/Nonnull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/apollographql/apollo/internal/d;->t:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/apollographql/apollo/internal/CallState;->IDLE:Lcom/apollographql/apollo/internal/CallState;
-
-    if-ne v0, v1, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/d;->o()Lcom/apollographql/apollo/internal/d$d;
-
-    move-result-object v0
-
-    const-string v1, "operationNames == null"
-
-    .line 3
-    invoke-static {p1, v1}, Lcom/apollographql/apollo/api/internal/e;->c(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
-
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/internal/d$d;->m(Ljava/util/List;)Lcom/apollographql/apollo/internal/d$d;
-
-    move-result-object p1
-
-    .line 4
-    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/d$d;->c()Lcom/apollographql/apollo/internal/d;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 5
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Already Executed"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 .method public varargs refetchQueries([Lcom/apollographql/apollo/api/c;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
@@ -2053,9 +1983,79 @@
     throw p1
 .end method
 
-.method public bridge synthetic responseFetcher(Li4/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
+.method public varargs refetchQueries([Lz5/h;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall;
+    .locals 2
+    .param p1    # [Lz5/h;
+        .annotation runtime Ljavax/annotation/Nonnull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Lz5/h;",
+            ")",
+            "Lcom/amazonaws/mobileconnectors/appsync/AppSyncMutationCall<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .annotation runtime Ljavax/annotation/Nonnull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/apollographql/apollo/internal/d;->t:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/apollographql/apollo/internal/CallState;->IDLE:Lcom/apollographql/apollo/internal/CallState;
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/apollographql/apollo/internal/d;->o()Lcom/apollographql/apollo/internal/d$d;
+
+    move-result-object v0
+
+    const-string v1, "operationNames == null"
+
+    .line 3
+    invoke-static {p1, v1}, Lcom/apollographql/apollo/api/internal/e;->c(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/apollographql/apollo/internal/d$d;->m(Ljava/util/List;)Lcom/apollographql/apollo/internal/d$d;
+
+    move-result-object p1
+
+    .line 4
+    invoke-virtual {p1}, Lcom/apollographql/apollo/internal/d$d;->c()Lcom/apollographql/apollo/internal/d;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 5
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Already Executed"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public bridge synthetic responseFetcher(Lf6/a;)Lcom/amazonaws/mobileconnectors/appsync/AppSyncQueryCall;
     .locals 0
-    .param p1    # Li4/a;
+    .param p1    # Lf6/a;
         .annotation runtime Ljavax/annotation/Nonnull;
         .end annotation
     .end param
@@ -2063,7 +2063,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->m(Li4/a;)Lcom/apollographql/apollo/internal/d;
+    invoke-virtual {p0, p1}, Lcom/apollographql/apollo/internal/d;->m(Lf6/a;)Lcom/apollographql/apollo/internal/d;
 
     move-result-object p1
 

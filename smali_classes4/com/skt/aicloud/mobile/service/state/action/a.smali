@@ -35,39 +35,39 @@
     return-object v0
 .end method
 
-.method public Z(Lma/c;)V
+.method public Z(Ljc/c;)V
     .locals 16
 
     move-object/from16 v0, p0
 
     .line 1
-    invoke-super/range {p0 .. p1}, Lcom/skt/aicloud/speaker/service/state/a;->Z(Lma/c;)V
+    invoke-super/range {p0 .. p1}, Lcom/skt/aicloud/speaker/service/state/a;->Z(Ljc/c;)V
 
     .line 2
-    iget-object v1, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v1, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v1}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v6
 
     .line 3
-    iget-object v1, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v1, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v1}, Lma/c;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Ljc/c;->f()Ljava/lang/String;
 
     move-result-object v1
 
     .line 4
-    iget-object v2, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v2, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v2}, Lma/c;->m()Ljava/lang/String;
+    invoke-virtual {v2}, Ljc/c;->m()Ljava/lang/String;
 
     move-result-object v2
 
     .line 5
-    iget-object v3, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v3, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v3}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v3}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v3
 
@@ -618,9 +618,9 @@
     iput-object v6, v0, Lcom/skt/aicloud/mobile/service/state/action/a;->s:Ljava/lang/String;
 
     .line 21
-    iget-object v2, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v2, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v2}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v2}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v2
 
@@ -669,9 +669,9 @@
 
     move-result-object v2
 
-    iget-object v1, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v1, v0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v1}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v1}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v1
 
@@ -684,7 +684,7 @@
 
     move-result-object v4
 
-    invoke-virtual/range {p0 .. p0}, Lcom/skt/aicloud/speaker/service/state/a;->h()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/skt/aicloud/speaker/service/state/a;->i()Ljava/lang/String;
 
     move-result-object v5
 
@@ -846,13 +846,37 @@
     return-object p1
 .end method
 
+.method public g(Landroid/content/Intent;Ljc/c;)V
+    .locals 0
+
+    const-string p1, "setAction"
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    if-nez p2, :cond_0
+
+    const-string p1, "setAction : card is null"
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0, p2}, Lcom/skt/aicloud/mobile/service/state/action/a;->Z(Ljc/c;)V
+
+    return-void
+.end method
+
 .method public final g0(Z)Z
     .locals 11
 
     .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v0}, Lma/c;->c()Lma/b0;
+    invoke-virtual {v0}, Ljc/c;->c()Ljc/b0;
 
     move-result-object v0
 
@@ -872,7 +896,7 @@
 
     aput-object v0, v1, v3
 
-    const-string/jumbo v0, "timeoutPrevListAgain() : %s commandInfo is invalid"
+    const-string v0, "timeoutPrevListAgain() : %s commandInfo is invalid"
 
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -894,9 +918,9 @@
     move-result-object v1
 
     .line 6
-    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v4, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
-    invoke-virtual {v4}, Lma/c;->n()Ljava/lang/String;
+    invoke-virtual {v4}, Ljc/c;->n()Ljava/lang/String;
 
     move-result-object v8
 
@@ -927,12 +951,12 @@
 
     move-result-object v4
 
-    invoke-interface {v0}, Lma/b0;->getDomain()Ljava/lang/String;
+    invoke-interface {v0}, Ljc/b0;->getDomain()Ljava/lang/String;
 
     move-result-object v6
 
     .line 10
-    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/state/a;->i()Ljava/lang/String;
 
     move-result-object v7
 
@@ -952,11 +976,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Lma/c;
+    iget-object v1, p0, Lcom/skt/aicloud/speaker/service/state/a;->f:Ljc/c;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/mobile/service/api/b;->R(Lma/c;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/skt/aicloud/mobile/service/api/b;->R(Ljc/c;Z)V
 
     .line 2
     invoke-virtual {p0, v2}, Lcom/skt/aicloud/mobile/service/state/action/a;->g0(Z)Z
@@ -964,28 +988,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method public i(Landroid/content/Intent;Lma/c;)V
-    .locals 0
-
-    const-string p1, "setAction"
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
-
-    if-nez p2, :cond_0
-
-    const-string p1, "setAction : card is null"
-
-    .line 2
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/service/state/a;->V(Ljava/lang/String;)V
-
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0, p2}, Lcom/skt/aicloud/mobile/service/state/action/a;->Z(Lma/c;)V
-
-    return-void
 .end method

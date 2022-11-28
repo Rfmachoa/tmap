@@ -73,7 +73,7 @@
 
     const-string v0, "TmapMainActivity_preferenceChangeListener"
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -199,7 +199,7 @@
     goto :goto_0
 
     :sswitch_6
-    const-string/jumbo v0, "token_id"
+    const-string v0, "token_id"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -242,7 +242,7 @@
     if-eqz p1, :cond_b
 
     .line 5
-    invoke-virtual {p1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->q1()V
+    invoke-virtual {p1}, Lcom/skt/tmap/mapview/streaming/MapViewStreaming;->r1()V
 
     goto/16 :goto_1
 
@@ -250,11 +250,11 @@
     :pswitch_1
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->V6(Landroid/content/Context;)Z
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->t6(Z)V
+    invoke-virtual {p1, p2}, Lcom/skt/tmap/activity/BaseAiActivity;->C6(Z)V
 
     goto/16 :goto_1
 
@@ -262,7 +262,7 @@
     :pswitch_2
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 
     goto/16 :goto_1
 
@@ -274,7 +274,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->K2(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->M2(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -283,11 +283,11 @@
     .line 9
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->d7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;->Q()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;->R()Z
 
     move-result p1
 
@@ -302,7 +302,7 @@
 
     iget-object p2, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    const v0, 0x7f1300bb
+    const v0, 0x7f1400bc
 
     invoke-virtual {p2, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -317,7 +317,7 @@
     .line 11
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->d7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
+    invoke-static {p1}, Lcom/skt/tmap/activity/TmapMainActivity;->r7(Lcom/skt/tmap/activity/TmapMainActivity;)Lcom/skt/tmap/mvp/presenter/TmapMainPresenter;
 
     move-result-object p1
 
@@ -327,12 +327,12 @@
     :cond_9
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 
     .line 13
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -341,7 +341,7 @@
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     .line 14
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->V6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -350,7 +350,7 @@
     .line 15
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->r6(Z)V
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->A6(Z)V
 
     goto :goto_1
 
@@ -380,12 +380,12 @@
     :pswitch_5
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 
     .line 19
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->O6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->Q6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -394,7 +394,7 @@
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
     .line 20
-    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->T6(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/skt/tmap/engine/TmapAiManager;->V6(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -403,7 +403,7 @@
     .line 21
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->r6(Z)V
+    invoke-virtual {p1, v2}, Lcom/skt/tmap/activity/BaseAiActivity;->A6(Z)V
 
     goto :goto_1
 
@@ -415,7 +415,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/r0;->p(Landroid/app/Activity;)V
+    invoke-static {p1}, Lcom/skt/tmap/util/x0;->p(Landroid/app/Activity;)V
 
     goto :goto_1
 
@@ -423,13 +423,11 @@
     :pswitch_7
     iget-object p1, p0, Lcom/skt/tmap/activity/TmapMainActivity$r;->a:Lcom/skt/tmap/activity/TmapMainActivity;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->b6()V
+    invoke-virtual {p1}, Lcom/skt/tmap/activity/BaseAiActivity;->k6()V
 
     :cond_b
     :goto_1
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

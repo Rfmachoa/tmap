@@ -1,6 +1,6 @@
 .class public Lcom/google/android/gms/analytics/ecommerce/Product;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # annotations
@@ -10,26 +10,17 @@
 
 # instance fields
 .field public zza:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
 
-    .line 1
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/analytics/ecommerce/Product;->zza:Ljava/util/Map;
@@ -42,10 +33,10 @@
 .method public setBrand(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "br"
@@ -59,10 +50,10 @@
 .method public setCategory(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "ca"
@@ -76,10 +67,10 @@
 .method public setCouponCode(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "cc"
@@ -93,10 +84,10 @@
 .method public setCustomDimension(ILjava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 0
     .param p2    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -111,7 +102,7 @@
 
 .method public setCustomMetric(II)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -131,10 +122,10 @@
 .method public setId(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "id"
@@ -148,10 +139,10 @@
 .method public setName(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "nm"
@@ -164,7 +155,7 @@
 
 .method public setPosition(I)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -181,7 +172,7 @@
 
 .method public setPrice(D)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 0
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -198,7 +189,7 @@
 
 .method public setQuantity(I)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
@@ -216,10 +207,10 @@
 .method public setVariant(Ljava/lang/String;)Lcom/google/android/gms/analytics/ecommerce/Product;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const-string v0, "va"
@@ -232,12 +223,12 @@
 
 .method public toString()Ljava/lang/String;
     .locals 1
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/analytics/ecommerce/Product;->zza:Ljava/util/Map;
 
-    .line 1
     invoke-static {v0}, Lcom/google/android/gms/analytics/zzj;->zzb(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object v0
@@ -246,29 +237,17 @@
 .end method
 
 .method public final zza(Ljava/lang/String;)Ljava/util/Map;
-    .locals 6
+    .locals 4
     .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/HashMap;
 
     .line 1
+    new-instance v0, Ljava/util/HashMap;
+
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/gms/analytics/ecommerce/Product;->zza:Ljava/util/Map;
@@ -287,7 +266,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -296,40 +275,20 @@
     check-cast v2, Ljava/util/Map$Entry;
 
     .line 3
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v3
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v3, Ljava/lang/String;
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    goto :goto_1
+    invoke-virtual {p1, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_0
-    new-instance v4, Ljava/lang/String;
+    move-result-object v3
 
-    invoke-direct {v4, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    move-object v3, v4
-
-    :goto_1
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -340,7 +299,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     return-object v0
 .end method
 

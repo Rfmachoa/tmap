@@ -1,175 +1,111 @@
 .class public final Ld0/b;
 .super Ljava/lang/Object;
-.source "VideoUtil.java"
+.source "CameraCaptureResultImageInfo.java"
+
+# interfaces
+.implements Landroidx/camera/core/j1;
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "VideoUtil"
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
+# instance fields
+.field public final a:Landroidx/camera/core/impl/c;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroidx/camera/core/impl/c;)V
     .locals 0
+    .param p1    # Landroidx/camera/core/impl/c;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    iput-object p1, p0, Ld0/b;->a:Landroidx/camera/core/impl/c;
+
     return-void
 .end method
 
-.method public static a(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/lang/String;
-    .locals 8
-    .param p0    # Landroid/content/ContentResolver;
+
+# virtual methods
+.method public a(Landroidx/camera/core/impl/utils/ExifData$b;)V
+    .locals 1
+    .param p1    # Landroidx/camera/core/impl/utils/ExifData$b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p1    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "resolver",
-            "contentUri"
-        }
-    .end annotation
-
-    const-string v0, "_data"
-
-    const/4 v1, 0x0
 
     .line 1
-    :try_start_0
-    filled-new-array {v0}, [Ljava/lang/String;
+    iget-object v0, p0, Ld0/b;->a:Landroidx/camera/core/impl/c;
 
-    move-result-object v4
+    invoke-interface {v0, p1}, Landroidx/camera/core/impl/c;->a(Landroidx/camera/core/impl/utils/ExifData$b;)V
 
-    const/4 v5, 0x0
+    return-void
+.end method
 
-    const/4 v6, 0x0
+.method public b()Lb0/v1;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    const/4 v7, 0x0
+    .line 1
+    iget-object v0, p0, Ld0/b;->a:Landroidx/camera/core/impl/c;
 
-    move-object v2, p0
-
-    move-object v3, p1
-
-    .line 2
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 3
-    invoke-static {v1}, Lr1/o;->k(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/database/Cursor;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 4
-    :try_start_1
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 5
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 6
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 7
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    move-object v1, p0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    move-object v1, p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    :goto_0
-    :try_start_2
-    const-string p0, "VideoUtil"
-
-    const-string v2, "Failed in getting absolute path for Uri %s with Exception %s"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    .line 8
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    aput-object p1, v3, v4
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0}, Ljava/lang/RuntimeException;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Landroidx/camera/core/impl/c;->b()Lb0/v1;
 
     move-result-object v0
 
-    aput-object v0, v3, p1
+    return-object v0
+.end method
 
-    .line 9
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+.method public c()J
+    .locals 2
 
-    move-result-object p1
+    .line 1
+    iget-object v0, p0, Ld0/b;->a:Landroidx/camera/core/impl/c;
 
-    invoke-static {p0, p1}, Landroidx/camera/core/x1;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0}, Landroidx/camera/core/impl/c;->c()J
 
-    const-string p0, ""
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result-wide v0
 
-    if-eqz v1, :cond_0
+    return-wide v0
+.end method
 
-    .line 10
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+.method public d()Landroid/graphics/Matrix;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
-    :cond_0
-    return-object p0
+    .line 1
+    new-instance v0, Landroid/graphics/Matrix;
 
-    :catchall_1
-    move-exception p1
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    :goto_1
-    if-eqz v1, :cond_1
+    return-object v0
+.end method
 
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+.method public e()I
+    .locals 1
 
-    .line 11
-    :cond_1
-    throw p1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public f()Landroidx/camera/core/impl/c;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Ld0/b;->a:Landroidx/camera/core/impl/c;
+
+    return-object v0
 .end method

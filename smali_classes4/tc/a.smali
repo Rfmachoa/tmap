@@ -1,16 +1,20 @@
 .class public final Ltc/a;
 .super Ljava/lang/Object;
-.source "SimplePositionData.java"
+.source "BuildConfig.java"
 
 
-# instance fields
-.field public a:D
+# static fields
+.field public static final a:Z = false
 
-.field public b:D
+.field public static final b:Ljava/lang/String; = "com.skt.aidev.libnog"
 
-.field public c:I
+.field public static final c:Ljava/lang/String; = "release"
 
-.field public d:I
+.field public static final d:Ljava/lang/String; = ""
+
+.field public static final e:I = 0x64
+
+.field public static final f:Ljava/lang/String; = "0.1.0"
 
 
 # direct methods

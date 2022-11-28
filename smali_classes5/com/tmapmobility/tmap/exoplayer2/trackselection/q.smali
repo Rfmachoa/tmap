@@ -1,120 +1,111 @@
-.class public final Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
-.super Lcom/tmapmobility/tmap/exoplayer2/trackselection/c;
-.source "FixedTrackSelection.java"
+.class public interface abstract Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;
+.super Ljava/lang/Object;
+.source "ExoTrackSelection.java"
+
+# interfaces
+.implements Lcom/tmapmobility/tmap/exoplayer2/trackselection/TrackSelection;
 
 
-# instance fields
-.field public final j:I
-
-.field public final k:Ljava/lang/Object;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-
-# direct methods
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-direct {p0, p1, p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;II)V
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    .line 2
-    invoke-direct/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;IIILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;IIILjava/lang/Object;)V
-    .locals 2
-    .param p5    # Ljava/lang/Object;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    aput p2, v0, v1
-
-    .line 3
-    invoke-direct {p0, p1, v0, p3}, Lcom/tmapmobility/tmap/exoplayer2/trackselection/c;-><init>(Lcom/tmapmobility/tmap/exoplayer2/source/TrackGroup;[II)V
-
-    .line 4
-    iput p4, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;->j:I
-
-    .line 5
-    iput-object p5, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;->k:Ljava/lang/Object;
-
-    return-void
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$b;,
+        Lcom/tmapmobility/tmap/exoplayer2/trackselection/q$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public b(JJJLjava/util/List;[Lme/o;)V
-    .locals 0
+.method public abstract b(JJJLjava/util/List;[Lpg/o;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JJJ",
             "Ljava/util/List<",
             "+",
-            "Lme/n;",
+            "Lpg/n;",
             ">;[",
-            "Lme/o;",
+            "Lpg/o;",
             ")V"
         }
     .end annotation
+.end method
+
+.method public abstract blacklist(IJ)Z
+.end method
+
+.method public abstract c(IJ)Z
+.end method
+
+.method public abstract d(F)V
+.end method
+
+.method public abstract disable()V
+.end method
+
+.method public e()V
+    .locals 0
 
     return-void
 .end method
 
-.method public getSelectedIndex()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract enable()V
 .end method
 
-.method public getSelectionData()Ljava/lang/Object;
-    .locals 1
-    .annotation build Landroidx/annotation/Nullable;
+.method public abstract evaluateQueueSize(JLjava/util/List;)I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Ljava/util/List<",
+            "+",
+            "Lpg/n;",
+            ">;)I"
+        }
+    .end annotation
+.end method
+
+.method public f(JLpg/f;Ljava/util/List;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Lpg/f;",
+            "Ljava/util/List<",
+            "+",
+            "Lpg/n;",
+            ">;)Z"
+        }
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;->k:Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    return-object v0
+    return p1
 .end method
 
-.method public getSelectionReason()I
-    .locals 1
+.method public g(Z)V
+    .locals 0
 
-    .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/trackselection/q;->j:I
+    return-void
+.end method
 
-    return v0
+.method public abstract getSelectedFormat()Lcom/tmapmobility/tmap/exoplayer2/Format;
+.end method
+
+.method public abstract getSelectedIndex()I
+.end method
+
+.method public abstract getSelectedIndexInTrackGroup()I
+.end method
+
+.method public abstract getSelectionData()Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end method
+
+.method public abstract getSelectionReason()I
+.end method
+
+.method public h()V
+    .locals 0
+
+    return-void
 .end method

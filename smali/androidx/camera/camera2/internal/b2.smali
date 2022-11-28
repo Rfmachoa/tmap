@@ -3,46 +3,32 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic a:Landroidx/camera/camera2/internal/b2;
+# instance fields
+.field public final synthetic a:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Landroidx/camera/camera2/internal/b2;
-
-    invoke-direct {v0}, Landroidx/camera/camera2/internal/b2;-><init>()V
-
-    sput-object v0, Landroidx/camera/camera2/internal/b2;->a:Landroidx/camera/camera2/internal/b2;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
+.method public synthetic constructor <init>(Ljava/util/LinkedHashSet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/camera/camera2/internal/b2;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p1, Landroid/util/Size;
+    iget-object v0, p0, Landroidx/camera/camera2/internal/b2;->a:Ljava/util/LinkedHashSet;
 
-    check-cast p2, Landroid/util/Size;
+    invoke-static {v0}, Landroidx/camera/camera2/internal/c2$a;->a(Ljava/util/LinkedHashSet;)V
 
-    invoke-static {p1, p2}, Landroidx/camera/camera2/internal/c2;->a(Landroid/util/Size;Landroid/util/Size;)I
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

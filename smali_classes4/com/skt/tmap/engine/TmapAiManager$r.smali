@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->W3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->T3(Lcom/skt/voice/tyche/data/CardResult;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity;
+.field public final synthetic a:Lcom/skt/voice/tyche/data/CardResult;
 
 .field public final synthetic b:Lcom/skt/tmap/engine/TmapAiManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/tmap/activity/TmapNaviActivity;)V
+.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -33,14 +33,14 @@
         }
         names = {
             "this$0",
-            "val$naviActivity"
+            "val$cardResult"
         }
     .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    iput-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iput-object p2, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->a:Lcom/skt/voice/tyche/data/CardResult;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,17 +50,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->b:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->hb()V
+    iget-object v1, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->a:Lcom/skt/voice/tyche/data/CardResult;
 
-    .line 2
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$r;->a:Lcom/skt/tmap/activity/TmapNaviActivity;
+    sget-object v2, Lcom/skt/voice/tyche/AiConstant$AiVolume;->MAX:Lcom/skt/voice/tyche/AiConstant$AiVolume;
 
-    invoke-virtual {v0}, Lcom/skt/tmap/activity/TmapNaviActivity;->lc()V
+    invoke-static {v0, v1, v2}, Lcom/skt/tmap/engine/TmapAiManager;->A0(Lcom/skt/tmap/engine/TmapAiManager;Lcom/skt/voice/tyche/data/CardResult;Lcom/skt/voice/tyche/AiConstant$AiVolume;)V
 
     return-void
 .end method

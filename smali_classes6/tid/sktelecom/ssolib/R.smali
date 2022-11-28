@@ -19,8 +19,7 @@
         Ltid/sktelecom/ssolib/R$plurals;,
         Ltid/sktelecom/ssolib/R$string;,
         Ltid/sktelecom/ssolib/R$style;,
-        Ltid/sktelecom/ssolib/R$styleable;,
-        Ltid/sktelecom/ssolib/R$xml;
+        Ltid/sktelecom/ssolib/R$styleable;
     }
 .end annotation
 

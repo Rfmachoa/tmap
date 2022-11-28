@@ -31,29 +31,29 @@
 
 .field public static final K0:Ljava/lang/String; = "Content"
 
-.field public static final V0:Ljava/lang/String; = "command"
+.field public static final X0:Ljava/lang/String; = "command"
 
-.field public static final W0:Ljava/lang/String; = "commandInfo"
+.field public static final Y0:Ljava/lang/String; = "commandInfo"
 
-.field public static final X0:Ljava/lang/String; = "domain"
+.field public static final Z0:Ljava/lang/String; = "domain"
 
-.field public static final Y0:Ljava/lang/String; = "starbucks"
+.field public static final a1:Ljava/lang/String; = "starbucks"
 
-.field public static final Z0:Ljava/lang/String; = "tts"
+.field public static final b1:Ljava/lang/String; = "tts"
 
-.field public static final a1:Ljava/lang/String; = "brandName"
+.field public static final c1:Ljava/lang/String; = "brandName"
 
-.field public static final b1:Ljava/lang/String; = "orderStatus"
+.field public static final d1:Ljava/lang/String; = "orderStatus"
 
-.field public static final c1:Ljava/lang/String; = "cardInfo"
+.field public static final e1:Ljava/lang/String; = "cardInfo"
 
-.field public static final d1:Ljava/lang/String; = "orderInfo"
+.field public static final f1:Ljava/lang/String; = "orderInfo"
 
-.field public static final e1:Ljava/lang/String; = "orderList"
+.field public static final g1:Ljava/lang/String; = "orderList"
 
-.field public static final f1:Ljava/lang/String; = "storeList"
+.field public static final h1:Ljava/lang/String; = "storeList"
 
-.field public static final g1:Ljava/lang/String; = "menuList"
+.field public static final i1:Ljava/lang/String; = "menuList"
 
 .field public static final k0:Ljava/lang/String; = "GuiOrderInfo"
 
@@ -170,12 +170,12 @@
     iput-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->u:Ljava/util/ArrayList;
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->i(Landroid/os/Parcel;)V
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->l(Landroid/os/Parcel;)V
 
     return-void
 .end method
 
-.method public static C(Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;Lorg/json/JSONObject;)V
+.method public static D(Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;Lorg/json/JSONObject;)V
     .locals 10
 
     const-string v0, "menuList"
@@ -231,7 +231,7 @@
     if-eqz v8, :cond_7
 
     .line 6
-    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v8
 
@@ -241,14 +241,14 @@
 
     if-eqz v8, :cond_0
 
-    const-string/jumbo v8, "tts"
+    const-string v8, "tts"
 
     .line 7
     invoke-virtual {p1, v8}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->o(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->q(Ljava/lang/String;)V
 
     .line 8
     :cond_0
@@ -482,7 +482,16 @@
 
 
 # virtual methods
-.method public A()Ljava/util/ArrayList;
+.method public A()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->i:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public B()Ljava/util/ArrayList;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -519,7 +528,7 @@
     return-object v0
 .end method
 
-.method public B()Ljava/util/ArrayList;
+.method public C()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -544,46 +553,20 @@
     return v0
 .end method
 
-.method public i(Landroid/os/Parcel;)V
+.method public l(Landroid/os/Parcel;)V
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->i(Landroid/os/Parcel;)V
+    invoke-super {p0, p1}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->l(Landroid/os/Parcel;)V
 
     return-void
 .end method
 
-.method public r()Ljava/lang/String;
+.method public t()Ljava/lang/String;
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->h:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public s()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$b;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->j:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$b;
-
-    return-object v0
-.end method
-
-.method public t()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$d;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->u:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -597,7 +580,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -610,7 +593,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->f()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/skt/aicloud/speaker/lib/GuiInfo;->h()Ljava/lang/String;
 
     move-result-object v2
 
@@ -810,7 +793,33 @@
     return-object v0
 .end method
 
-.method public v()I
+.method public u()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$b;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->j:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$b;
+
+    return-object v0
+.end method
+
+.method public v()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$d;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->u:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method public w()I
     .locals 3
 
     .line 1
@@ -848,15 +857,6 @@
     return v1
 .end method
 
-.method public w()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->k:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
-
-    return-object v0
-.end method
-
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
@@ -866,7 +866,16 @@
     return-void
 .end method
 
-.method public x()Ljava/util/ArrayList;
+.method public x()Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->k:Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo$e;
+
+    return-object v0
+.end method
+
+.method public y()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -883,7 +892,7 @@
     return-object v0
 .end method
 
-.method public y()Ljava/lang/String;
+.method public z()Ljava/lang/String;
     .locals 2
 
     .line 1
@@ -922,14 +931,5 @@
     const-string v0, ""
 
     :goto_0
-    return-object v0
-.end method
-
-.method public z()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lcom/skt/aicloud/speaker/lib/guiinfo/GuiOrderInfo;->i:Ljava/lang/String;
-
     return-object v0
 .end method

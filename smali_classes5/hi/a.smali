@@ -1,570 +1,447 @@
-.class public abstract Lhi/a;
-.super Lai/g0;
-.source "ConnectableObservable.java"
+.class public Lhi/a;
+.super Ljava/lang/Object;
+.source "AIMDBackoffManager.java"
+
+# interfaces
+.implements Lkh/d;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lai/g0<",
-        "TT;>;"
-    }
-.end annotation
+# instance fields
+.field public final a:Lsi/d;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lsi/d<",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final b:Lhi/k;
+
+.field public final c:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final d:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public e:J
+
+.field public f:D
+
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lsi/d;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lsi/d<",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            ">;)V"
+        }
+    .end annotation
 
     .line 1
-    invoke-direct {p0}, Lai/g0;-><init>()V
+    new-instance v0, Lhi/u0;
+
+    invoke-direct {v0}, Lhi/u0;-><init>()V
+
+    invoke-direct {p0, p1, v0}, Lhi/a;-><init>(Lsi/d;Lhi/k;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lsi/d;Lhi/k;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lsi/d<",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            ">;",
+            "Lhi/k;",
+            ")V"
+        }
+    .end annotation
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v0, 0x1388
+
+    .line 3
+    iput-wide v0, p0, Lhi/a;->e:J
+
+    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+
+    .line 4
+    iput-wide v0, p0, Lhi/a;->f:D
+
+    const/4 v0, 0x2
+
+    .line 5
+    iput v0, p0, Lhi/a;->g:I
+
+    .line 6
+    iput-object p2, p0, Lhi/a;->b:Lhi/k;
+
+    .line 7
+    iput-object p1, p0, Lhi/a;->a:Lsi/d;
+
+    .line 8
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lhi/a;->c:Ljava/util/Map;
+
+    .line 9
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lhi/a;->d:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public I8()Lai/g0;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
+.method public a(Lcz/msebera/android/httpclient/conn/routing/a;)V
+    .locals 9
 
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
+    .line 1
+    iget-object v0, p0, Lhi/a;->a:Lsi/d;
 
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
+    monitor-enter v0
 
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Lhi/a;->a:Lsi/d;
+
+    invoke-interface {v1, p1}, Lsi/d;->c(Ljava/lang/Object;)I
+
+    move-result v1
+
+    .line 3
+    iget-object v2, p0, Lhi/a;->d:Ljava/util/Map;
+
+    invoke-virtual {p0, v2, p1}, Lhi/a;->d(Ljava/util/Map;Lcz/msebera/android/httpclient/conn/routing/a;)Ljava/lang/Long;
+
+    move-result-object v2
+
+    .line 4
+    iget-object v3, p0, Lhi/a;->b:Lhi/k;
+
+    invoke-interface {v3}, Lhi/k;->getCurrentTime()J
+
+    move-result-wide v3
+
+    .line 5
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    sub-long v5, v3, v5
+
+    iget-wide v7, p0, Lhi/a;->e:J
+
+    cmp-long v2, v5, v7
+
+    if-gez v2, :cond_0
+
+    .line 6
+    monitor-exit v0
+
+    return-void
+
+    .line 7
+    :cond_0
+    iget-object v2, p0, Lhi/a;->a:Lsi/d;
+
+    invoke-virtual {p0, v1}, Lhi/a;->c(I)I
+
+    move-result v1
+
+    invoke-interface {v2, p1, v1}, Lsi/d;->d(Ljava/lang/Object;I)V
+
+    .line 8
+    iget-object v1, p0, Lhi/a;->d:Ljava/util/Map;
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 9
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public b(Lcz/msebera/android/httpclient/conn/routing/a;)V
+    .locals 10
+
+    .line 1
+    iget-object v0, p0, Lhi/a;->a:Lsi/d;
+
+    monitor-enter v0
+
+    .line 2
+    :try_start_0
+    iget-object v1, p0, Lhi/a;->a:Lsi/d;
+
+    invoke-interface {v1, p1}, Lsi/d;->c(Ljava/lang/Object;)I
+
+    move-result v1
+
+    .line 3
+    iget v2, p0, Lhi/a;->g:I
+
+    if-lt v1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    add-int/lit8 v2, v1, 0x1
+
+    .line 4
+    :goto_0
+    iget-object v1, p0, Lhi/a;->c:Ljava/util/Map;
+
+    invoke-virtual {p0, v1, p1}, Lhi/a;->d(Ljava/util/Map;Lcz/msebera/android/httpclient/conn/routing/a;)Ljava/lang/Long;
+
+    move-result-object v1
+
+    .line 5
+    iget-object v3, p0, Lhi/a;->d:Ljava/util/Map;
+
+    invoke-virtual {p0, v3, p1}, Lhi/a;->d(Ljava/util/Map;Lcz/msebera/android/httpclient/conn/routing/a;)Ljava/lang/Long;
+
+    move-result-object v3
+
+    .line 6
+    iget-object v4, p0, Lhi/a;->b:Lhi/k;
+
+    invoke-interface {v4}, Lhi/k;->getCurrentTime()J
+
+    move-result-wide v4
+
+    .line 7
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    sub-long v6, v4, v6
+
+    iget-wide v8, p0, Lhi/a;->e:J
+
+    cmp-long v1, v6, v8
+
+    if-ltz v1, :cond_2
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    sub-long v6, v4, v6
+
+    iget-wide v8, p0, Lhi/a;->e:J
+
+    cmp-long v1, v6, v8
+
+    if-gez v1, :cond_1
+
+    goto :goto_1
+
+    .line 8
+    :cond_1
+    iget-object v1, p0, Lhi/a;->a:Lsi/d;
+
+    invoke-interface {v1, p1, v2}, Lsi/d;->d(Ljava/lang/Object;I)V
+
+    .line 9
+    iget-object v1, p0, Lhi/a;->c:Ljava/util/Map;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 10
+    monitor-exit v0
+
+    return-void
+
+    .line 11
+    :cond_2
+    :goto_1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 12
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final c(I)I
+    .locals 4
 
     const/4 v0, 0x1
 
-    .line 1
-    invoke-virtual {p0, v0}, Lhi/a;->J8(I)Lai/g0;
+    if-gt p1, v0, :cond_0
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public J8(I)Lai/g0;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "numberOfSubscribers"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
+    return v0
 
     .line 1
-    invoke-static {}, Lio/reactivex/rxjava3/internal/functions/Functions;->h()Lci/g;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Lhi/a;->K8(ILci/g;)Lai/g0;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public K8(ILci/g;)Lai/g0;
-    .locals 1
-    .param p2    # Lci/g;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "numberOfSubscribers",
-            "connection"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Lci/g<",
-            "-",
-            "Lio/reactivex/rxjava3/disposables/c;",
-            ">;)",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
-
-    const-string v0, "connection is null"
-
-    .line 1
-    invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    if-gtz p1, :cond_0
-
-    .line 2
-    invoke-virtual {p0, p2}, Lhi/a;->M8(Lci/g;)V
-
-    .line 3
-    invoke-static {p0}, Lji/a;->U(Lhi/a;)Lhi/a;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 4
     :cond_0
-    new-instance v0, Lio/reactivex/rxjava3/internal/operators/observable/i;
+    iget-wide v0, p0, Lhi/a;->f:D
 
-    invoke-direct {v0, p0, p1, p2}, Lio/reactivex/rxjava3/internal/operators/observable/i;-><init>(Lhi/a;ILci/g;)V
+    int-to-double v2, p1
 
-    invoke-static {v0}, Lji/a;->R(Lai/g0;)Lai/g0;
+    mul-double/2addr v0, v2
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
 
-    return-object p1
+    move-result-wide v0
+
+    double-to-int p1, v0
+
+    return p1
 .end method
 
-.method public final L8()Lio/reactivex/rxjava3/disposables/c;
-    .locals 1
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
-
-    .line 1
-    new-instance v0, Lio/reactivex/rxjava3/internal/util/e;
-
-    invoke-direct {v0}, Lio/reactivex/rxjava3/internal/util/e;-><init>()V
-
-    .line 2
-    invoke-virtual {p0, v0}, Lhi/a;->M8(Lci/g;)V
-
-    .line 3
-    iget-object v0, v0, Lio/reactivex/rxjava3/internal/util/e;->a:Lio/reactivex/rxjava3/disposables/c;
-
-    return-object v0
-.end method
-
-.method public abstract M8(Lci/g;)V
-    .param p1    # Lci/g;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "connection"
-        }
-    .end annotation
-
+.method public final d(Ljava/util/Map;Lcz/msebera/android/httpclient/conn/routing/a;)Ljava/lang/Long;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lci/g<",
-            "-",
-            "Lio/reactivex/rxjava3/disposables/c;",
-            ">;)V"
+            "Ljava/util/Map<",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            "Ljava/lang/Long;",
+            ">;",
+            "Lcz/msebera/android/httpclient/conn/routing/a;",
+            ")",
+            "Ljava/lang/Long;"
         }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
-.end method
-
-.method public N8()Lai/g0;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
     .end annotation
 
     .line 1
-    new-instance v0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableRefCount;
-
-    invoke-direct {v0, p0}, Lio/reactivex/rxjava3/internal/operators/observable/ObservableRefCount;-><init>(Lhi/a;)V
-
-    invoke-static {v0}, Lji/a;->R(Lai/g0;)Lai/g0;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final O8(I)Lai/g0;
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "subscriberCount"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
-
-    .line 1
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Lki/b;->j()Lai/o0;
-
-    move-result-object v5
-
-    const-wide/16 v2, 0x0
-
-    move-object v0, p0
-
-    move v1, p1
-
-    invoke-virtual/range {v0 .. v5}, Lhi/a;->Q8(IJLjava/util/concurrent/TimeUnit;Lai/o0;)Lai/g0;
+    invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    check-cast p1, Ljava/lang/Long;
 
-.method public final P8(IJLjava/util/concurrent/TimeUnit;)Lai/g0;
-    .locals 6
-    .param p4    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "subscriberCount",
-            "timeout",
-            "unit"
-        }
-    .end annotation
+    if-nez p1, :cond_0
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(IJ",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "io.reactivex:computation"
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lki/b;->a()Lai/o0;
-
-    move-result-object v5
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lhi/a;->Q8(IJLjava/util/concurrent/TimeUnit;Lai/o0;)Lai/g0;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final Q8(IJLjava/util/concurrent/TimeUnit;Lai/o0;)Lai/g0;
-    .locals 8
-    .param p4    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .param p5    # Lai/o0;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "subscriberCount",
-            "timeout",
-            "unit",
-            "scheduler"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(IJ",
-            "Ljava/util/concurrent/TimeUnit;",
-            "Lai/o0;",
-            ")",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "custom"
-    .end annotation
-
-    const-string v0, "subscriberCount"
-
-    .line 1
-    invoke-static {p1, v0}, Lio/reactivex/rxjava3/internal/functions/a;->b(ILjava/lang/String;)I
-
-    const-string v0, "unit is null"
+    const-wide/16 p1, 0x0
 
     .line 2
-    invoke-static {p4, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    const-string v0, "scheduler is null"
-
-    .line 3
-    invoke-static {p5, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 4
-    new-instance v0, Lio/reactivex/rxjava3/internal/operators/observable/ObservableRefCount;
-
-    move-object v1, v0
-
-    move-object v2, p0
-
-    move v3, p1
-
-    move-wide v4, p2
-
-    move-object v6, p4
-
-    move-object v7, p5
-
-    invoke-direct/range {v1 .. v7}, Lio/reactivex/rxjava3/internal/operators/observable/ObservableRefCount;-><init>(Lhi/a;IJLjava/util/concurrent/TimeUnit;Lai/o0;)V
-
-    invoke-static {v0}, Lji/a;->R(Lai/g0;)Lai/g0;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
+    :cond_0
     return-object p1
 .end method
 
-.method public final R8(JLjava/util/concurrent/TimeUnit;)Lai/g0;
-    .locals 6
-    .param p3    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "timeout",
-            "unit"
-        }
-    .end annotation
+.method public e(D)V
+    .locals 2
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
+    const-wide/16 v0, 0x0
 
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
+    cmpl-double v0, p1, v0
 
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
+    if-lez v0, :cond_0
 
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "io.reactivex:computation"
-    .end annotation
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+
+    cmpg-double v0, p1, v0
+
+    if-gez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v1, "Backoff factor must be 0.0 < f < 1.0"
 
     .line 1
-    invoke-static {}, Lki/b;->a()Lai/o0;
+    invoke-static {v0, v1}, Lui/a;->a(ZLjava/lang/String;)V
 
-    move-result-object v5
+    .line 2
+    iput-wide p1, p0, Lhi/a;->f:D
 
-    const/4 v1, 0x1
-
-    move-object v0, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    invoke-virtual/range {v0 .. v5}, Lhi/a;->Q8(IJLjava/util/concurrent/TimeUnit;Lai/o0;)Lai/g0;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final S8(JLjava/util/concurrent/TimeUnit;Lai/o0;)Lai/g0;
-    .locals 6
-    .param p3    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lai/o0;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "timeout",
-            "unit",
-            "scheduler"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Ljava/util/concurrent/TimeUnit;",
-            "Lai/o0;",
-            ")",
-            "Lai/g0<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/CheckReturnValue;
-    .end annotation
-
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "custom"
-    .end annotation
-
-    const/4 v1, 0x1
-
-    move-object v0, p0
-
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    move-object v5, p4
+.method public f(J)V
+    .locals 3
 
     .line 1
-    invoke-virtual/range {v0 .. v5}, Lhi/a;->Q8(IJLjava/util/concurrent/TimeUnit;Lai/o0;)Lai/g0;
+    iget-wide v0, p0, Lhi/a;->e:J
 
-    move-result-object p1
+    const-string v2, "Cool down"
 
-    return-object p1
+    invoke-static {v0, v1, v2}, Lui/a;->j(JLjava/lang/String;)J
+
+    .line 2
+    iput-wide p1, p0, Lhi/a;->e:J
+
+    return-void
 .end method
 
-.method public abstract T8()V
-    .annotation runtime Lio/reactivex/rxjava3/annotations/SchedulerSupport;
-        value = "none"
-    .end annotation
+.method public g(I)V
+    .locals 1
+
+    const-string v0, "Per host connection cap"
+
+    .line 1
+    invoke-static {p1, v0}, Lui/a;->i(ILjava/lang/String;)I
+
+    .line 2
+    iput p1, p0, Lhi/a;->g:I
+
+    return-void
 .end method

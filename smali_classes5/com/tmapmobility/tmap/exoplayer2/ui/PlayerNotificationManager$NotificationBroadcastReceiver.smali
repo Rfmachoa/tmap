@@ -165,7 +165,7 @@
     if-eqz v1, :cond_5
 
     .line 15
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->i0()V
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->j0()V
 
     goto :goto_1
 
@@ -210,7 +210,7 @@
     if-eqz v1, :cond_8
 
     .line 21
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->G0()V
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/Player;->H0()V
 
     goto :goto_1
 

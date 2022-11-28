@@ -219,9 +219,9 @@
     .line 13
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadService$c;->c:Landroid/os/Handler;
 
-    new-instance v1, Lle/q;
+    new-instance v1, Log/q;
 
-    invoke-direct {v1, p0}, Lle/q;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadService$c;)V
+    invoke-direct {v1, p0}, Log/q;-><init>(Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadService$c;)V
 
     iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/offline/DownloadService$c;->b:J
 

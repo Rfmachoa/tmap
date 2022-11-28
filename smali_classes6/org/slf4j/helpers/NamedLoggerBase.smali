@@ -3,7 +3,7 @@
 .source "NamedLoggerBase.java"
 
 # interfaces
-.implements Lpk/c;
+.implements Lvm/c;
 .implements Ljava/io/Serializable;
 
 
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lpk/d;->j(Ljava/lang/String;)Lpk/c;
+    invoke-static {v0}, Lvm/d;->j(Ljava/lang/String;)Lvm/c;
 
     move-result-object v0
 

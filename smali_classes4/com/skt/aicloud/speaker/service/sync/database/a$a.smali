@@ -103,7 +103,7 @@
 
     const-string v4, "second"
 
-    const-string/jumbo v5, "time"
+    const-string v5, "time"
 
     const-string v6, "sound_type"
 

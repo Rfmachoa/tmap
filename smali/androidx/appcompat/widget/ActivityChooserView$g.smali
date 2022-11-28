@@ -159,14 +159,14 @@
     .line 2
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$g;->a:Landroidx/appcompat/widget/ActivityChooserView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActivityChooserView;->j:Ls1/a;
+    iget-object v0, v0, Landroidx/appcompat/widget/ActivityChooserView;->j:Landroidx/core/view/b;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
     .line 3
-    invoke-virtual {v0, v1}, Ls1/a;->m(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/view/b;->m(Z)V
 
     :cond_0
     return-void

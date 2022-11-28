@@ -1,706 +1,242 @@
 .class public Lyc/a;
 .super Ljava/lang/Object;
-.source "CarInfoUtil.java"
+.source "AgNetworkManager.java"
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "CarInfoUtil"
+.field public static final f:Ljava/lang/String; = "AgNetworkManager"
+
+
+# instance fields
+.field public a:Ljava/net/Socket;
+
+.field public b:Ljava/io/DataOutputStream;
+
+.field public c:Ljava/io/DataInputStream;
+
+.field public d:Ljava/lang/String;
+
+.field public e:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const-string v0, "0,0,0,0"
+
+    .line 2
+    iput-object v0, p0, Lyc/a;->d:Ljava/lang/String;
+
+    const/16 v0, 0x1389
+
+    .line 3
+    iput v0, p0, Lyc/a;->e:I
+
     return-void
 .end method
 
-.method public static a(I)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "carIndex"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    .line 2
-    iget v4, v3, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->index:I
-
-    if-ne v4, p0, :cond_0
-
-    return-object v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    sget-object p0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_NORMAL:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/skt/tmap/util/TmapUserSettingSharePreferenceConst;->z0:Ljava/lang/String;
-
-    const-string v1, "car.model"
-
-    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 2
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    .line 3
-    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    return-object v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
     .line 4
-    :cond_1
-    sget-object p0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_NORMAL:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lyc/a;->b(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    move-result-object v0
-
-    iget v0, v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->displayStrResId:I
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(I)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "oilIndex"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    .line 2
-    iget v4, v3, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->vsmOilType:I
-
-    if-ne v4, p0, :cond_0
-
-    return-object v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 3
-    :cond_1
-    sget-object p0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->FT_GAS:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/skt/tmap/util/TmapUserSettingSharePreferenceConst;->A0:Ljava/lang/String;
-
-    const-string v1, "car.fuel"
-
-    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 2
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    .line 3
-    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    return-object v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 4
-    :cond_1
-    sget-object p0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->FT_GAS:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    return-object p0
-.end method
-
-.method public static f(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p0}, Lyc/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v0
-
-    iget v0, v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->displayStrResId:I
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/content/Context;)[Ljava/lang/String;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    .line 2
-    :goto_0
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v2
-
-    array-length v2, v2
-
-    if-ge v1, v2, :cond_0
-
-    .line 3
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v2
-
-    aget-object v2, v2, v1
-
-    iget v2, v2, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->displayStrResId:I
-
-    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public static h(Landroid/content/Context;)B
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    const-string v0, "car.hipassYn"
-
-    .line 1
-    invoke-static {p0, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->j(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static i(Landroid/content/Context;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "context"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/skt/tmap/util/TmapUserSettingSharePreferenceConst;->z0:Ljava/lang/String;
-
-    const-string v1, "car.model"
-
-    invoke-static {p0, v1, v0}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->r(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "car.options"
-
-    .line 2
-    invoke-static {p0, v1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->q(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 3
-    invoke-static {v0, p0}, Lyc/a;->j(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static j(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "carType",
-            "carOptions"
-        }
-    .end annotation
-
-    .line 1
-    sget-object v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_SMALL_TRUCK:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_MIDDLE:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    .line 2
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_LARGE:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    .line 3
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_TRUCK:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
-
-    .line 4
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;->CT_SPECIAL:Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarType;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_4
+    iput-object p1, p0, Lyc/a;->d:Ljava/lang/String;
 
     .line 6
+    iput p2, p0, Lyc/a;->e:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()V
+    .locals 1
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lyc/a;->c:Ljava/io/DataInputStream;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->close()V
+
+    .line 3
     :cond_0
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    .line 7
-    new-instance p0, Lcom/google/gson/Gson;
-
-    invoke-direct {p0}, Lcom/google/gson/Gson;-><init>()V
-
-    const-class v0, Ljava/util/Map;
-
-    invoke-virtual {p0, p1, v0}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Map;
-
-    const-string/jumbo p1, "truckType"
-
-    .line 8
-    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lyc/a;->b:Ljava/io/DataOutputStream;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 4
+    invoke-virtual {v0}, Ljava/io/DataOutputStream;->close()V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/TruckType;->None:Lcom/skt/tmap/engine/navigation/network/ndds/dto/request/TruckType;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
+    .line 5
     :cond_1
-    const-string/jumbo p1, "truckHeight"
-
-    .line 9
-    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lyc/a;->a:Ljava/net/Socket;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 6
+    invoke-virtual {v0}, Ljava/net/Socket;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
-
-    if-nez p1, :cond_3
-
+    :catch_0
     :cond_2
-    const-string/jumbo p1, "truckWeight"
-
-    .line 10
-    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_4
-
-    :cond_3
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_4
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public static k(Landroid/app/Activity;Ljava/lang/String;)V
+.method public b(I)V
+    .locals 1
+
+    .line 1
+    :try_start_0
+    iget-object v0, p0, Lyc/a;->a:Ljava/net/Socket;
+
+    invoke-virtual {v0, p1}, Ljava/net/Socket;->setSoTimeout(I)V
+    :try_end_0
+    .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+.end method
+
+.method public c()Ljava/io/DataInputStream;
     .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "activity",
-            "useHipassYn"
-        }
-    .end annotation
 
     .line 1
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    iget-object v0, p0, Lyc/a;->a:Ljava/net/Socket;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    const-string v1, "car.hipassYn"
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    invoke-static {p0, v1, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->R(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static l(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "context",
-            "oilTypeReqKey"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    return-void
+    return-object v0
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
+    :try_start_0
+    new-instance v0, Ljava/io/DataInputStream;
 
-    move-result-object v0
+    iget-object v1, p0, Lyc/a;->a:Ljava/net/Socket;
 
-    array-length v2, v0
+    invoke-virtual {v1}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
-    const/4 v3, 0x0
+    move-result-object v1
 
-    :goto_0
-    if-ge v3, v2, :cond_2
+    invoke-direct {v0, v1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    aget-object v4, v0, v3
-
-    .line 3
-    iget-object v5, v4, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->reqKey:Ljava/lang/String;
-
-    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-ne v5, v1, :cond_1
-
-    .line 4
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "car.fuel"
-
-    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 5
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, v0, p1}, Lcom/skt/tmap/util/TmapUserSettingSharedPreference;->R(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v3, v3, 0x1
+    iput-object v0, p0, Lyc/a;->c:Ljava/io/DataInputStream;
+    :try_end_0
+    .catch Ljava/io/StreamCorruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     goto :goto_0
 
-    :cond_2
-    :goto_1
-    return-void
+    :catch_0
+    move-exception v0
+
+    .line 3
+    invoke-virtual {v0}, Ljava/io/IOException;->getCause()Ljava/lang/Throwable;
+
+    .line 4
+    instance-of v1, v0, Ljava/net/SocketException;
+
+    .line 5
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    .line 6
+    :catch_1
+    :goto_0
+    iget-object v0, p0, Lyc/a;->c:Ljava/io/DataInputStream;
+
+    return-object v0
 .end method
 
-.method public static m(Landroid/app/Activity;Ljava/lang/String;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "activity",
-            "oilTypeReqKey"
-        }
-    .end annotation
+.method public d()Ljava/io/DataOutputStream;
+    .locals 1
 
     .line 1
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iget-object v0, p0, Lyc/a;->b:Ljava/io/DataOutputStream;
+
+    return-object v0
+.end method
+
+.method public e()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lyc/a;->a:Ljava/net/Socket;
+
+    invoke-virtual {v0}, Ljava/net/Socket;->isConnected()Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    return v0
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public f()I
+    .locals 3
 
-    return-void
+    .line 1
+    :try_start_0
+    new-instance v0, Ljava/net/Socket;
+
+    invoke-direct {v0}, Ljava/net/Socket;-><init>()V
+
+    iput-object v0, p0, Lyc/a;->a:Ljava/net/Socket;
 
     .line 2
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    new-instance v0, Ljava/net/InetSocketAddress;
 
-    move-result-object p0
+    iget-object v1, p0, Lyc/a;->d:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lyc/a;->l(Landroid/content/Context;Ljava/lang/String;)V
+    iget v2, p0, Lyc/a;->e:I
 
-    return-void
+    invoke-direct {v0, v1, v2}, Ljava/net/InetSocketAddress;-><init>(Ljava/lang/String;I)V
+
+    .line 3
+    iget-object v1, p0, Lyc/a;->a:Ljava/net/Socket;
+
+    const/16 v2, 0x1b58
+
+    invoke-virtual {v1, v0, v2}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
+
+    .line 4
+    new-instance v0, Ljava/io/DataOutputStream;
+
+    iget-object v1, p0, Lyc/a;->a:Ljava/net/Socket;
+
+    invoke-virtual {v1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    iput-object v0, p0, Lyc/a;->b:Ljava/io/DataOutputStream;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 .end method

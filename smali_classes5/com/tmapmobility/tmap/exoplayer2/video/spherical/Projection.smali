@@ -206,7 +206,7 @@
 
     const/4 v9, 0x2
 
-    invoke-static {v7, v8, v9, v1}, Lcom/google/protobuf/a;->a(IIII)I
+    invoke-static {v7, v8, v9, v1}, Landroidx/navigation/b0;->a(IIII)I
 
     move-result v8
 

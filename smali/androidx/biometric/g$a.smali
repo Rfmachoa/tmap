@@ -35,15 +35,15 @@
 
 
 # virtual methods
-.method public a()Ll1/b;
+.method public a()Landroidx/core/os/d;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    new-instance v0, Ll1/b;
+    new-instance v0, Landroidx/core/os/d;
 
-    invoke-direct {v0}, Ll1/b;-><init>()V
+    invoke-direct {v0}, Landroidx/core/os/d;-><init>()V
 
     return-object v0
 .end method

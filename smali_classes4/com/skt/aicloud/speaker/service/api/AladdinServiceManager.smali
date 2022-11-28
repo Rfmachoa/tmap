@@ -126,7 +126,7 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
-    const-string v3, "1.26.20"
+    const-string v3, "1.26.22"
 
     aput-object v3, v2, v4
 
@@ -260,13 +260,13 @@
     if-eqz v2, :cond_3
 
     .line 6
-    invoke-interface {v2}, Lcom/skt/aicloud/speaker/service/state/b;->getRequestId()Lma/d;
+    invoke-interface {v2}, Lcom/skt/aicloud/speaker/service/state/b;->getRequestId()Ljc/d;
 
     move-result-object v1
 
     .line 7
     :cond_3
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v2
 
@@ -274,7 +274,7 @@
 
     iget-object v0, v0, Lcom/skt/aicloud/speaker/service/api/g$b;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v1, v3, v0, p1}, Lu8/a;->q(Lma/d;Ljava/lang/String;Ljava/lang/String;Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;)V
+    invoke-virtual {v2, v1, v3, v0, p1}, Lra/a;->q(Ljc/d;Ljava/lang/String;Ljava/lang/String;Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;)V
 
     return-void
 .end method
@@ -446,13 +446,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Ls8/b;->c()Ls8/b;
+    invoke-static {}, Lpa/b;->c()Lpa/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ls8/b;->a(Landroid/content/Context;)I
+    invoke-virtual {v0, v1}, Lpa/b;->a(Landroid/content/Context;)I
 
     return-void
 .end method
@@ -1115,7 +1115,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lua/d;->a()Ljava/lang/String;
+    invoke-static {}, Lrc/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1157,7 +1157,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lua/d;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lrc/d;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1328,7 +1328,7 @@
     .line 1
     iget-object v0, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lua/d;->E(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lrc/d;->E(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1471,21 +1471,21 @@
     const-string v0, "CLASS_NAME"
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 6
-    invoke-virtual {p1, v3}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v3}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 7
-    invoke-static {}, Lp8/a;->d()Lp8/a;
+    invoke-static {}, Lma/a;->d()Lma/a;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0, p1}, Lp8/a;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v0, p1}, Lma/a;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     invoke-static {}, Lcom/skt/aicloud/mobile/service/common/ApplicationStateDetecter;->g()Lcom/skt/aicloud/mobile/service/common/ApplicationStateDetecter;
@@ -1508,7 +1508,7 @@
 
     .line 10
     :pswitch_2
-    invoke-virtual {p1, v3}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v3}, Lcom/skt/aicloud/speaker/lib/guiinfo/AppIntentInfo;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1530,11 +1530,11 @@
     invoke-static {v0, v2}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
-    invoke-static {}, Lp8/a;->d()Lp8/a;
+    invoke-static {}, Lma/a;->d()Lma/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lp8/a;->f(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lma/a;->f(Ljava/lang/String;)V
 
     const-string v0, "CREATE"
 
@@ -1557,11 +1557,11 @@
     .line 15
     iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-static {p1}, Lc9/a;->b(Landroid/content/Context;)Lc9/a;
+    invoke-static {p1}, Lza/a;->b(Landroid/content/Context;)Lza/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lc9/a;->a()V
+    invoke-virtual {p1}, Lza/a;->a()V
 
     :cond_3
     return v1
@@ -1858,7 +1858,7 @@
     .locals 7
 
     .line 1
-    invoke-static {}, Le9/a;->c()Le9/a;
+    invoke-static {}, Lbb/a;->c()Lbb/a;
 
     move-result-object v0
 
@@ -1874,7 +1874,7 @@
 
     move-object v6, p6
 
-    invoke-virtual/range {v0 .. v6}, Le9/a;->a(Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/aicloud/speaker/lib/AIServiceResult;
+    invoke-virtual/range {v0 .. v6}, Lbb/a;->a(Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/aicloud/speaker/lib/AIServiceResult;
 
     move-result-object p1
 
@@ -1884,11 +1884,11 @@
     return-void
 .end method
 
-.method public notifyAIServiceResult(Lma/c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public notifyAIServiceResult(Ljc/c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
     .line 3
-    invoke-static {}, Le9/a;->c()Le9/a;
+    invoke-static {}, Lbb/a;->c()Lbb/a;
 
     move-result-object v0
 
@@ -1902,7 +1902,7 @@
 
     move-object v5, p5
 
-    invoke-virtual/range {v0 .. v5}, Le9/a;->b(Lma/c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/aicloud/speaker/lib/AIServiceResult;
+    invoke-virtual/range {v0 .. v5}, Lbb/a;->b(Ljc/c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/skt/aicloud/speaker/lib/AIServiceResult;
 
     move-result-object p1
 
@@ -1958,7 +1958,7 @@
     invoke-interface {v0, p1}, Lcom/skt/aicloud/speaker/lib/model/IAladdinServiceMonitorCallback;->onMediaPlayerState(Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->d()Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState;->e()Lcom/skt/aicloud/speaker/lib/state/MediaPlayerState$PlayState;
 
     move-result-object p1
 
@@ -2189,21 +2189,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/a;
+    new-instance v0, Lib/a;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1}, Ll9/a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lib/a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, v1, v0, p2}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, v1, v0, p2}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2239,21 +2239,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/b;
+    new-instance v0, Lib/b;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1, p2, p3}, Ll9/b;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, p2, p3}, Lib/b;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object p2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, p2, v0, p4}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, p2, v0, p4}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2277,21 +2277,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lj9/a;
+    new-instance v0, Lgb/a;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lj9/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lgb/a;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v1, Li9/c;
+    new-instance v1, Lfb/c;
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v0, p1}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {v1, v2, v0, p1}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {v1}, Li9/c;->l()V
+    invoke-virtual {v1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2319,21 +2319,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/c;
+    new-instance v0, Lib/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1}, Ll9/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lib/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, v1, v0, p2}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, v1, v0, p2}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2349,26 +2349,26 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lj9/c;
+    new-instance v0, Lgb/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lj9/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lgb/c;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v1, Li9/c;
+    new-instance v1, Lfb/c;
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v0, p1}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {v1, v2, v0, p1}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     const/4 p1, 0x0
 
     .line 4
-    invoke-virtual {v1, p1}, Li9/c;->n(Z)V
+    invoke-virtual {v1, p1}, Lfb/c;->n(Z)V
 
     .line 5
-    invoke-virtual {v1}, Li9/c;->l()V
+    invoke-virtual {v1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2396,21 +2396,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/d;
+    new-instance v0, Lib/d;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1}, Ll9/d;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lib/d;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, v1, v0, p2}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, v1, v0, p2}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2426,21 +2426,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/e;
+    new-instance v0, Lib/e;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Ll9/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lib/e;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v1, Li9/c;
+    new-instance v1, Lfb/c;
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v0, p1}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {v1, v2, v0, p1}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {v1}, Li9/c;->l()V
+    invoke-virtual {v1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2456,21 +2456,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/f;
+    new-instance v0, Lib/f;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Ll9/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lib/f;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v1, Li9/c;
+    new-instance v1, Lfb/c;
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v0, p1}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {v1, v2, v0, p1}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {v1}, Li9/c;->l()V
+    invoke-virtual {v1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2498,21 +2498,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/g;
+    new-instance v0, Lib/g;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1}, Ll9/g;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lib/g;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, v1, v0, p2}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, v1, v0, p2}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2528,21 +2528,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/h;
+    new-instance v0, Lib/h;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Ll9/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lib/h;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v1, Li9/c;
+    new-instance v1, Lfb/c;
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v0, p1}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {v1, v2, v0, p1}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {v1}, Li9/c;->l()V
+    invoke-virtual {v1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2592,21 +2592,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lj9/d;
+    new-instance v0, Lgb/d;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1}, Lj9/d;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, p1}, Lgb/d;-><init>(Landroid/content/Context;I)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, v1, v0, p2}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, v1, v0, p2}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2653,7 +2653,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lsa/d;)Z
+    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
 
     goto :goto_0
 
@@ -2667,7 +2667,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lsa/d;)Z
+    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
 
     :goto_0
     return-void
@@ -2717,7 +2717,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lsa/d;)Z
+    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
 
     goto :goto_0
 
@@ -2731,7 +2731,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lsa/d;)Z
+    invoke-virtual {p1, p2, v0}, Lcom/skt/aicloud/speaker/service/api/d$b;->t(Ljava/lang/String;Lpc/d;)Z
 
     :goto_0
     return-void
@@ -2775,21 +2775,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/i;
+    new-instance v0, Lib/i;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1, p2}, Ll9/i;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, p2}, Lib/i;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object p2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, p2, v0, p3}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, p2, v0, p3}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2836,7 +2836,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lsa/d;Z)Z
+    invoke-virtual {p1, p2, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lpc/d;Z)Z
 
     goto :goto_0
 
@@ -2850,7 +2850,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lsa/d;Z)Z
+    invoke-virtual {p1, p2, v0, v1}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lpc/d;Z)Z
 
     :goto_0
     return-void
@@ -2900,7 +2900,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0, p3}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lsa/d;Z)Z
+    invoke-virtual {p1, p2, v0, p3}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lpc/d;Z)Z
 
     goto :goto_0
 
@@ -2914,7 +2914,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, p2, v0, p3}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lsa/d;Z)Z
+    invoke-virtual {p1, p2, v0, p3}, Lcom/skt/aicloud/speaker/service/api/d$b;->s(Ljava/lang/String;Lpc/d;Z)Z
 
     :goto_0
     return-void
@@ -2947,21 +2947,21 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Ll9/j;
+    new-instance v0, Lib/j;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1, p2}, Ll9/j;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, p2}, Lib/j;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    new-instance p1, Li9/c;
+    new-instance p1, Lfb/c;
 
     iget-object p2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, p2, v0, p3}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {p1, p2, v0, p3}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     .line 4
-    invoke-virtual {p1}, Li9/c;->l()V
+    invoke-virtual {p1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -2977,26 +2977,26 @@
     invoke-static {v0, v1}, Lcom/beyless/android/lib/util/log/BLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v0, Lj9/e;
+    new-instance v0, Lgb/e;
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lj9/e;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lgb/e;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v1, Li9/c;
+    new-instance v1, Lfb/c;
 
     iget-object v2, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v2, v0, p1}, Li9/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
+    invoke-direct {v1, v2, v0, p1}, Lfb/c;-><init>(Landroid/content/Context;Lcom/skt/aicloud/mobile/service/net/http/api/nugu/NuguQueryBase;Lcom/skt/aicloud/speaker/lib/model/IAladdinServerResultListener;)V
 
     const/4 p1, 0x0
 
     .line 4
-    invoke-virtual {v1, p1}, Li9/c;->n(Z)V
+    invoke-virtual {v1, p1}, Lfb/c;->n(Z)V
 
     .line 5
-    invoke-virtual {v1}, Li9/c;->l()V
+    invoke-virtual {v1}, Lfb/c;->l()V
 
     return-void
 .end method
@@ -3194,13 +3194,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Ls8/b;->c()Ls8/b;
+    invoke-static {}, Lpa/b;->c()Lpa/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1, p1, p2}, Ls8/b;->h(Landroid/content/Context;J)V
+    invoke-virtual {v0, v1, p1, p2}, Lpa/b;->h(Landroid/content/Context;J)V
 
     return-void
 .end method
@@ -3367,12 +3367,12 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->d()Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo$Type;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->e()Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo$Type;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/skt/aicloud/speaker/lib/guiinfo/LocationInfo;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -3691,7 +3691,7 @@
 
     .line 2
     :cond_0
-    invoke-static {p1}, Lp8/d;->h(Lcom/skt/aicloud/speaker/lib/UserInfo;)V
+    invoke-static {p1}, Lma/d;->h(Lcom/skt/aicloud/speaker/lib/UserInfo;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/aicloud/speaker/service/api/AladdinServiceManager;->getAladdinStateManager()Lcom/skt/aicloud/speaker/service/api/c;

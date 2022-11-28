@@ -383,7 +383,7 @@
     .line 20
     new-instance v4, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherAlphabetToKorean;
 
-    const-string/jumbo v13, "t"
+    const-string v13, "t"
 
     const/16 v15, 0x13
 
@@ -400,7 +400,7 @@
     .line 21
     new-instance v2, Lcom/skt/aicloud/mobile/service/util/stringconverter/data/MatcherAlphabetToKorean;
 
-    const-string/jumbo v13, "u"
+    const-string v13, "u"
 
     const/16 v14, 0x14
 

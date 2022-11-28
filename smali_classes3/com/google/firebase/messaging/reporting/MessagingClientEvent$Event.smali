@@ -1,9 +1,9 @@
 .class public final enum Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 .super Ljava/lang/Enum;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "MessagingClientEvent.java"
 
 # interfaces
-.implements Lcom/google/android/gms/internal/firebase_messaging/zzq;
+.implements Lcom/google/firebase/encoders/proto/ProtoEnum;
 
 
 # annotations
@@ -21,7 +21,7 @@
         "Ljava/lang/Enum<",
         "Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;",
         ">;",
-        "Lcom/google/android/gms/internal/firebase_messaging/zzq;"
+        "Lcom/google/firebase/encoders/proto/ProtoEnum;"
     }
 .end annotation
 
@@ -30,19 +30,10 @@
 .field private static final synthetic $VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
 .field public static final enum MESSAGE_DELIVERED:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final enum MESSAGE_OPEN:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 .field public static final enum UNKNOWN_EVENT:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 
 # instance fields
@@ -50,36 +41,8 @@
 
 
 # direct methods
-.method private static synthetic $values()[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-    .locals 3
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->UNKNOWN_EVENT:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->MESSAGE_DELIVERED:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->MESSAGE_OPEN:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 7
 
     .line 1
     new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
@@ -92,34 +55,40 @@
 
     sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->UNKNOWN_EVENT:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
-    new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-
-    const-string v1, "MESSAGE_DELIVERED"
-
-    const/4 v2, 0x1
-
     .line 2
-    invoke-direct {v0, v1, v2, v2}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;-><init>(Ljava/lang/String;II)V
+    new-instance v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->MESSAGE_DELIVERED:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
+    const-string v3, "MESSAGE_DELIVERED"
 
-    new-instance v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
+    const/4 v4, 0x1
 
-    const-string v1, "MESSAGE_OPEN"
+    invoke-direct {v1, v3, v4, v4}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;-><init>(Ljava/lang/String;II)V
 
-    const/4 v2, 0x2
+    sput-object v1, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->MESSAGE_DELIVERED:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
     .line 3
-    invoke-direct {v0, v1, v2, v2}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;-><init>(Ljava/lang/String;II)V
+    new-instance v3, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->MESSAGE_OPEN:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
+    const-string v5, "MESSAGE_OPEN"
+
+    const/4 v6, 0x2
+
+    invoke-direct {v3, v5, v6, v6}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->MESSAGE_OPEN:Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
+
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
+
+    aput-object v0, v5, v2
+
+    aput-object v1, v5, v4
+
+    aput-object v3, v5, v6
 
     .line 4
-    invoke-static {}, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->$values()[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->$VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
+    sput-object v5, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->$VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
 
     return-void
 .end method
@@ -135,6 +104,7 @@
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->number_:I
 
     return-void
@@ -142,12 +112,6 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
     .locals 1
-    .param p0    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
     const-class v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
@@ -163,8 +127,6 @@
 
 .method public static values()[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
     .line 1
     sget-object v0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->$VALUES:[Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;
@@ -183,6 +145,7 @@
 .method public getNumber()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/firebase/messaging/reporting/MessagingClientEvent$Event;->number_:I
 
     return v0

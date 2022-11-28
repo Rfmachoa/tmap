@@ -119,7 +119,7 @@
     return-void
 .end method
 
-.method public static o(Ldf/d;)[Lcz/msebera/android/httpclient/impl/client/cache/o0;
+.method public static o(Lhh/d;)[Lcz/msebera/android/httpclient/impl/client/cache/o0;
     .locals 4
 
     .line 1
@@ -128,7 +128,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 2
-    invoke-interface {p0}, Ldf/d;->getValue()Ljava/lang/String;
+    invoke-interface {p0}, Lhh/d;->getValue()Ljava/lang/String;
 
     move-result-object p0
 
@@ -845,7 +845,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lnf/b;->d(Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {v0}, Lrh/b;->d(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v0
 
@@ -1240,7 +1240,7 @@
     iget-object v1, p0, Lcz/msebera/android/httpclient/impl/client/cache/o0;->g:Ljava/util/Date;
 
     .line 3
-    invoke-static {v1}, Lnf/b;->b(Ljava/util/Date;)Ljava/lang/String;
+    invoke-static {v1}, Lrh/b;->b(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v1
 

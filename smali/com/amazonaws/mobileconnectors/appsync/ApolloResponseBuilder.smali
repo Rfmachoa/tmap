@@ -16,17 +16,17 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lc4/o;",
-            "Lb4/b;",
+            "Lz5/o;",
+            "Ly5/b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final mapResponseNormalizer:Lj4/h;
+.field private final mapResponseNormalizer:Lg6/h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lj4/h<",
+            "Lg6/h<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -52,16 +52,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Map;Lj4/h;)V
+.method public constructor <init>(Ljava/util/Map;Lg6/h;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lc4/o;",
-            "Lb4/b;",
+            "Lz5/o;",
+            "Ly5/b;",
             ">;",
-            "Lj4/h<",
+            "Lg6/h<",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -76,14 +76,14 @@
     iput-object p1, p0, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->customTypeAdapters:Ljava/util/Map;
 
     .line 3
-    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->mapResponseNormalizer:Lj4/h;
+    iput-object p2, p0, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->mapResponseNormalizer:Lg6/h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public buildResponse(Ljava/lang/String;Lcom/apollographql/apollo/api/f;)Lc4/i;
+.method public buildResponse(Ljava/lang/String;Lcom/apollographql/apollo/api/f;)Lz5/i;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -97,7 +97,7 @@
             "Ljava/lang/String;",
             "Lcom/apollographql/apollo/api/f<",
             "TD;TT;TV;>;)",
-            "Lc4/i<",
+            "Lz5/i<",
             "TT;>;"
         }
     .end annotation
@@ -110,37 +110,37 @@
     move-result-object p1
 
     .line 2
-    new-instance v0, Lo4/a;
+    new-instance v0, Ll6/a;
 
     .line 3
-    invoke-interface {p2}, Lcom/apollographql/apollo/api/b;->responseFieldMapper()Lc4/j;
+    invoke-interface {p2}, Lcom/apollographql/apollo/api/b;->responseFieldMapper()Lz5/j;
 
     move-result-object v1
 
-    new-instance v2, Lo4/d;
+    new-instance v2, Ll6/d;
 
     iget-object v3, p0, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->customTypeAdapters:Ljava/util/Map;
 
-    invoke-direct {v2, v3}, Lo4/d;-><init>(Ljava/util/Map;)V
+    invoke-direct {v2, v3}, Ll6/d;-><init>(Ljava/util/Map;)V
 
-    iget-object v3, p0, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->mapResponseNormalizer:Lj4/h;
+    iget-object v3, p0, Lcom/amazonaws/mobileconnectors/appsync/ApolloResponseBuilder;->mapResponseNormalizer:Lg6/h;
 
-    invoke-direct {v0, p2, v1, v2, v3}, Lo4/a;-><init>(Lcom/apollographql/apollo/api/b;Lc4/j;Lo4/d;Lj4/h;)V
+    invoke-direct {v0, p2, v1, v2, v3}, Ll6/a;-><init>(Lcom/apollographql/apollo/api/b;Lz5/j;Ll6/d;Lg6/h;)V
 
     .line 4
     :try_start_0
-    invoke-virtual {p1}, Lokhttp3/ResponseBody;->source()Lzj/o;
+    invoke-virtual {p1}, Lokhttp3/ResponseBody;->source()Lem/o;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lo4/a;->g(Lzj/o;)Lc4/i;
+    invoke-virtual {v0, p1}, Ll6/a;->f(Lem/o;)Lz5/i;
 
     move-result-object p1
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 5
-    invoke-virtual {p1}, Lc4/i;->f()Z
+    invoke-virtual {p1}, Lz5/i;->f()Z
 
     move-result p2
 

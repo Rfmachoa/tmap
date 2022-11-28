@@ -60,6 +60,14 @@
 
 .method public setImportData(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "importData"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHappenBodyVo;->importData:Ljava/lang/String;
@@ -69,6 +77,14 @@
 
 .method public setLocation(Lcom/skt/moment/net/vo/ReqHappenBodyVo$ResLocationVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "location"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHappenBodyVo;->location:Lcom/skt/moment/net/vo/ReqHappenBodyVo$ResLocationVo;
@@ -79,6 +95,17 @@
 .method public setLocation(Ljava/lang/Double;Ljava/lang/Double;)V
     .locals 1
     .annotation runtime Lcom/fasterxml/jackson/annotation/JsonIgnore;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "latitude",
+            "longitude"
+        }
     .end annotation
 
     .line 2
@@ -100,6 +127,14 @@
 
 .method public setMomentCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "momentCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ReqHappenBodyVo;->momentCode:Ljava/lang/String;

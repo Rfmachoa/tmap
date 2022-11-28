@@ -6,6 +6,8 @@
 # static fields
 .field public static final DERIVED_FEATURES_MASK:I
 
+.field public static final MAX_BIG_DECIMAL_SCALE:I = 0x270f
+
 .field public static final SURR1_FIRST:I = 0xd800
 
 .field public static final SURR1_LAST:I = 0xdbff
@@ -14,20 +16,20 @@
 
 .field public static final SURR2_LAST:I = 0xdfff
 
+.field public static final WRITE_BINARY:Ljava/lang/String; = "write a binary value"
+
+.field public static final WRITE_BOOLEAN:Ljava/lang/String; = "write a boolean value"
+
+.field public static final WRITE_NULL:Ljava/lang/String; = "write a null"
+
+.field public static final WRITE_NUMBER:Ljava/lang/String; = "write a number"
+
+.field public static final WRITE_RAW:Ljava/lang/String; = "write a raw (unencoded) value"
+
+.field public static final WRITE_STRING:Ljava/lang/String; = "write a string"
+
 
 # instance fields
-.field public final WRITE_BINARY:Ljava/lang/String;
-
-.field public final WRITE_BOOLEAN:Ljava/lang/String;
-
-.field public final WRITE_NULL:Ljava/lang/String;
-
-.field public final WRITE_NUMBER:Ljava/lang/String;
-
-.field public final WRITE_RAW:Ljava/lang/String;
-
-.field public final WRITE_STRING:Ljava/lang/String;
-
 .field public _cfgNumbersAsStrings:Z
 
 .field public _closed:Z
@@ -46,12 +48,14 @@
     .line 1
     sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
+    .line 2
     invoke-virtual {v0}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->getMask()I
 
     move-result v0
 
     sget-object v1, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->ESCAPE_NON_ASCII:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
+    .line 3
     invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->getMask()I
 
     move-result v1
@@ -60,6 +64,7 @@
 
     sget-object v1, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->STRICT_DUPLICATE_DETECTION:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
+    .line 4
     invoke-virtual {v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->getMask()I
 
     move-result v1
@@ -72,48 +77,18 @@
 .end method
 
 .method public constructor <init>(ILcom/fasterxml/jackson/core/ObjectCodec;)V
-    .locals 1
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/fasterxml/jackson/core/JsonGenerator;-><init>()V
 
-    const-string v0, "write a binary value"
-
     .line 2
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_BINARY:Ljava/lang/String;
-
-    const-string v0, "write a boolean value"
-
-    .line 3
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_BOOLEAN:Ljava/lang/String;
-
-    const-string v0, "write a null"
-
-    .line 4
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_NULL:Ljava/lang/String;
-
-    const-string v0, "write a number"
-
-    .line 5
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_NUMBER:Ljava/lang/String;
-
-    const-string v0, "write a raw (unencoded) value"
-
-    .line 6
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_RAW:Ljava/lang/String;
-
-    const-string v0, "write a string"
-
-    .line 7
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_STRING:Ljava/lang/String;
-
-    .line 8
     iput p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
 
-    .line 9
+    .line 3
     iput-object p2, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_objectCodec:Lcom/fasterxml/jackson/core/ObjectCodec;
 
-    .line 10
+    .line 4
     sget-object p2, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->STRICT_DUPLICATE_DETECTION:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
 
     invoke-virtual {p2, p1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
@@ -122,6 +97,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 5
     invoke-static {p0}, Lcom/fasterxml/jackson/core/json/DupDetector;->rootDetector(Lcom/fasterxml/jackson/core/JsonGenerator;)Lcom/fasterxml/jackson/core/json/DupDetector;
 
     move-result-object p2
@@ -131,13 +107,40 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 11
+    .line 6
     :goto_0
     invoke-static {p2}, Lcom/fasterxml/jackson/core/json/JsonWriteContext;->createRootContext(Lcom/fasterxml/jackson/core/json/DupDetector;)Lcom/fasterxml/jackson/core/json/JsonWriteContext;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
+
+    .line 7
+    sget-object p2, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+
+    invoke-virtual {p2, p1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(ILcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/json/JsonWriteContext;)V
+    .locals 0
+
+    .line 8
+    invoke-direct {p0}, Lcom/fasterxml/jackson/core/JsonGenerator;-><init>()V
+
+    .line 9
+    iput p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
+
+    .line 10
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_objectCodec:Lcom/fasterxml/jackson/core/ObjectCodec;
+
+    .line 11
+    iput-object p3, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
 
     .line 12
     sget-object p2, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
@@ -151,65 +154,96 @@
     return-void
 .end method
 
-.method public constructor <init>(ILcom/fasterxml/jackson/core/ObjectCodec;Lcom/fasterxml/jackson/core/json/JsonWriteContext;)V
-    .locals 1
-
-    .line 13
-    invoke-direct {p0}, Lcom/fasterxml/jackson/core/JsonGenerator;-><init>()V
-
-    const-string v0, "write a binary value"
-
-    .line 14
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_BINARY:Ljava/lang/String;
-
-    const-string v0, "write a boolean value"
-
-    .line 15
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_BOOLEAN:Ljava/lang/String;
-
-    const-string v0, "write a null"
-
-    .line 16
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_NULL:Ljava/lang/String;
-
-    const-string v0, "write a number"
-
-    .line 17
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_NUMBER:Ljava/lang/String;
-
-    const-string v0, "write a raw (unencoded) value"
-
-    .line 18
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_RAW:Ljava/lang/String;
-
-    const-string v0, "write a string"
-
-    .line 19
-    iput-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->WRITE_STRING:Ljava/lang/String;
-
-    .line 20
-    iput p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
-
-    .line 21
-    iput-object p2, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_objectCodec:Lcom/fasterxml/jackson/core/ObjectCodec;
-
-    .line 22
-    iput-object p3, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
-
-    .line 23
-    sget-object p2, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_NUMBERS_AS_STRINGS:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
-
-    invoke-virtual {p2, p1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_cfgNumbersAsStrings:Z
-
-    return-void
-.end method
-
 
 # virtual methods
+.method public _asString(Ljava/math/BigDecimal;)Ljava/lang/String;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    sget-object v0, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->WRITE_BIGDECIMAL_AS_PLAIN:Lcom/fasterxml/jackson/core/JsonGenerator$Feature;
+
+    iget v1, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_features:I
+
+    invoke-virtual {v0, v1}, Lcom/fasterxml/jackson/core/JsonGenerator$Feature;->enabledIn(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 2
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
+
+    move-result v0
+
+    const/16 v1, -0x270f
+
+    const/16 v2, 0x270f
+
+    if-lt v0, v1, :cond_0
+
+    if-le v0, v2, :cond_1
+
+    :cond_0
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    .line 3
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v1, v3
+
+    const/4 v0, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v1, v0
+
+    const-string v0, "Attempt to write plain `java.math.BigDecimal` (see JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN) with illegal scale (%d): needs to be between [-%d, %d]"
+
+    .line 4
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/fasterxml/jackson/core/JsonGenerator;->_reportError(Ljava/lang/String;)V
+
+    .line 5
+    :cond_1
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 6
+    :cond_2
+    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public _checkStdFeatureChanges(II)V
     .locals 2
 
@@ -611,21 +645,10 @@
     return v0
 .end method
 
-.method public bridge synthetic getOutputContext()Lcom/fasterxml/jackson/core/JsonStreamContext;
+.method public getOutputContext()Lcom/fasterxml/jackson/core/JsonStreamContext;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->getOutputContext()Lcom/fasterxml/jackson/core/json/JsonWriteContext;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getOutputContext()Lcom/fasterxml/jackson/core/json/JsonWriteContext;
-    .locals 1
-
-    .line 2
     iget-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
 
     return-object v0
@@ -708,8 +731,12 @@
     .line 1
     iget-object v0, p0, Lcom/fasterxml/jackson/core/base/GeneratorBase;->_writeContext:Lcom/fasterxml/jackson/core/json/JsonWriteContext;
 
+    if-eqz v0, :cond_0
+
+    .line 2
     invoke-virtual {v0, p1}, Lcom/fasterxml/jackson/core/json/JsonWriteContext;->setCurrentValue(Ljava/lang/Object;)V
 
+    :cond_0
     return-void
 .end method
 
@@ -764,13 +791,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/fasterxml/jackson/core/util/VersionUtil;->versionFor(Ljava/lang/Class;)Lcom/fasterxml/jackson/core/Version;
-
-    move-result-object v0
+    sget-object v0, Lcom/fasterxml/jackson/core/json/PackageVersion;->VERSION:Lcom/fasterxml/jackson/core/Version;
 
     return-object v0
 .end method
@@ -916,6 +937,26 @@
     .line 6
     invoke-virtual {p0, p1, p2, p3}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeRaw([CII)V
 
+    return-void
+.end method
+
+.method public writeStartObject(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/core/JsonGenerator;->writeStartObject()V
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/fasterxml/jackson/core/base/GeneratorBase;->setCurrentValue(Ljava/lang/Object;)V
+
+    :cond_0
     return-void
 .end method
 

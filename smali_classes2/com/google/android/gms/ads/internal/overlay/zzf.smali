@@ -1,42 +1,25 @@
-.class final synthetic Lcom/google/android/gms/ads/internal/overlay/zzf;
-.super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-ads@@19.1.0"
-
-# interfaces
-.implements Lcom/google/android/gms/internal/ads/zzbfv;
-
-
-# instance fields
-.field private final zzdkl:Lcom/google/android/gms/ads/internal/overlay/zzc;
+.class final Lcom/google/android/gms/ads/internal/overlay/zzf;
+.super Ljava/lang/Exception;
+.source "com.google.android.gms:play-services-ads@@21.3.0"
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/ads/internal/overlay/zzc;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzf;->zzdkl:Lcom/google/android/gms/ads/internal/overlay/zzc;
+    .line 1
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final zzak(Z)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
-    .line 1
-    iget-object p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzf;->zzdkl:Lcom/google/android/gms/ads/internal/overlay/zzc;
+    const-string p1, "Could not obtain webview for the overlay."
 
     .line 2
-    iget-object p1, p1, Lcom/google/android/gms/ads/internal/overlay/zzc;->zzdce:Lcom/google/android/gms/internal/ads/zzbek;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-eqz p1, :cond_0
-
-    .line 3
-    invoke-interface {p1}, Lcom/google/android/gms/internal/ads/zzbek;->zzum()V
-
-    :cond_0
     return-void
 .end method

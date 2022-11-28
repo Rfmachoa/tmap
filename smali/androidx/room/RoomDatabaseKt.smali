@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nRoomDatabase.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoomDatabase.kt\nandroidx/room/RoomDatabaseKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,166:1\n197#2,8:167\n*E\n*S KotlinDebug\n*F\n+ 1 RoomDatabase.kt\nandroidx/room/RoomDatabaseKt\n*L\n105#1,8:167\n*E\n"
+    value = "SMAP\nRoomDatabase.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoomDatabase.kt\nandroidx/room/RoomDatabaseKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,174:1\n314#2,11:175\n*S KotlinDebug\n*F\n+ 1 RoomDatabase.kt\nandroidx/room/RoomDatabaseKt\n*L\n112#1:175,11\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
@@ -20,43 +20,53 @@
         "Lkotlin/coroutines/c;",
         "",
         "block",
-        "c",
-        "(Landroidx/room/RoomDatabase;Lej/l;Lkotlin/coroutines/c;)Ljava/lang/Object;",
+        "e",
+        "(Landroidx/room/RoomDatabase;Lgl/l;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "Lkotlin/coroutines/CoroutineContext;",
-        "b",
+        "d",
         "(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "Ljava/util/concurrent/Executor;",
         "Lkotlinx/coroutines/y1;",
         "controlJob",
         "Lkotlin/coroutines/d;",
-        "a",
+        "c",
         "(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "room-ktx_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
-        0x0
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # direct methods
 .method public static final synthetic a(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1, p2}, Landroidx/room/RoomDatabaseKt;->c(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic b(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1}, Landroidx/room/RoomDatabaseKt;->d(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 3
-    .param p0    # Ljava/util/concurrent/Executor;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p1    # Lkotlinx/coroutines/y1;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p2    # Lkotlin/coroutines/c;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,11 +80,8 @@
         }
     .end annotation
 
-    .annotation build Lorg/jetbrains/annotations/Nullable;
-    .end annotation
-
     .line 1
-    new-instance v0, Lkotlinx/coroutines/o;
+    new-instance v0, Lkotlinx/coroutines/q;
 
     invoke-static {p2}, Lkotlin/coroutines/intrinsics/IntrinsicsKt__IntrinsicsJvmKt;->d(Lkotlin/coroutines/c;)Lkotlin/coroutines/c;
 
@@ -82,20 +89,23 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/o;-><init>(Lkotlin/coroutines/c;I)V
+    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/q;-><init>(Lkotlin/coroutines/c;I)V
 
     .line 2
-    new-instance v1, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$$inlined$suspendCancellableCoroutine$lambda$1;
-
-    invoke-direct {v1, p0, p1}, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$$inlined$suspendCancellableCoroutine$lambda$1;-><init>(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;)V
-
-    invoke-interface {v0, v1}, Lkotlinx/coroutines/n;->h(Lej/l;)V
+    invoke-virtual {v0}, Lkotlinx/coroutines/q;->D()V
 
     .line 3
-    :try_start_0
-    new-instance v1, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$$inlined$suspendCancellableCoroutine$lambda$2;
+    new-instance v1, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$2$1;
 
-    invoke-direct {v1, v0, p0, p1}, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$$inlined$suspendCancellableCoroutine$lambda$2;-><init>(Lkotlinx/coroutines/n;Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;)V
+    invoke-direct {v1, p1}, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$2$1;-><init>(Lkotlinx/coroutines/y1;)V
+
+    invoke-interface {v0, v1}, Lkotlinx/coroutines/p;->i(Lgl/l;)V
+
+    .line 4
+    :try_start_0
+    new-instance v1, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$2$2;
+
+    invoke-direct {v1, v0, p1}, Landroidx/room/RoomDatabaseKt$acquireTransactionThread$2$2;-><init>(Lkotlinx/coroutines/p;Lkotlinx/coroutines/y1;)V
 
     invoke-interface {p0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
@@ -106,45 +116,37 @@
     :catch_0
     move-exception p0
 
-    .line 4
+    .line 5
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v1, "Unable to acquire a thread to perform the database transaction."
 
     invoke-direct {p1, v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 5
-    invoke-interface {v0, p1}, Lkotlinx/coroutines/n;->a(Ljava/lang/Throwable;)Z
-
     .line 6
+    invoke-interface {v0, p1}, Lkotlinx/coroutines/p;->a(Ljava/lang/Throwable;)Z
+
+    .line 7
     :goto_0
-    invoke-virtual {v0}, Lkotlinx/coroutines/o;->D()Ljava/lang/Object;
+    invoke-virtual {v0}, Lkotlinx/coroutines/q;->y()Ljava/lang/Object;
 
     move-result-object p0
 
-    .line 7
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    .line 8
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object p1
 
     if-ne p0, p1, :cond_0
 
-    invoke-static {p2}, Lwi/e;->c(Lkotlin/coroutines/c;)V
+    invoke-static {p2}, Lzk/e;->c(Lkotlin/coroutines/c;)V
 
     :cond_0
     return-object p0
 .end method
 
-.method public static final synthetic b(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final d(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 6
-    .param p0    # Landroidx/room/RoomDatabase;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p1    # Lkotlin/coroutines/c;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -155,9 +157,6 @@
             ">;)",
             "Ljava/lang/Object;"
         }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/Nullable;
     .end annotation
 
     instance-of v0, p1, Landroidx/room/RoomDatabaseKt$createTransactionContext$1;
@@ -190,7 +189,7 @@
     :goto_0
     iget-object p1, v0, Landroidx/room/RoomDatabaseKt$createTransactionContext$1;->result:Ljava/lang/Object;
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -205,7 +204,7 @@
 
     iget-object p0, v0, Landroidx/room/RoomDatabaseKt$createTransactionContext$1;->L$1:Ljava/lang/Object;
 
-    check-cast p0, Lkotlinx/coroutines/z;
+    check-cast p0, Lkotlinx/coroutines/b0;
 
     iget-object v0, v0, Landroidx/room/RoomDatabaseKt$createTransactionContext$1;->L$0:Ljava/lang/Object;
 
@@ -232,18 +231,40 @@
     const/4 p1, 0x0
 
     .line 4
-    invoke-static {p1, v3, p1}, Lkotlinx/coroutines/b2;->d(Lkotlinx/coroutines/y1;ILjava/lang/Object;)Lkotlinx/coroutines/z;
+    invoke-static {p1, v3, p1}, Lkotlinx/coroutines/b2;->c(Lkotlinx/coroutines/y1;ILjava/lang/Object;)Lkotlinx/coroutines/b0;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p0}, Landroidx/room/RoomDatabase;->p()Ljava/util/concurrent/Executor;
+    invoke-interface {v0}, Lkotlin/coroutines/c;->getContext()Lkotlin/coroutines/CoroutineContext;
+
+    move-result-object v2
+
+    sget-object v4, Lkotlinx/coroutines/y1;->A0:Lkotlinx/coroutines/y1$b;
+
+    invoke-interface {v2, v4}, Lkotlin/coroutines/CoroutineContext;->get(Lkotlin/coroutines/CoroutineContext$b;)Lkotlin/coroutines/CoroutineContext$a;
+
+    move-result-object v2
+
+    check-cast v2, Lkotlinx/coroutines/y1;
+
+    if-eqz v2, :cond_3
+
+    new-instance v4, Landroidx/room/RoomDatabaseKt$createTransactionContext$2;
+
+    invoke-direct {v4, p1}, Landroidx/room/RoomDatabaseKt$createTransactionContext$2;-><init>(Lkotlinx/coroutines/b0;)V
+
+    invoke-interface {v2, v4}, Lkotlinx/coroutines/y1;->E1(Lgl/l;)Lkotlinx/coroutines/f1;
+
+    .line 6
+    :cond_3
+    invoke-virtual {p0}, Landroidx/room/RoomDatabase;->u()Ljava/util/concurrent/Executor;
 
     move-result-object v2
 
     const-string v4, "transactionExecutor"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p0, v0, Landroidx/room/RoomDatabaseKt$createTransactionContext$1;->L$0:Ljava/lang/Object;
 
@@ -251,15 +272,15 @@
 
     iput v3, v0, Landroidx/room/RoomDatabaseKt$createTransactionContext$1;->label:I
 
-    invoke-static {v2, p1, v0}, Landroidx/room/RoomDatabaseKt;->a(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {v2, p1, v0}, Landroidx/room/RoomDatabaseKt;->c(Ljava/util/concurrent/Executor;Lkotlinx/coroutines/y1;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-ne v0, v1, :cond_3
+    if-ne v0, v1, :cond_4
 
     return-object v1
 
-    :cond_3
+    :cond_4
     move-object v5, v0
 
     move-object v0, p0
@@ -268,37 +289,37 @@
 
     move-object p1, v5
 
-    .line 6
+    .line 7
     :goto_1
     check-cast p1, Lkotlin/coroutines/d;
 
-    .line 7
-    new-instance v1, Landroidx/room/s;
-
-    invoke-direct {v1, p0, p1}, Landroidx/room/s;-><init>(Lkotlinx/coroutines/y1;Lkotlin/coroutines/d;)V
-
     .line 8
-    invoke-virtual {v0}, Landroidx/room/RoomDatabase;->o()Ljava/lang/ThreadLocal;
+    new-instance v1, Landroidx/room/z1;
+
+    invoke-direct {v1, p0, p1}, Landroidx/room/z1;-><init>(Lkotlinx/coroutines/y1;Lkotlin/coroutines/d;)V
+
+    .line 9
+    invoke-virtual {v0}, Landroidx/room/RoomDatabase;->t()Ljava/lang/ThreadLocal;
 
     move-result-object v0
 
     const-string v2, "suspendingTransactionId"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
 
-    invoke-static {p0}, Lwi/a;->f(I)Ljava/lang/Integer;
+    invoke-static {p0}, Lzk/a;->f(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lkotlinx/coroutines/c3;->a(Ljava/lang/ThreadLocal;Ljava/lang/Object;)Lkotlinx/coroutines/b3;
+    invoke-static {v0, p0}, Lkotlinx/coroutines/b3;->a(Ljava/lang/ThreadLocal;Ljava/lang/Object;)Lkotlinx/coroutines/a3;
 
     move-result-object p0
 
-    .line 9
+    .line 10
     invoke-interface {p1, v1}, Lkotlin/coroutines/CoroutineContext;->plus(Lkotlin/coroutines/CoroutineContext;)Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p1
@@ -310,13 +331,13 @@
     return-object p0
 .end method
 
-.method public static final c(Landroidx/room/RoomDatabase;Lej/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final e(Landroidx/room/RoomDatabase;Lgl/l;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 5
     .param p0    # Landroidx/room/RoomDatabase;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/l;
+    .param p1    # Lgl/l;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -330,7 +351,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/room/RoomDatabase;",
-            "Lej/l<",
+            "Lgl/l<",
             "-",
             "Lkotlin/coroutines/c<",
             "-TR;>;+",
@@ -375,7 +396,7 @@
     :goto_0
     iget-object p2, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->result:Ljava/lang/Object;
 
-    invoke-static {}, Lvi/b;->h()Ljava/lang/Object;
+    invoke-static {}, Lyk/b;->h()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -392,22 +413,11 @@
 
     if-ne v2, v3, :cond_1
 
-    iget-object p0, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$2:Ljava/lang/Object;
-
-    check-cast p0, Lkotlin/coroutines/CoroutineContext;
-
-    iget-object p0, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$1:Ljava/lang/Object;
-
-    check-cast p0, Lej/l;
-
-    iget-object p0, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$0:Ljava/lang/Object;
-
-    check-cast p0, Landroidx/room/RoomDatabase;
-
     invoke-static {p2}, Lkotlin/d0;->n(Ljava/lang/Object;)V
 
     goto :goto_3
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -417,12 +427,13 @@
 
     throw p0
 
+    .line 3
     :cond_2
     iget-object p0, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$1:Ljava/lang/Object;
 
     move-object p1, p0
 
-    check-cast p1, Lej/l;
+    check-cast p1, Lgl/l;
 
     iget-object p0, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$0:Ljava/lang/Object;
 
@@ -435,22 +446,22 @@
     :cond_3
     invoke-static {p2}, Lkotlin/d0;->n(Ljava/lang/Object;)V
 
-    .line 2
+    .line 4
     invoke-interface {v0}, Lkotlin/coroutines/c;->getContext()Lkotlin/coroutines/CoroutineContext;
 
     move-result-object p2
 
-    sget-object v2, Landroidx/room/s;->d:Landroidx/room/s$a;
+    sget-object v2, Landroidx/room/z1;->d:Landroidx/room/z1$a;
 
     invoke-interface {p2, v2}, Lkotlin/coroutines/CoroutineContext;->get(Lkotlin/coroutines/CoroutineContext$b;)Lkotlin/coroutines/CoroutineContext$a;
 
     move-result-object p2
 
-    check-cast p2, Landroidx/room/s;
+    check-cast p2, Landroidx/room/z1;
 
     if-eqz p2, :cond_4
 
-    invoke-virtual {p2}, Landroidx/room/s;->e()Lkotlin/coroutines/d;
+    invoke-virtual {p2}, Landroidx/room/z1;->e()Lkotlin/coroutines/d;
 
     move-result-object p2
 
@@ -465,7 +476,7 @@
 
     iput v4, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->label:I
 
-    invoke-static {p0, v0}, Landroidx/room/RoomDatabaseKt;->b(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Landroidx/room/RoomDatabaseKt;->d(Landroidx/room/RoomDatabase;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -473,28 +484,26 @@
 
     return-object v1
 
-    .line 3
+    .line 5
     :cond_5
     :goto_1
     check-cast p2, Lkotlin/coroutines/CoroutineContext;
 
-    .line 4
+    .line 6
     :goto_2
     new-instance v2, Landroidx/room/RoomDatabaseKt$withTransaction$2;
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, p0, p1, v4}, Landroidx/room/RoomDatabaseKt$withTransaction$2;-><init>(Landroidx/room/RoomDatabase;Lej/l;Lkotlin/coroutines/c;)V
+    invoke-direct {v2, p0, p1, v4}, Landroidx/room/RoomDatabaseKt$withTransaction$2;-><init>(Landroidx/room/RoomDatabase;Lgl/l;Lkotlin/coroutines/c;)V
 
-    iput-object p0, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$0:Ljava/lang/Object;
+    iput-object v4, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$0:Ljava/lang/Object;
 
-    iput-object p1, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$1:Ljava/lang/Object;
-
-    iput-object p2, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$2:Ljava/lang/Object;
+    iput-object v4, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->L$1:Ljava/lang/Object;
 
     iput v3, v0, Landroidx/room/RoomDatabaseKt$withTransaction$1;->label:I
 
-    invoke-static {p2, v2, v0}, Lkotlinx/coroutines/g;->i(Lkotlin/coroutines/CoroutineContext;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p2, v2, v0}, Lkotlinx/coroutines/i;->h(Lkotlin/coroutines/CoroutineContext;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p2
 

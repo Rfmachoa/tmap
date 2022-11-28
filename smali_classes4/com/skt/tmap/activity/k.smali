@@ -30,7 +30,7 @@
 
     check-cast p1, Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;
 
-    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->v5(Lcom/skt/tmap/activity/BaseWebViewActivity;Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseWebViewActivity;->D5(Lcom/skt/tmap/activity/BaseWebViewActivity;Lcom/skt/tmap/mvp/viewmodel/userdata/RepoResponse;)V
 
     return-void
 .end method

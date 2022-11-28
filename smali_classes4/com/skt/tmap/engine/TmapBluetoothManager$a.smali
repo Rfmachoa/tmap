@@ -72,7 +72,7 @@
 
     const-string v0, "android.permission.BLUETOOTH_CONNECT"
 
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/l0;->m(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/r0;->m(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p1
 
@@ -175,12 +175,12 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
     iget-object p2, p0, Lcom/skt/tmap/engine/TmapBluetoothManager$a;->a:Landroid/content/Context;
 
-    invoke-static {p2}, Ldc/d;->a(Landroid/content/Context;)Ldc/d;
+    invoke-static {p2}, Lbe/e;->a(Landroid/content/Context;)Lbe/e;
 
     move-result-object p2
 
@@ -199,7 +199,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p2, v0, v1, v2}, Ldc/d;->R(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p2, v0, v1, v2}, Lbe/e;->S(Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_0
 

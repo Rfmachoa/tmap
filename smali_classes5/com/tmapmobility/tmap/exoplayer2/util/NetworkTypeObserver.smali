@@ -6,9 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$d;,
-        Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$Receiver;,
         Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$b;,
+        Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$Receiver;,
         Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$c;
     }
 .end annotation
@@ -186,7 +185,7 @@
 
     .line 2
     :pswitch_1
-    sget p0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget p0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v0, 0x1d
 
@@ -434,9 +433,9 @@
     .line 3
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver;->a:Landroid/os/Handler;
 
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/util/y;
+    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/util/z;
 
-    invoke-direct {v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/y;-><init>(Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver;Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$c;)V
+    invoke-direct {v1, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/z;-><init>(Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver;Lcom/tmapmobility/tmap/exoplayer2/util/NetworkTypeObserver$c;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

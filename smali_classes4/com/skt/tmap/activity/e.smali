@@ -3,38 +3,34 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lcom/skt/tmap/util/l0$f;
+.implements Landroidx/lifecycle/Observer;
 
 
 # instance fields
 .field public final synthetic a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-.field public final synthetic b:I
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/BaseAiActivity;I)V
+.method public synthetic constructor <init>(Lcom/skt/tmap/activity/BaseAiActivity;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/skt/tmap/activity/e;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iput p2, p0, Lcom/skt/tmap/activity/e;->b:I
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final onChanged(Ljava/lang/Object;)V
+    .locals 1
 
     iget-object v0, p0, Lcom/skt/tmap/activity/e;->a:Lcom/skt/tmap/activity/BaseAiActivity;
 
-    iget v1, p0, Lcom/skt/tmap/activity/e;->b:I
+    check-cast p1, Lcom/skt/tmap/car/data/c;
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/activity/BaseAiActivity;->w5(Lcom/skt/tmap/activity/BaseAiActivity;I)V
+    invoke-static {v0, p1}, Lcom/skt/tmap/activity/BaseAiActivity;->D5(Lcom/skt/tmap/activity/BaseAiActivity;Lcom/skt/tmap/car/data/c;)V
 
     return-void
 .end method

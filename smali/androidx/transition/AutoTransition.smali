@@ -11,26 +11,34 @@
     invoke-direct {p0}, Landroidx/transition/TransitionSet;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Landroidx/transition/AutoTransition;->w()V
+    invoke-virtual {p0}, Landroidx/transition/AutoTransition;->v()V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 3
     invoke-direct {p0, p1, p2}, Landroidx/transition/TransitionSet;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 4
-    invoke-virtual {p0}, Landroidx/transition/AutoTransition;->w()V
+    invoke-virtual {p0}, Landroidx/transition/AutoTransition;->v()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w()V
+.method public final v()V
     .locals 3
 
     const/4 v0, 0x1

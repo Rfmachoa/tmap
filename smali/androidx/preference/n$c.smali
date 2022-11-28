@@ -41,6 +41,10 @@
 # virtual methods
 .method public a(Landroidx/preference/Preference;)Z
     .locals 2
+    .param p1    # Landroidx/preference/Preference;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget-object v0, p0, Landroidx/preference/n$c;->a:Landroidx/preference/PreferenceGroup;

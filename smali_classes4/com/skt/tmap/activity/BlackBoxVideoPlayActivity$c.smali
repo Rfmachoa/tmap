@@ -59,7 +59,7 @@
 
     iget-object v0, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$c;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->z5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->H5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$c;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->A5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/net/Uri;
+    invoke-static {p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->I5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Landroid/net/Uri;
 
     move-result-object v0
 

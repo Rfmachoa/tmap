@@ -11,11 +11,6 @@
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0018\u0018\u0000 02\u00020\u0001:\u00010B\u0019\u0012\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006R\u001a\u0010\u0007\u001a\u00020\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\t\u0010\n\"\u0004\u0008\u000b\u0010\u000cR\u001a\u0010\r\u001a\u00020\u0005X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000e\u0010\u000f\"\u0004\u0008\u0010\u0010\u0011R\u001c\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0014\u0010\u0015\"\u0004\u0008\u0016\u0010\u0017R\u001a\u0010\u0018\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001a\u0010\u001b\"\u0004\u0008\u001c\u0010\u001dR\u001c\u0010\u001e\u001a\u0004\u0018\u00010\u0005X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001f\u0010\u000f\"\u0004\u0008 \u0010\u0011R\u001a\u0010!\u001a\u00020\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\"\u0010\n\"\u0004\u0008#\u0010\u000cR\u001a\u0010$\u001a\u00020\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008%\u0010\n\"\u0004\u0008&\u0010\u000cR\u001c\u0010\'\u001a\u0004\u0018\u00010\u0013X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008(\u0010\u0015\"\u0004\u0008)\u0010\u0017R\u001a\u0010*\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008+\u0010\u001b\"\u0004\u0008,\u0010\u001dR\u001a\u0010-\u001a\u00020\u0008X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008.\u0010\n\"\u0004\u0008/\u0010\u000c\u00a8\u00061"
     }
@@ -74,9 +69,10 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
+    xi = 0x30
 .end annotation
 
 
@@ -164,7 +160,7 @@
     .line 3
     iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->hasTbtInfo:Z
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     .line 4
     :cond_0
@@ -180,11 +176,14 @@
     .line 6
     iget-object v2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->szPosRoadName:Ljava/lang/String;
 
-    if-eqz v2, :cond_1
+    if-nez v2, :cond_1
 
-    move-object v0, v2
+    goto :goto_0
 
     :cond_1
+    move-object v0, v2
+
+    :goto_0
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->currentRoadName:Ljava/lang/String;
 
     .line 7
@@ -205,13 +204,13 @@
 
     move-result-object v0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_2
     move-object v0, v2
 
     .line 9
-    :goto_0
+    :goto_1
     iget-object v3, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->stGuidePointNext:Lcom/skt/tmap/engine/navigation/data/TBTInfo;
 
     if-eqz v3, :cond_3
@@ -248,6 +247,7 @@
 
     const/16 p2, 0x99
 
+    .line 13
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -270,6 +270,7 @@
 
     if-ne v0, p2, :cond_5
 
+    .line 14
     :cond_4
     iget-object p2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->stGuidePoint:Lcom/skt/tmap/engine/navigation/data/TBTInfo;
 
@@ -277,52 +278,52 @@
 
     if-lez p2, :cond_5
 
-    .line 13
+    .line 15
     iput-boolean v4, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->showTollFee:Z
 
-    .line 14
+    .line 16
     iput p2, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->tollFee:I
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 15
+    .line 17
     :cond_5
     iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->showTollFee:Z
 
-    .line 16
+    .line 18
     iput v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->tollFee:I
 
-    .line 17
-    :goto_1
+    .line 19
+    :goto_2
     iget-object p2, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->stGuidePoint:Lcom/skt/tmap/engine/navigation/data/TBTInfo;
 
     iput-object p2, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->firstTBTInfo:Lcom/skt/tmap/engine/navigation/data/TBTInfo;
 
     if-eqz v2, :cond_6
 
-    .line 18
+    .line 20
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
 
     if-eqz p2, :cond_6
 
-    .line 19
+    .line 21
     iget-object p1, p1, Lcom/skt/tmap/engine/navigation/data/RGData;->stGuidePointNext:Lcom/skt/tmap/engine/navigation/data/TBTInfo;
 
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->secondTBTInfo:Lcom/skt/tmap/engine/navigation/data/TBTInfo;
 
-    .line 20
+    .line 22
     :cond_6
     iput-boolean v4, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->hasTbtInfo:Z
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 21
+    .line 23
     :cond_7
     iput-boolean v1, p0, Lcom/skt/tmap/engine/navigation/livedata/ObservableTBTData;->hasTbtInfo:Z
 
-    :goto_2
+    :goto_3
     return-void
 .end method
 

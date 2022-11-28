@@ -59,12 +59,12 @@
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2}, Lcom/skt/bugAgent/BugReportAgnet;->j(Lcom/skt/bugAgent/BugReportAgnet;Z)V
+    invoke-static {p1, p2}, Lcom/skt/bugAgent/BugReportAgnet;->i(Lcom/skt/bugAgent/BugReportAgnet;Z)V
 
     .line 4
     iget-object p1, p0, Lcom/skt/bugAgent/BugReportAgnet$LocResultReceiver;->a:Lcom/skt/bugAgent/BugReportAgnet;
 
-    invoke-static {p1}, Lcom/skt/bugAgent/BugReportAgnet;->a(Lcom/skt/bugAgent/BugReportAgnet;)Lab/a;
+    invoke-static {p1}, Lcom/skt/bugAgent/BugReportAgnet;->b(Lcom/skt/bugAgent/BugReportAgnet;)Lxc/a;
 
     move-result-object p1
 
@@ -73,11 +73,11 @@
     .line 5
     iget-object p1, p0, Lcom/skt/bugAgent/BugReportAgnet$LocResultReceiver;->a:Lcom/skt/bugAgent/BugReportAgnet;
 
-    invoke-static {p1}, Lcom/skt/bugAgent/BugReportAgnet;->a(Lcom/skt/bugAgent/BugReportAgnet;)Lab/a;
+    invoke-static {p1}, Lcom/skt/bugAgent/BugReportAgnet;->b(Lcom/skt/bugAgent/BugReportAgnet;)Lxc/a;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lab/a;->a()Z
+    invoke-interface {p1}, Lxc/a;->a()Z
 
     .line 6
     :cond_0

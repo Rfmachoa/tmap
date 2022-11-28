@@ -60,13 +60,24 @@
     return-void
 .end method
 
-.method public b()V
+.method public b(Ljava/lang/String;Ljc/c;Lorg/json/JSONObject;)V
     .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/c$c;->a:Lcom/skt/aicloud/speaker/service/api/c;
+
+    invoke-static {p1, p2}, Lcom/skt/aicloud/speaker/service/api/c;->F(Lcom/skt/aicloud/speaker/service/api/c;Ljc/c;)V
 
     return-void
 .end method
 
 .method public c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public d()V
     .locals 5
 
     const-string v0, "AladdinStateManager"
@@ -94,13 +105,13 @@
     return-void
 .end method
 
-.method public d()V
+.method public e()V
     .locals 0
 
     return-void
 .end method
 
-.method public e()V
+.method public f()V
     .locals 5
 
     const-string v0, "AladdinStateManager"
@@ -128,7 +139,7 @@
     return-void
 .end method
 
-.method public f()V
+.method public g()V
     .locals 5
 
     const-string v0, "onAsrStateCancel() : curState = "
@@ -207,17 +218,6 @@
     const-string v4, "onAsrStateCancel()"
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/skt/aicloud/speaker/service/state/b;->c(ZLjava/lang/String;Lcom/skt/aicloud/speaker/service/player/BgmCaller;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public g(Ljava/lang/String;Lma/c;Lorg/json/JSONObject;)V
-    .locals 0
-
-    .line 1
-    iget-object p1, p0, Lcom/skt/aicloud/speaker/service/api/c$c;->a:Lcom/skt/aicloud/speaker/service/api/c;
-
-    invoke-static {p1, p2}, Lcom/skt/aicloud/speaker/service/api/c;->F(Lcom/skt/aicloud/speaker/service/api/c;Lma/c;)V
 
     return-void
 .end method

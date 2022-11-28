@@ -221,11 +221,6 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    .line 3
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->f:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -242,7 +237,7 @@
 .end method
 
 .method public final c(ILjava/lang/Object;)Z
-    .locals 1
+    .locals 2
     .param p2    # Ljava/lang/Object;
         .annotation build Landroid/annotation/SuppressLint;
             value = {
@@ -282,11 +277,6 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    .line 3
     iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->f:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -297,15 +287,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 4
+    .line 3
     iget-object v0, v0, Landroidx/activity/result/ActivityResultRegistry$c;->a:Landroidx/activity/result/a;
 
     if-nez v0, :cond_1
 
     goto :goto_0
 
-    .line 5
+    .line 4
     :cond_1
+    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    .line 5
     invoke-interface {v0, p2}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
 
     goto :goto_1
@@ -322,6 +321,7 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    :cond_3
     :goto_1
     const/4 p1, 0x1
 
@@ -358,25 +358,42 @@
 
     if-eqz v0, :cond_0
 
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->e:Ljava/util/ArrayList;
+
     .line 2
-    iget-object p1, p4, Landroidx/activity/result/ActivityResultRegistry$c;->b:Lb/a;
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p1, p2, p3}, Lb/a;->c(ILandroid/content/Intent;)Ljava/lang/Object;
+    iget-object v0, p4, Landroidx/activity/result/ActivityResultRegistry$c;->a:Landroidx/activity/result/a;
 
-    move-result-object p1
+    .line 4
+    iget-object p4, p4, Landroidx/activity/result/ActivityResultRegistry$c;->b:Lc/a;
 
-    invoke-interface {v0, p1}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
+    .line 5
+    invoke-virtual {p4, p2, p3}, Lc/a;->c(ILandroid/content/Intent;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-interface {v0, p2}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
+
+    .line 6
+    iget-object p2, p0, Landroidx/activity/result/ActivityResultRegistry;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 4
+    .line 7
     :cond_0
     iget-object p4, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
 
     invoke-interface {p4, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
+    .line 8
     iget-object p4, p0, Landroidx/activity/result/ActivityResultRegistry;->h:Landroid/os/Bundle;
 
     new-instance v0, Landroidx/activity/result/ActivityResult;
@@ -432,8 +449,8 @@
     return v0
 .end method
 
-.method public abstract f(ILb/a;Ljava/lang/Object;Landroidx/core/app/c;)V
-    .param p2    # Lb/a;
+.method public abstract f(ILc/a;Ljava/lang/Object;Landroidx/core/app/e;)V
+    .param p2    # Lc/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -444,7 +461,7 @@
             }
         .end annotation
     .end param
-    .param p4    # Landroidx/core/app/c;
+    .param p4    # Landroidx/core/app/e;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -458,9 +475,9 @@
             "O:",
             "Ljava/lang/Object;",
             ">(I",
-            "Lb/a<",
+            "Lc/a<",
             "TI;TO;>;TI;",
-            "Landroidx/core/app/c;",
+            "Landroidx/core/app/e;",
             ")V"
         }
     .end annotation
@@ -687,7 +704,7 @@
     return-void
 .end method
 
-.method public final i(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Lb/a;Landroidx/activity/result/a;)Landroidx/activity/result/e;
+.method public final i(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Lc/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
     .locals 3
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
@@ -697,7 +714,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lb/a;
+    .param p3    # Lc/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -717,11 +734,11 @@
             ">(",
             "Ljava/lang/String;",
             "Landroidx/lifecycle/LifecycleOwner;",
-            "Lb/a<",
+            "Lc/a<",
             "TI;TO;>;",
             "Landroidx/activity/result/a<",
             "TO;>;)",
-            "Landroidx/activity/result/e<",
+            "Landroidx/activity/result/g<",
             "TI;>;"
         }
     .end annotation
@@ -745,46 +762,44 @@
     if-nez v1, :cond_1
 
     .line 3
-    invoke-virtual {p0, p1}, Landroidx/activity/result/ActivityResultRegistry;->k(Ljava/lang/String;)I
-
-    move-result p2
+    invoke-virtual {p0, p1}, Landroidx/activity/result/ActivityResultRegistry;->k(Ljava/lang/String;)V
 
     .line 4
-    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->d:Ljava/util/Map;
+    iget-object p2, p0, Landroidx/activity/result/ActivityResultRegistry;->d:Ljava/util/Map;
 
-    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p2
 
-    check-cast v1, Landroidx/activity/result/ActivityResultRegistry$d;
+    check-cast p2, Landroidx/activity/result/ActivityResultRegistry$d;
 
-    if-nez v1, :cond_0
+    if-nez p2, :cond_0
 
     .line 5
-    new-instance v1, Landroidx/activity/result/ActivityResultRegistry$d;
+    new-instance p2, Landroidx/activity/result/ActivityResultRegistry$d;
 
-    invoke-direct {v1, v0}, Landroidx/activity/result/ActivityResultRegistry$d;-><init>(Landroidx/lifecycle/Lifecycle;)V
+    invoke-direct {p2, v0}, Landroidx/activity/result/ActivityResultRegistry$d;-><init>(Landroidx/lifecycle/Lifecycle;)V
 
     .line 6
     :cond_0
     new-instance v0, Landroidx/activity/result/ActivityResultRegistry$1;
 
-    invoke-direct {v0, p0, p1, p4, p3}, Landroidx/activity/result/ActivityResultRegistry$1;-><init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;Landroidx/activity/result/a;Lb/a;)V
+    invoke-direct {v0, p0, p1, p4, p3}, Landroidx/activity/result/ActivityResultRegistry$1;-><init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;Landroidx/activity/result/a;Lc/a;)V
 
     .line 7
-    invoke-virtual {v1, v0}, Landroidx/activity/result/ActivityResultRegistry$d;->a(Landroidx/lifecycle/LifecycleEventObserver;)V
+    invoke-virtual {p2, v0}, Landroidx/activity/result/ActivityResultRegistry$d;->a(Landroidx/lifecycle/LifecycleEventObserver;)V
 
     .line 8
     iget-object p4, p0, Landroidx/activity/result/ActivityResultRegistry;->d:Ljava/util/Map;
 
-    invoke-interface {p4, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 9
-    new-instance p4, Landroidx/activity/result/ActivityResultRegistry$a;
+    new-instance p2, Landroidx/activity/result/ActivityResultRegistry$a;
 
-    invoke-direct {p4, p0, p1, p2, p3}, Landroidx/activity/result/ActivityResultRegistry$a;-><init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;ILb/a;)V
+    invoke-direct {p2, p0, p1, p3}, Landroidx/activity/result/ActivityResultRegistry$a;-><init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;Lc/a;)V
 
-    return-object p4
+    return-object p2
 
     .line 10
     :cond_1
@@ -824,13 +839,13 @@
     throw p1
 .end method
 
-.method public final j(Ljava/lang/String;Lb/a;Landroidx/activity/result/a;)Landroidx/activity/result/e;
-    .locals 3
+.method public final j(Ljava/lang/String;Lc/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
+    .locals 2
     .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lb/a;
+    .param p2    # Lc/a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -849,97 +864,95 @@
             "Ljava/lang/Object;",
             ">(",
             "Ljava/lang/String;",
-            "Lb/a<",
+            "Lc/a<",
             "TI;TO;>;",
             "Landroidx/activity/result/a<",
             "TO;>;)",
-            "Landroidx/activity/result/e<",
+            "Landroidx/activity/result/g<",
             "TI;>;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Landroidx/activity/result/ActivityResultRegistry;->k(Ljava/lang/String;)I
+    invoke-virtual {p0, p1}, Landroidx/activity/result/ActivityResultRegistry;->k(Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->f:Ljava/util/Map;
+
+    new-instance v1, Landroidx/activity/result/ActivityResultRegistry$c;
+
+    invoke-direct {v1, p3, p2}, Landroidx/activity/result/ActivityResultRegistry$c;-><init>(Landroidx/activity/result/a;Lc/a;)V
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 2
-    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->f:Ljava/util/Map;
-
-    new-instance v2, Landroidx/activity/result/ActivityResultRegistry$c;
-
-    invoke-direct {v2, p3, p2}, Landroidx/activity/result/ActivityResultRegistry$c;-><init>(Landroidx/activity/result/a;Lb/a;)V
-
-    invoke-interface {v1, p1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 3
-    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
-
-    invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     .line 4
-    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
 
-    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
     .line 5
-    iget-object v2, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
+    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->g:Ljava/util/Map;
 
-    invoke-interface {v2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 6
-    invoke-interface {p3, v1}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
+    invoke-interface {p3, v0}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
 
     .line 7
     :cond_0
-    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->h:Landroid/os/Bundle;
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry;->h:Landroid/os/Bundle;
 
-    invoke-virtual {v1, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Landroidx/activity/result/ActivityResult;
+    check-cast v0, Landroidx/activity/result/ActivityResult;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     .line 8
-    iget-object v2, p0, Landroidx/activity/result/ActivityResultRegistry;->h:Landroid/os/Bundle;
+    iget-object v1, p0, Landroidx/activity/result/ActivityResultRegistry;->h:Landroid/os/Bundle;
 
-    invoke-virtual {v2, p1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
     .line 9
-    invoke-virtual {v1}, Landroidx/activity/result/ActivityResult;->c()I
+    invoke-virtual {v0}, Landroidx/activity/result/ActivityResult;->c()I
 
-    move-result v2
+    move-result v1
 
     .line 10
-    invoke-virtual {v1}, Landroidx/activity/result/ActivityResult;->b()Landroid/content/Intent;
+    invoke-virtual {v0}, Landroidx/activity/result/ActivityResult;->a()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v0
 
     .line 11
-    invoke-virtual {p2, v2, v1}, Lb/a;->c(ILandroid/content/Intent;)Ljava/lang/Object;
+    invoke-virtual {p2, v1, v0}, Lc/a;->c(ILandroid/content/Intent;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-interface {p3, v1}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
+    invoke-interface {p3, v0}, Landroidx/activity/result/a;->a(Ljava/lang/Object;)V
 
     .line 12
     :cond_1
     new-instance p3, Landroidx/activity/result/ActivityResultRegistry$b;
 
-    invoke-direct {p3, p0, p1, v0, p2}, Landroidx/activity/result/ActivityResultRegistry$b;-><init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;ILb/a;)V
+    invoke-direct {p3, p0, p1, p2}, Landroidx/activity/result/ActivityResultRegistry$b;-><init>(Landroidx/activity/result/ActivityResultRegistry;Ljava/lang/String;Lc/a;)V
 
     return-object p3
 .end method
 
-.method public final k(Ljava/lang/String;)I
+.method public final k(Ljava/lang/String;)V
     .locals 1
 
     .line 1
@@ -953,23 +966,18 @@
 
     if-eqz v0, :cond_0
 
+    return-void
+
     .line 2
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    return p1
-
-    .line 3
     :cond_0
     invoke-virtual {p0}, Landroidx/activity/result/ActivityResultRegistry;->e()I
 
     move-result v0
 
-    .line 4
+    .line 3
     invoke-virtual {p0, v0, p1}, Landroidx/activity/result/ActivityResultRegistry;->a(ILjava/lang/String;)V
 
-    return v0
+    return-void
 .end method
 
 .method public final l(Ljava/lang/String;)V
@@ -1028,7 +1036,7 @@
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-static {v2, p1, v1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, p1, v1}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1064,7 +1072,7 @@
     if-eqz v0, :cond_2
 
     .line 11
-    invoke-static {v2, p1, v1}, Landroidx/activity/result/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, p1, v1}, Landroidx/activity/result/i;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

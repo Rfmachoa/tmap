@@ -66,8 +66,8 @@
 .method public abstract invalidateSpecValues()V
 .end method
 
-.method public abstract registerAnimatorsCompleteCallback(Li3/b$a;)V
-    .param p1    # Li3/b$a;
+.method public abstract registerAnimatorsCompleteCallback(Lq4/b$a;)V
+    .param p1    # Lq4/b$a;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

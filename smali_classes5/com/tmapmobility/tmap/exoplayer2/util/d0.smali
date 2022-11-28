@@ -1,877 +1,547 @@
-.class public final Lcom/tmapmobility/tmap/exoplayer2/util/d0;
+.class public abstract Lcom/tmapmobility/tmap/exoplayer2/util/d0;
 .super Ljava/lang/Object;
-.source "SntpClient.java"
+.source "RunnableFutureTask.java"
+
+# interfaces
+.implements Ljava/util/concurrent/RunnableFuture;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        Lcom/tmapmobility/tmap/exoplayer2/util/d0$c;,
-        Lcom/tmapmobility/tmap/exoplayer2/util/d0$d;,
-        Lcom/tmapmobility/tmap/exoplayer2/util/d0$b;
+        "<R:",
+        "Ljava/lang/Object;",
+        "E:",
+        "Ljava/lang/Exception;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/RunnableFuture<",
+        "TR;>;"
     }
 .end annotation
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "time.android.com"
+# instance fields
+.field public final a:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-.field public static final b:I = 0x2710
+.field public final b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-.field public static final c:I = 0x18
+.field public final c:Ljava/lang/Object;
 
-.field public static final d:I = 0x20
-
-.field public static final e:I = 0x28
-
-.field public static final f:I = 0x30
-
-.field public static final g:I = 0x7b
-
-.field public static final h:I = 0x3
-
-.field public static final i:I = 0x4
-
-.field public static final j:I = 0x5
-
-.field public static final k:I = 0x3
-
-.field public static final l:I = 0x3
-
-.field public static final m:I = 0x0
-
-.field public static final n:I = 0xf
-
-.field public static final o:J = 0x83aa7e80L
-
-.field public static final p:Ljava/lang/Object;
-
-.field public static final q:Ljava/lang/Object;
-
-.field public static r:Z = false
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "valueLock"
+.field public d:Ljava/lang/Exception;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public static s:J = 0x0L
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "valueLock"
+.field public e:Ljava/lang/Object;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TR;"
+        }
     .end annotation
 .end field
 
-.field public static t:Ljava/lang/String; = "time.android.com"
-    .annotation build Landroidx/annotation/GuardedBy;
-        value = "valueLock"
+.field public f:Ljava/lang/Thread;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
+
+.field public g:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
-
-    .line 1
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->p:Ljava/lang/Object;
-
-    .line 2
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->q:Ljava/lang/Object;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public static synthetic a()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->p:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public static synthetic b()Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->q:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public static synthetic c()Z
-    .locals 1
-
-    .line 1
-    sget-boolean v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->r:Z
-
-    return v0
-.end method
-
-.method public static synthetic d(Z)Z
-    .locals 0
-
-    .line 1
-    sput-boolean p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->r:Z
-
-    return p0
-.end method
-
-.method public static synthetic e()J
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->l()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static synthetic f(J)J
-    .locals 0
-
-    .line 1
-    sput-wide p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->s:J
-
-    return-wide p0
-.end method
-
-.method public static g(BBIJ)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_4
-
-    const/4 p0, 0x4
-
-    if-eq p1, p0, :cond_1
-
-    const/4 p0, 0x5
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    .line 1
-    :cond_0
-    new-instance p0, Ljava/io/IOException;
-
-    const-string p2, "SNTP: Untrusted mode: "
-
-    invoke-static {p2, p1}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    :goto_0
-    if-eqz p2, :cond_3
-
-    const/16 p0, 0xf
-
-    if-gt p2, p0, :cond_3
-
-    const-wide/16 p0, 0x0
-
-    cmp-long p0, p3, p0
-
-    if-eqz p0, :cond_2
-
-    return-void
-
     .line 2
-    :cond_2
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    const-string p1, "SNTP: Zero transmitTime"
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;-><init>()V
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->a:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
     .line 3
-    :cond_3
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    const-string p1, "SNTP: Untrusted stratum: "
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;-><init>()V
 
-    invoke-static {p1, p2}, Landroid/support/v4/media/b;->a(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
     .line 4
-    :cond_4
-    new-instance p0, Ljava/io/IOException;
+    new-instance v0, Ljava/lang/Object;
 
-    const-string p1, "SNTP: Unsynchronized server"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c:Ljava/lang/Object;
 
-    throw p0
+    return-void
 .end method
 
-.method public static h()J
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->c()V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->a:Lcom/tmapmobility/tmap/exoplayer2/util/h;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->c()V
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final cancel(Z)Z
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->q:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c:Ljava/lang/Object;
 
     monitor-enter v0
 
     .line 2
     :try_start_0
-    sget-boolean v1, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->r:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->g:Z
+
+    if-nez v1, :cond_3
+
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
+
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->e()Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    sget-wide v1, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->s:J
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    .line 3
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->g:Z
+
+    .line 4
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c()V
+
+    .line 5
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->f:Ljava/lang/Thread;
+
+    if-eqz v2, :cond_1
+
+    if-eqz p1, :cond_2
+
+    .line 6
+    invoke-virtual {v2}, Ljava/lang/Thread;->interrupt()V
 
     goto :goto_0
 
-    :cond_0
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    :goto_0
-    monitor-exit v0
-
-    return-wide v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public static i()Ljava/lang/String;
-    .locals 2
-
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->q:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->t:Ljava/lang/String;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    .line 3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public static j(Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;Lcom/tmapmobility/tmap/exoplayer2/util/d0$b;)V
-    .locals 2
-    .param p0    # Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/util/d0$b;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .line 1
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->k()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    .line 2
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d0$b;->b()V
-
-    :cond_0
-    return-void
-
+    .line 7
     :cond_1
-    if-nez p0, :cond_2
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->a:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    .line 3
-    new-instance p0, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->f()Z
 
-    const-string v0, "SntpClient"
+    .line 8
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    invoke-direct {p0, v0}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->f()Z
 
-    .line 4
+    .line 9
     :cond_2
-    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0$d;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/d0$d;-><init>(Lcom/tmapmobility/tmap/exoplayer2/util/d0$a;)V
-
-    new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/util/d0$c;
-
-    invoke-direct {v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d0$c;-><init>(Lcom/tmapmobility/tmap/exoplayer2/util/d0$b;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, v0, v1, p1}, Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader;->l(Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$e;Lcom/tmapmobility/tmap/exoplayer2/upstream/Loader$b;I)J
-
-    return-void
-.end method
-
-.method public static k()Z
-    .locals 2
-
-    .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->q:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    .line 2
-    :try_start_0
-    sget-boolean v1, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->r:Z
-
+    :goto_0
     monitor-exit v0
 
     return v1
 
-    :catchall_0
-    move-exception v1
+    :cond_3
+    :goto_1
+    const/4 p1, 0x0
 
-    .line 3
+    .line 10
+    monitor-exit v0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 11
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw v1
+    throw p1
 .end method
 
-.method public static l()J
-    .locals 16
+.method public abstract d()Ljava/lang/Object;
+    .annotation build Lcom/tmapmobility/tmap/exoplayer2/util/UnknownNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TR;^TE;"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;
+            Ljava/lang/Exception;
+        }
+    .end annotation
+.end method
+
+.method public final e()Ljava/lang/Object;
+    .locals 2
+    .annotation build Lcom/tmapmobility/tmap/exoplayer2/util/UnknownNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TR;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;
         }
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->i()Ljava/lang/String;
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->g:Z
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
-
-    move-result-object v0
+    if-nez v0, :cond_1
 
     .line 2
-    new-instance v1, Ljava/net/DatagramSocket;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->d:Ljava/lang/Exception;
 
-    invoke-direct {v1}, Ljava/net/DatagramSocket;-><init>()V
-
-    const/16 v2, 0x2710
+    if-nez v0, :cond_0
 
     .line 3
-    :try_start_0
-    invoke-virtual {v1, v2}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->e:Ljava/lang/Object;
 
-    const/16 v2, 0x30
-
-    new-array v3, v2, [B
+    return-object v0
 
     .line 4
-    new-instance v4, Ljava/net/DatagramPacket;
+    :cond_0
+    new-instance v0, Ljava/util/concurrent/ExecutionException;
 
-    const/16 v5, 0x7b
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->d:Ljava/lang/Exception;
 
-    invoke-direct {v4, v3, v2, v0, v5}, Ljava/net/DatagramPacket;-><init>([BILjava/net/InetAddress;I)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
 
-    const/16 v0, 0x1b
-
-    const/4 v5, 0x0
-
-    aput-byte v0, v3, v5
+    throw v0
 
     .line 5
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :cond_1
+    new-instance v0, Ljava/util/concurrent/CancellationException;
 
-    move-result-wide v6
+    invoke-direct {v0}, Ljava/util/concurrent/CancellationException;-><init>()V
 
-    .line 6
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v8
-
-    const/16 v0, 0x28
-
-    .line 7
-    invoke-static {v3, v0, v6, v7}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->p([BIJ)V
-
-    .line 8
-    invoke-virtual {v1, v4}, Ljava/net/DatagramSocket;->send(Ljava/net/DatagramPacket;)V
-
-    .line 9
-    new-instance v4, Ljava/net/DatagramPacket;
-
-    invoke-direct {v4, v3, v2}, Ljava/net/DatagramPacket;-><init>([BI)V
-
-    .line 10
-    invoke-virtual {v1, v4}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
-
-    .line 11
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v10
-
-    sub-long v8, v10, v8
-
-    add-long/2addr v8, v6
-
-    .line 12
-    aget-byte v2, v3, v5
-
-    shr-int/lit8 v2, v2, 0x6
-
-    and-int/lit8 v2, v2, 0x3
-
-    int-to-byte v2, v2
-
-    .line 13
-    aget-byte v4, v3, v5
-
-    and-int/lit8 v4, v4, 0x7
-
-    int-to-byte v4, v4
-
-    const/4 v5, 0x1
-
-    .line 14
-    aget-byte v5, v3, v5
-
-    and-int/lit16 v5, v5, 0xff
-
-    const/16 v6, 0x18
-
-    .line 15
-    invoke-static {v3, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->n([BI)J
-
-    move-result-wide v6
-
-    const/16 v12, 0x20
-
-    .line 16
-    invoke-static {v3, v12}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->n([BI)J
-
-    move-result-wide v12
-
-    .line 17
-    invoke-static {v3, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->n([BI)J
-
-    move-result-wide v14
-
-    .line 18
-    invoke-static {v2, v4, v5, v14, v15}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->g(BBIJ)V
-
-    sub-long/2addr v12, v6
-
-    sub-long/2addr v14, v8
-
-    add-long/2addr v14, v12
-
-    const-wide/16 v2, 0x2
-
-    .line 19
-    div-long/2addr v14, v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    add-long/2addr v8, v14
-
-    sub-long/2addr v8, v10
-
-    .line 20
-    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
-
-    return-wide v8
-
-    :catchall_0
-    move-exception v0
-
-    .line 21
-    :try_start_1
-    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_0
     throw v0
 .end method
 
-.method public static m([BI)J
-    .locals 5
+.method public final get()Ljava/lang/Object;
+    .locals 1
+    .annotation build Lcom/tmapmobility/tmap/exoplayer2/util/UnknownNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TR;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
 
     .line 1
-    aget-byte v0, p0, p1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    add-int/lit8 v1, p1, 0x1
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->a()V
 
     .line 2
-    aget-byte v1, p0, v1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->e()Ljava/lang/Object;
 
-    add-int/lit8 v2, p1, 0x2
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+    .annotation build Lcom/tmapmobility/tmap/exoplayer2/util/UnknownNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")TR;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;,
+            Ljava/lang/InterruptedException;,
+            Ljava/util/concurrent/TimeoutException;
+        }
+    .end annotation
 
     .line 3
-    aget-byte v2, p0, v2
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    add-int/lit8 p1, p1, 0x3
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide p1
 
     .line 4
-    aget-byte p0, p0, p1
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    and-int/lit16 p1, v0, 0x80
+    invoke-virtual {p3, p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->b(J)Z
 
-    const/16 v3, 0x80
+    move-result p1
 
-    if-ne p1, v3, :cond_0
+    if-eqz p1, :cond_0
 
-    and-int/lit8 p1, v0, 0x7f
+    .line 5
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->e()Ljava/lang/Object;
 
-    add-int/lit16 v0, p1, 0x80
+    move-result-object p1
 
+    return-object p1
+
+    .line 6
     :cond_0
-    and-int/lit16 p1, v1, 0x80
+    new-instance p1, Ljava/util/concurrent/TimeoutException;
 
-    if-ne p1, v3, :cond_1
+    invoke-direct {p1}, Ljava/util/concurrent/TimeoutException;-><init>()V
 
-    and-int/lit8 p1, v1, 0x7f
-
-    add-int/lit16 v1, p1, 0x80
-
-    :cond_1
-    and-int/lit16 p1, v2, 0x80
-
-    if-ne p1, v3, :cond_2
-
-    and-int/lit8 p1, v2, 0x7f
-
-    add-int/lit16 v2, p1, 0x80
-
-    :cond_2
-    and-int/lit16 p1, p0, 0x80
-
-    if-ne p1, v3, :cond_3
-
-    and-int/lit8 p0, p0, 0x7f
-
-    add-int/2addr p0, v3
-
-    :cond_3
-    int-to-long v3, v0
-
-    const/16 p1, 0x18
-
-    shl-long/2addr v3, p1
-
-    int-to-long v0, v1
-
-    const/16 p1, 0x10
-
-    shl-long/2addr v0, p1
-
-    add-long/2addr v3, v0
-
-    int-to-long v0, v2
-
-    const/16 p1, 0x8
-
-    shl-long/2addr v0, p1
-
-    add-long/2addr v3, v0
-
-    int-to-long p0, p0
-
-    add-long/2addr v3, p0
-
-    return-wide v3
+    throw p1
 .end method
 
-.method public static n([BI)J
-    .locals 5
+.method public final isCancelled()Z
+    .locals 1
 
     .line 1
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->m([BI)J
+    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->g:Z
 
-    move-result-wide v0
-
-    add-int/lit8 p1, p1, 0x4
-
-    .line 2
-    invoke-static {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->m([BI)J
-
-    move-result-wide p0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    cmp-long v4, p0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    const-wide v2, 0x83aa7e80L
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x3e8
-
-    mul-long/2addr v0, v2
-
-    mul-long/2addr p0, v2
-
-    const-wide v2, 0x100000000L
-
-    .line 3
-    div-long/2addr p0, v2
-
-    add-long/2addr p0, v0
-
-    return-wide p0
+    return v0
 .end method
 
-.method public static o(Ljava/lang/String;)V
-    .locals 2
+.method public final isDone()Z
+    .locals 1
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->q:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->e()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c:Ljava/lang/Object;
 
     monitor-enter v0
 
     .line 2
     :try_start_0
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->t:Ljava/lang/String;
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->g:Z
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
     .line 3
-    sput-object p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->t:Ljava/lang/String;
-
-    const/4 p0, 0x0
-
-    .line 4
-    sput-boolean p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->r:Z
-
-    .line 5
-    :cond_0
     monitor-exit v0
 
     return-void
 
-    :catchall_0
-    move-exception p0
+    .line 4
+    :cond_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->f:Ljava/lang/Thread;
+
+    .line 5
     monitor-exit v0
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public static p([BIJ)V
-    .locals 11
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p2, v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    add-int/lit8 p2, p1, 0x8
-
-    .line 1
-    invoke-static {p0, p1, p2, v1}, Ljava/util/Arrays;->fill([BIIB)V
-
-    return-void
-
-    :cond_0
-    const-wide/16 v2, 0x3e8
-
-    .line 2
-    div-long v4, p2, v2
-
-    mul-long v6, v4, v2
-
-    sub-long/2addr p2, v6
-
-    const-wide v6, 0x83aa7e80L
-
-    add-long/2addr v4, v6
-
-    add-int/lit8 v0, p1, 0x1
-
-    const/16 v6, 0x18
-
-    shr-long v7, v4, v6
-
-    long-to-int v7, v7
-
-    int-to-byte v7, v7
-
-    .line 3
-    aput-byte v7, p0, p1
-
-    add-int/lit8 p1, v0, 0x1
-
-    const/16 v7, 0x10
-
-    shr-long v8, v4, v7
-
-    long-to-int v8, v8
-
-    int-to-byte v8, v8
-
-    .line 4
-    aput-byte v8, p0, v0
-
-    add-int/lit8 v0, p1, 0x1
-
-    const/16 v8, 0x8
-
-    shr-long v9, v4, v8
-
-    long-to-int v9, v9
-
-    int-to-byte v9, v9
-
-    .line 5
-    aput-byte v9, p0, p1
-
-    add-int/lit8 p1, v0, 0x1
-
-    shr-long/2addr v4, v1
-
-    long-to-int v1, v4
-
-    int-to-byte v1, v1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     .line 6
-    aput-byte v1, p0, v0
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->a:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    const-wide v0, 0x100000000L
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->f()Z
 
-    mul-long/2addr p2, v0
+    const/4 v0, 0x0
 
     .line 7
-    div-long/2addr p2, v2
+    :try_start_1
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->d()Ljava/lang/Object;
 
-    add-int/lit8 v0, p1, 0x1
+    move-result-object v1
 
-    shr-long v1, p2, v6
-
-    long-to-int v1, v1
-
-    int-to-byte v1, v1
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->e:Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     .line 8
-    aput-byte v1, p0, p1
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c:Ljava/lang/Object;
 
-    add-int/lit8 p1, v0, 0x1
-
-    shr-long v1, p2, v7
-
-    long-to-int v1, v1
-
-    int-to-byte v1, v1
+    monitor-enter v1
 
     .line 9
-    aput-byte v1, p0, v0
+    :try_start_2
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
 
-    add-int/lit8 v0, p1, 0x1
-
-    shr-long/2addr p2, v8
-
-    long-to-int p2, p2
-
-    int-to-byte p2, p2
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->f()Z
 
     .line 10
-    aput-byte p2, p0, p1
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->f:Ljava/lang/Thread;
 
     .line 11
-    invoke-static {}, Ljava/lang/Math;->random()D
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
-    move-result-wide p1
+    .line 12
+    monitor-exit v1
 
-    const-wide v1, 0x406fe00000000000L    # 255.0
+    goto :goto_0
 
-    mul-double/2addr p1, v1
+    :catchall_0
+    move-exception v0
 
-    double-to-int p1, p1
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    int-to-byte p1, p1
+    throw v0
 
-    aput-byte p1, p0, v0
+    :catchall_1
+    move-exception v1
 
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    .line 13
+    :try_start_3
+    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->d:Ljava/lang/Exception;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 14
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 15
+    :try_start_4
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
+
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->f()Z
+
+    .line 16
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->f:Ljava/lang/Thread;
+
+    .line 17
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    .line 18
+    monitor-exit v1
+
+    :goto_0
     return-void
+
+    :catchall_2
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    throw v0
+
+    .line 19
+    :goto_1
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->c:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    .line 20
+    :try_start_5
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->b:Lcom/tmapmobility/tmap/exoplayer2/util/h;
+
+    invoke-virtual {v3}, Lcom/tmapmobility/tmap/exoplayer2/util/h;->f()Z
+
+    .line 21
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/util/d0;->f:Ljava/lang/Thread;
+
+    .line 22
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    .line 23
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    .line 24
+    throw v1
+
+    :catchall_3
+    move-exception v0
+
+    .line 25
+    :try_start_6
+    monitor-exit v2
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    throw v0
+
+    :catchall_4
+    move-exception v1
+
+    .line 26
+    :try_start_7
+    monitor-exit v0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_4
+
+    throw v1
 .end method

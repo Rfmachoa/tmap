@@ -155,7 +155,7 @@
     const/4 v0, 0x1
 
     .line 2
-    invoke-virtual {p0, v0}, Landroid/widget/AutoCompleteTextView;->setInputMethodMode(I)V
+    invoke-static {p0, v0}, Landroidx/appcompat/widget/SearchView$k;->b(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;I)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/appcompat/widget/SearchView$SearchAutoComplete;->enoughToFilter()Z
@@ -171,9 +171,9 @@
 
     .line 5
     :cond_0
-    sget-object v0, Landroidx/appcompat/widget/SearchView;->G1:Landroidx/appcompat/widget/SearchView$n;
+    sget-object v0, Landroidx/appcompat/widget/SearchView;->I1:Landroidx/appcompat/widget/SearchView$o;
 
-    invoke-virtual {v0, p0}, Landroidx/appcompat/widget/SearchView$n;->c(Landroid/widget/AutoCompleteTextView;)V
+    invoke-virtual {v0, p0}, Landroidx/appcompat/widget/SearchView$o;->c(Landroid/widget/AutoCompleteTextView;)V
 
     :cond_1
     :goto_0

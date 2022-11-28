@@ -41,6 +41,14 @@
 
 .method public setNewCouponCnt(Ljava/lang/Integer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCouponCnt"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResNewCouponVo;->newCouponCnt:Ljava/lang/Integer;
@@ -50,6 +58,14 @@
 
 .method public setNewCouponYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newCouponYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResNewCouponVo;->newCouponYn:Ljava/lang/String;

@@ -39,7 +39,7 @@
     const-string v0, "phone"
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;->h(Ljava/lang/String;)Lma/b0;
+    invoke-virtual {p0, v0}, Lcom/skt/aicloud/speaker/service/presentation/pCommandInfo;->h(Ljava/lang/String;)Ljc/b0;
 
     return-void
 .end method
@@ -87,7 +87,7 @@
 
     :cond_0
     :try_start_0
-    const-string/jumbo v0, "tellNumberLabel"
+    const-string v0, "tellNumberLabel"
 
     .line 7
     invoke-static {p1, v0}, Lcom/skt/aicloud/mobile/service/util/n;->j(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;

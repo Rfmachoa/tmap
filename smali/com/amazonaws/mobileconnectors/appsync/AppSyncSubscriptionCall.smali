@@ -3,7 +3,7 @@
 .source "AppSyncSubscriptionCall.java"
 
 # interfaces
-.implements Lq4/a;
+.implements Ln6/a;
 
 
 # annotations
@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lq4/a;"
+        "Ln6/a;"
     }
 .end annotation
 

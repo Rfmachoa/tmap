@@ -34,6 +34,10 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
+    .param p1    # Landroid/os/Message;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     iget p1, p1, Landroid/os/Message;->what:I
@@ -48,7 +52,7 @@
     :cond_0
     iget-object p1, p0, Landroidx/preference/l$a;->a:Landroidx/preference/l;
 
-    invoke-virtual {p1}, Landroidx/preference/l;->c()V
+    invoke-virtual {p1}, Landroidx/preference/l;->b()V
 
     :goto_0
     return-void

@@ -38,6 +38,18 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "serverAlias",
+            "appCode",
+            "accessKey"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Lcom/skt/moment/task/z;-><init>()V
@@ -226,7 +238,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lib/d;->l(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v5, v6}, Lfd/d;->l(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v5
 
@@ -263,26 +275,26 @@
     .line 8
     iget-object v2, p0, Lcom/skt/moment/task/k;->q:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->p(Ljava/lang/String;)V
 
     .line 9
     iget-object v1, p0, Lcom/skt/moment/task/k;->C:Lcom/skt/moment/task/z$b;
 
     iget-object v2, p0, Lcom/skt/moment/task/k;->r:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->k(Ljava/lang/String;)V
 
     .line 10
     iget-object v1, p0, Lcom/skt/moment/task/k;->C:Lcom/skt/moment/task/z$b;
 
     iget-object v2, p0, Lcom/skt/moment/task/k;->s:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->i(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/skt/moment/task/z$b;->j(Ljava/lang/String;)V
 
     .line 11
     iget-object v1, p0, Lcom/skt/moment/task/k;->C:Lcom/skt/moment/task/z$b;
 
-    invoke-virtual {v1, v0}, Lcom/skt/moment/task/z$b;->m(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/skt/moment/task/z$b;->n(Ljava/lang/Object;)V
 
     :cond_3
     const/4 v0, 0x2
@@ -295,6 +307,14 @@
 
 .method public final Q([Ljava/lang/String;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "imageUrls"
+        }
+    .end annotation
 
     .line 1
     array-length v0, p1
@@ -316,7 +336,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v5
 
@@ -324,7 +344,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v5, v6, v4}, Lfb/b;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v4}, Lcd/b;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -363,7 +383,7 @@
     if-nez v0, :cond_3
 
     .line 6
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
@@ -371,12 +391,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v4}, Lfb/b;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2, v4}, Lcd/b;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 7
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v2
 
@@ -384,12 +404,12 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v4}, Lfb/b;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Lcd/b;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 8
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v3
 
@@ -401,7 +421,7 @@
 
     invoke-direct {v5, p0, v6, v2, p1}, Lcom/skt/moment/task/k$b;-><init>(Lcom/skt/moment/task/k;Ljava/io/File;Ljava/lang/String;[Ljava/lang/String;)V
 
-    invoke-virtual {v3, v4, v5}, Lhb/a;->c(Ljava/lang/String;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual {v3, v4, v5}, Led/a;->c(Ljava/lang/String;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
 
     move-result-object p1
 
@@ -466,7 +486,7 @@
     const/16 v7, 0xfa0
 
     .line 8
-    invoke-static/range {v2 .. v7}, Lib/d;->x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static/range {v2 .. v7}, Lfd/d;->x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 9
     :cond_0
@@ -477,6 +497,14 @@
 
 .method public final S(Ljava/lang/String;)Lcom/skt/moment/net/vo/ServiceResVo;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonString"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -608,7 +636,7 @@
     check-cast v0, Lcom/skt/moment/net/vo/ResInitBodyVo;
 
     .line 2
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v1
 
@@ -620,10 +648,10 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lhb/a;->l(I)V
+    invoke-virtual {v1, v2}, Led/a;->l(I)V
 
     .line 3
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v1
 
@@ -635,10 +663,10 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lfb/b;->C(I)V
+    invoke-virtual {v1, v2}, Lcd/b;->C(I)V
 
     .line 4
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v1
 
@@ -650,10 +678,10 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lfb/b;->E(I)V
+    invoke-virtual {v1, v2}, Lcd/b;->E(I)V
 
     .line 5
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v1
 
@@ -665,10 +693,10 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lfb/b;->D(I)V
+    invoke-virtual {v1, v2}, Lcd/b;->D(I)V
 
     .line 6
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v1
 
@@ -676,7 +704,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lfb/b;->B(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcd/b;->B(Ljava/util/List;)V
 
     .line 7
     new-instance v1, Lcom/skt/moment/net/vo/NewCoupon;
@@ -726,7 +754,7 @@
     iput-object v0, p0, Lcom/skt/moment/task/k;->w:Lcom/skt/moment/net/vo/ServiceReqVo;
 
     .line 5
-    invoke-static {}, Lhb/a;->f()Lhb/a;
+    invoke-static {}, Led/a;->f()Led/a;
 
     move-result-object v1
 
@@ -736,7 +764,7 @@
 
     invoke-direct {v4, p0}, Lcom/skt/moment/task/k$a;-><init>(Lcom/skt/moment/task/k;)V
 
-    invoke-virtual {v1, v3, v2, v0, v4}, Lhb/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
+    invoke-virtual {v1, v3, v2, v0, v4}, Led/a;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Lcom/loopj/android/http/y;)Lcom/loopj/android/http/x;
 
     move-result-object v0
 
@@ -749,6 +777,14 @@
 
 .method public final V([Ljava/lang/String;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imageUrls"
+        }
+    .end annotation
 
     .line 1
     iget v0, p0, Lcom/skt/moment/task/k;->z:I
@@ -832,7 +868,7 @@
     const/16 v6, 0xfa0
 
     .line 12
-    invoke-static/range {v1 .. v6}, Lib/d;->x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static/range {v1 .. v6}, Lfd/d;->x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 13
     :cond_2
@@ -856,7 +892,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
@@ -864,14 +900,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/b;->x(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcd/b;->x(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lib/d;->e(Ljava/lang/String;)Z
+    invoke-static {v0}, Lfd/d;->e(Ljava/lang/String;)Z
 
     .line 2
-    invoke-static {}, Lfb/b;->n()Lfb/b;
+    invoke-static {}, Lcd/b;->n()Lcd/b;
 
     move-result-object v0
 
@@ -879,11 +915,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lfb/b;->y(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcd/b;->y(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lib/d;->e(Ljava/lang/String;)Z
+    invoke-static {v0}, Lfd/d;->e(Ljava/lang/String;)Z
 
     .line 3
     invoke-virtual {p0}, Lcom/skt/moment/task/k;->U()Z
@@ -904,6 +940,14 @@
 
 .method public c(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/skt/moment/task/k;->y:Lcom/loopj/android/http/x;

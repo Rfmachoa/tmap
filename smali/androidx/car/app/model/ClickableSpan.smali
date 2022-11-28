@@ -10,7 +10,7 @@
 
 
 # instance fields
-.field private final mOnClickDelegate:Landroidx/car/app/model/i;
+.field private final mOnClickDelegate:Landroidx/car/app/model/l;
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
@@ -29,30 +29,30 @@
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iput-object v0, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/car/app/model/k;)V
+.method public constructor <init>(Landroidx/car/app/model/n;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Landroidx/car/app/model/CarSpan;-><init>()V
 
     .line 2
-    invoke-static {p1}, Landroidx/car/app/model/OnClickDelegateImpl;->c(Landroidx/car/app/model/k;)Landroidx/car/app/model/i;
+    invoke-static {p1}, Landroidx/car/app/model/OnClickDelegateImpl;->c(Landroidx/car/app/model/n;)Landroidx/car/app/model/l;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iput-object p1, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     return-void
 .end method
 
-.method public static a(Landroidx/car/app/model/k;)Landroidx/car/app/model/ClickableSpan;
+.method public static a(Landroidx/car/app/model/n;)Landroidx/car/app/model/ClickableSpan;
     .locals 1
-    .param p0    # Landroidx/car/app/model/k;
+    .param p0    # Landroidx/car/app/model/n;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -70,26 +70,26 @@
 
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p0, Landroidx/car/app/model/k;
+    check-cast p0, Landroidx/car/app/model/n;
 
-    invoke-direct {v0, p0}, Landroidx/car/app/model/ClickableSpan;-><init>(Landroidx/car/app/model/k;)V
+    invoke-direct {v0, p0}, Landroidx/car/app/model/ClickableSpan;-><init>(Landroidx/car/app/model/n;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public b()Landroidx/car/app/model/i;
+.method public b()Landroidx/car/app/model/l;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object v0, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Landroidx/car/app/model/i;
+    check-cast v0, Landroidx/car/app/model/l;
 
     return-object v0
 .end method
@@ -122,7 +122,7 @@
     check-cast p1, Landroidx/car/app/model/ClickableSpan;
 
     .line 3
-    iget-object v1, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object v1, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     if-nez v1, :cond_2
 
@@ -138,7 +138,7 @@
 
     move-result-object v1
 
-    iget-object p1, p1, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object p1, p1, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     if-nez p1, :cond_3
 
@@ -167,7 +167,7 @@
     new-array v1, v0, [Ljava/lang/Object;
 
     .line 1
-    iget-object v2, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/i;
+    iget-object v2, p0, Landroidx/car/app/model/ClickableSpan;->mOnClickDelegate:Landroidx/car/app/model/l;
 
     const/4 v3, 0x0
 

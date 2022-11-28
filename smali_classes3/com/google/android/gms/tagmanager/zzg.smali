@@ -1,9 +1,9 @@
 .class final Lcom/google/android/gms/tagmanager/zzg;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 # interfaces
-.implements Lcom/google/android/gms/tagmanager/zzav;
+.implements Lcom/google/android/gms/tagmanager/zzau;
 
 
 # instance fields
@@ -25,15 +25,6 @@
 # virtual methods
 .method public final zza(Ljava/util/Map;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
 
     const-string v0, "gtm.url"
 
@@ -97,7 +88,7 @@
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzg;->zza:Landroid/content/Context;
 
     .line 8
-    invoke-static {v0, p1}, Lcom/google/android/gms/tagmanager/zzcx;->zzc(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/google/android/gms/tagmanager/zzcw;->zzc(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_2
     :goto_0

@@ -1,9 +1,12 @@
 .class public final Lcom/android/billingclient/api/BillingClient$a;
 .super Ljava/lang/Object;
-.source "com.android.billingclient:billing@@3.0.0"
+.source "com.android.billingclient:billing@@4.0.0"
 
 
 # annotations
+.annotation build Landroidx/annotation/AnyThread;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/android/billingclient/api/BillingClient;
 .end annotation
@@ -15,65 +18,62 @@
 
 
 # instance fields
-.field public a:Z
+.field public volatile a:Ljava/lang/String;
 
-.field public final b:Landroid/content/Context;
+.field public volatile b:Z
 
-.field public c:Lcom/android/billingclient/api/q;
+.field public final c:Landroid/content/Context;
+
+.field public volatile d:Lcom/android/billingclient/api/n;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lcom/android/billingclient/api/BillingClient$a;->b:Landroid/content/Context;
-
-    return-void
-.end method
-
 .method public synthetic constructor <init>(Landroid/content/Context;Lcom/android/billingclient/api/l0;)V
     .locals 0
 
-    .line 3
-    invoke-direct {p0, p1}, Lcom/android/billingclient/api/BillingClient$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/android/billingclient/api/BillingClient$a;->c:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/android/billingclient/api/BillingClient;
+.method public a()Lcom/android/billingclient/api/BillingClient;
     .locals 5
-    .annotation build Landroidx/annotation/UiThread;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/android/billingclient/api/BillingClient$a;->b:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/billingclient/api/BillingClient$a;->c:Landroid/content/Context;
 
     if-eqz v0, :cond_2
 
-    .line 2
-    iget-object v1, p0, Lcom/android/billingclient/api/BillingClient$a;->c:Lcom/android/billingclient/api/q;
+    .line 1
+    iget-object v0, p0, Lcom/android/billingclient/api/BillingClient$a;->d:Lcom/android/billingclient/api/n;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
+
+    .line 2
+    iget-boolean v0, p0, Lcom/android/billingclient/api/BillingClient$a;->b:Z
+
+    if-eqz v0, :cond_0
 
     .line 3
-    iget-boolean v2, p0, Lcom/android/billingclient/api/BillingClient$a;->a:Z
+    new-instance v0, Lcom/android/billingclient/api/d;
 
-    if-eqz v2, :cond_0
+    const/4 v1, 0x0
+
+    iget-boolean v2, p0, Lcom/android/billingclient/api/BillingClient$a;->b:Z
+
+    iget-object v3, p0, Lcom/android/billingclient/api/BillingClient$a;->c:Landroid/content/Context;
+
+    iget-object v4, p0, Lcom/android/billingclient/api/BillingClient$a;->d:Lcom/android/billingclient/api/n;
 
     .line 4
-    new-instance v3, Lcom/android/billingclient/api/g;
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/android/billingclient/api/d;-><init>(Ljava/lang/String;ZLandroid/content/Context;Lcom/android/billingclient/api/n;)V
 
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v2, v0, v1}, Lcom/android/billingclient/api/g;-><init>(Ljava/lang/String;ZLandroid/content/Context;Lcom/android/billingclient/api/q;)V
-
-    return-object v3
+    return-object v0
 
     .line 5
     :cond_0
@@ -81,55 +81,56 @@
 
     const-string v1, "Support for pending purchases must be enabled. Enable this by calling \'enablePendingPurchases()\' on BillingClientBuilder."
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
     .line 6
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Please provide a valid listener for purchases updates."
-
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     .line 7
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Please provide a valid listener for purchases updates."
+
+    .line 8
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 9
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Please provide a valid Context."
 
+    .line 10
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public final b()Lcom/android/billingclient/api/BillingClient$a;
+.method public b()Lcom/android/billingclient/api/BillingClient$a;
     .locals 1
-    .annotation build Landroidx/annotation/UiThread;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     const/4 v0, 0x1
 
-    .line 1
-    iput-boolean v0, p0, Lcom/android/billingclient/api/BillingClient$a;->a:Z
+    iput-boolean v0, p0, Lcom/android/billingclient/api/BillingClient$a;->b:Z
 
     return-object p0
 .end method
 
-.method public final c(Lcom/android/billingclient/api/q;)Lcom/android/billingclient/api/BillingClient$a;
+.method public c(Lcom/android/billingclient/api/n;)Lcom/android/billingclient/api/BillingClient$a;
     .locals 0
-    .param p1    # Lcom/android/billingclient/api/q;
+    .param p1    # Lcom/android/billingclient/api/n;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/UiThread;
+    .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    .line 1
-    iput-object p1, p0, Lcom/android/billingclient/api/BillingClient$a;->c:Lcom/android/billingclient/api/q;
+    iput-object p1, p0, Lcom/android/billingclient/api/BillingClient$a;->d:Lcom/android/billingclient/api/n;
 
     return-object p0
 .end method

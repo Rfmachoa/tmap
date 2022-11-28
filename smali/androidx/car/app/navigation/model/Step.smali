@@ -62,28 +62,28 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 7
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 8
+    .line 9
     iput-object v0, p0, Landroidx/car/app/navigation/model/Step;->mManeuver:Landroidx/car/app/navigation/model/Maneuver;
 
-    .line 9
+    .line 10
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Landroidx/car/app/navigation/model/Step;->mLanes:Ljava/util/List;
 
-    .line 10
+    .line 11
     iput-object v0, p0, Landroidx/car/app/navigation/model/Step;->mLanesImage:Landroidx/car/app/model/CarIcon;
 
-    .line 11
+    .line 12
     iput-object v0, p0, Landroidx/car/app/navigation/model/Step;->mCue:Landroidx/car/app/model/CarText;
 
-    .line 12
+    .line 13
     iput-object v0, p0, Landroidx/car/app/navigation/model/Step;->mRoad:Landroidx/car/app/model/CarText;
 
     return-void
@@ -135,12 +135,17 @@
     iput-object p1, p0, Landroidx/car/app/navigation/model/Step;->mLanes:Ljava/util/List;
 
     .line 4
-    iput-object p3, p0, Landroidx/car/app/navigation/model/Step;->mLanesImage:Landroidx/car/app/model/CarIcon;
+    sget-object p1, La1/c;->c:La1/c;
+
+    invoke-virtual {p1, p3}, La1/c;->c(Landroidx/car/app/model/CarIcon;)V
 
     .line 5
-    iput-object p4, p0, Landroidx/car/app/navigation/model/Step;->mCue:Landroidx/car/app/model/CarText;
+    iput-object p3, p0, Landroidx/car/app/navigation/model/Step;->mLanesImage:Landroidx/car/app/model/CarIcon;
 
     .line 6
+    iput-object p4, p0, Landroidx/car/app/navigation/model/Step;->mCue:Landroidx/car/app/model/CarText;
+
+    .line 7
     iput-object p5, p0, Landroidx/car/app/navigation/model/Step;->mRoad:Landroidx/car/app/model/CarText;
 
     return-void

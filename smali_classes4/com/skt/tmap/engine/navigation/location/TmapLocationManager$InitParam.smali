@@ -23,8 +23,6 @@
 
 .field public enableSensors:Z
 
-.field public reliabilityChecker:Lcom/skt/tmap/engine/navigation/location/ReliabilityChecker;
-
 .field public saveGpsLog:Z
 
 .field public saveGpsLogDirPath:Landroid/net/Uri;

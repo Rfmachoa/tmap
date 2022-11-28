@@ -3,52 +3,38 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Landroidx/concurrent/futures/CallbackToFutureAdapter$b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/camera/core/o0;
+.field public final synthetic a:Landroidx/camera/core/s2;
 
-.field public final synthetic b:Ljava/util/concurrent/Executor;
-
-.field public final synthetic c:Landroidx/camera/core/p1;
-
-.field public final synthetic d:Landroidx/camera/core/ImageAnalysis$a;
+.field public final synthetic b:Landroidx/camera/core/s2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/camera/core/o0;Ljava/util/concurrent/Executor;Landroidx/camera/core/p1;Landroidx/camera/core/ImageAnalysis$a;)V
+.method public synthetic constructor <init>(Landroidx/camera/core/s2;Landroidx/camera/core/s2;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/core/m0;->a:Landroidx/camera/core/o0;
+    iput-object p1, p0, Landroidx/camera/core/m0;->a:Landroidx/camera/core/s2;
 
-    iput-object p2, p0, Landroidx/camera/core/m0;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p3, p0, Landroidx/camera/core/m0;->c:Landroidx/camera/core/p1;
-
-    iput-object p4, p0, Landroidx/camera/core/m0;->d:Landroidx/camera/core/ImageAnalysis$a;
+    iput-object p2, p0, Landroidx/camera/core/m0;->b:Landroidx/camera/core/s2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Landroidx/camera/core/m0;->a:Landroidx/camera/core/o0;
+    iget-object v0, p0, Landroidx/camera/core/m0;->a:Landroidx/camera/core/s2;
 
-    iget-object v1, p0, Landroidx/camera/core/m0;->b:Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Landroidx/camera/core/m0;->b:Landroidx/camera/core/s2;
 
-    iget-object v2, p0, Landroidx/camera/core/m0;->c:Landroidx/camera/core/p1;
+    invoke-static {v0, v1}, Landroidx/camera/core/ImageAnalysis;->P(Landroidx/camera/core/s2;Landroidx/camera/core/s2;)V
 
-    iget-object v3, p0, Landroidx/camera/core/m0;->d:Landroidx/camera/core/ImageAnalysis$a;
-
-    invoke-static {v0, v1, v2, v3, p1}, Landroidx/camera/core/o0;->c(Landroidx/camera/core/o0;Ljava/util/concurrent/Executor;Landroidx/camera/core/p1;Landroidx/camera/core/ImageAnalysis$a;Landroidx/concurrent/futures/CallbackToFutureAdapter$a;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

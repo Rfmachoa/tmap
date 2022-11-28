@@ -1,6 +1,6 @@
 .class public abstract Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-base@@18.0.1"
+.source "com.google.android.gms:play-services-base@@18.1.0"
 
 
 # annotations
@@ -19,12 +19,6 @@
 
 # instance fields
 .field private zaa:Lcom/google/android/gms/dynamic/LifecycleDelegate;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
 
 .field private zab:Landroid/os/Bundle;
     .annotation build Landroidx/annotation/Nullable;
@@ -32,23 +26,8 @@
 .end field
 
 .field private zac:Ljava/util/LinkedList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedList<",
-            "Lcom/google/android/gms/dynamic/zah;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 .field private final zad:Lcom/google/android/gms/dynamic/OnDelegateCreatedListener;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/dynamic/OnDelegateCreatedListener<",
-            "TT;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods

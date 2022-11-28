@@ -1,59 +1,42 @@
-.class public interface abstract Lcc/d;
+.class public abstract Lcc/d;
 .super Ljava/lang/Object;
-.source "ResultCallback.java"
+.source "AladdinWifi.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+# static fields
+.field public static final a:Ljava/lang/String; = "wifi_scan_available"
+
+.field public static final b:Ljava/lang/String; = "scan_enabled"
+
+.field public static final c:Ljava/lang/String; = "android.net.wifi.WIFI_AP_STATE_CHANGED"
+
+.field public static final d:Ljava/lang/String; = "wifi_state"
+
+.field public static final e:Ljava/lang/String; = "wifi_ap_error_code"
+
+.field public static final f:Ljava/lang/String; = "previous_wifi_state"
+
+.field public static final g:I = 0xa
+
+.field public static final h:I = 0xb
+
+.field public static final i:I = 0xc
+
+.field public static final j:I = 0xd
+
+.field public static final k:I = 0xe
+
+.field public static final l:I = 0x0
+
+.field public static final m:I = 0x1
 
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;ILjava/lang/String;Ljava/lang/String;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "responseDto",
-            "errorType",
-            "errorCode",
-            "errorMessage"
-        }
-    .end annotation
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;I",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-.end method
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract onSuccess(Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "responseDto"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
+    return-void
 .end method

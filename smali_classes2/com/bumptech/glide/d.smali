@@ -22,7 +22,7 @@
 
 .field public final b:Lcom/bumptech/glide/Registry;
 
-.field public final c:Lj5/k;
+.field public final c:Lg7/k;
 
 .field public final d:Lcom/bumptech/glide/b$a;
 
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;Lcom/bumptech/glide/Registry;Lj5/k;Lcom/bumptech/glide/b$a;Ljava/util/Map;Ljava/util/List;Lcom/bumptech/glide/load/engine/i;Lcom/bumptech/glide/e;I)V
+.method public constructor <init>(Landroid/content/Context;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;Lcom/bumptech/glide/Registry;Lg7/k;Lcom/bumptech/glide/b$a;Ljava/util/Map;Ljava/util/List;Lcom/bumptech/glide/load/engine/i;Lcom/bumptech/glide/e;I)V
     .locals 0
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -93,7 +93,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lj5/k;
+    .param p4    # Lg7/k;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -123,7 +123,7 @@
             "Landroid/content/Context;",
             "Lcom/bumptech/glide/load/engine/bitmap_recycle/b;",
             "Lcom/bumptech/glide/Registry;",
-            "Lj5/k;",
+            "Lg7/k;",
             "Lcom/bumptech/glide/b$a;",
             "Ljava/util/Map<",
             "Ljava/lang/Class<",
@@ -154,7 +154,7 @@
     iput-object p3, p0, Lcom/bumptech/glide/d;->b:Lcom/bumptech/glide/Registry;
 
     .line 4
-    iput-object p4, p0, Lcom/bumptech/glide/d;->c:Lj5/k;
+    iput-object p4, p0, Lcom/bumptech/glide/d;->c:Lg7/k;
 
     .line 5
     iput-object p5, p0, Lcom/bumptech/glide/d;->d:Lcom/bumptech/glide/b$a;
@@ -179,7 +179,7 @@
 
 
 # virtual methods
-.method public a(Landroid/widget/ImageView;Ljava/lang/Class;)Lj5/r;
+.method public a(Landroid/widget/ImageView;Ljava/lang/Class;)Lg7/r;
     .locals 1
     .param p1    # Landroid/widget/ImageView;
         .annotation build Landroidx/annotation/NonNull;
@@ -200,16 +200,16 @@
             "Landroid/widget/ImageView;",
             "Ljava/lang/Class<",
             "TX;>;)",
-            "Lj5/r<",
+            "Lg7/r<",
             "Landroid/widget/ImageView;",
             "TX;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/bumptech/glide/d;->c:Lj5/k;
+    iget-object v0, p0, Lcom/bumptech/glide/d;->c:Lg7/k;
 
-    invoke-virtual {v0, p1, p2}, Lj5/k;->a(Landroid/widget/ImageView;Ljava/lang/Class;)Lj5/r;
+    invoke-virtual {v0, p1, p2}, Lg7/k;->a(Landroid/widget/ImageView;Ljava/lang/Class;)Lg7/r;
 
     move-result-object p1
 

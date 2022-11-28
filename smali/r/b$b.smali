@@ -1,112 +1,49 @@
-.class public final Lr/b$b;
+.class public Lr/b$b;
 .super Ljava/lang/Object;
-.source "Camera2ImplConfig.java"
+.source "BrowserActionsFallbackMenuAdapter.java"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lr/b;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lr/b;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
-    name = "b"
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
 # instance fields
-.field public a:Landroidx/camera/core/g0;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroidx/camera/core/g0<",
-            "TT;>;"
-        }
-    .end annotation
-.end field
+.field public final synthetic a:Lr/b;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/camera/core/g0;)V
+.method public constructor <init>(Lr/b;)V
     .locals 0
-    .param p1    # Landroidx/camera/core/g0;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "baseBuilder"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/camera/core/g0<",
-            "TT;>;)V"
-        }
-    .end annotation
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lr/b$b;->a:Lr/b;
 
-    .line 2
-    iput-object p1, p0, Lr/b$b;->a:Landroidx/camera/core/g0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lr/d;)Lr/b$b;
-    .locals 2
-    .param p1    # Lr/d;
+.method public execute(Ljava/lang/Runnable;)V
+    .locals 0
+    .param p1    # Ljava/lang/Runnable;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "cameraEventCallbacks"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lr/d;",
-            ")",
-            "Lr/b$b<",
-            "TT;>;"
-        }
-    .end annotation
 
     .line 1
-    iget-object v0, p0, Lr/b$b;->a:Landroidx/camera/core/g0;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    invoke-interface {v0}, Landroidx/camera/core/g0;->c()Landroidx/camera/core/impl/m;
-
-    move-result-object v0
-
-    sget-object v1, Lr/b;->C:Landroidx/camera/core/impl/Config$a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/camera/core/impl/m;->t(Landroidx/camera/core/impl/Config$a;Ljava/lang/Object;)V
-
-    return-object p0
+    return-void
 .end method

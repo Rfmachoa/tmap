@@ -70,7 +70,7 @@
 
     const-string v5, "ST_OPTIMAL"
 
-    const v6, 0x7f13083c
+    const v6, 0x7f1408ba
 
     move-object v0, v7
 
@@ -91,7 +91,7 @@
 
     const-string v13, "ST_MINIMAL"
 
-    const v14, 0x7f130809
+    const v14, 0x7f140887
 
     move-object v8, v0
 
@@ -112,7 +112,7 @@
 
     const-string v20, "ST_FREE"
 
-    const v21, 0x7f130804
+    const v21, 0x7f140882
 
     move-object v15, v1
 
@@ -133,7 +133,7 @@
 
     const-string v13, "ST_SHORT"
 
-    const v14, 0x7f130808
+    const v14, 0x7f140886
 
     move-object v8, v2
 
@@ -154,7 +154,7 @@
 
     const-string v20, "ST_EXPRESS"
 
-    const v21, 0x7f1307a2
+    const v21, 0x7f14081f
 
     move-object v15, v3
 
@@ -175,7 +175,7 @@
 
     const-string v13, "ST_BEGINNER"
 
-    const v14, 0x7f1307d2
+    const v14, 0x7f140850
 
     move-object v8, v4
 
@@ -196,7 +196,7 @@
 
     const-string v20, "ST_TWOWHEEL"
 
-    const v21, 0x7f1307a3
+    const v21, 0x7f140820
 
     move-object v15, v5
 
@@ -217,7 +217,7 @@
 
     const-string v13, "ST_CHILD"
 
-    const v14, 0x7f1307d1
+    const v14, 0x7f14084f
 
     move-object v8, v6
 
@@ -274,25 +274,14 @@
     .line 11
     invoke-static {}, Lcom/skt/tmap/data/RouteOptionData;->values()[Lcom/skt/tmap/data/RouteOptionData;
 
-    move-result-object v0
+    move-result-object v1
 
-    array-length v1, v0
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    :goto_0
-    if-ge v9, v1, :cond_0
+    move-result-object v1
 
-    aget-object v2, v0, v9
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 12
-    sget-object v3, Lcom/skt/tmap/data/RouteOptionData;->VALUES:Ljava/util/List;
-
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 

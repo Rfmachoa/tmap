@@ -27,10 +27,10 @@
 
 
 # instance fields
-.field public final a:Landroidx/databinding/t;
+.field public final a:Landroidx/databinding/u;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/databinding/t<",
+            "Landroidx/databinding/u<",
             "Landroidx/databinding/o;",
             ">;"
         }
@@ -56,11 +56,11 @@
     invoke-direct {p0}, Landroidx/databinding/o$a;-><init>()V
 
     .line 2
-    new-instance v0, Landroidx/databinding/t;
+    new-instance v0, Landroidx/databinding/u;
 
-    invoke-direct {v0, p1, p2, p0, p3}, Landroidx/databinding/t;-><init>(Landroidx/databinding/ViewDataBinding;ILandroidx/databinding/p;Ljava/lang/ref/ReferenceQueue;)V
+    invoke-direct {v0, p1, p2, p0, p3}, Landroidx/databinding/u;-><init>(Landroidx/databinding/ViewDataBinding;ILandroidx/databinding/p;Ljava/lang/ref/ReferenceQueue;)V
 
-    iput-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/t;
+    iput-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/u;
 
     return-void
 .end method
@@ -71,18 +71,18 @@
     .locals 2
 
     .line 1
-    iget-object p2, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/t;
+    iget-object p2, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/u;
 
-    invoke-virtual {p2}, Landroidx/databinding/t;->a()Landroidx/databinding/ViewDataBinding;
+    invoke-virtual {p2}, Landroidx/databinding/u;->a()Landroidx/databinding/ViewDataBinding;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
     .line 2
-    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/u;
 
-    invoke-virtual {v0}, Landroidx/databinding/t;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/databinding/u;->b()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -92,13 +92,13 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/u;
 
-    iget v0, v0, Landroidx/databinding/t;->b:I
+    iget v0, v0, Landroidx/databinding/u;->b:I
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v0, p1, v1}, Landroidx/databinding/ViewDataBinding;->U(ILjava/lang/Object;I)V
+    invoke-virtual {p2, v0, p1, v1}, Landroidx/databinding/ViewDataBinding;->W(ILjava/lang/Object;I)V
 
     :cond_1
     :goto_0
@@ -111,19 +111,19 @@
     return-void
 .end method
 
-.method public c()Landroidx/databinding/t;
+.method public c()Landroidx/databinding/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/databinding/t<",
+            "Landroidx/databinding/u<",
             "Landroidx/databinding/o;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/t;
+    iget-object v0, p0, Landroidx/databinding/ViewDataBinding$m;->a:Landroidx/databinding/u;
 
     return-object v0
 .end method

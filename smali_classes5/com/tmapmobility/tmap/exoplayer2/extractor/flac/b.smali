@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/q;IJJ)V
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/s;IJJ)V
     .locals 16
 
     move-object/from16 v0, p1
@@ -22,7 +22,7 @@
 
     new-instance v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;
 
-    invoke-direct {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/q;)V
+    invoke-direct {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/s;)V
 
     new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/b$b;
 
@@ -30,21 +30,21 @@
 
     move/from16 v4, p2
 
-    invoke-direct {v2, v0, v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/b$b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/q;ILcom/tmapmobility/tmap/exoplayer2/extractor/flac/b$a;)V
+    invoke-direct {v2, v0, v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/flac/b$b;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/s;ILcom/tmapmobility/tmap/exoplayer2/extractor/flac/b$a;)V
 
     .line 2
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/q;->h()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/s;->h()J
 
     move-result-wide v3
 
-    iget-wide v7, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/q;->j:J
+    iget-wide v7, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/s;->j:J
 
     .line 3
-    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/q;->e()J
+    invoke-virtual/range {p1 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/s;->e()J
 
     move-result-wide v13
 
-    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/q;->c:I
+    iget v0, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/s;->c:I
 
     const/4 v5, 0x6
 

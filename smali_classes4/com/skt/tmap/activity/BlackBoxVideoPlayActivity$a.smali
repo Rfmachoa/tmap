@@ -59,12 +59,12 @@
     const-string/jumbo v0, "videoBlackBox onPrepared"
 
     .line 1
-    invoke-static {p1, v0}, Lcom/skt/tmap/util/c1;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/skt/tmap/util/j1;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$a;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->u5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
+    invoke-static {p1}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->C5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;)Lcom/skt/tmap/blackbox/BlackBoxVideoView;
 
     move-result-object p1
 

@@ -59,7 +59,7 @@
     .line 1
     iget-object p1, p0, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity$d;->a:Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;
 
-    invoke-static {p1, p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->B5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;Z)V
+    invoke-static {p1, p2}, Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;->J5(Lcom/skt/tmap/activity/BlackBoxVideoPlayActivity;Z)V
 
     return-void
 .end method

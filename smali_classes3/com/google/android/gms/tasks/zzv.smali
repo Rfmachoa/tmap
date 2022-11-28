@@ -1,19 +1,10 @@
 .class final Lcom/google/android/gms/tasks/zzv;
 .super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # instance fields
 .field private final zza:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/ref/WeakReference<",
-            "Lcom/google/android/gms/tasks/zzq<",
-            "*>;>;>;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -141,15 +132,6 @@
 
 .method public final zzb(Lcom/google/android/gms/tasks/zzq;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/tasks/zzq<",
-            "TT;>;)V"
-        }
-    .end annotation
 
     .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzv;->zza:Ljava/util/List;

@@ -27,6 +27,8 @@
 
 .field public static final enum ALWAYS:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
 
+.field public static final enum CUSTOM:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+
 .field public static final enum NON_ABSENT:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
 
 .field public static final enum NON_DEFAULT:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
@@ -40,7 +42,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 13
+    .locals 15
 
     .line 1
     new-instance v0, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
@@ -100,32 +102,45 @@
     .line 6
     new-instance v9, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
 
-    const-string v11, "USE_DEFAULTS"
+    const-string v11, "CUSTOM"
 
     const/4 v12, 0x5
 
     invoke-direct {v9, v11, v12}, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;-><init>(Ljava/lang/String;I)V
 
-    sput-object v9, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->USE_DEFAULTS:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
-
-    const/4 v11, 0x6
-
-    new-array v11, v11, [Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
-
-    aput-object v0, v11, v2
-
-    aput-object v1, v11, v4
-
-    aput-object v3, v11, v6
-
-    aput-object v5, v11, v8
-
-    aput-object v7, v11, v10
-
-    aput-object v9, v11, v12
+    sput-object v9, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->CUSTOM:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
 
     .line 7
-    sput-object v11, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->$VALUES:[Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+    new-instance v11, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+
+    const-string v13, "USE_DEFAULTS"
+
+    const/4 v14, 0x6
+
+    invoke-direct {v11, v13, v14}, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->USE_DEFAULTS:Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+
+    const/4 v13, 0x7
+
+    new-array v13, v13, [Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
+
+    aput-object v0, v13, v2
+
+    aput-object v1, v13, v4
+
+    aput-object v3, v13, v6
+
+    aput-object v5, v13, v8
+
+    aput-object v7, v13, v10
+
+    aput-object v9, v13, v12
+
+    aput-object v11, v13, v14
+
+    .line 8
+    sput-object v13, Lcom/fasterxml/jackson/annotation/JsonInclude$Include;->$VALUES:[Lcom/fasterxml/jackson/annotation/JsonInclude$Include;
 
     return-void
 .end method

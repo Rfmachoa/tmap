@@ -1,58 +1,139 @@
 .class public final Lti/d;
 .super Ljava/lang/Object;
-.source "ContractBuilder.kt"
+.source "DefaultedHttpContext.java"
+
+# interfaces
+.implements Lti/g;
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a%\u0010\u0005\u001a\u00020\u00022\u0017\u0010\u0004\u001a\u0013\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00020\u00020\u0000\u00a2\u0006\u0002\u0008\u0003H\u0087\u0008\u00f8\u0001\u0000\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006\u0006"
-    }
-    d2 = {
-        "Lkotlin/Function1;",
-        "Lti/c;",
-        "Lkotlin/d1;",
-        "Lkotlin/ExtensionFunctionType;",
-        "builder",
-        "a",
-        "kotlin-stdlib"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x5,
-        0x1
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
+# instance fields
+.field public final a:Lti/g;
+
+.field public final b:Lti/g;
+
+
 # direct methods
-.method public static final a(Lej/l;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lej/l<",
-            "-",
-            "Lti/c;",
-            "Lkotlin/d1;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>(Lti/g;Lti/g;)V
+    .locals 1
 
-    .annotation build Lkotlin/SinceKotlin;
-        version = "1.3"
-    .end annotation
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .annotation build Lkotlin/contracts/ExperimentalContracts;
-    .end annotation
+    const-string v0, "HTTP context"
 
-    .annotation build Lkotlin/internal/ContractsDsl;
-    .end annotation
+    .line 2
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .annotation build Lkotlin/internal/InlineOnly;
-    .end annotation
+    move-result-object p1
+
+    check-cast p1, Lti/g;
+
+    iput-object p1, p0, Lti/d;->a:Lti/g;
+
+    .line 3
+    iput-object p2, p0, Lti/d;->b:Lti/g;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a()Lti/g;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lti/d;->b:Lti/g;
+
+    return-object v0
+.end method
+
+.method public getAttribute(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lti/d;->a:Lti/g;
+
+    invoke-interface {v0, p1}, Lti/g;->getAttribute(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lti/d;->b:Lti/g;
+
+    invoke-interface {v0, p1}, Lti/g;->getAttribute(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public removeAttribute(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lti/d;->a:Lti/g;
+
+    invoke-interface {v0, p1}, Lti/g;->removeAttribute(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lti/d;->a:Lti/g;
+
+    invoke-interface {v0, p1, p2}, Lti/g;->setAttribute(Ljava/lang/String;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "[local: "
+
+    .line 1
+    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lti/d;->a:Lti/g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "defaults: "
+
+    .line 3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lti/d;->b:Lti/g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    .line 4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

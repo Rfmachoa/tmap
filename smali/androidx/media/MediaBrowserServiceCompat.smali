@@ -27,7 +27,7 @@
 # static fields
 .field public static final K0:I = 0x4
 
-.field public static final V0:I = -0x1
+.field public static final X0:I = -0x1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field public static final W0:I = 0x0
+.field public static final Y0:I = 0x0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
@@ -43,7 +43,7 @@
     .end annotation
 .end field
 
-.field public static final X0:I = 0x1
+.field public static final Z0:I = 0x1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
@@ -234,14 +234,14 @@
 
     move-result-object v2
 
-    check-cast v2, Lr1/i;
+    check-cast v2, Landroidx/core/util/k;
 
     .line 4
-    iget-object v3, v2, Lr1/i;->a:Ljava/lang/Object;
+    iget-object v3, v2, Landroidx/core/util/k;->a:Ljava/lang/Object;
 
     if-ne p3, v3, :cond_1
 
-    iget-object v2, v2, Lr1/i;->b:Ljava/lang/Object;
+    iget-object v2, v2, Landroidx/core/util/k;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/os/Bundle;
 
@@ -256,9 +256,9 @@
 
     .line 6
     :cond_2
-    new-instance v1, Lr1/i;
+    new-instance v1, Landroidx/core/util/k;
 
-    invoke-direct {v1, p3, p4}, Lr1/i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, p3, p4}, Landroidx/core/util/k;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1203,7 +1203,7 @@
 
     const-string v0, " id="
 
-    invoke-static {p4, p2, v0, p1}, Landroidx/fragment/app/z;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p2, v0, p1}, Landroidx/fragment/app/i0;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1258,7 +1258,7 @@
 
     const-string p3, "onLoadItem must call detach() or sendResult() before returning for id="
 
-    invoke-static {p3, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1315,7 +1315,7 @@
 
     const-string p3, "onSearch must call detach() or sendResult() before returning for query="
 
-    invoke-static {p3, p1}, Lc/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3, p1}, Ld/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1408,9 +1408,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lr1/i;
+    check-cast v5, Landroidx/core/util/k;
 
-    iget-object v5, v5, Lr1/i;->a:Ljava/lang/Object;
+    iget-object v5, v5, Landroidx/core/util/k;->a:Ljava/lang/Object;
 
     if-ne p3, v5, :cond_2
 

@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$s;Landroidx/recyclerview/widget/RecyclerView$x;Lt1/c;)V
+.method public onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$s;Landroidx/recyclerview/widget/RecyclerView$x;Lk2/c;)V
     .locals 0
     .param p1    # Landroidx/recyclerview/widget/RecyclerView$s;
         .annotation build Landroidx/annotation/NonNull;
@@ -93,20 +93,20 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p3    # Lt1/c;
+    .param p3    # Lk2/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$m;->onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$s;Landroidx/recyclerview/widget/RecyclerView$x;Lt1/c;)V
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$m;->onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$s;Landroidx/recyclerview/widget/RecyclerView$x;Lk2/c;)V
 
     .line 2
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$h;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
-    invoke-virtual {p1, p3}, Landroidx/viewpager2/widget/ViewPager2$e;->j(Lt1/c;)V
+    invoke-virtual {p1, p3}, Landroidx/viewpager2/widget/ViewPager2$e;->j(Lk2/c;)V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
     .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$h;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
     invoke-virtual {v0, p3}, Landroidx/viewpager2/widget/ViewPager2$e;->b(I)Z
 
@@ -140,7 +140,7 @@
     .line 2
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$h;->a:Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->Y0:Landroidx/viewpager2/widget/ViewPager2$e;
+    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->a1:Landroidx/viewpager2/widget/ViewPager2$e;
 
     invoke-virtual {p1, p3}, Landroidx/viewpager2/widget/ViewPager2$e;->k(I)Z
 

@@ -137,7 +137,7 @@
     sub-int/2addr v1, v2
 
     .line 5
-    invoke-static {v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->access$000(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;)I
+    invoke-static {v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->access$300(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;)I
 
     move-result v0
 
@@ -452,22 +452,27 @@
     if-eqz p2, :cond_0
 
     .line 2
-    sget-object p2, Lt1/c$a;->r:Lt1/c$a;
+    sget-object p2, Lk2/c$a;->r:Lk2/c$a;
 
-    invoke-virtual {p2}, Lt1/c$a;->b()I
+    invoke-virtual {p2}, Lk2/c$a;->b()I
 
     move-result p2
 
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->r1(Landroid/view/View;I)V
 
     .line 3
-    sget-object p2, Lt1/c$a;->s:Lt1/c$a;
+    sget-object p2, Lk2/c$a;->s:Lk2/c$a;
 
-    invoke-virtual {p2}, Lt1/c$a;->b()I
+    invoke-virtual {p2}, Lk2/c$a;->b()I
 
     move-result p2
 
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->r1(Landroid/view/View;I)V
+
+    const/4 p2, 0x0
+
+    .line 4
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->B1(Landroid/view/View;Landroidx/core/view/a;)V
 
     :cond_0
     return-void

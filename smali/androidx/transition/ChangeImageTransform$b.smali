@@ -1,4 +1,4 @@
-.class public final Landroidx/transition/ChangeImageTransform$b;
+.class public Landroidx/transition/ChangeImageTransform$b;
 .super Landroid/util/Property;
 .source "ChangeImageTransform.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x1
     name = null
 .end annotation
 
@@ -47,7 +47,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1, p2}, Lh3/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
+    invoke-static {p1, p2}, Lp4/g;->a(Landroid/widget/ImageView;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

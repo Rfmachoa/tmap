@@ -86,7 +86,7 @@
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Ly6/b;->a(J)I
+    invoke-static {v1, v2}, Lw8/b;->a(J)I
 
     move-result v1
 

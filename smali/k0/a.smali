@@ -1,194 +1,66 @@
-.class public interface abstract Lk0/a;
+.class public Lk0/a;
 .super Ljava/lang/Object;
-.source "CarInfo.java"
+.source "ExtensionDisabledValidator.java"
 
 
 # annotations
-.annotation build Landroidx/annotation/MainThread;
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
 .end annotation
 
-.annotation runtime Landroidx/car/app/annotations/RequiresCarApi;
-    value = 0x3
-.end annotation
+
+# instance fields
+.field public final a:Lj0/c;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    const-class v0, Lj0/c;
+
+    invoke-static {v0}, Lj0/a;->a(Ljava/lang/Class;)Lb0/m1;
+
+    move-result-object v0
+
+    check-cast v0, Lj0/c;
+
+    iput-object v0, p0, Lk0/a;->a:Lj0/c;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Lj0/i;)V
-    .param p1    # Lj0/i;
+.method public a(Ljava/lang/String;I)Z
+    .locals 1
+    .param p1    # Ljava/lang/String;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/EnergyLevel;",
-            ">;)V"
-        }
-    .end annotation
-.end method
 
-.method public abstract b(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Model;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    .line 1
+    iget-object v0, p0, Lk0/a;->a:Lj0/c;
 
-.method public abstract c(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Speed;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    if-eqz v0, :cond_0
 
-.method public abstract d(Lj0/i;)V
-    .param p1    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Speed;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    invoke-virtual {v0, p1, p2}, Lj0/c;->f(Ljava/lang/String;I)Z
 
-.method public abstract e(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/TollCard;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    move-result p1
 
-.method public abstract f(Lj0/i;)V
-    .param p1    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Mileage;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    if-eqz p1, :cond_0
 
-.method public abstract g(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/EnergyLevel;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    const/4 p1, 0x1
 
-.method public abstract h(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/Mileage;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    goto :goto_0
 
-.method public abstract i(Lj0/i;)V
-    .param p1    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/TollCard;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    :cond_0
+    const/4 p1, 0x0
 
-.method public abstract j(Ljava/util/concurrent/Executor;Lj0/i;)V
-    .param p1    # Ljava/util/concurrent/Executor;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Lj0/i;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/Executor;",
-            "Lj0/i<",
-            "Landroidx/car/app/hardware/info/EnergyProfile;",
-            ">;)V"
-        }
-    .end annotation
+    :goto_0
+    return p1
 .end method

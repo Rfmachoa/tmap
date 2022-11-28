@@ -22,7 +22,7 @@
             "Ljava/lang/Integer;",
             "Ljava/util/TreeMap<",
             "Ljava/lang/Integer;",
-            "Lz2/a;",
+            "Lc4/b;",
             ">;>;"
         }
     .end annotation
@@ -48,14 +48,14 @@
 
 
 # virtual methods
-.method public final a(Lz2/a;)V
+.method public final a(Lc4/b;)V
     .locals 5
 
     .line 1
-    iget v0, p1, Lz2/a;->a:I
+    iget v0, p1, Lc4/b;->a:I
 
     .line 2
-    iget v1, p1, Lz2/a;->b:I
+    iget v1, p1, Lc4/b;->b:I
 
     .line 3
     iget-object v2, p0, Landroidx/room/RoomDatabase$c;->a:Ljava/util/HashMap;
@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lz2/a;
+    check-cast v0, Lc4/b;
 
     if-eqz v0, :cond_1
 
@@ -136,9 +136,51 @@
     return-void
 .end method
 
-.method public varargs b([Lz2/a;)V
+.method public b(Ljava/util/List;)V
+    .locals 1
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lc4/b;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc4/b;
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroidx/room/RoomDatabase$c;->a(Lc4/b;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public varargs c([Lc4/b;)V
     .locals 3
-    .param p1    # [Lz2/a;
+    .param p1    # [Lc4/b;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -154,7 +196,7 @@
     aget-object v2, p1, v1
 
     .line 2
-    invoke-virtual {p0, v2}, Landroidx/room/RoomDatabase$c;->a(Lz2/a;)V
+    invoke-virtual {p0, v2}, Landroidx/room/RoomDatabase$c;->a(Lc4/b;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -164,7 +206,7 @@
     return-void
 .end method
 
-.method public c(II)Ljava/util/List;
+.method public d(II)Ljava/util/List;
     .locals 2
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -173,7 +215,7 @@
         value = {
             "(II)",
             "Ljava/util/List<",
-            "Lz2/a;",
+            "Lc4/b;",
             ">;"
         }
     .end annotation
@@ -204,23 +246,23 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    invoke-virtual {p0, v1, v0, p1, p2}, Landroidx/room/RoomDatabase$c;->d(Ljava/util/List;ZII)Ljava/util/List;
+    invoke-virtual {p0, v1, v0, p1, p2}, Landroidx/room/RoomDatabase$c;->e(Ljava/util/List;ZII)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final d(Ljava/util/List;ZII)Ljava/util/List;
+.method public final e(Ljava/util/List;ZII)Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lz2/a;",
+            "Lc4/b;",
             ">;ZII)",
             "Ljava/util/List<",
-            "Lz2/a;",
+            "Lc4/b;",
             ">;"
         }
     .end annotation
@@ -329,6 +371,8 @@
 
     move-result-object p3
 
+    check-cast p3, Lc4/b;
+
     invoke-interface {p1, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move p3, v3
@@ -345,4 +389,31 @@
 
     :cond_8
     return-object p1
+.end method
+
+.method public f()Ljava/util/Map;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Lc4/b;",
+            ">;>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/room/RoomDatabase$c;->a:Ljava/util/HashMap;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
 .end method

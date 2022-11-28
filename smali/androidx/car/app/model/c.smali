@@ -7,20 +7,20 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/car/app/model/InputCallbackDelegateImpl$OnInputCallbackStub;
+.field public final synthetic a:Landroidx/car/app/model/AlertCallbackDelegateImpl$AlertCallbackStub;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/model/InputCallbackDelegateImpl$OnInputCallbackStub;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Landroidx/car/app/model/AlertCallbackDelegateImpl$AlertCallbackStub;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/model/c;->a:Landroidx/car/app/model/InputCallbackDelegateImpl$OnInputCallbackStub;
+    iput-object p1, p0, Landroidx/car/app/model/c;->a:Landroidx/car/app/model/AlertCallbackDelegateImpl$AlertCallbackStub;
 
-    iput-object p2, p0, Landroidx/car/app/model/c;->b:Ljava/lang/String;
+    iput p2, p0, Landroidx/car/app/model/c;->b:I
 
     return-void
 .end method
@@ -30,11 +30,11 @@
 .method public final a()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Landroidx/car/app/model/c;->a:Landroidx/car/app/model/InputCallbackDelegateImpl$OnInputCallbackStub;
+    iget-object v0, p0, Landroidx/car/app/model/c;->a:Landroidx/car/app/model/AlertCallbackDelegateImpl$AlertCallbackStub;
 
-    iget-object v1, p0, Landroidx/car/app/model/c;->b:Ljava/lang/String;
+    iget v1, p0, Landroidx/car/app/model/c;->b:I
 
-    invoke-static {v0, v1}, Landroidx/car/app/model/InputCallbackDelegateImpl$OnInputCallbackStub;->a(Landroidx/car/app/model/InputCallbackDelegateImpl$OnInputCallbackStub;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Landroidx/car/app/model/AlertCallbackDelegateImpl$AlertCallbackStub;->b(Landroidx/car/app/model/AlertCallbackDelegateImpl$AlertCallbackStub;I)Ljava/lang/Object;
 
     move-result-object v0
 

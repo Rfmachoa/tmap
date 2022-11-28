@@ -30,6 +30,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -117,6 +125,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 14
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -204,6 +222,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 27
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -293,8 +323,18 @@
 # virtual methods
 .method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_7
 
     .line 1
     sget-object v0, Landroidx/constraintlayout/widget/R$styleable;->MockView:[I
@@ -423,11 +463,15 @@
 
     .line 16
     :cond_6
-    iget-object p2, p0, Landroidx/constraintlayout/utils/widget/MockView;->f:Ljava/lang/String;
-
-    if-nez p2, :cond_7
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 17
+    :cond_7
+    iget-object p2, p0, Landroidx/constraintlayout/utils/widget/MockView;->f:Ljava/lang/String;
+
+    if-nez p2, :cond_8
+
+    .line 18
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -445,42 +489,42 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 18
+    .line 19
     :catch_0
-    :cond_7
+    :cond_8
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MockView;->a:Landroid/graphics/Paint;
 
     iget p2, p0, Landroidx/constraintlayout/utils/widget/MockView;->h:I
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 19
+    .line 20
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MockView;->a:Landroid/graphics/Paint;
 
     const/4 p2, 0x1
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 20
+    .line 21
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MockView;->b:Landroid/graphics/Paint;
 
     iget v0, p0, Landroidx/constraintlayout/utils/widget/MockView;->i:I
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 21
+    .line 22
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MockView;->b:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 22
+    .line 23
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MockView;->c:Landroid/graphics/Paint;
 
     iget p2, p0, Landroidx/constraintlayout/utils/widget/MockView;->j:I
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 23
+    .line 24
     iget p1, p0, Landroidx/constraintlayout/utils/widget/MockView;->k:I
 
     int-to-float p1, p1
@@ -512,6 +556,14 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V

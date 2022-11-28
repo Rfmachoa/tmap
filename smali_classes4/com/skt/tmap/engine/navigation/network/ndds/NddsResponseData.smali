@@ -31,7 +31,7 @@
     .line 2
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/network/ndds/NddsResponseData;->errorCode:Ljava/lang/String;
 
-    const-string/jumbo v0, "success"
+    const-string v0, "success"
 
     .line 3
     iput-object v0, p0, Lcom/skt/tmap/engine/navigation/network/ndds/NddsResponseData;->errorMessage:Ljava/lang/String;

@@ -1,287 +1,294 @@
-.class public final Lki/d;
+.class public Lki/d;
 .super Ljava/lang/Object;
-.source "Timed.java"
+.source "BasicDomainHandler.java"
+
+# interfaces
+.implements Lbi/c;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
 .end annotation
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
-
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V
-    .locals 1
-    .param p1    # Ljava/lang/Object;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "value",
-            "time",
-            "unit"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;J",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, "value is null"
-
-    .line 2
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iput-object p1, p0, Lki/d;->a:Ljava/lang/Object;
-
-    .line 3
-    iput-wide p2, p0, Lki/d;->b:J
-
-    const-string p1, "unit is null"
-
-    .line 4
-    invoke-static {p4, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-object p1, p4
-
-    check-cast p1, Ljava/util/concurrent/TimeUnit;
-
-    iput-object p4, p0, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
-    .locals 2
-
-    .line 1
-    iget-wide v0, p0, Lki/d;->b:J
-
-    return-wide v0
-.end method
-
-.method public b(Ljava/util/concurrent/TimeUnit;)J
-    .locals 3
-    .param p1    # Ljava/util/concurrent/TimeUnit;
-        .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "unit"
-        }
-    .end annotation
-
-    .line 1
-    iget-wide v0, p0, Lki/d;->b:J
-
-    iget-object v2, p0, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p1, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public c()Ljava/util/concurrent/TimeUnit;
-    .locals 1
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
-
-    return-object v0
-.end method
-
-.method public d()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
+.method public a(Lbi/b;Lbi/d;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "()TT;"
+            Lcz/msebera/android/httpclient/cookie/MalformedCookieException;
         }
     .end annotation
 
-    .annotation build Lio/reactivex/rxjava3/annotations/NonNull;
-    .end annotation
+    const-string v0, "Cookie"
 
     .line 1
-    iget-object v0, p0, Lki/d;->a:Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    return-object v0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "other"
-        }
-    .end annotation
-
-    .line 1
-    instance-of v0, p1, Lki/d;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
+    const-string v0, "Cookie origin"
 
     .line 2
-    check-cast p1, Lki/d;
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 3
-    iget-object v0, p0, Lki/d;->a:Ljava/lang/Object;
+    invoke-virtual {p2}, Lbi/d;->a()Ljava/lang/String;
 
-    iget-object v2, p1, Lki/d;->a:Ljava/lang/Object;
-
-    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-wide v2, p0, Lki/d;->b:J
-
-    iget-wide v4, p1, Lki/d;->b:J
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object p1, p1, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
+    move-result-object p2
 
     .line 4
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {p1}, Lbi/b;->getDomain()Ljava/lang/String;
 
-    move-result p1
+    move-result-object p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_5
 
-    const/4 v1, 0x1
+    const-string v0, "."
 
-    :cond_0
-    return v1
-.end method
-
-.method public hashCode()I
-    .locals 6
-
-    .line 1
-    iget-object v0, p0, Lki/d;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    .line 2
-    iget-wide v2, p0, Lki/d;->b:J
-
-    ushr-long v4, v2, v1
-
-    xor-long/2addr v2, v4
-
-    long-to-int v2, v2
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    .line 3
-    iget-object v1, p0, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->hashCode()I
+    .line 5
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    const-string v2, "\""
 
-    return v1
+    const-string v3, "\". Domain of origin: \""
+
+    const-string v4, "Illegal domain attribute \""
+
+    if-eqz v1, :cond_2
+
+    .line 6
+    invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 7
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 8
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 9
+    :cond_0
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    .line 10
+    :cond_1
+    new-instance v0, Lcz/msebera/android/httpclient/cookie/CookieRestrictionViolationException;
+
+    invoke-static {v4, p1, v3, p2, v2}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcz/msebera/android/httpclient/cookie/CookieRestrictionViolationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 11
+    :cond_2
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_3
+    :goto_0
+    return-void
+
+    .line 12
+    :cond_4
+    new-instance v0, Lcz/msebera/android/httpclient/cookie/CookieRestrictionViolationException;
+
+    invoke-static {v4, p1, v3, p2, v2}, Lw/d0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcz/msebera/android/httpclient/cookie/CookieRestrictionViolationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 13
+    :cond_5
+    new-instance p1, Lcz/msebera/android/httpclient/cookie/CookieRestrictionViolationException;
+
+    const-string p2, "Cookie domain may not be null"
+
+    invoke-direct {p1, p2}, Lcz/msebera/android/httpclient/cookie/CookieRestrictionViolationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public b(Lbi/b;Lbi/d;)Z
+    .locals 4
 
-    const-string v0, "Timed[time="
+    const-string v0, "Cookie"
 
     .line 1
-    invoke-static {v0}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    const-string v0, "Cookie origin"
+
+    .line 2
+    invoke-static {p2, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
+    invoke-virtual {p2}, Lbi/d;->a()Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 4
+    invoke-interface {p1}, Lbi/b;->getDomain()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    .line 5
+    :cond_0
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    return v2
+
+    :cond_1
+    const-string v1, "."
+
+    .line 6
+    invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 7
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/16 v3, 0x2e
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 8
+    :cond_2
+    invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    move v0, v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public c(Lbi/k;Ljava/lang/String;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcz/msebera/android/httpclient/cookie/MalformedCookieException;
+        }
+    .end annotation
+
+    const-string v0, "Cookie"
+
+    .line 1
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    if-eqz p2, :cond_1
+
+    .line 2
+    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lki/d;->b:J
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, ", unit="
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 3
+    invoke-interface {p1, p2}, Lbi/k;->setDomain(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lki/d;->c:Ljava/util/concurrent/TimeUnit;
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 4
+    :cond_0
+    new-instance p1, Lcz/msebera/android/httpclient/cookie/MalformedCookieException;
 
-    const-string v1, ", value="
+    const-string p2, "Blank value for domain attribute"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, p2}, Lcz/msebera/android/httpclient/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lki/d;->a:Ljava/lang/Object;
+    throw p1
 
-    const-string v2, "]"
+    .line 5
+    :cond_1
+    new-instance p1, Lcz/msebera/android/httpclient/cookie/MalformedCookieException;
 
-    invoke-static {v0, v1, v2}, Lx/c;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+    const-string p2, "Missing value for domain attribute"
 
-    move-result-object v0
+    invoke-direct {p1, p2}, Lcz/msebera/android/httpclient/cookie/MalformedCookieException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    throw p1
 .end method

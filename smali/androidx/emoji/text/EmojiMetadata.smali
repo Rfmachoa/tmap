@@ -35,7 +35,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ThreadLocal<",
-            "Lf3/c;",
+            "Ln4/c;",
             ">;"
         }
     .end annotation
@@ -155,11 +155,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lf3/c;->y(I)I
+    invoke-virtual {v0, p1}, Ln4/c;->y(I)I
 
     move-result p1
 
@@ -170,11 +170,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->A()I
+    invoke-virtual {v0}, Ln4/c;->A()I
 
     move-result v0
 
@@ -185,11 +185,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->B()S
+    invoke-virtual {v0}, Ln4/c;->B()S
 
     move-result v0
 
@@ -209,11 +209,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->I()S
+    invoke-virtual {v0}, Ln4/c;->I()S
 
     move-result v0
 
@@ -224,18 +224,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->J()I
+    invoke-virtual {v0}, Ln4/c;->J()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final h()Lf3/c;
+.method public final h()Ln4/c;
     .locals 3
 
     .line 1
@@ -245,14 +245,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lf3/c;
+    check-cast v1, Ln4/c;
 
     if-nez v1, :cond_0
 
     .line 2
-    new-instance v1, Lf3/c;
+    new-instance v1, Ln4/c;
 
-    invoke-direct {v1}, Lf3/c;-><init>()V
+    invoke-direct {v1}, Ln4/c;-><init>()V
 
     .line 3
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
@@ -261,13 +261,13 @@
     :cond_0
     iget-object v0, p0, Landroidx/emoji/text/EmojiMetadata;->b:Landroidx/emoji/text/c;
 
-    invoke-virtual {v0}, Landroidx/emoji/text/c;->f()Lf3/d;
+    invoke-virtual {v0}, Landroidx/emoji/text/c;->f()Ln4/d;
 
     move-result-object v0
 
     iget v2, p0, Landroidx/emoji/text/EmojiMetadata;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lf3/d;->B(Lf3/c;I)Lf3/c;
+    invoke-virtual {v0, v1, v2}, Ln4/d;->B(Ln4/c;I)Ln4/c;
 
     return-object v1
 .end method
@@ -276,11 +276,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->K()S
+    invoke-virtual {v0}, Ln4/c;->K()S
 
     move-result v0
 
@@ -304,11 +304,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->N()S
+    invoke-virtual {v0}, Ln4/c;->N()S
 
     move-result v0
 
@@ -319,11 +319,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Lf3/c;
+    invoke-virtual {p0}, Landroidx/emoji/text/EmojiMetadata;->h()Ln4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf3/c;->E()Z
+    invoke-virtual {v0}, Ln4/c;->E()Z
 
     move-result v0
 

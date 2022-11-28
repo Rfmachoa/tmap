@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/skt/tmap/engine/TmapAiManager;->y6(I)V
+    value = Lcom/skt/tmap/engine/TmapAiManager;->A6(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,29 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcom/skt/tmap/engine/TmapAiManager;
+.field public final synthetic a:Lcom/skt/tmap/engine/TmapAiManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;I)V
+.method public constructor <init>(Lcom/skt/tmap/engine/TmapAiManager;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
-            0x8010,
-            0x1010
+            0x8010
         }
         names = {
-            "this$0",
-            "val$index"
+            "this$0"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->b:Lcom/skt/tmap/engine/TmapAiManager;
-
-    iput p2, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->a:I
+    iput-object p1, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,30 +44,19 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->b:Lcom/skt/tmap/engine/TmapAiManager;
-
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    invoke-static {}, Lcom/skt/tmap/location/m;->t()Lcom/skt/tmap/location/m;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/skt/tmap/location/m;->turnOnGps()V
 
     .line 2
-    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->b:Lcom/skt/tmap/engine/TmapAiManager;
+    iget-object v0, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->a:Lcom/skt/tmap/engine/TmapAiManager;
 
-    invoke-static {v0}, Lcom/skt/tmap/engine/TmapAiManager;->d1(Lcom/skt/tmap/engine/TmapAiManager;)Lcom/skt/voice/tyche/AiTechLabVoiceCallback;
+    invoke-virtual {v0}, Lcom/skt/tmap/engine/TmapAiManager;->D1()V
 
-    move-result-object v0
-
-    sget-object v1, Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;->STATE_SELECT_LIST:Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;
-
-    iget v2, p0, Lcom/skt/tmap/engine/TmapAiManager$m0;->a:I
-
-    invoke-interface {v0, v1, v2}, Lcom/skt/voice/tyche/AiTechLabVoiceCallback;->p(Lcom/skt/voice/tyche/AiTechLabVoiceCallback$voiceCallbackState;I)V
-
-    :cond_0
     return-void
 .end method

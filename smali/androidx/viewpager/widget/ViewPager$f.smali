@@ -38,13 +38,13 @@
     .line 1
     iget-object v0, p0, Landroidx/viewpager/widget/ViewPager$f;->a:Landroidx/viewpager/widget/ViewPager;
 
-    iget-object v0, v0, Landroidx/viewpager/widget/ViewPager;->e:Ll3/a;
+    iget-object v0, v0, Landroidx/viewpager/widget/ViewPager;->e:Lt4/a;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ll3/a;->e()I
+    invoke-virtual {v0}, Lt4/a;->e()I
 
     move-result v0
 
@@ -92,12 +92,12 @@
 
     iget-object p1, p0, Landroidx/viewpager/widget/ViewPager$f;->a:Landroidx/viewpager/widget/ViewPager;
 
-    iget-object p1, p1, Landroidx/viewpager/widget/ViewPager;->e:Ll3/a;
+    iget-object p1, p1, Landroidx/viewpager/widget/ViewPager;->e:Lt4/a;
 
     if-eqz p1, :cond_0
 
     .line 5
-    invoke-virtual {p1}, Ll3/a;->e()I
+    invoke-virtual {p1}, Lt4/a;->e()I
 
     move-result p1
 
@@ -121,11 +121,11 @@
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lt1/c;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/view/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Lk2/c;)V
 
     .line 2
     const-class p1, Landroidx/viewpager/widget/ViewPager;
@@ -134,14 +134,14 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lt1/c;->U0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lk2/c;->Z0(Ljava/lang/CharSequence;)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager$f;->a()Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Lt1/c;->D1(Z)V
+    invoke-virtual {p2, p1}, Lk2/c;->I1(Z)V
 
     .line 4
     iget-object p1, p0, Landroidx/viewpager/widget/ViewPager$f;->a:Landroidx/viewpager/widget/ViewPager;
@@ -157,7 +157,7 @@
     const/16 p1, 0x1000
 
     .line 5
-    invoke-virtual {p2, p1}, Lt1/c;->a(I)V
+    invoke-virtual {p2, p1}, Lk2/c;->a(I)V
 
     .line 6
     :cond_0
@@ -174,7 +174,7 @@
     const/16 p1, 0x2000
 
     .line 7
-    invoke-virtual {p2, p1}, Lt1/c;->a(I)V
+    invoke-virtual {p2, p1}, Lk2/c;->a(I)V
 
     :cond_1
     return-void

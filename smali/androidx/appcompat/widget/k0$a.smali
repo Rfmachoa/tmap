@@ -1,88 +1,147 @@
-.class public Landroidx/appcompat/widget/k0$a;
+.class public final Landroidx/appcompat/widget/k0$a;
 .super Ljava/lang/Object;
-.source "ToolbarWidgetWrapper.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ThemedSpinnerAdapter.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/widget/k0;-><init>(Landroidx/appcompat/widget/Toolbar;ZII)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/appcompat/widget/k0;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x19
+    name = "a"
 .end annotation
 
 
 # instance fields
-.field public final a:Lj/a;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Landroidx/appcompat/widget/k0;
+.field public final b:Landroid/view/LayoutInflater;
+
+.field public c:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/k0;)V
-    .locals 8
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iput-object p1, p0, Landroidx/appcompat/widget/k0$a;->b:Landroidx/appcompat/widget/k0;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v7, Lj/a;
+    iput-object p1, p0, Landroidx/appcompat/widget/k0$a;->a:Landroid/content/Context;
 
-    iget-object v0, p1, Landroidx/appcompat/widget/k0;->a:Landroidx/appcompat/widget/Toolbar;
+    .line 3
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object v1
-
-    iget-object v6, p1, Landroidx/appcompat/widget/k0;->j:Ljava/lang/CharSequence;
-
-    const/4 v2, 0x0
-
-    const v3, 0x102002c
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, v7
-
-    invoke-direct/range {v0 .. v6}, Lj/a;-><init>(Landroid/content/Context;IIIILjava/lang/CharSequence;)V
-
-    iput-object v7, p0, Landroidx/appcompat/widget/k0$a;->a:Lj/a;
+    iput-object p1, p0, Landroidx/appcompat/widget/k0$a;->b:Landroid/view/LayoutInflater;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public a()Landroid/view/LayoutInflater;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object p1, p0, Landroidx/appcompat/widget/k0$a;->b:Landroidx/appcompat/widget/k0;
-
-    iget-object v0, p1, Landroidx/appcompat/widget/k0;->m:Landroid/view/Window$Callback;
+    iget-object v0, p0, Landroidx/appcompat/widget/k0$a;->c:Landroid/view/LayoutInflater;
 
     if-eqz v0, :cond_0
 
-    iget-boolean p1, p1, Landroidx/appcompat/widget/k0;->n:Z
+    goto :goto_0
 
-    if-eqz p1, :cond_0
+    :cond_0
+    iget-object v0, p0, Landroidx/appcompat/widget/k0$a;->b:Landroid/view/LayoutInflater;
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public b()Landroid/content/res/Resources$Theme;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Landroidx/appcompat/widget/k0$a;->c:Landroid/view/LayoutInflater;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public c(Landroid/content/res/Resources$Theme;)V
+    .locals 2
+    .param p1    # Landroid/content/res/Resources$Theme;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
+    .line 1
+    iput-object p1, p0, Landroidx/appcompat/widget/k0$a;->c:Landroid/view/LayoutInflater;
+
+    goto :goto_0
+
     .line 2
-    iget-object v1, p0, Landroidx/appcompat/widget/k0$a;->a:Lj/a;
-
-    invoke-interface {v0, p1, v1}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
-
     :cond_0
+    iget-object v0, p0, Landroidx/appcompat/widget/k0$a;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v0
+
+    if-ne p1, v0, :cond_1
+
+    .line 3
+    iget-object p1, p0, Landroidx/appcompat/widget/k0$a;->b:Landroid/view/LayoutInflater;
+
+    iput-object p1, p0, Landroidx/appcompat/widget/k0$a;->c:Landroid/view/LayoutInflater;
+
+    goto :goto_0
+
+    .line 4
+    :cond_1
+    new-instance v0, Lk/d;
+
+    iget-object v1, p0, Landroidx/appcompat/widget/k0$a;->a:Landroid/content/Context;
+
+    invoke-direct {v0, v1, p1}, Lk/d;-><init>(Landroid/content/Context;Landroid/content/res/Resources$Theme;)V
+
+    .line 5
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    iput-object p1, p0, Landroidx/appcompat/widget/k0$a;->c:Landroid/view/LayoutInflater;
+
+    :goto_0
     return-void
 .end method

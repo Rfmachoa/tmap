@@ -94,7 +94,7 @@
 
 
 # virtual methods
-.method public b(Ljava/lang/String;Ljava/lang/String;)V
+.method public a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .line 1
@@ -114,7 +114,15 @@
     return-object v0
 .end method
 
-.method public d(Ljava/lang/String;)Ljava/lang/String;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .line 1
@@ -137,15 +145,7 @@
     return-object p1
 .end method
 
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e(Ljava/lang/String;)V
+.method public f(Ljava/lang/String;)V
     .locals 0
 
     .line 1

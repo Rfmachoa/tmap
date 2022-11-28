@@ -1,32 +1,34 @@
-.class public interface abstract Lph/b;
+.class public final Lph/b;
 .super Ljava/lang/Object;
-.source "BiConsumer.java"
+.source "AuthPolicy.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T1:",
-        "Ljava/lang/Object;",
-        "T2:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation build Lcz/msebera/android/httpclient/annotation/Immutable;
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
-# virtual methods
-.method public abstract accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT1;TT2;)V"
-        }
-    .end annotation
+# static fields
+.field public static final a:Ljava/lang/String; = "NTLM"
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+.field public static final b:Ljava/lang/String; = "Digest"
+
+.field public static final c:Ljava/lang/String; = "Basic"
+
+.field public static final d:Ljava/lang/String; = "negotiate"
+
+.field public static final e:Ljava/lang/String; = "Kerberos"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

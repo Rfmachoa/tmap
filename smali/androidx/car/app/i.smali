@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/car/app/ScreenManager;
+.field public final synthetic a:Landroidx/car/app/CarContext;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/car/app/ScreenManager;)V
+.method public synthetic constructor <init>(Landroidx/car/app/CarContext;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/car/app/i;->a:Landroidx/car/app/ScreenManager;
+    iput-object p1, p0, Landroidx/car/app/i;->a:Landroidx/car/app/CarContext;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Landroidx/car/app/i;->a:Landroidx/car/app/ScreenManager;
+    iget-object v0, p0, Landroidx/car/app/i;->a:Landroidx/car/app/CarContext;
 
-    invoke-virtual {v0}, Landroidx/car/app/ScreenManager;->l()Landroidx/car/app/model/TemplateWrapper;
+    invoke-static {v0}, Landroidx/car/app/AppManager$1;->a(Landroidx/car/app/CarContext;)Ljava/lang/Object;
 
     move-result-object v0
 

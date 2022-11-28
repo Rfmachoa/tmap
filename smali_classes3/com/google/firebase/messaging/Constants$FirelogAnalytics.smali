@@ -1,6 +1,6 @@
 .class public final Lcom/google/firebase/messaging/Constants$FirelogAnalytics;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-messaging@@23.0.0"
+.source "Constants.java"
 
 
 # annotations
@@ -16,15 +16,13 @@
 
 # static fields
 .field public static final FCM_LOG_SOURCE:Ljava/lang/String; = "FCM_CLIENT_EVENT_LOGGING"
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

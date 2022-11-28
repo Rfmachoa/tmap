@@ -15,7 +15,7 @@
 # static fields
 .field public static final K0:F = 25.0f
 
-.field public static final V0:F = 3.1415927f
+.field public static final X0:F = 3.1415927f
 
 .field public static final k0:F = 100.0f
 
@@ -48,7 +48,7 @@
 
 .field public final f:Lcom/tmapmobility/tmap/exoplayer2/video/spherical/d;
 
-.field public final g:Lcf/e;
+.field public final g:Lfh/e;
 
 .field public h:Landroid/graphics/SurfaceTexture;
     .annotation build Landroidx/annotation/Nullable;
@@ -123,7 +123,7 @@
     iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->b:Landroid/hardware/SensorManager;
 
     .line 6
-    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+    sget v0, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->a:I
 
     const/16 v1, 0x12
 
@@ -156,16 +156,16 @@
     iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->c:Landroid/hardware/Sensor;
 
     .line 10
-    new-instance p2, Lcf/e;
+    new-instance p2, Lfh/e;
 
-    invoke-direct {p2}, Lcf/e;-><init>()V
+    invoke-direct {p2}, Lfh/e;-><init>()V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lcf/e;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lfh/e;
 
     .line 11
     new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$a;
 
-    invoke-direct {v0, p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;Lcf/e;)V
+    invoke-direct {v0, p0, p2}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;Lfh/e;)V
 
     .line 12
     new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/d;
@@ -284,7 +284,7 @@
     check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$b;
 
     .line 3
-    invoke-interface {v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$b;->u(Landroid/view/Surface;)V
+    invoke-interface {v2, v0}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$b;->v(Landroid/view/Surface;)V
 
     goto :goto_0
 
@@ -346,7 +346,7 @@
     check-cast v3, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$b;
 
     .line 7
-    invoke-interface {v3, v2}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$b;->v(Landroid/view/Surface;)V
+    invoke-interface {v3, v2}, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView$b;->w(Landroid/view/Surface;)V
 
     goto :goto_0
 
@@ -402,20 +402,20 @@
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->e:Landroid/os/Handler;
 
-    new-instance v1, Lcf/g;
+    new-instance v1, Lfh/g;
 
-    invoke-direct {v1, p0, p1}, Lcf/g;-><init>(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;Landroid/graphics/SurfaceTexture;)V
+    invoke-direct {v1, p0, p1}, Lfh/g;-><init>(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;Landroid/graphics/SurfaceTexture;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public getCameraMotionListener()Lcf/a;
+.method public getCameraMotionListener()Lfh/a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lcf/e;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lfh/e;
 
     return-object v0
 .end method
@@ -424,7 +424,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lcf/e;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lfh/e;
 
     return-object v0
 .end method
@@ -522,9 +522,9 @@
     .line 2
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->e:Landroid/os/Handler;
 
-    new-instance v1, Lcf/f;
+    new-instance v1, Lfh/f;
 
-    invoke-direct {v1, p0}, Lcf/f;-><init>(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;)V
+    invoke-direct {v1, p0}, Lfh/f;-><init>(Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -569,9 +569,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lcf/e;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/video/spherical/SphericalGLSurfaceView;->g:Lfh/e;
 
-    invoke-virtual {v0, p1}, Lcf/e;->h(I)V
+    invoke-virtual {v0, p1}, Lfh/e;->h(I)V
 
     return-void
 .end method

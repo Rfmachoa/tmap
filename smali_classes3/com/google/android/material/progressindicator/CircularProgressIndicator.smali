@@ -272,6 +272,17 @@
     .end param
 
     .line 1
+    invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->getTrackThickness()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x2
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    .line 2
     iget-object v0, p0, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->spec:Lcom/google/android/material/progressindicator/BaseProgressIndicatorSpec;
 
     move-object v1, v0
@@ -282,19 +293,19 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 2
+    .line 3
     move-object v1, v0
 
     check-cast v1, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;
 
     iput p1, v1, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->indicatorSize:I
 
-    .line 3
+    .line 4
     check-cast v0, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;
 
     invoke-virtual {v0}, Lcom/google/android/material/progressindicator/CircularProgressIndicatorSpec;->validateSpec()V
 
-    .line 4
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/material/progressindicator/BaseProgressIndicator;->invalidate()V
 
     :cond_0

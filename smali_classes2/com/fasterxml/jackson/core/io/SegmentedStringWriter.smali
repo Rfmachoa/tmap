@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final _buffer:Lcom/fasterxml/jackson/core/util/TextBuffer;
+.field private final _buffer:Lcom/fasterxml/jackson/core/util/TextBuffer;
 
 
 # direct methods

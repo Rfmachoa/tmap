@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/util/DeviceProperties;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -673,7 +673,7 @@
 .end method
 
 .method public static isWearableWithoutPlayStore(Landroid/content/Context;)Z
-    .locals 3
+    .locals 1
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -690,42 +690,43 @@
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastN()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     .line 2
+    :cond_0
     invoke-static {p0}, Lcom/google/android/gms/common/util/DeviceProperties;->zza(Landroid/content/Context;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastO()Z
 
     move-result p0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
-    goto :goto_0
+    invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastR()Z
 
-    :cond_0
-    return v1
+    move-result p0
+
+    if-eqz p0, :cond_2
 
     :cond_1
-    :goto_0
-    move v1, v2
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_2
-    return v1
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 .method public static zza(Landroid/content/Context;)Z

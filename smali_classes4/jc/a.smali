@@ -1,1990 +1,1603 @@
-.class public Ljc/a;
+.class public final Ljc/a;
 .super Ljava/lang/Object;
-.source "AroundInfoListModel.java"
+.source "CardType.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Ljc/a$a;
+    }
+.end annotation
 
 
 # static fields
-.field public static final x:I = 0x14
+.field public static final A:Ljava/lang/String; = "read.bed_time.set_time"
 
+.field public static final A0:Ljava/lang/String; = "cancel.mute"
 
-# instance fields
-.field public a:Lpb/n;
+.field public static final B:Ljava/lang/String; = "read.bed_time.left_time"
 
-.field public b:Lpb/m;
+.field public static final B0:Ljava/lang/String; = "turn_off.microphone"
 
-.field public c:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoTopMenuInfo;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final C:Ljava/lang/String; = "read.timer.set_time"
 
-.field public d:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final C0:Ljava/lang/String; = "read.content.info"
 
-.field public e:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final D:Ljava/lang/String; = "read.timer.left_time"
 
-.field public f:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final D0:Ljava/lang/String; = "turn_off"
 
-.field public g:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final E:Ljava/lang/String; = "play.translation"
 
-.field public h:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final E0:Ljava/lang/String; = "close"
 
-.field public i:[Ljava/lang/String;
+.field public static final F:Ljava/lang/String; = "stop"
 
-.field public j:[Ljava/lang/String;
+.field public static final F0:Ljava/lang/String; = "connect.call"
 
-.field public k:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final G:Ljava/lang/String; = "stop.music"
 
-.field public l:I
+.field public static final G0:Ljava/lang/String; = "retry.call"
 
-.field public m:Landroid/app/Activity;
+.field public static final H:Ljava/lang/String; = "stop.news"
 
-.field public n:Ljava/lang/String;
+.field public static final H0:Ljava/lang/String; = "retry.call.missed"
 
-.field public o:[B
+.field public static final I:Ljava/lang/String; = "stop.radio"
 
-.field public p:Z
+.field public static final I0:Ljava/lang/String; = "connect.call.emergency"
 
-.field public q:I
+.field public static final J:Ljava/lang/String; = "stop.podcast"
 
-.field public r:I
+.field public static final J0:Ljava/lang/String; = "connect.call.cscenter"
 
-.field public s:Z
+.field public static final K:Ljava/lang/String; = "stop.msg"
 
-.field public t:Z
+.field public static final K0:Ljava/lang/String; = "accept.call"
 
-.field public u:I
+.field public static final L:Ljava/lang/String; = "cancel"
 
-.field public v:Z
+.field public static final L0:Ljava/lang/String; = "reject.call"
 
-.field public w:Z
+.field public static final M:Ljava/lang/String; = "stop.media.audio"
+
+.field public static final M0:Ljava/lang/String; = "ask.caller"
+
+.field public static final N:Ljava/lang/String; = "pause"
+
+.field public static final N0:Ljava/lang/String; = "send.msg"
+
+.field public static final O:Ljava/lang/String; = "pause.music"
+
+.field public static final O0:Ljava/lang/String; = "send.msg.arrival_time"
+
+.field public static final P:Ljava/lang/String; = "pause.news"
+
+.field public static final P0:Ljava/lang/String; = "send.msg.cur_loc"
+
+.field public static final Q:Ljava/lang/String; = "pause.radio"
+
+.field public static final Q0:Ljava/lang/String; = "reply.msg.reject"
+
+.field public static final R:Ljava/lang/String; = "pause.podcast"
+
+.field public static final R0:Ljava/lang/String; = "read.msg"
+
+.field public static final S:Ljava/lang/String; = "previous"
+
+.field public static final S0:Ljava/lang/String; = "ask.order"
+
+.field public static final T:Ljava/lang/String; = "play.music.previous"
+
+.field public static final T0:Ljava/lang/String; = "ask.order.cancel"
+
+.field public static final U:Ljava/lang/String; = "play.news.previous"
+
+.field public static final U0:Ljava/lang/String; = "ask.order.list"
+
+.field public static final V:Ljava/lang/String; = "play.channel.previous"
+
+.field public static final V0:Ljava/lang/String; = "ask.order.balance"
+
+.field public static final W:Ljava/lang/String; = "play.episode.previous"
+
+.field public static final W0:Ljava/lang/String; = "result.order"
+
+.field public static final X:Ljava/lang/String; = "play.radio.previous"
+
+.field public static final X0:Ljava/lang/String; = "result.order.cancel"
+
+.field public static final Y:Ljava/lang/String; = "play.podcast.previous"
+
+.field public static final Y0:Ljava/lang/String; = "result.order.validation"
+
+.field public static final Z:Ljava/lang/String; = "play.podcast.episode.previous"
+
+.field public static final Z0:Ljava/lang/String; = "."
+
+.field public static final a:Ljava/lang/String; = "iot"
+
+.field public static final a0:Ljava/lang/String; = "play.bluetooth.previous"
+
+.field public static final a1:Ljava/lang/String; = "resume"
+
+.field public static final b:Ljava/lang/String; = "beep"
+
+.field public static final b0:Ljava/lang/String; = "read.msg.previous"
+
+.field public static final b1:Ljava/lang/String; = "play"
+
+.field public static final c:Ljava/lang/String; = "noop"
+
+.field public static final c0:Ljava/lang/String; = "next"
+
+.field public static final c1:Ljava/lang/String; = "rewind"
+
+.field public static final d:Ljava/lang/String; = "set.wakeupword"
+
+.field public static final d0:Ljava/lang/String; = "play.music.next"
+
+.field public static final e:Ljava/lang/String; = "oos"
+
+.field public static final e0:Ljava/lang/String; = "play.news.next"
+
+.field public static final f:Ljava/lang/String; = "ood"
+
+.field public static final f0:Ljava/lang/String; = "play.channel.next"
+
+.field public static final g:Ljava/lang/String; = "error"
+
+.field public static final g0:Ljava/lang/String; = "play.episode.next"
+
+.field public static final h:Ljava/lang/String; = "usd"
+
+.field public static final h0:Ljava/lang/String; = "play.radio.next"
+
+.field public static final i:Ljava/lang/String; = "basic"
+
+.field public static final i0:Ljava/lang/String; = "play.podcast.next"
+
+.field public static final j:Ljava/lang/String; = "basic.list"
+
+.field public static final j0:Ljava/lang/String; = "play.podcast.episode.next"
+
+.field public static final k:Ljava/lang/String; = "search.phone"
+
+.field public static final k0:Ljava/lang/String; = "play.bluetooth.next"
+
+.field public static final l:Ljava/lang/String; = "noti.emergency"
+
+.field public static final l0:Ljava/lang/String; = "read.msg.next"
+
+.field public static final m:Ljava/lang/String; = "play.music"
+
+.field public static final m0:Ljava/lang/String; = "continue"
+
+.field public static final n:Ljava/lang/String; = "play.news"
+
+.field public static final n0:Ljava/lang/String; = "continue.music"
+
+.field public static final o:Ljava/lang/String; = "play.podcast"
+
+.field public static final o0:Ljava/lang/String; = "resume.news"
+
+.field public static final p:Ljava/lang/String; = "play.radio"
+
+.field public static final p0:Ljava/lang/String; = "resume.radio"
+
+.field public static final q:Ljava/lang/String; = "play.media.audio"
+
+.field public static final q0:Ljava/lang/String; = "resume.podcast"
+
+.field public static final r:Ljava/lang/String; = "alarm.set"
+
+.field public static final r0:Ljava/lang/String; = "repeat"
+
+.field public static final s:Ljava/lang/String; = "alarm.sync"
+
+.field public static final s0:Ljava/lang/String; = "repeat.music"
+
+.field public static final t:Ljava/lang/String; = "alarm.snooze.set"
+
+.field public static final t0:Ljava/lang/String; = "rewind.news"
+
+.field public static final u:Ljava/lang/String; = "alarm.cancel"
+
+.field public static final u0:Ljava/lang/String; = "rewind.radio"
+
+.field public static final v:Ljava/lang/String; = "alarm.play.music"
+
+.field public static final v0:Ljava/lang/String; = "rewind.podcast"
+
+.field public static final w:Ljava/lang/String; = "timer.set"
+
+.field public static final w0:Ljava/lang/String; = "vol.up"
+
+.field public static final x:Ljava/lang/String; = "timer.cancel"
+
+.field public static final x0:Ljava/lang/String; = "vol.down"
+
+.field public static final y:Ljava/lang/String; = "sleeptimer.set"
+
+.field public static final y0:Ljava/lang/String; = "vol.set"
+
+.field public static final z:Ljava/lang/String; = "sleeptimer.cancel"
+
+.field public static final z0:Ljava/lang/String; = "mute"
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "activity"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string/jumbo v0, "\uc804\uccb4"
-
-    const-string v1, "SK \uc5d0\ub108\uc9c0"
-
-    const-string/jumbo v2, "\uc5d0\uc2a4\uc624\uc77c"
-
-    const-string v3, "GS \uce7c\ud14d\uc2a4"
-
-    const-string/jumbo v4, "\ud604\ub300 \uc624\uc77c\ubc45\ud06c"
-
-    const-string/jumbo v5, "\uae30\ud0c0 \uc8fc\uc720\uc18c"
-
-    .line 2
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ljc/a;->i:[Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    .line 3
-    iput-object v0, p0, Ljc/a;->k:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    .line 4
-    iput-boolean v0, p0, Ljc/a;->s:Z
-
-    .line 5
-    iput-boolean v0, p0, Ljc/a;->t:Z
-
-    .line 6
-    iput v0, p0, Ljc/a;->u:I
-
-    .line 7
-    iput-boolean v0, p0, Ljc/a;->v:Z
-
-    .line 8
-    iput-boolean v0, p0, Ljc/a;->w:Z
-
-    .line 9
-    iput-object p1, p0, Ljc/a;->m:Landroid/app/Activity;
-
     return-void
 .end method
 
-
-# virtual methods
-.method public A()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Ljc/a;->s:Z
-
-    return v0
-.end method
-
-.method public B()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Ljc/a;->v:Z
-
-    return v0
-.end method
-
-.method public C()Z
-    .locals 1
-
-    .line 1
-    iget-boolean v0, p0, Ljc/a;->t:Z
-
-    return v0
-.end method
-
-.method public D(I)V
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "feulType"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Ljc/a;->g()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->J(Ljava/util/ArrayList;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Ljc/a;->b()V
-
-    .line 4
-    :goto_0
-    invoke-virtual {p0}, Ljc/a;->e()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/skt/tmap/data/AroundInfoListItem;
-
-    const/4 v2, 0x2
-
-    if-ne p1, v2, :cond_2
-
-    .line 5
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "4"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 6
-    invoke-virtual {p0}, Ljc/a;->g()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v2, 0x3
-
-    if-ne p1, v2, :cond_3
-
-    .line 7
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "6"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 8
-    invoke-virtual {p0}, Ljc/a;->g()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 9
-    :cond_3
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "3"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x4
-
-    if-ne p1, v2, :cond_4
-
-    .line 10
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getHighHhPrice()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_1
-
-    .line 11
-    invoke-virtual {p0}, Ljc/a;->g()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 12
-    :cond_4
-    invoke-virtual {p0}, Ljc/a;->g()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_1
-
-    :cond_5
-    return-void
-.end method
-
-.method public E(I)V
-    .locals 6
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "feulType"
-        }
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Ljc/a;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->I(Ljava/util/ArrayList;)V
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Ljc/a;->h()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    .line 4
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->K(Ljava/util/ArrayList;)V
-
-    goto :goto_0
-
-    .line 5
-    :cond_1
-    invoke-virtual {p0}, Ljc/a;->c()V
-
-    .line 6
-    :goto_0
-    invoke-virtual {p0}, Ljc/a;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_2
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/skt/tmap/data/AroundInfoListItem;
-
-    const/4 v2, 0x3
-
-    if-ne p1, v2, :cond_3
-
-    .line 7
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "6"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 8
-    invoke-virtual {p0}, Ljc/a;->h()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v2, 0x2
-
-    const-string v3, "2"
-
-    if-ne p1, v2, :cond_5
-
-    .line 9
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "1"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    .line 10
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 11
-    :cond_4
-    invoke-virtual {p0}, Ljc/a;->h()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 12
-    :cond_5
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "0"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_6
-
-    .line 13
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_6
-    const/4 v2, 0x4
-
-    if-ne p1, v2, :cond_7
-
-    .line 14
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getHighHhPrice()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_2
-
-    .line 15
-    invoke-virtual {p0}, Ljc/a;->h()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 16
-    :cond_7
-    invoke-virtual {p0}, Ljc/a;->h()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_1
-
-    :cond_8
-    return-void
-.end method
-
-.method public F(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "isAndoMode"
-        }
-    .end annotation
-
-    .line 1
-    iput-boolean p1, p0, Ljc/a;->w:Z
-
-    return-void
-.end method
-
-.method public G(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "aroundInfoListText"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->k:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public H(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "baseAllItemListAround"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->d:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public I(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "baseAllItemListRoute"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->e:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public J(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "baseItemListAround"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->f:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public K(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "baseItemListOnRoute"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->g:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public L(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "currentAroundItemList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->h:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public M([B)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "currentGPSCoord"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->o:[B
-
-    return-void
-.end method
-
-.method public N(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "fromMain"
-        }
-    .end annotation
-
-    .line 1
-    iput-boolean p1, p0, Ljc/a;->p:Z
-
-    return-void
-.end method
-
-.method public O(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "infoListType"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/a;->u:I
-
-    return-void
-.end method
-
-.method public P(I)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "position"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    invoke-static {}, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->values()[Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object v1
-
-    aget-object p1, v1, p1
-
-    iget-object p1, p1, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->reqKey:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Lyc/a;->m(Landroid/app/Activity;Ljava/lang/String;)V
-
-    .line 2
-    iget-object p1, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lyc/a;->e(Landroid/content/Context;)Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;
-
-    move-result-object p1
-
-    iget p1, p1, Lcom/skt/tmap/setting/data/enumType/SettingEnum$CarFuel;->vsmOilType:I
-
-    iput p1, p0, Ljc/a;->u:I
-
-    .line 3
-    invoke-virtual {p0}, Ljc/a;->u()Lpb/m;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 4
-    invoke-virtual {p0}, Ljc/a;->u()Lpb/m;
-
-    move-result-object p1
-
-    iget v0, p0, Ljc/a;->u:I
-
-    invoke-virtual {p1, v0}, Lpb/m;->l(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public Q(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "infoListType"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/a;->q:I
-
-    return-void
-.end method
-
-.method public R(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "itemsOnlyOnRoute"
-        }
-    .end annotation
-
-    .line 1
-    iput-boolean p1, p0, Ljc/a;->s:Z
-
-    return-void
-.end method
-
-.method public S(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "list"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    invoke-static {p1}, Lcom/skt/tmap/util/e1;->y(Ljava/util/ArrayList;)V
-
-    return-void
-.end method
-
-.method public T(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "isRouteTabSelected"
-        }
-    .end annotation
-
-    .line 1
-    iput-boolean p1, p0, Ljc/a;->v:Z
-
-    return-void
-.end method
-
-.method public U(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "routedDistance"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/a;->r:I
-
-    return-void
-.end method
-
-.method public V(I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "routeIndex"
-        }
-    .end annotation
-
-    .line 1
-    iput p1, p0, Ljc/a;->l:I
-
-    return-void
-.end method
-
-.method public W(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "startFinishTimer"
-        }
-    .end annotation
-
-    .line 1
-    iput-boolean p1, p0, Ljc/a;->t:Z
-
-    return-void
-.end method
-
-.method public X(Lpb/m;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "subMenuAdapter"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->b:Lpb/m;
-
-    return-void
-.end method
-
-.method public Y(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "titleString"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->n:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public Z(Lpb/n;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "topMenuAdapter"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->a:Lpb/n;
-
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "brand"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f1307c5
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    .line 2
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f1307c3
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    .line 3
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f1307c6
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    .line 4
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f1307c4
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public a0(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "topMenuItemList"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoTopMenuInfo;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 1
-    iput-object p1, p0, Ljc/a;->c:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->f:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c()V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->g:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public d()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->k:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public e()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->d:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->H(Ljava/util/ArrayList;)V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Ljc/a;->d:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public f()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->e:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->I(Ljava/util/ArrayList;)V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Ljc/a;->e:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public g()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->f:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public h()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->g:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->K(Ljava/util/ArrayList;)V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Ljc/a;->g:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public i(Ljava/util/ArrayList;Ljava/lang/String;)Ljava/util/ArrayList;
-    .locals 5
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "list",
-            "gasBrand"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    const-string/jumbo v0, "\uc804\uccb4"
-
-    .line 1
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    return-object p1
-
-    .line 2
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 3
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_2
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/skt/tmap/data/AroundInfoListItem;
-
-    .line 4
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getStId()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 5
-    invoke-virtual {v1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getDataKind()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v2, :cond_4
-
-    .line 6
-    invoke-virtual {p0}, Ljc/a;->B()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    if-nez v3, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    :goto_1
-    if-eqz p2, :cond_7
-
-    const-string/jumbo v4, "\uae30\ud0c0"
-
-    .line 7
-    invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    .line 8
-    invoke-virtual {p0}, Ljc/a;->B()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    .line 9
-    invoke-virtual {p0, v2}, Ljc/a;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 10
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_5
-    const-string v4, "3"
-
-    .line 11
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_6
-
-    const-string v4, "4"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 12
-    :cond_6
-    invoke-virtual {p0, v2}, Ljc/a;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 13
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 14
-    :cond_7
-    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 15
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_8
-    return-object v0
-.end method
-
-.method public j()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->h:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljc/a;->L(Ljava/util/ArrayList;)V
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Ljc/a;->h:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public k()[B
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->o:[B
-
-    return-object v0
-.end method
-
-.method public l()Ljava/util/ArrayList;
+.method public static a(Ljava/lang/String;)Z
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoListItem;",
-            ">;"
-        }
-    .end annotation
 
     .line 1
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    .line 2
-    iget-object v1, p0, Ljc/a;->h:Ljava/util/ArrayList;
+    move-result v0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/16 v2, 0x14
-
-    if-le v2, v1, :cond_0
-
-    iget-object v1, p0, Ljc/a;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    .line 3
-    :cond_0
-    iget-object v1, p0, Ljc/a;->h:Ljava/util/ArrayList;
-
-    if-eqz v1, :cond_1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v2, :cond_1
-
-    .line 4
-    iget-object v3, p0, Ljc/a;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/skt/tmap/data/AroundInfoListItem;
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public m()[Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Ljc/a;->i:[Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public n()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Ljc/a;->u:I
-
-    return v0
-.end method
-
-.method public o()I
-    .locals 1
-
-    .line 1
-    iget v0, p0, Ljc/a;->q:I
-
-    return v0
-.end method
-
-.method public p()V
-    .locals 3
-
-    .line 1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 2
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v1, v2}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getNaviDataInfo(I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lcom/skt/tmap/engine/navigation/data/EVStationInfo;
-
-    if-eqz v1, :cond_0
-
-    .line 3
-    invoke-virtual {p0}, Ljc/a;->s()I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/e1;->w([Lcom/skt/tmap/engine/navigation/data/EVStationInfo;I)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 4
-    :cond_0
-    invoke-static {}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getInstance()Lcom/skt/tmap/engine/navigation/TmapNavigation;
-
-    move-result-object v1
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/skt/tmap/engine/navigation/TmapNavigation;->getNaviDataInfo(I)[Ljava/lang/Object;
+    const/4 v3, -0x1
 
-    move-result-object v1
+    sparse-switch v0, :sswitch_data_0
 
-    check-cast v1, [Lcom/skt/tmap/engine/navigation/data/GasStationInfo;
+    goto/16 :goto_0
 
-    if-eqz v1, :cond_1
+    :sswitch_0
+    const-string v0, "connect.call"
 
-    .line 5
-    invoke-virtual {p0}, Ljc/a;->s()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result p0
 
-    invoke-static {v1, v2}, Lcom/skt/tmap/util/e1;->q([Lcom/skt/tmap/engine/navigation/data/GasStationInfo;I)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 6
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_3
-
-    .line 7
-    invoke-virtual {p0}, Ljc/a;->f()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    if-nez v1, :cond_2
-
-    .line 8
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p0, v1}, Ljc/a;->I(Ljava/util/ArrayList;)V
+    if-nez p0, :cond_0
 
     goto :goto_0
 
-    .line 9
+    :cond_0
+    const/4 v3, 0x7
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "reject.call"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "accept.call"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
     :cond_2
-    invoke-virtual {p0}, Ljc/a;->f()Ljava/util/ArrayList;
+    const/4 v3, 0x5
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    :sswitch_3
+    const-string v0, "retry.call.missed"
 
-    .line 10
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "connect.call.cscenter"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "ask.caller"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "retry.call"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    move v3, v1
+
+    goto :goto_0
+
+    :sswitch_7
+    const-string v0, "connect.call.emergency"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    move v3, v2
+
     :goto_0
-    invoke-virtual {p0}, Ljc/a;->f()Ljava/util/ArrayList;
+    packed-switch v3, :pswitch_data_0
 
-    move-result-object v1
+    return v2
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    :pswitch_0
+    return v1
 
-    .line 11
-    invoke-virtual {p0}, Ljc/a;->n()I
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x744edc7b -> :sswitch_7
+        -0x468c061c -> :sswitch_6
+        -0x3a787760 -> :sswitch_5
+        -0x372227af -> :sswitch_4
+        0x19ba65e5 -> :sswitch_3
+        0x22bee384 -> :sswitch_2
+        0x4cafab4d -> :sswitch_1
+        0x6f5b3ce2 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 3
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "continue"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Ljc/a;->E(I)V
+    const/4 v1, 0x1
 
-    :cond_3
-    return-void
-.end method
+    if-nez v0, :cond_2
 
-.method public q()[Ljava/lang/String;
-    .locals 1
+    .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 1
-    iget-object v0, p0, Ljc/a;->j:[Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "continue."
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    array-length v0, v0
+    return v1
+
+    .line 4
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "resume."
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 5
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    return v1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_2
+    return v1
+.end method
+
+.method public static c(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 4
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "next"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_1
+
+    .line 2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "play."
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "."
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 3
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return v2
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v2
+.end method
+
+.method public static d(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 3
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "pause"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
 
     if-nez v0, :cond_1
 
     .line 2
-    :cond_0
-    iget-object v0, p0, Ljc/a;->m:Landroid/app/Activity;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lyc/a;->g(Landroid/content/Context;)[Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v0
+    const-string v2, "pause."
 
-    iput-object v0, p0, Ljc/a;->j:[Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     .line 3
-    :cond_1
-    iget-object v0, p0, Ljc/a;->j:[Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v1
 .end method
 
-.method public r(Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;)Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
-    .locals 3
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "searchData"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+.method public static e(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 4
 
     .line 1
-    :cond_0
-    new-instance v0, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;-><init>()V
+    const-string v0, "previous"
 
-    .line 2
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getRpFlag()B
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setRPFlag(B)V
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_1
+
+    .line 2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "play."
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "."
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     .line 3
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getPkey()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result p0
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPkey(Ljava/lang/String;)V
+    if-eqz p0, :cond_0
+
+    return v2
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v2
+.end method
+
+.method public static f(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 3
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "repeat"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_2
+
+    .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "repeat."
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return v1
 
     .line 4
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getPoiId()Ljava/lang/String;
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
+    const-string v2, "rewind."
 
-    move-result-object v1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPOIId([B)V
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     .line 5
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getNavSeq()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result p0
 
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setNavSeq(Ljava/lang/String;)V
+    if-eqz p0, :cond_1
 
-    .line 6
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getNavX1()Ljava/lang/String;
+    return v1
 
-    move-result-object v1
+    :cond_1
+    const/4 p0, 0x0
 
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getNavY1()Ljava/lang/String;
+    return p0
 
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setPosString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 7
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getCenterX()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getCenterY()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setCenterString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 8
-    invoke-virtual {p1}, Lcom/skt/tmap/network/ndds/dto/poi/search/PoiSearches;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setfurName([B)V
-
-    .line 9
-    iget-object v1, p0, Ljc/a;->m:Landroid/app/Activity;
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, p1}, Lcom/skt/tmap/util/a;->b(Landroid/content/Context;Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setaddress([B)V
-
-    .line 10
-    invoke-static {p1}, Lcom/skt/tmap/util/a;->g(Lcom/skt/tmap/network/ndds/dto/base/PoiBaseInterface;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/skt/tmap/util/v0;->d(Ljava/lang/String;)[B
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/navigation/network/RouteSearchData;->setroadName([B)V
-
-    return-object v0
+    :cond_2
+    return v1
 .end method
 
-.method public s()I
+.method public static g(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 4
+
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "stop.media.audio"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "close"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v2
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "stop"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v3, v1
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "stop."
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 3
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    return v2
+
+    :cond_3
+    return v1
+
+    :pswitch_0
+    return v2
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x360802 -> :sswitch_2
+        0x5a5ddf8 -> :sswitch_1
+        0x62154960 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static h(Ljava/lang/String;)Z
+    .locals 4
+
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "read.content.info"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "pause"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x5
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "stop"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "next"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "continue"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "repeat"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v3, v1
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "previous"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    move v3, v2
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    return v2
+
+    :pswitch_0
+    return v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x4bec4509 -> :sswitch_6
+        -0x37b3d265 -> :sswitch_5
+        -0x21ced359 -> :sswitch_4
+        0x338af3 -> :sswitch_3
+        0x360802 -> :sswitch_2
+        0x65825f6 -> :sswitch_1
+        0x3b5fe25b -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static i(Ljava/lang/String;)Z
+    .locals 4
+
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "reply.msg.reject"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "send.msg.arrival_time"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "send.msg"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "send.msg.cur_loc"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v3, v1
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "read.msg"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v3, v2
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    return v2
+
+    :pswitch_0
+    return v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x33c6d0d7 -> :sswitch_4
+        0x19fe55ee -> :sswitch_3
+        0x4a495c1b -> :sswitch_2
+        0x526c4e46 -> :sswitch_1
+        0x6e282430 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static j(Ljava/lang/String;)Z
+    .locals 4
+
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "ask.order"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "result.order.validation"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x5
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "ask.order.cancel"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "ask.order.balance"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "ask.order.list"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "result.order"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v3, v1
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "result.order.cancel"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    move v3, v2
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    return v2
+
+    :pswitch_0
+    return v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6a50acb5 -> :sswitch_6
+        -0x34430dc3 -> :sswitch_5
+        -0x2362ae2d -> :sswitch_4
+        0x8664587 -> :sswitch_3
+        0x1ac1566f -> :sswitch_2
+        0x48eb9cca -> :sswitch_1
+        0x49206f99 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static k(Ljava/lang/String;)Z
     .locals 1
 
     .line 1
-    iget v0, p0, Ljc/a;->r:I
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    const-string v0, "next"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "read.msg.next"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public t()I
+.method public static l(Ljava/lang/String;)Z
     .locals 1
 
     .line 1
-    iget v0, p0, Ljc/a;->l:I
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    const-string v0, "previous"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "read.msg.previous"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public u()Lpb/m;
-    .locals 1
+.method public static m(Ljava/lang/String;)Z
+    .locals 4
 
     .line 1
-    iget-object v0, p0, Ljc/a;->b:Lpb/m;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "stop.msg"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "close"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "stop"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v3, v1
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "cancel"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v3, v2
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    return v2
+
+    :pswitch_0
+    return v1
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x5185d186 -> :sswitch_3
+        0x360802 -> :sswitch_2
+        0x5a5ddf8 -> :sswitch_1
+        0x6624c795 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public v()Ljava/lang/String;
-    .locals 1
+.method public static n(Ljava/lang/String;)Z
+    .locals 4
 
     .line 1
-    iget-object v0, p0, Ljc/a;->n:Ljava/lang/String;
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public w()Lpb/n;
-    .locals 1
+    const/4 v1, 0x0
 
-    .line 1
-    iget-object v0, p0, Ljc/a;->a:Lpb/n;
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    return v1
 
-.method public x()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/skt/tmap/data/AroundInfoTopMenuInfo;",
-            ">;"
-        }
-    .end annotation
+    .line 2
+    :cond_0
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1
-    iget-object v0, p0, Ljc/a;->c:Ljava/util/ArrayList;
+    const/4 v0, -0x1
 
-    return-object v0
-.end method
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-.method public y()Z
-    .locals 1
+    move-result v2
 
-    .line 1
-    iget-boolean v0, p0, Ljc/a;->w:Z
+    const/4 v3, 0x1
 
-    return v0
-.end method
+    sparse-switch v2, :sswitch_data_0
 
-.method public z()Z
-    .locals 1
+    goto :goto_0
 
-    .line 1
-    iget-boolean v0, p0, Ljc/a;->p:Z
+    :sswitch_0
+    const-string/jumbo v2, "vol.set"
 
-    return v0
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v2, "mute"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string/jumbo v2, "vol.up"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v2, "cancel.mute"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v0, v3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string/jumbo v2, "vol.down"
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v0, v1
+
+    :goto_0
+    packed-switch v0, :pswitch_data_0
+
+    return v1
+
+    :pswitch_0
+    return v3
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x735edf23 -> :sswitch_4
+        -0x6062a6f3 -> :sswitch_3
+        -0x3056226a -> :sswitch_2
+        0x335219 -> :sswitch_1
+        0x2591ccc7 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

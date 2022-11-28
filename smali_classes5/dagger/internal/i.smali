@@ -3,7 +3,7 @@
 .source "MapProviderFactory.java"
 
 # interfaces
-.implements Lsg/a;
+.implements Lwi/a;
 
 
 # annotations
@@ -22,12 +22,12 @@
         ">",
         "Ldagger/internal/a<",
         "TK;TV;",
-        "Loi/a<",
+        "Lsk/a<",
         "TV;>;>;",
-        "Lsg/a<",
+        "Lwi/a<",
         "Ljava/util/Map<",
         "TK;",
-        "Loi/a<",
+        "Lsk/a<",
         "TV;>;>;>;"
     }
 .end annotation
@@ -41,7 +41,7 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;)V"
         }
     .end annotation
@@ -94,7 +94,7 @@
             "()",
             "Ljava/util/Map<",
             "TK;",
-            "Loi/a<",
+            "Lsk/a<",
             "TV;>;>;"
         }
     .end annotation

@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field private a:Landroidx/browser/customtabs/d;
+.field private a:Landroidx/browser/customtabs/CustomTabsSession;
 
 .field private b:Landroidx/browser/customtabs/CustomTabsClient;
 
-.field private c:Landroidx/browser/customtabs/c;
+.field private c:Landroidx/browser/customtabs/d;
 
 .field private d:Ltid/sktelecom/ssolib/c/a$a;
 
@@ -37,7 +37,7 @@
 
 
 # virtual methods
-.method public a()Landroidx/browser/customtabs/d;
+.method public a()Landroidx/browser/customtabs/CustomTabsSession;
     .locals 3
 
     .line 6
@@ -48,13 +48,13 @@
     if-nez v0, :cond_0
 
     .line 7
-    iput-object v1, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/d;
+    iput-object v1, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/CustomTabsSession;
 
     goto :goto_0
 
     .line 8
     :cond_0
-    iget-object v2, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/d;
+    iget-object v2, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/CustomTabsSession;
 
     if-nez v2, :cond_1
 
@@ -63,16 +63,16 @@
 
     invoke-direct {v2, v1}, Ltid/sktelecom/ssolib/c/a$b;-><init>(Ltid/sktelecom/ssolib/c/a$1;)V
 
-    invoke-virtual {v0, v2}, Landroidx/browser/customtabs/CustomTabsClient;->f(Landroidx/browser/customtabs/a;)Landroidx/browser/customtabs/d;
+    invoke-virtual {v0, v2}, Landroidx/browser/customtabs/CustomTabsClient;->k(Landroidx/browser/customtabs/b;)Landroidx/browser/customtabs/CustomTabsSession;
 
     move-result-object v0
 
-    iput-object v0, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/d;
+    iput-object v0, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/CustomTabsSession;
 
     .line 10
     :cond_1
     :goto_0
-    iget-object v0, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/d;
+    iget-object v0, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/CustomTabsSession;
 
     return-object v0
 .end method
@@ -81,7 +81,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Ltid/sktelecom/ssolib/c/a;->c:Landroidx/browser/customtabs/c;
+    iget-object v0, p0, Ltid/sktelecom/ssolib/c/a;->c:Landroidx/browser/customtabs/d;
 
     if-nez v0, :cond_0
 
@@ -97,10 +97,10 @@
     iput-object p1, p0, Ltid/sktelecom/ssolib/c/a;->b:Landroidx/browser/customtabs/CustomTabsClient;
 
     .line 4
-    iput-object p1, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/d;
+    iput-object p1, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/CustomTabsSession;
 
     .line 5
-    iput-object p1, p0, Ltid/sktelecom/ssolib/c/a;->c:Landroidx/browser/customtabs/c;
+    iput-object p1, p0, Ltid/sktelecom/ssolib/c/a;->c:Landroidx/browser/customtabs/d;
 
     return-void
 .end method
@@ -114,7 +114,7 @@
     const-wide/16 v0, 0x0
 
     .line 13
-    invoke-virtual {p1, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->g(J)Z
+    invoke-virtual {p1, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->n(J)Z
 
     .line 14
     iget-object p1, p0, Ltid/sktelecom/ssolib/c/a;->d:Ltid/sktelecom/ssolib/c/a$a;
@@ -145,7 +145,7 @@
     iput-object v0, p0, Ltid/sktelecom/ssolib/c/a;->b:Landroidx/browser/customtabs/CustomTabsClient;
 
     .line 6
-    iput-object v0, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/d;
+    iput-object v0, p0, Ltid/sktelecom/ssolib/c/a;->a:Landroidx/browser/customtabs/CustomTabsSession;
 
     .line 7
     iget-object v0, p0, Ltid/sktelecom/ssolib/c/a;->d:Ltid/sktelecom/ssolib/c/a$a;
@@ -186,10 +186,10 @@
 
     invoke-direct {v1, p0}, Ltid/sktelecom/ssolib/c/c;-><init>(Ltid/sktelecom/ssolib/c/d;)V
 
-    iput-object v1, p0, Ltid/sktelecom/ssolib/c/a;->c:Landroidx/browser/customtabs/c;
+    iput-object v1, p0, Ltid/sktelecom/ssolib/c/a;->c:Landroidx/browser/customtabs/d;
 
     .line 4
-    invoke-static {p1, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->a(Landroid/content/Context;Ljava/lang/String;Landroidx/browser/customtabs/c;)Z
+    invoke-static {p1, v0, v1}, Landroidx/browser/customtabs/CustomTabsClient;->b(Landroid/content/Context;Ljava/lang/String;Landroidx/browser/customtabs/d;)Z
 
     move-result p1
 

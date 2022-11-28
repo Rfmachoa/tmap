@@ -3,7 +3,7 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Lci/r;
+.implements Lgk/g;
 
 
 # static fields
@@ -33,14 +33,12 @@
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final accept(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcom/amplifyframework/datastore/storage/StorageItemChange;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/StorageObserver;->c(Lcom/amplifyframework/datastore/storage/StorageItemChange;)Z
+    invoke-static {p1}, Lcom/amplifyframework/datastore/syncengine/StorageObserver;->d(Ljava/lang/Throwable;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

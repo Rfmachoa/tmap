@@ -44,7 +44,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -53,17 +53,17 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0115
+    const p1, 0x7f0d011d
 
     .line 3
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->setContentView(I)V
 
-    const p1, 0x7f0a0b27
+    const p1, 0x7f0a0bad
 
     .line 4
     invoke-virtual {p0, p1}, Lcom/skt/tmap/activity/BaseActivity;->initTmapBack(I)V
 
-    const p1, 0x7f0a01c4
+    const p1, 0x7f0a01df
 
     .line 5
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -81,7 +81,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a01c9
+    const p1, 0x7f0a01e4
 
     .line 7
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
@@ -100,19 +100,19 @@
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 9
-    invoke-static {p0}, Lcom/skt/tmap/util/e;->r(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/skt/tmap/util/g;->u(Landroid/content/Context;)V
 
     .line 10
     invoke-virtual {p0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/service/LoginService;->Y0(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/skt/tmap/service/LoginService;->m1(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 
     .line 11
-    invoke-static {p0, p1}, Lcom/skt/tmap/util/TmapSharedPreference;->L1(Landroid/content/Context;Z)V
+    invoke-static {p0, p1}, Lcom/skt/tmap/util/TmapSharedPreference;->T1(Landroid/content/Context;Z)V
 
     const/4 p1, 0x0
 
@@ -126,20 +126,20 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/skt/tmap/util/k;->s(Ljava/io/File;Landroid/content/Context;)V
+    invoke-static {v0, v1}, Lcom/skt/tmap/util/m;->s(Ljava/io/File;Landroid/content/Context;)V
 
     .line 14
-    invoke-static {}, Lcom/skt/tmap/util/g;->h()V
+    invoke-static {}, Lcom/skt/tmap/util/i;->h()V
 
     .line 15
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 16
-    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->F1(Z)V
+    invoke-virtual {v0, p1}, Lcom/skt/tmap/engine/TmapAiManager;->H1(Z)V
 
     .line 17
     :cond_1

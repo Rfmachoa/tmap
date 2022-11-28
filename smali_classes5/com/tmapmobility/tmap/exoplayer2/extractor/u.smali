@@ -1,217 +1,286 @@
 .class public final Lcom/tmapmobility/tmap/exoplayer2/extractor/u;
 .super Ljava/lang/Object;
-.source "IndexSeekMap.java"
+.source "GaplessInfoHolder.java"
 
-# interfaces
-.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+
+# static fields
+.field public static final c:Ljava/lang/String; = "com.apple.iTunes"
+
+.field public static final d:Ljava/lang/String; = "iTunSMPB"
+
+.field public static final e:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final d:[J
+.field public a:I
 
-.field public final e:[J
-
-.field public final f:J
-
-.field public final g:Z
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>([J[JJ)V
-    .locals 8
+.method public static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "^ [0-9a-fA-F]{8} ([0-9a-fA-F]{8}) ([0-9a-fA-F]{8})"
+
+    .line 1
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, -0x1
+
     .line 2
-    array-length v0, p1
-
-    array-length v1, p2
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v3
-
-    :goto_0
-    invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->a(Z)V
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->a:I
 
     .line 3
-    array-length v0, p2
-
-    if-lez v0, :cond_1
-
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v3
-
-    .line 4
-    :goto_1
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->g:Z
-
-    if-eqz v1, :cond_2
-
-    .line 5
-    aget-wide v4, p2, v3
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v1, v4, v6
-
-    if-lez v1, :cond_2
-
-    add-int/lit8 v1, v0, 0x1
-
-    .line 6
-    new-array v4, v1, [J
-
-    iput-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->d:[J
-
-    .line 7
-    new-array v1, v1, [J
-
-    iput-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:[J
-
-    .line 8
-    invoke-static {p1, v3, v4, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 9
-    invoke-static {p2, v3, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_2
-
-    .line 10
-    :cond_2
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->d:[J
-
-    .line 11
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:[J
-
-    .line 12
-    :goto_2
-    iput-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->f:J
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(J)Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;
-    .locals 8
-
-    .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->g:Z
-
-    if-nez v0, :cond_0
-
-    .line 2
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;
-
-    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/y;->c:Lcom/tmapmobility/tmap/exoplayer2/extractor/y;
-
-    invoke-direct {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/y;)V
-
-    return-object p1
-
-    .line 3
-    :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:[J
-
-    const/4 v1, 0x1
-
-    .line 4
-    invoke-static {v0, p1, p2, v1, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->j([JJZZ)I
-
-    move-result v0
-
-    .line 5
-    new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/extractor/y;
-
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:[J
-
-    aget-wide v4, v3, v0
-
-    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->d:[J
-
-    aget-wide v6, v3, v0
-
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/tmapmobility/tmap/exoplayer2/extractor/y;-><init>(JJ)V
-
-    .line 6
-    iget-wide v3, v2, Lcom/tmapmobility/tmap/exoplayer2/extractor/y;->a:J
-
-    cmp-long p1, v3, p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:[J
-
-    array-length p1, p1
-
-    sub-int/2addr p1, v1
-
-    if-ne v0, p1, :cond_1
-
-    goto :goto_0
-
-    .line 7
-    :cond_1
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/y;
-
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:[J
-
-    add-int/2addr v0, v1
-
-    aget-wide v3, p2, v0
-
-    iget-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->d:[J
-
-    aget-wide v0, p2, v0
-
-    invoke-direct {p1, v3, v4, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/y;-><init>(JJ)V
-
-    .line 8
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;
-
-    invoke-direct {p2, v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/y;Lcom/tmapmobility/tmap/exoplayer2/extractor/y;)V
-
-    return-object p2
-
-    .line 9
-    :cond_2
-    :goto_0
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;
-
-    invoke-direct {p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$a;-><init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/y;)V
-
-    return-object p1
-.end method
-
-.method public getDurationUs()J
+.method public a()Z
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->f:J
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->a:I
 
-    return-wide v0
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->b:I
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
-.method public isSeekable()Z
-    .locals 1
+.method public final b(Ljava/lang/String;)Z
+    .locals 4
 
     .line 1
-    iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->g:Z
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->e:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p1
+
+    .line 2
+    invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 3
+    :try_start_0
+    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    const/16 v2, 0x10
+
+    invoke-static {v1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/4 v3, 0x2
+
+    .line 4
+    invoke-virtual {p1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    if-gtz v1, :cond_0
+
+    if-lez p1, :cond_1
+
+    .line 5
+    :cond_0
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->a:I
+
+    .line 6
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->b:I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     return v0
+
+    :catch_0
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public c(Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;)Z
+    .locals 7
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    .line 1
+    :goto_0
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->f()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_2
+
+    .line 2
+    invoke-virtual {p1, v1}, Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata;->e(I)Lcom/tmapmobility/tmap/exoplayer2/metadata/Metadata$Entry;
+
+    move-result-object v2
+
+    .line 3
+    instance-of v3, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/CommentFrame;
+
+    const-string v4, "iTunSMPB"
+
+    const/4 v5, 0x1
+
+    if-eqz v3, :cond_0
+
+    .line 4
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/CommentFrame;
+
+    .line 5
+    iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/CommentFrame;->c:Ljava/lang/String;
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v2, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/CommentFrame;->d:Ljava/lang/String;
+
+    .line 6
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->b(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    return v5
+
+    .line 7
+    :cond_0
+    instance-of v3, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/InternalFrame;
+
+    if-eqz v3, :cond_1
+
+    .line 8
+    check-cast v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/InternalFrame;
+
+    .line 9
+    iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/InternalFrame;->b:Ljava/lang/String;
+
+    const-string v6, "com.apple.iTunes"
+
+    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/InternalFrame;->c:Ljava/lang/String;
+
+    .line 10
+    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v2, v2, Lcom/tmapmobility/tmap/exoplayer2/metadata/id3/InternalFrame;->d:Ljava/lang/String;
+
+    .line 11
+    invoke-virtual {p0, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->b(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    return v5
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return v0
+.end method
+
+.method public d(I)Z
+    .locals 1
+
+    shr-int/lit8 v0, p1, 0xc
+
+    and-int/lit16 p1, p1, 0xfff
+
+    if-gtz v0, :cond_1
+
+    if-lez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 1
+    :cond_1
+    :goto_0
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->a:I
+
+    .line 2
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/u;->b:I
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

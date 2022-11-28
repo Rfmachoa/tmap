@@ -5,13 +5,13 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nTmapPlusActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TmapPlusActivity.kt\ncom/skt/tmap/activity/TmapPlusActivity\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,39:1\n1#2:40\n*E\n"
+    value = "SMAP\nTmapPlusActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TmapPlusActivity.kt\ncom/skt/tmap/activity/TmapPlusActivity\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,33:1\n1#2:34\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     bv = {}
     d1 = {
-        "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0012\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0014J\u0008\u0010\u0006\u001a\u00020\u0004H\u0016\u00a8\u0006\t"
+        "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u0012\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0014\u00a8\u0006\u0008"
     }
     d2 = {
         "Lcom/skt/tmap/activity/TmapPlusActivity;",
@@ -20,7 +20,6 @@
         "savedInstanceState",
         "Lkotlin/d1;",
         "onCreate",
-        "finish",
         "<init>",
         "()V",
         "tmap_android_phoneKUShip"
@@ -28,23 +27,44 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
 
 # instance fields
-.field public a:Llb/g8;
+.field public a:Lid/y9;
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+.end field
 
-.field public b:Ljava/util/HashMap;
+.field public b:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/Integer;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/Map;
+
     invoke-direct {p0}, Lcom/skt/tmap/activity/BaseWebViewActivity;-><init>()V
 
     return-void
@@ -52,75 +72,55 @@
 
 
 # virtual methods
-.method public B5()V
+.method public J5()V
     .locals 1
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/Map;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    :cond_0
     return-void
 .end method
 
-.method public C5(I)Landroid/view/View;
+.method public K5(I)Landroid/view/View;
     .locals 2
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/HashMap;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/HashMap;
-
-    :cond_0
-    iget-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroid/view/View;
+    check-cast v1, Landroid/view/View;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->b:Ljava/util/HashMap;
+    if-eqz v1, :cond_0
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
 
     :cond_1
-    return-object v0
-.end method
-
-.method public finish()V
-    .locals 1
-
-    .line 1
-    sget-object v0, Lkc/d;->d:Lkc/d;
-
-    invoke-virtual {v0, p0}, Lkc/d;->c(Landroid/content/Context;)V
-
-    .line 2
-    invoke-super {p0}, Lcom/skt/tmap/activity/BaseActivity;->finish()V
-
-    return-void
+    :goto_0
+    return-object v1
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -136,11 +136,7 @@
     .line 2
     iget-object p1, p0, Lcom/skt/tmap/activity/BaseActivity;->basePresenter:Lcom/skt/tmap/mvp/presenter/BasePresenter;
 
-    const-string v0, "basePresenter"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->B()Z
+    invoke-virtual {p1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->D()Z
 
     move-result p1
 
@@ -149,50 +145,56 @@
     return-void
 
     :cond_0
-    const p1, 0x7f0d0211
+    const p1, 0x7f0d0212
 
     .line 3
     invoke-static {p0, p1}, Landroidx/databinding/h;->l(Landroid/app/Activity;I)Landroidx/databinding/ViewDataBinding;
 
     move-result-object p1
 
-    check-cast p1, Llb/g8;
+    check-cast p1, Lid/y9;
 
-    iput-object p1, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->a:Llb/g8;
+    iput-object p1, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->a:Lid/y9;
+
+    const/4 v0, 0x0
 
     if-eqz p1, :cond_1
 
     .line 4
-    iget-object p1, p1, Llb/g8;->j1:Landroid/view/View;
-
-    if-eqz p1, :cond_1
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 5
-    :cond_1
-    iget-object p1, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->a:Llb/g8;
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p1, Llb/g8;->k1:Lcom/skt/tmap/view/TmapWebView;
+    iget-object p1, p1, Lid/y9;->l1:Landroid/view/View;
 
     goto :goto_0
 
-    :cond_2
-    const/4 p1, 0x0
+    :cond_1
+    move-object p1, v0
 
     :goto_0
-    iput-object p1, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/16 v1, 0x8
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 5
+    :goto_1
+    iget-object p1, p0, Lcom/skt/tmap/activity/TmapPlusActivity;->a:Lid/y9;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, p1, Lid/y9;->m1:Lcom/skt/tmap/view/TmapWebView;
+
+    :cond_3
+    iput-object v0, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
 
     .line 6
     invoke-virtual {p0}, Landroid/app/Activity;->getBaseContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/skt/tmap/util/d2;->m(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/skt/tmap/util/o2;->p(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -201,7 +203,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     const-string v1, "pageid"
 
@@ -209,7 +211,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     const-string v1, "&pageid="
 
@@ -218,20 +220,20 @@
     move-result-object p1
 
     .line 8
-    :cond_3
+    :cond_4
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    const-string/jumbo v1, "svc_mgmt_num"
+    const-string v1, "svc_mgmt_num"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     const-string v1, "&svc_mgmt_num="
 
@@ -240,20 +242,20 @@
     move-result-object p1
 
     .line 9
-    :cond_4
+    :cond_5
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    const-string/jumbo v1, "subs_prod_id"
+    const-string v1, "subs_prod_id"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     const-string v1, "&subs_prod_id="
 
@@ -262,12 +264,12 @@
     move-result-object p1
 
     .line 10
-    :cond_5
+    :cond_6
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     const-string v1, "extra"
 
@@ -275,7 +277,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     const-string v1, "&extra="
 
@@ -284,15 +286,15 @@
     move-result-object p1
 
     .line 11
-    :cond_6
+    :cond_7
     iget-object v0, p0, Lcom/skt/tmap/activity/BaseWebViewActivity;->webView:Lcom/skt/tmap/view/TmapWebView;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p0, p1, v1}, Lcom/skt/tmap/view/TmapWebView;->init(Landroid/app/Activity;Ljava/lang/String;Z)V
 
-    :cond_7
+    :cond_8
     return-void
 .end method

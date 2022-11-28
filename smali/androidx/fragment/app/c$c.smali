@@ -84,5 +84,38 @@
 
     invoke-virtual {p1}, Landroidx/fragment/app/c$l;->a()V
 
+    const/4 p1, 0x2
+
+    .line 5
+    invoke-static {p1}, Landroidx/fragment/app/FragmentManager;->W0(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "Animator from operation "
+
+    .line 6
+    invoke-static {p1}, Landroid/support/v4/media/d;->a(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    iget-object v0, p0, Landroidx/fragment/app/c$c;->d:Landroidx/fragment/app/SpecialEffectsController$Operation;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " has ended."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     return-void
 .end method

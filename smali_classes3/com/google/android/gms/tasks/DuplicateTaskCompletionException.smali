@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;
 .super Ljava/lang/IllegalStateException;
-.source "com.google.android.gms:play-services-tasks@@18.0.1"
+.source "com.google.android.gms:play-services-tasks@@18.0.2"
 
 
 # direct methods
@@ -18,7 +18,7 @@
 .end method
 
 .method public static of(Lcom/google/android/gms/tasks/Task;)Ljava/lang/IllegalStateException;
-    .locals 4
+    .locals 3
     .param p0    # Lcom/google/android/gms/tasks/Task;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -109,25 +109,11 @@
 
     const-string v2, "Complete with: "
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    .line 8
     invoke-virtual {v2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    goto :goto_1
-
-    :cond_4
-    new-instance p0, Ljava/lang/String;
-
-    invoke-direct {p0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_1
+    .line 8
     invoke-direct {v1, p0, v0}, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v1

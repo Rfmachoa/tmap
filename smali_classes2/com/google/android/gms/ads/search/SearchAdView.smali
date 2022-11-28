@@ -1,124 +1,157 @@
 .class public final Lcom/google/android/gms/ads/search/SearchAdView;
 .super Landroid/view/ViewGroup;
-.source "com.google.android.gms:play-services-ads-lite@@19.1.0"
+.source "com.google.android.gms:play-services-ads-lite@@21.3.0"
 
 
 # instance fields
-.field private final zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+.field private final zza:Lcom/google/android/gms/ads/internal/client/zzdu;
+    .annotation runtime Lorg/checkerframework/checker/initialization/qual/NotOnlyInitialized;
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
+    new-instance p1, Lcom/google/android/gms/ads/internal/client/zzdu;
+
     .line 2
-    new-instance p1, Lcom/google/android/gms/internal/ads/zzxv;
+    invoke-direct {p1, p0}, Lcom/google/android/gms/ads/internal/client/zzdu;-><init>(Landroid/view/ViewGroup;)V
 
-    invoke-direct {p1, p0}, Lcom/google/android/gms/internal/ads/zzxv;-><init>(Landroid/view/ViewGroup;)V
-
-    iput-object p1, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iput-object p1, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 3
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 4
-    new-instance p1, Lcom/google/android/gms/internal/ads/zzxv;
+    new-instance p1, Lcom/google/android/gms/ads/internal/client/zzdu;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, p2, v0}, Lcom/google/android/gms/internal/ads/zzxv;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
+    .line 4
+    invoke-direct {p1, p0, p2, v0}, Lcom/google/android/gms/ads/internal/client/zzdu;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iput-object p1, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .param p1    # Landroid/content/Context;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Landroid/util/AttributeSet;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 5
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 6
-    new-instance p1, Lcom/google/android/gms/internal/ads/zzxv;
+    new-instance p1, Lcom/google/android/gms/ads/internal/client/zzdu;
 
     const/4 p3, 0x0
 
-    invoke-direct {p1, p0, p2, p3}, Lcom/google/android/gms/internal/ads/zzxv;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
+    .line 6
+    invoke-direct {p1, p0, p2, p3}, Lcom/google/android/gms/ads/internal/client/zzdu;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iput-object p1, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final destroy()V
+.method public destroy()V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzxv;->destroy()V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzk()V
 
     return-void
 .end method
 
-.method public final getAdListener()Lcom/google/android/gms/ads/AdListener;
+.method public getAdListener()Lcom/google/android/gms/ads/AdListener;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzxv;->getAdListener()Lcom/google/android/gms/ads/AdListener;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzdu;->zza()Lcom/google/android/gms/ads/AdListener;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final getAdSize()Lcom/google/android/gms/ads/AdSize;
+.method public getAdSize()Lcom/google/android/gms/ads/AdSize;
     .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzxv;->getAdSize()Lcom/google/android/gms/ads/AdSize;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzb()Lcom/google/android/gms/ads/AdSize;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final getAdUnitId()Ljava/lang/String;
+.method public getAdUnitId()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzxv;->getAdUnitId()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzj()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final loadAd(Lcom/google/android/gms/ads/search/DynamicHeightSearchAdRequest;)V
+.method public loadAd(Lcom/google/android/gms/ads/search/DynamicHeightSearchAdRequest;)V
     .locals 2
+    .param p1    # Lcom/google/android/gms/ads/search/DynamicHeightSearchAdRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroidx/annotation/RequiresPermission;
         value = "android.permission.INTERNET"
     .end annotation
 
-    .line 2
+    .line 1
     sget-object v0, Lcom/google/android/gms/ads/AdSize;->SEARCH:Lcom/google/android/gms/ads/AdSize;
 
     invoke-virtual {p0}, Lcom/google/android/gms/ads/search/SearchAdView;->getAdSize()Lcom/google/android/gms/ads/AdSize;
@@ -131,14 +164,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    .line 2
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/search/DynamicHeightSearchAdRequest;->zzdq()Lcom/google/android/gms/internal/ads/zzxt;
+    .line 3
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/search/DynamicHeightSearchAdRequest;->zza()Lcom/google/android/gms/ads/internal/client/zzdr;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzxv;->zza(Lcom/google/android/gms/internal/ads/zzxt;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzm(Lcom/google/android/gms/ads/internal/client/zzdr;)V
 
     return-void
 
@@ -148,30 +182,35 @@
 
     const-string v0, "You must use AdSize.SEARCH for a DynamicHeightSearchAdRequest"
 
+    .line 5
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final loadAd(Lcom/google/android/gms/ads/search/SearchAdRequest;)V
+.method public loadAd(Lcom/google/android/gms/ads/search/SearchAdRequest;)V
     .locals 1
+    .param p1    # Lcom/google/android/gms/ads/search/SearchAdRequest;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
     .annotation build Landroidx/annotation/RequiresPermission;
         value = "android.permission.INTERNET"
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    .line 6
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/search/SearchAdRequest;->zzdq()Lcom/google/android/gms/internal/ads/zzxt;
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/search/SearchAdRequest;->zza()Lcom/google/android/gms/ads/internal/client/zzdr;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzxv;->zza(Lcom/google/android/gms/internal/ads/zzxt;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzm(Lcom/google/android/gms/ads/internal/client/zzdr;)V
 
     return-void
 .end method
 
-.method public final onLayout(ZIIII)V
+.method public onLayout(ZIIII)V
     .locals 2
 
     const/4 p1, 0x0
@@ -206,28 +245,26 @@
 
     sub-int/2addr p4, v0
 
-    .line 5
     div-int/lit8 p4, p4, 0x2
 
     sub-int/2addr p5, p3
 
     sub-int/2addr p5, v1
 
-    .line 6
     div-int/lit8 p5, p5, 0x2
 
     add-int/2addr v0, p4
 
     add-int/2addr v1, p5
 
-    .line 7
+    .line 5
     invoke-virtual {p1, p4, p5, v0, v1}, Landroid/view/View;->layout(IIII)V
 
     :cond_0
     return-void
 .end method
 
-.method public final onMeasure(II)V
+.method public onMeasure(II)V
     .locals 4
 
     const/4 v0, 0x0
@@ -263,10 +300,8 @@
 
     goto :goto_1
 
-    :cond_0
-    const/4 v1, 0x0
-
     .line 6
+    :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/ads/search/SearchAdView;->getAdSize()Lcom/google/android/gms/ads/AdSize;
 
@@ -277,12 +312,14 @@
     goto :goto_0
 
     :catch_0
-    move-exception v2
+    move-exception v1
 
-    const-string v3, "Unable to retrieve ad size."
+    const-string v2, "Unable to retrieve ad size."
 
     .line 7
-    invoke-static {v3, v2}, Lcom/google/android/gms/internal/ads/zzazw;->zzc(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v1}, Lcom/google/android/gms/internal/ads/zzcgp;->zzh(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v1, 0x0
 
     :goto_0
     if-eqz v1, :cond_1
@@ -345,44 +382,52 @@
     return-void
 .end method
 
-.method public final pause()V
+.method public pause()V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzxv;->pause()V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzn()V
 
     return-void
 .end method
 
-.method public final resume()V
+.method public resume()V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzxv;->resume()V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzp()V
 
     return-void
 .end method
 
-.method public final setAdListener(Lcom/google/android/gms/ads/AdListener;)V
+.method public setAdListener(Lcom/google/android/gms/ads/AdListener;)V
     .locals 1
+    .param p1    # Lcom/google/android/gms/ads/AdListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzxv;->setAdListener(Lcom/google/android/gms/ads/AdListener;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzr(Lcom/google/android/gms/ads/AdListener;)V
 
     return-void
 .end method
 
-.method public final setAdSize(Lcom/google/android/gms/ads/AdSize;)V
+.method public setAdSize(Lcom/google/android/gms/ads/AdSize;)V
     .locals 3
+    .param p1    # Lcom/google/android/gms/ads/AdSize;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
     const/4 v1, 0x1
 
@@ -392,18 +437,22 @@
 
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/ads/zzxv;->setAdSizes([Lcom/google/android/gms/ads/AdSize;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzs([Lcom/google/android/gms/ads/AdSize;)V
 
     return-void
 .end method
 
-.method public final setAdUnitId(Ljava/lang/String;)V
+.method public setAdUnitId(Ljava/lang/String;)V
     .locals 1
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
 
     .line 1
-    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zzadd:Lcom/google/android/gms/internal/ads/zzxv;
+    iget-object v0, p0, Lcom/google/android/gms/ads/search/SearchAdView;->zza:Lcom/google/android/gms/ads/internal/client/zzdu;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ads/zzxv;->setAdUnitId(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/zzdu;->zzu(Ljava/lang/String;)V
 
     return-void
 .end method

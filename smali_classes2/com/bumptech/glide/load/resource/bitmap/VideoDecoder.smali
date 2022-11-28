@@ -3,7 +3,7 @@
 .source "VideoDecoder.java"
 
 # interfaces
-.implements Lu4/f;
+.implements Lr6/f;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lu4/f<",
+        "Lr6/f<",
         "TT;",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -42,20 +42,20 @@
     .end annotation
 .end field
 
-.field public static final g:Lu4/d;
+.field public static final g:Lr6/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lu4/d<",
+            "Lr6/d<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public static final h:Lu4/d;
+.field public static final h:Lr6/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lu4/d<",
+            "Lr6/d<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -98,11 +98,11 @@
     const-string v2, "com.bumptech.glide.load.resource.bitmap.VideoBitmapDecode.TargetFrame"
 
     .line 2
-    invoke-static {v2, v0, v1}, Lu4/d;->a(Ljava/lang/String;Ljava/lang/Object;Lu4/d$b;)Lu4/d;
+    invoke-static {v2, v0, v1}, Lr6/d;->a(Ljava/lang/String;Ljava/lang/Object;Lr6/d$b;)Lr6/d;
 
     move-result-object v0
 
-    sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->g:Lu4/d;
+    sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->g:Lr6/d;
 
     const/4 v0, 0x2
 
@@ -118,11 +118,11 @@
     const-string v2, "com.bumptech.glide.load.resource.bitmap.VideoBitmapDecode.FrameOption"
 
     .line 4
-    invoke-static {v2, v0, v1}, Lu4/d;->a(Ljava/lang/String;Ljava/lang/Object;Lu4/d$b;)Lu4/d;
+    invoke-static {v2, v0, v1}, Lr6/d;->a(Ljava/lang/String;Ljava/lang/Object;Lr6/d$b;)Lr6/d;
 
     move-result-object v0
 
-    sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->h:Lu4/d;
+    sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->h:Lr6/d;
 
     .line 5
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$e;
@@ -184,14 +184,14 @@
     return-void
 .end method
 
-.method public static c(Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lu4/f;
+.method public static c(Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lr6/f;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/bumptech/glide/load/engine/bitmap_recycle/e;",
             ")",
-            "Lu4/f<",
+            "Lr6/f<",
             "Landroid/content/res/AssetFileDescriptor;",
             "Landroid/graphics/Bitmap;",
             ">;"
@@ -212,7 +212,7 @@
     return-object v0
 .end method
 
-.method public static d(Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lu4/f;
+.method public static d(Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lr6/f;
     .locals 2
     .annotation build Landroidx/annotation/RequiresApi;
         api = 0x17
@@ -223,7 +223,7 @@
             "(",
             "Lcom/bumptech/glide/load/engine/bitmap_recycle/e;",
             ")",
-            "Lu4/f<",
+            "Lr6/f<",
             "Ljava/nio/ByteBuffer;",
             "Landroid/graphics/Bitmap;",
             ">;"
@@ -432,14 +432,14 @@
     return-object p0
 .end method
 
-.method public static h(Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lu4/f;
+.method public static h(Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lr6/f;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/bumptech/glide/load/engine/bitmap_recycle/e;",
             ")",
-            "Lu4/f<",
+            "Lr6/f<",
             "Landroid/os/ParcelFileDescriptor;",
             "Landroid/graphics/Bitmap;",
             ">;"
@@ -460,20 +460,20 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;IILu4/e;)Lcom/bumptech/glide/load/engine/s;
-    .locals 8
+.method public a(Ljava/lang/Object;IILr6/e;)Lcom/bumptech/glide/load/engine/s;
+    .locals 9
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p4    # Lu4/e;
+    .param p4    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;II",
-            "Lu4/e;",
+            "Lr6/e;",
             ")",
             "Lcom/bumptech/glide/load/engine/s<",
             "Landroid/graphics/Bitmap;",
@@ -488,9 +488,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->g:Lu4/d;
+    sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->g:Lr6/d;
 
-    invoke-virtual {p4, v0}, Lu4/e;->c(Lu4/d;)Ljava/lang/Object;
+    invoke-virtual {p4, v0}, Lr6/e;->c(Lr6/d;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -520,7 +520,7 @@
 
     const-string p2, "Requested frame must be non-negative, or DEFAULT_FRAME, given: "
 
-    invoke-static {p2, v2, v3}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {p2, v2, v3}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object p2
 
@@ -531,9 +531,9 @@
     .line 3
     :cond_1
     :goto_0
-    sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->h:Lu4/d;
+    sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->h:Lr6/d;
 
-    invoke-virtual {p4, v0}, Lu4/e;->c(Lu4/d;)Ljava/lang/Object;
+    invoke-virtual {p4, v0}, Lr6/e;->c(Lr6/d;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -550,9 +550,9 @@
 
     .line 5
     :cond_2
-    sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->h:Lu4/d;
+    sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->h:Lr6/d;
 
-    invoke-virtual {p4, v1}, Lu4/e;->c(Lu4/d;)Ljava/lang/Object;
+    invoke-virtual {p4, v1}, Lr6/e;->c(Lr6/d;)Ljava/lang/Object;
 
     move-result-object p4
 
@@ -572,6 +572,8 @@
     invoke-virtual {p4}, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$e;->a()Landroid/media/MediaMetadataRetriever;
 
     move-result-object p4
+
+    const/16 v8, 0x1d
 
     .line 8
     :try_start_0
@@ -598,9 +600,21 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 11
-    invoke-virtual {p4}, Landroid/media/MediaMetadataRetriever;->release()V
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt p2, v8, :cond_4
 
     .line 12
+    invoke-virtual {p4}, Landroid/media/MediaMetadataRetriever;->close()V
+
+    goto :goto_1
+
+    .line 13
+    :cond_4
+    invoke-virtual {p4}, Landroid/media/MediaMetadataRetriever;->release()V
+
+    .line 14
+    :goto_1
     iget-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->b:Lcom/bumptech/glide/load/engine/bitmap_recycle/e;
 
     invoke-static {p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/g;->d(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/engine/bitmap_recycle/e;)Lcom/bumptech/glide/load/resource/bitmap/g;
@@ -612,26 +626,38 @@
     :catchall_0
     move-exception p1
 
-    .line 13
+    .line 15
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt p2, v8, :cond_5
+
+    .line 16
+    invoke-virtual {p4}, Landroid/media/MediaMetadataRetriever;->close()V
+
+    goto :goto_2
+
+    .line 17
+    :cond_5
     invoke-virtual {p4}, Landroid/media/MediaMetadataRetriever;->release()V
 
+    :goto_2
     throw p1
 .end method
 
-.method public b(Ljava/lang/Object;Lu4/e;)Z
+.method public b(Ljava/lang/Object;Lr6/e;)Z
     .locals 0
     .param p1    # Ljava/lang/Object;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lu4/e;
+    .param p2    # Lr6/e;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Lu4/e;",
+            "Lr6/e;",
             ")Z"
         }
     .end annotation

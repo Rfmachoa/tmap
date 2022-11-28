@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "AtomParsers.java"
 
+# interfaces
+.implements Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$c;
+
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -15,55 +18,137 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final b:J
+.field public final b:I
 
 .field public final c:I
 
+.field public d:I
+
+.field public e:I
+
 
 # direct methods
-.method public constructor <init>(IJI)V
-    .locals 0
+.method public constructor <init>(Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/a$b;)V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->a:I
+    iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/a$b;->C1:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    const/16 v0, 0xc
 
     .line 3
-    iput-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->b:J
+    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 4
-    iput p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->c:I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->K()I
+
+    move-result v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->c:I
+
+    .line 5
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->K()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->b:I
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;)J
+
+# virtual methods
+.method public a()I
+    .locals 1
+
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public getSampleCount()I
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->b:I
+
+    return v0
+.end method
+
+.method public readNextSampleSize()I
     .locals 2
 
     .line 1
-    iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->b:J
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->c:I
 
-    return-wide v0
-.end method
+    const/16 v1, 0x8
 
-.method public static synthetic b(Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;)I
-    .locals 0
+    if-ne v0, v1, :cond_0
 
-    .line 1
-    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->a:I
+    .line 2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    return p0
-.end method
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
-.method public static synthetic c(Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;)I
-    .locals 0
+    move-result v0
 
-    .line 1
-    iget p0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->c:I
+    return v0
 
-    return p0
+    :cond_0
+    const/16 v1, 0x10
+
+    if-ne v0, v1, :cond_1
+
+    .line 3
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->M()I
+
+    move-result v0
+
+    return v0
+
+    .line 4
+    :cond_1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->d:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->d:I
+
+    rem-int/lit8 v0, v0, 0x2
+
+    if-nez v0, :cond_2
+
+    .line 5
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->a:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->e:I
+
+    and-int/lit16 v0, v0, 0xf0
+
+    shr-int/lit8 v0, v0, 0x4
+
+    return v0
+
+    .line 6
+    :cond_2
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mp4/b$f;->e:I
+
+    and-int/lit8 v0, v0, 0xf
+
+    return v0
 .end method

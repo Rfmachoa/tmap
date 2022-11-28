@@ -6,6 +6,22 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "momentCode",
+            "serverAlias",
+            "appCode",
+            "accessKey",
+            "resHappenVo"
+        }
+    .end annotation
 
     .line 1
     invoke-direct/range {p0 .. p5}, Lcom/skt/moment/task/b;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/skt/moment/net/vo/ServiceResVo;)V
@@ -101,6 +117,14 @@
 
 .method public d1(Lcom/skt/moment/net/vo/ServiceResVo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resCouponDownloadVo"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/task/b;->o0:Lcom/skt/moment/net/vo/ServiceResVo;

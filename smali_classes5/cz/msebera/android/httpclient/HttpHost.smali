@@ -40,7 +40,7 @@
     const-string v0, "HTTP host"
 
     .line 20
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 21
     iget-object v0, p1, Lcz/msebera/android/httpclient/HttpHost;->hostname:Ljava/lang/String;
@@ -103,7 +103,7 @@
     const-string v0, "Host name"
 
     .line 2
-    invoke-static {p1, v0}, Lqg/a;->c(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {p1, v0}, Lui/a;->c(Ljava/lang/CharSequence;Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
     const-string v0, "Inet address"
 
     .line 11
-    invoke-static {p1, v0}, Lqg/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lui/a;->h(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -352,21 +352,21 @@
 
     const/16 v1, 0x11
 
-    invoke-static {v1, v0}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v1, v0}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 
     .line 2
     iget v1, p0, Lcz/msebera/android/httpclient/HttpHost;->port:I
 
-    invoke-static {v0, v1}, Lqg/g;->c(II)I
+    invoke-static {v0, v1}, Lui/g;->c(II)I
 
     move-result v0
 
     .line 3
     iget-object v1, p0, Lcz/msebera/android/httpclient/HttpHost;->schemeName:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lqg/g;->d(ILjava/lang/Object;)I
+    invoke-static {v0, v1}, Lui/g;->d(ILjava/lang/Object;)I
 
     move-result v0
 

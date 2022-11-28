@@ -3,6 +3,12 @@
 .source "ImageCaptureException.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
+
 # instance fields
 .field private final mImageCaptureError:I
 
@@ -18,18 +24,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x10,
-            0x10
-        }
-        names = {
-            "imageCaptureError",
-            "message",
-            "cause"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V

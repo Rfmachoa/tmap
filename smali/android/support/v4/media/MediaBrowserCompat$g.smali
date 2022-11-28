@@ -331,7 +331,7 @@
     :cond_0
     iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->e:Landroidx/collection/a;
 
-    invoke-virtual {p1, p2}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -879,7 +879,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->e:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -895,7 +895,7 @@
     .line 3
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->e:Landroidx/collection/a;
 
-    invoke-virtual {v1, p1, v0}, Landroidx/collection/l;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/m;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
     :cond_0
@@ -1017,7 +1017,7 @@
     .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->e:Landroidx/collection/a;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/l;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/m;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1194,7 +1194,7 @@
     :cond_8
     iget-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->e:Landroidx/collection/a;
 
-    invoke-virtual {p2, p1}, Landroidx/collection/l;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroidx/collection/m;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_9
     return-void
@@ -1243,7 +1243,7 @@
     const-string v2, "extra_messenger"
 
     .line 3
-    invoke-static {v1, v2}, Landroidx/core/app/i;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {v1, v2}, Landroidx/core/app/k;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v2
 
@@ -1297,7 +1297,7 @@
     const-string v0, "extra_session_binder"
 
     .line 9
-    invoke-static {v1, v0}, Landroidx/core/app/i;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {v1, v0}, Landroidx/core/app/k;->a(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -1317,7 +1317,7 @@
     move-result-object v1
 
     .line 13
-    invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->d(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->e(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object v0
 

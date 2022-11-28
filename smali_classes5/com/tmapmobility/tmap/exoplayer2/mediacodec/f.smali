@@ -153,19 +153,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;Landroid/media/MediaCodec;)V
+.method public static synthetic a(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->j(Landroid/media/MediaCodec;)V
-
-    return-void
-.end method
-
-.method private synthetic j(Landroid/media/MediaCodec;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->n(Landroid/media/MediaCodec;)V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->m()V
 
     return-void
 .end method
@@ -218,7 +209,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->k()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->j()V
 
     .line 5
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->d:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/i;
@@ -280,7 +271,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->k()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->j()V
 
     .line 5
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->e:Lcom/tmapmobility/tmap/exoplayer2/mediacodec/i;
@@ -369,12 +360,8 @@
     throw p1
 .end method
 
-.method public e(Landroid/media/MediaCodec;)V
+.method public e()V
     .locals 5
-    .param p1    # Landroid/media/MediaCodec;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->a:Ljava/lang/Object;
@@ -394,7 +381,7 @@
     .line 3
     iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->c:Landroid/os/Handler;
 
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -402,7 +389,7 @@
 
     new-instance v2, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/e;
 
-    invoke-direct {v2, p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;Landroid/media/MediaCodec;)V
+    invoke-direct {v2, p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/e;-><init>(Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -412,13 +399,13 @@
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception v1
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw v1
 .end method
 
 .method public final f()V
@@ -591,22 +578,22 @@
     return v0
 .end method
 
-.method public final k()V
+.method public final j()V
     .locals 0
     .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->l()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->k()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->m()V
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->l()V
 
     return-void
 .end method
 
-.method public final l()V
+.method public final k()V
     .locals 2
     .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
@@ -629,7 +616,7 @@
     throw v0
 .end method
 
-.method public final m()V
+.method public final l()V
     .locals 2
     .annotation build Landroidx/annotation/GuardedBy;
         value = "lock"
@@ -652,12 +639,8 @@
     throw v0
 .end method
 
-.method public final n(Landroid/media/MediaCodec;)V
+.method public final m()V
     .locals 6
-    .param p1    # Landroid/media/MediaCodec;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->a:Ljava/lang/Object;
@@ -702,11 +685,11 @@
     if-gez v1, :cond_2
 
     .line 6
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->o(Ljava/lang/IllegalStateException;)V
+    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->n(Ljava/lang/IllegalStateException;)V
 
     .line 7
     monitor-exit v0
@@ -716,58 +699,23 @@
     .line 8
     :cond_2
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->f()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_3
 
     .line 9
-    :try_start_1
-    invoke-virtual {p1}, Landroid/media/MediaCodec;->start()V
-    :try_end_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    .line 10
-    :try_start_2
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->o(Ljava/lang/IllegalStateException;)V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    .line 11
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->o(Ljava/lang/IllegalStateException;)V
-
-    .line 12
-    :cond_3
-    :goto_0
     monitor-exit v0
 
     return-void
 
     :catchall_0
-    move-exception p1
+    move-exception v1
 
     monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    throw v1
 .end method
 
-.method public final o(Ljava/lang/IllegalStateException;)V
+.method public final n(Ljava/lang/IllegalStateException;)V
     .locals 1
 
     .line 1
@@ -792,6 +740,43 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
+.end method
+
+.method public o()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    .line 2
+    :try_start_0
+    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->l:Z
+
+    .line 3
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->b:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->quit()Z
+
+    .line 4
+    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->f()V
+
+    .line 5
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
 .method public onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
@@ -928,41 +913,4 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p2
-.end method
-
-.method public p()V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    .line 2
-    :try_start_0
-    iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->l:Z
-
-    .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->b:Landroid/os/HandlerThread;
-
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->quit()Z
-
-    .line 4
-    invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/mediacodec/f;->f()V
-
-    .line 5
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
 .end method

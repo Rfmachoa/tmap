@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation runtime Lcom/fasterxml/jackson/databind/annotation/JacksonStdImpl;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers;
 .end annotation
@@ -109,6 +112,30 @@
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public getEmptyValue(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    new-instance p1, Ljava/util/Date;
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p1, v0, v1}, Ljava/util/Date;-><init>(J)V
+
+    return-object p1
+.end method
+
+.method public bridge synthetic logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;->logicalType()Lcom/fasterxml/jackson/databind/type/LogicalType;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public bridge synthetic withDateFormat(Ljava/text/DateFormat;Ljava/lang/String;)Lcom/fasterxml/jackson/databind/deser/std/DateDeserializers$DateBasedDeserializer;

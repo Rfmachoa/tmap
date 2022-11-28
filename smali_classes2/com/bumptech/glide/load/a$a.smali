@@ -3,12 +3,12 @@
 .source "ImageHeaderParserUtils.java"
 
 # interfaces
-.implements Lcom/bumptech/glide/load/a$g;
+.implements Lcom/bumptech/glide/load/a$h;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/bumptech/glide/load/a;->e(Ljava/util/List;Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
+    value = Lcom/bumptech/glide/load/a;->f(Ljava/util/List;Ljava/io/InputStream;Lcom/bumptech/glide/load/engine/bitmap_recycle/b;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

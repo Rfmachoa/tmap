@@ -108,9 +108,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Landroidx/core/view/WindowInsetsCompat$g;->g:Lc1/l;
+    iget-object v1, p0, Landroidx/core/view/WindowInsetsCompat$g;->g:Lv1/k;
 
-    iget-object p1, p1, Landroidx/core/view/WindowInsetsCompat$g;->g:Lc1/l;
+    iget-object p1, p1, Landroidx/core/view/WindowInsetsCompat$g;->g:Lv1/k;
 
     .line 4
     invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -128,7 +128,7 @@
     return v0
 .end method
 
-.method public f()Ls1/d;
+.method public f()Landroidx/core/view/f;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ls1/d;->i(Ljava/lang/Object;)Ls1/d;
+    invoke-static {v0}, Landroidx/core/view/f;->i(Landroid/view/DisplayCutout;)Landroidx/core/view/f;
 
     move-result-object v0
 

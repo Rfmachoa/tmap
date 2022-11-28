@@ -3,12 +3,12 @@
 .source "BaseTransientBottomBar.java"
 
 # interfaces
-.implements Lcom/google/android/material/snackbar/SnackbarManager$Callback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;->onDetachedFromWindow()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,44 +35,15 @@
 
 
 # virtual methods
-.method public dismiss(I)V
-    .locals 4
+.method public run()V
+    .locals 2
 
     .line 1
-    sget-object v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->handler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$6;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$6;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
+    const/4 v1, 0x3
 
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    .line 2
-    invoke-virtual {v0, v2, p1, v3, v1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    .line 3
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-.end method
-
-.method public show()V
-    .locals 3
-
-    .line 1
-    sget-object v0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->handler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$6;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v0, v1}, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->onViewHidden(I)V
 
     return-void
 .end method

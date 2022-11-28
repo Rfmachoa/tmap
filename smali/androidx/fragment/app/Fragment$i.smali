@@ -1,129 +1,90 @@
 .class public Landroidx/fragment/app/Fragment$i;
-.super Ljava/lang/Object;
+.super Landroidx/fragment/app/Fragment$l;
 .source "Fragment.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/fragment/app/Fragment;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/fragment/app/Fragment;->prepareCallInternal(Lc/a;Lp/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "i"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/view/View;
+.field public final synthetic a:Lp/a;
 
-.field public b:Landroid/animation/Animator;
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public c:Z
+.field public final synthetic c:Lc/a;
 
-.field public d:I
+.field public final synthetic d:Landroidx/activity/result/a;
 
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public j:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public k:Ljava/lang/Object;
-
-.field public l:Ljava/lang/Object;
-
-.field public m:Ljava/lang/Object;
-
-.field public n:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public p:Ljava/lang/Object;
-
-.field public q:Ljava/lang/Boolean;
-
-.field public r:Ljava/lang/Boolean;
-
-.field public s:Landroidx/core/app/u;
-
-.field public t:Landroidx/core/app/u;
-
-.field public u:F
-
-.field public v:Landroid/view/View;
-
-.field public w:Z
-
-.field public x:Landroidx/fragment/app/Fragment$k;
-
-.field public y:Z
+.field public final synthetic e:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroidx/fragment/app/Fragment;Lp/a;Ljava/util/concurrent/atomic/AtomicReference;Lc/a;Landroidx/activity/result/a;)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Landroidx/fragment/app/Fragment$i;->e:Landroidx/fragment/app/Fragment;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Landroidx/fragment/app/Fragment$i;->a:Lp/a;
+
+    iput-object p3, p0, Landroidx/fragment/app/Fragment$i;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-object p4, p0, Landroidx/fragment/app/Fragment$i;->c:Lc/a;
+
+    iput-object p5, p0, Landroidx/fragment/app/Fragment$i;->d:Landroidx/activity/result/a;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Landroidx/fragment/app/Fragment$l;-><init>(Landroidx/fragment/app/Fragment$b;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Landroidx/fragment/app/Fragment$i;->e:Landroidx/fragment/app/Fragment;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->generateActivityResultKey()Ljava/lang/String;
+
+    move-result-object v0
 
     .line 2
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$i;->k:Ljava/lang/Object;
+    iget-object v1, p0, Landroidx/fragment/app/Fragment$i;->a:Lp/a;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v2}, Lp/a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/activity/result/ActivityResultRegistry;
 
     .line 3
-    sget-object v1, Landroidx/fragment/app/Fragment;->USE_DEFAULT_TRANSITION:Ljava/lang/Object;
+    iget-object v2, p0, Landroidx/fragment/app/Fragment$i;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object v1, p0, Landroidx/fragment/app/Fragment$i;->l:Ljava/lang/Object;
+    iget-object v3, p0, Landroidx/fragment/app/Fragment$i;->e:Landroidx/fragment/app/Fragment;
 
-    .line 4
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$i;->m:Ljava/lang/Object;
+    iget-object v4, p0, Landroidx/fragment/app/Fragment$i;->c:Lc/a;
 
-    .line 5
-    iput-object v1, p0, Landroidx/fragment/app/Fragment$i;->n:Ljava/lang/Object;
+    iget-object v5, p0, Landroidx/fragment/app/Fragment$i;->d:Landroidx/activity/result/a;
 
-    .line 6
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$i;->o:Ljava/lang/Object;
+    invoke-virtual {v1, v0, v3, v4, v5}, Landroidx/activity/result/ActivityResultRegistry;->i(Ljava/lang/String;Landroidx/lifecycle/LifecycleOwner;Lc/a;Landroidx/activity/result/a;)Landroidx/activity/result/g;
 
-    .line 7
-    iput-object v1, p0, Landroidx/fragment/app/Fragment$i;->p:Ljava/lang/Object;
+    move-result-object v0
 
-    .line 8
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$i;->s:Landroidx/core/app/u;
-
-    .line 9
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$i;->t:Landroidx/core/app/u;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 10
-    iput v1, p0, Landroidx/fragment/app/Fragment$i;->u:F
-
-    .line 11
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$i;->v:Landroid/view/View;
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     return-void
 .end method

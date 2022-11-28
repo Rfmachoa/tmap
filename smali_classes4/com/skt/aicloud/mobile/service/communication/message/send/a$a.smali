@@ -51,11 +51,11 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lu8/a;->g()Lu8/a;
+    invoke-static {}, Lra/a;->g()Lra/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lu8/a;->d()V
+    invoke-virtual {v0}, Lra/a;->d()V
 
     .line 2
     new-instance v0, Lcom/skt/aicloud/mobile/service/communication/message/send/TextMessageSender;

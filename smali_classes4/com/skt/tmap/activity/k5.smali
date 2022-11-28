@@ -3,32 +3,40 @@
 .source "R8$$SyntheticClass"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnFail;
 
 
-# instance fields
-.field public final synthetic a:Lcom/skt/tmap/activity/TmapNaviActivity$i0;
+# static fields
+.field public static final synthetic a:Lcom/skt/tmap/activity/k5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/skt/tmap/activity/TmapNaviActivity$i0;)V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/skt/tmap/activity/k5;
+
+    invoke-direct {v0}, Lcom/skt/tmap/activity/k5;-><init>()V
+
+    sput-object v0, Lcom/skt/tmap/activity/k5;->a:Lcom/skt/tmap/activity/k5;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/skt/tmap/activity/k5;->a:Lcom/skt/tmap/activity/TmapNaviActivity$i0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onFailAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/skt/tmap/activity/k5;->a:Lcom/skt/tmap/activity/TmapNaviActivity$i0;
-
-    invoke-static {v0}, Lcom/skt/tmap/activity/TmapNaviActivity$i0;->y(Lcom/skt/tmap/activity/TmapNaviActivity$i0;)V
+    invoke-static {p1, p2, p3, p4}, Lcom/skt/tmap/activity/TmapNaviActivity;->i8(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

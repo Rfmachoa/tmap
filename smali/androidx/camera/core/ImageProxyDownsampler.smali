@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/camera/core/ImageProxyDownsampler$c;,
@@ -22,20 +26,8 @@
     return-void
 .end method
 
-.method public static a(II[B)Landroidx/camera/core/p1$a;
+.method public static a(II[B)Landroidx/camera/core/m1$a;
     .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10,
-            0x10,
-            0x10
-        }
-        names = {
-            "rowStride",
-            "pixelStride",
-            "data"
-        }
-    .end annotation
 
     .line 1
     new-instance v0, Landroidx/camera/core/ImageProxyDownsampler$a;
@@ -45,22 +37,8 @@
     return-object v0
 .end method
 
-.method public static b(Landroidx/camera/core/p1;IILandroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;)Landroidx/camera/core/i0;
+.method public static b(Landroidx/camera/core/m1;IILandroidx/camera/core/ImageProxyDownsampler$DownsamplingMethod;)Landroidx/camera/core/j0;
     .locals 22
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "image",
-            "downsampledWidth",
-            "downsampledHeight",
-            "downsamplingMethod"
-        }
-    .end annotation
 
     move-object/from16 v0, p0
 
@@ -69,7 +47,7 @@
     move/from16 v2, p2
 
     .line 1
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->g()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->h()I
 
     move-result v3
 
@@ -78,26 +56,26 @@
     if-ne v3, v4, :cond_5
 
     .line 2
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v3
 
     if-lt v3, v1, :cond_4
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v3
 
     if-lt v3, v2, :cond_4
 
     .line 3
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v3
 
     if-ne v3, v1, :cond_0
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v3
 
@@ -107,11 +85,11 @@
     new-instance v3, Landroidx/camera/core/ImageProxyDownsampler$c;
 
     .line 5
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->r0()[Landroidx/camera/core/p1$a;
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->L0()[Landroidx/camera/core/m1$a;
 
     move-result-object v4
 
-    invoke-direct {v3, v0, v4, v1, v2}, Landroidx/camera/core/ImageProxyDownsampler$c;-><init>(Landroidx/camera/core/p1;[Landroidx/camera/core/p1$a;II)V
+    invoke-direct {v3, v0, v4, v1, v2}, Landroidx/camera/core/ImageProxyDownsampler$c;-><init>(Landroidx/camera/core/m1;[Landroidx/camera/core/m1$a;II)V
 
     return-object v3
 
@@ -121,7 +99,7 @@
     new-array v4, v3, [I
 
     .line 6
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v5
 
@@ -129,7 +107,7 @@
 
     aput v5, v4, v6
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v5
 
@@ -141,7 +119,7 @@
 
     aput v5, v4, v8
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v5
 
@@ -152,13 +130,13 @@
     new-array v5, v3, [I
 
     .line 7
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v9
 
     aput v9, v5, v6
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v9
 
@@ -166,7 +144,7 @@
 
     aput v9, v5, v8
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v9
 
@@ -196,20 +174,20 @@
 
     aput v11, v10, v7
 
-    new-array v11, v3, [Landroidx/camera/core/p1$a;
+    new-array v11, v3, [Landroidx/camera/core/m1$a;
 
     :goto_0
     if-ge v6, v3, :cond_3
 
     .line 10
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->r0()[Landroidx/camera/core/p1$a;
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->L0()[Landroidx/camera/core/m1$a;
 
     move-result-object v12
 
     aget-object v12, v12, v6
 
     .line 11
-    invoke-interface {v12}, Landroidx/camera/core/p1$a;->getBuffer()Ljava/nio/ByteBuffer;
+    invoke-interface {v12}, Landroidx/camera/core/m1$a;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v13
 
@@ -244,12 +222,12 @@
     aget v14, v4, v6
 
     .line 15
-    invoke-interface {v12}, Landroidx/camera/core/p1$a;->b()I
+    invoke-interface {v12}, Landroidx/camera/core/m1$a;->b()I
 
     move-result v16
 
     .line 16
-    invoke-interface {v12}, Landroidx/camera/core/p1$a;->a()I
+    invoke-interface {v12}, Landroidx/camera/core/m1$a;->a()I
 
     move-result v12
 
@@ -279,12 +257,12 @@
     aget v14, v4, v6
 
     .line 19
-    invoke-interface {v12}, Landroidx/camera/core/p1$a;->b()I
+    invoke-interface {v12}, Landroidx/camera/core/m1$a;->b()I
 
     move-result v15
 
     .line 20
-    invoke-interface {v12}, Landroidx/camera/core/p1$a;->a()I
+    invoke-interface {v12}, Landroidx/camera/core/m1$a;->a()I
 
     move-result v16
 
@@ -305,7 +283,7 @@
 
     move-object/from16 v13, v21
 
-    invoke-static {v12, v8, v13}, Landroidx/camera/core/ImageProxyDownsampler;->a(II[B)Landroidx/camera/core/p1$a;
+    invoke-static {v12, v8, v13}, Landroidx/camera/core/ImageProxyDownsampler;->a(II[B)Landroidx/camera/core/m1$a;
 
     move-result-object v12
 
@@ -319,7 +297,7 @@
     :cond_3
     new-instance v3, Landroidx/camera/core/ImageProxyDownsampler$c;
 
-    invoke-direct {v3, v0, v11, v1, v2}, Landroidx/camera/core/ImageProxyDownsampler$c;-><init>(Landroidx/camera/core/p1;[Landroidx/camera/core/p1$a;II)V
+    invoke-direct {v3, v0, v11, v1, v2}, Landroidx/camera/core/ImageProxyDownsampler$c;-><init>(Landroidx/camera/core/m1;[Landroidx/camera/core/m1$a;II)V
 
     return-object v3
 
@@ -346,11 +324,11 @@
     new-instance v1, Landroid/util/Size;
 
     .line 25
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getWidth()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getWidth()I
 
     move-result v2
 
-    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/p1;->getHeight()I
+    invoke-interface/range {p0 .. p0}, Landroidx/camera/core/m1;->getHeight()I
 
     move-result v0
 
@@ -383,28 +361,6 @@
 
 .method public static c(Ljava/nio/ByteBuffer;IIII[BII)V
     .locals 17
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "input",
-            "inputWidth",
-            "inputPixelStride",
-            "inputRowStride",
-            "inputHeight",
-            "output",
-            "outputWidth",
-            "outputHeight"
-        }
-    .end annotation
 
     move-object/from16 v1, p0
 
@@ -614,28 +570,6 @@
 
 .method public static d(Ljava/nio/ByteBuffer;IIII[BII)V
     .locals 7
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0,
-            0x0
-        }
-        names = {
-            "input",
-            "inputWidth",
-            "inputPixelStride",
-            "inputRowStride",
-            "inputHeight",
-            "output",
-            "outputWidth",
-            "outputHeight"
-        }
-    .end annotation
 
     int-to-float p1, p1
 

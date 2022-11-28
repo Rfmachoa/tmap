@@ -1,219 +1,374 @@
-.class public final Ll1/g;
-.super Ljava/lang/Object;
-.source "Handler.kt"
-
-
-# annotations
-.annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nHandler.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Handler.kt\nandroidx/core/os/HandlerKt\n*L\n1#1,69:1\n38#1,7:70\n65#1,3:77\n*E\n"
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    bv = {}
-    d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u001a1\u0010\t\u001a\u00020\u0008*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\u000e\u0008\u0004\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0005H\u0086\u0008\u001a1\u0010\u000b\u001a\u00020\u0008*\u00020\u00002\u0006\u0010\n\u001a\u00020\u00012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\u000e\u0008\u0004\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0005H\u0086\u0008\u00a8\u0006\u000c"
-    }
-    d2 = {
-        "Landroid/os/Handler;",
-        "",
-        "delayInMillis",
-        "",
-        "token",
-        "Lkotlin/Function0;",
-        "Lkotlin/d1;",
-        "action",
-        "Ljava/lang/Runnable;",
-        "c",
-        "uptimeMillis",
-        "a",
-        "core-ktx_release"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x4,
-        0x0
-    }
-.end annotation
+.class public Ll1/g;
+.super Ll1/d;
+.source "HorizontalChainReference.java"
 
 
 # direct methods
-.method public static final a(Landroid/os/Handler;JLjava/lang/Object;Lej/a;)Ljava/lang/Runnable;
+.method public constructor <init>(Landroidx/constraintlayout/core/state/State;)V
     .locals 1
-    .param p0    # Landroid/os/Handler;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/Object;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Lej/a;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Handler;",
-            "J",
-            "Ljava/lang/Object;",
-            "Lej/a<",
-            "Lkotlin/d1;",
-            ">;)",
-            "Ljava/lang/Runnable;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$postAtTime"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "action"
-
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    new-instance v0, Ll1/g$a;
+    sget-object v0, Landroidx/constraintlayout/core/state/State$Helper;->HORIZONTAL_CHAIN:Landroidx/constraintlayout/core/state/State$Helper;
 
-    invoke-direct {v0, p4}, Ll1/g$a;-><init>(Lej/a;)V
+    invoke-direct {p0, p1, v0}, Ll1/d;-><init>(Landroidx/constraintlayout/core/state/State;Landroidx/constraintlayout/core/state/State$Helper;)V
 
-    .line 2
-    invoke-virtual {p0, v0, p3, p1, p2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-
-    return-object v0
+    return-void
 .end method
 
-.method public static synthetic b(Landroid/os/Handler;JLjava/lang/Object;Lej/a;ILjava/lang/Object;)Ljava/lang/Runnable;
-    .locals 0
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
 
-    and-int/lit8 p5, p5, 0x2
-
-    if-eqz p5, :cond_0
-
-    const/4 p3, 0x0
-
-    :cond_0
-    const-string p5, "$this$postAtTime"
+# virtual methods
+.method public b()V
+    .locals 5
 
     .line 1
-    invoke-static {p0, p5}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, p0, Landroidx/constraintlayout/core/state/a;->l0:Ljava/util/ArrayList;
 
-    const-string p5, "action"
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 2
-    new-instance p5, Ll1/g$a;
-
-    invoke-direct {p5, p4}, Ll1/g$a;-><init>(Lej/a;)V
-
-    .line 3
-    invoke-virtual {p0, p5, p3, p1, p2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
-
-    return-object p5
-.end method
-
-.method public static final c(Landroid/os/Handler;JLjava/lang/Object;Lej/a;)Ljava/lang/Runnable;
-    .locals 1
-    .param p0    # Landroid/os/Handler;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .param p3    # Ljava/lang/Object;
-        .annotation build Lorg/jetbrains/annotations/Nullable;
-        .end annotation
-    .end param
-    .param p4    # Lej/a;
-        .annotation build Lorg/jetbrains/annotations/NotNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Handler;",
-            "J",
-            "Ljava/lang/Object;",
-            "Lej/a<",
-            "Lkotlin/d1;",
-            ">;)",
-            "Ljava/lang/Runnable;"
-        }
-    .end annotation
-
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
-
-    const-string v0, "$this$postDelayed"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "action"
-
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1
-    new-instance v0, Ll1/g$b;
-
-    invoke-direct {v0, p4}, Ll1/g$b;-><init>(Lej/a;)V
-
-    if-nez p3, :cond_0
-
-    .line 2
-    invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-static {p0, v0, p3, p1, p2}, Ll1/f;->d(Landroid/os/Handler;Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+    move-result-object v0
 
     :goto_0
-    return-object v0
-.end method
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-.method public static synthetic d(Landroid/os/Handler;JLjava/lang/Object;Lej/a;ILjava/lang/Object;)Ljava/lang/Runnable;
-    .locals 0
-    .annotation build Lorg/jetbrains/annotations/NotNull;
-    .end annotation
+    move-result v1
 
-    and-int/lit8 p5, p5, 0x2
+    if-eqz v1, :cond_0
 
-    if-eqz p5, :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 p3, 0x0
-
-    :cond_0
-    const-string p5, "$this$postDelayed"
-
-    .line 1
-    invoke-static {p0, p5}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p5, "action"
-
-    invoke-static {p4, p5}, Lkotlin/jvm/internal/f0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v1
 
     .line 2
-    new-instance p5, Ll1/g$b;
+    iget-object v2, p0, Landroidx/constraintlayout/core/state/a;->j0:Landroidx/constraintlayout/core/state/State;
 
-    invoke-direct {p5, p4}, Ll1/g$b;-><init>(Lej/a;)V
+    invoke-virtual {v2, v1}, Landroidx/constraintlayout/core/state/State;->e(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
 
-    if-nez p3, :cond_1
+    move-result-object v1
 
     .line 3
-    invoke-virtual {p0, p5, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->v()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     goto :goto_0
 
     .line 4
-    :cond_1
-    invoke-static {p0, p5, p3, p1, p2}, Ll1/f;->d(Landroid/os/Handler;Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+    :cond_0
+    iget-object v0, p0, Landroidx/constraintlayout/core/state/a;->l0:Ljava/util/ArrayList;
 
-    :goto_0
-    return-object p5
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    move-object v2, v1
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    .line 5
+    iget-object v4, p0, Landroidx/constraintlayout/core/state/a;->j0:Landroidx/constraintlayout/core/state/State;
+
+    invoke-virtual {v4, v3}, Landroidx/constraintlayout/core/state/State;->e(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v3
+
+    if-nez v2, :cond_5
+
+    .line 6
+    iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->O:Ljava/lang/Object;
+
+    if-eqz v2, :cond_1
+
+    .line 7
+    invoke-virtual {v3, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->B0(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->m:I
+
+    .line 8
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->s:I
+
+    .line 9
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_2
+
+    .line 10
+    :cond_1
+    iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->P:Ljava/lang/Object;
+
+    if-eqz v2, :cond_2
+
+    .line 11
+    invoke-virtual {v3, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->A0(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->m:I
+
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->s:I
+
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_2
+
+    .line 12
+    :cond_2
+    iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->K:Ljava/lang/Object;
+
+    if-eqz v2, :cond_3
+
+    .line 13
+    invoke-virtual {v3, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->B0(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->k:I
+
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->q:I
+
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_2
+
+    .line 14
+    :cond_3
+    iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->L:Ljava/lang/Object;
+
+    if-eqz v2, :cond_4
+
+    .line 15
+    invoke-virtual {v3, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->A0(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->k:I
+
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v2
+
+    iget v4, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->q:I
+
+    invoke-virtual {v2, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_2
+
+    .line 16
+    :cond_4
+    sget-object v2, Landroidx/constraintlayout/core/state/State;->j:Ljava/lang/Integer;
+
+    invoke-virtual {v3, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->B0(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    :goto_2
+    move-object v2, v3
+
+    :cond_5
+    if-eqz v1, :cond_6
+
+    .line 17
+    invoke-virtual {v3}, Landroidx/constraintlayout/core/state/ConstraintReference;->getKey()Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Landroidx/constraintlayout/core/state/ConstraintReference;->B(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    .line 18
+    invoke-virtual {v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->A0(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    :cond_6
+    move-object v1, v3
+
+    goto :goto_1
+
+    :cond_7
+    if-eqz v1, :cond_c
+
+    .line 19
+    iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->Q:Ljava/lang/Object;
+
+    if-eqz v0, :cond_8
+
+    .line 20
+    invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->B(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->n:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->t:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_3
+
+    .line 21
+    :cond_8
+    iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->R:Ljava/lang/Object;
+
+    if-eqz v0, :cond_9
+
+    .line 22
+    invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->A(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->n:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->t:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_3
+
+    .line 23
+    :cond_9
+    iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->M:Ljava/lang/Object;
+
+    if-eqz v0, :cond_a
+
+    .line 24
+    invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->B(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->l:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->r:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_3
+
+    .line 25
+    :cond_a
+    iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->N:Ljava/lang/Object;
+
+    if-eqz v0, :cond_b
+
+    .line 26
+    invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->A(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->l:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->c0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->r:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->e0(I)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    goto :goto_3
+
+    .line 27
+    :cond_b
+    sget-object v0, Landroidx/constraintlayout/core/state/State;->j:Ljava/lang/Integer;
+
+    invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->A(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    :cond_c
+    :goto_3
+    if-nez v2, :cond_d
+
+    return-void
+
+    .line 28
+    :cond_d
+    iget v0, p0, Ll1/d;->n0:F
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    cmpl-float v1, v0, v1
+
+    if-eqz v1, :cond_e
+
+    .line 29
+    invoke-virtual {v2, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->Y(F)Landroidx/constraintlayout/core/state/ConstraintReference;
+
+    .line 30
+    :cond_e
+    sget-object v0, Ll1/g$a;->a:[I
+
+    iget-object v1, p0, Ll1/d;->o0:Landroidx/constraintlayout/core/state/State$Chain;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_11
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_10
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_f
+
+    goto :goto_4
+
+    .line 31
+    :cond_f
+    invoke-virtual {v2, v3}, Landroidx/constraintlayout/core/state/ConstraintReference;->s0(I)V
+
+    goto :goto_4
+
+    .line 32
+    :cond_10
+    invoke-virtual {v2, v1}, Landroidx/constraintlayout/core/state/ConstraintReference;->s0(I)V
+
+    goto :goto_4
+
+    :cond_11
+    const/4 v0, 0x0
+
+    .line 33
+    invoke-virtual {v2, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->s0(I)V
+
+    :goto_4
+    return-void
 .end method

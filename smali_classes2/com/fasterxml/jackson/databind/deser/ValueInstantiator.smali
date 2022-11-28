@@ -3,6 +3,16 @@
 .source "ValueInstantiator.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fasterxml/jackson/databind/deser/ValueInstantiator$Delegating;,
+        Lcom/fasterxml/jackson/databind/deser/ValueInstantiator$Base;,
+        Lcom/fasterxml/jackson/databind/deser/ValueInstantiator$Gettable;
+    }
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -16,105 +26,148 @@
 
 # virtual methods
 .method public _createFromStringFallbacks(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 4
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;,
-            Lcom/fasterxml/jackson/core/JsonProcessingException;
+            Ljava/io/IOException;
         }
     .end annotation
 
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateFromBoolean()Z
+    invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v3, "true"
-
-    .line 3
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 4
-    invoke-virtual {p0, p1, v1}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->createFromBoolean(Lcom/fasterxml/jackson/databind/DeserializationContext;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    const-string v3, "false"
-
-    .line 5
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 6
-    invoke-virtual {p0, p1, v2}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->createFromBoolean(Lcom/fasterxml/jackson/databind/DeserializationContext;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 7
-    :cond_1
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 8
     sget-object v0, Lcom/fasterxml/jackson/databind/DeserializationFeature;->ACCEPT_EMPTY_STRING_AS_NULL_OBJECT:Lcom/fasterxml/jackson/databind/DeserializationFeature;
 
     invoke-virtual {p1, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->isEnabled(Lcom/fasterxml/jackson/databind/DeserializationFeature;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
     const/4 p1, 0x0
 
     return-object p1
 
-    :cond_2
-    const/4 v0, 0x2
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateFromBoolean()Z
 
-    new-array v0, v0, [Ljava/lang/Object;
+    move-result v0
 
-    .line 9
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object v3
+    const/4 v2, 0x1
 
-    aput-object v3, v0, v2
+    if-eqz v0, :cond_2
 
-    aput-object p2, v0, v1
+    .line 4
+    sget-object v0, Lcom/fasterxml/jackson/databind/type/LogicalType;->Boolean:Lcom/fasterxml/jackson/databind/type/LogicalType;
 
-    const-string p2, "Can not instantiate value of type %s from String value (\'%s\'); no single-String constructor/factory method"
+    const-class v3, Ljava/lang/Boolean;
 
-    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    sget-object v4, Lcom/fasterxml/jackson/databind/cfg/CoercionInputShape;->String:Lcom/fasterxml/jackson/databind/cfg/CoercionInputShape;
+
+    invoke-virtual {p1, v0, v3, v4}, Lcom/fasterxml/jackson/databind/DeserializationContext;->findCoercionAction(Lcom/fasterxml/jackson/databind/type/LogicalType;Ljava/lang/Class;Lcom/fasterxml/jackson/databind/cfg/CoercionInputShape;)Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/fasterxml/jackson/databind/cfg/CoercionAction;->TryConvert:Lcom/fasterxml/jackson/databind/cfg/CoercionAction;
+
+    if-ne v0, v3, :cond_2
+
+    .line 5
+    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "true"
+
+    .line 6
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    .line 7
+    invoke-virtual {p0, p1, v2}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->createFromBoolean(Lcom/fasterxml/jackson/databind/DeserializationContext;Z)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
+
+    :cond_1
+    const-string v3, "false"
+
+    .line 8
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 9
+    invoke-virtual {p0, p1, v1}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->createFromBoolean(Lcom/fasterxml/jackson/databind/DeserializationContext;Z)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 10
+    :cond_2
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getParser()Lcom/fasterxml/jackson/core/JsonParser;
+
+    move-result-object v4
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    aput-object p2, v5, v1
+
+    const-string p2, "no String-argument constructor/factory method to deserialize from String value (\'%s\')"
+
+    move-object v0, p1
+
+    move-object v1, v3
+
+    move-object v2, p0
+
+    move-object v3, v4
+
+    move-object v4, p2
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public canCreateFromBigDecimal()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public canCreateFromBigInteger()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public canCreateFromBoolean()Z
@@ -212,12 +265,20 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateUsingDelegate()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateUsingArrayDelegate()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 3
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateFromObjectWith()Z
 
     move-result v0
@@ -230,6 +291,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateFromInt()Z
 
     move-result v0
@@ -242,6 +304,7 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->canCreateFromDouble()Z
 
     move-result v0
@@ -269,189 +332,258 @@
     return v0
 .end method
 
-.method public createFromBoolean(Lcom/fasterxml/jackson/databind/DeserializationContext;Z)Ljava/lang/Object;
-    .locals 3
+.method public createContextual(Lcom/fasterxml/jackson/databind/DeserializationContext;Lcom/fasterxml/jackson/databind/BeanDescription;)Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/fasterxml/jackson/databind/JsonMappingException;
+        }
+    .end annotation
+
+    return-object p0
+.end method
+
+.method public createFromBigDecimal(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/math/BigDecimal;)Ljava/lang/Object;
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    aput-object v1, v0, v2
+    new-array v5, v0, [Ljava/lang/Object;
 
+    const/4 v0, 0x0
+
+    aput-object p2, v5, v0
+
+    const/4 v3, 0x0
+
+    const-string v4, "no BigDecimal/double/Double-argument constructor/factory method to deserialize from Number value (%s)"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public createFromBigInteger(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/math/BigInteger;)Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const/4 v0, 0x1
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    aput-object p2, v5, v0
+
+    const/4 v3, 0x0
+
+    const-string v4, "no BigInteger-argument constructor/factory method to deserialize from Number value (%s)"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public createFromBoolean(Lcom/fasterxml/jackson/databind/DeserializationContext;Z)Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const/4 v0, 0x1
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    .line 2
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    aput-object p2, v0, v1
+    aput-object p2, v5, v0
 
-    const-string p2, "Can not instantiate value of type %s from Boolean value (%s)"
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    const-string v4, "no boolean/Boolean-argument constructor/factory method to deserialize from boolean value (%s)"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    .line 3
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method
 
 .method public createFromDouble(Lcom/fasterxml/jackson/databind/DeserializationContext;D)Ljava/lang/Object;
-    .locals 3
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    aput-object v1, v0, v2
+    new-array v5, v0, [Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p2
 
-    const/4 p3, 0x1
+    const/4 p3, 0x0
 
-    aput-object p2, v0, p3
+    aput-object p2, v5, p3
 
-    const-string p2, "Can not instantiate value of type %s from Floating-point number (%s, double)"
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    const-string v4, "no double/Double-argument constructor/factory method to deserialize from Number value (%s)"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    .line 3
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method
 
 .method public createFromInt(Lcom/fasterxml/jackson/databind/DeserializationContext;I)Ljava/lang/Object;
-    .locals 3
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    aput-object v1, v0, v2
+    new-array v5, v0, [Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    aput-object p2, v0, v1
+    aput-object p2, v5, v0
 
-    const-string p2, "Can not instantiate value of type %s from Integer number (%s, int)"
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    const-string v4, "no int/Int-argument constructor/factory method to deserialize from Number value (%s)"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    .line 3
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method
 
 .method public createFromLong(Lcom/fasterxml/jackson/databind/DeserializationContext;J)Ljava/lang/Object;
-    .locals 3
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x1
 
-    aput-object v1, v0, v2
+    new-array v5, v0, [Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
-    const/4 p3, 0x1
+    const/4 p3, 0x0
 
-    aput-object p2, v0, p3
+    aput-object p2, v5, p3
 
-    const-string p2, "Can not instantiate value of type %s from Integer number (%s, long)"
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, p2, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    const-string v4, "no long/Long-argument constructor/factory method to deserialize from Number value (%s)"
 
-    move-result-object p1
+    move-object v0, p1
 
-    throw p1
-.end method
+    move-object v2, p0
 
-.method public createFromObjectWith(Lcom/fasterxml/jackson/databind/DeserializationContext;[Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const/4 p2, 0x1
-
-    new-array p2, p2, [Ljava/lang/Object;
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aput-object v0, p2, v1
-
-    const-string v0, "Can not instantiate value of type %s with arguments"
-
-    invoke-virtual {p1, v0, p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    .line 3
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method
 
-.method public createFromString(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Ljava/lang/Object;
+.method public createFromObjectWith(Lcom/fasterxml/jackson/databind/DeserializationContext;[Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;Lcom/fasterxml/jackson/databind/deser/impl/PropertyValueBuffer;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -459,8 +591,82 @@
         }
     .end annotation
 
+    .line 2
+    invoke-virtual {p3, p2}, Lcom/fasterxml/jackson/databind/deser/impl/PropertyValueBuffer;->getParameters([Lcom/fasterxml/jackson/databind/deser/SettableBeanProperty;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->createFromObjectWith(Lcom/fasterxml/jackson/databind/DeserializationContext;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public createFromObjectWith(Lcom/fasterxml/jackson/databind/DeserializationContext;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->_createFromStringFallbacks(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const/4 p2, 0x0
+
+    new-array v5, p2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    const-string v4, "no creator with arguments specified"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public createFromString(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/fasterxml/jackson/databind/DeserializationContext;->getParser()Lcom/fasterxml/jackson/core/JsonParser;
+
+    move-result-object v3
+
+    const/4 v0, 0x1
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    aput-object p2, v5, v0
+
+    const-string v4, "no String-argument constructor/factory method to deserialize from String value (\'%s\')"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -468,93 +674,99 @@
 .end method
 
 .method public createUsingArrayDelegate(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/4 p2, 0x1
-
-    new-array p2, p2, [Ljava/lang/Object;
-
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aput-object v0, p2, v1
-
-    const-string v0, "Can not instantiate value of type %s using delegate"
-
-    invoke-virtual {p1, v0, p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public createUsingDefault(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 p2, 0x0
 
-    aput-object v1, v0, v2
+    new-array v5, p2, [Ljava/lang/Object;
 
-    const-string v1, "Can not instantiate value of type %s; no default creator found"
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v1, v0}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    const-string v4, "no array delegate creator specified"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method
 
-.method public createUsingDelegate(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public createUsingDefault(Lcom/fasterxml/jackson/databind/DeserializationContext;)Ljava/lang/Object;
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/4 p2, 0x1
-
-    new-array p2, p2, [Ljava/lang/Object;
-
     .line 1
-    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueTypeDesc()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    aput-object v0, p2, v1
+    new-array v5, v0, [Ljava/lang/Object;
 
-    const-string v0, "Can not instantiate value of type %s using delegate"
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v0, p2}, Lcom/fasterxml/jackson/databind/DeserializationContext;->mappingException(Ljava/lang/String;[Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonMappingException;
+    const-string v4, "no default no-arguments constructor found"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
+.end method
+
+.method public createUsingDelegate(Lcom/fasterxml/jackson/databind/DeserializationContext;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const/4 p2, 0x0
+
+    new-array v5, p2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    const-string v4, "no delegate creator specified"
+
+    move-object v0, p1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/fasterxml/jackson/databind/DeserializationContext;->handleMissingInstantiator(Ljava/lang/Class;Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;Lcom/fasterxml/jackson/core/JsonParser;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public getArrayDelegateCreator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;
@@ -605,15 +817,43 @@
     return-object p1
 .end method
 
-.method public getIncompleteParameter()Lcom/fasterxml/jackson/databind/introspect/AnnotatedParameter;
+.method public getValueClass()Ljava/lang/Class;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
 
-    const/4 v0, 0x0
+    .line 1
+    const-class v0, Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public abstract getValueTypeDesc()Ljava/lang/String;
+.method public getValueTypeDesc()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/fasterxml/jackson/databind/deser/ValueInstantiator;->getValueClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "UNKNOWN"
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public getWithArgsCreator()Lcom/fasterxml/jackson/databind/introspect/AnnotatedWithParams;

@@ -1,5 +1,5 @@
 .class public Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder$a;
-.super Lcom/tmapmobility/tmap/exoplayer2/text/i;
+.super Lcom/tmapmobility/tmap/exoplayer2/text/j;
 .source "ExoplayerCuesDecoder.java"
 
 
@@ -25,20 +25,20 @@
     .line 1
     iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder$a;->f:Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder;
 
-    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/text/i;-><init>()V
+    invoke-direct {p0}, Lcom/tmapmobility/tmap/exoplayer2/text/j;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public j()V
+.method public k()V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder$a;->f:Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder;
 
-    invoke-static {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder;->a(Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder;Lcom/tmapmobility/tmap/exoplayer2/text/i;)V
+    invoke-static {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder;->a(Lcom/tmapmobility/tmap/exoplayer2/text/ExoplayerCuesDecoder;Lcom/tmapmobility/tmap/exoplayer2/text/j;)V
 
     return-void
 .end method

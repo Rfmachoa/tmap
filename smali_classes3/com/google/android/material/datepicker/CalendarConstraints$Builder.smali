@@ -25,6 +25,8 @@
 # instance fields
 .field private end:J
 
+.field private firstDayOfWeek:I
+
 .field private openAt:Ljava/lang/Long;
 
 .field private start:J
@@ -162,7 +164,14 @@
     iput-object v0, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->openAt:Ljava/lang/Long;
 
     .line 12
-    invoke-static {p1}, Lcom/google/android/material/datepicker/CalendarConstraints;->access$400(Lcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
+    invoke-static {p1}, Lcom/google/android/material/datepicker/CalendarConstraints;->access$400(Lcom/google/android/material/datepicker/CalendarConstraints;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->firstDayOfWeek:I
+
+    .line 13
+    invoke-static {p1}, Lcom/google/android/material/datepicker/CalendarConstraints;->access$500(Lcom/google/android/material/datepicker/CalendarConstraints;)Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
 
     move-result-object p1
 
@@ -174,7 +183,7 @@
 
 # virtual methods
 .method public build()Lcom/google/android/material/datepicker/CalendarConstraints;
-    .locals 9
+    .locals 10
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -216,6 +225,7 @@
 
     check-cast v6, Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->openAt:Ljava/lang/Long;
 
     if-nez v0, :cond_0
@@ -224,7 +234,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -237,11 +246,13 @@
     :goto_0
     move-object v7, v0
 
-    const/4 v8, 0x0
+    iget v8, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->firstDayOfWeek:I
+
+    const/4 v9, 0x0
 
     move-object v3, v1
 
-    invoke-direct/range {v3 .. v8}, Lcom/google/android/material/datepicker/CalendarConstraints;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$1;)V
+    invoke-direct/range {v3 .. v9}, Lcom/google/android/material/datepicker/CalendarConstraints;-><init>(Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/Month;Lcom/google/android/material/datepicker/CalendarConstraints$DateValidator;Lcom/google/android/material/datepicker/Month;ILcom/google/android/material/datepicker/CalendarConstraints$1;)V
 
     return-object v1
 .end method
@@ -251,8 +262,31 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iput-wide p1, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->end:J
+
+    return-object p0
+.end method
+
+.method public setFirstDayOfWeek(I)Lcom/google/android/material/datepicker/CalendarConstraints$Builder;
+    .locals 0
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->firstDayOfWeek:I
 
     return-object p0
 .end method
@@ -260,6 +294,9 @@
 .method public setOpenAt(J)Lcom/google/android/material/datepicker/CalendarConstraints$Builder;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1
@@ -277,6 +314,9 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .line 1
     iput-wide p1, p0, Lcom/google/android/material/datepicker/CalendarConstraints$Builder;->start:J
 
@@ -290,6 +330,9 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
     .line 1

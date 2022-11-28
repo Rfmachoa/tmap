@@ -1,28 +1,46 @@
-.class public final Landroidx/core/content/m;
+.class public final synthetic Landroidx/core/content/m;
 .super Ljava/lang/Object;
-.source "UnusedAppRestrictionsConstants.java"
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Landroidx/core/util/v;
 
 
 # static fields
-.field public static final a:I = 0x0
-
-.field public static final b:I = 0x1
-
-.field public static final c:I = 0x2
-
-.field public static final d:I = 0x3
-
-.field public static final e:I = 0x4
-
-.field public static final f:I = 0x5
+.field public static final synthetic a:Landroidx/core/content/m;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static synthetic constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/core/content/m;
+
+    invoke-direct {v0}, Landroidx/core/content/m;-><init>()V
+
+    sput-object v0, Landroidx/core/content/m;->a:Landroidx/core/content/m;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p1}, Landroidx/core/content/h$e;->a(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
 .end method

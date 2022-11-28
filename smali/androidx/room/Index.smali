@@ -10,8 +10,15 @@
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Landroidx/room/Index;
         name = ""
+        orders = {}
         unique = false
     .end subannotation
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/room/Index$Order;
+    }
 .end annotation
 
 .annotation runtime Ljava/lang/annotation/Retention;
@@ -25,6 +32,9 @@
 
 # virtual methods
 .method public abstract name()Ljava/lang/String;
+.end method
+
+.method public abstract orders()[Landroidx/room/Index$Order;
 .end method
 
 .method public abstract unique()Z

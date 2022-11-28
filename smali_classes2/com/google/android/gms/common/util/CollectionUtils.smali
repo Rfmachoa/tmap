@@ -1,6 +1,6 @@
 .class public final Lcom/google/android/gms/common/util/CollectionUtils;
 .super Ljava/lang/Object;
-.source "com.google.android.gms:play-services-basement@@18.0.0"
+.source "com.google.android.gms:play-services-basement@@18.1.0"
 
 
 # annotations
@@ -447,13 +447,11 @@
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const/16 p1, 0x42
+    const-string p1, "Key and values array lengths not equal: "
 
-    const-string v2, "Key and values array lengths not equal: "
+    const-string v2, " != "
 
-    const-string v3, " != "
-
-    invoke-static {p1, v2, v0, v3, v1}, Lcom/android/billingclient/api/n;->a(ILjava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, v0, v2, v1}, Landroidx/emoji2/text/flatbuffer/x;->a(Ljava/lang/String;ILjava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -718,17 +716,6 @@
 
 .method private static zza(IZ)Ljava/util/Map;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<K:",
-            "Ljava/lang/Object;",
-            "V:",
-            "Ljava/lang/Object;",
-            ">(IZ)",
-            "Ljava/util/Map<",
-            "TK;TV;>;"
-        }
-    .end annotation
 
     const/16 p1, 0x100
 
@@ -755,15 +742,6 @@
 
 .method private static zzb(IZ)Ljava/util/Set;
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(IZ)",
-            "Ljava/util/Set<",
-            "TT;>;"
-        }
-    .end annotation
 
     const/4 v0, 0x1
 

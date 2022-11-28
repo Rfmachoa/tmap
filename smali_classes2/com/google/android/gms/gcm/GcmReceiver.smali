@@ -303,11 +303,11 @@
 
     const/16 v3, 0x5e
 
-    invoke-static {v1, v3}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {v1, v3}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v3
 
-    invoke-static {v2, v3}, Lcom/android/billingclient/api/d;->a(Ljava/lang/String;I)I
+    invoke-static {v2, v3}, Lcom/google/android/gms/gcm/a;->a(Ljava/lang/String;I)I
 
     move-result v3
 
@@ -315,7 +315,7 @@
 
     const-string v5, "/"
 
-    invoke-static {v3, v4, v1, v5, v2}, Lcom/android/billingclient/api/f;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v4, v1, v5, v2}, Lcom/google/android/gms/gcm/c;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

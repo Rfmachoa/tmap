@@ -152,6 +152,14 @@
 
 .method public setAutoCouponDownloadMessage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "autoCouponDownloadMessage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->autoCouponDownloadMessage:Ljava/lang/String;
@@ -161,6 +169,14 @@
 
 .method public setAutoCouponDownloadYn(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "autoCouponDownloadYn"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->autoCouponDownloadYn:Ljava/lang/String;
@@ -170,6 +186,14 @@
 
 .method public setOutlinkAppPackage(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkAppPackage"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkAppPackage:Ljava/lang/String;
@@ -179,6 +203,14 @@
 
 .method public setOutlinkButtonDesc(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkButtonDesc"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkButtonDesc:Ljava/lang/String;
@@ -188,6 +220,14 @@
 
 .method public setOutlinkButtonTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkButtonTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkButtonTitle:Ljava/lang/String;
@@ -197,6 +237,14 @@
 
 .method public setOutlinkCode(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkCode"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkCode:Ljava/lang/String;
@@ -206,6 +254,14 @@
 
 .method public setOutlinkContents(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkContents"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkContents:Ljava/lang/String;
@@ -215,6 +271,14 @@
 
 .method public setOutlinkTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkTitle:Ljava/lang/String;
@@ -224,6 +288,14 @@
 
 .method public setOutlinkUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outlinkUrl"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->outlinkUrl:Ljava/lang/String;
@@ -233,6 +305,14 @@
 
 .method public setWebviewTitle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "webviewTitle"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/skt/moment/net/vo/ResTreatsHappenBodyVo$ResTreatsVo;->webviewTitle:Ljava/lang/String;

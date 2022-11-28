@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/bumptech/glide/load/data/b<",
-        "Landroid/os/ParcelFileDescriptor;",
+        "Landroid/content/res/AssetFileDescriptor;",
         ">;"
     }
 .end annotation
@@ -34,13 +34,13 @@
         value = {
             "()",
             "Ljava/lang/Class<",
-            "Landroid/os/ParcelFileDescriptor;",
+            "Landroid/content/res/AssetFileDescriptor;",
             ">;"
         }
     .end annotation
 
     .line 1
-    const-class v0, Landroid/os/ParcelFileDescriptor;
+    const-class v0, Landroid/content/res/AssetFileDescriptor;
 
     return-object v0
 .end method
@@ -54,9 +54,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Landroid/os/ParcelFileDescriptor;
+    check-cast p1, Landroid/content/res/AssetFileDescriptor;
 
-    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/h;->g(Landroid/os/ParcelFileDescriptor;)V
+    invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/h;->g(Landroid/content/res/AssetFileDescriptor;)V
 
     return-void
 .end method
@@ -70,14 +70,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/data/h;->h(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+    invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/data/h;->h(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public g(Landroid/os/ParcelFileDescriptor;)V
+.method public g(Landroid/content/res/AssetFileDescriptor;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -86,12 +86,12 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->close()V
+    invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->close()V
 
     return-void
 .end method
 
-.method public h(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
+.method public h(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -101,10 +101,6 @@
 
     .line 1
     invoke-virtual {p1, p2}, Landroid/content/res/AssetManager;->openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/AssetFileDescriptor;->getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
 

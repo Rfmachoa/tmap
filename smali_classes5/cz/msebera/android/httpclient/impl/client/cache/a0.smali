@@ -31,7 +31,7 @@
     return-void
 .end method
 
-.method public static b(Ldf/l;)V
+.method public static b(Lhh/l;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -45,14 +45,14 @@
 
     .line 1
     :cond_0
-    invoke-interface {p0}, Ldf/l;->isStreaming()Z
+    invoke-interface {p0}, Lhh/l;->isStreaming()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-interface {p0}, Ldf/l;->getContent()Ljava/io/InputStream;
+    invoke-interface {p0}, Lhh/l;->getContent()Ljava/io/InputStream;
 
     move-result-object p0
 

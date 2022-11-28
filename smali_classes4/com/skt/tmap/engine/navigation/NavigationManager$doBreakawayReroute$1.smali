@@ -42,8 +42,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x4,
-        0x2
+        0x7,
+        0x1
     }
 .end annotation
 
@@ -55,15 +55,10 @@
 # direct methods
 .method public constructor <init>(Lcom/skt/tmap/engine/navigation/NavigationManager;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    .line 1
     iput-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doBreakawayReroute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -92,7 +87,7 @@
 .end method
 
 .method public onComplete(Lcom/skt/tmap/engine/navigation/route/RouteResult;)V
-    .locals 2
+    .locals 3
     .param p1    # Lcom/skt/tmap/engine/navigation/route/RouteResult;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
@@ -119,14 +114,16 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 3
     invoke-virtual {p1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->getResponseDto()Lcom/skt/tmap/engine/navigation/network/ndds/dto/response/PlanningRouteMultiFormatResponseDto;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_1
 
@@ -136,7 +133,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lkotlin/collections/CollectionsKt___CollectionsKt;->R2(Ljava/util/List;I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -148,15 +145,16 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_1
+
+    move v2, v1
 
     :cond_1
-    const/4 v1, 0x1
+    xor-int/lit8 v0, v2, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->setFavoriteRouteSelected(Z)V
 
     :cond_2
-    invoke-virtual {p1, v1}, Lcom/skt/tmap/engine/navigation/route/RouteResult;->setFavoriteRouteSelected(Z)V
-
-    :cond_3
     return-void
 .end method
 
@@ -204,24 +202,20 @@
 
     invoke-static {p2, p1}, Lcom/skt/tmap/engine/navigation/util/TmapNavigationLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez p3, :cond_0
-
-    goto :goto_2
+    if-eqz p3, :cond_2
 
     .line 2
-    :cond_0
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
     move-result p1
 
     sparse-switch p1, :sswitch_data_0
 
-    goto :goto_2
+    goto :goto_1
 
     :sswitch_0
     const-string p1, "210501"
 
-    .line 3
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -237,9 +231,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_2
     const-string p1, "022003"
@@ -248,9 +242,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_0
 
-    goto :goto_0
+    goto :goto_1
 
     :sswitch_3
     const-string p1, "300"
@@ -259,9 +253,12 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-nez p1, :cond_0
 
-    .line 4
+    goto :goto_1
+
+    .line 3
+    :cond_0
     :goto_0
     iget-object p1, p0, Lcom/skt/tmap/engine/navigation/NavigationManager$doBreakawayReroute$1;->this$0:Lcom/skt/tmap/engine/navigation/NavigationManager;
 
@@ -271,21 +268,16 @@
 
     if-eqz p1, :cond_2
 
-    if-eqz p4, :cond_1
+    if-nez p4, :cond_1
 
-    goto :goto_1
-
-    :cond_1
     const-string p4, ""
 
-    :goto_1
+    :cond_1
     invoke-interface {p1, p3, p4}, Lcom/skt/tmap/engine/navigation/DriveStatusChangedListener;->onFailRouteRequest(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    :goto_2
+    :goto_1
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

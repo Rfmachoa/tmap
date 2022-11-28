@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/google/firebase/auth/internal/IdTokenListener;
 .super Ljava/lang/Object;
-.source "com.google.firebase:firebase-auth-interop@@20.0.0"
+.source "com.google.firebase:firebase-auth-interop@@19.0.2"
 
 
 # annotations

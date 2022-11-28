@@ -1457,7 +1457,7 @@
 
     const-string v3, "Top bit not zero: "
 
-    invoke-static {v3, v0, v1}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v3, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1598,7 +1598,7 @@
 
     const-string v3, "Invalid UTF-8 sequence continuation byte: "
 
-    invoke-static {v3, v0, v1}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v3, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1622,7 +1622,7 @@
 
     const-string v3, "Invalid UTF-8 sequence first byte: "
 
-    invoke-static {v3, v0, v1}, Landroidx/camera/core/l1;->a(Ljava/lang/String;J)Ljava/lang/String;
+    invoke-static {v3, v0, v1}, Lb0/p0;->a(Ljava/lang/String;J)Ljava/lang/String;
 
     move-result-object v0
 

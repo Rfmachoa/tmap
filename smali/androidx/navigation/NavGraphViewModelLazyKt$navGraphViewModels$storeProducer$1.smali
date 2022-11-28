@@ -3,12 +3,12 @@
 .source "NavGraphViewModelLazy.kt"
 
 # interfaces
-.implements Lej/a;
+.implements Lgl/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/navigation/NavGraphViewModelLazyKt;->a(Landroidx/fragment/app/Fragment;ILej/a;)Lkotlin/o;
+    value = Landroidx/navigation/NavGraphViewModelLazyKt;->e(Landroidx/fragment/app/Fragment;ILgl/a;)Lkotlin/p;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,17 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lej/a<",
+        "Lgl/a<",
         "Landroidx/lifecycle/ViewModelStore;",
         ">;"
     }
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNavGraphViewModelLazy.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavGraphViewModelLazy.kt\nandroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1\n*L\n1#1,64:1\n*E\n"
+    value = "SMAP\nNavGraphViewModelLazy.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NavGraphViewModelLazy.kt\nandroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1\n*L\n1#1,220:1\n*E\n"
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
-    bv = {
-        0x1,
-        0x0,
-        0x3
-    }
     d1 = {
         "\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\"\n\u0008\u0000\u0010\u0002\u0018\u0001*\u00020\u0003H\n\u00a2\u0006\u0002\u0008\u0004"
     }
@@ -48,25 +43,38 @@
     k = 0x3
     mv = {
         0x1,
-        0x1,
-        0x10
+        0x6,
+        0x0
     }
+    xi = 0xb0
 .end annotation
 
 
 # instance fields
-.field public final synthetic $backStackEntry:Lkotlin/o;
-
-.field public final synthetic $backStackEntry$metadata:Lkotlin/reflect/n;
+.field public final synthetic $backStackEntry$delegate:Lkotlin/p;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/p<",
+            "Landroidx/navigation/NavBackStackEntry;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/o;Lkotlin/reflect/n;)V
+.method public constructor <init>(Lkotlin/p;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/p<",
+            "Landroidx/navigation/NavBackStackEntry;",
+            ">;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Landroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1;->$backStackEntry:Lkotlin/o;
-
-    iput-object p2, p0, Landroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1;->$backStackEntry$metadata:Lkotlin/reflect/n;
+    iput-object p1, p0, Landroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1;->$backStackEntry$delegate:Lkotlin/p;
 
     const/4 p1, 0x0
 
@@ -78,30 +86,20 @@
 
 # virtual methods
 .method public final invoke()Landroidx/lifecycle/ViewModelStore;
-    .locals 2
+    .locals 1
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 
-    .line 1
-    iget-object v0, p0, Landroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1;->$backStackEntry:Lkotlin/o;
+    .line 2
+    iget-object v0, p0, Landroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1;->$backStackEntry$delegate:Lkotlin/p;
 
-    invoke-interface {v0}, Lkotlin/o;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/navigation/p;
-
-    const-string v1, "backStackEntry"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Landroidx/navigation/p;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
+    invoke-static {v0}, Landroidx/navigation/NavGraphViewModelLazyKt;->a(Lkotlin/p;)Landroidx/navigation/NavBackStackEntry;
 
     move-result-object v0
 
-    const-string v1, "backStackEntry.viewModelStore"
+    invoke-virtual {v0}, Landroidx/navigation/NavBackStackEntry;->getViewModelStore()Landroidx/lifecycle/ViewModelStore;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/f0;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
     return-object v0
 .end method
@@ -109,6 +107,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/navigation/NavGraphViewModelLazyKt$navGraphViewModels$storeProducer$1;->invoke()Landroidx/lifecycle/ViewModelStore;
 
     move-result-object v0

@@ -32,17 +32,17 @@
 
 .field public static final hide_password_duration:I = 0x7f0b0011
 
-.field public static final mtrl_btn_anim_delay_ms:I = 0x7f0b0013
+.field public static final mtrl_btn_anim_delay_ms:I = 0x7f0b003f
 
-.field public static final mtrl_btn_anim_duration_ms:I = 0x7f0b0014
+.field public static final mtrl_btn_anim_duration_ms:I = 0x7f0b0040
 
-.field public static final mtrl_chip_anim_duration:I = 0x7f0b001a
+.field public static final mtrl_chip_anim_duration:I = 0x7f0b0046
 
-.field public static final mtrl_tab_indicator_anim_duration_ms:I = 0x7f0b001b
+.field public static final mtrl_tab_indicator_anim_duration_ms:I = 0x7f0b004f
 
-.field public static final show_password_duration:I = 0x7f0b001c
+.field public static final show_password_duration:I = 0x7f0b0055
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0b001d
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0056
 
 
 # direct methods

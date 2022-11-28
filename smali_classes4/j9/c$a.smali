@@ -1,6 +1,6 @@
-.class public Lj9/c$a;
+.class public interface abstract Lj9/c$a;
 .super Ljava/lang/Object;
-.source "QueryGetIsUserExternalDuplication.java"
+.source "Table.java"
 
 
 # annotations
@@ -9,36 +9,27 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x609
     name = "a"
 .end annotation
 
-
-# instance fields
-.field public a:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "userExternalIdYesno"
-    .end annotation
-.end field
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lj9/c$a;->a:Ljava/lang/String;
-
-    return-object v0
+.method public abstract a(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/database/sqlite/SQLiteDatabase;",
+            ")TT;"
+        }
+    .end annotation
 .end method

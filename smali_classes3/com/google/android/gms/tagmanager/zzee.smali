@@ -1,17 +1,14 @@
 .class final Lcom/google/android/gms/tagmanager/zzee;
-.super Lcom/google/android/gms/tagmanager/zzfl;
-.source "com.google.android.gms:play-services-tagmanager-v4-impl@@17.0.1"
-
-
-# annotations
-.annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
-.end annotation
+.super Lcom/google/android/gms/tagmanager/zzbt;
+.source "com.google.android.gms:play-services-tagmanager-v4-impl@@18.0.2"
 
 
 # static fields
 .field private static final zza:Ljava/lang/String;
 
-.field private static final zzb:Ljava/lang/String;
+
+# instance fields
+.field private final zzb:Landroid/content/Context;
 
 
 # direct methods
@@ -19,7 +16,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzaj:Lcom/google/android/gms/internal/gtm/zza;
+    sget-object v0, Lcom/google/android/gms/internal/gtm/zza;->zzB:Lcom/google/android/gms/internal/gtm/zza;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zza;->toString()Ljava/lang/String;
 
@@ -27,100 +24,89 @@
 
     sput-object v0, Lcom/google/android/gms/tagmanager/zzee;->zza:Ljava/lang/String;
 
-    .line 2
-    sget-object v0, Lcom/google/android/gms/internal/gtm/zzb;->zzby:Lcom/google/android/gms/internal/gtm/zzb;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/gtm/zzb;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/tagmanager/zzee;->zzb:Ljava/lang/String;
-
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzee;->zza:Ljava/lang/String;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/google/android/gms/tagmanager/zzfl;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lcom/google/android/gms/tagmanager/zzee;->zza:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/tagmanager/zzbt;-><init>(Ljava/lang/String;[Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcom/google/android/gms/tagmanager/zzee;->zzb:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final zzc(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/gtm/zzak;",
-            ">;)Z"
-        }
-    .end annotation
-
-    sget-object v0, Lcom/google/android/gms/tagmanager/zzee;->zzb:Ljava/lang/String;
+.method public final zza(Ljava/util/Map;)Lcom/google/android/gms/internal/gtm/zzam;
+    .locals 2
 
     .line 1
-    invoke-interface {p3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p1, Landroid/util/DisplayMetrics;
 
-    move-result-object p3
+    invoke-direct {p1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    check-cast p3, Lcom/google/android/gms/internal/gtm/zzak;
+    iget-object v0, p0, Lcom/google/android/gms/tagmanager/zzee;->zzb:Landroid/content/Context;
+
+    const-string v1, "window"
 
     .line 2
-    invoke-static {p3}, Lcom/google/android/gms/tagmanager/zzfv;->zzl(Lcom/google/android/gms/internal/gtm/zzak;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p3
+    move-result-object v0
 
-    invoke-static {p3}, Lcom/google/android/gms/tagmanager/zzfv;->zzg(Ljava/lang/Object;)Ljava/lang/Boolean;
-
-    move-result-object p3
+    check-cast v0, Landroid/view/WindowManager;
 
     .line 3
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    move-result p3
-
-    const/4 v0, 0x1
-
-    if-eq v0, p3, :cond_0
-
-    const/16 p3, 0x40
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p3, 0x42
-
-    :goto_0
-    :try_start_0
-    invoke-static {p2, p3}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
-
-    move-result-object p2
+    move-result-object v0
 
     .line 4
-    invoke-virtual {p2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    invoke-virtual {v0, p1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+
+    .line 5
+    iget v0, p1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    .line 6
+    iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 7
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "x"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
+    invoke-static {p1}, Lcom/google/android/gms/tagmanager/zzfu;->zzc(Ljava/lang/Object;)Lcom/google/android/gms/internal/gtm/zzam;
 
-    move-result p1
-    :try_end_0
-    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p1
 
-    return p1
+    return-object p1
+.end method
 
-    :catch_0
-    const/4 p1, 0x0
+.method public final zzb()Z
+    .locals 1
 
-    return p1
+    const/4 v0, 0x1
+
+    return v0
 .end method

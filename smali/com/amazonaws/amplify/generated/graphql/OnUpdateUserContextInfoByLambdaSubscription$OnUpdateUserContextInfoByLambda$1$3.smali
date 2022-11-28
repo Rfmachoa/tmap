@@ -59,7 +59,7 @@
     .line 1
     sget-object v0, Ltype/CustomType;->AWSJSON:Ltype/CustomType;
 
-    invoke-interface {p2, v0, p1}, Lcom/apollographql/apollo/api/e$a;->a(Lc4/o;Ljava/lang/Object;)V
+    invoke-interface {p2, v0, p1}, Lcom/apollographql/apollo/api/e$a;->a(Lz5/o;Ljava/lang/Object;)V
 
     return-void
 .end method

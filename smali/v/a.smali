@@ -1,99 +1,78 @@
-.class public Lv/a;
+.class public final Lv/a;
 .super Ljava/lang/Object;
-.source "AeFpsRange.java"
+.source "Camera2CameraCaptureResultConverter.java"
 
 
-# instance fields
-.field public final a:Landroid/util/Range;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/Range<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x15
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Lx/b1;)V
-    .locals 1
-    .param p1    # Lx/b1;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x10
-        }
-        names = {
-            "quirks"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    const-class v0, Lu/a;
-
-    invoke-virtual {p1, v0}, Lx/b1;->b(Ljava/lang/Class;)Lx/a1;
-
-    move-result-object p1
-
-    check-cast p1, Lu/a;
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    .line 3
-    iput-object p1, p0, Lv/a;->a:Landroid/util/Range;
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    invoke-virtual {p1}, Lu/a;->b()Landroid/util/Range;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lv/a;->a:Landroid/util/Range;
-
-    :goto_0
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Lr/b$a;)V
-    .locals 2
-    .param p1    # Lr/b$a;
+.method public static a(Landroidx/camera/core/impl/CameraCaptureFailure;)Landroid/hardware/camera2/CaptureFailure;
+    .locals 1
+    .param p0    # Landroidx/camera/core/impl/CameraCaptureFailure;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "configBuilder"
-        }
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lv/a;->a:Landroid/util/Range;
+    instance-of v0, p0, Landroidx/camera/camera2/internal/g;
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureRequest$Key;
+    check-cast p0, Landroidx/camera/camera2/internal/g;
 
-    invoke-virtual {p1, v1, v0}, Lr/b$a;->f(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lr/b$a;
+    invoke-virtual {p0}, Landroidx/camera/camera2/internal/g;->b()Landroid/hardware/camera2/CaptureFailure;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    return-void
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static b(Landroidx/camera/core/impl/c;)Landroid/hardware/camera2/CaptureResult;
+    .locals 1
+    .param p0    # Landroidx/camera/core/impl/c;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    instance-of v0, p0, Landroidx/camera/camera2/internal/h;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    check-cast p0, Landroidx/camera/camera2/internal/h;
+
+    invoke-virtual {p0}, Landroidx/camera/camera2/internal/h;->e()Landroid/hardware/camera2/CaptureResult;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

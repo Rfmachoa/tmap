@@ -1,16 +1,6 @@
 .class final Lcom/google/android/gms/auth/api/zza;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/api/Api$AbstractClientBuilder<",
-        "Lcom/google/android/gms/internal/auth/zzak;",
-        "Lcom/google/android/gms/auth/api/AuthProxyOptions;",
-        ">;"
-    }
-.end annotation
+.source "com.google.android.gms:play-services-auth-base@@18.0.4"
 
 
 # direct methods
@@ -25,7 +15,7 @@
 
 
 # virtual methods
-.method public final synthetic buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
+.method public final synthetic buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
     .locals 7
 
     .line 1
@@ -34,7 +24,7 @@
     check-cast v4, Lcom/google/android/gms/auth/api/AuthProxyOptions;
 
     .line 2
-    new-instance p4, Lcom/google/android/gms/internal/auth/zzak;
+    new-instance p4, Lcom/google/android/gms/internal/auth/zzbe;
 
     move-object v0, p4
 
@@ -48,7 +38,7 @@
 
     move-object v6, p6
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/internal/auth/zzak;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/auth/api/AuthProxyOptions;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/internal/auth/zzbe;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/auth/api/AuthProxyOptions;Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;)V
 
     return-object p4
 .end method

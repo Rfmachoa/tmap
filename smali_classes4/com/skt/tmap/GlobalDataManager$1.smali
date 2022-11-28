@@ -159,18 +159,18 @@
 
     .line 12
     :cond_3
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
     .line 13
-    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->l2()Lcom/skt/tmap/engine/TmapAiManager;
+    invoke-static {}, Lcom/skt/tmap/engine/TmapAiManager;->n2()Lcom/skt/tmap/engine/TmapAiManager;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->n1()V
+    invoke-virtual {p1}, Lcom/skt/tmap/engine/TmapAiManager;->p1()V
 
     :cond_4
     :goto_0

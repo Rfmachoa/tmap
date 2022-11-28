@@ -17,265 +17,279 @@
 
 
 # static fields
-.field public static final A0:Ljava/lang/String; = "A_AAC"
+.field public static final A0:Ljava/lang/String; = "A_OPUS"
 
-.field public static final A1:I = 0x88
+.field public static final A1:I = 0x83
 
-.field public static final A2:I = 0x55bd
+.field public static final A2:I = 0x55bb
 
-.field public static final B0:Ljava/lang/String; = "A_MPEG/L2"
+.field public static final B0:Ljava/lang/String; = "A_AAC"
 
-.field public static final B1:I = 0x55aa
+.field public static final B1:I = 0x88
 
-.field public static final B2:I = 0x55d0
+.field public static final B2:I = 0x55bc
 
-.field public static final C0:Ljava/lang/String; = "A_MPEG/L3"
+.field public static final C0:Ljava/lang/String; = "A_MPEG/L2"
 
-.field public static final C1:I = 0x23e383
+.field public static final C1:I = 0x55aa
 
-.field public static final C2:I = 0x55d1
+.field public static final C2:I = 0x55bd
 
-.field public static final D0:Ljava/lang/String; = "A_AC3"
+.field public static final D0:Ljava/lang/String; = "A_MPEG/L3"
 
-.field public static final D1:I = 0x55ee
+.field public static final D1:I = 0x23e383
 
-.field public static final D2:I = 0x55d2
+.field public static final D2:I = 0x55d0
 
-.field public static final E0:Ljava/lang/String; = "A_EAC3"
+.field public static final E0:Ljava/lang/String; = "A_AC3"
 
-.field public static final E1:I = 0x41e4
+.field public static final E1:I = 0x55ee
 
-.field public static final E2:I = 0x55d3
+.field public static final E2:I = 0x55d1
 
-.field public static final F0:Ljava/lang/String; = "A_TRUEHD"
+.field public static final F0:Ljava/lang/String; = "A_EAC3"
 
-.field public static final F1:I = 0x41e7
+.field public static final F1:I = 0x41e4
 
-.field public static final F2:I = 0x55d4
+.field public static final F2:I = 0x55d2
 
-.field public static final G0:Ljava/lang/String; = "A_DTS"
+.field public static final G0:Ljava/lang/String; = "A_TRUEHD"
 
-.field public static final G1:I = 0x41ed
+.field public static final G1:I = 0x41e7
 
-.field public static final G2:I = 0x55d5
+.field public static final G2:I = 0x55d3
 
-.field public static final H0:Ljava/lang/String; = "A_DTS/EXPRESS"
+.field public static final H0:Ljava/lang/String; = "A_DTS"
 
-.field public static final H1:I = 0x536e
+.field public static final H1:I = 0x41ed
 
-.field public static final H2:I = 0x55d6
+.field public static final H2:I = 0x55d4
 
-.field public static final I0:Ljava/lang/String; = "A_DTS/LOSSLESS"
+.field public static final I0:Ljava/lang/String; = "A_DTS/EXPRESS"
 
-.field public static final I1:I = 0x86
+.field public static final I1:I = 0x536e
 
-.field public static final I2:I = 0x55d7
+.field public static final I2:I = 0x55d5
 
-.field public static final J0:Ljava/lang/String; = "A_FLAC"
+.field public static final J0:Ljava/lang/String; = "A_DTS/LOSSLESS"
 
-.field public static final J1:I = 0x63a2
+.field public static final J1:I = 0x86
 
-.field public static final J2:I = 0x55d8
+.field public static final J2:I = 0x55d6
 
-.field public static final K0:Ljava/lang/String; = "A_MS/ACM"
+.field public static final K0:Ljava/lang/String; = "A_FLAC"
 
-.field public static final K1:I = 0x56aa
+.field public static final K1:I = 0x63a2
 
-.field public static final K2:I = 0x55d9
+.field public static final K2:I = 0x55d7
 
-.field public static final L0:Ljava/lang/String; = "A_PCM/INT/LIT"
+.field public static final L0:Ljava/lang/String; = "A_MS/ACM"
 
-.field public static final L1:I = 0x56bb
+.field public static final L1:I = 0x56aa
 
-.field public static final L2:I = 0x55da
+.field public static final L2:I = 0x55d8
 
-.field public static final M0:Ljava/lang/String; = "A_PCM/INT/BIG"
+.field public static final M0:Ljava/lang/String; = "A_PCM/INT/LIT"
 
-.field public static final M1:I = 0xe0
+.field public static final M1:I = 0x56bb
 
-.field public static final M2:I = 0x4
+.field public static final M2:I = 0x55d9
 
-.field public static final N0:Ljava/lang/String; = "A_PCM/FLOAT/IEEE"
+.field public static final N0:Ljava/lang/String; = "A_PCM/INT/BIG"
 
-.field public static final N1:I = 0xb0
+.field public static final N1:I = 0x75a2
 
-.field public static final N2:I = 0x64766343
+.field public static final N2:I = 0x55da
 
-.field public static final O0:Ljava/lang/String; = "S_TEXT/UTF8"
+.field public static final O0:Ljava/lang/String; = "A_PCM/FLOAT/IEEE"
 
-.field public static final O1:I = 0xba
+.field public static final O1:I = 0xe0
 
-.field public static final O2:I = 0x64767643
+.field public static final O2:I = 0x4
 
-.field public static final P0:Ljava/lang/String; = "S_TEXT/ASS"
+.field public static final P0:Ljava/lang/String; = "S_TEXT/UTF8"
 
-.field public static final P1:I = 0x54b0
+.field public static final P1:I = 0xb0
 
-.field public static final P2:I = 0x0
+.field public static final P2:I = 0x64766343
 
-.field public static final Q0:Ljava/lang/String; = "S_TEXT/WEBVTT"
+.field public static final Q0:Ljava/lang/String; = "S_TEXT/ASS"
 
-.field public static final Q1:I = 0x54ba
+.field public static final Q1:I = 0xba
 
-.field public static final Q2:I = 0x1
+.field public static final Q2:I = 0x64767643
 
-.field public static final R0:Ljava/lang/String; = "S_VOBSUB"
+.field public static final R0:Ljava/lang/String; = "S_TEXT/WEBVTT"
 
-.field public static final R1:I = 0x54b2
+.field public static final R1:I = 0x54b0
 
-.field public static final R2:I = 0x2
+.field public static final R2:I = 0x0
 
-.field public static final S0:Ljava/lang/String; = "S_HDMV/PGS"
+.field public static final S0:Ljava/lang/String; = "S_VOBSUB"
 
-.field public static final S1:I = 0xe1
+.field public static final S1:I = 0x54ba
 
-.field public static final S2:I = 0x3
+.field public static final S2:I = 0x1
 
-.field public static final T0:Ljava/lang/String; = "S_DVBSUB"
+.field public static final T0:Ljava/lang/String; = "S_HDMV/PGS"
 
-.field public static final T1:I = 0x9f
+.field public static final T1:I = 0x54b2
 
-.field public static final T2:I = 0x58564944
+.field public static final T2:I = 0x2
 
-.field public static final U0:I = 0x2000
+.field public static final U0:Ljava/lang/String; = "S_DVBSUB"
 
-.field public static final U1:I = 0x6264
+.field public static final U1:I = 0xe1
 
-.field public static final U2:I = 0x33363248
+.field public static final U2:I = 0x3
 
-.field public static final V0:I = 0x1680
+.field public static final V0:I = 0x2000
 
-.field public static final V1:I = 0xb5
+.field public static final V1:I = 0x9f
 
-.field public static final V2:I = 0x31435657
+.field public static final V2:I = 0x58564944
 
-.field public static final W0:I = 0x8
+.field public static final W0:I = 0x1680
 
-.field public static final W1:I = 0x6d80
+.field public static final W1:I = 0x6264
 
-.field public static final W2:[B
+.field public static final W2:I = 0x33363248
 
-.field public static final X0:I = 0x2
+.field public static final X0:I = 0x8
 
-.field public static final X1:I = 0x6240
+.field public static final X1:I = 0xb5
 
-.field public static final X2:I = 0x13
+.field public static final X2:I = 0x31435657
 
-.field public static final Y0:I = 0x1a45dfa3
+.field public static final Y0:I = 0x2
 
-.field public static final Y1:I = 0x5031
+.field public static final Y1:I = 0x6d80
 
-.field public static final Y2:J = 0x3e8L
+.field public static final Y2:[B
 
-.field public static final Z0:I = 0x42f7
+.field public static final Z0:I = 0x1a45dfa3
 
-.field public static final Z1:I = 0x5032
+.field public static final Z1:I = 0x6240
 
-.field public static final Z2:Ljava/lang/String; = "%02d:%02d:%02d,%03d"
+.field public static final Z2:I = 0x13
 
-.field public static final a1:I = 0x4282
+.field public static final a1:I = 0x42f7
 
-.field public static final a2:I = 0x5034
+.field public static final a2:I = 0x5031
 
-.field public static final a3:[B
+.field public static final a3:J = 0x3e8L
 
-.field public static final b1:I = 0x4285
+.field public static final b1:I = 0x4282
 
-.field public static final b2:I = 0x4254
+.field public static final b2:I = 0x5032
 
-.field public static final b3:[B
+.field public static final b3:Ljava/lang/String; = "%02d:%02d:%02d,%03d"
 
-.field public static final c1:I = 0x18538067
+.field public static final c1:I = 0x4285
 
-.field public static final c2:I = 0x4255
+.field public static final c2:I = 0x5034
 
-.field public static final c3:I = 0x15
+.field public static final c3:[B
 
-.field public static final d1:I = 0x1549a966
+.field public static final d1:I = 0x18538067
 
-.field public static final d2:I = 0x5035
+.field public static final d2:I = 0x4254
 
-.field public static final d3:J = 0x2710L
+.field public static final d3:[B
 
-.field public static final e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/m;
+.field public static final e1:I = 0x1549a966
 
-.field public static final e1:I = 0x114d9b74
+.field public static final e2:I = 0x4255
 
-.field public static final e2:I = 0x47e1
+.field public static final e3:I = 0x15
 
-.field public static final e3:Ljava/lang/String; = "%01d:%02d:%02d:%02d"
+.field public static final f0:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
-.field public static final f0:I = 0x1
+.field public static final f1:I = 0x114d9b74
 
-.field public static final f1:I = 0x4dbb
+.field public static final f2:I = 0x5035
 
-.field public static final f2:I = 0x47e2
+.field public static final f3:J = 0x2710L
 
-.field public static final f3:[B
+.field public static final g0:I = 0x1
 
-.field public static final g0:Ljava/lang/String; = "MatroskaExtractor"
+.field public static final g1:I = 0x4dbb
 
-.field public static final g1:I = 0x53ab
+.field public static final g2:I = 0x47e1
 
-.field public static final g2:I = 0x47e7
+.field public static final g3:Ljava/lang/String; = "%01d:%02d:%02d:%02d"
 
-.field public static final g3:I = 0x19
+.field public static final h0:Ljava/lang/String; = "MatroskaExtractor"
 
-.field public static final h0:I = -0x1
+.field public static final h1:I = 0x53ab
 
-.field public static final h1:I = 0x53ac
+.field public static final h2:I = 0x47e2
 
-.field public static final h2:I = 0x47e8
+.field public static final h3:[B
 
-.field public static final h3:J = 0x3e8L
+.field public static final i0:I = -0x1
 
-.field public static final i0:I = 0x0
+.field public static final i1:I = 0x53ac
 
-.field public static final i1:I = 0x1549a966
+.field public static final i2:I = 0x47e7
 
-.field public static final i2:I = 0x1c53bb6b
+.field public static final i3:I = 0x19
 
-.field public static final i3:Ljava/lang/String; = "%02d:%02d:%02d.%03d"
+.field public static final j0:I = 0x0
 
-.field public static final j0:I = 0x1
+.field public static final j1:I = 0x1549a966
 
-.field public static final j1:I = 0x2ad7b1
+.field public static final j2:I = 0x47e8
 
-.field public static final j2:I = 0xbb
+.field public static final j3:J = 0x3e8L
 
-.field public static final j3:I = 0x12
+.field public static final k0:I = 0x1
 
-.field public static final k0:I = 0x2
+.field public static final k1:I = 0x2ad7b1
 
-.field public static final k1:I = 0x4489
+.field public static final k2:I = 0x1c53bb6b
 
-.field public static final k2:I = 0xb3
+.field public static final k3:Ljava/lang/String; = "%02d:%02d:%02d.%03d"
 
-.field public static final k3:I = 0xfffe
+.field public static final l0:I = 0x2
 
-.field public static final l0:Ljava/lang/String; = "matroska"
+.field public static final l1:I = 0x4489
 
-.field public static final l1:I = 0x1f43b675
+.field public static final l2:I = 0xbb
 
-.field public static final l2:I = 0xb7
+.field public static final l3:I = 0x12
 
-.field public static final l3:I = 0x1
+.field public static final m0:Ljava/lang/String; = "matroska"
 
-.field public static final m0:Ljava/lang/String; = "webm"
+.field public static final m1:I = 0x1f43b675
 
-.field public static final m1:I = 0xe7
+.field public static final m2:I = 0xb3
 
-.field public static final m2:I = 0xf1
+.field public static final m3:I = 0xfffe
 
-.field public static final m3:Ljava/util/UUID;
+.field public static final n0:Ljava/lang/String; = "webm"
 
-.field public static final n0:Ljava/lang/String; = "V_VP8"
+.field public static final n1:I = 0xe7
 
-.field public static final n1:I = 0xa3
+.field public static final n2:I = 0xb7
 
-.field public static final n2:I = 0x22b59c
+.field public static final n3:I = 0x1
 
-.field public static final n3:Ljava/util/Map;
+.field public static final o0:Ljava/lang/String; = "V_VP8"
+
+.field public static final o1:I = 0xa3
+
+.field public static final o2:I = 0xf1
+
+.field public static final o3:Ljava/util/UUID;
+
+.field public static final p0:Ljava/lang/String; = "V_VP9"
+
+.field public static final p1:I = 0xa0
+
+.field public static final p2:I = 0x22b59c
+
+.field public static final p3:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -286,77 +300,65 @@
     .end annotation
 .end field
 
-.field public static final o0:Ljava/lang/String; = "V_VP9"
+.field public static final q0:Ljava/lang/String; = "V_AV1"
 
-.field public static final o1:I = 0xa0
+.field public static final q1:I = 0xa1
 
-.field public static final o2:I = 0x7670
+.field public static final q2:I = 0x7670
 
-.field public static final p0:Ljava/lang/String; = "V_AV1"
+.field public static final r0:Ljava/lang/String; = "V_MPEG2"
 
-.field public static final p1:I = 0xa1
+.field public static final r1:I = 0x9b
 
-.field public static final p2:I = 0x7671
+.field public static final r2:I = 0x7671
 
-.field public static final q0:Ljava/lang/String; = "V_MPEG2"
+.field public static final s0:Ljava/lang/String; = "V_MPEG4/ISO/SP"
 
-.field public static final q1:I = 0x9b
+.field public static final s1:I = 0x75a1
 
-.field public static final q2:I = 0x7672
+.field public static final s2:I = 0x7672
 
-.field public static final r0:Ljava/lang/String; = "V_MPEG4/ISO/SP"
+.field public static final t0:Ljava/lang/String; = "V_MPEG4/ISO/ASP"
 
-.field public static final r1:I = 0x75a1
+.field public static final t1:I = 0xa6
 
-.field public static final r2:I = 0x7673
+.field public static final t2:I = 0x7673
 
-.field public static final s0:Ljava/lang/String; = "V_MPEG4/ISO/ASP"
+.field public static final u0:Ljava/lang/String; = "V_MPEG4/ISO/AP"
 
-.field public static final s1:I = 0xa6
+.field public static final u1:I = 0xee
 
-.field public static final s2:I = 0x7674
+.field public static final u2:I = 0x7674
 
-.field public static final t0:Ljava/lang/String; = "V_MPEG4/ISO/AP"
+.field public static final v0:Ljava/lang/String; = "V_MPEG4/ISO/AVC"
 
-.field public static final t1:I = 0xee
+.field public static final v1:I = 0xa5
 
-.field public static final t2:I = 0x7675
+.field public static final v2:I = 0x7675
 
-.field public static final u0:Ljava/lang/String; = "V_MPEG4/ISO/AVC"
+.field public static final w0:Ljava/lang/String; = "V_MPEGH/ISO/HEVC"
 
-.field public static final u1:I = 0xa5
+.field public static final w1:I = 0xfb
 
-.field public static final u2:I = 0x53b8
+.field public static final w2:I = 0x53b8
 
-.field public static final v0:Ljava/lang/String; = "V_MPEGH/ISO/HEVC"
+.field public static final x0:Ljava/lang/String; = "V_MS/VFW/FOURCC"
 
-.field public static final v1:I = 0xfb
+.field public static final x1:I = 0x1654ae6b
 
-.field public static final v2:I = 0x55b0
+.field public static final x2:I = 0x55b0
 
-.field public static final w0:Ljava/lang/String; = "V_MS/VFW/FOURCC"
+.field public static final y0:Ljava/lang/String; = "V_THEORA"
 
-.field public static final w1:I = 0x1654ae6b
+.field public static final y1:I = 0xae
 
-.field public static final w2:I = 0x55b9
+.field public static final y2:I = 0x55b9
 
-.field public static final x0:Ljava/lang/String; = "V_THEORA"
+.field public static final z0:Ljava/lang/String; = "A_VORBIS"
 
-.field public static final x1:I = 0xae
+.field public static final z1:I = 0xd7
 
-.field public static final x2:I = 0x55ba
-
-.field public static final y0:Ljava/lang/String; = "A_VORBIS"
-
-.field public static final y1:I = 0xd7
-
-.field public static final y2:I = 0x55bb
-
-.field public static final z0:Ljava/lang/String; = "A_OPUS"
-
-.field public static final z1:I = 0x83
-
-.field public static final z2:I = 0x55bc
+.field public static final z2:I = 0x55ba
 
 
 # instance fields
@@ -370,12 +372,12 @@
 
 .field public E:J
 
-.field public F:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+.field public F:Lcom/tmapmobility/tmap/exoplayer2/util/u;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field public G:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+.field public G:Lcom/tmapmobility/tmap/exoplayer2/util/u;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -406,29 +408,31 @@
 
 .field public T:Z
 
-.field public U:I
+.field public U:J
 
 .field public V:I
 
 .field public W:I
 
-.field public X:Z
+.field public X:I
 
 .field public Y:Z
 
 .field public Z:Z
 
-.field public a0:I
+.field public a0:Z
 
-.field public b0:B
+.field public b0:I
 
-.field public c0:Z
+.field public c0:B
 
 .field public final d:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/a;
 
-.field public d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+.field public d0:Z
 
 .field public final e:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/d;
+
+.field public e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
 .field public final f:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
@@ -442,25 +446,25 @@
 
 .field public final g:Z
 
-.field public final h:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final h:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final i:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final i:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final k:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final k:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final l:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final l:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final o:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final o:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final p:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final p:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-.field public final q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+.field public final q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
 .field public r:Ljava/nio/ByteBuffer;
 
@@ -491,7 +495,7 @@
     .line 1
     sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/b;->b:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/b;
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/m;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->f0:Lcom/tmapmobility/tmap/exoplayer2/extractor/o;
 
     const/16 v0, 0x20
 
@@ -500,23 +504,23 @@
     .line 2
     fill-array-data v1, :array_0
 
-    sput-object v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W2:[B
+    sput-object v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y2:[B
 
     const-string v1, "Format: Start, End, ReadOrder, Layer, Style, Name, MarginL, MarginR, MarginV, Effect, Text"
 
     .line 3
-    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->z0(Ljava/lang/String;)[B
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->z0(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    sput-object v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a3:[B
+    sput-object v1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c3:[B
 
     new-array v0, v0, [B
 
     .line 4
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b3:[B
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d3:[B
 
     const/16 v0, 0x26
 
@@ -525,7 +529,7 @@
     .line 5
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->f3:[B
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h3:[B
 
     .line 6
     new-instance v0, Ljava/util/UUID;
@@ -536,7 +540,7 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m3:Ljava/util/UUID;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o3:Ljava/util/UUID;
 
     .line 7
     new-instance v0, Ljava/util/HashMap;
@@ -562,14 +566,14 @@
     move-object v6, v0
 
     .line 8
-    invoke-static/range {v5 .. v13}, Lkb/c;->a(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static/range {v5 .. v13}, Lcom/google/android/gms/internal/ads/b;->a(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
 
     .line 9
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n3:Ljava/util/Map;
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p3:Ljava/util/Map;
 
     return-void
 
@@ -789,16 +793,16 @@
     iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->f:Landroid/util/SparseArray;
 
     .line 16
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     const/4 v0, 0x4
 
-    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>(I)V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 17
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
@@ -814,69 +818,69 @@
 
     move-result-object v1
 
-    invoke-direct {p2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>([B)V
+    invoke-direct {p2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([B)V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 18
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>(I)V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 19
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/x;->b:[B
+    sget-object v1, Lcom/tmapmobility/tmap/exoplayer2/util/y;->i:[B
 
-    invoke-direct {p2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>([B)V
+    invoke-direct {p2, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>([B)V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 20
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>(I)V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 21
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>()V
+    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>()V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 22
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>()V
+    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>()V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 23
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     const/16 v0, 0x8
 
-    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>(I)V
+    invoke-direct {p2, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>(I)V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 24
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>()V
+    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>()V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 25
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;-><init>()V
+    invoke-direct {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;-><init>()V
 
-    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iput-object p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     new-array p1, p1, [I
 
@@ -1037,7 +1041,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a3:[B
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c3:[B
 
     return-object v0
 .end method
@@ -1046,7 +1050,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n3:Ljava/util/Map;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p3:Ljava/util/Map;
 
     return-object v0
 .end method
@@ -1055,7 +1059,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m3:Ljava/util/UUID;
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o3:Ljava/util/UUID;
 
     return-object v0
 .end method
@@ -1098,7 +1102,7 @@
 .end method
 
 .method public static r(JLjava/lang/String;J)[B
-    .locals 9
+    .locals 11
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -1128,9 +1132,11 @@
 
     long-to-int v0, v3
 
-    mul-int/lit16 v3, v0, 0xe10
+    int-to-long v3, v0
 
-    int-to-long v3, v3
+    const-wide/16 v5, 0xe10
+
+    mul-long/2addr v3, v5
 
     const-wide/32 v5, 0xf4240
 
@@ -1145,9 +1151,11 @@
 
     long-to-int v3, v3
 
-    mul-int/lit8 v4, v3, 0x3c
+    int-to-long v7, v3
 
-    int-to-long v7, v4
+    const-wide/16 v9, 0x3c
+
+    mul-long/2addr v7, v9
 
     mul-long/2addr v7, v5
 
@@ -1210,7 +1218,7 @@
     move-result-object p0
 
     .line 8
-    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->z0(Ljava/lang/String;)[B
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->z0(Ljava/lang/String;)[B
 
     move-result-object p0
 
@@ -1869,7 +1877,7 @@
 
 
 # virtual methods
-.method public final A(Lcom/tmapmobility/tmap/exoplayer2/extractor/v;J)Z
+.method public final A(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;J)Z
     .locals 5
 
     .line 1
@@ -1887,7 +1895,7 @@
     .line 3
     iget-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->C:J
 
-    iput-wide p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/v;->a:J
+    iput-wide p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/x;->a:J
 
     .line 4
     iput-boolean v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B:Z
@@ -1909,7 +1917,7 @@
     if-eqz v0, :cond_1
 
     .line 6
-    iput-wide p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/v;->a:J
+    iput-wide p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/x;->a:J
 
     .line 7
     iput-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->D:J
@@ -1920,7 +1928,7 @@
     return v2
 .end method
 
-.method public final B(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+.method public final B(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1929,9 +1937,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v0
 
@@ -1941,18 +1949,18 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->b()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b()I
 
     move-result v0
 
     if-ge v0, p2, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->b()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b()I
 
     move-result v1
 
@@ -1962,36 +1970,36 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->c(I)V
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->c(I)V
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v2
 
     sub-int v2, p2, v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 5
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->R(I)V
+    invoke-virtual {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->R(I)V
 
     return-void
 .end method
@@ -2002,36 +2010,36 @@
     const/4 v0, 0x0
 
     .line 1
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
-
-    .line 2
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
-    .line 3
+    .line 2
     iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
-    .line 4
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:Z
+    .line 3
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:I
 
-    .line 5
+    .line 4
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y:Z
 
-    .line 6
+    .line 5
     iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Z:Z
 
+    .line 6
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:Z
+
     .line 7
-    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:I
+    iput v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:I
 
     .line 8
-    iput-byte v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:B
+    iput-byte v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c0:B
 
     .line 9
-    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c0:Z
+    iput-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Z
 
     .line 10
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->O(I)V
+    invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
 
     return-void
 .end method
@@ -2058,7 +2066,7 @@
     move-wide v0, p1
 
     .line 2
-    invoke-static/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->k1(JJJ)J
+    invoke-static/range {v0 .. v5}, Lcom/tmapmobility/tmap/exoplayer2/util/n0;->o1(JJJ)J
 
     move-result-wide p1
 
@@ -2159,15 +2167,15 @@
 
     .line 5
     :cond_1
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;
+    new-instance p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;
 
     iget-wide p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->w:J
 
-    invoke-direct {p2, p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;-><init>(J)V
+    invoke-direct {p2, p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;-><init>(J)V
 
-    invoke-interface {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)V
+    invoke-interface {p1, p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/z;)V
 
     .line 6
     iput-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->y:Z
@@ -2176,18 +2184,18 @@
 
     .line 7
     :cond_2
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/t;-><init>()V
+    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/u;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     .line 8
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
-    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/t;-><init>()V
+    invoke-direct {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/u;-><init>()V
 
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     goto :goto_1
 
@@ -2277,6 +2285,11 @@
     .line 19
     :cond_b
     iput-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->T:Z
+
+    const-wide/16 p1, 0x0
+
+    .line 20
+    iput-wide p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:J
 
     :cond_c
     :goto_1
@@ -2393,7 +2406,7 @@
     return-void
 .end method
 
-.method public final H(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;I)I
+.method public final H(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;IZ)I
     .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2419,9 +2432,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W2:[B
+    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y2:[B
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[BI)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[BI)V
 
     .line 3
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p()I
@@ -2443,9 +2456,9 @@
     if-eqz v0, :cond_1
 
     .line 5
-    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b3:[B
+    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d3:[B
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[BI)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[BI)V
 
     .line 6
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p()I
@@ -2467,9 +2480,9 @@
     if-eqz v0, :cond_2
 
     .line 8
-    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->f3:[B
+    sget-object p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h3:[B
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[BI)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[BI)V
 
     .line 9
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p()I
@@ -2483,7 +2496,7 @@
     iget-object v0, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->X:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
     .line 11
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y:Z
 
     const/4 v2, 0x4
 
@@ -2510,32 +2523,32 @@
     iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
 
     .line 14
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Z:Z
 
     const/16 v6, 0x80
 
     if-nez v1, :cond_4
 
     .line 15
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
-    invoke-interface {p1, v1, v5, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, v1, v5, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 16
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     add-int/2addr v1, v4
 
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     .line 17
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
@@ -2546,18 +2559,18 @@
     if-eq v1, v6, :cond_3
 
     .line 18
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
     aget-byte v1, v1, v5
 
-    iput-byte v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:B
+    iput-byte v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c0:B
 
     .line 19
-    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y:Z
+    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Z:Z
 
     goto :goto_0
 
@@ -2576,7 +2589,7 @@
     .line 21
     :cond_4
     :goto_0
-    iget-byte v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:B
+    iget-byte v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c0:B
 
     and-int/lit8 v7, v1, 0x1
 
@@ -2614,35 +2627,35 @@
     iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
 
     .line 23
-    iget-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c0:Z
+    iget-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Z
 
     if-nez v7, :cond_8
 
     .line 24
-    iget-object v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v7}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v7}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v7
 
     const/16 v8, 0x8
 
-    invoke-interface {p1, v7, v5, v8}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, v7, v5, v8}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 25
-    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     add-int/2addr v7, v8
 
-    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     .line 26
-    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->c0:Z
+    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Z
 
     .line 27
-    iget-object v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v7}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v7}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v7
 
@@ -2662,109 +2675,109 @@
     aput-byte v6, v7, v5
 
     .line 29
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 30
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-interface {v0, v6, v4, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+    invoke-interface {v0, v6, v4, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 
     .line 31
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     add-int/2addr v6, v4
 
-    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     .line 32
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 33
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->o:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-interface {v0, v6, v8, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+    invoke-interface {v0, v6, v8, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 
     .line 34
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     add-int/2addr v6, v8
 
-    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     :cond_8
     if-eqz v1, :cond_10
 
     .line 35
-    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Z:Z
+    iget-boolean v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:Z
 
     if-nez v1, :cond_9
 
     .line 36
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
-    invoke-interface {p1, v1, v5, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, v1, v5, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 37
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     add-int/2addr v1, v4
 
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     .line 38
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {v1, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 39
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->G()I
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->G()I
 
     move-result v1
 
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:I
 
     .line 40
-    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Z:Z
+    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:Z
 
     .line 41
     :cond_9
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:I
 
     mul-int/2addr v1, v2
 
     .line 42
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v6, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->O(I)V
+    invoke-virtual {v6, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
 
     .line 43
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v6}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v6}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v6
 
-    invoke-interface {p1, v6, v5, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, v6, v5, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 44
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     add-int/2addr v6, v1
 
-    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     .line 45
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:I
 
     div-int/2addr v1, v3
 
@@ -2813,14 +2826,14 @@
 
     .line 51
     :goto_4
-    iget v8, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->a0:I
+    iget v8, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->b0:I
 
     if-ge v1, v8, :cond_d
 
     .line 52
-    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v8, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v8}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->K()I
+    invoke-virtual {v8}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->K()I
 
     move-result v8
 
@@ -2857,7 +2870,7 @@
 
     .line 56
     :cond_d
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     sub-int v1, p3, v1
 
@@ -2890,7 +2903,7 @@
 
     .line 61
     :goto_6
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     iget-object v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->r:Ljava/nio/ByteBuffer;
 
@@ -2898,19 +2911,19 @@
 
     move-result-object v7
 
-    invoke-virtual {v1, v7, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->Q([BI)V
+    invoke-virtual {v1, v7, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->Q([BI)V
 
     .line 62
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-interface {v0, v1, v6, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+    invoke-interface {v0, v1, v6, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 
     .line 63
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     add-int/2addr v1, v6
 
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     goto :goto_7
 
@@ -2921,46 +2934,61 @@
     if-eqz v1, :cond_10
 
     .line 65
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     array-length v7, v1
 
-    invoke-virtual {v6, v1, v7}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->Q([BI)V
+    invoke-virtual {v6, v1, v7}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->Q([BI)V
 
     .line 66
     :cond_10
     :goto_7
-    iget v1, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->f:I
+    invoke-static {p2, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->e(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;Z)Z
 
-    if-lez v1, :cond_11
+    move-result p4
+
+    if-eqz p4, :cond_11
 
     .line 67
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
+    iget p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
 
-    const/high16 v6, 0x10000000
+    const/high16 v1, 0x10000000
 
-    or-int/2addr v1, v6
+    or-int/2addr p4, v1
 
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
+    iput p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
 
     .line 68
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->O(I)V
+    invoke-virtual {p4, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
 
     .line 69
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->O(I)V
+    invoke-virtual {p4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
+
+    move-result p4
+
+    add-int/2addr p4, p3
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+
+    sub-int/2addr p4, v1
 
     .line 70
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
+
+    .line 71
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
-    shr-int/lit8 v6, p3, 0x18
+    shr-int/lit8 v6, p4, 0x18
 
     and-int/lit16 v6, v6, 0xff
 
@@ -2968,14 +2996,14 @@
 
     aput-byte v6, v1, v5
 
-    .line 71
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    .line 72
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
-    shr-int/lit8 v6, p3, 0x10
+    shr-int/lit8 v6, p4, 0x10
 
     and-int/lit16 v6, v6, 0xff
 
@@ -2983,14 +3011,14 @@
 
     aput-byte v6, v1, v4
 
-    .line 72
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    .line 73
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
-    shr-int/lit8 v6, p3, 0x8
+    shr-int/lit8 v6, p4, 0x8
 
     and-int/lit16 v6, v6, 0xff
 
@@ -2998,53 +3026,53 @@
 
     aput-byte v6, v1, v3
 
-    .line 73
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    .line 74
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
     const/4 v6, 0x3
 
-    and-int/lit16 v7, p3, 0xff
+    and-int/lit16 p4, p4, 0xff
 
-    int-to-byte v7, v7
+    int-to-byte p4, p4
 
-    aput-byte v7, v1, v6
-
-    .line 74
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
-
-    invoke-interface {v0, v1, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+    aput-byte p4, v1, v6
 
     .line 75
-    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    invoke-interface {v0, p4, v2, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 
     .line 76
-    :cond_11
-    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:Z
+    iget p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+
+    add-int/2addr p4, v2
+
+    iput p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     .line 77
-    :cond_12
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
-
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
-
-    move-result v1
-
-    add-int/2addr v1, p3
+    :cond_11
+    iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->Y:Z
 
     .line 78
+    :cond_12
+    iget-object p4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-virtual {p4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
+
+    move-result p4
+
+    add-int/2addr p4, p3
+
+    .line 79
     iget-object p3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->b:Ljava/lang/String;
 
-    const-string v6, "V_MPEG4/ISO/AVC"
+    const-string v1, "V_MPEG4/ISO/AVC"
 
-    invoke-virtual {v6, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
@@ -3052,9 +3080,9 @@
 
     iget-object p3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->b:Ljava/lang/String;
 
-    const-string v6, "V_MPEGH/ISO/HEVC"
+    const-string v1, "V_MPEGH/ISO/HEVC"
 
-    invoke-virtual {v6, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
@@ -3062,16 +3090,16 @@
 
     goto :goto_a
 
-    .line 79
+    .line 80
     :cond_13
-    iget-object p3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->T:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
+    iget-object p3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->T:Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;
 
     if-eqz p3, :cond_15
 
-    .line 80
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    .line 81
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result p3
 
@@ -3085,148 +3113,148 @@
     :goto_8
     invoke-static {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->i(Z)V
 
-    .line 81
-    iget-object p3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->T:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
-
-    invoke-virtual {p3, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)V
-
     .line 82
-    :cond_15
-    :goto_9
-    iget p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget-object p3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->T:Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;
 
-    if-ge p3, v1, :cond_18
-
-    sub-int p3, v1, p3
+    invoke-virtual {p3, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)V
 
     .line 83
-    invoke-virtual {p0, p1, v0, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;I)I
+    :cond_15
+    :goto_9
+    iget p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+
+    if-ge p3, p4, :cond_18
+
+    sub-int p3, p4, p3
+
+    .line 84
+    invoke-virtual {p0, p1, v0, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;I)I
 
     move-result p3
 
-    .line 84
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
-
-    add-int/2addr v3, p3
-
-    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
-
     .line 85
-    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
-    add-int/2addr v3, p3
+    add-int/2addr v1, p3
 
-    iput v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+
+    .line 86
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+
+    add-int/2addr v1, p3
+
+    iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     goto :goto_9
 
-    .line 86
+    .line 87
     :cond_16
     :goto_a
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {p3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object p3
 
-    .line 87
+    .line 88
     aput-byte v5, p3, v5
 
-    .line 88
+    .line 89
     aput-byte v5, p3, v4
 
-    .line 89
+    .line 90
     aput-byte v5, p3, v3
 
-    .line 90
-    iget v3, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->Y:I
-
-    rsub-int/lit8 v4, v3, 0x4
-
     .line 91
-    :goto_b
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    iget v1, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->Y:I
 
-    if-ge v6, v1, :cond_18
+    rsub-int/lit8 v3, v1, 0x4
 
     .line 92
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+    :goto_b
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
-    if-nez v6, :cond_17
+    if-ge v4, p4, :cond_18
 
     .line 93
-    invoke-virtual {p0, p1, p3, v4, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->K(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[BII)V
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:I
+
+    if-nez v4, :cond_17
 
     .line 94
-    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
-
-    add-int/2addr v6, v3
-
-    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
+    invoke-virtual {p0, p1, p3, v3, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->K(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[BII)V
 
     .line 95
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
-    invoke-virtual {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    add-int/2addr v4, v1
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
     .line 96
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v6}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->K()I
-
-    move-result v6
-
-    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+    invoke-virtual {v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 97
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v6, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->K()I
+
+    move-result v4
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:I
 
     .line 98
-    iget-object v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-interface {v0, v6, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    invoke-virtual {v4, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 99
+    iget-object v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-interface {v0, v4, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
+
+    .line 100
+    iget v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+
+    add-int/2addr v4, v2
+
+    iput v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+
+    goto :goto_b
+
+    .line 101
+    :cond_17
+    invoke-virtual {p0, p1, v0, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;I)I
+
+    move-result v4
+
+    .line 102
     iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
-    add-int/2addr v6, v2
+    add-int/2addr v6, v4
 
     iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
 
-    goto :goto_b
-
-    .line 100
-    :cond_17
-    invoke-virtual {p0, p1, v0, v6}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;I)I
-
-    move-result v6
-
-    .line 101
-    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
-
-    add-int/2addr v7, v6
-
-    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:I
-
-    .line 102
-    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
-
-    add-int/2addr v7, v6
-
-    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
-
     .line 103
-    iget v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
+    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
-    sub-int/2addr v7, v6
+    add-int/2addr v6, v4
 
-    iput v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
-
-    goto :goto_b
+    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     .line 104
+    iget v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:I
+
+    sub-int/2addr v6, v4
+
+    iput v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->X:I
+
+    goto :goto_b
+
+    .line 105
     :cond_18
     iget-object p1, p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->b:Ljava/lang/String;
 
@@ -3238,24 +3266,24 @@
 
     if-eqz p1, :cond_19
 
-    .line 105
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
-
-    invoke-virtual {p1, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
-
     .line 106
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-interface {v0, p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    invoke-virtual {p1, v5}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 107
-    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->k:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    invoke-interface {v0, p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
+
+    .line 108
+    iget p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     add-int/2addr p1, v2
 
-    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
-    .line 108
+    .line 109
     :cond_19
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->p()I
 
@@ -3264,7 +3292,7 @@
     return p1
 .end method
 
-.method public final I(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[BI)V
+.method public final I(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[BI)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3278,9 +3306,9 @@
     add-int/2addr v0, p3
 
     .line 2
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->b()I
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->b()I
 
     move-result v1
 
@@ -3289,7 +3317,7 @@
     if-ge v1, v0, :cond_0
 
     .line 3
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     add-int v3, v0, p3
 
@@ -3297,15 +3325,15 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->P([B)V
+    invoke-virtual {v1, v3}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->P([B)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
@@ -3315,30 +3343,30 @@
 
     .line 5
     :goto_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
     array-length p2, p2
 
-    invoke-interface {p1, v1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, v1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 6
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {p1, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 7
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->R(I)V
+    invoke-virtual {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->R(I)V
 
     return-void
 .end method
 
-.method public final J(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;I)I
+.method public final J(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;I)I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3347,9 +3375,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->a()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
 
     move-result v0
 
@@ -3361,9 +3389,9 @@
     move-result p1
 
     .line 3
-    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-interface {p2, p3, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    invoke-interface {p2, p3, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
 
     goto :goto_0
 
@@ -3379,7 +3407,7 @@
     return p1
 .end method
 
-.method public final K(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;[BII)V
+.method public final K(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;[BII)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3388,9 +3416,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->a()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->a()I
 
     move-result v0
 
@@ -3403,29 +3431,29 @@
     sub-int/2addr p4, v0
 
     .line 2
-    invoke-interface {p1, p2, v1, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p1, p2, v1, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     if-lez v0, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p1, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->k([BII)V
+    invoke-virtual {p1, p2, p3, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->k([BII)V
 
     :cond_0
     return-void
 .end method
 
-.method public final b(Lcom/tmapmobility/tmap/exoplayer2/extractor/j;)V
+.method public final b(Lcom/tmapmobility/tmap/exoplayer2/extractor/l;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iput-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
     return-void
 .end method
 
-.method public final c(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/v;)I
+.method public final c(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)I
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3453,18 +3481,18 @@
     .line 3
     iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/a;
 
-    invoke-interface {v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/a;->a(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+    invoke-interface {v2, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/a;->a(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 4
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->getPosition()J
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->getPosition()J
 
     move-result-wide v3
 
-    invoke-virtual {p0, p2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->A(Lcom/tmapmobility/tmap/exoplayer2/extractor/v;J)Z
+    invoke-virtual {p0, p2, v3, v4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->A(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;J)Z
 
     move-result v3
 
@@ -3498,7 +3526,7 @@
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->a(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->i()V
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->j()V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -3513,7 +3541,7 @@
     return v0
 .end method
 
-.method public final d(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+.method public final d(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3526,7 +3554,7 @@
 
     invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/c;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/c;->b(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;)Z
+    invoke-virtual {v0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/c;->b(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;)Z
 
     move-result p1
 
@@ -3549,11 +3577,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     if-eqz v0, :cond_0
 
@@ -3647,14 +3675,14 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
     invoke-static {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a;->k(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public k(IILcom/tmapmobility/tmap/exoplayer2/extractor/i;)V
+.method public k(IILcom/tmapmobility/tmap/exoplayer2/extractor/k;)V
     .locals 21
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
@@ -3728,7 +3756,7 @@
     iput-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->v:[B
 
     .line 3
-    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     goto/16 :goto_d
 
@@ -3766,40 +3794,40 @@
     iput-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->k:[B
 
     .line 7
-    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     goto/16 :goto_d
 
     .line 8
     :cond_2
-    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v0
 
     invoke-static {v0, v9}, Ljava/util/Arrays;->fill([BB)V
 
     .line 9
-    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v0
 
     rsub-int/lit8 v2, v1, 0x4
 
-    invoke-interface {v8, v0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {v8, v0, v2, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 10
-    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->S(I)V
+    invoke-virtual {v0, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->S(I)V
 
     .line 11
-    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->I()J
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->I()J
 
     move-result-wide v0
 
@@ -3814,7 +3842,7 @@
     new-array v2, v1, [B
 
     .line 13
-    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     .line 14
     invoke-virtual/range {p0 .. p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
@@ -3841,7 +3869,7 @@
     iput-object v2, v0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->i:[B
 
     .line 17
-    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {v8, v2, v9, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     goto/16 :goto_d
 
@@ -3851,7 +3879,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v7, v0, v8, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->u(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v0, v8, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->u(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     goto/16 :goto_d
 
@@ -3879,7 +3907,7 @@
     iget v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->S:I
 
     .line 22
-    invoke-virtual {v7, v0, v2, v8, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->v(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;ILcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v0, v2, v8, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->v(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;ILcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     goto/16 :goto_d
 
@@ -3894,7 +3922,7 @@
     .line 24
     iget-object v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/d;
 
-    invoke-virtual {v2, v8, v9, v10, v6}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/d;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;ZZI)J
+    invoke-virtual {v2, v8, v9, v10, v6}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/d;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;ZZI)J
 
     move-result-wide v11
 
@@ -3920,9 +3948,9 @@
     iput v10, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J:I
 
     .line 28
-    iget-object v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v2, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->O(I)V
+    invoke-virtual {v2, v9}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
 
     .line 29
     :cond_9
@@ -3945,7 +3973,7 @@
 
     sub-int v0, v1, v0
 
-    invoke-interface {v8, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->skipFully(I)V
+    invoke-interface {v8, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->skipFully(I)V
 
     .line 31
     iput v9, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J:I
@@ -3964,12 +3992,12 @@
     const/4 v2, 0x3
 
     .line 34
-    invoke-virtual {v7, v8, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v8, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     .line 35
-    iget-object v12, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v12, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v12}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v12}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v12
 
@@ -4013,12 +4041,12 @@
     const/4 v14, 0x4
 
     .line 39
-    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     .line 40
-    iget-object v15, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v15, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v15}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v15}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v15
 
@@ -4081,12 +4109,12 @@
     add-int/2addr v14, v10
 
     .line 46
-    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     .line 47
-    iget-object v4, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v4, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v4
 
@@ -4157,12 +4185,12 @@
     add-int/lit8 v14, v14, 0x1
 
     .line 53
-    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     .line 54
-    iget-object v12, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v12, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v12}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v12}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v12
 
@@ -4184,9 +4212,9 @@
     shl-int v5, v10, v18
 
     .line 55
-    iget-object v9, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v9, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v9}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v9}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v9
 
@@ -4199,12 +4227,12 @@
     add-int/2addr v14, v12
 
     .line 56
-    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+    invoke-virtual {v7, v8, v14}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->B(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
 
     .line 57
-    iget-object v9, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v9, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v9}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v9}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v9
 
@@ -4232,9 +4260,9 @@
     shl-long v10, v16, v6
 
     .line 58
-    iget-object v15, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v15, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v15}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v15}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v15
 
@@ -4396,9 +4424,9 @@
 
     .line 65
     :goto_7
-    iget-object v1, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
@@ -4408,9 +4436,9 @@
 
     shl-int/2addr v1, v6
 
-    iget-object v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v2
 
@@ -4450,10 +4478,10 @@
 
     if-ne v0, v1, :cond_18
 
-    iget-object v1, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->j:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     .line 68
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
@@ -4537,11 +4565,14 @@
 
     aget v0, v1, v0
 
-    invoke-virtual {v7, v8, v10, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->H(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;I)I
+    const/4 v1, 0x0
+
+    .line 75
+    invoke-virtual {v7, v8, v10, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->H(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;IZ)I
 
     move-result v5
 
-    .line 75
+    .line 76
     iget-wide v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->K:J
 
     iget v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->M:I
@@ -4556,7 +4587,7 @@
 
     add-long/2addr v2, v0
 
-    .line 76
+    .line 77
     iget v4, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
 
     const/4 v6, 0x0
@@ -4567,7 +4598,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;JIII)V
 
-    .line 77
+    .line 78
     iget v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->M:I
 
     const/4 v1, 0x1
@@ -4581,36 +4612,36 @@
     :cond_1c
     const/4 v0, 0x0
 
-    .line 78
+    .line 79
     iput v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J:I
 
     goto :goto_d
 
-    .line 79
     :cond_1d
+    const/4 v1, 0x1
+
+    .line 80
     :goto_c
     iget v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->M:I
 
-    iget v1, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->N:I
+    iget v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->N:I
 
-    if-ge v0, v1, :cond_1e
-
-    .line 80
-    iget-object v1, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->O:[I
-
-    aget v2, v1, v0
+    if-ge v0, v2, :cond_1e
 
     .line 81
-    invoke-virtual {v7, v8, v10, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->H(Lcom/tmapmobility/tmap/exoplayer2/extractor/i;Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;I)I
+    iget-object v2, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->O:[I
 
-    move-result v2
-
-    aput v2, v1, v0
+    aget v3, v2, v0
 
     .line 82
-    iget v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->M:I
+    invoke-virtual {v7, v8, v10, v3, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->H(Lcom/tmapmobility/tmap/exoplayer2/extractor/k;Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;IZ)I
 
-    const/4 v1, 0x1
+    move-result v3
+
+    aput v3, v2, v0
+
+    .line 83
+    iget v0, v7, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->M:I
 
     add-int/2addr v0, v1
 
@@ -4623,13 +4654,13 @@
     return-void
 .end method
 
-.method public final l(Lcom/tmapmobility/tmap/exoplayer2/util/t;Lcom/tmapmobility/tmap/exoplayer2/util/t;)Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+.method public final l(Lcom/tmapmobility/tmap/exoplayer2/util/u;Lcom/tmapmobility/tmap/exoplayer2/util/u;)Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
     .locals 11
-    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    .param p1    # Lcom/tmapmobility/tmap/exoplayer2/util/u;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    .param p2    # Lcom/tmapmobility/tmap/exoplayer2/util/u;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -4654,7 +4685,7 @@
     if-eqz p1, :cond_4
 
     .line 2
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->c()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->c()I
 
     move-result v0
 
@@ -4663,11 +4694,11 @@
     if-eqz p2, :cond_4
 
     .line 3
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->c()I
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->c()I
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->c()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->c()I
 
     move-result v1
 
@@ -4677,7 +4708,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->c()I
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->c()I
 
     move-result v0
 
@@ -4701,7 +4732,7 @@
     if-ge v6, v0, :cond_1
 
     .line 9
-    invoke-virtual {p1, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->b(I)J
+    invoke-virtual {p1, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->b(I)J
 
     move-result-wide v7
 
@@ -4710,7 +4741,7 @@
     .line 10
     iget-wide v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->t:J
 
-    invoke-virtual {p2, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->b(I)J
+    invoke-virtual {p2, v6}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->b(I)J
 
     move-result-wide v9
 
@@ -4805,7 +4836,7 @@
 
     const-string v0, "MatroskaExtractor"
 
-    invoke-static {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     invoke-static {v1, p1}, Ljava/util/Arrays;->copyOf([II)[I
@@ -4838,11 +4869,11 @@
     .line 22
     :cond_4
     :goto_2
-    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;
+    new-instance p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;
 
     iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->w:J
 
-    invoke-direct {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/x$b;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z$b;-><init>(J)V
 
     return-object p1
 .end method
@@ -4856,7 +4887,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->T:Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->T:Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;
 
     const/4 v8, 0x1
 
@@ -4875,7 +4906,7 @@
 
     move v6, p6
 
-    invoke-virtual/range {v0 .. v7}, Lcom/tmapmobility/tmap/exoplayer2/extractor/z;->c(Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;JIIILcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput$a;)V
+    invoke-virtual/range {v0 .. v7}, Lcom/tmapmobility/tmap/exoplayer2/extractor/b0;->c(Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;JIIILcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput$a;)V
 
     goto/16 :goto_4
 
@@ -4924,7 +4955,7 @@
     const-string v0, "Skipping subtitle sample in laced block."
 
     .line 7
-    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -4941,7 +4972,7 @@
     const-string v0, "Skipping subtitle sample with no duration."
 
     .line 9
-    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->m(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/Log;->n(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -4949,34 +4980,34 @@
     :cond_3
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
     invoke-static {v0, v2, v3, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->E(Ljava/lang/String;J[B)V
 
     .line 11
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->e()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->e()I
 
     move-result v0
 
     :goto_0
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v1
 
     if-ge v0, v1, :cond_5
 
     .line 12
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object v1
 
@@ -4985,9 +5016,9 @@
     if-nez v1, :cond_4
 
     .line 13
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->R(I)V
+    invoke-virtual {v1, v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->R(I)V
 
     goto :goto_1
 
@@ -5001,18 +5032,18 @@
     :goto_1
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->X:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/a0;I)V
+    invoke-interface {v0, v1, v2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->a(Lcom/tmapmobility/tmap/exoplayer2/util/b0;I)V
 
     .line 15
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->n:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v0
 
@@ -5031,49 +5062,52 @@
 
     if-le v0, v8, :cond_7
 
-    const v0, -0x10000001
+    .line 17
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    and-int/2addr p4, v0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
 
     goto :goto_3
 
-    .line 17
+    .line 18
     :cond_7
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->f()I
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->f()I
 
     move-result v0
 
-    .line 18
+    .line 19
     iget-object v1, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->X:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
     const/4 v3, 0x2
 
-    invoke-interface {v1, v2, v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/a0;II)V
+    invoke-interface {v1, v2, v0, v3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->d(Lcom/tmapmobility/tmap/exoplayer2/util/b0;II)V
 
     add-int/2addr p5, v0
 
     :cond_8
     :goto_3
-    move v3, p4
-
     move v4, p5
 
-    .line 19
+    .line 20
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->X:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;
 
     iget-object v6, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->j:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput$a;
 
     move-wide v1, p2
 
+    move v3, p4
+
     move v5, p6
 
     invoke-interface/range {v0 .. v6}, Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput;->c(JIIILcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput$a;)V
 
-    .line 20
+    .line 21
     :goto_4
     iput-boolean v8, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->I:Z
 
@@ -5141,27 +5175,27 @@
     if-nez p1, :cond_1
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
-    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iget-object v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
-    invoke-virtual {p0, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l(Lcom/tmapmobility/tmap/exoplayer2/util/t;Lcom/tmapmobility/tmap/exoplayer2/util/t;)Lcom/tmapmobility/tmap/exoplayer2/extractor/x;
+    invoke-virtual {p0, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->l(Lcom/tmapmobility/tmap/exoplayer2/util/u;Lcom/tmapmobility/tmap/exoplayer2/util/u;)Lcom/tmapmobility/tmap/exoplayer2/extractor/z;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/x;)V
+    invoke-interface {p1, v0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->d(Lcom/tmapmobility/tmap/exoplayer2/extractor/z;)V
 
     .line 4
     iput-boolean v4, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->y:Z
 
     .line 5
     :cond_1
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     .line 6
-    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     goto/16 :goto_2
 
@@ -5176,9 +5210,9 @@
     if-eqz p1, :cond_3
 
     .line 8
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
-    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/j;->endTracks()V
+    invoke-interface {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/l;->endTracks()V
 
     goto/16 :goto_2
 
@@ -5213,7 +5247,7 @@
 
     cmp-long p1, v0, v2
 
-    if-eqz p1, :cond_14
+    if-eqz p1, :cond_15
 
     .line 13
     invoke-virtual {p0, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->D(J)J
@@ -5233,7 +5267,7 @@
 
     iget-boolean v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->h:Z
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     iget-object p1, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->i:[B
 
@@ -5260,7 +5294,7 @@
 
     iget-boolean v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->h:Z
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     .line 19
     iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->j:Lcom/tmapmobility/tmap/exoplayer2/extractor/TrackOutput$a;
@@ -5274,7 +5308,7 @@
 
     new-instance v3, Lcom/tmapmobility/tmap/exoplayer2/drm/DrmInitData$SchemeData;
 
-    sget-object v4, Lcom/tmapmobility/tmap/exoplayer2/C;->P1:Ljava/util/UUID;
+    sget-object v4, Lcom/tmapmobility/tmap/exoplayer2/C;->b2:Ljava/util/UUID;
 
     iget-object v5, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->x:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
@@ -5320,7 +5354,7 @@
 
     if-eqz v4, :cond_b
 
-    if-ne p1, v3, :cond_14
+    if-ne p1, v3, :cond_15
 
     .line 23
     iput-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->C:J
@@ -5360,11 +5394,11 @@
     if-eqz v0, :cond_d
 
     .line 28
-    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->d0:Lcom/tmapmobility/tmap/exoplayer2/extractor/j;
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->e0:Lcom/tmapmobility/tmap/exoplayer2/extractor/l;
 
     iget v1, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->c:I
 
-    invoke-virtual {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->h(Lcom/tmapmobility/tmap/exoplayer2/extractor/j;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->i(Lcom/tmapmobility/tmap/exoplayer2/extractor/l;I)V
 
     .line 29
     iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->f:Landroid/util/SparseArray;
@@ -5377,7 +5411,7 @@
     :cond_d
     iput-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->x:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_e
     const-string p1, "CodecId is missing in TrackEntry element"
@@ -5399,104 +5433,158 @@
 
     return-void
 
-    :cond_10
-    move p1, v1
-
-    move v0, p1
-
     .line 33
-    :goto_0
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->N:I
-
-    if-ge p1, v2, :cond_11
-
-    .line 34
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->O:[I
-
-    aget v2, v2, p1
-
-    add-int/2addr v0, v2
-
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    .line 35
-    :cond_11
+    :cond_10
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->f:Landroid/util/SparseArray;
 
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->P:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->P:I
 
-    invoke-virtual {p1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
-    .line 36
+    .line 34
     invoke-static {p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->a(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;)V
 
-    move v9, v1
+    .line 35
+    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v2, v4
+
+    if-lez v0, :cond_11
+
+    iget-object v0, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->b:Ljava/lang/String;
+
+    const-string v2, "A_OPUS"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    .line 36
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
+
+    const/16 v2, 0x8
 
     .line 37
-    :goto_1
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->N:I
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    if-ge v9, v2, :cond_13
+    move-result-object v2
+
+    sget-object v3, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     .line 38
-    iget-wide v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->K:J
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    iget v4, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->e:I
+    move-result-object v2
 
-    mul-int/2addr v4, v9
-
-    div-int/lit16 v4, v4, 0x3e8
-
-    int-to-long v4, v4
-
-    add-long/2addr v4, v2
+    iget-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:J
 
     .line 39
-    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
+    invoke-virtual {v2, v3, v4}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    if-nez v9, :cond_12
+    move-result-object v2
 
     .line 40
-    iget-boolean v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->T:Z
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
-    if-nez v3, :cond_12
-
-    or-int/lit8 v2, v2, 0x1
-
-    :cond_12
-    move v6, v2
+    move-result-object v2
 
     .line 41
-    iget-object v2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->O:[I
+    invoke-virtual {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->P([B)V
 
-    aget v7, v2, v9
+    :cond_11
+    move v0, v1
 
-    sub-int/2addr v0, v7
+    move v2, v0
+
+    .line 42
+    :goto_0
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->N:I
+
+    if-ge v0, v3, :cond_12
+
+    .line 43
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->O:[I
+
+    aget v3, v3, v0
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_12
+    move v0, v1
+
+    .line 44
+    :goto_1
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->N:I
+
+    if-ge v0, v3, :cond_14
+
+    .line 45
+    iget-wide v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->K:J
+
+    iget v5, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->e:I
+
+    mul-int/2addr v5, v0
+
+    div-int/lit16 v5, v5, 0x3e8
+
+    int-to-long v5, v5
+
+    add-long v4, v3, v5
+
+    .line 46
+    iget v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->R:I
+
+    if-nez v0, :cond_13
+
+    .line 47
+    iget-boolean v6, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->T:Z
+
+    if-nez v6, :cond_13
+
+    or-int/lit8 v3, v3, 0x1
+
+    :cond_13
+    move v6, v3
+
+    .line 48
+    iget-object v3, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->O:[I
+
+    aget v7, v3, v0
+
+    sub-int v9, v2, v7
 
     move-object v2, p0
 
     move-object v3, p1
 
-    move v8, v0
+    move v8, v9
 
-    .line 42
+    .line 49
     invoke-virtual/range {v2 .. v8}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->m(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;JIII)V
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v0, v0, 0x1
+
+    move v2, v9
 
     goto :goto_1
 
-    .line 43
-    :cond_13
+    .line 50
+    :cond_14
     iput v1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->J:I
 
-    :cond_14
+    :cond_15
     :goto_2
     return-void
 .end method
@@ -5505,7 +5593,7 @@
     .locals 1
 
     .line 1
-    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->V:I
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->W:I
 
     .line 2
     invoke-virtual {p0}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->C()V
@@ -5809,7 +5897,7 @@
 
     check-cast p2, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
-    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->m()V
+    invoke-virtual {p2}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->n()V
 
     add-int/lit8 p1, p1, 0x1
 
@@ -5934,6 +6022,7 @@
         0x63a2 -> :sswitch_1
         0x6d80 -> :sswitch_2
         0x75a1 -> :sswitch_2
+        0x75a2 -> :sswitch_4
         0x7670 -> :sswitch_2
         0x7671 -> :sswitch_4
         0x7672 -> :sswitch_1
@@ -5953,7 +6042,7 @@
     .end sparse-switch
 .end method
 
-.method public u(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;Lcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+.method public u(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;Lcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -5983,7 +6072,7 @@
 
     .line 3
     :cond_0
-    invoke-interface {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->skipFully(I)V
+    invoke-interface {p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->skipFully(I)V
 
     goto :goto_1
 
@@ -5997,13 +6086,13 @@
     const/4 p1, 0x0
 
     .line 5
-    invoke-interface {p2, v0, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p2, v0, p1, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     :goto_1
     return-void
 .end method
 
-.method public v(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;ILcom/tmapmobility/tmap/exoplayer2/extractor/i;I)V
+.method public v(Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;ILcom/tmapmobility/tmap/exoplayer2/extractor/k;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -6028,26 +6117,26 @@
     if-eqz p1, :cond_0
 
     .line 3
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p1, p4}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->O(I)V
+    invoke-virtual {p1, p4}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->O(I)V
 
     .line 4
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/a0;
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->q:Lcom/tmapmobility/tmap/exoplayer2/util/b0;
 
-    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/a0;->d()[B
+    invoke-virtual {p1}, Lcom/tmapmobility/tmap/exoplayer2/util/b0;->d()[B
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    invoke-interface {p3, p1, p2, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->readFully([BII)V
+    invoke-interface {p3, p1, p2, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->readFully([BII)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-interface {p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/i;->skipFully(I)V
+    invoke-interface {p3, p4}, Lcom/tmapmobility/tmap/exoplayer2/extractor/k;->skipFully(I)V
 
     :goto_0
     return-void
@@ -6259,6 +6348,12 @@
 
     .line 20
     :sswitch_3
+    iput-wide p2, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->U:J
+
+    goto/16 :goto_0
+
+    .line 21
+    :sswitch_4
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6269,8 +6364,8 @@
 
     goto/16 :goto_0
 
-    .line 21
-    :sswitch_4
+    .line 22
+    :sswitch_5
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6279,8 +6374,8 @@
 
     goto/16 :goto_0
 
-    .line 22
-    :sswitch_5
+    .line 23
+    :sswitch_6
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6289,8 +6384,8 @@
 
     goto/16 :goto_0
 
-    .line 23
-    :sswitch_6
+    .line 24
+    :sswitch_7
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6301,8 +6396,8 @@
 
     goto/16 :goto_0
 
-    .line 24
-    :sswitch_7
+    .line 25
+    :sswitch_8
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6318,18 +6413,6 @@
 
     goto/16 :goto_0
 
-    .line 25
-    :sswitch_8
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
-
-    move-result-object p1
-
-    long-to-int p2, p2
-
-    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->p:I
-
-    goto/16 :goto_0
-
     .line 26
     :sswitch_9
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
@@ -6338,7 +6421,7 @@
 
     long-to-int p2, p2
 
-    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->q:I
+    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->p:I
 
     goto/16 :goto_0
 
@@ -6350,14 +6433,26 @@
 
     long-to-int p2, p2
 
+    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->q:I
+
+    goto/16 :goto_0
+
+    .line 28
+    :sswitch_b
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
+
+    move-result-object p1
+
+    long-to-int p2, p2
+
     iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->o:I
 
     goto/16 :goto_0
 
-    :sswitch_b
+    :sswitch_c
     long-to-int p2, p2
 
-    .line 28
+    .line 29
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->i(I)V
 
     if-eqz p2, :cond_a
@@ -6372,7 +6467,7 @@
 
     goto/16 :goto_0
 
-    .line 29
+    .line 30
     :cond_7
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->x:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
@@ -6380,7 +6475,7 @@
 
     goto/16 :goto_0
 
-    .line 30
+    .line 31
     :cond_8
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->x:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
@@ -6388,7 +6483,7 @@
 
     goto/16 :goto_0
 
-    .line 31
+    .line 32
     :cond_9
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->x:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
@@ -6396,7 +6491,7 @@
 
     goto/16 :goto_0
 
-    .line 32
+    .line 33
     :cond_a
     iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->x:Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
@@ -6404,8 +6499,8 @@
 
     goto/16 :goto_0
 
-    .line 33
-    :sswitch_c
+    .line 34
+    :sswitch_d
     iget-wide v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->t:J
 
     add-long/2addr p2, v0
@@ -6414,14 +6509,14 @@
 
     goto/16 :goto_0
 
-    :sswitch_d
+    :sswitch_e
     cmp-long p1, p2, v3
 
     if-nez p1, :cond_b
 
     goto/16 :goto_0
 
-    .line 34
+    .line 35
     :cond_b
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6445,7 +6540,7 @@
 
     throw p1
 
-    :sswitch_e
+    :sswitch_f
     const-wide/16 v3, 0x5
 
     cmp-long p1, p2, v3
@@ -6454,7 +6549,7 @@
 
     goto/16 :goto_0
 
-    .line 35
+    .line 36
     :cond_c
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6478,14 +6573,14 @@
 
     throw p1
 
-    :sswitch_f
+    :sswitch_10
     cmp-long p1, p2, v3
 
     if-nez p1, :cond_d
 
     goto/16 :goto_0
 
-    .line 36
+    .line 37
     :cond_d
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6509,7 +6604,7 @@
 
     throw p1
 
-    :sswitch_10
+    :sswitch_11
     cmp-long p1, p2, v3
 
     if-ltz p1, :cond_e
@@ -6522,7 +6617,7 @@
 
     goto/16 :goto_0
 
-    .line 37
+    .line 38
     :cond_e
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6546,7 +6641,7 @@
 
     throw p1
 
-    :sswitch_11
+    :sswitch_12
     const-wide/16 v3, 0x3
 
     cmp-long p1, p2, v3
@@ -6555,7 +6650,7 @@
 
     goto/16 :goto_0
 
-    .line 38
+    .line 39
     :cond_f
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6579,8 +6674,8 @@
 
     throw p1
 
-    .line 39
-    :sswitch_12
+    .line 40
+    :sswitch_13
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6591,41 +6686,41 @@
 
     goto/16 :goto_0
 
-    .line 40
-    :sswitch_13
+    .line 41
+    :sswitch_14
     iput-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->T:Z
 
     goto/16 :goto_0
 
-    .line 41
-    :sswitch_14
+    .line 42
+    :sswitch_15
     iget-boolean v0, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->H:Z
 
     if-nez v0, :cond_14
 
-    .line 42
+    .line 43
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h(I)V
 
-    .line 43
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/t;
-
-    invoke-virtual {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->a(J)V
-
     .line 44
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->G:Lcom/tmapmobility/tmap/exoplayer2/util/u;
+
+    invoke-virtual {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->a(J)V
+
+    .line 45
     iput-boolean v7, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->H:Z
 
     goto/16 :goto_0
 
-    :sswitch_15
+    :sswitch_16
     long-to-int p1, p2
 
-    .line 45
+    .line 46
     iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->S:I
 
     goto/16 :goto_0
 
-    .line 46
-    :sswitch_16
+    .line 47
+    :sswitch_17
     invoke-virtual {p0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->D(J)J
 
     move-result-wide p1
@@ -6634,8 +6729,8 @@
 
     goto/16 :goto_0
 
-    .line 47
-    :sswitch_17
+    .line 48
+    :sswitch_18
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6646,8 +6741,8 @@
 
     goto :goto_0
 
-    .line 48
-    :sswitch_18
+    .line 49
+    :sswitch_19
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6658,30 +6753,18 @@
 
     goto :goto_0
 
-    .line 49
-    :sswitch_19
+    .line 50
+    :sswitch_1a
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->h(I)V
 
-    .line 50
-    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/t;
+    .line 51
+    iget-object p1, p0, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->F:Lcom/tmapmobility/tmap/exoplayer2/util/u;
 
     invoke-virtual {p0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->D(J)J
 
     move-result-wide p2
 
-    invoke-virtual {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/t;->a(J)V
-
-    goto :goto_0
-
-    .line 51
-    :sswitch_1a
-    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
-
-    move-result-object p1
-
-    long-to-int p2, p2
-
-    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->m:I
+    invoke-virtual {p1, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/util/u;->a(J)V
 
     goto :goto_0
 
@@ -6693,12 +6776,24 @@
 
     long-to-int p2, p2
 
-    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->O:I
+    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->m:I
 
     goto :goto_0
 
     .line 53
     :sswitch_1c
+    invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
+
+    move-result-object p1
+
+    long-to-int p2, p2
+
+    iput p2, p1, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;->O:I
+
+    goto :goto_0
+
+    .line 54
+    :sswitch_1d
     invoke-virtual {p0, p2, p3}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->D(J)J
 
     move-result-wide p1
@@ -6707,8 +6802,8 @@
 
     goto :goto_0
 
-    .line 54
-    :sswitch_1d
+    .line 55
+    :sswitch_1e
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6724,8 +6819,8 @@
 
     goto :goto_0
 
-    .line 55
-    :sswitch_1e
+    .line 56
+    :sswitch_1f
     invoke-virtual {p0, p1}, Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor;->s(I)Lcom/tmapmobility/tmap/exoplayer2/extractor/mkv/MatroskaExtractor$c;
 
     move-result-object p1
@@ -6743,7 +6838,7 @@
 
     goto :goto_0
 
-    .line 56
+    .line 57
     :cond_12
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6778,7 +6873,7 @@
     :goto_0
     return-void
 
-    .line 57
+    .line 58
     :cond_15
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -6804,34 +6899,35 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x83 -> :sswitch_1e
-        0x88 -> :sswitch_1d
-        0x9b -> :sswitch_1c
-        0x9f -> :sswitch_1b
-        0xb0 -> :sswitch_1a
-        0xb3 -> :sswitch_19
-        0xba -> :sswitch_18
-        0xd7 -> :sswitch_17
-        0xe7 -> :sswitch_16
-        0xee -> :sswitch_15
-        0xf1 -> :sswitch_14
-        0xfb -> :sswitch_13
-        0x41e7 -> :sswitch_12
-        0x4254 -> :sswitch_11
-        0x4285 -> :sswitch_10
-        0x42f7 -> :sswitch_f
-        0x47e1 -> :sswitch_e
-        0x47e8 -> :sswitch_d
-        0x53ac -> :sswitch_c
-        0x53b8 -> :sswitch_b
-        0x54b0 -> :sswitch_a
-        0x54b2 -> :sswitch_9
-        0x54ba -> :sswitch_8
-        0x55aa -> :sswitch_7
-        0x55ee -> :sswitch_6
-        0x56aa -> :sswitch_5
-        0x56bb -> :sswitch_4
-        0x6264 -> :sswitch_3
+        0x83 -> :sswitch_1f
+        0x88 -> :sswitch_1e
+        0x9b -> :sswitch_1d
+        0x9f -> :sswitch_1c
+        0xb0 -> :sswitch_1b
+        0xb3 -> :sswitch_1a
+        0xba -> :sswitch_19
+        0xd7 -> :sswitch_18
+        0xe7 -> :sswitch_17
+        0xee -> :sswitch_16
+        0xf1 -> :sswitch_15
+        0xfb -> :sswitch_14
+        0x41e7 -> :sswitch_13
+        0x4254 -> :sswitch_12
+        0x4285 -> :sswitch_11
+        0x42f7 -> :sswitch_10
+        0x47e1 -> :sswitch_f
+        0x47e8 -> :sswitch_e
+        0x53ac -> :sswitch_d
+        0x53b8 -> :sswitch_c
+        0x54b0 -> :sswitch_b
+        0x54b2 -> :sswitch_a
+        0x54ba -> :sswitch_9
+        0x55aa -> :sswitch_8
+        0x55ee -> :sswitch_7
+        0x56aa -> :sswitch_6
+        0x56bb -> :sswitch_5
+        0x6264 -> :sswitch_4
+        0x75a2 -> :sswitch_3
         0x7671 -> :sswitch_2
         0x23e383 -> :sswitch_1
         0x2ad7b1 -> :sswitch_0

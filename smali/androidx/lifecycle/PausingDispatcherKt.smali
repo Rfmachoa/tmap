@@ -13,40 +13,40 @@
         "T",
         "Landroidx/lifecycle/LifecycleOwner;",
         "Lkotlin/Function2;",
-        "Lkotlinx/coroutines/n0;",
+        "Lkotlinx/coroutines/p0;",
         "Lkotlin/coroutines/c;",
         "",
         "Lkotlin/ExtensionFunctionType;",
         "block",
         "whenCreated",
-        "(Landroidx/lifecycle/LifecycleOwner;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;",
+        "(Landroidx/lifecycle/LifecycleOwner;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "Landroidx/lifecycle/Lifecycle;",
-        "(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;",
+        "(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "whenStarted",
         "whenResumed",
         "Landroidx/lifecycle/Lifecycle$State;",
         "minState",
         "whenStateAtLeast",
-        "(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;",
+        "(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;",
         "lifecycle-runtime-ktx_release"
     }
     k = 0x2
     mv = {
         0x1,
-        0x4,
-        0x1
+        0x6,
+        0x0
     }
 .end annotation
 
 
 # direct methods
-.method public static final whenCreated(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenCreated(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/lifecycle/Lifecycle;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -60,9 +60,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/lifecycle/Lifecycle;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -80,20 +80,20 @@
     .line 2
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final whenCreated(Landroidx/lifecycle/LifecycleOwner;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenCreated(Landroidx/lifecycle/LifecycleOwner;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/lifecycle/LifecycleOwner;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -107,9 +107,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/lifecycle/LifecycleOwner;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -133,20 +133,20 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenCreated(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenCreated(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final whenResumed(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenResumed(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/lifecycle/Lifecycle;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -160,9 +160,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/lifecycle/Lifecycle;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -180,20 +180,20 @@
     .line 2
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final whenResumed(Landroidx/lifecycle/LifecycleOwner;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenResumed(Landroidx/lifecycle/LifecycleOwner;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/lifecycle/LifecycleOwner;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -207,9 +207,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/lifecycle/LifecycleOwner;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -233,20 +233,20 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenResumed(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenResumed(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final whenStarted(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenStarted(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/lifecycle/Lifecycle;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -260,9 +260,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/lifecycle/Lifecycle;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -280,20 +280,20 @@
     .line 2
     sget-object v0, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, v0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final whenStarted(Landroidx/lifecycle/LifecycleOwner;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenStarted(Landroidx/lifecycle/LifecycleOwner;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 1
     .param p0    # Landroidx/lifecycle/LifecycleOwner;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p1    # Lej/p;
+    .param p1    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -307,9 +307,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroidx/lifecycle/LifecycleOwner;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -333,14 +333,14 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/f0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStarted(Landroidx/lifecycle/Lifecycle;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Landroidx/lifecycle/PausingDispatcherKt;->whenStarted(Landroidx/lifecycle/Lifecycle;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+.method public static final whenStateAtLeast(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
     .locals 3
     .param p0    # Landroidx/lifecycle/Lifecycle;
         .annotation build Lorg/jetbrains/annotations/NotNull;
@@ -350,7 +350,7 @@
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
-    .param p2    # Lej/p;
+    .param p2    # Lgl/p;
         .annotation build Lorg/jetbrains/annotations/NotNull;
         .end annotation
     .end param
@@ -365,9 +365,9 @@
             ">(",
             "Landroidx/lifecycle/Lifecycle;",
             "Landroidx/lifecycle/Lifecycle$State;",
-            "Lej/p<",
+            "Lgl/p<",
             "-",
-            "Lkotlinx/coroutines/n0;",
+            "Lkotlinx/coroutines/p0;",
             "-",
             "Lkotlin/coroutines/c<",
             "-TT;>;+",
@@ -383,11 +383,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lkotlinx/coroutines/b1;->e()Lkotlinx/coroutines/i2;
+    invoke-static {}, Lkotlinx/coroutines/c1;->e()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->H1()Lkotlinx/coroutines/i2;
+    invoke-virtual {v0}, Lkotlinx/coroutines/i2;->c2()Lkotlinx/coroutines/i2;
 
     move-result-object v0
 
@@ -395,9 +395,9 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, p2, v2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lej/p;Lkotlin/coroutines/c;)V
+    invoke-direct {v1, p0, p1, p2, v2}, Landroidx/lifecycle/PausingDispatcherKt$whenStateAtLeast$2;-><init>(Landroidx/lifecycle/Lifecycle;Landroidx/lifecycle/Lifecycle$State;Lgl/p;Lkotlin/coroutines/c;)V
 
-    invoke-static {v0, v1, p3}, Lkotlinx/coroutines/g;->i(Lkotlin/coroutines/CoroutineContext;Lej/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
+    invoke-static {v0, v1, p3}, Lkotlinx/coroutines/i;->h(Lkotlin/coroutines/CoroutineContext;Lgl/p;Lkotlin/coroutines/c;)Ljava/lang/Object;
 
     move-result-object p0
 

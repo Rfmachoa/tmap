@@ -810,9 +810,9 @@
     .line 55
     iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView$z;->g:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView;->mPrefetchRegistry:Landroidx/recyclerview/widget/n$b;
+    iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView;->mPrefetchRegistry:Landroidx/recyclerview/widget/m$b;
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/n$b;->b()V
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/m$b;->b()V
 
     goto :goto_8
 
@@ -823,12 +823,12 @@
     .line 57
     iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView$z;->g:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v4, v1, Landroidx/recyclerview/widget/RecyclerView;->mGapWorker:Landroidx/recyclerview/widget/n;
+    iget-object v4, v1, Landroidx/recyclerview/widget/RecyclerView;->mGapWorker:Landroidx/recyclerview/widget/m;
 
     if-eqz v4, :cond_17
 
     .line 58
-    invoke-virtual {v4, v1, v8, v7}, Landroidx/recyclerview/widget/n;->f(Landroidx/recyclerview/widget/RecyclerView;II)V
+    invoke-virtual {v4, v1, v8, v7}, Landroidx/recyclerview/widget/m;->f(Landroidx/recyclerview/widget/RecyclerView;II)V
 
     .line 59
     :cond_17

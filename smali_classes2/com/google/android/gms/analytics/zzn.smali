@@ -1,6 +1,6 @@
 .class final Lcom/google/android/gms/analytics/zzn;
 .super Ljava/util/concurrent/ThreadPoolExecutor;
-.source "com.google.android.gms:play-services-analytics-impl@@17.0.1"
+.source "com.google.android.gms:play-services-analytics-impl@@18.0.2"
 
 
 # instance fields
@@ -11,13 +11,13 @@
 .method public constructor <init>(Lcom/google/android/gms/analytics/zzr;)V
     .locals 7
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/analytics/zzn;->zza:Lcom/google/android/gms/analytics/zzr;
 
     sget-object v5, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
     new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    .line 1
     invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     const/4 v1, 0x1
@@ -51,21 +51,10 @@
 # virtual methods
 .method public final newTaskFor(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/RunnableFuture;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Runnable;",
-            "TT;)",
-            "Ljava/util/concurrent/RunnableFuture<",
-            "TT;>;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/analytics/zzm;
 
     .line 1
+    new-instance v0, Lcom/google/android/gms/analytics/zzm;
+
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/analytics/zzm;-><init>(Lcom/google/android/gms/analytics/zzn;Ljava/lang/Runnable;Ljava/lang/Object;)V
 
     return-object v0
